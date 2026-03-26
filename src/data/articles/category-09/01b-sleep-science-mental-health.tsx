@@ -108,7 +108,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           1. Manage Light Exposure Strategically
         </h2>
         <p className="mb-6">
-          Light is the most powerful regulator of your circadian rhythm—the internal 24-hour clock that controls sleep-wake cycles <Citation id="2" index={2} source="Journal of Clinical Sleep Medicine" year="2020" tier={1} />. When, how much, and what kind of light you're exposed to directly affects sleep quality.
+          Light is the most powerful regulator of your circadian rhythm---the internal 24-hour clock that controls sleep-wake cycles <Citation id="2" index={2} source="Journal of Clinical Sleep Medicine" year="2020" tier={1} />. When, how much, and what kind of light you're exposed to directly affects sleep quality.
         </p>
 
         <ArticleTabs
@@ -162,7 +162,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           2. Keep Your Bedroom Cool
         </h2>
         <p className="mb-6">
-          Your body temperature naturally drops as you fall asleep—it's a biological signal that sleep is beginning <Citation id="3" index={3} source="Physiology & Behavior" year="2019" tier={1} />. A bedroom that's too warm interferes with this process, making it harder to fall asleep and stay asleep.
+          Your body temperature naturally drops as you fall asleep---it's a biological signal that sleep is beginning <Citation id="3" index={3} source="Physiology & Behavior" year="2019" tier={1} />. A bedroom that's too warm interferes with this process, making it harder to fall asleep and stay asleep.
         </p>
         <p className="mb-6">
           <strong>Ideal temperature:</strong> 60-67°F (15-19°C) for most people. This may feel cold initially, but your body warms under blankets. If you tend to run hot, aim for the cooler end of the range.
@@ -178,7 +178,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           3. Maintain a Consistent Sleep Schedule
         </h2>
         <p className="mb-6">
-          Going to bed and waking up at the same time every day—<strong>including weekends</strong>—is one of the most effective sleep hygiene practices. It reinforces your circadian rhythm, making it easier to fall asleep and wake up naturally.
+          Going to bed and waking up at the same time every day---<strong>including weekends</strong>---is one of the most effective sleep hygiene practices. It reinforces your circadian rhythm, making it easier to fall asleep and wake up naturally.
         </p>
         <p className="mb-6">
           Irregular sleep schedules (sleeping in on weekends, varying bedtimes) create a phenomenon called "social jet lag," where your internal clock is constantly being reset. This leads to grogginess, mood instability, and difficulty concentrating.
@@ -210,7 +210,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Regular physical activity improves both sleep quality and duration <Citation id="4" index={4} source="Sleep Medicine" year="2020" tier={1} />. Exercise reduces the time it takes to fall asleep, increases deep sleep, and decreases nighttime awakenings.
         </p>
         <p className="mb-6">
-          <strong>Timing matters:</strong> Vigorous exercise raises body temperature and increases cortisol and adrenaline—both of which can interfere with sleep if done too close to bedtime. Aim to finish intense workouts at least 3-4 hours before bed. Gentle activities like yoga or stretching are fine in the evening.
+          <strong>Timing matters:</strong> Vigorous exercise raises body temperature and increases cortisol and adrenaline---both of which can interfere with sleep if done too close to bedtime. Aim to finish intense workouts at least 3-4 hours before bed. Gentle activities like yoga or stretching are fine in the evening.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -251,7 +251,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           6. Optimize Your Sleep Environment
         </h2>
         <p className="mb-6">
-          Your bedroom should be a sleep sanctuary—dark, quiet, cool, and comfortable <Citation id="6" index={6} source="Sleep Health" year="2021" tier={1} />.
+          Your bedroom should be a sleep sanctuary---dark, quiet, cool, and comfortable <Citation id="6" index={6} source="Sleep Health" year="2021" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -324,7 +324,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           8. Watch Meal Timing and Size
         </h2>
         <p className="mb-6">
-          Eating large meals close to bedtime can interfere with sleep. Digestion raises body temperature and can cause discomfort, acid reflux, or indigestion—all of which disrupt sleep onset and quality.
+          Eating large meals close to bedtime can interfere with sleep. Digestion raises body temperature and can cause discomfort, acid reflux, or indigestion---all of which disrupt sleep onset and quality.
         </p>
         <p className="mb-6">
           <strong>Best practices:</strong>
@@ -333,7 +333,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           <li>Finish dinner 2-3 hours before bed</li>
           <li>If you need a snack, keep it light and protein-based (e.g., a small handful of nuts, yogurt)</li>
           <li>Avoid spicy, fatty, or acidic foods in the evening if you're prone to heartburn</li>
-          <li>Don't go to bed hungry—hunger can also disrupt sleep</li>
+          <li>Don't go to bed hungry---hunger can also disrupt sleep</li>
         </ul>
 
         <h2 id="napping" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -359,7 +359,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: "What if I can't fall asleep within 20 minutes?",
               content: (
                 <p>
-                  Get out of bed and do a quiet, non-stimulating activity (reading, gentle stretching) until you feel sleepy. This prevents your brain from associating the bed with wakefulness and frustration—a key principle in CBT for insomnia.
+                  Get out of bed and do a quiet, non-stimulating activity (reading, gentle stretching) until you feel sleepy. This prevents your brain from associating the bed with wakefulness and frustration---a key principle in CBT for insomnia.
                 </p>
               ),
             },
@@ -423,12 +423,12 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
         </h2>
         <ArticleCallout variant="key-takeaway">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Light exposure</strong> is the most powerful circadian regulator—get bright light in the morning, dim it at night.</li>
+            <li><strong>Light exposure</strong> is the most powerful circadian regulator---get bright light in the morning, dim it at night.</li>
             <li><strong>Consistency matters most</strong>: same bedtime and wake time every day, including weekends.</li>
             <li><strong>Cool, dark, quiet environments</strong> promote better sleep quality.</li>
             <li><strong>Avoid caffeine after 2 PM</strong> and alcohol within 3-4 hours of bed.</li>
             <li><strong>Wind-down routines</strong> signal your brain that it's time to sleep.</li>
-            <li><strong>Sleep hygiene alone won't cure chronic insomnia</strong>—seek CBT-I if problems persist.</li>
+            <li><strong>Sleep hygiene alone won't cure chronic insomnia</strong>---seek CBT-I if problems persist.</li>
           </ul>
         </ArticleCallout>
       </>
@@ -439,7 +439,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     id: catId(7),
     slug: 'circadian-rhythm-internal-clock-controls-everything',
     title: 'Your Circadian Rhythm: How Your Internal Clock Controls Everything',
-    description: 'Your circadian rhythm regulates far more than sleep—it orchestrates hormones, metabolism, mood, and immune function across the 24-hour cycle.',
+    description: 'Your circadian rhythm regulates far more than sleep---it orchestrates hormones, metabolism, mood, and immune function across the 24-hour cycle.',
     image: "/images/articles/cat09/cover-007.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 9,
@@ -533,10 +533,10 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Deep inside your brain, a cluster of about 20,000 neurons called the suprachiasmatic nucleus (SCN) acts as your body's master clock. This tiny structure orchestrates a 24-hour rhythm that influences nearly every cell in your body—when you feel alert, when you feel hungry, when your body temperature peaks, and when you're most vulnerable to infection.
+            Deep inside your brain, a cluster of about 20,000 neurons called the suprachiasmatic nucleus (SCN) acts as your body's master clock. This tiny structure orchestrates a 24-hour rhythm that influences nearly every cell in your body---when you feel alert, when you feel hungry, when your body temperature peaks, and when you're most vulnerable to infection.
           </p>
           <p className="mb-6">
-            Your circadian rhythm isn't just about sleep. It's a fundamental organizing principle that coordinates physiology, behavior, and metabolism across the day-night cycle <Citation id="1" index={1} source="Current Biology" year="2020" tier={1} />. When this rhythm is disrupted—by shift work, jet lag, or irregular sleep schedules—the consequences extend far beyond fatigue.
+            Your circadian rhythm isn't just about sleep. It's a fundamental organizing principle that coordinates physiology, behavior, and metabolism across the day-night cycle <Citation id="1" index={1} source="Current Biology" year="2020" tier={1} />. When this rhythm is disrupted---by shift work, jet lag, or irregular sleep schedules---the consequences extend far beyond fatigue.
           </p>
         </div>
 
@@ -553,7 +553,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           The term "circadian" comes from the Latin <em>circa diem</em>, meaning "about a day." Circadian rhythms are roughly 24-hour cycles in biological processes that persist even in the absence of environmental cues <Citation id="9" index={9} source="National Institute of General Medical Sciences" year="2023" tier={2} />.
         </p>
         <p className="mb-6">
-          These rhythms are <strong>endogenous</strong>—meaning they're generated internally, not imposed by the external environment. If you were placed in a dark cave with no time cues, your body would still maintain an approximately 24-hour cycle of sleep-wake, body temperature, and hormone release. However, this internal rhythm isn't exactly 24 hours for most people; it's closer to 24.2 hours. Light exposure 'resets' the clock each day, keeping it synchronized with the external world.
+          These rhythms are <strong>endogenous</strong>---meaning they're generated internally, not imposed by the external environment. If you were placed in a dark cave with no time cues, your body would still maintain an approximately 24-hour cycle of sleep-wake, body temperature, and hormone release. However, this internal rhythm isn't exactly 24 hours for most people; it's closer to 24.2 hours. Light exposure 'resets' the clock each day, keeping it synchronized with the external world.
         </p>
 
         <h2 id="master-clock-scn" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -563,7 +563,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           The SCN sits in the hypothalamus, just above where the optic nerves cross. It receives direct input from the eyes via a specialized pathway, allowing it to detect light and adjust the circadian rhythm accordingly <Citation id="4" index={4} source="Progress in Brain Research" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          The SCN synchronizes "peripheral clocks" throughout the body—in the liver, heart, muscles, and even individual cells. These peripheral clocks regulate local functions (like when the liver releases glucose or when the gut is most active), but they all take their timing cues from the SCN.
+          The SCN synchronizes "peripheral clocks" throughout the body---in the liver, heart, muscles, and even individual cells. These peripheral clocks regulate local functions (like when the liver releases glucose or when the gut is most active), but they all take their timing cues from the SCN.
         </p>
 
         <ArticleChart
@@ -607,10 +607,10 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Light: The Primary Zeitgeber
         </h2>
         <p className="mb-6">
-          "Zeitgeber" is German for "time giver"—an environmental cue that synchronizes the internal clock. Light is the most powerful zeitgeber for humans <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2019" tier={1} />.
+          "Zeitgeber" is German for "time giver"---an environmental cue that synchronizes the internal clock. Light is the most powerful zeitgeber for humans <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          Specialized photoreceptor cells in the retina (called intrinsically photosensitive retinal ganglion cells) detect light—especially blue wavelengths—and send signals directly to the SCN. This is why morning sunlight exposure is so effective at "setting" your circadian clock and why blue-light-rich screens in the evening can delay sleep onset.
+          Specialized photoreceptor cells in the retina (called intrinsically photosensitive retinal ganglion cells) detect light---especially blue wavelengths---and send signals directly to the SCN. This is why morning sunlight exposure is so effective at "setting" your circadian clock and why blue-light-rich screens in the evening can delay sleep onset.
         </p>
 
         <ArticleAccordion
@@ -621,7 +621,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: 'Are there other zeitgebers besides light?',
               content: (
                 <p>
-                  Yes. Meal timing, exercise, social interaction, and temperature changes can all influence circadian rhythms—though none as powerfully as light. Regular meal times, for example, help synchronize peripheral clocks in the liver and gut.
+                  Yes. Meal timing, exercise, social interaction, and temperature changes can all influence circadian rhythms---though none as powerfully as light. Regular meal times, for example, help synchronize peripheral clocks in the liver and gut.
                 </p>
               ),
             },
@@ -630,7 +630,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: "What happens if you're blind?",
               content: (
                 <p>
-                  Some blind people—those whose eyes can still detect light via the specialized circadian photoreceptors—maintain normal circadian rhythms. Others develop Non-24-Hour Sleep-Wake Disorder, where their internal clock 'free-runs' and gradually drifts later each day because it lacks light input to reset.
+                  Some blind people---those whose eyes can still detect light via the specialized circadian photoreceptors---maintain normal circadian rhythms. Others develop Non-24-Hour Sleep-Wake Disorder, where their internal clock 'free-runs' and gradually drifts later each day because it lacks light input to reset.
                 </p>
               ),
             },
@@ -641,7 +641,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Chronotypes: Are You a Lark or an Owl?
         </h2>
         <p className="mb-6">
-          People vary in their natural circadian timing—a trait called <strong>chronotype</strong> <Citation id="7" index={7} source="Nature and Science of Sleep" year="2020" tier={1} />. This variation is partly genetic and reflects when your internal clock is set relative to the 24-hour day.
+          People vary in their natural circadian timing---a trait called <strong>chronotype</strong> <Citation id="7" index={7} source="Nature and Science of Sleep" year="2020" tier={1} />. This variation is partly genetic and reflects when your internal clock is set relative to the 24-hour day.
         </p>
 
         <ArticleTabs
@@ -692,14 +692,14 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Chronotype is not a choice or a personality trait—it's biologically driven. Evening types (night owls) aren't lazy; their circadian rhythms are naturally delayed. Forcing a night owl to wake at 6 AM every day is like imposing permanent jet lag.
+          Chronotype is not a choice or a personality trait---it's biologically driven. Evening types (night owls) aren't lazy; their circadian rhythms are naturally delayed. Forcing a night owl to wake at 6 AM every day is like imposing permanent jet lag.
         </p>
 
         <h2 id="circadian-misalignment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Happens When Circadian Rhythms Are Disrupted?
         </h2>
         <p className="mb-6">
-          Circadian misalignment—when your internal clock is out of sync with your environment or schedule—has profound health consequences <Citation id="8" index={8} source="Annual Review of Physiology" year="2021" tier={1} />.
+          Circadian misalignment---when your internal clock is out of sync with your environment or schedule---has profound health consequences <Citation id="8" index={8} source="Annual Review of Physiology" year="2021" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -717,7 +717,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: 'Social Jet Lag',
               description: (
                 <p>
-                  Sleeping in on weekends to 'catch up' creates a mismatch between your weekday and weekend circadian timing—like traveling across time zones every week. Social jet lag is linked to metabolic problems, mood disturbances, and poor cognitive performance <Citation id="6" index={6} source="Current Opinion in Endocrine and Metabolic Research" year="2020" tier={1} />.
+                  Sleeping in on weekends to 'catch up' creates a mismatch between your weekday and weekend circadian timing---like traveling across time zones every week. Social jet lag is linked to metabolic problems, mood disturbances, and poor cognitive performance <Citation id="6" index={6} source="Current Opinion in Endocrine and Metabolic Research" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -902,7 +902,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
             You've heard the warnings: blue light from screens destroys your sleep. But if you've tried blue-light-blocking glasses or night mode settings and still struggle with sleep, you might wonder if the science is oversold.
           </p>
           <p className="mb-6">
-            The truth is nuanced. Blue light does suppress melatonin and delay sleep onset <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />, but it's not the only—or even the primary—reason screens disrupt sleep. What you're doing on your device matters as much as the light it emits.
+            The truth is nuanced. Blue light does suppress melatonin and delay sleep onset <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />, but it's not the only---or even the primary---reason screens disrupt sleep. What you're doing on your device matters as much as the light it emits.
           </p>
         </div>
 
@@ -910,7 +910,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           How Blue Light Affects Sleep
         </h2>
         <p className="mb-6">
-          Blue light—wavelengths between 450-480 nanometers—is part of the visible light spectrum. It's abundant in natural sunlight (which is why the sky looks blue) and is also emitted by LED screens, smartphones, tablets, and computers.
+          Blue light---wavelengths between 450-480 nanometers---is part of the visible light spectrum. It's abundant in natural sunlight (which is why the sky looks blue) and is also emitted by LED screens, smartphones, tablets, and computers.
         </p>
         <p className="mb-6">
           Specialized photoreceptor cells in your eyes, called intrinsically photosensitive retinal ganglion cells (ipRGCs), contain a pigment called melanopsin that is most sensitive to blue light <Citation id="6" index={6} source="Nature" year="2020" tier={1} />. When these cells detect blue light, they send signals to the brain's master clock (the suprachiasmatic nucleus), which suppresses melatonin production.
@@ -929,7 +929,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
         </ArticleCallout>
 
         <h2 id="not-just-blue-light" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          It's Not Just the Blue Light—It's What You're Doing
+          It's Not Just the Blue Light---It's What You're Doing
         </h2>
         <p className="mb-6">
           While blue light suppresses melatonin, research suggests that the <strong>content</strong> you're consuming and the <strong>cognitive arousal</strong> it creates may be even more disruptive to sleep <Citation id="4" index={4} source="Computers in Human Behavior" year="2020" tier={1} />.
@@ -948,7 +948,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Checking work emails, scrolling through upsetting news, or watching a thriller activates your stress response and increases cortisol—a wakefulness hormone. Even with blue light filtered out, this cognitive and emotional arousal makes it hard to fall asleep.
+          Checking work emails, scrolling through upsetting news, or watching a thriller activates your stress response and increases cortisol---a wakefulness hormone. Even with blue light filtered out, this cognitive and emotional arousal makes it hard to fall asleep.
         </p>
 
         <h2 id="blue-light-glasses" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1142,7 +1142,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Blue light suppresses melatonin</strong>, delaying sleep onset when exposure occurs in the evening.</li>
             <li><strong>Content matters as much as light</strong>: cognitively or emotionally stimulating activities disrupt sleep regardless of blue light filtering.</li>
-            <li><strong>Night mode helps, but minimally</strong>—it's not a replacement for reducing screen time.</li>
+            <li><strong>Night mode helps, but minimally</strong>---it's not a replacement for reducing screen time.</li>
             <li><strong>Blue-light-blocking glasses</strong> may provide modest benefits for passive screen use, but won't fix arousal from stimulating content.</li>
             <li><strong>Screen curfew is most effective</strong>: 30-90 minutes screen-free before bed improves sleep quality.</li>
             <li><strong>Morning light exposure</strong> strengthens your circadian rhythm, making you less vulnerable to evening light disruption.</li>
@@ -1156,7 +1156,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     id: catId(9),
     slug: 'caffeine-alcohol-sleep-substances-sabotage-rest',
     title: 'Caffeine, Alcohol, and Sleep: How Common Substances Sabotage Your Rest',
-    description: 'Coffee helps you wake up, and alcohol helps you fall asleep—right? The truth about how these substances affect sleep quality is more complicated.',
+    description: 'Coffee helps you wake up, and alcohol helps you fall asleep---right? The truth about how these substances affect sleep quality is more complicated.',
     image: "/images/articles/cat09/cover-009.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 7,
@@ -1234,7 +1234,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Coffee in the morning, wine in the evening—it's a daily rhythm for millions of people. But while caffeine and alcohol feel like they help you manage wakefulness and sleep, both substances disrupt the very processes they seem to support.
+            Coffee in the morning, wine in the evening---it's a daily rhythm for millions of people. But while caffeine and alcohol feel like they help you manage wakefulness and sleep, both substances disrupt the very processes they seem to support.
           </p>
           <p className="mb-6">
             Understanding how these common substances affect sleep architecture, circadian rhythms, and overall sleep quality can help you make informed choices about when and how much to consume.
@@ -1245,7 +1245,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Caffeine: The World's Most Popular Stimulant
         </h2>
         <p className="mb-6">
-          Caffeine is consumed by about 90% of adults worldwide, primarily through coffee, tea, energy drinks, and sodas. It works by blocking adenosine receptors in the brain. Adenosine is a neurotransmitter that builds up during wakefulness and makes you feel sleepy—so when caffeine blocks these receptors, you feel more alert.
+          Caffeine is consumed by about 90% of adults worldwide, primarily through coffee, tea, energy drinks, and sodas. It works by blocking adenosine receptors in the brain. Adenosine is a neurotransmitter that builds up during wakefulness and makes you feel sleepy---so when caffeine blocks these receptors, you feel more alert.
         </p>
         <p className="mb-6">
           But caffeine doesn't eliminate sleepiness; it just masks it. The adenosine is still there, waiting. When caffeine wears off, the accumulated adenosine floods the receptors all at once, causing the "caffeine crash."
@@ -1253,7 +1253,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Caffeine has a half-life of 5-6 hours in most people <Citation id="1" index={1} source="Journal of Clinical Sleep Medicine" year="2013" tier={1} />. This means if you drink a cup of coffee at 3 PM, half of that caffeine is still in your system at 9 PM—potentially interfering with sleep onset.
+            Caffeine has a half-life of 5-6 hours in most people <Citation id="1" index={1} source="Journal of Clinical Sleep Medicine" year="2013" tier={1} />. This means if you drink a cup of coffee at 3 PM, half of that caffeine is still in your system at 9 PM---potentially interfering with sleep onset.
           </p>
         </ArticleCallout>
 
@@ -1337,7 +1337,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Alcohol: The Sleep Disruptor Disguised as a Sedative
         </h2>
         <p className="mb-6">
-          Many people use alcohol as a "nightcap" to help them fall asleep. And it does work—initially. Alcohol acts as a sedative, reducing the time it takes to fall asleep. But the quality of that sleep is profoundly disrupted <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />.
+          Many people use alcohol as a "nightcap" to help them fall asleep. And it does work---initially. Alcohol acts as a sedative, reducing the time it takes to fall asleep. But the quality of that sleep is profoundly disrupted <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />.
         </p>
 
         <h2 id="alcohol-sleep-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1366,7 +1366,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: 'Increases Nighttime Awakenings',
               description: (
                 <p>
-                  Alcohol disrupts the normal sleep cycle, causing you to wake up multiple times during the night—even if you don't remember it. This fragmentation prevents restorative deep sleep.
+                  Alcohol disrupts the normal sleep cycle, causing you to wake up multiple times during the night---even if you don't remember it. This fragmentation prevents restorative deep sleep.
                 </p>
               ),
             },
@@ -1530,7 +1530,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
             <li><strong>Caffeine delays sleep onset</strong>, reduces deep sleep, and stays in your system for 5-6 hours (longer in slow metabolizers).</li>
             <li><strong>Alcohol helps you fall asleep</strong> but fragments sleep, suppresses REM, and causes early morning awakenings.</li>
             <li><strong>Timing is critical</strong>: stop caffeine 6+ hours before bed, alcohol 3-4 hours before bed.</li>
-            <li><strong>The caffeine-alcohol cycle</strong> perpetuates poor sleep—breaking it requires addressing both substances.</li>
+            <li><strong>The caffeine-alcohol cycle</strong> perpetuates poor sleep---breaking it requires addressing both substances.</li>
             <li><strong>Genetic variation matters</strong>: some people metabolize caffeine much slower than others.</li>
             <li><strong>For optimal sleep</strong>, limit caffeine to the morning and minimize or eliminate alcohol in the evening.</li>
           </ul>
@@ -1621,10 +1621,10 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            It's a familiar pattern: skimp on sleep all week to meet deadlines, then sleep until noon on Saturday to "catch up." It feels restorative in the moment—but does it actually erase the effects of weekday sleep deprivation?
+            It's a familiar pattern: skimp on sleep all week to meet deadlines, then sleep until noon on Saturday to "catch up." It feels restorative in the moment---but does it actually erase the effects of weekday sleep deprivation?
           </p>
           <p className="mb-6">
-            The short answer: partially, but not completely <Citation id="1" index={1} source="Sleep" year="2021" tier={1} />. Weekend recovery sleep can mitigate some consequences of chronic sleep restriction, but it also creates new problems—particularly circadian misalignment, known as "social jet lag."
+            The short answer: partially, but not completely <Citation id="1" index={1} source="Sleep" year="2021" tier={1} />. Weekend recovery sleep can mitigate some consequences of chronic sleep restriction, but it also creates new problems---particularly circadian misalignment, known as "social jet lag."
           </p>
         </div>
 
@@ -1635,12 +1635,12 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Sleep debt is the cumulative difference between the sleep you need and the sleep you actually get <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />. If you need 8 hours but only get 6, you accumulate a 2-hour sleep debt each night. Over a work week, that's 10 hours of lost sleep.
         </p>
         <p className="mb-6">
-          Unlike financial debt, sleep debt doesn't have a clear "payoff" timeline. You can't simply sleep 10 extra hours on Saturday and be fully recovered. The effects of chronic sleep restriction—impaired cognition, emotional dysregulation, metabolic changes—linger even after extended recovery sleep.
+          Unlike financial debt, sleep debt doesn't have a clear "payoff" timeline. You can't simply sleep 10 extra hours on Saturday and be fully recovered. The effects of chronic sleep restriction---impaired cognition, emotional dysregulation, metabolic changes---linger even after extended recovery sleep.
         </p>
 
         <ArticleCallout variant="did-you-know">
           <p>
-            After just one week of sleeping 6 hours per night, your cognitive performance is equivalent to staying awake for 24 hours straight <Citation id="8" index={8} source="National Heart, Lung, and Blood Institute" year="2022" tier={2} />—yet most people don't feel that impaired. Sleep debt accumulates silently.
+            After just one week of sleeping 6 hours per night, your cognitive performance is equivalent to staying awake for 24 hours straight <Citation id="8" index={8} source="National Heart, Lung, and Blood Institute" year="2022" tier={2} />---yet most people don't feel that impaired. Sleep debt accumulates silently.
           </p>
         </ArticleCallout>
 
@@ -1697,7 +1697,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Social jet lag occurs when your sleep schedule on work days is misaligned with your sleep schedule on free days <Citation id="3" index={3} source="Current Diabetes Reports" year="2020" tier={1} />. It's called "social" jet lag because it's driven by societal demands (work, school) rather than travel.
         </p>
         <p className="mb-6">
-          <strong>Example:</strong> You wake at 6 AM on weekdays but sleep until 10 AM on weekends. Your body experiences a 4-hour time shift—equivalent to flying from New York to California every weekend and back on Monday.
+          <strong>Example:</strong> You wake at 6 AM on weekdays but sleep until 10 AM on weekends. Your body experiences a 4-hour time shift---equivalent to flying from New York to California every weekend and back on Monday.
         </p>
 
         <ComparisonTable
@@ -1742,7 +1742,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           Why Sleep Consistency Matters More Than Total Sleep Time
         </h2>
         <p className="mb-6">
-          Research increasingly shows that <strong>consistency</strong> in sleep timing is as important—if not more so—than total sleep duration <Citation id="7" index={7} source="Sleep Medicine" year="2020" tier={1} />.
+          Research increasingly shows that <strong>consistency</strong> in sleep timing is as important---if not more so---than total sleep duration <Citation id="7" index={7} source="Sleep Medicine" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           People who maintain consistent sleep-wake times (even on weekends) have:
@@ -1756,7 +1756,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Your body doesn't care about weekdays and weekends. It cares about consistent signals. When you sleep in on Saturday, you're telling your brain it's a different time zone—and come Monday, you're jet-lagged."
+          quote="Your body doesn't care about weekdays and weekends. It cares about consistent signals. When you sleep in on Saturday, you're telling your brain it's a different time zone---and come Monday, you're jet-lagged."
           attribution="Dr. Till Roenneberg"
           role="Chronobiologist"
           source="University of Munich, 2020"
@@ -1766,7 +1766,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           So What Should You Do?
         </h2>
         <p className="mb-6">
-          The ideal solution is to <strong>get adequate sleep every night</strong>—7-9 hours, at consistent times, seven days a week. But for many people, this isn't realistic due to work, caregiving, or other obligations.
+          The ideal solution is to <strong>get adequate sleep every night</strong>---7-9 hours, at consistent times, seven days a week. But for many people, this isn't realistic due to work, caregiving, or other obligations.
         </p>
 
         <ProgressSteps
@@ -1800,7 +1800,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: 'Gradually Increase Weeknight Sleep',
               description: (
                 <p>
-                  Add 15-30 minutes to your weeknight sleep by going to bed earlier. Even small increases—6.5 hours instead of 6, for example—reduce the need for weekend catch-up.
+                  Add 15-30 minutes to your weeknight sleep by going to bed earlier. Even small increases---6.5 hours instead of 6, for example---reduce the need for weekend catch-up.
                 </p>
               ),
             },
@@ -1822,7 +1822,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
           <strong>Shift workers:</strong> If your work schedule rotates or includes night shifts, weekend recovery sleep can help mitigate chronic sleep deprivation. However, maintaining a consistent sleep schedule on your days off (even if it's shifted relative to typical hours) is still preferable to drastically changing sleep times.
         </p>
         <p className="mb-6">
-          <strong>Parents of young children:</strong> Sleep disruption is often unavoidable in the early years. If weekends offer the first opportunity for uninterrupted sleep, take it—but try to wake within 2 hours of your weekday wake time to minimize social jet lag.
+          <strong>Parents of young children:</strong> Sleep disruption is often unavoidable in the early years. If weekends offer the first opportunity for uninterrupted sleep, take it---but try to wake within 2 hours of your weekday wake time to minimize social jet lag.
         </p>
 
         <BeforeAfter
@@ -1874,7 +1874,7 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
               title: 'For mild chronic restriction (6-6.5 hrs consistently)',
               content: (
                 <p>
-                  Weekend recovery provides partial benefit—enough to reduce some metabolic and mood consequences, but not enough to fully compensate.
+                  Weekend recovery provides partial benefit---enough to reduce some metabolic and mood consequences, but not enough to fully compensate.
                 </p>
               ),
             },
@@ -1896,11 +1896,11 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Weekend catch-up sleep provides partial recovery</strong> from weekday sleep debt, but it's not a full solution.</li>
-            <li><strong>Social jet lag</strong>—the circadian misalignment from drastically different weekend sleep schedules—creates its own health problems.</li>
+            <li><strong>Social jet lag</strong>---the circadian misalignment from drastically different weekend sleep schedules---creates its own health problems.</li>
             <li><strong>Sleep consistency matters</strong> as much as total sleep time for long-term health.</li>
             <li><strong>Limit sleep-in time to 1 hour max</strong> to balance recovery with circadian stability.</li>
-            <li><strong>Prioritize weeknight sleep first</strong>—addressing the root cause is better than compensating on weekends.</li>
-            <li><strong>If weekends are your only recovery opportunity</strong>, take it—but be aware of the trade-offs.</li>
+            <li><strong>Prioritize weeknight sleep first</strong>---addressing the root cause is better than compensating on weekends.</li>
+            <li><strong>If weekends are your only recovery opportunity</strong>, take it---but be aware of the trade-offs.</li>
           </ul>
         </ArticleCallout>
       </>

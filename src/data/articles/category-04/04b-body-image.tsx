@@ -15,7 +15,7 @@ export const bodyImageArticlesB: Article[] = [
     id: catId(36),
     slug: 'how-diet-culture-damages-mental-health',
     title: 'How Diet Culture Damages Mental Health',
-    description: `Diet culture isn't just about weight—it's a system of beliefs that harms mental health, self-worth, and your relationship with food and body.`,
+    description: `Diet culture isn't just about weight---it's a system of beliefs that harms mental health, self-worth, and your relationship with food and body.`,
     image: '/images/articles/cat04/cover-036.svg',
     category: CATEGORY_SELF_WORTH,
     readTime: 7,
@@ -91,7 +91,7 @@ export const bodyImageArticlesB: Article[] = [
           Alternatives to Diet Culture
         </h2>
         <p className="mb-6">
-          Rejecting diet culture doesn't mean ignoring health—it means redefining it <Citation id="4" index={4} source="Nutrition Today" year="2021" tier={1} />:
+          Rejecting diet culture doesn't mean ignoring health---it means redefining it <Citation id="4" index={4} source="Nutrition Today" year="2021" tier={1} />:
         </p>
         <ArticleAccordion
           type="single"
@@ -131,7 +131,7 @@ export const bodyImageArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Exercise is healthy—until it isn't. When movement becomes compulsive, driven by anxiety about weight or appearance, and causes distress if missed, it crosses into exercise addiction. What looks like dedication from the outside can be a prison of obsession and body image anxiety.
+            Exercise is healthy---until it isn't. When movement becomes compulsive, driven by anxiety about weight or appearance, and causes distress if missed, it crosses into exercise addiction. What looks like dedication from the outside can be a prison of obsession and body image anxiety.
           </p>
           <p className="mb-6">
             Research shows 3-5% of regular exercisers meet criteria for exercise addiction, with higher rates among those with eating disorders (39-48%) <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2020" tier={1} />. The line between healthy and compulsive exercise is drawn by motivation, flexibility, and impact on life <Citation id="2" index={2} source="Sports Medicine" year="2021" tier={2} />.
@@ -172,7 +172,7 @@ export const bodyImageArticlesB: Article[] = [
           The Connection to Eating Disorders
         </h2>
         <p className="mb-6">
-          Compulsive exercise is a common symptom in anorexia nervosa, bulimia nervosa, and binge eating disorder. It serves as a compensatory behavior—attempting to control weight or "undo" eating <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2020" tier={1} />.
+          Compulsive exercise is a common symptom in anorexia nervosa, bulimia nervosa, and binge eating disorder. It serves as a compensatory behavior---attempting to control weight or "undo" eating <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2020" tier={1} />.
         </p>
 
         <StatCard
@@ -193,13 +193,13 @@ export const bodyImageArticlesB: Article[] = [
             { title: 'Examine Motivation', description: <p>Ask: Why am I exercising? If the answer is 'to burn calories' or "because I have to," it may be compulsive <Citation id="3" index={3} source="Body Image" year="2020" tier={1} />.</p> },
             { title: 'Practice Flexibility', description: <p>Intentionally take rest days. Notice the anxiety and practice tolerating it without exercising.</p> },
             { title: 'Decouple Exercise from Food', description: <p>Stop 'earning' meals or "burning off" food. Eat based on hunger, exercise for enjoyment.</p> },
-            { title: 'Prioritize Joy Over Obligation', description: <p>Choose movement that feels good, not just what burns the most calories. Dance, walk, stretch—whatever brings pleasure.</p> },
+            { title: 'Prioritize Joy Over Obligation', description: <p>Choose movement that feels good, not just what burns the most calories. Dance, walk, stretch---whatever brings pleasure.</p> },
             { title: 'Seek Help if Needed', description: <p>If exercise feels compulsive and you can't stop despite negative consequences, treatment can help <Citation id="4" index={4} source="Journal of Behavioral Addictions" year="2021" tier={1} />.</p> },
           ]}
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Exercise becomes addictive when it's compulsive, driven by body image anxiety, inflexible, and impairs life. Healthy movement is joyful, flexible, and enhances wellbeing—not a punishment for eating or a requirement for worth.</p>
+          <p>Exercise becomes addictive when it's compulsive, driven by body image anxiety, inflexible, and impairs life. Healthy movement is joyful, flexible, and enhances wellbeing---not a punishment for eating or a requirement for worth.</p>
         </ArticleCallout>
       </>
     ),
@@ -226,7 +226,7 @@ export const bodyImageArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            What's considered beautiful varies dramatically across cultures: pale skin in some contexts, tanned in others; thinness in the West, fuller figures in parts of Africa and Latin America. But regardless of the specific ideal, the psychological pattern is the same—striving for an often unattainable standard creates body dissatisfaction.
+            What's considered beautiful varies dramatically across cultures: pale skin in some contexts, tanned in others; thinness in the West, fuller figures in parts of Africa and Latin America. But regardless of the specific ideal, the psychological pattern is the same---striving for an often unattainable standard creates body dissatisfaction.
           </p>
           <p className="mb-6">
             Research shows body image concerns exist across all cultures studied, though the specific focus varies <Citation id="1" index={1} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. Globalization and Western media are homogenizing beauty ideals, spreading thin-ideal body dissatisfaction worldwide <Citation id="2" index={2} source="Body Image" year="2021" tier={1} />.
@@ -267,7 +267,7 @@ export const bodyImageArticlesB: Article[] = [
           The Globalizing of Western Ideals
         </h2>
         <p className="mb-6">
-          Western media—Hollywood, Instagram, TikTok—has global reach. Research shows exposure to Western media correlates with adoption of thin-ideal body dissatisfaction, even in cultures that traditionally valued fuller figures <Citation id="4" index={4} source="Sex Roles" year="2020" tier={1} />.
+          Western media---Hollywood, Instagram, TikTok---has global reach. Research shows exposure to Western media correlates with adoption of thin-ideal body dissatisfaction, even in cultures that traditionally valued fuller figures <Citation id="4" index={4} source="Sex Roles" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="warning">
@@ -315,10 +315,10 @@ export const bodyImageArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Wrinkles appear. Skin sags. Hair grays or thins. Weight redistributes. Your body ages, and a culture obsessed with youth tells you this is a problem to fix, hide, or resist. But aging is not a failure—it's a privilege. Navigating body image as you age requires rejecting ageist beauty standards and honoring your body's evolution.
+            Wrinkles appear. Skin sags. Hair grays or thins. Weight redistributes. Your body ages, and a culture obsessed with youth tells you this is a problem to fix, hide, or resist. But aging is not a failure---it's a privilege. Navigating body image as you age requires rejecting ageist beauty standards and honoring your body's evolution.
           </p>
           <p className="mb-6">
-            Research shows body image concerns don't necessarily decrease with age—they shift. While some older adults report greater body acceptance, others experience distress about visible aging <Citation id="1" index={1} source="Body Image" year="2020" tier={1} />. Cultural ageism intensifies these concerns <Citation id="2" index={2} source="Psychology and Aging" year="2021" tier={1} />.
+            Research shows body image concerns don't necessarily decrease with age---they shift. While some older adults report greater body acceptance, others experience distress about visible aging <Citation id="1" index={1} source="Body Image" year="2020" tier={1} />. Cultural ageism intensifies these concerns <Citation id="2" index={2} source="Psychology and Aging" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -358,14 +358,14 @@ export const bodyImageArticlesB: Article[] = [
           steps={[
             { title: 'Reframe Aging as Accumulation, Not Loss', description: <p>Your body holds stories: scars from adventures, laugh lines from joy, strength from endurance. Aging reflects a life lived <Citation id="3" index={3} source="Journal of Women & Aging" year="2020" tier={1} />.</p> },
             { title: `Challenge "Anti-Aging" Language`, description: <p>Reject the framing. You're not fighting your body's natural evolution. Skincare can be self-care without being anti-aging warfare <Citation id="4" index={4} source="Feminist Media Studies" year="2020" tier={1} />.</p> },
-            { title: 'Focus on Function Over Form', description: <p>What can your body still do? Appreciate mobility, sensation, healing—not just appearance. Functional decline is gradual; your body remains capable in many ways.</p> },
+            { title: 'Focus on Function Over Form', description: <p>What can your body still do? Appreciate mobility, sensation, healing---not just appearance. Functional decline is gradual; your body remains capable in many ways.</p> },
             { title: 'Seek Age-Diverse Representation', description: <p>Follow older influencers, watch media featuring diverse ages. Normalize seeing bodies that look like yours.</p> },
-            { title: 'Practice Self-Compassion', description: <p>Treat yourself as you would a friend. You wouldn't judge their wrinkles harshly—extend the same kindness to yourself.</p> },
+            { title: 'Practice Self-Compassion', description: <p>Treat yourself as you would a friend. You wouldn't judge their wrinkles harshly---extend the same kindness to yourself.</p> },
           ]}
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Aging bodies change, and cultural ageism frames these changes as problems. Body image in later life improves when you reject "anti-aging" narratives, honor your body's history, focus on function over appearance, and practice self-compassion. Aging is not a failure—it's evidence of a life lived.</p>
+          <p>Aging bodies change, and cultural ageism frames these changes as problems. Body image in later life improves when you reject "anti-aging" narratives, honor your body's history, focus on function over appearance, and practice self-compassion. Aging is not a failure---it's evidence of a life lived.</p>
         </ArticleCallout>
       </>
     ),
@@ -393,7 +393,7 @@ export const bodyImageArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Children as young as five express body dissatisfaction. By age six, many have internalized cultural beauty standards. Body image forms early, shaped by family messages, peer interactions, and media exposure. Parents and caregivers have profound influence—both protective and harmful—on how children learn to perceive their bodies.
+            Children as young as five express body dissatisfaction. By age six, many have internalized cultural beauty standards. Body image forms early, shaped by family messages, peer interactions, and media exposure. Parents and caregivers have profound influence---both protective and harmful---on how children learn to perceive their bodies.
           </p>
           <p className="mb-6">
             Research shows parental attitudes and behaviors significantly predict child body image <Citation id="2" index={2} source="Body Image" year="2021" tier={1} />. Children observe how adults talk about bodies, food, and appearance, internalizing these patterns <Citation id="5" index={5} source="Eating Behaviors" year="2020" tier={1} />. Prevention starts with mindful modeling.
@@ -443,7 +443,7 @@ export const bodyImageArticlesB: Article[] = [
                   <p className="mb-3"><strong>Avoid commenting on children's bodies or others" appearances.</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Instead of "You're so pretty," say "You're so kind/creative/funny"</li>
-                    <li>Talk about bodies in functional terms: "Your legs are strong—they help you run and jump!"</li>
+                    <li>Talk about bodies in functional terms: "Your legs are strong---they help you run and jump!"</li>
                     <li>Don't comment on weight gain or loss</li>
                     <li>Never tease or criticize a child's appearance, even jokingly</li>
                   </ul>

@@ -1,6 +1,6 @@
  
 // ============================================================================
-// Category 18 — Women's Mental Health | Subcategory 01b
+// Category 18 --- Women's Mental Health | Subcategory 01b
 // Reproductive Mental Health (Articles 6-10)
 // ============================================================================
 
@@ -27,7 +27,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Abortion', 'Reproductive Rights', 'Grief', 'Decision-Making'],
 
-    summary: `Research shows that the most common emotional response after abortion is relief, with over 95% of people reporting they made the right decision years later. Mental health outcomes are influenced more by pre-existing conditions, quality of social support, and abortion access than by the procedure itself. Some experience grief or ambivalence alongside relief—these complex emotions are normal and valid. Evidence-based mental health support focuses on honoring individual experiences without imposing judgment or assumptions about "correct" feelings.`,
+    summary: `Research shows that the most common emotional response after abortion is relief, with over 95% of people reporting they made the right decision years later. Mental health outcomes are influenced more by pre-existing conditions, quality of social support, and abortion access than by the procedure itself. Some experience grief or ambivalence alongside relief---these complex emotions are normal and valid. Evidence-based mental health support focuses on honoring individual experiences without imposing judgment or assumptions about "correct" feelings.`,
 
     keyFacts: [
       {
@@ -39,21 +39,21 @@ export const articles: Article[] = [
         citationIndex: 2,
       },
       {
-        text: `Barriers to abortion access—such as forced waiting periods, financial strain, and stigma—significantly worsen mental health outcomes.`,
+        text: `Barriers to abortion access---such as forced waiting periods, financial strain, and stigma---significantly worsen mental health outcomes.`,
         citationIndex: 3,
       },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The realization that there is no single "correct" emotional response to abortion—grief and relief can coexist, and both are valid reflections of complex human experience rather than signs of pathology or regret.`,
+    sparkMoment: `The realization that there is no single "correct" emotional response to abortion---grief and relief can coexist, and both are valid reflections of complex human experience rather than signs of pathology or regret.`,
 
     practicalExercise: {
       title: `Honoring Your Experience`,
       steps: [
         {
           title: `Acknowledge all emotions`,
-          description: `Name the feelings present without judgment—relief, sadness, guilt, or numbness are all common. Emotions can coexist.`,
+          description: `Name the feelings present without judgment---relief, sadness, guilt, or numbness are all common. Emotions can coexist.`,
         },
         {
           title: `Separate your feelings from stigma`,
@@ -103,10 +103,10 @@ export const articles: Article[] = [
       <>
         <p>
           Maria stared at the ceiling of the recovery room, surprised by the overwhelming sense of
-          calm washing over her. She had braced for devastation—for guilt or regret—but instead
+          calm washing over her. She had braced for devastation---for guilt or regret---but instead
           felt only quiet relief. <Citation index={1} /> Later, when a friend asked if she was
           "okay," Maria struggled to explain that she was more than okay. She had made the right
-          choice for her life. The absence of trauma didn't mean absence of emotion—it meant her
+          choice for her life. The absence of trauma didn't mean absence of emotion---it meant her
           decision aligned with her values and circumstances.
         </p>
 
@@ -121,7 +121,7 @@ export const articles: Article[] = [
           Decades of research consistently show that the most common emotional response to
           abortion is relief. <Citation index={2} /> This finding often surprises people because
           it contradicts cultural narratives about abortion regret. Relief doesn't mean the
-          decision was easy or that no other emotions are present—many people experience complex,
+          decision was easy or that no other emotions are present---many people experience complex,
           layered feelings including sadness for circumstances that led to the decision,
           gratitude for access to care, or grief for what might have been in different life
           conditions.
@@ -138,14 +138,14 @@ export const articles: Article[] = [
         <ArticleCallout
           type="info"
           title="The Evidence on 'Post-Abortion Syndrome'"
-          content="'Post-abortion syndrome' is not a recognized medical or psychiatric diagnosis. Major medical organizations including the American Psychological Association and the American Psychiatric Association have found no scientific evidence for a specific trauma syndrome caused by abortion. This does not invalidate individual experiences of grief or sadness—it means those emotions are not a pathological syndrome but rather normal human responses to complex life circumstances."
+          content="'Post-abortion syndrome' is not a recognized medical or psychiatric diagnosis. Major medical organizations including the American Psychological Association and the American Psychiatric Association have found no scientific evidence for a specific trauma syndrome caused by abortion. This does not invalidate individual experiences of grief or sadness---it means those emotions are not a pathological syndrome but rather normal human responses to complex life circumstances."
         />
 
         <h2>Factors That Influence Mental Health After Abortion</h2>
         <p>
           <Citation index={3} /> Several factors significantly shape emotional well-being
-          following abortion. Barriers to accessing care—such as mandatory waiting periods,
-          forced counseling, lack of nearby providers, or financial obstacles—create measurable
+          following abortion. Barriers to accessing care---such as mandatory waiting periods,
+          forced counseling, lack of nearby providers, or financial obstacles---create measurable
           psychological distress. People who must travel long distances, carry unwanted
           pregnancies longer due to legal restrictions, or face hostile provider environments
           report worse mental health outcomes.
@@ -170,7 +170,7 @@ export const articles: Article[] = [
           Evidence-based mental health support after abortion begins with respecting autonomy
           and honoring individual experiences. Some people need space to grieve, others want to
           move forward immediately, and many experience both. Post-abortion counseling should be
-          available but never mandatory—forcing people into counseling can itself be harmful and
+          available but never mandatory---forcing people into counseling can itself be harmful and
           undermines autonomy.
         </p>
         <p>
@@ -185,7 +185,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="When to Seek Professional Support"
-          content="Consider reaching out to a mental health professional if you experience persistent depression lasting more than two weeks, intrusive thoughts about the abortion that interfere with daily life, suicidal ideation, or worsening of pre-existing mental health conditions. These symptoms indicate a need for support—not that abortion was the wrong decision, but that additional care can help you process complex circumstances."
+          content="Consider reaching out to a mental health professional if you experience persistent depression lasting more than two weeks, intrusive thoughts about the abortion that interfere with daily life, suicidal ideation, or worsening of pre-existing mental health conditions. These symptoms indicate a need for support---not that abortion was the wrong decision, but that additional care can help you process complex circumstances."
         />
       </>
     ),
@@ -226,7 +226,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The understanding that PCOS is not a personal failure but a complex endocrine condition—and that prioritizing mental health is not vanity but essential medical care for a syndrome that affects both body and mind.`,
+    sparkMoment: `The understanding that PCOS is not a personal failure but a complex endocrine condition---and that prioritizing mental health is not vanity but essential medical care for a syndrome that affects both body and mind.`,
 
     practicalExercise: {
       title: `Body Respect Practice for PCOS`,
@@ -287,21 +287,21 @@ export const articles: Article[] = [
           suggestion to "lose weight." <Citation index={1} /> No one asked about the depression
           that had shadowed her since symptoms began, or the hours she spent each week removing
           body hair in shame. When a new endocrinologist finally said, "PCOS affects mental
-          health just as much as physical health—let's address both," Jasmine cried in the exam
+          health just as much as physical health---let's address both," Jasmine cried in the exam
           room. Someone finally saw the whole picture.
         </p>
 
         <StatCard
           value="3-4x"
           label="higher rate of depression in people with PCOS compared to general population"
-          description="This elevated risk persists even when controlling for body weight, indicating that PCOS itself—not just weight concerns—drives mental health burden."
+          description="This elevated risk persists even when controlling for body weight, indicating that PCOS itself---not just weight concerns---drives mental health burden."
         />
 
         <h2>The Psychological Burden of PCOS</h2>
         <p>
           Polycystic ovary syndrome creates mental health challenges through multiple pathways.
-          First, hormonal dysregulation—particularly elevated androgens and insulin
-          resistance—directly affects neurotransmitter function and mood regulation.{' '}
+          First, hormonal dysregulation---particularly elevated androgens and insulin
+          resistance---directly affects neurotransmitter function and mood regulation.{' '}
           <Citation index={2} /> People with PCOS show altered cortisol patterns and chronic
           low-grade inflammation, both of which increase vulnerability to depression and anxiety.
         </p>
@@ -310,8 +310,8 @@ export const articles: Article[] = [
           painful ovarian cysts, persistent acne, hirsutism, thinning scalp hair, and metabolic
           concerns requires constant vigilance. Many describe feeling betrayed by their bodies or
           grieving the easier relationship with their body they see others have. The
-          unpredictability of symptoms—never knowing when a cyst will rupture or when the next
-          period will come—creates ongoing stress.
+          unpredictability of symptoms---never knowing when a cyst will rupture or when the next
+          period will come---creates ongoing stress.
         </p>
 
         <ArticleCallout
@@ -323,8 +323,8 @@ export const articles: Article[] = [
         <h2>Body Image and Identity Challenges</h2>
         <p>
           <Citation index={3} /> Up to 60% of people with PCOS experience clinically significant
-          body image distress. Hirsutism—facial and body hair growth in patterns typically
-          associated with masculinity—challenges gender identity and social belonging for many.
+          body image distress. Hirsutism---facial and body hair growth in patterns typically
+          associated with masculinity---challenges gender identity and social belonging for many.
           The time and expense of hair removal, the fear of being "found out," and internalized
           shame about not meeting feminine beauty standards create persistent psychological
           burden.
@@ -333,7 +333,7 @@ export const articles: Article[] = [
           Weight changes and difficulty losing weight despite significant effort fuel frustration
           and self-blame. The relationship between PCOS and weight is complex: insulin resistance
           makes weight loss more difficult, while excess weight can worsen hormonal imbalance.
-          This creates a cycle where people feel trapped—blamed for a symptom they have limited
+          This creates a cycle where people feel trapped---blamed for a symptom they have limited
           control over. Weight stigma from healthcare providers and society amplifies distress.
         </p>
 
@@ -356,7 +356,7 @@ export const articles: Article[] = [
           negative beliefs about self-worth and body image, acceptance and commitment therapy to
           develop psychological flexibility with symptoms that may not fully resolve, and support
           for managing grief around fertility concerns or altered life timeline. Group support
-          reduces isolation and provides validation that symptoms are real and burdensome—not
+          reduces isolation and provides validation that symptoms are real and burdensome---not
           evidence of personal failure.
         </p>
 
@@ -385,7 +385,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Endometriosis', 'Chronic Pain', 'Medical Trauma', 'Advocacy'],
 
-    summary: `Endometriosis affects approximately 10% of women and people assigned female at birth, causing chronic pelvic pain, painful periods, and fertility challenges. The average diagnostic delay is 7-10 years—a period marked by medical dismissal, invalidation of symptoms, and escalating psychological distress. People with endometriosis experience depression and anxiety rates 2-3 times higher than the general population. Mental health impacts stem from chronic pain burden, repeated medical trauma, disrupted life plans, and the invisible nature of symptoms. Integrated pain management and trauma-informed mental health care improve both physical and psychological outcomes.`,
+    summary: `Endometriosis affects approximately 10% of women and people assigned female at birth, causing chronic pelvic pain, painful periods, and fertility challenges. The average diagnostic delay is 7-10 years---a period marked by medical dismissal, invalidation of symptoms, and escalating psychological distress. People with endometriosis experience depression and anxiety rates 2-3 times higher than the general population. Mental health impacts stem from chronic pain burden, repeated medical trauma, disrupted life plans, and the invisible nature of symptoms. Integrated pain management and trauma-informed mental health care improve both physical and psychological outcomes.`,
 
     keyFacts: [
       {
@@ -404,7 +404,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The validation that years of being told "it's just cramps" or "you're too sensitive" was medical failure, not personal weakness—and that chronic pain is a legitimate reason for psychological support, not evidence that pain is "all in your head."`,
+    sparkMoment: `The validation that years of being told "it's just cramps" or "you're too sensitive" was medical failure, not personal weakness---and that chronic pain is a legitimate reason for psychological support, not evidence that pain is "all in your head."`,
 
     practicalExercise: {
       title: `Pain-Psychology Integration Practice`,
@@ -464,7 +464,7 @@ export const articles: Article[] = [
           time she was finally diagnosed with endometriosis at age 25, she had been to seven
           doctors, missed dozens of workdays, and developed severe anxiety around her menstrual
           cycle. <Citation index={1} /> The depression came not just from pain but from years of
-          having her reality denied—being told she was dramatic, had a low pain threshold, or
+          having her reality denied---being told she was dramatic, had a low pain threshold, or
           needed to "relax." When a specialist finally said, "This level of pain is not normal
           and not your fault," Elena felt both vindication and rage at the lost years.
         </p>
@@ -478,7 +478,7 @@ export const articles: Article[] = [
         <h2>The Psychological Toll of Chronic Pain</h2>
         <p>
           Endometriosis pain is not like typical period discomfort. It can be debilitating,
-          unpredictable, and present throughout the menstrual cycle—not just during menstruation.{' '}
+          unpredictable, and present throughout the menstrual cycle---not just during menstruation.{' '}
           <Citation index={2} /> Chronic pelvic pain affects sleep, concentration, physical
           activity, sexual intimacy, and social participation. The unpredictability of pain
           flares creates hypervigilance and anticipatory anxiety: constantly planning around
@@ -486,7 +486,7 @@ export const articles: Article[] = [
         </p>
         <p>
           Depression in endometriosis is strongly correlated with pain severity, but also with
-          pain-related disability—the degree to which pain disrupts valued activities and roles.
+          pain-related disability---the degree to which pain disrupts valued activities and roles.
           People describe grief for the spontaneous life they've lost, frustration at their
           body's betrayal, and exhaustion from the constant effort of managing symptoms. Chronic
           pain also affects the nervous system over time, potentially increasing pain sensitivity
@@ -496,7 +496,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="warning"
           title="The Trap of Medical Gaslighting"
-          content="Endometriosis symptoms are frequently dismissed as 'normal period pain,' anxiety, or psychosomatic complaints. This medical gaslighting—where legitimate physical symptoms are attributed to psychological causes—constitutes a form of medical trauma. When pain is real but repeatedly invalidated, people begin to doubt their own perception, delaying care-seeking and worsening both physical and mental health outcomes."
+          content="Endometriosis symptoms are frequently dismissed as 'normal period pain,' anxiety, or psychosomatic complaints. This medical gaslighting---where legitimate physical symptoms are attributed to psychological causes---constitutes a form of medical trauma. When pain is real but repeatedly invalidated, people begin to doubt their own perception, delaying care-seeking and worsening both physical and mental health outcomes."
         />
 
         <h2>Fertility Concerns and Life Planning</h2>
@@ -510,8 +510,8 @@ export const articles: Article[] = [
         <p>
           The intersection of chronic pain and fertility concerns creates compound psychological
           burden. Painful intercourse (dyspareunia) affects intimacy and relationships. Decisions
-          about treatment—such as whether to use hormonal suppression that provides pain relief
-          but delays fertility attempts—force impossible trade-offs. Many describe feeling robbed
+          about treatment---such as whether to use hormonal suppression that provides pain relief
+          but delays fertility attempts---force impossible trade-offs. Many describe feeling robbed
           of normal life milestones and forced to make medical decisions before they're ready.
         </p>
 
@@ -541,7 +541,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Finding Appropriate Support"
-          content="Seek mental health professionals who understand chronic pain and medical trauma. Helpful providers validate that pain is real while offering tools to reduce pain-related distress and disability. Avoid providers who suggest pain is caused by stress or that resolving psychological issues will cure endometriosis—this perpetuates harmful mind-body dualism."
+          content="Seek mental health professionals who understand chronic pain and medical trauma. Helpful providers validate that pain is real while offering tools to reduce pain-related distress and disability. Avoid providers who suggest pain is caused by stress or that resolving psychological issues will cure endometriosis---this perpetuates harmful mind-body dualism."
         />
       </>
     ),
@@ -582,7 +582,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The recognition that reproductive coercion is not "relationship conflict" but a form of abuse that violates fundamental human rights to bodily autonomy and self-determination—and that reclaiming reproductive decision-making is an act of resistance and healing.`,
+    sparkMoment: `The recognition that reproductive coercion is not "relationship conflict" but a form of abuse that violates fundamental human rights to bodily autonomy and self-determination---and that reclaiming reproductive decision-making is an act of resistance and healing.`,
 
     practicalExercise: {
       title: `Reproductive Autonomy Assessment`,
@@ -642,7 +642,7 @@ export const articles: Article[] = [
           house. When she confronted him, he called it a joke. <Citation index={1} /> He
           "forgot" condoms during sex, then pressured her to skip emergency contraception because
           "a baby would be good for us." When Nicole became pregnant before she felt ready, he
-          was overjoyed—and she felt trapped. It took months before she could name what had
+          was overjoyed---and she felt trapped. It took months before she could name what had
           happened: reproductive coercion, a violation of her right to decide when and whether to
           become pregnant.
         </p>
@@ -650,7 +650,7 @@ export const articles: Article[] = [
         <StatCard
           value="8-15%"
           label="of women report experiencing reproductive coercion in their lifetime"
-          description="Rates are significantly higher among those experiencing intimate partner violence—up to 35% in some studies—and among young women and marginalized communities."
+          description="Rates are significantly higher among those experiencing intimate partner violence---up to 35% in some studies---and among young women and marginalized communities."
         />
 
         <h2>Understanding Reproductive Coercion</h2>
@@ -676,7 +676,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="warning"
           title="Reproductive Coercion is Abuse"
-          content="Reproductive coercion is not a 'disagreement about family planning' or 'miscommunication about contraception.' It is intimate partner abuse that violates bodily autonomy and reproductive rights. If you cannot make free decisions about if, when, and how to become pregnant or prevent pregnancy, you are experiencing coercion—regardless of whether other forms of abuse are present."
+          content="Reproductive coercion is not a 'disagreement about family planning' or 'miscommunication about contraception.' It is intimate partner abuse that violates bodily autonomy and reproductive rights. If you cannot make free decisions about if, when, and how to become pregnant or prevent pregnancy, you are experiencing coercion---regardless of whether other forms of abuse are present."
         />
 
         <h2>Mental Health Consequences</h2>
@@ -688,7 +688,7 @@ export const articles: Article[] = [
           agency, and complicated feelings about pregnancy or children conceived through coercion.
         </p>
         <p>
-          Reproductive coercion creates what researchers call "reproductive control trauma"—the
+          Reproductive coercion creates what researchers call "reproductive control trauma"---the
           violation of one of the most intimate forms of bodily autonomy. People describe feeling
           that their body was weaponized against them, that pregnancy became a tool of
           entrapment, or that they lost the ability to determine their own life path. When
@@ -745,7 +745,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Body Image', 'Pregnancy', 'Postpartum', 'Self-Compassion'],
 
-    summary: `Reproductive experiences—pregnancy, postpartum recovery, hormonal fluctuations, and aging—significantly impact body image and relationship with one's body. Cultural narratives of "bouncing back," weight stigma in prenatal care, and idealized motherhood imagery create unrealistic expectations and psychological distress. Research shows negative body image during pregnancy predicts postpartum depression, disordered eating, and difficulty with breastfeeding. Body-neutral and body-respect approaches that honor the functional capacity of bodies through reproductive experiences promote better mental health than appearance-focused body positivity.`,
+    summary: `Reproductive experiences---pregnancy, postpartum recovery, hormonal fluctuations, and aging---significantly impact body image and relationship with one's body. Cultural narratives of "bouncing back," weight stigma in prenatal care, and idealized motherhood imagery create unrealistic expectations and psychological distress. Research shows negative body image during pregnancy predicts postpartum depression, disordered eating, and difficulty with breastfeeding. Body-neutral and body-respect approaches that honor the functional capacity of bodies through reproductive experiences promote better mental health than appearance-focused body positivity.`,
 
     keyFacts: [
       {
@@ -764,7 +764,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The shift from "How do I look?" to "What is my body accomplishing?"—recognizing that pregnancy, birth, and postpartum recovery are extraordinary physiological feats worthy of respect, regardless of whether changes meet cultural beauty standards.`,
+    sparkMoment: `The shift from "How do I look?" to "What is my body accomplishing?"---recognizing that pregnancy, birth, and postpartum recovery are extraordinary physiological feats worthy of respect, regardless of whether changes meet cultural beauty standards.`,
 
     practicalExercise: {
       title: `Body Respect Through Reproductive Change`,
@@ -775,7 +775,7 @@ export const articles: Article[] = [
         },
         {
           title: `Challenge "bounce back" narratives`,
-          description: `When you encounter postpartum weight loss messaging, ask: Who benefits from this pressure? Not you, not your baby—often just the diet industry.`,
+          description: `When you encounter postpartum weight loss messaging, ask: Who benefits from this pressure? Not you, not your baby---often just the diet industry.`,
         },
         {
           title: `Practice body-neutral language`,
@@ -824,7 +824,7 @@ export const articles: Article[] = [
           pregnant, but the stretch marks, swollen ankles, and unfamiliar shape felt like failure
           rather than function. <Citation index={1} /> Social media showed glowing pregnant women
           in crop tops; her reality was exhaustion, heartburn, and shame about her changing body.
-          When her midwife asked how she felt, Aisha said "fine"—because admitting body distress
+          When her midwife asked how she felt, Aisha said "fine"---because admitting body distress
           during pregnancy felt ungrateful. Only later, struggling with postpartum depression, did
           she learn that her pregnancy body image predicted her current mental health struggles.
         </p>
@@ -849,8 +849,8 @@ export const articles: Article[] = [
           Prenatal care often exacerbates body image distress through weight-focused
           conversations, unsolicited comments about size ("You're so big!" or "You barely look
           pregnant!"), and inadequate discussion of normal body changes like skin changes,
-          varicose veins, or hair growth. Medical weight stigma—providers focusing excessively on
-          weight or making assumptions about health based on body size—compounds distress,
+          varicose veins, or hair growth. Medical weight stigma---providers focusing excessively on
+          weight or making assumptions about health based on body size---compounds distress,
           particularly for people in larger bodies or those with eating disorder histories.
         </p>
 
@@ -866,7 +866,7 @@ export const articles: Article[] = [
           continued physical changes as the body heals, potential for birth injuries like
           perineal tears or cesarean scars, breastfeeding changes to breast size and shape, sleep
           deprivation affecting skin and appearance, and social pressure to "get your body back."
-          Many describe feeling disconnected from their body—it no longer serves pregnancy, but
+          Many describe feeling disconnected from their body---it no longer serves pregnancy, but
           doesn't yet feel familiar or functional.
         </p>
         <p>
@@ -905,7 +905,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Protecting Body Image During Reproductive Transitions"
-          content="1) Ask providers to share weight only if medically necessary, 2) Set boundaries around body comments from family/friends, 3) Delay clothes shopping until postpartum body stabilizes (usually 6-12 months), 4) Seek mental health support if body image significantly affects mood or functioning, 5) Remember: the timeline for physical recovery is months to years, not weeks—despite what social media suggests."
+          content="1) Ask providers to share weight only if medically necessary, 2) Set boundaries around body comments from family/friends, 3) Delay clothes shopping until postpartum body stabilizes (usually 6-12 months), 4) Seek mental health support if body image significantly affects mood or functioning, 5) Remember: the timeline for physical recovery is months to years, not weeks---despite what social media suggests."
         />
       </>
     ),

@@ -70,7 +70,7 @@ export const seasonalPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            For many people, the winter holidays aren't joyful—they're exhausting, lonely, or triggering. The cultural expectation to feel grateful, festive, and connected creates a painful contrast for those who are grieving, depressed, or isolated. And that contrast can deepen the darkness.
+            For many people, the winter holidays aren't joyful---they're exhausting, lonely, or triggering. The cultural expectation to feel grateful, festive, and connected creates a painful contrast for those who are grieving, depressed, or isolated. And that contrast can deepen the darkness.
           </p>
           <p className="mb-6">
             Holiday depression is real, common, and understandable. This article explores why holidays are so hard for many people and offers practical strategies for getting through them <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2021" tier={3} />.
@@ -95,14 +95,14 @@ export const seasonalPatternsArticlesB: Article[] = [
           2. Grief and Loss
         </h3>
         <p className="mb-6">
-          Holidays magnify the absence of people who are no longer in your life—due to death, divorce, estrangement, or distance. Empty chairs at the table feel emptier when everyone else is celebrating <Citation id="4" index={4} source="American Psychological Association" year="2021" tier={3} />.
+          Holidays magnify the absence of people who are no longer in your life---due to death, divorce, estrangement, or distance. Empty chairs at the table feel emptier when everyone else is celebrating <Citation id="4" index={4} source="American Psychological Association" year="2021" tier={3} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           3. Family Stress
         </h3>
         <p className="mb-6">
-          For some, family gatherings aren't comforting—they're sites of conflict, criticism, old wounds, or dysfunction. Forced togetherness can reactivate painful dynamics.
+          For some, family gatherings aren't comforting---they're sites of conflict, criticism, old wounds, or dysfunction. Forced togetherness can reactivate painful dynamics.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -170,7 +170,7 @@ export const seasonalPatternsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-2">If old traditions feel painful (especially after loss), you don't have to keep doing them.</p>
-                  <p className="mb-2">Create small, new rituals that feel meaningful to you—lighting a candle, watching a favorite movie, volunteering, spending time in nature.</p>
+                  <p className="mb-2">Create small, new rituals that feel meaningful to you---lighting a candle, watching a favorite movie, volunteering, spending time in nature.</p>
                   <p>It's also okay to treat the day like any other day. Not celebrating is a valid choice.</p>
                 </div>
               ),
@@ -182,7 +182,7 @@ export const seasonalPatternsArticlesB: Article[] = [
                 <div>
                   <p className="mb-2">Identify when you're most vulnerable (e.g., being alone on Christmas morning, sitting at a table with a missing loved one) and plan coping strategies in advance.</p>
                   <p className="mb-2">This might mean having a friend on standby to call, scheduling a walk, or giving yourself permission to cry.</p>
-                  <p>Anticipating pain doesn't make it worse—it helps you meet it prepared.</p>
+                  <p>Anticipating pain doesn't make it worse---it helps you meet it prepared.</p>
                 </div>
               ),
             },
@@ -302,10 +302,10 @@ export const seasonalPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A date on the calendar arrives, and suddenly you feel inexplicably sad, anxious, or disconnected—even if you can't immediately remember why. Then it hits you: it's the anniversary of a death, a breakup, a trauma, or another significant loss. Your body remembered, even if your conscious mind didn't.
+            A date on the calendar arrives, and suddenly you feel inexplicably sad, anxious, or disconnected---even if you can't immediately remember why. Then it hits you: it's the anniversary of a death, a breakup, a trauma, or another significant loss. Your body remembered, even if your conscious mind didn't.
           </p>
           <p className="mb-6">
-            These are anniversary reactions—emotional, cognitive, and physical responses triggered by the calendar date of a past event <Citation id="1" index={1} source="Death Studies" year="2019" tier={1} />. This article explains why they happen and how to navigate them with compassion.
+            These are anniversary reactions---emotional, cognitive, and physical responses triggered by the calendar date of a past event <Citation id="1" index={1} source="Death Studies" year="2019" tier={1} />. This article explains why they happen and how to navigate them with compassion.
           </p>
         </div>
 
@@ -313,7 +313,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           What Are Anniversary Reactions?
         </h2>
         <p className="mb-6">
-          An anniversary reaction is a surge of grief, sadness, anxiety, or other difficult emotions that occurs around the anniversary of a significant event—typically a loss, trauma, or ending <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2018" tier={1} />.
+          An anniversary reaction is a surge of grief, sadness, anxiety, or other difficult emotions that occurs around the anniversary of a significant event---typically a loss, trauma, or ending <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Common triggers include:</strong>
@@ -371,7 +371,7 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Anniversary reactions can produce physical symptoms—fatigue, headaches, digestive issues, sleep disturbances—even without conscious emotional awareness. Your body carries the memory <Citation id="4" index={4} source="Psychosomatic Medicine" year="2017" tier={1} />.
+            Anniversary reactions can produce physical symptoms---fatigue, headaches, digestive issues, sleep disturbances---even without conscious emotional awareness. Your body carries the memory <Citation id="4" index={4} source="Psychosomatic Medicine" year="2017" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -445,7 +445,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           When Anniversary Reactions Are Severe
         </h2>
         <p className="mb-6">
-          For some people, especially those with unresolved trauma or complicated grief, anniversary reactions can be debilitating—triggering suicidal thoughts, flashbacks, or severe depression.
+          For some people, especially those with unresolved trauma or complicated grief, anniversary reactions can be debilitating---triggering suicidal thoughts, flashbacks, or severe depression.
         </p>
         <p className="mb-6">
           <strong>Seek professional help if:</strong>
@@ -459,7 +459,7 @@ export const seasonalPatternsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Therapy—especially trauma-focused therapy or grief counseling—can help process what the anniversary is reactivating.
+          Therapy---especially trauma-focused therapy or grief counseling---can help process what the anniversary is reactivating.
         </p>
 
         <h2 id="supporting-someone" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -561,7 +561,7 @@ export const seasonalPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Some people live on a mood roller coaster—not the extreme highs and lows of bipolar disorder, but a persistent, low-grade oscillation between mild depression and mild hypomania. Good weeks followed by bad weeks, with little stability in between. This is cyclothymia.
+            Some people live on a mood roller coaster---not the extreme highs and lows of bipolar disorder, but a persistent, low-grade oscillation between mild depression and mild hypomania. Good weeks followed by bad weeks, with little stability in between. This is cyclothymia.
           </p>
           <p className="mb-6">
             Cyclothymic disorder is a chronic mood condition on the bipolar spectrum, characterized by mood swings that are less severe than bipolar I or II but more persistent and disruptive than normal mood variation <Citation id="1" index={1} source="Bipolar Disorders" year="2019" tier={1} />. This article explains what cyclothymia is, how it's diagnosed, and how it's treated.
@@ -626,7 +626,7 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The key feature of cyclothymia is <strong>chronicity</strong>. It's not occasional mood swings—it's a persistent pattern of fluctuation lasting at least two years, with no more than two months of stable mood.
+            The key feature of cyclothymia is <strong>chronicity</strong>. It's not occasional mood swings---it's a persistent pattern of fluctuation lasting at least two years, with no more than two months of stable mood.
           </p>
         </ArticleCallout>
 
@@ -634,7 +634,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           Who Gets Cyclothymia?
         </h2>
         <p className="mb-6">
-          Cyclothymia affects an estimated 0.4–1% of the population, often beginning in adolescence or early adulthood <Citation id="3" index={3} source="Journal of Affective Disorders" year="2018" tier={1} />. It's equally common in men and women.
+          Cyclothymia affects an estimated 0.4--1% of the population, often beginning in adolescence or early adulthood <Citation id="3" index={3} source="Journal of Affective Disorders" year="2018" tier={1} />. It's equally common in men and women.
         </p>
         <p className="mb-6">
           <strong>Risk factors include:</strong>
@@ -662,7 +662,7 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>Important:</strong> About 15–50% of people with cyclothymia eventually develop full bipolar I or II disorder <Citation id="4" index={4} source="American Journal of Psychiatry" year="2020" tier={1} />. This doesn't mean cyclothymia always progresses, but it underscores the importance of monitoring and treatment.
+            <strong>Important:</strong> About 15--50% of people with cyclothymia eventually develop full bipolar I or II disorder <Citation id="4" index={4} source="American Journal of Psychiatry" year="2020" tier={1} />. This doesn't mean cyclothymia always progresses, but it underscores the importance of monitoring and treatment.
           </p>
         </ArticleCallout>
 
@@ -718,7 +718,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           Living with Cyclothymia
         </h2>
         <p className="mb-6">
-          Cyclothymia can feel exhausting—the constant ups and downs make it hard to trust your own emotions or plan for the future. But with treatment, many people achieve greater stability and quality of life <Citation id="8" index={8} source="Depression and Bipolar Support Alliance" year="2021" tier={3} />.
+          Cyclothymia can feel exhausting---the constant ups and downs make it hard to trust your own emotions or plan for the future. But with treatment, many people achieve greater stability and quality of life <Citation id="8" index={8} source="Depression and Bipolar Support Alliance" year="2021" tier={3} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -802,7 +802,7 @@ export const seasonalPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression distorts your memory. Bad days feel endless, and good moments disappear. Over time, it's easy to lose track of patterns—what makes you feel better, what makes you worse, and whether you're actually improving. Mood tracking creates an objective record that cuts through the fog.
+            Depression distorts your memory. Bad days feel endless, and good moments disappear. Over time, it's easy to lose track of patterns---what makes you feel better, what makes you worse, and whether you're actually improving. Mood tracking creates an objective record that cuts through the fog.
           </p>
           <p className="mb-6">
             Research shows that self-monitoring mood improves treatment outcomes, helps identify triggers, and increases self-awareness <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />. This article explains how to track your mood effectively, what tools to use, and how to interpret the patterns you find.
@@ -834,15 +834,15 @@ export const seasonalPatternsArticlesB: Article[] = [
           What to Track
         </h2>
         <p className="mb-6">
-          The more data points you track, the more patterns you'll see—but start simple. You can always add more later <Citation id="5" index={5} source="American Psychiatric Association" year="2021" tier={3} />.
+          The more data points you track, the more patterns you'll see---but start simple. You can always add more later <Citation id="5" index={5} source="American Psychiatric Association" year="2021" tier={3} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           Core Metrics
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Mood rating (1–10 scale):</strong> How you felt overall that day</li>
-          <li><strong>Energy level (1–10 scale):</strong> Physical and mental energy</li>
+          <li><strong>Mood rating (1--10 scale):</strong> How you felt overall that day</li>
+          <li><strong>Energy level (1--10 scale):</strong> Physical and mental energy</li>
           <li><strong>Sleep hours:</strong> Total sleep time and quality</li>
           <li><strong>Activities:</strong> What you did that day (exercise, social contact, work, hobbies)</li>
         </ul>
@@ -851,7 +851,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           Optional Add-Ons
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Anxiety level (1–10 scale):</strong> If anxiety is a factor for you</li>
+          <li><strong>Anxiety level (1--10 scale):</strong> If anxiety is a factor for you</li>
           <li><strong>Medication adherence:</strong> Did you take your meds as prescribed?</li>
           <li><strong>Substance use:</strong> Alcohol, cannabis, or other substances</li>
           <li><strong>Symptoms:</strong> Specific symptoms like crying, irritability, suicidal thoughts</li>
@@ -931,7 +931,7 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Set a daily reminder:</strong> Same time each day (e.g., before bed) to log your mood</li>
-          <li><strong>Keep it simple:</strong> Don't overwhelm yourself with 20 data points. Start with 3–5.</li>
+          <li><strong>Keep it simple:</strong> Don't overwhelm yourself with 20 data points. Start with 3--5.</li>
           <li><strong>Make it part of a routine:</strong> Pair it with an existing habit (brushing teeth, morning coffee)</li>
           <li><strong>Don't aim for perfection:</strong> If you miss a day, don't quit. Just pick back up.</li>
           <li><strong>Review weekly:</strong> Look at the past week's data to spot patterns. This reinforces the value of tracking.</li>
@@ -941,7 +941,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           How to Interpret Your Mood Data
         </h2>
         <p className="mb-6">
-          After 2–4 weeks of consistent tracking, you'll have enough data to identify patterns <Citation id="3" index={3} source="Bipolar Disorders" year="2018" tier={1} />:
+          After 2--4 weeks of consistent tracking, you'll have enough data to identify patterns <Citation id="3" index={3} source="Bipolar Disorders" year="2018" tier={1} />:
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1086,7 +1086,7 @@ export const seasonalPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Just get more sun and take vitamin D!" If only treating depression were that simple. The relationship between light exposure, vitamin D, and mental health is real—but it's nuanced, and the evidence doesn't support vitamin D as a cure-all for depression.
+            "Just get more sun and take vitamin D!" If only treating depression were that simple. The relationship between light exposure, vitamin D, and mental health is real---but it's nuanced, and the evidence doesn't support vitamin D as a cure-all for depression.
           </p>
           <p className="mb-6">
             This article reviews what research actually shows about light, vitamin D, and mood, separating established science from internet oversimplification <Citation id="1" index={1} source="British Journal of Psychiatry" year="2019" tier={1} />.
@@ -1114,7 +1114,7 @@ export const seasonalPatternsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          This pathway is <strong>independent of vitamin D</strong>. Bright light therapy works for seasonal affective disorder (SAD) not because it raises vitamin D levels (it doesn't—therapeutic light boxes block UV rays), but because it directly affects brain chemistry <Citation id="2" index={2} source="Journal of Affective Disorders" year="2020" tier={1} />.
+          This pathway is <strong>independent of vitamin D</strong>. Bright light therapy works for seasonal affective disorder (SAD) not because it raises vitamin D levels (it doesn't---therapeutic light boxes block UV rays), but because it directly affects brain chemistry <Citation id="2" index={2} source="Journal of Affective Disorders" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1136,7 +1136,7 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Light exposure improves mood primarily through its effects on the brain's circadian system—not through vitamin D. Vitamin D may play a supporting role, but it's not the main mechanism.
+            Light exposure improves mood primarily through its effects on the brain's circadian system---not through vitamin D. Vitamin D may play a supporting role, but it's not the main mechanism.
           </p>
         </ArticleCallout>
 
@@ -1151,7 +1151,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           What the Research Shows
         </h3>
         <p className="mb-6">
-          A 2019 meta-analysis of 61 studies found a small but significant association between low vitamin D levels and increased depression risk <Citation id="1" index={1} source="British Journal of Psychiatry" year="2019" tier={1} />. However, association doesn't prove causation—it's possible that depression causes low vitamin D (due to reduced outdoor activity), rather than the reverse.
+          A 2019 meta-analysis of 61 studies found a small but significant association between low vitamin D levels and increased depression risk <Citation id="1" index={1} source="British Journal of Psychiatry" year="2019" tier={1} />. However, association doesn't prove causation---it's possible that depression causes low vitamin D (due to reduced outdoor activity), rather than the reverse.
         </p>
 
         <p className="mb-6">
@@ -1187,7 +1187,7 @@ export const seasonalPatternsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          But <strong>don't expect it to cure depression</strong>. At best, it may provide a small boost—especially if you were deficient to begin with.
+          But <strong>don't expect it to cure depression</strong>. At best, it may provide a small boost---especially if you were deficient to begin with.
         </p>
 
         <h2 id="light-vs-vitamin-d" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1217,12 +1217,12 @@ export const seasonalPatternsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>For circadian regulation:</strong> 30 minutes of outdoor light exposure in the morning (even on cloudy days)</li>
-          <li><strong>For vitamin D synthesis:</strong> 10–30 minutes of midday sun exposure on bare skin (arms, legs) several times per week (varies by latitude and skin tone)</li>
+          <li><strong>For vitamin D synthesis:</strong> 10--30 minutes of midday sun exposure on bare skin (arms, legs) several times per week (varies by latitude and skin tone)</li>
         </ul>
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>Skin cancer risk is real.</strong> Balance vitamin D production with sun protection. Brief, regular exposure (10–15 minutes) without sunscreen is enough for most people. After that, use sunscreen to prevent skin damage.
+            <strong>Skin cancer risk is real.</strong> Balance vitamin D production with sun protection. Brief, regular exposure (10--15 minutes) without sunscreen is enough for most people. After that, use sunscreen to prevent skin damage.
           </p>
         </ArticleCallout>
 
@@ -1241,7 +1241,7 @@ export const seasonalPatternsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          <strong>Typical dose:</strong> 1,000–2,000 IU daily is generally safe and effective for maintaining normal levels <Citation id="7" index={7} source="Endocrine Society" year="2021" tier={3} />. Higher doses (up to 4,000 IU) may be recommended if you're deficient, but consult a doctor first.
+          <strong>Typical dose:</strong> 1,000--2,000 IU daily is generally safe and effective for maintaining normal levels <Citation id="7" index={7} source="Endocrine Society" year="2021" tier={3} />. Higher doses (up to 4,000 IU) may be recommended if you're deficient, but consult a doctor first.
         </p>
 
         <h2 id="what-works-better" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1252,8 +1252,8 @@ export const seasonalPatternsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Morning light exposure:</strong> Go outside within 30 minutes of waking, even for 10–15 minutes</li>
-          <li><strong>Light therapy (for SAD):</strong> 10,000 lux light box for 20–30 minutes each morning</li>
+          <li><strong>Morning light exposure:</strong> Go outside within 30 minutes of waking, even for 10--15 minutes</li>
+          <li><strong>Light therapy (for SAD):</strong> 10,000 lux light box for 20--30 minutes each morning</li>
           <li><strong>Regular exercise:</strong> More effective than vitamin D for reducing depressive symptoms</li>
           <li><strong>Psychotherapy (CBT, IPT):</strong> Evidence-based talk therapy</li>
           <li><strong>Antidepressant medication:</strong> If recommended by a provider</li>
@@ -1263,7 +1263,7 @@ export const seasonalPatternsArticlesB: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Light exposure—especially morning sunlight—has robust evidence for improving mood. Vitamin D plays a supporting role, and supplementation may help if you're deficient. But vitamin D is not a depression cure, and taking it won't replace evidence-based treatments like therapy, medication, or lifestyle changes.
+          Light exposure---especially morning sunlight---has robust evidence for improving mood. Vitamin D plays a supporting role, and supplementation may help if you're deficient. But vitamin D is not a depression cure, and taking it won't replace evidence-based treatments like therapy, medication, or lifestyle changes.
         </p>
         <p className="mb-6">
           If you're considering vitamin D supplementation for depression, get your levels tested first and talk to a healthcare provider. Don't rely on supplements alone to manage mental health.

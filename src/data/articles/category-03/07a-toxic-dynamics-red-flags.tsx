@@ -94,7 +94,7 @@ export const toxicDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Toxic relationships don't always announce themselves with obvious abuse. More often, they creep in gradually—subtle control disguised as care, manipulation framed as love, boundary violations normalized as intimacy. Learning to recognize these patterns is essential for protecting your mental health and wellbeing.
+            Toxic relationships don't always announce themselves with obvious abuse. More often, they creep in gradually---subtle control disguised as care, manipulation framed as love, boundary violations normalized as intimacy. Learning to recognize these patterns is essential for protecting your mental health and wellbeing.
           </p>
           <p className="mb-6">
             Research shows that emotional and psychological abuse can be as damaging as physical violence, yet it's often harder to identify because there are no visible bruises <Citation id="4" index={4} source="Journal of Emotional Abuse" year="2017" tier={1} />. Understanding the research-backed markers of toxicity helps you distinguish between relationship challenges (which all relationships have) and patterns that are fundamentally harmful.
@@ -105,7 +105,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           What Makes a Relationship "Toxic"?
         </h2>
         <p className="mb-6">
-          Not every conflict or difficult moment indicates toxicity. A toxic relationship is one where interactions consistently leave one or both people feeling worse—diminished, controlled, anxious, or unsafe <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />. Key markers include:
+          Not every conflict or difficult moment indicates toxicity. A toxic relationship is one where interactions consistently leave one or both people feeling worse---diminished, controlled, anxious, or unsafe <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />. Key markers include:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -142,7 +142,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    One partner dictates what the other wears, who they see, where they go, how they spend money, or what they think <Citation id="5" index={5} source="Violence and Victims" year="2021" tier={1} />. This often escalates gradually—starting with "helpful" suggestions that become demands.
+                    One partner dictates what the other wears, who they see, where they go, how they spend money, or what they think <Citation id="5" index={5} source="Violence and Victims" year="2021" tier={1} />. This often escalates gradually---starting with "helpful" suggestions that become demands.
                   </p>
                   <p>
                     <strong>Examples</strong>: Monitoring your phone, requiring check-ins throughout the day, forbidding certain friendships, controlling finances, deciding unilaterally where you live or work.
@@ -314,7 +314,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           The Health Toll of Toxicity
         </h2>
         <p className="mb-6">
-          Toxic relationships don't just feel bad—they cause measurable harm <Citation id="8" index={8} source="American Journal of Preventive Medicine" year="2019" tier={1} />:
+          Toxic relationships don't just feel bad---they cause measurable harm <Citation id="8" index={8} source="American Journal of Preventive Medicine" year="2019" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -356,7 +356,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               title: '3. Reach Out Privately',
               description: (
                 <p>
-                  Talk to someone you trust—friend, family member, therapist, hotline counselor. Breaking the silence reduces shame and isolation.
+                  Talk to someone you trust---friend, family member, therapist, hotline counselor. Breaking the silence reduces shame and isolation.
                 </p>
               ),
             },
@@ -493,7 +493,7 @@ export const toxicDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Emotional manipulation is psychological warfare disguised as love. It rewrites your reality, erodes your self-trust, and keeps you tethered to someone who harms you. Understanding the specific tactics—gaslighting, love-bombing, DARVO, triangulation—is essential for recognizing when you're being manipulated and reclaiming your sense of reality.
+            Emotional manipulation is psychological warfare disguised as love. It rewrites your reality, erodes your self-trust, and keeps you tethered to someone who harms you. Understanding the specific tactics---gaslighting, love-bombing, DARVO, triangulation---is essential for recognizing when you're being manipulated and reclaiming your sense of reality.
           </p>
           <p className="mb-6">
             Research shows that psychological manipulation can cause trauma symptoms as severe as physical abuse, including PTSD, depression, and anxiety <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} />. The insidious part? Manipulators convince you that your perception is the problem, not their behavior.
@@ -530,7 +530,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Gaslighting creates cognitive dissonance—the discomfort of holding two conflicting beliefs <Citation id="6" index={6} source="Journal of Traumatic Stress" year="2020" tier={1} />. Your experience says "This happened," but someone you love/trust says "No it didn't."
+                    Gaslighting creates cognitive dissonance---the discomfort of holding two conflicting beliefs <Citation id="6" index={6} source="Journal of Traumatic Stress" year="2020" tier={1} />. Your experience says "This happened," but someone you love/trust says "No it didn't."
                   </p>
                   <p className="mb-4">
                     To resolve the dissonance, many people doubt themselves rather than the gaslighter. Over time, this erodes self-trust to the point where you rely on the abuser to tell you what's real.
@@ -544,7 +544,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               content: (
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Document everything</strong>: Keep a private journal, screenshot messages, save emails. External evidence combats memory manipulation.</li>
-                  <li><strong>Trust your gut</strong>: If something feels wrong, it probably is—even if they say you're imagining it.</li>
+                  <li><strong>Trust your gut</strong>: If something feels wrong, it probably is---even if they say you're imagining it.</li>
                   <li><strong>Seek outside perspective</strong>: Talk to trusted friends or a therapist who can validate your reality.</li>
                   <li><strong>Rebuild self-trust</strong>: Practice listening to your own instincts in small decisions first.</li>
                 </ul>
@@ -557,7 +557,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           Love-Bombing: Overwhelming Affection as Control
         </h2>
         <p className="mb-6">
-          Love-bombing is excessive, intense affection early in a relationship designed to create fast attachment and dependency <Citation id="2" index={2} source="Personality and Individual Differences" year="2021" tier={1} />. It feels amazing at first—finally, someone who "gets you"—but it's a manipulation tactic.
+          Love-bombing is excessive, intense affection early in a relationship designed to create fast attachment and dependency <Citation id="2" index={2} source="Personality and Individual Differences" year="2021" tier={1} />. It feels amazing at first---finally, someone who "gets you"---but it's a manipulation tactic.
         </p>
 
         <BeforeAfter
@@ -744,7 +744,7 @@ export const toxicDynamicsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>Trust your discomfort</strong>: Manipulation creates a specific feeling—confusion, self-doubt, walking on eggshells, constant anxiety. If something feels "off" in a relationship, that feeling is data. Don't dismiss it.
+            <strong>Trust your discomfort</strong>: Manipulation creates a specific feeling---confusion, self-doubt, walking on eggshells, constant anxiety. If something feels "off" in a relationship, that feeling is data. Don't dismiss it.
           </p>
         </ArticleCallout>
 
@@ -760,7 +760,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           <li><strong>Stop defending yourself</strong>: You don't owe manipulators explanations or justifications. 'No' is a complete sentence.</li>
           <li><strong>Document interactions</strong>: Keep records to counteract gaslighting and provide evidence if needed legally or for therapy.</li>
           <li><strong>Set firm boundaries</strong>: "I'm not discussing this,", "I need space," and enforce them even when guilt-tripped.</li>
-          <li><strong>Seek outside support</strong>: Therapist, support group, trusted friends—people who can validate your reality.</li>
+          <li><strong>Seek outside support</strong>: Therapist, support group, trusted friends---people who can validate your reality.</li>
           <li><strong>Plan your exit safely</strong>: If leaving, do so with support and a safety plan, especially if there's any risk of retaliation.</li>
           <li><strong>Expect hoovering</strong>: Manipulators often try to pull you back in with apologies, promises, or love-bombing. Stay strong.</li>
         </ol>
@@ -867,10 +867,10 @@ export const toxicDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You pour yourself into others—fixing their problems, managing their emotions, sacrificing your needs to keep the peace. It feels like love, like being a good person. But underneath, you're exhausted, resentful, and losing yourself. This is codependency: when caring for others becomes compulsive and comes at the cost of your own wellbeing.
+            You pour yourself into others---fixing their problems, managing their emotions, sacrificing your needs to keep the peace. It feels like love, like being a good person. But underneath, you're exhausted, resentful, and losing yourself. This is codependency: when caring for others becomes compulsive and comes at the cost of your own wellbeing.
           </p>
           <p className="mb-6">
-            Codependency isn't about being kind or supportive—those are healthy traits. It's about deriving your entire sense of worth from being needed by others, often to the point of enabling destructive behavior or neglecting yourself <Citation id="1" index={1} source="Journal of Psychoactive Drugs" year="2018" tier={1} />. Understanding the difference between healthy helping and codependent patterns is essential for building relationships where both people can thrive.
+            Codependency isn't about being kind or supportive---those are healthy traits. It's about deriving your entire sense of worth from being needed by others, often to the point of enabling destructive behavior or neglecting yourself <Citation id="1" index={1} source="Journal of Psychoactive Drugs" year="2018" tier={1} />. Understanding the difference between healthy helping and codependent patterns is essential for building relationships where both people can thrive.
           </p>
         </div>
 
@@ -885,7 +885,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           <li>One or both parents had addiction, mental illness, or abusive behavior</li>
           <li>Emotional needs were ignored or invalidated</li>
           <li>You had to be the "caretaker," managing adult problems as a child</li>
-          <li>Love was conditional—you had to earn it by being "good" or helpful</li>
+          <li>Love was conditional---you had to earn it by being "good" or helpful</li>
           <li>Expressing needs was punished or led to abandonment</li>
         </ul>
 
@@ -1063,15 +1063,15 @@ export const toxicDynamicsArticlesA: Article[] = [
           For the Person Being "Helped"
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Stunted growth—no motivation to change if someone always rescues you</li>
-          <li>Learned helplessness—believing you can't solve your own problems</li>
+          <li>Stunted growth---no motivation to change if someone always rescues you</li>
+          <li>Learned helplessness---believing you can't solve your own problems</li>
           <li>Guilt and obligation instead of genuine connection</li>
           <li>Dependency that prevents autonomy</li>
           <li>Enabled destructive behaviors (addiction, irresponsibility)</li>
         </ul>
 
         <p className="mb-6">
-          Codependency masquerades as love, but it's actually fear—fear of abandonment, fear of not being enough, fear of being alone. Real love allows both people to be whole, flawed, and responsible for themselves.
+          Codependency masquerades as love, but it's actually fear---fear of abandonment, fear of not being enough, fear of being alone. Real love allows both people to be whole, flawed, and responsible for themselves.
         </p>
 
         <h2 id="breaking-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1088,7 +1088,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               title: '1. Acknowledge the Pattern',
               description: (
                 <p>
-                  Recognize that you're codependent. This isn't about being a bad person—it's about learned patterns from childhood or past relationships that no longer serve you.
+                  Recognize that you're codependent. This isn't about being a bad person---it's about learned patterns from childhood or past relationships that no longer serve you.
                 </p>
               ),
             },
@@ -1096,7 +1096,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               title: '2. Learn to Set Boundaries',
               description: (
                 <p>
-                  Start small: say 'no' to one request this week. Notice the discomfort—guilt, anxiety, fear—and sit with it without giving in. Boundaries get easier with practice <Citation id="7" index={7} source="Journal of Mental Health Counseling" year="2020" tier={1} />.
+                  Start small: say 'no' to one request this week. Notice the discomfort---guilt, anxiety, fear---and sit with it without giving in. Boundaries get easier with practice <Citation id="7" index={7} source="Journal of Mental Health Counseling" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -1137,7 +1137,7 @@ export const toxicDynamicsArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p className="mb-4">
-            <strong>Expect discomfort</strong>: When you start setting boundaries, codependent relationships will resist. People used to your compliance will push back. This doesn't mean you're wrong—it means the dynamic is changing. Stay consistent.
+            <strong>Expect discomfort</strong>: When you start setting boundaries, codependent relationships will resist. People used to your compliance will push back. This doesn't mean you're wrong---it means the dynamic is changing. Stay consistent.
           </p>
         </ArticleCallout>
 
@@ -1145,7 +1145,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           From Codependency to Healthy Interdependence
         </h2>
         <p className="mb-6">
-          The goal isn't complete independence (humans need connection)—it's interdependence:
+          The goal isn't complete independence (humans need connection)---it's interdependence:
         </p>
 
         <BeforeAfter
@@ -1210,7 +1210,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Healing from codependency is about reclaiming yourself—your needs, your boundaries, your worth. You can learn to love without losing yourself in the process.
+          Healing from codependency is about reclaiming yourself---your needs, your boundaries, your worth. You can learn to love without losing yourself in the process.
         </p>
       </>
     ),
@@ -1297,7 +1297,7 @@ export const toxicDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            At first, they made you feel like the most special person in the world. Now, you walk on eggshells, doubt your own reality, and feel like you can never do anything right. Welcome to the narcissistic relationship cycle—a predictable pattern of idealization, devaluation, and discard that leaves survivors questioning their sanity and self-worth.
+            At first, they made you feel like the most special person in the world. Now, you walk on eggshells, doubt your own reality, and feel like you can never do anything right. Welcome to the narcissistic relationship cycle---a predictable pattern of idealization, devaluation, and discard that leaves survivors questioning their sanity and self-worth.
           </p>
           <p className="mb-6">
             Being in a relationship with someone who has narcissistic traits (or clinical Narcissistic Personality Disorder) creates specific forms of psychological harm that are difficult to understand from the outside <Citation id="3" index={3} source="Journal of Trauma & Dissociation" year="2021" tier={1} />. This article describes what narcissistic abuse looks and feels like from the inside, so you can recognize it and begin to heal.
@@ -1314,7 +1314,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Grandiose narcissism</strong>: Overt arrogance, need for admiration, entitlement, lack of empathy, exploitative behavior</li>
           <li><strong>Vulnerable narcissism</strong>: Hidden under insecurity and victimhood, but equally self-focused and manipulative</li>
-          <li><strong>Malignant narcissism</strong>: Narcissism plus antisocial traits, sadism, paranoia—the most dangerous form</li>
+          <li><strong>Malignant narcissism</strong>: Narcissism plus antisocial traits, sadism, paranoia---the most dangerous form</li>
         </ul>
 
         <p className="mb-6">
@@ -1342,7 +1342,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">
-                    Intense attention, flattery, and affection designed to hook you emotionally. You feel like you've found your soulmate—someone who finally "gets" you.
+                    Intense attention, flattery, and affection designed to hook you emotionally. You feel like you've found your soulmate---someone who finally "gets" you.
                   </p>
                   <p className="mb-4">
                     <strong>What it looks like</strong>:
@@ -1374,7 +1374,7 @@ export const toxicDynamicsArticlesA: Article[] = [
                     <li>Constant criticism: nothing you do is good enough</li>
                     <li>Gaslighting: denying things they said or did, making you question reality</li>
                     <li>Silent treatment as punishment for perceived slights</li>
-                    <li>Comparison to others: exes, friends, strangers—you always fall short</li>
+                    <li>Comparison to others: exes, friends, strangers---you always fall short</li>
                     <li>Triangulation: flirting with others to make you jealous and insecure</li>
                     <li>Sudden rage over minor issues, then blaming you for "making them" angry</li>
                   </ul>
@@ -1389,7 +1389,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">
-                    When they've extracted what they need (admiration, resources, control) or found a new "supply," they discard you—often cruelly and without closure.
+                    When they've extracted what they need (admiration, resources, control) or found a new "supply," they discard you---often cruelly and without closure.
                   </p>
                   <p className="mb-4">
                     <strong>What it looks like</strong>:
@@ -1399,7 +1399,7 @@ export const toxicDynamicsArticlesA: Article[] = [
                     <li>Blaming you entirely for the relationship's failure</li>
                     <li>Moving on immediately to someone new (often overlapping)</li>
                     <li>Smear campaign: telling others you're 'crazy," abusive, or unstable</li>
-                    <li>Complete emotional detachment—you're now a non-person to them</li>
+                    <li>Complete emotional detachment---you're now a non-person to them</li>
                   </ul>
                   <p className="mt-4">
                     <strong>What's really happening</strong>: You've served your purpose. Narcissists don't experience genuine attachment, so they can discard people without remorse.
@@ -1412,7 +1412,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">
-                    Named after the vacuum brand, "hoovering" is when they try to suck you back in after discarding you—usually when their new supply doesn't work out.
+                    Named after the vacuum brand, "hoovering" is when they try to suck you back in after discarding you---usually when their new supply doesn't work out.
                   </p>
                   <p className="mb-4">
                     <strong>What it looks like</strong>:
@@ -1424,7 +1424,7 @@ export const toxicDynamicsArticlesA: Article[] = [
                     <li>Playing the victim: "I'm struggling without you,", "No one understands me like you do"</li>
                   </ul>
                   <p className="mt-4">
-                    <strong>What's really happening</strong>: They need a new supply source or ego boost. If you go back, the cycle repeats—usually faster and more intensely.
+                    <strong>What's really happening</strong>: They need a new supply source or ego boost. If you go back, the cycle repeats---usually faster and more intensely.
                   </p>
                 </div>
               ),
@@ -1452,7 +1452,7 @@ export const toxicDynamicsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>You're not crazy</strong>: The confusion, self-doubt, and difficulty leaving are normal responses to abnormal, abusive behavior. Narcissistic abuse is designed to make you feel crazy—that's how it maintains control.
+            <strong>You're not crazy</strong>: The confusion, self-doubt, and difficulty leaving are normal responses to abnormal, abusive behavior. Narcissistic abuse is designed to make you feel crazy---that's how it maintains control.
           </p>
         </ArticleCallout>
 
@@ -1545,10 +1545,10 @@ export const toxicDynamicsArticlesA: Article[] = [
           <li><strong>Go no-contact</strong>: Any contact reopens the wound and gives them opportunity to hoover. Block everywhere.</li>
           <li><strong>Educate yourself</strong>: Understanding narcissistic patterns helps you see it wasn't your fault and prevents future relationships with narcissists.</li>
           <li><strong>Seek specialized therapy</strong>: Therapists trained in narcissistic abuse recovery or complex PTSD can help you process the trauma.</li>
-          <li><strong>Rebuild your identity</strong>: Rediscover who you are outside the relationship—your interests, values, friendships.</li>
+          <li><strong>Rebuild your identity</strong>: Rediscover who you are outside the relationship---your interests, values, friendships.</li>
           <li><strong>Grieve</strong>: Mourn the person you thought they were, even though that person never truly existed.</li>
           <li><strong>Join support groups</strong>: Connecting with other survivors validates your experience and reduces isolation.</li>
-          <li><strong>Expect setbacks</strong>: Healing isn't linear. Hoovering attempts, trauma anniversaries, or seeing them with new supply can trigger you—that's normal.</li>
+          <li><strong>Expect setbacks</strong>: Healing isn't linear. Hoovering attempts, trauma anniversaries, or seeing them with new supply can trigger you---that's normal.</li>
         </ol>
 
         <ArticleCallout variant="warning">
@@ -1694,7 +1694,7 @@ export const toxicDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know the relationship is bad for you. Your friends see it, your family sees it, you see it. Yet you can't leave. Every time you try, you feel pulled back—not just emotionally, but almost physically. This isn't weakness. This is trauma bonding: a powerful psychological and neurobiological attachment to someone who harms you, created by cycles of abuse and intermittent reinforcement.
+            You know the relationship is bad for you. Your friends see it, your family sees it, you see it. Yet you can't leave. Every time you try, you feel pulled back---not just emotionally, but almost physically. This isn't weakness. This is trauma bonding: a powerful psychological and neurobiological attachment to someone who harms you, created by cycles of abuse and intermittent reinforcement.
           </p>
           <p className="mb-6">
             Trauma bonds form when someone alternates between abuse and kindness, creating an addictive pattern that's stronger than bonds formed in healthy relationships <Citation id="1" index={1} source="Trauma, Violence, & Abuse" year="2019" tier={1} />. Understanding the science behind why you're stuck is the first step toward breaking free.
@@ -1732,7 +1732,7 @@ export const toxicDynamicsArticlesA: Article[] = [
           The Neuroscience: Why Your Brain Gets Addicted
         </h2>
         <p className="mb-6">
-          Trauma bonds aren't just emotional—they're neurobiological <Citation id="4" index={4} source="Psychoneuroendocrinology" year="2021" tier={1} />:
+          Trauma bonds aren't just emotional---they're neurobiological <Citation id="4" index={4} source="Psychoneuroendocrinology" year="2021" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -1744,10 +1744,10 @@ export const toxicDynamicsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Unpredictable rewards (affection after cruelty) trigger more dopamine than consistent rewards <Citation id="2" index={2} source="Journal of Experimental Psychology" year="2018" tier={1} />. This is why gambling is addictive—and why abusive relationships hook you.
+                    Unpredictable rewards (affection after cruelty) trigger more dopamine than consistent rewards <Citation id="2" index={2} source="Journal of Experimental Psychology" year="2018" tier={1} />. This is why gambling is addictive---and why abusive relationships hook you.
                   </p>
                   <p className="mb-4">
-                    When your partner is occasionally kind after long periods of cruelty, your brain releases a flood of dopamine (the "reward" chemical). This creates cravings for the next "fix"—the next moment of kindness.
+                    When your partner is occasionally kind after long periods of cruelty, your brain releases a flood of dopamine (the "reward" chemical). This creates cravings for the next "fix"---the next moment of kindness.
                   </p>
                   <p>
                     <strong>Result</strong>: You become addicted to the cycle, constantly chasing the high of their approval.
@@ -1761,7 +1761,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Oxytocin (the "bonding hormone") releases during intimate moments, sex, and even reconciliation after conflict. In abusive relationships, the make-up phase triggers oxytocin, which strengthens attachment—even to someone harmful.
+                    Oxytocin (the "bonding hormone") releases during intimate moments, sex, and even reconciliation after conflict. In abusive relationships, the make-up phase triggers oxytocin, which strengthens attachment---even to someone harmful.
                   </p>
                   <p>
                     Your body doesn't distinguish between healthy and unhealthy attachment. The chemistry is the same.
@@ -1877,7 +1877,7 @@ export const toxicDynamicsArticlesA: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Sunk cost fallacy</strong>: "I've invested so much, I can't give up now"</li>
-          <li><strong>Fear of retaliation</strong>: Abusers often escalate when you try to leave—threats, stalking, violence</li>
+          <li><strong>Fear of retaliation</strong>: Abusers often escalate when you try to leave---threats, stalking, violence</li>
           <li><strong>Financial dependence</strong>: No access to money, housing, or resources</li>
           <li><strong>Children</strong>: Fear of custody battles or putting kids through trauma</li>
           <li><strong>Isolation</strong>: No support system left to turn to</li>
@@ -1940,7 +1940,7 @@ export const toxicDynamicsArticlesA: Article[] = [
               title: '6. Document the Reality',
               description: (
                 <p>
-                  Keep a journal of abuse incidents. When you're tempted to go back, read it. Your memory will minimize the bad and amplify the good—written records counteract this.
+                  Keep a journal of abuse incidents. When you're tempted to go back, read it. Your memory will minimize the bad and amplify the good---written records counteract this.
                 </p>
               ),
             },
@@ -1980,7 +1980,7 @@ export const toxicDynamicsArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p className="mb-4">
-            <strong>Healing isn't linear</strong>: You'll have good days and terrible days. Trauma anniversaries, seeing them with someone new, or stress can trigger setbacks. This doesn't mean you're failing—it means you're healing from something significant.
+            <strong>Healing isn't linear</strong>: You'll have good days and terrible days. Trauma anniversaries, seeing them with someone new, or stress can trigger setbacks. This doesn't mean you're failing---it means you're healing from something significant.
           </p>
         </ArticleCallout>
 
@@ -2001,7 +2001,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          If you notice these patterns, slow down. Healthy love builds gradually, with consistency and respect—not through intensity and chaos.
+          If you notice these patterns, slow down. Healthy love builds gradually, with consistency and respect---not through intensity and chaos.
         </p>
 
         <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2036,7 +2036,7 @@ export const toxicDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Breaking a trauma bond is one of the hardest things you'll ever do. But on the other side is freedom—the ability to trust yourself, to choose relationships that honor you, and to reclaim the life that abuse stole. You deserve that life.
+          Breaking a trauma bond is one of the hardest things you'll ever do. But on the other side is freedom---the ability to trust yourself, to choose relationships that honor you, and to reclaim the life that abuse stole. You deserve that life.
         </p>
       </>
     ),

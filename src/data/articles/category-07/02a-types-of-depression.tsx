@@ -19,7 +19,7 @@ export const typesOfDepressionArticlesA: Article[] = [
     id: catId(11),
     slug: 'major-depressive-disorder-clinical-depression',
     title: 'Major Depressive Disorder: The Condition Behind Clinical Depression',
-    description: 'Comprehensive guide to major depressive disorder—diagnostic criteria, symptoms, course, treatment, and what makes clinical depression different from sadness.',
+    description: 'Comprehensive guide to major depressive disorder---diagnostic criteria, symptoms, course, treatment, and what makes clinical depression different from sadness.',
     image: "/images/articles/cat07/cover-011.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 12,
@@ -113,10 +113,10 @@ export const typesOfDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When someone says they have "clinical depression, ' they're usually referring to Major Depressive Disorder (MDD)—the most common and well-studied form of depression. It's distinct from other types of depression in its severity, duration, and the specific symptoms required for diagnosis.
+            When someone says they have "clinical depression, ' they're usually referring to Major Depressive Disorder (MDD)---the most common and well-studied form of depression. It's distinct from other types of depression in its severity, duration, and the specific symptoms required for diagnosis.
           </p>
           <p className="mb-6">
-            Major Depressive Disorder affects approximately 7% of adults in any given year, with lifetime prevalence around 20% <Citation id="10" index={10} source="National Institute of Mental Health" year="2023" tier={2} />. Understanding MDD is crucial because it's highly treatable, yet often goes unrecognized or untreated—with significant consequences for health, relationships, and quality of life <Citation id="2" index={2} source="JAMA" year="2020" tier={1} />.
+            Major Depressive Disorder affects approximately 7% of adults in any given year, with lifetime prevalence around 20% <Citation id="10" index={10} source="National Institute of Mental Health" year="2023" tier={2} />. Understanding MDD is crucial because it's highly treatable, yet often goes unrecognized or untreated---with significant consequences for health, relationships, and quality of life <Citation id="2" index={2} source="JAMA" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Note that you don't need all nine symptoms—five is the threshold, and those five must include either depressed mood or anhedonia. The specific combination varies between individuals.
+          Note that you don't need all nine symptoms---five is the threshold, and those five must include either depressed mood or anhedonia. The specific combination varies between individuals.
         </p>
 
         <h2 id="severity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -286,7 +286,7 @@ export const typesOfDepressionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Depressed mood:</strong> Not just sadness but a pervasive emptiness, heaviness, or hopelessness that colors everything. Some describe it as emotional numbness or feeling dead inside.</p>
-                  <p className="mb-4"><strong>Anhedonia:</strong> The inability to feel pleasure is often more disabling than sadness. Activities that used to bring joy—hobbies, sex, time with loved ones—feel flat and pointless. You go through the motions without genuine enjoyment.</p>
+                  <p className="mb-4"><strong>Anhedonia:</strong> The inability to feel pleasure is often more disabling than sadness. Activities that used to bring joy---hobbies, sex, time with loved ones---feel flat and pointless. You go through the motions without genuine enjoyment.</p>
                   <p className="mb-4"><strong>Guilt and worthlessness:</strong> Not proportional self-criticism but pervasive, often delusional beliefs about being fundamentally flawed, a burden, or deserving of suffering.</p>
                 </div>
               ),
@@ -297,7 +297,7 @@ export const typesOfDepressionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Concentration problems:</strong> Reading the same paragraph five times, zoning out during conversations, inability to follow TV shows or complex tasks <Citation id="9" index={9} source="CNS Drugs" year="2020" tier={1} />.</p>
-                  <p className="mb-4"><strong>Decision paralysis:</strong> Even trivial choices feel overwhelming. What to wear, what to eat, which email to answer—all require energy you don't have.</p>
+                  <p className="mb-4"><strong>Decision paralysis:</strong> Even trivial choices feel overwhelming. What to wear, what to eat, which email to answer---all require energy you don't have.</p>
                   <p className="mb-4"><strong>Memory impairment:</strong> Forgetting recent conversations, appointments, or what you did yesterday. Short-term memory feels unreliable.</p>
                   <p className="mb-4"><strong>Negative thinking patterns:</strong> Automatic thoughts of hopelessness, self-blame, and pessimism about the future. Cognitive distortions become pervasive.</p>
                 </div>
@@ -312,7 +312,7 @@ export const typesOfDepressionArticlesA: Article[] = [
                   <p className="mb-4"><strong>Sleep disturbance:</strong> Insomnia (especially early morning awakening), hypersomnia (sleeping 12+ hours but never feeling rested), or disrupted sleep architecture.</p>
                   <p className="mb-4"><strong>Appetite/weight changes:</strong> Either significant loss of appetite and weight, or increased eating (especially comfort foods) and weight gain.</p>
                   <p className="mb-4"><strong>Psychomotor changes:</strong> Either agitation (restlessness, inability to sit still, pacing) or retardation (moving in slow motion, delayed speech, prolonged pauses).</p>
-                  <p className="mb-4"><strong>Physical pain:</strong> Unexplained aches, headaches, digestive problems—depression often manifests physically.</p>
+                  <p className="mb-4"><strong>Physical pain:</strong> Unexplained aches, headaches, digestive problems---depression often manifests physically.</p>
                 </div>
               ),
             },
@@ -501,8 +501,8 @@ export const typesOfDepressionArticlesA: Article[] = [
             title: 'First-Line Treatments',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li><strong>Psychotherapy:</strong> Cognitive Behavioral Therapy (CBT), Interpersonal Therapy (IPT), Behavioral Activation—all with strong evidence</li>
-                <li><strong>Antidepressant medication:</strong> SSRIs, SNRIs, other classes—effective in 50-70% of patients</li>
+                <li><strong>Psychotherapy:</strong> Cognitive Behavioral Therapy (CBT), Interpersonal Therapy (IPT), Behavioral Activation---all with strong evidence</li>
+                <li><strong>Antidepressant medication:</strong> SSRIs, SNRIs, other classes---effective in 50-70% of patients</li>
                 <li><strong>Combination:</strong> Therapy + medication often more effective than either alone, especially for moderate-severe depression</li>
               </ul>
             ),
@@ -572,7 +572,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          If you recognize yourself in this description of MDD, you're not alone, and help is available. The first step is reaching out to a healthcare provider for evaluation. Depression lies when it tells you nothing will help—that's a symptom, not reality. Treatment works, recovery is possible, and there's hope for a life beyond depression.
+          If you recognize yourself in this description of MDD, you're not alone, and help is available. The first step is reaching out to a healthcare provider for evaluation. Depression lies when it tells you nothing will help---that's a symptom, not reality. Treatment works, recovery is possible, and there's hope for a life beyond depression.
         </p>
       </>
     ),
@@ -668,10 +668,10 @@ export const typesOfDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imagine waking up with a low-level sense of sadness, fatigue, and hopelessness—not just today, but every day for years. Not severe enough to be completely incapacitating, but persistent enough that you can barely remember what it feels like to be genuinely happy. This is persistent depressive disorder, formerly known as dysthymia.
+            Imagine waking up with a low-level sense of sadness, fatigue, and hopelessness---not just today, but every day for years. Not severe enough to be completely incapacitating, but persistent enough that you can barely remember what it feels like to be genuinely happy. This is persistent depressive disorder, formerly known as dysthymia.
           </p>
           <p className="mb-6">
-            Persistent Depressive Disorder (PDD) is chronic, low-grade depression that lasts for at least two years in adults (one year in children/adolescents). While less severe than major depression at any given moment, its chronicity creates profound cumulative suffering and impairment <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />. Many people with PDD assume their persistent low mood is just "how they are"—personality rather than a treatable condition.
+            Persistent Depressive Disorder (PDD) is chronic, low-grade depression that lasts for at least two years in adults (one year in children/adolescents). While less severe than major depression at any given moment, its chronicity creates profound cumulative suffering and impairment <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />. Many people with PDD assume their persistent low mood is just "how they are"---personality rather than a treatable condition.
           </p>
         </div>
 
@@ -731,7 +731,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>About 75% of people with PDD also experience major depressive episodes at some point—a pattern called "double depression" <Citation id="3" index={3} source="Journal of Affective Disorders" year="2019" tier={1} />. Imagine your baseline is already depressed, and then you experience acute major depression on top of it. When the major episode resolves, you return to chronic dysthymia rather than full wellness.</p>
+          <p>About 75% of people with PDD also experience major depressive episodes at some point---a pattern called "double depression" <Citation id="3" index={3} source="Journal of Affective Disorders" year="2019" tier={1} />. Imagine your baseline is already depressed, and then you experience acute major depression on top of it. When the major episode resolves, you return to chronic dysthymia rather than full wellness.</p>
         </ArticleCallout>
 
         <h2 id="what-it-feels-like" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -742,7 +742,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="I've been this way for so long that I don't remember what it's like to feel normal. I assume this is just my personality—I'm a pessimistic, low-energy person. But it's exhausting being me."
+          quote="I've been this way for so long that I don't remember what it's like to feel normal. I assume this is just my personality---I'm a pessimistic, low-energy person. But it's exhausting being me."
           attribution="Anonymous patient with PDD"
           role="Living with persistent depressive disorder"
           variant="large"
@@ -757,11 +757,11 @@ export const typesOfDepressionArticlesA: Article[] = [
                 <div>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Persistent low-level sadness or emptiness that feels like your baseline</li>
-                    <li>Joylessness—rarely experiencing genuine happiness or excitement</li>
+                    <li>Joylessness---rarely experiencing genuine happiness or excitement</li>
                     <li>Pervasive pessimism and negative outlook on life</li>
                     <li>Low self-esteem that feels like accurate self-perception rather than distortion</li>
                     <li>Chronic feelings of inadequacy or being "less than" others</li>
-                    <li>Hopelessness about the future—not expecting things to improve</li>
+                    <li>Hopelessness about the future---not expecting things to improve</li>
                   </ul>
                 </div>
               ),
@@ -787,7 +787,7 @@ export const typesOfDepressionArticlesA: Article[] = [
               content: (
                 <div>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Chronic low energy—you've learned to function despite constant fatigue</li>
+                    <li>Chronic low energy---you've learned to function despite constant fatigue</li>
                     <li>Sleep problems (too much or too little) for years</li>
                     <li>Appetite changes (undereating or overeating) as long-term pattern</li>
                     <li>Physical heaviness or lethargy</li>
@@ -873,8 +873,8 @@ export const typesOfDepressionArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Lost potential:</strong> Years or decades of underachievement, missed opportunities, unfulfilled goals</li>
           <li><strong>Relationship impact:</strong> Chronic emotional unavailability, difficulty forming or maintaining close relationships</li>
-          <li><strong>Identity formation:</strong> Depression becomes fused with identity—"I'm just a sad person"</li>
-          <li><strong>Missed developmental milestones:</strong> Especially for early-onset PDD—normal adolescent/young adult experiences missed</li>
+          <li><strong>Identity formation:</strong> Depression becomes fused with identity---"I'm just a sad person"</li>
+          <li><strong>Missed developmental milestones:</strong> Especially for early-onset PDD---normal adolescent/young adult experiences missed</li>
           <li><strong>Compound stress:</strong> Chronic low mood makes all life stressors harder to manage</li>
           <li><strong>Hopelessness about treatment:</strong> After years of feeling this way, many doubt anything can help</li>
         </ul>
@@ -895,7 +895,7 @@ export const typesOfDepressionArticlesA: Article[] = [
               title: 'Normalized as Personality',
               content: (
                 <div>
-                  <p className="mb-4">After years of persistent low mood, both the person and those around them accept it as "just who they are"—a pessimistic, low-energy, joyless person.</p>
+                  <p className="mb-4">After years of persistent low mood, both the person and those around them accept it as "just who they are"---a pessimistic, low-energy, joyless person.</p>
                   <p>This is fundamentally different from recognizing an illness. You don't seek treatment for your personality.</p>
                 </div>
               ),
@@ -912,7 +912,7 @@ export const typesOfDepressionArticlesA: Article[] = [
               title: 'Functional Adaptation',
               content: (
                 <div>
-                  <p className="mb-4">Most people with PDD remain functional—going to work, maintaining basic self-care, meeting responsibilities. This masks the internal suffering.</p>
+                  <p className="mb-4">Most people with PDD remain functional---going to work, maintaining basic self-care, meeting responsibilities. This masks the internal suffering.</p>
                   <p>Others think "they're fine' because they're functioning, and the person themselves may think "it can't be depression because I'm managing."</p>
                 </div>
               ),
@@ -921,7 +921,7 @@ export const typesOfDepressionArticlesA: Article[] = [
               id: 'comparison',
               title: 'Comparison to Major Depression',
               content: (
-                <p>Because PDD symptoms are milder than major depression, people dismiss their experience: "I'm not depressed—I can get out of bed, I go to work. This is just normal life."</p>
+                <p>Because PDD symptoms are milder than major depression, people dismiss their experience: "I'm not depressed---I can get out of bed, I go to work. This is just normal life."</p>
               ),
             },
             {
@@ -964,7 +964,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Higher risk for major depression compared to general population</li>
           <li>When major episode resolves, return to dysthymic baseline (not full wellness)</li>
-          <li>This can be confusing—"I got better, but I still don't feel normal"</li>
+          <li>This can be confusing---"I got better, but I still don't feel normal"</li>
           <li>Both the PDD and the major depression require treatment</li>
           <li>Poorer overall prognosis than either condition alone</li>
           <li>Higher suicide risk</li>
@@ -1051,25 +1051,25 @@ export const typesOfDepressionArticlesA: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>PDD is a medical condition, not your personality</li>
-          <li>Treatment works—many people experience significant or full remission</li>
+          <li>Treatment works---many people experience significant or full remission</li>
           <li>Even partial improvement in chronic depression dramatically increases quality of life</li>
           <li>You don't have to settle for "just getting by"</li>
           <li>Recovery is possible even after decades of persistent depression</li>
         </ul>
 
         <QuoteBlock
-          quote="I didn't realize I was depressed for 15 years. I thought I was just a pessimistic, low-energy person. Treatment showed me I'm not—I'd just been sick for so long I forgot what wellness felt like. Getting better feels like meeting myself for the first time."
+          quote="I didn't realize I was depressed for 15 years. I thought I was just a pessimistic, low-energy person. Treatment showed me I'm not---I'd just been sick for so long I forgot what wellness felt like. Getting better feels like meeting myself for the first time."
           attribution="Anonymous patient"
           role="Recovering from persistent depressive disorder"
           variant="large"
         />
 
         <p className="mb-6">
-          If you recognize yourself in this description—if low mood, fatigue, hopelessness, and joylessness have been your baseline for years—consider seeking professional evaluation. What you've normalized as "just how you are" may be a treatable condition. Life doesn't have to feel this heavy, and you deserve more than chronic emotional suffering.
+          If you recognize yourself in this description---if low mood, fatigue, hopelessness, and joylessness have been your baseline for years---consider seeking professional evaluation. What you've normalized as "just how you are" may be a treatable condition. Life doesn't have to feel this heavy, and you deserve more than chronic emotional suffering.
         </p>
 
         <p className="mb-6">
-          Persistent depressive disorder is persistent—but it's not permanent. With treatment, the future can look different from the past.
+          Persistent depressive disorder is persistent---but it's not permanent. With treatment, the future can look different from the past.
         </p>
       </>
     ),
@@ -1165,7 +1165,7 @@ export const typesOfDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're in the depths of depression, it may not matter to you whether it's bipolar or unipolar depression—both feel crushing. But the distinction is critical for treatment. Using antidepressants alone for bipolar depression can worsen outcomes, trigger mania, or destabilize mood cycles. Getting the diagnosis right is essential.
+            When you're in the depths of depression, it may not matter to you whether it's bipolar or unipolar depression---both feel crushing. But the distinction is critical for treatment. Using antidepressants alone for bipolar depression can worsen outcomes, trigger mania, or destabilize mood cycles. Getting the diagnosis right is essential.
           </p>
           <p className="mb-6">
             Bipolar depression refers to depressive episodes occurring in bipolar disorder (either Bipolar I or Bipolar II). Unipolar depression refers to major depressive disorder without any history of manic or hypomanic episodes <Citation id="3" index={3} source="American Psychiatric Association" year="2022" tier={4} />. The depressive symptoms can look nearly identical, yet they're fundamentally different conditions requiring distinct treatment approaches <Citation id="1" index={1} source="Canadian Journal of Psychiatry" year="2020" tier={1} />.
@@ -1180,7 +1180,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>People with bipolar disorder spend much more time depressed than manic/hypomanic—about 3:1 ratio for Bipolar I, even higher for Bipolar II</li>
+          <li>People with bipolar disorder spend much more time depressed than manic/hypomanic---about 3:1 ratio for Bipolar I, even higher for Bipolar II</li>
           <li>Many people seek help during depressive episodes, not recognizing past hypomanic periods as significant</li>
           <li>Hypomania (especially in Bipolar II) can be subtle or feel positive, so it's not reported</li>
           <li>Clinicians may not specifically ask about manic/hypomanic symptoms</li>
@@ -1222,7 +1222,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          <strong>Important caveat:</strong> These are statistical trends, not diagnostic rules. Many people with unipolar depression have atypical features, and many with bipolar depression don't. No single depressive symptom definitively distinguishes the two—the diagnosis hinges on history of mania/hypomania.
+          <strong>Important caveat:</strong> These are statistical trends, not diagnostic rules. Many people with unipolar depression have atypical features, and many with bipolar depression don't. No single depressive symptom definitively distinguishes the two---the diagnosis hinges on history of mania/hypomania.
         </p>
 
         <h2 id="identifying-bipolar" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1247,7 +1247,7 @@ export const typesOfDepressionArticlesA: Article[] = [
                     <li>Increased confidence, grandiosity, or reckless behavior</li>
                     <li>Increased spending, sexual activity, or risk-taking</li>
                   </ul>
-                  <p className="mt-4">Hypomania may have felt good at the time and not been perceived as problematic—yet it still indicates bipolar disorder.</p>
+                  <p className="mt-4">Hypomania may have felt good at the time and not been perceived as problematic---yet it still indicates bipolar disorder.</p>
                 </div>
               ),
             },
@@ -1451,14 +1451,14 @@ export const typesOfDepressionArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="The correct diagnosis isn't just academic—it determines whether treatment helps or harms. Bipolar depression requires a fundamentally different approach. Getting it right can be the difference between years of struggle and effective treatment."
+          quote="The correct diagnosis isn't just academic---it determines whether treatment helps or harms. Bipolar depression requires a fundamentally different approach. Getting it right can be the difference between years of struggle and effective treatment."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
 
         <p className="mb-6">
-          If you're struggling with depression, especially treatment-resistant depression, don't assume the diagnosis is settled. Bipolar disorder is commonly missed. Advocating for thorough evaluation may reveal why previous treatments haven't worked—and open the door to approaches that will.
+          If you're struggling with depression, especially treatment-resistant depression, don't assume the diagnosis is settled. Bipolar disorder is commonly missed. Advocating for thorough evaluation may reveal why previous treatments haven't worked---and open the door to approaches that will.
         </p>
       </>
     ),
@@ -1546,10 +1546,10 @@ export const typesOfDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every fall, as days shorten and darkness comes earlier, some people feel a familiar heaviness descending. Energy drains, motivation vanishes, and simple tasks feel overwhelming. Come spring, the cloud lifts as predictably as it arrived. This isn't coincidence or laziness—it's Seasonal Affective Disorder, a pattern of depression synchronized with the seasons.
+            Every fall, as days shorten and darkness comes earlier, some people feel a familiar heaviness descending. Energy drains, motivation vanishes, and simple tasks feel overwhelming. Come spring, the cloud lifts as predictably as it arrived. This isn't coincidence or laziness---it's Seasonal Affective Disorder, a pattern of depression synchronized with the seasons.
           </p>
           <p className="mb-6">
-            Seasonal Affective Disorder (SAD) is major depression with a seasonal pattern—most commonly winter depression that recurs every year during fall/winter months and remits in spring/summer <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />. It affects approximately 5% of adults in the U.S., with higher rates in northern latitudes where winter days are shorter. The biological mechanism involves disrupted circadian rhythms and reduced light exposure affecting brain chemistry <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2020" tier={1} />.
+            Seasonal Affective Disorder (SAD) is major depression with a seasonal pattern---most commonly winter depression that recurs every year during fall/winter months and remits in spring/summer <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />. It affects approximately 5% of adults in the U.S., with higher rates in northern latitudes where winter days are shorter. The biological mechanism involves disrupted circadian rhythms and reduced light exposure affecting brain chemistry <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -1593,7 +1593,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>The atypical features (hypersomnia, hyperphagia, weight gain) may be evolutionary adaptations—conserving energy and building fat stores during winter scarcity. In modern times with abundant food and indoor living, these adaptations become maladaptive symptoms.</p>
+          <p>The atypical features (hypersomnia, hyperphagia, weight gain) may be evolutionary adaptations---conserving energy and building fat stores during winter scarcity. In modern times with abundant food and indoor living, these adaptations become maladaptive symptoms.</p>
         </ArticleCallout>
 
         <h2 id="pattern" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1795,7 +1795,7 @@ export const typesOfDepressionArticlesA: Article[] = [
                   <li><strong>Exercise:</strong> Regular physical activity, especially outdoors in daylight</li>
                   <li><strong>Regular sleep schedule:</strong> Consistent wake/sleep times to stabilize circadian rhythm</li>
                   <li><strong>Social connection:</strong> Maintain social activities despite low motivation</li>
-                  <li><strong>Plan enjoyable winter activities:</strong> Don't hibernate—engage with the season</li>
+                  <li><strong>Plan enjoyable winter activities:</strong> Don't hibernate---engage with the season</li>
                 </ul>
               ),
             },
@@ -1837,24 +1837,24 @@ export const typesOfDepressionArticlesA: Article[] = [
         <ArticleCallout variant="tip" title="Proactive Treatment Plan">
           <p className="mb-4">If you have a history of winter SAD:</p>
           <ol className="list-decimal pl-6 space-y-2">
-            <li>In August/September, review last winter—what helped, what didn't</li>
+            <li>In August/September, review last winter---what helped, what didn't</li>
             <li>Obtain light box if needed; ensure it works</li>
             <li>Schedule start date for light therapy (early September)</li>
             <li>If using medication, schedule psychiatry appointment for early fall</li>
-            <li>Plan winter activities/goals—create structure before motivation drops</li>
+            <li>Plan winter activities/goals---create structure before motivation drops</li>
             <li>Line up social support and accountability</li>
           </ol>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="SAD feels inevitable every winter—the darkness comes, and I fall with it. But it doesn't have to be that way. Treatment works. Now I start light therapy in September, and winter is just... winter. Not a depressive episode."
+          quote="SAD feels inevitable every winter---the darkness comes, and I fall with it. But it doesn't have to be that way. Treatment works. Now I start light therapy in September, and winter is just... winter. Not a depressive episode."
           attribution="Anonymous patient with SAD"
           role="Managing seasonal depression proactively"
           variant="large"
         />
 
         <p className="mb-6">
-          If you notice a pattern of depression beginning each fall and lifting each spring, you likely have SAD—and that means you have a treatable condition with clear, effective interventions. You don't have to suffer through every winter. Light therapy, CBT, and medication can break the cycle. Talk to a healthcare provider about starting preventive treatment before your symptoms return.
+          If you notice a pattern of depression beginning each fall and lifting each spring, you likely have SAD---and that means you have a treatable condition with clear, effective interventions. You don't have to suffer through every winter. Light therapy, CBT, and medication can break the cycle. Talk to a healthcare provider about starting preventive treatment before your symptoms return.
         </p>
       </>
     ),
@@ -1958,7 +1958,7 @@ export const typesOfDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Society tells new mothers they should be glowing, grateful, blissfully bonded with their baby. So when you instead feel overwhelming sadness, anxiety, emptiness, or rage—when you can't sleep even when the baby sleeps, when you fantasize about running away, when you feel like a failure at the very thing you're 'supposed' to know how to do—the shame compounds the suffering. This is postpartum depression, and it's one of the most common complications of childbirth.
+            Society tells new mothers they should be glowing, grateful, blissfully bonded with their baby. So when you instead feel overwhelming sadness, anxiety, emptiness, or rage---when you can't sleep even when the baby sleeps, when you fantasize about running away, when you feel like a failure at the very thing you're 'supposed' to know how to do---the shame compounds the suffering. This is postpartum depression, and it's one of the most common complications of childbirth.
           </p>
           <p className="mb-6">
             Postpartum depression (PPD) is major depression occurring during pregnancy or within the first year after giving birth, most commonly in the first three months postpartum <Citation id="1" index={1} source="Obstetrics & Gynecology" year="2020" tier={1} />. It affects approximately 1 in 7 women (15%), with higher rates in adolescents, women living in poverty, and those with prior depression <Citation id="10" index={10} source="National Institute of Mental Health" year="2023" tier={2} />. Despite its prevalence, it often goes unrecognized and untreated due to stigma, lack of screening, and the assumption that postpartum struggles are "just part of being a new mom."
@@ -1997,7 +1997,7 @@ export const typesOfDepressionArticlesA: Article[] = [
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Difficulty bonding with baby or feeling connected</li>
                   <li>Lack of interest in baby or feeling detached</li>
-                  <li>Intrusive thoughts about harming baby (without intent to act—these are distressing, unwanted thoughts)</li>
+                  <li>Intrusive thoughts about harming baby (without intent to act---these are distressing, unwanted thoughts)</li>
                   <li>Excessive worry about baby's health or safety</li>
                   <li>Feeling like you made a mistake having a baby</li>
                   <li>Guilt about not feeling loving toward baby</li>
@@ -2054,7 +2054,7 @@ export const typesOfDepressionArticlesA: Article[] = [
             <li>Interferes with functioning and caregiving</li>
             <li>Requires professional treatment</li>
           </ul>
-          <p className="mt-4">If symptoms persist beyond 2 weeks or are severe, it's not baby blues—it's depression, and you need help.</p>
+          <p className="mt-4">If symptoms persist beyond 2 weeks or are severe, it's not baby blues---it's depression, and you need help.</p>
         </ArticleCallout>
 
         <h2 id="risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2096,7 +2096,7 @@ export const typesOfDepressionArticlesA: Article[] = [
           What Causes PPD?
         </h2>
         <p className="mb-6">
-          The postpartum period involves massive biological, psychological, and social changes—a perfect storm for depression vulnerability <Citation id="4" index={4} source="Nature Reviews Neuroscience" year="2020" tier={1} />:
+          The postpartum period involves massive biological, psychological, and social changes---a perfect storm for depression vulnerability <Citation id="4" index={4} source="Nature Reviews Neuroscience" year="2020" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -2105,7 +2105,7 @@ export const typesOfDepressionArticlesA: Article[] = [
             {
               title: 'Hormonal plunge',
               description: (
-                <p>During pregnancy, estrogen and progesterone reach levels 10-100 times higher than normal. Immediately after delivery, they plummet to near-zero levels within 24 hours—the most dramatic hormonal change the body ever experiences. This rapid withdrawal affects neurotransmitters (serotonin, dopamine, GABA) involved in mood regulation.</p>
+                <p>During pregnancy, estrogen and progesterone reach levels 10-100 times higher than normal. Immediately after delivery, they plummet to near-zero levels within 24 hours---the most dramatic hormonal change the body ever experiences. This rapid withdrawal affects neurotransmitters (serotonin, dopamine, GABA) involved in mood regulation.</p>
               ),
             },
             {
@@ -2167,7 +2167,7 @@ export const typesOfDepressionArticlesA: Article[] = [
           <li>Impaired ability to care for baby safely</li>
           <li>Relationship strain with partner</li>
           <li>Increased risk of chronic depression</li>
-          <li>Suicide risk (rare but serious—maternal suicide accounts for ~20% of postpartum deaths)</li>
+          <li>Suicide risk (rare but serious---maternal suicide accounts for ~20% of postpartum deaths)</li>
         </ul>
 
         <p className="mb-6">
@@ -2184,7 +2184,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Getting treatment for PPD isn't selfish—it's essential for both you and your baby. Maternal mental health is foundational to infant health and development. Taking care of yourself is taking care of your baby.</p>
+          <p>Getting treatment for PPD isn't selfish---it's essential for both you and your baby. Maternal mental health is foundational to infant health and development. Taking care of yourself is taking care of your baby.</p>
         </ArticleCallout>
 
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2294,7 +2294,7 @@ export const typesOfDepressionArticlesA: Article[] = [
           <li><strong>Crisis resources:</strong> 988 Suicide & Crisis Lifeline, Crisis Text Line (text HOME to 741741)</li>
         </ul>
 
-        <ArticleCallout variant="warning" title="Postpartum Psychosis—Emergency Condition">
+        <ArticleCallout variant="warning" title="Postpartum Psychosis---Emergency Condition">
           <p className="mb-4">Postpartum psychosis is rare (1-2 per 1,000 births) but a psychiatric emergency <Citation id="8" index={8} source="American Family Physician" year="2020" tier={2} />. Symptoms:</p>
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Hallucinations (seeing/hearing things not there)</li>
@@ -2316,7 +2316,7 @@ export const typesOfDepressionArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="I thought I was a terrible mother because I didn't feel the overwhelming love everyone talks about. I felt nothing—just exhaustion and dread. Getting treatment was the hardest and best thing I did. Now I can actually enjoy my baby. I wish I'd asked for help sooner."
+          quote="I thought I was a terrible mother because I didn't feel the overwhelming love everyone talks about. I felt nothing---just exhaustion and dread. Getting treatment was the hardest and best thing I did. Now I can actually enjoy my baby. I wish I'd asked for help sooner."
           attribution="Anonymous mother"
           role="Recovering from postpartum depression"
           variant="large"

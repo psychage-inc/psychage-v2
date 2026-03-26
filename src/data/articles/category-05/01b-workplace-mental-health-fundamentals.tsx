@@ -98,7 +98,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You check your email constantly for signs. You overanalyze every conversation with your
             boss. You lie awake at night running through worst-case scenarios. This is job
-            insecurity—and it takes a profound toll on mental health.
+            insecurity---and it takes a profound toll on mental health.
           </p>
           <p className="mb-6">
             Job insecurity is the subjective sense that your employment is unstable or at risk{', '}
@@ -141,7 +141,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               title: 'Quantitative Job Insecurity',
               content: (
                 <p>
-                  The fear of losing your job entirely—unemployment. This is the most obvious form
+                  The fear of losing your job entirely---unemployment. This is the most obvious form
                   and typically the most distressing.
                 </p>
               ),
@@ -151,7 +151,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               title: 'Qualitative Job Insecurity',
               content: (
                 <p>
-                  The fear of losing valued aspects of your job—like autonomy, benefits, advancement
+                  The fear of losing valued aspects of your job---like autonomy, benefits, advancement
                   opportunities, or meaningful work. You keep your job, but it gets worse.
                 </p>
               ),
@@ -188,7 +188,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
             year="2021"
             tier={1}
           />
-          . The uncertainty itself—not just the potential loss—drives psychological harm.
+          . The uncertainty itself---not just the potential loss---drives psychological harm.
         </p>
 
         <StatCard
@@ -211,7 +211,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           <p>
             <strong>Clinical insight:</strong> Prolonged uncertainty activates the same stress
             response as actual threat. Your body doesn't distinguish between "might lose my job" and
-            "lost my job"—it treats both as danger.
+            "lost my job"---it treats both as danger.
           </p>
         </ArticleCallout>
 
@@ -249,7 +249,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
             feels like existential uncertainty.
           </li>
           <li>
-            <strong>Financial fear:</strong> Bills, mortgage, healthcare—the stakes feel
+            <strong>Financial fear:</strong> Bills, mortgage, healthcare---the stakes feel
             overwhelming.
           </li>
           <li>
@@ -265,7 +265,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           The Ripple Effect on Family and Relationships
         </h2>
         <p className="mb-6">
-          Job insecurity doesn't stay at work—it infiltrates home life. Research shows it increases
+          Job insecurity doesn't stay at work---it infiltrates home life. Research shows it increases
           marital conflict, parenting stress, and family tension{', '}
           <Citation id="5" index={5} source="Journal of Family Psychology" year="2021" tier={1} />
           .
@@ -356,7 +356,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               description: (
                 <p>
                   If your job is your entire identity, insecurity feels catastrophic. Invest in roles
-                  outside work—friend, parent, hobbyist, volunteer.
+                  outside work---friend, parent, hobbyist, volunteer.
                 </p>
               ),
             },
@@ -395,7 +395,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           When Your Employer Contributes to Insecurity
         </h2>
         <p className="mb-6">
-          Some organizations inadvertently (or intentionally) create cultures of insecurity—through
+          Some organizations inadvertently (or intentionally) create cultures of insecurity---through
           lack of communication, frequent restructuring, or management by fear.
         </p>
 
@@ -428,7 +428,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Job insecurity is not a personal failing—it's a structural issue affecting millions.
+            Job insecurity is not a personal failing---it's a structural issue affecting millions.
             Your mental health response to uncertainty is valid, and you deserve support in managing
             it.
           </p>
@@ -529,7 +529,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             For decades, companies have redesigned workspaces to promote collaboration and save
             money. Open-plan offices, hot desking, and shared spaces became the norm. But new
-            research reveals these environments may be harming our brains—and our mental health.
+            research reveals these environments may be harming our brains---and our mental health.
           </p>
           <p className="mb-6">
             This article examines the science of workplace environmental stressors and what they do
@@ -582,7 +582,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>
             <strong>Core finding:</strong> Open-plan offices don't make people more
-            collaborative—they make them more avoidant. The lack of privacy drives people to
+            collaborative---they make them more avoidant. The lack of privacy drives people to
             headphones, email, and isolation.
           </p>
         </ArticleCallout>
@@ -595,7 +595,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           One of the most robust findings in environmental psychology is that noise impairs
-          cognitive tasks—especially those requiring concentration or memory{', '}
+          cognitive tasks---especially those requiring concentration or memory{', '}
           <Citation
             id="2"
             index={2}
@@ -621,7 +621,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
 
         <p className="mb-6">
           The brain struggles to filter irrelevant auditory information, especially speech. When you
-          hear conversations in the background, your brain automatically processes them—even when
+          hear conversations in the background, your brain automatically processes them---even when
           you're trying not to listen{', '}
           <Citation
             id="7"
@@ -704,7 +704,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
 
         <p className="mb-6">
           One study found that workers in open-plan offices took <strong>62% more sick days</strong>{', '}
-          than those in private offices—suggesting environmental stressors weaken immune function{', '}
+          than those in private offices---suggesting environmental stressors weaken immune function{', '}
           <Citation
             id="3"
             index={3}
@@ -722,7 +722,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           The Psychological Cost of Hot Desking
         </h2>
         <p className="mb-6">
-          Hot desking—where employees don't have assigned desks—was designed to maximize space
+          Hot desking---where employees don't have assigned desks---was designed to maximize space
           efficiency. But research shows it undermines <strong>psychological ownership</strong>,
           the sense that a space is "yours"{', '}
           <Citation id="4" index={4} source="Applied Ergonomics" year="2021" tier={1} />.
@@ -742,7 +742,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Psychological ownership isn't about ego—it's about security. When you don't have a
+          Psychological ownership isn't about ego---it's about security. When you don't have a
           designated space, your brain remains in a low-level state of vigilance, scanning for
           where you belong. This consumes mental energy before you even start working.
         </p>
@@ -754,7 +754,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           Privacy, Autonomy, and Mental Health
         </h2>
         <p className="mb-6">
-          Privacy at work isn't about hiding—it's about control over when and how you interact with
+          Privacy at work isn't about hiding---it's about control over when and how you interact with
           others{', '}
           <Citation id="6" index={6} source="Ergonomics" year="2021" tier={1} />. Open-plan offices
           rob you of this control.
@@ -775,7 +775,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p>
             For people with anxiety, ADHD, or sensory processing sensitivities, open offices can be
-            debilitating—turning work into a daily survival challenge.
+            debilitating---turning work into a daily survival challenge.
           </p>
         </ArticleCallout>
 
@@ -797,7 +797,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               title: 'Normalize using headphones',
               description: (
                 <p>
-                  Noise-canceling headphones aren't antisocial—they're adaptive. Use them to create
+                  Noise-canceling headphones aren't antisocial---they're adaptive. Use them to create
                   auditory privacy.
                 </p>
               ),
@@ -931,7 +931,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Your workspace isn't neutral—it actively shapes your brain function, stress levels, and
+            Your workspace isn't neutral---it actively shapes your brain function, stress levels, and
             mental health. Understanding this gives you permission to advocate for environments that
             support you, not harm you.
           </p>
@@ -1023,7 +1023,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Some people clock in and out, trading hours for money. Others feel like their work
-            matters—that it contributes to something larger than themselves. This difference, called{', '}
+            matters---that it contributes to something larger than themselves. This difference, called{', '}
             <strong>meaningful work</strong>, has profound effects on mental health.
           </p>
           <p className="mb-6">
@@ -1056,7 +1056,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
             year="2020"
             tier={2}
           />
-          . It's not about the job itself—it's about how you experience it.
+          . It's not about the job itself---it's about how you experience it.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -1113,7 +1113,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Meaningful work functions as a psychological resource—it gives you resilience during
+          Meaningful work functions as a psychological resource---it gives you resilience during
           difficult times. When work feels purposeful, stressful days are more tolerable because you
           can connect them to something larger.
         </p>
@@ -1160,7 +1160,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               title: 'Intrinsic Motivation',
               content: (
                 <p>
-                  Meaningful work taps into intrinsic motivation—doing something because it's
+                  Meaningful work taps into intrinsic motivation---doing something because it's
                   inherently rewarding, not just for external rewards. This sustains energy and
                   reduces burnout.
                 </p>
@@ -1197,7 +1197,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           Case Study: Healthcare Workers and Meaning
         </h2>
         <p className="mb-6">
-          Healthcare workers face extreme stress—long hours, emotional labor, life-or-death
+          Healthcare workers face extreme stress---long hours, emotional labor, life-or-death
           decisions. Yet many report high levels of meaning in their work{', '}
           <Citation
             id="5"
@@ -1231,7 +1231,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           What if your job doesn't feel inherently meaningful? You can actively shape it through a
-          process called <strong>job crafting</strong>—making small changes to how you think about,
+          process called <strong>job crafting</strong>---making small changes to how you think about,
           perform, or relate to your work{', '}
           <Citation id="4" index={4} source="Journal of Vocational Behavior" year="2022" tier={1} />
           .
@@ -1291,8 +1291,8 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          When organizations leverage meaning to justify poor working conditions—low pay, excessive
-          hours, lack of boundaries—employees burn out faster. The narrative becomes: "You should be
+          When organizations leverage meaning to justify poor working conditions---low pay, excessive
+          hours, lack of boundaries---employees burn out faster. The narrative becomes: "You should be
           grateful; this work is meaningful."
         </p>
 
@@ -1311,7 +1311,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p>
             If your workplace uses "purpose" as a reason to overwork you, underpay you, or dismiss
-            your needs—that's not meaningful work. That's exploitation disguised as mission.
+            your needs---that's not meaningful work. That's exploitation disguised as mission.
           </p>
         </ArticleCallout>
 
@@ -1354,8 +1354,8 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you're struggling with a pervasive sense of meaninglessness—at work or in life
-          generally—and it's contributing to depression or hopelessness, therapy can help. Existential
+          If you're struggling with a pervasive sense of meaninglessness---at work or in life
+          generally---and it's contributing to depression or hopelessness, therapy can help. Existential
           therapy and logotherapy (developed by Viktor Frankl) specifically address questions of
           meaning and purpose.
         </p>
@@ -1363,7 +1363,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>
             Meaningful work is one of the most powerful mental health resources available. Whether
-            you find it, create it, or seek it elsewhere—purpose matters.
+            you find it, create it, or seek it elsewhere---purpose matters.
           </p>
         </ArticleCallout>
       </>
@@ -1454,10 +1454,10 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Your manager wants updates every hour. They rewrite your work. They need to approve
             every small decision. You feel like you're being watched, judged, and controlled. This
-            is micromanagement—and it's destroying your mental health.
+            is micromanagement---and it's destroying your mental health.
           </p>
           <p className="mb-6">
-            Micromanagement isn't just annoying—it systematically undermines autonomy, trust, and
+            Micromanagement isn't just annoying---it systematically undermines autonomy, trust, and
             psychological safety{', '}
             <Citation
               id="1"
@@ -1549,7 +1549,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Autonomy doesn't mean working without guidance—it means having choice, voice, and control
+          Autonomy doesn't mean working without guidance---it means having choice, voice, and control
           over how you do your work. Micromanagement systematically denies this{', '}
           <Citation
             id="7"
@@ -1617,7 +1617,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           One of the most insidious effects of chronic micromanagement is{', '}
-          <strong>learned helplessness</strong>—the psychological state where you stop trying
+          <strong>learned helplessness</strong>---the psychological state where you stop trying
           because you believe your actions don't matter{', '}
           <Citation id="6" index={6} source="Journal of Applied Psychology" year="2020" tier={1} />
           .
@@ -1688,7 +1688,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           The Performance Paradox
         </h2>
         <p className="mb-6">
-          Ironically, micromanagement doesn't improve performance—it degrades it{', '}
+          Ironically, micromanagement doesn't improve performance---it degrades it{', '}
           <Citation
             id="4"
             index={4}
@@ -1707,7 +1707,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Micromanagers create the very problems they're trying to prevent—a self-fulfilling
+          Micromanagers create the very problems they're trying to prevent---a self-fulfilling
           prophecy of incompetence.
         </p>
 
@@ -1776,7 +1776,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="tip">
           <p>
             If possible, seek support from HR, a mentor, or another leader in the organization. But
-            only if it's safe to do so—retaliatory micromanagers exist.
+            only if it's safe to do so---retaliatory micromanagers exist.
           </p>
         </ArticleCallout>
 
@@ -1818,7 +1818,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Micromanagement isn't leadership—it's control masked as concern. You deserve autonomy,
+            Micromanagement isn't leadership---it's control masked as concern. You deserve autonomy,
             trust, and the space to use your skills. If you're not getting that, it's not your
             failure. It's theirs.
           </p>
@@ -1831,7 +1831,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
     id: catId(10),
     slug: 'employee-wellbeing-programs-what-works',
     title: 'Employee Wellbeing Programs: What Actually Works According to Research',
-    description: 'Evidence-based analysis of workplace wellness initiatives—which interventions improve mental health and which are ineffective.',
+    description: 'Evidence-based analysis of workplace wellness initiatives---which interventions improve mental health and which are ineffective.',
     image: "/images/articles/cat05/cover-010.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 9,
@@ -1950,7 +1950,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
             year="2022"
             tier={1}
           />
-          . Here's what worked—and what didn't.
+          . Here's what worked---and what didn't.
         </p>
 
         <StatCard
@@ -2044,7 +2044,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               content: (
                 <p>
                   When employees are told to 'build resilience' in toxic environments, it often
-                  backfires—increasing cynicism and blame. Resilience training works only when paired
+                  backfires---increasing cynicism and blame. Resilience training works only when paired
                   with systemic change.
                 </p>
               ),
@@ -2075,7 +2075,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p>
             <strong>Critical insight:</strong> If a program focuses on fixing employees rather than
-            fixing the workplace, it's unlikely to work—and may worsen morale by implying the
+            fixing the workplace, it's unlikely to work---and may worsen morale by implying the
             problem is individual weakness.
           </p>
         </ArticleCallout>
@@ -2135,7 +2135,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
           Training managers to recognize mental health issues, have supportive conversations, and
           reduce stigma significantly improves team wellbeing{', '}
           <Citation id="4" index={4} source="Psychological Medicine" year="2020" tier={1} />.
-          Managers are often the first to notice distress—equipping them helps.
+          Managers are often the first to notice distress---equipping them helps.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -2165,7 +2165,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          5. Employee Assistance Programs (EAPs) — If Promoted
+          5. Employee Assistance Programs (EAPs) --- If Promoted
         </h3>
         <p className="mb-6">
           EAPs offer confidential counseling and support. They work when employees know about them
@@ -2177,7 +2177,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
             year="2021"
             tier={1}
           />
-          . Most employees don't know their workplace has an EAP—awareness is critical.
+          . Most employees don't know their workplace has an EAP---awareness is critical.
         </p>
 
         <h2
@@ -2302,7 +2302,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               description: (
                 <p>
                   If the program focuses on individual coping without changing workload, management,
-                  or culture—it's unlikely to help long-term.
+                  or culture---it's unlikely to help long-term.
                 </p>
               ),
             },
@@ -2311,7 +2311,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               description: (
                 <p>
                   Confidential counseling through an EAP can provide real support. Don't assume your
-                  employer will know—it's private.
+                  employer will know---it's private.
                 </p>
               ),
             },
@@ -2328,7 +2328,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
               title: 'Manage expectations',
               description: (
                 <p>
-                  If your workplace offers wellness apps or workshops, use them if they help—but
+                  If your workplace offers wellness apps or workshops, use them if they help---but
                   don't blame yourself if they don't solve systemic problems.
                 </p>
               ),
@@ -2348,12 +2348,12 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            Most studies focus on office workers in high-income countries—less is known about
+            Most studies focus on office workers in high-income countries---less is known about
             shift workers, gig workers, or low-wage employees.
           </li>
           <li>Long-term effects (5-10 years) are rarely measured.</li>
           <li>
-            Cultural differences in program effectiveness are understudied—what works in Sweden may
+            Cultural differences in program effectiveness are understudied---what works in Sweden may
             not work in Japan or Brazil.
           </li>
           <li>
@@ -2394,7 +2394,7 @@ export const workplaceMentalHealthFundamentalsArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>
             The evidence is clear: fixing the workplace is more effective than fixing the worker.
-            Real wellbeing programs address power, autonomy, workload, and culture—not just offering
+            Real wellbeing programs address power, autonomy, workload, and culture---not just offering
             meditation apps and hoping for the best.
           </p>
         </ArticleCallout>

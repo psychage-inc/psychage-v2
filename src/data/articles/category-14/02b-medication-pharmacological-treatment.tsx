@@ -113,7 +113,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            ADHD medication doesn't cure ADHD — but for many people, it makes daily life dramatically more manageable. Tasks that once felt impossible become achievable. Attention stabilizes. Impulsivity decreases. Executive function improves <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
+            ADHD medication doesn't cure ADHD --- but for many people, it makes daily life dramatically more manageable. Tasks that once felt impossible become achievable. Attention stabilizes. Impulsivity decreases. Executive function improves <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             But finding the right medication involves trial and adjustment. Stimulants work for about 70-80% of people with ADHD, but there are multiple types, formulations, and non-stimulant alternatives. Understanding your options helps you make informed decisions with your prescriber <Citation id="4" index={4} source="American Psychiatric Association" year="2022" tier={4} />.
@@ -199,7 +199,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="info" title="No Way to Predict Which Works Best">
-          <p>About 50% of people respond well to both families. But some respond only to one or the other. The only way to know is to try. If methylphenidate doesn't work or causes intolerable side effects, try an amphetamine — or vice versa <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.</p>
+          <p>About 50% of people respond well to both families. But some respond only to one or the other. The only way to know is to try. If methylphenidate doesn't work or causes intolerable side effects, try an amphetamine --- or vice versa <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="non-stimulants" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -217,7 +217,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               title: 'Atomoxetine (Strattera)',
               content: (
                 <div>
-                  <p className="mb-4">Atomoxetine is a selective norepinephrine reuptake inhibitor (SNRI) — the first non-stimulant FDA-approved for ADHD <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2022" tier={1} />.</p>
+                  <p className="mb-4">Atomoxetine is a selective norepinephrine reuptake inhibitor (SNRI) --- the first non-stimulant FDA-approved for ADHD <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2022" tier={1} />.</p>
                   <p className="mb-4"><strong>How it works:</strong> Increases norepinephrine in the prefrontal cortex, improving attention and impulse control</p>
                   <p className="mb-4"><strong>Benefits:</strong></p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
@@ -257,7 +257,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
                     <li>Sedation, especially when starting</li>
                     <li>Can lower blood pressure (monitor if combining with other meds)</li>
                     <li>Less effective for attention than stimulants</li>
-                    <li>Must taper off slowly — stopping abruptly can cause blood pressure spike</li>
+                    <li>Must taper off slowly --- stopping abruptly can cause blood pressure spike</li>
                   </ul>
                   <p><strong>Best for:</strong> Children/teens with ADHD + aggression or sleep problems; often used as add-ons to stimulants</p>
                 </div>
@@ -265,10 +265,10 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             },
             {
               id: 'wellbutrin',
-              title: 'Bupropion (Wellbutrin) — Off-Label',
+              title: 'Bupropion (Wellbutrin) --- Off-Label',
               content: (
                 <div>
-                  <p className="mb-4">Bupropion is an antidepressant (NDRI — norepinephrine-dopamine reuptake inhibitor) sometimes prescribed off-label for ADHD.</p>
+                  <p className="mb-4">Bupropion is an antidepressant (NDRI --- norepinephrine-dopamine reuptake inhibitor) sometimes prescribed off-label for ADHD.</p>
                   <p className="mb-4"><strong>Benefits:</strong></p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li>Treats both ADHD and depression</li>
@@ -301,7 +301,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             {
               title: 'Start with Stimulants (Usually)',
               description: (
-                <p>Most doctors start with stimulants because they're most effective. Methylphenidate or amphetamine — the choice is often based on doctor preference, your medical history, or which your insurance covers.</p>
+                <p>Most doctors start with stimulants because they're most effective. Methylphenidate or amphetamine --- the choice is often based on doctor preference, your medical history, or which your insurance covers.</p>
               ),
             },
             {
@@ -344,7 +344,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Stimulants are controlled substances because they have abuse potential when misused (crushed, snorted, injected, or taken in high doses). But when taken as prescribed, they're safe and don't lead to addiction <Citation id="10" index={10} source="American Journal of Psychiatry" year="2021" tier={1} />.</p>
-                  <p className="mb-4">In fact, treating ADHD with medication <strong>reduces</strong> the risk of substance use disorders later in life — untreated ADHD increases substance use risk.</p>
+                  <p className="mb-4">In fact, treating ADHD with medication <strong>reduces</strong> the risk of substance use disorders later in life --- untreated ADHD increases substance use risk.</p>
                   <p>If you have a history of substance use, your doctor may prefer non-stimulants like atomoxetine or Vyvanse (which is harder to abuse).</p>
                 </div>
               ),
@@ -374,7 +374,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               title: 'Will Medication Change My Personality?',
               content: (
                 <div>
-                  <p className="mb-4">At the right dose, ADHD medication should make you feel more like yourself — more organized, less overwhelmed, more in control. It shouldn't make you feel "flat," emotionless, or zombie-like.</p>
+                  <p className="mb-4">At the right dose, ADHD medication should make you feel more like yourself --- more organized, less overwhelmed, more in control. It shouldn't make you feel "flat," emotionless, or zombie-like.</p>
                   <p>If medication makes you feel emotionally numb or not like yourself, the dose is likely too high or the medication isn't the right fit. Talk to your doctor about adjusting.</p>
                 </div>
               ),
@@ -402,7 +402,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="I tried Ritalin first — it helped, but wore off too fast and I'd crash. Switched to Vyvanse, and it was life-changing. Smooth all-day coverage, no crash. I could finally finish what I started. It took trying three medications to find the right fit, but it was worth it."
+          quote="I tried Ritalin first --- it helped, but wore off too fast and I'd crash. Switched to Vyvanse, and it was life-changing. Smooth all-day coverage, no crash. I could finally finish what I started. It took trying three medications to find the right fit, but it was worth it."
           attribution="Adult with ADHD"
           role="Patient Perspective"
           variant="large"
@@ -452,7 +452,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          ADHD medication can be transformative when it's the right fit. Don't give up if the first medication doesn't work — there are many options, and persistence pays off.
+          ADHD medication can be transformative when it's the right fit. Don't give up if the first medication doesn't work --- there are many options, and persistence pays off.
         </p>
       </>
     ),
@@ -539,10 +539,10 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you take psychiatric medication, it's not "fixing" a broken brain — it's adjusting the chemical balance of neurotransmitters, the messengers that allow brain cells to communicate <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2021" tier={1} />. But these changes don't happen instantly, and they're more complex than simply "adding more serotonin."
+            When you take psychiatric medication, it's not "fixing" a broken brain --- it's adjusting the chemical balance of neurotransmitters, the messengers that allow brain cells to communicate <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2021" tier={1} />. But these changes don't happen instantly, and they're more complex than simply "adding more serotonin."
           </p>
           <p className="mb-6">
-            Understanding how these medications work helps you set realistic expectations and recognize when they're doing their job — even before you feel dramatically different.
+            Understanding how these medications work helps you set realistic expectations and recognize when they're doing their job --- even before you feel dramatically different.
           </p>
         </div>
 
@@ -573,73 +573,73 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           items={[
             {
               id: 'serotonin',
-              title: 'Serotonin — Mood, Anxiety, Sleep',
+              title: 'Serotonin --- Mood, Anxiety, Sleep',
               content: (
                 <div>
                   <p className="mb-4">Serotonin regulates mood, anxiety, sleep, appetite, and pain perception <Citation id="6" index={6} source="Neuron" year="2021" tier={1} />. Low serotonin is associated with depression and anxiety (though the relationship is more complex than "low serotonin = depression").</p>
                   <p className="mb-4"><strong>Medications that target serotonin:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>SSRIs (Selective Serotonin Reuptake Inhibitors) — block serotonin from being reabsorbed, keeping more in the synapse</li>
-                    <li>SNRIs — target serotonin and norepinephrine</li>
-                    <li>TCAs (Tricyclic Antidepressants) — older meds that affect serotonin, norepinephrine, and other systems</li>
+                    <li>SSRIs (Selective Serotonin Reuptake Inhibitors) --- block serotonin from being reabsorbed, keeping more in the synapse</li>
+                    <li>SNRIs --- target serotonin and norepinephrine</li>
+                    <li>TCAs (Tricyclic Antidepressants) --- older meds that affect serotonin, norepinephrine, and other systems</li>
                   </ul>
                 </div>
               ),
             },
             {
               id: 'dopamine',
-              title: 'Dopamine — Motivation, Reward, Focus',
+              title: 'Dopamine --- Motivation, Reward, Focus',
               content: (
                 <div>
                   <p className="mb-4">Dopamine drives motivation, reward, pleasure, and focus. It's central to ADHD, addiction, and schizophrenia <Citation id="5" index={5} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.</p>
                   <p className="mb-4"><strong>Medications that target dopamine:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Stimulants (Adderall, Ritalin) — increase dopamine for ADHD</li>
-                    <li>Bupropion (Wellbutrin) — increases dopamine and norepinephrine</li>
-                    <li>Antipsychotics — block dopamine receptors to reduce psychosis</li>
+                    <li>Stimulants (Adderall, Ritalin) --- increase dopamine for ADHD</li>
+                    <li>Bupropion (Wellbutrin) --- increases dopamine and norepinephrine</li>
+                    <li>Antipsychotics --- block dopamine receptors to reduce psychosis</li>
                   </ul>
                 </div>
               ),
             },
             {
               id: 'norepinephrine',
-              title: 'Norepinephrine — Alertness, Focus, Stress Response',
+              title: 'Norepinephrine --- Alertness, Focus, Stress Response',
               content: (
                 <div>
                   <p className="mb-4">Norepinephrine (noradrenaline) is involved in alertness, focus, and the stress response. Too much contributes to anxiety; too little contributes to fatigue and poor concentration.</p>
                   <p className="mb-4"><strong>Medications that target norepinephrine:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>SNRIs (venlafaxine, duloxetine) — for depression and anxiety</li>
-                    <li>Atomoxetine (Strattera) — for ADHD</li>
-                    <li>TCAs — older antidepressants</li>
+                    <li>SNRIs (venlafaxine, duloxetine) --- for depression and anxiety</li>
+                    <li>Atomoxetine (Strattera) --- for ADHD</li>
+                    <li>TCAs --- older antidepressants</li>
                   </ul>
                 </div>
               ),
             },
             {
               id: 'gaba',
-              title: 'GABA — The Brake Pedal',
+              title: 'GABA --- The Brake Pedal',
               content: (
                 <div>
-                  <p className="mb-4">GABA (gamma-aminobutyric acid) is the brain's main inhibitory neurotransmitter — it slows things down, calming neural activity <Citation id="4" index={4} source="Molecular Psychiatry" year="2022" tier={1} />. Low GABA activity is linked to anxiety and seizures.</p>
+                  <p className="mb-4">GABA (gamma-aminobutyric acid) is the brain's main inhibitory neurotransmitter --- it slows things down, calming neural activity <Citation id="4" index={4} source="Molecular Psychiatry" year="2022" tier={1} />. Low GABA activity is linked to anxiety and seizures.</p>
                   <p className="mb-4"><strong>Medications that target GABA:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Benzodiazepines (Xanax, Klonopin) — enhance GABA, reducing anxiety rapidly</li>
-                    <li>Some anticonvulsants (valproate, gabapentin) — used for mood stabilization and anxiety</li>
+                    <li>Benzodiazepines (Xanax, Klonopin) --- enhance GABA, reducing anxiety rapidly</li>
+                    <li>Some anticonvulsants (valproate, gabapentin) --- used for mood stabilization and anxiety</li>
                   </ul>
                 </div>
               ),
             },
             {
               id: 'glutamate',
-              title: 'Glutamate — The Gas Pedal',
+              title: 'Glutamate --- The Gas Pedal',
               content: (
                 <div>
-                  <p className="mb-4">Glutamate is the brain's main excitatory neurotransmitter — it speeds things up, activating neurons. It's essential for learning and memory but can be toxic in excess.</p>
+                  <p className="mb-4">Glutamate is the brain's main excitatory neurotransmitter --- it speeds things up, activating neurons. It's essential for learning and memory but can be toxic in excess.</p>
                   <p className="mb-4"><strong>Medications that target glutamate:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Ketamine and esketamine (Spravato) — block glutamate receptors, showing rapid antidepressant effects</li>
-                    <li>Lamotrigine (Lamictal) — modulates glutamate, used for bipolar depression</li>
+                    <li>Ketamine and esketamine (Spravato) --- block glutamate receptors, showing rapid antidepressant effects</li>
+                    <li>Lamotrigine (Lamictal) --- modulates glutamate, used for bipolar depression</li>
                   </ul>
                 </div>
               ),
@@ -651,7 +651,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           How Psychiatric Medications Affect Neurotransmitters
         </h2>
         <p className="mb-6">
-          Most psychiatric medications don't create new neurotransmitters — they change how existing neurotransmitters are used <Citation id="7" index={7} source="National Institute of Mental Health" year="2022" tier={2} />.
+          Most psychiatric medications don't create new neurotransmitters --- they change how existing neurotransmitters are used <Citation id="7" index={7} source="National Institute of Mental Health" year="2022" tier={2} />.
         </p>
 
         <ComparisonTable
@@ -671,7 +671,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           Why Do Psychiatric Medications Take Weeks to Work?
         </h2>
         <p className="mb-6">
-          This is one of the most confusing parts: SSRIs increase serotonin in the synapse within hours — but you won't feel better for 4-8 weeks. Why?
+          This is one of the most confusing parts: SSRIs increase serotonin in the synapse within hours --- but you won't feel better for 4-8 weeks. Why?
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Answer: Neuroplasticity and Receptor Changes">
@@ -681,7 +681,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             <li><strong>Neuroplasticity</strong>: Medications promote brain-derived neurotrophic factor (BDNF), which helps neurons grow new connections and repair damage from chronic stress.</li>
             <li><strong>Circuit remodeling</strong>: Brain circuits that were stuck in negative patterns (rumination, anxiety) gradually shift to healthier patterns.</li>
           </ul>
-          <p className="mt-4">This is why stopping medication too early — before these deeper changes solidify — often leads to relapse.</p>
+          <p className="mt-4">This is why stopping medication too early --- before these deeper changes solidify --- often leads to relapse.</p>
         </ArticleCallout>
 
         <ProgressSteps
@@ -696,13 +696,13 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             {
               title: 'Week 1-2: Side Effects Peak',
               description: (
-                <p>The sudden chemical change can cause nausea, jitteriness, or insomnia — these usually fade as your brain adjusts. No symptom improvement yet.</p>
+                <p>The sudden chemical change can cause nausea, jitteriness, or insomnia --- these usually fade as your brain adjusts. No symptom improvement yet.</p>
               ),
             },
             {
               title: 'Week 2-4: Receptor Adaptation Begins',
               description: (
-                <p>Receptors start downregulating. Side effects lessen. You may notice subtle improvements — better sleep, slightly less anxiety — but not full relief.</p>
+                <p>Receptors start downregulating. Side effects lessen. You may notice subtle improvements --- better sleep, slightly less anxiety --- but not full relief.</p>
               ),
             },
             {
@@ -724,18 +724,18 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           Beyond the "Chemical Imbalance" Myth
         </h2>
         <p className="mb-6">
-          For decades, depression was explained as a "chemical imbalance" — too little serotonin. This was always an oversimplification <Citation id="2" index={2} source="Journal of Psychiatry & Neuroscience" year="2020" tier={1} />.
+          For decades, depression was explained as a "chemical imbalance" --- too little serotonin. This was always an oversimplification <Citation id="2" index={2} source="Journal of Psychiatry & Neuroscience" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="info" title="The Modern Understanding">
           <p className="mb-4">Mental health conditions aren't caused by a single neurotransmitter deficiency. They involve:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Multiple neurotransmitter systems</strong> interacting in complex ways</li>
-            <li><strong>Brain circuit dysfunction</strong> — patterns of neural activity that get stuck</li>
+            <li><strong>Brain circuit dysfunction</strong> --- patterns of neural activity that get stuck</li>
             <li><strong>Inflammation and stress hormones</strong> affecting brain function</li>
             <li><strong>Genetics, environment, and life experience</strong> shaping brain development</li>
           </ul>
-          <p className="mt-4">Medications help by resetting these systems — not by "fixing" a simple imbalance.</p>
+          <p className="mt-4">Medications help by resetting these systems --- not by "fixing" a simple imbalance.</p>
         </ArticleCallout>
 
         <QuoteBlock
@@ -751,7 +751,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
 
         <StatCard
           stats={[
-            { value: 4, suffix: '–8', label: 'Weeks for most antidepressants to reach full effect' },
+            { value: 4, suffix: '--8', label: 'Weeks for most antidepressants to reach full effect' },
             { value: 40, suffix: '%', label: "Symptom improvement needed to feel 'better'" },
             { value: 6, suffix: '+', label: 'Months recommended for first medication trial' },
           ]}
@@ -761,7 +761,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Be patient</strong>: Give medications the full 6-8 weeks to work before deciding they're not effective</li>
           <li><strong>Don't stop early</strong>: Stopping after 2-3 weeks because you feel better or worse prevents the deeper brain changes from happening</li>
-          <li><strong>Side effects ≠ effectiveness</strong>: Feeling side effects doesn't mean the medication is 'working' — and not feeling side effects doesn't mean it's not working</li>
+          <li><strong>Side effects ≠ effectiveness</strong>: Feeling side effects doesn't mean the medication is 'working' --- and not feeling side effects doesn't mean it's not working</li>
           <li><strong>Medication isn't magic</strong>: It creates conditions for recovery, but therapy, lifestyle, and social support are still essential</li>
           <li><strong>Everyone responds differently</strong>: Your brain chemistry is unique. What works for someone else may not work for you, and vice versa</li>
         </ul>
@@ -858,7 +858,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Side effects are the most common reason people stop taking psychiatric medication — even when the medication is working <Citation id="5" index={5} source="American Journal of Psychiatry" year="2021" tier={1} />. But many side effects are temporary, manageable, or preventable with simple adjustments.
+            Side effects are the most common reason people stop taking psychiatric medication --- even when the medication is working <Citation id="5" index={5} source="American Journal of Psychiatry" year="2021" tier={1} />. But many side effects are temporary, manageable, or preventable with simple adjustments.
           </p>
           <p className="mb-6">
             Knowing which side effects are normal, which fade over time, and which require immediate medical attention helps you navigate treatment safely and stick with medications that improve your life.
@@ -949,7 +949,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="tip" title="The Two-Week Rule">
-          <p>Most early side effects improve within 2 weeks as your body adjusts. If you can tolerate mild nausea, jitteriness, or GI upset for those first weeks, they often resolve on their own. But if side effects are severe or intolerable, contact your doctor sooner — dose adjustments or switching medications can help.</p>
+          <p>Most early side effects improve within 2 weeks as your body adjusts. If you can tolerate mild nausea, jitteriness, or GI upset for those first weeks, they often resolve on their own. But if side effects are severe or intolerable, contact your doctor sooner --- dose adjustments or switching medications can help.</p>
         </ArticleCallout>
 
         <h2 id="persistent-side-effects" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -983,7 +983,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
                     <li><strong>Medication holidays:</strong> Skipping doses on weekends (only with short-acting SSRIs, under doctor guidance) may help</li>
                     <li><strong>Other aids:</strong> Sildenafil (Viagra) for men, lubricants for women, pelvic floor therapy</li>
                   </ul>
-                  <p><strong>Don't suffer in silence:</strong> Many people stop medication due to sexual side effects without telling their doctor. Be honest — there are solutions.</p>
+                  <p><strong>Don't suffer in silence:</strong> Many people stop medication due to sexual side effects without telling their doctor. Be honest --- there are solutions.</p>
                 </div>
               ),
             },
@@ -1012,7 +1012,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Common with:</strong> SSRIs at high doses, some antipsychotics</p>
-                  <p className="mb-4"><strong>What it feels like:</strong> Reduced emotional range — not sad, but not happy either. Feeling "flat" or "numb," caring less about things that used to matter.</p>
+                  <p className="mb-4"><strong>What it feels like:</strong> Reduced emotional range --- not sad, but not happy either. Feeling "flat" or "numb," caring less about things that used to matter.</p>
                   <p className="mb-4"><strong>Management:</strong></p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li><strong>Lower the dose:</strong> Emotional blunting often dose-dependent</li>
@@ -1041,7 +1041,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             <li><strong>Severe allergic reaction</strong>: Rash, hives, swelling of face/tongue/throat, difficulty breathing</li>
             <li><strong>Neuroleptic malignant syndrome</strong> (from antipsychotics): High fever, muscle rigidity, confusion, irregular heart rate (rare but medical emergency)</li>
             <li><strong>Lithium toxicity</strong>: Severe nausea, vomiting, confusion, tremor, slurred speech</li>
-            <li><strong>Severe rash</strong> (from lamotrigine): Stevens-Johnson syndrome is rare but serious — report any rash immediately</li>
+            <li><strong>Severe rash</strong> (from lamotrigine): Stevens-Johnson syndrome is rare but serious --- report any rash immediately</li>
           </ul>
         </ArticleCallout>
 
@@ -1081,7 +1081,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           Discontinuation Syndrome: Why You Shouldn't Stop Suddenly
         </h2>
         <p className="mb-6">
-          Stopping psychiatric medication abruptly — especially SSRIs, SNRIs, and benzodiazepines — can cause withdrawal-like symptoms called discontinuation syndrome <Citation id="7" index={7} source="Psychotherapy and Psychosomatics" year="2021" tier={1} />.
+          Stopping psychiatric medication abruptly --- especially SSRIs, SNRIs, and benzodiazepines --- can cause withdrawal-like symptoms called discontinuation syndrome <Citation id="7" index={7} source="Psychotherapy and Psychosomatics" year="2021" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -1092,7 +1092,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               description: (
                 <ul className="list-disc pl-5 space-y-2">
                   <li>Flu-like symptoms (fatigue, muscle aches, chills)</li>
-                  <li>"Brain zaps" — electric shock sensations in the head</li>
+                  <li>"Brain zaps" --- electric shock sensations in the head</li>
                   <li>Dizziness, vertigo, balance problems</li>
                   <li>Nausea, vomiting</li>
                   <li>Insomnia, vivid dreams</li>
@@ -1172,14 +1172,14 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
         </ArticleCallout>
 
         <QuoteBlock
-          quote="I dealt with sexual side effects from my SSRI for two years because I was too embarrassed to bring it up. When I finally told my psychiatrist, she switched me to bupropion and the problem resolved in a month. I wish I'd said something sooner — those were two years of my life I didn't need to lose."
+          quote="I dealt with sexual side effects from my SSRI for two years because I was too embarrassed to bring it up. When I finally told my psychiatrist, she switched me to bupropion and the problem resolved in a month. I wish I'd said something sooner --- those were two years of my life I didn't need to lose."
           attribution="Person on Antidepressants"
           role="Patient Perspective"
           variant="large"
         />
 
         <p className="mb-6 mt-6">
-          Side effects are real, but they're also manageable. You don't have to choose between mental health and quality of life — there are almost always alternatives.
+          Side effects are real, but they're also manageable. You don't have to choose between mental health and quality of life --- there are almost always alternatives.
         </p>
       </>
     ),
@@ -1266,7 +1266,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Starting psychiatric medication feels like a leap of faith. Stopping feels like you're finally free. But both require careful planning — not sudden decisions. Abruptly stopping medication can cause withdrawal symptoms, trigger relapse, or even be dangerous <Citation id="1" index={1} source="Psychotherapy and Psychosomatics" year="2021" tier={1} />.
+            Starting psychiatric medication feels like a leap of faith. Stopping feels like you're finally free. But both require careful planning --- not sudden decisions. Abruptly stopping medication can cause withdrawal symptoms, trigger relapse, or even be dangerous <Citation id="1" index={1} source="Psychotherapy and Psychosomatics" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Here's how to start medication safely, how long to stay on it, and the right way to stop when the time comes.
@@ -1292,7 +1292,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             {
               title: 'Expect an Adjustment Period',
               description: (
-                <p>The first 2 weeks often involve side effects (nausea, jitteriness, sleep changes) without symptom relief. This is normal — your brain is adapting. Most early side effects fade by week 3-4.</p>
+                <p>The first 2 weeks often involve side effects (nausea, jitteriness, sleep changes) without symptom relief. This is normal --- your brain is adapting. Most early side effects fade by week 3-4.</p>
               ),
             },
             {
@@ -1343,10 +1343,10 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">Key Principles</h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Stay on medication for at least 6-12 months after you feel better</strong> — this consolidates recovery and prevents relapse</li>
+          <li><strong>Stay on medication for at least 6-12 months after you feel better</strong> --- this consolidates recovery and prevents relapse</li>
           <li><strong>If you've had 2+ episodes of depression or mania</strong>, long-term (possibly lifelong) treatment is usually recommended</li>
-          <li><strong>If you have chronic conditions</strong> (bipolar, schizophrenia, severe OCD), medication is often indefinite — like insulin for diabetes</li>
-          <li><strong>Stopping too early greatly increases relapse risk</strong> — up to 60% of people relapse within a year if they stop antidepressants prematurely</li>
+          <li><strong>If you have chronic conditions</strong> (bipolar, schizophrenia, severe OCD), medication is often indefinite --- like insulin for diabetes</li>
+          <li><strong>Stopping too early greatly increases relapse risk</strong> --- up to 60% of people relapse within a year if they stop antidepressants prematurely</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="Feeling Better ≠ Ready to Stop">
@@ -1369,7 +1369,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
                 <div>
                   <p className="mb-4"><strong>Tapering schedule:</strong> Reduce dose by 10-25% every 2-4 weeks. Total taper time: 2-6 months depending on how long you've been on the medication.</p>
                   <p className="mb-4"><strong>Watch for discontinuation syndrome:</strong> Flu-like symptoms, brain zaps, dizziness, nausea, insomnia, mood swings. If these occur, slow the taper.</p>
-                  <p className="mb-4"><strong>Short-acting SSRIs/SNRIs (paroxetine, venlafaxine):</strong> Highest risk of withdrawal — taper very slowly, sometimes switching to fluoxetine (long half-life) first to make tapering easier.</p>
+                  <p className="mb-4"><strong>Short-acting SSRIs/SNRIs (paroxetine, venlafaxine):</strong> Highest risk of withdrawal --- taper very slowly, sometimes switching to fluoxetine (long half-life) first to make tapering easier.</p>
                   <p><strong>Never stop cold turkey</strong> unless medically necessary (e.g., serotonin syndrome). Even missing a few doses can cause withdrawal symptoms.</p>
                 </div>
               ),
@@ -1379,7 +1379,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               label: 'Mood Stabilizers',
               content: (
                 <div>
-                  <p className="mb-4"><strong>Tapering schedule:</strong> Very slow taper — 10% reduction every 2-4 weeks, often taking 6-12 months.</p>
+                  <p className="mb-4"><strong>Tapering schedule:</strong> Very slow taper --- 10% reduction every 2-4 weeks, often taking 6-12 months.</p>
                   <p className="mb-4"><strong>Risk of relapse is extremely high:</strong> Stopping mood stabilizers for bipolar disorder leads to manic or depressive episodes in 60-90% of people within a year <Citation id="7" index={7} source="Bipolar Disorders" year="2021" tier={1} />.</p>
                   <p className="mb-4"><strong>Lithium:</strong> Must taper slowly and monitor blood levels. Abrupt cessation can trigger rapid-cycling bipolar or severe mania.</p>
                   <p><strong>Most people with bipolar disorder stay on mood stabilizers indefinitely</strong> to prevent relapse. Discuss risks carefully with your psychiatrist before tapering.</p>
@@ -1403,9 +1403,9 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               label: 'Benzodiazepines',
               content: (
                 <div>
-                  <p className="mb-4"><strong>Tapering schedule:</strong> Extremely slow — 5-10% reduction every 1-2 weeks. Total taper can take 6-18 months for long-term users <Citation id="3" index={3} source="Addiction" year="2022" tier={1} />.</p>
+                  <p className="mb-4"><strong>Tapering schedule:</strong> Extremely slow --- 5-10% reduction every 1-2 weeks. Total taper can take 6-18 months for long-term users <Citation id="3" index={3} source="Addiction" year="2022" tier={1} />.</p>
                   <p className="mb-4"><strong>Why so slow:</strong> Benzodiazepine withdrawal can cause seizures, severe anxiety, insomnia, tremors, and protracted withdrawal syndrome lasting months.</p>
-                  <p className="mb-4"><strong>Never stop cold turkey</strong> — this is medically dangerous. Withdrawal can be life-threatening.</p>
+                  <p className="mb-4"><strong>Never stop cold turkey</strong> --- this is medically dangerous. Withdrawal can be life-threatening.</p>
                   <p><strong>Many people switch to a long-acting benzo (diazepam) first</strong> to make tapering smoother, then gradually reduce the diazepam.</p>
                 </div>
               ),
@@ -1428,7 +1428,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
                 <li>Withdrawal symptoms within days to weeks</li>
                 <li>Relapse of depression, anxiety, or mania within weeks to months</li>
                 <li>Symptoms often worse than before starting medication</li>
-                <li>Difficult to restart medication — takes 6-8 weeks to work again</li>
+                <li>Difficult to restart medication --- takes 6-8 weeks to work again</li>
                 <li>Loss of trust in treatment</li>
               </ul>
             ),
@@ -1520,21 +1520,21 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               id: 'restart-plan',
               title: '4. Have a Plan to Restart Medication Quickly',
               content: (
-                <p>If symptoms return, know that restarting medication is not failure — it's smart self-care. Agree in advance with your doctor on a plan to resume if needed.</p>
+                <p>If symptoms return, know that restarting medication is not failure --- it's smart self-care. Agree in advance with your doctor on a plan to resume if needed.</p>
               ),
             },
             {
               id: 'ongoing-therapy',
               title: '5. Continue Therapy and Coping Skills',
               content: (
-                <p>Medication is only one part of treatment. Keep up with therapy, exercise, sleep hygiene, social connection, and stress management — these protect against relapse.</p>
+                <p>Medication is only one part of treatment. Keep up with therapy, exercise, sleep hygiene, social connection, and stress management --- these protect against relapse.</p>
               ),
             },
           ]}
         />
 
         <QuoteBlock
-          quote="I stopped my antidepressant after a year because I felt great. Within three months, I was back in bed, unable to work. I thought I'd failed. My psychiatrist explained that my brain still needed the medication — it wasn't a character flaw. I restarted, tapered much more slowly the second time, and I've been stable for five years now."
+          quote="I stopped my antidepressant after a year because I felt great. Within three months, I was back in bed, unable to work. I thought I'd failed. My psychiatrist explained that my brain still needed the medication --- it wasn't a character flaw. I restarted, tapered much more slowly the second time, and I've been stable for five years now."
           attribution="Person with Recurrent Depression"
           role="Patient Perspective"
           variant="large"
@@ -1548,11 +1548,11 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
             <li>Adjust the plan if withdrawal symptoms or relapse occur</li>
             <li>Support your decision, even if they recommend against it</li>
           </ul>
-          <p className="mt-4">Stopping medication isn't a sign of weakness or failure — but doing it safely requires partnership and planning.</p>
+          <p className="mt-4">Stopping medication isn't a sign of weakness or failure --- but doing it safely requires partnership and planning.</p>
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          Psychiatric medication is a tool, not a lifelong sentence. But stopping requires the same care and intention as starting. Taper slowly, monitor closely, and have a plan — your future self will thank you.
+          Psychiatric medication is a tool, not a lifelong sentence. But stopping requires the same care and intention as starting. Taper slowly, monitor closely, and have a plan --- your future self will thank you.
         </p>
       </>
     ),
@@ -1655,10 +1655,10 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The question isn't "medication or therapy?" — it's "which treatment, or combination of treatments, works best for me?" For decades, research has compared medication, psychotherapy, and combined treatment. The answer is nuanced: both work, but for different people, different conditions, and with different long-term outcomes <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
+            The question isn't "medication or therapy?" --- it's "which treatment, or combination of treatments, works best for me?" For decades, research has compared medication, psychotherapy, and combined treatment. The answer is nuanced: both work, but for different people, different conditions, and with different long-term outcomes <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Here's what the evidence actually shows — without the ideology or marketing.
+            Here's what the evidence actually shows --- without the ideology or marketing.
           </p>
         </div>
 
@@ -1718,7 +1718,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
                     <li>Therapy alone: 30-40% relapse within 1-2 years</li>
                     <li>Combined (then medication stopped but skills maintained): 35-45% relapse</li>
                   </ul>
-                  <p className="mb-4"><strong>Why:</strong> Therapy teaches coping skills, cognitive restructuring, and behavioral activation that persist after therapy ends. Medication provides symptom relief but doesn't teach skills — when you stop, the biological vulnerability remains.</p>
+                  <p className="mb-4"><strong>Why:</strong> Therapy teaches coping skills, cognitive restructuring, and behavioral activation that persist after therapy ends. Medication provides symptom relief but doesn't teach skills --- when you stop, the biological vulnerability remains.</p>
                   <p><strong>Exception:</strong> For chronic, recurrent depression or bipolar disorder, long-term or indefinite medication is often necessary regardless of therapy.</p>
                 </div>
               ),
@@ -1729,7 +1729,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">For mild to moderate depression, therapy and medication are equally effective. But for <strong>severe depression</strong> (especially with suicidal ideation, psychotic features, or extreme impairment), medication is usually necessary <Citation id="7" index={7} source="JAMA" year="2020" tier={1} />.</p>
-                  <p className="mb-4"><strong>Why:</strong> Severe depression often involves biological dysregulation that needs pharmacological intervention. Therapy requires cognitive capacity and energy — if you can't get out of bed or think clearly, therapy alone may not be accessible.</p>
+                  <p className="mb-4"><strong>Why:</strong> Severe depression often involves biological dysregulation that needs pharmacological intervention. Therapy requires cognitive capacity and energy --- if you can't get out of bed or think clearly, therapy alone may not be accessible.</p>
                   <p><strong>Best approach for severe depression:</strong> Start with medication for rapid symptom reduction, then add therapy once you're stable enough to engage.</p>
                 </div>
               ),
@@ -1767,7 +1767,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           How Medication and Therapy Work Differently
         </h2>
         <p className="mb-6">
-          Medication and therapy target mental health problems through different mechanisms — and that's why combining them is often most effective <Citation id="9" index={9} source="Nature Reviews Neuroscience" year="2021" tier={1} />.
+          Medication and therapy target mental health problems through different mechanisms --- and that's why combining them is often most effective <Citation id="9" index={9} source="Nature Reviews Neuroscience" year="2021" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -1801,9 +1801,9 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           <p className="mb-4">Medication stabilizes your brain chemistry, creating a foundation for therapy to work. Therapy builds skills and changes patterns, reducing relapse risk long-term.</p>
           <p className="mb-4">Think of it like this:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Medication</strong> is like pain relief after breaking your leg — it makes the pain manageable</li>
-            <li><strong>Therapy</strong> is like physical therapy — it strengthens the leg, teaches you how to walk again, and prevents re-injury</li>
-            <li><strong>Combined</strong> is pain relief + PT — the fastest, most complete recovery</li>
+            <li><strong>Medication</strong> is like pain relief after breaking your leg --- it makes the pain manageable</li>
+            <li><strong>Therapy</strong> is like physical therapy --- it strengthens the leg, teaches you how to walk again, and prevents re-injury</li>
+            <li><strong>Combined</strong> is pain relief + PT --- the fastest, most complete recovery</li>
           </ul>
         </ArticleCallout>
 
@@ -1915,7 +1915,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
           <li>No side effects</li>
           <li>Builds lasting skills</li>
           <li>Addresses root causes, not just symptoms</li>
-          <li>Empowering — active participation vs. passive pill-taking</li>
+          <li>Empowering --- active participation vs. passive pill-taking</li>
           <li>Less stigma in some communities</li>
         </ul>
 

@@ -39,7 +39,7 @@ export const communicationSkillsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most people don't listen to understand—they listen to respond. While someone is talking, they're formulating their reply, waiting for a pause to jump in, or mentally preparing their counterargument. This isn't listening. It's waiting to talk.
+            Most people don't listen to understand---they listen to respond. While someone is talking, they're formulating their reply, waiting for a pause to jump in, or mentally preparing their counterargument. This isn't listening. It's waiting to talk.
           </p>
           <p className="mb-6">
             Active listening is the skill of giving someone your full attention, seeking to understand their perspective, and reflecting that understanding back to them <Citation id="1" index={1} source="Journal of Applied Psychology" year="2020" tier={1} />. It's rare, powerful, and one of the most underrated communication skills.
@@ -282,7 +282,7 @@ export const communicationSkillsArticlesA: Article[] = [
               label: 'Global',
               content: (
                 <div>
-                  <p className="mb-4"><strong>Focus:</strong> On the full context—words, emotions, body language, what's unsaid</p>
+                  <p className="mb-4"><strong>Focus:</strong> On the full context---words, emotions, body language, what's unsaid</p>
                   <p className="mb-4"><strong>Sounds like:</strong> Noticing patterns, reading between lines, sensing what they're not saying</p>
                   <p><strong>Result:</strong> Deep understanding and connection</p>
                 </div>
@@ -493,7 +493,7 @@ export const communicationSkillsArticlesA: Article[] = [
           Universal Human Needs
         </h2>
         <p className="mb-6">
-          Needs are universal—everyone has them. Common needs include <Citation id="3" index={3} source="Emotion" year="2019" tier={1} />:
+          Needs are universal---everyone has them. Common needs include <Citation id="3" index={3} source="Emotion" year="2019" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Connection:</strong> Love, belonging, intimacy, understanding</li>
@@ -575,7 +575,7 @@ export const communicationSkillsArticlesA: Article[] = [
           Receiving with Empathy
         </h2>
         <p className="mb-6">
-          NVC isn't just about expressing—it's also about listening with empathy <Citation id="4" index={4} source="Communication Research" year="2021" tier={1} />. When someone is upset:
+          NVC isn't just about expressing---it's also about listening with empathy <Citation id="4" index={4} source="Communication Research" year="2021" tier={1} />. When someone is upset:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Listen for the feeling:</strong> "It sounds like you're feeling frustrated?"</li>
@@ -618,7 +618,7 @@ export const communicationSkillsArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          NVC isn't about being nice or avoiding conflict. It's about being real, clear, and compassionate—even when you're angry. It transforms blame into understanding and demands into collaboration. That's powerful.
+          NVC isn't about being nice or avoiding conflict. It's about being real, clear, and compassionate---even when you're angry. It transforms blame into understanding and demands into collaboration. That's powerful.
         </p>
       </>
     ),
@@ -631,7 +631,7 @@ export const communicationSkillsArticlesA: Article[] = [
     id: catId(23),
     slug: 'four-horsemen-communication-what-kills-relationships-gottman-research',
     title: 'The Four Horsemen of Communication: What Kills Relationships (Gottman Research)',
-    description: 'Research-backed breakdown of the four communication patterns that predict relationship failure—and their antidotes.',
+    description: 'Research-backed breakdown of the four communication patterns that predict relationship failure---and their antidotes.',
     image: "/images/articles/cat03/cover-023.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 10,
@@ -650,7 +650,7 @@ export const communicationSkillsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Dr. John Gottman can predict with 90% accuracy whether a couple will divorce—by watching them argue for 15 minutes. The secret? Four specific communication patterns he calls "The Four Horsemen of the Apocalypse."
+            Dr. John Gottman can predict with 90% accuracy whether a couple will divorce---by watching them argue for 15 minutes. The secret? Four specific communication patterns he calls "The Four Horsemen of the Apocalypse."
           </p>
           <p className="mb-6">
             Over four decades of research involving thousands of couples, Gottman identified these toxic patterns that reliably erode relationships <Citation id="2" index={2} source="Journal of Marriage and Family" year="2000" tier={1} />. The good news: once you recognize them, you can replace them with healthier alternatives.
@@ -711,7 +711,7 @@ export const communicationSkillsArticlesA: Article[] = [
           Horseman #2: Contempt
         </h2>
         <p className="mb-6">
-          Contempt is criticism on steroids—it adds mockery, sarcasm, name-calling, and a sense of superiority <Citation id="3" index={3} source="Psychological Science" year="2018" tier={1} />.
+          Contempt is criticism on steroids---it adds mockery, sarcasm, name-calling, and a sense of superiority <Citation id="3" index={3} source="Psychological Science" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>What it looks like:</strong>
@@ -781,7 +781,7 @@ export const communicationSkillsArticlesA: Article[] = [
           Horseman #4: Stonewalling
         </h2>
         <p className="mb-6">
-          Stonewalling is withdrawing from the conversation entirely—shutting down, going silent, walking away <Citation id="1" index={1} source="Journal of Family Psychology" year="2019" tier={1} />.
+          Stonewalling is withdrawing from the conversation entirely---shutting down, going silent, walking away <Citation id="1" index={1} source="Journal of Family Psychology" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>What it looks like:</strong>
@@ -853,7 +853,7 @@ export const communicationSkillsArticlesA: Article[] = [
           The Magic of Repair Attempts
         </h2>
         <p className="mb-6">
-          Successful couples aren't conflict-free—they're good at repair <Citation id="4" index={4} source="Personal Relationships" year="2020" tier={1} />. A repair attempt is anything that de-escalates tension:
+          Successful couples aren't conflict-free---they're good at repair <Citation id="4" index={4} source="Personal Relationships" year="2020" tier={1} />. A repair attempt is anything that de-escalates tension:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>"I'm sorry, I'm being harsh. Let me start over."</li>
@@ -873,7 +873,7 @@ export const communicationSkillsArticlesA: Article[] = [
           <li>The presence of all Four Horsemen predicts divorce with 90% accuracy <Citation id="2" index={2} source="Journal of Marriage and Family" year="2000" tier={1} /></li>
           <li>Stonewalling is more common in men (85% of stonewallers are male) due to higher physiological reactivity</li>
           <li>Couples therapy using Gottman Method shows significant improvement in reducing the Four Horsemen <Citation id="5" index={5} source="Journal of Marital and Family Therapy" year="2021" tier={1} /></li>
-          <li>It's not conflict itself that kills relationships—it's HOW you fight</li>
+          <li>It's not conflict itself that kills relationships---it's HOW you fight</li>
         </ul>
 
         <QuoteBlock
@@ -900,7 +900,7 @@ export const communicationSkillsArticlesA: Article[] = [
           <li>If the Horsemen are entrenched, seek Gottman Method couples therapy</li>
         </ol>
         <p className="mb-6">
-          Healthy relationships aren't built on never fighting. They're built on fighting well—with respect, accountability, and repair. That's entirely learnable.
+          Healthy relationships aren't built on never fighting. They're built on fighting well---with respect, accountability, and repair. That's entirely learnable.
         </p>
       </>
     ),
@@ -913,7 +913,7 @@ export const communicationSkillsArticlesA: Article[] = [
     id: catId(24),
     slug: 'how-to-ask-for-what-you-need-assertive-communication-basics',
     title: 'How to Ask for What You Need: Assertive Communication Basics',
-    description: 'Master the art of asking for what you need clearly, directly, and without apology—while still being respectful and kind.',
+    description: 'Master the art of asking for what you need clearly, directly, and without apology---while still being respectful and kind.',
     image: "/images/articles/cat03/cover-024.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -930,7 +930,7 @@ export const communicationSkillsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Many people spend years hoping others will read their minds, then feel resentful when their unspoken needs go unmet. The solution isn't telepathy—it's learning to ask.
+            Many people spend years hoping others will read their minds, then feel resentful when their unspoken needs go unmet. The solution isn't telepathy---it's learning to ask.
           </p>
           <p className="mb-6">
             Asking for what you need isn't selfish, demanding, or rude <Citation id="1" index={1} source="Behavior Therapy" year="2020" tier={1} />. It's clear, honest communication. And it dramatically improves relationships, reduces resentment, and gets you more of what you actually want.
@@ -1101,7 +1101,7 @@ export const communicationSkillsArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          The worst that happens when you ask is hearing "no"—which is the same outcome as not asking at all. But the best that happens? You get what you need. That's worth the risk.
+          The worst that happens when you ask is hearing "no"---which is the same outcome as not asking at all. But the best that happens? You get what you need. That's worth the risk.
         </p>
       </>
     ),
@@ -1114,7 +1114,7 @@ export const communicationSkillsArticlesA: Article[] = [
     id: catId(25),
     slug: 'validation-the-most-underrated-communication-skill',
     title: 'Validation: The Most Underrated Communication Skill',
-    description: 'Learn why validation is the fastest way to de-escalate conflict, build trust, and make others feel heard—even when you disagree.',
+    description: 'Learn why validation is the fastest way to de-escalate conflict, build trust, and make others feel heard---even when you disagree.',
     image: "/images/articles/cat03/cover-025.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -1131,7 +1131,7 @@ export const communicationSkillsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Someone shares something hard with you. Your instinct: fix it, minimize it, or offer perspective. "It's not that bad.", "At least you have...", "Just think positive!" These responses, though well-intentioned, are invalidating—and they shut people down.
+            Someone shares something hard with you. Your instinct: fix it, minimize it, or offer perspective. "It's not that bad.", "At least you have...", "Just think positive!" These responses, though well-intentioned, are invalidating---and they shut people down.
           </p>
           <p className="mb-6">
             Validation is acknowledging someone's feelings as legitimate, understandable, and worthy of respect <Citation id="1" index={1} source="Emotion" year="2020" tier={1} />. It doesn't mean agreeing. It means showing that their experience makes sense, given their perspective.
@@ -1288,7 +1288,7 @@ export const communicationSkillsArticlesA: Article[] = [
           You can also validate yourself:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"It makes sense I'm tired—I didn't sleep well."</li>
+          <li>"It makes sense I'm tired---I didn't sleep well."</li>
           <li>"Of course I'm anxious. This is a big deal."</li>
           <li>"It's okay to feel sad right now. This is hard."</li>
         </ul>

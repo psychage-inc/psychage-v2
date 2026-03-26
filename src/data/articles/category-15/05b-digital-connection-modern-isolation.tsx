@@ -146,7 +146,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Car Dependency Kills Casual Contact',
               content: (
                 <p>
-                  When you drive everywhere, you never encounter neighbors. Walking creates spontaneous interactions — waving to someone watering their lawn, chatting at the bus stop. Driving eliminates these moments.
+                  When you drive everywhere, you never encounter neighbors. Walking creates spontaneous interactions --- waving to someone watering their lawn, chatting at the bus stop. Driving eliminates these moments.
                 </p>
               ),
             },
@@ -155,7 +155,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Single-Use Zoning Separates Life',
               content: (
                 <p>
-                  Zoning laws separate residential from commercial areas. You drive to work, drive to shop, drive home. Your neighborhood has houses and nothing else — no cafes, no corner stores, no reasons to linger <Citation id="6" index={6} source="Urban Studies" year="2021" tier={1} />.
+                  Zoning laws separate residential from commercial areas. You drive to work, drive to shop, drive home. Your neighborhood has houses and nothing else --- no cafes, no corner stores, no reasons to linger <Citation id="6" index={6} source="Urban Studies" year="2021" tier={1} />.
                 </p>
               ),
             },
@@ -213,7 +213,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
           Design for Connection
         </h2>
         <p className="mb-6">
-          We cannot redesign every city overnight. But understanding how design shapes connection helps us make better choices: choosing walkable neighborhoods, advocating for better public spaces, and recognizing that loneliness is not just personal — it is structural.
+          We cannot redesign every city overnight. But understanding how design shapes connection helps us make better choices: choosing walkable neighborhoods, advocating for better public spaces, and recognizing that loneliness is not just personal --- it is structural.
         </p>
       </>
     ),
@@ -368,7 +368,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
           Do These Apps Work?
         </h2>
         <p className="mb-6">
-          A meta-analysis of digital loneliness interventions found modest positive effects — but with important caveats <Citation id="4" index={4} source="Clinical Psychology Review" year="2020" tier={1} />:
+          A meta-analysis of digital loneliness interventions found modest positive effects --- but with important caveats <Citation id="4" index={4} source="Clinical Psychology Review" year="2020" tier={1} />:
         </p>
 
         <StatCard
@@ -404,7 +404,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
           Technology as Tool, Not Solution
         </h2>
         <p className="mb-6">
-          Apps cannot fix loneliness. But they can be useful tools — if used intentionally.
+          Apps cannot fix loneliness. But they can be useful tools --- if used intentionally.
         </p>
         <p className="mb-6">
           Use them to find people, then move offline. Use them to maintain existing friendships, not replace face-to-face time. Use them as bridges, not destinations.
@@ -501,7 +501,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
             You left behind everyone you knew. Your family. Your friends. The place where you belonged. And now you are starting over in a country where you are a stranger.
           </p>
           <p className="mb-6">
-            Immigration is often portrayed as opportunity. But it is also profound loss. The loneliness of immigration is unique — it combines linguistic barriers, cultural disconnection, loss of social networks, and the grief of leaving home <Citation id="1" index={1} source="Journal of Immigrant and Minority Health" year="2020" tier={1} />.
+            Immigration is often portrayed as opportunity. But it is also profound loss. The loneliness of immigration is unique --- it combines linguistic barriers, cultural disconnection, loss of social networks, and the grief of leaving home <Citation id="1" index={1} source="Journal of Immigrant and Minority Health" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             This article explores why immigration creates isolation, how to navigate the challenges of building community in a new country, and strategies that work.
@@ -538,7 +538,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Cultural Disconnection',
               content: (
                 <p>
-                  Social norms, humor, unspoken rules — everything is different. You feel like an outsider because you are one. You miss cultural references, misread social cues, and constantly feel off-balance <Citation id="4" index={4} source="Cultural Diversity and Ethnic Minority Psychology" year="2019" tier={1} />.
+                  Social norms, humor, unspoken rules --- everything is different. You feel like an outsider because you are one. You miss cultural references, misread social cues, and constantly feel off-balance <Citation id="4" index={4} source="Cultural Diversity and Ethnic Minority Psychology" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -556,7 +556,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Grief and Nostalgia',
               content: (
                 <p>
-                  You miss home. Not just the people, but the smells, the sounds, the familiarity. This homesickness is a form of grief — mourning a life that still exists but you can no longer access.
+                  You miss home. Not just the people, but the smells, the sounds, the familiarity. This homesickness is a form of grief --- mourning a life that still exists but you can no longer access.
                 </p>
               ),
             },
@@ -583,7 +583,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Join cultural/ethnic community organizations',
               description: (
                 <p>
-                  Ethnic enclaves and cultural organizations provide immediate belonging. You share language, food, references, experiences. This is not isolation — it is strategic rebuilding <Citation id="5" index={5} source="Journal of Ethnic and Migration Studies" year="2020" tier={1} />.
+                  Ethnic enclaves and cultural organizations provide immediate belonging. You share language, food, references, experiences. This is not isolation --- it is strategic rebuilding <Citation id="5" index={5} source="Journal of Ethnic and Migration Studies" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -599,7 +599,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Find shared-interest groups',
               description: (
                 <p>
-                  Sports, hobbies, volunteering — activities where language is secondary. Connection happens through doing, not just talking.
+                  Sports, hobbies, volunteering --- activities where language is secondary. Connection happens through doing, not just talking.
                 </p>
               ),
             },
@@ -607,7 +607,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               title: 'Maintain connections back home',
               description: (
                 <p>
-                  Video calls, messaging, social media — stay connected to your roots. This is not preventing integration. It is maintaining identity and support.
+                  Video calls, messaging, social media --- stay connected to your roots. This is not preventing integration. It is maintaining identity and support.
                 </p>
               ),
             },
@@ -629,7 +629,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
           The loneliness of immigration is not failure. It is the natural consequence of leaving one world for another.
         </p>
         <p className="mb-6">
-          Give yourself time. Be patient with the slow work of building a new life. And know that millions of people have walked this path before you — and found belonging on the other side.
+          Give yourself time. Be patient with the slow work of building a new life. And know that millions of people have walked this path before you --- and found belonging on the other side.
         </p>
       </>
     ),
@@ -723,7 +723,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
             Saying "I am lonely" feels like confessing failure. It feels like admitting you are unlikeable, unwanted, somehow defective. So people suffer in silence, hiding their loneliness even from those closest to them <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            This article explores the shame around loneliness, why it keeps people isolated, and why admitting you are lonely is not weakness — it is the first step toward connection.
+            This article explores the shame around loneliness, why it keeps people isolated, and why admitting you are lonely is not weakness --- it is the first step toward connection.
           </p>
         </div>
 
@@ -744,7 +744,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          We stigmatize loneliness because we see it as evidence of social failure. If you were likeable, interesting, worthy — you would have friends. The fact that you are alone must mean you are lacking.
+          We stigmatize loneliness because we see it as evidence of social failure. If you were likeable, interesting, worthy --- you would have friends. The fact that you are alone must mean you are lacking.
         </p>
         <p className="mb-6">
           This is, of course, not true. But the belief is powerful enough to keep people silent.
@@ -800,7 +800,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Studies confirm this. People who disclose loneliness to trusted others experience reduced loneliness and increased connection — but only if they choose safe recipients <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
+          Studies confirm this. People who disclose loneliness to trusted others experience reduced loneliness and increased connection --- but only if they choose safe recipients <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
         </p>
 
         <h2 id="how-to-share" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -953,7 +953,7 @@ export const digitalConnectionModernIsolationArticlesB: Article[] = [
               Building social connection requires strategy, not just intention. Research shows that people who set specific, actionable goals for connection are far more successful than those who simply hope things will improve <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2021" tier={1} />.
             </p>
             <p className="mb-6">
-              This article walks you through creating a personalized social connection plan — a concrete roadmap for building the relationships you need.
+              This article walks you through creating a personalized social connection plan --- a concrete roadmap for building the relationships you need.
             </p>
           </div>
 

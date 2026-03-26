@@ -110,7 +110,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <p>
-          Self-control is the ability to override immediate impulses, desires, or emotional responses in service of broader goals or values. When you resist checking your phone during a conversation, choose a salad over fries, or complete a difficult task before watching TV, you're exercising self-control. Neuroscience reveals this isn't simply "willpower"—it's a complex interplay between brain regions evaluating rewards, emotions, and long-term consequences. Understanding how your brain manages impulses can help you work <em>with</em> your neural architecture rather than fighting it. <Citation ids={["1", '2']} />
+          Self-control is the ability to override immediate impulses, desires, or emotional responses in service of broader goals or values. When you resist checking your phone during a conversation, choose a salad over fries, or complete a difficult task before watching TV, you're exercising self-control. Neuroscience reveals this isn't simply "willpower"---it's a complex interplay between brain regions evaluating rewards, emotions, and long-term consequences. Understanding how your brain manages impulses can help you work <em>with</em> your neural architecture rather than fighting it. <Citation ids={["1", '2']} />
         </p>
 
         <ArticleCallout type="info" title="Core Concept: The Hot and Cool Brain Systems">
@@ -121,7 +121,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <h2>The Brain Architecture of Self-Control</h2>
         <p>
-          The prefrontal cortex (PFC), particularly the ventrolateral and dorsolateral regions, acts as your brain's 'executive suite"—monitoring ongoing behavior, inhibiting prepotent responses, and maintaining goal representations. When you resist a temptation, the PFC actively suppresses signals from subcortical structures like the striatum and amygdala that encode reward salience and emotional urgency. <Citation ids={['2', '9']} />
+          The prefrontal cortex (PFC), particularly the ventrolateral and dorsolateral regions, acts as your brain's 'executive suite"---monitoring ongoing behavior, inhibiting prepotent responses, and maintaining goal representations. When you resist a temptation, the PFC actively suppresses signals from subcortical structures like the striatum and amygdala that encode reward salience and emotional urgency. <Citation ids={['2', '9']} />
         </p>
 
         <StatCard
@@ -131,12 +131,12 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          The anterior cingulate cortex (ACC) detects conflict between competing responses—"I want the cookie" vs. "I'm eating healthy." The ACC signals this conflict to the PFC, which then implements control by downregulating activity in reward-processing regions. This process requires energy and attention, which is why self-control fails more easily when you're tired, stressed, or cognitively overloaded. <Citation ids={["1", '5']} />
+          The anterior cingulate cortex (ACC) detects conflict between competing responses---"I want the cookie" vs. "I'm eating healthy." The ACC signals this conflict to the PFC, which then implements control by downregulating activity in reward-processing regions. This process requires energy and attention, which is why self-control fails more easily when you're tired, stressed, or cognitively overloaded. <Citation ids={["1", '5']} />
         </p>
 
         <h2>Dopamine, Reward Prediction, and Impulse</h2>
         <p>
-          Dopamine pathways encode the value of immediate rewards. When you see a dessert, dopamine neurons fire in anticipation—this is the 'wanting' signal. The magnitude of this dopamine burst depends on how rewarding the brain predicts the experience will be, adjusted by factors like hunger, stress, and past experience. Self-control means the PFC can modulate this dopamine-driven wanting by activating representations of future consequences. <Citation ids={['3', '7']} />
+          Dopamine pathways encode the value of immediate rewards. When you see a dessert, dopamine neurons fire in anticipation---this is the 'wanting' signal. The magnitude of this dopamine burst depends on how rewarding the brain predicts the experience will be, adjusted by factors like hunger, stress, and past experience. Self-control means the PFC can modulate this dopamine-driven wanting by activating representations of future consequences. <Citation ids={['3', '7']} />
         </p>
 
         <ComparisonTable
@@ -152,12 +152,12 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          Temporal discounting—the tendency to devalue rewards that are delayed—has a neural basis. Brain regions that track immediate rewards show greater activation than those representing future gains, unless the PFC actively maintains a representation of the delayed outcome. This explains why visualizing your future self or making future consequences concrete can strengthen self-control. <Citation ids={['7', '10']} />
+          Temporal discounting---the tendency to devalue rewards that are delayed---has a neural basis. Brain regions that track immediate rewards show greater activation than those representing future gains, unless the PFC actively maintains a representation of the delayed outcome. This explains why visualizing your future self or making future consequences concrete can strengthen self-control. <Citation ids={['7', '10']} />
         </p>
 
         <h2>Individual Differences in Self-Control Capacity</h2>
         <p>
-          Self-control isn't equally distributed. Longitudinal research shows that individual differences in self-control—measurable as early as preschool—predict health, financial stability, and criminal outcomes decades later. These differences arise from genetics (approximately 60% heritable), early childhood environment, stress exposure, and accumulated practice. <Citation ids={['4', '8']} />
+          Self-control isn't equally distributed. Longitudinal research shows that individual differences in self-control---measurable as early as preschool---predict health, financial stability, and criminal outcomes decades later. These differences arise from genetics (approximately 60% heritable), early childhood environment, stress exposure, and accumulated practice. <Citation ids={['4', '8']} />
         </p>
 
         <ArticleCallout type="science" title="Research Insight: Stability and Malleability">
@@ -168,11 +168,11 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <h2>When Self-Control Breaks Down</h2>
         <p>
-          Several factors systematically undermine self-control: sleep deprivation (reduces PFC activity), acute stress (shifts control from PFC to limbic system), glucose depletion (older research, now contested), cognitive load (PFC can only manage limited demands), and alcohol (suppresses PFC function). Recognizing these vulnerabilities allows for strategic planning—making important decisions when rested, fed, and calm. <Citation ids={['1', '5']} />
+          Several factors systematically undermine self-control: sleep deprivation (reduces PFC activity), acute stress (shifts control from PFC to limbic system), glucose depletion (older research, now contested), cognitive load (PFC can only manage limited demands), and alcohol (suppresses PFC function). Recognizing these vulnerabilities allows for strategic planning---making important decisions when rested, fed, and calm. <Citation ids={['1', '5']} />
         </p>
 
         <QuoteBlock
-          quote="Self-control is not about suppression—it's about strategic allocation of limited cognitive resources."
+          quote="Self-control is not about suppression---it's about strategic allocation of limited cognitive resources."
           author="Roy Baumeister"
           context="Psychological Scientist"
         />
@@ -186,7 +186,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
           steps={[
             {
               title: 'Reduce Temptation Exposure',
-              description: `The PFC wins more easily when the limbic system isn't strongly activated—out of sight, out of mind works because it reduces the dopamine signal magnitude.`,
+              description: `The PFC wins more easily when the limbic system isn't strongly activated---out of sight, out of mind works because it reduces the dopamine signal magnitude.`,
             },
             {
               title: 'Make Future Consequences Concrete',
@@ -205,12 +205,12 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <h2>The Bigger Picture: Self-Control as One Tool</h2>
         <p>
-          Self-control is valuable but has costs—chronic suppression of impulses increases stress, depletes mental resources, and can backfire through rebound effects. The most effective long-term approach combines modest self-control capacity with structural changes: modifying environments to reduce temptations, building habits that automate desired behaviors, and cultivating intrinsic motivation that aligns emotional and rational systems. <Citation ids={["4", '8']} />
+          Self-control is valuable but has costs---chronic suppression of impulses increases stress, depletes mental resources, and can backfire through rebound effects. The most effective long-term approach combines modest self-control capacity with structural changes: modifying environments to reduce temptations, building habits that automate desired behaviors, and cultivating intrinsic motivation that aligns emotional and rational systems. <Citation ids={["4", '8']} />
         </p>
 
         <ArticleCallout type="reflection" title="Reflection Prompt">
           <p>
-            When does your self-control tend to fail? What patterns do you notice—time of day, stress level, environment? What strategies could reduce the burden on your prefrontal cortex in those situations?
+            When does your self-control tend to fail? What patterns do you notice---time of day, stress level, environment? What strategies could reduce the burden on your prefrontal cortex in those situations?
           </p>
         </ArticleCallout>
       </>
@@ -314,12 +314,12 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <p>
-          For two decades, the dominant model of self-control held that willpower functioned like a muscle or battery—a limited resource that depletes with use and requires rest to recharge. This 'ego depletion' theory, introduced by Roy Baumeister in 1998, suggested that exerting self-control in one domain (resisting cookies) impairs subsequent self-control in another (persisting on a difficult puzzle). Recent large-scale replications have challenged this model, revealing a more complex picture: self-control may be less about resource depletion and more about motivation, beliefs, and attention allocation. <Citation ids={['1', '2']} />
+          For two decades, the dominant model of self-control held that willpower functioned like a muscle or battery---a limited resource that depletes with use and requires rest to recharge. This 'ego depletion' theory, introduced by Roy Baumeister in 1998, suggested that exerting self-control in one domain (resisting cookies) impairs subsequent self-control in another (persisting on a difficult puzzle). Recent large-scale replications have challenged this model, revealing a more complex picture: self-control may be less about resource depletion and more about motivation, beliefs, and attention allocation. <Citation ids={['1', '2']} />
         </p>
 
         <h2>The Original Ego Depletion Model</h2>
         <p>
-          Baumeister's initial studies showed a consistent pattern: participants who completed a self-control task (suppressing emotions, resisting temptation, making choices) performed worse on a subsequent unrelated self-control task compared to controls. The theory proposed that all acts of self-control draw from a shared, limited resource—perhaps glucose—that becomes depleted with use. This explained why people exhibit worse self-control when tired, stressed, or after making many decisions. <Citation ids={['1', '5']} />
+          Baumeister's initial studies showed a consistent pattern: participants who completed a self-control task (suppressing emotions, resisting temptation, making choices) performed worse on a subsequent unrelated self-control task compared to controls. The theory proposed that all acts of self-control draw from a shared, limited resource---perhaps glucose---that becomes depleted with use. This explained why people exhibit worse self-control when tired, stressed, or after making many decisions. <Citation ids={['1', '5']} />
         </p>
 
         <ArticleChart
@@ -336,12 +336,12 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          The glucose hypothesis—that self-control depletes blood glucose—gained traction when studies showed that consuming sugary drinks restored self-control performance. This seemed to provide a biological mechanism: the brain uses glucose for executive function, self-control consumes glucose, and replenishing glucose restores capacity. <Citation ids={['4', '5']} />
+          The glucose hypothesis---that self-control depletes blood glucose---gained traction when studies showed that consuming sugary drinks restored self-control performance. This seemed to provide a biological mechanism: the brain uses glucose for executive function, self-control consumes glucose, and replenishing glucose restores capacity. <Citation ids={['4', '5']} />
         </p>
 
         <h2>The Replication Crisis Arrives</h2>
         <p>
-          In 2016, a massive pre-registered replication involving 23 laboratories and over 2,000 participants attempted to reproduce the ego depletion effect. The result: the effect size was nearly zero. Subsequent meta-analyses found that when accounting for publication bias (the tendency for positive findings to be published preferentially), the depletion effect shrinks dramatically—from moderate-to-large (d = 0.62) to small-to-negligible (d = 0.04). <Citation ids={['2', '3']} />
+          In 2016, a massive pre-registered replication involving 23 laboratories and over 2,000 participants attempted to reproduce the ego depletion effect. The result: the effect size was nearly zero. Subsequent meta-analyses found that when accounting for publication bias (the tendency for positive findings to be published preferentially), the depletion effect shrinks dramatically---from moderate-to-large (d = 0.62) to small-to-negligible (d = 0.04). <Citation ids={['2', '3']} />
         </p>
 
         <StatCard
@@ -351,7 +351,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          Further research challenged the glucose hypothesis: studies showed that <em>believing</em> glucose restores willpower was as important as actually consuming it. Participants who believed willpower was unlimited showed no depletion effects even after effortful tasks, while those who believed willpower was limited showed depletion—regardless of glucose consumption. <Citation ids={['4', '9']} />
+          Further research challenged the glucose hypothesis: studies showed that <em>believing</em> glucose restores willpower was as important as actually consuming it. Participants who believed willpower was unlimited showed no depletion effects even after effortful tasks, while those who believed willpower was limited showed depletion---regardless of glucose consumption. <Citation ids={['4', '9']} />
         </p>
 
         <h2>What's Actually Happening: Alternative Explanations</h2>
@@ -363,25 +363,25 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
           items={[
             {
               title: 'The Motivation Account',
-              content: `Prolonged self-control tasks are aversive—people want to stop. Reduced performance on subsequent tasks may reflect decreased motivation rather than depleted capacity. When rewards increase or tasks become more engaging, 'depletion' effects disappear.`,
+              content: `Prolonged self-control tasks are aversive---people want to stop. Reduced performance on subsequent tasks may reflect decreased motivation rather than depleted capacity. When rewards increase or tasks become more engaging, 'depletion' effects disappear.`,
             },
             {
               title: 'The Attention Shift Model',
-              content: 'Self-control requires sustained attention toward goals and away from temptations. After prolonged effort, attention naturally shifts toward rest and reward—a prioritization change, not a capacity limit.',
+              content: 'Self-control requires sustained attention toward goals and away from temptations. After prolonged effort, attention naturally shifts toward rest and reward---a prioritization change, not a capacity limit.',
             },
             {
               title: 'The Opportunity Cost Model',
-              content: 'The brain constantly weighs whether continued effort is worth the cost. After exertion, the cost of further effort increases relative to the benefits, leading to strategic disengagement—not depletion.',
+              content: 'The brain constantly weighs whether continued effort is worth the cost. After exertion, the cost of further effort increases relative to the benefits, leading to strategic disengagement---not depletion.',
             },
             {
               title: 'The Mindset Effect',
-              content: 'Beliefs about willpower shape performance. People who view willpower as non-limited show no depletion. Cultural differences also exist—ego depletion effects are stronger in Western, individualistic cultures.',
+              content: 'Beliefs about willpower shape performance. People who view willpower as non-limited show no depletion. Cultural differences also exist---ego depletion effects are stronger in Western, individualistic cultures.',
             },
           ]}
         />
 
         <p>
-          These alternative accounts don't deny that self-control becomes harder after sustained effort—they challenge the <em>mechanism</em>. The experience of mental fatigue is real, but it may signal prioritization shifts or motivational states rather than depleted neural resources. <Citation ids={['6', '7', '8']} />
+          These alternative accounts don't deny that self-control becomes harder after sustained effort---they challenge the <em>mechanism</em>. The experience of mental fatigue is real, but it may signal prioritization shifts or motivational states rather than depleted neural resources. <Citation ids={['6', '7', '8']} />
         </p>
 
         <h2>Practical Implications: What This Means for You</h2>
@@ -403,7 +403,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <ArticleCallout type="warning" title="Important Nuance">
           <p>
-            Challenging the limited-resource model doesn't mean self-control is infinite. Mental fatigue is real—sleep deprivation, chronic stress, and cognitive overload genuinely impair executive function. What's changed is the understanding that simple exertion of self-control in one domain doesn't necessarily deplete capacity in another. <Citation ids={['10']} />
+            Challenging the limited-resource model doesn't mean self-control is infinite. Mental fatigue is real---sleep deprivation, chronic stress, and cognitive overload genuinely impair executive function. What's changed is the understanding that simple exertion of self-control in one domain doesn't necessarily deplete capacity in another. <Citation ids={['10']} />
           </p>
         </ArticleCallout>
 
@@ -420,7 +420,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
             },
             {
               title: "Design Environments That Reduce Need for Self-Control",
-              description: `The most successful people don't rely on willpower—they structure their lives to minimize temptation. Remove friction from desired behaviors, add friction to undesired ones.`,
+              description: `The most successful people don't rely on willpower---they structure their lives to minimize temptation. Remove friction from desired behaviors, add friction to undesired ones.`,
             },
             {
               title: 'Connect Tasks to Meaningful Goals',
@@ -435,7 +435,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <h2>The Bottom Line</h2>
         <p>
-          The willpower-as-battery metaphor is overly simplistic. Self-control capacity is influenced by beliefs, motivation, context, and physiological states—but not in the straightforward "use it and lose it" way originally proposed. This is liberating: you're not doomed to fail at self-control after a demanding day. With the right mindset, structures, and motivations, you can sustain effort longer than the old model suggested. <Citation ids={["5", '6', '9']} />
+          The willpower-as-battery metaphor is overly simplistic. Self-control capacity is influenced by beliefs, motivation, context, and physiological states---but not in the straightforward "use it and lose it" way originally proposed. This is liberating: you're not doomed to fail at self-control after a demanding day. With the right mindset, structures, and motivations, you can sustain effort longer than the old model suggested. <Citation ids={["5", '6', '9']} />
         </p>
 
         <QuoteBlock
@@ -550,27 +550,27 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <p>
-          In the late 1960s, Walter Mischel conducted the Stanford marshmallow experiment: four-year-olds were offered a choice—eat one marshmallow now, or wait 15 minutes and get two. Some children waited; others didn't. Follow-up studies found that those who waited longer had better life outcomes—higher SAT scores, educational attainment, and BMI. The narrative became cultural shorthand: delayed gratification predicts success; self-control is destiny. But recent replications reveal a more complex story—one where context, socioeconomic background, and environmental reliability matter as much as individual temperament. <Citation ids={['1', '2']} />
+          In the late 1960s, Walter Mischel conducted the Stanford marshmallow experiment: four-year-olds were offered a choice---eat one marshmallow now, or wait 15 minutes and get two. Some children waited; others didn't. Follow-up studies found that those who waited longer had better life outcomes---higher SAT scores, educational attainment, and BMI. The narrative became cultural shorthand: delayed gratification predicts success; self-control is destiny. But recent replications reveal a more complex story---one where context, socioeconomic background, and environmental reliability matter as much as individual temperament. <Citation ids={['1', '2']} />
         </p>
 
         <h2>What the Original Study Actually Found</h2>
         <p>
-          Mischel's original sample was small (fewer than 90 children) and drawn from Stanford's Bing Nursery School—a population skewed toward high socioeconomic status (SES). Children who waited longer (measured in seconds) showed modest correlations with outcomes measured years later: SAT scores (r ≈ 0.42), educational attainment (r ≈ 0.35), and BMI (r ≈ -0.26). These are meaningful associations, but they explain only 10–20% of outcome variance. <Citation ids={['1', '10']} />
+          Mischel's original sample was small (fewer than 90 children) and drawn from Stanford's Bing Nursery School---a population skewed toward high socioeconomic status (SES). Children who waited longer (measured in seconds) showed modest correlations with outcomes measured years later: SAT scores (r ≈ 0.42), educational attainment (r ≈ 0.35), and BMI (r ≈ -0.26). These are meaningful associations, but they explain only 10--20% of outcome variance. <Citation ids={['1', '10']} />
         </p>
 
         <StatCard
           value="~15%"
           label="Variance in outcomes explained by wait time"
-          description="Delay time predicts later outcomes, but most variance remains unexplained—context and opportunity matter more"
+          description="Delay time predicts later outcomes, but most variance remains unexplained---context and opportunity matter more"
         />
 
         <p>
-          Critically, the original study didn't control for family background, parental education, or household income—variables that predict both delay ability <em>and</em> life outcomes. This left open a major question: was delay of gratification driving success, or were both outcomes and delay capacity byproducts of privilege? <Citation ids={['1', '2']} />
+          Critically, the original study didn't control for family background, parental education, or household income---variables that predict both delay ability <em>and</em> life outcomes. This left open a major question: was delay of gratification driving success, or were both outcomes and delay capacity byproducts of privilege? <Citation ids={['1', '2']} />
         </p>
 
         <h2>The 2018 Replication: Context Changes Everything</h2>
         <p>
-          Tyler Watts and colleagues replicated the marshmallow test with a diverse sample of over 900 children from varied socioeconomic backgrounds. After controlling for family income, home environment, and early cognitive ability, the association between delay time and later outcomes (age 15) nearly disappeared—effect sizes dropped by over 50%. Most of the 'marshmallow effect' was explained by preexisting differences in socioeconomic resources. <Citation ids={['2', '4']} />
+          Tyler Watts and colleagues replicated the marshmallow test with a diverse sample of over 900 children from varied socioeconomic backgrounds. After controlling for family income, home environment, and early cognitive ability, the association between delay time and later outcomes (age 15) nearly disappeared---effect sizes dropped by over 50%. Most of the 'marshmallow effect' was explained by preexisting differences in socioeconomic resources. <Citation ids={['2', '4']} />
         </p>
 
         <ComparisonTable
@@ -579,19 +579,19 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
           rows={[
             ['Small, high-SES sample', 'Large, diverse sample'],
             ['No SES controls', 'Controlled for income, home environment, cognition'],
-            ['Delay predicted outcomes (r ≈ 0.35–0.42)', 'Effect reduced by >50% after controls'],
+            ['Delay predicted outcomes (r ≈ 0.35--0.42)', 'Effect reduced by >50% after controls'],
             ['Emphasized individual trait', 'Highlighted socioeconomic context'],
             ['Self-control is destiny', 'Context enables self-control'],
           ]}
         />
 
         <p>
-          This doesn't mean self-control is irrelevant—it means that children's ability to delay gratification is shaped by their environments. Kids who grow up in unstable, resource-scarce settings learn that waiting doesn't reliably pay off. In such contexts, taking the immediate reward is <em>rational</em>. <Citation ids={['3', '6']} />
+          This doesn't mean self-control is irrelevant---it means that children's ability to delay gratification is shaped by their environments. Kids who grow up in unstable, resource-scarce settings learn that waiting doesn't reliably pay off. In such contexts, taking the immediate reward is <em>rational</em>. <Citation ids={['3', '6']} />
         </p>
 
         <h2>Environmental Reliability: A Rational Response to Uncertainty</h2>
         <p>
-          A landmark 2013 study demonstrated this perfectly. Researchers manipulated children's beliefs about adult reliability before administering the marshmallow test. In the 'reliable' condition, an adult made a promise and kept it. In the "unreliable" condition, the adult made a promise and broke it. Children in the unreliable condition waited an average of 3 minutes; those in the reliable condition waited over 12 minutes—a fourfold difference. <Citation ids={['3']} />
+          A landmark 2013 study demonstrated this perfectly. Researchers manipulated children's beliefs about adult reliability before administering the marshmallow test. In the 'reliable' condition, an adult made a promise and kept it. In the "unreliable" condition, the adult made a promise and broke it. Children in the unreliable condition waited an average of 3 minutes; those in the reliable condition waited over 12 minutes---a fourfold difference. <Citation ids={['3']} />
         </p>
 
         <ArticleChart
@@ -608,18 +608,18 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          Children aren't simply "impulsive" or "patient"—they're making adaptive decisions based on learned expectations about whether delayed rewards materialize. Kids who've experienced food insecurity, housing instability, or broken promises learn that "a bird in the hand is worth two in the bush." This is <em>smart</em>, not deficient. <Citation ids={['3', '6']} />
+          Children aren't simply "impulsive" or "patient"---they're making adaptive decisions based on learned expectations about whether delayed rewards materialize. Kids who've experienced food insecurity, housing instability, or broken promises learn that "a bird in the hand is worth two in the bush." This is <em>smart</em>, not deficient. <Citation ids={['3', '6']} />
         </p>
 
         <ArticleCallout type="science" title="Cross-Cultural Context">
           <p>
-            Delay of gratification also varies by culture. Collectivist societies emphasize patience and self-restraint more than individualistic ones. Children in East Asian cultures wait longer on average than Western children—not because of innate differences, but due to cultural norms, parental scaffolding, and socialization practices. <Citation ids={['5', '9']} />
+            Delay of gratification also varies by culture. Collectivist societies emphasize patience and self-restraint more than individualistic ones. Children in East Asian cultures wait longer on average than Western children---not because of innate differences, but due to cultural norms, parental scaffolding, and socialization practices. <Citation ids={['5', '9']} />
           </p>
         </ArticleCallout>
 
         <h2>Cognitive Strategies: How Some Children Succeed</h2>
         <p>
-          Among children who <em>did</em> wait successfully, Mischel's team identified specific strategies: distraction (looking away, singing), cognitive reframing ("it's just a picture, not real"), and self-talk. These strategies reduce the temptation's salience, making waiting easier. Importantly, children who used these strategies could be taught them—self-control isn't purely dispositional; it's learned. <Citation ids={["7", '8']} />
+          Among children who <em>did</em> wait successfully, Mischel's team identified specific strategies: distraction (looking away, singing), cognitive reframing ("it's just a picture, not real"), and self-talk. These strategies reduce the temptation's salience, making waiting easier. Importantly, children who used these strategies could be taught them---self-control isn't purely dispositional; it's learned. <Citation ids={["7", '8']} />
         </p>
 
         <ArticleAccordion
@@ -634,7 +634,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
             },
             {
               title: 'Goal Reminders',
-              content: 'Children who kept the goal (two marshmallows) in mind performed better. External reminders—a picture of the reward—helped sustain delay.',
+              content: 'Children who kept the goal (two marshmallows) in mind performed better. External reminders---a picture of the reward---helped sustain delay.',
             },
             {
               title: 'Parental Scaffolding',
@@ -656,7 +656,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
           steps={[
             {
               title: 'Context Matters More Than Temperament',
-              description: 'Self-control is shaped by socioeconomic resources, environmental stability, and cultural norms—not just innate capacity.',
+              description: 'Self-control is shaped by socioeconomic resources, environmental stability, and cultural norms---not just innate capacity.',
             },
             {
               title: "Rational Adaptation to Uncertainty",
@@ -664,7 +664,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
             },
             {
               title: "Self-Control Can Be Taught",
-              description: "Cognitive strategies—distraction, reframing, goal reminders—improve delay capacity. This is learnable, not fixed.",
+              description: "Cognitive strategies---distraction, reframing, goal reminders---improve delay capacity. This is learnable, not fixed.",
             },
             {
               title: "Beware Simple Narratives",
@@ -686,7 +686,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <ArticleCallout type="reflection" title="Reflection Prompt">
           <p>
-            Think about a time you chose an immediate reward over a delayed one. Was that choice irrational, or were you responding to uncertainty about whether the delayed reward would actually arrive? What would need to change—in your environment or beliefs—for delayed gratification to feel safer?
+            Think about a time you chose an immediate reward over a delayed one. Was that choice irrational, or were you responding to uncertainty about whether the delayed reward would actually arrive? What would need to change---in your environment or beliefs---for delayed gratification to feel safer?
           </p>
         </ArticleCallout>
       </>
@@ -774,38 +774,38 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <p>
-          Odysseus knew that he would be unable to resist the Sirens' song, so while still rational, he ordered his crew to tie him to the mast and plug their ears with wax. This ancient story captures the essence of pre-commitment: binding your future self when motivation is high to prevent poor decisions when motivation is low. Modern behavioral science has formalized this strategy, showing that well-designed commitment devices dramatically increase goal achievement—from savings to exercise to substance use recovery. <Citation ids={['1', '2', '3']} />
+          Odysseus knew that he would be unable to resist the Sirens' song, so while still rational, he ordered his crew to tie him to the mast and plug their ears with wax. This ancient story captures the essence of pre-commitment: binding your future self when motivation is high to prevent poor decisions when motivation is low. Modern behavioral science has formalized this strategy, showing that well-designed commitment devices dramatically increase goal achievement---from savings to exercise to substance use recovery. <Citation ids={['1', '2', '3']} />
         </p>
 
         <h2>Why Pre-Commitment Works: Time-Inconsistent Preferences</h2>
         <p>
-          Humans exhibit time-inconsistent preferences—we prefer larger-later rewards when they're far away, but switch to preferring smaller-sooner rewards when they're imminent. You plan to exercise tomorrow (valuing long-term health), but when tomorrow arrives, staying in bed feels better (immediate comfort wins). Pre-commitment devices lock in the 'future-oriented self's" decision before the "present-oriented self" gets a vote. <Citation ids={['3', '8']} />
+          Humans exhibit time-inconsistent preferences---we prefer larger-later rewards when they're far away, but switch to preferring smaller-sooner rewards when they're imminent. You plan to exercise tomorrow (valuing long-term health), but when tomorrow arrives, staying in bed feels better (immediate comfort wins). Pre-commitment devices lock in the 'future-oriented self's" decision before the "present-oriented self" gets a vote. <Citation ids={['3', '8']} />
         </p>
 
         <ArticleCallout type="info" title="Core Concept: Ulysses Contracts">
           <p>
-            A Ulysses contract (or commitment device) is any mechanism that restricts your future options to align behavior with long-term goals. It works by raising the cost of giving in to temptation—making the undesired behavior harder, more expensive, or socially costly. <Citation ids={['2']} />
+            A Ulysses contract (or commitment device) is any mechanism that restricts your future options to align behavior with long-term goals. It works by raising the cost of giving in to temptation---making the undesired behavior harder, more expensive, or socially costly. <Citation ids={['2']} />
           </p>
         </ArticleCallout>
 
         <h2>Types of Pre-Commitment Devices</h2>
         <p>
-          Commitment devices vary in strength—from soft nudges to hard locks that make defection impossible. The optimal type depends on the behavior and your level of self-control challenge.
+          Commitment devices vary in strength---from soft nudges to hard locks that make defection impossible. The optimal type depends on the behavior and your level of self-control challenge.
         </p>
 
         <ArticleAccordion
           items={[
             {
               title: 'Financial Stakes',
-              content: 'Apps like StickK or Beeminder let you bet money on goal achievement. If you fail, the money goes to charity (or an anti-charity you hate). Financial loss is a powerful motivator—studies show people work harder to avoid losing $10 than to gain $10.',
+              content: 'Apps like StickK or Beeminder let you bet money on goal achievement. If you fail, the money goes to charity (or an anti-charity you hate). Financial loss is a powerful motivator---studies show people work harder to avoid losing $10 than to gain $10.',
             },
             {
               title: 'Social Accountability',
-              content: 'Public commitments increase follow-through. Announcing your goal to friends, joining a challenge group, or hiring a coach adds social pressure. Research shows public commitments increase success rates by 30–40%.',
+              content: 'Public commitments increase follow-through. Announcing your goal to friends, joining a challenge group, or hiring a coach adds social pressure. Research shows public commitments increase success rates by 30--40%.',
             },
             {
               title: 'Physical Restrictions',
-              content: `Removing temptations entirely—deleting apps, asking a friend to hold your credit card, storing junk food at someone else's house. If the temptation isn't accessible, willpower isn't needed.`,
+              content: `Removing temptations entirely---deleting apps, asking a friend to hold your credit card, storing junk food at someone else's house. If the temptation isn't accessible, willpower isn't needed.`,
             },
             {
               title: 'Time Locks',
@@ -813,13 +813,13 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
             },
             {
               title: 'Default Automation',
-              content: 'Auto-transfers to savings, pre-scheduled workouts, meal delivery services. Automation removes the decision point—the desired behavior happens unless you actively opt out.',
+              content: 'Auto-transfers to savings, pre-scheduled workouts, meal delivery services. Automation removes the decision point---the desired behavior happens unless you actively opt out.',
             },
           ]}
         />
 
         <p>
-          The strongest commitment devices make defection <em>impossible</em>—Odysseus couldn't untie himself. Weaker devices rely on social pressure or financial costs, which can be overridden if temptation is strong enough. Match device strength to the difficulty of the goal. <Citation ids={['2', '3']} />
+          The strongest commitment devices make defection <em>impossible</em>---Odysseus couldn't untie himself. Weaker devices rely on social pressure or financial costs, which can be overridden if temptation is strong enough. Match device strength to the difficulty of the goal. <Citation ids={['2', '3']} />
         </p>
 
         <h2>Evidence from the Field</h2>
@@ -834,7 +834,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          <strong>Savings:</strong> In the Philippines, commitment savings accounts—where funds are locked until a goal date or amount is reached—increased savings by 82% compared to standard accounts. Participants voluntarily restricted their own access to money to prevent impulsive spending. <Citation ids={['4']} />
+          <strong>Savings:</strong> In the Philippines, commitment savings accounts---where funds are locked until a goal date or amount is reached---increased savings by 82% compared to standard accounts. Participants voluntarily restricted their own access to money to prevent impulsive spending. <Citation ids={['4']} />
         </p>
 
         <p>
@@ -842,7 +842,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         </p>
 
         <p>
-          <strong>Medication Adherence:</strong> Digital pill bottles that lock until the next scheduled dose increased HIV medication adherence from 68% to 91%. Patients couldn't take extra doses or forget—the device enforced the schedule. <Citation ids={['5']} />
+          <strong>Medication Adherence:</strong> Digital pill bottles that lock until the next scheduled dose increased HIV medication adherence from 68% to 91%. Patients couldn't take extra doses or forget---the device enforced the schedule. <Citation ids={['5']} />
         </p>
 
         <p>
@@ -869,7 +869,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
               description: `Vague goals ("exercise more") fail. Specific commitments ("gym Tuesday/Thursday 6am") succeed. Ambiguity allows wiggle room.`,
             },
             {
-              title: "Start Small—Weak Commitments First",
+              title: "Start Small---Weak Commitments First",
               content: 'Test with low-stakes commitments before escalating. A $10 bet or a social announcement is safer than locking away your credit card.',
             },
             {
@@ -930,18 +930,18 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <h2>The Broader Lesson: Reduce Reliance on Willpower</h2>
         <p>
-          The most effective commitment devices don't just add friction—they eliminate the need for in-the-moment self-control entirely. Automation, default settings, and environmental design beat willpower because they remove the decision point. Rather than resisting temptation daily, structure your life so temptation doesn't arise. Pre-commitment is one tool in a broader strategy of making desired behaviors the path of least resistance. <Citation ids={['1', '3', '8']} />
+          The most effective commitment devices don't just add friction---they eliminate the need for in-the-moment self-control entirely. Automation, default settings, and environmental design beat willpower because they remove the decision point. Rather than resisting temptation daily, structure your life so temptation doesn't arise. Pre-commitment is one tool in a broader strategy of making desired behaviors the path of least resistance. <Citation ids={['1', '3', '8']} />
         </p>
 
         <QuoteBlock
-          quote="The most disciplined people are those who need discipline the least—they've engineered their lives to minimize temptation."
+          quote="The most disciplined people are those who need discipline the least---they've engineered their lives to minimize temptation."
           author="James Clear"
           context="Author, Atomic Habits"
         />
 
         <ArticleCallout type="reflection" title="Reflection Prompt">
           <p>
-            What's one goal where you consistently fail despite good intentions? Could a commitment device—financial, social, or physical—help lock in your future behavior? What's the weakest commitment device you'd be willing to try today?
+            What's one goal where you consistently fail despite good intentions? Could a commitment device---financial, social, or physical---help lock in your future behavior? What's the weakest commitment device you'd be willing to try today?
           </p>
         </ArticleCallout>
       </>
@@ -1029,12 +1029,12 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
     content: (
       <>
         <p>
-          Western culture celebrates intensity—the entrepreneur working 100-hour weeks, the athlete training until collapse, the dieter overhauling their entire life overnight. But research consistently shows that consistency, not intensity, predicts long-term success. The person who writes 200 words daily produces more than the person who writes 5,000 words once a month. The jogger who runs 15 minutes every morning develops better cardiovascular health than the weekend warrior doing sporadic marathons. Discipline isn't about heroic bursts of willpower—it's about showing up, even when it's boring. <Citation ids={['1', '2']} />
+          Western culture celebrates intensity---the entrepreneur working 100-hour weeks, the athlete training until collapse, the dieter overhauling their entire life overnight. But research consistently shows that consistency, not intensity, predicts long-term success. The person who writes 200 words daily produces more than the person who writes 5,000 words once a month. The jogger who runs 15 minutes every morning develops better cardiovascular health than the weekend warrior doing sporadic marathons. Discipline isn't about heroic bursts of willpower---it's about showing up, even when it's boring. <Citation ids={['1', '2']} />
         </p>
 
         <h2>Why Intensity Fails: The Boom-Bust Cycle</h2>
         <p>
-          Intense efforts feel productive—you're 'all in, ' making dramatic changes, pushing hard. But intensity is metabolically and psychologically expensive. High-intensity efforts drain motivation, create injury risk, and produce diminishing returns. After the initial burst, most people burn out, revert to baseline, and feel like failures. The cycle repeats: intense effort → burnout → guilt → renewed intensity → burnout. <Citation ids={['4', '5']} />
+          Intense efforts feel productive---you're 'all in, ' making dramatic changes, pushing hard. But intensity is metabolically and psychologically expensive. High-intensity efforts drain motivation, create injury risk, and produce diminishing returns. After the initial burst, most people burn out, revert to baseline, and feel like failures. The cycle repeats: intense effort → burnout → guilt → renewed intensity → burnout. <Citation ids={['4', '5']} />
         </p>
 
         <ArticleChart
@@ -1067,7 +1067,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <h2>The Power of Consistency: Compounding Over Time</h2>
         <p>
-          Consistency leverages compounding—small, repeated actions accumulate into significant results. A 1% daily improvement doesn't feel impressive, but over a year, it compounds to 37x growth. Conversely, sporadic 50% improvements separated by long gaps yield far less cumulative progress. The math favors frequency over intensity. <Citation ids={['2', '8']} />
+          Consistency leverages compounding---small, repeated actions accumulate into significant results. A 1% daily improvement doesn't feel impressive, but over a year, it compounds to 37x growth. Conversely, sporadic 50% improvements separated by long gaps yield far less cumulative progress. The math favors frequency over intensity. <Citation ids={['2', '8']} />
         </p>
 
         <StatCard
@@ -1077,7 +1077,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          Beyond mathematics, consistency builds automaticity—the behavior becomes habitual, requiring less willpower over time. Research shows that habits form through repetition in consistent contexts: same time, same place, same cue. After 66 days (on average), the behavior becomes automatic. Intensity doesn't create automaticity—frequency does. <Citation ids={['1', '6']} />
+          Beyond mathematics, consistency builds automaticity---the behavior becomes habitual, requiring less willpower over time. Research shows that habits form through repetition in consistent contexts: same time, same place, same cue. After 66 days (on average), the behavior becomes automatic. Intensity doesn't create automaticity---frequency does. <Citation ids={['1', '6']} />
         </p>
 
         <h2>Why Consistency Is Psychologically Easier</h2>
@@ -1097,7 +1097,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
             },
             {
               title: 'Accommodate Life Disruptions',
-              content: `A sick day or work emergency doesn't derail a modest routine—you miss one day, then resume. High-intensity regimens collapse entirely when disrupted.`,
+              content: `A sick day or work emergency doesn't derail a modest routine---you miss one day, then resume. High-intensity regimens collapse entirely when disrupted.`,
             },
             {
               title: 'Build Identity',
@@ -1132,7 +1132,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
         />
 
         <p>
-          Across all domains, frequency of engagement predicts long-term success better than intensity per session. This isn't to say intensity has no role—elite performance requires both—but for most people building new habits, consistency is the foundation. <Citation ids={['2', '4', '7']} />
+          Across all domains, frequency of engagement predicts long-term success better than intensity per session. This isn't to say intensity has no role---elite performance requires both---but for most people building new habits, consistency is the foundation. <Citation ids={['2', '4', '7']} />
         </p>
 
         <h2>How to Build Consistency Without Relying on Discipline</h2>
@@ -1144,7 +1144,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
           steps={[
             {
               title: 'Start Absurdly Small',
-              description: 'Make the habit so easy it feels trivial—2 push-ups, 50 words, 1 minute of meditation. Once the streak starts, you can scale up. The goal is to establish the pattern, not achieve results.',
+              description: 'Make the habit so easy it feels trivial---2 push-ups, 50 words, 1 minute of meditation. Once the streak starts, you can scale up. The goal is to establish the pattern, not achieve results.',
             },
             {
               title: "Anchor to Existing Routines",
@@ -1152,33 +1152,33 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
             },
             {
               title: "Track Visibly",
-              description: `Use a habit tracker, calendar X's, or a visible tally. Seeing an unbroken streak creates psychological momentum—you don't want to break it. Visual progress is motivating.`,
+              description: `Use a habit tracker, calendar X's, or a visible tally. Seeing an unbroken streak creates psychological momentum---you don't want to break it. Visual progress is motivating.`,
             },
             {
               title: 'Optimize for Frequency, Not Perfection',
-              description: 'A mediocre workout counts. Writing bad sentences counts. Showing up is 80% of the battle. Perfectionism kills consistency—lower your standards for what "counts.',
+              description: 'A mediocre workout counts. Writing bad sentences counts. Showing up is 80% of the battle. Perfectionism kills consistency---lower your standards for what "counts.',
             },
             {
               title: "Prepare for Disruption",
-              description: `Plan for sick days, travel, and chaos. Have a minimal viable version: "If I can't do 20 minutes, I'll do 2 minutes." Never miss twice in a row—that's when streaks die.`,
+              description: `Plan for sick days, travel, and chaos. Have a minimal viable version: "If I can't do 20 minutes, I'll do 2 minutes." Never miss twice in a row---that's when streaks die.`,
             },
           ]}
         />
 
         <ArticleCallout type="tip" title="The Two-Day Rule">
           <p>
-            Never skip the same habit two days in a row. Life happens—you'll miss days. But missing two consecutive days is when momentum collapses. One missed day is a blip; two is the start of quitting. Protect the streak by allowing flexibility while maintaining the pattern. <Citation ids={['1', '6']} />
+            Never skip the same habit two days in a row. Life happens---you'll miss days. But missing two consecutive days is when momentum collapses. One missed day is a blip; two is the start of quitting. Protect the streak by allowing flexibility while maintaining the pattern. <Citation ids={['1', '6']} />
           </p>
         </ArticleCallout>
 
         <h2>When Intensity Does Matter</h2>
         <p>
-          Consistency builds the foundation, but intensity has a role: breaking plateaus, signaling commitment, and achieving peak performance. Elite athletes, artists, and professionals use periodization—cycles of high intensity followed by recovery. But intensity is only effective <em>after</em> consistency has established the base. Trying to start with intensity skips the necessary groundwork. <Citation ids={['4', '7']} />
+          Consistency builds the foundation, but intensity has a role: breaking plateaus, signaling commitment, and achieving peak performance. Elite athletes, artists, and professionals use periodization---cycles of high intensity followed by recovery. But intensity is only effective <em>after</em> consistency has established the base. Trying to start with intensity skips the necessary groundwork. <Citation ids={['4', '7']} />
         </p>
 
         <h2>The Compounding Payoff</h2>
         <p>
-          The benefits of consistency aren't immediately visible—this is why people abandon it. A single workout doesn't transform your health; six months of daily movement does. One day of writing produces little; a year of daily writing produces a book. The lag between effort and outcome tests patience, but the payoff is exponential. Trust the process. <Citation ids={['2', '8']} />
+          The benefits of consistency aren't immediately visible---this is why people abandon it. A single workout doesn't transform your health; six months of daily movement does. One day of writing produces little; a year of daily writing produces a book. The lag between effort and outcome tests patience, but the payoff is exponential. Trust the process. <Citation ids={['2', '8']} />
         </p>
 
         <QuoteBlock
@@ -1189,7 +1189,7 @@ export const disciplineWillpowerSelfControlArticlesA: Article[] = [
 
         <ArticleCallout type="reflection" title="Reflection Prompt">
           <p>
-            What's one area where you've been chasing intensity but failing at consistency? Could you design a minimal version—so small it feels almost silly—that you could do every single day? What would that look like?
+            What's one area where you've been chasing intensity but failing at consistency? Could you design a minimal version---so small it feels almost silly---that you could do every single day? What would that look like?
           </p>
         </ArticleCallout>
       </>

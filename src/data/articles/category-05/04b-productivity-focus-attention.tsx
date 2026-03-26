@@ -96,7 +96,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            ADHD affects an estimated 4-5% of working adults, yet it remains widely misunderstood in professional environments. The condition's core features—inattention, impulsivity, and executive function deficits—directly impact workplace performance in specific, predictable ways. Understanding these patterns enables targeted accommodations that dramatically improve functioning.
+            ADHD affects an estimated 4-5% of working adults, yet it remains widely misunderstood in professional environments. The condition's core features---inattention, impulsivity, and executive function deficits---directly impact workplace performance in specific, predictable ways. Understanding these patterns enables targeted accommodations that dramatically improve functioning.
           </p>
           <p className="mb-6">
             ADHD is not about laziness or lack of intelligence. It's a neurodevelopmental condition affecting the brain's executive function systems: working memory, task initiation, sustained attention, impulse control, and time perception <Citation id="2" index={2} source="Psychological Assessment" year="2022" tier={1} />.
@@ -136,7 +136,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Time Blindness: A Core Challenge
         </h2>
         <p className="mb-6">
-          People with ADHD often experience "time blindness"—impaired perception of time passage and future time <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />. This isn't about not caring or being irresponsible; it's a neurological difference in how the brain processes temporal information.
+          People with ADHD often experience "time blindness"---impaired perception of time passage and future time <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />. This isn't about not caring or being irresponsible; it's a neurological difference in how the brain processes temporal information.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -151,7 +151,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Working Memory Limitations
         </h2>
         <p className="mb-6">
-          Working memory—the ability to hold and manipulate information temporarily—is significantly impaired in ADHD <Citation id="6" index={6} source="Neuropsychology" year="2021" tier={1} />. This affects following multi-step instructions, remembering details during conversations, and keeping track of parallel tasks.
+          Working memory---the ability to hold and manipulate information temporarily---is significantly impaired in ADHD <Citation id="6" index={6} source="Neuropsychology" year="2021" tier={1} />. This affects following multi-step instructions, remembering details during conversations, and keeping track of parallel tasks.
         </p>
 
         <BeforeAfter
@@ -194,10 +194,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
               title: 'Environmental Modifications',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Quiet workspace or noise-cancelling headphones</strong> — reduces distractibility</li>
-                  <li><strong>Standing desk or fidget tools</strong> — channels hyperactivity productively</li>
-                  <li><strong>Visual barriers (cubicle walls, screens)</strong> — blocks visual distractions</li>
-                  <li><strong>Flexible seating location</strong> — allows movement to maintain focus</li>
+                  <li><strong>Quiet workspace or noise-cancelling headphones</strong> --- reduces distractibility</li>
+                  <li><strong>Standing desk or fidget tools</strong> --- channels hyperactivity productively</li>
+                  <li><strong>Visual barriers (cubicle walls, screens)</strong> --- blocks visual distractions</li>
+                  <li><strong>Flexible seating location</strong> --- allows movement to maintain focus</li>
                 </ul>
               ),
             },
@@ -206,10 +206,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
               title: 'Schedule and Task Structure',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Flexible work hours</strong> — accommodates circadian rhythm differences and medication timing</li>
-                  <li><strong>Clear priorities and deadlines</strong> — compensates for impaired urgency perception</li>
-                  <li><strong>Task breakdown into smaller steps</strong> — reduces activation energy for starting</li>
-                  <li><strong>Regular check-ins with supervisor</strong> — provides external accountability and course correction</li>
+                  <li><strong>Flexible work hours</strong> --- accommodates circadian rhythm differences and medication timing</li>
+                  <li><strong>Clear priorities and deadlines</strong> --- compensates for impaired urgency perception</li>
+                  <li><strong>Task breakdown into smaller steps</strong> --- reduces activation energy for starting</li>
+                  <li><strong>Regular check-ins with supervisor</strong> --- provides external accountability and course correction</li>
                 </ul>
               ),
             },
@@ -218,10 +218,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
               title: 'Communication Adjustments',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Written follow-up after verbal instructions</strong> — compensates for working memory limits</li>
-                  <li><strong>Agenda provided before meetings</strong> — allows preparation and reduces overwhelm</li>
-                  <li><strong>Permission to record meetings</strong> — enables review of missed information</li>
-                  <li><strong>Clear, concise communication preferred</strong> — reduces cognitive load of parsing information</li>
+                  <li><strong>Written follow-up after verbal instructions</strong> --- compensates for working memory limits</li>
+                  <li><strong>Agenda provided before meetings</strong> --- allows preparation and reduces overwhelm</li>
+                  <li><strong>Permission to record meetings</strong> --- enables review of missed information</li>
+                  <li><strong>Clear, concise communication preferred</strong> --- reduces cognitive load of parsing information</li>
                 </ul>
               ),
             },
@@ -230,10 +230,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
               title: 'Technology Tools',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Task management software</strong> — external organization system (Todoist, Asana, etc.)</li>
-                  <li><strong>Calendar with notifications</strong> — automated reminders for transitions and deadlines</li>
-                  <li><strong>Website blockers during focus time</strong> — removes distractions proactively</li>
-                  <li><strong>Time-tracking apps</strong> — provides objective data on time spent, improving awareness</li>
+                  <li><strong>Task management software</strong> --- external organization system (Todoist, Asana, etc.)</li>
+                  <li><strong>Calendar with notifications</strong> --- automated reminders for transitions and deadlines</li>
+                  <li><strong>Website blockers during focus time</strong> --- removes distractions proactively</li>
+                  <li><strong>Time-tracking apps</strong> --- provides objective data on time spent, improving awareness</li>
                 </ul>
               ),
             },
@@ -248,7 +248,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Disclosure Considerations">
-          <p>Disclosure is optional and strategic. Pros: Access to legal accommodations, reduces need to hide struggles, enables honest communication. Cons: Potential stigma, no guarantee how employer will respond, cannot un-disclose. Many people disclose only when seeking specific accommodations, using problem-solving framing: "I work best with written instructions—could we implement that?"</p>
+          <p>Disclosure is optional and strategic. Pros: Access to legal accommodations, reduces need to hide struggles, enables honest communication. Cons: Potential stigma, no guarantee how employer will respond, cannot un-disclose. Many people disclose only when seeking specific accommodations, using problem-solving framing: "I work best with written instructions---could we implement that?"</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -263,10 +263,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Medication (stimulants and non-stimulants)</strong> — improves attention, impulse control, and executive function with moderate to large effect sizes <Citation id="7" index={7} source="JAMA Psychiatry" year="2022" tier={1} /></li>
-          <li><strong>Cognitive-behavioral therapy (CBT)</strong> — teaches compensatory strategies and addresses co-occurring anxiety/depression <Citation id="8" index={8} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} /></li>
-          <li><strong>Executive function coaching</strong> — provides external structure, accountability, and skill-building</li>
-          <li><strong>Combination approach</strong> — medication plus skills training often yields best outcomes</li>
+          <li><strong>Medication (stimulants and non-stimulants)</strong> --- improves attention, impulse control, and executive function with moderate to large effect sizes <Citation id="7" index={7} source="JAMA Psychiatry" year="2022" tier={1} /></li>
+          <li><strong>Cognitive-behavioral therapy (CBT)</strong> --- teaches compensatory strategies and addresses co-occurring anxiety/depression <Citation id="8" index={8} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} /></li>
+          <li><strong>Executive function coaching</strong> --- provides external structure, accountability, and skill-building</li>
+          <li><strong>Combination approach</strong> --- medication plus skills training often yields best outcomes</li>
         </ul>
 
         <ArticleChart
@@ -314,7 +314,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           First Steps
         </h2>
         <p className="mb-6">
-          If you suspect ADHD impacts your work: (1) Seek evaluation from a psychiatrist, psychologist, or ADHD specialist—diagnosis opens treatment options, (2) Implement simple accommodations immediately (timers, written task lists, calendar blocking), (3) Consider whether formal workplace accommodations would help, weighing disclosure trade-offs, (4) Explore treatment options—medication, therapy, or coaching.
+          If you suspect ADHD impacts your work: (1) Seek evaluation from a psychiatrist, psychologist, or ADHD specialist---diagnosis opens treatment options, (2) Implement simple accommodations immediately (timers, written task lists, calendar blocking), (3) Consider whether formal workplace accommodations would help, weighing disclosure trade-offs, (4) Explore treatment options---medication, therapy, or coaching.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -408,10 +408,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every decision you make—from choosing what to wear, to responding to emails, to strategic business choices—depletes a finite cognitive resource. As the day progresses and decisions accumulate, the quality of your decision-making deteriorates: you become more impulsive, more risk-averse, or simply avoid deciding altogether.
+            Every decision you make---from choosing what to wear, to responding to emails, to strategic business choices---depletes a finite cognitive resource. As the day progresses and decisions accumulate, the quality of your decision-making deteriorates: you become more impulsive, more risk-averse, or simply avoid deciding altogether.
           </p>
           <p className="mb-6">
-            This phenomenon, called decision fatigue, explains why experienced judges grant parole more frequently early in the day and almost never right before lunch <Citation id="2" index={2} source="Proceedings of the National Academy of Sciences" year="2011" tier={1} />—their decision-making capacity depletes through the morning, leading to the cognitively easier default choice: deny parole.
+            This phenomenon, called decision fatigue, explains why experienced judges grant parole more frequently early in the day and almost never right before lunch <Citation id="2" index={2} source="Proceedings of the National Academy of Sciences" year="2011" tier={1} />---their decision-making capacity depletes through the morning, leading to the cognitively easier default choice: deny parole.
           </p>
         </div>
 
@@ -419,7 +419,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           The Mechanism: Why Decisions Deplete You
         </h2>
         <p className="mb-6">
-          Decision-making requires executive function—the brain's supervisory system involving the prefrontal cortex <Citation id="1" index={1} source="Social and Personality Psychology Compass" year="2020" tier={1} />. Each decision consumes cognitive resources: weighing options, inhibiting impulses, predicting outcomes, committing to a choice.
+          Decision-making requires executive function---the brain's supervisory system involving the prefrontal cortex <Citation id="1" index={1} source="Social and Personality Psychology Compass" year="2020" tier={1} />. Each decision consumes cognitive resources: weighing options, inhibiting impulses, predicting outcomes, committing to a choice.
         </p>
 
         <StatCard
@@ -479,7 +479,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          The cognitive load of evaluating numerous options accelerates decision fatigue. Reducing options—even when all are viable—improves both decision speed and satisfaction with chosen outcomes.
+          The cognitive load of evaluating numerous options accelerates decision fatigue. Reducing options---even when all are viable---improves both decision speed and satisfaction with chosen outcomes.
         </p>
 
         <h2 id="glucose-debate" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -534,14 +534,14 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Schedule critical meetings early</strong> — board decisions, strategy sessions, and high-stakes negotiations should occur when cognitive resources are fresh</li>
-          <li><strong>Provide decision-making frameworks</strong> — standardized evaluation criteria reduce cognitive load of each decision</li>
-          <li><strong>Implement "decision-free" policies</strong> — default options for routine matters (meal choices, standard procedures) eliminate trivial decisions</li>
-          <li><strong>Limit meeting frequency</strong> — each meeting involves numerous micro-decisions; reducing meeting count preserves capacity</li>
+          <li><strong>Schedule critical meetings early</strong> --- board decisions, strategy sessions, and high-stakes negotiations should occur when cognitive resources are fresh</li>
+          <li><strong>Provide decision-making frameworks</strong> --- standardized evaluation criteria reduce cognitive load of each decision</li>
+          <li><strong>Implement "decision-free" policies</strong> --- default options for routine matters (meal choices, standard procedures) eliminate trivial decisions</li>
+          <li><strong>Limit meeting frequency</strong> --- each meeting involves numerous micro-decisions; reducing meeting count preserves capacity</li>
         </ul>
 
         <ArticleCallout variant="tip" title="The Two-Decision Rule">
-          <p>Try to limit yourself to two major decisions per day—choices requiring significant analysis and carrying meaningful consequences. Everything else gets automated, delegated, or postponed. This forces prioritization and preserves capacity for what matters most.</p>
+          <p>Try to limit yourself to two major decisions per day---choices requiring significant analysis and carrying meaningful consequences. Everything else gets automated, delegated, or postponed. This forces prioritization and preserves capacity for what matters most.</p>
         </ArticleCallout>
 
         <h2 id="famous-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -552,9 +552,9 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Wardrobe uniformity</strong> — Steve Jobs" black turtleneck, Mark Zuckerberg's gray t-shirts, Barack Obama's blue or gray suits: eliminating clothing decisions preserves capacity for consequential choices</li>
-          <li><strong>Meal automation</strong> — eating the same breakfast daily, ordering from a rotation of established meal options</li>
-          <li><strong>Morning routines</strong> — fixed sequences executed without deliberation, conserving decision capacity for work</li>
+          <li><strong>Wardrobe uniformity</strong> --- Steve Jobs" black turtleneck, Mark Zuckerberg's gray t-shirts, Barack Obama's blue or gray suits: eliminating clothing decisions preserves capacity for consequential choices</li>
+          <li><strong>Meal automation</strong> --- eating the same breakfast daily, ordering from a rotation of established meal options</li>
+          <li><strong>Morning routines</strong> --- fixed sequences executed without deliberation, conserving decision capacity for work</li>
         </ul>
 
         <p className="mb-6">
@@ -569,14 +569,14 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          If you experience persistent decision paralysis—difficulty making even small choices, overwhelming analysis paralysis, chronic procrastination specifically around decisions, or severe anxiety about making wrong choices—professional support can address underlying conditions and build decision-making capacity.
+          If you experience persistent decision paralysis---difficulty making even small choices, overwhelming analysis paralysis, chronic procrastination specifically around decisions, or severe anxiety about making wrong choices---professional support can address underlying conditions and build decision-making capacity.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Implementation: This Week
         </h2>
         <p className="mb-6">
-          Start with one area of decision automation. Pick your highest-frequency low-stakes decision—clothing, breakfast, email check timing, meeting scheduling—and create a default rule that eliminates the choice. Track how this affects your afternoon decision quality and energy. Once established, automate another routine decision. The compounding effect of multiple automations is substantial.
+          Start with one area of decision automation. Pick your highest-frequency low-stakes decision---clothing, breakfast, email check timing, meeting scheduling---and create a default rule that eliminates the choice. Track how this affects your afternoon decision quality and energy. Once established, automate another routine decision. The compounding effect of multiple automations is substantial.
         </p>
       </>
     ),
@@ -671,7 +671,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Flow—the state of complete absorption where time disappears, self-consciousness fades, and performance peaks—represents optimal human experience. Psychologist Mihaly Csikszentmihalyi spent decades studying when and why people enter this effortless immersion state, revealing predictable conditions that reliably induce flow.
+            Flow---the state of complete absorption where time disappears, self-consciousness fades, and performance peaks---represents optimal human experience. Psychologist Mihaly Csikszentmihalyi spent decades studying when and why people enter this effortless immersion state, revealing predictable conditions that reliably induce flow.
           </p>
           <p className="mb-6">
             Flow is not mystical or random. It's a neurological state characterized by specific brain activity patterns and triggered by identifiable environmental and task conditions <Citation id="2" index={2} source="Frontiers in Psychology" year="2022" tier={1} />. Understanding these conditions enables deliberately creating circumstances that facilitate flow.
@@ -686,15 +686,15 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Clear goals</strong> — knowing what you're trying to accomplish</li>
-          <li><strong>Immediate feedback</strong> — understanding how well you're performing in real-time</li>
-          <li><strong>Challenge-skill balance</strong> — task difficulty matches your abilities (neither too easy nor too hard)</li>
-          <li><strong>Action-awareness merging</strong> — you stop thinking about what you're doing and simply do it</li>
-          <li><strong>Reduced self-consciousness</strong> — inner critic quiets, you forget to evaluate yourself</li>
-          <li><strong>Sense of control</strong> — feeling capable of handling the demands</li>
-          <li><strong>Time distortion</strong> — hours feel like minutes</li>
-          <li><strong>Intrinsic motivation</strong> — the activity itself is rewarding</li>
-          <li><strong>Total concentration</strong> — complete absorption in the present moment</li>
+          <li><strong>Clear goals</strong> --- knowing what you're trying to accomplish</li>
+          <li><strong>Immediate feedback</strong> --- understanding how well you're performing in real-time</li>
+          <li><strong>Challenge-skill balance</strong> --- task difficulty matches your abilities (neither too easy nor too hard)</li>
+          <li><strong>Action-awareness merging</strong> --- you stop thinking about what you're doing and simply do it</li>
+          <li><strong>Reduced self-consciousness</strong> --- inner critic quiets, you forget to evaluate yourself</li>
+          <li><strong>Sense of control</strong> --- feeling capable of handling the demands</li>
+          <li><strong>Time distortion</strong> --- hours feel like minutes</li>
+          <li><strong>Intrinsic motivation</strong> --- the activity itself is rewarding</li>
+          <li><strong>Total concentration</strong> --- complete absorption in the present moment</li>
         </ul>
 
         <StatCard
@@ -727,14 +727,14 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Flow requires operating at the edge of your abilities—tasks slightly beyond your comfort zone that demand growth but remain achievable. Routine work rarely induces flow; neither does work so difficult it overwhelms.</p>
+          <p>Flow requires operating at the edge of your abilities---tasks slightly beyond your comfort zone that demand growth but remain achievable. Routine work rarely induces flow; neither does work so difficult it overwhelms.</p>
         </ArticleCallout>
 
         <h2 id="neuroscience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Neuroscience: Transient Hypofrontality
         </h2>
         <p className="mb-6">
-          During flow, the brain enters a state called transient hypofrontality: temporary deactivation of the prefrontal cortex <Citation id="5" index={5} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />. This region normally handles self-awareness, time perception, and conscious deliberation—the very functions that disappear in flow.
+          During flow, the brain enters a state called transient hypofrontality: temporary deactivation of the prefrontal cortex <Citation id="5" index={5} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />. This region normally handles self-awareness, time perception, and conscious deliberation---the very functions that disappear in flow.
         </p>
 
         <ComparisonTable
@@ -750,7 +750,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          This hypofrontality explains why flow feels effortless despite high performance: the brain shifts from effortful conscious control to efficient automatic processing. You're not trying hard—you're operating smoothly within trained neural pathways.
+          This hypofrontality explains why flow feels effortless despite high performance: the brain shifts from effortful conscious control to efficient automatic processing. You're not trying hard---you're operating smoothly within trained neural pathways.
         </p>
 
         <h2 id="creativity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -787,7 +787,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
             },
             {
               title: 'Immediate feedback systems',
-              description: <p>Structure work to provide rapid performance feedback—visible progress, incremental outputs, functional tests that show results.</p>,
+              description: <p>Structure work to provide rapid performance feedback---visible progress, incremental outputs, functional tests that show results.</p>,
             },
             {
               title: 'Protected time blocks',
@@ -799,7 +799,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
             },
             {
               title: 'Match tasks to skills',
-              description: <p>Assign work at the edge of competence—neither routine (boring) nor far beyond capability (anxiety-inducing).</p>,
+              description: <p>Assign work at the edge of competence---neither routine (boring) nor far beyond capability (anxiety-inducing).</p>,
             },
           ]}
         />
@@ -812,15 +812,15 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Constant connectivity</strong> — expectation of immediate responses interrupts deep engagement</li>
-          <li><strong>Fragmented schedules</strong> — meetings every 30-60 minutes prevent sustained focus periods</li>
-          <li><strong>Multitasking culture</strong> — juggling multiple projects prevents the singular focus flow requires</li>
-          <li><strong>Open-plan offices</strong> — visual and auditory distractions every few minutes</li>
-          <li><strong>Ambiguous goals</strong> — unclear success criteria prevent the feedback flow needs</li>
+          <li><strong>Constant connectivity</strong> --- expectation of immediate responses interrupts deep engagement</li>
+          <li><strong>Fragmented schedules</strong> --- meetings every 30-60 minutes prevent sustained focus periods</li>
+          <li><strong>Multitasking culture</strong> --- juggling multiple projects prevents the singular focus flow requires</li>
+          <li><strong>Open-plan offices</strong> --- visual and auditory distractions every few minutes</li>
+          <li><strong>Ambiguous goals</strong> --- unclear success criteria prevent the feedback flow needs</li>
         </ul>
 
         <ArticleCallout variant="warning">
-          <p>Organizations often say they value productivity and creativity, then implement practices—open offices, always-on communication, over-scheduled calendars—that make flow impossible. Changing individual habits helps, but systemic reform requires organizational acknowledgment that flow-hostile environments destroy the outcomes they claim to want.</p>
+          <p>Organizations often say they value productivity and creativity, then implement practices---open offices, always-on communication, over-scheduled calendars---that make flow impossible. Changing individual habits helps, but systemic reform requires organizational acknowledgment that flow-hostile environments destroy the outcomes they claim to want.</p>
         </ArticleCallout>
 
         <h2 id="individual-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -831,11 +831,11 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Intrinsic motivation</strong> — genuine interest in the task itself (not external rewards)</li>
-          <li><strong>Conscientiousness</strong> — capacity for sustained attention and persistence</li>
-          <li><strong>Low neuroticism</strong> — less anxiety and self-doubt during challenging tasks</li>
-          <li><strong>Openness to experience</strong> — comfort with novel approaches and creative exploration</li>
-          <li><strong>Autotelic personality</strong> — deriving satisfaction from activities themselves rather than outcomes</li>
+          <li><strong>Intrinsic motivation</strong> --- genuine interest in the task itself (not external rewards)</li>
+          <li><strong>Conscientiousness</strong> --- capacity for sustained attention and persistence</li>
+          <li><strong>Low neuroticism</strong> --- less anxiety and self-doubt during challenging tasks</li>
+          <li><strong>Openness to experience</strong> --- comfort with novel approaches and creative exploration</li>
+          <li><strong>Autotelic personality</strong> --- deriving satisfaction from activities themselves rather than outcomes</li>
         </ul>
 
         <p className="mb-6">
@@ -846,18 +846,18 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Flow and Long-Term Well-Being
         </h2>
         <p className="mb-6">
-          Frequent flow experiences predict higher life satisfaction, meaning, and subjective well-being longitudinally <Citation id="9" index={9} source="Journal of Happiness Studies" year="2022" tier={1} />. Flow provides intrinsic rewards—the experience itself feels good—independent of external outcomes.
+          Frequent flow experiences predict higher life satisfaction, meaning, and subjective well-being longitudinally <Citation id="9" index={9} source="Journal of Happiness Studies" year="2022" tier={1} />. Flow provides intrinsic rewards---the experience itself feels good---independent of external outcomes.
         </p>
 
         <p className="mb-6">
-          People who structure their lives to maximize flow—choosing work that offers challenge-skill balance, protecting time for immersive activities, cultivating skills deliberately—report greater overall happiness than those focused solely on pleasure or achievement.
+          People who structure their lives to maximize flow---choosing work that offers challenge-skill balance, protecting time for immersive activities, cultivating skills deliberately---report greater overall happiness than those focused solely on pleasure or achievement.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Cultivating Flow This Week
         </h2>
         <p className="mb-6">
-          Identify one task that could induce flow: challenging but achievable, with clear goals and immediate feedback. Schedule a 2-hour uninterrupted block. Eliminate all distractions—phone off, notifications disabled, door closed. Begin the task with singular focus. Notice when flow begins (action becomes effortless, time distorts). Track how long it lasts and what environmental factors helped or hindered. Repeat this experiment weekly, refining conditions based on what works.
+          Identify one task that could induce flow: challenging but achievable, with clear goals and immediate feedback. Schedule a 2-hour uninterrupted block. Eliminate all distractions---phone off, notifications disabled, door closed. Begin the task with singular focus. Notice when flow begins (action becomes effortless, time distorts). Track how long it lasts and what environmental factors helped or hindered. Repeat this experiment weekly, refining conditions based on what works.
         </p>
       </>
     ),
@@ -944,10 +944,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You cannot multitask. What you're actually doing when you think you're multitasking is rapidly switching between tasks—and each switch carries a cognitive cost. Despite the cultural celebration of multitasking as a productivity skill, neuroscience demonstrates unequivocally that it makes you slower, less accurate, and more mentally fatigued.
+            You cannot multitask. What you're actually doing when you think you're multitasking is rapidly switching between tasks---and each switch carries a cognitive cost. Despite the cultural celebration of multitasking as a productivity skill, neuroscience demonstrates unequivocally that it makes you slower, less accurate, and more mentally fatigued.
           </p>
           <p className="mb-6">
-            The human brain is fundamentally incapable of processing two cognitively demanding tasks simultaneously <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />. When you think you're doing two things at once, your brain is actually switching attention between them very quickly—and paying a performance penalty for every switch.
+            The human brain is fundamentally incapable of processing two cognitively demanding tasks simultaneously <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />. When you think you're doing two things at once, your brain is actually switching attention between them very quickly---and paying a performance penalty for every switch.
           </p>
         </div>
 
@@ -955,7 +955,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Switching Costs: The Hidden Tax
         </h2>
         <p className="mb-6">
-          Every time you switch tasks, your brain must: (1) disengage from Task A, (2) shift attention to Task B, (3) load Task B's context into working memory, (4) suppress Task A's residual activation <Citation id="1" index={1} source="Trends in Cognitive Sciences" year="2001" tier={1} />. This reconfiguration takes time—typically hundreds of milliseconds per switch—and these costs accumulate rapidly.
+          Every time you switch tasks, your brain must: (1) disengage from Task A, (2) shift attention to Task B, (3) load Task B's context into working memory, (4) suppress Task A's residual activation <Citation id="1" index={1} source="Trends in Cognitive Sciences" year="2001" tier={1} />. This reconfiguration takes time---typically hundreds of milliseconds per switch---and these costs accumulate rapidly.
         </p>
 
         <StatCard
@@ -968,7 +968,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          In a workday with 60 task switches (checking email while writing, answering messages during calls, toggling between projects), you're losing 24 seconds per switch—totaling 24 minutes of pure switching overhead. This doesn't account for the quality degradation of work done in fragmented attention states.
+          In a workday with 60 task switches (checking email while writing, answering messages during calls, toggling between projects), you're losing 24 seconds per switch---totaling 24 minutes of pure switching overhead. This doesn't account for the quality degradation of work done in fragmented attention states.
         </p>
 
         <h2 id="interference" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -991,14 +991,14 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p><strong>The dangerous illusion:</strong> You don't feel like you're performing worse while multitasking. Subjective perception of performance doesn't match objective reality—you think you're doing fine while actually making more errors and missing more information.</p>
+          <p><strong>The dangerous illusion:</strong> You don't feel like you're performing worse while multitasking. Subjective perception of performance doesn't match objective reality---you think you're doing fine while actually making more errors and missing more information.</p>
         </ArticleCallout>
 
         <h2 id="media-multitasking" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Media Multitasking and Attentional Control
         </h2>
         <p className="mb-6">
-          Research on heavy media multitaskers—people who frequently use multiple media simultaneously (watching TV while browsing social media, listening to podcasts while reading articles)—reveals concerning patterns <Citation id="3" index={3} source="Proceedings of the National Academy of Sciences" year="2009" tier={1} />.
+          Research on heavy media multitaskers---people who frequently use multiple media simultaneously (watching TV while browsing social media, listening to podcasts while reading articles)---reveals concerning patterns <Citation id="3" index={3} source="Proceedings of the National Academy of Sciences" year="2009" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1032,7 +1032,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Hands-free phone conversations also impair driving—not because of manual interference, but because conversation itself consumes attentional resources needed for safe driving. The brain cannot fully process both dialogue and road conditions simultaneously.
+          Hands-free phone conversations also impair driving---not because of manual interference, but because conversation itself consumes attentional resources needed for safe driving. The brain cannot fully process both dialogue and road conditions simultaneously.
         </p>
 
         <h2 id="exceptions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1043,9 +1043,9 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Automatic + cognitive tasks</strong> — walking while talking works because walking is automated and doesn't require conscious attention</li>
-          <li><strong>Different modalities</strong> — listening to instrumental music while reading text doesn't create strong interference because they use different processing systems (though performance still degrades slightly)</li>
-          <li><strong>One task requiring minimal attention</strong> — monitoring for rare events (watching for specific alarm) while doing other work is feasible, though you'll miss some alarms</li>
+          <li><strong>Automatic + cognitive tasks</strong> --- walking while talking works because walking is automated and doesn't require conscious attention</li>
+          <li><strong>Different modalities</strong> --- listening to instrumental music while reading text doesn't create strong interference because they use different processing systems (though performance still degrades slightly)</li>
+          <li><strong>One task requiring minimal attention</strong> --- monitoring for rare events (watching for specific alarm) while doing other work is feasible, though you'll miss some alarms</li>
         </ul>
 
         <p className="mb-6">
@@ -1084,7 +1084,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Working Memory Bottleneck
         </h2>
         <p className="mb-6">
-          The fundamental constraint is working memory capacity: humans can hold roughly 4-7 items in conscious awareness simultaneously <Citation id="6" index={6} source="Journal of Experimental Psychology" year="2020" tier={1} />. When you switch tasks, you must flush current task information from working memory and load new task information—losing context and requiring reconstruction when you return.
+          The fundamental constraint is working memory capacity: humans can hold roughly 4-7 items in conscious awareness simultaneously <Citation id="6" index={6} source="Journal of Experimental Psychology" year="2020" tier={1} />. When you switch tasks, you must flush current task information from working memory and load new task information---losing context and requiring reconstruction when you return.
         </p>
 
         <BeforeAfter
@@ -1134,7 +1134,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
             },
             {
               title: 'Use time-blocking',
-              description: <p>Assign specific time blocks to specific tasks. During that block, work only on the designated task—no exceptions for 'quick' interruptions.</p>,
+              description: <p>Assign specific time blocks to specific tasks. During that block, work only on the designated task---no exceptions for 'quick' interruptions.</p>,
             },
             {
               title: 'Implement communication boundaries',
@@ -1237,7 +1237,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
             Most productivity advice optimizes for short-term output spikes, not long-term sustainable performance. The result: people sprint until they burn out, recover, and repeat the cycle. Sustainable productivity takes a different approach: designing work systems that maintain high performance over years by integrating recovery, managing energy, and building habits that don't require constant willpower.
           </p>
           <p className="mb-6">
-            Research demonstrates that sustainable high performers outpace "productivity heroes" over time <Citation id="2" index={2} source="Journal of Applied Psychology" year="2022" tier={1} />—not through extraordinary effort, but through consistent habits, strategic recovery, and systems that reduce cognitive load.
+            Research demonstrates that sustainable high performers outpace "productivity heroes" over time <Citation id="2" index={2} source="Journal of Applied Psychology" year="2022" tier={1} />---not through extraordinary effort, but through consistent habits, strategic recovery, and systems that reduce cognitive load.
           </p>
         </div>
 
@@ -1245,7 +1245,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Why Most Productivity Systems Fail Long-Term
         </h2>
         <p className="mb-6">
-          Productivity systems built on willpower, extreme discipline, or relentless hustle fail predictably. They work temporarily—weeks or months—then collapse under cognitive fatigue, depleted motivation, or burnout.
+          Productivity systems built on willpower, extreme discipline, or relentless hustle fail predictably. They work temporarily---weeks or months---then collapse under cognitive fatigue, depleted motivation, or burnout.
         </p>
 
         <ComparisonTable
@@ -1288,7 +1288,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Recovery: The Missing Piece
         </h2>
         <p className="mb-6">
-          Sustainable productivity requires strategic recovery—deliberate practices that restore cognitive and emotional resources <Citation id="3" index={3} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Without recovery, performance degrades progressively until burnout forces involuntary rest.
+          Sustainable productivity requires strategic recovery---deliberate practices that restore cognitive and emotional resources <Citation id="3" index={3} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Without recovery, performance degrades progressively until burnout forces involuntary rest.
         </p>
 
         <p className="mb-6">
@@ -1296,10 +1296,10 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Psychological detachment</strong> — mentally disconnecting from work (not thinking about tasks during off-hours)</li>
-          <li><strong>Relaxation</strong> — low-effort activities that reduce activation (reading, stretching, meditation)</li>
-          <li><strong>Mastery experiences</strong> — engaging in challenging activities unrelated to work (hobbies, learning, sports)</li>
-          <li><strong>Control</strong> — autonomous choice over how to spend time (deciding your own schedule during off-work hours)</li>
+          <li><strong>Psychological detachment</strong> --- mentally disconnecting from work (not thinking about tasks during off-hours)</li>
+          <li><strong>Relaxation</strong> --- low-effort activities that reduce activation (reading, stretching, meditation)</li>
+          <li><strong>Mastery experiences</strong> --- engaging in challenging activities unrelated to work (hobbies, learning, sports)</li>
+          <li><strong>Control</strong> --- autonomous choice over how to spend time (deciding your own schedule during off-work hours)</li>
         </ul>
 
         <ArticleChart
@@ -1379,7 +1379,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
           Self-Compassion and Sustained Performance
         </h2>
         <p className="mb-6">
-          Self-compassion—treating yourself with kindness during failures and setbacks—predicts sustained high performance better than self-criticism <Citation id="6" index={6} source="Self and Identity" year="2022" tier={1} />. Harsh self-judgment depletes motivation and increases procrastination; self-compassion maintains engagement even after setbacks.
+          Self-compassion---treating yourself with kindness during failures and setbacks---predicts sustained high performance better than self-criticism <Citation id="6" index={6} source="Self and Identity" year="2022" tier={1} />. Harsh self-judgment depletes motivation and increases procrastination; self-compassion maintains engagement even after setbacks.
         </p>
 
         <QuoteBlock
@@ -1417,7 +1417,7 @@ export const productivityFocusAttentionArticlesB: Article[] = [
             },
             {
               title: 'Regular reviews',
-              description: <p>Weekly assessment of what's working and what needs adjustment. Systems require maintenance—they drift without periodic tuning.</p>,
+              description: <p>Weekly assessment of what's working and what needs adjustment. Systems require maintenance---they drift without periodic tuning.</p>,
             },
           ]}
         />
@@ -1437,14 +1437,14 @@ export const productivityFocusAttentionArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>The "shutdown ritual" — end each workday with a consistent routine: review tomorrow's priorities, close open loops (notes about where you stopped), close work applications, say "shutdown complete" aloud. This signals your brain that work is done and recovery can begin.</p>
+          <p>The "shutdown ritual" --- end each workday with a consistent routine: review tomorrow's priorities, close open loops (notes about where you stopped), close work applications, say "shutdown complete" aloud. This signals your brain that work is done and recovery can begin.</p>
         </ArticleCallout>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Building Your Sustainable System
         </h2>
         <p className="mb-6">
-          Start with one change this week: Establish one keystone habit (morning planning, shutdown ritual, or weekly review). Design your environment to support it. Track whether it happens, not whether it's perfect. Once it's consistent for three weeks, add a second element. Build gradually—sustainability means the system still works in six months, not that it's impressive next week.
+          Start with one change this week: Establish one keystone habit (morning planning, shutdown ritual, or weekly review). Design your environment to support it. Track whether it happens, not whether it's perfect. Once it's consistent for three weeks, add a second element. Build gradually---sustainability means the system still works in six months, not that it's impressive next week.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

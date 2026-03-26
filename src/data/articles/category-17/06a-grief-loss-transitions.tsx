@@ -19,7 +19,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Grief', 'Bereavement', 'Loss', 'Coping'],
 
-    summary: `Older adults often face multiple losses within short timeframes—spouses, siblings, lifelong friends, health, independence—creating what researchers call "bereavement overload." Unlike younger adults who grieve one loss at a time, older adults may be processing several deaths simultaneously while managing their own aging. This cumulative grief can complicate the mourning process, increase depression risk, and strain coping resources. Understanding how grief changes with age and implementing supportive strategies can help older adults navigate these losses while maintaining emotional well-being and finding new meaning after profound change.`,
+    summary: `Older adults often face multiple losses within short timeframes---spouses, siblings, lifelong friends, health, independence---creating what researchers call "bereavement overload." Unlike younger adults who grieve one loss at a time, older adults may be processing several deaths simultaneously while managing their own aging. This cumulative grief can complicate the mourning process, increase depression risk, and strain coping resources. Understanding how grief changes with age and implementing supportive strategies can help older adults navigate these losses while maintaining emotional well-being and finding new meaning after profound change.`,
 
     keyFacts: [
       { text: `Adults 65+ experience an average of 8-10 significant losses per decade, including deaths, health changes, and role transitions.`, citationIndex: 1 },
@@ -29,7 +29,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The realization that grief in later life isn't just about who you've lost, but about the accumulation of a lifetime of goodbyes—and that honoring each loss while staying connected to life requires both courage and community.`,
+    sparkMoment: `The realization that grief in later life isn't just about who you've lost, but about the accumulation of a lifetime of goodbyes---and that honoring each loss while staying connected to life requires both courage and community.`,
 
     practicalExercise: {
       title: `Memory Integration Practice`,
@@ -73,17 +73,17 @@ export const griefLossTransitionsArticlesA: Article[] = [
         />
 
         <p>
-          The grief experience itself changes with age. <Citation index={3} /> compared to younger bereaved individuals. They may cry less but struggle more with loneliness, purpose, and identity reformation. Social networks that once provided comfort have often shrunk—friends who would have offered support may themselves be deceased or managing their own losses.
+          The grief experience itself changes with age. <Citation index={3} /> compared to younger bereaved individuals. They may cry less but struggle more with loneliness, purpose, and identity reformation. Social networks that once provided comfort have often shrunk---friends who would have offered support may themselves be deceased or managing their own losses.
         </p>
 
         <h2>Recognizing Complicated Grief Patterns</h2>
         <p>
-          Not all grief in later life becomes complicated, but certain factors increase risk. Cumulative losses without adequate recovery time between bereavements can deplete emotional reserves. Loss of a spouse after many decades together often involves profound identity disruption—you are no longer part of a "we." Deaths that are sudden, traumatic, or ambiguous (such as advanced dementia where the person is physically present but cognitively absent) complicate the mourning process. Limited social support, financial strain, or pre-existing depression can make grief harder to process healthily.
+          Not all grief in later life becomes complicated, but certain factors increase risk. Cumulative losses without adequate recovery time between bereavements can deplete emotional reserves. Loss of a spouse after many decades together often involves profound identity disruption---you are no longer part of a "we." Deaths that are sudden, traumatic, or ambiguous (such as advanced dementia where the person is physically present but cognitively absent) complicate the mourning process. Limited social support, financial strain, or pre-existing depression can make grief harder to process healthily.
         </p>
 
         <h2>Strategies for Navigating Cumulative Loss</h2>
         <p>
-          Healthy grieving in later life involves honoring each loss individually while maintaining connection to life. This might mean creating small rituals for each person or loss—lighting a candle, visiting a meaningful place, sharing a story. Building or maintaining social connections becomes critical even when it feels exhausting. Grief support groups specifically for older adults provide understanding from peers facing similar patterns. Professional counseling can help when grief feels overwhelming or persists without relief. Physical self-care—adequate sleep, nutrition, gentle movement—supports emotional resilience during this demanding time.
+          Healthy grieving in later life involves honoring each loss individually while maintaining connection to life. This might mean creating small rituals for each person or loss---lighting a candle, visiting a meaningful place, sharing a story. Building or maintaining social connections becomes critical even when it feels exhausting. Grief support groups specifically for older adults provide understanding from peers facing similar patterns. Professional counseling can help when grief feels overwhelming or persists without relief. Physical self-care---adequate sleep, nutrition, gentle movement---supports emotional resilience during this demanding time.
         </p>
       </>
     ),
@@ -102,7 +102,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Widowhood', 'Grief', 'Identity', 'Late-Life Loss'],
 
-    summary: `The death of a spouse after decades of partnership represents one of life's most profound transitions, especially in later life when the relationship may have spanned 40, 50, or 60+ years. Beyond the emotional pain of loss, widowhood disrupts fundamental identity—you are no longer part of a "we" that shaped daily routines, social connections, and sense of self. Research shows that spousal loss in later life increases health risks, mortality, depression, and social isolation. Yet with time, support, and intentional strategies, many widowed older adults rebuild meaningful lives that honor their partnership while creating new sources of connection and purpose.`,
+    summary: `The death of a spouse after decades of partnership represents one of life's most profound transitions, especially in later life when the relationship may have spanned 40, 50, or 60+ years. Beyond the emotional pain of loss, widowhood disrupts fundamental identity---you are no longer part of a "we" that shaped daily routines, social connections, and sense of self. Research shows that spousal loss in later life increases health risks, mortality, depression, and social isolation. Yet with time, support, and intentional strategies, many widowed older adults rebuild meaningful lives that honor their partnership while creating new sources of connection and purpose.`,
 
     keyFacts: [
       { text: `Risk of death increases 40-50% in the first 6 months after losing a spouse, particularly for men, before gradually returning to baseline.`, citationIndex: 1 },
@@ -112,7 +112,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Understanding that rebuilding after losing a life partner isn't about replacing them or "moving on"—it's about carrying their influence forward while learning to live as "I" instead of "we."`,
+    sparkMoment: `Understanding that rebuilding after losing a life partner isn't about replacing them or "moving on"---it's about carrying their influence forward while learning to live as "I" instead of "we."`,
 
     practicalExercise: {
       title: `Identity Reconstruction Practice`,
@@ -146,7 +146,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
         <h2>The Identity Crisis of Widowhood</h2>
         <p>
-          After decades of partnership, individual identity and couple identity become deeply intertwined. <Citation index={2} />. The surviving spouse often faces not just grief but practical challenges—managing finances previously handled by the partner, cooking for one after a lifetime of cooking for two, attending social events alone where they were always part of a couple.
+          After decades of partnership, individual identity and couple identity become deeply intertwined. <Citation index={2} />. The surviving spouse often faces not just grief but practical challenges---managing finances previously handled by the partner, cooking for one after a lifetime of cooking for two, attending social events alone where they were always part of a couple.
         </p>
 
         <ArticleCallout
@@ -161,7 +161,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
         <h2>Navigating Practical and Emotional Challenges</h2>
         <p>
-          The first year involves both grieving and learning new skills. Financial management, home maintenance, meal planning, and healthcare decisions may require learning or relearning. Social invitations may decrease as couple-based friendships dissolve. Holidays and anniversaries bring acute pain. Decision-making feels overwhelming without the person you consulted for decades. These are expected challenges, not signs of inadequate coping—they reflect the profound nature of the loss and the extent of life reconstruction required.
+          The first year involves both grieving and learning new skills. Financial management, home maintenance, meal planning, and healthcare decisions may require learning or relearning. Social invitations may decrease as couple-based friendships dissolve. Holidays and anniversaries bring acute pain. Decision-making feels overwhelming without the person you consulted for decades. These are expected challenges, not signs of inadequate coping---they reflect the profound nature of the loss and the extent of life reconstruction required.
         </p>
       </>
     ),
@@ -180,7 +180,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Retirement', 'Identity', 'Purpose', 'Life Transitions'],
 
-    summary: `Retirement is often portrayed as a golden reward after decades of work, but the psychological reality can be complex. For many people, career provides not just income but identity, structure, social connection, and purpose. Leaving that behind can trigger depression, anxiety, identity crisis, and loss of meaning—particularly for those who were highly invested in their professional roles. Research shows that mental health outcomes in retirement vary widely based on how voluntary the retirement was, availability of other meaningful roles, financial security, and intentional planning for the transition. Successful retirement involves actively creating new sources of purpose, connection, and daily structure rather than simply stopping work.`,
+    summary: `Retirement is often portrayed as a golden reward after decades of work, but the psychological reality can be complex. For many people, career provides not just income but identity, structure, social connection, and purpose. Leaving that behind can trigger depression, anxiety, identity crisis, and loss of meaning---particularly for those who were highly invested in their professional roles. Research shows that mental health outcomes in retirement vary widely based on how voluntary the retirement was, availability of other meaningful roles, financial security, and intentional planning for the transition. Successful retirement involves actively creating new sources of purpose, connection, and daily structure rather than simply stopping work.`,
 
     keyFacts: [
       { text: `30-40% of retirees experience significant depressive symptoms in the first year after leaving work, with highest rates among those who retired involuntarily.`, citationIndex: 1 },
@@ -190,7 +190,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The insight that retirement doesn't mean becoming less—it means becoming different, with the freedom to choose what matters most when work no longer defines your days.`,
+    sparkMoment: `The insight that retirement doesn't mean becoming less---it means becoming different, with the freedom to choose what matters most when work no longer defines your days.`,
 
     practicalExercise: {
       title: `Purpose Discovery Practice`,
@@ -269,12 +269,12 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The understanding that home is both the physical space you're leaving and the sense of belonging you carry with you—and that creating "home" in a new place is possible at any age.`,
+    sparkMoment: `The understanding that home is both the physical space you're leaving and the sense of belonging you carry with you---and that creating "home" in a new place is possible at any age.`,
 
     practicalExercise: {
       title: `Transition Preparation Practice`,
       steps: [
-        { title: `Acknowledge the loss`, description: `Write about what this home has meant to you across the decades—specific rooms, rituals, memories` },
+        { title: `Acknowledge the loss`, description: `Write about what this home has meant to you across the decades---specific rooms, rituals, memories` },
         { title: `Create continuity`, description: `Identify 5-10 items or routines you'll bring to the new space to maintain connection to your history` },
         { title: `Say goodbye intentionally`, description: `Plan a closing ritual (dinner with friends, final walk through rooms, photos, blessing)` },
         { title: `Visualize the new`, description: `Research and imagine positive aspects of the new living situation before moving day` },
@@ -303,7 +303,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
         <h2>Why Moving Feels Like Loss in Later Life</h2>
         <p>
-          A home of many decades is not just a building—it's a repository of memories, accomplishments, family history, and identity. <Citation index={2} />. Leaving means saying goodbye to the neighborhood where everyone knows you, the routines built over years, the garden you tended, the view from your window. It often means confronting aging and dependence—you're moving because you can't manage stairs, can't maintain the property, can't live independently in this space anymore.
+          A home of many decades is not just a building---it's a repository of memories, accomplishments, family history, and identity. <Citation index={2} />. Leaving means saying goodbye to the neighborhood where everyone knows you, the routines built over years, the garden you tended, the view from your window. It often means confronting aging and dependence---you're moving because you can't manage stairs, can't maintain the property, can't live independently in this space anymore.
         </p>
 
         <ArticleCallout
@@ -314,12 +314,12 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
         <h2>The Downsizing Dilemma</h2>
         <p>
-          <Citation index={3} />. Each item triggers decisions and memories—this was Mom's china, this was from our trip to Ireland, the kids made this in school. Sorting through possessions can feel like sorting through your life story, deciding which chapters to keep and which to release. Adult children may pressure quick decisions or dismiss sentimental attachments, not understanding the grief embedded in each choice.
+          <Citation index={3} />. Each item triggers decisions and memories---this was Mom's china, this was from our trip to Ireland, the kids made this in school. Sorting through possessions can feel like sorting through your life story, deciding which chapters to keep and which to release. Adult children may pressure quick decisions or dismiss sentimental attachments, not understanding the grief embedded in each choice.
         </p>
 
         <h2>Strategies for Healthier Transitions</h2>
         <p>
-          Successful moves involve allowing adequate time for emotional processing and practical planning, acknowledging the grief and loss involved rather than minimizing feelings, creating intentional closing rituals to honor the home you're leaving, bringing meaningful items and routines to the new space for continuity, visiting the new location multiple times before moving to build familiarity, connecting with new community or building friendships before the move, and asking for help—both practical (packing, organizing) and emotional (someone to listen to the stories). The goal isn't to eliminate the grief but to honor it while also opening yourself to new possibilities.
+          Successful moves involve allowing adequate time for emotional processing and practical planning, acknowledging the grief and loss involved rather than minimizing feelings, creating intentional closing rituals to honor the home you're leaving, bringing meaningful items and routines to the new space for continuity, visiting the new location multiple times before moving to build familiarity, connecting with new community or building friendships before the move, and asking for help---both practical (packing, organizing) and emotional (someone to listen to the stories). The goal isn't to eliminate the grief but to honor it while also opening yourself to new possibilities.
         </p>
       </>
     ),
@@ -338,7 +338,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mortality', 'Existential', 'Anxiety', 'End-of-Life'],
 
-    summary: `As people age, awareness of mortality shifts from abstract future concept to tangible reality. Friends and siblings die. Health declines. Time feels finite in ways it never did at 40 or 50. For some older adults, this heightened mortality awareness leads to existential anxiety—fear of death, regret about life choices, concerns about legacy, or panic about time running out. Yet research shows that mortality awareness can also deepen appreciation for life, clarify values, and motivate meaningful action in remaining years. How individuals navigate this awareness depends on personality, life satisfaction, spiritual beliefs, unresolved conflicts, and the presence of supportive relationships that allow honest conversations about death and dying.`,
+    summary: `As people age, awareness of mortality shifts from abstract future concept to tangible reality. Friends and siblings die. Health declines. Time feels finite in ways it never did at 40 or 50. For some older adults, this heightened mortality awareness leads to existential anxiety---fear of death, regret about life choices, concerns about legacy, or panic about time running out. Yet research shows that mortality awareness can also deepen appreciation for life, clarify values, and motivate meaningful action in remaining years. How individuals navigate this awareness depends on personality, life satisfaction, spiritual beliefs, unresolved conflicts, and the presence of supportive relationships that allow honest conversations about death and dying.`,
 
     keyFacts: [
       { text: `15-20% of older adults experience clinically significant death anxiety, with higher rates among those with unresolved life regrets or limited social support.`, citationIndex: 1 },
@@ -348,7 +348,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The paradox that truly accepting the finiteness of life—rather than fighting or denying it—often brings the deepest peace and most meaningful living in the time that remains.`,
+    sparkMoment: `The paradox that truly accepting the finiteness of life---rather than fighting or denying it---often brings the deepest peace and most meaningful living in the time that remains.`,
 
     practicalExercise: {
       title: `Mortality Reflection Practice`,
@@ -371,7 +371,7 @@ export const griefLossTransitionsArticlesA: Article[] = [
     content: (
       <>
         <p>
-          At 81, George found himself waking at 3 AM with his heart racing, consumed by thoughts of death. He wasn't actively dying—his health was reasonably good. But <Citation index={1} />. The panic attacks surprised him. He'd never been particularly anxious before. But now he couldn't stop calculating years left, wondering if he'd see another grandchild born, questioning whether his life had mattered enough.
+          At 81, George found himself waking at 3 AM with his heart racing, consumed by thoughts of death. He wasn't actively dying---his health was reasonably good. But <Citation index={1} />. The panic attacks surprised him. He'd never been particularly anxious before. But now he couldn't stop calculating years left, wondering if he'd see another grandchild born, questioning whether his life had mattered enough.
         </p>
 
         <StatCard

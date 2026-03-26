@@ -145,7 +145,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
             { feature: 'Audience', values: ['Small group of witnesses', 'Potentially unlimited audience'] },
             { feature: 'Permanence', values: ['Ends, memories fade', 'Permanent digital record'] },
             { feature: 'Anonymity', values: ['Face-to-face, known bully', 'Can be anonymous'] },
-            { feature: 'Escape', values: ['Leave the location', 'No escape—follows you home'] },
+            { feature: 'Escape', values: ['Leave the location', 'No escape---follows you home'] },
             { feature: 'Adult awareness', values: ['Often visible to teachers/parents', 'Often hidden from adults'] },
           ]}
           highlightColumn={1}
@@ -308,7 +308,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           The Role of Bystanders
         </h2>
         <p className="mb-6">
-          Most cyberbullying happens in front of an audience. Bystanders have significant power to stop or worsen bullying. Research shows that when peers intervene—even with simple supportive comments to the victim or reporting the bully—bullying decreases significantly <Citation id="5" index={5} source="Journal of Youth and Adolescence" year="2022" tier={1} />.
+          Most cyberbullying happens in front of an audience. Bystanders have significant power to stop or worsen bullying. Research shows that when peers intervene---even with simple supportive comments to the victim or reporting the bully---bullying decreases significantly <Citation id="5" index={5} source="Journal of Youth and Adolescence" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           What bystanders can do:
@@ -449,7 +449,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You say something ill-considered online. Within hours, thousands of strangers are calling you names, digging through your old posts, contacting your employer, and celebrating your downfall. This is cancel culture in action—public shaming at internet scale. Whether you call it accountability or a digital lynch mob depends largely on whether you're participating or being targeted.
+            You say something ill-considered online. Within hours, thousands of strangers are calling you names, digging through your old posts, contacting your employer, and celebrating your downfall. This is cancel culture in action---public shaming at internet scale. Whether you call it accountability or a digital lynch mob depends largely on whether you're participating or being targeted.
           </p>
           <p className="mb-6">
             The mental health impacts are severe. A 2021 study found that 73% of people who experienced mass public shaming online developed symptoms of anxiety disorders, and 34% met criteria for PTSD <Citation id="5" index={5} source="Journal of Anxiety Disorders" year="2022" tier={1} />. But the psychology extends beyond victims. Participating in pile-ons also has documented effects on the shamers themselves.
@@ -484,7 +484,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           The Mental Health Impact on Targets
         </h2>
         <p className="mb-6">
-          Being "canceled" isn't just criticism—it's mass, coordinated public humiliation. The psychological effects mirror trauma:
+          Being "canceled" isn't just criticism---it's mass, coordinated public humiliation. The psychological effects mirror trauma:
         </p>
 
         <StatCard
@@ -558,14 +558,14 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Research on deindividuation shows that when people feel anonymous in a large group, they're more likely to engage in behaviors they'd never do alone—including cruelty <Citation id="2" index={2} source="Computers in Human Behavior" year="2022" tier={1} />. Each individual tweet might seem harmless, but collectively they constitute assault.
+          Research on deindividuation shows that when people feel anonymous in a large group, they're more likely to engage in behaviors they'd never do alone---including cruelty <Citation id="2" index={2} source="Computers in Human Behavior" year="2022" tier={1} />. Each individual tweet might seem harmless, but collectively they constitute assault.
         </p>
 
         <h2 id="grandstanding" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Moral Grandstanding and Virtue Signaling
         </h2>
         <p className="mb-6">
-          A 2021 study on online moral outrage found that much of what appears to be genuine accountability is actually <strong>moral grandstanding</strong>—public displays designed to show others how virtuous you are <Citation id="6" index={6} source="Journal of Social Psychology" year="2021" tier={1} />.
+          A 2021 study on online moral outrage found that much of what appears to be genuine accountability is actually <strong>moral grandstanding</strong>---public displays designed to show others how virtuous you are <Citation id="6" index={6} source="Journal of Social Psychology" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Signs of grandstanding vs. genuine concern:
@@ -579,7 +579,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
             { feature: 'Tone', values: ['Performative outrage', 'Serious, measured'] },
             { feature: 'Goal', values: ['Social status', 'Actual change'] },
             { feature: 'Action', values: ['Public shaming', 'Direct communication, education'] },
-            { feature: 'Forgiveness', values: ['None—permanent condemnation', 'Room for growth and apology'] },
+            { feature: 'Forgiveness', values: ['None---permanent condemnation', 'Room for growth and apology'] },
           ]}
           highlightColumn={1}
         />
@@ -684,7 +684,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
 
         <ArticleCallout variant="action-plan" title="Crisis Response for Targets">
           <ol className="list-decimal pl-5 space-y-3">
-            <li><strong>Step away from social media immediately.</strong> Don't read the comments. Don't try to defend yourself—it usually makes it worse.</li>
+            <li><strong>Step away from social media immediately.</strong> Don't read the comments. Don't try to defend yourself---it usually makes it worse.</li>
             <li><strong>Tell someone you trust.</strong> Don't face this alone. Reach out to friends, family, or a therapist.</li>
             <li><strong>Document threats for reporting.</strong> If people are threatening violence or contacting your employer, screenshot and report to platforms and potentially police.</li>
             <li><strong>Consider a statement, then silence.</strong> One brief apology or clarification, then disengage completely. Endless explanations feed the mob.</li>
@@ -786,10 +786,10 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You post a photo of your new haircut. Within minutes, someone you've never met is in your comments saying you look terrible and should be ashamed. You share good news about a promotion. A stranger replies with insults. You ask a genuine question online. Multiple people mock you. Welcome to internet trolling—the phenomenon of people being gratuitously cruel to strangers for no apparent reason.
+            You post a photo of your new haircut. Within minutes, someone you've never met is in your comments saying you look terrible and should be ashamed. You share good news about a promotion. A stranger replies with insults. You ask a genuine question online. Multiple people mock you. Welcome to internet trolling---the phenomenon of people being gratuitously cruel to strangers for no apparent reason.
           </p>
           <p className="mb-6">
-            Research shows that trolling isn't random. It's driven by specific personality traits, situational factors, and the unique features of online environments. Understanding the psychology of trolls doesn't excuse their behavior, but it does help explain it—and reveals better ways to respond than arguing.
+            Research shows that trolling isn't random. It's driven by specific personality traits, situational factors, and the unique features of online environments. Understanding the psychology of trolls doesn't excuse their behavior, but it does help explain it---and reveals better ways to respond than arguing.
           </p>
         </div>
 
@@ -817,7 +817,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           Who Trolls? The Dark Tetrad
         </h2>
         <p className="mb-6">
-          Not everyone trolls. Research consistently finds that trolls score high on the "Dark Tetrad"—four antisocial personality traits <Citation id="1" index={1} source="Personality and Individual Differences" year="2021" tier={1} />:
+          Not everyone trolls. Research consistently finds that trolls score high on the "Dark Tetrad"---four antisocial personality traits <Citation id="1" index={1} source="Personality and Individual Differences" year="2021" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -833,7 +833,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The strongest predictor is <strong>sadism</strong>—people who genuinely enjoy causing others pain. A 2021 study found that self-identified trolls scored significantly higher on sadism than non-trolls, and many explicitly stated they troll "because it's fun to upset people."
+          The strongest predictor is <strong>sadism</strong>---people who genuinely enjoy causing others pain. A 2021 study found that self-identified trolls scored significantly higher on sadism than non-trolls, and many explicitly stated they troll "because it's fun to upset people."
         </p>
 
         <StatCard
@@ -908,7 +908,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Attention:</strong> Any response—anger, defense, counterattack—rewards the troll</li>
+          <li><strong>Attention:</strong> Any response---anger, defense, counterattack---rewards the troll</li>
           <li><strong>Feeling powerful:</strong> Knowing they upset you gives them a sense of control</li>
           <li><strong>Entertainment:</strong> Many trolls explicitly describe it as fun, a game, or comedy</li>
           <li><strong>Social validation:</strong> Peer trolls applaud each other's cruelty</li>
@@ -983,11 +983,11 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
             },
             {
               title: 'Report if severe',
-              description: <p>Threats, hate speech, harassment campaigns—report these to the platform. Include screenshots.</p>,
+              description: <p>Threats, hate speech, harassment campaigns---report these to the platform. Include screenshots.</p>,
             },
             {
               title: "Don\'t take it personally",
-              description: <p>Trolls attack randomly. Their cruelty isn't about you—it's about them getting attention and feeling powerful.</p>,
+              description: <p>Trolls attack randomly. Their cruelty isn't about you---it's about them getting attention and feeling powerful.</p>,
             },
             {
               title: 'Adjust privacy settings',
@@ -1031,7 +1031,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
             <li>Limit time on platforms where you're being harassed</li>
             <li>Turn off notifications for comments and mentions</li>
             <li>Ask friends to report/block the trolls on your behalf</li>
-            <li>Remember: trolls target randomly—it's not personal</li>
+            <li>Remember: trolls target randomly---it's not personal</li>
             <li>Talk to someone you trust about what you're experiencing</li>
             <li>Consider taking a break from social media entirely</li>
             <li>Seek professional support if harassment is causing anxiety or depression</li>
@@ -1058,7 +1058,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Don't Feed the Trolls">
-          <p>Trolling is driven by sadism, the online disinhibition effect, and desire for attention. Trolls target vulnerable groups disproportionately and thrive on engagement. The most effective response is no response—block, report, and move on. Don't argue, don't defend, don't insult back. You won't change their behavior, but you will give them what they want. Protect your mental health by curating your online experience, limiting exposure, and remembering that trolls are miserable people projecting their pain. Their cruelty isn't about you. It's about them.</p>
+          <p>Trolling is driven by sadism, the online disinhibition effect, and desire for attention. Trolls target vulnerable groups disproportionately and thrive on engagement. The most effective response is no response---block, report, and move on. Don't argue, don't defend, don't insult back. You won't change their behavior, but you will give them what they want. Protect your mental health by curating your online experience, limiting exposure, and remembering that trolls are miserable people projecting their pain. Their cruelty isn't about you. It's about them.</p>
         </ArticleCallout>
       </>
     ),
@@ -1146,7 +1146,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Intimate images you shared privately with a partner are posted online without your consent. Strangers can now see your body. Your name is attached. The images spread. This is revenge porn—more accurately called non-consensual intimate image sharing or image-based sexual abuse. It's a form of digital violence with devastating psychological consequences.
+            Intimate images you shared privately with a partner are posted online without your consent. Strangers can now see your body. Your name is attached. The images spread. This is revenge porn---more accurately called non-consensual intimate image sharing or image-based sexual abuse. It's a form of digital violence with devastating psychological consequences.
           </p>
           <p className="mb-6">
             A 2022 study found that 91% of victims of non-consensual pornography experience significant psychological distress, 51% have suicidal thoughts, and 93% report symptoms meeting criteria for PTSD <Citation id="2" index={2} source="Psychology of Violence" year="2021" tier={1} />. This isn't just embarrassment. It's trauma.
@@ -1238,7 +1238,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
               id: 'depression',
               title: 'Depression and Isolation',
               content: (
-                <p>Victims withdraw from social connections, lose interest in activities they once enjoyed, and experience profound hopelessness. The violation of trust—often by someone they cared about—damages their ability to trust others.</p>
+                <p>Victims withdraw from social connections, lose interest in activities they once enjoyed, and experience profound hopelessness. The violation of trust---often by someone they cared about---damages their ability to trust others.</p>
               ),
             },
             {
@@ -1293,7 +1293,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           steps={[
             {
               title: 'Document everything immediately',
-              description: <p>Screenshot images, URLs, usernames, messages, and any identifying information. Save with dates and times. Do NOT download or save the actual images to your device—this can create legal complications. Screenshot the page showing they exist.</p>,
+              description: <p>Screenshot images, URLs, usernames, messages, and any identifying information. Save with dates and times. Do NOT download or save the actual images to your device---this can create legal complications. Screenshot the page showing they exist.</p>,
             },
             {
               title: 'Contact platform immediately',
@@ -1403,7 +1403,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="The images don't define you. The violation doesn't define you. How you survive and rebuild—that's what defines you. And you will survive this."
+          quote="The images don't define you. The violation doesn't define you. How you survive and rebuild---that's what defines you. And you will survive this."
           attribution="Dr. Holly Jacobs"
           role="Founder, Cyber Civil Rights Initiative"
           source="CCRI Resources, 2022"
@@ -1498,10 +1498,10 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            It starts with a YouTube video about a legitimate grievance. The algorithm recommends something slightly more extreme. Then more extreme. Six months later, you're watching content calling for violence, believing conspiracy theories, and viewing entire groups of people as enemies. This is online radicalization—the gradual process by which algorithms and extremist communities pull vulnerable people toward extreme ideologies.
+            It starts with a YouTube video about a legitimate grievance. The algorithm recommends something slightly more extreme. Then more extreme. Six months later, you're watching content calling for violence, believing conspiracy theories, and viewing entire groups of people as enemies. This is online radicalization---the gradual process by which algorithms and extremist communities pull vulnerable people toward extreme ideologies.
           </p>
           <p className="mb-6">
-            Research shows that radicalization isn't about stupidity or evil. It's about psychological vulnerability meeting sophisticated manipulation. Understanding how it works—and who's most susceptible—is essential for prevention and intervention.
+            Research shows that radicalization isn't about stupidity or evil. It's about psychological vulnerability meeting sophisticated manipulation. Understanding how it works---and who's most susceptible---is essential for prevention and intervention.
           </p>
         </div>
 
@@ -1528,7 +1528,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Radicalization happens across the political spectrum—far-right, far-left, religious extremism, and single-issue movements (anti-government, eco-terrorism, etc.).
+          Radicalization happens across the political spectrum---far-right, far-left, religious extremism, and single-issue movements (anti-government, eco-terrorism, etc.).
         </p>
 
         <h2 id="who-vulnerable" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1568,7 +1568,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
               id: 'grievance',
               title: 'Perceived Injustice and Grievance',
               content: (
-                <p>Real or perceived unfairness—job loss, discrimination, relationship failures, societal marginalization—creates anger that needs a target. Extremist narratives provide simple explanations (it's THEM) and simple solutions (fight THEM).</p>
+                <p>Real or perceived unfairness---job loss, discrimination, relationship failures, societal marginalization---creates anger that needs a target. Extremist narratives provide simple explanations (it's THEM) and simple solutions (fight THEM).</p>
               ),
             },
             {
@@ -1742,7 +1742,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Be aware of how algorithms work (they prioritize engagement, not truth)</li>
           <li>Actively seek diverse information sources</li>
-          <li>Notice when content makes you angry—anger is engagement, which feeds the algorithm</li>
+          <li>Notice when content makes you angry---anger is engagement, which feeds the algorithm</li>
           <li>Use tools like NewsGuard to evaluate source credibility</li>
           <li>Take breaks from platforms when you notice increasing polarization in your feed</li>
           <li>Maintain real-world relationships that challenge your echo chamber</li>
@@ -1750,7 +1750,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="The most effective vaccine against radicalization is critical thinking and real-world human connection. Extremism thrives in isolation and feeds on emotion. Bring in light—facts, relationships, nuance—and the extremist narrative loses its power."
+          quote="The most effective vaccine against radicalization is critical thinking and real-world human connection. Extremism thrives in isolation and feeds on emotion. Bring in light---facts, relationships, nuance---and the extremist narrative loses its power."
           attribution="Dr. Peter Neumann"
           role="Radicalization Researcher"
           source="King's College London, 2021"
@@ -1772,7 +1772,7 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="Radicalization Is Preventable">
-          <p>Online radicalization happens through a gradual process where algorithms and extremist communities exploit psychological vulnerabilities—loneliness, identity crisis, mental health struggles, and need for meaning. Platforms facilitate this by recommending increasingly extreme content to maximize engagement. Warning signs include sudden extreme views, conspiracy thinking, and dehumanizing language. Intervention requires maintaining relationships, addressing underlying needs, introducing complexity, and potentially professional help. Protect yourself by understanding how algorithms work, seeking diverse sources, and maintaining real-world connections. If someone is threatening violence, report to authorities immediately. Recovery is possible with the right support.</p>
+          <p>Online radicalization happens through a gradual process where algorithms and extremist communities exploit psychological vulnerabilities---loneliness, identity crisis, mental health struggles, and need for meaning. Platforms facilitate this by recommending increasingly extreme content to maximize engagement. Warning signs include sudden extreme views, conspiracy thinking, and dehumanizing language. Intervention requires maintaining relationships, addressing underlying needs, introducing complexity, and potentially professional help. Protect yourself by understanding how algorithms work, seeking diverse sources, and maintaining real-world connections. If someone is threatening violence, report to authorities immediately. Recovery is possible with the right support.</p>
         </ArticleCallout>
       </>
     ),

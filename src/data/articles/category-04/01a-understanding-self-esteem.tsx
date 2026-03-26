@@ -169,7 +169,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-esteem is how you evaluate yourself based on various criteria. Unlike self-worth, self-esteem can be contingent — meaning it depends on meeting certain standards in domains you care about <Citation id="4" index={4} source="Psychological Review" year="2003" tier={1} />.
+          Self-esteem is how you evaluate yourself based on various criteria. Unlike self-worth, self-esteem can be contingent --- meaning it depends on meeting certain standards in domains you care about <Citation id="4" index={4} source="Psychological Review" year="2003" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -195,7 +195,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-confidence is domain-specific. You might be confident in your cooking abilities but lack confidence in public speaking. Confidence is about competence beliefs — your assessment of whether you can successfully perform specific tasks.
+          Self-confidence is domain-specific. You might be confident in your cooking abilities but lack confidence in public speaking. Confidence is about competence beliefs --- your assessment of whether you can successfully perform specific tasks.
         </p>
 
         <ArticleChart
@@ -276,7 +276,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          Self-concept clarity — how clearly and confidently you understand who you are — also plays a crucial role <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="1996" tier={1} />. When you understand the difference between these concepts, you develop clearer self-knowledge.
+          Self-concept clarity --- how clearly and confidently you understand who you are --- also plays a crucial role <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="1996" tier={1} />. When you understand the difference between these concepts, you develop clearer self-knowledge.
         </p>
 
         <h2 id="practical-implications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -289,7 +289,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p className="mb-4">
-            <strong>If you're working on self-worth:</strong> Focus on practices that reinforce your inherent value as a person — self-compassion, mindfulness, and separating your worth from your performance.
+            <strong>If you're working on self-worth:</strong> Focus on practices that reinforce your inherent value as a person --- self-compassion, mindfulness, and separating your worth from your performance.
           </p>
           <p className="mb-4">
             <strong>If you're working on self-esteem:</strong> Examine what your self-evaluation is based on. Is it contingent on things outside your control? Can you shift toward more stable foundations?
@@ -300,7 +300,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Self-esteem can function as a psychological defense mechanism <Citation id="8" index={8} source="Journal of Experimental Social Psychology" year="2008" tier={1} />. When it's contingent and fragile, you may develop protective strategies that limit growth — avoiding challenges, dismissing feedback, or inflating your abilities.
+          Self-esteem can function as a psychological defense mechanism <Citation id="8" index={8} source="Journal of Experimental Social Psychology" year="2008" tier={1} />. When it's contingent and fragile, you may develop protective strategies that limit growth --- avoiding challenges, dismissing feedback, or inflating your abilities.
         </p>
 
         <h2 id="moving-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -318,7 +318,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          When these three work together harmoniously, you develop what researchers call "optimal self-esteem" — a stable, positive self-regard that's neither defensive nor contingent, allowing you to engage authentically with life's challenges and opportunities.
+          When these three work together harmoniously, you develop what researchers call "optimal self-esteem" --- a stable, positive self-regard that's neither defensive nor contingent, allowing you to engage authentically with life's challenges and opportunities.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -424,7 +424,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
             Self-esteem doesn't appear out of nowhere. It develops through years of experiences, relationships, and messages you receive about who you are and what you're worth. Understanding where your self-esteem comes from is the first step toward reshaping it.
           </p>
           <p className="mb-6">
-            Research shows that self-esteem has its roots primarily in childhood experiences, particularly in relationships with caregivers and peers <Citation id="2" index={2} source="Developmental Psychology" year="1998" tier={1} />. But it's not deterministic — self-esteem continues to develop and can change throughout life.
+            Research shows that self-esteem has its roots primarily in childhood experiences, particularly in relationships with caregivers and peers <Citation id="2" index={2} source="Developmental Psychology" year="1998" tier={1} />. But it's not deterministic --- self-esteem continues to develop and can change throughout life.
           </p>
         </div>
 
@@ -511,7 +511,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Sociologist Charles Cooley described the "looking-glass self" — we come to see ourselves as we believe others see us. Children internalize the messages they receive about themselves <Citation id="5" index={5} source="American Journal of Sociology" year="1981" tier={1} />.
+          Sociologist Charles Cooley described the "looking-glass self" --- we come to see ourselves as we believe others see us. Children internalize the messages they receive about themselves <Citation id="5" index={5} source="American Journal of Sociology" year="1981" tier={1} />.
         </p>
 
         <QuoteBlock
@@ -522,7 +522,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          When adults consistently communicate — through words, tone, attention, or neglect — messages like "You're capable,", "You're a burden,", "You're smart," or "You're disappointing," children absorb these as fundamental truths about themselves.
+          When adults consistently communicate --- through words, tone, attention, or neglect --- messages like "You're capable,", "You're a burden,", "You're smart," or "You're disappointing," children absorb these as fundamental truths about themselves.
         </p>
 
         <p className="mb-6">
@@ -596,7 +596,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Children who receive consistent messages that their worth depends on achievement often develop what researchers call "contingent self-esteem" — a pattern that persists into adulthood and creates vulnerability to anxiety and depression.
+          Children who receive consistent messages that their worth depends on achievement often develop what researchers call "contingent self-esteem" --- a pattern that persists into adulthood and creates vulnerability to anxiety and depression.
         </p>
 
         <h2 id="trauma-adversity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -604,7 +604,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Adverse Childhood Experiences (ACEs) — including abuse, neglect, household dysfunction, and witnessing violence — have profound effects on self-esteem development <Citation id="6" index={6} source="Clinical Psychology Review" year="2015" tier={1} />.
+          Adverse Childhood Experiences (ACEs) --- including abuse, neglect, household dysfunction, and witnessing violence --- have profound effects on self-esteem development <Citation id="6" index={6} source="Clinical Psychology Review" year="2015" tier={1} />.
         </p>
 
         <ArticleCallout variant="warning">
@@ -638,12 +638,12 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Understanding where your self-esteem comes from is empowering. It helps you recognize patterns that may not have originated with you — they were learned.
+          Understanding where your self-esteem comes from is empowering. It helps you recognize patterns that may not have originated with you --- they were learned.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Self-esteem patterns established in childhood are powerful but not permanent. The same mechanisms that created these patterns — relationships, experiences, and reflected appraisals — can be used to reshape them.
+            Self-esteem patterns established in childhood are powerful but not permanent. The same mechanisms that created these patterns --- relationships, experiences, and reflected appraisals --- can be used to reshape them.
           </p>
         </ArticleCallout>
 
@@ -763,7 +763,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Low self-esteem manifests in thoughts, feelings, and behaviors. It's not always obvious — people with low self-esteem often hide it well.
+          Low self-esteem manifests in thoughts, feelings, and behaviors. It's not always obvious --- people with low self-esteem often hide it well.
         </p>
 
         <ArticleAccordion
@@ -911,7 +911,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            People with low self-esteem often feel more comfortable with negative feedback than positive feedback because it matches their self-concept. Positive feedback creates cognitive dissonance — it conflicts with how they see themselves.
+            People with low self-esteem often feel more comfortable with negative feedback than positive feedback because it matches their self-concept. Positive feedback creates cognitive dissonance --- it conflicts with how they see themselves.
           </p>
         </ArticleCallout>
 
@@ -928,7 +928,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Rejection sensitivity — the tendency to anxiously expect and intensely react to rejection — creates a vicious cycle that maintains low self-esteem <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2001" tier={1} />.
+          Rejection sensitivity --- the tendency to anxiously expect and intensely react to rejection --- creates a vicious cycle that maintains low self-esteem <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2001" tier={1} />.
         </p>
 
         <h2 id="safety-behaviors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -990,7 +990,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Some people don't just have low self-esteem — they have unstable self-esteem that swings dramatically based on daily events <Citation id="9" index={9} source="Journal of Research in Personality" year="2010" tier={1} />.
+          Some people don't just have low self-esteem --- they have unstable self-esteem that swings dramatically based on daily events <Citation id="9" index={9} source="Journal of Research in Personality" year="2010" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1000,7 +1000,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Unstable self-esteem often reflects contingent self-worth — when your value depends on external validation, achievement, or approval, every success temporarily boosts you and every setback crashes you.
+          Unstable self-esteem often reflects contingent self-worth --- when your value depends on external validation, achievement, or approval, every success temporarily boosts you and every setback crashes you.
         </p>
 
         <h2 id="breaking-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1157,7 +1157,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            High self-esteem isn't always healthy, and low self-esteem isn't always the problem. What matters just as much is the stability and foundation of your self-esteem — whether it's fragile, contingent, or truly secure.
+            High self-esteem isn't always healthy, and low self-esteem isn't always the problem. What matters just as much is the stability and foundation of your self-esteem --- whether it's fragile, contingent, or truly secure.
           </p>
           <p className="mb-6">
             Research reveals that self-esteem exists on multiple dimensions, not just a simple low-to-high scale <Citation id="4" index={4} source="Journal of Research in Personality" year="2008" tier={1} />. Understanding where your self-esteem falls on the spectrum helps explain why some people with "high" self-esteem are actually quite vulnerable.
@@ -1193,7 +1193,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          You can have high self-esteem that's unstable and contingent — which creates vulnerability. Or you can have moderate self-esteem that's stable and non-contingent — which predicts better mental health outcomes.
+          You can have high self-esteem that's unstable and contingent --- which creates vulnerability. Or you can have moderate self-esteem that's stable and non-contingent --- which predicts better mental health outcomes.
         </p>
 
         <h2 id="fragile-self-esteem" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1462,7 +1462,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
               title: 'Develop authentic self-knowledge',
               description: (
                 <p>
-                  Non-defensive self-awareness — knowing both strengths and weaknesses honestly — is key to authentic self-esteem.
+                  Non-defensive self-awareness --- knowing both strengths and weaknesses honestly --- is key to authentic self-esteem.
                 </p>
               ),
             },
@@ -1561,10 +1561,10 @@ export const understandingSelfEsteemArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I am lovable. I am successful. I am confident." Positive affirmations are everywhere — in self-help books, therapy apps, and motivational posters. But research reveals a surprising truth: for people who need them most, they can actually make things worse.
+            "I am lovable. I am successful. I am confident." Positive affirmations are everywhere --- in self-help books, therapy apps, and motivational posters. But research reveals a surprising truth: for people who need them most, they can actually make things worse.
           </p>
           <p className="mb-6">
-            A landmark 2009 study found that positive self-statements made people with low self-esteem feel worse, not better <Citation id="1" index={1} source="Psychological Science" year="2009" tier={1} />. Understanding why this happens — and what works instead — is crucial for effective self-improvement.
+            A landmark 2009 study found that positive self-statements made people with low self-esteem feel worse, not better <Citation id="1" index={1} source="Psychological Science" year="2009" tier={1} />. Understanding why this happens --- and what works instead --- is crucial for effective self-improvement.
           </p>
         </div>
 
@@ -1593,7 +1593,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Positive affirmations don't fail because they're inherently ineffective. They fail because of cognitive dissonance — the psychological discomfort that occurs when your beliefs and statements conflict.
+            Positive affirmations don't fail because they're inherently ineffective. They fail because of cognitive dissonance --- the psychological discomfort that occurs when your beliefs and statements conflict.
           </p>
         </ArticleCallout>
 
@@ -1612,14 +1612,14 @@ export const understandingSelfEsteemArticlesA: Article[] = [
             {
               feature: 'I am confident',
               values: [
-                "No I'm not — I just failed that presentation",
+                "No I'm not --- I just failed that presentation",
                 'Feel worse',
               ],
             },
             {
               feature: 'I am successful',
               values: [
-                "That's a lie — look at all my mistakes",
+                "That's a lie --- look at all my mistakes",
                 'Increased self-criticism',
               ],
             },
@@ -1659,7 +1659,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Try this: For the next 30 seconds, do NOT think about a white bear. What happens? You can't stop thinking about white bears. This is the ironic process — trying to suppress a thought makes it more prominent.
+            Try this: For the next 30 seconds, do NOT think about a white bear. What happens? You can't stop thinking about white bears. This is the ironic process --- trying to suppress a thought makes it more prominent.
           </p>
         </ArticleCallout>
 
@@ -1672,7 +1672,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Positive affirmations aren't useless — they just work differently than advertised. Research shows they benefit:
+          Positive affirmations aren't useless --- they just work differently than advertised. Research shows they benefit:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1686,7 +1686,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-affirmation theory — different from positive affirmations — has robust scientific support <Citation id="3" index={3} source="Advances in Experimental Social Psychology" year="2006" tier={1} />. But it works differently.
+          Self-affirmation theory --- different from positive affirmations --- has robust scientific support <Citation id="3" index={3} source="Advances in Experimental Social Psychology" year="2006" tier={1} />. But it works differently.
         </p>
 
         <p className="mb-6">
@@ -1709,7 +1709,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Values affirmations work because they don't create cognitive dissonance. You're not making unbelievable claims about yourself — you're reconnecting with what genuinely matters to you <Citation id="8" index={8} source="Science" year="2010" tier={1} />.
+          Values affirmations work because they don't create cognitive dissonance. You're not making unbelievable claims about yourself --- you're reconnecting with what genuinely matters to you <Citation id="8" index={8} source="Science" year="2010" tier={1} />.
         </p>
 
         <h2 id="alternatives" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1846,7 +1846,7 @@ export const understandingSelfEsteemArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          If you've tried positive affirmations and felt worse, you're not doing it wrong. The research shows you're having a normal psychological response. Try the evidence-based alternatives instead — they're designed to actually work.
+          If you've tried positive affirmations and felt worse, you're not doing it wrong. The research shows you're having a normal psychological response. Try the evidence-based alternatives instead --- they're designed to actually work.
         </p>
       </>
     ),

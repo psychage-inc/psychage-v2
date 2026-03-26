@@ -94,10 +94,10 @@ export const copingWithDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When depression pulls you into a spiral of withdrawal and inactivity, the solution isn't to think your way out—it's to act your way out. Behavioral activation is a deceptively simple yet remarkably effective strategy backed by decades of research.
+            When depression pulls you into a spiral of withdrawal and inactivity, the solution isn't to think your way out---it's to act your way out. Behavioral activation is a deceptively simple yet remarkably effective strategy backed by decades of research.
           </p>
           <p className="mb-6">
-            Behavioral activation (BA) is a structured approach that helps people with depression increase their engagement in meaningful, mood-lifting activities <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2006" tier={1} />. Unlike talk therapies that focus on changing thoughts, BA focuses on changing what you do, based on the principle that action comes before motivation—not the other way around <Citation id="2" index={2} source="Psychological Medicine" year="2020" tier={1} />.
+            Behavioral activation (BA) is a structured approach that helps people with depression increase their engagement in meaningful, mood-lifting activities <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2006" tier={1} />. Unlike talk therapies that focus on changing thoughts, BA focuses on changing what you do, based on the principle that action comes before motivation---not the other way around <Citation id="2" index={2} source="Psychological Medicine" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ export const copingWithDepressionArticlesA: Article[] = [
             <strong>The BA principle:</strong> When you're depressed, you can't wait to feel motivated before you act. You need to act first, and motivation follows.
           </p>
           <p>
-            This counterintuitive approach is what makes BA so effective—and so different from other depression treatments.
+            This counterintuitive approach is what makes BA so effective---and so different from other depression treatments.
           </p>
         </ArticleCallout>
 
@@ -121,17 +121,17 @@ export const copingWithDepressionArticlesA: Article[] = [
           Why Behavioral Activation Works
         </h2>
         <p className="mb-6">
-          Depression is characterized by <strong>behavioral avoidance</strong>—you stop doing things that used to bring you joy, connection, or a sense of achievement <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2017" tier={1} />. This avoidance feels protective in the moment, but over time it starves your brain of the positive experiences it needs to regulate mood.
+          Depression is characterized by <strong>behavioral avoidance</strong>---you stop doing things that used to bring you joy, connection, or a sense of achievement <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2017" tier={1} />. This avoidance feels protective in the moment, but over time it starves your brain of the positive experiences it needs to regulate mood.
         </p>
         <p className="mb-6">
-          BA reverses this pattern by re-exposing you to rewarding activities. Research shows that when you reengage with life—even in small ways—your brain's reward system begins to reactivate, neurotransmitter balance improves, and depressive symptoms decrease <Citation id="4" index={4} source="Clinical Psychology Review" year="2019" tier={1} />.
+          BA reverses this pattern by re-exposing you to rewarding activities. Research shows that when you reengage with life---even in small ways---your brain's reward system begins to reactivate, neurotransmitter balance improves, and depressive symptoms decrease <Citation id="4" index={4} source="Clinical Psychology Review" year="2019" tier={1} />.
         </p>
 
         <StatCard
           stats={[
             { value: 54, suffix: '%', label: 'Reduction in depressive symptoms with BA' },
             { value: 2, suffix: 'x', label: 'More effective than no treatment' },
-            { value: 8, suffix: '–12', label: 'Weeks to see significant improvement' },
+            { value: 8, suffix: '--12', label: 'Weeks to see significant improvement' },
           ]}
           source="Psychological Medicine, 2020"
         />
@@ -159,7 +159,7 @@ export const copingWithDepressionArticlesA: Article[] = [
               title: 'Identify valued activities',
               description: (
                 <div>
-                  <p className="mb-2">Make a list of activities that used to bring you pleasure, accomplishment, or social connection—even if they don't appeal to you right now.</p>
+                  <p className="mb-2">Make a list of activities that used to bring you pleasure, accomplishment, or social connection---even if they don't appeal to you right now.</p>
                   <p>Include both small tasks (making tea, taking a shower) and larger ones (seeing a friend, going for a walk).</p>
                 </div>
               ),
@@ -174,7 +174,7 @@ export const copingWithDepressionArticlesA: Article[] = [
               ),
             },
             {
-              title: 'Do the activity—regardless of how you feel',
+              title: 'Do the activity---regardless of how you feel',
               description: (
                 <div>
                   <p className="mb-2">This is the critical step. When the scheduled time arrives, do the activity even if you don't feel like it.</p>
@@ -282,7 +282,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           Evidence and Effectiveness
         </h2>
         <p className="mb-6">
-          Behavioral activation is one of the most well-researched interventions for depression. Multiple randomized controlled trials have found it to be as effective as cognitive therapy for treating moderate to severe depression—and sometimes more effective <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2006" tier={1} />.
+          Behavioral activation is one of the most well-researched interventions for depression. Multiple randomized controlled trials have found it to be as effective as cognitive therapy for treating moderate to severe depression---and sometimes more effective <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2006" tier={1} />.
         </p>
         <p className="mb-6">
           A 2020 meta-analysis of 53 studies found that BA significantly reduces depressive symptoms compared to control conditions, with effects that persist long-term <Citation id="2" index={2} source="Psychological Medicine" year="2020" tier={1} />. It also enhances the effectiveness of antidepressant medications when used together <Citation id="5" index={5} source="Journal of Affective Disorders" year="2018" tier={1} />.
@@ -290,7 +290,7 @@ export const copingWithDepressionArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            <strong>For clinicians:</strong> BA can be delivered in brief formats (8–12 sessions) and is particularly effective for clients who struggle with rumination or cognitive interventions. It's also adaptable for diverse populations and can be integrated into other treatment modalities.
+            <strong>For clinicians:</strong> BA can be delivered in brief formats (8--12 sessions) and is particularly effective for clients who struggle with rumination or cognitive interventions. It's also adaptable for diverse populations and can be integrated into other treatment modalities.
           </p>
         </ArticleCallout>
 
@@ -301,7 +301,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           Behavioral activation is a powerful self-help tool, but it's not a replacement for professional treatment if you're experiencing severe depression, suicidal thoughts, or significant functional impairment.
         </p>
         <p className="mb-6">
-          If you've tried BA consistently for 4–6 weeks and see no improvement, or if your depression is worsening, reach out to a mental health provider. A therapist trained in BA can help you tailor the approach, troubleshoot obstacles, and determine if additional interventions are needed.
+          If you've tried BA consistently for 4--6 weeks and see no improvement, or if your depression is worsening, reach out to a mental health provider. A therapist trained in BA can help you tailor the approach, troubleshoot obstacles, and determine if additional interventions are needed.
         </p>
 
         <ArticleCallout variant="warning">
@@ -409,7 +409,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           Depression disrupts your circadian rhythm, the internal clock that regulates sleep and wakefulness. This dysregulation leads to fragmented sleep, early morning awakening, or hypersomnia (sleeping excessively) <Citation id="6" index={6} source="Sleep Medicine Reviews" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          Depression also reduces morning motor activity—your brain's capacity to initiate movement is impaired <Citation id="2" index={2} source="Psychiatry Research" year="2019" tier={1} />. Combined with anhedonia (loss of pleasure), there's literally no reward pulling you out of bed. You're not choosing to stay there; your brain simply isn't generating the neurochemical push that non-depressed people experience automatically.
+          Depression also reduces morning motor activity---your brain's capacity to initiate movement is impaired <Citation id="2" index={2} source="Psychiatry Research" year="2019" tier={1} />. Combined with anhedonia (loss of pleasure), there's literally no reward pulling you out of bed. You're not choosing to stay there; your brain simply isn't generating the neurochemical push that non-depressed people experience automatically.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -487,7 +487,7 @@ export const copingWithDepressionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2">Because your brain's reward system is blunted, you need to manually create incentives. This might be a favorite beverage, a particular breakfast, or 10 minutes of a show you enjoy.</p>
-                  <p>The reward doesn't have to feel exciting—it just has to be slightly more appealing than staying in bed <Citation id="8" index={8} source="Behavior Therapy" year="2018" tier={1} />.</p>
+                  <p>The reward doesn't have to feel exciting---it just has to be slightly more appealing than staying in bed <Citation id="8" index={8} source="Behavior Therapy" year="2018" tier={1} />.</p>
                 </div>
               ),
             },
@@ -509,7 +509,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           <ul className="list-disc pl-5 space-y-2">
             <li>Sit up in bed for 5 minutes. That counts as movement.</li>
             <li>Eat something, even if it's crackers or a protein bar within reach.</li>
-            <li>Hydrate—keep water by your bed.</li>
+            <li>Hydrate---keep water by your bed.</li>
             <li>Contact someone, even just a text saying "I'm struggling today."</li>
           </ul>
         </ArticleCallout>
@@ -526,7 +526,7 @@ export const copingWithDepressionArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Studies show that people with depression who practice self-compassion (rather than self-criticism) around their symptoms experience faster recovery and better treatment outcomes. Being kind to yourself isn't indulgent—it's strategic.
+            Studies show that people with depression who practice self-compassion (rather than self-criticism) around their symptoms experience faster recovery and better treatment outcomes. Being kind to yourself isn't indulgent---it's strategic.
           </p>
         </ArticleCallout>
 
@@ -537,7 +537,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           If you're unable to get out of bed most days for more than two weeks, or if your inability to get up is preventing you from meeting basic needs (eating, personal hygiene, attending work or school), it's time to reach out to a healthcare provider.
         </p>
         <p className="mb-6">
-          Treatment options—therapy, medication, or both—can address the underlying neurobiological causes of morning dysfunction. You don't have to white-knuckle your way through this alone.
+          Treatment options---therapy, medication, or both---can address the underlying neurobiological causes of morning dysfunction. You don't have to white-knuckle your way through this alone.
         </p>
       </>
     ),
@@ -633,7 +633,7 @@ export const copingWithDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression isn't something you can simply decide to stop feeling. But research shows that certain daily practices—when done consistently—can reduce symptoms, improve functioning, and support recovery. This is your evidence-based toolkit.
+            Depression isn't something you can simply decide to stop feeling. But research shows that certain daily practices---when done consistently---can reduce symptoms, improve functioning, and support recovery. This is your evidence-based toolkit.
           </p>
           <p className="mb-6">
             These aren't quick fixes or miracle cures. They're foundational practices backed by decades of research, designed to work alongside (not replace) professional treatment <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />. Think of them as the scaffolding that supports your brain as it heals.
@@ -644,7 +644,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           1. Movement and Exercise
         </h2>
         <p className="mb-6">
-          Physical activity is one of the most well-established non-pharmaceutical interventions for depression. A 2021 systematic review found that regular exercise produces moderate to large reductions in depressive symptoms—effects comparable to psychotherapy or medication <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2021" tier={1} />.
+          Physical activity is one of the most well-established non-pharmaceutical interventions for depression. A 2021 systematic review found that regular exercise produces moderate to large reductions in depressive symptoms---effects comparable to psychotherapy or medication <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2021" tier={1} />.
         </p>
 
         <ArticleChart
@@ -660,10 +660,10 @@ export const copingWithDepressionArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>How much?</strong> Even 20–30 minutes of moderate activity most days of the week can make a difference. You don't need to train for a marathon. Walking, gentle yoga, or dancing in your kitchen all count.
+          <strong>How much?</strong> Even 20--30 minutes of moderate activity most days of the week can make a difference. You don't need to train for a marathon. Walking, gentle yoga, or dancing in your kitchen all count.
         </p>
         <p className="mb-6">
-          <strong>Why it works:</strong> Exercise increases neurotransmitters (serotonin, dopamine, norepinephrine), promotes neurogenesis (growth of new brain cells), reduces inflammation, and improves sleep—all mechanisms linked to depression recovery.
+          <strong>Why it works:</strong> Exercise increases neurotransmitters (serotonin, dopamine, norepinephrine), promotes neurogenesis (growth of new brain cells), reduces inflammation, and improves sleep---all mechanisms linked to depression recovery.
         </p>
 
         <ArticleCallout variant="tip">
@@ -675,7 +675,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           2. Sleep Structure and Hygiene
         </h2>
         <p className="mb-6">
-          Sleep disturbances are both a symptom and a perpetuating factor in depression. Poor sleep worsens mood, and depressed mood disrupts sleep—creating a vicious cycle <Citation id="4" index={4} source="Sleep Medicine Clinics" year="2020" tier={1} />.
+          Sleep disturbances are both a symptom and a perpetuating factor in depression. Poor sleep worsens mood, and depressed mood disrupts sleep---creating a vicious cycle <Citation id="4" index={4} source="Sleep Medicine Clinics" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           The most effective intervention is <strong>sleep hygiene</strong>: a set of practices that optimize your sleep-wake rhythm.
@@ -685,13 +685,13 @@ export const copingWithDepressionArticlesA: Article[] = [
           <li><strong>Consistent sleep and wake times:</strong> Go to bed and wake up at the same time every day, even weekends.</li>
           <li><strong>Light exposure:</strong> Get bright light (ideally sunlight) within 30 minutes of waking.</li>
           <li><strong>Limit naps:</strong> If you must nap, keep it under 30 minutes and before 3 PM.</li>
-          <li><strong>Wind-down routine:</strong> 30–60 minutes before bed, dim lights, avoid screens, engage in calming activities.</li>
+          <li><strong>Wind-down routine:</strong> 30--60 minutes before bed, dim lights, avoid screens, engage in calming activities.</li>
           <li><strong>Bedroom environment:</strong> Cool, dark, quiet. Reserve bed for sleep (not work or scrolling).</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Improving sleep hygiene has been shown to enhance the effectiveness of antidepressant medications and psychotherapy. It's not just about feeling rested—it's about giving your brain the conditions it needs to heal.
+            Improving sleep hygiene has been shown to enhance the effectiveness of antidepressant medications and psychotherapy. It's not just about feeling rested---it's about giving your brain the conditions it needs to heal.
           </p>
         </ArticleCallout>
 
@@ -699,7 +699,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           3. Social Connection (Even in Small Doses)
         </h2>
         <p className="mb-6">
-          Depression makes you want to isolate, but isolation makes depression worse. Longitudinal studies show that social connection—even brief, low-intensity interactions—predicts better depression outcomes <Citation id="5" index={5} source="Social Psychiatry and Psychiatric Epidemiology" year="2019" tier={1} />.
+          Depression makes you want to isolate, but isolation makes depression worse. Longitudinal studies show that social connection---even brief, low-intensity interactions---predicts better depression outcomes <Citation id="5" index={5} source="Social Psychiatry and Psychiatric Epidemiology" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           You don't need deep, emotionally intense conversations. A text exchange with a friend, a nod to a neighbor, or sitting in a coffee shop around others all count.
@@ -707,7 +707,7 @@ export const copingWithDepressionArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>The anti-isolation rule:</strong> One brief social interaction per day, no matter how small. This is not about being social for the sake of it—it's about signaling to your brain that you're not alone.
+            <strong>The anti-isolation rule:</strong> One brief social interaction per day, no matter how small. This is not about being social for the sake of it---it's about signaling to your brain that you're not alone.
           </p>
         </ArticleCallout>
 
@@ -715,13 +715,13 @@ export const copingWithDepressionArticlesA: Article[] = [
           4. Mindfulness and Meditation
         </h2>
         <p className="mb-6">
-          Mindfulness-based interventions (like MBCT—Mindfulness-Based Cognitive Therapy) have strong evidence for reducing depression relapse and managing current symptoms <Citation id="6" index={6} source="Clinical Psychology Review" year="2020" tier={1} />.
+          Mindfulness-based interventions (like MBCT---Mindfulness-Based Cognitive Therapy) have strong evidence for reducing depression relapse and managing current symptoms <Citation id="6" index={6} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Mindfulness teaches you to observe your thoughts without getting pulled into them. Instead of "I'm worthless' becoming a spiral, it becomes "I'm noticing the thought "I'm worthless."This small shift reduces the power of depressive thinking.
         </p>
         <p className="mb-6">
-          <strong>How to start:</strong> Use a guided meditation app (Headspace, Insight Timer, Calm). Even 5–10 minutes daily can build the skill. Focus on noticing breath, body sensations, or sounds—without trying to change them.
+          <strong>How to start:</strong> Use a guided meditation app (Headspace, Insight Timer, Calm). Even 5--10 minutes daily can build the skill. Focus on noticing breath, body sensations, or sounds---without trying to change them.
         </p>
 
         <h2 id="gratitude-practice" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -747,7 +747,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           There's no single "depression diet," but emerging research suggests that certain dietary patterns may support mental health: Mediterranean-style eating, omega-3 fatty acids, reducing ultra-processed foods <Citation id="9" index={9} source="Nutritional Neuroscience" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          <strong>Realistic approach:</strong> Don't overhaul your entire diet overnight. Small shifts—adding one vegetable to a meal, swapping soda for water sometimes, eating regular meals instead of skipping—can matter more than perfection.
+          <strong>Realistic approach:</strong> Don't overhaul your entire diet overnight. Small shifts---adding one vegetable to a meal, swapping soda for water sometimes, eating regular meals instead of skipping---can matter more than perfection.
         </p>
         <p className="mb-6">
           When depression makes cooking impossible, keep easy, nutrient-dense options available: nuts, Greek yogurt, pre-cut vegetables, canned beans, eggs.
@@ -757,7 +757,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           7. Structure and Routine
         </h2>
         <p className="mb-6">
-          Depression erodes structure. Days blur together, time loses meaning. Rebuilding routine—even a minimal one—provides scaffolding that supports functioning <Citation id="2" index={2} source="BMC Psychiatry" year="2019" tier={1} />.
+          Depression erodes structure. Days blur together, time loses meaning. Rebuilding routine---even a minimal one---provides scaffolding that supports functioning <Citation id="2" index={2} source="BMC Psychiatry" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Start with anchoring one or two activities at consistent times: wake-up time, one meal, bedtime. Build from there.
@@ -779,7 +779,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           You don't need to do all of these practices at once. In fact, trying to do everything perfectly is a setup for failure. Instead, choose one or two practices that feel most accessible right now and commit to them for two weeks.
         </p>
         <p className="mb-6">
-          Track what you actually do (not what you wish you did). Notice whether your mood, energy, or functioning shifts—even slightly. Adjust as needed.
+          Track what you actually do (not what you wish you did). Notice whether your mood, energy, or functioning shifts---even slightly. Adjust as needed.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -792,7 +792,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           When Self-Help Isn't Enough
         </h2>
         <p className="mb-6">
-          These tools can be powerful, but they're not substitutes for professional treatment. If you've been practicing these strategies consistently for a month and see no improvement—or if your depression is severe or worsening—reach out to a mental health provider.
+          These tools can be powerful, but they're not substitutes for professional treatment. If you've been practicing these strategies consistently for a month and see no improvement---or if your depression is severe or worsening---reach out to a mental health provider.
         </p>
         <p className="mb-6">
           Treatment (therapy, medication, or both) addresses the underlying mechanisms of depression in ways that self-help alone cannot. These daily practices work best as complements to professional care, not replacements for it.
@@ -883,7 +883,7 @@ export const copingWithDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When depression clouds your mind with heavy thoughts and tangled emotions, getting them onto paper can create clarity, distance, and relief. Journaling for depression isn't about writing beautifully or keeping a perfect diary—it's about externalizing what's inside so it has less power over you.
+            When depression clouds your mind with heavy thoughts and tangled emotions, getting them onto paper can create clarity, distance, and relief. Journaling for depression isn't about writing beautifully or keeping a perfect diary---it's about externalizing what's inside so it has less power over you.
           </p>
           <p className="mb-6">
             Research shows that structured expressive writing can reduce depressive symptoms, decrease rumination, and improve emotional regulation <Citation id="1" index={1} source="Clinical Psychology Review" year="2018" tier={1} />. This article offers evidence-based prompts and techniques to help you use journaling as a tool for healing.
@@ -894,7 +894,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           Why Journaling Helps with Depression
         </h2>
         <p className="mb-6">
-          Depression often involves rumination—repetitive, circular thinking that traps you in negative thought loops. Writing interrupts this process by forcing you to slow down, organize your thoughts, and put them into words <Citation id="7" index={7} source="Cognition and Emotion" year="2019" tier={1} />.
+          Depression often involves rumination---repetitive, circular thinking that traps you in negative thought loops. Writing interrupts this process by forcing you to slow down, organize your thoughts, and put them into words <Citation id="7" index={7} source="Cognition and Emotion" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Neuroscience research shows that expressive writing activates different brain regions than rumination. Writing engages the prefrontal cortex (involved in reasoning and perspective-taking) rather than just the amygdala (the emotional alarm system) <Citation id="4" index={4} source="Advances in Psychiatric Treatment" year="2017" tier={1} />. This shift creates psychological distance from overwhelming emotions.
@@ -902,7 +902,7 @@ export const copingWithDepressionArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Journaling doesn't make painful emotions disappear, but it transforms them from an internal storm into something you can observe, understand, and work with. That shift—from being inside the emotion to being alongside it—is where healing begins.
+            Journaling doesn't make painful emotions disappear, but it transforms them from an internal storm into something you can observe, understand, and work with. That shift---from being inside the emotion to being alongside it---is where healing begins.
           </p>
         </ArticleCallout>
 
@@ -914,7 +914,7 @@ export const copingWithDepressionArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Keep it short:</strong> 10–15 minutes is enough. Longer isn't necessarily better.</li>
+          <li><strong>Keep it short:</strong> 10--15 minutes is enough. Longer isn't necessarily better.</li>
           <li><strong>Write by hand if possible:</strong> Handwriting engages different neural pathways than typing and may deepen processing.</li>
           <li><strong>Don't edit or censor:</strong> This isn't for anyone else. Spelling and grammar don't matter.</li>
           <li><strong>Set a regular time:</strong> Morning or evening, whichever feels more natural. Consistency builds the habit.</li>
@@ -963,7 +963,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           For Tracking Patterns
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>What was my mood today (0–10)? What might have influenced it?</li>
+          <li>What was my mood today (0--10)? What might have influenced it?</li>
           <li>What activities did I do today? Which ones made me feel slightly better or worse?</li>
           <li>What time of day is hardest for me? What makes it hard?</li>
           <li>What warning signs do I notice when my depression is worsening?</li>
@@ -1135,7 +1135,7 @@ export const copingWithDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Exercise is one of the most well-documented non-pharmaceutical treatments for depression. It's not a cure, and it's not a substitute for therapy or medication—but it's a powerful tool that literally changes your brain chemistry in ways that lift mood, improve energy, and support recovery.
+            Exercise is one of the most well-documented non-pharmaceutical treatments for depression. It's not a cure, and it's not a substitute for therapy or medication---but it's a powerful tool that literally changes your brain chemistry in ways that lift mood, improve energy, and support recovery.
           </p>
           <p className="mb-6">
             This article explains the neuroscience behind why exercise works for depression, what types of movement are most effective, and how to start when depression makes the idea of exercising feel impossible <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2019" tier={1} />.
@@ -1153,7 +1153,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           1. Neurotransmitter Release
         </h3>
         <p className="mb-6">
-          Exercise increases levels of serotonin, dopamine, and norepinephrine—the same neurotransmitters targeted by antidepressant medications. These chemicals regulate mood, motivation, and energy. Physical activity essentially gives your brain a natural dose of what it's been lacking.
+          Exercise increases levels of serotonin, dopamine, and norepinephrine---the same neurotransmitters targeted by antidepressant medications. These chemicals regulate mood, motivation, and energy. Physical activity essentially gives your brain a natural dose of what it's been lacking.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1179,7 +1179,7 @@ export const copingWithDepressionArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Exercise doesn't just make you "feel better" in a vague, temporary way. It produces measurable, lasting changes in brain structure and chemistry—changes that are therapeutic for depression at a biological level.
+            Exercise doesn't just make you "feel better" in a vague, temporary way. It produces measurable, lasting changes in brain structure and chemistry---changes that are therapeutic for depression at a biological level.
           </p>
         </ArticleCallout>
 
@@ -1187,14 +1187,14 @@ export const copingWithDepressionArticlesA: Article[] = [
           How Effective Is Exercise for Depression?
         </h2>
         <p className="mb-6">
-          A 2021 systematic review and meta-analysis found that exercise produces moderate to large reductions in depressive symptoms—effects comparable to psychotherapy and antidepressant medication <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2021" tier={1} />.
+          A 2021 systematic review and meta-analysis found that exercise produces moderate to large reductions in depressive symptoms---effects comparable to psychotherapy and antidepressant medication <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2021" tier={1} />.
         </p>
 
         <StatCard
           stats={[
             { value: 0.6, suffix: '', label: 'Effect size of exercise on depression (large effect)' },
             { value: 150, suffix: 'min', label: 'Weekly exercise recommended by WHO' },
-            { value: 4, suffix: '–6', label: 'Weeks to see mood improvement' },
+            { value: 4, suffix: '--6', label: 'Weeks to see mood improvement' },
           ]}
           source="American Journal of Preventive Medicine, 2021; WHO, 2020"
         />
@@ -1230,7 +1230,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           The World Health Organization recommends 150 minutes of moderate-intensity aerobic activity per week for mental health benefits <Citation id="5" index={5} source="World Health Organization" year="2020" tier={2} />. That breaks down to 30 minutes, five days a week.
         </p>
         <p className="mb-6">
-          <strong>But here's the nuance:</strong> Even lower doses of exercise—10 to 15 minutes at a time, or 75 minutes per week—show benefits for depression <Citation id="9" index={9} source="Primary Care Companion to the Journal of Clinical Psychiatry" year="2006" tier={2} />. Don't let "150 minutes" become a barrier. Start where you can.
+          <strong>But here's the nuance:</strong> Even lower doses of exercise---10 to 15 minutes at a time, or 75 minutes per week---show benefits for depression <Citation id="9" index={9} source="Primary Care Companion to the Journal of Clinical Psychiatry" year="2006" tier={2} />. Don't let "150 minutes" become a barrier. Start where you can.
         </p>
 
         <ArticleCallout variant="tip">
@@ -1249,7 +1249,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           How to Start When Depression Makes Exercise Feel Impossible
         </h2>
         <p className="mb-6">
-          The cruel irony of exercise for depression: it works, but depression makes you not want to do it. Motivation, energy, and pleasure are all compromised—exactly the things you need to start moving.
+          The cruel irony of exercise for depression: it works, but depression makes you not want to do it. Motivation, energy, and pleasure are all compromised---exactly the things you need to start moving.
         </p>
         <p className="mb-6">
           The solution isn't to force yourself through willpower. It's to use behavioral strategies that bypass motivation <Citation id="7" index={7} source="Behavior Modification" year="2019" tier={1} />:
@@ -1295,7 +1295,7 @@ export const copingWithDepressionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2">The word "exercise" can feel heavy and performative. "Movement" is gentler and more inclusive.</p>
-                  <p>Stretching, dancing in your kitchen, walking to the mailbox, playing with a pet—it all counts.</p>
+                  <p>Stretching, dancing in your kitchen, walking to the mailbox, playing with a pet---it all counts.</p>
                 </div>
               ),
             },
@@ -1316,7 +1316,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           Exercise as Part of a Treatment Plan
         </h2>
         <p className="mb-6">
-          Exercise works best when combined with other treatments—therapy, medication, or both. It's an adjunct intervention, meaning it enhances the effectiveness of other approaches rather than replacing them <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2019" tier={1} />.
+          Exercise works best when combined with other treatments---therapy, medication, or both. It's an adjunct intervention, meaning it enhances the effectiveness of other approaches rather than replacing them <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           If you're in therapy, talk to your therapist about integrating movement into your treatment plan. If you're on medication, exercise can amplify its benefits and help manage side effects like weight gain or fatigue.
@@ -1332,7 +1332,7 @@ export const copingWithDepressionArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          Exercise is a powerful tool, but it's not a replacement for professional treatment. If your depression is severe, if you're experiencing suicidal thoughts, or if exercise alone isn't improving your symptoms after 4–6 weeks, reach out to a mental health provider.
+          Exercise is a powerful tool, but it's not a replacement for professional treatment. If your depression is severe, if you're experiencing suicidal thoughts, or if exercise alone isn't improving your symptoms after 4--6 weeks, reach out to a mental health provider.
         </p>
         <p className="mb-6">
           If you have medical conditions that limit your ability to exercise, consult a doctor before starting a new routine. They can help tailor recommendations to your specific needs.

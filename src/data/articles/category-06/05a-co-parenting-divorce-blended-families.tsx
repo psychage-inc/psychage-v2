@@ -41,7 +41,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
             The end of a marriage is painful, but how parents handle divorce determines its impact on children. Research shows that children's adjustment depends less on divorce itself and more on how parents manage conflict and co-parenting <Citation id="1" index={1} source="Child Development" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
-            Effective co-parenting after divorce requires putting children's needs ahead of adult anger, hurt, or resentment. It's not easy — but it's one of the most important things you can do for your children's mental health.
+            Effective co-parenting after divorce requires putting children's needs ahead of adult anger, hurt, or resentment. It's not easy --- but it's one of the most important things you can do for your children's mental health.
           </p>
         </div>
 
@@ -70,13 +70,13 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
         />
 
         <h2 id="conflict-is-the-key" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Parental Conflict — Not Divorce — Predicts Outcomes
+          Parental Conflict --- Not Divorce --- Predicts Outcomes
         </h2>
         <p className="mb-6">
-          Children in high-conflict intact families often fare worse than children of divorce with low-conflict co-parenting <Citation id="3" index={3} source="Clinical Child and Family Psychology Review" year="2021" tier={1} />. The key factor is exposure to adult conflict — fighting, bad-mouthing, tension children can feel.
+          Children in high-conflict intact families often fare worse than children of divorce with low-conflict co-parenting <Citation id="3" index={3} source="Clinical Child and Family Psychology Review" year="2021" tier={1} />. The key factor is exposure to adult conflict --- fighting, bad-mouthing, tension children can feel.
           </p>
         <p className="mb-6">
-          This means your primary job as co-parents is managing conflict — not eliminating disagreements, but handling them away from children in respectful ways.
+          This means your primary job as co-parents is managing conflict --- not eliminating disagreements, but handling them away from children in respectful ways.
         </p>
 
         <ArticleCallout variant="warning">
@@ -98,7 +98,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
             },
             {
               title: 'Child-Centered Decisions',
-              description: <p>Before every decision, ask: "What's best for my child?" Not what punishes your ex, not what's most convenient for you — what serves your child's wellbeing <Citation id="7" index={7} source="Family Court Review" year="2020" tier={1} />.</p>,
+              description: <p>Before every decision, ask: "What's best for my child?" Not what punishes your ex, not what's most convenient for you --- what serves your child's wellbeing <Citation id="7" index={7} source="Family Court Review" year="2020" tier={1} />.</p>,
             },
             {
               title: 'Keep Conflict Private',
@@ -106,7 +106,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
             },
             {
               title: 'Consistent Rules Across Homes',
-              description: <p>Align on bedtimes, screen time, discipline, homework — major rules should be similar. Small differences are okay; contradictory parenting creates confusion <Citation id="6" index={6} source="Parenting: Science and Practice" year="2021" tier={1} />.</p>,
+              description: <p>Align on bedtimes, screen time, discipline, homework --- major rules should be similar. Small differences are okay; contradictory parenting creates confusion <Citation id="6" index={6} source="Parenting: Science and Practice" year="2021" tier={1} />.</p>,
             },
             {
               title: 'Support the Other Parent',
@@ -204,7 +204,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Co-parenting is one of the hardest things you'll do — working cooperatively with someone you're angry at or hurt by. But your children's mental health depends on it. Every time you choose calm communication over conflict, you're giving your children a gift.
+            Co-parenting is one of the hardest things you'll do --- working cooperatively with someone you're angry at or hurt by. But your children's mental health depends on it. Every time you choose calm communication over conflict, you're giving your children a gift.
           </p>
         </ArticleCallout>
       </>
@@ -239,7 +239,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
             Sometimes, no amount of effort can make co-parenting work. When your ex is high-conflict, refuses boundaries, or consistently escalates every interaction, traditional co-parenting may actually increase harm.
           </p>
           <p className="mb-6">
-            Parallel parenting is an alternative approach that minimizes direct contact while allowing both parents to remain actively involved in children's lives <Citation id="1" index={1} source="Journal of Divorce & Remarriage" year="2020" tier={1} />. It's not giving up — it's protecting everyone's wellbeing.
+            Parallel parenting is an alternative approach that minimizes direct contact while allowing both parents to remain actively involved in children's lives <Citation id="1" index={1} source="Journal of Divorce & Remarriage" year="2020" tier={1} />. It's not giving up --- it's protecting everyone's wellbeing.
           </p>
         </div>
 
@@ -307,7 +307,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
             },
             {
               title: 'Independent Decision-Making',
-              description: <p>Each parent makes day-to-day decisions during their parenting time. Only major decisions (medical emergencies, school changes) require consultation — and these should be outlined in court orders.</p>,
+              description: <p>Each parent makes day-to-day decisions during their parenting time. Only major decisions (medical emergencies, school changes) require consultation --- and these should be outlined in court orders.</p>,
             },
             {
               title: 'Different Rules Are Okay',
@@ -344,7 +344,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Don't respond to emotional baiting or personal attacks</li>
           <li>Limit communication to child-related logistics only</li>
-          <li>Don't defend, explain, engage — just stick to facts</li>
+          <li>Don't defend, explain, engage --- just stick to facts</li>
           <li>Document everything in case of future legal issues</li>
           <li>Block ex on personal social media</li>
           <li>Use 'gray rock' technique: be boring, unemotional, unrewarding to engage with</li>
@@ -352,7 +352,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Parallel parenting isn't what anyone hopes for when they have children. But when co-parenting creates more harm than good, it's the healthier choice. Low conflict — even if it means distance — serves children better than ongoing war.
+            Parallel parenting isn't what anyone hopes for when they have children. But when co-parenting creates more harm than good, it's the healthier choice. Low conflict --- even if it means distance --- serves children better than ongoing war.
           </p>
         </ArticleCallout>
       </>
@@ -434,7 +434,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
           Preschool Age (3-5 years)
         </h2>
         <p className="mb-6">
-          Preschoolers are egocentric — they believe they're the center of events. Many blame themselves for the divorce <Citation id="3" index={3} source="Journal of Family Psychology" year="2020" tier={1} />.
+          Preschoolers are egocentric --- they believe they're the center of events. Many blame themselves for the divorce <Citation id="3" index={3} source="Journal of Family Psychology" year="2020" tier={1} />.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Common reactions:</strong> Self-blame ("Daddy left because I was bad"), magical thinking, regression (thumb-sucking, bedwetting), fear that the other parent will also leave</li>
@@ -549,7 +549,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
           What Makes Stepfamilies Different
         </h2>
         <p className="mb-6">
-          Stepfamilies are "born of loss" — they form after divorce, death, or separation. Unlike first families that start with a couple and gradually add children, stepfamilies start with established parent-child bonds and try to integrate new relationships <Citation id="2" index={2} source="Journal of Family Psychology" year="2021" tier={1} />.
+          Stepfamilies are "born of loss" --- they form after divorce, death, or separation. Unlike first families that start with a couple and gradually add children, stepfamilies start with established parent-child bonds and try to integrate new relationships <Citation id="2" index={2} source="Journal of Family Psychology" year="2021" tier={1} />.
         </p>
 
         <StatCard
@@ -588,7 +588,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
                   <p className="mb-4">
                     What is a stepparent's role? Friend? Disciplinarian? Parent? The lack of clear cultural scripts creates confusion <Citation id="4" index={4} source="Journal of Marriage and Family" year="2020" tier={1} />.
                   </p>
-                  <p><strong>Strategy:</strong> Start as a friendly adult. Stepparents earn authority over time — it can't be demanded from day one. Let biological parent handle discipline initially.</p>
+                  <p><strong>Strategy:</strong> Start as a friendly adult. Stepparents earn authority over time --- it can't be demanded from day one. Let biological parent handle discipline initially.</p>
                 </div>
               ),
             },
@@ -670,7 +670,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Present united front on rules and decisions</li>
-          <li>Protect couple time — date nights, private conversations</li>
+          <li>Protect couple time --- date nights, private conversations</li>
           <li>Support partner's parenting (even when you disagree privately)</li>
           <li>Don't let children drive wedges between you</li>
         </ul>
@@ -709,7 +709,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Don't tell your mom I said this.", "If you loved me, you wouldn't want to go to your dad's.", "Whose house do you like better?" These questions put children in impossible positions — forced to choose between parents they love.
+            "Don't tell your mom I said this.", "If you loved me, you wouldn't want to go to your dad's.", "Whose house do you like better?" These questions put children in impossible positions --- forced to choose between parents they love.
           </p>
           <p className="mb-6">
             Loyalty conflicts occur when children feel they must choose sides or hide affection for one parent to protect the other <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />. These conflicts harm children's mental health and attachment security.
@@ -796,7 +796,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Severe loyalty conflicts can lead to parental alienation — where a child rejects one parent entirely. This is traumatic for both child and rejected parent <Citation id="2" index={2} source="Family Court Review" year="2021" tier={2} />.
+            Severe loyalty conflicts can lead to parental alienation --- where a child rejects one parent entirely. This is traumatic for both child and rejected parent <Citation id="2" index={2} source="Family Court Review" year="2021" tier={2} />.
           </p>
         </ArticleCallout>
 
@@ -812,7 +812,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
           steps={[
             {
               title: 'Explicitly Give Permission',
-              description: <p>"I want you to have a great relationship with your mom. You can tell me about fun things you do together — it makes me happy when you're happy."</p>,
+              description: <p>"I want you to have a great relationship with your mom. You can tell me about fun things you do together --- it makes me happy when you're happy."</p>,
             },
             {
               title: 'Never Bad-Mouth',
@@ -876,7 +876,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Children need permission to love both parents freely and fully. When you give that permission — even when it's hard — you give your child the gift of wholeness instead of conflict.
+            Children need permission to love both parents freely and fully. When you give that permission --- even when it's hard --- you give your child the gift of wholeness instead of conflict.
           </p>
         </ArticleCallout>
       </>

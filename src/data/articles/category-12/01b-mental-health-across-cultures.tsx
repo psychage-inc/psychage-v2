@@ -102,7 +102,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Black Americans are 20% more likely to experience serious mental health conditions than the general population, yet only one in three receives treatment <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />. This gap is not about need—it reflects centuries of systemic barriers, cultural mistrust of medical systems, and a mental health field that has historically pathologized Black experiences.
+            Black Americans are 20% more likely to experience serious mental health conditions than the general population, yet only one in three receives treatment <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />. This gap is not about need---it reflects centuries of systemic barriers, cultural mistrust of medical systems, and a mental health field that has historically pathologized Black experiences.
           </p>
           <p className="mb-6">
             Mental health in African and Afro-diasporic communities is inseparable from the ongoing impact of slavery, colonization, segregation, and structural racism. Yet alongside these challenges exists profound resilience, cultural strength, and community-based healing traditions that mainstream mental health often ignores.
@@ -113,7 +113,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           The Mental Health Impact of Racism
         </h2>
         <p className="mb-6">
-          Racism is not just a social issue—it is a chronic stressor that directly damages mental and physical health <Citation id="2" index={2} source="American Journal of Public Health" year="2022" tier={1} />.
+          Racism is not just a social issue---it is a chronic stressor that directly damages mental and physical health <Citation id="2" index={2} source="American Journal of Public Health" year="2022" tier={1} />.
         </p>
 
         <ArticleTabs
@@ -141,7 +141,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
                     Policies and systems that create unequal access to resources. Housing segregation, school funding inequities, employment discrimination, mass incarceration, healthcare disparities.
                   </p>
                   <p className="mb-4">
-                    <strong>Mental health effects:</strong> Poverty, housing instability, food insecurity, lack of access to quality healthcare and education—all independently increase mental health risk.
+                    <strong>Mental health effects:</strong> Poverty, housing instability, food insecurity, lack of access to quality healthcare and education---all independently increase mental health risk.
                   </p>
                 </div>
               ),
@@ -164,7 +164,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The cumulative effect of repeated exposure to racism—called <em>weathering</em>—leads to premature aging of biological systems and increased rates of depression, anxiety, hypertension, and cardiovascular disease <Citation id="5" index={5} source="Annual Review of Public Health" year="2023" tier={1} />.
+          The cumulative effect of repeated exposure to racism---called <em>weathering</em>---leads to premature aging of biological systems and increased rates of depression, anxiety, hypertension, and cardiovascular disease <Citation id="5" index={5} source="Annual Review of Public Health" year="2023" tier={1} />.
         </p>
 
         <StatCard
@@ -180,7 +180,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           Cultural Mistrust of Mental Health Systems
         </h2>
         <p className="mb-6">
-          Black communities" wariness of mental health systems is not paranoia—it is a rational response to historical and ongoing mistreatment <Citation id="3" index={3} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />.
+          Black communities" wariness of mental health systems is not paranoia---it is a rational response to historical and ongoing mistreatment <Citation id="3" index={3} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Historical Context Matters">
@@ -225,7 +225,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           The "Strong Black Woman" Schema
         </h2>
         <p className="mb-6">
-          The cultural archetype of the Strong Black Woman—resilient, self-sacrificing, emotionally restrained, and always able to persevere—carries both protective and harmful effects <Citation id="4" index={4} source="Psychology of Women Quarterly" year="2021" tier={1} />.
+          The cultural archetype of the Strong Black Woman---resilient, self-sacrificing, emotionally restrained, and always able to persevere---carries both protective and harmful effects <Citation id="4" index={4} source="Psychology of Women Quarterly" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Protective aspects:</strong>
@@ -248,7 +248,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip" title="Redefining Strength">
-          <p>True strength includes knowing when to rest, seeking support, setting boundaries, and acknowledging pain. Asking for help is not weakness—it is wisdom. Self-care is not selfish—it is necessary for sustainability.</p>
+          <p>True strength includes knowing when to rest, seeking support, setting boundaries, and acknowledging pain. Asking for help is not weakness---it is wisdom. Self-care is not selfish---it is necessary for sustainability.</p>
         </ArticleCallout>
 
         <h2 id="barriers-to-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -298,7 +298,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           Historical and Intergenerational Trauma
         </h2>
         <p className="mb-6">
-          The legacy of slavery, colonization, and ongoing oppression creates <em>historical trauma</em>—collective emotional and psychological wounding across generations <Citation id="9" index={9} source="Transcultural Psychiatry" year="2022" tier={1} />. This manifests as:
+          The legacy of slavery, colonization, and ongoing oppression creates <em>historical trauma</em>---collective emotional and psychological wounding across generations <Citation id="9" index={9} source="Transcultural Psychiatry" year="2022" tier={1} />. This manifests as:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Chronic grief and anger about historical injustices</li>
@@ -331,7 +331,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <strong>If you are a non-Black provider serving Black clients:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Educate yourself about racism's impact on mental health—do not expect clients to teach you</li>
+          <li>Educate yourself about racism's impact on mental health---do not expect clients to teach you</li>
           <li>Acknowledge historical and ongoing medical racism explicitly</li>
           <li>Recognize that cultural mistrust is protective, not pathological</li>
           <li>Do not pathologize anger about racism or "healthy paranoia"</li>
@@ -440,10 +440,10 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In many Middle Eastern communities, a young woman struggling with depression might hide her symptoms to protect her marriage prospects. A father experiencing anxiety might visit a physician for headaches rather than admit emotional distress. A family might consult an imam before—or instead of—a mental health professional. These patterns reflect cultural values where family honor, religious faith, and social reputation profoundly shape mental health experiences.
+            In many Middle Eastern communities, a young woman struggling with depression might hide her symptoms to protect her marriage prospects. A father experiencing anxiety might visit a physician for headaches rather than admit emotional distress. A family might consult an imam before---or instead of---a mental health professional. These patterns reflect cultural values where family honor, religious faith, and social reputation profoundly shape mental health experiences.
           </p>
           <p className="mb-6">
-            Mental health in Middle Eastern cultures—encompassing Arab, Persian, Turkish, and other communities across North Africa, the Arabian Peninsula, and Western Asia—is deeply influenced by concepts of honor, collective family identity, and Islamic faith <Citation id="1" index={1} source="International Journal of Social Psychiatry" year="2021" tier={1} />. Understanding these cultural frameworks is essential for providing effective, respectful care.
+            Mental health in Middle Eastern cultures---encompassing Arab, Persian, Turkish, and other communities across North Africa, the Arabian Peninsula, and Western Asia---is deeply influenced by concepts of honor, collective family identity, and Islamic faith <Citation id="1" index={1} source="International Journal of Social Psychiatry" year="2021" tier={1} />. Understanding these cultural frameworks is essential for providing effective, respectful care.
           </p>
         </div>
 
@@ -451,7 +451,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           Honor Culture and Family Reputation
         </h2>
         <p className="mb-6">
-          Middle Eastern societies are often described as "honor cultures"—where social standing and family reputation are paramount <Citation id="2" index={2} source="Transcultural Psychiatry" year="2022" tier={1} />. Individual behavior reflects not just on oneself, but on the entire extended family.
+          Middle Eastern societies are often described as "honor cultures"---where social standing and family reputation are paramount <Citation id="2" index={2} source="Transcultural Psychiatry" year="2022" tier={1} />. Individual behavior reflects not just on oneself, but on the entire extended family.
         </p>
         <p className="mb-6">
           <strong>Key aspects of honor culture:</strong>
@@ -468,7 +468,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          This does not mean individuals do not care about their own wellbeing—it means they navigate mental health within a framework where family harmony and reputation are primary concerns.
+          This does not mean individuals do not care about their own wellbeing---it means they navigate mental health within a framework where family harmony and reputation are primary concerns.
         </p>
 
         <h2 id="role-of-islam" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -524,7 +524,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note">
-          <p><strong>Important:</strong> Islamic teachings do not prohibit mental health treatment. Many Islamic scholars emphasize that seeking medical care—including mental health care—is consistent with Islamic principles. The Quran states, "For every disease, Allah has given a cure."</p>
+          <p><strong>Important:</strong> Islamic teachings do not prohibit mental health treatment. Many Islamic scholars emphasize that seeking medical care---including mental health care---is consistent with Islamic principles. The Quran states, "For every disease, Allah has given a cure."</p>
         </ArticleCallout>
 
         <h2 id="gender-dynamics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -570,7 +570,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           Somatization: Physical Expression of Distress
         </h2>
         <p className="mb-6">
-          As in many non-Western cultures, psychological distress in Middle Eastern communities is often expressed through physical symptoms—a phenomenon called somatization <Citation id="6" index={6} source="Culture, Medicine and Psychiatry" year="2020" tier={1} />.
+          As in many non-Western cultures, psychological distress in Middle Eastern communities is often expressed through physical symptoms---a phenomenon called somatization <Citation id="6" index={6} source="Culture, Medicine and Psychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Common somatic presentations:</strong>
@@ -671,7 +671,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <li>It is okay to involve family members if that feels comfortable</li>
           <li>Telehealth can expand access to culturally matched providers</li>
           <li>Community organizations and mosques may offer mental health resources</li>
-          <li>Your faith and family values are not obstacles—they can be sources of healing</li>
+          <li>Your faith and family values are not obstacles---they can be sources of healing</li>
         </ul>
 
         <p className="mb-6">
@@ -799,7 +799,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
             A young Indian woman earning a prestigious degree might still hide depression from her parents, fearing it will damage her marriage prospects. A Pakistani man experiencing anxiety might describe only physical symptoms to his doctor, never mentioning the emotional distress. A Bangladeshi teenager might feel torn between parental expectations and personal dreams, unable to voice the conflict without feeling disloyal.
           </p>
           <p className="mb-6">
-            Mental health in South Asian communities—including Indian, Pakistani, Bangladeshi, Sri Lankan, Nepali, and Bhutanese populations—is profoundly shaped by cultural values around family duty, honor, emotional restraint, and academic achievement <Citation id="1" index={1} source="Asian Journal of Psychiatry" year="2021" tier={1} />. These values create both protective factors and significant barriers to mental health care.
+            Mental health in South Asian communities---including Indian, Pakistani, Bangladeshi, Sri Lankan, Nepali, and Bhutanese populations---is profoundly shaped by cultural values around family duty, honor, emotional restraint, and academic achievement <Citation id="1" index={1} source="Asian Journal of Psychiatry" year="2021" tier={1} />. These values create both protective factors and significant barriers to mental health care.
           </p>
         </div>
 
@@ -852,7 +852,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip" title="Intergenerational Cultural Conflict">
-          <p>Second-generation South Asians often navigate two worlds—collectivist family values at home and individualist values at school or work. This cultural code-switching can be adaptive but also creates internal conflict, identity confusion, and family tension when values clash <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.</p>
+          <p>Second-generation South Asians often navigate two worlds---collectivist family values at home and individualist values at school or work. This cultural code-switching can be adaptive but also creates internal conflict, identity confusion, and family tension when values clash <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="silence-stigma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -879,7 +879,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          This culture of silence means that mental health problems often remain hidden until they reach crisis levels—hospitalization, suicide attempt, or complete inability to function.
+          This culture of silence means that mental health problems often remain hidden until they reach crisis levels---hospitalization, suicide attempt, or complete inability to function.
         </p>
 
         <h2 id="suicide-risk" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -967,7 +967,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           Spirituality and Religion
         </h2>
         <p className="mb-6">
-          South Asian communities practice diverse faiths—Hinduism, Islam, Sikhism, Christianity, Buddhism, Jainism—each shaping mental health understanding differently <Citation id="7" index={7} source="Transcultural Psychiatry" year="2021" tier={1} />.
+          South Asian communities practice diverse faiths---Hinduism, Islam, Sikhism, Christianity, Buddhism, Jainism---each shaping mental health understanding differently <Citation id="7" index={7} source="Transcultural Psychiatry" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Protective aspects:</strong>
@@ -1018,7 +1018,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <li>Online resources: South Asian Therapists, Desi Mental Health, Asian Mental Health Collective</li>
           <li>Telehealth expands access to culturally matched providers</li>
           <li>Community organizations may offer culturally tailored support groups</li>
-          <li>You can involve family or keep treatment private—both are valid choices</li>
+          <li>You can involve family or keep treatment private---both are valid choices</li>
           <li>Seeking help is an act of strength, not weakness or disloyalty</li>
         </ul>
 
@@ -1026,7 +1026,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <strong>If you are a family member:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Mental health problems are not family shame—they are health conditions requiring treatment</li>
+          <li>Mental health problems are not family shame---they are health conditions requiring treatment</li>
           <li>Supporting someone seeking help shows love and care</li>
           <li>Professional treatment does not mean you have failed as a family</li>
           <li>Early intervention prevents suffering and saves lives</li>
@@ -1048,7 +1048,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <li>Physical symptoms without clear medical cause</li>
         </ul>
         <p className="mb-6">
-          Your mental health matters. Taking care of yourself allows you to better care for your family and fulfill your responsibilities. Seeking help is not betrayal—it is self-preservation.
+          Your mental health matters. Taking care of yourself allows you to better care for your family and fulfill your responsibilities. Seeking help is not betrayal---it is self-preservation.
         </p>
       </>
     ),
@@ -1143,10 +1143,10 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            An Anishinaabe elder conducts a smudging ceremony with sage to cleanse negative energy. A Maori community gathers for a powhiri (welcoming ritual) to restore social bonds. A Navajo family seeks a traditional healing ceremony alongside psychiatric medication for a relative experiencing psychosis. These are not alternatives to mental health care—they are Indigenous approaches to wellness that Western psychiatry is finally beginning to recognize and respect.
+            An Anishinaabe elder conducts a smudging ceremony with sage to cleanse negative energy. A Maori community gathers for a powhiri (welcoming ritual) to restore social bonds. A Navajo family seeks a traditional healing ceremony alongside psychiatric medication for a relative experiencing psychosis. These are not alternatives to mental health care---they are Indigenous approaches to wellness that Western psychiatry is finally beginning to recognize and respect.
           </p>
           <p className="mb-6">
-            Indigenous peoples worldwide—from Native Americans and First Nations in North America to Aboriginal Australians, Maori in New Zealand, and Indigenous communities across Latin America, Africa, and Asia—face profound mental health disparities rooted in colonization, forced assimilation, and ongoing marginalization <Citation id="1" index={1} source="Transcultural Psychiatry" year="2021" tier={1} />. Yet these same communities hold ancient healing traditions that offer pathways to wellness that Western medicine is only beginning to understand.
+            Indigenous peoples worldwide---from Native Americans and First Nations in North America to Aboriginal Australians, Maori in New Zealand, and Indigenous communities across Latin America, Africa, and Asia---face profound mental health disparities rooted in colonization, forced assimilation, and ongoing marginalization <Citation id="1" index={1} source="Transcultural Psychiatry" year="2021" tier={1} />. Yet these same communities hold ancient healing traditions that offer pathways to wellness that Western medicine is only beginning to understand.
           </p>
         </div>
 
@@ -1154,7 +1154,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           Historical and Intergenerational Trauma
         </h2>
         <p className="mb-6">
-          To understand Indigenous mental health, you must first understand historical trauma—the cumulative emotional and psychological wounding across generations resulting from massive group trauma <Citation id="3" index={3} source="The Lancet" year="2023" tier={1} />.
+          To understand Indigenous mental health, you must first understand historical trauma---the cumulative emotional and psychological wounding across generations resulting from massive group trauma <Citation id="3" index={3} source="The Lancet" year="2023" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Forms of Historical Trauma">
@@ -1166,7 +1166,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Historical trauma does not stay in the past—it is transmitted across generations through disrupted attachment, lost cultural knowledge, normalized violence, and biological changes (epigenetics) <Citation id="7" index={7} source="American Psychologist" year="2021" tier={1} />. Grandchildren of boarding school survivors experience higher rates of depression, PTSD, and substance use, even if they never attended themselves.
+          Historical trauma does not stay in the past---it is transmitted across generations through disrupted attachment, lost cultural knowledge, normalized violence, and biological changes (epigenetics) <Citation id="7" index={7} source="American Psychologist" year="2021" tier={1} />. Grandchildren of boarding school survivors experience higher rates of depression, PTSD, and substance use, even if they never attended themselves.
         </p>
 
         <StatCard
@@ -1200,7 +1200,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           The Suicide Crisis in Indigenous Youth
         </h2>
         <p className="mb-6">
-          Indigenous youth suicide is a public health emergency <Citation id="4" index={4} source="American Journal of Public Health" year="2021" tier={4} />. Some communities have experienced suicide clusters—multiple deaths in short periods—devastating small populations.
+          Indigenous youth suicide is a public health emergency <Citation id="4" index={4} source="American Journal of Public Health" year="2021" tier={4} />. Some communities have experienced suicide clusters---multiple deaths in short periods---devastating small populations.
         </p>
         <p className="mb-6">
           <strong>Contributing factors:</strong>
@@ -1306,7 +1306,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           The Evidence for Traditional Healing
         </h2>
         <p className="mb-6">
-          Western research is beginning to document what Indigenous communities have always known—traditional healing practices improve mental health outcomes <Citation id="6" index={6} source="Journal of Indigenous Wellbeing" year="2020" tier={1} />.
+          Western research is beginning to document what Indigenous communities have always known---traditional healing practices improve mental health outcomes <Citation id="6" index={6} source="Journal of Indigenous Wellbeing" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Research findings:</strong>
@@ -1344,7 +1344,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          This means that mental health interventions that strengthen cultural identity—language programs, cultural camps, land-based healing—are not just culturally appropriate, they are therapeutically effective.
+          This means that mental health interventions that strengthen cultural identity---language programs, cultural camps, land-based healing---are not just culturally appropriate, they are therapeutically effective.
         </p>
 
         <h2 id="decolonizing-mental-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1379,7 +1379,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <p className="mt-2"><strong>Do:</strong> Learn about the specific Indigenous culture you are serving (they are not all the same)</p>
           <p className="mt-2"><strong>Don't:</strong> Appropriate ceremonies or practices without permission and training</p>
           <p className="mt-2"><strong>Don't:</strong> Claim expertise in Indigenous healing as a non-Indigenous person</p>
-          <p className="mt-2"><strong>Don't:</strong> Expect Indigenous clients to educate you—do your own learning</p>
+          <p className="mt-2"><strong>Don't:</strong> Expect Indigenous clients to educate you---do your own learning</p>
         </ArticleCallout>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1389,12 +1389,12 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <strong>If you are Indigenous and seeking mental health support:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Start with tribal health services if available—they often integrate traditional and Western approaches</li>
+          <li>Start with tribal health services if available---they often integrate traditional and Western approaches</li>
           <li>Ask about traditional healers and whether they work alongside clinical services</li>
           <li>Look for Indigenous mental health providers or those with specific cultural training</li>
           <li>Telehealth can expand access to Indigenous providers across distance</li>
           <li>Community programs (cultural camps, language classes, land-based healing) are mental health interventions</li>
-          <li>It is okay to use both traditional healing and Western therapy—they can work together</li>
+          <li>It is okay to use both traditional healing and Western therapy---they can work together</li>
         </ul>
 
         <p className="mb-6">
@@ -1423,7 +1423,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <li>Symptoms of trauma (nightmares, flashbacks, hypervigilance)</li>
         </ul>
         <p className="mb-6">
-          Seeking help—whether from traditional healers, clinical providers, or both—is an act of cultural survival and resistance. Your wellness supports the wellness of your community and the continuation of your people.
+          Seeking help---whether from traditional healers, clinical providers, or both---is an act of cultural survival and resistance. Your wellness supports the wellness of your community and the continuation of your people.
         </p>
       </>
     ),
@@ -1526,10 +1526,10 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            For most of the 20th century, psychology claimed to study universal human nature. Yet 96% of research participants came from Western, Educated, Industrialized, Rich, Democratic (WEIRD) societies—just 12% of the world's population <Citation id="1" index={1} source="Behavioral and Brain Sciences" year="2010" tier={1} />. When cross-cultural researchers finally began studying the other 88%, they discovered something startling: many "universal" truths of psychology were culturally specific to the West.
+            For most of the 20th century, psychology claimed to study universal human nature. Yet 96% of research participants came from Western, Educated, Industrialized, Rich, Democratic (WEIRD) societies---just 12% of the world's population <Citation id="1" index={1} source="Behavioral and Brain Sciences" year="2010" tier={1} />. When cross-cultural researchers finally began studying the other 88%, they discovered something startling: many "universal" truths of psychology were culturally specific to the West.
           </p>
           <p className="mb-6">
-            This article explores what happens when Western psychiatric models meet the rest of the world—and what we learn when we stop treating Western psychology as the neutral, scientific baseline.
+            This article explores what happens when Western psychiatric models meet the rest of the world---and what we learn when we stop treating Western psychology as the neutral, scientific baseline.
           </p>
         </div>
 
@@ -1570,7 +1570,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <strong>1. The self is not universal.</strong>
         </p>
         <p className="mb-6">
-          Western psychology assumes an independent, autonomous self. But in many cultures, the self is fundamentally relational and interdependent. This is not just a philosophical difference—it changes brain activity, memory, perception, and motivation at neurobiological levels.
+          Western psychology assumes an independent, autonomous self. But in many cultures, the self is fundamentally relational and interdependent. This is not just a philosophical difference---it changes brain activity, memory, perception, and motivation at neurobiological levels.
         </p>
 
         <p className="mb-6">
@@ -1608,7 +1608,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          This does not mean depression is "just cultural"—it is a real condition causing genuine suffering. But culture profoundly shapes how depression is experienced, expressed, understood, and treated.
+          This does not mean depression is "just cultural"---it is a real condition causing genuine suffering. But culture profoundly shapes how depression is experienced, expressed, understood, and treated.
         </p>
 
         <h2 id="blind-spots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1660,13 +1660,13 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <strong>Key findings:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Self-perception:</strong> When Westerners think about themselves, medial prefrontal cortex activates. For East Asians, this same region activates when thinking about self AND close others—reflecting interdependent self-concept.</li>
+          <li><strong>Self-perception:</strong> When Westerners think about themselves, medial prefrontal cortex activates. For East Asians, this same region activates when thinking about self AND close others---reflecting interdependent self-concept.</li>
           <li><strong>Attention:</strong> Americans show more brain activity when focusing on focal objects; East Asians show more activity processing context and relationships between objects.</li>
           <li><strong>Emotion regulation:</strong> Cultural values about emotion expression shape which brain regions are recruited to regulate feelings.</li>
         </ul>
 
         <p className="mb-6">
-          This research proves that culture is not just a "lens" through which we interpret biology—culture shapes the biology itself. Nature and nurture are inseparable.
+          This research proves that culture is not just a "lens" through which we interpret biology---culture shapes the biology itself. Nature and nurture are inseparable.
         </p>
 
         <h2 id="colonialism" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1684,7 +1684,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="When you export Western mental health models without cultural adaptation, you are not providing universal care—you are engaging in cultural imperialism dressed up as science."
+          quote="When you export Western mental health models without cultural adaptation, you are not providing universal care---you are engaging in cultural imperialism dressed up as science."
           attribution="Dr. Derek Summerfield"
           role="Psychiatrist and Medical Anthropologist"
           source="Institute of Psychiatry, London"
@@ -1704,7 +1704,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
           <li>Your way of understanding and expressing distress is valid, even if it does not fit Western diagnostic categories</li>
           <li>It is okay to prefer family involvement, spiritual practices, or traditional healing</li>
           <li>Seek providers with cultural humility who respect your background</li>
-          <li>You can use both Western and traditional approaches—they are not mutually exclusive</li>
+          <li>You can use both Western and traditional approaches---they are not mutually exclusive</li>
         </ul>
 
         <p className="mb-6">
@@ -1712,7 +1712,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Western diagnostic systems are culturally constructed, not culture-neutral</li>
-          <li>Cultural adaptation is not optional—it is essential for effective care</li>
+          <li>Cultural adaptation is not optional---it is essential for effective care</li>
           <li>Do not pathologize cultural practices, beliefs, or values</li>
           <li>Work with cultural consultants, traditional healers, and community leaders</li>
           <li>Recognize your own cultural assumptions and biases</li>
@@ -1747,14 +1747,14 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="info" title="The DSM-5 Cultural Formulation">
-          <p>The DSM-5 includes a Cultural Formulation Interview (CFI)—16 questions assessing cultural identity, explanations of illness, cultural stressors, and help-seeking preferences <Citation id="8" index={8} source="JAMA Psychiatry" year="2020" tier={1} />. If more clinicians used this tool, diagnosis and treatment would be more culturally responsive.</p>
+          <p>The DSM-5 includes a Cultural Formulation Interview (CFI)---16 questions assessing cultural identity, explanations of illness, cultural stressors, and help-seeking preferences <Citation id="8" index={8} source="JAMA Psychiatry" year="2020" tier={1} />. If more clinicians used this tool, diagnosis and treatment would be more culturally responsive.</p>
         </ArticleCallout>
 
         <h2 id="conclusion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Moving Forward: Toward Truly Global Mental Health
         </h2>
         <p className="mb-6">
-          The path forward is not to abandon Western psychology entirely—it has valuable contributions. The goal is to stop treating Western models as universal and to create space for diverse ways of understanding and healing mental distress.
+          The path forward is not to abandon Western psychology entirely---it has valuable contributions. The goal is to stop treating Western models as universal and to create space for diverse ways of understanding and healing mental distress.
         </p>
         <p className="mb-6">
           <strong>True global mental health would:</strong>

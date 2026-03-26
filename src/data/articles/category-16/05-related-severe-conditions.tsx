@@ -15,7 +15,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 5 — Related Severe Conditions | Articles 41–45
+// Subcategory 5 --- Related Severe Conditions | Articles 41--45
 // ============================================================================
 
 export const relatedSevereConditionsArticles: Article[] = [
@@ -26,7 +26,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     id: catId(41),
     slug: 'bipolar-disorder-psychotic-features-when-mood-and-reality-diverge',
     title: 'Bipolar Disorder With Psychotic Features: When Mood and Reality Diverge',
-    description: 'How psychosis manifests during bipolar episodes — the difference between schizoaffective disorder and bipolar with psychotic features, mood-congruent vs. mood-incongruent psychosis, and treatment implications.',
+    description: 'How psychosis manifests during bipolar episodes --- the difference between schizoaffective disorder and bipolar with psychotic features, mood-congruent vs. mood-incongruent psychosis, and treatment implications.',
     image: '/images/articles/cat16/cover-041.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -35,10 +35,10 @@ export const relatedSevereConditionsArticles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Bipolar Disorder', 'Psychosis', 'Mood Disorders', 'Diagnosis'],
 
-    summary: 'Approximately 50–70% of people with bipolar I disorder experience psychotic symptoms during at least one mood episode. These psychotic features — hallucinations, delusions, and disorganized thinking — occur exclusively during severe manic or depressive episodes and resolve when the mood episode resolves. This distinguishes bipolar disorder with psychotic features from schizoaffective disorder, where psychotic symptoms persist between mood episodes. The content of psychosis in bipolar disorder is often mood-congruent: grandiose delusions during mania ("I\'m a billionaire," "I can control the weather"), nihilistic delusions during depression ("I\'m dead," "the world is ending"). Understanding this mood-psychosis relationship is essential for accurate diagnosis and effective treatment.',
+    summary: 'Approximately 50--70% of people with bipolar I disorder experience psychotic symptoms during at least one mood episode. These psychotic features --- hallucinations, delusions, and disorganized thinking --- occur exclusively during severe manic or depressive episodes and resolve when the mood episode resolves. This distinguishes bipolar disorder with psychotic features from schizoaffective disorder, where psychotic symptoms persist between mood episodes. The content of psychosis in bipolar disorder is often mood-congruent: grandiose delusions during mania ("I\'m a billionaire," "I can control the weather"), nihilistic delusions during depression ("I\'m dead," "the world is ending"). Understanding this mood-psychosis relationship is essential for accurate diagnosis and effective treatment.',
 
     keyFacts: [
-      { text: 'Approximately 50–70% of people with bipolar I disorder experience psychotic features during at least one episode', citationIndex: 1 },
+      { text: 'Approximately 50--70% of people with bipolar I disorder experience psychotic features during at least one episode', citationIndex: 1 },
       { text: 'Psychotic features during bipolar episodes are associated with worse outcomes, higher hospitalization rates, and greater functional impairment', citationIndex: 2 },
       { text: 'Mood-congruent psychosis (delusions matching the mood state) is more common than mood-incongruent psychosis in bipolar disorder', citationIndex: 3 },
       { text: 'The distinction between bipolar disorder with psychotic features and schizoaffective disorder rests on whether psychosis occurs exclusively during mood episodes', citationIndex: 4 },
@@ -46,7 +46,7 @@ export const relatedSevereConditionsArticles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'During a manic episode with psychosis, a person might believe they can fly — not as a metaphor, but as an absolute conviction that leads them to dangerous heights. During a depressive episode with psychosis, they might believe they\'re already dead — not feeling dead, but genuinely believing they died and exist as a walking corpse. The mood doesn\'t just color the delusion; it generates it.',
+    sparkMoment: 'During a manic episode with psychosis, a person might believe they can fly --- not as a metaphor, but as an absolute conviction that leads them to dangerous heights. During a depressive episode with psychosis, they might believe they\'re already dead --- not feeling dead, but genuinely believing they died and exist as a walking corpse. The mood doesn\'t just color the delusion; it generates it.',
 
     practicalExercise: {
       title: 'Recognizing Mood-Psychosis Patterns',
@@ -75,7 +75,7 @@ export const relatedSevereConditionsArticles: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When most people think of bipolar disorder, they picture extreme mood swings —
+            When most people think of bipolar disorder, they picture extreme mood swings ---
             highs and lows, mania and depression. What often goes undiscussed is that for
             a substantial proportion of people with bipolar I disorder, these mood extremes
             can fracture reality
@@ -83,7 +83,7 @@ export const relatedSevereConditionsArticles: Article[] = [
             During severe manic episodes, a person might develop grandiose delusions that
             feel as real as any perception. During severe depressive episodes, nihilistic
             beliefs can take root with delusional intensity. These aren't metaphors or
-            exaggerations — they're genuine breaks from shared reality that occur in the
+            exaggerations --- they're genuine breaks from shared reality that occur in the
             context of extreme mood states.
           </p>
         </div>
@@ -92,11 +92,11 @@ export const relatedSevereConditionsArticles: Article[] = [
           How Common Is Psychosis in Bipolar Disorder?
         </h2>
         <p className="mb-6">
-          Psychotic features occur in approximately 50–70% of people with bipolar I
+          Psychotic features occur in approximately 50--70% of people with bipolar I
           disorder during at least one
           episode <Citation id="1" index={1} source="Bipolar Disorders" year="2020" tier={1} />.
           The presence of psychosis is one of the diagnostic criteria that distinguishes
-          bipolar I from bipolar II — bipolar II is characterized by hypomanic (less
+          bipolar I from bipolar II --- bipolar II is characterized by hypomanic (less
           severe) episodes that by definition do not include psychotic features. Psychosis
           can occur during manic episodes, depressive episodes, or mixed episodes, though
           it's most common during severe mania.
@@ -106,7 +106,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           stats={[
             { value: 60, suffix: '%', label: 'Experience psychosis during at least one episode' },
             { value: 25, suffix: '%', label: 'Have psychosis during first manic episode' },
-            { value: 2, suffix: '–3×', label: 'Higher hospitalization rate with psychosis' },
+            { value: 2, suffix: '--3×', label: 'Higher hospitalization rate with psychosis' },
           ]}
           source="Bipolar Disorders, 2020; Journal of Affective Disorders, 2019"
         />
@@ -116,7 +116,7 @@ export const relatedSevereConditionsArticles: Article[] = [
         </h2>
         <p className="mb-6">
           The content of psychotic experiences in bipolar disorder typically matches the
-          prevailing mood state — a phenomenon called mood
+          prevailing mood state --- a phenomenon called mood
           congruence <Citation id="3" index={3} source="Psychological Medicine" year="2020" tier={1} />:
         </p>
 
@@ -130,8 +130,8 @@ export const relatedSevereConditionsArticles: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Mood-incongruent psychosis — delusions or hallucinations whose content doesn't
-          match the mood state — can also occur in bipolar disorder but is less common.
+          Mood-incongruent psychosis --- delusions or hallucinations whose content doesn't
+          match the mood state --- can also occur in bipolar disorder but is less common.
           When present, it may suggest a more severe illness course or raise diagnostic
           questions about whether schizoaffective disorder better explains the pattern.
         </p>
@@ -152,11 +152,11 @@ export const relatedSevereConditionsArticles: Article[] = [
           tabs={[
             {
               label: 'Bipolar Disorder With Psychotic Features',
-              content: 'Psychotic symptoms (hallucinations, delusions) occur only during mood episodes (manic, depressive, or mixed). When the mood episode resolves with treatment, the psychosis resolves too. Between episodes, the person does not experience psychotic symptoms. The primary diagnosis is a mood disorder — psychosis is a feature of severe mood states.',
+              content: 'Psychotic symptoms (hallucinations, delusions) occur only during mood episodes (manic, depressive, or mixed). When the mood episode resolves with treatment, the psychosis resolves too. Between episodes, the person does not experience psychotic symptoms. The primary diagnosis is a mood disorder --- psychosis is a feature of severe mood states.',
             },
             {
               label: 'Schizoaffective Disorder (Bipolar Type)',
-              content: 'The person experiences both mood episodes (meeting criteria for bipolar disorder) AND psychotic symptoms that persist for at least 2 weeks in the absence of a major mood episode. Psychosis exists independently of mood state. The diagnosis requires that psychotic symptoms have been present for a substantial portion of the total illness duration. This is conceptualized as a hybrid condition — not purely a mood disorder, not purely a psychotic disorder.',
+              content: 'The person experiences both mood episodes (meeting criteria for bipolar disorder) AND psychotic symptoms that persist for at least 2 weeks in the absence of a major mood episode. Psychosis exists independently of mood state. The diagnosis requires that psychotic symptoms have been present for a substantial portion of the total illness duration. This is conceptualized as a hybrid condition --- not purely a mood disorder, not purely a psychotic disorder.',
             },
           ]}
         />
@@ -176,7 +176,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           The treatment of bipolar disorder with psychotic features requires addressing
           both the mood dysregulation and the psychotic
           symptoms <Citation id="5" index={5} source="American Journal of Psychiatry" year="2020" tier={1} />.
-          Mood stabilizers alone are typically insufficient when psychosis is present —
+          Mood stabilizers alone are typically insufficient when psychosis is present ---
           the combination of a mood stabilizer (lithium, valproate, or lamotrigine) plus
           an antipsychotic is standard during acute psychotic manic or depressive episodes.
         </p>
@@ -194,7 +194,7 @@ export const relatedSevereConditionsArticles: Article[] = [
         <ArticleCallout type="warning" title="The Risk of Antidepressants">
           Antidepressants are frequently prescribed during bipolar depression, but in
           people with a history of psychotic features, they carry significant risk of
-          triggering mania or mixed states — which may themselves include psychosis.
+          triggering mania or mixed states --- which may themselves include psychosis.
           If antidepressants are used in bipolar disorder with psychotic features, they
           should always be combined with a mood stabilizer and used with
           caution <Citation id="8" index={8} source="National Institute for Health and Care Excellence" year="2024" tier={3} />.
@@ -210,7 +210,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     id: catId(42),
     slug: 'major-depression-psychotic-features-when-despair-distorts-reality',
     title: 'Major Depression With Psychotic Features: When Despair Distorts Reality',
-    description: 'Understanding psychotic depression — how severe major depressive episodes can include delusions and hallucinations, why it\'s often missed, and why treatment differs from non-psychotic depression.',
+    description: 'Understanding psychotic depression --- how severe major depressive episodes can include delusions and hallucinations, why it\'s often missed, and why treatment differs from non-psychotic depression.',
     image: '/images/articles/cat16/cover-042.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 11,
@@ -219,23 +219,23 @@ export const relatedSevereConditionsArticles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Psychotic Depression', 'Major Depression', 'Psychosis', 'Treatment'],
 
-    summary: 'Psychotic depression — major depressive disorder with psychotic features — affects approximately 15–20% of people hospitalized for depression, yet it remains underrecognized and undertreated. Unlike the grandiose delusions of mania, psychotic depression involves nihilistic, guilt-ridden, or somatic delusions that amplify hopelessness to delusional proportions. A person might believe their internal organs are rotting, that they\'ve committed unforgivable sins, or that they\'re already dead (Cotard delusion). These aren\'t exaggerations of depressed thinking — they\'re fixed false beliefs held with delusional conviction. Psychotic depression carries a significantly higher suicide risk than non-psychotic depression and requires different treatment: antidepressants alone are insufficient; the combination of an antidepressant plus an antipsychotic, or ECT, is the evidence-based approach.',
+    summary: 'Psychotic depression --- major depressive disorder with psychotic features --- affects approximately 15--20% of people hospitalized for depression, yet it remains underrecognized and undertreated. Unlike the grandiose delusions of mania, psychotic depression involves nihilistic, guilt-ridden, or somatic delusions that amplify hopelessness to delusional proportions. A person might believe their internal organs are rotting, that they\'ve committed unforgivable sins, or that they\'re already dead (Cotard delusion). These aren\'t exaggerations of depressed thinking --- they\'re fixed false beliefs held with delusional conviction. Psychotic depression carries a significantly higher suicide risk than non-psychotic depression and requires different treatment: antidepressants alone are insufficient; the combination of an antidepressant plus an antipsychotic, or ECT, is the evidence-based approach.',
 
     keyFacts: [
-      { text: 'Approximately 15–20% of people with severe major depression experience psychotic features during at least one episode', citationIndex: 1 },
-      { text: 'Psychotic depression carries a 4–5 times higher suicide risk than non-psychotic depression', citationIndex: 2 },
-      { text: 'Antidepressants alone have a response rate of only 30–40% in psychotic depression, compared to 60–70% when combined with antipsychotics', citationIndex: 3 },
+      { text: 'Approximately 15--20% of people with severe major depression experience psychotic features during at least one episode', citationIndex: 1 },
+      { text: 'Psychotic depression carries a 4--5 times higher suicide risk than non-psychotic depression', citationIndex: 2 },
+      { text: 'Antidepressants alone have a response rate of only 30--40% in psychotic depression, compared to 60--70% when combined with antipsychotics', citationIndex: 3 },
       { text: 'Psychotic depression is frequently misdiagnosed as schizophrenia, delaying appropriate treatment', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The person with psychotic depression who believes they\'re already dead isn\'t speaking metaphorically. They genuinely experience themselves as a corpse — walking, talking, but fundamentally no longer alive. This is Cotard delusion, and it transforms depression from unbearable sadness into a reality where hope is literally impossible because the self no longer exists.',
+    sparkMoment: 'The person with psychotic depression who believes they\'re already dead isn\'t speaking metaphorically. They genuinely experience themselves as a corpse --- walking, talking, but fundamentally no longer alive. This is Cotard delusion, and it transforms depression from unbearable sadness into a reality where hope is literally impossible because the self no longer exists.',
 
     practicalExercise: {
       title: 'Recognizing Psychotic Features in Depression',
       steps: [
-        { title: 'Distinguish metaphor from delusion', description: 'Depressed thinking: "I feel like I\'m worthless." Psychotic depression: "I am worthless — it\'s an objective fact everyone knows." The difference is conviction and imperviousness to contrary evidence. If reassurance doesn\'t create even momentary doubt, the belief may be delusional.' },
+        { title: 'Distinguish metaphor from delusion', description: 'Depressed thinking: "I feel like I\'m worthless." Psychotic depression: "I am worthless --- it\'s an objective fact everyone knows." The difference is conviction and imperviousness to contrary evidence. If reassurance doesn\'t create even momentary doubt, the belief may be delusional.' },
         { title: 'Watch for nihilistic themes', description: 'Common themes in psychotic depression: guilt out of proportion to any action, belief that one\'s body is diseased or rotting, conviction that one has ruined others\' lives irreparably, or belief that the world is ending. These themes are darker and more absolute than typical depressive rumination.' },
         { title: 'Note if depression includes hallucinations', description: 'Auditory hallucinations in psychotic depression typically involve accusatory voices ("You\'re evil," "You deserve to die") rather than command hallucinations. Any hallucinations during severe depression should trigger immediate clinical evaluation.' },
         { title: 'Assess suicide risk urgently', description: 'Psychotic depression represents one of the highest-risk clinical presentations for suicide. If you or someone you know experiences psychotic symptoms during depression, this is a psychiatric emergency requiring immediate professional evaluation.' },
@@ -260,13 +260,13 @@ export const relatedSevereConditionsArticles: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Depression is isolating. Psychotic depression is isolating in a way that defies
-            ordinary comprehension — because the isolation isn't just emotional, it's
+            ordinary comprehension --- because the isolation isn't just emotional, it's
             existential. When someone with psychotic depression believes they are already
             dead, or that their sins are so profound that redemption is impossible, or that
             their body is rotting from the inside, they occupy a reality that no amount of
             reassurance can
             penetrate <Citation id="1" index={1} source="Depression and Anxiety" year="2019" tier={1} />.
-            This is depression amplified to the point of delusion — and it requires
+            This is depression amplified to the point of delusion --- and it requires
             recognition and treatment that standard depression protocols don't provide.
           </p>
         </div>
@@ -275,9 +275,9 @@ export const relatedSevereConditionsArticles: Article[] = [
           What Psychotic Depression Looks Like
         </h2>
         <p className="mb-6">
-          Psychotic depression combines the vegetative symptoms of severe major depression —
+          Psychotic depression combines the vegetative symptoms of severe major depression ---
           profound sadness, loss of interest, sleep and appetite disturbance, psychomotor
-          changes — with delusions or hallucinations whose content reflects depressive
+          changes --- with delusions or hallucinations whose content reflects depressive
           themes <Citation id="4" index={4} source="Journal of Clinical Psychiatry" year="2020" tier={1} />.
           The delusions are almost always mood-congruent, meaning they match and amplify
           the depressive state:
@@ -287,15 +287,15 @@ export const relatedSevereConditionsArticles: Article[] = [
           items={[
             {
               title: 'Delusions of Guilt',
-              content: 'The person believes they have committed terrible, unforgivable acts — often things they haven\'t actually done or minor transgressions blown into catastrophic proportions. The guilt is experienced as objective fact rather than feeling. "I\'ve ruined everyone\'s life and I deserve to be punished" is held with the same certainty that you know your own name.',
+              content: 'The person believes they have committed terrible, unforgivable acts --- often things they haven\'t actually done or minor transgressions blown into catastrophic proportions. The guilt is experienced as objective fact rather than feeling. "I\'ve ruined everyone\'s life and I deserve to be punished" is held with the same certainty that you know your own name.',
             },
             {
               title: 'Nihilistic Delusions',
-              content: 'Beliefs that oneself, others, or the world doesn\'t exist or is about to end. The most extreme form is Cotard delusion — the conviction that one is dead, doesn\'t exist, or has lost essential organs or body parts. This is not metaphorical: the person genuinely experiences themselves as a walking corpse or non-entity.',
+              content: 'Beliefs that oneself, others, or the world doesn\'t exist or is about to end. The most extreme form is Cotard delusion --- the conviction that one is dead, doesn\'t exist, or has lost essential organs or body parts. This is not metaphorical: the person genuinely experiences themselves as a walking corpse or non-entity.',
             },
             {
               title: 'Somatic Delusions',
-              content: 'Fixed false beliefs about one\'s body — that organs are rotting, that one has a terrible disease doctors have failed to detect, that one\'s body is fundamentally defective or repulsive. These beliefs persist despite medical reassurance and negative test results.',
+              content: 'Fixed false beliefs about one\'s body --- that organs are rotting, that one has a terrible disease doctors have failed to detect, that one\'s body is fundamentally defective or repulsive. These beliefs persist despite medical reassurance and negative test results.',
             },
             {
               title: 'Persecutory Delusions',
@@ -312,14 +312,14 @@ export const relatedSevereConditionsArticles: Article[] = [
           misdiagnosed <Citation id="4" index={4} source="Journal of Clinical Psychiatry" year="2020" tier={1} />.
           During an initial evaluation, clinicians may focus on the obvious depressive
           symptoms and fail to probe for psychotic features. Patients may not volunteer
-          delusional beliefs because the delusions feel like reality — not symptoms to
+          delusional beliefs because the delusions feel like reality --- not symptoms to
           report but facts to accept. And when psychotic features are recognized, they're
           sometimes misattributed to schizophrenia rather than recognized as a feature
           of severe depression.
         </p>
         <p className="mb-6">
           The distinction matters enormously for treatment. Someone misdiagnosed with
-          schizophrenia might receive an antipsychotic alone — which will reduce the
+          schizophrenia might receive an antipsychotic alone --- which will reduce the
           psychotic symptoms but leave the underlying depression untreated, creating a
           chronically depressed person without delusions rather than a recovered person.
           The correct treatment requires addressing both the mood disorder and the
@@ -344,8 +344,8 @@ export const relatedSevereConditionsArticles: Article[] = [
           alone produce inadequate
           response <Citation id="3" index={3} source="American Journal of Psychiatry" year="2019" tier={1} />.
           Response rates to antidepressant monotherapy in psychotic depression are
-          approximately 30–40% — comparable to placebo in some trials. The combination
-          of an antidepressant plus an antipsychotic produces response rates of 60–70%,
+          approximately 30--40% --- comparable to placebo in some trials. The combination
+          of an antidepressant plus an antipsychotic produces response rates of 60--70%,
           more than double the rate of either medication alone.
         </p>
 
@@ -353,7 +353,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           before={{
             title: 'Ineffective Treatment',
             items: [
-              'Antidepressant alone: 30–40% response',
+              'Antidepressant alone: 30--40% response',
               'Antipsychotic alone: Reduces psychosis, leaves depression',
               'Psychotherapy alone: Ineffective during acute psychosis',
               'Delayed treatment: Higher suicide risk, longer episode',
@@ -362,8 +362,8 @@ export const relatedSevereConditionsArticles: Article[] = [
           after={{
             title: 'Evidence-Based Treatment',
             items: [
-              'Antidepressant + antipsychotic: 60–70% response',
-              'ECT: 80–90% response, fastest onset',
+              'Antidepressant + antipsychotic: 60--70% response',
+              'ECT: 80--90% response, fastest onset',
               'Hospitalization for safety during acute phase',
               'Relapse prevention with maintenance medication',
             ],
@@ -372,7 +372,7 @@ export const relatedSevereConditionsArticles: Article[] = [
 
         <p className="mt-6 mb-6">
           Electroconvulsive therapy (ECT) is the most effective treatment for psychotic
-          depression, with response rates of 80–90% and rapid
+          depression, with response rates of 80--90% and rapid
           onset <Citation id="5" index={5} source="Journal of ECT" year="2020" tier={1} />.
           ECT should be considered first-line in situations where rapid response is
           essential (imminent suicide risk, catatonia, refusal to eat or drink) or when
@@ -392,7 +392,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     id: catId(43),
     slug: 'substance-induced-psychotic-disorder-when-drugs-trigger-psychosis',
     title: 'Substance-Induced Psychotic Disorder: When Drugs Trigger Psychosis',
-    description: 'How substances — particularly cannabis, stimulants, and hallucinogens — can trigger psychotic episodes, the relationship between substance use and schizophrenia, and when psychosis persists after the substance clears.',
+    description: 'How substances --- particularly cannabis, stimulants, and hallucinogens --- can trigger psychotic episodes, the relationship between substance use and schizophrenia, and when psychosis persists after the substance clears.',
     image: '/images/articles/cat16/cover-043.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 13,
@@ -401,24 +401,24 @@ export const relatedSevereConditionsArticles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Substance Use', 'Drug-Induced Psychosis', 'Cannabis', 'Treatment'],
 
-    summary: 'Substance-induced psychotic disorder occurs when psychotic symptoms — hallucinations, delusions, disorganized thinking — emerge during or shortly after substance intoxication or withdrawal. The substances most commonly implicated are cannabis (particularly high-potency forms), stimulants (methamphetamine, cocaine), and hallucinogens (LSD, psilocybin). For most people, substance-induced psychosis resolves within hours to weeks once the substance clears and use stops. But for a subset — particularly those with genetic vulnerability — substance-induced psychosis can be the trigger that unmasks an underlying psychotic disorder like schizophrenia. This article examines which substances carry the highest risk, who is most vulnerable, and the critical question: when does substance-induced psychosis end and primary psychotic disorder begin?',
+    summary: 'Substance-induced psychotic disorder occurs when psychotic symptoms --- hallucinations, delusions, disorganized thinking --- emerge during or shortly after substance intoxication or withdrawal. The substances most commonly implicated are cannabis (particularly high-potency forms), stimulants (methamphetamine, cocaine), and hallucinogens (LSD, psilocybin). For most people, substance-induced psychosis resolves within hours to weeks once the substance clears and use stops. But for a subset --- particularly those with genetic vulnerability --- substance-induced psychosis can be the trigger that unmasks an underlying psychotic disorder like schizophrenia. This article examines which substances carry the highest risk, who is most vulnerable, and the critical question: when does substance-induced psychosis end and primary psychotic disorder begin?',
 
     keyFacts: [
-      { text: 'Cannabis use disorder increases the risk of developing schizophrenia approximately 2–3×, with the risk highest for high-potency cannabis and adolescent-onset use', citationIndex: 1 },
-      { text: 'Approximately 25–40% of people who present with first-episode psychosis have substance-induced psychosis, most commonly from cannabis or stimulants', citationIndex: 2 },
+      { text: 'Cannabis use disorder increases the risk of developing schizophrenia approximately 2--3×, with the risk highest for high-potency cannabis and adolescent-onset use', citationIndex: 1 },
+      { text: 'Approximately 25--40% of people who present with first-episode psychosis have substance-induced psychosis, most commonly from cannabis or stimulants', citationIndex: 2 },
       { text: 'Methamphetamine-induced psychosis can persist for weeks or months after cessation of use, and in some cases transitions to chronic psychosis', citationIndex: 3 },
       { text: 'The younger the age of cannabis initiation, the higher the risk of later developing a psychotic disorder', citationIndex: 1 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The relationship between cannabis and psychosis isn\'t simple causation — it\'s gene-environment interaction. Most people who use cannabis will never develop psychosis. But for people with specific genetic vulnerabilities, cannabis can be the environmental trigger that initiates a psychotic disorder that would not have emerged otherwise. The question "does cannabis cause schizophrenia?" has the unsatisfying but accurate answer: sometimes, in some people.',
+    sparkMoment: 'The relationship between cannabis and psychosis isn\'t simple causation --- it\'s gene-environment interaction. Most people who use cannabis will never develop psychosis. But for people with specific genetic vulnerabilities, cannabis can be the environmental trigger that initiates a psychotic disorder that would not have emerged otherwise. The question "does cannabis cause schizophrenia?" has the unsatisfying but accurate answer: sometimes, in some people.',
 
     practicalExercise: {
       title: 'Assessing Substance-Psychosis Connection',
       steps: [
         { title: 'Map the timeline', description: 'If you or someone you know has experienced psychosis, carefully document when substance use began, when psychotic symptoms first appeared, and whether symptoms resolve during periods of abstinence. Symptoms that only occur during/after substance use suggest substance-induced psychosis.' },
-        { title: 'Identify all substances', description: 'Include prescription medications (steroids, stimulants for ADHD), over-the-counter drugs (antihistamines, cough suppressants), and supplements — not just illegal substances. Substance-induced psychosis can result from unexpected sources.' },
+        { title: 'Identify all substances', description: 'Include prescription medications (steroids, stimulants for ADHD), over-the-counter drugs (antihistamines, cough suppressants), and supplements --- not just illegal substances. Substance-induced psychosis can result from unexpected sources.' },
         { title: 'Note family psychiatric history', description: 'If there\'s family history of schizophrenia or bipolar disorder, substance-induced psychosis may represent the unmasking of genetic vulnerability. This information should be shared with treatment providers.' },
         { title: 'Commit to a period of abstinence', description: 'The only way to distinguish substance-induced psychosis from primary psychotic disorder is abstinence. If symptoms resolve within weeks to months of stopping all substance use and don\'t return during sustained abstinence, the diagnosis is substance-induced. If symptoms persist, the diagnosis may need revision.' },
       ],
@@ -444,10 +444,10 @@ export const relatedSevereConditionsArticles: Article[] = [
             The person who smokes cannabis and develops paranoid delusions. The college student
             who takes LSD and never fully returns. The person using methamphetamine who begins
             hearing voices that persist long after the drug has cleared their system. These are
-            all faces of substance-induced psychotic disorder — a condition that sits at the
+            all faces of substance-induced psychotic disorder --- a condition that sits at the
             complicated intersection of pharmacology, genetics, and psychiatric
             vulnerability <Citation id="2" index={2} source="Schizophrenia Research" year="2020" tier={1} />.
-            Understanding this intersection isn't academic — it shapes prevention strategies,
+            Understanding this intersection isn't academic --- it shapes prevention strategies,
             treatment decisions, and the fundamental question of whether someone has a
             temporary drug reaction or a chronic psychiatric condition.
           </p>
@@ -465,15 +465,15 @@ export const relatedSevereConditionsArticles: Article[] = [
           tabs={[
             {
               label: 'Cannabis',
-              content: 'Cannabis — particularly high-potency varieties with high THC and low CBD — is the most commonly implicated substance in drug-induced psychosis. Daily use approximately doubles the risk of psychosis compared to non-use, and high-potency daily use increases risk by approximately 5-fold. The risk is highest for adolescent-onset use, when the developing brain appears most vulnerable. For people with genetic vulnerability (family history of schizophrenia, specific genetic variants), cannabis can act as an environmental trigger for psychotic disorders.',
+              content: 'Cannabis --- particularly high-potency varieties with high THC and low CBD --- is the most commonly implicated substance in drug-induced psychosis. Daily use approximately doubles the risk of psychosis compared to non-use, and high-potency daily use increases risk by approximately 5-fold. The risk is highest for adolescent-onset use, when the developing brain appears most vulnerable. For people with genetic vulnerability (family history of schizophrenia, specific genetic variants), cannabis can act as an environmental trigger for psychotic disorders.',
             },
             {
               label: 'Stimulants',
-              content: 'Methamphetamine and cocaine can induce psychosis that is clinically indistinguishable from paranoid schizophrenia — auditory hallucinations, persecutory delusions, and thought disorder. Methamphetamine-induced psychosis can persist for weeks or months after cessation, and approximately 25% of people with methamphetamine-induced psychosis go on to develop chronic psychotic disorders. The mechanism involves dopamine hyperactivity, the same pathway implicated in schizophrenia.',
+              content: 'Methamphetamine and cocaine can induce psychosis that is clinically indistinguishable from paranoid schizophrenia --- auditory hallucinations, persecutory delusions, and thought disorder. Methamphetamine-induced psychosis can persist for weeks or months after cessation, and approximately 25% of people with methamphetamine-induced psychosis go on to develop chronic psychotic disorders. The mechanism involves dopamine hyperactivity, the same pathway implicated in schizophrenia.',
             },
             {
               label: 'Hallucinogens',
-              content: 'LSD, psilocybin, and similar compounds can induce acute psychotic states during intoxication, but these typically resolve within hours. A small subset develops Hallucinogen Persisting Perception Disorder (HPPD) — ongoing visual disturbances long after use. And rarely, hallucinogen use appears to trigger persistent psychotic disorders in vulnerable individuals, though the causal relationship remains debated.',
+              content: 'LSD, psilocybin, and similar compounds can induce acute psychotic states during intoxication, but these typically resolve within hours. A small subset develops Hallucinogen Persisting Perception Disorder (HPPD) --- ongoing visual disturbances long after use. And rarely, hallucinogen use appears to trigger persistent psychotic disorders in vulnerable individuals, though the causal relationship remains debated.',
             },
             {
               label: 'Prescription Medications',
@@ -486,7 +486,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           The Role of Genetic Vulnerability
         </h2>
         <p className="mb-6">
-          The relationship between substance use and psychosis is not deterministic — most
+          The relationship between substance use and psychosis is not deterministic --- most
           people who use cannabis or stimulants will never develop psychosis. The critical
           factor is gene-environment
           interaction <Citation id="5" index={5} source="Psychological Medicine" year="2020" tier={1} />.
@@ -497,7 +497,7 @@ export const relatedSevereConditionsArticles: Article[] = [
         <p className="mb-6">
           Twin studies provide compelling evidence: among people with identical genetic
           makeup, the twin who uses cannabis has higher risk of psychosis than the twin
-          who doesn't — but the baseline risk varies depending on family history. This
+          who doesn't --- but the baseline risk varies depending on family history. This
           means that substance use acts as a trigger in genetically vulnerable individuals,
           potentially initiating a psychotic disorder that might not have emerged otherwise,
           or might have emerged later in life.
@@ -505,7 +505,7 @@ export const relatedSevereConditionsArticles: Article[] = [
 
         <StatCard
           stats={[
-            { value: 2, suffix: '–3×', label: 'Schizophrenia risk with cannabis use' },
+            { value: 2, suffix: '--3×', label: 'Schizophrenia risk with cannabis use' },
             { value: 25, suffix: '%', label: 'Of first-episode psychosis is substance-induced' },
             { value: 5, suffix: '×', label: 'Risk with high-potency daily cannabis use' },
           ]}
@@ -536,7 +536,7 @@ export const relatedSevereConditionsArticles: Article[] = [
 
         <ArticleCallout type="tip" title="Why Abstinence Is Essential">
           For someone who has experienced psychosis in the context of substance use,
-          achieving and maintaining abstinence is not just harm reduction — it's diagnostic
+          achieving and maintaining abstinence is not just harm reduction --- it's diagnostic
           clarification and potentially curative
           treatment <Citation id="6" index={6} source="Journal of Clinical Psychiatry" year="2020" tier={1} />.
           Continued substance use makes it impossible to know whether ongoing psychotic
@@ -555,7 +555,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     id: catId(44),
     slug: 'catatonia-when-psychosis-affects-movement-and-speech',
     title: 'Catatonia: When Psychosis Affects Movement and Speech',
-    description: 'Understanding catatonia — a syndrome of motor and behavioral abnormalities that can occur in psychotic conditions, mood disorders, or medical illness — and why rapid recognition and treatment is essential.',
+    description: 'Understanding catatonia --- a syndrome of motor and behavioral abnormalities that can occur in psychotic conditions, mood disorders, or medical illness --- and why rapid recognition and treatment is essential.',
     image: '/images/articles/cat16/cover-044.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 11,
@@ -564,24 +564,24 @@ export const relatedSevereConditionsArticles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Catatonia', 'Motor Symptoms', 'Medical Emergency', 'Treatment'],
 
-    summary: 'Catatonia is a syndrome of motor and behavioral abnormalities that can range from complete immobility to extreme agitation. While historically associated with schizophrenia, catatonia can occur in mood disorders (especially bipolar disorder and psychotic depression), medical conditions, and neurological disorders. The presentation can be stuporous (immobility, mutism, rigidity) or excited (purposeless agitation, echolalia, stereotypies). Malignant catatonia — characterized by autonomic instability, fever, and altered mental status — is a medical emergency with significant mortality risk if untreated. Despite being underrecognized in modern psychiatry, catatonia is highly treatable: benzodiazepines produce rapid response in 60–80% of cases, and ECT is effective in treatment-resistant cases. Recognition is key — and recognition requires knowing what to look for.',
+    summary: 'Catatonia is a syndrome of motor and behavioral abnormalities that can range from complete immobility to extreme agitation. While historically associated with schizophrenia, catatonia can occur in mood disorders (especially bipolar disorder and psychotic depression), medical conditions, and neurological disorders. The presentation can be stuporous (immobility, mutism, rigidity) or excited (purposeless agitation, echolalia, stereotypies). Malignant catatonia --- characterized by autonomic instability, fever, and altered mental status --- is a medical emergency with significant mortality risk if untreated. Despite being underrecognized in modern psychiatry, catatonia is highly treatable: benzodiazepines produce rapid response in 60--80% of cases, and ECT is effective in treatment-resistant cases. Recognition is key --- and recognition requires knowing what to look for.',
 
     keyFacts: [
       { text: 'Approximately 10% of psychiatric inpatients meet criteria for catatonia, though it remains underrecognized', citationIndex: 1 },
       { text: 'Mood disorders (bipolar disorder and major depression) now account for more cases of catatonia than schizophrenia', citationIndex: 2 },
-      { text: 'Benzodiazepines (particularly lorazepam) produce response in 60–80% of catatonia cases within hours to days', citationIndex: 3 },
-      { text: 'Malignant catatonia carries a mortality rate of 10–20% if untreated, but responds well to ECT', citationIndex: 4 },
+      { text: 'Benzodiazepines (particularly lorazepam) produce response in 60--80% of catatonia cases within hours to days', citationIndex: 3 },
+      { text: 'Malignant catatonia carries a mortality rate of 10--20% if untreated, but responds well to ECT', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The person with catatonia who appears "frozen" isn\'t choosing not to move — they\'re experiencing a neurological disruption so profound that the motor system locks up entirely. What looks like stubbornness or regression is actually a medical emergency that responds, often within hours, to the right treatment. The tragedy is that catatonia is so often missed.',
+    sparkMoment: 'The person with catatonia who appears "frozen" isn\'t choosing not to move --- they\'re experiencing a neurological disruption so profound that the motor system locks up entirely. What looks like stubbornness or regression is actually a medical emergency that responds, often within hours, to the right treatment. The tragedy is that catatonia is so often missed.',
 
     practicalExercise: {
       title: 'Recognizing Catatonic Signs',
       steps: [
         { title: 'Know the hallmark signs', description: 'Immobility or extreme slowing of movement, mutism (not speaking) or near-mutism, posturing (holding odd positions), waxy flexibility (limbs can be positioned and stay there), echolalia (repeating others\' words), or echopraxia (copying others\' movements). Any combination of these should trigger catatonia screening.' },
-        { title: 'Check for autonomic instability', description: 'If catatonic signs are accompanied by fever, rapid heart rate, blood pressure fluctuations, or profuse sweating, this may be malignant catatonia — a medical emergency requiring immediate hospitalization and often ICU-level care.' },
+        { title: 'Check for autonomic instability', description: 'If catatonic signs are accompanied by fever, rapid heart rate, blood pressure fluctuations, or profuse sweating, this may be malignant catatonia --- a medical emergency requiring immediate hospitalization and often ICU-level care.' },
         { title: 'Document the context', description: 'When did the motor symptoms begin? Are they associated with a mood episode (mania or depression)? Recent medication changes (especially antipsychotics, which can cause a catatonia-like syndrome called neuroleptic malignant syndrome)? Medical illness? Context helps guide treatment.' },
         { title: 'Request a lorazepam challenge', description: 'If catatonia is suspected, a diagnostic-therapeutic test is to give lorazepam and observe for response. Rapid improvement within 30 minutes to 2 hours confirms the diagnosis and indicates that benzodiazepines will likely be effective.' },
       ],
@@ -607,13 +607,13 @@ export const relatedSevereConditionsArticles: Article[] = [
             Catatonia looks like nothing else in psychiatry. A person sits frozen, eyes
             open but unseeing, limbs held in positions that should be uncomfortable but
             that they maintain for hours. Or the opposite: frenzied, purposeless movement
-            that continues without apparent goal or fatigue. Speech reduced to echolalia —
+            that continues without apparent goal or fatigue. Speech reduced to echolalia ---
             repeating others' words like a broken recording. These aren't metaphors for
             internal states; they're observable motor and behavioral abnormalities with
             neurological
             underpinnings <Citation id="1" index={1} source="Schizophrenia Bulletin" year="2020" tier={1} />.
             And despite being one of the most treatable syndromes in psychiatry, catatonia
-            is chronically underrecognized — often for weeks, sometimes longer.
+            is chronically underrecognized --- often for weeks, sometimes longer.
           </p>
         </div>
 
@@ -643,7 +643,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           What Causes Catatonia?
         </h2>
         <p className="mb-6">
-          Catatonia is not a diagnosis itself — it's a syndrome that can arise from multiple
+          Catatonia is not a diagnosis itself --- it's a syndrome that can arise from multiple
           underlying
           conditions <Citation id="2" index={2} source="Bipolar Disorders" year="2019" tier={1} />:
         </p>
@@ -652,7 +652,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           items={[
             {
               title: 'Mood Disorders (Most Common)',
-              content: 'Bipolar disorder (especially during mixed or manic episodes) and major depressive disorder (particularly psychotic depression) are now the most common psychiatric causes of catatonia, accounting for approximately 40–50% of cases. This represents a shift from historical associations with schizophrenia.',
+              content: 'Bipolar disorder (especially during mixed or manic episodes) and major depressive disorder (particularly psychotic depression) are now the most common psychiatric causes of catatonia, accounting for approximately 40--50% of cases. This represents a shift from historical associations with schizophrenia.',
             },
             {
               title: 'Schizophrenia and Psychotic Disorders',
@@ -673,18 +673,18 @@ export const relatedSevereConditionsArticles: Article[] = [
           Treatment: Why Benzodiazepines and ECT Work
         </h2>
         <p className="mb-6">
-          Catatonia is one of the most reliably treatable conditions in psychiatry —
+          Catatonia is one of the most reliably treatable conditions in psychiatry ---
           if it's
           recognized <Citation id="3" index={3} source="Schizophrenia Research" year="2020" tier={1} />.
           The first-line treatment is lorazepam (a benzodiazepine), typically given
-          intravenously or intramuscularly at doses of 1–2 mg initially, with repeat
-          doses every few hours until response occurs. Approximately 60–80% of people
+          intravenously or intramuscularly at doses of 1--2 mg initially, with repeat
+          doses every few hours until response occurs. Approximately 60--80% of people
           with catatonia show dramatic improvement within hours to days of starting
           lorazepam.
         </p>
         <p className="mb-6">
-          For catatonia that doesn't respond to benzodiazepines — or for malignant
-          catatonia, which is a medical emergency — electroconvulsive therapy (ECT)
+          For catatonia that doesn't respond to benzodiazepines --- or for malignant
+          catatonia, which is a medical emergency --- electroconvulsive therapy (ECT)
           is highly
           effective <Citation id="6" index={6} source="Journal of ECT" year="2020" tier={1} />.
           Response rates to ECT in catatonia exceed 80%, often within just a few
@@ -715,7 +715,7 @@ export const relatedSevereConditionsArticles: Article[] = [
     id: catId(45),
     slug: 'childhood-onset-schizophrenia-rare-severe-early-psychosis',
     title: 'Childhood-Onset Schizophrenia: Rare, Severe, and Early Psychosis',
-    description: 'Understanding childhood-onset schizophrenia — a rare and severe form of psychosis that begins before age 13, how it differs from adult-onset schizophrenia, and the unique challenges it presents.',
+    description: 'Understanding childhood-onset schizophrenia --- a rare and severe form of psychosis that begins before age 13, how it differs from adult-onset schizophrenia, and the unique challenges it presents.',
     image: '/images/articles/cat16/cover-045.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -724,10 +724,10 @@ export const relatedSevereConditionsArticles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Childhood Schizophrenia', 'Early-Onset', 'Pediatric', 'Diagnosis'],
 
-    summary: 'Childhood-onset schizophrenia (COS) — defined as schizophrenia with onset before age 13 — is extraordinarily rare, affecting approximately 1 in 40,000 children. It represents one of the most severe forms of the illness, characterized by more prominent negative and cognitive symptoms, poorer response to treatment, and worse long-term outcomes than adult-onset schizophrenia. The diagnostic challenge is immense: normal childhood development includes vivid imaginative play that can resemble psychotic thinking, and many childhood psychiatric conditions can mimic psychosis. Yet early diagnosis and treatment are essential because the longer psychosis goes untreated in childhood, the more profound the developmental disruption. This article explores how COS presents, how it\'s distinguished from other childhood conditions, and what evidence-based treatment looks like for children whose developing brains are navigating psychosis.',
+    summary: 'Childhood-onset schizophrenia (COS) --- defined as schizophrenia with onset before age 13 --- is extraordinarily rare, affecting approximately 1 in 40,000 children. It represents one of the most severe forms of the illness, characterized by more prominent negative and cognitive symptoms, poorer response to treatment, and worse long-term outcomes than adult-onset schizophrenia. The diagnostic challenge is immense: normal childhood development includes vivid imaginative play that can resemble psychotic thinking, and many childhood psychiatric conditions can mimic psychosis. Yet early diagnosis and treatment are essential because the longer psychosis goes untreated in childhood, the more profound the developmental disruption. This article explores how COS presents, how it\'s distinguished from other childhood conditions, and what evidence-based treatment looks like for children whose developing brains are navigating psychosis.',
 
     keyFacts: [
-      { text: 'Childhood-onset schizophrenia (before age 13) affects approximately 1 in 40,000 children — 50 times rarer than adult-onset schizophrenia', citationIndex: 1 },
+      { text: 'Childhood-onset schizophrenia (before age 13) affects approximately 1 in 40,000 children --- 50 times rarer than adult-onset schizophrenia', citationIndex: 1 },
       { text: 'Children with COS show progressive loss of gray matter volume that exceeds normal developmental changes and adult-onset schizophrenia', citationIndex: 2 },
       { text: 'Cognitive deficits in COS are more severe than in adult-onset schizophrenia, particularly affecting working memory and executive function', citationIndex: 3 },
       { text: 'Second-generation antipsychotics are first-line treatment for COS, but response rates are lower and side effects more prominent than in adults', citationIndex: 4 },
@@ -735,14 +735,14 @@ export const relatedSevereConditionsArticles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The child who tells you about imaginary friends isn\'t experiencing psychosis — that\'s normal development. The child who is terrified of voices commanding them to hurt themselves, who withdraws from all social contact, and whose academic performance collapses might be. The challenge is that the line between rich imagination and psychosis in childhood is blurry — and missing COS means missing the narrow window when early intervention matters most.',
+    sparkMoment: 'The child who tells you about imaginary friends isn\'t experiencing psychosis --- that\'s normal development. The child who is terrified of voices commanding them to hurt themselves, who withdraws from all social contact, and whose academic performance collapses might be. The challenge is that the line between rich imagination and psychosis in childhood is blurry --- and missing COS means missing the narrow window when early intervention matters most.',
 
     practicalExercise: {
       title: 'Recognizing Red Flags in Childhood',
       steps: [
         { title: 'Distinguish imagination from hallucination', description: 'Normal imaginary play: the child knows it\'s pretend and can turn it on/off. Hallucinations: the child is distressed by experiences they can\'t control, describes them as real, and can\'t make them stop. Fear and loss of control are key distinguishing features.' },
-        { title: 'Watch for developmental regression', description: 'Loss of previously acquired skills — language, social abilities, self-care — is a red flag. COS is often preceded by a period of typical development followed by deterioration. Document specific skills lost and the timeline.' },
-        { title: 'Note social withdrawal beyond shyness', description: 'Most children want peer connection even if they\'re introverted. Profound withdrawal — refusing to play with others, showing no interest in friendships, seeming unable to connect — particularly when this represents a change from earlier behavior, warrants evaluation.' },
+        { title: 'Watch for developmental regression', description: 'Loss of previously acquired skills --- language, social abilities, self-care --- is a red flag. COS is often preceded by a period of typical development followed by deterioration. Document specific skills lost and the timeline.' },
+        { title: 'Note social withdrawal beyond shyness', description: 'Most children want peer connection even if they\'re introverted. Profound withdrawal --- refusing to play with others, showing no interest in friendships, seeming unable to connect --- particularly when this represents a change from earlier behavior, warrants evaluation.' },
         { title: 'Seek specialist evaluation', description: 'COS diagnosis requires child psychiatrist evaluation, preferably one with specific expertise in early-onset psychosis. General pediatricians may miss it; general child psychiatrists may be unfamiliar with the presentation. Specialty clinics for early-onset psychosis exist at major academic medical centers.' },
       ],
       toolLink: '/tools/symptom-navigator',
@@ -771,7 +771,7 @@ export const relatedSevereConditionsArticles: Article[] = [
             who withdraws completely from family and peers, sitting alone for hours in
             catatonic
             silence <Citation id="1" index={1} source="Schizophrenia Research" year="2019" tier={1} />.
-            Childhood-onset schizophrenia is mercifully rare — but for the families who
+            Childhood-onset schizophrenia is mercifully rare --- but for the families who
             encounter it, it represents one of the most devastating psychiatric conditions
             in medicine, disrupting development at its most vulnerable stage.
           </p>
@@ -809,19 +809,19 @@ export const relatedSevereConditionsArticles: Article[] = [
         </h2>
         <p className="mb-6">
           One of the most striking findings in childhood-onset schizophrenia research
-          is the progressive loss of gray matter during adolescence — a process that
+          is the progressive loss of gray matter during adolescence --- a process that
           far exceeds normal developmental pruning and adult-onset
           schizophrenia <Citation id="2" index={2} source="American Journal of Psychiatry" year="2019" tier={1} />.
           Longitudinal MRI studies by the NIMH show that children with COS lose gray
           matter in a wave-like pattern that starts in parietal regions and spreads
-          to frontal and temporal cortex — with total gray matter loss approximately
+          to frontal and temporal cortex --- with total gray matter loss approximately
           double what's seen in age-matched healthy controls.
         </p>
         <p className="mb-6">
           These brain changes correlate with functional decline: as gray matter volume
           decreases, cognitive performance worsens, negative symptoms intensify, and
           functional outcomes deteriorate. The progressive nature of these changes
-          underscores why early intervention is critical — the earlier treatment begins,
+          underscores why early intervention is critical --- the earlier treatment begins,
           the more developmental plasticity remains to potentially modify the trajectory.
         </p>
 
@@ -863,23 +863,23 @@ export const relatedSevereConditionsArticles: Article[] = [
           for COS, with the most evidence supporting risperidone, olanzapine, and
           clozapine <Citation id="4" index={4} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2020" tier={1} />.
           However, response rates in children are lower than in adults (approximately
-          30–50% show significant improvement), and side effects — particularly
-          metabolic effects like weight gain and insulin resistance — are more
+          30--50% show significant improvement), and side effects --- particularly
+          metabolic effects like weight gain and insulin resistance --- are more
           pronounced in the developing child.
         </p>
         <p className="mb-6">
           Clozapine, despite requiring blood monitoring, may be the most effective
           antipsychotic for COS and should be considered earlier in the treatment
-          algorithm than in adult schizophrenia. Psychosocial interventions —
+          algorithm than in adult schizophrenia. Psychosocial interventions ---
           including family psychoeducation, social skills training, cognitive
-          remediation, and educational support — are essential components of
+          remediation, and educational support --- are essential components of
           comprehensive treatment. The goal is not just symptom reduction but
           supporting continued development and minimizing the educational and
           social disruption that untreated psychosis causes.
         </p>
 
         <QuoteBlock
-          quote="The families of children with COS face extraordinary challenges — navigating a mental health system unprepared for childhood psychosis, watching their child's peers develop normally while their child regresses, and mourning the future they expected while fighting for the future that remains possible."
+          quote="The families of children with COS face extraordinary challenges --- navigating a mental health system unprepared for childhood psychosis, watching their child's peers develop normally while their child regresses, and mourning the future they expected while fighting for the future that remains possible."
           author="Family burden study, Schizophrenia Bulletin, 2019"
         />
 
@@ -888,7 +888,7 @@ export const relatedSevereConditionsArticles: Article[] = [
           than for adult-onset, with lower rates of remission, higher rates of
           persistent negative symptoms, and greater functional
           impairment <Citation id="5" index={5} source="American Journal of Psychiatry" year="2018" tier={1} />.
-          But outcomes are not uniform — approximately 10–20% achieve good outcomes
+          But outcomes are not uniform --- approximately 10--20% achieve good outcomes
           with adequate treatment, education support, and family stability. The
           predictors of better outcomes mirror those in adult schizophrenia: shorter
           duration of untreated psychosis, better premorbid functioning, and strong

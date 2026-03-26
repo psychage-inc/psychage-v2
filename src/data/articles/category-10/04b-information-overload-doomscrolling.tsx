@@ -89,7 +89,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You open TikTok to watch "just one video." Forty-five minutes later, you're still scrolling. You intended to check Instagram for five minutes. An hour has vanished. There's no 'bottom' to reach, no natural stopping point. Welcome to the infinite scroll — the most powerful attention trap ever designed.
+            You open TikTok to watch "just one video." Forty-five minutes later, you're still scrolling. You intended to check Instagram for five minutes. An hour has vanished. There's no 'bottom' to reach, no natural stopping point. Welcome to the infinite scroll --- the most powerful attention trap ever designed.
           </p>
           <p className="mb-6">
             Infinite scroll is a design pattern where content loads continuously as you scroll down, eliminating pagination or clear endpoints. While convenient, research shows this design deliberately exploits psychological vulnerabilities to maximize engagement time <Citation id="1" index={1} source="Computers in Human Behavior" year="2023" tier={1} />. Understanding how and why it works is essential for protecting your attention and mental health <Citation id="2" index={2} source="Behaviour & Information Technology" year="2022" tier={1} />.
@@ -109,7 +109,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           How Infinite Scroll Hijacks Your Brain
         </h2>
         <p className="mb-6">
-          Infinite scroll isn't accidental — it's engineered to be addictive using principles from behavioral psychology <Citation id="3" index={3} source="Nature Neuroscience" year="2023" tier={1} />:
+          Infinite scroll isn't accidental --- it's engineered to be addictive using principles from behavioral psychology <Citation id="3" index={3} source="Nature Neuroscience" year="2023" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -120,7 +120,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               title: 'Variable Reward Schedule (The Slot Machine Effect)',
               content: (
                 <div className="space-y-3">
-                  <p>Every swipe might reveal something interesting, funny, shocking, or useful — but you never know which swipe will deliver the reward. This unpredictability is incredibly powerful.</p>
+                  <p>Every swipe might reveal something interesting, funny, shocking, or useful --- but you never know which swipe will deliver the reward. This unpredictability is incredibly powerful.</p>
                   <p>It's the same psychological principle that makes slot machines addictive: intermittent, unpredictable rewards trigger dopamine release more effectively than consistent rewards. Your brain stays engaged, chasing that next hit of novelty.</p>
                   <p>The scroll becomes compulsive: "Maybe the next post will be the good one."</p>
                 </div>
@@ -132,7 +132,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Before infinite scroll, websites had pages. When you reached the bottom of page 1, you made a conscious decision: click "next" or stop. This created natural break points.</p>
-                  <p>Infinite scroll removes that decision. Content loads automatically as you approach the bottom. There's no pause, no moment to ask "Do I want to keep going?" — the decision is made for you.</p>
+                  <p>Infinite scroll removes that decision. Content loads automatically as you approach the bottom. There's no pause, no moment to ask "Do I want to keep going?" --- the decision is made for you.</p>
                   <p>This is called "removing friction." Platforms want to eliminate any moment where you might choose to stop.</p>
                 </div>
               ),
@@ -143,7 +143,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Scrolling requires minimal cognitive effort. You don't have to click, type, or make decisions. Just a simple thumb movement, repeated.</p>
-                  <p>This low-effort interaction is soothing — almost meditative. You can scroll while watching TV, waiting in line, or lying in bed. It becomes a default behavior when your brain is idle.</p>
+                  <p>This low-effort interaction is soothing --- almost meditative. You can scroll while watching TV, waiting in line, or lying in bed. It becomes a default behavior when your brain is idle.</p>
                   <p>The ease of scrolling makes it a go-to distraction, creating a habit loop that's hard to break.</p>
                 </div>
               ),
@@ -154,7 +154,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Platforms track <em>everything</em>: what you slow down for, what you watch until the end, what you skip. The algorithm learns what keeps <em>you</em> specifically scrolling.</p>
-                  <p>Over time, your feed becomes increasingly optimized to hold your attention. It's personalized addiction — the content is tailored to your individual psychological triggers.</p>
+                  <p>Over time, your feed becomes increasingly optimized to hold your attention. It's personalized addiction --- the content is tailored to your individual psychological triggers.</p>
                 </div>
               ),
             },
@@ -185,7 +185,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <li><strong>Content aggregators:</strong> Feedly, Flipboard</li>
         </ul>
         <p className="mb-6">
-          TikTok and Instagram Reels take this to the extreme with <strong>vertical infinite scroll</strong> — you don't even need to tap. Just swipe up, and the next video instantly plays. The barrier between content pieces essentially disappears.
+          TikTok and Instagram Reels take this to the extreme with <strong>vertical infinite scroll</strong> --- you don't even need to tap. Just swipe up, and the next video instantly plays. The barrier between content pieces essentially disappears.
         </p>
 
         <h2 id="mental-health-costs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -212,7 +212,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>Many people report entering a "scroll trance" — a dissociative state where they're not fully present or conscious of what they're doing. This passive consumption state is mentally draining and contributes to feelings of emptiness afterward.</p>
+          <p>Many people report entering a "scroll trance" --- a dissociative state where they're not fully present or conscious of what they're doing. This passive consumption state is mentally draining and contributes to feelings of emptiness afterward.</p>
         </ArticleCallout>
 
         <h2 id="why-hard-to-stop" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -267,7 +267,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               description: (
                 <div className="space-y-2">
                   <p>The most effective intervention: remove the apps entirely. If you need to check social media, do it on a desktop browser where infinite scroll is less optimized.</p>
-                  <p>This adds friction — you have to consciously open a browser and type a URL. That pause is often enough to break the automatic habit.</p>
+                  <p>This adds friction --- you have to consciously open a browser and type a URL. That pause is often enough to break the automatic habit.</p>
                 </div>
               ),
             },
@@ -319,7 +319,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <li><strong>Humane design movement:</strong> Organizations like the Center for Humane Technology advocate for technology that respects human attention and autonomy</li>
         </ul>
         <p className="mb-6">
-          Support platforms that offer chronological feeds, finite content, and user control. Vote with your attention — when possible, use platforms that respect it.
+          Support platforms that offer chronological feeds, finite content, and user control. Vote with your attention --- when possible, use platforms that respect it.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -415,7 +415,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You want to be an informed citizen. You care about what's happening in the world. But every time you check the news, you're left feeling anxious, hopeless, or overwhelmed. Is it possible to stay informed without sacrificing your mental health? Yes — but it requires intention and boundaries.
+            You want to be an informed citizen. You care about what's happening in the world. But every time you check the news, you're left feeling anxious, hopeless, or overwhelmed. Is it possible to stay informed without sacrificing your mental health? Yes --- but it requires intention and boundaries.
           </p>
           <p className="mb-6">
             Research shows it's entirely possible to be well-informed without constant news consumption or chronic anxiety <Citation id="1" index={1} source="Health Communication" year="2023" tier={1} />. The key is shifting from passive, reactive news consumption to intentional, bounded engagement that prioritizes both awareness and well-being <Citation id="4" index={4} source="Journalism Studies" year="2023" tier={1} />.
@@ -443,7 +443,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Being truly informed means understanding <em>context</em>, <em>nuance</em>, and <em>solutions</em> — not just reacting to every headline. You can be more informed with less consumption if you're strategic about how you engage.</p>
+          <p>Being truly informed means understanding <em>context</em>, <em>nuance</em>, and <em>solutions</em> --- not just reacting to every headline. You can be more informed with less consumption if you're strategic about how you engage.</p>
         </ArticleCallout>
 
         <h2 id="building-information-diet" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -480,7 +480,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               title: 'Seek Solutions-Focused Journalism',
               description: (
                 <div className="space-y-2">
-                  <p>Balance problem-focused news with solutions journalism — reporting that covers not just what's wrong, but what's being done about it <Citation id="2" index={2} source="Journalism Practice" year="2022" tier={1} />.</p>
+                  <p>Balance problem-focused news with solutions journalism --- reporting that covers not just what's wrong, but what's being done about it <Citation id="2" index={2} source="Journalism Practice" year="2022" tier={1} />.</p>
                   <p><strong>Sources to explore:</strong></p>
                   <ul className="list-disc pl-5 space-y-1 mt-2">
                     <li>Positive News (positive.news)</li>
@@ -579,7 +579,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
                     <li>Volunteer locally on related issues</li>
                     <li>Have a conversation to raise awareness</li>
                   </ul>
-                  <p className="mt-2">Action transforms helplessness into agency. You're no longer just a passive consumer — you're a participant.</p>
+                  <p className="mt-2">Action transforms helplessness into agency. You're no longer just a passive consumer --- you're a participant.</p>
                 </div>
               ),
             },
@@ -589,7 +589,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               description: (
                 <div className="space-y-3">
                   <p>After consuming difficult news, intentionally seek out positive content: nature videos, uplifting stories, time with loved ones, creative activities.</p>
-                  <p>This isn't about toxic positivity or denial — it's about preventing your worldview from becoming skewed entirely toward the negative.</p>
+                  <p>This isn't about toxic positivity or denial --- it's about preventing your worldview from becoming skewed entirely toward the negative.</p>
                 </div>
               ),
             },
@@ -609,7 +609,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip" title="The Middle Path">
-          <p>You don't have to choose between "obsessively consuming all news" and "complete ignorance." The middle path — intentional, bounded, thoughtful engagement — allows you to be informed without being consumed.</p>
+          <p>You don't have to choose between "obsessively consuming all news" and "complete ignorance." The middle path --- intentional, bounded, thoughtful engagement --- allows you to be informed without being consumed.</p>
         </ArticleCallout>
 
         <h2 id="teaching-children" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -640,7 +640,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <li>Hopelessness or depression</li>
         </ul>
         <p className="mb-6">
-          Talk to a therapist. Cognitive-behavioral therapy can help you develop healthier media habits and manage anxiety <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />. You can be an informed, engaged citizen without sacrificing your mental health — sometimes you just need support finding that balance.
+          Talk to a therapist. Cognitive-behavioral therapy can help you develop healthier media habits and manage anxiety <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />. You can be an informed, engaged citizen without sacrificing your mental health --- sometimes you just need support finding that balance.
         </p>
       </>
     ),
@@ -722,7 +722,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
             Everyone in your Twitter feed agrees: the world is heading toward disaster. Every post on your Facebook wall confirms your worst fears. The news your algorithm shows you proves you were right all along. But step outside your digital bubble, and you discover half the population sees a completely different reality. You're living in an echo chamber.
           </p>
           <p className="mb-6">
-            Echo chambers — environments where you're primarily exposed to information that confirms your existing beliefs — are a defining feature of modern digital life <Citation id="1" index={1} source="Current Opinion in Psychology" year="2023" tier={1} />. While they feel comfortable (everyone agrees with you!), research shows they amplify anxiety, distort reality, and contribute to polarization and conflict <Citation id="2" index={2} source="Social Media + Society" year="2022" tier={1} />.
+            Echo chambers --- environments where you're primarily exposed to information that confirms your existing beliefs --- are a defining feature of modern digital life <Citation id="1" index={1} source="Current Opinion in Psychology" year="2023" tier={1} />. While they feel comfortable (everyone agrees with you!), research shows they amplify anxiety, distort reality, and contribute to polarization and conflict <Citation id="2" index={2} source="Social Media + Society" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -748,7 +748,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           items={[
             { feature: 'Definition', values: ['Algorithmic curation limits information exposure', 'Social network where dissent is actively excluded'] },
             { feature: 'Mechanism', values: ["Platform algorithms show you content similar to what you've engaged with", 'You and your network dismiss or attack opposing views'] },
-            { feature: 'Awareness', values: ["Often invisible — you don't know what you're not seeing", 'Can be deliberate — actively unfollowing/blocking disagreement'] },
+            { feature: 'Awareness', values: ["Often invisible --- you don't know what you're not seeing", 'Can be deliberate --- actively unfollowing/blocking disagreement'] },
             { feature: 'Source', values: ['Technology-driven', 'Socially-driven (though enabled by technology)'] },
             { feature: 'Effect', values: ['Narrow information diet', 'Reinforced beliefs + hostility toward outsiders'] },
           ]}
@@ -775,7 +775,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Social media algorithms track what you click, like, share, and spend time on. They then show you more of that type of content.</p>
-                  <p>If you engage with political content from one perspective, the algorithm serves you more from that perspective. Over time, your feed becomes ideologically homogeneous — not because you chose it, but because the algorithm optimized for engagement.</p>
+                  <p>If you engage with political content from one perspective, the algorithm serves you more from that perspective. Over time, your feed becomes ideologically homogeneous --- not because you chose it, but because the algorithm optimized for engagement.</p>
                 </div>
               ),
             },
@@ -794,7 +794,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               title: 'Confirmation Bias Amplification',
               content: (
                 <div className="space-y-3">
-                  <p>Humans have a natural confirmation bias — we seek information that confirms what we already believe and dismiss contradictory evidence <Citation id="3" index={3} source="Cognition" year="2023" tier={1} />.</p>
+                  <p>Humans have a natural confirmation bias --- we seek information that confirms what we already believe and dismiss contradictory evidence <Citation id="3" index={3} source="Cognition" year="2023" tier={1} />.</p>
                   <p>Echo chambers supercharge this tendency. When every source you encounter agrees with you, it feels like you're right and everyone else is misinformed. You stop questioning your beliefs because you never encounter credible challenges to them.</p>
                 </div>
               ),
@@ -814,7 +814,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               title: `Vilification of the 'Other Side'`,
               content: (
                 <div className="space-y-3">
-                  <p>Echo chambers don't just reinforce your beliefs — they often demonize those who disagree. "They" are portrayed as stupid, evil, brainwashed, or malicious.</p>
+                  <p>Echo chambers don't just reinforce your beliefs --- they often demonize those who disagree. "They" are portrayed as stupid, evil, brainwashed, or malicious.</p>
                   <p>This makes genuine dialogue impossible. Why would you engage with someone you've been taught to see as the enemy?</p>
                 </div>
               ),
@@ -863,7 +863,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Echo chambers foster tribal thinking: the world is divided into "us" (enlightened, moral, correct) and "them" (ignorant, immoral, wrong).</p>
-                  <p>This binary thinking increases conflict, reduces empathy, and makes it difficult to find common ground or compromise. It's also mentally exhausting — feeling like you're in constant battle is stressful.</p>
+                  <p>This binary thinking increases conflict, reduces empathy, and makes it difficult to find common ground or compromise. It's also mentally exhausting --- feeling like you're in constant battle is stressful.</p>
                 </div>
               ),
             },
@@ -873,7 +873,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Echo chambers often lead to cutting off family members, old friends, or colleagues who hold different views. While setting boundaries can be healthy, complete relationship severance based on political disagreement creates isolation and grief.</p>
-                  <p>Many people report losing friendships or becoming estranged from family due to echo chamber dynamics — and feeling lonely and sad as a result.</p>
+                  <p>Many people report losing friendships or becoming estranged from family due to echo chamber dynamics --- and feeling lonely and sad as a result.</p>
                 </div>
               ),
             },
@@ -898,7 +898,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               title: 'Diversify Your Sources',
               description: (
                 <div className="space-y-2">
-                  <p>Actively seek out credible sources that challenge your views. This doesn't mean following extremists or bad-faith actors — it means engaging with thoughtful people who see things differently.</p>
+                  <p>Actively seek out credible sources that challenge your views. This doesn't mean following extremists or bad-faith actors --- it means engaging with thoughtful people who see things differently.</p>
                   <p>If you're liberal, read The Economist or moderate conservative writers. If you're conservative, read The Atlantic or moderate liberal perspectives. Seek publications known for intellectual honesty, not sensationalism.</p>
                 </div>
               ),
@@ -936,7 +936,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
             {
               title: 'Be Willing to Be Wrong',
               description: (
-                <p>Intellectual humility is the antidote to echo chambers. Approach your own beliefs with the question: 'What would change my mind?" If the answer is "nothing, ' you're not engaging in reasoning — you're in an identity fortress.</p>
+                <p>Intellectual humility is the antidote to echo chambers. Approach your own beliefs with the question: 'What would change my mind?" If the answer is "nothing, ' you're not engaging in reasoning --- you're in an identity fortress.</p>
               ),
             },
           ]}
@@ -957,7 +957,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <li>Family or friendship breakdowns due to polarization</li>
         </ul>
         <p className="mb-6">
-          Therapy can help you process these emotions, develop critical thinking skills, and rebuild relationships <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />. Cognitive-behavioral therapy can address distorted thinking patterns that echo chambers reinforce. You don't have to stay trapped in a bubble — but sometimes you need support finding the exit.
+          Therapy can help you process these emotions, develop critical thinking skills, and rebuild relationships <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />. Cognitive-behavioral therapy can address distorted thinking patterns that echo chambers reinforce. You don't have to stay trapped in a bubble --- but sometimes you need support finding the exit.
         </p>
       </>
     ),
@@ -1036,10 +1036,10 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            For months, every news cycle brought death tolls, overwhelmed hospitals, and uncertain futures. Breaking news alerts interrupted sleep. Social media became a constant stream of fear, anger, and grief. You couldn't escape it — the pandemic was everywhere, all the time. And it took a toll.
+            For months, every news cycle brought death tolls, overwhelmed hospitals, and uncertain futures. Breaking news alerts interrupted sleep. Social media became a constant stream of fear, anger, and grief. You couldn't escape it --- the pandemic was everywhere, all the time. And it took a toll.
           </p>
           <p className="mb-6">
-            The COVID-19 pandemic created an unprecedented information environment: a global crisis unfolding in real-time, documented minute-by-minute across every platform <Citation id="1" index={1} source="JAMA Network Open" year="2022" tier={1} />. Research shows this constant exposure to pandemic news significantly worsened mental health outcomes, creating what the WHO called an "infodemic" — an epidemic of information that was as harmful as the virus itself <Citation id="3" index={3} source="The Lancet" year="2022" tier={1} />.
+            The COVID-19 pandemic created an unprecedented information environment: a global crisis unfolding in real-time, documented minute-by-minute across every platform <Citation id="1" index={1} source="JAMA Network Open" year="2022" tier={1} />. Research shows this constant exposure to pandemic news significantly worsened mental health outcomes, creating what the WHO called an "infodemic" --- an epidemic of information that was as harmful as the virus itself <Citation id="3" index={3} source="The Lancet" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -1066,14 +1066,14 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               id: 'prolonged-uncertainty',
               title: 'Prolonged Uncertainty',
               content: (
-                <p>Unlike natural disasters or terrorist attacks (acute crises with clear beginnings and ends), the pandemic was a slow-burn crisis lasting years. The constant uncertainty — When will it end? Is it safe? Will there be another wave? — created chronic stress. Humans tolerate short-term stress better than prolonged uncertainty.</p>
+                <p>Unlike natural disasters or terrorist attacks (acute crises with clear beginnings and ends), the pandemic was a slow-burn crisis lasting years. The constant uncertainty --- When will it end? Is it safe? Will there be another wave? --- created chronic stress. Humans tolerate short-term stress better than prolonged uncertainty.</p>
               ),
             },
             {
               id: 'personal-relevance',
               title: 'Universal Personal Relevance',
               content: (
-                <p>Most news feels distant ('that happened somewhere else, to other people"). But the pandemic affected <em>everyone</em>. Every story felt personally threatening. You weren't reading about abstract risks — you were reading about threats to yourself, your loved ones, your livelihood.</p>
+                <p>Most news feels distant ('that happened somewhere else, to other people"). But the pandemic affected <em>everyone</em>. Every story felt personally threatening. You weren't reading about abstract risks --- you were reading about threats to yourself, your loved ones, your livelihood.</p>
               ),
             },
             {
@@ -1089,7 +1089,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>The infodemic created confusion: guidance changed, experts disagreed, misinformation spread rapidly. You couldn't trust what you read because contradictory information appeared everywhere.</p>
-                  <p>This epistemic uncertainty — not knowing what's true — is deeply anxiety-provoking. When you can't rely on information to make safe decisions, every choice feels risky.</p>
+                  <p>This epistemic uncertainty --- not knowing what's true --- is deeply anxiety-provoking. When you can't rely on information to make safe decisions, every choice feels risky.</p>
                 </div>
               ),
             },
@@ -1178,7 +1178,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
             {
               title: 'Limit Frequency, Not Total Avoidance',
               description: (
-                <p>Complete news avoidance during a crisis that affects you directly isn't realistic. Instead, check news 1-2 times per day from trusted sources. Constant checking doesn't improve safety — it just increases anxiety.</p>
+                <p>Complete news avoidance during a crisis that affects you directly isn't realistic. Instead, check news 1-2 times per day from trusted sources. Constant checking doesn't improve safety --- it just increases anxiety.</p>
               ),
             },
             {
@@ -1325,10 +1325,10 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You wouldn't eat junk food for every meal and expect to feel healthy. Yet many of us consume information with no thought to quality, quantity, or balance — and wonder why we feel anxious, scattered, and overwhelmed. Just as your body needs nutritious food, your mind needs a healthy information diet.
+            You wouldn't eat junk food for every meal and expect to feel healthy. Yet many of us consume information with no thought to quality, quantity, or balance --- and wonder why we feel anxious, scattered, and overwhelmed. Just as your body needs nutritious food, your mind needs a healthy information diet.
           </p>
           <p className="mb-6">
-            An information diet is the totality of what you consume through reading, watching, listening, and scrolling. Research shows that intentionally curating this diet — choosing quality over quantity, depth over breadth, and signal over noise — significantly improves mental health, focus, and well-being <Citation id="1" index={1} source="Computers in Human Behavior" year="2023" tier={1} />. Here's how to build one <Citation id="2" index={2} source="Media Psychology" year="2023" tier={1} />.
+            An information diet is the totality of what you consume through reading, watching, listening, and scrolling. Research shows that intentionally curating this diet --- choosing quality over quantity, depth over breadth, and signal over noise --- significantly improves mental health, focus, and well-being <Citation id="1" index={1} source="Computers in Human Behavior" year="2023" tier={1} />. Here's how to build one <Citation id="2" index={2} source="Media Psychology" year="2023" tier={1} />.
           </p>
         </div>
 
@@ -1465,7 +1465,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
             {
               title: 'Regularly Review and Adjust',
               description: (
-                <p>Every month, revisit your information diet. What's working? What's not? Are you meeting your goals? Do your sources still serve you? Prune what doesn't work, keep refining. An information diet isn't set-it-and-forget-it — it's a practice.</p>
+                <p>Every month, revisit your information diet. What's working? What's not? Are you meeting your goals? Do your sources still serve you? Prune what doesn't work, keep refining. An information diet isn't set-it-and-forget-it --- it's a practice.</p>
               ),
             },
           ]}
@@ -1501,7 +1501,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
               title: 'Recognize Your Own Biases',
               content: (
                 <div className="space-y-3">
-                  <p>You have confirmation bias, recency bias, and availability bias. Everyone does. The question isn't whether you're biased — it's whether you're aware of it.</p>
+                  <p>You have confirmation bias, recency bias, and availability bias. Everyone does. The question isn't whether you're biased --- it's whether you're aware of it.</p>
                   <p>Notice when information feels <em>too</em> aligned with your beliefs. That's when you should be most skeptical.</p>
                 </div>
               ),
@@ -1537,7 +1537,7 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           </li>
           <li>
             <strong>Challenge:</strong> "I get bored without constant stimulation."<br />
-            <strong>Solution:</strong> Boredom isn't dangerous — it's your brain's signal that it needs rest or creative space. Learn to sit with it. Over time, you'll rediscover interests that passive consumption replaced.
+            <strong>Solution:</strong> Boredom isn't dangerous --- it's your brain's signal that it needs rest or creative space. Learn to sit with it. Over time, you'll rediscover interests that passive consumption replaced.
           </li>
           <li>
             <strong>Challenge:</strong> 'I keep falling back into old habits."<br />
@@ -1559,11 +1559,11 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <li>You use information consumption to avoid dealing with personal problems</li>
         </ul>
         <p className="mb-6">
-          Therapists can help address underlying issues (anxiety, loneliness, avoidance) and develop healthier coping strategies <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. A healthy information diet is part of overall mental health — sometimes you need support building it.
+          Therapists can help address underlying issues (anxiety, loneliness, avoidance) and develop healthier coping strategies <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. A healthy information diet is part of overall mental health --- sometimes you need support building it.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>You have more control over your information environment than you think. Every source you follow, every notification you enable, every minute you spend scrolling — these are choices. Make them intentionally, and your mental health will thank you.</p>
+          <p>You have more control over your information environment than you think. Every source you follow, every notification you enable, every minute you spend scrolling --- these are choices. Make them intentionally, and your mental health will thank you.</p>
         </ArticleCallout>
       </>
     ),

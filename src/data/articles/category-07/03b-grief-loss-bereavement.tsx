@@ -17,7 +17,7 @@ export const griefLossArticlesB: Article[] = [
     id: catId(26),
     slug: 'disenfranchised-grief',
     title: "Disenfranchised Grief: When Your Loss Isn't Acknowledged by Others",
-    description: "Disenfranchised grief is loss that society doesn't recognize or validate—miscarriage, pet death, non-traditional relationships. Learn why validation matters.",
+    description: "Disenfranchised grief is loss that society doesn't recognize or validate---miscarriage, pet death, non-traditional relationships. Learn why validation matters.",
     image: "/images/articles/cat07/cover-026.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 7,
@@ -71,10 +71,10 @@ export const griefLossArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your ex-partner dies. Your pet of 15 years passes away. You have a miscarriage at 8 weeks. A close friend ends the relationship. Your grief is profound—yet when you try to share it, you encounter dismissal: "You weren't even together anymore,", "It was just a pet,", "At least it was early,", "You'll make new friends." Your loss isn't acknowledged. Your grief isn't validated. This is disenfranchised grief.
+            Your ex-partner dies. Your pet of 15 years passes away. You have a miscarriage at 8 weeks. A close friend ends the relationship. Your grief is profound---yet when you try to share it, you encounter dismissal: "You weren't even together anymore,", "It was just a pet,", "At least it was early,", "You'll make new friends." Your loss isn't acknowledged. Your grief isn't validated. This is disenfranchised grief.
           </p>
           <p className="mb-6">
-            Disenfranchised grief is grief that isn't openly acknowledged, socially validated, or publicly mourned <Citation id="1" index={1} source="Death Studies" year="2020" tier={1} />. Society determines which losses "count" and deserve support—and which don't. When your loss falls outside these recognized categories, you grieve alone, without the rituals, support, or permission that help people heal <Citation id="2" index={2} source="OMEGA - Journal of Death and Dying" year="2019" tier={1} />.
+            Disenfranchised grief is grief that isn't openly acknowledged, socially validated, or publicly mourned <Citation id="1" index={1} source="Death Studies" year="2020" tier={1} />. Society determines which losses "count" and deserve support---and which don't. When your loss falls outside these recognized categories, you grieve alone, without the rituals, support, or permission that help people heal <Citation id="2" index={2} source="OMEGA - Journal of Death and Dying" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -90,7 +90,7 @@ export const griefLossArticlesB: Article[] = [
               title: 'Relationship Not Recognized',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Ex-partners:</strong> "You're divorced—why are you still upset?"</li>
+                  <li><strong>Ex-partners:</strong> "You're divorced---why are you still upset?"</li>
                   <li><strong>Affairs:</strong> Secret relationships can't be publicly mourned</li>
                   <li><strong>Friends:</strong> Friendship loss dismissed as less significant than family</li>
                   <li><strong>Non-traditional relationships:</strong> Polyamorous partners, long-distance relationships not recognized by family</li>
@@ -175,7 +175,7 @@ export const griefLossArticlesB: Article[] = [
             title: 'Disenfranchised Grief (Not Recognized)',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Isolation—no one acknowledges your loss</li>
+                <li>Isolation---no one acknowledges your loss</li>
                 <li>No rituals or communal mourning</li>
                 <li>Expected to function normally immediately</li>
                 <li>No support offered</li>
@@ -241,7 +241,7 @@ export const griefLossArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">You divorced or broke up, but that doesn't erase history, shared children, or complex feelings:</p>
                   <ul className="list-disc pl-6 mb-4 space-y-2">
-                    <li>"You're not together anymore—why are you upset?"</li>
+                    <li>"You're not together anymore---why are you upset?"</li>
                     <li>"You hated them anyway"</li>
                     <li>Excluded from funeral or memorial</li>
                   </ul>
@@ -282,7 +282,7 @@ export const griefLossArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Your grief is not determined by what others recognize. It's determined by what you've lost. If your heart is broken, your grief is real—regardless of whether society validates it."
+          quote="Your grief is not determined by what others recognize. It's determined by what you've lost. If your heart is broken, your grief is real---regardless of whether society validates it."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -327,7 +327,7 @@ export const griefLossArticlesB: Article[] = [
     id: catId(27),
     slug: 'grief-after-suicide',
     title: "Grief After Suicide: The Unique Pain of Surviving Someone's Death by Suicide",
-    description: "Suicide loss survivors face unique grief—trauma, guilt, stigma, unanswered questions. Learn about the experience and how to support yourself or others.",
+    description: "Suicide loss survivors face unique grief---trauma, guilt, stigma, unanswered questions. Learn about the experience and how to support yourself or others.",
     image: "/images/articles/cat07/cover-027.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 8,
@@ -381,7 +381,7 @@ export const griefLossArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The phone call. The knock on the door. The moment your world shatters. Someone you love died by suicide. In an instant, you're not just bereaved—you're a 'suicide survivor, ' a term that carries weight, stigma, and a unique form of suffering that those who haven't experienced it struggle to understand. The grief is compounded by trauma, guilt, anger, unanswered questions, and a silence that isolates you from normal grief support.
+            The phone call. The knock on the door. The moment your world shatters. Someone you love died by suicide. In an instant, you're not just bereaved---you're a 'suicide survivor, ' a term that carries weight, stigma, and a unique form of suffering that those who haven't experienced it struggle to understand. The grief is compounded by trauma, guilt, anger, unanswered questions, and a silence that isolates you from normal grief support.
           </p>
           <p className="mb-6">
             Grief after suicide is fundamentally different from other bereavements <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />. It combines profound loss with traumatic shock, existential questions, self-blame, and societal stigma. Suicide survivors (those who've lost someone to suicide, not people who survived suicide attempts) face unique challenges that require specific understanding and support <Citation id="2" index={2} source="Journal of Affective Disorders" year="2021" tier={1} />.
@@ -400,7 +400,7 @@ export const griefLossArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">The haunting, unanswerable question: Why did they do it? What did I miss? Could I have prevented it?</p>
-                  <p>Unlike most deaths, suicide seems preventable in retrospect—which creates endless rumination and self-blame. You search for signs you missed, conversations you should have had, warnings you ignored.</p>
+                  <p>Unlike most deaths, suicide seems preventable in retrospect---which creates endless rumination and self-blame. You search for signs you missed, conversations you should have had, warnings you ignored.</p>
                 </div>
               ),
             },
@@ -415,14 +415,14 @@ export const griefLossArticlesB: Article[] = [
                     <li>"If only I'd called that day"</li>
                     <li>"I failed them"</li>
                   </ul>
-                  <p className="mt-4">The guilt is often irrational but feels undeniable. You become prosecutor, judge, and defendant—always finding yourself guilty.</p>
+                  <p className="mt-4">The guilt is often irrational but feels undeniable. You become prosecutor, judge, and defendant---always finding yourself guilty.</p>
                 </div>
               ),
             },
             {
               title: 'Rejection and Abandonment',
               description: (
-                <p>Suicide can feel like a choice to leave you. Unlike illness or accident, the person's agency is involved—creating feelings of rejection, abandonment, or not being 'worth living for." Intellectually you may understand mental illness impaired their judgment, but emotionally it still feels like they chose to leave.</p>
+                <p>Suicide can feel like a choice to leave you. Unlike illness or accident, the person's agency is involved---creating feelings of rejection, abandonment, or not being 'worth living for." Intellectually you may understand mental illness impaired their judgment, but emotionally it still feels like they chose to leave.</p>
               ),
             },
             {
@@ -463,7 +463,7 @@ export const griefLossArticlesB: Article[] = [
             {
               title: 'Relief and Guilt About Relief',
               description: (
-                <p>If the person struggled with mental illness for years, there may be relief that their suffering ended—followed by crushing guilt for feeling relieved. Both emotions are normal and can coexist.</p>
+                <p>If the person struggled with mental illness for years, there may be relief that their suffering ended---followed by crushing guilt for feeling relieved. Both emotions are normal and can coexist.</p>
               ),
             },
           ]}
@@ -479,7 +479,7 @@ export const griefLossArticlesB: Article[] = [
           <li><strong>Intrusive thoughts:</strong> Graphic mental images of their death, even if you didn't witness it.</li>
           <li><strong>Hypervigilance about others:</strong> Intense fear of losing someone else to suicide. Monitoring loved ones' moods obsessively.</li>
           <li><strong>Identity shift:</strong> Becoming defined as 'the person whose [relation] died by suicide." The loss becomes central to your identity.</li>
-          <li><strong>Existential crisis:</strong> Questioning everything—life's meaning, your beliefs, your understanding of the person, your judgments about safety.</li>
+          <li><strong>Existential crisis:</strong> Questioning everything---life's meaning, your beliefs, your understanding of the person, your judgments about safety.</li>
           <li><strong>Complicated relationships with memory:</strong> Difficulty remembering them before the suicide. The manner of death overshadows earlier memories.</li>
         </ul>
 
@@ -509,7 +509,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'accept-complexity',
               title: 'Accept the complexity of your emotions',
               content: (
-                <p>Love, anger, guilt, relief, sadness, rage—all can coexist. You don't have to pick one. Allow the full range without judging yourself.</p>
+                <p>Love, anger, guilt, relief, sadness, rage---all can coexist. You don't have to pick one. Allow the full range without judging yourself.</p>
               ),
             },
             {
@@ -519,7 +519,7 @@ export const griefLossArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">Cognitive work to challenge self-blame:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>You are not responsible for another person's suicide.</strong> Mental illness, pain, and impaired judgment led to their death—not your actions or inactions.</li>
+                    <li><strong>You are not responsible for another person's suicide.</strong> Mental illness, pain, and impaired judgment led to their death---not your actions or inactions.</li>
                     <li><strong>You cannot read minds or predict the future.</strong> Even professionals miss suicide risk. You did the best you could with what you knew.</li>
                     <li><strong>Hindsight bias distorts reality.</strong> Signs seem "obvious" only after, not before.</li>
                     <li><strong>Love and prevention are not the same.</strong> You loved them. That doesn't mean you could have stopped them.</li>
@@ -531,7 +531,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'tell-story',
               title: 'Tell your story',
               content: (
-                <p>Breaking silence reduces shame and isolation. Find safe people—support groups, therapists, trusted friends—who can hold your story without judgment. Online suicide survivor communities provide understanding that general grief support may not.</p>
+                <p>Breaking silence reduces shame and isolation. Find safe people---support groups, therapists, trusted friends---who can hold your story without judgment. Online suicide survivor communities provide understanding that general grief support may not.</p>
               ),
             },
             {
@@ -557,7 +557,7 @@ export const griefLossArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Become advocates for suicide prevention</li>
                     <li>Share their story to help others</li>
-                    <li>Find purpose in the loss—not that it was "meant to be," but that they can create meaning from it</li>
+                    <li>Find purpose in the loss---not that it was "meant to be," but that they can create meaning from it</li>
                   </ul>
                   <p className="mt-4">This is not required for healing. Some people find meaning; others don't. Both are okay.</p>
                 </div>
@@ -567,7 +567,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'boundaries',
               title: 'Set boundaries around stigma',
               content: (
-                <p>You don't owe anyone an explanation. You can choose to be open or private about cause of death. You can educate or decline to. Protect yourself from judgment—you're not required to subject yourself to stigma.</p>
+                <p>You don't owe anyone an explanation. You can choose to be open or private about cause of death. You can educate or decline to. Protect yourself from judgment---you're not required to subject yourself to stigma.</p>
               ),
             },
           ]}
@@ -603,14 +603,14 @@ export const griefLossArticlesB: Article[] = [
         </ArticleCallout>
 
         <QuoteBlock
-          quote="You are not responsible for their death. You are not broken for grieving this way. You are not alone in this impossible grief. Healing is possible—not to forget them or stop missing them, but to learn to carry the loss while still finding reasons to stay."
+          quote="You are not responsible for their death. You are not broken for grieving this way. You are not alone in this impossible grief. Healing is possible---not to forget them or stop missing them, but to learn to carry the loss while still finding reasons to stay."
           attribution="Survivor-focused grief support community"
           role="American Foundation for Suicide Prevention"
           variant="large"
         />
 
         <p className="mb-6">
-          If you've lost someone to suicide, please hear this: <strong>It is not your fault.</strong> You could not have saved them by loving them more, watching them closer, or doing something different. Mental illness and unbearable pain led to their death—not you. Grief after suicide is one of the hardest things a human can endure, but you can survive it. Reach out. Find your people. Tell your story. The silence ends when you break it.
+          If you've lost someone to suicide, please hear this: <strong>It is not your fault.</strong> You could not have saved them by loving them more, watching them closer, or doing something different. Mental illness and unbearable pain led to their death---not you. Grief after suicide is one of the hardest things a human can endure, but you can survive it. Reach out. Find your people. Tell your story. The silence ends when you break it.
         </p>
 
         <p className="mb-6">
@@ -619,8 +619,8 @@ export const griefLossArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>988 Suicide & Crisis Lifeline:</strong> Call or text 988, available 24/7</li>
-          <li><strong>American Foundation for Suicide Prevention (AFSP):</strong> afsp.org—survivor support groups, resources</li>
-          <li><strong>Alliance of Hope:</strong> allianceofhope.org—online support community for suicide loss survivors</li>
+          <li><strong>American Foundation for Suicide Prevention (AFSP):</strong> afsp.org---survivor support groups, resources</li>
+          <li><strong>Alliance of Hope:</strong> allianceofhope.org---online support community for suicide loss survivors</li>
           <li><strong>Survivors of Suicide Loss Day:</strong> International event for survivors (check AFSP for local events)</li>
         </ul>
       </>
@@ -677,10 +677,10 @@ export const griefLossArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your dog of 14 years dies. Your heart shatters. You cry for days. You can't eat, can't sleep, can't function. Friends say, 'It was just a dog—you can get another one." Coworkers expect you back the next day. Society doesn't give you bereavement leave for a pet. Yet your grief is as profound as any you've experienced. You're not overreacting. Pet loss is real grief.
+            Your dog of 14 years dies. Your heart shatters. You cry for days. You can't eat, can't sleep, can't function. Friends say, 'It was just a dog---you can get another one." Coworkers expect you back the next day. Society doesn't give you bereavement leave for a pet. Yet your grief is as profound as any you've experienced. You're not overreacting. Pet loss is real grief.
           </p>
           <p className="mb-6">
-            Pets are family members, companions, sources of unconditional love, and daily routines built around their care <Citation id="1" index={1} source="Society & Animals" year="2020" tier={1} />. Their loss leaves a gaping hole in your life—an empty house, broken routine, and the absence of a being who loved you without judgment. Yet pet grief is disenfranchised—society doesn't validate it the way it validates human loss <Citation id="2" index={2} source="OMEGA - Journal of Death and Dying" year="2019" tier={1} />. This dismissal adds isolation to pain.
+            Pets are family members, companions, sources of unconditional love, and daily routines built around their care <Citation id="1" index={1} source="Society & Animals" year="2020" tier={1} />. Their loss leaves a gaping hole in your life---an empty house, broken routine, and the absence of a being who loved you without judgment. Yet pet grief is disenfranchised---society doesn't validate it the way it validates human loss <Citation id="2" index={2} source="OMEGA - Journal of Death and Dying" year="2019" tier={1} />. This dismissal adds isolation to pain.
           </p>
         </div>
 
@@ -700,7 +700,7 @@ export const griefLossArticlesB: Article[] = [
             {
               title: 'Daily companionship',
               description: (
-                <p>Your pet was part of your daily routine—morning walks, evening cuddles, shared meals. They structured your day. Their absence disrupts every routine, making the loss feel omnipresent.</p>
+                <p>Your pet was part of your daily routine---morning walks, evening cuddles, shared meals. They structured your day. Their absence disrupts every routine, making the loss feel omnipresent.</p>
               ),
             },
             {
@@ -724,14 +724,14 @@ export const griefLossArticlesB: Article[] = [
             {
               title: 'Life stage companion',
               description: (
-                <p>Pets are often with you through major life transitions—college, first apartment, marriage, children, divorce, retirement. They witnessed and shared your life. Losing them is losing that witness to your story.</p>
+                <p>Pets are often with you through major life transitions---college, first apartment, marriage, children, divorce, retirement. They witnessed and shared your life. Losing them is losing that witness to your story.</p>
               ),
             },
           ]}
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Research shows the intensity of pet grief correlates with <strong>attachment security</strong>, not with whether the being was human <Citation id="3" index={3} source="Anthrozoös" year="2021" tier={1} />. If your pet was a primary attachment figure—which for many people, especially those living alone, they are—grief will be as intense as losing a family member.</p>
+          <p>Research shows the intensity of pet grief correlates with <strong>attachment security</strong>, not with whether the being was human <Citation id="3" index={3} source="Anthrozoös" year="2021" tier={1} />. If your pet was a primary attachment figure---which for many people, especially those living alone, they are---grief will be as intense as losing a family member.</p>
         </ArticleCallout>
 
         <h2 id="unique-aspects" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -739,10 +739,10 @@ export const griefLossArticlesB: Article[] = [
         </h2>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Decision to euthanize:</strong> Unlike most human deaths, you often must decide when your pet dies. This decision—even when merciful—carries guilt: "Did I do it too soon? Too late? Was I being selfish to end their suffering?"</li>
+          <li><strong>Decision to euthanize:</strong> Unlike most human deaths, you often must decide when your pet dies. This decision---even when merciful---carries guilt: "Did I do it too soon? Too late? Was I being selfish to end their suffering?"</li>
           <li><strong>Witnessing death:</strong> Many people are present when their pet is euthanized, creating traumatic memories alongside the grief.</li>
           <li><strong>Disenfranchisement:</strong> No bereavement leave, no funeral rituals, dismissal from others: "Just get another dog."</li>
-          <li><strong>Multiple simultaneous losses:</strong> Losing routine, purpose, physical touch, companionship, home security, motivation to exercise—all at once.</li>
+          <li><strong>Multiple simultaneous losses:</strong> Losing routine, purpose, physical touch, companionship, home security, motivation to exercise---all at once.</li>
           <li><strong>Other pets grieving:</strong> If you have other animals, they're grieving too, which compounds your pain.</li>
           <li><strong>Ambivalence about new pets:</strong> Pressure to "replace" them, but resistance to betraying their memory.</li>
         </ul>
@@ -755,7 +755,7 @@ export const griefLossArticlesB: Article[] = [
           title="What People Say vs. What You Feel"
           columns={["What People Say (Invalidating)", "What You're Actually Experiencing"]}
           items={[
-            { feature: 'It was just a pet', values: ['They were family—a being I loved deeply and who loved me'] },
+            { feature: 'It was just a pet', values: ['They were family---a being I loved deeply and who loved me'] },
             { feature: 'You can get another one', values: ['They were irreplaceable, unique, not interchangeable'] },
             { feature: "At least it wasn't a person", values: ['My grief is real regardless of species'] },
             { feature: 'You knew this would happen eventually', values: ["Knowing doesn't make it hurt less"] },
@@ -765,7 +765,7 @@ export const griefLossArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>If people minimize your grief, that's their limitation—not a reflection of your loss's legitimacy. You don't need permission from others to grieve your pet.</p>
+          <p>If people minimize your grief, that's their limitation---not a reflection of your loss's legitimacy. You don't need permission from others to grieve your pet.</p>
         </ArticleCallout>
 
         <h2 id="coping" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -777,13 +777,13 @@ export const griefLossArticlesB: Article[] = [
           <li><strong>Create rituals:</strong> Memorial service, plant a tree, create a photo album, write a letter to your pet, scatter ashes somewhere meaningful. Ritual helps closure.</li>
           <li><strong>Seek understanding support:</strong> Pet loss support groups (in-person or online), friends who are pet people and "get it," grief hotlines specific to pet loss.</li>
           <li><strong>Preserve memories:</strong> Keep their collar, paw print, favorite toy. Photos. Videos. Write down stories about them. Their physical presence is gone, but memories remain.</li>
-          <li><strong>Maintain routines (or create new ones):</strong> If you walked your dog daily, keep walking—for yourself now. Or establish new routines that honor the time you shared.</li>
+          <li><strong>Maintain routines (or create new ones):</strong> If you walked your dog daily, keep walking---for yourself now. Or establish new routines that honor the time you shared.</li>
           <li><strong>Be patient with "getting another pet":</strong> There's no timeline. Some people need a new pet immediately to fill the void; others need months or years. Both are okay. And adopting a new pet doesn't dishonor the one you lost.</li>
           <li><strong>Address guilt if you euthanized:</strong> You gave them a peaceful death, free from prolonged suffering. That was a final act of love, not betrayal.</li>
         </ul>
 
         <QuoteBlock
-          quote="Grief is grief. Love is love. The depth of your pain reflects the depth of your bond—and that bond was real, regardless of whether it was with a human or an animal. Your grief deserves respect."
+          quote="Grief is grief. Love is love. The depth of your pain reflects the depth of your bond---and that bond was real, regardless of whether it was with a human or an animal. Your grief deserves respect."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -794,7 +794,7 @@ export const griefLossArticlesB: Article[] = [
         </h2>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Association for Pet Loss and Bereavement:</strong> aplb.org—support groups, chat rooms, hotlines</li>
+          <li><strong>Association for Pet Loss and Bereavement:</strong> aplb.org---support groups, chat rooms, hotlines</li>
           <li><strong>Lap of Love:</strong> Veterinary hospice service with grief support resources</li>
           <li><strong>Cornell Pet Loss Support Hotline:</strong> (607) 218-7457</li>
           <li><strong>Online communities:</strong> Reddit r/Petloss, Facebook pet loss groups</li>
@@ -814,7 +814,7 @@ export const griefLossArticlesB: Article[] = [
                 <li>"It was just a pet"</li>
                 <li>"You can get another one"</li>
                 <li>"At least you don't have kids"</li>
-                <li>"I know how you feel—my goldfish died once"</li>
+                <li>"I know how you feel---my goldfish died once"</li>
                 <li>"They're in a better place' (unless person is religious)</li>
               </ul>
             ),
@@ -823,8 +823,8 @@ export const griefLossArticlesB: Article[] = [
             title: 'Instead Say',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>"I'm so sorry—I know how much [pet's name] meant to you"</li>
-                <li>"Tell me about [pet's name]—I'd love to hear stories"</li>
+                <li>"I'm so sorry---I know how much [pet's name] meant to you"</li>
+                <li>"Tell me about [pet's name]---I'd love to hear stories"</li>
                 <li>"This must be so hard. How are you doing?"</li>
                 <li>"What's your favorite memory of [pet's name]?"</li>
                 <li>Send a sympathy card, plant, or donation to animal shelter in pet's name</li>
@@ -834,7 +834,7 @@ export const griefLossArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          If you've lost a pet <Citation id="4" index={4} source="Death Studies" year="2018" tier={1} />, please know your grief is valid and real. The bond you shared was love—pure, uncomplicated, and profound. Their life had meaning. Your grief honors that. Take all the time you need. Cry as much as you need. Remember them as long as you live. And when you're ready—if you're ever ready—there will be another animal who needs the love you have to give. Not a replacement, but a new relationship, different yet equally meaningful.
+          If you've lost a pet <Citation id="4" index={4} source="Death Studies" year="2018" tier={1} />, please know your grief is valid and real. The bond you shared was love---pure, uncomplicated, and profound. Their life had meaning. Your grief honors that. Take all the time you need. Cry as much as you need. Remember them as long as you live. And when you're ready---if you're ever ready---there will be another animal who needs the love you have to give. Not a replacement, but a new relationship, different yet equally meaningful.
         </p>
       </>
     ),
@@ -844,7 +844,7 @@ export const griefLossArticlesB: Article[] = [
     id: catId(29),
     slug: 'grief-and-the-body',
     title: 'Grief and the Body: How Loss Manifests Physically',
-    description: `Grief isn't just emotional—it's physical. Learn how grief affects the body, why "broken heart syndrome" is real, and how to care for yourself.`,
+    description: `Grief isn't just emotional---it's physical. Learn how grief affects the body, why "broken heart syndrome" is real, and how to care for yourself.`,
     image: '/images/articles/cat07/cover-029.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 6,
@@ -890,7 +890,7 @@ export const griefLossArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After a profound loss, your chest feels tight. Your stomach churns. Your head pounds. You're exhausted despite sleeping 12 hours. Your arms feel heavy, as if weighted down. You wonder if you're sick—but tests come back normal. This is grief manifesting in your body. Grief isn't just an emotional experience; it's a full-body phenomenon with real physical symptoms.
+            After a profound loss, your chest feels tight. Your stomach churns. Your head pounds. You're exhausted despite sleeping 12 hours. Your arms feel heavy, as if weighted down. You wonder if you're sick---but tests come back normal. This is grief manifesting in your body. Grief isn't just an emotional experience; it's a full-body phenomenon with real physical symptoms.
           </p>
           <p className="mb-6">
             The mind-body connection means intense emotional pain translates into physical sensations and symptoms <Citation id="1" index={1} source="Journal of Psychosomatic Research" year="2020" tier={1} />. Grief activates the stress response, suppresses immune function, disrupts sleep and appetite, and can even affect cardiovascular health <Citation id="3" index={3} source="Psychological Bulletin" year="2021" tier={1} />. Understanding the physical manifestations of grief helps you recognize what you're experiencing and take care of your body during bereavement.
@@ -946,10 +946,10 @@ export const griefLossArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>What happens:</strong> The heart's left ventricle temporarily weakens and changes shape in response to stress hormones</li>
-          <li><strong>Symptoms:</strong> Chest pain, shortness of breath—identical to heart attack</li>
+          <li><strong>Symptoms:</strong> Chest pain, shortness of breath---identical to heart attack</li>
           <li><strong>Trigger:</strong> Often follows sudden loss or shocking news</li>
           <li><strong>Prognosis:</strong> Usually resolves within weeks, but requires medical attention</li>
-          <li><strong>Important:</strong> If you experience chest pain and shortness of breath, seek emergency care—even if you suspect it's grief-related</li>
+          <li><strong>Important:</strong> If you experience chest pain and shortness of breath, seek emergency care---even if you suspect it's grief-related</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -961,7 +961,7 @@ export const griefLossArticlesB: Article[] = [
             <li>Extreme fatigue that doesn't improve with rest</li>
             <li>Any symptom that concerns you</li>
           </ul>
-          <p className="mt-4">Grief can cause physical symptoms, but it can also mask serious medical conditions. Don't assume every symptom is "just grief"—get checked.</p>
+          <p className="mt-4">Grief can cause physical symptoms, but it can also mask serious medical conditions. Don't assume every symptom is "just grief"---get checked.</p>
         </ArticleCallout>
 
         <h2 id="why-it-happens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -974,7 +974,7 @@ export const griefLossArticlesB: Article[] = [
             {
               title: 'Stress response activation',
               description: (
-                <p>Grief triggers the body's stress response—elevated cortisol, adrenaline, chronic activation of sympathetic nervous system. This affects every body system.</p>
+                <p>Grief triggers the body's stress response---elevated cortisol, adrenaline, chronic activation of sympathetic nervous system. This affects every body system.</p>
               ),
             },
             {
@@ -986,7 +986,7 @@ export const griefLossArticlesB: Article[] = [
             {
               title: 'Sleep disruption',
               description: (
-                <p>Grief disrupts sleep architecture—less REM sleep, more nighttime awakenings. Poor sleep worsens all other physical and emotional symptoms.</p>
+                <p>Grief disrupts sleep architecture---less REM sleep, more nighttime awakenings. Poor sleep worsens all other physical and emotional symptoms.</p>
               ),
             },
             {
@@ -1015,7 +1015,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'rest',
               title: 'Prioritize rest',
               content: (
-                <p>Grief is exhausting. Sleep when you can, even if it's naps. Rest doesn't mean you're weak—your body is working hard to process trauma and loss. Don't force yourself to maintain your pre-grief schedule.</p>
+                <p>Grief is exhausting. Sleep when you can, even if it's naps. Rest doesn't mean you're weak---your body is working hard to process trauma and loss. Don't force yourself to maintain your pre-grief schedule.</p>
               ),
             },
             {
@@ -1029,7 +1029,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'movement',
               title: 'Gentle movement',
               content: (
-                <p>Exercise releases endorphins and reduces stress. But don't push yourself to intense workouts if you're not ready. Walking, stretching, yoga—gentle movement helps more than no movement.</p>
+                <p>Exercise releases endorphins and reduces stress. But don't push yourself to intense workouts if you're not ready. Walking, stretching, yoga---gentle movement helps more than no movement.</p>
               ),
             },
             {
@@ -1043,7 +1043,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'medical-care',
               title: "Don't skip medical care",
               content: (
-                <p>Keep routine appointments. Manage chronic conditions. Address new symptoms. Grief increases health risks—proactive care matters.</p>
+                <p>Keep routine appointments. Manage chronic conditions. Address new symptoms. Grief increases health risks---proactive care matters.</p>
               ),
             },
             {
@@ -1057,7 +1057,7 @@ export const griefLossArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="Grief lives in the body as much as the mind. Tending to your physical self—sleeping, eating, moving, breathing—isn't optional self-care. It's survival care. Your body is carrying an enormous burden. Treat it with gentleness."
+          quote="Grief lives in the body as much as the mind. Tending to your physical self---sleeping, eating, moving, breathing---isn't optional self-care. It's survival care. Your body is carrying an enormous burden. Treat it with gentleness."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -1081,7 +1081,7 @@ export const griefLossArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Grief affects the body, but your body also needs care to process grief. The two are intertwined. Be patient with yourself. Rest. Eat. Move gently. Breathe. Your body knows how to heal—give it what it needs to do so. And remember: physical symptoms of grief are normal, but they're not something you have to suffer through alone. Reach out for support when you need it.
+          Grief affects the body, but your body also needs care to process grief. The two are intertwined. Be patient with yourself. Rest. Eat. Move gently. Breathe. Your body knows how to heal---give it what it needs to do so. And remember: physical symptoms of grief are normal, but they're not something you have to suffer through alone. Reach out for support when you need it.
         </p>
       </>
     ),
@@ -1145,7 +1145,7 @@ export const griefLossArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "How long will this last?" It's one of the first questions grieving people ask. They want to know when the pain will ease, when they'll feel normal again, when they can stop crying at random moments. The truthful answer—that there's no universal timeline—feels unhelpful. But research does reveal patterns that can provide guidance without dictating a deadline.
+            "How long will this last?" It's one of the first questions grieving people ask. They want to know when the pain will ease, when they'll feel normal again, when they can stop crying at random moments. The truthful answer---that there's no universal timeline---feels unhelpful. But research does reveal patterns that can provide guidance without dictating a deadline.
           </p>
           <p className="mb-6">
             Grief is highly individual <Citation id="4" index={4} source="Death Studies" year="2021" tier={1} />. Variables like relationship closeness, circumstances of death, available support, prior losses, and personal coping style all influence how long acute grief lasts. However, longitudinal studies tracking bereaved people over time show general trajectories that most people follow <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />.
@@ -1168,7 +1168,7 @@ export const griefLossArticlesB: Article[] = [
                 <div>
                   <p className="mb-4"><strong>Most common pattern.</strong> Low levels of grief symptoms throughout, with brief spike immediately after loss that quickly returns to baseline.</p>
                   <p className="mb-4">These people experience sadness and miss the deceased, but functioning remains relatively stable. They adapt fairly quickly.</p>
-                  <p><strong>This doesn't mean they didn't love the person or aren't grieving—they're just naturally resilient.</strong></p>
+                  <p><strong>This doesn't mean they didn't love the person or aren't grieving---they're just naturally resilient.</strong></p>
                 </div>
               ),
             },
@@ -1177,7 +1177,7 @@ export const griefLossArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">High distress initially that gradually decreases over 6-12 months, reaching low levels by end of first year.</p>
-                  <p className="mb-4">This is what many people think of as "normal grief"—intense pain that slowly eases with time.</p>
+                  <p className="mb-4">This is what many people think of as "normal grief"---intense pain that slowly eases with time.</p>
                   <p><strong>Timeline:</strong> Acute phase (first 3 months), gradual improvement (3-12 months), stabilization (12+ months).</p>
                 </div>
               ),
@@ -1187,7 +1187,7 @@ export const griefLossArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">High distress that doesn't significantly decrease over time. Grief remains intense years later.</p>
-                  <p className="mb-4">This pattern indicates prolonged grief disorder—grief that doesn't naturally resolve and requires intervention.</p>
+                  <p className="mb-4">This pattern indicates prolonged grief disorder---grief that doesn't naturally resolve and requires intervention.</p>
                   <p><strong>Key marker:</strong> No improvement in grief intensity between 6 months and 2+ years post-loss.</p>
                 </div>
               ),
@@ -1211,7 +1211,7 @@ export const griefLossArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>The majority of bereaved people (60-70%) fall into resilience or recovery patterns—meaning they experience grief but adapt without developing clinical disorders. This challenges the cultural narrative that "normal grief" must be prolonged and debilitating <Citation id="2" index={2} source="JAMA" year="2007" tier={1} />.</p>
+          <p>The majority of bereaved people (60-70%) fall into resilience or recovery patterns---meaning they experience grief but adapt without developing clinical disorders. This challenges the cultural narrative that "normal grief" must be prolonged and debilitating <Citation id="2" index={2} source="JAMA" year="2007" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="what-changes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1254,18 +1254,18 @@ export const griefLossArticlesB: Article[] = [
           Yearning: The Core of Grief
         </h2>
         <p className="mb-6">
-          Research shows <strong>yearning</strong>—intense longing for the deceased—is the most specific and persistent grief symptom <Citation id="3" index={3} source="American Journal of Psychiatry" year="2019" tier={1} />:
+          Research shows <strong>yearning</strong>---intense longing for the deceased---is the most specific and persistent grief symptom <Citation id="3" index={3} source="American Journal of Psychiatry" year="2019" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Yearning peaks around 4-6 months post-loss (when shock wears off and reality sets in)</li>
           <li>For most, yearning gradually decreases over 12-24 months</li>
           <li>Yearning that remains intense beyond 12 months is a key marker of prolonged grief disorder</li>
-          <li>Low-level yearning can persist indefinitely—this is normal, not pathological</li>
+          <li>Low-level yearning can persist indefinitely---this is normal, not pathological</li>
         </ul>
 
         <QuoteBlock
-          quote="You never stop missing them. The rawness eases, but the love—and the loss—remains. A decade later, you might still have a moment where you reach for the phone to call them before remembering. That's not pathology. That's love."
+          quote="You never stop missing them. The rawness eases, but the love---and the loss---remains. A decade later, you might still have a moment where you reach for the phone to call them before remembering. That's not pathology. That's love."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -1282,7 +1282,7 @@ export const griefLossArticlesB: Article[] = [
               id: 'relationship',
               title: 'Closeness of relationship',
               content: (
-                <p>Loss of primary attachment figures (spouse, child, parent in childhood) typically involves longer, more intense grief than loss of more distant relationships. But exceptions abound—a close friend's death can be as devastating as family.</p>
+                <p>Loss of primary attachment figures (spouse, child, parent in childhood) typically involves longer, more intense grief than loss of more distant relationships. But exceptions abound---a close friend's death can be as devastating as family.</p>
               ),
             },
             {
@@ -1349,7 +1349,7 @@ export const griefLossArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Prolonged grief is not a failure or weakness—it's a diagnosable condition with effective treatment (Complicated Grief Therapy). Seeking help is not giving up on the deceased; it's honoring them by reclaiming your life.
+          Prolonged grief is not a failure or weakness---it's a diagnosable condition with effective treatment (Complicated Grief Therapy). Seeking help is not giving up on the deceased; it's honoring them by reclaiming your life.
         </p>
 
         <h2 id="no-timeline" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1373,10 +1373,10 @@ export const griefLossArticlesB: Article[] = [
             title: 'Reality',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Grief is individual—no universal timeline</li>
+                <li>Grief is individual---no universal timeline</li>
                 <li>Acute grief typically eases in 6-24 months for most people</li>
                 <li>Some level of grief may persist indefinitely</li>
-                <li>Timeline doesn't reflect love—resilience and grief intensity aren't inversely related</li>
+                <li>Timeline doesn't reflect love---resilience and grief intensity aren't inversely related</li>
                 <li>Both quick adaptation and prolonged grief can be normal</li>
               </ul>
             ),

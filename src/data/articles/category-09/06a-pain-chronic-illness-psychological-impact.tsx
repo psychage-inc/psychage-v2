@@ -93,10 +93,10 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Chronic pain—pain lasting beyond normal healing time, typically 3+ months—affects over 50 million Americans. But here's what's surprising: the intensity of chronic pain often has little to do with tissue damage. Pain is created by the brain, and psychological factors profoundly influence how much pain you experience.
+            Chronic pain---pain lasting beyond normal healing time, typically 3+ months---affects over 50 million Americans. But here's what's surprising: the intensity of chronic pain often has little to do with tissue damage. Pain is created by the brain, and psychological factors profoundly influence how much pain you experience.
           </p>
           <p className="mb-6">
-            Understanding the psychology of pain doesn't mean pain is "all in your head" or not real. It means recognizing that pain is a complex experience involving sensation, emotion, cognition, and context—all processed by your brain <Citation id="1" index={1} source="Pain" year="2019" tier={1} />.
+            Understanding the psychology of pain doesn't mean pain is "all in your head" or not real. It means recognizing that pain is a complex experience involving sensation, emotion, cognition, and context---all processed by your brain <Citation id="1" index={1} source="Pain" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           Traditional models viewed pain as a simple alarm system: tissue damage → nerve signals → pain. But modern neuroscience reveals pain is far more complex <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          Pain is your brain's interpretation of threat, not a direct readout of tissue damage. Your brain integrates multiple inputs—sensory signals, past experiences, beliefs, emotions, context—to decide how much pain to create.
+          Pain is your brain's interpretation of threat, not a direct readout of tissue damage. Your brain integrates multiple inputs---sensory signals, past experiences, beliefs, emotions, context---to decide how much pain to create.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -159,7 +159,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           Central Sensitization: When the Alarm System Gets Stuck
         </h2>
         <p className="mb-6">
-          In chronic pain, the nervous system often undergoes central sensitization—becoming hypersensitive to stimuli <Citation id="3" index={3} source="The Journal of Pain" year="2018" tier={1} />. Think of it like a faulty fire alarm that triggers from burnt toast instead of actual fires.
+          In chronic pain, the nervous system often undergoes central sensitization---becoming hypersensitive to stimuli <Citation id="3" index={3} source="The Journal of Pain" year="2018" tier={1} />. Think of it like a faulty fire alarm that triggers from burnt toast instead of actual fires.
         </p>
         <p className="mb-6">
           Changes include:
@@ -230,7 +230,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           2. Emotional State
         </h3>
         <p className="mb-6">
-          Negative emotions—anxiety, depression, anger—increase pain intensity <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />. The brain regions processing emotion and pain overlap significantly. When you're distressed, pain hurts more.
+          Negative emotions---anxiety, depression, anger---increase pain intensity <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />. The brain regions processing emotion and pain overlap significantly. When you're distressed, pain hurts more.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -324,20 +324,20 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
             <li>You should just "think positive" and it will go away</li>
             <li>Medical evaluation isn't needed</li>
           </ul>
-          <p className="mt-4">It means pain is real, complex, and influenced by brain processing—which opens doors to effective treatment.</p>
+          <p className="mt-4">It means pain is real, complex, and influenced by brain processing---which opens doors to effective treatment.</p>
         </ArticleCallout>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Chronic pain is a biopsychosocial experience—biological, psychological, and social factors all contribute. Recognizing this doesn't diminish pain's reality; it explains why pain can persist after tissues heal and why psychological interventions work.
+          Chronic pain is a biopsychosocial experience---biological, psychological, and social factors all contribute. Recognizing this doesn't diminish pain's reality; it explains why pain can persist after tissues heal and why psychological interventions work.
         </p>
         <p className="mb-6">
           The brain creates pain to protect you. When chronic, the protection system becomes overactive. Understanding this empowers you to work with your nervous system to reduce sensitization and retrain pain pathways.
         </p>
         <p className="mb-6">
-          Pain is real, complex, and—importantly—modifiable through comprehensive approaches addressing body and mind together.
+          Pain is real, complex, and---importantly---modifiable through comprehensive approaches addressing body and mind together.
         </p>
       </>
     ),
@@ -409,7 +409,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "This pain will never end.", "Something must be seriously wrong.", "I can't handle this." If these thoughts sound familiar, you may be experiencing pain catastrophizing—a pattern of magnifying pain's threat that actually makes pain worse.
+            "This pain will never end.", "Something must be seriously wrong.", "I can't handle this." If these thoughts sound familiar, you may be experiencing pain catastrophizing---a pattern of magnifying pain's threat that actually makes pain worse.
           </p>
           <p className="mb-6">
             Pain catastrophizing is one of the most powerful psychological factors influencing chronic pain <Citation id="1" index={1} source="Indian Journal of Psychological Medicine" year="2018" tier={1} />. The good news: recognizing and changing catastrophizing thoughts can significantly reduce pain intensity and disability.
@@ -429,7 +429,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Catastrophizing isn't just worrying about pain—it's a specific pattern of worst-case thinking that amplifies pain's intensity, increases disability, and predicts poorer treatment outcomes.</p>
+          <p>Catastrophizing isn't just worrying about pain---it's a specific pattern of worst-case thinking that amplifies pain's intensity, increases disability, and predicts poorer treatment outcomes.</p>
         </ArticleCallout>
 
         <h2 id="examples-catastrophizing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -459,7 +459,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           1. Attention Amplification
         </h3>
         <p className="mb-6">
-          When you catastrophize, you focus intensely on pain. Attention amplifies perception—the more you focus on pain, the more it hurts. You become hypervigilant to every twinge.
+          When you catastrophize, you focus intensely on pain. Attention amplifies perception---the more you focus on pain, the more it hurts. You become hypervigilant to every twinge.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -621,10 +621,10 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Pain catastrophizing isn't weakness or character flaw—it's an understandable response to threatening sensations. But it genuinely amplifies pain and disability.
+          Pain catastrophizing isn't weakness or character flaw---it's an understandable response to threatening sensations. But it genuinely amplifies pain and disability.
         </p>
         <p className="mb-6">
-          By recognizing catastrophizing patterns and challenging worst-case thinking, you can reduce pain's intensity and your suffering. This doesn't mean denying pain exists or 'thinking positive"—it means relating to pain more realistically and less fearfully.
+          By recognizing catastrophizing patterns and challenging worst-case thinking, you can reduce pain's intensity and your suffering. This doesn't mean denying pain exists or 'thinking positive"---it means relating to pain more realistically and less fearfully.
         </p>
         <p className="mb-6">
           Your thoughts about pain significantly influence how much pain you experience. Changing those thoughts is a learnable skill that can transform your pain experience.
@@ -715,7 +715,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Chronic illness and mental health don't just co-occur—they influence each other in complex, bidirectional ways. Depression can worsen diabetes control. Autoimmune diseases trigger anxiety. Treating mental health improves physical health outcomes, and vice versa.
+            Chronic illness and mental health don't just co-occur---they influence each other in complex, bidirectional ways. Depression can worsen diabetes control. Autoimmune diseases trigger anxiety. Treating mental health improves physical health outcomes, and vice versa.
           </p>
           <p className="mb-6">
             Understanding this intricate relationship is crucial because people with chronic illness have 2-3 times higher rates of depression and anxiety than the general population <Citation id="1" index={1} source="General Hospital Psychiatry" year="2020" tier={1} />. Yet mental health often goes unaddressed in medical care.
@@ -858,7 +858,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Attributed to illness</strong>: 'Of course you're depressed, you're sick' (but it's still treatable!)</li>
-          <li><strong>Symptom overlap</strong>: Fatigue, sleep issues, concentration problems—illness or depression?</li>
+          <li><strong>Symptom overlap</strong>: Fatigue, sleep issues, concentration problems---illness or depression?</li>
           <li><strong>Siloed care</strong>: Medical doctors focus on physical disease; mental health is separate</li>
           <li><strong>Stigma</strong>: Patients fear seeming "weak" or not coping well</li>
           <li><strong>Time constraints</strong>: Brief medical appointments prioritize physical symptoms</li>
@@ -867,14 +867,14 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4"><strong>Important:</strong></p>
-          <p>Feeling depressed or anxious when dealing with chronic illness is common and understandable—but it's not inevitable or something you just have to accept. Mental health symptoms are treatable, and treating them often improves physical health too.</p>
+          <p>Feeling depressed or anxious when dealing with chronic illness is common and understandable---but it's not inevitable or something you just have to accept. Mental health symptoms are treatable, and treating them often improves physical health too.</p>
         </ArticleCallout>
 
         <h2 id="integrated-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Case for Integrated Care
         </h2>
         <p className="mb-6">
-          Integrated care—addressing physical and mental health together—improves outcomes for both <Citation id="4" index={4} source="The Lancet" year="2021" tier={1} />:
+          Integrated care---addressing physical and mental health together---improves outcomes for both <Citation id="4" index={4} source="The Lancet" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Treating depression improves diabetes control, heart disease outcomes, pain management</li>
@@ -917,13 +917,13 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Chronic illness and mental health are deeply intertwined. Ignoring mental health when treating chronic illness—or ignoring physical health when treating mental health—misses half the picture.
+          Chronic illness and mental health are deeply intertwined. Ignoring mental health when treating chronic illness---or ignoring physical health when treating mental health---misses half the picture.
         </p>
         <p className="mb-6">
           The good news: addressing mental health improves physical health outcomes, and vice versa. You don't have to suffer with both. Comprehensive care targeting mind and body together offers the best path to wellbeing.
         </p>
         <p className="mb-6">
-          Living with chronic illness is hard enough. You deserve support for all aspects of your health—physical and mental.
+          Living with chronic illness is hard enough. You deserve support for all aspects of your health---physical and mental.
         </p>
       </>
     ),
@@ -1022,7 +1022,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li><strong>Commitment</strong>: Taking action guided by your values even when pain is present</li>
         </ol>
         <p className="mb-6">
-          The goal isn't pain reduction (though that sometimes happens as a byproduct). The goal is psychological flexibility—being able to fully experience the present moment and persist in valued actions regardless of difficult thoughts and feelings.
+          The goal isn't pain reduction (though that sometimes happens as a byproduct). The goal is psychological flexibility---being able to fully experience the present moment and persist in valued actions regardless of difficult thoughts and feelings.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1042,7 +1042,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li>Acting consistently with who you want to be, not what pain dictates</li>
         </ul>
         <p className="mb-6">
-          Research shows psychological flexibility predicts better pain outcomes—lower disability, less depression, better quality of life—independent of pain intensity <Citation id="5" index={5} source="European Journal of Pain" year="2019" tier={1} />.
+          Research shows psychological flexibility predicts better pain outcomes---lower disability, less depression, better quality of life---independent of pain intensity <Citation id="5" index={5} source="European Journal of Pain" year="2019" tier={1} />.
         </p>
 
         <h2 id="six-core-processes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1092,7 +1092,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
               title: '5. Values',
               description: (
                 <div>
-                  <p className="mb-2">Clarifying what truly matters to you—how you want to live, who you want to be, what gives life meaning.</p>
+                  <p className="mb-2">Clarifying what truly matters to you---how you want to live, who you want to be, what gives life meaning.</p>
                   <p className="italic">Values are directions (like "west"), not destinations you reach.</p>
                 </div>
               ),
@@ -1169,7 +1169,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           Values Work: The Heart of ACT
         </h2>
         <p className="mb-6">
-          ACT emphasizes values—chosen life directions—over goals <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />. Values give direction when pain makes life feel meaningless.
+          ACT emphasizes values---chosen life directions---over goals <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />. Values give direction when pain makes life feel meaningless.
         </p>
         <p className="mb-6">
           Common value domains:
@@ -1190,7 +1190,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           Committed Action: Values in Motion
         </h2>
         <p className="mb-6">
-          Values without action are just ideas. ACT emphasizes committed action—specific behaviors aligned with values, practiced consistently even when difficult.
+          Values without action are just ideas. ACT emphasizes committed action---specific behaviors aligned with values, practiced consistently even when difficult.
         </p>
         <p className="mb-6">
           Example: If "being a present parent" is a value but pain has made you withdraw, committed actions might include:
@@ -1234,7 +1234,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li>Effects maintained at 6-12 month follow-ups</li>
         </ul>
         <p className="mb-6">
-          Notably, pain intensity often doesn't change much—but suffering and disability decrease significantly.
+          Notably, pain intensity often doesn't change much---but suffering and disability decrease significantly.
         </p>
 
         <StatCard
@@ -1293,10 +1293,10 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           ACT offers a profound shift in how you relate to chronic pain. Instead of battling to eliminate pain, you learn to carry it more lightly while moving toward what matters.
         </p>
         <p className="mb-6">
-          This doesn't mean giving up on pain relief—it means not making pain relief a prerequisite for living well. You can build a meaningful life now, with pain present, rather than waiting for pain to disappear first.
+          This doesn't mean giving up on pain relief---it means not making pain relief a prerequisite for living well. You can build a meaningful life now, with pain present, rather than waiting for pain to disappear first.
         </p>
         <p className="mb-6">
-          Pain may be unavoidable. Suffering—the struggle against pain and the life lost to it—is more negotiable. ACT teaches you to reduce suffering while reclaiming your life.
+          Pain may be unavoidable. Suffering---the struggle against pain and the life lost to it---is more negotiable. ACT teaches you to reduce suffering while reclaiming your life.
         </p>
       </>
     ),
@@ -1383,11 +1383,11 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li>Commuting to work: -1 spoon</li>
         </ul>
         <p className="mb-6">
-          By mid-morning, the spoons were nearly gone—but the day had barely started. The friend suddenly understood: healthy people have unlimited spoons, but chronic illness means starting each day with a finite number.
+          By mid-morning, the spoons were nearly gone---but the day had barely started. The friend suddenly understood: healthy people have unlimited spoons, but chronic illness means starting each day with a finite number.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The power of Spoon Theory isn't just tracking energy—it's the visceral understanding it creates. When you can SEE someone running out of spoons, the invisible limitations of chronic illness become visible.</p>
+          <p>The power of Spoon Theory isn't just tracking energy---it's the visceral understanding it creates. When you can SEE someone running out of spoons, the invisible limitations of chronic illness become visible.</p>
         </ArticleCallout>
 
         <h2 id="how-spoon-theory-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1399,9 +1399,9 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Spoons = Units of energy</strong>: Each person starts the day with a certain number of spoons</li>
           <li><strong>Every activity costs spoons</strong>: Basic tasks healthy people do automatically (showering, cooking, socializing) all cost energy</li>
-          <li><strong>Spoons are finite</strong>: Once you run out, you're done—no matter what still needs doing</li>
+          <li><strong>Spoons are finite</strong>: Once you run out, you're done---no matter what still needs doing</li>
           <li><strong>Different tasks cost different amounts</strong>: Some activities are spoon-intensive (doctor visits, grocery shopping), others less so (reading, gentle stretching)</li>
-          <li><strong>You must budget carefully</strong>: Choices matter—if you use 5 spoons on something optional, you won't have them for essentials later</li>
+          <li><strong>You must budget carefully</strong>: Choices matter---if you use 5 spoons on something optional, you won't have them for essentials later</li>
           <li><strong>You can't borrow tomorrow's spoons without consequences</strong>: Overdoing it today means starting tomorrow with fewer spoons (or in 'spoon debt')</li>
         </ul>
 
@@ -1409,10 +1409,10 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           Healthy People vs. "Spoonies"
         </h2>
         <p className="mb-6">
-          Healthy people don't count spoons—they have a seemingly unlimited supply that replenishes overnight. They can:
+          Healthy people don't count spoons---they have a seemingly unlimited supply that replenishes overnight. They can:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Work a full day, go to the gym, cook dinner, socialize—all in one day</li>
+          <li>Work a full day, go to the gym, cook dinner, socialize---all in one day</li>
           <li>Have a busy week and still function</li>
           <li>Push through when tired and recover quickly</li>
         </ul>
@@ -1500,7 +1500,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>"I'd love to come, but that would use all my spoons and I have a doctor's appointment tomorrow"</li>
-          <li>"I'm out of spoons for today—can we reschedule?"</li>
+          <li>"I'm out of spoons for today---can we reschedule?"</li>
           <li>"Grocery shopping costs me 5 spoons. Can you come with me so it costs fewer?"</li>
           <li>"I spent all my spoons at work today, so I don't have energy to clean"</li>
         </ul>
@@ -1570,7 +1570,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           Spoon Theory offers a simple, relatable way to explain the invisible energy limitations of chronic illness. It validates the difficult choices people with chronic conditions face daily and helps others understand why "just pushing through" isn't an option.
         </p>
         <p className="mb-6">
-          Whether you use spoons, batteries, or another metaphor, the core truth remains: energy is finite when you're chronically ill. Managing it wisely—and communicating your limits clearly—is essential for maintaining quality of life.
+          Whether you use spoons, batteries, or another metaphor, the core truth remains: energy is finite when you're chronically ill. Managing it wisely---and communicating your limits clearly---is essential for maintaining quality of life.
         </p>
         <p className="mb-6">
           You're not lazy for running out of spoons. You're living with a real physiological limitation that requires thoughtful management and deserves understanding from others.

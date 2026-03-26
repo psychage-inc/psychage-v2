@@ -14,7 +14,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
     id: catId(21),
     slug: 'parental-burnout-when-the-job-that-matters-most-depletes-you',
     title: 'Parental Burnout: When the Job That Matters Most Depletes You',
-    description: 'Understand parental burnout — exhaustion, detachment, and overwhelm from caregiving demands.',
+    description: 'Understand parental burnout --- exhaustion, detachment, and overwhelm from caregiving demands.',
     image: "/images/articles/cat06/cover-021.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 7,
@@ -36,7 +36,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Parental burnout is not just tiredness — it's physical, emotional, and mental exhaustion from chronic caregiving stress.
+            Parental burnout is not just tiredness --- it's physical, emotional, and mental exhaustion from chronic caregiving stress.
           </p>
           <p className="mb-6">
             First identified in 2017, parental burnout is now recognized as a distinct syndrome affecting millions <Citation id="1" index={1} source="Clinical Psychological Science" year="2020" tier={1} />.
@@ -121,7 +121,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
             Postpartum depression affects 1 in 7 mothers, yet many suffer in silence, believing they should feel only joy.
           </p>
           <p className="mb-6">
-            PPD is not weakness or a character flaw — it's a medical condition requiring treatment <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
+            PPD is not weakness or a character flaw --- it's a medical condition requiring treatment <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -198,7 +198,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Nearly every parent experiences guilt — the gnawing feeling that they're not doing enough, doing too much, or doing it wrong.
+            Nearly every parent experiences guilt --- the gnawing feeling that they're not doing enough, doing too much, or doing it wrong.
           </p>
           <p className="mb-6">
             Parenting guilt is nearly universal, yet rarely discussed openly <Citation id="1" index={1} source="Parenting" year="2021" tier={1} />.
@@ -237,7 +237,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
           The Good Enough Parent
         </h2>
         <p className="mb-6">
-          Pediatrician Donald Winnicott introduced "good enough parenting" — meeting children's needs adequately without perfection <Citation id="5" index={5} source="Journal of Child Psychology" year="2021" tier={1} />.
+          Pediatrician Donald Winnicott introduced "good enough parenting" --- meeting children's needs adequately without perfection <Citation id="5" index={5} source="Journal of Child Psychology" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip">
@@ -400,7 +400,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
         </h2>
         <p className="mb-6"><Citation id="8" index={8} source="Journal of Family Nursing" year="2020" tier={1} />:</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Seek your own therapy — not just family therapy</li>
+          <li>Seek your own therapy --- not just family therapy</li>
           <li>Join parent support groups <Citation id="4" index={4} source="Journal of Clinical Child Psychology" year="2020" tier={1} /></li>
           <li>Build respite care network</li>
           <li>Set boundaries to protect your wellbeing</li>
@@ -408,7 +408,7 @@ export const parentingStressMentalHealthArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>You cannot pour from an empty cup. Taking care of yourself isn't selfish — it's necessary for sustainable caregiving <Citation id="7" index={7} source="Journal of Family Studies" year="2021" tier={1} />.</p>
+          <p>You cannot pour from an empty cup. Taking care of yourself isn't selfish --- it's necessary for sustainable caregiving <Citation id="7" index={7} source="Journal of Family Studies" year="2021" tier={1} />.</p>
         </ArticleCallout>
       </>
     ),

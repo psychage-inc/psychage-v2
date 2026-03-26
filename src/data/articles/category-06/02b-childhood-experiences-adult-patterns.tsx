@@ -39,7 +39,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
             Nearly half of marriages end in divorce, meaning millions of children navigate this transition. What does research reveal about long-term effects?
           </p>
           <p className="mb-6">
-            The answer is nuanced. Divorce itself is not deterministic — outcomes depend heavily on how the divorce is handled <Citation id="2" index={2} source="Psychological Bulletin" year="2020" tier={1} />.
+            The answer is nuanced. Divorce itself is not deterministic --- outcomes depend heavily on how the divorce is handled <Citation id="2" index={2} source="Psychological Bulletin" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -135,7 +135,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
             Parents who shield children from all risk and difficulty may prevent the very resilience they hope to build.
           </p>
           <p className="mb-6">
-            Overprotective parenting — also called helicopter parenting — stems from love and fear, but research shows it can hinder development <Citation id="1" index={1} source="Journal of Child and Family Studies" year="2021" tier={1} />.
+            Overprotective parenting --- also called helicopter parenting --- stems from love and fear, but research shows it can hinder development <Citation id="1" index={1} source="Journal of Child and Family Studies" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -222,7 +222,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Childhood bullying is not just a normal part of growing up — it can create lasting psychological wounds.
+            Childhood bullying is not just a normal part of growing up --- it can create lasting psychological wounds.
           </p>
           <p className="mb-6">
             Research consistently shows that being bullied in childhood increases risk for mental health problems decades later <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
@@ -311,10 +311,10 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Inside every adult lives the child they once were — with unmet needs, unprocessed hurts, and persistent hopes.
+            Inside every adult lives the child they once were --- with unmet needs, unprocessed hurts, and persistent hopes.
           </p>
           <p className="mb-6">
-            The inner child is not just metaphor but a psychological reality — the part of you that still carries childhood experiences and needs <Citation id="1" index={1} source="Psychotherapy" year="2021" tier={1} />.
+            The inner child is not just metaphor but a psychological reality --- the part of you that still carries childhood experiences and needs <Citation id="1" index={1} source="Psychotherapy" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -356,12 +356,12 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
             {
               id: 'rescripting',
               title: 'Imagery Rescripting',
-              content: <p>Revisiting painful childhood memories in imagination and changing the outcome — giving yourself what you needed then.</p>,
+              content: <p>Revisiting painful childhood memories in imagination and changing the outcome --- giving yourself what you needed then.</p>,
             },
             {
               id: 'reparenting',
               title: 'Self-Reparenting',
-              content: <p>Providing for yourself now what your parents couldn't provide then — validation, safety, unconditional acceptance.</p>,
+              content: <p>Providing for yourself now what your parents couldn't provide then --- validation, safety, unconditional acceptance.</p>,
             },
             {
               id: 'parts-work',
@@ -456,7 +456,7 @@ export const childhoodExperiencesAdultPatternsArticlesB: Article[] = [
             },
             {
               title: 'Meet your own needs',
-              description: <p>Practice identifying what you need in the moment and giving it to yourself — rest, comfort, validation, fun <Citation id="6" index={6} source="Journal of Health Psychology" year="2020" tier={1} />.</p>,
+              description: <p>Practice identifying what you need in the moment and giving it to yourself --- rest, comfort, validation, fun <Citation id="6" index={6} source="Journal of Health Psychology" year="2020" tier={1} />.</p>,
             },
             {
               title: 'Set healthy boundaries',

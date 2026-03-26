@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-useless-escape */
 // ============================================================================
-// Category 18 — Women's Mental Health | Subcategory 04a
+// Category 18 --- Women's Mental Health | Subcategory 04a
 // Trauma and PTSD in Women (Articles 31-35)
 // ============================================================================
 
@@ -46,14 +46,14 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The profound recognition that gender-based violence is not about individual pathology or "bad relationships"—it's structural violence rooted in power and gender inequality, and healing requires both individual support and societal transformation.`,
+    sparkMoment: `The profound recognition that gender-based violence is not about individual pathology or "bad relationships"---it's structural violence rooted in power and gender inequality, and healing requires both individual support and societal transformation.`,
 
     practicalExercise: {
       title: `Safety and Support Assessment`,
       steps: [
         {
           title: `Assess your current safety`,
-          description: `If experiencing violence: Are you in immediate danger? Do you have a safe place to go? List trusted people who could help. Safety is the foundation—other healing cannot occur without it.`,
+          description: `If experiencing violence: Are you in immediate danger? Do you have a safe place to go? List trusted people who could help. Safety is the foundation---other healing cannot occur without it.`,
         },
         {
           title: `Recognize the patterns`,
@@ -105,7 +105,7 @@ export const articles: Article[] = [
           For three years, Aisha's partner controlled every aspect of her life: where she went,
           who she saw, what she wore, how she spent money. He monitored her phone, isolated her
           from family, and exploded in rage over minor infractions. <Citation index={1} /> The
-          physical violence was sporadic—mostly he used psychological tactics, threats, and
+          physical violence was sporadic---mostly he used psychological tactics, threats, and
           degradation. Aisha felt like she was losing her mind: anxious, depressed, unable to make
           simple decisions. When she finally disclosed to her doctor, the response was, "Why don't
           you just leave?" As if it were that simple. As if fear, economic dependence, and years
@@ -123,7 +123,7 @@ export const articles: Article[] = [
           Gender-based violence (GBV) is violence directed against individuals based on their
           gender, rooted in gender inequality and power imbalances. <Citation index={2} /> While
           people of all genders experience violence, GBV disproportionately affects women and
-          girls. Forms of GBV include intimate partner violence (IPV)—physical violence (hitting,
+          girls. Forms of GBV include intimate partner violence (IPV)---physical violence (hitting,
           choking, burning, using weapons), sexual violence (forced sex, reproductive coercion,
           sexual assault), psychological violence (threats, humiliation, isolation, surveillance,
           degradation), and economic abuse (controlling finances, preventing work, creating
@@ -142,13 +142,13 @@ export const articles: Article[] = [
         <ArticleCallout
           type="warning"
           title="Why Leaving Is Not Simple"
-          content="Asking 'Why doesn't she just leave?' misunderstands the dynamics of intimate partner violence. Barriers include: fear (most dangerous time for victims is when leaving or after leaving—risk of homicide increases), economic dependence (abusers often control finances, prevent work, destroy credit), isolation (cut off from support networks), children (fear of losing custody, harming children by leaving), trauma bonding (intermittent reinforcement creates powerful psychological attachment), and systemic failures (lack of affordable housing, inadequate legal protection, victim-blaming attitudes). Leaving is a process, not a single decision."
+          content="Asking 'Why doesn't she just leave?' misunderstands the dynamics of intimate partner violence. Barriers include: fear (most dangerous time for victims is when leaving or after leaving---risk of homicide increases), economic dependence (abusers often control finances, prevent work, destroy credit), isolation (cut off from support networks), children (fear of losing custody, harming children by leaving), trauma bonding (intermittent reinforcement creates powerful psychological attachment), and systemic failures (lack of affordable housing, inadequate legal protection, victim-blaming attitudes). Leaving is a process, not a single decision."
         />
 
         <h2>Mental Health Consequences of Gender-Based Violence</h2>
         <p>
           <Citation index={3} /> GBV creates profound and lasting mental health impacts. PTSD is
-          one of the most common outcomes—intrusive memories or flashbacks of violence, nightmares,
+          one of the most common outcomes---intrusive memories or flashbacks of violence, nightmares,
           hypervigilance and exaggerated startle response, avoidance of reminders, emotional
           numbing or detachment, and feeling constantly unsafe even after violence has ended.
           Depression affects up to 60% of IPV survivors, characterized by persistent sadness and
@@ -157,15 +157,15 @@ export const articles: Article[] = [
           suicidal ideation (IPV survivors are at significantly elevated suicide risk).
         </p>
         <p>
-          Anxiety disorders are extremely common—generalized anxiety (constant worry, inability to
+          Anxiety disorders are extremely common---generalized anxiety (constant worry, inability to
           relax), panic attacks (often triggered by reminders of violence), and social anxiety
           (particularly if violence was public or involved humiliation). Complex PTSD often
           develops with prolonged violence, involving difficulties with emotion regulation
           (intense, unpredictable emotional responses), negative self-concept (profound shame,
           guilt, feeling permanently damaged), and interpersonal difficulties (distrust, difficulty
           with intimacy, revictimization vulnerability). Substance use may develop as coping
-          mechanism for unbearable emotions or chronic pain. Dissociation—feeling disconnected
-          from body, emotions, or reality—commonly occurs during violence and may persist as
+          mechanism for unbearable emotions or chronic pain. Dissociation---feeling disconnected
+          from body, emotions, or reality---commonly occurs during violence and may persist as
           chronic symptom.
         </p>
 
@@ -189,23 +189,23 @@ export const articles: Article[] = [
         </p>
         <p>
           These tactics systematically erode sense of self, agency, and reality. Many survivors
-          describe feeling like they "lost themselves"—no longer recognizing who they are or what
+          describe feeling like they "lost themselves"---no longer recognizing who they are or what
           they believe. The psychological impacts often outlast physical injuries. Broken bones
           heal; shattered self-concept and pervasive sense of worthlessness can persist for years.
-          This is why "but he never hit me" doesn't mean there wasn't violence—psychological abuse
+          This is why "but he never hit me" doesn't mean there wasn't violence---psychological abuse
           IS violence and causes profound trauma.
         </p>
 
         <ArticleCallout
           type="info"
           title="Trauma Bonding and Cognitive Dissonance"
-          content="Trauma bonding—powerful emotional attachment to abuser—is common and often misunderstood. It develops through intermittent reinforcement: abuse followed by apology, kindness, or affection creates addictive cycle. Cognitive dissonance (holding contradictory beliefs: 'He loves me' and 'He hurts me') is resolved by minimizing violence ('It wasn't that bad'), blaming self ('I provoked him'), or believing promises to change. This is not weakness—it's predictable psychological response to trauma. Breaking trauma bonds requires safety, support, and often professional help."
+          content="Trauma bonding---powerful emotional attachment to abuser---is common and often misunderstood. It develops through intermittent reinforcement: abuse followed by apology, kindness, or affection creates addictive cycle. Cognitive dissonance (holding contradictory beliefs: 'He loves me' and 'He hurts me') is resolved by minimizing violence ('It wasn't that bad'), blaming self ('I provoked him'), or believing promises to change. This is not weakness---it's predictable psychological response to trauma. Breaking trauma bonds requires safety, support, and often professional help."
         />
 
         <h3>Recovery and Treatment</h3>
         <p>
           Effective treatment for GBV trauma must be trauma-informed and prioritize safety. Safety
-          planning comes first—mental health treatment cannot be effective while violence
+          planning comes first---mental health treatment cannot be effective while violence
           continues or threat remains. Work with domestic violence advocates to create safety plan,
           access legal protection if possible (restraining orders, though recognize limitations),
           develop emergency exit strategy, and secure financial resources. Only when baseline
@@ -218,16 +218,16 @@ export const articles: Article[] = [
           to reclaim personal story and challenge narratives of worthlessness or culpability.
           Therapists must understand power and control dynamics, validate rather than pathologize
           responses to violence, support autonomy rather than directing choices, and recognize that
-          healing is not linear—there will be setbacks and that's normal.
+          healing is not linear---there will be setbacks and that's normal.
         </p>
 
         <p>
           Reclaiming agency and identity involves recognizing that violence was not your fault
-          (perpetrator made choice to use violence—nothing you did caused or justified it),
+          (perpetrator made choice to use violence---nothing you did caused or justified it),
           challenging internalized beliefs about worthlessness, rediscovering who you are separate
           from abuse, rebuilding support networks and connections, and developing sense of personal
           power and efficacy. Support groups with other survivors reduce isolation and provide
-          validation. Many find advocacy work or peer support roles empowering—using their
+          validation. Many find advocacy work or peer support roles empowering---using their
           experience to help others.
         </p>
 
@@ -239,7 +239,7 @@ export const articles: Article[] = [
 
         <h3>Societal and Systemic Change</h3>
         <p>
-          Individual healing is necessary but insufficient—GBV is structural problem requiring
+          Individual healing is necessary but insufficient---GBV is structural problem requiring
           systemic solutions. This includes challenging cultural norms that normalize violence
           against women, excuse perpetrators ("boys will be boys"), and blame victims, strengthening
           legal protections and ensuring enforcement (prosecution of perpetrators, protective
@@ -258,7 +258,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="If You're Experiencing Violence"
-          content="Safety resources: National Domestic Violence Hotline (1-800-799-7233, text START to 88788, or chat at thehotline.org), National Sexual Assault Hotline (1-800-656-4673), local domestic violence agencies for shelter, advocacy, legal help. When seeking help: use safe phone/computer (abuser may monitor), clear browser history, have safety plan, know that you're not alone and this is not your fault. Leaving is most dangerous time—work with advocates to plan safely."
+          content="Safety resources: National Domestic Violence Hotline (1-800-799-7233, text START to 88788, or chat at thehotline.org), National Sexual Assault Hotline (1-800-656-4673), local domestic violence agencies for shelter, advocacy, legal help. When seeking help: use safe phone/computer (abuser may monitor), clear browser history, have safety plan, know that you're not alone and this is not your fault. Leaving is most dangerous time---work with advocates to plan safely."
         />
       </>
     ),
@@ -280,7 +280,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sexual Assault', 'Rape', 'Trauma Recovery', 'PTSD'],
 
-    summary: `Sexual assault affects one in six women in the United States, causing profound mental health consequences including PTSD (up to 94% immediately post-assault), depression, anxiety, substance use, and disrupted sense of safety, trust, and bodily autonomy. Assault is never the survivor's fault—responsibility rests entirely with the perpetrator. Recovery involves processing trauma without being re-traumatized, challenging self-blame and shame, reclaiming body and sexuality (if and when ready), and rebuilding sense of safety and trust. Trauma-informed care, specialized sexual assault services, and evidence-based treatments like PE and CPT support healing. Recovery is possible but not linear—there is no timeline.`,
+    summary: `Sexual assault affects one in six women in the United States, causing profound mental health consequences including PTSD (up to 94% immediately post-assault), depression, anxiety, substance use, and disrupted sense of safety, trust, and bodily autonomy. Assault is never the survivor's fault---responsibility rests entirely with the perpetrator. Recovery involves processing trauma without being re-traumatized, challenging self-blame and shame, reclaiming body and sexuality (if and when ready), and rebuilding sense of safety and trust. Trauma-informed care, specialized sexual assault services, and evidence-based treatments like PE and CPT support healing. Recovery is possible but not linear---there is no timeline.`,
 
     keyFacts: [
       {
@@ -299,7 +299,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The liberating truth that healing from sexual assault doesn't require forgiveness of the perpetrator, resumption of "normal" sexuality, or complete elimination of all symptoms—it means reclaiming your right to define your own recovery and live a meaningful life on your terms.`,
+    sparkMoment: `The liberating truth that healing from sexual assault doesn't require forgiveness of the perpetrator, resumption of "normal" sexuality, or complete elimination of all symptoms---it means reclaiming your right to define your own recovery and live a meaningful life on your terms.`,
 
     practicalExercise: {
       title: `Post-Assault Safety and Support`,
@@ -310,7 +310,7 @@ export const articles: Article[] = [
         },
         {
           title: `Allow all reactions`,
-          description: `There's no "correct" way to react. Shock, numbness, crying, anger, wanting to shower, not wanting to talk—all are normal. Don't judge your responses.`,
+          description: `There's no "correct" way to react. Shock, numbness, crying, anger, wanting to shower, not wanting to talk---all are normal. Don't judge your responses.`,
         },
         {
           title: `Access specialized support`,
@@ -318,7 +318,7 @@ export const articles: Article[] = [
         },
         {
           title: `Prioritize your needs`,
-          description: `You get to decide: whether to report (or not), whether to tell others (or not), what kind of support you want, when/if to pursue therapy. This is about reclaiming agency—make choices that feel right for you.`,
+          description: `You get to decide: whether to report (or not), whether to tell others (or not), what kind of support you want, when/if to pursue therapy. This is about reclaiming agency---make choices that feel right for you.`,
         },
       ],
       toolLink: '/crisis',
@@ -357,9 +357,9 @@ export const articles: Article[] = [
         <p>
           Three months after the assault, Jasmine still couldn't sleep through the night. Every
           time she closed her eyes, she was back in that room, feeling trapped and terrified.{' '}
-          <Citation index={1} /> During the day, she felt numb—going through motions but not
+          <Citation index={1} /> During the day, she felt numb---going through motions but not
           really present. She'd had one panic attack at a party when someone touched her shoulder
-          unexpectedly. Her friends said she should "move on"—the assault was months ago. But
+          unexpectedly. Her friends said she should "move on"---the assault was months ago. But
           Jasmine felt stuck, unable to move forward or back. When she finally called a sexual
           assault crisis line, the counselor said something that made her cry: "There's no
           timeline for healing. Your reactions are normal responses to abnormal trauma."
@@ -376,7 +376,7 @@ export const articles: Article[] = [
           The hours and days following sexual assault are critical. <Citation index={2} />
           Immediate medical care should address physical injuries, sexually transmitted infection
           prevention (prophylactic antibiotics), emergency contraception if assault involved
-          penetration, and forensic evidence collection (if considering reporting—though this
+          penetration, and forensic evidence collection (if considering reporting---though this
           doesn't commit you to reporting). Sexual Assault Nurse Examiners (SANEs) are specially
           trained to provide trauma-informed care.
         </p>
@@ -384,12 +384,12 @@ export const articles: Article[] = [
           Crisis emotional support is essential. Contact sexual assault crisis hotlines (National
           Sexual Assault Hotline 1-800-656-4673) for immediate support, crisis counseling, and
           connection to local resources. Advocates can accompany you to hospital or police if
-          desired. Immediate psychological reactions vary widely—there's no "right" way to react.
+          desired. Immediate psychological reactions vary widely---there's no "right" way to react.
           Common responses include shock or numbness (feeling detached, going through motions
           automatically), intense fear or panic, anger or rage, crying or emotional volatility,
           need to shower or clean (understandable but complicates evidence collection if planning
           to report), wanting to be alone or not wanting to be left alone, difficulty remembering
-          details (trauma affects memory—this is normal, not lying), and self-blame or shame.
+          details (trauma affects memory---this is normal, not lying), and self-blame or shame.
         </p>
 
         <ArticleCallout
@@ -401,7 +401,7 @@ export const articles: Article[] = [
         <h2>Mental Health Consequences</h2>
         <p>
           <Citation index={3} /> Sexual assault creates profound psychological trauma. PTSD is
-          extremely common—up to 94% of assault survivors experience acute stress disorder in the
+          extremely common---up to 94% of assault survivors experience acute stress disorder in the
           immediate aftermath (symptoms in first month), and 30-50% develop chronic PTSD.
           Symptoms include intrusive re-experiencing (flashbacks, nightmares, intrusive memories),
           avoidance (of reminders, sex, relationships, or emotions), hyperarousal (hypervigilance,
@@ -414,7 +414,7 @@ export const articles: Article[] = [
           goods, and elevated suicide risk (survivors are at 4-10 times higher risk). Anxiety
           disorders include generalized anxiety, panic attacks (often triggered by reminders or
           feeling trapped), and specific phobias (of darkness, being alone, or situations similar
-          to assault). Dissociation—feeling disconnected from body or reality—commonly occurs
+          to assault). Dissociation---feeling disconnected from body or reality---commonly occurs
           during assault as survival mechanism and may persist. Substance use may develop as
           attempt to numb unbearable emotions or sleep.
         </p>
@@ -438,23 +438,23 @@ export const articles: Article[] = [
           Self-blame is one of the most toxic and persistent consequences of sexual assault. Many
           survivors torture themselves with "if only" thoughts: if only I hadn't gone to that
           party, trusted that person, had that drink, worn something different, fought harder. This
-          self-blame serves a psychological function—creating illusion of control. If you caused
+          self-blame serves a psychological function---creating illusion of control. If you caused
           it, maybe you can prevent future assault by behaving differently. But this is false
-          comfort. You didn't cause it—the perpetrator chose to assault you.
+          comfort. You didn't cause it---the perpetrator chose to assault you.
         </p>
         <p>
           Shame is closely related but distinct from guilt. Guilt says "I did something bad";
           shame says "I am bad." Many survivors feel fundamentally damaged, dirty, or broken. This
-          shame is not about what happened—it's about perceived loss of worth or purity. Cultural
+          shame is not about what happened---it's about perceived loss of worth or purity. Cultural
           narratives that tie women's value to sexual "purity" compound this. The truth is: assault
           doesn't make you dirty, damaged, or less valuable. What was taken was choice and
-          safety—not your worth or wholeness.
+          safety---not your worth or wholeness.
         </p>
 
         <ArticleCallout
           type="info"
           title="Freezing Is a Survival Response"
-          content="Many survivors experience tonic immobility (freezing) during assault—inability to move, speak, or fight despite wanting to. This is involuntary neurobiological response to overwhelming threat, not choice or consent. Yet many blame themselves for 'not fighting back.' Freezing is adaptive survival response that may have prevented further injury or death. It's common in all mammals facing inescapable threat. Your nervous system protected you—there's nothing to be ashamed of."
+          content="Many survivors experience tonic immobility (freezing) during assault---inability to move, speak, or fight despite wanting to. This is involuntary neurobiological response to overwhelming threat, not choice or consent. Yet many blame themselves for 'not fighting back.' Freezing is adaptive survival response that may have prevented further injury or death. It's common in all mammals facing inescapable threat. Your nervous system protected you---there's nothing to be ashamed of."
         />
 
         <h3>Evidence-Based Trauma Treatment</h3>
@@ -463,8 +463,8 @@ export const articles: Article[] = [
           Exposure (PE) therapy involves imaginal exposure (repeatedly recounting assault memory in
           detail in safe therapeutic setting, reducing emotional intensity over time), in vivo
           exposure (gradually approaching safe situations you've been avoiding due to trauma), and
-          processing the meaning of trauma. PE is counterintuitive—confronting rather than avoiding
-          trauma—but highly effective.
+          processing the meaning of trauma. PE is counterintuitive---confronting rather than avoiding
+          trauma---but highly effective.
         </p>
         <p>
           Cognitive Processing Therapy (CPT) targets trauma-related beliefs through identifying
@@ -472,15 +472,15 @@ export const articles: Article[] = [
           examining evidence for and against these beliefs, and developing more balanced, accurate
           beliefs. EMDR (Eye Movement Desensitization and Reprocessing) uses bilateral stimulation
           while processing traumatic memories to reduce their emotional intensity. All three
-          therapies are effective—choice depends on personal preference and therapist availability.
+          therapies are effective---choice depends on personal preference and therapist availability.
         </p>
 
         <p>
           Therapy should be trauma-informed: paced at your speed (not pushing faster than you're
           ready), validating your experiences and reactions, supporting your autonomy in treatment
           decisions, and addressing both PTSD symptoms and broader impacts (relationships,
-          sexuality, self-concept). Medications—particularly SSRIs like sertraline or
-          paroxetine—can reduce PTSD symptoms and are often combined with therapy.
+          sexuality, self-concept). Medications---particularly SSRIs like sertraline or
+          paroxetine---can reduce PTSD symptoms and are often combined with therapy.
         </p>
 
         <StatCard
@@ -502,7 +502,7 @@ export const articles: Article[] = [
           Regarding sexuality, there's no requirement to "get back to normal" sexual function.
           Some survivors reclaim sexuality as empowering; others find celibacy or asexuality feels
           right; many navigate something in between. What matters is that choices about your body
-          and sexuality are yours—made from agency rather than trauma or pressure. If you choose
+          and sexuality are yours---made from agency rather than trauma or pressure. If you choose
           to explore sexual healing, specialized sex therapists who understand trauma can help
           navigate triggers, rebuild trust, and rediscover pleasure on your terms.
         </p>

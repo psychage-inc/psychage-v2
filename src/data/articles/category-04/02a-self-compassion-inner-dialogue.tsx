@@ -99,7 +99,7 @@ export const selfCompassionArticlesA: Article[] = [
             Self-compassion sounds simple: treating yourself with kindness. But psychologist Kristin Neff's research reveals it's a nuanced construct with three interconnected components that work together to transform how you relate to yourself, especially during difficult times.
           </p>
           <p className="mb-6">
-            Understanding self-compassion as a multi-dimensional practice — not just "being nice to yourself" — helps explain why it's so effective for mental health and why it requires intentional cultivation <Citation id="1" index={1} source="Self and Identity" year="2003" tier={1} />.
+            Understanding self-compassion as a multi-dimensional practice --- not just "being nice to yourself" --- helps explain why it's so effective for mental health and why it requires intentional cultivation <Citation id="1" index={1} source="Self and Identity" year="2003" tier={1} />.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export const selfCompassionArticlesA: Article[] = [
         </h3>
 
         <p className="mb-6">
-          Common humanity involves recognizing that suffering and personal inadequacy are part of the shared human experience — something we all go through rather than something happening only to "me" alone.
+          Common humanity involves recognizing that suffering and personal inadequacy are part of the shared human experience --- something we all go through rather than something happening only to "me" alone.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -216,7 +216,7 @@ export const selfCompassionArticlesA: Article[] = [
         </h3>
 
         <p className="mb-6">
-          Mindfulness means holding your painful thoughts and feelings in balanced awareness — neither suppressing nor ruminating on them. You observe difficult emotions without being swept away by them.
+          Mindfulness means holding your painful thoughts and feelings in balanced awareness --- neither suppressing nor ruminating on them. You observe difficult emotions without being swept away by them.
         </p>
 
         <p className="mb-6">
@@ -243,7 +243,7 @@ export const selfCompassionArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          These components aren't separate practices — they reinforce each other in a mutually supportive system.
+          These components aren't separate practices --- they reinforce each other in a mutually supportive system.
         </p>
 
         <ProgressSteps
@@ -369,7 +369,7 @@ export const selfCompassionArticlesA: Article[] = [
               title: "'Self-compassion will make me weak or lazy",
               content: (
                 <p>
-                  Research shows the opposite: self-compassionate people are more motivated to change and grow because they don't fear failure. Self-criticism doesn't motivate — it paralyzes.
+                  Research shows the opposite: self-compassionate people are more motivated to change and grow because they don't fear failure. Self-criticism doesn't motivate --- it paralyzes.
                 </p>
               ),
             },
@@ -387,7 +387,7 @@ export const selfCompassionArticlesA: Article[] = [
               title: "'It feels selfish or self-indulgent",
               content: (
                 <p>
-                  Self-compassion isn't selfish — research shows self-compassionate people are more caring toward others. You can't pour from an empty cup. Treating yourself well enables you to care for others more effectively.
+                  Self-compassion isn't selfish --- research shows self-compassionate people are more caring toward others. You can't pour from an empty cup. Treating yourself well enables you to care for others more effectively.
                 </p>
               ),
             },
@@ -529,7 +529,7 @@ export const selfCompassionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            That harsh voice in your head calling you inadequate, stupid, or worthless — your inner critic — isn't inherently part of who you are. It's a learned pattern, often rooted in early experiences, that can be understood and ultimately transformed.
+            That harsh voice in your head calling you inadequate, stupid, or worthless --- your inner critic --- isn't inherently part of who you are. It's a learned pattern, often rooted in early experiences, that can be understood and ultimately transformed.
           </p>
           <p className="mb-6">
             Understanding where your inner critic comes from and how it operates is the first step toward reducing its power <Citation id="1" index={1} source="Psychotherapy" year="2014" tier={1} />. Research shows that self-criticism is strongly linked to depression, anxiety, and low self-esteem, but it's also highly treatable.
@@ -550,15 +550,15 @@ export const selfCompassionArticlesA: Article[] = [
           items={[
             {
               feature: "You're so stupid",
-              values: ['I made a mistake — what can I learn?'],
+              values: ['I made a mistake --- what can I learn?'],
             },
             {
               feature: 'You always mess everything up',
-              values: ["This didn't go well — what happened?"],
+              values: ["This didn't go well --- what happened?"],
             },
             {
               feature: "You're worthless",
-              values: ["I struggled with this — that's human"],
+              values: ["I struggled with this --- that's human"],
             },
             {
               feature: 'Global, personal attack',
@@ -585,7 +585,7 @@ export const selfCompassionArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          The inner critic isn't born with you — it's learned. Several developmental factors contribute to its formation.
+          The inner critic isn't born with you --- it's learned. Several developmental factors contribute to its formation.
         </p>
 
         <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -693,7 +693,7 @@ export const selfCompassionArticlesA: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-criticism isn't just unpleasant — it's damaging to mental health and wellbeing <Citation id="2" index={2} source="Clinical Psychology Review" year="2004" tier={1} />.
+          Self-criticism isn't just unpleasant --- it's damaging to mental health and wellbeing <Citation id="2" index={2} source="Clinical Psychology Review" year="2004" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -829,7 +829,7 @@ export const selfCompassionArticlesA: Article[] = [
               title: 'Acceptance and Commitment Therapy (ACT)',
               content: (
                 <p>
-                  Teaches defusion — recognizing thoughts as mental events, not facts. You learn to observe the inner critic without buying into its messages.
+                  Teaches defusion --- recognizing thoughts as mental events, not facts. You learn to observe the inner critic without buying into its messages.
                 </p>
               ),
             },

@@ -36,7 +36,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
       },
       {
         id: '2',
-        text: 'Habits—a repeat performance',
+        text: 'Habits---a repeat performance',
         source: 'Annual Review of Psychology',
         year: '2016',
         link: 'https://doi.org/10.1146/annurev-psych-122414-033417',
@@ -111,7 +111,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've tried to quit scrolling social media before bed. You've resolved to stop stress-eating countless times. You've promised yourself you'd break the procrastination habit. Yet somehow, despite your best intentions, you find yourself repeating the same unwanted behaviors. This isn't a failure of character—it's neuroscience.
+            You've tried to quit scrolling social media before bed. You've resolved to stop stress-eating countless times. You've promised yourself you'd break the procrastination habit. Yet somehow, despite your best intentions, you find yourself repeating the same unwanted behaviors. This isn't a failure of character---it's neuroscience.
           </p>
           <p className="mb-6">
             Bad habits aren't hard to break because you lack discipline. They're hard to break because your brain has literally rewired itself to perform them automatically. Understanding why requires looking at how habits become encoded in neural pathways, why they resist conscious override, and what it really takes to interrupt compulsive patterns <Citation id="1" index={1} source="Philosophical Transactions of the Royal Society B" year="2008" tier={1} />.
@@ -122,7 +122,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           The Transition From Action to Automation
         </h2>
         <p className="mb-6">
-          When you first perform a behavior, it requires conscious effort and deliberation. Your prefrontal cortex—the brain's executive control center—actively guides each step. But with repetition, something fundamental changes. Control shifts from the prefrontal cortex to the basal ganglia, a set of structures deep in the brain that specialize in automatic behavior <Citation id="2" index={2} source="Annual Review of Psychology" year="2016" tier={1} />.
+          When you first perform a behavior, it requires conscious effort and deliberation. Your prefrontal cortex---the brain's executive control center---actively guides each step. But with repetition, something fundamental changes. Control shifts from the prefrontal cortex to the basal ganglia, a set of structures deep in the brain that specialize in automatic behavior <Citation id="2" index={2} source="Annual Review of Psychology" year="2016" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -152,14 +152,14 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          This transition serves a crucial purpose: cognitive efficiency. Your brain can't consciously process every action—you'd be mentally exhausted by noon. Habits free up mental resources for novel problems. The catch? Your brain doesn't distinguish between helpful and harmful patterns. Once a behavior becomes habitual, it follows the same neural pathways regardless of whether it serves you <Citation id="3" index={3} source="Current Opinion in Behavioral Sciences" year="2020" tier={1} />.
+          This transition serves a crucial purpose: cognitive efficiency. Your brain can't consciously process every action---you'd be mentally exhausted by noon. Habits free up mental resources for novel problems. The catch? Your brain doesn't distinguish between helpful and harmful patterns. Once a behavior becomes habitual, it follows the same neural pathways regardless of whether it serves you <Citation id="3" index={3} source="Current Opinion in Behavioral Sciences" year="2020" tier={1} />.
         </p>
 
         <h2 id="dopamine-learning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Dopamine Trap: Why Bad Habits Feel Good
         </h2>
         <p className="mb-6">
-          Dopamine is often called the "pleasure chemical, " but that's misleading. Dopamine doesn't create pleasure—it drives learning and motivation. When you perform a behavior and get a reward, dopamine signals your brain: "Remember this. Do it again." The problem? Dopamine doesn't care if the behavior is healthy <Citation id="4" index={4} source="European Journal of Neuroscience" year="2020" tier={1} />.
+          Dopamine is often called the "pleasure chemical, " but that's misleading. Dopamine doesn't create pleasure---it drives learning and motivation. When you perform a behavior and get a reward, dopamine signals your brain: "Remember this. Do it again." The problem? Dopamine doesn't care if the behavior is healthy <Citation id="4" index={4} source="European Journal of Neuroscience" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout
@@ -168,10 +168,10 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                Initially, dopamine spikes when you receive a reward (checking social media and seeing notifications). But with repetition, the spike moves earlier—to the cue itself (seeing your phone). Eventually, you get a dopamine hit just from anticipating the behavior, even before you do it.
+                Initially, dopamine spikes when you receive a reward (checking social media and seeing notifications). But with repetition, the spike moves earlier---to the cue itself (seeing your phone). Eventually, you get a dopamine hit just from anticipating the behavior, even before you do it.
               </p>
               <p className="mb-3">
-                This creates a prediction error system where not performing the habit feels like losing an expected reward. You experience it as craving, restlessness, or discomfort—not from needing the behavior, but from your brain expecting dopamine that doesn't arrive.
+                This creates a prediction error system where not performing the habit feels like losing an expected reward. You experience it as craving, restlessness, or discomfort---not from needing the behavior, but from your brain expecting dopamine that doesn't arrive.
               </p>
               <p>
                 This is why trying to "just stop" a bad habit often leads to intense discomfort. You're fighting against a neural prediction that's been reinforced hundreds or thousands of times.
@@ -184,7 +184,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Why Stress Makes Bad Habits Worse
         </h2>
         <p className="mb-6">
-          You've probably noticed that unwanted habits get worse when you're stressed. This isn't coincidental—it's a direct neurological effect. Under stress, your brain shifts control away from the prefrontal cortex (goal-directed behavior) toward the basal ganglia (habitual behavior) <Citation id="7" index={7} source="Neuroscience & Biobehavioral Reviews" year="2019" tier={1} />.
+          You've probably noticed that unwanted habits get worse when you're stressed. This isn't coincidental---it's a direct neurological effect. Under stress, your brain shifts control away from the prefrontal cortex (goal-directed behavior) toward the basal ganglia (habitual behavior) <Citation id="7" index={7} source="Neuroscience & Biobehavioral Reviews" year="2019" tier={1} />.
         </p>
 
         <StatCard
@@ -215,7 +215,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Context Dependency: Why Changing Your Environment Matters
         </h2>
         <p className="mb-6">
-          Habits are powerfully linked to context—the specific cues, locations, times, and emotional states that trigger them. Research shows that habits are easier to break when you change the context in which they occur <Citation id="5" index={5} source="Journal of Consumer Psychology" year="2020" tier={1} />. This is why people who move to a new city often find it easier to adopt new behaviors, and why changing your environment is more effective than relying on willpower alone.
+          Habits are powerfully linked to context---the specific cues, locations, times, and emotional states that trigger them. Research shows that habits are easier to break when you change the context in which they occur <Citation id="5" index={5} source="Journal of Consumer Psychology" year="2020" tier={1} />. This is why people who move to a new city often find it easier to adopt new behaviors, and why changing your environment is more effective than relying on willpower alone.
         </p>
 
         <ProgressSteps
@@ -233,7 +233,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Disruption Breaks Automaticity',
               description: (
                 <p>
-                  When you change the context, the automatic cue-response connection is interrupted. The habit doesn't disappear, but it requires conscious effort again—bringing it back under prefrontal cortex control where you can make different choices.
+                  When you change the context, the automatic cue-response connection is interrupted. The habit doesn't disappear, but it requires conscious effort again---bringing it back under prefrontal cortex control where you can make different choices.
                 </p>
               ),
             },
@@ -252,7 +252,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Memory Reconsolidation: A Window for Change
         </h2>
         <p className="mb-6">
-          Habit memories aren't as fixed as once believed. When you recall a habit memory (by encountering the cue), it enters a brief period of instability called reconsolidation. During this window—lasting minutes to hours—the memory can be modified or weakened <Citation id="8" index={8} source="Neuropsychopharmacology" year="2019" tier={1} />.
+          Habit memories aren't as fixed as once believed. When you recall a habit memory (by encountering the cue), it enters a brief period of instability called reconsolidation. During this window---lasting minutes to hours---the memory can be modified or weakened <Citation id="8" index={8} source="Neuropsychopharmacology" year="2019" tier={1} />.
         </p>
 
         <ArticleCallout
@@ -302,7 +302,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Explicit Monitoring',
               content: (
                 <p>
-                  Actively tracking a behavior makes it harder to execute automatically. This is why keeping a log (food journal, time-tracking app, habit tracker) can disrupt unwanted patterns—it forces conscious awareness of what would otherwise be automatic.
+                  Actively tracking a behavior makes it harder to execute automatically. This is why keeping a log (food journal, time-tracking app, habit tracker) can disrupt unwanted patterns---it forces conscious awareness of what would otherwise be automatic.
                 </p>
               ),
             },
@@ -329,7 +329,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Why the "21-Day Myth" Is Wrong
         </h2>
         <p className="mb-6">
-          You've probably heard that it takes 21 days to break a habit. This is not supported by research. A widely-cited study found that it takes an average of 66 days for a new behavior to become automatic—with a range from 18 to 254 days depending on complexity <Citation id="2" index={2} source="Annual Review of Psychology" year="2016" tier={1} />.
+          You've probably heard that it takes 21 days to break a habit. This is not supported by research. A widely-cited study found that it takes an average of 66 days for a new behavior to become automatic---with a range from 18 to 254 days depending on complexity <Citation id="2" index={2} source="Annual Review of Psychology" year="2016" tier={1} />.
         </p>
 
         <ArticleChart
@@ -345,7 +345,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Breaking a bad habit typically takes longer than forming a new one because you're not just establishing a new pattern—you're also weakening an existing neural pathway. The more deeply ingrained the habit (how many repetitions, how strong the dopamine association, how automatic it feels), the longer it takes to meaningfully disrupt.
+          Breaking a bad habit typically takes longer than forming a new one because you're not just establishing a new pattern---you're also weakening an existing neural pathway. The more deeply ingrained the habit (how many repetitions, how strong the dopamine association, how automatic it feels), the longer it takes to meaningfully disrupt.
         </p>
 
         <ArticleCallout
@@ -357,7 +357,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 Bad habits are hard to break because they involve multiple brain systems working in concert: automatic basal ganglia control, dopamine prediction errors, stress-induced prefrontal cortex suppression, and context-dependent cue associations.
               </p>
               <p className="mb-3">
-                Success requires understanding that you're working against neuroscience—not character flaws. Effective strategies include:
+                Success requires understanding that you're working against neuroscience---not character flaws. Effective strategies include:
               </p>
               <ul className="list-disc pl-6 space-y-2">
                 <li>Changing environmental contexts to disrupt cues</li>
@@ -472,7 +472,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You reach for your phone the moment you wake up. You check Instagram while brushing your teeth. You scroll TikTok while eating breakfast. You refresh Twitter during work breaks. You're on your phone in bed until you fall asleep. By the time your head hits the pillow, you've spent 4-6 hours on social media—and you're not sure where the day went.
+            You reach for your phone the moment you wake up. You check Instagram while brushing your teeth. You scroll TikTok while eating breakfast. You refresh Twitter during work breaks. You're on your phone in bed until you fall asleep. By the time your head hits the pillow, you've spent 4-6 hours on social media---and you're not sure where the day went.
           </p>
           <p className="mb-6">
             If this sounds familiar, you're not alone. Research shows that problematic social media use affects approximately 5-10% of users, with rates higher among adolescents and young adults <Citation id="2" index={2} source="PLOS ONE" year="2019" tier={1} />. More importantly, limiting social media use has been shown to significantly reduce anxiety, depression, loneliness, and FOMO (fear of missing out) <Citation id="3" index={3} source="Journal of Social and Clinical Psychology" year="2018" tier={1} />.
@@ -483,7 +483,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Step 1: Recognize When Use Becomes Problematic
         </h2>
         <p className="mb-6">
-          Not all social media use is problematic. The issue isn't whether you use social media—it's whether your use is compulsive, excessive, or interfering with your wellbeing. Research identifies several warning signs:
+          Not all social media use is problematic. The issue isn't whether you use social media---it's whether your use is compulsive, excessive, or interfering with your wellbeing. Research identifies several warning signs:
         </p>
 
         <ArticleAccordion
@@ -524,7 +524,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Negative Consequences',
               content: (
                 <p>
-                  Social media use interferes with sleep, work, relationships, or mental health—yet you continue despite these consequences. You've missed deadlines, neglected friends, or experienced increased anxiety but haven't changed behavior <Citation id="1" index={1} source="EClinicalMedicine" year="2019" tier={1} />.
+                  Social media use interferes with sleep, work, relationships, or mental health---yet you continue despite these consequences. You've missed deadlines, neglected friends, or experienced increased anxiety but haven't changed behavior <Citation id="1" index={1} source="EClinicalMedicine" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -552,7 +552,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li><strong>Context patterns</strong> (where/when do you use most? Bored? Anxious? Commuting?)</li>
               </ul>
               <p className="mt-4 text-sm">
-                This data will reveal your personal triggers and high-risk times—essential for designing effective interventions.
+                This data will reveal your personal triggers and high-risk times---essential for designing effective interventions.
               </p>
             </div>
           }
@@ -562,7 +562,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Step 3: Understand the Psychological Hooks
         </h2>
         <p className="mb-6">
-          Social media platforms are designed by teams of engineers and psychologists whose job is to maximize "engagement"—a euphemism for keeping you scrolling. Understanding the specific mechanisms makes them easier to resist <Citation id="9" index={9} source="JAMA Pediatrics" year="2021" tier={1} />.
+          Social media platforms are designed by teams of engineers and psychologists whose job is to maximize "engagement"---a euphemism for keeping you scrolling. Understanding the specific mechanisms makes them easier to resist <Citation id="9" index={9} source="JAMA Pediatrics" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -574,7 +574,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
             },
             {
               left: 'Variable reward schedule (sometimes likes/comments, sometimes not)',
-              right: 'Dopamine spikes unpredictably—the same mechanism in slot machines <Citation id="7" index={7} source="Behavioral Neuroscience" year="2019" tier={1} />',
+              right: 'Dopamine spikes unpredictably---the same mechanism in slot machines <Citation id="7" index={7} source="Behavioral Neuroscience" year="2019" tier={1} />',
             },
             {
               left: 'Push notifications (red badges, alerts)',
@@ -596,7 +596,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          These aren't bugs—they're features. Recognizing that you're not weak-willed but rather up against sophisticated behavioral engineering helps remove self-blame and focus on effective countermeasures.
+          These aren't bugs---they're features. Recognizing that you're not weak-willed but rather up against sophisticated behavioral engineering helps remove self-blame and focus on effective countermeasures.
         </p>
 
         <h2 id="intervention-hierarchy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -670,7 +670,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                Many people try to "just use less" without changing their phone setup. This rarely works. Relying on willpower alone means fighting the apps" design, your established neural pathways, and variable dopamine rewards—every single time you feel an urge.
+                Many people try to "just use less" without changing their phone setup. This rarely works. Relying on willpower alone means fighting the apps" design, your established neural pathways, and variable dopamine rewards---every single time you feel an urge.
               </p>
               <p>
                 Effective change requires environmental restructuring. Make the unwanted behavior harder to do by default, not just something you "try not to do."
@@ -683,7 +683,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Step 5: Replace the Function (Not Just the Behavior)
         </h2>
         <p className="mb-6">
-          You're not scrolling social media for no reason. It serves psychological functions—boredom relief, social connection, emotional regulation, procrastination, status-checking. Simply removing social media without addressing these needs creates a void that pulls you back. You need functional replacements.
+          You're not scrolling social media for no reason. It serves psychological functions---boredom relief, social connection, emotional regulation, procrastination, status-checking. Simply removing social media without addressing these needs creates a void that pulls you back. You need functional replacements.
         </p>
 
         <ComparisonTable
@@ -717,7 +717,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The most successful long-term reduction happens when you find genuinely satisfying alternatives that meet the same psychological needs. This isn't about replacing Instagram with "productive" activities you hate—it's about finding things that actually feel rewarding.
+          The most successful long-term reduction happens when you find genuinely satisfying alternatives that meet the same psychological needs. This isn't about replacing Instagram with "productive" activities you hate---it's about finding things that actually feel rewarding.
         </p>
 
         <h2 id="manage-withdrawal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -755,7 +755,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               <ul className="list-disc pl-6 space-y-2">
                 <li><strong>Urge surfing:</strong> When you feel the pull to check social media, pause and observe the urge without acting on it. Notice it peaks and then naturally decreases (usually within 5-10 minutes).</li>
                 <li><strong>Delay tactics:</strong> "I can check in 15 minutes if I still want to." Often the urge passes before the time is up.</li>
-                <li><strong>Physical activity:</strong> Movement disrupts the urge pattern—even a 2-minute walk helps.</li>
+                <li><strong>Physical activity:</strong> Movement disrupts the urge pattern---even a 2-minute walk helps.</li>
                 <li><strong>Track small wins:</strong> "I've gone 4 hours without checking" creates positive reinforcement.</li>
                 <li><strong>Prepare responses:</strong> "I'm taking a social media break' for friends who wonder why you're not liking their posts.</li>
               </ul>
@@ -804,7 +804,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Step 7: Plan for Setbacks (They're Normal)
         </h2>
         <p className="mb-6">
-          You will have days where you slip back into old patterns. This doesn't mean failure—it means you're human. The key is how you respond to setbacks:
+          You will have days where you slip back into old patterns. This doesn't mean failure---it means you're human. The key is how you respond to setbacks:
         </p>
 
         <ArticleAccordion
@@ -868,7 +868,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li>Greater sense of agency and control</li>
               </ul>
               <p className="mt-4">
-                Breaking social media addiction isn't about becoming a digital hermit. It's about using social media as a tool you control, rather than letting it control you. The goal is intentionality—choosing when, how, and why you engage rather than compulsively responding to every notification and urge.
+                Breaking social media addiction isn't about becoming a digital hermit. It's about using social media as a tool you control, rather than letting it control you. The goal is intentionality---choosing when, how, and why you engage rather than compulsively responding to every notification and urge.
               </p>
             </div>
           }
@@ -966,7 +966,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You had a stressful meeting, and suddenly you're standing in front of the open refrigerator even though you ate lunch an hour ago. You're feeling lonely on a Friday night, and before you know it, you've finished an entire pint of ice cream. You're anxious about an upcoming deadline, and your hand keeps reaching for the chip bag. You're not physically hungry—but you're eating anyway.
+            You had a stressful meeting, and suddenly you're standing in front of the open refrigerator even though you ate lunch an hour ago. You're feeling lonely on a Friday night, and before you know it, you've finished an entire pint of ice cream. You're anxious about an upcoming deadline, and your hand keeps reaching for the chip bag. You're not physically hungry---but you're eating anyway.
           </p>
           <p className="mb-6">
             This is emotional eating: using food to manage feelings rather than to satisfy physical hunger. Research shows that emotional eating is strongly associated with anxiety, depression, and stress, and can contribute to disordered eating patterns <Citation id="1" index={1} source="Eating Behaviors" year="2020" tier={1} />. Understanding why you turn to food when you're not hungry is the first step toward developing healthier emotional regulation strategies.
@@ -1025,7 +1025,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li><strong>T</strong> = Tired? Am I physically or emotionally exhausted?</li>
               </ul>
               <p className="mt-4">
-                If the answer is A, L, or T rather than H, you're likely experiencing emotional hunger. This doesn't mean you shouldn't eat—but it does mean food won't solve the underlying problem.
+                If the answer is A, L, or T rather than H, you're likely experiencing emotional hunger. This doesn't mean you shouldn't eat---but it does mean food won't solve the underlying problem.
               </p>
             </div>
           }
@@ -1035,7 +1035,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Why Food "Works" (Temporarily) for Emotional Regulation
         </h2>
         <p className="mb-6">
-          Emotional eating isn't random or irrational. It persists because it provides real, measurable neurological effects—they just don't last <Citation id="2" index={2} source="Stress and Health" year="2018" tier={1} />:
+          Emotional eating isn't random or irrational. It persists because it provides real, measurable neurological effects---they just don't last <Citation id="2" index={2} source="Stress and Health" year="2018" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -1045,7 +1045,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Immediate Dopamine Release',
               description: (
                 <p>
-                  Highly palatable foods (sweet, salty, fatty) trigger dopamine release in the brain's reward system. This creates a brief sense of pleasure and relief—exactly what you're seeking when you're stressed or sad. Your brain learns: 'feeling bad + eating = feeling better' <Citation id="3" index={3} source="Physiology & Behavior" year="2019" tier={1} />.
+                  Highly palatable foods (sweet, salty, fatty) trigger dopamine release in the brain's reward system. This creates a brief sense of pleasure and relief---exactly what you're seeking when you're stressed or sad. Your brain learns: 'feeling bad + eating = feeling better' <Citation id="3" index={3} source="Physiology & Behavior" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -1053,7 +1053,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Temporary Distraction',
               description: (
                 <p>
-                  The act of eating requires attention—selecting food, tasting, chewing, swallowing. This temporarily shifts your focus away from uncomfortable emotions. It's cognitive distraction disguised as self-care.
+                  The act of eating requires attention---selecting food, tasting, chewing, swallowing. This temporarily shifts your focus away from uncomfortable emotions. It's cognitive distraction disguised as self-care.
                 </p>
               ),
             },
@@ -1069,7 +1069,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Biochemical Response to Carbohydrates',
               description: (
                 <p>
-                  Carbohydrate-rich foods can temporarily increase serotonin, a neurotransmitter associated with mood regulation. This is why many people crave pasta, bread, or sweets when feeling down—there's a real biochemical effect, though short-lived <Citation id="6" index={6} source="Molecular Psychiatry" year="2022" tier={1} />.
+                  Carbohydrate-rich foods can temporarily increase serotonin, a neurotransmitter associated with mood regulation. This is why many people crave pasta, bread, or sweets when feeling down---there's a real biochemical effect, though short-lived <Citation id="6" index={6} source="Molecular Psychiatry" year="2022" tier={1} />.
                 </p>
               ),
             },
@@ -1077,7 +1077,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The problem isn't that food doesn't 'work"—it's that it works briefly, doesn't address the root emotion, and often creates new problems (guilt, shame, physical discomfort, weight gain, disconnection from hunger cues).
+          The problem isn't that food doesn't 'work"---it's that it works briefly, doesn't address the root emotion, and often creates new problems (guilt, shame, physical discomfort, weight gain, disconnection from hunger cues).
         </p>
 
         <h2 id="common-triggers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1172,10 +1172,10 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 When you label foods as "forbidden," you increase their psychological power. A single cookie becomes loaded with emotional significance. If you eat one, it triggers all-or-nothing thinking: "I've already ruined my diet, so I might as well eat the whole box."
               </p>
               <p className="mb-3">
-                Additionally, calorie restriction depletes the self-regulatory resources needed to manage emotions effectively. When you're physically under-fueled, you have less capacity for emotional regulation—making you more likely to turn to food for comfort.
+                Additionally, calorie restriction depletes the self-regulatory resources needed to manage emotions effectively. When you're physically under-fueled, you have less capacity for emotional regulation---making you more likely to turn to food for comfort.
               </p>
               <p>
-                For many people, the path out of emotional eating involves less restriction, not more—learning to eat all foods without moral judgment while developing non-food emotional coping strategies.
+                For many people, the path out of emotional eating involves less restriction, not more---learning to eat all foods without moral judgment while developing non-food emotional coping strategies.
               </p>
             </div>
           }
@@ -1212,7 +1212,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                     When you feel the urge to eat emotionally, pause for 10 minutes. During this time, investigate the emotion: What am I actually feeling? What happened right before this urge? What do I actually need right now?
                   </p>
                   <p>
-                    Often, naming the emotion reduces its intensity. Sometimes the urge passes entirely. Other times, you eat anyway—but with awareness, which is still progress.
+                    Often, naming the emotion reduces its intensity. Sometimes the urge passes entirely. Other times, you eat anyway---but with awareness, which is still progress.
                   </p>
                 </div>
               ),
@@ -1232,7 +1232,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                     <li>Anxiety → Deep breathing, grounding exercise (5-4-3-2-1 senses), physical movement</li>
                   </ul>
                   <p className="mt-3">
-                    <strong>Key:</strong> These don't have to "fix" the emotion—they just need to offer a competing behavioral option.
+                    <strong>Key:</strong> These don't have to "fix" the emotion---they just need to offer a competing behavioral option.
                   </p>
                 </div>
               ),
@@ -1241,7 +1241,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: '4. Practice Mindful Eating',
               description: (
                 <p>
-                  When you do eat—whether physically or emotionally hungry—eat mindfully. Sit down. Remove distractions. Notice taste, texture, temperature. Eat slowly. This practice helps you reconnect with satiety cues and reduces autopilot eating. Research shows mindful eating significantly reduces emotional and binge eating <Citation id="4" index={4} source="Eating Disorders" year="2021" tier={1} />.
+                  When you do eat---whether physically or emotionally hungry---eat mindfully. Sit down. Remove distractions. Notice taste, texture, temperature. Eat slowly. This practice helps you reconnect with satiety cues and reduces autopilot eating. Research shows mindful eating significantly reduces emotional and binge eating <Citation id="4" index={4} source="Eating Disorders" year="2021" tier={1} />.
                 </p>
               ),
             },
@@ -1249,7 +1249,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: '5. Allow Emotional Eating Sometimes',
               description: (
                 <p>
-                  Paradoxically, giving yourself permission to eat emotionally (without guilt) reduces its frequency. When food isn't forbidden, it loses its power as rebellion or escape. Some days you'll use food for comfort—and that's human. The goal is flexibility, not perfection.
+                  Paradoxically, giving yourself permission to eat emotionally (without guilt) reduces its frequency. When food isn't forbidden, it loses its power as rebellion or escape. Some days you'll use food for comfort---and that's human. The goal is flexibility, not perfection.
                 </p>
               ),
             },
@@ -1312,14 +1312,14 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li>Developing trust in your body's hunger and fullness cues</li>
               </ul>
               <p className="mt-4">
-                The goal isn't to never eat for emotional reasons—it's to expand your emotional coping toolkit so food isn't your only option, and to develop a peaceful, flexible relationship with eating that serves your overall wellbeing.
+                The goal isn't to never eat for emotional reasons---it's to expand your emotional coping toolkit so food isn't your only option, and to develop a peaceful, flexible relationship with eating that serves your overall wellbeing.
               </p>
             </div>
           }
         />
 
         <QuoteBlock
-          quote="We don't have to eat perfectly. We don't have to eat perfectly to be healthy. We don't have to eat perfectly to be worthy. Emotional eating is information—it tells us something needs attention. Listen to the message, not just the messenger."
+          quote="We don't have to eat perfectly. We don't have to eat perfectly to be healthy. We don't have to eat perfectly to be worthy. Emotional eating is information---it tells us something needs attention. Listen to the message, not just the messenger."
           author="Evelyn Tribole"
           role="Dietitian & Co-Creator of Intuitive Eating"
         />
@@ -1416,10 +1416,10 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know the project is due Friday. You know starting earlier would reduce stress. You know you'll regret waiting until Thursday night. Yet here you are on Monday, scrolling social media, reorganizing your desk, doing literally anything except the task you need to do. You're not lazy—you're procrastinating. And it's not a time management problem.
+            You know the project is due Friday. You know starting earlier would reduce stress. You know you'll regret waiting until Thursday night. Yet here you are on Monday, scrolling social media, reorganizing your desk, doing literally anything except the task you need to do. You're not lazy---you're procrastinating. And it's not a time management problem.
           </p>
           <p className="mb-6">
-            Procrastination affects approximately 20% of adults chronically and up to 95% occasionally <Citation id="2" index={2} source="Psychological Bulletin" year="2007" tier={1} />. It's associated with increased stress, worse health outcomes, lower academic and professional performance, and significant psychological distress <Citation id="1" index={1} source="Journal of Behavioral Medicine" year="2020" tier={1} />. But understanding why you procrastinate—the emotional and psychological drivers—is far more important than any productivity hack.
+            Procrastination affects approximately 20% of adults chronically and up to 95% occasionally <Citation id="2" index={2} source="Psychological Bulletin" year="2007" tier={1} />. It's associated with increased stress, worse health outcomes, lower academic and professional performance, and significant psychological distress <Citation id="1" index={1} source="Journal of Behavioral Medicine" year="2020" tier={1} />. But understanding why you procrastinate---the emotional and psychological drivers---is far more important than any productivity hack.
           </p>
         </div>
 
@@ -1457,7 +1457,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          When you procrastinate, you're choosing short-term mood repair (avoiding the negative feelings associated with the task) over long-term goals. You're not avoiding work—you're avoiding the emotional discomfort the work triggers.
+          When you procrastinate, you're choosing short-term mood repair (avoiding the negative feelings associated with the task) over long-term goals. You're not avoiding work---you're avoiding the emotional discomfort the work triggers.
         </p>
 
         <h2 id="root-causes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1474,7 +1474,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    If you don't try your best, failure doesn't reflect your true ability—it's just because you "didn't have time." This protects your ego. Procrastination becomes a self-handicapping strategy: maintaining the possibility that you could have succeeded if you'd tried <Citation id="3" index={3} source="Personality and Individual Differences" year="2019" tier={1} />.
+                    If you don't try your best, failure doesn't reflect your true ability---it's just because you "didn't have time." This protects your ego. Procrastination becomes a self-handicapping strategy: maintaining the possibility that you could have succeeded if you'd tried <Citation id="3" index={3} source="Personality and Individual Differences" year="2019" tier={1} />.
                   </p>
                   <p className="text-sm">
                     <strong>Variation:</strong> Fear of success can also trigger procrastination if success means increased expectations, visibility, or responsibility you're not ready for.
@@ -1510,7 +1510,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Attention and Executive Function Challenges',
               content: (
                 <p>
-                  For people with ADHD or executive dysfunction, procrastination often stems from difficulty with task initiation, time perception, and sustained attention—neurological challenges, not character flaws <Citation id="6" index={6} source="Journal of Attention Disorders" year="2021" tier={1} />. The task isn't emotionally threatening; your brain just struggles with the "start" signal.
+                  For people with ADHD or executive dysfunction, procrastination often stems from difficulty with task initiation, time perception, and sustained attention---neurological challenges, not character flaws <Citation id="6" index={6} source="Journal of Attention Disorders" year="2021" tier={1} />. The task isn't emotionally threatening; your brain just struggles with the "start" signal.
                 </p>
               ),
             },
@@ -1548,7 +1548,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li>What temporary relief did procrastination provide?</li>
               </ul>
               <p className="mt-4">
-                Your answers reveal your procrastination function—which determines which interventions will actually work.
+                Your answers reveal your procrastination function---which determines which interventions will actually work.
               </p>
             </div>
           }
@@ -1655,7 +1655,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Lower the Stakes',
               content: (
                 <p>
-                  Reframe from 'This has to be perfect' to "This is a draft" or "This is version 1.0." Give yourself explicit permission for the work to be imperfect. Set a time limit: "I'll work for 45 minutes, then stop—whether it's done or not."
+                  Reframe from 'This has to be perfect' to "This is a draft" or "This is version 1.0." Give yourself explicit permission for the work to be imperfect. Set a time limit: "I'll work for 45 minutes, then stop---whether it's done or not."
                 </p>
               ),
             },
@@ -1696,7 +1696,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: `The 'Eat the Frog' Method`,
               content: (
                 <p>
-                  Do the most aversive task first thing in the morning when willpower is highest. Once it's done, everything else feels easier by comparison. Delay increases dread—early completion eliminates rumination.
+                  Do the most aversive task first thing in the morning when willpower is highest. Once it's done, everything else feels easier by comparison. Delay increases dread---early completion eliminates rumination.
                 </p>
               ),
             },
@@ -1763,7 +1763,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li><strong>If</strong> I start thinking "I'll do it later," <strong>then</strong> I will do just 5 minutes right now.</li>
               </ul>
               <p className="mt-4">
-                These work because they outsource decision-making to your past self. When the cue occurs (9 AM Tuesday), the plan activates automatically—bypassing the moment of "Do I feel like it?" where procrastination lives.
+                These work because they outsource decision-making to your past self. When the cue occurs (9 AM Tuesday), the plan activates automatically---bypassing the moment of "Do I feel like it?" where procrastination lives.
               </p>
             </div>
           }
@@ -1807,7 +1807,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Procrastination is the soul rebelling against entrapment. Sometimes the rebellion is warranted—the task truly doesn't align with your values. But often, it's fear dressed up as resistance. Learning to distinguish between the two is the work of a lifetime."
+          quote="Procrastination is the soul rebelling against entrapment. Sometimes the rebellion is warranted---the task truly doesn't align with your values. But often, it's fear dressed up as resistance. Learning to distinguish between the two is the work of a lifetime."
           author="Dr. Timothy Pychyl"
           role="Psychologist & Procrastination Researcher, Carleton University"
         />
@@ -1925,10 +1925,10 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "You're such an idiot.", "Of course you messed that up.", "Nobody actually likes you.", "You'll never be good enough." If a friend spoke to you this way, you'd end the friendship. Yet you might say these exact words to yourself—multiple times a day—without question. This is negative self-talk, and it's far more damaging than most people realize.
+            "You're such an idiot.", "Of course you messed that up.", "Nobody actually likes you.", "You'll never be good enough." If a friend spoke to you this way, you'd end the friendship. Yet you might say these exact words to yourself---multiple times a day---without question. This is negative self-talk, and it's far more damaging than most people realize.
           </p>
           <p className="mb-6">
-            Research shows that negative self-talk is strongly associated with depression, anxiety, low self-esteem, and poor emotional regulation <Citation id="2" index={2} source="Cognitive Therapy and Research" year="2020" tier={1} />. But here's the crucial insight: your internal monologue isn't an unchangeable personality trait—it's a habit. And like any habit, it can be identified, interrupted, and rewired.
+            Research shows that negative self-talk is strongly associated with depression, anxiety, low self-esteem, and poor emotional regulation <Citation id="2" index={2} source="Cognitive Therapy and Research" year="2020" tier={1} />. But here's the crucial insight: your internal monologue isn't an unchangeable personality trait---it's a habit. And like any habit, it can be identified, interrupted, and rewired.
           </p>
         </div>
 
@@ -1936,7 +1936,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           What Is Self-Talk (and Why Does It Matter)?
         </h2>
         <p className="mb-6">
-          Self-talk is your internal narrative—the ongoing stream of thoughts, interpretations, and evaluations that run through your mind. It's how you make sense of experiences, motivate yourself, and regulate emotions. Everyone has self-talk; the question is whether yours is predominantly helpful or harmful <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2014" tier={1} />.
+          Self-talk is your internal narrative---the ongoing stream of thoughts, interpretations, and evaluations that run through your mind. It's how you make sense of experiences, motivate yourself, and regulate emotions. Everyone has self-talk; the question is whether yours is predominantly helpful or harmful <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2014" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1966,7 +1966,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Negative self-talk operates like a background program constantly running criticism, catastrophizing, and self-blame. Over time, this becomes your default interpretive lens—shaping how you perceive yourself, your capabilities, and your worth.
+          Negative self-talk operates like a background program constantly running criticism, catastrophizing, and self-blame. Over time, this becomes your default interpretive lens---shaping how you perceive yourself, your capabilities, and your worth.
         </p>
 
         <h2 id="types-of-negative-self-talk" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2123,7 +2123,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                Paradoxically, the inner critic often develops as a protective mechanism. If being "good enough" kept you safe as a child (avoided punishment, earned approval), the critic becomes hypervigilant—constantly scanning for ways you might fail to meet standards.
+                Paradoxically, the inner critic often develops as a protective mechanism. If being "good enough" kept you safe as a child (avoided punishment, earned approval), the critic becomes hypervigilant---constantly scanning for ways you might fail to meet standards.
               </p>
               <p>
                 The critic's intent might have been protection ("If I criticize myself first, others" criticism will hurt less"), but the result is chronic self-attack that undermines wellbeing. Understanding this origin can help you respond to the critic with compassion rather than more criticism.
@@ -2136,7 +2136,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Step 1: Cognitive Restructuring (Challenge the Thoughts)
         </h2>
         <p className="mb-6">
-          Cognitive restructuring, a core technique in CBT, involves identifying negative thoughts, examining their validity, and generating more balanced alternatives. This isn't "positive thinking"—it's realistic thinking <Citation id="7" index={7} source="Frontiers in Psychology" year="2021" tier={1} />.
+          Cognitive restructuring, a core technique in CBT, involves identifying negative thoughts, examining their validity, and generating more balanced alternatives. This isn't "positive thinking"---it's realistic thinking <Citation id="7" index={7} source="Frontiers in Psychology" year="2021" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -2246,7 +2246,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Recognize that struggle, failure, and imperfection are part of the shared human experience—not evidence that you're uniquely defective.
+                    Recognize that struggle, failure, and imperfection are part of the shared human experience---not evidence that you're uniquely defective.
                   </p>
                   <p className="text-sm italic">
                     Instead of: "I'm the only one who can't handle this."<br />
@@ -2260,7 +2260,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Observe negative thoughts without becoming fused with them. Notice them as mental events—not absolute truths.
+                    Observe negative thoughts without becoming fused with them. Notice them as mental events---not absolute truths.
                   </p>
                   <p className="text-sm italic">
                     Instead of: "I am worthless."<br />
@@ -2331,14 +2331,14 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Using your own name or "you" engages the same mental processes you use when advising a friend—more compassionate, less emotionally charged, and more constructive. This small shift can significantly reduce rumination and self-criticism.
+          Using your own name or "you" engages the same mental processes you use when advising a friend---more compassionate, less emotionally charged, and more constructive. This small shift can significantly reduce rumination and self-criticism.
         </p>
 
         <h2 id="rewriting-the-script" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Rewriting the Script: From Critic to Coach
         </h2>
         <p className="mb-6">
-          The goal isn't to eliminate all self-evaluation—it's to transform the inner critic into an inner coach. A coach is honest about areas for growth but believes in your capacity to improve. A critic believes you're fundamentally flawed.
+          The goal isn't to eliminate all self-evaluation---it's to transform the inner critic into an inner coach. A coach is honest about areas for growth but believes in your capacity to improve. A critic believes you're fundamentally flawed.
         </p>
 
         <ComparisonTable
@@ -2399,7 +2399,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
           Building a Daily Practice
         </h2>
         <p className="mb-6">
-          Changing negative self-talk requires consistent practice. It's like building a new neural pathway—repetition strengthens the alternative route until it becomes the default.
+          Changing negative self-talk requires consistent practice. It's like building a new neural pathway---repetition strengthens the alternative route until it becomes the default.
         </p>
 
         <ProgressSteps
@@ -2417,7 +2417,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
               title: 'Midday Check-In',
               description: (
                 <p>
-                  Pause once during the day and ask: 'What has my self-talk been like today? Have I been kind or critical?" No judgment—just awareness.
+                  Pause once during the day and ask: 'What has my self-talk been like today? Have I been kind or critical?" No judgment---just awareness.
                 </p>
               ),
             },
@@ -2457,7 +2457,7 @@ export const breakingUnhealthyPatternsArticlesA: Article[] = [
                 <li>Greater overall self-compassion</li>
               </ul>
               <p className="mt-4">
-                Over time, the inner critic becomes quieter, less automatic, and less convincing. In its place, a kinder, more realistic internal voice emerges—one that supports your growth rather than sabotaging it.
+                Over time, the inner critic becomes quieter, less automatic, and less convincing. In its place, a kinder, more realistic internal voice emerges---one that supports your growth rather than sabotaging it.
               </p>
             </div>
           }

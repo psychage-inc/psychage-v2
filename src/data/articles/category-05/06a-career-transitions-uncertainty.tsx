@@ -95,7 +95,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "What do you do?" is among the first questions we ask new acquaintances. For many, the answer defines identity: "I'm a teacher,", "I'm an engineer,", "I'm a lawyer." When careers change—by choice or circumstance—this identity anchor disappears, triggering profound questions: Who am I without this role? What defines my worth?
+            "What do you do?" is among the first questions we ask new acquaintances. For many, the answer defines identity: "I'm a teacher,", "I'm an engineer,", "I'm a lawyer." When careers change---by choice or circumstance---this identity anchor disappears, triggering profound questions: Who am I without this role? What defines my worth?
           </p>
           <p className="mb-6">
             Career transitions disrupt not just logistics (income, schedule, social networks) but fundamental sense of self <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2021" tier={1} />. Understanding this identity dimension is essential for navigating career change without losing yourself in the process.
@@ -110,12 +110,12 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Time investment</strong> — we spend more waking hours working than any other activity</li>
-          <li><strong>Social recognition</strong> — careers provide status, respect, and social categorization</li>
-          <li><strong>Purpose and meaning</strong> — work often answers "What do I contribute to the world?"</li>
-          <li><strong>Competence</strong> — professional expertise builds self-efficacy and mastery</li>
-          <li><strong>Community</strong> — colleagues become primary social network</li>
-          <li><strong>Structure</strong> — work organizes daily life and provides routine</li>
+          <li><strong>Time investment</strong> --- we spend more waking hours working than any other activity</li>
+          <li><strong>Social recognition</strong> --- careers provide status, respect, and social categorization</li>
+          <li><strong>Purpose and meaning</strong> --- work often answers "What do I contribute to the world?"</li>
+          <li><strong>Competence</strong> --- professional expertise builds self-efficacy and mastery</li>
+          <li><strong>Community</strong> --- colleagues become primary social network</li>
+          <li><strong>Structure</strong> --- work organizes daily life and provides routine</li>
         </ul>
 
         <StatCard
@@ -128,7 +128,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>The tighter your identity is woven with your career, the more destabilizing career transitions become. "I am a doctor" creates more identity disruption when changing careers than "I work as a doctor"—the latter leaves space for self beyond role.</p>
+          <p>The tighter your identity is woven with your career, the more destabilizing career transitions become. "I am a doctor" creates more identity disruption when changing careers than "I work as a doctor"---the latter leaves space for self beyond role.</p>
         </ArticleCallout>
 
         <h2 id="transition-stages" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -151,7 +151,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Most struggle happens in the Neutral Zone—the liminal space where you've left one identity but haven't fully formed the next. This ambiguity is psychologically uncomfortable but necessary for transformation.
+          Most struggle happens in the Neutral Zone---the liminal space where you've left one identity but haven't fully formed the next. This ambiguity is psychologically uncomfortable but necessary for transformation.
         </p>
 
         <h2 id="separating" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -174,7 +174,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             },
             {
               title: 'Cultivate non-work identity anchors',
-              description: <p>Parent, partner, friend, hobbyist, community member, learner—develop multiple identity sources so losing one doesn't collapse the whole structure.</p>,
+              description: <p>Parent, partner, friend, hobbyist, community member, learner---develop multiple identity sources so losing one doesn't collapse the whole structure.</p>,
             },
             {
               title: 'Reframe career as expression, not essence',
@@ -193,7 +193,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           Narrative Identity Work
         </h2>
         <p className="mb-6">
-          We make sense of career changes through storytelling—constructing narratives that connect past, present, and future into coherent identity <Citation id="4" index={4} source="Human Relations" year="2020" tier={1} />.
+          We make sense of career changes through storytelling---constructing narratives that connect past, present, and future into coherent identity <Citation id="4" index={4} source="Human Relations" year="2020" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -234,11 +234,11 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Status loss</strong> — moving from prestigious to less recognized roles triggers grief about social standing</li>
-          <li><strong>Imposter feelings</strong> — being a beginner again after mastery feels threatening to competence-based identity</li>
-          <li><strong>Social network disruption</strong> — losing work friends and community removes social validation of identity</li>
-          <li><strong>External judgment</strong> — others questioning your choice ("Why would you leave that job?") triggers self-doubt</li>
-          <li><strong>Financial identity</strong> — income changes affect lifestyle and how you see yourself economically</li>
+          <li><strong>Status loss</strong> --- moving from prestigious to less recognized roles triggers grief about social standing</li>
+          <li><strong>Imposter feelings</strong> --- being a beginner again after mastery feels threatening to competence-based identity</li>
+          <li><strong>Social network disruption</strong> --- losing work friends and community removes social validation of identity</li>
+          <li><strong>External judgment</strong> --- others questioning your choice ("Why would you leave that job?") triggers self-doubt</li>
+          <li><strong>Financial identity</strong> --- income changes affect lifestyle and how you see yourself economically</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -249,7 +249,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           Developing a Protean Career Orientation
         </h2>
         <p className="mb-6">
-          Protean career orientation—being self-directed and values-driven rather than organizationally defined—predicts better adaptation to career changes <Citation id="6" index={6} source="Journal of Organizational Behavior" year="2021" tier={1} />.
+          Protean career orientation---being self-directed and values-driven rather than organizationally defined---predicts better adaptation to career changes <Citation id="6" index={6} source="Journal of Organizational Behavior" year="2021" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -257,11 +257,11 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Values clarity</strong> — know what matters most to you and use it to evaluate opportunities</li>
-          <li><strong>Self-awareness</strong> — understand your strengths, interests, and developmental edges</li>
-          <li><strong>Adaptability</strong> — see change as normal rather than threatening</li>
-          <li><strong>Learning orientation</strong> — prioritize growth over proving competence</li>
-          <li><strong>Internal success metrics</strong> — measure progress against your standards, not others" expectations</li>
+          <li><strong>Values clarity</strong> --- know what matters most to you and use it to evaluate opportunities</li>
+          <li><strong>Self-awareness</strong> --- understand your strengths, interests, and developmental edges</li>
+          <li><strong>Adaptability</strong> --- see change as normal rather than threatening</li>
+          <li><strong>Learning orientation</strong> --- prioritize growth over proving competence</li>
+          <li><strong>Internal success metrics</strong> --- measure progress against your standards, not others" expectations</li>
         </ul>
 
         <h2 id="practical" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -272,19 +272,19 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Write your story</strong> — journal about who you are, what you value, how this change fits your larger narrative</li>
-          <li><strong>Identify constants</strong> — list qualities that remain true across all your roles (curiosity, integrity, humor, resilience)</li>
-          <li><strong>Seek identity mirrors</strong> — talk with people who know you well and can reflect back your enduring qualities</li>
-          <li><strong>Maintain rituals</strong> — keep routines unrelated to work (morning coffee, exercise, hobbies) that anchor identity</li>
-          <li><strong>Experiment actively</strong> — try new activities, roles, and connections to discover unexpressed aspects of self</li>
-          <li><strong>Practice self-compassion</strong> — identity confusion during transitions is normal, not failure</li>
+          <li><strong>Write your story</strong> --- journal about who you are, what you value, how this change fits your larger narrative</li>
+          <li><strong>Identify constants</strong> --- list qualities that remain true across all your roles (curiosity, integrity, humor, resilience)</li>
+          <li><strong>Seek identity mirrors</strong> --- talk with people who know you well and can reflect back your enduring qualities</li>
+          <li><strong>Maintain rituals</strong> --- keep routines unrelated to work (morning coffee, exercise, hobbies) that anchor identity</li>
+          <li><strong>Experiment actively</strong> --- try new activities, roles, and connections to discover unexpressed aspects of self</li>
+          <li><strong>Practice self-compassion</strong> --- identity confusion during transitions is normal, not failure</li>
         </ul>
 
         <h2 id="integration" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Integration: Bringing Old and New Together
         </h2>
         <p className="mb-6">
-          Successful career transitions don't erase previous identity—they integrate past and present into expanded whole <Citation id="2" index={2} source="Academy of Management Review" year="2020" tier={1} />. The teacher who becomes a corporate trainer doesn't stop being educational; the lawyer who becomes a mediator doesn't abandon advocacy.
+          Successful career transitions don't erase previous identity---they integrate past and present into expanded whole <Citation id="2" index={2} source="Academy of Management Review" year="2020" tier={1} />. The teacher who becomes a corporate trainer doesn't stop being educational; the lawyer who becomes a mediator doesn't abandon advocacy.
         </p>
 
         <p className="mb-6">
@@ -382,7 +382,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Being laid off—losing your job through no fault of your own—triggers a complex psychological response combining shock, grief, financial stress, and identity disruption. Unlike voluntary career changes where you control timing and direction, layoffs happen to you, stripping agency at the same moment they remove income and structure.
+            Being laid off---losing your job through no fault of your own---triggers a complex psychological response combining shock, grief, financial stress, and identity disruption. Unlike voluntary career changes where you control timing and direction, layoffs happen to you, stripping agency at the same moment they remove income and structure.
           </p>
           <p className="mb-6">
             Research demonstrates that job loss significantly increases risk for depression, anxiety, substance use, and physical health problems <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. The impact extends beyond the individual, affecting partners, children, and entire families. Understanding these effects and evidence-based coping strategies aids recovery.
@@ -406,19 +406,19 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         />
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Financial security</strong> — immediate income loss, potential benefits loss, savings depletion</li>
-          <li><strong>Identity and purpose</strong> — loss of professional role and status</li>
-          <li><strong>Structure and routine</strong> — days lose organization and predictability</li>
-          <li><strong>Social connections</strong> — separation from work friends and professional network</li>
-          <li><strong>Self-esteem</strong> — questioning competence and worth despite layoff being structural</li>
-          <li><strong>Future uncertainty</strong> — unknown timeline for re-employment and financial stability</li>
+          <li><strong>Financial security</strong> --- immediate income loss, potential benefits loss, savings depletion</li>
+          <li><strong>Identity and purpose</strong> --- loss of professional role and status</li>
+          <li><strong>Structure and routine</strong> --- days lose organization and predictability</li>
+          <li><strong>Social connections</strong> --- separation from work friends and professional network</li>
+          <li><strong>Self-esteem</strong> --- questioning competence and worth despite layoff being structural</li>
+          <li><strong>Future uncertainty</strong> --- unknown timeline for re-employment and financial stability</li>
         </ul>
 
         <h2 id="grief" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Grief Process After Job Loss
         </h2>
         <p className="mb-6">
-          Layoffs trigger genuine grief—loss of identity, community, purpose, and security <Citation id="4" index={4} source="Journal of Vocational Behavior" year="2021" tier={1} />. The process mirrors other forms of grief:
+          Layoffs trigger genuine grief---loss of identity, community, purpose, and security <Citation id="4" index={4} source="Journal of Vocational Behavior" year="2021" tier={1} />. The process mirrors other forms of grief:
         </p>
 
         <ComparisonTable
@@ -435,7 +435,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>These stages aren't linear—you may cycle through them multiple times. Anger can resurge weeks later; acceptance doesn't mean you're 'over it." Grief is a process, not a checklist.</p>
+          <p>These stages aren't linear---you may cycle through them multiple times. Anger can resurge weeks later; acceptance doesn't mean you're 'over it." Grief is a process, not a checklist.</p>
         </ArticleCallout>
 
         <h2 id="financial-stress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -462,13 +462,13 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             },
             {
               title: 'Access emergency resources',
-              description: <p>Food banks, utility assistance programs, healthcare subsidies—use available support without shame. They exist for this purpose.</p>,
+              description: <p>Food banks, utility assistance programs, healthcare subsidies---use available support without shame. They exist for this purpose.</p>,
             },
           ]}
         />
 
         <p className="mb-6">
-          Financial stress compounds mental health challenges. Addressing practical survival needs isn't shallow—it's foundational for psychological recovery.
+          Financial stress compounds mental health challenges. Addressing practical survival needs isn't shallow---it's foundational for psychological recovery.
         </p>
 
         <h2 id="identity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -479,7 +479,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"They kept others but not me—I must not have been valuable"</li>
+          <li>"They kept others but not me---I must not have been valuable"</li>
           <li>"I should have seen this coming and protected myself"</li>
           <li>"I'm a burden to my family now"</li>
           <li>"Other people can find jobs; maybe I can't"</li>
@@ -502,14 +502,14 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Emotional support</strong> — people who listen without judgment and validate feelings</li>
-          <li><strong>Practical support</strong> — help with childcare, meals, job leads, resume review</li>
-          <li><strong>Informational support</strong> — advice about job search, networking, industry insights</li>
-          <li><strong>Social companionship</strong> — activities that maintain connection and normalcy</li>
+          <li><strong>Emotional support</strong> --- people who listen without judgment and validate feelings</li>
+          <li><strong>Practical support</strong> --- help with childcare, meals, job leads, resume review</li>
+          <li><strong>Informational support</strong> --- advice about job search, networking, industry insights</li>
+          <li><strong>Social companionship</strong> --- activities that maintain connection and normalcy</li>
         </ul>
 
         <p className="mb-6">
-          Many people withdraw after layoffs from shame or not wanting to burden others. This isolation exacerbates depression. Reaching out—even when difficult—protects mental health and accelerates recovery.
+          Many people withdraw after layoffs from shame or not wanting to burden others. This isolation exacerbates depression. Reaching out---even when difficult---protects mental health and accelerates recovery.
         </p>
 
         <h2 id="structure" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -520,11 +520,11 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Maintain sleep schedule</strong> — wake and sleep at consistent times even without work obligations</li>
-          <li><strong>Designate job search time</strong> — treat job searching like a job: specific hours, breaks, end time</li>
-          <li><strong>Non-work routines</strong> — exercise, meals, hobbies at regular times</li>
-          <li><strong>Weekly planning</strong> — schedule the week ahead with specific activities and goals</li>
-          <li><strong>Social commitments</strong> — regular meetings with friends, groups, or volunteers create accountability</li>
+          <li><strong>Maintain sleep schedule</strong> --- wake and sleep at consistent times even without work obligations</li>
+          <li><strong>Designate job search time</strong> --- treat job searching like a job: specific hours, breaks, end time</li>
+          <li><strong>Non-work routines</strong> --- exercise, meals, hobbies at regular times</li>
+          <li><strong>Weekly planning</strong> --- schedule the week ahead with specific activities and goals</li>
+          <li><strong>Social commitments</strong> --- regular meetings with friends, groups, or volunteers create accountability</li>
         </ul>
 
         <h2 id="resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -535,12 +535,12 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Growth mindset</strong> — seeing layoff as temporary setback, not permanent failure</li>
-          <li><strong>Flexible career expectations</strong> — willingness to consider adjacent roles or industries</li>
-          <li><strong>Active coping</strong> — problem-solving and seeking support rather than avoidance</li>
-          <li><strong>Self-compassion</strong> — treating yourself kindly during difficulty</li>
-          <li><strong>Meaning-making</strong> — finding purpose or learning in the experience</li>
-          <li><strong>Previous adversity navigation</strong> — having overcome past challenges builds confidence</li>
+          <li><strong>Growth mindset</strong> --- seeing layoff as temporary setback, not permanent failure</li>
+          <li><strong>Flexible career expectations</strong> --- willingness to consider adjacent roles or industries</li>
+          <li><strong>Active coping</strong> --- problem-solving and seeking support rather than avoidance</li>
+          <li><strong>Self-compassion</strong> --- treating yourself kindly during difficulty</li>
+          <li><strong>Meaning-making</strong> --- finding purpose or learning in the experience</li>
+          <li><strong>Previous adversity navigation</strong> --- having overcome past challenges builds confidence</li>
         </ul>
 
         <h2 id="job-search" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -556,7 +556,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             {
               id: 'rejection',
               title: 'Handling Rejection',
-              content: <p>Most applications get no response; most interviews end in rejection. This is normal, not personal. Track applications as numbers game—rejection is expected part of process, not commentary on worth.</p>,
+              content: <p>Most applications get no response; most interviews end in rejection. This is normal, not personal. Track applications as numbers game---rejection is expected part of process, not commentary on worth.</p>,
             },
             {
               id: 'urgency',
@@ -582,7 +582,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           This Week: First Steps
         </h2>
         <p className="mb-6">
-          (1) File for unemployment if you haven't. (2) Tell three people you trust about the layoff—isolation worsens everything. (3) Create one routine you'll maintain: morning walk, daily journaling, regular check-in with friend. (4) List three strengths you demonstrated in your previous job that transfer to future roles. Small concrete actions create momentum when everything feels overwhelming.
+          (1) File for unemployment if you haven't. (2) Tell three people you trust about the layoff---isolation worsens everything. (3) Create one routine you'll maintain: morning walk, daily journaling, regular check-in with friend. (4) List three strengths you demonstrated in your previous job that transfer to future roles. Small concrete actions create momentum when everything feels overwhelming.
         </p>
       </>
     ),
@@ -669,7 +669,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Job searching combines multiple psychological stressors: repeated rejection, financial pressure, uncertain timeline, loss of control, and constant self-evaluation. What should be a straightforward transactional process—matching skills to needs—becomes emotionally grueling because jobs represent not just income but identity, security, and worth.
+            Job searching combines multiple psychological stressors: repeated rejection, financial pressure, uncertain timeline, loss of control, and constant self-evaluation. What should be a straightforward transactional process---matching skills to needs---becomes emotionally grueling because jobs represent not just income but identity, security, and worth.
           </p>
           <p className="mb-6">
             Research demonstrates that job searching significantly impacts mental health, with higher rates of anxiety, depression, and stress compared to employed individuals <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2021" tier={1} />. Understanding these psychological dynamics helps you protect wellbeing while maintaining effective search strategies.
@@ -680,7 +680,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           The Psychological Impact of Rejection
         </h2>
         <p className="mb-6">
-          Job search rejection triggers the same neural pathways as social rejection—the brain processes professional rejection as threat to belonging and survival <Citation id="2" index={2} source="Journal of Applied Psychology" year="2020" tier={1} />.
+          Job search rejection triggers the same neural pathways as social rejection---the brain processes professional rejection as threat to belonging and survival <Citation id="2" index={2} source="Journal of Applied Psychology" year="2020" tier={1} />.
         </p>
 
         <StatCard
@@ -697,7 +697,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Rejection in job searches is not diagnostic of your worth or capabilities—it's a numbers game influenced by factors you can't control: timing, internal candidates, hiring freezes, automated screening errors, and random chance. Personalizing statistical rejection creates unnecessary suffering.</p>
+          <p>Rejection in job searches is not diagnostic of your worth or capabilities---it's a numbers game influenced by factors you can't control: timing, internal candidates, hiring freezes, automated screening errors, and random chance. Personalizing statistical rejection creates unnecessary suffering.</p>
         </ArticleCallout>
 
         <h2 id="emotional-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -720,7 +720,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          This cycle repeats dozens of times. The cumulative emotional load—hope, disappointment, hope, disappointment—is exhausting. Recognizing the pattern helps: "I'm in anxious waiting phase; this is temporary and expected."
+          This cycle repeats dozens of times. The cumulative emotional load---hope, disappointment, hope, disappointment---is exhausting. Recognizing the pattern helps: "I'm in anxious waiting phase; this is temporary and expected."
         </p>
 
         <h2 id="self-regulation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -739,7 +739,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             },
             {
               title: 'Establish search boundaries',
-              description: <p>Designated job search hours (e.g., 9 AM-1 PM) prevent all-consuming 24/7 searching. Rest periods are productive—they prevent burnout <Citation id="6" index={6} source="Anxiety, Stress, & Coping" year="2021" tier={1} />.</p>,
+              description: <p>Designated job search hours (e.g., 9 AM-1 PM) prevent all-consuming 24/7 searching. Rest periods are productive---they prevent burnout <Citation id="6" index={6} source="Anxiety, Stress, & Coping" year="2021" tier={1} />.</p>,
             },
             {
               title: 'Separate worth from outcomes',
@@ -760,9 +760,9 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Selection bias</strong> — people broadcast successes, not struggles; you see curated highlights, not full reality</li>
-          <li><strong>Timeline variation</strong> — job searches vary wildly in duration based on industry, level, timing, luck</li>
-          <li><strong>Hidden context</strong> — that friend who found a job quickly may have internal referral, or accepted lower pay, or hates the role</li>
+          <li><strong>Selection bias</strong> --- people broadcast successes, not struggles; you see curated highlights, not full reality</li>
+          <li><strong>Timeline variation</strong> --- job searches vary wildly in duration based on industry, level, timing, luck</li>
+          <li><strong>Hidden context</strong> --- that friend who found a job quickly may have internal referral, or accepted lower pay, or hates the role</li>
         </ul>
 
         <ArticleCallout variant="tip" title="Social Media Boundaries">
@@ -773,21 +773,21 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           Managing Uncertainty
         </h2>
         <p className="mb-6">
-          The uncertain timeline—not knowing if you'll find a job in weeks or months—creates chronic stress. Strategies to tolerate uncertainty:
+          The uncertain timeline---not knowing if you'll find a job in weeks or months---creates chronic stress. Strategies to tolerate uncertainty:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Scenario planning</strong> — create plans for different timelines (1 month, 3 months, 6 months) so you're prepared rather than catastrophizing</li>
-          <li><strong>Focus on present</strong> — "What can I do today?" rather than "What if I never find anything?"</li>
-          <li><strong>Small certainties</strong> — establish certainties you control (daily routines, skill-building, networking)</li>
-          <li><strong>Reframe unknown as possibility</strong> — "I don't know what will happen' can mean positive outcomes, not just negative</li>
+          <li><strong>Scenario planning</strong> --- create plans for different timelines (1 month, 3 months, 6 months) so you're prepared rather than catastrophizing</li>
+          <li><strong>Focus on present</strong> --- "What can I do today?" rather than "What if I never find anything?"</li>
+          <li><strong>Small certainties</strong> --- establish certainties you control (daily routines, skill-building, networking)</li>
+          <li><strong>Reframe unknown as possibility</strong> --- "I don't know what will happen' can mean positive outcomes, not just negative</li>
         </ul>
 
         <h2 id="self-efficacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Building Job Search Self-Efficacy
         </h2>
         <p className="mb-6">
-          Job search self-efficacy—confidence in your ability to successfully find employment—predicts both better search outcomes and lower psychological distress <Citation id="4" index={4} source="Career Development International" year="2021" tier={1} />.
+          Job search self-efficacy---confidence in your ability to successfully find employment---predicts both better search outcomes and lower psychological distress <Citation id="4" index={4} source="Career Development International" year="2021" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -795,10 +795,10 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Skill mastery</strong> — practicing interview responses, refining resume, improving networking</li>
-          <li><strong>Vicarious experience</strong> — learning from others who successfully navigated job searches</li>
-          <li><strong>Verbal persuasion</strong> — supportive people affirming your capabilities</li>
-          <li><strong>Managing arousal</strong> — reducing anxiety through relaxation techniques before high-stakes interactions</li>
+          <li><strong>Skill mastery</strong> --- practicing interview responses, refining resume, improving networking</li>
+          <li><strong>Vicarious experience</strong> --- learning from others who successfully navigated job searches</li>
+          <li><strong>Verbal persuasion</strong> --- supportive people affirming your capabilities</li>
+          <li><strong>Managing arousal</strong> --- reducing anxiety through relaxation techniques before high-stakes interactions</li>
         </ul>
 
         <h2 id="networking-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -814,7 +814,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             {
               id: 'reframe',
               title: 'Reframe Networking',
-              content: <p>Networking isn't begging for favors—it's information gathering and relationship building. Most people enjoy helping when asked genuinely. You're offering conversation, not demanding jobs.</p>,
+              content: <p>Networking isn't begging for favors---it's information gathering and relationship building. Most people enjoy helping when asked genuinely. You're offering conversation, not demanding jobs.</p>,
             },
             {
               id: 'script',
@@ -824,7 +824,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             {
               id: 'value',
               title: 'Provide Value',
-              content: <p>Share relevant articles, make introductions, offer your expertise—networking should be reciprocal even when you're seeking more.</p>,
+              content: <p>Share relevant articles, make introductions, offer your expertise---networking should be reciprocal even when you're seeking more.</p>,
             },
           ]}
         />
@@ -837,11 +837,11 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Quality over quantity</strong> — 10 tailored applications outperform 50 generic ones</li>
-          <li><strong>Diversify applications</strong> — mix dream roles with realistic backups; multiple paths reduce anxiety</li>
-          <li><strong>Maintain non-search activities</strong> — exercise, hobbies, social connection prevent all-consuming focus</li>
-          <li><strong>Limit checking</strong> — checking email every 10 minutes doesn't accelerate responses; schedule specific check times</li>
-          <li><strong>Celebrate micro-progress</strong> — phone screen, networking conversation, skill learned—acknowledge forward movement</li>
+          <li><strong>Quality over quantity</strong> --- 10 tailored applications outperform 50 generic ones</li>
+          <li><strong>Diversify applications</strong> --- mix dream roles with realistic backups; multiple paths reduce anxiety</li>
+          <li><strong>Maintain non-search activities</strong> --- exercise, hobbies, social connection prevent all-consuming focus</li>
+          <li><strong>Limit checking</strong> --- checking email every 10 minutes doesn't accelerate responses; schedule specific check times</li>
+          <li><strong>Celebrate micro-progress</strong> --- phone screen, networking conversation, skill learned---acknowledge forward movement</li>
         </ul>
 
         <h2 id="when-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -942,7 +942,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Starting a new job should feel exciting—you wanted this role, they chose you, it's a fresh start. Yet most people experience significant anxiety during the first weeks and months: fear of making mistakes, overwhelming new information, uncertainty about fitting in, and the pressure to prove the hiring decision was correct.
+            Starting a new job should feel exciting---you wanted this role, they chose you, it's a fresh start. Yet most people experience significant anxiety during the first weeks and months: fear of making mistakes, overwhelming new information, uncertainty about fitting in, and the pressure to prove the hiring decision was correct.
           </p>
           <p className="mb-6">
             Research demonstrates that new employee adjustment is a critical period affecting long-term job satisfaction, performance, and retention <Citation id="1" index={1} source="Journal of Applied Psychology" year="2021" tier={1} />. Understanding common psychological challenges during transitions helps you navigate them more effectively and with less self-judgment.
@@ -957,12 +957,12 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Information overload</strong> — systems, processes, people, culture, expectations all at once</li>
-          <li><strong>Competence anxiety</strong> — being a beginner again after mastery in previous role</li>
-          <li><strong>Social uncertainty</strong> — not knowing informal norms, who to ask for help, how to fit in</li>
-          <li><strong>Performance pressure</strong> — proving you were the right hire while still learning</li>
-          <li><strong>Identity adjustment</strong> — integrating new professional identity</li>
-          <li><strong>Comparison to predecessors</strong> — living up to or differentiating from person who held role</li>
+          <li><strong>Information overload</strong> --- systems, processes, people, culture, expectations all at once</li>
+          <li><strong>Competence anxiety</strong> --- being a beginner again after mastery in previous role</li>
+          <li><strong>Social uncertainty</strong> --- not knowing informal norms, who to ask for help, how to fit in</li>
+          <li><strong>Performance pressure</strong> --- proving you were the right hire while still learning</li>
+          <li><strong>Identity adjustment</strong> --- integrating new professional identity</li>
+          <li><strong>Comparison to predecessors</strong> --- living up to or differentiating from person who held role</li>
         </ul>
 
         <StatCard
@@ -989,7 +989,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Feeling incompetent during your first weeks is not evidence you're unqualified—it's evidence you're learning. No one knows how to do a job they've never done before. The learning curve is expected and built into hiring timelines.</p>
+          <p>Feeling incompetent during your first weeks is not evidence you're unqualified---it's evidence you're learning. No one knows how to do a job they've never done before. The learning curve is expected and built into hiring timelines.</p>
         </ArticleCallout>
 
         <h2 id="learning-curve" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1052,9 +1052,9 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Days 1-30: Learn</strong> — focus on understanding context, not proving yourself; ask questions, observe dynamics, read documentation</li>
-          <li><strong>Days 31-60: Build relationships</strong> — establish credibility, identify key stakeholders, understand expectations</li>
-          <li><strong>Days 61-90: Create value</strong> — deliver quick wins, align with manager on priorities, start contributing meaningfully</li>
+          <li><strong>Days 1-30: Learn</strong> --- focus on understanding context, not proving yourself; ask questions, observe dynamics, read documentation</li>
+          <li><strong>Days 31-60: Build relationships</strong> --- establish credibility, identify key stakeholders, understand expectations</li>
+          <li><strong>Days 61-90: Create value</strong> --- deliver quick wins, align with manager on priorities, start contributing meaningfully</li>
         </ul>
 
         <p className="mb-6">
@@ -1069,11 +1069,11 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Clear expectations</strong> — specific goals for first 30, 60, 90 days</li>
-          <li><strong>Structured training</strong> — systematic introduction to systems, processes, people</li>
-          <li><strong>Assigned buddy/mentor</strong> — designated person for questions beyond manager</li>
-          <li><strong>Regular check-ins</strong> — frequent touchpoints in first weeks, gradually reducing</li>
-          <li><strong>Social integration opportunities</strong> — team lunches, introductions, informal gatherings</li>
+          <li><strong>Clear expectations</strong> --- specific goals for first 30, 60, 90 days</li>
+          <li><strong>Structured training</strong> --- systematic introduction to systems, processes, people</li>
+          <li><strong>Assigned buddy/mentor</strong> --- designated person for questions beyond manager</li>
+          <li><strong>Regular check-ins</strong> --- frequent touchpoints in first weeks, gradually reducing</li>
+          <li><strong>Social integration opportunities</strong> --- team lunches, introductions, informal gatherings</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -1088,10 +1088,10 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Reduced informal learning</strong> — can't overhear conversations or observe how things work</li>
-          <li><strong>Social isolation</strong> — harder to build relationships through video alone</li>
-          <li><strong>Technology barriers</strong> — learning tools remotely while learning role</li>
-          <li><strong>Visibility concerns</strong> — worry about being forgotten or overlooked when not physically present</li>
+          <li><strong>Reduced informal learning</strong> --- can't overhear conversations or observe how things work</li>
+          <li><strong>Social isolation</strong> --- harder to build relationships through video alone</li>
+          <li><strong>Technology barriers</strong> --- learning tools remotely while learning role</li>
+          <li><strong>Visibility concerns</strong> --- worry about being forgotten or overlooked when not physically present</li>
         </ul>
 
         <p className="mb-6">
@@ -1106,10 +1106,10 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Reframe mistakes as data</strong> — errors teach you what doesn't work, accelerating learning</li>
-          <li><strong>Distinguish recoverable from catastrophic</strong> — most mistakes are easily fixed; catastrophic ones are rare</li>
-          <li><strong>Acknowledge early</strong> — "I made an error and fixed it" demonstrates accountability</li>
-          <li><strong>Extract learning</strong> — "I learned X from that mistake" shows growth mindset</li>
+          <li><strong>Reframe mistakes as data</strong> --- errors teach you what doesn't work, accelerating learning</li>
+          <li><strong>Distinguish recoverable from catastrophic</strong> --- most mistakes are easily fixed; catastrophic ones are rare</li>
+          <li><strong>Acknowledge early</strong> --- "I made an error and fixed it" demonstrates accountability</li>
+          <li><strong>Extract learning</strong> --- "I learned X from that mistake" shows growth mindset</li>
         </ul>
 
         <h2 id="self-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1120,18 +1120,18 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Protect sleep</strong> — anxiety disrupts sleep; prioritize sleep hygiene even when tempted to work late</li>
-          <li><strong>Maintain exercise</strong> — physical activity regulates stress hormones and improves mood</li>
-          <li><strong>Set boundaries</strong> — working 12-hour days to prove yourself accelerates burnout, not success</li>
-          <li><strong>Debrief regularly</strong> — talk to supportive people about challenges and wins</li>
-          <li><strong>Celebrate progress</strong> — acknowledge learning and small wins, not just final mastery</li>
+          <li><strong>Protect sleep</strong> --- anxiety disrupts sleep; prioritize sleep hygiene even when tempted to work late</li>
+          <li><strong>Maintain exercise</strong> --- physical activity regulates stress hormones and improves mood</li>
+          <li><strong>Set boundaries</strong> --- working 12-hour days to prove yourself accelerates burnout, not success</li>
+          <li><strong>Debrief regularly</strong> --- talk to supportive people about challenges and wins</li>
+          <li><strong>Celebrate progress</strong> --- acknowledge learning and small wins, not just final mastery</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Your First Week: Action Steps
         </h2>
         <p className="mb-6">
-          (1) Ask your manager: "What does success look like in my first 30, 60, 90 days?" Clear expectations reduce anxiety. (2) Identify one person who can answer cultural questions—a buddy or friendly colleague. (3) Schedule brief coffee chats with 3-5 teammates to build relationships. (4) Create a learning document where you track systems, processes, and people as you learn them. (5) Practice self-compassion: "I'm learning; confusion is expected" rather than "I should already know this."
+          (1) Ask your manager: "What does success look like in my first 30, 60, 90 days?" Clear expectations reduce anxiety. (2) Identify one person who can answer cultural questions---a buddy or friendly colleague. (3) Schedule brief coffee chats with 3-5 teammates to build relationships. (4) Create a learning document where you track systems, processes, and people as you learn them. (5) Practice self-compassion: "I'm learning; confusion is expected" rather than "I should already know this."
         </p>
       </>
     ),
@@ -1218,7 +1218,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've spent 15 years building your career. You've achieved what you once thought would bring satisfaction: promotions, salary increases, expertise, respect. Yet instead of fulfillment, you feel hollow. The path that once excited you now feels like someone else's life. This is mid-career crisis—the unsettling realization that success as you defined it doesn't deliver the meaning you need.
+            You've spent 15 years building your career. You've achieved what you once thought would bring satisfaction: promotions, salary increases, expertise, respect. Yet instead of fulfillment, you feel hollow. The path that once excited you now feels like someone else's life. This is mid-career crisis---the unsettling realization that success as you defined it doesn't deliver the meaning you need.
           </p>
           <p className="mb-6">
             Research demonstrates that career satisfaction follows a U-shaped curve, with satisfaction lowest in the 40s and early 50s <Citation id="2" index={2} source="Economic Journal" year="2008" tier={1} />. Mid-career questioning is normal, not failure. Understanding this transition helps you navigate it toward growth rather than stagnation.
@@ -1233,12 +1233,12 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Loss of meaning</strong> — work feels pointless or disconnected from values</li>
-          <li><strong>Identity confusion</strong> — "Is this who I am? Is this who I want to be?"</li>
-          <li><strong>Envy of alternatives</strong> — fantasizing about completely different careers</li>
-          <li><strong>Sunday night dread</strong> — persistent anxiety about returning to work each week</li>
-          <li><strong>Achievement without satisfaction</strong> — hitting goals that no longer matter</li>
-          <li><strong>Awareness of finite time</strong> — "Is this how I want to spend my remaining working years?"</li>
+          <li><strong>Loss of meaning</strong> --- work feels pointless or disconnected from values</li>
+          <li><strong>Identity confusion</strong> --- "Is this who I am? Is this who I want to be?"</li>
+          <li><strong>Envy of alternatives</strong> --- fantasizing about completely different careers</li>
+          <li><strong>Sunday night dread</strong> --- persistent anxiety about returning to work each week</li>
+          <li><strong>Achievement without satisfaction</strong> --- hitting goals that no longer matter</li>
+          <li><strong>Awareness of finite time</strong> --- "Is this how I want to spend my remaining working years?"</li>
         </ul>
 
         <StatCard
@@ -1254,7 +1254,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
           The Career Plateau
         </h2>
         <p className="mb-6">
-          Many mid-career professionals hit plateaus—limited further advancement opportunities <Citation id="3" index={3} source="Journal of Organizational Behavior" year="2020" tier={1} />. You've climbed as high as you'll go, or the next level requires tradeoffs you're unwilling to make.
+          Many mid-career professionals hit plateaus---limited further advancement opportunities <Citation id="3" index={3} source="Journal of Organizational Behavior" year="2020" tier={1} />. You've climbed as high as you'll go, or the next level requires tradeoffs you're unwilling to make.
         </p>
 
         <ComparisonTable
@@ -1269,32 +1269,32 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Plateaus aren't inherently negative—staying at a level by choice differs psychologically from being stuck. The crisis emerges when the plateau contradicts your self-concept or when staying feels like settling.
+          Plateaus aren't inherently negative---staying at a level by choice differs psychologically from being stuck. The crisis emerges when the plateau contradicts your self-concept or when staying feels like settling.
         </p>
 
         <h2 id="golden-handcuffs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Golden Handcuffs: When Security Traps
         </h2>
         <p className="mb-6">
-          Mid-career often brings "golden handcuffs"—compensation and benefits that make leaving financially difficult despite unhappiness <Citation id="5" index={5} source="Human Relations" year="2020" tier={1} />.
+          Mid-career often brings "golden handcuffs"---compensation and benefits that make leaving financially difficult despite unhappiness <Citation id="5" index={5} source="Human Relations" year="2020" tier={1} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Lifestyle dependence</strong> — expenses scaled to income make reduction painful</li>
-          <li><strong>Retirement proximity</strong> — staying for pension vesting or years-to-retirement countdown</li>
-          <li><strong>Family obligations</strong> — supporting children's education, aging parents, mortgage</li>
-          <li><strong>Benefits lock-in</strong> — healthcare, stock options, vacation accrual</li>
+          <li><strong>Lifestyle dependence</strong> --- expenses scaled to income make reduction painful</li>
+          <li><strong>Retirement proximity</strong> --- staying for pension vesting or years-to-retirement countdown</li>
+          <li><strong>Family obligations</strong> --- supporting children's education, aging parents, mortgage</li>
+          <li><strong>Benefits lock-in</strong> --- healthcare, stock options, vacation accrual</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The question isn't whether constraints are real—they are. It's whether the cost of staying (mental health, time, meaning) exceeds the cost of changing (financial adjustment, uncertainty). This calculus is personal and complex, not binary.</p>
+          <p>The question isn't whether constraints are real---they are. It's whether the cost of staying (mental health, time, meaning) exceeds the cost of changing (financial adjustment, uncertainty). This calculus is personal and complex, not binary.</p>
         </ArticleCallout>
 
         <h2 id="generativity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Generativity Shift
         </h2>
         <p className="mb-6">
-          Erik Erikson's developmental theory identifies middle adulthood as the stage of generativity vs. stagnation <Citation id="6" index={6} source="Psychology and Aging" year="2021" tier={1} />. Generativity—contributing to the next generation and society—becomes primary developmental task.
+          Erik Erikson's developmental theory identifies middle adulthood as the stage of generativity vs. stagnation <Citation id="6" index={6} source="Psychology and Aging" year="2021" tier={1} />. Generativity---contributing to the next generation and society---becomes primary developmental task.
         </p>
 
         <p className="mb-6">
@@ -1307,17 +1307,17 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             {
               id: 'mentoring',
               title: 'Mentoring and Teaching',
-              description: <p>Guiding junior colleagues, sharing expertise, developing others—fulfills generative need within current role.</p>,
+              description: <p>Guiding junior colleagues, sharing expertise, developing others---fulfills generative need within current role.</p>,
             },
             {
               id: 'impact',
               title: 'Social Impact',
-              content: <p>Shifting to roles with clearer societal contribution, volunteering skills, joining boards—extends impact beyond profit.</p>,
+              content: <p>Shifting to roles with clearer societal contribution, volunteering skills, joining boards---extends impact beyond profit.</p>,
             },
             {
               id: 'legacy',
               title: 'Legacy Building',
-              content: <p>Creating systems, knowledge, or practices that outlast your tenure—tangible contribution that persists.</p>,
+              content: <p>Creating systems, knowledge, or practices that outlast your tenure---tangible contribution that persists.</p>,
             },
           ]}
         />
@@ -1342,7 +1342,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
             },
             {
               title: 'Explore without committing',
-              description: <p>Informational interviews, side projects, volunteer work, classes—test possibilities before burning bridges.</p>,
+              description: <p>Informational interviews, side projects, volunteer work, classes---test possibilities before burning bridges.</p>,
             },
             {
               title: 'Consider incremental change',
@@ -1359,12 +1359,12 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Reshape current role</strong> — negotiate different responsibilities, shift focus, reduce hours</li>
-          <li><strong>Internal transfer</strong> — change teams, departments, or locations within organization</li>
-          <li><strong>Portfolio career</strong> — combine part-time work with passion projects, teaching, consulting</li>
-          <li><strong>Gradual transition</strong> — stay while building new skills, network, financial cushion for change</li>
-          <li><strong>Meaning outside work</strong> — accept work as income source, derive purpose from family, hobbies, service</li>
-          <li><strong>Full pivot</strong> — leave for completely different career aligned with current values</li>
+          <li><strong>Reshape current role</strong> --- negotiate different responsibilities, shift focus, reduce hours</li>
+          <li><strong>Internal transfer</strong> --- change teams, departments, or locations within organization</li>
+          <li><strong>Portfolio career</strong> --- combine part-time work with passion projects, teaching, consulting</li>
+          <li><strong>Gradual transition</strong> --- stay while building new skills, network, financial cushion for change</li>
+          <li><strong>Meaning outside work</strong> --- accept work as income source, derive purpose from family, hobbies, service</li>
+          <li><strong>Full pivot</strong> --- leave for completely different career aligned with current values</li>
         </ul>
 
         <p className="mb-6">
@@ -1379,7 +1379,7 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          Mid-career crisis is often the valley—you've summited the first mountain and realized the view isn't what you expected. The work isn't returning to the first mountain but identifying and climbing your second: what brings meaning beyond conventional success?
+          Mid-career crisis is often the valley---you've summited the first mountain and realized the view isn't what you expected. The work isn't returning to the first mountain but identifying and climbing your second: what brings meaning beyond conventional success?
         </p>
 
         <h2 id="practical" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1390,12 +1390,12 @@ export const careerTransitionsUncertaintyArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Create space for reflection</strong> — regular time away from work demands to think deeply</li>
-          <li><strong>Talk to people in alternative paths</strong> — informational interviews reveal realities vs. fantasies</li>
-          <li><strong>Experiment small</strong> — side projects, volunteer work, courses test interests without risking stability</li>
-          <li><strong>Calculate real costs of change</strong> — what would leaving actually require financially? Often more feasible than imagined</li>
-          <li><strong>Work with career counselor</strong> — professional guidance for mid-career transitions provides structure and accountability</li>
-          <li><strong>Discuss with family</strong> — career changes affect household; collaborative decision-making prevents resentment</li>
+          <li><strong>Create space for reflection</strong> --- regular time away from work demands to think deeply</li>
+          <li><strong>Talk to people in alternative paths</strong> --- informational interviews reveal realities vs. fantasies</li>
+          <li><strong>Experiment small</strong> --- side projects, volunteer work, courses test interests without risking stability</li>
+          <li><strong>Calculate real costs of change</strong> --- what would leaving actually require financially? Often more feasible than imagined</li>
+          <li><strong>Work with career counselor</strong> --- professional guidance for mid-career transitions provides structure and accountability</li>
+          <li><strong>Discuss with family</strong> --- career changes affect household; collaborative decision-making prevents resentment</li>
         </ul>
 
         <h2 id="when-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

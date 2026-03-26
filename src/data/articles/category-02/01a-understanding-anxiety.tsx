@@ -98,7 +98,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Your heart pounds. Your palms sweat. Your mind races through worst-case scenarios. This is
-            anxiety — your body's built-in alarm system doing exactly what it was designed to do. But
+            anxiety --- your body's built-in alarm system doing exactly what it was designed to do. But
             understanding why this happens, and what makes anxiety different from everyday worry, can
             change how you respond to it.
           </p>
@@ -124,7 +124,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           <Citation id="1" index={2} source="Psychiatric Clinics of North America" year="2009" tier={1} />.
         </p>
         <p className="mb-6">
-          When you feel anxious, your amygdala — the brain's threat-detection center — identifies
+          When you feel anxious, your amygdala --- the brain's threat-detection center --- identifies
           something as potentially dangerous and triggers a cascade of responses{', '}
           <Citation id="3" index={3} source="Biological Psychiatry" year="2020" tier={1} />. This includes:
         </p>
@@ -168,7 +168,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           <p>
             Your anxiety response is so ancient that it predates language. The amygdala, your brain's
             threat detector, evolved hundreds of millions of years ago and operates faster than conscious
-            thought — which is why you often feel anxious before you know why.
+            thought --- which is why you often feel anxious before you know why.
           </p>
         </ArticleCallout>
 
@@ -180,7 +180,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           While often used interchangeably, anxiety and fear are distinct experiences. Fear is a response
-          to an immediate, concrete threat — a car swerving into your lane, a snake on the hiking trail. It
+          to an immediate, concrete threat --- a car swerving into your lane, a snake on the hiking trail. It
           happens in the present moment and typically resolves when the danger passes.
         </p>
         <p className="mb-6">
@@ -209,7 +209,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           The Anxiety Response: What Happens in Your Body
         </h2>
         <p className="mb-6">
-          When anxiety kicks in, your sympathetic nervous system — the "fight or flight" system — takes
+          When anxiety kicks in, your sympathetic nervous system --- the "fight or flight" system --- takes
           over{', '}
           <Citation id="4" index={6} source="American Physiological Society" year="2018" tier={2} />. This
           creates a cascade of physical sensations:
@@ -284,8 +284,8 @@ export const understandingAnxietyArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Some anxiety is normal and even helpful. Anxiety before a job interview motivates you to prepare.
-          Anxiety about a deadline helps you stay focused. The question isn't whether you have anxiety —
-          most people do — but whether your anxiety is proportionate to the situation and manageable.
+          Anxiety about a deadline helps you stay focused. The question isn't whether you have anxiety ---
+          most people do --- but whether your anxiety is proportionate to the situation and manageable.
         </p>
         <p className="mb-6">
           Anxiety becomes problematic when it:
@@ -360,8 +360,8 @@ export const understandingAnxietyArticlesA: Article[] = [
           Understanding Is the First Step
         </h2>
         <p className="mb-6">
-          Recognizing anxiety for what it is — a natural, evolutionarily adaptive response that sometimes
-          misfires in modern contexts — can reduce the shame and confusion many people feel. You're not
+          Recognizing anxiety for what it is --- a natural, evolutionarily adaptive response that sometimes
+          misfires in modern contexts --- can reduce the shame and confusion many people feel. You're not
           broken. Your alarm system is just overly sensitive.
         </p>
         <p className="mb-6">
@@ -375,7 +375,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>Remember:</strong> Anxiety isn't your enemy. It's a signal. The goal isn't to eliminate
-            anxiety entirely — that's both impossible and undesirable. The goal is to develop a healthier
+            anxiety entirely --- that's both impossible and undesirable. The goal is to develop a healthier
             relationship with it, so it informs you without controlling you.
           </p>
         </ArticleCallout>
@@ -572,7 +572,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           The Six-Month Rule and Other Diagnostic Criteria
         </h2>
         <p className="mb-6">
-          For Generalized Anxiety Disorder (GAD) — the most common anxiety disorder — the anxiety and worry
+          For Generalized Anxiety Disorder (GAD) --- the most common anxiety disorder --- the anxiety and worry
           must occur more days than not for at least six months{', '}
           <Citation id="5" index={3} source="Depression and Anxiety" year="2020" tier={1} />. This
           duration criterion helps distinguish temporary stress responses from persistent patterns.
@@ -827,7 +827,7 @@ export const understandingAnxietyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You avoid the thing that makes you anxious. Relief floods in — temporarily. But then, the next
+            You avoid the thing that makes you anxious. Relief floods in --- temporarily. But then, the next
             time the situation arises, your anxiety is even stronger. This is the anxiety cycle, a
             self-reinforcing loop that keeps you trapped in fear. Understanding how it works is the first
             step toward breaking free.
@@ -856,7 +856,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           items={[
             {
               id: 'stage1',
-              title: 'Stage 1: Trigger — Something Activates Your Anxiety',
+              title: 'Stage 1: Trigger --- Something Activates Your Anxiety',
               content: (
                 <div>
                   <p className="mb-4">
@@ -877,7 +877,7 @@ export const understandingAnxietyArticlesA: Article[] = [
             },
             {
               id: 'stage2',
-              title: 'Stage 2: Response — Anxiety Symptoms Emerge',
+              title: 'Stage 2: Response --- Anxiety Symptoms Emerge',
               content: (
                 <div>
                   <p className="mb-4">
@@ -895,7 +895,7 @@ export const understandingAnxietyArticlesA: Article[] = [
             },
             {
               id: 'stage3',
-              title: 'Stage 3: Avoidance — You Escape or Prevent the Situation',
+              title: 'Stage 3: Avoidance --- You Escape or Prevent the Situation',
               content: (
                 <div>
                   <p className="mb-4">
@@ -919,7 +919,7 @@ export const understandingAnxietyArticlesA: Article[] = [
             },
             {
               id: 'stage4',
-              title: 'Stage 4: Reinforcement — The Cycle Strengthens',
+              title: 'Stage 4: Reinforcement --- The Cycle Strengthens',
               content: (
                 <div>
                   <p className="mb-4">
@@ -967,7 +967,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           Why Avoidance Feels Like the Right Choice
         </h2>
         <p className="mb-6">
-          Avoidance isn't irrational. It works — in the moment. The relief you feel when you cancel plans,
+          Avoidance isn't irrational. It works --- in the moment. The relief you feel when you cancel plans,
           leave a situation, or avoid a feared outcome is real and immediate. Your nervous system calms
           down. The threat is gone.
         </p>
@@ -1078,7 +1078,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           Facing the Sensations: Interoceptive Exposure
         </h2>
         <p className="mb-6">
-          For panic disorder and health anxiety, the feared trigger isn't external — it's the physical
+          For panic disorder and health anxiety, the feared trigger isn't external --- it's the physical
           sensations themselves. People fear rapid heartbeat, dizziness, shortness of breath, or other
           anxiety symptoms because they interpret them as dangerous{', '}
           <Citation id="4" index={8} source="Behavior Therapy" year="2018" tier={1} />.
@@ -1218,7 +1218,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Your heart races. Your chest tightens. Your stomach churns. Your hands shake. Anxiety doesn't
-            just live in your mind — it commandeers your entire body. Understanding why anxiety feels so
+            just live in your mind --- it commandeers your entire body. Understanding why anxiety feels so
             intensely physical can help you stop fearing the symptoms themselves.
           </p>
           <p className="mb-6">
@@ -1241,7 +1241,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           <Citation id="1" index={2} source="Autonomic Neuroscience" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          When your brain perceives threat — whether it's a bear in the woods or an upcoming presentation —
+          When your brain perceives threat --- whether it's a bear in the woods or an upcoming presentation ---
           it activates your sympathetic nervous system, the "fight or flight" branch of your autonomic
           nervous system. This triggers immediate physical changes designed to help you survive:
         </p>
@@ -1383,7 +1383,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           Interoception: Your Body's Internal Awareness System
         </h2>
         <p className="mb-6">
-          Interoception is your ability to sense what's happening inside your body — hunger, heartbeat,
+          Interoception is your ability to sense what's happening inside your body --- hunger, heartbeat,
           breathing, temperature, muscle tension{', '}
           <Citation id="2" index={7} source="Biological Psychiatry" year="2019" tier={1} />.
         </p>
@@ -1400,7 +1400,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         <p className="mb-6">
           This is called anxiety sensitivity: fear of anxiety-related sensations themselves{', '}
           <Citation id="8" index={8} source="Behavior Therapy" year="2019" tier={1} />. You're not just
-          anxious about external situations — you're anxious about your own body's responses.
+          anxious about external situations --- you're anxious about your own body's responses.
         </p>
 
         <ArticleCallout variant="clinical-note" title="The Panic Spiral">
@@ -1411,7 +1411,7 @@ export const understandingAnxietyArticlesA: Article[] = [
             interpret it as a heart attack. More anxiety. The cycle escalates into full panic.
           </p>
           <p>
-            Breaking this cycle requires learning that the sensations themselves aren't dangerous — they're
+            Breaking this cycle requires learning that the sensations themselves aren't dangerous --- they're
             just uncomfortable.
           </p>
         </ArticleCallout>
@@ -1515,7 +1515,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           The physical symptoms of anxiety aren't a sign that something is wrong with your body. They're a
-          sign that your body is doing exactly what it's designed to do when it perceives threat — even if
+          sign that your body is doing exactly what it's designed to do when it perceives threat --- even if
           that threat isn't actually dangerous.
         </p>
         <p className="mb-6">
@@ -1526,7 +1526,7 @@ export const understandingAnxietyArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>Remember:</strong> The goal isn't to eliminate physical anxiety symptoms entirely — that's
+            <strong>Remember:</strong> The goal isn't to eliminate physical anxiety symptoms entirely --- that's
             unrealistic. The goal is to change your relationship with them so they inform you without
             terrifying you.
           </p>
@@ -1546,7 +1546,7 @@ export const understandingAnxietyArticlesA: Article[] = [
     id: catId(5),
     slug: 'types-of-anxiety-disorders-overview',
     title: 'Types of Anxiety Disorders: A Clear Overview',
-    description: 'Learn about the major anxiety disorders — GAD, panic disorder, social anxiety, phobias, and more — and how they differ from each other.',
+    description: 'Learn about the major anxiety disorders --- GAD, panic disorder, social anxiety, phobias, and more --- and how they differ from each other.',
     image: "/images/articles/cat02/cover-005.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 8,
@@ -1638,7 +1638,7 @@ export const understandingAnxietyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Anxiety disorder" isn't a single condition — it's a category that includes several distinct
+            "Anxiety disorder" isn't a single condition --- it's a category that includes several distinct
             diagnoses, each with its own patterns, triggers, and treatment approaches. Understanding which
             type you might be experiencing can guide you toward the most effective help.
           </p>
@@ -1668,7 +1668,7 @@ export const understandingAnxietyArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Generalized Anxiety Disorder is characterized by persistent, excessive worry about a variety of
-          topics — health, work, finances, relationships, minor matters{', '}
+          topics --- health, work, finances, relationships, minor matters{', '}
           <Citation id="3" index={2} source="BMJ" year="2020" tier={1} />. The worry is difficult to
           control and occurs more days than not for at least six months.
         </p>
@@ -1964,7 +1964,7 @@ export const understandingAnxietyArticlesA: Article[] = [
           <p className="mb-4">
             <strong>Bottom line:</strong> Understanding which anxiety disorder you're experiencing helps you
             find the most effective treatment. While all anxiety disorders involve excessive fear and worry,
-            the specific focus of that fear — and the behaviors it drives — distinguishes one from another.
+            the specific focus of that fear --- and the behaviors it drives --- distinguishes one from another.
           </p>
           <p className="mb-4">
             Most importantly: all of these conditions are highly treatable. With the right support, people

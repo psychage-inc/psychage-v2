@@ -98,13 +98,13 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've been feeling tired for months. Your jaw aches from clenching. You can't remember the last time you truly relaxed. Welcome to chronic stress — the silent epidemic reshaping millions of brains and bodies every day.
+            You've been feeling tired for months. Your jaw aches from clenching. You can't remember the last time you truly relaxed. Welcome to chronic stress --- the silent epidemic reshaping millions of brains and bodies every day.
           </p>
           <p className="mb-6">
             Unlike the quick jolt of acute stress (like swerving to avoid a car accident), chronic stress is ongoing pressure that never quite lets up <Citation id="1" index={1} source="Physical Therapy" year="2014" tier={1} />. It's the unrelenting work deadlines, the constant financial worry, the caregiving that never ends, the relationship tension that simmers for months.
           </p>
           <p className="mb-6">
-            The distinction matters because your nervous system evolved to handle short bursts of stress — not the marathon of modern life. When stress becomes chronic, the very systems designed to protect you begin to break down <Citation id="2" index={2} source="Brain Research" year="2015" tier={1} />.
+            The distinction matters because your nervous system evolved to handle short bursts of stress --- not the marathon of modern life. When stress becomes chronic, the very systems designed to protect you begin to break down <Citation id="2" index={2} source="Brain Research" year="2015" tier={1} />.
           </p>
         </div>
 
@@ -121,13 +121,13 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           Acute vs. Chronic Stress: A Critical Distinction
         </h2>
         <p className="mb-6">
-          <strong>Acute stress</strong> is immediate and time-limited. Your heart pounds before a presentation. You feel a surge of adrenaline when you narrowly avoid an accident. These responses are adaptive — they help you perform and survive <Citation id="3" index={3} source="Journal of Health and Social Behavior" year="2010" tier={1} />.
+          <strong>Acute stress</strong> is immediate and time-limited. Your heart pounds before a presentation. You feel a surge of adrenaline when you narrowly avoid an accident. These responses are adaptive --- they help you perform and survive <Citation id="3" index={3} source="Journal of Health and Social Behavior" year="2010" tier={1} />.
         </p>
         <p className="mb-6">
           Once the threat passes, your nervous system returns to baseline. The presentation ends. The near-miss is over. Your body recovers.
         </p>
         <p className="mb-6">
-          <strong>Chronic stress</strong> is different. It's the stressor that doesn't end — or a series of stressors that overlap without adequate recovery time <Citation id="4" index={4} source="National Institute of Mental Health" year="2023" tier={2} />. Your body stays in a state of heightened alert, and the recovery phase never comes.
+          <strong>Chronic stress</strong> is different. It's the stressor that doesn't end --- or a series of stressors that overlap without adequate recovery time <Citation id="4" index={4} source="National Institute of Mental Health" year="2023" tier={2} />. Your body stays in a state of heightened alert, and the recovery phase never comes.
         </p>
 
         <ComparisonTable
@@ -148,7 +148,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           What Happens to Your Body Under Chronic Stress
         </h2>
         <p className="mb-6">
-          When stress persists, your body's stress response system — designed for short-term emergencies — becomes chronically activated. This creates a cascade of biological changes <Citation id="5" index={5} source="American Psychological Association" year="2023" tier={3} />:
+          When stress persists, your body's stress response system --- designed for short-term emergencies --- becomes chronically activated. This creates a cascade of biological changes <Citation id="5" index={5} source="American Psychological Association" year="2023" tier={3} />:
         </p>
 
         <ProgressSteps
@@ -190,7 +190,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Brain Changes',
               description: (
                 <p>
-                  Chronic stress physically reshapes your brain — shrinking the hippocampus (memory), enlarging the amygdala (fear center), and weakening prefrontal cortex connections (executive function).
+                  Chronic stress physically reshapes your brain --- shrinking the hippocampus (memory), enlarging the amygdala (fear center), and weakening prefrontal cortex connections (executive function).
                 </p>
               ),
             },
@@ -216,7 +216,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           <li><strong>Neuroplasticity reduction</strong>: The brain's ability to form new neural connections decreases, making it harder to learn new coping strategies <Citation id="7" index={7} source="Nature Reviews Neuroscience" year="2005" tier={1} />.</li>
         </ul>
         <p className="mb-6">
-          The good news? These changes are not always permanent. With intervention — stress reduction, therapy, lifestyle changes — the brain can recover much of its lost function. Neuroplasticity works both ways.
+          The good news? These changes are not always permanent. With intervention --- stress reduction, therapy, lifestyle changes --- the brain can recover much of its lost function. Neuroplasticity works both ways.
         </p>
 
         <h2 id="recognizing-chronic-stress-in-yourself" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -295,7 +295,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Economic insecurity</strong>: Housing costs, student debt, job instability create persistent financial pressure.</li>
           <li><strong>Information overload</strong>: 24/7 news cycles, social media, and constant connectivity keep our nervous systems on high alert.</li>
-          <li><strong>Role strain</strong>: We're expected to excel as workers, parents, partners, friends, caregivers — often simultaneously.</li>
+          <li><strong>Role strain</strong>: We're expected to excel as workers, parents, partners, friends, caregivers --- often simultaneously.</li>
           <li><strong>Loss of community support</strong>: Geographic mobility and digital isolation mean fewer built-in support systems.</li>
           <li><strong>Chronic uncertainty</strong>: Rapid social change, climate anxiety, political polarization create ambient stress with no clear resolution.</li>
         </ul>
@@ -322,7 +322,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           <li>Physical symptoms are severe or unexplained by medical conditions</li>
         </ul>
         <p className="mb-6">
-          Chronic stress is not a character flaw or a sign of weakness. It's a biological response to sustained pressure — and it responds to intervention. The first step is recognizing it for what it is.
+          Chronic stress is not a character flaw or a sign of weakness. It's a biological response to sustained pressure --- and it responds to intervention. The first step is recognizing it for what it is.
         </p>
 
         <ArticleCallout variant="tip" title="Next Steps">
@@ -427,10 +427,10 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every time you encounter a stressor — a looming deadline, a difficult conversation, a scary diagnosis — a complex biological orchestra begins to play. This is your stress response system, an ancient survival mechanism that has kept humans alive for millennia.
+            Every time you encounter a stressor --- a looming deadline, a difficult conversation, a scary diagnosis --- a complex biological orchestra begins to play. This is your stress response system, an ancient survival mechanism that has kept humans alive for millennia.
           </p>
           <p className="mb-6">
-            Understanding how this system works isn't just academic curiosity. When you know what's happening inside your body during stress, you gain insight into why you feel the way you do — and more importantly, where you can intervene to change it <Citation id="1" index={1} source="Polish Archives of Internal Medicine" year="2016" tier={1} />.
+            Understanding how this system works isn't just academic curiosity. When you know what's happening inside your body during stress, you gain insight into why you feel the way you do --- and more importantly, where you can intervene to change it <Citation id="1" index={1} source="Polish Archives of Internal Medicine" year="2016" tier={1} />.
           </p>
         </div>
 
@@ -499,7 +499,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Adrenaline has a half-life of only about 2 minutes in your bloodstream. That's why the intense physical sensations of acute stress (like a near-miss car accident) fade relatively quickly — even though you may feel shaken emotionally for much longer.
+            Adrenaline has a half-life of only about 2 minutes in your bloodstream. That's why the intense physical sensations of acute stress (like a near-miss car accident) fade relatively quickly --- even though you may feel shaken emotionally for much longer.
           </p>
         </ArticleCallout>
 
@@ -539,20 +539,20 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
             },
             {
               title: 'Negative Feedback Loop',
-              description: <p>Cortisol signals the hypothalamus and pituitary to reduce CRH and ACTH production — turning off the stress response once threat has passed.</p>,
+              description: <p>Cortisol signals the hypothalamus and pituitary to reduce CRH and ACTH production --- turning off the stress response once threat has passed.</p>,
             },
           ]}
         />
 
         <p className="mb-6 mt-6">
-          This is where chronic stress causes problems. When stress is unrelenting, the HPA axis stays activated. Over time, the negative feedback loop can become dysregulated — either producing too much cortisol (hyperactivation) or too little (hypoactivation, as seen in burnout) <Citation id="5" index={5} source="Dialogues in Clinical Neuroscience" year="2006" tier={1} />.
+          This is where chronic stress causes problems. When stress is unrelenting, the HPA axis stays activated. Over time, the negative feedback loop can become dysregulated --- either producing too much cortisol (hyperactivation) or too little (hypoactivation, as seen in burnout) <Citation id="5" index={5} source="Dialogues in Clinical Neuroscience" year="2006" tier={1} />.
         </p>
 
         <h2 id="cortisol-the-double-edged-hormone" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Cortisol: The Double-Edged Hormone
         </h2>
         <p className="mb-6">
-          Cortisol has earned a bad reputation, but it's essential for survival. The problem isn't cortisol itself — it's chronic elevation or dysregulation <Citation id="6" index={6} source="Nature Reviews Neuroscience" year="2012" tier={1} />.
+          Cortisol has earned a bad reputation, but it's essential for survival. The problem isn't cortisol itself --- it's chronic elevation or dysregulation <Citation id="6" index={6} source="Nature Reviews Neuroscience" year="2012" tier={1} />.
         </p>
 
         <ArticleChart
@@ -584,7 +584,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Remains chronically elevated (disrupts sleep, digestion, immune function)</li>
           <li>Loses its natural circadian rhythm (fatigue in morning, wired at night)</li>
-          <li>Becomes "flattened" (seen in burnout — low or blunted cortisol response)</li>
+          <li>Becomes "flattened" (seen in burnout --- low or blunted cortisol response)</li>
           <li>Impairs hippocampus function (memory problems, reduced stress resilience)</li>
         </ul>
 
@@ -616,7 +616,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>The key insight:</strong> Many stress management techniques (deep breathing, meditation, progressive muscle relaxation, vagus nerve stimulation) work specifically by activating the parasympathetic nervous system — shifting the seesaw back toward balance.
+            <strong>The key insight:</strong> Many stress management techniques (deep breathing, meditation, progressive muscle relaxation, vagus nerve stimulation) work specifically by activating the parasympathetic nervous system --- shifting the seesaw back toward balance.
           </p>
         </ArticleCallout>
 
@@ -644,7 +644,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Early Life Experiences',
               content: (
                 <p>
-                  Adverse childhood experiences can 'program' the HPA axis to be hyperreactive — a phenomenon called biological embedding. Conversely, secure attachment and low early-life stress can create a more resilient stress response system.
+                  Adverse childhood experiences can 'program' the HPA axis to be hyperreactive --- a phenomenon called biological embedding. Conversely, secure attachment and low early-life stress can create a more resilient stress response system.
                 </p>
               ),
             },
@@ -653,7 +653,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Prior Chronic Stress',
               content: (
                 <p>
-                  Prolonged stress exposure can sensitize the HPA axis, making you more reactive to future stressors (kindling effect) — or in some cases, lead to blunted responses (burnout, exhaustion).
+                  Prolonged stress exposure can sensitize the HPA axis, making you more reactive to future stressors (kindling effect) --- or in some cases, lead to blunted responses (burnout, exhaustion).
                 </p>
               ),
             },
@@ -686,7 +686,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Perception matters</strong>: The stress response begins with your brain's interpretation of threat. Cognitive reappraisal can literally change your physiological stress response.</li>
-          <li><strong>Recovery is essential</strong>: It's not just about reducing stressors — it's about activating the parasympathetic 'brake' to allow your body to return to baseline.</li>
+          <li><strong>Recovery is essential</strong>: It's not just about reducing stressors --- it's about activating the parasympathetic 'brake' to allow your body to return to baseline.</li>
           <li><strong>Timing matters</strong>: Acute stress can be adaptive and even beneficial. Chronic, unrelenting stress without recovery is what causes damage.</li>
           <li><strong>Lifestyle interventions work</strong>: Exercise, sleep, nutrition, and social connection directly influence HPA axis function and stress resilience.</li>
           <li><strong>Early intervention helps</strong>: Addressing stress before it becomes chronic prevents the biological embedding that makes the stress response system hypersensitive.</li>
@@ -701,7 +701,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Your stress response system is not your enemy. It's an ancient, sophisticated survival mechanism. The challenge of modern life is learning to work with this system — not against it — in a world it was never designed to navigate.
+          Your stress response system is not your enemy. It's an ancient, sophisticated survival mechanism. The challenge of modern life is learning to work with this system --- not against it --- in a world it was never designed to navigate.
         </p>
       </>
     ),
@@ -795,7 +795,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
             You stare at your to-do list. Twelve items. Twenty items. More keep appearing in your mind. Your inbox has 247 unread messages. Three people need responses today. A project deadline looms. And you haven't even opened the bills yet. You feel frozen. You can't start anything because everything demands your attention at once.
           </p>
           <p className="mb-6">
-            This is overwhelm — the cognitive and emotional state that emerges when demands exceed your perceived resources to meet them <Citation id="1" index={1} source="Ecco Press" year="2004" tier={5} />. It's not just stress. It's the suffocating feeling that there are too many things, too many decisions, too many responsibilities — and not enough of you to handle them all.
+            This is overwhelm --- the cognitive and emotional state that emerges when demands exceed your perceived resources to meet them <Citation id="1" index={1} source="Ecco Press" year="2004" tier={5} />. It's not just stress. It's the suffocating feeling that there are too many things, too many decisions, too many responsibilities --- and not enough of you to handle them all.
           </p>
         </div>
 
@@ -809,7 +809,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           What Happens in Your Brain During Overwhelm
         </h2>
         <p className="mb-6">
-          Overwhelm creates a specific pattern of cognitive impairment. When you're overwhelmed, your brain's executive functions — the prefrontal cortex systems responsible for planning, prioritizing, and decision-making — become compromised <Citation id="2" index={2} source="Cognitive Psychology" year="2011" tier={1} />.
+          Overwhelm creates a specific pattern of cognitive impairment. When you're overwhelmed, your brain's executive functions --- the prefrontal cortex systems responsible for planning, prioritizing, and decision-making --- become compromised <Citation id="2" index={2} source="Cognitive Psychology" year="2011" tier={1} />.
         </p>
         <p className="mb-6">
           Here's what's happening neurologically:
@@ -945,7 +945,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Brain Dump',
               description: (
                 <p>
-                  Write down everything demanding your attention — every task, worry, and obligation. Don't organize it yet. Just get it out of your head and onto paper. This frees up working memory <Citation id="7" index={7} source="Journal of Experimental Psychology: General" year="2016" tier={1} />.
+                  Write down everything demanding your attention --- every task, worry, and obligation. Don't organize it yet. Just get it out of your head and onto paper. This frees up working memory <Citation id="7" index={7} source="Journal of Experimental Psychology: General" year="2016" tier={1} />.
                 </p>
               ),
             },
@@ -953,7 +953,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Pick the Smallest Thing',
               description: (
                 <p>
-                  Choose the easiest, most concrete task on your list — something you can complete in 5-10 minutes. Do it. Completing one small thing breaks the paralysis and provides a sense of agency.
+                  Choose the easiest, most concrete task on your list --- something you can complete in 5-10 minutes. Do it. Completing one small thing breaks the paralysis and provides a sense of agency.
                 </p>
               ),
             },
@@ -1005,7 +1005,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: '3. Set Boundaries on Inputs',
               content: (
                 <p>
-                  Limit new commitments. Batch check email instead of constantly monitoring. Turn off non-essential notifications. Every new input adds to cognitive load — be selective about what you let in.
+                  Limit new commitments. Batch check email instead of constantly monitoring. Turn off non-essential notifications. Every new input adds to cognitive load --- be selective about what you let in.
                 </p>
               ),
             },
@@ -1014,7 +1014,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: '4. Build in Recovery Time',
               content: (
                 <p>
-                  Overwhelm is often the result of sustained effort without adequate rest. Schedule breaks. Protect sleep. Allow white space in your calendar. Recovery is not optional — it's when your cognitive resources replenish.
+                  Overwhelm is often the result of sustained effort without adequate rest. Schedule breaks. Protect sleep. Allow white space in your calendar. Recovery is not optional --- it's when your cognitive resources replenish.
                 </p>
               ),
             },
@@ -1023,7 +1023,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: '5. Practice Present-Moment Awareness',
               content: (
                 <p>
-                  Mindfulness training helps you notice when your mind is spiraling into 'everything is urgent' mode and gently redirect to the present task <Citation id="8" index={8} source="Clinical Psychology Review" year="2011" tier={1} />. You can only do one thing right now — practice being fully there for it.
+                  Mindfulness training helps you notice when your mind is spiraling into 'everything is urgent' mode and gently redirect to the present task <Citation id="8" index={8} source="Clinical Psychology Review" year="2011" tier={1} />. You can only do one thing right now --- practice being fully there for it.
                 </p>
               ),
             },
@@ -1032,7 +1032,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: '6. Ask for Help and Delegate',
               content: (
                 <p>
-                  Overwhelm thrives in isolation. Share the load. Delegate tasks. Ask for extensions. Seek support. You don't have to do everything yourself — that belief is often what creates overwhelm in the first place.
+                  Overwhelm thrives in isolation. Share the load. Delegate tasks. Ask for extensions. Seek support. You don't have to do everything yourself --- that belief is often what creates overwhelm in the first place.
                 </p>
               ),
             },
@@ -1043,13 +1043,13 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           When Overwhelm Becomes Chronic
         </h2>
         <p className="mb-6">
-          If you find yourself in a near-constant state of overwhelm — where these strategies provide only temporary relief before the feeling returns — it may signal a deeper issue:
+          If you find yourself in a near-constant state of overwhelm --- where these strategies provide only temporary relief before the feeling returns --- it may signal a deeper issue:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Unrealistic expectations</strong>: You're expecting yourself to do more than is humanly possible.</li>
           <li><strong>Systemic overload</strong>: Your life circumstances genuinely involve too many demands (caregiving, financial stress, chronic illness). This requires structural change, not just coping strategies.</li>
           <li><strong>Underlying anxiety disorder</strong>: Generalized anxiety can make everything feel overwhelming, even when objectively the demands are manageable.</li>
-          <li><strong>Burnout</strong>: Chronic overwhelm is often a precursor to or component of burnout — a state of emotional, physical, and mental exhaustion.</li>
+          <li><strong>Burnout</strong>: Chronic overwhelm is often a precursor to or component of burnout --- a state of emotional, physical, and mental exhaustion.</li>
         </ul>
         <p className="mb-6">
           In these cases, working with a therapist can help you identify root causes and develop sustainable solutions.
@@ -1057,7 +1057,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="Remember This">
           <p>
-            Overwhelm is temporary. It feels permanent in the moment, but it's a state you move through — not a fixed trait. By taking small, concrete actions and building better systems, you can reclaim your sense of control.
+            Overwhelm is temporary. It feels permanent in the moment, but it's a state you move through --- not a fixed trait. By taking small, concrete actions and building better systems, you can reclaim your sense of control.
           </p>
         </ArticleCallout>
       </>
@@ -1152,7 +1152,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
             By 9 a.m., you've already made dozens of decisions. What to wear. What to eat. Which route to take. Which email to answer first. Reply now or later. Coffee or tea. By the afternoon, choosing where to order lunch feels impossibly difficult. By evening, you can't decide what to watch on Netflix, so you scroll aimlessly for 20 minutes before giving up.
           </p>
           <p className="mb-6">
-            This is decision fatigue — the deteriorating quality of decisions made after a long session of decision-making <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="1998" tier={1} />. Every choice you make throughout the day depletes a finite pool of mental energy, leaving you with less capacity for the decisions that come later.
+            This is decision fatigue --- the deteriorating quality of decisions made after a long session of decision-making <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="1998" tier={1} />. Every choice you make throughout the day depletes a finite pool of mental energy, leaving you with less capacity for the decisions that come later.
           </p>
         </div>
 
@@ -1172,7 +1172,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           Decision fatigue is grounded in the concept of <strong>ego depletion</strong>, a theory proposing that self-control and willpower draw from a limited mental resource <Citation id="2" index={2} source="Social Psychological and Personality Science" year="2011" tier={1} />. Each decision, especially those requiring self-control or trade-offs, uses up some of this resource.
         </p>
         <p className="mb-6">
-          The more decisions you make, the more this resource depletes — leading to:
+          The more decisions you make, the more this resource depletes --- leading to:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Impaired judgment</strong>: You make worse choices or defer decisions entirely.</li>
@@ -1235,7 +1235,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Defaulting to the Status Quo',
               content: (
                 <p>
-                  When depleted, you're more likely to stick with whatever is currently happening rather than make an active change — even if change would be beneficial. Example: staying in a job you dislike because job searching requires too many decisions.
+                  When depleted, you're more likely to stick with whatever is currently happening rather than make an active change --- even if change would be beneficial. Example: staying in a job you dislike because job searching requires too many decisions.
                 </p>
               ),
             },
@@ -1253,7 +1253,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
               title: 'Decision Avoidance',
               content: (
                 <p>
-                  You put off decisions entirely. "I'll figure it out tomorrow." This creates decision debt — the decisions accumulate and become even more overwhelming.
+                  You put off decisions entirely. "I'll figure it out tomorrow." This creates decision debt --- the decisions accumulate and become even more overwhelming.
                 </p>
               ),
             },
@@ -1314,7 +1314,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           3. Make Important Decisions Early
         </h3>
         <p className="mb-6">
-          Your decision-making capacity is highest in the morning (assuming you've slept well). Schedule important decisions — career moves, financial planning, difficult conversations — for the first half of the day <Citation id="7" index={7} source="Annual Review of Psychology" year="2016" tier={1} />.
+          Your decision-making capacity is highest in the morning (assuming you've slept well). Schedule important decisions --- career moves, financial planning, difficult conversations --- for the first half of the day <Citation id="7" index={7} source="Annual Review of Psychology" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
           Reserve low-stakes decisions (what to watch, what to order) for later in the day when your capacity is lower.
@@ -1382,7 +1382,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           When You Can't Reduce the Decisions
         </h2>
         <p className="mb-6">
-          Some life circumstances genuinely require high decision volume — launching a business, planning a wedding, managing a serious illness. In these cases:
+          Some life circumstances genuinely require high decision volume --- launching a business, planning a wedding, managing a serious illness. In these cases:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Protect your reserves</strong>: Be ruthlessly protective of your mental energy. Say no to optional commitments.</li>
@@ -1393,7 +1393,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Your mental energy is finite. Every trivial decision you eliminate preserves capacity for decisions that actually matter. The goal isn't to stop making decisions — it's to make fewer, better ones by design.
+            Your mental energy is finite. Every trivial decision you eliminate preserves capacity for decisions that actually matter. The goal isn't to stop making decisions --- it's to make fewer, better ones by design.
           </p>
         </ArticleCallout>
       </>
@@ -1496,7 +1496,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
             You walk into an exam you studied for all week. Your mind goes blank. You can't recall basic concepts that were clear the night before. Or you're giving a presentation and suddenly forget the key point you meant to make. Later, when the pressure is off, it all comes flooding back.
           </p>
           <p className="mb-6">
-            This isn't a sign of inadequate preparation or a failing memory. It's the predictable effect of stress on cognitive function. Understanding the neuroscience behind this phenomenon reveals why it happens — and what you can do about it <Citation id="1" index={1} source="Neuroscience and Biobehavioral Reviews" year="2015" tier={1} />.
+            This isn't a sign of inadequate preparation or a failing memory. It's the predictable effect of stress on cognitive function. Understanding the neuroscience behind this phenomenon reveals why it happens --- and what you can do about it <Citation id="1" index={1} source="Neuroscience and Biobehavioral Reviews" year="2015" tier={1} />.
           </p>
         </div>
 
@@ -1536,14 +1536,14 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          This creates a paradox: acute stress can actually help you remember threatening or highly emotional experiences (this is adaptive — you need to remember dangers). But that same stress impairs your ability to recall neutral information and think flexibly in the moment.
+          This creates a paradox: acute stress can actually help you remember threatening or highly emotional experiences (this is adaptive --- you need to remember dangers). But that same stress impairs your ability to recall neutral information and think flexibly in the moment.
         </p>
 
         <h2 id="what-happens-in-your-brain-under-stress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Happens in Your Brain Under Stress
         </h2>
         <p className="mb-6">
-          When you encounter a stressor, your body releases a cascade of hormones — primarily cortisol and norepinephrine. These hormones have profound effects on brain regions involved in memory <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2005" tier={1} />:
+          When you encounter a stressor, your body releases a cascade of hormones --- primarily cortisol and norepinephrine. These hormones have profound effects on brain regions involved in memory <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2005" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -1600,7 +1600,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
           Why You Blank Under Pressure: The Retrieval Paradox
         </h2>
         <p className="mb-6">
-          One of the most frustrating aspects of stress is that it specifically impairs <strong>memory retrieval</strong> — your ability to access information you know you've learned <Citation id="7" index={7} source="Neuroscience Letters" year="2019" tier={1} />.
+          One of the most frustrating aspects of stress is that it specifically impairs <strong>memory retrieval</strong> --- your ability to access information you know you've learned <Citation id="7" index={7} source="Neuroscience Letters" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Here's why:

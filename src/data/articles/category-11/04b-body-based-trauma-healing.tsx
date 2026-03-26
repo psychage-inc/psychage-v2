@@ -16,7 +16,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
     id: catId(36),
     slug: 'neurofeedback-ptsd-brain-training-trauma-recovery',
     title: 'Neurofeedback for PTSD: How Brain Training Supports Trauma Recovery',
-    description: 'Explore neurofeedback therapy—a non-invasive brain training technique that helps regulate dysregulated neural patterns in trauma survivors.',
+    description: 'Explore neurofeedback therapy---a non-invasive brain training technique that helps regulate dysregulated neural patterns in trauma survivors.',
     image: "/images/articles/cat11/cover-036.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 9,
@@ -94,10 +94,10 @@ export const bodyBasedHealingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imagine being able to watch your brain's activity in real time—and learn to change it. That's neurofeedback: a form of biofeedback that trains your brain to self-regulate by showing you live feedback on your brainwaves. For trauma survivors whose brains are stuck in patterns of hyperarousal or shutdown, neurofeedback offers a way to retrain those patterns directly—without medication, without talking about the trauma, and often with lasting results.
+            Imagine being able to watch your brain's activity in real time---and learn to change it. That's neurofeedback: a form of biofeedback that trains your brain to self-regulate by showing you live feedback on your brainwaves. For trauma survivors whose brains are stuck in patterns of hyperarousal or shutdown, neurofeedback offers a way to retrain those patterns directly---without medication, without talking about the trauma, and often with lasting results.
           </p>
           <p className="mb-6">
-            Neurofeedback (also called EEG biofeedback) is increasingly recognized as an effective adjunct treatment for PTSD <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. While it's not a replacement for trauma-focused therapy, research shows it can significantly reduce symptoms—especially for people who haven't responded to traditional treatments.
+            Neurofeedback (also called EEG biofeedback) is increasingly recognized as an effective adjunct treatment for PTSD <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. While it's not a replacement for trauma-focused therapy, research shows it can significantly reduce symptoms---especially for people who haven't responded to traditional treatments.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Core concept:</strong> You don't consciously control the training—your brain learns subconsciously by receiving positive feedback when it produces healthier activity. It's like physical therapy, but for neural pathways.</p>
+          <p><strong>Core concept:</strong> You don't consciously control the training---your brain learns subconsciously by receiving positive feedback when it produces healthier activity. It's like physical therapy, but for neural pathways.</p>
         </ArticleCallout>
 
         <h2 id="ptsd-brain-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -137,7 +137,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Neurofeedback aims to normalize these patterns—increasing alpha and SMR (calming), reducing excessive beta (anxiety) or theta (dissociation).
+          Neurofeedback aims to normalize these patterns---increasing alpha and SMR (calming), reducing excessive beta (anxiety) or theta (dissociation).
         </p>
 
         <StatCard
@@ -217,10 +217,10 @@ export const bodyBasedHealingArticlesB: Article[] = [
           variant="vertical"
           steps={[
             { title: 'Assessment', description: <p>Initial session includes a QEEG (quantitative EEG) brain map to identify dysregulated areas. This guides the training protocol.</p> },
-            { title: 'Sensor placement', description: <p>Small sensors are placed on your scalp with conductive paste (painless, non-invasive). They read electrical activity—they don't send signals into your brain.</p> },
+            { title: 'Sensor placement', description: <p>Small sensors are placed on your scalp with conductive paste (painless, non-invasive). They read electrical activity---they don't send signals into your brain.</p> },
             { title: 'Training begins', description: <p>You might watch a movie, play a game, or listen to music. When your brain produces the target frequency, you get a reward (screen brightens, sound plays, game advances).</p> },
             { title: 'Your brain learns', description: <p>You don't consciously 'try' to do anything. Your brain subconsciously adjusts to earn more rewards. It's operant conditioning at the neural level.</p> },
-            { title: 'Post-session', description: <p>Some people feel energized, others relaxed. Effects are cumulative—you may not notice major changes until 10-15 sessions in.</p> },
+            { title: 'Post-session', description: <p>Some people feel energized, others relaxed. Effects are cumulative---you may not notice major changes until 10-15 sessions in.</p> },
           ]}
         />
 
@@ -318,7 +318,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li>You're working with a therapist and want to add a somatic/brain-based component</li>
         </ul>
         <p className="mb-6">
-          Neurofeedback isn't magic—but for many people, it's the missing piece. When your brain learns to self-regulate, the symptoms you've been fighting begin to quiet. You don't just manage PTSD—you retrain the neural patterns that created it.
+          Neurofeedback isn't magic---but for many people, it's the missing piece. When your brain learns to self-regulate, the symptoms you've been fighting begin to quiet. You don't just manage PTSD---you retrain the neural patterns that created it.
         </p>
       </>
     ),
@@ -405,10 +405,10 @@ export const bodyBasedHealingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You sit in your therapist's office describing the trauma, but the words feel empty—disconnected from the weight in your chest, the tightness in your jaw, the numbness in your legs. Traditional talk therapy asks you to make sense of what happened with your mind. Sensorimotor Psychotherapy starts with your body. It asks: <em>What is your body holding that words can't reach?</em> And then, through mindful tracking of sensations and movements, it helps you release what's been trapped there.
+            You sit in your therapist's office describing the trauma, but the words feel empty---disconnected from the weight in your chest, the tightness in your jaw, the numbness in your legs. Traditional talk therapy asks you to make sense of what happened with your mind. Sensorimotor Psychotherapy starts with your body. It asks: <em>What is your body holding that words can't reach?</em> And then, through mindful tracking of sensations and movements, it helps you release what's been trapped there.
           </p>
           <p className="mb-6">
-            Developed by Dr. Pat Ogden, Sensorimotor Psychotherapy (SP) is a body-oriented talk therapy that integrates cognitive, emotional, and physical processing <Citation id="1" index={1} source="Trauma and the Body" year="2006" tier={5} />. It's grounded in neuroscience, attachment theory, and an understanding that trauma lives not just in memory—but in posture, breath, muscle tension, and automatic physical reactions.
+            Developed by Dr. Pat Ogden, Sensorimotor Psychotherapy (SP) is a body-oriented talk therapy that integrates cognitive, emotional, and physical processing <Citation id="1" index={1} source="Trauma and the Body" year="2006" tier={5} />. It's grounded in neuroscience, attachment theory, and an understanding that trauma lives not just in memory---but in posture, breath, muscle tension, and automatic physical reactions.
           </p>
         </div>
 
@@ -420,7 +420,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Trauma is stored in the body:</strong> Not just as memories, but as incomplete defensive responses (fight, flight, freeze) trapped in the nervous system.</li>
-          <li><strong>Bottom-up processing:</strong> Healing starts with body sensations and movements, which then inform emotions and thoughts—not the other way around.</li>
+          <li><strong>Bottom-up processing:</strong> Healing starts with body sensations and movements, which then inform emotions and thoughts---not the other way around.</li>
           <li><strong>Mindful awareness:</strong> You learn to notice and track physical sensations without judgment, building interoceptive capacity.</li>
           <li><strong>Completing defensive responses:</strong> SP helps you finish the protective actions your body wanted to take during trauma but couldn't.</li>
           <li><strong>Integration:</strong> Bringing together body, emotion, and cognition for holistic healing.</li>
@@ -456,7 +456,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Core insight:</strong> In SP, the body isn't just a source of symptoms—it's a resource for healing. Your body knows what it needs to do to complete the trauma response. SP helps you listen.</p>
+          <p><strong>Core insight:</strong> In SP, the body isn't just a source of symptoms---it's a resource for healing. Your body knows what it needs to do to complete the trauma response. SP helps you listen.</p>
         </ArticleCallout>
 
         <h2 id="how-sp-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -470,7 +470,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           variant="vertical"
           steps={[
             { title: 'Grounding and resourcing', description: <p>Sessions begin by establishing a sense of safety and presence. You might notice your feet on the floor, scan your body for areas of calm, or identify internal/external resources.</p> },
-            { title: 'Tracking sensations', description: <p>The therapist guides you to notice physical sensations: 'Where do you feel that in your body? What does it feel like—tight, warm, heavy, buzzing?" This builds interoceptive awareness <Citation id="5" index={5} source="Frontiers in Human Neuroscience" year="2021" tier={1} />.</p> },
+            { title: 'Tracking sensations', description: <p>The therapist guides you to notice physical sensations: 'Where do you feel that in your body? What does it feel like---tight, warm, heavy, buzzing?" This builds interoceptive awareness <Citation id="5" index={5} source="Frontiers in Human Neuroscience" year="2021" tier={1} />.</p> },
             { title: 'Following impulses', description: <p>If your body has an impulse to move (push away, turn, reach out), you're invited to explore it slowly. "What does your hand want to do? Let's follow that movement."</p> },
             { title: 'Completing defensive responses', description: <p>Trauma often freezes fight/flight responses. In SP, you might slowly push against the therapist's hands (completing a 'fight' impulse) or turn away (completing "flight"). This discharges trapped survival energy <Citation id="6" index={6} source="Clinical Psychology Review" year="2019" tier={1} />.</p> },
             { title: 'Integrating meaning', description: <p>After somatic work, you reflect on what emerged: "When I pushed, I felt strong. I realized I <em>did</em> fight back, even if it didn't stop them." This integrates body, emotion, and cognition.</p> },
@@ -498,7 +498,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '2. Titration',
               content: (
                 <div>
-                  <p className="mb-4">Working with trauma in small, manageable doses. The therapist might say: "Let's touch the edge of that memory—just enough to notice what happens in your body." This prevents overwhelm.</p>
+                  <p className="mb-4">Working with trauma in small, manageable doses. The therapist might say: "Let's touch the edge of that memory---just enough to notice what happens in your body." This prevents overwhelm.</p>
                 </div>
               ),
             },
@@ -542,7 +542,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li><strong>Less talking, more sensing:</strong> You might spend minutes in silence, tracking a sensation.</li>
           <li><strong>Movement:</strong> You may stand, shift positions, or make small gestures. The body leads.</li>
           <li><strong>Slowness:</strong> Everything happens at a deliberate pace to allow the nervous system to integrate.</li>
-          <li><strong>Collaboration:</strong> The therapist doesn't interpret your experience—they help you discover what your body is communicating.</li>
+          <li><strong>Collaboration:</strong> The therapist doesn't interpret your experience---they help you discover what your body is communicating.</li>
           <li><strong>Emotional release:</strong> Tears, shaking, heat, or tingling may arise. This is healthy discharge, not retraumatization.</li>
         </ul>
 
@@ -559,7 +559,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You feel disconnected from your body or chronically numb</li>
           <li>You have somatic symptoms tied to trauma (chronic pain, tension, digestive issues)</li>
-          <li>Talk therapy feels too cognitive—you can understand the trauma but don't <em>feel</em> better</li>
+          <li>Talk therapy feels too cognitive---you can understand the trauma but don't <em>feel</em> better</li>
           <li>You dissociate frequently or have difficulty staying present</li>
           <li>You experienced preverbal trauma (before you could talk about it)</li>
           <li>You froze during trauma and need to complete defensive responses</li>
@@ -617,7 +617,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li>You're willing to work with sensation and movement, not just words</li>
         </ul>
         <p className="mb-6">
-          Your body has been carrying the story of what happened. Sensorimotor Psychotherapy gives it a voice—and a chance to release what it's held for too long.
+          Your body has been carrying the story of what happened. Sensorimotor Psychotherapy gives it a voice---and a chance to release what it's held for too long.
         </p>
       </>
     ),
@@ -704,10 +704,10 @@ export const bodyBasedHealingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After trauma, your nervous system lives in a state of perpetual threat detection. Every sound, every sudden movement activates the alarm. But step into a forest, and something shifts. Your breathing slows. Your shoulders drop. The hypervigilance that felt permanent begins to quiet. This isn't just relaxation—it's your nervous system remembering what safety feels like. Nature isn't a cure for trauma, but research shows it's one of the most accessible, evidence-backed tools for healing.
+            After trauma, your nervous system lives in a state of perpetual threat detection. Every sound, every sudden movement activates the alarm. But step into a forest, and something shifts. Your breathing slows. Your shoulders drop. The hypervigilance that felt permanent begins to quiet. This isn't just relaxation---it's your nervous system remembering what safety feels like. Nature isn't a cure for trauma, but research shows it's one of the most accessible, evidence-backed tools for healing.
           </p>
           <p className="mb-6">
-            Ecotherapy—the intentional use of nature for mental health—has been practiced informally for millennia. Now, science is catching up, showing that green spaces reduce cortisol, improve mood, and significantly decrease PTSD symptoms <Citation id="1" index={1} source="Science Advances" year="2019" tier={1} />. Nature doesn't replace therapy—but it creates the conditions where healing becomes possible.
+            Ecotherapy---the intentional use of nature for mental health---has been practiced informally for millennia. Now, science is catching up, showing that green spaces reduce cortisol, improve mood, and significantly decrease PTSD symptoms <Citation id="1" index={1} source="Science Advances" year="2019" tier={1} />. Nature doesn't replace therapy---but it creates the conditions where healing becomes possible.
           </p>
         </div>
 
@@ -715,7 +715,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           Why Nature Helps Trauma Recovery
         </h2>
         <p className="mb-6">
-          Nature's healing effects aren't just anecdotal—they're neurobiological <Citation id="2" index={2} source="Environmental Research" year="2021" tier={1} />:
+          Nature's healing effects aren't just anecdotal---they're neurobiological <Citation id="2" index={2} source="Environmental Research" year="2021" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -736,7 +736,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '2. Restores Attention and Reduces Rumination',
               content: (
                 <div>
-                  <p className="mb-4">Trauma survivors often experience "directed attention fatigue"—your brain is exhausted from constant vigilance. Nature provides <strong>soft fascination</strong>: your attention is gently captured (by birdsong, leaves, water) without effort.</p>
+                  <p className="mb-4">Trauma survivors often experience "directed attention fatigue"---your brain is exhausted from constant vigilance. Nature provides <strong>soft fascination</strong>: your attention is gently captured (by birdsong, leaves, water) without effort.</p>
                   <p>This allows your prefrontal cortex (thinking brain) to rest, reducing rumination and intrusive thoughts.</p>
                 </div>
               ),
@@ -746,7 +746,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '3. Provides Sensory Grounding',
               content: (
                 <div>
-                  <p className="mb-4">Nature engages all five senses—sights, sounds, smells, textures, tastes (fresh air). This sensory richness pulls you into the present moment, interrupting dissociation and flashbacks.</p>
+                  <p className="mb-4">Nature engages all five senses---sights, sounds, smells, textures, tastes (fresh air). This sensory richness pulls you into the present moment, interrupting dissociation and flashbacks.</p>
                   <p>The rhythmic sounds of waves, wind, or rain can be particularly soothing for dysregulated nervous systems.</p>
                 </div>
               ),
@@ -756,7 +756,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '4. Offers Safety Cues',
               content: (
                 <div>
-                  <p className="mb-4">Wide horizons, soft edges, the absence of human-made sharp angles—natural landscapes signal safety to your amygdala. Unlike urban environments (which can feel threatening), forests and parks reduce threat perception.</p>
+                  <p className="mb-4">Wide horizons, soft edges, the absence of human-made sharp angles---natural landscapes signal safety to your amygdala. Unlike urban environments (which can feel threatening), forests and parks reduce threat perception.</p>
                 </div>
               ),
             },
@@ -765,7 +765,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '5. Boosts Immune Function',
               content: (
                 <div>
-                  <p className="mb-4">Trees release phytoncides (natural compounds), which increase natural killer cells and reduce inflammation. PTSD is associated with chronic inflammation—nature exposure can counteract this <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2020" tier={1} />.</p>
+                  <p className="mb-4">Trees release phytoncides (natural compounds), which increase natural killer cells and reduce inflammation. PTSD is associated with chronic inflammation---nature exposure can counteract this <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2020" tier={1} />.</p>
                 </div>
               ),
             },
@@ -785,7 +785,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           Forest Bathing (Shinrin-Yoku): Intentional Immersion
         </h2>
         <p className="mb-6">
-          Forest bathing, developed in Japan in the 1980s, is the practice of mindfully immersing yourself in a forest environment <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2020" tier={1} />. It's not hiking—it's slow, sensory engagement.
+          Forest bathing, developed in Japan in the 1980s, is the practice of mindfully immersing yourself in a forest environment <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2020" tier={1} />. It's not hiking---it's slow, sensory engagement.
         </p>
         <p className="mb-6">
           How to practice:
@@ -811,7 +811,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Outward Bound Veterans:</strong> Multi-day wilderness expeditions with fellow veterans, led by trained guides. Participants report 30% PTSD symptom reduction.</li>
           <li><strong>Sierra Club Military Outdoors:</strong> Backpacking, kayaking, and climbing trips for active military and veterans.</li>
-          <li><strong>Project Healing Waters:</strong> Fly fishing for disabled veterans—combines nature immersion with skill-building and community.</li>
+          <li><strong>Project Healing Waters:</strong> Fly fishing for disabled veterans---combines nature immersion with skill-building and community.</li>
         </ul>
         <p className="mb-6">
           Why it works: Shared challenge, peer support, and the regulating effects of nature create a powerful healing trifecta.
@@ -863,7 +863,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li>Work with a therapist to gradually desensitize (imaginal exposure, then short visits, building up)</li>
         </ul>
         <p className="mb-6">
-          Don't force it. Nature should feel regulating, not retraumatizing. If it doesn't, that's information—not failure.
+          Don't force it. Nature should feel regulating, not retraumatizing. If it doesn't, that's information---not failure.
         </p>
 
         <ArticleCallout variant="warning">
@@ -879,7 +879,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You feel stuck in therapy and want to add a somatic, embodied component</li>
           <li>You're drawn to nature but don't know how to use it therapeutically</li>
-          <li>You're a veteran or first responder—many programs are tailored for you</li>
+          <li>You're a veteran or first responder---many programs are tailored for you</li>
           <li>You want community-based healing, not just individual therapy</li>
         </ul>
         <p className="mb-6">
@@ -977,7 +977,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
             After trauma, human connection can feel dangerous. Eye contact triggers anxiety. Vulnerability feels like a threat. But place a dog in the room, and something shifts. The dog doesn't judge, doesn't require explanation, doesn't recoil from your pain. It simply offers presence. For many trauma survivors, animals provide what people cannot: unconditional acceptance, non-verbal attunement, and a safe entry point back into trust and connection.
           </p>
           <p className="mb-6">
-            Animal-assisted therapy (AAT)—the integration of trained animals into therapeutic interventions—is now backed by solid research showing it reduces PTSD symptoms, anxiety, and emotional dysregulation <Citation id="1" index={1} source="Complementary Therapies in Clinical Practice" year="2021" tier={1} />. Whether through service dogs, equine therapy, or therapeutic visits, animals are becoming recognized partners in trauma recovery.
+            Animal-assisted therapy (AAT)---the integration of trained animals into therapeutic interventions---is now backed by solid research showing it reduces PTSD symptoms, anxiety, and emotional dysregulation <Citation id="1" index={1} source="Complementary Therapies in Clinical Practice" year="2021" tier={1} />. Whether through service dogs, equine therapy, or therapeutic visits, animals are becoming recognized partners in trauma recovery.
           </p>
         </div>
 
@@ -1015,7 +1015,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Animals communicate through body language, presence, and energy. For survivors who struggle with verbal processing or find words inadequate, this non-verbal connection offers a different pathway to healing.</p>
-                  <p>Dogs read human emotion with remarkable accuracy—they can sense fear, sadness, or distress before you verbalize it.</p>
+                  <p>Dogs read human emotion with remarkable accuracy---they can sense fear, sadness, or distress before you verbalize it.</p>
                 </div>
               ),
             },
@@ -1033,7 +1033,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '3. Physiological Calming',
               content: (
                 <div>
-                  <p className="mb-4">Petting an animal lowers cortisol (stress hormone), increases oxytocin (bonding hormone), and slows heart rate <Citation id="7" index={7} source="International Journal of Environmental Research and Public Health" year="2021" tier={1} />. This physiological regulation happens automatically—your nervous system responds to the animal's calm presence.</p>
+                  <p className="mb-4">Petting an animal lowers cortisol (stress hormone), increases oxytocin (bonding hormone), and slows heart rate <Citation id="7" index={7} source="International Journal of Environmental Research and Public Health" year="2021" tier={1} />. This physiological regulation happens automatically---your nervous system responds to the animal's calm presence.</p>
                 </div>
               ),
             },
@@ -1077,14 +1077,14 @@ export const bodyBasedHealingArticlesB: Article[] = [
           Why horses?
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Mirroring:</strong> Horses are prey animals, highly attuned to threat. They mirror your nervous system state—if you're anxious, they become anxious. This provides immediate feedback on your emotional regulation.</li>
-          <li><strong>Non-verbal communication:</strong> Horses don't respond to words—only to body language, intention, and energy. This forces you to become aware of what you're communicating nonverbally.</li>
+          <li><strong>Mirroring:</strong> Horses are prey animals, highly attuned to threat. They mirror your nervous system state---if you're anxious, they become anxious. This provides immediate feedback on your emotional regulation.</li>
+          <li><strong>Non-verbal communication:</strong> Horses don't respond to words---only to body language, intention, and energy. This forces you to become aware of what you're communicating nonverbally.</li>
           <li><strong>Safe power:</strong> Horses are large, powerful animals. Learning to guide a 1,200-pound horse can rebuild a sense of agency and confidence.</li>
           <li><strong>Metaphor:</strong> Interactions with horses often mirror relationship dynamics. Processing these interactions in therapy reveals patterns and opens insights.</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Research finding:</strong> Veterans who completed 12 weeks of equine-assisted therapy showed a 56% reduction in PTSD symptoms—comparable to gold-standard treatments like CPT or EMDR <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2020" tier={1} />.</p>
+          <p><strong>Research finding:</strong> Veterans who completed 12 weeks of equine-assisted therapy showed a 56% reduction in PTSD symptoms---comparable to gold-standard treatments like CPT or EMDR <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2020" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="ptsd-service-dogs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1191,7 +1191,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li>You need help rebuilding trust and connection after betrayal trauma</li>
         </ul>
         <p className="mb-6">
-          Animals won't judge your story. They won't rush your healing. They'll meet you exactly where you are—offering presence, patience, and a different kind of companionship. For many trauma survivors, that's exactly what makes all the difference.
+          Animals won't judge your story. They won't rush your healing. They'll meet you exactly where you are---offering presence, patience, and a different kind of companionship. For many trauma survivors, that's exactly what makes all the difference.
         </p>
       </>
     ),
@@ -1278,10 +1278,10 @@ export const bodyBasedHealingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've been in therapy for months. You can explain your trauma clearly, analyze why it happened, even reframe the maladaptive thoughts. But when you're triggered, none of that insight helps. Your body still reacts—heart pounding, breath shallow, muscles bracing—as if the danger is happening right now. You understand the trauma cognitively, but you don't <em>feel</em> healed. This is the limitation of traditional talk therapy for trauma: it speaks to your thinking brain, but trauma lives deeper—in your body, your nervous system, your subcortical structures that don't speak in words.
+            You've been in therapy for months. You can explain your trauma clearly, analyze why it happened, even reframe the maladaptive thoughts. But when you're triggered, none of that insight helps. Your body still reacts---heart pounding, breath shallow, muscles bracing---as if the danger is happening right now. You understand the trauma cognitively, but you don't <em>feel</em> healed. This is the limitation of traditional talk therapy for trauma: it speaks to your thinking brain, but trauma lives deeper---in your body, your nervous system, your subcortical structures that don't speak in words.
           </p>
           <p className="mb-6">
-            Traditional talk therapy—psychodynamic, humanistic, or even some cognitive approaches—was designed for problems rooted in thought and emotion. Trauma is different. It's a physiological injury to the nervous system <Citation id="1" index={1} source="The Body Keeps the Score" year="2014" tier={5} />. And while talk therapy can be part of healing, research shows it's often not enough on its own <Citation id="2" index={2} source="Frontiers in Psychology" year="2021" tier={1} />.
+            Traditional talk therapy---psychodynamic, humanistic, or even some cognitive approaches---was designed for problems rooted in thought and emotion. Trauma is different. It's a physiological injury to the nervous system <Citation id="1" index={1} source="The Body Keeps the Score" year="2014" tier={5} />. And while talk therapy can be part of healing, research shows it's often not enough on its own <Citation id="2" index={2} source="Frontiers in Psychology" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -1289,7 +1289,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           How Trauma Is Different from Other Mental Health Issues
         </h2>
         <p className="mb-6">
-          Most mental health issues—depression, relationship problems, existential questions—are cognitive and emotional in nature. They respond well to talking, reflecting, and reframing.
+          Most mental health issues---depression, relationship problems, existential questions---are cognitive and emotional in nature. They respond well to talking, reflecting, and reframing.
         </p>
         <p className="mb-6">
           Trauma, however, creates changes at multiple levels:
@@ -1302,11 +1302,11 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li><strong>Relational:</strong> Disrupted attachment, difficulty with trust and intimacy</li>
         </ul>
         <p className="mb-6">
-          Traditional talk therapy addresses the cognitive and relational layers. But if the neurobiological, autonomic, and somatic layers aren't addressed, the trauma remains unresolved—no matter how much you talk <Citation id="5" index={5} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={1} />.
+          Traditional talk therapy addresses the cognitive and relational layers. But if the neurobiological, autonomic, and somatic layers aren't addressed, the trauma remains unresolved---no matter how much you talk <Citation id="5" index={5} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Critical insight:</strong> You can't think your way out of a nervous system dysregulation. Trauma is stored below the level of conscious thought—in your brainstem, your vagus nerve, your muscle memory. Healing requires reaching those layers.</p>
+          <p><strong>Critical insight:</strong> You can't think your way out of a nervous system dysregulation. Trauma is stored below the level of conscious thought---in your brainstem, your vagus nerve, your muscle memory. Healing requires reaching those layers.</p>
         </ArticleCallout>
 
         <h2 id="what-talk-therapy-does-well" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1338,8 +1338,8 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '1. Trauma Is Stored Subcortically',
               content: (
                 <div>
-                  <p className="mb-4">Talk therapy engages the prefrontal cortex (thinking brain). But trauma memories are stored in the amygdala and brainstem—structures that don't process language <Citation id="2" index={2} source="Frontiers in Psychology" year="2021" tier={1} />.</p>
-                  <p className="mb-4">When you're triggered, your prefrontal cortex goes offline. You can't access the insights you discussed in therapy because the survival brain has taken over. Talk therapy can't directly reach these areas—somatic work can.</p>
+                  <p className="mb-4">Talk therapy engages the prefrontal cortex (thinking brain). But trauma memories are stored in the amygdala and brainstem---structures that don't process language <Citation id="2" index={2} source="Frontiers in Psychology" year="2021" tier={1} />.</p>
+                  <p className="mb-4">When you're triggered, your prefrontal cortex goes offline. You can't access the insights you discussed in therapy because the survival brain has taken over. Talk therapy can't directly reach these areas---somatic work can.</p>
                 </div>
               ),
             },
@@ -1348,7 +1348,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: '2. The Body Holds What Words Cannot',
               content: (
                 <div>
-                  <p className="mb-4">Trauma isn't just a memory—it's a <strong>somatic experience</strong>. Your body holds patterns: bracing, shallow breathing, chronic tension. These patterns don't change through talking. They need direct body-based intervention <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.</p>
+                  <p className="mb-4">Trauma isn't just a memory---it's a <strong>somatic experience</strong>. Your body holds patterns: bracing, shallow breathing, chronic tension. These patterns don't change through talking. They need direct body-based intervention <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.</p>
                   <p>Example: You might <em>know</em> you're safe, but your body still reacts to loud noises. Talk therapy addresses the thought; somatic therapy addresses the nervous system response.</p>
                 </div>
               ),
@@ -1378,7 +1378,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
               title: "5. Cognitive Insight Doesn't Equal Healing",
               content: (
                 <div>
-                  <p className="mb-4">You can <em>understand</em> intellectually that the trauma wasn't your fault—and still <em>feel</em> like it was. Cognitive restructuring changes beliefs, but it doesn't always change the felt sense in your body.</p>
+                  <p className="mb-4">You can <em>understand</em> intellectually that the trauma wasn't your fault---and still <em>feel</em> like it was. Cognitive restructuring changes beliefs, but it doesn't always change the felt sense in your body.</p>
                   <p>Healing requires integrating cognition, emotion, <em>and</em> somatic experience.</p>
                 </div>
               ),
@@ -1412,7 +1412,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           Consider adding somatic approaches if:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>You can talk about your trauma without emotional charge—you're too disconnected from it</li>
+          <li>You can talk about your trauma without emotional charge---you're too disconnected from it</li>
           <li>You understand the trauma cognitively but still have intense physical reactions</li>
           <li>You feel numb, dissociated, or "dead inside" despite talk therapy</li>
           <li>You have chronic physical symptoms (pain, tension, digestive issues) tied to trauma</li>
@@ -1421,7 +1421,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p><strong>Integration, not replacement:</strong> The goal isn't to abandon talk therapy—it's to add body-based approaches. Most trauma survivors benefit from both cognitive and somatic work <Citation id="7" index={7} source="Clinical Neuropsychiatry" year="2020" tier={1} />.</p>
+          <p><strong>Integration, not replacement:</strong> The goal isn't to abandon talk therapy---it's to add body-based approaches. Most trauma survivors benefit from both cognitive and somatic work <Citation id="7" index={7} source="Clinical Neuropsychiatry" year="2020" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="what-to-look-for" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1462,7 +1462,7 @@ export const bodyBasedHealingArticlesB: Article[] = [
           <li>You have PTSD or complex trauma (not just adjustment issues or depression)</li>
         </ul>
         <p className="mb-6">
-          Trauma isn't just a story that needs to be told differently. It's an experience that needs to be metabolized—by your brain, your body, and your nervous system. Talk is part of that process. But it's not the whole process. And recognizing that difference is the first step toward finding what works.
+          Trauma isn't just a story that needs to be told differently. It's an experience that needs to be metabolized---by your brain, your body, and your nervous system. Talk is part of that process. But it's not the whole process. And recognizing that difference is the first step toward finding what works.
         </p>
       </>
     ),

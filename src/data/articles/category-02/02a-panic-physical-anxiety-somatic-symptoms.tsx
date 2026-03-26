@@ -176,7 +176,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Your amygdala (the brain's fear center) detects a threat — real or perceived, sometimes
+                    Your amygdala (the brain's fear center) detects a threat --- real or perceived, sometimes
                     just a body sensation like a skipped heartbeat. It immediately triggers the alarm system.
                   </p>
                   <p>
@@ -253,7 +253,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         <p className="mb-6">
           This system monitors blood levels of carbon dioxide (CO2). In most people, rising CO2 triggers
           increased breathing to expel it. In people with panic disorder, even small increases in CO2 can
-          trigger a false alarm — the brain thinks you're suffocating when you're not{', '}
+          trigger a false alarm --- the brain thinks you're suffocating when you're not{', '}
           <Citation id="5" index={4} source="Biological Psychiatry" year="2021" tier={1} />.
         </p>
         <p className="mb-6">This explains why:</p>
@@ -271,7 +271,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           Why Physical Symptoms Feel So Intense
         </h2>
         <p className="mb-6">
-          The physical sensations during a panic attack are not imaginary — they're very real physiological
+          The physical sensations during a panic attack are not imaginary --- they're very real physiological
           changes{', '}
           <Citation id="3" index={5} source="Psychoneuroendocrinology" year="2019" tier={1} />. Here's why
           they feel so extreme:
@@ -501,7 +501,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
             there's no actual danger. It's a false alarm, not a medical emergency.
           </p>
           <p className="mb-4">
-            The symptoms are real, intense, and terrifying — but they're caused by adrenaline and
+            The symptoms are real, intense, and terrifying --- but they're caused by adrenaline and
             hyperventilation, not heart attacks, strokes, or other catastrophic events.
           </p>
           <p>
@@ -520,7 +520,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'heart-attack-vs-panic-attack-difference',
-    title: "Am I Having a Heart Attack?' — How to Tell the Difference from a Panic Attack",
+    title: "Am I Having a Heart Attack?' --- How to Tell the Difference from a Panic Attack",
     description: "Learn the critical differences between heart attack and panic attack symptoms, and when you should seek emergency medical care.",
     image: "/images/articles/cat02/cover-012.svg",
     category: CATEGORY_ANXIETY_STRESS,
@@ -600,7 +600,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             The chest pain hits. Your heart races. You're sweating, dizzy, terrified. Your first thought:
-            "I'm having a heart attack." This is one of the most frightening moments in a panic attack —
+            "I'm having a heart attack." This is one of the most frightening moments in a panic attack ---
             and one of the most common reasons people with anxiety end up in emergency rooms.
           </p>
           <p className="mb-6">
@@ -779,7 +779,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
             <strong>Pain brought on by exertion</strong> that doesn't improve with rest
           </li>
           <li>
-            <strong>First-time severe chest pain</strong> — always get it checked
+            <strong>First-time severe chest pain</strong> --- always get it checked
           </li>
           <li>
             <strong>Known heart disease or cardiac risk factors</strong> (diabetes, high blood pressure,
@@ -977,7 +977,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
             manage panic attacks and reduce the fear that drives them.
           </p>
           <p>
-            The chest pain from panic is real and terrifying — but it's not dangerous. Understanding this
+            The chest pain from panic is real and terrifying --- but it's not dangerous. Understanding this
             difference is the foundation for breaking the panic cycle.
           </p>
         </ArticleCallout>
@@ -1071,14 +1071,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Your heart races. Your fingers tingle. Your vision narrows. You're breathing fast and can't seem to
-            catch your breath — but here's the counterintuitive truth: you're actually getting too much air, not
+            catch your breath --- but here's the counterintuitive truth: you're actually getting too much air, not
             too little.
           </p>
           <p className="mb-6">
             Hyperventilation is one of the most common physical responses to anxiety, creating a cascade of
             uncomfortable symptoms that can intensify panic{', '}
             <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. It's also
-            one of the most misunderstood — and one of the most treatable.
+            one of the most misunderstood --- and one of the most treatable.
           </p>
         </div>
 
@@ -1089,13 +1089,13 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           What Is Hyperventilation?
         </h2>
         <p className="mb-6">
-          Hyperventilation means breathing more than your body needs — usually faster and deeper than normal{', '}
+          Hyperventilation means breathing more than your body needs --- usually faster and deeper than normal{', '}
           <Citation id="2" index={2} source="Chest" year="2019" tier={1} />. While normal breathing brings in
           oxygen and removes carbon dioxide (CO₂) at balanced rates, hyperventilation blows off too much CO₂ too
           quickly.
         </p>
         <p className="mb-6">
-          This CO₂ imbalance creates respiratory alkalosis — your blood becomes slightly more alkaline — which
+          This CO₂ imbalance creates respiratory alkalosis --- your blood becomes slightly more alkaline --- which
           triggers a chain reaction of physical symptoms throughout your body.
         </p>
 
@@ -1117,14 +1117,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           Why Anxiety Triggers Hyperventilation
         </h2>
         <p className="mb-6">
-          When your brain perceives threat, it activates the sympathetic nervous system — the fight-or-flight
+          When your brain perceives threat, it activates the sympathetic nervous system --- the fight-or-flight
           response. Part of this response is increasing breathing rate to prepare for physical action{', '}
           <Citation id="4" index={3} source="Biological Psychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           In people with panic disorder or anxiety disorders, this response is often triggered by internal
           sensations or thoughts rather than real physical danger. The breathing increases, but there's no
-          physical activity to use the extra oxygen — creating the imbalance.
+          physical activity to use the extra oxygen --- creating the imbalance.
         </p>
 
         <ProgressSteps
@@ -1182,7 +1182,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
                   <li>Inability to take a "satisfying" deep breath</li>
                   <li>Chest tightness or pain</li>
                   <li>Frequent yawning or sighing</li>
-                  <li>Air hunger — feeling like you're suffocating</li>
+                  <li>Air hunger --- feeling like you're suffocating</li>
                 </ul>
               ),
             },
@@ -1231,7 +1231,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           <p>
             If you're experiencing these symptoms for the first time or they feel different from usual patterns,
             get medical evaluation first. Many conditions can cause similar symptoms, and hyperventilation is a
-            diagnosis of exclusion — meaning other causes must be ruled out first.
+            diagnosis of exclusion --- meaning other causes must be ruled out first.
           </p>
         </ArticleCallout>
 
@@ -1271,7 +1271,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           3. Diaphragmatic (Belly) Breathing
         </h3>
-        <p className="mb-6">Place one hand on your chest and one on your belly. Breathe so that only the belly hand moves — this engages your diaphragm and naturally slows breathing.</p>
+        <p className="mb-6">Place one hand on your chest and one on your belly. Breathe so that only the belly hand moves --- this engages your diaphragm and naturally slows breathing.</p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           4. Paper Bag Technique (Use With Caution)
@@ -1288,7 +1288,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="The Paradox of Air Hunger">
           <p>
-            During hyperventilation, you feel like you can't get enough air — but the solution is breathing less,
+            During hyperventilation, you feel like you can't get enough air --- but the solution is breathing less,
             not more. This counterintuitive fact makes hyperventilation scary, but understanding it helps you
             resist the urge to breathe faster when panic hits.
           </p>
@@ -1322,7 +1322,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         <p className="mb-6">Practice these breathing exercises when calm, not just during panic:</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>5-10 minutes of diaphragmatic breathing each morning</li>
-          <li>Set reminders to check your breathing throughout the day — are you breathing too fast or shallow?</li>
+          <li>Set reminders to check your breathing throughout the day --- are you breathing too fast or shallow?</li>
           <li>Notice breath-holding or sighing patterns, which can precede hyperventilation</li>
           <li>Practice slow breathing in mildly stressful situations (traffic, waiting in line) to build the skill</li>
         </ul>
@@ -1359,7 +1359,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
     id: catId(14),
     slug: 'chest-tightness-tingling-and-dizziness-understanding-anxietys-physical-symptoms',
     title: "Chest Tightness, Tingling, and Dizziness: Understanding Anxiety's Physical Symptoms",
-    description: "Discover why anxiety creates physical symptoms like chest tightness, tingling extremities, and dizziness — and learn which sensations are anxiety versus when to seek medical care.",
+    description: "Discover why anxiety creates physical symptoms like chest tightness, tingling extremities, and dizziness --- and learn which sensations are anxiety versus when to seek medical care.",
     image: "/images/articles/cat02/cover-014.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 6,
@@ -1437,14 +1437,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Anxiety doesn't just live in your head — it takes up residence in your body. Chest tightness that
+            Anxiety doesn't just live in your head --- it takes up residence in your body. Chest tightness that
             makes you fear a heart attack. Tingling fingers that feel like nerve damage. Dizziness so intense you
             grip the nearest surface. These sensations are real, frightening, and utterly convincing that
             something is medically wrong.
           </p>
           <p className="mb-6">
-            Understanding why anxiety creates these physical symptoms — and learning to recognize anxiety's
-            signature patterns — can reduce the fear that often makes symptoms worse{', '}
+            Understanding why anxiety creates these physical symptoms --- and learning to recognize anxiety's
+            signature patterns --- can reduce the fear that often makes symptoms worse{', '}
             <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />.
           </p>
         </div>
@@ -1456,8 +1456,8 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           Why Anxiety Creates Physical Symptoms
         </h2>
         <p className="mb-6">
-          When your brain's threat-detection system (the amygdala) perceives danger — whether real or
-          misinterpreted — it activates the sympathetic nervous system{', '}
+          When your brain's threat-detection system (the amygdala) perceives danger --- whether real or
+          misinterpreted --- it activates the sympathetic nervous system{', '}
           <Citation id="3" index={2} source="Physiology" year="2020" tier={1} />. This triggers a cascade of
           physical changes designed to help you survive:
         </p>
@@ -1471,7 +1471,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         </ul>
         <p className="mb-6">
           These changes are adaptive when facing real physical danger. But when triggered by anxiety, worry, or
-          panic — situations with no actual physical threat — the body's preparation for action creates
+          panic --- situations with no actual physical threat --- the body's preparation for action creates
           uncomfortable sensations with nowhere to go.
         </p>
 
@@ -1602,7 +1602,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
             temporarily
           </li>
           <li>
-            Nerves are highly sensitive to calcium levels — when free calcium drops, nerves fire more easily
+            Nerves are highly sensitive to calcium levels --- when free calcium drops, nerves fire more easily
           </li>
           <li>This creates tingling, numbness, or "pins and needles" sensations</li>
         </ol>
@@ -1745,7 +1745,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
             reassurance
           </li>
           <li>
-            <strong>Tolerate discomfort:</strong> Practice experiencing symptoms without reacting — they peak and
+            <strong>Tolerate discomfort:</strong> Practice experiencing symptoms without reacting --- they peak and
             pass
           </li>
           <li>
@@ -1884,14 +1884,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             A headache becomes a brain tumor. A skipped heartbeat becomes cardiac arrest. A skin mark becomes
             melanoma. For people with health anxiety, normal bodily sensations transform into catastrophic medical
-            diagnoses — and no amount of reassurance from doctors makes the fear go away for long.
+            diagnoses --- and no amount of reassurance from doctors makes the fear go away for long.
           </p>
           <p className="mb-6">
             Health anxiety, previously called hypochondriasis, is more than excessive worry about health. It's a
             persistent preoccupation with having or acquiring a serious illness, despite medical evidence to the
             contrary{', '}
             <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />. The worry
-            itself becomes disabling, consuming time, energy, and mental resources — ironically often affecting
+            itself becomes disabling, consuming time, energy, and mental resources --- ironically often affecting
             health more than any actual illness would.
           </p>
         </div>
@@ -2035,7 +2035,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
                     dehydrated."
                   </p>
                   <p>
-                    Research shows people with health anxiety have an <strong>attentional bias</strong> — they
+                    Research shows people with health anxiety have an <strong>attentional bias</strong> --- they
                     notice body sensations more than others and interpret ambiguous sensations as threatening{', '}
                     <Citation id="9" index={4} source="Clinical Psychology Review" year="2020" tier={1} />.
                   </p>
@@ -2048,14 +2048,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>Pattern:</strong> Needing 100% certainty that you're not ill — which is impossible.
+                    <strong>Pattern:</strong> Needing 100% certainty that you're not ill --- which is impossible.
                   </p>
                   <p className="mb-4">
                     <strong>Example:</strong> "The doctor said I'm fine, but what if they missed something? What if
                     the tests were wrong?"
                   </p>
                   <p>
-                    Intolerance of uncertainty is a core feature — people with health anxiety cannot tolerate the
+                    Intolerance of uncertainty is a core feature --- people with health anxiety cannot tolerate the
                     normal ambiguity that exists in all medical assessments{', '}
                     <Citation id="4" index={5} source="Journal of Anxiety Disorders" year="2020" tier={1} />.
                   </p>
@@ -2096,7 +2096,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
                     symptoms repeatedly, booking multiple doctor appointments for the same concern.
                   </p>
                   <p>
-                    Reassurance provides brief relief, but the anxiety returns quickly — often stronger than before.
+                    Reassurance provides brief relief, but the anxiety returns quickly --- often stronger than before.
                     Each reassurance-seeking cycle <strong>teaches your brain</strong> that the worry is dangerous
                     and needs to be neutralized{', '}
                     <Citation id="7" index={6} source="Journal of Obsessive-Compulsive and Related Disorders" year="2020" tier={1} />.
@@ -2179,14 +2179,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="The Paradox of Safety Behaviors">
           <p className="mb-4">
-            Safety behaviors feel protective in the moment — checking reassures you, doctor visits provide
+            Safety behaviors feel protective in the moment --- checking reassures you, doctor visits provide
             temporary certainty, avoiding health triggers reduces immediate anxiety. But over time, these
             behaviors <strong>maintain the problem</strong>.
           </p>
           <p>
             They prevent you from learning that symptoms are usually benign, that uncertainty is tolerable, and
             that anxiety naturally decreases without intervention. Treatment involves gradually reducing these
-            safety behaviors — which initially increases anxiety but ultimately breaks the cycle.
+            safety behaviors --- which initially increases anxiety but ultimately breaks the cycle.
           </p>
         </ArticleCallout>
 
@@ -2251,7 +2251,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
                     dismissed
                   </li>
                   <li>
-                    <strong>Missed diagnoses:</strong> "Cry wolf" effect — real symptoms may be dismissed due to
+                    <strong>Missed diagnoses:</strong> "Cry wolf" effect --- real symptoms may be dismissed due to
                     history of health anxiety
                   </li>
                 </ul>
@@ -2264,7 +2264,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
                 <div>
                   <p className="mb-4">
                     Some people with health anxiety respond with <strong>care avoidance</strong> rather than care
-                    seeking — they're so afraid of receiving a diagnosis that they avoid medical care entirely.
+                    seeking --- they're so afraid of receiving a diagnosis that they avoid medical care entirely.
                   </p>
                   <p className="mb-4">
                     <strong>Behaviors include:</strong>
@@ -2336,7 +2336,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
         </ol>
 
         <QuoteBlock
-          quote="The goal of treatment is not to eliminate all health concerns — that would be unhealthy in a different way. The goal is to respond to health information in a balanced, proportionate way that doesn't consume your life or prevent you from living it."
+          quote="The goal of treatment is not to eliminate all health concerns --- that would be unhealthy in a different way. The goal is to respond to health information in a balanced, proportionate way that doesn't consume your life or prevent you from living it."
           attribution="Treatment principle"
           role="CBT for Health Anxiety"
           variant="large"
@@ -2391,14 +2391,14 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
             repeatedly reassure.
           </li>
           <li>
-            <strong>Keep a symptom diary:</strong> Track symptoms and worry levels to see patterns — most symptoms
+            <strong>Keep a symptom diary:</strong> Track symptoms and worry levels to see patterns --- most symptoms
             fluctuate or resolve on their own.
           </li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The central insight:</strong> Health anxiety is not about health — it's about anxiety. The
+            <strong>The central insight:</strong> Health anxiety is not about health --- it's about anxiety. The
             content is health-related, but the mechanism is anxiety-driven worry, just as in other anxiety
             disorders.
           </p>
@@ -2409,7 +2409,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
           </p>
           <p>
             With appropriate treatment, most people with health anxiety see significant improvement. The worry
-            doesn't have to control your life — and it doesn't have to be the illness.
+            doesn't have to control your life --- and it doesn't have to be the illness.
           </p>
         </ArticleCallout>
       </>

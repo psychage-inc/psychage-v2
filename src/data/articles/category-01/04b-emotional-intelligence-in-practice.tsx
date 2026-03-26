@@ -21,7 +21,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     id: catId(36),
     slug: 'the-empathy-spectrum-from-cognitive-to-affective-to-compassionate',
     title: 'The Empathy Spectrum: From Cognitive to Affective to Compassionate',
-    description: 'Understanding the three types of empathy—cognitive, affective, and compassionate—and how they shape connection, burnout, and helping behavior.',
+    description: 'Understanding the three types of empathy---cognitive, affective, and compassionate---and how they shape connection, burnout, and helping behavior.',
     image: "/images/articles/cat01/cover-036.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 8,
@@ -107,10 +107,10 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When we talk about empathy, most people think of a single, unified ability. But neuroscience reveals a more complex picture: empathy is not one thing—it's a spectrum of related but distinct processes that involve different brain networks, serve different functions, and have very different effects on mental health.
+            When we talk about empathy, most people think of a single, unified ability. But neuroscience reveals a more complex picture: empathy is not one thing---it's a spectrum of related but distinct processes that involve different brain networks, serve different functions, and have very different effects on mental health.
           </p>
           <p className="mb-6">
-            Understanding the three main types of empathy—cognitive, affective, and compassionate—can help you understand why some people seem cold despite understanding others perfectly, why healthcare workers burn out from caring too much, and why compassion is fundamentally different from empathy <Citation id="1" index={1} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
+            Understanding the three main types of empathy---cognitive, affective, and compassionate---can help you understand why some people seem cold despite understanding others perfectly, why healthcare workers burn out from caring too much, and why compassion is fundamentally different from empathy <Citation id="1" index={1} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -132,14 +132,14 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Cognitive Empathy: Understanding Without Feeling
         </h2>
         <p className="mb-6">
-          Cognitive empathy—also called perspective-taking or theory of mind—is the ability to understand someone else's mental state without necessarily feeling their emotion <Citation id="2" index={2} source="Emotion Review" year="2019" tier={1} />.
+          Cognitive empathy---also called perspective-taking or theory of mind---is the ability to understand someone else's mental state without necessarily feeling their emotion <Citation id="2" index={2} source="Emotion Review" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          This is the empathy a skilled negotiator uses to anticipate what the other side wants. It's what allows a therapist to understand a client's experience without being emotionally flooded. And, disturbingly, it's what enables manipulation—psychopaths often have intact cognitive empathy but lack affective empathy <Citation id="5" index={5} source="Personality and Individual Differences" year="2020" tier={1} />.
+          This is the empathy a skilled negotiator uses to anticipate what the other side wants. It's what allows a therapist to understand a client's experience without being emotionally flooded. And, disturbingly, it's what enables manipulation---psychopaths often have intact cognitive empathy but lack affective empathy <Citation id="5" index={5} source="Personality and Individual Differences" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Cognitive empathy is neither inherently good nor bad—it's a tool. The question is whether it's paired with care (compassion) or used for exploitation.</p>
+          <p>Cognitive empathy is neither inherently good nor bad---it's a tool. The question is whether it's paired with care (compassion) or used for exploitation.</p>
         </ArticleCallout>
 
         <StatCard
@@ -158,7 +158,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Affective empathy is the automatic, visceral experience of sharing someone else's emotional state. When you wince seeing someone stub their toe, or feel anxiety rising when you're around an anxious person, that's affective empathy <Citation id="1" index={1} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          This type of empathy relies on the mirror neuron system—brain cells that fire both when you perform an action and when you watch someone else perform it <Citation id="7" index={7} source="Molecular Psychiatry" year="2018" tier={1} />. It's automatic, hard to control, and often happens below conscious awareness.
+          This type of empathy relies on the mirror neuron system---brain cells that fire both when you perform an action and when you watch someone else perform it <Citation id="7" index={7} source="Molecular Psychiatry" year="2018" tier={1} />. It's automatic, hard to control, and often happens below conscious awareness.
         </p>
 
         <ArticleAccordion
@@ -169,7 +169,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
               title: 'The Benefits of Affective Empathy',
               content: (
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Drives prosocial behavior—feeling others" pain motivates helping <Citation id="9" index={9} source="Psychological Bulletin" year="2017" tier={1} /></li>
+                  <li>Drives prosocial behavior---feeling others" pain motivates helping <Citation id="9" index={9} source="Psychological Bulletin" year="2017" tier={1} /></li>
                   <li>Strengthens social bonds and intimacy in relationships</li>
                   <li>Enables emotional attunement with children, partners, and friends</li>
                   <li>Facilitates nonverbal emotional communication</li>
@@ -181,9 +181,9 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
               title: 'The Costs of Affective Empathy',
               content: (
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Emotional contagion—absorbing others" stress, anxiety, or sadness</li>
-                  <li>Empathic distress—becoming overwhelmed by others' suffering</li>
-                  <li>Compassion fatigue—burnout from chronic emotional absorption <Citation id="3" index={3} source="Journal of Clinical Nursing" year="2021" tier={1} /></li>
+                  <li>Emotional contagion---absorbing others" stress, anxiety, or sadness</li>
+                  <li>Empathic distress---becoming overwhelmed by others' suffering</li>
+                  <li>Compassion fatigue---burnout from chronic emotional absorption <Citation id="3" index={3} source="Journal of Clinical Nursing" year="2021" tier={1} /></li>
                   <li>Difficulty separating your emotions from others"</li>
                 </ul>
               ),
@@ -199,10 +199,10 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Compassionate Empathy: Warmth + Action
         </h2>
         <p className="mb-6">
-          Compassionate empathy—sometimes called empathic concern—combines understanding and feeling with a motivation to help, but crucially, it includes warmth and resilience rather than distress <Citation id="4" index={4} source="Social Cognitive and Affective Neuroscience" year="2018" tier={1} />.
+          Compassionate empathy---sometimes called empathic concern---combines understanding and feeling with a motivation to help, but crucially, it includes warmth and resilience rather than distress <Citation id="4" index={4} source="Social Cognitive and Affective Neuroscience" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          When you feel compassion, your brain activates reward circuits (the ventral striatum) rather than pain circuits. You feel moved to help, but you don't absorb the suffering—you remain emotionally regulated while offering care.
+          When you feel compassion, your brain activates reward circuits (the ventral striatum) rather than pain circuits. You feel moved to help, but you don't absorb the suffering---you remain emotionally regulated while offering care.
         </p>
 
         <ArticleTabs
@@ -294,7 +294,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
               id: 'hsps',
               title: 'Highly Sensitive People (HSPs)',
               content: (
-                <p>Tend to have very high affective empathy—they absorb emotions intensely and can become overwhelmed. Benefit greatly from learning to cultivate compassion instead of pure empathy.</p>
+                <p>Tend to have very high affective empathy---they absorb emotions intensely and can become overwhelmed. Benefit greatly from learning to cultivate compassion instead of pure empathy.</p>
               ),
             },
             {
@@ -352,7 +352,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           <li>Compassion training increases prosocial behavior more than empathy training alone</li>
           <li>Healthcare workers trained in compassion show reduced burnout and improved patient care</li>
           <li>Empathy without compassion predicts empathic distress and avoidance of suffering</li>
-          <li>Compassion can be trained—it's a skill, not just a personality trait</li>
+          <li>Compassion can be trained---it's a skill, not just a personality trait</li>
           <li>The brain's 'empathy network' and "compassion network" are distinct and can be independently strengthened</li>
         </ul>
 
@@ -370,7 +370,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           <li>Train your brain to respond with warmth and action rather than distress and overwhelm</li>
         </ul>
         <p className="mb-6">
-          The goal is not to eliminate empathy—it's to balance understanding, feeling, and compassionate action in a way that sustains both you and the people you care about.
+          The goal is not to eliminate empathy---it's to balance understanding, feeling, and compassionate action in a way that sustains both you and the people you care about.
         </p>
       </>
     ),
@@ -383,7 +383,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     id: catId(37),
     slug: 'emotional-contagion-why-other-peoples-moods-affect-yours',
     title: `Emotional Contagion: Why Other People's Moods Affect Yours`,
-    description: `The neuroscience of emotional contagion—how moods spread between people, who's most susceptible, and how to protect your emotional state.`,
+    description: `The neuroscience of emotional contagion---how moods spread between people, who's most susceptible, and how to protect your emotional state.`,
     image: "/images/articles/cat01/cover-037.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -469,10 +469,10 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You walk into a room where two people are arguing. Within seconds, your heart rate increases and your shoulders tense—even though you're not part of the conflict. You scroll through social media and feel anxious, though you can't pinpoint why. You leave lunch with a friend feeling drained, as if their stress seeped into your bones.
+            You walk into a room where two people are arguing. Within seconds, your heart rate increases and your shoulders tense---even though you're not part of the conflict. You scroll through social media and feel anxious, though you can't pinpoint why. You leave lunch with a friend feeling drained, as if their stress seeped into your bones.
           </p>
           <p className="mb-6">
-            This is emotional contagion: the automatic, often unconscious transfer of emotions from one person to another <Citation id="1" index={1} source="Current Opinion in Psychology" year="2020" tier={1} />. Unlike deliberate empathy, emotional contagion happens whether you want it to or not—and research shows it's far more powerful and pervasive than most people realize.
+            This is emotional contagion: the automatic, often unconscious transfer of emotions from one person to another <Citation id="1" index={1} source="Current Opinion in Psychology" year="2020" tier={1} />. Unlike deliberate empathy, emotional contagion happens whether you want it to or not---and research shows it's far more powerful and pervasive than most people realize.
           </p>
         </div>
 
@@ -509,10 +509,10 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           The Neural Basis: Mirror Neurons and Shared Circuits
         </h2>
         <p className="mb-6">
-          Emotional contagion relies on the brain's mirror neuron system—neurons that fire both when you perform an action and when you observe someone else performing it <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2019" tier={1} />. When you see someone smile, the same motor neurons activate as if you were smiling yourself.
+          Emotional contagion relies on the brain's mirror neuron system---neurons that fire both when you perform an action and when you observe someone else performing it <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2019" tier={1} />. When you see someone smile, the same motor neurons activate as if you were smiling yourself.
         </p>
         <p className="mb-6">
-          Your brain also has shared circuits for pain and emotion. When you see someone in distress, your anterior cingulate cortex (ACC) and anterior insula—regions involved in experiencing your own pain and emotion—light up. Your brain literally simulates their internal state.
+          Your brain also has shared circuits for pain and emotion. When you see someone in distress, your anterior cingulate cortex (ACC) and anterior insula---regions involved in experiencing your own pain and emotion---light up. Your brain literally simulates their internal state.
         </p>
 
         <StatCard
@@ -548,14 +548,14 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
               id: 'relationships',
               title: 'Romantic Relationships',
               content: (
-                <p>Partners' stress levels synchronize—if one person is chronically anxious, the other often becomes anxious too <Citation id="8" index={8} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. This can create feedback loops where both partners" stress amplifies the other's.</p>
+                <p>Partners' stress levels synchronize---if one person is chronically anxious, the other often becomes anxious too <Citation id="8" index={8} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. This can create feedback loops where both partners" stress amplifies the other's.</p>
               ),
             },
             {
               id: 'workplace',
               title: 'The Workplace',
               content: (
-                <p>One stressed coworker can raise cortisol levels in everyone around them <Citation id="7" index={7} source="Journal of Applied Psychology" year="2021" tier={1} />. Leaders" moods have especially strong contagion effects—team mood often mirrors the boss's emotional state.</p>
+                <p>One stressed coworker can raise cortisol levels in everyone around them <Citation id="7" index={7} source="Journal of Applied Psychology" year="2021" tier={1} />. Leaders" moods have especially strong contagion effects---team mood often mirrors the boss's emotional state.</p>
               ),
             },
             {
@@ -610,7 +610,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Stress is particularly contagious. Even observing someone under stress (without direct interaction) can trigger your own stress response <Citation id="9" index={9} source="Nature Neuroscience" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
-          In one study, participants who merely observed a stranger undergoing a stressful task showed elevated cortisol levels—their bodies responded as if they were the ones being stressed. When the observed person was a romantic partner, the cortisol response was even stronger.
+          In one study, participants who merely observed a stranger undergoing a stressful task showed elevated cortisol levels---their bodies responded as if they were the ones being stressed. When the observed person was a romantic partner, the cortisol response was even stronger.
         </p>
 
         <QuoteBlock
@@ -625,7 +625,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           How to Protect Yourself from Negative Emotional Contagion
         </h2>
         <p className="mb-6">
-          You can't completely prevent emotional contagion—it's automatic. But you can reduce its impact:
+          You can't completely prevent emotional contagion---it's automatic. But you can reduce its impact:
         </p>
 
         <ProgressSteps
@@ -662,7 +662,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Positive Emotional Contagion: Joy, Laughter, and Enthusiasm
         </h2>
         <p className="mb-6">
-          It's not all bad news. Positive emotions are contagious too—and they spread faster and wider than negative ones in some contexts.
+          It's not all bad news. Positive emotions are contagious too---and they spread faster and wider than negative ones in some contexts.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Laughter:</strong> Highly contagious, even when you don't know why someone is laughing</li>
@@ -681,10 +681,10 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Emotional contagion happens automatically and unconsciously within milliseconds</li>
           <li>Negative emotions (fear, anger, stress) spread more readily than positive ones in high-stakes contexts</li>
-          <li>Close relationships amplify contagion effects—partners" emotions converge over time</li>
+          <li>Close relationships amplify contagion effects---partners" emotions converge over time</li>
           <li>Social media creates emotional contagion at scale, often amplifying negativity</li>
           <li>You can reduce susceptibility through awareness, grounding, and emotional regulation</li>
-          <li>Positive emotions are contagious too—you can be a source of uplift for others</li>
+          <li>Positive emotions are contagious too---you can be a source of uplift for others</li>
         </ul>
 
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -700,7 +700,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           <li>You can make informed choices about who you spend time with and what content you consume</li>
         </ul>
         <p className="mb-6">
-          You are not responsible for fixing everyone's emotional state. But you are responsible for protecting your own—and for being mindful of the emotional wake you leave behind.
+          You are not responsible for fixing everyone's emotional state. But you are responsible for protecting your own---and for being mindful of the emotional wake you leave behind.
         </p>
       </>
     ),
@@ -713,7 +713,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     id: catId(38),
     slug: 'setting-emotional-boundaries-while-staying-connected',
     title: 'Setting Emotional Boundaries While Staying Connected',
-    description: 'How to protect your emotional energy without shutting people out—the delicate balance between empathy and self-preservation.',
+    description: 'How to protect your emotional energy without shutting people out---the delicate balance between empathy and self-preservation.',
     image: "/images/articles/cat01/cover-038.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -794,7 +794,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
             "Just set boundaries" is advice that sounds simple but feels impossible. How do you protect your emotional energy without seeming cold? How do you care about someone's pain without absorbing it as your own? How do you stay connected while maintaining separateness?
           </p>
           <p className="mb-6">
-            Emotional boundaries are invisible lines that define where your emotional responsibility ends and another person's begins <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. They're not about building walls—they're about building doors you can open and close as needed <Citation id="7" index={7} source="Journal of Humanistic Psychology" year="2021" tier={1} />.
+            Emotional boundaries are invisible lines that define where your emotional responsibility ends and another person's begins <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. They're not about building walls---they're about building doors you can open and close as needed <Citation id="7" index={7} source="Journal of Humanistic Psychology" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -848,7 +848,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
             {
               id: 'drained',
               title: 'You feel emotionally drained after interactions',
-              content: <p>If spending time with certain people consistently leaves you exhausted, anxious, or depleted—even when the interaction was 'positive"—your boundaries may be too porous. You're absorbing more than you should.</p>,
+              content: <p>If spending time with certain people consistently leaves you exhausted, anxious, or depleted---even when the interaction was 'positive"---your boundaries may be too porous. You're absorbing more than you should.</p>,
             },
             {
               id: 'responsible',
@@ -863,12 +863,12 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
             {
               id: 'losing-yourself',
               title: 'You lose yourself in relationships',
-              content: <p>If you mold your opinions, interests, or emotions to match those around you, you may struggle with differentiation of self—the ability to remain yourself while staying connected <Citation id="8" index={8} source="Family Process" year="2018" tier={1} />.</p>,
+              content: <p>If you mold your opinions, interests, or emotions to match those around you, you may struggle with differentiation of self---the ability to remain yourself while staying connected <Citation id="8" index={8} source="Family Process" year="2018" tier={1} />.</p>,
             },
             {
               id: 'guilt',
               title: 'You feel guilty for prioritizing your needs',
-              content: <p>If self-care feels selfish, or if you believe others' needs always come first, you've internalized the belief that boundaries are mean. They're not—they're necessary.</p>,
+              content: <p>If self-care feels selfish, or if you believe others' needs always come first, you've internalized the belief that boundaries are mean. They're not---they're necessary.</p>,
             },
           ]}
         />
@@ -947,7 +947,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
             },
             {
               title: '4. Expect Pushback',
-              description: <p>People used to your lack of boundaries may resist. This doesn't mean your boundary is wrong—it means it's new.</p>,
+              description: <p>People used to your lack of boundaries may resist. This doesn't mean your boundary is wrong---it means it's new.</p>,
             },
             {
               title: '5. Hold the Line',
@@ -970,7 +970,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Managing Guilt When You Set Boundaries
         </h2>
         <p className="mb-6">
-          Guilt is the most common barrier to setting boundaries. Here's why it happens—and what to do about it:
+          Guilt is the most common barrier to setting boundaries. Here's why it happens---and what to do about it:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>You've been conditioned to prioritize others:</strong> If you grew up in an environment where your needs didn't matter, asserting them now feels wrong. This is learned, not truth.</li>
@@ -1045,7 +1045,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           If you struggle to set boundaries due to deep-seated patterns (codependency, people-pleasing, fear of abandonment), therapy can help. Modalities like DBT, Codependency Recovery, and Attachment-Based Therapy specifically address boundary development <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          Setting emotional boundaries is an act of self-respect. It's not about shutting people out—it's about making room for authentic connection by protecting what makes that connection sustainable.
+          Setting emotional boundaries is an act of self-respect. It's not about shutting people out---it's about making room for authentic connection by protecting what makes that connection sustainable.
         </p>
       </>
     ),
@@ -1136,7 +1136,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "We need to talk." Four words that make your heart sink. Whether it's addressing a conflict, delivering critical feedback, or bringing up a sensitive issue, difficult conversations are where relationships are tested—and where emotional intelligence matters most.
+            "We need to talk." Four words that make your heart sink. Whether it's addressing a conflict, delivering critical feedback, or bringing up a sensitive issue, difficult conversations are where relationships are tested---and where emotional intelligence matters most.
           </p>
           <p className="mb-6">
             Most people avoid these conversations until the problem explodes, or they rush into them unprepared and make things worse. Emotional intelligence offers a third path: addressing hard topics with clarity, empathy, and skill in a way that strengthens rather than damages the relationship <Citation id="1" index={1} source="Journal of Applied Psychology" year="2020" tier={1} />.
@@ -1147,7 +1147,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           Why Difficult Conversations Feel Impossible
         </h2>
         <p className="mb-6">
-          When the stakes are high and emotions run strong, your brain interprets the conversation as a threat. Your amygdala activates, flooding your system with cortisol and adrenaline—the same response you'd have facing physical danger <Citation id="2" index={2} source="Social Cognitive and Affective Neuroscience" year="2019" tier={1} />.
+          When the stakes are high and emotions run strong, your brain interprets the conversation as a threat. Your amygdala activates, flooding your system with cortisol and adrenaline---the same response you'd have facing physical danger <Citation id="2" index={2} source="Social Cognitive and Affective Neuroscience" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           This triggers three common responses:
@@ -1157,14 +1157,14 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           title="Threat Responses in Difficult Conversations"
           columns={['Response', 'What It Looks Like', 'Why It Happens']}
           items={[
-            { feature: 'Fight', values: ['Becoming aggressive, defensive, or accusatory', 'Amygdala hijack — rational thinking goes offline'] },
+            { feature: 'Fight', values: ['Becoming aggressive, defensive, or accusatory', 'Amygdala hijack --- rational thinking goes offline'] },
             { feature: 'Flight', values: ['Avoiding the conversation, changing the subject, making excuses', 'Fear of conflict or rejection overwhelming approach motivation'] },
             { feature: 'Freeze', values: [`Shutting down, going silent, emotional numbing', "Overwhelm triggers parasympathetic shutdown <Citation id="7" index={7} source="Journal of Marriage and Family" year="2019" tier={1} />`] },
           ]}
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>The goal is not to eliminate the threat response—it's to recognize it early and shift from reactive mode to intentional communication.</p>
+          <p>The goal is not to eliminate the threat response---it's to recognize it early and shift from reactive mode to intentional communication.</p>
         </ArticleCallout>
 
         <h2 id="preparation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1264,19 +1264,19 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           steps={[
             {
               title: 'Observation (Not Evaluation)',
-              description: <p>'When I see/hear [specific behavior]..." — Describe what happened without adding interpretation or judgment.</p>,
+              description: <p>'When I see/hear [specific behavior]..." --- Describe what happened without adding interpretation or judgment.</p>,
             },
             {
               title: 'Feeling (Not Thought)',
-              description: <p>"I feel [emotion]..." — Name the emotion you're experiencing. Use actual feeling words (sad, scared, frustrated), not thoughts disguised as feelings ("I feel like you don't care").</p>,
+              description: <p>"I feel [emotion]..." --- Name the emotion you're experiencing. Use actual feeling words (sad, scared, frustrated), not thoughts disguised as feelings ("I feel like you don't care").</p>,
             },
             {
               title: 'Need (Universal)',
-              description: <p>'Because I need [universal human need]..." — Identify the underlying need (respect, clarity, connection, safety, autonomy) that's not being met.</p>,
+              description: <p>'Because I need [universal human need]..." --- Identify the underlying need (respect, clarity, connection, safety, autonomy) that's not being met.</p>,
             },
             {
               title: 'Request (Specific)',
-              description: <p>'Would you be willing to [concrete action]?" — Make a clear, doable request. Not a demand, not vague, not a test.</p>,
+              description: <p>'Would you be willing to [concrete action]?" --- Make a clear, doable request. Not a demand, not vague, not a test.</p>,
             },
           ]}
         />
@@ -1375,7 +1375,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           When the Conversation Goes Sideways: Repair Attempts
         </h2>
         <p className="mb-6">
-          Even with the best skills, difficult conversations can escalate. The key is repair—recognizing when things are off track and course-correcting:
+          Even with the best skills, difficult conversations can escalate. The key is repair---recognizing when things are off track and course-correcting:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>"I don't think this is going the way either of us wants. Can we start over?"</li>
@@ -1385,17 +1385,17 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="info">
-          <p>Repair attempts are not signs of failure—they're signs of emotional intelligence. The ability to name when something isn't working and reset is what separates healthy conflict from destructive conflict <Citation id="4" index={4} source="Administrative Science Quarterly" year="2021" tier={1} />.</p>
+          <p>Repair attempts are not signs of failure---they're signs of emotional intelligence. The ability to name when something isn't working and reset is what separates healthy conflict from destructive conflict <Citation id="4" index={4} source="Administrative Science Quarterly" year="2021" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If difficult conversations consistently escalate into yelling, shutdown, or injury—or if you avoid them entirely at the cost of the relationship—consider couples therapy, mediation, or communication skills training. Sometimes a neutral third party can create the safety needed for productive dialogue.
+          If difficult conversations consistently escalate into yelling, shutdown, or injury---or if you avoid them entirely at the cost of the relationship---consider couples therapy, mediation, or communication skills training. Sometimes a neutral third party can create the safety needed for productive dialogue.
         </p>
         <p className="mb-6">
-          Difficult conversations are not the problem—they're the path to deeper understanding. Avoiding them doesn't protect the relationship; it slowly erodes it. Facing them with emotional intelligence strengthens trust and builds the foundation for lasting connection.
+          Difficult conversations are not the problem---they're the path to deeper understanding. Avoiding them doesn't protect the relationship; it slowly erodes it. Facing them with emotional intelligence strengthens trust and builds the foundation for lasting connection.
         </p>
       </>
     ),
@@ -1408,7 +1408,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
     id: catId(40),
     slug: 'teaching-emotional-intelligence-skills-for-parents-teachers-mentors',
     title: 'Teaching Emotional Intelligence: Skills for Parents, Teachers, and Mentors',
-    description: 'How to help children and young adults develop emotional awareness, regulation, empathy, and social skills—with age-appropriate strategies.',
+    description: 'How to help children and young adults develop emotional awareness, regulation, empathy, and social skills---with age-appropriate strategies.',
     image: "/images/articles/cat01/cover-040.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 8,
@@ -1489,7 +1489,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
             You can't teach a child emotional intelligence by lecturing them about feelings. You teach it by modeling it, naming it, and creating a safe space for emotions to exist without judgment. Whether you're a parent, teacher, coach, or mentor, the way you respond to a child's emotions shapes their lifelong relationship with their inner world.
           </p>
           <p className="mb-6">
-            Research shows that children who develop strong emotional intelligence have better academic outcomes, healthier relationships, lower rates of mental health problems, and greater life satisfaction decades later <Citation id="1" index={1} source="Child Development" year="2020" tier={1} />. The good news? Emotional intelligence is learnable—and it starts with the adults in a child's life.
+            Research shows that children who develop strong emotional intelligence have better academic outcomes, healthier relationships, lower rates of mental health problems, and greater life satisfaction decades later <Citation id="1" index={1} source="Child Development" year="2020" tier={1} />. The good news? Emotional intelligence is learnable---and it starts with the adults in a child's life.
           </p>
         </div>
 
@@ -1513,7 +1513,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           <li><strong>Academic success:</strong> Students who can regulate emotions focus better and persist through challenges</li>
           <li><strong>Mental health:</strong> Strong EQ protects against anxiety, depression, and behavioral problems <Citation id="7" index={7} source="Psychological Bulletin" year="2021" tier={1} /></li>
           <li><strong>Social competence:</strong> Children with high EQ form healthier friendships and resolve conflicts effectively</li>
-          <li><strong>Long-term wellbeing:</strong> Effects persist into adulthood—job performance, relationship satisfaction, and overall life satisfaction</li>
+          <li><strong>Long-term wellbeing:</strong> Effects persist into adulthood---job performance, relationship satisfaction, and overall life satisfaction</li>
         </ul>
 
         <h2 id="emotion-coaching" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1550,11 +1550,11 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
             },
             {
               title: '3. Validate the Feeling',
-              description: <p>'It makes sense you feel disappointed. You really wanted to go to the park." Validation doesn't mean agreeing—it means acknowledging.</p>,
+              description: <p>'It makes sense you feel disappointed. You really wanted to go to the park." Validation doesn't mean agreeing---it means acknowledging.</p>,
             },
             {
               title: '4. Help Them Label It',
-              description: <p>Build emotional vocabulary: "That feeling you're having—that tight, hot feeling in your chest—that's frustration."</p>,
+              description: <p>Build emotional vocabulary: "That feeling you're having---that tight, hot feeling in your chest---that's frustration."</p>,
             },
             {
               title: '5. Set Limits and Problem-Solve',
@@ -1582,7 +1582,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Use simple emotion words: "You're mad. I see you're mad."</li>
                     <li>Model regulation: "I'm taking a deep breath. Let's breathe together."</li>
-                    <li>Offer comfort: Toddlers can't self-regulate alone yet—they need your calm presence</li>
+                    <li>Offer comfort: Toddlers can't self-regulate alone yet---they need your calm presence</li>
                     <li>Read books about feelings together</li>
                   </ul>
                 </div>
@@ -1646,11 +1646,11 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         <ArticleAccordion
           type="multiple"
           items={[
-            { id: 'r', title: 'R — Recognizing emotions in self and others', content: <p>Identifying facial expressions, body language, and situational cues that signal emotional states.</p> },
-            { id: 'u', title: 'U — Understanding the causes and consequences of emotions', content: <p>Exploring why emotions arise and how they influence thoughts and behaviors.</p> },
-            { id: 'l', title: 'L — Labeling emotions with precise vocabulary', content: <p>Moving beyond 'good' and "bad" to build a rich emotional lexicon (e.g., "apprehensive,", "elated,", "resentful").</p> },
-            { id: 'e', title: 'E — Expressing emotions appropriately in context', content: <p>Knowing when, where, and how to share emotions in socially effective ways.</p> },
-            { id: 'r2', title: 'R — Regulating emotions with helpful strategies', content: <p>Building a toolkit of evidence-based regulation techniques (breathing, reappraisal, self-talk, movement).</p> },
+            { id: 'r', title: 'R --- Recognizing emotions in self and others', content: <p>Identifying facial expressions, body language, and situational cues that signal emotional states.</p> },
+            { id: 'u', title: 'U --- Understanding the causes and consequences of emotions', content: <p>Exploring why emotions arise and how they influence thoughts and behaviors.</p> },
+            { id: 'l', title: 'L --- Labeling emotions with precise vocabulary', content: <p>Moving beyond 'good' and "bad" to build a rich emotional lexicon (e.g., "apprehensive,", "elated,", "resentful").</p> },
+            { id: 'e', title: 'E --- Expressing emotions appropriately in context', content: <p>Knowing when, where, and how to share emotions in socially effective ways.</p> },
+            { id: 'r2', title: 'R --- Regulating emotions with helpful strategies', content: <p>Building a toolkit of evidence-based regulation techniques (breathing, reappraisal, self-talk, movement).</p> },
           ]}
         />
 
@@ -1658,7 +1658,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           The Most Important Tool: Your Own Emotional Regulation
         </h2>
         <p className="mb-6">
-          Children don't learn emotional intelligence from what you say—they learn from what you do. If you yell "CALM DOWN!" when they're upset, you've taught them that emotions require yelling. If you model staying calm when frustrated, you've taught them regulation in action <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />.
+          Children don't learn emotional intelligence from what you say---they learn from what you do. If you yell "CALM DOWN!" when they're upset, you've taught them that emotions require yelling. If you model staying calm when frustrated, you've taught them regulation in action <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
 
         <QuoteBlock
@@ -1670,7 +1670,7 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>This is why your own emotional regulation matters so much. When you lose it, repair. Say: "I yelled, and that wasn't okay. I was feeling overwhelmed, and I needed a break. I'm sorry." This teaches accountability and repair—powerful EQ skills.</p>
+          <p>This is why your own emotional regulation matters so much. When you lose it, repair. Say: "I yelled, and that wasn't okay. I was feeling overwhelmed, and I needed a break. I'm sorry." This teaches accountability and repair---powerful EQ skills.</p>
         </ArticleCallout>
 
         <h2 id="common-mistakes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1725,9 +1725,9 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           steps={[
             { title: 'Emotion Check-Ins', description: <p>Daily ritual: 'On a scale of 1-10, how are you feeling today? What color is your mood?" Make it routine, not reserved for crisis.</p> },
             { title: 'Feelings Chart', description: <p>Post a feelings wheel or chart. When emotions arise, point to it: 'Can you find the word that matches how you feel?'</p> },
-            { title: 'Calm-Down Corner', description: <p>Create a designated space with sensory tools (stress ball, glitter jar, breathing poster, books). Not punishment—a safe regulation space.</p> },
+            { title: 'Calm-Down Corner', description: <p>Create a designated space with sensory tools (stress ball, glitter jar, breathing poster, books). Not punishment---a safe regulation space.</p> },
             { title: 'Reflective Conversations', description: <p>After conflicts: 'What were you feeling? What did you need? What could you do differently next time?" Focus on learning, not blame.</p> },
-            { title: 'Emotion Charades', description: <p>Act out emotions without words—builds recognition and expression skills in a playful way.</p> },
+            { title: 'Emotion Charades', description: <p>Act out emotions without words---builds recognition and expression skills in a playful way.</p> },
           ]}
         />
 
@@ -1735,10 +1735,10 @@ export const emotionalIntelligenceInPracticeArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If a child shows persistent emotional dysregulation—frequent meltdowns disproportionate to triggers, inability to calm down even with support, aggression, or withdrawal—consider professional evaluation. Conditions like ADHD, autism, anxiety, or trauma can affect emotional development and require specialized support.
+          If a child shows persistent emotional dysregulation---frequent meltdowns disproportionate to triggers, inability to calm down even with support, aggression, or withdrawal---consider professional evaluation. Conditions like ADHD, autism, anxiety, or trauma can affect emotional development and require specialized support.
         </p>
         <p className="mb-6">
-          Teaching emotional intelligence is not a one-time lesson—it's a daily practice woven into every interaction. The most powerful gift you can give a child is the message: "Your feelings matter. You can handle them. And you don't have to do it alone."
+          Teaching emotional intelligence is not a one-time lesson---it's a daily practice woven into every interaction. The most powerful gift you can give a child is the message: "Your feelings matter. You can handle them. And you don't have to do it alone."
         </p>
       </>
     ),

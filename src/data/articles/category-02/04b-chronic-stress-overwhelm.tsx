@@ -115,10 +115,10 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Stress doesn't just feel bad. It physically damages your body. What begins as a psychological experience — worry, overwhelm, pressure — sets off a cascade of biological changes that, when sustained over time, increase your risk for nearly every major chronic disease.
+            Stress doesn't just feel bad. It physically damages your body. What begins as a psychological experience --- worry, overwhelm, pressure --- sets off a cascade of biological changes that, when sustained over time, increase your risk for nearly every major chronic disease.
           </p>
           <p className="mb-6">
-            This isn't speculation or correlation. Decades of research have mapped the precise mechanisms by which chronic stress shortens lives, damages organs, and accelerates aging <Citation id="1" index={1} source="PLoS ONE" year="2017" tier={1} />. Understanding these pathways is not meant to add stress about your stress — but to underscore why stress management is not optional self-care. It's preventive medicine.
+            This isn't speculation or correlation. Decades of research have mapped the precise mechanisms by which chronic stress shortens lives, damages organs, and accelerates aging <Citation id="1" index={1} source="PLoS ONE" year="2017" tier={1} />. Understanding these pathways is not meant to add stress about your stress --- but to underscore why stress management is not optional self-care. It's preventive medicine.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Studies show that people with high chronic stress have inflammatory markers (like C-reactive protein) comparable to individuals with chronic infections or autoimmune diseases — even when they're otherwise healthy.
+            Studies show that people with high chronic stress have inflammatory markers (like C-reactive protein) comparable to individuals with chronic infections or autoimmune diseases --- even when they're otherwise healthy.
           </p>
         </ArticleCallout>
 
@@ -193,7 +193,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Plaque Instability',
               description: (
                 <p>
-                  Stress hormones can destabilize existing arterial plaques, making them more likely to rupture — the triggering event for most heart attacks.
+                  Stress hormones can destabilize existing arterial plaques, making them more likely to rupture --- the triggering event for most heart attacks.
                 </p>
               ),
             },
@@ -285,7 +285,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Insulin Resistance and Type 2 Diabetes',
               content: (
                 <p>
-                  Cortisol increases blood glucose to provide energy for dealing with stress. Chronic elevation leads to insulin resistance, where cells stop responding to insulin effectively. This is a primary pathway from chronic stress to type 2 diabetes — people with high chronic stress have 1.5-2x higher diabetes risk.
+                  Cortisol increases blood glucose to provide energy for dealing with stress. Chronic elevation leads to insulin resistance, where cells stop responding to insulin effectively. This is a primary pathway from chronic stress to type 2 diabetes --- people with high chronic stress have 1.5-2x higher diabetes risk.
                 </p>
               ),
             },
@@ -309,7 +309,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Thyroid Dysfunction',
               content: (
                 <p>
-                  Chronic stress can suppress thyroid function (hypothyroidism), leading to fatigue, weight gain, depression, and metabolic slowdown. The HPA axis and hypothalamic-pituitary-thyroid axis are interconnected — dysfunction in one affects the other.
+                  Chronic stress can suppress thyroid function (hypothyroidism), leading to fatigue, weight gain, depression, and metabolic slowdown. The HPA axis and hypothalamic-pituitary-thyroid axis are interconnected --- dysfunction in one affects the other.
                 </p>
               ),
             },
@@ -335,7 +335,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <li><strong>Irritable bowel syndrome (IBS)</strong>: Stress is a major trigger for IBS symptoms and can cause onset in susceptible individuals.</li>
           <li><strong>Inflammatory bowel disease (IBD)</strong>: Stress worsens flares in Crohn's disease and ulcerative colitis.</li>
           <li><strong>Altered gut motility</strong>: Stress can speed up or slow down digestion, causing diarrhea or constipation.</li>
-          <li><strong>Increased intestinal permeability</strong>: "Leaky gut" — stress compromises the intestinal barrier, allowing toxins and bacteria to enter the bloodstream.</li>
+          <li><strong>Increased intestinal permeability</strong>: "Leaky gut" --- stress compromises the intestinal barrier, allowing toxins and bacteria to enter the bloodstream.</li>
           <li><strong>Dysbiosis</strong>: Chronic stress alters the gut microbiome composition, reducing beneficial bacteria and increasing harmful strains.</li>
           <li><strong>Ulcer formation</strong>: While H. pylori bacteria cause most ulcers, stress increases ulcer risk and delays healing.</li>
         </ul>
@@ -430,7 +430,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Chronic stress doesn't just make you feel older — it makes you biologically older. But this also means that stress reduction interventions are not just "nice to have." They're anti-aging medicine at the cellular level.
+            Chronic stress doesn't just make you feel older --- it makes you biologically older. But this also means that stress reduction interventions are not just "nice to have." They're anti-aging medicine at the cellular level.
           </p>
         </ArticleCallout>
 
@@ -444,7 +444,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <li><strong>Blood pressure</strong> normalizes within weeks of stress reduction</li>
           <li><strong>Inflammation markers</strong> decrease significantly with meditation and stress management</li>
           <li><strong>Immune function</strong> improves with better sleep and reduced cortisol</li>
-          <li><strong>Brain structure</strong> shows recovery — hippocampus can regrow, prefrontal cortex can strengthen</li>
+          <li><strong>Brain structure</strong> shows recovery --- hippocampus can regrow, prefrontal cortex can strengthen</li>
           <li><strong>Metabolic function</strong> improves with stress reduction combined with lifestyle change</li>
         </ul>
 
@@ -540,7 +540,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You wake at 3 a.m., mind racing about bills. During the day, every purchase decision triggers anxiety. You avoid checking your bank account because seeing the numbers makes you feel sick. You feel ashamed when friends suggest dinner out. Financial stress has become the background noise of your life — constant, exhausting, inescapable.
+            You wake at 3 a.m., mind racing about bills. During the day, every purchase decision triggers anxiety. You avoid checking your bank account because seeing the numbers makes you feel sick. You feel ashamed when friends suggest dinner out. Financial stress has become the background noise of your life --- constant, exhausting, inescapable.
           </p>
           <p className="mb-6">
             Money worries are one of the most common sources of chronic stress, yet they're often discussed in hushed tones, tangled with shame. The psychological toll of financial insecurity is profound and well-documented <Citation id="1" index={1} source="Journal of American College Health" year="2019" tier={1} />. Understanding why financial stress feels uniquely consuming is the first step toward breaking its grip.
@@ -571,7 +571,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: '1. It Threatens Basic Survival Needs',
               content: (
                 <p>
-                  Money is the means to secure food, shelter, healthcare, and safety. When finances are unstable, your brain's threat detection system is chronically activated. Unlike other stressors, this one genuinely could affect your survival — and your brain knows it.
+                  Money is the means to secure food, shelter, healthcare, and safety. When finances are unstable, your brain's threat detection system is chronically activated. Unlike other stressors, this one genuinely could affect your survival --- and your brain knows it.
                 </p>
               ),
             },
@@ -598,7 +598,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: '4. It Often Feels Outside Your Control',
               content: (
                 <p>
-                  Job loss, medical emergencies, economic recessions, cost-of-living increases — many financial stressors are caused by forces beyond individual control. This learned helplessness is psychologically devastating.
+                  Job loss, medical emergencies, economic recessions, cost-of-living increases --- many financial stressors are caused by forces beyond individual control. This learned helplessness is psychologically devastating.
                 </p>
               ),
             },
@@ -618,7 +618,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           The Mental Health Toll of Financial Stress
         </h2>
         <p className="mb-6">
-          Financial stress doesn't just feel bad — it has measurable effects on mental health <Citation id="3" index={3} source="Family Relations" year="2013" tier={1} />:
+          Financial stress doesn't just feel bad --- it has measurable effects on mental health <Citation id="3" index={3} source="Family Relations" year="2013" tier={1} />:
         </p>
 
         <ArticleChart
@@ -653,7 +653,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           The Shame Spiral: Why Financial Stress Is Stigmatized
         </h2>
         <p className="mb-6">
-          One of the most damaging aspects of financial stress is the shame that accompanies it. Society often frames financial struggle as a personal moral failing — lack of discipline, poor choices, laziness — rather than acknowledging systemic factors:
+          One of the most damaging aspects of financial stress is the shame that accompanies it. Society often frames financial struggle as a personal moral failing --- lack of discipline, poor choices, laziness --- rather than acknowledging systemic factors:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Stagnant wages despite rising productivity</li>
@@ -691,7 +691,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           1. Face the Numbers (Exposure, Not Avoidance)
         </h3>
         <p className="mb-6">
-          Avoidance is a natural response to anxiety, but avoiding your financial reality makes the anxiety worse. Not knowing is often more stressful than knowing — even when the news is bad.
+          Avoidance is a natural response to anxiety, but avoiding your financial reality makes the anxiety worse. Not knowing is often more stressful than knowing --- even when the news is bad.
         </p>
         <p className="mb-6">
           <strong>Practice:</strong> Set aside a specific time to review your finances. Write down all income, expenses, debts, and assets. The act of organizing the information reduces the sense of chaos and often reveals the situation is more manageable than you feared.
@@ -704,14 +704,14 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           Make two lists: things within your control (reducing discretionary spending, seeking additional income, negotiating bills) and things outside your control (economic conditions, past decisions, other people's financial choices).
         </p>
         <p className="mb-6">
-          <strong>Practice:</strong> Focus your energy exclusively on the first list. For the second, practice radical acceptance — acknowledge the reality without fighting it mentally.
+          <strong>Practice:</strong> Focus your energy exclusively on the first list. For the second, practice radical acceptance --- acknowledge the reality without fighting it mentally.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           3. Time-Box Your Worry
         </h3>
         <p className="mb-6">
-          Constant rumination doesn't solve problems — it just depletes mental resources. Designate a specific "worry time" (e.g., 20 minutes at 4 p.m. daily).
+          Constant rumination doesn't solve problems --- it just depletes mental resources. Designate a specific "worry time" (e.g., 20 minutes at 4 p.m. daily).
         </p>
         <p className="mb-6">
           <strong>Practice:</strong> When financial worries arise outside this time, write them down and tell yourself, "I'll address this during my worry time." During worry time, actively problem-solve. This technique reduces intrusive thoughts by 40-60% <Citation id="6" index={6} source="Springer" year="2015" tier={5} />.
@@ -747,10 +747,10 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           6. Break Isolation: Talk About It
         </h3>
         <p className="mb-6">
-          Financial stress thrives in silence. Shame tells you that you're the only one struggling, which is statistically false — the majority of people experience financial stress at some point.
+          Financial stress thrives in silence. Shame tells you that you're the only one struggling, which is statistically false --- the majority of people experience financial stress at some point.
         </p>
         <p className="mb-6">
-          <strong>Practice:</strong> Confide in a trusted friend, family member, or therapist. Join a support group. Online forums for people managing debt or financial hardship can reduce isolation. You don't have to share specific numbers if that feels uncomfortable — sharing the emotional burden is what matters.
+          <strong>Practice:</strong> Confide in a trusted friend, family member, or therapist. Join a support group. Online forums for people managing debt or financial hardship can reduce isolation. You don't have to share specific numbers if that feels uncomfortable --- sharing the emotional burden is what matters.
         </p>
 
         <h2 id="practical-financial-steps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -791,7 +791,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Seek Free Financial Counseling',
               description: (
                 <p>
-                  Nonprofit credit counseling agencies (like NFCC members) offer free or low-cost financial advice, debt management plans, and budgeting support. They're not collection agencies — they work for you.
+                  Nonprofit credit counseling agencies (like NFCC members) offer free or low-cost financial advice, debt management plans, and budgeting support. They're not collection agencies --- they work for you.
                 </p>
               ),
             },
@@ -807,7 +807,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Use Available Assistance Programs',
               description: (
                 <p>
-                  SNAP (food assistance), Medicaid, utility assistance programs, housing vouchers — these exist to support people in financial hardship. There's no shame in using resources designed for exactly this situation.
+                  SNAP (food assistance), Medicaid, utility assistance programs, housing vouchers --- these exist to support people in financial hardship. There's no shame in using resources designed for exactly this situation.
                 </p>
               ),
             },
@@ -925,7 +925,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're caring for an aging parent with dementia. Or a child with a chronic illness. Or a spouse recovering from a stroke. The role found you — you didn't choose it, but you stepped up. Now, months or years later, you're exhausted in ways that sleep can't fix. You feel guilty for resenting the very person you love. You've forgotten what it feels like to have time for yourself.
+            You're caring for an aging parent with dementia. Or a child with a chronic illness. Or a spouse recovering from a stroke. The role found you --- you didn't choose it, but you stepped up. Now, months or years later, you're exhausted in ways that sleep can't fix. You feel guilty for resenting the very person you love. You've forgotten what it feels like to have time for yourself.
           </p>
           <p className="mb-6">
             Caregiver stress is a unique form of chronic stress characterized by the physical, emotional, and financial strain of providing ongoing care for someone who cannot fully care for themselves <Citation id="1" index={1} source="International Journal of Nursing Studies" year="2012" tier={1} />. It's one of the most demanding and under-recognized sources of burnout, affecting an estimated 53 million family caregivers in the United States alone.
@@ -974,7 +974,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: '3. Emotional Complexity',
               content: (
                 <p>
-                  You're caring for someone you love, which makes the stress uniquely painful. You feel grief for losses (the parent who no longer recognizes you, the child's lost potential), guilt for feeling resentful, and shame for not doing 'enough' — all while providing intimate, demanding care.
+                  You're caring for someone you love, which makes the stress uniquely painful. You feel grief for losses (the parent who no longer recognizes you, the child's lost potential), guilt for feeling resentful, and shame for not doing 'enough' --- all while providing intimate, demanding care.
                 </p>
               ),
             },
@@ -983,7 +983,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: '4. Role Reversal and Identity Loss',
               content: (
                 <p>
-                  Many caregivers experience profound identity shifts — from spouse to nurse, from child to parent of their parent. Your own goals, career, and social life often disappear. 'Who am I beyond a caregiver?" becomes an unanswerable question.
+                  Many caregivers experience profound identity shifts --- from spouse to nurse, from child to parent of their parent. Your own goals, career, and social life often disappear. 'Who am I beyond a caregiver?" becomes an unanswerable question.
                 </p>
               ),
             },
@@ -1043,7 +1043,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            The landmark study showing 63% increased mortality risk for high-stress caregivers found that the risk was specific to caregivers experiencing strain — not all caregivers. The psychological burden, more than the time commitment alone, predicts health outcomes.
+            The landmark study showing 63% increased mortality risk for high-stress caregivers found that the risk was specific to caregivers experiencing strain --- not all caregivers. The psychological burden, more than the time commitment alone, predicts health outcomes.
           </p>
         </ArticleCallout>
 
@@ -1051,7 +1051,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           Compassion Fatigue: When Empathy Becomes Exhausting
         </h2>
         <p className="mb-6">
-          A specific form of caregiver burnout is compassion fatigue — the reduced capacity to feel empathy and compassion after prolonged exposure to others" suffering <Citation id="6" index={6} source="Journal of Nursing Scholarship" year="2016" tier={1} />.
+          A specific form of caregiver burnout is compassion fatigue --- the reduced capacity to feel empathy and compassion after prolonged exposure to others" suffering <Citation id="6" index={6} source="Journal of Nursing Scholarship" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
           Signs include:
@@ -1065,7 +1065,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <li>Feeling like you're 'going through the motions"</li>
         </ul>
         <p className="mb-6">
-          Compassion fatigue is not callousness or a character flaw — it's a protective psychological response to sustained empathic distress. Your nervous system is trying to shield you from continuous emotional pain by numbing you out.
+          Compassion fatigue is not callousness or a character flaw --- it's a protective psychological response to sustained empathic distress. Your nervous system is trying to shield you from continuous emotional pain by numbing you out.
         </p>
 
         <h2 id="strategies-for-caregivers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1082,14 +1082,14 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           The airplane oxygen mask analogy is overused but true: you cannot care for others if you're depleted. Yet caregivers often feel guilty prioritizing their own needs.
         </p>
         <p className="mb-6">
-          <strong>Reframe:</strong> Self-care is not indulgence — it's the foundation that makes caregiving sustainable. Taking care of yourself is taking care of the person you're caring for, because it prevents your collapse.
+          <strong>Reframe:</strong> Self-care is not indulgence --- it's the foundation that makes caregiving sustainable. Taking care of yourself is taking care of the person you're caring for, because it prevents your collapse.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. Accept and Seek Respite Care
         </h3>
         <p className="mb-6">
-          Regular breaks from caregiving are not optional. Respite care — having someone else provide care temporarily — is one of the most effective interventions for reducing caregiver burden.
+          Regular breaks from caregiving are not optional. Respite care --- having someone else provide care temporarily --- is one of the most effective interventions for reducing caregiver burden.
         </p>
         <p className="mb-6">
           <strong>Options:</strong>
@@ -1119,7 +1119,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           Caregivers are notoriously self-critical: "I should be more patient,", "I should do more,", "I'm failing them." This internal critic amplifies stress <Citation id="8" index={8} source="New Harbinger Publications" year="2019" tier={5} />.
         </p>
         <p className="mb-6">
-          <strong>Practice:</strong> When you notice self-judgment, ask: "Would I speak to a friend this way?" Offer yourself the same compassion you give to others. "I'm doing the best I can in an impossible situation' is not a cop-out — it's often the truth.
+          <strong>Practice:</strong> When you notice self-judgment, ask: "Would I speak to a friend this way?" Offer yourself the same compassion you give to others. "I'm doing the best I can in an impossible situation' is not a cop-out --- it's often the truth.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1132,7 +1132,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <strong>Examples:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"I need to sleep — we'll handle non-urgent issues in the morning."</li>
+          <li>"I need to sleep --- we'll handle non-urgent issues in the morning."</li>
           <li>"I can help with medical appointments, but I need my sibling to handle financial paperwork."</li>
           <li>"I'm hiring a home health aide for personal care tasks I can't physically or emotionally manage."</li>
         </ul>
@@ -1141,7 +1141,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           6. Preserve Fragments of Your Identity
         </h3>
         <p className="mb-6">
-          Hold on to small pieces of who you are beyond caregiving. A weekly walk. A hobby for 30 minutes. A phone call with a friend. These aren't luxuries — they're anchors to your sense of self.
+          Hold on to small pieces of who you are beyond caregiving. A weekly walk. A hobby for 30 minutes. A phone call with a friend. These aren't luxuries --- they're anchors to your sense of self.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1163,7 +1163,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           When Placement Becomes Necessary
         </h2>
         <p className="mb-6">
-          Sometimes, despite your best efforts, the level of care needed exceeds what's safe or sustainable at home. Transitioning a loved one to assisted living, memory care, or skilled nursing is not failure — it's recognition of reality.
+          Sometimes, despite your best efforts, the level of care needed exceeds what's safe or sustainable at home. Transitioning a loved one to assisted living, memory care, or skilled nursing is not failure --- it's recognition of reality.
         </p>
         <p className="mb-6">
           <strong>If you're considering placement:</strong>
@@ -1172,13 +1172,13 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <li>Consult with their medical team about care needs</li>
           <li>Explore financial options (Medicaid, VA benefits, long-term care insurance)</li>
           <li>Tour facilities and ask about staffing ratios, activities, and specialized care</li>
-          <li>Prepare for guilt — it's normal, even when placement is the right choice</li>
+          <li>Prepare for guilt --- it's normal, even when placement is the right choice</li>
           <li>Remember: you can still be an advocate and loving presence without being the hands-on caregiver</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            You are not superhuman. Caregiving is one of the hardest things a person can do. Acknowledging the toll it takes is not weakness — it's honesty. Seeking support is not giving up — it's what allows you to keep going.
+            You are not superhuman. Caregiving is one of the hardest things a person can do. Acknowledging the toll it takes is not weakness --- it's honesty. Seeking support is not giving up --- it's what allows you to keep going.
           </p>
         </ArticleCallout>
       </>
@@ -1192,7 +1192,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
     id: catId(39),
     slug: 'how-stress-accumulates-understanding-allostatic-load',
     title: 'How Stress Accumulates: Understanding Allostatic Load',
-    description: 'Explore the concept of allostatic load — the cumulative biological burden of chronic stress — and what science reveals about its measurement and health impacts.',
+    description: 'Explore the concept of allostatic load --- the cumulative biological burden of chronic stress --- and what science reveals about its measurement and health impacts.',
     image: "/images/articles/cat02/cover-039.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 8,
@@ -1270,10 +1270,10 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imagine your body as a bank account. Each stressful experience is a withdrawal. Acute stress makes small withdrawals that you quickly replenish. But chronic stress — the kind that doesn't relent — creates a sustained overdraft. Over time, the cumulative deficit grows. Your biological systems become depleted, dysregulated, and damaged.
+            Imagine your body as a bank account. Each stressful experience is a withdrawal. Acute stress makes small withdrawals that you quickly replenish. But chronic stress --- the kind that doesn't relent --- creates a sustained overdraft. Over time, the cumulative deficit grows. Your biological systems become depleted, dysregulated, and damaged.
           </p>
           <p className="mb-6">
-            This is allostatic load: the cumulative wear and tear on the body from chronic stress <Citation id="1" index={1} source="Neuropsychopharmacology" year="2000" tier={1} />. Developed by researchers Bruce McEwen and Eliot Stellar, the concept explains how stress — even when not causing immediate harm — accumulates over time to increase disease risk and accelerate aging.
+            This is allostatic load: the cumulative wear and tear on the body from chronic stress <Citation id="1" index={1} source="Neuropsychopharmacology" year="2000" tier={1} />. Developed by researchers Bruce McEwen and Eliot Stellar, the concept explains how stress --- even when not causing immediate harm --- accumulates over time to increase disease risk and accelerate aging.
           </p>
         </div>
 
@@ -1281,7 +1281,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           Allostasis vs. Homeostasis: Understanding Adaptation
         </h2>
         <p className="mb-6">
-          To understand allostatic load, first understand <strong>allostasis</strong> — the process by which your body maintains stability through change <Citation id="2" index={2} source="New England Journal of Medicine" year="1998" tier={1} />.
+          To understand allostatic load, first understand <strong>allostasis</strong> --- the process by which your body maintains stability through change <Citation id="2" index={2} source="New England Journal of Medicine" year="1998" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1313,7 +1313,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Allostasis is adaptive — it's how your body prepares for and responds to challenges. The problem arises when allostatic systems are chronically activated without adequate recovery. That's when you accrue <strong>allostatic load</strong>.
+          Allostasis is adaptive --- it's how your body prepares for and responds to challenges. The problem arises when allostatic systems are chronically activated without adequate recovery. That's when you accrue <strong>allostatic load</strong>.
         </p>
 
         <h2 id="four-types-of-allostatic-load" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1340,7 +1340,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Type 2: Lack of Adaptation',
               content: (
                 <p>
-                  The stress response fails to habituate to repeated exposure to the same stressor. Most people's cortisol response to public speaking diminishes with practice. But some individuals continue to mount the same intense response every time — their system doesn't adapt. This creates cumulative strain even when the stressor itself hasn't changed.
+                  The stress response fails to habituate to repeated exposure to the same stressor. Most people's cortisol response to public speaking diminishes with practice. But some individuals continue to mount the same intense response every time --- their system doesn't adapt. This creates cumulative strain even when the stressor itself hasn't changed.
                 </p>
               ),
             },
@@ -1349,7 +1349,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Type 3: Prolonged Response',
               content: (
                 <p>
-                  The stress response activates appropriately but fails to shut off when the stressor ends. Cortisol remains elevated. Heart rate stays high. The sympathetic nervous system stays 'on." This is common in anxiety disorders and PTSD — the threat is gone, but the body acts as if it's still present.
+                  The stress response activates appropriately but fails to shut off when the stressor ends. Cortisol remains elevated. Heart rate stays high. The sympathetic nervous system stays 'on." This is common in anxiety disorders and PTSD --- the threat is gone, but the body acts as if it's still present.
                 </p>
               ),
             },
@@ -1358,7 +1358,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
               title: 'Type 4: Inadequate Response',
               content: (
                 <p>
-                  The stress response system becomes so depleted that it can't mount an adequate response when needed. This is often seen in burnout — cortisol levels become blunted or dysregulated. Paradoxically, inadequate stress responses allow inflammation to go unchecked, as cortisol's anti-inflammatory effects are diminished.
+                  The stress response system becomes so depleted that it can't mount an adequate response when needed. This is often seen in burnout --- cortisol levels become blunted or dysregulated. Paradoxically, inadequate stress responses allow inflammation to go unchecked, as cortisol's anti-inflammatory effects are diminished.
                 </p>
               ),
             },
@@ -1488,14 +1488,14 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
           <li><strong>Cognitive decline</strong>: Higher allostatic load in midlife predicts worse cognitive function 20 years later.</li>
         </ul>
         <p className="mb-6">
-          The implication: chronic stress doesn't just make you feel older — it makes you biologically older.
+          The implication: chronic stress doesn't just make you feel older --- it makes you biologically older.
         </p>
 
         <h2 id="can-allostatic-load-be-reversed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Can Allostatic Load Be Reduced?
         </h2>
         <p className="mb-6">
-          The encouraging answer is yes — many components of allostatic load are modifiable <Citation id="7" index={7} source="Psychosomatic Medicine" year="2019" tier={1} />:
+          The encouraging answer is yes --- many components of allostatic load are modifiable <Citation id="7" index={7} source="Psychosomatic Medicine" year="2019" tier={1} />:
         </p>
 
         <BeforeAfter
@@ -1539,7 +1539,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Allostatic load is the biological ledger of your stress history. But it's not destiny. With sustained lifestyle changes and stress reduction, you can shift the balance — reducing the wear and tear, restoring resilience, and literally turning back your biological clock.
+            Allostatic load is the biological ledger of your stress history. But it's not destiny. With sustained lifestyle changes and stress reduction, you can shift the balance --- reducing the wear and tear, restoring resilience, and literally turning back your biological clock.
           </p>
         </ArticleCallout>
       </>
@@ -1631,7 +1631,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The first time you give a presentation, your heart races and your mind blanks. The tenth time, you're still nervous but functional. By the fiftieth time, it feels routine. This isn't just habituation — it's stress inoculation. Your nervous system has learned that this stressor is survivable, and your stress response has been calibrated accordingly.
+            The first time you give a presentation, your heart races and your mind blanks. The tenth time, you're still nervous but functional. By the fiftieth time, it feels routine. This isn't just habituation --- it's stress inoculation. Your nervous system has learned that this stressor is survivable, and your stress response has been calibrated accordingly.
           </p>
           <p className="mb-6">
             Stress inoculation is the process by which controlled, manageable exposure to stress strengthens your ability to handle future stressors <Citation id="1" index={1} source="The Guilford Press" year="2017" tier={5} />. Just as a vaccine introduces a weakened pathogen to build immunity, stress inoculation introduces manageable challenges to build psychological resilience.
@@ -1672,7 +1672,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The goal isn't to eliminate stress. It's to experience the right dose of stress — enough to challenge you, not so much that it overwhelms you.
+            The goal isn't to eliminate stress. It's to experience the right dose of stress --- enough to challenge you, not so much that it overwhelms you.
           </p>
         </ArticleCallout>
 
@@ -1864,7 +1864,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="The Takeaway">
           <p>
-            Resilience isn't innate — it's built. Every time you face a manageable challenge and come through it, you're teaching your nervous system: 'I can handle hard things." That learning accumulates, making you increasingly capable of navigating life's inevitable difficulties.
+            Resilience isn't innate --- it's built. Every time you face a manageable challenge and come through it, you're teaching your nervous system: 'I can handle hard things." That learning accumulates, making you increasingly capable of navigating life's inevitable difficulties.
           </p>
         </ArticleCallout>
       </>

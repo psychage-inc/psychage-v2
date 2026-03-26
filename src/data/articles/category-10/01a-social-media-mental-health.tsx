@@ -122,7 +122,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           Passive Scrolling vs. Active Engagement
         </h2>
         <p className="mb-6">
-          One of the most consistent findings is the distinction between passive and active use. <strong>Passive use</strong> means scrolling through feeds without interacting—watching others" lives go by. <strong>Active use</strong> means posting, commenting, and genuinely connecting with others.
+          One of the most consistent findings is the distinction between passive and active use. <strong>Passive use</strong> means scrolling through feeds without interacting---watching others" lives go by. <strong>Active use</strong> means posting, commenting, and genuinely connecting with others.
         </p>
         <p className="mb-6">
           A longitudinal study published in the Journal of Experimental Psychology found that passive social media use predicts increases in depressive symptoms over time, while active use does not <Citation id="2" index={2} source="Journal of Experimental Psychology: General" year="2022" tier={1} />. The researchers tracked participants for six months and found that every additional hour of passive scrolling per day predicted a 13% increase in depression scores.
@@ -145,7 +145,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           The Comparison Engine
         </h2>
         <p className="mb-6">
-          Social media platforms are optimized for comparison. Research shows that 60% of users report feeling worse about their own lives after seeing others" posts <Citation id="3" index={3} source="Psychology of Popular Media" year="2021" tier={1} />. This phenomenon is called <strong>upward social comparison</strong>—measuring yourself against people who appear to be doing better.
+          Social media platforms are optimized for comparison. Research shows that 60% of users report feeling worse about their own lives after seeing others" posts <Citation id="3" index={3} source="Psychology of Popular Media" year="2021" tier={1} />. This phenomenon is called <strong>upward social comparison</strong>---measuring yourself against people who appear to be doing better.
         </p>
         <p className="mb-6">
           The problem is structural. Feeds are curated to show highlights, not reality. You see vacation photos, not laundry piles. Promotions, not rejections. Happiness, not struggle. Your brain knows this intellectually, but the emotional impact remains.
@@ -195,10 +195,10 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           Research also documents genuine benefits when social media is used intentionally. A 2021 systematic review found that platforms can provide <Citation id="10" index={10} source="Frontiers in Psychology" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Community for marginalized groups</strong>—LGBTQ+ youth, people with rare conditions, or those in isolated areas find crucial peer support.</li>
-          <li><strong>Mental health awareness</strong>—Destigmatizing conversations and shared experiences reduce shame.</li>
-          <li><strong>Crisis intervention</strong>—Some platforms have implemented suicide prevention tools that connect users to resources.</li>
-          <li><strong>Access to information</strong>—Educational content about mental health reaches people who might not seek help otherwise.</li>
+          <li><strong>Community for marginalized groups</strong>---LGBTQ+ youth, people with rare conditions, or those in isolated areas find crucial peer support.</li>
+          <li><strong>Mental health awareness</strong>---Destigmatizing conversations and shared experiences reduce shame.</li>
+          <li><strong>Crisis intervention</strong>---Some platforms have implemented suicide prevention tools that connect users to resources.</li>
+          <li><strong>Access to information</strong>---Educational content about mental health reaches people who might not seek help otherwise.</li>
         </ul>
 
         <QuoteBlock
@@ -512,7 +512,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
               id: 'reality-check',
               title: 'Reality-check the highlight reel',
               content: (
-                <p>Remind yourself: "This is curated. I'm seeing their best 1%." Look for the effort behind the post—filters, editing, staging. What you see is a performance, not reality.</p>
+                <p>Remind yourself: "This is curated. I'm seeing their best 1%." Look for the effort behind the post---filters, editing, staging. What you see is a performance, not reality.</p>
               ),
             },
             {
@@ -526,7 +526,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
               id: 'active-use',
               title: 'Shift to active use',
               content: (
-                <p>Passive scrolling drives comparison. Active use—posting, commenting, direct messaging—builds connection. Studies show active engagement does not predict depression, while passive use does.</p>
+                <p>Passive scrolling drives comparison. Active use---posting, commenting, direct messaging---builds connection. Studies show active engagement does not predict depression, while passive use does.</p>
               ),
             },
             {
@@ -557,7 +557,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Remember">
-          <p>You're comparing your behind-the-scenes to everyone else's showreel. The game is rigged. The solution isn't to win at comparison—it's to stop playing. Curate what you see, notice when you compare, and shift your focus back to your own path.</p>
+          <p>You're comparing your behind-the-scenes to everyone else's showreel. The game is rigged. The solution isn't to win at comparison---it's to stop playing. Curate what you see, notice when you compare, and shift your focus back to your own path.</p>
         </ArticleCallout>
       </>
     ),
@@ -767,7 +767,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
             {
               title: 'Create tech-free zones',
               description: (
-                <p>No phones at meals, in bedrooms overnight, or during family time. Model this yourself—your behavior sets the norm.</p>
+                <p>No phones at meals, in bedrooms overnight, or during family time. Model this yourself---your behavior sets the norm.</p>
               ),
             },
             {
@@ -802,7 +802,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           <li><strong>Drastic changes in eating or sleeping</strong> patterns</li>
           <li><strong>Mentions of self-harm or suicide</strong>, even casually</li>
           <li><strong>Significant drop in grades or loss of interest</strong> in activities they used to enjoy</li>
-          <li><strong>Evidence of cyberbullying</strong>—either as victim or perpetrator</li>
+          <li><strong>Evidence of cyberbullying</strong>---either as victim or perpetrator</li>
           <li><strong>Inability to stop using social media</strong> despite wanting to</li>
         </ul>
         <p className="mb-6">
@@ -912,7 +912,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're at dinner with friends, but you keep checking your phone. You see people posting from a party you weren't invited to. Suddenly, you're not really present anymore. You're anxious, distracted, and vaguely resentful. This is FOMO—Fear of Missing Out—and it's one of the most powerful drivers of social media use.
+            You're at dinner with friends, but you keep checking your phone. You see people posting from a party you weren't invited to. Suddenly, you're not really present anymore. You're anxious, distracted, and vaguely resentful. This is FOMO---Fear of Missing Out---and it's one of the most powerful drivers of social media use.
           </p>
           <p className="mb-6">
             FOMO isn't new. Humans have always worried about being left out. But social media turns this ancient anxiety into a 24/7 feedback loop. Research shows that 70% of young adults experience FOMO regularly, and it's directly linked to problematic social media use, anxiety, and depression <Citation id="3" index={3} source="Psychology of Popular Media" year="2021" tier={1} />.
@@ -926,15 +926,15 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           FOMO was first defined in a 2013 research paper as "a pervasive apprehension that others might be having rewarding experiences from which one is absent" <Citation id="1" index={1} source="Computers in Human Behavior" year="2013" tier={1} />. It's driven by two core human needs:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>The need to belong</strong>—a fundamental drive to connect with others and be part of a social group.</li>
-          <li><strong>The need for relatedness</strong>—wanting to feel that your experiences matter and are validated by others.</li>
+          <li><strong>The need to belong</strong>---a fundamental drive to connect with others and be part of a social group.</li>
+          <li><strong>The need for relatedness</strong>---wanting to feel that your experiences matter and are validated by others.</li>
         </ul>
         <p className="mb-6">
           When you scroll through your feed and see others doing things without you, both needs are threatened. Your brain interprets this as a social survival issue, triggering anxiety.
         </p>
 
         <ArticleCallout variant="info">
-          <p><strong>FOMO vs. General Anxiety:</strong> FOMO is situational and social—it's triggered by specific content showing others' experiences. General anxiety is broader and not tied to what others are doing. But chronic FOMO can fuel general anxiety over time.</p>
+          <p><strong>FOMO vs. General Anxiety:</strong> FOMO is situational and social---it's triggered by specific content showing others' experiences. General anxiety is broader and not tied to what others are doing. But chronic FOMO can fuel general anxiety over time.</p>
         </ArticleCallout>
 
         <h2 id="fomo-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -949,7 +949,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           steps={[
             {
               title: 'Trigger: You see content showing others having fun',
-              description: <p>A party, vacation, dinner, event—anything that looks rewarding.</p>,
+              description: <p>A party, vacation, dinner, event---anything that looks rewarding.</p>,
             },
             {
               title: 'Emotional response: Anxiety and inadequacy',
@@ -1002,7 +1002,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           The Mental Health Impact
         </h2>
         <p className="mb-6">
-          FOMO isn't just annoying—it has measurable effects on mental health:
+          FOMO isn't just annoying---it has measurable effects on mental health:
         </p>
 
         <StatCard
@@ -1042,7 +1042,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
               id: 'reality-check',
               title: '2. Reality-check the story',
               content: (
-                <p>Ask yourself: 'Am I actually missing out, or does it just feel that way?" Usually, what you see online is a curated slice of someone's life. You're not missing the full picture—just a performance.</p>
+                <p>Ask yourself: 'Am I actually missing out, or does it just feel that way?" Usually, what you see online is a curated slice of someone's life. You're not missing the full picture---just a performance.</p>
               ),
             },
             {
@@ -1063,7 +1063,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
               id: 'curate',
               title: '5. Curate your feed',
               content: (
-                <p>Unfollow accounts that trigger FOMO—especially people you don't know well or influencers whose lives seem impossibly glamorous. Your feed should support your well-being, not undermine it.</p>
+                <p>Unfollow accounts that trigger FOMO---especially people you don't know well or influencers whose lives seem impossibly glamorous. Your feed should support your well-being, not undermine it.</p>
               ),
             },
             {
@@ -1077,7 +1077,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
               id: 'accept',
               title: '7. Accept that you will miss things',
               content: (
-                <p>You cannot be everywhere or do everything. Missing out is part of life. The goal isn't to eliminate missing out—it's to be okay with it. This is a mindset shift, not a behavior change.</p>
+                <p>You cannot be everywhere or do everything. Missing out is part of life. The goal isn't to eliminate missing out---it's to be okay with it. This is a mindset shift, not a behavior change.</p>
               ),
             },
           ]}
@@ -1087,7 +1087,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           From FOMO to JOMO
         </h2>
         <p className="mb-6">
-          There's a growing movement toward <strong>JOMO</strong>—the Joy of Missing Out. JOMO means choosing presence over constant connection. It means being content with where you are and what you're doing, without needing to know what everyone else is doing.
+          There's a growing movement toward <strong>JOMO</strong>---the Joy of Missing Out. JOMO means choosing presence over constant connection. It means being content with where you are and what you're doing, without needing to know what everyone else is doing.
         </p>
         <p className="mb-6">
           JOMO doesn't mean becoming a hermit. It means reclaiming your attention and deciding intentionally where to invest it. Research shows that people who cultivate JOMO report higher life satisfaction and lower anxiety <Citation id="6" index={6} source="Cyberpsychology, Behavior, and Social Networking" year="2022" tier={1} />.
@@ -1208,7 +1208,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           Why Visual Platforms Are Different
         </h2>
         <p className="mb-6">
-          Text-based platforms like Twitter or Reddit don't show the same body image effects. The difference is obvious: Instagram and TikTok are built around photos and videos of people. You're constantly exposed to others' appearances, and the algorithms prioritize content that gets engagement—which means visually appealing content rises to the top.
+          Text-based platforms like Twitter or Reddit don't show the same body image effects. The difference is obvious: Instagram and TikTok are built around photos and videos of people. You're constantly exposed to others' appearances, and the algorithms prioritize content that gets engagement---which means visually appealing content rises to the top.
         </p>
         <p className="mb-6">
           A 2021 review in <em>Current Psychiatry Reports</em> found that image-heavy platforms uniquely predict body dissatisfaction, drive for thinness, and symptoms of eating disorders, even after controlling for overall social media use <Citation id="8" index={8} source="Current Psychiatry Reports" year="2021" tier={1} />.
@@ -1284,10 +1284,10 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
           While anyone can experience body image issues from social media, certain groups are at higher risk:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Young women and girls</strong>—Research consistently shows stronger effects in this group, particularly ages 13-25.</li>
-          <li><strong>People with existing body image concerns</strong>—If you already struggle with how you look, social media amplifies the problem.</li>
-          <li><strong>LGBTQ+ youth</strong>—Particularly trans and gender-nonconforming individuals, who face unique appearance pressures and dysphoria triggers.</li>
-          <li><strong>People with histories of eating disorders</strong>—Visual platforms can trigger relapse or worsen symptoms.</li>
+          <li><strong>Young women and girls</strong>---Research consistently shows stronger effects in this group, particularly ages 13-25.</li>
+          <li><strong>People with existing body image concerns</strong>---If you already struggle with how you look, social media amplifies the problem.</li>
+          <li><strong>LGBTQ+ youth</strong>---Particularly trans and gender-nonconforming individuals, who face unique appearance pressures and dysphoria triggers.</li>
+          <li><strong>People with histories of eating disorders</strong>---Visual platforms can trigger relapse or worsen symptoms.</li>
         </ul>
         <p className="mb-6">
           A 2020 study found that young adults who used Instagram for more than 2 hours per day had a 3.2 times higher risk of developing disordered eating compared to those who used it less than 30 minutes per day <Citation id="1" index={1} source="Journal of the Academy of Nutrition and Dietetics" year="2020" tier={1} />.
@@ -1373,7 +1373,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
-          <p>Instagram and TikTok are designed to keep you scrolling, and they do it by showing you idealized images that make you feel inadequate. The solution isn't to achieve the impossible standard—it's to recognize the game is rigged and refuse to play. Curate what you see, limit your time, and invest in real life.</p>
+          <p>Instagram and TikTok are designed to keep you scrolling, and they do it by showing you idealized images that make you feel inadequate. The solution isn't to achieve the impossible standard---it's to recognize the game is rigged and refuse to play. Curate what you see, limit your time, and invest in real life.</p>
         </ArticleCallout>
       </>
     ),

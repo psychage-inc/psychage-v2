@@ -89,7 +89,7 @@ export const moodDisordersArticlesC: Article[] = [
         </div>
 
         <h2 id="research" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Research Shows</h2>
-        <p className="mb-6">Studies find higher rates of bipolar disorder among artists and writers compared to the general population <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. Hypomania—with its rapid thinking and increased productivity—may enhance creative output <Citation id="3" index={2} source="Creativity Research Journal" year="2020" tier={1} />.</p>
+        <p className="mb-6">Studies find higher rates of bipolar disorder among artists and writers compared to the general population <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. Hypomania---with its rapid thinking and increased productivity---may enhance creative output <Citation id="3" index={2} source="Creativity Research Journal" year="2020" tier={1} />.</p>
 
         <StatCard stats={[
           { value: 8, suffix: '%', label: 'Writers with bipolar disorder' },
@@ -104,7 +104,7 @@ export const moodDisordersArticlesC: Article[] = [
         <QuoteBlock quote="I am not my illness. My illness does not define my art. My art is what I create in spite of it, and sometimes because I have learned from it." attribution="Anonymous" role="Artist Living with Bipolar II" source="Mental Health Forum" variant="large" />
 
         <h2 id="clinical-implications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Clinical Implications</h2>
-        <p className="mb-6">Artists with bipolar disorder may resist treatment, fearing it will dampen creativity. Research shows this is unfounded—treatment stabilizes mood without reducing creative drive.</p>
+        <p className="mb-6">Artists with bipolar disorder may resist treatment, fearing it will dampen creativity. Research shows this is unfounded---treatment stabilizes mood without reducing creative drive.</p>
       </>
     ),
   },
@@ -185,7 +185,7 @@ export const moodDisordersArticlesC: Article[] = [
         </div>
 
         <h2 id="ketamine" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Ketamine and Esketamine</h2>
-        <p className="mb-6">Ketamine produces rapid antidepressant effects—within hours—in treatment-resistant depression <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />. Esketamine (nasal spray) is FDA-approved for this indication.</p>
+        <p className="mb-6">Ketamine produces rapid antidepressant effects---within hours---in treatment-resistant depression <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />. Esketamine (nasal spray) is FDA-approved for this indication.</p>
 
         <h2 id="psychedelics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Psychedelic-Assisted Therapy</h2>
         <p className="mb-6">Psilocybin (magic mushrooms) shows promise for treatment-resistant depression in clinical trials <Citation id="2" index={2} source="NEJM" year="2021" tier={1} />. Research is ongoing.</p>
@@ -207,7 +207,7 @@ export const moodDisordersArticlesC: Article[] = [
     id: catId(20),
     slug: 'living-well-with-mood-disorder-long-term-management-strategies',
     title: 'Living Well with a Mood Disorder: Long-Term Management Strategies',
-    description: 'Recovery from mood disorders is not just about symptom reduction—it is about building a meaningful life. Learn sustainable strategies for long-term wellness.',
+    description: 'Recovery from mood disorders is not just about symptom reduction---it is about building a meaningful life. Learn sustainable strategies for long-term wellness.',
     image: "/images/articles/cat13/cover-020.svg",
     category: CATEGORY_MENTAL_HEALTH_CONDITIONS,
     readTime: 9,

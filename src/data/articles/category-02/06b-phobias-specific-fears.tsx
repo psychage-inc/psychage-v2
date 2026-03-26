@@ -99,10 +99,10 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The elevator doors close. Your chest tightens. Your breath quickens. The walls feel like they're moving inward. You need out — now. Or maybe it's an MRI machine, a crowded subway car, a windowless room, or even a packed concert. Anywhere you feel trapped, enclosed, unable to escape freely.
+            The elevator doors close. Your chest tightens. Your breath quickens. The walls feel like they're moving inward. You need out --- now. Or maybe it's an MRI machine, a crowded subway car, a windowless room, or even a packed concert. Anywhere you feel trapped, enclosed, unable to escape freely.
           </p>
           <p className="mb-6">
-            Claustrophobia, the fear of enclosed or confined spaces, affects 4-7% of people at a clinical level and causes milder discomfort in many more <Citation id="1" index={1} source="Depression and Anxiety" year="2018" tier={1} />. It's more than just preferring open spaces — it's a visceral panic response that can severely limit your life.
+            Claustrophobia, the fear of enclosed or confined spaces, affects 4-7% of people at a clinical level and causes milder discomfort in many more <Citation id="1" index={1} source="Depression and Anxiety" year="2018" tier={1} />. It's more than just preferring open spaces --- it's a visceral panic response that can severely limit your life.
           </p>
         </div>
 
@@ -114,19 +114,19 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Elevators</strong> — especially small or crowded ones, or when they stop between floors</li>
-          <li><strong>MRI and CT scanners</strong> — the narrow tube and loud noises create intense confinement</li>
+          <li><strong>Elevators</strong> --- especially small or crowded ones, or when they stop between floors</li>
+          <li><strong>MRI and CT scanners</strong> --- the narrow tube and loud noises create intense confinement</li>
           <li><strong>Small rooms</strong> without windows or with locked doors</li>
-          <li><strong>Airplanes</strong> — the inability to leave mid-flight triggers panic</li>
-          <li><strong>Crowded spaces</strong> — packed trains, concerts, theaters where you feel hemmed in by people</li>
-          <li><strong>Tunnels and caves</strong> — underground spaces with limited exits</li>
-          <li><strong>Cars in traffic</strong> — feeling stuck, unable to escape</li>
-          <li><strong>Tight clothing or restraints</strong> — anything that restricts movement</li>
+          <li><strong>Airplanes</strong> --- the inability to leave mid-flight triggers panic</li>
+          <li><strong>Crowded spaces</strong> --- packed trains, concerts, theaters where you feel hemmed in by people</li>
+          <li><strong>Tunnels and caves</strong> --- underground spaces with limited exits</li>
+          <li><strong>Cars in traffic</strong> --- feeling stuck, unable to escape</li>
+          <li><strong>Tight clothing or restraints</strong> --- anything that restricts movement</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The core fear in claustrophobia isn't the space itself — it's the perceived inability to escape combined with fear of suffocation, being trapped, or losing control. Even large rooms can trigger claustrophobia if exits are locked or blocked.
+            The core fear in claustrophobia isn't the space itself --- it's the perceived inability to escape combined with fear of suffocation, being trapped, or losing control. Even large rooms can trigger claustrophobia if exits are locked or blocked.
           </p>
         </ArticleCallout>
 
@@ -174,7 +174,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
                   <li>Desperate attempts to escape (pounding on doors, pressing elevator buttons repeatedly)</li>
                   <li>Refusing to enter confined spaces</li>
                   <li>Positioning yourself near exits</li>
-                  <li>Hypervigilance — constantly scanning for escape routes</li>
+                  <li>Hypervigilance --- constantly scanning for escape routes</li>
                 </ul>
               ),
             },
@@ -241,7 +241,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know" title="Suffocation Fear Theory">
           <p>
-            Research suggests claustrophobia is closely linked to <strong>suffocation fear</strong> — the terror of not being able to breathe <Citation id="4" index={4} source="Cognitive Therapy and Research" year="2017" tier={1} />. People with claustrophobia often report feeling like the air is running out in confined spaces, even when objectively there's plenty of oxygen. This explains why even large elevators can trigger panic if they feel "airless."
+            Research suggests claustrophobia is closely linked to <strong>suffocation fear</strong> --- the terror of not being able to breathe <Citation id="4" index={4} source="Cognitive Therapy and Research" year="2017" tier={1} />. People with claustrophobia often report feeling like the air is running out in confined spaces, even when objectively there's plenty of oxygen. This explains why even large elevators can trigger panic if they feel "airless."
           </p>
         </ArticleCallout>
 
@@ -473,10 +473,10 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A tiny spider crosses your floor. It's harmless — far too small to bite, let alone hurt you. Yet your heart races. You freeze. Every muscle tenses. You know the fear is irrational, but your brain screams danger anyway. Why? Because millions of years of evolution have primed you to fear certain animals, even when modern logic says you're safe.
+            A tiny spider crosses your floor. It's harmless --- far too small to bite, let alone hurt you. Yet your heart races. You freeze. Every muscle tenses. You know the fear is irrational, but your brain screams danger anyway. Why? Because millions of years of evolution have primed you to fear certain animals, even when modern logic says you're safe.
           </p>
           <p className="mb-6">
-            Animal phobias — fear of spiders, snakes, dogs, birds, mice, and other creatures — are among the most common and earliest-developing phobias. They feel hardwired because, in a sense, they are <Citation id="1" index={1} source="Evolution and Human Behavior" year="2018" tier={1} />.
+            Animal phobias --- fear of spiders, snakes, dogs, birds, mice, and other creatures --- are among the most common and earliest-developing phobias. They feel hardwired because, in a sense, they are <Citation id="1" index={1} source="Evolution and Human Behavior" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -484,7 +484,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           The Evolutionary Preparedness Theory
         </h2>
         <p className="mb-6">
-          Why is spider phobia so common, but "car phobia" almost non-existent — despite cars being statistically far more dangerous? The answer lies in <strong>prepared learning</strong>: our brains evolved to quickly learn fear of things that were threats to our ancestors.
+          Why is spider phobia so common, but "car phobia" almost non-existent --- despite cars being statistically far more dangerous? The answer lies in <strong>prepared learning</strong>: our brains evolved to quickly learn fear of things that were threats to our ancestors.
         </p>
 
         <ComparisonTable
@@ -495,8 +495,8 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
             { feature: '', values: ['Cars, guns, electrical outlets, pollution'] },
             { feature: 'Speed of learning', values: ['Very fast (1-2 exposures)'] },
             { feature: '', values: ['Slow or impossible'] },
-            { feature: 'Resistance to extinction', values: ['Strong — fear persists even without reinforcement'] },
-            { feature: '', values: ['Weak — easily unlearned'] },
+            { feature: 'Resistance to extinction', values: ['Strong --- fear persists even without reinforcement'] },
+            { feature: '', values: ['Weak --- easily unlearned'] },
             { feature: 'Age of onset', values: ['Early childhood (3-8 years)'] },
             { feature: '', values: ['Varies, often later'] },
           ]}
@@ -515,7 +515,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           Groundbreaking research shows that infants as young as 6 months pay more visual attention to images of snakes and spiders than to images of flowers or fish <Citation id="2" index={2} source="Current Directions in Psychological Science" year="2017" tier={1} />. They're not yet afraid, but they're already primed to notice these creatures.
         </p>
         <p className="mb-6">
-          This suggests an innate bias — a template that says, "This category of animal is worth paying attention to because it might be dangerous." Fear develops when this template meets a frightening experience (being startled by a spider) or social learning (seeing a parent scream).
+          This suggests an innate bias --- a template that says, "This category of animal is worth paying attention to because it might be dangerous." Fear develops when this template meets a frightening experience (being startled by a spider) or social learning (seeing a parent scream).
         </p>
 
         <h2 id="social-transmission" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -542,7 +542,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           The Role of Disgust
         </h2>
         <p className="mb-6">
-          Animal phobias aren't just about fear — they're also about <strong>disgust</strong> <Citation id="4" index={4} source="Clinical Psychology Review" year="2019" tier={1} />. Spiders, snakes, rats, and cockroaches trigger visceral disgust responses: the urge to recoil, shudder, feel contaminated.
+          Animal phobias aren't just about fear --- they're also about <strong>disgust</strong> <Citation id="4" index={4} source="Clinical Psychology Review" year="2019" tier={1} />. Spiders, snakes, rats, and cockroaches trigger visceral disgust responses: the urge to recoil, shudder, feel contaminated.
         </p>
         <p className="mb-6">
           Disgust likely evolved to protect us from disease. Creatures associated with contamination (rats, insects) or venom (spiders, snakes) trigger both fear and disgust. This dual response makes animal phobias particularly intense and persistent.
@@ -580,7 +580,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
                     <strong>Why it develops:</strong> Spiders are unpredictable, move suddenly, have many legs, and some species are venomous. Disgust plays a major role.
                   </p>
                   <p>
-                    <strong>Impact:</strong> People avoid basements, garages, camping, gardening — anywhere spiders might be found.
+                    <strong>Impact:</strong> People avoid basements, garages, camping, gardening --- anywhere spiders might be found.
                   </p>
                 </div>
               ),
@@ -660,7 +660,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           Fear Generalization: When All Spiders Become "The Spider"
         </h2>
         <p className="mb-6">
-          A single bad encounter with one dog can create fear of <em>all dogs</em> — large and small, aggressive and friendly. This is <strong>stimulus generalization</strong> <Citation id="8" index={8} source="Behaviour Research and Therapy" year="2016" tier={1} />.
+          A single bad encounter with one dog can create fear of <em>all dogs</em> --- large and small, aggressive and friendly. This is <strong>stimulus generalization</strong> <Citation id="8" index={8} source="Behaviour Research and Therapy" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
           Your brain overgeneralizes: "Dog = danger." It's evolutionarily safer to assume all members of a category are threats until proven otherwise. The cost of one false alarm (fearing a harmless dog) is low compared to the cost of one miss (approaching a dangerous dog).
@@ -696,7 +696,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Snake and spider fear are nearly universal across cultures, suggesting deep evolutionary roots</li>
-          <li>Dog fear varies widely — higher in cultures where dogs are seen as dangerous or unclean, lower where dogs are common pets</li>
+          <li>Dog fear varies widely --- higher in cultures where dogs are seen as dangerous or unclean, lower where dogs are common pets</li>
           <li>Some cultures have specific animal fears that don't exist elsewhere (e.g., fear of certain insects in tropical regions)</li>
         </ul>
 
@@ -822,7 +822,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can't remember the last time you vomited — because you've spent years structuring your entire life to avoid it. You scrutinize every food for freshness. You avoid alcohol, restaurants, crowds, pregnant people, children, anyone who mentions feeling unwell. Stomach bugs terrify you more than serious illness. The thought of vomiting — or worse, seeing someone else vomit — triggers immediate panic.
+            You can't remember the last time you vomited --- because you've spent years structuring your entire life to avoid it. You scrutinize every food for freshness. You avoid alcohol, restaurants, crowds, pregnant people, children, anyone who mentions feeling unwell. Stomach bugs terrify you more than serious illness. The thought of vomiting --- or worse, seeing someone else vomit --- triggers immediate panic.
           </p>
           <p className="mb-6">
             This is emetophobia: the intense, persistent fear of vomiting. It's one of the most common phobias you've probably never heard of, affecting an estimated 0.1-8% of people (prevalence varies widely by study) <Citation id="1" index={1} source="Clinical Psychology Review" year="2017" tier={1} />. Those with severe emetophobia often say it's the most debilitating phobia they can imagine.
@@ -833,7 +833,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           What Is Emetophobia?
         </h2>
         <p className="mb-6">
-          Emetophobia is the specific phobia of vomiting. But it's not just fear of the physical act — it can include:
+          Emetophobia is the specific phobia of vomiting. But it's not just fear of the physical act --- it can include:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -963,7 +963,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           <li><strong>Witnessing someone else vomit</strong>: Especially if it was frightening (a parent, sibling, or stranger in public)</li>
           <li><strong>Loss of control</strong>: Vomiting represents a visceral loss of bodily control, which can be terrifying for anxious or perfectionistic children</li>
           <li><strong>Association with illness or death</strong>: If vomiting was linked to a serious illness in the family, it can become a symbol of danger</li>
-          <li><strong>No clear trigger</strong>: Some people develop emetophobia without a specific traumatic event — it may emerge from general anxiety sensitivity</li>
+          <li><strong>No clear trigger</strong>: Some people develop emetophobia without a specific traumatic event --- it may emerge from general anxiety sensitivity</li>
         </ul>
 
         <h2 id="overlap-with-other-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1020,7 +1020,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            If you avoid situations, foods, or places primarily because they might lead to vomiting (yours or others"), you likely have emetophobia — even if you've never been formally diagnosed. Naming it is the first step toward addressing it.
+            If you avoid situations, foods, or places primarily because they might lead to vomiting (yours or others"), you likely have emetophobia --- even if you've never been formally diagnosed. Naming it is the first step toward addressing it.
           </p>
         </ArticleCallout>
 
@@ -1188,7 +1188,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most phobias make your heart race, your blood pressure spike, your body prepare to fight or flee. But blood-injection-injury (BII) phobia does something different — something unique in the entire catalog of human fears. It makes you faint.
+            Most phobias make your heart race, your blood pressure spike, your body prepare to fight or flee. But blood-injection-injury (BII) phobia does something different --- something unique in the entire catalog of human fears. It makes you faint.
           </p>
           <p className="mb-6">
             This paradoxical response has puzzled researchers for decades. Why does the sight of blood cause some people's blood pressure to plummet instead of rise? What evolutionary purpose could fainting possibly serve? And why does this phobia require a completely different treatment approach than all others <Citation id="1" index={1} source="Psychophysiology" year="2017" tier={1} />?
@@ -1203,9 +1203,9 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Blood</strong> — seeing your own blood or others" blood</li>
-          <li><strong>Injections</strong> — needles, vaccinations, IV insertion</li>
-          <li><strong>Injury</strong> — wounds, surgical procedures, medical procedures</li>
+          <li><strong>Blood</strong> --- seeing your own blood or others" blood</li>
+          <li><strong>Injections</strong> --- needles, vaccinations, IV insertion</li>
+          <li><strong>Injury</strong> --- wounds, surgical procedures, medical procedures</li>
         </ul>
 
         <StatCard
@@ -1281,7 +1281,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            This biphasic pattern is found in about 75% of people with BII phobia <Citation id="1" index={1} source="Psychophysiology" year="2017" tier={1} />. No other phobia causes this response — all others show sustained increases in heart rate and blood pressure during phobic exposure.
+            This biphasic pattern is found in about 75% of people with BII phobia <Citation id="1" index={1} source="Psychophysiology" year="2017" tier={1} />. No other phobia causes this response --- all others show sustained increases in heart rate and blood pressure during phobic exposure.
           </p>
         </ArticleCallout>
 
@@ -1299,7 +1299,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          This response may have been selected for in our evolutionary past, but in modern medical settings, it's maladaptive — it prevents people from accessing necessary healthcare.
+          This response may have been selected for in our evolutionary past, but in modern medical settings, it's maladaptive --- it prevents people from accessing necessary healthcare.
         </p>
 
         <h2 id="genetic-component" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1328,7 +1328,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           The Role of Disgust
         </h2>
         <p className="mb-6">
-          BII phobia isn't just fear — it's also profound <strong>disgust</strong>. Brain imaging studies show heightened activation of the insula (disgust center) when people with BII phobia view images of blood or injury <Citation id="5" index={5} source="NeuroImage" year="2019" tier={1} />.
+          BII phobia isn't just fear --- it's also profound <strong>disgust</strong>. Brain imaging studies show heightened activation of the insula (disgust center) when people with BII phobia view images of blood or injury <Citation id="5" index={5} source="NeuroImage" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Disgust sensitivity is a core feature:
@@ -1401,7 +1401,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            If BII phobia is preventing you from getting necessary medical care, it's no longer "just a phobia" — it's a medical emergency. Treatment exists and is highly effective.
+            If BII phobia is preventing you from getting necessary medical care, it's no longer "just a phobia" --- it's a medical emergency. Treatment exists and is highly effective.
           </p>
         </ArticleCallout>
 
@@ -1477,7 +1477,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          One-session treatment (OST) — a single, intensive 2-3 hour session — is highly effective for BII phobia when it includes applied tension training.
+          One-session treatment (OST) --- a single, intensive 2-3 hour session --- is highly effective for BII phobia when it includes applied tension training.
         </p>
 
         <QuoteBlock
@@ -1499,12 +1499,12 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           <li>This response likely had evolutionary survival value but is now maladaptive</li>
           <li>It has a strong genetic component (~60-70% heritability)</li>
           <li>Disgust is a central emotion, not just fear</li>
-          <li>Standard exposure therapy doesn't work — you need <strong>applied tension</strong> to prevent fainting</li>
+          <li>Standard exposure therapy doesn't work --- you need <strong>applied tension</strong> to prevent fainting</li>
           <li>With proper treatment, 80%+ of people significantly reduce symptoms and can access medical care</li>
         </ul>
 
         <p className="mb-6">
-          If you've spent years avoiding doctors, dentists, and necessary medical procedures because of fear of blood or needles, know that highly effective treatment exists. BII phobia doesn't have to control your healthcare decisions — or endanger your health — any longer.
+          If you've spent years avoiding doctors, dentists, and necessary medical procedures because of fear of blood or needles, know that highly effective treatment exists. BII phobia doesn't have to control your healthcare decisions --- or endanger your health --- any longer.
         </p>
       </>
     ),
@@ -1595,10 +1595,10 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your child is terrified of dogs. Or the dark. Or thunderstorms. Or needles. The fear seems irrational to you, but to them, it's overwhelming. They avoid playgrounds where dogs might be, refuse sleepovers, panic during storms, or scream at the doctor's office. You want to help, but you're not sure how — and you worry that pushing too hard might make things worse.
+            Your child is terrified of dogs. Or the dark. Or thunderstorms. Or needles. The fear seems irrational to you, but to them, it's overwhelming. They avoid playgrounds where dogs might be, refuse sleepovers, panic during storms, or scream at the doctor's office. You want to help, but you're not sure how --- and you worry that pushing too hard might make things worse.
           </p>
           <p className="mb-6">
-            Specific phobias affect 5-10% of children at some point <Citation id="1" index={1} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2018" tier={1} />. As a parent, you play a crucial role — for better or worse — in how your child's phobia develops and whether it persists into adulthood.
+            Specific phobias affect 5-10% of children at some point <Citation id="1" index={1} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2018" tier={1} />. As a parent, you play a crucial role --- for better or worse --- in how your child's phobia develops and whether it persists into adulthood.
           </p>
         </div>
 
@@ -1643,7 +1643,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-2"><strong>Normal fears:</strong> Loud noises, strangers, separation from caregivers</p>
-                  <p><strong>Why:</strong> Evolutionarily adaptive — staying close to caregivers meant safety</p>
+                  <p><strong>Why:</strong> Evolutionarily adaptive --- staying close to caregivers meant safety</p>
                 </div>
               ),
             },
@@ -1688,7 +1688,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           Common Parenting Mistakes That Worsen Phobias
         </h2>
         <p className="mb-6">
-          Well-meaning parents often inadvertently reinforce their child's phobia through <strong>parental accommodation</strong> — changing your behavior to help your child avoid the feared thing <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
+          Well-meaning parents often inadvertently reinforce their child's phobia through <strong>parental accommodation</strong> --- changing your behavior to help your child avoid the feared thing <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
         </p>
 
         <ArticleChart
@@ -1709,7 +1709,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Avoiding the feared thing entirely</strong>: Never taking your dog-phobic child to parks, friends" homes with dogs, or outdoor spaces where dogs might be</li>
-          <li><strong>Providing excessive reassurance</strong>: Repeatedly telling them "There are no monsters" or "The dog won't hurt you' — which teaches them they need you to feel safe</li>
+          <li><strong>Providing excessive reassurance</strong>: Repeatedly telling them "There are no monsters" or "The dog won't hurt you' --- which teaches them they need you to feel safe</li>
           <li><strong>Allowing escape</strong>: Leaving events early or skipping activities when your child gets anxious</li>
           <li><strong>Doing things for them</strong>: Checking under the bed for monsters, keeping all lights on, sleeping in their room</li>
           <li><strong>Modifying family life</strong>: The whole family avoids certain places or activities to prevent the child's distress</li>
@@ -1806,7 +1806,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    Don't go from full accommodation to zero overnight — that's too hard for both of you. Instead, pick one accommodation to reduce each week.
+                    Don't go from full accommodation to zero overnight --- that's too hard for both of you. Instead, pick one accommodation to reduce each week.
                   </p>
                   <p>
                     <strong>Example:</strong> If you've been sleeping in their room due to darkness fear, start by sitting by the door, then in the hallway, then checking in every 10 minutes, then only at bedtime.
@@ -1870,7 +1870,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
           Parent Involvement in Treatment
         </h2>
         <p className="mb-6">
-          Treatments that involve parents are more effective than child-only therapy <Citation id="8" index={8} source="Journal of Clinical Child & Adolescent Psychology" year="2018" tier={1} />. You're not just dropping your child off at therapy — you're learning strategies to:
+          Treatments that involve parents are more effective than child-only therapy <Citation id="8" index={8} source="Journal of Clinical Child & Adolescent Psychology" year="2018" tier={1} />. You're not just dropping your child off at therapy --- you're learning strategies to:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1908,7 +1908,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            <strong>Remember:</strong> Your child's phobia is not your fault. But you have enormous power to help them overcome it — or to accidentally reinforce it. The good news? With the right approach, most childhood phobias are highly treatable, and earlier intervention means better long-term outcomes.
+            <strong>Remember:</strong> Your child's phobia is not your fault. But you have enormous power to help them overcome it --- or to accidentally reinforce it. The good news? With the right approach, most childhood phobias are highly treatable, and earlier intervention means better long-term outcomes.
           </p>
         </ArticleCallout>
 

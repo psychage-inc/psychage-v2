@@ -143,7 +143,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Different values about independence, risk, and quality of life',
               content: (
                 <p>
-                  One sibling may prioritize safety and advocate for 24/7 supervision. Another may value the parent's autonomy and resist 'controlling' care. These aren't right or wrong positions—they're fundamentally different frameworks for what constitutes good care, shaped by different life experiences and values.
+                  One sibling may prioritize safety and advocate for 24/7 supervision. Another may value the parent's autonomy and resist 'controlling' care. These aren't right or wrong positions---they're fundamentally different frameworks for what constitutes good care, shaped by different life experiences and values.
                 </p>
               ),
             },
@@ -206,7 +206,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           When siblings live in different cities or states, conflict intensifies <Citation id="4" index={4} source="Family Relations" year="2018" tier={1} />. The long-distance sibling may feel guilty but also disconnected from daily reality. They may offer advice based on outdated information or memories of the parent before significant decline.
         </p>
         <p className="mb-6">
-          Meanwhile, the local caregiver experiences the relentless daily grind—the midnight bathroom assistance, the forgotten stove, the repetitive conversations. They often feel that distant siblings have no right to criticize decisions they don't understand.
+          Meanwhile, the local caregiver experiences the relentless daily grind---the midnight bathroom assistance, the forgotten stove, the repetitive conversations. They often feel that distant siblings have no right to criticize decisions they don't understand.
         </p>
 
         <ArticleCallout variant="tip" title="Bridge the Distance Gap">
@@ -467,7 +467,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Guilt is not the same as wrongdoing. You can feel guilty about a decision that is objectively right, necessary, and even loving. Guilt is an emotional response to violating internalized rules or expectations—it doesn't mean you've actually done something wrong.
+            Guilt is not the same as wrongdoing. You can feel guilty about a decision that is objectively right, necessary, and even loving. Guilt is an emotional response to violating internalized rules or expectations---it doesn't mean you've actually done something wrong.
           </p>
         </ArticleCallout>
 
@@ -532,7 +532,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Studies show that family members who remain actively involved after placement—visiting regularly, advocating for care needs, maintaining emotional connection—help their loved ones thrive in facility settings. Placement doesn't end your caregiving role; it changes the nature of your contribution.
+            Studies show that family members who remain actively involved after placement---visiting regularly, advocating for care needs, maintaining emotional connection---help their loved ones thrive in facility settings. Placement doesn't end your caregiving role; it changes the nature of your contribution.
           </p>
         </ArticleCallout>
 
@@ -551,7 +551,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: `From 'I'm giving up" to "I'm getting help`,
               content: (
                 <p>
-                  You're not abandoning your parent—you're accessing a level of professional support that one or two family members cannot provide alone. This is recognizing limits, not failure. Professional care means trained staff, 24-hour monitoring, and specialized programs your home cannot replicate.
+                  You're not abandoning your parent---you're accessing a level of professional support that one or two family members cannot provide alone. This is recognizing limits, not failure. Professional care means trained staff, 24-hour monitoring, and specialized programs your home cannot replicate.
                 </p>
               ),
             },
@@ -632,7 +632,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Grieve the loss of the ideal',
               description: (
                 <p>
-                  You're grieving the future you imagined—your parent peacefully aging at home, surrounded by family. That future isn't available. Grieving it fully allows you to engage with the reality you actually face rather than measuring current decisions against an impossible standard.
+                  You're grieving the future you imagined---your parent peacefully aging at home, surrounded by family. That future isn't available. Grieving it fully allows you to engage with the reality you actually face rather than measuring current decisions against an impossible standard.
                 </p>
               ),
             },
@@ -648,7 +648,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Seek support from others who have made this decision',
               description: (
                 <p>
-                  Caregiver support groups—particularly those for people who have placed loved ones—provide validation and perspective that family members cannot. Hearing others' experiences of guilt, grief, and gradual peace can normalize your own journey.
+                  Caregiver support groups---particularly those for people who have placed loved ones---provide validation and perspective that family members cannot. Hearing others' experiences of guilt, grief, and gradual peace can normalize your own journey.
                 </p>
               ),
             },
@@ -659,16 +659,16 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           Maintaining Connection After Placement
         </h2>
         <p className="mb-6">
-          The relationship doesn't end with placement—it evolves <Citation id="8" index={8} source="The Gerontologist" year="2021" tier={1} />. Ways to stay meaningfully connected include:
+          The relationship doesn't end with placement---it evolves <Citation id="8" index={8} source="The Gerontologist" year="2021" tier={1} />. Ways to stay meaningfully connected include:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Visit at different times of day to see how care varies and when your parent is most alert</li>
-          <li>Bring meaningful activities—old photos, favorite music, familiar foods (if allowed), books to read aloud</li>
+          <li>Bring meaningful activities---old photos, favorite music, familiar foods (if allowed), books to read aloud</li>
           <li>Get to know the staff who work most closely with your parent; they're your partners in care</li>
           <li>Attend care planning meetings and advocate for your parent's preferences and comfort</li>
           <li>Don't let guilt make you avoid visits; your presence matters even if your parent has advanced dementia</li>
-          <li>Take your parent outside the facility when possible—short drives, visits to favorite places, outdoor time</li>
+          <li>Take your parent outside the facility when possible---short drives, visits to favorite places, outdoor time</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -775,7 +775,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
             Your mother needs 24-hour care that costs more than your mortgage. Your retirement savings are disappearing. You've cut back your work hours to manage her care, reducing your income just as expenses skyrocket. The financial pressure feels as overwhelming as the caregiving itself.
           </p>
           <p className="mb-6">
-            Family caregivers spend an average of $7,200 per year on out-of-pocket caregiving expenses, with many spending far more <Citation id="1" index={1} source="AARP Public Policy Institute" year="2021" tier={2} />. This financial strain creates significant mental health consequences—anxiety about the future, shame about not being able to afford better care, conflict with siblings over money, and the devastating realization that doing the right thing for your parent may jeopardize your own financial security.
+            Family caregivers spend an average of $7,200 per year on out-of-pocket caregiving expenses, with many spending far more <Citation id="1" index={1} source="AARP Public Policy Institute" year="2021" tier={2} />. This financial strain creates significant mental health consequences---anxiety about the future, shame about not being able to afford better care, conflict with siblings over money, and the devastating realization that doing the right thing for your parent may jeopardize your own financial security.
           </p>
         </div>
 
@@ -834,7 +834,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
             <strong>Shame and inadequacy:</strong> Feeling like you should be able to afford better care, comparing yourself to siblings with more resources, or guilt about not being wealthy enough to solve the problem.
           </li>
           <li>
-            <strong>Decision paralysis:</strong> Financial constraints force impossible choices—quality care versus preserving inheritance, your retirement security versus your parent's comfort.
+            <strong>Decision paralysis:</strong> Financial constraints force impossible choices---quality care versus preserving inheritance, your retirement security versus your parent's comfort.
           </li>
           <li>
             <strong>Resentment:</strong> Anger at the parent for not planning better, at siblings who won't contribute financially, at a healthcare system that bankrupts families, or at yourself for caring so much that you sacrifice your own financial future.
@@ -904,7 +904,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Disagreements about spending priorities',
               content: (
                 <p>
-                  One sibling wants to preserve assets for inheritance; another wants to spend everything on the highest quality care. One values extending life regardless of cost; another prioritizes comfort care. These aren't right or wrong positions—they're different values about money and duty.
+                  One sibling wants to preserve assets for inheritance; another wants to spend everything on the highest quality care. One values extending life regardless of cost; another prioritizes comfort care. These aren't right or wrong positions---they're different values about money and duty.
                 </p>
               ),
             },
@@ -913,7 +913,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Financial Transparency Reduces Conflict">
           <p>
-            Create a shared spreadsheet or use apps like Carely to track all eldercare expenses and parent assets. Regular financial updates to all siblings—showing income, expenses, remaining assets—prevent suspicion and allow informed decision-making. Transparency doesn't guarantee agreement, but it reduces accusations of secrecy.
+            Create a shared spreadsheet or use apps like Carely to track all eldercare expenses and parent assets. Regular financial updates to all siblings---showing income, expenses, remaining assets---prevent suspicion and allow informed decision-making. Transparency doesn't guarantee agreement, but it reduces accusations of secrecy.
           </p>
         </ArticleCallout>
 
@@ -933,7 +933,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These decisions create moral injury—the psychological distress that comes from violating your own values because circumstances leave no ethical option. A daughter who cannot afford memory care for her mother while paying for her children's college feels she's failing both generations.
+          These decisions create moral injury---the psychological distress that comes from violating your own values because circumstances leave no ethical option. A daughter who cannot afford memory care for her mother while paying for her children's college feels she's failing both generations.
         </p>
 
         <h2 id="financial-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -950,7 +950,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Consult an elder law attorney early',
               description: (
                 <p>
-                  Medicaid planning strategies—spending down assets strategically, creating trusts, understanding look-back periods—are most effective when implemented before crisis. Many middle-class families could qualify for Medicaid coverage with proper planning but miss the window by waiting too long.
+                  Medicaid planning strategies---spending down assets strategically, creating trusts, understanding look-back periods---are most effective when implemented before crisis. Many middle-class families could qualify for Medicaid coverage with proper planning but miss the window by waiting too long.
                 </p>
               ),
             },
@@ -1143,7 +1143,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
             In your culture, sending a parent to a nursing home is unthinkable. Good children care for aging parents at home, no matter the cost to career, marriage, or health. But your mother needs round-the-clock care, your children need you, and you're collapsing under the weight of expectations you can no longer meet.
           </p>
           <p className="mb-6">
-            Cultural values about eldercare—particularly concepts like filial piety in Asian cultures, familismo in Latino communities, and religious duties in many traditions—powerfully shape caregiving decisions and the guilt that accompanies them <Citation id="1" index={1} source="Journal of Cross-Cultural Gerontology" year="2020" tier={1} />. These values often conflict with the realities of modern life, creating profound internal and familial conflicts about duty, sacrifice, and acceptable limits.
+            Cultural values about eldercare---particularly concepts like filial piety in Asian cultures, familismo in Latino communities, and religious duties in many traditions---powerfully shape caregiving decisions and the guilt that accompanies them <Citation id="1" index={1} source="Journal of Cross-Cultural Gerontology" year="2020" tier={1} />. These values often conflict with the realities of modern life, creating profound internal and familial conflicts about duty, sacrifice, and acceptable limits.
           </p>
         </div>
 
@@ -1200,7 +1200,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           Filial Piety and Asian American Caregivers
         </h2>
         <p className="mb-6">
-          In many Asian cultures, filial piety (孝 xiào in Chinese, 효 hyo in Korean) is a fundamental virtue—the obligation of children to respect, care for, and honor parents <Citation id="2" index={2} source="The Gerontologist" year="2021" tier={1} />. This goes beyond Western concepts of caregiving to encompass lifelong duty, often with the expectation that children will sacrifice personal goals for parental wellbeing.
+          In many Asian cultures, filial piety (孝 xiào in Chinese, 효 hyo in Korean) is a fundamental virtue---the obligation of children to respect, care for, and honor parents <Citation id="2" index={2} source="The Gerontologist" year="2021" tier={1} />. This goes beyond Western concepts of caregiving to encompass lifelong duty, often with the expectation that children will sacrifice personal goals for parental wellbeing.
         </p>
 
         <p className="mb-6">
@@ -1217,7 +1217,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           Familismo in Latino Communities
         </h2>
         <p className="mb-6">
-          Familismo—the strong identification with and attachment to family—shapes Latino eldercare in ways that both support and stress caregivers <Citation id="3" index={3} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. Family is the primary source of support, and the idea of "putting your parent in a home" can be seen as a profound moral failure.
+          Familismo---the strong identification with and attachment to family---shapes Latino eldercare in ways that both support and stress caregivers <Citation id="3" index={3} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. Family is the primary source of support, and the idea of "putting your parent in a home" can be seen as a profound moral failure.
           </p>
 
         <p className="mb-6">
@@ -1232,7 +1232,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
             <strong>Marianismo:</strong> Cultural idealization of women's self-sacrifice particularly burdens daughters and daughters-in-law
           </li>
           <li>
-            <strong>Extended family expectations:</strong> Decisions are rarely individual—aunts, uncles, cousins may all have opinions and expectations
+            <strong>Extended family expectations:</strong> Decisions are rarely individual---aunts, uncles, cousins may all have opinions and expectations
           </li>
           <li>
             <strong>Religious influences:</strong> Catholic and evangelical Protestant beliefs often reinforce family care as spiritual duty
@@ -1254,7 +1254,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Language and healthcare navigation',
               content: (
                 <p>
-                  Adult children often serve as medical interpreters, giving them power in healthcare decisions that can feel inappropriate to parents who expect deference. This role reversal—children making decisions for parents—violates traditional hierarchies and creates shame for aging parents.
+                  Adult children often serve as medical interpreters, giving them power in healthcare decisions that can feel inappropriate to parents who expect deference. This role reversal---children making decisions for parents---violates traditional hierarchies and creates shame for aging parents.
                 </p>
               ),
             },
@@ -1354,7 +1354,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Distinguish between core values and specific practices',
               description: (
                 <p>
-                  The core value might be 'honoring parents." The traditional practice might be "multi-generational home." Can you honor the value through different practices—finding excellent facility care, visiting daily, managing medical decisions, maintaining emotional connection? Values can be honored through multiple pathways.
+                  The core value might be 'honoring parents." The traditional practice might be "multi-generational home." Can you honor the value through different practices---finding excellent facility care, visiting daily, managing medical decisions, maintaining emotional connection? Values can be honored through multiple pathways.
                 </p>
               ),
             },
@@ -1378,7 +1378,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Grieve the gap between ideal and possible',
               description: (
                 <p>
-                  You may need to grieve the fact that you cannot be the caregiver your culture idealizes. This grief is real and deserves space. Accepting your limits isn't abandoning your values—it's recognizing you're human, not superhuman.
+                  You may need to grieve the fact that you cannot be the caregiver your culture idealizes. This grief is real and deserves space. Accepting your limits isn't abandoning your values---it's recognizing you're human, not superhuman.
                 </p>
               ),
             },
@@ -1517,7 +1517,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
             "Take care of yourself" is the advice every caregiver hears. But when you're managing medications, doctor appointments, behavioral crises, and maybe your own job and children, self-care feels like a luxury you cannot afford. Yet research is clear: caregiver wellbeing directly predicts care quality and sustainability.
           </p>
           <p className="mb-6">
-            Family caregivers who neglect their own health are 63% more likely to die within four years compared to non-caregivers of the same age <Citation id="2" index={2} source="Journal of the American Geriatrics Society" year="2020" tier={1} />. This isn't about bubble baths and spa days—it's about survival strategies that allow you to provide care long-term without destroying your own health in the process.
+            Family caregivers who neglect their own health are 63% more likely to die within four years compared to non-caregivers of the same age <Citation id="2" index={2} source="Journal of the American Geriatrics Society" year="2020" tier={1} />. This isn't about bubble baths and spa days---it's about survival strategies that allow you to provide care long-term without destroying your own health in the process.
           </p>
         </div>
 
@@ -1525,7 +1525,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           Why Self-Care Is Not Selfish
         </h2>
         <p className="mb-6">
-          The airplane oxygen mask metaphor applies: you cannot care for others if you collapse <Citation id="1" index={1} source="The Gerontologist" year="2021" tier={1} />. Caregiver self-care isn't indulgent—it's strategically necessary for three reasons:
+          The airplane oxygen mask metaphor applies: you cannot care for others if you collapse <Citation id="1" index={1} source="The Gerontologist" year="2021" tier={1} />. Caregiver self-care isn't indulgent---it's strategically necessary for three reasons:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1533,7 +1533,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
             <strong>You provide better care when you're not depleted:</strong> Exhausted, resentful caregivers make more mistakes, have less patience, and provide lower-quality emotional support.
           </li>
           <li>
-            <strong>Your loved one needs you to last:</strong> Many caregiving situations span years or decades. Sprint pace is unsustainable. Pacing yourself isn't giving less—it's making sure you don't burn out halfway through.
+            <strong>Your loved one needs you to last:</strong> Many caregiving situations span years or decades. Sprint pace is unsustainable. Pacing yourself isn't giving less---it's making sure you don't burn out halfway through.
           </li>
           <li>
             <strong>You deserve to be well:</strong> Your wellbeing has intrinsic value independent of your caregiving role. You matter as a person, not just as a caregiver.
@@ -1542,7 +1542,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Self-care is not something you do after all caregiving tasks are complete—there will always be more tasks. Self-care must be integrated into your caregiving routine as a non-negotiable component, not an optional reward.
+            Self-care is not something you do after all caregiving tasks are complete---there will always be more tasks. Self-care must be integrated into your caregiving routine as a non-negotiable component, not an optional reward.
           </p>
         </ArticleCallout>
 
@@ -1568,7 +1568,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Attend your own medical appointments',
               description: (
                 <p>
-                  Caregivers routinely skip their own doctor visits, dental appointments, and cancer screenings. Schedule these as you would for your loved one. Arrange respite care if needed. Your health crises will only compound the caregiving burden—prevention is pragmatic, not selfish.
+                  Caregivers routinely skip their own doctor visits, dental appointments, and cancer screenings. Schedule these as you would for your loved one. Arrange respite care if needed. Your health crises will only compound the caregiving burden---prevention is pragmatic, not selfish.
                 </p>
               ),
             },
@@ -1614,7 +1614,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Name and validate your full range of feelings',
               content: (
                 <p>
-                  You can love your parent and resent the caregiving burden. You can feel guilty about wanting a break and still deserve that break. Ambivalence is normal. Anger at someone with dementia is normal. Grief while they're still alive is normal. Your feelings aren't moral failings—they're human responses to impossible situations.
+                  You can love your parent and resent the caregiving burden. You can feel guilty about wanting a break and still deserve that break. Ambivalence is normal. Anger at someone with dementia is normal. Grief while they're still alive is normal. Your feelings aren't moral failings---they're human responses to impossible situations.
                 </p>
               ),
             },
@@ -1632,7 +1632,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Maintain pieces of your pre-caregiving identity',
               content: (
                 <p>
-                  You are not just a caregiver. Continue at least one activity that reminds you who you were before this role: book club, hobby, friendship, creative pursuit. Even 30 minutes weekly matters. This isn't escape—it's maintaining the self you'll need to return to when caregiving ends.
+                  You are not just a caregiver. Continue at least one activity that reminds you who you were before this role: book club, hobby, friendship, creative pursuit. Even 30 minutes weekly matters. This isn't escape---it's maintaining the self you'll need to return to when caregiving ends.
                 </p>
               ),
             },
@@ -1641,7 +1641,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
               title: 'Practice self-compassion over self-criticism',
               content: (
                 <p>
-                  You will make mistakes. You will lose patience. You will fall short of your ideals. Self-compassion—treating yourself as you would a struggling friend—reduces caregiver depression and increases resilience. The inner critic who demands perfection creates suffering without improving care.
+                  You will make mistakes. You will lose patience. You will fall short of your ideals. Self-compassion---treating yourself as you would a struggling friend---reduces caregiver depression and increases resilience. The inner critic who demands perfection creates suffering without improving care.
                 </p>
               ),
             },
@@ -1652,7 +1652,7 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           The Non-Negotiable Need for Respite
         </h2>
         <p className="mb-6">
-          Respite—temporary relief from caregiving responsibilities—is the most evidence-backed intervention for caregiver wellbeing <Citation id="3" index={3} source="Journal of Applied Gerontology" year="2021" tier={1} />. Yet 70% of caregivers report difficulty accessing or accepting respite care.
+          Respite---temporary relief from caregiving responsibilities---is the most evidence-backed intervention for caregiver wellbeing <Citation id="3" index={3} source="Journal of Applied Gerontology" year="2021" tier={1} />. Yet 70% of caregivers report difficulty accessing or accepting respite care.
         </p>
 
         <ComparisonTable
@@ -1802,11 +1802,11 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Therapy for caregivers—particularly cognitive-behavioral therapy or acceptance and commitment therapy—provides concrete skills for managing the unique stressors of caregiving. Many therapists offer sliding-scale fees or telehealth options that accommodate caregivers" constraints.
+          Therapy for caregivers---particularly cognitive-behavioral therapy or acceptance and commitment therapy---provides concrete skills for managing the unique stressors of caregiving. Many therapists offer sliding-scale fees or telehealth options that accommodate caregivers" constraints.
         </p>
 
         <QuoteBlock
-          quote={`I spent two years thinking self-care meant I should feel less stressed. My therapist reframed it: self-care means you survive the stress without being destroyed by it. That shift—from "eliminate stress" to "survive stress"—made self-care feel possible instead of a failure I could never achieve.`}
+          quote={`I spent two years thinking self-care meant I should feel less stressed. My therapist reframed it: self-care means you survive the stress without being destroyed by it. That shift---from "eliminate stress" to "survive stress"---made self-care feel possible instead of a failure I could never achieve.`}
           attribution="David, age 61"
           role="Caregiver for wife with early-onset Alzheimer's"
           variant="large"
@@ -1816,13 +1816,13 @@ export const eldercareCaregivingAgingParentsArticlesB: Article[] = [
           The Goal: Sustainable Caregiving
         </h2>
         <p className="mb-6">
-          Self-care for caregivers isn't about achieving balance or peace—it's about not collapsing before the journey ends. It's strategic resource management: preserving enough of yourself that you can continue showing up, advocating effectively, and maintaining connection with the person you're caring for.
+          Self-care for caregivers isn't about achieving balance or peace---it's about not collapsing before the journey ends. It's strategic resource management: preserving enough of yourself that you can continue showing up, advocating effectively, and maintaining connection with the person you're caring for.
         </p>
         <p className="mb-6">
-          Start small. Pick one self-care strategy from this article and implement it this week. Not five strategies—one. Self-care compounds over time. The caregiver who sleeps six hours instead of four, walks ten minutes three times a week, and attends one support group meeting monthly will outlast the caregiver who attempts perfection and collapses from the effort.
+          Start small. Pick one self-care strategy from this article and implement it this week. Not five strategies---one. Self-care compounds over time. The caregiver who sleeps six hours instead of four, walks ten minutes three times a week, and attends one support group meeting monthly will outlast the caregiver who attempts perfection and collapses from the effort.
         </p>
         <p className="mb-6">
-          You matter. Your wellbeing has value. Caring for yourself isn't taking away from your loved one—it's what makes caring for them possible long-term.
+          You matter. Your wellbeing has value. Caring for yourself isn't taking away from your loved one---it's what makes caring for them possible long-term.
         </p>
       </>
     ),

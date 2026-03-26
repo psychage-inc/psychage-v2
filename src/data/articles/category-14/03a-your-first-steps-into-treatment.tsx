@@ -97,7 +97,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most people wait too long to seek therapy. They push through, hoping things will get better on their own, unsure if their struggles "count" as serious enough <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />. But mental health treatment isn't reserved for crisis — it's a resource for anyone whose emotional well-being is suffering.
+            Most people wait too long to seek therapy. They push through, hoping things will get better on their own, unsure if their struggles "count" as serious enough <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />. But mental health treatment isn't reserved for crisis --- it's a resource for anyone whose emotional well-being is suffering.
           </p>
           <p className="mb-6">
             So how do you know when it's time? There's no single answer, but there are clear signs that professional support could help <Citation id="3" index={3} source="American Psychological Association" year="2021" tier={4} />.
@@ -138,7 +138,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               id: 'coping',
               title: "3. Your Coping Strategies Aren't Working",
               content: (
-                <p>If you've tried self-help — exercise, journaling, talking to friends, meditation — and you're still struggling, therapy offers tools and perspectives self-help can't provide <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2020" tier={1} />.</p>
+                <p>If you've tried self-help --- exercise, journaling, talking to friends, meditation --- and you're still struggling, therapy offers tools and perspectives self-help can't provide <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2020" tier={1} />.</p>
               ),
             },
             {
@@ -175,7 +175,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Seek help immediately</strong> if you're thinking about hurting yourself. Call 988 (Suicide & Crisis Lifeline) or go to the nearest ER.</p>
-                  <p>These thoughts mean you're in pain and need support — not that you're weak or broken.</p>
+                  <p>These thoughts mean you're in pain and need support --- not that you're weak or broken.</p>
                 </div>
               ),
             },
@@ -194,7 +194,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         </ArticleCallout>
 
         <h2 id="common-hesitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Common Reasons People Delay — And Why They're Myths
+          Common Reasons People Delay --- And Why They're Myths
         </h2>
 
         <ComparisonTable
@@ -204,7 +204,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
             { feature: "My problems aren't serious enough", values: ['Therapy helps with all levels of distress, not just severe cases'] },
             { feature: 'I should be able to handle this myself', values: ['Asking for help is strength, not weakness'] },
             { feature: 'Therapy is too expensive', values: ['Many affordable options exist: sliding scale, community centers, insurance'] },
-            { feature: "I don't want to burden someone", values: ['Therapists are trained professionals — this is their job'] },
+            { feature: "I don't want to burden someone", values: ['Therapists are trained professionals --- this is their job'] },
             { feature: 'What will people think?', values: ['Therapy is increasingly normalized; your treatment is confidential'] },
           ]}
           highlightColumn={1}
@@ -276,7 +276,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Seeking therapy isn't admitting defeat — it's investing in yourself. You deserve support.
+          Seeking therapy isn't admitting defeat --- it's investing in yourself. You deserve support.
         </p>
       </>
     ),
@@ -456,14 +456,14 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               id: 'what-if-cry',
               title: 'What if I cry?',
               content: (
-                <p>Crying in therapy is completely normal and expected. Therapists are used to it. They'll have tissues and will give you space. Crying isn't a sign of weakness — it's often a sign you're finally in a safe space to feel what you've been holding in.</p>
+                <p>Crying in therapy is completely normal and expected. Therapists are used to it. They'll have tissues and will give you space. Crying isn't a sign of weakness --- it's often a sign you're finally in a safe space to feel what you've been holding in.</p>
               ),
             },
             {
               id: 'what-to-talk-about',
               title: 'What do I talk about?',
               content: (
-                <p>You don't need to prepare a speech or know what to say. The therapist will ask questions to guide the conversation. If you freeze up, just say "I'm not sure what to say' — that's useful information for the therapist too.</p>
+                <p>You don't need to prepare a speech or know what to say. The therapist will ask questions to guide the conversation. If you freeze up, just say "I'm not sure what to say' --- that's useful information for the therapist too.</p>
               ),
             },
             {
@@ -471,7 +471,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               title: 'Will they judge me?',
               content: (
                 <div>
-                  <p className="mb-4">No. Therapists have heard it all — eating disorders, suicidal thoughts, intrusive violent thoughts, affairs, addictions, trauma. Their job is to understand and help, not to judge <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2021" tier={1} />.</p>
+                  <p className="mb-4">No. Therapists have heard it all --- eating disorders, suicidal thoughts, intrusive violent thoughts, affairs, addictions, trauma. Their job is to understand and help, not to judge <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2021" tier={1} />.</p>
                   <p>If you feel judged, that's a sign the therapist isn't a good fit, not that you're doing something wrong.</p>
                 </div>
               ),
@@ -480,14 +480,14 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               id: 'do-i-have-to-share-everything',
               title: 'Do I have to share everything in the first session?',
               content: (
-                <p>No. You can share as much or as little as you're comfortable with. It's okay to say "I'm not ready to talk about that yet." Trust builds over time — you don't owe the therapist your full life story on day one.</p>
+                <p>No. You can share as much or as little as you're comfortable with. It's okay to say "I'm not ready to talk about that yet." Trust builds over time --- you don't owe the therapist your full life story on day one.</p>
               ),
             },
             {
               id: 'what-if-dont-click',
               title: "What if I don\'t click with the therapist?",
               content: (
-                <p>That's important information. The therapeutic relationship (called 'therapeutic alliance') is one of the strongest predictors of therapy success. If you don't feel comfortable, it's okay to try a different therapist. You can say "I don't think this is the right fit' — good therapists won't take it personally.</p>
+                <p>That's important information. The therapeutic relationship (called 'therapeutic alliance') is one of the strongest predictors of therapy success. If you don't feel comfortable, it's okay to try a different therapist. You can say "I don't think this is the right fit' --- good therapists won't take it personally.</p>
               ),
             },
           ]}
@@ -511,7 +511,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="You're Interviewing Them Too">
-          <p>Therapy is a collaboration, not a one-way service. You're not a passive patient — you're an active participant. If something doesn't feel right (their style, their answers, their demeanor), trust your gut. Finding the right therapist is like finding the right doctor: fit matters <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.</p>
+          <p>Therapy is a collaboration, not a one-way service. You're not a passive patient --- you're an active participant. If something doesn't feel right (their style, their answers, their demeanor), trust your gut. Finding the right therapist is like finding the right doctor: fit matters <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="after-the-session" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -525,11 +525,11 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
           title="What You Might Feel vs. What It Means"
           columns={['Feeling', 'What It Means']}
           items={[
-            { feature: 'Emotionally drained', values: ['Normal — you opened up about hard things'] },
-            { feature: 'Relieved', values: ['Good sign — you felt heard and understood'] },
-            { feature: 'Uncertain', values: ["Common — one session isn't enough to know if it's the right fit"] },
+            { feature: 'Emotionally drained', values: ['Normal --- you opened up about hard things'] },
+            { feature: 'Relieved', values: ['Good sign --- you felt heard and understood'] },
+            { feature: 'Uncertain', values: ["Common --- one session isn't enough to know if it's the right fit"] },
             { feature: 'Uncomfortable', values: ["Could mean the therapist isn't a good match, or you're just adjusting"] },
-            { feature: 'Hopeful', values: ["Excellent sign — you're starting to see a path forward"] },
+            { feature: 'Hopeful', values: ["Excellent sign --- you're starting to see a path forward"] },
           ]}
           highlightColumn={0}
         />
@@ -747,7 +747,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
                 <div>
                   <p className="mb-4">Your primary care doctor can refer you to therapists. Friends or family members who've been in therapy may also have recommendations.</p>
                   <p className="mb-4"><strong>Pros:</strong> Personal endorsement can be reassuring</p>
-                  <p><strong>Cons:</strong> What works for someone else may not work for you — still vet the therapist yourself</p>
+                  <p><strong>Cons:</strong> What works for someone else may not work for you --- still vet the therapist yourself</p>
                 </div>
               ),
             },
@@ -870,7 +870,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          If it's not working after 3-4 sessions, it's okay to say "I don't think this is the right fit' and try someone else. You're not being difficult — you're advocating for your mental health.
+          If it's not working after 3-4 sessions, it's okay to say "I don't think this is the right fit' and try someone else. You're not being difficult --- you're advocating for your mental health.
         </p>
 
         <h2 id="if-cant-find-anyone" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -883,7 +883,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         <StatCard
           stats={[
             { value: 160, suffix: 'M', label: 'Americans live in mental health professional shortage areas' },
-            { value: 3, suffix: '–6', label: 'Month average waitlist for therapists in some regions' },
+            { value: 3, suffix: '--6', label: 'Month average waitlist for therapists in some regions' },
             { value: 40, suffix: '%', label: 'Of therapists not accepting new clients at any given time' },
           ]}
           source="NAMI, 2022 & Kaiser Family Foundation, 2021"
@@ -979,10 +979,10 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Not all therapists are good therapists. Some are unethical, incompetent, or just the wrong fit. Many people stay with therapists who aren't helping (or are actively harming) because they don't know what healthy therapy looks like — or they feel guilty about 'firing' their therapist <Citation id="2" index={2} source="Psychotherapy Research" year="2020" tier={1} />.
+            Not all therapists are good therapists. Some are unethical, incompetent, or just the wrong fit. Many people stay with therapists who aren't helping (or are actively harming) because they don't know what healthy therapy looks like --- or they feel guilty about 'firing' their therapist <Citation id="2" index={2} source="Psychotherapy Research" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            You deserve a therapist who respects boundaries, maintains professionalism, and helps you make progress. Here's how to recognize when something's off — and when to walk away.
+            You deserve a therapist who respects boundaries, maintains professionalism, and helps you make progress. Here's how to recognize when something's off --- and when to walk away.
           </p>
         </div>
 
@@ -1035,7 +1035,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Good therapists guide you to your own insights and decisions. Bad therapists say "You should leave your partner" or "You need to quit your job" without exploring your feelings or options.</p>
-                  <p><strong>Note:</strong> CBT and DBT therapists do teach skills and suggest behavioral changes — that's different from telling you how to live your life.</p>
+                  <p><strong>Note:</strong> CBT and DBT therapists do teach skills and suggest behavioral changes --- that's different from telling you how to live your life.</p>
                 </div>
               ),
             },
@@ -1087,7 +1087,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
               title: "7. You\'re Not Making Progress After 3-6 Months",
               content: (
                 <div>
-                  <p className="mb-4">Therapy isn't instant, but you should notice some improvement within a few months — better coping skills, new insights, gradual symptom reduction. If nothing is changing after 6 months of consistent work, it's worth trying a different therapist or approach.</p>
+                  <p className="mb-4">Therapy isn't instant, but you should notice some improvement within a few months --- better coping skills, new insights, gradual symptom reduction. If nothing is changing after 6 months of consistent work, it's worth trying a different therapist or approach.</p>
                   <p><strong>Exception:</strong> Complex trauma or chronic conditions may take longer. But you should still feel like you're moving forward, not stuck.</p>
                 </div>
               ),
@@ -1099,7 +1099,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
           "Fit" Issues: Not Wrong, Just Wrong for You
         </h2>
         <p className="mb-6">
-          Sometimes a therapist is ethical and competent but just doesn't click with you. That's okay. Therapeutic alliance (the relationship between you and your therapist) is crucial for outcomes — if it's not there, therapy won't work as well.
+          Sometimes a therapist is ethical and competent but just doesn't click with you. That's okay. Therapeutic alliance (the relationship between you and your therapist) is crucial for outcomes --- if it's not there, therapy won't work as well.
         </p>
 
         <ComparisonTable
@@ -1180,18 +1180,18 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         </h2>
 
         <QuoteBlock
-          quote={`My first therapist told me I was "too sensitive" and needed to 'just get over' my childhood trauma. I thought that was normal — that I was the problem. When I switched to a trauma-informed therapist, the difference was night and day. She validated my pain and helped me heal. I wish I'd left the first one sooner.`}
+          quote={`My first therapist told me I was "too sensitive" and needed to 'just get over' my childhood trauma. I thought that was normal --- that I was the problem. When I switched to a trauma-informed therapist, the difference was night and day. She validated my pain and helped me heal. I wish I'd left the first one sooner.`}
           attribution="Person Who Switched Therapists"
           role="Patient Perspective"
           variant="large"
         />
 
         <p className="mb-6 mt-6">
-          <strong>Key takeaway:</strong> Therapy should feel challenging at times — growth is uncomfortable. But it should never feel demeaning, unsafe, or violating. If something feels off, trust that feeling.
+          <strong>Key takeaway:</strong> Therapy should feel challenging at times --- growth is uncomfortable. But it should never feel demeaning, unsafe, or violating. If something feels off, trust that feeling.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="You're Not Being Difficult">
-          <p>Advocating for yourself in therapy — giving feedback, switching therapists, or ending sessions that aren't helpful — is not being difficult. It's being an active participant in your mental health care. You deserve a therapist who respects you, understands you, and helps you make progress.</p>
+          <p>Advocating for yourself in therapy --- giving feedback, switching therapists, or ending sessions that aren't helpful --- is not being difficult. It's being an active participant in your mental health care. You deserve a therapist who respects you, understands you, and helps you make progress.</p>
         </ArticleCallout>
       </>
     ),
@@ -1278,7 +1278,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The COVID-19 pandemic forced therapy online overnight — and it stayed there. Teletherapy (therapy via video or phone) went from niche to mainstream, and the research has caught up. The verdict: online therapy works just as well as in-person therapy for most conditions and most people <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
+            The COVID-19 pandemic forced therapy online overnight --- and it stayed there. Teletherapy (therapy via video or phone) went from niche to mainstream, and the research has caught up. The verdict: online therapy works just as well as in-person therapy for most conditions and most people <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             But there are nuances. Here's what the research says about effectiveness, therapeutic alliance, and when one format is better than the other.
@@ -1410,7 +1410,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
             <li><strong>Comfort</strong>: Some people feel safer and more open in their own space</li>
             <li><strong>Cost savings</strong>: No transportation costs, sometimes lower session fees</li>
             <li><strong>Anonymity</strong>: No risk of running into someone in the waiting room</li>
-            <li><strong>Better for certain conditions</strong>: Agoraphobia, social anxiety, mobility issues — teletherapy removes barriers</li>
+            <li><strong>Better for certain conditions</strong>: Agoraphobia, social anxiety, mobility issues --- teletherapy removes barriers</li>
           </ul>
         </ArticleCallout>
 
@@ -1461,7 +1461,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
                     <li>Therapy feels more "real" face-to-face</li>
                     <li>Home isn't a safe or private space</li>
                     <li>Leaving the house and going to an office creates helpful separation</li>
-                    <li>Screen fatigue — already on Zoom all day for work</li>
+                    <li>Screen fatigue --- already on Zoom all day for work</li>
                   </ul>
                 </div>
               ),
@@ -1505,7 +1505,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
           Patient Satisfaction: What Do People Prefer?
         </h2>
         <p className="mb-6">
-          Surveys show high satisfaction with teletherapy — around 80-90% of people who tried it during the pandemic want the option to continue <Citation id="7" index={7} source="Clinical Psychology & Psychotherapy" year="2021" tier={1} />.
+          Surveys show high satisfaction with teletherapy --- around 80-90% of people who tried it during the pandemic want the option to continue <Citation id="7" index={7} source="Clinical Psychology & Psychotherapy" year="2021" tier={1} />.
         </p>
 
         <ArticleChart
@@ -1520,7 +1520,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>Takeaway:</strong> Most people want <strong>flexibility</strong> — the ability to choose based on their current needs.
+          <strong>Takeaway:</strong> Most people want <strong>flexibility</strong> --- the ability to choose based on their current needs.
         </p>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1555,7 +1555,7 @@ export const yourFirstStepsIntoTreatmentArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          The research is clear: teletherapy works. Whether it works <em>for you</em> is personal. The good news is you have options — and both are evidence-based.
+          The research is clear: teletherapy works. Whether it works <em>for you</em> is personal. The good news is you have options --- and both are evidence-based.
         </p>
       </>
     ),

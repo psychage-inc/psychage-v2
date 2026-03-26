@@ -138,7 +138,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           <Citation id="1" index={1} source="American Psychiatric Association" year="2022" tier={4} />.
         </p>
         <p className="mb-6">
-          The key word is "disorder"—PTSD is not just the immediate shock or distress following trauma (which is
+          The key word is "disorder"---PTSD is not just the immediate shock or distress following trauma (which is
           normal). It's a pattern of symptoms that persist for more than a month and significantly impair functioning.
         </p>
 
@@ -561,7 +561,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
             <li>About 6-8% of people will have PTSD in their lifetime</li>
             <li>Symptoms include intrusive memories, avoidance, negative thoughts/mood, and hyperarousal</li>
             <li>Evidence-based treatments (CPT, PE, EMDR) are highly effective</li>
-            <li>Recovery is possible—most people improve significantly with proper treatment</li>
+            <li>Recovery is possible---most people improve significantly with proper treatment</li>
           </ul>
         </ArticleCallout>
 
@@ -576,10 +576,10 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           daily life, or cause significant distress, it's time to seek professional help{', '}
           <Citation id="10" index={10} source="World Health Organization" year="2022" tier={2} />.
         </p>
-        <p className="mb-6">Look for a mental health professional who specializes in trauma and uses evidence-based treatments like CPT, PE, or EMDR. Don't be discouraged if the first therapist or treatment approach isn't the right fit—finding the right match is part of the process.</p>
+        <p className="mb-6">Look for a mental health professional who specializes in trauma and uses evidence-based treatments like CPT, PE, or EMDR. Don't be discouraged if the first therapist or treatment approach isn't the right fit---finding the right match is part of the process.</p>
         <p className="mb-6">
           PTSD is not a sign of weakness. It's a normal response of a nervous system that experienced something
-          abnormal. With the right support, healing is not just possible—it's expected.
+          abnormal. With the right support, healing is not just possible---it's expected.
         </p>
       </>
     ),
@@ -683,14 +683,14 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imagine being diagnosed with depression, then anxiety, then borderline personality disorder—cycling through
+            Imagine being diagnosed with depression, then anxiety, then borderline personality disorder---cycling through
             treatments that help a little but never quite address what you're experiencing. This is the story of many
             people with Complex PTSD (C-PTSD), a condition that wasn't officially recognized until 2018, and even then,
-            only in the international classification system—not in the DSM-5 used in the United States.
+            only in the international classification system---not in the DSM-5 used in the United States.
           </p>
           <p className="mb-6">
             Complex PTSD represents a crucial evolution in our understanding of trauma. It acknowledges that prolonged,
-            repeated trauma—especially in childhood—creates a different clinical picture than single-incident trauma,
+            repeated trauma---especially in childhood---creates a different clinical picture than single-incident trauma,
             requiring a different treatment approach{', '}
             <Citation id="2" index={2} source="Journal of Traumatic Stress" year="1992" tier={1} />.
           </p>
@@ -705,7 +705,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <p className="mb-6">
           The concept of Complex PTSD was first proposed by trauma researcher Judith Herman in her 1992 book <em>Trauma
           and Recovery</em>. She observed that survivors of prolonged trauma (abuse, captivity, domestic violence)
-          showed symptoms beyond classic PTSD—particularly problems with emotion regulation, self-concept, and
+          showed symptoms beyond classic PTSD---particularly problems with emotion regulation, self-concept, and
           relationships.
         </p>
         <p className="mb-6">
@@ -855,7 +855,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                   </ul>
                   <p className="mt-4">
                     <em>
-                      Why this happens: Identity forms through reflected appraisals—how others treat you tells you who you
+                      Why this happens: Identity forms through reflected appraisals---how others treat you tells you who you
                       are. Chronic abuse and neglect teach children they are worthless, creating core beliefs that persist
                       into adulthood.
                     </em>
@@ -893,7 +893,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                   <p className="mt-4">
                     <em>
                       Why this happens: Attachment patterns form early. When the people who should protect you also hurt
-                      you, it creates disorganized attachment—the person you need for safety is also the source of danger.
+                      you, it creates disorganized attachment---the person you need for safety is also the source of danger.
                       This fundamentally shapes how you relate to others throughout life{', '}
                       <Citation id="9" index={9} source="Attachment & Human Development" year="2020" tier={1} />.
                     </em>
@@ -1081,7 +1081,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                     <li>Building therapeutic relationship and trust</li>
                   </ul>
                   <p className="mt-3">
-                    <em>This phase can take months to years. It's not "prep work"—it's essential healing.</em>
+                    <em>This phase can take months to years. It's not "prep work"---it's essential healing.</em>
                   </p>
                 </div>
               ),
@@ -1177,8 +1177,8 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Validation',
               content: (
                 <p>
-                  Understanding that your symptoms are a recognized response to prolonged trauma—not a personality flaw or
-                  treatment-resistant depression—can be profoundly validating.
+                  Understanding that your symptoms are a recognized response to prolonged trauma---not a personality flaw or
+                  treatment-resistant depression---can be profoundly validating.
                 </p>
               ),
             },
@@ -1208,7 +1208,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Understanding that your struggles with emotions, relationships, and self-worth are symptoms of a trauma
-                  response—not evidence that you're fundamentally broken—fosters self-compassion.
+                  response---not evidence that you're fundamentally broken---fosters self-compassion.
                 </p>
               ),
             },
@@ -1240,7 +1240,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           phase-based treatment that addresses all your symptoms.
         </p>
         <p className="mb-6">
-          Recovery from C-PTSD takes time—often years—but it is absolutely possible. You're not broken or defective.
+          Recovery from C-PTSD takes time---often years---but it is absolutely possible. You're not broken or defective.
           You adapted brilliantly to impossible circumstances. Now, you can learn new ways of being that serve you
           better.
         </p>
@@ -1331,12 +1331,12 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You're going about your day when suddenly you're not here anymore. A smell, a sound, or nothing you can
-            identify triggers it—and you're back there. Your heart races. You can see it, feel it, smell it as if it's
+            identify triggers it---and you're back there. Your heart races. You can see it, feel it, smell it as if it's
             happening right now. This is a flashback, and it's one of the most distressing symptoms of PTSD.
           </p>
           <p className="mb-6">
-            Understanding what happens in your brain during a flashback—and why your mind can't tell the difference
-            between past and present—is the first step toward managing them{', '}
+            Understanding what happens in your brain during a flashback---and why your mind can't tell the difference
+            between past and present---is the first step toward managing them{', '}
             <Citation id="1" index={1} source="Biological Psychiatry" year="2020" tier={1} />.
           </p>
         </div>
@@ -1351,7 +1351,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           A flashback is a dissociative experience where you re-experience a traumatic event as if it's happening in
           the present moment{', '}
           <Citation id="3" index={3} source="National Center for PTSD" year="2023" tier={2} />. It's more than just
-          remembering—you feel transported back to the original event.
+          remembering---you feel transported back to the original event.
         </p>
         <p className="mb-6">Flashbacks can involve:</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1409,7 +1409,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>Fragmented into sensory pieces (images, sounds, smells)</li>
-                <li>No time stamp—not filed as "past"</li>
+                <li>No time stamp---not filed as "past"</li>
                 <li>Feels like it's happening now</li>
                 <li>Intrudes involuntarily</li>
                 <li>Exists separately, not integrated</li>
@@ -1459,7 +1459,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                   </p>
                   <p className="mb-3">
                     <strong>Example:</strong> A veteran hears a car backfire and suddenly feels heart-pounding terror,
-                    but doesn't necessarily "see" combat scenes—just experiences the body's fear response
+                    but doesn't necessarily "see" combat scenes---just experiences the body's fear response
                   </p>
                 </div>
               ),
@@ -1475,7 +1475,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                   </p>
                   <p className="mb-3">
                     <strong>Example:</strong> Feeling sudden, intense shame or terror that feels disproportionate to
-                    the current situation—this is your body remembering the emotional state of past trauma
+                    the current situation---this is your body remembering the emotional state of past trauma
                   </p>
                   <p>
                     <em>
@@ -1542,7 +1542,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Sometimes flashbacks seem to come "out of nowhere"—but there's usually a trigger, even if it's operating below
+          Sometimes flashbacks seem to come "out of nowhere"---but there's usually a trigger, even if it's operating below
           conscious awareness.
         </p>
 
@@ -1602,7 +1602,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Safe Place Imagery',
               description: (
                 <p>
-                  Visualize a place where you feel completely safe (real or imaginary). Engage all your senses—what do
+                  Visualize a place where you feel completely safe (real or imaginary). Engage all your senses---what do
                   you see, hear, smell, feel there? This gives your brain an alternative to the trauma imagery.
                 </p>
               ),
@@ -1622,7 +1622,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <ArticleCallout variant="tip">
           <p>
             Practice grounding techniques when you're <strong>not</strong> in a flashback. This makes them more
-            accessible when you need them. It's like a fire drill—you want to know the exits before there's an actual
+            accessible when you need them. It's like a fire drill---you want to know the exits before there's an actual
             emergency.
           </p>
         </ArticleCallout>
@@ -1641,7 +1641,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <p className="mb-6">
           Treatments like EMDR, CPT, and Prolonged Exposure work by helping your hippocampus finally organize the
           trauma memory, give it a time stamp, and integrate it into your life narrative. When this happens, the memory
-          becomes just that—a memory. It stops intruding because your brain now knows it's in the past{', '}
+          becomes just that---a memory. It stops intruding because your brain now knows it's in the past{', '}
           <Citation id="8" index={8} source="Nature Reviews Neuroscience" year="2019" tier={1} />.
         </p>
 
@@ -1744,12 +1744,12 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You can't relax. Your eyes constantly scan every room you enter, noting exits, checking faces, assessing
-            threats. You startle at sudden sounds. You notice everything—every movement in your peripheral vision, every
+            threats. You startle at sudden sounds. You notice everything---every movement in your peripheral vision, every
             shift in someone's tone. Your nervous system is stuck in high alert, convinced danger is imminent even when
             you're objectively safe. This is hypervigilance, and it's exhausting.
           </p>
           <p className="mb-6">
-            Hypervigilance is a common symptom of PTSD—an overactive threat-detection system that once kept you safe but
+            Hypervigilance is a common symptom of PTSD---an overactive threat-detection system that once kept you safe but
             now prevents you from ever feeling at ease{', '}
             <Citation id="1" index={1} source="Biological Psychiatry: Cognitive Neuroscience" year="2020" tier={1} />.
           </p>
@@ -1808,7 +1808,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Your amygdala (the brain's smoke detector) becomes hypersensitive after trauma. It's like a smoke
-                  detector that goes off when you make toast—the sensitivity is too high. Your amygdala now interprets
+                  detector that goes off when you make toast---the sensitivity is too high. Your amygdala now interprets
                   neutral or mildly threatening cues as dangerous.
                 </p>
               ),
@@ -1830,7 +1830,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Your sympathetic nervous system (fight/flight) stays partially activated. You're in a state of
-                  sustained arousal—not full panic, but always 'on"—ready to spring into action at any moment.
+                  sustained arousal---not full panic, but always 'on"---ready to spring into action at any moment.
                 </p>
               ),
             },
@@ -1840,7 +1840,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Your attention automatically orients toward threat-related stimuli. In a crowded room, you notice the
-                  person who seems angry, the exit routes, potential weapons—not because you're choosing to, but because
+                  person who seems angry, the exit routes, potential weapons---not because you're choosing to, but because
                   your brain automatically prioritizes threat-relevant information.
                 </p>
               ),
@@ -1855,7 +1855,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           Why Hypervigilance Develops
         </h2>
         <p className="mb-6">
-          Hypervigilance is actually an <em>adaptive</em> response—your brain learned it kept you safe. If you
+          Hypervigilance is actually an <em>adaptive</em> response---your brain learned it kept you safe. If you
           experienced prolonged danger (childhood abuse, combat, domestic violence), heightened vigilance helped you
           anticipate and avoid threats.
         </p>
@@ -2032,9 +2032,9 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Hypervigilance served a purpose—it kept you alive during danger. But you don't need that level of vigilance
+          Hypervigilance served a purpose---it kept you alive during danger. But you don't need that level of vigilance
           anymore. With time and practice, you can teach your nervous system that it's okay to relax, to let your guard
-          down, to rest. Safety can become more than just a concept—it can become a felt experience in your body.
+          down, to rest. Safety can become more than just a concept---it can become a felt experience in your body.
         </p>
       </>
     ),
@@ -2122,10 +2122,10 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You feel nothing. Friends share good news and you fake a smile, knowing you should be happy but feeling... empty. Someone you love says "I love you" and the words don't land. You go through the motions—work, meals, conversations—but it's like watching your life through glass. You're here, but you're not really <em>here</em>. This is emotional numbness, and it's one of the most isolating symptoms of trauma.
+            You feel nothing. Friends share good news and you fake a smile, knowing you should be happy but feeling... empty. Someone you love says "I love you" and the words don't land. You go through the motions---work, meals, conversations---but it's like watching your life through glass. You're here, but you're not really <em>here</em>. This is emotional numbness, and it's one of the most isolating symptoms of trauma.
           </p>
           <p className="mb-6">
-            While hypervigilance is all too much feeling, numbness is the opposite—a protective shutdown that leaves you disconnected from your emotions and from life itself{', '}
+            While hypervigilance is all too much feeling, numbness is the opposite---a protective shutdown that leaves you disconnected from your emotions and from life itself{', '}
             <Citation id="1" index={1} source="Biological Psychiatry" year="2020" tier={1} />.
           </p>
         </div>
@@ -2137,7 +2137,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           What Is Emotional Numbness?
         </h2>
         <p className="mb-6">
-          Emotional numbness (also called emotional anhedonia or affective numbing) is a persistent inability to experience emotions—positive or negative{', '}
+          Emotional numbness (also called emotional anhedonia or affective numbing) is a persistent inability to experience emotions---positive or negative{', '}
           <Citation id="3" index={3} source="National Center for PTSD" year="2023" tier={2} />. You might:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -2152,7 +2152,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Important Distinction">
           <p>
-            Numbness is different from depression, though they can co-occur. Depression involves negative emotions (sadness, hopelessness, guilt). Numbness is the <em>absence</em> of emotion—you don't feel sad, but you also don't feel anything else.
+            Numbness is different from depression, though they can co-occur. Depression involves negative emotions (sadness, hopelessness, guilt). Numbness is the <em>absence</em> of emotion---you don't feel sad, but you also don't feel anything else.
           </p>
         </ArticleCallout>
 
@@ -2173,7 +2173,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Emotional Overwhelm During Trauma',
               description: (
                 <p>
-                  During traumatic events, emotions become unbearably intense—terror, helplessness, rage, shame. These emotions are more than your system can handle.
+                  During traumatic events, emotions become unbearably intense---terror, helplessness, rage, shame. These emotions are more than your system can handle.
                 </p>
               ),
             },
@@ -2181,7 +2181,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Adaptive Shutdown',
               description: (
                 <p>
-                  To survive, your brain essentially turns down the emotional volume. This is called dissociation—disconnecting from feelings to get through an impossible situation{', '}
+                  To survive, your brain essentially turns down the emotional volume. This is called dissociation---disconnecting from feelings to get through an impossible situation{', '}
                   <Citation id="4" index={4} source="European Journal of Psychotraumatology" year="2020" tier={1} />.
                 </p>
               ),
@@ -2233,7 +2233,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Reward System Dysfunction',
               content: (
                 <p>
-                  Brain regions involved in pleasure and reward (nucleus accumbens, ventral striatum) show reduced activity. This is why nothing feels good anymore—your brain's reward circuitry is dampened.
+                  Brain regions involved in pleasure and reward (nucleus accumbens, ventral striatum) show reduced activity. This is why nothing feels good anymore---your brain's reward circuitry is dampened.
                 </p>
               ),
             },
@@ -2272,7 +2272,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Some people describe numbness as a relief after the intensity of hyperarousal. But long-term, it's deeply damaging. You're not healing—you're just avoiding. Recovery requires feeling your feelings, not eliminating them.
+            Some people describe numbness as a relief after the intensity of hyperarousal. But long-term, it's deeply damaging. You're not healing---you're just avoiding. Recovery requires feeling your feelings, not eliminating them.
           </p>
         </ArticleCallout>
 
@@ -2386,10 +2386,10 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           What to Expect as Numbness Lifts
         </h2>
         <p className="mb-6">
-          As you reconnect with emotions, it won't be all sunshine and rainbows. You'll feel the difficult emotions too—grief, anger, sadness. This can be scary, but it's actually a sign of healing. You're no longer avoiding; you're processing.
+          As you reconnect with emotions, it won't be all sunshine and rainbows. You'll feel the difficult emotions too---grief, anger, sadness. This can be scary, but it's actually a sign of healing. You're no longer avoiding; you're processing.
         </p>
         <p className="mb-6">
-          The goal isn't to feel good all the time. The goal is to feel—to experience the full range of human emotions, both pleasant and unpleasant. That's what it means to be alive.
+          The goal isn't to feel good all the time. The goal is to feel---to experience the full range of human emotions, both pleasant and unpleasant. That's what it means to be alive.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -2398,15 +2398,15 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Emotional numbness is a protective response that persists after trauma</li>
-            <li>You can't selectively numb—shutting down pain also shuts down joy</li>
+            <li>You can't selectively numb---shutting down pain also shuts down joy</li>
             <li>Reconnecting with emotions is gradual and requires creating safety</li>
             <li>Body-based approaches are often most effective for numbing</li>
-            <li>Feeling again—even painful emotions—is a sign of healing, not regression</li>
+            <li>Feeling again---even painful emotions---is a sign of healing, not regression</li>
           </ul>
         </ArticleCallout>
 
         <p className="mb-6">
-          Numbness served a purpose. It got you through something unbearable. But you don't need it anymore. Slowly, carefully, with support, you can thaw. And when you do, you'll discover that being alive—really alive, feeling all of it—is worth the risk.
+          Numbness served a purpose. It got you through something unbearable. But you don't need it anymore. Slowly, carefully, with support, you can thaw. And when you do, you'll discover that being alive---really alive, feeling all of it---is worth the risk.
         </p>
       </>
     ),

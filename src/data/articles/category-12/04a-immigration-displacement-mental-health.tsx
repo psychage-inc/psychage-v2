@@ -90,10 +90,10 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Leaving your home country—whether by choice or necessity—is one of life's most significant stressors. You leave behind family, language, culture, career, and everything familiar. You arrive in a place where nothing feels like home, where you may not speak the language, where your credentials aren't recognized, and where you're navigating systems you don't understand.
+            Leaving your home country---whether by choice or necessity---is one of life's most significant stressors. You leave behind family, language, culture, career, and everything familiar. You arrive in a place where nothing feels like home, where you may not speak the language, where your credentials aren't recognized, and where you're navigating systems you don't understand.
           </p>
           <p className="mb-6">
-            Immigration is not just a logistical challenge—it's a profound psychological one <Citation id="1" index={1} source="World Psychiatry" year="2018" tier={1} />. Immigrants face higher rates of depression, anxiety, and PTSD compared to native-born populations, not because migration itself is inherently pathological, but because of the immense stress that accompanies it <Citation id="2" index={2} source="American Journal of Public Health" year="2020" tier={1} />. Understanding these challenges is the first step toward healing.
+            Immigration is not just a logistical challenge---it's a profound psychological one <Citation id="1" index={1} source="World Psychiatry" year="2018" tier={1} />. Immigrants face higher rates of depression, anxiety, and PTSD compared to native-born populations, not because migration itself is inherently pathological, but because of the immense stress that accompanies it <Citation id="2" index={2} source="American Journal of Public Health" year="2020" tier={1} />. Understanding these challenges is the first step toward healing.
           </p>
         </div>
 
@@ -133,7 +133,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Dangerous travel conditions (border crossings, smugglers, overcrowded boats)</li>
                     <li>Detention in immigration facilities</li>
-                    <li>Family separation—leaving loved ones behind or being separated at the border</li>
+                    <li>Family separation---leaving loved ones behind or being separated at the border</li>
                     <li>Fear of deportation or being turned away</li>
                     <li>Loss of belongings, documents, or money along the way</li>
                   </ul>
@@ -148,9 +148,9 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
                     <strong>What you face after arrival:</strong>
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Acculturation stress—adapting to a new language, culture, and way of life</li>
+                    <li>Acculturation stress---adapting to a new language, culture, and way of life</li>
                     <li>Discrimination, xenophobia, and anti-immigrant sentiment</li>
-                    <li>Downward mobility—loss of professional status, underemployment</li>
+                    <li>Downward mobility---loss of professional status, underemployment</li>
                     <li>Financial hardship, housing instability</li>
                     <li>Social isolation and loss of community</li>
                     <li>Ongoing fear for undocumented immigrants or those with uncertain legal status</li>
@@ -180,7 +180,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           1. Grief and Loss
         </h3>
         <p className="mb-6">
-          Immigration involves profound loss—of home, culture, language, relationships, professional identity, and a sense of belonging. This is called "ambiguous loss" because what you've lost still exists, but you're separated from it. Grieving this loss is normal and necessary.
+          Immigration involves profound loss---of home, culture, language, relationships, professional identity, and a sense of belonging. This is called "ambiguous loss" because what you've lost still exists, but you're separated from it. Grieving this loss is normal and necessary.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -194,7 +194,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           3. Downward Mobility
         </h3>
         <p className="mb-6">
-          Many immigrants were professionals in their home countries—doctors, teachers, engineers—but their credentials aren't recognized in the new country. Working low-wage jobs, being underemployed, and losing professional status damages self-esteem and financial security.
+          Many immigrants were professionals in their home countries---doctors, teachers, engineers---but their credentials aren't recognized in the new country. Working low-wage jobs, being underemployed, and losing professional status damages self-esteem and financial security.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -213,7 +213,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Healthy Immigrant Paradox">
           <p>
-            Research shows that recent immigrants often have better mental health than native-born populations despite facing more stressors—this is called the "healthy immigrant paradox." However, this advantage erodes over time as immigrants face chronic discrimination, economic hardship, and acculturation stress. The longer immigrants live in the host country, the more their mental health resembles or worsens compared to native-born populations.
+            Research shows that recent immigrants often have better mental health than native-born populations despite facing more stressors---this is called the "healthy immigrant paradox." However, this advantage erodes over time as immigrants face chronic discrimination, economic hardship, and acculturation stress. The longer immigrants live in the host country, the more their mental health resembles or worsens compared to native-born populations.
           </p>
         </ArticleCallout>
 
@@ -278,7 +278,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Finding Mental Health Support as an Immigrant
         </h2>
         <p className="mb-6">
-          Barriers to mental health care are real—language, cost, fear, stigma—but support is available <Citation id="6" index={6} source="SAMHSA" year="2022" tier={2} />:
+          Barriers to mental health care are real---language, cost, fear, stigma---but support is available <Citation id="6" index={6} source="SAMHSA" year="2022" tier={2} />:
         </p>
 
         <ArticleAccordion
@@ -323,7 +323,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Emergency medical care regardless of immigration status</li>
                     <li>Confidential mental health services (HIPAA protects your privacy)</li>
-                    <li>Some states offer healthcare coverage to undocumented residents—check local resources</li>
+                    <li>Some states offer healthcare coverage to undocumented residents---check local resources</li>
                   </ul>
                   <p className="mt-4">
                     <strong>Note:</strong> While most clinics are safe, if you're concerned, seek care from immigrant-serving organizations that explicitly protect client privacy.
@@ -370,7 +370,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           You Are Not Alone
         </h2>
         <p className="mb-6">
-          The psychological challenges of immigration are real, but they don't define you. You survived leaving your home, navigating a new country, and rebuilding your life—that is resilience. Seeking help is not weakness; it's continuing that same courage. You deserve support, and support exists.
+          The psychological challenges of immigration are real, but they don't define you. You survived leaving your home, navigating a new country, and rebuilding your life---that is resilience. Seeking help is not weakness; it's continuing that same courage. You deserve support, and support exists.
         </p>
       </>
     ),
@@ -453,10 +453,10 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You didn't choose to leave. You were forced to flee—war, persecution, violence, or disaster made staying impossible. You left behind your home, your community, sometimes your family. You survived a dangerous journey. You arrived in a new country where everything is unfamiliar, where you may be unwanted, where you're starting over with nothing.
+            You didn't choose to leave. You were forced to flee---war, persecution, violence, or disaster made staying impossible. You left behind your home, your community, sometimes your family. You survived a dangerous journey. You arrived in a new country where everything is unfamiliar, where you may be unwanted, where you're starting over with nothing.
           </p>
           <p className="mb-6">
-            Refugees face some of the most extreme mental health challenges of any population <Citation id="1" index={1} source="The Lancet" year="2019" tier={1} />. Rates of PTSD, depression, and anxiety are significantly higher than in the general population—not because refugees are weak, but because they've endured trauma that most people will never experience <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2020" tier={1} />. Yet refugees also demonstrate extraordinary resilience. Understanding both the harm and the strength is essential.
+            Refugees face some of the most extreme mental health challenges of any population <Citation id="1" index={1} source="The Lancet" year="2019" tier={1} />. Rates of PTSD, depression, and anxiety are significantly higher than in the general population---not because refugees are weak, but because they've endured trauma that most people will never experience <Citation id="2" index={2} source="Journal of Traumatic Stress" year="2020" tier={1} />. Yet refugees also demonstrate extraordinary resilience. Understanding both the harm and the strength is essential.
           </p>
         </div>
 
@@ -478,7 +478,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Layers of Trauma: Before, During, and After
         </h2>
         <p className="mb-6">
-          Refugee trauma is not a single event—it's cumulative, ongoing, and layered <Citation id="1" index={1} source="The Lancet" year="2019" tier={1} />:
+          Refugee trauma is not a single event---it's cumulative, ongoing, and layered <Citation id="1" index={1} source="The Lancet" year="2019" tier={1} />:
         </p>
 
         <BeforeAfter
@@ -514,7 +514,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Post-Migration Stressors
         </h3>
         <p className="mb-6">
-          Trauma doesn't end upon arrival—new stressors compound existing trauma <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2021" tier={1} />:
+          Trauma doesn't end upon arrival---new stressors compound existing trauma <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Prolonged asylum process</strong>: Years of uncertainty about legal status and fear of deportation</li>
@@ -528,7 +528,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Complex Trauma vs. Single-Incident PTSD">
           <p>
-            Refugees often experience complex trauma—multiple, prolonged traumatic events over time—rather than a single incident. This differs from the "classic" PTSD model (e.g., one car accident). Complex trauma affects identity, trust, relationships, and worldview more deeply, requiring longer, more comprehensive treatment.
+            Refugees often experience complex trauma---multiple, prolonged traumatic events over time---rather than a single incident. This differs from the "classic" PTSD model (e.g., one car accident). Complex trauma affects identity, trust, relationships, and worldview more deeply, requiring longer, more comprehensive treatment.
           </p>
         </ArticleCallout>
 
@@ -565,7 +565,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
               feature: 'Grief',
               values: [
                 'Profound sadness for losses (home, family, identity, culture)',
-                'Ambiguous loss—grieving people and places that still exist but are unreachable',
+                'Ambiguous loss---grieving people and places that still exist but are unreachable',
               ],
             },
             {
@@ -625,7 +625,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Resilience and Post-Traumatic Growth
         </h2>
         <p className="mb-6">
-          Despite immense suffering, many refugees demonstrate remarkable resilience and even post-traumatic growth—positive psychological change as a result of struggling with trauma <Citation id="6" index={6} source="Journal of Refugee Studies" year="2020" tier={1} />:
+          Despite immense suffering, many refugees demonstrate remarkable resilience and even post-traumatic growth---positive psychological change as a result of struggling with trauma <Citation id="6" index={6} source="Journal of Refugee Studies" year="2020" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Stronger sense of purpose and meaning</li>
@@ -635,7 +635,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           <li>Recognition of personal strength</li>
         </ul>
         <p className="mb-6">
-          Resilience doesn't mean trauma didn't happen or doesn't hurt—it means you're surviving despite it.
+          Resilience doesn't mean trauma didn't happen or doesn't hurt---it means you're surviving despite it.
         </p>
 
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -660,7 +660,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
             <li>Be provided in the client's native language (not through family interpreters)</li>
             <li>Address ongoing stressors (asylum process, family separation) alongside past trauma</li>
             <li>Integrate cultural and spiritual beliefs about healing</li>
-            <li>Build trust slowly—refugees may have experienced betrayal by authorities</li>
+            <li>Build trust slowly---refugees may have experienced betrayal by authorities</li>
             <li>Prioritize safety and stabilization before processing trauma</li>
           </ul>
         </ArticleCallout>
@@ -691,7 +691,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          What you've survived is unimaginable. Seeking help doesn't mean you're broken—it means you're continuing to fight for your life and your future. You deserve healing, and healing is possible.
+          What you've survived is unimaginable. Seeking help doesn't mean you're broken---it means you're continuing to fight for your life and your future. You deserve healing, and healing is possible.
         </p>
       </>
     ),
@@ -766,10 +766,10 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You fled persecution. You survived the journey. You arrived at a border and asked for protection—something international law guarantees you the right to seek. Instead, you were detained. You were separated from your children. You waited months, then years, in legal limbo, not knowing if you'll be sent back to the danger you escaped or allowed to stay. Every day is uncertainty, fear, and powerlessness.
+            You fled persecution. You survived the journey. You arrived at a border and asked for protection---something international law guarantees you the right to seek. Instead, you were detained. You were separated from your children. You waited months, then years, in legal limbo, not knowing if you'll be sent back to the danger you escaped or allowed to stay. Every day is uncertainty, fear, and powerlessness.
           </p>
           <p className="mb-6">
-            Asylum seekers face some of the most extreme mental health crises of any population <Citation id="1" index={1} source="British Journal of Psychiatry" year="2020" tier={1} />. The combination of pre-migration trauma, immigration detention, family separation, and prolonged uncertainty produces rates of PTSD, depression, and suicide that are alarmingly high <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={1} />. This is not an accident—it's the predictable result of policies designed to deter asylum seekers through psychological harm.
+            Asylum seekers face some of the most extreme mental health crises of any population <Citation id="1" index={1} source="British Journal of Psychiatry" year="2020" tier={1} />. The combination of pre-migration trauma, immigration detention, family separation, and prolonged uncertainty produces rates of PTSD, depression, and suicide that are alarmingly high <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={1} />. This is not an accident---it's the predictable result of policies designed to deter asylum seekers through psychological harm.
           </p>
         </div>
 
@@ -795,7 +795,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           1. Immigration Detention
         </h3>
         <p className="mb-6">
-          Being detained—often in facilities that resemble prisons—compounds trauma <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={1} />:
+          Being detained---often in facilities that resemble prisons---compounds trauma <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Indefinite detention</strong>: Not knowing when or if you'll be released</li>
@@ -807,7 +807,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Research consistently shows that immigration detention causes severe psychological harm, including PTSD, depression, anxiety, and increased suicide risk <Citation id="6" index={6} source="The Lancet Public Health" year="2022" tier={1} />. Detention does not improve asylum case outcomes—it only harms mental health.
+            Research consistently shows that immigration detention causes severe psychological harm, including PTSD, depression, anxiety, and increased suicide risk <Citation id="6" index={6} source="The Lancet Public Health" year="2022" tier={1} />. Detention does not improve asylum case outcomes---it only harms mental health.
           </p>
         </ArticleCallout>
 
@@ -837,7 +837,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Prolonged uncertainty is toxic to mental health—it prevents healing, fuels anxiety, and produces hopelessness.
+          Prolonged uncertainty is toxic to mental health---it prevents healing, fuels anxiety, and produces hopelessness.
         </p>
 
         <h2 id="compounded-trauma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -895,7 +895,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           <li><strong>Legal limbo</strong>: Cannot access public benefits or insurance while asylum case is pending</li>
           <li><strong>Language</strong>: Services rarely available in asylum seekers" languages</li>
           <li><strong>Fear</strong>: Worry that disclosing mental health struggles could hurt asylum case</li>
-          <li><strong>Mistrust</strong>: Authorities in home country may have been perpetrators—hard to trust systems here</li>
+          <li><strong>Mistrust</strong>: Authorities in home country may have been perpetrators---hard to trust systems here</li>
           <li><strong>Stigma</strong>: Cultural beliefs that mental illness is shameful or a sign of weakness</li>
         </ul>
 
@@ -903,15 +903,15 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Immigration Policy as Intentional Psychological Harm
         </h2>
         <p className="mb-6">
-          Policies like prolonged detention, family separation, and "Remain in Mexico" are not bureaucratic accidents—they are designed to deter asylum seekers by inflicting psychological suffering <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={1} />. Public health experts, human rights organizations, and mental health professionals have called these policies "state-sanctioned trauma."
+          Policies like prolonged detention, family separation, and "Remain in Mexico" are not bureaucratic accidents---they are designed to deter asylum seekers by inflicting psychological suffering <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={1} />. Public health experts, human rights organizations, and mental health professionals have called these policies "state-sanctioned trauma."
         </p>
         <p className="mb-6">
-          The harm is predictable, preventable, and policy-driven. Asylum seekers" mental health crises are iatrogenic—caused by the systems meant to process their cases.
+          The harm is predictable, preventable, and policy-driven. Asylum seekers" mental health crises are iatrogenic---caused by the systems meant to process their cases.
         </p>
 
         <ArticleCallout variant="clinical-note" title="International Law and the Right to Asylum">
           <p>
-            Under international law (1951 Refugee Convention), people have the right to seek asylum and should not be penalized for irregular entry. Detention, family separation, and deterrence policies violate these principles. Mental health harm is not a side effect—it's a human rights violation <Citation id="5" index={5} source="UNHCR" year="2021" tier={2} />.
+            Under international law (1951 Refugee Convention), people have the right to seek asylum and should not be penalized for irregular entry. Detention, family separation, and deterrence policies violate these principles. Mental health harm is not a side effect---it's a human rights violation <Citation id="5" index={5} source="UNHCR" year="2021" tier={2} />.
           </p>
         </ArticleCallout>
 
@@ -950,7 +950,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
               title: 'Crisis Support',
               description: (
                 <p>
-                  If you're in crisis, call or text 988 (Suicide & Crisis Lifeline). Multilingual support is available. Your immigration status does not matter—crisis services are confidential and free.
+                  If you're in crisis, call or text 988 (Suicide & Crisis Lifeline). Multilingual support is available. Your immigration status does not matter---crisis services are confidential and free.
                 </p>
               ),
             },
@@ -980,7 +980,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          What you're enduring is inhumane. Your distress is not weakness—it's a normal response to abnormal cruelty. You deserve safety, dignity, and healing. Support exists, even within a system designed to harm you. Reach out.
+          What you're enduring is inhumane. Your distress is not weakness---it's a normal response to abnormal cruelty. You deserve safety, dignity, and healing. Support exists, even within a system designed to harm you. Reach out.
         </p>
       </>
     ),
@@ -1058,10 +1058,10 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You don't speak the language well enough. Your accent marks you as foreign. The customs are confusing—when to make eye contact, how close to stand, what's polite and what's rude. Your qualifications from home aren't recognized. You miss your food, your community, the way life used to make sense. But when you try to hold onto your culture, people tell you: "You're in America now. You need to assimilate."
+            You don't speak the language well enough. Your accent marks you as foreign. The customs are confusing---when to make eye contact, how close to stand, what's polite and what's rude. Your qualifications from home aren't recognized. You miss your food, your community, the way life used to make sense. But when you try to hold onto your culture, people tell you: "You're in America now. You need to assimilate."
           </p>
           <p className="mb-6">
-            Acculturation stress is the psychological strain of adapting to a new culture <Citation id="1" index={1} source="American Psychologist" year="2018" tier={1} />. It's normal—nearly everyone who immigrates experiences it. But when the pressure to change is relentless, when you're told your culture is inferior, or when you feel like you're losing yourself, acculturation stress can lead to anxiety, depression, and identity confusion.
+            Acculturation stress is the psychological strain of adapting to a new culture <Citation id="1" index={1} source="American Psychologist" year="2018" tier={1} />. It's normal---nearly everyone who immigrates experiences it. But when the pressure to change is relentless, when you're told your culture is inferior, or when you feel like you're losing yourself, acculturation stress can lead to anxiety, depression, and identity confusion.
           </p>
         </div>
 
@@ -1120,7 +1120,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Research consistently shows that integration—being bicultural—produces the best mental health outcomes <Citation id="3" index={3} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />. You don't have to choose between cultures. You can honor both.
+            Research consistently shows that integration---being bicultural---produces the best mental health outcomes <Citation id="3" index={3} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />. You don't have to choose between cultures. You can honor both.
           </p>
         </ArticleCallout>
 
@@ -1133,7 +1133,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           <li><strong>Loss of status</strong>: Credentials not recognized, underemployment, loss of professional identity</li>
           <li><strong>Cultural clash</strong>: Values from home culture conflict with host culture (individualism vs. collectivism, gender roles, parenting styles)</li>
           <li><strong>Social isolation</strong>: Loss of community, difficulty making friends, feeling like an outsider</li>
-          <li><strong>Identity confusion</strong>: Not knowing who you are anymore—too different from your heritage culture, but not accepted in the host culture</li>
+          <li><strong>Identity confusion</strong>: Not knowing who you are anymore---too different from your heritage culture, but not accepted in the host culture</li>
           <li><strong>Guilt</strong>: Feeling like you're betraying your culture by adapting</li>
         </ul>
 
@@ -1162,7 +1162,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
               <ul className="list-disc pl-5 space-y-2">
                 <li>Want to fit in with peers, adopt host culture norms</li>
                 <li>May feel embarrassed by parents" accents, customs, or traditional values</li>
-                <li>Take on adult roles (translating, navigating systems) — "parentification"</li>
+                <li>Take on adult roles (translating, navigating systems) --- "parentification"</li>
                 <li>Feel torn between two worlds, pressured to choose</li>
               </ul>
             ),
@@ -1200,7 +1200,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
               title: 'Learn the Language (But Keep Yours)',
               description: (
                 <p>
-                  Language proficiency reduces stress and increases opportunities—but don't abandon your native language. Bilingualism is a cognitive advantage and preserves cultural connection.
+                  Language proficiency reduces stress and increases opportunities---but don't abandon your native language. Bilingualism is a cognitive advantage and preserves cultural connection.
                 </p>
               ),
             },
@@ -1237,7 +1237,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Adapting to a new culture is hard. You're not failing—you're navigating something most people never have to do. You can honor where you come from while building a life where you are.
+          Adapting to a new culture is hard. You're not failing---you're navigating something most people never have to do. You can honor where you come from while building a life where you are.
         </p>
       </>
     ),
@@ -1312,10 +1312,10 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're sitting in a therapist's office, trying to explain how you feel. But the words don't exist in English. The language you learned to express emotion, to describe family roles, to talk about your body and spirit—none of it translates. The therapist doesn't understand. You feel more alone than when you walked in.
+            You're sitting in a therapist's office, trying to explain how you feel. But the words don't exist in English. The language you learned to express emotion, to describe family roles, to talk about your body and spirit---none of it translates. The therapist doesn't understand. You feel more alone than when you walked in.
           </p>
           <p className="mb-6">
-            Nearly 26 million people in the United States have limited English proficiency, and language barriers are one of the most significant obstacles to mental health care <Citation id="1" index={1} source="Journal of General Internal Medicine" year="2019" tier={1} />. When you can't communicate in your native language, you can't fully access treatment, build trust with providers, or express the nuances of psychological pain. Language barriers don't just inconvenience—they harm.
+            Nearly 26 million people in the United States have limited English proficiency, and language barriers are one of the most significant obstacles to mental health care <Citation id="1" index={1} source="Journal of General Internal Medicine" year="2019" tier={1} />. When you can't communicate in your native language, you can't fully access treatment, build trust with providers, or express the nuances of psychological pain. Language barriers don't just inconvenience---they harm.
           </p>
         </div>
 
@@ -1390,12 +1390,12 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           <li><strong>"Depression"</strong>: Some languages don't have a direct equivalent; may be described through physical symptoms (heaviness, pain) rather than emotional terms</li>
           <li><strong>"Anxiety"</strong>: May be expressed as "nervios" (Spanish), "hwa-byung" (Korean), or other culture-bound syndromes</li>
           <li><strong>Family roles</strong>: Terms like "enmeshment" or "codependency" have negative connotations in Western therapy but describe valued interdependence in collectivist cultures</li>
-          <li><strong>Trauma</strong>: Describing traumatic experiences in a second language can feel emotionally distant—you're not accessing the visceral memory tied to your first language</li>
+          <li><strong>Trauma</strong>: Describing traumatic experiences in a second language can feel emotionally distant---you're not accessing the visceral memory tied to your first language</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="Why Native Language Therapy Matters">
           <p>
-            Research shows that therapy in a person's native language produces better outcomes than therapy through interpreters <Citation id="6" index={6} source="Cultural Diversity and Ethnic Minority Psychology" year="2019" tier={1} />. Emotions are encoded in the language you first learned them. When you switch languages, you may dissociate from emotion—helpful for daily functioning, but harmful for therapy where feeling is essential.
+            Research shows that therapy in a person's native language produces better outcomes than therapy through interpreters <Citation id="6" index={6} source="Cultural Diversity and Ethnic Minority Psychology" year="2019" tier={1} />. Emotions are encoded in the language you first learned them. When you switch languages, you may dissociate from emotion---helpful for daily functioning, but harmful for therapy where feeling is essential.
           </p>
         </ArticleCallout>
 
@@ -1410,7 +1410,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Professional Interpreters
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Loss of nuance</strong>: Mental health interpreters need specialized training—medical interpreters may not understand psychological terminology</li>
+          <li><strong>Loss of nuance</strong>: Mental health interpreters need specialized training---medical interpreters may not understand psychological terminology</li>
           <li><strong>Disrupted rapport</strong>: Three-way conversation slows pacing, reduces eye contact, makes therapy feel clinical</li>
           <li><strong>Limited availability</strong>: Few interpreters trained in mental health; long wait times</li>
         </ul>
@@ -1419,7 +1419,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           Family Members as Interpreters (Problematic)
         </h3>
         <p className="mb-6">
-          Using family—especially children—to interpret violates ethical standards and causes harm <Citation id="4" index={4} source="Journal of Clinical Ethics" year="2017" tier={1} />:
+          Using family---especially children---to interpret violates ethical standards and causes harm <Citation id="4" index={4} source="Journal of Clinical Ethics" year="2017" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Confidentiality violated</strong>: Patient can't disclose private information (abuse, sexual health, suicidal thoughts) in front of family</li>
@@ -1430,7 +1430,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Federal law (Title VI of the Civil Rights Act) requires healthcare facilities that receive federal funding to provide language access services, including qualified interpreters <Citation id="5" index={5} source="HHS" year="2021" tier={2} />. You have the right to request an interpreter—do not accept family translation for mental health care.
+            Federal law (Title VI of the Civil Rights Act) requires healthcare facilities that receive federal funding to provide language access services, including qualified interpreters <Citation id="5" index={5} source="HHS" year="2021" tier={2} />. You have the right to request an interpreter---do not accept family translation for mental health care.
           </p>
         </ArticleCallout>
 
@@ -1504,7 +1504,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
           <li>Translate intake forms, consent forms, and educational materials</li>
           <li>Train interpreters specifically in mental health terminology</li>
           <li>Never use family members, especially children, as interpreters</li>
-          <li>Recognize that language concordance improves outcomes—prioritize it</li>
+          <li>Recognize that language concordance improves outcomes---prioritize it</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

@@ -113,7 +113,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You have 500 Facebook friends and 1,200 Instagram followers. You see updates from dozens of people every day. But you feel lonely. This paradox—being hyper-connected yet socially isolated—defines the modern digital experience.
+            You have 500 Facebook friends and 1,200 Instagram followers. You see updates from dozens of people every day. But you feel lonely. This paradox---being hyper-connected yet socially isolated---defines the modern digital experience.
           </p>
           <p className="mb-6">
             A landmark 2017 study found that young adults who used social media more than 2 hours per day had twice the risk of perceived social isolation compared to those who used it less than 30 minutes per day <Citation id="1" index={1} source="American Journal of Preventive Medicine" year="2017" tier={1} />. The relationship is counterintuitive but consistent: more online connection often means more loneliness.
@@ -127,7 +127,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Loneliness is more than an uncomfortable feeling. It's a public health crisis. Research shows that chronic loneliness increases the risk of premature death as much as smoking 15 cigarettes per day <Citation id="3" index={3} source="Perspectives on Psychological Science" year="2015" tier={1} />. It predicts depression, anxiety, cardiovascular disease, and cognitive decline.
         </p>
         <p className="mb-6">
-          Rates of loneliness have been rising for decades, but the increase accelerated after 2010—the same year Instagram launched and smartphones became ubiquitous. Correlation isn't causation, but the timing is striking.
+          Rates of loneliness have been rising for decades, but the increase accelerated after 2010---the same year Instagram launched and smartphones became ubiquitous. Correlation isn't causation, but the timing is striking.
         </p>
 
         <StatCard
@@ -177,7 +177,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           <li><strong>Active use:</strong> Messaging friends, commenting meaningfully, sharing your own thoughts. This predicts reduced loneliness when it involves close ties.</li>
         </ul>
         <p className="mb-6">
-          A 2019 study found that passive Facebook use increases loneliness through a specific pathway: it triggers upward social comparison, which makes you feel worse about your own social life <Citation id="5" index={5} source="Cyberpsychology, Behavior, and Social Networking" year="2019" tier={1} />. You see everyone else at parties, dinners, and events, and you feel left out—even if those same people also spend most nights at home.
+          A 2019 study found that passive Facebook use increases loneliness through a specific pathway: it triggers upward social comparison, which makes you feel worse about your own social life <Citation id="5" index={5} source="Cyberpsychology, Behavior, and Social Networking" year="2019" tier={1} />. You see everyone else at parties, dinners, and events, and you feel left out---even if those same people also spend most nights at home.
         </p>
 
         <ArticleCallout variant="info">
@@ -188,7 +188,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Weak Ties Don't Replace Strong Ties
         </h2>
         <p className="mb-6">
-          Social media is excellent at maintaining <strong>weak ties</strong>—acquaintances, old classmates, people you met once. But it's less effective at deepening <strong>strong ties</strong>—close friends and family who provide meaningful support.
+          Social media is excellent at maintaining <strong>weak ties</strong>---acquaintances, old classmates, people you met once. But it's less effective at deepening <strong>strong ties</strong>---close friends and family who provide meaningful support.
         </p>
         <p className="mb-6">
           A 2020 study found that people with larger social networks online but fewer close relationships offline reported higher loneliness <Citation id="9" index={9} source="Social Media + Society" year="2020" tier={1} />. The number of connections doesn't matter if none of them are deep.
@@ -259,7 +259,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'distance',
               title: 'Maintaining long-distance relationships',
               content: (
-                <p>When in-person contact isn't possible—because of distance, mobility issues, or pandemics—social media provides a valuable bridge. Video calls, messaging, and photo sharing help maintain closeness across miles.</p>
+                <p>When in-person contact isn't possible---because of distance, mobility issues, or pandemics---social media provides a valuable bridge. Video calls, messaging, and photo sharing help maintain closeness across miles.</p>
               ),
             },
             {
@@ -293,7 +293,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           A landmark 2018 study directly tested whether limiting social media reduces loneliness. Participants who cut their use to 30 minutes per day for three weeks showed significant decreases in loneliness and depression compared to a control group <Citation id="6" index={6} source="Journal of Social and Clinical Psychology" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          The mechanism? Participants reported spending more time with people in person, feeling less FOMO, and comparing themselves to others less frequently. Reducing social media didn't eliminate connection—it redirected attention toward higher-quality connection.
+          The mechanism? Participants reported spending more time with people in person, feeling less FOMO, and comparing themselves to others less frequently. Reducing social media didn't eliminate connection---it redirected attention toward higher-quality connection.
         </p>
 
         <QuoteBlock
@@ -338,7 +338,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="The Answer">
-          <p>Does social media replace real connection? For most people, yes—if used passively and excessively. It displaces in-person time, fosters comparison, and spreads attention across too many shallow ties. The solution isn't to quit entirely but to use it intentionally: less passive scrolling, more active messaging, and always prioritize face-to-face connection.</p>
+          <p>Does social media replace real connection? For most people, yes---if used passively and excessively. It displaces in-person time, fosters comparison, and spreads attention across too many shallow ties. The solution isn't to quit entirely but to use it intentionally: less passive scrolling, more active messaging, and always prioritize face-to-face connection.</p>
         </ArticleCallout>
       </>
     ),
@@ -434,10 +434,10 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You post a photo. Within seconds, you're checking for likes. The first few notifications trigger a small rush of pleasure. You keep checking. This isn't weakness—it's neuroscience. Social media platforms are engineered to exploit your brain's reward system, and they're very good at it.
+            You post a photo. Within seconds, you're checking for likes. The first few notifications trigger a small rush of pleasure. You keep checking. This isn't weakness---it's neuroscience. Social media platforms are engineered to exploit your brain's reward system, and they're very good at it.
           </p>
           <p className="mb-6">
-            Every like, comment, and share triggers a release of dopamine, the neurotransmitter associated with pleasure and motivation <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2021" tier={1} />. The platforms use variable reward schedules—the same mechanism that makes slot machines addictive—to keep you coming back. Understanding how this works is the first step toward breaking free.
+            Every like, comment, and share triggers a release of dopamine, the neurotransmitter associated with pleasure and motivation <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2021" tier={1} />. The platforms use variable reward schedules---the same mechanism that makes slot machines addictive---to keep you coming back. Understanding how this works is the first step toward breaking free.
           </p>
         </div>
 
@@ -452,14 +452,14 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="info">
-          <p><strong>How Dopamine Works:</strong> When you check your phone, your brain releases a small burst of dopamine in anticipation of potential rewards (new likes, messages, notifications). This creates a craving to check again. Over time, the behavior becomes compulsive—you check even when you don't expect anything new.</p>
+          <p><strong>How Dopamine Works:</strong> When you check your phone, your brain releases a small burst of dopamine in anticipation of potential rewards (new likes, messages, notifications). This creates a craving to check again. Over time, the behavior becomes compulsive---you check even when you don't expect anything new.</p>
         </ArticleCallout>
 
         <h2 id="variable-rewards" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Variable Reward Schedules: The Slot Machine Effect
         </h2>
         <p className="mb-6">
-          The most addictive feature of social media isn't the rewards themselves—it's the <strong>unpredictability</strong> of when you'll get them. This is called a <strong>variable ratio reinforcement schedule</strong>, and it's extraordinarily effective at creating compulsive behavior <Citation id="2" index={2} source="Addictive Behaviors" year="2020" tier={2} />.
+          The most addictive feature of social media isn't the rewards themselves---it's the <strong>unpredictability</strong> of when you'll get them. This is called a <strong>variable ratio reinforcement schedule</strong>, and it's extraordinarily effective at creating compulsive behavior <Citation id="2" index={2} source="Addictive Behaviors" year="2020" tier={2} />.
         </p>
         <p className="mb-6">
           Here's how it works: Sometimes you check Instagram and get 10 new likes. Sometimes you get zero. Sometimes you get one. You never know. This uncertainty keeps you checking because the next pull <em>might</em> be the big payoff. It's the same mechanism that keeps people at slot machines for hours.
@@ -482,10 +482,10 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Notifications: Pavlov's Bell for Your Pocket
         </h2>
         <p className="mb-6">
-          Push notifications are classical conditioning in action. The red badge, the ping, the vibration—these are all designed to trigger an immediate dopamine response and compel you to check <Citation id="5" index={5} source="Computers in Human Behavior" year="2021" tier={1} />.
+          Push notifications are classical conditioning in action. The red badge, the ping, the vibration---these are all designed to trigger an immediate dopamine response and compel you to check <Citation id="5" index={5} source="Computers in Human Behavior" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          Research shows that even <em>anticipating</em> a notification causes dopamine release. Your brain learns to associate the phone with potential rewards, so just seeing it on your desk triggers the urge to check. This is why "phone fasting" can feel so uncomfortable at first—you're experiencing withdrawal from a learned dopamine loop.
+          Research shows that even <em>anticipating</em> a notification causes dopamine release. Your brain learns to associate the phone with potential rewards, so just seeing it on your desk triggers the urge to check. This is why "phone fasting" can feel so uncomfortable at first---you're experiencing withdrawal from a learned dopamine loop.
         </p>
 
         <StatCard
@@ -504,7 +504,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Traditional media had natural stopping points: the end of a TV show, the bottom of a newspaper page, the last track on an album. Social media platforms deliberately remove these cues. The feed never ends. This design is called <strong>infinite scroll</strong>, and it's explicitly built to maximize time spent <Citation id="7" index={7} source="ACM Transactions on Computer-Human Interaction" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          Without stopping cues, your brain never gets the signal to disengage. You scroll "just a little more" until 20 minutes have passed. The absence of closure keeps dopamine flowing at a low, steady level—enough to hold your attention but not enough to satisfy the craving.
+          Without stopping cues, your brain never gets the signal to disengage. You scroll "just a little more" until 20 minutes have passed. The absence of closure keeps dopamine flowing at a low, steady level---enough to hold your attention but not enough to satisfy the craving.
         </p>
 
         <ArticleAccordion
@@ -514,7 +514,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'autoplay',
               title: 'Autoplay videos',
               content: (
-                <p>TikTok, YouTube, Instagram Reels—they all autoplay the next video. You don't have to decide to keep watching. The decision is made for you. This removes friction and makes disengagement require active effort.</p>
+                <p>TikTok, YouTube, Instagram Reels---they all autoplay the next video. You don't have to decide to keep watching. The decision is made for you. This removes friction and makes disengagement require active effort.</p>
               ),
             },
             {
@@ -538,7 +538,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Brain Changes in Heavy Users
         </h2>
         <p className="mb-6">
-          Neuroimaging studies show that heavy social media use is associated with changes in brain structure and function. A 2022 meta-analysis found that people with problematic smartphone use show reduced gray matter volume in the striatum—the brain's reward center <Citation id="4" index={4} source="Brain Structure and Function" year="2022" tier={1} />.
+          Neuroimaging studies show that heavy social media use is associated with changes in brain structure and function. A 2022 meta-analysis found that people with problematic smartphone use show reduced gray matter volume in the striatum---the brain's reward center <Citation id="4" index={4} source="Brain Structure and Function" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           These changes resemble what's seen in substance addiction. Longitudinal research shows that over time, users develop <strong>tolerance</strong> (needing more use to get the same dopamine hit) and <strong>withdrawal</strong> (anxiety, irritability when unable to check) <Citation id="8" index={8} source="Cyberpsychology, Behavior, and Social Networking" year="2023" tier={1} />.
@@ -563,7 +563,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Dopamine isn't the only neurochemical at play. Social media taps into a deeper need: <strong>social validation</strong>. Humans are intensely social creatures. Our ancestors' survival depended on group acceptance. Rejection meant death.
         </p>
         <p className="mb-6">
-          Likes and followers activate the same brain regions involved in social acceptance and rejection <Citation id="3" index={3} source="Frontiers in Psychology" year="2019" tier={1} />. When you get likes, your brain interprets this as social approval—evidence that you're valued by the group. When you don't, it registers as rejection.
+          Likes and followers activate the same brain regions involved in social acceptance and rejection <Citation id="3" index={3} source="Frontiers in Psychology" year="2019" tier={1} />. When you get likes, your brain interprets this as social approval---evidence that you're valued by the group. When you don't, it registers as rejection.
         </p>
         <p className="mb-6">
           This is why social media is more addictive than video games or streaming. Games trigger dopamine through achievement. Social media triggers dopamine through the deeper, more primal need for belonging.
@@ -628,7 +628,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="The Neuroscience Bottom Line">
-          <p>Social media hijacks dopamine through unpredictable rewards, infinite feeds, and social validation. Your brain can't tell the difference between a like and genuine acceptance. The solution: Turn off notifications, add friction, limit time, and replace the habit with real-world rewards. You're not weak—you're up against industrial-grade behavioral engineering.</p>
+          <p>Social media hijacks dopamine through unpredictable rewards, infinite feeds, and social validation. Your brain can't tell the difference between a like and genuine acceptance. The solution: Turn off notifications, add friction, limit time, and replace the habit with real-world rewards. You're not weak---you're up against industrial-grade behavioral engineering.</p>
         </ArticleCallout>
       </>
     ),
@@ -762,7 +762,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'impression',
               title: 'Impression management',
               content: (
-                <p>We all want to be seen positively. Research shows that people strategically share content that presents them in a favorable light—successful, attractive, popular, happy <Citation id="2" index={2} source="Personality and Individual Differences" year="2014" tier={1} />. This is normal self-presentation, just amplified by the public nature of social media.</p>
+                <p>We all want to be seen positively. Research shows that people strategically share content that presents them in a favorable light---successful, attractive, popular, happy <Citation id="2" index={2} source="Personality and Individual Differences" year="2014" tier={1} />. This is normal self-presentation, just amplified by the public nature of social media.</p>
               ),
             },
             {
@@ -871,10 +871,10 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           The highlight reel effect drives several negative outcomes:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Inadequacy and low self-esteem</strong>—You feel like you're not doing enough, not happy enough, not successful enough.</li>
-          <li><strong>Envy and resentment</strong>—You resent others for their seemingly perfect lives, even though you consciously know it's curated.</li>
-          <li><strong>FOMO (Fear of Missing Out)</strong>—You feel left behind or excluded from experiences everyone else seems to be having.</li>
-          <li><strong>Depression and anxiety</strong>—Chronic comparison wears down mood and increases stress.</li>
+          <li><strong>Inadequacy and low self-esteem</strong>---You feel like you're not doing enough, not happy enough, not successful enough.</li>
+          <li><strong>Envy and resentment</strong>---You resent others for their seemingly perfect lives, even though you consciously know it's curated.</li>
+          <li><strong>FOMO (Fear of Missing Out)</strong>---You feel left behind or excluded from experiences everyone else seems to be having.</li>
+          <li><strong>Depression and anxiety</strong>---Chronic comparison wears down mood and increases stress.</li>
         </ul>
         <p className="mb-6">
           Studies show that people who spend more time on social media report lower life satisfaction and higher depressive symptoms, largely mediated by upward social comparison <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2017" tier={1} />.
@@ -904,7 +904,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
                     <li>"What am I not seeing? What happened before or after this photo?"</li>
                     <li>"How much editing, filtering, or staging went into this?"</li>
                   </ul>
-                  <p className="mt-4">Naming the distortion weakens its emotional power. Studies show that media literacy training—learning to recognize curation—reduces social comparison effects by 40% <Citation id="7" index={7} source="Psychology of Popular Media" year="2023" tier={1} />.</p>
+                  <p className="mt-4">Naming the distortion weakens its emotional power. Studies show that media literacy training---learning to recognize curation---reduces social comparison effects by 40% <Citation id="7" index={7} source="Psychology of Popular Media" year="2023" tier={1} />.</p>
                 </div>
               ),
             },
@@ -930,7 +930,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">The less time you spend on social media, the less you're exposed to highlight reels. Set a 30-minute daily limit. Research shows this significantly reduces comparison-driven depression.</p>
-                  <p>When you do use it, use it actively—message friends, comment meaningfully—not passively scrolling through strangers' perfect lives.</p>
+                  <p>When you do use it, use it actively---message friends, comment meaningfully---not passively scrolling through strangers' perfect lives.</p>
                 </div>
               ),
             },
@@ -973,7 +973,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="Remember This">
-          <p>You're comparing your blooper reel to everyone else's highlight reel. The game is rigged. Everyone curates. Everyone edits. Everyone hides the hard stuff. The solution isn't to create a better highlight reel—it's to stop treating social media as reality. It's a performance, not a documentary. Live your real life, not your feed.</p>
+          <p>You're comparing your blooper reel to everyone else's highlight reel. The game is rigged. Everyone curates. Everyone edits. Everyone hides the hard stuff. The solution isn't to create a better highlight reel---it's to stop treating social media as reality. It's a performance, not a documentary. Live your real life, not your feed.</p>
         </ArticleCallout>
       </>
     ),
@@ -1180,7 +1180,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'days-4-7',
               title: 'Days 4-7: Adjustment and awareness',
               content: (
-                <p>The urges weaken. You start noticing how much time you have. Many people report feeling bored, which is actually a positive sign—you're no longer filling every empty moment with scrolling. Boredom allows creativity and reflection.</p>
+                <p>The urges weaken. You start noticing how much time you have. Many people report feeling bored, which is actually a positive sign---you're no longer filling every empty moment with scrolling. Boredom allows creativity and reflection.</p>
               ),
             },
             {
@@ -1207,10 +1207,10 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Not everyone responds the same way to social media breaks. Research shows larger effects in:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Heavy users</strong>—People who use social media 3+ hours daily see the most improvement.</li>
-          <li><strong>People with baseline depression or anxiety</strong>—Those already struggling benefit more than those with high baseline well-being.</li>
-          <li><strong>Young adults (18-30)</strong>—Effects are strongest in this age group, likely because they use platforms more intensely.</li>
-          <li><strong>Passive users</strong>—People who primarily scroll (rather than post/message) show the largest reductions in loneliness.</li>
+          <li><strong>Heavy users</strong>---People who use social media 3+ hours daily see the most improvement.</li>
+          <li><strong>People with baseline depression or anxiety</strong>---Those already struggling benefit more than those with high baseline well-being.</li>
+          <li><strong>Young adults (18-30)</strong>---Effects are strongest in this age group, likely because they use platforms more intensely.</li>
+          <li><strong>Passive users</strong>---People who primarily scroll (rather than post/message) show the largest reductions in loneliness.</li>
         </ul>
 
         <h2 id="sustained-effects" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1277,10 +1277,10 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           If quitting entirely feels too extreme, research supports these approaches:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>30-minute daily limit</strong> (10 min per platform)—The 2018 Penn study showed this is nearly as effective as full abstinence.</li>
-          <li><strong>Weekend breaks</strong>—Delete apps Friday evening, reinstall Monday morning. Consistent weekly breaks maintain benefits.</li>
-          <li><strong>Platform-specific breaks</strong>—Quit Instagram but keep messaging apps. Many people find image-heavy platforms most harmful.</li>
-          <li><strong>No social media before noon</strong>—Protects morning mood and productivity. Evening use is also problematic but less so than starting the day with it.</li>
+          <li><strong>30-minute daily limit</strong> (10 min per platform)---The 2018 Penn study showed this is nearly as effective as full abstinence.</li>
+          <li><strong>Weekend breaks</strong>---Delete apps Friday evening, reinstall Monday morning. Consistent weekly breaks maintain benefits.</li>
+          <li><strong>Platform-specific breaks</strong>---Quit Instagram but keep messaging apps. Many people find image-heavy platforms most harmful.</li>
+          <li><strong>No social media before noon</strong>---Protects morning mood and productivity. Evening use is also problematic but less so than starting the day with it.</li>
         </ul>
 
         <QuoteBlock
@@ -1291,7 +1291,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="The Research Bottom Line">
-          <p>Even one week off social media improves mental health. Three to four weeks is better. Effects last only if you maintain boundaries after the break. Take a break, notice the difference, and then use that awareness to build a healthier long-term relationship with social media—or quit for good.</p>
+          <p>Even one week off social media improves mental health. Three to four weeks is better. Effects last only if you maintain boundaries after the break. Take a break, notice the difference, and then use that awareness to build a healthier long-term relationship with social media---or quit for good.</p>
         </ArticleCallout>
       </>
     ),
@@ -1379,7 +1379,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You don't have to quit social media to protect your mental health. Mindful use—intentional, boundaried, and aware—can help you get the benefits (connection, information, community) while minimizing the harms (comparison, distraction, addiction). Here's how.
+            You don't have to quit social media to protect your mental health. Mindful use---intentional, boundaried, and aware---can help you get the benefits (connection, information, community) while minimizing the harms (comparison, distraction, addiction). Here's how.
           </p>
           <p className="mb-6">
             A 2023 meta-analysis of 34 intervention studies found that teaching mindful social media use reduces problematic use by 40% and improves well-being by 25% <Citation id="2" index={2} source="Computers in Human Behavior" year="2023" tier={1} />. The key is replacing automatic scrolling with deliberate choices.
@@ -1439,7 +1439,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
             },
             {
               title: 'Enable hard cutoffs, not reminders',
-              description: <p>Choose 'Block at End of Limit' rather than "Remind Me." Reminders don't work—you'll ignore them. Hard cutoffs create real boundaries.</p>,
+              description: <p>Choose 'Block at End of Limit' rather than "Remind Me." Reminders don't work---you'll ignore them. Hard cutoffs create real boundaries.</p>,
             },
             {
               title: "Don't override the limit",
@@ -1493,7 +1493,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
               id: 'follow-positive',
               title: 'Follow accounts that add value',
               content: (
-                <p>Educational content, body-positive creators, mental health advocates, artists, comedians—follow people who make you think, laugh, or feel less alone. Use social media to learn and connect, not to judge yourself.</p>
+                <p>Educational content, body-positive creators, mental health advocates, artists, comedians---follow people who make you think, laugh, or feel less alone. Use social media to learn and connect, not to judge yourself.</p>
               ),
             },
             {
@@ -1517,7 +1517,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Strategy 4: Shift to Active Use
         </h2>
         <p className="mb-6">
-          Passive scrolling drives most of social media's negative effects. Active use—posting, commenting, messaging—can actually reduce loneliness and increase connection <Citation id="7" index={7} source="Journal of Computer-Mediated Communication" year="2020" tier={1} />.
+          Passive scrolling drives most of social media's negative effects. Active use---posting, commenting, messaging---can actually reduce loneliness and increase connection <Citation id="7" index={7} source="Journal of Computer-Mediated Communication" year="2020" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1541,7 +1541,7 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
           Strategy 5: Add Friction to Impulsive Use
         </h2>
         <p className="mb-6">
-          Platforms are designed to be frictionless—open instantly, scroll infinitely. Adding friction disrupts autopilot use <Citation id="8" index={8} source="ACM Transactions on Computer-Human Interaction" year="2021" tier={1} />.
+          Platforms are designed to be frictionless---open instantly, scroll infinitely. Adding friction disrupts autopilot use <Citation id="8" index={8} source="ACM Transactions on Computer-Human Interaction" year="2021" tier={1} />.
         </p>
 
         <ArticleTabs
@@ -1621,17 +1621,17 @@ export const socialMediaMentalHealthArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Mindful Use Framework">
-          <p><strong>Before:</strong> Ask why you're opening the app. <strong>During:</strong> Stay intentional—message, post, then close. Don't scroll aimlessly. <strong>After:</strong> Notice how you feel. If worse, adjust. <strong>Long-term:</strong> Enforce time limits, disable notifications, curate your feed, and take monthly breaks. Mindful use isn't about perfection—it's about awareness and choice.</p>
+          <p><strong>Before:</strong> Ask why you're opening the app. <strong>During:</strong> Stay intentional---message, post, then close. Don't scroll aimlessly. <strong>After:</strong> Notice how you feel. If worse, adjust. <strong>Long-term:</strong> Enforce time limits, disable notifications, curate your feed, and take monthly breaks. Mindful use isn't about perfection---it's about awareness and choice.</p>
         </ArticleCallout>
 
         <h2 id="final-note" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           A Final Note
         </h2>
         <p className="mb-6">
-          Social media companies don't want you to use their platforms mindfully. They want you to use them compulsively. Every feature—notifications, infinite scroll, variable rewards—is designed to maximize time spent, not well-being.
+          Social media companies don't want you to use their platforms mindfully. They want you to use them compulsively. Every feature---notifications, infinite scroll, variable rewards---is designed to maximize time spent, not well-being.
         </p>
         <p className="mb-6">
-          Mindful use is an act of resistance. It's reclaiming your attention from systems built to capture it. It won't be easy, and you won't be perfect. But every intentional choice—every notification turned off, every limit enforced, every passive scroll interrupted—is a step toward using technology on your terms.
+          Mindful use is an act of resistance. It's reclaiming your attention from systems built to capture it. It won't be easy, and you won't be perfect. But every intentional choice---every notification turned off, every limit enforced, every passive scroll interrupted---is a step toward using technology on your terms.
         </p>
       </>
     ),

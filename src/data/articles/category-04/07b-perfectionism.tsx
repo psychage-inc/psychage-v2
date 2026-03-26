@@ -18,7 +18,7 @@ export const perfectionismArticlesB: Article[] = [
     id: catId(66),
     slug: 'fawn-response-trauma-creates-people-pleasers',
     title: 'The Fawn Response: How Trauma Creates People-Pleasers',
-    description: "People-pleasing isn't always about low self-esteem—it can be a survival strategy learned in threatening environments.",
+    description: "People-pleasing isn't always about low self-esteem---it can be a survival strategy learned in threatening environments.",
     image: '/images/articles/cat04/cover-066.svg',
     category: CATEGORY_SELF_WORTH,
     readTime: 7,
@@ -96,7 +96,7 @@ export const perfectionismArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most people know fight, flight, and freeze. But there's a fourth trauma response: fawn—appeasing the threat to stay safe.
+            Most people know fight, flight, and freeze. But there's a fourth trauma response: fawn---appeasing the threat to stay safe.
           </p>
           <p className="mb-6">
             The fawn response involves automatically pleasing, appeasing, or accommodating others to avoid conflict or harm <Citation id="1" index={1} source="CreateSpace" year="2013" tier={5} />. It's especially common in people who experienced childhood trauma, particularly in caregiving relationships where they couldn't fight or flee <Citation id="2" index={2} source="Journal of Trauma & Dissociation" year="2020" tier={1} />.
@@ -134,7 +134,7 @@ export const perfectionismArticlesB: Article[] = [
               title: 'Unpredictable or Volatile Caregivers',
               content: (
                 <p>
-                  When a parent's mood is unpredictable—loving one moment, rageful the next—children become hypervigilant to emotional cues and learn to manage the parent's emotions to stay safe.
+                  When a parent's mood is unpredictable---loving one moment, rageful the next---children become hypervigilant to emotional cues and learn to manage the parent's emotions to stay safe.
                 </p>
               ),
             },
@@ -182,7 +182,7 @@ export const perfectionismArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          The fawn response becomes automatic—a deeply ingrained pattern that activates in any situation that feels remotely threatening <Citation id="4" index={4} source="Clinical Psychology Review" year="2018" tier={1} />:
+          The fawn response becomes automatic---a deeply ingrained pattern that activates in any situation that feels remotely threatening <Citation id="4" index={4} source="Clinical Psychology Review" year="2018" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -241,7 +241,7 @@ export const perfectionismArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            If helping feels compulsive, you can't say no, and you feel resentful afterward—that's fawn, not kindness. Kindness energizes; fawning depletes.
+            If helping feels compulsive, you can't say no, and you feel resentful afterward---that's fawn, not kindness. Kindness energizes; fawning depletes.
           </p>
         </ArticleCallout>
 
@@ -255,7 +255,7 @@ export const perfectionismArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Attracted to partners who are demanding, volatile, or narcissistic (familiar dynamics)</li>
           <li>Tolerate mistreatment to avoid abandonment</li>
-          <li>Difficulty recognizing red flags—focus only on keeping partner happy</li>
+          <li>Difficulty recognizing red flags---focus only on keeping partner happy</li>
           <li>Lose sense of self in relationships ("Who am I outside of pleasing you?")</li>
           <li>Stay in harmful relationships far longer than healthy</li>
         </ul>
@@ -271,7 +271,7 @@ export const perfectionismArticlesB: Article[] = [
               title: 'Recognize fawn as a survival strategy',
               description: (
                 <p>
-                  It's not a character flaw—it's how you stayed safe. Understanding the origin reduces shame <Citation id="5" index={5} source="Psychotherapy Research" year="2021" tier={1} />.
+                  It's not a character flaw---it's how you stayed safe. Understanding the origin reduces shame <Citation id="5" index={5} source="Psychotherapy Research" year="2021" tier={1} />.
                 </p>
               ),
             },
@@ -327,7 +327,7 @@ export const perfectionismArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If fawn responses are deeply entrenched—especially if rooted in complex trauma—therapy is essential. Trauma-informed therapists understand that fawning isn't weakness; it's a survival strategy that served a purpose and can be gently unlearned with proper support.
+          If fawn responses are deeply entrenched---especially if rooted in complex trauma---therapy is essential. Trauma-informed therapists understand that fawning isn't weakness; it's a survival strategy that served a purpose and can be gently unlearned with proper support.
         </p>
       </>
     ),
@@ -447,7 +447,7 @@ export const perfectionismArticlesB: Article[] = [
             },
             {
               title: 'Confirmation',
-              description: <p>"See? I can't do anything right' — belief strengthened</p>,
+              description: <p>"See? I can't do anything right' --- belief strengthened</p>,
             },
           ]}
         />
@@ -505,7 +505,7 @@ export const perfectionismArticlesB: Article[] = [
                     Write the perfectionistic belief. List evidence for it, then evidence against it. Most perfectionistic beliefs collapse under scrutiny.
                   </p>
                   <p>
-                    <strong>Example:</strong> "I must ace this exam or I'm worthless' — Evidence against: many successful people have failed exams, my worth isn't determined by one test, I have value regardless of grades.
+                    <strong>Example:</strong> "I must ace this exam or I'm worthless' --- Evidence against: many successful people have failed exams, my worth isn't determined by one test, I have value regardless of grades.
                   </p>
                 </div>
               ),
@@ -595,7 +595,7 @@ export const perfectionismArticlesB: Article[] = [
           4. Self-Compassion Training
         </h2>
         <p className="mb-6">
-          Self-compassion—treating yourself with kindness when you fail—directly counters perfectionism <Citation id="6" index={6} source="Mindfulness" year="2020" tier={1} />:
+          Self-compassion---treating yourself with kindness when you fail---directly counters perfectionism <Citation id="6" index={6} source="Mindfulness" year="2020" tier={1} />:
         </p>
 
         <ArticleChart
@@ -688,7 +688,7 @@ export const perfectionismArticlesB: Article[] = [
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>Notice early warning signs (increased checking, procrastination, harsh self-talk)</li>
-          <li>Return to CBT tools immediately—don't wait for crisis</li>
+          <li>Return to CBT tools immediately---don't wait for crisis</li>
           <li>Remind yourself of evidence: good enough has worked before</li>
           <li>Reconnect with values: is perfection serving what you care about?</li>
           <li>Seek support: therapy booster sessions, trusted friends, support groups</li>
@@ -786,10 +786,10 @@ export const perfectionismArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Perfectionistic parents want the best for their children—but striving for flawless parenting often creates the opposite of what they hope for.
+            Perfectionistic parents want the best for their children---but striving for flawless parenting often creates the opposite of what they hope for.
           </p>
           <p className="mb-6">
-            Research shows that parental perfectionism predicts anxiety, depression, and perfectionism in children <Citation id="1" index={1} source="Journal of Family Psychology" year="2019" tier={1} />. The antidote isn't lowering your standards—it's embracing 'good-enough' parenting, a concept introduced by pediatrician Donald Winnicott in 1953 <Citation id="2" index={2} source="Psychoanalytic Study of the Child" year="1953" tier={1} />.
+            Research shows that parental perfectionism predicts anxiety, depression, and perfectionism in children <Citation id="1" index={1} source="Journal of Family Psychology" year="2019" tier={1} />. The antidote isn't lowering your standards---it's embracing 'good-enough' parenting, a concept introduced by pediatrician Donald Winnicott in 1953 <Citation id="2" index={2} source="Psychoanalytic Study of the Child" year="1953" tier={1} />.
           </p>
         </div>
 
@@ -940,7 +940,7 @@ export const perfectionismArticlesB: Article[] = [
           Modeling Self-Compassion
         </h2>
         <p className="mb-6">
-          Children learn more from what you do than what you say. When you model self-compassion—being kind to yourself when you make mistakes—children learn that imperfection is human and acceptable <Citation id="5" index={5} source="Journal of Child and Family Studies" year="2019" tier={1} />.
+          Children learn more from what you do than what you say. When you model self-compassion---being kind to yourself when you make mistakes---children learn that imperfection is human and acceptable <Citation id="5" index={5} source="Journal of Child and Family Studies" year="2019" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip" title="Try This">
@@ -959,7 +959,7 @@ export const perfectionismArticlesB: Article[] = [
           The Cost to Parents
         </h2>
         <p className="mb-6">
-          Perfectionistic parenting doesn't just harm children—it leads to parental burnout, a state of overwhelming exhaustion <Citation id="6" index={6} source="Clinical Psychological Science" year="2020" tier={1} />. When you believe you must be a perfect parent, there's no room for rest, mistakes, or your own needs.
+          Perfectionistic parenting doesn't just harm children---it leads to parental burnout, a state of overwhelming exhaustion <Citation id="6" index={6} source="Clinical Psychological Science" year="2020" tier={1} />. When you believe you must be a perfect parent, there's no room for rest, mistakes, or your own needs.
         </p>
 
         <h2 id="practical-shifts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1082,7 +1082,7 @@ export const perfectionismArticlesB: Article[] = [
             Straight A's don't guarantee wellbeing. Academic perfectionism drives achievement at the expense of mental health, genuine learning, and sustainable success.
           </p>
           <p className="mb-6">
-            Research shows that academic perfectionism in college students predicts depression, anxiety, and burnout—not greater success or satisfaction <Citation id="1" index={1} source="Journal of American College Health" year="2019" tier={1} />. High standards are healthy; perfectionism is not.
+            Research shows that academic perfectionism in college students predicts depression, anxiety, and burnout---not greater success or satisfaction <Citation id="1" index={1} source="Journal of American College Health" year="2019" tier={1} />. High standards are healthy; perfectionism is not.
           </p>
         </div>
 
@@ -1112,7 +1112,7 @@ export const perfectionismArticlesB: Article[] = [
           <li>Grades below A feel like failure</li>
           <li>Procrastination on assignments from fear of imperfection <Citation id="2" index={2} source="Learning and Individual Differences" year="2018" tier={1} /></li>
           <li>Excessive time spent on minor details</li>
-          <li>Can't enjoy success—immediately focus on next challenge</li>
+          <li>Can't enjoy success---immediately focus on next challenge</li>
           <li>Extreme test anxiety despite thorough preparation <Citation id="4" index={4} source="Anxiety, Stress & Coping" year="2019" tier={4} /></li>
           <li>Avoid challenging courses to protect GPA</li>
           <li>Compare performance constantly to peers</li>
@@ -1258,7 +1258,7 @@ export const perfectionismArticlesB: Article[] = [
               title: 'Challenge all-or-nothing thinking',
               description: (
                 <p>
-                  "A B+ isn't failure—it's good work." Most grades in the A/B range reflect strong understanding.
+                  "A B+ isn't failure---it's good work." Most grades in the A/B range reflect strong understanding.
                 </p>
               ),
             },
@@ -1287,7 +1287,7 @@ export const perfectionismArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Emphasize learning over grades in messaging</li>
-          <li>Reward effort, improvement, and creative thinking—not just correctness</li>
+          <li>Reward effort, improvement, and creative thinking---not just correctness</li>
           <li>Normalize mistakes as part of the learning process</li>
           <li>Provide specific, actionable feedback (not just letter grades)</li>
           <li>Model that even experts make mistakes and learn continuously</li>
@@ -1296,7 +1296,7 @@ export const perfectionismArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="For Students">
           <p>
-            If you're reading this as a student: Your education is about becoming who you want to be, not proving who you are. Grades are feedback, not verdicts on your worth. The most successful, fulfilled people aren't those who were perfect students—they're those who learned how to learn, took risks, and recovered from failure.
+            If you're reading this as a student: Your education is about becoming who you want to be, not proving who you are. Grades are feedback, not verdicts on your worth. The most successful, fulfilled people aren't those who were perfect students---they're those who learned how to learn, took risks, and recovered from failure.
           </p>
         </ArticleCallout>
 
@@ -1314,7 +1314,7 @@ export const perfectionismArticlesB: Article[] = [
     id: catId(70),
     slug: 'recovery-from-perfectionism',
     title: 'Recovery from Perfectionism: What It Looks Like in Practice',
-    description: "Recovering from perfectionism isn't about lowering standards—it's about reconnecting with your worth, embracing imperfection, and building sustainable excellence.",
+    description: "Recovering from perfectionism isn't about lowering standards---it's about reconnecting with your worth, embracing imperfection, and building sustainable excellence.",
     image: '/images/articles/cat04/cover-070.svg',
     category: CATEGORY_SELF_WORTH,
     readTime: 7,
@@ -1395,7 +1395,7 @@ export const perfectionismArticlesB: Article[] = [
             Recovery from perfectionism doesn't mean becoming mediocre. It means building a life where your worth isn't contingent on flawless performance.
           </p>
           <p className="mb-6">
-            Research on perfectionism treatment outcomes shows that recovery is possible—and it looks like reduced anxiety, greater life satisfaction, improved relationships, and paradoxically, often better performance <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2020" tier={1} />. But what does recovery actually look like day-to-day?
+            Research on perfectionism treatment outcomes shows that recovery is possible---and it looks like reduced anxiety, greater life satisfaction, improved relationships, and paradoxically, often better performance <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2020" tier={1} />. But what does recovery actually look like day-to-day?
           </p>
         </div>
 
@@ -1586,7 +1586,7 @@ export const perfectionismArticlesB: Article[] = [
               title: 'Sustained Practice',
               description: (
                 <p>
-                  Recovery requires ongoing practice. Perfectionism resurfaces under stress—recognizing and interrupting it becomes automatic.
+                  Recovery requires ongoing practice. Perfectionism resurfaces under stress---recognizing and interrupting it becomes automatic.
                 </p>
               ),
             },
@@ -1613,7 +1613,7 @@ export const perfectionismArticlesB: Article[] = [
             title: 'Discoveries in Recovery',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>"Good enough works—I didn't fail"</li>
+                <li>"Good enough works---I didn't fail"</li>
                 <li>"I have more energy for what matters"</li>
                 <li>"I'm more than my achievements"</li>
                 <li>"I'm more authentic and connected" <Citation id="8" index={8} source="Journal of Positive Psychology" year="2021" tier={1} /></li>
@@ -1634,7 +1634,7 @@ export const perfectionismArticlesB: Article[] = [
             <strong>Notice early warning signs:</strong> Increased checking, procrastination, harsh self-talk
           </li>
           <li>
-            <strong>Return to CBT tools immediately:</strong> Don't wait until crisis—interrupt at first sign
+            <strong>Return to CBT tools immediately:</strong> Don't wait until crisis---interrupt at first sign
           </li>
           <li>
             <strong>Self-compassion practice:</strong> Daily self-compassion prevents perfectionistic relapse
@@ -1674,7 +1674,7 @@ export const perfectionismArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Recovery isn't about becoming less—it's about becoming more yourself. The goal isn't to stop caring about excellence. It's to stop believing your worth depends on it.
+            Recovery isn't about becoming less---it's about becoming more yourself. The goal isn't to stop caring about excellence. It's to stop believing your worth depends on it.
           </p>
         </ArticleCallout>
 

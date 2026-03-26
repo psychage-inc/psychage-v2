@@ -17,7 +17,7 @@ export const traumaResponsesArticlesB: Article[] = [
     id: catId(26),
     slug: 'avoidance-after-trauma-staying-safe-keeps-you-stuck',
     title: 'Avoidance After Trauma: How Staying Safe Keeps You Stuck',
-    description: 'Discover why trauma-related avoidance—while protective in the short term—prevents healing and shrinks your world, and how to break the cycle.',
+    description: 'Discover why trauma-related avoidance---while protective in the short term---prevents healing and shrinks your world, and how to break the cycle.',
     image: "/images/articles/cat11/cover-026.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 6,
@@ -95,10 +95,10 @@ export const traumaResponsesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After trauma, your instinct is to avoid anything that reminds you of what happened. You avoid places, people, conversations, even thoughts. It makes sense: why would you willingly approach something that triggers pain? But here's the paradox—while avoidance feels protective, it's the very thing that keeps trauma alive. Every time you avoid, you teach your brain that the danger is still there. And your world gets smaller.
+            After trauma, your instinct is to avoid anything that reminds you of what happened. You avoid places, people, conversations, even thoughts. It makes sense: why would you willingly approach something that triggers pain? But here's the paradox---while avoidance feels protective, it's the very thing that keeps trauma alive. Every time you avoid, you teach your brain that the danger is still there. And your world gets smaller.
           </p>
           <p className="mb-6">
-            Avoidance is one of the core symptom clusters of PTSD <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2020" tier={1} />. And while it provides short-term relief, research consistently shows that <strong>the more you avoid, the stronger the trauma becomes</strong>—and the harder it is to reclaim your life.
+            Avoidance is one of the core symptom clusters of PTSD <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2020" tier={1} />. And while it provides short-term relief, research consistently shows that <strong>the more you avoid, the stronger the trauma becomes</strong>---and the harder it is to reclaim your life.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export const traumaResponsesArticlesB: Article[] = [
           Why Avoidance Feels Necessary
         </h2>
         <p className="mb-6">
-          Avoidance isn't irrational—it's your nervous system trying to protect you. When you were traumatized, your brain learned: <em>This situation = danger.</em> Now, anything that resembles that situation activates the same threat response. Avoiding those triggers feels like <strong>the only way to stay safe</strong> <Citation id="4" index={4} source="Journal of Anxiety Disorders" year="2020" tier={1} />.
+          Avoidance isn't irrational---it's your nervous system trying to protect you. When you were traumatized, your brain learned: <em>This situation = danger.</em> Now, anything that resembles that situation activates the same threat response. Avoiding those triggers feels like <strong>the only way to stay safe</strong> <Citation id="4" index={4} source="Journal of Anxiety Disorders" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           In the short term, avoidance works:
@@ -147,7 +147,7 @@ export const traumaResponsesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="warning">
-          <p><strong>The trap:</strong> Avoidance provides short-term relief but prevents long-term healing. You never learn that the trigger itself isn't dangerous—only the memory is. So the fear stays frozen in place.</p>
+          <p><strong>The trap:</strong> Avoidance provides short-term relief but prevents long-term healing. You never learn that the trigger itself isn't dangerous---only the memory is. So the fear stays frozen in place.</p>
         </ArticleCallout>
 
         <h2 id="how-avoidance-maintains-ptsd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -173,7 +173,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li><strong>Prevents emotional processing:</strong> You can't heal from what you refuse to feel. Avoidance blocks the natural processing of traumatic memories.</li>
           <li><strong>Reinforces fear:</strong> By avoiding, you never learn that most triggers are safe. Your brain continues to treat them as threats.</li>
           <li><strong>Generalizes over time:</strong> Avoidance spreads. You start by avoiding one place, then entire categories of situations.</li>
-          <li><strong>Reduces quality of life:</strong> Avoiding trauma reminders often means avoiding life itself—relationships, work, hobbies, connection.</li>
+          <li><strong>Reduces quality of life:</strong> Avoiding trauma reminders often means avoiding life itself---relationships, work, hobbies, connection.</li>
           <li><strong>Prevents disconfirmation:</strong> You never discover: "I can handle being triggered and survive."</li>
         </ul>
 
@@ -251,7 +251,7 @@ export const traumaResponsesArticlesB: Article[] = [
           Subtle "Safety Behaviors" That Are Actually Avoidance
         </h2>
         <p className="mb-6">
-          Some avoidance is obvious. But "safety behaviors"—things you do to feel protected—can also maintain fear <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />:
+          Some avoidance is obvious. But "safety behaviors"---things you do to feel protected---can also maintain fear <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Only going places if someone accompanies you</li>
@@ -272,18 +272,18 @@ export const traumaResponsesArticlesB: Article[] = [
           Breaking the Avoidance Cycle: Gradual Exposure
         </h2>
         <p className="mb-6">
-          The antidote to avoidance is <strong>approach</strong>—gradually, safely re-engaging with avoided situations to teach your brain that you can handle them <Citation id="7" index={7} source="Clinical Psychological Science" year="2021" tier={1} />. This is the foundation of exposure therapy, one of the most effective treatments for PTSD <Citation id="6" index={6} source="American Psychological Association" year="2022" tier={3} />.
+          The antidote to avoidance is <strong>approach</strong>---gradually, safely re-engaging with avoided situations to teach your brain that you can handle them <Citation id="7" index={7} source="Clinical Psychological Science" year="2021" tier={1} />. This is the foundation of exposure therapy, one of the most effective treatments for PTSD <Citation id="6" index={6} source="American Psychological Association" year="2022" tier={3} />.
         </p>
 
         <ProgressSteps
           variant="vertical"
           steps={[
             { title: `Identify what you're avoiding`, description: <p>Make a list: places, people, activities, emotions, conversations. Be specific. Rate each from 0 (not distressing) to 10 (extremely distressing).</p> },
-            { title: 'Start with the easiest item', description: <p>Choose something rated 3–4. You want a challenge, but not overwhelm. Success builds on success.</p> },
+            { title: 'Start with the easiest item', description: <p>Choose something rated 3--4. You want a challenge, but not overwhelm. Success builds on success.</p> },
             { title: 'Approach gradually', description: <p>If you're avoiding driving: start by sitting in the car (not driving). Then drive around the block. Build up slowly. Stay until anxiety peaks and begins to drop.</p> },
             { title: 'Stay with the discomfort', description: <p>Don't flee at the first sign of anxiety. The healing happens when you stay present and your nervous system learns: "This is uncomfortable, but I'm safe."</p> },
             { title: 'Repeat until anxiety decreases', description: <p>Exposure works through habituation. The first time is hardest. By the 5th or 10th time, anxiety drops significantly.</p> },
-            { title: 'Move up the hierarchy', description: <p>Once you've mastered the easier item, move to something rated 5–6. Gradually work your way up. With guidance, most people can approach even high-fear situations.</p> },
+            { title: 'Move up the hierarchy', description: <p>Once you've mastered the easier item, move to something rated 5--6. Gradually work your way up. With guidance, most people can approach even high-fear situations.</p> },
           ]}
         />
 
@@ -344,14 +344,14 @@ export const traumaResponsesArticlesB: Article[] = [
           Consider trauma-focused therapy if:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Your life is shrinking—you avoid more places/people/activities over time</li>
+          <li>Your life is shrinking---you avoid more places/people/activities over time</li>
           <li>Avoidance prevents you from working, socializing, or functioning</li>
           <li>You use substances or self-harm to avoid feelings</li>
           <li>You've been avoiding for months/years and it's not getting better</li>
           <li>You want to heal but don't know how to approach what you're avoiding safely</li>
         </ul>
         <p className="mb-6">
-          Therapies proven effective for avoidance-based PTSD include Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), and EMDR. These approaches help you face what you've been avoiding—not to overwhelm you, but to teach your nervous system: <em>I can handle this. The trauma is over. I am safe now.</em>
+          Therapies proven effective for avoidance-based PTSD include Prolonged Exposure (PE), Cognitive Processing Therapy (CPT), and EMDR. These approaches help you face what you've been avoiding---not to overwhelm you, but to teach your nervous system: <em>I can handle this. The trauma is over. I am safe now.</em>
         </p>
       </>
     ),
@@ -360,7 +360,7 @@ export const traumaResponsesArticlesB: Article[] = [
     id: catId(27),
     slug: 'trauma-bonding-why-people-stay-abusive-situations',
     title: 'Trauma Bonding: Why People Stay in Abusive Situations',
-    description: 'Understand the psychological mechanism that creates intense attachment to abusers—and why leaving feels impossible even when you know you should.',
+    description: 'Understand the psychological mechanism that creates intense attachment to abusers---and why leaving feels impossible even when you know you should.',
     image: "/images/articles/cat11/cover-027.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 7,
@@ -427,7 +427,7 @@ export const traumaResponsesArticlesB: Article[] = [
       },
       {
         id: '8',
-        text: 'Should I Stay or Should I Go? A Guide to Knowing if Your Relationship Can—and Should—be Saved',
+        text: 'Should I Stay or Should I Go? A Guide to Knowing if Your Relationship Can---and Should---be Saved',
         source: 'William Morrow Paperbacks',
         year: '2013',
         link: 'https://www.harpercollins.com/products/should-i-stay-or-should-i-go',
@@ -438,10 +438,10 @@ export const traumaResponsesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            People ask: <em>Why don't they just leave?</em> They don't understand that leaving feels impossible—not because you're weak, but because your nervous system has been rewired to crave the very person who hurts you. This is trauma bonding: an intense emotional attachment formed through cycles of abuse, intermittent kindness, and psychological manipulation. It's not love. It's a neurobiological response to trauma that makes the abuser feel like your lifeline, even as they destroy you.
+            People ask: <em>Why don't they just leave?</em> They don't understand that leaving feels impossible---not because you're weak, but because your nervous system has been rewired to crave the very person who hurts you. This is trauma bonding: an intense emotional attachment formed through cycles of abuse, intermittent kindness, and psychological manipulation. It's not love. It's a neurobiological response to trauma that makes the abuser feel like your lifeline, even as they destroy you.
           </p>
           <p className="mb-6">
-            Trauma bonding was first described in research on hostages, prisoners of war, and cult members—people who developed powerful attachments to their captors <Citation id="1" index={1} source="Journal of Women & Social Work" year="2019" tier={1} />. The same mechanism occurs in abusive intimate relationships, parent-child abuse, and other dynamics where power is imbalanced and harm is unpredictable.
+            Trauma bonding was first described in research on hostages, prisoners of war, and cult members---people who developed powerful attachments to their captors <Citation id="1" index={1} source="Journal of Women & Social Work" year="2019" tier={1} />. The same mechanism occurs in abusive intimate relationships, parent-child abuse, and other dynamics where power is imbalanced and harm is unpredictable.
           </p>
         </div>
 
@@ -449,7 +449,7 @@ export const traumaResponsesArticlesB: Article[] = [
           What Is Trauma Bonding?
         </h2>
         <p className="mb-6">
-          Trauma bonding is a strong emotional attachment to someone who causes you harm—an attachment <strong>created by the abuse itself</strong> <Citation id="2" index={2} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={2} />. Key characteristics include:
+          Trauma bonding is a strong emotional attachment to someone who causes you harm---an attachment <strong>created by the abuse itself</strong> <Citation id="2" index={2} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={2} />. Key characteristics include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Intense connection to someone who mistreats you</li>
@@ -460,7 +460,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li>Craving the abuser when apart, despite the pain they cause</li>
         </ul>
         <p className="mb-6">
-          This isn't the same as healthy attachment or even codependency. Trauma bonds are formed through <strong>intermittent reinforcement</strong>—unpredictable cycles of punishment and reward that create addiction-like attachment <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
+          This isn't the same as healthy attachment or even codependency. Trauma bonds are formed through <strong>intermittent reinforcement</strong>---unpredictable cycles of punishment and reward that create addiction-like attachment <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
         </p>
 
         <StatCard
@@ -476,7 +476,7 @@ export const traumaResponsesArticlesB: Article[] = [
           How Trauma Bonds Form: The Cycle of Abuse
         </h2>
         <p className="mb-6">
-          Trauma bonding doesn't happen in relationships that are <em>consistently</em> abusive. It happens when abuse is <strong>intermittent</strong>—when harm is mixed with affection, apologies, or moments of tenderness <Citation id="4" index={4} source="Journal of Interpersonal Violence" year="2020" tier={1} />.
+          Trauma bonding doesn't happen in relationships that are <em>consistently</em> abusive. It happens when abuse is <strong>intermittent</strong>---when harm is mixed with affection, apologies, or moments of tenderness <Citation id="4" index={4} source="Journal of Interpersonal Violence" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           The typical cycle includes four phases:
@@ -500,13 +500,13 @@ export const traumaResponsesArticlesB: Article[] = [
           steps={[
             { title: 'Tension building', description: <p>You walk on eggshells. The abuser becomes irritable, critical, or distant. You try to appease them, anticipating the explosion.</p> },
             { title: 'Abuse incident', description: <p>The explosion: verbal, emotional, physical, or sexual abuse. You feel terrified, hurt, or degraded.</p> },
-            { title: `Reconciliation ('honeymoon")`, description: <p>The abuser apologizes, shows affection, promises change. This is the hook—the kindness feels like relief, like the "real them" is back.</p> },
+            { title: `Reconciliation ('honeymoon")`, description: <p>The abuser apologizes, shows affection, promises change. This is the hook---the kindness feels like relief, like the "real them" is back.</p> },
             { title: 'Calm period', description: <p>Things feel normal, even good. You believe it's over. But the tension begins building again, and the cycle repeats.</p> },
           ]}
         />
 
         <p className="mb-6">
-          The <strong>honeymoon phase</strong> is critical. After the pain of abuse, the abuser's kindness triggers a flood of relief and hope. Your brain releases dopamine and oxytocin—the same neurochemicals involved in addiction and romantic love. You become biochemically attached to the person who hurt you <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
+          The <strong>honeymoon phase</strong> is critical. After the pain of abuse, the abuser's kindness triggers a flood of relief and hope. Your brain releases dopamine and oxytocin---the same neurochemicals involved in addiction and romantic love. You become biochemically attached to the person who hurt you <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -531,7 +531,7 @@ export const traumaResponsesArticlesB: Article[] = [
                   <p className="mb-4">You minimize what's happening or blame yourself:</p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>"They only yell when I provoke them."</li>
-                    <li>"Everyone fights—it's not that bad."</li>
+                    <li>"Everyone fights---it's not that bad."</li>
                     <li>"They had a hard childhood, they can't help it."</li>
                     <li>"If I were better, they wouldn't get so angry."</li>
                   </ul>
@@ -604,7 +604,7 @@ export const traumaResponsesArticlesB: Article[] = [
           Leaving a trauma bond isn't like ending a normal relationship. The attachment is rooted in survival mechanisms and neurochemical addiction <Citation id="7" index={7} source="Attachment & Human Development" year="2021" tier={1} />. Barriers include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Biochemical withdrawal:</strong> Leaving triggers the same withdrawal symptoms as quitting a drug—anxiety, depression, physical pain, intense craving.</li>
+          <li><strong>Biochemical withdrawal:</strong> Leaving triggers the same withdrawal symptoms as quitting a drug---anxiety, depression, physical pain, intense craving.</li>
           <li><strong>Cognitive dissonance:</strong> You hold two truths: "They hurt me" and "I love them." Leaving forces you to reconcile this, which feels unbearable.</li>
           <li><strong>Hope addiction:</strong> You're addicted to the <em>potential</em> of who they could be, not who they are.</li>
           <li><strong>Shame:</strong> You blame yourself for staying, which makes leaving feel like admitting failure.</li>
@@ -620,7 +620,7 @@ export const traumaResponsesArticlesB: Article[] = [
           Breaking the Trauma Bond
         </h2>
         <p className="mb-6">
-          Healing from a trauma bond requires more than just physical distance—it requires rewiring your attachment and processing the trauma <Citation id="8" index={8} source="Should I Stay or Should I Go?" year="2013" tier={5} />.
+          Healing from a trauma bond requires more than just physical distance---it requires rewiring your attachment and processing the trauma <Citation id="8" index={8} source="Should I Stay or Should I Go?" year="2013" tier={5} />.
         </p>
 
         <ProgressSteps
@@ -632,7 +632,7 @@ export const traumaResponsesArticlesB: Article[] = [
             { title: 'Create physical distance (safely)', description: <p>No contact is ideal, but if unsafe or impossible (shared custody), create as much distance as you can. Block on social media. Delete photos.</p> },
             { title: 'Expect withdrawal', description: <p>You will crave them. You will romanticize the good times. This is biochemical withdrawal, not evidence that leaving was wrong. It passes.</p> },
             { title: 'Work with a trauma therapist', description: <p>EMDR, Internal Family Systems, or trauma-focused CBT can help you process the abuse and understand why you bonded. Therapy accelerates healing.</p> },
-            { title: 'Grieve the relationship you wanted', description: <p>You're not just losing a person—you're losing the hope of who they could have been. Allow yourself to mourn.</p> },
+            { title: 'Grieve the relationship you wanted', description: <p>You're not just losing a person---you're losing the hope of who they could have been. Allow yourself to mourn.</p> },
           ]}
         />
 
@@ -645,7 +645,7 @@ export const traumaResponsesArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Love bombing:</strong> Intense affection, gifts, and attention at the start (sets up the "high" you'll chase later)</li>
           <li><strong>Isolation tactics:</strong> Discouraging friendships, criticizing your family, monopolizing your time</li>
-          <li><strong>Hot and cold behavior:</strong> Inconsistent affection—adoring one day, distant or cruel the next</li>
+          <li><strong>Hot and cold behavior:</strong> Inconsistent affection---adoring one day, distant or cruel the next</li>
           <li><strong>Blame-shifting:</strong> Nothing is ever their fault; you're always the problem</li>
           <li><strong>Gaslighting:</strong> Denying abuse, twisting reality, making you doubt your perception</li>
           <li><strong>Moving too fast:</strong> Pushing for commitment, cohabitation, or enmeshment quickly</li>
@@ -664,7 +664,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li><strong>Local domestic violence shelters:</strong> Safe housing, legal advocacy, counseling</li>
         </ul>
         <p className="mb-6">
-          Breaking a trauma bond is one of the hardest things you'll ever do. But it's possible. Thousands of people have walked this path and reclaimed their lives. You're not weak for being bonded. You're strong for recognizing it—and brave for seeking a way out.
+          Breaking a trauma bond is one of the hardest things you'll ever do. But it's possible. Thousands of people have walked this path and reclaimed their lives. You're not weak for being bonded. You're strong for recognizing it---and brave for seeking a way out.
         </p>
       </>
     ),
@@ -751,10 +751,10 @@ export const traumaResponsesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After trauma, the first question many survivors ask isn't "Why did this happen?" It's "What did I do wrong?" You replay the event in your mind, cataloging every choice that might have prevented it. <em>If I hadn't gone there. If I'd fought back. If I'd been smarter, stronger, more careful.</em> Self-blame becomes the story you tell to make sense of the senseless—but it's a story built on distortions, not truth.
+            After trauma, the first question many survivors ask isn't "Why did this happen?" It's "What did I do wrong?" You replay the event in your mind, cataloging every choice that might have prevented it. <em>If I hadn't gone there. If I'd fought back. If I'd been smarter, stronger, more careful.</em> Self-blame becomes the story you tell to make sense of the senseless---but it's a story built on distortions, not truth.
           </p>
           <p className="mb-6">
-            Research shows that 60-90% of trauma survivors experience significant self-blame <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. And this isn't a minor symptom—self-blame is one of the strongest predictors of PTSD severity and chronicity. The more you blame yourself, the harder it is to heal <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
+            Research shows that 60-90% of trauma survivors experience significant self-blame <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. And this isn't a minor symptom---self-blame is one of the strongest predictors of PTSD severity and chronicity. The more you blame yourself, the harder it is to heal <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -762,7 +762,7 @@ export const traumaResponsesArticlesB: Article[] = [
           Why Self-Blame Happens: The Psychological Functions
         </h2>
         <p className="mb-6">
-          Self-blame isn't irrational—it serves psychological purposes that feel protective, even as they harm you <Citation id="4" index={4} source="Journal of Interpersonal Violence" year="2019" tier={1} />:
+          Self-blame isn't irrational---it serves psychological purposes that feel protective, even as they harm you <Citation id="4" index={4} source="Journal of Interpersonal Violence" year="2019" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -793,7 +793,7 @@ export const traumaResponsesArticlesB: Article[] = [
                     <li>"Bad things don't happen to innocent people, so I must have done something wrong."</li>
                     <li>"If I was hurt, I must have deserved it somehow."</li>
                   </ul>
-                  <p className="mt-4"><strong>The truth:</strong> The world isn't just. Trauma happens to good people. Accepting this is terrifying—but liberating.</p>
+                  <p className="mt-4"><strong>The truth:</strong> The world isn't just. Trauma happens to good people. Accepting this is terrifying---but liberating.</p>
                 </div>
               ),
             },
@@ -881,7 +881,7 @@ export const traumaResponsesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Cognitive Distortion vs. Reality:</strong> Your brain is trying to make sense of trauma by rewriting the story. Below are common distortions—and the evidence-based rebuttals.</p>
+          <p><strong>Cognitive Distortion vs. Reality:</strong> Your brain is trying to make sense of trauma by rewriting the story. Below are common distortions---and the evidence-based rebuttals.</p>
         </ArticleCallout>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -896,7 +896,7 @@ export const traumaResponsesArticlesB: Article[] = [
         <h2 id="neurobiological-roots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Neurobiological Roots of Self-Blame</h2>
         <p className="mb-6">
-          Research shows that self-blame activates specific brain regions—particularly the anterior cingulate cortex and medial prefrontal cortex—areas involved in error detection and self-reflection <Citation id="6" index={6} source="Biological Psychiatry" year="2021" tier={1} />. In PTSD, these regions can become hyperactive, creating a persistent "something is wrong with me" signal.
+          Research shows that self-blame activates specific brain regions---particularly the anterior cingulate cortex and medial prefrontal cortex---areas involved in error detection and self-reflection <Citation id="6" index={6} source="Biological Psychiatry" year="2021" tier={1} />. In PTSD, these regions can become hyperactive, creating a persistent "something is wrong with me" signal.
         </p>
         <p className="mb-6">
           Additionally, trauma disrupts the brain's ability to contextualize memories. You may <em>feel</em> like you had more control than you did because your hippocampus (which time-stamps and contextualizes) was impaired during the trauma. This makes it harder to accurately remember: <em>I was trapped. I had no options. This wasn't my fault.</em>
@@ -924,7 +924,7 @@ export const traumaResponsesArticlesB: Article[] = [
           The Role of Self-Compassion
         </h2>
         <p className="mb-6">
-          Self-compassion—treating yourself with the kindness you'd offer a friend—is a powerful antidote to self-blame <Citation id="7" index={7} source="Mindfulness" year="2020" tier={1} />. Research shows that self-compassion interventions reduce PTSD symptoms, particularly shame and self-criticism.
+          Self-compassion---treating yourself with the kindness you'd offer a friend---is a powerful antidote to self-blame <Citation id="7" index={7} source="Mindfulness" year="2020" tier={1} />. Research shows that self-compassion interventions reduce PTSD symptoms, particularly shame and self-criticism.
         </p>
         <p className="mb-6">
           Try this practice:
@@ -965,7 +965,7 @@ export const traumaResponsesArticlesB: Article[] = [
     id: catId(29),
     slug: 'anger-after-trauma-emotion-survivors-told-not-to-feel',
     title: 'Anger After Trauma: The Emotion Survivors Are Told Not to Feel',
-    description: 'Understand why anger is a natural, protective response to trauma—and how suppressing it can delay healing and harm your well-being.',
+    description: 'Understand why anger is a natural, protective response to trauma---and how suppressing it can delay healing and harm your well-being.',
     image: "/images/articles/cat11/cover-029.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 6,
@@ -1043,10 +1043,10 @@ export const traumaResponsesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After trauma, you're allowed to be sad. You're allowed to be scared. But anger? That's dangerous. Unproductive. A sign you haven't 'moved on." So you push it down. You perform forgiveness you don't feel. You smile through rage because angry victims aren't sympathetic. But here's what no one tells you: <strong>anger is the emotion that knows you were wronged</strong>. And suppressing it doesn't make you heal faster—it keeps you stuck.
+            After trauma, you're allowed to be sad. You're allowed to be scared. But anger? That's dangerous. Unproductive. A sign you haven't 'moved on." So you push it down. You perform forgiveness you don't feel. You smile through rage because angry victims aren't sympathetic. But here's what no one tells you: <strong>anger is the emotion that knows you were wronged</strong>. And suppressing it doesn't make you heal faster---it keeps you stuck.
           </p>
           <p className="mb-6">
-            Research shows that anger is one of the most common—and most suppressed—emotions in trauma survivors <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. And while society treats anger as a problem to solve, psychologists increasingly recognize it as a <strong>protective, adaptive response</strong> that signals you're ready to reclaim your power <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
+            Research shows that anger is one of the most common---and most suppressed---emotions in trauma survivors <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. And while society treats anger as a problem to solve, psychologists increasingly recognize it as a <strong>protective, adaptive response</strong> that signals you're ready to reclaim your power <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -1061,7 +1061,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li><strong>Restores agency:</strong> In trauma, you were powerless. Anger is your psyche's attempt to reclaim control.</li>
           <li><strong>Creates distance from shame:</strong> Anger points outward ("They did this") instead of inward ("I'm broken").</li>
           <li><strong>Protects vulnerability:</strong> Anger feels safer than grief, fear, or helplessness. It's armor.</li>
-          <li><strong>Mobilizes energy:</strong> Unlike depression's shutdown, anger activates you—it wants action, change, justice.</li>
+          <li><strong>Mobilizes energy:</strong> Unlike depression's shutdown, anger activates you---it wants action, change, justice.</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
@@ -1087,7 +1087,7 @@ export const traumaResponsesArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Social messaging:</strong> "Good victims" are forgiving, not angry. Anger makes people uncomfortable, so you're pressured to suppress it.</li>
           <li><strong>Fear of losing control:</strong> After feeling powerless, you fear that anger will consume you or make you violent.</li>
-          <li><strong>Misplaced anger:</strong> You're angry at the perpetrator, but they're gone or untouchable—so the anger leaks onto safer targets (yourself, loved ones).</li>
+          <li><strong>Misplaced anger:</strong> You're angry at the perpetrator, but they're gone or untouchable---so the anger leaks onto safer targets (yourself, loved ones).</li>
           <li><strong>Gender conditioning:</strong> Women, especially, are socialized to be accommodating, not angry. Expressing anger risks being labeled 'hysterical' or "bitter" <Citation id="6" index={6} source="Journal of Anxiety Disorders" year="2019" tier={1} />.</li>
           <li><strong>Spiritual bypassing:</strong> Pressure to "forgive and move on" before you've processed the violation.</li>
         </ul>
@@ -1103,7 +1103,7 @@ export const traumaResponsesArticlesB: Article[] = [
           Healthy vs. Unhealthy Anger Expression
         </h2>
         <p className="mb-6">
-          The goal isn't to eliminate anger—it's to express it in ways that heal rather than harm <Citation id="5" index={5} source="Health Psychology" year="2020" tier={1} />.
+          The goal isn't to eliminate anger---it's to express it in ways that heal rather than harm <Citation id="5" index={5} source="Health Psychology" year="2020" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -1139,7 +1139,7 @@ export const traumaResponsesArticlesB: Article[] = [
           What Suppressed Anger Does to You
         </h2>
         <p className="mb-6">
-          When anger has nowhere to go, it doesn't disappear—it goes underground <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />:
+          When anger has nowhere to go, it doesn't disappear---it goes underground <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Turns into depression:</strong> Anger turned inward becomes self-hatred, hopelessness, and despair.</li>
@@ -1164,8 +1164,8 @@ export const traumaResponsesArticlesB: Article[] = [
         <ProgressSteps
           variant="vertical"
           steps={[
-            { title: 'Name it', description: <p>Say out loud: 'I am angry." Not "frustrated" or "annoyed"—angry. Naming gives it permission to exist.</p> },
-            { title: 'Write an unsent letter', description: <p>Pour out everything you want to say to the person who hurt you. Hold nothing back. Then burn it, rip it up, or keep it—whatever feels right.</p> },
+            { title: 'Name it', description: <p>Say out loud: 'I am angry." Not "frustrated" or "annoyed"---angry. Naming gives it permission to exist.</p> },
+            { title: 'Write an unsent letter', description: <p>Pour out everything you want to say to the person who hurt you. Hold nothing back. Then burn it, rip it up, or keep it---whatever feels right.</p> },
             { title: 'Move it through your body', description: <p>Anger is physical. Try: hitting a pillow, tearing paper, stomping, dancing aggressively, or high-intensity exercise. Let the energy discharge.</p> },
             { title: 'Use your voice', description: <p>In private: scream into a pillow, yell in your car, or verbalize what you couldn't say then: 'You had no right. What you did was wrong.'</p> },
             { title: 'Channel it into action', description: <p>Anger wants change. Volunteer, advocate, set boundaries, or create art. Let anger fuel something meaningful.</p> },
@@ -1180,11 +1180,11 @@ export const traumaResponsesArticlesB: Article[] = [
           Survivors are often told: "You need to forgive to heal." This is <strong>not true</strong> <Citation id="4" index={4} source="The Gifts of Imperfection" year="2010" tier={5} />. Forgiveness is a personal choice, not a requirement for recovery. Some people find it helpful. Others don't. Both paths are valid.
         </p>
         <p className="mb-6">
-          What <em>is</em> required: releasing the <strong>grip</strong> anger has on you. This doesn't mean forgetting or condoning—it means the anger no longer controls your life. You can be angry <em>and</em> move forward. You can refuse to forgive <em>and</em> still heal.
+          What <em>is</em> required: releasing the <strong>grip</strong> anger has on you. This doesn't mean forgetting or condoning---it means the anger no longer controls your life. You can be angry <em>and</em> move forward. You can refuse to forgive <em>and</em> still heal.
         </p>
 
         <ArticleCallout variant="tip">
-          <p><strong>Reframe forgiveness:</strong> If someone pressures you to forgive, remember—you can say: "I'm not ready, and I may never be. What I <em>am</em> doing is reclaiming my life. That's enough."</p>
+          <p><strong>Reframe forgiveness:</strong> If someone pressures you to forgive, remember---you can say: "I'm not ready, and I may never be. What I <em>am</em> doing is reclaiming my life. That's enough."</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1201,7 +1201,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li>You've been angry for years and it's not getting better on its own</li>
         </ul>
         <p className="mb-6">
-          Look for trauma-informed therapists trained in somatic or emotion-focused approaches. Anger isn't the enemy. It's the part of you that knows you deserved better—and it's trying to protect you. Listen to it. Honor it. And when you're ready, let it transform from a wound into a source of power.
+          Look for trauma-informed therapists trained in somatic or emotion-focused approaches. Anger isn't the enemy. It's the part of you that knows you deserved better---and it's trying to protect you. Listen to it. Honor it. And when you're ready, let it transform from a wound into a source of power.
         </p>
       </>
     ),
@@ -1210,7 +1210,7 @@ export const traumaResponsesArticlesB: Article[] = [
     id: catId(30),
     slug: 'hyperarousal-living-in-constant-alert',
     title: 'Hyperarousal: Living in a State of Constant Alert',
-    description: `Understand the hyperarousal symptom cluster of PTSD—why your body won't turn off the alarm, and how to calm a chronically activated nervous system.`,
+    description: `Understand the hyperarousal symptom cluster of PTSD---why your body won't turn off the alarm, and how to calm a chronically activated nervous system.`,
     image: '/images/articles/cat11/cover-030.svg',
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 7,
@@ -1288,10 +1288,10 @@ export const traumaResponsesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your heart pounds at the slightest unexpected noise. You can't sleep because your mind won't stop scanning for danger. You startle when someone touches you, even gently. You feel wired, jittery, like you're waiting for something terrible to happen. This is hyperarousal—your nervous system stuck in high alert, unable to distinguish between past threat and present safety. The trauma is over, but your body doesn't know it.
+            Your heart pounds at the slightest unexpected noise. You can't sleep because your mind won't stop scanning for danger. You startle when someone touches you, even gently. You feel wired, jittery, like you're waiting for something terrible to happen. This is hyperarousal---your nervous system stuck in high alert, unable to distinguish between past threat and present safety. The trauma is over, but your body doesn't know it.
           </p>
           <p className="mb-6">
-            Hyperarousal is one of the four symptom clusters of PTSD (alongside intrusion, avoidance, and negative mood changes) <Citation id="1" index={1} source="Biological Psychiatry" year="2021" tier={1} />. It's driven by a dysregulated sympathetic nervous system—your "fight or flight" system that won't turn off. And while it feels unbearable, understanding <em>why</em> it happens is the first step toward calming it.
+            Hyperarousal is one of the four symptom clusters of PTSD (alongside intrusion, avoidance, and negative mood changes) <Citation id="1" index={1} source="Biological Psychiatry" year="2021" tier={1} />. It's driven by a dysregulated sympathetic nervous system---your "fight or flight" system that won't turn off. And while it feels unbearable, understanding <em>why</em> it happens is the first step toward calming it.
           </p>
         </div>
 
@@ -1329,7 +1329,7 @@ export const traumaResponsesArticlesB: Article[] = [
           After trauma, your amygdala (alarm system) becomes <strong>hypersensitive</strong>. It detects threats that aren't there. Meanwhile, your prefrontal cortex (which normally says "calm down, that's not actually dangerous") is <strong>underactive</strong>. The result: your body stays in fight-or-flight mode, flooding you with stress hormones (cortisol, adrenaline) even when you're safe.
         </p>
         <p className="mb-6">
-          This isn't a choice. Your conscious mind knows you're safe. But your brainstem—operating below conscious awareness—hasn't gotten the memo.
+          This isn't a choice. Your conscious mind knows you're safe. But your brainstem---operating below conscious awareness---hasn't gotten the memo.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1350,7 +1350,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li>You interpret neutral expressions as hostile</li>
         </ul>
         <p className="mb-6">
-          This was <strong>adaptive during trauma</strong>—scanning kept you alive. But now it's exhausting, isolating, and prevents you from being present.
+          This was <strong>adaptive during trauma</strong>---scanning kept you alive. But now it's exhausting, isolating, and prevents you from being present.
         </p>
 
         <h2 id="sleep-disturbances" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1387,7 +1387,7 @@ export const traumaResponsesArticlesB: Article[] = [
             { title: 'Grounding techniques', description: <p>Use the 5-4-3-2-1 method: Name 5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste. This brings you into the present and interrupts threat-scanning.</p> },
             { title: 'Progressive muscle relaxation', description: <p>Tense and release each muscle group (feet, calves, thighs, etc.). This teaches your body what relaxation feels like and releases stored tension.</p> },
             { title: 'Bilateral stimulation', description: <p>Used in EMDR: alternate tapping on your knees, crossing your arms and tapping shoulders, or listening to bilateral music. This calms the nervous system.</p> },
-            { title: 'Aerobic exercise', description: <p>30+ minutes of cardio (running, swimming, cycling) metabolizes stress hormones and discharges pent-up arousal. Don't skip this—it's one of the most effective tools.</p> },
+            { title: 'Aerobic exercise', description: <p>30+ minutes of cardio (running, swimming, cycling) metabolizes stress hormones and discharges pent-up arousal. Don't skip this---it's one of the most effective tools.</p> },
             { title: 'Mindfulness meditation', description: <p>Research shows mindfulness reduces hyperarousal by training your brain to observe sensations without reacting. Start with 5 minutes daily <Citation id="5" index={5} source="Clinical Psychology Review" year="2021" tier={1} />.</p> },
           ]}
         />
@@ -1412,11 +1412,11 @@ export const traumaResponsesArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Ventral vagal (safe and social):</strong> Calm, connected, able to think clearly</li>
-          <li><strong>Sympathetic (fight or flight):</strong> Hyperarousal—activated, anxious, alert</li>
-          <li><strong>Dorsal vagal (freeze/shutdown):</strong> Hypoarousal—numb, dissociated, collapsed</li>
+          <li><strong>Sympathetic (fight or flight):</strong> Hyperarousal---activated, anxious, alert</li>
+          <li><strong>Dorsal vagal (freeze/shutdown):</strong> Hypoarousal---numb, dissociated, collapsed</li>
         </ul>
         <p className="mb-6">
-          In PTSD, you're often stuck in sympathetic (hyperarousal) or dorsal (shutdown), with little access to the ventral vagal "safe" state. Healing involves building capacity to return to ventral vagal—the state where connection, rest, and processing are possible.
+          In PTSD, you're often stuck in sympathetic (hyperarousal) or dorsal (shutdown), with little access to the ventral vagal "safe" state. Healing involves building capacity to return to ventral vagal---the state where connection, rest, and processing are possible.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1433,7 +1433,7 @@ export const traumaResponsesArticlesB: Article[] = [
           <li>You feel unsafe even in objectively safe environments</li>
         </ul>
         <p className="mb-6">
-          Effective treatments include EMDR, Prolonged Exposure, CPT, and Somatic Experiencing. Medications like SSRIs or prazosin can also help. The goal isn't to eliminate all arousal—it's to restore flexibility so your nervous system can shift between states as needed, rather than being stuck in high alert.
+          Effective treatments include EMDR, Prolonged Exposure, CPT, and Somatic Experiencing. Medications like SSRIs or prazosin can also help. The goal isn't to eliminate all arousal---it's to restore flexibility so your nervous system can shift between states as needed, rather than being stuck in high alert.
         </p>
 
         <p className="mb-6">

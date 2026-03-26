@@ -92,7 +92,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression affects millions of men, yet they're significantly less likely than women to be diagnosed or to seek help. This isn't because men experience less depression—it's because depression in men often looks different, and cultural expectations around masculinity discourage vulnerability and help-seeking.
+            Depression affects millions of men, yet they're significantly less likely than women to be diagnosed or to seek help. This isn't because men experience less depression---it's because depression in men often looks different, and cultural expectations around masculinity discourage vulnerability and help-seeking.
           </p>
           <p className="mb-6">
             Understanding how depression manifests uniquely in men is critical for recognition, diagnosis, and treatment <Citation id="1" index={1} source="JAMA Psychiatry" year="2017" tier={1} />. This article explores why men's depression is underdiagnosed and what the warning signs actually are.
@@ -117,7 +117,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           2. Different Symptom Presentation
         </h3>
         <p className="mb-6">
-          Standard depression screening tools were developed primarily based on how depression presents in women. Men are more likely to exhibit anger, irritability, risk-taking, and substance use—symptoms not always recognized as depression <Citation id="4" index={4} source="Journal of Affective Disorders" year="2018" tier={1} />.
+          Standard depression screening tools were developed primarily based on how depression presents in women. Men are more likely to exhibit anger, irritability, risk-taking, and substance use---symptoms not always recognized as depression <Citation id="4" index={4} source="Journal of Affective Disorders" year="2018" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -129,7 +129,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-2">
-            <strong>The tragic consequence:</strong> Men die by suicide at 3–4 times the rate of women, despite women having higher rates of diagnosed depression <Citation id="5" index={5} source="World Health Organization" year="2021" tier={2} />.
+            <strong>The tragic consequence:</strong> Men die by suicide at 3--4 times the rate of women, despite women having higher rates of diagnosed depression <Citation id="5" index={5} source="World Health Organization" year="2021" tier={2} />.
           </p>
           <p>
             This gap suggests that many men are suffering in silence, with depression going unrecognized until it becomes life-threatening.
@@ -159,7 +159,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Critical insight:</strong> If a man seems more angry, withdrawn, or reckless than usual—especially if combined with fatigue, sleep problems, or substance use—consider that depression may be the underlying cause, even if he's not expressing sadness.
+            <strong>Critical insight:</strong> If a man seems more angry, withdrawn, or reckless than usual---especially if combined with fatigue, sleep problems, or substance use---consider that depression may be the underlying cause, even if he's not expressing sadness.
           </p>
         </ArticleCallout>
 
@@ -227,7 +227,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
               title: "'People will judge me",
               content: (
                 <div>
-                  <p className="mb-2">Mental health providers are trained professionals bound by confidentiality. They've seen it all, and their job is to help—not judge.</p>
+                  <p className="mb-2">Mental health providers are trained professionals bound by confidentiality. They've seen it all, and their job is to help---not judge.</p>
                   <p><strong>Reality:</strong> Millions of men are in treatment for depression. You're not alone, and you're not weak for needing support.</p>
                 </div>
               ),
@@ -360,7 +360,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Women are diagnosed with depression at roughly twice the rate of men—a disparity that begins in adolescence and persists throughout the lifespan. This isn't because women are "more emotional" or weaker. It's because women face a unique combination of biological, psychological, and social risk factors that converge to increase vulnerability.
+            Women are diagnosed with depression at roughly twice the rate of men---a disparity that begins in adolescence and persists throughout the lifespan. This isn't because women are "more emotional" or weaker. It's because women face a unique combination of biological, psychological, and social risk factors that converge to increase vulnerability.
           </p>
           <p className="mb-6">
             Understanding what drives higher depression rates in women is essential for recognition, prevention, and effective treatment <Citation id="1" index={1} source="Journal of Affective Disorders" year="2017" tier={1} />. This article explores the multifaceted reasons behind this gender gap.
@@ -384,7 +384,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The gap emerges at puberty, suggesting that hormonal changes play a role—but hormones are only part of the story.
+          The gap emerges at puberty, suggesting that hormonal changes play a role---but hormones are only part of the story.
         </p>
 
         <h2 id="hormonal-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -398,14 +398,14 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           1. Premenstrual Dysphoric Disorder (PMDD)
         </h3>
         <p className="mb-6">
-          Up to 5% of women experience PMDD—severe mood symptoms (depression, irritability, anxiety) in the week before menstruation that resolve after the period starts <Citation id="3" index={3} source="Current Psychiatry Reports" year="2020" tier={1} />. This is distinct from regular PMS and represents a hormonal sensitivity that affects brain chemistry.
+          Up to 5% of women experience PMDD---severe mood symptoms (depression, irritability, anxiety) in the week before menstruation that resolve after the period starts <Citation id="3" index={3} source="Current Psychiatry Reports" year="2020" tier={1} />. This is distinct from regular PMS and represents a hormonal sensitivity that affects brain chemistry.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. Perinatal Depression
         </h3>
         <p className="mb-6">
-          Pregnancy and the postpartum period involve dramatic hormonal shifts. Around 10–15% of women experience depression during pregnancy (antenatal depression) or after birth (postpartum depression) <Citation id="4" index={4} source="American Journal of Obstetrics and Gynecology" year="2019" tier={1} />.
+          Pregnancy and the postpartum period involve dramatic hormonal shifts. Around 10--15% of women experience depression during pregnancy (antenatal depression) or after birth (postpartum depression) <Citation id="4" index={4} source="American Journal of Obstetrics and Gynecology" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -432,7 +432,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           1. Gender-Based Violence and Trauma
         </h3>
         <p className="mb-6">
-          Women are disproportionately affected by sexual assault, domestic violence, and childhood sexual abuse—all of which are strong predictors of depression <Citation id="6" index={6} source="The Lancet" year="2018" tier={1} />. Trauma exposure is a major driver of the gender gap in depression.
+          Women are disproportionately affected by sexual assault, domestic violence, and childhood sexual abuse---all of which are strong predictors of depression <Citation id="6" index={6} source="The Lancet" year="2018" tier={1} />. Trauma exposure is a major driver of the gender gap in depression.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -446,14 +446,14 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           3. Work-Life Balance and Role Strain
         </h3>
         <p className="mb-6">
-          Many women juggle multiple roles—employee, parent, caregiver, partner—without adequate support. This "second shift" of unpaid domestic labor compounds workplace stress.
+          Many women juggle multiple roles---employee, parent, caregiver, partner---without adequate support. This "second shift" of unpaid domestic labor compounds workplace stress.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           4. Economic Inequality
         </h3>
         <p className="mb-6">
-          Women face wage gaps, occupational segregation, and higher poverty rates—all of which are associated with increased depression risk.
+          Women face wage gaps, occupational segregation, and higher poverty rates---all of which are associated with increased depression risk.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -631,7 +631,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Adolescence is already a time of mood swings, identity exploration, and intense emotions. So how do you tell the difference between normal teenage angst and clinical depression? The answer matters: teen depression is common, serious, and treatable—but only if it's recognized.
+            Adolescence is already a time of mood swings, identity exploration, and intense emotions. So how do you tell the difference between normal teenage angst and clinical depression? The answer matters: teen depression is common, serious, and treatable---but only if it's recognized.
           </p>
           <p className="mb-6">
             This article provides parents, teachers, and anyone who works with teens the tools to recognize depression and respond effectively <Citation id="8" index={8} source="National Institute of Mental Health" year="2021" tier={2} />.
@@ -642,7 +642,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           How Common Is Teen Depression?
         </h2>
         <p className="mb-6">
-          Adolescent depression has been rising in recent years. National data shows that approximately 15–20% of teens will experience a major depressive episode before adulthood <Citation id="1" index={1} source="JAMA Pediatrics" year="2020" tier={1} />.
+          Adolescent depression has been rising in recent years. National data shows that approximately 15--20% of teens will experience a major depressive episode before adulthood <Citation id="1" index={1} source="JAMA Pediatrics" year="2020" tier={1} />.
         </p>
 
         <StatCard
@@ -655,7 +655,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Depression during adolescence isn't just "a phase"—it's a real mental health condition that can interfere with school, relationships, and development. Left untreated, it increases risk for substance use, academic failure, and suicide <Citation id="4" index={4} source="The Lancet" year="2018" tier={1} />.
+          Depression during adolescence isn't just "a phase"---it's a real mental health condition that can interfere with school, relationships, and development. Left untreated, it increases risk for substance use, academic failure, and suicide <Citation id="4" index={4} source="The Lancet" year="2018" tier={1} />.
         </p>
 
         <h2 id="how-depression-looks-different-in-teens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -680,7 +680,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Critical distinction:</strong> If a teen seems more irritable, withdrawn, or defiant than usual—and it's persisting for weeks—consider that depression (not just "being a teenager") may be the underlying cause.
+            <strong>Critical distinction:</strong> If a teen seems more irritable, withdrawn, or defiant than usual---and it's persisting for weeks---consider that depression (not just "being a teenager") may be the underlying cause.
           </p>
         </ArticleCallout>
 
@@ -812,7 +812,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           5. Monitor (Without Hovering)
         </h3>
         <p className="mb-6">
-          Keep an eye on changes in mood, behavior, and social connection—but avoid being intrusive in a way that feels controlling.
+          Keep an eye on changes in mood, behavior, and social connection---but avoid being intrusive in a way that feels controlling.
         </p>
 
         <h2 id="treatment-for-teens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -840,7 +840,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Report concerns to the school counselor or psychologist</li>
           <li>Reach out to the student privately: "I've noticed you seem different lately. Are you okay?"</li>
-          <li>Don't try to diagnose—just listen and connect them with resources</li>
+          <li>Don't try to diagnose---just listen and connect them with resources</li>
           <li>Know your school's protocol for mental health crises</li>
         </ul>
       </>
@@ -945,7 +945,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Depression isn't just common—it's disruptive. Students with depression have lower GPAs, higher dropout rates, and increased risk of substance use and suicide <Citation id="2" index={2} source="Psychiatric Services" year="2019" tier={1} />.
+          Depression isn't just common---it's disruptive. Students with depression have lower GPAs, higher dropout rates, and increased risk of substance use and suicide <Citation id="2" index={2} source="Psychiatric Services" year="2019" tier={1} />.
         </p>
 
         <h2 id="why-college-students-are-vulnerable" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -987,14 +987,14 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           5. Increased Independence Without Support
         </h3>
         <p className="mb-6">
-          Students are expected to manage their own health, schedules, and responsibilities—often without the support structures they had at home.
+          Students are expected to manage their own health, schedules, and responsibilities---often without the support structures they had at home.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           6. Substance Use and Sleep Deprivation
         </h3>
         <p className="mb-6">
-          Campus culture often normalizes excessive drinking, drug use, and all-nighters—all of which worsen mental health.
+          Campus culture often normalizes excessive drinking, drug use, and all-nighters---all of which worsen mental health.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1072,14 +1072,14 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           2. Build a Support Network
         </h3>
         <p className="mb-6">
-          Connect with roommates, classmates, or student organizations. Isolation worsens depression—even small social connections help.
+          Connect with roommates, classmates, or student organizations. Isolation worsens depression---even small social connections help.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           3. Prioritize Basics
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Sleep: Aim for 7–8 hours, even if it means saying no to some activities</li>
+          <li>Sleep: Aim for 7--8 hours, even if it means saying no to some activities</li>
           <li>Eat regularly: Skipping meals worsens mood and energy</li>
           <li>Move your body: Even a 10-minute walk helps</li>
         </ul>
@@ -1119,7 +1119,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           <li>Notice changes in mood, communication patterns, or grades</li>
           <li>Normalize mental health: "It's okay to struggle. Let's get you help."</li>
           <li>Help them connect with campus or off-campus resources</li>
-          <li>Don't add pressure about grades or career—mental health is the priority</li>
+          <li>Don't add pressure about grades or career---mental health is the priority</li>
         </ul>
       </>
     ),
@@ -1202,7 +1202,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
             "They're just slowing down.", "It's natural to be sad at their age.", "Memory problems are part of getting old." These assumptions lead to a tragic outcome: depression in older adults is chronically underdiagnosed and undertreated. The result is unnecessary suffering, functional decline, and increased risk of medical complications and death.
           </p>
           <p className="mb-6">
-            Depression is not a normal part of aging. It's a medical condition that deserves recognition and treatment—but it often looks different in older adults, which is why it's so often missed <Citation id="1" index={1} source="The Lancet" year="2018" tier={1} />.
+            Depression is not a normal part of aging. It's a medical condition that deserves recognition and treatment---but it often looks different in older adults, which is why it's so often missed <Citation id="1" index={1} source="The Lancet" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -1210,7 +1210,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           How Common Is Depression in Older Adults?
         </h2>
         <p className="mb-6">
-          While major depressive disorder is slightly less common in older adults than in younger populations, clinically significant depressive symptoms affect 10–15% of community-dwelling older adults and up to 30–40% of those in nursing homes or hospitals <Citation id="2" index={2} source="American Journal of Geriatric Psychiatry" year="2020" tier={1} />.
+          While major depressive disorder is slightly less common in older adults than in younger populations, clinically significant depressive symptoms affect 10--15% of community-dwelling older adults and up to 30--40% of those in nursing homes or hospitals <Citation id="2" index={2} source="American Journal of Geriatric Psychiatry" year="2020" tier={1} />.
         </p>
 
         <StatCard
@@ -1233,14 +1233,14 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
           1. Ageist Assumptions
         </h3>
         <p className="mb-6">
-          Many people—including healthcare providers—assume that sadness, withdrawal, or loss of interest are "normal" for older adults. This is false. Aging does not cause depression.
+          Many people---including healthcare providers---assume that sadness, withdrawal, or loss of interest are "normal" for older adults. This is false. Aging does not cause depression.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. Different Symptom Presentation
         </h3>
         <p className="mb-6">
-          Older adults are less likely to report sadness and more likely to present with physical complaints, memory problems, or apathy—symptoms easily attributed to aging or medical illness <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />.
+          Older adults are less likely to report sadness and more likely to present with physical complaints, memory problems, or apathy---symptoms easily attributed to aging or medical illness <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1259,7 +1259,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Critical point:</strong> If an older adult's personality, mood, or functioning has changed—even if the changes seem "age-appropriate"—consider depression as a possible cause. Don't assume it's "just aging."
+            <strong>Critical point:</strong> If an older adult's personality, mood, or functioning has changed---even if the changes seem "age-appropriate"---consider depression as a possible cause. Don't assume it's "just aging."
           </p>
         </ArticleCallout>
 
@@ -1285,7 +1285,7 @@ export const depressionSpecificPopulationsArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>"Pseudodementia":</strong> Severe depression in older adults can cause memory and concentration problems that look like dementia. This is treatable—unlike neurodegenerative dementia. Always screen for depression when cognitive decline appears <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />.
+            <strong>"Pseudodementia":</strong> Severe depression in older adults can cause memory and concentration problems that look like dementia. This is treatable---unlike neurodegenerative dementia. Always screen for depression when cognitive decline appears <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />.
           </p>
         </ArticleCallout>
 

@@ -98,10 +98,10 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You wake up exhausted despite sleeping eight hours. The work that once energized you now feels meaningless. You're going through the motions, emotionally detached, cynical about things you used to care about. You're not sad, exactly — you're hollow. This isn't depression. This isn't ordinary stress. This is burnout.
+            You wake up exhausted despite sleeping eight hours. The work that once energized you now feels meaningless. You're going through the motions, emotionally detached, cynical about things you used to care about. You're not sad, exactly --- you're hollow. This isn't depression. This isn't ordinary stress. This is burnout.
           </p>
           <p className="mb-6">
-            Burnout is a state of chronic physical, emotional, and mental exhaustion caused by prolonged exposure to demanding circumstances — typically work-related, but increasingly recognized in parenting, caregiving, and other high-demand roles <Citation id="1" index={1} source="Consulting Psychologists Press" year="1996" tier={5} />. It's more than being tired. It's a syndrome with distinct features that, if left unaddressed, can have serious health consequences.
+            Burnout is a state of chronic physical, emotional, and mental exhaustion caused by prolonged exposure to demanding circumstances --- typically work-related, but increasingly recognized in parenting, caregiving, and other high-demand roles <Citation id="1" index={1} source="Consulting Psychologists Press" year="1996" tier={5} />. It's more than being tired. It's a syndrome with distinct features that, if left unaddressed, can have serious health consequences.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    This is the central quality of burnout — a profound depletion of emotional resources. You feel drained, unable to give more, running on empty.
+                    This is the central quality of burnout --- a profound depletion of emotional resources. You feel drained, unable to give more, running on empty.
                   </p>
                   <p className="font-semibold mt-2 mb-1">What it feels like:</p>
                   <ul className="list-disc pl-5 space-y-1">
@@ -182,7 +182,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            In 2019, the World Health Organization officially recognized burnout in the ICD-11 (International Classification of Diseases) as an "occupational phenomenon" — not a medical condition, but a syndrome resulting from chronic workplace stress that has not been successfully managed <Citation id="3" index={3} source="World Health Organization" year="2019" tier={2} />.
+            In 2019, the World Health Organization officially recognized burnout in the ICD-11 (International Classification of Diseases) as an "occupational phenomenon" --- not a medical condition, but a syndrome resulting from chronic workplace stress that has not been successfully managed <Citation id="3" index={3} source="World Health Organization" year="2019" tier={2} />.
           </p>
         </ArticleCallout>
 
@@ -264,7 +264,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           What Causes Burnout?
         </h2>
         <p className="mb-6">
-          Burnout doesn't happen overnight. It's the result of a mismatch between the person and their environment — typically in one or more of six key areas <Citation id="6" index={6} source="Annual Review of Organizational Psychology" year="2014" tier={1} />:
+          Burnout doesn't happen overnight. It's the result of a mismatch between the person and their environment --- typically in one or more of six key areas <Citation id="6" index={6} source="Annual Review of Organizational Psychology" year="2014" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -302,7 +302,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               title: '4. Community',
               content: (
                 <p>
-                  Isolation, conflict, lack of support from colleagues or supervisors. Humans are social beings — working in toxic or unsupportive environments accelerates burnout.
+                  Isolation, conflict, lack of support from colleagues or supervisors. Humans are social beings --- working in toxic or unsupportive environments accelerates burnout.
                 </p>
               ),
             },
@@ -367,7 +367,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           The Consequences of Untreated Burnout
         </h2>
         <p className="mb-6">
-          Burnout isn't just unpleasant — it has real health, career, and relationship consequences:
+          Burnout isn't just unpleasant --- it has real health, career, and relationship consequences:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Physical health</strong>: Increased risk of cardiovascular disease, type 2 diabetes, musculoskeletal disorders, weakened immune function</li>
@@ -379,7 +379,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Burnout is not a personal failure. It's a signal that the demands placed on you have exceeded your resources to meet them for too long. The solution isn't just individual coping — it often requires changing the environment, setting boundaries, or making difficult decisions about what you can sustain.
+            Burnout is not a personal failure. It's a signal that the demands placed on you have exceeded your resources to meet them for too long. The solution isn't just individual coping --- it often requires changing the environment, setting boundaries, or making difficult decisions about what you can sustain.
           </p>
         </ArticleCallout>
       </>
@@ -455,7 +455,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're exhausted. But is it burnout, or have you just had a really hard week? Is a weekend of rest going to fix this, or do you need something more? The line between normal fatigue and burnout can feel blurry — but there are clear distinctions that matter for how you respond.
+            You're exhausted. But is it burnout, or have you just had a really hard week? Is a weekend of rest going to fix this, or do you need something more? The line between normal fatigue and burnout can feel blurry --- but there are clear distinctions that matter for how you respond.
           </p>
           <p className="mb-6">
             Burnout isn't just extreme tiredness. It's a specific syndrome with recognizable patterns <Citation id="1" index={1} source="Ballantine Books" year="2019" tier={5} />. Knowing the difference helps you determine whether you need a vacation or a more fundamental change.
@@ -488,7 +488,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2"><strong>Normal fatigue:</strong> Primarily physical. Your body is tired from exertion or lack of sleep.</p>
-                  <p><strong>Burnout:</strong> Deep emotional and mental exhaustion. You feel depleted in ways that sleep can't fix. The fatigue feels existential — "I have nothing left to give."</p>
+                  <p><strong>Burnout:</strong> Deep emotional and mental exhaustion. You feel depleted in ways that sleep can't fix. The fatigue feels existential --- "I have nothing left to give."</p>
                 </div>
               ),
             },
@@ -548,7 +548,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2"><strong>Normal fatigue:</strong> Temporary physical tiredness, maybe some muscle soreness or occasional headaches.</p>
-                  <p><strong>Burnout:</strong> Chronic physical symptoms — headaches, digestive issues, frequent illness, muscle tension, sleep disturbances that persist despite rest.</p>
+                  <p><strong>Burnout:</strong> Chronic physical symptoms --- headaches, digestive issues, frequent illness, muscle tension, sleep disturbances that persist despite rest.</p>
                 </div>
               ),
             },
@@ -637,9 +637,9 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           <p className="mt-6 font-semibold">Scoring:</p>
           <ul className="list-disc pl-6 mt-2 space-y-1">
             <li><strong>0-10:</strong> Low burnout risk</li>
-            <li><strong>11-20:</strong> Moderate burnout risk — pay attention</li>
-            <li><strong>21-30:</strong> High burnout risk — intervention needed</li>
-            <li><strong>31-40:</strong> Severe burnout — seek professional support</li>
+            <li><strong>11-20:</strong> Moderate burnout risk --- pay attention</li>
+            <li><strong>21-30:</strong> High burnout risk --- intervention needed</li>
+            <li><strong>31-40:</strong> Severe burnout --- seek professional support</li>
           </ul>
         </div>
 
@@ -722,7 +722,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           <li>Seek professional support (therapist, burnout coach, employee assistance program)</li>
           <li>Evaluate whether your current role is sustainable without major changes</li>
           <li>Address physical health symptoms with a physician</li>
-          <li>Make recovery your priority — burnout at this stage requires months, not days, to heal</li>
+          <li>Make recovery your priority --- burnout at this stage requires months, not days, to heal</li>
         </ul>
 
         <QuoteBlock
@@ -746,7 +746,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          The distinction between tired and burned out isn't academic. It determines your path forward — and the sooner you identify burnout, the easier it is to reverse.
+          The distinction between tired and burned out isn't academic. It determines your path forward --- and the sooner you identify burnout, the easier it is to reverse.
         </p>
       </>
     ),
@@ -821,10 +821,10 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Burnout doesn't announce itself with a dramatic crash. It's a slow burn — a progressive deterioration that unfolds in predictable stages. By the time most people recognize they're burned out, they're deep into the cycle. Understanding the 12 stages helps you catch it early, when intervention is easier and recovery is faster.
+            Burnout doesn't announce itself with a dramatic crash. It's a slow burn --- a progressive deterioration that unfolds in predictable stages. By the time most people recognize they're burned out, they're deep into the cycle. Understanding the 12 stages helps you catch it early, when intervention is easier and recovery is faster.
           </p>
           <p className="mb-6">
-            This model, developed by psychologists Herbert Freudenberger and Gail North, maps the trajectory from enthusiastic engagement to complete breakdown <Citation id="1" index={1} source="International Stress Management Association" year="2018" tier={3} />. You don't necessarily progress linearly through every stage, but the pattern is recognizable — and reversible if caught in time.
+            This model, developed by psychologists Herbert Freudenberger and Gail North, maps the trajectory from enthusiastic engagement to complete breakdown <Citation id="1" index={1} source="International Stress Management Association" year="2018" tier={3} />. You don't necessarily progress linearly through every stage, but the pattern is recognizable --- and reversible if caught in time.
           </p>
         </div>
 
@@ -846,7 +846,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    You take on a new role or project with enthusiasm. You want to prove yourself, meet expectations, and demonstrate your value. This drive feels positive — you're energized and motivated.
+                    You take on a new role or project with enthusiasm. You want to prove yourself, meet expectations, and demonstrate your value. This drive feels positive --- you're energized and motivated.
                   </p>
                   <p className="font-semibold mt-2 mb-1">What it looks like:</p>
                   <ul className="list-disc pl-5 space-y-1">
@@ -884,7 +884,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    To sustain the pace, you start cutting corners on self-care. Sleep, exercise, social time, hobbies — all get deprioritized because "work comes first."
+                    To sustain the pace, you start cutting corners on self-care. Sleep, exercise, social time, hobbies --- all get deprioritized because "work comes first."
                   </p>
                   <p className="font-semibold mt-2 mb-1">What it looks like:</p>
                   <ul className="list-disc pl-5 space-y-1">
@@ -894,7 +894,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
                     <li>Abandoning exercise routines</li>
                     <li>"I'll rest when this project is done' mindset</li>
                   </ul>
-                  <p className="mt-2 text-sm italic">Intervention: This is a critical turning point. Recommit to non-negotiable self-care. Recognize that neglecting your needs doesn't make you more productive — it makes burnout inevitable.</p>
+                  <p className="mt-2 text-sm italic">Intervention: This is a critical turning point. Recommit to non-negotiable self-care. Recognize that neglecting your needs doesn't make you more productive --- it makes burnout inevitable.</p>
                 </div>
               ),
             },
@@ -903,7 +903,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    You're starting to feel the strain, but instead of acknowledging it's the workload or environment, you externalize the problem. "It's not the job — it's everyone else."
+                    You're starting to feel the strain, but instead of acknowledging it's the workload or environment, you externalize the problem. "It's not the job --- it's everyone else."
                   </p>
                   <p className="font-semibold mt-2 mb-1">What it looks like:</p>
                   <ul className="list-disc pl-5 space-y-1">
@@ -931,7 +931,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-2">
-                    Things that used to matter to you — relationships, hobbies, health — now feel like burdens or distractions from work. Your values unconsciously shift to accommodate the demands.
+                    Things that used to matter to you --- relationships, hobbies, health --- now feel like burdens or distractions from work. Your values unconsciously shift to accommodate the demands.
                   </p>
                   <p className="font-semibold mt-2 mb-1">What it looks like:</p>
                   <ul className="list-disc pl-5 space-y-1">
@@ -959,7 +959,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
                     <li>Physical symptoms (headaches, insomnia, digestive issues) ignored or normalized</li>
                     <li>Increased reliance on substances (caffeine, alcohol) to cope</li>
                   </ul>
-                  <p className="mt-2 text-sm italic">Intervention: If people you trust are expressing concern, listen. Denial at this stage requires external perspective — seek professional help.</p>
+                  <p className="mt-2 text-sm italic">Intervention: If people you trust are expressing concern, listen. Denial at this stage requires external perspective --- seek professional help.</p>
                 </div>
               ),
             },
@@ -1044,7 +1044,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
                   </p>
                   <p className="font-semibold mt-2 mb-1">What it looks like:</p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>Existential emptiness — "What's the point of anything?"</li>
+                    <li>Existential emptiness --- "What's the point of anything?"</li>
                     <li>Increased reliance on food, substances, shopping, sex to feel something</li>
                     <li>Overeating or undereating</li>
                     <li>Compulsive behaviors</li>
@@ -1103,7 +1103,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           Prevention and Reversal: Where You Intervene Matters
         </h2>
         <p className="mb-6">
-          The 12-stage model isn't just diagnostic — it's a map for intervention <Citation id="6" index={6} source="Scandinavian Journal of Work, Environment & Health" year="2016" tier={1} />:
+          The 12-stage model isn't just diagnostic --- it's a map for intervention <Citation id="6" index={6} source="Scandinavian Journal of Work, Environment & Health" year="2016" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1120,7 +1120,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Burnout is not a character flaw or a sign of weakness. It's a predictable response to unsustainable conditions. Catching it early — ideally before Stage 5 — makes all the difference between a minor course correction and a complete breakdown.
+          Burnout is not a character flaw or a sign of weakness. It's a predictable response to unsustainable conditions. Catching it early --- ideally before Stage 5 --- makes all the difference between a minor course correction and a complete breakdown.
         </p>
       </>
     ),
@@ -1203,10 +1203,10 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The very people we rely on to heal others are themselves breaking down. Healthcare worker burnout has reached epidemic proportions — and it was a crisis long before COVID-19 made it undeniable. Physicians, nurses, EMTs, therapists, social workers: the toll of caring for others in a broken system is devastating careers, health, and lives.
+            The very people we rely on to heal others are themselves breaking down. Healthcare worker burnout has reached epidemic proportions --- and it was a crisis long before COVID-19 made it undeniable. Physicians, nurses, EMTs, therapists, social workers: the toll of caring for others in a broken system is devastating careers, health, and lives.
           </p>
           <p className="mb-6">
-            Healthcare burnout isn't just a personal problem. It's a public health crisis. Burned-out clinicians make more medical errors, provide lower-quality care, and are more likely to leave the profession — creating dangerous shortages <Citation id="1" index={1} source="Journal of the American Medical Association" year="2020" tier={1} />.
+            Healthcare burnout isn't just a personal problem. It's a public health crisis. Burned-out clinicians make more medical errors, provide lower-quality care, and are more likely to leave the profession --- creating dangerous shortages <Citation id="1" index={1} source="Journal of the American Medical Association" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -1234,7 +1234,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               title: 'Life-and-Death Decisions Under Time Pressure',
               content: (
                 <p>
-                  Mistakes can be fatal. The weight of this responsibility is unrelenting. There's no 'off switch' — even when you leave the hospital, you carry the burden of patients you couldn't save, diagnoses you might have missed.
+                  Mistakes can be fatal. The weight of this responsibility is unrelenting. There's no 'off switch' --- even when you leave the hospital, you carry the burden of patients you couldn't save, diagnoses you might have missed.
                 </p>
               ),
             },
@@ -1243,7 +1243,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               title: 'Emotional Labor and Compassion Fatigue',
               content: (
                 <p>
-                  Healthcare requires constant empathy while managing your own emotional responses to suffering, death, and trauma. Over time, this depletes your capacity for compassion — not because you don't care, but because you're empty.
+                  Healthcare requires constant empathy while managing your own emotional responses to suffering, death, and trauma. Over time, this depletes your capacity for compassion --- not because you don't care, but because you're empty.
                 </p>
               ),
             },
@@ -1261,7 +1261,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               title: 'Moral Injury and Ethical Distress',
               content: (
                 <p>
-                  Being forced to provide care you know is inadequate due to insurance denials, staffing shortages, or time constraints. Watching patients suffer because they can't afford treatment. This isn't just stress — it's moral injury, a betrayal of your professional values <Citation id="6" index={6} source="The New England Journal of Medicine" year="2020" tier={1} />.
+                  Being forced to provide care you know is inadequate due to insurance denials, staffing shortages, or time constraints. Watching patients suffer because they can't afford treatment. This isn't just stress --- it's moral injury, a betrayal of your professional values <Citation id="6" index={6} source="The New England Journal of Medicine" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -1298,14 +1298,14 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           The Impact on Patient Care
         </h2>
         <p className="mb-6">
-          Healthcare burnout isn't just bad for clinicians — it's dangerous for patients <Citation id="3" index={3} source="Patient Safety in Surgery" year="2016" tier={1} />:
+          Healthcare burnout isn't just bad for clinicians --- it's dangerous for patients <Citation id="3" index={3} source="Patient Safety in Surgery" year="2016" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Increased medical errors</strong>: Burnout doubles the risk of safety incidents and medical mistakes.</li>
           <li><strong>Reduced patient satisfaction</strong>: Burned-out providers are less empathetic, spend less time listening, and communicate less effectively.</li>
           <li><strong>Worse health outcomes</strong>: Studies show higher complication rates, longer hospital stays, and increased mortality in settings with high provider burnout.</li>
-          <li><strong>Staff turnover</strong>: Burned-out clinicians leave the profession, worsening shortages and increasing burden on remaining staff — a vicious cycle.</li>
+          <li><strong>Staff turnover</strong>: Burned-out clinicians leave the profession, worsening shortages and increasing burden on remaining staff --- a vicious cycle.</li>
         </ul>
 
         <h2 id="covid-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1339,7 +1339,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Many healthcare workers who weathered the peak now face delayed psychological consequences. Trauma doesn't always show up during the crisis — it emerges afterward.
+          Many healthcare workers who weathered the peak now face delayed psychological consequences. Trauma doesn't always show up during the crisis --- it emerges afterward.
         </p>
 
         <h2 id="what-healthcare-workers-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1353,7 +1353,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           1. Acknowledge the Reality (Fight the Stigma)
         </h3>
         <p className="mb-6">
-          Burnout is not a personal failing. It's a systemic issue. You didn't cause this, and you can't individually fix a broken system. Seeking help is not weakness — it's professionalism.
+          Burnout is not a personal failing. It's a systemic issue. You didn't cause this, and you can't individually fix a broken system. Seeking help is not weakness --- it's professionalism.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
@@ -1361,7 +1361,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Learn to say no to non-essential committee work, extra shifts when you're depleted</li>
-          <li>Protect time off — don't check emails on vacation</li>
+          <li>Protect time off --- don't check emails on vacation</li>
           <li>Set limits on emotional availability outside of work hours</li>
         </ul>
 
@@ -1382,7 +1382,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           <li><strong>Transition rituals</strong>: A 10-minute walk or breathing exercise between work and home</li>
           <li><strong>Physical activity</strong>: Exercise is one of the most effective burnout interventions</li>
           <li><strong>Mindfulness/meditation</strong>: Even brief practices reduce emotional exhaustion</li>
-          <li><strong>Creative outlets</strong>: Art, music, writing — something unrelated to medicine</li>
+          <li><strong>Creative outlets</strong>: Art, music, writing --- something unrelated to medicine</li>
         </ul>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
@@ -1416,7 +1416,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          You entered healthcare to help people. But you can't pour from an empty cup. Acknowledging your own suffering isn't selfish — it's necessary for survival.
+          You entered healthcare to help people. But you can't pour from an empty cup. Acknowledging your own suffering isn't selfish --- it's necessary for survival.
         </p>
       </>
     ),
@@ -1556,7 +1556,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           What Causes Academic Burnout?
         </h2>
         <p className="mb-6">
-          Academic burnout isn't caused by a single factor — it's the accumulation of systemic pressures:
+          Academic burnout isn't caused by a single factor --- it's the accumulation of systemic pressures:
         </p>
 
         <ArticleAccordion
@@ -1576,7 +1576,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
               title: '2. Hypercompetitiveness and Comparison Culture',
               content: (
                 <p>
-                  College admissions are more competitive than ever. Grad school acceptance rates plummet. Social media amplifies comparison. You're not just competing with your classmates — you're competing with the world.
+                  College admissions are more competitive than ever. Grad school acceptance rates plummet. Social media amplifies comparison. You're not just competing with your classmates --- you're competing with the world.
                 </p>
               ),
             },
@@ -1623,7 +1623,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           The Graduate Student Mental Health Crisis
         </h2>
         <p className="mb-6">
-          Graduate students — particularly PhD candidates — face especially high burnout rates <Citation id="3" index={3} source="Nature Biotechnology" year="2018" tier={1} />:
+          Graduate students --- particularly PhD candidates --- face especially high burnout rates <Citation id="3" index={3} source="Nature Biotechnology" year="2018" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -1692,21 +1692,21 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           2. Set Boundaries on Study Time
         </h3>
         <p className="mb-6">
-          Establish non-negotiable end times. Protect weekends or evenings. Diminishing returns set in after a certain point — more hours don't equal better learning.
+          Establish non-negotiable end times. Protect weekends or evenings. Diminishing returns set in after a certain point --- more hours don't equal better learning.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
           3. Build a Support Network
         </h3>
         <p className="mb-6">
-          Connect with classmates — not just to study, but to support each other emotionally. Join clubs or groups unrelated to your major. Maintain friendships outside academia.
+          Connect with classmates --- not just to study, but to support each other emotionally. Join clubs or groups unrelated to your major. Maintain friendships outside academia.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
           4. Use Campus Mental Health Resources
         </h3>
         <p className="mb-6">
-          Most schools offer free or low-cost counseling. Use it. There's no shame in seeking help — in fact, it's one of the smartest things high-achievers do <Citation id="7" index={7} source="American College Health Association" year="2023" tier={3} />.
+          Most schools offer free or low-cost counseling. Use it. There's no shame in seeking help --- in fact, it's one of the smartest things high-achievers do <Citation id="7" index={7} source="American College Health Association" year="2023" tier={3} />.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
@@ -1720,7 +1720,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           6. Consider a Leave of Absence
         </h3>
         <p className="mb-6">
-          If burnout is severe, taking time off is not quitting — it's strategically protecting your health and long-term success. Many students who take leaves return stronger and more focused.
+          If burnout is severe, taking time off is not quitting --- it's strategically protecting your health and long-term success. Many students who take leaves return stronger and more focused.
         </p>
 
         <ArticleCallout variant="tip">
@@ -1733,7 +1733,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
           What Educators and Institutions Can Do
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Reduce unnecessary workload</strong> — assess whether every assignment is essential</li>
+          <li><strong>Reduce unnecessary workload</strong> --- assess whether every assignment is essential</li>
           <li><strong>Teach time management</strong> and stress reduction skills explicitly</li>
           <li><strong>Create cultures of collaboration</strong> rather than competition</li>
           <li><strong>Normalize mental health support</strong> and help-seeking</li>
@@ -1743,7 +1743,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Education should expand minds, not break spirits. If you're burned out, you're not failing — the system is.
+          Education should expand minds, not break spirits. If you're burned out, you're not failing --- the system is.
         </p>
       </>
     ),

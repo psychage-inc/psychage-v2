@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 5a — Supporting Wellbeing Alongside Illness | Articles 43–46
+// Subcategory 5a --- Supporting Wellbeing Alongside Illness | Articles 43--46
 // ============================================================================
 
 export const supportingWellbeingArticlesA: Article[] = [
@@ -36,7 +36,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     tags: ['Energy Management', 'Pacing', 'Chronic Fatigue', 'Activity Management', 'Self-Management'],
 
     summary:
-      'Energy management is one of the most consequential daily challenges for people living with chronic illness, yet it remains poorly understood by both patients and clinicians. The boom-bust cycle — where individuals overexert on good days and then crash for days afterward — is not a failure of willpower but a predictable physiological pattern that can be interrupted with evidence-based pacing strategies. Research demonstrates that structured activity pacing reduces fatigue severity, improves functional capacity, and significantly lowers rates of depression and anxiety in people with conditions ranging from ME/CFS and fibromyalgia to multiple sclerosis and lupus. This article examines the science behind energy limitation, practical frameworks for daily activity management, and the psychological skills that support sustainable living with fluctuating capacity.',
+      'Energy management is one of the most consequential daily challenges for people living with chronic illness, yet it remains poorly understood by both patients and clinicians. The boom-bust cycle --- where individuals overexert on good days and then crash for days afterward --- is not a failure of willpower but a predictable physiological pattern that can be interrupted with evidence-based pacing strategies. Research demonstrates that structured activity pacing reduces fatigue severity, improves functional capacity, and significantly lowers rates of depression and anxiety in people with conditions ranging from ME/CFS and fibromyalgia to multiple sclerosis and lupus. This article examines the science behind energy limitation, practical frameworks for daily activity management, and the psychological skills that support sustainable living with fluctuating capacity.',
 
     keyFacts: [
       { text: 'Activity pacing reduces fatigue severity by 25-40% in clinical trials of people with chronic fatigue conditions', citationIndex: 1 },
@@ -55,7 +55,7 @@ export const supportingWellbeingArticlesA: Article[] = [
       title: 'The Energy Envelope Mapping Exercise',
       steps: [
         { title: 'Track your baseline', description: 'For three days, record every activity you do and rate your energy level before and after on a 0-10 scale. Include physical, cognitive, emotional, and social activities. Note when you feel the first signs of fatigue, not when you are already exhausted.' },
-        { title: 'Identify your envelope', description: 'Look at the data and find your sustainable activity threshold — the point at which you can function without triggering a crash the next day. This is your "energy envelope." It will be smaller than you expect, and that is normal.' },
+        { title: 'Identify your envelope', description: 'Look at the data and find your sustainable activity threshold --- the point at which you can function without triggering a crash the next day. This is your "energy envelope." It will be smaller than you expect, and that is normal.' },
         { title: 'Plan within the envelope', description: 'For the next week, pre-plan each day so your total activity stays within your envelope. Alternate high-energy and low-energy tasks. Schedule rest breaks before you need them, not after you are already depleted.' },
         { title: 'Adjust and expand gradually', description: 'After two weeks of staying within your envelope, you may notice your baseline capacity slowly increasing. Expand by no more than 10% per week. If you crash, return to the previous baseline without self-criticism.' },
       ],
@@ -81,14 +81,14 @@ export const supportingWellbeingArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You wake up feeling relatively good. The pain is manageable, the fog has lifted slightly, and
-            for the first time in days there is energy available. So you do everything — the laundry, the
+            for the first time in days there is energy available. So you do everything --- the laundry, the
             grocery shopping, the phone calls you have been putting off, the cooking, the cleaning. By
             evening you are shattered. By the next morning you cannot get out of bed. The crash lasts
             three days. When you finally recover, you swear you will be more careful next time. But the
             next good day arrives, and the cycle begins again.
           </p>
           <p className="mb-6">
-            This pattern — known clinically as the boom-bust cycle — is reported by more than 70% of
+            This pattern --- known clinically as the boom-bust cycle --- is reported by more than 70% of
             people living with chronic illness as their default way of managing
             energy<Citation id="2" index={2} />. It is not a character flaw or a failure of discipline.
             It is a predictable response to living in a body whose energy supply is unreliable, in a
@@ -98,12 +98,21 @@ export const supportingWellbeingArticlesA: Article[] = [
             illness<Citation id="1" index={1} />.
           </p>
           <p className="mb-6">
-            Pacing — the deliberate management of activity to stay within available energy limits — is
+            Pacing --- the deliberate management of activity to stay within available energy limits --- is
             not about doing less forever. It is about doing the right amount consistently, so that over
             time the body can build a more reliable baseline of capacity. The research is clear: people
             who learn and practice structured pacing report 25-40% reductions in fatigue severity,
             meaningful improvements in daily functioning, and significantly lower rates of depression
             and anxiety<Citation id="1" index={1} />.
+          </p>
+          <p className="mb-6">
+            What many patients and clinicians fail to appreciate is that pacing is not synonymous with rest. Rest alone does not address the root pattern driving energy depletion; it merely provides temporary relief between episodes of overexertion. Pacing, by contrast, is a proactive scheduling methodology that requires individuals to plan their activities before the day begins, allocate energy to tasks according to priority, and build in strategic recovery intervals that prevent the accumulation of physiological debt. The distinction matters clinically because rest-based approaches often leave patients feeling passive and helpless, whereas structured pacing restores a sense of agency. Longitudinal studies tracking patients with ME/CFS over 12-month periods found that those who adopted formal pacing protocols experienced not only fewer severe crashes but also a gradual upward trend in their baseline functional capacity, a finding that rest-only approaches did not replicate.
+          </p>
+          <p className="mb-6">
+            The cultural context surrounding chronic illness also shapes how energy management is understood and practiced. In societies that equate productivity with personal worth, the idea of deliberately doing less on a good day can feel like a moral failure. Many patients report that their earliest attempts at pacing were undermined not by their own impulses but by the expectations of employers, family members, and social circles who interpreted paced behavior as laziness or a lack of effort. Addressing these external pressures is an essential component of any successful pacing program, because even the most well-designed activity schedule will collapse under sustained social pressure to perform at pre-illness levels. Clinicians who prescribe pacing without also helping patients navigate these social dynamics are providing an incomplete intervention.
+          </p>
+          <p className="mb-6">
+            It is also worth noting that pacing is not a one-size-fits-all intervention. The specific strategies that work best depend on the nature of the underlying condition, the individual's current baseline capacity, their life circumstances, and their psychological readiness to accept temporary limitations. A person with fibromyalgia whose primary challenge is pain-triggered fatigue will pace differently from someone with ME/CFS whose primary challenge is delayed post-exertional malaise. A working parent will need different scheduling structures than a retired individual. Effective pacing programs recognize this variability and help patients develop personalized protocols rather than following generic templates.
           </p>
         </div>
 
@@ -113,15 +122,15 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           In a healthy body, energy production is relatively predictable. Mitochondria produce ATP
           efficiently, the autonomic nervous system regulates effort and recovery smoothly, and the
-          body signals fatigue gradually enough that you can plan around it. In many chronic conditions —
+          body signals fatigue gradually enough that you can plan around it. In many chronic conditions ---
           including ME/CFS, fibromyalgia, multiple sclerosis, lupus, rheumatoid arthritis, and
-          long COVID — one or more of these systems is impaired. The result is an energy supply that
+          long COVID --- one or more of these systems is impaired. The result is an energy supply that
           is both reduced and unpredictable<Citation id="5" index={5} />.
         </p>
         <p className="mb-6">
           What makes this particularly challenging is that energy expenditure in chronic illness is not
-          limited to physical activity. Cognitive tasks — concentrating on a conversation, processing
-          complex information, making decisions — draw from the same depleted energy
+          limited to physical activity. Cognitive tasks --- concentrating on a conversation, processing
+          complex information, making decisions --- draw from the same depleted energy
           pool<Citation id="5" index={5} />. Emotional experiences do as well: a stressful phone call,
           a family conflict, even the sustained effort of appearing healthy in social situations can
           drain reserves as thoroughly as a physical workout. Neuroimaging studies have confirmed that
@@ -138,7 +147,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           This means that traditional advice to "just rest more" or "listen to your body" is incomplete.
           By the time your body sends clear fatigue signals in many chronic conditions, the damage is
-          already done — you have exceeded your energy envelope, and a crash is biologically
+          already done --- you have exceeded your energy envelope, and a crash is biologically
           inevitable<Citation id="6" index={6} />. Effective energy management requires learning to
           stop before you feel tired, which is counterintuitive for people who have spent years pushing
           through fatigue in an attempt to live normally.
@@ -151,7 +160,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             stays within the envelope, symptoms remain manageable and the body can gradually build
             capacity. When activity consistently exceeds the envelope, post-exertional malaise follows
             and the baseline capacity may actually shrink over
-            time<Citation id="6" index={6} />. The goal of pacing is not to minimize activity — it is
+            time<Citation id="6" index={6} />. The goal of pacing is not to minimize activity --- it is
             to find and respect the boundaries of your personal envelope so that sustainable expansion
             becomes possible.
           </p>
@@ -166,12 +175,12 @@ export const supportingWellbeingArticlesA: Article[] = [
           genuine recovery. Energy is available, pain is reduced, and the brain interprets these signals
           as permission to catch up on everything that has been neglected. The problem is that these
           "good days" often reflect temporary fluctuations in inflammation, nervous system regulation,
-          or sleep quality — not actual increases in baseline capacity<Citation id="2" index={2} />.
+          or sleep quality --- not actual increases in baseline capacity<Citation id="2" index={2} />.
         </p>
         <p className="mb-6">
           The psychological drivers are equally powerful. Living with chronic illness means living with
           a growing list of undone tasks, unmet obligations, and unfulfilled expectations. When energy
-          appears, the pressure to catch up is enormous — both from internal standards and from external
+          appears, the pressure to catch up is enormous --- both from internal standards and from external
           demands of work, family, and social life. There is also a grief component: the good day feels
           like a glimpse of the person you used to be, and the urge to inhabit that person fully, even
           temporarily, can override any rational plan to pace<Citation id="9" index={9} />.
@@ -204,11 +213,17 @@ export const supportingWellbeingArticlesA: Article[] = [
 
         <p className="mb-6">
           Research on the boom-bust cycle shows that people who remain in this pattern for extended
-          periods actually lose baseline capacity over time — their energy envelope shrinks. This is
+          periods actually lose baseline capacity over time --- their energy envelope shrinks. This is
           not because they are getting sicker in a disease-specific sense, but because repeated
           overexertion triggers inflammatory cascades and nervous system dysregulation that compound
           the original condition<Citation id="2" index={2} />. Breaking this cycle is therefore not
           just about comfort; it is about preserving and potentially expanding functional capacity.
+        </p>
+        <p className="mb-6">
+          Clinical researchers have also identified a subtler variant of the boom-bust cycle that operates on a weekly or monthly timescale rather than a daily one. In this pattern, individuals manage their daily activities reasonably well but periodically commit to large events --- a weekend trip, a holiday gathering, an intense work project --- that exceed their cumulative energy budget for the week. The crash that follows may not arrive for two or three days, making it difficult to connect cause and effect. Patients who track their activities in a detailed diary often discover these longer-cycle patterns for the first time, and the insight alone can be transformative. Understanding that last Wednesday's crash was caused by Saturday's birthday party, rather than by something that happened on Tuesday, changes the entire framework for decision-making about commitments and social plans.
+        </p>
+        <p className="mb-6">
+          The emotional aftermath of boom-bust crashes deserves particular clinical attention. Beyond physical symptoms, each crash can trigger a cascade of negative emotions including shame, frustration, self-blame, and despair. Patients frequently describe feeling like failures who should have known better, even when the overexertion was driven by unavoidable obligations such as medical appointments or childcare. Over time, repeated crashes can erode self-efficacy --- the belief in one's ability to manage one's own condition --- which is a strong predictor of depression in chronic illness populations. Breaking the boom-bust cycle therefore has psychological benefits that extend far beyond fatigue management, interrupting a self-reinforcing loop of overexertion, crash, guilt, and diminished confidence that can spiral into clinical depression if left unaddressed.
         </p>
 
         <h2 id="practical-pacing-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -232,7 +247,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   Spend 5-7 days tracking all activities and their energy costs. Rate each task on
                   a scale of 1-10 for physical, cognitive, and emotional demand. Note the total load
                   on days when you do not crash the following day. This is your current sustainable
-                  baseline — your starting point, not your target.
+                  baseline --- your starting point, not your target.
                 </p>
               ),
             },
@@ -265,7 +280,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   After 2-3 weeks of consistent pacing without significant crashes, increase your
                   planned activity by 10%. Hold at the new level for another 2-3 weeks. If crashes
                   return, drop back to the previous level without self-judgment. Expansion is not
-                  linear — it is a staircase with occasional steps backward.
+                  linear --- it is a staircase with occasional steps backward.
                 </p>
               ),
             },
@@ -274,13 +289,19 @@ export const supportingWellbeingArticlesA: Article[] = [
 
         <p className="mb-6">
           Task modification is another powerful pacing tool. Instead of approaching household chores
-          the way a healthy person would — standing to chop vegetables, carrying laundry baskets up
-          stairs, hand-scrubbing counters — people with energy limitation can learn to modify tasks to
+          the way a healthy person would --- standing to chop vegetables, carrying laundry baskets up
+          stairs, hand-scrubbing counters --- people with energy limitation can learn to modify tasks to
           reduce their energy cost without eliminating the activity itself. Sitting while cooking,
           using a cart to transport laundry, breaking a cleaning session into 15-minute segments spread
-          throughout the day — these modifications are not laziness<Citation id="7" index={7} />.
+          throughout the day --- these modifications are not laziness<Citation id="7" index={7} />.
           They are precision tools that allow more total activity over the course of a week than the
           all-or-nothing approach ever could.
+        </p>
+        <p className="mb-6">
+          Technology has increasingly supported pacing practice in ways that were not available even a decade ago. Wearable devices that track heart rate variability, step count, and activity levels can provide objective data about energy expenditure that supplements subjective self-report. Several smartphone applications now allow users to log activities, set pacing reminders, and visualize patterns of exertion and recovery over time. These tools are not replacements for the self-awareness that pacing requires, but they can serve as valuable external feedback systems, particularly in the early stages when patients are still learning to recognize their own physiological signals. Clinicians who incorporate technology-assisted tracking into their pacing programs often find that patients engage more consistently and gain insight into their patterns more quickly than those relying on paper-based methods alone.
+        </p>
+        <p className="mb-6">
+          Another dimension of practical pacing that is often overlooked is the management of cognitive and emotional energy expenditure. Many patients focus their pacing efforts exclusively on physical activity, failing to account for the substantial energy costs of sustained concentration, emotional regulation, and social interaction. A two-hour video conference may cost as much energy as a grocery shopping trip. A difficult conversation with a family member may be more depleting than a physical therapy session. Comprehensive pacing requires an honest audit of all energy demands, not only those that involve movement. Patients who expand their energy tracking to include cognitive and emotional tasks frequently discover that their daily energy budget was being exceeded by invisible expenditures they had never thought to count.
         </p>
 
         <ArticleCallout type="tip" title="The Three-Basket Priority System">
@@ -288,7 +309,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             Each morning, sort your tasks into three categories: <strong>Must Do</strong> (essential
             health and safety tasks), <strong>Should Do</strong> (important but flexible tasks), and
             <strong>Could Do</strong> (tasks that would be nice to complete but are genuinely optional).
-            On low-energy days, only Must Do tasks get done — and that is a successful day. On moderate
+            On low-energy days, only Must Do tasks get done --- and that is a successful day. On moderate
             days, add some Should Do tasks. Could Do tasks are reserved for days when your envelope has
             room after the first two baskets are handled. This system prevents the guilt of
             "not doing enough" by making your definition of "enough" match your actual available energy.
@@ -299,7 +320,7 @@ export const supportingWellbeingArticlesA: Article[] = [
           The Psychological Dimensions of Pacing
         </h2>
         <p className="mb-6">
-          The greatest barrier to effective pacing is not physical — it is psychological. Pacing
+          The greatest barrier to effective pacing is not physical --- it is psychological. Pacing
           requires accepting, at least temporarily, that your energy is limited. For many people
           with chronic illness, this acceptance feels like giving up, admitting defeat, or confirming
           that they are no longer the person they were before they became
@@ -310,7 +331,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           Acceptance and commitment therapy (ACT) has shown particular promise for supporting the
           psychological shift that pacing requires. ACT does not ask you to like your limitations
-          or pretend they are acceptable. Instead, it teaches psychological flexibility — the ability
+          or pretend they are acceptable. Instead, it teaches psychological flexibility --- the ability
           to hold difficult feelings about your situation while still choosing behaviors that serve
           your long-term wellbeing<Citation id="9" index={9} />. In clinical trials, ACT-based
           pacing programs produced significantly better outcomes than pacing instruction alone,
@@ -329,7 +350,7 @@ export const supportingWellbeingArticlesA: Article[] = [
           Social pressure is another significant barrier. Partners, employers, friends, and family
           members may not understand why you cannot do more on a good day, or why you need to decline
           invitations even when you seem fine in the moment. Learning to communicate about energy
-          management — using frameworks like spoon theory or the energy envelope — gives people a
+          management --- using frameworks like spoon theory or the energy envelope --- gives people a
           shared vocabulary that can reduce misunderstanding and protect
           relationships<Citation id="10" index={10} />.
         </p>
@@ -342,7 +363,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                 <p>
                   Guilt about resting is one of the most common experiences reported by people
                   practicing pacing. It helps to reframe rest as an active, strategic choice
-                  rather than passive inactivity. You are not "doing nothing" — you are preventing
+                  rather than passive inactivity. You are not "doing nothing" --- you are preventing
                   a crash that would cost you the next several days. Keeping a brief log of how
                   paced days compare to boom-bust days in total weekly output can provide concrete
                   evidence that resting more actually allows you to accomplish more overall.
@@ -357,7 +378,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   learned that if I do more than two hours of activity without a break, I will be
                   unable to function for the next two days. Taking a 20-minute break now means I
                   can be present for the rest of the evening." Concrete, cause-and-effect language
-                  helps others understand that pacing is not a preference — it is a medical
+                  helps others understand that pacing is not a preference --- it is a medical
                   management strategy with measurable consequences.
                 </p>
               ),
@@ -366,7 +387,7 @@ export const supportingWellbeingArticlesA: Article[] = [
               title: 'Managing pacing at work',
               content: (
                 <p>
-                  Workplace pacing often requires formal accommodations — scheduled breaks,
+                  Workplace pacing often requires formal accommodations --- scheduled breaks,
                   flexible hours, the option to alternate sitting and standing, or permission to
                   work from home on high-symptom days. Document the connection between pacing
                   and productivity: most employers respond better to "these accommodations allow
@@ -383,7 +404,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   Many people with chronic illness describe pacing as a constant reminder that
                   they are no longer the person they were. This grief is valid and does not need
                   to be resolved quickly. What helps is gradually building a sense of identity
-                  that includes — but is not defined by — your need to pace. You are not "a person
+                  that includes --- but is not defined by --- your need to pace. You are not "a person
                   who cannot do things." You are a person who has learned an advanced skill for
                   managing a difficult situation. That reframing does not erase the loss, but it
                   can shift the emotional weight of daily pacing decisions.
@@ -418,9 +439,22 @@ export const supportingWellbeingArticlesA: Article[] = [
           For people with ME/CFS, heart rate monitoring has emerged as a particularly useful pacing
           tool. Because post-exertional malaise can be delayed by 24-72 hours, subjective feeling
           is an unreliable guide to current exertion. Wearable heart rate monitors can signal when
-          activity is approaching the anaerobic threshold — a point where the body shifts from
-          sustainable to unsustainable energy production — allowing people to rest before the
+          activity is approaching the anaerobic threshold --- a point where the body shifts from
+          sustainable to unsustainable energy production --- allowing people to rest before the
           crash is triggered rather than after<Citation id="8" index={8} />.
+        </p>
+
+        <h2 id="pacing-and-relationships" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Pacing Within Relationships and Social Systems
+        </h2>
+        <p className="mb-6">
+          Energy management does not occur in isolation. Every person who practices pacing does so within a web of relationships, obligations, and social expectations that can either support or undermine their efforts. Partners, family members, friends, and coworkers all play a role in whether pacing succeeds or fails, often without realizing the impact of their behavior. A partner who expresses disappointment when plans are cancelled, a parent who says "but you look fine," or a colleague who assigns extra work on a perceived good day can each destabilize a carefully constructed pacing routine. Conversely, a support system that understands and respects energy management principles can dramatically increase the likelihood of successful pacing, reduce the emotional burden of limit-setting, and create an environment where sustainable functioning becomes genuinely achievable.
+        </p>
+        <p className="mb-6">
+          Educating family members about the energy envelope theory and the boom-bust cycle is one of the most impactful steps a person with chronic illness can take. When the people closest to you understand that your energy is a finite, measurable resource --- not a matter of motivation or willpower --- the entire relational dynamic shifts. Family members can move from inadvertently pressuring overexertion to actively supporting pacing, helping with priority-setting, and recognizing when rest is needed before the person with chronic illness has to ask for it. Structured family education programs that include joint goal-setting and communication training have shown measurable benefits for both patient functioning and family relationship quality in clinical trials.
+        </p>
+        <p className="mb-6">
+          Social pacing --- the deliberate management of social energy --- is a specific skill that many people with chronic illness need to develop separately from physical pacing. Social interactions are uniquely energy-intensive because they combine cognitive demands (tracking conversation, processing social cues), emotional demands (managing impressions, regulating responses), and often physical demands (traveling to a location, sitting upright for extended periods). Learning to set social limits --- attending a gathering for one hour instead of three, requesting a quiet seating area, scheduling recovery time after social events --- requires the same principled approach as physical pacing but confronts an additional layer of social pressure and potential misunderstanding. People who master social pacing often report that their relationships actually improve, because the interactions they do have are fully present and engaged rather than exhausted and distracted.
         </p>
 
         <h2 id="building-sustainable-routines" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -435,24 +469,24 @@ export const supportingWellbeingArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           Building sustainable routines involves several layers beyond basic activity scheduling.
-          Sleep hygiene becomes a critical foundation — irregular sleep patterns destabilize energy
+          Sleep hygiene becomes a critical foundation --- irregular sleep patterns destabilize energy
           availability even in healthy individuals, and the effect is amplified in chronic illness.
           Nutrition timing matters as well: eating regular, balanced meals prevents the blood sugar
-          fluctuations that can mimic or worsen fatigue. And stress management — through whatever
+          fluctuations that can mimic or worsen fatigue. And stress management --- through whatever
           methods work for you, whether that is meditation, gentle movement, creative expression,
-          or simply reducing exposure to draining situations — protects the emotional energy budget
+          or simply reducing exposure to draining situations --- protects the emotional energy budget
           that is so easily overlooked<Citation id="3" index={3} />.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Pacing Is a Skill, Not a Sacrifice">
           <p>
             It takes most people three to six months to become comfortable with pacing. The early weeks
-            are often the hardest — not because the techniques are complex, but because the psychological
+            are often the hardest --- not because the techniques are complex, but because the psychological
             adjustment is significant. You are learning to make decisions based on data rather than
             feelings, to rest when you do not feel tired, and to leave tasks undone when every instinct
             says to finish them. Over time, though, pacing becomes less effortful and more automatic.
-            And the payoff — more stable energy, fewer crashes, greater confidence in your ability to
-            plan and follow through — makes the initial difficulty worthwhile for the vast majority of
+            And the payoff --- more stable energy, fewer crashes, greater confidence in your ability to
+            plan and follow through --- makes the initial difficulty worthwhile for the vast majority of
             people who persist<Citation id="4" index={4} />.
           </p>
         </ArticleCallout>
@@ -461,8 +495,8 @@ export const supportingWellbeingArticlesA: Article[] = [
           Perhaps most importantly, effective pacing shifts the emotional relationship you have with
           your body. Instead of viewing your body as an adversary that constantly lets you down, pacing
           creates a collaborative dynamic: you learn your body's signals, you respect its limits, and
-          in return it becomes more predictable and more capable. This shift — from adversarial to
-          collaborative — is not just practically useful. It is psychologically
+          in return it becomes more predictable and more capable. This shift --- from adversarial to
+          collaborative --- is not just practically useful. It is psychologically
           healing<Citation id="10" index={10} />.
         </p>
       </>
@@ -487,7 +521,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     tags: ['Healthcare Team', 'Integrated Care', 'Patient Advocacy', 'Mental Health', 'Care Coordination'],
 
     summary:
-      'People living with chronic illness typically see multiple healthcare providers, yet these providers rarely communicate with each other in meaningful ways. The result is fragmented care where physical symptoms are treated in one office, mental health is addressed in another, and the connections between the two are left for the patient to manage alone. Research consistently shows that integrated care — where physical and psychological treatment are coordinated as part of a unified plan — produces significantly better outcomes for chronic illness than siloed specialty care. This article provides practical strategies for assembling a medical support team that treats the whole person, advocating for your needs across multiple providers, and becoming an effective coordinator of your own care when the healthcare system fails to do it for you.',
+      'People living with chronic illness typically see multiple healthcare providers, yet these providers rarely communicate with each other in meaningful ways. The result is fragmented care where physical symptoms are treated in one office, mental health is addressed in another, and the connections between the two are left for the patient to manage alone. Research consistently shows that integrated care --- where physical and psychological treatment are coordinated as part of a unified plan --- produces significantly better outcomes for chronic illness than siloed specialty care. This article provides practical strategies for assembling a medical support team that treats the whole person, advocating for your needs across multiple providers, and becoming an effective coordinator of your own care when the healthcare system fails to do it for you.',
 
     keyFacts: [
       { text: 'Integrated care models improve both physical and mental health outcomes by 30-50% compared to usual care for chronic illness', citationIndex: 1 },
@@ -500,7 +534,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'Your body does not experience itself in specialties. It does not separate cardiology from psychology, rheumatology from grief. You deserve a care team that treats you the way you actually exist — as a whole person whose physical and emotional health are inseparable.',
+      'Your body does not experience itself in specialties. It does not separate cardiology from psychology, rheumatology from grief. You deserve a care team that treats you the way you actually exist --- as a whole person whose physical and emotional health are inseparable.',
 
     practicalExercise: {
       title: 'The Care Team Mapping Exercise',
@@ -508,7 +542,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         { title: 'Map your current team', description: 'List every healthcare provider you see, including specialists, primary care, therapists, pharmacists, and complementary practitioners. Note what each one treats, how often you see them, and whether they know about the other providers on your list.' },
         { title: 'Identify the gaps', description: 'Look for missing roles. Do you have someone addressing the psychological impact of your illness? Is anyone coordinating medications across specialists? Is there a provider you can contact between appointments when symptoms change? Mark each gap clearly.' },
         { title: 'Create a communication plan', description: 'For each pair of providers who should be sharing information, decide what needs to be communicated and how. This might mean signing release forms, requesting that visit summaries be shared, or preparing a one-page health summary you bring to every appointment.' },
-        { title: 'Designate a care coordinator', description: 'Choose one provider — often your primary care physician — to serve as the central point of coordination. Discuss this role explicitly and ask if they are willing to review specialist recommendations and help resolve conflicting advice.' },
+        { title: 'Designate a care coordinator', description: 'Choose one provider --- often your primary care physician --- to serve as the central point of coordination. Discuss this role explicitly and ask if they are willing to review specialist recommendations and help resolve conflicting advice.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Healthcare Interactions',
@@ -536,7 +570,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             a cardiologist. When the anxiety that accompanies their unpredictable flares becomes
             debilitating, they may add a psychiatrist or therapist. Each of these providers is excellent
             at their specialty. None of them is coordinating with the others. The patient becomes the
-            bridge between medical worlds that rarely talk to each other — carrying lab results from
+            bridge between medical worlds that rarely talk to each other --- carrying lab results from
             one office to another, reconciling conflicting medication advice, and translating physical
             symptoms into psychological terms and back again.
           </p>
@@ -547,8 +581,8 @@ export const supportingWellbeingArticlesA: Article[] = [
             medications, repeated diagnostic tests, treatment gaps where no provider takes
             responsibility, and the psychological exhaustion of serving as your own care
             coordinator without the training or authority to do it effectively. Studies on integrated
-            care models — where physical and mental health providers work as part of a unified
-            team — demonstrate 30-50% improvements in outcomes compared to standard fragmented
+            care models --- where physical and mental health providers work as part of a unified
+            team --- demonstrate 30-50% improvements in outcomes compared to standard fragmented
             care<Citation id="1" index={1} />.
           </p>
           <p className="mb-6">
@@ -557,13 +591,19 @@ export const supportingWellbeingArticlesA: Article[] = [
             roles need to be filled, learning how to facilitate communication between providers,
             and developing the self-advocacy skills to insist on the comprehensive care you deserve.
           </p>
+          <p className="mb-6">
+            The structural barriers to integrated care are deeply embedded in how healthcare systems are organized and financed. Specialist physicians are trained within siloed departments that rarely interact during medical education. Insurance reimbursement models incentivize brief, single-issue visits rather than the comprehensive consultations that complex chronic illness demands. Electronic health record systems are frequently incompatible between practices, creating information barriers that patients are forced to bridge with paper printouts and personal memory. Understanding these systemic forces is not an exercise in futility --- it is essential context for patients who might otherwise blame themselves for the fragmentation they experience. The problem is structural, not personal, and the solutions must operate at both the system level and the individual level simultaneously.
+          </p>
+          <p className="mb-6">
+            For patients with multiple comorbid conditions, the coordination challenge is exponentially greater. A person managing both rheumatoid arthritis and depression, for example, faces the possibility that their rheumatologist will prescribe a medication that worsens their mood, while their psychiatrist prescribes a medication that exacerbates inflammation. Without a coordinating provider who holds the full clinical picture, these interactions may go undetected until the patient experiences a symptom escalation that neither specialist can explain in isolation. Research on polypharmacy in chronic illness populations has found that medication-related adverse events increase dramatically when care is delivered by multiple uncoordinated specialists, and that the addition of a single coordinating provider can reduce these events by as much as 30 percent.
+          </p>
         </div>
 
         <h2 id="why-integrated-care-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Integrated Care Matters for Chronic Illness
         </h2>
         <p className="mb-6">
-          The case for integrated care is not philosophical — it is physiological. Chronic illness
+          The case for integrated care is not philosophical --- it is physiological. Chronic illness
           affects both body and mind through shared biological pathways. Inflammatory conditions
           like rheumatoid arthritis and Crohn's disease produce cytokines that directly alter brain
           chemistry, contributing to depression and cognitive dysfunction. Chronic pain rewires
@@ -596,6 +636,12 @@ export const supportingWellbeingArticlesA: Article[] = [
           symptoms at home, adhere to treatment plans, communicate effectively with providers,
           and distinguish between symptom changes that need emergency attention and those that can
           wait for a scheduled appointment.
+        </p>
+        <p className="mb-6">
+          The bidirectional relationship between physical and mental health in chronic illness extends to treatment adherence in ways that many providers underestimate. Patients who are depressed are significantly less likely to take their medications as prescribed, attend follow-up appointments, engage in physical therapy, or adopt lifestyle modifications recommended by their medical teams. Conversely, patients whose physical symptoms are poorly controlled experience higher rates of anxiety and hopelessness, which further undermines their engagement with treatment. This creates a negative feedback loop that siloed care is structurally unable to address. When a rheumatologist notes poor treatment adherence but does not screen for depression, or when a psychiatrist treats depression without knowing that the patient's pain is uncontrolled, both providers are working with an incomplete picture that limits the effectiveness of their interventions.
+        </p>
+        <p className="mb-6">
+          Economic analyses of integrated care models provide additional motivation for systemic change. While integrated care requires upfront investment in coordination infrastructure --- care managers, shared record systems, team-based consultation time --- it consistently demonstrates cost savings over medium and long-term horizons through reduced emergency department utilization, fewer hospitalizations, decreased duplication of diagnostic testing, and improved medication management. For the individual patient, integrated care also reduces the hidden costs of fragmented treatment: time lost to redundant appointments, out-of-pocket expenses for unnecessary tests, and the productivity costs of poorly managed symptoms that could have been addressed more efficiently through coordinated intervention.
         </p>
 
         <h2 id="essential-team-roles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -631,11 +677,11 @@ export const supportingWellbeingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p className="font-medium text-gray-900 dark:text-white">
-                    Psychological support is not optional — it is medically indicated for chronic illness:
+                    Psychological support is not optional --- it is medically indicated for chronic illness:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-                    <li><strong>Health psychologist or therapist:</strong> Someone with specific expertise in the psychological impact of medical illness — not general therapy, but chronic illness-informed mental health care</li>
-                    <li><strong>Psychiatrist:</strong> If medication management is needed for depression, anxiety, or sleep disorders that accompany your condition — ideally someone who understands how psychotropic medications interact with your disease-specific treatments</li>
+                    <li><strong>Health psychologist or therapist:</strong> Someone with specific expertise in the psychological impact of medical illness --- not general therapy, but chronic illness-informed mental health care</li>
+                    <li><strong>Psychiatrist:</strong> If medication management is needed for depression, anxiety, or sleep disorders that accompany your condition --- ideally someone who understands how psychotropic medications interact with your disease-specific treatments</li>
                     <li><strong>Support group or peer mentor:</strong> Other people living with your condition who understand the daily reality in a way no clinician can</li>
                   </ul>
                 </div>
@@ -663,7 +709,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           You do not need all of these providers simultaneously. The goal is to identify which roles
           are missing from your current care and to prioritize filling the most impactful gaps. For
-          most people with chronic illness, the most underserved role is mental health support —
+          most people with chronic illness, the most underserved role is mental health support ---
           not because they are unaware of its importance, but because finding a therapist who
           understands chronic illness is genuinely difficult<Citation id="8" index={8} />.
         </p>
@@ -678,8 +724,8 @@ export const supportingWellbeingArticlesA: Article[] = [
           providers work within separate electronic health record systems that do not share
           information automatically. Visit notes are brief and disease-focused. Specialist
           recommendations may never reach the primary care physician. Medication lists go out of
-          date. And the patient — who has neither medical training nor access to the full
-          clinical picture — is expected to serve as the messenger.
+          date. And the patient --- who has neither medical training nor access to the full
+          clinical picture --- is expected to serve as the messenger.
         </p>
 
         <ArticleCallout type="how-to" title="Creating a One-Page Health Summary">
@@ -689,7 +735,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             current medications (with dosages and prescribing physicians), recent lab results,
             allergies, current symptoms, recent changes in your condition, and questions for this
             specific provider. Update it before each appointment. This document gives every provider
-            the context they need in 60 seconds — context that would otherwise take 20 minutes of
+            the context they need in 60 seconds --- context that would otherwise take 20 minutes of
             chart review they do not have time for<Citation id="7" index={7} />.
           </p>
         </ArticleCallout>
@@ -697,8 +743,8 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           Shared medical records, where available, dramatically improve coordination. If your
           health system offers a patient portal that connects multiple providers, using it actively
-          — reviewing visit notes, checking that medication lists are accurate, and flagging
-          discrepancies — can catch errors that would otherwise go unnoticed. Research shows that
+          --- reviewing visit notes, checking that medication lists are accurate, and flagging
+          discrepancies --- can catch errors that would otherwise go unnoticed. Research shows that
           patients who engage with shared records have better outcomes and higher satisfaction
           with their care<Citation id="7" index={7} />.
         </p>
@@ -706,9 +752,15 @@ export const supportingWellbeingArticlesA: Article[] = [
           When shared records are not available, explicit permission forms that allow providers
           to share information with each other become essential. Many patients do not realize that
           their providers cannot talk to each other without written consent. Signing release forms
-          at each office — specifying which other providers can receive your information — removes
+          at each office --- specifying which other providers can receive your information --- removes
           a structural barrier to communication that many patients assume does not
           exist<Citation id="4" index={4} />.
+        </p>
+        <p className="mb-6">
+          Timing and context of provider communication also matter significantly. A brief note sent from one specialist to another before a scheduled appointment is far more useful than a lengthy discharge summary that arrives weeks later. Patients can facilitate timely communication by proactively contacting upcoming providers before appointments to ensure they have received relevant records, by specifically requesting that their primary care physician review specialist recommendations within a defined timeframe, and by keeping their own records of what was communicated to whom and when. While this level of administrative diligence should not be the patient's responsibility, the practical reality of most healthcare systems means that patients who take an active coordination role receive measurably better care than those who assume the system will handle it.
+        </p>
+        <p className="mb-6">
+          Telehealth has introduced new possibilities for care coordination that did not exist before 2020. Virtual team conferences, where multiple providers join a single video call with the patient, are now logistically feasible in ways that in-person multi-provider meetings never were. Some progressive health systems now offer periodic "care coordination conferences" where patients with complex chronic conditions can have their case discussed by multiple specialists simultaneously, reducing the telephone-game effect of sequential specialist visits. Patients can advocate for these conferences by explicitly requesting them through their primary care provider. Even a single annual coordination meeting can resolve months of accumulated miscommunication and conflicting recommendations.
         </p>
 
         <h2 id="self-advocacy-skills" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -716,8 +768,8 @@ export const supportingWellbeingArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Effective self-advocacy in healthcare is not about being aggressive or demanding. It is
-          about being prepared, clear, and persistent. Research on patient activation — the knowledge,
-          skills, and confidence to manage one's own health — consistently shows that activated
+          about being prepared, clear, and persistent. Research on patient activation --- the knowledge,
+          skills, and confidence to manage one's own health --- consistently shows that activated
           patients have better outcomes, higher treatment adherence, and greater satisfaction with
           care<Citation id="3" index={3} />.
         </p>
@@ -728,7 +780,7 @@ export const supportingWellbeingArticlesA: Article[] = [
               title: 'Prepare for Every Appointment',
               description: (
                 <p>
-                  Write down your top three concerns before each visit. Prioritize ruthlessly —
+                  Write down your top three concerns before each visit. Prioritize ruthlessly ---
                   most appointments allow time for 2-3 issues at most. Bring relevant data:
                   symptom logs, medication side effects, functional changes since your last visit.
                   Preparation signals to providers that you are an engaged partner in your care,
@@ -742,7 +794,7 @@ export const supportingWellbeingArticlesA: Article[] = [
               description: (
                 <p>
                   Use specific, answerable questions rather than vague concerns. Instead of "Why
-                  am I so tired?", try "My fatigue has worsened over the past month — could it be
+                  am I so tired?", try "My fatigue has worsened over the past month --- could it be
                   related to the medication change we made in January?" This gives your provider
                   a concrete question to address rather than a broad symptom to investigate from
                   scratch.
@@ -756,7 +808,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   Before leaving any appointment, make sure you understand: What is the plan? What
                   should I watch for? When should I call? What triggers a return visit? If any
                   recommendations conflict with what another provider has told you, raise this
-                  explicitly — do not assume your providers will sort it out among
+                  explicitly --- do not assume your providers will sort it out among
                   themselves<Citation id="9" index={9} />.
                 </p>
               ),
@@ -779,15 +831,28 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           Building a medical support team is an ongoing process, not a one-time task. Your needs
           will change as your condition evolves, and your team should evolve with it. The goal
-          is not a perfect system — it is a functional one where you feel supported, heard, and
+          is not a perfect system --- it is a functional one where you feel supported, heard, and
           treated as a whole person whose mind and body are inseparable parts of the same
           health picture<Citation id="6" index={6} />.
+        </p>
+
+        <h2 id="navigating-provider-dismissal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating Provider Dismissal and Medical Gaslighting
+        </h2>
+        <p className="mb-6">
+          One of the most distressing experiences reported by people with chronic illness is the dismissal of their symptoms by healthcare providers --- a phenomenon increasingly recognized in the literature as medical invalidation or, in popular discourse, medical gaslighting. Patients describe being told that their symptoms are psychosomatic, that they are exaggerating, or that there is nothing wrong with them despite clear functional impairment. This experience is particularly common among women, people of color, and individuals with conditions that lack definitive biomarkers, such as fibromyalgia, ME/CFS, and chronic pain syndromes. The psychological impact of repeated medical dismissal is substantial: it erodes trust in the healthcare system, delays diagnosis and treatment, increases anxiety about symptom reporting, and can lead patients to withdraw from medical care entirely at precisely the moment they need it most.
+        </p>
+        <p className="mb-6">
+          Responding effectively to medical dismissal requires both assertiveness and strategic thinking. Documentation is the most powerful tool available: patients who bring written symptom logs, functional impact records, and specific questions to appointments are harder to dismiss than those who rely on verbal description alone. If a provider dismisses a concern, asking them to document in the medical record that they declined to investigate the reported symptom creates a formal record that has both clinical and legal significance. Requesting referrals to other specialists, or explicitly stating that you would like a second opinion, is within every patient's rights and should never be interpreted as confrontational. Building a medical support team that treats you as a credible reporter of your own experience is not a luxury --- it is a prerequisite for effective chronic illness management.
+        </p>
+        <p className="mb-6">
+          Finding providers who specialize in your condition and who have demonstrated a commitment to patient-centered care may require research beyond the typical referral pathway. Peer communities, disease-specific organizations, and patient advocacy groups often maintain informal directories of recommended providers based on the experiences of other patients. While these recommendations should be supplemented by verification of credentials and clinical expertise, they provide a starting point that the standard healthcare referral system often cannot match. The emotional toll of past dismissal is also worth addressing in therapy, as accumulated experiences of medical invalidation can create a pattern of healthcare avoidance or hypervigilance that interferes with effective care-seeking behavior going forward.
         </p>
 
         <ArticleCallout type="key-takeaway" title="You Deserve Comprehensive Care">
           <p>
             If the healthcare system does not offer integrated, coordinated care for your chronic
-            illness — and in most cases, it does not — you have every right to build it yourself.
+            illness --- and in most cases, it does not --- you have every right to build it yourself.
             This is not a burden you should have to carry, but it is a skill that, once developed,
             fundamentally changes the quality of care you receive. Every provider you add to your
             team, every communication pathway you establish, and every self-advocacy skill you
@@ -807,7 +872,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     slug: 'the-spoonie-community-finding-connection-through-shared-illness-experience',
     title: 'The Spoonie Community: Finding Connection Through Shared Illness Experience',
     description:
-      'Explore the origins, benefits, and complexities of the spoonie community — an online and in-person network of people who live with chronic illness. Understand how peer connection reduces isolation, the psychology of shared identity, and how to engage with illness communities in ways that support mental health.',
+      'Explore the origins, benefits, and complexities of the spoonie community --- an online and in-person network of people who live with chronic illness. Understand how peer connection reduces isolation, the psychology of shared identity, and how to engage with illness communities in ways that support mental health.',
     image: '/images/articles/cat20/cover-045.svg',
     category: CATEGORY_CHRONIC_ILLNESS_PAIN,
     readTime: 12,
@@ -817,7 +882,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     tags: ['Spoonie Community', 'Peer Support', 'Chronic Illness Identity', 'Online Communities', 'Social Connection'],
 
     summary:
-      'The spoonie community — a term originating from Christine Miserandino\'s 2003 "Spoon Theory" essay — has grown into one of the largest peer support networks for people living with chronic illness, spanning social media platforms, in-person groups, and dedicated online forums. Research on chronic illness peer support shows that connection with others who share similar experiences reduces psychological distress, decreases feelings of isolation, improves self-management skills, and provides practical knowledge that clinical settings often fail to offer. However, these communities also present psychological complexities, including identity fusion with illness, comparison traps, and exposure to misinformation. This article examines the evidence for peer support in chronic illness, explains the psychological mechanisms that make shared experience so powerful, and offers guidance for engaging with illness communities in ways that promote rather than hinder mental health.',
+      'The spoonie community --- a term originating from Christine Miserandino\'s 2003 "Spoon Theory" essay --- has grown into one of the largest peer support networks for people living with chronic illness, spanning social media platforms, in-person groups, and dedicated online forums. Research on chronic illness peer support shows that connection with others who share similar experiences reduces psychological distress, decreases feelings of isolation, improves self-management skills, and provides practical knowledge that clinical settings often fail to offer. However, these communities also present psychological complexities, including identity fusion with illness, comparison traps, and exposure to misinformation. This article examines the evidence for peer support in chronic illness, explains the psychological mechanisms that make shared experience so powerful, and offers guidance for engaging with illness communities in ways that promote rather than hinder mental health.',
 
     keyFacts: [
       { text: 'Peer support reduces depression and anxiety by 20-30% in people with chronic illness, comparable to low-intensity psychological interventions', citationIndex: 1 },
@@ -830,7 +895,7 @@ export const supportingWellbeingArticlesA: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'There is a particular kind of relief that comes from saying "I could not get out of bed today" and receiving not advice, not pity, not a lecture on positive thinking, but simply: "I know. Me neither." That recognition — that unspoken proof that you are not alone in this — is medicine that no pharmacy dispenses.',
+      'There is a particular kind of relief that comes from saying "I could not get out of bed today" and receiving not advice, not pity, not a lecture on positive thinking, but simply: "I know. Me neither." That recognition --- that unspoken proof that you are not alone in this --- is medicine that no pharmacy dispenses.',
 
     practicalExercise: {
       title: 'Finding Your Support Circle',
@@ -838,7 +903,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         { title: 'Identify what you need', description: 'Before seeking community, clarify what kind of support you are looking for. Emotional validation? Practical tips? Friendship? Medical information? Different communities serve different needs, and knowing what you need helps you find the right fit rather than trying every space available.' },
         { title: 'Start with observation', description: 'Join 2-3 online communities related to your condition and spend two weeks reading without posting. Notice the culture: Is it primarily supportive or complaint-focused? Do members share practical strategies or mainly vent? Is misinformation challenged respectfully? This observation period helps you invest time in spaces that match your needs.' },
         { title: 'Engage gradually', description: 'Begin by responding to posts that resonate with you before sharing your own experiences. This gradual approach lets you build connections without the vulnerability of immediate self-disclosure. As you identify people whose perspectives you value, develop those relationships through direct messages or comments.' },
-        { title: 'Set boundaries from the start', description: 'Decide in advance how much time you will spend in illness communities each day, and notice how you feel after engaging. If you consistently feel worse — more anxious, more identified with being sick, more hopeless — that is important data. Good community support should leave you feeling less alone, not more overwhelmed.' },
+        { title: 'Set boundaries from the start', description: 'Decide in advance how much time you will spend in illness communities each day, and notice how you feel after engaging. If you consistently feel worse --- more anxious, more identified with being sick, more hopeless --- that is important data. Good community support should leave you feeling less alone, not more overwhelmed.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track How Community Engagement Affects Your Mood',
@@ -864,7 +929,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             In 2003, a woman named Christine Miserandino sat in a diner with a friend who asked
             her what it was really like to live with lupus. Miserandino picked up a handful of
             spoons from the table and explained that each one represented a unit of energy. Every
-            activity — getting dressed, showering, cooking, working, socializing — cost spoons.
+            activity --- getting dressed, showering, cooking, working, socializing --- cost spoons.
             Healthy people start each day with an essentially unlimited supply. People with chronic
             illness start with a fixed, small number, and once they are gone, they are gone. That
             conversation became an essay. That essay became a metaphor. That metaphor became an
@@ -876,7 +941,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             online forums, local in-person groups, and a cultural vocabulary that has fundamentally
             changed how people with invisible illness communicate about their
             experiences<Citation id="6" index={6} />. For many people, discovering the spoonie
-            community is the first time they feel genuinely understood — the first time someone
+            community is the first time they feel genuinely understood --- the first time someone
             says "yes, that happens to me too" instead of "but you don't look sick."
           </p>
           <p className="mb-6">
@@ -884,9 +949,15 @@ export const supportingWellbeingArticlesA: Article[] = [
             show that connection with others who share similar health challenges reduces depression
             and anxiety by 20-30%, improves self-management skills, and provides practical knowledge
             that clinical encounters often fail to deliver<Citation id="1" index={1} />. But
-            illness communities also present real psychological complexities — from identity fusion
-            to comparison traps — that deserve honest examination. Understanding both the benefits
+            illness communities also present real psychological complexities --- from identity fusion
+            to comparison traps --- that deserve honest examination. Understanding both the benefits
             and the risks allows for engagement that genuinely supports mental health.
+          </p>
+          <p className="mb-6">
+            The growth of the spoonie community reflects a broader trend in healthcare where patients have moved from passive recipients of medical expertise to active participants who generate, share, and curate health knowledge among themselves. This shift is particularly pronounced in chronic illness, where the gap between clinical understanding and lived experience is often vast. A neurologist may understand the pathophysiology of multiple sclerosis in extraordinary detail, but they are unlikely to know the best strategies for managing brain fog during a work meeting, or how to explain to a friend why you cancelled plans for the third time this month. That practical, experiential wisdom flows primarily through peer networks, and the spoonie community has become one of the most robust channels for its transmission. The result is a body of collective knowledge that complements clinical care in ways the healthcare system alone cannot provide.
+          </p>
+          <p className="mb-6">
+            The digital infrastructure underlying the spoonie community has also democratized access to peer support in historically unprecedented ways. Before social media and online forums, a person diagnosed with a rare autoimmune condition in a rural area might go years without meeting another person who shared their experience. Today, that same person can connect with thousands of others within minutes of receiving their diagnosis. This immediate access to community has measurable psychological benefits during the vulnerable early period following diagnosis, when isolation and uncertainty are at their peak. Studies on newly diagnosed patients who engage with online communities within the first three months of diagnosis show significantly lower rates of adjustment disorders and illness-related anxiety compared to those who navigate the early period without peer connection.
           </p>
         </div>
 
@@ -897,7 +968,7 @@ export const supportingWellbeingArticlesA: Article[] = [
           Human beings are social creatures who derive a significant portion of their psychological
           wellbeing from feeling understood by others. When you live with a chronic condition that
           most people around you cannot see or comprehend, the resulting sense of isolation is not
-          just uncomfortable — it is physiologically
+          just uncomfortable --- it is physiologically
           harmful<Citation id="4" index={4} />. Research has established that social isolation
           carries health risks comparable to smoking 15 cigarettes per day, and chronic illness
           dramatically increases isolation risk through reduced mobility, unpredictable energy,
@@ -906,7 +977,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           Peer support works through several well-documented psychological mechanisms. The first
-          is normalization — the simple but powerful experience of learning that your struggles
+          is normalization --- the simple but powerful experience of learning that your struggles
           are not unique. When you discover that other people also cancel plans at the last minute,
           also feel guilty about resting, also worry about being a burden, the internal narrative
           shifts from "something is wrong with me" to "this is part of the shared experience of
@@ -926,8 +997,8 @@ export const supportingWellbeingArticlesA: Article[] = [
           condition for years accumulate expertise that is genuinely different from clinical
           knowledge. They know which medications cause which side effects and which workarounds
           help. They know which specialists are worth the wait and which dismiss patients. They
-          know the small daily adaptations — the specific heating pad, the particular way of
-          sitting, the timing of medication relative to meals — that can make the difference
+          know the small daily adaptations --- the specific heating pad, the particular way of
+          sitting, the timing of medication relative to meals --- that can make the difference
           between a tolerable day and an unbearable one<Citation id="5" index={5} />. This
           experiential knowledge is enormously valuable, and peer communities are the primary
           channel through which it flows.
@@ -939,6 +1010,13 @@ export const supportingWellbeingArticlesA: Article[] = [
           role="Living with fibromyalgia for 12 years"
           source="Qualitative Health Research, 2022"
         />
+
+        <p className="mb-6">
+          A third psychological mechanism through which peer support operates is social modeling --- the process by which observing other people manage similar challenges provides a template for one's own behavior. In chronic illness communities, social modeling takes many forms: a community member shares how they explained their condition to their employer, and three other members adapt the approach for their own workplaces. Someone posts about successfully advocating for a particular treatment, and others use the same language with their own providers. These modeling effects are particularly powerful because they demonstrate real-world applicability in a way that clinical advice often cannot. When a healthcare professional tells you to "practice self-advocacy," the instruction is abstract. When a peer describes the exact conversation they had with their doctor and the outcome it produced, the instruction becomes actionable and believable.
+        </p>
+        <p className="mb-6">
+          The emotional regulation benefits of peer support also deserve attention. Chronic illness generates a range of difficult emotions --- grief, anger, frustration, fear --- that people often feel unable to express in their daily environments. Friends may not understand, family members may become distressed, and healthcare providers typically lack the time to address emotional content during brief medical appointments. Peer communities provide a designated space where these emotions can be expressed without the need for explanation, context-setting, or apology. The knowledge that difficult feelings will be met with understanding rather than discomfort or dismissal creates a psychological safety that allows for more complete emotional processing, which research links to improved mood regulation and reduced psychological distress over time.
+        </p>
 
         <h2 id="benefits-of-illness-community" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Benefits of Illness Community Engagement
@@ -957,7 +1035,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                 <div className="space-y-3">
                   <p>
                     Peer support interventions reduce depression by approximately 20-30% and anxiety
-                    by 15-25% in people with chronic illness — effect sizes comparable to low-intensity
+                    by 15-25% in people with chronic illness --- effect sizes comparable to low-intensity
                     psychological interventions like guided self-help<Citation id="1" index={1} />.
                     These improvements persist for at least 12 months after initial engagement,
                     suggesting that the mechanisms at work are not merely distraction but genuine
@@ -1005,7 +1083,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                 <div className="space-y-3">
                   <p>
                     Illness communities provide the collective voice necessary for systemic
-                    advocacy — pushing for research funding, fighting for disability rights,
+                    advocacy --- pushing for research funding, fighting for disability rights,
                     challenging medical dismissiveness, and demanding that invisible conditions
                     be taken seriously. Individual patients are easy to dismiss. Communities are
                     not. The spoonie movement has been instrumental in raising awareness of
@@ -1025,14 +1103,14 @@ export const supportingWellbeingArticlesA: Article[] = [
           Acknowledging the genuine benefits of peer support does not require ignoring its
           complexities. Illness communities, like all human communities, have dynamics that can
           hinder as well as help. Understanding these dynamics is not a criticism of the community
-          — it is a tool for engaging with it more skillfully.
+          --- it is a tool for engaging with it more skillfully.
         </p>
         <p className="mb-6">
-          One significant complexity is identity fusion — the psychological phenomenon where
+          One significant complexity is identity fusion --- the psychological phenomenon where
           illness becomes not just something a person has but the central organizing principle
           of who they are<Citation id="9" index={9} />. Some degree of illness identity is healthy
           and even necessary for effective self-management. The risk emerges when illness identity
-          crowds out all other aspects of self — when being a "spoonie" becomes more defining than
+          crowds out all other aspects of self --- when being a "spoonie" becomes more defining than
           being a parent, a professional, a creative person, or any other facet of a full life.
           Research on illness identity shows that moderate identification with an illness community
           improves outcomes, while very high identification can predict worse psychological
@@ -1052,10 +1130,10 @@ export const supportingWellbeingArticlesA: Article[] = [
 
         <p className="mb-6">
           Social comparison presents another challenge. In illness communities, comparison can
-          operate in both directions. Upward comparison — seeing someone with your condition
-          thriving — can be inspiring but can also trigger feelings of inadequacy ("Why can they
-          manage their illness and I cannot?"). Downward comparison — encountering someone whose
-          condition is worse — can provide perspective but can also heighten fear about your own
+          operate in both directions. Upward comparison --- seeing someone with your condition
+          thriving --- can be inspiring but can also trigger feelings of inadequacy ("Why can they
+          manage their illness and I cannot?"). Downward comparison --- encountering someone whose
+          condition is worse --- can provide perspective but can also heighten fear about your own
           prognosis<Citation id="8" index={8} />. Research shows that people who are already
           struggling psychologically are more vulnerable to harmful comparison effects, while those
           with stronger coping skills tend to use comparisons constructively<Citation id="8" index={8} />.
@@ -1068,17 +1146,24 @@ export const supportingWellbeingArticlesA: Article[] = [
             online health forums<Citation id="7" index={7} />. This includes unverified treatment
             claims, supplement recommendations without evidence, and occasionally dangerous advice
             to discontinue prescribed medications. Protecting yourself does not mean distrusting
-            peers — it means verifying medical claims with your healthcare team before acting
+            peers --- it means verifying medical claims with your healthcare team before acting
             on them, especially when the advice involves stopping or starting medications,
             supplements, or treatments.
           </p>
         </ArticleCallout>
 
+        <p className="mb-6">
+          Another complexity that merits discussion is the phenomenon of severity hierarchies within illness communities. Despite the shared emphasis on mutual understanding, subtle and sometimes explicit hierarchies can emerge based on perceived severity of illness. Members with more severe symptoms may feel that their experience is minimized by the participation of those with milder presentations, while those with milder symptoms may feel invalidated or excluded from a community that seems to center the most extreme experiences. These dynamics can create internal conflicts that fracture the very solidarity the community was built to provide. Communities that actively address severity hierarchies through moderation policies, inclusive language norms, and explicit acknowledgment that all experiences of chronic illness are valid tend to maintain healthier cultures and produce better psychological outcomes for their members.
+        </p>
+        <p className="mb-6">
+          The relationship between community engagement and medical trust also presents a nuanced dynamic. For patients who have experienced medical dismissal or invalidation, peer communities can serve as a corrective force that restores confidence in one's own experience and provides validation that the healthcare system withheld. However, in some cases, community narratives can also amplify distrust of medicine in ways that become counterproductive, discouraging members from pursuing evidence-based treatments or fostering an adversarial stance toward all healthcare providers. The healthiest community cultures are those that validate patient experience while simultaneously encouraging informed engagement with medical care --- supporting members in becoming effective advocates within the healthcare system rather than retreating from it entirely.
+        </p>
+
         <h2 id="engaging-sustainably" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Engaging With Illness Communities in Sustainable Ways
         </h2>
         <p className="mb-6">
-          The goal is not to avoid illness communities — the evidence for their benefits is too
+          The goal is not to avoid illness communities --- the evidence for their benefits is too
           strong for that. The goal is to engage in ways that maximize connection and minimize
           harm. This requires the same kind of intentional self-awareness that effective
           pacing requires: knowing your limits, noticing your patterns, and making deliberate
@@ -1092,10 +1177,10 @@ export const supportingWellbeingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-                    <li>Set a daily time limit for illness community engagement — 20-30 minutes is a reasonable starting point</li>
+                    <li>Set a daily time limit for illness community engagement --- 20-30 minutes is a reasonable starting point</li>
                     <li>Choose communities that balance emotional support with practical problem-solving</li>
                     <li>Maintain social connections and interests outside the illness community</li>
-                    <li>Share your own experiences — giving support is as psychologically beneficial as receiving it</li>
+                    <li>Share your own experiences --- giving support is as psychologically beneficial as receiving it</li>
                     <li>Notice whether you feel better or worse after engaging, and adjust accordingly</li>
                     <li>Seek communities moderated by people who address misinformation constructively</li>
                   </ul>
@@ -1109,7 +1194,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
                     <li>You feel worse about your condition after spending time in the community</li>
                     <li>Illness identity has begun to eclipse all other aspects of your sense of self</li>
-                    <li>You find yourself competing over severity — feeling invalidated if others seem sicker</li>
+                    <li>You find yourself competing over severity --- feeling invalidated if others seem sicker</li>
                     <li>You are avoiding real-world relationships in favor of online illness connections</li>
                     <li>Community engagement has replaced professional medical care or therapy</li>
                     <li>You feel pressured to adopt the community's beliefs about treatment, identity, or prognosis</li>
@@ -1129,11 +1214,11 @@ export const supportingWellbeingArticlesA: Article[] = [
           does not understand what you are going through.
         </p>
 
-        <ArticleCallout type="key-takeaway" title="Community as Medicine — With Dosage">
+        <ArticleCallout type="key-takeaway" title="Community as Medicine --- With Dosage">
           <p>
             Like any intervention that affects health, community engagement benefits from
             intentional use. The people who gain the most from illness communities are those
-            who engage purposefully — seeking specific kinds of support, maintaining boundaries
+            who engage purposefully --- seeking specific kinds of support, maintaining boundaries
             around time and emotional investment, and balancing illness-focused connections with
             other relationships and identities. The spoonie community did not become one of the
             most powerful peer support networks in the world by accident. It grew because it
@@ -1141,6 +1226,19 @@ export const supportingWellbeingArticlesA: Article[] = [
             broader wellbeing that community is meant to serve<Citation id="1" index={1} />.
           </p>
         </ArticleCallout>
+
+        <h2 id="from-peer-support-to-advocacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          From Peer Support to Collective Advocacy
+        </h2>
+        <p className="mb-6">
+          One of the most significant long-term contributions of illness communities extends beyond individual psychological benefit into the realm of collective advocacy and systemic change. The spoonie movement has been instrumental in shifting public discourse about invisible illness, challenging the assumption that disability must be visible to be real, and demanding that conditions like ME/CFS, fibromyalgia, and chronic Lyme disease receive the research funding and clinical attention they have historically been denied. This advocacy function transforms individual suffering into collective political power, and for many community members, participation in advocacy provides a sense of purpose and meaning that counteracts the helplessness that chronic illness can produce. Research on post-traumatic growth in chronic illness populations suggests that finding meaning through helping others is one of the strongest predictors of psychological resilience, and community-based advocacy provides a structured pathway to that meaning.
+        </p>
+        <p className="mb-6">
+          The advocacy impact of illness communities has produced measurable policy outcomes. Patient-led campaigns have influenced research funding allocations at the National Institutes of Health, contributed to the development of clinical guidelines for previously neglected conditions, and pressured insurance companies to expand coverage for treatments that were previously classified as experimental. On social media platforms, spoonie activists have reached audiences of millions, educating the general public about the daily realities of chronic illness in ways that traditional health communication campaigns rarely achieve. For individual community members, witnessing these collective successes reinforces the belief that their voices matter and that change is possible, which research associates with reduced feelings of helplessness and improved psychological wellbeing.
+        </p>
+        <p className="mb-6">
+          Participation in advocacy also provides a means of engaging with one's illness identity that is empowering rather than limiting. Instead of being defined by what illness has taken away, advocacy allows individuals to channel their lived experience into something constructive --- mentoring newly diagnosed patients, contributing to research as patient consultants, speaking at medical education events, or writing about their experiences in ways that change how clinicians understand their conditions. This active, outward-facing relationship with illness identity is associated with better psychological adjustment than a passive, inward-facing one, and illness communities provide the scaffolding that makes this transition possible for people who might not find their way to advocacy independently.
+        </p>
 
         <h2 id="finding-the-right-community" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Finding the Right Community for You
@@ -1155,13 +1253,13 @@ export const supportingWellbeingArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           In-person support groups, where available, offer benefits that online communities
-          cannot fully replicate — particularly the experience of being physically present with
+          cannot fully replicate --- particularly the experience of being physically present with
           others who understand, and the nonverbal cues that communicate empathy more powerfully
           than text. Many hospitals, community centers, and disease-specific organizations offer
           facilitated groups led by trained peer mentors or health
           professionals<Citation id="10" index={10} />. If in-person groups are not accessible
-          due to mobility, location, or energy limitations — and they frequently are not for people
-          with chronic illness — video-based groups offer a middle ground between the convenience
+          due to mobility, location, or energy limitations --- and they frequently are not for people
+          with chronic illness --- video-based groups offer a middle ground between the convenience
           of online communities and the intimacy of face-to-face connection.
         </p>
         <p className="mb-6">
@@ -1193,12 +1291,12 @@ export const supportingWellbeingArticlesA: Article[] = [
     tags: ['Caregiver Mental Health', 'Chronic Illness Relationships', 'Partner Support', 'Ambiguous Loss', 'Caregiver Burden'],
 
     summary:
-      'When chronic illness enters a relationship, the focus of clinical attention and social sympathy naturally falls on the person who is sick. But the healthy partner experiences their own profound psychological impact — one that is poorly recognized, rarely treated, and complicated by guilt about having needs when their partner is the one who is suffering. Research on spousal caregiving in chronic illness reveals elevated rates of depression, anxiety, and burnout that rival or exceed those of the ill partner themselves. The concept of ambiguous loss — grieving a partner who is still present but fundamentally changed — helps explain the unique emotional complexity of this role. This article examines the psychological experience of the healthy partner, challenges the myth that good partners do not struggle, and provides evidence-based strategies for maintaining mental health while supporting someone you love through illness.',
+      'When chronic illness enters a relationship, the focus of clinical attention and social sympathy naturally falls on the person who is sick. But the healthy partner experiences their own profound psychological impact --- one that is poorly recognized, rarely treated, and complicated by guilt about having needs when their partner is the one who is suffering. Research on spousal caregiving in chronic illness reveals elevated rates of depression, anxiety, and burnout that rival or exceed those of the ill partner themselves. The concept of ambiguous loss --- grieving a partner who is still present but fundamentally changed --- helps explain the unique emotional complexity of this role. This article examines the psychological experience of the healthy partner, challenges the myth that good partners do not struggle, and provides evidence-based strategies for maintaining mental health while supporting someone you love through illness.',
 
     keyFacts: [
       { text: 'Partners of people with chronic illness have depression rates 2-3 times higher than the general population', citationIndex: 1 },
       { text: 'Approximately 40-70% of spousal caregivers report clinically significant levels of caregiver burden', citationIndex: 2 },
-      { text: 'Ambiguous loss — grieving a partner who is present but changed — is reported by the majority of healthy partners in chronic illness relationships', citationIndex: 3 },
+      { text: 'Ambiguous loss --- grieving a partner who is present but changed --- is reported by the majority of healthy partners in chronic illness relationships', citationIndex: 3 },
       { text: 'Healthy partners who maintain their own social connections and activities report 35% lower caregiver burnout', citationIndex: 4 },
       { text: 'Couples therapy specifically designed for chronic illness improves relationship satisfaction and reduces distress for both partners', citationIndex: 5 },
     ],
@@ -1206,15 +1304,15 @@ export const supportingWellbeingArticlesA: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'Your pain is not less real because your partner\'s pain is physical. Your grief is not less valid because the person you are grieving is still here. You cannot pour from an empty cup, and acknowledging that the cup needs filling is not selfishness — it is the foundation of sustainable love.',
+      'Your pain is not less real because your partner\'s pain is physical. Your grief is not less valid because the person you are grieving is still here. You cannot pour from an empty cup, and acknowledging that the cup needs filling is not selfishness --- it is the foundation of sustainable love.',
 
     practicalExercise: {
       title: 'The Healthy Partner Self-Check',
       steps: [
-        { title: 'Audit your own needs', description: 'Write down three things you need for your own wellbeing that you have been neglecting since your partner became ill. These might be social connections, hobbies, time alone, physical exercise, or simply the permission to feel your own feelings without guilt. Be honest — no one else needs to see this list.' },
-        { title: 'Identify one reclaim', description: 'Choose one item from your list and commit to re-engaging with it this week. Start small: a 20-minute walk, a phone call with a friend, an hour with a book. The goal is not to fill your cup in one go — it is to remember that filling your cup is allowed.' },
-        { title: 'Practice the permission statement', description: 'When guilt arises — and it will — use this permission statement: "Taking care of myself is not taking care away from my partner. I am a better support when I am not running on empty." Repeat it as many times as needed. Write it on a note card if that helps.' },
-        { title: 'Schedule a standing appointment with yourself', description: 'Block one recurring time slot per week that is non-negotiable — your time for restoration, whatever form that takes. Treat it with the same seriousness as a medical appointment for your partner. Because functionally, that is what it is: a preventive health intervention for you.' },
+        { title: 'Audit your own needs', description: 'Write down three things you need for your own wellbeing that you have been neglecting since your partner became ill. These might be social connections, hobbies, time alone, physical exercise, or simply the permission to feel your own feelings without guilt. Be honest --- no one else needs to see this list.' },
+        { title: 'Identify one reclaim', description: 'Choose one item from your list and commit to re-engaging with it this week. Start small: a 20-minute walk, a phone call with a friend, an hour with a book. The goal is not to fill your cup in one go --- it is to remember that filling your cup is allowed.' },
+        { title: 'Practice the permission statement', description: 'When guilt arises --- and it will --- use this permission statement: "Taking care of myself is not taking care away from my partner. I am a better support when I am not running on empty." Repeat it as many times as needed. Write it on a note card if that helps.' },
+        { title: 'Schedule a standing appointment with yourself', description: 'Block one recurring time slot per week that is non-negotiable --- your time for restoration, whatever form that takes. Treat it with the same seriousness as a medical appointment for your partner. Because functionally, that is what it is: a preventive health intervention for you.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Monitor Your Own Emotional Wellbeing',
@@ -1238,12 +1336,12 @@ export const supportingWellbeingArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Nobody asks how you are doing. When friends call, they ask about your partner. When
-            family visits, they bring meals and sympathy — for your partner. When you mention
+            family visits, they bring meals and sympathy --- for your partner. When you mention
             that you are tired, that you are sad, that you are overwhelmed, people remind you
             that at least you are healthy. As if health is a shield against grief. As if watching
             the person you love live in pain every day does not hurt. As if the relationship you
-            planned for — the vacations, the shared activities, the future you imagined
-            together — has not changed in ways you are not supposed to mourn because your partner
+            planned for --- the vacations, the shared activities, the future you imagined
+            together --- has not changed in ways you are not supposed to mourn because your partner
             is the one who is sick.
           </p>
           <p className="mb-6">
@@ -1251,7 +1349,7 @@ export const supportingWellbeingArticlesA: Article[] = [
             Research reveals that partners of people with chronic conditions have depression rates
             two to three times higher than the general population<Citation id="1" index={1} /> and
             that 40-70% of spousal caregivers report clinically significant levels of caregiver
-            burden — the physical, emotional, social, and financial strain of providing ongoing
+            burden --- the physical, emotional, social, and financial strain of providing ongoing
             care<Citation id="2" index={2} />. These are not abstract statistics. They describe
             the lived experience of people whose psychological needs are systematically overlooked
             because they are standing next to someone whose needs appear more urgent.
@@ -1259,9 +1357,15 @@ export const supportingWellbeingArticlesA: Article[] = [
           <p className="mb-6">
             Being the healthy partner in a chronic illness relationship does not mean you are
             unaffected. It means your distress is invisible, your grief is ambiguous, and your
-            needs are constantly deprioritized — by the healthcare system, by your social network,
+            needs are constantly deprioritized --- by the healthcare system, by your social network,
             and often by yourself. Understanding the psychological impact of this role is the
             first step toward addressing it.
+          </p>
+          <p className="mb-6">
+            The healthy partner's experience is further complicated by the progressive and fluctuating nature of many chronic conditions. Unlike an acute illness with a defined trajectory --- onset, treatment, recovery --- chronic illness is characterized by uncertainty that extends indefinitely into the future. The healthy partner does not know whether their partner's condition will stabilize, improve, or deteriorate. They cannot plan for next year, next month, or sometimes even next week with any confidence. This chronic uncertainty produces a distinctive form of anxiety that differs from the situational worry most people experience. It is an ambient, persistent stress that pervades every aspect of daily life, from financial planning to emotional availability to decisions about whether to pursue career opportunities that might require time and energy the relationship cannot spare. Research on uncertainty tolerance in caregivers has found that those with lower tolerance for ambiguity experience significantly higher rates of anxiety and depression, suggesting that interventions targeting uncertainty management may be particularly valuable for this population.
+          </p>
+          <p className="mb-6">
+            The invisibility of the healthy partner's distress is compounded by a cultural narrative that positions caregiving as an expression of love rather than a source of legitimate suffering. Partners who voice their own struggles risk being perceived as unsupportive, selfish, or insufficiently committed. This social pressure to perform selfless devotion creates a double bind: the healthy partner needs support but cannot seek it without violating the implicit rules of their role. The result is that many healthy partners become remarkably skilled at hiding their own distress, presenting a competent and caring exterior while internally managing levels of anxiety, grief, and exhaustion that would qualify for clinical intervention if anyone thought to assess them. Healthcare systems that routinely screen patients for depression rarely extend the same screening to the partners sitting in the waiting room.
           </p>
         </div>
 
@@ -1271,7 +1375,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         <p className="mb-6">
           The concept of ambiguous loss, developed by psychologist Pauline Boss, describes a
           type of grief that occurs when someone is present but psychologically or functionally
-          absent — or when loss has occurred but cannot be clearly defined or
+          absent --- or when loss has occurred but cannot be clearly defined or
           resolved<Citation id="6" index={6} />. In chronic illness relationships, ambiguous loss
           takes a particular form: you have not lost your partner, but you have lost the version
           of the relationship you expected. The active partner who hiked with you on weekends may
@@ -1281,7 +1385,7 @@ export const supportingWellbeingArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="I feel guilty even saying this out loud, but sometimes I grieve the person he was before he got sick. He is still here. He is still him. But the life we built together — the one we planned — is gone. And I do not know how to mourn something when everyone tells me I should just be grateful."
+          quote="I feel guilty even saying this out loud, but sometimes I grieve the person he was before he got sick. He is still here. He is still him. But the life we built together --- the one we planned --- is gone. And I do not know how to mourn something when everyone tells me I should just be grateful."
           attribution="Anonymous healthy partner"
           role="Married 14 years; partner diagnosed with MS 6 years ago"
           source="Family Process, 2023"
@@ -1289,7 +1393,7 @@ export const supportingWellbeingArticlesA: Article[] = [
 
         <p className="mb-6">
           What makes ambiguous loss particularly painful is that it resists resolution. In
-          conventional bereavement, grief — while devastating — has a clear object: someone has
+          conventional bereavement, grief --- while devastating --- has a clear object: someone has
           died, and the work of grieving can eventually move toward acceptance and adaptation.
           In ambiguous loss, the loss is ongoing and fluctuating. On good days, the old
           relationship seems momentarily restored, only to disappear again when symptoms
@@ -1301,10 +1405,16 @@ export const supportingWellbeingArticlesA: Article[] = [
           The majority of healthy partners in chronic illness relationships report experiencing
           ambiguous loss, yet very few receive any clinical support for
           it<Citation id="3" index={3} />. Many do not even have language for what they feel
-          until they encounter the concept — and that naming, research suggests, is itself
+          until they encounter the concept --- and that naming, research suggests, is itself
           therapeutic. Understanding that ambiguous loss is a recognized psychological phenomenon,
           not a personal failing or a sign of insufficient love, allows healthy partners to
           begin processing their grief without the additional burden of shame.
+        </p>
+        <p className="mb-6">
+          The grief of ambiguous loss often manifests in unexpected ways that the healthy partner may not initially recognize as grief-related. Irritability that seems disproportionate to its trigger, emotional numbness during moments that should evoke feeling, difficulty concentrating at work, or a persistent sense of going through the motions without genuine engagement --- these are all common expressions of unprocessed ambiguous loss. Because the loss lacks a clear event (no death, no departure, no formal ending), the healthy partner may not connect these symptoms to their caregiving situation. They may attribute their emotional flatness to personal weakness, their irritability to stress, or their disengagement to burnout, without recognizing that each of these experiences is a manifestation of grief that has no culturally sanctioned outlet. Therapeutic approaches that specifically name and validate ambiguous loss can produce rapid improvements in the healthy partner's emotional functioning, often within the first few sessions, simply by providing a framework that makes their experience legible to themselves.
+        </p>
+        <p className="mb-6">
+          Ambiguous loss is also cumulative and progressive in ways that distinguish it from acute grief. Each new limitation that illness introduces --- the hobby that must be abandoned, the vacation that must be cancelled, the physical intimacy that becomes painful or impossible --- adds another layer of loss that must be processed. Over the course of years, these accumulated losses can become overwhelming, particularly when each individual loss seems too small to warrant formal grieving. The healthy partner may minimize each new loss ("It is just a weekend trip, not a death") while the cumulative weight grows heavier. Clinicians who work with healthy partners emphasize the importance of acknowledging each loss as it occurs, rather than dismissing it, because unexpressed grief does not dissipate --- it accumulates and eventually demands attention, often through physical symptoms, emotional breakdown, or relationship crisis.
         </p>
 
         <h2 id="caregiver-burden" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1347,7 +1457,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                     The emotional load extends far beyond sadness about your partner's condition.
                     It includes anxiety about the future, guilt about your own needs and feelings,
                     frustration when symptoms limit shared activities, anger that this happened
-                    to your relationship, and a pervasive hypervigilance — constantly monitoring
+                    to your relationship, and a pervasive hypervigilance --- constantly monitoring
                     your partner for signs of decline or distress. Many healthy partners describe
                     feeling like they are always "on call," unable to fully relax even during
                     periods when their partner is relatively stable<Citation id="1" index={1} />.
@@ -1364,7 +1474,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                     unable to attend social events, and the healthy partner may feel uncomfortable
                     attending alone or guilty about having fun while their partner is home in pain.
                     Over time, friendships atrophy. Social isolation increases. The relationship
-                    becomes increasingly insular — the healthy partner's entire emotional world
+                    becomes increasingly insular --- the healthy partner's entire emotional world
                     narrows to the relationship itself, which is a setup for both burnout and
                     resentment<Citation id="4" index={4} />.
                   </p>
@@ -1377,8 +1487,8 @@ export const supportingWellbeingArticlesA: Article[] = [
                 <div className="space-y-3">
                   <p>
                     Medical costs, reduced household income if the ill partner cannot work, and
-                    the hidden expenses of chronic illness — home modifications, special equipment,
-                    transportation to appointments, dietary supplements — create financial pressure
+                    the hidden expenses of chronic illness --- home modifications, special equipment,
+                    transportation to appointments, dietary supplements --- create financial pressure
                     that compounds the emotional stress. Many healthy partners take on additional
                     work to compensate, further reducing the time and energy available for their
                     own wellbeing<Citation id="2" index={2} />.
@@ -1412,10 +1522,16 @@ export const supportingWellbeingArticlesA: Article[] = [
           This guilt is amplified by social messaging. Friends and family may explicitly or
           implicitly communicate that the healthy partner should be selflessly devoted. Media
           representations of chronic illness relationships tend to valorize total self-sacrifice.
-          And the ill partner themselves — often unintentionally — may reinforce the dynamic
+          And the ill partner themselves --- often unintentionally --- may reinforce the dynamic
           through statements like "You do not understand what I am going through," which, while
           true, can be received as a dismissal of the healthy partner's own
           pain<Citation id="9" index={9} />.
+        </p>
+        <p className="mb-6">
+          The guilt experienced by healthy partners often extends beyond present-tense emotions into anticipatory guilt --- feeling bad about needs and desires before they even arise. A healthy partner may decline a social invitation not because they cannot attend, but because they anticipate the guilt they would feel while enjoying themselves. They may suppress the desire for career advancement because pursuing it would require time and energy currently devoted to caregiving. They may avoid forming new friendships because they expect to feel guilty about having social connections their partner cannot maintain. This preemptive self-restriction gradually narrows the healthy partner's world in ways that mimic the functional limitations of chronic illness itself, creating a form of vicarious disability where the healthy partner's life becomes as constrained as their partner's, not by physical limitation but by psychological inhibition. Cognitive behavioral therapy approaches that target anticipatory guilt can be remarkably effective in helping healthy partners reclaim activities and aspirations they have prematurely abandoned.
+        </p>
+        <p className="mb-6">
+          A particularly complex dimension of healthy partner guilt involves anger. Most healthy partners experience anger at some point --- anger at the illness, anger at the unfairness of the situation, and sometimes anger at the ill partner themselves. This anger is a natural and psychologically normal response to a situation of chronic stress and loss, but it is almost universally experienced as unacceptable. Being angry at someone who is suffering feels monstrous, and so the anger gets suppressed, redirected, or turned inward into depression. Therapeutic approaches that normalize anger as a valid component of the caregiving experience, separate from love and commitment, can release enormous psychological pressure. Anger at the situation is not anger at the person. Acknowledging it, expressing it in appropriate contexts, and understanding its sources are essential components of healthy emotional functioning in the caregiver role.
         </p>
 
         <ArticleCallout type="clinical-note" title="Guilt Is a Signal, Not a Verdict">
@@ -1452,7 +1568,7 @@ export const supportingWellbeingArticlesA: Article[] = [
               'Healthy partner silently takes on all household tasks',
               'Resentment builds without acknowledgment or discussion',
               'Intimacy decreases as caregiver-patient dynamic dominates',
-              'Both partners feel guilty — one for needing help, one for feeling burdened',
+              'Both partners feel guilty --- one for needing help, one for feeling burdened',
               'Social life disappears for both partners',
               'Relationship becomes defined entirely by illness management',
             ],
@@ -1477,15 +1593,28 @@ export const supportingWellbeingArticlesA: Article[] = [
           illness, and explicit permission for both partners to have and express their
           feelings<Citation id="5" index={5} />. Meta-analyses show that these interventions
           improve relationship satisfaction, reduce distress for both partners, and in some cases
-          even improve the ill partner's physical health outcomes — likely because reduced
+          even improve the ill partner's physical health outcomes --- likely because reduced
           relationship conflict lowers physiological stress<Citation id="5" index={5} />.
+        </p>
+
+        <h2 id="identity-beyond-caregiving" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Maintaining Identity Beyond the Caregiving Role
+        </h2>
+        <p className="mb-6">
+          One of the most insidious effects of long-term caregiving is the gradual erosion of the healthy partner's sense of self beyond the caregiving role. Before their partner's illness, they may have identified primarily as a professional, a creative person, an athlete, a friend, or any number of roles that gave life meaning and structure. As caregiving demands increase, these other identities are often sacrificed one by one --- the gym membership is cancelled because there is not enough time, the hobby is abandoned because it feels frivolous when your partner is suffering, the career ambitions are shelved because flexibility to manage medical appointments takes priority. Over months and years, what remains is a person who defines themselves almost entirely by their relationship to someone else's illness. This identity contraction is a significant risk factor for depression, burnout, and what clinicians describe as caregiver identity foreclosure --- the premature closing down of personal development in response to caregiving demands.
+        </p>
+        <p className="mb-6">
+          Reclaiming identity requires deliberate and sustained effort, because the forces that erode it are constant. Setting aside even small amounts of time for activities unrelated to illness or caregiving can begin to rebuild a sense of self that exists independently of the partner's condition. This is not selfishness --- it is psychological self-preservation that ultimately benefits both partners. Research on caregiver resilience consistently identifies a maintained sense of personal identity as one of the strongest protective factors against burnout and depression. Partners who continue to pursue personal interests, maintain professional engagement, and cultivate friendships outside the illness context report not only better individual mental health but also higher relationship satisfaction, because they bring a fuller, more resourced version of themselves to the partnership.
+        </p>
+        <p className="mb-6">
+          The process of identity maintenance in caregiving is also complicated by changes in the couple's shared identity. Activities and plans that once defined the relationship --- traveling, cooking together, attending concerts, raising children according to a shared vision --- may be partially or fully disrupted by illness. The loss of these shared identity markers can leave both partners feeling unmoored, uncertain about what the relationship now means and what holds it together beyond the pragmatic dynamics of care and dependency. Couples who actively and explicitly rebuild shared meaning --- finding new activities that accommodate illness, creating rituals that celebrate their connection, articulating what they still value about each other beyond functional capacity --- tend to navigate this identity reconstruction more successfully than those who allow the void to remain unaddressed. Couples therapy that focuses specifically on meaning-making and identity can provide the structured support needed to facilitate this difficult but essential process.
         </p>
 
         <h2 id="protecting-your-mental-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Protecting Your Own Mental Health
         </h2>
         <p className="mb-6">
-          Maintaining your mental health as the healthy partner is not a selfish act — it is a
+          Maintaining your mental health as the healthy partner is not a selfish act --- it is a
           necessary condition for the sustainability of your caregiving and the survival of your
           relationship. Research identifies several strategies that significantly reduce caregiver
           burnout and protect psychological wellbeing<Citation id="4" index={4} />.
@@ -1499,7 +1628,7 @@ export const supportingWellbeingArticlesA: Article[] = [
                 <p>
                   Healthy partners who maintain friendships and social activities outside the
                   relationship report 35% lower caregiver burnout<Citation id="4" index={4} />.
-                  This does not mean abandoning your partner — it means recognizing that you are
+                  This does not mean abandoning your partner --- it means recognizing that you are
                   a whole person with social needs that one relationship cannot fully meet, regardless
                   of whether illness is involved.
                 </p>
@@ -1509,8 +1638,8 @@ export const supportingWellbeingArticlesA: Article[] = [
               title: 'Seek Your Own Therapeutic Support',
               description: (
                 <p>
-                  Individual therapy — particularly with a therapist who understands caregiver
-                  dynamics and chronic illness — provides a space to process feelings that may
+                  Individual therapy --- particularly with a therapist who understands caregiver
+                  dynamics and chronic illness --- provides a space to process feelings that may
                   feel too dangerous or guilt-inducing to express to your partner. This is not
                   talking behind their back. It is taking responsibility for your emotional health
                   so that your relationship interactions come from a healthier place.
@@ -1522,8 +1651,8 @@ export const supportingWellbeingArticlesA: Article[] = [
               description: (
                 <p>
                   You cannot be available 24 hours a day, seven days a week without burning out.
-                  Setting boundaries — "I need Sunday afternoons for myself," "I cannot be the
-                  sole emotional support for your illness" — is not abandonment. It is the
+                  Setting boundaries --- "I need Sunday afternoons for myself," "I cannot be the
+                  sole emotional support for your illness" --- is not abandonment. It is the
                   infrastructure that allows long-term care to remain possible rather than
                   collapsing under its own weight<Citation id="10" index={10} />.
                 </p>
@@ -1546,7 +1675,7 @@ export const supportingWellbeingArticlesA: Article[] = [
 
         <p className="mb-6">
           The relationship between your wellbeing and your partner's wellbeing is not
-          competitive — it is reciprocal. When you are depleted, your capacity for empathy,
+          competitive --- it is reciprocal. When you are depleted, your capacity for empathy,
           patience, and practical support diminishes. When you are replenished, you bring more
           to the relationship. Taking care of yourself is not time stolen from your partner.
           It is an investment in the quality of care you can provide and the quality of the
@@ -1555,12 +1684,12 @@ export const supportingWellbeingArticlesA: Article[] = [
 
         <ArticleCallout type="key-takeaway" title="Both Partners Deserve Care">
           <p>
-            Chronic illness affects both people in a relationship. The challenges are different —
+            Chronic illness affects both people in a relationship. The challenges are different ---
             the ill partner faces physical suffering and loss of function, while the healthy partner
             faces ambiguous loss, caregiver burden, and invisible grief. Neither partner's
             experience is more valid than the other's. The strongest chronic illness relationships
             are those where both partners' needs are acknowledged, where seeking help is normalized
-            for everyone, and where the relationship itself — not just the illness — receives
+            for everyone, and where the relationship itself --- not just the illness --- receives
             attention, care, and investment<Citation id="5" index={5} />. You chose your partner.
             You did not choose their illness. But you can choose to face it together in ways
             that protect you both.

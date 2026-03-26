@@ -95,7 +95,7 @@ export const friendshipsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Friendship isn't just nice to have—it's essential. Close connections protect mental health, extend lifespan, and provide a buffer against life's stressors in ways that few other relationships can.
+            Friendship isn't just nice to have---it's essential. Close connections protect mental health, extend lifespan, and provide a buffer against life's stressors in ways that few other relationships can.
           </p>
           <p className="mb-6">
             Research consistently shows that people with strong friendships experience lower rates of depression and anxiety, recover faster from illness, and report higher life satisfaction <Citation id="1" index={1} source="Journal of Health and Social Behavior" year="2010" tier={1} />. The need for social belonging is as fundamental to human wellbeing as food and shelter <Citation id="2" index={2} source="Psychological Bulletin" year="1995" tier={1} />.
@@ -106,10 +106,10 @@ export const friendshipsArticlesA: Article[] = [
           The Evolutionary Roots of Friendship
         </h2>
         <p className="mb-6">
-          Humans evolved as social creatures. For our ancestors, belonging to a group meant survival—access to food, protection from predators, and support during illness or injury. Those who formed strong bonds were more likely to survive and reproduce, embedding social connection deeply into our biology.
+          Humans evolved as social creatures. For our ancestors, belonging to a group meant survival---access to food, protection from predators, and support during illness or injury. Those who formed strong bonds were more likely to survive and reproduce, embedding social connection deeply into our biology.
         </p>
         <p className="mb-6">
-          Modern neuroscience reveals that social connection activates the same reward pathways in the brain as food or physical pleasure <Citation id="8" index={8} source="Annual Review of Sociology" year="2014" tier={1} />. This isn't metaphorical—our brains are literally wired to seek and maintain friendships.
+          Modern neuroscience reveals that social connection activates the same reward pathways in the brain as food or physical pleasure <Citation id="8" index={8} source="Annual Review of Sociology" year="2014" tier={1} />. This isn't metaphorical---our brains are literally wired to seek and maintain friendships.
         </p>
 
         <StatCard
@@ -138,7 +138,7 @@ export const friendshipsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The Harvard Study of Adult Development</strong>, which followed participants for over 80 years, found that the quality of close relationships was the single strongest predictor of life satisfaction and longevity—more important than wealth, fame, or social class.
+            <strong>The Harvard Study of Adult Development</strong>, which followed participants for over 80 years, found that the quality of close relationships was the single strongest predictor of life satisfaction and longevity---more important than wealth, fame, or social class.
           </p>
         </ArticleCallout>
 
@@ -279,12 +279,12 @@ export const friendshipsArticlesA: Article[] = [
           How to Build Friendship into Your Life
         </h2>
         <p className="mb-6">
-          Friendship doesn't happen by accident—it requires intention and effort <Citation id="7" index={7} source="American Psychological Association" year="2021" tier={3} />:
+          Friendship doesn't happen by accident---it requires intention and effort <Citation id="7" index={7} source="American Psychological Association" year="2021" tier={3} />:
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Create regular opportunities for interaction</strong>: Join groups, attend events, say yes to invitations</li>
-          <li><strong>Initiate plans</strong>: Don't wait to be invited—reach out first</li>
+          <li><strong>Initiate plans</strong>: Don't wait to be invited---reach out first</li>
           <li><strong>Show up consistently</strong>: Friendship deepens through repeated, reliable contact</li>
           <li><strong>Practice vulnerability</strong>: Share something personal to signal trust</li>
           <li><strong>Invest time</strong>: Strong friendships require approximately 200 hours of interaction to develop</li>
@@ -400,7 +400,7 @@ export const friendshipsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            If making friends feels harder than it used to, you're not imagining it. Adult friendship formation faces structural, psychological, and social barriers that didn't exist in childhood—but understanding these obstacles is the first step to overcoming them.
+            If making friends feels harder than it used to, you're not imagining it. Adult friendship formation faces structural, psychological, and social barriers that didn't exist in childhood---but understanding these obstacles is the first step to overcoming them.
           </p>
           <p className="mb-6">
             Research shows it takes approximately 50 hours of interaction to move from acquaintance to casual friend, 90 hours to become "real" friends, and over 200 hours to develop close friendship <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2018" tier={1} />. As adults, finding those hours becomes exponentially harder.
@@ -449,7 +449,7 @@ export const friendshipsArticlesA: Article[] = [
               title: '4. Higher Expectations',
               content: (
                 <p>
-                  We're pickier about who we befriend. We want friends who share our values, match our communication style, and fit our lifestyle—narrowing the pool considerably.
+                  We're pickier about who we befriend. We want friends who share our values, match our communication style, and fit our lifestyle---narrowing the pool considerably.
                 </p>
               ),
             },
@@ -586,11 +586,11 @@ export const friendshipsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Giving up too soon</strong>: Three declined invitations doesn't mean rejection—it might mean bad timing</li>
+          <li><strong>Giving up too soon</strong>: Three declined invitations doesn't mean rejection---it might mean bad timing</li>
           <li><strong>Waiting for the "perfect" friend</strong>: Compatibility grows over time; it's rarely instant</li>
           <li><strong>Only socializing when convenient</strong>: Friendship requires prioritization, even when you're tired</li>
           <li><strong>Neglecting follow-up</strong>: The connection after an initial meeting determines whether it continues</li>
-          <li><strong>Comparing to past friendships</strong>: Adult friendships look different from college ones—they're often less intense but more stable <Citation id="2" index={2} source="Psychology and Aging" year="2016" tier={1} /></li>
+          <li><strong>Comparing to past friendships</strong>: Adult friendships look different from college ones---they're often less intense but more stable <Citation id="2" index={2} source="Psychology and Aging" year="2016" tier={1} /></li>
           <li><strong>Relying solely on apps</strong>: Friendship apps (Bumble BFF, Meetup) can help, but in-person contact is essential for depth</li>
         </ul>
 
@@ -645,7 +645,7 @@ export const friendshipsArticlesA: Article[] = [
           Maintaining Perspective
         </h2>
         <p className="mb-6">
-          It's normal for adult friendship formation to feel slow and effortful. The challenge isn't a reflection of your likability—it's a structural reality of adult life <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />.
+          It's normal for adult friendship formation to feel slow and effortful. The challenge isn't a reflection of your likability---it's a structural reality of adult life <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -757,10 +757,10 @@ export const friendshipsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When a friendship ends, the grief can be profound—yet society offers no rituals, no sympathy cards, and little recognition of the loss. This silence doesn't reflect the pain's reality: friendship breakups hurt as much as romantic ones, sometimes more.
+            When a friendship ends, the grief can be profound---yet society offers no rituals, no sympathy cards, and little recognition of the loss. This silence doesn't reflect the pain's reality: friendship breakups hurt as much as romantic ones, sometimes more.
           </p>
           <p className="mb-6">
-            Research shows that friendship dissolution triggers the same neural pain pathways as physical injury <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2012" tier={1} />. The brain doesn't distinguish between social and physical pain—both activate the same regions and release the same stress hormones. Yet because friendship endings receive less social validation, the grief often goes unprocessed <Citation id="5" index={5} source="Journal of Palliative Medicine" year="2018" tier={1} />.
+            Research shows that friendship dissolution triggers the same neural pain pathways as physical injury <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2012" tier={1} />. The brain doesn't distinguish between social and physical pain---both activate the same regions and release the same stress hormones. Yet because friendship endings receive less social validation, the grief often goes unprocessed <Citation id="5" index={5} source="Journal of Palliative Medicine" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -784,7 +784,7 @@ export const friendshipsArticlesA: Article[] = [
           1. Lack of Social Scripts
         </h3>
         <p className="mb-6">
-          Romantic breakups come with established rituals: returning belongings, changing relationship status, explaining to others what happened. Friendship endings are ambiguous—no clear moment of severance, no social permission to grieve publicly <Citation id="4" index={4} source="Personal Relationships" year="2017" tier={1} />.
+          Romantic breakups come with established rituals: returning belongings, changing relationship status, explaining to others what happened. Friendship endings are ambiguous---no clear moment of severance, no social permission to grieve publicly <Citation id="4" index={4} source="Personal Relationships" year="2017" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -805,12 +805,12 @@ export const friendshipsArticlesA: Article[] = [
           4. Disenfranchised Grief
         </h3>
         <p className="mb-6">
-          People minimize friendship loss: "You'll make new friends,", "It wasn't that serious,", "At least it wasn't a spouse." This dismissal (disenfranchised grief) compounds the pain—you hurt, but society tells you you shouldn't <Citation id="5" index={5} source="Journal of Palliative Medicine" year="2018" tier={1} />.
+          People minimize friendship loss: "You'll make new friends,", "It wasn't that serious,", "At least it wasn't a spouse." This dismissal (disenfranchised grief) compounds the pain---you hurt, but society tells you you shouldn't <Citation id="5" index={5} source="Journal of Palliative Medicine" year="2018" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>Neurological reality</strong>: Brain imaging studies show that social rejection activates the dorsal anterior cingulate cortex and anterior insula—the same regions that process physical pain. The phrase "hurt feelings" is neurologically accurate.
+            <strong>Neurological reality</strong>: Brain imaging studies show that social rejection activates the dorsal anterior cingulate cortex and anterior insula---the same regions that process physical pain. The phrase "hurt feelings" is neurologically accurate.
           </p>
         </ArticleCallout>
 
@@ -925,7 +925,7 @@ export const friendshipsArticlesA: Article[] = [
               title: '4. Resist the Urge to Vilify or Idealize',
               description: (
                 <p>
-                  Both extremes prevent processing. The friendship had value and it ended—both can be true. Complexity is okay.
+                  Both extremes prevent processing. The friendship had value and it ended---both can be true. Complexity is okay.
                 </p>
               ),
             },
@@ -950,7 +950,7 @@ export const friendshipsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Accept ambiguity</strong>: You may never know exactly what happened, and that's okay</li>
           <li><strong>Focus on your experience</strong>: What you learned, how you grew, what you'll do differently next time</li>
-          <li><strong>Release the fantasy</strong>: The reconciliation conversation might never happen—grieve that too</li>
+          <li><strong>Release the fantasy</strong>: The reconciliation conversation might never happen---grieve that too</li>
           <li><strong>Forgive yourself</strong>: If you made mistakes, learn from them without dwelling in shame</li>
           <li><strong>Trust your judgment</strong>: Even if it ended, the friendship had value when it existed</li>
         </ul>
@@ -1064,7 +1064,7 @@ export const friendshipsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The gap between wanting to see friends and actually having time to see them is one of adulthood's quiet tragedies. But busy doesn't have to mean lonely—friendship maintenance is a skill, and there are proven strategies to keep connections alive even when your schedule is maxed out.
+            The gap between wanting to see friends and actually having time to see them is one of adulthood's quiet tragedies. But busy doesn't have to mean lonely---friendship maintenance is a skill, and there are proven strategies to keep connections alive even when your schedule is maxed out.
           </p>
           <p className="mb-6">
             Research shows that friendship quality isn't determined by frequency of contact alone, but by the intentionality and responsiveness of interactions <Citation id="1" index={1} source="Communication Research Reports" year="2018" tier={1} />. This is good news: you don't need to see friends weekly to maintain closeness if the contact you do have is meaningful.
@@ -1111,7 +1111,7 @@ export const friendshipsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Sharing what's actually happening in your life—struggles, victories, fears—builds intimacy. Surface-level updates ("work is fine, you?") don't maintain depth.
+                    Sharing what's actually happening in your life---struggles, victories, fears---builds intimacy. Surface-level updates ("work is fine, you?") don't maintain depth.
                   </p>
                   <p>
                     <strong>In practice</strong>: Send voice memos about what you're thinking about, not just what you're doing. Share vulnerably when you do connect.
@@ -1125,7 +1125,7 @@ export const friendshipsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Replying to texts, acknowledging what they share, asking follow-up questions. Consistency matters more than speed—if you always respond eventually, friends feel secure.
+                    Replying to texts, acknowledging what they share, asking follow-up questions. Consistency matters more than speed---if you always respond eventually, friends feel secure.
                   </p>
                   <p>
                     <strong>In practice</strong>: Set a "reply by" deadline (within 72 hours) and stick to it. Better to send a short reply than leave messages hanging.
@@ -1196,7 +1196,7 @@ export const friendshipsArticlesA: Article[] = [
           Time-Efficient Friendship Strategies
         </h2>
         <p className="mb-6">
-          You don't need hours to maintain connection—you need intentionality <Citation id="7" index={7} source="American Psychological Association" year="2022" tier={3} />:
+          You don't need hours to maintain connection---you need intentionality <Citation id="7" index={7} source="American Psychological Association" year="2022" tier={3} />:
         </p>
 
         <ComparisonTable
@@ -1275,7 +1275,7 @@ export const friendshipsArticlesA: Article[] = [
               title: 'Accept Different Levels of Detail',
               description: (
                 <p>
-                  You won't know daily minutiae anymore. Focus on deeper sharing—how they're feeling about life, what they're learning, what they're struggling with.
+                  You won't know daily minutiae anymore. Focus on deeper sharing---how they're feeling about life, what they're learning, what they're struggling with.
                 </p>
               ),
             },
@@ -1439,7 +1439,7 @@ export const friendshipsArticlesA: Article[] = [
           Dunbar's Number: The Cognitive Limit on Friendships
         </h2>
         <p className="mb-6">
-          Evolutionary psychologist Robin Dunbar proposed that humans can maintain stable social relationships with approximately 150 people—a limit determined by the size of our neocortex <Citation id="2" index={2} source="Philosophical Transactions of the Royal Society B" year="2012" tier={1} />. But that 150 isn't uniform—it's structured in layers:
+          Evolutionary psychologist Robin Dunbar proposed that humans can maintain stable social relationships with approximately 150 people---a limit determined by the size of our neocortex <Citation id="2" index={2} source="Philosophical Transactions of the Royal Society B" year="2012" tier={1} />. But that 150 isn't uniform---it's structured in layers:
         </p>
 
         <ArticleChart
@@ -1455,14 +1455,14 @@ export const friendshipsArticlesA: Article[] = [
         />
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Support clique (1-5 people)</strong>: Your innermost circle—people you'd call in a crisis</li>
+          <li><strong>Support clique (1-5 people)</strong>: Your innermost circle---people you'd call in a crisis</li>
           <li><strong>Sympathy group (5-15 people)</strong>: Close friends whose death would devastate you</li>
           <li><strong>Affinity group (15-50 people)</strong>: Good friends you see regularly and feel connected to</li>
           <li><strong>Active network (50-150 people)</strong>: Casual friends, acquaintances you interact with periodically</li>
         </ul>
 
         <p className="mb-6">
-          The key insight: <strong>most of your emotional needs are met by the inner two layers</strong>—the 5-15 people you're genuinely close to. The rest provide diversity, social stimulation, and context-specific support (work friends, hobby friends, neighborhood friends), but they're not the core of your wellbeing.
+          The key insight: <strong>most of your emotional needs are met by the inner two layers</strong>---the 5-15 people you're genuinely close to. The rest provide diversity, social stimulation, and context-specific support (work friends, hobby friends, neighborhood friends), but they're not the core of your wellbeing.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -1494,7 +1494,7 @@ export const friendshipsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>A 2010 meta-analysis of 148 studies found that <strong>the quality of social relationships</strong> (measured by emotional support, trust, and reciprocity) was a stronger predictor of longevity than the number of relationships <Citation id="7" index={7} source="PLOS Medicine" year="2010" tier={1} /></li>
           <li>Research on older adults showed that <strong>perceived quality of friendships</strong> protected against loneliness even when people had small networks, while large networks with low-quality ties didn't prevent loneliness <Citation id="5" index={5} source="Archives of Gerontology and Geriatrics" year="2020" tier={1} /></li>
-          <li>Neuroscience studies reveal that <strong>social network diversity</strong> (having friends from different contexts) correlates with better brain health, but only when those ties include some depth—pure acquaintanceships don't show the same benefit <Citation id="4" index={4} source="The Journals of Gerontology: Series B" year="2016" tier={1} /></li>
+          <li>Neuroscience studies reveal that <strong>social network diversity</strong> (having friends from different contexts) correlates with better brain health, but only when those ties include some depth---pure acquaintanceships don't show the same benefit <Citation id="4" index={4} source="The Journals of Gerontology: Series B" year="2016" tier={1} /></li>
           <li>Young adults with <strong>3-5 close, reciprocal friendships</strong> reported significantly higher wellbeing than those with large but superficial networks <Citation id="8" index={8} source="Personality and Individual Differences" year="2017" tier={1} /></li>
         </ul>
 
@@ -1572,7 +1572,7 @@ export const friendshipsArticlesA: Article[] = [
           <li><strong>Career advancement</strong>: Weak ties (acquaintances, former colleagues) often provide job leads and professional opportunities <Citation id="6" index={6} source="Annual Review of Psychology" year="2021" tier={1} /></li>
           <li><strong>Cognitive stimulation</strong>: Interacting with diverse people (even superficially) keeps your brain flexible and exposes you to new ideas <Citation id="1" index={1} source="Neurology" year="2019" tier={1} /></li>
           <li><strong>Resilience against loss</strong>: If your small circle fragments (moves, deaths, breakups), having a broader network prevents total isolation</li>
-          <li><strong>Specific needs</strong>: Different friends serve different functions—hobby buddies, parenting support, professional mentors. More variety means more tailored support</li>
+          <li><strong>Specific needs</strong>: Different friends serve different functions---hobby buddies, parenting support, professional mentors. More variety means more tailored support</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -1630,10 +1630,10 @@ export const friendshipsArticlesA: Article[] = [
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Who would I call with urgent bad news?</strong> (This is your support clique—aim for 1-5.)</li>
+          <li><strong>Who would I call with urgent bad news?</strong> (This is your support clique---aim for 1-5.)</li>
           <li><strong>Who knows the real me, not just the polished version?</strong> (This is your intimacy level.)</li>
           <li><strong>Do I have friendships that feel like obligations rather than sources of joy?</strong> (Consider whether pruning would increase quality.)</li>
-          <li><strong>Am I lonely despite having friends?</strong> (This signals a quality issue—your friendships may lack depth or reciprocity.)</li>
+          <li><strong>Am I lonely despite having friends?</strong> (This signals a quality issue---your friendships may lack depth or reciprocity.)</li>
           <li><strong>Do I have friends across different life domains?</strong> (Diversity provides resilience.)</li>
         </ol>
 

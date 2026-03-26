@@ -29,7 +29,7 @@ export const identityValuesArticlesB: Article[] = [
             You navigate multiple worlds: the culture you grew up in, the culture you live in now, maybe cultures from parents, partners, or travels. Each comes with values, norms, and expectations. Managing multiple cultural identities can be source of strength and struggle simultaneously.
           </p>
           <p className="mb-6">
-            Research shows bicultural individuals who integrate identities (rather than feeling conflict between them) report better mental health <Citation id="1" index={1} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />. But cultural identity conflict—feeling torn between cultures—correlates with anxiety and depression <Citation id="2" index={2} source="Cultural Diversity and Ethnic Minority Psychology" year="2021" tier={2} />.
+            Research shows bicultural individuals who integrate identities (rather than feeling conflict between them) report better mental health <Citation id="1" index={1} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />. But cultural identity conflict---feeling torn between cultures---correlates with anxiety and depression <Citation id="2" index={2} source="Cultural Diversity and Ethnic Minority Psychology" year="2021" tier={2} />.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export const identityValuesArticlesB: Article[] = [
           steps={[
             { title: `Reframe as "Both/And`, description: <p>You don't have to choose. You can be fully both (or multiple) identities simultaneously.</p> },
             { title: 'Find Community', description: <p>Connect with others navigating similar cultural spaces. Shared experience reduces isolation.</p> },
-            { title: 'Celebrate Hybridity', description: <p>Your multicultural identity is a strength—cognitive flexibility, perspective-taking, cultural bridge-building.</p> },
+            { title: 'Celebrate Hybridity', description: <p>Your multicultural identity is a strength---cognitive flexibility, perspective-taking, cultural bridge-building.</p> },
             { title: 'Set Boundaries', description: <p>You're not obligated to explain or represent your culture to others. It's okay to decline 'cultural educator' role.</p> },
           ]}
         />
@@ -82,7 +82,7 @@ export const identityValuesArticlesB: Article[] = [
     id: catId(47),
     slug: 'gender-identity-mental-health-psychological-impact',
     title: 'Gender Identity and Mental Health: Understanding the Psychological Impact',
-    description: 'Gender identity—your internal sense of gender—profoundly affects mental health, especially when it conflicts with assigned sex or social expectations.',
+    description: 'Gender identity---your internal sense of gender---profoundly affects mental health, especially when it conflicts with assigned sex or social expectations.',
     image: "/images/articles/cat04/cover-047.svg",
     category: CATEGORY_SELF_WORTH,
     readTime: 6,
@@ -99,10 +99,10 @@ export const identityValuesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Gender identity—your internal sense of being male, female, both, neither, or another gender—is a fundamental aspect of self. For many, gender identity aligns with sex assigned at birth. For others, it doesn't, creating gender dysphoria and navigating a world that often doesn't recognize or affirm their identity.
+            Gender identity---your internal sense of being male, female, both, neither, or another gender---is a fundamental aspect of self. For many, gender identity aligns with sex assigned at birth. For others, it doesn't, creating gender dysphoria and navigating a world that often doesn't recognize or affirm their identity.
           </p>
           <p className="mb-6">
-            Research shows transgender and gender-diverse individuals experience higher rates of depression and anxiety—not because of gender identity itself, but due to minority stress: discrimination, lack of affirmation, and social rejection <Citation id="3" index={3} source="Psychology of Sexual Orientation and Gender Diversity" year="2021" tier={1} />.
+            Research shows transgender and gender-diverse individuals experience higher rates of depression and anxiety---not because of gender identity itself, but due to minority stress: discrimination, lack of affirmation, and social rejection <Citation id="3" index={3} source="Psychology of Sexual Orientation and Gender Diversity" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -155,7 +155,7 @@ export const identityValuesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Gender identity profoundly affects mental health—not because being transgender or gender-diverse is pathological, but because minority stress (discrimination, lack of affirmation, rejection) creates psychological harm. Affirming care, family acceptance, and supportive community dramatically improve mental health outcomes.</p>
+          <p>Gender identity profoundly affects mental health---not because being transgender or gender-diverse is pathological, but because minority stress (discrimination, lack of affirmation, rejection) creates psychological harm. Affirming care, family acceptance, and supportive community dramatically improve mental health outcomes.</p>
         </ArticleCallout>
       </>
     ),
@@ -184,7 +184,7 @@ export const identityValuesArticlesB: Article[] = [
             Discovering and accepting your sexual orientation can be liberating, terrifying, or both. For lesbian, gay, bisexual, and other non-heterosexual individuals, self-acceptance often involves unlearning internalized stigma, navigating family responses, and building identity in contexts that assume heterosexuality.
           </p>
           <p className="mb-6">
-            Research shows sexual orientation itself doesn't cause mental health problems—minority stress does <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2021" tier={1} />. LGB individuals face higher rates of depression and anxiety due to discrimination, rejection, and internalized stigma <Citation id="1" index={1} source="American Psychologist" year="2020" tier={1} />.
+            Research shows sexual orientation itself doesn't cause mental health problems---minority stress does <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2021" tier={1} />. LGB individuals face higher rates of depression and anxiety due to discrimination, rejection, and internalized stigma <Citation id="1" index={1} source="American Psychologist" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -197,7 +197,7 @@ export const identityValuesArticlesB: Article[] = [
             { title: 'Awareness', description: <p>Recognizing attraction that doesn't align with heterosexual assumption. Can occur at any age.</p> },
             { title: 'Exploration', description: <p>Testing, questioning, seeking information. Uncertainty and confusion common.</p> },
             { title: 'Self-Acceptance', description: <p>Integrating sexual orientation into identity. Overcoming internalized homophobia/biphobia.</p> },
-            { title: 'Disclosure', description: <p>Coming out to others—ongoing process, not one-time event. Each context requires new decision <Citation id="3" index={3} source="Journal of Gay & Lesbian Mental Health" year="2020" tier={1} />.</p> },
+            { title: 'Disclosure', description: <p>Coming out to others---ongoing process, not one-time event. Each context requires new decision <Citation id="3" index={3} source="Journal of Gay & Lesbian Mental Health" year="2020" tier={1} />.</p> },
           ]}
         />
 
@@ -220,13 +220,13 @@ export const identityValuesArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Challenge internalized stigma:</strong> Recognize that negative beliefs are learned, not truth</li>
           <li><strong>Find affirming community:</strong> Connection with other LGB people reduces isolation</li>
-          <li><strong>Selective disclosure:</strong> Come out strategically—safety and wellbeing matter more than complete openness</li>
+          <li><strong>Selective disclosure:</strong> Come out strategically---safety and wellbeing matter more than complete openness</li>
           <li><strong>Affirming therapy:</strong> Work with LGB-affirming therapist if struggling</li>
           <li><strong>Build chosen family:</strong> Create support network of accepting people</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Sexual orientation is a normal variation of human sexuality. Mental health challenges among LGB individuals stem from minority stress—stigma, discrimination, and rejection—not from orientation itself. Self-acceptance involves unlearning internalized stigma, finding affirming community, and building identity authentically.</p>
+          <p>Sexual orientation is a normal variation of human sexuality. Mental health challenges among LGB individuals stem from minority stress---stigma, discrimination, and rejection---not from orientation itself. Self-acceptance involves unlearning internalized stigma, finding affirming community, and building identity authentically.</p>
         </ArticleCallout>
       </>
     ),
@@ -252,7 +252,7 @@ export const identityValuesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I'm a doctor.", "I'm an engineer.", "I'm an artist." For many, career is central to identity—source of meaning, status, and self-definition. But when "what you do" becomes "who you are," job loss, retirement, or career dissatisfaction can trigger identity crisis.
+            "I'm a doctor.", "I'm an engineer.", "I'm an artist." For many, career is central to identity---source of meaning, status, and self-definition. But when "what you do" becomes "who you are," job loss, retirement, or career dissatisfaction can trigger identity crisis.
           </p>
           <p className="mb-6">
             Research shows career identity can support psychological wellbeing when it's integrated with (not replacing) other identity aspects <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2020" tier={1} />. But over-identification with work predicts burnout and difficulty navigating transitions <Citation id="2" index={2} source="Journal of Applied Psychology" year="2021" tier={1} />.
@@ -279,9 +279,9 @@ export const identityValuesArticlesB: Article[] = [
           Who's at Risk for Over-Identification?
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>High-status professions:</strong> Doctors, lawyers, executives—where career confers identity/prestige</li>
-          <li><strong>All-consuming careers:</strong> Startups, medicine, academia—fields demanding constant engagement</li>
-          <li><strong>Passionate vocations:</strong> Artists, activists—work tied to values and purpose</li>
+          <li><strong>High-status professions:</strong> Doctors, lawyers, executives---where career confers identity/prestige</li>
+          <li><strong>All-consuming careers:</strong> Startups, medicine, academia---fields demanding constant engagement</li>
+          <li><strong>Passionate vocations:</strong> Artists, activists---work tied to values and purpose</li>
           <li><strong>Late-career professionals:</strong> Decades invested; career = life's work</li>
         </ul>
 
@@ -325,7 +325,7 @@ export const identityValuesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Divorce ends a marriage, but it also ends being a spouse. Retirement ends a career, but it also ends professional identity. Illness changes abilities, changing how you see yourself. Major life transitions don't just alter circumstances—they require reinventing who you are.
+            Divorce ends a marriage, but it also ends being a spouse. Retirement ends a career, but it also ends professional identity. Illness changes abilities, changing how you see yourself. Major life transitions don't just alter circumstances---they require reinventing who you are.
           </p>
           <p className="mb-6">
             Research shows identity reconstruction after major life events involves disintegration (loss of old self) and reintegration (building new self) <Citation id="1" index={1} source="Journal of Personality" year="2021" tier={1} />. While painful, this process can lead to posttraumatic growth and more authentic identity <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
@@ -352,7 +352,7 @@ export const identityValuesArticlesB: Article[] = [
           steps={[
             { title: '1. Disintegration: Loss of Old Identity', description: <p>Who you were no longer fits. Disorientation, grief, identity confusion. This is normal, not failure.</p> },
             { title: '2. Liminal Space: Between Identities', description: <p>No longer old self, not yet new self. Uncertainty feels unbearable but is necessary for transformation <Citation id="3" index={3} source="Identity: An International Journal" year="2020" tier={1} />.</p> },
-            { title: '3. Exploration: Trying New Selves', description: <p>Experiment with new roles, activities, communities. Not all will fit—that's the point.</p> },
+            { title: '3. Exploration: Trying New Selves', description: <p>Experiment with new roles, activities, communities. Not all will fit---that's the point.</p> },
             { title: '4. Commitment: Building New Identity', description: <p>Gradually committing to aspects that resonate. New self emerges through action, not just thought.</p> },
             { title: '5. Integration: Coheren New Self', description: <p>New identity stabilizes. Integration includes parts of old self that still fit.</p> },
           ]}
@@ -366,11 +366,11 @@ export const identityValuesArticlesB: Article[] = [
           <li><strong>Grieve what's lost:</strong> Honor old identity even as you move forward. Grief is part of transition.</li>
           <li><strong>Experiment broadly:</strong> Try activities, communities, roles without committing. Exploration precedes clarity.</li>
           <li><strong>Rewrite your narrative:</strong> Tell new story about yourself that integrates past and future. How does this transition fit into your life story?</li>
-          <li><strong>Be patient:</strong> Reinvention takes time—months to years, not weeks. Trust the process.</li>
+          <li><strong>Be patient:</strong> Reinvention takes time---months to years, not weeks. Trust the process.</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Major life transitions require identity reinvention—dismantling old self and constructing new one. While disorienting and painful, this process offers opportunity for growth and authenticity. Navigating it requires accepting uncertainty, grieving loss, exploring possibilities, and patiently allowing new identity to emerge.</p>
+          <p>Major life transitions require identity reinvention---dismantling old self and constructing new one. While disorienting and painful, this process offers opportunity for growth and authenticity. Navigating it requires accepting uncertainty, grieving loss, exploring possibilities, and patiently allowing new identity to emerge.</p>
         </ArticleCallout>
       </>
     ),

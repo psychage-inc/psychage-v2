@@ -98,7 +98,7 @@ export const attachmentStylesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Understanding your attachment style isn't about getting a label—it's about gaining clarity on the patterns that shape how you connect with others. This self-awareness is the first step toward healthier relationships and, if needed, intentional change.
+            Understanding your attachment style isn't about getting a label---it's about gaining clarity on the patterns that shape how you connect with others. This self-awareness is the first step toward healthier relationships and, if needed, intentional change.
           </p>
           <p className="mb-6">
             While formal assessments exist, you can gain meaningful insight through honest self-reflection about your relationship history, emotional patterns, and automatic reactions to intimacy and distance <Citation id="1" index={1} source="Journal of Personality Assessment" year="2000" tier={1} />.
@@ -120,7 +120,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Core Self-Reflection Questions
         </h2>
         <p className="mb-6">
-          Answer these questions honestly, thinking about your most common patterns across multiple relationships—not just one particularly good or bad relationship.
+          Answer these questions honestly, thinking about your most common patterns across multiple relationships---not just one particularly good or bad relationship.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -182,7 +182,7 @@ export const attachmentStylesArticlesB: Article[] = [
                     <li>Feel comfortable both alone and in close relationships</li>
                     <li>Can communicate needs without anxiety or avoidance</li>
                     <li>Trust that others will be there for you</li>
-                    <li>Don't take conflict personally—you see it as solvable</li>
+                    <li>Don't take conflict personally---you see it as solvable</li>
                     <li>Can self-soothe but also ask for support when needed</li>
                     <li>Feel worthy of love and expect relationships to be generally positive</li>
                     <li>Can give your partner space without feeling threatened</li>
@@ -201,7 +201,7 @@ export const attachmentStylesArticlesB: Article[] = [
                     <li>Need regular reassurance about the relationship</li>
                     <li>Overanalyze small changes in tone, word choice, or behavior</li>
                     <li>Feel anxious when you don't hear from someone</li>
-                    <li>Struggle to be alone—you feel better when connected</li>
+                    <li>Struggle to be alone---you feel better when connected</li>
                     <li>Worry that you love more than you're loved</li>
                     <li>Sometimes engage in protest behaviors (dramatic gestures to get attention)</li>
                     <li>Take perceived rejection very hard</li>
@@ -340,7 +340,7 @@ export const attachmentStylesArticlesB: Article[] = [
             { feature: 'Secure', values: ["Communicate needs, seek support", "I'm stressed. Can we talk?"] },
             { feature: 'Anxious', values: ['Seek excessive reassurance, cling', 'Do you still love me? Are we okay?'] },
             { feature: 'Avoidant', values: ["Withdraw, shut down, need space", "I'm fine. I need to be alone."] },
-            { feature: 'Disorganized', values: ['Oscillate—cling then push away', 'I need you—actually, leave me alone.'] },
+            { feature: 'Disorganized', values: ['Oscillate---cling then push away', 'I need you---actually, leave me alone.'] },
           ]}
           highlightColumn={0}
         />
@@ -354,7 +354,7 @@ export const attachmentStylesArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Experiences in Close Relationships-Revised (ECR-R):</strong> 36 questions measuring anxiety and avoidance dimensions</li>
           <li><strong>Relationship Questionnaire (RQ):</strong> Brief categorical measure</li>
-          <li><strong>Adult Attachment Interview (AAI):</strong> In-depth interview administered by trained professionals—the gold standard, but requires a specialist <Citation id="3" index={3} source="Attachment & Human Development" year="2003" tier={1} /></li>
+          <li><strong>Adult Attachment Interview (AAI):</strong> In-depth interview administered by trained professionals---the gold standard, but requires a specialist <Citation id="3" index={3} source="Attachment & Human Development" year="2003" tier={1} /></li>
         </ul>
         <p className="mb-6">
           These tools are available through therapists or online. However, self-reflection often provides enough insight to begin working on patterns.
@@ -386,7 +386,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Identifying your attachment style is the beginning, not the end. Once you recognize your patterns:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Practice self-compassion:</strong> Your attachment style isn't a flaw—it's an adaptation</li>
+          <li><strong>Practice self-compassion:</strong> Your attachment style isn't a flaw---it's an adaptation</li>
           <li><strong>Notice patterns in real-time:</strong> Start recognizing when attachment fears are driving behavior</li>
           <li><strong>Communicate with partners:</strong> Sharing your attachment awareness can reduce misunderstandings</li>
           <li><strong>Seek support if needed:</strong> Therapy, particularly attachment-focused therapy, can accelerate healing</li>
@@ -394,7 +394,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </ol>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Knowing your attachment style isn't about putting yourself in a box—it's about understanding the invisible forces shaping your relationships so you can make conscious choices instead of automatic reactions.</p>
+          <p>Knowing your attachment style isn't about putting yourself in a box---it's about understanding the invisible forces shaping your relationships so you can make conscious choices instead of automatic reactions.</p>
         </ArticleCallout>
 
         <h2 id="final-reflection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -410,7 +410,7 @@ export const attachmentStylesArticlesB: Article[] = [
           <li>What would you like to change about how you connect with others?</li>
         </ul>
         <p className="mb-6">
-          Your answers are a roadmap—a starting point for building the relationships you want.
+          Your answers are a roadmap---a starting point for building the relationships you want.
         </p>
       </>
     ),
@@ -423,7 +423,7 @@ export const attachmentStylesArticlesB: Article[] = [
     id: catId(7),
     slug: 'attachment-styles-in-friendships-not-just-about-romance',
     title: "Attachment Styles in Friendships: It's Not Just About Romance",
-    description: "Discover how anxious, avoidant, and disorganized attachment patterns show up in friendships—and why platonic bonds matter just as much.",
+    description: "Discover how anxious, avoidant, and disorganized attachment patterns show up in friendships---and why platonic bonds matter just as much.",
     image: "/images/articles/cat03/cover-007.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -501,7 +501,7 @@ export const attachmentStylesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When we talk about attachment theory, romantic relationships dominate the conversation. But the patterns you learned in childhood don't just influence who you date—they shape every close relationship in your life, including friendships.
+            When we talk about attachment theory, romantic relationships dominate the conversation. But the patterns you learned in childhood don't just influence who you date---they shape every close relationship in your life, including friendships.
           </p>
           <p className="mb-6">
             The friend who needs constant reassurance that you're not mad at them? The one who pulls away when you try to deepen the bond? The friendship that feels like a roller coaster of intensity and distance? Attachment styles explain these dynamics too <Citation id="1" index={1} source="Personality and Social Psychology Review" year="2011" tier={1} />.
@@ -512,7 +512,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Why Friendships Matter for Attachment
         </h2>
         <p className="mb-6">
-          Friendships serve as attachment bonds throughout life—especially in adolescence and early adulthood when peer relationships often rival or surpass romantic ones in importance <Citation id="6" index={6} source="Development and Psychopathology" year="2020" tier={1} />. Close friends can provide:
+          Friendships serve as attachment bonds throughout life---especially in adolescence and early adulthood when peer relationships often rival or surpass romantic ones in importance <Citation id="6" index={6} source="Development and Psychopathology" year="2020" tier={1} />. Close friends can provide:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>A secure base (someone you can rely on when stressed)</li>
@@ -522,7 +522,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Research shows that secure friendships in adolescence can buffer against the effects of insecure romantic attachment later in life. Friends aren't just "practice" for romance—they're independently valuable attachment figures.</p>
+          <p>Research shows that secure friendships in adolescence can buffer against the effects of insecure romantic attachment later in life. Friends aren't just "practice" for romance---they're independently valuable attachment figures.</p>
         </ArticleCallout>
 
         <h2 id="secure-in-friendship" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -570,7 +570,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="tip">
-          <p><strong>For anxiously attached friends:</strong> Before sending that "Are you mad at me?" text, pause. Ask yourself: Is there concrete evidence my friend is upset, or am I responding to a fear? Often, the silence is just life—not rejection.</p>
+          <p><strong>For anxiously attached friends:</strong> Before sending that "Are you mad at me?" text, pause. Ask yourself: Is there concrete evidence my friend is upset, or am I responding to a fear? Often, the silence is just life---not rejection.</p>
         </ArticleCallout>
 
         <h2 id="avoidant-in-friendship" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -600,14 +600,14 @@ export const attachmentStylesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="tip">
-          <p><strong>For avoidantly attached friends:</strong> If you value a friendship, communicate that—even in small ways. A brief "thinking of you" text goes a long way. Your friends can't read your mind, and your silence may be misinterpreted as disinterest.</p>
+          <p><strong>For avoidantly attached friends:</strong> If you value a friendship, communicate that---even in small ways. A brief "thinking of you" text goes a long way. Your friends can't read your mind, and your silence may be misinterpreted as disinterest.</p>
         </ArticleCallout>
 
         <h2 id="disorganized-in-friendship" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Disorganized Attachment in Friendships
         </h2>
         <p className="mb-6">
-          Disorganized attachment creates the same push-pull dynamic in friendships as in romantic relationships—craving closeness but fearing it.
+          Disorganized attachment creates the same push-pull dynamic in friendships as in romantic relationships---craving closeness but fearing it.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -692,7 +692,7 @@ export const attachmentStylesArticlesB: Article[] = [
             { feature: 'Secure', values: ['Openly asks for support', 'Feels trusted and helpful'] },
             { feature: 'Anxious', values: ['Seeks excessive reassurance', 'May feel drained or unable to help enough'] },
             { feature: 'Avoidant', values: ['Handles problems alone', 'May feel shut out or unneeded'] },
-            { feature: 'Disorganized', values: ['Oscillates—asks then rejects help', 'Feels confused or rejected'] },
+            { feature: 'Disorganized', values: ['Oscillates---asks then rejects help', 'Feels confused or rejected'] },
           ]}
           highlightColumn={0}
         />
@@ -701,7 +701,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Can Friendships Heal Insecure Attachment?
         </h2>
         <p className="mb-6">
-          Yes. Secure friendships can be corrective experiences—proving that closeness is safe, that people can be reliable, and that you're worthy of consistent care <Citation id="6" index={6} source="Development and Psychopathology" year="2020" tier={1} />.
+          Yes. Secure friendships can be corrective experiences---proving that closeness is safe, that people can be reliable, and that you're worthy of consistent care <Citation id="6" index={6} source="Development and Psychopathology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           A friend who:
@@ -717,7 +717,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Friendships aren't inferior to romantic relationships in the attachment system—they're parallel tracks. Healing can happen in platonic bonds just as powerfully as in romantic ones.</p>
+          <p>Friendships aren't inferior to romantic relationships in the attachment system---they're parallel tracks. Healing can happen in platonic bonds just as powerfully as in romantic ones.</p>
         </ArticleCallout>
 
         <h2 id="practical-steps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -751,7 +751,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Friendships are fertile ground for attachment growth. They're lower-stakes than romantic relationships in some ways, making them safer spaces to practice new patterns. And unlike family, you choose your friends—which means you can intentionally seek out people who help you move toward security.
+          Friendships are fertile ground for attachment growth. They're lower-stakes than romantic relationships in some ways, making them safer spaces to practice new patterns. And unlike family, you choose your friends---which means you can intentionally seek out people who help you move toward security.
         </p>
       </>
     ),
@@ -764,7 +764,7 @@ export const attachmentStylesArticlesB: Article[] = [
     id: catId(8),
     slug: 'when-two-insecure-attachment-styles-meet-anxious-avoidant-trap',
     title: 'When Two Insecure Attachment Styles Meet: The Anxious-Avoidant Trap',
-    description: 'Explore the painful dynamics of anxious-avoidant pairings—why opposites attract, how the pursue-withdraw cycle perpetuates, and paths to breaking free.',
+    description: 'Explore the painful dynamics of anxious-avoidant pairings---why opposites attract, how the pursue-withdraw cycle perpetuates, and paths to breaking free.',
     image: "/images/articles/cat03/cover-008.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 9,
@@ -845,7 +845,7 @@ export const attachmentStylesArticlesB: Article[] = [
             One partner craves closeness but is met with distance. The other values independence but feels pursued relentlessly. The more one seeks connection, the more the other withdraws. The withdrawal triggers more pursuit. The pursuit triggers more withdrawal. Both are in pain, but their pain speaks different languages.
           </p>
           <p className="mb-6">
-            This is the anxious-avoidant trap—one of the most common and painful relationship dynamics in modern psychology <Citation id="1" index={1} source="Journal of Family Psychology" year="2015" tier={1} />. It's also one of the most paradoxical: these opposite attachment styles attract each other, yet their core strategies are fundamentally incompatible.
+            This is the anxious-avoidant trap---one of the most common and painful relationship dynamics in modern psychology <Citation id="1" index={1} source="Journal of Family Psychology" year="2015" tier={1} />. It's also one of the most paradoxical: these opposite attachment styles attract each other, yet their core strategies are fundamentally incompatible.
           </p>
         </div>
 
@@ -853,21 +853,21 @@ export const attachmentStylesArticlesB: Article[] = [
           Why Opposites Attract
         </h2>
         <p className="mb-6">
-          Anxious and avoidant individuals are disproportionately drawn to each other—far more than chance would predict <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2016" tier={1} />. Why?
+          Anxious and avoidant individuals are disproportionately drawn to each other---far more than chance would predict <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2016" tier={1} />. Why?
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           The Anxious Perspective
         </h3>
         <p className="mb-6">
-          Avoidant partners feel like a challenge. Their emotional distance activates the anxious person's attachment system, making the connection feel urgent and meaningful. The difficulty of getting close creates an illusion of depth. When the avoidant partner <em>does</em> show affection, it feels like a victory—intermittent reinforcement that keeps the anxious person hooked.
+          Avoidant partners feel like a challenge. Their emotional distance activates the anxious person's attachment system, making the connection feel urgent and meaningful. The difficulty of getting close creates an illusion of depth. When the avoidant partner <em>does</em> show affection, it feels like a victory---intermittent reinforcement that keeps the anxious person hooked.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           The Avoidant Perspective
         </h3>
         <p className="mb-6">
-          Anxious partners initially seem warm, emotionally open, and deeply interested—qualities the avoidant person admires but struggles to embody. The anxious partner's willingness to pursue means the avoidant doesn't have to do the emotional heavy lifting. Early on, it feels complementary: 'They bring the closeness I struggle with; I bring the independence they lack."
+          Anxious partners initially seem warm, emotionally open, and deeply interested---qualities the avoidant person admires but struggles to embody. The anxious partner's willingness to pursue means the avoidant doesn't have to do the emotional heavy lifting. Early on, it feels complementary: 'They bring the closeness I struggle with; I bring the independence they lack."
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -896,7 +896,7 @@ export const attachmentStylesArticlesB: Article[] = [
               title: 'The Avoidant Partner Feels Overwhelmed',
               description: (
                 <p>
-                  The request for closeness triggers the avoidant person's fear of engulfment or loss of autonomy. They withdraw—emotionally, physically, or both.
+                  The request for closeness triggers the avoidant person's fear of engulfment or loss of autonomy. They withdraw---emotionally, physically, or both.
                 </p>
               ),
             },
@@ -904,7 +904,7 @@ export const attachmentStylesArticlesB: Article[] = [
               title: 'The Anxious Partner Panics',
               description: (
                 <p>
-                  Withdrawal activates the anxious person's abandonment fears. They pursue harder—more texts, more emotional intensity, more questions.
+                  Withdrawal activates the anxious person's abandonment fears. They pursue harder---more texts, more emotional intensity, more questions.
                 </p>
               ),
             },
@@ -928,7 +928,7 @@ export const attachmentStylesArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>This cycle can escalate to the point where both partners are operating in survival mode—the anxious partner in panic, the avoidant partner in shutdown. At this stage, rational communication becomes nearly impossible without intervention.</p>
+          <p>This cycle can escalate to the point where both partners are operating in survival mode---the anxious partner in panic, the avoidant partner in shutdown. At this stage, rational communication becomes nearly impossible without intervention.</p>
         </ArticleCallout>
 
         <h2 id="what-it-looks-like" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -996,7 +996,7 @@ export const attachmentStylesArticlesB: Article[] = [
           The Neural Mismatch
         </h2>
         <p className="mb-6">
-          Recent neuroscience research reveals that anxious-avoidant couples show <strong>neural desynchrony</strong> during conflict—their brains are literally not on the same wavelength <Citation id="6" index={6} source="Social Cognitive and Affective Neuroscience" year="2020" tier={1} />.
+          Recent neuroscience research reveals that anxious-avoidant couples show <strong>neural desynchrony</strong> during conflict---their brains are literally not on the same wavelength <Citation id="6" index={6} source="Social Cognitive and Affective Neuroscience" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           When securely attached couples argue, their brains show synchronized activity in regions responsible for empathy and emotional regulation. Anxious-avoidant couples show opposite patterns: one brain activates threat responses while the other deactivates emotional processing.
@@ -1009,11 +1009,11 @@ export const attachmentStylesArticlesB: Article[] = [
           The anxious-avoidant trap is reinforcing for both parties in painful ways:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Anxious partner:</strong> The difficulty of getting closeness makes the relationship feel intensely meaningful. When the avoidant partner <em>does</em> show affection, it's like a dopamine hit—intermittent reinforcement that keeps them hooked.</li>
+          <li><strong>Anxious partner:</strong> The difficulty of getting closeness makes the relationship feel intensely meaningful. When the avoidant partner <em>does</em> show affection, it's like a dopamine hit---intermittent reinforcement that keeps them hooked.</li>
           <li><strong>Avoidant partner:</strong> The anxious partner's pursuit confirms their belief that people are demanding and relationships are suffocating. Their withdrawal confirms the anxious partner's belief that love requires constant effort.</li>
         </ul>
         <p className="mb-6">
-          Both are re-enacting their earliest attachment wounds—getting exactly what they fear most, which paradoxically feels familiar and therefore "right."
+          Both are re-enacting their earliest attachment wounds---getting exactly what they fear most, which paradoxically feels familiar and therefore "right."
         </p>
 
         <h2 id="who-suffers-more" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1028,14 +1028,14 @@ export const attachmentStylesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>Avoidant individuals often don't realize they're suffering because their coping strategy involves suppressing awareness of emotional pain. But physiological measures (heart rate, cortisol) show they're just as stressed as anxious partners—they just hide it better.</p>
+          <p>Avoidant individuals often don't realize they're suffering because their coping strategy involves suppressing awareness of emotional pain. But physiological measures (heart rate, cortisol) show they're just as stressed as anxious partners---they just hide it better.</p>
         </ArticleCallout>
 
         <h2 id="can-it-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Can Anxious-Avoidant Relationships Work?
         </h2>
         <p className="mb-6">
-          Yes—but only with intentional effort from both partners <Citation id="8" index={8} source="Psychotherapy Research" year="2021" tier={1} />. Research on couples therapy outcomes shows that anxious-avoidant pairs can shift toward greater security, but it requires:
+          Yes---but only with intentional effort from both partners <Citation id="8" index={8} source="Psychotherapy Research" year="2021" tier={1} />. Research on couples therapy outcomes shows that anxious-avoidant pairs can shift toward greater security, but it requires:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Mutual awareness of the pattern:</strong> Both people must recognize the pursue-withdraw cycle and their role in it</li>
@@ -1059,7 +1059,7 @@ export const attachmentStylesArticlesB: Article[] = [
           <li><strong>Self-soothe:</strong> Develop tools to calm your nervous system without external validation (breathwork, journaling, movement)</li>
           <li><strong>Challenge catastrophic thinking:</strong> "They didn't respond' doesn't mean "They don't love me"</li>
           <li><strong>Communicate needs clearly, not desperately:</strong> "I'd like to schedule a weekly date night' is more effective than "You never spend time with me"</li>
-          <li><strong>Respect their need for space:</strong> Giving space doesn't mean you're losing them—it often brings them closer</li>
+          <li><strong>Respect their need for space:</strong> Giving space doesn't mean you're losing them---it often brings them closer</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1068,7 +1068,7 @@ export const attachmentStylesArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Stay present instead of withdrawing:</strong> Notice the urge to shut down or leave. Can you stay in the conversation for 5 more minutes?</li>
           <li><strong>Name your need for space explicitly:</strong> "I need an hour to myself, then I'd like to talk' is kinder than disappearing</li>
-          <li><strong>Practice small acts of vulnerability:</strong> Share one feeling, one fear, one need—start small</li>
+          <li><strong>Practice small acts of vulnerability:</strong> Share one feeling, one fear, one need---start small</li>
           <li><strong>Recognize that your partner's needs aren't attacks:</strong> Requests for closeness aren't attempts to control you</li>
           <li><strong>Initiate closeness occasionally:</strong> Don't always wait for your partner to pursue. Reach out first sometimes</li>
         </ul>
@@ -1132,7 +1132,7 @@ export const attachmentStylesArticlesB: Article[] = [
           <li>Can tolerate both closeness and independence without panic</li>
         </ul>
         <p className="mb-6">
-          Secure partners may feel "boring" at first—especially to anxious individuals used to the adrenaline of the chase, or avoidant individuals used to keeping people at a distance. But with time, that stability can become the foundation for earned security.
+          Secure partners may feel "boring" at first---especially to anxious individuals used to the adrenaline of the chase, or avoidant individuals used to keeping people at a distance. But with time, that stability can become the foundation for earned security.
         </p>
       </>
     ),
@@ -1145,7 +1145,7 @@ export const attachmentStylesArticlesB: Article[] = [
     id: catId(9),
     slug: 'earned-secure-attachment-how-healing-happens-through-new-relationships',
     title: 'Earned Secure Attachment: How Healing Happens Through New Relationships',
-    description: 'Learn how new relational experiences—romantic, therapeutic, or platonic—can help you move from insecure to earned secure attachment.',
+    description: 'Learn how new relational experiences---romantic, therapeutic, or platonic---can help you move from insecure to earned secure attachment.',
     image: "/images/articles/cat03/cover-009.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 8,
@@ -1223,10 +1223,10 @@ export const attachmentStylesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your childhood was difficult. Your early relationships taught you that people are unreliable, that closeness is dangerous, or that love is conditional. But now—through therapy, through a secure partner, through years of self-work—you've found a way to trust, to be vulnerable, to believe that you're worthy of consistent care.
+            Your childhood was difficult. Your early relationships taught you that people are unreliable, that closeness is dangerous, or that love is conditional. But now---through therapy, through a secure partner, through years of self-work---you've found a way to trust, to be vulnerable, to believe that you're worthy of consistent care.
           </p>
           <p className="mb-6">
-            This is earned secure attachment—one of the most hopeful concepts in attachment research. It means that insecure patterns formed in childhood are not permanent <Citation id="1" index={1} source="Development and Psychopathology" year="2018" tier={1} />. Through new relational experiences, you can build internal working models that weren't available to you as a child.
+            This is earned secure attachment---one of the most hopeful concepts in attachment research. It means that insecure patterns formed in childhood are not permanent <Citation id="1" index={1} source="Development and Psychopathology" year="2018" tier={1} />. Through new relational experiences, you can build internal working models that weren't available to you as a child.
           </p>
         </div>
 
@@ -1255,7 +1255,7 @@ export const attachmentStylesArticlesB: Article[] = [
           How Earned Security Develops
         </h2>
         <p className="mb-6">
-          Earned security develops through corrective relational experiences—relationships that provide what early caregivers could not <Citation id="2" index={2} source="Psychotherapy" year="2019" tier={1} />.
+          Earned security develops through corrective relational experiences---relationships that provide what early caregivers could not <Citation id="2" index={2} source="Psychotherapy" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1327,14 +1327,14 @@ export const attachmentStylesArticlesB: Article[] = [
           Reflective Functioning (Mentalizing)
         </h3>
         <p className="mb-6">
-          Earned-secure individuals tend to have strong reflective functioning—the ability to understand their own and others" mental states <Citation id="7" index={7} source="Journal of Personality" year="2020" tier={1} />. They can step back and observe their thoughts and feelings without being consumed by them.
+          Earned-secure individuals tend to have strong reflective functioning---the ability to understand their own and others" mental states <Citation id="7" index={7} source="Journal of Personality" year="2020" tier={1} />. They can step back and observe their thoughts and feelings without being consumed by them.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           Narrative Coherence
         </h3>
         <p className="mb-6">
-          When discussing their past, earned-secure individuals tell coherent stories—not denying the pain, not overly dramatic, but integrated. They can say: "My childhood was hard. My parents struggled. I've worked through it. It shaped me, but it doesn't control me."
+          When discussing their past, earned-secure individuals tell coherent stories---not denying the pain, not overly dramatic, but integrated. They can say: "My childhood was hard. My parents struggled. I've worked through it. It shaped me, but it doesn't control me."
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1366,7 +1366,7 @@ export const attachmentStylesArticlesB: Article[] = [
               title: 'Willingness to Feel Discomfort',
               description: (
                 <p>
-                  Healing means doing the opposite of your automatic reactions—anxious individuals must tolerate space, avoidant individuals must practice vulnerability. This feels deeply unsafe at first.
+                  Healing means doing the opposite of your automatic reactions---anxious individuals must tolerate space, avoidant individuals must practice vulnerability. This feels deeply unsafe at first.
                 </p>
               ),
             },
@@ -1374,7 +1374,7 @@ export const attachmentStylesArticlesB: Article[] = [
               title: 'Relational Experiences That Challenge Old Models',
               description: (
                 <p>
-                  You need repeated experiences of: "I was vulnerable and wasn't rejected" or "I gave them space and they didn't abandon me." One good experience isn't enough—new neural pathways require repetition <Citation id="8" index={8} source="Clinical Psychology Review" year="2018" tier={1} />.
+                  You need repeated experiences of: "I was vulnerable and wasn't rejected" or "I gave them space and they didn't abandon me." One good experience isn't enough---new neural pathways require repetition <Citation id="8" index={8} source="Clinical Psychology Review" year="2018" tier={1} />.
                 </p>
               ),
             },
@@ -1415,7 +1415,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>Regression isn't failure—it's information. It tells you that your nervous system is under stress and needs support. The goal isn't to never have insecure moments; it's to move through them with awareness and self-compassion.</p>
+          <p>Regression isn't failure---it's information. It tells you that your nervous system is under stress and needs support. The goal isn't to never have insecure moments; it's to move through them with awareness and self-compassion.</p>
         </ArticleCallout>
 
         <h2 id="role-of-therapy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1432,7 +1432,7 @@ export const attachmentStylesArticlesB: Article[] = [
           <li><strong>Psychodynamic therapy:</strong> Explores how early attachment wounds show up in current relationships, including with the therapist</li>
           <li><strong>Internal Family Systems (IFS):</strong> Works with protective parts formed during childhood trauma</li>
           <li><strong>EMDR:</strong> Processes traumatic attachment memories to reduce their emotional charge</li>
-          <li><strong>Mentalization-Based Therapy:</strong> Builds reflective functioning—the capacity to understand your own and others" mental states</li>
+          <li><strong>Mentalization-Based Therapy:</strong> Builds reflective functioning---the capacity to understand your own and others" mental states</li>
         </ul>
 
         <h2 id="breaking-cycles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1478,7 +1478,7 @@ export const attachmentStylesArticlesB: Article[] = [
           The Message of Hope
         </h2>
         <p className="mb-6">
-          Earned security is one of the most hopeful findings in attachment research. It means that early adversity, while impactful, is not deterministic. The brain remains plastic. New relationships can rewire old patterns. You are not forever limited by the caregiving you received—or didn't receive—as a child.
+          Earned security is one of the most hopeful findings in attachment research. It means that early adversity, while impactful, is not deterministic. The brain remains plastic. New relationships can rewire old patterns. You are not forever limited by the caregiving you received---or didn't receive---as a child.
         </p>
         <p className="mb-6">
           The journey requires courage, self-compassion, and the willingness to trust again despite having been hurt. But on the other side is the capacity to love and be loved in ways that once felt impossible.
@@ -1497,7 +1497,7 @@ export const attachmentStylesArticlesB: Article[] = [
     id: catId(10),
     slug: 'attachment-theory-for-parents-how-your-style-affects-children',
     title: 'Attachment Theory for Parents: How Your Style Affects Your Children',
-    description: 'Understand how your own attachment patterns influence your parenting—and how to build secure attachment with your children regardless of your history.',
+    description: 'Understand how your own attachment patterns influence your parenting---and how to build secure attachment with your children regardless of your history.',
     image: "/images/articles/cat03/cover-010.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 9,
@@ -1586,7 +1586,7 @@ export const attachmentStylesArticlesB: Article[] = [
           How Attachment Is Transmitted Across Generations
         </h2>
         <p className="mb-6">
-          Attachment isn't genetically inherited—it's transmitted through caregiving behaviors. The way you respond to your child's needs shapes their internal working model of relationships <Citation id="4" index={4} source="Developmental Psychology" year="2017" tier={1} />.
+          Attachment isn't genetically inherited---it's transmitted through caregiving behaviors. The way you respond to your child's needs shapes their internal working model of relationships <Citation id="4" index={4} source="Developmental Psychology" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
           Key parenting behaviors that build secure attachment:
@@ -1599,7 +1599,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="info">
-          <p>You don't need to be perfect. Research shows that parents who are attuned about 50% of the time raise securely attached children. It's the pattern over time—not every interaction—that matters.</p>
+          <p>You don't need to be perfect. Research shows that parents who are attuned about 50% of the time raise securely attached children. It's the pattern over time---not every interaction---that matters.</p>
         </ArticleCallout>
 
         <h2 id="secure-parenting" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1658,7 +1658,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Avoidantly Attached Parents
         </h2>
         <p className="mb-6">
-          Avoidantly attached parents often feel uncomfortable with emotional needs—both their own and their child's <Citation id="6" index={6} source="Journal of Family Psychology" year="2019" tier={1} />.
+          Avoidantly attached parents often feel uncomfortable with emotional needs---both their own and their child's <Citation id="6" index={6} source="Journal of Family Psychology" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1714,14 +1714,14 @@ export const attachmentStylesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="warning">
-          <p>If you have unresolved trauma or recognize disorganized patterns in yourself, working with a trauma-informed therapist is crucial—both for your wellbeing and your child's.</p>
+          <p>If you have unresolved trauma or recognize disorganized patterns in yourself, working with a trauma-informed therapist is crucial---both for your wellbeing and your child's.</p>
         </ArticleCallout>
 
         <h2 id="reflective-functioning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Power of Reflective Functioning
         </h2>
         <p className="mb-6">
-          One of the strongest predictors of secure attachment in children is parental reflective functioning (also called mentalizing)—the capacity to understand your child's behavior in terms of their internal mental states <Citation id="2" index={2} source="Attachment & Human Development" year="2019" tier={1} />.
+          One of the strongest predictors of secure attachment in children is parental reflective functioning (also called mentalizing)---the capacity to understand your child's behavior in terms of their internal mental states <Citation id="2" index={2} source="Attachment & Human Development" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Reflective parents think:
@@ -1785,7 +1785,7 @@ export const attachmentStylesArticlesB: Article[] = [
                     <li>Validate emotions even when they feel foreign: "You're really upset. That makes sense."</li>
                     <li>Initiate physical affection even when it feels awkward (hugs, cuddles)</li>
                     <li>Ask about feelings, not just facts ("How did that make you feel?" not just "What happened?")</li>
-                    <li>Remind yourself: "Their emotions aren't a burden—they're information"</li>
+                    <li>Remind yourself: "Their emotions aren't a burden---they're information"</li>
                   </ul>
                 </div>
               ),
@@ -1800,7 +1800,7 @@ export const attachmentStylesArticlesB: Article[] = [
                     <li>Work with a trauma-informed therapist to process your own history</li>
                     <li>Build awareness of when you're dysregulated (before it escalates to frightening behavior)</li>
                     <li>Have a plan for when you're overwhelmed (safe person to call, cooling-off strategies)</li>
-                    <li>Practice self-compassion—you're breaking a cycle, and that's hard work</li>
+                    <li>Practice self-compassion---you're breaking a cycle, and that's hard work</li>
                     <li>Consider attachment-based parenting programs designed for trauma survivors <Citation id="8" index={8} source="Clinical Psychology Review" year="2020" tier={1} /></li>
                   </ul>
                 </div>
@@ -1871,7 +1871,7 @@ export const attachmentStylesArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Secure attachment isn't built through perfect parenting—it's built through good-enough parenting with consistent repair. Show up, attune most of the time, and apologize when you miss the mark.</p>
+          <p>Secure attachment isn't built through perfect parenting---it's built through good-enough parenting with consistent repair. Show up, attune most of the time, and apologize when you miss the mark.</p>
         </ArticleCallout>
 
         <h2 id="seeking-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1898,7 +1898,7 @@ export const attachmentStylesArticlesB: Article[] = [
           Your attachment history doesn't have to become your child's. With awareness, intentional effort, and self-compassion, you can provide the security you may not have received.
         </p>
         <p className="mb-6">
-          Parenting is the ultimate opportunity for earned security—for you and for your child. Every moment you pause before reacting, every time you repair after a mistake, every instance you stay present with discomfort, you're breaking the cycle.
+          Parenting is the ultimate opportunity for earned security---for you and for your child. Every moment you pause before reacting, every time you repair after a mistake, every instance you stay present with discomfort, you're breaking the cycle.
         </p>
         <p className="mb-6">
           Your children don't need perfection. They need a parent who's trying, who's reflective, and who's willing to grow alongside them.

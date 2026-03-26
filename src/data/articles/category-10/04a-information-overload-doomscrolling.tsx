@@ -100,7 +100,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
             It's late at night. You open your phone "just to check" the news before bed. An hour later, you're still scrolling through disaster reports, political crises, and pandemic updates. Your heart is racing, your mind is churning with worry, but you can't seem to stop. You're doomscrolling.
           </p>
           <p className="mb-6">
-            Doomscrolling — the compulsive consumption of negative news online — became widespread during the COVID-19 pandemic, but the behavior has persisted and evolved <Citation id="1" index={1} source="Computers in Human Behavior" year="2022" tier={1} />. Research shows this pattern of media consumption significantly impacts mental health, increasing anxiety, depression, and feelings of helplessness <Citation id="2" index={2} source="Health Communication" year="2023" tier={1} />.
+            Doomscrolling --- the compulsive consumption of negative news online --- became widespread during the COVID-19 pandemic, but the behavior has persisted and evolved <Citation id="1" index={1} source="Computers in Human Behavior" year="2022" tier={1} />. Research shows this pattern of media consumption significantly impacts mental health, increasing anxiety, depression, and feelings of helplessness <Citation id="2" index={2} source="Health Communication" year="2023" tier={1} />.
           </p>
         </div>
 
@@ -123,11 +123,11 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           <strong>Key characteristics:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Compulsive</strong> — You keep scrolling even when you want to stop</li>
-          <li><strong>Negative focus</strong> — Gravitating toward distressing, alarming, or upsetting content</li>
-          <li><strong>Time distortion</strong> — Minutes turn into hours without realizing it</li>
-          <li><strong>Emotional impact</strong> — Leaves you feeling worse, not better informed</li>
-          <li><strong>Difficult to resist</strong> — Feels like a compulsion rather than a choice</li>
+          <li><strong>Compulsive</strong> --- You keep scrolling even when you want to stop</li>
+          <li><strong>Negative focus</strong> --- Gravitating toward distressing, alarming, or upsetting content</li>
+          <li><strong>Time distortion</strong> --- Minutes turn into hours without realizing it</li>
+          <li><strong>Emotional impact</strong> --- Leaves you feeling worse, not better informed</li>
+          <li><strong>Difficult to resist</strong> --- Feels like a compulsion rather than a choice</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
@@ -160,7 +160,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>During times of crisis or uncertainty, we desperately want answers and information <Citation id="4" index={4} source="Anxiety, Stress, & Coping" year="2023" tier={1} />. Doomscrolling feels like we're "staying informed" and gaining control.</p>
-                  <p>In reality, consuming more and more bad news doesn't reduce uncertainty — it increases anxiety. But the compulsion to keep searching for that piece of information that will make things clear keeps us scrolling.</p>
+                  <p>In reality, consuming more and more bad news doesn't reduce uncertainty --- it increases anxiety. But the compulsion to keep searching for that piece of information that will make things clear keeps us scrolling.</p>
                 </div>
               ),
             },
@@ -169,7 +169,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               title: 'Intermittent Reinforcement',
               content: (
                 <div className="space-y-3">
-                  <p>Social media and news feeds are designed with infinite scroll and algorithmic content delivery. Every scroll <em>might</em> reveal something important or engaging — and occasionally it does.</p>
+                  <p>Social media and news feeds are designed with infinite scroll and algorithmic content delivery. Every scroll <em>might</em> reveal something important or engaging --- and occasionally it does.</p>
                   <p>This unpredictable reward schedule (you never know when the next "interesting" post will appear) is the same psychological principle that makes slot machines addictive. It keeps us scrolling "just one more swipe."</p>
                 </div>
               ),
@@ -190,7 +190,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Paradoxically, some people doomscroll to <em>avoid</em> their own emotions or problems. Focusing on global crises or other people's suffering can feel less threatening than confronting personal issues.</p>
-                  <p>The scrolling creates a kind of dissociative state — you're distracted, numbed, and not fully present. This temporary escape reinforces the behavior.</p>
+                  <p>The scrolling creates a kind of dissociative state --- you're distracted, numbed, and not fully present. This temporary escape reinforces the behavior.</p>
                 </div>
               ),
             },
@@ -420,7 +420,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
             You have 47 unread emails, 12 browser tabs open, three Slack conversations happening simultaneously, a podcast playing in the background, and your phone is buzzing with notifications. You feel like you're drowning in information, unable to think clearly or make decisions. Your brain is overloaded.
           </p>
           <p className="mb-6">
-            Information overload isn't just a modern annoyance — it's a documented cognitive phenomenon with measurable impacts on brain function, decision-making, and mental health <Citation id="1" index={1} source="Cognitive Psychology" year="2023" tier={1} />. In an era where the average person encounters more information in a day than someone in the 15th century encountered in a lifetime, understanding how overload affects us is critical <Citation id="2" index={2} source="Organizational Behavior and Human Decision Processes" year="2022" tier={1} />.
+            Information overload isn't just a modern annoyance --- it's a documented cognitive phenomenon with measurable impacts on brain function, decision-making, and mental health <Citation id="1" index={1} source="Cognitive Psychology" year="2023" tier={1} />. In an era where the average person encounters more information in a day than someone in the 15th century encountered in a lifetime, understanding how overload affects us is critical <Citation id="2" index={2} source="Organizational Behavior and Human Decision Processes" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -437,7 +437,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           What Is Information Overload?
         </h2>
         <p className="mb-6">
-          Information overload occurs when the volume of input exceeds your cognitive capacity to process it effectively. Your working memory — the mental workspace that holds and manipulates information — has a limited capacity <Citation id="7" index={7} source="Annual Review of Psychology" year="2023" tier={1} />.
+          Information overload occurs when the volume of input exceeds your cognitive capacity to process it effectively. Your working memory --- the mental workspace that holds and manipulates information --- has a limited capacity <Citation id="7" index={7} source="Annual Review of Psychology" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           Think of it like RAM on a computer: when too many programs are running simultaneously, the system slows down, freezes, or crashes. Your brain does the same thing.
@@ -458,7 +458,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Notice the inverted U-shape: performance increases with information up to a point, then sharply declines. Most modern knowledge workers are operating on the right side of that curve — in the overload zone.
+          Notice the inverted U-shape: performance increases with information up to a point, then sharply declines. Most modern knowledge workers are operating on the right side of that curve --- in the overload zone.
         </p>
 
         <h2 id="how-overload-affects" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -482,7 +482,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
                     <li>Make impulsive, low-quality decisions just to escape the overwhelm</li>
                     <li>Experience intense regret and second-guessing after deciding</li>
                   </ul>
-                  <p>This is why grocery stores with 24 jam varieties sell fewer jars than stores with 6 varieties — too much choice overwhelms the decision-making system.</p>
+                  <p>This is why grocery stores with 24 jam varieties sell fewer jars than stores with 6 varieties --- too much choice overwhelms the decision-making system.</p>
                 </div>
               ),
             },
@@ -492,7 +492,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Constant switching between information sources (emails, messages, documents, apps) creates "attention residue." Each time you switch tasks, part of your attention remains stuck on the previous task.</p>
-                  <p>Research shows it takes an average of 23 minutes to fully refocus after a distraction. In an environment with frequent interruptions, you never achieve deep focus — you're perpetually operating at partial capacity.</p>
+                  <p>Research shows it takes an average of 23 minutes to fully refocus after a distraction. In an environment with frequent interruptions, you never achieve deep focus --- you're perpetually operating at partial capacity.</p>
                 </div>
               ),
             },
@@ -521,7 +521,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               title: 'Reduced Creativity and Insight',
               content: (
                 <div className="space-y-3">
-                  <p>Creative thinking and insight require mental space — periods when your brain isn't actively processing information. Overload eliminates this space.</p>
+                  <p>Creative thinking and insight require mental space --- periods when your brain isn't actively processing information. Overload eliminates this space.</p>
                   <p>The "aha!" moments, novel connections, and creative problem-solving all happen during downtime. When you're constantly consuming input, you never access these cognitive states.</p>
                 </div>
               ),
@@ -544,7 +544,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Email:</strong> Average worker receives 121 emails per day</li>
-                  <li><strong>Messaging apps:</strong> Slack, Teams, WhatsApp, Discord — multiple platforms with constant notifications</li>
+                  <li><strong>Messaging apps:</strong> Slack, Teams, WhatsApp, Discord --- multiple platforms with constant notifications</li>
                   <li><strong>Social media:</strong> Infinite streams of updates, stories, posts</li>
                   <li><strong>Text messages:</strong> Personal and professional boundaries blurred</li>
                 </ul>
@@ -590,7 +590,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>The problem isn't just the volume of information — it's the expectation of <em>immediacy</em>. We're expected to process and respond to all these inputs in real-time, which is cognitively impossible.</p>
+          <p>The problem isn't just the volume of information --- it's the expectation of <em>immediacy</em>. We're expected to process and respond to all these inputs in real-time, which is cognitively impossible.</p>
         </ArticleCallout>
 
         <h2 id="strategies-to-reduce" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -609,7 +609,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
                 <div className="space-y-2">
                   <p>Categorize incoming information into three buckets:</p>
                   <ul className="list-disc pl-5 space-y-1 mt-2">
-                    <li><strong>Critical:</strong> Requires immediate attention (true emergencies only — less than 5% of inputs)</li>
+                    <li><strong>Critical:</strong> Requires immediate attention (true emergencies only --- less than 5% of inputs)</li>
                     <li><strong>Important:</strong> Needs response within 24-48 hours</li>
                     <li><strong>Low priority:</strong> Can be batched, delegated, or ignored</li>
                   </ul>
@@ -651,7 +651,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               description: (
                 <div className="space-y-2">
                   <p>Research shows that time in nature or engaging in activities that don't require directed attention (walking, crafting, listening to music) restores cognitive capacity <Citation id="5" index={5} source="Journal of Environmental Psychology" year="2023" tier={1} />.</p>
-                  <p>Schedule daily time for attention restoration — it's not a luxury, it's cognitive maintenance.</p>
+                  <p>Schedule daily time for attention restoration --- it's not a luxury, it's cognitive maintenance.</p>
                 </div>
               ),
             },
@@ -759,7 +759,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your phone buzzes with a breaking news alert. Within seconds, your heart rate increases, your muscles tense, and a wave of anxiety washes over you — before you've even read what happened. This is news anxiety, and it's affecting millions of people in the age of the 24/7 news cycle.
+            Your phone buzzes with a breaking news alert. Within seconds, your heart rate increases, your muscles tense, and a wave of anxiety washes over you --- before you've even read what happened. This is news anxiety, and it's affecting millions of people in the age of the 24/7 news cycle.
           </p>
           <p className="mb-6">
             Unlike previous generations who encountered news once or twice a day through newspapers or evening broadcasts, modern adults are exposed to a relentless stream of alarming headlines, crisis updates, and disaster coverage <Citation id="1" index={1} source="Health Communication" year="2023" tier={1} />. Research shows this constant exposure to negative news significantly increases anxiety, depression, and perceived threat levels <Citation id="2" index={2} source="Media Psychology" year="2022" tier={1} />.
@@ -779,7 +779,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           Why News Makes Us Anxious: The Psychology
         </h2>
         <p className="mb-6">
-          News-induced anxiety isn't a sign of weakness — it's a predictable response to how news is designed and delivered <Citation id="3" index={3} source="Journal of Health Psychology" year="2023" tier={1} />:
+          News-induced anxiety isn't a sign of weakness --- it's a predictable response to how news is designed and delivered <Citation id="3" index={3} source="Journal of Health Psychology" year="2023" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -791,7 +791,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>News outlets prioritize negative, threatening, or dramatic stories because they attract more attention and engagement. Studies show that negative headlines get 63% more clicks than positive ones.</p>
-                  <p>This creates a distorted view of reality. While crime rates in many countries have been falling for decades, most people believe crime is increasing — because that's what dominates news coverage.</p>
+                  <p>This creates a distorted view of reality. While crime rates in many countries have been falling for decades, most people believe crime is increasing --- because that's what dominates news coverage.</p>
                   <p>Your brain's negativity bias (evolved to help you survive threats) means negative information sticks more strongly than positive information, amplifying the anxiety effect.</p>
                 </div>
               ),
@@ -802,7 +802,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>The more easily we can recall examples of something, the more common we think it is. Constant news coverage of plane crashes, terrorist attacks, or rare diseases makes these events feel far more likely than they statistically are.</p>
-                  <p>This is why many people fear flying (extremely safe) more than driving (much more dangerous) — plane crashes get extensive news coverage, while car accidents rarely make headlines.</p>
+                  <p>This is why many people fear flying (extremely safe) more than driving (much more dangerous) --- plane crashes get extensive news coverage, while car accidents rarely make headlines.</p>
                   <p>The result: heightened perception of threat and chronic anxiety about low-probability events.</p>
                 </div>
               ),
@@ -822,7 +822,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               title: 'Mean World Syndrome: Distorted Perception of Safety',
               content: (
                 <div className="space-y-3">
-                  <p>Heavy news consumers develop "mean world syndrome" — the belief that the world is more dangerous, hostile, and scary than it actually is <Citation id="6" index={6} source="Mass Communication and Society" year="2022" tier={1} />.</p>
+                  <p>Heavy news consumers develop "mean world syndrome" --- the belief that the world is more dangerous, hostile, and scary than it actually is <Citation id="6" index={6} source="Mass Communication and Society" year="2022" tier={1} />.</p>
                   <p>This happens because news overrepresents violence, conflict, and disaster while underrepresenting the ordinary, peaceful moments that make up most of daily life globally.</p>
                   <p>People with mean world syndrome experience higher anxiety, lower trust in others, and increased support for authoritarian policies driven by fear.</p>
                 </div>
@@ -1152,7 +1152,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Extreme weather events, wildfires, and floods generate viral content. Dramatic videos and images spread rapidly, creating the impression that disaster is constant and everywhere.</p>
-                  <p>Additionally, "doomerism" — performative expressions of climate despair — can become a social identity online. Hopelessness becomes a badge of awareness, while optimism is dismissed as naiveté.</p>
+                  <p>Additionally, "doomerism" --- performative expressions of climate despair --- can become a social identity online. Hopelessness becomes a badge of awareness, while optimism is dismissed as naiveté.</p>
                 </div>
               ),
             },
@@ -1183,7 +1183,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           Climate Grief: Mourning What's Being Lost
         </h2>
         <p className="mb-6">
-          Alongside anxiety, many people experience climate grief — mourning ecosystems, species, landscapes, and ways of life that are disappearing <Citation id="5" index={5} source="Journal of Loss and Trauma" year="2022" tier={1} />:
+          Alongside anxiety, many people experience climate grief --- mourning ecosystems, species, landscapes, and ways of life that are disappearing <Citation id="5" index={5} source="Journal of Loss and Trauma" year="2022" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Solastalgia:</strong> Grief for the transformation of your home environment (coral reefs dying, forests burning, glaciers melting)</li>
@@ -1193,14 +1193,14 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Climate grief is not pathological — it's a healthy emotional response to real loss. Allowing yourself to grieve, rather than suppressing it, is an important part of processing climate emotions.</p>
+          <p>Climate grief is not pathological --- it's a healthy emotional response to real loss. Allowing yourself to grieve, rather than suppressing it, is an important part of processing climate emotions.</p>
         </ArticleCallout>
 
         <h2 id="from-anxiety-to-action" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           From Anxiety to Action: Channeling Climate Emotions Productively
         </h2>
         <p className="mb-6">
-          Research shows that the best antidote to climate anxiety is meaningful action — individual and collective <Citation id="4" index={4} source="Global Environmental Change" year="2023" tier={1} />:
+          Research shows that the best antidote to climate anxiety is meaningful action --- individual and collective <Citation id="4" index={4} source="Global Environmental Change" year="2023" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -1257,7 +1257,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
             {
               title: 'Find Grounding in Nature',
               description: (
-                <p>Spending time in nature — even local parks — reduces climate anxiety and reconnects you to what you're fighting to protect. It's a reminder that ecosystems are resilient and worth defending.</p>
+                <p>Spending time in nature --- even local parks --- reduces climate anxiety and reconnects you to what you're fighting to protect. It's a reminder that ecosystems are resilient and worth defending.</p>
               ),
             },
           ]}
@@ -1382,7 +1382,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
             Your aunt shares a Facebook post about a miracle cure for cancer that "doctors don't want you to know about." Your former college friend tweets a conspiracy theory about global elites. A viral video claims vaccines cause autism. You're left confused, anxious, and unsure what's real anymore. This is the mental health toll of the misinformation age.
           </p>
           <p className="mb-6">
-            Misinformation (false or inaccurate information spread unintentionally) and disinformation (deliberately false information spread to deceive) have exploded in the digital era. Research shows exposure to false information doesn't just confuse us — it creates measurable psychological harm, including increased anxiety, eroded trust, polarization, and difficulty making health decisions <Citation id="1" index={1} source="Psychological Bulletin" year="2023" tier={1} />. Understanding why we're vulnerable to misinformation and how to protect ourselves is now a mental health essential <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2022" tier={1} />.
+            Misinformation (false or inaccurate information spread unintentionally) and disinformation (deliberately false information spread to deceive) have exploded in the digital era. Research shows exposure to false information doesn't just confuse us --- it creates measurable psychological harm, including increased anxiety, eroded trust, polarization, and difficulty making health decisions <Citation id="1" index={1} source="Psychological Bulletin" year="2023" tier={1} />. Understanding why we're vulnerable to misinformation and how to protect ourselves is now a mental health essential <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -1410,7 +1410,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
               title: `Epistemic Uncertainty: Not Knowing What's Real`,
               content: (
                 <div className="space-y-3">
-                  <p>Humans need a coherent understanding of reality to function. Misinformation creates "epistemic uncertainty" — you no longer know what's true, who to trust, or how to make sense of the world.</p>
+                  <p>Humans need a coherent understanding of reality to function. Misinformation creates "epistemic uncertainty" --- you no longer know what's true, who to trust, or how to make sense of the world.</p>
                   <p>This uncertainty is deeply anxiety-provoking. When you can't trust basic facts, your sense of safety and control erodes. Research shows prolonged uncertainty is more distressing than negative certainty.</p>
                 </div>
               ),
@@ -1508,7 +1508,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>Research shows that false news spreads 6 times faster than true news on social media. This is because misinformation is often more novel, emotionally charged, and surprising than accurate information — all qualities that drive sharing.</p>
+          <p>Research shows that false news spreads 6 times faster than true news on social media. This is because misinformation is often more novel, emotionally charged, and surprising than accurate information --- all qualities that drive sharing.</p>
         </ArticleCallout>
 
         <h2 id="types-misinformation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1555,7 +1555,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
             {
               title: 'Lateral Reading: Leave the Page',
               description: (
-                <p>Don't just read the article — open new tabs and search for the claim, the source, and the author. See what credible sources say about them. This 'lateral reading' is how professional fact-checkers work.</p>
+                <p>Don't just read the article --- open new tabs and search for the claim, the source, and the author. See what credible sources say about them. This 'lateral reading' is how professional fact-checkers work.</p>
               ),
             },
             {

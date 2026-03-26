@@ -71,7 +71,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             For decades, people living with fibromyalgia were told that their pain was imaginary, that blood tests
             looked normal, and that nothing was truly wrong. Many left medical appointments feeling dismissed,
-            doubted, and deeply alone. Today, neuroscience tells a very different story — one that validates the
+            doubted, and deeply alone. Today, neuroscience tells a very different story --- one that validates the
             suffering of millions and points toward real, evidence-based paths to relief.
           </p>
           <p className="mb-6">
@@ -81,12 +81,22 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             <Citation id="1" index={1} source="Rheumatology International" year="2023" tier={1} />. What makes
             fibromyalgia especially challenging is not just the pain itself, but the invisible nature of the condition.
             There is no swelling to point to, no fracture on an X-ray, no single lab value that confirms the
-            diagnosis. This invisibility has fueled decades of medical skepticism — and profound psychological harm.
+            diagnosis. This invisibility has fueled decades of medical skepticism --- and profound psychological harm.
+          </p>
+          <p className="mb-6">
+            The gender disparity in fibromyalgia diagnoses --- women are diagnosed at roughly twice the rate of men ---
+            has contributed to a longstanding tendency to dismiss the condition as emotional or hysterical. Yet
+            emerging research suggests that biological differences in pain processing, hormonal modulation of the
+            nervous system, and diagnostic bias all play roles in this disparity. Men with fibromyalgia are
+            frequently underdiagnosed, in part because clinical criteria were developed primarily on female
+            populations and in part because cultural expectations around pain expression differ by gender. The
+            result is a condition that has been doubly marginalized: dismissed when it appears in women and
+            overlooked when it appears in men.
           </p>
           <p className="mb-6">
             Understanding fibromyalgia requires looking beyond traditional models of pain. The condition is rooted
             in how the nervous system processes sensory information, and its relationship with mental health is not
-            incidental — it is fundamental to the biology of the disease.
+            incidental --- it is fundamental to the biology of the disease.
           </p>
         </div>
 
@@ -95,7 +105,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           The term "fibromyalgia" was coined in 1976, but the condition it describes has appeared in medical
-          literature for centuries under different names — fibrositis, muscular rheumatism, psychogenic pain. For
+          literature for centuries under different names --- fibrositis, muscular rheumatism, psychogenic pain. For
           much of the 20th century, the absence of identifiable tissue damage led many physicians to classify it
           as a psychological condition rather than a physical one. Some clinicians openly questioned whether
           fibromyalgia was real at all.
@@ -106,8 +116,18 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           <Citation id="4" index={4} source="BMC Musculoskeletal Disorders" year="2021" tier={1} />. During that
           time, many encountered dismissal, accusations of malingering, or suggestions that their symptoms were
           entirely stress-related. Qualitative studies of the lived experience describe recurring themes of
-          invalidation, shame, and grief — people mourning not only their health but their credibility
+          invalidation, shame, and grief --- people mourning not only their health but their credibility
           <Citation id="10" index={10} source="Disability and Rehabilitation" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The consequences of this diagnostic journey extend well beyond frustration. Repeated invalidation from
+          medical professionals can produce a form of medical trauma, leaving patients reluctant to seek care even
+          when new symptoms arise. Some individuals internalize the skepticism they encounter, questioning their
+          own perceptions and developing a deep distrust of their bodily signals. Others cycle through specialist
+          after specialist, accumulating medical bills and losing faith in the healthcare system entirely. The
+          emotional residue of being disbelieved does not vanish once a diagnosis is finally given --- it shapes how
+          patients engage with treatment, how openly they communicate with providers, and how much hope they allow
+          themselves to hold.
         </p>
 
         <QuoteBlock
@@ -121,14 +141,14 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         <p className="mb-6">
           Modern research has transformed our understanding of fibromyalgia from a vague "functional" disorder
           to a condition with identifiable neurobiological mechanisms. The central concept is
-          <strong> central sensitization</strong> — a state in which the central nervous system amplifies incoming
+          <strong> central sensitization</strong> --- a state in which the central nervous system amplifies incoming
           pain signals, effectively turning up the volume on sensory input
           <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           In central sensitization, neurons in the spinal cord and brain become hyperexcitable. Stimuli that would
-          normally be perceived as mildly uncomfortable — a firm handshake, the pressure of a waistband, a change
-          in temperature — can register as genuinely painful. This is not the same as "imagining" pain. The pain
+          normally be perceived as mildly uncomfortable --- a firm handshake, the pressure of a waistband, a change
+          in temperature --- can register as genuinely painful. This is not the same as "imagining" pain. The pain
           signals are real; they are being generated and amplified by the nervous system itself rather than by
           damage in peripheral tissues.
         </p>
@@ -138,6 +158,17 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           the thalamus, prefrontal cortex, and anterior cingulate cortex
           <Citation id="7" index={7} source="Brain, Behavior, and Immunity" year="2022" tier={1} />. These findings
           provide visible, measurable evidence that fibromyalgia involves genuine changes in brain function.
+        </p>
+        <p className="mb-6">
+          Beyond neuroinflammation, research has identified alterations in functional connectivity between brain
+          regions involved in pain processing and those responsible for emotional regulation. The default mode
+          network --- a set of brain areas active during rest and self-referential thinking --- shows increased
+          connectivity with pain-processing regions in people with fibromyalgia. This may help explain why pain
+          in fibromyalgia often feels all-encompassing, infiltrating not just physical sensation but also self-
+          perception, mood, and the ability to concentrate on anything beyond the body's distress signals.
+          Structural MRI studies have also revealed reduced gray matter volume in the prefrontal cortex and
+          anterior cingulate cortex of people with longstanding fibromyalgia, suggesting that chronic pain may
+          physically reshape the brain over time.
         </p>
 
         <StatCard
@@ -158,11 +189,11 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           with fibromyalgia meet criteria for a comorbid psychiatric condition, most commonly major depressive
           disorder and generalized anxiety disorder
           <Citation id="3" index={3} source="Journal of Psychosomatic Research" year="2022" tier={1} />. This is
-          not merely the expected emotional response to living with chronic pain — though that response is
+          not merely the expected emotional response to living with chronic pain --- though that response is
           entirely valid. The connection runs deeper, into shared neurobiology.
         </p>
         <p className="mb-6">
-          Fibromyalgia, depression, and anxiety all involve dysregulation of neurotransmitter systems — particularly
+          Fibromyalgia, depression, and anxiety all involve dysregulation of neurotransmitter systems --- particularly
           serotonin, norepinephrine, and dopamine. They share alterations in the hypothalamic-pituitary-adrenal
           (HPA) axis, the body's central stress-response system. Sleep architecture is disrupted in similar ways
           across all three conditions. This convergence suggests that fibromyalgia is not simply a pain condition
@@ -175,7 +206,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             title: 'Depression and Fibromyalgia',
             content: (
               <div>
-                <p className="mb-3">Depression in fibromyalgia goes beyond sadness. It often presents as profound fatigue, cognitive slowing, loss of interest in previously enjoyed activities, and a deep sense of hopelessness about recovery. The overlap in symptoms — fatigue, poor concentration, sleep disturbance — can make it difficult to distinguish where fibromyalgia ends and depression begins.</p>
+                <p className="mb-3">Depression in fibromyalgia goes beyond sadness. It often presents as profound fatigue, cognitive slowing, loss of interest in previously enjoyed activities, and a deep sense of hopelessness about recovery. The overlap in symptoms --- fatigue, poor concentration, sleep disturbance --- can make it difficult to distinguish where fibromyalgia ends and depression begins.</p>
                 <p>Treating depression often improves fibromyalgia pain severity, and vice versa, reinforcing the bidirectional nature of the relationship.</p>
               </div>
             ),
@@ -184,8 +215,8 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             title: 'Anxiety and Hypervigilance',
             content: (
               <div>
-                <p className="mb-3">Many people with fibromyalgia develop hypervigilance toward bodily sensations — a constant monitoring for the next flare. This heightened attention, rooted in the nervous system's threat-detection pathways, can amplify pain perception and fuel a cycle of anxiety.</p>
-                <p>Anxiety also increases muscle tension, disrupts sleep, and activates the stress response — all of which worsen fibromyalgia symptoms.</p>
+                <p className="mb-3">Many people with fibromyalgia develop hypervigilance toward bodily sensations --- a constant monitoring for the next flare. This heightened attention, rooted in the nervous system's threat-detection pathways, can amplify pain perception and fuel a cycle of anxiety.</p>
+                <p>Anxiety also increases muscle tension, disrupts sleep, and activates the stress response --- all of which worsen fibromyalgia symptoms.</p>
               </div>
             ),
           },
@@ -204,16 +235,25 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Fibro Fog: When Pain Clouds Thinking
         </h2>
         <p className="mb-6">
-          Cognitive dysfunction in fibromyalgia — commonly called "fibro fog" — is one of the most distressing
+          Cognitive dysfunction in fibromyalgia --- commonly called "fibro fog" --- is one of the most distressing
           symptoms for many patients. It manifests as difficulty concentrating, word-finding problems, impaired
           working memory, and mental sluggishness. For people who relied on cognitive sharpness in their
           professional or personal lives, fibro fog can feel like a loss of identity.
         </p>
         <p className="mb-6">
           Neuroimaging studies show that fibro fog correlates with altered connectivity in brain networks
-          responsible for attention and executive function. Pain itself consumes cognitive resources — the brain
+          responsible for attention and executive function. Pain itself consumes cognitive resources --- the brain
           allocates processing power to managing pain signals, leaving fewer resources available for other tasks.
           Poor sleep quality, which is nearly universal in fibromyalgia, further degrades cognitive performance.
+        </p>
+        <p className="mb-6">
+          The social and professional consequences of fibro fog are substantial and often underappreciated. People
+          who once managed complex projects, held fluent conversations, or read for pleasure find themselves
+          struggling to follow a paragraph, losing track of appointments, or blanking on the names of longtime
+          colleagues. The gap between previous cognitive capacity and current function generates a particular
+          kind of grief --- not for a limb or a physical ability, but for the sharpness and reliability of one's
+          own mind. In workplace settings, cognitive difficulties may be interpreted as disinterest or incompetence,
+          adding professional jeopardy to an already overwhelming situation.
         </p>
         <p className="mb-6">
           Addressing fibro fog typically requires a multimodal approach: improving sleep quality, managing pain,
@@ -238,7 +278,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             content: (
               <div>
                 <p className="mb-3">Cognitive-behavioral therapy is one of the most studied and effective psychological treatments for fibromyalgia. Meta-analyses show it reduces pain severity by approximately 30%, with additional improvements in mood, fatigue, and daily functioning <Citation id="5" index={5} source="Pain" year="2023" tier={1} />.</p>
-                <p>CBT for fibromyalgia targets pain catastrophizing, activity avoidance, sleep-disrupting thought patterns, and the development of active coping strategies. It does not suggest pain is "all in your head" — it works by changing the brain's relationship to pain signals.</p>
+                <p>CBT for fibromyalgia targets pain catastrophizing, activity avoidance, sleep-disrupting thought patterns, and the development of active coping strategies. It does not suggest pain is "all in your head" --- it works by changing the brain's relationship to pain signals.</p>
               </div>
             ),
           },
@@ -258,7 +298,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             content: (
               <div>
                 <p className="mb-3">Mindfulness-based stress reduction (MBSR) has shown meaningful benefits for fibromyalgia pain and psychological well-being <Citation id="9" index={9} source="Annals of Internal Medicine" year="2022" tier={1} />.</p>
-                <p>Mindfulness does not aim to eliminate pain. Instead, it cultivates a different relationship to pain — observing it without judgment, reducing the emotional amplification that worsens suffering. Regular practice also activates the parasympathetic nervous system, counteracting the chronic stress activation characteristic of fibromyalgia.</p>
+                <p>Mindfulness does not aim to eliminate pain. Instead, it cultivates a different relationship to pain --- observing it without judgment, reducing the emotional amplification that worsens suffering. Regular practice also activates the parasympathetic nervous system, counteracting the chronic stress activation characteristic of fibromyalgia.</p>
               </div>
             ),
           },
@@ -274,6 +314,36 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           },
         ]} />
 
+        <h2 id="social-dimension" className="scroll-mt-32 text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          The Social Dimension of Fibromyalgia
+        </h2>
+        <p className="mb-6">
+          Fibromyalgia reshapes not only the body's relationship with pain but also a person's relationship with
+          the world around them. Friendships erode when plans are cancelled repeatedly due to flares. Family
+          members, no matter how well-intentioned, may struggle to understand why someone who looks healthy
+          cannot participate in ordinary activities. The unpredictability of symptoms --- a good day followed by
+          several bad ones --- makes it difficult to commit to social events, work schedules, or even household
+          responsibilities. Over time, the social world contracts, and isolation sets in.
+        </p>
+        <p className="mb-6">
+          Workplace accommodations remain inconsistent and often inadequate. Many people with fibromyalgia
+          reduce their working hours, change careers, or leave employment altogether --- not because they lack
+          motivation but because the combined burden of pain, fatigue, and cognitive fog makes sustained
+          performance in traditional work environments unsustainable. The financial consequences compound the
+          psychological toll, creating stress that further aggravates symptoms. Disability applications are
+          frequently denied for conditions without clear diagnostic markers, forcing people to prove their
+          suffering through a bureaucratic process that recapitulates the invalidation they experienced in
+          medical settings.
+        </p>
+        <p className="mb-6">
+          Peer support groups --- whether in person or online --- have emerged as a vital resource for many people
+          living with fibromyalgia. Connecting with others who share the same experience provides something
+          that medical treatment alone cannot: the feeling of being understood without explanation. Research on
+          self-management programs that include peer support components shows improvements in self-efficacy,
+          coping strategies, and overall well-being. These communities do not replace professional treatment,
+          but they fill a gap that clinical encounters often leave open.
+        </p>
+
         <h2 id="validation-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Validation Matters
         </h2>
@@ -285,19 +355,19 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           <Citation id="10" index={10} source="Disability and Rehabilitation" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          Conversely, invalidation — being told the pain is exaggerated, that you just need to try harder, or that
-          "everyone gets tired" — is associated with worse pain outcomes, greater psychological distress, and
+          Conversely, invalidation --- being told the pain is exaggerated, that you just need to try harder, or that
+          "everyone gets tired" --- is associated with worse pain outcomes, greater psychological distress, and
           withdrawal from treatment. If you live with fibromyalgia, seeking out healthcare providers who
           acknowledge and understand the condition is not a luxury; it is a therapeutic necessity.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Living with Fibromyalgia">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Fibromyalgia is real</strong> — central sensitization and neuroinflammation provide measurable evidence of nervous system changes.</li>
-            <li><strong>Mental health is part of the picture</strong> — depression and anxiety are common comorbidities rooted in shared neurobiology, not personal weakness.</li>
-            <li><strong>Treatment works best when integrated</strong> — combining psychological, physical, and pharmacological approaches yields the strongest outcomes.</li>
-            <li><strong>Validation is therapeutic</strong> — being believed by those around you meaningfully improves well-being.</li>
-            <li><strong>Pacing over pushing</strong> — respecting your body's limits while gradually expanding capacity is more sustainable than boom-bust cycles.</li>
+            <li><strong>Fibromyalgia is real</strong> --- central sensitization and neuroinflammation provide measurable evidence of nervous system changes.</li>
+            <li><strong>Mental health is part of the picture</strong> --- depression and anxiety are common comorbidities rooted in shared neurobiology, not personal weakness.</li>
+            <li><strong>Treatment works best when integrated</strong> --- combining psychological, physical, and pharmacological approaches yields the strongest outcomes.</li>
+            <li><strong>Validation is therapeutic</strong> --- being believed by those around you meaningfully improves well-being.</li>
+            <li><strong>Pacing over pushing</strong> --- respecting your body's limits while gradually expanding capacity is more sustainable than boom-bust cycles.</li>
           </ul>
         </ArticleCallout>
 
@@ -305,14 +375,22 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Moving Forward with Fibromyalgia
         </h2>
         <p className="mb-6">
-          Living with fibromyalgia means navigating a condition that fluctuates — good days and difficult days,
+          Living with fibromyalgia means navigating a condition that fluctuates --- good days and difficult days,
           progress and setbacks. It means learning to pace activities, advocate for yourself in medical settings,
           and build a support network that understands the invisible nature of your experience.
         </p>
         <p className="mb-6">
           Science is catching up. Neuroimaging, genetic research, and advances in pain neuroscience are steadily
           building a more complete picture of fibromyalgia. With each discovery, the gap between what patients
-          have always known — that their pain is real — and what medicine can demonstrate narrows further.
+          have always known --- that their pain is real --- and what medicine can demonstrate narrows further.
+        </p>
+        <p className="mb-6">
+          Developing a personalized management plan takes time and patience. What works for one person may not
+          work for another, and finding the right combination of therapies often involves trial, adjustment, and
+          honest communication with healthcare providers. Keeping a detailed journal of symptoms, triggers,
+          treatments, and their effects can accelerate this process, providing both you and your clinical team
+          with the data needed to make informed decisions. Progress in fibromyalgia is rarely linear --- it
+          unfolds in increments, with setbacks that test resolve and breakthroughs that renew hope.
         </p>
         <p className="mb-6">
           If you are living with fibromyalgia, know that effective treatment exists, that your experience is
@@ -350,7 +428,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     ],
     videoStatus: 'planned' as const,
     sparkMoment:
-      "CRPS rewrites the rules your body was built on — a light touch becomes fire, stillness becomes agony. Understanding that this is your nervous system misfiring, not your mind failing, is the first step toward reclaiming your life from the pain.",
+      "CRPS rewrites the rules your body was built on --- a light touch becomes fire, stillness becomes agony. Understanding that this is your nervous system misfiring, not your mind failing, is the first step toward reclaiming your life from the pain.",
     practicalExercise: {
       title: 'Graded Motor Imagery Journal',
       steps: [
@@ -379,18 +457,27 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             A minor wrist fracture heals in six weeks. The cast comes off, the bone knits together, and life
-            returns to normal. But for some people, the pain after that fracture does not fade — it intensifies.
+            returns to normal. But for some people, the pain after that fracture does not fade --- it intensifies.
             The hand swells, the skin changes color, and a light breeze across the fingers produces searing,
             burning agony. This is Complex Regional Pain Syndrome, and it represents one of the most challenging
             intersections of neurology, pain science, and mental health.
           </p>
           <p className="mb-6">
             Complex Regional Pain Syndrome (CRPS) is a chronic pain condition that typically develops after an
-            injury — a fracture, surgery, sprain, or even a minor soft tissue injury. What distinguishes CRPS
+            injury --- a fracture, surgery, sprain, or even a minor soft tissue injury. What distinguishes CRPS
             from normal post-injury pain is the severity and duration: the pain is grossly disproportionate to
             the original injury and persists long after tissues have healed
             <Citation id="1" index={1} source="Pain" year="2022" tier={1} />. CRPS affects approximately 26
             per 100,000 person-years, with women affected 3-4 times more frequently than men.
+          </p>
+          <p className="mb-6">
+            The condition was formerly known as reflex sympathetic dystrophy (Type I) or causalgia (Type II),
+            names that reflected earlier theories about sympathetic nervous system involvement. While the
+            terminology has evolved, the clinical reality remains stark: CRPS can transform a routine medical
+            event into a years-long battle with pain that defies conventional expectations of healing.
+            Understanding the neurological foundations of CRPS is essential for patients, families, and
+            clinicians alike, because the path to effective treatment begins with recognizing that this pain
+            is generated by a malfunctioning nervous system rather than by ongoing tissue injury.
           </p>
         </div>
 
@@ -400,6 +487,16 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         <p className="mb-6">
           CRPS is classified into two types based on the presence or absence of confirmed nerve damage. Both
           types can produce identical symptoms and can be equally severe.
+        </p>
+        <p className="mb-6">
+          Type I accounts for roughly 90% of all cases and develops without any identifiable damage to a
+          specific nerve. This is what makes it so confounding from a traditional medical perspective --- the
+          severity of the pain has no proportional relationship to the triggering event. A simple wrist
+          fracture, a minor surgical procedure, or even prolonged limb immobilization can set the cascade in
+          motion. Type II, though less common, involves a confirmed injury to a peripheral nerve and tends to
+          produce pain with a more electrical or shooting quality. Despite these distinctions in origin, the
+          downstream neurological processes are remarkably similar, and the treatment approach for both types
+          centers on the same multidisciplinary rehabilitation principles.
         </p>
 
         <ComparisonTable
@@ -419,7 +516,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           What Happens in the Nervous System
         </h2>
         <p className="mb-6">
-          CRPS is not a single mechanism gone wrong — it is a cascade of interconnected dysfunctions spanning
+          CRPS is not a single mechanism gone wrong --- it is a cascade of interconnected dysfunctions spanning
           the peripheral nerves, immune system, autonomic nervous system, and brain
           <Citation id="3" index={3} source="Nature Reviews Neurology" year="2023" tier={1} />. After the initial
           injury, an aberrant inflammatory response develops. Pro-inflammatory cytokines flood the affected area,
@@ -430,16 +527,26 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           The autonomic nervous system, which regulates blood flow and sweating, becomes dysregulated. This
           produces the visible signs of CRPS: skin color changes (red, blue, or white), temperature asymmetry
           between the affected and unaffected limbs, and abnormal sweating. The immune system contributes through
-          neurogenic inflammation — an immune response driven by the nervous system itself
+          neurogenic inflammation --- an immune response driven by the nervous system itself
           <Citation id="9" index={9} source="Brain" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           Perhaps most remarkably, CRPS produces measurable changes in the brain. Functional MRI studies reveal
-          that the area of the somatosensory cortex representing the affected limb shrinks — the brain's internal
+          that the area of the somatosensory cortex representing the affected limb shrinks --- the brain's internal
           map of the body literally reorganizes
           <Citation id="4" index={4} source="NeuroImage: Clinical" year="2022" tier={1} />. This cortical
           reorganization correlates with pain intensity and helps explain why people with CRPS often have difficulty
           recognizing or moving the affected limb, even when motor pathways are intact.
+        </p>
+        <p className="mb-6">
+          The interplay between these systems creates a self-sustaining loop. Peripheral sensitization feeds
+          amplified signals to the spinal cord, which relays them to a brain already reorganized to interpret
+          those signals as maximally threatening. The autonomic nervous system responds with vascular and sudomotor
+          changes that further irritate peripheral nerves, and the immune system's neurogenic inflammatory
+          response adds fuel to the entire process. This is why CRPS is so resistant to single-mechanism
+          treatments --- the condition is maintained by multiple interconnected systems that reinforce one another.
+          Breaking the cycle requires interventions that address the peripheral, central, autonomic, and immune
+          components simultaneously or in carefully sequenced stages.
         </p>
 
         <ArticleCallout type="clinical-note" title="Recognizing CRPS Symptoms">
@@ -467,7 +574,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           CRPS pain has been rated on the McGill Pain Scale as more severe than childbirth, phantom limb pain,
           and chronic back pain
           <Citation id="2" index={2} source="European Journal of Pain" year="2021" tier={1} />. The relentless
-          nature of this pain — often present 24 hours a day — exhausts coping resources. Fear of pain and
+          nature of this pain --- often present 24 hours a day --- exhausts coping resources. Fear of pain and
           re-injury can lead to avoidance behaviors that paradoxically worsen the condition by promoting
           immobility and deconditioning.
         </p>
@@ -479,6 +586,38 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           them to look and function normally.
         </p>
 
+        <h2 id="identity-and-relationships" className="scroll-mt-32 text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          Living with CRPS: Identity and Relationships
+        </h2>
+        <p className="mb-6">
+          CRPS does not merely alter how the body feels --- it reshapes how a person sees themselves and how they
+          move through the world. Activities that once defined identity --- playing an instrument, cooking a family
+          meal, holding a child, typing at a keyboard --- may become sources of excruciating pain or may be lost
+          entirely. The grief that accompanies this loss is not abstract. It is the grief of watching your own
+          life narrow, of mourning a version of yourself that you can no longer access, and of facing an
+          uncertain future where the boundaries of possibility are drawn by a nervous system you cannot control.
+        </p>
+        <p className="mb-6">
+          Relationships bear enormous strain under the weight of CRPS. Partners may struggle to understand why
+          a light touch --- once a gesture of affection --- now provokes genuine agony. Friends may drift away when
+          invitations are declined month after month. Children may not understand why a parent who looks the same
+          as before can no longer participate in the activities they once shared. The invisible nature of the
+          condition compounds every social difficulty: from the outside, the affected limb may look normal or
+          only mildly swollen, offering no visible explanation for the severity of the suffering it produces.
+          Building a support network that includes people who understand the condition --- whether through patient
+          communities, support groups, or informed family members --- becomes an essential component of long-term
+          coping.
+        </p>
+        <p className="mb-6">
+          Professional identity is frequently disrupted as well. Many people with CRPS are unable to return to
+          their previous occupations, particularly those requiring manual dexterity, sustained physical effort,
+          or exposure to temperature extremes. Navigating disability systems, workplace accommodations, and the
+          financial consequences of reduced earning capacity adds a layer of practical stress that compounds the
+          emotional burden. Finding meaningful activity and purpose outside of previous roles --- through adapted
+          hobbies, volunteer work, mentorship, or creative expression --- can provide psychological anchoring
+          during a period that otherwise feels defined by loss.
+        </p>
+
         <h2 id="treatment-multidisciplinary" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Multidisciplinary Treatment
         </h2>
@@ -486,13 +625,13 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Clinical guidelines emphasize that CRPS requires a multidisciplinary approach, ideally initiated early
           in the course of the condition
           <Citation id="6" index={6} source="National Institute for Health and Care Excellence" year="2022" tier={2} />.
-          Early intervention — particularly within the first year — significantly improves long-term outcomes
+          Early intervention --- particularly within the first year --- significantly improves long-term outcomes
           and the likelihood of remission.
         </p>
 
         <ProgressSteps steps={[
           { title: 'Pain Education', description: 'Understanding that CRPS is a neurological condition, not a sign of ongoing tissue damage, helps reduce fear and catastrophizing. Pain neuroscience education is a foundational component of treatment.' },
-          { title: 'Graded Motor Imagery', description: 'A three-stage rehabilitation approach — laterality recognition, motor imagery, and mirror therapy — that targets the cortical reorganization underlying CRPS. Randomized trials show significant pain reduction and functional improvement.' },
+          { title: 'Graded Motor Imagery', description: 'A three-stage rehabilitation approach --- laterality recognition, motor imagery, and mirror therapy --- that targets the cortical reorganization underlying CRPS. Randomized trials show significant pain reduction and functional improvement.' },
           { title: 'Physiotherapy and Graded Exposure', description: 'Gentle, progressive movement restores function and counters the deconditioning that worsens CRPS. The approach must be paced carefully to avoid triggering flares while steadily expanding capacity.' },
           { title: 'Psychological Support', description: 'CBT, acceptance and commitment therapy, and trauma-informed care address the psychological comorbidities and help develop sustainable coping strategies for living with severe chronic pain.' },
           { title: 'Pharmacological Management', description: 'Medications may include neuropathic pain agents (gabapentin, pregabalin), anti-inflammatory drugs, bisphosphonates, low-dose naltrexone, or in refractory cases, interventional procedures such as sympathetic nerve blocks.' },
@@ -509,7 +648,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           The program proceeds through three stages. First, patients practice identifying whether images show left
-          or right limbs — a task that activates the motor cortex without any actual movement. Second, they
+          or right limbs --- a task that activates the motor cortex without any actual movement. Second, they
           imagine moving the affected limb in specific ways. Third, they use mirror therapy, where watching the
           reflection of the unaffected limb moving tricks the brain into perceiving pain-free movement of the
           affected limb
@@ -517,8 +656,8 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           This approach works because it gradually normalizes cortical representation. By easing the brain back
-          into processing movement information from the affected area — first through recognition, then
-          imagination, then visual feedback — GMI can reduce pain and improve function without the risks
+          into processing movement information from the affected area --- first through recognition, then
+          imagination, then visual feedback --- GMI can reduce pain and improve function without the risks
           associated with aggressive physical rehabilitation.
         </p>
 
@@ -534,17 +673,27 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         <p className="mb-6">
           Self-advocacy is essential. Seeking out clinicians experienced with CRPS, connecting with patient
           communities, and maintaining hope during difficult periods are all protective factors. The condition's
-          neurological basis also means that the brain's capacity for change — neuroplasticity — is both part
+          neurological basis also means that the brain's capacity for change --- neuroplasticity --- is both part
           of the problem and part of the solution. The same nervous system that learned to amplify pain can,
           with appropriate support, learn to quiet it.
+        </p>
+        <p className="mb-6">
+          Ongoing research into the mechanisms of CRPS continues to open new treatment avenues. Low-dose
+          naltrexone, ketamine infusions, and novel neuromodulation techniques are being studied in clinical
+          trials, offering potential options for people who have not responded adequately to current standard-of-
+          care approaches. Advances in understanding neurogenic inflammation and autoimmune contributions to
+          CRPS may eventually lead to targeted therapies that address the condition's root mechanisms rather
+          than managing symptoms alone. For now, the combination of early intervention, comprehensive
+          rehabilitation, psychological support, and informed self-advocacy represents the strongest foundation
+          for reclaiming function and quality of life.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Understanding CRPS">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>CRPS is neurological</strong> — involving peripheral nerve sensitization, immune dysfunction, autonomic changes, and cortical reorganization.</li>
-            <li><strong>Early treatment matters</strong> — outcomes are significantly better when multidisciplinary care begins within the first year.</li>
-            <li><strong>Psychological support is essential</strong> — not because CRPS is psychological, but because severe pain affects mental health and psychological interventions improve outcomes.</li>
-            <li><strong>Graded motor imagery shows promise</strong> — targeting the brain's body map directly can reduce pain and restore function.</li>
+            <li><strong>CRPS is neurological</strong> --- involving peripheral nerve sensitization, immune dysfunction, autonomic changes, and cortical reorganization.</li>
+            <li><strong>Early treatment matters</strong> --- outcomes are significantly better when multidisciplinary care begins within the first year.</li>
+            <li><strong>Psychological support is essential</strong> --- not because CRPS is psychological, but because severe pain affects mental health and psychological interventions improve outcomes.</li>
+            <li><strong>Graded motor imagery shows promise</strong> --- targeting the brain's body map directly can reduce pain and restore function.</li>
           </ul>
         </ArticleCallout>
       </>
@@ -578,7 +727,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     ],
     videoStatus: 'planned' as const,
     sparkMoment:
-      "The opioid conversation is not about blame — it is about building systems that treat pain effectively while protecting vulnerable people. Both undertreated pain and addiction cause profound suffering, and the path forward requires holding both truths at once.",
+      "The opioid conversation is not about blame --- it is about building systems that treat pain effectively while protecting vulnerable people. Both undertreated pain and addiction cause profound suffering, and the path forward requires holding both truths at once.",
     practicalExercise: {
       title: 'Pain Management Decision Journal',
       steps: [
@@ -610,7 +759,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             of opioids, chronic pain, and mental health. On one side are millions of people living with
             debilitating pain who deserve effective treatment. On the other is an epidemic that has claimed over
             500,000 lives in the United States and fundamentally reshaped how society views pain medication.
-            Understanding what the evidence actually says — beyond the headlines — is essential for anyone
+            Understanding what the evidence actually says --- beyond the headlines --- is essential for anyone
             navigating this terrain.
           </p>
           <p className="mb-6">
@@ -618,6 +767,14 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             pain. Their role in chronic non-cancer pain, however, has been the subject of intensive research and
             re-evaluation. The evidence that has emerged tells a nuanced story: one where opioids are neither
             the straightforward solution many once believed nor the universal villain some now portray them as.
+          </p>
+          <p className="mb-6">
+            The stakes of getting this balance right are enormous. Undertreated pain devastates quality of life,
+            erodes mental health, and drives some individuals toward unregulated sources of relief. Overprescribing,
+            meanwhile, has produced a cascade of dependence, addiction, and death that has reshaped entire
+            communities. Caught in the middle are clinicians trying to practice responsibly and patients trying
+            to live with conditions that demand effective pain management. Moving forward requires abandoning
+            simplistic narratives and engaging with the full complexity of what the evidence reveals.
           </p>
         </div>
 
@@ -641,14 +798,14 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Opioid medications work by binding to mu-opioid receptors distributed throughout the brain, spinal
-          cord, and peripheral tissues. These receptors are part of the body's endogenous opioid system — the
+          cord, and peripheral tissues. These receptors are part of the body's endogenous opioid system --- the
           same system that produces endorphins during exercise, social connection, and other rewarding experiences.
           When opioid medications activate these receptors, they reduce pain transmission and produce feelings
           of well-being and calm
           <Citation id="6" index={6} source="Neuropsychopharmacology" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          This dual action — pain relief and mood elevation — is both the therapeutic value and the vulnerability
+          This dual action --- pain relief and mood elevation --- is both the therapeutic value and the vulnerability
           of opioid treatment. For someone experiencing severe pain alongside depression, anxiety, or emotional
           distress, opioids can provide relief from multiple sources of suffering simultaneously. This makes
           them powerfully reinforcing, but it also means that the medication may be addressing emotional pain
@@ -658,16 +815,27 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Over time, the brain adapts to chronic opioid exposure. Tolerance develops, requiring higher doses
           for the same analgesic effect. The endogenous opioid system downregulates, meaning the body produces
           fewer of its own pain-relieving chemicals. And in some cases, a phenomenon called opioid-induced
-          hyperalgesia develops — the medication paradoxically increases pain sensitivity
+          hyperalgesia develops --- the medication paradoxically increases pain sensitivity
           <Citation id="4" index={4} source="Anesthesiology" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Opioid-induced hyperalgesia represents one of the most troubling paradoxes in pain medicine. Rather
+          than simply losing effectiveness through tolerance, the medication can actively recalibrate the nervous
+          system toward greater pain sensitivity. Patients and clinicians may interpret the worsening pain as
+          evidence that the underlying condition is progressing, leading to dose increases that further entrench
+          the problem. Distinguishing between disease progression, tolerance, and hyperalgesia requires careful
+          clinical assessment --- and the distinction carries significant implications for treatment direction.
+          When hyperalgesia is the driver, the counterintuitive solution is often to reduce the opioid dose
+          rather than increase it, a process that requires trust, clear communication, and robust alternative
+          pain management strategies.
         </p>
 
         <h2 id="evidence-long-term" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What the Research Shows About Long-Term Use
         </h2>
         <p className="mb-6">
-          The SPACE trial — one of the most rigorous studies comparing opioid and non-opioid medications for
-          chronic musculoskeletal pain — found that after 12 months, opioid therapy was not superior to
+          The SPACE trial --- one of the most rigorous studies comparing opioid and non-opioid medications for
+          chronic musculoskeletal pain --- found that after 12 months, opioid therapy was not superior to
           non-opioid alternatives for pain-related function
           <Citation id="1" index={1} source="JAMA" year="2018" tier={1} />. The opioid group actually reported
           slightly worse pain intensity, while the non-opioid group experienced fewer side effects.
@@ -702,11 +870,11 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           contribute to this elevated vulnerability.
         </p>
         <p className="mb-6">
-          Depression and chronic pain share overlapping neurobiology — both involve dysfunction in serotonin,
+          Depression and chronic pain share overlapping neurobiology --- both involve dysfunction in serotonin,
           norepinephrine, and dopamine systems. People with untreated depression may experience pain more
           intensely, leading to higher-dose prescriptions. Opioids' mood-elevating effects may be especially
           reinforcing for people whose baseline mood is low, creating a pattern where the medication serves
-          dual purposes — managing physical pain and self-medicating emotional distress.
+          dual purposes --- managing physical pain and self-medicating emotional distress.
         </p>
         <p className="mb-6">
           Anxiety disorders, post-traumatic stress, and histories of adverse childhood experiences also
@@ -720,7 +888,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Physical Dependence vs. Addiction
         </h2>
         <p className="mb-6">
-          One of the most important — and most commonly misunderstood — distinctions in opioid treatment is the
+          One of the most important --- and most commonly misunderstood --- distinctions in opioid treatment is the
           difference between physical dependence and addiction. These are related but fundamentally different
           phenomena, and conflating them causes real harm
           <Citation id="8" index={8} source="American Society of Addiction Medicine" year="2023" tier={2} />.
@@ -753,15 +921,44 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Many people taking opioids as prescribed develop physical dependence without ever developing addiction.
           However, fear of being labeled an "addict" prevents some patients from reporting concerns about their
           medication, while the conflation of dependence with addiction leads some clinicians to abruptly
-          discontinue opioids — which can be medically dangerous and psychologically devastating
+          discontinue opioids --- which can be medically dangerous and psychologically devastating
           <Citation id="9" index={9} source="Pain Medicine" year="2023" tier={1} />.
+        </p>
+
+        <h2 id="policy-pendulum" className="scroll-mt-32 text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          The Human Cost of the Policy Pendulum
+        </h2>
+        <p className="mb-6">
+          The response to the opioid epidemic has saved lives through prescription monitoring programs, prescriber
+          education, and expanded access to naloxone and medication-assisted treatment. But it has also created
+          unintended casualties. Some patients who had been stable on long-term opioid therapy for years found
+          their prescriptions abruptly reduced or eliminated as prescribing guidelines tightened and clinicians
+          faced regulatory pressure. These patients --- many of them older adults with degenerative conditions,
+          people with severe injuries, or individuals whose pain conditions left few alternatives --- were thrust
+          into withdrawal, undertreated pain, and in some cases, crisis.
+        </p>
+        <p className="mb-6">
+          The psychological toll of forced tapering extends beyond the physical discomfort of withdrawal. Patients
+          report feelings of abandonment by providers they trusted, shame at being treated as though they had
+          done something wrong, and despair at the prospect of returning to unmanaged pain. For individuals who
+          had built stable lives around a medication regimen that worked --- holding jobs, maintaining relationships,
+          participating in family life --- the sudden loss of that stability can be devastating. Some turned to
+          illicit opioids or alcohol. Others withdrew from medical care altogether, preferring to suffer in
+          silence rather than navigate a system they no longer trusted.
+        </p>
+        <p className="mb-6">
+          Responsible policy requires acknowledging both poles of this pendulum. The era of liberal prescribing
+          caused immeasurable harm. But the corrective must not create its own form of suffering by abandoning
+          patients who depend on these medications for functional lives. Individualized assessment, shared
+          decision-making, and compassionate care remain the foundation of ethical pain treatment --- regardless
+          of which direction policy trends may push.
         </p>
 
         <h2 id="multimodal-alternatives" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Multimodal Pain Management
         </h2>
         <p className="mb-6">
-          The strongest evidence for chronic pain management points toward multimodal approaches — treatment
+          The strongest evidence for chronic pain management points toward multimodal approaches --- treatment
           programs that combine multiple strategies addressing different aspects of the pain experience. Systematic
           reviews consistently show that multimodal programs produce equivalent or better outcomes than opioid
           monotherapy, with fewer risks
@@ -773,7 +970,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             title: 'Psychological Approaches',
             content: (
               <div>
-                <p className="mb-3">Cognitive-behavioral therapy for chronic pain, acceptance and commitment therapy, and mindfulness-based stress reduction all have robust evidence. These approaches do not suggest that pain is imaginary — they change the brain's relationship to pain signals, reducing suffering and improving function.</p>
+                <p className="mb-3">Cognitive-behavioral therapy for chronic pain, acceptance and commitment therapy, and mindfulness-based stress reduction all have robust evidence. These approaches do not suggest that pain is imaginary --- they change the brain's relationship to pain signals, reducing suffering and improving function.</p>
                 <p>Psychological treatment is especially important when chronic pain co-occurs with depression, anxiety, or trauma.</p>
               </div>
             ),
@@ -809,7 +1006,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           The harm reduction framework acknowledges that some people will continue to use opioids for pain
-          management — either by choice or because alternatives have been insufficient. Rather than an
+          management --- either by choice or because alternatives have been insufficient. Rather than an
           all-or-nothing approach, harm reduction focuses on minimizing risks while respecting patient autonomy
           <Citation id="10" index={10} source="The Lancet" year="2022" tier={1} />.
         </p>
@@ -820,7 +1017,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           the medication is being used and whether goals are being met.
         </p>
         <p className="mb-6">
-          For people who decide — in partnership with their clinicians — to taper off opioids, the process
+          For people who decide --- in partnership with their clinicians --- to taper off opioids, the process
           should be gradual, patient-directed, and accompanied by alternative pain management support. Forced
           or rapid tapering has been associated with worsened pain, psychological distress, and in some cases,
           patients turning to illicit opioids
@@ -831,7 +1028,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Toward Better Pain Care
         </h2>
         <p className="mb-6">
-          The opioid crisis revealed systemic failures — in prescribing practices, in addiction treatment access,
+          The opioid crisis revealed systemic failures --- in prescribing practices, in addiction treatment access,
           in the separation of pain medicine from mental health care, and in the inadequacy of alternatives offered
           to people in pain. Moving forward requires holding multiple truths simultaneously: that chronic pain
           deserves effective treatment, that opioids carry real risks, that mental health is inseparable from
@@ -839,18 +1036,27 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           treatment history.
         </p>
         <p className="mb-6">
+          The path forward also requires addressing the structural barriers that limit access to multimodal
+          pain care. Psychological therapies, physiotherapy, and integrative approaches are not universally
+          available or affordable. Insurance coverage for comprehensive pain programs remains inconsistent.
+          Rural and underserved communities often lack the specialists needed for multidisciplinary care.
+          Closing these gaps is not merely a matter of clinical preference --- it is a matter of equity. When
+          the only accessible treatment for pain is a prescription, the likelihood of opioid-related harm
+          rises. When the full spectrum of evidence-based options is available, outcomes improve for everyone.
+        </p>
+        <p className="mb-6">
           If you are navigating the intersection of chronic pain, opioid treatment, and mental health, you
           deserve a treatment team that listens, explains options clearly, monitors your well-being comprehensively,
-          and works collaboratively toward your goals. That team exists — and finding it is worth the effort.
+          and works collaboratively toward your goals. That team exists --- and finding it is worth the effort.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Key Takeaways">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Opioids have a place</strong> — they remain appropriate for acute, post-surgical, and cancer-related pain, while their role in chronic non-cancer pain requires careful individualized assessment.</li>
-            <li><strong>Mental health matters</strong> — depression and anxiety increase opioid vulnerability and should be screened for and treated alongside pain.</li>
-            <li><strong>Dependence is not addiction</strong> — physical dependence is a normal adaptation; addiction involves compulsive use despite harm.</li>
-            <li><strong>Multimodal approaches work</strong> — combining psychological, physical, and pharmacological strategies produces the best outcomes.</li>
-            <li><strong>Tapering should be collaborative</strong> — never forced or abrupt, always accompanied by alternative support.</li>
+            <li><strong>Opioids have a place</strong> --- they remain appropriate for acute, post-surgical, and cancer-related pain, while their role in chronic non-cancer pain requires careful individualized assessment.</li>
+            <li><strong>Mental health matters</strong> --- depression and anxiety increase opioid vulnerability and should be screened for and treated alongside pain.</li>
+            <li><strong>Dependence is not addiction</strong> --- physical dependence is a normal adaptation; addiction involves compulsive use despite harm.</li>
+            <li><strong>Multimodal approaches work</strong> --- combining psychological, physical, and pharmacological strategies produces the best outcomes.</li>
+            <li><strong>Tapering should be collaborative</strong> --- never forced or abrupt, always accompanied by alternative support.</li>
           </ul>
         </ArticleCallout>
       </>
@@ -874,7 +1080,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Chronic Pain', 'Sleep', 'Insomnia', 'CBT-I'],
     summary:
-      'Pain and sleep exist in a bidirectional relationship that can become a self-reinforcing cycle of suffering. Chronic pain disrupts sleep architecture — reducing deep restorative sleep, increasing nighttime awakenings, and fragmenting sleep continuity. In turn, poor sleep amplifies pain sensitivity through changes in pain-processing pathways, increases inflammatory markers, and reduces the emotional resources available for coping. Research shows that sleep disturbance is not merely a consequence of chronic pain but an independent factor that worsens pain outcomes. This article explores the neuroscience underlying the pain-sleep connection, examines why standard sleep advice often falls short for people with chronic pain, and presents evidence-based strategies for improving sleep quality. Cognitive-behavioral therapy for insomnia (CBT-I), adapted for chronic pain populations, has emerged as the gold-standard treatment, while sleep hygiene modifications, body positioning strategies, and relaxation techniques offer additional support.',
+      'Pain and sleep exist in a bidirectional relationship that can become a self-reinforcing cycle of suffering. Chronic pain disrupts sleep architecture --- reducing deep restorative sleep, increasing nighttime awakenings, and fragmenting sleep continuity. In turn, poor sleep amplifies pain sensitivity through changes in pain-processing pathways, increases inflammatory markers, and reduces the emotional resources available for coping. Research shows that sleep disturbance is not merely a consequence of chronic pain but an independent factor that worsens pain outcomes. This article explores the neuroscience underlying the pain-sleep connection, examines why standard sleep advice often falls short for people with chronic pain, and presents evidence-based strategies for improving sleep quality. Cognitive-behavioral therapy for insomnia (CBT-I), adapted for chronic pain populations, has emerged as the gold-standard treatment, while sleep hygiene modifications, body positioning strategies, and relaxation techniques offer additional support.',
     keyFacts: [
       { text: 'Up to 88% of people with chronic pain report clinically significant sleep disturbance.', citationIndex: 1 },
       { text: 'One night of sleep deprivation increases pain sensitivity by approximately 15-25% in controlled studies.', citationIndex: 2 },
@@ -884,13 +1090,13 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     ],
     videoStatus: 'planned' as const,
     sparkMoment:
-      "Sleep is not a luxury that pain takes from you — it is a biological need that, when restored, becomes one of your most powerful tools for managing pain. Breaking the cycle starts with understanding that better sleep does not require zero pain.",
+      "Sleep is not a luxury that pain takes from you --- it is a biological need that, when restored, becomes one of your most powerful tools for managing pain. Breaking the cycle starts with understanding that better sleep does not require zero pain.",
     practicalExercise: {
       title: 'Sleep-Pain Connection Tracker',
       steps: [
         { title: 'Evening Check-In', description: 'Before bed, rate your pain on a 0-10 scale and note any specific areas of discomfort. Write down your stress level and one thing you can release before sleep.' },
         { title: 'Morning Assessment', description: 'Upon waking, rate your sleep quality (0-10), estimate total sleep time, and note how many times you woke. Then rate your morning pain level before getting out of bed.' },
-        { title: 'Pattern Identification', description: 'After 10 days, review your data. Look for patterns: Does higher evening pain predict worse sleep? Does worse sleep predict higher morning pain? Are there nights that went better — what was different?' },
+        { title: 'Pattern Identification', description: 'After 10 days, review your data. Look for patterns: Does higher evening pain predict worse sleep? Does worse sleep predict higher morning pain? Are there nights that went better --- what was different?' },
         { title: 'One Change Experiment', description: 'Based on your patterns, choose one sleep strategy from this article. Apply it consistently for two weeks while continuing to track, then evaluate whether your sleep-pain pattern has shifted.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -914,14 +1120,14 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You lie awake at 2 AM, pain radiating through your lower back, every position offering temporary
             relief that fades within minutes. When morning arrives, the exhaustion from a fragmented night makes
-            everything hurt more — your pain threshold lower, your patience thinner, your body less equipped to
+            everything hurt more --- your pain threshold lower, your patience thinner, your body less equipped to
             cope. By evening, elevated pain makes sleep even harder. This is the pain-sleep cycle, and it is one
             of the most common and debilitating patterns in chronic pain.
           </p>
           <p className="mb-6">
             Up to 88% of people with chronic pain report clinically significant sleep disturbance
             <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2022" tier={1} />. This is not
-            merely an inconvenience — it is a biological feedback loop where each problem amplifies the other.
+            merely an inconvenience --- it is a biological feedback loop where each problem amplifies the other.
             Understanding this cycle, and how to interrupt it, can meaningfully change the trajectory of chronic
             pain management.
           </p>
@@ -931,8 +1137,8 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           The Pain-Sleep Cycle Explained
         </h2>
         <p className="mb-6">
-          Pain disrupts sleep through several direct mechanisms. Nociceptive signals — the nerve impulses that
-          carry pain information — can trigger micro-arousals throughout the night, pulling the brain out of
+          Pain disrupts sleep through several direct mechanisms. Nociceptive signals --- the nerve impulses that
+          carry pain information --- can trigger micro-arousals throughout the night, pulling the brain out of
           deeper sleep stages even when you do not fully wake. Chronic pain reduces slow-wave sleep (the deepest,
           most restorative stage) by 25-50%
           <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
@@ -943,8 +1149,17 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           But here is the critical insight: research shows that the relationship is not symmetrical. Poor sleep
           increases next-day pain intensity more strongly than pain disrupts that night's sleep
           <Citation id="4" index={4} source="Sleep" year="2022" tier={1} />. This means sleep is not just a
-          casualty of chronic pain — it is an active driver of pain severity. Improving sleep may be one of the
+          casualty of chronic pain --- it is an active driver of pain severity. Improving sleep may be one of the
           most effective ways to reduce chronic pain.
+        </p>
+        <p className="mb-6">
+          The asymmetry of this relationship carries an important clinical implication: targeting sleep may offer
+          greater leverage over the cycle than targeting pain alone. When sleep improves, the cascade of benefits
+          extends in multiple directions simultaneously --- pain sensitivity decreases, inflammatory markers drop,
+          emotional resilience recovers, and cognitive function sharpens. Each of these improvements feeds back
+          into better sleep the following night, creating the possibility of a virtuous cycle that gradually
+          replaces the vicious one. This is why sleep-focused interventions have become a cornerstone of modern
+          chronic pain management.
         </p>
 
         <StatCard
@@ -962,9 +1177,9 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Neuroimaging studies have revealed exactly how sleep deprivation changes pain processing. When
-          sleep-deprived, the somatosensory cortex — the brain region that registers pain intensity — becomes
-          hyperactivated, while the nucleus accumbens and insula — regions involved in pain evaluation and
-          modulation — become less active
+          sleep-deprived, the somatosensory cortex --- the brain region that registers pain intensity --- becomes
+          hyperactivated, while the nucleus accumbens and insula --- regions involved in pain evaluation and
+          modulation --- become less active
           <Citation id="7" index={7} source="Journal of Neuroscience" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
@@ -975,18 +1190,27 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           chronic pain, this amplification can be the difference between a manageable day and an overwhelming one.
         </p>
         <p className="mb-6">
-          Sleep deprivation also elevates inflammatory markers — C-reactive protein, interleukin-6, tumor
-          necrosis factor-alpha — all of which lower pain thresholds and increase tissue sensitivity. It
+          Sleep deprivation also elevates inflammatory markers --- C-reactive protein, interleukin-6, tumor
+          necrosis factor-alpha --- all of which lower pain thresholds and increase tissue sensitivity. It
           impairs emotional regulation, making pain feel more threatening and catastrophic. And it reduces
-          the brain's production of endogenous opioids — the body's natural pain-relieving chemicals.
+          the brain's production of endogenous opioids --- the body's natural pain-relieving chemicals.
+        </p>
+        <p className="mb-6">
+          The prefrontal cortex, which normally exercises top-down control over emotional and sensory processing,
+          becomes less effective after poor sleep. This means that the rational capacity to contextualize pain ---
+          to remind yourself that a flare is temporary, that you have coped before, that the pain does not
+          signal new damage --- is diminished when you are sleep-deprived. Pain becomes not just physically more
+          intense but psychologically more overwhelming. The loss of this cognitive buffer explains why pain
+          crises so often follow bad nights, and why the same pain level that feels manageable after restorative
+          sleep can feel catastrophic after a fragmented one.
         </p>
 
         <h2 id="why-standard-advice-fails" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Standard Sleep Advice Often Falls Short
         </h2>
         <p className="mb-6">
-          Generic sleep hygiene recommendations — maintain a consistent schedule, keep the bedroom cool, avoid
-          screens before bed — are a reasonable starting point but often insufficient for people with chronic pain.
+          Generic sleep hygiene recommendations --- maintain a consistent schedule, keep the bedroom cool, avoid
+          screens before bed --- are a reasonable starting point but often insufficient for people with chronic pain.
           Pain introduces unique challenges that standard advice does not address: physical discomfort makes
           finding a comfortable position difficult, anxiety about the next day's pain creates bedtime dread, and
           the frustration of lying awake in pain can create a conditioned association between the bed and suffering.
@@ -996,6 +1220,16 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           targeted interventions beyond basic sleep hygiene
           <Citation id="6" index={6} source="American Academy of Sleep Medicine" year="2022" tier={2} />.
           This is where specialized approaches become necessary.
+        </p>
+        <p className="mb-6">
+          One of the most common problems is the development of conditioned arousal. After months or years of
+          lying awake in pain, the bed itself becomes associated with wakefulness and suffering rather than
+          rest. The moment you lie down, your nervous system goes on high alert, scanning for pain and bracing
+          for another difficult night. This conditioned response operates below conscious awareness and cannot
+          be overcome by willpower alone. Similarly, the anticipatory anxiety that builds throughout the evening
+          --- the dread of another sleepless night --- activates the stress response at precisely the moment when
+          the body needs to transition into a state of calm. Standard advice to "relax and let sleep come" fails
+          to account for the powerful conditioning that chronic pain establishes in the bedroom environment.
         </p>
 
         <h2 id="cbti-chronic-pain" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1067,6 +1301,35 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           },
         ]} />
 
+        <h2 id="emotional-landscape" className="scroll-mt-32 text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          The Emotional Landscape of Sleepless Nights
+        </h2>
+        <p className="mb-6">
+          The psychological toll of chronic sleep deprivation in the context of pain is rarely discussed with
+          the specificity it deserves. Night after night of fragmented sleep erodes emotional reserves in ways
+          that compound over time. Irritability increases, patience thins, and the capacity for empathy --- toward
+          others and toward oneself --- diminishes. Relationships strain under the weight of exhaustion-driven
+          tension. Small frustrations that a well-rested person would brush aside become sources of conflict
+          or tears. The person living with pain and poor sleep often recognizes that their reactions are
+          disproportionate but lacks the cognitive and emotional resources to modulate them.
+        </p>
+        <p className="mb-6">
+          There is also a particular loneliness to being awake at 3 AM in pain while the rest of the household
+          sleeps. The nighttime hours can amplify rumination, worry, and despair. Problems that feel manageable
+          during daylight seem insurmountable in the dark. Pain catastrophizing --- the tendency to magnify
+          threat, ruminate on pain, and feel helpless --- peaks during nighttime wakefulness, when the
+          prefrontal cortex's regulatory capacity is at its lowest. This emotional vulnerability does not
+          reflect personal weakness; it reflects the predictable neurological consequences of sustained sleep
+          loss acting on an already burdened nervous system.
+        </p>
+        <p className="mb-6">
+          Acknowledging this emotional dimension is not tangential to treatment --- it is central. Interventions
+          that address nighttime emotional distress, whether through pre-sleep relaxation routines, cognitive
+          restructuring of catastrophic nighttime thoughts, or even simple strategies like having a calming
+          audiobook available for wakeful periods, can reduce the psychological intensity of sleepless hours
+          and, paradoxically, make falling back to sleep easier.
+        </p>
+
         <h2 id="breaking-the-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Breaking the Cycle: Where to Start
         </h2>
@@ -1080,16 +1343,16 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Start with one or two strategies from this article. Track your sleep and pain together for at least
           two weeks to establish a baseline, then introduce changes systematically. If sleep remains severely
           disrupted after implementing behavioral strategies, speak with a healthcare provider about a referral
-          to a sleep specialist — ideally one experienced with chronic pain populations.
+          to a sleep specialist --- ideally one experienced with chronic pain populations.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Breaking the Pain-Sleep Cycle">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Sleep disruption drives pain</strong> — poor sleep increases next-day pain more than pain disrupts sleep.</li>
-            <li><strong>Improving sleep treats pain</strong> — restoring sleep quality is one of the most effective pain management strategies.</li>
-            <li><strong>CBT-I is the gold standard</strong> — adapted for chronic pain, it improves both sleep and pain outcomes.</li>
-            <li><strong>Positioning matters</strong> — strategic pillow use and body positioning reduce nighttime discomfort.</li>
-            <li><strong>Track both together</strong> — monitoring sleep and pain simultaneously reveals patterns and measures progress.</li>
+            <li><strong>Sleep disruption drives pain</strong> --- poor sleep increases next-day pain more than pain disrupts sleep.</li>
+            <li><strong>Improving sleep treats pain</strong> --- restoring sleep quality is one of the most effective pain management strategies.</li>
+            <li><strong>CBT-I is the gold standard</strong> --- adapted for chronic pain, it improves both sleep and pain outcomes.</li>
+            <li><strong>Positioning matters</strong> --- strategic pillow use and body positioning reduce nighttime discomfort.</li>
+            <li><strong>Track both together</strong> --- monitoring sleep and pain simultaneously reveals patterns and measures progress.</li>
           </ul>
         </ArticleCallout>
       </>
@@ -1113,24 +1376,24 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Chronic Pain', 'Depression', 'Comorbidity', 'Neurobiology'],
     summary:
-      'Chronic pain and depression co-occur far more frequently than chance alone would predict, and their relationship extends well beyond the expected emotional response to living with pain. Research has identified shared neurobiological pathways — overlapping neurotransmitter dysfunction, altered brain connectivity, dysregulated stress responses, and common inflammatory processes — that help explain why these conditions so frequently travel together. When they co-occur, each condition amplifies the other: depression lowers pain thresholds and reduces engagement with treatment, while chronic pain erodes mood, disrupts sleep, and shrinks the activities that sustain well-being. This article examines the epidemiology of pain-depression comorbidity, the neurobiological mechanisms that underlie their connection, the clinical challenge of distinguishing and assessing both conditions simultaneously, and the evidence for integrated treatment approaches. Dual-action antidepressants, cognitive-behavioral therapy adapted for pain and mood, and behavioral activation strategies offer the strongest evidence for breaking the cycle and improving outcomes for both conditions.',
+      'Chronic pain and depression co-occur far more frequently than chance alone would predict, and their relationship extends well beyond the expected emotional response to living with pain. Research has identified shared neurobiological pathways --- overlapping neurotransmitter dysfunction, altered brain connectivity, dysregulated stress responses, and common inflammatory processes --- that help explain why these conditions so frequently travel together. When they co-occur, each condition amplifies the other: depression lowers pain thresholds and reduces engagement with treatment, while chronic pain erodes mood, disrupts sleep, and shrinks the activities that sustain well-being. This article examines the epidemiology of pain-depression comorbidity, the neurobiological mechanisms that underlie their connection, the clinical challenge of distinguishing and assessing both conditions simultaneously, and the evidence for integrated treatment approaches. Dual-action antidepressants, cognitive-behavioral therapy adapted for pain and mood, and behavioral activation strategies offer the strongest evidence for breaking the cycle and improving outcomes for both conditions.',
     keyFacts: [
       { text: 'People with chronic pain are 2-3 times more likely to develop depression than the general population.', citationIndex: 1 },
       { text: 'Depression reduces pain thresholds by altering descending pain inhibition pathways in the brainstem.', citationIndex: 3 },
       { text: 'Serotonin-norepinephrine reuptake inhibitors (SNRIs) treat both pain and depression through shared neurotransmitter pathways.', citationIndex: 6 },
-      { text: 'Treating depression alone improves pain outcomes, and treating pain alone improves mood — confirming bidirectionality.', citationIndex: 7 },
+      { text: 'Treating depression alone improves pain outcomes, and treating pain alone improves mood --- confirming bidirectionality.', citationIndex: 7 },
       { text: 'Chronic inflammation, measured by elevated CRP and IL-6, is found in both chronic pain and depression.', citationIndex: 4 },
     ],
     videoStatus: 'planned' as const,
     sparkMoment:
-      "Pain and depression are not separate enemies attacking from different directions. They are intertwined, rooted in the same soil of neurobiology — which means that treating one can heal both.",
+      "Pain and depression are not separate enemies attacking from different directions. They are intertwined, rooted in the same soil of neurobiology --- which means that treating one can heal both.",
     practicalExercise: {
       title: 'Dual Tracking: Pain and Mood Journal',
       steps: [
         { title: 'Morning Baseline', description: "Rate your pain (0-10) and mood (0-10) each morning before activities begin. Note sleep quality from the previous night. This captures your starting point before the day's events." },
         { title: 'Activity and Response Log', description: 'Throughout the day, note activities you engage in and briefly rate pain and mood during or after each. Look for activities that lift mood without worsening pain, or that reduce pain without harming mood.' },
         { title: 'Evening Reflection', description: 'Before bed, rate pain and mood again. Identify one positive moment from the day, however small. Note any connection you observed between pain changes and mood shifts.' },
-        { title: 'Weekly Pattern Review', description: 'Review the week and identify your best and worst days. What was different? Look for modifiable factors — activities, social contact, rest, medication timing — that influenced the pain-mood connection.' },
+        { title: 'Weekly Pattern Review', description: 'Review the week and identify your best and worst days. What was different? Look for modifiable factors --- activities, social contact, rest, medication timing --- that influenced the pain-mood connection.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Open Mood Journal',
@@ -1151,7 +1414,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When chronic pain and depression co-occur — and they frequently do — each condition feeds the other
+            When chronic pain and depression co-occur --- and they frequently do --- each condition feeds the other
             in a cycle that can feel impossible to break. Pain saps motivation, narrows activity, and erodes hope.
             Depression lowers pain thresholds, amplifies suffering, and undermines the engagement needed for
             recovery. Understanding that these are not separate problems but interconnected manifestations of
@@ -1161,9 +1424,18 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             People with chronic pain are 2-3 times more likely to develop depression than the general population,
             and people with depression experience pain more intensely and more frequently
             <Citation id="1" index={1} source="Psychological Medicine" year="2023" tier={1} />. This is not
-            simply because living with pain is depressing — though it certainly can be. The relationship is
+            simply because living with pain is depressing --- though it certainly can be. The relationship is
             bidirectional and rooted in shared neurobiological pathways that process both physical pain and
             emotional suffering.
+          </p>
+          <p className="mb-6">
+            The clinical significance of this comorbidity cannot be overstated. When chronic pain and depression
+            co-occur, each condition responds less well to treatment than it would in isolation. Pain medications
+            provide less relief. Antidepressants take longer to work. Physical rehabilitation is harder to
+            sustain. The combined burden exceeds the sum of its parts, creating a state of suffering that demands
+            an integrated understanding and an integrated response. Recognizing that these conditions are
+            biologically linked --- not merely coincidental --- changes the entire approach to treatment and offers
+            genuine pathways toward improvement.
           </p>
         </div>
 
@@ -1171,7 +1443,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Shared Neurobiology: Why Pain and Depression Travel Together
         </h2>
         <p className="mb-6">
-          The overlap between pain and depression is not coincidental — it is structural. The brain regions that
+          The overlap between pain and depression is not coincidental --- it is structural. The brain regions that
           process pain overlap substantially with those involved in mood regulation. The anterior cingulate cortex,
           prefrontal cortex, amygdala, and insula are all critically involved in both pain perception and emotional
           processing
@@ -1180,14 +1452,14 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         <p className="mb-6">
           At the neurotransmitter level, serotonin and norepinephrine play essential roles in both mood regulation
           and pain modulation. In the brainstem, descending pathways that use these neurotransmitters normally
-          inhibit pain signals traveling up the spinal cord — a process called descending pain inhibition.
+          inhibit pain signals traveling up the spinal cord --- a process called descending pain inhibition.
           Depression disrupts these pathways, reducing the brain's natural ability to dampen pain signals
           <Citation id="3" index={3} source="Brain" year="2021" tier={1} />. The result is that depression
           literally makes pain hurt more.
         </p>
         <p className="mb-6">
           Chronic inflammation provides another point of convergence. Elevated levels of pro-inflammatory
-          cytokines — including C-reactive protein, interleukin-6, and tumor necrosis factor-alpha — are
+          cytokines --- including C-reactive protein, interleukin-6, and tumor necrosis factor-alpha --- are
           consistently found in both chronic pain and major depressive disorder
           <Citation id="4" index={4} source="Biological Psychiatry" year="2023" tier={1} />. This shared
           inflammatory state suggests that the conditions may share common upstream drivers, including chronic
@@ -1212,17 +1484,28 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Beyond neurobiology, pain and depression reinforce each other through behavioral and psychological
-          pathways that operate in daily life. Pain leads to reduced activity — less movement, fewer social
+          pathways that operate in daily life. Pain leads to reduced activity --- less movement, fewer social
           engagements, withdrawal from hobbies and roles that provided meaning and pleasure. This activity
           reduction is one of the most potent behavioral drivers of depression.
         </p>
         <p className="mb-6">
-          As depression develops, it brings anhedonia (loss of pleasure), fatigue, and hopelessness — all of
+          As depression develops, it brings anhedonia (loss of pleasure), fatigue, and hopelessness --- all of
           which further reduce the motivation to engage in the very activities that could improve both mood and
           pain. Catastrophic thinking about pain ("This will never get better") mirrors depressive cognitive
           patterns ("Nothing will ever change"). The two conditions become functionally indistinguishable in
           daily experience
           <Citation id="10" index={10} source="Social Science & Medicine" year="2022" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Sleep disturbance serves as a particularly potent accelerant of this cycle. Pain disrupts sleep, poor
+          sleep worsens both pain and mood, and the resulting exhaustion makes every other coping strategy
+          harder to implement. The person who might have the emotional resources to push through a difficult
+          day after a good night's rest finds themselves without that buffer when sleep has been fragmented
+          for weeks or months. Social withdrawal compounds the problem further. Human connection is one of the
+          most reliable buffers against depression, yet chronic pain frequently leads people to cancel plans,
+          decline invitations, and gradually disappear from the social fabric that once sustained them. The
+          resulting loneliness feeds depressive symptoms, which in turn make the effort of social engagement
+          feel even more insurmountable.
         </p>
 
         <QuoteBlock
@@ -1235,15 +1518,15 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Identifying depression in people with chronic pain presents unique clinical challenges. Many symptoms
-          of depression — fatigue, sleep disturbance, appetite changes, difficulty concentrating, reduced
-          activity — overlap directly with symptoms that chronic pain itself produces
+          of depression --- fatigue, sleep disturbance, appetite changes, difficulty concentrating, reduced
+          activity --- overlap directly with symptoms that chronic pain itself produces
           <Citation id="5" index={5} source="Journal of Pain" year="2022" tier={1} />. Clinicians may
           attribute these symptoms to pain alone, leaving depression undiagnosed and untreated.
         </p>
         <p className="mb-6">
           Assessment tools validated for pain populations focus more heavily on cognitive and emotional symptoms
-          of depression — persistent low mood, loss of interest, feelings of worthlessness, guilt, and
-          hopelessness — rather than somatic symptoms that could be explained by the pain condition itself. If
+          of depression --- persistent low mood, loss of interest, feelings of worthlessness, guilt, and
+          hopelessness --- rather than somatic symptoms that could be explained by the pain condition itself. If
           you suspect you may be experiencing depression alongside chronic pain, communicating your emotional
           experience to your healthcare provider is important, even if it feels separate from the "pain problem."
         </p>
@@ -1255,7 +1538,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           The strongest evidence supports treating pain and depression together rather than sequentially. Clinical
           guidelines recommend an integrated approach where both conditions are addressed simultaneously
           <Citation id="9" index={9} source="National Institute for Health and Care Excellence" year="2022" tier={2} />.
-          Importantly, research consistently shows that treating one condition improves the other — treating
+          Importantly, research consistently shows that treating one condition improves the other --- treating
           depression reduces pain severity, and treating pain improves mood
           <Citation id="7" index={7} source="JAMA" year="2022" tier={1} />.
         </p>
@@ -1283,8 +1566,8 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             title: 'Behavioral Activation',
             content: (
               <div>
-                <p className="mb-3">Behavioral activation — systematically reintroducing valued activities despite pain and low mood — has strong evidence for both conditions <Citation id="8" index={8} source="Pain" year="2023" tier={1} />. The approach starts with small, achievable activities and builds gradually.</p>
-                <p>The key insight is that motivation follows action, not the reverse. Waiting to feel motivated before acting keeps the cycle spinning. Starting with activity — even when it feels pointless — begins to generate the positive reinforcement that restores both mood and function.</p>
+                <p className="mb-3">Behavioral activation --- systematically reintroducing valued activities despite pain and low mood --- has strong evidence for both conditions <Citation id="8" index={8} source="Pain" year="2023" tier={1} />. The approach starts with small, achievable activities and builds gradually.</p>
+                <p>The key insight is that motivation follows action, not the reverse. Waiting to feel motivated before acting keeps the cycle spinning. Starting with activity --- even when it feels pointless --- begins to generate the positive reinforcement that restores both mood and function.</p>
               </div>
             ),
           },
@@ -1292,12 +1575,41 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             title: 'Exercise and Movement',
             content: (
               <div>
-                <p className="mb-3">Physical activity has demonstrated efficacy for both chronic pain and depression. For comorbid conditions, gentle, enjoyable movement is the starting point — walking, swimming, gardening, or any activity that produces even mild positive experience.</p>
+                <p className="mb-3">Physical activity has demonstrated efficacy for both chronic pain and depression. For comorbid conditions, gentle, enjoyable movement is the starting point --- walking, swimming, gardening, or any activity that produces even mild positive experience.</p>
                 <p>The anti-inflammatory effects of regular exercise address the shared inflammatory pathways, while the social and achievement dimensions counter depressive withdrawal.</p>
               </div>
             ),
           },
         ]} />
+
+        <h2 id="self-compassion" className="scroll-mt-32 text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          The Role of Self-Compassion
+        </h2>
+        <p className="mb-6">
+          People living with comorbid pain and depression often hold themselves to standards that predate their
+          illness. They compare their current functioning to what they could do before, measure themselves
+          against peers who are not managing chronic conditions, and interpret their limitations as personal
+          failures rather than consequences of a neurobiological state. This self-critical stance is not merely
+          unhelpful --- research suggests it actively worsens both pain and depression by increasing stress
+          hormones, elevating muscle tension, and reinforcing the cognitive patterns that sustain both conditions.
+        </p>
+        <p className="mb-6">
+          Self-compassion --- treating yourself with the same understanding and patience you would offer a close
+          friend in a similar situation --- has emerged as a meaningful therapeutic target. Studies examining
+          self-compassion interventions for chronic pain populations have found improvements in pain
+          acceptance, reduced catastrophizing, and better engagement with treatment. Self-compassion does not
+          mean resignation or abandoning goals. It means acknowledging the difficulty of what you are facing,
+          recognizing that suffering is a shared human experience rather than an individual defect, and
+          choosing to respond to your own struggles with kindness rather than criticism.
+        </p>
+        <p className="mb-6">
+          Practically, self-compassion might look like adjusting expectations on a bad day without guilt,
+          celebrating small accomplishments that others might take for granted, or simply pausing in a moment
+          of frustration to acknowledge that managing chronic pain alongside depression is genuinely hard --- and
+          that the fact you are still trying matters. These are not trivial gestures. They represent a
+          deliberate reorientation of the relationship you have with yourself, and that relationship is one of
+          the most modifiable factors in the pain-depression cycle.
+        </p>
 
         <h2 id="what-you-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What You Can Do
@@ -1312,23 +1624,23 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           opens the door to integrated treatment that addresses both.
         </p>
         <p className="mb-6">
-          Second, consider tracking pain and mood together. The patterns you discover — which activities
-          improve both, which worsen both, how sleep quality affects the next day — provide invaluable
+          Second, consider tracking pain and mood together. The patterns you discover --- which activities
+          improve both, which worsen both, how sleep quality affects the next day --- provide invaluable
           information for tailoring your treatment approach.
         </p>
         <p className="mb-6">
           Third, start small with behavioral activation. Choose one activity that used to bring you pleasure or
-          meaning, scale it down to the smallest possible version, and try it. Not because you feel like it — you
-          probably will not — but because action generates the momentum that feelings alone cannot provide.
+          meaning, scale it down to the smallest possible version, and try it. Not because you feel like it --- you
+          probably will not --- but because action generates the momentum that feelings alone cannot provide.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Pain and Depression: Key Insights">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Shared neurobiology</strong> — pain and depression involve overlapping brain regions, neurotransmitter systems, and inflammatory pathways.</li>
-            <li><strong>Bidirectional amplification</strong> — each condition makes the other worse, but treating either improves both.</li>
-            <li><strong>Integrated treatment works best</strong> — addressing pain and depression simultaneously produces better outcomes than treating them separately.</li>
-            <li><strong>Behavioral activation is powerful</strong> — reintroducing valued activities despite pain and low mood interrupts the cycle at a behavioral level.</li>
-            <li><strong>Assessment matters</strong> — depression in chronic pain is often overlooked; communicating emotional symptoms to your provider is essential.</li>
+            <li><strong>Shared neurobiology</strong> --- pain and depression involve overlapping brain regions, neurotransmitter systems, and inflammatory pathways.</li>
+            <li><strong>Bidirectional amplification</strong> --- each condition makes the other worse, but treating either improves both.</li>
+            <li><strong>Integrated treatment works best</strong> --- addressing pain and depression simultaneously produces better outcomes than treating them separately.</li>
+            <li><strong>Behavioral activation is powerful</strong> --- reintroducing valued activities despite pain and low mood interrupts the cycle at a behavioral level.</li>
+            <li><strong>Assessment matters</strong> --- depression in chronic pain is often overlooked; communicating emotional symptoms to your provider is essential.</li>
           </ul>
         </ArticleCallout>
       </>
@@ -1352,7 +1664,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Exercise', 'Chronic Pain', 'Movement', 'Kinesiophobia'],
     summary:
-      "Movement is one of the most consistently supported interventions for chronic pain, yet it is also one of the most counterintuitive. When everything hurts, the idea of exercise can feel threatening — even dangerous. Fear of movement (kinesiophobia) affects up to 70% of people with chronic pain and is a stronger predictor of disability than the pain itself. This article explores why the chronic pain brain resists movement, the neuroscience behind how gentle exercise reduces pain sensitivity over time, and practical frameworks for starting safely. Evidence supports walking, aquatic exercise, yoga, tai chi, and other low-impact activities as effective approaches. The key principles are starting below your perceived limit, progressing gradually based on time rather than pain, and understanding that temporary discomfort during activity does not mean damage. Graded exposure to movement, guided by a physiotherapist when possible, can rewire the brain's threat assessment of movement and restore both function and confidence.",
+      "Movement is one of the most consistently supported interventions for chronic pain, yet it is also one of the most counterintuitive. When everything hurts, the idea of exercise can feel threatening --- even dangerous. Fear of movement (kinesiophobia) affects up to 70% of people with chronic pain and is a stronger predictor of disability than the pain itself. This article explores why the chronic pain brain resists movement, the neuroscience behind how gentle exercise reduces pain sensitivity over time, and practical frameworks for starting safely. Evidence supports walking, aquatic exercise, yoga, tai chi, and other low-impact activities as effective approaches. The key principles are starting below your perceived limit, progressing gradually based on time rather than pain, and understanding that temporary discomfort during activity does not mean damage. Graded exposure to movement, guided by a physiotherapist when possible, can rewire the brain's threat assessment of movement and restore both function and confidence.",
     keyFacts: [
       { text: 'Exercise reduces chronic pain severity by 15-30% on average across multiple meta-analyses.', citationIndex: 1 },
       { text: 'Kinesiophobia (fear of movement) affects up to 70% of chronic pain patients and predicts disability more than pain intensity.', citationIndex: 3 },
@@ -1362,7 +1674,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
     ],
     videoStatus: 'planned' as const,
     sparkMoment:
-      "Your body was designed to move, and chronic pain has not changed that. What has changed is your nervous system's assessment of threat. Gentle, gradual movement teaches the brain that movement is safe — and in doing so, it begins to quiet the pain.",
+      "Your body was designed to move, and chronic pain has not changed that. What has changed is your nervous system's assessment of threat. Gentle, gradual movement teaches the brain that movement is safe --- and in doing so, it begins to quiet the pain.",
     practicalExercise: {
       title: 'Gentle Movement Starter Journal',
       steps: [
@@ -1390,7 +1702,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Move more" is some of the most commonly given — and most commonly resisted — advice in chronic pain
+            "Move more" is some of the most commonly given --- and most commonly resisted --- advice in chronic pain
             management. When every step sends a jolt through your back, when bending to tie a shoe triggers a
             wave of pain, the suggestion to exercise can feel not only unhelpful but insulting. Yet the evidence
             is clear: gentle, progressive movement is one of the most effective treatments available for chronic
@@ -1402,7 +1714,16 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             <Citation id="1" index={1} source="British Journal of Sports Medicine" year="2023" tier={1} />.
             This effect is comparable to many medications, with far fewer side effects and additional benefits
             for mood, sleep, cardiovascular health, and overall function. The challenge is not whether exercise
-            works — it is how to start when pain makes movement feel dangerous.
+            works --- it is how to start when pain makes movement feel dangerous.
+          </p>
+          <p className="mb-6">
+            The disconnect between evidence and action is not a failure of willpower. It is a predictable
+            consequence of how chronic pain rewires the brain's threat-detection systems. After months or years
+            of pain during movement, the nervous system develops a protective stance that treats physical
+            activity as inherently dangerous. Overcoming this protective stance requires more than motivation ---
+            it requires understanding why the brain resists, what safe movement actually looks like, and how
+            gradual, consistent practice can fundamentally change the nervous system's relationship with the
+            body in motion.
           </p>
         </div>
 
@@ -1410,7 +1731,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           Kinesiophobia: When the Brain Says "Don't Move"
         </h2>
         <p className="mb-6">
-          Kinesiophobia — the fear of movement due to anticipated pain or re-injury — affects up to 70% of
+          Kinesiophobia --- the fear of movement due to anticipated pain or re-injury --- affects up to 70% of
           people with chronic pain
           <Citation id="3" index={3} source="European Journal of Pain" year="2023" tier={1} />. Research shows
           it is a stronger predictor of disability and work absence than pain intensity itself. This means that
@@ -1419,14 +1740,14 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         <p className="mb-6">
           Kinesiophobia develops through a logical but ultimately counterproductive process. After an injury, the
           brain learns to associate certain movements with pain. This association persists even after the original
-          injury heals, because the nervous system has become sensitized — it continues to generate pain signals
+          injury heals, because the nervous system has become sensitized --- it continues to generate pain signals
           as a protective warning, even when there is no ongoing tissue damage. The brain interprets the pain as
           evidence that movement is harmful, reinforcing avoidance.
         </p>
         <p className="mb-6">
           The problem is that avoidance creates its own problems. Muscles weaken, joints stiffen, cardiovascular
           fitness declines, and the body becomes more vulnerable to pain with less and less activity. The
-          threshold for triggering pain drops, confirming the fear: "See, even that small movement hurt — I
+          threshold for triggering pain drops, confirming the fear: "See, even that small movement hurt --- I
           shouldn't move." This is the deconditioning trap, and it is one of the primary mechanisms through
           which acute pain becomes chronic.
         </p>
@@ -1458,18 +1779,18 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           How Exercise Reduces Pain: The Neuroscience
         </h2>
         <p className="mb-6">
-          Exercise does not reduce pain simply by strengthening muscles — though that contributes. Its primary
+          Exercise does not reduce pain simply by strengthening muscles --- though that contributes. Its primary
           mechanisms are neurological, operating through at least four distinct pathways.
         </p>
         <p className="mb-6">
-          First, moderate exercise activates the endogenous opioid and endocannabinoid systems — the body's
+          First, moderate exercise activates the endogenous opioid and endocannabinoid systems --- the body's
           built-in pain-relief network. These natural chemicals dampen pain signals and produce feelings of
           well-being
           <Citation id="2" index={2} source="Pain" year="2022" tier={1} />. This exercise-induced hypoalgesia
           (pain reduction) can last for hours after a single session.
         </p>
         <p className="mb-6">
-          Second, regular exercise promotes neuroplasticity — the brain's ability to reorganize its neural
+          Second, regular exercise promotes neuroplasticity --- the brain's ability to reorganize its neural
           pathways. In chronic pain, the brain's representation of the affected body area becomes distorted.
           Consistent, gentle movement helps normalize these representations, essentially "re-mapping" the
           body in the brain
@@ -1483,9 +1804,19 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           pain processing.
         </p>
         <p className="mb-6">
-          Fourth, exercise improves sleep quality, mood, and stress resilience — all of which modulate pain
+          Fourth, exercise improves sleep quality, mood, and stress resilience --- all of which modulate pain
           perception. The combined effect of these four mechanisms makes exercise one of the most comprehensive
           pain interventions available.
+        </p>
+        <p className="mb-6">
+          There is a fifth mechanism that deserves attention: the psychological dimension of successful movement.
+          Every session of gentle exercise that does not produce a catastrophic flare provides the brain with
+          evidence that movement is safer than it had predicted. This experiential learning is far more powerful
+          than verbal reassurance. Over weeks of consistent practice, the accumulated evidence gradually shifts
+          the nervous system's threat assessment, reducing the anticipatory fear that precedes activity and the
+          hypervigilance that accompanies it. In this way, exercise functions not only as a physical intervention
+          but as a form of exposure therapy --- systematically demonstrating to the brain that movement and
+          safety can coexist.
         </p>
 
         <h2 id="types-of-exercise" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1495,7 +1826,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           The World Health Organization recommends that adults with chronic conditions aim for at least
           150 minutes of moderate physical activity per week, adapted to individual abilities
           <Citation id="9" index={9} source="World Health Organization" year="2022" tier={2} />. The best
-          exercise is the one you will actually do consistently — enjoyment and sustainability matter more than
+          exercise is the one you will actually do consistently --- enjoyment and sustainability matter more than
           type or intensity.
         </p>
 
@@ -1505,7 +1836,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             label: 'Walking',
             content: (
               <div>
-                <p className="mb-3">Walking is the most accessible and widely studied exercise for chronic pain. It requires no equipment, can be done at any pace, and allows precise control over duration and intensity. Start with whatever distance you can manage without a significant flare — even if that is two minutes — and build from there.</p>
+                <p className="mb-3">Walking is the most accessible and widely studied exercise for chronic pain. It requires no equipment, can be done at any pace, and allows precise control over duration and intensity. Start with whatever distance you can manage without a significant flare --- even if that is two minutes --- and build from there.</p>
               </div>
             ),
           },
@@ -1523,7 +1854,7 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
             label: 'Yoga',
             content: (
               <div>
-                <p className="mb-3">Gentle yoga (restorative, yin, or chair yoga) combines movement, breathing, and mindfulness — addressing physical deconditioning and psychological components simultaneously <Citation id="7" index={7} source="Annals of Internal Medicine" year="2022" tier={1} />. Choose classes specifically designed for chronic pain or beginners, and communicate your condition to instructors.</p>
+                <p className="mb-3">Gentle yoga (restorative, yin, or chair yoga) combines movement, breathing, and mindfulness --- addressing physical deconditioning and psychological components simultaneously <Citation id="7" index={7} source="Annals of Internal Medicine" year="2022" tier={1} />. Choose classes specifically designed for chronic pain or beginners, and communicate your condition to instructors.</p>
               </div>
             ),
           },
@@ -1548,18 +1879,18 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
         </p>
 
         <ProgressSteps steps={[
-          { title: 'Find Your Baseline', description: 'On a moderate pain day, do your chosen activity until you feel the first hint that continuing might not be wise. Note the time. Your starting dose is 50% of that time — this becomes your consistent daily amount regardless of how you feel.' },
-          { title: 'Consistency Over Intensity', description: 'Do your baseline amount every day for one week, even on good days. Resist the temptation to do more when pain is low — this boom-bust pattern causes the flares that reinforce kinesiophobia.' },
+          { title: 'Find Your Baseline', description: 'On a moderate pain day, do your chosen activity until you feel the first hint that continuing might not be wise. Note the time. Your starting dose is 50% of that time --- this becomes your consistent daily amount regardless of how you feel.' },
+          { title: 'Consistency Over Intensity', description: 'Do your baseline amount every day for one week, even on good days. Resist the temptation to do more when pain is low --- this boom-bust pattern causes the flares that reinforce kinesiophobia.' },
           { title: 'Gradual Progression', description: 'After a stable week, increase by no more than 10%. If you walked 5 minutes, move to 5.5 minutes. This pace feels frustratingly slow, but it builds capacity without triggering the threat response.' },
-          { title: 'Expect Fluctuation', description: 'Some days will be harder than others. The goal is not a pain-free exercise experience — it is a consistent, gradually expanding movement practice that your nervous system learns to trust over weeks and months.' },
+          { title: 'Expect Fluctuation', description: 'Some days will be harder than others. The goal is not a pain-free exercise experience --- it is a consistent, gradually expanding movement practice that your nervous system learns to trust over weeks and months.' },
         ]} />
 
         <h2 id="graded-exposure" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Graded Exposure: Retraining the Threat Response
         </h2>
         <p className="mb-6">
-          For people with significant kinesiophobia, graded exposure — a structured program of gradually facing
-          feared movements — has strong evidence for reducing fear and improving function
+          For people with significant kinesiophobia, graded exposure --- a structured program of gradually facing
+          feared movements --- has strong evidence for reducing fear and improving function
           <Citation id="5" index={5} source="The Lancet" year="2023" tier={1} />. Guided by a physiotherapist,
           graded exposure creates a hierarchy of feared movements ranked from least to most threatening, then
           works through them systematically.
@@ -1582,29 +1913,68 @@ export const chronicPainAndTheMindArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="social-psychological-benefits" className="scroll-mt-32 text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6">
+          The Social and Psychological Benefits of Movement
+        </h2>
+        <p className="mb-6">
+          The benefits of movement for people with chronic pain extend well beyond the neurological and
+          physical. Exercise, particularly when done in group settings, provides social connection that chronic
+          pain otherwise tends to erode. Attending a gentle yoga class, walking with a friend, or participating
+          in an aquatic exercise group offers regular human contact, shared purpose, and the normalizing
+          experience of being in a room with others who are also working to reclaim their bodies. For people
+          whose social world has contracted around their pain, these connections can be profoundly restorative.
+        </p>
+        <p className="mb-6">
+          Movement also provides a sense of agency and accomplishment that chronic pain frequently strips away.
+          When so much of life with chronic pain feels defined by what you cannot do, completing a walk or
+          finishing a stretching routine --- however brief --- is a concrete demonstration of capability. Over
+          time, these small victories accumulate into a shifted self-concept: from someone defined by
+          limitations to someone actively engaged in their own recovery. This shift in identity, while gradual
+          and sometimes fragile, is one of the most therapeutically valuable outcomes of a sustained movement
+          practice.
+        </p>
+        <p className="mb-6">
+          The mood benefits of exercise are independent of its effects on pain. Physical activity triggers the
+          release of endorphins, serotonin, and brain-derived neurotrophic factor --- all of which improve mood,
+          reduce anxiety, and support cognitive function. For people living with the double burden of chronic
+          pain and depression, even modest amounts of movement can begin to address both conditions
+          simultaneously. The key is framing exercise not as a performance to be measured but as a practice to
+          be maintained, understanding that its value lies in consistency rather than intensity, and that the
+          body's response to regular gentle movement is cumulative and enduring.
+        </p>
+
         <h2 id="long-term-perspective" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Long-Term Perspective
         </h2>
         <p className="mb-6">
-          The benefits of exercise for chronic pain are cumulative. The first few sessions may not feel better —
+          The benefits of exercise for chronic pain are cumulative. The first few sessions may not feel better ---
           they may even feel harder. But over weeks and months, consistent gentle movement reshapes the nervous
           system's response to physical activity. Pain thresholds rise, endogenous pain relief systems
           strengthen, inflammation decreases, and the psychological burden of kinesiophobia eases.
         </p>
         <p className="mb-6">
           This is not about becoming an athlete or achieving a specific fitness level. It is about reclaiming
-          movement as something your body can do — safely, gradually, and on your own terms. Every step, every
+          movement as something your body can do --- safely, gradually, and on your own terms. Every step, every
           stretch, every gentle reach teaches your nervous system that your body is capable and resilient, even
           in the presence of pain.
+        </p>
+        <p className="mb-6">
+          Setbacks are part of the process. Flares will happen --- triggered by weather changes, stress, illness,
+          or simply the unpredictable nature of chronic pain. The goal during a flare is not to maintain your
+          current level of activity at all costs but to maintain some activity, even if it is reduced. Dropping
+          back to an earlier level temporarily and then rebuilding preserves the habit and the neural adaptations
+          you have built, while pushing through a severe flare risks reinforcing the association between movement
+          and suffering. Flexibility and self-compassion during difficult periods are not signs of failure; they
+          are signs of sophisticated self-management.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Movement and Chronic Pain">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Exercise reduces pain by 15-30%</strong> — comparable to many medications, with additional benefits for mood and function.</li>
-            <li><strong>Fear of movement predicts disability more than pain</strong> — addressing kinesiophobia is as important as managing pain.</li>
-            <li><strong>Start below your limit</strong> — beginning at 50% of perceived capacity prevents flares and builds confidence.</li>
-            <li><strong>Consistency beats intensity</strong> — small daily amounts are more effective than sporadic bursts.</li>
-            <li><strong>Multiple types work</strong> — walking, aquatic exercise, yoga, and tai chi all have strong evidence for chronic pain.</li>
+            <li><strong>Exercise reduces pain by 15-30%</strong> --- comparable to many medications, with additional benefits for mood and function.</li>
+            <li><strong>Fear of movement predicts disability more than pain</strong> --- addressing kinesiophobia is as important as managing pain.</li>
+            <li><strong>Start below your limit</strong> --- beginning at 50% of perceived capacity prevents flares and builds confidence.</li>
+            <li><strong>Consistency beats intensity</strong> --- small daily amounts are more effective than sporadic bursts.</li>
+            <li><strong>Multiple types work</strong> --- walking, aquatic exercise, yoga, and tai chi all have strong evidence for chronic pain.</li>
           </ul>
         </ArticleCallout>
       </>

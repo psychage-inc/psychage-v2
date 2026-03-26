@@ -38,7 +38,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Trauma doesn't always end with the person who experienced it. Sometimes, pain echoes through generations — shaping how families communicate, cope, and connect long after the original event.
+            Trauma doesn't always end with the person who experienced it. Sometimes, pain echoes through generations --- shaping how families communicate, cope, and connect long after the original event.
           </p>
           <p className="mb-6">
             Intergenerational trauma refers to the transmission of trauma effects from one generation to the next <Citation id="1" index={1} source="Psychiatric Times" year="2018" tier={2} />. This can happen through parenting behaviors, family narratives, communication patterns, and even biological mechanisms <Citation id="2" index={2} source="Biological Psychiatry" year="2016" tier={1} />.
@@ -78,7 +78,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
               title: 'Family Narratives',
               content: (
                 <p>
-                  Stories families tell about themselves — "we're survivors,", "we can't trust anyone,", "the world is dangerous" — create identity frameworks that children internalize.
+                  Stories families tell about themselves --- "we're survivors,", "we can't trust anyone,", "the world is dangerous" --- create identity frameworks that children internalize.
                 </p>
               ),
             },
@@ -87,7 +87,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
               title: 'Epigenetic Changes',
               content: (
                 <p>
-                  Emerging research suggests trauma may cause epigenetic changes — modifications in how genes are expressed — that can be passed to offspring <Citation id="2" index={2} source="Biological Psychiatry" year="2016" tier={1} />.
+                  Emerging research suggests trauma may cause epigenetic changes --- modifications in how genes are expressed --- that can be passed to offspring <Citation id="2" index={2} source="Biological Psychiatry" year="2016" tier={1} />.
                 </p>
               ),
             },
@@ -137,7 +137,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           steps={[
             {
               title: 'Acknowledge the Past',
-              description: <p>Learn about your family's history — what they experienced, how they survived, what they lost. Understanding context reduces self-blame.</p>,
+              description: <p>Learn about your family's history --- what they experienced, how they survived, what they lost. Understanding context reduces self-blame.</p>,
             },
             {
               title: 'Identify Patterns',
@@ -197,7 +197,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
             Can the trauma your grandmother experienced change how your genes work? It sounds like science fiction, but emerging research in epigenetics suggests the answer might be yes.
           </p>
           <p className="mb-6">
-            Epigenetics is the study of how behaviors and environment can cause changes that affect the way genes are expressed — without altering the DNA sequence itself <Citation id="1" index={1} source="Nature Neuroscience" year="2014" tier={1} />. These changes can potentially be passed to future generations.
+            Epigenetics is the study of how behaviors and environment can cause changes that affect the way genes are expressed --- without altering the DNA sequence itself <Citation id="1" index={1} source="Nature Neuroscience" year="2014" tier={1} />. These changes can potentially be passed to future generations.
           </p>
         </div>
 
@@ -208,7 +208,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           Think of DNA as a recipe book and epigenetics as the sticky notes that mark which recipes to use. Your DNA sequence stays the same, but epigenetic modifications determine which genes are "turned on" or "turned off" <Citation id="5" index={5} source="Nature Reviews Genetics" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          These modifications happen through processes like DNA methylation and histone modification. Environmental factors — including stress, nutrition, and trauma — can trigger these changes.
+          These modifications happen through processes like DNA methylation and histone modification. Environmental factors --- including stress, nutrition, and trauma --- can trigger these changes.
         </p>
 
         <StatCard
@@ -245,7 +245,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           Much of what we know about epigenetic trauma transmission comes from animal studies. Research on mice has shown that fear conditioning can create epigenetic changes that affect offspring's fear responses <Citation id="1" index={1} source="Nature Neuroscience" year="2014" tier={1} />.
         </p>
         <p className="mb-6">
-          In one experiment, mice were trained to fear a specific smell. Their descendants — who had never been exposed to the conditioning — showed heightened sensitivity to the same smell, suggesting inherited behavioral changes.
+          In one experiment, mice were trained to fear a specific smell. Their descendants --- who had never been exposed to the conditioning --- showed heightened sensitivity to the same smell, suggesting inherited behavioral changes.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -261,7 +261,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           The field of epigenetic trauma transmission is exciting but still developing. Important limitations include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Most human studies are correlational, not causal — we see associations but can't prove direct transmission</li>
+          <li>Most human studies are correlational, not causal --- we see associations but can't prove direct transmission</li>
           <li>Social and environmental factors are hard to separate from biological ones</li>
           <li>Epigenetic marks are often erased during reproduction, though some can persist</li>
           <li>Sample sizes are often small, making findings preliminary</li>
@@ -274,7 +274,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           Even if epigenetic trauma transmission is real, it doesn't mean you're doomed by your ancestors' experiences. Epigenetic changes are potentially reversible <Citation id="6" index={6} source="Cell" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          Positive environmental factors — therapy, supportive relationships, stress management — may help modify epigenetic marks <Citation id="8" index={8} source="Annual Review of Psychology" year="2020" tier={1} />. Understanding the biology of trauma transmission empowers you to actively work toward healing.
+          Positive environmental factors --- therapy, supportive relationships, stress management --- may help modify epigenetic marks <Citation id="8" index={8} source="Annual Review of Psychology" year="2020" tier={1} />. Understanding the biology of trauma transmission empowers you to actively work toward healing.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -311,7 +311,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I sound just like my mother.", "I swore I'd never do what my father did, and here I am doing it." Breaking family patterns is one of the hardest — and most important — things you can do.
+            "I sound just like my mother.", "I swore I'd never do what my father did, and here I am doing it." Breaking family patterns is one of the hardest --- and most important --- things you can do.
           </p>
           <p className="mb-6">
             Research shows that many people repeat dysfunctional family patterns even when they consciously want to do things differently <Citation id="1" index={1} source="Child Abuse & Neglect" year="2018" tier={1} />. But cycle-breaking is possible with awareness, intention, and support.
@@ -398,7 +398,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           Step 5: Practice Self-Compassion
         </h2>
         <p className="mb-6">
-          You will slip. You'll hear your parent's words coming out of your mouth. This doesn't mean you've failed — it means you're human <Citation id="3" index={3} source="Mindfulness" year="2020" tier={1} />.
+          You will slip. You'll hear your parent's words coming out of your mouth. This doesn't mean you've failed --- it means you're human <Citation id="3" index={3} source="Mindfulness" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Self-compassion accelerates change because it allows you to acknowledge mistakes without shame spirals. Notice the slip, repair if needed, and recommit to your chosen path.
@@ -416,7 +416,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Your brain has lifelong neuroplasticity — the ability to form new neural pathways <Citation id="8" index={8} source="Neuroscience & Biobehavioral Reviews" year="2019" tier={1} />. The patterns you inherited aren't permanent. With intention and practice, you can create new ones.
+            Your brain has lifelong neuroplasticity --- the ability to form new neural pathways <Citation id="8" index={8} source="Neuroscience & Biobehavioral Reviews" year="2019" tier={1} />. The patterns you inherited aren't permanent. With intention and practice, you can create new ones.
           </p>
         </ArticleCallout>
       </>
@@ -448,7 +448,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Some trauma doesn't happen to individuals — it happens to entire communities. Slavery, genocide, colonization, forced displacement — these collective wounds echo through generations, affecting families and communities today.
+            Some trauma doesn't happen to individuals --- it happens to entire communities. Slavery, genocide, colonization, forced displacement --- these collective wounds echo through generations, affecting families and communities today.
           </p>
           <p className="mb-6">
             Cultural trauma (also called historical or collective trauma) refers to the psychological and social impacts of large-scale traumatic events experienced by a cultural or ethnic group <Citation id="1" index={1} source="American Journal of Public Health" year="2017" tier={2} />.
@@ -593,7 +593,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Understanding cultural trauma isn't about dwelling on the past — it's about recognizing how history shapes the present so you can make conscious choices about the future. Your healing contributes to your community's healing.
+            Understanding cultural trauma isn't about dwelling on the past --- it's about recognizing how history shapes the present so you can make conscious choices about the future. Your healing contributes to your community's healing.
           </p>
         </ArticleCallout>
       </>
@@ -664,7 +664,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Dangerous border crossings and exploitative smugglers</li>
                     <li>Prolonged time in overcrowded refugee camps</li>
-                    <li>Family separation — not knowing if loved ones survived</li>
+                    <li>Family separation --- not knowing if loved ones survived</li>
                     <li>Physical hardship, hunger, illness</li>
                     <li>Ongoing fear of deportation or rejection</li>
                   </ul>
@@ -682,7 +682,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
                     <li>Discrimination and xenophobia</li>
                     <li>Economic hardship and underemployment</li>
                     <li>Loss of professional identity and social status</li>
-                    <li>Survivor's guilt — safety while others remain in danger</li>
+                    <li>Survivor's guilt --- safety while others remain in danger</li>
                     <li>Grief over lost culture, community, and homeland</li>
                   </ul>
                 </div>
@@ -724,7 +724,7 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           Second-Generation Effects
         </h2>
         <p className="mb-6">
-          Children of refugees — even those born in the new country — carry the impact of their parents" trauma <Citation id="7" index={7} source="Social Science & Medicine" year="2018" tier={1} />:
+          Children of refugees --- even those born in the new country --- carry the impact of their parents" trauma <Citation id="7" index={7} source="Social Science & Medicine" year="2018" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Parents" hypervigilance and fear can create anxious attachment</li>
@@ -738,11 +738,11 @@ export const intergenerationalTraumaHealingArticlesA: Article[] = [
           Cultural Bereavement
         </h2>
         <p className="mb-6">
-          Refugees experience a unique form of grief called cultural bereavement — mourning the loss of homeland, language, customs, social networks, and identity <Citation id="5" index={5} source="Transcultural Psychiatry" year="2019" tier={1} />. This grief is often unrecognized because the person is "safe" in the new country.
+          Refugees experience a unique form of grief called cultural bereavement --- mourning the loss of homeland, language, customs, social networks, and identity <Citation id="5" index={5} source="Transcultural Psychiatry" year="2019" tier={1} />. This grief is often unrecognized because the person is "safe" in the new country.
         </p>
 
         <QuoteBlock
-          quote="You grieve not just the place, but who you were in that place. Your language, your profession, your social standing — all left behind."
+          quote="You grieve not just the place, but who you were in that place. Your language, your profession, your social standing --- all left behind."
           attribution="Dr. Afifa Ahmed"
           role="Refugee Mental Health Researcher"
           source="Cultural Bereavement in Forced Migration"

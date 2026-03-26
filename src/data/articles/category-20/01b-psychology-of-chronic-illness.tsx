@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 1 — Psychology of Chronic Illness | Articles 6–10
+// Subcategory 1 --- Psychology of Chronic Illness | Articles 6--10
 // ============================================================================
 
 export const psychologyOfChronicIllnessArticlesB: Article[] = [
@@ -36,12 +36,12 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     tags: ['Health Anxiety', 'Chronic Illness', 'Self-Help', 'Body Awareness'],
 
     summary:
-      'When you live with a chronic illness, every new sensation can trigger a cascade of worry: Is this a flare? A new complication? Or just a normal part of having a body? Research suggests that between 20 and 40 percent of people with chronic health conditions develop clinically significant health anxiety — a rate far higher than the general population. This anxiety is not irrational; it grows from real experiences of medical unpredictability. But when worry becomes constant, it can paradoxically interfere with the very health behaviors that matter most: attending appointments, following treatment plans, and maintaining quality of life. This article explores how to distinguish between productive medical vigilance and anxiety that has become its own source of suffering, offering concrete strategies for staying alert without staying afraid.',
+      'When you live with a chronic illness, every new sensation can trigger a cascade of worry: Is this a flare? A new complication? Or just a normal part of having a body? Research suggests that between 20 and 40 percent of people with chronic health conditions develop clinically significant health anxiety --- a rate far higher than the general population. This anxiety is not irrational; it grows from real experiences of medical unpredictability. But when worry becomes constant, it can paradoxically interfere with the very health behaviors that matter most: attending appointments, following treatment plans, and maintaining quality of life. This article explores how to distinguish between productive medical vigilance and anxiety that has become its own source of suffering, offering concrete strategies for staying alert without staying afraid.',
 
     keyFacts: [
-      { text: '20–40% of people with chronic illness develop clinically significant health anxiety', citationIndex: 1 },
+      { text: '20--40% of people with chronic illness develop clinically significant health anxiety', citationIndex: 1 },
       { text: 'Health anxiety in medically ill populations is associated with 30% more healthcare utilization', citationIndex: 2 },
-      { text: 'Cognitive behavioral therapy reduces health anxiety severity by 40–60% in controlled trials', citationIndex: 3 },
+      { text: 'Cognitive behavioral therapy reduces health anxiety severity by 40--60% in controlled trials', citationIndex: 3 },
       { text: 'Body hypervigilance can amplify symptom perception by up to 50% compared to neutral monitoring', citationIndex: 4 },
       { text: 'Only 25% of people with chronic illness and co-occurring anxiety receive treatment for the anxiety', citationIndex: 5 },
     ],
@@ -49,14 +49,14 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      "Your worry is not a character flaw. It is the natural response of a brain that has learned — through lived experience — that bodies can betray you. The goal is not to stop caring about your health. It is to care without being consumed.",
+      "Your worry is not a character flaw. It is the natural response of a brain that has learned --- through lived experience --- that bodies can betray you. The goal is not to stop caring about your health. It is to care without being consumed.",
 
     practicalExercise: {
       title: 'The Worry Sorting Exercise',
       steps: [
-        { title: 'Name the worry', description: 'Write down the specific health concern. Be as concrete as possible — not "something is wrong" but "this sharp pain in my left side has been present for three days."' },
+        { title: 'Name the worry', description: 'Write down the specific health concern. Be as concrete as possible --- not "something is wrong" but "this sharp pain in my left side has been present for three days."' },
         { title: 'Check the evidence', description: "Ask: Has my doctor told me this specific symptom warrants urgent attention? Is this consistent with my known condition? Is there an objective change I can measure (temperature, swelling, function)?" },
-        { title: 'Assign a category', description: 'Sort the worry into one of three buckets: (A) Contact my care team now, (B) Monitor and note for next appointment, or (C) Acknowledge and release — this is anxiety talking.' },
+        { title: 'Assign a category', description: 'Sort the worry into one of three buckets: (A) Contact my care team now, (B) Monitor and note for next appointment, or (C) Acknowledge and release --- this is anxiety talking.' },
         { title: 'Act on the category', description: "Follow through on what the category requires. For Category C, practice one round of slow breathing and redirect your attention to an engaging activity for 20 minutes." },
       ],
       toolLink: '/tools/mood-journal',
@@ -83,13 +83,13 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             The moment a doctor says "chronic," something shifts in how you inhabit your own body.
             Every twinge, every flutter, every unfamiliar ache gets filtered through a new lens:
             Is this my condition? Is it getting worse? Should I call someone? That vigilance can
-            be protective — it can catch real problems early. But it can also become a prison,
+            be protective --- it can catch real problems early. But it can also become a prison,
             trapping you in a cycle of scanning, worrying, and scanning again that is itself a
             form of suffering.
           </p>
           <p className="mb-6">
             Research shows that 20 to 40 percent of people living with chronic health conditions
-            develop clinically significant health anxiety — a rate several times higher than the
+            develop clinically significant health anxiety --- a rate several times higher than the
             general population <Citation id="1" index={1} source="Journal of Psychosomatic Research" year="2022" tier={1} />.
             This is not weakness. It is the predictable response of a nervous system that has
             learned, through painful experience, that bodies can produce genuine emergencies. The
@@ -109,8 +109,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           always behave predictably <Citation id="9" index={9} source="Journal of Anxiety Disorders" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          The brain's threat detection system — centered on the amygdala and its connections to the
-          insula, a region that processes internal body signals — becomes calibrated to a higher
+          The brain's threat detection system --- centered on the amygdala and its connections to the
+          insula, a region that processes internal body signals --- becomes calibrated to a higher
           baseline of alertness. Neuroimaging research has shown that people with health anxiety
           exhibit heightened interoceptive processing: they literally perceive bodily sensations more
           intensely than people without health anxiety <Citation id="8" index={8} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
@@ -120,14 +120,24 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           A key psychological driver is intolerance of uncertainty. Chronic illness introduces a
-          permanent uncertainty into daily life — you cannot know for certain what tomorrow will
+          permanent uncertainty into daily life --- you cannot know for certain what tomorrow will
           bring. For people who struggle with ambiguity, this uncertainty becomes its own source
           of distress, independent of any particular symptom <Citation id="9" index={9} source="Journal of Anxiety Disorders" year="2022" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Social context intensifies the problem. People with chronic illness frequently encounter
+          well-meaning friends and family who either catastrophize alongside them --- reinforcing the
+          sense that every symptom is dangerous --- or minimize their concerns, insisting they are
+          overreacting. Neither response helps. The person caught between these poles learns to
+          distrust their own judgment, which only deepens the anxiety cycle. Medical trauma compounds
+          this further: a history of delayed diagnoses, emergency hospitalizations, or being
+          dismissed by providers teaches the nervous system that vigilance is the only reliable
+          form of self-protection.
         </p>
 
         <StatCard
           stats={[
-            { value: '20–40', suffix: '%', label: 'of chronic illness patients develop health anxiety' },
+            { value: '20--40', suffix: '%', label: 'of chronic illness patients develop health anxiety' },
             { value: 30, suffix: '%', label: 'more healthcare visits driven by anxiety, not disease progression' },
             { value: 75, suffix: '%', label: 'with co-occurring anxiety go untreated for the anxiety itself' },
           ]}
@@ -153,17 +163,28 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             ['Response to reassurance', 'Calms down after clear medical input', 'Relief is temporary; worry returns quickly'],
             ['Behavioral impact', 'Leads to appropriate action (call doctor, monitor)', 'Leads to excessive checking, avoidance, or both'],
             ['Emotional tone', 'Concern with capacity to problem-solve', 'Dread, helplessness, catastrophic thinking'],
-            ['Body scanning', 'Targeted — checking a specific area or function', 'Generalized — constantly scanning entire body'],
+            ['Body scanning', 'Targeted --- checking a specific area or function', 'Generalized --- constantly scanning entire body'],
           ]}
         />
 
         <p className="mb-6">
           One of the most telling differences is what happens after reassurance. When a legitimate
-          concern is addressed — a doctor explains what a symptom means, a test comes back normal —
+          concern is addressed --- a doctor explains what a symptom means, a test comes back normal ---
           productive vigilance relaxes. Health anxiety, by contrast, finds the reassurance
           insufficient. The relief lasts hours or days before the worry regenerates, often
           attaching to a new symptom or a new interpretation of the same
           one <Citation id="6" index={6} source="National Institute for Health and Care Excellence (NICE)" year="2024" tier={3} />.
+        </p>
+        <p className="mb-6">
+          Another distinguishing marker is the scope of disruption. Productive vigilance stays
+          contained --- it concerns a specific medical issue and, once addressed, recedes into the
+          background of daily life. Health anxiety, by contrast, bleeds into everything. It
+          occupies mental bandwidth during meals, during conversations with loved ones, during
+          work tasks that have nothing to do with health. It becomes the default state of
+          consciousness rather than a temporary response to a specific trigger. People living
+          with this pattern often describe a sense of never being fully present in any moment
+          because part of their attention is always monitoring, always bracing for the next sign
+          of trouble.
         </p>
 
         <h2 id="the-body-scanning-trap" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -172,8 +193,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <p className="mb-6">
           One of the most counterintuitive findings in health anxiety research is that paying
           closer attention to your body can make symptoms feel worse. A 2023 meta-analysis
-          found that attentional bias toward bodily sensations — the tendency to automatically
-          direct awareness to physical feelings — amplifies subjective symptom intensity by
+          found that attentional bias toward bodily sensations --- the tendency to automatically
+          direct awareness to physical feelings --- amplifies subjective symptom intensity by
           up to 50 percent compared to neutral
           monitoring <Citation id="4" index={4} source="Clinical Psychology Review" year="2023" tier={1} />.
         </p>
@@ -186,10 +207,20 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           flagged as potential dangers, amplified in intensity, and pushed into conscious
           awareness <Citation id="8" index={8} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.
         </p>
+        <p className="mb-6">
+          The trap is circular. Heightened attention detects more sensations, more sensations
+          generate more worry, and more worry intensifies the attention. Over weeks and months,
+          this loop can narrow a person's entire relationship with their body to one of
+          surveillance. Moments of physical pleasure, relaxation, or neutral comfort get crowded
+          out by the constant search for something wrong. The body stops being a place you live
+          in and becomes a minefield you navigate. Breaking this cycle requires not less awareness
+          of the body but a fundamentally different kind of awareness --- one rooted in curiosity
+          rather than fear, and in observation rather than judgment.
+        </p>
 
         <ArticleCallout variant="key-takeaway" title="The Amplification Paradox">
           <p>
-            The harder you look for symptoms, the more symptoms you find — not because your
+            The harder you look for symptoms, the more symptoms you find --- not because your
             condition is worsening, but because attention itself changes perception. This is
             not a failure of willpower. It is a well-documented feature of how the human
             nervous system processes threat signals. Understanding this mechanism is the first
@@ -215,8 +246,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Rather than monitoring your body continuously, designate specific times — once
-                    in the morning and once in the evening — to check in with how you feel. Outside
+                    Rather than monitoring your body continuously, designate specific times --- once
+                    in the morning and once in the evening --- to check in with how you feel. Outside
                     these windows, practice redirecting your attention when you notice body scanning.
                     This reduces overall hypervigilance while maintaining genuine awareness.
                   </p>
@@ -228,8 +259,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Writing down symptoms as they occur — with objective descriptors like location,
-                    intensity on a 1–10 scale, and duration — externalizes the worry. Over time,
+                    Writing down symptoms as they occur --- with objective descriptors like location,
+                    intensity on a 1--10 scale, and duration --- externalizes the worry. Over time,
                     the journal provides data that can distinguish anxiety-driven perceptions from
                     genuine patterns of disease activity.
                   </p>
@@ -270,21 +301,55 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Health anxiety does not always manifest as excessive doctor visits. For some people,
-          it drives avoidance — skipping appointments, refusing tests, or not taking medication
+          it drives avoidance --- skipping appointments, refusing tests, or not taking medication
           because engaging with the medical system triggers overwhelming fear. A 2021 study found
           that health anxiety is associated with a 30 percent increase in healthcare utilization
           among some patients and a dramatic decrease among
           others <Citation id="2" index={2} source="General Hospital Psychiatry" year="2021" tier={1} />.
-          Both patterns — over-engagement and avoidance — are driven by the same underlying
+          Both patterns --- over-engagement and avoidance --- are driven by the same underlying
           intolerance of uncertainty.
         </p>
         <p className="mb-6">
           If you recognize yourself in the avoidance pattern, this is particularly important to
           address. Skipping monitoring or treatment because of anxiety can allow genuine medical
           issues to progress unchecked. Working with a mental health professional who understands
-          chronic illness — ideally someone trained in health psychology or psycho-oncology — can
+          chronic illness --- ideally someone trained in health psychology or psycho-oncology --- can
           help break this
           cycle <Citation id="7" index={7} source="National Institute of Mental Health" year="2024" tier={2} />.
+        </p>
+
+        <h2 id="the-role-of-relationships-and-communication" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Role of Relationships and Communication
+        </h2>
+        <p className="mb-6">
+          Health anxiety does not exist in a vacuum. It shapes and is shaped by the relationships
+          closest to you --- partners, family members, friends, and coworkers who witness your
+          struggle and respond in ways that can either ease or amplify it. When a loved one
+          repeatedly asks "Are you okay?" or visibly tenses whenever you mention a symptom,
+          they unintentionally validate the threat response your brain is already running. When
+          they dismiss your concern with "You are fine, stop worrying," they invalidate an
+          experience that feels deeply real, which can drive the anxiety underground where it
+          festers without the relief of shared expression.
+        </p>
+        <p className="mb-6">
+          Communication with your inner circle about what health anxiety actually is --- and what
+          kind of response helps --- can meaningfully reduce its grip. Many couples and families
+          benefit from establishing a shared language: a way for the anxious person to signal
+          that they are having a worry moment without triggering a cascade of concern from
+          everyone around them, and a way for loved ones to offer support without either
+          catastrophizing or dismissing. Something as simple as "I am having a scanning moment
+          --- I do not need reassurance, just company" can reshape the dynamic entirely.
+        </p>
+        <p className="mb-6">
+          Healthcare providers also play a role that extends beyond the clinical. The quality
+          of the patient-provider relationship directly influences health anxiety levels. Providers
+          who take the time to explain what symptoms are and are not concerning, who validate
+          the experience of worry without reinforcing it, and who collaborate on monitoring
+          plans rather than issuing instructions create a therapeutic alliance that functions
+          as a buffer against the anxiety spiral. Conversely, providers who are dismissive,
+          rushed, or patronizing can inadvertently worsen health anxiety by making patients
+          feel that they cannot trust professional reassurance --- which removes one of the few
+          reliable exit ramps from the worry cycle.
         </p>
 
         <h2 id="building-a-new-relationship-with-your-body" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -293,7 +358,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <p className="mb-6">
           The ultimate goal is not the absence of worry. People living with chronic illness will
           always have legitimate reasons for health-related concern. The goal is a different
-          relationship with that worry — one where concern can exist without consuming your
+          relationship with that worry --- one where concern can exist without consuming your
           entire field of attention, and where your brain learns to distinguish between signals
           that require action and signals that require acceptance.
         </p>
@@ -303,8 +368,19 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           it is a skill that only 25 percent of people with chronic illness and co-occurring
           anxiety currently receive help
           developing <Citation id="5" index={5} source="The Lancet Psychiatry" year="2019" tier={1} />.
-          If this article describes your experience, you deserve support — not just for your
+          If this article describes your experience, you deserve support --- not just for your
           physical condition, but for the psychological weight it carries.
+        </p>
+        <p className="mb-6">
+          Building this new relationship is gradual and nonlinear. There will be days when
+          the old patterns reassert themselves --- when a new symptom triggers an immediate
+          spiral, when the reassurance from your last appointment feels impossibly distant,
+          when your body does something unfamiliar and your brain defaults to catastrophe.
+          These setbacks are not evidence of failure. They are a normal part of rewiring a
+          nervous system that has been shaped by real and repeated medical stress. Each time
+          you notice the spiral, name it, and choose a different response --- even imperfectly ---
+          you are strengthening the neural pathways that will eventually make balanced monitoring
+          your default rather than your aspiration.
         </p>
 
         <ArticleCallout variant="action-plan" title="When to Seek Additional Support">
@@ -330,7 +406,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     slug: 'the-boom-and-bust-cycle-why-people-with-chronic-illness-overdo-it',
     title: 'The Boom-and-Bust Cycle: Why People With Chronic Illness Overdo It',
     description:
-      'Understand the psychological and physiological mechanisms behind the boom-and-bust pattern in chronic illness — why good days lead to overexertion, and how activity pacing can break the cycle without sacrificing meaningful engagement.',
+      'Understand the psychological and physiological mechanisms behind the boom-and-bust pattern in chronic illness --- why good days lead to overexertion, and how activity pacing can break the cycle without sacrificing meaningful engagement.',
     image: '/images/articles/cat20/cover-007.svg',
     category: CATEGORY_CHRONIC_ILLNESS_PAIN,
     readTime: 13,
@@ -340,11 +416,11 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     tags: ['Activity Pacing', 'Chronic Illness', 'Energy Management', 'Self-Help'],
 
     summary:
-      'You have a good day — you feel almost normal — so you do everything. You clean the house, run errands, catch up on work, exercise, socialize. Then you crash. Hard. You spend the next two or three days barely able to move, overwhelmed by fatigue, pain, or both. When you finally recover enough to function, you do it all over again. This is the boom-and-bust cycle, and it is one of the most common and destructive patterns in chronic illness. Research suggests that up to 70 percent of people with conditions like fibromyalgia, ME/CFS, multiple sclerosis, and rheumatoid arthritis fall into this pattern. The cycle is driven by a combination of biological factors, psychological pressure, and the understandable desire to reclaim normalcy. This article examines why the pattern persists and provides evidence-based pacing strategies that can help break it.',
+      'You have a good day --- you feel almost normal --- so you do everything. You clean the house, run errands, catch up on work, exercise, socialize. Then you crash. Hard. You spend the next two or three days barely able to move, overwhelmed by fatigue, pain, or both. When you finally recover enough to function, you do it all over again. This is the boom-and-bust cycle, and it is one of the most common and destructive patterns in chronic illness. Research suggests that up to 70 percent of people with conditions like fibromyalgia, ME/CFS, multiple sclerosis, and rheumatoid arthritis fall into this pattern. The cycle is driven by a combination of biological factors, psychological pressure, and the understandable desire to reclaim normalcy. This article examines why the pattern persists and provides evidence-based pacing strategies that can help break it.',
 
     keyFacts: [
       { text: 'Up to 70% of people with chronic fatigue and pain conditions report boom-and-bust activity patterns', citationIndex: 1 },
-      { text: 'Activity pacing improves function and reduces fatigue severity by 25–35% in randomized trials', citationIndex: 2 },
+      { text: 'Activity pacing improves function and reduces fatigue severity by 25--35% in randomized trials', citationIndex: 2 },
       { text: 'The boom-and-bust cycle is associated with 40% higher pain intensity ratings over time', citationIndex: 3 },
       { text: 'People in the boom-and-bust pattern report 50% lower quality of life than consistent pacers', citationIndex: 4 },
       { text: 'Guilt and social expectations are the top two psychological drivers of overexertion on good days', citationIndex: 5 },
@@ -353,15 +429,15 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      "The boom-and-bust cycle is not a failure of discipline. It is what happens when a person who has lost so much tries to reclaim everything at once. Breaking it does not mean doing less with your life — it means distributing your life more evenly across your days.",
+      "The boom-and-bust cycle is not a failure of discipline. It is what happens when a person who has lost so much tries to reclaim everything at once. Breaking it does not mean doing less with your life --- it means distributing your life more evenly across your days.",
 
     practicalExercise: {
       title: 'The Energy Budget Baseline',
       steps: [
-        { title: 'Track your baseline', description: 'For five days, rate your energy on a 1–10 scale every two hours. Do not try to change your behavior — just observe. Note what activities drain energy and what restores it.' },
-        { title: 'Identify your sustainable ceiling', description: "Look at days where you functioned without crashing the next day. What was your total activity level? That is your current sustainable ceiling — not your maximum capacity." },
+        { title: 'Track your baseline', description: 'For five days, rate your energy on a 1--10 scale every two hours. Do not try to change your behavior --- just observe. Note what activities drain energy and what restores it.' },
+        { title: 'Identify your sustainable ceiling', description: "Look at days where you functioned without crashing the next day. What was your total activity level? That is your current sustainable ceiling --- not your maximum capacity." },
         { title: 'Plan at 70% capacity', description: "On your next good day, plan activities that use only 70% of your sustainable ceiling. Leave 30% as a buffer. This will feel frustrating. That frustration is the cost of long-term stability." },
-        { title: 'Review and adjust weekly', description: 'Each week, review whether you crashed. If not, you can gradually increase by 5–10%. If you did crash, reduce your planned activity by one level. This is iterative, not fixed.' },
+        { title: 'Review and adjust weekly', description: 'Each week, review whether you crashed. If not, you can gradually increase by 5--10%. If you did crash, reduce your planned activity by one level. This is iterative, not fixed.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Log Your Energy Patterns',
@@ -385,7 +461,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You wake up and something is different. The fog has lifted. The pain has receded
-            to a low hum instead of a roar. Energy — actual, usable energy — is flowing through
+            to a low hum instead of a roar. Energy --- actual, usable energy --- is flowing through
             you for the first time in days. Your brain immediately starts making a list: the
             laundry, the groceries, the emails, the walk you have been missing, the friend you
             have been canceling on. Today is the day you catch up. Today is the day you prove
@@ -415,7 +491,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <p className="mb-6">
           Physiologically, many chronic conditions involve dysregulated energy metabolism.
           In conditions like myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS),
-          mitochondrial function and aerobic energy production are impaired — meaning the body
+          mitochondrial function and aerobic energy production are impaired --- meaning the body
           literally cannot sustain activity at the same thresholds as a healthy body. When
           activity exceeds this reduced threshold, the result is post-exertional malaise: a
           disproportionate worsening of symptoms that can take days to
@@ -423,29 +499,40 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Psychologically, the boom phase is driven by several powerful forces. First, there
-          is the sheer relief of feeling capable — when you have been debilitated for days,
+          is the sheer relief of feeling capable --- when you have been debilitated for days,
           a good day feels like a window that might close at any moment, creating urgency to
           act. Second, there is accumulated guilt about tasks undone, relationships neglected,
-          and responsibilities deferred. Third, there is the deep human need to prove — to
-          yourself and to others — that you are still the person you were before your
+          and responsibilities deferred. Third, there is the deep human need to prove --- to
+          yourself and to others --- that you are still the person you were before your
           diagnosis <Citation id="5" index={5} source="Disability and Rehabilitation" year="2022" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The social dimension is equally potent. Chronic illness often comes with visible
+          consequences --- canceled plans, unfinished projects, dependence on others for tasks
+          that once felt effortless. A good day offers a temporary escape from that narrative.
+          It becomes an opportunity to demonstrate competence, to contribute to the household,
+          to show up for people you have been letting down. The emotional reward of a productive
+          boom day is immense, which is precisely what makes the pattern so addictive despite
+          its devastating consequences. The crash that follows is treated as the price of
+          admission rather than a preventable outcome, because in the moment, the psychological
+          payoff of doing everything feels worth any physical cost.
         </p>
 
         <BeforeAfter
           before={{
             title: 'The Boom-and-Bust Pattern',
             items: [
-              'Good day arrives — do everything possible',
+              'Good day arrives --- do everything possible',
               'Push through warning signs of fatigue',
-              'Crash for 2–5 days after overexertion',
+              'Crash for 2--5 days after overexertion',
               'Recover slowly, guilt builds during rest',
-              'Next good day — repeat the entire cycle',
+              'Next good day --- repeat the entire cycle',
             ],
           }}
           after={{
             title: 'The Paced Approach',
             items: [
-              'Good day arrives — follow pre-planned activity budget',
+              'Good day arrives --- follow pre-planned activity budget',
               'Stop at 70% of capacity, even if energy remains',
               'Mild recovery period of hours, not days',
               'Consistent baseline allows gradual capacity increase',
@@ -467,13 +554,24 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           There is also a self-regulation component. Research in health psychology has shown
-          that people with chronic conditions often struggle with goal disengagement — the
+          that people with chronic conditions often struggle with goal disengagement --- the
           ability to step away from a task before completing it. When you start cleaning the
           kitchen and feel the fatigue building, the healthy response is to stop. But years
           of conditioning in a productivity-oriented culture have trained you to push through.
           The problem is that the rules your brain learned in a healthy body do not apply to
           your current
           body <Citation id="8" index={8} source="Health Psychology" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Identity plays a particularly complex role. Many people with chronic illness built
+          their self-concept around productivity, competence, and reliability long before the
+          diagnosis arrived. The boom phase offers a temporary reunion with that former self ---
+          a few hours or a day where the gap between who you are and who you used to be narrows
+          to almost nothing. Giving that up, even strategically, can feel like accepting a
+          diminished version of yourself permanently. Pacing requires mourning the loss of
+          spontaneous capacity before it can become a sustainable practice. Without that
+          emotional processing, the intellectual understanding that pacing works will repeatedly
+          lose to the emotional pull of reclaiming normalcy.
         </p>
 
         <QuoteBlock
@@ -486,26 +584,26 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Activity pacing is often misunderstood as "doing less." That framing misses the
-          point entirely. Pacing means doing a consistent, sustainable amount — which for
+          point entirely. Pacing means doing a consistent, sustainable amount --- which for
           many people actually means doing <em>more</em> on bad days and <em>less</em> on
           good days, creating a stable baseline that prevents the extreme swings.
         </p>
         <p className="mb-6">
           The NICE guidelines for ME/CFS define pacing as "planning activity to stay within
-          your energy envelope — the amount of energy available to you on a given day — and
+          your energy envelope --- the amount of energy available to you on a given day --- and
           not pushing beyond it even when you feel capable of
           doing more" <Citation id="6" index={6} source="National Institute for Health and Care Excellence (NICE)" year="2021" tier={3} />.
           Randomized trials show that pacing improves function and reduces fatigue severity
-          by 25 to 35 percent — not by reducing total activity, but by distributing it more
+          by 25 to 35 percent --- not by reducing total activity, but by distributing it more
           evenly <Citation id="2" index={2} source="Pain" year="2022" tier={1} />.
         </p>
 
         <ProgressSteps
           steps={[
-            { title: 'Establish your baseline', description: 'Track activity and energy for 5–7 days without changing behavior. Identify the maximum activity level that does not trigger a multi-day crash.' },
+            { title: 'Establish your baseline', description: 'Track activity and energy for 5--7 days without changing behavior. Identify the maximum activity level that does not trigger a multi-day crash.' },
             { title: 'Set your initial ceiling', description: 'Plan daily activities at 70% of your baseline maximum. This buffer protects against unexpected demands and gradually builds tolerance.' },
             { title: 'Introduce rest proactively', description: 'Schedule rest breaks before fatigue forces you to stop. Planned rest is restorative; collapse-driven rest is not.' },
-            { title: 'Increase gradually', description: 'If no crashes occur for two weeks, increase planned activity by 5–10%. If a crash occurs, return to the previous level. Patience is the strategy.' },
+            { title: 'Increase gradually', description: 'If no crashes occur for two weeks, increase planned activity by 5--10%. If a crash occurs, return to the previous level. Patience is the strategy.' },
           ]}
         />
 
@@ -519,10 +617,10 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           But people who pace consistently report 50 percent higher quality of life than those
           who remain in the boom-and-bust
           cycle <Citation id="4" index={4} source="Journal of Psychosomatic Research" year="2023" tier={1} />.
-          The unused 30 percent is not wasted — it is invested in tomorrow.
+          The unused 30 percent is not wasted --- it is invested in tomorrow.
         </p>
         <p className="mb-6">
-          Guilt is often fueled by comparison — comparing your current capacity to your
+          Guilt is often fueled by comparison --- comparing your current capacity to your
           pre-illness self, or comparing yourself to healthy people around you. But the
           relevant comparison is between your paced self and your boom-and-bust self. Across
           a full week, the paced version of you will accomplish more, hurt less, and have
@@ -538,6 +636,41 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             day. It is measured by how many functional days you can sustain in a row.
           </p>
         </ArticleCallout>
+
+        <h2 id="the-impact-on-relationships-and-trust" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Impact on Relationships and Trust
+        </h2>
+        <p className="mb-6">
+          The boom-and-bust cycle does not only affect the person living with the condition.
+          It radiates outward into every relationship. Partners, children, friends, and
+          coworkers learn to distrust good days because they have seen what follows. A person
+          who appears energetic and capable on Monday but is bedridden by Wednesday creates
+          confusion and frustration in the people around them --- not because those people lack
+          compassion, but because the pattern is genuinely difficult to understand from the
+          outside. The visible fluctuation between high function and total incapacity can
+          look, to an uninformed observer, like inconsistency or exaggeration.
+        </p>
+        <p className="mb-6">
+          Over time, this dynamic erodes trust in both directions. The person with the illness
+          may stop sharing how they feel because they anticipate disbelief. Their loved ones
+          may stop offering help because they cannot predict when it will be needed. Plans
+          become provisional. Commitments carry asterisks. The relationship itself begins to
+          operate on the same boom-and-bust rhythm as the illness, swinging between periods
+          of closeness during stable phases and distance during crashes. Pacing, therefore,
+          is not just a personal health strategy --- it is a relational one. A more predictable
+          energy pattern makes it easier for the people in your life to understand, plan
+          around, and genuinely support your needs rather than reacting in confusion to
+          dramatic swings they cannot anticipate.
+        </p>
+        <p className="mb-6">
+          Communicating openly about the cycle and the pacing strategy you are adopting can
+          transform these dynamics. When the people around you understand that you are leaving
+          energy in reserve intentionally --- not because you do not want to participate, but
+          because doing so protects your ability to show up consistently --- they can become
+          allies in the pacing process rather than inadvertent contributors to the boom
+          phase. Shared understanding replaces the cycle of confusion and resentment that
+          the boom-and-bust pattern so reliably generates.
+        </p>
 
         <h2 id="making-pacing-practical" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Making Pacing Practical
@@ -556,8 +689,17 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           will do and what you will defer), chunking (breaking larger tasks into smaller segments
           with rest between), and switching (alternating between physical, cognitive, and social
           activities to distribute the load across different systems). These strategies are not
-          about restriction — they are about optimization for a body that operates under different
+          about restriction --- they are about optimization for a body that operates under different
           constraints than the one you may have grown up with.
+        </p>
+        <p className="mb-6">
+          One of the most effective practical tools is the concept of "energy bookending" ---
+          placing a rest period of defined length both before and after any demanding activity.
+          If you know that grocery shopping costs significant energy, you plan fifteen minutes
+          of rest before you leave and thirty minutes of rest after you return, before starting
+          anything else. This bookending prevents the cascade effect where one activity flows
+          into the next without pause, each one drawing from an ever-shrinking reserve until
+          the crash becomes inevitable.
         </p>
         <p className="mb-6">
           If the boom-and-bust cycle has defined your experience of illness, know that changing it
@@ -577,7 +719,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     slug: 'fatigue-and-mental-health-when-exhaustion-becomes-your-whole-identity',
     title: 'Fatigue and Mental Health: When Exhaustion Becomes Your Whole Identity',
     description:
-      'A deep dive into the neuroscience and psychology of chronic fatigue — exploring how persistent exhaustion reshapes identity, disrupts cognition, and interacts with depression, and what current research reveals about reclaiming a sense of self beyond tiredness.',
+      'A deep dive into the neuroscience and psychology of chronic fatigue --- exploring how persistent exhaustion reshapes identity, disrupts cognition, and interacts with depression, and what current research reveals about reclaiming a sense of self beyond tiredness.',
     image: '/images/articles/cat20/cover-008.svg',
     category: CATEGORY_CHRONIC_ILLNESS_PAIN,
     readTime: 14,
@@ -587,25 +729,25 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     tags: ['Chronic Fatigue', 'Identity', 'Condition Deep Dive', 'Neuroscience'],
 
     summary:
-      'Fatigue in chronic illness is not ordinary tiredness. It is a bone-deep, unrelenting exhaustion that sleep does not resolve and willpower cannot override. Affecting an estimated 40 to 80 percent of people with chronic health conditions, pathological fatigue disrupts every dimension of life — work, relationships, cognition, and the very sense of who you are. Over time, many people find that fatigue becomes the central organizing feature of their identity: they are no longer a parent, a professional, a friend — they are simply someone who is tired. This article examines the neuroscience behind chronic fatigue, its bidirectional relationship with depression and anxiety, the phenomenon of identity erosion, and evidence-based approaches to reclaiming meaningful engagement even within the constraints of limited energy.',
+      'Fatigue in chronic illness is not ordinary tiredness. It is a bone-deep, unrelenting exhaustion that sleep does not resolve and willpower cannot override. Affecting an estimated 40 to 80 percent of people with chronic health conditions, pathological fatigue disrupts every dimension of life --- work, relationships, cognition, and the very sense of who you are. Over time, many people find that fatigue becomes the central organizing feature of their identity: they are no longer a parent, a professional, a friend --- they are simply someone who is tired. This article examines the neuroscience behind chronic fatigue, its bidirectional relationship with depression and anxiety, the phenomenon of identity erosion, and evidence-based approaches to reclaiming meaningful engagement even within the constraints of limited energy.',
 
     keyFacts: [
-      { text: '40–80% of people with chronic conditions report clinically significant fatigue', citationIndex: 1 },
+      { text: '40--80% of people with chronic conditions report clinically significant fatigue', citationIndex: 1 },
       { text: 'Chronic fatigue is associated with elevated pro-inflammatory cytokines, particularly IL-6 and TNF-alpha', citationIndex: 2 },
       { text: 'Up to 60% of people with chronic fatigue meet criteria for a co-occurring mood or anxiety disorder', citationIndex: 3 },
-      { text: 'Cognitive impairment from fatigue — "brain fog" — is rated as more disabling than physical fatigue by 45% of patients', citationIndex: 4 },
+      { text: 'Cognitive impairment from fatigue --- "brain fog" --- is rated as more disabling than physical fatigue by 45% of patients', citationIndex: 4 },
       { text: 'Values-based activity planning improves wellbeing in fatigued populations by 30% compared to symptom-driven approaches', citationIndex: 5 },
     ],
 
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      "You are not your fatigue. Fatigue is something that happens inside you — it is not what you are. Reclaiming that distinction, even partially, is one of the most important psychological tasks in chronic illness.",
+      "You are not your fatigue. Fatigue is something that happens inside you --- it is not what you are. Reclaiming that distinction, even partially, is one of the most important psychological tasks in chronic illness.",
 
     practicalExercise: {
       title: 'The Identity Reclamation Map',
       steps: [
-        { title: 'List five things you valued before fatigue', description: 'Write down five activities, roles, or qualities that felt central to who you are — not what you did for a living, but what made you feel like yourself.' },
+        { title: 'List five things you valued before fatigue', description: 'Write down five activities, roles, or qualities that felt central to who you are --- not what you did for a living, but what made you feel like yourself.' },
         { title: 'Find the micro-expression', description: 'For each item, identify the smallest possible version that is still meaningful. If you valued being creative, that might be sketching for five minutes. If you valued connecting with others, it might be one genuine text message per day.' },
         { title: 'Schedule one micro-expression daily', description: 'Choose one and build it into your day at a time when your energy is typically highest. This is non-negotiable self-investment, not optional leisure.' },
         { title: 'Notice the identity effect', description: 'After two weeks, reflect: do you describe yourself any differently? Even a small shift from "I am exhausted" toward "I am someone who creates/connects/explores, within limits" represents a meaningful change.' },
@@ -634,7 +776,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             "I am so tired." When you live with chronic illness, these four words become the
             most honest sentence you know. Not the ordinary tiredness that a good night of
             sleep resolves. Not the satisfying exhaustion after a productive day. This is
-            something different — a bone-deep, system-wide depletion that settles into your
+            something different --- a bone-deep, system-wide depletion that settles into your
             body like weather and refuses to leave.
           </p>
           <p className="mb-6">
@@ -644,7 +786,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             failure <Citation id="1" index={1} source="Journal of Psychosomatic Research" year="2023" tier={1} />.
             It is also one of the most poorly understood, frequently dismissed, and
             psychologically devastating aspects of chronic illness. Over time, fatigue does
-            not just limit what you can do — it begins to redefine who you believe you are.
+            not just limit what you can do --- it begins to redefine who you believe you are.
           </p>
         </div>
 
@@ -653,32 +795,43 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Chronic fatigue is not a psychological invention. It has measurable biological
-          substrates. A growing body of research implicates neuroinflammation — chronic,
-          low-grade inflammation affecting the brain — as a central mechanism. Studies have
+          substrates. A growing body of research implicates neuroinflammation --- chronic,
+          low-grade inflammation affecting the brain --- as a central mechanism. Studies have
           consistently found elevated levels of pro-inflammatory cytokines, particularly
           interleukin-6 (IL-6) and tumor necrosis factor-alpha (TNF-alpha), in people with
           chronic fatigue across multiple disease
           contexts <Citation id="2" index={2} source="Brain, Behavior, and Immunity" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          These inflammatory molecules do not just signal the immune system — they directly
+          These inflammatory molecules do not just signal the immune system --- they directly
           affect brain function. They alter neurotransmitter metabolism, particularly in
           dopaminergic and serotonergic pathways that regulate motivation, reward, and energy
           allocation. A 2023 review in <em>Nature Reviews Neuroscience</em> described fatigue
           as "a signal from the brain that the cost-benefit ratio of continued effort has shifted
-          — the brain is essentially deciding that the metabolic price of activity exceeds its
+          --- the brain is essentially deciding that the metabolic price of activity exceeds its
           expected reward" <Citation id="9" index={9} source="Nature Reviews Neuroscience" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           This explains why chronic fatigue feels so different from ordinary tiredness. It is not
-          just your muscles that are depleted — it is the neural circuits that generate the
+          just your muscles that are depleted --- it is the neural circuits that generate the
           motivation to move in the first place. Willpower cannot override a system that has
           fundamentally recalculated the economics of effort.
+        </p>
+        <p className="mb-6">
+          Sleep disturbance further compounds the picture. Many chronic conditions are accompanied
+          by disordered sleep --- whether from pain that disrupts sleep architecture, medications
+          that alter sleep-wake cycles, or the neuroinflammation itself interfering with the
+          brain's ability to enter restorative deep sleep phases. The result is a compounding
+          deficit: the body needs more recovery than a healthy body, while simultaneously getting
+          less effective rest. People with chronic fatigue often report sleeping eight, ten, or
+          even twelve hours and waking up feeling no more restored than when they lay down. This
+          is not a sleep hygiene problem. It is a physiological dysfunction in the restorative
+          mechanisms that healthy sleep depends on.
         </p>
 
         <StatCard
           stats={[
-            { value: '40–80', suffix: '%', label: 'of chronic illness patients report significant fatigue' },
+            { value: '40--80', suffix: '%', label: 'of chronic illness patients report significant fatigue' },
             { value: 60, suffix: '%', label: 'of those with chronic fatigue also have depression or anxiety' },
             { value: 45, suffix: '%', label: 'rate cognitive fog as more disabling than physical fatigue' },
           ]}
@@ -689,7 +842,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           Brain Fog: The Cognitive Dimension
         </h2>
         <p className="mb-6">
-          Fatigue is not only physical. Cognitive impairment — widely known as "brain fog" — is
+          Fatigue is not only physical. Cognitive impairment --- widely known as "brain fog" --- is
           one of its most distressing manifestations. A 2023 meta-analysis found that people
           with chronic fatigue show measurable deficits in processing speed, working memory,
           sustained attention, and executive function compared to healthy
@@ -700,9 +853,19 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <p className="mb-6">
           Perhaps most telling, 45 percent of patients in one large survey rated cognitive
           impairment as <em>more disabling</em> than physical fatigue. The loss of mental
-          sharpness strikes at something fundamental: the sense that your mind — your thoughts,
-          your intelligence, your capacity to engage with the world — still belongs to
+          sharpness strikes at something fundamental: the sense that your mind --- your thoughts,
+          your intelligence, your capacity to engage with the world --- still belongs to
           you <Citation id="4" index={4} source="Neuropsychology Review" year="2023" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The social consequences of brain fog can be as damaging as the cognitive deficits
+          themselves. When you cannot reliably follow a conversation, remember commitments, or
+          articulate your thoughts with the fluency you once took for granted, social interactions
+          become sources of anxiety rather than connection. Many people begin to avoid situations
+          where their cognitive difficulties might be visible --- declining invitations, withdrawing
+          from group activities, or staying silent in meetings where they would once have
+          contributed. This withdrawal is often misread by others as disinterest or depression,
+          creating a secondary layer of social isolation that deepens the psychological toll.
         </p>
 
         <ArticleAccordion
@@ -714,7 +877,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
                   The brain takes measurably longer to process incoming information. Conversations
                   may feel like they are happening too fast. Reading requires re-reading. Instructions
                   need to be heard multiple times. This is not a listening problem or an intelligence
-                  problem — it is a neurological processing bottleneck.
+                  problem --- it is a neurological processing bottleneck.
                 </p>
               ),
             },
@@ -734,8 +897,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
               content: (
                 <p>
                   Planning, prioritizing, and decision-making become effortful in ways they did not
-                  used to be. The cognitive overhead of managing daily life — which healthy brains
-                  handle largely on autopilot — becomes a conscious, exhausting process that itself
+                  used to be. The cognitive overhead of managing daily life --- which healthy brains
+                  handle largely on autopilot --- becomes a conscious, exhausting process that itself
                   depletes the limited energy available.
                 </p>
               ),
@@ -775,7 +938,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           mood simultaneously, not sequentially.
         </p>
 
-        <ArticleCallout variant="clinical-note" title="Fatigue Is Not Laziness — And It Is Not 'Just Depression'">
+        <ArticleCallout variant="clinical-note" title="Fatigue Is Not Laziness --- And It Is Not 'Just Depression'">
           <p>
             A common and harmful clinical error is attributing all fatigue to depression and
             prescribing antidepressants as the sole intervention. While treating co-occurring
@@ -787,19 +950,52 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="the-social-invisibility-of-fatigue" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Social Invisibility of Fatigue
+        </h2>
+        <p className="mb-6">
+          Unlike a broken bone or a surgical scar, fatigue carries no outward markers. A person
+          in the grip of debilitating exhaustion can appear perfectly healthy to an outside observer
+          --- well-dressed, upright, speaking in complete sentences. This invisibility creates a
+          persistent gap between internal experience and external perception that is itself a source
+          of psychological distress. Friends say "But you look great." Employers question the need
+          for accommodations. Family members wonder, privately or aloud, whether the fatigue is
+          really as bad as it is described. Each of these interactions chips away at the person's
+          confidence in their own experience, introducing doubt into what the body is clearly
+          communicating.
+        </p>
+        <p className="mb-6">
+          The invisibility of fatigue also creates a painful double bind around disclosure. Sharing
+          the reality of your exhaustion risks being met with disbelief, unsolicited advice, or
+          the subtle withdrawal of people who do not know how to respond to suffering they cannot
+          see. Not sharing means carrying the full weight of the experience alone, performing
+          normalcy at significant personal cost. Many people with chronic fatigue become expert
+          mask-wearers --- projecting energy and engagement in public while collapsing in private.
+          This performance is itself exhausting, creating a secondary drain on the very resource
+          that is already in critically short supply.
+        </p>
+        <p className="mb-6">
+          Addressing the social dimension of fatigue means building relationships where honesty
+          about your energy levels is safe and expected rather than something to be hidden or
+          defended. It means educating the people closest to you --- not with medical lectures, but
+          with honest descriptions of what your days actually look like. And it means accepting
+          that some people will not understand, no matter how clearly you explain, and that their
+          inability to grasp your experience does not invalidate it.
+        </p>
+
         <h2 id="when-fatigue-becomes-identity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Fatigue Becomes Identity
         </h2>
         <p className="mb-6">
           One of the most insidious effects of chronic fatigue is identity erosion. A 2022
           qualitative meta-synthesis found that people with chronic fatigue across multiple
-          conditions consistently described a process of "biographical disruption" — a fracturing
+          conditions consistently described a process of "biographical disruption" --- a fracturing
           of the narrative they had built about who they are and what their life would look
           like <Citation id="8" index={8} source="Social Science & Medicine" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          When fatigue eliminates the activities through which you expressed yourself — your
-          career, your hobbies, your social roles, your parenting — what remains? Many people
+          When fatigue eliminates the activities through which you expressed yourself --- your
+          career, your hobbies, your social roles, your parenting --- what remains? Many people
           describe a gradual narrowing of identity until "tired person" is all that is left.
           They stop being invited to things. They stop planning things. They stop expecting
           things of themselves. The world contracts to the size of what their energy allows,
@@ -808,8 +1004,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <p className="mb-6">
           This identity shift is not inevitable, but it requires active resistance. Acceptance
           and commitment therapy (ACT) has shown particular promise here, with a 2022 randomized
-          controlled trial showing that values-based activity planning — choosing activities based
-          on what matters to you rather than what your symptoms dictate — improved psychological
+          controlled trial showing that values-based activity planning --- choosing activities based
+          on what matters to you rather than what your symptoms dictate --- improved psychological
           wellbeing by 30 percent compared to symptom-driven
           approaches <Citation id="5" index={5} source="Journal of Consulting and Clinical Psychology" year="2022" tier={1} />.
         </p>
@@ -820,7 +1016,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         <p className="mb-6">
           The work of reclaiming identity does not require reclaiming your former energy
           levels. It requires finding ways to express your core values within your current
-          constraints — and recognizing that a scaled-down version of something meaningful is
+          constraints --- and recognizing that a scaled-down version of something meaningful is
           infinitely more valuable to your psychological health than no version at all.
         </p>
         <p className="mb-6">
@@ -829,11 +1025,23 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           quality of life and social
           connection <Citation id="6" index={6} source="National Institute for Health and Care Excellence (NICE)" year="2021" tier={3} />.
           This is a clinical acknowledgment that managing fatigue is not just about reducing
-          symptoms — it is about preserving the person who lives with them.
+          symptoms --- it is about preserving the person who lives with them.
+        </p>
+        <p className="mb-6">
+          Practical strategies for identity reclamation often begin with what researchers call
+          "micro-engagements" --- activities so small that they fall within even the most limited
+          energy budgets but still carry personal meaning. A person who identified strongly as a
+          reader might listen to five minutes of an audiobook. A person who valued cooking might
+          choose a single ingredient for someone else to prepare. A person who found purpose in
+          mentoring might write one encouraging message to a colleague. These are not consolation
+          prizes. They are the seed forms of the activities that define who you are, kept alive
+          during a period when full expression is not possible. Over time, as energy management
+          improves and treatment takes effect, these seeds can grow --- but only if they are planted
+          and maintained during the hardest stretches.
         </p>
         <p className="mb-6">
           If fatigue has become the loudest voice in your life, it does not have to be the only
-          one. You are still in there — underneath the exhaustion, behind the fog, beyond the
+          one. You are still in there --- underneath the exhaustion, behind the fog, beyond the
           limitations. The task is not to eliminate fatigue. It is to build a life that remains
           recognizably yours even in its presence.
         </p>
@@ -843,7 +1051,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             Most fatigue management programs start with energy and work toward function. Try
             reversing the process: start by identifying who you want to be, then figure out
             the smallest expressions of that identity your energy allows. You may find that
-            meaning creates its own form of fuel — not the metabolic kind, but the
+            meaning creates its own form of fuel --- not the metabolic kind, but the
             psychological kind that makes getting through a difficult day feel worthwhile.
           </p>
         </ArticleCallout>
@@ -859,7 +1067,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     slug: 'the-financial-toxicity-of-chronic-illness-when-healthcare-costs-destroy-wellbeing',
     title: 'The Financial Toxicity of Chronic Illness: When Healthcare Costs Destroy Wellbeing',
     description:
-      'A research-based examination of financial toxicity — the measurable psychological harm caused by healthcare costs — including its prevalence, mental health impact, and emerging interventions aimed at reducing economic suffering alongside medical suffering.',
+      'A research-based examination of financial toxicity --- the measurable psychological harm caused by healthcare costs --- including its prevalence, mental health impact, and emerging interventions aimed at reducing economic suffering alongside medical suffering.',
     image: '/images/articles/cat20/cover-009.svg',
     category: CATEGORY_CHRONIC_ILLNESS_PAIN,
     readTime: 13,
@@ -869,20 +1077,20 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     tags: ['Financial Toxicity', 'Healthcare Costs', 'Research Digest', 'Health Policy'],
 
     summary:
-      'Financial toxicity is a clinical term for a devastating reality: the measurable psychological and physical harm caused by the cost of healthcare itself. For the estimated 137 million Americans who struggle with medical debt and the millions more worldwide who face catastrophic health expenditures, the financial burden of chronic illness can be as destructive as the disease. Research shows that financial toxicity is independently associated with higher rates of depression, anxiety, treatment non-adherence, and even mortality. People skip medications, delay necessary care, ration insulin, and choose between paying for treatment and paying for food — not because they do not understand the medical consequences, but because they cannot afford both survival and solvency. This article synthesizes current research on the scope, mechanisms, and mental health consequences of financial toxicity, and examines what systemic and individual-level interventions show promise.',
+      'Financial toxicity is a clinical term for a devastating reality: the measurable psychological and physical harm caused by the cost of healthcare itself. For the estimated 137 million Americans who struggle with medical debt and the millions more worldwide who face catastrophic health expenditures, the financial burden of chronic illness can be as destructive as the disease. Research shows that financial toxicity is independently associated with higher rates of depression, anxiety, treatment non-adherence, and even mortality. People skip medications, delay necessary care, ration insulin, and choose between paying for treatment and paying for food --- not because they do not understand the medical consequences, but because they cannot afford both survival and solvency. This article synthesizes current research on the scope, mechanisms, and mental health consequences of financial toxicity, and examines what systemic and individual-level interventions show promise.',
 
     keyFacts: [
       { text: 'An estimated 137 million Americans experienced financial hardship due to medical costs in 2022', citationIndex: 1 },
       { text: 'Financial toxicity is associated with a 70% higher risk of depression compared to patients without cost burden', citationIndex: 2 },
-      { text: '25–30% of people with chronic conditions report skipping or rationing medications due to cost', citationIndex: 3 },
+      { text: '25--30% of people with chronic conditions report skipping or rationing medications due to cost', citationIndex: 3 },
       { text: 'Medical debt is the leading cause of personal bankruptcy in the United States', citationIndex: 4 },
-      { text: 'Financial navigation programs reduce patient distress by 35–40% while improving treatment adherence', citationIndex: 5 },
+      { text: 'Financial navigation programs reduce patient distress by 35--40% while improving treatment adherence', citationIndex: 5 },
     ],
 
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      "Financial toxicity is not a side effect of illness. It is a second illness — one that the healthcare system itself inflicts on the people it is supposed to help. Naming it as a clinical harm is the first step toward treating it as one.",
+      "Financial toxicity is not a side effect of illness. It is a second illness --- one that the healthcare system itself inflicts on the people it is supposed to help. Naming it as a clinical harm is the first step toward treating it as one.",
 
     practicalExercise: {
       title: 'The Financial Clarity Inventory',
@@ -903,7 +1111,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
       { id: '4', text: 'Medical debt in the United States: A systematic review', source: 'JAMA Internal Medicine', year: '2023', link: 'https://doi.org/10.1001/jamainternmed.2023.0759', tier: 1 },
       { id: '5', text: 'Financial navigation in healthcare: A randomized trial of a multi-component intervention', source: 'Journal of General Internal Medicine', year: '2023', link: 'https://doi.org/10.1007/s11606-023-08092-3', tier: 1 },
       { id: '6', text: 'Financial toxicity as an unrecognized patient-reported outcome in health care', source: 'World Health Organization Bulletin', year: '2023', link: 'https://www.who.int/bulletin/volumes/101/5/financial-toxicity', tier: 2 },
-      { id: '7', text: 'Out-of-pocket health spending and financial hardship among the uninsured and insured', source: 'Centers for Disease Control and Prevention — NCHS Data Brief', year: '2023', link: 'https://www.cdc.gov/nchs/data/databriefs/db468.pdf', tier: 2 },
+      { id: '7', text: 'Out-of-pocket health spending and financial hardship among the uninsured and insured', source: 'Centers for Disease Control and Prevention --- NCHS Data Brief', year: '2023', link: 'https://www.cdc.gov/nchs/data/databriefs/db468.pdf', tier: 2 },
       { id: '8', text: 'Financial toxicity and treatment outcomes: Association with mortality in chronic disease', source: 'The Lancet Public Health', year: '2022', link: 'https://doi.org/10.1016/S2468-2667(22)00234-8', tier: 1 },
       { id: '9', text: 'Interventions addressing financial toxicity in patients with cancer: A scoping review', source: 'Supportive Care in Cancer', year: '2023', link: 'https://doi.org/10.1007/s00520-023-07756-2', tier: 1 },
       { id: '10', text: 'Patient financial hardship screening and assistance programs: A best practice guide', source: 'American Hospital Association', year: '2024', link: 'https://www.aha.org/guides/financial-assistance', tier: 4 },
@@ -918,7 +1126,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             after an insurance portal loads. It is the weight of a bill you cannot pay for
             care you could not refuse. For millions of people living with chronic illness,
             the financial cost of staying alive is itself a source of profound psychological
-            harm — and it has a clinical name: financial toxicity.
+            harm --- and it has a clinical name: financial toxicity.
           </p>
           <p className="mb-6">
             The term "financial toxicity" was first coined in oncology research to describe
@@ -944,23 +1152,33 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           people with chronic
           conditions <Citation id="4" index={4} source="JAMA Internal Medicine" year="2023" tier={1} />.
           But the problem is not limited to the uninsured. CDC data shows that even insured
-          Americans face substantial out-of-pocket costs — deductibles, copays, coinsurance,
-          and non-covered services — that can accumulate to thousands of dollars
-          annually <Citation id="7" index={7} source="Centers for Disease Control and Prevention — NCHS Data Brief" year="2023" tier={2} />.
+          Americans face substantial out-of-pocket costs --- deductibles, copays, coinsurance,
+          and non-covered services --- that can accumulate to thousands of dollars
+          annually <Citation id="7" index={7} source="Centers for Disease Control and Prevention --- NCHS Data Brief" year="2023" tier={2} />.
         </p>
         <p className="mb-6">
           For people with chronic illness, these costs are not one-time events. They are
           recurring, often escalating, and frequently unpredictable. A single flare can mean
-          an emergency room visit, new medications, specialist referrals, and imaging studies —
+          an emergency room visit, new medications, specialist referrals, and imaging studies ---
           each generating its own bill. The financial burden becomes chronic in the same way
           the illness is chronic: it does not resolve, and it demands constant management.
+        </p>
+        <p className="mb-6">
+          The unpredictability is particularly corrosive. A person with stable diabetes can budget
+          for monthly insulin and routine check-ups, but the moment a complication arises --- a foot
+          infection requiring wound care, a retinal screening that leads to laser treatment, an
+          A1C spike that demands medication adjustment --- the financial picture shifts without
+          warning. This unpredictability mirrors the medical unpredictability of the illness itself,
+          creating a dual uncertainty that compounds the psychological burden. People report that
+          the fear of an unexpected medical bill generates a background anxiety that never fully
+          resolves, even during periods of clinical stability.
         </p>
 
         <StatCard
           stats={[
             { value: 137, suffix: 'M', label: 'Americans facing medical financial hardship' },
             { value: 100, suffix: 'M', label: 'Americans carrying medical debt' },
-            { value: '25–30', suffix: '%', label: 'of chronically ill skip medications due to cost' },
+            { value: '25--30', suffix: '%', label: 'of chronically ill skip medications due to cost' },
           ]}
           source="American Journal of Public Health, 2023; JAMA Internal Medicine, 2023"
         />
@@ -975,7 +1193,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           to patients with the same conditions but without cost
           burden <Citation id="2" index={2} source="Journal of Clinical Oncology" year="2022" tier={1} />.
           This association persisted after controlling for disease severity, suggesting that
-          the financial stress itself — not just the illness — drives the psychological harm.
+          the financial stress itself --- not just the illness --- drives the psychological harm.
         </p>
         <p className="mb-6">
           The mechanisms are straightforward. Financial stress activates the same threat-response
@@ -984,6 +1202,19 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           But financial stress in illness carries an additional cruelty: the threat is generated
           by the very system you depend on for survival. You cannot escape the stressor without
           also escaping the care you need.
+        </p>
+        <p className="mb-6">
+          The cognitive effects of financial stress deserve particular attention. Research on
+          scarcity shows that the mental bandwidth consumed by financial worry --- the constant
+          calculations, the decisions about which bills to pay and which to defer, the anxiety
+          about whether insurance will cover a needed procedure --- directly impairs executive
+          function and decision-making capacity. For someone already managing the cognitive
+          demands of a chronic illness, adding financial scarcity to the equation can push the
+          brain past its capacity to cope effectively. The result is a downward spiral where
+          financial stress impairs the very cognitive resources needed to navigate the financial
+          system, leading to missed deadlines for assistance applications, failure to appeal
+          denied claims, and avoidance of the billing communications that could connect them
+          to available support.
         </p>
 
         <ArticleCallout variant="warning" title="The Deadly Tradeoff">
@@ -994,7 +1225,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             This is not irrational behavior. It is the rational response of people who cannot
             afford both their medications and their rent. Insulin rationing alone kills an
             estimated 1,000 Americans per year. Financial toxicity is not just a quality-of-life
-            issue — it is a survival issue.
+            issue --- it is a survival issue.
           </p>
         </ArticleCallout>
 
@@ -1015,7 +1246,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           This is not an abstract policy concern. It means that two people with the same
           diagnosis, the same disease stage, and the same treatment plan can have different
           survival outcomes based on how much the treatment costs them. Healthcare cost is not
-          just an economic variable — it is a clinical variable that directly affects health
+          just an economic variable --- it is a clinical variable that directly affects health
           outcomes.
         </p>
 
@@ -1043,6 +1274,41 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="the-shame-and-silence-around-medical-debt" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Shame and Silence Around Medical Debt
+        </h2>
+        <p className="mb-6">
+          Financial toxicity carries a psychological burden that extends beyond the economic
+          numbers. There is a deep, culturally reinforced shame attached to medical debt that
+          silences the people experiencing it. In societies that equate financial stability with
+          personal responsibility, falling into debt --- even debt incurred through no fault of
+          one's own --- triggers feelings of failure, inadequacy, and moral deficiency. People
+          with medical debt frequently report hiding their situation from friends, family, and
+          even their own healthcare providers, creating an isolation that compounds the
+          psychological harm.
+        </p>
+        <p className="mb-6">
+          This shame has tangible clinical consequences. Patients who feel embarrassed about
+          their financial situation are less likely to tell their providers that they cannot
+          afford prescribed medications, less likely to ask about lower-cost alternatives, and
+          less likely to apply for assistance programs. The silence becomes self-perpetuating:
+          the more isolated a person feels in their financial struggle, the less likely they
+          are to discover that millions of others share the same burden and that concrete
+          resources exist to help. Breaking that silence --- whether through conversations with
+          trusted individuals, support groups for people with chronic illness, or direct
+          communication with a financial counselor at a hospital or clinic --- is often the
+          single most important step toward reducing the psychological weight of medical debt.
+        </p>
+        <p className="mb-6">
+          Relationships suffer under the pressure of financial toxicity in ways that parallel
+          the relational strain of the illness itself. Partners argue about medical spending.
+          Parents feel guilt about the resources their treatment diverts from their children.
+          Adult children carry the burden of aging parents whose savings have been consumed by
+          healthcare costs. These relational fractures are not side effects of financial
+          toxicity --- they are central features of it, and they deserve recognition as part
+          of the clinical picture that healthcare providers and policymakers must address.
+        </p>
+
         <h2 id="what-can-be-done" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Can Be Done
         </h2>
@@ -1054,7 +1320,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           care <Citation id="9" index={9} source="Supportive Care in Cancer" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
-          At the individual level, the most promising intervention is financial navigation —
+          At the individual level, the most promising intervention is financial navigation ---
           connecting patients with trained professionals who help them access existing resources:
           manufacturer copay assistance programs, hospital charity care, state pharmaceutical
           programs, nonprofit assistance funds, and insurance appeals processes. A 2023 randomized
@@ -1065,7 +1331,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
 
         <ProgressSteps
           steps={[
-            { title: 'Ask about financial assistance', description: 'Every hospital receiving federal funding is required to offer financial assistance programs. Ask the billing department for a financial assistance application — these can reduce or eliminate bills based on income.' },
+            { title: 'Ask about financial assistance', description: 'Every hospital receiving federal funding is required to offer financial assistance programs. Ask the billing department for a financial assistance application --- these can reduce or eliminate bills based on income.' },
             { title: 'Investigate manufacturer programs', description: 'Most pharmaceutical companies offer patient assistance programs for expensive medications. Your prescriber or pharmacist can help identify these programs and assist with applications.' },
             { title: 'Request financial screening', description: 'Ask your care team if they offer financial toxicity screening. Many cancer centers and chronic disease clinics now employ financial counselors or social workers who can connect you to resources.' },
             { title: 'Document everything', description: 'Keep records of all medical bills, insurance communications, and financial assistance applications. Documentation protects you during appeals and helps financial navigators work more effectively on your behalf.' },
@@ -1077,7 +1343,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           One of the most important developments in this field is simply the act of naming
-          financial toxicity as a clinical outcome — not a personal failure, not an inevitable
+          financial toxicity as a clinical outcome --- not a personal failure, not an inevitable
           cost of illness, but a measurable harm that the healthcare system has an obligation
           to mitigate. The American Hospital Association has published guidance urging all
           facilities to proactively screen patients for financial hardship and connect them with
@@ -1089,8 +1355,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           that this experience is shared by millions, documented by research, and increasingly
           recognized by the clinical community as a legitimate harm requiring intervention. You
           are not failing to manage your money. You are navigating a system that was not designed
-          to protect you from this particular form of suffering. And naming that truth — clearly,
-          without shame — is the first step toward changing it.
+          to protect you from this particular form of suffering. And naming that truth --- clearly,
+          without shame --- is the first step toward changing it.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Financial Toxicity Is a Clinical Outcome">
@@ -1114,7 +1380,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     slug: 'advocacy-and-assertiveness-in-healthcare-speaking-up-for-yourself',
     title: 'Advocacy and Assertiveness in Healthcare: Speaking Up for Yourself',
     description:
-      'Learn evidence-based strategies for effective self-advocacy in medical settings — including how to prepare for appointments, communicate symptoms, navigate disagreements with providers, and build a healthcare team that listens.',
+      'Learn evidence-based strategies for effective self-advocacy in medical settings --- including how to prepare for appointments, communicate symptoms, navigate disagreements with providers, and build a healthcare team that listens.',
     image: '/images/articles/cat20/cover-010.svg',
     category: CATEGORY_CHRONIC_ILLNESS_PAIN,
     readTime: 12,
@@ -1124,25 +1390,25 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
     tags: ['Self-Advocacy', 'Healthcare Communication', 'Self-Help', 'Patient Empowerment'],
 
     summary:
-      'Speaking up in a medical appointment should be simple. You are the expert on your own experience, and the provider is the expert on the medicine. But for people with chronic illness, the reality is far more complicated. Research consistently shows that patients who actively participate in their healthcare — asking questions, expressing concerns, requesting clarification — have better outcomes, higher treatment adherence, and greater satisfaction. Yet many people find self-advocacy in medical settings profoundly difficult. Power dynamics, time pressure, medical jargon, past experiences of being dismissed, and the vulnerability of being unwell all conspire to silence the very people whose voices matter most. This article provides evidence-based strategies for preparing, communicating, and persisting — not as a combative patient, but as an informed partner in your own care.',
+      'Speaking up in a medical appointment should be simple. You are the expert on your own experience, and the provider is the expert on the medicine. But for people with chronic illness, the reality is far more complicated. Research consistently shows that patients who actively participate in their healthcare --- asking questions, expressing concerns, requesting clarification --- have better outcomes, higher treatment adherence, and greater satisfaction. Yet many people find self-advocacy in medical settings profoundly difficult. Power dynamics, time pressure, medical jargon, past experiences of being dismissed, and the vulnerability of being unwell all conspire to silence the very people whose voices matter most. This article provides evidence-based strategies for preparing, communicating, and persisting --- not as a combative patient, but as an informed partner in your own care.',
 
     keyFacts: [
       { text: 'Patients who actively participate in medical decision-making have 25% better treatment adherence', citationIndex: 1 },
-      { text: 'The average medical appointment lasts 15–20 minutes, and patients are interrupted within 11 seconds of beginning to speak', citationIndex: 2 },
+      { text: 'The average medical appointment lasts 15--20 minutes, and patients are interrupted within 11 seconds of beginning to speak', citationIndex: 2 },
       { text: '40% of patients leave appointments without fully understanding their treatment plan', citationIndex: 3 },
-      { text: 'Women and racial minorities are 20–30% more likely to report having their symptoms dismissed by providers', citationIndex: 4 },
+      { text: 'Women and racial minorities are 20--30% more likely to report having their symptoms dismissed by providers', citationIndex: 4 },
       { text: 'Shared decision-making interventions improve patient satisfaction by 40% and reduce decisional conflict by 50%', citationIndex: 5 },
     ],
 
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      "You are not being difficult when you ask questions. You are not being demanding when you describe your pain accurately. You are doing exactly what the evidence says leads to better care. Your voice is not an interruption — it is a clinical tool.",
+      "You are not being difficult when you ask questions. You are not being demanding when you describe your pain accurately. You are doing exactly what the evidence says leads to better care. Your voice is not an interruption --- it is a clinical tool.",
 
     practicalExercise: {
       title: 'The Appointment Preparation Protocol',
       steps: [
-        { title: 'Write your top three concerns', description: 'Before each appointment, identify the three most important issues you need to address. Rank them by urgency. Lead with the most critical concern — do not save it for the end when time may have run out.' },
+        { title: 'Write your top three concerns', description: 'Before each appointment, identify the three most important issues you need to address. Rank them by urgency. Lead with the most critical concern --- do not save it for the end when time may have run out.' },
         { title: 'Prepare your SOAPE note', description: 'Write a brief note using this format: Symptoms (what you are experiencing), Onset (when it started), Aggravating factors (what makes it worse), Palliating factors (what helps), and Effect on function (how it impacts your daily life).' },
         { title: 'Bring your ask', description: 'Know what you want from the appointment: a referral, a medication change, a diagnostic test, an explanation. If you leave without it, ask directly: "I came in today specifically hoping to discuss [X]. Can we address that before I go?"' },
         { title: 'Request the documentation', description: 'At the end, ask: "Can you document in my chart what we discussed today and what was decided?" This creates a record that protects you and ensures follow-through on the plan.' },
@@ -1171,8 +1437,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             You have been living in your body for your entire life. You know what normal feels
             like. You know when something has changed. You know when the pain is different,
             when the fatigue has deepened, when something is not right. And yet, when you sit
-            in a medical exam room — paper gown, fluorescent lights, a provider you see for
-            fifteen minutes every few months — all of that expertise can evaporate. The words
+            in a medical exam room --- paper gown, fluorescent lights, a provider you see for
+            fifteen minutes every few months --- all of that expertise can evaporate. The words
             do not come out right. The clock is ticking. You leave, and in the car, you
             remember everything you meant to say.
           </p>
@@ -1195,27 +1461,38 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           Why Self-Advocacy Is So Hard
         </h2>
         <p className="mb-6">
-          The difficulty of speaking up in medical settings is not a personal failing — it
+          The difficulty of speaking up in medical settings is not a personal failing --- it
           is a predictable consequence of the power dynamics inherent in the healthcare
           encounter. A 2022 review in <em>Health Psychology Review</em> identified several
           structural factors that suppress patient voice: the knowledge asymmetry between
           provider and patient, the physical vulnerability of being examined, the time pressure
-          of short appointments, the social conditioning to defer to authority, and — for
-          people with chronic illness — the fear of being labeled a "difficult
+          of short appointments, the social conditioning to defer to authority, and --- for
+          people with chronic illness --- the fear of being labeled a "difficult
           patient" <Citation id="8" index={8} source="Health Psychology Review" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           That last factor deserves emphasis. People with chronic illness depend on their
           healthcare providers in ways that create a profound power imbalance. If you alienate
           your doctor, who will manage your prescriptions? Who will authorize your referrals?
-          The fear of damaging the relationship — even when the relationship is not serving
-          you well — keeps many people silent when they most need to speak.
+          The fear of damaging the relationship --- even when the relationship is not serving
+          you well --- keeps many people silent when they most need to speak.
+        </p>
+        <p className="mb-6">
+          Chronic illness also introduces a specific form of communication fatigue. By the time
+          someone has been living with a condition for years, they have told their story dozens
+          or hundreds of times --- to primary care doctors, specialists, emergency room staff,
+          insurance representatives, and new providers after every move or insurance change.
+          Each retelling requires emotional labor. Each new provider means starting from
+          scratch, re-establishing credibility, and re-proving that your symptoms are real
+          and your history is accurate. This repetition is not just tedious --- it is
+          psychologically depleting, and it actively works against the self-advocacy that
+          the evidence shows leads to better outcomes.
         </p>
 
         <ArticleCallout variant="insight" title="The Paradox of Chronic Illness Advocacy">
           <p>
-            The people who most need to advocate for themselves — those with complex,
-            poorly understood, or stigmatized conditions — are precisely the ones who face the
+            The people who most need to advocate for themselves --- those with complex,
+            poorly understood, or stigmatized conditions --- are precisely the ones who face the
             greatest barriers to doing so. They have the most at stake, the most appointments,
             the most chances to be dismissed, and the most exhaustion from repeating their
             story to providers who may not have read their chart.
@@ -1226,16 +1503,16 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           The Evidence for Speaking Up
         </h2>
         <p className="mb-6">
-          Research on shared decision-making — the model in which patients and providers
-          collaborate on treatment choices — consistently shows superior outcomes. A 2022
+          Research on shared decision-making --- the model in which patients and providers
+          collaborate on treatment choices --- consistently shows superior outcomes. A 2022
           meta-analysis in the <em>BMJ</em> found that shared decision-making interventions
-          improved patient satisfaction by 40 percent and reduced decisional conflict — the
-          distress of not knowing whether the right choice was made — by 50
+          improved patient satisfaction by 40 percent and reduced decisional conflict --- the
+          distress of not knowing whether the right choice was made --- by 50
           percent <Citation id="5" index={5} source="BMJ" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          Patient activation — a measure of how engaged, informed, and confident a patient
-          is in managing their own care — is one of the strongest predictors of health
+          Patient activation --- a measure of how engaged, informed, and confident a patient
+          is in managing their own care --- is one of the strongest predictors of health
           outcomes across chronic conditions. Activated patients are more likely to follow
           treatment plans, catch errors, seek preventive care, and manage their conditions
           effectively <Citation id="1" index={1} source="Health Affairs" year="2022" tier={1} />.
@@ -1248,8 +1525,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           The most effective advocacy happens before you walk into the exam room. Preparation
-          transforms the appointment from a reactive interaction — where you respond to whatever
-          the provider brings up — into a collaborative one where you set the
+          transforms the appointment from a reactive interaction --- where you respond to whatever
+          the provider brings up --- into a collaborative one where you set the
           agenda <Citation id="6" index={6} source="Agency for Healthcare Research and Quality" year="2023" tier={2} />.
         </p>
 
@@ -1263,7 +1540,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
                     Write down your top three concerns, ranked by priority. Prepare a symptom
                     summary that includes when the symptom started, what makes it better or worse,
                     how it affects your daily function, and what you have already tried. Bring a
-                    current medication list. Bring your specific ask — what you want to leave the
+                    current medication list. Bring your specific ask --- what you want to leave the
                     appointment with.
                   </p>
                 </div>
@@ -1274,7 +1551,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Lead with your most important concern — not the easiest one. If you are
+                    Lead with your most important concern --- not the easiest one. If you are
                     interrupted, wait for the pause and say: "I want to make sure I share something
                     important." Take notes or bring someone to take notes for you. If you do not
                     understand something, say: "Can you explain that in everyday language?" Ask your
@@ -1290,7 +1567,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
                   <p className="mb-4">
                     Review your notes within 24 hours while the conversation is fresh. If you
                     forgot to raise a concern, call the office or send a patient portal message.
-                    Request a copy of the visit summary or after-visit notes — many healthcare
+                    Request a copy of the visit summary or after-visit notes --- many healthcare
                     systems now provide these automatically through patient portals. Track whether
                     agreed-upon actions (referrals, tests, medication changes) actually happen.
                   </p>
@@ -1304,8 +1581,8 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           Navigating Dismissal
         </h2>
         <p className="mb-6">
-          For many people with chronic illness — especially women, people of color, and those
-          with invisible conditions — the most significant barrier to advocacy is the
+          For many people with chronic illness --- especially women, people of color, and those
+          with invisible conditions --- the most significant barrier to advocacy is the
           experience of having symptoms dismissed. A 2023 large-scale survey found that women
           and racial minorities are 20 to 30 percent more likely to report that providers
           minimized, ignored, or attributed their symptoms to psychological causes without
@@ -1323,9 +1600,20 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           diagnosis without creating
           confrontation <Citation id="9" index={9} source="Patient Education and Counseling" year="2023" tier={1} />.
         </p>
+        <p className="mb-6">
+          The emotional aftermath of dismissal also deserves attention. Being told --- explicitly
+          or implicitly --- that your suffering is not real, not serious, or not worth investigating
+          produces a specific kind of psychological injury. It undermines your relationship with
+          your own body, making you doubt sensations that are genuinely informative. It erodes
+          trust in a healthcare system you depend on for survival. And it compounds the isolation
+          of chronic illness by adding the experience of not being believed to the experience of
+          being unwell. If you have been dismissed, recognizing that this reflects a systemic
+          problem in healthcare delivery rather than a personal inadequacy in how you communicate
+          is an essential step toward rebuilding confidence in your own advocacy.
+        </p>
 
         <QuoteBlock
-          quote="The phrase 'Can you note in my chart that you are choosing not to investigate this?' changed the entire dynamic of my appointments. Suddenly, providers started taking my concerns seriously — because documentation creates accountability."
+          quote="The phrase 'Can you note in my chart that you are choosing not to investigate this?' changed the entire dynamic of my appointments. Suddenly, providers started taking my concerns seriously --- because documentation creates accountability."
           source="Patient advocacy research participant, Health Psychology Review, 2022"
         />
 
@@ -1337,21 +1625,21 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           guidelines emphasize that effective healthcare depends on a genuine partnership
           between patient and
           provider <Citation id="7" index={7} source="National Institute for Health and Care Excellence (NICE)" year="2024" tier={3} />.
-          When that partnership does not exist — when a provider consistently dismisses your
+          When that partnership does not exist --- when a provider consistently dismisses your
           concerns, refuses to explain their reasoning, or makes you feel worse for asking
-          questions — it may be time to find a different provider.
+          questions --- it may be time to find a different provider.
         </p>
         <p className="mb-6">
           This is not always easy, especially with specialist shortages, insurance restrictions,
           and geographic barriers. But the evidence is clear: the quality of the patient-provider
           relationship independently predicts treatment outcomes. A provider who listens to you,
-          takes your concerns seriously, and collaborates on decisions is not a luxury — it is
+          takes your concerns seriously, and collaborates on decisions is not a luxury --- it is
           a therapeutic
           tool <Citation id="5" index={5} source="BMJ" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          You can also expand your advocacy network beyond your providers. Patient advocates —
-          professionals who attend appointments with you and help navigate the system — are
+          You can also expand your advocacy network beyond your providers. Patient advocates ---
+          professionals who attend appointments with you and help navigate the system --- are
           increasingly available through hospitals and nonprofit organizations. Peer support
           groups, both in-person and online, provide lived-experience guidance and emotional
           solidarity. And trusted companions who accompany you to appointments can serve as
@@ -1359,22 +1647,62 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
           anchors <Citation id="10" index={10} source="American College of Physicians" year="2024" tier={4} />.
         </p>
 
+        <h2 id="advocacy-as-a-learnable-skill" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Advocacy as a Learnable Skill
+        </h2>
+        <p className="mb-6">
+          One of the most persistent myths about self-advocacy is that it requires a particular
+          personality type --- that you need to be naturally assertive, extroverted, or
+          confrontational to speak effectively in medical settings. The research tells a
+          different story. Communication skills training programs designed specifically for
+          patients have been shown to significantly improve advocacy behaviors regardless of
+          baseline personality traits. A 2023 systematic review found that even brief
+          interventions --- a single coaching session before an appointment, a structured
+          communication worksheet, or a practice conversation with a peer --- produced measurable
+          improvements in the clarity and completeness of patient
+          communication <Citation id="9" index={9} source="Patient Education and Counseling" year="2023" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The skill of advocacy can be broken into discrete, practicable components. There is
+          the skill of preparation --- knowing what you want to communicate before the
+          appointment begins. There is the skill of prioritization --- leading with what matters
+          most rather than burying it under smaller concerns. There is the skill of specificity ---
+          describing symptoms in functional, measurable terms rather than vague emotional
+          language. There is the skill of persistence --- returning to an important topic that
+          was redirected or dismissed. And there is the skill of documentation --- ensuring that
+          what was discussed is recorded in a way that creates accountability and continuity.
+          None of these require charisma or confrontation. They require practice, preparation,
+          and the understanding that your participation in your own care is not optional --- it
+          is essential.
+        </p>
+        <p className="mb-6">
+          For people who find in-person advocacy particularly difficult --- whether due to
+          anxiety, cognitive fog, or the power dynamics of the exam room --- written communication
+          offers a valuable alternative. Patient portal messages, pre-appointment letters, and
+          symptom summaries prepared in advance allow you to articulate your concerns with the
+          precision and completeness that the pressure of a live conversation can make difficult.
+          Many providers report that patients who send organized written summaries before
+          appointments receive more thorough and focused care, because the provider arrives
+          already informed about the patient's priorities rather than spending limited
+          appointment time gathering basic information.
+        </p>
+
         <h2 id="your-voice-is-clinical-data" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Your Voice Is Clinical Data
         </h2>
         <p className="mb-6">
-          Self-advocacy in healthcare is sometimes framed as a soft skill — a nice-to-have
+          Self-advocacy in healthcare is sometimes framed as a soft skill --- a nice-to-have
           that makes appointments more pleasant. The evidence says otherwise. Your description
           of your symptoms, your report of how treatment is working, your account of how your
-          condition affects your daily function — this is clinical data. Without it, your
+          condition affects your daily function --- this is clinical data. Without it, your
           provider is making decisions with incomplete information. Speaking up is not demanding
-          — it is informing.
+          --- it is informing.
         </p>
         <p className="mb-6">
           You do not need to become a medical expert to advocate effectively. You need to
           become an expert on three things: what you are experiencing, what you need, and how
           to communicate both clearly. Those are skills that can be learned, practiced, and
-          sharpened — and this article, along with the preparation protocol above, is a
+          sharpened --- and this article, along with the preparation protocol above, is a
           starting point. Your voice matters. Use it.
         </p>
 
@@ -1384,7 +1712,7 @@ export const psychologyOfChronicIllnessArticlesB: Article[] = [
             three concerns and one specific question you want answered. Bring the paper with
             you. Start the appointment by saying: "I wrote down a few things I want to make
             sure we cover today." That single sentence shifts the dynamic from passive
-            to active — and the evidence says it leads to better care, better outcomes, and
+            to active --- and the evidence says it leads to better care, better outcomes, and
             a better experience for both you and your
             provider <Citation id="9" index={9} source="Patient Education and Counseling" year="2023" tier={1} />.
           </p>

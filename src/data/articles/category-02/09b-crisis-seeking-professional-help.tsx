@@ -78,10 +78,10 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You need therapy, but the barriers feel insurmountable: the nearest anxiety specialist is an hour away, you work irregular hours, leaving your house during high-anxiety periods feels impossible, or the cost of traditional in-person therapy is prohibitive. Then you hear about online therapy—sessions from your living room, flexible scheduling, often lower cost. But does it actually work? Can you really build a therapeutic relationship through a screen? Is it as effective as face-to-face treatment?
+            You need therapy, but the barriers feel insurmountable: the nearest anxiety specialist is an hour away, you work irregular hours, leaving your house during high-anxiety periods feels impossible, or the cost of traditional in-person therapy is prohibitive. Then you hear about online therapy---sessions from your living room, flexible scheduling, often lower cost. But does it actually work? Can you really build a therapeutic relationship through a screen? Is it as effective as face-to-face treatment?
           </p>
           <p className="mb-6">
-            The short answer, supported by extensive research: Yes. Online therapy for anxiety disorders is as effective as in-person treatment for most people <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />. The COVID-19 pandemic accelerated adoption and research, and the evidence is clear: Telehealth isn't a compromise—it's a legitimate, effective treatment modality.
+            The short answer, supported by extensive research: Yes. Online therapy for anxiety disorders is as effective as in-person treatment for most people <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />. The COVID-19 pandemic accelerated adoption and research, and the evidence is clear: Telehealth isn't a compromise---it's a legitimate, effective treatment modality.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            <strong>Key Finding:</strong> For generalized anxiety disorder, panic disorder, and social anxiety, video therapy shows equivalent effectiveness to face-to-face treatment. Even exposure therapy—which therapists initially worried might require in-person support—can be delivered effectively online.
+            <strong>Key Finding:</strong> For generalized anxiety disorder, panic disorder, and social anxiety, video therapy shows equivalent effectiveness to face-to-face treatment. Even exposure therapy---which therapists initially worried might require in-person support---can be delivered effectively online.
           </p>
         </ArticleCallout>
 
@@ -152,7 +152,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>The bottom line:</strong> Therapist support—even minimal check-ins—dramatically improves outcomes and reduces dropout. Fully self-guided programs work for some, but many people struggle with motivation and adherence without accountability.
+          <strong>The bottom line:</strong> Therapist support---even minimal check-ins---dramatically improves outcomes and reduces dropout. Fully self-guided programs work for some, but many people struggle with motivation and adherence without accountability.
         </p>
 
         <StatCard
@@ -189,7 +189,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           3. Comfort and Privacy
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Therapy from your own safe space—especially valuable for agoraphobia or severe social anxiety</li>
+          <li>Therapy from your own safe space---especially valuable for agoraphobia or severe social anxiety</li>
           <li>No waiting room anxiety</li>
           <li>Reduced stigma concerns (no one sees you entering a therapist's office)</li>
         </ul>
@@ -198,7 +198,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           4. Continuity During Disruptions
         </h3>
         <p className="mb-6">
-          Travel, illness, weather, relocation—online therapy continues uninterrupted. This consistency is particularly valuable for anxiety treatment, where regular sessions matter.
+          Travel, illness, weather, relocation---online therapy continues uninterrupted. This consistency is particularly valuable for anxiety treatment, where regular sessions matter.
         </p>
 
         <h2 id="limitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -228,7 +228,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           <li><strong>Are therapists licensed?</strong> Verify they're licensed in your state/country</li>
           <li><strong>What are their credentials?</strong> Look for LCSWs, LPCs, psychologists specializing in anxiety</li>
           <li><strong>Is the platform HIPAA-compliant?</strong> Essential for privacy protection</li>
-          <li><strong>What format is offered?</strong> Live video, messaging, phone—what works best for you?</li>
+          <li><strong>What format is offered?</strong> Live video, messaging, phone---what works best for you?</li>
           <li><strong>How quickly can you be matched?</strong> Some platforms match within days; others have waitlists</li>
           <li><strong>Can you switch therapists?</strong> Important if the first match isn't right</li>
           <li><strong>What's the cancellation/refund policy?</strong></li>
@@ -302,7 +302,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
               title: 'Do homework assignments',
               description: (
                 <p>
-                  Online therapy still requires between-session practice. Complete assignments, track symptoms, practice skills—just as you would with in-person therapy.
+                  Online therapy still requires between-session practice. Complete assignments, track symptoms, practice skills---just as you would with in-person therapy.
                 </p>
               ),
             },
@@ -310,7 +310,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
               title: 'Communicate about the online format',
               description: (
                 <p>
-                  If you're struggling with the online aspect—tech issues, feeling disconnected—tell your therapist. They can adjust or troubleshoot.
+                  If you're struggling with the online aspect---tech issues, feeling disconnected---tell your therapist. They can adjust or troubleshoot.
                 </p>
               ),
             },
@@ -331,10 +331,10 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>Key Takeaway:</strong> Online therapy for anxiety is not a second-best option—it's an evidence-based, effective treatment modality with unique advantages. Research shows it produces outcomes equivalent to in-person therapy for most anxiety disorders, with benefits including increased access, lower cost, scheduling flexibility, and reduced barriers.
+            <strong>Key Takeaway:</strong> Online therapy for anxiety is not a second-best option---it's an evidence-based, effective treatment modality with unique advantages. Research shows it produces outcomes equivalent to in-person therapy for most anxiety disorders, with benefits including increased access, lower cost, scheduling flexibility, and reduced barriers.
           </p>
           <p>
-            Live video therapy with a licensed therapist shows the strongest outcomes, while self-guided programs work for some but have high dropout rates without support. Choose platforms carefully (verify licensing, HIPAA compliance, therapist credentials), create a dedicated therapy space, and engage as fully as you would in person. For many people—especially those facing geographic, financial, or accessibility barriers—online therapy isn't just effective, it's life-changing. The best therapy is the therapy you can access and commit to. If online therapy makes that possible for you, that makes it the right choice.
+            Live video therapy with a licensed therapist shows the strongest outcomes, while self-guided programs work for some but have high dropout rates without support. Choose platforms carefully (verify licensing, HIPAA compliance, therapist credentials), create a dedicated therapy space, and engage as fully as you would in person. For many people---especially those facing geographic, financial, or accessibility barriers---online therapy isn't just effective, it's life-changing. The best therapy is the therapy you can access and commit to. If online therapy makes that possible for you, that makes it the right choice.
           </p>
         </ArticleCallout>
       </>
@@ -406,10 +406,10 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Just exercise more" might be the most frustrating advice you receive when you mention anxiety. As if you haven't heard it before. As if anxiety doesn't make the thought of going to a gym feel overwhelming. As if a 30-minute run could magically fix a disorder that's been disrupting your life for years. But here's what people miss when they casually throw out this advice: Exercise isn't a simplistic 'cure' for anxiety—it's a neurobiologically active intervention with effects comparable to medication and therapy.
+            "Just exercise more" might be the most frustrating advice you receive when you mention anxiety. As if you haven't heard it before. As if anxiety doesn't make the thought of going to a gym feel overwhelming. As if a 30-minute run could magically fix a disorder that's been disrupting your life for years. But here's what people miss when they casually throw out this advice: Exercise isn't a simplistic 'cure' for anxiety---it's a neurobiologically active intervention with effects comparable to medication and therapy.
           </p>
           <p className="mb-6">
-            Research shows that regular exercise reduces anxiety symptoms by 40-50% on average <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2021" tier={1} />. That's clinically significant. It's not about "burning off stress"—it's about fundamentally changing brain chemistry, stress response systems, and neuroplasticity <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
+            Research shows that regular exercise reduces anxiety symptoms by 40-50% on average <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2021" tier={1} />. That's clinically significant. It's not about "burning off stress"---it's about fundamentally changing brain chemistry, stress response systems, and neuroplasticity <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -421,14 +421,14 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           1. Neurotransmitter Regulation
         </h3>
         <p className="mb-6">
-          Exercise increases levels of GABA (the brain's primary calming neurotransmitter) and serotonin, while modulating norepinephrine—the same targets as many anxiety medications <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={2} />. Regular aerobic exercise has been shown to produce changes in brain chemistry similar to SSRIs, though the mechanisms differ.
+          Exercise increases levels of GABA (the brain's primary calming neurotransmitter) and serotonin, while modulating norepinephrine---the same targets as many anxiety medications <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={2} />. Regular aerobic exercise has been shown to produce changes in brain chemistry similar to SSRIs, though the mechanisms differ.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. Hippocampal Neurogenesis
         </h3>
         <p className="mb-6">
-          Exercise stimulates growth of new neurons in the hippocampus—a brain region involved in emotion regulation and stress response. Anxiety and chronic stress shrink the hippocampus; exercise reverses this. It's literal brain repair.
+          Exercise stimulates growth of new neurons in the hippocampus---a brain region involved in emotion regulation and stress response. Anxiety and chronic stress shrink the hippocampus; exercise reverses this. It's literal brain repair.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -442,7 +442,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           4. Interoceptive Exposure
         </h3>
         <p className="mb-6">
-          This is a psychological mechanism: Exercise creates physical sensations similar to anxiety (elevated heart rate, sweating, breathlessness). Regular exposure to these sensations in a safe, controlled context (exercise) reduces fear of them when they occur during anxiety. You learn: "Rapid heartbeat doesn't mean danger—it's just my body working."
+          This is a psychological mechanism: Exercise creates physical sensations similar to anxiety (elevated heart rate, sweating, breathlessness). Regular exposure to these sensations in a safe, controlled context (exercise) reduces fear of them when they occur during anxiety. You learn: "Rapid heartbeat doesn't mean danger---it's just my body working."
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -506,7 +506,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           <strong>Key findings from research <Citation id="5" index={5} source="Frontiers in Psychiatry" year="2020" tier={1} />:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Both aerobic and resistance training</strong> significantly reduce anxiety—no clear winner</li>
+          <li><strong>Both aerobic and resistance training</strong> significantly reduce anxiety---no clear winner</li>
           <li><strong>Yoga and tai chi</strong> are as effective as traditional exercise, with added benefits of breath control and mindfulness <Citation id="6" index={6} source="Journal of Alternative and Complementary Medicine" year="2021" tier={1} /></li>
           <li><strong>Intensity matters less than consistency:</strong> Moderate exercise done regularly beats occasional intense workouts</li>
           <li><strong>Outdoor exercise</strong> (nature exposure) may provide additional anxiety reduction beyond indoor exercise</li>
@@ -559,7 +559,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           Barrier 1: "Exercise Triggers My Anxiety" (Interoceptive Fear)
         </h3>
         <p className="mb-6">
-          If elevated heart rate and breathlessness trigger panic, start with <em>very</em> low-intensity movement and gradually increase. This is therapeutic—you're doing exposure therapy.
+          If elevated heart rate and breathlessness trigger panic, start with <em>very</em> low-intensity movement and gradually increase. This is therapeutic---you're doing exposure therapy.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Week 1-2: 10-minute gentle walks</li>
@@ -596,7 +596,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           <li>"After I drop the kids at school, I will do a 20-minute yoga video."</li>
         </ul>
         <p className="mb-6">
-          <strong>Lower the barrier:</strong> Commit to showing up, not to a full workout. "I will put on workout clothes and walk for 5 minutes. After that, I can choose to continue or stop." Often, starting is the hardest part—once you're moving, you continue.
+          <strong>Lower the barrier:</strong> Commit to showing up, not to a full workout. "I will put on workout clothes and walk for 5 minutes. After that, I can choose to continue or stop." Often, starting is the hardest part---once you're moving, you continue.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -657,20 +657,20 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           Exercise as Part of Comprehensive Treatment
         </h2>
         <p className="mb-6">
-          Exercise is powerful, but for moderate to severe anxiety, it's best used alongside—not instead of—therapy and/or medication <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2021" tier={1} />:
+          Exercise is powerful, but for moderate to severe anxiety, it's best used alongside---not instead of---therapy and/or medication <Citation id="1" index={1} source="Journal of Psychiatric Research" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Exercise + CBT:</strong> Exercise provides neurobiological support while CBT changes thought patterns—powerful combination</li>
+          <li><strong>Exercise + CBT:</strong> Exercise provides neurobiological support while CBT changes thought patterns---powerful combination</li>
           <li><strong>Exercise + medication:</strong> Exercise can enhance medication effectiveness and may allow for lower doses (discuss with doctor)</li>
           <li><strong>Exercise alone:</strong> Can be sufficient for mild anxiety or as a primary prevention/maintenance strategy</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>Key Takeaway:</strong> Exercise is not a simplistic "just get moving" prescription—it's a neurobiologically active treatment that reduces anxiety through neurotransmitter regulation, hippocampal neurogenesis, HPA axis recalibration, interoceptive exposure, and inflammation reduction.
+            <strong>Key Takeaway:</strong> Exercise is not a simplistic "just get moving" prescription---it's a neurobiologically active treatment that reduces anxiety through neurotransmitter regulation, hippocampal neurogenesis, HPA axis recalibration, interoceptive exposure, and inflammation reduction.
           </p>
           <p>
-            Research shows 150 minutes per week of moderate aerobic exercise (or 75 minutes vigorous) produces 40-50% reduction in anxiety symptoms—comparable to medication and therapy. Both aerobic exercise and resistance training work; yoga and walking are effective; the best exercise is the one you'll do consistently. Start small (10-15 minutes, 3-4 days/week), build gradually, address barriers specific to anxiety (interoceptive fear, gym avoidance, motivation challenges), and use exercise as part of comprehensive treatment, not a replacement for therapy or medication when needed. Movement is medicine—not in a trivial 'feel-good' way, but in a literal, brain-changing, life-improving way.
+            Research shows 150 minutes per week of moderate aerobic exercise (or 75 minutes vigorous) produces 40-50% reduction in anxiety symptoms---comparable to medication and therapy. Both aerobic exercise and resistance training work; yoga and walking are effective; the best exercise is the one you'll do consistently. Start small (10-15 minutes, 3-4 days/week), build gradually, address barriers specific to anxiety (interoceptive fear, gym avoidance, motivation challenges), and use exercise as part of comprehensive treatment, not a replacement for therapy or medication when needed. Movement is medicine---not in a trivial 'feel-good' way, but in a literal, brain-changing, life-improving way.
           </p>
         </ArticleCallout>
       </>
@@ -762,7 +762,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Acute treatment (first 12-16 weeks):</strong> Combination therapy produces faster symptom reduction and higher remission rates (75-80% vs. 55-65% for monotherapy) <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} /></li>
           <li><strong>Long-term outcomes (1+ years):</strong> Combination treatment has lower relapse rates (25%) compared to medication alone (45-50%) <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2020" tier={1} /></li>
-          <li><strong>Functional improvement:</strong> Combined treatment leads to greater improvements in work, relationships, and quality of life—not just symptom scores</li>
+          <li><strong>Functional improvement:</strong> Combined treatment leads to greater improvements in work, relationships, and quality of life---not just symptom scores</li>
           <li><strong>Treatment dropout:</strong> Combination therapy has similar or slightly lower dropout rates compared to medication or therapy alone</li>
         </ul>
 
@@ -885,7 +885,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
             <strong>APA Guidelines <Citation id="4" index={4} source="APA" year="2020" tier={2} />:</strong> For moderate-severe anxiety, start both simultaneously when possible. For mild anxiety, offer therapy first. For severe anxiety preventing therapy engagement, stabilize with medication first.
           </p>
           <p>
-            The "right" sequence is individualized—discuss with your providers based on severity, urgency, preferences, and access.
+            The "right" sequence is individualized---discuss with your providers based on severity, urgency, preferences, and access.
           </p>
         </ArticleCallout>
 
@@ -931,7 +931,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
               title: 'Have a relapse prevention plan',
               description: (
                 <p>
-                  Continue therapy check-ins during tapering. If symptoms return, pause the taper or resume previous dose. Some people need long-term medication—that's okay.
+                  Continue therapy check-ins during tapering. If symptoms return, pause the taper or resume previous dose. Some people need long-term medication---that's okay.
                 </p>
               ),
             },
@@ -989,7 +989,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Start medication on a weekend or low-stress period</li>
           <li>Inform your therapist if side effects are interfering</li>
-          <li>Give it 4-6 weeks—most side effects diminish</li>
+          <li>Give it 4-6 weeks---most side effects diminish</li>
           <li>If side effects persist, work with prescriber to adjust medication</li>
         </ul>
 
@@ -1007,10 +1007,10 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>Key Takeaway:</strong> Combining psychotherapy (usually CBT) with medication produces superior outcomes for moderate-severe anxiety compared to either treatment alone—75-80% response rates vs. 55-65% for monotherapy, and significantly lower relapse rates long-term.
+            <strong>Key Takeaway:</strong> Combining psychotherapy (usually CBT) with medication produces superior outcomes for moderate-severe anxiety compared to either treatment alone---75-80% response rates vs. 55-65% for monotherapy, and significantly lower relapse rates long-term.
           </p>
           <p>
-            The treatments are complementary: Medication addresses neurobiological dysfunction and reduces baseline anxiety enough to engage fully in life and therapy; therapy provides lasting skills that work even after medication is discontinued. Start both simultaneously for moderate-severe anxiety, or sequence based on severity and preferences. If you do well on combination treatment, medication may eventually be tapered under supervision while maintaining therapy skills, though some people benefit from long-term medication—and that's a valid, evidence-based choice. The goal isn't to use the fewest treatments possible—it's to use whatever combination of evidence-based approaches leads to recovery and sustained wellbeing. For many with anxiety, that's both medication and therapy working together.
+            The treatments are complementary: Medication addresses neurobiological dysfunction and reduces baseline anxiety enough to engage fully in life and therapy; therapy provides lasting skills that work even after medication is discontinued. Start both simultaneously for moderate-severe anxiety, or sequence based on severity and preferences. If you do well on combination treatment, medication may eventually be tapered under supervision while maintaining therapy skills, though some people benefit from long-term medication---and that's a valid, evidence-based choice. The goal isn't to use the fewest treatments possible---it's to use whatever combination of evidence-based approaches leads to recovery and sustained wellbeing. For many with anxiety, that's both medication and therapy working together.
           </p>
         </ArticleCallout>
       </>
@@ -1074,10 +1074,10 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've done the work. Therapy taught you skills. Medication stabilized your symptoms. For months, maybe a year, anxiety has been manageable—maybe even barely noticeable. Then stress hits: a job change, relationship conflict, a health scare. The familiar tightness returns. The catastrophic thoughts creep back. You wonder: Is this relapse? Did all that progress disappear? Am I starting over from scratch?
+            You've done the work. Therapy taught you skills. Medication stabilized your symptoms. For months, maybe a year, anxiety has been manageable---maybe even barely noticeable. Then stress hits: a job change, relationship conflict, a health scare. The familiar tightness returns. The catastrophic thoughts creep back. You wonder: Is this relapse? Did all that progress disappear? Am I starting over from scratch?
           </p>
           <p className="mb-6">
-            Here's the reality: Relapse is common with anxiety disorders—30-50% of people experience symptom recurrence within 2 years of ending treatment <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />. But relapse doesn't erase your progress, and it's not inevitable. With the right strategies, you can maintain gains, recognize warning signs early, and respond before symptoms escalate.
+            Here's the reality: Relapse is common with anxiety disorders---30-50% of people experience symptom recurrence within 2 years of ending treatment <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />. But relapse doesn't erase your progress, and it's not inevitable. With the right strategies, you can maintain gains, recognize warning signs early, and respond before symptoms escalate.
           </p>
         </div>
 
@@ -1115,7 +1115,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="info">
           <p>
-            <strong>Important:</strong> A few anxious days during a stressful week isn't relapse—it's being human. Relapse is characterized by persistent symptoms, return of avoidance behaviors, and functional impairment that doesn't resolve within 1-2 weeks.
+            <strong>Important:</strong> A few anxious days during a stressful week isn't relapse---it's being human. Relapse is characterized by persistent symptoms, return of avoidance behaviors, and functional impairment that doesn't resolve within 1-2 weeks.
           </p>
         </ArticleCallout>
 
@@ -1155,7 +1155,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           1. Continue Practicing Skills Regularly
         </h3>
         <p className="mb-6">
-          The #1 predictor of sustained recovery: Ongoing skill use even when you feel good <Citation id="2" index={2} source="Behaviour Research and Therapy" year="2020" tier={1} />. CBT/ACT skills aren't crutches—they're maintenance practices, like brushing your teeth.
+          The #1 predictor of sustained recovery: Ongoing skill use even when you feel good <Citation id="2" index={2} source="Behaviour Research and Therapy" year="2020" tier={1} />. CBT/ACT skills aren't crutches---they're maintenance practices, like brushing your teeth.
         </p>
 
         <ArticleCallout variant="tip" title="Maintenance Skill Practice">
@@ -1181,7 +1181,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These aren't full treatment courses—often just 1-3 sessions to recalibrate and reinforce skills.
+          These aren't full treatment courses---often just 1-3 sessions to recalibrate and reinforce skills.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1236,11 +1236,11 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           4. Maintain Physical Health Foundations
         </h3>
         <p className="mb-6">
-          Sleep, exercise, and nutrition aren't just "nice to have"—they're protective factors against relapse:
+          Sleep, exercise, and nutrition aren't just "nice to have"---they're protective factors against relapse:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Sleep:</strong> 7-9 hours nightly. Disrupted sleep is both a warning sign and a risk factor for worsening anxiety.</li>
-          <li><strong>Exercise:</strong> 150 min/week moderate aerobic activity. Don't abandon this when you feel better—it's maintenance.</li>
+          <li><strong>Exercise:</strong> 150 min/week moderate aerobic activity. Don't abandon this when you feel better---it's maintenance.</li>
           <li><strong>Nutrition:</strong> Regular meals, limit caffeine/alcohol, stable blood sugar. Skipping meals or excessive caffeine often precedes anxiety spikes.</li>
         </ul>
 
@@ -1253,7 +1253,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Weekly contact with supportive friends or family</li>
           <li>Consider ongoing support groups (NAMI, ADAA local groups, online communities)</li>
-          <li>Don't withdraw when stress increases—reach out more, not less</li>
+          <li>Don't withdraw when stress increases---reach out more, not less</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1266,7 +1266,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           <li><strong>Stay on medication for recommended duration:</strong> Typically 6-12 months after symptoms remit, sometimes longer</li>
           <li><strong>Taper slowly if discontinuing:</strong> Over weeks to months, not abruptly</li>
           <li><strong>Monitor during taper:</strong> Increase therapy check-ins, track symptoms closely</li>
-          <li><strong>Don't view long-term medication as failure:</strong> Some people need ongoing pharmacotherapy for sustained wellness—that's evidence-based care, not weakness</li>
+          <li><strong>Don't view long-term medication as failure:</strong> Some people need ongoing pharmacotherapy for sustained wellness---that's evidence-based care, not weakness</li>
         </ul>
 
         <h2 id="if-relapse-happens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1274,13 +1274,13 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          <strong>First: Don't catastrophize.</strong> Relapse doesn't erase your progress. Your brain has already learned new patterns—reactivating them is faster than building them the first time.
+          <strong>First: Don't catastrophize.</strong> Relapse doesn't erase your progress. Your brain has already learned new patterns---reactivating them is faster than building them the first time.
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Acknowledge it without shame:</strong> "I'm experiencing a relapse. This is treatable. I've done this before."</li>
           <li><strong>Return to treatment quickly:</strong> Contact your therapist or prescriber. Don't wait weeks hoping it resolves on its own.</li>
-          <li><strong>Resume skills immediately:</strong> Go back to what worked before—thought records, exposure practice, mindfulness, values-aligned action</li>
+          <li><strong>Resume skills immediately:</strong> Go back to what worked before---thought records, exposure practice, mindfulness, values-aligned action</li>
           <li><strong>Identify what changed:</strong> Did you stop practicing skills? Experience major stress? Stop medication? Understanding triggers helps prevent future relapses.</li>
           <li><strong>Adjust treatment plan:</strong> Maybe you need more intensive therapy, medication adjustment, or longer maintenance phase</li>
           <li><strong>Be patient:</strong> Re-remission is often faster than initial treatment, but it still takes time (weeks, not days)</li>
@@ -1329,7 +1329,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
             <strong>Key Takeaway:</strong> Relapse is common (30-50% within 2 years) but not inevitable. The most effective prevention strategies are: (1) Continue practicing CBT/ACT skills regularly even when feeling good, (2) Schedule periodic booster therapy sessions, (3) Recognize early warning signs and intervene early, (4) Maintain physical health foundations (sleep, exercise, nutrition), (5) Stay socially connected, and (6) If on medication, follow recommended duration and taper slowly.
           </p>
           <p>
-            Relapse doesn't erase your progress—it's a signal to increase support and skill use, not evidence that treatment failed. Distinguish between temporary setbacks (normal) and true relapse (persistent symptoms requiring re-treatment). If relapse occurs, respond quickly: resume skills, return to treatment, identify what changed, and adjust your maintenance plan. With a solid relapse prevention plan, you can sustain recovery long-term. Anxiety may be a chronic condition for some, requiring ongoing management—but that management works, and a life well-lived with occasional anxiety is absolutely achievable.
+            Relapse doesn't erase your progress---it's a signal to increase support and skill use, not evidence that treatment failed. Distinguish between temporary setbacks (normal) and true relapse (persistent symptoms requiring re-treatment). If relapse occurs, respond quickly: resume skills, return to treatment, identify what changed, and adjust your maintenance plan. With a solid relapse prevention plan, you can sustain recovery long-term. Anxiety may be a chronic condition for some, requiring ongoing management---but that management works, and a life well-lived with occasional anxiety is absolutely achievable.
           </p>
         </ArticleCallout>
       </>
@@ -1393,10 +1393,10 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Week 4 of therapy, you feel amazing. The anxiety that ruled your life for years suddenly feels manageable. You think: "I'm cured! This is it!" Then week 6 hits. A bad day becomes a bad week. The old thoughts return. Panic creeps back. You spiral: "I thought I was getting better. What went wrong? Did I fail? Is this whole treatment pointless?" This is the painful misconception at the heart of anxiety recovery—the belief that healing is a straight line from sick to well.
+            Week 4 of therapy, you feel amazing. The anxiety that ruled your life for years suddenly feels manageable. You think: "I'm cured! This is it!" Then week 6 hits. A bad day becomes a bad week. The old thoughts return. Panic creeps back. You spiral: "I thought I was getting better. What went wrong? Did I fail? Is this whole treatment pointless?" This is the painful misconception at the heart of anxiety recovery---the belief that healing is a straight line from sick to well.
           </p>
           <p className="mb-6">
-            Recovery from anxiety doesn't follow a linear trajectory. Research tracking people through treatment shows that symptom reduction looks more like a jagged mountain range than a smooth downward slope <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />. There are good weeks and bad weeks. Days when you feel "cured" and days when you're sure nothing has changed. This isn't failure—it's the normal pattern of recovery. And understanding this can make all the difference in whether you persist or give up.
+            Recovery from anxiety doesn't follow a linear trajectory. Research tracking people through treatment shows that symptom reduction looks more like a jagged mountain range than a smooth downward slope <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />. There are good weeks and bad weeks. Days when you feel "cured" and days when you're sure nothing has changed. This isn't failure---it's the normal pattern of recovery. And understanding this can make all the difference in whether you persist or give up.
           </p>
         </div>
 
@@ -1430,8 +1430,8 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Overall trend downward:</strong> Despite fluctuations, the general direction is improvement</li>
-          <li><strong>Regular spikes:</strong> Every few weeks, symptoms temporarily worsen—this is normal</li>
-          <li><strong>Good weeks don't last forever:</strong> And that's okay—they're not supposed to</li>
+          <li><strong>Regular spikes:</strong> Every few weeks, symptoms temporarily worsen---this is normal</li>
+          <li><strong>Good weeks don't last forever:</strong> And that's okay---they're not supposed to</li>
           <li><strong>Bad weeks don't erase progress:</strong> Even when symptoms spike, they typically don't return to baseline severity</li>
           <li><strong>The timeline is months, not weeks:</strong> Meaningful, sustained improvement takes 3-6+ months</li>
         </ul>
@@ -1450,34 +1450,34 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           1. Life Stress Continues During Treatment
         </h3>
         <p className="mb-6">
-          You're not recovering in a vacuum. Work deadlines, relationship conflicts, health scares, sleep disruption—life happens while you're in treatment. Each stressor can temporarily increase anxiety, even as you're building skills.
+          You're not recovering in a vacuum. Work deadlines, relationship conflicts, health scares, sleep disruption---life happens while you're in treatment. Each stressor can temporarily increase anxiety, even as you're building skills.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. Brain Changes Take Time
         </h3>
         <p className="mb-6">
-          Neuroplasticity—your brain rewiring fear circuits, building new neural pathways—doesn't happen overnight. Medication takes 4-6 weeks to reach full effectiveness. Therapy skills require repetition over weeks to consolidate. Your brain is doing complex remodeling work that naturally has ups and downs.
+          Neuroplasticity---your brain rewiring fear circuits, building new neural pathways---doesn't happen overnight. Medication takes 4-6 weeks to reach full effectiveness. Therapy skills require repetition over weeks to consolidate. Your brain is doing complex remodeling work that naturally has ups and downs.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           3. Extinction Bursts During Exposure
         </h3>
         <p className="mb-6">
-          When you start facing feared situations (exposure therapy), anxiety often temporarily intensifies before it decreases. This is called an "extinction burst"—your brain's last-ditch effort to make you avoid. It feels like regression, but it's actually progress.
+          When you start facing feared situations (exposure therapy), anxiety often temporarily intensifies before it decreases. This is called an "extinction burst"---your brain's last-ditch effort to make you avoid. It feels like regression, but it's actually progress.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           4. Skill Development Is Gradual
         </h3>
         <p className="mb-6">
-          Learning to identify, challenge, and respond differently to anxious thoughts isn't like flipping a switch. Some days you remember your skills and use them effectively. Other days you forget, or they don't work as well. This is normal learning—two steps forward, one step back.
+          Learning to identify, challenge, and respond differently to anxious thoughts isn't like flipping a switch. Some days you remember your skills and use them effectively. Other days you forget, or they don't work as well. This is normal learning---two steps forward, one step back.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           5. Expectation Violations</h3>
         <p className="mb-6">
-          When you have a great week, you expect it to continue. When anxiety returns, it feels catastrophic because you'd started to believe you were "fixed." The disappointment itself can worsen anxiety. Managing expectations—knowing good weeks will be followed by tougher ones—reduces this secondary distress.
+          When you have a great week, you expect it to continue. When anxiety returns, it feels catastrophic because you'd started to believe you were "fixed." The disappointment itself can worsen anxiety. Managing expectations---knowing good weeks will be followed by tougher ones---reduces this secondary distress.
         </p>
 
         <h2 id="redefining-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1530,7 +1530,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           2. Recovery Time from Setbacks
         </h3>
         <p className="mb-6">
-          Early in recovery, a bad day might derail you for a week. As you progress, you bounce back faster—maybe a day or two instead of a week. That's improvement, even if the bad days still happen.
+          Early in recovery, a bad day might derail you for a week. As you progress, you bounce back faster---maybe a day or two instead of a week. That's improvement, even if the bad days still happen.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1544,7 +1544,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
           4. Values-Aligned Living
         </h3>
         <p className="mb-6">
-          Are you making choices based on what you value rather than what you fear? Even small shifts—going to one social event instead of avoiding all, speaking up once in a meeting—are meaningful progress.
+          Are you making choices based on what you value rather than what you fear? Even small shifts---going to one social event instead of avoiding all, speaking up once in a meeting---are meaningful progress.
         </p>
 
         <ArticleCallout variant="tip" title="Monthly Progress Check-In">
@@ -1576,7 +1576,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
             <strong>Normalize it:</strong> "This is expected. Recovery isn't linear. This doesn't erase my progress."
           </li>
           <li>
-            <strong>Use skills, don't abandon them:</strong> Setbacks are when you need skills most. Practice thought challenging, exposure, mindfulness—even if they feel less effective than usual.
+            <strong>Use skills, don't abandon them:</strong> Setbacks are when you need skills most. Practice thought challenging, exposure, mindfulness---even if they feel less effective than usual.
           </li>
           <li>
             <strong>Practice self-compassion:</strong> "This is hard. I'm struggling right now. That's okay. I can be kind to myself while I work through this" <Citation id="3" index={3} source="Mindfulness" year="2021" tier={1} /></li>
@@ -1609,7 +1609,7 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="info">
           <p>
-            <strong>Research on long-term recovery trajectories <Citation id="4" index={4} source="American Psychologist" year="2020" tier={1} />:</strong> Most people who stick with evidence-based treatment show meaningful, sustained improvement by 6-12 months. But even 2-3 years out, they still have periodic difficult weeks. The difference: Those weeks are less frequent, less severe, and resolve faster. Recovery isn't reaching a permanent anxiety-free state—it's developing resilience and skill to navigate inevitable fluctuations.
+            <strong>Research on long-term recovery trajectories <Citation id="4" index={4} source="American Psychologist" year="2020" tier={1} />:</strong> Most people who stick with evidence-based treatment show meaningful, sustained improvement by 6-12 months. But even 2-3 years out, they still have periodic difficult weeks. The difference: Those weeks are less frequent, less severe, and resolve faster. Recovery isn't reaching a permanent anxiety-free state---it's developing resilience and skill to navigate inevitable fluctuations.
           </p>
         </ArticleCallout>
 
@@ -1634,13 +1634,13 @@ export const crisisSeekingProfessionalHelpArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>Key Takeaway:</strong> Recovery from anxiety is not linear. Research shows that 80-85% of people experience fluctuating symptoms throughout treatment—good weeks followed by difficult ones, progress followed by temporary setbacks. This is normal, not failure.
+            <strong>Key Takeaway:</strong> Recovery from anxiety is not linear. Research shows that 80-85% of people experience fluctuating symptoms throughout treatment---good weeks followed by difficult ones, progress followed by temporary setbacks. This is normal, not failure.
           </p>
           <p className="mb-3">
             The pattern: overall downward trend in symptoms and functional impairment, but with regular spikes and valleys. Causes: ongoing life stress, gradual brain changes, extinction bursts during exposure, skill-building taking time, and expectation violations. Redefine recovery: Not as permanent symptom elimination, but as living according to values despite occasional anxiety, having resilience to bounce back from setbacks, and building a meaningful life where anxiety exists but doesn't dominate.
           </p>
           <p>
-            Measure progress through functional milestones, recovery time from setbacks, skill usage, and values-alignment—not daily symptom intensity. When setbacks happen, name them accurately (not catastrophically), normalize them, use skills anyway, practice self-compassion, and trust the process. Recovery is becoming someone who can live fully even when anxiety is present. The path is winding, but the direction—when you're on the right track—is forward. Keep going.
+            Measure progress through functional milestones, recovery time from setbacks, skill usage, and values-alignment---not daily symptom intensity. When setbacks happen, name them accurately (not catastrophically), normalize them, use skills anyway, practice self-compassion, and trust the process. Recovery is becoming someone who can live fully even when anxiety is present. The path is winding, but the direction---when you're on the right track---is forward. Keep going.
           </p>
         </ArticleCallout>
       </>

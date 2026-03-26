@@ -288,10 +288,10 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           You do not need to master all ten techniques at once. Pick two or three that feel most natural and practice them during low-stress moments first <Citation id="8" index={8} source="American Psychological Association" year="2022" tier={3} />. When you practice during calm periods, the techniques become automatic and easier to access when emotions run high.
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Start small</strong> — try one breathing exercise today for just two minutes.</li>
-          <li><strong>Notice patterns</strong> — when do you most often feel overwhelmed? Morning? Evening? After social events?</li>
-          <li><strong>Build a rotation</strong> — alternate between body-based and mind-based techniques to find your best fit.</li>
-          <li><strong>Track what works</strong> — write a brief note after each practice about how it felt.</li>
+          <li><strong>Start small</strong> --- try one breathing exercise today for just two minutes.</li>
+          <li><strong>Notice patterns</strong> --- when do you most often feel overwhelmed? Morning? Evening? After social events?</li>
+          <li><strong>Build a rotation</strong> --- alternate between body-based and mind-based techniques to find your best fit.</li>
+          <li><strong>Track what works</strong> --- write a brief note after each practice about how it felt.</li>
         </ol>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -313,7 +313,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
     id: catId(12),
     slug: 'stop-technique-60-second-reset',
     title: 'The STOP Technique: A 60-Second Reset When Emotions Overwhelm You',
-    description: 'Learn the STOP technique — a simple four-step method used in CBT and DBT to pause emotional reactivity and regain control in under a minute.',
+    description: 'Learn the STOP technique --- a simple four-step method used in CBT and DBT to pause emotional reactivity and regain control in under a minute.',
     image: "/images/articles/cat01/cover-012.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 6,
@@ -409,25 +409,25 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           variant="vertical"
           steps={[
             {
-              title: 'S — Stop',
+              title: 'S --- Stop',
               description: (
                 <p>Freeze. Do not act, do not speak, do not send the text. Simply pause whatever you are doing. This interrupts the automatic reaction loop.</p>
               ),
             },
             {
-              title: 'T — Take a Breath',
+              title: 'T --- Take a Breath',
               description: (
                 <p>Take one slow, deep breath. Inhale for 4 counts, hold for 2, exhale for 6. This activates your parasympathetic nervous system and begins calming the stress response.</p>
               ),
             },
             {
-              title: 'O — Observe',
+              title: 'O --- Observe',
               description: (
                 <p>Notice what is happening inside you and around you. What emotion are you feeling? Where do you feel it in your body? What triggered it? Observation creates distance between you and the emotion.</p>
               ),
             },
             {
-              title: 'P — Proceed Mindfully',
+              title: 'P --- Proceed Mindfully',
               description: (
                 <p>Now choose your response intentionally. Ask yourself: What action aligns with my values right now? What would be most effective? Then act from that place of clarity.</p>
               ),
@@ -466,12 +466,12 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Brief interventions like STOP are most effective when you practice them in low-stakes moments first <Citation id="8" index={8} source="Journal of Affective Disorders" year="2021" tier={1} />. Try using STOP during minor frustrations — a slow driver, a long line, a dropped cup — so the steps become automatic before you need them in high-stakes moments.
+          Brief interventions like STOP are most effective when you practice them in low-stakes moments first <Citation id="8" index={8} source="Journal of Affective Disorders" year="2021" tier={1} />. Try using STOP during minor frustrations --- a slow driver, a long line, a dropped cup --- so the steps become automatic before you need them in high-stakes moments.
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>Set a phone reminder to practice STOP twice daily for one week.</li>
           <li>After each practice, rate your emotional intensity before and after on a 1-10 scale.</li>
-          <li>Notice which step feels most impactful for you — the pause, the breath, the observation, or the mindful choice.</li>
+          <li>Notice which step feels most impactful for you --- the pause, the breath, the observation, or the mindful choice.</li>
         </ol>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -493,7 +493,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
     id: catId(13),
     slug: 'breathing-exercises-for-emotional-regulation',
     title: 'Breathing Exercises That Actually Work for Emotional Regulation',
-    description: 'Explore breathing techniques backed by science — from box breathing to physiological sighs — and learn which patterns work best for different emotional states.',
+    description: 'Explore breathing techniques backed by science --- from box breathing to physiological sighs --- and learn which patterns work best for different emotional states.',
     image: "/images/articles/cat01/cover-013.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -579,7 +579,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Breathing is the only autonomic function you can control consciously. Every other automatic process — your heartbeat, digestion, pupil dilation — runs beyond your reach. But your breath? You can slow it, deepen it, and change its pattern. And when you do, you send a direct signal to your nervous system that shifts your entire emotional state.
+            Breathing is the only autonomic function you can control consciously. Every other automatic process --- your heartbeat, digestion, pupil dilation --- runs beyond your reach. But your breath? You can slow it, deepen it, and change its pattern. And when you do, you send a direct signal to your nervous system that shifts your entire emotional state.
           </p>
           <p className="mb-6">
             A systematic review of slow breathing research found that controlled breathing reduces cortisol, lowers blood pressure, increases heart rate variability, and improves mood across dozens of studies <Citation id="1" index={1} source="Frontiers in Human Neuroscience" year="2018" tier={1} />. A 2023 study from Stanford showed that just five minutes of structured breathing outperformed meditation for mood improvement <Citation id="2" index={2} source="Cell Reports Medicine" year="2023" tier={1} />.
@@ -590,7 +590,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           How Breathing Affects Your Emotions
         </h2>
         <p className="mb-6">
-          Your vagus nerve is the longest cranial nerve in your body. It runs from your brainstem through your chest and into your abdomen. When you exhale slowly, you stimulate the vagus nerve, which activates your parasympathetic (rest-and-digest) system <Citation id="4" index={4} source="Frontiers in Psychology" year="2014" tier={1} />. This is why slow breathing calms you down — it is not a metaphor or a mindset trick. It is a direct physiological mechanism.
+          Your vagus nerve is the longest cranial nerve in your body. It runs from your brainstem through your chest and into your abdomen. When you exhale slowly, you stimulate the vagus nerve, which activates your parasympathetic (rest-and-digest) system <Citation id="4" index={4} source="Frontiers in Psychology" year="2014" tier={1} />. This is why slow breathing calms you down --- it is not a metaphor or a mindset trick. It is a direct physiological mechanism.
         </p>
         <p className="mb-6">
           Different breathing patterns create different effects. Fast breathing activates the sympathetic (fight-or-flight) system, which can be useful when you need energy. Slow breathing activates the parasympathetic system, calming you down <Citation id="1" index={1} source="Frontiers in Human Neuroscience" year="2018" tier={1} />.
@@ -688,7 +688,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Start with the physiological sigh — it is the simplest, fastest, and requires no counting. Do one to three cycles whenever you notice stress rising. Once comfortable, add five minutes of coherent breathing (5 in, 5 out) to your morning or evening routine <Citation id="5" index={5} source="Frontiers in Psychology" year="2017" tier={1} />.
+          Start with the physiological sigh --- it is the simplest, fastest, and requires no counting. Do one to three cycles whenever you notice stress rising. Once comfortable, add five minutes of coherent breathing (5 in, 5 out) to your morning or evening routine <Citation id="5" index={5} source="Frontiers in Psychology" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
           Research shows consistent daily practice of controlled breathing produces measurable improvements in mood, anxiety, and heart rate variability within two to four weeks <Citation id="6" index={6} source="National Center for Complementary and Integrative Health" year="2023" tier={2} />.
@@ -869,10 +869,10 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           Mental grounding uses cognitive tasks to redirect your attention. These are especially helpful when physical grounding is not practical, such as during a meeting or on public transit.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Counting backward from 100 by 7s</strong> — requires enough concentration to override rumination.</li>
-          <li><strong>Naming categories</strong> — list every dog breed, country, or color you can think of.</li>
-          <li><strong>Describing your surroundings in detail</strong> — "I am sitting in a brown chair. The wall is cream-colored. There is a window to my left."</li>
-          <li><strong>Reciting something familiar</strong> — a poem, song lyrics, or the alphabet backward.</li>
+          <li><strong>Counting backward from 100 by 7s</strong> --- requires enough concentration to override rumination.</li>
+          <li><strong>Naming categories</strong> --- list every dog breed, country, or color you can think of.</li>
+          <li><strong>Describing your surroundings in detail</strong> --- "I am sitting in a brown chair. The wall is cream-colored. There is a window to my left."</li>
+          <li><strong>Reciting something familiar</strong> --- a poem, song lyrics, or the alphabet backward.</li>
         </ul>
 
         <h2 id="soothing-grounding" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -882,10 +882,10 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           Soothing grounding uses comfort and self-compassion to create a sense of safety:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Imagine a safe place</strong> — picture a location where you feel completely safe and at ease.</li>
-          <li><strong>Speak kindly to yourself</strong> — "I am safe right now. This feeling will pass. I can handle this."</li>
-          <li><strong>Touch something comforting</strong> — a soft blanket, a smooth stone, or your own arm.</li>
-          <li><strong>Remember someone who cares about you</strong> — picture their face, recall their voice.</li>
+          <li><strong>Imagine a safe place</strong> --- picture a location where you feel completely safe and at ease.</li>
+          <li><strong>Speak kindly to yourself</strong> --- "I am safe right now. This feeling will pass. I can handle this."</li>
+          <li><strong>Touch something comforting</strong> --- a soft blanket, a smooth stone, or your own arm.</li>
+          <li><strong>Remember someone who cares about you</strong> --- picture their face, recall their voice.</li>
         </ul>
 
         <BeforeAfter
@@ -939,7 +939,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
     id: catId(15),
     slug: 'cognitive-reappraisal-change-feelings-by-changing-thoughts',
     title: 'Cognitive Reappraisal: How to Change What You Feel by Changing How You Think',
-    description: 'Learn cognitive reappraisal — the gold-standard emotion regulation strategy from CBT. Discover how reframing your interpretation of events can transform your emotional experience.',
+    description: 'Learn cognitive reappraisal --- the gold-standard emotion regulation strategy from CBT. Discover how reframing your interpretation of events can transform your emotional experience.',
     image: "/images/articles/cat01/cover-015.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 8,
@@ -1025,10 +1025,10 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your colleague does not reply to your email for two days. You could think, "They are ignoring me because they are upset with me." Or you could think, "They are probably swamped with deadlines this week." Same situation. Completely different emotional outcomes. This is the power of cognitive reappraisal — one of the most well-researched emotion regulation strategies in psychology.
+            Your colleague does not reply to your email for two days. You could think, "They are ignoring me because they are upset with me." Or you could think, "They are probably swamped with deadlines this week." Same situation. Completely different emotional outcomes. This is the power of cognitive reappraisal --- one of the most well-researched emotion regulation strategies in psychology.
           </p>
           <p className="mb-6">
-            Cognitive reappraisal means changing the way you interpret a situation to change the way you feel about it. Neuroimaging studies show that when people use reappraisal successfully, activity in the prefrontal cortex increases while amygdala activation decreases — the thinking brain calms the emotional brain <Citation id="1" index={1} source="Cerebral Cortex" year="2014" tier={1} />.
+            Cognitive reappraisal means changing the way you interpret a situation to change the way you feel about it. Neuroimaging studies show that when people use reappraisal successfully, activity in the prefrontal cortex increases while amygdala activation decreases --- the thinking brain calms the emotional brain <Citation id="1" index={1} source="Cerebral Cortex" year="2014" tier={1} />.
           </p>
         </div>
 
@@ -1039,7 +1039,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           The foundation of cognitive reappraisal comes from Aaron Beck's cognitive model, developed in the 1970s <Citation id="3" index={3} source="Guilford Press" year="1979" tier={5} />. Beck proposed that it is not events themselves that cause our emotions, but our interpretations of those events. When you change the interpretation, the emotion follows.
         </p>
         <p className="mb-6">
-          James Gross's process model of emotion regulation identifies five points where you can intervene in the emotion generation process, and reappraisal occurs at the most powerful point — before the full emotional response has been generated <Citation id="4" index={4} source="Emotion Review" year="2023" tier={1} />.
+          James Gross's process model of emotion regulation identifies five points where you can intervene in the emotion generation process, and reappraisal occurs at the most powerful point --- before the full emotional response has been generated <Citation id="4" index={4} source="Emotion Review" year="2023" tier={1} />.
         </p>
 
         <QuoteBlock
@@ -1054,7 +1054,7 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           Reappraisal vs. Suppression
         </h2>
         <p className="mb-6">
-          It is important to understand what reappraisal is not. It is not pushing emotions down, pretending you do not feel them, or putting on a brave face. That is suppression, and research consistently shows suppression backfires — it increases physiological stress, reduces memory, and damages relationships <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2003" tier={1} />.
+          It is important to understand what reappraisal is not. It is not pushing emotions down, pretending you do not feel them, or putting on a brave face. That is suppression, and research consistently shows suppression backfires --- it increases physiological stress, reduces memory, and damages relationships <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2003" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1091,11 +1091,11 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
             },
             {
               title: 'Generate Alternatives',
-              description: <p>Create two or three plausible alternative interpretations. They do not need to be positive — just realistic. 'Maybe they are sick. Maybe they had a family emergency. Maybe they need alone time."</p>,
+              description: <p>Create two or three plausible alternative interpretations. They do not need to be positive --- just realistic. 'Maybe they are sick. Maybe they had a family emergency. Maybe they need alone time."</p>,
             },
             {
               title: 'Choose the Most Balanced Interpretation',
-              description: <p>Select the interpretation that is most accurate and helpful. It does not need to be the most optimistic — it needs to be the most realistic. 'I do not know why they cancelled, and jumping to conclusions does not help me."</p>,
+              description: <p>Select the interpretation that is most accurate and helpful. It does not need to be the most optimistic --- it needs to be the most realistic. 'I do not know why they cancelled, and jumping to conclusions does not help me."</p>,
             },
           ]}
         />
@@ -1107,11 +1107,11 @@ export const everydayEmotionalRegulationArticlesA: Article[] = [
           Certain patterns of thinking make reappraisal harder. Recognizing these common distortions (called cognitive distortions in CBT) helps you catch them faster <Citation id="8" index={8} source="Dialogues in Clinical Neuroscience" year="2015" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>All-or-nothing thinking</strong> — seeing things in black and white with no middle ground.</li>
-          <li><strong>Mind reading</strong> — assuming you know what others are thinking without evidence.</li>
-          <li><strong>Catastrophizing</strong> — jumping to the worst possible outcome.</li>
-          <li><strong>Personalization</strong> — taking responsibility for things that are not about you.</li>
-          <li><strong>Emotional reasoning</strong> — believing something is true because it feels true.</li>
+          <li><strong>All-or-nothing thinking</strong> --- seeing things in black and white with no middle ground.</li>
+          <li><strong>Mind reading</strong> --- assuming you know what others are thinking without evidence.</li>
+          <li><strong>Catastrophizing</strong> --- jumping to the worst possible outcome.</li>
+          <li><strong>Personalization</strong> --- taking responsibility for things that are not about you.</li>
+          <li><strong>Emotional reasoning</strong> --- believing something is true because it feels true.</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

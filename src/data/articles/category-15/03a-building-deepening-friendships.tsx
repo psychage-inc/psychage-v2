@@ -141,7 +141,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
                     Friendships require repeated, unplanned interactions. You need to see someone regularly without having to coordinate every encounter.
                   </p>
                   <p className="mb-4">
-                    <strong>Why this matters:</strong> This is why school friendships formed so easily — you were in the same building every day. As an adult, you need to create this proximity artificially.
+                    <strong>Why this matters:</strong> This is why school friendships formed so easily --- you were in the same building every day. As an adult, you need to create this proximity artificially.
                   </p>
                   <p className="mb-2"><strong>How to create proximity:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
@@ -239,7 +239,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
             {
               title: "Use the 'Shared Activity' Approach",
               description: (
-                <p>Instead of awkward "let's hang out sometime' invitations, suggest specific shared activities: "Want to check out that new coffee shop on Saturday?" or "I'm going to the farmers market Sunday morning — want to join?"</p>
+                <p>Instead of awkward "let's hang out sometime' invitations, suggest specific shared activities: "Want to check out that new coffee shop on Saturday?" or "I'm going to the farmers market Sunday morning --- want to join?"</p>
               ),
             },
             {
@@ -261,7 +261,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           The Role of Self-Disclosure
         </h2>
         <p className="mb-6">
-          Friendships deepen through progressive self-disclosure — gradually sharing more personal information <Citation id="3" index={3} source="Psychological Bulletin" year="2017" tier={1} />:
+          Friendships deepen through progressive self-disclosure --- gradually sharing more personal information <Citation id="3" index={3} source="Psychological Bulletin" year="2017" tier={1} />:
         </p>
 
         <ArticleTabs
@@ -457,7 +457,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
             What makes some people become close friends while others remain acquaintances? The answer isn't chemistry, shared interests, or luck. Research has identified three specific ingredients that create and deepen friendships: proximity, frequency, and vulnerability.
           </p>
           <p className="mb-6">
-            Understanding these ingredients reveals why some friendships form effortlessly while others never get off the ground — and gives you a roadmap for building the connections you want <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2018" tier={1} />.
+            Understanding these ingredients reveals why some friendships form effortlessly while others never get off the ground --- and gives you a roadmap for building the connections you want <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -465,7 +465,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           Ingredient 1: Proximity (Being in the Same Place)
         </h2>
         <p className="mb-6">
-          Proximity — physical nearness — is the foundation of friendship formation <Citation id="5" index={5} source="Journal of Personality and Social Psychology" year="2016" tier={1} />. Simply being in the same space repeatedly makes friendship more likely.
+          Proximity --- physical nearness --- is the foundation of friendship formation <Citation id="5" index={5} source="Journal of Personality and Social Psychology" year="2016" tier={1} />. Simply being in the same space repeatedly makes friendship more likely.
         </p>
 
         <StatCard
@@ -576,10 +576,10 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           Frequent contact builds friendship through:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Trust accumulation</strong> — Each positive interaction builds trust incrementally</li>
-          <li><strong>Shared experiences</strong> — You create a history together</li>
-          <li><strong>Mutual investment</strong> — Regular contact signals that both people value the relationship</li>
-          <li><strong>Momentum</strong> — The relationship feels active, not stagnant</li>
+          <li><strong>Trust accumulation</strong> --- Each positive interaction builds trust incrementally</li>
+          <li><strong>Shared experiences</strong> --- You create a history together</li>
+          <li><strong>Mutual investment</strong> --- Regular contact signals that both people value the relationship</li>
+          <li><strong>Momentum</strong> --- The relationship feels active, not stagnant</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -606,7 +606,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           Proximity and frequency create acquaintances. Vulnerability creates close friends <Citation id="2" index={2} source="Psychological Bulletin" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
-          Vulnerability means self-disclosure — sharing personal thoughts, feelings, fears, and experiences that reveal who you really are.
+          Vulnerability means self-disclosure --- sharing personal thoughts, feelings, fears, and experiences that reveal who you really are.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -616,7 +616,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           Psychologist Arthur Aron's famous "36 Questions" study demonstrated that vulnerability accelerates intimacy <Citation id="4" index={4} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />. Pairs of strangers who asked each other increasingly personal questions felt significantly closer than control pairs who made small talk.
         </p>
         <p className="mb-6">
-          <strong>The key finding:</strong> Reciprocal self-disclosure — both people gradually sharing more personal information — creates emotional closeness and trust.
+          <strong>The key finding:</strong> Reciprocal self-disclosure --- both people gradually sharing more personal information --- creates emotional closeness and trust.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -730,7 +730,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="tip">
-          <p>Most failed adult friendships aren't about incompatibility — they're about missing one or more of these ingredients. Identify which ingredient is lacking and intentionally add it.</p>
+          <p>Most failed adult friendships aren't about incompatibility --- they're about missing one or more of these ingredients. Identify which ingredient is lacking and intentionally add it.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -862,7 +862,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           The Power of Progressive Self-Disclosure
         </h2>
         <p className="mb-6">
-          The primary mechanism that deepens friendships is progressive self-disclosure — gradually sharing more personal information over time <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />.
+          The primary mechanism that deepens friendships is progressive self-disclosure --- gradually sharing more personal information over time <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />.
         </p>
 
         <ArticleChart
@@ -911,7 +911,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-1">
                     <li>"I actually think that movie everyone loved was overrated"</li>
                     <li>"I've been thinking about changing careers because this doesn't feel right"</li>
-                    <li>"I'm not close with my family — we just don't really get each other"</li>
+                    <li>"I'm not close with my family --- we just don't really get each other"</li>
                   </ul>
                 </div>
               ),
@@ -987,9 +987,9 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           <strong>How to suggest one-on-one time:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"I'd love to grab coffee sometime, just us — are you free next week?"</li>
+          <li>"I'd love to grab coffee sometime, just us --- are you free next week?"</li>
           <li>"Want to check out that new restaurant together?"</li>
-          <li>"I'm going to the art museum Saturday — want to join?"</li>
+          <li>"I'm going to the art museum Saturday --- want to join?"</li>
         </ul>
 
         <h2 id="activities" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1133,7 +1133,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Deepening friendships isn't about finding perfect chemistry. It's about progressive disclosure, consistent one-on-one time, shared experiences, and showing up for each other. Most people want deeper friendships — you just need to make the first move.</p>
+          <p>Deepening friendships isn't about finding perfect chemistry. It's about progressive disclosure, consistent one-on-one time, shared experiences, and showing up for each other. Most people want deeper friendships --- you just need to make the first move.</p>
         </ArticleCallout>
       </>
     ),
@@ -1221,7 +1221,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Being a good friend isn't about grand gestures or always being available. It's a set of learnable skills — ways of listening, supporting, showing up, and communicating that make people feel valued and understood.
+            Being a good friend isn't about grand gestures or always being available. It's a set of learnable skills --- ways of listening, supporting, showing up, and communicating that make people feel valued and understood.
           </p>
           <p className="mb-6">
             If you want to strengthen your friendships or wonder why some of your friendships feel one-sided or distant, these evidence-based friendship skills can help <Citation id="7" index={7} source="Communication Quarterly" year="2018" tier={1} />.
@@ -1232,7 +1232,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           Skill 1: Active Listening (Not Just Waiting to Talk)
         </h2>
         <p className="mb-6">
-          Most people don't actually listen — they wait for their turn to talk or think about what they'll say next <Citation id="1" index={1} source="Communication Research" year="2018" tier={1} />. Active listening means fully focusing on what the other person is saying.
+          Most people don't actually listen --- they wait for their turn to talk or think about what they'll say next <Citation id="1" index={1} source="Communication Research" year="2018" tier={1} />. Active listening means fully focusing on what the other person is saying.
         </p>
 
         <BeforeAfter
@@ -1312,7 +1312,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
                   <p className="mb-2"><strong>How to provide it:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
                     <li>"I can see why that would be upsetting"</li>
-                    <li>"You're not overreacting — that's a big deal"</li>
+                    <li>"You're not overreacting --- that's a big deal"</li>
                     <li>"I'm here if you need to talk or just want company"</li>
                   </ul>
                 </div>
@@ -1339,10 +1339,10 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
               title: 'Informational Support (Sharing Knowledge)',
               content: (
                 <div>
-                  <p className="mb-3">Providing information, advice, or resources — but only when asked.</p>
+                  <p className="mb-3">Providing information, advice, or resources --- but only when asked.</p>
                   <p className="mb-2"><strong>How to provide it:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>"I went through something similar — want to hear what worked for me?"</li>
+                    <li>"I went through something similar --- want to hear what worked for me?"</li>
                     <li>"I know a great therapist if you're looking for recommendations"</li>
                     <li>"Here's an article that helped me understand this better"</li>
                   </ul>
@@ -1372,11 +1372,11 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           What Reliability Looks Like
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Show up when you say you will</strong> — Don't cancel plans last minute unless truly necessary</li>
-          <li><strong>Follow through on commitments</strong> — If you said you'd send that link or make that intro, do it</li>
-          <li><strong>Respond to messages within a reasonable time</strong> — You don't need to reply instantly, but don't ghost for weeks</li>
-          <li><strong>Be consistent in your effort</strong> — Don't only reach out when you need something</li>
-          <li><strong>Keep confidences</strong> — If they shared something private, don't tell others</li>
+          <li><strong>Show up when you say you will</strong> --- Don't cancel plans last minute unless truly necessary</li>
+          <li><strong>Follow through on commitments</strong> --- If you said you'd send that link or make that intro, do it</li>
+          <li><strong>Respond to messages within a reasonable time</strong> --- You don't need to reply instantly, but don't ghost for weeks</li>
+          <li><strong>Be consistent in your effort</strong> --- Don't only reach out when you need something</li>
+          <li><strong>Keep confidences</strong> --- If they shared something private, don't tell others</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -1403,7 +1403,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
                     <li>Ask follow-up questions to let them savor the moment</li>
                     <li>Remember their accomplishments and reference them later</li>
                   </ul>
-                  <p className="mt-4"><strong>Avoid:</strong> One-upping ("That's great — I just got an even bigger promotion") or minimizing ("Oh that's nice")</p>
+                  <p className="mt-4"><strong>Avoid:</strong> One-upping ("That's great --- I just got an even bigger promotion") or minimizing ("Oh that's nice")</p>
                 </div>
               ),
             },
@@ -1539,7 +1539,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Being a good friend is about small, consistent actions: listening fully, showing up reliably, celebrating their wins, supporting during hard times, and respecting their boundaries. Most people want to be better friends — they just need to practice the skills.</p>
+          <p>Being a good friend is about small, consistent actions: listening fully, showing up reliably, celebrating their wins, supporting during hard times, and respecting their boundaries. Most people want to be better friends --- they just need to practice the skills.</p>
         </ArticleCallout>
       </>
     ),
@@ -1627,10 +1627,10 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every close friendship eventually faces conflict. A misunderstanding, a hurtful comment, a boundary crossed, a betrayal. The question isn't whether conflict will happen — it's whether the friendship can survive it.
+            Every close friendship eventually faces conflict. A misunderstanding, a hurtful comment, a boundary crossed, a betrayal. The question isn't whether conflict will happen --- it's whether the friendship can survive it.
           </p>
           <p className="mb-6">
-            Some friendships end at the first sign of tension. Others emerge stronger after navigating conflict successfully. The difference isn't the severity of the conflict — it's how it's handled <Citation id="1" index={1} source="Personal Relationships" year="2019" tier={1} />.
+            Some friendships end at the first sign of tension. Others emerge stronger after navigating conflict successfully. The difference isn't the severity of the conflict --- it's how it's handled <Citation id="1" index={1} source="Personal Relationships" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -1684,7 +1684,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
               title: 'Boundary Violation',
               content: (
                 <div>
-                  <p className="mb-3">One person crossed a line — overshared to others, showed up uninvited, made inappropriate comments.</p>
+                  <p className="mb-3">One person crossed a line --- overshared to others, showed up uninvited, made inappropriate comments.</p>
                   <p className="mb-2"><strong>Example:</strong> They shared something you told them in confidence.</p>
                   <p className="mb-2"><strong>Repair approach:</strong> Honest conversation about boundaries, genuine apology, commitment to change.</p>
                 </div>
@@ -1706,7 +1706,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
               title: 'Betrayal or Major Breach of Trust',
               content: (
                 <div>
-                  <p className="mb-3">Serious violation — lying, stealing, romantic betrayal, severe gossip.</p>
+                  <p className="mb-3">Serious violation --- lying, stealing, romantic betrayal, severe gossip.</p>
                   <p className="mb-2"><strong>Example:</strong> They lied about something important or betrayed your trust in a major way.</p>
                   <p className="mb-2"><strong>Repair approach:</strong> Requires significant time, genuine accountability, and slowly rebuilding trust. May not be repairable.</p>
                 </div>
@@ -1797,10 +1797,10 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
               content: (
                 <div>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>Cool down first</strong> — Don't attempt repair while still angry or defensive</li>
-                    <li><strong>Clarify your goal</strong> — Do you want to preserve the friendship or just clear the air?</li>
-                    <li><strong>Choose the right setting</strong> — In-person or video call, not text. Private, not public</li>
-                    <li><strong>Prepare to listen</strong> — They may be hurt in ways you didn't realize</li>
+                    <li><strong>Cool down first</strong> --- Don't attempt repair while still angry or defensive</li>
+                    <li><strong>Clarify your goal</strong> --- Do you want to preserve the friendship or just clear the air?</li>
+                    <li><strong>Choose the right setting</strong> --- In-person or video call, not text. Private, not public</li>
+                    <li><strong>Prepare to listen</strong> --- They may be hurt in ways you didn't realize</li>
                   </ul>
                 </div>
               ),
@@ -1812,10 +1812,10 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
                 <div>
                   <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Lead with your apology</strong> (if you're the one who hurt them)</li>
-                    <li><strong>Use "I" statements</strong> — "I felt..." not "You always..."</li>
-                    <li><strong>Listen without interrupting</strong> — Let them fully express how they feel</li>
-                    <li><strong>Avoid blame-shifting</strong> — Focus on your behavior, not theirs</li>
-                    <li><strong>Ask questions to understand</strong> — "Can you help me understand what that felt like for you?"</li>
+                    <li><strong>Use "I" statements</strong> --- "I felt..." not "You always..."</li>
+                    <li><strong>Listen without interrupting</strong> --- Let them fully express how they feel</li>
+                    <li><strong>Avoid blame-shifting</strong> --- Focus on your behavior, not theirs</li>
+                    <li><strong>Ask questions to understand</strong> --- "Can you help me understand what that felt like for you?"</li>
                   </ul>
                 </div>
               ),
@@ -1828,8 +1828,8 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Give them space</strong> if they need time to process</li>
                     <li><strong>Follow through</strong> on any commitments you made</li>
-                    <li><strong>Don't expect instant forgiveness</strong> — Trust rebuilds gradually</li>
-                    <li><strong>Check in later</strong> — "Are we okay?" conversations may need to happen multiple times</li>
+                    <li><strong>Don't expect instant forgiveness</strong> --- Trust rebuilds gradually</li>
+                    <li><strong>Check in later</strong> --- "Are we okay?" conversations may need to happen multiple times</li>
                   </ul>
                 </div>
               ),
@@ -1935,11 +1935,11 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           Can Friendships Become Stronger After Conflict?
         </h2>
         <p className="mb-6">
-          Yes — if both people are committed to repair, many friendships emerge stronger <Citation id="1" index={1} source="Personal Relationships" year="2019" tier={1} />:
+          Yes --- if both people are committed to repair, many friendships emerge stronger <Citation id="1" index={1} source="Personal Relationships" year="2019" tier={1} />:
         </p>
 
         <QuoteBlock
-          quote="Successfully navigating conflict together builds a different kind of trust — the knowledge that the friendship can withstand difficulty and that both people are willing to work through problems rather than abandon the relationship at the first sign of trouble."
+          quote="Successfully navigating conflict together builds a different kind of trust --- the knowledge that the friendship can withstand difficulty and that both people are willing to work through problems rather than abandon the relationship at the first sign of trouble."
           attribution="Dr. John Gottman"
           role="Relationship Researcher"
           source="The Science of Trust"
@@ -1950,10 +1950,10 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           What Makes Post-Conflict Friendships Stronger
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Deeper communication</strong> — You've practiced vulnerable, honest conversation</li>
-          <li><strong>Clearer boundaries</strong> — The conflict clarified what you each need</li>
-          <li><strong>Proven commitment</strong> — You know the other person values the friendship enough to work through difficulty</li>
-          <li><strong>Increased understanding</strong> — You know each other better after navigating conflict together</li>
+          <li><strong>Deeper communication</strong> --- You've practiced vulnerable, honest conversation</li>
+          <li><strong>Clearer boundaries</strong> --- The conflict clarified what you each need</li>
+          <li><strong>Proven commitment</strong> --- You know the other person values the friendship enough to work through difficulty</li>
+          <li><strong>Increased understanding</strong> --- You know each other better after navigating conflict together</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

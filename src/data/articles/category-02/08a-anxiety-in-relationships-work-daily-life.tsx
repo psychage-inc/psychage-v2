@@ -1154,299 +1154,206 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
     ],
     content: (
       <>
-        <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your child wants to walk to their friend's house three blocks away. Your mind immediately floods with catastrophic scenarios—accidents, abduction, injury. You know these fears are disproportionate, but you say "It's not safe' anyway. Later, you notice your child hesitating before trying new things, asking "Is it safe?" before decisions, exhibiting the same hypervigilance you struggle with daily. This is the heartbreaking challenge of parenting with anxiety: the awareness that your internal battle might be shaping their emerging worldview.
-          </p>
-          <p className="mb-6">
-            Research confirms what many anxious parents fear: anxiety can be transmitted intergenerationally, not through genetics alone, but through parenting behaviors, emotional modeling, and family patterns <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. Children of anxious parents are 2-3 times more likely to develop anxiety disorders themselves <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />.
-          </p>
-          <p className="mb-6">
-            But here's the crucial insight: Having anxiety doesn't doom your children to the same struggle. Conscious, evidence-based parenting strategies can interrupt intergenerational transmission and help you raise resilient, emotionally healthy children—even while managing your own anxiety.
-          </p>
-        </div>
+<div><div id="introduction" className="scroll-mt-32"><p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Your child wants to walk to their friend's house three blocks away. Your mind immediately floods with catastrophic scenarios—accidents, abduction, injury. You know these fears are disproportionate, but you say "It's not safe" anyway. Later, you notice your child hesitating before trying new things, asking "Is it safe?" before decisions, exhibiting the same hypervigilance you struggle with daily. This is the heartbreaking challenge of parenting with anxiety: the awareness that your internal battle might be shaping their emerging worldview.</p><p className="mb-6">Research confirms what many anxious parents fear: anxiety can be transmitted intergenerationally, not through genetics alone, but through parenting behaviors, emotional modeling, and family patterns <button type="button" id="citation-ref-1" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 1 — click to view reference" data-state="closed">1</button>. Children of anxious parents are 2-3 times more likely to develop anxiety disorders themselves <button type="button" id="citation-ref-2" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 2 — click to view reference" data-state="closed">2</button>.</p><p className="mb-6">But here's what's equally important: This transmission isn't inevitable. Understanding how anxiety passes from parent to child—and implementing specific strategies—can break the cycle. Let's explore how anxiety shows up in parenting, the mechanisms of transmission, and evidence-based approaches to raising resilient children while managing your own anxiety.</p><p className="mb-6">Consider Sarah, a 35-year-old mother of two. Sarah has generalized anxiety disorder and noticed her 7-year-old daughter Maya started refusing playdates and expressing excessive worry about school. "I see myself in her," Sarah said, "and it breaks my heart. I don't want her to live with this weight." Sarah's awareness became the first step toward change—recognizing the pattern meant she could intervene.</p></div><h2 id="how-parental-anxiety-affects-children" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Parental Anxiety Affects Children</h2><p className="mb-6">Anxiety transmission from parent to child happens through multiple pathways <button type="button" id="citation-ref-1" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 1 — click to view reference" data-state="closed">1</button>:</p><p className="mb-6"><strong>Emotional modeling:</strong> Children learn by watching. When you respond to uncertainty with visible anxiety—tense body language, worried facial expressions, catastrophic verbal predictions—your child learns that the world is dangerous and that anxiety is the appropriate response.</p><p className="mb-6">James, a father with social anxiety, noticed his son Marcus (age 5) started clinging to him at birthday parties. James realized Marcus was mirroring his own tension. "I'd stand by the wall, checking my phone, looking uncomfortable. Marcus saw that and learned 'parties are something to avoid.'"</p><p className="mb-6"><strong>Overprotective parenting:</strong> Anxiety drives us to prevent any potential harm to our children. But excessive protection—not letting them try age-appropriate challenges, hovering, solving problems for them—sends the message: "You can't handle this. The world is too dangerous for you."</p><p className="mb-6"><strong>Anxious family climate:</strong> When anxiety pervades family life—constant worry discussions, reassurance-seeking, avoidance of normal activities—children absorb the message that the world requires constant vigilance and fear is a normal state of being <button type="button" id="citation-ref-3" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 3 — click to view reference" data-state="closed">3</button>.</p><p className="mb-6"><strong>Language patterns:</strong> Anxious parents often use language that reinforces threat perception: "Be careful!" "That's dangerous!" "What if something bad happens?" This language teaches children to scan for danger and expect negative outcomes.</p><p className="mb-6">Maria, a mother with health anxiety, caught herself saying "Don't touch that, you'll get sick" dozens of times daily. Her daughter Sophia (age 4) began refusing to touch playground equipment and asking if everything was "germy."</p><div className="
+                not-prose my-8 rounded-2xl
+                bg-gradient-to-br from-gray-50 to-white dark:from-gray-900/50 dark:to-gray-900/30
+                border border-gray-100 dark:border-gray-800
+                overflow-hidden
 
-        <h2 id="how-anxiety-transfers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          How Parental Anxiety Affects Children
-        </h2>
-        <p className="mb-6">
-          Anxiety transmission happens through three primary pathways <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />:
-        </p>
+            "><div className="grid grid-cols-1 sm:grid-cols-3 divide-x divide-gray-100 dark:divide-gray-800"><div className="flex flex-col items-center text-center p-6" style={{opacity:0,transform:'translateY(20px)'}}><div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">2-3x</div><p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">Higher risk of anxiety disorders in children of anxious parents</p></div><div className="flex flex-col items-center text-center p-6" style={{opacity:0,transform:'translateY(20px)'}}><div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">65%</div><p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">Reduction in child anxiety with parent-focused intervention</p></div><div className="flex flex-col items-center text-center p-6" style={{opacity:0,transform:'translateY(20px)'}}><div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">40%</div><p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">Of childhood anxiety is influenced by parenting behavior (not just genetics)</p></div></div><div className="px-6 py-3 border-t border-gray-100 dark:border-gray-800"><p className="text-xs text-gray-400 dark:text-gray-500 italic text-center">Source: Journal of Child Psychology and Psychiatry, 2021; Clinical Psychology Review, 2020</p></div></div><div className="
+                not-prose my-8 rounded-xl border-l-4 border-l-rose-400
+                bg-rose-50 dark:bg-rose-950/20
+                overflow-hidden
 
-        <ArticleAccordion
-          type="multiple"
-          items={[
-            {
-              id: 'modeling',
-              title: '1. Emotional modeling and vicarious learning',
-              content: (
-                <div>
-                  <p className="mb-3">
-                    Children learn emotional responses by observing their parents. When you react to a dog with fear, express catastrophic worry about plane travel, or visibly panic in new situations, your child learns that the world is threatening <Citation id="6" index={6} source="Emotion" year="2020" tier={1} />. They adopt your fear responses even if they've never directly experienced danger.
-                  </p>
-                  <p>
-                    <strong>Example:</strong> A parent who refuses to drive on highways teaches their child that highways are inherently dangerous, even without explaining why or having an accident.
-                  </p>
-                </div>
-              ),
-            },
-            {
-              id: 'overprotection',
-              title: '2. Overprotective parenting behaviors',
-              content: (
-                <div>
-                  <p className="mb-3">
-                    Anxiety drives parents to shield children from perceived threats. This manifests as preventing age-appropriate risks, solving problems for them, or limiting independence. While well-intentioned, overprotection sends the message: "You can't handle this. The world is dangerous. You need me to stay safe" <Citation id="3" index={3} source="Developmental Psychology" year="2019" tier={1} />.
-                  </p>
-                  <p className="mb-3">
-                    Research shows that overprotective parenting is one of the strongest predictors of childhood anxiety development. Children who aren't allowed to face challenges don't develop confidence in their ability to cope.
-                  </p>
-                  <p>
-                    <strong>Example:</strong> Not allowing a 7-year-old to climb the 'big kid' playground equipment, intervening immediately when they struggle with homework, or preventing sleepovers due to parental worry (not actual safety concerns).
-                  </p>
-                </div>
-              ),
-            },
-            {
-              id: 'family-climate',
-              title: '3. Anxious family emotional climate',
-              content: (
-                <div>
-                  <p className="mb-3">
-                    Chronic anxiety in the household creates an atmosphere of tension and hypervigilance. Children become attuned to a parent's anxiety—walking on eggshells, feeling responsible for managing parent emotions, or absorbing the general sense that "something bad might happen."
-                  </p>
-                  <p>
-                    <strong>Example:</strong> A child who learns to be extra quiet when a parent is anxious, who checks repeatedly whether the parent is "okay," or who becomes anxious themselves when they sense parental distress.
-                  </p>
-                </div>
-              ),
-            },
-          ]}
-        />
+            " style={{opacity:0,transform:'translateY(16px)'}}><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-stethoscope text-rose-500 mt-0.5 shrink-0"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"></path><path d="M8 15v1a6 6 0 0 0 6 6a6 6 0 0 0 6-6v-4"></path><circle cx="20" cy="10" r="2"></circle></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-rose-900 dark:text-rose-200">Clinical Note</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p>It's important to distinguish between appropriate caution and anxiety-driven overprotection. Teaching a 5-year-old to look both ways before crossing the street is appropriate. Not allowing a 10-year-old to walk to a friend's house two blocks away in a safe neighborhood because "something might happen" is anxiety-driven and limits healthy development of autonomy and confidence <button type="button" id="citation-ref-4" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 4 — click to view reference" data-state="closed">4</button>.</p></div></div></div></div><h2 id="breaking-the-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Strategies to Break the Cycle</h2><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">1. Model Anxiety Management, Not Avoidance</h3><p className="mb-6">Your children don't need you to be anxiety-free—they need you to demonstrate that anxiety is manageable. Instead of hiding your anxiety or avoiding situations, show them how you cope with it <button type="button" id="citation-ref-5" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 5 — click to view reference" data-state="closed">5</button>.</p><p className="mb-6">Instead of: *Canceling family outing because you're anxious* (models avoidance)</p><p className="mb-6">Try: "I'm feeling nervous about this, but we're still going. I'm going to use my breathing exercises in the car. Sometimes we feel nervous and do things anyway—that's being brave."</p><p className="mb-6">Rachel, a mother with panic disorder, used to hide her anxiety attacks from her kids. Now she says (age-appropriately): "Mommy's heart is beating fast right now. I'm going to do my calm-down breathing. Want to do it with me?" Her kids learned: Anxiety happens, and we have tools to manage it.</p><div className="
+                not-prose my-8 rounded-xl border-l-4 border-l-emerald-400
+                bg-emerald-50 dark:bg-emerald-950/20
+                overflow-hidden
 
-        <StatCard
-          stats={[
-            { value: 65, suffix: '%', label: 'of children with an anxious parent show elevated anxiety symptoms' },
-            { value: 2.5, suffix: 'x', label: 'Increased risk of anxiety disorder diagnosis' },
-            { value: 45, suffix: '%', label: 'Reduction in child anxiety when parents receive treatment' },
-          ]}
-          source="Clinical Psychology Review, 2020; Journal of Child Psychology and Psychiatry, 2021"
-        />
+            " style={{opacity:0,transform:'translateY(16px)'}}><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-lightbulb text-emerald-500 mt-0.5 shrink-0"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">Practical Exercise: The "Brave Modeling" Script</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p className="mb-2">Use this framework when facing an anxiety-provoking situation with your child:</p><p className="mb-2"><strong>Step 1:</strong> Name the feeling honestly. "I feel nervous about [situation]."</p><p className="mb-2"><strong>Step 2:</strong> State your coping plan. "I'm going to [specific coping strategy]."</p><p className="mb-2"><strong>Step 3:</strong> Affirm the decision to proceed despite anxiety. "We're still going to do this because [value/reason]."</p><p className="mb-2"><strong>Step 4:</strong> After the event, reflect. "I was nervous, but we did it! I'm glad we didn't let worry stop us."</p><p>Example: "I feel nervous about this parent-teacher conference (Step 1). I'm going to take three deep breaths before we go in (Step 2). We're still going because it's important to support your learning (Step 3). [After] I was nervous, but talking to your teacher was helpful! Being nervous doesn't mean something is wrong (Step 4)."</p></div></div></div></div><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">2. Practice Graded Independence Instead of Overprotection</h3><p className="mb-6">Overprotection prevents children from learning they can handle challenges. Graded exposure to age-appropriate risks builds confidence and resilience <button type="button" id="citation-ref-6" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 6 — click to view reference" data-state="closed">6</button>.</p><p className="mb-6">Start with tasks that trigger your anxiety but are developmentally appropriate:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li><strong>Age 5-7:</strong> Playing in the backyard unsupervised for 15 minutes, ordering their own food at restaurants, choosing their own clothes</li><li><strong>Age 8-10:</strong> Walking to a friend's house nearby, staying home alone for 30 minutes, handling small conflicts with peers independently</li><li><strong>Age 11-13:</strong> Taking public transportation short distances, managing homework schedule, navigating minor social problems without parental intervention</li><li><strong>Age 14+:</strong> Part-time job, driving (when licensed), making medical appointments</li></ul><p className="mb-6">Devon, a father with generalized anxiety, made a list: "Things I want to let my 9-year-old do but anxiety says no." He started with the easiest: letting his son bike to the end of the block and back. After a week, his son biked to the park (3 blocks). Three months later, his son was biking to school. "Each small step proved to my anxiety—and my son—that he's capable."</p><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">3. Use Courage-Focused Language Instead of Fear-Focused Language</h3><p className="mb-6">The words you use shape your child's internal narrative about challenges and fear <button type="button" id="citation-ref-7" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 7 — click to view reference" data-state="closed">7</button>:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>Instead of "Be careful! You'll fall!" → "You've got this. Take your time."</li><li>Instead of "Don't talk to strangers—something bad could happen" → "Most people are kind, and you know to come get me if someone makes you uncomfortable."</li><li>Instead of "Are you scared? It's okay to skip it" → "Feeling nervous is normal. Do you want to try anyway?"</li><li>Instead of "That's too dangerous" → "That's a big challenge. What's your plan to stay safe?"</li></ul><p className="mb-6">Notice the shift: Fear-focused language emphasizes threat. Courage-focused language acknowledges feelings while emphasizing capability and problem-solving.</p><div className="
+                not-prose my-8 rounded-xl border-l-4 border-l-emerald-400
+                bg-emerald-50 dark:bg-emerald-950/20
+                overflow-hidden
 
-        <h2 id="parenting-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Evidence-Based Strategies for Parenting with Anxiety
-        </h2>
+            " style={{opacity:0,transform:'translateY(16px)'}}><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-lightbulb text-emerald-500 mt-0.5 shrink-0"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">Practical Exercise: Language Awareness Log</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p className="mb-2">For one week, track fear-focused language you use with your child:</p><p className="mb-2"><strong>Step 1:</strong> Each evening, write down 2-3 anxious statements you said that day. ("Be careful!" "That's dangerous!" "What if you get hurt?")</p><p className="mb-2"><strong>Step 2:</strong> Rewrite each statement in courage-focused language.</p><p className="mb-2"><strong>Step 3:</strong> Practice saying the new versions out loud until they feel natural.</p><p className="mb-2"><strong>Step 4:</strong> The following week, actively use courage-focused alternatives in real time.</p><p>Sarah's example: She caught herself saying "Be careful!" 15+ times daily. She rewrote it: "You've got this—use your strong climbing skills." Within two weeks, the new phrase became automatic, and Maya's confidence visibly increased.</p></div></div></div></div><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">4. Implement Mindful Parenting to Interrupt Automatic Reactions</h3><p className="mb-6">Anxiety creates automatic reactions—we jump to "no" when children ask to try new things, we intervene at the first sign of struggle, we transmit our tension nonverbally. Mindful parenting creates a pause between your anxiety and your response <button type="button" id="citation-ref-8" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 8 — click to view reference" data-state="closed">8</button>.</p><p className="mb-6">When your child asks to do something that triggers your anxiety:</p><ol className="list-decimal pl-6 mb-6 space-y-2"><li><strong>Notice:</strong> "I'm feeling anxiety right now. My chest is tight. I want to say no."</li><li><strong>Pause:</strong> Take three breaths before responding.</li><li><strong>Ask:</strong> "Is this anxiety-driven or is there real danger? What would I decide if I weren't anxious?"</li><li><strong>Respond:</strong> Make a choice based on values (fostering independence, resilience) rather than automatic fear.</li></ol><p className="mb-6">Lisa used this when her 8-year-old asked to sleep over at a friend's house. Her immediate thought: "No—what if there's an emergency and I'm not there?" She paused, recognized anxiety talking, and asked: "Is there actual danger or is this my worry?" She said yes to the sleepover. Her daughter had a wonderful time, and Lisa learned she could tolerate the anxiety of not being physically present.</p><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">5. Prioritize Your Own Anxiety Treatment</h3><p className="mb-6">The most powerful thing you can do for your child's mental health is to actively treat your own anxiety <button type="button" id="citation-ref-5" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 5 — click to view reference" data-state="closed">5</button>. Research shows that when parents receive cognitive-behavioral therapy for anxiety, their children's anxiety symptoms decrease significantly—even when the children themselves aren't in therapy <button type="button" id="citation-ref-1" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 1 — click to view reference" data-state="closed">1</button>.</p><p className="mb-6">Seeking treatment isn't selfish—it's one of the most protective things you can do for your child. You're modeling that mental health matters, that help is available, and that struggling doesn't mean you're broken.</p><div className="
+                not-prose my-8 rounded-xl border-l-4 border-l-emerald-400
+                bg-emerald-50 dark:bg-emerald-950/20
+                overflow-hidden
 
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          1. Model Anxiety Management, Not Anxiety Avoidance
-        </h3>
-        <p className="mb-6">
-          You don't need to hide your anxiety from your children. In fact, appropriate modeling of anxiety management teaches valuable coping skills <Citation id="6" index={6} source="Emotion" year="2020" tier={1} />. The key is showing them how to handle anxiety, not that anxiety should be avoided.
-        </p>
+            " style={{opacity:0,transform:'translateY(16px)'}}><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-lightbulb text-emerald-500 mt-0.5 shrink-0"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">Practical Exercise: Your Parenting Anxiety Plan</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p className="mb-2">Create a personalized plan to address how your anxiety shows up in parenting:</p><p className="mb-2"><strong>Step 1:</strong> Identify one overprotective behavior you want to change. (Example: Not letting my 10-year-old walk to school alone.)</p><p className="mb-2"><strong>Step 2:</strong> Break it into smaller steps. (Example: Week 1: Walk together but let child lead. Week 2: Walk halfway, watch child complete route. Week 3: Child walks independently while I watch from distance. Week 4: Child walks fully independently.)</p><p className="mb-2"><strong>Step 3:</strong> Identify one fear-focused phrase you want to replace and choose the courage-focused alternative.</p><p className="mb-2"><strong>Step 4:</strong> Schedule one "brave modeling" moment this week where you name your anxiety and show your coping strategy.</p><p className="mb-2"><strong>Step 5:</strong> Contact a therapist if you haven't already. Treating your anxiety is protecting your child's mental health.</p></div></div></div></div><h2 id="what-if-my-child-already-shows-signs-of-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What If My Child Already Shows Signs of Anxiety?</h2><p className="mb-6">If your child is already exhibiting anxious behaviors, early intervention is highly effective. Consider these steps:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li><strong>Validate without amplifying:</strong> "I know you're feeling worried about the sleepover. It's okay to feel nervous. What would help you feel a bit braver?"</li><li><strong>Encourage approach, not avoidance:</strong> Gently support them in facing fears rather than accommodating avoidance. Research shows parental accommodation of child anxiety maintains and worsens anxiety over time <button type="button" id="citation-ref-6" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 6 — click to view reference" data-state="closed">6</button>.</li><li><strong>Teach coping skills:</strong> Deep breathing, progressive muscle relaxation, cognitive reframing (age-appropriate versions).</li><li><strong>Seek professional help:</strong> Cognitive-behavioral therapy for childhood anxiety is highly effective, with success rates of 60-70% <button type="button" id="citation-ref-1" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 1 — click to view reference" data-state="closed">1</button>.</li></ul><h2 id="this-months-action-plan" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">This Month's Action Plan</h2><ol className="list-decimal pl-6 mb-6 space-y-2"><li>Pick one overprotective behavior to address with graded independence</li><li>Replace one fear-focused phrase with courage-focused language this week</li><li>Practice the "brave modeling" script when facing an anxiety-provoking situation with your child</li><li>Use the mindful pause technique (Notice-Pause-Ask-Respond) when your child requests something that triggers your anxiety</li><li>If you're not currently in treatment for your own anxiety, schedule an evaluation with a therapist</li></ol><h2 id="when-to-seek-professional-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Professional Help</h2><p className="mb-6">Consider family therapy or individual therapy for your child if:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>Your child's anxiety significantly interferes with school, friendships, or family activities</li><li>Your child exhibits severe avoidance (refusing school, avoiding all social situations, extreme separation anxiety)</li><li>Physical symptoms are present (frequent stomachaches, headaches, sleep disturbances without medical cause)</li><li>Your child expresses persistent, excessive worry that they can't control</li><li>Despite implementing these strategies, your child's anxiety worsens or doesn't improve over 2-3 months</li></ul><p className="mb-6">Parent-child interaction therapy (PCIT) and family-based CBT are particularly effective for addressing anxiety transmission <button type="button" id="citation-ref-8" className="
+                        inline-flex items-center justify-center
+                        w-[18px] h-[18px] ml-0.5 -mt-2
+                        text-[10px] font-bold text-teal-600 dark:text-teal-400
+                        bg-teal-50 dark:bg-teal-900/30
+                        rounded-full cursor-pointer
+                        hover:bg-teal-100 dark:hover:bg-teal-900/50
+                        hover:scale-110
+                        active:scale-95
+                        transition-all duration-150
+                        align-super
+                        focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                    " aria-label="Citation 8 — click to view reference" data-state="closed">8</button>.</p><div className="
+                not-prose my-8 rounded-xl border-l-4 border-l-teal-400
+                bg-teal-50 dark:bg-teal-950/20
+                overflow-hidden
 
-        <ArticleCallout variant="tip" title="What to Say Instead">
-          <p className="mb-3">
-            <strong>Instead of hiding:</strong> "I'm fine!" (while clearly distressed)
-          </p>
-          <p className="mb-3">
-            <strong>Try modeling:</strong> "I'm feeling anxious about [situation], and here's what I'm going to do to manage it: I'm going to take some deep breaths, remind myself that I've handled this before, and focus on what I can control. Anxiety is uncomfortable, but I can handle it."
-          </p>
-          <p className="text-sm">
-            This teaches: Anxiety is normal, nameable, manageable, and temporary.
-          </p>
-        </ArticleCallout>
-
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          2. Practice "Graded Independence" Instead of Overprotection
-        </h3>
-        <p className="mb-6">
-          The antidote to anxiety-driven overprotection is gradually increasing age-appropriate independence <Citation id="7" index={7} source="Child Development Perspectives" year="2020" tier={1} />. This builds your child's confidence and disrupts the message that the world is too dangerous for them to navigate.
-        </p>
-
-        <ProgressSteps
-          variant="vertical"
-          steps={[
-            {
-              title: 'Identify one overprotective behavior',
-              description: (
-                <p>
-                  Where does your anxiety drive you to restrict your child's independence? Common examples: not allowing them to make age-appropriate decisions, solving all problems for them, preventing reasonable risks.
-                </p>
-              ),
-            },
-            {
-              title: 'Define the fear vs. actual risk',
-              description: (
-                <p>
-                  Write down what you fear will happen. Then, honestly assess the actual probability and severity. Is this a genuine safety concern or anxiety? Consult pediatric guidelines for age-appropriate independence if unsure.
-                </p>
-              ),
-            },
-            {
-              title: 'Create a graduated exposure plan',
-              description: (
-                <p>
-                  Break the independence goal into smaller steps. If the goal is letting your 9-year-old bike to a friend's house, start with: walking together, walking while you follow behind, biking together, biking while you watch from a distance, biking independently.
-                </p>
-              ),
-            },
-            {
-              title: 'Tolerate your anxiety during the exposure',
-              description: (
-                <p>
-                  Your anxiety will spike when you allow age-appropriate risk. Use your own anxiety management tools: breathing, cognitive reframing, distress tolerance. The goal isn't to eliminate your worry—it's to prevent it from dictating your parenting choices.
-                </p>
-              ),
-            },
-            {
-              title: 'Celebrate their competence',
-              description: (
-                <p>
-                  When they successfully navigate the challenge, reflect back their capability: "You did it! You handled that well. I'm proud of how you [specific behavior]." This reinforces their sense of agency.
-                </p>
-              ),
-            },
-          ]}
-        />
-
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          3. Use "Courageous Parenting" Language
-        </h3>
-        <p className="mb-6">
-          The language you use shapes how children perceive challenges and their own capabilities. Anxious parents tend to use threat-focused language; shifting to courage-focused language changes the narrative:
-        </p>
-
-        <BeforeAfter
-          before={{
-            title: 'Anxiety-Driven Language',
-            content: (
-              <ul className="list-disc pl-5 space-y-2">
-                <li>"Be careful! That's dangerous!"</li>
-                <li>"Don't do that—you might get hurt!"</li>
-                <li>"Let me do it for you so nothing goes wrong."</li>
-                <li>"Are you sure you can handle that?"</li>
-              </ul>
-            ),
-          }}
-          after={{
-            title: 'Courage-Focused Language',
-            content: (
-              <ul className="list-disc pl-5 space-y-2">
-                <li>"That looks challenging. What's your plan for staying safe while you try it?"</li>
-                <li>"If you fall, you'll get back up. Your body is strong and you know how to be careful."</li>
-                <li>"I believe you can figure this out. I'm here if you need help, but try it yourself first."</li>
-                <li>"It's okay to feel nervous. Brave means doing it even when you're a little scared."</li>
-              </ul>
-            ),
-          }}
-        />
-
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          4. Implement Mindful Parenting Practices
-        </h3>
-        <p className="mb-6">
-          Mindful parenting—being present with your child rather than caught in anxious future-thinking—significantly reduces anxiety transmission <Citation id="5" index={5} source="Journal of Clinical Child & Adolescent Psychology" year="2021" tier={1} />. Key practices include:
-        </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Pause before reacting:</strong> When your child wants to do something that triggers your anxiety, take three breaths before responding. Ask yourself: "Is this my anxiety talking, or is this a genuine safety concern?"</li>
-          <li><strong>Listen to understand, not to fix:</strong> When your child expresses worry, resist the urge to immediately solve the problem or reassure. Instead, listen fully, validate their feeling, and guide them to their own solutions.</li>
-          <li><strong>Practice presence during daily moments:</strong> Put away your phone during bedtime routines, meals, or play. Anxiety pulls you into "what if" thinking; presence keeps you in the "what is."</li>
-        </ul>
-
-        <ArticleCallout variant="tip" title={`The "Notice and Name' Technique`}>
-          <p>
-            When you feel anxiety rising during a parenting moment, silently notice and name it: "This is my anxiety. It's trying to protect my child from a threat that isn't actually dangerous. I can feel this anxiety and still make a choice based on what's best for my child's development, not my fear."
-          </p>
-        </ArticleCallout>
-
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          5. When Your Child Shows Anxiety: Validate, Don't Accommodate
-        </h3>
-        <p className="mb-6">
-          If your child develops anxiety (whether related to your own or independent), the instinct is to remove the source of distress. But research shows that accommodating anxiety (allowing avoidance of feared situations) strengthens it long-term <Citation id="8" index={8} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2021" tier={1} />.
-        </p>
-
-        <ComparisonTable
-          title="Validation vs. Accommodation"
-          columns={['Response Type', 'What It Looks Like', 'Long-Term Effect']}
-          items={[
-            {
-              feature: 'Accommodation (unhelpful)',
-              values: [
-                "Allowing child to skip school due to social anxiety; doing homework for them when they're anxious; constantly reassuring 'nothing bad will happen'",
-                'Anxiety strengthens; child doesn\'t learn they can cope',
-              ],
-            },
-            {
-              feature: 'Validation + Support (helpful)',
-              values: [
-                "I know you're feeling anxious about school. That's really hard. Anxiety tries to protect you by telling you to avoid. Let's make a plan to handle it together, and you\'re going to go.'",
-                'Child learns anxiety is tolerable and they can face challenges',
-              ],
-            },
-          ]}
-          highlightColumn={2}
-        />
-
-        <h2 id="managing-your-own-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Prioritize Your Own Anxiety Treatment
-        </h2>
-        <p className="mb-6">
-          The single most effective way to reduce anxiety transmission to your children is to treat your own anxiety <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />. Studies show that when parents receive effective anxiety treatment, children's anxiety symptoms decrease significantly—even when the child isn't in therapy themselves.
-        </p>
-        <p className="mb-6">
-          Seeking treatment isn't selfish—it's one of the most protective things you can do for your children <Citation id="9" index={9} source="Anxiety and Depression Association of America" year="2022" tier={3} />.
-        </p>
-
-        <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          How to Get Started This Week
-        </h2>
-        <p className="mb-6">
-          Choose one area where your anxiety most influences your parenting. This week:
-        </p>
-        <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li>
-            <strong>Identify one overprotective behavior to change:</strong> Where are you restricting age-appropriate independence due to anxiety?
-          </li>
-          <li>
-            <strong>Practice one instance of modeling anxiety management:</strong> Name your anxiety aloud and demonstrate a coping skill.
-          </li>
-          <li>
-            <strong>Shift your language in one recurring scenario:</strong> Replace threat-focused language with courage-focused language.
-          </li>
-          <li>
-            <strong>Pause before reacting three times:</strong> When anxiety is triggered by your child's request or behavior, take three breaths before responding.
-          </li>
-        </ol>
-
-        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          When to Seek Professional Help
-        </h2>
-        <p className="mb-6">
-          Consider working with a therapist if:
-        </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Your anxiety significantly restricts your child's age-appropriate activities and independence</li>
-          <li>You notice your child developing anxiety symptoms (excessive worry, avoidance, physical symptoms)</li>
-          <li>Your anxiety leads to frequent conflict with your co-parent about parenting decisions</li>
-          <li>You feel unable to tolerate your child's distress or age-appropriate risks despite understanding intellectually they're safe</li>
-          <li>Your own anxiety symptoms are severe and untreated</li>
-        </ul>
-        <p className="mb-6">
-          Family-based cognitive-behavioral therapy, where both parent and child receive coordinated treatment, has strong evidence for breaking intergenerational anxiety cycles <Citation id="8" index={8} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2021" tier={1} />.
-        </p>
-
-        <ArticleCallout variant="key-takeaway">
-          <p className="mb-3">
-            <strong>Key Takeaway:</strong> Parental anxiety can be transmitted to children through emotional modeling, overprotective behaviors, and anxious family climate—but this transmission isn't inevitable.
-          </p>
-          <p>
-            By modeling anxiety management (not avoidance), practicing graded independence instead of overprotection, using courage-focused language, implementing mindful parenting, and prioritizing your own treatment, you can raise resilient children while managing your own anxiety. The goal isn't to be an anxiety-free parent—it's to be a parent who demonstrates that anxiety is manageable and doesn't have to limit life. Your children don't need perfect parents; they need parents who show them how to face fear and move forward anyway.
-          </p>
-        </ArticleCallout>
-      </>
-    ),
-  },
+            " style={{opacity:0,transform:'translateY(16px)'}}><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-star text-teal-500 mt-0.5 shrink-0"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-teal-900 dark:text-teal-200">Key Takeaway</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p className="mb-3">Parental anxiety can be transmitted to children through emotional modeling, overprotective behaviors, and anxious family climate—but this transmission isn't inevitable.</p><p>By modeling anxiety management (not avoidance), practicing graded independence instead of overprotection, using courage-focused language, implementing mindful parenting, and prioritizing your own treatment, you can raise resilient children while managing your own anxiety. The goal isn't to be an anxiety-free parent—it's to be a parent who demonstrates that anxiety is manageable and doesn't have to limit life. Your children don't need perfect parents; they need parents who show them how to face fear and move forward anyway.</p></div></div></div></div></div>  },
   {
     id: catId(75),
     slug: 'anxiety-and-intimacy-how-fear-shows-up-in-your-closest-relationships',
@@ -1527,305 +1434,166 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
     ],
     content: (
       <>
-        <div id="introduction" className="scroll-mt-32">
-          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your partner reaches for you, and instead of connection, you feel a surge of anxiety. Your mind races: Do I look okay? Am I doing this right? What if I disappoint them? What if they're judging me? The moment that should be intimate becomes a performance evaluation. Or maybe it's emotional intimacy that triggers fear—your partner asks 'What are you really feeling?" and you freeze, unable to access or articulate the vulnerability required. This is how anxiety infiltrates intimacy: turning connection into threat, closeness into exposure.
-          </p>
-          <p className="mb-6">
-            Anxiety and intimacy have a complicated relationship. Research shows that individuals with anxiety disorders report significantly lower relationship satisfaction, reduced emotional closeness, and higher rates of sexual dysfunction compared to those without anxiety <Citation id="1" index={1} source="Archives of Sexual Behavior" year="2020" tier={1} />. Yet intimacy—both emotional and physical—is also one of the most powerful protective factors against anxiety.
-          </p>
-          <p className="mb-6">
-            Understanding how anxiety shows up in intimate moments and learning to move through it, rather than avoiding it, can transform your closest relationships <Citation id="2" index={2} source="Journal of Sex & Marital Therapy" year="2021" tier={1} />.
-          </p>
-        </div>
+        <div><div id="introduction" className="scroll-mt-32"><p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Your partner reaches for you, and instead of connection, you feel a surge of anxiety. Your mind races: Do I look okay? Am I doing this right? What if I disappoint them? What if they're judging me? The moment that should be intimate becomes a performance evaluation. Or maybe it's emotional intimacy that triggers fear—your partner asks "What are you really feeling?" and you freeze, unable to access or articulate the vulnerability required. This is how anxiety infiltrates intimacy: turning connection into threat, closeness into exposure.</p><p className="mb-6">Anxiety and intimacy have a complicated relationship. Research shows that individuals with anxiety disorders report significantly lower relationship satisfaction, reduced emotional closeness, and higher rates of sexual dysfunction compared to those without anxiety <button type="button" id="citation-ref-1" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 1 — click to view reference">1</button>. Yet intimacy—both emotional and physical—is also one of the most powerful protective factors against anxiety.</p><p className="mb-6">Understanding how anxiety shows up in intimate moments and learning to move through it, rather than avoiding it, can transform your closest relationships <button type="button" id="citation-ref-2" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 2 — click to view reference">2</button>.</p></div><h2 id="how-anxiety-impacts-intimacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Anxiety Impacts Emotional and Physical Intimacy</h2><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Emotional Intimacy: When Vulnerability Feels Dangerous</h3><p className="mb-6">Emotional intimacy requires vulnerability—the willingness to be fully seen, including your fears, needs, and imperfections. For someone with anxiety, vulnerability often triggers intense discomfort <button type="button" id="citation-ref-3" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 3 — click to view reference">3</button>:</p><p className="mb-6">Consider Marcus, who'd been dating Sarah for eight months. Everything seemed perfect on the surface, but Sarah noticed Marcus never shared his deeper feelings. When she asked about his childhood, his hopes, or his fears, he'd deflect with humor or change the subject. It wasn't that Marcus didn't care—his anxiety convinced him that if Sarah saw his insecurities, his past struggles with depression, his fear of not being "enough," she'd leave. So he kept conversations surface-level, creating an invisible wall that left Sarah feeling alone in the relationship.</p><p className="mb-6">Common vulnerability fears in anxious individuals include:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li><strong>Fear of judgment:</strong> "If I show them my real feelings, they'll think I'm too much/too needy/too broken."</li><li><strong>Fear of abandonment:</strong> "If they truly know me, they'll leave."</li><li><strong>Fear of loss of control:</strong> "Sharing my deepest thoughts makes me too exposed, too dependent."</li><li><strong>Hypervigilance to partner's reactions:</strong> Watching for micro-expressions of disappointment, withdrawal, or criticism, making authentic sharing nearly impossible.</li></ul><p className="mb-6">This creates a painful paradox: You crave closeness but fear the vulnerability required to achieve it. The result is often emotional distance—sharing surface-level information, intellectualizing feelings, or avoiding deep conversations altogether.</p><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Physical Intimacy: When the Body Becomes a Threat</h3><p className="mb-6">Anxiety profoundly affects physical and sexual intimacy <button type="button" id="citation-ref-4" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 4 — click to view reference">4</button>. Take Elena, a 32-year-old with generalized anxiety who began avoiding physical intimacy with her husband. During intimate moments, her mind would flood with performance worries: "Does my body look okay from this angle? Am I taking too long? Is he getting bored? Am I breathing too loudly?" The constant self-monitoring pulled her completely out of the experience, making pleasure nearly impossible. Eventually, she started declining his advances altogether—not because she didn't love him or wasn't attracted to him, but because the anxiety had become overwhelming.</p><p className="mb-6">Or consider James, whose social anxiety extended into the bedroom. He'd mentally "spectate" during sex—watching himself from outside, evaluating his performance, convinced his partner was silently judging him. This dissociation prevented genuine connection and left him feeling even more isolated despite physical closeness.</p><p className="mb-6">Common patterns include:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li><strong>Performance anxiety:</strong> Obsessive worry about "doing it right," physical appearance, or partner satisfaction</li><li><strong>Dissociation or 'spectating':</strong> Mentally leaving your body during intimacy, observing rather than experiencing</li><li><strong>Avoidance of physical intimacy:</strong> Declining or deflecting advances to avoid anxiety-provoking situations</li><li><strong>Need for constant reassurance:</strong> Repeatedly asking "Is this okay?" or "Do you still find me attractive?" which can disrupt connection</li></ul><div className="
+                        not-prose my-8 rounded-2xl
+                        bg-gradient-to-br from-gray-50 to-white dark:from-gray-900/50 dark:to-gray-900/30
+                        border border-gray-100 dark:border-gray-800
+                        overflow-hidden
 
-        <h2 id="how-anxiety-impacts-intimacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          How Anxiety Impacts Emotional and Physical Intimacy
-        </h2>
+                    "><div className="grid grid-cols-1 sm:grid-cols-3 divide-x divide-gray-100 dark:divide-gray-800"><div className="flex flex-col items-center text-center p-6"><div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">63%</div><p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">of people with anxiety report difficulties with intimacy</p></div><div className="flex flex-col items-center text-center p-6"><div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">40%</div><p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">experience sexual dysfunction related to anxiety</p></div><div className="flex flex-col items-center text-center p-6"><div className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tabular-nums">70%</div><p className="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-[200px]">report improvement with targeted interventions</p></div></div><div className="px-6 py-3 border-t border-gray-100 dark:border-gray-800"><p className="text-xs text-gray-400 dark:text-gray-500 italic text-center">Source: Archives of Sexual Behavior, 2020; Sexual Medicine Reviews, 2020</p></div></div><h2 id="strategies-for-intimacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strategies for Building Intimacy Despite Anxiety</h2><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">1. Practice "Graded Vulnerability" in Emotional Intimacy</h3><p className="mb-6">You don't have to jump from emotional distance to complete openness. Gradual, intentional sharing builds trust in both yourself and your partner <button type="button" id="citation-ref-3" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 3 — click to view reference">3</button>:</p><div className="not-prose my-8 "><div className="relative pl-8"><div className="absolute left-[15px] top-2 bottom-2 w-0.5 bg-gray-200 dark:bg-gray-700"></div><div className="space-y-8"><div className="relative"><div className="absolute -left-8 top-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 border-2 border-white dark:border-gray-900 flex items-center justify-center z-10"><span className="text-xs font-bold text-teal-600 dark:text-teal-400">1</span></div><div className="pl-4"><h4 className="text-base font-semibold text-gray-900 dark:text-white mb-1">Start with low-stakes sharing</h4><div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p>Share a minor preference, a small worry, or a hope for the week. Notice how your partner responds. Most likely, they respond with acceptance, not judgment.</p></div></div></div><div className="relative"><div className="absolute -left-8 top-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 border-2 border-white dark:border-gray-900 flex items-center justify-center z-10"><span className="text-xs font-bold text-teal-600 dark:text-teal-400">2</span></div><div className="pl-4"><h4 className="text-base font-semibold text-gray-900 dark:text-white mb-1">Name your anxiety about sharing</h4><div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p>"I want to share something with you, and I'm noticing anxiety coming up. Part of me is worried you'll think it's silly." This meta-communication (talking about the vulnerability itself) often reduces the anxiety.</p></div></div></div><div className="relative"><div className="absolute -left-8 top-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 border-2 border-white dark:border-gray-900 flex items-center justify-center z-10"><span className="text-xs font-bold text-teal-600 dark:text-teal-400">3</span></div><div className="pl-4"><h4 className="text-base font-semibold text-gray-900 dark:text-white mb-1">Share one level deeper</h4><div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p>Once lower-stakes sharing feels safer, move to moderately vulnerable topics: a fear you've had, a need you're not sure how to express, a dream you're hesitant to voice.</p></div></div></div><div className="relative"><div className="absolute -left-8 top-0 w-8 h-8 rounded-full bg-teal-100 dark:bg-teal-900/30 border-2 border-white dark:border-gray-900 flex items-center justify-center z-10"><span className="text-xs font-bold text-teal-600 dark:text-teal-400">4</span></div><div className="pl-4"><h4 className="text-base font-semibold text-gray-900 dark:text-white mb-1">Practice receiving vulnerability in return</h4><div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p>Intimacy is reciprocal. When your partner shares vulnerably, resist the urge to fix, minimize, or reassure excessively. Just listen, validate, and stay present.</p></div></div></div></div></div></div><p className="mb-6 mt-6">After Marcus finally opened up to Sarah about his anxiety and past depression, something unexpected happened: instead of leaving, Sarah felt closer to him. She shared her own struggles with perfectionism and body image. Their relationship deepened not despite vulnerability, but because of it. Within weeks, Marcus noticed his baseline anxiety in the relationship decreased—the energy he'd spent hiding was now available for genuine connection.</p><div className="
+                        not-prose my-8 rounded-xl border-l-4 border-l-emerald-400
+                        bg-emerald-50 dark:bg-emerald-950/20
+                        overflow-hidden
 
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          Emotional Intimacy: When Vulnerability Feels Dangerous
-        </h3>
-        <p className="mb-6">
-          Emotional intimacy requires vulnerability—the willingness to be fully seen, including your fears, needs, and imperfections. For someone with anxiety, vulnerability often triggers intense discomfort <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2019" tier={1} />:
-        </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Fear of judgment:</strong> "If I show them my real feelings, they'll think I'm too much/too needy/too broken."</li>
-          <li><strong>Fear of abandonment:</strong> "If they truly know me, they'll leave."</li>
-          <li><strong>Fear of loss of control:</strong> "Sharing my deepest thoughts makes me too exposed, too dependent."</li>
-          <li><strong>Hypervigilance to partner's reactions:</strong> Watching for micro-expressions of disappointment, withdrawal, or criticism, making authentic sharing nearly impossible.</li>
-        </ul>
-        <p className="mb-6">
-          This creates a painful paradox: You crave closeness but fear the vulnerability required to achieve it. The result is often emotional distance—sharing surface-level information, intellectualizing feelings, or avoiding deep conversations altogether.
-        </p>
+                    "><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-lightbulb text-emerald-500 mt-0.5 shrink-0"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">Daily Micro-Vulnerability Practice</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p>Share one feeling each day with your partner, using the format: "Today I felt [emotion] when [situation]." No lengthy explanation required. This builds the habit of emotional honesty without overwhelming either of you.</p></div></div></div></div><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">2. Shift from Performance to Presence in Physical Intimacy</h3><p className="mb-6">Anxiety during physical intimacy is often rooted in performance evaluation: "Am I doing this right? Do I look okay? Are they enjoying this?" Mindfulness-based approaches shift the focus from performance to sensation and connection <button type="button" id="citation-ref-5" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 5 — click to view reference">5</button>:</p><div className="not-prose my-8 "><div className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-2xl overflow-hidden border border-gray-200 dark:border-gray-700"><div className="bg-red-50/50 dark:bg-red-950/10 p-6 border-b md:border-b-0 md:border-r border-gray-200 dark:border-gray-700"><div className="flex items-center gap-2 mb-4"><span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">Performance-Focused (Anxiety-Driven)</span></div><div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-3 [&>p:last-child]:mb-0 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-4"><ul className="list-disc pl-5 space-y-2"><li>Mind: "Am I doing this right? Do I look attractive from this angle? Are they getting bored?"</li><li>Body sensation: Minimal awareness—disconnected from physical experience</li><li>Result: Anxiety, self-consciousness, reduced pleasure and connection</li></ul></div></div><div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10"></div><div className="bg-emerald-50/50 dark:bg-emerald-950/10 p-6"><div className="flex items-center gap-2 mb-4"><span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Presence-Focused (Mindful)</span></div><div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-3 [&>p:last-child]:mb-0 [&>ul]:space-y-2 [&>ul]:list-disc [&>ul]:pl-4"><ul className="list-disc pl-5 space-y-2"><li>Mind: "I notice the warmth of their skin. I notice my breath. I notice tension in my shoulders—let it release. I notice sensation here, now."</li><li>Body sensation: Fully present—attuned to physical experience and connection</li><li>Result: Reduced anxiety, increased pleasure, deeper intimacy</li></ul></div></div></div><div className="flex md:hidden justify-center -mt-1 -mb-1"><div className="w-8 h-8 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm -translate-y-5"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-arrow-right text-gray-400 rotate-90"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></div></div></div><p className="mb-6 mt-6"><strong>Practice: Sensate Focus</strong> (a technique from sex therapy):</p><ol className="list-decimal pl-6 mb-6 space-y-2"><li>With your partner, agree to non-sexual touch focused entirely on sensation (e.g., hand massage, back touch).</li><li>The goal is NOT arousal or pleasure—it's simply noticing sensation without judgment.</li><li>When your mind drifts to performance worry, gently return attention to the physical sensation.</li><li>Gradually increase to more intimate touch, always keeping the focus on presence rather than performance or outcome.</li></ol><p className="mb-6">This practice rewires the brain to associate intimacy with safety and presence rather than evaluation and threat <button type="button" id="citation-ref-8" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 8 — click to view reference">8</button>. Elena and her husband practiced sensate focus for four weeks, starting with simple hand holding and gradually progressing. For the first time in years, Elena experienced intimacy without the constant performance anxiety—not because the anxiety disappeared, but because she learned to redirect attention away from evaluation and toward sensation.</p><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">3. Communicate About Anxiety with Your Partner</h3><p className="mb-6">One of the most powerful interventions for anxiety in intimate relationships is simply talking about it <button type="button" id="citation-ref-6" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 6 — click to view reference">6</button>. When anxiety remains unnamed, partners often misinterpret withdrawal as disinterest, reassurance-seeking as neediness, or avoidance as rejection.</p><p className="mb-6">Consider Priya, whose attachment anxiety led her to constantly seek reassurance from her partner: "Do you still love me? Are you happy with me? Are you thinking about leaving?" Her partner felt exhausted and smothered. When Priya finally explained, "I have anxiety that makes me constantly fear abandonment. When you're quiet or distant, my brain tells me you're losing interest. I'm not actually doubting you—I'm fighting my anxiety. It helps when you reassure me once, then gently remind me it's the anxiety talking if I ask again," her partner understood. He stopped taking the reassurance-seeking personally and became an ally in managing it.</p><div className="
+                        not-prose my-8 rounded-xl border-l-4 border-l-emerald-400
+                        bg-emerald-50 dark:bg-emerald-950/20
+                        overflow-hidden
 
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          Physical Intimacy: When the Body Becomes a Threat
-        </h3>
-        <p className="mb-6">
-          Anxiety profoundly affects physical and sexual intimacy <Citation id="4" index={4} source="Sexual Medicine Reviews" year="2020" tier={1} />:
-        </p>
+                    "><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-lightbulb text-emerald-500 mt-0.5 shrink-0"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-emerald-900 dark:text-emerald-200">What to Say</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p className="mb-3">Choose a calm, non-intimate moment to have this conversation:</p><p className="mb-3">"I want to talk about how anxiety affects our intimacy. Sometimes when we're close—emotionally or physically—I feel anxious. It's not about you or how I feel about you. It's about my fear of [being judged/being abandoned/losing control]. I'm working on it, and it helps when you [specific support, e.g., 'reassure me once and then give me space to sit with the feeling' or 'check in with me gently if I seem distant']."</p><p className="text-sm">This transparency reduces anxiety by removing the need to hide it and invites your partner to be an ally rather than an unwitting trigger.</p></div></div></div></div><h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">4. Challenge Catastrophic Intimacy Beliefs</h3><p className="mb-6">Anxiety around intimacy is often fueled by catastrophic beliefs about vulnerability <button type="button" id="citation-ref-7" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 7 — click to view reference">7</button>. Identifying and challenging these beliefs reduces their power:</p><div className="not-prose my-8 "><h4 className="text-base font-bold text-gray-900 dark:text-white mb-4">Anxious Beliefs vs. Reality-Based Alternatives</h4><div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700"><table className="w-full text-left"><thead><tr><th className="px-4 py-3 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-gray-800/50 border-b border-gray-200 dark:border-gray-700">Anxious Belief</th><th className="
+                                                px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider
+                                                border-b border-gray-200 dark:border-gray-700
+                                                bg-teal-50 dark:bg-teal-900/20 text-teal-700 dark:text-teal-300
+                                            ">Evidence-Based Reality</th></tr></thead><tbody><tr className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"><td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">If I show my real feelings, they'll leave me.</td><td className="
+                                                    px-4 py-3 text-center
 
-        <ArticleAccordion
-          type="multiple"
-          items={[
-            {
-              id: 'performance',
-              title: 'Performance anxiety',
-              content: (
-                <div>
-                  <p className="mb-3">
-                    Worry about sexual performance, body image, or "doing it right" activates the sympathetic nervous system (fight-or-flight), which directly inhibits arousal. The more you monitor your performance, the less present and responsive you become.
-                  </p>
-                </div>
-              ),
-            },
-            {
-              id: 'dissociation',
-              title: "Dissociation or 'spectating'",
-              content: (
-                <div>
-                  <p className="mb-3">
-                    Anxiety pulls you out of your body and into your head. Instead of experiencing sensation, you're observing yourself from the outside, critiquing, analyzing, worrying. This mental distance prevents genuine connection and pleasure.
-                  </p>
-                </div>
-              ),
-            },
-            {
-              id: 'avoidance',
-              title: 'Avoidance of physical intimacy',
-              content: (
-                <div>
-                  <p className="mb-3">
-                    To avoid anxiety-provoking vulnerability, you might initiate physical intimacy less often, create distance, or develop excuses. Over time, this creates a cycle where reduced intimacy increases relationship anxiety, which further reduces intimacy.
-                  </p>
-                </div>
-              ),
-            },
-            {
-              id: 'reassurance',
-              title: 'Need for constant reassurance',
-              content: (
-                <div>
-                  <p className="mb-3">
-                    "Did you enjoy that?", "Was I okay?", "Are you sure?" Seeking repeated validation during or after intimate moments temporarily soothes anxiety but reinforces the underlying belief that you're inadequate and need external proof otherwise.
-                  </p>
-                </div>
-              ),
-            },
-          ]}
-        />
+                                                "><span className="text-sm text-gray-700 dark:text-gray-300">Authentic vulnerability creates deeper connection. Hiding creates distance. Partners who leave due to honesty were likely not right for you long-term.</span></td></tr><tr className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"><td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">I need to be perfect in bed or they'll be disappointed.</td><td className="
+                                                    px-4 py-3 text-center
 
-        <StatCard
-          stats={[
-            { value: 58, suffix: '%', label: 'of people with anxiety report difficulties with intimacy' },
-            { value: 43, suffix: '%', label: 'experience sexual dysfunction related to anxiety' },
-            { value: 62, suffix: '%', label: 'report improvement with targeted interventions' },
-          ]}
-          source="Archives of Sexual Behavior, 2020; Sexual Medicine Reviews, 2020"
-        />
+                                                "><span className="text-sm text-gray-700 dark:text-gray-300">Connection and presence matter more than technical performance. Most partners value emotional intimacy over physical perfection. Communication about preferences matters more than mind-reading.</span></td></tr><tr className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"><td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">Being vulnerable means losing control.</td><td className="
+                                                    px-4 py-3 text-center
 
-        <h2 id="strategies-for-intimacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Strategies for Building Intimacy Despite Anxiety
-        </h2>
+                                                "><span className="text-sm text-gray-700 dark:text-gray-300">Vulnerability is a choice, not a loss of control. You decide what to share and when. Strength includes the ability to be honest about weakness.</span></td></tr><tr className="border-b border-gray-100 dark:border-gray-800 last:border-b-0 hover:bg-gray-50/50 dark:hover:bg-gray-800/30 transition-colors"><td className="px-4 py-3 text-sm font-medium text-gray-800 dark:text-gray-200">If they really knew me, they wouldn't want me.</td><td className="
+                                                    px-4 py-3 text-center
 
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          1. Practice "Graded Vulnerability" in Emotional Intimacy
-        </h3>
-        <p className="mb-6">
-          You don't have to jump from emotional distance to complete openness. Gradual, intentional sharing builds trust in both yourself and your partner <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2019" tier={1} />:
-        </p>
+                                                "><span className="text-sm text-gray-700 dark:text-gray-300">You are worthy of love including your flaws. Relationships deepen through acceptance of the whole person, not a curated version.</span></td></tr></tbody></table></div></div><h2 id="when-anxiety-creates-avoidance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When Anxiety Leads to Intimacy Avoidance</h2><p className="mb-6">If anxiety causes you to consistently avoid emotional or physical intimacy, this pattern often worsens over time. The longer you avoid, the more anxiety builds around the avoided activity, creating a self-reinforcing cycle.</p><p className="mb-6">Breaking this cycle requires gradual exposure—not forcing yourself into intense intimacy, but taking small steps back toward connection. Work with your partner to identify one low-pressure intimate behavior you can practice this week (e.g., holding hands during a conversation, sharing one vulnerable thought, initiating non-sexual physical closeness).</p><h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How to Get Started This Week</h2><ol className="list-decimal pl-6 mb-6 space-y-2"><li><strong>Identify your primary intimacy anxiety pattern:</strong> Do you avoid emotional vulnerability? Experience performance anxiety during physical intimacy? Seek excessive reassurance? Dissociate or "spectate" during intimate moments?</li><li><strong>Have one conversation with your partner:</strong> Name how anxiety affects your intimacy and what support would help.</li><li><strong>Practice one presence-based technique:</strong> Try graded vulnerability for emotional intimacy or sensate focus for physical intimacy.</li><li><strong>Challenge one catastrophic belief:</strong> Write down an anxious intimacy belief and counter it with evidence-based reality.</li></ol><h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Professional Help</h2><p className="mb-6">Consider working with a therapist—individually or as a couple—if:</p><ul className="list-disc pl-6 mb-6 space-y-2"><li>Anxiety consistently prevents emotional or physical intimacy in your relationship</li><li>You experience significant sexual dysfunction related to anxiety (e.g., erectile difficulties, pain, inability to orgasm, complete loss of desire)</li><li>Avoidance of intimacy is creating conflict or distance in your relationship</li><li>Your partner feels rejected or confused by your intimacy patterns</li><li>Intimacy anxiety is linked to past trauma (sexual, relational, or otherwise)</li><li>Self-help strategies don't improve intimacy after consistent practice for 6-8 weeks</li></ul><p className="mb-6">Emotionally Focused Therapy (EFT) for couples and sex therapy have particularly strong evidence for addressing anxiety-related intimacy issues <button type="button" id="citation-ref-6" className="
+                                inline-flex items-center justify-center
+                                w-[18px] h-[18px] ml-0.5 -mt-2
+                                text-[10px] font-bold text-teal-600 dark:text-teal-400
+                                bg-teal-50 dark:bg-teal-900/30
+                                rounded-full cursor-pointer
+                                hover:bg-teal-100 dark:hover:bg-teal-900/50
+                                hover:scale-110
+                                active:scale-95
+                                transition-all duration-150
+                                align-super
+                                focus:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 focus-visible:ring-offset-1
+                            " aria-label="Citation 6 — click to view reference">6</button>.</p><div className="
+                        not-prose my-8 rounded-xl border-l-4 border-l-teal-400
+                        bg-teal-50 dark:bg-teal-950/20
+                        overflow-hidden
 
-        <ProgressSteps
-          variant="vertical"
-          steps={[
-            {
-              title: 'Start with low-stakes sharing',
-              description: (
-                <p>
-                  Share a minor preference, a small worry, or a hope for the week. Notice how your partner responds. Most likely, they respond with acceptance, not judgment.
-                </p>
-              ),
-            },
-            {
-              title: 'Name your anxiety about sharing',
-              description: (
-                <p>
-                  "I want to share something with you, and I'm noticing anxiety coming up. Part of me is worried you'll think it's silly." This meta-communication (talking about the vulnerability itself) often reduces the anxiety.
-                </p>
-              ),
-            },
-            {
-              title: 'Share one level deeper',
-              description: (
-                <p>
-                  Once lower-stakes sharing feels safer, move to moderately vulnerable topics: a fear you've had, a need you're not sure how to express, a dream you're hesitant to voice.
-                </p>
-              ),
-            },
-            {
-              title: 'Practice receiving vulnerability in return',
-              description: (
-                <p>
-                  Intimacy is reciprocal. When your partner shares vulnerably, resist the urge to fix, minimize, or reassure excessively. Just listen, validate, and stay present.
-                </p>
-              ),
-            },
-          ]}
-        />
+                    "><div className="flex items-start gap-3 p-5 "><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-star text-teal-500 mt-0.5 shrink-0"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg><div className="flex-1 min-w-0"><h4 className="font-bold text-sm text-teal-900 dark:text-teal-200">Key Takeaway</h4><div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0"><p className="mb-3"><strong>Key Takeaway:</strong> Anxiety disrupts both emotional and physical intimacy through fear of vulnerability, performance anxiety, dissociation, and avoidance. But intimacy doesn't require the absence of anxiety—it requires the willingness to be present despite it.</p><p>By practicing graded vulnerability, shifting from performance to presence, communicating about your anxiety with your partner, and challenging catastrophic beliefs, you can build deeper connection even while managing fear. Intimacy isn't about being fearless; it's about choosing connection even when vulnerability feels risky. The deepest relationships aren't built by people who never feel afraid—they're built by people who feel afraid and reach for each other anyway.</p></div></div></div></div></div>
 
-        <ArticleCallout variant="tip">
-          <p>
-            <strong>Daily Micro-Vulnerability Practice:</strong> Share one feeling each day with your partner, using the format: "Today I felt [emotion] when [situation]." No lengthy explanation required. This builds the habit of emotional honesty without overwhelming either of you.
-          </p>
-        </ArticleCallout>
 
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          2. Shift from Performance to Presence in Physical Intimacy
-        </h3>
-        <p className="mb-6">
-          Anxiety during physical intimacy is often rooted in performance evaluation: "Am I doing this right? Do I look okay? Are they enjoying this?" Mindfulness-based approaches shift the focus from performance to sensation and connection <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2021" tier={1} />:
-        </p>
-
-        <BeforeAfter
-          before={{
-            title: 'Performance-Focused (Anxiety-Driven)',
-            content: (
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Mind: "Am I doing this right? Do I look attractive from this angle? Are they getting bored?"</li>
-                <li>Body sensation: Minimal awareness—disconnected from physical experience</li>
-                <li>Result: Anxiety, self-consciousness, reduced pleasure and connection</li>
-              </ul>
-            ),
-          }}
-          after={{
-            title: 'Presence-Focused (Mindful)',
-            content: (
-              <ul className="list-disc pl-5 space-y-2">
-                <li>Mind: "I notice the warmth of their skin. I notice my breath. I notice tension in my shoulders—let it release. I notice sensation here, now."</li>
-                <li>Body sensation: Fully present—attuned to physical experience and connection</li>
-                <li>Result: Reduced anxiety, increased pleasure, deeper intimacy</li>
-              </ul>
-            ),
-          }}
-        />
-
-        <p className="mb-6 mt-6">
-          <strong>Practice: Sensate Focus</strong> (a technique from sex therapy):
-        </p>
-        <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li>With your partner, agree to non-sexual touch focused entirely on sensation (e.g., hand massage, back touch).</li>
-          <li>The goal is NOT arousal or pleasure—it's simply noticing sensation without judgment.</li>
-          <li>When your mind drifts to performance worry, gently return attention to the physical sensation.</li>
-          <li>Gradually increase to more intimate touch, always keeping the focus on presence rather than performance or outcome.</li>
-        </ol>
-        <p className="mb-6">
-          This practice rewires the brain to associate intimacy with safety and presence rather than evaluation and threat <Citation id="8" index={8} source="AASECT" year="2022" tier={3} />.
-        </p>
-
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          3. Communicate About Anxiety with Your Partner
-        </h3>
-        <p className="mb-6">
-          One of the most powerful interventions for anxiety in intimate relationships is simply talking about it <Citation id="6" index={6} source="Journal of Marital and Family Therapy" year="2020" tier={1} />. When anxiety remains unnamed, partners often misinterpret withdrawal as disinterest, reassurance-seeking as neediness, or avoidance as rejection.
-        </p>
-
-        <ArticleCallout variant="tip" title="What to Say">
-          <p className="mb-3">
-            Choose a calm, non-intimate moment to have this conversation:
-          </p>
-          <p className="mb-3">
-            "I want to talk about how anxiety affects our intimacy. Sometimes when we're close—emotionally or physically—I feel anxious. It's not about you or how I feel about you. It's about my fear of [being judged/being abandoned/losing control]. I'm working on it, and it helps when you [specific support, e.g., 'reassure me once and then give me space to sit with the feeling' or 'check in with me gently if I seem distant']."
-          </p>
-          <p className="text-sm">
-            This transparency reduces anxiety by removing the need to hide it and invites your partner to be an ally rather than an unwitting trigger.
-          </p>
-        </ArticleCallout>
-
-        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          4. Challenge Catastrophic Intimacy Beliefs
-        </h3>
-        <p className="mb-6">
-          Anxiety around intimacy is often fueled by catastrophic beliefs about vulnerability <Citation id="7" index={7} source="Clinical Psychology Review" year="2019" tier={1} />. Identifying and challenging these beliefs reduces their power:
-        </p>
-
-        <ComparisonTable
-          title="Anxious Beliefs vs. Reality-Based Alternatives"
-          columns={['Anxious Belief', 'Evidence-Based Reality']}
-          items={[
-            {
-              feature: "If I show my real feelings, they'll leave me.",
-              values: ['Authentic vulnerability creates deeper connection. Hiding creates distance. Partners who leave due to honesty were likely not right for you long-term.'],
-            },
-            {
-              feature: "I need to be perfect in bed or they'll be disappointed.",
-              values: ['Connection and presence matter more than technical performance. Most partners value emotional intimacy over physical perfection. Communication about preferences matters more than mind-reading.'],
-            },
-            {
-              feature: 'Being vulnerable means losing control.',
-              values: ['Vulnerability is a choice, not a loss of control. You decide what to share and when. Strength includes the ability to be honest about weakness.'],
-            },
-            {
-              feature: "If they really knew me, they wouldn't want me.",
-              values: ['You are worthy of love including your flaws. Relationships deepen through acceptance of the whole person, not a curated version.'],
-            },
-          ]}
-        />
-
-        <h2 id="when-anxiety-creates-avoidance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          When Anxiety Leads to Intimacy Avoidance
-        </h2>
-        <p className="mb-6">
-          If anxiety causes you to consistently avoid emotional or physical intimacy, this pattern often worsens over time. The longer you avoid, the more anxiety builds around the avoided activity, creating a self-reinforcing cycle.
-        </p>
-        <p className="mb-6">
-          Breaking this cycle requires gradual exposure—not forcing yourself into intense intimacy, but taking small steps back toward connection. Work with your partner to identify one low-pressure intimate behavior you can practice this week (e.g., holding hands during a conversation, sharing one vulnerable thought, initiating non-sexual physical closeness).
-        </p>
-
-        <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          How to Get Started This Week
-        </h2>
-        <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li>
-            <strong>Identify your primary intimacy anxiety pattern:</strong> Do you avoid emotional vulnerability? Experience performance anxiety during physical intimacy? Seek excessive reassurance? Dissociate or "spectate" during intimate moments?
-          </li>
-          <li>
-            <strong>Have one conversation with your partner:</strong> Name how anxiety affects your intimacy and what support would help.
-          </li>
-          <li>
-            <strong>Practice one presence-based technique:</strong> Try graded vulnerability for emotional intimacy or sensate focus for physical intimacy.
-          </li>
-          <li>
-            <strong>Challenge one catastrophic belief:</strong> Write down an anxious intimacy belief and counter it with evidence-based reality.
-          </li>
-        </ol>
-
-        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          When to Seek Professional Help
-        </h2>
-        <p className="mb-6">
-          Consider working with a therapist—individually or as a couple—if:
-        </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Anxiety consistently prevents emotional or physical intimacy in your relationship</li>
-          <li>You experience significant sexual dysfunction related to anxiety (e.g., erectile difficulties, pain, inability to orgasm, complete loss of desire)</li>
-          <li>Avoidance of intimacy is creating conflict or distance in your relationship</li>
-          <li>Your partner feels rejected or confused by your intimacy patterns</li>
-          <li>Intimacy anxiety is linked to past trauma (sexual, relational, or otherwise)</li>
-          <li>Self-help strategies don't improve intimacy after consistent practice for 6-8 weeks</li>
-        </ul>
-        <p className="mb-6">
-          Emotionally Focused Therapy (EFT) for couples and sex therapy have particularly strong evidence for addressing anxiety-related intimacy issues <Citation id="6" index={6} source="Journal of Marital and Family Therapy" year="2020" tier={1} />.
-        </p>
-
-        <ArticleCallout variant="key-takeaway">
-          <p className="mb-3">
-            <strong>Key Takeaway:</strong> Anxiety disrupts both emotional and physical intimacy through fear of vulnerability, performance anxiety, dissociation, and avoidance. But intimacy doesn't require the absence of anxiety—it requires the willingness to be present despite it.
-          </p>
-          <p>
-            By practicing graded vulnerability, shifting from performance to presence, communicating about your anxiety with your partner, and challenging catastrophic beliefs, you can build deeper connection even while managing fear. Intimacy isn't about being fearless; it's about choosing connection even when vulnerability feels risky. The deepest relationships aren't built by people who never feel afraid—they're built by people who feel afraid and reach for each other anyway.
-          </p>
-        </ArticleCallout>
       </>
     ),
   },

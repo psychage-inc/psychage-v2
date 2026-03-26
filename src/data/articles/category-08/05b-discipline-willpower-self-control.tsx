@@ -94,17 +94,17 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     content: (
       <>
         <p>
-          After a poor night's sleep, everything feels harder—resisting the donut, focusing on work, not snapping at your partner. This isn't weakness; it's neuroscience. Sleep deprivation systematically impairs the prefrontal cortex, the brain region responsible for inhibitory control, planning, and emotion regulation. When the PFC underperforms, the limbic system (impulses, emotions) operates unchecked. Sleep isn't a luxury for self-control—it's the biological foundation. <Citation ids={['1', '2', '3']} />
+          After a poor night's sleep, everything feels harder---resisting the donut, focusing on work, not snapping at your partner. This isn't weakness; it's neuroscience. Sleep deprivation systematically impairs the prefrontal cortex, the brain region responsible for inhibitory control, planning, and emotion regulation. When the PFC underperforms, the limbic system (impulses, emotions) operates unchecked. Sleep isn't a luxury for self-control---it's the biological foundation. <Citation ids={['1', '2', '3']} />
         </p>
 
         <h2>The Prefrontal Cortex: First Casualty of Sleep Loss</h2>
         <p>
-          The prefrontal cortex (PFC) is metabolically expensive—it requires substantial glucose and oxygen to function. During sleep deprivation, the PFC shows reduced activity on brain scans, particularly in areas responsible for inhibitory control and decision-making. Meanwhile, subcortical regions (amygdala, striatum) that encode emotions and rewards remain active or even hyperactive. The result: you feel impulses and cravings more intensely while having less ability to override them. <Citation ids={['1', '2']} />
+          The prefrontal cortex (PFC) is metabolically expensive---it requires substantial glucose and oxygen to function. During sleep deprivation, the PFC shows reduced activity on brain scans, particularly in areas responsible for inhibitory control and decision-making. Meanwhile, subcortical regions (amygdala, striatum) that encode emotions and rewards remain active or even hyperactive. The result: you feel impulses and cravings more intensely while having less ability to override them. <Citation ids={['1', '2']} />
         </p>
 
         <ArticleCallout type="info" title="Core Mechanism: PFC Hypoactivity">
           <p>
-            Sleep deprivation reduces blood flow to the ventromedial and dorsolateral PFC—the exact regions that inhibit impulses and maintain goals. This creates an imbalance: the "want" system (limbic) is active, the "control" system (PFC) is sluggish. Self-control fails not because you're weak, but because the hardware is impaired. <Citation ids={["2", '5']} />
+            Sleep deprivation reduces blood flow to the ventromedial and dorsolateral PFC---the exact regions that inhibit impulses and maintain goals. This creates an imbalance: the "want" system (limbic) is active, the "control" system (PFC) is sluggish. Self-control fails not because you're weak, but because the hardware is impaired. <Citation ids={["2", '5']} />
           </p>
         </ArticleCallout>
 
@@ -117,11 +117,11 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
           items={[
             {
               title: 'Food Choices and Overeating',
-              content: 'Sleep-deprived individuals consume 300–500 more calories per day, preferring high-fat, high-sugar foods. Neuroimaging shows increased reward system activation when viewing junk food after poor sleep.',
+              content: 'Sleep-deprived individuals consume 300--500 more calories per day, preferring high-fat, high-sugar foods. Neuroimaging shows increased reward system activation when viewing junk food after poor sleep.',
             },
             {
               title: 'Impulse Spending and Financial Decisions',
-              content: 'Sleep loss increases impulsive purchases and risk-taking in financial decisions. Tired people favor immediate rewards over delayed, larger payoffs—temporal discounting increases.',
+              content: 'Sleep loss increases impulsive purchases and risk-taking in financial decisions. Tired people favor immediate rewards over delayed, larger payoffs---temporal discounting increases.',
             },
             {
               title: 'Emotional Reactivity',
@@ -133,18 +133,18 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Attention and Task Persistence',
-              content: 'Sleep-deprived people give up sooner on difficult tasks. Sustained attention—required for long-term goals—collapses. Mind-wandering increases, task engagement decreases.',
+              content: 'Sleep-deprived people give up sooner on difficult tasks. Sustained attention---required for long-term goals---collapses. Mind-wandering increases, task engagement decreases.',
             },
           ]}
         />
 
         <p>
-          These aren't character flaws—they're predictable consequences of PFC impairment. When the control center is offline, behavior is driven by immediate needs and impulses. <Citation ids={['3', '4', '6']} />
+          These aren't character flaws---they're predictable consequences of PFC impairment. When the control center is offline, behavior is driven by immediate needs and impulses. <Citation ids={['3', '4', '6']} />
         </p>
 
         <h2>The Cumulative Effect: Chronic Sleep Restriction</h2>
         <p>
-          One bad night impairs self-control, but chronic sleep restriction—sleeping 5–6 hours nightly—creates cumulative deficits. Cognitive performance after one week of 6-hour nights resembles acute total sleep deprivation (staying awake 24 hours). Most people underestimate this impairment because they adapt subjectively—they <em>feel</em> okay—but objective performance remains compromised. <Citation ids={['5']} />
+          One bad night impairs self-control, but chronic sleep restriction---sleeping 5--6 hours nightly---creates cumulative deficits. Cognitive performance after one week of 6-hour nights resembles acute total sleep deprivation (staying awake 24 hours). Most people underestimate this impairment because they adapt subjectively---they <em>feel</em> okay---but objective performance remains compromised. <Citation ids={['5']} />
         </p>
 
         <StatCard
@@ -184,20 +184,20 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
           headers={['Well-Rested State', 'Sleep-Deprived State']}
           rows={[
             ['Balanced hunger hormones', 'Elevated ghrelin, reduced leptin'],
-            ['PFC inhibits cravings', 'PFC activity reduced 10–30%'],
+            ['PFC inhibits cravings', 'PFC activity reduced 10--30%'],
             ['Reward system proportional', 'Reward system hyperactive (+60%)'],
             ['Prefer healthy foods', 'Prefer high-fat, high-sugar foods'],
-            ['Normal calorie intake', 'Consume 300–500 extra calories'],
+            ['Normal calorie intake', 'Consume 300--500 extra calories'],
           ]}
         />
 
         <p>
-          This isn't about willpower—it's biochemistry. When you're sleep-deprived, your brain is literally wired to crave calorie-dense foods while simultaneously losing the capacity to resist them. <Citation ids={['4', '6']} />
+          This isn't about willpower---it's biochemistry. When you're sleep-deprived, your brain is literally wired to crave calorie-dense foods while simultaneously losing the capacity to resist them. <Citation ids={['4', '6']} />
         </p>
 
         <h2>Sleep's Role in Habit Formation</h2>
         <p>
-          Beyond acute self-control, sleep plays a critical role in habit consolidation. During sleep, the brain transfers learned behaviors from effortful, PFC-mediated control to automatic, basal ganglia-mediated habits. Sleep-deprived individuals require more repetitions to automate behaviors—habits form more slowly. This means poor sleep not only impairs immediate self-control but also delays the point at which desired behaviors become automatic. <Citation ids={['7']} />
+          Beyond acute self-control, sleep plays a critical role in habit consolidation. During sleep, the brain transfers learned behaviors from effortful, PFC-mediated control to automatic, basal ganglia-mediated habits. Sleep-deprived individuals require more repetitions to automate behaviors---habits form more slowly. This means poor sleep not only impairs immediate self-control but also delays the point at which desired behaviors become automatic. <Citation ids={['7']} />
         </p>
 
         <ArticleCallout type="science" title="Research Insight: Sleep and Automaticity">
@@ -208,14 +208,14 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>Sleep Extension: Restoring Self-Control Capacity</h2>
         <p>
-          The good news: self-control capacity is restorable. Sleep extension studies—where chronically sleep-deprived participants increase sleep to 8+ hours—show improved impulse control, better food choices, reduced emotional reactivity, and enhanced decision-making within days. PFC function recovers rapidly when sleep is prioritized. <Citation ids={['8']} />
+          The good news: self-control capacity is restorable. Sleep extension studies---where chronically sleep-deprived participants increase sleep to 8+ hours---show improved impulse control, better food choices, reduced emotional reactivity, and enhanced decision-making within days. PFC function recovers rapidly when sleep is prioritized. <Citation ids={['8']} />
         </p>
 
         <ProgressSteps
           steps={[
             {
               title: 'Protect Your Sleep Window',
-              description: 'Schedule 8 hours in bed, non-negotiable. Treat this like any other health intervention—because it is. Sleep is the foundation; everything else rests on it.',
+              description: 'Schedule 8 hours in bed, non-negotiable. Treat this like any other health intervention---because it is. Sleep is the foundation; everything else rests on it.',
             },
             {
               title: "Recognize Sleep Debt as Self-Control Debt",
@@ -223,7 +223,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Strategic Timing for Important Decisions',
-              description: 'Make high-stakes decisions (financial, relational, career) when well-rested. Avoid decision-making after poor sleep—your PFC is offline.',
+              description: 'Make high-stakes decisions (financial, relational, career) when well-rested. Avoid decision-making after poor sleep---your PFC is offline.',
             },
             {
               title: "Use Environmental Support When Tired",
@@ -239,15 +239,15 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <ul>
           <li><strong>Consistent sleep schedule:</strong> Same bedtime and wake time, even on weekends. Circadian consistency maximizes sleep quality.</li>
-          <li><strong>Pre-sleep wind-down:</strong> 60 minutes before bed, reduce stimulation—dim lights, no screens, calming activities.</li>
-          <li><strong>Sleep environment:</strong> Cool (65–68°F), dark, quiet bedroom. Invest in blackout curtains and white noise if needed.</li>
+          <li><strong>Pre-sleep wind-down:</strong> 60 minutes before bed, reduce stimulation---dim lights, no screens, calming activities.</li>
+          <li><strong>Sleep environment:</strong> Cool (65--68°F), dark, quiet bedroom. Invest in blackout curtains and white noise if needed.</li>
           <li><strong>Limit caffeine and alcohol:</strong> Caffeine after 2pm and alcohol within 3 hours of bed disrupt sleep architecture.</li>
-          <li><strong>Morning light exposure:</strong> 10–20 minutes of bright light within an hour of waking strengthens circadian rhythm, improving nighttime sleep.</li>
+          <li><strong>Morning light exposure:</strong> 10--20 minutes of bright light within an hour of waking strengthens circadian rhythm, improving nighttime sleep.</li>
         </ul>
 
         <h2>The Bottom Line: Sleep Is Non-Negotiable for Self-Control</h2>
         <p>
-          You cannot willpower your way through chronic sleep deprivation. The prefrontal cortex—your executive control center—requires 7–9 hours of sleep to function optimally. Sacrificing sleep to "get more done" backfires: you lose more productivity and self-control capacity than you gain in waking hours. Sleep isn't a weakness to overcome; it's the foundation of discipline. <Citation ids={["3", '6', '8']} />
+          You cannot willpower your way through chronic sleep deprivation. The prefrontal cortex---your executive control center---requires 7--9 hours of sleep to function optimally. Sacrificing sleep to "get more done" backfires: you lose more productivity and self-control capacity than you gain in waking hours. Sleep isn't a weakness to overcome; it's the foundation of discipline. <Citation ids={["3", '6', '8']} />
         </p>
 
         <QuoteBlock
@@ -338,23 +338,23 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Most people have activities they <em>should</em> do (exercise, chores, studying) and activities they <em>want</em> to do (Netflix, social media, favorite podcasts). The 'shoulds' offer delayed benefits but feel like work; the "wants" offer immediate pleasure but no long-term gain. Temptation bundling solves this conflict by pairing the two: you only allow yourself the "want" while doing the "should." Watch your favorite show only while on the treadmill. Listen to an addictive podcast only while doing dishes. This strategy exploits present bias—our preference for immediate rewards—to make unpleasant but important behaviors more appealing. <Citation ids={['1', '2']} />
+          Most people have activities they <em>should</em> do (exercise, chores, studying) and activities they <em>want</em> to do (Netflix, social media, favorite podcasts). The 'shoulds' offer delayed benefits but feel like work; the "wants" offer immediate pleasure but no long-term gain. Temptation bundling solves this conflict by pairing the two: you only allow yourself the "want" while doing the "should." Watch your favorite show only while on the treadmill. Listen to an addictive podcast only while doing dishes. This strategy exploits present bias---our preference for immediate rewards---to make unpleasant but important behaviors more appealing. <Citation ids={['1', '2']} />
         </p>
 
         <h2>The Concept: Restricting Pleasure to Work</h2>
         <p>
-          Temptation bundling, coined by economist Katy Milkman, works by creating a rule: 'I only consume [immediate pleasure] while doing [unpleasant task]." This transforms the unpleasant task into an opportunity to access something you crave. The gym becomes the only place you watch your favorite show—suddenly, you <em>want</em> to go to the gym. <Citation ids={['1', '3']} />
+          Temptation bundling, coined by economist Katy Milkman, works by creating a rule: 'I only consume [immediate pleasure] while doing [unpleasant task]." This transforms the unpleasant task into an opportunity to access something you crave. The gym becomes the only place you watch your favorite show---suddenly, you <em>want</em> to go to the gym. <Citation ids={['1', '3']} />
         </p>
 
         <ArticleCallout type="info" title="Core Principle: Present Bias Judo">
           <p>
-            Humans exhibit present bias—we overvalue immediate rewards relative to delayed ones. Temptation bundling doesn't fight this bias; it harnesses it. By making an immediate pleasure contingent on an effortful behavior, the "should" acquires immediate reward value. You're using your psychology's weakness as a lever. <Citation ids={["4"]} />
+            Humans exhibit present bias---we overvalue immediate rewards relative to delayed ones. Temptation bundling doesn't fight this bias; it harnesses it. By making an immediate pleasure contingent on an effortful behavior, the "should" acquires immediate reward value. You're using your psychology's weakness as a lever. <Citation ids={["4"]} />
           </p>
         </ArticleCallout>
 
         <h2>The Original Study: Gym Attendance</h2>
         <p>
-          Milkman's 2014 study tested temptation bundling with gym attendance. Participants were given iPods loaded with addictive audiobooks but were only allowed to listen at the gym. Over 9 weeks, the temptation bundling group visited the gym 51% more frequently than controls. Participants reported that the restriction made them genuinely <em>excited</em> to exercise—they wanted to know what happened next in the story. <Citation ids={['1']} />
+          Milkman's 2014 study tested temptation bundling with gym attendance. Participants were given iPods loaded with addictive audiobooks but were only allowed to listen at the gym. Over 9 weeks, the temptation bundling group visited the gym 51% more frequently than controls. Participants reported that the restriction made them genuinely <em>excited</em> to exercise---they wanted to know what happened next in the story. <Citation ids={['1']} />
         </p>
 
         <StatCard
@@ -364,7 +364,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          The key was restriction: participants weren't just encouraged to listen while exercising—they <em>could only</em> listen while exercising. This scarcity made the gym the gateway to something they craved. When the study ended and restrictions lifted, gym attendance declined—the bundled temptation was the primary motivator. <Citation ids={['1', '2']} />
+          The key was restriction: participants weren't just encouraged to listen while exercising---they <em>could only</em> listen while exercising. This scarcity made the gym the gateway to something they craved. When the study ended and restrictions lifted, gym attendance declined---the bundled temptation was the primary motivator. <Citation ids={['1', '2']} />
         </p>
 
         <h2>Why It Works: Dual Reward System</h2>
@@ -409,7 +409,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Commuting',
-              content: `Only listen to an addictive podcast during your commute. The commute becomes time you look forward to—you're eager to get in the car.`,
+              content: `Only listen to an addictive podcast during your commute. The commute becomes time you look forward to---you're eager to get in the car.`,
             },
             {
               title: 'Unpleasant Medical Tasks',
@@ -419,7 +419,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          The pattern is consistent: identify something you genuinely enjoy, then restrict access to it exclusively while doing something you avoid. The restriction is critical—if you allow the pleasure outside the task, the motivation collapses. <Citation ids={['2', '6']} />
+          The pattern is consistent: identify something you genuinely enjoy, then restrict access to it exclusively while doing something you avoid. The restriction is critical---if you allow the pleasure outside the task, the motivation collapses. <Citation ids={['2', '6']} />
         </p>
 
         <h2>Designing Effective Bundles: Key Principles</h2>
@@ -435,7 +435,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Enforce the Restriction Strictly',
-              description: 'The temptation must be unavailable outside the task. If you cheat—watching the show at home—the gym loses its appeal. Commitment is key.',
+              description: 'The temptation must be unavailable outside the task. If you cheat---watching the show at home---the gym loses its appeal. Commitment is key.',
             },
             {
               title: "Match Task Difficulty to Reward Value",
@@ -460,7 +460,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>Evidence for Long-Term Habit Formation</h2>
         <p>
-          Does temptation bundling create lasting habits, or does motivation disappear when the bundle ends? Research is mixed. In Milkman's study, gym attendance declined when the audiobook restriction was lifted. However, other studies show that if the bundle lasts long enough (8+ weeks), the behavior can become habitual—people continue even after the temptation is no longer restricted. <Citation ids={['1', '6']} />
+          Does temptation bundling create lasting habits, or does motivation disappear when the bundle ends? Research is mixed. In Milkman's study, gym attendance declined when the audiobook restriction was lifted. However, other studies show that if the bundle lasts long enough (8+ weeks), the behavior can become habitual---people continue even after the temptation is no longer restricted. <Citation ids={['1', '6']} />
         </p>
 
         <ArticleChart
@@ -489,7 +489,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <ul>
           <li><strong>Starting new behaviors</strong> when activation energy is the main barrier</li>
-          <li><strong>Unpleasant but not harmful tasks</strong> (exercise, chores—not alcohol or junk food)</li>
+          <li><strong>Unpleasant but not harmful tasks</strong> (exercise, chores---not alcohol or junk food)</li>
           <li><strong>Behaviors you can realistically sustain</strong> long enough to build habits</li>
         </ul>
 
@@ -499,7 +499,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>The Bigger Picture: Reducing Friction, Not Just Adding Carrots</h2>
         <p>
-          Temptation bundling is one tool in a broader behavior design toolkit. It works by adding immediate rewards, but other strategies—removing obstacles, social accountability, identity shifts—may be equally or more effective. The best approach combines multiple strategies: bundle temptations to get started, modify environments to reduce friction, and cultivate intrinsic motivation to sustain behavior long-term. <Citation ids={['5', '7']} />
+          Temptation bundling is one tool in a broader behavior design toolkit. It works by adding immediate rewards, but other strategies---removing obstacles, social accountability, identity shifts---may be equally or more effective. The best approach combines multiple strategies: bundle temptations to get started, modify environments to reduce friction, and cultivate intrinsic motivation to sustain behavior long-term. <Citation ids={['5', '7']} />
         </p>
 
         <QuoteBlock
@@ -598,7 +598,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Most goals fail not from lack of motivation but from lack of specificity. You intend to exercise, but when? Where? What if you're tired? Without answers to these questions, behavior depends on in-the-moment decision-making—a losing strategy. Implementation intentions solve this by pre-planning: 'If [situation X occurs], then I will [behavior Y]." This simple "if-then" format doubles goal achievement rates across domains by automating behavior and removing the need for effortful decision-making. <Citation ids={['1', '2']} />
+          Most goals fail not from lack of motivation but from lack of specificity. You intend to exercise, but when? Where? What if you're tired? Without answers to these questions, behavior depends on in-the-moment decision-making---a losing strategy. Implementation intentions solve this by pre-planning: 'If [situation X occurs], then I will [behavior Y]." This simple "if-then" format doubles goal achievement rates across domains by automating behavior and removing the need for effortful decision-making. <Citation ids={['1', '2']} />
         </p>
 
         <h2>The Concept: Pre-Planning Cue-Response Pairs</h2>
@@ -608,13 +608,13 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <ArticleCallout type="info" title="Core Mechanism: Cue-Response Automation">
           <p>
-            Implementation intentions work by creating a mental link between a situational cue and a behavioral response. When the cue is encountered, the response activates automatically—without requiring willpower or decision-making. Brain scans show that well-practiced if-then plans activate motor regions directly, bypassing deliberative control processes. <Citation ids={['5']} />
+            Implementation intentions work by creating a mental link between a situational cue and a behavioral response. When the cue is encountered, the response activates automatically---without requiring willpower or decision-making. Brain scans show that well-practiced if-then plans activate motor regions directly, bypassing deliberative control processes. <Citation ids={['5']} />
           </p>
         </ArticleCallout>
 
         <h2>The Evidence: Doubling Goal Achievement</h2>
         <p>
-          Peter Gollwitzer's original research and subsequent meta-analyses consistently find large effects: implementation intentions increase goal achievement rates by 50–100% compared to goal intentions alone. This holds across behaviors—exercise, diet, studying, medication adherence, voting, cancer screenings. <Citation ids={['2', '4']} />
+          Peter Gollwitzer's original research and subsequent meta-analyses consistently find large effects: implementation intentions increase goal achievement rates by 50--100% compared to goal intentions alone. This holds across behaviors---exercise, diet, studying, medication adherence, voting, cancer screenings. <Citation ids={['2', '4']} />
         </p>
 
         <StatCard
@@ -624,7 +624,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          Why the large effect? Because implementation intentions address the two most common failure points: <em>forgetting to act</em> (the cue triggers memory) and <em>hesitating when the moment arrives</em> (the decision is pre-made). You don't rely on memory or motivation—the situation prompts the behavior automatically. <Citation ids={['2', '4']} />
+          Why the large effect? Because implementation intentions address the two most common failure points: <em>forgetting to act</em> (the cue triggers memory) and <em>hesitating when the moment arrives</em> (the decision is pre-made). You don't rely on memory or motivation---the situation prompts the behavior automatically. <Citation ids={['2', '4']} />
         </p>
 
         <h2>How to Formulate Effective If-Then Plans</h2>
@@ -652,7 +652,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Write It Down and Rehearse Mentally',
-              description: 'The act of writing the if-then plan and visualizing the cue-response sequence strengthens the mental association. Rehearse the plan 3–5 times.',
+              description: 'The act of writing the if-then plan and visualizing the cue-response sequence strengthens the mental association. Rehearse the plan 3--5 times.',
             },
           ]}
         />
@@ -714,7 +714,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         </p>
 
         <ul>
-          <li><strong>Exercise:</strong> Participants who formed if-then plans exercised 2.3 times per week vs. 0.8 times for goal-only controls—a 188% increase. <Citation ids={['6']} /></li>
+          <li><strong>Exercise:</strong> Participants who formed if-then plans exercised 2.3 times per week vs. 0.8 times for goal-only controls---a 188% increase. <Citation ids={['6']} /></li>
           <li><strong>Diet:</strong> If-then plans specifying meal timing and content increased fruit/vegetable consumption by 35% and reduced junk food intake by 28%. <Citation ids={['7']} /></li>
           <li><strong>Medication Adherence:</strong> Patients who planned "if I eat breakfast, then I'll take my medication' had 86% adherence vs. 53% in controls. <Citation ids={["3"]} /></li>
           <li><strong>Cancer Screening:</strong> Women who made if-then plans for scheduling mammograms were 3x more likely to complete screening within 3 months. <Citation ids={['4']} /></li>
@@ -741,11 +741,11 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: `The Plan Isn't Rehearsed`,
-              content: `Simply writing the plan once isn't enough. Mental rehearsal—visualizing the cue and response—strengthens the association. Repeat the plan 3–5 times.`,
+              content: `Simply writing the plan once isn't enough. Mental rehearsal---visualizing the cue and response---strengthens the association. Repeat the plan 3--5 times.`,
             },
             {
               title: 'Too Many Plans at Once',
-              content: 'Creating 20 if-then plans simultaneously overwhelms cognitive capacity. Start with 2–3 key plans, then add more once those are automatic.',
+              content: 'Creating 20 if-then plans simultaneously overwhelms cognitive capacity. Start with 2--3 key plans, then add more once those are automatic.',
             },
             {
               title: 'No Contingency Plans for Obstacles',
@@ -755,7 +755,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          Effective implementation intentions balance specificity with realism—concrete enough to guide behavior, flexible enough to accommodate variability. <Citation ids={['2', '4']} />
+          Effective implementation intentions balance specificity with realism---concrete enough to guide behavior, flexible enough to accommodate variability. <Citation ids={['2', '4']} />
         </p>
 
         <h2>Combining If-Then Plans with Other Strategies</h2>
@@ -772,7 +772,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>The Bottom Line: Automate Decisions Before They Happen</h2>
         <p>
-          The brilliance of implementation intentions is that they eliminate decision-making at the moment when self-control is weakest. You decide once, in advance, when motivation is high—then the plan executes automatically when the cue arrives. This conserves willpower, reduces procrastination, and turns goals into behavior. <Citation ids={['1', '4', '5']} />
+          The brilliance of implementation intentions is that they eliminate decision-making at the moment when self-control is weakest. You decide once, in advance, when motivation is high---then the plan executes automatically when the cue arrives. This conserves willpower, reduces procrastination, and turns goals into behavior. <Citation ids={['1', '4', '5']} />
         </p>
 
         <QuoteBlock
@@ -871,17 +871,17 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     content: (
       <>
         <p>
-          When you're stressed, healthy behaviors collapse: you skip the gym, eat junk food, doom-scroll for hours, snap at loved ones. This isn't moral failure—it's neurobiology. Stress hormones (cortisol, norepinephrine) systematically impair the prefrontal cortex while amplifying limbic system reactivity. The 'think' brain goes offline; the "react" brain takes over. Under chronic stress, goal-directed behavior shifts to automatic habits—usually the unhealthy ones. Understanding this mechanism is the first step to protecting self-control when life gets hard. <Citation ids={['1', '2']} />
+          When you're stressed, healthy behaviors collapse: you skip the gym, eat junk food, doom-scroll for hours, snap at loved ones. This isn't moral failure---it's neurobiology. Stress hormones (cortisol, norepinephrine) systematically impair the prefrontal cortex while amplifying limbic system reactivity. The 'think' brain goes offline; the "react" brain takes over. Under chronic stress, goal-directed behavior shifts to automatic habits---usually the unhealthy ones. Understanding this mechanism is the first step to protecting self-control when life gets hard. <Citation ids={['1', '2']} />
         </p>
 
         <h2>The Neurobiological Pathway: From Stress to Impulsivity</h2>
         <p>
-          When you encounter a stressor, your hypothalamic-pituitary-adrenal (HPA) axis activates, releasing cortisol. Simultaneously, the sympathetic nervous system floods your body with norepinephrine. These hormones prepare you for 'fight or flight"—optimizing for immediate survival, not long-term planning. The prefrontal cortex (PFC), which manages impulse control and deliberative decision-making, is <em>intentionally suppressed</em> during acute stress. <Citation ids={['1', '3']} />
+          When you encounter a stressor, your hypothalamic-pituitary-adrenal (HPA) axis activates, releasing cortisol. Simultaneously, the sympathetic nervous system floods your body with norepinephrine. These hormones prepare you for 'fight or flight"---optimizing for immediate survival, not long-term planning. The prefrontal cortex (PFC), which manages impulse control and deliberative decision-making, is <em>intentionally suppressed</em> during acute stress. <Citation ids={['1', '3']} />
         </p>
 
         <ArticleCallout type="info" title="Core Mechanism: PFC Shutdown Under Stress">
           <p>
-            Elevated cortisol reduces PFC activity while increasing amygdala (threat detection) and striatum (habit execution) activity. This shift is adaptive in genuine emergencies—you don't want to deliberate when a predator appears. But in modern life, chronic low-grade stress keeps this system activated, chronically impairing self-control. <Citation ids={['1', '4']} />
+            Elevated cortisol reduces PFC activity while increasing amygdala (threat detection) and striatum (habit execution) activity. This shift is adaptive in genuine emergencies---you don't want to deliberate when a predator appears. But in modern life, chronic low-grade stress keeps this system activated, chronically impairing self-control. <Citation ids={['1', '4']} />
           </p>
         </ArticleCallout>
 
@@ -903,12 +903,12 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          Acute stress can temporarily sharpen focus on immediate tasks but undermines self-control afterward (rebound effect). Chronic stress compounds—each day of elevated cortisol further weakens PFC function and strengthens habitual responses. <Citation ids={['2', '4']} />
+          Acute stress can temporarily sharpen focus on immediate tasks but undermines self-control afterward (rebound effect). Chronic stress compounds---each day of elevated cortisol further weakens PFC function and strengthens habitual responses. <Citation ids={['2', '4']} />
         </p>
 
         <h2>Why Stress Makes You Eat Junk Food</h2>
         <p>
-          Stress-induced eating is one of the most robust behavioral effects. Cortisol increases appetite (particularly for high-fat, high-sugar foods) through multiple pathways: it directly stimulates hunger signals, increases dopamine response to palatable foods, and impairs the PFC's ability to inhibit cravings. Simultaneously, stress reduces sensitivity to satiety cues—you eat past fullness. <Citation ids={['5']} />
+          Stress-induced eating is one of the most robust behavioral effects. Cortisol increases appetite (particularly for high-fat, high-sugar foods) through multiple pathways: it directly stimulates hunger signals, increases dopamine response to palatable foods, and impairs the PFC's ability to inhibit cravings. Simultaneously, stress reduces sensitivity to satiety cues---you eat past fullness. <Citation ids={['5']} />
         </p>
 
         <StatCard
@@ -936,12 +936,12 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          Stress doesn't just make you want food—it makes you want <em>specific</em> foods. The brain seeks quick energy (sugar) and reward (fat/salt) to offset the stress response. This is why stress eating targets cookies and chips, not broccoli. <Citation ids={['5', '6']} />
+          Stress doesn't just make you want food---it makes you want <em>specific</em> foods. The brain seeks quick energy (sugar) and reward (fat/salt) to offset the stress response. This is why stress eating targets cookies and chips, not broccoli. <Citation ids={['5', '6']} />
         </p>
 
         <h2>Stress and the Shift to Habitual Behavior</h2>
         <p>
-          Under stress, the brain shifts from goal-directed behavior (controlled by PFC) to habitual behavior (controlled by basal ganglia). This means you default to whatever you've done most frequently in the past—which, for most people, includes unhealthy habits. If your stress response has historically involved smoking, drinking, or binge-watching, those patterns will resurface automatically under pressure. <Citation ids={['4']} />
+          Under stress, the brain shifts from goal-directed behavior (controlled by PFC) to habitual behavior (controlled by basal ganglia). This means you default to whatever you've done most frequently in the past---which, for most people, includes unhealthy habits. If your stress response has historically involved smoking, drinking, or binge-watching, those patterns will resurface automatically under pressure. <Citation ids={['4']} />
         </p>
 
         <ArticleCallout type="science" title="Research Finding: Stress Triggers Habitual Pathways">
@@ -975,7 +975,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Financial Impulsivity',
-              content: 'Stress increases impulsive spending—retail therapy is a real phenomenon. The brain seeks immediate reward to offset stress, leading to purchases you later regret. Online shopping while stressed is particularly risky.',
+              content: 'Stress increases impulsive spending---retail therapy is a real phenomenon. The brain seeks immediate reward to offset stress, leading to purchases you later regret. Online shopping while stressed is particularly risky.',
             },
           ]}
         />
@@ -993,7 +993,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
           steps={[
             {
               title: 'Reduce Chronic Stress Load',
-              description: `Address the root causes where possible—delegate tasks, set boundaries, seek support. Chronic stress is the killer; even small reductions help. Don't accept it as inevitable.`,
+              description: `Address the root causes where possible---delegate tasks, set boundaries, seek support. Chronic stress is the killer; even small reductions help. Don't accept it as inevitable.`,
             },
             {
               title: 'Build Stress-Resilience Through Exercise',
@@ -1005,22 +1005,22 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: "Protect Sleep Aggressively",
-              description: "Sleep deprivation and stress have additive effects—both impair PFC function. Prioritize 7–9 hours nightly, especially during high-stress periods. Sleep is your first line of defense.",
+              description: "Sleep deprivation and stress have additive effects---both impair PFC function. Prioritize 7--9 hours nightly, especially during high-stress periods. Sleep is your first line of defense.",
             },
             {
               title: "Pre-Commit and Automate During Low-Stress Periods",
-              description: `Make decisions and set up systems when you're calm. Use commitment devices, meal prep, automatic transfers—reduce the need for self-control during stressed states.`,
+              description: `Make decisions and set up systems when you're calm. Use commitment devices, meal prep, automatic transfers---reduce the need for self-control during stressed states.`,
             },
             {
               title: 'Lower Your Standards During Crisis',
-              description: `When acutely stressed, don't expect peak performance. Aim for "good enough"—a 10-minute workout, a mediocre meal, basic functioning. Perfectionism collapses under stress; flexibility survives.`,
+              description: `When acutely stressed, don't expect peak performance. Aim for "good enough"---a 10-minute workout, a mediocre meal, basic functioning. Perfectionism collapses under stress; flexibility survives.`,
             },
           ]}
         />
 
         <h2>When to Seek Professional Support</h2>
         <p>
-          If chronic stress is persistently impairing your functioning—you can't meet basic responsibilities, you're engaging in harmful behaviors, or you feel constantly overwhelmed—this is beyond self-help territory. Therapy (particularly CBT and mindfulness-based interventions) and, in some cases, medication can restore self-regulation capacity. Stress-induced self-control failure isn't a personal weakness—it's a medical concern worth addressing. <Citation ids={['2', '7']} />
+          If chronic stress is persistently impairing your functioning---you can't meet basic responsibilities, you're engaging in harmful behaviors, or you feel constantly overwhelmed---this is beyond self-help territory. Therapy (particularly CBT and mindfulness-based interventions) and, in some cases, medication can restore self-regulation capacity. Stress-induced self-control failure isn't a personal weakness---it's a medical concern worth addressing. <Citation ids={['2', '7']} />
         </p>
 
         <ArticleCallout type="warning" title="Red Flags: When Stress Overwhelms Self-Control">
@@ -1031,18 +1031,18 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>The Bigger Picture: Self-Control as Context-Dependent</h2>
         <p>
-          Recognizing that stress destroys self-control shifts the narrative from "I lack discipline" to "I'm operating under impaired conditions." Just as you wouldn't expect peak athletic performance with a sprained ankle, you shouldn't expect peak self-control under chronic stress. The solution isn't to try harder—it's to reduce stress, build resilience, and design systems that don't rely on willpower alone. <Citation ids={["1", '2', '8']} />
+          Recognizing that stress destroys self-control shifts the narrative from "I lack discipline" to "I'm operating under impaired conditions." Just as you wouldn't expect peak athletic performance with a sprained ankle, you shouldn't expect peak self-control under chronic stress. The solution isn't to try harder---it's to reduce stress, build resilience, and design systems that don't rely on willpower alone. <Citation ids={["1", '2', '8']} />
         </p>
 
         <QuoteBlock
-          quote="Stress doesn't reveal your true character—it reveals your brain's adaptive prioritization under threat. You're not weak; you're human."
+          quote="Stress doesn't reveal your true character---it reveals your brain's adaptive prioritization under threat. You're not weak; you're human."
           author="Robert Sapolsky"
           context="Neuroendocrinologist and author of Why Zebras Don't Get Ulcers"
         />
 
         <ArticleCallout type="reflection" title="Reflection Prompt">
           <p>
-            What patterns of self-control failure occur when you're stressed? What automatic behaviors do you default to? What's one structural change you could make—now, while calm—to protect yourself when stress inevitably returns?
+            What patterns of self-control failure occur when you're stressed? What automatic behaviors do you default to? What's one structural change you could make---now, while calm---to protect yourself when stress inevitably returns?
           </p>
         </ArticleCallout>
       </>
@@ -1130,17 +1130,17 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Many people treat themselves like a drill sergeant treats a recruit—berating failures, demanding perfection, tolerating no weakness. The logic seems sound: harsh self-criticism will motivate improvement. But research shows the opposite: self-punishment undermines motivation, increases procrastination, and predicts goal abandonment. Self-compassion—treating yourself with the same kindness you'd offer a struggling friend—predicts better long-term goal achievement, greater resilience, and sustained behavior change. Discipline doesn't require suffering; it thrives on support. <Citation ids={['1', '2']} />
+          Many people treat themselves like a drill sergeant treats a recruit---berating failures, demanding perfection, tolerating no weakness. The logic seems sound: harsh self-criticism will motivate improvement. But research shows the opposite: self-punishment undermines motivation, increases procrastination, and predicts goal abandonment. Self-compassion---treating yourself with the same kindness you'd offer a struggling friend---predicts better long-term goal achievement, greater resilience, and sustained behavior change. Discipline doesn't require suffering; it thrives on support. <Citation ids={['1', '2']} />
         </p>
 
         <h2>The Myth: Harshness Drives Improvement</h2>
         <p>
-          The belief that harsh self-criticism motivates improvement is deeply entrenched. You tell yourself, `If I'm not tough on myself, I'll get lazy. I need to stay disciplined." But this confuses short-term compliance with long-term change. Punishment can produce temporary behavior modification (you skip dessert after berating yourself), but it creates avoidance, shame, and eventual rebellion—the diet-binge cycle, the workout-quit loop. <Citation ids={['2', '6']} />
+          The belief that harsh self-criticism motivates improvement is deeply entrenched. You tell yourself, `If I'm not tough on myself, I'll get lazy. I need to stay disciplined." But this confuses short-term compliance with long-term change. Punishment can produce temporary behavior modification (you skip dessert after berating yourself), but it creates avoidance, shame, and eventual rebellion---the diet-binge cycle, the workout-quit loop. <Citation ids={['2', '6']} />
         </p>
 
         <ArticleCallout type="warning" title="The Self-Criticism Trap">
           <p>
-            Self-criticism activates the brain's threat system—the same neural pathways that respond to external danger. This triggers cortisol release, which impairs prefrontal function and increases stress eating, avoidance, and other self-control failures. You're literally undermining the brain regions needed for discipline. <Citation ids={['2', '5']} />
+            Self-criticism activates the brain's threat system---the same neural pathways that respond to external danger. This triggers cortisol release, which impairs prefrontal function and increases stress eating, avoidance, and other self-control failures. You're literally undermining the brain regions needed for discipline. <Citation ids={['2', '5']} />
           </p>
         </ArticleCallout>
 
@@ -1158,7 +1158,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         </ul>
 
         <p>
-          Self-compassionate people don't give themselves permission to quit—they give themselves permission to <em>keep trying</em> after failure. They view setbacks as information, not identity. <Citation ids={['1', '4']} />
+          Self-compassionate people don't give themselves permission to quit---they give themselves permission to <em>keep trying</em> after failure. They view setbacks as information, not identity. <Citation ids={['1', '4']} />
         </p>
 
         <StatCard
@@ -1231,7 +1231,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
           steps={[
             {
               title: 'Reduces Avoidance',
-              description: `When failure doesn't trigger shame, you can face problems directly. Self-compassionate people weigh themselves regularly, track progress honestly, and seek feedback—they don't avoid uncomfortable truths.`,
+              description: `When failure doesn't trigger shame, you can face problems directly. Self-compassionate people weigh themselves regularly, track progress honestly, and seek feedback---they don't avoid uncomfortable truths.`,
             },
             {
               title: 'Increases Intrinsic Motivation',
@@ -1239,7 +1239,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Enhances Resilience After Setbacks',
-              description: `Self-compassionate people recover faster from failures. They don't spiral into rumination or give up—they analyze what happened, adjust, and continue. This resilience is critical for long-term success.`,
+              description: `Self-compassionate people recover faster from failures. They don't spiral into rumination or give up---they analyze what happened, adjust, and continue. This resilience is critical for long-term success.`,
             },
             {
               title: 'Reduces Emotional Eating and Stress Behaviors',
@@ -1247,13 +1247,13 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: "Supports Growth Mindset",
-              description: "Self-compassion pairs naturally with a growth mindset—the belief that abilities improve with effort. Both view challenges as opportunities to learn, not evidence of fixed inadequacy.",
+              description: "Self-compassion pairs naturally with a growth mindset---the belief that abilities improve with effort. Both view challenges as opportunities to learn, not evidence of fixed inadequacy.",
             },
           ]}
         />
 
         <p>
-          Self-compassion doesn't lower standards—it creates the psychological safety needed to meet them. You can be honest about shortcomings without self-attack. <Citation ids={['3', '7', '8']} />
+          Self-compassion doesn't lower standards---it creates the psychological safety needed to meet them. You can be honest about shortcomings without self-attack. <Citation ids={['3', '7', '8']} />
         </p>
 
         <h2>Practical Strategies for Compassionate Self-Discipline</h2>
@@ -1273,7 +1273,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
             },
             {
               title: 'Practice Self-Kindness Rituals',
-              content: `After a difficult day, do something kind for yourself that doesn't undermine goals—a bath, calling a friend, a walk. Self-care isn't self-sabotage; it's necessary maintenance.`,
+              content: `After a difficult day, do something kind for yourself that doesn't undermine goals---a bath, calling a friend, a walk. Self-care isn't self-sabotage; it's necessary maintenance.`,
             },
             {
               title: `Reframe 'Failure' as Data`,
@@ -1287,12 +1287,12 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
         />
 
         <p>
-          These practices aren't "soft"—they're strategic. Self-compassion creates the conditions for sustained effort, which is the foundation of discipline. <Citation ids={["1", '4', '7']} />
+          These practices aren't "soft"---they're strategic. Self-compassion creates the conditions for sustained effort, which is the foundation of discipline. <Citation ids={["1", '4', '7']} />
         </p>
 
         <h2>When Self-Compassion Feels Unnatural</h2>
         <p>
-          If you've spent years using harsh self-criticism, self-compassion can feel foreign or even 'wrong"—like you're letting yourself off the hook. This discomfort is normal. Self-compassion is a skill that develops with practice, just like physical flexibility. Start small:
+          If you've spent years using harsh self-criticism, self-compassion can feel foreign or even 'wrong"---like you're letting yourself off the hook. This discomfort is normal. Self-compassion is a skill that develops with practice, just like physical flexibility. Start small:
         </p>
 
         <ul>
@@ -1310,7 +1310,7 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
 
         <h2>The Long View: Sustainable vs. Punitive Discipline</h2>
         <p>
-          Punitive self-discipline is like a crash diet—it works briefly, then collapses. Compassionate self-discipline is like sustainable nutrition—less dramatic, but it lasts. The people who maintain long-term change aren't the harshest critics; they're the kindest coaches to themselves. They celebrate small wins, forgive setbacks, and keep showing up. That's real discipline. <Citation ids={['4', '6', '8']} />
+          Punitive self-discipline is like a crash diet---it works briefly, then collapses. Compassionate self-discipline is like sustainable nutrition---less dramatic, but it lasts. The people who maintain long-term change aren't the harshest critics; they're the kindest coaches to themselves. They celebrate small wins, forgive setbacks, and keep showing up. That's real discipline. <Citation ids={['4', '6', '8']} />
         </p>
 
         <QuoteBlock

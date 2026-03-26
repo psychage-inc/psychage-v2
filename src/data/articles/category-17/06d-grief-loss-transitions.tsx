@@ -19,7 +19,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Grandparenting', 'Estrangement', 'Family Conflict', 'Grief'],
 
-    summary: `Grandparent estrangement—being cut off from contact with grandchildren due to family conflict, parental choice, or divorce—represents a particularly painful late-life loss. Unlike death, where grief has social recognition and finality, estrangement involves ambiguous loss: the grandchildren are alive but inaccessible, creating ongoing anguish without closure. Common causes include conflict with adult children, divorce of the adult child when the other parent limits contact, disagreements about parenting or values, or adult children cutting off toxic parents and limiting grandparent access. Research shows that grandparent estrangement triggers depression, complicated grief, shame, and social isolation. While some estrangements can be healed through changed behavior and repair attempts, others remain permanent, requiring grief work and rebuilding meaning despite the loss.`,
+    summary: `Grandparent estrangement---being cut off from contact with grandchildren due to family conflict, parental choice, or divorce---represents a particularly painful late-life loss. Unlike death, where grief has social recognition and finality, estrangement involves ambiguous loss: the grandchildren are alive but inaccessible, creating ongoing anguish without closure. Common causes include conflict with adult children, divorce of the adult child when the other parent limits contact, disagreements about parenting or values, or adult children cutting off toxic parents and limiting grandparent access. Research shows that grandparent estrangement triggers depression, complicated grief, shame, and social isolation. While some estrangements can be healed through changed behavior and repair attempts, others remain permanent, requiring grief work and rebuilding meaning despite the loss.`,
 
     keyFacts: [
       { text: `An estimated 10-20% of grandparents in the U.S. report being estranged from at least one grandchild, affecting millions of families.`, citationIndex: 1 },
@@ -29,7 +29,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Understanding that loving grandchildren from a distance—even without contact—isn't meaningless, and that the values you hoped to pass to them can still guide how you live your remaining years.`,
+    sparkMoment: `Understanding that loving grandchildren from a distance---even without contact---isn't meaningless, and that the values you hoped to pass to them can still guide how you live your remaining years.`,
 
     practicalExercise: {
       title: `Estrangement Coping Practice`,
@@ -69,17 +69,17 @@ export const griefLossTransitionsArticlesD: Article[] = [
         <ArticleCallout
           type="warning"
           title="Ambiguous Loss"
-          content="Unlike death, which has finality and social recognition, estrangement creates ambiguous loss—the person is alive but inaccessible. This lack of closure makes grief particularly complicated. You don't know if reconciliation is possible, whether to hope or move on, how to answer when people ask about grandchildren."
+          content="Unlike death, which has finality and social recognition, estrangement creates ambiguous loss---the person is alive but inaccessible. This lack of closure makes grief particularly complicated. You don't know if reconciliation is possible, whether to hope or move on, how to answer when people ask about grandchildren."
         />
 
         <h2>The Unique Pain of This Loss</h2>
         <p>
-          <Citation index={3} /> because there's no finality, no funeral, no social support structure for the loss. They may feel shame about whatever caused the estrangement, powerlessness since they can't force contact, anger at the gatekeeping parent, grief for missed milestones, fear that grandchildren will forget them, and torment from knowing the children are close by but unreachable. Social media compounds suffering—seeing photos of grandchildren's lives while excluded from them.
+          <Citation index={3} /> because there's no finality, no funeral, no social support structure for the loss. They may feel shame about whatever caused the estrangement, powerlessness since they can't force contact, anger at the gatekeeping parent, grief for missed milestones, fear that grandchildren will forget them, and torment from knowing the children are close by but unreachable. Social media compounds suffering---seeing photos of grandchildren's lives while excluded from them.
         </p>
 
         <h2>Pathways Forward</h2>
         <p>
-          Navigation depends on the situation. If your behavior contributed (violations, toxicity, overstepping), sincere changed behavior and humble amends without demands may open doors—eventually. If the estrangement reflects the adult child's need for boundaries, respecting those while remaining consistently open to future contact may be appropriate. In cases where reconciliation seems unlikely, coping involves grieving the lost relationship, finding support from others in similar situations, channeling grandparenting energy toward other children who need mentors, and building meaning in life beyond this one relationship. Legal options (grandparent visitation rights) exist in some states but often damage relationships further. The work is accepting what you cannot control while staying open to whatever connection may be possible in the future.
+          Navigation depends on the situation. If your behavior contributed (violations, toxicity, overstepping), sincere changed behavior and humble amends without demands may open doors---eventually. If the estrangement reflects the adult child's need for boundaries, respecting those while remaining consistently open to future contact may be appropriate. In cases where reconciliation seems unlikely, coping involves grieving the lost relationship, finding support from others in similar situations, channeling grandparenting energy toward other children who need mentors, and building meaning in life beyond this one relationship. Legal options (grandparent visitation rights) exist in some states but often damage relationships further. The work is accepting what you cannot control while staying open to whatever connection may be possible in the future.
         </p>
       </>
     ),
@@ -98,7 +98,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Resilience', 'Growth', 'Positive Aging', 'Strength'],
 
-    summary: `While late life involves significant losses and challenges, research in positive psychology reveals that many older adults show remarkable resilience and even growth through adversity. Post-traumatic growth—positive psychological change following highly challenging life circumstances—occurs frequently in later adulthood after bereavement, health crises, and major life transitions. Older adults often report increased appreciation for life, stronger relationships, greater personal strength, new possibilities, and spiritual development after difficult experiences. Factors supporting resilience include accumulated life experience and coping skills, perspective that comes with age, strong social connections, sense of meaning and purpose, and psychological flexibility. Understanding these strengths-based patterns challenges deficit models of aging and offers hope that difficulty can ultimately enrich later life.`,
+    summary: `While late life involves significant losses and challenges, research in positive psychology reveals that many older adults show remarkable resilience and even growth through adversity. Post-traumatic growth---positive psychological change following highly challenging life circumstances---occurs frequently in later adulthood after bereavement, health crises, and major life transitions. Older adults often report increased appreciation for life, stronger relationships, greater personal strength, new possibilities, and spiritual development after difficult experiences. Factors supporting resilience include accumulated life experience and coping skills, perspective that comes with age, strong social connections, sense of meaning and purpose, and psychological flexibility. Understanding these strengths-based patterns challenges deficit models of aging and offers hope that difficulty can ultimately enrich later life.`,
 
     keyFacts: [
       { text: `60-70% of older adults facing major life stressors (bereavement, illness, trauma) show resilient trajectories with minimal long-term dysfunction.`, citationIndex: 1 },
@@ -108,15 +108,15 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The revelation that loss and hardship don't have to diminish you—they can deepen appreciation, strengthen connections, clarify priorities, and reveal capabilities you didn't know you possessed.`,
+    sparkMoment: `The revelation that loss and hardship don't have to diminish you---they can deepen appreciation, strengthen connections, clarify priorities, and reveal capabilities you didn't know you possessed.`,
 
     practicalExercise: {
       title: `Post-Adversity Growth Reflection`,
       steps: [
         { title: `Identify a major challenge`, description: `Choose a significant difficulty you've faced in recent years (loss, illness, transition)` },
-        { title: `Notice changes in yourself`, description: `Write how you're different now—perspectives, priorities, relationships, capabilities` },
+        { title: `Notice changes in yourself`, description: `Write how you're different now---perspectives, priorities, relationships, capabilities` },
         { title: `Name unexpected positives`, description: `List any surprising good that emerged from the difficulty (new relationships, clarified values, discovered strengths)` },
-        { title: `Acknowledge both pain and growth`, description: `Recognize that growth doesn't negate suffering—both can be true simultaneously` },
+        { title: `Acknowledge both pain and growth`, description: `Recognize that growth doesn't negate suffering---both can be true simultaneously` },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Growth',
@@ -158,7 +158,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
         <h2>Cultivating Growth Through Difficulty</h2>
         <p>
-          While growth can't be forced and not everyone experiences it, certain approaches support positive development after adversity: allowing adequate time for grief and processing rather than rushing to "be positive," actively seeking meaning in the experience (what can this teach me?), maintaining social connections even when isolating feels easier, practicing gratitude for what remains alongside mourning what's lost, helping others going through similar challenges, and engaging in reflection through journaling, therapy, or life review. The goal isn't toxic positivity that denies suffering but rather holding both pain and possibility—grief and growth—simultaneously. Difficulty doesn't have to diminish you. Often, when processed with support and meaning-making, it deepens and enriches remaining life.
+          While growth can't be forced and not everyone experiences it, certain approaches support positive development after adversity: allowing adequate time for grief and processing rather than rushing to "be positive," actively seeking meaning in the experience (what can this teach me?), maintaining social connections even when isolating feels easier, practicing gratitude for what remains alongside mourning what's lost, helping others going through similar challenges, and engaging in reflection through journaling, therapy, or life review. The goal isn't toxic positivity that denies suffering but rather holding both pain and possibility---grief and growth---simultaneously. Difficulty doesn't have to diminish you. Often, when processed with support and meaning-making, it deepens and enriches remaining life.
         </p>
       </>
     ),
@@ -177,7 +177,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Spirituality', 'Religion', 'Faith', 'Meaning'],
 
-    summary: `For many older adults, spiritual and religious beliefs become increasingly important as they face mortality, loss, and existential questions about life's meaning. Research shows that spirituality—whether expressed through organized religion, personal spiritual practices, or secular meaning-making—strongly predicts better mental health, lower depression and anxiety, greater life satisfaction, and easier adjustment to loss in later life. Religious community involvement provides social support, purpose, and structure. Spiritual practices offer comfort and transcendent perspective. Faith frameworks help people make sense of suffering and death. However, spirituality can also create struggle, particularly when beliefs are challenged by events or when religious communities are unavailable. Understanding the complex role of faith in aging supports holistic well-being approaches for older adults.`,
+    summary: `For many older adults, spiritual and religious beliefs become increasingly important as they face mortality, loss, and existential questions about life's meaning. Research shows that spirituality---whether expressed through organized religion, personal spiritual practices, or secular meaning-making---strongly predicts better mental health, lower depression and anxiety, greater life satisfaction, and easier adjustment to loss in later life. Religious community involvement provides social support, purpose, and structure. Spiritual practices offer comfort and transcendent perspective. Faith frameworks help people make sense of suffering and death. However, spirituality can also create struggle, particularly when beliefs are challenged by events or when religious communities are unavailable. Understanding the complex role of faith in aging supports holistic well-being approaches for older adults.`,
 
     keyFacts: [
       { text: `Adults 65+ report higher levels of religious/spiritual engagement than any other age group, with 75%+ saying faith is very important to them.`, citationIndex: 1 },
@@ -187,12 +187,12 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The recognition that spirituality in later life isn't about earning salvation—it's about finding frameworks for understanding mortality, suffering, and meaning that bring peace rather than fear.`,
+    sparkMoment: `The recognition that spirituality in later life isn't about earning salvation---it's about finding frameworks for understanding mortality, suffering, and meaning that bring peace rather than fear.`,
 
     practicalExercise: {
       title: `Spiritual Exploration Practice`,
       steps: [
-        { title: `Clarify current beliefs`, description: `Write about what you currently believe about death, afterlife, suffering, life's purpose—be honest` },
+        { title: `Clarify current beliefs`, description: `Write about what you currently believe about death, afterlife, suffering, life's purpose---be honest` },
         { title: `Identify what brings peace`, description: `List spiritual practices or beliefs that genuinely comfort you (prayer, nature, meditation, community, philosophy)` },
         { title: `Address struggles`, description: `Name any ways your faith has been challenged or doesn't fit your current experience` },
         { title: `Engage or explore`, description: `Choose one spiritual practice or community connection to deepen this month` },
@@ -227,7 +227,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
         <ArticleCallout
           type="info"
           title="Spirituality vs. Religion"
-          content="Religion involves organized belief systems and communal practices (church, mosque, synagogue, temple). Spirituality is broader—personal sense of connection to transcendent meaning, which may or may not involve religion. Both show mental health benefits, with organized religion offering additional social support advantages."
+          content="Religion involves organized belief systems and communal practices (church, mosque, synagogue, temple). Spirituality is broader---personal sense of connection to transcendent meaning, which may or may not involve religion. Both show mental health benefits, with organized religion offering additional social support advantages."
         />
 
         <h2>Mental Health Benefits and Risks</h2>
@@ -237,7 +237,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
         <h2>Cultivating Spiritual Well-Being</h2>
         <p>
-          Supporting spiritual health in later life involves exploring beliefs honestly rather than maintaining ones that no longer fit, engaging in practices that genuinely bring peace (prayer, meditation, nature, music, service), connecting with faith communities when possible, addressing spiritual struggles directly (through clergy, spiritual directors, or therapy), finding meaning through secular spirituality if traditional religion doesn't resonate, and remaining open to spiritual growth and evolution. Spirituality in later life isn't about earning salvation or following rules perfectly—it's about finding frameworks for understanding mortality and suffering that bring peace, connection, and meaning in life's final chapters.
+          Supporting spiritual health in later life involves exploring beliefs honestly rather than maintaining ones that no longer fit, engaging in practices that genuinely bring peace (prayer, meditation, nature, music, service), connecting with faith communities when possible, addressing spiritual struggles directly (through clergy, spiritual directors, or therapy), finding meaning through secular spirituality if traditional religion doesn't resonate, and remaining open to spiritual growth and evolution. Spirituality in later life isn't about earning salvation or following rules perfectly---it's about finding frameworks for understanding mortality and suffering that bring peace, connection, and meaning in life's final chapters.
         </p>
       </>
     ),
@@ -256,7 +256,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Parent-Child', 'Role Reversal', 'Caregiving', 'Family Dynamics'],
 
-    summary: `The gradual shift from independent parent to dependent older adult requiring help from adult children represents one of later life's most psychologically complex transitions—for both generations. Parents may struggle with loss of authority, dignity, and independence while becoming "parented" by their own children. Adult children face difficult emotions including grief, guilt, resentment, and role confusion as they manage care while maintaining their own lives. This role reversal triggers family dynamic changes, boundary challenges, and often resurfaces unresolved childhood issues. Research shows that the quality of this transition significantly impacts both parties' mental health and the parent-child relationship's final chapter. Successful navigation requires acknowledging the difficulty, preserving parental dignity, clear communication, and willingness to address old patterns that complicate current caregiving.`,
+    summary: `The gradual shift from independent parent to dependent older adult requiring help from adult children represents one of later life's most psychologically complex transitions---for both generations. Parents may struggle with loss of authority, dignity, and independence while becoming "parented" by their own children. Adult children face difficult emotions including grief, guilt, resentment, and role confusion as they manage care while maintaining their own lives. This role reversal triggers family dynamic changes, boundary challenges, and often resurfaces unresolved childhood issues. Research shows that the quality of this transition significantly impacts both parties' mental health and the parent-child relationship's final chapter. Successful navigation requires acknowledging the difficulty, preserving parental dignity, clear communication, and willingness to address old patterns that complicate current caregiving.`,
 
     keyFacts: [
       { text: `Adult children provide 80%+ of unpaid elder care in the U.S., with women providing twice the hours of hands-on care as men.`, citationIndex: 1 },
@@ -266,15 +266,15 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Understanding that role reversal doesn't mean erasing the parent-child relationship—it means adapting it so that even when parents need help, their dignity, autonomy, and parental identity can remain intact.`,
+    sparkMoment: `Understanding that role reversal doesn't mean erasing the parent-child relationship---it means adapting it so that even when parents need help, their dignity, autonomy, and parental identity can remain intact.`,
 
     practicalExercise: {
       title: `Dignified Care Practice`,
       steps: [
-        { title: `Preserve decision-making`, description: `Let parents make all choices they're capable of making—when to bathe, what to wear, what to eat, how to spend time` },
-        { title: `Avoid infantilizing`, description: `Notice when you slip into "parenting" tone or language—adjust to address them as the adult they are` },
+        { title: `Preserve decision-making`, description: `Let parents make all choices they're capable of making---when to bathe, what to wear, what to eat, how to spend time` },
+        { title: `Avoid infantilizing`, description: `Notice when you slip into "parenting" tone or language---adjust to address them as the adult they are` },
         { title: `Acknowledge the difficulty`, description: `Name the awkwardness directly with your parent: "I know this is hard for both of us"` },
-        { title: `Maintain boundaries`, description: `You can help without becoming entirely defined by caregiving—preserve your own life and identity` },
+        { title: `Maintain boundaries`, description: `You can help without becoming entirely defined by caregiving---preserve your own life and identity` },
       ],
       toolLink: '/crisis',
       toolLabel: 'Find Support',
@@ -300,13 +300,13 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
         <h2>The Psychology of Role Reversal</h2>
         <p>
-          <Citation index={2} />. They may feel they've failed at staying independent, lost authority in the relationship, become burdens to their children, or that the natural order has been violated. For adult children, the role shift triggers complex emotions: grief for the strong parent they're losing, guilt about not doing enough or resenting the demands, fear of what further decline will mean, and discomfort with the power reversal. Old family patterns resurface—childhood roles (the good child, the rebellious one), unresolved conflicts, favoritism dynamics, and communication patterns that may have worked when you were 12 but don't work now.
+          <Citation index={2} />. They may feel they've failed at staying independent, lost authority in the relationship, become burdens to their children, or that the natural order has been violated. For adult children, the role shift triggers complex emotions: grief for the strong parent they're losing, guilt about not doing enough or resenting the demands, fear of what further decline will mean, and discomfort with the power reversal. Old family patterns resurface---childhood roles (the good child, the rebellious one), unresolved conflicts, favoritism dynamics, and communication patterns that may have worked when you were 12 but don't work now.
         </p>
 
         <ArticleCallout
           type="warning"
           title="The Infantilization Trap"
-          content="Adult children often unconsciously slip into parenting behaviors—using sing-song tones, making all decisions, speaking about the parent in third person while they're present, calling them diminutive names. This is deeply disrespectful and damages dignity even when well-intentioned. They're still adults deserving of adult treatment."
+          content="Adult children often unconsciously slip into parenting behaviors---using sing-song tones, making all decisions, speaking about the parent in third person while they're present, calling them diminutive names. This is deeply disrespectful and damages dignity even when well-intentioned. They're still adults deserving of adult treatment."
         />
 
         <h2>Common Challenges</h2>
@@ -316,7 +316,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
         <h2>Maintaining Dignity Through Transition</h2>
         <p>
-          Healthier role reversal involves preserving parental autonomy wherever possible (let them decide anything they're capable of deciding), avoiding infantilizing language and tone, including them in all decisions about their care, acknowledging the difficulty for both of you openly, maintaining appropriate boundaries (you're helping, not becoming their parent), addressing old family patterns that complicate current care, getting sibling involvement to prevent one person bearing everything, and seeking support for your own caregiver stress. The goal isn't to reverse roles completely—it's to adapt the parent-child relationship so that even when parents need help, their dignity, decision-making capacity, and parental identity remain honored as much as possible.
+          Healthier role reversal involves preserving parental autonomy wherever possible (let them decide anything they're capable of deciding), avoiding infantilizing language and tone, including them in all decisions about their care, acknowledging the difficulty for both of you openly, maintaining appropriate boundaries (you're helping, not becoming their parent), addressing old family patterns that complicate current care, getting sibling involvement to prevent one person bearing everything, and seeking support for your own caregiver stress. The goal isn't to reverse roles completely---it's to adapt the parent-child relationship so that even when parents need help, their dignity, decision-making capacity, and parental identity remain honored as much as possible.
         </p>
       </>
     ),
@@ -335,7 +335,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Celebration', 'Milestones', 'Meaning', 'Joy'],
 
-    summary: `While contemporary culture focuses on celebrating milestones in youth and middle age—graduations, weddings, career promotions, new babies—later life milestones often go unmarked despite their profound significance. Birthdays beyond 80, anniversaries of major events, completion of meaningful projects, survival of illness, successful life transitions, and legacy accomplishments all deserve recognition and celebration. Research shows that marking positive milestones in later life increases well-being, strengthens social connections, provides sense of accomplishment, and creates meaning during a life stage often defined by loss. Intentionally creating and celebrating later-life milestones—both personal and communal—supports positive aging and reminds older adults and those around them that this life stage includes growth, achievement, and joy alongside its challenges.`,
+    summary: `While contemporary culture focuses on celebrating milestones in youth and middle age---graduations, weddings, career promotions, new babies---later life milestones often go unmarked despite their profound significance. Birthdays beyond 80, anniversaries of major events, completion of meaningful projects, survival of illness, successful life transitions, and legacy accomplishments all deserve recognition and celebration. Research shows that marking positive milestones in later life increases well-being, strengthens social connections, provides sense of accomplishment, and creates meaning during a life stage often defined by loss. Intentionally creating and celebrating later-life milestones---both personal and communal---supports positive aging and reminds older adults and those around them that this life stage includes growth, achievement, and joy alongside its challenges.`,
 
     keyFacts: [
       { text: `Older adults who regularly celebrate personal milestones and accomplishments report 25-30% higher life satisfaction than those focused only on decline.`, citationIndex: 1 },
@@ -345,7 +345,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The realization that every year of life lived, every challenge overcome, every new skill learned, and every relationship deepened deserves celebration—perhaps even more so in later life when these accomplishments represent hard-won victories.`,
+    sparkMoment: `The realization that every year of life lived, every challenge overcome, every new skill learned, and every relationship deepened deserves celebration---perhaps even more so in later life when these accomplishments represent hard-won victories.`,
 
     practicalExercise: {
       title: `Milestone Recognition Practice`,
@@ -368,7 +368,7 @@ export const griefLossTransitionsArticlesD: Article[] = [
     content: (
       <>
         <p>
-          When Ruth turned 90, her family threw her a surprise party with 50 guests. <Citation index={1} />, she said. <Citation index={1} />. The event shifted something in her—she stopped seeing herself as just declining and started noticing what she was still accomplishing and experiencing.
+          When Ruth turned 90, her family threw her a surprise party with 50 guests. <Citation index={1} />, she said. <Citation index={1} />. The event shifted something in her---she stopped seeing herself as just declining and started noticing what she was still accomplishing and experiencing.
         </p>
 
         <StatCard

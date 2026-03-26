@@ -93,7 +93,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
               title: 'Behavioral Changes',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>Social withdrawal — avoiding friends, family activities</li>
+                  <li>Social withdrawal --- avoiding friends, family activities</li>
                   <li>Aggressive outbursts or violent behavior</li>
                   <li>Self-harm (cutting, hitting self, risky behaviors)</li>
                   <li>Dramatic personality changes</li>
@@ -178,7 +178,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
         />
 
         <h2 id="crisis-signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Crisis Signs — Seek Help Immediately
+          Crisis Signs --- Seek Help Immediately
         </h2>
         <p className="mb-6">
           Some symptoms require immediate professional intervention <Citation id="4" index={4} source="Pediatrics" year="2020" tier={2} />:
@@ -282,7 +282,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
           Children who learn about mental health from parents <Citation id="2" index={2} source="School Mental Health" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Develop emotional literacy — can name and understand feelings</li>
+          <li>Develop emotional literacy --- can name and understand feelings</li>
           <li>See mental health as normal, not shameful</li>
           <li>Know that struggling is okay and help is available</li>
           <li>Are more likely to seek support when needed</li>
@@ -311,7 +311,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
               content: (
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Names for basic emotions (happy, sad, mad, scared, frustrated)</li>
-                  <li>All feelings are okay — it's what we do with them that matters</li>
+                  <li>All feelings are okay --- it's what we do with them that matters</li>
                   <li>Everyone has big feelings sometimes</li>
                   <li>Grown-ups can help when feelings feel too big</li>
                 </ul>
@@ -351,7 +351,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
                   <li>Just like bodies get sick, minds can struggle too</li>
                   <li>Anxiety, depression, and other mental health issues are medical, not moral failures</li>
                   <li>Therapy is like going to the doctor for your mind</li>
-                  <li>Many people struggle — they're not alone</li>
+                  <li>Many people struggle --- they're not alone</li>
                 </ul>
               ),
             },
@@ -361,7 +361,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
               content: (
                 <div className="space-y-2">
                   <p className="italic">"Mental health is about our feelings and thoughts, just like physical health is about our bodies."</p>
-                  <p className="italic">"Sometimes people's brains have a hard time with worry or sadness, and they need help from a therapist — kind of like how we see a doctor when we're sick."</p>
+                  <p className="italic">"Sometimes people's brains have a hard time with worry or sadness, and they need help from a therapist --- kind of like how we see a doctor when we're sick."</p>
                   <p className="italic">"I notice you've been really worried lately. Let's talk about it. Would it help to talk to someone who's an expert in helping kids with worry?"</p>
                 </div>
               ),
@@ -391,7 +391,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
               content: (
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Mental health conditions are common (1 in 5 people)</li>
-                  <li>The brain is still developing through age 25 — teen years are vulnerable</li>
+                  <li>The brain is still developing through age 25 --- teen years are vulnerable</li>
                   <li>Getting help is smart and brave, not weak</li>
                   <li>Medication can be helpful and isn't "giving up"</li>
                   <li>You can talk to them about anything without judgment</li>
@@ -405,7 +405,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
                 <div className="space-y-2">
                   <p className="italic">"I've noticed you seem down lately. I'm here if you want to talk, no judgment."</p>
                   <p className="italic">"Mental health struggles are really common in teenagers. You're not alone, and there's no shame in getting help."</p>
-                  <p className="italic">"If you're having thoughts about hurting yourself, please tell me. I won't be mad — I just want you to be safe."</p>
+                  <p className="italic">"If you're having thoughts about hurting yourself, please tell me. I won't be mad --- I just want you to be safe."</p>
                   <p className="mt-2">Respect their privacy while staying involved. Offer options: "We could find a therapist together, or I could help you find resources to look on your own."</p>
                 </div>
               ),
@@ -434,7 +434,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
             },
             {
               title: 'Use Everyday Moments',
-              description: <p>Don't wait for a crisis. Talk about emotions during calm times — in the car, at dinner, before bed.</p>,
+              description: <p>Don't wait for a crisis. Talk about emotions during calm times --- in the car, at dinner, before bed.</p>,
             },
             {
               title: 'Reduce Stigma',
@@ -463,7 +463,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Talking about mental health with children isn't a one-time conversation — it's an ongoing dialogue. Start early, be open, normalize struggles, and emphasize that help is available and getting it is brave <Citation id="7" index={7} source="American Journal of Orthopsychiatry" year="2021" tier={1} />.
+            Talking about mental health with children isn't a one-time conversation --- it's an ongoing dialogue. Start early, be open, normalize struggles, and emphasize that help is available and getting it is brave <Citation id="7" index={7} source="American Journal of Orthopsychiatry" year="2021" tier={1} />.
           </p>
         </ArticleCallout>
       </>
@@ -495,7 +495,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            All children worry sometimes. But when worry becomes constant, interferes with daily life, or causes physical distress, it may be anxiety — one of the most common mental health issues in childhood.
+            All children worry sometimes. But when worry becomes constant, interferes with daily life, or causes physical distress, it may be anxiety --- one of the most common mental health issues in childhood.
           </p>
           <p className="mb-6">
             Childhood anxiety disorders affect about 7-10% of children <Citation id="1" index={1} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2020" tier={1} />. Understanding what anxiety looks like and how to respond helps children develop coping skills and prevents anxiety from worsening.
@@ -595,7 +595,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Accommodation — changing family routines to avoid triggering anxiety — provides short-term relief but long-term worsening. Children need to learn anxiety is uncomfortable but not dangerous.
+            Accommodation --- changing family routines to avoid triggering anxiety --- provides short-term relief but long-term worsening. Children need to learn anxiety is uncomfortable but not dangerous.
           </p>
         </ArticleCallout>
 
@@ -616,7 +616,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
             },
             {
               title: 'Gradual Exposure',
-              description: <p>Create a 'fear ladder' — small steps toward the feared situation. Celebrate each step, don't rush to the top.</p>,
+              description: <p>Create a 'fear ladder' --- small steps toward the feared situation. Celebrate each step, don't rush to the top.</p>,
             },
             {
               title: 'Teach Coping Skills',
@@ -656,7 +656,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The goal isn't to eliminate anxiety — it's to teach children that anxiety is uncomfortable but manageable. With support, most anxious children learn to face fears and develop lifelong coping skills.
+            The goal isn't to eliminate anxiety --- it's to teach children that anxiety is uncomfortable but manageable. With support, most anxious children learn to face fears and develop lifelong coping skills.
           </p>
         </ArticleCallout>
       </>
@@ -688,7 +688,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I can't go to school. My stomach hurts.", "Please don't make me go." School refusal is terrifying for parents — you know education matters, but your child is genuinely distressed. What do you do?
+            "I can't go to school. My stomach hurts.", "Please don't make me go." School refusal is terrifying for parents --- you know education matters, but your child is genuinely distressed. What do you do?
           </p>
           <p className="mb-6">
             School refusal affects 2-5% of children and can stem from anxiety, bullying, learning difficulties, or family issues <Citation id="1" index={1} source="Child and Adolescent Mental Health" year="2020" tier={1} />. Understanding the cause is key to effective intervention.
@@ -806,7 +806,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
           steps={[
             {
               title: 'Get Medical Evaluation',
-              description: <p>Rule out physical causes of symptoms. But don't allow endless doctor visits to delay return — this reinforces avoidance.</p>,
+              description: <p>Rule out physical causes of symptoms. But don't allow endless doctor visits to delay return --- this reinforces avoidance.</p>,
             },
             {
               title: 'Investigate the Cause',
@@ -835,11 +835,11 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
           What NOT to Do
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Allow indefinite absence — this worsens anxiety and creates academic gaps</li>
+          <li>Allow indefinite absence --- this worsens anxiety and creates academic gaps</li>
           <li>Make home more appealing than school (TV, video games, attention)</li>
-          <li>Punish or shame — this increases distress without solving the problem</li>
+          <li>Punish or shame --- this increases distress without solving the problem</li>
           <li>Give up and switch to homeschooling without addressing underlying issue</li>
-          <li>Argue endlessly each morning — this delays departure and reinforces pattern</li>
+          <li>Argue endlessly each morning --- this delays departure and reinforces pattern</li>
         </ul>
 
         <ArticleCallout variant="tip" title="Morning Routine Strategy">
@@ -863,7 +863,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            School refusal is treatable. Early intervention, return to school as soon as possible, addressing underlying causes, and therapy create best outcomes. The longer avoidance continues, the harder it becomes — act quickly.
+            School refusal is treatable. Early intervention, return to school as soon as possible, addressing underlying causes, and therapy create best outcomes. The longer avoidance continues, the harder it becomes --- act quickly.
           </p>
         </ArticleCallout>
       </>
@@ -898,7 +898,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
             Your child is having a meltdown over a broken crayon. You're exhausted. Your instinct might be "It's just a crayon, stop crying." But what if this moment is an opportunity to teach your child lifelong emotional skills?
           </p>
           <p className="mb-6">
-            Emotion coaching — a parenting approach developed by Dr. John Gottman — helps children develop emotional regulation, resilience, and social competence <Citation id="1" index={1} source="Parenting: Science and Practice" year="2020" tier={1} />. It's about treating emotions as teaching moments, not problems to fix.
+            Emotion coaching --- a parenting approach developed by Dr. John Gottman --- helps children develop emotional regulation, resilience, and social competence <Citation id="1" index={1} source="Parenting: Science and Practice" year="2020" tier={1} />. It's about treating emotions as teaching moments, not problems to fix.
           </p>
         </div>
 
@@ -977,7 +977,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Emotion dismissing — minimizing, ignoring, or punishing emotions — teaches children their feelings are bad or wrong. This impairs emotional development and self-regulation <Citation id="4" index={4} source="Clinical Child and Family Psychology Review" year="2020" tier={1} />.
+            Emotion dismissing --- minimizing, ignoring, or punishing emotions --- teaches children their feelings are bad or wrong. This impairs emotional development and self-regulation <Citation id="4" index={4} source="Clinical Child and Family Psychology Review" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1087,7 +1087,7 @@ export const supportingChildrensMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Emotion coaching isn't about eliminating difficult emotions — it's about teaching children that all emotions are okay and manageable. When children feel heard and understood, they develop the skills to regulate themselves.
+            Emotion coaching isn't about eliminating difficult emotions --- it's about teaching children that all emotions are okay and manageable. When children feel heard and understood, they develop the skills to regulate themselves.
           </p>
         </ArticleCallout>
       </>

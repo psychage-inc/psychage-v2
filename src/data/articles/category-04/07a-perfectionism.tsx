@@ -18,7 +18,7 @@ export const perfectionismArticlesA: Article[] = [
     id: catId(61),
     slug: 'what-is-perfectionism-high-standards-vs-self-punishment',
     title: 'What Is Perfectionism? The Difference Between High Standards and Self-Punishment',
-    description: `Perfectionism isn't about excellence—it's about fear of failure and conditional self-worth. Learn to distinguish healthy striving from harmful perfectionism.`,
+    description: `Perfectionism isn't about excellence---it's about fear of failure and conditional self-worth. Learn to distinguish healthy striving from harmful perfectionism.`,
     image: '/images/articles/cat04/cover-061.svg',
     category: CATEGORY_SELF_WORTH,
     readTime: 7,
@@ -96,10 +96,10 @@ export const perfectionismArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Perfectionism isn't about wanting to do well. It's about believing your worth depends on being flawless—and punishing yourself when you're not.
+            Perfectionism isn't about wanting to do well. It's about believing your worth depends on being flawless---and punishing yourself when you're not.
           </p>
           <p className="mb-6">
-            Research shows perfectionism is rising among young people, increasing by 33% between 1989 and 2016 <Citation id="2" index={2} source="Psychological Bulletin" year="2019" tier={1} />. This isn't a harmless personality quirk—perfectionism is strongly linked to depression, anxiety, eating disorders, and even suicide <Citation id="6" index={6} source="Journal of Personality" year="2018" tier={1} />.
+            Research shows perfectionism is rising among young people, increasing by 33% between 1989 and 2016 <Citation id="2" index={2} source="Psychological Bulletin" year="2019" tier={1} />. This isn't a harmless personality quirk---perfectionism is strongly linked to depression, anxiety, eating disorders, and even suicide <Citation id="6" index={6} source="Journal of Personality" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -124,7 +124,7 @@ export const perfectionismArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The defining feature of perfectionism isn't high standards—it's the belief that anything less than perfect is unacceptable, and that imperfection makes you fundamentally flawed or worthless.
+            The defining feature of perfectionism isn't high standards---it's the belief that anything less than perfect is unacceptable, and that imperfection makes you fundamentally flawed or worthless.
           </p>
         </ArticleCallout>
 
@@ -180,7 +180,7 @@ export const perfectionismArticlesA: Article[] = [
               title: 'Achievement-Oriented Culture',
               content: (
                 <p>
-                  Social media, competitive academic environments, and cultural emphasis on success create pressure to be exceptional in every domain—which is impossible.
+                  Social media, competitive academic environments, and cultural emphasis on success create pressure to be exceptional in every domain---which is impossible.
                 </p>
               ),
             },
@@ -210,7 +210,7 @@ export const perfectionismArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Perfectionism doesn't just feel bad—it has measurable mental health consequences <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2018" tier={1} />:
+          Perfectionism doesn't just feel bad---it has measurable mental health consequences <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2018" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -256,14 +256,14 @@ export const perfectionismArticlesA: Article[] = [
           <li>You feel like a fraud despite accomplishments</li>
           <li>You compare yourself constantly to others</li>
           <li>You feel intense shame when criticized</li>
-          <li>You can't enjoy successes—you immediately focus on what's next</li>
+          <li>You can't enjoy successes---you immediately focus on what's next</li>
         </ul>
 
         <h2 id="path-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Moving Beyond Perfectionism
         </h2>
         <p className="mb-6">
-          Recovery from perfectionism doesn't mean lowering standards—it means decoupling your worth from your performance <Citation id="5" index={5} source="Self and Identity" year="2020" tier={1} />.
+          Recovery from perfectionism doesn't mean lowering standards---it means decoupling your worth from your performance <Citation id="5" index={5} source="Self and Identity" year="2020" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -296,7 +296,7 @@ export const perfectionismArticlesA: Article[] = [
           steps={[
             {
               title: 'Recognize perfectionism as a problem, not a virtue',
-              description: <p>Perfectionism isn't conscientiousness or ambition—it's a mental health risk factor. Stop wearing it as a badge of honor.</p>,
+              description: <p>Perfectionism isn't conscientiousness or ambition---it's a mental health risk factor. Stop wearing it as a badge of honor.</p>,
             },
             {
               title: 'Practice self-compassion',
@@ -317,7 +317,7 @@ export const perfectionismArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If perfectionism is severely impairing your life—causing depression, preventing you from completing tasks, damaging relationships, or triggering suicidal thoughts—therapy can help. Cognitive-behavioral therapy (CBT) is effective for treating clinical perfectionism.
+          If perfectionism is severely impairing your life---causing depression, preventing you from completing tasks, damaging relationships, or triggering suicidal thoughts---therapy can help. Cognitive-behavioral therapy (CBT) is effective for treating clinical perfectionism.
         </p>
       </>
     ),
@@ -439,7 +439,7 @@ export const perfectionismArticlesA: Article[] = [
                     <strong>Core belief:</strong> "I must be perfect."
                   </p>
                   <p className="mb-4">
-                    You set extremely high standards for yourself and are harshly self-critical when you don't meet them. This type is internally driven—the pressure comes from within <Citation id="5" index={5} source="Personality and Individual Differences" year="2019" tier={1} />.
+                    You set extremely high standards for yourself and are harshly self-critical when you don't meet them. This type is internally driven---the pressure comes from within <Citation id="5" index={5} source="Personality and Individual Differences" year="2019" tier={1} />.
                   </p>
                   <p>
                     <strong>Examples:</strong> "I should be able to ace this exam without studying,", "I can't make any mistakes in this presentation,", "If I'm not the best, I've failed."
@@ -557,7 +557,7 @@ export const perfectionismArticlesA: Article[] = [
           Socially Prescribed Perfectionism: The Most Dangerous Type
         </h2>
         <p className="mb-6">
-          This type carries the highest mental health risk. Believing that others demand perfection—and that you'll be rejected if you fail—creates feelings of helplessness and hopelessness <Citation id="3" index={3} source="American Psychologist" year="2020" tier={1} />.
+          This type carries the highest mental health risk. Believing that others demand perfection---and that you'll be rejected if you fail---creates feelings of helplessness and hopelessness <Citation id="3" index={3} source="American Psychologist" year="2020" tier={1} />.
         </p>
 
         <StatCard
@@ -577,7 +577,7 @@ export const perfectionismArticlesA: Article[] = [
           Mixed Perfectionism
         </h2>
         <p className="mb-6">
-          Many people experience more than one type. High self-oriented and socially prescribed perfectionism together is particularly toxic—you pressure yourself intensely while also believing others demand perfection. This combination has the highest rates of clinical depression <Citation id="2" index={2} source="Psychological Assessment" year="2017" tier={1} />.
+          Many people experience more than one type. High self-oriented and socially prescribed perfectionism together is particularly toxic---you pressure yourself intensely while also believing others demand perfection. This combination has the highest rates of clinical depression <Citation id="2" index={2} source="Psychological Assessment" year="2017" tier={1} />.
         </p>
 
         <h2 id="treatment-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -635,7 +635,7 @@ export const perfectionismArticlesA: Article[] = [
     id: catId(63),
     slug: 'perfectionism-procrastination-burnout-depression',
     title: 'How Perfectionism Leads to Procrastination, Burnout, and Depression',
-    description: `Perfectionism doesn't create success—it creates paralysis, exhaustion, and despair. Understand the psychological mechanisms that turn high standards into mental health problems.`,
+    description: `Perfectionism doesn't create success---it creates paralysis, exhaustion, and despair. Understand the psychological mechanisms that turn high standards into mental health problems.`,
     image: '/images/articles/cat04/cover-063.svg',
     category: CATEGORY_SELF_WORTH,
     readTime: 7,
@@ -716,7 +716,7 @@ export const perfectionismArticlesA: Article[] = [
             Perfectionism promises excellence but delivers the opposite: paralysis, exhaustion, and deep dissatisfaction.
           </p>
           <p className="mb-6">
-            Research shows perfectionism is a significant risk factor for procrastination, burnout, and depression—creating the very outcomes perfectionists fear most <Citation id="1" index={1} source="European Journal of Personality" year="2018" tier={1} /> <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2019" tier={1} /> <Citation id="3" index={3} source="Clinical Psychology Review" year="2017" tier={1} />.
+            Research shows perfectionism is a significant risk factor for procrastination, burnout, and depression---creating the very outcomes perfectionists fear most <Citation id="1" index={1} source="European Journal of Personality" year="2018" tier={1} /> <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2019" tier={1} /> <Citation id="3" index={3} source="Clinical Psychology Review" year="2017" tier={1} />.
           </p>
         </div>
 
@@ -729,7 +729,7 @@ export const perfectionismArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            If you can't do it perfectly, you don't start at all. Procrastination isn't laziness—it's a protection mechanism against the anxiety of potential imperfection <Citation id="4" index={4} source="Personality and Individual Differences" year="2020" tier={1} />.
+            If you can't do it perfectly, you don't start at all. Procrastination isn't laziness---it's a protection mechanism against the anxiety of potential imperfection <Citation id="4" index={4} source="Personality and Individual Differences" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -746,7 +746,7 @@ export const perfectionismArticlesA: Article[] = [
             },
             {
               title: 'Avoid starting',
-              description: <p>"I'll wait until I have more time/energy/clarity"—which never comes.</p>,
+              description: <p>"I'll wait until I have more time/energy/clarity"---which never comes.</p>,
             },
             {
               title: 'Experience guilt and shame',
@@ -767,7 +767,7 @@ export const perfectionismArticlesA: Article[] = [
           The Path to Burnout
         </h2>
         <p className="mb-6">
-          Burnout—a state of emotional, physical, and mental exhaustion—occurs when demands consistently exceed resources <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2019" tier={1} />. Perfectionism creates this imbalance in three ways:
+          Burnout---a state of emotional, physical, and mental exhaustion---occurs when demands consistently exceed resources <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2019" tier={1} />. Perfectionism creates this imbalance in three ways:
         </p>
 
         <ArticleAccordion
@@ -787,7 +787,7 @@ export const perfectionismArticlesA: Article[] = [
               title: '2. No Recovery Through Achievement',
               content: (
                 <p>
-                  Normal work cycles include satisfaction after completion, which provides psychological recovery. Perfectionists never feel satisfied—the work is 'never good enough." This prevents recovery and compounds exhaustion <Citation id="5" index={5} source="Stress and Health" year="2018" tier={1} />.
+                  Normal work cycles include satisfaction after completion, which provides psychological recovery. Perfectionists never feel satisfied---the work is 'never good enough." This prevents recovery and compounds exhaustion <Citation id="5" index={5} source="Stress and Health" year="2018" tier={1} />.
                 </p>
               ),
             },
@@ -832,7 +832,7 @@ export const perfectionismArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          The core depressogenic element: Perfectionism creates a life in which you never feel good enough, no matter what you achieve <Citation id="6" index={6} source="Journal of Abnormal Psychology" year="2019" tier={1} />. This chronic inadequacy breeds hopelessness—a core feature of depression.
+          The core depressogenic element: Perfectionism creates a life in which you never feel good enough, no matter what you achieve <Citation id="6" index={6} source="Journal of Abnormal Psychology" year="2019" tier={1} />. This chronic inadequacy breeds hopelessness---a core feature of depression.
         </p>
 
         <h2 id="cognitive-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1024,10 +1024,10 @@ export const perfectionismArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Good enough" isn't settling—it's wisdom. It's recognizing that perfection is impossible, unnecessary, and actually counterproductive.
+            "Good enough" isn't settling---it's wisdom. It's recognizing that perfection is impossible, unnecessary, and actually counterproductive.
           </p>
           <p className="mb-6">
-            The "good enough" principle originates from psychotherapy, where therapists recognize that perfect treatment isn't possible—progress and improvement are the goals <Citation id="1" index={1} source="American Journal of Psychotherapy" year="2018" tier={1} />. This principle applies far beyond therapy.
+            The "good enough" principle originates from psychotherapy, where therapists recognize that perfect treatment isn't possible---progress and improvement are the goals <Citation id="1" index={1} source="American Journal of Psychotherapy" year="2018" tier={1} />. This principle applies far beyond therapy.
           </p>
         </div>
 
@@ -1052,7 +1052,7 @@ export const perfectionismArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Research consistently shows that satisficers—people who accept "good enough"—report higher life satisfaction, lower depression, and less regret than maximizers who pursue perfection <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2002" tier={1} />.
+            Research consistently shows that satisficers---people who accept "good enough"---report higher life satisfaction, lower depression, and less regret than maximizers who pursue perfection <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2002" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1060,7 +1060,7 @@ export const perfectionismArticlesA: Article[] = [
           The 80/20 Rule
         </h2>
         <p className="mb-6">
-          The Pareto Principle states that 80% of results come from 20% of effort <Citation id="3" index={3} source="Journal of Applied Psychology" year="2019" tier={1} />. The last 20% of perfection often requires 80% of the effort—and produces minimal additional value.
+          The Pareto Principle states that 80% of results come from 20% of effort <Citation id="3" index={3} source="Journal of Applied Psychology" year="2019" tier={1} />. The last 20% of perfection often requires 80% of the effort---and produces minimal additional value.
         </p>
 
         <ArticleChart
@@ -1089,7 +1089,7 @@ export const perfectionismArticlesA: Article[] = [
           steps={[
             {
               title: 'Identify the actual requirements',
-              description: <p>What objectively needs to happen for this to work? Not what would be ideal—what's necessary?</p>,
+              description: <p>What objectively needs to happen for this to work? Not what would be ideal---what's necessary?</p>,
             },
             {
               title: 'Define minimum viable outcome',
@@ -1153,7 +1153,7 @@ export const perfectionismArticlesA: Article[] = [
           Testing Good Enough in Practice
         </h2>
         <p className="mb-6">
-          Cognitive-behavioral therapy for perfectionism uses behavioral experiments—deliberately doing things "good enough" and observing outcomes <Citation id="5" index={5} source="Cognitive Behaviour Therapy" year="2018" tier={1} />. This provides evidence that good enough actually works.
+          Cognitive-behavioral therapy for perfectionism uses behavioral experiments---deliberately doing things "good enough" and observing outcomes <Citation id="5" index={5} source="Cognitive Behaviour Therapy" year="2018" tier={1} />. This provides evidence that good enough actually works.
         </p>
 
         <BeforeAfter
@@ -1185,7 +1185,7 @@ export const perfectionismArticlesA: Article[] = [
           Self-Compassion as an Alternative
         </h2>
         <p className="mb-6">
-          Research shows self-compassion—treating yourself with kindness rather than harsh criticism—is a powerful antidote to perfectionism <Citation id="4" index={4} source="Mindfulness" year="2020" tier={1} />. When you can accept imperfection with compassion, the need for perfection decreases.
+          Research shows self-compassion---treating yourself with kindness rather than harsh criticism---is a powerful antidote to perfectionism <Citation id="4" index={4} source="Mindfulness" year="2020" tier={1} />. When you can accept imperfection with compassion, the need for perfection decreases.
         </p>
 
         <QuoteBlock
@@ -1202,7 +1202,7 @@ export const perfectionismArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>"Done is better than perfect"</li>
           <li>"This is good enough for this purpose"</li>
-          <li>"Perfect isn't an option—good is"</li>
+          <li>"Perfect isn't an option---good is"</li>
           <li>"I'm allowed to be human"</li>
           <li>"This meets the actual requirements"</li>
           <li>"My worth isn't determined by this task"</li>
@@ -1217,7 +1217,7 @@ export const perfectionismArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            The goal isn't to lower your standards universally—it's to match effort to importance, accept imperfection in yourself and your work, and recognize that your worth isn't determined by achievement.
+            The goal isn't to lower your standards universally---it's to match effort to importance, accept imperfection in yourself and your work, and recognize that your worth isn't determined by achievement.
           </p>
         </ArticleCallout>
 
@@ -1225,7 +1225,7 @@ export const perfectionismArticlesA: Article[] = [
           When "Good Enough" Feels Impossible
         </h2>
         <p className="mb-6">
-          If you intellectually understand "good enough" but can't implement it—if the anxiety of imperfection is too overwhelming—therapy can help. Cognitive-behavioral therapy provides structured support for challenging perfectionistic beliefs and building tolerance for imperfection.
+          If you intellectually understand "good enough" but can't implement it---if the anxiety of imperfection is too overwhelming---therapy can help. Cognitive-behavioral therapy provides structured support for challenging perfectionistic beliefs and building tolerance for imperfection.
         </p>
       </>
     ),
@@ -1316,7 +1316,7 @@ export const perfectionismArticlesA: Article[] = [
             People-pleasing looks like kindness but feels like prison. You say yes when you mean no, hide your needs, and shape yourself to what you think others want.
           </p>
           <p className="mb-6">
-            Chronic people-pleasing—also called sociotropy or excessive accommodation—is linked to depression, anxiety, low self-esteem, and relationship dissatisfaction <Citation id="1" index={1} source="Journal of Abnormal Psychology" year="1983" tier={1} /> <Citation id="3" index={3} source="Journal of Counseling Psychology" year="2019" tier={1} />.
+            Chronic people-pleasing---also called sociotropy or excessive accommodation---is linked to depression, anxiety, low self-esteem, and relationship dissatisfaction <Citation id="1" index={1} source="Journal of Abnormal Psychology" year="1983" tier={1} /> <Citation id="3" index={3} source="Journal of Counseling Psychology" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -1499,7 +1499,7 @@ export const perfectionismArticlesA: Article[] = [
           Setting Boundaries
         </h2>
         <p className="mb-6">
-          Boundaries—clear limits on what you will and won't accept—are essential for healthy relationships <Citation id="5" index={5} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. People-pleasers often have weak or absent boundaries.
+          Boundaries---clear limits on what you will and won't accept---are essential for healthy relationships <Citation id="5" index={5} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. People-pleasers often have weak or absent boundaries.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1521,12 +1521,12 @@ export const perfectionismArticlesA: Article[] = [
           Developing a Self
         </h2>
         <p className="mb-6">
-          Family systems theory calls this "differentiation"—the ability to have a clear sense of self while remaining emotionally connected to others <Citation id="7" index={7} source="Journal of Marital and Family Therapy" year="2019" tier={1} />. You can care about others without losing yourself.
+          Family systems theory calls this "differentiation"---the ability to have a clear sense of self while remaining emotionally connected to others <Citation id="7" index={7} source="Journal of Marital and Family Therapy" year="2019" tier={1} />. You can care about others without losing yourself.
         </p>
 
         <ArticleCallout variant="tip" title="The Authenticity Test">
           <p>
-            After an interaction, ask: "Did I show up as myself, or as who I thought they wanted?" If the latter, you people-pleased. The goal isn't to stop caring about others—it's to care about yourself equally.
+            After an interaction, ask: "Did I show up as myself, or as who I thought they wanted?" If the latter, you people-pleased. The goal isn't to stop caring about others---it's to care about yourself equally.
           </p>
         </ArticleCallout>
 
@@ -1534,7 +1534,7 @@ export const perfectionismArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If people-pleasing is severe—if you have no sense of your own preferences, feel constant resentment, or experience depression from self-abandonment—therapy can help. Assertiveness training, cognitive-behavioral therapy, and psychodynamic therapy all address people-pleasing patterns effectively.
+          If people-pleasing is severe---if you have no sense of your own preferences, feel constant resentment, or experience depression from self-abandonment---therapy can help. Assertiveness training, cognitive-behavioral therapy, and psychodynamic therapy all address people-pleasing patterns effectively.
         </p>
       </>
     ),

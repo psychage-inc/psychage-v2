@@ -96,7 +96,7 @@ export const selfCompassionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your internal dialogue — the running commentary in your mind about yourself, others, and the world — shapes your emotions, behaviors, and sense of self. But not all self-talk is created equal. Some patterns support you. Others undermine you.
+            Your internal dialogue --- the running commentary in your mind about yourself, others, and the world --- shapes your emotions, behaviors, and sense of self. But not all self-talk is created equal. Some patterns support you. Others undermine you.
           </p>
           <p className="mb-6">
             Learning to distinguish between helpful and harmful self-talk is a crucial skill for mental health <Citation id="4" index={4} source="Clinical Psychology Review" year="2016" tier={1} />. The good news: self-talk patterns can be identified, understood, and changed.
@@ -108,7 +108,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-talk is your internal narration — the thoughts you think about yourself and your experiences. It can be conscious or automatic, positive or negative, helpful or harmful.
+          Self-talk is your internal narration --- the thoughts you think about yourself and your experiences. It can be conscious or automatic, positive or negative, helpful or harmful.
         </p>
 
         <ArticleChart
@@ -151,7 +151,7 @@ export const selfCompassionArticlesB: Article[] = [
               feature: 'Made a mistake',
               values: [
                 "I'm so stupid, I always mess up",
-                'I made a mistake — what can I learn?',
+                'I made a mistake --- what can I learn?',
               ],
             },
             {
@@ -172,7 +172,7 @@ export const selfCompassionArticlesB: Article[] = [
               feature: 'Received criticism',
               values: [
                 "I'm worthless, everyone hates me",
-                "That feedback was hard to hear — what's useful?",
+                "That feedback was hard to hear --- what's useful?",
               ],
             },
           ]}
@@ -196,7 +196,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Destructive self-talk patterns often involve cognitive distortions — systematic errors in thinking that worsen mood and undermine wellbeing <Citation id="3" index={3} source="Cognitive Therapy and Research" year="2008" tier={1} />.
+          Destructive self-talk patterns often involve cognitive distortions --- systematic errors in thinking that worsen mood and undermine wellbeing <Citation id="3" index={3} source="Cognitive Therapy and Research" year="2008" tier={1} />.
         </p>
 
         <ArticleTabs
@@ -244,7 +244,7 @@ export const selfCompassionArticlesB: Article[] = [
                     <strong>Pattern:</strong> Taking responsibility for things outside your control
                   </p>
                   <p className="mb-3">
-                    <strong>Example:</strong> "My friend is upset — it must be my fault"
+                    <strong>Example:</strong> "My friend is upset --- it must be my fault"
                   </p>
                   <p>
                     <strong>Impact:</strong> Creates guilt, shame, and excessive responsibility
@@ -338,7 +338,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          One powerful way to shift self-talk is through "self-distancing" — talking to yourself in second or third person rather than first person <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2014" tier={1} />.
+          One powerful way to shift self-talk is through "self-distancing" --- talking to yourself in second or third person rather than first person <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2014" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip">
@@ -545,7 +545,7 @@ export const selfCompassionArticlesB: Article[] = [
             One of the cruelest paradoxes: the people who would benefit most from self-compassion often resist it because they feel undeserving. "I don't deserve kindness. I deserve to suffer for what I've done or who I am."
           </p>
           <p className="mb-6">
-            This belief — that you must earn the right to treat yourself well — is deeply rooted but fundamentally flawed <Citation id="3" index={3} source="Clinical Psychology Review" year="2018" tier={1} />. Learning to practice self-compassion despite feeling undeserving is possible and transformative.
+            This belief --- that you must earn the right to treat yourself well --- is deeply rooted but fundamentally flawed <Citation id="3" index={3} source="Clinical Psychology Review" year="2018" tier={1} />. Learning to practice self-compassion despite feeling undeserving is possible and transformative.
           </p>
         </div>
 
@@ -559,7 +559,7 @@ export const selfCompassionArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            This belief treats compassion as something you must earn through good behavior, achievement, or worthiness. But compassion — toward yourself or others — isn't earned. It's offered freely, especially during suffering.
+            This belief treats compassion as something you must earn through good behavior, achievement, or worthiness. But compassion --- toward yourself or others --- isn't earned. It's offered freely, especially during suffering.
           </p>
         </ArticleCallout>
 
@@ -645,7 +645,7 @@ export const selfCompassionArticlesB: Article[] = [
               title: 'Practice for someone else first',
               description: (
                 <p>
-                  Generate compassion for a friend, child, or pet. Notice how that feels. Gradually include yourself in the circle of compassion — not as special, just as another being who suffers.
+                  Generate compassion for a friend, child, or pet. Notice how that feels. Gradually include yourself in the circle of compassion --- not as special, just as another being who suffers.
                 </p>
               ),
             },
@@ -685,7 +685,7 @@ export const selfCompassionArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          If the answer is no (and it almost always is), that's evidence the harsh treatment isn't appropriate for you either. You don't need to feel deserving to recognize that all humans — including child-you, current-you, and future-you — warrant basic kindness.
+          If the answer is no (and it almost always is), that's evidence the harsh treatment isn't appropriate for you either. You don't need to feel deserving to recognize that all humans --- including child-you, current-you, and future-you --- warrant basic kindness.
         </p>
 
         <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -698,7 +698,7 @@ export const selfCompassionArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            This physical gesture activates the mammalian caregiving system — the same neural circuits involved in caring for others. It can bypass cognitive blocks and create a physiological sense of safety and care.
+            This physical gesture activates the mammalian caregiving system --- the same neural circuits involved in caring for others. It can bypass cognitive blocks and create a physiological sense of safety and care.
           </p>
         </ArticleCallout>
 
@@ -711,7 +711,7 @@ export const selfCompassionArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Imagine yourself at a younger age — perhaps when you were first learning the harsh self-treatment. Can you feel compassion for that child or teenager who was doing their best with limited tools? That person is still within you.
+          Imagine yourself at a younger age --- perhaps when you were first learning the harsh self-treatment. Can you feel compassion for that child or teenager who was doing their best with limited tools? That person is still within you.
         </p>
 
         <h3 className="text-2xl font-display font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -736,7 +736,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Shame — the belief that you are fundamentally bad or defective — is the most common barrier to self-compassion <Citation id="2" index={2} source="Journal of Clinical Psychology" year="2013" tier={1} />.
+          Shame --- the belief that you are fundamentally bad or defective --- is the most common barrier to self-compassion <Citation id="2" index={2} source="Journal of Clinical Psychology" year="2013" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -769,7 +769,7 @@ export const selfCompassionArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Shame developed as protection — it's not your fault</li>
+          <li>Shame developed as protection --- it's not your fault</li>
           <li>The threat system (shame/self-attack) and care system (compassion) can't both be fully active</li>
           <li>Building the care system reduces the threat system's dominance</li>
           <li>Compassion is a skill that can be cultivated, not a feeling you must have first</li>
@@ -917,7 +917,7 @@ export const selfCompassionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're in the middle of a difficult moment — stressed, hurting, or overwhelmed — complex self-compassion theories aren't helpful. You need something simple, fast, and effective. The Self-Compassion Break is exactly that.
+            When you're in the middle of a difficult moment --- stressed, hurting, or overwhelmed --- complex self-compassion theories aren't helpful. You need something simple, fast, and effective. The Self-Compassion Break is exactly that.
           </p>
           <p className="mb-6">
             Developed by Dr. Kristin Neff, this three-minute practice engages all components of self-compassion in a format you can use anytime, anywhere <Citation id="1" index={1} source="Mindful Self-Compassion Workbook" year="2018" tier={5} />. Research shows even brief self-compassion practices significantly reduce distress <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
@@ -944,7 +944,7 @@ export const selfCompassionArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            You don't need to wait for a major crisis. Practice during small daily frustrations — traffic, a spilled coffee, a minor setback. Building the skill during small moments makes it accessible during big ones.
+            You don't need to wait for a major crisis. Practice during small daily frustrations --- traffic, a spilled coffee, a minor setback. Building the skill during small moments makes it accessible during big ones.
           </p>
         </ArticleCallout>
 
@@ -953,14 +953,14 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Find a quiet place if possible, but this can be done anywhere — at your desk, in the car, in the bathroom. Place your hand over your heart or another soothing location. Take a few breaths.
+          Find a quiet place if possible, but this can be done anywhere --- at your desk, in the car, in the bathroom. Place your hand over your heart or another soothing location. Take a few breaths.
         </p>
 
         <ProgressSteps
           variant="vertical"
           steps={[
             {
-              title: 'Step 1: Mindfulness — Acknowledge the Pain',
+              title: 'Step 1: Mindfulness --- Acknowledge the Pain',
               description: (
                 <div>
                   <p className="mb-3">
@@ -973,13 +973,13 @@ export const selfCompassionArticlesB: Article[] = [
                     <li>"I'm struggling right now"</li>
                   </ul>
                   <p className="mt-3">
-                    You're simply naming your experience without judgment. You don't have to make it go away or fix it — just acknowledge it's there.
+                    You're simply naming your experience without judgment. You don't have to make it go away or fix it --- just acknowledge it's there.
                   </p>
                 </div>
               ),
             },
             {
-              title: "Step 2: Common Humanity — Remember You\'re Not Alone",
+              title: "Step 2: Common Humanity --- Remember You\'re Not Alone",
               description: (
                 <div>
                   <p className="mb-3">
@@ -998,7 +998,7 @@ export const selfCompassionArticlesB: Article[] = [
               ),
             },
             {
-              title: 'Step 3: Self-Kindness — Offer Yourself Care',
+              title: 'Step 3: Self-Kindness --- Offer Yourself Care',
               description: (
                 <div>
                   <p className="mb-3">
@@ -1020,7 +1020,7 @@ export const selfCompassionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          That's it. Three steps. About three minutes. You've engaged mindfulness, common humanity, and self-kindness — all three components of self-compassion.
+          That's it. Three steps. About three minutes. You've engaged mindfulness, common humanity, and self-kindness --- all three components of self-compassion.
         </p>
 
         <h2 id="why-it-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1114,10 +1114,10 @@ export const selfCompassionArticlesB: Article[] = [
             title: 'Solution',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Normal at first — the action matters more than the feeling</li>
-                <li>Keep practicing — feeling follows behavior</li>
+                <li>Normal at first --- the action matters more than the feeling</li>
+                <li>Keep practicing --- feeling follows behavior</li>
                 <li>Gently return attention when you notice wandering</li>
-                <li>May trigger grief — this is actually healing, not harm</li>
+                <li>May trigger grief --- this is actually healing, not harm</li>
               </ul>
             ),
           }}
@@ -1134,7 +1134,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          While the Self-Compassion Break is designed for difficult moments, practicing it daily — even when you're not struggling — builds the skill <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2018" tier={1} />.
+          While the Self-Compassion Break is designed for difficult moments, practicing it daily --- even when you're not struggling --- builds the skill <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2018" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1200,7 +1200,7 @@ export const selfCompassionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The Self-Compassion Break is deceptively simple. Three steps, three minutes, but potentially life-changing. The key is practice — using it regularly, especially during small struggles, until it becomes second nature when big challenges arise.
+          The Self-Compassion Break is deceptively simple. Three steps, three minutes, but potentially life-changing. The key is practice --- using it regularly, especially during small struggles, until it becomes second nature when big challenges arise.
         </p>
       </>
     ),
@@ -1282,7 +1282,7 @@ export const selfCompassionArticlesB: Article[] = [
             When you fail, make a mistake, or feel inadequate, a painful thought often follows: "I'm the only one. Everyone else has it together. Something is uniquely wrong with me." This sense of isolation intensifies suffering and fuels shame.
           </p>
           <p className="mb-6">
-            Common humanity — recognizing that imperfection and struggle are part of the shared human experience — is a powerful antidote to this isolation <Citation id="1" index={1} source="Journal of Happiness Studies" year="2014" tier={1} />. It's not just a comforting thought; it's a psychological shift that fundamentally changes how you relate to your difficulties.
+            Common humanity --- recognizing that imperfection and struggle are part of the shared human experience --- is a powerful antidote to this isolation <Citation id="1" index={1} source="Journal of Happiness Studies" year="2014" tier={1} />. It's not just a comforting thought; it's a psychological shift that fundamentally changes how you relate to your difficulties.
           </p>
         </div>
 
@@ -1291,7 +1291,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Common humanity is the recognition that suffering, failure, and imperfection are not signs that something is wrong with you specifically — they're part of being human.
+          Common humanity is the recognition that suffering, failure, and imperfection are not signs that something is wrong with you specifically --- they're part of being human.
         </p>
 
         <QuoteBlock
@@ -1386,7 +1386,7 @@ export const selfCompassionArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            You're not defective for struggling. You're human. The same neurological, psychological, and social systems that create suffering in others create it in you. Your pain doesn't make you different — it makes you connected.
+            You're not defective for struggling. You're human. The same neurological, psychological, and social systems that create suffering in others create it in you. Your pain doesn't make you different --- it makes you connected.
           </p>
         </ArticleCallout>
 
@@ -1395,7 +1395,7 @@ export const selfCompassionArticlesB: Article[] = [
         </h3>
 
         <p className="mb-6">
-          Social comparison — measuring yourself against others — is a major source of self-blame. When you recognize that everyone struggles (just in different ways and at different times), the comparison loses its sting <Citation id="5" index={5} source="Clinical Psychology Review" year="2017" tier={1} />.
+          Social comparison --- measuring yourself against others --- is a major source of self-blame. When you recognize that everyone struggles (just in different ways and at different times), the comparison loses its sting <Citation id="5" index={5} source="Clinical Psychology Review" year="2017" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1557,7 +1557,7 @@ export const selfCompassionArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Common humanity transforms isolation into connection, shame into shared experience, and self-blame into understanding. It doesn't erase pain, but it changes your relationship to it — and that changes everything.
+          Common humanity transforms isolation into connection, shame into shared experience, and self-blame into understanding. It doesn't erase pain, but it changes your relationship to it --- and that changes everything.
         </p>
       </>
     ),

@@ -1,6 +1,6 @@
  
 // ============================================================================
-// Category 18 — Women's Mental Health | Subcategory 02b
+// Category 18 --- Women's Mental Health | Subcategory 02b
 // Perinatal and Postpartum Mental Health (Articles 16-20)
 // ============================================================================
 
@@ -27,7 +27,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Pregnancy After Loss', 'Grief', 'Anxiety', 'Rainbow Pregnancy'],
 
-    summary: `Pregnancy after loss—whether from miscarriage, stillbirth, or infant death—brings complex emotions: hope mixed with terror, joy shadowed by trauma, and difficulty bonding due to fear of another loss. Up to 40% of people pregnant after loss experience clinically significant anxiety or depression. Common challenges include hypervigilance about fetal movement, difficulty celebrating pregnancy milestones, survivor's guilt, and feeling unable to discuss fears without seeming ungrateful. Support requires acknowledging both grief for the lost baby and hope for the current pregnancy—these emotions coexist and both are valid.`,
+    summary: `Pregnancy after loss---whether from miscarriage, stillbirth, or infant death---brings complex emotions: hope mixed with terror, joy shadowed by trauma, and difficulty bonding due to fear of another loss. Up to 40% of people pregnant after loss experience clinically significant anxiety or depression. Common challenges include hypervigilance about fetal movement, difficulty celebrating pregnancy milestones, survivor's guilt, and feeling unable to discuss fears without seeming ungrateful. Support requires acknowledging both grief for the lost baby and hope for the current pregnancy---these emotions coexist and both are valid.`,
 
     keyFacts: [
       {
@@ -35,7 +35,7 @@ export const articles: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Pregnancy after loss is often called "rainbow pregnancy"—beauty after a storm—but the metaphor can minimize ongoing grief and fear.`,
+        text: `Pregnancy after loss is often called "rainbow pregnancy"---beauty after a storm---but the metaphor can minimize ongoing grief and fear.`,
         citationIndex: 2,
       },
       {
@@ -46,7 +46,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The understanding that you can simultaneously grieve one baby and hope for another—these are not conflicting emotions but the reality of holding both loss and possibility in a heart stretched wide by love.`,
+    sparkMoment: `The understanding that you can simultaneously grieve one baby and hope for another---these are not conflicting emotions but the reality of holding both loss and possibility in a heart stretched wide by love.`,
 
     practicalExercise: {
       title: `Holding Both Grief and Hope`,
@@ -57,7 +57,7 @@ export const articles: Article[] = [
         },
         {
           title: `Honor both babies`,
-          description: `Find a way to acknowledge your lost baby while connecting with this pregnancy—separate journals, a ritual, or simply saying both names. You don't have to choose between them.`,
+          description: `Find a way to acknowledge your lost baby while connecting with this pregnancy---separate journals, a ritual, or simply saying both names. You don't have to choose between them.`,
         },
         {
           title: `Set protective boundaries`,
@@ -103,18 +103,18 @@ export const articles: Article[] = [
       <>
         <p>
           When the ultrasound showed a heartbeat at 8 weeks, Kendra felt numb instead of joyful.
-          Her previous pregnancy had ended at 10 weeks—she couldn't let herself believe this one
+          Her previous pregnancy had ended at 10 weeks---she couldn't let herself believe this one
           would be different. <Citation index={1} /> Each prenatal appointment brought panic, not
           excitement. She checked for bleeding constantly, counted every symptom as proof of
           impending loss, and couldn't bring herself to tell anyone she was pregnant. When friends
-          asked if she was "so excited," Kendra lied. The truth—that she was terrified—felt like
+          asked if she was "so excited," Kendra lied. The truth---that she was terrified---felt like
           tempting fate or dishonoring the baby. But the fear was suffocating.
         </p>
 
         <StatCard
           value="30-40%"
           label="of people experience significant anxiety during pregnancy after loss"
-          description="Pregnancy after loss is not a simple 'fresh start'—it's a complex emotional experience requiring specific support and understanding."
+          description="Pregnancy after loss is not a simple 'fresh start'---it's a complex emotional experience requiring specific support and understanding."
         />
 
         <h2>The Psychological Landscape of Pregnancy After Loss</h2>
@@ -141,7 +141,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="info"
           title="Rainbow Pregnancy: Beautiful but Complicated"
-          content="'Rainbow baby' refers to a baby born after loss—beauty after a storm. While the metaphor honors hope, it can inadvertently minimize ongoing grief. A rainbow doesn't erase the storm. Pregnancy after loss involves both grief for the baby who died and hope for the baby who may live. Both emotions are real, valid, and can coexist."
+          content="'Rainbow baby' refers to a baby born after loss---beauty after a storm. While the metaphor honors hope, it can inadvertently minimize ongoing grief. A rainbow doesn't erase the storm. Pregnancy after loss involves both grief for the baby who died and hope for the baby who may live. Both emotions are real, valid, and can coexist."
         />
 
         <h2>Managing Anxiety and Trauma</h2>
@@ -166,7 +166,7 @@ export const articles: Article[] = [
         <StatCard
           value="Milestone anxiety"
           label="peaks at the gestation of previous loss"
-          description="As pregnancy approaches and passes the point of previous loss, anxiety often intensifies. This is normal and predictable—not a sign that something is wrong."
+          description="As pregnancy approaches and passes the point of previous loss, anxiety often intensifies. This is normal and predictable---not a sign that something is wrong."
         />
 
         <h2>Trauma-Informed Prenatal Care</h2>
@@ -192,7 +192,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Honoring Both Babies"
-          content="You don't have to choose between grieving your lost baby and hoping for this one. Some find it helpful to: keep photos or mementos of the lost baby visible during current pregnancy, use different journals or memory boxes for each baby, celebrate the lost baby's due date or remembrance day even while pregnant, or simply speak both babies' names. Love isn't a finite resource—your heart is big enough for both."
+          content="You don't have to choose between grieving your lost baby and hoping for this one. Some find it helpful to: keep photos or mementos of the lost baby visible during current pregnancy, use different journals or memory boxes for each baby, celebrate the lost baby's due date or remembrance day even while pregnant, or simply speak both babies' names. Love isn't a finite resource---your heart is big enough for both."
         />
       </>
     ),
@@ -222,7 +222,7 @@ export const articles: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Intrusive thoughts about harm in perinatal OCD are ego-dystonic (unwanted, distressing, opposite of desires)—very different from psychotic delusions.`,
+        text: `Intrusive thoughts about harm in perinatal OCD are ego-dystonic (unwanted, distressing, opposite of desires)---very different from psychotic delusions.`,
         citationIndex: 2,
       },
       {
@@ -233,7 +233,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The liberation of learning that horrifying intrusive thoughts are a symptom of how much you care about your baby's safety—not a sign of danger—and that you don't have to perform rituals or avoid triggers to keep your baby safe.`,
+    sparkMoment: `The liberation of learning that horrifying intrusive thoughts are a symptom of how much you care about your baby's safety---not a sign of danger---and that you don't have to perform rituals or avoid triggers to keep your baby safe.`,
 
     practicalExercise: {
       title: `Recognizing OCD Patterns`,
@@ -244,7 +244,7 @@ export const articles: Article[] = [
         },
         {
           title: `Distinguish OCD from reality`,
-          description: `Ask: Is this thought distressing and unwanted (OCD)? Or is this something I actually want to do (not OCD)? Perinatal OCD thoughts are ego-dystonic—opposite of desires.`,
+          description: `Ask: Is this thought distressing and unwanted (OCD)? Or is this something I actually want to do (not OCD)? Perinatal OCD thoughts are ego-dystonic---opposite of desires.`,
         },
         {
           title: `Track your compulsions`,
@@ -291,12 +291,12 @@ export const articles: Article[] = [
         <p>
           Every time Rachel held her newborn son, an image flashed through her mind: dropping him
           down the stairs. She would freeze in terror, then immediately put him down and check his
-          body for injuries—even though she hadn't actually dropped him. <Citation index={1} />
+          body for injuries---even though she hadn't actually dropped him. <Citation index={1} />
           The thought felt like a premonition, a warning that she was dangerous. She stopped
           carrying him near stairs, then near any hard surfaces, then avoided holding him while
           standing. She spent hours googling "postpartum psychosis" and "thoughts about harming
           baby," terrified she was becoming dangerous. When a therapist explained perinatal OCD,
-          Rachel cried with relief: she wasn't psychotic or evil—she had a treatable anxiety
+          Rachel cried with relief: she wasn't psychotic or evil---she had a treatable anxiety
           disorder.
         </p>
 
@@ -311,7 +311,7 @@ export const articles: Article[] = [
           Perinatal OCD is characterized by obsessions (intrusive, unwanted thoughts, images, or
           urges) and compulsions (repetitive behaviors or mental acts performed to reduce anxiety
           from obsessions). <Citation index={2} /> Common perinatal obsessions include harm
-          obsessions (thoughts or images of accidentally or intentionally harming baby—dropping,
+          obsessions (thoughts or images of accidentally or intentionally harming baby---dropping,
           shaking, suffocating, stabbing, or sexually abusing baby), contamination obsessions
           (excessive fear of germs, chemicals, or toxins harming baby), symmetry or "just right"
           obsessions (needing things arranged perfectly or rituals performed correctly to keep
@@ -331,7 +331,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="warning"
           title="Perinatal OCD vs. Postpartum Psychosis"
-          content="Perinatal OCD and postpartum psychosis are completely different. In OCD, intrusive thoughts are ego-dystonic (unwanted, distressing, opposite of desires), insight is intact (person knows thoughts are irrational), and there's no intention to act on thoughts. In psychosis, delusions are ego-syntonic (believed to be true), insight is impaired, and there may be intent to act. If you're terrified by your thoughts, that's OCD. If you believe your thoughts are true commands, that's psychosis—seek emergency care."
+          content="Perinatal OCD and postpartum psychosis are completely different. In OCD, intrusive thoughts are ego-dystonic (unwanted, distressing, opposite of desires), insight is intact (person knows thoughts are irrational), and there's no intention to act on thoughts. In psychosis, delusions are ego-syntonic (believed to be true), insight is impaired, and there may be intent to act. If you're terrified by your thoughts, that's OCD. If you believe your thoughts are true commands, that's psychosis---seek emergency care."
         />
 
         <h2>Why Perinatal OCD Develops</h2>
@@ -362,9 +362,9 @@ export const articles: Article[] = [
         <p>
           The most effective treatment for perinatal OCD is Exposure and Response Prevention
           (ERP), a specialized form of cognitive-behavioral therapy. ERP involves two components:
-          exposure (gradually, systematically confronting feared situations or thoughts—e.g., being
+          exposure (gradually, systematically confronting feared situations or thoughts---e.g., being
           near stairs while holding baby, or intentionally thinking the intrusive thought) and
-          response prevention (refraining from compulsions that provide temporary relief—no
+          response prevention (refraining from compulsions that provide temporary relief---no
           checking, reassurance-seeking, or avoidance).
         </p>
         <p>
@@ -401,7 +401,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Tokophobia', 'Birth Fear', 'Childbirth', 'Maternal Request Cesarean'],
 
-    summary: `Tokophobia is pathological fear of childbirth, affecting 6-14% of pregnant people. Primary tokophobia occurs in people who have never given birth; secondary tokophobia develops after traumatic birth experiences. Symptoms include severe anxiety or panic about labor, avoidance of pregnancy despite wanting children, termination of wanted pregnancy due to fear, and requests for elective cesarean to avoid labor. Tokophobia is distinct from normal birth anxiety—it's debilitating and interferes with reproductive decisions. Treatment includes psychoeducation, cognitive-behavioral therapy, birth trauma processing (for secondary tokophobia), and respectful discussion of birth options including maternal request cesarean.`,
+    summary: `Tokophobia is pathological fear of childbirth, affecting 6-14% of pregnant people. Primary tokophobia occurs in people who have never given birth; secondary tokophobia develops after traumatic birth experiences. Symptoms include severe anxiety or panic about labor, avoidance of pregnancy despite wanting children, termination of wanted pregnancy due to fear, and requests for elective cesarean to avoid labor. Tokophobia is distinct from normal birth anxiety---it's debilitating and interferes with reproductive decisions. Treatment includes psychoeducation, cognitive-behavioral therapy, birth trauma processing (for secondary tokophobia), and respectful discussion of birth options including maternal request cesarean.`,
 
     keyFacts: [
       {
@@ -420,7 +420,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The validation that extreme fear of childbirth is not cowardice or weakness but a specific phobia deserving of treatment—and that choosing how you give birth based on what feels safest to you is not "giving up" but exercising bodily autonomy.`,
+    sparkMoment: `The validation that extreme fear of childbirth is not cowardice or weakness but a specific phobia deserving of treatment---and that choosing how you give birth based on what feels safest to you is not "giving up" but exercising bodily autonomy.`,
 
     practicalExercise: {
       title: `Fear Assessment and Autonomy`,
@@ -477,7 +477,7 @@ export const articles: Article[] = [
       <>
         <p>
           At 32 weeks pregnant, Emma had her fifth panic attack this month. The thought of labor
-          made her physically ill—not normal nervousness, but visceral terror. <Citation
+          made her physically ill---not normal nervousness, but visceral terror. <Citation
           index={1} /> She couldn't watch birth scenes in movies, avoided pregnant friends'
           birth stories, and had nightmares about being trapped in uncontrollable pain. When she
           asked her OB about a planned cesarean, the response was dismissive: "You'll be fine.
@@ -514,7 +514,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="info"
           title="Normal Birth Anxiety vs. Tokophobia"
-          content="Most pregnant people experience some anxiety about birth—this is normal and adaptive, motivating preparation. Tokophobia is different: fear is severe (7-10 on intensity scale), persistent (not just occasional worry), interferes with functioning (avoiding prenatal care, unable to bond with pregnancy, terminating wanted pregnancy), and doesn't respond to reassurance or education. If fear is debilitating, it warrants treatment."
+          content="Most pregnant people experience some anxiety about birth---this is normal and adaptive, motivating preparation. Tokophobia is different: fear is severe (7-10 on intensity scale), persistent (not just occasional worry), interferes with functioning (avoiding prenatal care, unable to bond with pregnancy, terminating wanted pregnancy), and doesn't respond to reassurance or education. If fear is debilitating, it warrants treatment."
         />
 
         <h2>Impact on Pregnancy and Birth</h2>
@@ -524,7 +524,7 @@ export const articles: Article[] = [
           appointments discussing labor), difficulty bonding with baby (emotional detachment as
           self-protection), severe anxiety or depression, and hyperemesis or other physical
           symptoms potentially exacerbated by extreme stress. Some terminate wanted pregnancies
-          due to unbearable fear of childbirth—a devastating outcome of untreated tokophobia.
+          due to unbearable fear of childbirth---a devastating outcome of untreated tokophobia.
         </p>
         <p>
           Birth planning becomes fraught. Many request elective cesarean delivery (maternal
@@ -549,7 +549,7 @@ export const articles: Article[] = [
           planning. Cognitive-behavioral therapy (CBT) helps identify and challenge catastrophic
           beliefs about childbirth, develop coping strategies for managing fear, and gradually
           approach avoided topics through exposure. Psychoeducation about birth physiology,
-          pain management options, and statistics can reduce fear based on misinformation—though
+          pain management options, and statistics can reduce fear based on misinformation---though
           education alone is rarely sufficient for severe tokophobia.
         </p>
         <p>
@@ -585,7 +585,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Postpartum Rage', 'Anger', 'Irritability', 'Postpartum Mood'],
 
-    summary: `Postpartum rage—intense, disproportionate anger or irritability—affects up to 40% of postpartum people but is rarely discussed. Rage manifests as explosive anger at partner or other children, intrusive thoughts of throwing or hitting things, verbal outbursts, and feeling out of control. Rage is often a symptom of postpartum depression, anxiety, or trauma, driven by hormonal shifts, sleep deprivation, overwhelm, and unmet needs. It's not a character flaw or evidence of being a bad parent—it's a symptom requiring treatment. Managing rage involves addressing underlying mood disorders, practical support, anger management skills, and couples therapy to repair relationships.`,
+    summary: `Postpartum rage---intense, disproportionate anger or irritability---affects up to 40% of postpartum people but is rarely discussed. Rage manifests as explosive anger at partner or other children, intrusive thoughts of throwing or hitting things, verbal outbursts, and feeling out of control. Rage is often a symptom of postpartum depression, anxiety, or trauma, driven by hormonal shifts, sleep deprivation, overwhelm, and unmet needs. It's not a character flaw or evidence of being a bad parent---it's a symptom requiring treatment. Managing rage involves addressing underlying mood disorders, practical support, anger management skills, and couples therapy to repair relationships.`,
 
     keyFacts: [
       {
@@ -593,7 +593,7 @@ export const articles: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Postpartum rage is commonly a symptom of depression, anxiety, or PTSD—not a standalone diagnosis but a signal that treatment is needed.`,
+        text: `Postpartum rage is commonly a symptom of depression, anxiety, or PTSD---not a standalone diagnosis but a signal that treatment is needed.`,
         citationIndex: 2,
       },
       {
@@ -604,7 +604,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The relief of learning that postpartum rage is not proof you're a terrible parent but a symptom of an overwhelmed nervous system desperately signaling that something needs to change—and that you deserve support, not shame.`,
+    sparkMoment: `The relief of learning that postpartum rage is not proof you're a terrible parent but a symptom of an overwhelmed nervous system desperately signaling that something needs to change---and that you deserve support, not shame.`,
 
     practicalExercise: {
       title: `Rage Awareness and Intervention`,
@@ -661,11 +661,11 @@ export const articles: Article[] = [
       <>
         <p>
           When her partner asked "What's for dinner?" for the third night in a row without
-          offering to cook, something snapped in Nadia. She felt white-hot rage—a fury so intense
+          offering to cook, something snapped in Nadia. She felt white-hot rage---a fury so intense
           she wanted to throw the plate at the wall. <Citation index={1} /> Instead, she screamed,
           shocking both of them. Later, when the baby wouldn't stop crying at 2 AM, the rage
           returned: intrusive thoughts of shaking her, images of throwing the bassinet. Nadia was
-          horrified. She loved her daughter desperately—where was this violent anger coming from?
+          horrified. She loved her daughter desperately---where was this violent anger coming from?
           She felt like a monster, afraid to tell anyone she was struggling with rage.
         </p>
 
@@ -689,7 +689,7 @@ export const articles: Article[] = [
           Rage is not a standalone diagnosis but typically a symptom of underlying perinatal mood
           and anxiety disorders. Up to 70% of people experiencing postpartum rage also meet
           criteria for postpartum depression, anxiety, or PTSD. Rage can be the primary presenting
-          symptom of depression—particularly in people socialized to express distress as anger
+          symptom of depression---particularly in people socialized to express distress as anger
           rather than sadness. The cultural narrative of postpartum depression as only sadness and
           tearfulness means rage-predominant presentations are often missed.
         </p>
@@ -697,7 +697,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="warning"
           title="Rage vs. Postpartum Psychosis"
-          content="Postpartum rage (even intense) is different from postpartum psychosis. Rage involves anger in response to triggers (sleep deprivation, partner behavior, crying baby), with intact reality testing and no intent to harm baby. Psychosis involves delusions, hallucinations, and loss of reality contact. If you have intrusive violent thoughts that distress you, that's likely rage or OCD. If you believe violent thoughts are commands you should follow, that's psychosis—seek emergency care."
+          content="Postpartum rage (even intense) is different from postpartum psychosis. Rage involves anger in response to triggers (sleep deprivation, partner behavior, crying baby), with intact reality testing and no intent to harm baby. Psychosis involves delusions, hallucinations, and loss of reality contact. If you have intrusive violent thoughts that distress you, that's likely rage or OCD. If you believe violent thoughts are commands you should follow, that's psychosis---seek emergency care."
         />
 
         <h2>What Drives Postpartum Rage</h2>
@@ -715,7 +715,7 @@ export const articles: Article[] = [
           inequity in partnership (carrying disproportionate mental and physical labor), birth
           trauma (rage as a trauma response to feeling violated or powerless), and identity loss
           (grief and anger about loss of pre-baby self, career, or autonomy). Rage often signals
-          that something fundamental is unsustainable—it's a desperate alarm bell, not a character
+          that something fundamental is unsustainable---it's a desperate alarm bell, not a character
           flaw.
         </p>
 
@@ -730,14 +730,14 @@ export const articles: Article[] = [
           Immediate rage management strategies focus on safety and de-escalation. When rage hits:
           ensure baby is safe (in crib, bassinet, or with another adult), physically remove
           yourself from the triggering situation if possible, use intense physical grounding
-          (splash cold water on face, squeeze ice cubes, do jumping jacks—activating body helps
+          (splash cold water on face, squeeze ice cubes, do jumping jacks---activating body helps
           regulate nervous system), and wait until regulated before engaging with partner or
-          returning to baby. You cannot parent effectively while in rage—temporarily stepping away
+          returning to baby. You cannot parent effectively while in rage---temporarily stepping away
           is responsible, not neglectful.
         </p>
         <p>
           Longer-term treatment addresses root causes. Screen for and treat underlying postpartum
-          depression, anxiety, or PTSD—rage often diminishes when mood disorders are treated.
+          depression, anxiety, or PTSD---rage often diminishes when mood disorders are treated.
           Secure adequate sleep (even one 4-hour stretch per night significantly improves
           regulation), negotiate equitable division of labor with partner, and develop anger
           management skills (identifying triggers, early intervention, communication strategies).
@@ -749,7 +749,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Talking About Rage Without Shame"
-          content="Telling your provider 'I'm experiencing postpartum rage' helps them understand what you're facing. Describe frequency, intensity, triggers, and whether it's accompanied by depression or anxiety. If you fear judgment, try: 'I'm having intense anger episodes that feel out of control. I need help managing this.' You're not alone—many providers now recognize rage as a common postpartum symptom deserving of compassionate care."
+          content="Telling your provider 'I'm experiencing postpartum rage' helps them understand what you're facing. Describe frequency, intensity, triggers, and whether it's accompanied by depression or anxiety. If you fear judgment, try: 'I'm having intense anger episodes that feel out of control. I need help managing this.' You're not alone---many providers now recognize rage as a common postpartum symptom deserving of compassionate care."
         />
       </>
     ),
@@ -771,7 +771,7 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Partner Mental Health', 'Paternal Depression', 'Non-Birthing Parent', 'Couples'],
 
-    summary: `Perinatal mental health challenges affect partners too—not just birthing parents. Paternal/partner postpartum depression affects 8-10% of fathers and non-birthing partners, with anxiety even more common. Risk factors include partner's depression, relationship conflict, financial stress, and lack of support. Unique challenges for partners include feeling helpless or inadequate, being expected to be "the strong one," having mental health needs dismissed, and lacking access to screening or services. Untreated partner depression affects couple relationship, parenting, and child development. Partners deserve screening, support, and treatment—not just as supports for birthing parents but for their own wellbeing.`,
+    summary: `Perinatal mental health challenges affect partners too---not just birthing parents. Paternal/partner postpartum depression affects 8-10% of fathers and non-birthing partners, with anxiety even more common. Risk factors include partner's depression, relationship conflict, financial stress, and lack of support. Unique challenges for partners include feeling helpless or inadequate, being expected to be "the strong one," having mental health needs dismissed, and lacking access to screening or services. Untreated partner depression affects couple relationship, parenting, and child development. Partners deserve screening, support, and treatment---not just as supports for birthing parents but for their own wellbeing.`,
 
     keyFacts: [
       {
@@ -790,7 +790,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The recognition that partners' mental health matters not just instrumentally (so they can support the birthing parent) but intrinsically—they are also becoming parents, also experiencing massive life transition, and also deserve care.`,
+    sparkMoment: `The recognition that partners' mental health matters not just instrumentally (so they can support the birthing parent) but intrinsically---they are also becoming parents, also experiencing massive life transition, and also deserve care.`,
 
     practicalExercise: {
       title: `Partner Mental Health Check-In`,
@@ -801,7 +801,7 @@ export const articles: Article[] = [
         },
         {
           title: `Challenge "strong one" narrative`,
-          description: `Notice beliefs like "I need to hold it together for my partner" or "My struggles don't matter compared to theirs." Your mental health matters—period.`,
+          description: `Notice beliefs like "I need to hold it together for my partner" or "My struggles don't matter compared to theirs." Your mental health matters---period.`,
         },
         {
           title: `Identify support barriers`,
@@ -847,7 +847,7 @@ export const articles: Article[] = [
       <>
         <p>
           Three months after their daughter was born, Marcus felt numb. He went through the
-          motions—diaper changes, bottle prep, rocking her to sleep—but felt disconnected, like
+          motions---diaper changes, bottle prep, rocking her to sleep---but felt disconnected, like
           watching someone else's life. <Citation index={1} /> His partner struggled with
           postpartum depression and needed his support, so Marcus told himself his own feelings
           didn't matter. He was supposed to be "the strong one." But the exhaustion and emptiness
@@ -876,7 +876,7 @@ export const articles: Article[] = [
           Symptoms may manifest differently in partners than in birthing parents. Partners are
           more likely to express distress as anger, irritability, increased work hours (avoiding
           home), substance use, or risky behaviors. This can lead to misdiagnosis or missed
-          diagnosis—depression presenting as anger may be labeled as relationship problem or
+          diagnosis---depression presenting as anger may be labeled as relationship problem or
           character flaw rather than mood disorder.
         </p>
 
@@ -889,7 +889,7 @@ export const articles: Article[] = [
         <h2>Risk Factors and Relationship Dynamics</h2>
         <p>
           <Citation index={3} /> Several factors increase partner depression risk. The strongest
-          predictor is birthing partner's depression—when one partner is depressed, the other's
+          predictor is birthing partner's depression---when one partner is depressed, the other's
           risk increases 2.5-5 times. This likely reflects both relationship strain from one
           partner's illness and shared risk factors (financial stress, difficult baby, lack of
           support). Other risk factors include relationship conflict before or during pregnancy,
@@ -936,7 +936,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Self-Advocacy for Partners"
-          content="If you're struggling: 1) Tell your primary care provider 'I'm experiencing symptoms of postpartum depression' (yes, use that term even if you didn't give birth), 2) Seek therapists who work with new fathers/partners specifically, 3) Join online support communities for non-birthing parents, 4) If your partner is also struggling, advocate for couples therapy and individual treatment for both of you. Your mental health is not a luxury—it's essential for your wellbeing and your family's health."
+          content="If you're struggling: 1) Tell your primary care provider 'I'm experiencing symptoms of postpartum depression' (yes, use that term even if you didn't give birth), 2) Seek therapists who work with new fathers/partners specifically, 3) Join online support communities for non-birthing parents, 4) If your partner is also struggling, advocate for couples therapy and individual treatment for both of you. Your mental health is not a luxury---it's essential for your wellbeing and your family's health."
         />
       </>
     ),

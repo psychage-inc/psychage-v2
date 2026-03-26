@@ -112,7 +112,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           <p className="mb-6">
             Understanding the causes of anxiety isn't about finding someone or something to blame. It's about
             recognizing that anxiety disorders have biological and psychological roots that make them real
-            medical conditions — not personal failings.
+            medical conditions --- not personal failings.
           </p>
         </div>
 
@@ -188,7 +188,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           <li>Genes affecting GABA function (the brain's primary calming neurotransmitter)</li>
         </ul>
         <p className="mb-6">
-          Importantly, having these genetic variants doesn't guarantee you'll develop an anxiety disorder —
+          Importantly, having these genetic variants doesn't guarantee you'll develop an anxiety disorder ---
           it just makes you more vulnerable under stressful conditions. This is why identical twins (who
           share 100% of their DNA) don't have 100% concordance for anxiety disorders. Genes load the gun,
           but environment pulls the trigger.
@@ -198,7 +198,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           <p className="mb-4">
             One of the most studied findings is how the serotonin transporter gene (5-HTTLPR) interacts with
             stress. People with the "short" variant of this gene are more vulnerable to developing anxiety
-            when exposed to significant life stress — but they don't have higher anxiety rates in
+            when exposed to significant life stress --- but they don't have higher anxiety rates in
             low-stress environments{', '}
             <Citation id="2" index={5} source="Current Psychiatry Reports" year="2021" tier={1} />.
           </p>
@@ -404,8 +404,8 @@ export const understandingAnxietyArticlesB: Article[] = [
               title: 'Chronic Stress',
               description: (
                 <p>
-                  Prolonged exposure to stressors — financial hardship, relationship problems, caregiving
-                  demands, discrimination — wears down stress resilience and increases anxiety risk.
+                  Prolonged exposure to stressors --- financial hardship, relationship problems, caregiving
+                  demands, discrimination --- wears down stress resilience and increases anxiety risk.
                 </p>
               ),
             },
@@ -513,7 +513,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           </li>
           <li>We don't know why some people naturally recover while others develop chronic anxiety</li>
           <li>
-            Individual variation is enormous — no single cause explains all cases of even one anxiety
+            Individual variation is enormous --- no single cause explains all cases of even one anxiety
             disorder
           </li>
         </ul>
@@ -644,7 +644,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Anxiety doesn't usually appear overnight as a full-blown disorder. It typically develops
             gradually, starting with mild symptoms that worsen over time if left unaddressed. Understanding
-            this progression can help you intervene early — before anxiety becomes deeply entrenched.
+            this progression can help you intervene early --- before anxiety becomes deeply entrenched.
           </p>
           <p className="mb-6">
             Research shows that anxiety disorders follow predictable patterns from onset to chronicity{', '}
@@ -721,7 +721,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           </li>
           <li>
             <strong>Triggering event:</strong> Often (but not always) a stressor precipitates the first
-            significant anxiety episode — a traumatic event, major life change, or accumulated stress
+            significant anxiety episode --- a traumatic event, major life change, or accumulated stress
           </li>
           <li>
             <strong>First panic attack or intense anxiety episode:</strong> This initial experience is often
@@ -766,7 +766,7 @@ export const understandingAnxietyArticlesB: Article[] = [
               title: 'Avoidance Patterns Form',
               description: (
                 <p>
-                  You start avoiding triggers — skipping social events, refusing to drive certain routes,
+                  You start avoiding triggers --- skipping social events, refusing to drive certain routes,
                   declining opportunities. Each avoidance provides short-term relief but strengthens the
                   anxiety cycle.
                 </p>
@@ -802,7 +802,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           Stage 3: Chronic Anxiety and Lifestyle Impact
         </h2>
         <p className="mb-6">
-          Without treatment, anxiety often becomes chronic — persisting for months or years{', '}
+          Without treatment, anxiety often becomes chronic --- persisting for months or years{', '}
           <Citation id="7" index={5} source="British Journal of Psychiatry" year="2020" tier={1} />. At this
           stage:
         </p>
@@ -870,7 +870,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           </li>
         </ul>
         <p className="mb-6">
-          This pattern can be frustrating — feeling better only to relapse — but it's actually normal for
+          This pattern can be frustrating --- feeling better only to relapse --- but it's actually normal for
           untreated anxiety disorders. Treatment significantly reduces this cycling and promotes sustained
           recovery.
         </p>
@@ -1031,7 +1031,7 @@ export const understandingAnxietyArticlesB: Article[] = [
     id: catId(8),
     slug: 'anxiety-statistics-research-who-is-affected',
     title: "Anxiety in Numbers: What the Research Tells Us About Who's Affected",
-    description: "Explore the latest statistics on anxiety disorders globally — who develops them, when, and what factors influence prevalence.",
+    description: "Explore the latest statistics on anxiety disorders globally --- who develops them, when, and what factors influence prevalence.",
     image: "/images/articles/cat02/cover-008.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 7,
@@ -1114,7 +1114,7 @@ export const understandingAnxietyArticlesB: Article[] = [
             context for both individuals and healthcare systems.
           </p>
           <p className="mb-6">
-            These statistics aren't just numbers — they represent real people navigating challenges that often
+            These statistics aren't just numbers --- they represent real people navigating challenges that often
             feel isolating. Knowing how common anxiety is can help reduce stigma and normalize seeking help.
           </p>
         </div>
@@ -1307,7 +1307,7 @@ export const understandingAnxietyArticlesB: Article[] = [
             high-income)
           </li>
           <li>
-            <strong>Education:</strong> Inverse relationship — lower education associated with higher anxiety
+            <strong>Education:</strong> Inverse relationship --- lower education associated with higher anxiety
             rates
           </li>
           <li>
@@ -1452,7 +1452,7 @@ export const understandingAnxietyArticlesB: Article[] = [
             evidence-based treatment
           </li>
           <li>
-            <strong>Early treatment matters:</strong> The long delay from onset to treatment is a problem —
+            <strong>Early treatment matters:</strong> The long delay from onset to treatment is a problem ---
             seeking help early improves outcomes
           </li>
           <li>
@@ -1562,7 +1562,7 @@ export const understandingAnxietyArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your anxiety isn't a design flaw. It's a feature — an ancient survival system that kept your
+            Your anxiety isn't a design flaw. It's a feature --- an ancient survival system that kept your
             ancestors alive long enough to have children, who eventually had you. Understanding why anxiety
             evolved can transform it from an enemy into a misguided protector.
           </p>
@@ -1627,7 +1627,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Imagine a smoke detector that only goes off when absolutely certain there's a fire. Sounds great,
-          right? Except you'd die in fires it missed. A good smoke detector is overly sensitive — it goes
+          right? Except you'd die in fires it missed. A good smoke detector is overly sensitive --- it goes
           off when you burn toast because missing even one real fire is catastrophic.
         </p>
         <p className="mb-6">
@@ -1920,7 +1920,7 @@ export const understandingAnxietyArticlesB: Article[] = [
             intended for physical action
           </li>
           <li>
-            <strong>Accept you can't eliminate anxiety:</strong> The goal isn't zero anxiety — it's anxiety
+            <strong>Accept you can't eliminate anxiety:</strong> The goal isn't zero anxiety --- it's anxiety
             that's proportionate and manageable
           </li>
         </ul>
@@ -1949,7 +1949,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>Bottom line:</strong> Your anxiety exists because it kept your ancestors alive. The
-            hypervigilance, the worst-case thinking, the constant scanning for threat — these were features,
+            hypervigilance, the worst-case thinking, the constant scanning for threat --- these were features,
             not bugs, for most of human history.
           </p>
           <p className="mb-4">
@@ -1958,7 +1958,7 @@ export const understandingAnxietyArticlesB: Article[] = [
           </p>
           <p>
             Understanding this doesn't cure anxiety, but it can reduce shame, provide context, and guide more
-            effective interventions. You're not broken — you're just running outdated software.
+            effective interventions. You're not broken --- you're just running outdated software.
           </p>
         </ArticleCallout>
       </>
@@ -2051,7 +2051,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Racing heart. Sweaty palms. Butterflies in your stomach. Rapid breathing. Quick thoughts. Are you
-            anxious or excited? Your body can't tell the difference — the same physiological arousal
+            anxious or excited? Your body can't tell the difference --- the same physiological arousal
             underlies both emotions. The difference is entirely in how your brain interprets it.
           </p>
           <p className="mb-6">
@@ -2071,7 +2071,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
             <strong>Identical physiology:</strong> Anxiety and excitement produce nearly identical bodily
-            states — increased heart rate, respiration, adrenaline, and cortisol{', '}
+            states --- increased heart rate, respiration, adrenaline, and cortisol{', '}
             <Citation id="4" index={2} source="Biological Psychology" year="2020" tier={1} />
           </li>
           <li>
@@ -2245,11 +2245,11 @@ export const understandingAnxietyArticlesB: Article[] = [
                 <div>
                   <p className="mb-3">
                     <strong>Anxiety:</strong> You interpret the situation as threatening. Your arousal means
-                    "Danger ahead — something bad might happen."
+                    "Danger ahead --- something bad might happen."
                   </p>
                   <p>
                     <strong>Excitement:</strong> You interpret the situation as an opportunity. Your arousal
-                    means "Something good is coming — I'm ready for this."
+                    means "Something good is coming --- I'm ready for this."
                   </p>
                 </div>
               ),
@@ -2361,7 +2361,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         </ol>
 
         <QuoteBlock
-          quote="Don't try to calm down before a big moment. Get excited instead. Your body is already giving you the energy you need — just change the story about what that energy means."
+          quote="Don't try to calm down before a big moment. Get excited instead. Your body is already giving you the energy you need --- just change the story about what that energy means."
           attribution="Dr. James Rivera"
           role="Clinical Psychologist"
           source="Psychage Content Team"
@@ -2444,7 +2444,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
             <strong>Your symptoms aren't the enemy:</strong> Racing heart and butterflies aren't signs
-            something is wrong — they're signs your body is ready
+            something is wrong --- they're signs your body is ready
           </li>
           <li>
             <strong>Small mindset shifts matter:</strong> Changing how you interpret arousal can
@@ -2463,7 +2463,7 @@ export const understandingAnxietyArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>Bottom line:</strong> Anxiety and excitement are physiologically identical. Your racing
-            heart doesn't know if you're terrified or thrilled — only your brain's interpretation determines
+            heart doesn't know if you're terrified or thrilled --- only your brain's interpretation determines
             which emotion you experience.
           </p>
           <p className="mb-4">

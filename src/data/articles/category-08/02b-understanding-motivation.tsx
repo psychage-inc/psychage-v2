@@ -103,10 +103,10 @@ export const understandingMotivationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can force yourself to exercise for weeks through sheer willpower. You can chase external rewards—money, status, approval—for months or even years. But sustainable motivation, the kind that carries you through setbacks and keeps you going when no one's watching, comes from a deeper source: alignment between your actions and your core values, between your daily behaviors and your sense of purpose.
+            You can force yourself to exercise for weeks through sheer willpower. You can chase external rewards---money, status, approval---for months or even years. But sustainable motivation, the kind that carries you through setbacks and keeps you going when no one's watching, comes from a deeper source: alignment between your actions and your core values, between your daily behaviors and your sense of purpose.
           </p>
           <p className="mb-6">
-            Research on self-concordant goals shows that people who pursue goals aligned with their values experience greater persistence, better wellbeing, and more goal attainment than those pursuing goals for external reasons <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2001" tier={1} />. Understanding and connecting to your values isn't just philosophical—it's practical fuel for sustained behavior change.
+            Research on self-concordant goals shows that people who pursue goals aligned with their values experience greater persistence, better wellbeing, and more goal attainment than those pursuing goals for external reasons <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2001" tier={1} />. Understanding and connecting to your values isn't just philosophical---it's practical fuel for sustained behavior change.
           </p>
         </div>
 
@@ -127,8 +127,8 @@ export const understandingMotivationArticlesB: Article[] = [
           data={[
             {
               dimension: 'Nature',
-              values: 'Directions—ongoing, never finished',
-              goals: 'Destinations—specific, achievable endpoints',
+              values: 'Directions---ongoing, never finished',
+              goals: 'Destinations---specific, achievable endpoints',
             },
             {
               dimension: 'Example',
@@ -137,24 +137,24 @@ export const understandingMotivationArticlesB: Article[] = [
             },
             {
               dimension: 'Completion',
-              values: 'Never complete—always more to do',
+              values: 'Never complete---always more to do',
               goals: 'Can be checked off when achieved',
             },
             {
               dimension: 'Failure',
-              values: 'Can\'t fail—can only reconnect',
+              values: 'Can\'t fail---can only reconnect',
               goals: 'Can succeed or fail',
             },
             {
               dimension: 'Motivation',
-              values: 'Intrinsic—aligned with who you want to be',
+              values: 'Intrinsic---aligned with who you want to be',
               goals: 'Can be intrinsic or extrinsic',
             },
           ]}
         />
 
         <p className="mt-6 mb-6">
-          Values are like compass directions (north, south); goals are like destinations (a specific town). You can reach a destination, but you never "arrive" at north—you just keep moving in that direction. This is why values provide more durable motivation: they can't be depleted through achievement.
+          Values are like compass directions (north, south); goals are like destinations (a specific town). You can reach a destination, but you never "arrive" at north---you just keep moving in that direction. This is why values provide more durable motivation: they can't be depleted through achievement.
         </p>
 
         <h2 id="self-concordance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -175,7 +175,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          When goals are self-concordant, you pursue them because they reflect who you are and what matters to you—not because you'll get rewarded or avoid punishment. This internalized motivation is more resilient to setbacks and doesn't require constant external reinforcement.
+          When goals are self-concordant, you pursue them because they reflect who you are and what matters to you---not because you'll get rewarded or avoid punishment. This internalized motivation is more resilient to setbacks and doesn't require constant external reinforcement.
         </p>
 
         <ArticleCallout
@@ -187,7 +187,7 @@ export const understandingMotivationArticlesB: Article[] = [
                 Self-concordant goals satisfy basic psychological needs for autonomy, competence, and relatedness. When you pursue a goal because it aligns with your values (high self-concordance), you experience autonomy (you chose it freely), competence (it challenges you meaningfully), and often relatedness (it connects to what matters to you and others).
               </p>
               <p>
-                This creates a positive feedback loop: self-concordant goals → greater effort → better attainment → need satisfaction → wellbeing → more motivation for future goals. Non-concordant goals break this cycle—even when achieved, they don't satisfy needs or increase wellbeing, draining motivation over time.
+                This creates a positive feedback loop: self-concordant goals → greater effort → better attainment → need satisfaction → wellbeing → more motivation for future goals. Non-concordant goals break this cycle---even when achieved, they don't satisfy needs or increase wellbeing, draining motivation over time.
               </p>
             </div>
           }
@@ -271,7 +271,7 @@ export const understandingMotivationArticlesB: Article[] = [
           Purpose: The Larger Frame
         </h2>
         <p className="mb-6">
-          While values are directions you want to move in, purpose is the overarching sense of meaning and significance in your life—the "why" behind the "what." Research shows that having a sense of purpose predicts:
+          While values are directions you want to move in, purpose is the overarching sense of meaning and significance in your life---the "why" behind the "what." Research shows that having a sense of purpose predicts:
         </p>
 
         <ArticleChart
@@ -290,7 +290,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          A landmark study tracking over 6,000 adults found that those with higher sense of purpose had significantly lower mortality risk over a 14-year period, even controlling for other factors <Citation id="4" index={4} source="Psychological Science" year="2014" tier={1} />. Purpose isn't just philosophical—it has measurable impacts on physical and mental health.
+          A landmark study tracking over 6,000 adults found that those with higher sense of purpose had significantly lower mortality risk over a 14-year period, even controlling for other factors <Citation id="4" index={4} source="Psychological Science" year="2014" tier={1} />. Purpose isn't just philosophical---it has measurable impacts on physical and mental health.
         </p>
 
         <ArticleCallout
@@ -320,12 +320,12 @@ export const understandingMotivationArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="People who prioritize intrinsic goals report greater wellbeing, vitality, and self-actualization. Those who prioritize extrinsic goals—even when they achieve them—report lower wellbeing and more symptoms of anxiety and depression."
+          quote="People who prioritize intrinsic goals report greater wellbeing, vitality, and self-actualization. Those who prioritize extrinsic goals---even when they achieve them---report lower wellbeing and more symptoms of anxiety and depression."
           author="Self-Determination Theory Research"
         />
 
         <p className="mt-6 mb-6">
-          This doesn't mean money, success, or appearance can't be goals—but when they're primary motivators disconnected from deeper values, they don't satisfy psychological needs or produce lasting fulfillment. The most sustainable goals have intrinsic content or connect extrinsic achievements to intrinsic values (e.g., 'I want financial security so I can spend more time with family').
+          This doesn't mean money, success, or appearance can't be goals---but when they're primary motivators disconnected from deeper values, they don't satisfy psychological needs or produce lasting fulfillment. The most sustainable goals have intrinsic content or connect extrinsic achievements to intrinsic values (e.g., 'I want financial security so I can spend more time with family').
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -339,7 +339,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: '1. Write Your Eulogy or 80th Birthday Speech',
               description: (
                 <p>
-                  Imagine you're 80 years old looking back, or imagine what you'd want said at your funeral. What kind of person were you? What did you stand for? What mattered most? This exercise quickly clarifies values by forcing long-term perspective—the daily frustrations fade, and what truly matters comes into focus.
+                  Imagine you're 80 years old looking back, or imagine what you'd want said at your funeral. What kind of person were you? What did you stand for? What mattered most? This exercise quickly clarifies values by forcing long-term perspective---the daily frustrations fade, and what truly matters comes into focus.
                 </p>
               ),
             },
@@ -363,7 +363,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: '4. Regular Values Check-Ins',
               description: (
                 <p>
-                  Monthly or quarterly, review your activities and commitments: 'Are my daily behaviors aligned with my stated values? Where am I living inconsistently with what matters most?" This audit prevents value drift—when you slowly move away from what matters without realizing it.
+                  Monthly or quarterly, review your activities and commitments: 'Are my daily behaviors aligned with my stated values? Where am I living inconsistently with what matters most?" This audit prevents value drift---when you slowly move away from what matters without realizing it.
                 </p>
               ),
             },
@@ -371,7 +371,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: '5. Reframe Tasks as Value Expression',
               description: (
                 <p>
-                  When facing an unmotivating task, explicitly reframe it as value expression: "This isn't just exercise—this is me living my value of self-respect and vitality." This cognitive reframe increases autonomous motivation and reduces the sense of external pressure <Citation id="7" index={7} source="Psychological Science" year="2020" tier={1} />.
+                  When facing an unmotivating task, explicitly reframe it as value expression: "This isn't just exercise---this is me living my value of self-respect and vitality." This cognitive reframe increases autonomous motivation and reduces the sense of external pressure <Citation id="7" index={7} source="Psychological Science" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -395,7 +395,7 @@ export const understandingMotivationArticlesB: Article[] = [
                 <li><strong>Prioritize:</strong> Not all values can be maximized simultaneously. Which matters most in this season of life?</li>
                 <li><strong>Integrate:</strong> Look for ways to honor both values partially rather than choosing one completely</li>
                 <li><strong>Accept Trade-offs:</strong> Every choice involves opportunity cost. Make the trade-off consciously rather than avoiding the tension</li>
-                <li><strong>Revisit Regularly:</strong> Priorities shift over time. What you valued at 25 may differ from what you value at 45—that's healthy growth</li>
+                <li><strong>Revisit Regularly:</strong> Priorities shift over time. What you valued at 25 may differ from what you value at 45---that's healthy growth</li>
               </ul>
               <p className="mt-3">
                 Research shows that wellbeing comes not from perfectly balancing all values, but from making conscious choices aligned with current priorities and accepting the inherent trade-offs <Citation id="9" index={9} source="Journal of Personality and Social Psychology" year="1998" tier={1} />.
@@ -413,10 +413,10 @@ export const understandingMotivationArticlesB: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>Values are directions (ongoing), not destinations (achievable)—this makes them more durable sources of motivation than goals alone</li>
+              <li>Values are directions (ongoing), not destinations (achievable)---this makes them more durable sources of motivation than goals alone</li>
               <li>Self-concordant goals (aligned with values) lead to greater persistence, attainment, and wellbeing than goals pursued for external reasons</li>
-              <li>Connect daily behaviors to core values through explicit reframing—this increases autonomous motivation and reduces sense of external pressure</li>
-              <li>Sense of purpose (overarching meaning) predicts better physical health, mental health, and even longevity—it's not just philosophical</li>
+              <li>Connect daily behaviors to core values through explicit reframing---this increases autonomous motivation and reduces sense of external pressure</li>
+              <li>Sense of purpose (overarching meaning) predicts better physical health, mental health, and even longevity---it's not just philosophical</li>
               <li>Intrinsic goal contents (growth, relationships, contribution) produce greater wellbeing than extrinsic contents (wealth, fame, image), even when extrinsic goals are achieved</li>
             </ul>
           }
@@ -434,7 +434,7 @@ export const understandingMotivationArticlesB: Article[] = [
     id: catId(17),
     slug: 'reward-systems-incentives-without-undermining-motivation',
     title: 'Reward Systems: How to Use Incentives Without Undermining Intrinsic Motivation',
-    description: 'Discover evidence-based strategies for using rewards and incentives effectively—without destroying the internal motivation that makes behavior sustainable.',
+    description: 'Discover evidence-based strategies for using rewards and incentives effectively---without destroying the internal motivation that makes behavior sustainable.',
     image: "/images/articles/cat08/cover-017.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -512,10 +512,10 @@ export const understandingMotivationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You want to build a habit, so you create a reward system: "If I exercise five times this week, I'll buy myself that new book." It works for a while—you hit your targets, earn your rewards. But then something strange happens: when you stop the rewards, the behavior stops too. Even though you used to enjoy exercise, it now feels like work without the payoff. You've accidentally undermined your intrinsic motivation.
+            You want to build a habit, so you create a reward system: "If I exercise five times this week, I'll buy myself that new book." It works for a while---you hit your targets, earn your rewards. But then something strange happens: when you stop the rewards, the behavior stops too. Even though you used to enjoy exercise, it now feels like work without the payoff. You've accidentally undermined your intrinsic motivation.
           </p>
           <p className="mb-6">
-            This is the central dilemma of reward systems: they can effectively initiate behavior, but they risk destroying the internal motivation that makes behavior sustainable long-term. A meta-analysis of 128 studies found that tangible rewards significantly undermine intrinsic motivation, especially when expected and tied to task completion <Citation id="1" index={1} source="Psychological Bulletin" year="1999" tier={1} />. But rewards don't have to backfire—if used strategically.
+            This is the central dilemma of reward systems: they can effectively initiate behavior, but they risk destroying the internal motivation that makes behavior sustainable long-term. A meta-analysis of 128 studies found that tangible rewards significantly undermine intrinsic motivation, especially when expected and tied to task completion <Citation id="1" index={1} source="Psychological Bulletin" year="1999" tier={1} />. But rewards don't have to backfire---if used strategically.
           </p>
         </div>
 
@@ -538,7 +538,7 @@ export const understandingMotivationArticlesB: Article[] = [
                 <li><strong>Locus of causality shifts:</strong> You perceive the behavior as controlled by external factors rather than freely chosen</li>
                 <li><strong>Autonomy decreases:</strong> You feel less self-determined, more pressured</li>
                 <li><strong>Interest declines:</strong> The activity itself becomes less engaging</li>
-                <li><strong>Contingency dependency:</strong> When rewards stop, behavior stops—even if you originally enjoyed it</li>
+                <li><strong>Contingency dependency:</strong> When rewards stop, behavior stops---even if you originally enjoyed it</li>
               </ul>
             </div>
           }
@@ -588,14 +588,14 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The key insight: rewards are less harmful—and sometimes beneficial—when they acknowledge competence and effort rather than controlling behavior through contingencies.
+          The key insight: rewards are less harmful---and sometimes beneficial---when they acknowledge competence and effort rather than controlling behavior through contingencies.
         </p>
 
         <h2 id="verbal-rewards" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Power of Verbal Rewards (Done Right)
         </h2>
         <p className="mb-6">
-          Unlike tangible rewards, verbal rewards (praise, positive feedback) can actually enhance intrinsic motivation—but only when delivered in specific ways. A meta-analysis found that verbal rewards increase intrinsic motivation when they're informational (provide feedback about competence) rather than controlling (pressure to perform) <Citation id="4" index={4} source="Journal of Personality and Social Psychology" year="2015" tier={1} />.
+          Unlike tangible rewards, verbal rewards (praise, positive feedback) can actually enhance intrinsic motivation---but only when delivered in specific ways. A meta-analysis found that verbal rewards increase intrinsic motivation when they're informational (provide feedback about competence) rather than controlling (pressure to perform) <Citation id="4" index={4} source="Journal of Personality and Social Psychology" year="2015" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -612,7 +612,7 @@ export const understandingMotivationArticlesB: Article[] = [
                     <li><strong>Process praise (supportive):</strong> "You worked really hard on that!", "Your strategy was effective!", "You persisted through difficulty!"</li>
                   </ul>
                   <p className="mt-3">
-                    Person praise focuses on fixed traits and creates pressure to maintain the identity. Process praise acknowledges controllable factors—effort, strategy, persistence—and increases motivation because it suggests improvement is possible through action.
+                    Person praise focuses on fixed traits and creates pressure to maintain the identity. Process praise acknowledges controllable factors---effort, strategy, persistence---and increases motivation because it suggests improvement is possible through action.
                   </p>
                 </div>
               ),
@@ -629,7 +629,7 @@ export const understandingMotivationArticlesB: Article[] = [
                   </ul>
                   <p className="mb-3"><strong>Informational feedback:</strong></p>
                   <ul className="list-disc pl-6 space-y-1">
-                    <li>"I noticed you tried a new approach—how did that feel?"</li>
+                    <li>"I noticed you tried a new approach---how did that feel?"</li>
                     <li>"Your persistence really paid off in solving that problem."</li>
                     <li>"You seemed really engaged with that task."</li>
                   </ul>
@@ -646,7 +646,7 @@ export const understandingMotivationArticlesB: Article[] = [
           Strategic Use of Tangible Rewards
         </h2>
         <p className="mb-6">
-          Sometimes you need to use tangible rewards—for tasks you genuinely don't enjoy or when building initial momentum. The key is using them temporarily and strategically while working toward internalization:
+          Sometimes you need to use tangible rewards---for tasks you genuinely don't enjoy or when building initial momentum. The key is using them temporarily and strategically while working toward internalization:
         </p>
 
         <ProgressSteps
@@ -672,7 +672,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: 'Phase 3: Value Connection',
               description: (
                 <p>
-                  Connect the behavior to personal values: 'I exercise because I value taking care of my body." Now motivation is internalized—the behavior aligns with who you are, not what you get.
+                  Connect the behavior to personal values: 'I exercise because I value taking care of my body." Now motivation is internalized---the behavior aligns with who you are, not what you get.
                 </p>
               ),
             },
@@ -680,7 +680,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: 'Phase 4: Reward Removal',
               description: (
                 <p>
-                  Gradually remove external rewards as internal motivation strengthens. If motivation drops when rewards disappear, you removed them too early—go back to Phase 2 and build more competence and value connection.
+                  Gradually remove external rewards as internal motivation strengthens. If motivation drops when rewards disappear, you removed them too early---go back to Phase 2 and build more competence and value connection.
                 </p>
               ),
             },
@@ -712,7 +712,7 @@ export const understandingMotivationArticlesB: Article[] = [
           Gamification: A Modern Reward System
         </h2>
         <p className="mb-6">
-          Gamification—using game elements like points, badges, leaderboards—is essentially a reward system. Research on gamification shows mixed results: it can increase short-term engagement but often fails to produce lasting behavior change <Citation id="6" index={6} source="American Journal of Preventive Medicine" year="2013" tier={1} />.
+          Gamification---using game elements like points, badges, leaderboards---is essentially a reward system. Research on gamification shows mixed results: it can increase short-term engagement but often fails to produce lasting behavior change <Citation id="6" index={6} source="American Journal of Preventive Medicine" year="2013" tier={1} />.
         </p>
 
         <ArticleCallout
@@ -768,14 +768,14 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Financial incentives work best when used as initial catalyst with explicit plan for transitioning to internalized motivation—building competence, connecting to values, and creating social support that continues after payments end.
+          Financial incentives work best when used as initial catalyst with explicit plan for transitioning to internalized motivation---building competence, connecting to values, and creating social support that continues after payments end.
         </p>
 
         <h2 id="self-rewards" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Self-Rewards: A Different Category
         </h2>
         <p className="mb-6">
-          Interestingly, self-administered rewards (you reward yourself) show less undermining effect than externally administered rewards <Citation id="8" index={8} source="Motivation and Emotion" year="2016" tier={1} />. This may be because self-rewards preserve autonomy—you control whether, when, and how you're rewarded.
+          Interestingly, self-administered rewards (you reward yourself) show less undermining effect than externally administered rewards <Citation id="8" index={8} source="Motivation and Emotion" year="2016" tier={1} />. This may be because self-rewards preserve autonomy---you control whether, when, and how you're rewarded.
         </p>
 
         <ArticleAccordion
@@ -786,7 +786,7 @@ export const understandingMotivationArticlesB: Article[] = [
                 <div>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Make them meaningful but not controlling:</strong> "After my workout, I'll enjoy a nice coffee' (celebrating the behavior) vs. "I can only have coffee if I work out" (contingency that creates pressure)</li>
-                    <li><strong>Focus on experiences over things:</strong> Time in nature, social connection, relaxing activity—rewards that align with wellbeing rather than consumption</li>
+                    <li><strong>Focus on experiences over things:</strong> Time in nature, social connection, relaxing activity---rewards that align with wellbeing rather than consumption</li>
                     <li><strong>Connect to the behavior:</strong> Reward exercise with a massage (related) rather than ice cream (contradictory). This reinforces the value system rather than creating cognitive dissonance</li>
                     <li><strong>Use them temporarily:</strong> View self-rewards as training wheels while you build intrinsic motivation, not as permanent motivation strategy</li>
                   </ul>
@@ -824,18 +824,18 @@ export const understandingMotivationArticlesB: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>Expected tangible rewards significantly undermine intrinsic motivation, especially for tasks you already find interesting—use them sparingly and strategically</li>
+              <li>Expected tangible rewards significantly undermine intrinsic motivation, especially for tasks you already find interesting---use them sparingly and strategically</li>
               <li>Verbal rewards (praise, feedback) can support motivation when informational (acknowledging competence/effort) rather than controlling (pressuring performance)</li>
               <li>Process praise ("You worked hard") supports motivation; person praise ("You're smart") undermines it by creating pressure to maintain identity</li>
               <li>Use tangible rewards as temporary scaffolding while building competence and value connection, then remove them as internal motivation strengthens</li>
-              <li>Avoid performance-contingent rewards for creative, interesting, or complex tasks—they reduce exploration, risk-taking, and enjoyment</li>
+              <li>Avoid performance-contingent rewards for creative, interesting, or complex tasks---they reduce exploration, risk-taking, and enjoyment</li>
             </ul>
           }
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> Rewards can support or undermine motivation—but so can the fundamental sense of control you have over your actions. Discover why autonomy is the most powerful predictor of sustained motivation.
+            <strong>Next:</strong> Rewards can support or undermine motivation---but so can the fundamental sense of control you have over your actions. Discover why autonomy is the most powerful predictor of sustained motivation.
           </p>
         </div>
       </>
@@ -845,7 +845,7 @@ export const understandingMotivationArticlesB: Article[] = [
     id: catId(18),
     slug: 'role-autonomy-motivation-why-choice-matters',
     title: 'The Role of Autonomy in Motivation: Why Choice Matters',
-    description: 'Explore why feeling self-directed—rather than controlled—is essential for sustained motivation, even in structured environments where choice seems limited.',
+    description: 'Explore why feeling self-directed---rather than controlled---is essential for sustained motivation, even in structured environments where choice seems limited.',
     image: "/images/articles/cat08/cover-018.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 9,
@@ -931,10 +931,10 @@ export const understandingMotivationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Two people receive the same health advice: exercise three times weekly. One feels motivated and follows through. The other feels pressured and resists. The difference? The first person feels the recommendation respects their autonomy—they choose to follow it because it aligns with their values. The second feels controlled—the advice is imposed, removing their sense of choice. Same behavior, different motivation.
+            Two people receive the same health advice: exercise three times weekly. One feels motivated and follows through. The other feels pressured and resists. The difference? The first person feels the recommendation respects their autonomy---they choose to follow it because it aligns with their values. The second feels controlled---the advice is imposed, removing their sense of choice. Same behavior, different motivation.
           </p>
           <p className="mb-6">
-            Autonomy—the experience of behaving according to your values and interests rather than external pressure—is one of the three universal psychological needs identified by self-determination theory. Research consistently shows that autonomy support predicts greater motivation, engagement, wellbeing, and even physical health outcomes across diverse domains <Citation id="1" index={1} source="Psychological Bulletin" year="2008" tier={1} />.
+            Autonomy---the experience of behaving according to your values and interests rather than external pressure---is one of the three universal psychological needs identified by self-determination theory. Research consistently shows that autonomy support predicts greater motivation, engagement, wellbeing, and even physical health outcomes across diverse domains <Citation id="1" index={1} source="Psychological Bulletin" year="2008" tier={1} />.
           </p>
         </div>
 
@@ -972,7 +972,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          You can experience autonomy while following rules, accepting help, or even doing things you'd rather not do—as long as you endorse the behavior rather than feeling coerced. A student who genuinely values education feels autonomous doing homework; one who does it only to avoid punishment does not.
+          You can experience autonomy while following rules, accepting help, or even doing things you'd rather not do---as long as you endorse the behavior rather than feeling coerced. A student who genuinely values education feels autonomous doing homework; one who does it only to avoid punishment does not.
         </p>
 
         <ArticleCallout
@@ -980,7 +980,7 @@ export const understandingMotivationArticlesB: Article[] = [
           title="The Paradox of Autonomy"
           content={
             <p>
-              You can feel autonomous while doing something someone else suggested, required, or even mandated—if you understand the rationale, see how it aligns with your values, and experience a sense of choice in how you approach it. Autonomy isn't about making every decision; it's about experiencing your actions as self-endorsed rather than externally imposed.
+              You can feel autonomous while doing something someone else suggested, required, or even mandated---if you understand the rationale, see how it aligns with your values, and experience a sense of choice in how you approach it. Autonomy isn't about making every decision; it's about experiencing your actions as self-endorsed rather than externally imposed.
             </p>
           }
         />
@@ -989,7 +989,7 @@ export const understandingMotivationArticlesB: Article[] = [
           The Psychology of Choice
         </h2>
         <p className="mb-6">
-          A meta-analysis of 41 studies found that providing choice significantly increases intrinsic motivation, perceived competence, positive affect, and performance—even when choices are relatively trivial <Citation id="1" index={1} source="Psychological Bulletin" year="2008" tier={1} />. The mere presence of choice signals to your brain: "I have control here."
+          A meta-analysis of 41 studies found that providing choice significantly increases intrinsic motivation, perceived competence, positive affect, and performance---even when choices are relatively trivial <Citation id="1" index={1} source="Psychological Bulletin" year="2008" tier={1} />. The mere presence of choice signals to your brain: "I have control here."
         </p>
 
         <StatCard
@@ -1010,7 +1010,7 @@ export const understandingMotivationArticlesB: Article[] = [
           The Paradox of Too Much Choice
         </h2>
         <p className="mb-6">
-          While choice generally supports autonomy and motivation, research also shows that excessive choice can be demotivating. The famous "jam study" found that customers were more likely to purchase jam when offered 6 options versus 24—too many choices created decision paralysis <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2000" tier={1} />.
+          While choice generally supports autonomy and motivation, research also shows that excessive choice can be demotivating. The famous "jam study" found that customers were more likely to purchase jam when offered 6 options versus 24---too many choices created decision paralysis <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2000" tier={1} />.
         </p>
 
         <ArticleChart
@@ -1028,7 +1028,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The sweet spot appears to be moderate choice—enough options to feel autonomous, not so many that decision-making becomes burdensome. This is especially true for complex decisions or when you lack expertise to evaluate options.
+          The sweet spot appears to be moderate choice---enough options to feel autonomous, not so many that decision-making becomes burdensome. This is especially true for complex decisions or when you lack expertise to evaluate options.
         </p>
 
         <h2 id="autonomy-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1047,7 +1047,7 @@ export const understandingMotivationArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Provides rationale:</strong> "It's important to exercise regularly because it supports cardiovascular health and mood regulation."</li>
                     <li><strong>Acknowledges perspective:</strong> "I know this might feel like a lot right now, and it's okay if you're not ready."</li>
-                    <li><strong>Offers choice:</strong> "You could try running, swimming, or strength training—what appeals to you?"</li>
+                    <li><strong>Offers choice:</strong> "You could try running, swimming, or strength training---what appeals to you?"</li>
                     <li><strong>Uses invitational language:</strong> "You might consider...", "One option is...", "It could be helpful to..."</li>
                     <li><strong>Validates feelings:</strong> "It makes sense that you feel resistant given your past experiences."</li>
                     <li><strong>Encourages self-initiation:</strong> "What do you think would work best for your schedule?"</li>
@@ -1071,7 +1071,7 @@ export const understandingMotivationArticlesB: Article[] = [
                     <li><strong>Focuses on external outcomes:</strong> "Do this or you'll fail/disappoint me."</li>
                   </ul>
                   <p className="mt-3">
-                    Controlling communication treats you as someone to be directed rather than an autonomous agent capable of making informed decisions. Even if the advice is identical, the controlling approach undermines motivation through reactance—the psychological resistance that arises when freedom is threatened <Citation id="9" index={9} source="Cognitive Therapy and Research" year="2006" tier={1} />.
+                    Controlling communication treats you as someone to be directed rather than an autonomous agent capable of making informed decisions. Even if the advice is identical, the controlling approach undermines motivation through reactance---the psychological resistance that arises when freedom is threatened <Citation id="9" index={9} source="Cognitive Therapy and Research" year="2006" tier={1} />.
                   </p>
                 </div>
               ),
@@ -1118,14 +1118,14 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Notice how autonomy-supportive self-talk acknowledges your perspective, provides choice, and uses invitational language—even when talking to yourself. This internal communication style supports motivation by preserving your sense of agency rather than creating internal pressure and rebellion.
+          Notice how autonomy-supportive self-talk acknowledges your perspective, provides choice, and uses invitational language---even when talking to yourself. This internal communication style supports motivation by preserving your sense of agency rather than creating internal pressure and rebellion.
         </p>
 
         <h2 id="cross-cultural" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Autonomy Across Cultures
         </h2>
         <p className="mb-6">
-          A common criticism of autonomy as a universal need is that it seems Western-centric—individualistic cultures value autonomy, but what about collectivistic cultures where interdependence is emphasized? Research shows that autonomy needs are indeed universal, but how they're expressed varies culturally <Citation id="4" index={4} source="Frontiers in Psychology" year="2014" tier={1} />.
+          A common criticism of autonomy as a universal need is that it seems Western-centric---individualistic cultures value autonomy, but what about collectivistic cultures where interdependence is emphasized? Research shows that autonomy needs are indeed universal, but how they're expressed varies culturally <Citation id="4" index={4} source="Frontiers in Psychology" year="2014" tier={1} />.
         </p>
 
         <ArticleCallout
@@ -1137,7 +1137,7 @@ export const understandingMotivationArticlesB: Article[] = [
                 In individualistic cultures (US, Western Europe), autonomy often looks like "doing your own thing" and making independent choices. In collectivistic cultures (East Asia, Latin America), autonomy might look like "freely choosing to fulfill role obligations" or "endorsing family/community values."
               </p>
               <p>
-                The form differs, but the underlying need—to experience behavior as self-endorsed rather than externally imposed—remains constant. A Japanese employee who genuinely values group harmony and chooses to prioritize team over self experiences autonomy. One who feels coerced into group conformity does not <Citation id="6" index={6} source="Journal of Personality" year="2006" tier={1} />.
+                The form differs, but the underlying need---to experience behavior as self-endorsed rather than externally imposed---remains constant. A Japanese employee who genuinely values group harmony and chooses to prioritize team over self experiences autonomy. One who feels coerced into group conformity does not <Citation id="6" index={6} source="Journal of Personality" year="2006" tier={1} />.
               </p>
             </div>
           }
@@ -1151,12 +1151,12 @@ export const understandingMotivationArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Patients whose doctors use autonomy-supportive communication are more likely to follow medical advice, maintain behavior changes, and report better health outcomes—not because they're more compliant, but because they've internalized the value of the recommended behaviors."
+          quote="Patients whose doctors use autonomy-supportive communication are more likely to follow medical advice, maintain behavior changes, and report better health outcomes---not because they're more compliant, but because they've internalized the value of the recommended behaviors."
           author="Health Psychology Research"
         />
 
         <p className="mt-6 mb-6">
-          This is why paternalistic healthcare ("Do what I tell you") often fails while collaborative healthcare ("Here's the information—what makes sense for you?") succeeds. The behavior might be identical, but autonomy-supportive delivery increases adherence because patients own the decision <Citation id="8" index={8} source="Patient Education and Counseling" year="2015" tier={1} />.
+          This is why paternalistic healthcare ("Do what I tell you") often fails while collaborative healthcare ("Here's the information---what makes sense for you?") succeeds. The behavior might be identical, but autonomy-supportive delivery increases adherence because patients own the decision <Citation id="8" index={8} source="Patient Education and Counseling" year="2015" tier={1} />.
         </p>
 
         <h2 id="structured-environments" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1181,7 +1181,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: 'Offer Choice Within Structure',
               description: (
                 <p>
-                  Even when the task is fixed, offer choice in how it's done: when, where, with whom, in what order. 'You need to complete these five tasks—which would you like to start with?" Choice within constraints supports autonomy without sacrificing structure <Citation id="7" index={7} source="Psychology of Sport and Exercise" year="2010" tier={1} />.
+                  Even when the task is fixed, offer choice in how it's done: when, where, with whom, in what order. 'You need to complete these five tasks---which would you like to start with?" Choice within constraints supports autonomy without sacrificing structure <Citation id="7" index={7} source="Psychology of Sport and Exercise" year="2010" tier={1} />.
                 </p>
               ),
             },
@@ -1189,7 +1189,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: 'Acknowledge Mixed Feelings',
               description: (
                 <p>
-                  Recognize that people might not want to do something while still expecting them to do it. "I know this isn't your favorite task' validates experience without removing the requirement. Acknowledgment reduces reactance—when feelings are validated, people resist less.
+                  Recognize that people might not want to do something while still expecting them to do it. "I know this isn't your favorite task' validates experience without removing the requirement. Acknowledgment reduces reactance---when feelings are validated, people resist less.
                 </p>
               ),
             },
@@ -1197,7 +1197,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: 'Use Invitational Language',
               description: (
                 <p>
-                  Replace 'You must' with "It would be helpful if you could" or "Consider trying." Language matters—invitational phrasing preserves psychological freedom even when the outcome is non-negotiable.
+                  Replace 'You must' with "It would be helpful if you could" or "Consider trying." Language matters---invitational phrasing preserves psychological freedom even when the outcome is non-negotiable.
                 </p>
               ),
             },
@@ -1221,18 +1221,18 @@ export const understandingMotivationArticlesB: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>Autonomy is experiencing behavior as self-endorsed rather than externally controlled—it's not the same as independence or complete freedom</li>
+              <li>Autonomy is experiencing behavior as self-endorsed rather than externally controlled---it's not the same as independence or complete freedom</li>
               <li>Providing choice, even trivial choice, significantly increases intrinsic motivation, engagement, and performance across diverse contexts</li>
-              <li>However, excessive choice can be demotivating—optimal autonomy support provides moderate, meaningful choice rather than overwhelming options</li>
+              <li>However, excessive choice can be demotivating---optimal autonomy support provides moderate, meaningful choice rather than overwhelming options</li>
               <li>Autonomy-supportive communication (provides rationale, acknowledges perspective, offers choice, uses invitational language) increases motivation far more than controlling communication</li>
-              <li>You can experience autonomy even when following rules or doing required tasks—if you understand the rationale and endorse the behavior</li>
+              <li>You can experience autonomy even when following rules or doing required tasks---if you understand the rationale and endorse the behavior</li>
             </ul>
           }
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> Autonomy is powerful, but humans are also fundamentally social. Discover how social connection and accountability can fuel motivation—when done right.
+            <strong>Next:</strong> Autonomy is powerful, but humans are also fundamentally social. Discover how social connection and accountability can fuel motivation---when done right.
           </p>
         </div>
       </>
@@ -1242,7 +1242,7 @@ export const understandingMotivationArticlesB: Article[] = [
     id: catId(19),
     slug: 'how-social-connection-fuels-motivation-accountability',
     title: 'How Social Connection Fuels Motivation: The Power of Accountability',
-    description: 'Learn why social support and accountability are among the most powerful motivational tools—and how to harness them without sacrificing autonomy.',
+    description: 'Learn why social support and accountability are among the most powerful motivational tools---and how to harness them without sacrificing autonomy.',
     image: "/images/articles/cat08/cover-019.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -1320,10 +1320,10 @@ export const understandingMotivationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've committed to going to the gym three times this week. On Monday morning, your alarm goes off and you don't feel like going. If you're alone with this decision, you might roll over and skip it. But if you know your workout partner is waiting for you, you get up. Social connection doesn't just make behavior change more pleasant—it fundamentally alters your motivation structure.
+            You've committed to going to the gym three times this week. On Monday morning, your alarm goes off and you don't feel like going. If you're alone with this decision, you might roll over and skip it. But if you know your workout partner is waiting for you, you get up. Social connection doesn't just make behavior change more pleasant---it fundamentally alters your motivation structure.
           </p>
           <p className="mb-6">
-            Research on self-determination theory identifies relatedness—the need to feel connected to others—as one of three universal psychological needs. When satisfied, relatedness predicts greater intrinsic motivation, engagement, wellbeing, and goal attainment <Citation id="1" index={1} source="Journal of Applied Psychology" year="2015" tier={1} />. Understanding how to leverage social connection for motivation while preserving autonomy is one of the most practical behavior change strategies available.
+            Research on self-determination theory identifies relatedness---the need to feel connected to others---as one of three universal psychological needs. When satisfied, relatedness predicts greater intrinsic motivation, engagement, wellbeing, and goal attainment <Citation id="1" index={1} source="Journal of Applied Psychology" year="2015" tier={1} />. Understanding how to leverage social connection for motivation while preserving autonomy is one of the most practical behavior change strategies available.
           </p>
         </div>
 
@@ -1354,7 +1354,7 @@ export const understandingMotivationArticlesB: Article[] = [
           The Power of Accountability
         </h2>
         <p className="mb-6">
-          Accountability—knowing that someone will ask whether you did what you said you'd do—is one of the most powerful motivational tools. Research shows that public commitment and accountability to others significantly increases goal attainment <Citation id="3" index={3} source="Organizational Behavior and Human Decision Processes" year="2013" tier={1} />.
+          Accountability---knowing that someone will ask whether you did what you said you'd do---is one of the most powerful motivational tools. Research shows that public commitment and accountability to others significantly increases goal attainment <Citation id="3" index={3} source="Organizational Behavior and Human Decision Processes" year="2013" tier={1} />.
         </p>
 
         <ArticleChart
@@ -1377,7 +1377,7 @@ export const understandingMotivationArticlesB: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                The famous "Hawthorne effect" demonstrates that simply being observed increases performance <Citation id="4" index={4} source="Journal of Management History" year="2009" tier={1} />. When you know someone is watching or will ask about your progress, you modify your behavior—not necessarily through pressure, but through heightened awareness and activation of identity concerns ("I said I'd do this; I want to be someone who follows through").
+                The famous "Hawthorne effect" demonstrates that simply being observed increases performance <Citation id="4" index={4} source="Journal of Management History" year="2009" tier={1} />. When you know someone is watching or will ask about your progress, you modify your behavior---not necessarily through pressure, but through heightened awareness and activation of identity concerns ("I said I'd do this; I want to be someone who follows through").
               </p>
               <p>
                 This is why accountability works even when there are no explicit consequences. The knowledge that someone will know whether you succeeded creates internal motivation to maintain consistency between your stated intentions and actual behavior.
@@ -1419,7 +1419,7 @@ export const understandingMotivationArticlesB: Article[] = [
             {
               type: 'Appraisal Support',
               function: 'Feedback on progress, reality-checking',
-              example: "You've made real progress—let me show you the data.",
+              example: "You've made real progress---let me show you the data.",
             },
             {
               type: 'Companionship Support',
@@ -1441,12 +1441,12 @@ export const understandingMotivationArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote={`When "runners" run, they're not just exercising—they're expressing their identity and maintaining connection to their running community. This makes the behavior intrinsically motivating because it serves dual purposes: the activity itself and identity affirmation.`}
+          quote={`When "runners" run, they're not just exercising---they're expressing their identity and maintaining connection to their running community. This makes the behavior intrinsically motivating because it serves dual purposes: the activity itself and identity affirmation.`}
           author="Social Identity Research"
         />
 
         <p className="mt-6 mb-6">
-          This is why joining communities around your goals is so effective. A study on weight loss found that participants in group-based programs lost significantly more weight and maintained it longer than those in individual programs <Citation id="6" index={6} source="Obesity" year="2014" tier={1} />. The group provides not just accountability but identity—you become "someone in this community," and the behavior expresses that identity.
+          This is why joining communities around your goals is so effective. A study on weight loss found that participants in group-based programs lost significantly more weight and maintained it longer than those in individual programs <Citation id="6" index={6} source="Obesity" year="2014" tier={1} />. The group provides not just accountability but identity---you become "someone in this community," and the behavior expresses that identity.
         </p>
 
         <h2 id="when-accountability-backfires" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1493,7 +1493,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The key is choosing accountability partners who support your autonomy rather than control you. The ideal accountability partner asks questions, acknowledges difficulty, celebrates progress, and trusts your judgment—even when you struggle or fail.
+          The key is choosing accountability partners who support your autonomy rather than control you. The ideal accountability partner asks questions, acknowledges difficulty, celebrates progress, and trusts your judgment---even when you struggle or fail.
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1549,7 +1549,7 @@ export const understandingMotivationArticlesB: Article[] = [
               title: '4. Join Communities Aligned with Your Goals',
               content: (
                 <p>
-                  Find in-person or online communities where your goal behavior is the norm. Running clubs, writing groups, meditation sanghas, professional organizations—these provide both accountability and identity support. When everyone around you does the thing, it feels normal rather than effortful. You're not fighting against your environment; you're supported by it.
+                  Find in-person or online communities where your goal behavior is the norm. Running clubs, writing groups, meditation sanghas, professional organizations---these provide both accountability and identity support. When everyone around you does the thing, it feels normal rather than effortful. You're not fighting against your environment; you're supported by it.
                 </p>
               ),
             },
@@ -1598,7 +1598,7 @@ export const understandingMotivationArticlesB: Article[] = [
                 <li>Could I try a very low-commitment form of social support (e.g., reporting progress to one trusted person once per month)?</li>
               </ul>
               <p className="mt-3">
-                Even "lone wolves" are social animals. Relatedness is a universal need—it doesn't require constant interaction, but complete isolation from social support often limits potential.
+                Even "lone wolves" are social animals. Relatedness is a universal need---it doesn't require constant interaction, but complete isolation from social support often limits potential.
               </p>
             </div>
           }
@@ -1614,9 +1614,9 @@ export const understandingMotivationArticlesB: Article[] = [
           content={
             <ul className="list-disc pl-6 space-y-2">
               <li>Social connection fuels motivation through multiple pathways: accountability, identity, emotional support, social proof, and stress buffering</li>
-              <li>Accountability significantly increases goal attainment—simply knowing someone will ask about your progress changes behavior</li>
+              <li>Accountability significantly increases goal attainment---simply knowing someone will ask about your progress changes behavior</li>
               <li>Supportive accountability (curious, encouraging, autonomy-respecting) enhances motivation; controlling accountability (demanding, judgmental, pressuring) undermines it</li>
-              <li>Joining communities where your goal behavior is the norm provides both accountability and identity support—the behavior becomes part of who you are</li>
+              <li>Joining communities where your goal behavior is the norm provides both accountability and identity support---the behavior becomes part of who you are</li>
               <li>Structure regular check-ins with accountability partners, focus on process commitments (controllable behaviors) rather than outcome commitments (vulnerable to external factors)</li>
             </ul>
           }
@@ -1624,7 +1624,7 @@ export const understandingMotivationArticlesB: Article[] = [
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> Social support helps, but sometimes motivation disappears completely—not from lack of discipline or support, but from a deeper loss of interest in everything. Learn about anhedonia and when motivation loss signals something more serious.
+            <strong>Next:</strong> Social support helps, but sometimes motivation disappears completely---not from lack of discipline or support, but from a deeper loss of interest in everything. Learn about anhedonia and when motivation loss signals something more serious.
           </p>
         </div>
       </>
@@ -1634,7 +1634,7 @@ export const understandingMotivationArticlesB: Article[] = [
     id: catId(20),
     slug: 'when-nothing-motivates-you-anhedonia-low-drive',
     title: 'When Nothing Motivates You: Understanding Anhedonia and Low Drive',
-    description: 'Recognize when persistent loss of motivation signals anhedonia or other clinical issues—and what to do when nothing brings you joy or interest anymore.',
+    description: 'Recognize when persistent loss of motivation signals anhedonia or other clinical issues---and what to do when nothing brings you joy or interest anymore.',
     image: "/images/articles/cat08/cover-020.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 9,
@@ -1712,10 +1712,10 @@ export const understandingMotivationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've lost interest in everything. Not just one goal or hobby—everything. Activities that once brought you joy feel empty. You can't remember the last time you felt excited about anything. You go through the motions, but there's no spark, no drive, no pleasure. This isn't ordinary low motivation—this is anhedonia, and it's a signal that something deeper is happening.
+            You've lost interest in everything. Not just one goal or hobby---everything. Activities that once brought you joy feel empty. You can't remember the last time you felt excited about anything. You go through the motions, but there's no spark, no drive, no pleasure. This isn't ordinary low motivation---this is anhedonia, and it's a signal that something deeper is happening.
           </p>
           <p className="mb-6">
-            Anhedonia—the inability to feel pleasure or interest—is one of the core symptoms of depression and appears in other psychiatric conditions. While this article has explored behavioral strategies for building and sustaining motivation, those strategies assume a baseline capacity for interest and reward processing. When that capacity is impaired, behavior change techniques aren't enough. You need to address the underlying condition.
+            Anhedonia---the inability to feel pleasure or interest---is one of the core symptoms of depression and appears in other psychiatric conditions. While this article has explored behavioral strategies for building and sustaining motivation, those strategies assume a baseline capacity for interest and reward processing. When that capacity is impaired, behavior change techniques aren't enough. You need to address the underlying condition.
           </p>
         </div>
 
@@ -1723,7 +1723,7 @@ export const understandingMotivationArticlesB: Article[] = [
           What Is Anhedonia?
         </h2>
         <p className="mb-6">
-          Anhedonia is the reduced ability to experience pleasure from activities that are normally rewarding. It's not just "not feeling motivated"—it's a fundamental disruption in your brain's reward system <Citation id="1" index={1} source="Current Opinion in Behavioral Sciences" year="2018" tier={1} />.
+          Anhedonia is the reduced ability to experience pleasure from activities that are normally rewarding. It's not just "not feeling motivated"---it's a fundamental disruption in your brain's reward system <Citation id="1" index={1} source="Current Opinion in Behavioral Sciences" year="2018" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1790,7 +1790,7 @@ export const understandingMotivationArticlesB: Article[] = [
                     <li>"Everything feels like too much effort for no reward"</li>
                   </ul>
                   <p className="mt-3">
-                    Motivational anhedonia is linked to dopaminergic dysfunction—the brain systems that generate "wanting" and motivation are impaired <Citation id="7" index={7} source="Dialogues in Clinical Neuroscience" year="2014" tier={1} />.
+                    Motivational anhedonia is linked to dopaminergic dysfunction---the brain systems that generate "wanting" and motivation are impaired <Citation id="7" index={7} source="Dialogues in Clinical Neuroscience" year="2014" tier={1} />.
                   </p>
                 </div>
               ),
@@ -1819,7 +1819,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Many people with depression experience both types—they neither anticipate pleasure nor experience it when engaged in activities. This creates a vicious cycle: lack of anticipation prevents action, lack of pleasure during action confirms that "nothing matters," further reducing motivation.
+          Many people with depression experience both types---they neither anticipate pleasure nor experience it when engaged in activities. This creates a vicious cycle: lack of anticipation prevents action, lack of pleasure during action confirms that "nothing matters," further reducing motivation.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1929,11 +1929,11 @@ export const understandingMotivationArticlesB: Article[] = [
           The Importance of Self-Compassion
         </h2>
         <p className="mb-6">
-          People experiencing anhedonia often feel guilt and shame: "I should be able to enjoy things,", "I'm being lazy,", "What's wrong with me?" This self-criticism compounds the suffering. Research shows that self-compassion—treating yourself with the same kindness you'd offer a friend—significantly predicts better mental health outcomes <Citation id="8" index={8} source="Clinical Psychology Review" year="2012" tier={1} />.
+          People experiencing anhedonia often feel guilt and shame: "I should be able to enjoy things,", "I'm being lazy,", "What's wrong with me?" This self-criticism compounds the suffering. Research shows that self-compassion---treating yourself with the same kindness you'd offer a friend---significantly predicts better mental health outcomes <Citation id="8" index={8} source="Clinical Psychology Review" year="2012" tier={1} />.
         </p>
 
         <QuoteBlock
-          quote="Anhedonia is not a moral failing or character weakness. It's a disruption in neurological circuits beyond your direct control. You wouldn't blame someone for not being able to see clearly with cataracts—don't blame yourself for not being able to feel pleasure when your reward circuits are impaired."
+          quote="Anhedonia is not a moral failing or character weakness. It's a disruption in neurological circuits beyond your direct control. You wouldn't blame someone for not being able to see clearly with cataracts---don't blame yourself for not being able to feel pleasure when your reward circuits are impaired."
           author="Clinical Perspective on Anhedonia"
         />
 
@@ -1941,7 +1941,7 @@ export const understandingMotivationArticlesB: Article[] = [
           Recovery Is Possible
         </h2>
         <p className="mb-6">
-          Anhedonia can feel permanent when you're in it—you can't imagine ever feeling joy again. But research shows that anhedonia responds to treatment, often significantly:
+          Anhedonia can feel permanent when you're in it---you can't imagine ever feeling joy again. But research shows that anhedonia responds to treatment, often significantly:
         </p>
 
         <ArticleChart
@@ -1959,7 +1959,7 @@ export const understandingMotivationArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Recovery isn't always linear—you may have good days and bad days. But with appropriate treatment, most people experience significant improvement in their capacity for pleasure and motivation within weeks to months.
+          Recovery isn't always linear---you may have good days and bad days. But with appropriate treatment, most people experience significant improvement in their capacity for pleasure and motivation within weeks to months.
         </p>
 
         <h2 id="key-takeaways" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1971,10 +1971,10 @@ export const understandingMotivationArticlesB: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>Anhedonia—the inability to feel pleasure or interest—is a core symptom of depression and other conditions, reflecting disruption in brain reward circuits</li>
+              <li>Anhedonia---the inability to feel pleasure or interest---is a core symptom of depression and other conditions, reflecting disruption in brain reward circuits</li>
               <li>Motivational anhedonia (can't anticipate pleasure) and consummatory anhedonia (can't experience pleasure in the moment) often co-occur and create vicious cycles</li>
               <li>Seek professional help if loss of interest persists 2+ weeks, affects most activities, impairs functioning, or is accompanied by other depression symptoms</li>
-              <li>Evidence-based treatments include behavioral activation therapy, antidepressant medication, CBT, and lifestyle changes—often most effective in combination</li>
+              <li>Evidence-based treatments include behavioral activation therapy, antidepressant medication, CBT, and lifestyle changes---often most effective in combination</li>
               <li>Practice self-compassion: anhedonia is a neurological disruption, not a character flaw. Recovery is possible with appropriate treatment</li>
             </ul>
           }

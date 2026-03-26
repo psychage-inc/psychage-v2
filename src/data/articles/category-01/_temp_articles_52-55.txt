@@ -1,0 +1,11 @@
+This file contains the TSX content for articles 52-55 that need to be added to 06a-neuroscience-of-emotions.tsx
+
+Due to the large size of the expanded articles, I'll provide the content structure here and then we can integrate it properly into the main file.
+
+The articles needing integration are:
+- Article 52: The Amygdala (expanded to ~1800 words)
+- Article 53: Neuroplasticity and Emotional Change (expanded to ~1800 words)
+- Article 54: The Vagus Nerve: Your Body (expanded to ~1800 words)
+- Article 55: How Stress Hormones Hijack Your Emotional Regulation (expanded to ~1800 words)
+
+All articles follow the same TSX/React component structure as Article 51.

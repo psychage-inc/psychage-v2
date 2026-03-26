@@ -17,8 +17,8 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'work-life-balance-myth-what-actually-works',
-    title: "Work-Life Balance Is a Myth — Here's What Actually Works",
-    description: "Why work-life balance is an impossible standard—and what to aim for instead that actually protects your wellbeing.",
+    title: "Work-Life Balance Is a Myth --- Here's What Actually Works",
+    description: "Why work-life balance is an impossible standard---and what to aim for instead that actually protects your wellbeing.",
     image: "/images/articles/cat05/cover-021.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -97,14 +97,14 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             "Work-life balance" has become a cultural mantra. Companies promise it. Self-help books
-            teach it. But most people feel like they're failing at it—because the concept itself is
+            teach it. But most people feel like they're failing at it---because the concept itself is
             flawed.
           </p>
           <p className="mb-6">
-            Research shows that "balance" implies an equal, static split between work and life—a
+            Research shows that "balance" implies an equal, static split between work and life---a
             standard that's unrealistic and unhelpful{', '}
             <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2021" tier={1} />
-            . This article explores why the balance metaphor doesn't work—and what does.
+            . This article explores why the balance metaphor doesn't work---and what does.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Balance also implies separation—work on one side, life on the other. But for many people,
+          Balance also implies separation---work on one side, life on the other. But for many people,
           work and personal life overlap: remote work, passion-driven careers, side hustles, caring
           for family while working. The boundaries aren't clean.
         </p>
@@ -196,8 +196,8 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            Integration works when it's <strong>voluntary</strong>. Forced integration—like being
-            expected to answer emails at 10 PM—is exploitation, not enrichment.
+            Integration works when it's <strong>voluntary</strong>. Forced integration---like being
+            expected to answer emails at 10 PM---is exploitation, not enrichment.
           </p>
         </ArticleCallout>
 
@@ -234,7 +234,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>No work email on personal phone</li>
                     <li>Dedicated workspace (close the door when done)</li>
-                    <li>Fixed work hours—no flexibility, but no bleeding</li>
+                    <li>Fixed work hours---no flexibility, but no bleeding</li>
                   </ul>
                   <p className="mt-4">
                     <strong>Best for:</strong> People who need clear mental separation to recharge.
@@ -306,7 +306,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          True equity requires systemic change—not telling women to balance better.
+          True equity requires systemic change---not telling women to balance better.
         </p>
 
         <h2
@@ -323,7 +323,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
               title: 'Define what matters to you',
               description: (
                 <p>
-                  Not balance—priorities. What do you value most right now? Time with family?
+                  Not balance---priorities. What do you value most right now? Time with family?
                   Career growth? Creative pursuits? Health? Be honest.
                 </p>
               ),
@@ -376,14 +376,14 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If work-life conflict is causing persistent distress, anxiety, or depression—or if you
-          feel trapped with no options—therapy can help. A therapist can clarify your values, set
+          If work-life conflict is causing persistent distress, anxiety, or depression---or if you
+          feel trapped with no options---therapy can help. A therapist can clarify your values, set
           boundaries, and navigate difficult choices.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Work-life balance is a myth that sets you up to fail. Work-life fit is the goal—creating
+            Work-life balance is a myth that sets you up to fail. Work-life fit is the goal---creating
             arrangements that align with your values and circumstances. It won't be perfect, and it
             will change over time. That's not failure. That's life.
           </p>
@@ -399,7 +399,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     id: catId(22),
     slug: 'disconnect-from-work-home-office',
     title: 'How to Disconnect from Work When Your Office Is Your Home',
-    description: 'Practical strategies for creating mental separation when working remotely—without needing a separate room.',
+    description: 'Practical strategies for creating mental separation when working remotely---without needing a separate room.',
     image: "/images/articles/cat05/cover-022.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -442,7 +442,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           Why Mental Disconnection Matters
         </h2>
         <p className="mb-6">
-          Disconnection isn't just about stopping work—it's about psychologically detaching{', '}
+          Disconnection isn't just about stopping work---it's about psychologically detaching{', '}
           <Citation
             id="5"
             index={5}
@@ -473,7 +473,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     id: catId(23),
     slug: 'setting-boundaries-with-boss-scripts',
     title: 'Setting Boundaries with Your Boss: Scripts for Common Situations',
-    description: 'Word-for-word scripts for setting workplace boundaries—even with difficult managers.',
+    description: 'Word-for-word scripts for setting workplace boundaries---even with difficult managers.',
     image: "/images/articles/cat05/cover-023.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -499,7 +499,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
             What if it affects your career? What if they say no?
           </p>
           <p className="mb-6">
-            But boundaries aren't insubordination—they're necessary for sustainable work{', '}
+            But boundaries aren't insubordination---they're necessary for sustainable work{', '}
             <Citation id="1" index={1} source="Journal of Business Ethics" year="2021" tier={1} />.
             This article provides scripts for common boundary-setting scenarios, along with guidance
             for navigating power dynamics.
@@ -538,7 +538,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
     id: catId(24),
     slug: 'after-hours-email-trap',
     title: 'The After-Hours Email Trap: Why Always Being Available Hurts Your Health',
-    description: 'Understand the psychological and physical toll of constant email availability—and how to break free.',
+    description: 'Understand the psychological and physical toll of constant email availability---and how to break free.',
     image: "/images/articles/cat05/cover-024.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -565,7 +565,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
             relaxation ruined.
           </p>
           <p className="mb-6">
-            After-hours email has become normalized—but research shows it's damaging mental and
+            After-hours email has become normalized---but research shows it's damaging mental and
             physical health{', '}
             <Citation id="1" index={1} source="Computers in Human Behavior" year="2021" tier={1} />.
             This article explores why constant availability is harmful and how to reclaim your
@@ -581,7 +581,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           The Health Consequences of Always Being "On"
         </h2>
         <p className="mb-6">
-          Constant email availability prevents psychological detachment from work—a critical
+          Constant email availability prevents psychological detachment from work---a critical
           component of recovery{', '}
           <Citation
             id="3"
@@ -642,7 +642,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
             Nothing. Vacation guilt is a psychological phenomenon driven by cultural messages about
             productivity and worth{', '}
             <Citation id="3" index={3} source="Cultural Psychology" year="2021" tier={1} />. This
-            article explores why rest feels wrong—and how to reclaim it.
+            article explores why rest feels wrong---and how to reclaim it.
           </p>
         </div>
 
@@ -654,7 +654,7 @@ export const workLifeBalanceBoundariesArticlesA: Article[] = [
           What Is Vacation Guilt?
         </h2>
         <p className="mb-6">
-          Vacation guilt is the emotional discomfort people feel when taking time off—a sense that
+          Vacation guilt is the emotional discomfort people feel when taking time off---a sense that
           rest is selfish, lazy, or unearned{', '}
           <Citation id="5" index={5} source="Leisure Studies" year="2020" tier={1} />. It manifests
           as anxiety during vacation, checking work email compulsively, or cutting trips short.

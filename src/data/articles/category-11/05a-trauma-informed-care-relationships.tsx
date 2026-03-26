@@ -94,10 +94,10 @@ export const traumaInformedCareArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imagine walking into a hospital, and before anyone asks about your symptoms, they dim the harsh fluorescent lights and speak in calm tones. The intake form doesn't ask invasive questions without explanation. No one touches you without asking permission first. This isn't luxury care—it's trauma-informed care: a paradigm shift in how systems serve people, based on one fundamental understanding: <em>trauma is common, and the way we deliver services can either heal or retraumatize.</em>
+            Imagine walking into a hospital, and before anyone asks about your symptoms, they dim the harsh fluorescent lights and speak in calm tones. The intake form doesn't ask invasive questions without explanation. No one touches you without asking permission first. This isn't luxury care---it's trauma-informed care: a paradigm shift in how systems serve people, based on one fundamental understanding: <em>trauma is common, and the way we deliver services can either heal or retraumatize.</em>
           </p>
           <p className="mb-6">
-            Trauma-informed care (TIC) isn't a clinical intervention or a specific therapy. It's a framework for delivering services—in healthcare, education, criminal justice, social services, and beyond—with an awareness of trauma's prevalence and impact <Citation id="1" index={1} source="SAMHSA" year="2014" tier={2} />. It shifts the question from "What's wrong with you?" to "What happened to you?"—and transforms how institutions interact with the people they serve.
+            Trauma-informed care (TIC) isn't a clinical intervention or a specific therapy. It's a framework for delivering services---in healthcare, education, criminal justice, social services, and beyond---with an awareness of trauma's prevalence and impact <Citation id="1" index={1} source="SAMHSA" year="2014" tier={2} />. It shifts the question from "What's wrong with you?" to "What happened to you?"---and transforms how institutions interact with the people they serve.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export const traumaInformedCareArticlesA: Article[] = [
               title: '1. Safety',
               content: (
                 <div>
-                  <p className="mb-4"><strong>Physical and emotional safety for everyone—clients and staff.</strong></p>
+                  <p className="mb-4"><strong>Physical and emotional safety for everyone---clients and staff.</strong></p>
                   <p className="mb-4">In practice:</p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Clear, predictable procedures</li>
@@ -205,7 +205,7 @@ export const traumaInformedCareArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Clients have meaningful choices (appointment times, treatment options)</li>
                     <li>Strengths-based language ("What's strong with you?")</li>
-                    <li>Respect for "no"—people can decline interventions</li>
+                    <li>Respect for "no"---people can decline interventions</li>
                     <li>Recognition of resilience, not just pathology</li>
                   </ul>
                 </div>
@@ -303,7 +303,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           How Organizations Implement TIC
         </h2>
         <p className="mb-6">
-          Trauma-informed care isn't a checklist—it's a cultural transformation <Citation id="6" index={6} source="Creating Trauma-Informed Systems" year="2019" tier={5} />:
+          Trauma-informed care isn't a checklist---it's a cultural transformation <Citation id="6" index={6} source="Creating Trauma-Informed Systems" year="2019" tier={5} />:
         </p>
 
         <ProgressSteps
@@ -330,7 +330,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Bottom line:</strong> Trauma-informed care recognizes that people don't come to services as blank slates. They bring histories—and those histories shape how they experience help. When we ignore trauma, we risk harm. When we acknowledge it, we create conditions for healing.</p>
+          <p><strong>Bottom line:</strong> Trauma-informed care recognizes that people don't come to services as blank slates. They bring histories---and those histories shape how they experience help. When we ignore trauma, we risk harm. When we acknowledge it, we create conditions for healing.</p>
         </ArticleCallout>
 
         <h2 id="asking-for-tic" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -346,7 +346,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           <li>"Can you explain why you need this information?"</li>
         </ul>
         <p className="mb-6">
-          If a provider responds defensively to these questions, that's information. Trauma-informed organizations welcome these conversations—because they're committed to continuous improvement, not defensiveness.
+          If a provider responds defensively to these questions, that's information. Trauma-informed organizations welcome these conversations---because they're committed to continuous improvement, not defensiveness.
         </p>
       </>
     ),
@@ -433,10 +433,10 @@ export const traumaInformedCareArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your child melts down over what seems like nothing. They hoard food even though the pantry is full. They flinch when you reach to hug them. Traditional parenting advice tells you to set firm boundaries, use time-outs, or let them "cry it out." But for children who've experienced trauma—abuse, neglect, foster care, adoption, domestic violence—these approaches don't just fail. They backfire. Because trauma-affected children don't need more control or consequences. They need safety, connection, and co-regulation. They need trauma-informed parenting.
+            Your child melts down over what seems like nothing. They hoard food even though the pantry is full. They flinch when you reach to hug them. Traditional parenting advice tells you to set firm boundaries, use time-outs, or let them "cry it out." But for children who've experienced trauma---abuse, neglect, foster care, adoption, domestic violence---these approaches don't just fail. They backfire. Because trauma-affected children don't need more control or consequences. They need safety, connection, and co-regulation. They need trauma-informed parenting.
           </p>
           <p className="mb-6">
-            Trauma-informed parenting recognizes that behavior is communication, and that children who've experienced adversity carry wounds that shape how they experience the world <Citation id="1" index={1} source="Child Abuse & Neglect" year="2021" tier={1} />. This approach prioritizes felt safety, builds trust slowly, and meets dysregulation with calm presence—not punishment.
+            Trauma-informed parenting recognizes that behavior is communication, and that children who've experienced adversity carry wounds that shape how they experience the world <Citation id="1" index={1} source="Child Abuse & Neglect" year="2021" tier={1} />. This approach prioritizes felt safety, builds trust slowly, and meets dysregulation with calm presence---not punishment.
           </p>
         </div>
 
@@ -444,7 +444,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           Understanding Developmental Trauma
         </h2>
         <p className="mb-6">
-          Children who experience trauma—especially chronic or relational trauma—during critical developmental periods often exhibit <Citation id="4" index={4} source="Child and Adolescent Social Work Journal" year="2019" tier={1} />:
+          Children who experience trauma---especially chronic or relational trauma---during critical developmental periods often exhibit <Citation id="4" index={4} source="Child and Adolescent Social Work Journal" year="2019" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Dysregulated nervous systems:</strong> Stuck in hyperarousal (anxious, reactive) or hypoarousal (shut down, numb)</li>
@@ -452,7 +452,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           <li><strong>Control-seeking behaviors:</strong> Try to control environment/people to feel safe</li>
           <li><strong>Sensory processing issues:</strong> Over- or under-reactive to touch, sound, light</li>
           <li><strong>Difficulty with transitions:</strong> Any change feels threatening</li>
-          <li><strong>Trust deficits:</strong> Adults have hurt or abandoned them before—why trust you?</li>
+          <li><strong>Trust deficits:</strong> Adults have hurt or abandoned them before---why trust you?</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -476,7 +476,7 @@ export const traumaInformedCareArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Predictable routines (reduces hypervigilance)</li>
                     <li>Calm tone of voice, slow movements</li>
-                    <li>No surprises—warn before transitions</li>
+                    <li>No surprises---warn before transitions</li>
                     <li>Safe physical environment (child-proofed, sensory-friendly)</li>
                   </ul>
                 </div>
@@ -607,7 +607,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="warning">
-          <p><strong>Caregiver burnout is real:</strong> If you're feeling hopeless, resentful, or fantasizing about giving up, reach out. You're not failing—you're overwhelmed and need support.</p>
+          <p><strong>Caregiver burnout is real:</strong> If you're feeling hopeless, resentful, or fantasizing about giving up, reach out. You're not failing---you're overwhelmed and need support.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -628,7 +628,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          Trauma-informed parenting isn't permissive—it's deeply attuned. You still set boundaries. You still teach. But you do it with compassion, recognizing that your child isn't broken—they're wounded. And with the right care, wounds can heal.
+          Trauma-informed parenting isn't permissive---it's deeply attuned. You still set boundaries. You still teach. But you do it with compassion, recognizing that your child isn't broken---they're wounded. And with the right care, wounds can heal.
         </p>
       </>
     ),
@@ -715,10 +715,10 @@ export const traumaInformedCareArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You crave intimacy but recoil when someone gets too close. You test your partner to see if they'll leave—and when they don't, you push harder. You're hypervigilant for signs of betrayal, misreading neutral expressions as rejection. Or maybe you've gone numb, staying in relationships that feel empty because at least they're predictable. Trauma doesn't just live in your body and memories—it lives in the space between you and the people you love. And until it's addressed, it shapes every relationship you try to build.
+            You crave intimacy but recoil when someone gets too close. You test your partner to see if they'll leave---and when they don't, you push harder. You're hypervigilant for signs of betrayal, misreading neutral expressions as rejection. Or maybe you've gone numb, staying in relationships that feel empty because at least they're predictable. Trauma doesn't just live in your body and memories---it lives in the space between you and the people you love. And until it's addressed, it shapes every relationship you try to build.
           </p>
           <p className="mb-6">
-            Research shows that trauma—especially relational trauma (abuse, neglect, betrayal)—profoundly affects how we attach, trust, and connect <Citation id="1" index={1} source="Journal of Family Violence" year="2021" tier={1} />. But these patterns aren't permanent. With awareness and intentional work, you can build healthier, safer relationships despite your history.
+            Research shows that trauma---especially relational trauma (abuse, neglect, betrayal)---profoundly affects how we attach, trust, and connect <Citation id="1" index={1} source="Journal of Family Violence" year="2021" tier={1} />. But these patterns aren't permanent. With awareness and intentional work, you can build healthier, safer relationships despite your history.
           </p>
         </div>
 
@@ -750,7 +750,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           Trust Issues: The Core Wound
         </h2>
         <p className="mb-6">
-          When trust is violated—especially by someone you depended on—it creates a lasting injury <Citation id="5" index={5} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={1} />. Trust becomes both what you crave most and fear most.
+          When trust is violated---especially by someone you depended on---it creates a lasting injury <Citation id="5" index={5} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={1} />. Trust becomes both what you crave most and fear most.
         </p>
 
         <ArticleAccordion
@@ -762,7 +762,7 @@ export const traumaInformedCareArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">You read into every text delay, every facial expression, every change in tone. Your nervous system is on constant alert for signs that this person will hurt you too.</p>
-                  <p><strong>Impact:</strong> Partners feel scrutinized, controlled, or unable to do anything right. You exhaust yourself—and them.</p>
+                  <p><strong>Impact:</strong> Partners feel scrutinized, controlled, or unable to do anything right. You exhaust yourself---and them.</p>
                 </div>
               ),
             },
@@ -771,7 +771,7 @@ export const traumaInformedCareArticlesA: Article[] = [
               title: `Testing: "Will You Leave If I'm Unlovable?`,
               content: (
                 <div>
-                  <p className="mb-4">You push boundaries, pick fights, or withdraw to see if your partner will abandon you. When they don't, you escalate—because you don't believe they'll stay.</p>
+                  <p className="mb-4">You push boundaries, pick fights, or withdraw to see if your partner will abandon you. When they don't, you escalate---because you don't believe they'll stay.</p>
                   <p><strong>Impact:</strong> Eventually, the testing becomes a self-fulfilling prophecy. They leave, confirming your belief: 'Everyone abandons me.'</p>
                 </div>
               ),
@@ -793,7 +793,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           Intimacy Challenges After Trauma
         </h2>
         <p className="mb-6">
-          Intimacy requires vulnerability—and vulnerability requires feeling safe. For trauma survivors, safety is elusive <Citation id="3" index={3} source="Journal of Sex & Marital Therapy" year="2021" tier={1} />.
+          Intimacy requires vulnerability---and vulnerability requires feeling safe. For trauma survivors, safety is elusive <Citation id="3" index={3} source="Journal of Sex & Marital Therapy" year="2021" tier={1} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -804,7 +804,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Research shows that 60-80% of people with PTSD report relationship difficulties as a primary symptom—not because they don't want connection, but because trauma makes connection feel unsafe <Citation id="6" index={6} source="The Body Keeps the Score" year="2014" tier={5} />.</p>
+          <p>Research shows that 60-80% of people with PTSD report relationship difficulties as a primary symptom---not because they don't want connection, but because trauma makes connection feel unsafe <Citation id="6" index={6} source="The Body Keeps the Score" year="2014" tier={5} />.</p>
         </ArticleCallout>
 
         <h2 id="relationship-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -858,7 +858,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="tip">
-          <p><strong>Script for partners:</strong> "When I pull away, it's my trauma—not you. I'm working on staying present. If I need space, I'll let you know it's temporary."</p>
+          <p><strong>Script for partners:</strong> "When I pull away, it's my trauma---not you. I'm working on staying present. If I need space, I'll let you know it's temporary."</p>
         </ArticleCallout>
 
         <h2 id="for-partners" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -981,10 +981,10 @@ export const traumaInformedCareArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You drink to quiet the flashbacks. You use opioids because they numb the pain your body won't let go. You smoke weed to sleep through the nightmares. For a few hours, the substances work—they silence the hypervigilance, soften the shame, make the world feel bearable. But when they wear off, the trauma is still there. And now, so is the addiction. This isn't moral failure. It's the self-medication hypothesis: trauma survivors use substances not for fun, but for survival.
+            You drink to quiet the flashbacks. You use opioids because they numb the pain your body won't let go. You smoke weed to sleep through the nightmares. For a few hours, the substances work---they silence the hypervigilance, soften the shame, make the world feel bearable. But when they wear off, the trauma is still there. And now, so is the addiction. This isn't moral failure. It's the self-medication hypothesis: trauma survivors use substances not for fun, but for survival.
           </p>
           <p className="mb-6">
-            Research shows a profound link between trauma and substance use disorders (SUDs). Up to 75% of people in addiction treatment have trauma histories <Citation id="2" index={2} source="Journal of Substance Abuse Treatment" year="2021" tier={1} />. And the relationship is bidirectional: trauma increases addiction risk, and addiction can create new trauma. Healing requires addressing both—simultaneously.
+            Research shows a profound link between trauma and substance use disorders (SUDs). Up to 75% of people in addiction treatment have trauma histories <Citation id="2" index={2} source="Journal of Substance Abuse Treatment" year="2021" tier={1} />. And the relationship is bidirectional: trauma increases addiction risk, and addiction can create new trauma. Healing requires addressing both---simultaneously.
           </p>
         </div>
 
@@ -992,7 +992,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           The Self-Medication Hypothesis
         </h2>
         <p className="mb-6">
-          The self-medication hypothesis, developed by Dr. Edward Khantzian, proposes that people with SUDs aren't seeking pleasure—they're seeking relief <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />. Substances are chosen (often unconsciously) based on which symptoms they alleviate:
+          The self-medication hypothesis, developed by Dr. Edward Khantzian, proposes that people with SUDs aren't seeking pleasure---they're seeking relief <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />. Substances are chosen (often unconsciously) based on which symptoms they alleviate:
         </p>
 
         <ComparisonTable
@@ -1008,7 +1008,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Critical insight:</strong> The substance isn't the problem—it's the solution the person found to an untreated trauma problem. Addressing addiction without treating trauma sets people up for relapse.</p>
+          <p><strong>Critical insight:</strong> The substance isn't the problem---it's the solution the person found to an untreated trauma problem. Addressing addiction without treating trauma sets people up for relapse.</p>
         </ArticleCallout>
 
         <h2 id="ace-and-addiction" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1028,7 +1028,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          ACEs include: physical/emotional/sexual abuse, neglect, household dysfunction (domestic violence, parental substance use, mental illness, incarceration, divorce). The more ACEs, the higher the risk—not just of addiction, but of early initiation (starting substance use younger).
+          ACEs include: physical/emotional/sexual abuse, neglect, household dysfunction (domestic violence, parental substance use, mental illness, incarceration, divorce). The more ACEs, the higher the risk---not just of addiction, but of early initiation (starting substance use younger).
         </p>
 
         <h2 id="neurobiology" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1038,14 +1038,14 @@ export const traumaInformedCareArticlesA: Article[] = [
           Trauma and addiction affect overlapping brain systems <Citation id="6" index={6} source="Frontiers in Psychiatry" year="2020" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Stress response system:</strong> Trauma dysregulates the HPA axis (cortisol, stress hormones). Substances temporarily "reset" it—but worsen dysregulation long-term.</li>
+          <li><strong>Stress response system:</strong> Trauma dysregulates the HPA axis (cortisol, stress hormones). Substances temporarily "reset" it---but worsen dysregulation long-term.</li>
           <li><strong>Reward circuitry:</strong> Trauma damages dopamine pathways. Substances flood these pathways, creating powerful reinforcement.</li>
           <li><strong>Emotional regulation:</strong> Trauma impairs prefrontal cortex function. Substances become the only tool for managing overwhelming emotions.</li>
           <li><strong>Memory:</strong> Substances suppress the hippocampus, reducing flashbacks and intrusive memories temporarily.</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Dr. Gabor Maté argues that "the question is not why the addiction, but why the pain" <Citation id="4" index={4} source="In the Realm of Hungry Ghosts" year="2010" tier={5} />. Trauma survivors aren't seeking escape for fun—they're seeking survival.</p>
+          <p>Dr. Gabor Maté argues that "the question is not why the addiction, but why the pain" <Citation id="4" index={4} source="In the Realm of Hungry Ghosts" year="2010" tier={5} />. Trauma survivors aren't seeking escape for fun---they're seeking survival.</p>
         </ArticleCallout>
 
         <h2 id="vicious-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1067,7 +1067,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           Barriers to Integrated Treatment
         </h2>
         <p className="mb-6">
-          Historically, trauma and addiction were treated separately—or trauma wasn't addressed at all. This sequential approach fails because:
+          Historically, trauma and addiction were treated separately---or trauma wasn't addressed at all. This sequential approach fails because:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Untreated trauma drives relapse (people return to substances to cope)</li>
@@ -1107,7 +1107,7 @@ export const traumaInformedCareArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Combines Prolonged Exposure (for PTSD) with relapse prevention (for SUD).</p>
-                  <p className="mb-4">Research shows: Treating PTSD doesn't increase substance use—it often <em>reduces</em> it.</p>
+                  <p className="mb-4">Research shows: Treating PTSD doesn't increase substance use---it often <em>reduces</em> it.</p>
                 </div>
               ),
             },
@@ -1161,14 +1161,14 @@ export const traumaInformedCareArticlesA: Article[] = [
           <li>You've relapsed repeatedly despite trying to quit</li>
           <li>You have both PTSD and SUD diagnoses</li>
           <li>Substance use is causing harm, but you can't stop</li>
-          <li>You've tried addiction treatment without trauma work—and it didn't stick</li>
+          <li>You've tried addiction treatment without trauma work---and it didn't stick</li>
         </ul>
         <p className="mb-6">
           Look for dual-diagnosis programs, trauma-informed rehabs, or therapists certified in Seeking Safety, COPE, or TARGET. Resources: SAMHSA National Helpline (1-800-662-4357), free, confidential, 24/7.
         </p>
 
         <p className="mb-6">
-          Addiction isn't weakness. For trauma survivors, it's often the most effective tool you had—until you get better ones. Recovery isn't about willpower. It's about healing the pain underneath. And when that pain is addressed, the need for substances begins to fade.
+          Addiction isn't weakness. For trauma survivors, it's often the most effective tool you had---until you get better ones. Recovery isn't about willpower. It's about healing the pain underneath. And when that pain is addressed, the need for substances begins to fade.
         </p>
       </>
     ),
@@ -1255,10 +1255,10 @@ export const traumaInformedCareArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You watch your partner retreat into silence, jump at sudden noises, or wake screaming from nightmares. You want to help—but you don't know how. You try to be supportive, but sometimes you feel like you're walking on eggshells. You absorb their pain, accommodate their avoidance, and slowly lose yourself in the process. Loving someone with PTSD is hard. And without guidance, you risk burnout, codependency, or inadvertently reinforcing the very symptoms you're trying to ease.
+            You watch your partner retreat into silence, jump at sudden noises, or wake screaming from nightmares. You want to help---but you don't know how. You try to be supportive, but sometimes you feel like you're walking on eggshells. You absorb their pain, accommodate their avoidance, and slowly lose yourself in the process. Loving someone with PTSD is hard. And without guidance, you risk burnout, codependency, or inadvertently reinforcing the very symptoms you're trying to ease.
           </p>
           <p className="mb-6">
-            Supporting a partner with PTSD requires balancing compassion with boundaries, understanding with accountability <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. Research shows that partners play a crucial role in recovery—but only when that support is informed, sustainable, and doesn't enable avoidance or dependence. Here's what actually helps.
+            Supporting a partner with PTSD requires balancing compassion with boundaries, understanding with accountability <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. Research shows that partners play a crucial role in recovery---but only when that support is informed, sustainable, and doesn't enable avoidance or dependence. Here's what actually helps.
           </p>
         </div>
 
@@ -1413,7 +1413,7 @@ export const traumaInformedCareArticlesA: Article[] = [
           Secondary Traumatic Stress: When You Absorb Their Pain
         </h2>
         <p className="mb-6">
-          Partners of people with PTSD can develop secondary traumatic stress (STS)—experiencing PTSD-like symptoms from exposure to the partner's trauma <Citation id="4" index={4} source="Military Psychology" year="2020" tier={1} />. Signs include:
+          Partners of people with PTSD can develop secondary traumatic stress (STS)---experiencing PTSD-like symptoms from exposure to the partner's trauma <Citation id="4" index={4} source="Military Psychology" year="2020" tier={1} />. Signs include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Hypervigilance about your partner's well-being</li>
@@ -1427,7 +1427,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         </p>
 
         <h2 id="self-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Self-Care Isn't Selfish—It's Necessary
+          Self-Care Isn't Selfish---It's Necessary
         </h2>
         <p className="mb-6">
           You can't support them if you're depleted <Citation id="8" index={8} source="Frontiers in Psychology" year="2021" tier={1} />:
@@ -1479,7 +1479,7 @@ export const traumaInformedCareArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          Loving someone with PTSD takes patience, education, and boundaries. You can be supportive without losing yourself. You can encourage healing without doing the healing for them. And you deserve care too—because your well-being matters just as much.
+          Loving someone with PTSD takes patience, education, and boundaries. You can be supportive without losing yourself. You can encourage healing without doing the healing for them. And you deserve care too---because your well-being matters just as much.
         </p>
       </>
     ),

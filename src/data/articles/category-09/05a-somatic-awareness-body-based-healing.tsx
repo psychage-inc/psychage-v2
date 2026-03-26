@@ -93,7 +93,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When traditional talk therapy doesn't fully resolve trauma symptoms, many people find healing through Somatic Experiencing—a body-based therapy that works with how trauma affects your nervous system and physical sensations.
+            When traditional talk therapy doesn't fully resolve trauma symptoms, many people find healing through Somatic Experiencing---a body-based therapy that works with how trauma affects your nervous system and physical sensations.
           </p>
           <p className="mb-6">
             Developed by Dr. Peter Levine, Somatic Experiencing (SE) is grounded in the observation that animals in the wild, despite facing life-threatening situations regularly, rarely develop trauma symptoms. The difference? They complete their natural survival responses, while humans often suppress or override these instinctive reactions <Citation id="1" index={1} source="Frontiers in Psychology" year="2017" tier={1} />.
@@ -107,7 +107,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Somatic Experiencing is a therapeutic approach focused on releasing trauma that has become "stuck" in the body's nervous system <Citation id="2" index={2} source="Journal of Evidence-Based Integrative Medicine" year="2017" tier={1} />. Rather than focusing primarily on talking about traumatic events, SE helps people process trauma by working with bodily sensations, movements, and nervous system states.
         </p>
         <p className="mb-6">
-          The core principle: trauma isn't just a mental or emotional issue—it's a physiological state where the nervous system remains stuck in survival mode even after the threat has passed.
+          The core principle: trauma isn't just a mental or emotional issue---it's a physiological state where the nervous system remains stuck in survival mode even after the threat has passed.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -140,7 +140,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
             {
               title: 'Titrate (Work in Small Doses)',
               description: (
-                <p>Rather than diving into trauma narratives, SE works with trauma material in tiny, manageable pieces—just enough to activate without overwhelming the system.</p>
+                <p>Rather than diving into trauma narratives, SE works with trauma material in tiny, manageable pieces---just enough to activate without overwhelming the system.</p>
               ),
             },
             {
@@ -152,7 +152,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
             {
               title: 'Discharge Survival Energy',
               description: (
-                <p>Allow the body to complete interrupted survival responses through spontaneous movements like trembling, shaking, deep breaths, or gentle movements—releasing stored activation.</p>
+                <p>Allow the body to complete interrupted survival responses through spontaneous movements like trembling, shaking, deep breaths, or gentle movements---releasing stored activation.</p>
               ),
             },
             {
@@ -174,9 +174,9 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           According to Polyvagal Theory, we have three nervous system states:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Ventral vagal (safe and social)</strong>: Calm, connected, present—optimal for learning and relating</li>
-          <li><strong>Sympathetic (mobilization)</strong>: Fight or flight—activated for perceived threats</li>
-          <li><strong>Dorsal vagal (immobilization)</strong>: Freeze, collapse, shutdown—last-resort survival response</li>
+          <li><strong>Ventral vagal (safe and social)</strong>: Calm, connected, present---optimal for learning and relating</li>
+          <li><strong>Sympathetic (mobilization)</strong>: Fight or flight---activated for perceived threats</li>
+          <li><strong>Dorsal vagal (immobilization)</strong>: Freeze, collapse, shutdown---last-resort survival response</li>
         </ul>
         <p className="mb-6">
           Trauma can trap people in chronic sympathetic activation (anxiety, hypervigilance, panic) or dorsal shutdown (depression, dissociation, numbness). SE helps shift the nervous system back to ventral vagal regulation.
@@ -201,7 +201,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           <li>The therapist asks you to notice what you're feeling in your body right now</li>
           <li>You might be guided to track sensations like tightness, warmth, tingling, or heaviness</li>
           <li>If trauma material surfaces, the therapist helps you stay with body sensations rather than the story</li>
-          <li>You might experience spontaneous movements, sighs, yawns, shakes, or trembling—signs of nervous system discharge</li>
+          <li>You might experience spontaneous movements, sighs, yawns, shakes, or trembling---signs of nervous system discharge</li>
           <li>The pace is slow and gentle, always honoring your body's signals</li>
           <li>You're encouraged to notice when you feel 'too much' and return to neutral or pleasant sensations</li>
         </ul>
@@ -272,7 +272,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Completion of Gestures
         </h3>
         <p className="mb-6">
-          If you notice an impulse to move (push away, reach out, turn away), gently allow that small movement. Don't force it—just notice and permit the body's wisdom.
+          If you notice an impulse to move (push away, reach out, turn away), gently allow that small movement. Don't force it---just notice and permit the body's wisdom.
         </p>
 
         <ArticleCallout variant="warning">
@@ -324,7 +324,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           <li>You have difficulty accessing or expressing emotions verbally</li>
         </ul>
         <p className="mb-6">
-          Somatic Experiencing offers a path to trauma healing that honors the body's innate wisdom and capacity for self-regulation—helping you move from surviving to thriving.
+          Somatic Experiencing offers a path to trauma healing that honors the body's innate wisdom and capacity for self-regulation---helping you move from surviving to thriving.
         </p>
       </>
     ),
@@ -334,7 +334,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     id: catId(42),
     slug: 'body-keeps-score-trauma-lives-in-body',
     title: 'The Body Keeps the Score: How Trauma Lives in Your Body',
-    description: 'Discover how traumatic experiences become stored in the body, affecting posture, breathing, tension patterns, and physical health—and why body-based healing matters.',
+    description: 'Discover how traumatic experiences become stored in the body, affecting posture, breathing, tension patterns, and physical health---and why body-based healing matters.',
     image: "/images/articles/cat09/cover-042.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 8,
@@ -412,10 +412,10 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "The Body Keeps the Score"—Dr. Bessel van der Kolk's groundbreaking book title captures a fundamental truth about trauma: when overwhelming experiences happen, the body remembers, even when the mind tries to forget.
+            "The Body Keeps the Score"---Dr. Bessel van der Kolk's groundbreaking book title captures a fundamental truth about trauma: when overwhelming experiences happen, the body remembers, even when the mind tries to forget.
           </p>
           <p className="mb-6">
-            Trauma doesn't just create psychological symptoms like flashbacks or nightmares. It becomes embodied—stored in muscle tension, breathing patterns, posture, pain, and nervous system dysregulation <Citation id="2" index={2} source="Frontiers in Psychology" year="2018" tier={1} />. Understanding how trauma lives in the body is key to healing it.
+            Trauma doesn't just create psychological symptoms like flashbacks or nightmares. It becomes embodied---stored in muscle tension, breathing patterns, posture, pain, and nervous system dysregulation <Citation id="2" index={2} source="Frontiers in Psychology" year="2018" tier={1} />. Understanding how trauma lives in the body is key to healing it.
           </p>
         </div>
 
@@ -423,7 +423,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           What Does "The Body Keeps the Score" Mean?
         </h2>
         <p className="mb-6">
-          When you experience trauma—whether a single shocking event or prolonged adversity—your brain and body record every detail: the sensations, movements, sounds, smells, and physiological state <Citation id="1" index={1} source="Penguin Books" year="2014" tier={5} />.
+          When you experience trauma---whether a single shocking event or prolonged adversity---your brain and body record every detail: the sensations, movements, sounds, smells, and physiological state <Citation id="1" index={1} source="Penguin Books" year="2014" tier={5} />.
         </p>
         <p className="mb-6">
           These memories aren't just stored as narratives you can recall. They're stored as:
@@ -439,7 +439,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The body doesn't distinguish between remembering trauma and reliving it. When something triggers a trauma memory, your body may respond as if the threat is happening right now—even if consciously you know you're safe.</p>
+          <p>The body doesn't distinguish between remembering trauma and reliving it. When something triggers a trauma memory, your body may respond as if the threat is happening right now---even if consciously you know you're safe.</p>
         </ArticleCallout>
 
         <h2 id="how-trauma-affects-body" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -470,7 +470,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Breathing Dysregulation
         </h3>
         <p className="mb-6">
-          Trauma often disrupts natural breathing patterns <Citation id="5" index={5} source="Biological Psychology" year="2016" tier={1} />. People with PTSD frequently breathe shallowly, over-breathe (hyperventilate), or hold their breath unconsciously—all of which maintain nervous system activation.
+          Trauma often disrupts natural breathing patterns <Citation id="5" index={5} source="Biological Psychology" year="2016" tier={1} />. People with PTSD frequently breathe shallowly, over-breathe (hyperventilate), or hold their breath unconsciously---all of which maintain nervous system activation.
         </p>
         <p className="mb-6">
           Disrupted breathing perpetuates anxiety and panic by:
@@ -516,7 +516,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Chronic trauma exposure dysregulates the immune system, increasing risk for autoimmune conditions, frequent infections, and inflammatory diseases <Citation id="6" index={6} source="Psychoneuroendocrinology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          The chronic stress response suppresses some immune functions while hyperactivating inflammatory pathways—creating vulnerability to illness.
+          The chronic stress response suppresses some immune functions while hyperactivating inflammatory pathways---creating vulnerability to illness.
         </p>
 
         <StatCard
@@ -544,14 +544,14 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p className="mb-4"><strong>This is why talk therapy alone may not fully resolve trauma:</strong></p>
-          <p>You can understand your trauma intellectually, develop insights, and reframe your thoughts—but if the body still holds the trauma patterns, symptoms persist. Effective trauma treatment must engage the body.</p>
+          <p>You can understand your trauma intellectually, develop insights, and reframe your thoughts---but if the body still holds the trauma patterns, symptoms persist. Effective trauma treatment must engage the body.</p>
         </ArticleCallout>
 
         <h2 id="why-body-based-healing-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Body-Based Healing Matters
         </h2>
         <p className="mb-6">
-          Because trauma is stored somatically, healing requires somatic approaches—therapies that work directly with body sensations, movements, and nervous system states.
+          Because trauma is stored somatically, healing requires somatic approaches---therapies that work directly with body sensations, movements, and nervous system states.
         </p>
         <p className="mb-6">
           Body-based trauma therapies include:
@@ -583,7 +583,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Gentle Movement
         </h3>
         <p className="mb-6">
-          Walking, swimming, tai chi, or gentle yoga help release muscle tension and teach the body it can move safely. Start slow—intense exercise can be dysregulating if your nervous system is overwhelmed.
+          Walking, swimming, tai chi, or gentle yoga help release muscle tension and teach the body it can move safely. Start slow---intense exercise can be dysregulating if your nervous system is overwhelmed.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -616,20 +616,20 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4"><strong>Important caution:</strong></p>
-          <p>If body-based practices trigger overwhelming distress, flashbacks, or dissociation, stop and seek professional guidance. Not all somatic practices are safe for all trauma survivors—work with trauma specialists to find what helps you.</p>
+          <p>If body-based practices trigger overwhelming distress, flashbacks, or dissociation, stop and seek professional guidance. Not all somatic practices are safe for all trauma survivors---work with trauma specialists to find what helps you.</p>
         </ArticleCallout>
 
         <h2 id="hope-for-healing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Hope for Healing
         </h2>
         <p className="mb-6">
-          The fact that trauma lives in the body isn't just bad news—it's also good news. The body is more accessible than buried memories. You can work with what you feel right now, in this moment, without having to fully recall or narrate traumatic events.
+          The fact that trauma lives in the body isn't just bad news---it's also good news. The body is more accessible than buried memories. You can work with what you feel right now, in this moment, without having to fully recall or narrate traumatic events.
         </p>
         <p className="mb-6">
           The body that kept the score can also release it. Through gentle, body-based approaches, your nervous system can learn new patterns: safety instead of threat, regulation instead of dysregulation, ease instead of bracing.
         </p>
         <p className="mb-6">
-          Healing doesn't erase what happened—but it can free you from living as if the trauma is still happening. And that changes everything.
+          Healing doesn't erase what happened---but it can free you from living as if the trauma is still happening. And that changes everything.
         </p>
       </>
     ),
@@ -717,15 +717,15 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Headaches when stressed. Stomach pain before important meetings. Chest tightness during anxiety. Fatigue when depressed. These aren't imagined—they're somatic symptoms, physical manifestations of psychological distress.
+            Headaches when stressed. Stomach pain before important meetings. Chest tightness during anxiety. Fatigue when depressed. These aren't imagined---they're somatic symptoms, physical manifestations of psychological distress.
           </p>
           <p className="mb-6">
-            The mind-body connection isn't metaphorical—it's physiological. Emotions, stress, and mental health conditions create real physical symptoms through nervous system pathways, hormone release, immune changes, and muscle tension <Citation id="2" index={2} source="Psychoneuroendocrinology" year="2020" tier={1} />.
+            The mind-body connection isn't metaphorical---it's physiological. Emotions, stress, and mental health conditions create real physical symptoms through nervous system pathways, hormone release, immune changes, and muscle tension <Citation id="2" index={2} source="Psychoneuroendocrinology" year="2020" tier={1} />.
           </p>
         </div>
 
         <ArticleCallout variant="key-takeaway">
-          <p>"Somatic" means "of the body." Somatic symptoms are physical symptoms influenced by psychological factors. Importantly: somatic symptoms are REAL—not imagined, not "all in your head." The symptoms are physical, even when psychological factors contribute to them.</p>
+          <p>"Somatic" means "of the body." Somatic symptoms are physical symptoms influenced by psychological factors. Importantly: somatic symptoms are REAL---not imagined, not "all in your head." The symptoms are physical, even when psychological factors contribute to them.</p>
         </ArticleCallout>
 
         <h2 id="what-are-somatic-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -765,7 +765,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           2. Muscle Tension
         </h3>
         <p className="mb-6">
-          Psychological stress causes unconscious muscle bracing. Over time, chronic tension creates pain—tension headaches, jaw pain (TMJ), back pain, and neck pain are all commonly linked to stress.
+          Psychological stress causes unconscious muscle bracing. Over time, chronic tension creates pain---tension headaches, jaw pain (TMJ), back pain, and neck pain are all commonly linked to stress.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -786,7 +786,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           5. Attention and Perception
         </h3>
         <p className="mb-6">
-          Anxiety increases body vigilance—you notice and amplify normal body sensations that others might ignore. A slightly elevated heart rate becomes "heart palpitations," normal intestinal movement becomes "severe pain."
+          Anxiety increases body vigilance---you notice and amplify normal body sensations that others might ignore. A slightly elevated heart rate becomes "heart palpitations," normal intestinal movement becomes "severe pain."
         </p>
 
         <StatCard
@@ -825,14 +825,14 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           <li>Symptoms persist for at least 6 months (though specific symptoms may change)</li>
         </ul>
         <p className="mb-6">
-          Importantly, this diagnosis doesn't require symptoms to lack a medical cause—it focuses on the psychological response to symptoms.
+          Importantly, this diagnosis doesn't require symptoms to lack a medical cause---it focuses on the psychological response to symptoms.
         </p>
 
         <h2 id="alexithymia-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Alexithymia Connection
         </h2>
         <p className="mb-6">
-          Alexithymia—difficulty identifying and describing emotions—is strongly linked to somatization <Citation id="5" index={5} source="Psychotherapy and Psychosomatics" year="2018" tier={1} />. When people struggle to recognize or express emotions verbally, those emotions may manifest physically instead.
+          Alexithymia---difficulty identifying and describing emotions---is strongly linked to somatization <Citation id="5" index={5} source="Psychotherapy and Psychosomatics" year="2018" tier={1} />. When people struggle to recognize or express emotions verbally, those emotions may manifest physically instead.
         </p>
         <p className="mb-6">
           This isn't conscious or intentional. The body becomes the language through which psychological distress is communicated.
@@ -845,7 +845,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Some cultures emphasize physical symptoms over emotional expression <Citation id="8" index={8} source="Current Opinion in Psychiatry" year="2016" tier={1} />. In contexts where mental health stigma is high, people may express psychological distress primarily through somatic symptoms.
         </p>
         <p className="mb-6">
-          This doesn't make symptoms less real—it reflects how culture shapes the expression of distress.
+          This doesn't make symptoms less real---it reflects how culture shapes the expression of distress.
         </p>
 
         <h2 id="medical-evaluation-important" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -878,7 +878,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Cognitive Behavioral Therapy (CBT)
         </h3>
         <p className="mb-6">
-          CBT for somatic symptoms helps you understand mind-body connections, reduce symptom-focused anxiety, and develop coping strategies <Citation id="6" index={6} source="Cochrane Database of Systematic Reviews" year="2019" tier={1} />. It doesn't claim symptoms aren't real—it helps you respond to them differently.
+          CBT for somatic symptoms helps you understand mind-body connections, reduce symptom-focused anxiety, and develop coping strategies <Citation id="6" index={6} source="Cochrane Database of Systematic Reviews" year="2019" tier={1} />. It doesn't claim symptoms aren't real---it helps you respond to them differently.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -899,7 +899,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Stress Management
         </h3>
         <p className="mb-6">
-          Addressing sources of stress—through problem-solving, boundary-setting, lifestyle changes, or therapy—reduces the physiological burden creating symptoms.
+          Addressing sources of stress---through problem-solving, boundary-setting, lifestyle changes, or therapy---reduces the physiological burden creating symptoms.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -941,12 +941,12 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Somatic symptoms are not your fault or a personal failing</li>
-          <li>The mind-body connection is universal—everyone experiences it</li>
+          <li>The mind-body connection is universal---everyone experiences it</li>
           <li>Your symptoms are valid even if psychological factors contribute</li>
           <li>Healing is possible with the right support and approaches</li>
         </ul>
         <p className="mb-6">
-          Your body is communicating distress the best way it knows how. The solution isn't to ignore or push through symptoms—it's to listen compassionately and address what your body is trying to tell you.
+          Your body is communicating distress the best way it knows how. The solution isn't to ignore or push through symptoms---it's to listen compassionately and address what your body is trying to tell you.
         </p>
       </>
     ),
@@ -1034,7 +1034,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You breathe about 20,000 times per day, mostly without thinking. Yet how you breathe profoundly affects your mental state, nervous system activation, and emotional regulation. Breathwork—intentional control of breathing—is one of the most accessible and powerful tools for mental health.
+            You breathe about 20,000 times per day, mostly without thinking. Yet how you breathe profoundly affects your mental state, nervous system activation, and emotional regulation. Breathwork---intentional control of breathing---is one of the most accessible and powerful tools for mental health.
           </p>
           <p className="mb-6">
             Unlike many mental health interventions that require weeks to show effects, breathwork can shift your nervous system state in minutes <Citation id="1" index={1} source="Frontiers in Physiology" year="2018" tier={1} />. Best of all, it's free, portable, and always available.
@@ -1066,7 +1066,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Heart Rate Variability (HRV)
         </h3>
         <p className="mb-6">
-          HRV—variation in time between heartbeats—is a marker of nervous system flexibility and stress resilience. Slow, controlled breathing increases HRV, indicating better regulation <Citation id="7" index={7} source="International Journal of Psychophysiology" year="2017" tier={1} />.
+          HRV---variation in time between heartbeats---is a marker of nervous system flexibility and stress resilience. Slow, controlled breathing increases HRV, indicating better regulation <Citation id="7" index={7} source="International Journal of Psychophysiology" year="2017" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1080,7 +1080,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           Carbon Dioxide Levels
         </h3>
         <p className="mb-6">
-          Over-breathing (hyperventilation) reduces CO2 in your blood, which can trigger anxiety symptoms—dizziness, tingling, chest tightness. Slow breathing normalizes CO2 levels.
+          Over-breathing (hyperventilation) reduces CO2 in your blood, which can trigger anxiety symptoms---dizziness, tingling, chest tightness. Slow breathing normalizes CO2 levels.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1268,8 +1268,8 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Breath holding</strong>: If you have cardiovascular issues, avoid extended breath holds without medical clearance</li>
-          <li><strong>Hyperventilation techniques</strong>: Some intensive breathwork (like holotropic breathing) can be destabilizing—not recommended for people with severe mental health conditions</li>
-          <li><strong>Trauma sensitivity</strong>: Breath focus can trigger trauma responses in some people with PTSD—start gently and stop if distressing</li>
+          <li><strong>Hyperventilation techniques</strong>: Some intensive breathwork (like holotropic breathing) can be destabilizing---not recommended for people with severe mental health conditions</li>
+          <li><strong>Trauma sensitivity</strong>: Breath focus can trigger trauma responses in some people with PTSD---start gently and stop if distressing</li>
           <li><strong>Pregnancy</strong>: Avoid intense breath-holding practices; gentle diaphragmatic breathing is safe</li>
         </ul>
 
@@ -1283,7 +1283,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           While breathwork alone won't replace therapy or medication when needed, it's a powerful self-regulation tool that complements any mental health treatment plan.
         </p>
         <p className="mb-6">
-          Your breath is always with you—a portable pharmacy of calm waiting to be activated. All you have to do is slow down, deepen, and breathe.
+          Your breath is always with you---a portable pharmacy of calm waiting to be activated. All you have to do is slow down, deepen, and breathe.
         </p>
       </>
     ),
@@ -1366,7 +1366,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
             Progressive Muscle Relaxation (PMR) is a simple yet powerful technique for reducing stress and anxiety by teaching your body what deep relaxation actually feels like. Developed in the 1920s, it remains one of the most researched and effective stress-management tools.
           </p>
           <p className="mb-6">
-            The premise is straightforward: by systematically tensing and then releasing muscle groups, you become aware of the difference between tension and relaxation—and learn to induce the relaxed state at will <Citation id="3" index={3} source="Journal of Behavior Therapy and Experimental Psychiatry" year="2019" tier={1} />.
+            The premise is straightforward: by systematically tensing and then releasing muscle groups, you become aware of the difference between tension and relaxation---and learn to induce the relaxed state at will <Citation id="3" index={3} source="Journal of Behavior Therapy and Experimental Psychiatry" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -1377,11 +1377,11 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           PMR involves tensing specific muscle groups for 5-10 seconds, then releasing that tension and noticing the sensation of relaxation for 15-20 seconds before moving to the next muscle group.
         </p>
         <p className="mb-6">
-          You progress systematically through the body—typically starting with hands and arms, moving to face and neck, then torso, legs, and feet. The entire process takes 10-20 minutes.
+          You progress systematically through the body---typically starting with hands and arms, moving to face and neck, then torso, legs, and feet. The entire process takes 10-20 minutes.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>PMR works because many people hold chronic muscle tension without realizing it. By intentionally creating and releasing tension, you learn to recognize what tension feels like—and what true relaxation feels like—allowing you to release unconscious muscle holding.</p>
+          <p>PMR works because many people hold chronic muscle tension without realizing it. By intentionally creating and releasing tension, you learn to recognize what tension feels like---and what true relaxation feels like---allowing you to release unconscious muscle holding.</p>
         </ArticleCallout>
 
         <h2 id="how-pmr-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1529,7 +1529,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           "I Fall Asleep During Practice"
         </h3>
         <p className="mb-6">
-          If practicing before bed, falling asleep is fine—PMR works great as a sleep aid. If you want to complete the practice, do it earlier in the day or practice sitting up.
+          If practicing before bed, falling asleep is fine---PMR works great as a sleep aid. If you want to complete the practice, do it earlier in the day or practice sitting up.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1608,7 +1608,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           <p className="mb-4"><strong>When to use caution:</strong></p>
           <ul className="list-disc pl-6 space-y-2">
             <li>If you have muscle injuries or chronic pain conditions, modify or skip tensing affected areas</li>
-            <li>Some people with trauma find PMR triggering (body focus can activate trauma responses)—work with a trauma-informed therapist</li>
+            <li>Some people with trauma find PMR triggering (body focus can activate trauma responses)---work with a trauma-informed therapist</li>
             <li>If you have serious medical conditions, check with your doctor before starting</li>
           </ul>
         </ArticleCallout>
@@ -1623,7 +1623,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           While it may seem too simple to be effective, decades of research confirm: systematically releasing muscle tension reduces both physical and psychological stress. Give it four weeks of regular practice before deciding if it works for you.
         </p>
         <p className="mb-6">
-          Your body holds more tension than you realize. PMR teaches you to let it go—one muscle group at a time.
+          Your body holds more tension than you realize. PMR teaches you to let it go---one muscle group at a time.
         </p>
       </>
     ),

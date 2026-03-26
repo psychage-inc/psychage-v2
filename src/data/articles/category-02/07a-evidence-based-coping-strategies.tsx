@@ -107,7 +107,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've heard all the advice: "Just breathe.", "Think positive.", "Drink chamomile tea." But when anxiety hits, vague suggestions don't cut it. You need strategies that actually work — backed by research, not just wellness influencer anecdotes.
+            You've heard all the advice: "Just breathe.", "Think positive.", "Drink chamomile tea." But when anxiety hits, vague suggestions don't cut it. You need strategies that actually work --- backed by research, not just wellness influencer anecdotes.
           </p>
           <p className="mb-6">
             Here are 12 evidence-based coping techniques for anxiety, organized by when and how to use them <Citation id="1" index={1} source="Clinical Psychology Review" year="2019" tier={1} />. Not all will work for everyone, but these are the strategies with the strongest scientific support.
@@ -118,7 +118,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
           For Acute Anxiety: In-the-Moment Techniques
         </h2>
         <p className="mb-6">
-          When anxiety spikes suddenly — before a presentation, during a panic attack, or in a triggering situation — these strategies help calm your nervous system quickly.
+          When anxiety spikes suddenly --- before a presentation, during a panic attack, or in a triggering situation --- these strategies help calm your nervous system quickly.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
@@ -186,7 +186,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>In-the-moment techniques</strong> don't cure anxiety — they reduce the intensity of acute episodes so you can think clearly and regain control. Use them when anxiety spikes, not as your only strategy.
+            <strong>In-the-moment techniques</strong> don't cure anxiety --- they reduce the intensity of acute episodes so you can think clearly and regain control. Use them when anxiety spikes, not as your only strategy.
           </p>
         </ArticleCallout>
 
@@ -244,13 +244,13 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
           8. Social Connection
         </h3>
         <p className="mb-6">
-          <strong>What it is:</strong> Regular, meaningful interaction with supportive people — not surface-level small talk.
+          <strong>What it is:</strong> Regular, meaningful interaction with supportive people --- not surface-level small talk.
         </p>
         <p className="mb-6">
           <strong>Why it works:</strong> Social support buffers stress, reduces cortisol, and provides perspective. Loneliness amplifies anxiety <Citation id="7" index={7} source="American Journal of Psychiatry" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          <strong>Best for:</strong> Chronic anxiety, social anxiety (start small — one trusted person).
+          <strong>Best for:</strong> Chronic anxiety, social anxiety (start small --- one trusted person).
         </p>
 
         <ComparisonTable
@@ -305,7 +305,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
           11. Behavioral Activation
         </h3>
         <p className="mb-6">
-          <strong>What it is:</strong> Doing something — anything — when anxiety makes you want to freeze or avoid.
+          <strong>What it is:</strong> Doing something --- anything --- when anxiety makes you want to freeze or avoid.
         </p>
         <p className="mb-6">
           <strong>How to do it:</strong> Make a list of small, manageable actions. Pick one and do it, even if you don't feel like it.
@@ -461,7 +461,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your heart is racing. Your thoughts are spiraling. You feel disconnected from your body, like you're watching yourself from outside. Anxiety has pulled you into a vortex of "what ifs" and worst-case scenarios. You need an anchor — something to bring you back to right now, where you're actually safe.
+            Your heart is racing. Your thoughts are spiraling. You feel disconnected from your body, like you're watching yourself from outside. Anxiety has pulled you into a vortex of "what ifs" and worst-case scenarios. You need an anchor --- something to bring you back to right now, where you're actually safe.
           </p>
           <p className="mb-6">
             The 5-4-3-2-1 grounding technique is one of the simplest, most effective tools for interrupting anxiety and panic. It works by redirecting your attention from internal chaos to external, present-moment sensory input <Citation id="1" index={1} source="Journal of Clinical Psychology" year="2017" tier={1} />.
@@ -493,7 +493,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
           The 5-4-3-2-1 Technique: Step by Step
         </h2>
         <p className="mb-6">
-          This exercise takes 3-5 minutes. You can do it anywhere — at your desk, in a car, at a party, in bed. Say your answers out loud if possible (hearing your own voice is grounding). If you're in public, you can whisper or think them silently.
+          This exercise takes 3-5 minutes. You can do it anywhere --- at your desk, in a car, at a party, in bed. Say your answers out loud if possible (hearing your own voice is grounding). If you're in public, you can whisper or think them silently.
         </p>
 
         <ProgressSteps
@@ -729,7 +729,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Think of grounding as a life raft — it keeps you afloat during a storm, but you still need to address why you're in stormy waters. If anxiety is frequent or severe, professional treatment is essential <Citation id="6" index={6} source="Frontiers in Psychology" year="2020" tier={1} />.
+          Think of grounding as a life raft --- it keeps you afloat during a storm, but you still need to address why you're in stormy waters. If anxiety is frequent or severe, professional treatment is essential <Citation id="6" index={6} source="Frontiers in Psychology" year="2020" tier={1} />.
         </p>
 
         <QuoteBlock
@@ -815,10 +815,10 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your shoulders are hunched. Your jaw is clenched. Your stomach is tight. You don't even realize how much tension you're carrying until someone points it out — or until it manifests as headaches, backaches, or insomnia. Anxiety doesn't just live in your mind. It lives in your muscles.
+            Your shoulders are hunched. Your jaw is clenched. Your stomach is tight. You don't even realize how much tension you're carrying until someone points it out --- or until it manifests as headaches, backaches, or insomnia. Anxiety doesn't just live in your mind. It lives in your muscles.
           </p>
           <p className="mb-6">
-            Progressive Muscle Relaxation (PMR) is a simple yet powerful technique that systematically releases physical tension, teaching your body — and by extension, your mind — how to relax <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2018" tier={1} />.
+            Progressive Muscle Relaxation (PMR) is a simple yet powerful technique that systematically releases physical tension, teaching your body --- and by extension, your mind --- how to relax <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -839,7 +839,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The contrast between tension and relaxation is what makes PMR effective. By deliberately tensing first, you become more aware of what tension feels like — and then deeply feel the release. Over time, you learn to recognize and release tension automatically.
+            The contrast between tension and relaxation is what makes PMR effective. By deliberately tensing first, you become more aware of what tension feels like --- and then deeply feel the release. Over time, you learn to recognize and release tension automatically.
           </p>
         </ArticleCallout>
 
@@ -977,7 +977,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
               title: '10. Face',
               content: (
                 <div>
-                  <p className="mb-2"><strong>Tense:</strong> Scrunch your entire face — squeeze eyes shut, wrinkle nose, clench jaw. Hold.</p>
+                  <p className="mb-2"><strong>Tense:</strong> Scrunch your entire face --- squeeze eyes shut, wrinkle nose, clench jaw. Hold.</p>
                   <p className="mb-2"><strong>Release:</strong> Let everything soften. Relax your forehead, jaw, tongue.</p>
                 </div>
               ),
@@ -1155,10 +1155,10 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Just breathe." You've heard it a million times when anxious. And it's maddening because you <em>are</em> breathing — shallow, rapid, chest-heaving breathing that makes you feel worse. The problem isn't that you're not breathing. It's <em>how</em> you're breathing.
+            "Just breathe." You've heard it a million times when anxious. And it's maddening because you <em>are</em> breathing --- shallow, rapid, chest-heaving breathing that makes you feel worse. The problem isn't that you're not breathing. It's <em>how</em> you're breathing.
           </p>
           <p className="mb-6">
-            Breathwork — controlled breathing techniques — is one of the fastest, most accessible ways to calm anxiety. Within 60-90 seconds, you can shift your nervous system from fight-or-flight to rest-and-digest <Citation id="1" index={1} source="Frontiers in Psychology" year="2018" tier={1} />.
+            Breathwork --- controlled breathing techniques --- is one of the fastest, most accessible ways to calm anxiety. Within 60-90 seconds, you can shift your nervous system from fight-or-flight to rest-and-digest <Citation id="1" index={1} source="Frontiers in Psychology" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -1214,19 +1214,19 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
           variant="vertical"
           steps={[
             {
-              title: 'Inhale Through Nose — Count to 4',
+              title: 'Inhale Through Nose --- Count to 4',
               description: <p>Breathe in slowly and deeply through your nose.</p>,
             },
             {
-              title: 'Hold — Count to 4',
+              title: 'Hold --- Count to 4',
               description: <p>Hold your breath. Don't strain.</p>,
             },
             {
-              title: 'Exhale Through Mouth — Count to 4',
+              title: 'Exhale Through Mouth --- Count to 4',
               description: <p>Slowly release all the air.</p>,
             },
             {
-              title: 'Hold — Count to 4',
+              title: 'Hold --- Count to 4',
               description: <p>Hold with empty lungs before the next inhale.</p>,
             },
           ]}
@@ -1255,9 +1255,9 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
 
         <ul className="list-decimal pl-6 mb-6 space-y-2">
           <li>Place the tip of your tongue against the ridge behind your upper front teeth (keeps it there throughout)</li>
-          <li><strong>Inhale through nose</strong> — count to 4</li>
-          <li><strong>Hold</strong> — count to 7</li>
-          <li><strong>Exhale through mouth</strong> (making a "whoosh" sound) — count to 8</li>
+          <li><strong>Inhale through nose</strong> --- count to 4</li>
+          <li><strong>Hold</strong> --- count to 7</li>
+          <li><strong>Exhale through mouth</strong> (making a "whoosh" sound) --- count to 8</li>
           <li>Repeat 4 times</li>
         </ul>
 
@@ -1391,7 +1391,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          <strong>Start with box breathing or 4-7-8</strong> — they're simple, fast, and highly effective for acute anxiety. Once comfortable, explore diaphragmatic breathing as a daily practice.
+          <strong>Start with box breathing or 4-7-8</strong> --- they're simple, fast, and highly effective for acute anxiety. Once comfortable, explore diaphragmatic breathing as a daily practice.
         </p>
 
         <h2 id="common-mistakes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1420,7 +1420,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Your breath is always with you — the most portable, powerful anxiety tool you have. Master one technique. Practice it daily. And when anxiety strikes, you'll have an anchor.
+          Your breath is always with you --- the most portable, powerful anxiety tool you have. Master one technique. Practice it daily. And when anxiety strikes, you'll have an anchor.
         </p>
       </>
     ),
@@ -1495,10 +1495,10 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Everyone thinks I'm incompetent.", "This will definitely end in disaster.", "I can't handle this." Your anxious thoughts feel like facts — urgent, certain, undeniable. But they're not facts. They're interpretations, predictions, stories your anxious brain tells to keep you safe. And you can learn to question them.
+            "Everyone thinks I'm incompetent.", "This will definitely end in disaster.", "I can't handle this." Your anxious thoughts feel like facts --- urgent, certain, undeniable. But they're not facts. They're interpretations, predictions, stories your anxious brain tells to keep you safe. And you can learn to question them.
           </p>
           <p className="mb-6">
-            Cognitive restructuring is a core technique in Cognitive Behavioral Therapy (CBT) that teaches you to identify, challenge, and reframe distorted anxious thoughts <Citation id="1" index={1} source="Clinical Psychology Review" year="2019" tier={1} />. It's not about "thinking positive" — it's about thinking accurately.
+            Cognitive restructuring is a core technique in Cognitive Behavioral Therapy (CBT) that teaches you to identify, challenge, and reframe distorted anxious thoughts <Citation id="1" index={1} source="Clinical Psychology Review" year="2019" tier={1} />. It's not about "thinking positive" --- it's about thinking accurately.
           </p>
         </div>
 
@@ -1619,7 +1619,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Cognitive distortions aren't lies you're telling yourself. They're automatic, unconscious thought patterns your brain uses to make sense of threat. The goal isn't to eliminate them — it's to recognize and question them.
+            Cognitive distortions aren't lies you're telling yourself. They're automatic, unconscious thought patterns your brain uses to make sense of threat. The goal isn't to eliminate them --- it's to recognize and question them.
           </p>
         </ArticleCallout>
 
@@ -1705,7 +1705,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Notice: The balanced thought doesn't eliminate anxiety. It <em>reduces</em> it by correcting distortions. You're not trying to convince yourself everything is perfect — you're seeking accuracy.
+          Notice: The balanced thought doesn't eliminate anxiety. It <em>reduces</em> it by correcting distortions. You're not trying to convince yourself everything is perfect --- you're seeking accuracy.
         </p>
 
         <h2 id="thought-record" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

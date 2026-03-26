@@ -159,7 +159,7 @@ export const communicationSkillsArticlesB: Article[] = [
           I-statements aren't magic. They won't fix a relationship with someone who doesn't care about your feelings. But they give healthy communication a chance. They transform blame into vulnerability, accusation into honesty.
         </p>
         <p className="mb-6">
-          Start using them. It'll feel awkward at first. With practice, it becomes natural—and your conversations become far more productive.
+          Start using them. It'll feel awkward at first. With practice, it becomes natural---and your conversations become far more productive.
         </p>
 
         <QuoteBlock
@@ -196,7 +196,7 @@ export const communicationSkillsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            How you communicate shapes every relationship in your life. There are four main styles: passive, aggressive, passive-aggressive, and assertive. Most people default to one—often without realizing it.
+            How you communicate shapes every relationship in your life. There are four main styles: passive, aggressive, passive-aggressive, and assertive. Most people default to one---often without realizing it.
           </p>
           <p className="mb-6">
             Only one style consistently leads to healthy, respectful relationships <Citation id="1" index={1} source="Journal of Social Psychology" year="2020" tier={1} />. The others create resentment, misunderstanding, or conflict. Here's how to identify your style and shift toward assertiveness.
@@ -398,7 +398,7 @@ export const communicationSkillsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Assertiveness is a skill. If you've spent years being passive or aggressive, it won't feel natural at first. That's okay. Start small. Practice. Over time, assertive communication becomes your new default—and your relationships transform.
+          Assertiveness is a skill. If you've spent years being passive or aggressive, it won't feel natural at first. That's okay. Start small. Practice. Over time, assertive communication becomes your new default---and your relationships transform.
         </p>
       </>
     ),
@@ -411,7 +411,7 @@ export const communicationSkillsArticlesB: Article[] = [
     id: catId(28),
     slug: 'how-to-give-feedback-without-triggering-defensiveness',
     title: 'How to Give Feedback Without Triggering Defensiveness',
-    description: 'Master the art of delivering constructive feedback that people can actually hear and act on—without making them defensive or angry.',
+    description: 'Master the art of delivering constructive feedback that people can actually hear and act on---without making them defensive or angry.',
     image: "/images/articles/cat03/cover-028.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -427,7 +427,7 @@ export const communicationSkillsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Giving feedback is one of the hardest communication skills. Too harsh, and they shut down. Too soft, and they don't take it seriously. Most people avoid feedback entirely—then let resentment build until they explode.
+            Giving feedback is one of the hardest communication skills. Too harsh, and they shut down. Too soft, and they don't take it seriously. Most people avoid feedback entirely---then let resentment build until they explode.
           </p>
           <p className="mb-6">
             There's a better way. Research shows specific techniques dramatically improve how feedback is received <Citation id="1" index={1} source="Journal of Applied Psychology" year="2020" tier={1} />. Here's how to deliver it effectively.
@@ -460,7 +460,7 @@ export const communicationSkillsArticlesB: Article[] = [
             },
             {
               title: '2. Behavior',
-              description: <p>State the observable behavior—what they did or said, not your interpretation of it.</p>,
+              description: <p>State the observable behavior---what they did or said, not your interpretation of it.</p>,
             },
             {
               title: '3. Impact',
@@ -526,7 +526,7 @@ export const communicationSkillsArticlesB: Article[] = [
           <li>It feels manipulative</li>
         </ul>
         <p className="mb-6">
-          <strong>Instead:</strong> Be direct and kind. If you have genuine positive feedback, give it separately—don't use it as a buffer for criticism.
+          <strong>Instead:</strong> Be direct and kind. If you have genuine positive feedback, give it separately---don't use it as a buffer for criticism.
         </p>
 
         <ArticleCallout variant="tip">
@@ -606,7 +606,7 @@ export const communicationSkillsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Feedback doesn't have to be painful. When delivered with clarity, empathy, and respect, it strengthens relationships rather than damaging them. It's not about being nice—it's about being clear and kind at the same time.
+          Feedback doesn't have to be painful. When delivered with clarity, empathy, and respect, it strengthens relationships rather than damaging them. It's not about being nice---it's about being clear and kind at the same time.
         </p>
       </>
     ),
@@ -619,7 +619,7 @@ export const communicationSkillsArticlesB: Article[] = [
     id: catId(29),
     slug: 'the-art-of-apology-what-makes-im-sorry-actually-work',
     title: "The Art of Apology: What Makes 'I'm Sorry' Actually Work",
-    description: "Learn the components of a genuine apology and why most apologies fail—plus scripts for making amends that actually repair relationships.",
+    description: "Learn the components of a genuine apology and why most apologies fail---plus scripts for making amends that actually repair relationships.",
     image: "/images/articles/cat03/cover-029.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 8,
@@ -801,7 +801,7 @@ export const communicationSkillsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're upset and need to talk. Your partner needs space to think. You want to process out loud; they go silent. Neither of you is wrong—you just speak different emotional languages.
+            You're upset and need to talk. Your partner needs space to think. You want to process out loud; they go silent. Neither of you is wrong---you just speak different emotional languages.
           </p>
           <p className="mb-6">
             People vary widely in how they express, process, and regulate emotions <Citation id="1" index={1} source="Emotion" year="2020" tier={1} />. Understanding these differences prevents misinterpreting someone's style as lack of care.
@@ -881,7 +881,7 @@ export const communicationSkillsArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Different doesn't mean wrong. Someone's emotional style is not a rejection of you—it's just how they're wired.</p>
+          <p>Different doesn't mean wrong. Someone's emotional style is not a rejection of you---it's just how they're wired.</p>
         </ArticleCallout>
 
         <h2 id="bridging-the-gap" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -963,7 +963,7 @@ export const communicationSkillsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Emotional style differences can feel like speaking different languages. But with understanding, patience, and clear communication, you can learn to translate—and build a relationship that honors both of your needs.
+          Emotional style differences can feel like speaking different languages. But with understanding, patience, and clear communication, you can learn to translate---and build a relationship that honors both of your needs.
         </p>
       </>
     ),

@@ -98,10 +98,10 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you experience racism—whether a violent assault, a microaggression at work, or watching another person who looks like you harmed on the news—your body and mind respond with a stress reaction. When these experiences accumulate over a lifetime, they can produce symptoms that look remarkably like PTSD: hypervigilance, intrusive thoughts, emotional numbness, and a persistent sense of danger.
+            When you experience racism---whether a violent assault, a microaggression at work, or watching another person who looks like you harmed on the news---your body and mind respond with a stress reaction. When these experiences accumulate over a lifetime, they can produce symptoms that look remarkably like PTSD: hypervigilance, intrusive thoughts, emotional numbness, and a persistent sense of danger.
           </p>
           <p className="mb-6">
-            This is racial trauma <Citation id="1" index={1} source="American Psychologist" year="2019" tier={1} />. Also called race-based traumatic stress, it refers to the psychological and emotional harm caused by encounters with racial bias, discrimination, and violence <Citation id="2" index={2} source="American Journal of Orthopsychiatry" year="2017" tier={1} />. The term validates what people of color have long known: racism isn't just unfair—it's harmful to mental health in measurable, serious ways.
+            This is racial trauma <Citation id="1" index={1} source="American Psychologist" year="2019" tier={1} />. Also called race-based traumatic stress, it refers to the psychological and emotional harm caused by encounters with racial bias, discrimination, and violence <Citation id="2" index={2} source="American Journal of Orthopsychiatry" year="2017" tier={1} />. The term validates what people of color have long known: racism isn't just unfair---it's harmful to mental health in measurable, serious ways.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           <li><strong>Direct attacks</strong>: Being called slurs, physically assaulted, or threatened because of race</li>
           <li><strong>Institutional racism</strong>: Being denied jobs, housing, loans, or healthcare due to racial bias</li>
           <li><strong>Vicarious trauma</strong>: Witnessing or hearing about violence against people who share your racial or ethnic identity</li>
-          <li><strong>Microaggressions</strong>: Cumulative "small" indignities—being followed in stores, asked "where are you really from," having your name mispronounced repeatedly, or being assumed to be in a lower-status role</li>
+          <li><strong>Microaggressions</strong>: Cumulative "small" indignities---being followed in stores, asked "where are you really from," having your name mispronounced repeatedly, or being assumed to be in a lower-status role</li>
           <li><strong>Historical trauma</strong>: Carrying the psychological legacy of slavery, colonization, genocide, or forced displacement experienced by your ancestors</li>
         </ul>
 
@@ -184,7 +184,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Elevated cortisol and inflammatory markers</li>
           <li>Higher rates of hypertension, diabetes, and cardiovascular disease</li>
-          <li>Increased allostatic load—the cumulative wear and tear on the body from chronic stress</li>
+          <li>Increased allostatic load---the cumulative wear and tear on the body from chronic stress</li>
           <li>Shortened telomeres (cellular markers of aging)</li>
         </ul>
 
@@ -254,7 +254,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Engage in Collective Action',
               description: (
                 <p>
-                  Many survivors find that participating in racial justice work—organizing, protesting, educating—helps transform pain into purpose. This doesn't mean you must become an activist, but engaging in meaningful action can restore a sense of agency.
+                  Many survivors find that participating in racial justice work---organizing, protesting, educating---helps transform pain into purpose. This doesn't mean you must become an activist, but engaging in meaningful action can restore a sense of agency.
                 </p>
               ),
             },
@@ -262,7 +262,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Practice Restorative Self-Care',
               description: (
                 <p>
-                  Prioritize rest, joy, and activities that reconnect you to cultural heritage and identity. Engage in practices that honor your body's need to recover from hypervigilance—somatic therapies, yoga, breathwork, and time in nature can all support nervous system regulation.
+                  Prioritize rest, joy, and activities that reconnect you to cultural heritage and identity. Engage in practices that honor your body's need to recover from hypervigilance---somatic therapies, yoga, breathwork, and time in nature can all support nervous system regulation.
                 </p>
               ),
             },
@@ -382,7 +382,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Mental health conditions do not discriminate—depression, anxiety, PTSD, and other disorders affect people across all racial and ethnic groups. But access to quality mental health care is far from equal. People of color are less likely to receive treatment, more likely to receive lower-quality care, and more likely to face discrimination in clinical settings.
+            Mental health conditions do not discriminate---depression, anxiety, PTSD, and other disorders affect people across all racial and ethnic groups. But access to quality mental health care is far from equal. People of color are less likely to receive treatment, more likely to receive lower-quality care, and more likely to face discrimination in clinical settings.
           </p>
           <p className="mb-6">
             These disparities are not the result of individual choices or cultural preferences. They stem from structural barriers embedded in healthcare systems, economic inequities, provider bias, and the ongoing effects of racism <Citation id="4" index={4} source="National Academies" year="2023" tier={2} />. Understanding why these gaps exist is the first step toward closing them.
@@ -440,7 +440,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Hispanic/Latino adults are nearly 3 times more likely to be uninsured than white adults</li>
-          <li>Even with insurance, high deductibles and copays create barriers (therapy sessions often cost $100–$250 per session)</li>
+          <li>Even with insurance, high deductibles and copays create barriers (therapy sessions often cost $100--$250 per session)</li>
           <li>Medicaid covers fewer providers, leading to long wait times or inaccessible care for low-income individuals</li>
         </ul>
 
@@ -448,12 +448,12 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           2. Provider Shortages and Geographic Deserts
         </h3>
         <p className="mb-6">
-          Communities of color—particularly rural and low-income areas—face severe shortages of mental health providers <Citation id="5" index={5} source="APA" year="2022" tier={3} />:
+          Communities of color---particularly rural and low-income areas---face severe shortages of mental health providers <Citation id="5" index={5} source="APA" year="2022" tier={3} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Only 4% of psychologists, 2% of psychiatrists, and 5% of social workers are Black, despite Black Americans making up 13% of the population</li>
           <li>Providers of color are more likely to work in underserved areas but are overwhelmed by demand</li>
-          <li>Telehealth has expanded access but still requires internet, devices, and privacy—barriers for low-income households</li>
+          <li>Telehealth has expanded access but still requires internet, devices, and privacy---barriers for low-income households</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -472,7 +472,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           Provider Bias and Discrimination in Clinical Care
         </h2>
         <p className="mb-6">
-          Even when people of color access care, they often encounter bias—both implicit and explicit—from healthcare providers <Citation id="3" index={3} source="Future Healthcare Journal" year="2019" tier={1} />:
+          Even when people of color access care, they often encounter bias---both implicit and explicit---from healthcare providers <Citation id="3" index={3} source="Future Healthcare Journal" year="2019" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -513,7 +513,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="The Legacy of Racism in Psychiatry">
           <p>
-            Psychiatry has a deeply troubling history: enslaved Africans who fled captivity were diagnosed with "drapetomania" (a supposed mental illness causing the "irrational" desire for freedom). Black Americans were used in unethical medical experiments. Homosexuality was classified as a mental disorder until 1973. These harms are not ancient history—they shape present-day mistrust and must be acknowledged by providers committed to equity.
+            Psychiatry has a deeply troubling history: enslaved Africans who fled captivity were diagnosed with "drapetomania" (a supposed mental illness causing the "irrational" desire for freedom). Black Americans were used in unethical medical experiments. Homosexuality was classified as a mental disorder until 1973. These harms are not ancient history---they shape present-day mistrust and must be acknowledged by providers committed to equity.
           </p>
         </ArticleCallout>
 
@@ -546,7 +546,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="info" title="Finding Culturally Responsive Care">
           <p>
-            While the system has deep flaws, you deserve care that honors your full identity. Seek providers who share your background, ask about their training in cultural humility, and trust your instincts—if a provider dismisses your experiences of racism or cultural context, it's okay to find someone else.
+            While the system has deep flaws, you deserve care that honors your full identity. Seek providers who share your background, ask about their training in cultural humility, and trust your instincts---if a provider dismisses your experiences of racism or cultural context, it's okay to find someone else.
           </p>
         </ArticleCallout>
       </>
@@ -630,10 +630,10 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A coworker touches your hair without asking. Someone asks "where are you really from?" You're followed around a store. A professor assumes you're in the class on an athletic scholarship. Your name is mispronounced—again—and you're told "Can I just call you something easier?"
+            A coworker touches your hair without asking. Someone asks "where are you really from?" You're followed around a store. A professor assumes you're in the class on an athletic scholarship. Your name is mispronounced---again---and you're told "Can I just call you something easier?"
           </p>
           <p className="mb-6">
-            These incidents may seem small. The person who said it might claim they "didn't mean anything by it." But these everyday slights—called racial microaggressions—are not harmless <Citation id="1" index={1} source="American Psychologist" year="2007" tier={1} />. When they happen repeatedly, they accumulate into chronic stress that damages mental health in measurable ways.
+            These incidents may seem small. The person who said it might claim they "didn't mean anything by it." But these everyday slights---called racial microaggressions---are not harmless <Citation id="1" index={1} source="American Psychologist" year="2007" tier={1} />. When they happen repeatedly, they accumulate into chronic stress that damages mental health in measurable ways.
           </p>
         </div>
 
@@ -760,7 +760,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           <li><strong>Ambiguity</strong>: It's often unclear whether the comment was intentionally racist, leaving the target to question their perception</li>
           <li><strong>Catch-22 of responding</strong>: If you say nothing, you carry the emotional burden; if you speak up, you risk being labeled "angry,", "difficult," or "too sensitive"</li>
           <li><strong>Invalidation</strong>: When others deny the harm ("They didn't mean it that way"), it compounds the injury by making you doubt your reality</li>
-          <li><strong>Frequency</strong>: It's not one incident—it's multiple incidents per day, every day, over a lifetime</li>
+          <li><strong>Frequency</strong>: It's not one incident---it's multiple incidents per day, every day, over a lifetime</li>
           <li><strong>Powerlessness</strong>: Microaggressions often occur in contexts where speaking up could jeopardize your job, grade, or safety</li>
         </ul>
 
@@ -791,7 +791,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Validate Your Experience',
               description: (
                 <p>
-                  Trust yourself. If something felt racist, it likely was—even if the other person didn't intend harm. You don't need external validation to know that what happened was hurtful.
+                  Trust yourself. If something felt racist, it likely was---even if the other person didn't intend harm. You don't need external validation to know that what happened was hurtful.
                 </p>
               ),
             },
@@ -818,7 +818,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Process and Release',
               description: (
                 <p>
-                  Talk to trusted friends, journal, or seek therapy to process the emotional toll. Carrying these experiences alone increases the harm. Community support—especially from others who share your racial identity—can be deeply healing.
+                  Talk to trusted friends, journal, or seek therapy to process the emotional toll. Carrying these experiences alone increases the harm. Community support---especially from others who share your racial identity---can be deeply healing.
                 </p>
               ),
             },
@@ -835,7 +835,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="For Allies and Bystanders">
           <p>
-            If you witness a microaggression, intervene if it's safe to do so. Interrupt the comment, redirect the conversation, or check in privately with the target afterward. Don't ask the target to explain or prove the harm—believe them. And do your own learning rather than expecting people of color to educate you.
+            If you witness a microaggression, intervene if it's safe to do so. Interrupt the comment, redirect the conversation, or check in privately with the target afterward. Don't ask the target to explain or prove the harm---believe them. And do your own learning rather than expecting people of color to educate you.
           </p>
         </ArticleCallout>
 
@@ -843,7 +843,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           When to Seek Professional Support
         </h2>
         <p className="mb-6">
-          If microaggressions are causing persistent distress, consider reaching out to a therapist—ideally one who specializes in racial trauma and understands the reality of microaggressions. You deserve a space where your experiences are validated, not questioned.
+          If microaggressions are causing persistent distress, consider reaching out to a therapist---ideally one who specializes in racial trauma and understands the reality of microaggressions. You deserve a space where your experiences are validated, not questioned.
         </p>
       </>
     ),
@@ -926,10 +926,10 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're sitting across from a therapist, trying to explain what it's like to navigate the world in your skin. You mention racism, family expectations rooted in your culture, or spiritual beliefs that shape how you see mental health. The therapist looks uncomfortable, changes the subject, or says, "Let's not focus on race—let's talk about you as an individual."
+            You're sitting across from a therapist, trying to explain what it's like to navigate the world in your skin. You mention racism, family expectations rooted in your culture, or spiritual beliefs that shape how you see mental health. The therapist looks uncomfortable, changes the subject, or says, "Let's not focus on race---let's talk about you as an individual."
           </p>
           <p className="mb-6">
-            This is a failure of cultural competence <Citation id="1" index={1} source="APA" year="2017" tier={3} />. A culturally competent therapist doesn't erase your identity—they center it. They understand that your race, ethnicity, immigration status, language, and cultural values are not separate from your mental health; they are integral to it.
+            This is a failure of cultural competence <Citation id="1" index={1} source="APA" year="2017" tier={3} />. A culturally competent therapist doesn't erase your identity---they center it. They understand that your race, ethnicity, immigration status, language, and cultural values are not separate from your mental health; they are integral to it.
           </p>
         </div>
 
@@ -948,7 +948,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Research shows that culturally adapted therapy—treatment tailored to cultural values, language, and context—produces better outcomes than generic, one-size-fits-all approaches <Citation id="5" index={5} source="Journal of Consulting and Clinical Psychology" year="2015" tier={1} />. Cultural competence isn't just "nice to have"—it directly improves treatment effectiveness.
+            Research shows that culturally adapted therapy---treatment tailored to cultural values, language, and context---produces better outcomes than generic, one-size-fits-all approaches <Citation id="5" index={5} source="Journal of Consulting and Clinical Psychology" year="2015" tier={1} />. Cultural competence isn't just "nice to have"---it directly improves treatment effectiveness.
           </p>
         </ArticleCallout>
 
@@ -962,7 +962,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           <li><strong>Misdiagnosis</strong>: Symptoms are misinterpreted because the therapist doesn't understand cultural expressions of distress (e.g., somatization in some Asian cultures)</li>
           <li><strong>Invalidation</strong>: Experiences of racism, discrimination, or cultural stress are minimized or dismissed</li>
           <li><strong>Pathologization</strong>: Cultural practices, family structures, or spiritual beliefs are labeled as "dysfunctional"</li>
-          <li><strong>Dropout</strong>: Clients don't return when they feel misunderstood or disrespected—people of color drop out of therapy at higher rates when cultural mismatch occurs <Citation id="6" index={6} source="JAMA Psychiatry" year="2018" tier={1} /></li>
+          <li><strong>Dropout</strong>: Clients don't return when they feel misunderstood or disrespected---people of color drop out of therapy at higher rates when cultural mismatch occurs <Citation id="6" index={6} source="JAMA Psychiatry" year="2018" tier={1} /></li>
         </ul>
 
         <h2 id="red-flags" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1095,7 +1095,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Consider Racial Concordance',
               description: (
                 <p>
-                  Research shows that racial and ethnic match between therapist and client improves retention and outcomes <Citation id="6" index={6} source="JAMA Psychiatry" year="2018" tier={1} />. While it's not essential—white therapists can be culturally competent—shared identity often reduces the burden of explaining your cultural context.
+                  Research shows that racial and ethnic match between therapist and client improves retention and outcomes <Citation id="6" index={6} source="JAMA Psychiatry" year="2018" tier={1} />. While it's not essential---white therapists can be culturally competent---shared identity often reduces the burden of explaining your cultural context.
                 </p>
               ),
             },
@@ -1128,7 +1128,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           <li>Discuss racism, discrimination, and cultural stress without judgment</li>
           <li>Request a different therapist if you don't feel understood</li>
           <li>Ask your therapist to learn more about your culture</li>
-          <li>Expect that your spiritual beliefs, family values, and cultural practices will be honored—not pathologized</li>
+          <li>Expect that your spiritual beliefs, family values, and cultural practices will be honored---not pathologized</li>
         </ul>
 
         <p className="mb-6">
@@ -1226,7 +1226,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
             In many Black families and communities, there's a shared script: "We don't do therapy.", "Prayer is enough.", "You just have to be strong." These messages come from love, from survival, from generations who endured unimaginable trauma without the luxury of professional help. But they also come at a cost.
           </p>
           <p className="mb-6">
-            Black Americans experience mental health conditions at rates similar to—or higher than—the general population, yet they are far less likely to receive treatment <Citation id="1" index={1} source="NAMI" year="2022" tier={3} />. This gap isn't about lack of need. It's about a mental health system that has historically failed, harmed, and excluded Black people—and a culture of silence that has made asking for help feel like weakness.
+            Black Americans experience mental health conditions at rates similar to---or higher than---the general population, yet they are far less likely to receive treatment <Citation id="1" index={1} source="NAMI" year="2022" tier={3} />. This gap isn't about lack of need. It's about a mental health system that has historically failed, harmed, and excluded Black people---and a culture of silence that has made asking for help feel like weakness.
           </p>
         </div>
 
@@ -1258,14 +1258,14 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           1. Racial Trauma and Violence
         </h3>
         <p className="mb-6">
-          Experiencing or witnessing racial violence—whether police brutality, hate crimes, or viral videos of Black death—produces psychological harm similar to PTSD <Citation id="3" index={3} source="The Lancet Psychiatry" year="2022" tier={1} />. Studies show that exposure to police killings of unarmed Black people increases poor mental health days for Black Americans in the surrounding area <Citation id="6" index={6} source="American Journal of Public Health" year="2021" tier={1} />.
+          Experiencing or witnessing racial violence---whether police brutality, hate crimes, or viral videos of Black death---produces psychological harm similar to PTSD <Citation id="3" index={3} source="The Lancet Psychiatry" year="2022" tier={1} />. Studies show that exposure to police killings of unarmed Black people increases poor mental health days for Black Americans in the surrounding area <Citation id="6" index={6} source="American Journal of Public Health" year="2021" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. The "Strong Black Woman" and "Strong Black Man" Schemas
         </h3>
         <p className="mb-6">
-          Cultural expectations to be perpetually strong, resilient, and self-reliant—while positive in some ways—can become a barrier to seeking help. The "Strong Black Woman" schema, for example, is linked to higher rates of depression when women suppress emotional pain to fulfill caregiving roles <Citation id="5" index={5} source="Psychology of Women Quarterly" year="2018" tier={1} />. Similarly, Black men face pressure to embody stoicism and hyper-masculinity, making vulnerability feel unsafe.
+          Cultural expectations to be perpetually strong, resilient, and self-reliant---while positive in some ways---can become a barrier to seeking help. The "Strong Black Woman" schema, for example, is linked to higher rates of depression when women suppress emotional pain to fulfill caregiving roles <Citation id="5" index={5} source="Psychology of Women Quarterly" year="2018" tier={1} />. Similarly, Black men face pressure to embody stoicism and hyper-masculinity, making vulnerability feel unsafe.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1279,12 +1279,12 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           4. Lack of Representation in Mental Health Care
         </h3>
         <p className="mb-6">
-          Only 4% of psychologists and 2% of psychiatrists are Black. This means many Black clients must explain their cultural context, educate white providers about racism, or tolerate microaggressions in therapy—turning what should be a healing space into another site of labor.
+          Only 4% of psychologists and 2% of psychiatrists are Black. This means many Black clients must explain their cultural context, educate white providers about racism, or tolerate microaggressions in therapy---turning what should be a healing space into another site of labor.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Historical Trauma and Mistrust">
           <p>
-            Black Americans" mistrust of the healthcare system is not paranoia—it's rational. The Tuskegee Syphilis Study left Black men untreated for syphilis for 40 years in the name of 'research' <Citation id="4" index={4} source="Journal of the National Medical Association" year="2019" tier={1} />. Enslaved people were used for medical experimentation. Psychiatric diagnoses were weaponized to pathologize resistance to slavery. This history is not ancient—it shapes present-day hesitation to seek care.
+            Black Americans" mistrust of the healthcare system is not paranoia---it's rational. The Tuskegee Syphilis Study left Black men untreated for syphilis for 40 years in the name of 'research' <Citation id="4" index={4} source="Journal of the National Medical Association" year="2019" tier={1} />. Enslaved people were used for medical experimentation. Psychiatric diagnoses were weaponized to pathologize resistance to slavery. This history is not ancient---it shapes present-day hesitation to seek care.
           </p>
         </ArticleCallout>
 
@@ -1297,17 +1297,17 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>"What happens in this house stays in this house"</li>
           <li>"Pray about it"</li>
-          <li>"Our ancestors survived worse—you can handle this"</li>
+          <li>"Our ancestors survived worse---you can handle this"</li>
           <li>"Therapy is for white people"</li>
           <li>"You're just being weak"</li>
         </ul>
         <p className="mb-6">
-          These messages are rooted in survival strategies—Black communities have historically had to be resilient in the face of systemic violence. But they also prevent people from accessing life-saving support.
+          These messages are rooted in survival strategies---Black communities have historically had to be resilient in the face of systemic violence. But they also prevent people from accessing life-saving support.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Faith and therapy are not opposites. Many Black therapists integrate spirituality into their practice, honoring the role of faith while also providing evidence-based tools. Seeking therapy doesn't mean you lack faith—it means you're taking care of the mind and body that your faith teaches are sacred.
+            Faith and therapy are not opposites. Many Black therapists integrate spirituality into their practice, honoring the role of faith while also providing evidence-based tools. Seeking therapy doesn't mean you lack faith---it means you're taking care of the mind and body that your faith teaches are sacred.
           </p>
         </ArticleCallout>
 
@@ -1399,7 +1399,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           You Deserve Healing
         </h2>
         <p className="mb-6">
-          Seeking help is not weakness. It's courage. It's refusing to carry trauma alone. It's choosing to heal so that the next generation doesn't have to carry what you did. Mental health care is not a luxury reserved for others—it's a right that belongs to you, too.
+          Seeking help is not weakness. It's courage. It's refusing to carry trauma alone. It's choosing to heal so that the next generation doesn't have to carry what you did. Mental health care is not a luxury reserved for others---it's a right that belongs to you, too.
         </p>
       </>
     ),

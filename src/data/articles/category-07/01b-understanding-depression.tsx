@@ -97,10 +97,10 @@ export const understandingDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You show up to work on time. You meet deadlines. You smile at social gatherings and answer "I'm fine' when people ask. On paper, your life looks functional, maybe even successful. But internally, you're drowning—numb, exhausted, disconnected, going through the motions while feeling nothing.
+            You show up to work on time. You meet deadlines. You smile at social gatherings and answer "I'm fine' when people ask. On paper, your life looks functional, maybe even successful. But internally, you're drowning---numb, exhausted, disconnected, going through the motions while feeling nothing.
           </p>
           <p className="mb-6">
-            This is high-functioning depression, sometimes called smiling depression or persistent depressive disorder (dysthymia). It's depression that doesn't completely incapacitate you but quietly steals your quality of life while everyone around you remains oblivious <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />. Because you're "managing," others—and often you yourself—dismiss your suffering as stress, laziness, or just "how life is."
+            This is high-functioning depression, sometimes called smiling depression or persistent depressive disorder (dysthymia). It's depression that doesn't completely incapacitate you but quietly steals your quality of life while everyone around you remains oblivious <Citation id="1" index={1} source="Harvard Review of Psychiatry" year="2020" tier={1} />. Because you're "managing," others---and often you yourself---dismiss your suffering as stress, laziness, or just "how life is."
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          The gap between external appearance and internal reality is what makes this form of depression so insidious <Citation id="5" index={5} source="Depression and Anxiety" year="2019" tier={1} />. You develop a mask—a functional persona that navigates the world while your authentic self is suffering in silence.
+          The gap between external appearance and internal reality is what makes this form of depression so insidious <Citation id="5" index={5} source="Depression and Anxiety" year="2019" tier={1} />. You develop a mask---a functional persona that navigates the world while your authentic self is suffering in silence.
         </p>
 
         <h2 id="symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -157,7 +157,7 @@ export const understandingDepressionArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Rather than intense sadness, you feel nothing. Colors are muted, music sounds hollow, meaningful moments feel flat. You're going through life in grayscale.</p>
-                  <p>This anhedonia (inability to feel pleasure) is just as much depression as active sadness—maybe more so, because it's harder to recognize and explain to others.</p>
+                  <p>This anhedonia (inability to feel pleasure) is just as much depression as active sadness---maybe more so, because it's harder to recognize and explain to others.</p>
                 </div>
               ),
             },
@@ -167,7 +167,7 @@ export const understandingDepressionArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">You might sleep 7-9 hours but wake up feeling like you haven't rested. Everything takes twice the energy it should. Getting through a normal day feels like running a marathon.</p>
-                  <p>You compensate by pushing harder, using caffeine, or sheer willpower—which works in the short term but deepens the long-term depletion.</p>
+                  <p>You compensate by pushing harder, using caffeine, or sheer willpower---which works in the short term but deepens the long-term depletion.</p>
                 </div>
               ),
             },
@@ -177,7 +177,7 @@ export const understandingDepressionArticlesB: Article[] = [
               content: (
                 <div>
                   <p>Difficulty concentrating, remembering details, or making even small decisions. You might reread the same paragraph five times or stare at your closet unable to choose what to wear.</p>
-                  <p className="mt-4">To others, you seem fine because you're still producing work—but you know it takes three times longer and requires intense effort to focus.</p>
+                  <p className="mt-4">To others, you seem fine because you're still producing work---but you know it takes three times longer and requires intense effort to focus.</p>
                 </div>
               ),
             },
@@ -203,7 +203,7 @@ export const understandingDepressionArticlesB: Article[] = [
               title: 'Selective Social Withdrawal',
               content: (
                 <div>
-                  <p className="mb-4">You show up for mandatory social obligations—work meetings, family dinners—but cancel optional plans. You isolate during free time, avoiding friends or declining invitations.</p>
+                  <p className="mb-4">You show up for mandatory social obligations---work meetings, family dinners---but cancel optional plans. You isolate during free time, avoiding friends or declining invitations.</p>
                   <p>When you do socialize, you're performing rather than connecting, counting down the minutes until you can leave.</p>
                 </div>
               ),
@@ -353,7 +353,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Depression doesn't have to completely incapacitate you to warrant treatment. If you're suffering—even if you're 'managing"—you deserve help. Treatment isn't reserved for people who can't function; it's for anyone whose quality of life is impaired.</p>
+          <p>Depression doesn't have to completely incapacitate you to warrant treatment. If you're suffering---even if you're 'managing"---you deserve help. Treatment isn't reserved for people who can't function; it's for anyone whose quality of life is impaired.</p>
         </ArticleCallout>
 
         <h2 id="recognition" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -369,7 +369,7 @@ export const understandingDepressionArticlesB: Article[] = [
           items={[
             {
               feature: 'Do you feel genuinely happy?',
-              values: ["No, or rarely—you might smile but don't feel joy", 'Yes, regularly and authentically'],
+              values: ["No, or rarely---you might smile but don't feel joy", 'Yes, regularly and authentically'],
             },
             {
               feature: 'Does anything excite you?',
@@ -396,7 +396,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          If you answered "Consider Help If..." to most questions, professional evaluation is warranted—regardless of how well you're functioning externally.
+          If you answered "Consider Help If..." to most questions, professional evaluation is warranted---regardless of how well you're functioning externally.
         </p>
 
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -473,7 +473,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          High-functioning depression is insidious precisely because it's hidden. You've gotten so good at pushing through that no one—including you—realizes how much you're suffering. But you don't have to live this way. Treatment can help you not just function, but actually feel alive again.
+          High-functioning depression is insidious precisely because it's hidden. You've gotten so good at pushing through that no one---including you---realizes how much you're suffering. But you don't have to live this way. Treatment can help you not just function, but actually feel alive again.
         </p>
       </>
     ),
@@ -561,10 +561,10 @@ export const understandingDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            People often think of depression primarily as an emotional condition—sadness, emptiness, loss of pleasure. But for many, the cognitive symptoms are equally debilitating: the brain fog, the inability to concentrate, the paralysis when facing simple decisions, the memory lapses that make you feel like you're losing your mind.
+            People often think of depression primarily as an emotional condition---sadness, emptiness, loss of pleasure. But for many, the cognitive symptoms are equally debilitating: the brain fog, the inability to concentrate, the paralysis when facing simple decisions, the memory lapses that make you feel like you're losing your mind.
           </p>
           <p className="mb-6">
-            These aren't character flaws or signs of laziness. Cognitive impairment is a core feature of depression, affecting up to 94% of people during a depressive episode <Citation id="1" index={1} source="Dialogues in Clinical Neuroscience" year="2020" tier={1} />. Understanding how depression affects your thinking helps you recognize these symptoms for what they are—medical symptoms, not personal failings—and points toward effective interventions.
+            These aren't character flaws or signs of laziness. Cognitive impairment is a core feature of depression, affecting up to 94% of people during a depressive episode <Citation id="1" index={1} source="Dialogues in Clinical Neuroscience" year="2020" tier={1} />. Understanding how depression affects your thinking helps you recognize these symptoms for what they are---medical symptoms, not personal failings---and points toward effective interventions.
           </p>
         </div>
 
@@ -597,7 +597,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="did-you-know">
-          <p>The experience of "brain fog" in depression isn't imaginary. Neuroimaging shows reduced activity in the prefrontal cortex—the brain region responsible for sustained attention and cognitive control.</p>
+          <p>The experience of "brain fog" in depression isn't imaginary. Neuroimaging shows reduced activity in the prefrontal cortex---the brain region responsible for sustained attention and cognitive control.</p>
         </ArticleCallout>
 
         <p className="mb-6"><strong>What this looks like in daily life:</strong></p>
@@ -612,7 +612,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          <strong>Why it happens:</strong> Depression hijacks your attention system. Your brain is preoccupied with internal negative thoughts (rumination), leaving fewer resources for external focus. Additionally, reduced dopamine and norepinephrine—neurotransmitters involved in attention—impair your ability to sustain concentration <Citation id="4" index={4} source="Clinical Psychology Review" year="2018" tier={1} />.
+          <strong>Why it happens:</strong> Depression hijacks your attention system. Your brain is preoccupied with internal negative thoughts (rumination), leaving fewer resources for external focus. Additionally, reduced dopamine and norepinephrine---neurotransmitters involved in attention---impair your ability to sustain concentration <Citation id="4" index={4} source="Clinical Psychology Review" year="2018" tier={1} />.
         </p>
 
         <h2 id="memory" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -629,7 +629,7 @@ export const understandingDepressionArticlesB: Article[] = [
               label: 'Working Memory',
               content: (
                 <div>
-                  <p className="mb-4">Working memory is your mental scratch pad—holding a phone number long enough to dial it, following multi-step instructions, doing mental math.</p>
+                  <p className="mb-4">Working memory is your mental scratch pad---holding a phone number long enough to dial it, following multi-step instructions, doing mental math.</p>
                   <p className="mb-4"><strong>In depression:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Forgetting what you went into a room to get</li>
@@ -653,7 +653,7 @@ export const understandingDepressionArticlesB: Article[] = [
                     <li>Easier to recall negative memories than positive ones (negativity bias)</li>
                     <li>Past events remembered with a negative emotional tint</li>
                   </ul>
-                  <p>Depression creates an overgeneralization of memory—remembering "I always fail" rather than specific instances, which reinforces hopelessness.</p>
+                  <p>Depression creates an overgeneralization of memory---remembering "I always fail" rather than specific instances, which reinforces hopelessness.</p>
                 </div>
               ),
             },
@@ -662,7 +662,7 @@ export const understandingDepressionArticlesB: Article[] = [
               label: 'Prospective Memory',
               content: (
                 <div>
-                  <p className="mb-4">Prospective memory is remembering to do things in the future—taking medication, keeping appointments, following through on commitments.</p>
+                  <p className="mb-4">Prospective memory is remembering to do things in the future---taking medication, keeping appointments, following through on commitments.</p>
                   <p className="mb-4"><strong>In depression:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Missing appointments or deadlines</li>
@@ -677,7 +677,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          <strong>The biological basis:</strong> Depression affects the hippocampus—the brain structure critical for memory formation. Studies show reduced hippocampal volume in people with depression, and this correlates with memory impairment. The good news: this appears partially reversible with treatment.
+          <strong>The biological basis:</strong> Depression affects the hippocampus---the brain structure critical for memory formation. Studies show reduced hippocampal volume in people with depression, and this correlates with memory impairment. The good news: this appears partially reversible with treatment.
         </p>
 
         <h2 id="executive-function" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -706,7 +706,7 @@ export const understandingDepressionArticlesB: Article[] = [
               title: 'Decision Paralysis',
               content: (
                 <div>
-                  <p className="mb-4">Even trivial decisions feel overwhelming. What to wear, what to eat, which email to answer first—choices that should be automatic become impossible.</p>
+                  <p className="mb-4">Even trivial decisions feel overwhelming. What to wear, what to eat, which email to answer first---choices that should be automatic become impossible.</p>
                   <p className="mb-4"><strong>Why:</strong> Depression impairs reward prediction. Your brain can't accurately estimate which option will feel better, so all choices seem equally pointless or risky. Additionally, fear of making the "wrong" choice leads to avoidance.</p>
                   <p>You might spend an hour staring at your closet, or avoid decisions entirely by sticking rigidly to routines.</p>
                 </div>
@@ -728,7 +728,7 @@ export const understandingDepressionArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">When obstacles arise, you feel stuck. Your brain generates fewer potential solutions and has difficulty evaluating which might work.</p>
-                  <p>Depression narrows cognitive flexibility—you get locked into patterns ("nothing will work anyway") rather than creatively adapting.</p>
+                  <p>Depression narrows cognitive flexibility---you get locked into patterns ("nothing will work anyway") rather than creatively adapting.</p>
                 </div>
               ),
             },
@@ -737,7 +737,7 @@ export const understandingDepressionArticlesB: Article[] = [
               title: 'Difficulty Initiating Tasks',
               content: (
                 <div>
-                  <p className="mb-4">You know what you need to do, but you can't make yourself start. This isn't laziness—it's a genuine deficit in task initiation, a key executive function.</p>
+                  <p className="mb-4">You know what you need to do, but you can't make yourself start. This isn't laziness---it's a genuine deficit in task initiation, a key executive function.</p>
                   <p>You might spend hours intending to start but feeling frozen, which then creates shame and worsens depression.</p>
                 </div>
               ),
@@ -758,7 +758,7 @@ export const understandingDepressionArticlesB: Article[] = [
           Slowed Processing Speed
         </h2>
         <p className="mb-6">
-          Depression slows down mental processing—how quickly you can take in information, understand it, and respond.
+          Depression slows down mental processing---how quickly you can take in information, understand it, and respond.
         </p>
 
         <BeforeAfter
@@ -787,14 +787,14 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          This psychomotor slowing is one reason work performance declines in depression. It's not that you don't know how to do your job—it just takes you three times longer to complete the same tasks, requiring enormous compensatory effort.
+          This psychomotor slowing is one reason work performance declines in depression. It's not that you don't know how to do your job---it just takes you three times longer to complete the same tasks, requiring enormous compensatory effort.
         </p>
 
         <h2 id="negative-bias" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Negative Cognitive Bias
         </h2>
         <p className="mb-6">
-          Depression doesn't just slow thinking—it systematically biases how you process information <Citation id="7" index={7} source="Current Opinion in Behavioral Sciences" year="2020" tier={1} />.
+          Depression doesn't just slow thinking---it systematically biases how you process information <Citation id="7" index={7} source="Current Opinion in Behavioral Sciences" year="2020" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -833,11 +833,11 @@ export const understandingDepressionArticlesB: Article[] = [
           Rumination: Stuck in Your Head
         </h2>
         <p className="mb-6">
-          Rumination—repetitive, passive focus on distress—is both a symptom and a maintaining factor of depression <Citation id="4" index={4} source="Clinical Psychology Review" year="2018" tier={1} />.
+          Rumination---repetitive, passive focus on distress---is both a symptom and a maintaining factor of depression <Citation id="4" index={4} source="Clinical Psychology Review" year="2018" tier={1} />.
         </p>
 
         <QuoteBlock
-          quote="Rumination is like a record skipping on the same painful groove. You replay what went wrong, analyze why you're inadequate, and predict how things will fail—over and over, without reaching any resolution."
+          quote="Rumination is like a record skipping on the same painful groove. You replay what went wrong, analyze why you're inadequate, and predict how things will fail---over and over, without reaching any resolution."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -853,7 +853,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Rumination consumes cognitive resources that could be used for attention, memory, and problem-solving. It's why your brain feels exhausted even when you haven't done anything—you've been running mental marathons of repetitive negative thinking.
+          Rumination consumes cognitive resources that could be used for attention, memory, and problem-solving. It's why your brain feels exhausted even when you haven't done anything---you've been running mental marathons of repetitive negative thinking.
         </p>
 
         <h2 id="daily-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -882,7 +882,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Many people experience "residual cognitive deficits"—they feel less depressed emotionally, but concentration, memory, and decision-making remain impaired. This is why people sometimes say "I'm not as sad, but I still don't feel like myself."
+          Many people experience "residual cognitive deficits"---they feel less depressed emotionally, but concentration, memory, and decision-making remain impaired. This is why people sometimes say "I'm not as sad, but I still don't feel like myself."
         </p>
 
         <p className="mb-6">
@@ -946,7 +946,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Cognitive symptoms in depression are medical symptoms, not personal failings. Your difficulty concentrating, remembering, or making decisions reflects changes in brain function—not your intelligence, worth, or character. Recognizing these as symptoms rather than flaws is the first step toward getting appropriate help.</p>
+          <p>Cognitive symptoms in depression are medical symptoms, not personal failings. Your difficulty concentrating, remembering, or making decisions reflects changes in brain function---not your intelligence, worth, or character. Recognizing these as symptoms rather than flaws is the first step toward getting appropriate help.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -1046,10 +1046,10 @@ export const understandingDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression isn't just in your head—it's in your cardiovascular system, your immune function, your metabolic health, and your entire body. The relationship between depression and physical health runs in both directions: physical illness increases depression risk, and depression worsens physical health outcomes.
+            Depression isn't just in your head---it's in your cardiovascular system, your immune function, your metabolic health, and your entire body. The relationship between depression and physical health runs in both directions: physical illness increases depression risk, and depression worsens physical health outcomes.
           </p>
           <p className="mb-6">
-            Understanding this bidirectional relationship has profound implications. It validates that depression is a whole-body condition requiring integrated treatment. It explains why people with chronic illness are at higher risk for depression. And it highlights that treating depression isn't just about improving mood—it's about protecting long-term physical health <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />.
+            Understanding this bidirectional relationship has profound implications. It validates that depression is a whole-body condition requiring integrated treatment. It explains why people with chronic illness are at higher risk for depression. And it highlights that treating depression isn't just about improving mood---it's about protecting long-term physical health <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -1215,7 +1215,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Exercise, healthy diet, stress management, and social connection all reduce inflammation—which may be one mechanism through which these lifestyle factors protect against both depression and physical illness.</p>
+          <p>Exercise, healthy diet, stress management, and social connection all reduce inflammation---which may be one mechanism through which these lifestyle factors protect against both depression and physical illness.</p>
         </ArticleCallout>
 
         <h2 id="chronic-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1254,7 +1254,7 @@ export const understandingDepressionArticlesB: Article[] = [
           Physical Symptoms of Depression
         </h2>
         <p className="mb-6">
-          Depression commonly presents with physical symptoms—sometimes more prominently than mood symptoms <Citation id="7" index={7} source="Journal of Affective Disorders" year="2020" tier={1} />.
+          Depression commonly presents with physical symptoms---sometimes more prominently than mood symptoms <Citation id="7" index={7} source="Journal of Affective Disorders" year="2020" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -1285,7 +1285,7 @@ export const understandingDepressionArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Exhaustion that rest doesn't relieve. Everything feels physically heavy and effortful.</p>
-                  <p>This isn't 'just tiredness"—it's a biological symptom related to inflammation, disrupted sleep architecture, and altered energy metabolism.</p>
+                  <p>This isn't 'just tiredness"---it's a biological symptom related to inflammation, disrupted sleep architecture, and altered energy metabolism.</p>
                 </div>
               ),
             },
@@ -1358,8 +1358,8 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="If you have chronic physical illness:">
           <ul className="list-disc pl-6 space-y-2">
-            <li>Ask your doctor about depression screening—it's not a sign of weakness, it's good medical practice</li>
-            <li>Don't dismiss mood changes as 'just natural given my situation"—they may be treatable depression</li>
+            <li>Ask your doctor about depression screening---it's not a sign of weakness, it's good medical practice</li>
+            <li>Don't dismiss mood changes as 'just natural given my situation"---they may be treatable depression</li>
             <li>Seek mental health support as part of comprehensive illness management</li>
             <li>Recognize that treating depression can improve your physical health outcomes</li>
           </ul>
@@ -1367,7 +1367,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="If you have depression:">
           <ul className="list-disc pl-6 space-y-2">
-            <li>Get regular physical health checkups—depression increases risk for physical conditions</li>
+            <li>Get regular physical health checkups---depression increases risk for physical conditions</li>
             <li>Tell your doctor about physical symptoms; don't assume they're 'just depression"</li>
             <li>Prioritize health behaviors (exercise, nutrition, sleep) as part of depression treatment</li>
             <li>Consider that some physical symptoms may improve as depression is treated</li>
@@ -1384,7 +1384,7 @@ export const understandingDepressionArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Exercise:</strong> Reduces depression and inflammation, improves cardiovascular health, enhances neuroplasticity</li>
           <li><strong>Mindfulness and meditation:</strong> Reduces stress hormones, lowers inflammation, improves pain tolerance</li>
-          <li><strong>Yoga:</strong> Combines physical movement, breath regulation, and mental focus—addresses multiple pathways</li>
+          <li><strong>Yoga:</strong> Combines physical movement, breath regulation, and mental focus---addresses multiple pathways</li>
           <li><strong>Tai chi:</strong> Particularly effective for older adults with both depression and chronic conditions</li>
           <li><strong>Biofeedback:</strong> Teaches regulation of autonomic nervous system (heart rate variability, muscle tension)</li>
           <li><strong>Nutrition interventions:</strong> Mediterranean diet, anti-inflammatory eating patterns</li>
@@ -1395,7 +1395,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Treating depression isn't just about feeling better emotionally—it's about protecting your physical health, improving medical outcomes, and potentially adding years to your life."
+          quote="Treating depression isn't just about feeling better emotionally---it's about protecting your physical health, improving medical outcomes, and potentially adding years to your life."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -1406,7 +1406,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Whether you're living with chronic illness and developing depression, or living with depression and concerned about physical health, understanding this connection empowers you to seek comprehensive care that treats you as a complete human being—not as a body separate from a mind.
+          Whether you're living with chronic illness and developing depression, or living with depression and concerned about physical health, understanding this connection empowers you to seek comprehensive care that treats you as a complete human being---not as a body separate from a mind.
         </p>
       </>
     ),
@@ -1497,7 +1497,7 @@ export const understandingDepressionArticlesB: Article[] = [
             When you're depressed, canceling plans feels like self-care. Being alone feels safer than facing people. Social interaction feels exhausting rather than energizing. The problem: isolation is both a symptom and a cause of depression, creating a self-reinforcing cycle that's difficult to break.
           </p>
           <p className="mb-6">
-            Understanding why depression drives you toward isolation—and why that isolation then worsens depression—is crucial for recovery. This isn't about forcing yourself to be social when you don't want to be. It's about recognizing the trap and finding sustainable ways to maintain connection even when your brain is telling you to withdraw <Citation id="1" index={1} source="Psychological Medicine" year="2020" tier={1} />.
+            Understanding why depression drives you toward isolation---and why that isolation then worsens depression---is crucial for recovery. This isn't about forcing yourself to be social when you don't want to be. It's about recognizing the trap and finding sustainable ways to maintain connection even when your brain is telling you to withdraw <Citation id="1" index={1} source="Psychological Medicine" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -1505,7 +1505,7 @@ export const understandingDepressionArticlesB: Article[] = [
           Why Depression Makes You Want to Isolate
         </h2>
         <p className="mb-6">
-          The urge to withdraw isn't a character flaw—it's a symptom with biological and psychological roots <Citation id="3" index={3} source="Journal of Abnormal Psychology" year="2019" tier={1} />.
+          The urge to withdraw isn't a character flaw---it's a symptom with biological and psychological roots <Citation id="3" index={3} source="Journal of Abnormal Psychology" year="2019" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -1516,7 +1516,7 @@ export const understandingDepressionArticlesB: Article[] = [
               title: 'Social Interaction Feels Exhausting',
               content: (
                 <div>
-                  <p className="mb-4">Depression drains your energy. Social interaction—reading social cues, maintaining conversation, regulating your presentation—requires cognitive and emotional resources you don't have.</p>
+                  <p className="mb-4">Depression drains your energy. Social interaction---reading social cues, maintaining conversation, regulating your presentation---requires cognitive and emotional resources you don't have.</p>
                   <p>What used to feel natural now feels like performance. You're already running on empty; socializing feels like one more demand you can't meet.</p>
                 </div>
               ),
@@ -1526,7 +1526,7 @@ export const understandingDepressionArticlesB: Article[] = [
               title: "You Can't Enjoy It Anyway",
               content: (
                 <div>
-                  <p className="mb-4">Anhedonia—the inability to feel pleasure—means social activities that used to be enjoyable now feel flat and pointless. If you can't enjoy seeing friends, why bother?</p>
+                  <p className="mb-4">Anhedonia---the inability to feel pleasure---means social activities that used to be enjoyable now feel flat and pointless. If you can't enjoy seeing friends, why bother?</p>
                   <p>Your brain's reward system isn't responding to social connection, so there's no motivation to seek it out.</p>
                 </div>
               ),
@@ -1557,7 +1557,7 @@ export const understandingDepressionArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Depression amplifies negative expectations. You assume people will judge you, find you boring, or see through your facade.</p>
-                  <p>Avoiding social situations protects you from anticipated rejection—even when that rejection is imagined.</p>
+                  <p>Avoiding social situations protects you from anticipated rejection---even when that rejection is imagined.</p>
                 </div>
               ),
             },
@@ -1584,7 +1584,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note">
-          <p>These aren't excuses or rationalizations—they're real experiences driven by changes in brain function. Depression alters your reward system, energy levels, and perception of social interactions in ways that make withdrawal feel logical and self-protective.</p>
+          <p>These aren't excuses or rationalizations---they're real experiences driven by changes in brain function. Depression alters your reward system, energy levels, and perception of social interactions in ways that make withdrawal feel logical and self-protective.</p>
         </ArticleCallout>
 
         <h2 id="biological-basis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1603,7 +1603,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Evolutionarily, social withdrawal during illness may have been adaptive—resting and avoiding social demands while recovering. But in depression, this response becomes maladaptive and self-perpetuating.
+          Evolutionarily, social withdrawal during illness may have been adaptive---resting and avoiding social demands while recovering. But in depression, this response becomes maladaptive and self-perpetuating.
         </p>
 
         <h2 id="vicious-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1633,7 +1633,7 @@ export const understandingDepressionArticlesB: Article[] = [
               title: 'Loss of behavioral activation',
               description: (
                 <div>
-                  <p className="mb-2">Social activities provide structure, meaning, and natural behavioral activation—all protective against depression <Citation id="5" index={5} source="Behavior Modification" year="2020" tier={1} />.</p>
+                  <p className="mb-2">Social activities provide structure, meaning, and natural behavioral activation---all protective against depression <Citation id="5" index={5} source="Behavior Modification" year="2020" tier={1} />.</p>
                   <p>When you isolate, you lose these naturally rewarding activities, leaving more time for rumination and passive disengagement.</p>
                 </div>
               ),
@@ -1686,7 +1686,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>Loneliness and social isolation are significant health risks. Meta-analyses find that chronic loneliness increases mortality risk by 26-32%—comparable to smoking 15 cigarettes per day <Citation id="4" index={4} source="Perspectives on Psychological Science" year="2015" tier={1} />.</p>
+          <p>Loneliness and social isolation are significant health risks. Meta-analyses find that chronic loneliness increases mortality risk by 26-32%---comparable to smoking 15 cigarettes per day <Citation id="4" index={4} source="Perspectives on Psychological Science" year="2015" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="types-of-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1740,7 +1740,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          In depression, you might not have energy for all types. Prioritizing quality over quantity—maintaining one or two close connections—may be more sustainable than trying to maintain a large social network.
+          In depression, you might not have energy for all types. Prioritizing quality over quantity---maintaining one or two close connections---may be more sustainable than trying to maintain a large social network.
         </p>
 
         <h2 id="breaking-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1876,7 +1876,7 @@ export const understandingDepressionArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Don't take it personally.</strong> Their withdrawal is about depression, not about you or the value of your relationship.</li>
-          <li><strong>Keep reaching out—gently.</strong> Don't disappear, but also don't pressure. 'Thinking of you, no need to respond" texts maintain connection without demanding energy.</li>
+          <li><strong>Keep reaching out---gently.</strong> Don't disappear, but also don't pressure. 'Thinking of you, no need to respond" texts maintain connection without demanding energy.</li>
           <li><strong>Lower the bar.</strong> Suggest low-effort activities: "Can I bring you dinner?" vs. "Want to go out to eat?"</li>
           <li><strong>Be specific.</strong> "How can I help?" is overwhelming. "I'm going to the grocery store, what do you need?" is actionable.</li>
           <li><strong>Tolerate their struggle.</strong> You don't need to fix it or cheer them up. Sometimes presence is enough.</li>
@@ -1884,18 +1884,18 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Depression tells you that isolation protects you and others. This is depression lying. Connection—even small, imperfect connection—is medicine."
+          quote="Depression tells you that isolation protects you and others. This is depression lying. Connection---even small, imperfect connection---is medicine."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
         />
 
         <p className="mb-6">
-          Breaking the isolation cycle doesn't happen overnight. It's not about suddenly becoming social again. It's about recognizing that withdrawal feeds depression, and finding the smallest sustainable ways to maintain threads of connection—to yourself, to others, and to the world—even when your brain is telling you to disappear.
+          Breaking the isolation cycle doesn't happen overnight. It's not about suddenly becoming social again. It's about recognizing that withdrawal feeds depression, and finding the smallest sustainable ways to maintain threads of connection---to yourself, to others, and to the world---even when your brain is telling you to disappear.
         </p>
 
         <p className="mb-6">
-          You don't have to do this alone. In fact, that's the entire point: healing from depression requires connection, even when—especially when—connection feels impossible.
+          You don't have to do this alone. In fact, that's the entire point: healing from depression requires connection, even when---especially when---connection feels impossible.
         </p>
       </>
     ),
@@ -1983,10 +1983,10 @@ export const understandingDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression is a universal human experience—it exists in every society across the globe. But how people experience, express, interpret, and respond to depression varies profoundly across cultures. The same underlying condition can manifest as primarily emotional symptoms in one culture, predominantly physical complaints in another, and spiritual crisis in a third.
+            Depression is a universal human experience---it exists in every society across the globe. But how people experience, express, interpret, and respond to depression varies profoundly across cultures. The same underlying condition can manifest as primarily emotional symptoms in one culture, predominantly physical complaints in another, and spiritual crisis in a third.
           </p>
           <p className="mb-6">
-            Understanding cultural variation in depression isn't just academic—it's essential for accurate diagnosis, effective treatment, and reducing stigma. It also reveals that Western psychiatric models, while valuable, don't capture the full human experience of emotional suffering <Citation id="1" index={1} source="Transcultural Psychiatry" year="2020" tier={1} />.
+            Understanding cultural variation in depression isn't just academic---it's essential for accurate diagnosis, effective treatment, and reducing stigma. It also reveals that Western psychiatric models, while valuable, don't capture the full human experience of emotional suffering <Citation id="1" index={1} source="Transcultural Psychiatry" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -2074,7 +2074,7 @@ export const understandingDepressionArticlesB: Article[] = [
                     <li>Explicit discussion of sadness, hopelessness, worthlessness</li>
                     <li>Psychological language: "I feel depressed,", "I'm anxious"</li>
                     <li>Focus on thoughts and emotions as primary experience</li>
-                    <li>Mind-body dualism—mental and physical treated as separate</li>
+                    <li>Mind-body dualism---mental and physical treated as separate</li>
                   </ul>
                   <p><strong>Why:</strong> Western cultures emphasize individualism, introspection, and psychological awareness. Mental health literacy is higher, and discussing emotions is more socially acceptable.</p>
                 </div>
@@ -2093,7 +2093,7 @@ export const understandingDepressionArticlesB: Article[] = [
                     <li>Integrated view of mind-body connection</li>
                   </ul>
                   <p className="mb-4"><strong>Why:</strong> Collectivist cultures may stigmatize mental illness more heavily (seen as bringing shame to family). Emotional restraint is valued. Physical symptoms are more socially acceptable.</p>
-                  <p>This doesn't mean East Asians don't experience emotional symptoms—they do. But somatic symptoms may be foregrounded in how distress is described and help is sought.</p>
+                  <p>This doesn't mean East Asians don't experience emotional symptoms---they do. But somatic symptoms may be foregrounded in how distress is described and help is sought.</p>
                 </div>
               ),
             },
@@ -2158,7 +2158,7 @@ export const understandingDepressionArticlesB: Article[] = [
                     <li>Concern about marriage prospects and family reputation</li>
                     <li>Greater emphasis on maintaining appearances</li>
                   </ul>
-                  <p className="mt-4">This creates additional barriers to seeking help—admitting depression affects not just you, but your family's standing in the community.</p>
+                  <p className="mt-4">This creates additional barriers to seeking help---admitting depression affects not just you, but your family's standing in the community.</p>
                 </div>
               ),
             },
@@ -2175,7 +2175,7 @@ export const understandingDepressionArticlesB: Article[] = [
                     <li>"You're not trying hard enough to be happy"</li>
                     <li>"Mental illness is an excuse for laziness"</li>
                   </ul>
-                  <p className="mt-4">While mental health awareness is growing in Western contexts, stigma persists—just taking a different form.</p>
+                  <p className="mt-4">While mental health awareness is growing in Western contexts, stigma persists---just taking a different form.</p>
                 </div>
               ),
             },
@@ -2213,7 +2213,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="When your language doesn't have a word for what you're feeling, does that change the experience? Research suggests yes—language both reflects and shapes how we understand our internal states."
+          quote="When your language doesn't have a word for what you're feeling, does that change the experience? Research suggests yes---language both reflects and shapes how we understand our internal states."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -2223,7 +2223,7 @@ export const understandingDepressionArticlesB: Article[] = [
           Cultural Concepts of Distress
         </h2>
         <p className="mb-6">
-          The DSM-5 acknowledges "cultural concepts of distress"—culture-specific ways of experiencing and expressing suffering <Citation id="5" index={5} source="American Journal of Psychiatry" year="2019" tier={1} />. These overlap with depression but don't map neatly onto Western diagnostic categories:
+          The DSM-5 acknowledges "cultural concepts of distress"---culture-specific ways of experiencing and expressing suffering <Citation id="5" index={5} source="American Journal of Psychiatry" year="2019" tier={1} />. These overlap with depression but don't map neatly onto Western diagnostic categories:
         </p>
 
         <ComparisonTable
@@ -2270,7 +2270,7 @@ export const understandingDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          These aren't "exotic" versions of Western disorders—they're legitimate cultural frameworks for understanding distress that may coexist with, overlap with, or differ from depression as defined by DSM criteria.
+          These aren't "exotic" versions of Western disorders---they're legitimate cultural frameworks for understanding distress that may coexist with, overlap with, or differ from depression as defined by DSM criteria.
         </p>
 
         <h2 id="help-seeking" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2304,7 +2304,7 @@ export const understandingDepressionArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>In many non-Western cultures, presenting to a mental health specialist with psychological complaints is rare. Instead, people seek help from primary care for physical symptoms or from spiritual/traditional healers for what are seen as spiritual problems. This doesn't mean they're not experiencing depression—it means the pathway to care looks different.</p>
+          <p>In many non-Western cultures, presenting to a mental health specialist with psychological complaints is rare. Instead, people seek help from primary care for physical symptoms or from spiritual/traditional healers for what are seen as spiritual problems. This doesn't mean they're not experiencing depression---it means the pathway to care looks different.</p>
         </ArticleCallout>
 
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2391,17 +2391,17 @@ export const understandingDepressionArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Depression is real across cultures.</strong> While expression varies, the underlying suffering is universal and deserves validation and treatment.</li>
           <li><strong>Western models don't capture everything.</strong> DSM criteria are useful tools but not the only legitimate way to understand emotional distress.</li>
-          <li><strong>Cultural variation is real.</strong> It's not just that people describe the same experience differently—culture shapes the actual phenomenology of depression.</li>
+          <li><strong>Cultural variation is real.</strong> It's not just that people describe the same experience differently---culture shapes the actual phenomenology of depression.</li>
           <li><strong>Cultural sensitivity matters.</strong> Effective treatment requires understanding a person's cultural context, not imposing a one-size-fits-all Western model.</li>
           <li><strong>Individuals vary within cultures.</strong> Cultural patterns are trends, not rigid rules. People within the same culture differ.</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Depression is both universal and culturally shaped. Recognizing this allows us to validate suffering across all its manifestations while adapting treatment to be effective within diverse cultural contexts. The goal is not cultural relativism that excuses suffering, nor cultural imperialism that imposes Western models—it's respectful, effective care that honors both the universality of human suffering and the diversity of human experience.</p>
+          <p>Depression is both universal and culturally shaped. Recognizing this allows us to validate suffering across all its manifestations while adapting treatment to be effective within diverse cultural contexts. The goal is not cultural relativism that excuses suffering, nor cultural imperialism that imposes Western models---it's respectful, effective care that honors both the universality of human suffering and the diversity of human experience.</p>
         </ArticleCallout>
 
         <p className="mb-6">
-          Whether you experience depression primarily as sadness, physical pain, spiritual disconnection, or social disharmony, your suffering is real. Effective help exists—though it may need to look different depending on your cultural context, language, values, and beliefs about what healing means.
+          Whether you experience depression primarily as sadness, physical pain, spiritual disconnection, or social disharmony, your suffering is real. Effective help exists---though it may need to look different depending on your cultural context, language, values, and beliefs about what healing means.
         </p>
       </>
     ),

@@ -102,10 +102,10 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The way you understand sadness, express distress, and seek help is deeply shaped by the culture you grew up in. What looks like depression in New York might be described as a physical pain in Seoul, or a spiritual crisis in Mumbai. Culture is not a minor detail in mental health—it is the lens through which we interpret our entire inner world.
+            The way you understand sadness, express distress, and seek help is deeply shaped by the culture you grew up in. What looks like depression in New York might be described as a physical pain in Seoul, or a spiritual crisis in Mumbai. Culture is not a minor detail in mental health---it is the lens through which we interpret our entire inner world.
           </p>
           <p className="mb-6">
-            Western psychology has long dominated the field of mental health, treating its frameworks as universal truths <Citation id="1" index={1} source="American Psychiatric Association" year="2016" tier={4} />. Yet research increasingly reveals that mental health is experienced, expressed, and treated in radically different ways across cultures <Citation id="2" index={2} source="Wiley-Blackwell" year="2020" tier={5} />. A one-size-fits-all approach not only fails to help—it can actively harm people whose experiences do not fit the Western mold.
+            Western psychology has long dominated the field of mental health, treating its frameworks as universal truths <Citation id="1" index={1} source="American Psychiatric Association" year="2016" tier={4} />. Yet research increasingly reveals that mental health is experienced, expressed, and treated in radically different ways across cultures <Citation id="2" index={2} source="Wiley-Blackwell" year="2020" tier={5} />. A one-size-fits-all approach not only fails to help---it can actively harm people whose experiences do not fit the Western mold.
           </p>
         </div>
 
@@ -116,15 +116,15 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Culture influences mental health in three fundamental ways: how symptoms are felt, how they are labeled, and what is considered abnormal.
         </p>
         <p className="mb-6">
-          <strong>Expression of symptoms.</strong> In many Western cultures, depression is primarily described through emotional and cognitive symptoms like sadness, hopelessness, and negative thoughts <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. But in many East Asian, African, and Latin American cultures, the same condition is more often expressed through physical symptoms like headaches, fatigue, or digestive problems—a phenomenon called <em>somatization</em>.
+          <strong>Expression of symptoms.</strong> In many Western cultures, depression is primarily described through emotional and cognitive symptoms like sadness, hopelessness, and negative thoughts <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. But in many East Asian, African, and Latin American cultures, the same condition is more often expressed through physical symptoms like headaches, fatigue, or digestive problems---a phenomenon called <em>somatization</em>.
         </p>
 
         <ArticleCallout variant="did-you-know" title="Why Physical vs. Emotional Symptoms?">
-          <p>Some cultures view the mind and body as inseparable, while Western medicine tends to split them apart. In Chinese medicine, for example, the concept of "qi" integrates physical and emotional well-being. Expressing distress through bodily symptoms is not "wrong"—it reflects a different cultural understanding of health.</p>
+          <p>Some cultures view the mind and body as inseparable, while Western medicine tends to split them apart. In Chinese medicine, for example, the concept of "qi" integrates physical and emotional well-being. Expressing distress through bodily symptoms is not "wrong"---it reflects a different cultural understanding of health.</p>
         </ArticleCallout>
 
         <p className="mb-6">
-          <strong>Labeling and meaning.</strong> The words available to describe distress shape how people understand their experiences <Citation id="4" index={4} source="Nature Reviews Psychology" year="2022" tier={1} />. Some languages have emotion words that have no direct English translation. For example, the Korean concept of <em>hwabyeong</em> (anger illness) describes physical symptoms arising from suppressed anger—a condition recognized in Korean culture but absent from Western diagnostic manuals.
+          <strong>Labeling and meaning.</strong> The words available to describe distress shape how people understand their experiences <Citation id="4" index={4} source="Nature Reviews Psychology" year="2022" tier={1} />. Some languages have emotion words that have no direct English translation. For example, the Korean concept of <em>hwabyeong</em> (anger illness) describes physical symptoms arising from suppressed anger---a condition recognized in Korean culture but absent from Western diagnostic manuals.
         </p>
         <p className="mb-6">
           <strong>What counts as abnormal.</strong> Every culture has norms about acceptable thoughts, feelings, and behaviors. Hearing the voices of deceased ancestors might be considered a sign of psychosis in one culture and a respected spiritual experience in another <Citation id="5" index={5} source="World Psychiatry" year="2020" tier={1} />. Culture defines the boundary between normal variation and pathology.
@@ -154,14 +154,14 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           In individualist cultures like the United States, Canada, and much of Western Europe, mental health treatment focuses on the individual: their thoughts, feelings, and personal goals. The ideal outcome is often framed as self-actualization or personal growth.
         </p>
         <p className="mb-6">
-          In collectivist cultures—common in East Asia, Latin America, Africa, and the Middle East—the self is understood as interconnected with family and community <Citation id="6" index={6} source="JAMA Psychiatry" year="2019" tier={1} />. Mental health problems may be seen as disrupting family harmony or failing to fulfill social roles. Treatment may focus on restoring relationships rather than individual insight.
+          In collectivist cultures---common in East Asia, Latin America, Africa, and the Middle East---the self is understood as interconnected with family and community <Citation id="6" index={6} source="JAMA Psychiatry" year="2019" tier={1} />. Mental health problems may be seen as disrupting family harmony or failing to fulfill social roles. Treatment may focus on restoring relationships rather than individual insight.
         </p>
 
         <h2 id="cultural-concepts-of-distress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Cultural Concepts of Distress
         </h2>
         <p className="mb-6">
-          The DSM-5, the primary diagnostic manual used in Western psychiatry, now includes a section on "Cultural Concepts of Distress"—culture-specific ways of understanding mental suffering that do not fit neatly into Western diagnostic categories <Citation id="7" index={7} source="Oxford University Press" year="2021" tier={5} />.
+          The DSM-5, the primary diagnostic manual used in Western psychiatry, now includes a section on "Cultural Concepts of Distress"---culture-specific ways of understanding mental suffering that do not fit neatly into Western diagnostic categories <Citation id="7" index={7} source="Oxford University Press" year="2021" tier={5} />.
         </p>
         <p className="mb-6">
           Some examples include:
@@ -181,7 +181,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Implications for Treatment
         </h2>
         <p className="mb-6">
-          Understanding culture is not just an academic exercise—it has direct implications for effective treatment <Citation id="8" index={8} source="World Health Organization" year="2020" tier={2} />.
+          Understanding culture is not just an academic exercise---it has direct implications for effective treatment <Citation id="8" index={8} source="World Health Organization" year="2020" tier={2} />.
         </p>
         <p className="mb-6">
           <strong>Misdiagnosis risk.</strong> A provider unfamiliar with cultural differences might misinterpret cultural expressions of distress. For example, a person from a culture where auditory hallucinations of ancestors are spiritually meaningful might be incorrectly diagnosed with psychosis.
@@ -190,7 +190,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <strong>Treatment engagement.</strong> Therapy models developed in Western contexts may not resonate with people from collectivist cultures. Individual talk therapy can feel isolating or irrelevant to someone who views problems through a family or community lens <Citation id="9" index={9} source="Journal of Psychiatric Research" year="2023" tier={1} />. Family therapy, group interventions, or integrating spiritual practices may be more effective.
         </p>
         <p className="mb-6">
-          <strong>Language barriers.</strong> Even when interpreter services are available, concepts central to Western therapy—like "boundaries,", "self-care," or "assertiveness"—may not translate well or may carry different meanings.
+          <strong>Language barriers.</strong> Even when interpreter services are available, concepts central to Western therapy---like "boundaries,", "self-care," or "assertiveness"---may not translate well or may carry different meanings.
         </p>
 
         <StatCard
@@ -218,7 +218,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Culture is not a barrier to effective mental health care—it is the foundation on which care must be built."
+          quote="Culture is not a barrier to effective mental health care---it is the foundation on which care must be built."
           attribution="Dr. Laurence Kirmayer"
           role="Director, Culture & Mental Health Research Unit"
           source="McGill University"
@@ -237,7 +237,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <li>Family or friends express concern about changes in your behavior</li>
         </ul>
         <p className="mb-6">
-          Look for providers who demonstrate cultural humility—a willingness to learn about your background and adapt their approach. If possible, seek therapists who share your cultural background or have specialized training in working with your community.
+          Look for providers who demonstrate cultural humility---a willingness to learn about your background and adapt their approach. If possible, seek therapists who share your cultural background or have specialized training in working with your community.
         </p>
       </>
     ),
@@ -343,7 +343,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
             In Malaysia and Southeast Asia, men have been known to experience sudden, overwhelming fear that their genitals are retracting into their body, leading to panic and sometimes fatal attempts to prevent this imagined retraction. In Japan, people suffer intense anxiety about offending others through their body odor or facial expressions. In Latin America, a frightening experience can cause one's soul to leave the body, resulting in physical illness.
           </p>
           <p className="mb-6">
-            These are not fabrications or superstitions—they are real conditions that cause genuine suffering. They are <em>culture-bound syndromes</em>: patterns of mental distress that appear primarily or exclusively within specific cultural contexts <Citation id="1" index={1} source="Culture, Medicine and Psychiatry" year="2020" tier={1} />. Their existence challenges a fundamental assumption of Western psychiatry: that mental illness is universal and culture-neutral.
+            These are not fabrications or superstitions---they are real conditions that cause genuine suffering. They are <em>culture-bound syndromes</em>: patterns of mental distress that appear primarily or exclusively within specific cultural contexts <Citation id="1" index={1} source="Culture, Medicine and Psychiatry" year="2020" tier={1} />. Their existence challenges a fundamental assumption of Western psychiatry: that mental illness is universal and culture-neutral.
           </p>
         </div>
 
@@ -420,7 +420,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
                     <strong>Cultural context:</strong> Rooted in Japanese cultural values around social harmony, respect, and avoiding causing discomfort to others. While Westerners with social anxiety fear being judged, people with taijin kyofusho fear harming others through their presence.
                   </p>
                   <p>
-                    <strong>Western parallel:</strong> Related to social anxiety disorder but with a fundamentally different focus—other-oriented rather than self-oriented fear.
+                    <strong>Western parallel:</strong> Related to social anxiety disorder but with a fundamentally different focus---other-oriented rather than self-oriented fear.
                   </p>
                 </div>
               ),
@@ -494,7 +494,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <strong>The universalist view</strong> argues that conditions like depression and anxiety exist everywhere, but culture influences how symptoms are expressed and labeled. From this perspective, ataque de nervios is just panic disorder with a cultural label.
         </p>
         <p className="mb-6">
-          <strong>The culturalist view</strong> argues that culture does not just influence symptom expression—it shapes the very experience of distress at neurobiological and phenomenological levels. From this view, reducing ataque to panic disorder erases meaningful differences in experience, meaning, and appropriate treatment <Citation id="8" index={8} source="Journal of the History of the Behavioral Sciences" year="2020" tier={1} />.
+          <strong>The culturalist view</strong> argues that culture does not just influence symptom expression---it shapes the very experience of distress at neurobiological and phenomenological levels. From this view, reducing ataque to panic disorder erases meaningful differences in experience, meaning, and appropriate treatment <Citation id="8" index={8} source="Journal of the History of the Behavioral Sciences" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -623,7 +623,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In the United States, therapy often focuses on helping you become more independent, assertive, and focused on your own needs. In Japan, the same problems might be approached by helping you better fulfill your family roles and restore social harmony. Neither approach is wrong—they reflect fundamentally different cultural values about what it means to be a healthy person.
+            In the United States, therapy often focuses on helping you become more independent, assertive, and focused on your own needs. In Japan, the same problems might be approached by helping you better fulfill your family roles and restore social harmony. Neither approach is wrong---they reflect fundamentally different cultural values about what it means to be a healthy person.
           </p>
           <p className="mb-6">
             The divide between individualist and collectivist cultures is one of the most important frameworks in cross-cultural psychology <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />. These cultural orientations shape not just how mental health is treated, but how it develops, how symptoms appear, and what recovery looks like.
@@ -686,7 +686,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <strong>Expression of emotions.</strong> Individualist cultures generally encourage emotional expression as healthy and authentic <Citation id="3" index={3} source="Current Opinion in Psychology" year="2022" tier={1} />. "Let it out,", "speak your truth," and "don't bottle it up" are common advice. Suppressing emotions is seen as unhealthy.
         </p>
         <p className="mb-6">
-          In collectivist cultures, emotional restraint is often valued to preserve group harmony. Expressing negative emotions—especially anger or frustration—can be seen as selfish or disruptive. This does not mean people feel less; they may simply channel distress into physical symptoms (somatization) or indirect expressions.
+          In collectivist cultures, emotional restraint is often valued to preserve group harmony. Expressing negative emotions---especially anger or frustration---can be seen as selfish or disruptive. This does not mean people feel less; they may simply channel distress into physical symptoms (somatization) or indirect expressions.
         </p>
 
         <ArticleCallout variant="tip" title="Neither Expression Style Is Inherently Better">
@@ -697,7 +697,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <strong>Sources of self-esteem.</strong> In individualist cultures, self-esteem is typically based on personal achievements, uniqueness, and internal attributes ("I am smart,", "I am creative"). Threats to self-esteem come from personal failure or not measuring up to individual standards.
         </p>
         <p className="mb-6">
-          In collectivist cultures, self-worth is more relational—based on fulfilling roles and maintaining relationships ("I am a good daughter,", "I contribute to my family"). Threats to self-esteem come from bringing shame to the family or failing social obligations.
+          In collectivist cultures, self-worth is more relational---based on fulfilling roles and maintaining relationships ("I am a good daughter,", "I contribute to my family"). Threats to self-esteem come from bringing shame to the family or failing social obligations.
         </p>
 
         <h2 id="stigma-and-help-seeking" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">
@@ -707,7 +707,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Mental health stigma exists in both individualist and collectivist cultures, but for different reasons <Citation id="4" index={4} source="Asian Journal of Social Psychology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          <strong>In individualist cultures,</strong> stigma often centers on perceived weakness or loss of control. Mental illness may be seen as a personal failing—inability to "pull yourself together" or "think positively." Seeking help is increasingly normalized, especially among younger generations.
+          <strong>In individualist cultures,</strong> stigma often centers on perceived weakness or loss of control. Mental illness may be seen as a personal failing---inability to "pull yourself together" or "think positively." Seeking help is increasingly normalized, especially among younger generations.
         </p>
         <p className="mb-6">
           <strong>In collectivist cultures,</strong> stigma is more about family honor and social standing. Mental illness may be seen as bringing shame to the family or affecting marriage prospects. Seeking professional help can be interpreted as airing private matters publicly, violating the cultural value of handling problems within the family <Citation id="5" index={5} source="Journal of Cross-Cultural Psychology" year="2023" tier={1} />.
@@ -723,7 +723,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          This does not mean people in collectivist cultures do not seek help—they may turn to family, religious leaders, or traditional healers before (or instead of) mental health professionals <Citation id="6" index={6} source="World Psychiatry" year="2021" tier={1} />.
+          This does not mean people in collectivist cultures do not seek help---they may turn to family, religious leaders, or traditional healers before (or instead of) mental health professionals <Citation id="6" index={6} source="World Psychiatry" year="2021" tier={1} />.
         </p>
 
         <h2 id="treatment-implications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -761,7 +761,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Cultural values are not static. Globalization, migration, and media exposure are creating hybrid cultural identities, especially among younger generations <Citation id="8" index={8} source="Transcultural Psychiatry" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
-          Many people navigate multiple cultural systems—adopting individualist values at work or school, while maintaining collectivist values at home. This cultural code-switching can be adaptive, but it can also create internal conflict when values clash.
+          Many people navigate multiple cultural systems---adopting individualist values at work or school, while maintaining collectivist values at home. This cultural code-switching can be adaptive, but it can also create internal conflict when values clash.
         </p>
 
         <QuoteBlock
@@ -901,10 +901,10 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A Chinese woman suffering from depression might visit her doctor complaining of chronic headaches, dizziness, and fatigue—but never mention the sadness, hopelessness, or sleep problems she also experiences. A Japanese student overwhelmed by anxiety might withdraw from social contact, describing only stomach pain and exhaustion. This is not deception or denial. It is how mental distress is often experienced and communicated in East Asian cultures.
+            A Chinese woman suffering from depression might visit her doctor complaining of chronic headaches, dizziness, and fatigue---but never mention the sadness, hopelessness, or sleep problems she also experiences. A Japanese student overwhelmed by anxiety might withdraw from social contact, describing only stomach pain and exhaustion. This is not deception or denial. It is how mental distress is often experienced and communicated in East Asian cultures.
           </p>
           <p className="mb-6">
-            Mental health in East Asian cultures—including Chinese, Japanese, Korean, and Vietnamese communities—is profoundly shaped by cultural values around family honor, emotional restraint, and social harmony <Citation id="1" index={1} source="Culture, Medicine and Psychiatry" year="2021" tier={1} />. Understanding these cultural frameworks is essential for effective care.
+            Mental health in East Asian cultures---including Chinese, Japanese, Korean, and Vietnamese communities---is profoundly shaped by cultural values around family honor, emotional restraint, and social harmony <Citation id="1" index={1} source="Culture, Medicine and Psychiatry" year="2021" tier={1} />. Understanding these cultural frameworks is essential for effective care.
           </p>
         </div>
 
@@ -924,7 +924,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    "Face" refers to social prestige, reputation, and honor <Citation id="3" index={3} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />. Losing face—through personal failure, family scandal, or public embarrassment—is a profound shame that affects not just the individual but the entire family.
+                    "Face" refers to social prestige, reputation, and honor <Citation id="3" index={3} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />. Losing face---through personal failure, family scandal, or public embarrassment---is a profound shame that affects not just the individual but the entire family.
                   </p>
                   <p>
                     <strong>Mental health impact:</strong> Seeking mental health treatment can be seen as an admission of weakness that causes the family to lose face. Mental illness may be hidden from extended family, friends, or community. This fear of judgment creates significant barriers to help-seeking.
@@ -952,7 +952,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Emotional self-control and not burdening others with one's feelings are valued. Expressing strong emotions—especially negative ones—is often seen as immature or disruptive to social harmony <Citation id="6" index={6} source="Clinical Psychology Review" year="2022" tier={1} />.
+                    Emotional self-control and not burdening others with one's feelings are valued. Expressing strong emotions---especially negative ones---is often seen as immature or disruptive to social harmony <Citation id="6" index={6} source="Clinical Psychology Review" year="2022" tier={1} />.
                   </p>
                   <p>
                     <strong>Mental health impact:</strong> People may not identify or label their emotional distress, leading to delayed recognition of mental health problems. Emotions may be channeled into physical symptoms (somatization) rather than verbally expressed.
@@ -981,7 +981,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Somatization: When Distress Becomes Physical
         </h2>
         <p className="mb-6">
-          One of the most studied phenomena in East Asian mental health is somatization—the expression of psychological distress through physical symptoms <Citation id="2" index={2} source="Asian Journal of Psychiatry" year="2022" tier={1} />.
+          One of the most studied phenomena in East Asian mental health is somatization---the expression of psychological distress through physical symptoms <Citation id="2" index={2} source="Asian Journal of Psychiatry" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Common somatic presentations of mental illness:</strong>
@@ -1021,7 +1021,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Neurasthenia: A Cultural Diagnosis
         </h2>
         <p className="mb-6">
-          In China, the diagnosis of <em>neurasthenia</em> (shenjing shuairuo) remains common, despite being removed from Western diagnostic manuals decades ago <Citation id="8" index={8} source="British Journal of Psychiatry" year="2020" tier={1} />. Neurasthenia describes a syndrome of mental and physical fatigue, weakness, headaches, and irritability—symptoms that in Western psychiatry might be diagnosed as depression or anxiety.
+          In China, the diagnosis of <em>neurasthenia</em> (shenjing shuairuo) remains common, despite being removed from Western diagnostic manuals decades ago <Citation id="8" index={8} source="British Journal of Psychiatry" year="2020" tier={1} />. Neurasthenia describes a syndrome of mental and physical fatigue, weakness, headaches, and irritability---symptoms that in Western psychiatry might be diagnosed as depression or anxiety.
         </p>
         <p className="mb-6">
           Neurasthenia is culturally acceptable because it attributes symptoms to overwork or "weakness of the nerves" rather than emotional problems. It allows people to seek treatment without the stigma attached to psychiatric diagnosis.
@@ -1096,7 +1096,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <li>Look for providers with training in Asian cultural competence or from similar backgrounds</li>
           <li>It is okay to start with a medical doctor if you feel more comfortable discussing physical symptoms</li>
           <li>Consider whether you want to involve family members in your treatment</li>
-          <li>Your cultural values around family, duty, and emotional restraint are not obstacles to overcome—they are part of who you are</li>
+          <li>Your cultural values around family, duty, and emotional restraint are not obstacles to overcome---they are part of who you are</li>
         </ul>
 
         <p className="mb-6">
@@ -1105,7 +1105,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Mental health problems are not a reflection of bad parenting or family failure</li>
           <li>Professional help can complement, not replace, family support</li>
-          <li>The stigma is changing—younger generations are more open to mental health treatment</li>
+          <li>The stigma is changing---younger generations are more open to mental health treatment</li>
           <li>Early intervention improves outcomes and prevents suffering</li>
         </ul>
 
@@ -1219,10 +1219,10 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When a Latina woman faces depression, she might first turn to her mother, her comadre (close friend), or her priest before considering a therapist. A Mexican American man struggling with anxiety might visit a curandero (traditional healer) for a cleansing ritual. A Puerto Rican family might describe emotional distress as an <em>ataque de nervios</em>—a culturally specific way of expressing overwhelming stress that brings the family together to provide support.
+            When a Latina woman faces depression, she might first turn to her mother, her comadre (close friend), or her priest before considering a therapist. A Mexican American man struggling with anxiety might visit a curandero (traditional healer) for a cleansing ritual. A Puerto Rican family might describe emotional distress as an <em>ataque de nervios</em>---a culturally specific way of expressing overwhelming stress that brings the family together to provide support.
           </p>
           <p className="mb-6">
-            Mental health in Latino/Hispanic communities is deeply shaped by cultural values that prioritize family unity, spiritual faith, and collective resilience <Citation id="1" index={1} source="Hispanic Journal of Behavioral Sciences" year="2021" tier={1} />. Understanding these cultural strengths—and the barriers they can sometimes create—is essential for effective mental health care.
+            Mental health in Latino/Hispanic communities is deeply shaped by cultural values that prioritize family unity, spiritual faith, and collective resilience <Citation id="1" index={1} source="Hispanic Journal of Behavioral Sciences" year="2021" tier={1} />. Understanding these cultural strengths---and the barriers they can sometimes create---is essential for effective mental health care.
           </p>
         </div>
 
@@ -1242,7 +1242,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    <em>Familismo</em> refers to the central importance of family—both nuclear and extended—in Latino culture. Family loyalty, obligation, and interconnectedness are core values. Family needs take priority over individual desires.
+                    <em>Familismo</em> refers to the central importance of family---both nuclear and extended---in Latino culture. Family loyalty, obligation, and interconnectedness are core values. Family needs take priority over individual desires.
                   </p>
                   <p className="mb-3">
                     <strong>Mental health impact:</strong> Family can be the strongest protective factor against mental illness, providing support, belonging, and practical help. But familismo can also create pressure to hide mental health problems to avoid burdening or shaming the family <Citation id="2" index={2} source="JAMA Psychiatry" year="2022" tier={1} />.
@@ -1282,7 +1282,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
                     <strong>Mental health impact:</strong> Young people may struggle to assert independence or disagree with family expectations without feeling they are being disrespectful. Therapy that encourages assertiveness or boundary-setting may clash with cultural values.
                   </p>
                   <p>
-                    <strong>In treatment:</strong> Providers should frame autonomy in culturally acceptable ways—such as becoming a stronger family member—rather than rejecting family obligations.
+                    <strong>In treatment:</strong> Providers should frame autonomy in culturally acceptable ways---such as becoming a stronger family member---rather than rejecting family obligations.
                   </p>
                 </div>
               ),
@@ -1293,7 +1293,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    <em>Marianismo</em> is the cultural expectation that women embody self-sacrifice, purity, and nurturing—modeled after the Virgin Mary. Women are expected to prioritize family needs above their own wellbeing <Citation id="9" index={9} source="Psychology of Women Quarterly" year="2020" tier={1} />.
+                    <em>Marianismo</em> is the cultural expectation that women embody self-sacrifice, purity, and nurturing---modeled after the Virgin Mary. Women are expected to prioritize family needs above their own wellbeing <Citation id="9" index={9} source="Psychology of Women Quarterly" year="2020" tier={1} />.
                   </p>
                   <p className="mb-3">
                     <strong>Mental health impact:</strong> Latina women may neglect their own mental health needs, feel guilty seeking help, or experience depression and anxiety from unmet personal needs. Self-care can feel selfish or culturally inappropriate.
@@ -1326,7 +1326,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="info" title="Ataque Is a Culturally Acceptable Response">
-          <p>Unlike panic attacks in mainstream U.S. culture (which are often hidden), ataque de nervios serves a social function. It communicates extreme distress, mobilizes family support, and is understood as a normal—if dramatic—response to overwhelming stress. Afterward, the person is cared for by family and community.</p>
+          <p>Unlike panic attacks in mainstream U.S. culture (which are often hidden), ataque de nervios serves a social function. It communicates extreme distress, mobilizes family support, and is understood as a normal---if dramatic---response to overwhelming stress. Afterward, the person is cared for by family and community.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -1337,7 +1337,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           Curanderismo and Traditional Healing
         </h2>
         <p className="mb-6">
-          Many Latino communities maintain traditional healing practices alongside—or instead of—biomedical mental health care <Citation id="5" index={5} source="Cultural Diversity and Ethnic Minority Psychology" year="2023" tier={1} />. <em>Curanderismo</em> (folk healing) is practiced throughout Latin America and among U.S. Latino communities.
+          Many Latino communities maintain traditional healing practices alongside---or instead of---biomedical mental health care <Citation id="5" index={5} source="Cultural Diversity and Ethnic Minority Psychology" year="2023" tier={1} />. <em>Curanderismo</em> (folk healing) is practiced throughout Latin America and among U.S. Latino communities.
         </p>
         <p className="mb-6">
           <strong>Common traditional healing practices:</strong>
@@ -1378,7 +1378,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="warning" title="The Immigrant Paradox">
-          <p>Research shows that first-generation immigrants often have better mental health than their U.S.-born children. This "immigrant paradox" suggests that traditional cultural values and strong family ties are protective. As families acculturate and lose cultural connections, mental health vulnerability increases—particularly among second and third generations.</p>
+          <p>Research shows that first-generation immigrants often have better mental health than their U.S.-born children. This "immigrant paradox" suggests that traditional cultural values and strong family ties are protective. As families acculturate and lose cultural connections, mental health vulnerability increases---particularly among second and third generations.</p>
         </ArticleCallout>
 
         <h2 id="barriers-to-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1414,7 +1414,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Our strength lies in our culture—our family bonds, our faith, our resilience. Mental health care should build on these strengths, not ask us to abandon them."
+          quote="Our strength lies in our culture---our family bonds, our faith, our resilience. Mental health care should build on these strengths, not ask us to abandon them."
           attribution="Dr. Melanie Domenech Rodríguez"
           role="Professor of Psychology"
           source="Utah State University"
@@ -1430,7 +1430,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
           <li>Look for providers who offer services in Spanish and have experience with Latino communities</li>
           <li>Consider whether you want family members involved in your treatment</li>
           <li>It is okay to integrate prayer, traditional healing, or faith-based support with therapy</li>
-          <li>Your cultural values around family and faith are not obstacles—they are strengths</li>
+          <li>Your cultural values around family and faith are not obstacles---they are strengths</li>
           <li>Free or low-cost options: Community health centers, university clinics, faith-based counseling</li>
         </ul>
 
@@ -1439,7 +1439,7 @@ export const mentalHealthAcrossCulturesArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Mental health problems are not a sign of weakness or bad character</li>
-          <li>Professional help complements—does not replace—family support</li>
+          <li>Professional help complements---does not replace---family support</li>
           <li>Early intervention prevents suffering and improves outcomes</li>
           <li>Your support and involvement can make treatment more effective</li>
         </ul>

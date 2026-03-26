@@ -97,7 +97,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Teachers are leaving the profession in record numbers. Those who remain report
-            exhaustion, cynicism, and a sense of futility. This isn't just about tough days—it's a
+            exhaustion, cynicism, and a sense of futility. This isn't just about tough days---it's a
             systemic crisis threatening the foundation of education.
           </p>
           <p className="mb-6">
@@ -109,7 +109,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
               year="2021"
               tier={1}
             />
-            . Understanding why it's happening—and what can be done—is essential for anyone who
+            . Understanding why it's happening---and what can be done---is essential for anyone who
             cares about the future of schools.
           </p>
         </div>
@@ -144,7 +144,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <p className="mb-6">
           The COVID-19 pandemic exacerbated an already dire situation. Teachers faced impossible
-          demands—pivoting to remote learning, managing health risks, addressing students" trauma,
+          demands---pivoting to remote learning, managing health risks, addressing students" trauma,
           and navigating political battles over masks and curriculum{', '}
           <Citation
             id="6"
@@ -159,7 +159,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p>
             The teacher shortage and burnout crisis are interconnected. Burned-out teachers leave,
-            creating more workload for those who remain, which accelerates their burnout—a vicious
+            creating more workload for those who remain, which accelerates their burnout---a vicious
             cycle.
           </p>
         </ArticleCallout>
@@ -171,7 +171,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           Why Teachers Burn Out: The Systemic Causes
         </h2>
         <p className="mb-6">
-          Teacher burnout isn't about weak individuals—it's about a broken system{', '}
+          Teacher burnout isn't about weak individuals---it's about a broken system{', '}
           <Citation
             id="3"
             index={3}
@@ -191,7 +191,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Teachers don't just teach—they plan lessons, grade, attend meetings, respond to
+                    Teachers don't just teach---they plan lessons, grade, attend meetings, respond to
                     emails, manage behavior, support struggling students, communicate with parents,
                     and complete administrative tasks.
                   </p>
@@ -210,7 +210,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
                   <p className="mb-4">
                     Teaching is emotional work. Teachers manage their own emotions while regulating
                     students" emotions, de-escalating conflicts, and providing social-emotional
-                    support—often without training or resources.
+                    support---often without training or resources.
                   </p>
                   <p>
                     This constant emotional regulation is exhausting and contributes to compassion
@@ -224,7 +224,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
               title: 'Lack of Autonomy',
               content: (
                 <p>
-                  Teachers are micromanaged—scripted curricula, standardized testing mandates, and
+                  Teachers are micromanaged---scripted curricula, standardized testing mandates, and
                   top-down policies leave little room for professional judgment. This undermines the
                   intrinsic motivation that drew many to teaching in the first place.
                 </p>
@@ -273,7 +273,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           The Impact on Students
         </h2>
         <p className="mb-6">
-          Teacher burnout doesn't just harm teachers—it damages student learning and wellbeing{', '}
+          Teacher burnout doesn't just harm teachers---it damages student learning and wellbeing{', '}
           <Citation
             id="2"
             index={2}
@@ -299,7 +299,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <p className="mb-6">
           Burned-out teachers are less patient, less creative, and less emotionally available.
-          Students sense this—and it affects their safety, motivation, and learning.
+          Students sense this---and it affects their safety, motivation, and learning.
         </p>
 
         <h2
@@ -328,7 +328,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          This is called <strong>surface acting</strong>—faking emotions you don't feel—and it's
+          This is called <strong>surface acting</strong>---faking emotions you don't feel---and it's
           one of the strongest predictors of burnout. Over time, the dissonance between how you
           feel and how you must act becomes unbearable.
         </p>
@@ -348,7 +348,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           The Pandemic's Lasting Impact
         </h2>
         <p className="mb-6">
-          COVID-19 didn't create teacher burnout—but it accelerated and intensified it{', '}
+          COVID-19 didn't create teacher burnout---but it accelerated and intensified it{', '}
           <Citation
             id="6"
             index={6}
@@ -385,7 +385,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Teachers managed student grief, learning loss, and behavioral crises—all while facing
+          Teachers managed student grief, learning loss, and behavioral crises---all while facing
           their own trauma. Many report feeling abandoned by administrators and scapegoated by
           parents and politicians.
         </p>
@@ -427,7 +427,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         <ArticleCallout variant="warning">
           <p>
             If a school tells burned-out teachers to "practice self-care" without reducing workload
-            or increasing support, it's performative—and insulting.
+            or increasing support, it's performative---and insulting.
           </p>
         </ArticleCallout>
 
@@ -438,7 +438,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           What Would Actually Help
         </h2>
         <p className="mb-6">
-          Solving teacher burnout requires systemic change—not individual fixes{', '}
+          Solving teacher burnout requires systemic change---not individual fixes{', '}
           <Citation
             id="3"
             index={3}
@@ -516,8 +516,8 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you're a teacher experiencing burnout—persistent exhaustion, cynicism, feeling like
-          you're failing—please seek support. Therapy can help you process the experience, set
+          If you're a teacher experiencing burnout---persistent exhaustion, cynicism, feeling like
+          you're failing---please seek support. Therapy can help you process the experience, set
           boundaries, and decide whether staying in the profession is sustainable for you.
         </p>
 
@@ -531,7 +531,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>
             Teacher burnout is a policy failure, not a personal one. Until education systems address
-            workload, compensation, and support, the crisis will continue—and children will pay the
+            workload, compensation, and support, the crisis will continue---and children will pay the
             price.
           </p>
         </ArticleCallout>
@@ -543,7 +543,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     id: catId(17),
     slug: 'tech-industry-burnout-innovation-exploitation',
     title: 'Tech Industry Burnout: When Innovation Culture Becomes Exploitation',
-    description: 'Examine the dark side of tech culture—how passion, disruption, and hustle rhetoric mask systemic burnout.',
+    description: 'Examine the dark side of tech culture---how passion, disruption, and hustle rhetoric mask systemic burnout.',
     image: "/images/articles/cat05/cover-017.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 8,
@@ -627,8 +627,8 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
             alarming rates.
           </p>
           <p className="mb-6">
-            This article examines how tech industry culture—despite its progressive branding and
-            lavish perks—creates conditions for systemic burnout{', '}
+            This article examines how tech industry culture---despite its progressive branding and
+            lavish perks---creates conditions for systemic burnout{', '}
             <Citation
               id="1"
               index={1}
@@ -647,7 +647,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           The Scope of the Problem
         </h2>
         <p className="mb-6">
-          Tech workers—engineers, designers, product managers, and others—report high rates of
+          Tech workers---engineers, designers, product managers, and others---report high rates of
           burnout despite high salaries and prestigious roles{', '}
           <Citation
             id="1"
@@ -669,7 +669,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          The paradox: tech companies offer free food, nap pods, and yoga classes—yet burnout
+          The paradox: tech companies offer free food, nap pods, and yoga classes---yet burnout
           persists. Why? Because perks don't address the underlying culture that glorifies
           overwork.
         </p>
@@ -681,7 +681,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           Hustle Culture: The Glorification of Overwork
         </h2>
         <p className="mb-6">
-          <strong>Hustle culture</strong> is the belief that relentless work is a virtue—and that
+          <strong>Hustle culture</strong> is the belief that relentless work is a virtue---and that
           rest is for the weak{', '}
           <Citation id="3" index={3} source="Work and Stress" year="2021" tier={1} />. In tech,
           this manifests as:
@@ -689,7 +689,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            <strong>Elon Musk–style workweeks:</strong> "Nobody ever changed the world on 40 hours
+            <strong>Elon Musk--style workweeks:</strong> "Nobody ever changed the world on 40 hours
             a week"
           </li>
           <li>
@@ -708,7 +708,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Hustle culture reframes exploitation as empowerment. You're not being overworked—you're
+            Hustle culture reframes exploitation as empowerment. You're not being overworked---you're
             'crushing it,", "grinding," or "building something that matters."
           </p>
         </ArticleCallout>
@@ -720,7 +720,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           The Passion Trap
         </h2>
         <p className="mb-6">
-          Tech companies recruit based on passion: "We're not just building software—we're changing
+          Tech companies recruit based on passion: "We're not just building software---we're changing
           the world!' This language makes work feel like a calling{', '}
           <Citation
             id="7"
@@ -755,7 +755,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
               content: (
                 <p>
                   Equity in a company is offered instead of competitive salaries. 'You're not here
-                  for the money—you're here for the mission!'
+                  for the money---you're here for the mission!'
                 </p>
               ),
             },
@@ -764,7 +764,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
               title: 'It Makes Burnout Feel Like Personal Failure',
               content: (
                 <p>
-                  If you're burned out, the narrative implies you weren't passionate enough—not that
+                  If you're burned out, the narrative implies you weren't passionate enough---not that
                   the workload was unsustainable.
                 </p>
               ),
@@ -797,7 +797,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           On-Call Culture and the Expectation of Constant Availability
         </h2>
         <p className="mb-6">
-          In many tech roles—especially engineering and DevOps—employees are expected to be on
+          In many tech roles---especially engineering and DevOps---employees are expected to be on
           call, responding to incidents at all hours{', '}
           <Citation
             id="4"
@@ -815,7 +815,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            <strong>Chronic hypervigilance:</strong> You're never truly off—always anticipating the
+            <strong>Chronic hypervigilance:</strong> You're never truly off---always anticipating the
             next alert
           </li>
           <li>
@@ -851,8 +851,8 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           Crunch Time in Gaming: A Case Study in Exploitation
         </h2>
         <p className="mb-6">
-          The video game industry exemplifies tech's burnout problem. "Crunch time"—mandatory
-          overtime before deadlines—is normalized{', '}
+          The video game industry exemplifies tech's burnout problem. "Crunch time"---mandatory
+          overtime before deadlines---is normalized{', '}
           <Citation id="5" index={5} source="Games and Culture" year="2021" tier={1} />.
         </p>
 
@@ -880,7 +880,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Crunch isn't a failure of planning—it's a business model. Studios rely on unsustainable
+            Crunch isn't a failure of planning---it's a business model. Studios rely on unsustainable
             labor to meet profit targets.
           </p>
         </ArticleCallout>
@@ -929,7 +929,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          For marginalized tech workers, burnout isn't just about workload—it's about
+          For marginalized tech workers, burnout isn't just about workload---it's about
           discrimination, exclusion, and the exhaustion of constantly proving yourself in hostile
           environments.
         </p>
@@ -1014,7 +1014,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Admitting burnout feels like weakness—or worse, like you're not cut out for the job.
+          Admitting burnout feels like weakness---or worse, like you're not cut out for the job.
         </p>
 
         <h2
@@ -1068,7 +1068,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
               description: (
                 <p>
                   Reduce burnout for underrepresented groups by creating belonging, equity, and
-                  psychological safety—not just hiring quotas.
+                  psychological safety---not just hiring quotas.
                 </p>
               ),
             },
@@ -1082,8 +1082,8 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you're in tech and experiencing burnout—especially if hustle culture has you
-          questioning whether the problem is you—consider therapy. A therapist can help you
+          If you're in tech and experiencing burnout---especially if hustle culture has you
+          questioning whether the problem is you---consider therapy. A therapist can help you
           disentangle your self-worth from productivity and decide whether your work environment is
           sustainable.
         </p>
@@ -1092,7 +1092,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
           <p>
             Tech industry burnout isn't about weak individuals who can't keep up. It's about a
             culture that celebrates overwork, exploits passion, and calls it innovation. Real
-            progress would mean building sustainable workplaces—not just building products faster.
+            progress would mean building sustainable workplaces---not just building products faster.
           </p>
         </ArticleCallout>
       </>
@@ -1107,7 +1107,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     id: catId(18),
     slug: 'burnout-recovery-timeline',
     title: 'The Burnout Recovery Timeline: What the Research Says About Healing',
-    description: 'Understand the stages and timeline of burnout recovery based on scientific evidence—and why rushing it backfires.',
+    description: 'Understand the stages and timeline of burnout recovery based on scientific evidence---and why rushing it backfires.',
     image: "/images/articles/cat05/cover-018.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -1186,7 +1186,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             "How long until I feel normal again?" This is the question everyone recovering from
-            burnout asks. The answer, unfortunately, is: it depends—and it takes longer than you
+            burnout asks. The answer, unfortunately, is: it depends---and it takes longer than you
             think.
           </p>
           <p className="mb-6">
@@ -1227,7 +1227,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Recovery is not just about feeling better—it's about rebuilding your capacity,
+            Recovery is not just about feeling better---it's about rebuilding your capacity,
             motivation, and sense of efficacy. Rushing this process increases relapse risk.
           </p>
         </ArticleCallout>
@@ -1253,7 +1253,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     id: catId(19),
     slug: 'sabbaticals-career-breaks-real-time-off',
     title: 'Sabbaticals, Career Breaks, and Leaves of Absence: When You Need Real Time Off',
-    description: 'Learn when extended time away from work is necessary for burnout recovery—and how to navigate it.',
+    description: 'Learn when extended time away from work is necessary for burnout recovery---and how to navigate it.',
     image: "/images/articles/cat05/cover-019.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -1331,7 +1331,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Two weeks of vacation won't fix burnout. Sometimes, you need real time away—weeks,
+            Two weeks of vacation won't fix burnout. Sometimes, you need real time away---weeks,
             months, or even a year. But taking extended leave feels impossible, scary, and
             financially risky.
           </p>
@@ -1384,7 +1384,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
     id: catId(20),
     slug: 'returning-to-work-after-burnout',
     title: 'Returning to Work After Burnout: How to Come Back Without Relapsing',
-    description: 'Navigate the challenging transition back to work after burnout—with strategies to prevent relapse.',
+    description: 'Navigate the challenging transition back to work after burnout---with strategies to prevent relapse.',
     image: "/images/articles/cat05/cover-020.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 8,
@@ -1463,7 +1463,7 @@ export const burnoutRecognitionRecoveryArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You've taken time off. You've rested, recovered, and rebuilt some energy. Now comes the
-            hardest part: going back. The anxiety is real—what if you burn out again?
+            hardest part: going back. The anxiety is real---what if you burn out again?
           </p>
           <p className="mb-6">
             Returning to work after burnout is a high-risk transition. Research shows that without

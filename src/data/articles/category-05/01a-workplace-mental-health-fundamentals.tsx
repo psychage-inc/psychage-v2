@@ -17,7 +17,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     id: catId(1),
     slug: 'mental-health-at-work-why-it-matters',
     title: 'Your Mental Health at Work: Why It Matters More Than You Think',
-    description: 'Discover why workplace mental health affects productivity, relationships, and physical health—and what you can do about it.',
+    description: 'Discover why workplace mental health affects productivity, relationships, and physical health---and what you can do about it.',
     image: "/images/articles/cat05/cover-001.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -96,7 +96,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You spend more time at work than almost anywhere else. Yet many of us treat our mental
-            health at work as separate from our overall wellbeing—as if we can simply leave our
+            health at work as separate from our overall wellbeing---as if we can simply leave our
             emotions at the office door.
           </p>
           <p className="mb-6">
@@ -121,7 +121,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           Why Workplace Mental Health Matters
         </h2>
         <p className="mb-6">
-          Mental health at work isn't just about feeling good—it affects every dimension of your
+          Mental health at work isn't just about feeling good---it affects every dimension of your
           professional and personal life. Research shows that mental health conditions like
           depression and anxiety significantly reduce work performance, decision-making quality, and
           interpersonal relationships{', '}
@@ -174,7 +174,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
             year="2020"
             tier={1}
           />
-          . This can lead to mistakes, missed deadlines, and conflict—which then worsen your mental
+          . This can lead to mistakes, missed deadlines, and conflict---which then worsen your mental
           health.
         </p>
 
@@ -220,7 +220,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
               content: (
                 <p>
                   Headaches, muscle tension, digestive issues, frequent illness, changes in
-                  appetite, or difficulty sleeping—especially on Sunday nights.
+                  appetite, or difficulty sleeping---especially on Sunday nights.
                 </p>
               ),
             },
@@ -332,7 +332,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           If work-related stress is interfering with your sleep, relationships, or daily
-          functioning—or if you're experiencing symptoms of anxiety or depression—it's time to
+          functioning---or if you're experiencing symptoms of anxiety or depression---it's time to
           consult a mental health professional{', '}
           <Citation id="5" index={5} source="The Lancet Psychiatry" year="2021" tier={1} />.
         </p>
@@ -346,7 +346,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Your mental health at work is not a luxury—it's a necessity. Protecting it is one of the
+          Your mental health at work is not a luxury---it's a necessity. Protecting it is one of the
           most important investments you can make in your career and your life.
         </p>
       </>
@@ -357,7 +357,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     id: catId(2),
     slug: 'psychological-contract-work-expectations',
     title: 'The Psychological Contract: What You Expect from Work and What Work Expects from You',
-    description: "Understand the unspoken agreement between you and your employer—and what happens when expectations don't align.",
+    description: "Understand the unspoken agreement between you and your employer---and what happens when expectations don't align.",
     image: '/images/articles/cat05/cover-002.svg',
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -435,7 +435,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Beyond your formal employment contract lies an invisible agreement—one that shapes your
+            Beyond your formal employment contract lies an invisible agreement---one that shapes your
             satisfaction, loyalty, and mental health at work more than any job description ever
             could.
           </p>
@@ -462,7 +462,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           A psychological contract consists of the beliefs you hold about what you owe your employer
-          and what your employer owes you—beyond what's written in your formal contract{', '}
+          and what your employer owes you---beyond what's written in your formal contract{', '}
           <Citation
             id="1"
             index={1}
@@ -638,8 +638,8 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
 
         <p className="mb-6">
           These differences can create tension when multigenerational teams have mismatched
-          expectations. Understanding your own contract—and recognizing that others may hold
-          different ones—can reduce conflict and improve collaboration.
+          expectations. Understanding your own contract---and recognizing that others may hold
+          different ones---can reduce conflict and improve collaboration.
         </p>
 
         <h2
@@ -710,15 +710,15 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If workplace disappointments are affecting your mental health—causing persistent anxiety,
-          depression, or feelings of worthlessness—consider speaking with a therapist. They can help
+          If workplace disappointments are affecting your mental health---causing persistent anxiety,
+          depression, or feelings of worthlessness---consider speaking with a therapist. They can help
           you process the breach, set boundaries, and clarify your values and next steps.
         </p>
 
         <ArticleCallout variant="tip">
           <p>
             The psychological contract is always negotiable. As your career evolves, your
-            expectations will change—and that's healthy. The key is ensuring your work aligns with
+            expectations will change---and that's healthy. The key is ensuring your work aligns with
             who you are becoming, not just who you were when you started.
           </p>
         </ArticleCallout>
@@ -730,7 +730,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
     id: catId(3),
     slug: 'workplace-stress-vs-distress',
     title: 'Workplace Stress vs. Workplace Distress: How to Tell the Difference',
-    description: 'Learn to distinguish healthy workplace pressure from harmful chronic distress—and what to do about each.',
+    description: 'Learn to distinguish healthy workplace pressure from harmful chronic distress---and what to do about each.',
     image: "/images/articles/cat05/cover-003.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -810,7 +810,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Not all workplace stress is created equal. Some pressure can sharpen your focus and
             boost performance. But when stress crosses an invisible line, it transforms into
-            distress—a state that damages your health, relationships, and sense of self.
+            distress---a state that damages your health, relationships, and sense of self.
           </p>
           <p className="mb-6">
             Learning to distinguish between productive stress and harmful distress is critical for
@@ -822,7 +822,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
               year="2022"
               tier={2}
             />
-            . Here's how to tell the difference—and what to do about each.
+            . Here's how to tell the difference---and what to do about each.
           </p>
         </div>
 
@@ -833,8 +833,8 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           Understanding the Stress Spectrum
         </h2>
         <p className="mb-6">
-          Stress exists on a spectrum. On one end is <strong>eustress</strong>—positive, motivating
-          stress that enhances performance. On the other end is <strong>distress</strong>—negative,
+          Stress exists on a spectrum. On one end is <strong>eustress</strong>---positive, motivating
+          stress that enhances performance. On the other end is <strong>distress</strong>---negative,
           overwhelming stress that impairs functioning{', '}
           <Citation
             id="7"
@@ -1062,7 +1062,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
               title: 'For eustress: Embrace it and recover',
               description: (
                 <p>
-                  Lean into the challenge, knowing it's temporary. Prioritize recovery afterward—rest,
+                  Lean into the challenge, knowing it's temporary. Prioritize recovery afterward---rest,
                   social connection, and activities that restore you.
                 </p>
               ),
@@ -1117,7 +1117,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           If workplace distress is affecting your sleep, mood, relationships, or physical
-          health—or if you feel constantly overwhelmed despite trying to manage it—talk to a mental
+          health---or if you feel constantly overwhelmed despite trying to manage it---talk to a mental
           health professional. Therapy can help you develop coping strategies, set boundaries, and
           decide whether your work environment is sustainable.
         </p>
@@ -1224,10 +1224,10 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You wake up with dread. Your stomach tightens as you pull into the parking lot. Every
             notification from your boss triggers anxiety. If this sounds familiar, you might be
-            working in a toxic environment—and it's likely harming your mental health.
+            working in a toxic environment---and it's likely harming your mental health.
           </p>
           <p className="mb-6">
-            Toxic workplaces don't just make you unhappy—they cause measurable psychological and
+            Toxic workplaces don't just make you unhappy---they cause measurable psychological and
             physical harm{', '}
             <Citation
               id="5"
@@ -1257,7 +1257,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
             year="2021"
             tier={1}
           />
-          . Toxicity can come from leadership, culture, or interpersonal dynamics—often all three.
+          . Toxicity can come from leadership, culture, or interpersonal dynamics---often all three.
         </p>
 
         <ArticleAccordion
@@ -1452,7 +1452,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          These are all valid reasons. Leaving isn't always possible or safe—and that's not a
+          These are all valid reasons. Leaving isn't always possible or safe---and that's not a
           personal failing{', '}
           <Citation id="9" index={9} source="Journal of Vocational Behavior" year="2022" tier={1} />
           .
@@ -1475,7 +1475,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
               title: "Name what's happening",
               description: (
                 <p>
-                  Stop blaming yourself. Recognize that the environment is toxic—not you. Documenting
+                  Stop blaming yourself. Recognize that the environment is toxic---not you. Documenting
                   incidents can help you see patterns.
                 </p>
               ),
@@ -1568,7 +1568,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           If you're experiencing symptoms of depression, anxiety, or trauma related to your
-          workplace—or if you're struggling with the decision of whether to stay or leave—a
+          workplace---or if you're struggling with the decision of whether to stay or leave---a
           therapist can provide crucial support. Many Employee Assistance Programs (EAPs) offer
           free, confidential counseling.
         </p>
@@ -1584,7 +1584,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         <p className="mb-6">
           Toxic workplaces are not your fault. You deserve to work in an environment that respects
           your humanity. Whether you stay or go, prioritizing your mental health is an act of
-          self-preservation—and it matters.
+          self-preservation---and it matters.
         </p>
       </>
     ),
@@ -1673,7 +1673,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Imagine working on a team where you can admit mistakes, ask questions, propose wild
-            ideas, and challenge the status quo—without fear of being judged, humiliated, or
+            ideas, and challenge the status quo---without fear of being judged, humiliated, or
             punished. This is psychological safety, and it's the single most important predictor of
             team effectiveness.
           </p>
@@ -1714,7 +1714,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
 
         <p className="mb-6">
           It means team members feel comfortable speaking up, sharing ideas, admitting errors, and
-          asking for help—without fearing embarrassment, rejection, or retaliation. It's about trust
+          asking for help---without fearing embarrassment, rejection, or retaliation. It's about trust
           at the group level{', '}
           <Citation
             id="4"
@@ -1777,7 +1777,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           What Psychological Safety Looks Like in Practice
         </h2>
         <p className="mb-6">
-          Psychological safety manifests in everyday behaviors—both what people do and what they
+          Psychological safety manifests in everyday behaviors---both what people do and what they
           don't fear doing.
         </p>
 
@@ -1828,7 +1828,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           The Mental Health Impact
         </h2>
         <p className="mb-6">
-          Psychological safety isn't just about performance—it's a mental health issue. Teams
+          Psychological safety isn't just about performance---it's a mental health issue. Teams
           lacking it create chronic stress, anxiety, and burnout{', '}
           <Citation
             id="5"
@@ -1878,7 +1878,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           How Leaders Create Psychological Safety
         </h2>
         <p className="mb-6">
-          Psychological safety is built—or destroyed—by leadership behavior{', '}
+          Psychological safety is built---or destroyed---by leadership behavior{', '}
           <Citation
             id="7"
             index={7}
@@ -1906,7 +1906,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
               description: (
                 <p>
                   Ask questions like 'What am I missing?" or "What concerns do you have?" Silence
-                  doesn't mean agreement—actively seek dissent.
+                  doesn't mean agreement---actively seek dissent.
                 </p>
               ),
             },
@@ -1941,7 +1941,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         />
 
         <QuoteBlock
-          quote="In psychologically safe teams, people aren't fearless—they're brave. They do things that scare them because they trust the team will catch them."
+          quote="In psychologically safe teams, people aren't fearless---they're brave. They do things that scare them because they trust the team will catch them."
           attribution="Dr. Amy Edmondson"
           role="Harvard Business School Professor"
           source="The Fearless Organization"
@@ -1985,7 +1985,7 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
         <ArticleCallout variant="tip">
           <p>
             Even one person consistently modeling these behaviors can shift team culture over time.
-            Change doesn't require unanimous agreement—it requires critical mass.
+            Change doesn't require unanimous agreement---it requires critical mass.
           </p>
         </ArticleCallout>
 
@@ -2034,15 +2034,15 @@ export const workplaceMentalHealthFundamentalsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If your workplace lacks psychological safety and it's affecting your mental health—causing
-          anxiety, depression, or a sense of worthlessness—talking to a therapist can help. They can
+          If your workplace lacks psychological safety and it's affecting your mental health---causing
+          anxiety, depression, or a sense of worthlessness---talking to a therapist can help. They can
           support you in navigating the environment, setting boundaries, and deciding whether to
           stay or leave.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Psychological safety isn't a perk—it's a prerequisite for healthy, high-performing
+            Psychological safety isn't a perk---it's a prerequisite for healthy, high-performing
             teams. If your workplace doesn't have it, you're not failing. The system is.
           </p>
         </ArticleCallout>

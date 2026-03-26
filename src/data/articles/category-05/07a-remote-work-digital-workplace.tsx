@@ -18,7 +18,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     id: catId(61),
     slug: 'remote-work-mental-health-five-years-data',
     title: 'Remote Work and Mental Health: What Five Years of Data Tells Us',
-    description: "Five years of research reveals a complex picture of remote work's mental health impacts—neither utopia nor disaster. Discover what the data actually shows about productivity, wellbeing, and the future of work.",
+    description: "Five years of research reveals a complex picture of remote work's mental health impacts---neither utopia nor disaster. Discover what the data actually shows about productivity, wellbeing, and the future of work.",
     image: '/images/articles/cat05/cover-061.svg',
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 8,
@@ -110,7 +110,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             The answer, as systematic reviews now reveal, is both frustratingly and refreshingly nuanced: it depends. Recent meta-analyses show that remote work improves mental health for some people while worsening it for others, with the differences explained by specific factors we can now identify <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2024" tier={1} />.
           </p>
           <p className="mb-6">
-            Longitudinal studies tracking the same workers over years provide a much clearer picture than the early pandemic-era speculation <Citation id="2" index={2} source="Work & Stress" year="2023" tier={1} />. This research digest synthesizes five years of data on remote work and mental health—what improved, what worsened, and who benefits most from different work arrangements.
+            Longitudinal studies tracking the same workers over years provide a much clearer picture than the early pandemic-era speculation <Citation id="2" index={2} source="Work & Stress" year="2023" tier={1} />. This research digest synthesizes five years of data on remote work and mental health---what improved, what worsened, and who benefits most from different work arrangements.
           </p>
         </div>
 
@@ -225,7 +225,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           What About Productivity?
         </h2>
         <p className="mb-6">
-          Meta-analytic evidence from 61 studies shows a small but significant productivity increase in remote work (average 5-7% improvement) <Citation id="5" index={5} source="Personnel Psychology" year="2023" tier={1} />. Importantly, this productivity gain does NOT come at the cost of mental health—the correlation between productivity and wellbeing in remote work is positive, not negative.
+          Meta-analytic evidence from 61 studies shows a small but significant productivity increase in remote work (average 5-7% improvement) <Citation id="5" index={5} source="Personnel Psychology" year="2023" tier={1} />. Importantly, this productivity gain does NOT come at the cost of mental health---the correlation between productivity and wellbeing in remote work is positive, not negative.
         </p>
         <p className="mb-6">
           The productivity increase appears driven by: reduced interruptions (fewer "drive-by" meetings), elimination of commute time (reallocated to work), better control over environment (fewer distractions for some), and ability to work during peak cognitive hours.
@@ -256,12 +256,12 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Each hour of daily commuting eliminated correlated with 16% reduction in perceived stress</li>
-          <li>Sleep quality improved proportional to commute length—workers with 90+ minute roundtrip commutes gained nearly an hour of sleep</li>
+          <li>Sleep quality improved proportional to commute length---workers with 90+ minute roundtrip commutes gained nearly an hour of sleep</li>
           <li>Physical activity paradoxically increased for many (time previously spent commuting reallocated to exercise)</li>
           <li>Relationship quality improved, with couples reporting more shared meals and quality time</li>
         </ul>
         <p className="mb-6">
-          For workers with long commutes, eliminating travel time was the single largest predictor of improved mental health—more than any other remote work factor. This finding suggests that for some workers, any downsides of remote work are outweighed by commute elimination benefits.
+          For workers with long commutes, eliminating travel time was the single largest predictor of improved mental health---more than any other remote work factor. This finding suggests that for some workers, any downsides of remote work are outweighed by commute elimination benefits.
         </p>
 
         <h2 id="organizational-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -298,12 +298,12 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Five years of data lead to several practical implications:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>There is no universal "right" arrangement</strong>—match work location to your specific needs, personality, life situation, and job requirements</li>
-          <li><strong>Organizational support matters more than location</strong>—a supportive remote environment beats a toxic office every time</li>
-          <li><strong>Boundaries require active management</strong>—flexibility won't help if you can't separate work from life</li>
-          <li><strong>Social connection needs intentional effort</strong>—don't wait to feel lonely; build routine connection points</li>
-          <li><strong>Hybrid may offer 'best of both worlds"</strong>—for many, 2-3 days in office balances connection with flexibility</li>
-          <li><strong>Your needs may change</strong>—reassess periodically rather than assuming one arrangement works forever</li>
+          <li><strong>There is no universal "right" arrangement</strong>---match work location to your specific needs, personality, life situation, and job requirements</li>
+          <li><strong>Organizational support matters more than location</strong>---a supportive remote environment beats a toxic office every time</li>
+          <li><strong>Boundaries require active management</strong>---flexibility won't help if you can't separate work from life</li>
+          <li><strong>Social connection needs intentional effort</strong>---don't wait to feel lonely; build routine connection points</li>
+          <li><strong>Hybrid may offer 'best of both worlds"</strong>---for many, 2-3 days in office balances connection with flexibility</li>
+          <li><strong>Your needs may change</strong>---reassess periodically rather than assuming one arrangement works forever</li>
         </ul>
 
         <h2 id="limitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -414,10 +414,10 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After a day of back-to-back video calls, you're exhausted in a way that doesn't happen after the same number of in-person meetings. Your eyes hurt. Your brain feels foggy. You're somehow both overstimulated and drained. This isn't in your head—it's a documented phenomenon researchers call 'Zoom fatigue."
+            After a day of back-to-back video calls, you're exhausted in a way that doesn't happen after the same number of in-person meetings. Your eyes hurt. Your brain feels foggy. You're somehow both overstimulated and drained. This isn't in your head---it's a documented phenomenon researchers call 'Zoom fatigue."
           </p>
           <p className="mb-6">
-            Research on videoconferencing fatigue reveals that virtual meetings create unique cognitive and emotional demands that don't exist in face-to-face interaction <Citation id="1" index={1} source="Technology, Mind, and Behavior" year="2021" tier={1} />. You're not just "bad at" video calls—your brain is working significantly harder to process the same information it would handle effortlessly in person.
+            Research on videoconferencing fatigue reveals that virtual meetings create unique cognitive and emotional demands that don't exist in face-to-face interaction <Citation id="1" index={1} source="Technology, Mind, and Behavior" year="2021" tier={1} />. You're not just "bad at" video calls---your brain is working significantly harder to process the same information it would handle effortlessly in person.
           </p>
           <p className="mb-6">
             Studies using both self-report measures and physiological indicators confirm that videoconferences produce measurably greater mental and physical fatigue than equivalent in-person interactions <Citation id="2" index={2} source="Computers in Human Behavior Reports" year="2022" tier={1} />. Understanding the mechanisms behind Zoom fatigue is the first step toward mitigating its toll on your mental health and work performance.
@@ -463,14 +463,14 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li>Increased muscle tension in neck and shoulders during video meetings</li>
         </ul>
         <p className="mb-6">
-          These findings demonstrate that Zoom fatigue has measurable biological signatures—it's not merely subjective perception <Citation id="6" index={6} source="Biological Psychology" year="2023" tier={1} />.
+          These findings demonstrate that Zoom fatigue has measurable biological signatures---it's not merely subjective perception <Citation id="6" index={6} source="Biological Psychology" year="2023" tier={1} />.
         </p>
 
         <h2 id="nonverbal-overload" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Nonverbal Communication Overload
         </h2>
         <p className="mb-6">
-          In face-to-face conversation, your brain processes nonverbal cues—facial expressions, body language, gestures, spatial positioning—automatically and effortlessly. Video calls disrupt this intuitive system in multiple ways <Citation id="1" index={1} source="Technology, Mind, and Behavior" year="2021" tier={1} />:
+          In face-to-face conversation, your brain processes nonverbal cues---facial expressions, body language, gestures, spatial positioning---automatically and effortlessly. Video calls disrupt this intuitive system in multiple ways <Citation id="1" index={1} source="Technology, Mind, and Behavior" year="2021" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -487,7 +487,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          When nonverbal communication becomes difficult, your brain compensates by working harder—consciously analyzing facial expressions that you'd normally read automatically, trying to interpret tone through audio compression artifacts, and constantly recalibrating your own expressions to ensure they're visible on camera.
+          When nonverbal communication becomes difficult, your brain compensates by working harder---consciously analyzing facial expressions that you'd normally read automatically, trying to interpret tone through audio compression artifacts, and constantly recalibrating your own expressions to ensure they're visible on camera.
         </p>
 
         <h2 id="mirror-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -497,10 +497,10 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Seeing yourself during conversations is psychologically unnatural. Research on self-focused attention shows that observing yourself triggers self-evaluation, anxiety, and reduced cognitive performance <Citation id="4" index={4} source="Cyberpsychology, Behavior, and Social Networking" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          In video calls, you see your own face continuously—the equivalent of having a mirror in front of you throughout every conversation. This creates:
+          In video calls, you see your own face continuously---the equivalent of having a mirror in front of you throughout every conversation. This creates:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Appearance monitoring:</strong> Constant awareness of how you look—your expression, hair, background—distracts from conversation content</li>
+          <li><strong>Appearance monitoring:</strong> Constant awareness of how you look---your expression, hair, background---distracts from conversation content</li>
           <li><strong>Performance anxiety:</strong> Feeling "on stage" rather than engaged in natural dialogue</li>
           <li><strong>Negative self-evaluation:</strong> Noticing perceived flaws or awkward expressions you'd never see in normal interaction</li>
           <li><strong>Reduced authenticity:</strong> Managing your image rather than focusing on genuine connection</li>
@@ -527,7 +527,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Video calls require you to stay centered in the camera frame, eliminating the natural movement that occurs in face-to-face meetings. Research on embodied cognition shows that physical movement supports thinking, attention regulation, and emotional processing <Citation id="3" index={3} source="Journal of Applied Psychology" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          In physical meetings, you naturally shift posture, walk to a whiteboard, lean forward when engaged, or stand to stretch. These movements aren't just comfort—they're cognitive tools. Video calls trap you in rigid positioning, forcing your brain to maintain attention and regulate emotion without the assist of physical movement.
+          In physical meetings, you naturally shift posture, walk to a whiteboard, lean forward when engaged, or stand to stretch. These movements aren't just comfort---they're cognitive tools. Video calls trap you in rigid positioning, forcing your brain to maintain attention and regulate emotion without the assist of physical movement.
         </p>
         <p className="mb-6">
           Additionally, the need to look at the camera (not the screen) creates an unnatural gaze pattern. Looking at someone's face on screen means the camera shows you looking down, not at them. Looking at the camera means you can't see their reactions. This impossible geometry creates constant tension <Citation id="8" index={8} source="Human-Computer Interaction" year="2022" tier={1} />.
@@ -537,10 +537,10 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Multitasking and Cognitive Load
         </h2>
         <p className="mb-6">
-          The computer screen holding your video call also contains email, Slack, documents, and the internet. This proximity creates constant temptation to multitask—and research shows that most people do, with significant cognitive costs.
+          The computer screen holding your video call also contains email, Slack, documents, and the internet. This proximity creates constant temptation to multitask---and research shows that most people do, with significant cognitive costs.
         </p>
         <p className="mb-6">
-          Studies using screen recording show that 87% of video call participants engage in at least one non-meeting computer activity during calls, with an average of 4.2 task switches per 30-minute meeting <Citation id="3" index={3} source="Journal of Applied Psychology" year="2022" tier={1} />. This task-switching depletes cognitive resources through "attention residue"—part of your mind stays focused on the interrupted task even when you return to the meeting.
+          Studies using screen recording show that 87% of video call participants engage in at least one non-meeting computer activity during calls, with an average of 4.2 task switches per 30-minute meeting <Citation id="3" index={3} source="Journal of Applied Psychology" year="2022" tier={1} />. This task-switching depletes cognitive resources through "attention residue"---part of your mind stays focused on the interrupted task even when you return to the meeting.
         </p>
 
         <ArticleCallout variant="clinical-note" title="The Multitasking Penalty">
@@ -560,7 +560,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li><strong>Domestic visibility:</strong> Women report more stress about home environment visibility and background management</li>
         </ul>
         <p className="mb-6">
-          These findings suggest that Zoom fatigue isn't just about technology—it's amplified by social dynamics and inequities that transfer to virtual spaces.
+          These findings suggest that Zoom fatigue isn't just about technology---it's amplified by social dynamics and inequities that transfer to virtual spaces.
         </p>
 
         <h2 id="mitigation-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -581,7 +581,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
                   <p className="mb-4"><strong>Audio-only option:</strong> When video isn't necessary, phone or audio-only calls reduce fatigue by 32%</p>
                   <p className="mb-4"><strong>5-minute screen breaks:</strong> Looking away from screen between calls significantly reduces eye strain</p>
                   <p className="mb-4"><strong>External webcam:</strong> Position at eye level and farther away to reduce size of faces on screen</p>
-                  <p className="mb-4"><strong>Reduce screen size:</strong> Don't maximize video window—smaller faces = less intensity</p>
+                  <p className="mb-4"><strong>Reduce screen size:</strong> Don't maximize video window---smaller faces = less intensity</p>
                   <p><strong>Movement breaks:</strong> Stand, stretch, or walk during breaks to counteract physical constraint</p>
                 </div>
               ),
@@ -616,7 +616,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li><strong>Over 6 hours daily:</strong> Severe fatigue, burnout risk, impaired performance</li>
         </ul>
         <p className="mb-6">
-          Individual variation is substantial—introverts, people with sensory sensitivities, and those with existing anxiety show lower thresholds. Organizational cultures normalizing 6+ hours of video calls daily are creating unsustainable demands on worker cognition and wellbeing.
+          Individual variation is substantial---introverts, people with sensory sensitivities, and those with existing anxiety show lower thresholds. Organizational cultures normalizing 6+ hours of video calls daily are creating unsustainable demands on worker cognition and wellbeing.
         </p>
 
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -626,13 +626,13 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Evidence-based takeaways for managing Zoom fatigue:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Your exhaustion is real and measurable</strong>—it's not weakness or poor adaptation</li>
-          <li><strong>Hide your self-view immediately</strong>—this single change has the largest effect</li>
-          <li><strong>Video isn't always necessary</strong>—normalize audio-only for one-on-ones or routine check-ins</li>
-          <li><strong>Fight for buffer time</strong>—back-to-back meetings without breaks is unsustainable</li>
-          <li><strong>Limit gallery view</strong>—seeing 20 faces simultaneously overloads your social processing</li>
-          <li><strong>Question meeting necessity</strong>—some video calls should be emails or async updates</li>
-          <li><strong>Advocate for change</strong>—organizational norms around video use significantly impact fatigue</li>
+          <li><strong>Your exhaustion is real and measurable</strong>---it's not weakness or poor adaptation</li>
+          <li><strong>Hide your self-view immediately</strong>---this single change has the largest effect</li>
+          <li><strong>Video isn't always necessary</strong>---normalize audio-only for one-on-ones or routine check-ins</li>
+          <li><strong>Fight for buffer time</strong>---back-to-back meetings without breaks is unsustainable</li>
+          <li><strong>Limit gallery view</strong>---seeing 20 faces simultaneously overloads your social processing</li>
+          <li><strong>Question meeting necessity</strong>---some video calls should be emails or async updates</li>
+          <li><strong>Advocate for change</strong>---organizational norms around video use significantly impact fatigue</li>
         </ul>
 
         <h2 id="limitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -656,7 +656,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Current investigations are exploring: eye-tracking technology that allows natural gaze patterns, AI-generated avatars that reduce self-monitoring, optimal camera positions and screen arrangements, virtual reality meetings as an alternative to traditional video, and pharmacological interventions for video-call-induced headaches and eye strain.
         </p>
         <p className="mb-6">
-          The research consensus: video calls are cognitively expensive in ways we're only beginning to understand. As remote and hybrid work become permanent, designing sustainable videoconference practices—individually and organizationally—is essential for long-term worker wellbeing.
+          The research consensus: video calls are cognitively expensive in ways we're only beginning to understand. As remote and hybrid work become permanent, designing sustainable videoconference practices---individually and organizationally---is essential for long-term worker wellbeing.
         </p>
       </>
     ),
@@ -743,13 +743,13 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've finished eight hours of video calls—talking to colleagues, presenting to clients, joining virtual meetings. You close your laptop. And you realize: you feel completely, achingly alone.
+            You've finished eight hours of video calls---talking to colleagues, presenting to clients, joining virtual meetings. You close your laptop. And you realize: you feel completely, achingly alone.
           </p>
           <p className="mb-6">
-            Remote work loneliness is paradoxical. You can be digitally connected all day—Slack messages, video calls, email threads—while simultaneously feeling profoundly isolated. Longitudinal research tracking remote workers shows that 28-37% experience clinically significant loneliness, with the highest rates among those living alone or early in their careers <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2023" tier={1} />.
+            Remote work loneliness is paradoxical. You can be digitally connected all day---Slack messages, video calls, email threads---while simultaneously feeling profoundly isolated. Longitudinal research tracking remote workers shows that 28-37% experience clinically significant loneliness, with the highest rates among those living alone or early in their careers <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
-            Importantly, loneliness isn't just about quantity of social contact. Research shows that loneliness is the subjective feeling that your social connections are inadequate—qualitatively or quantitatively—for your needs <Citation id="2" index={2} source="Organizational Psychology Review" year="2022" tier={2} />. You can be surrounded by people and feel lonely, or work alone and feel connected. Understanding this distinction is key to addressing remote work isolation.
+            Importantly, loneliness isn't just about quantity of social contact. Research shows that loneliness is the subjective feeling that your social connections are inadequate---qualitatively or quantitatively---for your needs <Citation id="2" index={2} source="Organizational Psychology Review" year="2022" tier={2} />. You can be surrounded by people and feel lonely, or work alone and feel connected. Understanding this distinction is key to addressing remote work isolation.
           </p>
         </div>
 
@@ -794,16 +794,16 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Lost Forms of Workplace Connection">
-          <p className="mb-4"><strong>Incidental interaction:</strong> Running into colleagues in hallways, break rooms, or elevators—brief, low-effort social contact that adds up.</p>
+          <p className="mb-4"><strong>Incidental interaction:</strong> Running into colleagues in hallways, break rooms, or elevators---brief, low-effort social contact that adds up.</p>
           <p className="mb-4"><strong>Parallel presence:</strong> Working silently near others, feeling the energy of shared space without actively interacting.</p>
           <p className="mb-4"><strong>Nonverbal communication:</strong> Reading the room, sensing team mood, picking up on unspoken dynamics.</p>
           <p className="mb-4"><strong>Spontaneous collaboration:</strong> Overhearing a problem and jumping in to help, impromptu brainstorming.</p>
-          <p className="mb-4"><strong>Social rituals:</strong> Group lunches, coffee breaks, after-work drinks—structured social opportunities.</p>
+          <p className="mb-4"><strong>Social rituals:</strong> Group lunches, coffee breaks, after-work drinks---structured social opportunities.</p>
           <p><strong>Physical co-presence:</strong> The basic reassurance of not being alone in space, even when working independently.</p>
         </ArticleCallout>
 
         <p className="mb-6">
-          Research shows that these "weak ties" and incidental interactions contribute significantly to wellbeing and sense of belonging <Citation id="3" index={3} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Their loss isn't trivial—it's a fundamental restructuring of daily social experience.
+          Research shows that these "weak ties" and incidental interactions contribute significantly to wellbeing and sense of belonging <Citation id="3" index={3} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Their loss isn't trivial---it's a fundamental restructuring of daily social experience.
         </p>
 
         <h2 id="who-is-vulnerable" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -828,7 +828,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The combination of living alone and working remotely creates compounding isolation effects. Research shows that remote workers who live alone experience nearly double the loneliness of those living with others <Citation id="8" index={8} source="Work & Stress" year="2023" tier={1} />. For these individuals, work may have been the primary source of daily social contact—its removal creates significant void.
+          The combination of living alone and working remotely creates compounding isolation effects. Research shows that remote workers who live alone experience nearly double the loneliness of those living with others <Citation id="8" index={8} source="Work & Stress" year="2023" tier={1} />. For these individuals, work may have been the primary source of daily social contact---its removal creates significant void.
         </p>
 
         <h2 id="quality-over-quantity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -877,7 +877,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Co-working space users reported 34% lower loneliness on days they worked from the space</li>
-          <li>Benefits depended on active social engagement—simply sitting near others wasn't enough</li>
+          <li>Benefits depended on active social engagement---simply sitting near others wasn't enough</li>
           <li>Co-working spaces with intentional community-building (events, introductions) showed strongest effects</li>
           <li>Cost was prohibitive for many workers; free alternatives (libraries, cafes) showed smaller but measurable benefits</li>
         </ul>
@@ -885,10 +885,10 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         <ArticleCallout variant="tip" title="Making Co-Working Spaces Work for Connection">
           <ul className="list-disc pl-6 space-y-2">
             <li>Choose spaces with community managers who facilitate introductions</li>
-            <li>Attend social events even when you don't "feel like it"—connection requires effort</li>
+            <li>Attend social events even when you don't "feel like it"---connection requires effort</li>
             <li>Have lunch in common areas rather than at your desk</li>
-            <li>Initiate conversation—most people are hoping someone else will</li>
-            <li>Go regularly on consistent days—familiarity builds relationships</li>
+            <li>Initiate conversation---most people are hoping someone else will</li>
+            <li>Go regularly on consistent days---familiarity builds relationships</li>
           </ul>
         </ArticleCallout>
 
@@ -896,7 +896,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           The Role of Parasocial Relationships
         </h2>
         <p className="mb-6">
-          An unexpected finding: parasocial relationships—one-sided connections with media figures, podcasters, streamers, or content creators—can buffer against remote work loneliness <Citation id="5" index={5} source="Computers in Human Behavior" year="2023" tier={1} />.
+          An unexpected finding: parasocial relationships---one-sided connections with media figures, podcasters, streamers, or content creators---can buffer against remote work loneliness <Citation id="5" index={5} source="Computers in Human Behavior" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           Research shows that remote workers who maintain parasocial relationships (listening to favorite podcasts during work, following creators who feel like "friends") report lower loneliness than those who work in silence. This doesn't replace real relationships, but it provides a sense of social presence and continuity throughout isolated work days.
@@ -918,13 +918,13 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             {
               title: 'Structured informal time',
               description: (
-                <p>Teams with designated 'virtual coffee' time (no agenda, just chat) showed 41% lower loneliness. Importantly, this had to be structured and protected—optional events that people could skip didn't provide the same benefit. When connection is optional, it's often the loneliest people who opt out.</p>
+                <p>Teams with designated 'virtual coffee' time (no agenda, just chat) showed 41% lower loneliness. Importantly, this had to be structured and protected---optional events that people could skip didn't provide the same benefit. When connection is optional, it's often the loneliest people who opt out.</p>
               ),
             },
             {
               title: 'Buddy systems',
               description: (
-                <p>Pairing remote workers with 'connection buddies' for regular check-ins (separate from managers) reduced loneliness by 38%. The key was reciprocity—both people support each other rather than one-directional mentoring.</p>
+                <p>Pairing remote workers with 'connection buddies' for regular check-ins (separate from managers) reduced loneliness by 38%. The key was reciprocity---both people support each other rather than one-directional mentoring.</p>
               ),
             },
             {
@@ -949,12 +949,12 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Evidence-based individual approaches:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Schedule social "appointments"</strong> with the same rigor you schedule work—treat connection as non-negotiable</li>
-          <li><strong>Diversify your social portfolio</strong>—don't rely solely on work for connection; build community elsewhere (classes, hobbies, volunteering)</li>
-          <li><strong>Initiate more than feels comfortable</strong>—lonely people often wait for others to reach out, perpetuating isolation</li>
-          <li><strong>Use "parallel work"</strong>—video call with a friend where you both work silently, creating co-presence</li>
-          <li><strong>Join online communities</strong> aligned with interests—these supplement (not replace) in-person connection</li>
-          <li><strong>Talk about your loneliness</strong>—research shows disclosure itself reduces isolation and often reveals others feel the same</li>
+          <li><strong>Schedule social "appointments"</strong> with the same rigor you schedule work---treat connection as non-negotiable</li>
+          <li><strong>Diversify your social portfolio</strong>---don't rely solely on work for connection; build community elsewhere (classes, hobbies, volunteering)</li>
+          <li><strong>Initiate more than feels comfortable</strong>---lonely people often wait for others to reach out, perpetuating isolation</li>
+          <li><strong>Use "parallel work"</strong>---video call with a friend where you both work silently, creating co-presence</li>
+          <li><strong>Join online communities</strong> aligned with interests---these supplement (not replace) in-person connection</li>
+          <li><strong>Talk about your loneliness</strong>---research shows disclosure itself reduces isolation and often reveals others feel the same</li>
         </ul>
 
         <ArticleCallout variant="warning" title="When Loneliness Becomes Depression">
@@ -968,12 +968,12 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           If you're experiencing remote work loneliness:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Name it explicitly</strong>—"I'm feeling lonely' reduces shame and creates space for problem-solving</li>
-          <li><strong>Assess what you're missing specifically</strong>—casual chat? Deep conversation? Physical co-presence? This guides your solution</li>
-          <li><strong>Reach out to one person this week</strong> for non-work conversation—message a colleague, call a friend, join one social activity</li>
-          <li><strong>Try one "parallel presence" strategy</strong>—work from a cafe, co-working space, or library once this week</li>
-          <li><strong>Join one online or local community</strong> aligned with an interest—book club, running group, online forum</li>
-          <li><strong>Tell your manager</strong> if you have supportive leadership—organizational support significantly impacts loneliness</li>
+          <li><strong>Name it explicitly</strong>---"I'm feeling lonely' reduces shame and creates space for problem-solving</li>
+          <li><strong>Assess what you're missing specifically</strong>---casual chat? Deep conversation? Physical co-presence? This guides your solution</li>
+          <li><strong>Reach out to one person this week</strong> for non-work conversation---message a colleague, call a friend, join one social activity</li>
+          <li><strong>Try one "parallel presence" strategy</strong>---work from a cafe, co-working space, or library once this week</li>
+          <li><strong>Join one online or local community</strong> aligned with an interest---book club, running group, online forum</li>
+          <li><strong>Tell your manager</strong> if you have supportive leadership---organizational support significantly impacts loneliness</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -991,7 +991,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li>Thoughts of self-harm or wondering if life is worth living</li>
         </ul>
         <p className="mb-6">
-          Therapists can help address underlying barriers to connection—social anxiety, attachment patterns, negative beliefs about relationships—that make loneliness persistent even when opportunities for connection exist. Cognitive-behavioral therapy (CBT) and interpersonal therapy (IPT) both have strong evidence for treating loneliness.
+          Therapists can help address underlying barriers to connection---social anxiety, attachment patterns, negative beliefs about relationships---that make loneliness persistent even when opportunities for connection exist. Cognitive-behavioral therapy (CBT) and interpersonal therapy (IPT) both have strong evidence for treating loneliness.
         </p>
       </>
     ),
@@ -1084,7 +1084,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             Research on remote work shows that lack of routine is one of the strongest predictors of poor mental health outcomes. Studies find that remote workers who maintain structured routines report 43% lower stress and significantly better work-life balance than those whose schedules become formless <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
-            The challenge is that office work provided automatic structure—commute times, meeting schedules, lunch breaks, colleagues leaving at 5pm—that remote work eliminates. Without these external cues, you must create your own temporal scaffolding. The good news: research identifies specific routine elements that significantly improve remote work wellbeing <Citation id="2" index={2} source="Applied Psychology: Health and Well-Being" year="2022" tier={1} />.
+            The challenge is that office work provided automatic structure---commute times, meeting schedules, lunch breaks, colleagues leaving at 5pm---that remote work eliminates. Without these external cues, you must create your own temporal scaffolding. The good news: research identifies specific routine elements that significantly improve remote work wellbeing <Citation id="2" index={2} source="Applied Psychology: Health and Well-Being" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -1092,7 +1092,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Why Routines Matter for Mental Health
         </h2>
         <p className="mb-6">
-          Temporal structure—predictable patterns in your day—serves multiple psychological functions:
+          Temporal structure---predictable patterns in your day---serves multiple psychological functions:
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Psychological Benefits of Routine">
@@ -1116,7 +1116,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Morning Routine: Setting Up Your Day
         </h2>
         <p className="mb-6">
-          A daily diary study tracking remote workers for 60 days found that morning routines were the strongest predictor of daily wellbeing—more than sleep duration or work demands <Citation id="2" index={2} source="Applied Psychology: Health and Well-Being" year="2022" tier={1} />.
+          A daily diary study tracking remote workers for 60 days found that morning routines were the strongest predictor of daily wellbeing---more than sleep duration or work demands <Citation id="2" index={2} source="Applied Psychology: Health and Well-Being" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           Effective morning routines share common elements:
@@ -1140,7 +1140,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             {
               title: 'Movement before screen time',
               description: (
-                <p>10-20 minutes of movement (walk, stretch, exercise) before opening laptop predicts better mood and energy throughout the day. This doesn't need to be intense—gentle movement signals 'day has started."</p>
+                <p>10-20 minutes of movement (walk, stretch, exercise) before opening laptop predicts better mood and energy throughout the day. This doesn't need to be intense---gentle movement signals 'day has started."</p>
               ),
             },
             {
@@ -1152,7 +1152,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             {
               title: 'Commute substitute',
               description: (
-                <p>A 10-15 minute transition ritual replacing lost commute—walk around block, shower, specific music—signals mental shift to 'work mode."</p>
+                <p>A 10-15 minute transition ritual replacing lost commute---walk around block, shower, specific music---signals mental shift to 'work mode."</p>
               ),
             },
           ]}
@@ -1182,10 +1182,10 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Evidence-based work structure principles:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Set explicit start and end times</strong>—communicate these to colleagues and honor them yourself</li>
-          <li><strong>Time-block deep work</strong>—protect 2-3 hour morning blocks for focused work before meetings</li>
-          <li><strong>Batch similar tasks</strong>—group emails, calls, admin work rather than context-switching constantly</li>
-          <li><strong>Use your chronotype</strong>—night owls forced to work 9-5 show worse outcomes than those working aligned with natural rhythm <Citation id="5" index={5} source="Chronobiology International" year="2023" tier={1} /></li>
+          <li><strong>Set explicit start and end times</strong>---communicate these to colleagues and honor them yourself</li>
+          <li><strong>Time-block deep work</strong>---protect 2-3 hour morning blocks for focused work before meetings</li>
+          <li><strong>Batch similar tasks</strong>---group emails, calls, admin work rather than context-switching constantly</li>
+          <li><strong>Use your chronotype</strong>---night owls forced to work 9-5 show worse outcomes than those working aligned with natural rhythm <Citation id="5" index={5} source="Chronobiology International" year="2023" tier={1} /></li>
         </ul>
 
         <h2 id="breaks-movement" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1208,7 +1208,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Key finding: "breaks" spent scrolling social media or checking news don't provide cognitive recovery—they're additional screen time that depletes rather than restores. Effective breaks involve physical movement, nature exposure, or genuine rest (eyes closed).
+          Key finding: "breaks" spent scrolling social media or checking news don't provide cognitive recovery---they're additional screen time that depletes rather than restores. Effective breaks involve physical movement, nature exposure, or genuine rest (eyes closed).
         </p>
 
         <ArticleCallout variant="tip" title="The 50/10 Rule">
@@ -1225,11 +1225,11 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Evidence-based lunch routine:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Block lunch time</strong>—put it in calendar like a meeting, 45-60 minutes</li>
-          <li><strong>Physical separation</strong>—eat away from your workspace if at all possible</li>
-          <li><strong>No screens</strong>—resist checking email or watching videos while eating</li>
-          <li><strong>Include protein and vegetables</strong>—blood sugar crashes from poor nutrition impair afternoon focus</li>
-          <li><strong>Brief walk or movement</strong>—even 10 minutes post-lunch improves afternoon productivity</li>
+          <li><strong>Block lunch time</strong>---put it in calendar like a meeting, 45-60 minutes</li>
+          <li><strong>Physical separation</strong>---eat away from your workspace if at all possible</li>
+          <li><strong>No screens</strong>---resist checking email or watching videos while eating</li>
+          <li><strong>Include protein and vegetables</strong>---blood sugar crashes from poor nutrition impair afternoon focus</li>
+          <li><strong>Brief walk or movement</strong>---even 10 minutes post-lunch improves afternoon productivity</li>
         </ul>
 
         <h2 id="end-of-day" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1276,17 +1276,17 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           Evidence-based evening routine for remote workers:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Hard stop on work communications</strong>—set specific time (e.g., 7pm) after which you don't check email/Slack</li>
-          <li><strong>Remove work devices from bedroom</strong>—the mere presence impairs sleep quality even when not using them</li>
-          <li><strong>Consistent bedtime</strong>—flexibility of remote work enables poor sleep hygiene; consistency matters more than duration</li>
-          <li><strong>Evening routine separate from work</strong>—cultivate non-work identity through hobbies, socializing, or relaxation</li>
+          <li><strong>Hard stop on work communications</strong>---set specific time (e.g., 7pm) after which you don't check email/Slack</li>
+          <li><strong>Remove work devices from bedroom</strong>---the mere presence impairs sleep quality even when not using them</li>
+          <li><strong>Consistent bedtime</strong>---flexibility of remote work enables poor sleep hygiene; consistency matters more than duration</li>
+          <li><strong>Evening routine separate from work</strong>---cultivate non-work identity through hobbies, socializing, or relaxation</li>
         </ul>
 
         <h2 id="implementation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Implementation: How to Actually Build These Routines
         </h2>
         <p className="mb-6">
-          Research on habit formation shows that implementation intentions—specific "if-then" plans—significantly increase follow-through <Citation id="8" index={8} source="European Journal of Social Psychology" year="2022" tier={1} />:
+          Research on habit formation shows that implementation intentions---specific "if-then" plans---significantly increase follow-through <Citation id="8" index={8} source="European Journal of Social Psychology" year="2022" tier={1} />:
         </p>
 
         <ArticleCallout variant="clinical-note" title="Using Implementation Intentions">
@@ -1304,7 +1304,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           The Flexibility Paradox
         </h2>
         <p className="mb-6">
-          Remote work's promise of flexibility can become a trap. Without structure, "flexibility" becomes formlessness. The solution isn't eliminating flexibility—it's building routine that creates structure while preserving genuine flexibility for when you need it.
+          Remote work's promise of flexibility can become a trap. Without structure, "flexibility" becomes formlessness. The solution isn't eliminating flexibility---it's building routine that creates structure while preserving genuine flexibility for when you need it.
         </p>
         <p className="mb-6">
           Example: Consistent morning routine and end-of-day time doesn't prevent taking a 2pm doctor's appointment or starting late one day. But having default structure means exceptions are intentional rather than every day being chaotic.
@@ -1317,12 +1317,12 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           To begin building a sustainable remote work routine:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Track current patterns</strong> for 3 days—note when you actually wake, start work, eat, take breaks, stop working, sleep</li>
-          <li><strong>Identify biggest problem</strong>—what's causing most stress or poor wellbeing? Lack of boundaries? Irregular sleep? No breaks?</li>
-          <li><strong>Choose ONE routine to establish</strong>—don't try to fix everything at once</li>
-          <li><strong>Write implementation intention</strong>—specific trigger and specific action</li>
-          <li><strong>Track adherence</strong> for 2 weeks—check off when you successfully execute the routine</li>
-          <li><strong>Troubleshoot barriers</strong>—what prevented you on days you didn't follow through? Adjust plan accordingly</li>
+          <li><strong>Track current patterns</strong> for 3 days---note when you actually wake, start work, eat, take breaks, stop working, sleep</li>
+          <li><strong>Identify biggest problem</strong>---what's causing most stress or poor wellbeing? Lack of boundaries? Irregular sleep? No breaks?</li>
+          <li><strong>Choose ONE routine to establish</strong>---don't try to fix everything at once</li>
+          <li><strong>Write implementation intention</strong>---specific trigger and specific action</li>
+          <li><strong>Track adherence</strong> for 2 weeks---check off when you successfully execute the routine</li>
+          <li><strong>Troubleshoot barriers</strong>---what prevented you on days you didn't follow through? Adjust plan accordingly</li>
         </ul>
 
         <h2 id="when-routine-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1339,7 +1339,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li>Relationship conflicts about work-life boundaries</li>
         </ul>
         <p className="mb-6">
-          These may indicate deeper issues—burnout, anxiety disorders, depression—that require professional support beyond routine optimization. Therapy can address underlying patterns while you build structural support through routines.
+          These may indicate deeper issues---burnout, anxiety disorders, depression---that require professional support beyond routine optimization. Therapy can address underlying patterns while you build structural support through routines.
         </p>
       </>
     ),
@@ -1348,7 +1348,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
     id: catId(65),
     slug: 'hybrid-work-challenge-managing-two-environments',
     title: 'The Hybrid Work Challenge: Managing Two Different Work Environments',
-    description: 'Hybrid work offers flexibility but creates unique challenges—constant transition, inequality, and coordination complexity. Learn strategies to navigate split work arrangements without mental health costs.',
+    description: 'Hybrid work offers flexibility but creates unique challenges---constant transition, inequality, and coordination complexity. Learn strategies to navigate split work arrangements without mental health costs.',
     image: "/images/articles/cat05/cover-065.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -1421,7 +1421,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             Monday and Thursday in the office, Tuesday through Friday at home. Or is it Wednesday and Thursday? Wait, is everyone coming in tomorrow? You check Slack. Someone suggests "let's just meet in person' but half the team is remote today. The hybrid work promise was "best of both worlds." The reality often feels like the worst of both.
           </p>
           <p className="mb-6">
-            Hybrid work—splitting time between office and home—has become the dominant post-pandemic arrangement. Systematic reviews show it offers advantages over fully remote or fully office work for many people, including flexibility with maintained social connection <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2024" tier={1} />.
+            Hybrid work---splitting time between office and home---has become the dominant post-pandemic arrangement. Systematic reviews show it offers advantages over fully remote or fully office work for many people, including flexibility with maintained social connection <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2024" tier={1} />.
           </p>
           <p className="mb-6">
             However, research also reveals that hybrid work creates unique challenges that neither fully remote nor fully office workers face: constant environmental transitions, coordination complexity, workplace inequality, and ambiguous norms <Citation id="2" index={2} source="Applied Cognitive Psychology" year="2023" tier={1} />. Understanding these challenges and how to navigate them is essential for protecting your mental health in split work arrangements.
@@ -1498,7 +1498,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The solution isn't returning to office full-time—it's intentional coordination. Teams with shared hybrid schedules ('everyone in Tuesday/Wednesday") show coordination effort comparable to fully remote work. The problem is individualized, unpredictable hybrid arrangements where no one knows who's where.
+          The solution isn't returning to office full-time---it's intentional coordination. Teams with shared hybrid schedules ('everyone in Tuesday/Wednesday") show coordination effort comparable to fully remote work. The problem is individualized, unpredictable hybrid arrangements where no one knows who's where.
         </p>
 
         <h2 id="inequality-dynamics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1516,7 +1516,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note" title="The Career Impact Question">
-          <p>Research shows that hybrid workers who spend less time in office receive fewer promotions and pay raises than those who come in more frequently—even when productivity is equal. This "proximity bias" means hybrid work flexibility may come with career costs. Whether this inequality is worth flexibility is personal calculation, but the trade-off should be conscious, not surprise.</p>
+          <p>Research shows that hybrid workers who spend less time in office receive fewer promotions and pay raises than those who come in more frequently---even when productivity is equal. This "proximity bias" means hybrid work flexibility may come with career costs. Whether this inequality is worth flexibility is personal calculation, but the trade-off should be conscious, not surprise.</p>
         </ArticleCallout>
 
         <h2 id="optimal-schedules" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1554,7 +1554,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
               id: 'earlycareer',
               title: 'For early-career workers',
               content: (
-                <p>Studies suggest more office time (3-4 days) benefits learning, mentorship access, and career development. However, this creates inequality—forcing junior workers in office while seniors work remotely breeds resentment and limits the very flexibility that attracted talent.</p>
+                <p>Studies suggest more office time (3-4 days) benefits learning, mentorship access, and career development. However, this creates inequality---forcing junior workers in office while seniors work remotely breeds resentment and limits the very flexibility that attracted talent.</p>
               ),
             },
           ]}
@@ -1564,25 +1564,25 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           The Pressure to Be Visible
         </h2>
         <p className="mb-6">
-          Hybrid work creates new form of presenteeism—feeling pressure to be in office more than necessary to appear committed, even when work could be done remotely <Citation id="6" index={6} source="Journal of Managerial Psychology" year="2023" tier={1} />.
+          Hybrid work creates new form of presenteeism---feeling pressure to be in office more than necessary to appear committed, even when work could be done remotely <Citation id="6" index={6} source="Journal of Managerial Psychology" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           Studies show 39% of hybrid workers report coming to office on days they'd prefer to work from home due to: fear of being perceived as less committed, concern about missing important conversations or decisions, pressure from managers who value visibility, or anxiety about career impacts of being remote "too much."
         </p>
         <p className="mb-6">
-          This defeats the purpose of hybrid flexibility. Workers gain stress of commuting and office distractions without the psychological benefit of choosing their location based on actual work needs. The solution requires organizational culture change—judging output, not location—but individuals can advocate for clarity around expectations.</p>
+          This defeats the purpose of hybrid flexibility. Workers gain stress of commuting and office distractions without the psychological benefit of choosing their location based on actual work needs. The solution requires organizational culture change---judging output, not location---but individuals can advocate for clarity around expectations.</p>
 
         <h2 id="workspace-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Loss of "Your" Space
         </h2>
         <p className="mb-6">
-          Many hybrid arrangements include "hot-desking"—no assigned workspace, you take any available desk when in office. Research on psychological ownership shows this significantly reduces wellbeing compared to assigned space <Citation id="7" index={7} source="Journal of Environmental Psychology" year="2023" tier={1} />.
+          Many hybrid arrangements include "hot-desking"---no assigned workspace, you take any available desk when in office. Research on psychological ownership shows this significantly reduces wellbeing compared to assigned space <Citation id="7" index={7} source="Journal of Environmental Psychology" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           The daily experience: arriving to find "your" usual spot taken, wasting time searching for desk and setting up, lack of personalization or comfort, losing items between visits, and reduced sense of belonging to physical workplace.
         </p>
         <p className="mb-6">
-          While hot-desking saves company money, research shows it creates stress and reduces productivity—costs that offset real estate savings. Workers with assigned spaces report higher job satisfaction, lower stress, and better performance than hot-deskers.
+          While hot-desking saves company money, research shows it creates stress and reduces productivity---costs that offset real estate savings. Workers with assigned spaces report higher job satisfaction, lower stress, and better performance than hot-deskers.
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1604,7 +1604,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
             {
               title: 'Align office days with team',
               description: (
-                <p>Coordinate with immediate colleagues to overlap office days. Coming in when your close collaborators are also in maximizes the value of office time. Being in office alone wastes the main benefit—human interaction.</p>
+                <p>Coordinate with immediate colleagues to overlap office days. Coming in when your close collaborators are also in maximizes the value of office time. Being in office alone wastes the main benefit---human interaction.</p>
               ),
             },
             {
@@ -1643,7 +1643,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li>Commute draining all benefits of office days</li>
         </ul>
         <p className="mb-6">
-          It's okay to advocate for fully remote or fully office if hybrid isn't working. The 'best of both worlds' promise doesn't hold for everyone—some people thrive with consistency more than flexibility.
+          It's okay to advocate for fully remote or fully office if hybrid isn't working. The 'best of both worlds' promise doesn't hold for everyone---some people thrive with consistency more than flexibility.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1653,12 +1653,12 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           To make hybrid work more sustainable:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Track your current pattern</strong> for 2 weeks—note which days you're where, how you feel, productivity levels</li>
-          <li><strong>Identify your biggest hybrid challenge</strong>—transition stress? Coordination? Unclear expectations?</li>
+          <li><strong>Track your current pattern</strong> for 2 weeks---note which days you're where, how you feel, productivity levels</li>
+          <li><strong>Identify your biggest hybrid challenge</strong>---transition stress? Coordination? Unclear expectations?</li>
           <li><strong>Talk with your team</strong> about coordinating office days if you haven't already</li>
           <li><strong>Propose a consistent schedule</strong> to your manager if you currently have flexible arrangement</li>
           <li><strong>Create one transition routine</strong> to reduce switching stress</li>
-          <li><strong>Reassess in 3 months</strong>—hybrid needs may change; check if current arrangement still serves you</li>
+          <li><strong>Reassess in 3 months</strong>---hybrid needs may change; check if current arrangement still serves you</li>
         </ul>
 
         <h2 id="future-of-hybrid" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1676,7 +1676,7 @@ export const remoteWorkDigitalWorkplaceArticlesA: Article[] = [
           <li>Regular reassessment of what's working and what isn't</li>
         </ul>
         <p className="mb-6">
-          The hybrid work challenges are solvable—but require intentionality from both organizations and individuals. The "figure it out as we go" approach creates the stress and inequality that undermines hybrid work's potential benefits.
+          The hybrid work challenges are solvable---but require intentionality from both organizations and individuals. The "figure it out as we go" approach creates the stress and inequality that undermines hybrid work's potential benefits.
         </p>
       </>
     ),

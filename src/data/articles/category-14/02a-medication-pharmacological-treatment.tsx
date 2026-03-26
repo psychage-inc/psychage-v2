@@ -114,7 +114,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
             If you've been prescribed medication for depression or anxiety, there's a good chance it's an SSRI. Selective Serotonin Reuptake Inhibitors are the most commonly prescribed antidepressants in the world, used by millions of people to manage depression, anxiety disorders, OCD, and other conditions <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />. But what exactly are they, and how do they work?
           </p>
           <p className="mb-6">
-            SSRIs are a class of medications that affect serotonin — a neurotransmitter involved in mood regulation. Unlike older antidepressants, SSRIs are "selective," targeting serotonin specifically rather than affecting multiple brain chemicals at once. This selectivity makes them generally safer and better tolerated <Citation id="2" index={2} source="Hogrefe Publishing" year="2023" tier={5} />.
+            SSRIs are a class of medications that affect serotonin --- a neurotransmitter involved in mood regulation. Unlike older antidepressants, SSRIs are "selective," targeting serotonin specifically rather than affecting multiple brain chemicals at once. This selectivity makes them generally safer and better tolerated <Citation id="2" index={2} source="Hogrefe Publishing" year="2023" tier={5} />.
           </p>
         </div>
 
@@ -127,12 +127,12 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Common SSRIs (by Generic Name)">
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Fluoxetine</strong> (Prozac) — often first-line, long half-life</li>
-            <li><strong>Sertraline</strong> (Zoloft) — widely used, good safety profile</li>
-            <li><strong>Escitalopram</strong> (Lexapro) — well-tolerated, effective</li>
-            <li><strong>Citalopram</strong> (Celexa) — older version of escitalopram</li>
-            <li><strong>Paroxetine</strong> (Paxil) — effective but higher discontinuation effects</li>
-            <li><strong>Fluvoxamine</strong> (Luvox) — often used for OCD</li>
+            <li><strong>Fluoxetine</strong> (Prozac) --- often first-line, long half-life</li>
+            <li><strong>Sertraline</strong> (Zoloft) --- widely used, good safety profile</li>
+            <li><strong>Escitalopram</strong> (Lexapro) --- well-tolerated, effective</li>
+            <li><strong>Citalopram</strong> (Celexa) --- older version of escitalopram</li>
+            <li><strong>Paroxetine</strong> (Paxil) --- effective but higher discontinuation effects</li>
+            <li><strong>Fluvoxamine</strong> (Luvox) --- often used for OCD</li>
           </ul>
         </ArticleCallout>
 
@@ -149,7 +149,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
             {
               title: 'Immediate Effect (Days 1-7)',
               description: (
-                <p>SSRIs begin blocking serotonin reuptake immediately, increasing serotonin levels in the synapses (spaces between nerve cells). However, you won't feel better yet — in fact, you might experience mild side effects as your brain adjusts.</p>
+                <p>SSRIs begin blocking serotonin reuptake immediately, increasing serotonin levels in the synapses (spaces between nerve cells). However, you won't feel better yet --- in fact, you might experience mild side effects as your brain adjusts.</p>
               ),
             },
             {
@@ -174,7 +174,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note" title="Why SSRIs Take Time to Work">
-          <p>The delay between starting medication and feeling better can be frustrating. This happens because SSRIs don't directly "fix" neurotransmitter imbalances — they trigger a cascade of brain changes (neuroplasticity, receptor changes, neurogenesis) that take weeks to develop <Citation id="4" index={4} source="Nature Reviews Neuroscience" year="2021" tier={1} />.</p>
+          <p>The delay between starting medication and feeling better can be frustrating. This happens because SSRIs don't directly "fix" neurotransmitter imbalances --- they trigger a cascade of brain changes (neuroplasticity, receptor changes, neurogenesis) that take weeks to develop <Citation id="4" index={4} source="Nature Reviews Neuroscience" year="2021" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="what-to-expect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -195,12 +195,12 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
                   <p className="mb-4">Most side effects are mild and improve within 1-2 weeks:</p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li><strong>Nausea</strong>: Take with food to reduce this</li>
-                    <li><strong>Sleep changes</strong>: Some SSRIs cause drowsiness, others insomnia — timing the dose can help</li>
+                    <li><strong>Sleep changes</strong>: Some SSRIs cause drowsiness, others insomnia --- timing the dose can help</li>
                     <li><strong>Headache</strong>: Usually resolves quickly</li>
                     <li><strong>Increased anxiety</strong>: Paradoxically, some people feel more anxious initially before improvement</li>
                     <li><strong>Appetite changes</strong>: Can increase or decrease</li>
                   </ul>
-                  <p>If side effects are severe or don't improve after 2 weeks, contact your prescriber — they may adjust the dose or switch medications.</p>
+                  <p>If side effects are severe or don't improve after 2 weeks, contact your prescriber --- they may adjust the dose or switch medications.</p>
                 </div>
               ),
             },
@@ -209,10 +209,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
               title: 'Sexual Side Effects (Common and Persistent)',
               content: (
                 <div>
-                  <p className="mb-4">One of the most common and frustrating side effects of SSRIs is sexual dysfunction — reduced libido, difficulty reaching orgasm, or erectile difficulties <Citation id="5" index={5} source="Journal of Clinical Psychiatry" year="2022" tier={1} />.</p>
+                  <p className="mb-4">One of the most common and frustrating side effects of SSRIs is sexual dysfunction --- reduced libido, difficulty reaching orgasm, or erectile difficulties <Citation id="5" index={5} source="Journal of Clinical Psychiatry" year="2022" tier={1} />.</p>
                   <p className="mb-4">This affects 40-65% of people on SSRIs and often doesn't improve over time. If this is a problem:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Talk to your doctor — don't suffer in silence</li>
+                    <li>Talk to your doctor --- don't suffer in silence</li>
                     <li>Lowering the dose sometimes helps</li>
                     <li>Switching to a different antidepressant (bupropion, mirtazapine) may eliminate this issue</li>
                     <li>Some doctors prescribe additional medications to counteract sexual side effects</li>
@@ -306,7 +306,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
         <ArticleCallout variant="warning" title="When SSRIs May Not Be the Best Choice">
           <p className="mb-4">SSRIs might not be ideal if you:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Have bipolar disorder (can trigger mania — mood stabilizers needed first)</li>
+            <li>Have bipolar disorder (can trigger mania --- mood stabilizers needed first)</li>
             <li>Are very sensitive to sexual side effects</li>
             <li>Have tried multiple SSRIs without benefit (may need a different class)</li>
             <li>Are taking certain medications that interact (serotonin syndrome risk)</li>
@@ -326,7 +326,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="SSRIs aren't happy pills — they don't make you artificially cheerful. They take the edge off the darkness just enough that you can start doing the work to feel better. For me, medication created the baseline stability I needed for therapy to actually work."
+          quote="SSRIs aren't happy pills --- they don't make you artificially cheerful. They take the edge off the darkness just enough that you can start doing the work to feel better. For me, medication created the baseline stability I needed for therapy to actually work."
           attribution="Person Living with Depression"
           role="Patient Perspective"
           variant="large"
@@ -347,10 +347,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           Stopping SSRIs: The Importance of Tapering
         </h2>
         <p className="mb-6">
-          Never stop an SSRI suddenly. Abrupt discontinuation can cause withdrawal-like symptoms called "discontinuation syndrome" — dizziness, brain zaps, flu-like symptoms, mood changes, and anxiety <Citation id="7" index={7} source="Psychotherapy and Psychosomatics" year="2020" tier={1} />.
+          Never stop an SSRI suddenly. Abrupt discontinuation can cause withdrawal-like symptoms called "discontinuation syndrome" --- dizziness, brain zaps, flu-like symptoms, mood changes, and anxiety <Citation id="7" index={7} source="Psychotherapy and Psychosomatics" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          When it's time to stop (after 6-12+ months of stability), your doctor will create a tapering schedule — gradually reducing your dose over weeks or months. This gives your brain time to readjust.
+          When it's time to stop (after 6-12+ months of stability), your doctor will create a tapering schedule --- gradually reducing your dose over weeks or months. This gives your brain time to readjust.
         </p>
 
         <StatCard
@@ -367,7 +367,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'snris-tcas-maois-beyond-ssris-other-antidepressant-options',
-    title: 'SNRIs, TCAs, and MAOIs: Beyond SSRIs — Other Antidepressant Options',
+    title: 'SNRIs, TCAs, and MAOIs: Beyond SSRIs --- Other Antidepressant Options',
     description: "Explore alternative antidepressant classes when SSRIs aren't enough, including SNRIs, tricyclics, MAOIs, and atypical antidepressants.",
     image: '/images/articles/cat14/cover-012.svg',
     category: CATEGORY_THERAPY_NAVIGATION,
@@ -462,7 +462,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            SSRIs are often the first medication tried for depression or anxiety — but they're far from the only option. If SSRIs haven't worked well for you, or if you need medication for a different type of condition, your doctor might recommend an SNRI, tricyclic antidepressant, MAOI, or one of several atypical antidepressants <Citation id="1" index={1} source="The Lancet" year="2018" tier={1} />.
+            SSRIs are often the first medication tried for depression or anxiety --- but they're far from the only option. If SSRIs haven't worked well for you, or if you need medication for a different type of condition, your doctor might recommend an SNRI, tricyclic antidepressant, MAOI, or one of several atypical antidepressants <Citation id="1" index={1} source="The Lancet" year="2018" tier={1} />.
           </p>
           <p className="mb-6">
             Each class of antidepressant works differently, targets different brain chemicals, and has different benefits and side effects. Understanding your options helps you make informed decisions with your prescriber about what might work best for you <Citation id="2" index={2} source="Cambridge University Press" year="2023" tier={5} />.
@@ -478,10 +478,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Common SNRIs">
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Venlafaxine</strong> (Effexor) — effective for depression and generalized anxiety</li>
-            <li><strong>Duloxetine</strong> (Cymbalta) — FDA-approved for depression, anxiety, and chronic pain</li>
-            <li><strong>Desvenlafaxine</strong> (Pristiq) — newer version of venlafaxine</li>
-            <li><strong>Levomilnacipran</strong> (Fetzima) — more norepinephrine-focused</li>
+            <li><strong>Venlafaxine</strong> (Effexor) --- effective for depression and generalized anxiety</li>
+            <li><strong>Duloxetine</strong> (Cymbalta) --- FDA-approved for depression, anxiety, and chronic pain</li>
+            <li><strong>Desvenlafaxine</strong> (Pristiq) --- newer version of venlafaxine</li>
+            <li><strong>Levomilnacipran</strong> (Fetzima) --- more norepinephrine-focused</li>
           </ul>
         </ArticleCallout>
 
@@ -507,17 +507,17 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note" title="Why TCAs Aren't First-Line Anymore">
-          <p>TCAs can be very effective — sometimes more so than SSRIs. But they cause more side effects (dry mouth, constipation, drowsiness, weight gain, heart rhythm changes) and are dangerous in overdose. This is why doctors usually try SSRIs or SNRIs first.</p>
+          <p>TCAs can be very effective --- sometimes more so than SSRIs. But they cause more side effects (dry mouth, constipation, drowsiness, weight gain, heart rhythm changes) and are dangerous in overdose. This is why doctors usually try SSRIs or SNRIs first.</p>
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
           <strong>Common TCAs:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Amitriptyline</strong> (Elavil) — often used for chronic pain, migraines, insomnia</li>
-          <li><strong>Nortriptyline</strong> (Pamelor) — better tolerated than amitriptyline</li>
-          <li><strong>Imipramine</strong> (Tofranil) — one of the first antidepressants</li>
-          <li><strong>Clomipramine</strong> (Anafranil) — particularly effective for OCD</li>
+          <li><strong>Amitriptyline</strong> (Elavil) --- often used for chronic pain, migraines, insomnia</li>
+          <li><strong>Nortriptyline</strong> (Pamelor) --- better tolerated than amitriptyline</li>
+          <li><strong>Imipramine</strong> (Tofranil) --- one of the first antidepressants</li>
+          <li><strong>Clomipramine</strong> (Anafranil) --- particularly effective for OCD</li>
         </ul>
 
         <p className="mb-6">
@@ -534,7 +534,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <p className="mb-4">TCAs require careful monitoring:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>ECG monitoring may be needed (TCAs can affect heart rhythm)</li>
-            <li>Dangerous in overdose — not appropriate if you're actively suicidal</li>
+            <li>Dangerous in overdose --- not appropriate if you're actively suicidal</li>
             <li>Many drug interactions</li>
             <li>Can worsen glaucoma, prostate problems, cognitive issues in older adults</li>
           </ul>
@@ -570,7 +570,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Phenelzine</strong> (Nardil)</li>
           <li><strong>Tranylcypromine</strong> (Parnate)</li>
-          <li><strong>Selegiline transdermal patch</strong> (Emsam) — lower doses bypass dietary restrictions</li>
+          <li><strong>Selegiline transdermal patch</strong> (Emsam) --- lower doses bypass dietary restrictions</li>
         </ul>
 
         <p className="mb-6">
@@ -605,7 +605,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
               title: 'Bupropion (Wellbutrin)',
               content: (
                 <div>
-                  <p className="mb-4">Bupropion is unique because it <strong>doesn't affect serotonin</strong> — it primarily increases dopamine and norepinephrine <Citation id="6" index={6} source="CNS Drugs" year="2021" tier={1} />.</p>
+                  <p className="mb-4">Bupropion is unique because it <strong>doesn't affect serotonin</strong> --- it primarily increases dopamine and norepinephrine <Citation id="6" index={6} source="CNS Drugs" year="2021" tier={1} />.</p>
                   <p className="mb-4"><strong>Benefits:</strong></p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li>No sexual side effects (makes it a good alternative if SSRIs cause this)</li>
@@ -668,10 +668,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           Sometimes instead of switching antidepressants, doctors add a second medication to boost the first one's effectiveness. Common augmentation strategies include <Citation id="8" index={8} source="American Journal of Psychiatry" year="2022" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Adding bupropion to an SSRI</strong> — addresses different neurotransmitters, eliminates sexual side effects</li>
-          <li><strong>Adding an atypical antipsychotic</strong> (aripiprazole, quetiapine) — FDA-approved for treatment-resistant depression</li>
-          <li><strong>Adding lithium</strong> — can boost antidepressant response</li>
-          <li><strong>Adding thyroid hormone</strong> (T3) — helps some people who don't fully respond</li>
+          <li><strong>Adding bupropion to an SSRI</strong> --- addresses different neurotransmitters, eliminates sexual side effects</li>
+          <li><strong>Adding an atypical antipsychotic</strong> (aripiprazole, quetiapine) --- FDA-approved for treatment-resistant depression</li>
+          <li><strong>Adding lithium</strong> --- can boost antidepressant response</li>
+          <li><strong>Adding thyroid hormone</strong> (T3) --- helps some people who don't fully respond</li>
         </ul>
 
         <ComparisonTable
@@ -838,7 +838,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            While antidepressants like SSRIs are often the first-line treatment for anxiety disorders, there are medications specifically designed to reduce anxiety symptoms more quickly. The most well-known are benzodiazepines — fast-acting medications that can provide rapid relief but carry risks of dependence <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />.
+            While antidepressants like SSRIs are often the first-line treatment for anxiety disorders, there are medications specifically designed to reduce anxiety symptoms more quickly. The most well-known are benzodiazepines --- fast-acting medications that can provide rapid relief but carry risks of dependence <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />.
           </p>
           <p className="mb-6">
             Understanding the different types of anti-anxiety medications, their benefits and risks, and when they are appropriate helps you make informed decisions with your healthcare provider about anxiety treatment <Citation id="2" index={2} source="American Psychiatric Association" year="2023" tier={4} />.
@@ -854,11 +854,11 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Common Benzodiazepines">
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Alprazolam</strong> (Xanax) — short-acting, highly potent</li>
-            <li><strong>Lorazepam</strong> (Ativan) — intermediate-acting, commonly used</li>
-            <li><strong>Clonazepam</strong> (Klonopin) — longer-acting, used for panic disorder</li>
-            <li><strong>Diazepam</strong> (Valium) — long-acting, also used for muscle relaxation</li>
-            <li><strong>Temazepam</strong> (Restoril) — primarily used for insomnia</li>
+            <li><strong>Alprazolam</strong> (Xanax) --- short-acting, highly potent</li>
+            <li><strong>Lorazepam</strong> (Ativan) --- intermediate-acting, commonly used</li>
+            <li><strong>Clonazepam</strong> (Klonopin) --- longer-acting, used for panic disorder</li>
+            <li><strong>Diazepam</strong> (Valium) --- long-acting, also used for muscle relaxation</li>
+            <li><strong>Temazepam</strong> (Restoril) --- primarily used for insomnia</li>
           </ul>
         </ArticleCallout>
 
@@ -923,7 +923,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
             {
               title: 'Dependence (Weeks 4-8)',
               description: (
-                <p>Your brain becomes dependent on the medication to function normally. Without it, you experience withdrawal symptoms — rebound anxiety, insomnia, tremors, and in severe cases, seizures <Citation id="4" index={4} source="Addiction" year="2020" tier={1} />.</p>
+                <p>Your brain becomes dependent on the medication to function normally. Without it, you experience withdrawal symptoms --- rebound anxiety, insomnia, tremors, and in severe cases, seizures <Citation id="4" index={4} source="Addiction" year="2020" tier={1} />.</p>
               ),
             },
             {
@@ -1027,7 +1027,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
               title: 'Beta-Blockers (Propranolol, Atenolol)',
               content: (
                 <div>
-                  <p className="mb-4">Beta-blockers are heart medications that block physical symptoms of anxiety — rapid heartbeat, trembling, sweating <Citation id="8" index={8} source="Anxiety, Stress & Coping" year="2020" tier={1} />.</p>
+                  <p className="mb-4">Beta-blockers are heart medications that block physical symptoms of anxiety --- rapid heartbeat, trembling, sweating <Citation id="8" index={8} source="Anxiety, Stress & Coping" year="2020" tier={1} />.</p>
                   <p className="mb-4"><strong>Best for:</strong></p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li>Performance anxiety (public speaking, test-taking)</li>
@@ -1056,12 +1056,12 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <strong>Guidelines for safe use:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Follow your prescriber's instructions exactly</strong> — don't increase doses on your own</li>
-          <li><strong>Avoid alcohol</strong> — combining alcohol with benzodiazepines is dangerous</li>
+          <li><strong>Follow your prescriber's instructions exactly</strong> --- don't increase doses on your own</li>
+          <li><strong>Avoid alcohol</strong> --- combining alcohol with benzodiazepines is dangerous</li>
           <li><strong>Don't drive or operate machinery</strong> until you know how medication affects you</li>
           <li><strong>Tell all your doctors</strong> what you're taking (benzodiazepines interact with many medications)</li>
-          <li><strong>Store securely</strong> — benzodiazepines have street value and abuse potential</li>
-          <li><strong>Never stop suddenly</strong> — always taper under medical supervision</li>
+          <li><strong>Store securely</strong> --- benzodiazepines have street value and abuse potential</li>
+          <li><strong>Never stop suddenly</strong> --- always taper under medical supervision</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="The Role of Medication vs. Therapy for Anxiety">
@@ -1188,14 +1188,14 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           What Are Mood Stabilizers?
         </h2>
         <p className="mb-6">
-          Mood stabilizers are medications that reduce the severity and frequency of mood episodes in bipolar disorder. They work by dampening extreme mood swings in both directions — preventing mania or hypomania on the high end and reducing depression on the low end.
+          Mood stabilizers are medications that reduce the severity and frequency of mood episodes in bipolar disorder. They work by dampening extreme mood swings in both directions --- preventing mania or hypomania on the high end and reducing depression on the low end.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Main Types of Mood Stabilizers">
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Lithium</strong> — the gold standard, oldest and most studied</li>
-            <li><strong>Anticonvulsants</strong> — valproate, lamotrigine, carbamazepine (originally developed for epilepsy)</li>
-            <li><strong>Atypical antipsychotics</strong> — quetiapine, aripiprazole, lurasidone (also used as mood stabilizers)</li>
+            <li><strong>Lithium</strong> --- the gold standard, oldest and most studied</li>
+            <li><strong>Anticonvulsants</strong> --- valproate, lamotrigine, carbamazepine (originally developed for epilepsy)</li>
+            <li><strong>Atypical antipsychotics</strong> --- quetiapine, aripiprazole, lurasidone (also used as mood stabilizers)</li>
           </ul>
         </ArticleCallout>
 
@@ -1277,7 +1277,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li>Blood tests every 3-6 months for lithium level, kidney function (creatinine), thyroid (TSH)</li>
             <li>If kidney or thyroid problems develop, dose adjustment or medication change may be needed</li>
-            <li>Stay well-hydrated — dehydration raises lithium levels and toxicity risk</li>
+            <li>Stay well-hydrated --- dehydration raises lithium levels and toxicity risk</li>
           </ul>
         </ArticleCallout>
 
@@ -1361,10 +1361,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <strong>Commonly used atypical antipsychotics:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Quetiapine</strong> (Seroquel) — FDA-approved for mania and bipolar depression</li>
-          <li><strong>Lurasidone</strong> (Latuda) — specifically for bipolar depression</li>
-          <li><strong>Aripiprazole</strong> (Abilify) — for mania, also used as antidepressant augmentation</li>
-          <li><strong>Olanzapine</strong> (Zyprexa) — effective for mania but significant weight gain</li>
+          <li><strong>Quetiapine</strong> (Seroquel) --- FDA-approved for mania and bipolar depression</li>
+          <li><strong>Lurasidone</strong> (Latuda) --- specifically for bipolar depression</li>
+          <li><strong>Aripiprazole</strong> (Abilify) --- for mania, also used as antidepressant augmentation</li>
+          <li><strong>Olanzapine</strong> (Zyprexa) --- effective for mania but significant weight gain</li>
         </ul>
 
         <p className="mb-6">
@@ -1390,7 +1390,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
         />
 
         <QuoteBlock
-          quote="Finding the right mood stabilizer was life-changing. I tried valproate first, but the weight gain was unbearable. Lithium worked better for me — yes, I have to get blood tests and I'm always thirsty, but I haven't had a manic episode in three years. That stability is worth everything."
+          quote="Finding the right mood stabilizer was life-changing. I tried valproate first, but the weight gain was unbearable. Lithium worked better for me --- yes, I have to get blood tests and I'm always thirsty, but I haven't had a manic episode in three years. That stability is worth everything."
           attribution="Person with Bipolar I Disorder"
           role="Patient Perspective"
           variant="large"
@@ -1400,7 +1400,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           Long-Term Treatment and Monitoring
         </h2>
         <p className="mb-6">
-          Bipolar disorder is typically a lifelong condition, and mood stabilizers are usually taken indefinitely. Stopping medication increases the risk of relapse significantly — even after years of stability.
+          Bipolar disorder is typically a lifelong condition, and mood stabilizers are usually taken indefinitely. Stopping medication increases the risk of relapse significantly --- even after years of stability.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Why Lifelong Treatment?">
@@ -1532,11 +1532,11 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="What Antipsychotics Treat">
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Schizophrenia</strong> — primary use, reduces positive symptoms (hallucinations, delusions)</li>
-            <li><strong>Bipolar disorder</strong> — treats acute mania, prevents mood episodes</li>
-            <li><strong>Severe depression</strong> — added to antidepressants for treatment-resistant cases</li>
-            <li><strong>Agitation and aggression</strong> — in dementia, autism, other conditions</li>
-            <li><strong>OCD, PTSD, insomnia</strong> — off-label uses at low doses</li>
+            <li><strong>Schizophrenia</strong> --- primary use, reduces positive symptoms (hallucinations, delusions)</li>
+            <li><strong>Bipolar disorder</strong> --- treats acute mania, prevents mood episodes</li>
+            <li><strong>Severe depression</strong> --- added to antidepressants for treatment-resistant cases</li>
+            <li><strong>Agitation and aggression</strong> --- in dementia, autism, other conditions</li>
+            <li><strong>OCD, PTSD, insomnia</strong> --- off-label uses at low doses</li>
           </ul>
         </ArticleCallout>
 
@@ -1551,9 +1551,9 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <strong>Common typical antipsychotics:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Haloperidol</strong> (Haldol) — high-potency, often used in hospitals for acute psychosis</li>
-          <li><strong>Chlorpromazine</strong> (Thorazine) — first antipsychotic ever developed</li>
-          <li><strong>Fluphenazine</strong> (Prolixin) — available as long-acting injection</li>
+          <li><strong>Haloperidol</strong> (Haldol) --- high-potency, often used in hospitals for acute psychosis</li>
+          <li><strong>Chlorpromazine</strong> (Thorazine) --- first antipsychotic ever developed</li>
+          <li><strong>Fluphenazine</strong> (Prolixin) --- available as long-acting injection</li>
         </ul>
 
         <p className="mb-6">
@@ -1572,7 +1572,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
             <li><strong>Akathisia</strong>: Inner restlessness, inability to sit still</li>
             <li><strong>Dystonia</strong>: Muscle spasms, especially of neck and eyes (can be frightening but treatable)</li>
             <li><strong>Parkinsonism</strong>: Tremor, stiffness, shuffling gait</li>
-            <li><strong>Tardive dyskinesia</strong>: Involuntary movements (lip smacking, tongue movements) — can be permanent</li>
+            <li><strong>Tardive dyskinesia</strong>: Involuntary movements (lip smacking, tongue movements) --- can be permanent</li>
           </ul>
         </ArticleCallout>
 
@@ -1624,7 +1624,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
               title: 'Aripiprazole (Abilify)',
               content: (
                 <div>
-                  <p className="mb-4">Works differently — a "partial dopamine agonist" that moderates dopamine activity rather than blocking it completely.</p>
+                  <p className="mb-4">Works differently --- a "partial dopamine agonist" that moderates dopamine activity rather than blocking it completely.</p>
                   <p className="mb-4"><strong>Benefits:</strong> Lower weight gain risk, less sedating, often used as add-on for depression.</p>
                   <p><strong>Side effects:</strong> Akathisia (restlessness) is common, nausea, insomnia.</p>
                 </div>
@@ -1643,7 +1643,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
             },
             {
               id: 'clozapine',
-              title: 'Clozapine (Clozaril) — The Most Effective',
+              title: 'Clozapine (Clozaril) --- The Most Effective',
               content: (
                 <div>
                   <p className="mb-4">Clozapine is the most effective antipsychotic for treatment-resistant schizophrenia but requires intensive monitoring due to serious side effects <Citation id="4" index={4} source="British Journal of Psychiatry" year="2021" tier={1} />.</p>
@@ -1685,9 +1685,9 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <strong>Metabolic monitoring is critical:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Weight, BMI, waist circumference — every visit</li>
-          <li>Fasting glucose and lipids — baseline, 3 months, then annually</li>
-          <li>Blood pressure — every visit</li>
+          <li>Weight, BMI, waist circumference --- every visit</li>
+          <li>Fasting glucose and lipids --- baseline, 3 months, then annually</li>
+          <li>Blood pressure --- every visit</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="Why Metabolic Monitoring Matters">
@@ -1705,10 +1705,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <strong>Available as long-acting injections:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Risperidone (Risperdal Consta) — every 2 weeks</li>
-          <li>Aripiprazole (Abilify Maintena, Aristada) — monthly or every 6 weeks</li>
-          <li>Paliperidone (Invega Sustenna, Trinza) — monthly or every 3 months</li>
-          <li>Haloperidol decanoate — monthly (typical antipsychotic)</li>
+          <li>Risperidone (Risperdal Consta) --- every 2 weeks</li>
+          <li>Aripiprazole (Abilify Maintena, Aristada) --- monthly or every 6 weeks</li>
+          <li>Paliperidone (Invega Sustenna, Trinza) --- monthly or every 3 months</li>
+          <li>Haloperidol decanoate --- monthly (typical antipsychotic)</li>
         </ul>
 
         <ArticleCallout variant="tip" title="Benefits of Long-Acting Injections">
@@ -1731,10 +1731,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           <strong>FDA-approved for bipolar disorder:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Quetiapine</strong> — mania, depression, maintenance</li>
-          <li><strong>Lurasidone</strong> — bipolar depression (alone or with lithium/valproate)</li>
-          <li><strong>Aripiprazole</strong> — mania, maintenance</li>
-          <li><strong>Olanzapine</strong> — mania, maintenance, bipolar depression (combined with fluoxetine)</li>
+          <li><strong>Quetiapine</strong> --- mania, depression, maintenance</li>
+          <li><strong>Lurasidone</strong> --- bipolar depression (alone or with lithium/valproate)</li>
+          <li><strong>Aripiprazole</strong> --- mania, maintenance</li>
+          <li><strong>Olanzapine</strong> --- mania, maintenance, bipolar depression (combined with fluoxetine)</li>
         </ul>
 
         <h2 id="off-label-uses" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1744,10 +1744,10 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           Antipsychotics are frequently prescribed off-label (for conditions not FDA-approved) at low doses <Citation id="10" index={10} source="Journal of Clinical Psychiatry" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Insomnia</strong> — quetiapine 25-100mg (sedating but not FDA-approved for sleep)</li>
-          <li><strong>Treatment-resistant depression</strong> — aripiprazole or quetiapine added to antidepressants</li>
-          <li><strong>OCD</strong> — low-dose antipsychotic added to SSRIs</li>
-          <li><strong>PTSD, severe anxiety</strong> — off-label use when other treatments fail</li>
+          <li><strong>Insomnia</strong> --- quetiapine 25-100mg (sedating but not FDA-approved for sleep)</li>
+          <li><strong>Treatment-resistant depression</strong> --- aripiprazole or quetiapine added to antidepressants</li>
+          <li><strong>OCD</strong> --- low-dose antipsychotic added to SSRIs</li>
+          <li><strong>PTSD, severe anxiety</strong> --- off-label use when other treatments fail</li>
         </ul>
 
         <ArticleCallout variant="warning" title="The Risk of Off-Label Use">

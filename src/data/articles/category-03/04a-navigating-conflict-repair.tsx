@@ -98,7 +98,7 @@ export const conflictRepairArticlesA: Article[] = [
             When we think about healthy relationships, we often picture harmony, agreement, and smooth sailing. But research tells a different story: couples who never fight may actually be at greater risk of relationship dissolution than those who engage in constructive disagreement <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
-            Conflict isn't a sign that something is broken—it's a signal that two people with different needs, perspectives, and histories are trying to build something together. The absence of conflict doesn't indicate a strong relationship; it often suggests avoidance, suppression, or disengagement <Citation id="2" index={2} source="Journal of Marriage and Family" year="2020" tier={1} />. The question isn't whether you'll have conflict, but how you'll handle it when it arrives.
+            Conflict isn't a sign that something is broken---it's a signal that two people with different needs, perspectives, and histories are trying to build something together. The absence of conflict doesn't indicate a strong relationship; it often suggests avoidance, suppression, or disengagement <Citation id="2" index={2} source="Journal of Marriage and Family" year="2020" tier={1} />. The question isn't whether you'll have conflict, but how you'll handle it when it arrives.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export const conflictRepairArticlesA: Article[] = [
           The Myths We Believe About Conflict
         </h2>
         <p className="mb-6">
-          Many of us carry unconscious beliefs about conflict that make it harder to navigate disagreements effectively. Relationship researcher John Gottman has spent decades studying couples and found that happy couples don't avoid conflict—they learn to manage it <Citation id="3" index={3} source="Harmony Books" year="2015" tier={5} />.
+          Many of us carry unconscious beliefs about conflict that make it harder to navigate disagreements effectively. Relationship researcher John Gottman has spent decades studying couples and found that happy couples don't avoid conflict---they learn to manage it <Citation id="3" index={3} source="Harmony Books" year="2015" tier={5} />.
         </p>
 
         <ArticleAccordion
@@ -117,7 +117,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: `Myth: Happy couples don't fight`,
               content: (
                 <p>
-                  <strong>Reality:</strong> Happy couples fight—but they fight productively. They use disagreements as opportunities to understand each other better, not to win or dominate. Research shows that couples in satisfying relationships have conflicts at similar rates to unhappy couples; the difference lies in how they handle those conflicts <Citation id="4" index={4} source="Personal Relationships" year="2018" tier={1} />.
+                  <strong>Reality:</strong> Happy couples fight---but they fight productively. They use disagreements as opportunities to understand each other better, not to win or dominate. Research shows that couples in satisfying relationships have conflicts at similar rates to unhappy couples; the difference lies in how they handle those conflicts <Citation id="4" index={4} source="Personal Relationships" year="2018" tier={1} />.
                 </p>
               ),
             },
@@ -126,7 +126,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Myth: Conflict means the relationship is failing',
               content: (
                 <p>
-                  <strong>Reality:</strong> Conflict is a normal part of intimacy. As relationships deepen, partners inevitably encounter differences in values, preferences, and needs. These differences create friction—but that friction can polish rough edges rather than wear the relationship down.
+                  <strong>Reality:</strong> Conflict is a normal part of intimacy. As relationships deepen, partners inevitably encounter differences in values, preferences, and needs. These differences create friction---but that friction can polish rough edges rather than wear the relationship down.
                 </p>
               ),
             },
@@ -135,7 +135,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: `Myth: If we fight about something, we're incompatible`,
               content: (
                 <p>
-                  <strong>Reality:</strong> Most relationship conflicts are perpetual problems that never fully resolve <Citation id="3" index={3} source="Harmony Books" year="2015" tier={5} />. About 69% of relationship conflicts are ongoing issues based on fundamental differences in personality or needs. Compatibility isn't about agreeing on everything—it's about managing disagreements with respect.
+                  <strong>Reality:</strong> Most relationship conflicts are perpetual problems that never fully resolve <Citation id="3" index={3} source="Harmony Books" year="2015" tier={5} />. About 69% of relationship conflicts are ongoing issues based on fundamental differences in personality or needs. Compatibility isn't about agreeing on everything---it's about managing disagreements with respect.
                 </p>
               ),
             },
@@ -171,7 +171,7 @@ export const conflictRepairArticlesA: Article[] = [
           Conflict Reveals What Matters
         </h3>
         <p className="mb-6">
-          We don't fight about things we don't care about. Conflict illuminates our values, boundaries, and non-negotiables. When your partner challenges you on something, they're showing you what matters to them—and giving you the same opportunity.
+          We don't fight about things we don't care about. Conflict illuminates our values, boundaries, and non-negotiables. When your partner challenges you on something, they're showing you what matters to them---and giving you the same opportunity.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -192,7 +192,7 @@ export const conflictRepairArticlesA: Article[] = [
           Conflict Prevents Bigger Problems
         </h3>
         <p className="mb-6">
-          Small disagreements addressed early prevent larger ruptures later. When you address issues as they arise—when stakes are lower and emotions are more manageable—you build confidence in the relationship's ability to handle difficulty. Avoidance, by contrast, allows problems to compound <Citation id="6" index={6} source="Communication Research" year="2019" tier={1} />.
+          Small disagreements addressed early prevent larger ruptures later. When you address issues as they arise---when stakes are lower and emotions are more manageable---you build confidence in the relationship's ability to handle difficulty. Avoidance, by contrast, allows problems to compound <Citation id="6" index={6} source="Communication Research" year="2019" tier={1} />.
         </p>
 
         <h2 id="constructive-vs-destructive" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -310,7 +310,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Seek to understand before being understood',
               description: (
                 <p>
-                  Ask questions. Reflect back what you hear. Validate their experience even if you disagree with their conclusion. "I can see why you'd feel that way' doesn't mean you're wrong—it means you're listening.
+                  Ask questions. Reflect back what you hear. Validate their experience even if you disagree with their conclusion. "I can see why you'd feel that way' doesn't mean you're wrong---it means you're listening.
                 </p>
               ),
             },
@@ -327,7 +327,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Conflict isn't the enemy of intimacy—it's the pathway to it. Every disagreement is a chance to choose each other again, to show that your relationship can hold hard truths, and to prove that love isn't about never hurting each other, but about how you repair when you do.
+            Conflict isn't the enemy of intimacy---it's the pathway to it. Every disagreement is a chance to choose each other again, to show that your relationship can hold hard truths, and to prove that love isn't about never hurting each other, but about how you repair when you do.
           </p>
         </ArticleCallout>
       </>
@@ -423,10 +423,10 @@ export const conflictRepairArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In the heat of an argument, there's often a moment—fleeting but critical—when a relationship can turn toward repair or spiral toward damage. Relationship researcher John Gottman calls this the "repair attempt, " and his decades of research show it's one of the most powerful predictors of relationship success <Citation id="1" index={1} source="Journal of Family Psychology" year="2002" tier={1} />.
+            In the heat of an argument, there's often a moment---fleeting but critical---when a relationship can turn toward repair or spiral toward damage. Relationship researcher John Gottman calls this the "repair attempt, " and his decades of research show it's one of the most powerful predictors of relationship success <Citation id="1" index={1} source="Journal of Family Psychology" year="2002" tier={1} />.
           </p>
           <p className="mb-6">
-            A repair attempt is any statement or action—silly, dramatic, or sincere—that prevents negativity from escalating out of control during conflict. It's the relationship equivalent of a circuit breaker: when emotional voltage gets too high, repair attempts keep the system from overloading <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={1} />. The most successful couples aren't those who never fight—they're the ones who know how to interrupt destructive patterns before they take root.
+            A repair attempt is any statement or action---silly, dramatic, or sincere---that prevents negativity from escalating out of control during conflict. It's the relationship equivalent of a circuit breaker: when emotional voltage gets too high, repair attempts keep the system from overloading <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={1} />. The most successful couples aren't those who never fight---they're the ones who know how to interrupt destructive patterns before they take root.
           </p>
         </div>
 
@@ -439,7 +439,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Gottman's research found that in couples headed for divorce, repair attempts were made but consistently ignored or rejected. In stable couples, repair attempts were recognized and accepted—even if they were clumsy or imperfect <Citation id="4" index={4} source="Journal of Marriage and Family" year="2019" tier={1} />.
+            Gottman's research found that in couples headed for divorce, repair attempts were made but consistently ignored or rejected. In stable couples, repair attempts were recognized and accepted---even if they were clumsy or imperfect <Citation id="4" index={4} source="Journal of Marriage and Family" year="2019" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -485,7 +485,7 @@ export const conflictRepairArticlesA: Article[] = [
           How to Make a Repair Attempt
         </h2>
         <p className="mb-6">
-          The key to a successful repair attempt isn't perfection—it's sincerity and timing. Here's how to practice this skill in real time <Citation id="8" index={8} source="Journal of Social and Clinical Psychology" year="2019" tier={1} />.
+          The key to a successful repair attempt isn't perfection---it's sincerity and timing. Here's how to practice this skill in real time <Citation id="8" index={8} source="Journal of Social and Clinical Psychology" year="2019" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -543,7 +543,7 @@ export const conflictRepairArticlesA: Article[] = [
           How to Recognize and Accept Repair Attempts
         </h2>
         <p className="mb-6">
-          Making repair attempts is only half the equation. The other half—often the harder half—is recognizing and accepting them when your partner offers them <Citation id="7" index={7} source="Clinical Psychology Review" year="2021" tier={1} />.
+          Making repair attempts is only half the equation. The other half---often the harder half---is recognizing and accepting them when your partner offers them <Citation id="7" index={7} source="Clinical Psychology Review" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip">
@@ -595,7 +595,7 @@ export const conflictRepairArticlesA: Article[] = [
           Pre-Planning: Create Your Repair Toolkit
         </h2>
         <p className="mb-6">
-          Gottman recommends that couples discuss repair strategies when they're calm—not in the middle of conflict. This pre-planning makes repair attempts more effective when emotions run high <Citation id="9" index={9} source="National Institutes of Health" year="2020" tier={2} />.
+          Gottman recommends that couples discuss repair strategies when they're calm---not in the middle of conflict. This pre-planning makes repair attempts more effective when emotions run high <Citation id="9" index={9} source="National Institutes of Health" year="2020" tier={2} />.
         </p>
 
         <ArticleAccordion
@@ -648,7 +648,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: '4. Debrief after conflicts',
               content: (
                 <p>
-                  After a disagreement is resolved, talk about what worked and what didn't. "I noticed you tried to reach for my hand and I pulled away—I wasn't ready yet. Next time, maybe just say 'I want to pause' and I'll be more receptive." This meta-conversation builds skill over time.
+                  After a disagreement is resolved, talk about what worked and what didn't. "I noticed you tried to reach for my hand and I pulled away---I wasn't ready yet. Next time, maybe just say 'I want to pause' and I'll be more receptive." This meta-conversation builds skill over time.
                 </p>
               ),
             },
@@ -679,7 +679,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Repair attempts aren't about avoiding conflict—they're about fighting well. They signal that your relationship matters more than winning the argument, and that staying connected is more important than being right. The couples who last aren't the ones who never fight; they're the ones who know how to reach for each other even when they're angry.
+            Repair attempts aren't about avoiding conflict---they're about fighting well. They signal that your relationship matters more than winning the argument, and that staying connected is more important than being right. The couples who last aren't the ones who never fight; they're the ones who know how to reach for each other even when they're angry.
           </p>
         </ArticleCallout>
       </>
@@ -775,10 +775,10 @@ export const conflictRepairArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every relationship has conflict. What separates thriving couples from struggling ones isn't the absence of disagreement—it's how they fight. Research consistently shows that couples who follow certain ground rules during conflict report higher relationship satisfaction, greater intimacy, and longer-lasting partnerships <Citation id="1" index={1} source="Communication Monographs" year="2020" tier={1} />.
+            Every relationship has conflict. What separates thriving couples from struggling ones isn't the absence of disagreement---it's how they fight. Research consistently shows that couples who follow certain ground rules during conflict report higher relationship satisfaction, greater intimacy, and longer-lasting partnerships <Citation id="1" index={1} source="Communication Monographs" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            "Fighting fair" doesn't mean suppressing your feelings or avoiding tough conversations. It means creating a structure that allows both people to express themselves fully while maintaining respect and working toward resolution <Citation id="2" index={2} source="Journal of Marriage and Family" year="2019" tier={1} />. These rules aren't about politeness—they're about protection. They protect the relationship from the corrosive effects of contempt, defensiveness, and escalation.
+            "Fighting fair" doesn't mean suppressing your feelings or avoiding tough conversations. It means creating a structure that allows both people to express themselves fully while maintaining respect and working toward resolution <Citation id="2" index={2} source="Journal of Marriage and Family" year="2019" tier={1} />. These rules aren't about politeness---they're about protection. They protect the relationship from the corrosive effects of contempt, defensiveness, and escalation.
           </p>
         </div>
 
@@ -786,11 +786,11 @@ export const conflictRepairArticlesA: Article[] = [
           The Core Rules of Fair Fighting
         </h2>
         <p className="mb-6">
-          These aren't arbitrary guidelines—they're distilled from decades of relationship research on what works and what destroys partnerships <Citation id="8" index={8} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
+          These aren't arbitrary guidelines---they're distilled from decades of relationship research on what works and what destroys partnerships <Citation id="8" index={8} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          Rule 1: No Character Attacks—Focus on Behavior
+          Rule 1: No Character Attacks---Focus on Behavior
         </h3>
         <p className="mb-6">
           Attack the problem, not the person. "You're so selfish" criticizes character; "I felt hurt when you made plans without asking me first" describes a specific behavior and its impact. The first creates defensiveness and shame. The second creates space for dialogue <Citation id="3" index={3} source="Journal of Family Psychology" year="2018" tier={1} />.
@@ -824,7 +824,7 @@ export const conflictRepairArticlesA: Article[] = [
         />
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          Rule 2: No Contempt—Ever
+          Rule 2: No Contempt---Ever
         </h3>
         <p className="mb-6">
           Contempt is the single strongest predictor of relationship breakdown in Gottman's research <Citation id="7" index={7} source="Journal of Social and Personal Relationships" year="2018" tier={1} />. Contempt includes eye-rolling, mocking, sarcasm, name-calling, and hostile humor. It communicates: "You're beneath me. I don't respect you."
@@ -832,12 +832,12 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="warning" title="Why Contempt Is Toxic">
           <p>
-            Contempt doesn't just hurt in the moment—it erodes the foundation of safety that relationships require. When contempt becomes a pattern, partners begin to see each other as adversaries rather than allies. Repair becomes nearly impossible because contempt destroys the goodwill needed for reconciliation.
+            Contempt doesn't just hurt in the moment---it erodes the foundation of safety that relationships require. When contempt becomes a pattern, partners begin to see each other as adversaries rather than allies. Repair becomes nearly impossible because contempt destroys the goodwill needed for reconciliation.
           </p>
         </ArticleCallout>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          Rule 3: Stay on Topic—One Issue at a Time
+          Rule 3: Stay on Topic---One Issue at a Time
         </h3>
         <p className="mb-6">
           "Kitchen-sinking" is when you bring up every past grievance during a current conflict: "And another thing, you never apologized for what you said last month, and you always leave dishes in the sink, and your family is rude to me..." This overwhelms the conversation and prevents resolution <Citation id="5" index={5} source="Personal Relationships" year="2019" tier={1} />.
@@ -896,7 +896,7 @@ export const conflictRepairArticlesA: Article[] = [
           Rule 6: Listen to Understand, Not to Defend
         </h3>
         <p className="mb-6">
-          Most people listen to respond—they're formulating their rebuttal while the other person is talking. Fair fighting requires listening to genuinely understand your partner's experience, even if you disagree with their interpretation <Citation id="6" index={6} source="International Journal of Listening" year="2020" tier={1} />.
+          Most people listen to respond---they're formulating their rebuttal while the other person is talking. Fair fighting requires listening to genuinely understand your partner's experience, even if you disagree with their interpretation <Citation id="6" index={6} source="International Journal of Listening" year="2020" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -910,7 +910,7 @@ export const conflictRepairArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Reflect back:</strong> "So you're saying you felt dismissed when I checked my phone?"</li>
                     <li><strong>Ask clarifying questions:</strong> "Help me understand what you needed in that moment"</li>
-                    <li><strong>Validate before disagreeing:</strong> "I can see why that would hurt" doesn't mean you're admitting fault—it means you're acknowledging their experience</li>
+                    <li><strong>Validate before disagreeing:</strong> "I can see why that would hurt" doesn't mean you're admitting fault---it means you're acknowledging their experience</li>
                   </ul>
                 </div>
               ),
@@ -948,7 +948,7 @@ export const conflictRepairArticlesA: Article[] = [
           Rule 8: Take Breaks When Flooded
         </h3>
         <p className="mb-6">
-          When your heart rate exceeds 100 beats per minute, your ability to think rationally plummets. This is called "flooding" <Citation id="4" index={4} source="Emotion" year="2021" tier={1} />. You can't problem-solve when flooded—you can only react.
+          When your heart rate exceeds 100 beats per minute, your ability to think rationally plummets. This is called "flooding" <Citation id="4" index={4} source="Emotion" year="2021" tier={1} />. You can't problem-solve when flooded---you can only react.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -975,11 +975,11 @@ export const conflictRepairArticlesA: Article[] = [
           Rule 10: Aim for Understanding, Not Winning
         </h3>
         <p className="mb-6">
-          Fair fighting isn't about proving you're right—it's about understanding each other's perspectives and finding a way forward together. If you 'win' the argument but damage the relationship, you've both lost.
+          Fair fighting isn't about proving you're right---it's about understanding each other's perspectives and finding a way forward together. If you 'win' the argument but damage the relationship, you've both lost.
         </p>
 
         <QuoteBlock
-          quote="The goal of conflict isn't to defeat your partner. It's to understand them deeply enough that you can hold both truths at once—yours and theirs—and find a solution that honors both."
+          quote="The goal of conflict isn't to defeat your partner. It's to understand them deeply enough that you can hold both truths at once---yours and theirs---and find a solution that honors both."
           attribution="Dr. Sue Johnson"
           role="Founder of Emotionally Focused Therapy"
           source="Hold Me Tight, 2008"
@@ -1008,7 +1008,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Print and post them',
               description: (
                 <p>
-                  Put a copy of these rules somewhere visible—on the fridge, in your bedroom, on your phone. When conflict arises and emotions run high, having a physical reminder can help you course-correct.
+                  Put a copy of these rules somewhere visible---on the fridge, in your bedroom, on your phone. When conflict arises and emotions run high, having a physical reminder can help you course-correct.
                 </p>
               ),
             },
@@ -1024,7 +1024,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Practice on small conflicts first',
               description: (
                 <p>
-                  Don't try to implement all 10 rules during your biggest, most emotionally charged disagreement. Practice on smaller issues—who does dishes, what movie to watch—until the skills feel more natural.
+                  Don't try to implement all 10 rules during your biggest, most emotionally charged disagreement. Practice on smaller issues---who does dishes, what movie to watch---until the skills feel more natural.
                 </p>
               ),
             },
@@ -1032,7 +1032,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Debrief after conflicts',
               description: (
                 <p>
-                  After a disagreement is resolved, talk about what went well and what didn't. 'I noticed I was using "you always' language again—I'll work on being more specific next time.' This meta-conversation builds skill over time.
+                  After a disagreement is resolved, talk about what went well and what didn't. 'I noticed I was using "you always' language again---I'll work on being more specific next time.' This meta-conversation builds skill over time.
                 </p>
               ),
             },
@@ -1043,7 +1043,7 @@ export const conflictRepairArticlesA: Article[] = [
           When Fair Fighting Feels Impossible
         </h2>
         <p className="mb-6">
-          If you consistently cannot follow these rules—if every conflict devolves into contempt, yelling, or stonewalling—it may indicate that underlying issues need professional attention.
+          If you consistently cannot follow these rules---if every conflict devolves into contempt, yelling, or stonewalling---it may indicate that underlying issues need professional attention.
         </p>
 
         <ArticleCallout variant="warning">
@@ -1061,7 +1061,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Fighting fair doesn't mean you won't get angry, hurt, or frustrated. It means you'll channel those feelings in ways that bring you closer rather than drive you apart. The couples who last aren't the ones who never fight—they're the ones who've learned to fight in ways that deepen trust rather than erode it.
+            Fighting fair doesn't mean you won't get angry, hurt, or frustrated. It means you'll channel those feelings in ways that bring you closer rather than drive you apart. The couples who last aren't the ones who never fight---they're the ones who've learned to fight in ways that deepen trust rather than erode it.
           </p>
         </ArticleCallout>
       </>
@@ -1157,10 +1157,10 @@ export const conflictRepairArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're mid-conversation, trying to resolve a disagreement, when your partner's face goes blank. They stop responding. They look away. They might pick up their phone, walk out of the room, or just stare into the distance. You're left talking to a wall. This is stonewalling—and it's one of the most destructive patterns in relationships <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />.
+            You're mid-conversation, trying to resolve a disagreement, when your partner's face goes blank. They stop responding. They look away. They might pick up their phone, walk out of the room, or just stare into the distance. You're left talking to a wall. This is stonewalling---and it's one of the most destructive patterns in relationships <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Relationship researcher John Gottman calls stonewalling one of the "Four Horsemen of the Apocalypse"—patterns so toxic they predict relationship failure with over 90% accuracy <Citation id="3" index={3} source="Journal of Marriage and Family" year="2018" tier={1} />. But stonewalling isn't always malicious. Often, it's a desperate attempt at self-protection when someone feels emotionally overwhelmed. Understanding what drives it—and how to address it—can mean the difference between connection and dissolution.
+            Relationship researcher John Gottman calls stonewalling one of the "Four Horsemen of the Apocalypse"---patterns so toxic they predict relationship failure with over 90% accuracy <Citation id="3" index={3} source="Journal of Marriage and Family" year="2018" tier={1} />. But stonewalling isn't always malicious. Often, it's a desperate attempt at self-protection when someone feels emotionally overwhelmed. Understanding what drives it---and how to address it---can mean the difference between connection and dissolution.
           </p>
         </div>
 
@@ -1194,7 +1194,7 @@ export const conflictRepairArticlesA: Article[] = [
           Why People Stonewall: The Physiology of Shutdown
         </h2>
         <p className="mb-6">
-          Stonewalling often isn't a conscious choice—it's a physiological response to feeling overwhelmed. When your nervous system perceives threat during conflict, it can trigger a shutdown response <Citation id="2" index={2} source="Psychophysiology" year="2019" tier={1} />.
+          Stonewalling often isn't a conscious choice---it's a physiological response to feeling overwhelmed. When your nervous system perceives threat during conflict, it can trigger a shutdown response <Citation id="2" index={2} source="Psychophysiology" year="2019" tier={1} />.
         </p>
 
         <StatCard
@@ -1306,7 +1306,7 @@ export const conflictRepairArticlesA: Article[] = [
           The Impact of Stonewalling on Relationships
         </h2>
         <p className="mb-6">
-          Stonewalling doesn't just frustrate in the moment—it has long-term corrosive effects on relationship health.
+          Stonewalling doesn't just frustrate in the moment---it has long-term corrosive effects on relationship health.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1325,7 +1325,7 @@ export const conflictRepairArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Temporary relief but long-term guilt:</strong> Shutdown may reduce immediate stress, but often creates shame later</li>
           <li><strong>Reinforces avoidance patterns:</strong> Each time you stonewall, it becomes easier to do it again</li>
-          <li><strong>Prevents resolution:</strong> Problems don't disappear—they compound when left unaddressed</li>
+          <li><strong>Prevents resolution:</strong> Problems don't disappear---they compound when left unaddressed</li>
           <li><strong>Damages self-concept:</strong> "I'm someone who can't handle conflict' becomes part of your identity</li>
         </ul>
 
@@ -1364,7 +1364,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Call a timeout BEFORE shutting down',
               description: (
                 <p>
-                  Say: "I'm starting to feel overwhelmed. I need 20 minutes to calm down, and then I promise I'll come back to finish this conversation." The key is the promise to return. This isn't avoidance—it's regulation.
+                  Say: "I'm starting to feel overwhelmed. I need 20 minutes to calm down, and then I promise I'll come back to finish this conversation." The key is the promise to return. This isn't avoidance---it's regulation.
                 </p>
               ),
             },
@@ -1388,7 +1388,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: `Name what's happening for you`,
               description: (
                 <p>
-                  "I'm feeling really overwhelmed right now, and my instinct is to shut down. I don't want to do that. Can we slow down?" Naming the urge to stonewall helps your partner understand it's not about them—it's about your nervous system's response.
+                  "I'm feeling really overwhelmed right now, and my instinct is to shut down. I don't want to do that. Can we slow down?" Naming the urge to stonewall helps your partner understand it's not about them---it's about your nervous system's response.
                 </p>
               ),
             },
@@ -1399,7 +1399,7 @@ export const conflictRepairArticlesA: Article[] = [
           If Your Partner Stonewalls
         </h2>
         <p className="mb-6">
-          When your partner shuts down, your instinct may be to push harder—to demand a response, to raise your voice, to insist they engage. This almost always backfires. Here's what helps instead.
+          When your partner shuts down, your instinct may be to push harder---to demand a response, to raise your voice, to insist they engage. This almost always backfires. Here's what helps instead.
         </p>
 
         <BeforeAfter
@@ -1461,7 +1461,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Stonewalling is often a nervous system response, not a character flaw. The person who shuts down isn't trying to hurt you—they're trying to protect themselves from overwhelm. Breaking the pattern requires compassion on both sides: the stonewaller learning to stay engaged even when uncomfortable, and the pursuer learning to lower intensity to create safety. Connection happens not in the absence of shutdown, but in the willingness to return to each other after it happens.
+            Stonewalling is often a nervous system response, not a character flaw. The person who shuts down isn't trying to hurt you---they're trying to protect themselves from overwhelm. Breaking the pattern requires compassion on both sides: the stonewaller learning to stay engaged even when uncomfortable, and the pursuer learning to lower intensity to create safety. Connection happens not in the absence of shutdown, but in the willingness to return to each other after it happens.
           </p>
         </ArticleCallout>
       </>
@@ -1471,7 +1471,7 @@ export const conflictRepairArticlesA: Article[] = [
     id: catId(35),
     slug: 'resolve-argument-no-one-backs-down',
     title: 'How to Resolve an Argument When Neither Person Wants to Back Down',
-    description: 'Navigate gridlocked conflicts where both people feel right and neither wants to compromise—practical strategies for breaking the stalemate.',
+    description: 'Navigate gridlocked conflicts where both people feel right and neither wants to compromise---practical strategies for breaking the stalemate.',
     image: "/images/articles/cat03/cover-035.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 9,
@@ -1557,10 +1557,10 @@ export const conflictRepairArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're both convinced you're right. Neither of you wants to budge. The argument circles back on itself—same points, same frustrations, no resolution. You're not having a conversation anymore; you're in a standoff. This is what relationship researcher John Gottman calls 'gridlock"—a conflict where both people's core values or deeply held beliefs are in opposition, and compromise feels like surrender <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />.
+            You're both convinced you're right. Neither of you wants to budge. The argument circles back on itself---same points, same frustrations, no resolution. You're not having a conversation anymore; you're in a standoff. This is what relationship researcher John Gottman calls 'gridlock"---a conflict where both people's core values or deeply held beliefs are in opposition, and compromise feels like surrender <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            About 69% of relationship conflicts are perpetual—they never fully resolve because they're rooted in fundamental differences between partners <Citation id="3" index={3} source="Simon & Schuster" year="2012" tier={5} />. The goal isn't to make these conflicts disappear. It's to manage them in ways that honor both people's perspectives and prevent the gridlock from eroding the relationship. Here's how to move forward when neither person wants to back down.
+            About 69% of relationship conflicts are perpetual---they never fully resolve because they're rooted in fundamental differences between partners <Citation id="3" index={3} source="Simon & Schuster" year="2012" tier={5} />. The goal isn't to make these conflicts disappear. It's to manage them in ways that honor both people's perspectives and prevent the gridlock from eroding the relationship. Here's how to move forward when neither person wants to back down.
           </p>
         </div>
 
@@ -1568,7 +1568,7 @@ export const conflictRepairArticlesA: Article[] = [
           Why Gridlock Happens
         </h2>
         <p className="mb-6">
-          Gridlocked conflicts feel different from solvable ones. They're not about logistics or miscommunication—they're about identity, values, and deeply held beliefs. When you're arguing about something that feels core to who you are, 'compromise' can feel like losing yourself <Citation id="2" index={2} source="Personal Relationships" year="2019" tier={1} />.
+          Gridlocked conflicts feel different from solvable ones. They're not about logistics or miscommunication---they're about identity, values, and deeply held beliefs. When you're arguing about something that feels core to who you are, 'compromise' can feel like losing yourself <Citation id="2" index={2} source="Personal Relationships" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1588,7 +1588,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Gridlocked conflicts often have a "dream" beneath them—an unspoken hope, fear, or core value that the person is protecting. "I don't want to move" might really mean "I need to feel rooted and connected to community." Uncovering the dream beneath the position is key to breaking gridlock <Citation id="3" index={3} source="Simon & Schuster" year="2012" tier={5} />.
+            Gridlocked conflicts often have a "dream" beneath them---an unspoken hope, fear, or core value that the person is protecting. "I don't want to move" might really mean "I need to feel rooted and connected to community." Uncovering the dream beneath the position is key to breaking gridlock <Citation id="3" index={3} source="Simon & Schuster" year="2012" tier={5} />.
           </p>
         </ArticleCallout>
 
@@ -1596,7 +1596,7 @@ export const conflictRepairArticlesA: Article[] = [
           Shift the Goal: From Winning to Understanding
         </h2>
         <p className="mb-6">
-          When you're gridlocked, the first step is to stop trying to "win" the argument. Winning means your partner loses—and when your partner loses, the relationship loses. Instead, shift your goal from persuading them to understanding them <Citation id="6" index={6} source="Communication Studies" year="2019" tier={1} />.
+          When you're gridlocked, the first step is to stop trying to "win" the argument. Winning means your partner loses---and when your partner loses, the relationship loses. Instead, shift your goal from persuading them to understanding them <Citation id="6" index={6} source="Communication Studies" year="2019" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1682,7 +1682,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Look for overlap and shared values',
               description: (
                 <p>
-                  Often, both people want similar things at a deeper level. You might both value 'security' but define it differently—one through financial savings, the other through stable relationships. Finding shared values creates a foundation for compromise.
+                  Often, both people want similar things at a deeper level. You might both value 'security' but define it differently---one through financial savings, the other through stable relationships. Finding shared values creates a foundation for compromise.
                 </p>
               ),
             },
@@ -1690,7 +1690,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: `Honor both dreams, even if you can't solve the conflict yet`,
               description: (
                 <p>
-                  Sometimes understanding is enough. You might not find a solution today, but knowing what your partner is protecting changes how you approach the disagreement. It's no longer 'you vs. me"—it's "us vs. the problem."
+                  Sometimes understanding is enough. You might not find a solution today, but knowing what your partner is protecting changes how you approach the disagreement. It's no longer 'you vs. me"---it's "us vs. the problem."
                 </p>
               ),
             },
@@ -1701,7 +1701,7 @@ export const conflictRepairArticlesA: Article[] = [
           Collaborative Problem-Solving Strategies
         </h2>
         <p className="mb-6">
-          Once you understand the dreams beneath the positions, you can move into creative problem-solving. This isn't about splitting the difference—it's about finding solutions that honor both people's core needs <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
+          Once you understand the dreams beneath the positions, you can move into creative problem-solving. This isn't about splitting the difference---it's about finding solutions that honor both people's core needs <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1742,7 +1742,7 @@ export const conflictRepairArticlesA: Article[] = [
           4. Both/And Instead of Either/Or
         </h3>
         <p className="mb-6">
-          Cognitive flexibility—the ability to see multiple solutions—is strongly associated with successful conflict resolution <Citation id="5" index={5} source="Cognitive Therapy and Research" year="2020" tier={1} />. Challenge the assumption that only one person's preference can be honored.
+          Cognitive flexibility---the ability to see multiple solutions---is strongly associated with successful conflict resolution <Citation id="5" index={5} source="Cognitive Therapy and Research" year="2020" tier={1} />. Challenge the assumption that only one person's preference can be honored.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1755,7 +1755,7 @@ export const conflictRepairArticlesA: Article[] = [
           When No Compromise Exists
         </h2>
         <p className="mb-6">
-          Sometimes, there is no middle ground. One person wants children; the other doesn't. One person needs to live near aging parents; the other has a career opportunity across the country. These conflicts can't be solved through negotiation—they require a different approach.
+          Sometimes, there is no middle ground. One person wants children; the other doesn't. One person needs to live near aging parents; the other has a career opportunity across the country. These conflicts can't be solved through negotiation---they require a different approach.
         </p>
 
         <ArticleAccordion
@@ -1766,7 +1766,7 @@ export const conflictRepairArticlesA: Article[] = [
               title: 'Accept the perpetual nature of the conflict',
               content: (
                 <p>
-                  Some conflicts will never be 'solved." The goal shifts from resolution to management. Gottman's research shows that happy couples with perpetual problems don't make them disappear—they learn to discuss them without damaging the relationship <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />.
+                  Some conflicts will never be 'solved." The goal shifts from resolution to management. Gottman's research shows that happy couples with perpetual problems don't make them disappear---they learn to discuss them without damaging the relationship <Citation id="1" index={1} source="Journal of Marriage and Family" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -1851,7 +1851,7 @@ export const conflictRepairArticlesA: Article[] = [
           When to Bring in a Third Party
         </h2>
         <p className="mb-6">
-          If you've tried these strategies and remain gridlocked, a couples therapist can help. A skilled therapist doesn't take sides—they help both people articulate their dreams, identify shared values, and find creative solutions neither of you saw alone.
+          If you've tried these strategies and remain gridlocked, a couples therapist can help. A skilled therapist doesn't take sides---they help both people articulate their dreams, identify shared values, and find creative solutions neither of you saw alone.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1868,7 +1868,7 @@ export const conflictRepairArticlesA: Article[] = [
         </ArticleCallout>
 
         <QuoteBlock
-          quote="The goal of perpetual problem dialogue isn't to solve the problem. It's to move from gridlock to dialogue—from feeling judged and rejected to feeling understood and accepted, even though you still disagree."
+          quote="The goal of perpetual problem dialogue isn't to solve the problem. It's to move from gridlock to dialogue---from feeling judged and rejected to feeling understood and accepted, even though you still disagree."
           attribution="Dr. John Gottman"
           role="Relationship Researcher"
           source="The Seven Principles for Making Marriage Work"
@@ -1877,7 +1877,7 @@ export const conflictRepairArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Not all conflicts can be resolved, and that's okay. The strongest relationships aren't those without disagreement—they're the ones where both people can hold their truth, honor their partner's truth, and remain connected despite the difference. When neither person wants to back down, the path forward isn't about changing your mind. It's about expanding your heart to hold both perspectives at once.
+            Not all conflicts can be resolved, and that's okay. The strongest relationships aren't those without disagreement---they're the ones where both people can hold their truth, honor their partner's truth, and remain connected despite the difference. When neither person wants to back down, the path forward isn't about changing your mind. It's about expanding your heart to hold both perspectives at once.
           </p>
         </ArticleCallout>
       </>

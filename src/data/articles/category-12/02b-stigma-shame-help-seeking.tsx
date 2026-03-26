@@ -87,10 +87,10 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "That project is so OCD.", "My boss is bipolar.", "This weather is schizophrenic.", "I'm so depressed about missing that concert." These casual uses of mental health language trivialize real conditions and reinforce stigma. Words matter—they shape how we think about mental illness, how people with mental health conditions see themselves, and whether people seek help.
+            "That project is so OCD.", "My boss is bipolar.", "This weather is schizophrenic.", "I'm so depressed about missing that concert." These casual uses of mental health language trivialize real conditions and reinforce stigma. Words matter---they shape how we think about mental illness, how people with mental health conditions see themselves, and whether people seek help.
           </p>
           <p className="mb-6">
-            Language is not just a reflection of attitudes—it actively constructs them <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. Changing how we talk about mental health is a powerful tool for reducing stigma and creating a more compassionate society.
+            Language is not just a reflection of attitudes---it actively constructs them <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. Changing how we talk about mental health is a powerful tool for reducing stigma and creating a more compassionate society.
           </p>
         </div>
 
@@ -136,7 +136,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning" title="Casual Misuse of Clinical Terms">
-          <p>Using clinical diagnoses casually ("I'm so OCD about organizing") trivializes real conditions and perpetuates misunderstanding. OCD is not perfectionism—it is intrusive thoughts and compulsive behaviors that cause severe distress <Citation id="4" index={4} source="Journal of Mental Health" year="2021" tier={1} />.</p>
+          <p>Using clinical diagnoses casually ("I'm so OCD about organizing") trivializes real conditions and perpetuates misunderstanding. OCD is not perfectionism---it is intrusive thoughts and compulsive behaviors that cause severe distress <Citation id="4" index={4} source="Journal of Mental Health" year="2021" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="person-first-language" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -172,7 +172,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Suicide Language: Words That Save Lives
         </h2>
         <p className="mb-6">
-          Language around suicide is particularly critical—media reporting guidelines exist because language influences suicide contagion <Citation id="6" index={6} source="American Foundation for Suicide Prevention" year="2023" tier={3} />.
+          Language around suicide is particularly critical---media reporting guidelines exist because language influences suicide contagion <Citation id="6" index={6} source="American Foundation for Suicide Prevention" year="2023" tier={3} />.
         </p>
 
         <BeforeAfter
@@ -225,7 +225,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
             Minimizes clinical anxiety disorder by equating it with normal worry
           </li>
           <li>
-            <strong>"I could never take medication—I prefer natural solutions."</strong><br />
+            <strong>"I could never take medication---I prefer natural solutions."</strong><br />
             Stigmatizes psychiatric medication as inferior or shameful
           </li>
           <li>
@@ -267,7 +267,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>Report facts, not speculation about mental health</li>
           <li>Consult mental health experts for context</li>
           <li>Include information about help-seeking and resources</li>
-          <li>Show diverse portrayals—recovery, treatment working, ordinary life</li>
+          <li>Show diverse portrayals---recovery, treatment working, ordinary life</li>
           <li>Follow reporting guidelines for suicide and mental health crises</li>
         </ul>
 
@@ -292,7 +292,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
             },
             {
               title: '4. Gently Educate Others',
-              description: <p>When you hear stigmatizing language, offer an alternative: "I've learned it's more respectful to say "person with mental illness.'' Avoid shaming—education works better than callouts.</p>,
+              description: <p>When you hear stigmatizing language, offer an alternative: "I've learned it's more respectful to say "person with mental illness.'' Avoid shaming---education works better than callouts.</p>,
             },
             {
               title: '5. Advocate for Systemic Change',
@@ -329,14 +329,14 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Respectful language is particularly important:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>In healthcare settings—affects diagnosis, treatment relationships, and patient dignity</li>
-          <li>In workplaces—creates psychologically safe environments for disclosure</li>
-          <li>In schools—reduces bullying and supports student mental health</li>
-          <li>In media—shapes public attitudes and policy support</li>
-          <li>In personal relationships—validates loved ones" experiences</li>
+          <li>In healthcare settings---affects diagnosis, treatment relationships, and patient dignity</li>
+          <li>In workplaces---creates psychologically safe environments for disclosure</li>
+          <li>In schools---reduces bullying and supports student mental health</li>
+          <li>In media---shapes public attitudes and policy support</li>
+          <li>In personal relationships---validates loved ones" experiences</li>
         </ul>
         <p className="mb-6">
-          Changing language is not "political correctness"—it is basic respect. Words have power to harm or heal. Choose healing.
+          Changing language is not "political correctness"---it is basic respect. Words have power to harm or heal. Choose healing.
         </p>
       </>
     ),
@@ -345,7 +345,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     id: catId(17),
     slug: 'anti-stigma-campaigns-what-works',
     title: "Anti-Stigma Campaigns: What Works and What Doesn't According to Research",
-    description: "Decades of anti-stigma campaigns offer lessons about what actually reduces mental health stigma at scale—and what falls flat.",
+    description: "Decades of anti-stigma campaigns offer lessons about what actually reduces mental health stigma at scale---and what falls flat.",
     image: "/images/articles/cat12/cover-017.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
     readTime: 8,
@@ -434,7 +434,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
             "It's okay to not be okay.", "End the stigma.", "Mental health matters." For decades, campaigns have tried to change public attitudes about mental illness. Some have worked. Many have not. The difference lies not in good intentions, but in understanding the psychology of stigma and using evidence-based strategies.
           </p>
           <p className="mb-6">
-            This article examines what research reveals about effective anti-stigma campaigns—and the costly mistakes that well-meaning efforts continue to make <Citation id="1" index={1} source="World Psychiatry" year="2022" tier={1} />.
+            This article examines what research reveals about effective anti-stigma campaigns---and the costly mistakes that well-meaning efforts continue to make <Citation id="1" index={1} source="World Psychiatry" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -609,7 +609,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          <strong>Most helpful:</strong> When celebrities share ongoing management, treatment that worked, and resources—not just disclosure of diagnosis or crisis.
+          <strong>Most helpful:</strong> When celebrities share ongoing management, treatment that worked, and resources---not just disclosure of diagnosis or crisis.
         </p>
 
         <h2 id="social-media-campaigns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -677,7 +677,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li><strong>Focus on hope and recovery.</strong> Show people living well with mental illness, not just crisis and tragedy.</li>
           <li><strong>Target specific audiences.</strong> Generic campaigns are less effective than targeted interventions (healthcare providers, employers, youth).</li>
           <li><strong>Sustain efforts.</strong> One-time events do not create lasting change. Long-term commitment is essential.</li>
-          <li><strong>Measure outcomes.</strong> Track attitude changes, help-seeking behavior, and policy impacts—not just awareness or reach.</li>
+          <li><strong>Measure outcomes.</strong> Track attitude changes, help-seeking behavior, and policy impacts---not just awareness or reach.</li>
           <li><strong>Address intersectionality.</strong> Mental health stigma intersects with racism, sexism, homophobia, and other forms of oppression.</li>
           <li><strong>Change systems, not just attitudes.</strong> Policy and institutional change create structural support for attitude change.</li>
         </ol>
@@ -786,7 +786,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A Gen Z college student casually mentions seeing their therapist on Instagram. Their Baby Boomer grandparent is horrified—in their generation, mental health treatment was shameful and hidden. A Millennial discusses burnout openly at work. Their Gen X manager, who learned to suffer in silence, does not know how to respond. These generational divides in mental health attitudes create misunderstanding, conflict, and missed opportunities for support.
+            A Gen Z college student casually mentions seeing their therapist on Instagram. Their Baby Boomer grandparent is horrified---in their generation, mental health treatment was shameful and hidden. A Millennial discusses burnout openly at work. Their Gen X manager, who learned to suffer in silence, does not know how to respond. These generational divides in mental health attitudes create misunderstanding, conflict, and missed opportunities for support.
           </p>
           <p className="mb-6">
             Each generation grew up in a different cultural context around mental health, shaping profoundly different attitudes, language, and willingness to seek help <Citation id="1" index={1} source="American Journal of Public Health" year="2022" tier={1} />. Understanding these differences is essential for families, workplaces, and communities.
@@ -839,7 +839,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         <ArticleCallout variant="tip" title="Bridging the Gap with Boomers">
           <p>When talking to older adults about mental health:</p>
           <ul className="list-disc pl-5 space-y-2 mt-3">
-            <li>Acknowledge their generation's context—they were taught silence</li>
+            <li>Acknowledge their generation's context---they were taught silence</li>
             <li>Frame therapy as strength or investment, not weakness</li>
             <li>Use medical language ("treatment,", "condition") rather than emotional language</li>
             <li>Share success stories of people they respect who sought help</li>
@@ -850,7 +850,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Gen X (Born 1965-1980): The Skeptical Middle
         </h2>
         <p className="mb-6">
-          Gen X came of age during deinstitutionalization and the rise of outpatient therapy, but stigma remained high. They are the "latchkey kid" generation—raised to be independent and self-sufficient.
+          Gen X came of age during deinstitutionalization and the rise of outpatient therapy, but stigma remained high. They are the "latchkey kid" generation---raised to be independent and self-sufficient.
         </p>
 
         <p className="mb-6">
@@ -867,7 +867,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <strong>Common attitudes:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Pragmatic about mental health—will seek help if absolutely necessary</li>
+          <li>Pragmatic about mental health---will seek help if absolutely necessary</li>
           <li>Value self-reliance but less rigid than Boomers</li>
           <li>Skeptical of therapy culture but recognize its utility</li>
           <li>May struggle to articulate emotions (not taught emotional vocabulary)</li>
@@ -885,7 +885,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <strong>Cultural context:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Prozac Nation era—psychiatric medication became common</li>
+          <li>Prozac Nation era---psychiatric medication became common</li>
           <li>School shootings and 9/11 creating collective trauma</li>
           <li>Economic precarity (2008 recession, student debt, housing crisis)</li>
           <li>Rise of internet and early social media</li>
@@ -997,7 +997,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <strong>If you are younger, talking to older family:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Recognize their generation faced more stigma—honor their experience</li>
+          <li>Recognize their generation faced more stigma---honor their experience</li>
           <li>Avoid judgment about their attitudes; explain your perspective with patience</li>
           <li>Use language that resonates (strength, treatment, health) rather than triggering words</li>
           <li>Share research and success stories rather than demanding acceptance</li>
@@ -1037,7 +1037,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Focus on shared values (family, health, resilience) rather than generational divides</li>
-          <li>Acknowledge that all approaches have wisdom—self-reliance AND help-seeking both matter</li>
+          <li>Acknowledge that all approaches have wisdom---self-reliance AND help-seeking both matter</li>
           <li>Use intergenerational storytelling to build empathy</li>
           <li>Celebrate progress while respecting history</li>
         </ul>
@@ -1056,7 +1056,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>Substance use to cope with emotions</li>
         </ul>
         <p className="mb-6">
-          Mental health care has evolved dramatically over the past 80 years. Every generation contributes to reducing stigma. The work continues—and it requires understanding across age, not judgment.
+          Mental health care has evolved dramatically over the past 80 years. Every generation contributes to reducing stigma. The work continues---and it requires understanding across age, not judgment.
         </p>
       </>
     ),
@@ -1065,7 +1065,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     id: catId(19),
     slug: 'celebrity-mental-health-disclosure',
     title: 'Celebrity Mental Health Disclosure: Does It Help or Hurt the Cause?',
-    description: 'When celebrities share mental health struggles, the effects are complex—sometimes helpful, sometimes harmful. What does the research say?',
+    description: 'When celebrities share mental health struggles, the effects are complex---sometimes helpful, sometimes harmful. What does the research say?',
     image: "/images/articles/cat12/cover-019.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
     readTime: 6,
@@ -1135,7 +1135,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When Demi Lovato disclosed bipolar disorder, searches for mental health resources spiked 500%. When Robin Williams died by suicide, suicide rates increased for weeks afterward. When Simone Biles withdrew from Olympics competition to protect her mental health, the response was both praise and backlash. Celebrity mental health disclosure is powerful—but the effects are complex and sometimes contradictory.
+            When Demi Lovato disclosed bipolar disorder, searches for mental health resources spiked 500%. When Robin Williams died by suicide, suicide rates increased for weeks afterward. When Simone Biles withdrew from Olympics competition to protect her mental health, the response was both praise and backlash. Celebrity mental health disclosure is powerful---but the effects are complex and sometimes contradictory.
           </p>
           <p className="mb-6">
             Research reveals that celebrity disclosure can both reduce stigma and cause harm, depending on how it is framed, who discloses, and how media covers it <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />. Understanding these dynamics is essential for maximizing benefits and minimizing risks.
@@ -1191,7 +1191,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <strong>1. Suicide contagion.</strong>
         </p>
         <p className="mb-6">
-          When celebrities die by suicide, research documents increases in suicide rates in the following weeks—a phenomenon called suicide contagion or the Werther effect <Citation id="3" index={3} source="Journal of the American Medical Association" year="2020" tier={1} />. After Robin Williams" death, suicide rates increased 10% in the months following. Sensationalized media coverage amplifies this effect.
+          When celebrities die by suicide, research documents increases in suicide rates in the following weeks---a phenomenon called suicide contagion or the Werther effect <Citation id="3" index={3} source="Journal of the American Medical Association" year="2020" tier={1} />. After Robin Williams" death, suicide rates increased 10% in the months following. Sensationalized media coverage amplifies this effect.
         </p>
 
         <ArticleCallout variant="warning" title="Suicide Contagion Is Real">
@@ -1258,7 +1258,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Parasocial Relationships and Mental Health
         </h2>
         <p className="mb-6">
-          Parasocial relationships—one-sided emotional connections fans feel toward celebrities—amplify the effects of celebrity mental health disclosure <Citation id="5" index={5} source="Psychology of Popular Media" year="2022" tier={1} />.
+          Parasocial relationships---one-sided emotional connections fans feel toward celebrities---amplify the effects of celebrity mental health disclosure <Citation id="5" index={5} source="Psychology of Popular Media" year="2022" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1313,7 +1313,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <strong>The Oprah Effect (1990s-present)</strong>
         </p>
         <p className="mb-6">
-          Oprah Winfrey's open discussions of childhood trauma, therapy, and mental health normalized help-seeking for millions <Citation id="7" index={7} source="American Journal of Public Health" year="2021" tier={1} />. Her platform consistently emphasized treatment, recovery, and resources—not just disclosure.
+          Oprah Winfrey's open discussions of childhood trauma, therapy, and mental health normalized help-seeking for millions <Citation id="7" index={7} source="American Journal of Public Health" year="2021" tier={1} />. Her platform consistently emphasized treatment, recovery, and resources---not just disclosure.
         </p>
 
         <p className="mb-6">
@@ -1357,7 +1357,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You are not obligated to disclose just because celebrities do</li>
-          <li>Your recovery path will differ from theirs—that is normal</li>
+          <li>Your recovery path will differ from theirs---that is normal</li>
           <li>Do not compare your progress to theirs (different circumstances)</li>
           <li>Seek support from peers and professionals, not just celebrity role models</li>
         </ul>
@@ -1367,9 +1367,9 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Limit media exposure to coverage of the death</li>
-          <li>Reach out for support—grief for someone you never met is valid</li>
+          <li>Reach out for support---grief for someone you never met is valid</li>
           <li>If you experience suicidal thoughts, call 988 immediately</li>
-          <li>Remember that suicide is not inevitable for people with mental illness—treatment works</li>
+          <li>Remember that suicide is not inevitable for people with mental illness---treatment works</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1385,7 +1385,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>You feel less alone knowing others struggle similarly</li>
         </ul>
         <p className="mb-6">
-          Celebrity disclosure can open doors—but professional help is what walks you through them. Use their stories as inspiration to seek support, not as a substitute for treatment.
+          Celebrity disclosure can open doors---but professional help is what walks you through them. Use their stories as inspiration to seek support, not as a substitute for treatment.
         </p>
       </>
     ),
@@ -1394,7 +1394,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     id: catId(20),
     slug: 'how-to-be-mental-health-ally',
     title: 'How to Be a Mental Health Ally: Practical Actions Against Stigma',
-    description: 'Wanting to support mental health is not enough—being an effective ally requires specific actions. Learn what helps and what harms.',
+    description: 'Wanting to support mental health is not enough---being an effective ally requires specific actions. Learn what helps and what harms.',
     image: "/images/articles/cat12/cover-020.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
     readTime: 7,
@@ -1472,7 +1472,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Let me know if you need anything" is well-intentioned but rarely helpful. "Have you tried yoga?" can be dismissive. "You don't seem depressed' invalidates invisible illness. Being a mental health ally requires more than good intentions—it requires understanding what truly helps and committing to specific, ongoing actions.
+            "Let me know if you need anything" is well-intentioned but rarely helpful. "Have you tried yoga?" can be dismissive. "You don't seem depressed' invalidates invisible illness. Being a mental health ally requires more than good intentions---it requires understanding what truly helps and committing to specific, ongoing actions.
           </p>
           <p className="mb-6">
             Mental health allyship means actively supporting people with mental health conditions, challenging stigma, and working to create systems that prioritize mental wellbeing <Citation id="1" index={1} source="Psychiatric Services" year="2022" tier={1} />. This article provides a practical guide to effective allyship.
@@ -1495,7 +1495,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="Allyship Is a Verb, Not a Noun">
-          <p>You do not become an ally by declaration—you practice allyship through consistent action. Being called an ally is something others decide, not something you claim for yourself.</p>
+          <p>You do not become an ally by declaration---you practice allyship through consistent action. Being called an ally is something others decide, not something you claim for yourself.</p>
         </ArticleCallout>
 
         <h2 id="supporting-individuals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1512,7 +1512,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
               title: '1. Listen Without Fixing',
               description: (
                 <div>
-                  <p className="mb-3">Most people do not want advice—they want to be heard. Resist the urge to solve, fix, or offer unsolicited suggestions. Just listen.</p>
+                  <p className="mb-3">Most people do not want advice---they want to be heard. Resist the urge to solve, fix, or offer unsolicited suggestions. Just listen.</p>
                   <p><strong>Say:</strong> "I'm here to listen' | <strong>Not:</strong> "Have you tried...?"</p>
                 </div>
               ),
@@ -1531,7 +1531,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">"Let me know if you need anything" is vague. Offer specific assistance that removes barriers.</p>
-                  <p><strong>Say:</strong> "I'm bringing dinner Thursday—what do you like?" | <strong>Not:</strong> "Call me if you need help"</p>
+                  <p><strong>Say:</strong> "I'm bringing dinner Thursday---what do you like?" | <strong>Not:</strong> "Call me if you need help"</p>
                 </div>
               ),
             },
@@ -1604,7 +1604,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         <ArticleCallout variant="warning" title="If Someone Is Suicidal">
           <p><strong>Do:</strong></p>
           <ul className="list-disc pl-5 space-y-2 mt-3 mb-4">
-            <li>Take it seriously—never dismiss or minimize</li>
+            <li>Take it seriously---never dismiss or minimize</li>
             <li>Ask directly: "Are you thinking about suicide?" (asking does not increase risk)</li>
             <li>Listen without judgment</li>
             <li>Ask if they have a plan and means (higher risk if yes)</li>
@@ -1637,9 +1637,9 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <strong>When you hear stigmatizing language:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"That's so OCD' → "I prefer "organized' or 'particular'—OCD is a serious condition'</li>
+          <li>"That's so OCD' → "I prefer "organized' or 'particular'---OCD is a serious condition'</li>
           <li>"He's crazy' → "That behavior seems unusual, but let's not use mental health terms casually"</li>
-          <li>"She's a schizophrenic' → "She's a person with schizophrenia—person-first language respects her humanity"</li>
+          <li>"She's a schizophrenic' → "She's a person with schizophrenia---person-first language respects her humanity"</li>
         </ul>
 
         <p className="mb-6">
@@ -1648,7 +1648,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Call it out in the moment when safe</li>
           <li>Report discrimination to HR, management, or authorities</li>
-          <li>Support the person affected—ask what they need</li>
+          <li>Support the person affected---ask what they need</li>
           <li>Document incidents to establish patterns</li>
         </ul>
 
@@ -1701,7 +1701,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Allyship is not self-defined—work and efforts must be recognized by those you seek to ally with. Allyship is actively disarming systems of oppression."
+          quote="Allyship is not self-defined---work and efforts must be recognized by those you seek to ally with. Allyship is actively disarming systems of oppression."
           attribution="Indigenous Action Media"
           role="Collective"
           source="Accomplices Not Allies"
@@ -1717,8 +1717,8 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-3">
           <li><strong>Educate yourself.</strong> Read books, articles, and first-person accounts from people with mental illness. Follow mental health advocates on social media.</li>
           <li><strong>Share your own experiences.</strong> If you have used therapy or struggled with mental health, share that (when appropriate) to normalize help-seeking.</li>
-          <li><strong>Check in on people regularly.</strong> Not just when they seem in crisis—consistent connection prevents isolation.</li>
-          <li><strong>Offer practical help.</strong> Childcare, meals, rides to appointments, help with paperwork—concrete support removes barriers.</li>
+          <li><strong>Check in on people regularly.</strong> Not just when they seem in crisis---consistent connection prevents isolation.</li>
+          <li><strong>Offer practical help.</strong> Childcare, meals, rides to appointments, help with paperwork---concrete support removes barriers.</li>
           <li><strong>Challenge stigmatizing language.</strong> Do it kindly but consistently.</li>
           <li><strong>Amplify voices of people with lived experience.</strong> Share their stories, support their work, follow their leadership.</li>
           <li><strong>Advocate for policy change.</strong> Contact representatives about mental health funding, write letters to the editor, vote.</li>
@@ -1733,10 +1733,10 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Set boundaries—you cannot be available 24/7</li>
+          <li>Set boundaries---you cannot be available 24/7</li>
           <li>Seek your own therapy or support groups for family/friends of people with mental illness</li>
           <li>Connect with other allies to share strategies and vent frustrations</li>
-          <li>Recognize that you cannot "fix" someone—recovery is their journey</li>
+          <li>Recognize that you cannot "fix" someone---recovery is their journey</li>
           <li>Practice self-compassion when you make mistakes</li>
         </ul>
 
@@ -1772,7 +1772,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>Keep showing up</li>
         </ul>
         <p className="mb-6">
-          Mental health allyship is not about perfection—it is about commitment to doing better, learning continuously, and taking action against stigma and injustice. The mental health community does not need saviors. It needs accomplices willing to fight alongside them for change.
+          Mental health allyship is not about perfection---it is about commitment to doing better, learning continuously, and taking action against stigma and injustice. The mental health community does not need saviors. It needs accomplices willing to fight alongside them for change.
         </p>
       </>
     ),

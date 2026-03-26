@@ -90,7 +90,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're sitting in a clinic, trying to explain how you're feeling. But the words don't translate. The therapist doesn't understand why you live with your extended family, why you can't 'just set boundaries' with your parents, or why leaving your community feels like betrayal. You're told to prioritize yourself—but in your culture, family comes first. No one speaks your language, literally or figuratively.
+            You're sitting in a clinic, trying to explain how you're feeling. But the words don't translate. The therapist doesn't understand why you live with your extended family, why you can't 'just set boundaries' with your parents, or why leaving your community feels like betrayal. You're told to prioritize yourself---but in your culture, family comes first. No one speaks your language, literally or figuratively.
           </p>
           <p className="mb-6">
             Hispanic and Latino Americans face mental health challenges shaped by language barriers, immigration stress, economic inequality, and cultural values that often clash with mainstream mental health approaches <Citation id="1" index={1} source="NAMI" year="2022" tier={3} />. Understanding these factors is essential for finding care that honors your full identity.
@@ -184,7 +184,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Undocumented immigrants are at higher risk for anxiety, depression, and PTSD due to chronic fear and marginalization. Despite this, they face the greatest barriers to care—lack of insurance, fear of ICE, and limited legal protections. Community-based organizations and immigrant-friendly health centers may offer safer, more accessible support.
+            Undocumented immigrants are at higher risk for anxiety, depression, and PTSD due to chronic fear and marginalization. Despite this, they face the greatest barriers to care---lack of insurance, fear of ICE, and limited legal protections. Community-based organizations and immigrant-friendly health centers may offer safer, more accessible support.
           </p>
         </ArticleCallout>
 
@@ -204,7 +204,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Family loyalty, interdependence, and collective well-being are prioritized over individual needs. This can be a source of strength—family support protects against mental illness. But it can also create conflict when mainstream therapy encourages "setting boundaries" or prioritizing self-care over family obligations.
+                    Family loyalty, interdependence, and collective well-being are prioritized over individual needs. This can be a source of strength---family support protects against mental illness. But it can also create conflict when mainstream therapy encourages "setting boundaries" or prioritizing self-care over family obligations.
                   </p>
                   <p className="mb-4"><strong>How it shows up in mental health:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
@@ -221,7 +221,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Respect for elders and authority figures is deeply valued. This can make it difficult to question a therapist, advocate for your needs, or challenge family members" advice—even when it's harmful.
+                    Respect for elders and authority figures is deeply valued. This can make it difficult to question a therapist, advocate for your needs, or challenge family members" advice---even when it's harmful.
                   </p>
                   <p className="mb-4"><strong>How it shows up in mental health:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
@@ -238,7 +238,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Traditional gender roles—women as self-sacrificing caregivers (marianismo), men as strong providers (machismo)—can prevent both women and men from seeking help. Women may feel they must endure suffering silently; men may see therapy as a threat to masculinity.
+                    Traditional gender roles---women as self-sacrificing caregivers (marianismo), men as strong providers (machismo)---can prevent both women and men from seeking help. Women may feel they must endure suffering silently; men may see therapy as a threat to masculinity.
                   </p>
                   <p className="mb-4"><strong>How it shows up in mental health:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
@@ -271,7 +271,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="info" title="Therapy Can Honor Cultural Values">
           <p>
-            A culturally competent therapist won't ask you to abandon your values—they'll work within them. Family therapy, involving loved ones in treatment, and integrating faith are all evidence-based approaches that respect Latino cultural contexts.
+            A culturally competent therapist won't ask you to abandon your values---they'll work within them. Family therapy, involving loved ones in treatment, and integrating faith are all evidence-based approaches that respect Latino cultural contexts.
           </p>
         </ArticleCallout>
 
@@ -282,9 +282,9 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           In many Latino communities, mental health is still taboo. Common beliefs include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"<em>La ropa sucia se lava en casa</em>" (Dirty laundry is washed at home—family problems stay private)</li>
+          <li>"<em>La ropa sucia se lava en casa</em>" (Dirty laundry is washed at home---family problems stay private)</li>
           <li>"<em>Solo los locos van al psiquiatra</em>" (Only crazy people go to the psychiatrist)</li>
-          <li>"<em>Hay que ser fuerte</em>" (You have to be strong—suffering is expected)</li>
+          <li>"<em>Hay que ser fuerte</em>" (You have to be strong---suffering is expected)</li>
           <li>Mental illness brings shame on the family and affects marriage prospects</li>
         </ul>
         <p className="mb-6">
@@ -326,7 +326,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: 'Involve Family (If You Choose)',
               description: (
                 <p>
-                  If family support is important to you, ask your therapist about family therapy or sessions where loved ones can participate in your care—this honors familismo while still getting professional help.
+                  If family support is important to you, ask your therapist about family therapy or sessions where loved ones can participate in your care---this honors familismo while still getting professional help.
                 </p>
               ),
             },
@@ -358,7 +358,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>If you're in crisis:</strong> Call or text 988 (Suicide & Crisis Lifeline) and press 2 for Spanish. Your immigration status does not matter—crisis services are confidential and available to everyone.
+            <strong>If you're in crisis:</strong> Call or text 988 (Suicide & Crisis Lifeline) and press 2 for Spanish. Your immigration status does not matter---crisis services are confidential and available to everyone.
           </p>
         </ArticleCallout>
       </>
@@ -442,7 +442,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "You're Asian—you're supposed to be good at this.", "At least you don't face real racism.", "You're so lucky your culture values education and hard work." These statements, often meant as compliments, are pieces of the model minority myth—a stereotype that paints Asian Americans as universally successful, resilient, and problem-free.
+            "You're Asian---you're supposed to be good at this.", "At least you don't face real racism.", "You're so lucky your culture values education and hard work." These statements, often meant as compliments, are pieces of the model minority myth---a stereotype that paints Asian Americans as universally successful, resilient, and problem-free.
           </p>
           <p className="mb-6">
             But behind the myth is a hidden crisis. Asian Americans have the lowest rates of mental health service use of any racial group, despite experiencing depression, anxiety, and trauma at rates comparable to others <Citation id="2" index={2} source="American Journal of Orthopsychiatry" year="2018" tier={1} />. The model minority myth erases struggles, perpetuates stigma, and leaves many suffering in silence.
@@ -453,12 +453,12 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           What Is the Model Minority Myth?
         </h2>
         <p className="mb-6">
-          The model minority myth is the stereotype that Asian Americans are universally high-achieving, economically successful, and culturally superior to other racial minorities <Citation id="1" index={1} source="Asian American Journal of Psychology" year="2019" tier={1} />. It portrays Asians as hardworking, obedient, and self-sufficient—therefore not in need of support or resources.
+          The model minority myth is the stereotype that Asian Americans are universally high-achieving, economically successful, and culturally superior to other racial minorities <Citation id="1" index={1} source="Asian American Journal of Psychology" year="2019" tier={1} />. It portrays Asians as hardworking, obedient, and self-sufficient---therefore not in need of support or resources.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Origins of the Myth">
           <p>
-            The model minority myth was weaponized in the 1960s during the Civil Rights Movement to divide communities of color. By holding up Asian Americans as "proof" that racism doesn't exist ("If they can succeed, why can't you?"), the myth was used to deny systemic racism and undermine Black and Latino advocacy for equity. It has never been about celebrating Asian Americans—it's been about controlling the narrative around race.
+            The model minority myth was weaponized in the 1960s during the Civil Rights Movement to divide communities of color. By holding up Asian Americans as "proof" that racism doesn't exist ("If they can succeed, why can't you?"), the myth was used to deny systemic racism and undermine Black and Latino advocacy for equity. It has never been about celebrating Asian Americans---it's been about controlling the narrative around race.
           </p>
         </ArticleCallout>
 
@@ -517,7 +517,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           2. Somatization
         </h3>
         <p className="mb-6">
-          Psychological distress often manifests as physical symptoms—headaches, stomachaches, fatigue—rather than emotional language like "I feel depressed" <Citation id="4" index={4} source="Culture, Medicine, and Psychiatry" year="2017" tier={1} />. This is not avoidance—it's a culturally shaped way of experiencing and expressing distress. However, it can lead to misdiagnosis when providers don't understand this pattern.
+          Psychological distress often manifests as physical symptoms---headaches, stomachaches, fatigue---rather than emotional language like "I feel depressed" <Citation id="4" index={4} source="Culture, Medicine, and Psychiatry" year="2017" tier={1} />. This is not avoidance---it's a culturally shaped way of experiencing and expressing distress. However, it can lead to misdiagnosis when providers don't understand this pattern.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -583,13 +583,13 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           "Asian American" encompasses over 50 ethnic groups with vastly different languages, histories, and experiences:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>East Asians</strong>: Chinese, Japanese, Korean—often most associated with the model minority myth</li>
-          <li><strong>Southeast Asians</strong>: Vietnamese, Cambodian, Hmong, Laotian—many are refugees with high poverty rates and trauma from war</li>
-          <li><strong>South Asians</strong>: Indian, Pakistani, Bangladeshi, Sri Lankan—face unique pressures around caste, arranged marriage, and anti-Muslim bias</li>
+          <li><strong>East Asians</strong>: Chinese, Japanese, Korean---often most associated with the model minority myth</li>
+          <li><strong>Southeast Asians</strong>: Vietnamese, Cambodian, Hmong, Laotian---many are refugees with high poverty rates and trauma from war</li>
+          <li><strong>South Asians</strong>: Indian, Pakistani, Bangladeshi, Sri Lankan---face unique pressures around caste, arranged marriage, and anti-Muslim bias</li>
           <li><strong>Pacific Islanders</strong>: Often grouped with Asians but have distinct identities and face high rates of health disparities</li>
         </ul>
         <p className="mb-6">
-          Southeast Asian and Pacific Islander communities experience higher poverty, lower educational attainment, and greater mental health disparities—but these realities are erased by the model minority myth's focus on East Asian "success."
+          Southeast Asian and Pacific Islander communities experience higher poverty, lower educational attainment, and greater mental health disparities---but these realities are erased by the model minority myth's focus on East Asian "success."
         </p>
 
         <h2 id="breaking-the-silence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -627,7 +627,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: 'Address Language Needs',
               description: (
                 <p>
-                  If English isn't your first language, seek therapists who speak your language. Mental health concepts are difficult to translate—therapy in your native language may feel more authentic.
+                  If English isn't your first language, seek therapists who speak your language. Mental health concepts are difficult to translate---therapy in your native language may feel more authentic.
                 </p>
               ),
             },
@@ -635,7 +635,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: 'Challenge the Myth Internally',
               description: (
                 <p>
-                  Remind yourself: struggling doesn't make you weak or a failure. Seeking help is not bringing shame—it's taking care of yourself so you can continue supporting those you love.
+                  Remind yourself: struggling doesn't make you weak or a failure. Seeking help is not bringing shame---it's taking care of yourself so you can continue supporting those you love.
                 </p>
               ),
             },
@@ -643,7 +643,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="We're told we're supposed to have it all figured out. That we're not allowed to struggle. But we do struggle—and we deserve support just as much as anyone else."
+          quote="We're told we're supposed to have it all figured out. That we're not allowed to struggle. But we do struggle---and we deserve support just as much as anyone else."
           attribution="Dr. Angela Chen"
           role="Psychologist and founder of the Asian Mental Health Collective"
           variant="large"
@@ -666,7 +666,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>If you're in crisis:</strong> Call or text 988 (Suicide & Crisis Lifeline). You can request a culturally competent counselor. You are not alone, and seeking help is not weakness—it's strength.
+            <strong>If you're in crisis:</strong> Call or text 988 (Suicide & Crisis Lifeline). You can request a culturally competent counselor. You are not alone, and seeking help is not weakness---it's strength.
           </p>
         </ArticleCallout>
       </>
@@ -742,7 +742,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "What are you?", "Where are you from—no, where are you really from?", "You don't look [race].", "You're not [race] enough." If you're multiracial or multicultural, you've likely heard these questions and statements your entire life. You may feel too much of one identity in some spaces, not enough in others, or like you're constantly explaining and defending who you are.
+            "What are you?", "Where are you from---no, where are you really from?", "You don't look [race].", "You're not [race] enough." If you're multiracial or multicultural, you've likely heard these questions and statements your entire life. You may feel too much of one identity in some spaces, not enough in others, or like you're constantly explaining and defending who you are.
           </p>
           <p className="mb-6">
             Navigating multiple racial or cultural identities brings unique mental health challenges <Citation id="1" index={1} source="Journal of Social Issues" year="2018" tier={1} />. From identity questioning to feeling like you belong nowhere, multiracial and multicultural individuals face pressures that monoracial peers rarely experience. But with the right support, this complexity can also be a source of strength, resilience, and expansive belonging.
@@ -757,7 +757,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Multiracial individuals</strong>: People with parents or ancestors of different racial backgrounds (e.g., Black and white, Asian and Latino, Indigenous and multiple other backgrounds)</li>
-          <li><strong>Multicultural individuals</strong>: People raised across multiple cultural contexts—immigrants, children of immigrants, expatriates, or "Third Culture Kids" who grow up in countries different from their parents" origin <Citation id="4" index={4} source="International Journal of Intercultural Relations" year="2017" tier={1} /></li>
+          <li><strong>Multicultural individuals</strong>: People raised across multiple cultural contexts---immigrants, children of immigrants, expatriates, or "Third Culture Kids" who grow up in countries different from their parents" origin <Citation id="4" index={4} source="International Journal of Intercultural Relations" year="2017" tier={1} /></li>
           <li><strong>Transracial adoptees</strong>: People raised by families of a different race or culture</li>
         </ul>
 
@@ -781,12 +781,12 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           2. Not Feeling "Enough" in Any Community
         </h3>
         <p className="mb-6">
-          Multiracial people often face rejection or skepticism from monoracial communities—told they're "not Black enough,", "not Asian enough," or "not really Latino" <Citation id="3" index={3} source="Cultural Diversity and Ethnic Minority Psychology" year="2019" tier={1} />. This can create:
+          Multiracial people often face rejection or skepticism from monoracial communities---told they're "not Black enough,", "not Asian enough," or "not really Latino" <Citation id="3" index={3} source="Cultural Diversity and Ethnic Minority Psychology" year="2019" tier={1} />. This can create:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Chronic sense of not belonging anywhere</li>
           <li>Pressure to "pick a side" or downplay parts of your identity</li>
-          <li>Code-switching exhaustion—shifting how you present depending on who you're with</li>
+          <li>Code-switching exhaustion---shifting how you present depending on who you're with</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -803,7 +803,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
             {
               feature: 'What are you?',
               values: [
-                'You are exotic, confusing, other—not a person, but a puzzle to solve',
+                'You are exotic, confusing, other---not a person, but a puzzle to solve',
                 'Objectification, feeling reduced to your appearance',
               ],
             },
@@ -831,7 +831,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
             {
               feature: 'Denial of racial discrimination',
               values: [
-                "You're lucky—you can pass.", "You're not really a person of color.",
+                "You're lucky---you can pass.", "You're not really a person of color.",
                 'Invalidation of experiences of racism; isolation from racial communities',
               ],
             },
@@ -843,7 +843,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           4. Family Dynamics and Cultural Conflict
         </h3>
         <p className="mb-6">
-          Growing up in a multiracial or multicultural family can bring richness—and tension:
+          Growing up in a multiracial or multicultural family can bring richness---and tension:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Navigating conflicting cultural expectations from different sides of the family</li>
@@ -899,7 +899,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: 'Claim All Parts of Your Identity',
               description: (
                 <p>
-                  You don't have to 'pick a side." Embrace the complexity—your identity can be "both/and" rather than "either/or." Explore each side of your heritage through food, language, history, and community.
+                  You don't have to 'pick a side." Embrace the complexity---your identity can be "both/and" rather than "either/or." Explore each side of your heritage through food, language, history, and community.
                 </p>
               ),
             },
@@ -915,7 +915,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: 'Reject Gatekeeping',
               description: (
                 <p>
-                  No one else gets to define your racial or cultural identity. If someone says you're 'not enough, ' that's their limitation—not yours. Your identity is valid as you experience it.
+                  No one else gets to define your racial or cultural identity. If someone says you're 'not enough, ' that's their limitation---not yours. Your identity is valid as you experience it.
                 </p>
               ),
             },
@@ -940,7 +940,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Research shows that multiracial individuals who achieve identity integration—embracing all parts of themselves without feeling pressured to choose—have higher self-esteem, lower anxiety, and greater life satisfaction <Citation id="5" index={5} source="Journal of Counseling Psychology" year="2021" tier={1} />. Integration, not assimilation, is the path to well-being.
+            Research shows that multiracial individuals who achieve identity integration---embracing all parts of themselves without feeling pressured to choose---have higher self-esteem, lower anxiety, and greater life satisfaction <Citation id="5" index={5} source="Journal of Counseling Psychology" year="2021" tier={1} />. Integration, not assimilation, is the path to well-being.
           </p>
         </ArticleCallout>
 
@@ -969,7 +969,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Your complexity is not a problem to solve—it's a reality to honor. You deserve support that sees and celebrates all of who you are.
+          Your complexity is not a problem to solve---it's a reality to honor. You deserve support that sees and celebrates all of who you are.
         </p>
       </>
     ),
@@ -1044,10 +1044,10 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You walk into class and scan the room. Once again, you're one of the only—or the only—person of color. Your professor mispronounces your name. A classmate asks you to speak for your entire race during a discussion on racism. You're expected to educate, explain, and perform gratitude for 'diversity initiatives' while navigating daily microaggressions, tokenization, and isolation.
+            You walk into class and scan the room. Once again, you're one of the only---or the only---person of color. Your professor mispronounces your name. A classmate asks you to speak for your entire race during a discussion on racism. You're expected to educate, explain, and perform gratitude for 'diversity initiatives' while navigating daily microaggressions, tokenization, and isolation.
           </p>
           <p className="mb-6">
-            Being a student or employee of color in a predominantly white institution (PWI)—whether a university, workplace, or organization—creates unique mental health stressors <Citation id="1" index={1} source="Journal of College Student Development" year="2019" tier={1} />. The toll of navigating these spaces is real, measurable, and often invisible to those who don't experience it.
+            Being a student or employee of color in a predominantly white institution (PWI)---whether a university, workplace, or organization---creates unique mental health stressors <Citation id="1" index={1} source="Journal of College Student Development" year="2019" tier={1} />. The toll of navigating these spaces is real, measurable, and often invisible to those who don't experience it.
           </p>
         </div>
 
@@ -1055,7 +1055,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           What Is a Predominantly White Institution?
         </h2>
         <p className="mb-6">
-          A PWI is any institution—school, university, workplace, organization—where white people make up the majority of students, employees, or members. These institutions were historically built by and for white people, and their structures, norms, and cultures often reflect this.
+          A PWI is any institution---school, university, workplace, organization---where white people make up the majority of students, employees, or members. These institutions were historically built by and for white people, and their structures, norms, and cultures often reflect this.
         </p>
         <p className="mb-6">
           The term originated in higher education to distinguish PWIs from Historically Black Colleges and Universities (HBCUs), Hispanic-Serving Institutions (HSIs), and Tribal Colleges. But the dynamics apply to any predominantly white setting.
@@ -1106,14 +1106,14 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           <li>Feeling hypervisible (every action represents your entire race)</li>
           <li>Pressure to speak for all people of your race in class discussions or meetings</li>
           <li>Tokenization in photos, promotional materials, or diversity committees</li>
-          <li>Isolation—no peers who share your experiences</li>
+          <li>Isolation---no peers who share your experiences</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           3. Imposter Syndrome
         </h3>
         <p className="mb-6">
-          When you're surrounded by messages (explicit or implicit) that you don't belong, it's easy to internalize doubt. Many students and employees of color at PWIs struggle with imposter syndrome—feeling like you only got in because of affirmative action, that you're not as qualified as your peers, or that you'll be 'found out' <Citation id="3" index={3} source="Journal of Counseling Psychology" year="2020" tier={1} />.
+          When you're surrounded by messages (explicit or implicit) that you don't belong, it's easy to internalize doubt. Many students and employees of color at PWIs struggle with imposter syndrome---feeling like you only got in because of affirmative action, that you're not as qualified as your peers, or that you'll be 'found out' <Citation id="3" index={3} source="Journal of Counseling Psychology" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1129,12 +1129,12 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           <li>Being the "diversity face" in marketing materials</li>
         </ul>
         <p className="mb-6">
-          This labor is rarely recognized in tenure decisions, promotions, or workload calculations—yet it's expected and exploited.
+          This labor is rarely recognized in tenure decisions, promotions, or workload calculations---yet it's expected and exploited.
         </p>
 
         <ArticleCallout variant="warning">
           <p>
-            Saying "no" to diversity work is not abandoning your community—it's protecting your mental health and refusing to do the institution's work for free. Institutions must compensate and value this labor, or hire diversity professionals to do it.
+            Saying "no" to diversity work is not abandoning your community---it's protecting your mental health and refusing to do the institution's work for free. Institutions must compensate and value this labor, or hire diversity professionals to do it.
           </p>
         </ArticleCallout>
 
@@ -1142,7 +1142,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           Campus and Workplace Climate Matters
         </h2>
         <p className="mb-6">
-          Research shows that the climate of a PWI—how welcome and valued people of color feel—directly predicts mental health outcomes <Citation id="4" index={4} source="American Journal of Orthopsychiatry" year="2021" tier={1} />. Hostile climates (frequent microaggressions, lack of diverse faculty/leadership, no support systems) worsen mental health. Supportive climates (affinity groups, culturally responsive counseling, institutional accountability) buffer against harm.
+          Research shows that the climate of a PWI---how welcome and valued people of color feel---directly predicts mental health outcomes <Citation id="4" index={4} source="American Journal of Orthopsychiatry" year="2021" tier={1} />. Hostile climates (frequent microaggressions, lack of diverse faculty/leadership, no support systems) worsen mental health. Supportive climates (affinity groups, culturally responsive counseling, institutional accountability) buffer against harm.
         </p>
 
         <h2 id="strategies-for-thriving" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1234,7 +1234,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Surviving a PWI is not just about enduring—it's about finding spaces where you're seen, supported, and celebrated. You deserve that, and you don't have to navigate this alone.
+          Surviving a PWI is not just about enduring---it's about finding spaces where you're seen, supported, and celebrated. You deserve that, and you don't have to navigate this alone.
         </p>
       </>
     ),
@@ -1325,7 +1325,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Evidence-based therapies like Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and trauma-focused treatments work—but they were largely developed by and for white, Western populations. When these treatments are applied without modification to people from different cultural backgrounds, they often miss the mark or feel alienating.
+            Evidence-based therapies like Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), and trauma-focused treatments work---but they were largely developed by and for white, Western populations. When these treatments are applied without modification to people from different cultural backgrounds, they often miss the mark or feel alienating.
           </p>
           <p className="mb-6">
             Cultural adaptation is the process of modifying evidence-based treatments to align with the values, beliefs, language, and lived experiences of specific cultural groups <Citation id="1" index={1} source="American Journal of Psychiatry" year="2018" tier={1} />. Research shows that culturally adapted therapies produce better outcomes, higher retention rates, and greater client satisfaction than generic treatments <Citation id="3" index={3} source="Journal of Consulting and Clinical Psychology" year="2020" tier={1} />.
@@ -1447,7 +1447,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Therapy conducted in Spanish</li>
-          <li>Incorporating familismo—family involvement in treatment when appropriate</li>
+          <li>Incorporating familismo---family involvement in treatment when appropriate</li>
           <li>Using dichos (proverbs) to explain cognitive distortions</li>
           <li>Addressing immigration-related stress, discrimination, and acculturation</li>
           <li>Integrating spiritual and religious coping (prayer, faith)</li>
@@ -1496,7 +1496,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Cultural adaptation is especially important for populations with high dropout rates from standard therapy—Latinx, Asian American, and African American clients are more likely to complete treatment when it's culturally responsive.
+          Cultural adaptation is especially important for populations with high dropout rates from standard therapy---Latinx, Asian American, and African American clients are more likely to complete treatment when it's culturally responsive.
         </p>
 
         <h2 id="what-to-look-for" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1514,7 +1514,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: `'What training do you have in culturally adapted treatments?`,
               content: (
                 <p>
-                  Look for therapists who have taken courses, workshops, or certifications in cultural competence and culturally adapted interventions—not just "I treat diverse clients."
+                  Look for therapists who have taken courses, workshops, or certifications in cultural competence and culturally adapted interventions---not just "I treat diverse clients."
                 </p>
               ),
             },
@@ -1541,7 +1541,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: `'Can you provide therapy in my language?`,
               content: (
                 <p>
-                  If you prefer therapy in a language other than English, confirm that the therapist is fluent and trained to deliver therapy in that language—not just conversational.
+                  If you prefer therapy in a language other than English, confirm that the therapist is fluent and trained to deliver therapy in that language---not just conversational.
                 </p>
               ),
             },
@@ -1550,7 +1550,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
               title: `'Do you understand the impact of racism/discrimination on mental health?`,
               content: (
                 <p>
-                  A culturally adapted therapist should validate that racism is real, harmful, and central to many clients' mental health struggles—not something to be dismissed or minimized.
+                  A culturally adapted therapist should validate that racism is real, harmful, and central to many clients' mental health struggles---not something to be dismissed or minimized.
                 </p>
               ),
             },
@@ -1561,7 +1561,7 @@ export const raceEthnicityMentalHealthArticlesB: Article[] = [
           The Therapeutic Alliance: Why It Matters
         </h2>
         <p className="mb-6">
-          The therapeutic alliance—the bond between client and therapist—is the single strongest predictor of therapy outcomes <Citation id="5" index={5} source="Psychotherapy Research" year="2021" tier={1} />. Cultural mismatch weakens the alliance; cultural alignment strengthens it.
+          The therapeutic alliance---the bond between client and therapist---is the single strongest predictor of therapy outcomes <Citation id="5" index={5} source="Psychotherapy Research" year="2021" tier={1} />. Cultural mismatch weakens the alliance; cultural alignment strengthens it.
         </p>
         <p className="mb-6">
           A strong alliance in cross-cultural therapy requires:

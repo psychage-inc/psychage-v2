@@ -1,4 +1,4 @@
- 
+
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_CHRONIC_ILLNESS_PAIN, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 4b — Medical Trauma and Healthcare Experiences | Articles 39–42
+// Subcategory 4b --- Medical Trauma and Healthcare Experiences | Articles 39--42
 // ============================================================================
 
 export const medicalTraumaHealthcareArticlesB: Article[] = [
@@ -36,7 +36,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     tags: ['Pediatric Trauma', 'Medical Trauma', 'Child Psychology', 'Hospital Anxiety', 'PTSS'],
 
     summary:
-      'Children who undergo hospitalizations, surgeries, or repeated medical procedures can develop lasting psychological effects that shape their relationship with healthcare for decades. Pediatric medical traumatic stress (PMTS) is now recognized as a distinct clinical phenomenon affecting up to 80% of hospitalized children at some level of distress. Unlike adult patients who can contextualize medical necessity, young children often interpret invasive procedures through a lens of threat and helplessness. This article examines the research on how hospital experiences imprint on developing minds, why some children are more vulnerable than others, and what evidence-based interventions — from child life programs to trauma-informed pediatric care — can meaningfully reduce long-term psychological harm.',
+      'Children who undergo hospitalizations, surgeries, or repeated medical procedures can develop lasting psychological effects that shape their relationship with healthcare for decades. Pediatric medical traumatic stress (PMTS) is now recognized as a distinct clinical phenomenon affecting up to 80% of hospitalized children at some level of distress. Unlike adult patients who can contextualize medical necessity, young children often interpret invasive procedures through a lens of threat and helplessness. This article examines the research on how hospital experiences imprint on developing minds, why some children are more vulnerable than others, and what evidence-based interventions --- from child life programs to trauma-informed pediatric care --- can meaningfully reduce long-term psychological harm.',
 
     keyFacts: [
       { text: 'Up to 80% of children and their families report some level of traumatic stress following hospitalization or serious medical events', citationIndex: 1 },
@@ -49,13 +49,13 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'A child does not distinguish between pain that helps and pain that harms. To them, a needle is a needle. Our responsibility is not to eliminate fear — it is to ensure that no child faces medical experiences without the protection of understanding, preparation, and compassionate presence.',
+      'A child does not distinguish between pain that helps and pain that harms. To them, a needle is a needle. Our responsibility is not to eliminate fear --- it is to ensure that no child faces medical experiences without the protection of understanding, preparation, and compassionate presence.',
 
     practicalExercise: {
       title: 'Pre-Procedure Preparation Toolkit for Parents',
       steps: [
         { title: 'Use honest, age-appropriate language', description: 'Explain what will happen using concrete terms the child can understand. Avoid vague reassurances like "it won\'t hurt" when it will. Instead, try: "You will feel a pinch that lasts about five seconds, and then it will be done."' },
-        { title: 'Practice coping strategies in advance', description: 'Teach your child one or two coping techniques before the appointment — deep belly breathing, squeezing a comfort object, or counting to ten. Practice together at home so the technique feels familiar.' },
+        { title: 'Practice coping strategies in advance', description: 'Teach your child one or two coping techniques before the appointment --- deep belly breathing, squeezing a comfort object, or counting to ten. Practice together at home so the technique feels familiar.' },
         { title: 'Create a comfort plan', description: 'Ask your child what would help them feel safer: a favorite stuffed animal, a specific song on headphones, holding your hand, or watching a video during the procedure. Write it down together as their "brave plan."' },
         { title: 'Debrief gently afterward', description: 'After the experience, give your child space to talk about what happened. Validate their feelings without dismissing them. "That was hard. You did something really brave even though you were scared" acknowledges both the difficulty and their courage.' },
       ],
@@ -81,7 +81,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             For most adults, a blood draw is an inconvenience. For a four-year-old, it can be a moment
-            of profound terror — an experience where strangers hold you down, a sharp object pierces
+            of profound terror --- an experience where strangers hold you down, a sharp object pierces
             your skin, and the people who are supposed to protect you stand by and let it happen.
             The difference between these two experiences is not maturity. It is cognitive development,
             and it matters enormously when we consider how hospital experiences shape children.
@@ -89,11 +89,11 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           <p className="mb-6">
             Pediatric medical traumatic stress (PMTS) refers to the set of psychological and
             physiological responses that children and their families can develop following medical
-            events — from a single emergency room visit to years of treatment for chronic
+            events --- from a single emergency room visit to years of treatment for chronic
             illness<Citation id="1" index={1} />. Research now shows that up to 80% of hospitalized
             children and their families experience some degree of traumatic
             stress<Citation id="1" index={1} />, and while most recover naturally, a significant
-            minority — between 15% and 25% — develop persistent symptoms that interfere with
+            minority --- between 15% and 25% --- develop persistent symptoms that interfere with
             daily functioning, school performance, and future healthcare
             engagement<Citation id="2" index={2} />.
           </p>
@@ -102,6 +102,17 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             question of how developing brains process experiences that involve pain, loss of control,
             and separation from safety. Understanding this process is the first step toward building
             medical environments where healing the body does not come at the cost of harming the mind.
+          </p>
+          <p className="mb-6">
+            The scope of pediatric medical trauma extends far beyond the most dramatic hospital scenarios.
+            While cancer treatment and major surgeries are well-recognized sources of childhood medical
+            stress, research demonstrates that even routine medical encounters can leave lasting
+            impressions on vulnerable children. A poorly handled vaccination, a frightening dental
+            procedure, or an emergency room visit for stitches can each become a formative experience
+            that shapes a child's relationship with healthcare for years to come. The determining
+            factor is not the objective severity of the medical event but the child's subjective
+            experience of it --- how much threat they perceived, how prepared they were, and how the
+            adults around them responded to their distress.
           </p>
         </div>
 
@@ -120,7 +131,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           not yet allow them to fully grasp concepts like "this will help you get better" or "the pain
           is temporary." To a three-year-old, a needle is simply something that hurts. There is no
           mitigating context. The brain registers the experience as a genuine threat, and the
-          fight-or-flight response activates accordingly — often manifesting as screaming, thrashing,
+          fight-or-flight response activates accordingly --- often manifesting as screaming, thrashing,
           freezing, or later, nightmares and behavioral regression<Citation id="3" index={3} />.
         </p>
 
@@ -128,7 +139,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           <p>
             A routine vaccination can be traumatic for one child and unremarkable for another. The
             determining factor is not the medical procedure itself but the child's subjective experience
-            of it — how much control they felt, whether they were prepared, whether a trusted adult
+            of it --- how much control they felt, whether they were prepared, whether a trusted adult
             was present, and how their distress was responded to in the moment. This means that even
             minor procedures deserve thoughtful preparation.
           </p>
@@ -143,14 +154,36 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           caregiver, and access to child life specialists who can help the child understand and
           cope with what is happening<Citation id="4" index={4} />.
         </p>
+        <p className="mb-6">
+          The concept of "dose-response" applies to pediatric medical trauma in a way that clinicians
+          and families should understand. Children who undergo multiple procedures, extended
+          hospitalizations, or repeated medical encounters accumulate psychological exposure over
+          time. Each additional experience does not exist in isolation --- it interacts with the
+          child's existing memories, associations, and coping resources. A child who had a
+          frightening blood draw at age four may approach a subsequent IV insertion at age six with
+          a nervous system already primed for threat, making the second experience more distressing
+          than it might otherwise have been. This cumulative effect means that early interventions
+          to prevent trauma have benefits that compound across a child's entire medical history.
+        </p>
+        <p className="mb-6">
+          Sensory aspects of the hospital environment deserve particular attention in understanding
+          what makes these experiences traumatic. The distinctive smell of antiseptic, the harsh
+          fluorescent lighting, the beeping of monitors, and the sight of medical equipment create
+          a multisensory landscape that can become encoded as a unified threat memory. Months or
+          years later, encountering any single element of this sensory cluster --- the smell of
+          rubbing alcohol in a school nurse's office, the sound of a heart monitor in a television
+          show --- can reactivate the entire emotional response associated with the original medical
+          experience. This is why some children who appear to have recovered well may suddenly
+          display intense distress in response to seemingly minor sensory triggers.
+        </p>
 
         <h2 id="recognizing-pediatric-medical-traumatic-stress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Recognizing Pediatric Medical Traumatic Stress
         </h2>
         <p className="mb-6">
           PMTS does not always look the way adults expect. While some children display obvious signs
-          of distress — nightmares, crying at the mention of doctors, refusing to enter medical
-          buildings — others internalize their responses in ways that can be easy to miss. A child
+          of distress --- nightmares, crying at the mention of doctors, refusing to enter medical
+          buildings --- others internalize their responses in ways that can be easy to miss. A child
           who becomes unusually quiet, withdraws from activities, develops new fears unrelated to
           medicine, or begins regressing to earlier developmental behaviors may be processing
           medical trauma without anyone recognizing it<Citation id="2" index={2} />.
@@ -163,7 +196,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Common signs of medical traumatic stress in young children:</p>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-                  <li>Regression to earlier behaviors — bedwetting, thumb-sucking, baby talk</li>
+                  <li>Regression to earlier behaviors --- bedwetting, thumb-sucking, baby talk</li>
                   <li>Increased separation anxiety and clinginess</li>
                   <li>Repetitive play that reenacts medical procedures</li>
                   <li>New fears of the dark, monsters, or being alone</li>
@@ -208,12 +241,32 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         ]} />
 
         <p className="mb-6">
-          The National Child Traumatic Stress Network has developed the D-E-F protocol — Distress,
-          Emotional Support, and Family — as a screening framework that can be integrated into
+          The National Child Traumatic Stress Network has developed the D-E-F protocol --- Distress,
+          Emotional Support, and Family --- as a screening framework that can be integrated into
           routine pediatric care<Citation id="6" index={6} />. The protocol encourages healthcare
           providers to assess distress levels throughout the medical encounter, provide emotional
           support tailored to the child's developmental stage, and engage the family as active
           partners in the child's psychological safety.
+        </p>
+        <p className="mb-6">
+          Timing is a critical factor in recognizing pediatric medical traumatic stress. Some
+          children display symptoms immediately after a medical event, while others may appear
+          fine for weeks or even months before showing signs of distress. This delayed onset
+          can be particularly confusing for parents, who may not connect their child's new
+          behavioral difficulties with a medical experience that occurred months earlier. Clinicians
+          who follow up with families after significant medical events --- not just to check physical
+          recovery but to ask about emotional and behavioral changes --- are far more likely to
+          identify children who need support before their symptoms become entrenched.
+        </p>
+        <p className="mb-6">
+          It is also important to recognize that siblings of hospitalized children can develop their
+          own form of medical traumatic stress. Brothers and sisters who witness a sibling's pain,
+          who experience sudden separation from their parents during a hospitalization, or who live
+          with the chronic fear that their sibling might die are psychologically affected in ways
+          that often go unaddressed. These children may feel guilty for being healthy, resentful of
+          the attention their sibling receives, or fearful that they too will become sick. Including
+          siblings in family-focused prevention efforts is an important but frequently overlooked
+          component of comprehensive pediatric trauma care.
         </p>
 
         <h2 id="the-parent-factor" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -224,14 +277,14 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           emotional response during and after medical events significantly predicts the child's
           psychological outcome<Citation id="8" index={8} />. Children are remarkably attuned to
           their caregivers' emotional states. When a parent is visibly terrified, the child's brain
-          interprets this as confirmation that the situation is dangerous — regardless of what
+          interprets this as confirmation that the situation is dangerous --- regardless of what
           anyone is saying.
         </p>
         <p className="mb-6">
           This does not mean parents should suppress all emotion or pretend to be calm when they are
           not. Children can detect inauthenticity, and forced cheerfulness can be confusing. Instead,
           the research suggests that the most protective parental behavior is what psychologists
-          call "regulated presence" — acknowledging the difficulty while communicating that you are
+          call "regulated presence" --- acknowledging the difficulty while communicating that you are
           there, that you can handle this, and that the child is not
           alone<Citation id="8" index={8} />.
         </p>
@@ -250,6 +303,30 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           pediatric trauma prevention programs target the entire family system, not just the child
           in isolation.
         </p>
+        <p className="mb-6">
+          The bidirectional nature of parent-child emotional influence during medical events deserves
+          careful attention. While parental distress increases a child's vulnerability, the reverse
+          is also true: watching a child suffer is one of the most distressing experiences a parent
+          can endure. Parents of children with chronic medical conditions report rates of
+          post-traumatic stress symptoms that are comparable to, and sometimes higher than, those
+          of the children themselves. This means that a parent who appears to be coping well during
+          their child's hospitalization may be experiencing significant psychological distress
+          that will only surface after the immediate medical crisis has passed. Healthcare teams
+          that check in with parents not just as informants about their child's condition but as
+          people who are themselves experiencing a traumatic event provide a level of care that
+          benefits the entire family system.
+        </p>
+        <p className="mb-6">
+          Cultural factors also play a significant role in how parents respond to their child's
+          medical experiences and how they communicate about those experiences within the family.
+          Some cultural contexts encourage stoic responses to medical adversity, which may lead
+          parents to minimize their own or their child's emotional distress. Other cultural
+          backgrounds may emphasize collective support systems that serve as powerful buffers
+          against medical trauma. Clinicians who approach families with cultural humility and
+          who ask about family beliefs and practices regarding medical experiences are better
+          equipped to provide support that resonates with how each family naturally processes
+          difficult events.
+        </p>
 
         <h2 id="evidence-based-interventions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Interventions That Work
@@ -267,7 +344,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           recovery<Citation id="9" index={9} />. When children can play with medical equipment,
           practice procedures on dolls, or draw pictures of their experiences, they gain a sense
           of mastery over situations that otherwise feel entirely out of their control. This is
-          not distraction — it is active cognitive processing through the medium that children
+          not distraction --- it is active cognitive processing through the medium that children
           understand best.
         </p>
 
@@ -289,7 +366,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             title: 'Comfort positioning over restraint',
             content: (
               <p>
-                Modern pediatric guidelines emphasize comfort positioning — holding children in
+                Modern pediatric guidelines emphasize comfort positioning --- holding children in
                 secure, supported positions on a parent's lap rather than using physical restraint.
                 Restraint significantly increases the risk of medical traumatic stress, while comfort
                 positioning reduces distress and often improves procedural success rates because the
@@ -323,13 +400,25 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           },
         ]} />
 
+        <p className="mb-6">
+          Beyond individual interventions, the physical design of pediatric healthcare environments
+          plays a meaningful role in either amplifying or reducing children's distress. Hospitals
+          that have invested in child-friendly design --- colorful murals, natural lighting, play
+          areas in waiting rooms, procedure rooms with adjustable lighting and distraction devices
+          --- consistently report lower anxiety levels among young patients. The sensory environment
+          communicates safety or threat long before any medical professional speaks a word. A cold,
+          sterile room with buzzing fluorescent lights and the sound of unfamiliar equipment sends
+          a very different message to a child's nervous system than a warm, softly lit space with
+          familiar objects and a sense of predictability.
+        </p>
+
         <h2 id="long-term-consequences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Long-Term Consequences: When Childhood Medical Trauma Goes Unaddressed
         </h2>
         <p className="mb-6">
           The effects of pediatric medical trauma do not always stay in childhood. Longitudinal
           research demonstrates that unresolved medical traumatic stress in childhood predicts
-          healthcare avoidance in adulthood — adults who experienced traumatic medical events as
+          healthcare avoidance in adulthood --- adults who experienced traumatic medical events as
           children are significantly more likely to delay seeking medical care, skip preventive
           screenings, and discontinue treatment
           prematurely<Citation id="5" index={5} />.
@@ -343,10 +432,48 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           The American Academy of Pediatrics now recommends that trauma-informed principles be
-          integrated into all pediatric care settings — not just emergency departments or oncology
+          integrated into all pediatric care settings --- not just emergency departments or oncology
           units<Citation id="7" index={7} />. This means recognizing that every medical encounter
           with a child is an opportunity to either build trust in the healthcare system or erode it.
           The procedures will be forgotten, but the feelings will be remembered.
+        </p>
+        <p className="mb-6">
+          Research on the long-term neurodevelopmental effects of early medical trauma provides
+          additional reasons for urgency in prevention. Repeated exposure to pain and distress
+          during critical periods of brain development can alter the stress-response system in
+          ways that persist into adulthood, including heightened cortisol reactivity, altered
+          pain sensitivity, and an overactive threat-detection system that makes the individual
+          more susceptible to anxiety disorders and chronic pain conditions later in life. These
+          neurobiological changes are not permanent or irreversible, but they are easier to
+          prevent than to treat once they have become established patterns within the developing
+          nervous system.
+        </p>
+
+        <h2 id="the-role-of-schools-and-communities" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Role of Schools and Communities in Supporting Recovery
+        </h2>
+        <p className="mb-6">
+          A child's recovery from medical trauma does not happen only within the walls of a
+          hospital or a therapist's office. Schools, childcare settings, and community environments
+          play a crucial role in supporting children as they process and recover from difficult
+          medical experiences. Teachers who are aware that a student has recently undergone a
+          hospitalization or significant medical procedure can watch for behavioral changes,
+          provide extra patience during periods of regression, and create a classroom environment
+          that feels safe and predictable --- qualities that are particularly healing for children
+          whose medical experiences have left them feeling that the world is unpredictable and
+          dangerous.
+        </p>
+        <p className="mb-6">
+          School nurses occupy a particularly important position in the support network for
+          children with medical trauma. Because they work at the intersection of healthcare and
+          education, school nurses are often the first adults outside the family to notice that
+          a child's response to routine health screenings or minor injuries seems disproportionate
+          to the situation. A child who becomes hysterical during a routine hearing test or who
+          refuses to visit the school nurse for a minor scrape may be reacting not to the current
+          situation but to the memories it activates. Training school health professionals to
+          recognize these responses as potential indicators of medical traumatic stress --- rather
+          than dismissing them as overreaction --- creates an additional layer of early identification
+          that can connect families with appropriate support.
         </p>
 
         <h2 id="building-trauma-informed-pediatric-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -369,16 +496,27 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Perhaps most importantly, trauma-informed care means recognizing that a child's resistance
-          is not defiance — it is communication. When a child screams, kicks, or tries to run, they
+          is not defiance --- it is communication. When a child screams, kicks, or tries to run, they
           are saying "I am afraid." The clinical response to fear should never be force. It should
           be understanding, preparation, and when possible, patience. The few extra minutes spent
           preparing a child for a procedure often save far more time than is lost to distress and
-          resistance — and they protect something that no amount of medical expertise can repair
+          resistance --- and they protect something that no amount of medical expertise can repair
           once it is broken: a child's trust that the adults around them will keep them safe.
+        </p>
+        <p className="mb-6">
+          Implementing trauma-informed care also requires institutional commitment that goes beyond
+          individual clinician behavior. Hospitals and medical practices that successfully adopt
+          this approach invest in staff training, create policies that prioritize comfort
+          positioning over restraint, allocate time in procedure schedules for adequate preparation,
+          and build feedback mechanisms that allow families to share their experiences. When
+          trauma-informed care is treated as an institutional priority rather than an individual
+          preference, it becomes woven into the fabric of how the entire organization interacts
+          with children --- from the registration desk to the recovery room, from the phlebotomist
+          to the surgeon.
         </p>
 
         <QuoteBlock
-          quote="Children do not have the luxury of understanding medical necessity. They only understand medical experience. Our job is to make that experience as safe as possible — not just physically, but emotionally."
+          quote="Children do not have the luxury of understanding medical necessity. They only understand medical experience. Our job is to make that experience as safe as possible --- not just physically, but emotionally."
           author="Dr. Nancy Kassam-Adams"
           role="Pediatric Psychologist"
           source="Pediatric medical traumatic stress research"
@@ -418,7 +556,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'The waiting room is not just a physical space — it is a psychological one. And unlike the doctor who will eventually call with results, you are the only person who can furnish that inner waiting room with something other than catastrophe. You cannot speed up the clock. But you can choose what you do with the time inside it.',
+      'The waiting room is not just a physical space --- it is a psychological one. And unlike the doctor who will eventually call with results, you are the only person who can furnish that inner waiting room with something other than catastrophe. You cannot speed up the clock. But you can choose what you do with the time inside it.',
 
     practicalExercise: {
       title: 'The Uncertainty Management Protocol',
@@ -451,7 +589,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You have had the test. The blood has been drawn, the scan has been completed, the biopsy
             has been taken. And now begins what many people describe as the worst part of the entire
-            medical experience — not the procedure itself, but the waiting. The hours, days, or
+            medical experience --- not the procedure itself, but the waiting. The hours, days, or
             sometimes weeks that stretch between "we will let you know" and actually knowing.
           </p>
           <p className="mb-6">
@@ -462,7 +600,17 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             equals or exceeds the distress they would feel upon receiving a difficult
             diagnosis<Citation id="2" index={2} />. This is not a character flaw or a failure of
             willpower. It is a predictable response rooted in how the human brain processes
-            uncertainty — and understanding that process is the first step toward managing it.
+            uncertainty --- and understanding that process is the first step toward managing it.
+          </p>
+          <p className="mb-6">
+            The waiting period occupies a peculiar psychological space. It is not the crisis itself
+            --- there may be no bad news at all. Yet the body responds as though the threat is already
+            present, flooding the system with stress hormones that disrupt sleep, impair digestion,
+            elevate heart rate, and create a persistent sense of dread that refuses to be reasoned
+            away. Friends and family, well-meaning as they are, often struggle to understand why
+            someone cannot simply "try not to think about it" or "stay positive until you know."
+            The neuroscience of uncertainty reveals why these suggestions, though kindly offered,
+            misunderstand the fundamental nature of the experience.
           </p>
         </div>
 
@@ -473,7 +621,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           The human brain evolved to resolve uncertainty as quickly as possible. In ancestral
           environments, ambiguity about whether a rustling bush contained a predator or just wind
           was a matter of life and death. The brain's default response to unresolved uncertainty
-          is to treat it as a threat — to keep the amygdala activated, stress hormones circulating,
+          is to treat it as a threat --- to keep the amygdala activated, stress hormones circulating,
           and attention focused on the potential danger until the ambiguity is
           resolved<Citation id="3" index={3} />.
         </p>
@@ -483,7 +631,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           detection center like an unresolved alarm. Unlike a tangible threat that you can fight or
           flee from, medical uncertainty offers no action to take. You cannot outrun a pending lab
           result. You cannot fight a diagnosis that does not yet exist. This leaves the nervous
-          system in a sustained state of activation with no discharge — the physiological equivalent
+          system in a sustained state of activation with no discharge --- the physiological equivalent
           of pressing the gas and brake pedals simultaneously<Citation id="6" index={6} />.
         </p>
 
@@ -496,10 +644,22 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
 
         <p className="mb-6">
           Neuroimaging studies reveal that uncertainty activates the anterior insula and dorsal
-          anterior cingulate cortex — the same brain regions involved in processing physical pain.
+          anterior cingulate cortex --- the same brain regions involved in processing physical pain.
           In a very real neurological sense, not knowing hurts. And the longer the uncertainty
           persists, the more the brain escalates its threat response, which is why a three-day
           wait often feels exponentially worse than a three-hour one<Citation id="3" index={3} />.
+        </p>
+        <p className="mb-6">
+          The brain's relationship with uncertainty is further complicated by the phenomenon of
+          anticipatory processing. When faced with an unresolved question of high personal
+          importance, the brain does not simply wait passively for an answer. Instead, it
+          continuously generates mental simulations of possible outcomes, rehearsing each scenario
+          as though preparing the body and mind for what might come. In moderate doses, this
+          anticipatory processing serves an adaptive function --- it helps people prepare practically
+          and emotionally for various possibilities. But when the stakes are high and the wait is
+          long, this mental simulation machine runs continuously, consuming cognitive resources,
+          disrupting concentration on other tasks, and producing a state of exhausting mental
+          hyperactivity that feels impossible to shut off.
         </p>
 
         <h2 id="catastrophic-thinking" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -509,12 +669,12 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           When the brain cannot resolve uncertainty through information, it does the next best
           thing: it guesses. And because the threat detection system is already activated, those
           guesses almost always skew toward the worst possible outcome. This is catastrophic
-          thinking — the cognitive tendency to imagine the most devastating result and then treat
+          thinking --- the cognitive tendency to imagine the most devastating result and then treat
           that imagination as though it were already real<Citation id="4" index={4} />.
         </p>
         <p className="mb-6">
           Research identifies catastrophic thinking as the single strongest predictor of
-          psychological distress during medical waiting periods — more powerful than the actual
+          psychological distress during medical waiting periods --- more powerful than the actual
           risk level, the type of test, or the person's prior medical
           history<Citation id="4" index={4} />. A person with a 5% chance of a serious diagnosis
           who catastrophizes will often experience more suffering than someone with a 50% chance
@@ -529,7 +689,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             Studies show that scanxiety can begin days to weeks before the actual scan and does not
             fully resolve until results are received. For cancer survivors who undergo regular
             surveillance for years, this means living with recurring cycles of anticipatory distress
-            that can significantly impact quality of life — even when every scan comes back clear.
+            that can significantly impact quality of life --- even when every scan comes back clear.
           </p>
         </ArticleCallout>
 
@@ -544,10 +704,22 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Recognizing this pattern is not about positive thinking or telling yourself everything
-          will be fine. It is about seeing the catastrophizing for what it is — a cognitive process,
+          will be fine. It is about seeing the catastrophizing for what it is --- a cognitive process,
           not a prophecy. The thought "it might be cancer" is a thought. It is not a diagnosis.
           The ability to hold that distinction, even loosely, is what separates manageable anxiety
           from overwhelming distress.
+        </p>
+        <p className="mb-6">
+          One particularly insidious aspect of catastrophic thinking during medical waiting periods
+          is its tendency to escalate through bodily attention. As anxiety mounts, the body produces
+          physical symptoms --- muscle tension, stomach upset, headaches, fatigue --- that the
+          catastrophizing mind then interprets as evidence of the feared diagnosis. A person waiting
+          for cancer screening results who develops a stress-related stomachache may begin thinking
+          "the cancer has already spread to my stomach," creating a feedback loop in which anxiety
+          produces physical symptoms that fuel further anxiety. Understanding this mechanism does
+          not stop it entirely, but it creates a crucial cognitive wedge that allows the person to
+          consider an alternative explanation for their physical discomfort before spiraling deeper
+          into catastrophic conclusions.
         </p>
 
         <h2 id="intolerance-of-uncertainty" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -558,14 +730,14 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           "intolerance of uncertainty" (IU) helps explain why. People with high IU experience
           ambiguous situations as fundamentally threatening, regardless of the actual probability of
           a negative outcome<Citation id="3" index={3} />. For these individuals, any uncertainty
-          feels dangerous — and medical uncertainty, with its life-or-death stakes, can feel
+          feels dangerous --- and medical uncertainty, with its life-or-death stakes, can feel
           catastrophic.
         </p>
         <p className="mb-6">
           Intolerance of uncertainty is not a fixed personality trait. It is a cognitive bias that
           can be modified through targeted interventions, particularly cognitive behavioral therapy
           (CBT) and acceptance and commitment therapy (ACT)<Citation id="9" index={9} />. The goal
-          of these approaches is not to eliminate uncertainty — that is impossible — but to change
+          of these approaches is not to eliminate uncertainty --- that is impossible --- but to change
           the person's relationship with it. Instead of "I cannot stand not knowing," the aim is to
           develop the capacity for "I do not yet know, and I can tolerate that."
         </p>
@@ -580,6 +752,18 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             ['Functioning during wait', 'Maintained with effort', 'Significantly impaired'],
           ]}
         />
+
+        <p className="mb-6">
+          Understanding where you fall on the intolerance of uncertainty spectrum can be genuinely
+          empowering during a medical waiting period. People who recognize that their distress is
+          being amplified by a general difficulty with ambiguity --- rather than by specific and
+          accurate information about their medical risk --- can begin to separate the signal from
+          the noise in their own emotional experience. This is not about minimizing legitimate
+          concern but about recognizing that some portion of the suffering during the wait is
+          generated by a cognitive style that responds to all uncertainty with alarm, regardless
+          of context. That portion of the suffering is addressable, even while the underlying
+          medical uncertainty remains unresolved.
+        </p>
 
         <h2 id="evidence-based-coping-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Coping Strategies for the Waiting Period
@@ -618,7 +802,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             description: (
               <span>
                 Anxiety thrives in empty space. Continue going to work, exercising, seeing friends,
-                and engaging in activities that give your days structure. This is not avoidance — it
+                and engaging in activities that give your days structure. This is not avoidance --- it
                 is giving your brain evidence that your life continues regardless of the pending result.
               </span>
             ),
@@ -645,6 +829,32 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           The two states can coexist.
         </p>
 
+        <h2 id="the-social-dimension-of-waiting" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Social Dimension of Waiting
+        </h2>
+        <p className="mb-6">
+          Waiting for medical results is often portrayed as a solitary experience, but it occurs
+          within a social context that can either buffer or intensify the psychological burden.
+          Partners, family members, and close friends are frequently drawn into the waiting period
+          alongside the patient, each managing their own anxiety while trying to provide support.
+          The person awaiting results may feel pressure to reassure worried loved ones, creating an
+          additional emotional labor on top of their own distress. Conversely, some people find
+          that sharing the burden of waiting --- having someone who checks in daily, who sits with
+          them in the anxiety without trying to fix it --- provides a form of emotional scaffolding
+          that makes the experience more bearable.
+        </p>
+        <p className="mb-6">
+          Decisions about whom to tell and when to tell them carry their own psychological weight.
+          Some people prefer to keep the waiting period private, disclosing the test only after
+          results are received, because the prospect of updating multiple people feels overwhelming.
+          Others find that early disclosure creates a support network that sustains them through the
+          uncertainty. Neither approach is universally correct. The research suggests that the key
+          factor is not the number of people who know but the quality of support available --- having
+          even one person who can listen without rushing to reassure, who can sit with not-knowing
+          alongside you, makes a measurable difference in how the waiting period is experienced
+          emotionally and physiologically.
+        </p>
+
         <h2 id="what-healthcare-systems-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Healthcare Systems Can Do Better
         </h2>
@@ -661,18 +871,31 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           dramatically reducing the waiting window. Others have trained staff to provide patients
           with explicit timelines ("You will receive a call within 72 hours") rather than vague
           promises ("We will be in touch"). These structural changes acknowledge that the waiting
-          period is not a neutral pause — it is an active source of psychological harm that
+          period is not a neutral pause --- it is an active source of psychological harm that
           deserves the same clinical attention as any other aspect of
           care<Citation id="8" index={8} />.
+        </p>
+        <p className="mb-6">
+          The design of patient portal systems also warrants careful psychological consideration.
+          Many patients report compulsively checking their online health portals during the
+          waiting period, refreshing the page dozens of times per day in hopes that results have
+          been posted. Some portal systems release raw lab values before a clinician has had the
+          opportunity to provide context, leading to situations where patients encounter alarming
+          numbers without any interpretive framework. The resulting distress --- often experienced
+          late at night or on weekends when the medical team is unreachable --- can be severe.
+          Healthcare systems that thoughtfully design the timing and presentation of digital
+          results, including clear contextual information and instructions for when to contact
+          the care team, can significantly reduce portal-related anxiety without sacrificing
+          the transparency that patients value.
         </p>
 
         <ArticleCallout type="action-plan" title="If You Are Currently Waiting for Results">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Know your timeline — ask your provider exactly when to expect results and how they will be delivered</li>
+            <li>Know your timeline --- ask your provider exactly when to expect results and how they will be delivered</li>
             <li>Limit yourself to checking your patient portal no more than twice daily</li>
-            <li>Tell at least one person you trust that you are waiting — isolation amplifies anxiety</li>
+            <li>Tell at least one person you trust that you are waiting --- isolation amplifies anxiety</li>
             <li>Move your body every day, even if it is just a 15-minute walk</li>
-            <li>If anxiety becomes unmanageable, call your healthcare provider's office — they may be able to expedite results or provide interim reassurance</li>
+            <li>If anxiety becomes unmanageable, call your healthcare provider's office --- they may be able to expedite results or provide interim reassurance</li>
           </ul>
         </ArticleCallout>
 
@@ -682,7 +905,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           The waiting ends. The results arrive. And regardless of whether the news is reassuring or
           difficult, most people find that the emotional aftermath requires its own processing.
-          Good news does not always bring the relief people expect — sometimes the sustained anxiety
+          Good news does not always bring the relief people expect --- sometimes the sustained anxiety
           leaves a residue of hypervigilance that takes weeks to
           dissipate<Citation id="7" index={7} />. Difficult news, while devastating, sometimes
           brings a paradoxical sense of relief because the uncertainty is finally over.
@@ -695,6 +918,17 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           traumatic, consider speaking with a mental health professional who can help you process
           both the medical information and the emotional toll of living in
           uncertainty<Citation id="10" index={10} />.
+        </p>
+        <p className="mb-6">
+          For people who receive reassuring results, there is sometimes a surprising emotional
+          complexity in the aftermath. Relief may be accompanied by guilt --- guilt for having
+          worried so intensely when "nothing was wrong," guilt for consuming medical resources
+          that others may need more, or guilt toward friends or family members whose test results
+          were not as favorable. Some people experience a period of emotional flatness after the
+          waiting ends, as though the sustained hyperarousal has temporarily depleted their
+          capacity to feel anything at all. Understanding that these reactions are normal and
+          temporary can help people be patient with themselves as their nervous systems gradually
+          recalibrate to a baseline that is no longer organized around an unresolved threat.
         </p>
 
         <QuoteBlock
@@ -724,7 +958,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     tags: ['Terminal Illness', 'End of Life', 'Meaning-Making', 'Palliative Psychology', 'Existential Distress'],
 
     summary:
-      'Receiving a terminal diagnosis confronts a person with the most fundamental human reality — that life ends. The psychological experience of living with the knowledge that time is limited encompasses far more than grief. It involves existential distress, identity reconstruction, relationship renegotiation, and, for many people, a profound search for meaning that can transform the final chapter of life into something unexpectedly purposeful. Research in palliative psychology has demonstrated that targeted mental health interventions — particularly meaning-centered psychotherapy and dignity therapy — significantly reduce depression, hopelessness, and desire for hastened death while improving quality of life and sense of purpose. This article explores the emotional and psychological terrain of terminal diagnosis, not to diminish its devastation, but to illuminate the ways that people find meaning, connection, and even moments of grace when facing the end.',
+      'Receiving a terminal diagnosis confronts a person with the most fundamental human reality --- that life ends. The psychological experience of living with the knowledge that time is limited encompasses far more than grief. It involves existential distress, identity reconstruction, relationship renegotiation, and, for many people, a profound search for meaning that can transform the final chapter of life into something unexpectedly purposeful. Research in palliative psychology has demonstrated that targeted mental health interventions --- particularly meaning-centered psychotherapy and dignity therapy --- significantly reduce depression, hopelessness, and desire for hastened death while improving quality of life and sense of purpose. This article explores the emotional and psychological terrain of terminal diagnosis, not to diminish its devastation, but to illuminate the ways that people find meaning, connection, and even moments of grace when facing the end.',
 
     keyFacts: [
       { text: 'Up to 50% of people with terminal diagnoses experience clinically significant depression or anxiety', citationIndex: 1 },
@@ -737,15 +971,15 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'Meaning is not destroyed by mortality. In many ways, it is created by it. The knowledge that time is finite does not empty life of purpose — it concentrates it. Every conversation, every sunrise, every act of love becomes a choice made in full awareness of its preciousness.',
+      'Meaning is not destroyed by mortality. In many ways, it is created by it. The knowledge that time is finite does not empty life of purpose --- it concentrates it. Every conversation, every sunrise, every act of love becomes a choice made in full awareness of its preciousness.',
 
     practicalExercise: {
       title: 'The Legacy Letter Exercise',
       steps: [
-        { title: 'Choose your audience', description: 'Select one person you love — a child, partner, friend, or sibling. This letter is for them, written from the deepest and most honest part of who you are.' },
-        { title: 'Write what matters most', description: 'Tell them what they have meant to your life. Share a memory that captures something essential about your relationship. Include something you hope they will carry forward — a value, a tradition, a way of seeing the world.' },
-        { title: 'Include your wishes for them', description: 'Write about the future you hope they will have. Not instructions or expectations, but genuine wishes — the kind of happiness you hope they will find, the qualities you see in them that will serve them well.' },
-        { title: 'Decide what to do with it', description: 'You may choose to share the letter now, to save it for later, or to write it as a process of personal reflection with no obligation to share. The therapeutic value is in the writing itself — the act of distilling what matters most.' },
+        { title: 'Choose your audience', description: 'Select one person you love --- a child, partner, friend, or sibling. This letter is for them, written from the deepest and most honest part of who you are.' },
+        { title: 'Write what matters most', description: 'Tell them what they have meant to your life. Share a memory that captures something essential about your relationship. Include something you hope they will carry forward --- a value, a tradition, a way of seeing the world.' },
+        { title: 'Include your wishes for them', description: 'Write about the future you hope they will have. Not instructions or expectations, but genuine wishes --- the kind of happiness you hope they will find, the qualities you see in them that will serve them well.' },
+        { title: 'Decide what to do with it', description: 'You may choose to share the letter now, to save it for later, or to write it as a process of personal reflection with no obligation to share. The therapeutic value is in the writing itself --- the act of distilling what matters most.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Reflect on Your Experience',
@@ -789,7 +1023,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             There is no preparation for the words "there is nothing more we can do." No amount
             of medical literacy, emotional resilience, or philosophical wisdom fully prepares a
             person for the moment when their diagnosis becomes terminal. And yet, within that
-            devastation, something else often begins — a reckoning with what life has meant, what
+            devastation, something else often begins --- a reckoning with what life has meant, what
             still matters, and how the remaining time might be shaped with intention.
           </p>
           <p className="mb-6">
@@ -806,7 +1040,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             This article approaches the topic of terminal diagnosis and mental health with the
             seriousness and sensitivity it demands. It does not offer platitudes or inspirational
             cliches. It examines what the research tells us about the psychological terrain of
-            facing the end of life — and what can genuinely help.
+            facing the end of life --- and what can genuinely help.
           </p>
         </div>
 
@@ -816,7 +1050,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           The emotional response to a terminal diagnosis is not a single event but an unfolding
           process that shifts and deepens over time. In the immediate aftermath, many people
-          describe a state of unreality — an inability to absorb what they have been told, as
+          describe a state of unreality --- an inability to absorb what they have been told, as
           though the words were meant for someone else. This dissociative numbness is a protective
           mechanism that allows the psyche to absorb the information gradually rather than all
           at once.
@@ -824,7 +1058,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           As the reality sets in, a spectrum of emotional responses emerges. Anger is common
           and often directed at the disease itself, at the healthcare system, at fate, or at a
-          God who allowed it. Profound sadness follows — not just grief for oneself, but grief
+          God who allowed it. Profound sadness follows --- not just grief for oneself, but grief
           for the people who will be left behind, for the milestones that will be missed, for the
           future that was taken. Fear manifests in many forms: fear of pain, fear of losing
           autonomy, fear of being a burden, and the primal fear of nonexistence
@@ -833,8 +1067,20 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           What research consistently reveals, however, is that these emotional responses are not
           static. They shift. They coexist. And for many people, they gradually make room for
-          other experiences — connection, reflection, generativity, and meaning — that become
+          other experiences --- connection, reflection, generativity, and meaning --- that become
           increasingly central as time progresses<Citation id="9" index={9} />.
+        </p>
+        <p className="mb-6">
+          The experience of anticipatory grief --- mourning losses that have not yet occurred --- is
+          one of the most psychologically distinctive aspects of living with a terminal diagnosis.
+          Unlike bereavement, which follows an actual loss, anticipatory grief unfolds alongside
+          continued living, creating a layered emotional reality in which a person may grieve the
+          future they will not see while simultaneously experiencing the present with heightened
+          intensity. Parents with terminal diagnoses often describe the particular anguish of
+          anticipating their children's milestones --- graduations, weddings, the birth of
+          grandchildren --- that they know they will miss. This form of grief is not resolved by
+          reassurance or cognitive restructuring. It requires witnessing, validation, and the
+          therapeutic space to express what is often unspeakable.
         </p>
 
         <h2 id="existential-distress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -845,7 +1091,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           recognition that existential distress is distinct from clinical
           depression<Citation id="4" index={4} />. A person facing the end of life may
           experience profound sadness, loss of purpose, and a sense that life has become
-          meaningless — symptoms that overlap with depression but arise from a fundamentally
+          meaningless --- symptoms that overlap with depression but arise from a fundamentally
           different source. Depression is a disorder of neurochemistry and cognition. Existential
           distress is a response to confronting the finite nature of human existence.
         </p>
@@ -854,7 +1100,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           help when clinical depression accompanies a terminal diagnosis, but they do not address
           the existential questions that keep a person awake at night: "Did my life matter?"
           "What will happen to my family?" "Is there anything after this?" These questions require
-          a different kind of therapeutic response — one that takes them seriously as legitimate
+          a different kind of therapeutic response --- one that takes them seriously as legitimate
           human concerns rather than symptoms to be managed<Citation id="8" index={8} />.
         </p>
 
@@ -881,12 +1127,25 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           }}
         />
 
+        <p className="mb-6">
+          Demoralization syndrome, a clinical construct that has gained increasing recognition in
+          palliative care, captures the specific form of existential distress that occurs when a
+          person loses their sense of coherence and purpose. Unlike depression, which often
+          includes pervasive anhedonia and neurovegetative symptoms, demoralization is characterized
+          primarily by a sense of helplessness, hopelessness, and subjective incompetence ---
+          the feeling that one can no longer cope with the demands of existence. A person can
+          be demoralized without being depressed, and depressed without being demoralized.
+          Recognizing this distinction allows clinicians to match the right intervention to the
+          right form of suffering, rather than defaulting to antidepressant medication for every
+          expression of emotional pain at the end of life.
+        </p>
+
         <h2 id="meaning-making-at-the-end" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Meaning-Making at the End: Evidence-Based Approaches
         </h2>
         <p className="mb-6">
           Viktor Frankl, the psychiatrist and Holocaust survivor, argued that the search for
-          meaning is the primary human motivation — and that meaning can be found even in the
+          meaning is the primary human motivation --- and that meaning can be found even in the
           most devastating circumstances. His logotherapy framework has been adapted for modern
           palliative care through meaning-centered psychotherapy (MCP), developed by William
           Breitbart at Memorial Sloan Kettering Cancer Center<Citation id="2" index={2} />.
@@ -915,9 +1174,44 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           the patient through a structured interview about their life, their values, the lessons
           they want to pass on, and the things they most want their loved ones to know. The
           conversation is transcribed, edited, and returned to the patient as a permanent document
-          — a tangible legacy that can be shared with family and friends. Research shows that 76%
+          --- a tangible legacy that can be shared with family and friends. Research shows that 76%
           of family members who receive a dignity therapy document describe it as a significant and
           lasting source of comfort<Citation id="3" index={3} />.
+        </p>
+        <p className="mb-6">
+          The effectiveness of these meaning-centered approaches rests on a fundamental insight
+          about human psychology: the need for meaning does not diminish as death approaches ---
+          it intensifies. When a person can no longer derive purpose from professional
+          accomplishments, future plans, or physical activities, the question of what gives life
+          meaning becomes both more urgent and more profound. Meaning-centered interventions do
+          not manufacture artificial purpose. They help people recognize and articulate the meaning
+          that already exists in their relationships, their memories, their values, and the choices
+          they continue to make each day about how to live the time that remains.
+        </p>
+
+        <h2 id="relationships-and-communication" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Relationships and Communication at the End of Life
+        </h2>
+        <p className="mb-6">
+          A terminal diagnosis transforms every significant relationship in a person's life.
+          The dynamics between patient and partner, parent and child, friend and friend are all
+          renegotiated --- sometimes openly, sometimes silently --- in the shadow of approaching
+          death. Research consistently identifies relational quality as one of the strongest
+          predictors of psychological well-being at the end of life. People who feel connected,
+          heard, and valued by those around them experience less depression, less desire for
+          hastened death, and a greater sense of meaning than those who feel isolated or
+          misunderstood, regardless of their physical symptom burden.
+        </p>
+        <p className="mb-6">
+          Yet honest communication about death remains one of the most difficult things that human
+          beings attempt. Families often engage in what researchers call "mutual pretense" --- a
+          tacit agreement to avoid discussing the approaching death, with each party believing
+          they are protecting the other from painful truth. While this pattern is understandable,
+          it frequently leaves both the dying person and their loved ones feeling isolated within
+          the very relationships that should be their greatest source of comfort. Breaking through
+          mutual pretense does not require dramatic confrontations or forced conversations. It
+          often begins with small, honest statements --- "I am scared" or "I do not know what to
+          say, but I want to be here" --- that give others permission to respond with equal honesty.
         </p>
 
         <h2 id="supporting-mental-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -925,7 +1219,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           The case for integrating mental health support into end-of-life care is not merely
-          humanitarian — it is clinical. A landmark study published in the New England Journal
+          humanitarian --- it is clinical. A landmark study published in the New England Journal
           of Medicine demonstrated that patients with metastatic lung cancer who received early
           palliative care, including psychological support, not only reported better quality of
           life and less depression but actually lived an average of two to three months longer
@@ -941,6 +1235,17 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           psychological care; support groups for both patients and caregivers; and spiritual
           care services for those who want them<Citation id="7" index={7} />.
         </p>
+        <p className="mb-6">
+          The timing of psychological support matters significantly. Research demonstrates that
+          earlier integration of mental health care --- beginning at the time of terminal
+          diagnosis rather than waiting until the final weeks of life --- produces substantially
+          better outcomes. People who have access to psychological support from the moment they
+          learn their diagnosis is terminal are better equipped to process the emotional impact,
+          make decisions about their remaining time that align with their values, and maintain
+          meaningful engagement with the people and activities they care about most. Waiting
+          until a person is in crisis to offer psychological support means missing the window
+          during which that support could have prevented the crisis altogether.
+        </p>
 
         <ArticleCallout type="clinical-note" title="For Healthcare Providers and Caregivers">
           <p className="mb-3">
@@ -948,9 +1253,9 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             presence than most clinical interactions demand. Key principles from the research:
           </p>
           <ul className="list-disc pl-5 space-y-2">
-            <li>Follow the patient's lead — some people want to talk about death directly, others do not. Both are valid.</li>
+            <li>Follow the patient's lead --- some people want to talk about death directly, others do not. Both are valid.</li>
             <li>Do not rush to fix or reassure. Sometimes the most therapeutic response is silence and witness.</li>
-            <li>Screen for existential distress separately from depression — they require different interventions.</li>
+            <li>Screen for existential distress separately from depression --- they require different interventions.</li>
             <li>Support the family system, not just the patient. Caregiver distress is both its own concern and a predictor of patient outcomes.</li>
             <li>Remember that finding meaning does not require accepting death cheerfully. It requires being heard.</li>
           </ul>
@@ -963,7 +1268,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           One of the most striking findings in palliative psychology is that some people
           report significant positive psychological change alongside their grief and
           fear<Citation id="9" index={9} />. This is not denial or toxic positivity. It is a
-          well-documented phenomenon called post-traumatic growth — the experience of positive
+          well-documented phenomenon called post-traumatic growth --- the experience of positive
           change that emerges from the struggle with a major life crisis.
         </p>
         <p className="mb-6">
@@ -971,7 +1276,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           they never had before, a deepening of relationships that superficiality no longer permits,
           a newfound appreciation for small pleasures that previously went unnoticed, and a sense
           of personal strength they did not know they possessed. These experiences do not cancel
-          out the suffering. They coexist with it — and for many people, they become the most
+          out the suffering. They coexist with it --- and for many people, they become the most
           valuable part of whatever time remains<Citation id="9" index={9} />.
         </p>
         <p className="mb-6">
@@ -979,8 +1284,19 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           have this diagnosis. But I would not trade the person it has made me. I see everything
           differently now. I say what I mean. I hold the people I love a little tighter. I have
           stopped pretending that things that do not matter actually do." This is not a silver
-          lining. It is a testament to the human capacity for meaning-making, even — perhaps
-          especially — in the face of the ultimate limit<Citation id="9" index={9} />.
+          lining. It is a testament to the human capacity for meaning-making, even --- perhaps
+          especially --- in the face of the ultimate limit<Citation id="9" index={9} />.
+        </p>
+        <p className="mb-6">
+          It is essential to note that post-traumatic growth is not a universal experience, nor
+          is it an expectation that should be placed upon people facing the end of life. Some
+          individuals find their remaining time marked primarily by suffering, and their
+          experience is no less valid than that of someone who reports transformation. The research
+          on post-traumatic growth is descriptive, not prescriptive --- it documents what some
+          people experience, not what all people should experience. Holding space for the full
+          range of responses to terminal diagnosis, without privileging any particular narrative,
+          is itself an act of profound respect for the complexity of human experience in the face
+          of death.
         </p>
 
         <QuoteBlock
@@ -1024,15 +1340,15 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'You carry within you a gift that someone chose to give — or that was given on their behalf by a family enduring the worst day of their lives. The weight of that is not something to power through. It is something to sit with, to honor, and to let shape the way you live the life they helped make possible.',
+      'You carry within you a gift that someone chose to give --- or that was given on their behalf by a family enduring the worst day of their lives. The weight of that is not something to power through. It is something to sit with, to honor, and to let shape the way you live the life they helped make possible.',
 
     practicalExercise: {
       title: 'Gratitude and Grief Integration Practice',
       steps: [
         { title: 'Acknowledge the complexity', description: 'Write two lists side by side: "What I feel grateful for since my transplant" and "What I find difficult about my transplant experience." Allow both lists to be as long as they need to be. Neither cancels the other out.' },
-        { title: 'Write to your donor', description: 'Whether or not you ever send it, write a letter to your donor or their family. Say what you want them to know. This is not an exercise in performing gratitude — it is a space for genuine emotional expression, including any complicated feelings.' },
-        { title: 'Identify one boundary to set', description: 'Think about the social pressure you feel related to your transplant — the obligation to be positive, the expectation to "make the most" of your new organ, the questions from others. Choose one boundary to set this week that protects your emotional well-being.' },
-        { title: 'Connect with a peer', description: 'Seek out a transplant support group — in person or online. Hearing that other recipients share your complicated feelings can be profoundly normalizing. You do not have to process this alone.' },
+        { title: 'Write to your donor', description: 'Whether or not you ever send it, write a letter to your donor or their family. Say what you want them to know. This is not an exercise in performing gratitude --- it is a space for genuine emotional expression, including any complicated feelings.' },
+        { title: 'Identify one boundary to set', description: 'Think about the social pressure you feel related to your transplant --- the obligation to be positive, the expectation to "make the most" of your new organ, the questions from others. Choose one boundary to set this week that protects your emotional well-being.' },
+        { title: 'Connect with a peer', description: 'Seek out a transplant support group --- in person or online. Hearing that other recipients share your complicated feelings can be profoundly normalizing. You do not have to process this alone.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Emotional Recovery',
@@ -1056,7 +1372,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             On the day you receive a transplant, you are given the most extraordinary gift one
-            human being can offer another — a piece of their body, entrusted to yours, so that
+            human being can offer another --- a piece of their body, entrusted to yours, so that
             you might live. The medical narrative calls this a second chance, a miracle, a
             triumph of science. And it is all of those things. But it is also something else:
             a psychological experience of staggering complexity that very few people outside the
@@ -1073,8 +1389,8 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             and emotionally extreme experiences a person can survive.
           </p>
           <p className="mb-6">
-            This article explores the emotional terrain of organ transplantation — from the
-            agonizing wait for a donor to the complicated reality of life after surgery — with
+            This article explores the emotional terrain of organ transplantation --- from the
+            agonizing wait for a donor to the complicated reality of life after surgery --- with
             the honesty and depth that transplant recipients deserve.
           </p>
         </div>
@@ -1087,7 +1403,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           Waiting for an organ is not like waiting for test results or a scheduled procedure.
           It is an indefinite, open-ended period of suspended animation during which a person
           must simultaneously prepare to live and prepare to die. The phone could ring at any
-          moment — or it might never ring at all. This existential ambiguity takes a measurable
+          moment --- or it might never ring at all. This existential ambiguity takes a measurable
           psychological toll<Citation id="4" index={4} />.
         </p>
         <p className="mb-6">
@@ -1095,16 +1411,29 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           perpetual readiness. Bags are packed. Plans are contingent. Every decision is filtered
           through the question: "What if the call comes today?" This hypervigilance, sustained
           over months or years, produces chronic stress, sleep disruption, and a form of
-          anticipatory grief that is difficult for outsiders to comprehend — you are mourning the
+          anticipatory grief that is difficult for outsiders to comprehend --- you are mourning the
           life you might lose while simultaneously hoping for the death of a stranger that might
           save you<Citation id="4" index={4} />.
+        </p>
+        <p className="mb-6">
+          The waiting period is further complicated by the physical deterioration that often
+          accompanies the underlying condition. As the organ that needs replacing continues to
+          fail, the person's world contracts --- energy decreases, activities become impossible,
+          independence erodes. This progressive loss of function creates a dual psychological
+          burden: the grief of watching one's own body decline, layered atop the uncertainty
+          of whether a transplant will arrive in time to reverse the trajectory. Some people
+          on the waiting list describe feeling as though they are watching their life narrow
+          to a point, unsure whether the point represents a new beginning or an ending. The
+          emotional stamina required to maintain hope under these conditions, day after day
+          and month after month, is one of the most underappreciated aspects of the transplant
+          experience.
         </p>
 
         <ArticleCallout type="insight" title="The Ethical Weight of Waiting">
           <p>
             One of the most psychologically unique aspects of organ transplantation is the
             awareness that your survival may depend on someone else's death. Most waiting-list
-            patients report having thought about their potential donor — who they are, how they
+            patients report having thought about their potential donor --- who they are, how they
             might die, whether their family would grieve. This awareness creates a form of
             preemptive guilt that has no parallel in other medical experiences. It is not
             pathological. It is a reflection of empathy operating under extraordinary
@@ -1116,7 +1445,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
           The Surgery and Its Immediate Aftermath
         </h2>
         <p className="mb-6">
-          The call comes. The surgery happens. And then the person wakes up — alive, in pain,
+          The call comes. The surgery happens. And then the person wakes up --- alive, in pain,
           and carrying within their body an organ that belonged to someone else. The immediate
           post-surgical period is often described in intensely contradictory terms: profound
           relief and profound disorientation, gratitude and terror, hope and a strange, pervasive
@@ -1124,13 +1453,27 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           The ICU environment itself can be traumatic. Many transplant recipients report
-          experiences consistent with ICU delirium — confusion, hallucinations, disorientation,
+          experiences consistent with ICU delirium --- confusion, hallucinations, disorientation,
           and intense fear. Some develop post-traumatic stress symptoms related not to the organ
           failure that brought them to transplant, but to the transplant process itself. The
           boundary between the life-saving event and the traumatic event is not always clear,
           and the expectation that patients should feel uniformly grateful from the moment they
           open their eyes can make it difficult to express the more complicated emotions that are
           actually present<Citation id="1" index={1} />.
+        </p>
+        <p className="mb-6">
+          The transition from ICU to hospital ward to home introduces its own sequence of
+          psychological challenges. In the ICU, patients are surrounded by constant monitoring
+          and medical attention that, while overwhelming, provides a sense of safety --- if
+          something goes wrong, help is immediately available. As monitoring decreases during
+          recovery, many recipients experience heightened anxiety about their body's ability
+          to sustain the transplanted organ without continuous surveillance. The move home,
+          which should represent recovery, can paradoxically trigger a wave of fear as the
+          person assumes full responsibility for their own post-transplant care, including
+          complex medication regimens, dietary restrictions, and vigilant self-monitoring for
+          signs of rejection. This transition from institutional safety to self-management is
+          a predictable stress point that transplant teams increasingly address through
+          graduated discharge planning and post-discharge psychological support.
         </p>
 
         <StatCard
@@ -1146,13 +1489,13 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           Survivor guilt is one of the most distinctive psychological challenges of organ
           transplantation. Approximately one-third of recipients report significant guilt
-          related to their transplant — guilt about surviving when others on the waiting list
+          related to their transplant --- guilt about surviving when others on the waiting list
           did not, guilt about the donor's death, and guilt about not feeling as grateful as
           they believe they should<Citation id="2" index={2} />.
         </p>
         <p className="mb-6">
           The pressure to perform gratitude is immense and comes from every direction: family,
-          friends, medical teams, the media, and society at large. "You got a second chance —
+          friends, medical teams, the media, and society at large. "You got a second chance ---
           you should be the happiest person alive" is a sentiment that transplant recipients
           hear constantly. And while they often do feel genuine gratitude, they also feel
           exhausted, frightened, in pain, and bewildered. The gap between what they are expected
@@ -1162,9 +1505,23 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           Healthy psychological adaptation after transplant does not require eliminating guilt.
           It requires integrating it. Research shows that recipients who can hold gratitude and
-          guilt simultaneously — acknowledging that both are valid responses to an extraordinary
-          situation — report better psychological outcomes than those who try to suppress one
+          guilt simultaneously --- acknowledging that both are valid responses to an extraordinary
+          situation --- report better psychological outcomes than those who try to suppress one
           emotion in favor of the other<Citation id="2" index={2} />.
+        </p>
+        <p className="mb-6">
+          The social dynamics surrounding survivor guilt deserve particular examination because
+          they are often invisible to people outside the transplant community. Recipients
+          frequently describe situations where acquaintances, coworkers, or even close friends
+          make well-intentioned comments that inadvertently intensify their guilt. Statements
+          like "you must feel so lucky" or "your donor would want you to live your best life"
+          carry implicit demands for a particular emotional performance. When a recipient is
+          having a difficult day --- struggling with medication side effects, worrying about
+          rejection, or simply feeling exhausted --- these comments can feel like accusations of
+          ingratitude rather than expressions of support. Learning to set gentle boundaries
+          around these interactions, and finding spaces where complicated feelings can be expressed
+          without judgment, is an important component of long-term psychological recovery after
+          transplantation.
         </p>
 
         <h2 id="identity-and-body-image" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1180,12 +1537,24 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           Up to 40% of transplant recipients report body image disturbances following their
           procedure<Citation id="5" index={5} />. These range from discomfort with surgical scars
-          to a deeper sense of bodily alienation — the feeling that the body they inhabit is
+          to a deeper sense of bodily alienation --- the feeling that the body they inhabit is
           not entirely theirs. Some recipients describe sensing the presence of their donor,
           attributing new preferences or personality changes to the transplanted organ. While
           there is no scientific evidence for cellular memory transfer, the psychological
           phenomenon is real and deserves clinical attention rather than
           dismissal<Citation id="8" index={8} />.
+        </p>
+        <p className="mb-6">
+          The physical changes associated with immunosuppressive medication add another layer to
+          the body image challenge. Weight gain, facial puffiness, hair changes, skin sensitivity,
+          and increased susceptibility to infections all alter the person's physical appearance
+          and their experience of inhabiting their body. For recipients who were already
+          physically debilitated before the transplant, these medication-related changes can feel
+          particularly cruel --- having endured the long decline of organ failure and the ordeal
+          of surgery, they emerge with a body that functions better internally but looks and
+          feels different from the one they remember. Navigating this altered physical identity
+          requires a form of grief work that is rarely discussed in the context of transplant
+          recovery but that profoundly affects quality of life and psychological well-being.
         </p>
 
         <ArticleAccordion items={[
@@ -1194,10 +1563,10 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             content: (
               <p>
                 Some recipients describe a period of feeling estranged from their own body after
-                transplant — as though the organ is a foreign object that does not fully belong.
+                transplant --- as though the organ is a foreign object that does not fully belong.
                 This experience typically diminishes over time as the body heals and the new organ
                 becomes functionally integrated. Therapeutic approaches that emphasize embodiment
-                practices — mindful body scans, gentle movement, and self-touch — can accelerate
+                practices --- mindful body scans, gentle movement, and self-touch --- can accelerate
                 this process of psychological reintegration.
               </p>
             ),
@@ -1211,7 +1580,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
                 fog, insomnia, and altered appearance. The daily routine of taking medications that
                 both sustain life and diminish quality of life creates an ongoing psychological
                 tension. Research identifies medication-related psychological distress as one of
-                the strongest predictors of non-adherence — making psychological support around
+                the strongest predictors of non-adherence --- making psychological support around
                 medication management a clinical priority.
               </p>
             ),
@@ -1222,7 +1591,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
               <p>
                 The possibility that the body might reject the transplanted organ creates a form
                 of chronic health anxiety that is unique to transplant recipients. Every new
-                symptom — a fever, an unfamiliar pain, fatigue — triggers the question: "Is this
+                symptom --- a fever, an unfamiliar pain, fatigue --- triggers the question: "Is this
                 rejection?" This hypervigilance is not irrational. Rejection is a real medical
                 possibility. But when it becomes pervasive, it can significantly impair quality
                 of life and requires targeted psychological support.
@@ -1233,7 +1602,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
             title: 'Relationship with the donor and donor family',
             content: (
               <p>
-                Many recipients think about their donor regularly — who they were, what they valued,
+                Many recipients think about their donor regularly --- who they were, what they valued,
                 how they died. Some write to donor families through organ procurement organizations.
                 Others prefer not to know. Both approaches are valid. The psychological key is
                 having the freedom to relate to the donor in whatever way feels authentic, without
@@ -1249,7 +1618,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           International guidelines now recommend that psychological support be integrated into
-          every phase of the transplant process — pre-transplant evaluation, the waiting period,
+          every phase of the transplant process --- pre-transplant evaluation, the waiting period,
           post-surgical recovery, and long-term follow-up<Citation id="7" index={7} />.
           Pre-transplant psychological evaluation is not a gatekeeping exercise; research shows
           that identifying and addressing psychological risk factors before surgery significantly
@@ -1258,23 +1627,67 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Cognitive behavioral therapy adapted for transplant populations addresses the specific
-          thought patterns that drive distress — catastrophic interpretation of bodily symptoms,
+          thought patterns that drive distress --- catastrophic interpretation of bodily symptoms,
           perfectionist standards for "using" the second chance, and all-or-nothing thinking about
           gratitude and recovery<Citation id="3" index={3} />. Support groups composed of fellow
           transplant recipients provide something that even the most skilled therapist cannot: the
           normalizing experience of hearing someone else say "I feel guilty that I am alive" and
           knowing you are not the only one.
         </p>
+        <p className="mb-6">
+          The long-term nature of transplant psychology requires support systems that extend well
+          beyond the initial recovery period. Research shows that psychological distress can
+          actually increase in the months and years following transplant, as the initial relief
+          fades and the chronic realities of immunosuppression, ongoing medical monitoring, and
+          the ever-present possibility of rejection settle into daily life. Recipients at the
+          one-year and five-year marks often face psychological challenges that are qualitatively
+          different from those in the immediate post-surgical period --- challenges related to
+          returning to work, renegotiating relationships, managing chronic medication side effects,
+          and finding a sense of normalcy in a life that has been fundamentally altered. Transplant
+          programs that provide ongoing psychological check-ins at regular intervals, rather than
+          offering support only during the acute phase, better serve the full arc of their
+          patients' emotional needs.
+        </p>
 
         <ArticleCallout type="action-plan" title="Building Your Post-Transplant Support System">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Ask your transplant team about psychological support services — many transplant centers have dedicated mental health professionals</li>
+            <li>Ask your transplant team about psychological support services --- many transplant centers have dedicated mental health professionals</li>
             <li>Connect with a transplant peer support group through your hospital or organizations like the Transplant Recipients International Organization</li>
-            <li>Be honest with your medical team about emotional struggles — they are as important as physical symptoms</li>
-            <li>Give yourself permission to feel complicated emotions without judgment — gratitude and grief are not mutually exclusive</li>
+            <li>Be honest with your medical team about emotional struggles --- they are as important as physical symptoms</li>
+            <li>Give yourself permission to feel complicated emotions without judgment --- gratitude and grief are not mutually exclusive</li>
             <li>If medication side effects affect your mood or cognition, discuss them openly rather than silently enduring or skipping doses</li>
           </ul>
         </ArticleCallout>
+
+        <h2 id="the-caregiver-experience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Caregiver Experience: Partners and Families in the Transplant Journey
+        </h2>
+        <p className="mb-6">
+          The psychological impact of organ transplantation extends well beyond the recipient to
+          encompass the partners, family members, and close friends who serve as caregivers
+          throughout the transplant journey. Caregivers carry a unique psychological burden that
+          is often overlooked in the medical focus on the patient. During the waiting period, they
+          share the uncertainty and fear. During the surgery, they endure hours of helpless
+          waiting. During recovery, they take on practical responsibilities --- managing medications,
+          monitoring for complications, maintaining the household --- while simultaneously processing
+          their own emotional responses to having nearly lost someone they love. Research on
+          transplant caregiver well-being reveals rates of depression, anxiety, and burnout that
+          rival those of the recipients themselves.
+        </p>
+        <p className="mb-6">
+          Caregivers also navigate a complex emotional landscape that includes relief, exhaustion,
+          resentment, and guilt about the resentment. The expectation that caregivers should feel
+          only gratitude and selfless devotion mirrors the gratitude pressure placed on recipients
+          and can be equally isolating. A spouse who feels overwhelmed by the demands of
+          post-transplant care may be reluctant to express frustration because it feels
+          inappropriate given that their partner has just survived a life-threatening medical
+          event. Yet suppressed caregiver distress does not disappear --- it manifests as physical
+          health problems, relationship strain, and diminished capacity to provide the very
+          support the recipient needs. Transplant programs that explicitly include caregiver
+          psychological assessment and support --- not as an afterthought but as a core component
+          of transplant care --- produce better outcomes for both the recipient and the family
+          system as a whole.
+        </p>
 
         <h2 id="post-traumatic-growth-after-transplant" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Post-Traumatic Growth: The Unexpected Transformation
@@ -1282,7 +1695,7 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           Despite the psychological challenges, a significant body of research documents
           post-traumatic growth in transplant recipients<Citation id="9" index={9} />.
-          Many people describe a fundamental shift in priorities after transplant — a deeper
+          Many people describe a fundamental shift in priorities after transplant --- a deeper
           appreciation for daily life, stronger relationships, reduced concern with trivial
           worries, and a heightened sense of purpose. Some channel their experience into advocacy
           for organ donation, peer mentoring for new recipients, or creative projects that give
@@ -1291,11 +1704,26 @@ export const medicalTraumaHealthcareArticlesB: Article[] = [
         <p className="mb-6">
           This growth does not erase the difficulty. It grows alongside it. The person who
           experiences profound gratitude on Tuesday and crushing guilt on Wednesday is not
-          confused — they are human. The transplant experience, in all its complexity, asks
+          confused --- they are human. The transplant experience, in all its complexity, asks
           people to hold contradictions that most of us never face: life and death, self and
           other, gratitude and grief, suffering and transcendence. Those who navigate it well
           do not resolve these contradictions. They learn to carry them with
           increasing grace<Citation id="9" index={9} />.
+        </p>
+        <p className="mb-6">
+          The trajectory of post-traumatic growth following transplant is often nonlinear, with
+          periods of profound appreciation interspersed with setbacks, medical scares, and
+          moments of despair. Research suggests that growth tends to deepen over time for
+          recipients who have access to psychological support and peer community, as the initial
+          overwhelm of the transplant experience gradually gives way to a more integrated
+          understanding of what has happened and what it means for the life ahead. Some
+          recipients describe reaching a point, often several years post-transplant, where the
+          organ begins to feel less like a foreign object and more like an integral part of
+          who they are --- not replacing the awareness of its origins, but coexisting with a
+          sense of wholeness that the early months of recovery did not permit. This integration
+          of the transplant experience into one's broader life story is perhaps the deepest
+          form of post-traumatic growth available to recipients, and it unfolds on a timeline
+          that cannot be rushed.
         </p>
 
         <QuoteBlock

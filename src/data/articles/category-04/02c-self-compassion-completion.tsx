@@ -120,7 +120,7 @@ export const selfCompassionArticlesC: Article[] = [
               title: 'Imagine a compassionate perspective',
               description: (
                 <p>
-                  Picture an unconditionally loving figure — real or imagined. This could be a mentor, grandparent, therapist, or idealized compassionate presence. What would they say to you about this situation?
+                  Picture an unconditionally loving figure --- real or imagined. This could be a mentor, grandparent, therapist, or idealized compassionate presence. What would they say to you about this situation?
                 </p>
               ),
             },
@@ -211,10 +211,10 @@ export const selfCompassionArticlesC: Article[] = [
             I know you're struggling with [specific situation]. I can see how much pain this is causing you, and I want you to know that your feelings make complete sense given what you're going through.
           </p>
           <p className="mb-4">
-            What happened [brief description] was difficult, and it's understandable that you feel [emotions]. Everyone experiences [similar struggles] — you're not alone in this, even though it might feel that way.
+            What happened [brief description] was difficult, and it's understandable that you feel [emotions]. Everyone experiences [similar struggles] --- you're not alone in this, even though it might feel that way.
           </p>
           <p className="mb-4">
-            I want you to remember that [compassionate truth about their worth, capability, or situation]. You deserve [what they need — kindness, rest, understanding, etc.].
+            I want you to remember that [compassionate truth about their worth, capability, or situation]. You deserve [what they need --- kindness, rest, understanding, etc.].
           </p>
           <p>
             With care and compassion, [Compassionate part of yourself]
@@ -231,7 +231,7 @@ export const selfCompassionArticlesC: Article[] = [
           items={[
             {
               feature: 'The words feel fake or forced',
-              values: ['Write anyway — sincerity follows action, not vice versa'],
+              values: ['Write anyway --- sincerity follows action, not vice versa'],
             },
             {
               feature: `I don't know what a compassionate voice sounds like`,
@@ -239,11 +239,11 @@ export const selfCompassionArticlesC: Article[] = [
             },
             {
               feature: `I start crying and can't continue`,
-              values: ['This is healing, not failure — the emotions are part of the process'],
+              values: ['This is healing, not failure --- the emotions are part of the process'],
             },
             {
               feature: `I can't think of anyone compassionate`,
-              values: ['Create an idealized figure — a wise, kind presence who sees your worth'],
+              values: ['Create an idealized figure --- a wise, kind presence who sees your worth'],
             },
           ]}
           highlightColumn={1}
@@ -266,7 +266,7 @@ export const selfCompassionArticlesC: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Over time, the compassionate voice in the letter can become internalized — your own voice, offering yourself the care you deserve.
+          Over time, the compassionate voice in the letter can become internalized --- your own voice, offering yourself the care you deserve.
         </p>
       </>
     ),
@@ -340,7 +340,7 @@ export const selfCompassionArticlesC: Article[] = [
             "Self-compassion sounds like feeling sorry for yourself." This common misconception prevents many people from practicing self-compassion. But research reveals these are fundamentally different psychological states with opposite effects on wellbeing.
           </p>
           <p className="mb-6">
-            Understanding the distinction between self-compassion and self-pity is crucial — one promotes resilience and growth, the other perpetuates suffering <Citation id="1" index={1} source="Self and Identity" year="2014" tier={1} />.
+            Understanding the distinction between self-compassion and self-pity is crucial --- one promotes resilience and growth, the other perpetuates suffering <Citation id="1" index={1} source="Self and Identity" year="2014" tier={1} />.
           </p>
         </div>
 
@@ -508,7 +508,7 @@ export const selfCompassionArticlesC: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Some situations genuinely are unfair, traumatic, or overwhelming. Validating that reality isn't self-pity — it's acknowledging truth. The key is whether you stay stuck in victimhood or move toward agency and healing.
+            Some situations genuinely are unfair, traumatic, or overwhelming. Validating that reality isn't self-pity --- it's acknowledging truth. The key is whether you stay stuck in victimhood or move toward agency and healing.
           </p>
         </ArticleCallout>
 
@@ -525,7 +525,7 @@ export const selfCompassionArticlesC: Article[] = [
         </p>
 
         <p className="mb-6">
-          The difference isn't in the severity of the situation — it's in your relationship to it and your sense of agency moving forward.
+          The difference isn't in the severity of the situation --- it's in your relationship to it and your sense of agency moving forward.
         </p>
       </>
     ),
@@ -646,7 +646,7 @@ export const selfCompassionArticlesC: Article[] = [
         />
 
         <p className="mb-6">
-          These effect sizes are larger than many established psychological interventions. Self-compassion isn't just correlated with better mental health — it's one of the strongest protective factors identified.
+          These effect sizes are larger than many established psychological interventions. Self-compassion isn't just correlated with better mental health --- it's one of the strongest protective factors identified.
         </p>
 
         <h2 id="depression" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -700,7 +700,7 @@ export const selfCompassionArticlesC: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-compassion doesn't just reduce distress — it actively promotes flourishing <Citation id="2" index={2} source="Journal of Research in Personality" year="2007" tier={1} />:
+          Self-compassion doesn't just reduce distress --- it actively promotes flourishing <Citation id="2" index={2} source="Journal of Research in Personality" year="2007" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -732,7 +732,7 @@ export const selfCompassionArticlesC: Article[] = [
         </h2>
 
         <p className="mb-6">
-          One of the most important findings: self-compassion enhances resilience — the ability to bounce back from adversity <Citation id="6" index={6} source="Anxiety, Stress, and Coping" year="2014" tier={1} />.
+          One of the most important findings: self-compassion enhances resilience --- the ability to bounce back from adversity <Citation id="6" index={6} source="Anxiety, Stress, and Coping" year="2014" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -843,7 +843,7 @@ export const selfCompassionArticlesC: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Self-compassion isn't just a feel-good idea — it's an evidence-based approach to mental health with strong scientific support.
+          Self-compassion isn't just a feel-good idea --- it's an evidence-based approach to mental health with strong scientific support.
         </p>
       </>
     ),
@@ -987,7 +987,7 @@ export const selfCompassionArticlesC: Article[] = [
               title: '5. Supportive Touch (20 seconds)',
               content: (
                 <p>
-                  Hand on heart, gentle hug, hand on cheek — physical gestures activate the caregiving system. Use during stress or difficulty.
+                  Hand on heart, gentle hug, hand on cheek --- physical gestures activate the caregiving system. Use during stress or difficulty.
                 </p>
               ),
             },
@@ -1032,12 +1032,12 @@ export const selfCompassionArticlesC: Article[] = [
           columns={['Harsh Tracking', 'Compassionate Tracking']}
           items={[
             {
-              feature: 'I only did 3/7 days — I failed',
-              values: ["I practiced 3 times this week — that's 3 more than last month!"],
+              feature: 'I only did 3/7 days --- I failed',
+              values: ["I practiced 3 times this week --- that's 3 more than last month!"],
             },
             {
               feature: 'I should be better by now',
-              values: ["Change takes time — I'm building new patterns"],
+              values: ["Change takes time --- I'm building new patterns"],
             },
             {
               feature: `Focus: what I didn\'t do`,
@@ -1066,7 +1066,7 @@ export const selfCompassionArticlesC: Article[] = [
               title: `Obstacle: "It feels awkward or fake`,
               description: (
                 <p>
-                  Solution: Normal at first. Keep practicing anyway — authenticity follows action. Start with practices that feel least awkward.
+                  Solution: Normal at first. Keep practicing anyway --- authenticity follows action. Start with practices that feel least awkward.
                 </p>
               ),
             },
@@ -1127,7 +1127,7 @@ export const selfCompassionArticlesC: Article[] = [
             The ultimate meta-practice: treat yourself with compassion when you forget to practice self-compassion.
           </p>
           <p>
-            You'll miss days. You'll forget. You'll practice imperfectly. That's not failure — that's being human. Notice the harsh judgment, then respond with kindness: "I'm learning. I'll try again tomorrow."
+            You'll miss days. You'll forget. You'll practice imperfectly. That's not failure --- that's being human. Notice the harsh judgment, then respond with kindness: "I'm learning. I'll try again tomorrow."
           </p>
         </ArticleCallout>
 

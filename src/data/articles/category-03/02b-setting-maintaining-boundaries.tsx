@@ -82,7 +82,7 @@ export const settingBoundariesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Boundaries aren't one-size-fits-all. The limits you need around your body are different from the limits you need around your time or emotional energy. Understanding the distinct types of boundaries helps you identify exactly where your limits are being violated—and what you need to communicate.
+            Boundaries aren't one-size-fits-all. The limits you need around your body are different from the limits you need around your time or emotional energy. Understanding the distinct types of boundaries helps you identify exactly where your limits are being violated---and what you need to communicate.
           </p>
           <p className="mb-6">
             Research identifies six major categories of boundaries, each protecting a different aspect of your wellbeing <Citation id="1" index={1} source="Journal of Social Psychology" year="2020" tier={1} />. Most people have strong boundaries in some areas and weak ones in others.
@@ -110,7 +110,7 @@ export const settingBoundariesArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>"I'm not comfortable with hugs. Can we shake hands instead?"</li>
           <li>"Please knock before entering my room."</li>
-          <li>"I need you to step back a bit—this feels too close."</li>
+          <li>"I need you to step back a bit---this feels too close."</li>
           <li>"Don't tickle me. I've asked you to stop."</li>
         </ul>
         <p className="mb-6">
@@ -124,7 +124,7 @@ export const settingBoundariesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Your body is yours. You have the right to decide who touches it, when, and how—regardless of relationship, context, or social expectations.</p>
+          <p>Your body is yours. You have the right to decide who touches it, when, and how---regardless of relationship, context, or social expectations.</p>
         </ArticleCallout>
 
         <h2 id="emotional-boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -337,7 +337,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Digital:</strong> You respond quickly to family but check work emails once daily</li>
         </ul>
         <p className="mb-6">
-          This isn't hypocrisy—it's appropriate differentiation. Different relationships warrant different levels of access.
+          This isn't hypocrisy---it's appropriate differentiation. Different relationships warrant different levels of access.
         </p>
 
         <h2 id="starting-point" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -437,7 +437,7 @@ export const settingBoundariesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Saying no is one of the most powerful acts of self-care—and one of the hardest for many people to do. The word sits in your throat. Your heart races. You imagine their disappointment. So you say yes, again, and spend the next week resenting it.
+            Saying no is one of the most powerful acts of self-care---and one of the hardest for many people to do. The word sits in your throat. Your heart races. You imagine their disappointment. So you say yes, again, and spend the next week resenting it.
           </p>
           <p className="mb-6">
             The ability to refuse requests without guilt is a skill, not an innate trait <Citation id="1" index={1} source="Social Psychological and Personality Science" year="2020" tier={1} />. This article provides the scripts, strategies, and mindset shifts you need to say no with confidence and kindness.
@@ -456,7 +456,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Fear of being selfish:</strong> "Good people don't say no"</li>
         </ol>
         <p className="mb-6">
-          These fears are especially pronounced in people socialized to be accommodating—particularly women, who face social penalties for assertiveness <Citation id="6" index={6} source="Sex Roles" year="2019" tier={1} />.
+          These fears are especially pronounced in people socialized to be accommodating---particularly women, who face social penalties for assertiveness <Citation id="6" index={6} source="Sex Roles" year="2019" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -744,10 +744,10 @@ export const settingBoundariesArticlesB: Article[] = [
           Final Thoughts
         </h2>
         <p className="mb-6">
-          Saying no gets easier with practice. The first ten times will be uncomfortable. The next ten will be slightly less so. Eventually, declining requests that don't serve you will feel neutral—maybe even empowering.
+          Saying no gets easier with practice. The first ten times will be uncomfortable. The next ten will be slightly less so. Eventually, declining requests that don't serve you will feel neutral---maybe even empowering.
         </p>
         <p className="mb-6">
-          Remember: People who respect you will accept your no. Those who don't weren't respecting you in the first place—they were using you.
+          Remember: People who respect you will accept your no. Those who don't weren't respecting you in the first place---they were using you.
         </p>
         <p className="mb-6">
           Your "no" is just as valuable as your "yes." Guard it accordingly.
@@ -784,7 +784,7 @@ export const settingBoundariesArticlesB: Article[] = [
             Setting boundaries with family feels like betrayal. These are the people who raised you, who share your blood, who've known you your whole life. How can you say no to them?
           </p>
           <p className="mb-6">
-            But family relationships are precisely where boundaries matter most—and where they're hardest to enforce <Citation id="1" index={1} source="Family Process" year="2020" tier={1} />. This article addresses the unique challenges of family boundaries and how to navigate them.
+            But family relationships are precisely where boundaries matter most---and where they're hardest to enforce <Citation id="1" index={1} source="Family Process" year="2020" tier={1} />. This article addresses the unique challenges of family boundaries and how to navigate them.
           </p>
         </div>
 
@@ -893,10 +893,10 @@ export const settingBoundariesArticlesB: Article[] = [
           <strong>Reframe the guilt:</strong>
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li>Caring for yourself isn't abandoning them—it's necessary for your health</li>
+          <li>Caring for yourself isn't abandoning them---it's necessary for your health</li>
           <li>Love doesn't mean unlimited access or obligation</li>
           <li>You can honor their sacrifices without sacrificing yourself</li>
-          <li>Guilt doesn't mean you're doing something wrong—it means you're breaking old patterns</li>
+          <li>Guilt doesn't mean you're doing something wrong---it means you're breaking old patterns</li>
         </ol>
 
         <ArticleCallout variant="tip">
@@ -914,7 +914,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Collectivist cultures (East Asia, Latin America, Middle East, Africa):</strong> Prioritize family harmony, interdependence, indirect communication</li>
         </ul>
         <p className="mb-6">
-          In collectivist cultures, setting boundaries may be seen as disrespectful, selfish, or a sign of weak family bonds. This doesn't mean boundaries are wrong—it means you may need:
+          In collectivist cultures, setting boundaries may be seen as disrespectful, selfish, or a sign of weak family bonds. This doesn't mean boundaries are wrong---it means you may need:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>More indirect communication ("I need to check with my spouse" instead of "No")</li>
@@ -956,7 +956,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Pushback:</strong> They may test boundaries repeatedly</li>
           <li><strong>Grief:</strong> Mourning the family you wish you had vs. the one you have</li>
           <li><strong>Relief:</strong> Over time, breathing room brings peace</li>
-          <li><strong>Growth:</strong> Your relationship may improve with clear limits—or it may not, and that's not your fault</li>
+          <li><strong>Growth:</strong> Your relationship may improve with clear limits---or it may not, and that's not your fault</li>
         </ul>
 
         <QuoteBlock
@@ -968,7 +968,7 @@ export const settingBoundariesArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Remember: Setting boundaries with family doesn't make you a bad son, daughter, sibling, or parent. It makes you a healthier adult taking care of yourself so you can show up authentically—not resentfully—in the relationships that matter.
+          Remember: Setting boundaries with family doesn't make you a bad son, daughter, sibling, or parent. It makes you a healthier adult taking care of yourself so you can show up authentically---not resentfully---in the relationships that matter.
         </p>
       </>
     ),
@@ -998,7 +998,7 @@ export const settingBoundariesArticlesB: Article[] = [
             Work boundaries feel risky. What if saying no costs you opportunities? What if protecting your time makes you seem uncommitted? What if your boss expects 24/7 availability?
           </p>
           <p className="mb-6">
-            Research shows that clear professional boundaries don't harm careers—they prevent burnout and increase long-term productivity <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Here's how to set them effectively.
+            Research shows that clear professional boundaries don't harm careers---they prevent burnout and increase long-term productivity <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Here's how to set them effectively.
           </p>
         </div>
 
@@ -1117,7 +1117,7 @@ export const settingBoundariesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="warning">
-          <p><strong>Exception:</strong> If your workplace actively punishes boundaries (expects 80-hour weeks, constant availability, no vacation), the problem isn't your boundaries—it's the workplace. Boundaries won't change a toxic culture; leaving might be the healthiest choice.</p>
+          <p><strong>Exception:</strong> If your workplace actively punishes boundaries (expects 80-hour weeks, constant availability, no vacation), the problem isn't your boundaries---it's the workplace. Boundaries won't change a toxic culture; leaving might be the healthiest choice.</p>
         </ArticleCallout>
 
         <h2 id="scripts-by-role" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1165,7 +1165,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li>Setting boundaries feels unsafe or career-ending</li>
         </ul>
         <p className="mb-6">
-          A workplace that doesn't respect boundaries doesn't respect employees. Your boundary isn't the problem—the system is.
+          A workplace that doesn't respect boundaries doesn't respect employees. Your boundary isn't the problem---the system is.
         </p>
 
         <QuoteBlock
@@ -1181,7 +1181,7 @@ export const settingBoundariesArticlesB: Article[] = [
     id: catId(17),
     slug: 'when-someone-doesnt-respect-boundaries-what-to-do-next',
     title: "When Someone Doesn't Respect Your Boundaries: What to Do Next",
-    description: "What to do when someone repeatedly violates your boundaries—from escalation strategies to when it's time to walk away.",
+    description: "What to do when someone repeatedly violates your boundaries---from escalation strategies to when it's time to walk away.",
     image: "/images/articles/cat03/cover-017.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -1336,7 +1336,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li>The relationship causes more harm than benefit</li>
         </ul>
         <p className="mb-6">
-          <strong>You don't need permission to protect yourself.</strong> You don't need to keep giving chances. You're allowed to walk away from people who don't respect you—even if they're family, even if they're not 'that bad," even if they "mean well."
+          <strong>You don't need permission to protect yourself.</strong> You don't need to keep giving chances. You're allowed to walk away from people who don't respect you---even if they're family, even if they're not 'that bad," even if they "mean well."
         </p>
 
         <h2 id="protecting-yourself" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1386,7 +1386,7 @@ export const settingBoundariesArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Boundaries reveal character. People who respect you will respect your limits. Those who don't were never respecting you in the first place—they were using you. Enforcing consequences isn't mean. It's self-preservation.
+          Boundaries reveal character. People who respect you will respect your limits. Those who don't were never respecting you in the first place---they were using you. Enforcing consequences isn't mean. It's self-preservation.
         </p>
       </>
     ),
@@ -1396,7 +1396,7 @@ export const settingBoundariesArticlesB: Article[] = [
     id: catId(18),
     slug: 'boundaries-vs-walls-protect-yourself-without-shutting-people-out',
     title: 'Boundaries vs. Walls: How to Protect Yourself Without Shutting People Out',
-    description: 'Understand the critical difference between protective boundaries and isolating walls—and how to build the former without creating the latter.',
+    description: 'Understand the critical difference between protective boundaries and isolating walls---and how to build the former without creating the latter.',
     image: "/images/articles/cat03/cover-018.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -1415,7 +1415,7 @@ export const settingBoundariesArticlesB: Article[] = [
             There's a fine line between protecting yourself and isolating yourself. Boundaries keep you safe while allowing connection. Walls keep everyone out, including people who could enrich your life.
           </p>
           <p className="mb-6">
-            Understanding this distinction is critical <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2020" tier={1} />. Here's how to tell the difference—and build boundaries without becoming a fortress.
+            Understanding this distinction is critical <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2020" tier={1} />. Here's how to tell the difference---and build boundaries without becoming a fortress.
           </p>
         </div>
 
@@ -1456,7 +1456,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li>You assume everyone will hurt you, so you hurt them first (emotional distance, cutting them off preemptively)</li>
           <li>You avoid relationships entirely to avoid potential pain</li>
           <li>You feel lonely but can't let anyone in</li>
-          <li>Your boundaries don't adjust—everyone gets the same level of distance regardless of their behavior</li>
+          <li>Your boundaries don't adjust---everyone gets the same level of distance regardless of their behavior</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -1476,7 +1476,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Repeated violations:</strong> Your boundaries were chronically disrespected</li>
         </ul>
         <p className="mb-6">
-          Your brain learned: <em>If I never let anyone close, I can't be hurt</em>. This is called <strong>defensive distancing</strong>—preemptively rejecting connection to avoid potential pain.
+          Your brain learned: <em>If I never let anyone close, I can't be hurt</em>. This is called <strong>defensive distancing</strong>---preemptively rejecting connection to avoid potential pain.
         </p>
         <p className="mb-6">
           It works in the short term (you won't be hurt). It fails in the long term (you'll be isolated, lonely, and miss out on meaningful connection).
@@ -1501,7 +1501,7 @@ export const settingBoundariesArticlesB: Article[] = [
           Practicing Selective Vulnerability
         </h2>
         <p className="mb-6">
-          You don't have to be vulnerable with everyone. The goal is <strong>selective vulnerability</strong>—opening up to people who've earned it through consistent, safe behavior.
+          You don't have to be vulnerable with everyone. The goal is <strong>selective vulnerability</strong>---opening up to people who've earned it through consistent, safe behavior.
         </p>
         <p className="mb-6">
           <strong>How to determine who gets access:</strong>
@@ -1536,7 +1536,7 @@ export const settingBoundariesArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="tip">
-          <p>Not everyone deserves Level 4 access. Most people will stay at Level 1 or 2—and that's healthy. Intimacy is earned, not automatic.</p>
+          <p>Not everyone deserves Level 4 access. Most people will stay at Level 1 or 2---and that's healthy. Intimacy is earned, not automatic.</p>
         </ArticleCallout>
 
         <h2 id="building-trust-gradually" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1550,7 +1550,7 @@ export const settingBoundariesArticlesB: Article[] = [
           <li><strong>Share one small thing:</strong> A minor worry, a hope, a frustration</li>
           <li><strong>Notice their response:</strong> Do they listen? Validate? Respect it?</li>
           <li><strong>Share slightly more next time:</strong> Build up incrementally</li>
-          <li><strong>Celebrate progress:</strong> You're rewiring years of protective patterns—this is hard work</li>
+          <li><strong>Celebrate progress:</strong> You're rewiring years of protective patterns---this is hard work</li>
         </ul>
 
         <h2 id="healing-from-walls" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1583,7 +1583,7 @@ export const settingBoundariesArticlesB: Article[] = [
           Finding the Balance
         </h2>
         <p className="mb-6">
-          The goal isn't to have no walls and total openness—that's also unhealthy (no boundaries). The goal is <strong>semi-permeable boundaries</strong>:
+          The goal isn't to have no walls and total openness---that's also unhealthy (no boundaries). The goal is <strong>semi-permeable boundaries</strong>:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Protected enough to feel safe</li>
@@ -1639,11 +1639,11 @@ export const settingBoundariesArticlesB: Article[] = [
           <li>The expectation of 24/7 availability</li>
         </ul>
         <p className="mb-6">
-          Without digital boundaries, you're perpetually "on"—never fully present, never fully resting. This contributes to anxiety, burnout, sleep problems, and relationship strain.
+          Without digital boundaries, you're perpetually "on"---never fully present, never fully resting. This contributes to anxiety, burnout, sleep problems, and relationship strain.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Just because you CAN be reached at any time doesn't mean you SHOULD be. Constant connectivity isn't connection—it's exhaustion.</p>
+          <p>Just because you CAN be reached at any time doesn't mean you SHOULD be. Constant connectivity isn't connection---it's exhaustion.</p>
         </ArticleCallout>
 
         <h2 id="types-of-digital-boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1847,7 +1847,7 @@ export const settingBoundariesArticlesB: Article[] = [
           Reclaiming Your Attention
         </h2>
         <p className="mb-6">
-          Your attention is your most valuable resource. Technology companies profit when you give it away freely. Digital boundaries aren't about rejecting technology—they're about using it intentionally rather than letting it use you.
+          Your attention is your most valuable resource. Technology companies profit when you give it away freely. Digital boundaries aren't about rejecting technology---they're about using it intentionally rather than letting it use you.
         </p>
         <p className="mb-6">
           Start with one boundary this week. Turn off notifications. Don't check email after dinner. Delete one app that drains you. Small changes compound into reclaimed time, energy, and presence.
@@ -2045,7 +2045,7 @@ export const settingBoundariesArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>If you struggle with boundaries yourself, working on your own boundaries IS teaching your child. They'll see you learning, growing, and prioritizing your wellbeing—powerful modeling.</p>
+          <p>If you struggle with boundaries yourself, working on your own boundaries IS teaching your child. They'll see you learning, growing, and prioritizing your wellbeing---powerful modeling.</p>
         </ArticleCallout>
 
         <h2 id="consent-education" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2066,7 +2066,7 @@ export const settingBoundariesArticlesB: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>Consent must be freely given (no coercion, pressure, or manipulation)</li>
           <li>Consent can be withdrawn at any time</li>
-          <li>Silence or lack of "no" doesn't mean yes—look for an enthusiastic yes</li>
+          <li>Silence or lack of "no" doesn't mean yes---look for an enthusiastic yes</li>
           <li>You don't owe anyone your body, time, attention, or affection</li>
         </ol>
 
@@ -2077,14 +2077,14 @@ export const settingBoundariesArticlesB: Article[] = [
           Balance is key: Teach children to protect themselves WITHOUT making them afraid of the world.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Normalize boundaries:</strong> Present them as normal, healthy parts of life—not scary warnings</li>
+          <li><strong>Normalize boundaries:</strong> Present them as normal, healthy parts of life---not scary warnings</li>
           <li><strong>Empower, don't terrify:</strong> "You have the power to say no and protect yourself" (not "Bad things will happen if you don't")</li>
           <li><strong>Create open communication:</strong> "You can tell me anything. I won't be mad." Make this true.</li>
           <li><strong>Trust their instincts:</strong> "If something feels wrong, it probably is. Listen to that feeling."</li>
         </ul>
 
         <QuoteBlock
-          quote="When we teach children that their bodies belong to them, we're not just preventing harm—we're building the foundation for a lifetime of self-respect and healthy relationships."
+          quote="When we teach children that their bodies belong to them, we're not just preventing harm---we're building the foundation for a lifetime of self-respect and healthy relationships."
           attribution="Dr. Laura Markham"
           role="Clinical Psychologist"
           source="Peaceful Parent, Happy Kids"

@@ -103,7 +103,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            For decades, building self-esteem has been psychology's go-to solution for mental health and wellbeing. But mounting research suggests we've been focusing on the wrong construct. Self-compassion — treating yourself with kindness — may matter more.
+            For decades, building self-esteem has been psychology's go-to solution for mental health and wellbeing. But mounting research suggests we've been focusing on the wrong construct. Self-compassion --- treating yourself with kindness --- may matter more.
           </p>
           <p className="mb-6">
             Psychologist Kristin Neff's groundbreaking work reveals that self-compassion predicts mental health better than self-esteem and comes without the downsides <Citation id="1" index={1} source="Journal of Personality" year="2011" tier={1} />. Understanding the difference between these two approaches to self-regard changes how we think about personal growth.
@@ -189,7 +189,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            The self-esteem movement in education — telling children they're special and wonderful — has not produced the expected benefits. Research shows inflated self-esteem without genuine competence can lead to poor outcomes and narcissistic tendencies.
+            The self-esteem movement in education --- telling children they're special and wonderful --- has not produced the expected benefits. Research shows inflated self-esteem without genuine competence can lead to poor outcomes and narcissistic tendencies.
           </p>
         </ArticleCallout>
 
@@ -229,7 +229,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
                     <strong>vs. Isolation</strong>
                   </p>
                   <p className="mb-4">
-                    Common humanity involves recognizing that suffering and personal inadequacy are part of the shared human experience — something we all go through rather than something that happens to "me" alone.
+                    Common humanity involves recognizing that suffering and personal inadequacy are part of the shared human experience --- something we all go through rather than something that happens to "me" alone.
                   </p>
                   <p>
                     This perspective prevents the isolating belief that "I'm the only one struggling' and connects your experience to the broader human condition.
@@ -262,7 +262,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          A growing body of research demonstrates that self-compassion offers significant mental health benefits — often surpassing those of self-esteem.
+          A growing body of research demonstrates that self-compassion offers significant mental health benefits --- often surpassing those of self-esteem.
         </p>
 
         <StatCard
@@ -413,7 +413,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          People with both high self-compassion and high self-esteem have the best outcomes — but if you had to choose one to work on first, research suggests self-compassion is the wiser choice <Citation id="3" index={3} source="Harvard Business Review" year="2018" tier={3} />.
+          People with both high self-compassion and high self-esteem have the best outcomes --- but if you had to choose one to work on first, research suggests self-compassion is the wiser choice <Citation id="3" index={3} source="Harvard Business Review" year="2018" tier={3} />.
         </p>
 
         <h2 id="interventions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -450,12 +450,12 @@ export const understandingSelfEsteemArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Research increasingly supports self-compassion as a more reliable path to wellbeing than self-esteem. It offers the emotional benefits without the costs — no social comparison, no defensive reactions, no crash when you fail.
+            Research increasingly supports self-compassion as a more reliable path to wellbeing than self-esteem. It offers the emotional benefits without the costs --- no social comparison, no defensive reactions, no crash when you fail.
           </p>
         </ArticleCallout>
 
         <p className="mb-6">
-          This doesn't mean self-esteem is bad or that you should avoid feeling good about yourself. It means that self-compassion provides a more stable, sustainable foundation for psychological health — one that doesn't require you to be special, just to be human.
+          This doesn't mean self-esteem is bad or that you should avoid feeling good about yourself. It means that self-compassion provides a more stable, sustainable foundation for psychological health --- one that doesn't require you to be special, just to be human.
         </p>
       </>
     ),
@@ -542,7 +542,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You got the promotion, finished the degree, lost the weight, or achieved the goal you've been chasing. You expected to feel different — confident, worthy, complete. Instead, the feeling fades quickly, and you're left wondering: Why doesn't success fix how I feel about myself?
+            You got the promotion, finished the degree, lost the weight, or achieved the goal you've been chasing. You expected to feel different --- confident, worthy, complete. Instead, the feeling fades quickly, and you're left wondering: Why doesn't success fix how I feel about myself?
           </p>
           <p className="mb-6">
             The answer lies in understanding the relationship between achievement and self-worth. Research shows that basing your value on accomplishments creates a fragile, unsustainable sense of self <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2003" tier={1} />. Success can't build self-worth because they're fundamentally different constructs.
@@ -595,7 +595,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          This adaptation process — sometimes called the "hedonic treadmill" — explains why:
+          This adaptation process --- sometimes called the "hedonic treadmill" --- explains why:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -753,7 +753,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
             },
             {
               feature: 'Completion',
-              values: ['Can be achieved and completed', 'Never complete — ongoing'],
+              values: ['Can be achieved and completed', 'Never complete --- ongoing'],
             },
             {
               feature: 'Satisfaction',
@@ -939,7 +939,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            What does it mean to value yourself? The answer depends profoundly on where you grew up. Western psychology's emphasis on high self-esteem as universal mental health isn't universal at all — it's culturally specific.
+            What does it mean to value yourself? The answer depends profoundly on where you grew up. Western psychology's emphasis on high self-esteem as universal mental health isn't universal at all --- it's culturally specific.
           </p>
           <p className="mb-6">
             Research shows that the meaning, importance, and expression of self-esteem vary dramatically across cultures <Citation id="1" index={1} source="Psychological Review" year="1991" tier={1} />. What looks like healthy self-esteem in New York might be considered arrogant in Tokyo, and what's valued in Beijing might seem like low self-esteem in Los Angeles.
@@ -1117,7 +1117,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Unlike Western self-esteem (internal evaluation), face is inherently social and relational. You don't just "have" face — it's granted by others based on your behavior and relationships.
+          Unlike Western self-esteem (internal evaluation), face is inherently social and relational. You don't just "have" face --- it's granted by others based on your behavior and relationships.
         </p>
 
         <ArticleCallout variant="tip">
@@ -1131,7 +1131,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Beyond individualist and collectivist, some cultures are characterized as "honor cultures" — where self-worth is based on reputation for strength, courage, and not tolerating disrespect <Citation id="8" index={8} source="Journal of Personality and Social Psychology" year="1996" tier={1} />.
+          Beyond individualist and collectivist, some cultures are characterized as "honor cultures" --- where self-worth is based on reputation for strength, courage, and not tolerating disrespect <Citation id="8" index={8} source="Journal of Personality and Social Psychology" year="1996" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1142,7 +1142,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
           <li>Self-worth is reputation-based, but focused on strength rather than harmony</li>
           <li>Insults or disrespect must be addressed to maintain honor</li>
           <li>Showing weakness damages self-concept and social standing</li>
-          <li>Family honor extends to all members — one person's shame affects the whole family</li>
+          <li>Family honor extends to all members --- one person's shame affects the whole family</li>
         </ul>
 
         <p className="mb-6">
@@ -1220,8 +1220,8 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>High self-esteem isn't universally the goal — harmony, face, or honor may be more relevant</li>
-          <li>Self-criticism isn't always maladaptive — context matters</li>
+          <li>High self-esteem isn't universally the goal --- harmony, face, or honor may be more relevant</li>
+          <li>Self-criticism isn't always maladaptive --- context matters</li>
           <li>Collectivist values (interdependence, family obligations) aren't pathological dependencies</li>
           <li>Clients may hold multiple cultural frameworks simultaneously and need support navigating between them</li>
         </ul>
@@ -1251,7 +1251,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            There's no single "correct" way to construct self-esteem. Cultural context shapes what aspects of self are valued, how self-worth is maintained, and what constitutes healthy self-regard. Understanding your own cultural framework — and recognizing it as one of many valid approaches — is crucial for authentic self-understanding.
+            There's no single "correct" way to construct self-esteem. Cultural context shapes what aspects of self are valued, how self-worth is maintained, and what constitutes healthy self-regard. Understanding your own cultural framework --- and recognizing it as one of many valid approaches --- is crucial for authentic self-understanding.
           </p>
         </ArticleCallout>
       </>
@@ -1347,10 +1347,10 @@ export const understandingSelfEsteemArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Gender shapes how we learn to value ourselves from the earliest ages. Boys and girls receive different messages about what makes them worthy, capable, and valuable — messages that persist into adulthood and influence mental health in profound ways.
+            Gender shapes how we learn to value ourselves from the earliest ages. Boys and girls receive different messages about what makes them worthy, capable, and valuable --- messages that persist into adulthood and influence mental health in profound ways.
           </p>
           <p className="mb-6">
-            Research reveals consistent patterns in how gender socialization affects self-esteem, but also important nuances <Citation id="1" index={1} source="Psychological Bulletin" year="1999" tier={1} />. Understanding these patterns helps us recognize how societal expectations — not biology — create many of the gender differences we observe.
+            Research reveals consistent patterns in how gender socialization affects self-esteem, but also important nuances <Citation id="1" index={1} source="Psychological Bulletin" year="1999" tier={1} />. Understanding these patterns helps us recognize how societal expectations --- not biology --- create many of the gender differences we observe.
           </p>
         </div>
 
@@ -1392,7 +1392,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            The gender gap in self-esteem is statistically significant but small in magnitude. There's enormous overlap between genders — many women have higher self-esteem than many men. Gender is one factor among many, and within-gender variation exceeds between-gender differences.
+            The gender gap in self-esteem is statistically significant but small in magnitude. There's enormous overlap between genders --- many women have higher self-esteem than many men. Gender is one factor among many, and within-gender variation exceeds between-gender differences.
           </p>
         </ArticleCallout>
 
@@ -1409,7 +1409,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </h3>
 
         <p className="mb-6">
-          Girls learn early that their appearance is a primary source of value. This "self-objectification" — viewing yourself as an object to be looked at and evaluated — damages self-esteem <Citation id="2" index={2} source="Psychology of Women Quarterly" year="1997" tier={1} />.
+          Girls learn early that their appearance is a primary source of value. This "self-objectification" --- viewing yourself as an object to be looked at and evaluated --- damages self-esteem <Citation id="2" index={2} source="Psychology of Women Quarterly" year="1997" tier={1} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1424,7 +1424,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </h3>
 
         <p className="mb-6">
-          Social comparison — measuring yourself against others — undermines self-esteem for everyone, but research shows girls engage in it more frequently, particularly around appearance <Citation id="9" index={9} source="Cyberpsychology, Behavior, and Social Networking" year="2020" tier={1} />.
+          Social comparison --- measuring yourself against others --- undermines self-esteem for everyone, but research shows girls engage in it more frequently, particularly around appearance <Citation id="9" index={9} source="Cyberpsychology, Behavior, and Social Networking" year="2020" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1738,7 +1738,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
             How do you measure something as subjective as self-esteem? For decades, psychologists have developed tools to quantify self-regard in reliable, valid ways. Understanding these measures helps you assess your own self-esteem accurately and track changes over time.
           </p>
           <p className="mb-6">
-            Self-esteem assessments vary in what they measure — global self-worth, domain-specific confidence, stability, or contingency. Knowing which tool to use and how to interpret results is key to meaningful self-understanding <Citation id="2" index={2} source="Journal of Personality Assessment" year="2001" tier={1} />.
+            Self-esteem assessments vary in what they measure --- global self-worth, domain-specific confidence, stability, or contingency. Knowing which tool to use and how to interpret results is key to meaningful self-understanding <Citation id="2" index={2} source="Journal of Personality Assessment" year="2001" tier={1} />.
           </p>
         </div>
 
@@ -1773,7 +1773,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>What it measures:</strong> Global self-worth — your overall evaluation of yourself as a person
+          <strong>What it measures:</strong> Global self-worth --- your overall evaluation of yourself as a person
         </p>
 
         <p className="mb-6">
@@ -1889,7 +1889,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          All the measures above are "explicit" — they ask you to consciously evaluate yourself. But you also have "implicit" self-esteem — automatic, unconscious associations with yourself <Citation id="6" index={6} source="Journal of Personality and Social Psychology" year="1998" tier={1} />.
+          All the measures above are "explicit" --- they ask you to consciously evaluate yourself. But you also have "implicit" self-esteem --- automatic, unconscious associations with yourself <Citation id="6" index={6} source="Journal of Personality and Social Psychology" year="1998" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1917,7 +1917,7 @@ export const understandingSelfEsteemArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
-          Self-esteem level (high vs. low) is only part of the picture. Stability — how much self-esteem fluctuates — predicts wellbeing independently <Citation id="7" index={7} source="Psychological Bulletin" year="2003" tier={1} />.
+          Self-esteem level (high vs. low) is only part of the picture. Stability --- how much self-esteem fluctuates --- predicts wellbeing independently <Citation id="7" index={7} source="Psychological Bulletin" year="2003" tier={1} />.
         </p>
 
         <p className="mb-6">

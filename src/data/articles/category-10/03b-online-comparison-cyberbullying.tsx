@@ -108,13 +108,13 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           The Anxiety of Being Constantly Rated
         </h2>
         <p className="mb-6">
-          Online rating systems create what psychologists call "evaluation apprehension" — the fear of being judged by others <Citation id="3" index={3} source="Computers in Human Behavior" year="2023" tier={1} />. Unlike traditional customer feedback, which often remained private, online reviews are:
+          Online rating systems create what psychologists call "evaluation apprehension" --- the fear of being judged by others <Citation id="3" index={3} source="Computers in Human Behavior" year="2023" tier={1} />. Unlike traditional customer feedback, which often remained private, online reviews are:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Public and permanent</strong> — visible to everyone, sometimes forever</li>
-          <li><strong>Quantified</strong> — reducing complex experiences to numerical scores</li>
-          <li><strong>Aggregated</strong> — creating overall ratings that follow you</li>
-          <li><strong>Asymmetric</strong> — easier to leave negative reviews than positive ones</li>
+          <li><strong>Public and permanent</strong> --- visible to everyone, sometimes forever</li>
+          <li><strong>Quantified</strong> --- reducing complex experiences to numerical scores</li>
+          <li><strong>Aggregated</strong> --- creating overall ratings that follow you</li>
+          <li><strong>Asymmetric</strong> --- easier to leave negative reviews than positive ones</li>
         </ul>
 
         <StatCard
@@ -220,7 +220,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Research shows we feel the pain of losing a star more intensely than the pleasure of gaining one. A single 3-star review can emotionally outweigh ten 5-star reviews, even though mathematically it barely affects your average.</p>
-                  <p>This is why many people become hypervigilant about protecting their ratings — the fear of loss is more powerful than the hope of gain.</p>
+                  <p>This is why many people become hypervigilant about protecting their ratings --- the fear of loss is more powerful than the hope of gain.</p>
                 </div>
               ),
             },
@@ -230,7 +230,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>When your rating becomes tied to your income or professional identity, it's easy to internalize those numbers as a measure of your worth as a person <Citation id="6" index={6} source="Self and Identity" year="2023" tier={1} />.</p>
-                  <p>A 4.3 rating isn't just feedback — it feels like you, as a person, are 4.3 out of 5. This cognitive fusion makes criticism feel personal and devastating.</p>
+                  <p>A 4.3 rating isn't just feedback --- it feels like you, as a person, are 4.3 out of 5. This cognitive fusion makes criticism feel personal and devastating.</p>
                 </div>
               ),
             },
@@ -250,7 +250,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Negative reviews feel like public rejection. For people with social anxiety, this taps into deep fears of being judged, criticized, or excluded <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />.</p>
-                  <p>The fact that reviews are visible to everyone amplifies this fear — it's not just one person's opinion, it's public humiliation.</p>
+                  <p>The fact that reviews are visible to everyone amplifies this fear --- it's not just one person's opinion, it's public humiliation.</p>
                 </div>
               ),
             },
@@ -447,7 +447,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You swipe through dozens of faces in minutes, receive matches that never message, send messages that go unanswered, and occasionally connect with someone who vanishes without explanation. For millions of people, this is modern dating — and it's taking a psychological toll.
+            You swipe through dozens of faces in minutes, receive matches that never message, send messages that go unanswered, and occasionally connect with someone who vanishes without explanation. For millions of people, this is modern dating --- and it's taking a psychological toll.
           </p>
           <p className="mb-6">
             Online dating has fundamentally changed how people meet romantic partners. While dating apps offer unprecedented access to potential matches, research shows they also create unique mental health challenges <Citation id="1" index={1} source="Cyberpsychology, Behavior, and Social Networking" year="2023" tier={1} />. From rejection overload to comparison fatigue, the digital dating landscape affects anxiety, self-esteem, and emotional well-being in ways we're only beginning to understand <Citation id="2" index={2} source="Personal Relationships" year="2022" tier={1} />.
@@ -470,11 +470,11 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           In traditional dating, rejection happens occasionally and usually involves some explanation or context. In online dating, rejection is relentless, ambiguous, and often wordless <Citation id="2" index={2} source="Personal Relationships" year="2022" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Swipe rejection</strong> — Someone sees your photo and rejects you in under a second</li>
-          <li><strong>Match silence</strong> — You match but they never message</li>
-          <li><strong>Message ghosting</strong> — Conversations stop abruptly with no explanation</li>
-          <li><strong>Slow fade</strong> — Responses get slower and less enthusiastic until they disappear</li>
-          <li><strong>Post-date ghosting</strong> — Things seem to go well, then they vanish</li>
+          <li><strong>Swipe rejection</strong> --- Someone sees your photo and rejects you in under a second</li>
+          <li><strong>Match silence</strong> --- You match but they never message</li>
+          <li><strong>Message ghosting</strong> --- Conversations stop abruptly with no explanation</li>
+          <li><strong>Slow fade</strong> --- Responses get slower and less enthusiastic until they disappear</li>
+          <li><strong>Post-date ghosting</strong> --- Things seem to go well, then they vanish</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -485,7 +485,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           The Unique Pain of Ghosting
         </h2>
         <p className="mb-6">
-          Ghosting — when someone you've been communicating with suddenly stops responding and disappears without explanation — is now a normal part of online dating. Research shows it creates a specific type of psychological distress <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2023" tier={1} />:
+          Ghosting --- when someone you've been communicating with suddenly stops responding and disappears without explanation --- is now a normal part of online dating. Research shows it creates a specific type of psychological distress <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2023" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -502,7 +502,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Psychologists describe ghosting as a form of "ambiguous loss" — you lose the relationship but without the clear ending that allows grief to resolve. This can be more psychologically damaging than an explicit rejection.
+          Psychologists describe ghosting as a form of "ambiguous loss" --- you lose the relationship but without the clear ending that allows grief to resolve. This can be more psychologically damaging than an explicit rejection.
         </p>
 
         <h2 id="comparison-commodification" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -541,7 +541,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Profiles reduce complex humans to bullet points: height, job, education, interests. This encourages a checklist mentality where people are evaluated like job candidates rather than potential partners.</p>
-                  <p>This commodification can make you feel like you're never "good enough" — there's always someone taller, more successful, or more interesting just a swipe away.</p>
+                  <p>This commodification can make you feel like you're never "good enough" --- there's always someone taller, more successful, or more interesting just a swipe away.</p>
                 </div>
               ),
             },
@@ -586,7 +586,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             {
               title: 'Reframe Rejection',
               description: (
-                <p>A 'no swipe' or unanswered message isn't personal rejection — it's a stranger making a split-second decision based on limited information. It says nothing about your worth. Practice saying: "Not a match' instead of "They rejected me."</p>
+                <p>A 'no swipe' or unanswered message isn't personal rejection --- it's a stranger making a split-second decision based on limited information. It says nothing about your worth. Practice saying: "Not a match' instead of "They rejected me."</p>
               ),
             },
             {
@@ -610,7 +610,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             {
               title: 'Practice Self-Compassion',
               description: (
-                <p>Online dating is objectively difficult for everyone. When you experience rejection or disappointment, treat yourself with the same kindness you'd offer a friend. It's not you — the system itself is emotionally taxing.</p>
+                <p>Online dating is objectively difficult for everyone. When you experience rejection or disappointment, treat yourself with the same kindness you'd offer a friend. It's not you --- the system itself is emotionally taxing.</p>
               ),
             },
           ]}
@@ -720,7 +720,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             You watch their videos every day, follow their life updates, laugh at their jokes, and feel genuinely happy when good things happen to them. When they post something difficult, you worry about them. You feel like you know them. But they have no idea you exist.
           </p>
           <p className="mb-6">
-            This is a parasocial relationship — a one-sided emotional connection where you feel intimately connected to someone (a celebrity, influencer, streamer, podcaster, or content creator) who doesn't know you <Citation id="1" index={1} source="Media Psychology" year="2023" tier={1} />. While the term sounds clinical, parasocial relationships are completely normal and increasingly common in our digital age. But understanding when they're healthy versus when they become problematic is important for mental health <Citation id="2" index={2} source="Journal of Computer-Mediated Communication" year="2022" tier={1} />.
+            This is a parasocial relationship --- a one-sided emotional connection where you feel intimately connected to someone (a celebrity, influencer, streamer, podcaster, or content creator) who doesn't know you <Citation id="1" index={1} source="Media Psychology" year="2023" tier={1} />. While the term sounds clinical, parasocial relationships are completely normal and increasingly common in our digital age. But understanding when they're healthy versus when they become problematic is important for mental health <Citation id="2" index={2} source="Journal of Computer-Mediated Communication" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -734,10 +734,10 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <strong>Key characteristics:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>One-directional</strong> — You know details about their life; they know nothing about yours</li>
-          <li><strong>Feels reciprocal</strong> — Even though it's one-sided, it feels like a real friendship</li>
-          <li><strong>Emotionally significant</strong> — You genuinely care about them and feel impacted by what happens to them</li>
-          <li><strong>Not based on actual interaction</strong> — You've never met, yet you feel connected</li>
+          <li><strong>One-directional</strong> --- You know details about their life; they know nothing about yours</li>
+          <li><strong>Feels reciprocal</strong> --- Even though it's one-sided, it feels like a real friendship</li>
+          <li><strong>Emotionally significant</strong> --- You genuinely care about them and feel impacted by what happens to them</li>
+          <li><strong>Not based on actual interaction</strong> --- You've never met, yet you feel connected</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
@@ -766,7 +766,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          When a YouTuber says "Hey guys" while looking into the camera, your brain processes that as if they're talking to <em>you</em>. When they share a vulnerable story, it feels like they're confiding in <em>you</em>. This intimacy is by design — it's what makes parasocial content so engaging.
+          When a YouTuber says "Hey guys" while looking into the camera, your brain processes that as if they're talking to <em>you</em>. When they share a vulnerable story, it feels like they're confiding in <em>you</em>. This intimacy is by design --- it's what makes parasocial content so engaging.
         </p>
 
         <h2 id="healthy-vs-unhealthy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -859,7 +859,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           Managing Parasocial Relationships Mindfully
         </h2>
         <p className="mb-6">
-          You don't have to eliminate parasocial relationships — just maintain awareness and balance:
+          You don't have to eliminate parasocial relationships --- just maintain awareness and balance:
         </p>
 
         <ProgressSteps
@@ -913,7 +913,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>You recognize patterns of obsession or unhealthy attachment</li>
         </ul>
         <p className="mb-6">
-          A therapist can help you understand what needs the parasocial relationship is meeting and develop healthier ways to meet those needs <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />. Parasocial relationships aren't bad — but if they're compensating for missing real connection, addressing that underlying loneliness is important.
+          A therapist can help you understand what needs the parasocial relationship is meeting and develop healthier ways to meet those needs <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />. Parasocial relationships aren't bad --- but if they're compensating for missing real connection, addressing that underlying loneliness is important.
         </p>
       </>
     ),
@@ -1003,7 +1003,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             For months, you've been messaging someone online. You've shared intimate details about your life. You've developed real feelings. Then you discover: the photos aren't them. The name isn't real. The person you thought you knew doesn't exist.
           </p>
           <p className="mb-6">
-            This is catfishing — the practice of creating a fake online identity to deceive others into relationships. While the term became popular from the MTV show, the phenomenon is widespread and psychologically damaging <Citation id="1" index={1} source="Computers in Human Behavior" year="2023" tier={1} />. Understanding why people do it, how to protect yourself, and how to heal from it matters for anyone navigating digital relationships <Citation id="2" index={2} source="Cyberpsychology, Behavior, and Social Networking" year="2022" tier={1} />.
+            This is catfishing --- the practice of creating a fake online identity to deceive others into relationships. While the term became popular from the MTV show, the phenomenon is widespread and psychologically damaging <Citation id="1" index={1} source="Computers in Human Behavior" year="2023" tier={1} />. Understanding why people do it, how to protect yourself, and how to heal from it matters for anyone navigating digital relationships <Citation id="2" index={2} source="Cyberpsychology, Behavior, and Social Networking" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -1037,7 +1037,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p><strong>Catfishing vs. Romance Scams:</strong> Not all catfishing is financially motivated, but all romance scams involve catfishing. If someone you've never met in person asks for money, gift cards, or financial help — especially after building emotional intimacy — that's a scam <Citation id="8" index={8} source="Federal Trade Commission" year="2023" tier={2} />.</p>
+          <p><strong>Catfishing vs. Romance Scams:</strong> Not all catfishing is financially motivated, but all romance scams involve catfishing. If someone you've never met in person asks for money, gift cards, or financial help --- especially after building emotional intimacy --- that's a scam <Citation id="8" index={8} source="Federal Trade Commission" year="2023" tier={2} />.</p>
         </ArticleCallout>
 
         <h2 id="why-people-catfish" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1072,7 +1072,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Many catfish are profoundly lonely. Creating a fake identity gives them access to companionship, attention, and emotional intimacy. They may genuinely care about the people they deceive, even while lying to them.</p>
-                  <p>This doesn't excuse the behavior, but it helps explain why some catfish maintain relationships for months or years — they're filling a real need for connection, even if through dishonest means.</p>
+                  <p>This doesn't excuse the behavior, but it helps explain why some catfish maintain relationships for months or years --- they're filling a real need for connection, even if through dishonest means.</p>
                 </div>
               ),
             },
@@ -1149,15 +1149,15 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           Research shows that catfishing victims often experience:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Complicated grief</strong> — Mourning someone who never existed</li>
-          <li><strong>Betrayal trauma</strong> — Deep violation of trust</li>
-          <li><strong>Identity confusion</strong> — Questioning your ability to judge character</li>
-          <li><strong>Social withdrawal</strong> — Avoiding new relationships or connections</li>
-          <li><strong>Anxiety and hypervigilance</strong> — Constant suspicion in future interactions</li>
+          <li><strong>Complicated grief</strong> --- Mourning someone who never existed</li>
+          <li><strong>Betrayal trauma</strong> --- Deep violation of trust</li>
+          <li><strong>Identity confusion</strong> --- Questioning your ability to judge character</li>
+          <li><strong>Social withdrawal</strong> --- Avoiding new relationships or connections</li>
+          <li><strong>Anxiety and hypervigilance</strong> --- Constant suspicion in future interactions</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The relationship felt real because the emotions <em>were</em> real — on your side. The fact that the other person was lying doesn't mean your feelings weren't valid. Give yourself permission to grieve the connection you believed you had.</p>
+          <p>The relationship felt real because the emotions <em>were</em> real --- on your side. The fact that the other person was lying doesn't mean your feelings weren't valid. Give yourself permission to grieve the connection you believed you had.</p>
         </ArticleCallout>
 
         <h2 id="recovery-process" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1179,7 +1179,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
             {
               title: 'Resist Self-Blame',
               description: (
-                <p>You didn't do anything wrong by trusting someone. The shame belongs to the person who lied, not to you. Skilled catfish are manipulative and convincing — falling for it doesn't mean you're naive or foolish.</p>
+                <p>You didn't do anything wrong by trusting someone. The shame belongs to the person who lied, not to you. Skilled catfish are manipulative and convincing --- falling for it doesn't mean you're naive or foolish.</p>
               ),
             },
             {
@@ -1376,7 +1376,7 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
                   <li>Low self-esteem or negative self-talk</li>
                   <li>Signs of depression or anxiety</li>
                   <li>Expressions of helplessness or hopelessness</li>
-                  <li>Mentions of wanting to hurt themselves (take this seriously — see crisis section below)</li>
+                  <li>Mentions of wanting to hurt themselves (take this seriously --- see crisis section below)</li>
                 </ul>
               ),
             },

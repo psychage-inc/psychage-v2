@@ -105,14 +105,14 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Before a big presentation, your stomach churns. During a stressful week, you live between the bathroom
-            and the couch. When anxiety hits, your gut is often the first to know — and the last to recover. The
+            and the couch. When anxiety hits, your gut is often the first to know --- and the last to recover. The
             phrase "gut feeling" is more literal than you might think.
           </p>
           <p className="mb-6">
             The connection between your brain and your digestive system is so intimate that your gut is often
             called your "second brain"{', '}
             <Citation id="1" index={1} source="Annals of Gastroenterology" year="2020" tier={1} />. Understanding
-            this gut-brain axis explains why anxiety wreaks havoc on your stomach — and what you can do about it.
+            this gut-brain axis explains why anxiety wreaks havoc on your stomach --- and what you can do about it.
           </p>
         </div>
 
@@ -123,7 +123,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           The Gut-Brain Axis: A Two-Way Highway
         </h2>
         <p className="mb-6">
-          Your brain and gut communicate constantly through the <strong>gut-brain axis</strong> — a bidirectional
+          Your brain and gut communicate constantly through the <strong>gut-brain axis</strong> --- a bidirectional
           communication network involving{', '}
           <Citation id="2" index={2} source="Gastroenterology Clinics of North America" year="2021" tier={1} />:
         </p>
@@ -181,7 +181,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           When you're anxious, your body prioritizes survival over digestion. The sympathetic nervous system
-          (fight-or-flight) essentially tells your digestive system: "We don't have time to digest food right now —
+          (fight-or-flight) essentially tells your digestive system: "We don't have time to digest food right now ---
           we need to deal with this threat"{', '}
           <Citation id="5" index={3} source="Frontiers in Neuroscience" year="2020" tier={1} />.
         </p>
@@ -334,7 +334,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           ]}
         />
 
-        <p className="mb-6">Many people have both — anxiety worsens IBS, and IBS symptoms create anxiety about gut function, creating a vicious cycle.</p>
+        <p className="mb-6">Many people have both --- anxiety worsens IBS, and IBS symptoms create anxiety about gut function, creating a vicious cycle.</p>
 
         <h2
           id="strategies-to-calm-gut"
@@ -372,7 +372,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           3. Diaphragmatic Breathing
         </h3>
         <p className="mb-6">
-          Deep belly breathing activates the vagus nerve — the main communication line between brain and gut. This
+          Deep belly breathing activates the vagus nerve --- the main communication line between brain and gut. This
           shifts your nervous system from sympathetic (fight-or-flight) to parasympathetic (rest-and-digest) mode.
         </p>
         <p className="mb-6">
@@ -455,13 +455,13 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            Your "gut feeling" about anxiety is real — because your gut and brain are in constant conversation.
+            Your "gut feeling" about anxiety is real --- because your gut and brain are in constant conversation.
             Anxiety doesn't just live in your head; it manifests throughout your body, with the gut being one of the
             most sensitive barometers of your mental state.
           </p>
           <p>
-            The good news: treatments that calm the brain-gut axis — CBT, gut-directed hypnotherapy, breathing
-            techniques, and stress management — can significantly reduce both anxiety and digestive symptoms. You
+            The good news: treatments that calm the brain-gut axis --- CBT, gut-directed hypnotherapy, breathing
+            techniques, and stress management --- can significantly reduce both anxiety and digestive symptoms. You
             don't have to live at the mercy of your nervous stomach.
           </p>
         </ArticleCallout>
@@ -570,7 +570,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The first panic attack arrives out of nowhere — a sudden surge of terror so intense you're convinced
+            The first panic attack arrives out of nowhere --- a sudden surge of terror so intense you're convinced
             you're dying, having a heart attack, or losing your mind. But panic disorder isn't about that first
             attack. It's about what happens next: the fear of the next attack, the constant vigilance, the
             shrinking world as you avoid situations where panic might strike.
@@ -579,7 +579,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             Panic disorder transforms panic attacks from isolated events into a pervasive condition dominated by
             anticipatory anxiety and avoidance{', '}
             <Citation id="1" index={1} source="Psychiatry Research" year="2021" tier={1} />. Understanding this
-            shift — and the evidence-based treatments that target it — is essential for reclaiming your life.
+            shift --- and the evidence-based treatments that target it --- is essential for reclaiming your life.
           </p>
         </div>
 
@@ -693,7 +693,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
               title: 'Hypervigilance develops',
               description: (
                 <p>
-                  Constant monitoring for signs of another attack — checking heart rate, scanning for symptoms,
+                  Constant monitoring for signs of another attack --- checking heart rate, scanning for symptoms,
                   avoiding perceived triggers.
                 </p>
               ),
@@ -738,7 +738,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="Panic disorder is not the panic itself — it's the fear of the panic. The attacks are time-limited and, while terrifying, not medically dangerous. What disables people is the anticipatory anxiety and the behavioral changes made to avoid panic."
+          quote="Panic disorder is not the panic itself --- it's the fear of the panic. The attacks are time-limited and, while terrifying, not medically dangerous. What disables people is the anticipatory anxiety and the behavioral changes made to avoid panic."
           attribution="Core clinical insight"
           role="Cognitive Model of Panic Disorder"
           variant="large"
@@ -847,7 +847,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These changes are not permanent — treatment, particularly CBT, has been shown to normalize brain activity
+          These changes are not permanent --- treatment, particularly CBT, has been shown to normalize brain activity
           patterns in panic disorder.
         </p>
 
@@ -949,7 +949,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
                   </ul>
                   <p className="mt-4">
                     <strong>Outcome:</strong> Panic sensations lose their catastrophic meaning. You learn "I can
-                    handle these feelings — they're uncomfortable but not dangerous."
+                    handle these feelings --- they're uncomfortable but not dangerous."
                   </p>
                 </div>
               ),
@@ -1048,7 +1048,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          <strong>Treatment involves systematically dropping safety behaviors</strong> — initially anxiety
+          <strong>Treatment involves systematically dropping safety behaviors</strong> --- initially anxiety
           increases, but over time you learn that panic is tolerable and self-limiting without them.
         </p>
 
@@ -1153,9 +1153,9 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The path out of panic disorder:</strong> It's not about never having panic attacks again — it's
+            <strong>The path out of panic disorder:</strong> It's not about never having panic attacks again --- it's
             about changing your relationship with panic. When panic loses its catastrophic meaning, when you stop
-            avoiding it, when you drop safety behaviors and learn you can handle the sensations — panic loses its
+            avoiding it, when you drop safety behaviors and learn you can handle the sensations --- panic loses its
             power.
           </p>
           <p className="mb-4">
@@ -1179,7 +1179,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     id: catId(18),
     slug: 'interoception-and-anxiety-how-body-awareness-can-help-or-hurt',
     title: 'Interoception and Anxiety: How Body Awareness Can Help or Hurt',
-    description: 'Explore interoception — your ability to sense internal body states — and learn how it can amplify anxiety or become a powerful tool for emotional regulation.',
+    description: 'Explore interoception --- your ability to sense internal body states --- and learn how it can amplify anxiety or become a powerful tool for emotional regulation.',
     image: "/images/articles/cat02/cover-018.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 8,
@@ -1259,7 +1259,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Right now, without looking down, can you tell if your heart is beating fast or slow? Can you sense the
             subtle sensations in your stomach that signal hunger before it becomes overwhelming? This ability to
-            perceive your body's internal signals is called <strong>interoception</strong> — and it's deeply
+            perceive your body's internal signals is called <strong>interoception</strong> --- and it's deeply
             connected to anxiety.
           </p>
           <p className="mb-6">
@@ -1296,7 +1296,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <p className="mb-6">
           Unlike the five traditional senses (sight, hearing, touch, taste, smell), interoception is often
-          invisible — you're not consciously aware of most internal signals unless they become strong or you
+          invisible --- you're not consciously aware of most internal signals unless they become strong or you
           deliberately tune in.
         </p>
 
@@ -1331,21 +1331,21 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             {
               feature: 'Accuracy',
               values: [
-                'Mixed findings — some higher, some normal',
+                'Mixed findings --- some higher, some normal',
                 'May detect heartbeat better but interpret incorrectly',
               ],
             },
             {
               feature: 'Sensitivity',
               values: [
-                'Heightened — notice subtle sensations',
+                'Heightened --- notice subtle sensations',
                 'Small changes feel significant; hypervigilance',
               ],
             },
             {
               feature: 'Interpretation',
               values: [
-                'Catastrophic — sensations mean danger',
+                'Catastrophic --- sensations mean danger',
                 `Normal heartbeat → 'heart attack'; breathlessness → "suffocating`,
               ],
             },
@@ -1360,7 +1360,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          The problem isn't just sensitivity — it's <strong>how sensations are interpreted</strong>. In anxiety,
+          The problem isn't just sensitivity --- it's <strong>how sensations are interpreted</strong>. In anxiety,
           normal interoceptive signals trigger catastrophic thoughts, which create more anxiety, which amplifies
           body sensations, creating a vicious cycle.
         </p>
@@ -1377,7 +1377,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           <Citation id="7" index={4} source="Nature Reviews Neuroscience" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          In anxiety disorders, neuroimaging shows <strong>hyperactivity in the insula</strong> — it's working
+          In anxiety disorders, neuroimaging shows <strong>hyperactivity in the insula</strong> --- it's working
           overtime, amplifying body signals and their emotional meaning. This explains why people with anxiety:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1407,7 +1407,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             },
             {
               title: 'Catastrophic interpretation',
-              description: <p>'My heart skipped a beat — something must be wrong with my heart."</p>,
+              description: <p>'My heart skipped a beat --- something must be wrong with my heart."</p>,
             },
             {
               title: 'Anxiety response',
@@ -1457,14 +1457,14 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>
             <strong>Notice sensations without judgment:</strong> "I notice my heart beating faster" (observation)
-            vs. "My heart is racing — I'm going to have a heart attack!" (catastrophe)
+            vs. "My heart is racing --- I'm going to have a heart attack!" (catastrophe)
           </li>
           <li>
             <strong>Recognize emotions through body cues:</strong> Anxiety announces itself through tight chest,
             shallow breathing, stomach tension before you consciously register "I'm anxious"
           </li>
           <li>
-            <strong>Respond early:</strong> Catching anxiety at the body level — before full panic — allows
+            <strong>Respond early:</strong> Catching anxiety at the body level --- before full panic --- allows
             intervention when it's easier to manage
           </li>
           <li>
@@ -1498,7 +1498,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             accurate awareness
           </li>
           <li>
-            <strong>Breathing awareness:</strong> Notice breath without controlling it — observe rate, depth,
+            <strong>Breathing awareness:</strong> Notice breath without controlling it --- observe rate, depth,
             sensations in chest/belly
           </li>
           <li>
@@ -1529,7 +1529,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
                     </li>
                     <li>
                       <strong>Start with feet.</strong> Notice sensations in toes, soles, heels. No need to feel
-                      anything specific — just observe what's there (tingling, pressure, warmth, nothing).
+                      anything specific --- just observe what's there (tingling, pressure, warmth, nothing).
                     </li>
                     <li>
                       <strong>Move slowly upward:</strong> Ankles → calves → knees → thighs → hips → abdomen →
@@ -1547,7 +1547,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
                     </li>
                   </ol>
                   <p className="mt-4">
-                    <strong>Goal:</strong> Not relaxation (though that may happen), but <em>awareness</em> — learning
+                    <strong>Goal:</strong> Not relaxation (though that may happen), but <em>awareness</em> --- learning
                     to observe body sensations without reacting to them.
                   </p>
                 </div>
@@ -1617,13 +1617,13 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The paradox of interoception:</strong> In anxiety, heightened body awareness becomes a curse —
+            <strong>The paradox of interoception:</strong> In anxiety, heightened body awareness becomes a curse ---
             you're too attuned to sensations and interpret them catastrophically. But with training, that same
             heightened awareness becomes a gift: early warning system for emotions, biofeedback for regulation, and
             a pathway to grounding.
           </p>
           <p className="mb-4">
-            The difference isn't in <em>how much</em> you feel — it's in <em>how you relate</em> to what you feel.
+            The difference isn't in <em>how much</em> you feel --- it's in <em>how you relate</em> to what you feel.
             Judgment and catastrophizing turn interoception into fuel for anxiety. Curiosity and acceptance turn it
             into information you can use.
           </p>
@@ -1643,7 +1643,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
     id: catId(19),
     slug: 'agoraphobia-when-the-fear-of-panic-shrinks-your-world',
     title: 'Agoraphobia: When the Fear of Panic Shrinks Your World',
-    description: 'Understand agoraphobia — the fear of situations where escape might be difficult — including its connection to panic disorder, how it develops, and exposure-based treatments that work.',
+    description: 'Understand agoraphobia --- the fear of situations where escape might be difficult --- including its connection to panic disorder, how it develops, and exposure-based treatments that work.',
     image: "/images/articles/cat02/cover-019.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 11,
@@ -1739,13 +1739,13 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             It starts small: avoiding the grocery store where you once had a panic attack. Then you skip the highway
             where traffic made you feel trapped. Soon, leaving the house at all feels impossible. What began as fear
-            of panic has become fear of the world itself — a condition called <strong>agoraphobia</strong>.
+            of panic has become fear of the world itself --- a condition called <strong>agoraphobia</strong>.
           </p>
           <p className="mb-6">
             Contrary to popular belief, agoraphobia isn't simply "fear of open spaces" or crowds. It's the fear of
             situations where escape might be difficult or help unavailable if panic-like symptoms occur{', '}
             <Citation id="1" index={1} source="Current Psychiatry Reports" year="2021" tier={1} />. Over time, this
-            fear shrinks your world — sometimes to the point where home is the only place that feels safe.
+            fear shrinks your world --- sometimes to the point where home is the only place that feels safe.
           </p>
         </div>
 
@@ -1798,7 +1798,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           Agoraphobia and Panic Disorder: The Connection
         </h2>
         <p className="mb-6">
-          Agoraphobia often — but not always — develops alongside panic disorder. About half of people with panic
+          Agoraphobia often --- but not always --- develops alongside panic disorder. About half of people with panic
           disorder develop agoraphobia if the panic disorder goes untreated.
         </p>
 
@@ -1865,7 +1865,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             {
               title: 'Association forms',
               description: (
-                <p>Brain links that location/situation with danger: 'Panic happened there — that place is unsafe.'</p>
+                <p>Brain links that location/situation with danger: 'Panic happened there --- that place is unsafe.'</p>
               ),
             },
             {
@@ -1909,7 +1909,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <ArticleCallout variant="warning" title="The Cruel Irony of Avoidance">
           <p className="mb-4">
-            Avoidance works brilliantly in the short term — you avoid the store, you don't panic, anxiety decreases.
+            Avoidance works brilliantly in the short term --- you avoid the store, you don't panic, anxiety decreases.
             Your brain learns: "Avoidance keeps me safe."
           </p>
           <p>
@@ -1993,7 +1993,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
           Safety Behaviors in Agoraphobia
         </h2>
         <p className="mb-6">
-          When avoidance isn't total, people with agoraphobia often use safety behaviors — subtle actions meant to
+          When avoidance isn't total, people with agoraphobia often use safety behaviors --- subtle actions meant to
           prevent panic{', '}
           <Citation id="3" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />:
         </p>
@@ -2098,7 +2098,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
                     <li>Attend a concert or crowded event alone (90/100)</li>
                   </ol>
                   <p className="mt-4">
-                    <strong>Note:</strong> Hierarchies are personalized — your specific fears determine the steps.
+                    <strong>Note:</strong> Hierarchies are personalized --- your specific fears determine the steps.
                   </p>
                 </div>
               ),
@@ -2158,7 +2158,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-3">
           <li>
-            <strong>Start small:</strong> Don't wait until you feel "ready" — anxiety won't disappear before you
+            <strong>Start small:</strong> Don't wait until you feel "ready" --- anxiety won't disappear before you
             face it. Start with the easiest exposures.
           </li>
           <li>
@@ -2187,13 +2187,13 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The path out of agoraphobia is through it — not around it.</strong> Every avoided situation
+            <strong>The path out of agoraphobia is through it --- not around it.</strong> Every avoided situation
             strengthens the fear. Every faced situation weakens it.
           </p>
           <p className="mb-4">
             Agoraphobia feels permanent when you're trapped by it. The world shrinks until home is the only safe
             place, and the idea of going back out seems impossible. But thousands of people have walked this path
-            before you — and found their way back.
+            before you --- and found their way back.
           </p>
           <p className="mb-4">
             Exposure therapy works{', '}
@@ -2202,7 +2202,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             expands. Slowly, the fear loses its grip.
           </p>
           <p>
-            You're not broken. You're not weak. You're experiencing a treatable condition — and treatment can give
+            You're not broken. You're not weak. You're experiencing a treatable condition --- and treatment can give
             you your life back.
           </p>
         </ArticleCallout>
@@ -2296,11 +2296,11 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You jolt awake at 3 AM, heart pounding, drenched in sweat, gasping for air. There was no nightmare, no
-            loud noise — just sudden, overwhelming terror that pulled you from sleep. This is nocturnal panic, and
+            loud noise --- just sudden, overwhelming terror that pulled you from sleep. This is nocturnal panic, and
             for people who experience it, even sleep feels unsafe.
           </p>
           <p className="mb-6">
-            Nocturnal panic attacks — panic attacks that occur during sleep — affect up to 70% of people with panic
+            Nocturnal panic attacks --- panic attacks that occur during sleep --- affect up to 70% of people with panic
             disorder at some point{', '}
             <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />. They're terrifying,
             disruptive, and often misunderstood. Understanding why they happen and how to address them can help you
@@ -2449,7 +2449,7 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
                   </p>
                   <p className="mb-4">
                     This anticipatory anxiety increases physiological arousal at bedtime, creating hypervigilance
-                    even during sleep. The heightened arousal makes panic attacks more likely — a self-fulfilling
+                    even during sleep. The heightened arousal makes panic attacks more likely --- a self-fulfilling
                     cycle.
                   </p>
                 </div>
@@ -2748,13 +2748,13 @@ export const panicPhysicalAnxietyArticlesB: Article[] = [
             safe: sleep.</strong> It turns rest into a threat, making every night a potential battleground.
           </p>
           <p className="mb-4">
-            But nocturnal panic, like daytime panic, is not dangerous — it's a false alarm. Your body's threat
+            But nocturnal panic, like daytime panic, is not dangerous --- it's a false alarm. Your body's threat
             detection system is oversensitive, triggering panic where no real danger exists. Understanding this
             doesn't make it less scary in the moment, but it's the foundation for recovery.
           </p>
           <p>
-            With treatment — CBT, medication if needed, improved sleep hygiene, and addressing anticipatory
-            anxiety — most people with nocturnal panic see significant improvement. You can reclaim your nights.
+            With treatment --- CBT, medication if needed, improved sleep hygiene, and addressing anticipatory
+            anxiety --- most people with nocturnal panic see significant improvement. You can reclaim your nights.
             Sleep can become safe again.
           </p>
         </ArticleCallout>

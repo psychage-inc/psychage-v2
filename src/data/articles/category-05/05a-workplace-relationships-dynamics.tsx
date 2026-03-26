@@ -95,10 +95,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Office politics exists in every organization—the informal systems of power, influence, and social dynamics that operate alongside formal structures. Many people react to workplace politics with either naive avoidance or cynical manipulation. The third option: strategic engagement grounded in integrity.
+            Office politics exists in every organization---the informal systems of power, influence, and social dynamics that operate alongside formal structures. Many people react to workplace politics with either naive avoidance or cynical manipulation. The third option: strategic engagement grounded in integrity.
           </p>
           <p className="mb-6">
-            Research demonstrates that political skill—the ability to understand and influence organizational dynamics—predicts career success, job satisfaction, and stress reduction <Citation id="1" index={1} source="Journal of Organizational Behavior" year="2005" tier={1} />. You can develop this skill without compromising your values.
+            Research demonstrates that political skill---the ability to understand and influence organizational dynamics---predicts career success, job satisfaction, and stress reduction <Citation id="1" index={1} source="Journal of Organizational Behavior" year="2005" tier={1} />. You can develop this skill without compromising your values.
           </p>
         </div>
 
@@ -106,11 +106,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Reframing: Politics as Relationship Systems
         </h2>
         <p className="mb-6">
-          "Office politics" sounds manipulative, but at its core, it simply describes how decisions actually get made in organizations—often through informal influence, relationships, and social capital rather than official channels <Citation id="6" index={6} source="Organizational Dynamics" year="2021" tier={1} />.
+          "Office politics" sounds manipulative, but at its core, it simply describes how decisions actually get made in organizations---often through informal influence, relationships, and social capital rather than official channels <Citation id="6" index={6} source="Organizational Dynamics" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Understanding organizational dynamics isn't cynicism—it's realism. Pretending politics doesn't exist doesn't make you more ethical; it makes you less effective at advancing both your interests and your values.</p>
+          <p>Understanding organizational dynamics isn't cynicism---it's realism. Pretending politics doesn't exist doesn't make you more ethical; it makes you less effective at advancing both your interests and your values.</p>
         </ArticleCallout>
 
         <StatCard
@@ -136,7 +136,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
             { feature: 'Social astuteness', values: ['Reading organizational dynamics accurately', 'Understanding stakeholder motivations without judgment'] },
             { feature: 'Interpersonal influence', values: ['Persuading others effectively', 'Advocating for ideas based on merit'] },
             { feature: 'Networking ability', values: ['Building diverse relationships', 'Creating genuine connections, not transactional ones'] },
-            { feature: 'Apparent sincerity', values: ['Coming across as authentic', 'Actually being authentic—transparency builds trust'] },
+            { feature: 'Apparent sincerity', values: ['Coming across as authentic', 'Actually being authentic---transparency builds trust'] },
           ]}
           highlightColumn={1}
         />
@@ -171,7 +171,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          This mapping isn't scheming—it's situational awareness. Understanding the system lets you navigate it effectively while maintaining integrity.
+          This mapping isn't scheming---it's situational awareness. Understanding the system lets you navigate it effectively while maintaining integrity.
         </p>
 
         <h2 id="building-influence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -182,11 +182,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Develop expertise</strong> — become the go-to person in a valuable area; expertise creates natural influence</li>
-          <li><strong>Help others succeed</strong> — support colleagues" goals without expecting immediate reciprocity; generosity builds social capital</li>
-          <li><strong>Connect people</strong> — introduce people who should know each other; being a connector increases your network centrality</li>
-          <li><strong>Share credit generously</strong> — acknowledge others' contributions publicly; magnanimity strengthens relationships</li>
-          <li><strong>Deliver consistently</strong> — reliability builds trust; trust is the foundation of influence</li>
+          <li><strong>Develop expertise</strong> --- become the go-to person in a valuable area; expertise creates natural influence</li>
+          <li><strong>Help others succeed</strong> --- support colleagues" goals without expecting immediate reciprocity; generosity builds social capital</li>
+          <li><strong>Connect people</strong> --- introduce people who should know each other; being a connector increases your network centrality</li>
+          <li><strong>Share credit generously</strong> --- acknowledge others' contributions publicly; magnanimity strengthens relationships</li>
+          <li><strong>Deliver consistently</strong> --- reliability builds trust; trust is the foundation of influence</li>
         </ul>
 
         <ArticleCallout variant="tip" title="The Long Game">
@@ -230,7 +230,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Impression Management vs. Authenticity
         </h2>
         <p className="mb-6">
-          Impression management—controlling how others perceive you—has an ethical version <Citation id="5" index={5} source="Psychological Bulletin" year="2020" tier={1} />. The manipulative version involves misrepresenting yourself. The authentic version involves highlighting genuine strengths and managing how you present real qualities.
+          Impression management---controlling how others perceive you---has an ethical version <Citation id="5" index={5} source="Psychological Bulletin" year="2020" tier={1} />. The manipulative version involves misrepresenting yourself. The authentic version involves highlighting genuine strengths and managing how you present real qualities.
         </p>
 
         <ComparisonTable
@@ -253,11 +253,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Evaluate the ask</strong> — Is this a minor preference violation (frustrating but not fundamental) or a core values breach (lying, harming others, illegal activity)?</li>
-          <li><strong>Consider indirect approaches</strong> — Can you achieve the goal without the unethical tactic? Often there are alternative paths.</li>
-          <li><strong>Document and escalate</strong> — If pressured to do something unethical, document the request and escalate appropriately (HR, legal, ethics hotline).</li>
-          <li><strong>Assess sustainability</strong> — Can you maintain integrity long-term in this environment? Chronic values-culture mismatch leads to burnout.</li>
-          <li><strong>Know your limits</strong> — Define clear boundaries in advance: "I will never..." Having pre-decided limits makes in-the-moment decisions easier.</li>
+          <li><strong>Evaluate the ask</strong> --- Is this a minor preference violation (frustrating but not fundamental) or a core values breach (lying, harming others, illegal activity)?</li>
+          <li><strong>Consider indirect approaches</strong> --- Can you achieve the goal without the unethical tactic? Often there are alternative paths.</li>
+          <li><strong>Document and escalate</strong> --- If pressured to do something unethical, document the request and escalate appropriately (HR, legal, ethics hotline).</li>
+          <li><strong>Assess sustainability</strong> --- Can you maintain integrity long-term in this environment? Chronic values-culture mismatch leads to burnout.</li>
+          <li><strong>Know your limits</strong> --- Define clear boundaries in advance: "I will never..." Having pre-decided limits makes in-the-moment decisions easier.</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -272,19 +272,19 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Stay neutral in conflicts that don't concern you</strong> — don't let others recruit you into their battles</li>
-          <li><strong>Listen more than you speak</strong> — observe dynamics before forming strong opinions or alliances</li>
-          <li><strong>Give feedback privately, praise publicly</strong> — classic advice that protects relationships</li>
-          <li><strong>Build bridges across groups</strong> — being trusted by multiple factions increases your influence and reduces vulnerability</li>
-          <li><strong>Document important conversations</strong> — follow-up emails confirming agreements protect you if narratives shift</li>
-          <li><strong>Choose battles strategically</strong> — not every issue warrants political capital; save it for what matters most</li>
+          <li><strong>Stay neutral in conflicts that don't concern you</strong> --- don't let others recruit you into their battles</li>
+          <li><strong>Listen more than you speak</strong> --- observe dynamics before forming strong opinions or alliances</li>
+          <li><strong>Give feedback privately, praise publicly</strong> --- classic advice that protects relationships</li>
+          <li><strong>Build bridges across groups</strong> --- being trusted by multiple factions increases your influence and reduces vulnerability</li>
+          <li><strong>Document important conversations</strong> --- follow-up emails confirming agreements protect you if narratives shift</li>
+          <li><strong>Choose battles strategically</strong> --- not every issue warrants political capital; save it for what matters most</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Starting This Week
         </h2>
         <p className="mb-6">
-          Begin mapping your organization's informal structure. Over the next week, observe: Who do senior leaders consult informally? Who gets cc'd on important emails? Whose opinions seem to shift outcomes in meetings? Who do people go to for information? Don't intervene or strategize yet—just observe and understand the system. Awareness precedes effective action.
+          Begin mapping your organization's informal structure. Over the next week, observe: Who do senior leaders consult informally? Who gets cc'd on important emails? Whose opinions seem to shift outcomes in meetings? Who do people go to for information? Don't intervene or strategize yet---just observe and understand the system. Awareness precedes effective action.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -378,10 +378,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your relationship with your direct manager profoundly shapes your work experience, performance, and mental health. A difficult boss can make even objectively good jobs feel unbearable. Understanding different challenging management patterns—and specific strategies for each—helps you navigate these relationships more effectively and decide when the situation is salvageable.
+            Your relationship with your direct manager profoundly shapes your work experience, performance, and mental health. A difficult boss can make even objectively good jobs feel unbearable. Understanding different challenging management patterns---and specific strategies for each---helps you navigate these relationships more effectively and decide when the situation is salvageable.
           </p>
           <p className="mb-6">
-            Research consistently demonstrates that abusive supervision—persistent hostile behavior from managers—harms employee wellbeing, job performance, and retention <Citation id="1" index={1} source="Journal of Management" year="2020" tier={1} />. Not all difficult bosses cross into abuse, but all require strategic management.
+            Research consistently demonstrates that abusive supervision---persistent hostile behavior from managers---harms employee wellbeing, job performance, and retention <Citation id="1" index={1} source="Journal of Management" year="2020" tier={1} />. Not all difficult bosses cross into abuse, but all require strategic management.
           </p>
         </div>
 
@@ -427,10 +427,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </ArticleCallout>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Provide visibility without being asked</strong> — send brief progress updates preempting their need to check in</li>
-          <li><strong>Ask for specific feedback early</strong> — "What level of detail do you want on updates?" shows respect for their preferences</li>
-          <li><strong>Document everything</strong> — track your work in shared systems where they can check status without interrupting you</li>
-          <li><strong>Request autonomy incrementally</strong> — "Can I handle X independently and report results?" builds trust gradually</li>
+          <li><strong>Provide visibility without being asked</strong> --- send brief progress updates preempting their need to check in</li>
+          <li><strong>Ask for specific feedback early</strong> --- "What level of detail do you want on updates?" shows respect for their preferences</li>
+          <li><strong>Document everything</strong> --- track your work in shared systems where they can check status without interrupting you</li>
+          <li><strong>Request autonomy incrementally</strong> --- "Can I handle X independently and report results?" builds trust gradually</li>
         </ul>
 
         <h2 id="avoider" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -440,11 +440,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Schedule regular one-on-ones</strong> — recurring calendar events create structure avoiders won't initiate</li>
-          <li><strong>Come with specific asks</strong> — "I need a decision on X by Friday" is easier to respond to than open-ended check-ins</li>
-          <li><strong>Send decision memos</strong> — "Unless I hear otherwise by [date], I'll proceed with [approach]" forces response or grants implicit approval</li>
-          <li><strong>Build lateral relationships</strong> — get guidance from peers when manager is unavailable</li>
-          <li><strong>Document independently</strong> — keep your own records of goals, decisions, and accomplishments for performance reviews</li>
+          <li><strong>Schedule regular one-on-ones</strong> --- recurring calendar events create structure avoiders won't initiate</li>
+          <li><strong>Come with specific asks</strong> --- "I need a decision on X by Friday" is easier to respond to than open-ended check-ins</li>
+          <li><strong>Send decision memos</strong> --- "Unless I hear otherwise by [date], I'll proceed with [approach]" forces response or grants implicit approval</li>
+          <li><strong>Build lateral relationships</strong> --- get guidance from peers when manager is unavailable</li>
+          <li><strong>Document independently</strong> --- keep your own records of goals, decisions, and accomplishments for performance reviews</li>
         </ul>
 
         <h2 id="volatile" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -459,18 +459,18 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </ArticleCallout>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Choose timing carefully</strong> — observe patterns (time of day, day of week) when they're calmer; save difficult conversations for those windows</li>
-          <li><strong>Stay calm and neutral</strong> — don't match their emotional intensity; steady responses can de-escalate</li>
-          <li><strong>Focus on facts</strong> — emotional volatility responds poorly to feelings-based arguments; stick to data and outcomes</li>
-          <li><strong>Don't take it personally</strong> — their outbursts reflect their regulation issues, not your worth</li>
-          <li><strong>Build support systems</strong> — debrief with trusted colleagues who understand the pattern</li>
+          <li><strong>Choose timing carefully</strong> --- observe patterns (time of day, day of week) when they're calmer; save difficult conversations for those windows</li>
+          <li><strong>Stay calm and neutral</strong> --- don't match their emotional intensity; steady responses can de-escalate</li>
+          <li><strong>Focus on facts</strong> --- emotional volatility responds poorly to feelings-based arguments; stick to data and outcomes</li>
+          <li><strong>Don't take it personally</strong> --- their outbursts reflect their regulation issues, not your worth</li>
+          <li><strong>Build support systems</strong> --- debrief with trusted colleagues who understand the pattern</li>
         </ul>
 
         <h2 id="managing-up" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Art of Managing Up
         </h2>
         <p className="mb-6">
-          Managing up—actively managing your relationship with your manager—isn't manipulation; it's strategic relationship management <Citation id="3" index={3} source="Journal of Organizational Behavior" year="2020" tier={1} />.
+          Managing up---actively managing your relationship with your manager---isn't manipulation; it's strategic relationship management <Citation id="3" index={3} source="Journal of Organizational Behavior" year="2020" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -503,10 +503,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Work hours</strong> — communicate availability clearly; don't establish precedent of constant after-hours responsiveness</li>
-          <li><strong>Scope creep</strong> — when new tasks arise, discuss priorities: "To take this on, what should I deprioritize?"</li>
-          <li><strong>Respect</strong> — tolerate management style differences, but don't tolerate verbal abuse, humiliation, or discrimination</li>
-          <li><strong>Credit</strong> — if your boss takes credit repeatedly, document your contributions in shared systems visible to others</li>
+          <li><strong>Work hours</strong> --- communicate availability clearly; don't establish precedent of constant after-hours responsiveness</li>
+          <li><strong>Scope creep</strong> --- when new tasks arise, discuss priorities: "To take this on, what should I deprioritize?"</li>
+          <li><strong>Respect</strong> --- tolerate management style differences, but don't tolerate verbal abuse, humiliation, or discrimination</li>
+          <li><strong>Credit</strong> --- if your boss takes credit repeatedly, document your contributions in shared systems visible to others</li>
         </ul>
 
         <h2 id="documentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -516,11 +516,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Record specifics</strong> — date, time, location, what was said/done, witnesses present, your response</li>
-          <li><strong>Use contemporaneous notes</strong> — document soon after incidents while memory is fresh</li>
-          <li><strong>Save communications</strong> — preserve emails, messages, performance reviews that demonstrate patterns</li>
-          <li><strong>Note impact</strong> — document how behavior affects your work, health, and wellbeing</li>
-          <li><strong>Keep copies privately</strong> — don't rely solely on company systems you may lose access to</li>
+          <li><strong>Record specifics</strong> --- date, time, location, what was said/done, witnesses present, your response</li>
+          <li><strong>Use contemporaneous notes</strong> --- document soon after incidents while memory is fresh</li>
+          <li><strong>Save communications</strong> --- preserve emails, messages, performance reviews that demonstrate patterns</li>
+          <li><strong>Note impact</strong> --- document how behavior affects your work, health, and wellbeing</li>
+          <li><strong>Keep copies privately</strong> --- don't rely solely on company systems you may lose access to</li>
         </ul>
 
         <p className="mb-6">
@@ -535,10 +535,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Illegal behavior</strong> — discrimination, harassment, retaliation, safety violations</li>
-          <li><strong>Policy violations</strong> — clear breaches of documented company policies</li>
-          <li><strong>Widespread pattern</strong> — multiple employees affected; systemic issue</li>
-          <li><strong>Direct attempts failed</strong> — you've addressed issues directly with boss without improvement</li>
+          <li><strong>Illegal behavior</strong> --- discrimination, harassment, retaliation, safety violations</li>
+          <li><strong>Policy violations</strong> --- clear breaches of documented company policies</li>
+          <li><strong>Widespread pattern</strong> --- multiple employees affected; systemic issue</li>
+          <li><strong>Direct attempts failed</strong> --- you've addressed issues directly with boss without improvement</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -561,14 +561,14 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Leaving isn't failure—it's recognizing when a situation can't be fixed and prioritizing your wellbeing. Start a quiet job search while still employed; having options reduces the power imbalance.
+          Leaving isn't failure---it's recognizing when a situation can't be fixed and prioritizing your wellbeing. Start a quiet job search while still employed; having options reduces the power imbalance.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           This Week: Assess and Act
         </h2>
         <p className="mb-6">
-          Identify your boss's primary pattern from the types above. Choose one specific strategy to try this week matched to that pattern. Track the results: Does it improve interactions? If not, try a different approach. Systematic experimentation helps you find what works in your specific situation—or confirms that no strategy will work and leaving is the right choice.
+          Identify your boss's primary pattern from the types above. Choose one specific strategy to try this week matched to that pattern. Track the results: Does it improve interactions? If not, try a different approach. Systematic experimentation helps you find what works in your specific situation---or confirms that no strategy will work and leaving is the right choice.
         </p>
       </>
     ),
@@ -655,7 +655,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Workplace bullying—repeated, deliberate mistreatment by colleagues or supervisors—affects an estimated 30% of workers at some point in their careers. Unlike one-time conflicts or personality clashes, bullying involves persistent hostile behavior that creates a hostile work environment and causes significant psychological harm.
+            Workplace bullying---repeated, deliberate mistreatment by colleagues or supervisors---affects an estimated 30% of workers at some point in their careers. Unlike one-time conflicts or personality clashes, bullying involves persistent hostile behavior that creates a hostile work environment and causes significant psychological harm.
           </p>
           <p className="mb-6">
             Research demonstrates that workplace bullying produces health consequences comparable to other forms of trauma: anxiety, depression, PTSD symptoms, and physical health problems <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Recognition is the first step toward addressing it.
@@ -683,12 +683,12 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Verbal abuse</strong> — yelling, insults, humiliation, harsh criticism (especially public)</li>
-          <li><strong>Social exclusion</strong> — deliberately excluding from meetings, conversations, or social events</li>
-          <li><strong>Work sabotage</strong> — withholding information, undermining projects, setting up to fail</li>
-          <li><strong>Excessive monitoring</strong> — micromanagement that goes beyond normal supervision</li>
-          <li><strong>Spreading rumors</strong> — damaging reputation through gossip or false information</li>
-          <li><strong>Unreasonable demands</strong> — impossible deadlines, excessive workload, conflicting instructions</li>
+          <li><strong>Verbal abuse</strong> --- yelling, insults, humiliation, harsh criticism (especially public)</li>
+          <li><strong>Social exclusion</strong> --- deliberately excluding from meetings, conversations, or social events</li>
+          <li><strong>Work sabotage</strong> --- withholding information, undermining projects, setting up to fail</li>
+          <li><strong>Excessive monitoring</strong> --- micromanagement that goes beyond normal supervision</li>
+          <li><strong>Spreading rumors</strong> --- damaging reputation through gossip or false information</li>
+          <li><strong>Unreasonable demands</strong> --- impossible deadlines, excessive workload, conflicting instructions</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -726,11 +726,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Mental health</strong> — anxiety disorders, depression, PTSD symptoms, substance use</li>
-          <li><strong>Physical health</strong> — cardiovascular problems, sleep disruption, GI issues, chronic pain</li>
-          <li><strong>Work performance</strong> — reduced productivity, increased errors, absenteeism, turnover</li>
-          <li><strong>Relationships</strong> — withdrawal from colleagues, conflict spillover into personal life</li>
-          <li><strong>Self-perception</strong> — decreased confidence, self-blame, professional identity erosion</li>
+          <li><strong>Mental health</strong> --- anxiety disorders, depression, PTSD symptoms, substance use</li>
+          <li><strong>Physical health</strong> --- cardiovascular problems, sleep disruption, GI issues, chronic pain</li>
+          <li><strong>Work performance</strong> --- reduced productivity, increased errors, absenteeism, turnover</li>
+          <li><strong>Relationships</strong> --- withdrawal from colleagues, conflict spillover into personal life</li>
+          <li><strong>Self-perception</strong> --- decreased confidence, self-blame, professional identity erosion</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -765,7 +765,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
             },
             {
               title: 'Document impacts',
-              description: <p>Medical appointments, therapy sessions, performance reviews, changes in work assignments—anything showing how the bullying affected you.</p>,
+              description: <p>Medical appointments, therapy sessions, performance reviews, changes in work assignments---anything showing how the bullying affected you.</p>,
             },
           ]}
         />
@@ -789,7 +789,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           </li>
           <li>
             <strong>HR complaint</strong>
-            <p className="mt-2">File formal complaint with Human Resources. Provide documentation. Understand HR's role is protecting the company—they may or may not protect you.</p>
+            <p className="mt-2">File formal complaint with Human Resources. Provide documentation. Understand HR's role is protecting the company---they may or may not protect you.</p>
           </li>
           <li>
             <strong>Legal complaint</strong> (if harassment based on protected characteristic)
@@ -809,11 +809,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Support the target privately</strong> — check in, validate their experience, offer to serve as witness if needed</li>
-          <li><strong>Interrupt in the moment</strong> (if safe) — "That's not okay' or redirecting conversation can stop escalation</li>
-          <li><strong>Document what you witness</strong> — contemporaneous notes from witnesses carry weight in investigations</li>
-          <li><strong>Report to appropriate channels</strong> — bullying thrives in silence; reporting (even anonymously) can trigger intervention</li>
-          <li><strong>Don't participate</strong> — refuse to spread rumors, laugh at put-downs, or socially exclude the target</li>
+          <li><strong>Support the target privately</strong> --- check in, validate their experience, offer to serve as witness if needed</li>
+          <li><strong>Interrupt in the moment</strong> (if safe) --- "That's not okay' or redirecting conversation can stop escalation</li>
+          <li><strong>Document what you witness</strong> --- contemporaneous notes from witnesses carry weight in investigations</li>
+          <li><strong>Report to appropriate channels</strong> --- bullying thrives in silence; reporting (even anonymously) can trigger intervention</li>
+          <li><strong>Don't participate</strong> --- refuse to spread rumors, laugh at put-downs, or socially exclude the target</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -828,12 +828,12 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Clear anti-bullying policies</strong> — explicit definitions, reporting procedures, investigation protocols</li>
-          <li><strong>Multiple reporting channels</strong> — options beyond direct supervisor (who may be the bully)</li>
-          <li><strong>Prompt, thorough investigations</strong> — taking complaints seriously with fair, timely investigation</li>
-          <li><strong>Consequences for bullies</strong> — meaningful discipline up to termination, not just "warnings"</li>
-          <li><strong>Protection from retaliation</strong> — monitoring and addressing any retaliation against reporters</li>
-          <li><strong>Cultural change</strong> — leadership modeling respectful behavior, rewarding collaboration over aggression</li>
+          <li><strong>Clear anti-bullying policies</strong> --- explicit definitions, reporting procedures, investigation protocols</li>
+          <li><strong>Multiple reporting channels</strong> --- options beyond direct supervisor (who may be the bully)</li>
+          <li><strong>Prompt, thorough investigations</strong> --- taking complaints seriously with fair, timely investigation</li>
+          <li><strong>Consequences for bullies</strong> --- meaningful discipline up to termination, not just "warnings"</li>
+          <li><strong>Protection from retaliation</strong> --- monitoring and addressing any retaliation against reporters</li>
+          <li><strong>Cultural change</strong> --- leadership modeling respectful behavior, rewarding collaboration over aggression</li>
         </ul>
 
         <p className="mb-6">
@@ -848,25 +848,25 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Remove yourself from the situation</strong> — transfer, leave, or formal intervention to stop the bullying</li>
-          <li><strong>Seek professional support</strong> — therapy, particularly trauma-focused approaches, helps process the experience</li>
-          <li><strong>Rebuild self-perception</strong> — recognize bullying reflects the bully's dysfunction, not your inadequacy</li>
-          <li><strong>Reconnect socially</strong> — bullying often creates isolation; rebuilding connections aids recovery</li>
-          <li><strong>Give it time</strong> — symptoms may persist for months after bullying ends; this is normal, not weakness</li>
+          <li><strong>Remove yourself from the situation</strong> --- transfer, leave, or formal intervention to stop the bullying</li>
+          <li><strong>Seek professional support</strong> --- therapy, particularly trauma-focused approaches, helps process the experience</li>
+          <li><strong>Rebuild self-perception</strong> --- recognize bullying reflects the bully's dysfunction, not your inadequacy</li>
+          <li><strong>Reconnect socially</strong> --- bullying often creates isolation; rebuilding connections aids recovery</li>
+          <li><strong>Give it time</strong> --- symptoms may persist for months after bullying ends; this is normal, not weakness</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           If This Is Happening to You
         </h2>
         <p className="mb-6">
-          Start documenting today—every incident, every witness, every impact. Tell someone you trust (friend, family, therapist) so you're not carrying this alone. Research your organization's policies and your legal rights. Consult an employment attorney for a confidential assessment of your situation and options. Most importantly: This is not your fault, and you don't deserve this treatment. Bullying is always wrong, regardless of the target's performance or personality.
+          Start documenting today---every incident, every witness, every impact. Tell someone you trust (friend, family, therapist) so you're not carrying this alone. Research your organization's policies and your legal rights. Consult an employment attorney for a confidential assessment of your situation and options. Most importantly: This is not your fault, and you don't deserve this treatment. Bullying is always wrong, regardless of the target's performance or personality.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Support
         </h2>
         <p className="mb-6">
-          If you're experiencing persistent anxiety, depression, nightmares, hypervigilance, or physical symptoms from workplace bullying, seek mental health support. Trauma-focused therapy (EMDR, CPT) can be particularly helpful. Don't wait until you "can't take it anymore"—early intervention prevents more severe symptoms and aids faster recovery.
+          If you're experiencing persistent anxiety, depression, nightmares, hypervigilance, or physical symptoms from workplace bullying, seek mental health support. Trauma-focused therapy (EMDR, CPT) can be particularly helpful. Don't wait until you "can't take it anymore"---early intervention prevents more severe symptoms and aids faster recovery.
         </p>
       </>
     ),
@@ -953,10 +953,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Why do some teams with talented individuals produce mediocre results while others with average individuals excel? Team effectiveness isn't simply the sum of individual capabilities—it emerges from psychological and social dynamics that either amplify or suppress collective potential.
+            Why do some teams with talented individuals produce mediocre results while others with average individuals excel? Team effectiveness isn't simply the sum of individual capabilities---it emerges from psychological and social dynamics that either amplify or suppress collective potential.
           </p>
           <p className="mb-6">
-            Google's Project Aristotle—a multi-year study examining hundreds of teams—found that who is on a team matters less than how the team works together <Citation id="2" index={2} source="Google re:Work" year="2015" tier={3} />. The single most important factor predicting team success: psychological safety.
+            Google's Project Aristotle---a multi-year study examining hundreds of teams---found that who is on a team matters less than how the team works together <Citation id="2" index={2} source="Google re:Work" year="2015" tier={3} />. The single most important factor predicting team success: psychological safety.
           </p>
         </div>
 
@@ -964,7 +964,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Psychological Safety: The Foundation
         </h2>
         <p className="mb-6">
-          Psychological safety—the shared belief that the team is safe for interpersonal risk-taking—predicts team learning, innovation, and performance <Citation id="1" index={1} source="Administrative Science Quarterly" year="1999" tier={1} />. In psychologically safe teams, people feel comfortable:
+          Psychological safety---the shared belief that the team is safe for interpersonal risk-taking---predicts team learning, innovation, and performance <Citation id="1" index={1} source="Administrative Science Quarterly" year="1999" tier={1} />. In psychologically safe teams, people feel comfortable:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -985,7 +985,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Psychological safety isn't about being "nice" or avoiding disagreement—it's about making conflict productive rather than threatening. The best teams disagree frequently but constructively, without fear that dissent will damage relationships or reputations.</p>
+          <p>Psychological safety isn't about being "nice" or avoiding disagreement---it's about making conflict productive rather than threatening. The best teams disagree frequently but constructively, without fear that dissent will damage relationships or reputations.</p>
         </ArticleCallout>
 
         <h2 id="building-safety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1055,7 +1055,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Trust erodes faster than it builds. One breach—broken promise, hidden agenda, blame-shifting—can destroy months of trust-building. Consistent reliability is essential.
+          Trust erodes faster than it builds. One breach---broken promise, hidden agenda, blame-shifting---can destroy months of trust-building. Consistent reliability is essential.
         </p>
 
         <h2 id="diversity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1066,8 +1066,8 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Benefits</strong> — broader perspective, more creative solutions, reduced groupthink, better problem-solving for complex tasks</li>
-          <li><strong>Challenges</strong> — communication difficulties, potential for misunderstanding, slower consensus-building, risk of subgroup formation</li>
+          <li><strong>Benefits</strong> --- broader perspective, more creative solutions, reduced groupthink, better problem-solving for complex tasks</li>
+          <li><strong>Challenges</strong> --- communication difficulties, potential for misunderstanding, slower consensus-building, risk of subgroup formation</li>
         </ul>
 
         <p className="mb-6">
@@ -1078,7 +1078,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Social Loafing: The Free-Rider Problem
         </h2>
         <p className="mb-6">
-          Social loafing—reduced effort when working in groups—is a persistent team challenge <Citation id="6" index={6} source="Group Dynamics" year="2020" tier={1} />. People loaf when:
+          Social loafing---reduced effort when working in groups---is a persistent team challenge <Citation id="6" index={6} source="Group Dynamics" year="2020" tier={1} />. People loaf when:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1097,7 +1097,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Shared Mental Models
         </h2>
         <p className="mb-6">
-          High-performing teams develop shared mental models—common understanding of tasks, roles, and team processes <Citation id="7" index={7} source="Organizational Behavior and Human Decision Processes" year="2021" tier={1} />. Shared understanding enables coordination without constant communication.
+          High-performing teams develop shared mental models---common understanding of tasks, roles, and team processes <Citation id="7" index={7} source="Organizational Behavior and Human Decision Processes" year="2021" tier={1} />. Shared understanding enables coordination without constant communication.
         </p>
 
         <p className="mb-6">
@@ -1108,7 +1108,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Optimal Team Size
         </h2>
         <p className="mb-6">
-          The "two-pizza rule"—teams should be small enough to feed with two pizzas (roughly 5-8 people)—has empirical support. Smaller teams communicate more effectively, coordinate more easily, and experience higher accountability <Citation id="2" index={2} source="Google re:Work" year="2015" tier={3} />.
+          The "two-pizza rule"---teams should be small enough to feed with two pizzas (roughly 5-8 people)---has empirical support. Smaller teams communicate more effectively, coordinate more easily, and experience higher accountability <Citation id="2" index={2} source="Google re:Work" year="2015" tier={3} />.
         </p>
 
         <p className="mb-6">
@@ -1119,7 +1119,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Improving Your Team This Week
         </h2>
         <p className="mb-6">
-          Choose one practice: (1) At your next team meeting, explicitly invite dissent: "What concerns haven't been raised?" (2) Share a mistake you made and what you learned—modeling vulnerability. (3) Thank someone publicly for challenging your idea. (4) Check shared understanding: "Let's each summarize our understanding of the goal." Small consistent actions compound into strong team culture.
+          Choose one practice: (1) At your next team meeting, explicitly invite dissent: "What concerns haven't been raised?" (2) Share a mistake you made and what you learned---modeling vulnerability. (3) Thank someone publicly for challenging your idea. (4) Check shared understanding: "Let's each summarize our understanding of the goal." Small consistent actions compound into strong team culture.
         </p>
       </>
     ),
@@ -1206,10 +1206,10 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Mentorship—guidance from someone more experienced in your field—affects far more than career trajectory. Good mentors provide psychological support, confidence-building, reality checks, and belonging that significantly impact mental health and workplace wellbeing.
+            Mentorship---guidance from someone more experienced in your field---affects far more than career trajectory. Good mentors provide psychological support, confidence-building, reality checks, and belonging that significantly impact mental health and workplace wellbeing.
           </p>
           <p className="mb-6">
-            Research demonstrates that people with strong mentorship relationships report higher job satisfaction, lower stress, better work-life balance, and reduced burnout risk <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2021" tier={1} />. The relationship itself—not just the advice—creates protective psychological benefits.
+            Research demonstrates that people with strong mentorship relationships report higher job satisfaction, lower stress, better work-life balance, and reduced burnout risk <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2021" tier={1} />. The relationship itself---not just the advice---creates protective psychological benefits.
           </p>
         </div>
 
@@ -1251,11 +1251,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Perspective and context</strong> — mentors normalize challenges ("This happened to me too") reducing feelings of inadequacy</li>
-          <li><strong>Practical guidance</strong> — concrete advice reduces uncertainty and decision paralysis</li>
-          <li><strong>Emotional validation</strong> — having someone acknowledge difficulty legitimizes your experience</li>
-          <li><strong>Advocacy and visibility</strong> — mentors opening doors reduces anxiety about career stagnation</li>
-          <li><strong>Belonging</strong> — particularly for underrepresented groups, mentors signal "people like you succeed here"</li>
+          <li><strong>Perspective and context</strong> --- mentors normalize challenges ("This happened to me too") reducing feelings of inadequacy</li>
+          <li><strong>Practical guidance</strong> --- concrete advice reduces uncertainty and decision paralysis</li>
+          <li><strong>Emotional validation</strong> --- having someone acknowledge difficulty legitimizes your experience</li>
+          <li><strong>Advocacy and visibility</strong> --- mentors opening doors reduces anxiety about career stagnation</li>
+          <li><strong>Belonging</strong> --- particularly for underrepresented groups, mentors signal "people like you succeed here"</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -1270,11 +1270,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Mutual respect</strong> — both parties value the relationship</li>
-          <li><strong>Chemistry</strong> — natural rapport, enjoying conversations</li>
-          <li><strong>Shared values</strong> — alignment on important professional or personal principles</li>
-          <li><strong>Relevant experience</strong> — mentor has navigated challenges you face</li>
-          <li><strong>Generosity</strong> — mentor genuinely wants to help, not extracting value</li>
+          <li><strong>Mutual respect</strong> --- both parties value the relationship</li>
+          <li><strong>Chemistry</strong> --- natural rapport, enjoying conversations</li>
+          <li><strong>Shared values</strong> --- alignment on important professional or personal principles</li>
+          <li><strong>Relevant experience</strong> --- mentor has navigated challenges you face</li>
+          <li><strong>Generosity</strong> --- mentor genuinely wants to help, not extracting value</li>
         </ul>
 
         <ProgressSteps
@@ -1307,27 +1307,27 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Identity mentors</strong> — someone who shares your marginalized identity understands specific challenges (navigating bias, microaggressions, isolation)</li>
-          <li><strong>Organizational mentors</strong> — senior people with organizational power can sponsor you, open doors, provide political guidance</li>
-          <li><strong>Multiple mentors</strong> — one person can't provide all functions; build a constellation of mentors serving different needs</li>
+          <li><strong>Identity mentors</strong> --- someone who shares your marginalized identity understands specific challenges (navigating bias, microaggressions, isolation)</li>
+          <li><strong>Organizational mentors</strong> --- senior people with organizational power can sponsor you, open doors, provide political guidance</li>
+          <li><strong>Multiple mentors</strong> --- one person can't provide all functions; build a constellation of mentors serving different needs</li>
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>Underrepresented individuals often face the "only one" phenomenon—being the sole person like them in spaces. Identity mentors outside your organization can provide safe spaces to process these unique stressors.</p>
+          <p>Underrepresented individuals often face the "only one" phenomenon---being the sole person like them in spaces. Identity mentors outside your organization can provide safe spaces to process these unique stressors.</p>
         </ArticleCallout>
 
         <h2 id="peer" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Peer Mentorship: Horizontal Support
         </h2>
         <p className="mb-6">
-          Mentorship doesn't require seniority differences. Peer mentors—colleagues at similar levels—provide different but equally valuable support <Citation id="6" index={6} source="Human Resource Development Review" year="2020" tier={1} />:
+          Mentorship doesn't require seniority differences. Peer mentors---colleagues at similar levels---provide different but equally valuable support <Citation id="6" index={6} source="Human Resource Development Review" year="2020" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Real-time problem-solving</strong> — peers face similar current challenges, not challenges from years ago</li>
-          <li><strong>Mutual accountability</strong> — checking in on each other's goals and progress</li>
-          <li><strong>Emotional safety</strong> — less hierarchy-related anxiety about appearing incompetent</li>
-          <li><strong>Skill exchange</strong> — teaching each other complementary skills</li>
+          <li><strong>Real-time problem-solving</strong> --- peers face similar current challenges, not challenges from years ago</li>
+          <li><strong>Mutual accountability</strong> --- checking in on each other's goals and progress</li>
+          <li><strong>Emotional safety</strong> --- less hierarchy-related anxiety about appearing incompetent</li>
+          <li><strong>Skill exchange</strong> --- teaching each other complementary skills</li>
         </ul>
 
         <p className="mb-6">
@@ -1338,7 +1338,7 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
           Reverse Mentorship: Learning from Juniors
         </h2>
         <p className="mb-6">
-          Reverse mentorship—junior employees mentoring senior leaders—benefits both parties <Citation id="7" index={7} source="Organization Management Journal" year="2021" tier={1} />. Junior employees gain visibility, confidence, and understanding of leadership challenges. Senior leaders gain current perspective on technology, cultural shifts, and frontline realities.
+          Reverse mentorship---junior employees mentoring senior leaders---benefits both parties <Citation id="7" index={7} source="Organization Management Journal" year="2021" tier={1} />. Junior employees gain visibility, confidence, and understanding of leadership challenges. Senior leaders gain current perspective on technology, cultural shifts, and frontline realities.
         </p>
 
         <p className="mb-6">
@@ -1353,11 +1353,11 @@ export const workplaceRelationshipsDynamicsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Over-dependence</strong> — mentorship should build independence, not create dependency on the mentor for all decisions</li>
-          <li><strong>Cloning</strong> — good mentors guide you to your authentic path, not replicate their career trajectory</li>
-          <li><strong>Boundary violations</strong> — mentorship should remain professional; romantic or exploitative relationships are harmful</li>
-          <li><strong>Toxic guidance</strong> — mentors pushing unethical behavior or their own agenda rather than your development</li>
-          <li><strong>One-size-fits-all advice</strong> — what worked for your mentor may not work for you; adapt guidance to your context</li>
+          <li><strong>Over-dependence</strong> --- mentorship should build independence, not create dependency on the mentor for all decisions</li>
+          <li><strong>Cloning</strong> --- good mentors guide you to your authentic path, not replicate their career trajectory</li>
+          <li><strong>Boundary violations</strong> --- mentorship should remain professional; romantic or exploitative relationships are harmful</li>
+          <li><strong>Toxic guidance</strong> --- mentors pushing unethical behavior or their own agenda rather than your development</li>
+          <li><strong>One-size-fits-all advice</strong> --- what worked for your mentor may not work for you; adapt guidance to your context</li>
         </ul>
 
         <h2 id="being-mentor" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

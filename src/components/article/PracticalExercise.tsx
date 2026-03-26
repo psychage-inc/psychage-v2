@@ -12,7 +12,7 @@ export interface ExerciseStep {
 interface PracticalExerciseProps {
     title: string;
     steps: ExerciseStep[];
-    toolLink?: string;
+    toolLink?: string; // Can be either internal path or external URL
     toolLabel?: string;
     className?: string;
 }
@@ -67,15 +67,23 @@ const PracticalExercise: React.FC<PracticalExerciseProps> = ({
                 ))}
             </ol>
 
-            {toolLink && (
-                <Link
-                    to={toolLink}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors shadow-sm"
-                >
-                    {toolLabel || 'Try This Tool'}
-                    <ArrowRight size={16} />
-                </Link>
-            )}
+            {toolLink && (() => {
+                const isExternal = toolLink.startsWith('http://') || toolLink.startsWith('https://');
+                const Component = isExternal ? 'a' : Link;
+                const linkProps = isExternal
+                    ? { href: toolLink, target: '_blank', rel: 'noopener noreferrer' }
+                    : { to: toolLink };
+
+                return (
+                    <Component
+                        {...linkProps}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white rounded-lg font-medium text-sm hover:bg-primary/90 transition-colors shadow-sm"
+                    >
+                        {toolLabel || 'Try This Tool'}
+                        <ArrowRight size={16} />
+                    </Component>
+                );
+            })()}
         </motion.div>
     );
 };

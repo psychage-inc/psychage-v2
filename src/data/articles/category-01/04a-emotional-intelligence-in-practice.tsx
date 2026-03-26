@@ -103,6 +103,9 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           <p className="mb-6">
             Emotional intelligence (often abbreviated as EQ) is not about being nice, suppressing anger, or always saying the right thing. It's a specific set of skills that help you understand, use, and manage emotions in yourself and others <Citation id="1" index={1} source="Bantam Books" year="1995" tier={5} />. And research shows it's strongly linked to mental health, relationship satisfaction, and overall life success <Citation id="3" index={3} source="The Lancet Psychiatry" year="2018" tier={1} />.
           </p>
+          <p className="mb-6">
+            Consider Sarah, a marketing manager who excels at technical tasks but struggles when team members get defensive during feedback sessions. Or Marcus, a talented software developer whose projects stall because he can't navigate the emotional undercurrents in team meetings. Both are intelligent professionals held back not by lack of knowledge, but by gaps in emotional intelligence.
+          </p>
         </div>
 
         <h2 id="the-four-branches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -118,7 +121,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
             {
               title: '1. Perceiving Emotions',
               description: (
-                <p>The ability to accurately identify emotions in yourself and others through facial expressions, tone of voice, body language, and context. This is the foundation—you can't manage what you can't recognize.</p>
+                <p>The ability to accurately identify emotions in yourself and others through facial expressions, tone of voice, body language, and context. This is the foundation---you can't manage what you can't recognize.</p>
               ),
             },
             {
@@ -130,17 +133,21 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
             {
               title: '3. Understanding Emotions',
               description: (
-                <p>Knowledge about how emotions work—how they progress, blend, and transition. Understanding that irritation can escalate to rage, or that anxiety often masks vulnerability.</p>
+                <p>Knowledge about how emotions work---how they progress, blend, and transition. Understanding that irritation can escalate to rage, or that anxiety often masks vulnerability.</p>
               ),
             },
             {
               title: '4. Managing Emotions',
               description: (
-                <p>The ability to regulate your own emotions and influence the emotions of others in constructive ways. This doesn't mean suppression—it means choosing effective responses.</p>
+                <p>The ability to regulate your own emotions and influence the emotions of others in constructive ways. This doesn't mean suppression---it means choosing effective responses.</p>
               ),
             },
           ]}
         />
+
+        <p className="mb-6 mt-8">
+          These four branches build on each other. You need to perceive emotions before you can use them strategically, understand them before you can manage them effectively, and practice all four to develop true emotional intelligence.
+        </p>
 
         <h2 id="why-it-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Emotional Intelligence Matters for Mental Health
@@ -160,10 +167,14 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Better emotion regulation:</strong> High EQ helps you calm yourself down during stress and prevent emotional spirals.</li>
-          <li><strong>Stronger relationships:</strong> Understanding and responding to others" emotions builds trust and connection.</li>
+          <li><strong>Stronger relationships:</strong> Understanding and responding to others' emotions builds trust and connection.</li>
           <li><strong>Reduced rumination:</strong> EQ skills help you understand emotions without getting stuck in repetitive negative thinking.</li>
           <li><strong>Healthier coping:</strong> People with high EQ are less likely to use avoidance-based coping (like substance use or emotional eating).</li>
         </ul>
+
+        <p className="mb-6">
+          Take the example of James, who noticed himself snapping at his partner after stressful workdays. By developing emotional awareness (perceiving), he recognized the pattern: work frustration was bleeding into home life. By understanding his emotions (understanding), he saw that irritation was masking exhaustion. By managing them (managing), he started creating a 15-minute buffer between work and home to decompress---dramatically improving his relationship quality.
+        </p>
 
         <h2 id="not-just-iq" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           EQ vs. IQ: Which Matters More?
@@ -185,8 +196,12 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Emotional intelligence is not about being "smarter" than IQ—it's a different kind of intelligence that complements cognitive ability. Both matter, but in different domains of life.</p>
+          <p>Emotional intelligence is not about being "smarter" than IQ---it's a different kind of intelligence that complements cognitive ability. Both matter, but in different domains of life.</p>
         </ArticleCallout>
+
+        <p className="mb-6 mt-8">
+          Consider two medical students with identical test scores. One becomes a beloved physician with a thriving practice; the other burns out within five years. The difference? The first doctor can read patient anxiety, manage their own stress, and navigate difficult conversations with families. Technical knowledge alone isn't enough---you need EQ to apply that knowledge effectively in the real world.
+        </p>
 
         <h2 id="neuroscience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Brain Basis of Emotional Intelligence
@@ -201,11 +216,133 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           <li><strong>Anterior cingulate cortex:</strong> Monitoring emotional conflict and social pain</li>
         </ul>
         <p className="mb-6">
-          These brain regions develop through experience. This is why EQ can be trained—your brain physically changes with practice <Citation id="8" index={8} source="Emotion" year="2021" tier={1} />.
+          These brain regions develop through experience. This is why EQ can be trained---your brain physically changes with practice <Citation id="8" index={8} source="Emotion" year="2021" tier={1} />. Neuroplasticity research shows that repeated emotional skills practice strengthens the connections between these regions, making emotionally intelligent responses more automatic over time.
         </p>
 
+        <ArticleCallout variant="info">
+          <p>Brain imaging studies show that people with higher EQ have greater connectivity between the prefrontal cortex and amygdala---the "thinking brain" has better communication with the "emotional brain." This integration allows for more nuanced emotional responses rather than purely reactive ones.</p>
+        </ArticleCallout>
+
+        <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Emotional Intelligence in Action
+        </h2>
+        <p className="mb-6">
+          Here's what emotional intelligence looks like in everyday situations:
+        </p>
+
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example 1: Conflict at Work</h4>
+          <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+            <strong>Low EQ response:</strong> Your colleague criticizes your project in a meeting. You feel your face flush with anger, immediately fire back a defensive comment, and stew about it for days.
+          </p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>High EQ response:</strong> You notice the physical sensation of anger (perceiving), recognize that your colleague's tone suggests their own stress (understanding), take three deep breaths before responding (managing), and say: "I hear your concerns. Can we schedule time to discuss specific improvements?" Later, you process your hurt feelings through journaling rather than rumination.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example 2: Family Tension</h4>
+          <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+            <strong>Low EQ response:</strong> Your parent makes a comment that triggers childhood wounds. You shut down emotionally, leave abruptly, and avoid them for weeks.
+          </p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>High EQ response:</strong> You notice the surge of old pain (perceiving), recognize it's tied to past patterns rather than present intent (understanding), and set a boundary: "I need to pause this conversation. I'm feeling overwhelmed right now." You return when regulated and communicate your needs clearly without blame.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-gray-50 dark:bg-gray-800/50 rounded-xl border border-gray-200 dark:border-gray-700">
+          <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Example 3: Personal Setback</h4>
+          <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">
+            <strong>Low EQ response:</strong> You don't get the promotion you wanted. You tell yourself "I'm a failure," lose motivation, and become resentful toward coworkers who succeeded.
+          </p>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>High EQ response:</strong> You acknowledge the disappointment and let yourself feel it (perceiving), separate the setback from your self-worth (understanding), and use the frustration as fuel to identify skill gaps and create a development plan (using emotions to facilitate thinking).
+          </p>
+        </div>
+
+        <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Exercises to Build Your EQ
+        </h2>
+        <p className="mb-6">
+          Emotional intelligence is a skill set, not a personality trait. Here are evidence-based exercises to develop each branch:
+        </p>
+
+        <ArticleAccordion
+          items={[
+            {
+              title: 'Exercise 1: The Emotion Wheel Practice (Perceiving)',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>Time required:</strong> 5 minutes daily</p>
+                  <p className="mb-3"><strong>Steps:</strong></p>
+                  <ol className="list-decimal pl-5 space-y-2 mb-3">
+                    <li>Download or print an emotion wheel (a circular diagram showing emotions from basic to complex)</li>
+                    <li>Three times per day, pause and ask: "What am I feeling right now?"</li>
+                    <li>Start with basic emotions (happy, sad, angry, afraid) and move toward specific ones (frustrated vs. overwhelmed vs. discouraged)</li>
+                    <li>Notice where you feel each emotion in your body (chest tightness, jaw clenching, stomach butterflies)</li>
+                    <li>Journal your observations without judgment</li>
+                  </ol>
+                  <p className="text-sm italic">Why it works: Granular emotion labeling (called "emotional granularity") is linked to better emotion regulation and mental health outcomes.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Exercise 2: The Reappraisal Challenge (Using Emotions)',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>Time required:</strong> 10 minutes per challenge</p>
+                  <p className="mb-3"><strong>Steps:</strong></p>
+                  <ol className="list-decimal pl-5 space-y-2 mb-3">
+                    <li>Identify a current source of anxiety or frustration</li>
+                    <li>Write down your initial interpretation of the situation</li>
+                    <li>Challenge yourself to generate three alternative interpretations---especially ones that reframe the emotion as useful</li>
+                    <li>Example: "I'm anxious about this presentation" → "My anxiety shows I care about doing well" → "This nervous energy can fuel my preparation and alertness"</li>
+                    <li>Choose the interpretation that feels most empowering and test it out</li>
+                  </ol>
+                  <p className="text-sm italic">Why it works: Cognitive reappraisal is one of the most effective emotion regulation strategies, associated with better mental health and social functioning.</p>
+                </div>
+              ),
+            },
+            {
+              title: 'Exercise 3: The Empathy Interview (Understanding)',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>Time required:</strong> 20 minutes weekly</p>
+                  <p className="mb-3"><strong>Steps:</strong></p>
+                  <ol className="list-decimal pl-5 space-y-2 mb-3">
+                    <li>Ask someone you trust to share a recent emotional experience</li>
+                    <li>Your only job is to listen and understand---not to fix, advise, or relate it back to yourself</li>
+                    <li>Ask clarifying questions: "What was that like for you?" "How did you make sense of it?" "What did you need in that moment?"</li>
+                    <li>Reflect back what you heard: "It sounds like you felt..." "What mattered most was..."</li>
+                    <li>Notice how their emotional experience differs from how you might have felt in the same situation</li>
+                  </ol>
+                  <p className="text-sm italic">Why it works: Active perspective-taking builds cognitive empathy and challenges the assumption that others feel the same way we do.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="common-misconceptions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Misconceptions About Emotional Intelligence
+        </h2>
+        <p className="mb-6">
+          Let's clear up what EQ is not:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>It's not about being "nice":</strong> EQ includes setting boundaries, having difficult conversations, and expressing anger appropriately. People-pleasing actually reflects low EQ because it prioritizes others' comfort over honest communication.</li>
+          <li><strong>It's not emotional suppression:</strong> High EQ means feeling your emotions fully while choosing how to express them. Suppression is linked to worse mental and physical health outcomes <Citation id="6" index={6} source="Journal of Vocational Behavior" year="2010" tier={1} />.</li>
+          <li><strong>It's not manipulation:</strong> While EQ helps you influence others, using it to deceive or exploit is emotional intelligence without integrity---and ultimately unsustainable.</li>
+          <li><strong>It's not fixed:</strong> Unlike IQ, EQ improves with age and experience. A 50-year-old typically has higher EQ than their 25-year-old self, assuming they've engaged in emotional growth.</li>
+        </ul>
+
+        <ArticleCallout variant="warning" title="The Dark Side of EQ">
+          <p>Research shows that some individuals high in emotional intelligence use it for self-serving purposes---reading others to manipulate, appearing empathetic to gain trust, then exploiting it. Emotional intelligence without ethics is dangerous. True EQ includes compassion, not just competence.</p>
+        </ArticleCallout>
+
         <h2 id="can-you-develop-it" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Can You Develop Emotional Intelligence?
+          Building Your Emotional Intelligence: A Roadmap
         </h2>
         <p className="mb-6">
           Yes. Unlike IQ, which is relatively stable after childhood, emotional intelligence can improve throughout your life with deliberate practice. A meta-analysis of intervention studies found that EQ training programs produce measurable increases in emotional skills and well-being <Citation id="8" index={8} source="Emotion" year="2021" tier={1} />.
@@ -218,8 +355,15 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
             <li>Ask yourself: "What is this emotion trying to tell me?"</li>
             <li>Observe how others react emotionally in different situations</li>
             <li>Pause before responding in emotionally charged moments</li>
+            <li>Seek feedback from trusted friends about your emotional impact</li>
+            <li>Read fiction---research shows it improves empathy and emotional understanding</li>
+            <li>Practice mindfulness meditation to strengthen emotional awareness</li>
           </ul>
         </ArticleCallout>
+
+        <p className="mb-6 mt-8">
+          Start small. Pick one branch to focus on for a month. Track your progress. Notice how improved emotional intelligence ripples into better relationships, reduced stress, and greater life satisfaction. The return on investment is substantial.
+        </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
@@ -228,7 +372,17 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           If you struggle to identify your emotions, feel disconnected from your feelings, or find that emotional outbursts interfere with your life, therapy can help. Emotion-Focused Therapy (EFT) and Dialectical Behavior Therapy (DBT) are evidence-based treatments specifically designed to build emotional skills.
         </p>
         <p className="mb-6">
-          Emotional intelligence is not a personality trait you're born with—it's a learnable set of skills. And building those skills might be one of the most valuable investments you make in your mental health.
+          Some signs you might benefit from professional support:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Chronic emotional numbness or feeling "flat"</li>
+          <li>Frequent intense emotional reactions that damage relationships</li>
+          <li>Difficulty recovering from emotional distress (taking days or weeks to bounce back)</li>
+          <li>Using unhealthy coping mechanisms (substance use, self-harm, binge eating) to manage emotions</li>
+          <li>Feeling completely overwhelmed by others' emotions or unable to separate them from your own</li>
+        </ul>
+        <p className="mb-6">
+          Emotional intelligence is not a personality trait you're born with---it's a learnable set of skills. And building those skills might be one of the most valuable investments you make in your mental health.
         </p>
       </>
     ),
@@ -241,7 +395,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     id: catId(32),
     slug: 'reading-other-peoples-emotions-empathy-attunement-social-cues',
     title: "Reading Other People's Emotions: Empathy, Attunement, and Social Cues",
-    description: "How to accurately perceive emotions in others through facial expressions, body language, and context—without mind-reading or projection.",
+    description: "How to accurately perceive emotions in others through facial expressions, body language, and context---without mind-reading or projection.",
     image: "/images/articles/cat01/cover-032.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -319,10 +473,10 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Have you ever walked into a room and immediately sensed tension, even though no one said a word? Or misread someone's mood completely, only to realize later you were way off? Reading emotions in others is a skill that shapes every interaction—and it's far more complex than most people realize.
+            Have you ever walked into a room and immediately sensed tension, even though no one said a word? Or misread someone's mood completely, only to realize later you were way off? Reading emotions in others is a skill that shapes every interaction---and it's far more complex than most people realize.
           </p>
           <p className="mb-6">
-            Accurately perceiving emotions in others involves decoding multiple channels of information: facial expressions, vocal tone, body language, and situational context <Citation id="1" index={1} source="Cengage Learning" year="2013" tier={5} />. When these signals align, reading emotions is straightforward. But when they contradict—like when someone says "I'm fine" with tears in their eyes—you need more sophisticated skills.
+            Accurately perceiving emotions in others involves decoding multiple channels of information: facial expressions, vocal tone, body language, and situational context <Citation id="1" index={1} source="Cengage Learning" year="2013" tier={5} />. When these signals align, reading emotions is straightforward. But when they contradict---like when someone says "I'm fine" with tears in their eyes---you need more sophisticated skills.
           </p>
         </div>
 
@@ -334,7 +488,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="did-you-know">
-          <p>Your brain automatically mimics the facial expressions you see in others—a process called facial mimicry. This helps you "feel into" their emotional state and understand it from the inside out <Citation id="3" index={3} source="Biological Psychology" year="2016" tier={1} />.</p>
+          <p>Your brain automatically mimics the facial expressions you see in others---a process called facial mimicry. This helps you "feel into" their emotional state and understand it from the inside out <Citation id="3" index={3} source="Biological Psychology" year="2016" tier={1} />.</p>
         </ArticleCallout>
 
         <ArticleAccordion
@@ -457,7 +611,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
               id: 'cultural-assumptions',
               title: 'Cultural assumptions: Expecting universal norms',
               content: (
-                <p>While some emotions are universal, the display rules—how openly people show emotions—vary dramatically across cultures. Direct eye contact signals confidence in some cultures and disrespect in others.</p>
+                <p>While some emotions are universal, the display rules---how openly people show emotions---vary dramatically across cultures. Direct eye contact signals confidence in some cultures and disrespect in others.</p>
               ),
             },
           ]}
@@ -474,7 +628,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           variant="vertical"
           steps={[
             { title: 'Observe without interpreting', description: <p>Practice noticing facial expressions, tone, and body language without immediately assigning meaning. Describe what you see: "Their shoulders are tense' rather than "They're angry."</p> },
-            { title: 'Check your assumptions', description: <p>When you think you know what someone feels, ask. 'You seem frustrated—is that right?" This builds accuracy and shows you care.</p> },
+            { title: 'Check your assumptions', description: <p>When you think you know what someone feels, ask. 'You seem frustrated---is that right?" This builds accuracy and shows you care.</p> },
             { title: 'Watch emotional shifts', description: <p>Notice when someone's emotional state changes during a conversation. What triggered the shift? This helps you connect emotions to context.</p> },
             { title: 'Practice with video', description: <p>Watch videos of people with the sound off and guess their emotions. Then watch with sound to check your accuracy.</p> },
             { title: 'Reflect on misreads', description: <p>When you get it wrong, reflect on what led you astray. Did you project your own feelings? Ignore context? Miss a key signal?</p> },
@@ -488,7 +642,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           If you consistently struggle to read emotions in others, feel confused by social interactions, or find that your misinterpretations damage relationships, therapy can help. Social skills training, mindfulness-based interventions, and certain types of group therapy specifically target emotional perception skills.
         </p>
         <p className="mb-6">
-          Reading emotions is not about becoming a mind reader—it's about tuning into the signals people give off and responding with curiosity and compassion rather than certainty and judgment.
+          Reading emotions is not about becoming a mind reader---it's about tuning into the signals people give off and responding with curiosity and compassion rather than certainty and judgment.
         </p>
       </>
     ),
@@ -501,7 +655,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     id: catId(33),
     slug: 'emotional-intelligence-in-conversations-listening-beyond-words',
     title: 'Emotional Intelligence in Conversations: Listening Beyond Words',
-    description: "How to bring emotional intelligence to everyday conversations—hearing what's unsaid, validating feelings, and building deeper connection.",
+    description: "How to bring emotional intelligence to everyday conversations---hearing what's unsaid, validating feelings, and building deeper connection.",
     image: '/images/articles/cat01/cover-033.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 6,
@@ -579,7 +733,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most of us think we're good listeners. But research shows there's a massive gap between what we think we're doing and what others experience. Truly listening—with emotional intelligence—is rarer and more powerful than most people realize.
+            Most of us think we're good listeners. But research shows there's a massive gap between what we think we're doing and what others experience. Truly listening---with emotional intelligence---is rarer and more powerful than most people realize.
           </p>
           <p className="mb-6">
             Active listening is not passive. It's not just waiting for your turn to talk while someone else speaks. It's the intentional practice of receiving both the content and the emotional subtext of what someone is communicating <Citation id="1" index={1} source="Journal of the American Academy of Audiology" year="2017" tier={1} />. And when done well, it changes the quality of every relationship you have.
@@ -605,14 +759,14 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Emotional intelligence in conversation means spending most of your time at Level 3—listening for the emotions beneath the words, not just the facts being stated.</p>
+          <p>Emotional intelligence in conversation means spending most of your time at Level 3---listening for the emotions beneath the words, not just the facts being stated.</p>
         </ArticleCallout>
 
         <h2 id="validation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Validation: The Missing Skill
         </h2>
         <p className="mb-6">
-          Validation means communicating that someone's feelings make sense given their experience—even if you disagree with their perspective or would feel differently yourself <Citation id="2" index={2} source="Psychotherapy Research" year="2019" tier={1} />. It's one of the most underused tools in everyday conversation.
+          Validation means communicating that someone's feelings make sense given their experience---even if you disagree with their perspective or would feel differently yourself <Citation id="2" index={2} source="Psychotherapy Research" year="2019" tier={1} />. It's one of the most underused tools in everyday conversation.
         </p>
         <p className="mb-6">
           Validation is NOT:
@@ -661,21 +815,21 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>Brain imaging studies show that when someone feels truly heard, their neural activity synchronizes with the listener's brain—a phenomenon called "brain-to-brain coupling" <Citation id="3" index={3} source="NeuroImage" year="2021" tier={1} />. This is the neurobiological basis of feeling "in sync" with someone.</p>
+          <p>Brain imaging studies show that when someone feels truly heard, their neural activity synchronizes with the listener's brain---a phenomenon called "brain-to-brain coupling" <Citation id="3" index={3} source="NeuroImage" year="2021" tier={1} />. This is the neurobiological basis of feeling "in sync" with someone.</p>
         </ArticleCallout>
 
         <h2 id="nonverbal-listening" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Nonverbal Listening: Your Body Speaks Too
         </h2>
         <p className="mb-6">
-          How you listen nonverbally matters as much as what you say. Research on empathic accuracy shows that nonverbal synchrony—matching the other person's energy, tone, and pace—increases emotional understanding <Citation id="6" index={6} source="Emotion" year="2019" tier={1} />.
+          How you listen nonverbally matters as much as what you say. Research on empathic accuracy shows that nonverbal synchrony---matching the other person's energy, tone, and pace---increases emotional understanding <Citation id="6" index={6} source="Emotion" year="2019" tier={1} />.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Eye contact:</strong> Maintain soft, natural eye contact (not staring) to signal attention</li>
           <li><strong>Posture:</strong> Lean slightly forward, uncross your arms, turn your body toward them</li>
           <li><strong>Facial expressions:</strong> Let your face naturally reflect concern, interest, or empathy</li>
           <li><strong>Minimal encouragers:</strong> Use small nods, "mm-hmm," or "I see" to show you're tracking</li>
-          <li><strong>Silence:</strong> Don't rush to fill pauses—silence creates space for deeper sharing</li>
+          <li><strong>Silence:</strong> Don't rush to fill pauses---silence creates space for deeper sharing</li>
         </ul>
 
         <h2 id="what-not-to-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -689,7 +843,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
               id: 'fixing',
               title: `Jumping to solutions ('Have you tried...")`,
               content: (
-                <p>Most people don't need you to solve their problem—they need to feel heard. Offering unsolicited advice communicates 'Your feelings are a problem to be fixed' rather than "Your feelings are valid and worth exploring."</p>
+                <p>Most people don't need you to solve their problem---they need to feel heard. Offering unsolicited advice communicates 'Your feelings are a problem to be fixed' rather than "Your feelings are valid and worth exploring."</p>
               ),
             },
             {
@@ -725,7 +879,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Notice your own activation:</strong> If you feel defensive or reactive, pause and take a breath before responding</li>
           <li><strong>Separate content from emotion:</strong> You can validate someone's feelings even if you disagree with their interpretation</li>
-          <li><strong>Name the pattern:</strong> If the conversation is escalating, say "I notice we're both getting heated—can we slow down?"</li>
+          <li><strong>Name the pattern:</strong> If the conversation is escalating, say "I notice we're both getting heated---can we slow down?"</li>
           <li><strong>Ask for repair time:</strong> If you need a break to regulate, say so: "I care about this conversation, and I need 10 minutes to calm down so I can listen better"</li>
         </ul>
 
@@ -758,7 +912,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           If you find that you consistently dominate conversations, struggle to stay present when others are speaking, or feel uncomfortable with emotional expression, therapy can help. Communication skills training and interpersonal process therapy specifically target these patterns <Citation id="8" index={8} source="Clinical Psychology Review" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          Listening with emotional intelligence is not a passive act—it's an active choice to prioritize someone else's experience over your own agenda. And it's one of the most generous gifts you can give in any relationship.
+          Listening with emotional intelligence is not a passive act---it's an active choice to prioritize someone else's experience over your own agenda. And it's one of the most generous gifts you can give in any relationship.
         </p>
       </>
     ),
@@ -771,7 +925,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
     id: catId(34),
     slug: 'how-to-respond-not-react-in-emotionally-charged-situations',
     title: 'How to Respond (Not React) in Emotionally Charged Situations',
-    description: 'Learn the difference between reactive impulse and thoughtful response—and how to create space between feeling and action.',
+    description: 'Learn the difference between reactive impulse and thoughtful response---and how to create space between feeling and action.',
     image: "/images/articles/cat01/cover-034.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -884,7 +1038,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           When you experience an emotional trigger, your amygdala (the brain's threat detection system) fires rapidly. This activates the fight-flight-freeze response before your prefrontal cortex (responsible for rational thought and impulse control) has time to catch up <Citation id="2" index={2} source="Biological Psychiatry" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          This is called <strong>amygdala hijack</strong>—when emotional reactivity overrides executive function. The pause between stimulus and response allows your prefrontal cortex to come back online <Citation id="7" index={7} source="Trends in Cognitive Sciences" year="2019" tier={1} />.
+          This is called <strong>amygdala hijack</strong>---when emotional reactivity overrides executive function. The pause between stimulus and response allows your prefrontal cortex to come back online <Citation id="7" index={7} source="Trends in Cognitive Sciences" year="2019" tier={1} />.
         </p>
 
         <StatCard
@@ -904,7 +1058,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           Creating the Pause: Practical Techniques
         </h2>
         <p className="mb-6">
-          The pause is not about suppressing your emotion—it's about giving yourself time to choose how you express it. Here are evidence-based ways to create that space:
+          The pause is not about suppressing your emotion---it's about giving yourself time to choose how you express it. Here are evidence-based ways to create that space:
         </p>
 
         <ProgressSteps
@@ -949,22 +1103,22 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           items={[
             {
               id: 'stop',
-              title: 'S — Stop',
+              title: 'S --- Stop',
               content: <p>Freeze. Don't move. Don't speak. Don't act. Just pause in your tracks.</p>,
             },
             {
               id: 'take',
-              title: 'T — Take a Step Back',
+              title: 'T --- Take a Step Back',
               content: <p>Mentally or physically step back from the situation. Get some distance from the emotional intensity.</p>,
             },
             {
               id: 'observe',
-              title: 'O — Observe',
+              title: 'O --- Observe',
               content: <p>Notice what's happening inside you (thoughts, feelings, body sensations) and outside you (facts of the situation, others' behavior). Describe without judging.</p>,
             },
             {
               id: 'proceed',
-              title: 'P — Proceed Mindfully',
+              title: 'P --- Proceed Mindfully',
               content: <p>Ask: What action would be most effective here? What aligns with my values? What will I be proud of later? Then act from that place.</p>,
             },
           ]}
@@ -990,13 +1144,13 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           Cognitive Reappraisal: Changing How You Think
         </h2>
         <p className="mb-6">
-          Cognitive reappraisal means reinterpreting a situation to change its emotional impact. It's not toxic positivity or denial—it's examining whether your initial interpretation is the only way to see things.
+          Cognitive reappraisal means reinterpreting a situation to change its emotional impact. It's not toxic positivity or denial---it's examining whether your initial interpretation is the only way to see things.
         </p>
 
         <ArticleCallout variant="tip" title="Reappraisal Examples">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Initial thought:</strong> "They ignored my text—they don't care about me." <strong>Reappraisal:</strong> "They might be busy or overwhelmed. I'll follow up tomorrow."</li>
-            <li><strong>Initial thought:</strong> "I can't believe they said that—they're attacking me." <strong>Reappraisal:</strong> "That comment hurt, but they might be stressed and not thinking clearly."</li>
+            <li><strong>Initial thought:</strong> "They ignored my text---they don't care about me." <strong>Reappraisal:</strong> "They might be busy or overwhelmed. I'll follow up tomorrow."</li>
+            <li><strong>Initial thought:</strong> "I can't believe they said that---they're attacking me." <strong>Reappraisal:</strong> "That comment hurt, but they might be stressed and not thinking clearly."</li>
             <li><strong>Initial thought:</strong> "This situation is unbearable." <strong>Reappraisal:</strong> "This is hard, but I've handled hard things before."</li>
           </ul>
         </ArticleCallout>
@@ -1005,11 +1159,11 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           How to Practice This Skill
         </h2>
         <p className="mb-6">
-          Start with low-stakes situations. Don't wait for a major conflict to practice—build the muscle in everyday moments:
+          Start with low-stakes situations. Don't wait for a major conflict to practice---build the muscle in everyday moments:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
           <li>When you feel a small irritation (traffic, spilled coffee), pause for 5 seconds before reacting</li>
-          <li>Notice the urge to respond immediately in texts or emails—wait 10 minutes before sending</li>
+          <li>Notice the urge to respond immediately in texts or emails---wait 10 minutes before sending</li>
           <li>When someone says something that triggers defensiveness, take a breath before replying</li>
           <li>Reflect on past reactions: What would you do differently if you could replay the moment?</li>
         </ul>
@@ -1120,7 +1274,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You spend a third of your waking life at work. Yet most professional settings operate under the unspoken rule that emotions should be checked at the door. The reality? Suppressing emotions doesn't make them disappear—it just makes work more exhausting.
+            You spend a third of your waking life at work. Yet most professional settings operate under the unspoken rule that emotions should be checked at the door. The reality? Suppressing emotions doesn't make them disappear---it just makes work more exhausting.
           </p>
           <p className="mb-6">
             Emotional intelligence at work is not about being "nice" or avoiding conflict. It's about managing your own emotional responses, reading the emotional climate of your workplace, and navigating interpersonal dynamics with awareness and skill <Citation id="1" index={1} source="Journal of Organizational Behavior" year="2020" tier={1} />. And research consistently shows that high EQ predicts job performance, leadership effectiveness, and career success <Citation id="2" index={2} source="Annual Review of Organizational Psychology and Organizational Behavior" year="2019" tier={1} />.
@@ -1155,7 +1309,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           Emotional Labor: The Hidden Cost of Workplace Emotion Management
         </h2>
         <p className="mb-6">
-          Emotional labor refers to the work of managing your emotions to meet the demands of your job—smiling at rude customers, staying calm when your boss is irrational, hiding frustration during a pointless meeting <Citation id="3" index={3} source="Journal of Occupational Health Psychology" year="2021" tier={1} />.
+          Emotional labor refers to the work of managing your emotions to meet the demands of your job---smiling at rude customers, staying calm when your boss is irrational, hiding frustration during a pointless meeting <Citation id="3" index={3} source="Journal of Occupational Health Psychology" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           There are two types of emotional labor:
@@ -1172,7 +1326,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Deep acting—where you genuinely shift your internal state—is less depleting than surface acting. Research shows that people who rely heavily on surface acting experience higher rates of burnout and mental health problems <Citation id="4" index={4} source="Work & Stress" year="2018" tier={1} />.</p>
+          <p>Deep acting---where you genuinely shift your internal state---is less depleting than surface acting. Research shows that people who rely heavily on surface acting experience higher rates of burnout and mental health problems <Citation id="4" index={4} source="Work & Stress" year="2018" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="difficult-colleagues" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1191,7 +1345,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2"><strong>Emotional Driver:</strong> Often anxiety and fear of failure, not a desire to control you personally.</p>
-                  <p><strong>EQ Strategy:</strong> Provide frequent, proactive updates to reduce their anxiety. Say: "I know you like to stay in the loop—I'll send you a brief update every Friday."</p>
+                  <p><strong>EQ Strategy:</strong> Provide frequent, proactive updates to reduce their anxiety. Say: "I know you like to stay in the loop---I'll send you a brief update every Friday."</p>
                 </div>
               ),
             },
@@ -1286,13 +1440,13 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           Creating Psychological Safety (If You're a Leader)
         </h2>
         <p className="mb-6">
-          Leaders with high emotional intelligence create environments where people feel safe to take risks, admit mistakes, and be human <Citation id="5" index={5} source="The Leadership Quarterly" year="2020" tier={1} />. Psychological safety—the belief that you won't be punished for speaking up—is the strongest predictor of team effectiveness <Citation id="8" index={8} source="Journal of Applied Psychology" year="2020" tier={1} />.
+          Leaders with high emotional intelligence create environments where people feel safe to take risks, admit mistakes, and be human <Citation id="5" index={5} source="The Leadership Quarterly" year="2020" tier={1} />. Psychological safety---the belief that you won't be punished for speaking up---is the strongest predictor of team effectiveness <Citation id="8" index={8} source="Journal of Applied Psychology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           How to build it:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Acknowledge your own mistakes publicly—it gives others permission to be imperfect</li>
+          <li>Acknowledge your own mistakes publicly---it gives others permission to be imperfect</li>
           <li>Respond to concerns with curiosity, not defensiveness</li>
           <li>Thank people for bringing up problems, even if the news is bad</li>
           <li>Never punish someone for admitting an error or raising a concern</li>
@@ -1309,7 +1463,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
           <li>Document incidents in writing with dates and details</li>
           <li>Report concerns to HR or leadership, if safe to do so</li>
           <li>Seek support from a therapist or employee assistance program (EAP)</li>
-          <li>Build your exit strategy—update your resume, network, explore other opportunities</li>
+          <li>Build your exit strategy---update your resume, network, explore other opportunities</li>
           <li>Protect your mental health first. No job is worth sacrificing your wellbeing.</li>
         </ul>
 

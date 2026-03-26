@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 7b — Men's Health Interventions Part 2 | Articles 62–66
+// Subcategory 7b --- Men's Health Interventions Part 2 | Articles 62--66
 // ============================================================================
 
 export const mensHealthInterventions2ArticlesB: Article[] = [
@@ -54,7 +54,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     practicalExercise: {
       title: 'Finding Your Service Path',
       steps: [
-        { title: 'Identify your skills and interests', description: 'Make a list of what you are good at and what you enjoy doing. Construction, cooking, mentoring, driving, technology, sports coaching — all of these translate into volunteer opportunities. Starting with existing strengths reduces the barrier to entry.' },
+        { title: 'Identify your skills and interests', description: 'Make a list of what you are good at and what you enjoy doing. Construction, cooking, mentoring, driving, technology, sports coaching --- all of these translate into volunteer opportunities. Starting with existing strengths reduces the barrier to entry.' },
         { title: 'Search for local opportunities', description: 'Visit VolunteerMatch.org, contact your local United Way, or check with community centers and faith-based organizations. Look for one-time events first if committing to a regular schedule feels overwhelming. Many organizations offer weekend or evening options.' },
         { title: 'Start with a single session', description: 'Commit to one volunteer session with no obligation to return. Pay attention to how you feel during and after. Notice whether the activity engages you, whether you connect with other volunteers, and whether you feel a sense of accomplishment.' },
         { title: 'Build consistency over time', description: 'Research shows mental health benefits increase significantly with regular volunteering. Aim for 2-3 hours per week once you find an activity that fits. The consistency creates routine, builds relationships, and deepens your sense of purpose.' },
@@ -83,14 +83,14 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
             When we talk about interventions for men's mental health, we typically think of therapy,
             medication, or support groups. Rarely does volunteering make the list. Yet a growing body
             of research suggests that service-oriented activity may be one of the most effective and
-            accessible mental health interventions available to men — particularly those who would
+            accessible mental health interventions available to men --- particularly those who would
             never walk into a therapist's office.
           </p>
           <p className="mb-6">
             The reasons are both practical and psychological. Volunteering is action-oriented, which
             aligns with how many men prefer to engage with challenges. It provides structured social
             contact without the pressure of emotional disclosure. It creates a sense of purpose and
-            competence — two pillars of psychological wellbeing that erode rapidly during periods
+            competence --- two pillars of psychological wellbeing that erode rapidly during periods
             of unemployment, retirement, or social
             isolation <Citation id="3" index={3} source="PLoS Medicine" year="2010" tier={1} />.
             And perhaps most importantly, volunteering reframes the narrative: instead of being
@@ -108,7 +108,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Men face a paradox when it comes to mental health: the traits most associated with
-          traditional masculinity — self-reliance, emotional stoicism, provider identity — are
+          traditional masculinity --- self-reliance, emotional stoicism, provider identity --- are
           the same traits that increase vulnerability to depression, isolation, and suicide.
           Volunteering addresses this paradox because it allows men to engage in helping
           behavior without requiring them to identify as someone who needs help.
@@ -149,7 +149,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           over the past two decades. Early studies were largely cross-sectional, making it
           impossible to determine whether volunteering caused better mental health or whether
           healthier people simply volunteered more. Recent longitudinal and quasi-experimental
-          designs have helped clarify the causal pathway — and the evidence consistently
+          designs have helped clarify the causal pathway --- and the evidence consistently
           favors a protective effect.
         </p>
         <p className="mb-6">
@@ -160,6 +160,18 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           The researchers identified a dose-response relationship: mental health benefits
           increased with volunteering hours up to approximately 100 hours per year (about
           2 hours per week), after which additional hours provided diminishing returns.
+        </p>
+        <p className="mb-6">
+          The physiological benefits of volunteering are also becoming clearer. Regular
+          volunteers show lower levels of chronic inflammation markers, reduced resting
+          cortisol, and improved cardiovascular health compared to non-volunteers of similar
+          age and socioeconomic status. These biological effects likely reflect the combined
+          impact of increased physical activity, reduced stress hormones from social
+          connection, and the neurochemical rewards associated with prosocial behavior.
+          Functional brain imaging studies show that helping others activates the mesolimbic
+          reward pathway --- the same circuitry engaged by food, social bonding, and other
+          experiences essential to survival --- suggesting that the positive feelings associated
+          with service have deep evolutionary roots.
         </p>
 
         <ArticleCallout type="key-takeaway">
@@ -211,7 +223,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">
                     Using professional or practical skills in volunteer work creates what researchers
-                    call "competence satisfaction" — the feeling that your specific abilities matter
+                    call "competence satisfaction" --- the feeling that your specific abilities matter
                     and are valued. Men with construction experience can build with Habitat for Humanity.
                     IT professionals can help nonprofits with technology. Accountants can provide
                     free tax preparation. Skills-based volunteering has been shown to produce greater
@@ -231,8 +243,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Group volunteer activities — disaster response, community cleanups, building
-                    projects — provide "shoulder-to-shoulder" social connection that many men find
+                    Group volunteer activities --- disaster response, community cleanups, building
+                    projects --- provide "shoulder-to-shoulder" social connection that many men find
                     more natural than face-to-face emotional conversation. Working alongside others
                     toward a shared goal creates camaraderie and trust without requiring explicit
                     self-disclosure.
@@ -259,8 +271,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   </p>
                   <p>
                     Mentoring also provides a socially sanctioned way for men to express care,
-                    empathy, and emotional investment. The mentoring role — teacher, guide,
-                    protector — aligns with traditional masculine values while building the
+                    empathy, and emotional investment. The mentoring role --- teacher, guide,
+                    protector --- aligns with traditional masculine values while building the
                     exact emotional capacities that protect mental health.
                   </p>
                 </div>
@@ -295,14 +307,14 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
               content: (
                 <p>
                   Team Rubicon mobilizes military veterans for disaster response and humanitarian
-                  aid. Founded on the insight that veterans possess valuable skills — leadership,
-                  teamwork, adaptability, calm under pressure — the organization provides a mission-driven
+                  aid. Founded on the insight that veterans possess valuable skills --- leadership,
+                  teamwork, adaptability, calm under pressure --- the organization provides a mission-driven
                   community that echoes military
                   service <Citation id="6" index={6} source="Military Medicine" year="2019" tier={1} />.
                   Research shows that Team Rubicon volunteers report significant improvements in
                   purpose, social connection, and identity, with 92% saying the organization helped
                   their transition to civilian life. The program works because it does not ask
-                  veterans to talk about their struggles — it asks them to use their strengths.
+                  veterans to talk about their struggles --- it asks them to use their strengths.
                 </p>
               ),
             },
@@ -311,8 +323,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
               content: (
                 <p>
                   Habitat for Humanity engages volunteers in building and renovating homes for
-                  families in need. The physical, tangible nature of the work — framing walls,
-                  laying flooring, painting rooms — appeals to men who prefer doing over talking.
+                  families in need. The physical, tangible nature of the work --- framing walls,
+                  laying flooring, painting rooms --- appeals to men who prefer doing over talking.
                   The builds also create natural team environments where men work side by side,
                   share meals, and develop relationships through shared accomplishment. Many
                   Habitat affiliates run "Men Build" events specifically designed to engage male
@@ -341,11 +353,37 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="the-identity-effect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Identity Effect
+        </h2>
+        <p className="mb-6">
+          One of the most underappreciated mechanisms through which volunteering supports
+          men's mental health is its effect on identity. Many men define themselves through
+          their professional roles --- engineer, manager, tradesman --- and when those roles
+          disappear through retirement, layoff, or disability, a psychological vacuum forms.
+          Volunteering fills that vacuum not with distraction but with genuine role replacement.
+          A retired firefighter who trains community emergency response teams is not pretending
+          to still be a firefighter. He is channeling the same competencies --- leadership, calm
+          under pressure, physical capability --- into a new context that validates who he is
+          rather than who he used to be.
+        </p>
+        <p className="mb-6">
+          This identity continuity matters because identity disruption is one of the strongest
+          risk factors for depression in men during life transitions. The volunteer role provides
+          what psychologists call "self-continuity" --- the sense that the present self is
+          meaningfully connected to the past self. When a man can look at his volunteer work
+          and see the same values, skills, and strengths that defined his professional life,
+          the transition feels less like an ending and more like a redirection. Studies of
+          retired men who volunteer consistently find that they report higher levels of
+          self-esteem, greater life coherence, and fewer symptoms of adjustment disorder
+          compared to retired men who do not engage in structured service activities.
+        </p>
+
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Getting Started
         </h2>
         <p className="mb-6">
-          The biggest barrier to volunteering is not motivation — it is logistics. Many men
+          The biggest barrier to volunteering is not motivation --- it is logistics. Many men
           report that they would like to volunteer but do not know where to start, feel that
           they do not have time, or worry that committing to a regular schedule will create
           additional
@@ -358,7 +396,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           steps={[
             { title: 'Explore without committing', description: 'Browse VolunteerMatch.org, Idealist.org, or your local United Way website. Attend an orientation or open house. Most organizations welcome visitors who simply want to learn more.' },
             { title: 'Start with a one-time event', description: 'Community cleanups, food drives, holiday meal services, and build days require no ongoing commitment. Use a single event to test whether the organization and activity feel right for you.' },
-            { title: 'Build a regular rhythm', description: 'Once you find an activity that fits, commit to a regular schedule — even if it is just once or twice a month. Consistency is what transforms volunteering from an event into a source of ongoing purpose and connection.' },
+            { title: 'Build a regular rhythm', description: 'Once you find an activity that fits, commit to a regular schedule --- even if it is just once or twice a month. Consistency is what transforms volunteering from an event into a source of ongoing purpose and connection.' },
             { title: 'Invite someone to join you', description: 'Volunteering with a friend, family member, or colleague doubles the social benefit and creates mutual accountability. Many men find it easier to try something new when they are not doing it alone.' },
           ]}
         />
@@ -366,7 +404,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           It is worth noting that the mental health benefits of volunteering are not automatic.
           Men who volunteer out of obligation, guilt, or external pressure tend to experience
-          less benefit — and sometimes increased stress — compared to those who volunteer
+          less benefit --- and sometimes increased stress --- compared to those who volunteer
           with a sense of autonomy and
           choice <Citation id="7" index={7} source="Journal of Happiness Studies" year="2021" tier={1} />.
           The goal is to find service that feels meaningful and energizing, not to add another
@@ -380,8 +418,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Volunteering is not a replacement for professional mental health treatment when
           treatment is needed. A man experiencing clinical depression, suicidal thoughts, or
           severe anxiety needs therapeutic support. But for the millions of men who experience
-          subclinical distress — the quiet loneliness of retirement, the purposelessness after
-          job loss, the isolation that creeps in when social networks shrink — service offers
+          subclinical distress --- the quiet loneliness of retirement, the purposelessness after
+          job loss, the isolation that creeps in when social networks shrink --- service offers
           something that medication and therapy alone cannot: a role in the world that matters.
         </p>
         <p className="mb-6">
@@ -391,6 +429,15 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           in helping, he finds the purpose, connection, and identity that protect against the
           very conditions he might never seek treatment for.
         </p>
+        <p className="mb-6">
+          Communities also benefit when men volunteer in greater numbers. Men bring distinct
+          strengths to service organizations --- physical capability, professional expertise,
+          mentoring experience, and leadership skills honed through careers and family life.
+          When more men engage in service, organizations gain capacity and communities become
+          more resilient. The relationship is genuinely reciprocal: the man who volunteers is
+          not taking from a system designed to help him. He is contributing to a system that
+          happens to help him back.
+        </p>
 
         <QuoteBlock
           quote="The best way to find yourself is to lose yourself in the service of others."
@@ -398,8 +445,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          If you are a man looking for something more — more connection, more purpose, more
-          reason to get out of bed in the morning — consider starting with one small act of
+          If you are a man looking for something more --- more connection, more purpose, more
+          reason to get out of bed in the morning --- consider starting with one small act of
           service. Not because you are broken and need fixing, but because helping others is
           one of the most reliable pathways to helping yourself.
         </p>
@@ -425,13 +472,13 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     tags: ['Anger', 'Emotional Awareness', 'Masculinity', 'Therapy Approaches'],
 
     summary:
-      "For many men, anger is the one emotion that feels permissible. When hurt, they get angry. When scared, they get angry. When grieving, ashamed, or overwhelmed, they get angry. This is not a defect — it is the predictable result of a socialization process that teaches boys from a very early age that anger is the only masculine emotion. Therapists and researchers describe anger as a 'gateway' or 'secondary' emotion: not the root feeling itself, but a protective response that covers more vulnerable states. The anger iceberg model, widely used in clinical settings, illustrates this dynamic — anger is the visible tip above the waterline, while hurt, fear, shame, loneliness, grief, and helplessness lie submerged beneath. Understanding this model is transformative for many men because it reframes anger not as a problem to be eliminated but as information to be decoded. Therapeutic approaches including Rational Emotive Behavior Therapy, Dialectical Behavior Therapy skills, and somatic experiencing offer evidence-based methods for helping men use anger as a doorway to fuller emotional awareness. This article explores the science behind anger as a secondary emotion, practical techniques for identifying what lies underneath, and how men can develop a richer emotional vocabulary without abandoning anger entirely.",
+      "For many men, anger is the one emotion that feels permissible. When hurt, they get angry. When scared, they get angry. When grieving, ashamed, or overwhelmed, they get angry. This is not a defect --- it is the predictable result of a socialization process that teaches boys from a very early age that anger is the only masculine emotion. Therapists and researchers describe anger as a 'gateway' or 'secondary' emotion: not the root feeling itself, but a protective response that covers more vulnerable states. The anger iceberg model, widely used in clinical settings, illustrates this dynamic --- anger is the visible tip above the waterline, while hurt, fear, shame, loneliness, grief, and helplessness lie submerged beneath. Understanding this model is transformative for many men because it reframes anger not as a problem to be eliminated but as information to be decoded. Therapeutic approaches including Rational Emotive Behavior Therapy, Dialectical Behavior Therapy skills, and somatic experiencing offer evidence-based methods for helping men use anger as a doorway to fuller emotional awareness. This article explores the science behind anger as a secondary emotion, practical techniques for identifying what lies underneath, and how men can develop a richer emotional vocabulary without abandoning anger entirely.",
 
     keyFacts: [
       { text: 'Men are significantly more likely to externalize emotional distress as anger, irritability, or aggression than to report sadness or anxiety', citationIndex: 1 },
       { text: 'The anger iceberg model is supported by neuroimaging studies showing that anger activates brain regions associated with emotional pain and threat detection', citationIndex: 2 },
       { text: 'Dialectical Behavior Therapy skills training reduces anger episodes by 50-73% in controlled trials', citationIndex: 3 },
-      { text: 'Alexithymia — difficulty identifying and describing emotions — affects approximately 17% of men compared to 10% of women', citationIndex: 4 },
+      { text: 'Alexithymia --- difficulty identifying and describing emotions --- affects approximately 17% of men compared to 10% of women', citationIndex: 4 },
       { text: 'Anger suppression is associated with increased cardiovascular risk, while anger awareness and expression reduce health risks', citationIndex: 5 },
     ],
 
@@ -443,8 +490,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     practicalExercise: {
       title: 'The Anger Audit',
       steps: [
-        { title: 'Catch the anger in real time', description: "The next time you notice yourself getting angry, pause before reacting. You do not need to suppress the anger — just notice it. Say to yourself: 'I am angry right now.' This creates a brief space between feeling and action." },
-        { title: 'Ask what came before', description: "Think back to the moment just before the anger arrived. What happened? What did someone say or do? What thought crossed your mind? Anger almost always follows another feeling — hurt, embarrassment, fear, or helplessness. Try to name that first feeling, even if it is just a guess." },
+        { title: 'Catch the anger in real time', description: "The next time you notice yourself getting angry, pause before reacting. You do not need to suppress the anger --- just notice it. Say to yourself: 'I am angry right now.' This creates a brief space between feeling and action." },
+        { title: 'Ask what came before', description: "Think back to the moment just before the anger arrived. What happened? What did someone say or do? What thought crossed your mind? Anger almost always follows another feeling --- hurt, embarrassment, fear, or helplessness. Try to name that first feeling, even if it is just a guess." },
         { title: 'Check the body', description: 'Where do you feel the anger physically? Clenched jaw, tight chest, hot face, fists? Now scan for other sensations: a sinking in the stomach (shame), a tightness in the throat (grief), a hollow feeling in the chest (loneliness). The body often reveals the primary emotion before the mind can name it.' },
         { title: 'Write it down afterward', description: "After the moment passes, write a brief note: 'I got angry when [trigger]. Before the anger, I think I felt [primary emotion]. My body felt [sensation].' Over time, patterns will emerge that help you decode your anger more quickly." },
       ],
@@ -471,24 +518,24 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Ask a man how he feels, and if he is honest, the answer is often "angry." Not because
             anger is his only emotion, but because it may be the only one he has been taught to
-            recognize. For many men, anger serves as a universal translator — converting hurt into
+            recognize. For many men, anger serves as a universal translator --- converting hurt into
             something fierce, fear into something loud, shame into something directed outward rather
             than inward.
           </p>
           <p className="mb-6">
             This pattern is so common that clinicians have a name for it: anger as a secondary or
             "gateway" emotion. The concept is straightforward but transformative. Anger is rarely
-            the root feeling. It is a protective response — a psychological shield that covers
+            the root feeling. It is a protective response --- a psychological shield that covers
             more vulnerable emotional states like hurt, fear, grief, shame, and
             helplessness <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />.
             Men are not born with a narrower emotional range than women. They are systematically
-            taught, from early childhood, that most emotions are off-limits — and anger is the one
+            taught, from early childhood, that most emotions are off-limits --- and anger is the one
             that remains
             permissible <Citation id="7" index={7} source="Developmental Psychology" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
             Understanding anger as a gateway emotion does not mean eliminating it. Anger is
-            a valid, important emotion with its own function — it signals boundary violations,
+            a valid, important emotion with its own function --- it signals boundary violations,
             injustice, and threat. The problem arises when anger becomes the only channel
             through which a man can experience and express his inner world. This article explores
             the science behind this pattern, the anger iceberg model, and evidence-based
@@ -510,7 +557,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           acceptable; sadness, fear, and vulnerability are not.
         </p>
         <p className="mb-6">
-          This early socialization creates a phenomenon researchers call alexithymia — difficulty
+          This early socialization creates a phenomenon researchers call alexithymia --- difficulty
           identifying and describing one's own emotions. Approximately 17% of men meet clinical
           criteria for alexithymia, compared to 10% of
           women <Citation id="4" index={4} source="Journal of Affective Disorders" year="2019" tier={1} />.
@@ -542,14 +589,25 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
 
         <p className="mb-6">
           The anger iceberg model, widely used in clinical practice, provides a visual framework
-          for understanding this dynamic. Above the waterline sits anger — visible, loud, socially
+          for understanding this dynamic. Above the waterline sits anger --- visible, loud, socially
           recognized. Below the surface lie the emotions that anger protects: hurt, fear, shame,
           grief, loneliness, embarrassment, helplessness, and disappointment. Neuroimaging studies
           support this model, showing that anger consistently co-activates brain regions associated
           with emotional pain and threat
           detection <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
-          When a man feels angry, his brain is simultaneously processing pain — he just may not
+          When a man feels angry, his brain is simultaneously processing pain --- he just may not
           have the emotional vocabulary to name it.
+        </p>
+        <p className="mb-6">
+          The speed of the anger response compounds the problem. Anger is one of the fastest
+          emotions to activate --- it mobilizes the sympathetic nervous system within milliseconds,
+          flooding the body with adrenaline and cortisol before the prefrontal cortex can
+          evaluate the situation. For men who have spent decades defaulting to anger, the
+          neural pathway from trigger to rage is deeply grooved. The underlying emotion --- the
+          hurt, the fear, the shame --- registers briefly, almost subliminally, before anger
+          overrides it. This is why so many men genuinely believe they are angry people rather
+          than hurt people. The primary emotion flashes and vanishes so quickly that it never
+          reaches conscious awareness. Only the anger remains, loud and unmistakable.
         </p>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -557,13 +615,13 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           The consequences of restricted emotional expression extend far beyond relationship
-          difficulties. Research demonstrates that anger suppression — attempting to push anger
-          away without addressing the underlying emotion — is associated with increased
+          difficulties. Research demonstrates that anger suppression --- attempting to push anger
+          away without addressing the underlying emotion --- is associated with increased
           cardiovascular risk, elevated blood pressure, and higher rates of coronary heart
           disease <Citation id="5" index={5} source="Journal of Behavioral Medicine" year="2018" tier={1} />.
           Paradoxically, chronic anger expression without emotional processing carries similar
           risks. The healthiest pattern is neither suppression nor uninhibited expression, but
-          emotional awareness — the ability to recognize what you are feeling and choose how
+          emotional awareness --- the ability to recognize what you are feeling and choose how
           to respond.
         </p>
         <p className="mb-6">
@@ -573,19 +631,19 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           withdrawal that define diagnostic
           criteria <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />.
           This means that depression in men is frequently missed by clinicians using standard
-          screening tools — because the man sitting across from them does not look depressed.
+          screening tools --- because the man sitting across from them does not look depressed.
           He looks angry.
         </p>
 
         <StatCard
           value="17%"
-          label="of men meet clinical criteria for alexithymia — difficulty identifying and describing their own emotional states"
+          label="of men meet clinical criteria for alexithymia --- difficulty identifying and describing their own emotional states"
           citation="Journal of Affective Disorders, 2019"
         />
 
         <p className="mb-6">
-          Research on emotional granularity — the ability to make fine-grained distinctions
-          between emotional states — shows that people with higher granularity regulate their
+          Research on emotional granularity --- the ability to make fine-grained distinctions
+          between emotional states --- shows that people with higher granularity regulate their
           emotions more effectively, experience less intense negative emotional episodes, and
           are less likely to respond to distress with aggression or substance
           use <Citation id="10" index={10} source="Current Directions in Psychological Science" year="2021" tier={1} />.
@@ -612,7 +670,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   <p className="mb-4">
                     <strong>Rational Emotive Behavior Therapy (REBT)</strong> targets the beliefs
                     that generate anger. Albert Ellis, who developed REBT, identified that anger
-                    typically follows a demand — an absolute belief that something "must" or "should"
+                    typically follows a demand --- an absolute belief that something "must" or "should"
                     be a certain way. When the world fails to comply with the demand, anger results.
                     REBT helps men identify these demands, evaluate whether they are realistic, and
                     develop more flexible thinking
@@ -621,7 +679,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   <p>
                     For example, "My partner should understand what I need without me having to say it"
                     becomes "I would prefer my partner to understand, but they cannot read my mind. I can
-                    communicate my needs directly." This reframing does not eliminate the emotion — it
+                    communicate my needs directly." This reframing does not eliminate the emotion --- it
                     reduces its intensity and reveals the underlying need (for understanding, connection,
                     or validation) that was hidden beneath the anger.
                   </p>
@@ -645,7 +703,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   <p>
                     DBT is particularly effective for men because it is skills-based and practical.
                     Rather than asking men to "talk about their feelings," DBT teaches specific,
-                    repeatable techniques that can be practiced and mastered — an approach that
+                    repeatable techniques that can be practiced and mastered --- an approach that
                     appeals to men who prefer action over introspection.
                   </p>
                 </div>
@@ -657,15 +715,15 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">
                     <strong>Somatic Experiencing</strong> works with the body's physical responses
-                    rather than cognitive content. Since anger produces intense physical sensations —
-                    jaw clenching, chest tightening, heat rising — somatic approaches teach men to
+                    rather than cognitive content. Since anger produces intense physical sensations ---
+                    jaw clenching, chest tightening, heat rising --- somatic approaches teach men to
                     track these sensations and follow them to their
                     source <Citation id="8" index={8} source="Body, Movement and Dance in Psychotherapy" year="2021" tier={1} />.
                   </p>
                   <p>
                     A man who notices his fists clenching might be guided to soften his hands and
                     notice what emerges when the anger posture releases. Often, what follows is grief,
-                    sadness, or fear — the emotions that the anger was protecting. For men who
+                    sadness, or fear --- the emotions that the anger was protecting. For men who
                     struggle with verbal emotional expression, the body provides an alternative
                     pathway to emotional awareness.
                   </p>
@@ -681,7 +739,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           Applying the anger-as-gateway concept in everyday life does not require formal therapy,
           though therapy can accelerate the process. The core skill is developing a pause between
-          feeling and reaction — what clinicians call "the sacred pause" — that creates enough
+          feeling and reaction --- what clinicians call "the sacred pause" --- that creates enough
           space to ask: "What am I actually feeling right now?"
         </p>
         <p className="mb-6">
@@ -699,18 +757,43 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
             the chemical process of anger in the body takes approximately 90 seconds from trigger
             to dissipation. Any anger lasting longer than 90 seconds is being sustained by
             thoughts and stories. When you feel anger rising, give yourself 90 seconds of pure
-            physical sensation — breathe, move, or simply wait. What remains after the chemical
+            physical sensation --- breathe, move, or simply wait. What remains after the chemical
             surge passes is the actual emotion underneath.
           </p>
         </ArticleCallout>
 
         <p className="mb-6">
           Building emotional vocabulary is a concrete, learnable skill. Some men find it helpful
-          to use an emotion wheel — a visual tool that displays dozens of specific emotions
+          to use an emotion wheel --- a visual tool that displays dozens of specific emotions
           organized by category. When "angry" is the only word available, the emotion wheel
           reveals that what they are actually feeling might be "dismissed," "betrayed,"
           "humiliated," "overwhelmed," or "trapped." Each of these words points to a different
           underlying need and a different constructive response.
+        </p>
+
+        <h2 id="the-relational-cost" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Relational Cost
+        </h2>
+        <p className="mb-6">
+          Chronic anger-as-default carries a steep relational price. Partners, children, friends,
+          and colleagues learn to walk on eggshells around a man whose emotional range is limited
+          to variations of intensity rather than variations of feeling. Over time, the people
+          closest to him may stop sharing difficult news, stop bringing up relationship concerns,
+          and stop attempting emotional intimacy --- not because they do not care, but because every
+          attempt is met with the same wall of irritability or rage. The relationship does not end
+          with a dramatic rupture. It hollows out gradually, until both people are present in the
+          same room but emotionally unreachable.
+        </p>
+        <p className="mb-6">
+          Children are particularly sensitive to this dynamic. A child who learns that their
+          father responds to stress, disappointment, or sadness with anger will internalize
+          two lessons: that emotions are dangerous, and that closeness with their father
+          requires managing his mood rather than sharing their own. Research on intergenerational
+          emotional patterns shows that sons of emotionally restricted fathers are significantly
+          more likely to develop similar patterns --- not through genetics but through modeling.
+          The anger-as-gateway pattern, left unaddressed, perpetuates itself across generations,
+          each one losing a little more of the emotional vocabulary that the one before could
+          not access.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -719,12 +802,12 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           If you recognize yourself in this article, that recognition is itself the first step.
           Many men go decades without realizing that their anger is a signal, not a character
-          flaw. The goal is not to stop being angry — anger is a healthy, necessary emotion.
+          flaw. The goal is not to stop being angry --- anger is a healthy, necessary emotion.
           The goal is to stop being only angry.
         </p>
         <p className="mb-6">
-          Start small. The next time you feel anger rising, try to catch it early — before it
-          escalates — and ask one simple question: "What happened right before this?" The
+          Start small. The next time you feel anger rising, try to catch it early --- before it
+          escalates --- and ask one simple question: "What happened right before this?" The
           trigger will often point to the primary emotion. You do not need to share this with
           anyone. You do not need to be vulnerable out loud. You just need to be honest with
           yourself about what you are actually feeling.
@@ -743,7 +826,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Building Forward
         </h2>
         <p className="mb-6">
-          The anger-as-gateway model is not about adding shame on top of anger — it is not
+          The anger-as-gateway model is not about adding shame on top of anger --- it is not
           about telling men they are doing emotions wrong. It is about expanding the repertoire.
           A man who can feel angry and hurt, angry and scared, angry and grieving has access to
           a richer, more accurate understanding of his experience. And that accuracy is what
@@ -756,12 +839,23 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Learning to decode anger is not a single breakthrough — it is a practice. There
+          Learning to decode anger is not a single breakthrough --- it is a practice. There
           will be times when anger moves too fast to catch, when old patterns reassert
           themselves, when vulnerability feels too risky. That is normal. The practice is
           not about perfection. It is about gradually expanding the window between feeling
           and reaction, and in that window, finding the courage to ask: what is really
           going on?
+        </p>
+        <p className="mb-6">
+          Men who commit to this practice often describe a gradual shift that surprises them.
+          They do not become less angry overnight. Instead, they begin to notice a brief
+          flicker of something else --- a half-second of hurt, a flash of fear --- just before
+          the anger lands. That flicker grows with attention. Over weeks and months, the
+          underlying emotions become louder, more distinct, harder to ignore. The man who
+          once had one word for every painful feeling begins to distinguish between dozens.
+          And in that distinction lies the possibility of responding differently --- to himself,
+          to the people he loves, and to the situations that once sent him straight to rage
+          without a detour through understanding.
         </p>
       </>
     ),
@@ -785,7 +879,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     tags: ['Provider Role', 'Masculinity', 'Financial Stress', 'Identity'],
 
     summary:
-      "Few cultural mandates shape men's mental health as profoundly as the provider role. From childhood, many boys absorb the message that their worth as men will ultimately be measured by their ability to earn, provide, and financially protect their families. This 'provider mandate' operates as an invisible scaffolding that supports male identity during times of employment and financial stability — and collapses it when those conditions falter. Research shows that financial stress is the single strongest predictor of depression in men, stronger than relationship problems, health issues, or social isolation. Job loss in men is associated with a 78% increase in depressive symptoms, compared to 22% in women, precisely because male identity is more tightly bound to work and earning. The consequences extend beyond individual suffering: men who rigidly equate their worth with providing are more likely to experience suicidal ideation during financial crises, less likely to seek help, and more likely to respond with withdrawal, substance use, or aggression. Yet the provider mandate is neither natural nor inevitable. It is a cultural construction that varies dramatically across time and geography, and it can be consciously renegotiated. This article examines the psychological mechanisms through which the provider role shapes men's mental health, reviews research on financial stress and masculine identity, and offers evidence-based frameworks for building a more resilient, multi-dimensional sense of self-worth.",
+      "Few cultural mandates shape men's mental health as profoundly as the provider role. From childhood, many boys absorb the message that their worth as men will ultimately be measured by their ability to earn, provide, and financially protect their families. This 'provider mandate' operates as an invisible scaffolding that supports male identity during times of employment and financial stability --- and collapses it when those conditions falter. Research shows that financial stress is the single strongest predictor of depression in men, stronger than relationship problems, health issues, or social isolation. Job loss in men is associated with a 78% increase in depressive symptoms, compared to 22% in women, precisely because male identity is more tightly bound to work and earning. The consequences extend beyond individual suffering: men who rigidly equate their worth with providing are more likely to experience suicidal ideation during financial crises, less likely to seek help, and more likely to respond with withdrawal, substance use, or aggression. Yet the provider mandate is neither natural nor inevitable. It is a cultural construction that varies dramatically across time and geography, and it can be consciously renegotiated. This article examines the psychological mechanisms through which the provider role shapes men's mental health, reviews research on financial stress and masculine identity, and offers evidence-based frameworks for building a more resilient, multi-dimensional sense of self-worth.",
 
     keyFacts: [
       { text: 'Financial stress is the single strongest predictor of depression in men, exceeding relationship problems and health concerns', citationIndex: 1 },
@@ -798,14 +892,14 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'He lost his job and felt like he had lost everything. Not because the work itself mattered so much, but because somewhere along the way he had been taught that he was only as valuable as his paycheck. The hardest part of rebuilding was not finding a new job — it was finding a new definition of enough.',
+      'He lost his job and felt like he had lost everything. Not because the work itself mattered so much, but because somewhere along the way he had been taught that he was only as valuable as his paycheck. The hardest part of rebuilding was not finding a new job --- it was finding a new definition of enough.',
 
     practicalExercise: {
       title: 'The Worth Inventory',
       steps: [
         { title: 'List your roles', description: 'Write down every role you fill in your life: partner, father, friend, brother, neighbor, mentor, community member, creator, learner. Notice how many roles exist beyond "earner" or "provider." Each of these represents a dimension of your value.' },
         { title: 'Identify non-financial contributions', description: 'For each role, write one contribution you make that has nothing to do with money. Emotional support for your partner. Teaching your child to ride a bike. Making a friend laugh. Coaching the neighborhood team. These contributions matter deeply to the people in your life.' },
-        { title: 'Ask someone you trust', description: 'Ask one person close to you: "What do you value most about having me in your life?" You may be surprised — most people will name presence, reliability, humor, kindness, or wisdom long before they mention financial provision.' },
+        { title: 'Ask someone you trust', description: 'Ask one person close to you: "What do you value most about having me in your life?" You may be surprised --- most people will name presence, reliability, humor, kindness, or wisdom long before they mention financial provision.' },
         { title: 'Write a new definition', description: 'Based on what you have learned, write a personal definition of your worth that includes but is not limited to financial contribution. Read it when financial stress threatens to collapse your sense of self.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -830,7 +924,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             When a man loses his job, something beyond employment disappears. For many men,
-            work is not just what they do — it is who they are. The provider role, deeply
+            work is not just what they do --- it is who they are. The provider role, deeply
             encoded in masculine identity, means that financial capacity becomes inseparable
             from self-worth. A man who cannot provide feels, in a very real psychological
             sense, that he has failed at being a man.
@@ -839,9 +933,9 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
             This is the provider mandate: the cultural expectation that a man's primary
             contribution to his family, his relationships, and his community is economic.
             While attitudes toward gender roles have shifted significantly over the past
-            several decades — dual-income households now represent 66% of married couples
+            several decades --- dual-income households now represent 66% of married couples
             with
-            children <Citation id="4" index={4} source="U.S. Bureau of Labor Statistics" year="2024" tier={2} /> —
+            children <Citation id="4" index={4} source="U.S. Bureau of Labor Statistics" year="2024" tier={2} /> ---
             the internal narrative has proven far more resistant to change. Many men who
             intellectually support gender equality still carry a deep, often unexamined
             belief that they are ultimately responsible for financial security.
@@ -861,17 +955,17 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Understanding the Provider Mandate
         </h2>
         <p className="mb-6">
-          The provider role is not hardwired — it is learned. Boys begin absorbing messages
+          The provider role is not hardwired --- it is learned. Boys begin absorbing messages
           about masculine worth and earning from an early age through family modeling, media
           representation, and peer socialization. "What do you want to be when you grow up?"
           is one of the first identity questions children encounter, and for boys, the answer
           is almost always evaluated through the lens of earning potential and status. A boy
           who says "a doctor" receives different social reinforcement than one who says "a
-          painter" — not because of the inherent value of either pursuit, but because of
+          painter" --- not because of the inherent value of either pursuit, but because of
           their perceived financial implications.
         </p>
         <p className="mb-6">
-          Researchers describe this phenomenon as "precarious manhood" — the idea that
+          Researchers describe this phenomenon as "precarious manhood" --- the idea that
           masculinity, unlike femininity, is perceived as a status that must be earned and
           can be lost. Financial success is one of the primary proving grounds. When a man
           earns well, his masculinity is confirmed. When he struggles financially, it is
@@ -893,7 +987,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           However, cultures where the provider role is more rigidly defined show higher rates
           of male depression, substance abuse, and suicide during economic downturns. In
           countries with more egalitarian gender norms and stronger social safety nets, the
-          mental health impact of job loss on men is significantly reduced — suggesting that
+          mental health impact of job loss on men is significantly reduced --- suggesting that
           the damage comes not from unemployment itself but from the meaning assigned to it.
         </p>
 
@@ -911,10 +1005,10 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           stress compared to men in the bottom quartile.
         </p>
         <p className="mb-6">
-          Importantly, it is not financial hardship alone that drives these outcomes — it is
+          Importantly, it is not financial hardship alone that drives these outcomes --- it is
           the interaction between financial stress and provider identity. A man who defines
           himself primarily as a provider and then loses the ability to provide experiences
-          what psychologists call "identity threat" — a fundamental challenge to his sense of
+          what psychologists call "identity threat" --- a fundamental challenge to his sense of
           who he is. The resulting distress goes far beyond frustration about money; it is
           an existential crisis about personal worth and masculine legitimacy.
         </p>
@@ -932,14 +1026,27 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
 
         <p className="mb-6">
           Conversely, research on role diversification shows that men who define their worth
-          through multiple dimensions — partner, parent, friend, community member, learner,
-          creator — demonstrate approximately 40% greater psychological resilience during
+          through multiple dimensions --- partner, parent, friend, community member, learner,
+          creator --- demonstrate approximately 40% greater psychological resilience during
           financial
           setbacks <Citation id="5" index={5} source="Journal of Counseling Psychology" year="2021" tier={1} />.
           When one pillar of identity is threatened, others remain intact. The man who loses
           his job but still sees himself as a devoted father, a skilled mentor, and a valued
           friend has psychological resources that the man who sees himself solely as a
           provider does not.
+        </p>
+        <p className="mb-6">
+          The relationship between financial stress and relationship quality adds another
+          layer to the research picture. Men under severe financial pressure frequently withdraw
+          from their partners emotionally, not because they care less but because the shame of
+          financial inadequacy makes intimacy feel unbearable. They work longer hours, avoid
+          conversations about money, and respond to their partner's concern with irritability
+          or silence. Over time, the relational damage compounds the financial stress, creating
+          a spiral in which the man loses both his financial footing and his closest emotional
+          support simultaneously. Studies on shared breadwinning households suggest that couples
+          who explicitly negotiate away from the sole-provider model report higher relationship
+          satisfaction and more equitable emotional
+          labor <Citation id="8" index={8} source="Journal of Marriage and Family" year="2022" tier={1} />.
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1007,7 +1114,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   partners <Citation id="8" index={8} source="Journal of Marriage and Family" year="2022" tier={1} />.
                   Men in shared-earning relationships report feeling less burdened and more
                   emotionally available. For many men, the shift from sole provider to equal
-                  partner is not a loss of status — it is a liberation from unsustainable pressure.
+                  partner is not a loss of status --- it is a liberation from unsustainable pressure.
                 </p>
               ),
             },
@@ -1018,7 +1125,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Real-World Applications
         </h2>
         <p className="mb-6">
-          The provider mandate does not operate in isolation — it intersects with every major
+          The provider mandate does not operate in isolation --- it intersects with every major
           life transition men face. Understanding these intersection points helps men anticipate
           and prepare for the identity challenges that financial shifts create.
         </p>
@@ -1026,8 +1133,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           <strong>Retirement:</strong> For men whose identity is heavily invested in work,
           retirement can trigger a profound identity crisis. The loss of professional status,
           daily structure, and the provider role can lead to depression, purposelessness, and
-          relationship strain. Men who build diverse identity portfolios before retirement —
-          developing hobbies, community roles, and relational depth — transition more
+          relationship strain. Men who build diverse identity portfolios before retirement ---
+          developing hobbies, community roles, and relational depth --- transition more
           smoothly.
         </p>
         <p className="mb-6">
@@ -1040,7 +1147,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           <strong>Economic downturns:</strong> During recessions and industry disruptions,
-          men's suicide rates rise disproportionately — a pattern documented across multiple
+          men's suicide rates rise disproportionately --- a pattern documented across multiple
           countries and economic
           cycles <Citation id="10" index={10} source="World Health Organization" year="2020" tier={2} />.
           Public health responses that recognize the link between masculine identity, financial
@@ -1048,20 +1155,47 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           economic crises.
         </p>
 
+        <h2 id="the-generational-dimension" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Generational Dimension
+        </h2>
+        <p className="mb-6">
+          The provider mandate does not emerge from nowhere --- it is transmitted across
+          generations through observation, instruction, and reinforcement. A boy who watches
+          his father sacrifice health, relationships, and personal fulfillment in pursuit of
+          financial provision absorbs a powerful lesson about what it means to be a man. He
+          may admire his father's dedication while simultaneously inheriting the same rigid
+          equation between earning and worth that constricted his father's emotional life.
+          Breaking this cycle requires conscious intervention: fathers who openly discuss the
+          costs of the provider mandate, who model multi-dimensional definitions of
+          masculinity, and who demonstrate that vulnerability and strength coexist give their
+          sons permission to build a more expansive identity from the start.
+        </p>
+        <p className="mb-6">
+          Younger generations of men are already renegotiating the provider mandate, though
+          not without friction. Surveys of men under 35 show increasing comfort with shared
+          breadwinning, stay-at-home fatherhood, and career paths chosen for fulfillment
+          rather than earning potential. Yet these same men report internal conflict --- an
+          intellectual rejection of the sole-provider expectation combined with a gut-level
+          anxiety when they are not the primary earner. The mandate's grip loosens slowly,
+          and men navigating this transition benefit from explicit conversations about where
+          their beliefs about providing originated, whether those beliefs serve them, and
+          what alternative definitions of masculine contribution might look like in practice.
+        </p>
+
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Getting Started
         </h2>
         <p className="mb-6">
-          Challenging the provider mandate is not a one-time decision — it is an ongoing
+          Challenging the provider mandate is not a one-time decision --- it is an ongoing
           practice of expanding how you define your value. Start by noticing the moments when
           your sense of self-worth fluctuates with your financial situation. When a bill
           creates disproportionate anxiety, when a friend's new car triggers shame, when your
-          partner's salary increase makes you feel smaller rather than grateful — these are
+          partner's salary increase makes you feel smaller rather than grateful --- these are
           signals that the provider mandate is operating beneath the surface.
         </p>
         <p className="mb-6">
           Talk to other men about these pressures. You will likely discover that they carry the
-          same weight. The provider mandate thrives in silence — it loses power when named and
+          same weight. The provider mandate thrives in silence --- it loses power when named and
           examined. Men's groups, therapy, and honest conversations with trusted friends all
           provide spaces where the mandate can be questioned without being replaced by shame
           about questioning it.
@@ -1089,7 +1223,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           by design.
         </p>
         <p className="mb-6">
-          The work of challenging the provider mandate is ultimately about freedom — freedom
+          The work of challenging the provider mandate is ultimately about freedom --- freedom
           from an equation that says you are only as good as your last paycheck. Men deserve
           a definition of masculinity that includes but is not limited to economic contribution.
           Building that definition is not a sign of weakness. It is perhaps the strongest
@@ -1141,9 +1275,9 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
       title: 'Your Creative Expression Experiment',
       steps: [
         { title: 'Choose your medium', description: 'Pick one creative activity that appeals to you: playing or listening to music intentionally, drawing or painting (skill does not matter), writing freely for 15 minutes, or working with your hands (woodworking, pottery, cooking as creativity). Choose what feels most natural, not most impressive.' },
-        { title: 'Set aside 20 uninterrupted minutes', description: 'Find a time when you will not be disturbed. Turn off your phone. The goal is not to produce something good — it is to let your inner experience express itself through the medium. If writing, do not edit. If drawing, do not judge. If playing music, do not perform.' },
+        { title: 'Set aside 20 uninterrupted minutes', description: 'Find a time when you will not be disturbed. Turn off your phone. The goal is not to produce something good --- it is to let your inner experience express itself through the medium. If writing, do not edit. If drawing, do not judge. If playing music, do not perform.' },
         { title: 'Notice what emerges', description: 'After the session, sit quietly for a few minutes. What feelings came up during the process? Did anything surprise you? Sometimes emotions surface during creative work that were not accessible through thinking or talking. Simply notice without analyzing.' },
-        { title: 'Repeat weekly', description: 'Make this a weekly practice for at least four weeks. Research shows that the mental health benefits of creative expression increase with consistency. You are building a new pathway for emotional processing — one that may become as natural as the verbal pathways you already use.' },
+        { title: 'Repeat weekly', description: 'Make this a weekly practice for at least four weeks. Research shows that the mental health benefits of creative expression increase with consistency. You are building a new pathway for emotional processing --- one that may become as natural as the verbal pathways you already use.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Log your mood before and after creative sessions to track the impact',
@@ -1176,7 +1310,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           <p className="mb-6">
             This matters because many men are not verbally defended by choice. Years of
             emotional socialization have literally reduced their access to emotional vocabulary.
-            A man who says "I am fine" is not necessarily lying — he may genuinely lack the
+            A man who says "I am fine" is not necessarily lying --- he may genuinely lack the
             internal pathway that connects feeling to word. Creative expression bypasses this
             limitation entirely. You do not need to name an emotion to paint it, play it,
             or write it. The act of creation becomes the expression itself.
@@ -1198,10 +1332,10 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Creative expression works through mechanisms that are distinct from and complementary
-          to traditional talk therapy. When a man creates something — a painting, a song, a
-          story, a sculpture — several psychological processes activate simultaneously. First,
+          to traditional talk therapy. When a man creates something --- a painting, a song, a
+          story, a sculpture --- several psychological processes activate simultaneously. First,
           the creative act engages focused attention, producing a state that psychologist
-          Mihaly Csikszentmihalyi called "flow" — a condition associated with reduced anxiety,
+          Mihaly Csikszentmihalyi called "flow" --- a condition associated with reduced anxiety,
           elevated mood, and temporary relief from rumination and
           self-criticism <Citation id="8" index={8} source="Journal of Positive Psychology" year="2019" tier={1} />.
         </p>
@@ -1209,7 +1343,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Second, creative expression externalizes internal experience. An emotion that
           exists only as an unnamed pressure inside the chest becomes a color on a canvas,
           a chord progression, a character in a story. This externalization is therapeutic
-          because it creates distance — the man can observe, reflect on, and even modify
+          because it creates distance --- the man can observe, reflect on, and even modify
           the emotional content without the vulnerability of direct self-disclosure.
         </p>
 
@@ -1223,9 +1357,21 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Third, creative products become tangible evidence of emotional experience. A man
           who struggles to tell his therapist that he is grieving may write a poem about loss
           and bring it to the next session. The poem says what he cannot. This indirect
-          communication is not a detour around emotional processing — it is an alternative
+          communication is not a detour around emotional processing --- it is an alternative
           route that is equally valid and, for many men, more
           accessible <Citation id="9" index={9} source="American Journal of Men's Health" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Fourth, creative practice builds a tolerance for imperfection that extends far
+          beyond the artistic domain. Many men operate under rigid standards of competence ---
+          if they cannot do something well, they would rather not do it at all. Creative
+          expression, by its nature, resists this binary. A painting is never objectively
+          right or wrong. A piece of music evolves through wrong notes and unexpected
+          detours. A story reveals itself through drafts and revisions. Men who develop a
+          creative practice gradually internalize the idea that process matters more than
+          product, that mistakes are instructive rather than shameful, and that vulnerability
+          in the act of creation does not diminish their competence --- it deepens their
+          capacity to engage with life as it actually is rather than as they think it should be.
         </p>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1271,7 +1417,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">
                     Music therapy demonstrates effect sizes of 0.67 for depression and 0.68
-                    for anxiety in meta-analytic reviews — comparable to
+                    for anxiety in meta-analytic reviews --- comparable to
                     psychotherapy <Citation id="2" index={2} source="Cochrane Database of Systematic Reviews" year="2017" tier={1} />.
                     Music works through multiple channels: rhythm regulates physiological arousal,
                     melody engages emotional memory, lyrics provide narrative frameworks for
@@ -1294,8 +1440,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Expressive writing — writing freely about emotional experiences for 15-20
-                    minutes — is one of the most well-studied psychological interventions, with
+                    Expressive writing --- writing freely about emotional experiences for 15-20
+                    minutes --- is one of the most well-studied psychological interventions, with
                     over 200 published studies. James Pennebaker's research demonstrated that
                     expressive writing improves physical health, reduces doctor visits by 43%,
                     and decreases depressive
@@ -1330,7 +1476,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           music <Citation id="7" index={7} source="Military Medicine" year="2020" tier={1} />.
           Participating veterans consistently report that creative expression helps them
           process experiences they could not address through verbal therapy alone. The
-          competitive element — unusual in a therapeutic context — engages the masculine
+          competitive element --- unusual in a therapeutic context --- engages the masculine
           drive for achievement and provides a framework that feels familiar and motivating.
         </p>
 
@@ -1343,7 +1489,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   Community-based art centers for veterans, such as the Veterans Art Center in
                   upstate New York, offer open studio time, structured workshops, and mentored
                   projects in a non-clinical setting. Veterans report that the studio environment
-                  — where the focus is on making art rather than discussing problems — reduces
+                  --- where the focus is on making art rather than discussing problems --- reduces
                   the stigma associated with help-seeking. The social bonds formed through shared
                   creative work often become the foundation for deeper conversations about mental
                   health that emerge organically over time.
@@ -1372,7 +1518,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
                   Organizations like the Warrior Writers Project and Veterans Writing Project
                   use creative writing workshops to help men (primarily veterans) process
                   difficult experiences through narrative. The workshop format provides structure
-                  and community, while the creative framing — writing stories, poems, or essays —
+                  and community, while the creative framing --- writing stories, poems, or essays ---
                   provides enough distance from personal material to make emotional processing
                   feel safe. Participants write about their experiences as characters, through
                   metaphor, or in the third person, gradually moving toward more direct expression
@@ -1382,6 +1528,33 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
             },
           ]}
         />
+
+        <h2 id="creativity-and-masculine-identity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Creativity and Masculine Identity
+        </h2>
+        <p className="mb-6">
+          One of the most persistent barriers to men's creative engagement is the cultural
+          message that art is not masculine. Boys who draw, write poetry, or take dance
+          classes often face teasing or social marginalization. By adulthood, many men have
+          internalized the idea that creative pursuits are frivolous, impractical, or
+          incompatible with masculine identity. This internalized prohibition cuts men off
+          from one of the most natural and effective channels for emotional processing that
+          humans possess. The irony is unmistakable: the same culture that tells men not to
+          talk about their feelings also tells them not to paint, write, or play music about
+          their feelings, leaving an increasingly narrow range of acceptable emotional outlets.
+        </p>
+        <p className="mb-6">
+          Reclaiming creativity as a masculine strength requires reframing what creativity
+          means. Woodworking is creative. Cooking an elaborate meal is creative. Restoring
+          a classic car is creative. Building a garden from bare soil is creative. Men who
+          resist the label of "artist" may already be engaging in creative practice without
+          recognizing it as such. The therapeutic benefit comes from intentionality --- from
+          approaching the creative act not just as a task to complete but as a space where
+          internal experience can surface and be acknowledged. A man sanding a piece of
+          furniture can use the repetitive motion as a form of meditation, allowing thoughts
+          and feelings to rise without judgment. The medium matters far less than the
+          willingness to let the process reveal something about what is happening inside.
+        </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Getting Started
@@ -1416,7 +1589,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           If you prefer social settings, look for community art classes, open mic nights, drum
           circles, or writing groups in your area. Many community centers, libraries, and
           veteran organizations offer free or low-cost creative programs. The social dimension
-          adds an extra layer of benefit — shared creative activity builds bonds quickly because
+          adds an extra layer of benefit --- shared creative activity builds bonds quickly because
           the creative process naturally invites authenticity.
         </p>
 
@@ -1426,8 +1599,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           Creative expression is not a replacement for professional mental health support when
           clinical treatment is needed. But for millions of men who experience emotional
-          distress that never reaches the threshold of clinical diagnosis — the quiet grief,
-          the unnamed anxiety, the chronic stress that accumulates silently — creativity
+          distress that never reaches the threshold of clinical diagnosis --- the quiet grief,
+          the unnamed anxiety, the chronic stress that accumulates silently --- creativity
           offers a way to process, express, and release what words alone cannot reach.
         </p>
         <p className="mb-6">
@@ -1435,6 +1608,17 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           universality. You do not need a diagnosis, a referral, insurance, or an appointment.
           You need twenty minutes, a piece of paper, and the willingness to let something
           inside come out in whatever form it chooses.
+        </p>
+        <p className="mb-6">
+          Over time, men who maintain a creative practice often find that the benefits
+          extend well beyond the creative sessions themselves. The capacity to sit with
+          uncertainty, to tolerate imperfection, and to find meaning in process rather than
+          outcome begins to reshape how they approach relationships, work challenges, and
+          their own emotional lives. Creativity teaches a man that not everything needs to
+          be fixed, solved, or controlled --- that sometimes the most productive response to
+          inner turmoil is not action but expression, not analysis but creation. This shift
+          in orientation, subtle but profound, represents one of the deepest forms of
+          emotional growth available through any intervention.
         </p>
 
         <QuoteBlock
@@ -1444,7 +1628,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
 
         <p className="mb-6">
           If you are a man who has always said "I am not creative," consider the possibility
-          that creativity was not absent — it was suppressed. The same socialization that
+          that creativity was not absent --- it was suppressed. The same socialization that
           taught you to hide emotions may have taught you that art, music, and writing are
           not masculine pursuits. They are. The evidence shows that creative expression may
           be one of the most effective tools men have for maintaining emotional health.
@@ -1463,7 +1647,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     slug: 'the-role-of-humor-in-mens-mental-health-when-laughter-helps-and-when-it-hides',
     title: "The Role of Humor in Men's Mental Health: When Laughter Helps and When It Hides",
     description:
-      "Review the research on humor styles — affiliative, self-enhancing, aggressive, and self-defeating — and learn when men's humor supports wellbeing and when it masks distress.",
+      "Review the research on humor styles --- affiliative, self-enhancing, aggressive, and self-defeating --- and learn when men's humor supports wellbeing and when it masks distress.",
     image: '/images/articles/cat19/cover-066.svg',
     category: CATEGORY_MENS_MENTAL_HEALTH,
     readTime: 13,
@@ -1473,7 +1657,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     tags: ['Humor', 'Coping Mechanisms', 'Research', "Men's Mental Health"],
 
     summary:
-      "Humor is one of the most complex and underexamined dimensions of men's mental health. For many men, humor serves as the primary social currency — the way they connect, communicate, and cope with emotional challenges. Yet not all humor is equal in its psychological effects. Research by Rod Martin and colleagues identifies four distinct humor styles with markedly different mental health implications: affiliative humor (using humor to build social bonds), self-enhancing humor (maintaining perspective through humor during adversity), aggressive humor (using humor to criticize, manipulate, or dominate), and self-defeating humor (putting oneself down for others' approval). Men disproportionately use all four styles compared to women, but the balance between them matters enormously. Affiliative and self-enhancing humor are consistently associated with better mental health outcomes, including lower depression, higher self-esteem, and stronger social support networks. Aggressive and self-defeating humor, however, correlate with depression, anxiety, loneliness, and poorer relationship quality. The challenge for men is that humor often functions as both coping mechanism and concealment strategy simultaneously. A man cracking jokes about his divorce may be processing his grief through humor or may be deflecting from pain he cannot face. This article reviews the research on humor styles, examines how men use humor as both shield and sword, and provides a framework for distinguishing adaptive humor from the kind that masks suffering.",
+      "Humor is one of the most complex and underexamined dimensions of men's mental health. For many men, humor serves as the primary social currency --- the way they connect, communicate, and cope with emotional challenges. Yet not all humor is equal in its psychological effects. Research by Rod Martin and colleagues identifies four distinct humor styles with markedly different mental health implications: affiliative humor (using humor to build social bonds), self-enhancing humor (maintaining perspective through humor during adversity), aggressive humor (using humor to criticize, manipulate, or dominate), and self-defeating humor (putting oneself down for others' approval). Men disproportionately use all four styles compared to women, but the balance between them matters enormously. Affiliative and self-enhancing humor are consistently associated with better mental health outcomes, including lower depression, higher self-esteem, and stronger social support networks. Aggressive and self-defeating humor, however, correlate with depression, anxiety, loneliness, and poorer relationship quality. The challenge for men is that humor often functions as both coping mechanism and concealment strategy simultaneously. A man cracking jokes about his divorce may be processing his grief through humor or may be deflecting from pain he cannot face. This article reviews the research on humor styles, examines how men use humor as both shield and sword, and provides a framework for distinguishing adaptive humor from the kind that masks suffering.",
 
     keyFacts: [
       { text: 'Men score significantly higher than women on all four humor styles, including both adaptive (affiliative, self-enhancing) and maladaptive (aggressive, self-defeating) forms', citationIndex: 1 },
@@ -1486,12 +1670,12 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      "He was the funniest person in every room. Everyone said so. What nobody knew was that the jokes were walls — perfectly constructed, brilliantly timed walls that kept anyone from asking the one question he could not answer: how are you, really?",
+      "He was the funniest person in every room. Everyone said so. What nobody knew was that the jokes were walls --- perfectly constructed, brilliantly timed walls that kept anyone from asking the one question he could not answer: how are you, really?",
 
     practicalExercise: {
       title: 'The Humor Audit',
       steps: [
-        { title: 'Track your humor for one week', description: 'Pay attention to when and how you use humor throughout the day. After each social interaction, briefly note: What kind of humor did I use? Was I building connection (affiliative), coping with something hard (self-enhancing), putting someone down (aggressive), or putting myself down (self-defeating)? No judgment — just observation.' },
+        { title: 'Track your humor for one week', description: 'Pay attention to when and how you use humor throughout the day. After each social interaction, briefly note: What kind of humor did I use? Was I building connection (affiliative), coping with something hard (self-enhancing), putting someone down (aggressive), or putting myself down (self-defeating)? No judgment --- just observation.' },
         { title: 'Notice the triggers', description: 'When do you reach for humor most? Is it when you are genuinely happy and connecting, or when you are uncomfortable, anxious, or trying to avoid something? The timing of humor reveals its function. Humor that appears when emotions get serious is often serving a defensive purpose.' },
         { title: 'Check the aftermath', description: 'After using humor, how do you feel? Connected and energized (sign of adaptive humor)? Relieved that the conversation moved away from a difficult topic (sign of deflection)? Momentarily amused but still carrying the same weight? The emotional residue after humor reveals whether it is processing or postponing.' },
         { title: 'Try one honest moment', description: 'The next time you are about to deflect with a joke, pause and try saying what you are actually feeling instead. Just once. It does not have to be dramatic. "Actually, that is kind of a sore subject for me" is enough. Notice how the other person responds and how you feel afterward.' },
@@ -1526,7 +1710,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           <p className="mb-6">
             But humor is not a single thing. It is a spectrum of strategies that range from
             deeply healing to quietly destructive. The man who makes his friends laugh until
-            they cry may be building the strongest bonds in the room — or he may be performing
+            they cry may be building the strongest bonds in the room --- or he may be performing
             wellbeing while drowning underneath. The challenge, both for the man and for the
             people who care about him, is knowing the
             difference <Citation id="6" index={6} source="Psychology of Men & Masculinities" year="2020" tier={1} />.
@@ -1565,7 +1749,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           Men score significantly higher than women on all four humor
           styles <Citation id="5" index={5} source="Psychology of Aesthetics, Creativity, and the Arts" year="2019" tier={1} />.
-          This means men are more likely to use humor as a social tool overall — but also
+          This means men are more likely to use humor as a social tool overall --- but also
           more likely to deploy it in psychologically harmful ways. The gender difference is
           particularly pronounced for aggressive humor, which researchers link to the masculine
           norm of dominance and
@@ -1579,7 +1763,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           making it one of the more effective natural coping strategies documented in the
           literature. Conversely, self-defeating humor shows a 0.36 correlation with depression
           and a 0.31 correlation with
-          anxiety <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} /> —
+          anxiety <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} /> ---
           meaning the more a person uses self-deprecating humor, the more likely they are to
           be struggling psychologically.
         </p>
@@ -1598,7 +1782,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           <strong>Social bonding:</strong> For many men, humor is the primary language of
           friendship. Male friendships are often built around shared laughter rather than
           shared vulnerability. Inside jokes, playful teasing, and comedic storytelling create
-          a sense of belonging and intimacy that parallels — but looks very different from —
+          a sense of belonging and intimacy that parallels --- but looks very different from ---
           the emotional disclosure that characterizes many female friendships. This is not
           inherently inferior. Research shows that humor-based bonding produces genuine
           closeness and social
@@ -1607,7 +1791,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           <strong>Status negotiation:</strong> In male social groups, being funny confers
           social capital. The funniest person in the group often holds significant social
-          influence. This creates an incentive to be entertaining that can become compulsive —
+          influence. This creates an incentive to be entertaining that can become compulsive ---
           some men feel they must constantly perform humor to maintain their social position,
           even when they are not feeling humorous at all.
         </p>
@@ -1621,9 +1805,9 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           <strong>Deflection:</strong> Perhaps the most concerning function of humor is its
-          use as a deflection mechanism. When a conversation approaches emotional territory —
+          use as a deflection mechanism. When a conversation approaches emotional territory ---
           when a friend asks how you are really doing, when a partner tries to discuss
-          relationship issues, when a therapist gets close to something painful — humor
+          relationship issues, when a therapist gets close to something painful --- humor
           provides an instant exit. A well-timed joke can redirect any conversation away
           from vulnerability and back to safer ground.
         </p>
@@ -1632,7 +1816,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           When Humor Helps
         </h2>
         <p className="mb-6">
-          Adaptive humor — particularly affiliative and self-enhancing styles — is genuinely
+          Adaptive humor --- particularly affiliative and self-enhancing styles --- is genuinely
           protective for mental health. The mechanisms are both psychological and physiological.
         </p>
 
@@ -1645,7 +1829,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         <p className="mb-6">
           Physiologically, laughter triggers the release of endorphins, reduces cortisol
           and adrenaline, lowers blood pressure, and activates the parasympathetic nervous
-          system — the body's "rest and digest"
+          system --- the body's "rest and digest"
           mode <Citation id="4" index={4} source="Proceedings of the Royal Society B" year="2012" tier={1} />.
           Social laughter is particularly powerful: laughing with others produces stronger
           endorphin responses than laughing alone, likely because of the additional social
@@ -1653,7 +1837,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Psychologically, self-enhancing humor provides what researchers call "cognitive
-          reappraisal" — the ability to reframe a stressful situation in a way that reduces
+          reappraisal" --- the ability to reframe a stressful situation in a way that reduces
           its emotional impact. A man going through a divorce who can say "Well, at least I
           will finally have closet space" is not denying his pain. He is finding a way to
           hold the pain and the perspective simultaneously. This capacity to maintain humor
@@ -1689,8 +1873,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Self-defeating humor is the clearest red flag. When a man consistently makes himself
-          the butt of the joke — deprecating his appearance, his intelligence, his worth, his
-          relationships — it often signals genuine low self-esteem being disguised as comedy.
+          the butt of the joke --- deprecating his appearance, his intelligence, his worth, his
+          relationships --- it often signals genuine low self-esteem being disguised as comedy.
           The laughter of others provides a momentary hit of social acceptance, but the
           underlying message ("I am not worth much") reinforces the very belief that drives
           the
@@ -1698,8 +1882,8 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Aggressive humor is similarly concerning, though it manifests differently. Men who
-          use humor to dominate, belittle, or control — through cutting sarcasm, "jokes" that
-          are actually insults, or humor that targets others' vulnerabilities — are often
+          use humor to dominate, belittle, or control --- through cutting sarcasm, "jokes" that
+          are actually insults, or humor that targets others' vulnerabilities --- are often
           managing their own insecurity through externalized
           aggression <Citation id="8" index={8} source="Humor: International Journal of Humor Research" year="2018" tier={1} />.
           The social setting of "just joking" provides plausible deniability for hostility
@@ -1743,23 +1927,23 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           Recognizing the Difference
         </h2>
         <p className="mb-6">
-          Distinguishing adaptive humor from maladaptive humor — both in yourself and in men
-          you care about — requires paying attention to context, pattern, and consequence
+          Distinguishing adaptive humor from maladaptive humor --- both in yourself and in men
+          you care about --- requires paying attention to context, pattern, and consequence
           rather than content alone. The same joke can be healthy or concerning depending on
           these factors.
         </p>
         <p className="mb-6">
           <strong>Context:</strong> When does the humor appear? Humor that emerges naturally
           during relaxed social interaction is typically adaptive. Humor that appears
-          specifically when emotions intensify — when someone asks a personal question, when
-          a conversation turns serious, when tears are close — is more likely serving a
+          specifically when emotions intensify --- when someone asks a personal question, when
+          a conversation turns serious, when tears are close --- is more likely serving a
           defensive function.
         </p>
         <p className="mb-6">
           <strong>Pattern:</strong> Is humor the only register, or one of many? A man who can
           be funny and serious, who can crack a joke and then have a genuine conversation, is
-          likely using humor adaptively. A man who cannot seem to engage without humor — who
-          meets every emotional moment with a joke — may be using humor as a barrier to
+          likely using humor adaptively. A man who cannot seem to engage without humor --- who
+          meets every emotional moment with a joke --- may be using humor as a barrier to
           emotional intimacy.
         </p>
         <p className="mb-6">
@@ -1767,7 +1951,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           humor makes people feel included, warm, and
           connected <Citation id="1" index={1} source="Journal of Research in Personality" year="2003" tier={1} />.
           Aggressive humor makes people feel small or unsafe, even when they laugh. Self-defeating
-          humor creates a vague discomfort in observers — the sense that what is being said as
+          humor creates a vague discomfort in observers --- the sense that what is being said as
           a joke might actually be true.
         </p>
 
@@ -1776,7 +1960,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
             <strong>For friends and family:</strong> If a man in your life uses humor to deflect
             from serious topics, resist the temptation to push past the humor directly.
             Instead, try acknowledging the humor and then gently returning to the topic:
-            "That is funny, and I appreciate that. But I also want to check — are you actually
+            "That is funny, and I appreciate that. But I also want to check --- are you actually
             doing okay?" This approach respects his coping style while signaling that you are
             willing to go deeper if he is.
           </p>
@@ -1789,12 +1973,12 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
           The research on humor and mental health leads to a nuanced conclusion: humor is
           neither inherently helpful nor inherently harmful. It is a tool whose impact depends
           entirely on how it is used. For men, the challenge is particularly acute because
-          humor is so deeply embedded in masculine social life that it can become automatic —
+          humor is so deeply embedded in masculine social life that it can become automatic ---
           a reflexive response that operates before conscious choice.
         </p>
         <p className="mb-6">
-          The goal is not to stop being funny. Men who use humor well — to connect, to cope,
-          to maintain perspective — have access to one of the most powerful natural mental
+          The goal is not to stop being funny. Men who use humor well --- to connect, to cope,
+          to maintain perspective --- have access to one of the most powerful natural mental
           health resources available. The goal is to become aware of when humor is serving
           you and when it is managing you. When laughter brings you closer to others and
           helps you hold difficulty with grace, it is medicine. When it prevents you from
@@ -1819,7 +2003,7 @@ export const mensHealthInterventions2ArticlesB: Article[] = [
 
         <p className="mb-6">
           If you recognize yourself as someone who uses humor to hide, you do not need to
-          dismantle your entire personality. Start by allowing one genuine moment per day —
+          dismantle your entire personality. Start by allowing one genuine moment per day ---
           one response to "How are you?" that is honest instead of funny. One conversation
           where you let the silence sit instead of filling it with a punchline. One
           acknowledgment that something is hard without immediately making it lighter.

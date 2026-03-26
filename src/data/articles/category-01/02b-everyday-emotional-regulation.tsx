@@ -20,7 +20,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     id: catId(16),
     slug: 'power-of-naming-emotions-affect-labeling',
     title: 'The Power of Naming Your Emotions: Why Labeling Feelings Calms the Brain',
-    description: 'Discover the neuroscience behind affect labeling — how simply naming your emotions reduces amygdala activation and helps you regain emotional control.',
+    description: 'Discover the neuroscience behind affect labeling --- how simply naming your emotions reduces amygdala activation and helps you regain emotional control.',
     image: "/images/articles/cat01/cover-016.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 8,
@@ -114,10 +114,10 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Name it to tame it" has become a popular phrase in therapy circles. But this is not just a clever slogan — it is grounded in rigorous neuroscience. When you put your emotions into specific words, measurable changes happen in your brain within seconds.
+            "Name it to tame it" has become a popular phrase in therapy circles. But this is not just a clever slogan --- it is grounded in rigorous neuroscience. When you put your emotions into specific words, measurable changes happen in your brain within seconds.
           </p>
           <p className="mb-6">
-            In 2007, UCLA psychologist Matthew Lieberman published a landmark study showing that simply labeling an emotion — saying "I feel anxious" rather than just feeling the anxiety — significantly reduced amygdala activation <Citation id="1" index={1} source="Psychological Science" year="2007" tier={1} />. This finding has been replicated across multiple studies and has reshaped how therapists approach emotion regulation <Citation id="2" index={2} source="Emotion Review" year="2018" tier={1} />.
+            In 2007, UCLA psychologist Matthew Lieberman published a landmark study showing that simply labeling an emotion --- saying "I feel anxious" rather than just feeling the anxiety --- significantly reduced amygdala activation <Citation id="1" index={1} source="Psychological Science" year="2007" tier={1} />. This finding has been replicated across multiple studies and has reshaped how therapists approach emotion regulation <Citation id="2" index={2} source="Emotion Review" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -125,7 +125,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           Key Findings: What the Research Shows
         </h2>
         <p className="mb-6">
-          Lieberman's original fMRI study asked participants to view photos of faces expressing strong emotions. When participants simply looked at the faces, their amygdala (the brain's threat detection center) activated strongly. But when they were asked to label the emotion they saw — 'angry,", "fearful,", "sad" — amygdala activity decreased significantly, while activity in the right ventrolateral prefrontal cortex (RVLPFC) increased <Citation id="1" index={1} source="Psychological Science" year="2007" tier={1} />.
+          Lieberman's original fMRI study asked participants to view photos of faces expressing strong emotions. When participants simply looked at the faces, their amygdala (the brain's threat detection center) activated strongly. But when they were asked to label the emotion they saw --- 'angry,", "fearful,", "sad" --- amygdala activity decreased significantly, while activity in the right ventrolateral prefrontal cortex (RVLPFC) increased <Citation id="1" index={1} source="Psychological Science" year="2007" tier={1} />.
         </p>
 
         <ArticleChart
@@ -168,7 +168,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">A 2012 study tested affect labeling with people who had spider phobia. Participants who labeled their fear response ("I feel afraid of this spider") showed greater reductions in fear and physiological arousal than participants who used cognitive reappraisal, distraction, or no strategy.</p>
-                  <p>This was surprising — labeling outperformed reappraisal, which had been considered the gold-standard technique.</p>
+                  <p>This was surprising --- labeling outperformed reappraisal, which had been considered the gold-standard technique.</p>
                 </div>
               ),
             },
@@ -177,7 +177,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
               label: 'Emotional Granularity',
               content: (
                 <div>
-                  <p className="mb-4">A 2021 study found that people with more specific emotional vocabularies — who could distinguish between "irritated,", "frustrated," and "enraged" rather than just "angry" — showed better emotion regulation outcomes.</p>
+                  <p className="mb-4">A 2021 study found that people with more specific emotional vocabularies --- who could distinguish between "irritated,", "frustrated," and "enraged" rather than just "angry" --- showed better emotion regulation outcomes.</p>
                   <p>This emotional granularity (the precision of your emotional vocabulary) predicted better coping, less aggression, and fewer maladaptive strategies.</p>
                 </div>
               ),
@@ -212,7 +212,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           Here are evidence-based ways to build your labeling practice <Citation id="4" index={4} source="Psychological Science" year="2021" tier={1} />:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Check in three times daily.</strong> Set reminders and ask yourself, "What am I feeling right now?" Use specific words — not "bad" but "disappointed,", "rejected," or "overwhelmed."</li>
+          <li><strong>Check in three times daily.</strong> Set reminders and ask yourself, "What am I feeling right now?" Use specific words --- not "bad" but "disappointed,", "rejected," or "overwhelmed."</li>
           <li><strong>Expand your vocabulary.</strong> Learn beyond the basic six (happy, sad, angry, scared, disgusted, surprised). Try words like "wistful,", "exasperated,", "ambivalent,", "tender," or "restless."</li>
           <li><strong>Use the phrase "I notice I am feeling..."</strong> This creates a small distance between you and the emotion, reinforcing the observer perspective.</li>
           <li><strong>Write it down.</strong> Journaling about emotions with specific labels shows even stronger regulation effects than just thinking the label.</li>
@@ -222,10 +222,10 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           Limitations and Open Questions
         </h2>
         <p className="mb-6">
-          While the evidence for affect labeling is strong, several questions remain <Citation id="7" index={7} source="Psychological Bulletin" year="2017" tier={1} />. Most studies have been conducted in laboratory settings with healthy adults — we need more research on how labeling works during real-world high-stress situations. There is also debate about whether labeling works best as a standalone technique or as part of a broader emotion regulation strategy.
+          While the evidence for affect labeling is strong, several questions remain <Citation id="7" index={7} source="Psychological Bulletin" year="2017" tier={1} />. Most studies have been conducted in laboratory settings with healthy adults --- we need more research on how labeling works during real-world high-stress situations. There is also debate about whether labeling works best as a standalone technique or as part of a broader emotion regulation strategy.
         </p>
         <p className="mb-6">
-          Additionally, some researchers have raised the question of whether affect labeling could be counterproductive for certain people — for example, those who tend to over-analyze their emotions (rumination). More research is needed to identify who benefits most from this approach <Citation id="9" index={9} source="Behaviour Research and Therapy" year="2012" tier={1} />.
+          Additionally, some researchers have raised the question of whether affect labeling could be counterproductive for certain people --- for example, those who tend to over-analyze their emotions (rumination). More research is needed to identify who benefits most from this approach <Citation id="9" index={9} source="Behaviour Research and Therapy" year="2012" tier={1} />.
         </p>
 
         <h2 id="whats-next" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -328,7 +328,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
             When a strong emotion hits, the first five minutes are critical. This is when stress hormones flood your system, your thinking brain goes partially offline, and the urge to react is strongest. What you do in this window determines whether the emotion passes through you or takes over your entire day.
           </p>
           <p className="mb-6">
-            Psychologist Guy Winch introduced the concept of emotional first aid — treating emotional injuries with the same urgency and care we give physical ones <Citation id="1" index={1} source="Plume/Penguin Books" year="2013" tier={5} />. Research on the time course of emotional responses shows that the first few minutes after a trigger represent the highest-intensity period, and early intervention dramatically improves outcomes <Citation id="2" index={2} source="Emotion" year="2012" tier={1} />.
+            Psychologist Guy Winch introduced the concept of emotional first aid --- treating emotional injuries with the same urgency and care we give physical ones <Citation id="1" index={1} source="Plume/Penguin Books" year="2013" tier={5} />. Research on the time course of emotional responses shows that the first few minutes after a trigger represent the highest-intensity period, and early intervention dramatically improves outcomes <Citation id="2" index={2} source="Emotion" year="2012" tier={1} />.
           </p>
         </div>
 
@@ -339,7 +339,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           When you encounter an emotional trigger, your amygdala activates within milliseconds, flooding your body with cortisol and adrenaline <Citation id="5" index={5} source="Psychoneuroendocrinology" year="2018" tier={1} />. This is the fight-or-flight response, and it is designed for survival, not for nuanced decision-making. During this window, your prefrontal cortex (responsible for planning, judgment, and impulse control) has reduced capacity.
         </p>
         <p className="mb-6">
-          Daniel Siegel describes a "window of tolerance" — the zone where you can experience emotions without becoming overwhelmed or shutting down <Citation id="7" index={7} source="Norton Series on Interpersonal Neurobiology" year="1999" tier={5} />. Emotional first aid keeps you within that window.
+          Daniel Siegel describes a "window of tolerance" --- the zone where you can experience emotions without becoming overwhelmed or shutting down <Citation id="7" index={7} source="Norton Series on Interpersonal Neurobiology" year="1999" tier={5} />. Emotional first aid keeps you within that window.
         </p>
 
         <h2 id="five-minute-protocol" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -370,7 +370,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
             {
               title: 'Minute 4: Validate Yourself',
               description: (
-                <p>Say to yourself: 'It makes sense that I feel this way given what just happened." Self-compassion prevents the shame spiral that often makes emotions worse. You do not need to fix the feeling — just accept it is there.</p>
+                <p>Say to yourself: 'It makes sense that I feel this way given what just happened." Self-compassion prevents the shame spiral that often makes emotions worse. You do not need to fix the feeling --- just accept it is there.</p>
               ),
             },
             {
@@ -430,7 +430,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If strong emotions regularly push you outside your window of tolerance — if you frequently feel out of control, dissociated, or unable to function — a therapist can help you build a personalized plan for emotional first aid and long-term regulation <Citation id="6" index={6} source="Behavior Therapy" year="2010" tier={1} />. There is nothing weak about getting skilled help for something this important.
+          If strong emotions regularly push you outside your window of tolerance --- if you frequently feel out of control, dissociated, or unable to function --- a therapist can help you build a personalized plan for emotional first aid and long-term regulation <Citation id="6" index={6} source="Behavior Therapy" year="2010" tier={1} />. There is nothing weak about getting skilled help for something this important.
         </p>
 
         <ArticleCallout variant="tip" title="Quick Recap">
@@ -523,10 +523,10 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When painful emotions arise, your brain sends an urgent message: make it stop. So you scroll through your phone, pour a drink, binge-watch a show, eat comfort food, or simply push the feeling away. These strategies work — briefly. But the emotion does not disappear. It goes underground and returns stronger.
+            When painful emotions arise, your brain sends an urgent message: make it stop. So you scroll through your phone, pour a drink, binge-watch a show, eat comfort food, or simply push the feeling away. These strategies work --- briefly. But the emotion does not disappear. It goes underground and returns stronger.
           </p>
           <p className="mb-6">
-            Research consistently shows that experiential avoidance — the unwillingness to remain in contact with uncomfortable internal experiences — is a core driver of anxiety, depression, substance use, and many other mental health challenges <Citation id="2" index={2} source="Journal of Consulting and Clinical Psychology" year="1996" tier={1} />. Learning to sit with uncomfortable emotions, rather than running from them, is one of the most transformative skills you can develop.
+            Research consistently shows that experiential avoidance --- the unwillingness to remain in contact with uncomfortable internal experiences --- is a core driver of anxiety, depression, substance use, and many other mental health challenges <Citation id="2" index={2} source="Journal of Consulting and Clinical Psychology" year="1996" tier={1} />. Learning to sit with uncomfortable emotions, rather than running from them, is one of the most transformative skills you can develop.
           </p>
         </div>
 
@@ -537,11 +537,11 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           Emotional avoidance takes many forms, and some are less obvious than others <Citation id="5" index={5} source="Behaviour Research and Therapy" year="2009" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Numbing</strong> — using substances, food, or screens to dull the feeling.</li>
-          <li><strong>Suppression</strong> — forcing yourself not to think about or feel the emotion.</li>
-          <li><strong>Distraction</strong> — constantly keeping busy so you never have to sit still with feelings.</li>
-          <li><strong>Intellectualizing</strong> — analyzing the emotion from a distance instead of actually feeling it.</li>
-          <li><strong>Reassurance-seeking</strong> — asking others to make you feel better rather than processing internally.</li>
+          <li><strong>Numbing</strong> --- using substances, food, or screens to dull the feeling.</li>
+          <li><strong>Suppression</strong> --- forcing yourself not to think about or feel the emotion.</li>
+          <li><strong>Distraction</strong> --- constantly keeping busy so you never have to sit still with feelings.</li>
+          <li><strong>Intellectualizing</strong> --- analyzing the emotion from a distance instead of actually feeling it.</li>
+          <li><strong>Reassurance-seeking</strong> --- asking others to make you feel better rather than processing internally.</li>
         </ul>
         <p className="mb-6">
           All of these strategies share a common thread: they are attempts to escape the discomfort of the present moment. While temporary relief is human and understandable, chronic avoidance narrows your life and prevents emotional growth <Citation id="8" index={8} source="Annual Review of Clinical Psychology" year="2010" tier={1} />.
@@ -573,10 +573,10 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">From mindfulness teacher Tara Brach, RAIN is a four-step process for meeting difficult emotions:</p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>R — Recognize:</strong> Notice the emotion is present. "Anger is here."</li>
-                    <li><strong>A — Allow:</strong> Let the emotion exist without trying to fix or change it.</li>
-                    <li><strong>I — Investigate:</strong> Gently explore. Where do you feel it in your body? What does it need?</li>
-                    <li><strong>N — Nurture:</strong> Offer yourself compassion. Place a hand on your heart if it helps.</li>
+                    <li><strong>R --- Recognize:</strong> Notice the emotion is present. "Anger is here."</li>
+                    <li><strong>A --- Allow:</strong> Let the emotion exist without trying to fix or change it.</li>
+                    <li><strong>I --- Investigate:</strong> Gently explore. Where do you feel it in your body? What does it need?</li>
+                    <li><strong>N --- Nurture:</strong> Offer yourself compassion. Place a hand on your heart if it helps.</li>
                   </ul>
                 </div>
               ),
@@ -588,9 +588,9 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">From dialectical behavior therapy, this metaphor treats emotions like ocean waves. They build, peak, and recede. Your job is to ride the wave without fighting it.</p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Notice the emotion building — the wave is rising.</li>
-                    <li>Breathe through the peak — it will not last forever.</li>
-                    <li>Observe as it naturally diminishes — no wave stays at full height.</li>
+                    <li>Notice the emotion building --- the wave is rising.</li>
+                    <li>Breathe through the peak --- it will not last forever.</li>
+                    <li>Observe as it naturally diminishes --- no wave stays at full height.</li>
                     <li>Most emotional waves pass within 60-90 seconds if you do not feed them with rumination.</li>
                   </ul>
                 </div>
@@ -602,7 +602,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">From acceptance and commitment therapy (ACT), defusion means creating distance between you and your thoughts. Instead of "I am worthless," say "I am having the thought that I am worthless." Instead of "This pain will never end," say "My mind is telling me this pain will never end."</p>
-                  <p>This does not change the thought — it changes your relationship to it. You become the observer of thoughts, not the victim of them.</p>
+                  <p>This does not change the thought --- it changes your relationship to it. You become the observer of thoughts, not the victim of them.</p>
                 </div>
               ),
             },
@@ -613,10 +613,10 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Start with low-intensity emotions. When you notice mild boredom, irritation, or restlessness, resist the urge to immediately distract yourself. Instead, sit with the feeling for just two minutes <Citation id="6" index={6} source="Clinical Psychology Review" year="2011" tier={1} />. Notice where it lives in your body. Breathe through it. You will discover that discomfort is not dangerous — it is information.
+          Start with low-intensity emotions. When you notice mild boredom, irritation, or restlessness, resist the urge to immediately distract yourself. Instead, sit with the feeling for just two minutes <Citation id="6" index={6} source="Clinical Psychology Review" year="2011" tier={1} />. Notice where it lives in your body. Breathe through it. You will discover that discomfort is not dangerous --- it is information.
         </p>
         <p className="mb-6">
-          Gradually increase the intensity of emotions you practice with. Over time, your distress tolerance expands — the range of feelings you can hold without needing to escape gets wider <Citation id="4" index={4} source="Clinical Psychology Review" year="2005" tier={1} />.
+          Gradually increase the intensity of emotions you practice with. Over time, your distress tolerance expands --- the range of feelings you can hold without needing to escape gets wider <Citation id="4" index={4} source="Clinical Psychology Review" year="2005" tier={1} />.
         </p>
 
         <QuoteBlock
@@ -634,7 +634,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Uncomfortable emotions are not problems to solve — they are experiences to move through. The more you practice sitting with them instead of running from them, the less power they hold over your behavior and your life.</p>
+          <p>Uncomfortable emotions are not problems to solve --- they are experiences to move through. The more you practice sitting with them instead of running from them, the less power they hold over your behavior and your life.</p>
         </ArticleCallout>
       </>
     ),
@@ -645,7 +645,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
     id: catId(19),
     slug: 'using-movement-to-regulate-nervous-system',
     title: 'Using Movement to Regulate Your Nervous System',
-    description: 'Learn how physical movement — from walking to shaking to yoga — directly regulates your nervous system and transforms emotional states, backed by neuroscience research.',
+    description: 'Learn how physical movement --- from walking to shaking to yoga --- directly regulates your nervous system and transforms emotional states, backed by neuroscience research.',
     image: "/images/articles/cat01/cover-019.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -780,7 +780,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
               title: 'Therapeutic Shaking (2-5 minutes)',
               content: (
                 <div>
-                  <p className="mb-4">Stand with knees slightly bent and shake your entire body — hands, arms, legs, torso. Animals naturally shake after a stressful encounter to release tension. This technique, used in trauma release exercises (TRE), helps discharge stored nervous system activation without requiring high fitness levels.</p>
+                  <p className="mb-4">Stand with knees slightly bent and shake your entire body --- hands, arms, legs, torso. Animals naturally shake after a stressful encounter to release tension. This technique, used in trauma release exercises (TRE), helps discharge stored nervous system activation without requiring high fitness levels.</p>
                 </div>
               ),
             },
@@ -812,11 +812,11 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           Movement produces a cascade of neurobiological changes that directly affect emotional regulation <Citation id="9" index={9} source="Translational Psychiatry" year="2019" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Endorphin release</strong> — the body's natural pain-relief and mood-boosting chemicals.</li>
-          <li><strong>Cortisol reduction</strong> — exercise metabolizes stress hormones, lowering overall arousal.</li>
-          <li><strong>BDNF increase</strong> — brain-derived neurotrophic factor promotes neural growth and resilience.</li>
-          <li><strong>Serotonin boost</strong> — the neurotransmitter associated with mood stability and well-being.</li>
-          <li><strong>Vagal tone improvement</strong> — regular movement strengthens the vagus nerve's ability to calm you.</li>
+          <li><strong>Endorphin release</strong> --- the body's natural pain-relief and mood-boosting chemicals.</li>
+          <li><strong>Cortisol reduction</strong> --- exercise metabolizes stress hormones, lowering overall arousal.</li>
+          <li><strong>BDNF increase</strong> --- brain-derived neurotrophic factor promotes neural growth and resilience.</li>
+          <li><strong>Serotonin boost</strong> --- the neurotransmitter associated with mood stability and well-being.</li>
+          <li><strong>Vagal tone improvement</strong> --- regular movement strengthens the vagus nerve's ability to calm you.</li>
         </ul>
 
         <StatCard
@@ -838,14 +838,14 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
           <li><strong>When anxious:</strong> Take a 10-minute walk outside. Focus on the rhythm of your feet.</li>
           <li><strong>When numb or flat:</strong> Try 2 minutes of shaking followed by a stretch.</li>
           <li><strong>When angry:</strong> Do 20 jumping jacks or walk briskly until the heat in your body cools.</li>
-          <li><strong>For daily maintenance:</strong> Build in 20-30 minutes of movement you enjoy — not punishment, but something that feels good.</li>
+          <li><strong>For daily maintenance:</strong> Build in 20-30 minutes of movement you enjoy --- not punishment, but something that feels good.</li>
         </ol>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you find yourself unable to move due to depression, chronic pain, or trauma responses, a somatic therapist or trauma-sensitive yoga instructor can help you reconnect with your body in a safe, guided way <Citation id="6" index={6} source="Norton Professional Books" year="2015" tier={5} />. Movement should never feel forced or punishing — if exercise feels like another source of stress, talk to a professional about finding the right approach.
+          If you find yourself unable to move due to depression, chronic pain, or trauma responses, a somatic therapist or trauma-sensitive yoga instructor can help you reconnect with your body in a safe, guided way <Citation id="6" index={6} source="Norton Professional Books" year="2015" tier={5} />. Movement should never feel forced or punishing --- if exercise feels like another source of stress, talk to a professional about finding the right approach.
         </p>
 
         <ArticleCallout variant="tip" title="Try This Right Now">
@@ -941,7 +941,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
             You have read about breathing exercises, grounding techniques, cognitive reappraisal, movement, and naming emotions. But knowing techniques is not the same as having a plan. When emotions hit hard, your thinking brain goes partially offline, and you need strategies that are pre-selected, practiced, and easy to access. That is what a regulation toolkit gives you.
           </p>
           <p className="mb-6">
-            Research on emotion regulation flexibility shows that the most psychologically healthy people do not rely on a single strategy — they have a repertoire of techniques they can draw from depending on the situation <Citation id="1" index={1} source="Cognition and Emotion" year="2015" tier={1} />. People who use a wider variety of strategies and match them to the demands of the moment report better well-being and lower rates of anxiety and depression <Citation id="2" index={2} source="Journal of Positive Psychology" year="2019" tier={1} />.
+            Research on emotion regulation flexibility shows that the most psychologically healthy people do not rely on a single strategy --- they have a repertoire of techniques they can draw from depending on the situation <Citation id="1" index={1} source="Cognition and Emotion" year="2015" tier={1} />. People who use a wider variety of strategies and match them to the demands of the moment report better well-being and lower rates of anxiety and depression <Citation id="2" index={2} source="Journal of Positive Psychology" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -1038,7 +1038,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note" title="A Note on Resilience">
-          <p>Building a regulation toolkit is not just about managing difficulty — it is about building resilience. The World Health Organization defines resilience as the ability to maintain or regain mental health during and after adversity. Every time you practice a regulation technique, you are strengthening neural pathways that make future regulation easier and faster <Citation id="6" index={6} source="World Health Organization" year="2022" tier={2} />.</p>
+          <p>Building a regulation toolkit is not just about managing difficulty --- it is about building resilience. The World Health Organization defines resilience as the ability to maintain or regain mental health during and after adversity. Every time you practice a regulation technique, you are strengthening neural pathways that make future regulation easier and faster <Citation id="6" index={6} source="World Health Organization" year="2022" tier={2} />.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1049,7 +1049,7 @@ export const everydayEmotionalRegulationArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>An emotional regulation toolkit is your personalized first-aid kit for difficult feelings. Map your triggers, select your strategies, match them to scenarios, practice in calm moments, and review monthly. The goal is not perfection — it is having a plan so you never feel completely helpless when emotions arrive.</p>
+          <p>An emotional regulation toolkit is your personalized first-aid kit for difficult feelings. Map your triggers, select your strategies, match them to scenarios, practice in calm moments, and review monthly. The goal is not perfection --- it is having a plan so you never feel completely helpless when emotions arrive.</p>
         </ArticleCallout>
       </>
     ),

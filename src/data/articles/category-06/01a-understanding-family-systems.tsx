@@ -100,7 +100,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
             Family systems theory, developed by psychiatrist Murray Bowen in the 1960s, fundamentally changed how mental health professionals understand human behavior <Citation id="1" index={1} source="AAMFT" year="2023" tier={3} />. Rather than viewing individuals in isolation, this approach recognizes that we cannot fully understand anyone without understanding the family system they come from.
           </p>
           <p className="mb-6">
-            This perspective matters because the patterns established in your family of origin often repeat throughout your life — in your romantic relationships, your friendships, your workplace dynamics, and eventually in the families you create <Citation id="3" index={3} source="Australian and New Zealand Journal of Family Therapy" year="2019" tier={1} />.
+            This perspective matters because the patterns established in your family of origin often repeat throughout your life --- in your romantic relationships, your friendships, your workplace dynamics, and eventually in the families you create <Citation id="3" index={3} source="Australian and New Zealand Journal of Family Therapy" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -108,11 +108,11 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           What Is a Family System?
         </h2>
         <p className="mb-6">
-          A family system is a group of interconnected individuals who influence one another through patterns of interaction, communication, and emotional connection <Citation id="2" index={2} source="American Psychological Association" year="2022" tier={3} />. Think of it like a mobile hanging from the ceiling — touch one piece, and the entire structure adjusts to find a new balance.
+          A family system is a group of interconnected individuals who influence one another through patterns of interaction, communication, and emotional connection <Citation id="2" index={2} source="American Psychological Association" year="2022" tier={3} />. Think of it like a mobile hanging from the ceiling --- touch one piece, and the entire structure adjusts to find a new balance.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Fundamental Principle">
-          <p>In a family system, the whole is greater than the sum of its parts. You cannot understand one family member in isolation — their behavior only makes sense in context of the larger family patterns.</p>
+          <p>In a family system, the whole is greater than the sum of its parts. You cannot understand one family member in isolation --- their behavior only makes sense in context of the larger family patterns.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -129,7 +129,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           The Family Emotional Climate
         </h2>
         <p className="mb-6">
-          Every family has an emotional climate — the characteristic atmosphere that shapes how feelings are expressed, conflicts are handled, and members relate to one another <Citation id="5" index={5} source="Clinical Child and Family Psychology Review" year="2020" tier={1} />. This climate profoundly affects mental health across the lifespan.
+          Every family has an emotional climate --- the characteristic atmosphere that shapes how feelings are expressed, conflicts are handled, and members relate to one another <Citation id="5" index={5} source="Clinical Child and Family Psychology Review" year="2020" tier={1} />. This climate profoundly affects mental health across the lifespan.
         </p>
 
         <ComparisonTable
@@ -172,11 +172,11 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           How Systems Maintain Balance
         </h2>
         <p className="mb-6">
-          Families develop patterns to maintain stability — what therapists call homeostasis. These patterns can be healthy or dysfunctional, but they serve a purpose: keeping the system balanced <Citation id="6" index={6} source="Journal of Marital and Family Therapy" year="2018" tier={1} />.
+          Families develop patterns to maintain stability --- what therapists call homeostasis. These patterns can be healthy or dysfunctional, but they serve a purpose: keeping the system balanced <Citation id="6" index={6} source="Journal of Marital and Family Therapy" year="2018" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note">
-          <p>When one family member begins therapy and changes their behavior, other family members often unconsciously work to restore the old balance. This is why individual change can feel like betraying your family — you're disrupting the system's equilibrium.</p>
+          <p>When one family member begins therapy and changes their behavior, other family members often unconsciously work to restore the old balance. This is why individual change can feel like betraying your family --- you're disrupting the system's equilibrium.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -193,7 +193,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           The Power of Invisible Rules
         </h2>
         <p className="mb-6">
-          Every family operates according to rules — most of which are never spoken aloud. These invisible rules govern everything from how close family members can be to one another, to what topics are off-limits, to who is allowed to express anger <Citation id="7" index={7} source="Family Process" year="2021" tier={1} />.
+          Every family operates according to rules --- most of which are never spoken aloud. These invisible rules govern everything from how close family members can be to one another, to what topics are off-limits, to who is allowed to express anger <Citation id="7" index={7} source="Family Process" year="2021" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -242,7 +242,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           How Patterns Travel Across Generations
         </h2>
         <p className="mb-6">
-          One of the most powerful aspects of family systems theory is its recognition that patterns repeat across generations. The way your grandparents related to your parents likely influences how your parents relate to you — and how you will relate to your own children <Citation id="8" index={8} source="Journal of Family Therapy" year="2020" tier={1} />.
+          One of the most powerful aspects of family systems theory is its recognition that patterns repeat across generations. The way your grandparents related to your parents likely influences how your parents relate to you --- and how you will relate to your own children <Citation id="8" index={8} source="Journal of Family Therapy" year="2020" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -290,7 +290,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>You don't need to understand every detail of family systems theory to benefit from it. Simply recognizing that your family operates as an interconnected system — rather than viewing problems as residing in individual people — shifts your perspective powerfully.</p>
+          <p>You don't need to understand every detail of family systems theory to benefit from it. Simply recognizing that your family operates as an interconnected system --- rather than viewing problems as residing in individual people --- shifts your perspective powerfully.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -391,13 +391,13 @@ export const understandingFamilySystemsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In every family, people unconsciously adopt roles — predictable patterns of behavior that serve the family system's need for stability. These roles feel natural because you've played them your entire life, but they may not reflect who you truly are.
+            In every family, people unconsciously adopt roles --- predictable patterns of behavior that serve the family system's need for stability. These roles feel natural because you've played them your entire life, but they may not reflect who you truly are.
           </p>
           <p className="mb-6">
             Family therapist Virginia Satir first identified these archetypal roles in the 1970s, observing that families under stress organize themselves into predictable patterns <Citation id="2" index={2} source="Science and Behavior Books" year="1988" tier={5} />. Later researchers expanded on her work, particularly in the context of families affected by addiction and dysfunction <Citation id="1" index={1} source="SAMHSA" year="2021" tier={2} />.
           </p>
           <p className="mb-6">
-            Understanding your family role is powerful because these patterns don't stay in childhood — they follow you into adult relationships, your workplace, your friendships, and the families you create <Citation id="4" index={4} source="Family Process" year="2020" tier={1} />.
+            Understanding your family role is powerful because these patterns don't stay in childhood --- they follow you into adult relationships, your workplace, your friendships, and the families you create <Citation id="4" index={4} source="Family Process" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -532,11 +532,11 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           When You Play Multiple Roles
         </h2>
         <p className="mb-6">
-          Many people don't fit cleanly into one category. You might be the hero at school but the scapegoat at home. Or you might shift roles as family circumstances change — stepping into the caretaker role when a parent becomes ill, or becoming the lost child after a sibling draws all the attention <Citation id="7" index={7} source="Addictive Behaviors" year="2019" tier={1} />.
+          Many people don't fit cleanly into one category. You might be the hero at school but the scapegoat at home. Or you might shift roles as family circumstances change --- stepping into the caretaker role when a parent becomes ill, or becoming the lost child after a sibling draws all the attention <Citation id="7" index={7} source="Addictive Behaviors" year="2019" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note">
-          <p>Role flexibility is actually healthier than being locked into one rigid role. The problem isn't playing different roles — it's when these roles are unconscious, limiting, or prevent you from being your authentic self.</p>
+          <p>Role flexibility is actually healthier than being locked into one rigid role. The problem isn't playing different roles --- it's when these roles are unconscious, limiting, or prevent you from being your authentic self.</p>
         </ArticleCallout>
 
         <h2 id="recognizing-your-role" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -616,7 +616,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     id: catId(3),
     slug: 'enmeshed-families-when-closeness-becomes-control',
     title: 'Enmeshed Families: When Closeness Becomes Control',
-    description: 'Understand enmeshment in families — when boundaries dissolve and individuality disappears under the guise of closeness and love.',
+    description: 'Understand enmeshment in families --- when boundaries dissolve and individuality disappears under the guise of closeness and love.',
     image: "/images/articles/cat06/cover-003.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 7,
@@ -715,7 +715,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           <li>Difficulty distinguishing your own feelings from family members" feelings</li>
           <li>Intense emotional reactivity to other family members' moods and experiences</li>
           <li>Guilt or anxiety when trying to establish independence</li>
-          <li>Limited privacy — everyone knows everyone else's business</li>
+          <li>Limited privacy --- everyone knows everyone else's business</li>
           <li>Family members speak for one another or assume they know what others think</li>
           <li>Individual achievements or failures are experienced as family achievements or failures</li>
         </ul>
@@ -742,8 +742,8 @@ export const understandingFamilySystemsArticlesA: Article[] = [
             {
               feature: 'Emotions',
               values: [
-                "If you're upset, I'm upset' — emotions are contagious and undifferentiated",
-                'Empathy without emotional fusion — you can care without absorbing',
+                "If you're upset, I'm upset' --- emotions are contagious and undifferentiated",
+                'Empathy without emotional fusion --- you can care without absorbing',
               ],
             },
             {
@@ -804,7 +804,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
                     Enmeshment is strongly correlated with anxiety disorders <Citation id="5" index={5} source="Anxiety Disorders" year="2018" tier={1} />. When you're hyperaware of everyone else's emotional state and feel responsible for managing it, chronic anxiety is almost inevitable.
                   </p>
                   <p>
-                    Separation anxiety often persists into adulthood — not just about leaving family, but about any form of independence or differentiation.
+                    Separation anxiety often persists into adulthood --- not just about leaving family, but about any form of independence or differentiation.
                   </p>
                 </div>
               ),
@@ -828,7 +828,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
               title: 'Chronic Guilt',
               content: (
                 <p>
-                  Any attempt at individuation — choosing a different career, moving to a new city, establishing different values — triggers intense guilt. This guilt feels like you're abandoning or betraying your family, even when you're simply living your own life.
+                  Any attempt at individuation --- choosing a different career, moving to a new city, establishing different values --- triggers intense guilt. This guilt feels like you're abandoning or betraying your family, even when you're simply living your own life.
                 </p>
               ),
             },
@@ -1050,7 +1050,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
             {
               feature: 'Emotional support',
               values: [
-                "Deal with it yourself' — vulnerability is discouraged, emotional needs minimized",
+                "Deal with it yourself' --- vulnerability is discouraged, emotional needs minimized",
                 'Support offered and accepted; vulnerability welcomed',
               ],
             },
@@ -1160,7 +1160,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           Attachment Difficulties
         </h3>
         <p className="mb-6">
-          Children from disengaged families often develop avoidant attachment patterns — learning to suppress emotional needs, avoid vulnerability, and maintain independence at all costs <Citation id="3" index={3} source="Attachment & Human Development" year="2021" tier={1} />. Adult relationships feel threatening because they require the very emotional openness that was unsafe or unavailable in childhood.
+          Children from disengaged families often develop avoidant attachment patterns --- learning to suppress emotional needs, avoid vulnerability, and maintain independence at all costs <Citation id="3" index={3} source="Attachment & Human Development" year="2021" tier={1} />. Adult relationships feel threatening because they require the very emotional openness that was unsafe or unavailable in childhood.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1261,7 +1261,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
     id: catId(5),
     slug: 'family-secrets-how-hidden-information-shapes-mental-health-across-generations',
     title: 'Family Secrets: How Hidden Information Shapes Mental Health Across Generations',
-    description: 'Discover how family secrets — from adoption to addiction — create invisible psychological burdens that affect mental health across multiple generations.',
+    description: 'Discover how family secrets --- from adoption to addiction --- create invisible psychological burdens that affect mental health across multiple generations.',
     image: "/images/articles/cat06/cover-005.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 8,
@@ -1339,13 +1339,13 @@ export const understandingFamilySystemsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every family has secrets — information deliberately concealed from certain family members or the outside world. These secrets range from minor omissions to life-defining facts, and they shape family dynamics in profound, often invisible ways.
+            Every family has secrets --- information deliberately concealed from certain family members or the outside world. These secrets range from minor omissions to life-defining facts, and they shape family dynamics in profound, often invisible ways.
           </p>
           <p className="mb-6">
-            Family secrets create what therapists call a "conspiracy of silence" — everyone knows but no one speaks about it, or some family members are kept in the dark while others carry the burden of knowing <Citation id="1" index={1} source="Family Process" year="2020" tier={1} />. The psychological cost of these secrets often outweighs the original issue being hidden.
+            Family secrets create what therapists call a "conspiracy of silence" --- everyone knows but no one speaks about it, or some family members are kept in the dark while others carry the burden of knowing <Citation id="1" index={1} source="Family Process" year="2020" tier={1} />. The psychological cost of these secrets often outweighs the original issue being hidden.
           </p>
           <p className="mb-6">
-            Research shows that family secrets don't just affect the secret-keeper or the person excluded from knowing — they create invisible patterns that ripple through generations <Citation id="3" index={3} source="Journal of Marital and Family Therapy" year="2019" tier={1} />.
+            Research shows that family secrets don't just affect the secret-keeper or the person excluded from knowing --- they create invisible patterns that ripple through generations <Citation id="3" index={3} source="Journal of Marital and Family Therapy" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -1452,7 +1452,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>Children often intuitively know when something is being hidden, even if they can't articulate what it is <Citation id="6" index={6} source="Developmental Psychology" year="2019" tier={1} />. The secrecy itself — not just the content of the secret — creates anxiety and confusion.</p>
+          <p>Children often intuitively know when something is being hidden, even if they can't articulate what it is <Citation id="6" index={6} source="Developmental Psychology" year="2019" tier={1} />. The secrecy itself --- not just the content of the secret --- creates anxiety and confusion.</p>
         </ArticleCallout>
 
         <h2 id="generational-transmission" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1463,11 +1463,11 @@ export const understandingFamilySystemsArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="did-you-know">
-          <p><strong>The "Ghost in the Nursery":</strong> Infant mental health pioneer Selma Fraiberg described how unresolved trauma in one generation haunts the next. A grandmother's unspoken sexual abuse can manifest as a mother's anxiety about her daughter's safety, which becomes the daughter's hypervigilance — none of them understanding the origin.</p>
+          <p><strong>The "Ghost in the Nursery":</strong> Infant mental health pioneer Selma Fraiberg described how unresolved trauma in one generation haunts the next. A grandmother's unspoken sexual abuse can manifest as a mother's anxiety about her daughter's safety, which becomes the daughter's hypervigilance --- none of them understanding the origin.</p>
         </ArticleCallout>
 
         <p className="mb-6">
-          Secrets create what family therapists call "symptomatic behavior" — someone in the family (often a child) develops symptoms that reflect the hidden tension. For example:
+          Secrets create what family therapists call "symptomatic behavior" --- someone in the family (often a child) develops symptoms that reflect the hidden tension. For example:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>A child develops anxiety that mirrors a parent's concealed panic disorder</li>
@@ -1480,7 +1480,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
           The Complex Decision to Disclose
         </h2>
         <p className="mb-6">
-          While research generally supports disclosure as healthier than secrecy, the decision of what, when, how, and to whom to disclose requires careful consideration <Citation id="5" index={5} source="Psychotherapy" year="2021" tier={1} />. Cultural context also matters — some cultures prioritize privacy and family reputation in ways that Western psychology doesn't always honor <Citation id="7" index={7} source="Culture & Psychology" year="2020" tier={1} />.
+          While research generally supports disclosure as healthier than secrecy, the decision of what, when, how, and to whom to disclose requires careful consideration <Citation id="5" index={5} source="Psychotherapy" year="2021" tier={1} />. Cultural context also matters --- some cultures prioritize privacy and family reputation in ways that Western psychology doesn't always honor <Citation id="7" index={7} source="Culture & Psychology" year="2020" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1521,7 +1521,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
               title: `Acknowledge the secret's impact`,
               description: (
                 <p>
-                  Recognize that the secrecy itself — not just the hidden information — has affected you. Name the ways it has shaped your relationships, self-concept, or mental health.
+                  Recognize that the secrecy itself --- not just the hidden information --- has affected you. Name the ways it has shaped your relationships, self-concept, or mental health.
                 </p>
               ),
             },
@@ -1553,7 +1553,7 @@ export const understandingFamilySystemsArticlesA: Article[] = [
               title: 'Break the cycle',
               description: (
                 <p>
-                  Decide what information you will share with the next generation. Breaking patterns of secrecy doesn't mean sharing everything — it means being intentional rather than automatic <Citation id="8" index={8} source="Clinical Psychology Review" year="2021" tier={1} />.
+                  Decide what information you will share with the next generation. Breaking patterns of secrecy doesn't mean sharing everything --- it means being intentional rather than automatic <Citation id="8" index={8} source="Clinical Psychology Review" year="2021" tier={1} />.
                 </p>
               ),
             },

@@ -97,7 +97,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             "Burnout" has become a catchall term for feeling tired, overworked, or unmotivated. But
-            burnout is a specific occupational phenomenon with clear diagnostic criteria—and
+            burnout is a specific occupational phenomenon with clear diagnostic criteria---and
             understanding what it actually is matters for recovery.
           </p>
           <p className="mb-6">
@@ -128,7 +128,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: '1. Emotional Exhaustion',
               content: (
                 <p>
-                  Feelings of energy depletion or fatigue. You feel drained—physically, emotionally,
+                  Feelings of energy depletion or fatigue. You feel drained---physically, emotionally,
                   mentally. Rest doesn't restore you. Even small tasks feel overwhelming.
                 </p>
               ),
@@ -160,7 +160,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>
             <strong>Critical point:</strong> All three dimensions must be present, and they must be
-            specifically related to your work context. Burnout is not a medical diagnosis—it's a
+            specifically related to your work context. Burnout is not a medical diagnosis---it's a
             workplace-induced syndrome.
           </p>
         </ArticleCallout>
@@ -208,7 +208,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <p className="mb-6">
           The distinction between burnout and depression is especially important. While they share
-          symptoms (exhaustion, withdrawal), depression affects all domains of life—work, home,
+          symptoms (exhaustion, withdrawal), depression affects all domains of life---work, home,
           hobbies. Burnout is anchored in the workplace{', '}
           <Citation id="4" index={4} source="Journal of Affective Disorders" year="2021" tier={1} />
           . That said, untreated burnout can evolve into clinical depression.
@@ -272,7 +272,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Certain professions—healthcare, education, social services—have higher burnout rates due
+          Certain professions---healthcare, education, social services---have higher burnout rates due
           to emotional labor, high demands, and limited control{', '}
           <Citation id="7" index={7} source="The Lancet" year="2021" tier={1} />.
         </p>
@@ -285,7 +285,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Calling everything "burnout" dilutes the term and obscures the systemic nature of the
-          problem. True burnout is a signal that the work environment is unsustainable—not that
+          problem. True burnout is a signal that the work environment is unsustainable---not that
           you're weak or need to be more resilient{', '}
           <Citation
             id="3"
@@ -307,7 +307,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <p className="mb-6">
           Recognizing burnout as occupational shifts responsibility: the solution isn't just
-          individual therapy or self-care—it's organizational change.
+          individual therapy or self-care---it's organizational change.
         </p>
 
         <h2
@@ -328,7 +328,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: 'Exhaustion',
               description: (
                 <p>
-                  Do you feel drained most days? Does rest—weekends, vacations—fail to restore you?
+                  Do you feel drained most days? Does rest---weekends, vacations---fail to restore you?
                   Do you wake up already tired?
                 </p>
               ),
@@ -394,13 +394,13 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           If you identify with the three dimensions of burnout and it's interfering with your
-          functioning, talk to a mental health professional. Burnout is treatable—but it requires
+          functioning, talk to a mental health professional. Burnout is treatable---but it requires
           both individual coping strategies and systemic change.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Burnout is real, measurable, and work-specific. It's not just "being tired"—it's a
+            Burnout is real, measurable, and work-specific. It's not just "being tired"---it's a
             syndrome that signals your work environment is harming you. Naming it correctly is the
             first step toward addressing it.
           </p>
@@ -413,7 +413,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     id: catId(12),
     slug: 'early-warning-signs-burnout',
     title: 'Early Warning Signs of Burnout: The Signals Most People Ignore',
-    description: 'Learn to recognize the subtle early indicators of burnout before it becomes severe—and why catching it early matters.',
+    description: 'Learn to recognize the subtle early indicators of burnout before it becomes severe---and why catching it early matters.',
     image: "/images/articles/cat05/cover-012.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -492,7 +492,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Burnout doesn't happen overnight. It builds gradually, often over months or years. By
-            the time most people recognize it, they're already deep in crisis—exhausted, cynical,
+            the time most people recognize it, they're already deep in crisis---exhausted, cynical,
             and depleted.
           </p>
           <p className="mb-6">
@@ -517,7 +517,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <p className="mb-6">
           Research shows that burnout is easier to reverse in early stages{', '}
           <Citation id="2" index={2} source="Stress and Health" year="2020" tier={1} />. Once
-          you've reached full burnout, recovery can take months or years—and sometimes requires
+          you've reached full burnout, recovery can take months or years---and sometimes requires
           leaving your job entirely.
         </p>
 
@@ -530,7 +530,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <ArticleCallout variant="tip">
           <p>
             Think of burnout like a slow leak in a tire. If you catch it early, you can patch it
-            and keep driving. If you ignore it, you'll eventually have a blowout—and the damage is
+            and keep driving. If you ignore it, you'll eventually have a blowout---and the damage is
             far worse.
           </p>
         </ArticleCallout>
@@ -573,7 +573,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: `Chronic Fatigue That Rest Doesn't Fix`,
               content: (
                 <p>
-                  You're tired all the time—even after a weekend or vacation. Your baseline energy
+                  You're tired all the time---even after a weekend or vacation. Your baseline energy
                   is permanently low. Small tasks feel monumental.
                 </p>
               ),
@@ -608,7 +608,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Research shows that sleep problems, in particular, are a strong early indicator—often
+          Research shows that sleep problems, in particular, are a strong early indicator---often
           appearing weeks before emotional exhaustion becomes obvious{', '}
           <Citation id="4" index={4} source="Sleep Medicine Reviews" year="2022" tier={1} />.
         </p>
@@ -666,7 +666,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           Behavioral Warning Signs
         </h2>
         <p className="mb-6">
-          Burnout changes how you behave—often in ways you don't fully notice until someone points
+          Burnout changes how you behave---often in ways you don't fully notice until someone points
           it out{', '}
           <Citation
             id="5"
@@ -747,7 +747,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            If people who know you well—managers, colleagues, partners—comment that you seem
+            If people who know you well---managers, colleagues, partners---comment that you seem
             "different" or "not yourself," take it seriously. External observers often notice
             changes before you do.
           </p>
@@ -858,15 +858,15 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you're experiencing multiple early warning signs—especially sleep disturbances,
-          persistent fatigue, or emotional numbness—don't wait for full burnout. A therapist can
+          If you're experiencing multiple early warning signs---especially sleep disturbances,
+          persistent fatigue, or emotional numbness---don't wait for full burnout. A therapist can
           help you develop coping strategies, set boundaries, and decide whether your work
           environment is sustainable.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Burnout whispers before it screams. Listen to the early signs—your body, emotions, and
+            Burnout whispers before it screams. Listen to the early signs---your body, emotions, and
             behavior are trying to protect you. Catching it early is the difference between a
             course correction and a crash.
           </p>
@@ -957,7 +957,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Am I burned out, or just tired?" It's a question many people ask—but struggle to
+            "Am I burned out, or just tired?" It's a question many people ask---but struggle to
             answer. Self-awareness helps, but validated tools provide clarity.
           </p>
           <p className="mb-6">
@@ -1241,7 +1241,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: 'Answer honestly',
               description: (
                 <p>
-                  These tools only work if you're truthful. Don't minimize or exaggerate—respond
+                  These tools only work if you're truthful. Don't minimize or exaggerate---respond
                   based on how you actually feel, not how you think you should feel.
                 </p>
               ),
@@ -1250,7 +1250,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: 'Interpret the results',
               description: (
                 <p>
-                  High scores don't mean you're broken—they mean your work environment is harming
+                  High scores don't mean you're broken---they mean your work environment is harming
                   you. Use the results to validate your experience and guide action.
                 </p>
               ),
@@ -1346,7 +1346,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     id: catId(14),
     slug: 'why-high-achievers-vulnerable-burnout',
     title: 'Why High Achievers Are Most Vulnerable to Burnout',
-    description: 'Explore the psychological patterns that make driven, successful people especially prone to burnout—and how to protect yourself.',
+    description: 'Explore the psychological patterns that make driven, successful people especially prone to burnout---and how to protect yourself.',
     image: "/images/articles/cat05/cover-014.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -1425,7 +1425,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             They're the ones who consistently exceed expectations. They take on extra projects,
-            work weekends, and pride themselves on excellence. They're high achievers—and they're
+            work weekends, and pride themselves on excellence. They're high achievers---and they're
             burning out at alarming rates.
           </p>
           <p className="mb-6">
@@ -1438,8 +1438,8 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               year="2021"
               tier={1}
             />
-            . The very traits that fuel achievement—conscientiousness, perfectionism, and intrinsic
-            motivation—also create conditions for depletion. Here's why—and what to do about it.
+            . The very traits that fuel achievement---conscientiousness, perfectionism, and intrinsic
+            motivation---also create conditions for depletion. Here's why---and what to do about it.
           </p>
         </div>
 
@@ -1473,7 +1473,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          The paradox: the more capable you are, the more gets piled on—and the harder it is to say
+          The paradox: the more capable you are, the more gets piled on---and the harder it is to say
           no. Success becomes its own trap.
         </p>
 
@@ -1525,7 +1525,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               content: (
                 <p>
                   Even when you succeed, it doesn't feel like enough. You immediately raise the bar.
-                  This prevents satisfaction and recovery—you're always chasing the next milestone.
+                  This prevents satisfaction and recovery---you're always chasing the next milestone.
                 </p>
               ),
             },
@@ -1533,7 +1533,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         />
 
         <QuoteBlock
-          quote="For perfectionists, excellence is never a destination—it's an exhausting treadmill with no off switch."
+          quote="For perfectionists, excellence is never a destination---it's an exhausting treadmill with no off switch."
           attribution="Dr. Thomas Curran"
           role="Perfectionism Researcher"
           source="The Perfection Trap"
@@ -1573,7 +1573,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           </li>
           <li>
             <strong>Setbacks feel existential:</strong> A project failure isn't just a
-            disappointment—it's a threat to who you are.
+            disappointment---it's a threat to who you are.
           </li>
         </ul>
 
@@ -1642,7 +1642,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <p className="mb-6">
           High achievers often confuse workaholism with dedication. But workaholism is compulsive
-          and draining—engagement is energizing and sustainable.
+          and draining---engagement is energizing and sustainable.
         </p>
 
         <h2
@@ -1652,7 +1652,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           The Dopamine Trap: Success Addiction
         </h2>
         <p className="mb-6">
-          Achievement triggers dopamine—a neurotransmitter associated with reward and motivation{', '}
+          Achievement triggers dopamine---a neurotransmitter associated with reward and motivation{', '}
           <Citation id="6" index={6} source="Journal of Business Ethics" year="2021" tier={1} />.
           This creates a cycle:
         </p>
@@ -1661,7 +1661,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           <li>You accomplish something → dopamine spike (feels good)</li>
           <li>Dopamine fades → you feel restless, empty</li>
           <li>You seek the next achievement to recreate the feeling</li>
-          <li>Tolerance builds—you need bigger wins to feel the same reward</li>
+          <li>Tolerance builds---you need bigger wins to feel the same reward</li>
         </ol>
 
         <p className="mb-6">
@@ -1703,7 +1703,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Recovery isn't optional—it's a biological necessity. But high achievers often treat it as
+          Recovery isn't optional---it's a biological necessity. But high achievers often treat it as
           a luxury they can't afford.
         </p>
 
@@ -1740,7 +1740,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           If you're driven and capable, you don't have to choose between achievement and
-          wellbeing—but you do need to be intentional{', '}
+          wellbeing---but you do need to be intentional{', '}
           <Citation id="7" index={7} source="American Psychologist" year="2022" tier={1} />.
         </p>
 
@@ -1810,9 +1810,9 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Being high-achieving doesn't mean you're destined for burnout—but it does mean you need
+            Being high-achieving doesn't mean you're destined for burnout---but it does mean you need
             to be more intentional about protecting your wellbeing. The traits that make you
-            successful can also harm you if left unchecked. Balance isn't weakness—it's strategic.
+            successful can also harm you if left unchecked. Balance isn't weakness---it's strategic.
           </p>
         </ArticleCallout>
       </>
@@ -1823,7 +1823,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
     id: catId(15),
     slug: 'compassion-fatigue-burnout-helping-professions',
     title: 'Compassion Fatigue: Burnout in Helping Professions',
-    description: 'Understand compassion fatigue—the unique form of burnout affecting healthcare workers, therapists, and caregivers.',
+    description: 'Understand compassion fatigue---the unique form of burnout affecting healthcare workers, therapists, and caregivers.',
     image: "/images/articles/cat05/cover-015.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 8,
@@ -1901,13 +1901,13 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You chose a helping profession because you cared. You wanted to make a difference—to
+            You chose a helping profession because you cared. You wanted to make a difference---to
             heal, support, or protect others. But somewhere along the way, your capacity to care
             started to fade. This is compassion fatigue.
           </p>
           <p className="mb-6">
             Compassion fatigue is a specific form of burnout affecting those who work with
-            suffering—healthcare workers, therapists, social workers, first responders, and
+            suffering---healthcare workers, therapists, social workers, first responders, and
             caregivers{', '}
             <Citation
               id="1"
@@ -1916,7 +1916,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               year="2021"
               tier={1}
             />
-            . It's the cost of caring—and it's alarmingly common.
+            . It's the cost of caring---and it's alarmingly common.
           </p>
         </div>
 
@@ -1939,7 +1939,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
             clients, or those you're helping
           </li>
           <li>
-            <strong>Reduced empathy:</strong> You struggle to connect with others' suffering—it
+            <strong>Reduced empathy:</strong> You struggle to connect with others' suffering---it
             feels distant or overwhelming
           </li>
           <li>
@@ -1956,7 +1956,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Core insight:</strong> Compassion fatigue is secondary traumatic stress—you
+            <strong>Core insight:</strong> Compassion fatigue is secondary traumatic stress---you
             absorb the trauma of those you help, and it accumulates over time.
           </p>
         </ArticleCallout>
@@ -2018,7 +2018,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
 
         <p className="mb-6">
           Many helping professionals experience <strong>both</strong> burnout and compassion
-          fatigue simultaneously—high workload plus exposure to suffering creates a perfect storm.
+          fatigue simultaneously---high workload plus exposure to suffering creates a perfect storm.
         </p>
 
         <h2
@@ -2050,7 +2050,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               content: (
                 <p>
                   Nurses, doctors, EMTs, and hospice workers witness death, trauma, and pain
-                  daily. The COVID-19 pandemic intensified this exponentially—many are now
+                  daily. The COVID-19 pandemic intensified this exponentially---many are now
                   experiencing moral injury (see below) alongside compassion fatigue.
                 </p>
               ),
@@ -2081,7 +2081,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               content: (
                 <p>
                   Those caring for aging parents, ill spouses, or disabled children experience
-                  compassion fatigue too—often without recognition or support.
+                  compassion fatigue too---often without recognition or support.
                 </p>
               ),
             },
@@ -2109,12 +2109,12 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Moral injury compounds compassion fatigue. You're not just exhausted from caring—you're
+          Moral injury compounds compassion fatigue. You're not just exhausted from caring---you're
           morally wounded by a system that prevents you from caring effectively.
         </p>
 
         <QuoteBlock
-          quote="I became a nurse to help people. Now I feel like I'm watching people suffer because the system won't let me do my job. That's not burnout—that's betrayal."
+          quote="I became a nurse to help people. Now I feel like I'm watching people suffer because the system won't let me do my job. That's not burnout---that's betrayal."
           attribution="Anonymous ICU Nurse"
           role="10 Years Experience"
           source="BMJ Study on Moral Injury"
@@ -2128,7 +2128,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           Signs You're Experiencing Compassion Fatigue
         </h2>
         <p className="mb-6">
-          The symptoms often emerge gradually—making them easy to normalize or ignore.
+          The symptoms often emerge gradually---making them easy to normalize or ignore.
         </p>
 
         <ArticleChart
@@ -2155,7 +2155,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           <li>Am I avoiding certain patients or cases because they're 'too much'?</li>
           <li>Do I have intrusive thoughts or nightmares about work-related trauma?</li>
           <li>Do I feel guilty for not caring as much as I used to?</li>
-          <li>Am I hypervigilant—constantly scanning for danger even at home?</li>
+          <li>Am I hypervigilant---constantly scanning for danger even at home?</li>
         </ul>
 
         <h2
@@ -2201,7 +2201,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
           The Protective Role of Compassion Satisfaction
         </h2>
         <p className="mb-6">
-          Compassion satisfaction—the joy and meaning you derive from helping—acts as a buffer
+          Compassion satisfaction---the joy and meaning you derive from helping---acts as a buffer
           against compassion fatigue{', '}
           <Citation
             id="6"
@@ -2218,7 +2218,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Reflect on meaningful moments—write them down</li>
+          <li>Reflect on meaningful moments---write them down</li>
           <li>Celebrate small wins (a patient smiled, a client felt heard)</li>
           <li>Connect with colleagues who still find meaning in the work</li>
           <li>Remember why you entered this field in the first place</li>
@@ -2243,8 +2243,8 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: 'Practice self-compassion',
               description: (
                 <p>
-                  Helpers are notoriously hard on themselves. Self-compassion—treating yourself with
-                  the same kindness you offer others—is protective against compassion fatigue and
+                  Helpers are notoriously hard on themselves. Self-compassion---treating yourself with
+                  the same kindness you offer others---is protective against compassion fatigue and
                   secondary trauma.
                 </p>
               ),
@@ -2280,7 +2280,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
               title: 'Address systemic issues',
               description: (
                 <p>
-                  Compassion fatigue is often a systemic problem—staffing shortages, inadequate
+                  Compassion fatigue is often a systemic problem---staffing shortages, inadequate
                   resources, poor management. Individual coping isn't enough. Advocate for change.
                 </p>
               ),
@@ -2305,7 +2305,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <p className="mb-6">
           If you're experiencing intrusive thoughts, nightmares, hypervigilance, or emotional
           numbness, seek professional support. Compassion fatigue and secondary traumatic stress
-          are treatable—but they don't resolve on their own.
+          are treatable---but they don't resolve on their own.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -2319,7 +2319,7 @@ export const burnoutRecognitionRecoveryArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p>
             Compassion fatigue is the occupational hazard of caring professions. It's not a sign of
-            weakness—it's evidence that you cared deeply enough to be affected. Recovery is
+            weakness---it's evidence that you cared deeply enough to be affected. Recovery is
             possible, but it requires acknowledging the cost of caring and giving yourself the same
             compassion you extend to others.
           </p>

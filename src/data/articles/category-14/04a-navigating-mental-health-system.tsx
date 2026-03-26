@@ -16,7 +16,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
     id: catId(31),
     slug: 'understanding-mental-health-insurance-coverage-what-included-not',
     title: `Understanding Mental Health Insurance Coverage: What's Included and What's Not`,
-    description: `Decode your insurance benefits for therapy, psychiatry, and mental health treatment — what's covered, what's not, and how to maximize your benefits.`,
+    description: `Decode your insurance benefits for therapy, psychiatry, and mental health treatment --- what's covered, what's not, and how to maximize your benefits.`,
     image: '/images/articles/cat14/cover-031.svg',
     category: CATEGORY_THERAPY_NAVIGATION,
     readTime: 9,
@@ -70,7 +70,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Mental health insurance coverage is confusing. Terms like "deductible,", "copay,", "in-network," and "prior authorization" make it hard to know what you'll actually pay for therapy or medication. But understanding your benefits can save you hundreds or thousands of dollars — and help you access the care you need.
+            Mental health insurance coverage is confusing. Terms like "deductible,", "copay,", "in-network," and "prior authorization" make it hard to know what you'll actually pay for therapy or medication. But understanding your benefits can save you hundreds or thousands of dollars --- and help you access the care you need.
           </p>
           <p className="mb-6">
             Here's a practical guide to decoding your mental health coverage, knowing what's covered, and navigating common insurance barriers.
@@ -115,7 +115,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
                 <div>
                   <p className="mb-4">The amount you pay out-of-pocket before insurance starts covering costs. Once you meet your deductible, insurance kicks in.</p>
                   <p className="mb-4"><strong>Example:</strong> $1,500 deductible means you pay the first $1,500 of medical costs yourself. After that, you pay copays/coinsurance.</p>
-                  <p><strong>Important:</strong> Some plans have separate mental health deductibles — check your Summary of Benefits.</p>
+                  <p><strong>Important:</strong> Some plans have separate mental health deductibles --- check your Summary of Benefits.</p>
                 </div>
               ),
             },
@@ -276,7 +276,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
             {
               title: 'Get a Superbill',
               description: (
-                <p>Ask your therapist for a 'superbill' — an itemized receipt with CPT codes, diagnosis, and session details.</p>
+                <p>Ask your therapist for a 'superbill' --- an itemized receipt with CPT codes, diagnosis, and session details.</p>
               ),
             },
             {
@@ -308,7 +308,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
                   <p className="mb-4"><strong>Solution:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Request a written explanation (Explanation of Benefits - EOB)</li>
-                    <li>File an appeal — your therapist can provide supporting documentation</li>
+                    <li>File an appeal --- your therapist can provide supporting documentation</li>
                     <li>Contact your state insurance commissioner if the denial violates parity laws</li>
                   </ul>
                 </div>
@@ -421,7 +421,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Therapy is expensive. Full-fee sessions cost $100-250+ per week. Without insurance, that's $400-1,000/month — unaffordable for most people. But affordable options exist: sliding scale therapy, community clinics, training programs, and online platforms can bring costs down to $0-80/session <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />.
+            Therapy is expensive. Full-fee sessions cost $100-250+ per week. Without insurance, that's $400-1,000/month --- unaffordable for most people. But affordable options exist: sliding scale therapy, community clinics, training programs, and online platforms can bring costs down to $0-80/session <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Here's how to find low-cost mental health care when money is tight.
@@ -457,13 +457,13 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
               title: '1. Private Practice Therapists',
               content: (
                 <div>
-                  <p className="mb-4">Many therapists reserve 1-5 sliding scale spots in their caseload. They don't always advertise this — you have to ask.</p>
+                  <p className="mb-4">Many therapists reserve 1-5 sliding scale spots in their caseload. They don't always advertise this --- you have to ask.</p>
                   <p className="mb-4"><strong>How to ask:</strong> "Do you offer sliding scale rates? My budget is [amount]."</p>
                   <p className="mb-4"><strong>Where to look:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Psychology Today directory — filter by "Sliding Scale: Yes"</li>
-                    <li>TherapyDen.com — many therapists list sliding scale availability</li>
-                    <li>Inclusive Therapists — social justice-focused directory with sliding scale options</li>
+                    <li>Psychology Today directory --- filter by "Sliding Scale: Yes"</li>
+                    <li>TherapyDen.com --- many therapists list sliding scale availability</li>
+                    <li>Inclusive Therapists --- social justice-focused directory with sliding scale options</li>
                   </ul>
                 </div>
               ),
@@ -497,7 +497,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
               title: '4. University Training Clinics',
               content: (
                 <div>
-                  <p className="mb-4">Grad students in psychology, counseling, or social work provide therapy under licensed supervision. Costs are much lower — often $5-40/session.</p>
+                  <p className="mb-4">Grad students in psychology, counseling, or social work provide therapy under licensed supervision. Costs are much lower --- often $5-40/session.</p>
                   <p className="mb-4"><strong>Quality:</strong> Students are learning, but they're closely supervised by experienced clinicians. Research shows outcomes are comparable to licensed therapists.</p>
                   <p><strong>Find one:</strong> Search "[your city] university counseling clinic" or contact local grad programs in psychology/social work.</p>
                 </div>
@@ -524,7 +524,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
               title: '6. Employee Assistance Programs (EAP)',
               content: (
                 <div>
-                  <p className="mb-4">Many employers offer EAPs — free, confidential counseling (typically 3-8 sessions) for employees and sometimes family members.</p>
+                  <p className="mb-4">Many employers offer EAPs --- free, confidential counseling (typically 3-8 sessions) for employees and sometimes family members.</p>
                   <p className="mb-4"><strong>Check:</strong> HR department or benefits portal</p>
                   <p><strong>Limitation:</strong> Short-term only; you'll need another option after your sessions run out.</p>
                 </div>
@@ -569,7 +569,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
               title: 'Support Groups',
               description: (
                 <div>
-                  <p className="mb-4">NAMI, DBSA (Depression and Bipolar Support Alliance), AA/NA, grief groups — peer support is free and evidence-based.</p>
+                  <p className="mb-4">NAMI, DBSA (Depression and Bipolar Support Alliance), AA/NA, grief groups --- peer support is free and evidence-based.</p>
                   <p><strong>Find groups:</strong> NAMI.org, DBSA alliance.org, local hospitals</p>
                 </div>
               ),
@@ -612,7 +612,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
         <StatCard
           stats={[
             { value: 60, suffix: '%', label: 'People who say cost is a barrier to mental health treatment' },
-            { value: 30, suffix: '–80', label: 'Dollar range for sliding scale therapy sessions (vs. $150-250 full fee)' },
+            { value: 30, suffix: '--80', label: 'Dollar range for sliding scale therapy sessions (vs. $150-250 full fee)' },
             { value: 0, suffix: '', label: 'Cost of many community mental health center services' },
           ]}
           source="Psychiatric Services, 2021"
@@ -632,18 +632,18 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
             <li>"I'm interested in working with you but I'm on a limited budget. Do you have any reduced-fee spots available?"</li>
           </ul>
           <p className="mb-4"><strong>If they say no:</strong></p>
-          <p>"No problem — do you know of any colleagues who offer sliding scale or low-cost options?"</p>
+          <p>"No problem --- do you know of any colleagues who offer sliding scale or low-cost options?"</p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote={`I was terrified to ask about sliding scale. But my therapist said "Of course — I hold sliding scale spots specifically for people who need them." I pay $60/session instead of $175. It's the only way I can afford consistent therapy.`}
+          quote={`I was terrified to ask about sliding scale. But my therapist said "Of course --- I hold sliding scale spots specifically for people who need them." I pay $60/session instead of $175. It's the only way I can afford consistent therapy.`}
           attribution="Sliding Scale Therapy Client"
           role="Patient Perspective"
           variant="large"
         />
 
         <p className="mb-6 mt-6">
-          Affordable therapy exists. It takes more effort to find, but you deserve support regardless of your income. Keep searching — the right fit is out there.
+          Affordable therapy exists. It takes more effort to find, but you deserve support regardless of your income. Keep searching --- the right fit is out there.
         </p>
       </>
     ),
@@ -709,7 +709,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           What Are Community Mental Health Centers?
         </h2>
         <p className="mb-6">
-          CMHCs are nonprofit clinics funded by federal, state, and local governments to serve people with mental illness and substance use disorders — especially those who can't afford private care <Citation id="2" index={2} source="Journal of Health Care for the Poor and Underserved" year="2020" tier={1} />.
+          CMHCs are nonprofit clinics funded by federal, state, and local governments to serve people with mental illness and substance use disorders --- especially those who can't afford private care <Citation id="2" index={2} source="Journal of Health Care for the Poor and Underserved" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Core Principle">
@@ -774,7 +774,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
               id: 'peer-support',
               title: 'Peer Support Services',
               content: (
-                <p>Support groups led by people with lived experience of mental illness — often free and open to the community.</p>
+                <p>Support groups led by people with lived experience of mental illness --- often free and open to the community.</p>
               ),
             },
           ]}
@@ -800,7 +800,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>Note:</strong> Exact fees vary by center. Some accept Medicaid, Medicare, and private insurance too — so you may pay your copay instead of sliding scale.
+          <strong>Note:</strong> Exact fees vary by center. Some accept Medicaid, Medicare, and private insurance too --- so you may pay your copay instead of sliding scale.
         </p>
 
         <h2 id="how-to-find" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -943,7 +943,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6 mt-6">
-          Community mental health centers are a vital safety net. If cost is a barrier, start here — they're designed specifically for people who can't afford private care.
+          Community mental health centers are a vital safety net. If cost is a barrier, start here --- they're designed specifically for people who can't afford private care.
         </p>
       </>
     ),
@@ -998,7 +998,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Mental health crises happen. Suicidal thoughts, psychotic episodes, panic attacks, manic episodes — when you or someone you love is in crisis, you need to know your options. The 988 Lifeline, mobile crisis teams, and emergency rooms all provide crisis care, but they work differently <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />.
+            Mental health crises happen. Suicidal thoughts, psychotic episodes, panic attacks, manic episodes --- when you or someone you love is in crisis, you need to know your options. The 988 Lifeline, mobile crisis teams, and emergency rooms all provide crisis care, but they work differently <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
             Here's what to expect from each option so you can make informed decisions in a crisis.
@@ -1030,7 +1030,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           Option 1: Call or Text 988 (Suicide & Crisis Lifeline)
         </h2>
         <p className="mb-6">
-          988 is the national crisis line — like 911 for mental health emergencies. Available 24/7, free, confidential.
+          988 is the national crisis line --- like 911 for mental health emergencies. Available 24/7, free, confidential.
         </p>
 
         <ArticleAccordion
@@ -1062,7 +1062,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
                     <li>Provide resources (local crisis centers, therapists, support groups)</li>
                     <li>Stay on the line as long as you need</li>
                   </ul>
-                  <p><strong>Goal:</strong> De-escalate crisis, provide support, connect you to resources — not automatically send police or hospitalize you <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />.</p>
+                  <p><strong>Goal:</strong> De-escalate crisis, provide support, connect you to resources --- not automatically send police or hospitalize you <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />.</p>
                 </div>
               ),
             },
@@ -1083,7 +1083,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           Option 2: Mobile Crisis Teams
         </h2>
         <p className="mb-6">
-          Some communities have mobile crisis teams — mental health professionals who come to you during a crisis <Citation id="3" index={3} source="Psychiatric Services" year="2021" tier={1} />.
+          Some communities have mobile crisis teams --- mental health professionals who come to you during a crisis <Citation id="3" index={3} source="Psychiatric Services" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1174,7 +1174,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
         />
 
         <QuoteBlock
-          quote="I called 988 during a really dark moment. I wasn't sure what to expect, but the counselor just listened. She didn't judge, didn't try to fix me. She helped me see I could get through the night. I didn't need the ER — I just needed someone to hear me."
+          quote="I called 988 during a really dark moment. I wasn't sure what to expect, but the counselor just listened. She didn't judge, didn't try to fix me. She helped me see I could get through the night. I didn't need the ER --- I just needed someone to hear me."
           attribution="988 Caller"
           role="Lived Experience"
           variant="large"
@@ -1198,7 +1198,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           highlightColumn={1}
         />
 
-        <p className="mb-6 mt-6">Crisis services exist to help you survive the hardest moments. You don't have to face a crisis alone. Reach out — these resources are designed for exactly this <Citation id="4" index={4} source="National Alliance on Mental Illness (NAMI)" year="2023" tier={3} />.</p>
+        <p className="mb-6 mt-6">Crisis services exist to help you survive the hardest moments. You don't have to face a crisis alone. Reach out --- these resources are designed for exactly this <Citation id="4" index={4} source="National Alliance on Mental Illness (NAMI)" year="2023" tier={3} />.</p>
       </>
     ),
   },
@@ -1254,7 +1254,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Psychiatric hospitalization is scary and often misunderstood. Movies show locked wards, restraints, and loss of control. Reality is different: most psychiatric units are safe, structured environments focused on stabilization <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. But not knowing what to expect makes it more frightening.
           </p>
-          <p className="mb-6">Here's what actually happens during a psychiatric hospital stay — from admission to discharge.</p>
+          <p className="mb-6">Here's what actually happens during a psychiatric hospital stay --- from admission to discharge.</p>
         </div>
 
         <h2 id="when-hospitalization" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1312,7 +1312,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
                     <li>Sharp objects (razors, scissors, nail clippers)</li>
                     <li>Belts, shoelaces, drawstrings (ligature risk)</li>
                     <li>Medications (hospital dispenses all meds)</li>
-                    <li>Electronics (phones, laptops — varies by facility)</li>
+                    <li>Electronics (phones, laptops --- varies by facility)</li>
                   </ul>
                   <p className="mt-4"><strong>You'll get these back at discharge.</strong></p>
                 </div>
@@ -1343,27 +1343,27 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           items={[
             {
               id: 'morning',
-              title: '7:00 AM — Wake-Up and Vitals',
+              title: '7:00 AM --- Wake-Up and Vitals',
               content: (<p>Staff take vitals, dispense morning meds. Breakfast in communal dining area.</p>),
             },
             {
               id: 'groups',
-              title: '9:00 AM — Group Therapy',
+              title: '9:00 AM --- Group Therapy',
               content: (<p>CBT skills, coping strategies, psychoeducation. Attendance usually required.</p>),
             },
             {
               id: 'doctor-rounds',
-              title: '10:00 AM — Doctor Rounds',
+              title: '10:00 AM --- Doctor Rounds',
               description: (<p>Brief check-in with psychiatrist. You discuss symptoms, medication changes, discharge planning.</p>),
             },
             {
               id: 'afternoon',
-              title: 'Afternoon — Activities and Free Time',
+              title: 'Afternoon --- Activities and Free Time',
               content: (<p>Art therapy, recreation therapy, reading, TV in day room. Some units have outdoor time.</p>),
             },
             {
               id: 'evening',
-              title: 'Evening — Dinner, Evening Meds, Wind-Down',
+              title: 'Evening --- Dinner, Evening Meds, Wind-Down',
               content: (<p>Evening group or relaxation activities. Lights out around 10-11 PM (varies).</p>),
             },
           ]}
@@ -1454,7 +1454,7 @@ export const navigatingMentalHealthSystemArticlesA: Article[] = [
           </ul>
         </ArticleCallout>
 
-        <p className="mb-6 mt-6">Psychiatric hospitalization is intense and disorienting, but it's temporary. It exists to keep people safe through the worst moments — and for many, it's a turning point toward recovery.</p>
+        <p className="mb-6 mt-6">Psychiatric hospitalization is intense and disorienting, but it's temporary. It exists to keep people safe through the worst moments --- and for many, it's a turning point toward recovery.</p>
       </>
     ),
   },

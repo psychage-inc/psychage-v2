@@ -96,7 +96,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             Your partner just started therapy. You want to help, but you're not sure how. Do you ask about sessions? Offer advice? Give them space? The line between supportive and intrusive can feel impossibly thin.
           </p>
           <p className="mb-6">
-            Research shows that partner support significantly improves therapy outcomes—but only when that support respects boundaries and autonomy <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2023" tier={1} />. Here's how to be your partner's champion without becoming their therapist.
+            Research shows that partner support significantly improves therapy outcomes---but only when that support respects boundaries and autonomy <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2023" tier={1} />. Here's how to be your partner's champion without becoming their therapist.
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           What Supportive Partnership Actually Looks Like
         </h2>
         <p className="mb-6">
-          Supporting a partner in therapy isn't about fixing them or managing their treatment—it's about creating an environment where they can do their therapeutic work <Citation id="3" index={3} source="Psychotherapy Research" year="2023" tier={1} />:
+          Supporting a partner in therapy isn't about fixing them or managing their treatment---it's about creating an environment where they can do their therapeutic work <Citation id="3" index={3} source="Psychotherapy Research" year="2023" tier={1} />:
         </p>
 
         <BeforeAfter
@@ -124,7 +124,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             title: 'Healthy Support',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>"How was therapy? No pressure to share—just checking in."</li>
+                <li>"How was therapy? No pressure to share---just checking in."</li>
                 <li>"What can I do to support you this week?"</li>
                 <li>"I'm proud of you for going, even when it's hard."</li>
                 <li>"Do you want to talk about it, or would you rather decompress?"</li>
@@ -138,7 +138,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           The Do's and Don'ts of Partner Support
         </h2>
         <p className="mb-6">
-          Clear guidelines from research on what helps—and what harms—when supporting a partner in therapy <Citation id="2" index={2} source="Family Process" year="2022" tier={2} />:
+          Clear guidelines from research on what helps---and what harms---when supporting a partner in therapy <Citation id="2" index={2} source="Family Process" year="2022" tier={2} />:
         </p>
 
         <ArticleCallout variant="tip" title="DO: Ask open-ended questions">
@@ -154,7 +154,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         </ArticleCallout>
 
         <ArticleCallout variant="warning" title="DON'T: Be their therapist">
-          <p>Analyzing their behavior, assigning homework, or interpreting their symptoms blurs the line between partner and clinician—and you can't be both <Citation id="5" index={5} source="Clinical Psychology Review" year="2023" tier={1} />.</p>
+          <p>Analyzing their behavior, assigning homework, or interpreting their symptoms blurs the line between partner and clinician---and you can't be both <Citation id="5" index={5} source="Clinical Psychology Review" year="2023" tier={1} />.</p>
         </ArticleCallout>
 
         <ArticleCallout variant="tip" title="DO: Adjust your expectations during hard weeks">
@@ -169,7 +169,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           When and How to Be More Directly Involved
         </h2>
         <p className="mb-6">
-          Sometimes more active involvement is appropriate—but only when your partner initiates it <Citation id="6" index={6} source="American Journal of Family Therapy" year="2023" tier={1} />:
+          Sometimes more active involvement is appropriate---but only when your partner initiates it <Citation id="6" index={6} source="American Journal of Family Therapy" year="2023" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -178,7 +178,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'If your partner asks you to attend a session',
               description: (
-                <p>Many therapists welcome partners for one or two sessions to improve communication or address relationship dynamics. Go with an open mind, listen more than you speak, and remember the therapist's job is to support your partner's growth—not mediate your relationship (unless you're in couples therapy).</p>
+                <p>Many therapists welcome partners for one or two sessions to improve communication or address relationship dynamics. Go with an open mind, listen more than you speak, and remember the therapist's job is to support your partner's growth---not mediate your relationship (unless you're in couples therapy).</p>
               ),
             },
             {
@@ -196,7 +196,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'If therapy is straining your relationship',
               description: (
-                <p>Individual therapy can shift relationship dynamics—sometimes for the better, sometimes creating friction <Citation id="7" index={7} source="Journal of Marital and Family Therapy" year="2022" tier={1} />. If you're struggling, suggest couples therapy as an addition (not replacement) to individual work.</p>
+                <p>Individual therapy can shift relationship dynamics---sometimes for the better, sometimes creating friction <Citation id="7" index={7} source="Journal of Marital and Family Therapy" year="2022" tier={1} />. If you're struggling, suggest couples therapy as an addition (not replacement) to individual work.</p>
               ),
             },
           ]}
@@ -216,14 +216,14 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="The most supportive thing you can do is trust that your partner is capable of doing their own work. Your job isn't to heal them—it's to love them while they heal themselves."
+          quote="The most supportive thing you can do is trust that your partner is capable of doing their own work. Your job isn't to heal them---it's to love them while they heal themselves."
           attribution="Dr. Sue Johnson"
           role="Clinical Psychologist"
           source="Hold Me Tight: Seven Conversations for a Lifetime of Love"
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Supporting a partner in therapy is about showing up, staying curious, respecting boundaries, and trusting their process. You're their partner, not their therapist—and that's exactly what they need.</p>
+          <p>Supporting a partner in therapy is about showing up, staying curious, respecting boundaries, and trusting their process. You're their partner, not their therapist---and that's exactly what they need.</p>
         </ArticleCallout>
       </>
     ),
@@ -318,10 +318,10 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've done the hard part—you recognized your child needed help and found them a therapist. But now what? How involved should you be? What do you do when they won't talk about sessions? And how do you handle the guilt, fear, or confusion that comes with watching your child struggle?
+            You've done the hard part---you recognized your child needed help and found them a therapist. But now what? How involved should you be? What do you do when they won't talk about sessions? And how do you handle the guilt, fear, or confusion that comes with watching your child struggle?
           </p>
           <p className="mb-6">
-            Parental involvement in child and adolescent therapy significantly improves outcomes—but the "right" level of involvement varies by age, issue, and therapeutic approach <Citation id="1" index={1} source="Journal of Clinical Child & Adolescent Psychology" year="2023" tier={1} />. Here's how to support your child's mental health journey effectively.
+            Parental involvement in child and adolescent therapy significantly improves outcomes---but the "right" level of involvement varies by age, issue, and therapeutic approach <Citation id="1" index={1} source="Journal of Clinical Child & Adolescent Psychology" year="2023" tier={1} />. Here's how to support your child's mental health journey effectively.
           </p>
         </div>
 
@@ -348,7 +348,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
                     <li>Communicate regularly with the therapist about progress</li>
                     <li>Help your child understand why they're seeing a "feelings doctor"</li>
                   </ul>
-                  <p className="text-sm">Expect the therapist to update you after most sessions—young children can't accurately report their own treatment.</p>
+                  <p className="text-sm">Expect the therapist to update you after most sessions---young children can't accurately report their own treatment.</p>
                 </div>
               ),
             },
@@ -363,7 +363,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
                     <li>Check in with the therapist periodically (monthly or as needed)</li>
                     <li>Support homework assignments (CBT worksheets, exposure exercises)</li>
                     <li>Notice and reinforce positive changes</li>
-                    <li>Respect some privacy—don't demand session details, but stay informed of overall progress</li>
+                    <li>Respect some privacy---don't demand session details, but stay informed of overall progress</li>
                   </ul>
                   <p className="text-sm">Therapists typically do brief parent check-ins at the end of sessions, sharing general updates without violating confidentiality.</p>
                 </div>
@@ -398,7 +398,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Why confidentiality matters</strong>: Teens won't be honest in therapy if they fear everything will be reported to parents. Research shows confidentiality is essential for effective adolescent treatment <Citation id="5" index={5} source="JAACAP" year="2023" tier={1} />.</li>
           <li><strong>What gets shared</strong>: Therapists will break confidentiality for safety concerns (suicidal thoughts, self-harm, abuse, danger to others). General progress updates can be shared with teen permission.</li>
-          <li><strong>What stays private</strong>: Relationship drama, sexual activity (unless concerning), friend conflicts, thoughts about you—these stay between teen and therapist unless the teen agrees to share.</li>
+          <li><strong>What stays private</strong>: Relationship drama, sexual activity (unless concerning), friend conflicts, thoughts about you---these stay between teen and therapist unless the teen agrees to share.</li>
           <li><strong>Your rights</strong>: Legally, parents often have rights to access minor children's records, but exercising that right can damage the therapeutic relationship. Discuss boundaries with the therapist upfront.</li>
         </ul>
 
@@ -418,7 +418,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Seek your own support</strong>: Consider parent support groups, your own therapist, or trusted friends who understand</li>
           <li><strong>Separate your emotions from your child's experience</strong>: Your child needs your strength right now, not your guilt or fear projected onto them</li>
-          <li><strong>Reframe "failure" as care</strong>: Getting your child help isn't admitting you failed—it's demonstrating love and responsiveness to their needs</li>
+          <li><strong>Reframe "failure" as care</strong>: Getting your child help isn't admitting you failed---it's demonstrating love and responsiveness to their needs</li>
           <li><strong>Remember: you didn't 'cause' their mental health condition</strong>: Most conditions have genetic, biological, and environmental factors beyond any single parent's control</li>
         </ul>
 
@@ -459,7 +459,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'Adjust family dynamics if needed',
               description: (
-                <p>Sometimes effective child therapy requires family changes—different communication patterns, new routines, or addressing parental conflict. Be open to feedback from the therapist about family factors.</p>
+                <p>Sometimes effective child therapy requires family changes---different communication patterns, new routines, or addressing parental conflict. Be open to feedback from the therapist about family factors.</p>
               ),
             },
             {
@@ -481,14 +481,14 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           <li>Is the therapeutic fit right? Not every child clicks with every therapist.</li>
           <li>Is the diagnosis accurate? Sometimes symptoms overlap and initial assessments need revision.</li>
           <li>Are there external factors interfering? Bullying, family stress, undiagnosed learning differences can impede progress.</li>
-          <li>Does your child need a different level of care? Outpatient therapy might not be enough for severe conditions—partial hospitalization or intensive outpatient programs exist for a reason.</li>
+          <li>Does your child need a different level of care? Outpatient therapy might not be enough for severe conditions---partial hospitalization or intensive outpatient programs exist for a reason.</li>
         </ul>
         <p className="mb-6">
           Don't be afraid to ask hard questions or seek second opinions. Advocating for your child's mental health is part of your job as a parent.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Your child's mental health journey isn't about perfection—it's about showing up, staying curious, trusting the process, and adjusting as needed. You're doing better than you think.</p>
+          <p>Your child's mental health journey isn't about perfection---it's about showing up, staying curious, trusting the process, and adjusting as needed. You're doing better than you think.</p>
         </ArticleCallout>
       </>
     ),
@@ -575,10 +575,10 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your friend just told you they're depressed. Or anxious. Or thinking about therapy. They've opened up about something deeply personal—and you have no idea what to say. Your mind races: Should I offer advice? Share my own experience? Just listen? What if I say the wrong thing and make it worse?
+            Your friend just told you they're depressed. Or anxious. Or thinking about therapy. They've opened up about something deeply personal---and you have no idea what to say. Your mind races: Should I offer advice? Share my own experience? Just listen? What if I say the wrong thing and make it worse?
           </p>
           <p className="mb-6">
-            When someone trusts you with their mental health struggles, your response matters enormously. Research shows that supportive reactions can reduce symptoms, increase treatment-seeking, and strengthen relationships—while dismissive or minimizing responses can cause harm and isolation <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2022" tier={1} />. Here's how to show up for a struggling friend.
+            When someone trusts you with their mental health struggles, your response matters enormously. Research shows that supportive reactions can reduce symptoms, increase treatment-seeking, and strengthen relationships---while dismissive or minimizing responses can cause harm and isolation <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2022" tier={1} />. Here's how to show up for a struggling friend.
           </p>
         </div>
 
@@ -618,7 +618,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
                 <li>"Have you tried yoga/meditation/exercise?"</li>
                 <li>"Everyone goes through this."</li>
                 <li>"You don't seem depressed to me."</li>
-                <li>"I know exactly how you feel—one time I..."</li>
+                <li>"I know exactly how you feel---one time I..."</li>
                 <li>"You just need to get out more."</li>
                 <li>"Are you sure you're not just stressed?"</li>
               </ul>
@@ -648,7 +648,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           Listen, Don't Fix
         </h2>
         <p className="mb-6">
-          The urge to "fix" your friend's pain is natural—but often unhelpful. Most people who open up aren't looking for solutions; they're looking for connection and validation <Citation id="4" index={4} source="Clinical Psychology Review" year="2022" tier={1} />.
+          The urge to "fix" your friend's pain is natural---but often unhelpful. Most people who open up aren't looking for solutions; they're looking for connection and validation <Citation id="4" index={4} source="Clinical Psychology Review" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           Practice active listening:
@@ -665,11 +665,11 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           When and How to Encourage Professional Help
         </h2>
         <p className="mb-6">
-          You don't need to be a therapist to be supportive—but you should gently encourage professional help when appropriate:
+          You don't need to be a therapist to be supportive---but you should gently encourage professional help when appropriate:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>If symptoms are severe or worsening</strong>: "It sounds like this is really affecting your life. Have you thought about talking to a therapist or doctor?"</li>
-          <li><strong>If they express suicidal thoughts</strong>: Take it seriously. "I'm worried about you. Can we call someone together right now—a crisis line, therapist, or the 988 Suicide & Crisis Lifeline?" <Citation id="5" index={5} source="Suicide and Life-Threatening Behavior" year="2023" tier={1} /></li>
+          <li><strong>If they express suicidal thoughts</strong>: Take it seriously. "I'm worried about you. Can we call someone together right now---a crisis line, therapist, or the 988 Suicide & Crisis Lifeline?" <Citation id="5" index={5} source="Suicide and Life-Threatening Behavior" year="2023" tier={1} /></li>
           <li><strong>If they're already in treatment but struggling</strong>: "It sounds like things aren't improving. Have you talked to your therapist about this? Maybe they could adjust your treatment."</li>
         </ul>
 
@@ -694,8 +694,8 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           <li><strong>Check in regularly</strong>: A simple "thinking of you" text or "how are you holding up?" shows consistent care.</li>
           <li><strong>Invite them to low-pressure activities</strong>: "Want to watch a movie at my place?" is easier than "Let's go to a crowded party."</li>
           <li><strong>Respect their capacity</strong>: If they cancel plans or need space, don't take it personally. Depression and anxiety make socializing exhausting.</li>
-          <li><strong>Celebrate small wins</strong>: "I'm proud of you for going to therapy today' or "I know getting out of bed was hard—I'm glad you're here."</li>
-          <li><strong>Don't disappear</strong>: Mental illness is isolating. Your continued presence—even when you don't know what to say—matters immensely.</li>
+          <li><strong>Celebrate small wins</strong>: "I'm proud of you for going to therapy today' or "I know getting out of bed was hard---I'm glad you're here."</li>
+          <li><strong>Don't disappear</strong>: Mental illness is isolating. Your continued presence---even when you don't know what to say---matters immensely.</li>
         </ul>
 
         <h2 id="taking-care-of-yourself" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -719,7 +719,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>When a friend opens up about their mental health, the most powerful thing you can do is listen without judgment, believe their experience, and show up consistently. You don't need perfect words—you just need to care, and let them know you care.</p>
+          <p>When a friend opens up about their mental health, the most powerful thing you can do is listen without judgment, believe their experience, and show up consistently. You don't need perfect words---you just need to care, and let them know you care.</p>
         </ArticleCallout>
       </>
     ),
@@ -727,7 +727,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'staging-intervention-evidence-based-approaches',
-    title: 'Staging an Intervention: When, Why, and How — Evidence-Based Approaches',
+    title: 'Staging an Intervention: When, Why, and How --- Evidence-Based Approaches',
     description: 'Learn when interventions are appropriate, how to plan one effectively, and evidence-based alternatives to confrontational approaches.',
     image: "/images/articles/cat14/cover-044.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
@@ -814,7 +814,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your loved one is spiraling—addiction, untreated mental illness, or both—and they refuse to get help. You've tried reasoning, pleading, threatening, ignoring. Nothing works. Now you're considering an intervention, that dramatic confrontation you've seen on TV where family and friends gather to deliver ultimatums.
+            Your loved one is spiraling---addiction, untreated mental illness, or both---and they refuse to get help. You've tried reasoning, pleading, threatening, ignoring. Nothing works. Now you're considering an intervention, that dramatic confrontation you've seen on TV where family and friends gather to deliver ultimatums.
           </p>
           <p className="mb-6">
             But here's what reality TV doesn't show: traditional confrontational interventions have mixed success rates and can backfire spectacularly <Citation id="1" index={1} source="Addiction" year="2023" tier={1} />. Fortunately, evidence-based approaches exist that are more effective and less damaging to relationships. Here's what works.
@@ -871,7 +871,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-1 text-sm mb-3">
                     <li>Can feel like an ambush, increasing defensiveness and shame</li>
                     <li>May damage relationships, especially if the person refuses treatment</li>
-                    <li>Doesn't address underlying motivation—people coerced into treatment often drop out early <Citation id="7" index={7} source="Behaviour Research and Therapy" year="2023" tier={1} /></li>
+                    <li>Doesn't address underlying motivation---people coerced into treatment often drop out early <Citation id="7" index={7} source="Behaviour Research and Therapy" year="2023" tier={1} /></li>
                   </ul>
                   <p className="text-sm"><strong>Success rate</strong>: About 50-60% agree to enter treatment immediately, but completion rates are lower.</p>
                 </div>
@@ -940,7 +940,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'Select participants carefully',
               description: (
-                <p>Include people the person trusts and respects. Exclude those with active addiction, unresolved conflicts with the person, or who can't control their emotions. Typically 4-6 people is ideal—more feels like an attack.</p>
+                <p>Include people the person trusts and respects. Exclude those with active addiction, unresolved conflicts with the person, or who can't control their emotions. Typically 4-6 people is ideal---more feels like an attack.</p>
               ),
             },
             {
@@ -956,7 +956,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
               ),
             },
             {
-              title: 'Decide on consequences—and mean them',
+              title: 'Decide on consequences---and mean them',
               description: (
                 <p>If using the Johnson Model, establish what will happen if the person refuses treatment (e.g., `I will no longer give you money' or "You cannot live here`). Only set consequences you're willing to enforce. Empty threats destroy credibility.</p>
               ),
@@ -970,7 +970,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'Follow through immediately',
               description: (
-                <p>If they agree to treatment, go that day or the next morning. Delay allows second thoughts. If they refuse, implement consequences calmly and compassionately—not as punishment, but as boundary-setting.</p>
+                <p>If they agree to treatment, go that day or the next morning. Delay allows second thoughts. If they refuse, implement consequences calmly and compassionately---not as punishment, but as boundary-setting.</p>
               ),
             },
           ]}
@@ -985,7 +985,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Emergency psychiatric hold (5150/Baker Act/etc.)</strong>: Allows involuntary hospitalization for 72 hours if the person is a danger to themselves or others. Criteria and processes vary by state <Citation id="6" index={6} source="Treatment Advocacy Center" year="2024" tier={3} />.</li>
           <li><strong>Court-ordered treatment</strong>: Some states allow families to petition for mandated outpatient treatment for severe mental illness.</li>
-          <li><strong>Conservatorship/guardianship</strong>: Legal authority over someone unable to care for themselves due to mental illness—a lengthy, costly process reserved for severe cases.</li>
+          <li><strong>Conservatorship/guardianship</strong>: Legal authority over someone unable to care for themselves due to mental illness---a lengthy, costly process reserved for severe cases.</li>
         </ul>
         <p className="mb-6">
           These options should be last resorts when all voluntary approaches have failed and safety is at immediate risk.
@@ -1005,7 +1005,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Interventions work best when they come from a place of love, not control. Whether you choose a traditional confrontational approach or a gentler evidence-based method like CRAFT, the goal is the same: opening a door to treatment that your loved one chooses to walk through. You can't force recovery—but you can create conditions that make it more likely.</p>
+          <p>Interventions work best when they come from a place of love, not control. Whether you choose a traditional confrontational approach or a gentler evidence-based method like CRAFT, the goal is the same: opening a door to treatment that your loved one chooses to walk through. You can't force recovery---but you can create conditions that make it more likely.</p>
         </ArticleCallout>
       </>
     ),
@@ -1100,10 +1100,10 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're exhausted. Your sleep is broken by worry. You've canceled plans to be available, skipped doctor's appointments because there's no time, snapped at people you love because you have nothing left to give. You tell yourself it's selfish to think about your own needs when your loved one is suffering—but you're running on empty.
+            You're exhausted. Your sleep is broken by worry. You've canceled plans to be available, skipped doctor's appointments because there's no time, snapped at people you love because you have nothing left to give. You tell yourself it's selfish to think about your own needs when your loved one is suffering---but you're running on empty.
           </p>
           <p className="mb-6">
-            This is caregiver fatigue, and it's not a sign of weakness or lack of love. Research shows that 40-70% of family caregivers for people with mental illness experience clinically significant depression, anxiety, or burnout <Citation id="1" index={1} source="Psychological Medicine" year="2023" tier={1} />. You cannot pour from an empty cup—and recognizing that is the first step toward sustainable caregiving.
+            This is caregiver fatigue, and it's not a sign of weakness or lack of love. Research shows that 40-70% of family caregivers for people with mental illness experience clinically significant depression, anxiety, or burnout <Citation id="1" index={1} source="Psychological Medicine" year="2023" tier={1} />. You cannot pour from an empty cup---and recognizing that is the first step toward sustainable caregiving.
           </p>
         </div>
 
@@ -1145,7 +1145,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          If you recognize several of these signs in yourself, you're experiencing caregiver burnout—and you need support as much as the person you're caring for <Citation id="7" index={7} source="Health Psychology" year="2022" tier={1} />.
+          If you recognize several of these signs in yourself, you're experiencing caregiver burnout---and you need support as much as the person you're caring for <Citation id="7" index={7} source="Health Psychology" year="2022" tier={1} />.
         </p>
 
         <h2 id="why-it-happens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1167,7 +1167,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
           Building Sustainable Caregiving Practices
         </h2>
         <p className="mb-6">
-          Self-care isn't selfish—it's essential for sustained caregiving. Evidence-based strategies that actually work <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />:
+          Self-care isn't selfish---it's essential for sustained caregiving. Evidence-based strategies that actually work <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -1177,7 +1177,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
               title: 'Set clear, firm boundaries',
               description: (
                 <div>
-                  <p className="mb-2">Boundaries aren't about loving your person less—they're about loving them sustainably. You're allowed to:</p>
+                  <p className="mb-2">Boundaries aren't about loving your person less---they're about loving them sustainably. You're allowed to:</p>
                   <ul className="list-disc pl-5 space-y-1 text-sm">
                     <li>Say no to requests that exceed your capacity</li>
                     <li>Take time for yourself without guilt</li>
@@ -1191,7 +1191,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'Schedule non-negotiable personal time',
               description: (
-                <p>Put your therapy appointments, exercise, social plans, or even solo downtime on the calendar as if they were medical appointments. Don't cancel them for non-emergencies. Regular respite—even short breaks—significantly reduces caregiver stress and depression <Citation id="4" index={4} source="The Gerontologist" year="2022" tier={1} />.</p>
+                <p>Put your therapy appointments, exercise, social plans, or even solo downtime on the calendar as if they were medical appointments. Don't cancel them for non-emergencies. Regular respite---even short breaks---significantly reduces caregiver stress and depression <Citation id="4" index={4} source="The Gerontologist" year="2022" tier={1} />.</p>
               ),
             },
             {
@@ -1209,7 +1209,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
             {
               title: 'Get your own mental health support',
               description: (
-                <p>You deserve therapy for yourself—not just as a caregiver, but as a person processing your own emotions, grief, and stress. Individual therapy gives you a space to talk about your needs without guilt <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />.</p>
+                <p>You deserve therapy for yourself---not just as a caregiver, but as a person processing your own emotions, grief, and stress. Individual therapy gives you a space to talk about your needs without guilt <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />.</p>
               ),
             },
             {
@@ -1263,7 +1263,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Caregiver fatigue is a sign you've been giving more than you have to give—not a sign of failure. Taking care of yourself isn't selfish; it's the only way to sustain long-term support for your loved one. You matter too.</p>
+          <p>Caregiver fatigue is a sign you've been giving more than you have to give---not a sign of failure. Taking care of yourself isn't selfish; it's the only way to sustain long-term support for your loved one. You matter too.</p>
         </ArticleCallout>
       </>
     ),

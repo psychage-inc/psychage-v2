@@ -95,10 +95,10 @@ export const conflictRepairArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The silent treatment—intentionally ignoring someone for hours, days, or even weeks—is one of the most psychologically damaging behaviors in relationships. It's not the same as needing space to calm down. It's a deliberate withdrawal of communication, affection, and acknowledgment designed to punish, control, or coerce <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2020" tier={1} />.
+            The silent treatment---intentionally ignoring someone for hours, days, or even weeks---is one of the most psychologically damaging behaviors in relationships. It's not the same as needing space to calm down. It's a deliberate withdrawal of communication, affection, and acknowledgment designed to punish, control, or coerce <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Research shows that being ignored activates the same neural pathways in the brain as physical pain <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. When someone gives you the silent treatment, your brain registers it as a threat to your social survival. The silent treatment isn't just uncomfortable—it's a form of emotional abuse that erodes trust, creates anxiety, and damages the foundation of the relationship <Citation id="6" index={6} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
+            Research shows that being ignored activates the same neural pathways in the brain as physical pain <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. When someone gives you the silent treatment, your brain registers it as a threat to your social survival. The silent treatment isn't just uncomfortable---it's a form of emotional abuse that erodes trust, creates anxiety, and damages the foundation of the relationship <Citation id="6" index={6} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
           </p>
         </div>
 
@@ -132,14 +132,14 @@ export const conflictRepairArticlesB: Article[] = [
           Why the Silent Treatment Is So Harmful
         </h2>
         <p className="mb-6">
-          The silent treatment isn't just unpleasant—it has measurable psychological and relational consequences that can last long after the silence ends.
+          The silent treatment isn't just unpleasant---it has measurable psychological and relational consequences that can last long after the silence ends.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           1. It Activates Social Pain in the Brain
         </h3>
         <p className="mb-6">
-          Neuroscience research shows that social exclusion—being ignored or ostracized—activates the same brain regions (the anterior cingulate cortex and insula) that process physical pain <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. Your brain doesn't distinguish between being physically hurt and being emotionally rejected. This is why the silent treatment feels unbearable—it literally hurts.
+          Neuroscience research shows that social exclusion---being ignored or ostracized---activates the same brain regions (the anterior cingulate cortex and insula) that process physical pain <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. Your brain doesn't distinguish between being physically hurt and being emotionally rejected. This is why the silent treatment feels unbearable---it literally hurts.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -153,7 +153,7 @@ export const conflictRepairArticlesB: Article[] = [
           3. It's a Form of Control and Manipulation
         </h3>
         <p className="mb-6">
-          The silent treatment is designed to make the other person so uncomfortable that they'll do whatever it takes to end the silence—apologize when they didn't do anything wrong, abandon their boundaries, or accept unacceptable behavior. It's a power play disguised as emotional withdrawal <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2020" tier={1} />.
+          The silent treatment is designed to make the other person so uncomfortable that they'll do whatever it takes to end the silence---apologize when they didn't do anything wrong, abandon their boundaries, or accept unacceptable behavior. It's a power play disguised as emotional withdrawal <Citation id="1" index={1} source="Journal of Social and Clinical Psychology" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -203,7 +203,7 @@ export const conflictRepairArticlesB: Article[] = [
               title: "They feel overwhelmed and don't know how else to cope",
               content: (
                 <p>
-                  Some people shut down because they genuinely don't have the skills to manage intense emotions or navigate conflict. The silence isn't strategic—it's a collapse. This is still harmful, but the intention is self-protection, not punishment.
+                  Some people shut down because they genuinely don't have the skills to manage intense emotions or navigate conflict. The silence isn't strategic---it's a collapse. This is still harmful, but the intention is self-protection, not punishment.
                 </p>
               ),
             },
@@ -272,7 +272,7 @@ export const conflictRepairArticlesB: Article[] = [
             {
               feature: 'Give one-word answers to shut down dialogue',
               values: [
-                "I'm not ready to talk yet. I will be later tonight. I'm not ignoring you—I just need time.",
+                "I'm not ready to talk yet. I will be later tonight. I'm not ignoring you---I just need time.",
                 'Provides reassurance that withdrawal is temporary',
               ],
             },
@@ -378,7 +378,7 @@ export const conflictRepairArticlesB: Article[] = [
           Setting Boundaries Around the Silent Treatment
         </h3>
         <p className="mb-6">
-          If the silent treatment is a pattern in your relationship, it's important to address it directly when you're both calm—not in the middle of an episode.
+          If the silent treatment is a pattern in your relationship, it's important to address it directly when you're both calm---not in the middle of an episode.
         </p>
 
         <ArticleCallout variant="tip">
@@ -421,7 +421,7 @@ export const conflictRepairArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The silent treatment is never okay—not as a conflict strategy, not as a way to "cool off, ' not as punishment. If you need space, say so. If you're overwhelmed, ask for a break. If you're hurt, use words. Silence isn't neutral—it's a weapon. And healthy relationships require both people to put down their weapons and choose dialogue, even when it's hard.
+            The silent treatment is never okay---not as a conflict strategy, not as a way to "cool off, ' not as punishment. If you need space, say so. If you're overwhelmed, ask for a break. If you're hurt, use words. Silence isn't neutral---it's a weapon. And healthy relationships require both people to put down their weapons and choose dialogue, even when it's hard.
           </p>
         </ArticleCallout>
       </>
@@ -431,7 +431,7 @@ export const conflictRepairArticlesB: Article[] = [
     id: catId(37),
     slug: 'conflict-styles-compete-avoid-accommodate-compromise-collaborate',
     title: 'Conflict Styles: Compete, Avoid, Accommodate, Compromise, and Collaborate',
-    description: 'Discover your default conflict style and learn how each approach affects relationships—and when to use which strategy.',
+    description: 'Discover your default conflict style and learn how each approach affects relationships---and when to use which strategy.',
     image: "/images/articles/cat03/cover-037.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 9,
@@ -517,10 +517,10 @@ export const conflictRepairArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When conflict arises, you have a default mode—a pattern of behavior that emerges automatically, often without conscious thought. Some people fight to win. Others flee to avoid discomfort. Some give in immediately to keep the peace, while others search for middle ground. Understanding your conflict style—and your partner's—is one of the most powerful tools for improving how you navigate disagreements <Citation id="1" index={1} source="Journal of Organizational Behavior" year="2019" tier={1} />.
+            When conflict arises, you have a default mode---a pattern of behavior that emerges automatically, often without conscious thought. Some people fight to win. Others flee to avoid discomfort. Some give in immediately to keep the peace, while others search for middle ground. Understanding your conflict style---and your partner's---is one of the most powerful tools for improving how you navigate disagreements <Citation id="1" index={1} source="Journal of Organizational Behavior" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
-            The Thomas-Kilmann Conflict Mode Instrument identifies five core styles of handling conflict: Competing, Avoiding, Accommodating, Compromising, and Collaborating. None of these styles is inherently good or bad—each has its place depending on the situation. But when you use the wrong style at the wrong time, or rely too heavily on one approach, relationships suffer <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={2} />.
+            The Thomas-Kilmann Conflict Mode Instrument identifies five core styles of handling conflict: Competing, Avoiding, Accommodating, Compromising, and Collaborating. None of these styles is inherently good or bad---each has its place depending on the situation. But when you use the wrong style at the wrong time, or rely too heavily on one approach, relationships suffer <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={2} />.
           </p>
         </div>
 
@@ -538,7 +538,7 @@ export const conflictRepairArticlesB: Article[] = [
           <strong>Core belief:</strong> "I need to win this. My way is right."
         </p>
         <p className="mb-6">
-          Competing is about pursuing your own needs at the expense of the other person. It's assertive and uncooperative—you stand your ground, argue your position, and expect the other person to concede.
+          Competing is about pursuing your own needs at the expense of the other person. It's assertive and uncooperative---you stand your ground, argue your position, and expect the other person to concede.
         </p>
 
         <ArticleCallout variant="info" title="When Competing Works">
@@ -552,7 +552,7 @@ export const conflictRepairArticlesB: Article[] = [
         <ArticleCallout variant="warning" title="When Competing Backfires">
           <ul className="list-disc pl-5 space-y-2">
             <li>Creates resentment and defensiveness in the other person</li>
-            <li>Damages trust when overused—"It's always their way or the highway"</li>
+            <li>Damages trust when overused---"It's always their way or the highway"</li>
             <li>Prevents compromise and creative problem-solving</li>
             <li>Can escalate into contempt, criticism, or verbal aggression</li>
           </ul>
@@ -565,14 +565,14 @@ export const conflictRepairArticlesB: Article[] = [
           <strong>Core belief:</strong> "Conflict is uncomfortable. I'll just wait for this to blow over."
         </p>
         <p className="mb-6">
-          Avoiding is sidestepping the conflict entirely—changing the subject, leaving the room, pretending the issue doesn't exist. It's neither assertive (you don't advocate for your needs) nor cooperative (you don't help the other person meet theirs).
+          Avoiding is sidestepping the conflict entirely---changing the subject, leaving the room, pretending the issue doesn't exist. It's neither assertive (you don't advocate for your needs) nor cooperative (you don't help the other person meet theirs).
         </p>
 
         <ArticleCallout variant="info" title="When Avoiding Works">
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>Trivial issues:</strong> Not everything needs to be addressed</li>
             <li><strong>When emotions are too high:</strong> Temporary avoidance to cool down (not indefinite avoidance)</li>
-            <li><strong>When the relationship isn't important:</strong> Stranger cuts you off in traffic—let it go</li>
+            <li><strong>When the relationship isn't important:</strong> Stranger cuts you off in traffic---let it go</li>
           </ul>
         </ArticleCallout>
 
@@ -592,12 +592,12 @@ export const conflictRepairArticlesB: Article[] = [
           <strong>Core belief:</strong> "I'll go along with what they want to keep the peace."
         </p>
         <p className="mb-6">
-          Accommodating is yielding to the other person's preferences at the expense of your own. It's cooperative but not assertive—you prioritize harmony and the other person's happiness over your own needs.
+          Accommodating is yielding to the other person's preferences at the expense of your own. It's cooperative but not assertive---you prioritize harmony and the other person's happiness over your own needs.
         </p>
 
         <ArticleCallout variant="info" title="When Accommodating Works">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>When the issue matters more to them than to you:</strong> "Sure, pick the restaurant—I'm happy either way"</li>
+            <li><strong>When the issue matters more to them than to you:</strong> "Sure, pick the restaurant---I'm happy either way"</li>
             <li><strong>To preserve the relationship:</strong> When being "right" isn't worth the damage to connection</li>
             <li><strong>To model flexibility:</strong> Showing that you can put their needs first sometimes</li>
           </ul>
@@ -605,7 +605,7 @@ export const conflictRepairArticlesB: Article[] = [
 
         <ArticleCallout variant="warning" title="When Accommodating Backfires">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Chronic accommodation leads to resentment—"I always give in and never get what I need" <Citation id="7" index={7} source="Journal of Social and Personal Relationships" year="2020" tier={1} /></li>
+            <li>Chronic accommodation leads to resentment---"I always give in and never get what I need" <Citation id="7" index={7} source="Journal of Social and Personal Relationships" year="2020" tier={1} /></li>
             <li>Your needs become invisible; the relationship becomes one-sided</li>
             <li>Can enable bad behavior if you're accommodating unreasonable demands</li>
             <li>You lose your sense of self and autonomy</li>
@@ -619,13 +619,13 @@ export const conflictRepairArticlesB: Article[] = [
           <strong>Core belief:</strong> "We'll both give up something to meet in the middle."
         </p>
         <p className="mb-6">
-          Compromising is finding a middle ground where both people get some—but not all—of what they want. It's the "split the difference" approach: moderately assertive, moderately cooperative.
+          Compromising is finding a middle ground where both people get some---but not all---of what they want. It's the "split the difference" approach: moderately assertive, moderately cooperative.
         </p>
 
         <ArticleCallout variant="info" title="When Compromising Works">
           <ul className="list-disc pl-5 space-y-2">
             <li><strong>When time is limited:</strong> You need a quick resolution and can't afford lengthy negotiation</li>
-            <li><strong>When both positions have merit:</strong> Neither person is "wrong"—just different preferences</li>
+            <li><strong>When both positions have merit:</strong> Neither person is "wrong"---just different preferences</li>
             <li><strong>When collaboration isn't possible:</strong> Resources are finite and must be divided</li>
           </ul>
         </ArticleCallout>
@@ -659,7 +659,7 @@ export const conflictRepairArticlesB: Article[] = [
 
         <ArticleCallout variant="warning" title="When Collaborating Is Too Much">
           <ul className="list-disc pl-5 space-y-2">
-            <li>Requires significant time and emotional energy—not practical for every disagreement</li>
+            <li>Requires significant time and emotional energy---not practical for every disagreement</li>
             <li>Can feel exhausting if overused for minor decisions</li>
             <li>Doesn't work if one person is unwilling to collaborate or negotiate in bad faith</li>
           </ul>
@@ -721,7 +721,7 @@ export const conflictRepairArticlesB: Article[] = [
           Identifying Your Default Style
         </h2>
         <p className="mb-6">
-          Most people have a go-to style they learned in childhood or developed over time. Understanding yours—and your partner's—helps you recognize when you're operating on autopilot instead of choosing the best approach for the situation <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={1} />.
+          Most people have a go-to style they learned in childhood or developed over time. Understanding yours---and your partner's---helps you recognize when you're operating on autopilot instead of choosing the best approach for the situation <Citation id="2" index={2} source="Personal Relationships" year="2020" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -782,14 +782,14 @@ export const conflictRepairArticlesB: Article[] = [
           Conflict styles are shaped by culture. Individualistic cultures (e.g., United States, Western Europe) tend to value assertiveness and direct communication, making competing and collaborating more common. Collectivistic cultures (e.g., East Asia, Latin America) often prioritize harmony and group cohesion, making avoiding and accommodating more normative <Citation id="3" index={3} source="Cross-Cultural Research" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          When partners come from different cultural backgrounds, their conflict styles may clash—not because one is "wrong, ' but because they're operating from different values. Understanding this can prevent misinterpreting cultural norms as personal failings.
+          When partners come from different cultural backgrounds, their conflict styles may clash---not because one is "wrong, ' but because they're operating from different values. Understanding this can prevent misinterpreting cultural norms as personal failings.
         </p>
 
         <h2 id="flexing-styles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Learning to Flex Between Styles
         </h2>
         <p className="mb-6">
-          The goal isn't to pick one "best" style—it's to develop the ability to choose the right style for the situation. Flexibility in conflict resolution is strongly associated with relationship satisfaction <Citation id="8" index={8} source="American Psychological Association" year="2021" tier={2} />.
+          The goal isn't to pick one "best" style---it's to develop the ability to choose the right style for the situation. Flexibility in conflict resolution is strongly associated with relationship satisfaction <Citation id="8" index={8} source="American Psychological Association" year="2021" tier={2} />.
         </p>
 
         <ProgressSteps
@@ -853,7 +853,7 @@ export const conflictRepairArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            No single conflict style is best. The strongest relationships are built by people who can flex—who can compete when boundaries are crossed, accommodate when it doesn't matter, avoid when emotions are too high, compromise when time is short, and collaborate when the issue deserves it. Mastering all five styles gives you the full toolkit to navigate conflict with skill and care.
+            No single conflict style is best. The strongest relationships are built by people who can flex---who can compete when boundaries are crossed, accommodate when it doesn't matter, avoid when emotions are too high, compromise when time is short, and collaborate when the issue deserves it. Mastering all five styles gives you the full toolkit to navigate conflict with skill and care.
           </p>
         </ArticleCallout>
       </>
@@ -941,10 +941,10 @@ export const conflictRepairArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The argument is over. The yelling has stopped. But the air is still heavy with hurt, and the words said in anger echo in the silence. You're both raw, maybe regretful, maybe still defensive. The fight may have ended, but the damage hasn't been addressed. This is the critical moment—when what happens next determines whether the relationship grows stronger or the rift grows wider <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
+            The argument is over. The yelling has stopped. But the air is still heavy with hurt, and the words said in anger echo in the silence. You're both raw, maybe regretful, maybe still defensive. The fight may have ended, but the damage hasn't been addressed. This is the critical moment---when what happens next determines whether the relationship grows stronger or the rift grows wider <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Reconnection after conflict isn't automatic. It requires intention, vulnerability, and often, courage—to apologize when you're still hurt, to reach out when you're afraid of rejection, to choose the relationship over being right. Research shows that how couples repair after conflict is more predictive of relationship success than whether they fight in the first place <Citation id="3" index={3} source="Emotion" year="2019" tier={1} />. Here's how to bridge the gap when the fight is done but the healing hasn't started.
+            Reconnection after conflict isn't automatic. It requires intention, vulnerability, and often, courage---to apologize when you're still hurt, to reach out when you're afraid of rejection, to choose the relationship over being right. Research shows that how couples repair after conflict is more predictive of relationship success than whether they fight in the first place <Citation id="3" index={3} source="Emotion" year="2019" tier={1} />. Here's how to bridge the gap when the fight is done but the healing hasn't started.
           </p>
         </div>
 
@@ -1011,7 +1011,7 @@ export const conflictRepairArticlesB: Article[] = [
           Step 2: Make the First Move Toward Reconnection
         </h2>
         <p className="mb-6">
-          Someone has to go first. Waiting for the other person to reach out creates a standoff where both people are hurt and neither is willing to be vulnerable. The person who makes the first move isn't admitting they were wrong—they're prioritizing the relationship over their pride <Citation id="7" index={7} source="Journal of Marriage and Family" year="2020" tier={1} />.
+          Someone has to go first. Waiting for the other person to reach out creates a standoff where both people are hurt and neither is willing to be vulnerable. The person who makes the first move isn't admitting they were wrong---they're prioritizing the relationship over their pride <Citation id="7" index={7} source="Journal of Marriage and Family" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1036,7 +1036,7 @@ export const conflictRepairArticlesB: Article[] = [
           Step 3: The Repair Conversation
         </h2>
         <p className="mb-6">
-          The repair conversation is not a resumption of the argument. It's a meta-conversation—a conversation about the conversation. The goal is to acknowledge hurt, take responsibility, and rebuild safety <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
+          The repair conversation is not a resumption of the argument. It's a meta-conversation---a conversation about the conversation. The goal is to acknowledge hurt, take responsibility, and rebuild safety <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -1070,7 +1070,7 @@ export const conflictRepairArticlesB: Article[] = [
               title: 'Validate their feelings',
               description: (
                 <p>
-                  "I can see why you'd feel hurt by that. If someone said that to me, I'd be hurt too." Validation doesn't mean you're admitting you were 100% wrong—it means you're acknowledging their emotional reality.
+                  "I can see why you'd feel hurt by that. If someone said that to me, I'd be hurt too." Validation doesn't mean you're admitting you were 100% wrong---it means you're acknowledging their emotional reality.
                 </p>
               ),
             },
@@ -1094,7 +1094,7 @@ export const conflictRepairArticlesB: Article[] = [
               title: 'Discuss what went wrong and how to prevent it',
               description: (
                 <p>
-                  "I think I got flooded and couldn't regulate. Next time I feel that way, I'm going to call a timeout before I say things I'll regret." This isn't about assigning blame—it's about learning from the rupture.
+                  "I think I got flooded and couldn't regulate. Next time I feel that way, I'm going to call a timeout before I say things I'll regret." This isn't about assigning blame---it's about learning from the rupture.
                 </p>
               ),
             },
@@ -1105,7 +1105,7 @@ export const conflictRepairArticlesB: Article[] = [
           What Makes an Apology Actually Work
         </h2>
         <p className="mb-6">
-          Not all apologies are created equal. Research identifies six components of an effective apology—and the more of these elements you include, the more likely your apology is to be accepted and facilitate healing <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
+          Not all apologies are created equal. Research identifies six components of an effective apology---and the more of these elements you include, the more likely your apology is to be accepted and facilitate healing <Citation id="2" index={2} source="Personal Relationships" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1148,7 +1148,7 @@ export const conflictRepairArticlesB: Article[] = [
           How to Receive an Apology (And Why It's Hard)
         </h2>
         <p className="mb-6">
-          Accepting an apology requires its own kind of courage. When you're still hurt, it can feel like letting them off the hook too easily. But forgiveness isn't about condoning what happened—it's about choosing to move forward together <Citation id="4" index={4} source="Frontiers in Psychology" year="2020" tier={1} />.
+          Accepting an apology requires its own kind of courage. When you're still hurt, it can feel like letting them off the hook too easily. But forgiveness isn't about condoning what happened---it's about choosing to move forward together <Citation id="4" index={4} source="Frontiers in Psychology" year="2020" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -1197,7 +1197,7 @@ export const conflictRepairArticlesB: Article[] = [
           Reconnection Rituals: Small Acts That Rebuild Safety
         </h2>
         <p className="mb-6">
-          After the repair conversation, small gestures of reconnection help both people feel emotionally safe again. Dr. Sue Johnson, founder of Emotionally Focused Therapy, calls these "bids for connection"—small invitations to re-engage <Citation id="5" index={5} source="Little, Brown and Company" year="2008" tier={5} />.
+          After the repair conversation, small gestures of reconnection help both people feel emotionally safe again. Dr. Sue Johnson, founder of Emotionally Focused Therapy, calls these "bids for connection"---small invitations to re-engage <Citation id="5" index={5} source="Little, Brown and Company" year="2008" tier={5} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1227,7 +1227,7 @@ export const conflictRepairArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>"I can't believe they said that to me"</li>
-                <li>"I should have said X, Y, Z—that would have shown them"</li>
+                <li>"I should have said X, Y, Z---that would have shown them"</li>
                 <li>Replaying the fight in your head over and over</li>
                 <li>Telling the story to multiple friends to "process"</li>
                 <li>Building a case for why you were right</li>
@@ -1252,7 +1252,7 @@ export const conflictRepairArticlesB: Article[] = [
           When Reconnection Feels Impossible
         </h2>
         <p className="mb-6">
-          If you've tried to repair and it's not working—if apologies are rejected, if resentment remains, if every attempt at reconnection is met with coldness—it may indicate deeper relational patterns that need professional support.
+          If you've tried to repair and it's not working---if apologies are rejected, if resentment remains, if every attempt at reconnection is met with coldness---it may indicate deeper relational patterns that need professional support.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1260,7 +1260,7 @@ export const conflictRepairArticlesB: Article[] = [
             <strong>Consider couples therapy if:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
-            <li>You can't seem to repair after conflicts—tension lingers for days or weeks</li>
+            <li>You can't seem to repair after conflicts---tension lingers for days or weeks</li>
             <li>Apologies feel hollow or are consistently rejected</li>
             <li>One or both of you bring up past fights during current ones</li>
             <li>You're stuck in a cycle of fight → temporary calm → repeat</li>
@@ -1278,7 +1278,7 @@ export const conflictRepairArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The strength of your relationship isn't measured by how often you fight, but by how well you repair. Every conflict is an opportunity to prove that your bond can withstand rupture—that you'll choose each other even when it's hard, that you'll come back even when you're hurt, and that love isn't about never hurting each other, but about what you do after the hurt happens.
+            The strength of your relationship isn't measured by how often you fight, but by how well you repair. Every conflict is an opportunity to prove that your bond can withstand rupture---that you'll choose each other even when it's hard, that you'll come back even when you're hurt, and that love isn't about never hurting each other, but about what you do after the hurt happens.
           </p>
         </ArticleCallout>
       </>
@@ -1342,10 +1342,10 @@ export const conflictRepairArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Not all relationship conflict is created equal. There's a critical difference between disagreements that challenge you to grow and patterns of behavior designed to control, manipulate, or harm. Healthy conflict is uncomfortable but ultimately strengthens the relationship. Abuse—whether emotional, verbal, physical, or psychological—destroys safety, autonomy, and self-worth <Citation id="1" index={1} source="Journal of Family Violence" year="2020" tier={1} />.
+            Not all relationship conflict is created equal. There's a critical difference between disagreements that challenge you to grow and patterns of behavior designed to control, manipulate, or harm. Healthy conflict is uncomfortable but ultimately strengthens the relationship. Abuse---whether emotional, verbal, physical, or psychological---destroys safety, autonomy, and self-worth <Citation id="1" index={1} source="Journal of Family Violence" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            One in four women and one in nine men experience severe intimate partner violence in their lifetime <Citation id="2" index={2} source="Centers for Disease Control and Prevention" year="2021" tier={2} />. But abuse doesn't always look like physical violence. Emotional and psychological abuse can be just as damaging—and much harder to identify. This article will help you recognize when conflict has crossed the line into abuse, and what to do if you're in an unsafe relationship.
+            One in four women and one in nine men experience severe intimate partner violence in their lifetime <Citation id="2" index={2} source="Centers for Disease Control and Prevention" year="2021" tier={2} />. But abuse doesn't always look like physical violence. Emotional and psychological abuse can be just as damaging---and much harder to identify. This article will help you recognize when conflict has crossed the line into abuse, and what to do if you're in an unsafe relationship.
           </p>
         </div>
 
@@ -1502,7 +1502,7 @@ export const conflictRepairArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Safety concerns:</strong> The most dangerous time is when you try to leave—risk of violence escalates</li>
+          <li><strong>Safety concerns:</strong> The most dangerous time is when you try to leave---risk of violence escalates</li>
           <li><strong>Financial dependence:</strong> No access to money, no job, nowhere to go</li>
           <li><strong>Isolation:</strong> Cut off from support systems who could help</li>
           <li><strong>Children:</strong> Fear of losing custody, fear of what will happen to the kids</li>
@@ -1560,7 +1560,7 @@ export const conflictRepairArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Identify safe spaces:</strong> Rooms with exits, away from weapons</li>
           <li><strong>Memorize important numbers:</strong> Don't rely on your phone in case it's taken</li>
-          <li><strong>Pack an emergency bag:</strong> ID, documents, medications, cash, change of clothes—keep it hidden or with a trusted friend</li>
+          <li><strong>Pack an emergency bag:</strong> ID, documents, medications, cash, change of clothes---keep it hidden or with a trusted friend</li>
           <li><strong>Establish a code word:</strong> A signal to friends or family that you need help immediately</li>
           <li><strong>Document abuse:</strong> Photos of injuries, screenshots of threatening messages, journal entries (store securely)</li>
           <li><strong>Know where to go:</strong> Identify local shelters, friends' homes, or safe places you can reach quickly</li>
@@ -1578,7 +1578,7 @@ export const conflictRepairArticlesB: Article[] = [
           <li><strong>Believe them:</strong> Don't minimize or question their experience</li>
           <li><strong>Don't judge or blame:</strong> Avoid "Why don't you just leave?"</li>
           <li><strong>Listen without pressuring:</strong> Let them make their own decisions about their safety</li>
-          <li><strong>Stay connected:</strong> Abusers isolate victims—your presence matters even if they can't leave yet</li>
+          <li><strong>Stay connected:</strong> Abusers isolate victims---your presence matters even if they can't leave yet</li>
           <li><strong>Offer resources:</strong> Share hotline numbers, shelter information, safety planning guides</li>
           <li><strong>Respect their timeline:</strong> Leaving is complex and dangerous. Support them wherever they are.</li>
           <li><strong>Help with safety planning:</strong> Offer to hold emergency documents, provide a place to stay, be a check-in contact</li>
@@ -1600,7 +1600,7 @@ export const conflictRepairArticlesB: Article[] = [
           Healthy relationships have conflict, but they do not have fear. Healthy relationships challenge you, but they do not diminish you. Healthy relationships have hard moments, but they do not leave you feeling worthless, trapped, or unsafe.
         </p>
         <p className="mb-6">
-          If your relationship has crossed the line into abuse, reaching out for help is not weakness—it's survival. Whether you call a hotline today or just start thinking about what safety might look like, every step toward recognizing the truth is a step toward freedom.
+          If your relationship has crossed the line into abuse, reaching out for help is not weakness---it's survival. Whether you call a hotline today or just start thinking about what safety might look like, every step toward recognizing the truth is a step toward freedom.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1696,10 +1696,10 @@ export const conflictRepairArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your kids will fight. Siblings will argue over toys. Friends will disagree on the playground. Teenagers will clash with you over boundaries and independence. Conflict is inevitable—but how children learn to handle it isn't. The skills they develop in childhood for navigating disagreements, managing big emotions, and repairing relationships will shape how they handle conflict for the rest of their lives <Citation id="1" index={1} source="Developmental Psychology" year="2020" tier={1} />.
+            Your kids will fight. Siblings will argue over toys. Friends will disagree on the playground. Teenagers will clash with you over boundaries and independence. Conflict is inevitable---but how children learn to handle it isn't. The skills they develop in childhood for navigating disagreements, managing big emotions, and repairing relationships will shape how they handle conflict for the rest of their lives <Citation id="1" index={1} source="Developmental Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Teaching conflict resolution isn't about eliminating disagreements—it's about giving kids the tools to work through them constructively. Children who learn healthy conflict skills develop stronger social relationships, better emotional regulation, and higher self-esteem <Citation id="4" index={4} source="Early Childhood Research Quarterly" year="2020" tier={1} />. Here's how to teach these essential skills at every stage of development.
+            Teaching conflict resolution isn't about eliminating disagreements---it's about giving kids the tools to work through them constructively. Children who learn healthy conflict skills develop stronger social relationships, better emotional regulation, and higher self-esteem <Citation id="4" index={4} source="Early Childhood Research Quarterly" year="2020" tier={1} />. Here's how to teach these essential skills at every stage of development.
           </p>
         </div>
 
@@ -1707,7 +1707,7 @@ export const conflictRepairArticlesB: Article[] = [
           Why Teaching Conflict Resolution Matters
         </h2>
         <p className="mb-6">
-          Children are not born knowing how to navigate disagreements—they learn by watching adults and through guided practice. Without explicit teaching, they default to whatever strategies feel instinctive: aggression, avoidance, or emotional meltdowns <Citation id="7" index={7} source="Journal of Child and Family Studies" year="2021" tier={1} />.
+          Children are not born knowing how to navigate disagreements---they learn by watching adults and through guided practice. Without explicit teaching, they default to whatever strategies feel instinctive: aggression, avoidance, or emotional meltdowns <Citation id="7" index={7} source="Journal of Child and Family Studies" year="2021" tier={1} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1754,7 +1754,7 @@ export const conflictRepairArticlesB: Article[] = [
           Age-by-Age Conflict Resolution Teaching
         </h2>
         <p className="mb-6">
-          Conflict resolution skills develop gradually. What you teach—and how you teach it—depends on the child's developmental stage <Citation id="8" index={8} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
+          Conflict resolution skills develop gradually. What you teach---and how you teach it---depends on the child's developmental stage <Citation id="8" index={8} source="Centers for Disease Control and Prevention" year="2021" tier={2} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1807,7 +1807,7 @@ export const conflictRepairArticlesB: Article[] = [
           <li><strong>Teach the six-part apology:</strong> (1) I'm sorry, (2) for [specific behavior], (3) It was wrong because..., (4) I understand it made you feel..., (5) Next time I'll..., (6) Will you forgive me?</li>
           <li><strong>Introduce active listening:</strong> 'Before you respond, tell me what you heard them say"</li>
           <li><strong>Let them solve their own conflicts (with coaching):</strong> "What do you think you could do to solve this problem?"</li>
-          <li><strong>Discuss fairness vs. equality:</strong> "Fair doesn't always mean everyone gets the same thing—it means everyone gets what they need"</li>
+          <li><strong>Discuss fairness vs. equality:</strong> "Fair doesn't always mean everyone gets the same thing---it means everyone gets what they need"</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1829,7 +1829,7 @@ export const conflictRepairArticlesB: Article[] = [
           Sibling Conflict: When to Step In and When to Step Back
         </h2>
         <p className="mb-6">
-          Sibling conflict is one of the most common places kids practice conflict resolution—for better or worse. Your role is to coach, not referee.
+          Sibling conflict is one of the most common places kids practice conflict resolution---for better or worse. Your role is to coach, not referee.
         </p>
 
         <ComparisonTable
@@ -1935,7 +1935,7 @@ export const conflictRepairArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Teaching conflict resolution is one of the greatest gifts you can give your children. It's not about preventing conflict—it's about equipping them to handle it with empathy, assertiveness, and creativity. The skills they learn at your kitchen table, mediating fights over toys and screen time, will serve them in friendships, romantic relationships, and workplaces for the rest of their lives. You're not just resolving today's argument—you're building tomorrow's emotionally intelligent adult.
+            Teaching conflict resolution is one of the greatest gifts you can give your children. It's not about preventing conflict---it's about equipping them to handle it with empathy, assertiveness, and creativity. The skills they learn at your kitchen table, mediating fights over toys and screen time, will serve them in friendships, romantic relationships, and workplaces for the rest of their lives. You're not just resolving today's argument---you're building tomorrow's emotionally intelligent adult.
           </p>
         </ArticleCallout>
       </>

@@ -17,7 +17,7 @@ export const understandingMotivationArticlesA: Article[] = [
     id: catId(11),
     slug: 'intrinsic-vs-extrinsic-motivation-why-source-matters',
     title: 'Intrinsic vs. Extrinsic Motivation: Why the Source of Your Drive Matters',
-    description: 'Explore the critical difference between motivation that comes from within and motivation driven by external rewards—and why one leads to sustainable change.',
+    description: 'Explore the critical difference between motivation that comes from within and motivation driven by external rewards---and why one leads to sustainable change.',
     image: "/images/articles/cat08/cover-011.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -103,10 +103,10 @@ export const understandingMotivationArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can motivate yourself to exercise by promising a reward—a treat, a shopping trip, a night out. Or you can exercise because you genuinely enjoy how it makes you feel. Both approaches might get you to the gym, but only one will keep you going when life gets complicated. The source of your motivation matters more than the strength of it.
+            You can motivate yourself to exercise by promising a reward---a treat, a shopping trip, a night out. Or you can exercise because you genuinely enjoy how it makes you feel. Both approaches might get you to the gym, but only one will keep you going when life gets complicated. The source of your motivation matters more than the strength of it.
           </p>
           <p className="mb-6">
-            Research in self-determination theory distinguishes between intrinsic motivation—doing something because it's inherently interesting or enjoyable—and extrinsic motivation—doing something because it leads to a separable outcome <Citation id="1" index={1} source="Contemporary Educational Psychology" year="2000" tier={1} />. This distinction isn't just theoretical. The type of motivation you have predicts how long you'll stick with a behavior, how much effort you'll invest, and how satisfied you'll feel with the outcome <Citation id="2" index={2} source="Psychological Inquiry" year="2000" tier={1} />.
+            Research in self-determination theory distinguishes between intrinsic motivation---doing something because it's inherently interesting or enjoyable---and extrinsic motivation---doing something because it leads to a separable outcome <Citation id="1" index={1} source="Contemporary Educational Psychology" year="2000" tier={1} />. This distinction isn't just theoretical. The type of motivation you have predicts how long you'll stick with a behavior, how much effort you'll invest, and how satisfied you'll feel with the outcome <Citation id="2" index={2} source="Psychological Inquiry" year="2000" tier={1} />.
           </p>
         </div>
 
@@ -124,8 +124,8 @@ export const understandingMotivationArticlesA: Article[] = [
           data={[
             {
               aspect: 'Source',
-              intrinsic: 'Internal—interest, enjoyment, satisfaction',
-              extrinsic: 'External—rewards, praise, avoiding punishment',
+              intrinsic: 'Internal---interest, enjoyment, satisfaction',
+              extrinsic: 'External---rewards, praise, avoiding punishment',
             },
             {
               aspect: 'Duration',
@@ -151,7 +151,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Intrinsic motivation is powered by psychological needs for autonomy, competence, and relatedness—you do things because they align with your interests and values. Extrinsic motivation is powered by contingencies—you do things to get rewards or avoid punishments <Citation id="3" index={3} source="Review of Educational Research" year="2001" tier={1} />.
+          Intrinsic motivation is powered by psychological needs for autonomy, competence, and relatedness---you do things because they align with your interests and values. Extrinsic motivation is powered by contingencies---you do things to get rewards or avoid punishments <Citation id="3" index={3} source="Review of Educational Research" year="2001" tier={1} />.
         </p>
 
         <h2 id="undermining-effect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -167,7 +167,7 @@ export const understandingMotivationArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                When you start paying yourself for activities you used to enjoy, your brain begins to reinterpret the activity. Instead of "I draw because I love it," the narrative shifts to "I draw to earn rewards." When the rewards stop, so does the behavior—even if you originally found it intrinsically enjoyable.
+                When you start paying yourself for activities you used to enjoy, your brain begins to reinterpret the activity. Instead of "I draw because I love it," the narrative shifts to "I draw to earn rewards." When the rewards stop, so does the behavior---even if you originally found it intrinsically enjoyable.
               </p>
               <p>
                 This effect is strongest when rewards are expected, tangible (money, prizes), and contingent on completing the task rather than the quality of performance <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2003" tier={1} />.
@@ -190,7 +190,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: 'Amotivation',
               description: (
                 <p>
-                  No intention to act—you don't see the value or don't believe you can succeed. This is the absence of motivation.
+                  No intention to act---you don't see the value or don't believe you can succeed. This is the absence of motivation.
                 </p>
               ),
             },
@@ -206,7 +206,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: 'Introjected Regulation',
               description: (
                 <p>
-                  Behavior is driven by internal pressure—guilt, shame, ego. You exercise to avoid feeling bad about yourself, not because you want to.
+                  Behavior is driven by internal pressure---guilt, shame, ego. You exercise to avoid feeling bad about yourself, not because you want to.
                 </p>
               ),
             },
@@ -222,7 +222,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: 'Integrated Regulation',
               description: (
                 <p>
-                  The behavior is fully aligned with your values and sense of self. Exercise is part of who you are—it's integrated into your identity.
+                  The behavior is fully aligned with your values and sense of self. Exercise is part of who you are---it's integrated into your identity.
                 </p>
               ),
             },
@@ -238,7 +238,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          The goal isn't always to achieve pure intrinsic motivation—some necessary tasks will never be inherently enjoyable. The goal is to move along the spectrum toward more internalized forms of regulation, where your behavior aligns with your values even when external rewards aren't present <Citation id="8" index={8} source="Journal of Personality" year="1994" tier={1} />.
+          The goal isn't always to achieve pure intrinsic motivation---some necessary tasks will never be inherently enjoyable. The goal is to move along the spectrum toward more internalized forms of regulation, where your behavior aligns with your values even when external rewards aren't present <Citation id="8" index={8} source="Journal of Personality" year="1994" tier={1} />.
         </p>
 
         <h2 id="practical-applications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -267,7 +267,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: '3. Build Competence Through Optimal Challenge',
               content: (
                 <p>
-                  Intrinsic motivation thrives when you're challenged just beyond your current skill level—not so easy that you're bored, not so hard that you're overwhelmed. This 'flow zone' sustains engagement because the activity itself becomes rewarding. Start where you can succeed, then gradually increase difficulty.
+                  Intrinsic motivation thrives when you're challenged just beyond your current skill level---not so easy that you're bored, not so hard that you're overwhelmed. This 'flow zone' sustains engagement because the activity itself becomes rewarding. Start where you can succeed, then gradually increase difficulty.
                 </p>
               ),
             },
@@ -275,7 +275,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: '4. Connect to Personal Values',
               content: (
                 <p>
-                  When you can't find inherent enjoyment, connect the behavior to your core values. You might not love meal prep, but if you value health, independence, and taking care of your body, meal prep becomes an expression of those values rather than just a chore. This is identified regulation—still autonomous, still self-determined.
+                  When you can't find inherent enjoyment, connect the behavior to your core values. You might not love meal prep, but if you value health, independence, and taking care of your body, meal prep becomes an expression of those values rather than just a chore. This is identified regulation---still autonomous, still self-determined.
                 </p>
               ),
             },
@@ -294,7 +294,7 @@ export const understandingMotivationArticlesA: Article[] = [
           When Extrinsic Motivation Is Useful
         </h2>
         <p className="mb-6">
-          Extrinsic motivation isn't inherently bad—it's a necessary tool for getting started with uninteresting but important tasks. The key is to use it strategically while working toward internalization:
+          Extrinsic motivation isn't inherently bad---it's a necessary tool for getting started with uninteresting but important tasks. The key is to use it strategically while working toward internalization:
         </p>
 
         <StatCard
@@ -321,8 +321,8 @@ export const understandingMotivationArticlesA: Article[] = [
           content={
             <ul className="list-disc pl-6 space-y-2">
               <li>Intrinsic motivation (internal interest) leads to more sustained engagement and wellbeing than extrinsic motivation (external rewards)</li>
-              <li>Adding external rewards to intrinsically motivated activities can undermine the original motivation—the undermining effect</li>
-              <li>Motivation exists on a spectrum from fully external to fully internalized—you don't have to love everything, but you can align behavior with your values</li>
+              <li>Adding external rewards to intrinsically motivated activities can undermine the original motivation---the undermining effect</li>
+              <li>Motivation exists on a spectrum from fully external to fully internalized---you don't have to love everything, but you can align behavior with your values</li>
               <li>Cultivate intrinsic motivation by providing autonomy, building competence through optimal challenge, and focusing on process over outcomes</li>
               <li>Use extrinsic rewards strategically as a starting point, but work toward internalization by connecting behavior to personal meaning</li>
             </ul>
@@ -341,7 +341,7 @@ export const understandingMotivationArticlesA: Article[] = [
     id: catId(12),
     slug: 'self-determination-theory-three-needs',
     title: 'Self-Determination Theory: The Three Things Every Person Needs to Feel Motivated',
-    description: 'Discover the three universal psychological needs—autonomy, competence, and relatedness—that fuel intrinsic motivation and psychological wellbeing.',
+    description: 'Discover the three universal psychological needs---autonomy, competence, and relatedness---that fuel intrinsic motivation and psychological wellbeing.',
     image: "/images/articles/cat08/cover-012.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 9,
@@ -438,7 +438,7 @@ export const understandingMotivationArticlesA: Article[] = [
             You've probably noticed that some environments energize you while others drain your motivation completely. You might thrive in one job and feel unmotivated in another that pays better. You might stick with one hobby for years and abandon another after weeks. Self-determination theory explains why: certain psychological needs must be met for you to feel motivated, engaged, and psychologically healthy.
           </p>
           <p className="mb-6">
-            Developed by psychologists Edward Deci and Richard Ryan, self-determination theory (SDT) proposes that all humans share three innate psychological needs: autonomy, competence, and relatedness <Citation id="1" index={1} source="American Psychologist" year="2000" tier={1} />. When these needs are satisfied, people experience greater intrinsic motivation, engagement, and wellbeing. When they're thwarted, motivation suffers—no matter how much you tell yourself you "should" be motivated.
+            Developed by psychologists Edward Deci and Richard Ryan, self-determination theory (SDT) proposes that all humans share three innate psychological needs: autonomy, competence, and relatedness <Citation id="1" index={1} source="American Psychologist" year="2000" tier={1} />. When these needs are satisfied, people experience greater intrinsic motivation, engagement, and wellbeing. When they're thwarted, motivation suffers---no matter how much you tell yourself you "should" be motivated.
           </p>
         </div>
 
@@ -452,10 +452,10 @@ export const understandingMotivationArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                Unlike wants (which are learned and culturally specific), these three needs are considered universal psychological nutrients—things every human requires for optimal functioning, regardless of culture, age, or context. Just as your body needs water and nutrients to function, your psychology needs autonomy, competence, and relatedness to thrive <Citation id="6" index={6} source="Annual Review of Psychology" year="2001" tier={1} />.
+                Unlike wants (which are learned and culturally specific), these three needs are considered universal psychological nutrients---things every human requires for optimal functioning, regardless of culture, age, or context. Just as your body needs water and nutrients to function, your psychology needs autonomy, competence, and relatedness to thrive <Citation id="6" index={6} source="Annual Review of Psychology" year="2001" tier={1} />.
               </p>
               <p>
-                When these needs are consistently satisfied, you experience eudaimonic wellbeing—a sense of meaning, growth, and vitality. When they're frustrated, you experience decreased motivation, lower wellbeing, and increased vulnerability to mental health difficulties.
+                When these needs are consistently satisfied, you experience eudaimonic wellbeing---a sense of meaning, growth, and vitality. When they're frustrated, you experience decreased motivation, lower wellbeing, and increased vulnerability to mental health difficulties.
               </p>
             </div>
           }
@@ -465,7 +465,7 @@ export const understandingMotivationArticlesA: Article[] = [
           1. Autonomy: The Need to Be Self-Governing
         </h3>
         <p className="mb-6">
-          Autonomy is the need to experience behavior as freely chosen and self-endorsed. It's not about being independent or alone—it's about feeling that your actions reflect your authentic self rather than external pressure or internal compulsion <Citation id="2" index={2} source="Journal of Social Psychology" year="2013" tier={1} />.
+          Autonomy is the need to experience behavior as freely chosen and self-endorsed. It's not about being independent or alone---it's about feeling that your actions reflect your authentic self rather than external pressure or internal compulsion <Citation id="2" index={2} source="Journal of Social Psychology" year="2013" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -500,7 +500,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Importantly, autonomy doesn't mean doing whatever you want. You can experience autonomy even in structured environments if you endorse the structure. A student who genuinely values education feels autonomous doing homework; one who does it only to avoid punishment does not—even if the behavior looks identical from the outside.
+          Importantly, autonomy doesn't mean doing whatever you want. You can experience autonomy even in structured environments if you endorse the structure. A student who genuinely values education feels autonomous doing homework; one who does it only to avoid punishment does not---even if the behavior looks identical from the outside.
         </p>
 
         <h3 id="competence" className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-10 mb-4 scroll-mt-32">
@@ -531,7 +531,7 @@ export const understandingMotivationArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Competence isn't about being the best or comparing yourself to others. It's about experiencing yourself as capable and effective. You can satisfy competence needs even in domains where you're objectively 'not good"—what matters is that you see yourself improving and that your efforts produce meaningful results.
+                    Competence isn't about being the best or comparing yourself to others. It's about experiencing yourself as capable and effective. You can satisfy competence needs even in domains where you're objectively 'not good"---what matters is that you see yourself improving and that your efforts produce meaningful results.
                   </p>
                   <p>
                     This is why beginner musicians often feel more motivated than intermediate ones. Beginners experience rapid, tangible progress (competence satisfaction), while intermediate players often hit plateaus where progress feels invisible (competence frustration).
@@ -546,17 +546,17 @@ export const understandingMotivationArticlesA: Article[] = [
           3. Relatedness: The Need for Connection
         </h3>
         <p className="mb-6">
-          Relatedness is the need to feel connected to others—to care for and be cared for, to feel a sense of belongingness and interpersonal connection. Humans are fundamentally social, and we need to feel that we matter to others and that others matter to us <Citation id="4" index={4} source="Journal of Applied Psychology" year="2015" tier={1} />.
+          Relatedness is the need to feel connected to others---to care for and be cared for, to feel a sense of belongingness and interpersonal connection. Humans are fundamentally social, and we need to feel that we matter to others and that others matter to us <Citation id="4" index={4} source="Journal of Applied Psychology" year="2015" tier={1} />.
         </p>
 
         <QuoteBlock
-          quote="The need for relatedness is not about constant social interaction or having many friends. It's about feeling that genuine connections exist—that you're valued, understood, and that your relationships are authentic rather than instrumental."
+          quote="The need for relatedness is not about constant social interaction or having many friends. It's about feeling that genuine connections exist---that you're valued, understood, and that your relationships are authentic rather than instrumental."
           author="Edward Deci & Richard Ryan"
           source="Self-Determination Theory Research"
         />
 
         <p className="mt-6 mb-6">
-          Relatedness needs can be satisfied through close relationships (family, friends, partners), but also through broader social contexts (feeling part of a team, community, or shared purpose). What matters is quality over quantity—a few authentic connections satisfy relatedness needs better than many superficial ones.
+          Relatedness needs can be satisfied through close relationships (family, friends, partners), but also through broader social contexts (feeling part of a team, community, or shared purpose). What matters is quality over quantity---a few authentic connections satisfy relatedness needs better than many superficial ones.
         </p>
 
         <h2 id="cross-cultural" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -572,7 +572,7 @@ export const understandingMotivationArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                In individualistic cultures (like the US), autonomy might look like "doing your own thing." In collectivistic cultures (like Japan or China), autonomy might look like "freely choosing to fulfill role obligations." The form differs, but the underlying need—to experience behavior as self-endorsed rather than pressured—remains the same.
+                In individualistic cultures (like the US), autonomy might look like "doing your own thing." In collectivistic cultures (like Japan or China), autonomy might look like "freely choosing to fulfill role obligations." The form differs, but the underlying need---to experience behavior as self-endorsed rather than pressured---remains the same.
               </p>
               <p>
                 Similarly, competence might be demonstrated through individual achievement in some cultures and through contributing to group success in others. Relatedness might emphasize close friendships in some contexts and broader community harmony in others. The needs are universal; the strategies for satisfying them are culturally shaped.
@@ -607,7 +607,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          This means it's not enough to simply not thwart needs—you need to actively support them. A neutral environment where needs are neither satisfied nor frustrated produces mediocre motivation and wellbeing. True thriving requires active need satisfaction.
+          This means it's not enough to simply not thwart needs---you need to actively support them. A neutral environment where needs are neither satisfied nor frustrated produces mediocre motivation and wellbeing. True thriving requires active need satisfaction.
         </p>
 
         <h2 id="practical-applications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -693,7 +693,7 @@ export const understandingMotivationArticlesA: Article[] = [
               <li>All humans share three innate psychological needs: autonomy (self-governance), competence (effectiveness), and relatedness (connection)</li>
               <li>When these needs are satisfied, you experience greater intrinsic motivation, engagement, and wellbeing; when frustrated, motivation and mental health suffer</li>
               <li>These needs are universal across cultures, though how they're expressed and satisfied varies by cultural context</li>
-              <li>Need satisfaction (actively supporting needs) produces better outcomes than need neutrality—you must actively create environments that support these needs</li>
+              <li>Need satisfaction (actively supporting needs) produces better outcomes than need neutrality---you must actively create environments that support these needs</li>
               <li>Practical strategies include providing choice and rationale (autonomy), optimal challenges and feedback (competence), and authentic connections (relatedness)</li>
             </ul>
           }
@@ -701,7 +701,7 @@ export const understandingMotivationArticlesA: Article[] = [
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> Understanding these needs is the first step—but what happens when your motivation disappears despite your best efforts? Learn why motivation fades and how to respond when you lose interest in things you used to care about.
+            <strong>Next:</strong> Understanding these needs is the first step---but what happens when your motivation disappears despite your best efforts? Learn why motivation fades and how to respond when you lose interest in things you used to care about.
           </p>
         </div>
       </>
@@ -711,7 +711,7 @@ export const understandingMotivationArticlesA: Article[] = [
     id: catId(13),
     slug: 'why-motivation-fades-psychology-losing-interest',
     title: 'Why Motivation Fades: The Psychology of Losing Interest',
-    description: 'Discover the psychological mechanisms behind waning motivation—from hedonic adaptation to value drift—and what to do when you stop caring about goals that once mattered.',
+    description: 'Discover the psychological mechanisms behind waning motivation---from hedonic adaptation to value drift---and what to do when you stop caring about goals that once mattered.',
     image: "/images/articles/cat08/cover-013.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -797,10 +797,10 @@ export const understandingMotivationArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Three months ago, you were fired up about a new project. You set goals, made plans, started strong. Now? You can barely remember why you cared. The motivation that once felt so real has evaporated, leaving you wondering what went wrong. If this pattern feels familiar, you're not broken—you're experiencing one of the most common and least discussed aspects of human psychology: motivation naturally fades.
+            Three months ago, you were fired up about a new project. You set goals, made plans, started strong. Now? You can barely remember why you cared. The motivation that once felt so real has evaporated, leaving you wondering what went wrong. If this pattern feels familiar, you're not broken---you're experiencing one of the most common and least discussed aspects of human psychology: motivation naturally fades.
           </p>
           <p className="mb-6">
-            Understanding why motivation disappears is the first step toward working with this reality rather than fighting it. Research on goal pursuit, hedonic adaptation, and motivational dynamics reveals several predictable patterns that cause motivation to wane—and strategies for sustaining it when it matters most.
+            Understanding why motivation disappears is the first step toward working with this reality rather than fighting it. Research on goal pursuit, hedonic adaptation, and motivational dynamics reveals several predictable patterns that cause motivation to wane---and strategies for sustaining it when it matters most.
           </p>
         </div>
 
@@ -808,7 +808,7 @@ export const understandingMotivationArticlesA: Article[] = [
           The Hedonic Treadmill: Why Novelty Wears Off
         </h2>
         <p className="mb-6">
-          One of the primary reasons motivation fades is hedonic adaptation—the psychological process by which you quickly return to a baseline level of happiness after positive or negative events <Citation id="1" index={1} source="Current Directions in Psychological Science" year="2008" tier={1} />. That exciting new job becomes routine. The hobby you couldn't wait to start becomes just another task.
+          One of the primary reasons motivation fades is hedonic adaptation---the psychological process by which you quickly return to a baseline level of happiness after positive or negative events <Citation id="1" index={1} source="Current Directions in Psychological Science" year="2008" tier={1} />. That exciting new job becomes routine. The hobby you couldn't wait to start becomes just another task.
         </p>
 
         <ArticleCallout
@@ -817,17 +817,17 @@ export const understandingMotivationArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                When you first start something new, your brain releases dopamine in response to the novelty and anticipated reward. This feels like motivation—excitement, energy, eagerness. But as the behavior becomes familiar, your brain adapts. The same activity produces less dopamine response, and the motivation evaporates <Citation id="4" index={4} source="Trends in Cognitive Sciences" year="2016" tier={1} />.
+                When you first start something new, your brain releases dopamine in response to the novelty and anticipated reward. This feels like motivation---excitement, energy, eagerness. But as the behavior becomes familiar, your brain adapts. The same activity produces less dopamine response, and the motivation evaporates <Citation id="4" index={4} source="Trends in Cognitive Sciences" year="2016" tier={1} />.
               </p>
               <p>
-                This is why new gym memberships are used enthusiastically in January and abandoned by March. The behavior hasn't changed—your brain's response to it has. You've adapted to the stimulus, and what once felt motivating now feels neutral or even effortful.
+                This is why new gym memberships are used enthusiastically in January and abandoned by March. The behavior hasn't changed---your brain's response to it has. You've adapted to the stimulus, and what once felt motivating now feels neutral or even effortful.
               </p>
             </div>
           }
         />
 
         <p className="mt-6 mb-6">
-          Hedonic adaptation is actually adaptive—if you never adapted, you'd remain overstimulated by everything new and unable to function effectively. But it means that motivation based purely on novelty or immediate pleasure is inherently temporary <Citation id="2" index={2} source="Journal of Economic Psychology" year="2019" tier={1} />.
+          Hedonic adaptation is actually adaptive---if you never adapted, you'd remain overstimulated by everything new and unable to function effectively. But it means that motivation based purely on novelty or immediate pleasure is inherently temporary <Citation id="2" index={2} source="Journal of Economic Psychology" year="2019" tier={1} />.
         </p>
 
         <h2 id="progress-paradox" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -853,7 +853,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          At the start, you're energized by novelty and possibility—everything feels achievable. At the end, you're motivated by proximity to completion—you can see the finish line. But in the middle, you've lost the novelty and you can't yet see the end. Progress feels slow, the goal feels distant, and motivation plummets.
+          At the start, you're energized by novelty and possibility---everything feels achievable. At the end, you're motivated by proximity to completion---you can see the finish line. But in the middle, you've lost the novelty and you can't yet see the end. Progress feels slow, the goal feels distant, and motivation plummets.
         </p>
 
         <ArticleAccordion
@@ -862,7 +862,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: 'Why the Middle Matters Most',
               content: (
                 <p>
-                  Most goals are abandoned in the middle, not at the start. The middle is where initial enthusiasm has worn off but the payoff still feels far away. If you can push through the middle—by breaking large goals into smaller milestones, tracking progress, or adding variety—you're much more likely to reach your goal. The middle is where discipline replaces motivation.
+                  Most goals are abandoned in the middle, not at the start. The middle is where initial enthusiasm has worn off but the payoff still feels far away. If you can push through the middle---by breaking large goals into smaller milestones, tracking progress, or adding variety---you're much more likely to reach your goal. The middle is where discipline replaces motivation.
                 </p>
               ),
             },
@@ -873,7 +873,7 @@ export const understandingMotivationArticlesA: Article[] = [
           Motivational Depletion: The Fatigue Factor
         </h2>
         <p className="mb-6">
-          Another reason motivation fades is simple fatigue. Pursuing goals—especially goals that require self-control—depletes motivational resources <Citation id="5" index={5} source="Motivation Science" year="2019" tier={1} />. You start the day energized and end it unmotivated, not because the goal changed but because you're mentally exhausted.
+          Another reason motivation fades is simple fatigue. Pursuing goals---especially goals that require self-control---depletes motivational resources <Citation id="5" index={5} source="Motivation Science" year="2019" tier={1} />. You start the day energized and end it unmotivated, not because the goal changed but because you're mentally exhausted.
         </p>
 
         <StatCard
@@ -887,7 +887,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          This is why motivation often returns after rest, vacation, or simply a good night's sleep. The goal hasn't become more meaningful—you've restored your motivational resources. Recognizing depletion as temporary can prevent you from mistaking fatigue for genuine disinterest.
+          This is why motivation often returns after rest, vacation, or simply a good night's sleep. The goal hasn't become more meaningful---you've restored your motivational resources. Recognizing depletion as temporary can prevent you from mistaking fatigue for genuine disinterest.
         </p>
 
         <h2 id="value-drift" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -945,14 +945,14 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          This is why successful people often seem driven to immediately pursue the next goal—not because they're never satisfied, but because the meaning and structure that came from pursuit needs to be replaced. The solution isn't to avoid achieving goals, but to understand that motivation after achievement requires cultivating new sources of meaning.
+          This is why successful people often seem driven to immediately pursue the next goal---not because they're never satisfied, but because the meaning and structure that came from pursuit needs to be replaced. The solution isn't to avoid achieving goals, but to understand that motivation after achievement requires cultivating new sources of meaning.
         </p>
 
         <h2 id="clinical-considerations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Motivation Loss Signals Something More
         </h2>
         <p className="mb-6">
-          While motivation naturally fluctuates, persistent and pervasive loss of motivation—especially for activities you once found meaningful—can signal depression or anhedonia <Citation id="8" index={8} source="Current Opinion in Behavioral Sciences" year="2018" tier={1} />. If you've lost interest in most things, feel emotionally flat, and experience this consistently for weeks or months, it's worth speaking with a mental health professional.
+          While motivation naturally fluctuates, persistent and pervasive loss of motivation---especially for activities you once found meaningful---can signal depression or anhedonia <Citation id="8" index={8} source="Current Opinion in Behavioral Sciences" year="2018" tier={1} />. If you've lost interest in most things, feel emotionally flat, and experience this consistently for weeks or months, it's worth speaking with a mental health professional.
         </p>
 
         <ArticleCallout
@@ -969,7 +969,7 @@ export const understandingMotivationArticlesA: Article[] = [
                 <li>You experience physical symptoms like fatigue, sleep changes, or appetite changes</li>
               </ul>
               <p className="mt-3">
-                Depression doesn't just make you feel unmotivated—it fundamentally alters your brain's reward processing system <Citation id="9" index={9} source="Psychological Review" year="2009" tier={1} />. Addressing the underlying condition is often necessary before motivation can return.
+                Depression doesn't just make you feel unmotivated---it fundamentally alters your brain's reward processing system <Citation id="9" index={9} source="Psychological Review" year="2009" tier={1} />. Addressing the underlying condition is often necessary before motivation can return.
               </p>
             </div>
           }
@@ -1034,10 +1034,10 @@ export const understandingMotivationArticlesA: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>Motivation naturally fades due to hedonic adaptation—your brain adapts to repeated stimuli, reducing dopamine response over time</li>
-              <li>The "middle problem" means motivation is lowest when you've lost novelty but can't yet see the finish line—this is where most goals are abandoned</li>
+              <li>Motivation naturally fades due to hedonic adaptation---your brain adapts to repeated stimuli, reducing dopamine response over time</li>
+              <li>The "middle problem" means motivation is lowest when you've lost novelty but can't yet see the finish line---this is where most goals are abandoned</li>
               <li>Motivational depletion from fatigue, stress, or decision fatigue is temporary and recoverable with rest; don't mistake tiredness for genuine disinterest</li>
-              <li>Sometimes motivation fades because your values have genuinely shifted—it's okay to let go of goals that no longer align with who you are</li>
+              <li>Sometimes motivation fades because your values have genuinely shifted---it's okay to let go of goals that no longer align with who you are</li>
               <li>Persistent, pervasive loss of motivation across all domains may signal depression and warrants professional support</li>
             </ul>
           }
@@ -1045,7 +1045,7 @@ export const understandingMotivationArticlesA: Article[] = [
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> When motivation fails, you need different tools. Discover motivational interviewing techniques—therapeutic strategies originally designed for counseling—that you can adapt to work on yourself when your drive disappears.
+            <strong>Next:</strong> When motivation fails, you need different tools. Discover motivational interviewing techniques---therapeutic strategies originally designed for counseling---that you can adapt to work on yourself when your drive disappears.
           </p>
         </div>
       </>
@@ -1055,7 +1055,7 @@ export const understandingMotivationArticlesA: Article[] = [
     id: catId(14),
     slug: 'motivational-interviewing-techniques-self',
     title: 'Motivational Interviewing Techniques You Can Use on Yourself',
-    description: 'Learn evidence-based strategies from motivational interviewing therapy—originally designed for counselors—that you can adapt to explore and strengthen your own motivation for change.',
+    description: 'Learn evidence-based strategies from motivational interviewing therapy---originally designed for counselors---that you can adapt to explore and strengthen your own motivation for change.',
     image: "/images/articles/cat08/cover-014.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 9,
@@ -1141,10 +1141,10 @@ export const understandingMotivationArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know you should exercise more, but you don't. You want to cut back on drinking, but you keep making excuses. You've set the same goal five times and abandoned it five times. Traditional self-help says 'just do it' or "find your why, ' but what if the problem isn't that you lack motivation—it's that you're ambivalent, and no amount of pep talks can resolve internal conflict?
+            You know you should exercise more, but you don't. You want to cut back on drinking, but you keep making excuses. You've set the same goal five times and abandoned it five times. Traditional self-help says 'just do it' or "find your why, ' but what if the problem isn't that you lack motivation---it's that you're ambivalent, and no amount of pep talks can resolve internal conflict?
           </p>
           <p className="mb-6">
-            Motivational interviewing (MI) is a therapeutic approach developed to help people explore and resolve ambivalence about behavior change <Citation id="1" index={1} source="Guilford Press" year="2012" tier={4} />. Originally designed for counselors working with clients resistant to change, MI's principles can be adapted for self-use. Meta-analyses show MI is effective across diverse behaviors—substance use, health behaviors, mental health treatment adherence—with moderate to strong effect sizes <Citation id="2" index={2} source="Research on Social Work Practice" year="2013" tier={1} />.
+            Motivational interviewing (MI) is a therapeutic approach developed to help people explore and resolve ambivalence about behavior change <Citation id="1" index={1} source="Guilford Press" year="2012" tier={4} />. Originally designed for counselors working with clients resistant to change, MI's principles can be adapted for self-use. Meta-analyses show MI is effective across diverse behaviors---substance use, health behaviors, mental health treatment adherence---with moderate to strong effect sizes <Citation id="2" index={2} source="Research on Social Work Practice" year="2013" tier={1} />.
           </p>
         </div>
 
@@ -1162,7 +1162,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: 'Resist the Righting Reflex',
               description: (
                 <p>
-                  The 'righting reflex' is the urge to fix, advise, or convince. When you tell yourself "I SHOULD exercise," you activate internal resistance. MI teaches that pushing yourself with "shoulds" often backfires—instead, explore why you're ambivalent without judgment.
+                  The 'righting reflex' is the urge to fix, advise, or convince. When you tell yourself "I SHOULD exercise," you activate internal resistance. MI teaches that pushing yourself with "shoulds" often backfires---instead, explore why you're ambivalent without judgment.
                 </p>
               ),
             },
@@ -1186,7 +1186,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: 'Empower Yourself',
               description: (
                 <p>
-                  Recognize that you have agency and capacity for change. MI is collaborative and autonomy-supportive—you're not broken and needing to be fixed; you're capable and exploring options.
+                  Recognize that you have agency and capacity for change. MI is collaborative and autonomy-supportive---you're not broken and needing to be fixed; you're capable and exploring options.
                 </p>
               ),
             },
@@ -1197,7 +1197,7 @@ export const understandingMotivationArticlesA: Article[] = [
           Understanding Ambivalence: The Real Block to Change
         </h2>
         <p className="mb-6">
-          Most people struggling with behavior change aren't unmotivated—they're ambivalent. Ambivalence means experiencing simultaneously conflicting motivations: part of you wants to change, part of you wants to stay the same <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2002" tier={5} />.
+          Most people struggling with behavior change aren't unmotivated---they're ambivalent. Ambivalence means experiencing simultaneously conflicting motivations: part of you wants to change, part of you wants to stay the same <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2002" tier={5} />.
         </p>
 
         <ComparisonTable
@@ -1257,11 +1257,11 @@ export const understandingMotivationArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Affirmations acknowledge your strengths, efforts, and values—not empty positivity, but genuine recognition. Research on self-compassion shows that treating yourself with the same kindness you'd offer a friend increases motivation and resilience <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2007" tier={1} />.
+                    Affirmations acknowledge your strengths, efforts, and values---not empty positivity, but genuine recognition. Research on self-compassion shows that treating yourself with the same kindness you'd offer a friend increases motivation and resilience <Citation id="7" index={7} source="Journal of Personality and Social Psychology" year="2007" tier={1} />.
                   </p>
                   <p className="mb-3">Examples of genuine self-affirmations:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>"I've struggled with this before and I'm still trying—that takes courage."</li>
+                    <li>"I've struggled with this before and I'm still trying---that takes courage."</li>
                     <li>"Even though I haven't exercised yet this week, I care enough about my health to keep thinking about it."</li>
                     <li>"I've successfully changed behaviors before, so I have evidence I can do difficult things."</li>
                   </ul>
@@ -1294,7 +1294,7 @@ export const understandingMotivationArticlesA: Article[] = [
                     Periodically summarize what you've discovered about your ambivalence, change talk, and sustain talk. Summaries help you see patterns and make explicit what was implicit:
                   </p>
                   <p className="mb-3 italic">
-                    "So on one hand, I want to exercise because I value health and I'm tired of feeling sluggish. On the other hand, I'm worried about time, I've failed before, and I'm not sure I know how to make it sustainable. The core issue seems to be that I want the benefits but don't trust myself to follow through. What if I addressed the trust issue first—maybe by starting with something so small I can't fail?"
+                    "So on one hand, I want to exercise because I value health and I'm tired of feeling sluggish. On the other hand, I'm worried about time, I've failed before, and I'm not sure I know how to make it sustainable. The core issue seems to be that I want the benefits but don't trust myself to follow through. What if I addressed the trust issue first---maybe by starting with something so small I can't fail?"
                   </p>
                   <p className="mt-3">
                     Summaries often reveal the next step that addresses both sides of ambivalence.
@@ -1309,7 +1309,7 @@ export const understandingMotivationArticlesA: Article[] = [
           The Decisional Balance Exercise
         </h2>
         <p className="mb-6">
-          A core MI technique is the decisional balance sheet—a systematic exploration of pros and cons of changing versus staying the same <Citation id="8" index={8} source="Journal of Counseling Psychology" year="1975" tier={1} />. This isn't a simplistic "pros vs cons" list—it explicitly examines four quadrants:
+          A core MI technique is the decisional balance sheet---a systematic exploration of pros and cons of changing versus staying the same <Citation id="8" index={8} source="Journal of Counseling Psychology" year="1975" tier={1} />. This isn't a simplistic "pros vs cons" list---it explicitly examines four quadrants:
         </p>
 
         <ComparisonTable
@@ -1341,7 +1341,7 @@ export const understandingMotivationArticlesA: Article[] = [
           Evoking Change Talk
         </h2>
         <p className="mb-6">
-          MI therapists strategically evoke change talk—language that expresses desire, ability, reasons, need, or commitment to change. You can do this for yourself by asking specific types of questions:
+          MI therapists strategically evoke change talk---language that expresses desire, ability, reasons, need, or commitment to change. You can do this for yourself by asking specific types of questions:
         </p>
 
         <StatCard
@@ -1358,7 +1358,7 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          When you answer these questions honestly, you generate your own change talk—which research shows predicts actual behavior change <Citation id="3" index={3} source="Journal of Consulting and Clinical Psychology" year="2003" tier={1} />.
+          When you answer these questions honestly, you generate your own change talk---which research shows predicts actual behavior change <Citation id="3" index={3} source="Journal of Consulting and Clinical Psychology" year="2003" tier={1} />.
         </p>
 
         <h2 id="rolling-with-resistance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1382,7 +1382,7 @@ export const understandingMotivationArticlesA: Article[] = [
                 <strong>Try:</strong> "What function does not exercising serve? What am I protecting by staying the same?"
               </p>
               <p>
-                Often, resistance is protecting something important—comfort, identity, fear of failure. When you understand what resistance is protecting, you can address the underlying concern rather than fighting the symptom.
+                Often, resistance is protecting something important---comfort, identity, fear of failure. When you understand what resistance is protecting, you can address the underlying concern rather than fighting the symptom.
               </p>
             </div>
           }
@@ -1392,11 +1392,11 @@ export const understandingMotivationArticlesA: Article[] = [
           From Exploration to Planning
         </h2>
         <p className="mb-6">
-          MI distinguishes between building motivation (exploring ambivalence, evoking change talk) and planning action. Only move to planning when you've genuinely resolved ambivalence—when change talk outweighs sustain talk and you feel internal commitment, not external pressure.
+          MI distinguishes between building motivation (exploring ambivalence, evoking change talk) and planning action. Only move to planning when you've genuinely resolved ambivalence---when change talk outweighs sustain talk and you feel internal commitment, not external pressure.
         </p>
 
         <p className="mb-6">
-          When you're ready to plan, use implementation intentions—specific if-then plans that research shows significantly increase follow-through <Citation id="9" index={9} source="American Psychologist" year="1999" tier={1} />:
+          When you're ready to plan, use implementation intentions---specific if-then plans that research shows significantly increase follow-through <Citation id="9" index={9} source="American Psychologist" year="1999" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -1411,7 +1411,7 @@ export const understandingMotivationArticlesA: Article[] = [
                     <li><strong>Then:</strong> "...then I will immediately put on workout clothes and do 10 minutes of movement."</li>
                   </ul>
                   <p className="mt-3">
-                    Implementation intentions work because they create mental associations between cues and behaviors, reducing the need for motivation in the moment. You've already decided—you just need to follow the plan.
+                    Implementation intentions work because they create mental associations between cues and behaviors, reducing the need for motivation in the moment. You've already decided---you just need to follow the plan.
                   </p>
                 </div>
               ),
@@ -1465,18 +1465,18 @@ export const understandingMotivationArticlesA: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>Motivational interviewing is an evidence-based approach for exploring and resolving ambivalence about behavior change—you can adapt its techniques for self-use</li>
+              <li>Motivational interviewing is an evidence-based approach for exploring and resolving ambivalence about behavior change---you can adapt its techniques for self-use</li>
               <li>Ambivalence (simultaneously wanting to change and wanting to stay the same) is the real barrier, not lack of motivation or willpower</li>
-              <li>OARS techniques—open-ended questions, affirmations, reflections, summaries—help you explore your own motivations without self-judgment</li>
-              <li>Evoke change talk (desire, ability, reasons, need, commitment) through strategic self-questioning—research shows change talk predicts actual behavior change</li>
-              <li>Only move to action planning after you've genuinely resolved ambivalence—forcing action before you're ready often backfires</li>
+              <li>OARS techniques---open-ended questions, affirmations, reflections, summaries---help you explore your own motivations without self-judgment</li>
+              <li>Evoke change talk (desire, ability, reasons, need, commitment) through strategic self-questioning---research shows change talk predicts actual behavior change</li>
+              <li>Only move to action planning after you've genuinely resolved ambivalence---forcing action before you're ready often backfires</li>
             </ul>
           }
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> You've explored your ambivalence and built some motivation—but what about the popular advice to "just wait until you feel motivated"? Learn why this strategy keeps you stuck and what to do instead.
+            <strong>Next:</strong> You've explored your ambivalence and built some motivation---but what about the popular advice to "just wait until you feel motivated"? Learn why this strategy keeps you stuck and what to do instead.
           </p>
         </div>
       </>
@@ -1486,7 +1486,7 @@ export const understandingMotivationArticlesA: Article[] = [
     id: catId(15),
     slug: 'motivation-myth-waiting-inspired-keeps-stuck',
     title: 'The Motivation Myth: Why Waiting to Feel Inspired Keeps You Stuck',
-    description: 'Challenge the common belief that motivation must come before action—and learn why reversing this sequence is often more effective for behavior change.',
+    description: 'Challenge the common belief that motivation must come before action---and learn why reversing this sequence is often more effective for behavior change.',
     image: "/images/articles/cat08/cover-015.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -1572,10 +1572,10 @@ export const understandingMotivationArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I'll start exercising when I feel motivated.", "I'll work on my project when inspiration strikes.", "I just need to wait until I'm in the right headspace." If you've ever said something like this, you've fallen for one of the most persistent myths about behavior change: that motivation comes first, and action follows. The truth is far more useful—and counterintuitive.
+            "I'll start exercising when I feel motivated.", "I'll work on my project when inspiration strikes.", "I just need to wait until I'm in the right headspace." If you've ever said something like this, you've fallen for one of the most persistent myths about behavior change: that motivation comes first, and action follows. The truth is far more useful---and counterintuitive.
           </p>
           <p className="mb-6">
-            Research on behavior and self-perception shows that action often creates motivation, not the other way around. Waiting for motivation is like waiting for the weather to improve before you leave the house—you might wait forever. Understanding this principle transforms how you approach goals that feel overwhelming or uninspiring.
+            Research on behavior and self-perception shows that action often creates motivation, not the other way around. Waiting for motivation is like waiting for the weather to improve before you leave the house---you might wait forever. Understanding this principle transforms how you approach goals that feel overwhelming or uninspiring.
           </p>
         </div>
 
@@ -1609,7 +1609,7 @@ export const understandingMotivationArticlesA: Article[] = [
         </div>
 
         <p className="mt-6 mb-6">
-          Starting with action—even tiny, imperfect action—often generates the motivation you thought you needed to begin. This is because your brain infers your motivations from your behaviors, a phenomenon called self-perception theory <Citation id="1" index={1} source="Advances in Experimental Social Psychology" year="1972" tier={1} />.
+          Starting with action---even tiny, imperfect action---often generates the motivation you thought you needed to begin. This is because your brain infers your motivations from your behaviors, a phenomenon called self-perception theory <Citation id="1" index={1} source="Advances in Experimental Social Psychology" year="1972" tier={1} />.
         </p>
 
         <h2 id="self-perception" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1625,10 +1625,10 @@ export const understandingMotivationArticlesA: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                Your brain works like an outside observer: it watches what you do and infers why you must have done it. When you act consistently in a certain way, your brain updates your self-concept to match the behavior. This is why identity-based habits work—you start by doing the behavior, and over time, you become the person who does that behavior <Citation id="4" index={4} source="Psychological Bulletin" year="2018" tier={1} />.
+                Your brain works like an outside observer: it watches what you do and infers why you must have done it. When you act consistently in a certain way, your brain updates your self-concept to match the behavior. This is why identity-based habits work---you start by doing the behavior, and over time, you become the person who does that behavior <Citation id="4" index={4} source="Psychological Bulletin" year="2018" tier={1} />.
               </p>
               <p>
-                This means the fastest way to feel motivated about exercise isn't to think about exercise or visualize yourself exercising—it's to actually exercise, even for 5 minutes, so your brain has behavioral evidence to work with.
+                This means the fastest way to feel motivated about exercise isn't to think about exercise or visualize yourself exercising---it's to actually exercise, even for 5 minutes, so your brain has behavioral evidence to work with.
               </p>
             </div>
           }
@@ -1638,7 +1638,7 @@ export const understandingMotivationArticlesA: Article[] = [
           Embodied Cognition: Action Shapes Thought
         </h2>
         <p className="mb-6">
-          Related to self-perception theory is embodied cognition—the idea that physical actions and bodily states influence mental states <Citation id="3" index={3} source="Frontiers in Psychology" year="2015" tier={1} />. Your body doesn't just express your motivation; it creates it.
+          Related to self-perception theory is embodied cognition---the idea that physical actions and bodily states influence mental states <Citation id="3" index={3} source="Frontiers in Psychology" year="2015" tier={1} />. Your body doesn't just express your motivation; it creates it.
         </p>
 
         <ComparisonTable
@@ -1673,14 +1673,14 @@ export const understandingMotivationArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          This is why "fake it till you make it" has some scientific validity—acting as if you're motivated can actually generate real motivation through embodied feedback loops.
+          This is why "fake it till you make it" has some scientific validity---acting as if you're motivated can actually generate real motivation through embodied feedback loops.
         </p>
 
         <h2 id="behavioral-activation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Behavioral Activation: Clinical Evidence
         </h2>
         <p className="mb-6">
-          One of the strongest pieces of evidence for action-before-motivation comes from behavioral activation therapy, a treatment for depression. Behavioral activation operates on a simple principle: when you're depressed and unmotivated, you wait for motivation to return before you act. But this creates a vicious cycle—inactivity worsens depression, which worsens inactivity.
+          One of the strongest pieces of evidence for action-before-motivation comes from behavioral activation therapy, a treatment for depression. Behavioral activation operates on a simple principle: when you're depressed and unmotivated, you wait for motivation to return before you act. But this creates a vicious cycle---inactivity worsens depression, which worsens inactivity.
         </p>
 
         <ArticleChart
@@ -1702,7 +1702,7 @@ export const understandingMotivationArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="You don't have to feel good to act good. But if you act good, you're more likely to feel good. This reversal—action before feeling—is one of the most powerful tools in behavior change."
+          quote="You don't have to feel good to act good. But if you act good, you're more likely to feel good. This reversal---action before feeling---is one of the most powerful tools in behavior change."
           author="Behavioral Activation Principle"
         />
 
@@ -1741,7 +1741,7 @@ export const understandingMotivationArticlesA: Article[] = [
                     When facing an unmotivating task, commit to just two minutes. "I'll exercise for 2 minutes.", "I'll work on my project for 2 minutes." The goal is to start, not to finish. Often, starting is the hardest part, and once you begin, continuing is easier.
                   </p>
                   <p>
-                    This works because it lowers the activation energy required to begin. You're not asking yourself to feel motivated for a full workout—just for 120 seconds. That's manageable even when motivation is absent.
+                    This works because it lowers the activation energy required to begin. You're not asking yourself to feel motivated for a full workout---just for 120 seconds. That's manageable even when motivation is absent.
                   </p>
                 </div>
               ),
@@ -1769,7 +1769,7 @@ export const understandingMotivationArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Research on persuasion shows that getting someone to agree to a small request makes them more likely to agree to a larger related request later—because the small action shifts their self-perception <Citation id="8" index={8} source="Personality and Social Psychology Review" year="1999" tier={1} />.
+                    Research on persuasion shows that getting someone to agree to a small request makes them more likely to agree to a larger related request later---because the small action shifts their self-perception <Citation id="8" index={8} source="Personality and Social Psychology Review" year="1999" tier={1} />.
                   </p>
                   <p>
                     Apply this to yourself: start with a version of your goal so small you'd be embarrassed to call it a goal. Want to run a marathon? Start with putting on running shoes. Want to write a book? Write one sentence. The tiny action shifts your identity ("I'm someone who runs,", "I'm someone who writes"), making the larger goal feel more aligned with who you are.
@@ -1799,7 +1799,7 @@ export const understandingMotivationArticlesA: Article[] = [
               title: '5. Ritualize the Start',
               content: (
                 <p>
-                  Create a simple pre-action ritual that signals 'now we do this thing"—make coffee, light a candle, put on certain music, do 3 deep breaths. The ritual becomes a cue that bypasses motivation. You don't need to feel motivated; you just need to start the ritual, and the action follows automatically.
+                  Create a simple pre-action ritual that signals 'now we do this thing"---make coffee, light a candle, put on certain music, do 3 deep breaths. The ritual becomes a cue that bypasses motivation. You don't need to feel motivated; you just need to start the ritual, and the action follows automatically.
                 </p>
               ),
             },
@@ -1818,9 +1818,9 @@ export const understandingMotivationArticlesA: Article[] = [
           title="When to Build Motivation First"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Major life decisions:</strong> Choosing a career, ending a relationship, relocating—these deserve thoughtful exploration of values and motivations, not just action</li>
+              <li><strong>Major life decisions:</strong> Choosing a career, ending a relationship, relocating---these deserve thoughtful exploration of values and motivations, not just action</li>
               <li><strong>Long-term sustainability:</strong> If you need to sustain a behavior for years, intrinsic motivation (genuine interest) will outlast forced action. Build the motivation foundation</li>
-              <li><strong>Complex goals requiring sacrifice:</strong> Training for an Ironman, finishing a PhD—these require deep commitment. Acting without genuine motivation often leads to burnout</li>
+              <li><strong>Complex goals requiring sacrifice:</strong> Training for an Ironman, finishing a PhD---these require deep commitment. Acting without genuine motivation often leads to burnout</li>
               <li><strong>Value alignment:</strong> When you're pursuing someone else's goal or one that doesn't fit your values, no amount of action will create lasting motivation. Start with value clarification</li>
             </ul>
           }
@@ -1839,18 +1839,18 @@ export const understandingMotivationArticlesA: Article[] = [
           title="Remember This"
           content={
             <ul className="list-disc pl-6 space-y-2">
-              <li>The common sequence "motivation → action → results" is often backwards—action frequently creates motivation, not the other way around</li>
+              <li>The common sequence "motivation → action → results" is often backwards---action frequently creates motivation, not the other way around</li>
               <li>Self-perception theory: your brain infers your motivations from your behaviors, so acting as if you're motivated can generate real motivation</li>
               <li>Behavioral activation therapy (highly effective for depression) operates on this principle: engage in valued activities even without motivation, and motivation often follows</li>
               <li>Start with actions so small you can do them without motivation (2-minute rule, foot-in-the-door), then let small wins create momentum and shift identity</li>
-              <li>For major, long-term goals requiring sustained effort, invest time in building genuine intrinsic motivation first—but for daily habits and short-term goals, action-first works better</li>
+              <li>For major, long-term goals requiring sustained effort, invest time in building genuine intrinsic motivation first---but for daily habits and short-term goals, action-first works better</li>
             </ul>
           }
         />
 
         <div className="mt-12 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-600">
           <p className="text-sm text-gray-600 dark:text-gray-300">
-            <strong>Next:</strong> You've learned that action can create motivation—but what should that action be aimed toward? Discover how connecting behavior change to your core values and sense of purpose creates the most durable form of motivation.
+            <strong>Next:</strong> You've learned that action can create motivation---but what should that action be aimed toward? Discover how connecting behavior change to your core values and sense of purpose creates the most durable form of motivation.
           </p>
         </div>
       </>

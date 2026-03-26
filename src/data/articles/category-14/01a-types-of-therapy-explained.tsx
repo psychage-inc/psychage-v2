@@ -110,7 +110,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            If you've looked into therapy options, you've likely encountered CBT — Cognitive Behavioral Therapy. It's the most widely researched form of psychotherapy in the world, with thousands of studies supporting its effectiveness for dozens of mental health conditions <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />. But what makes it so effective, and is it the right approach for you?
+            If you've looked into therapy options, you've likely encountered CBT --- Cognitive Behavioral Therapy. It's the most widely researched form of psychotherapy in the world, with thousands of studies supporting its effectiveness for dozens of mental health conditions <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />. But what makes it so effective, and is it the right approach for you?
           </p>
           <p className="mb-6">
             CBT is built on a simple but powerful idea: the way we think about situations affects how we feel and behave. By learning to identify and change unhelpful thought patterns, people can break cycles of distress and develop healthier ways of coping <Citation id="2" index={2} source="Oxford University Press" year="2020" tier={5} />. Unlike some forms of therapy that explore the past, CBT focuses primarily on present-day problems and teaches practical skills you can use immediately.
@@ -121,7 +121,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           What Is Cognitive Behavioral Therapy?
         </h2>
         <p className="mb-6">
-          CBT is a structured, time-limited psychotherapy that focuses on the relationship between thoughts (cognitions), feelings, and behaviors. The core premise is that our thoughts influence our emotions, which in turn influence our actions — and this cycle can either help or harm our mental health <Citation id="3" index={3} source="Cognitive Therapy and Research" year="2022" tier={1} />.
+          CBT is a structured, time-limited psychotherapy that focuses on the relationship between thoughts (cognitions), feelings, and behaviors. The core premise is that our thoughts influence our emotions, which in turn influence our actions --- and this cycle can either help or harm our mental health <Citation id="3" index={3} source="Cognitive Therapy and Research" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           For example, if you think "I'm terrible at my job," you might feel anxious or sad, leading you to avoid challenges or procrastinate. CBT teaches you to examine whether that thought is accurate, consider alternative perspectives, and take action based on a more balanced view of the situation.
@@ -145,7 +145,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Identify Negative Thought Patterns',
               description: (
-                <p>The first step is recognizing automatic negative thoughts — mental habits you might not even notice. Your therapist helps you spot patterns like catastrophizing (expecting the worst), black-and-white thinking (seeing things as all good or all bad), or mind-reading (assuming you know what others think).</p>
+                <p>The first step is recognizing automatic negative thoughts --- mental habits you might not even notice. Your therapist helps you spot patterns like catastrophizing (expecting the worst), black-and-white thinking (seeing things as all good or all bad), or mind-reading (assuming you know what others think).</p>
               ),
             },
             {
@@ -157,7 +157,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Practice New Behaviors',
               description: (
-                <p>CBT isn't just about thinking differently — it's about doing differently. You practice new behaviors through behavioral experiments, exposure exercises (for anxiety), and activity scheduling (for depression). These real-world tests help you see that feared outcomes often don't happen.</p>
+                <p>CBT isn't just about thinking differently --- it's about doing differently. You practice new behaviors through behavioral experiments, exposure exercises (for anxiety), and activity scheduling (for depression). These real-world tests help you see that feared outcomes often don't happen.</p>
               ),
             },
             {
@@ -200,7 +200,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
               id: 'homework',
               title: 'Is homework really required?',
               content: (
-                <p>Yes — and research shows it's essential to success. Studies find that people who complete practice exercises between sessions improve more than those who don't. Think of therapy like physical therapy: the real healing happens in the daily practice, not just the weekly appointment.</p>
+                <p>Yes --- and research shows it's essential to success. Studies find that people who complete practice exercises between sessions improve more than those who don't. Think of therapy like physical therapy: the real healing happens in the daily practice, not just the weekly appointment.</p>
               ),
             },
             {
@@ -250,13 +250,13 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           CBT is the first-line recommended treatment for many conditions, including:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Depression</strong> — especially when combined with antidepressant medication for moderate to severe cases <Citation id="4" index={4} source="American Psychological Association" year="2019" tier={4} /></li>
-          <li><strong>Anxiety disorders</strong> — generalized anxiety, panic disorder, social anxiety, specific phobias, and agoraphobia</li>
-          <li><strong>Obsessive-compulsive disorder (OCD)</strong> — particularly when using Exposure and Response Prevention (ERP), a specialized form of CBT</li>
-          <li><strong>Post-traumatic stress disorder (PTSD)</strong> — trauma-focused CBT is one of the most effective treatments available</li>
-          <li><strong>Insomnia</strong> — CBT for insomnia (CBT-I) is more effective long-term than sleep medication <Citation id="7" index={7} source="Sleep Medicine Reviews" year="2022" tier={1} /></li>
-          <li><strong>Eating disorders</strong> — especially bulimia and binge eating disorder</li>
-          <li><strong>Chronic pain</strong> — helps manage the emotional impact and improves coping strategies</li>
+          <li><strong>Depression</strong> --- especially when combined with antidepressant medication for moderate to severe cases <Citation id="4" index={4} source="American Psychological Association" year="2019" tier={4} /></li>
+          <li><strong>Anxiety disorders</strong> --- generalized anxiety, panic disorder, social anxiety, specific phobias, and agoraphobia</li>
+          <li><strong>Obsessive-compulsive disorder (OCD)</strong> --- particularly when using Exposure and Response Prevention (ERP), a specialized form of CBT</li>
+          <li><strong>Post-traumatic stress disorder (PTSD)</strong> --- trauma-focused CBT is one of the most effective treatments available</li>
+          <li><strong>Insomnia</strong> --- CBT for insomnia (CBT-I) is more effective long-term than sleep medication <Citation id="7" index={7} source="Sleep Medicine Reviews" year="2022" tier={1} /></li>
+          <li><strong>Eating disorders</strong> --- especially bulimia and binge eating disorder</li>
+          <li><strong>Chronic pain</strong> --- helps manage the emotional impact and improves coping strategies</li>
         </ul>
 
         <p className="mb-6">
@@ -419,10 +419,10 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When emotions feel overwhelming, when relationships are constantly in crisis, when you swing between extremes — traditional therapy might not be enough. That's where Dialectical Behavior Therapy (DBT) comes in. Originally developed for people with borderline personality disorder who were experiencing suicidal crises, DBT has become one of the most effective treatments for anyone struggling with intense emotional pain <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
+            When emotions feel overwhelming, when relationships are constantly in crisis, when you swing between extremes --- traditional therapy might not be enough. That's where Dialectical Behavior Therapy (DBT) comes in. Originally developed for people with borderline personality disorder who were experiencing suicidal crises, DBT has become one of the most effective treatments for anyone struggling with intense emotional pain <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            DBT is unique because it balances acceptance and change. It teaches you to accept yourself as you are while also working to build a life worth living <Citation id="2" index={2} source="Guilford Press" year="2022" tier={5} />. This dual focus — holding two seemingly opposite truths at once — is what "dialectical" means.
+            DBT is unique because it balances acceptance and change. It teaches you to accept yourself as you are while also working to build a life worth living <Citation id="2" index={2} source="Guilford Press" year="2022" tier={5} />. This dual focus --- holding two seemingly opposite truths at once --- is what "dialectical" means.
           </p>
         </div>
 
@@ -433,7 +433,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           DBT is a structured treatment program that combines individual therapy, group skills training, phone coaching, and a therapist consultation team. It was created by psychologist Dr. Marsha Linehan in the 1980s, who drew from cognitive-behavioral therapy, mindfulness practices, and her own lived experience with mental health challenges <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          The core problem DBT addresses is <strong>emotion dysregulation</strong> — difficulty managing intense emotional responses. People with emotion dysregulation experience emotions more intensely, react more quickly, and take longer to return to baseline after an emotional trigger.
+          The core problem DBT addresses is <strong>emotion dysregulation</strong> --- difficulty managing intense emotional responses. People with emotion dysregulation experience emotions more intensely, react more quickly, and take longer to return to baseline after an emotional trigger.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Dialectical Philosophy">
@@ -449,7 +449,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           How DBT Works: The Four Skills Modules
         </h2>
         <p className="mb-6">
-          DBT teaches four sets of practical skills that you practice both in group sessions and in real life. These aren't abstract concepts — they're concrete techniques you can use when emotions threaten to overwhelm you <Citation id="2" index={2} source="Guilford Press" year="2022" tier={5} />.
+          DBT teaches four sets of practical skills that you practice both in group sessions and in real life. These aren't abstract concepts --- they're concrete techniques you can use when emotions threaten to overwhelm you <Citation id="2" index={2} source="Guilford Press" year="2022" tier={5} />.
         </p>
 
         <ArticleAccordion
@@ -539,13 +539,13 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Skills Training Group (Weekly)',
               description: (
-                <p>A group class, usually 2-2.5 hours, where you learn the four skills modules. This is more like a class than traditional group therapy — the focus is on teaching and practicing skills, not processing emotions or sharing personal stories.</p>
+                <p>A group class, usually 2-2.5 hours, where you learn the four skills modules. This is more like a class than traditional group therapy --- the focus is on teaching and practicing skills, not processing emotions or sharing personal stories.</p>
               ),
             },
             {
               title: 'Phone Coaching (As Needed)',
               description: (
-                <p>Between sessions, you can call your therapist for brief coaching on using skills in real-time crises. These aren't therapy sessions — they're quick consultations to help you apply what you've learned when you need it most.</p>
+                <p>Between sessions, you can call your therapist for brief coaching on using skills in real-time crises. These aren't therapy sessions --- they're quick consultations to help you apply what you've learned when you need it most.</p>
               ),
             },
             {
@@ -586,7 +586,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="DBT saved my life — not just because it stopped me from acting on suicidal thoughts, but because it gave me skills to build a life I actually wanted to live. I went from crisis to crisis to having goals, relationships, and hope."
+          quote="DBT saved my life --- not just because it stopped me from acting on suicidal thoughts, but because it gave me skills to build a life I actually wanted to live. I went from crisis to crisis to having goals, relationships, and hope."
           attribution="DBT Program Graduate"
           role="Lived Experience Perspective"
           variant="large"
@@ -599,13 +599,13 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           DBT was originally designed for borderline personality disorder, and it remains the gold-standard treatment for this condition <Citation id="4" index={4} source="American Journal of Psychiatry" year="2022" tier={1} />. But research now supports DBT for many other conditions involving emotion dysregulation:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Borderline personality disorder</strong> — the most evidence-supported treatment</li>
-          <li><strong>Chronic suicidal ideation or self-harm</strong> — even without BPD diagnosis</li>
-          <li><strong>Substance use disorders</strong> — especially when emotion dysregulation drives use <Citation id="7" index={7} source="Addiction Science & Clinical Practice" year="2020" tier={1} /></li>
-          <li><strong>Eating disorders</strong> — particularly binge eating and bulimia</li>
-          <li><strong>PTSD</strong> — when combined with trauma processing</li>
-          <li><strong>Bipolar disorder</strong> — as an adjunct to medication</li>
-          <li><strong>Adolescents with emotional dysregulation</strong> — modified DBT shows strong outcomes <Citation id="6" index={6} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2021" tier={1} /></li>
+          <li><strong>Borderline personality disorder</strong> --- the most evidence-supported treatment</li>
+          <li><strong>Chronic suicidal ideation or self-harm</strong> --- even without BPD diagnosis</li>
+          <li><strong>Substance use disorders</strong> --- especially when emotion dysregulation drives use <Citation id="7" index={7} source="Addiction Science & Clinical Practice" year="2020" tier={1} /></li>
+          <li><strong>Eating disorders</strong> --- particularly binge eating and bulimia</li>
+          <li><strong>PTSD</strong> --- when combined with trauma processing</li>
+          <li><strong>Bipolar disorder</strong> --- as an adjunct to medication</li>
+          <li><strong>Adolescents with emotional dysregulation</strong> --- modified DBT shows strong outcomes <Citation id="6" index={6} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2021" tier={1} /></li>
         </ul>
 
         <ComparisonTable
@@ -759,10 +759,10 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Moving your eyes back and forth while recalling a traumatic memory sounds unusual — perhaps even too simple to work. Yet EMDR (Eye Movement Desensitization and Reprocessing) has become one of the most researched and effective treatments for PTSD, recognized by the World Health Organization, the American Psychological Association, and the U.S. Department of Veterans Affairs <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} /> <Citation id="3" index={3} source="American Psychological Association" year="2017" tier={4} />.
+            Moving your eyes back and forth while recalling a traumatic memory sounds unusual --- perhaps even too simple to work. Yet EMDR (Eye Movement Desensitization and Reprocessing) has become one of the most researched and effective treatments for PTSD, recognized by the World Health Organization, the American Psychological Association, and the U.S. Department of Veterans Affairs <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} /> <Citation id="3" index={3} source="American Psychological Association" year="2017" tier={4} />.
           </p>
           <p className="mb-6">
-            EMDR helps your brain reprocess traumatic memories so they lose their emotional charge. Instead of feeling like the trauma is happening now, the memory becomes something that happened in the past — still real, but no longer overwhelming <Citation id="2" index={2} source="Rodale Books" year="2012" tier={5} />.
+            EMDR helps your brain reprocess traumatic memories so they lose their emotional charge. Instead of feeling like the trauma is happening now, the memory becomes something that happened in the past --- still real, but no longer overwhelming <Citation id="2" index={2} source="Rodale Books" year="2012" tier={5} />.
           </p>
         </div>
 
@@ -773,7 +773,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           EMDR is a psychotherapy approach developed by psychologist Francine Shapiro in 1987. While walking in a park and noticing her eye movements seemed to reduce disturbing thoughts, she began testing whether guided eye movements could help others process trauma <Citation id="4" index={4} source="European Psychologist" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          The core idea: traumatic memories get "stuck" in the brain, frozen in the same form they were experienced — with all the intense emotions, physical sensations, and negative beliefs attached. EMDR helps your brain reprocess these memories, integrating them into your broader life story so they no longer trigger overwhelming reactions.
+          The core idea: traumatic memories get "stuck" in the brain, frozen in the same form they were experienced --- with all the intense emotions, physical sensations, and negative beliefs attached. EMDR helps your brain reprocess these memories, integrating them into your broader life story so they no longer trigger overwhelming reactions.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="What Makes EMDR Different">
@@ -799,7 +799,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Phase 2: Preparation',
               description: (
-                <p>Before processing trauma, your therapist teaches you relaxation and self-soothing techniques. These become your 'container' — ways to calm yourself if processing becomes too intense. This phase ensures you have resources to stay grounded.</p>
+                <p>Before processing trauma, your therapist teaches you relaxation and self-soothing techniques. These become your 'container' --- ways to calm yourself if processing becomes too intense. This phase ensures you have resources to stay grounded.</p>
               ),
             },
             {
@@ -811,7 +811,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Phase 4: Desensitization',
               description: (
-                <p>This is the reprocessing phase. While holding the memory in mind, you follow the therapist's fingers moving side to side (or feel alternating taps, or hear alternating sounds). You notice whatever comes up — images, thoughts, emotions, body sensations — without forcing anything. Sessions of bilateral stimulation continue until distress decreases.</p>
+                <p>This is the reprocessing phase. While holding the memory in mind, you follow the therapist's fingers moving side to side (or feel alternating taps, or hear alternating sounds). You notice whatever comes up --- images, thoughts, emotions, body sensations --- without forcing anything. Sessions of bilateral stimulation continue until distress decreases.</p>
               ),
             },
             {
@@ -829,7 +829,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: 'Phase 7: Closure',
               description: (
-                <p>At the end of each session, your therapist helps you return to a calm state using the relaxation techniques from Phase 2. You're reminded that processing can continue between sessions — and that's normal.</p>
+                <p>At the end of each session, your therapist helps you return to a calm state using the relaxation techniques from Phase 2. You're reminded that processing can continue between sessions --- and that's normal.</p>
               ),
             },
             {
@@ -848,7 +848,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             <li>New memories or insights emerging</li>
             <li>Physical sensations moving or releasing</li>
             <li>Emotions intensifying briefly, then softening</li>
-            <li>Nothing at all — and that's okay too</li>
+            <li>Nothing at all --- and that's okay too</li>
           </ul>
           <p className="mt-4">Your therapist will pause every 15-30 seconds to ask, "What do you notice now?" You share briefly, then continue processing.</p>
         </ArticleCallout>
@@ -867,7 +867,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
               id: 'session-length',
               title: 'How long are sessions?',
               content: (
-                <p>EMDR sessions are often 60-90 minutes — longer than standard therapy — to allow sufficient time for processing. Stopping in the middle of reprocessing can leave you feeling unsettled, so adequate time is important.</p>
+                <p>EMDR sessions are often 60-90 minutes --- longer than standard therapy --- to allow sufficient time for processing. Stopping in the middle of reprocessing can leave you feeling unsettled, so adequate time is important.</p>
               ),
             },
             {
@@ -905,7 +905,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
         />
 
         <QuoteBlock
-          quote="I spent years in talk therapy discussing my childhood trauma. EMDR was different — I didn't have to tell the story over and over. The memories lost their sting in ways that surprised me. Now I can think about what happened without my body reacting like it's happening again."
+          quote="I spent years in talk therapy discussing my childhood trauma. EMDR was different --- I didn't have to tell the story over and over. The memories lost their sting in ways that surprised me. Now I can think about what happened without my body reacting like it's happening again."
           attribution="EMDR Client"
           role="Lived Experience"
           variant="large"
@@ -953,12 +953,12 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           EMDR is particularly helpful for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>PTSD from a specific traumatic event</strong> — car accidents, assaults, natural disasters, combat</li>
-          <li><strong>Complex PTSD</strong> — repeated trauma, especially in childhood</li>
-          <li><strong>People who struggle with traditional talk therapy</strong> — you don't need to verbally process every detail</li>
-          <li><strong>Recent trauma</strong> — early intervention can prevent PTSD from developing</li>
-          <li><strong>Children and adolescents</strong> — EMDR is effective across ages and can be adapted with play therapy elements <Citation id="7" index={7} source="Child Maltreatment" year="2020" tier={1} /></li>
-          <li><strong>Performance anxiety</strong> — athletes, musicians, and public speakers use EMDR to process past failures</li>
+          <li><strong>PTSD from a specific traumatic event</strong> --- car accidents, assaults, natural disasters, combat</li>
+          <li><strong>Complex PTSD</strong> --- repeated trauma, especially in childhood</li>
+          <li><strong>People who struggle with traditional talk therapy</strong> --- you don't need to verbally process every detail</li>
+          <li><strong>Recent trauma</strong> --- early intervention can prevent PTSD from developing</li>
+          <li><strong>Children and adolescents</strong> --- EMDR is effective across ages and can be adapted with play therapy elements <Citation id="7" index={7} source="Child Maltreatment" year="2020" tier={1} /></li>
+          <li><strong>Performance anxiety</strong> --- athletes, musicians, and public speakers use EMDR to process past failures</li>
         </ul>
 
         <ComparisonTable
@@ -989,7 +989,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           Finding a Trained EMDR Therapist
         </h2>
         <p className="mb-6">
-          Not all therapists who offer EMDR are equally trained. Look for providers who have completed comprehensive EMDR training — typically 50+ hours of instruction plus supervised practice.
+          Not all therapists who offer EMDR are equally trained. Look for providers who have completed comprehensive EMDR training --- typically 50+ hours of instruction plus supervised practice.
         </p>
 
         <ArticleCallout variant="tip" title="How to Find Quality EMDR Therapy">
@@ -1112,7 +1112,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You find yourself repeating the same relationship patterns. You react to situations in ways that surprise even you. You feel stuck, but you can't quite explain why. These might be signs that unconscious processes — patterns learned early in life — are shaping your present choices without your awareness. Psychodynamic therapy helps bring these hidden patterns to light <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
+            You find yourself repeating the same relationship patterns. You react to situations in ways that surprise even you. You feel stuck, but you can't quite explain why. These might be signs that unconscious processes --- patterns learned early in life --- are shaping your present choices without your awareness. Psychodynamic therapy helps bring these hidden patterns to light <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Unlike therapies focused on symptom reduction, psychodynamic therapy explores the deeper "why" behind your struggles. It examines how your past experiences, early relationships, and unconscious conflicts continue to influence who you are today <Citation id="2" index={2} source="American Psychiatric Publishing" year="2020" tier={5} />.
@@ -1126,7 +1126,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           Psychodynamic therapy has its roots in psychoanalysis, the approach developed by Sigmund Freud in the late 1800s. Modern psychodynamic therapy has evolved considerably, integrating findings from attachment research, neuroscience, and decades of clinical refinement.
         </p>
         <p className="mb-6">
-          The core premise: much of what drives our behavior happens outside conscious awareness. Early experiences with caregivers shape templates for how we see ourselves, others, and relationships. These templates — called "internal working models" or "object relations" — operate automatically, influencing our adult lives in ways we don't recognize <Citation id="6" index={6} source="Attachment & Human Development" year="2021" tier={1} />.
+          The core premise: much of what drives our behavior happens outside conscious awareness. Early experiences with caregivers shape templates for how we see ourselves, others, and relationships. These templates --- called "internal working models" or "object relations" --- operate automatically, influencing our adult lives in ways we don't recognize <Citation id="6" index={6} source="Attachment & Human Development" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Central Concepts in Psychodynamic Therapy">
@@ -1160,7 +1160,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
               title: 'Transference: Your Relationship with the Therapist as a Mirror',
               content: (
                 <div>
-                  <p className="mb-4">Transference is one of psychodynamic therapy's most powerful tools. How you relate to your therapist often mirrors how you relate to important people in your life — and how you learned to relate as a child.</p>
+                  <p className="mb-4">Transference is one of psychodynamic therapy's most powerful tools. How you relate to your therapist often mirrors how you relate to important people in your life --- and how you learned to relate as a child.</p>
                   <p className="mb-4">For example, if you grew up needing to please an unpredictable parent, you might notice yourself working hard to please your therapist, anxiously scanning for signs of disapproval. Examining this pattern in therapy helps you see how it shows up everywhere.</p>
                 </div>
               ),
@@ -1200,7 +1200,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Psychodynamic therapy doesn't promise quick fixes. The work is slow, often frustrating, sometimes painful. But over time, you develop a richer understanding of yourself — not just what you do, but why. That self-knowledge is what allows lasting change."
+          quote="Psychodynamic therapy doesn't promise quick fixes. The work is slow, often frustrating, sometimes painful. But over time, you develop a richer understanding of yourself --- not just what you do, but why. That self-knowledge is what allows lasting change."
           attribution="Dr. Nancy McWilliams"
           role="Psychoanalytic Psychologist and Author"
           variant="large"
@@ -1227,7 +1227,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             <li>Talk about childhood memories one week, current relationships the next</li>
             <li>Feel confused or frustrated when your therapist doesn't give direct advice</li>
             <li>Notice yourself reacting emotionally to interpretations</li>
-            <li>Experience moments of sudden clarity — 'aha' insights that connect past to present</li>
+            <li>Experience moments of sudden clarity --- 'aha' insights that connect past to present</li>
           </ul>
         </ArticleCallout>
 
@@ -1235,7 +1235,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           Evidence for Effectiveness
         </h2>
         <p className="mb-6">
-          While psychodynamic therapy has fewer randomized controlled trials than CBT (partly because it's harder to standardize and measure), the research base is growing. A 2022 JAMA review found psychodynamic therapy produces benefits that not only persist but actually increase after treatment ends — a pattern called "sleeper effects" <Citation id="3" index={3} source="Journal of the American Medical Association" year="2022" tier={1} />.
+          While psychodynamic therapy has fewer randomized controlled trials than CBT (partly because it's harder to standardize and measure), the research base is growing. A 2022 JAMA review found psychodynamic therapy produces benefits that not only persist but actually increase after treatment ends --- a pattern called "sleeper effects" <Citation id="3" index={3} source="Journal of the American Medical Association" year="2022" tier={1} />.
         </p>
 
         <ArticleChart
@@ -1254,10 +1254,10 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           Psychodynamic therapy shows particularly strong outcomes for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Personality disorders</strong> — especially borderline personality disorder when using specialized approaches like Mentalization-Based Treatment (MBT) or Transference-Focused Psychotherapy (TFP) <Citation id="4" index={4} source="Personality Disorders: Theory, Research, and Treatment" year="2021" tier={1} /> <Citation id="5" index={5} source="International Journal of Psychoanalysis" year="2020" tier={1} /></li>
-          <li><strong>Chronic depression</strong> — particularly when CBT hasn't fully resolved symptoms <Citation id="7" index={7} source="The Lancet Psychiatry" year="2022" tier={1} /></li>
-          <li><strong>Anxiety disorders</strong> — especially when rooted in relationship or identity issues <Citation id="9" index={9} source="Clinical Psychology Review" year="2021" tier={1} /></li>
-          <li><strong>Relational difficulties</strong> — repeated patterns in relationships across contexts</li>
+          <li><strong>Personality disorders</strong> --- especially borderline personality disorder when using specialized approaches like Mentalization-Based Treatment (MBT) or Transference-Focused Psychotherapy (TFP) <Citation id="4" index={4} source="Personality Disorders: Theory, Research, and Treatment" year="2021" tier={1} /> <Citation id="5" index={5} source="International Journal of Psychoanalysis" year="2020" tier={1} /></li>
+          <li><strong>Chronic depression</strong> --- particularly when CBT hasn't fully resolved symptoms <Citation id="7" index={7} source="The Lancet Psychiatry" year="2022" tier={1} /></li>
+          <li><strong>Anxiety disorders</strong> --- especially when rooted in relationship or identity issues <Citation id="9" index={9} source="Clinical Psychology Review" year="2021" tier={1} /></li>
+          <li><strong>Relational difficulties</strong> --- repeated patterns in relationships across contexts</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="Modern Variations of Psychodynamic Therapy">
@@ -1321,7 +1321,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Psychodynamic therapy requires a strong therapeutic relationship — you'll be exploring vulnerable territory. Don't hesitate to meet with 2-3 therapists before deciding. The 'fit' matters enormously in this approach.
+          Psychodynamic therapy requires a strong therapeutic relationship --- you'll be exploring vulnerable territory. Don't hesitate to meet with 2-3 therapists before deciding. The 'fit' matters enormously in this approach.
         </p>
       </>
     ),
@@ -1424,7 +1424,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            What if the problem isn't that you have difficult thoughts and feelings — but that you're spending so much energy trying to get rid of them? Acceptance and Commitment Therapy (ACT, pronounced as the word 'act') offers a radically different approach: instead of fighting your inner experience, you learn to make room for it while moving toward what matters most in your life <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2021" tier={1} />.
+            What if the problem isn't that you have difficult thoughts and feelings --- but that you're spending so much energy trying to get rid of them? Acceptance and Commitment Therapy (ACT, pronounced as the word 'act') offers a radically different approach: instead of fighting your inner experience, you learn to make room for it while moving toward what matters most in your life <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             ACT is built on a simple but transformative idea: psychological suffering comes not from painful thoughts and feelings themselves, but from how we respond to them. When we fuse with negative thoughts, avoid difficult emotions, or lose touch with our values, we get stuck. ACT teaches you to hold difficult experiences lightly while taking committed action toward a meaningful life <Citation id="2" index={2} source="Trumpeter Books" year="2008" tier={5} />.
@@ -1438,7 +1438,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           ACT (developed by psychologist Steven Hayes in the 1980s) is a form of cognitive-behavioral therapy with a unique twist. Rather than challenging or changing negative thoughts like traditional CBT, ACT teaches you to change your relationship with those thoughts.
         </p>
         <p className="mb-6">
-          The central goal is <strong>psychological flexibility</strong> — the ability to be present with your experience, accept it without struggle, and choose actions guided by your values even when it's hard <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />.
+          The central goal is <strong>psychological flexibility</strong> --- the ability to be present with your experience, accept it without struggle, and choose actions guided by your values even when it's hard <Citation id="5" index={5} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The ACT Formula">
@@ -1451,7 +1451,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           How ACT Works: The Six Core Processes
         </h2>
         <p className="mb-6">
-          ACT isn't a linear step-by-step program — it's a set of six interrelated skills that work together to build psychological flexibility. These processes form what's called the 'hexaflex' model.
+          ACT isn't a linear step-by-step program --- it's a set of six interrelated skills that work together to build psychological flexibility. These processes form what's called the 'hexaflex' model.
         </p>
 
         <ProgressSteps
@@ -1461,7 +1461,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
               title: '1. Cognitive Defusion: Untangling from Thoughts',
               description: (
                 <div>
-                  <p className="mb-4">Normally, we "fuse" with our thoughts — we treat them as literal truth. "I'm worthless" becomes a fact rather than a thought. Defusion means creating distance from thoughts so you can observe them without being controlled by them <Citation id="8" index={8} source="Mindfulness" year="2021" tier={1} />.</p>
+                  <p className="mb-4">Normally, we "fuse" with our thoughts --- we treat them as literal truth. "I'm worthless" becomes a fact rather than a thought. Defusion means creating distance from thoughts so you can observe them without being controlled by them <Citation id="8" index={8} source="Mindfulness" year="2021" tier={1} />.</p>
                   <p className="mb-4"><strong>Defusion techniques:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Notice the thought: "I'm having the thought that I'm worthless"</li>
@@ -1475,13 +1475,13 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: '2. Acceptance: Making Room for Difficult Feelings',
               description: (
-                <p>Acceptance doesn't mean liking or wanting pain — it means allowing difficult feelings to be present without struggling against them. When you stop fighting anxiety, sadness, or anger, you free up energy for living. Acceptance is an active choice: 'I can feel this anxiety and still do what matters."</p>
+                <p>Acceptance doesn't mean liking or wanting pain --- it means allowing difficult feelings to be present without struggling against them. When you stop fighting anxiety, sadness, or anger, you free up energy for living. Acceptance is an active choice: 'I can feel this anxiety and still do what matters."</p>
               ),
             },
             {
               title: '3. Present Moment Awareness: Contacting the Here and Now',
               description: (
-                <p>Much suffering comes from dwelling on the past or worrying about the future. Mindfulness skills in ACT help you anchor in the present moment — the only place where you can actually take action. This isn't about emptying your mind; it's about noticing what's happening right now, inside and outside.</p>
+                <p>Much suffering comes from dwelling on the past or worrying about the future. Mindfulness skills in ACT help you anchor in the present moment --- the only place where you can actually take action. This isn't about emptying your mind; it's about noticing what's happening right now, inside and outside.</p>
               ),
             },
             {
@@ -1493,7 +1493,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
                     <li><strong>The conceptualized self</strong>: The story you tell about who you are ("I'm a failure,", "I'm an anxious person")</li>
                     <li><strong>The observing self</strong>: The "you" that notices thoughts, feelings, and experiences without being defined by them</li>
                   </ul>
-                  <p className="mt-4">Connecting with the observing self creates space and stability — thoughts and feelings come and go, but the observer remains.</p>
+                  <p className="mt-4">Connecting with the observing self creates space and stability --- thoughts and feelings come and go, but the observer remains.</p>
                 </div>
               ),
             },
@@ -1501,7 +1501,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
               title: '5. Values: Choosing Your Direction',
               description: (
                 <div>
-                  <p className="mb-4">Values are chosen life directions — what you want to stand for, what matters most to you. They're not goals (which can be completed) but ongoing qualities you want to embody <Citation id="7" index={7} source="Journal of Contextual Behavioral Science" year="2022" tier={1} />.</p>
+                  <p className="mb-4">Values are chosen life directions --- what you want to stand for, what matters most to you. They're not goals (which can be completed) but ongoing qualities you want to embody <Citation id="7" index={7} source="Journal of Contextual Behavioral Science" year="2022" tier={1} />.</p>
                   <p className="mb-4"><strong>Examples:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Goal: "Get married" → Value: "Being a loving, supportive partner"</li>
@@ -1515,14 +1515,14 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             {
               title: '6. Committed Action: Building Patterns of Effective Behavior',
               description: (
-                <p>Values give direction; committed action is the step-by-step movement in that direction. Even when fear, doubt, or discomfort show up, you take action aligned with your values. This is where change happens — not through eliminating anxiety, but through acting despite it.</p>
+                <p>Values give direction; committed action is the step-by-step movement in that direction. Even when fear, doubt, or discomfort show up, you take action aligned with your values. This is where change happens --- not through eliminating anxiety, but through acting despite it.</p>
               ),
             },
           ]}
         />
 
         <QuoteBlock
-          quote="You don't have to wait until anxiety goes away to start living. You can carry anxiety with you — like an annoying but harmless companion — and still do what matters."
+          quote="You don't have to wait until anxiety goes away to start living. You can carry anxiety with you --- like an annoying but harmless companion --- and still do what matters."
           attribution="Dr. Russ Harris"
           role={`ACT Therapist and Author of "The Happiness Trap"`}
           variant="large"
@@ -1556,7 +1556,7 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
               id: 'values-work',
               title: 'Values clarification is central',
               content: (
-                <p>Early in treatment, you'll spend time identifying your core values. Your therapist might ask: "If you couldn't fail, what would you do with your life?" or "Imagine your 80th birthday — what do you want to have stood for?" This work creates the compass for all committed action.</p>
+                <p>Early in treatment, you'll spend time identifying your core values. Your therapist might ask: "If you couldn't fail, what would you do with your life?" or "Imagine your 80th birthday --- what do you want to have stood for?" This work creates the compass for all committed action.</p>
               ),
             },
             {
@@ -1593,10 +1593,10 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           ACT shows particularly strong outcomes for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Chronic pain</strong> — helps people live fully despite pain rather than waiting for pain to end <Citation id="4" index={4} source="Current Opinion in Psychology" year="2021" tier={1} /></li>
-          <li><strong>Depression</strong> — especially when rumination and avoidance are prominent <Citation id="6" index={6} source="Journal of Contextual Behavioral Science" year="2021" tier={1} /></li>
-          <li><strong>Anxiety disorders</strong> — particularly effective for those who've tried to "control" anxiety without success</li>
-          <li><strong>Conditions where acceptance matters</strong> — chronic illness, grief, disability, aging</li>
+          <li><strong>Chronic pain</strong> --- helps people live fully despite pain rather than waiting for pain to end <Citation id="4" index={4} source="Current Opinion in Psychology" year="2021" tier={1} /></li>
+          <li><strong>Depression</strong> --- especially when rumination and avoidance are prominent <Citation id="6" index={6} source="Journal of Contextual Behavioral Science" year="2021" tier={1} /></li>
+          <li><strong>Anxiety disorders</strong> --- particularly effective for those who've tried to "control" anxiety without success</li>
+          <li><strong>Conditions where acceptance matters</strong> --- chronic illness, grief, disability, aging</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="ACT in Diverse Populations">
@@ -1611,9 +1611,9 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Have tried to "fix" or eliminate anxiety/depression</strong> without lasting success</li>
-          <li><strong>Struggle with experiential avoidance</strong> — constantly trying to escape discomfort</li>
-          <li><strong>Feel disconnected from what matters</strong> — you're stuck in coping rather than living</li>
-          <li><strong>Face unchangeable suffering</strong> — chronic pain, grief, terminal illness, disability</li>
+          <li><strong>Struggle with experiential avoidance</strong> --- constantly trying to escape discomfort</li>
+          <li><strong>Feel disconnected from what matters</strong> --- you're stuck in coping rather than living</li>
+          <li><strong>Face unchangeable suffering</strong> --- chronic pain, grief, terminal illness, disability</li>
           <li><strong>Get caught in rumination</strong> or overthinking</li>
           <li><strong>Are open to mindfulness and experiential exercises</strong></li>
           <li><strong>Value personal growth and meaning</strong> over just symptom reduction</li>

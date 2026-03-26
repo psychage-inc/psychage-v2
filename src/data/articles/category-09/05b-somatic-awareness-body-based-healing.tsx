@@ -80,7 +80,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
             Body scan meditation is a cornerstone practice of Mindfulness-Based Stress Reduction (MBSR), one of the most well-researched mindfulness interventions. By systematically directing attention through the body, you cultivate present-moment awareness, release tension, and develop a more connected relationship with physical experience.
           </p>
           <p className="mb-6">
-            Unlike Progressive Muscle Relaxation (which tenses then releases muscles), body scan meditation simply observes what's already present—teaching you to notice sensations without trying to change them <Citation id="1" index={1} source="Mindfulness" year="2019" tier={1} />.
+            Unlike Progressive Muscle Relaxation (which tenses then releases muscles), body scan meditation simply observes what's already present---teaching you to notice sensations without trying to change them <Citation id="1" index={1} source="Mindfulness" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -88,14 +88,14 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           What Is Body Scan Meditation?
         </h2>
         <p className="mb-6">
-          Body scan meditation involves lying down or sitting comfortably and systematically directing attention to different parts of your body, from toes to head (or head to toes). You notice whatever sensations are present—warmth, coolness, tingling, tension, pulsing, numbness, or nothing at all—without judgment.
+          Body scan meditation involves lying down or sitting comfortably and systematically directing attention to different parts of your body, from toes to head (or head to toes). You notice whatever sensations are present---warmth, coolness, tingling, tension, pulsing, numbness, or nothing at all---without judgment.
         </p>
         <p className="mb-6">
           The practice typically takes 20-45 minutes for a full body scan, though shorter versions (5-10 minutes) are effective once you've learned the technique.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The goal of body scan meditation isn't relaxation (though that often happens). The goal is awareness—learning to be present with your body's actual experience, whatever it is, without needing to fix, change, or escape it.</p>
+          <p>The goal of body scan meditation isn't relaxation (though that often happens). The goal is awareness---learning to be present with your body's actual experience, whatever it is, without needing to fix, change, or escape it.</p>
         </ArticleCallout>
 
         <h2 id="how-body-scan-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -109,7 +109,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           1. Develops Interoception
         </h3>
         <p className="mb-6">
-          Interoception is your ability to sense internal body states. Regular body scan practice enhances interoceptive awareness—helping you recognize hunger, fatigue, tension, and emotional states earlier and more accurately <Citation id="3" index={3} source="Biological Psychology" year="2020" tier={1} />.
+          Interoception is your ability to sense internal body states. Regular body scan practice enhances interoceptive awareness---helping you recognize hunger, fatigue, tension, and emotional states earlier and more accurately <Citation id="3" index={3} source="Biological Psychology" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -130,7 +130,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           4. Cultivates Non-Reactive Awareness
         </h3>
         <p className="mb-6">
-          Body scan teaches you to observe sensations (including uncomfortable ones) without immediately reacting—a skill that transfers to emotional experiences and thoughts.
+          Body scan teaches you to observe sensations (including uncomfortable ones) without immediately reacting---a skill that transfers to emotional experiences and thoughts.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -188,7 +188,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
             {
               title: 'Begin with Toes',
               description: (
-                <p>Bring attention to your left toes. Notice any sensations—tingling, warmth, pressure, nothing. There's no right or wrong. Just notice what's there.</p>
+                <p>Bring attention to your left toes. Notice any sensations---tingling, warmth, pressure, nothing. There's no right or wrong. Just notice what's there.</p>
               ),
             },
             {
@@ -224,7 +224,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
             {
               title: 'Neck, Throat, Face, Head',
               description: (
-                <p>Notice throat, jaw, mouth, nose, eyes, forehead, scalp. Facial tension is common—simply observe it.</p>
+                <p>Notice throat, jaw, mouth, nose, eyes, forehead, scalp. Facial tension is common---simply observe it.</p>
               ),
             },
             {
@@ -259,7 +259,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
                     <li>Sit rather than lie down</li>
                     <li>Keep eyes slightly open with soft gaze</li>
                   </ul>
-                  <p className="mt-4">If using body scan for sleep, falling asleep is perfect—you're doing it right!</p>
+                  <p className="mt-4">If using body scan for sleep, falling asleep is perfect---you're doing it right!</p>
                 </div>
               ),
             },
@@ -268,9 +268,9 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
               label: 'Mind Wandering',
               content: (
                 <div>
-                  <p className="mb-4">The mind will wander—constantly. This is normal, not failure.</p>
+                  <p className="mb-4">The mind will wander---constantly. This is normal, not failure.</p>
                   <p className="mb-4">Each time you notice wandering, gently bring attention back to the current body part. This moment of noticing and returning IS the practice.</p>
-                  <p>You might bring attention back 100 times in one session—that's 100 successful moments of mindfulness.</p>
+                  <p>You might bring attention back 100 times in one session---that's 100 successful moments of mindfulness.</p>
                 </div>
               ),
             },
@@ -306,8 +306,8 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">If you encounter pain or strong discomfort:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>Notice the edges—where does the sensation begin and end?</li>
-                    <li>Explore the quality—sharp, dull, throbbing, burning?</li>
+                    <li>Notice the edges---where does the sensation begin and end?</li>
+                    <li>Explore the quality---sharp, dull, throbbing, burning?</li>
                     <li>Breathe into the area without trying to force relaxation</li>
                     <li>If overwhelming, move attention to a neutral area</li>
                   </ul>
@@ -363,7 +363,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
             <li>Use guided audio until you know the sequence</li>
             <li>Start with just 10 minutes if 45 feels overwhelming</li>
             <li>Practice lying down initially, then try sitting as you build skill</li>
-            <li>Be patient—body awareness develops gradually</li>
+            <li>Be patient---body awareness develops gradually</li>
           </ul>
         </ArticleCallout>
 
@@ -405,7 +405,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Body scan meditation is a deceptively simple practice with profound effects. By learning to inhabit your body with awareness and acceptance, you develop a foundational skill for mental health and well-being.
         </p>
         <p className="mb-6">
-          It takes practice—weeks or months of regular scanning before the full benefits emerge. But the investment pays off in reduced stress, better emotional regulation, and a more connected relationship with your physical experience.
+          It takes practice---weeks or months of regular scanning before the full benefits emerge. But the investment pays off in reduced stress, better emotional regulation, and a more connected relationship with your physical experience.
         </p>
         <p className="mb-6">
           Your body is always in the present moment. Body scan meditation teaches you to join it there.
@@ -521,7 +521,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>DMT doesn't require dance skill or physical fitness. It's not about performing or looking good—it's about authentic movement expression and exploring how you move through the world, both literally and metaphorically.</p>
+          <p>DMT doesn't require dance skill or physical fitness. It's not about performing or looking good---it's about authentic movement expression and exploring how you move through the world, both literally and metaphorically.</p>
         </ArticleCallout>
 
         <h2 id="how-dmt-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -588,7 +588,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
             {
               title: 'Theme Development',
               description: (
-                <p>Exploring a therapeutic theme through movement—perhaps expressing an emotion, working with a relationship pattern, or exploring a quality like 'strength' or "boundaries."</p>
+                <p>Exploring a therapeutic theme through movement---perhaps expressing an emotion, working with a relationship pattern, or exploring a quality like 'strength' or "boundaries."</p>
               ),
             },
             {
@@ -687,7 +687,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Movement Metaphor
         </h3>
         <p className="mb-6">
-          Exploring psychological concepts through movement—like practicing "taking up space" or "setting boundaries" physically before applying them in life.
+          Exploring psychological concepts through movement---like practicing "taking up space" or "setting boundaries" physically before applying them in life.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -786,7 +786,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Dance/Movement Therapy offers a powerful pathway to healing that honors the body's wisdom and creative expression. It's particularly valuable when words aren't enough—when trauma, emotion, or experience lives beyond language.
+          Dance/Movement Therapy offers a powerful pathway to healing that honors the body's wisdom and creative expression. It's particularly valuable when words aren't enough---when trauma, emotion, or experience lives beyond language.
         </p>
         <p className="mb-6">
           You don't need to be a dancer to benefit from DMT. You just need to be willing to move, to listen to what your body is trying to say, and to explore healing through embodied expression.
@@ -868,7 +868,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
             When anxiety spikes, panic hits, or emotional overwhelm takes over, grounding techniques use your body and senses to anchor you back in the present moment. Simple, fast, and effective, these tools can interrupt crisis states and restore a sense of safety and control.
           </p>
           <p className="mb-6">
-            Grounding works by redirecting attention from internal distress (racing thoughts, intense emotions, traumatic memories) to external reality—what you can see, hear, touch, taste, and smell right now <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2018" tier={1} />.
+            Grounding works by redirecting attention from internal distress (racing thoughts, intense emotions, traumatic memories) to external reality---what you can see, hear, touch, taste, and smell right now <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -890,7 +890,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Grounding doesn't solve the underlying problem—it provides temporary relief and stabilization so you can then address what's wrong from a calmer state. Think of it as an emergency brake, not the destination.</p>
+          <p>Grounding doesn't solve the underlying problem---it provides temporary relief and stabilization so you can then address what's wrong from a calmer state. Think of it as an emergency brake, not the destination.</p>
         </ArticleCallout>
 
         <h2 id="how-grounding-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -966,7 +966,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <li>Cool metal object</li>
         </ul>
         <p className="mb-6">
-          When overwhelmed, focus intently on the texture—running fingers over it, describing the sensation in detail.
+          When overwhelmed, focus intently on the texture---running fingers over it, describing the sensation in detail.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1026,7 +1026,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Movement-Based Grounding
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Walking</strong>: Notice each step—heel down, weight shifting, toes pushing off</li>
+          <li><strong>Walking</strong>: Notice each step---heel down, weight shifting, toes pushing off</li>
           <li><strong>Jumping jacks or dancing</strong>: Get energy moving, focusing on body sensations</li>
           <li><strong>Yoga poses</strong>: Simple poses like child's pose or mountain pose with attention to alignment</li>
           <li><strong>Progressive muscle tightening</strong>: Tense and release muscle groups briefly</li>
@@ -1111,14 +1111,14 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Grounding is a crisis tool, not a cure. If you find yourself needing grounding techniques constantly, or if they stop working, it's time to address underlying issues with professional help.
         </p>
         <p className="mb-6">
-          Grounding helps you survive the moment—therapy helps you address what's creating the moments.
+          Grounding helps you survive the moment---therapy helps you address what's creating the moments.
         </p>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Grounding techniques are simple, effective, and always available. They don't require equipment, money, or perfect conditions—just willingness to redirect attention from internal distress to present-moment reality.
+          Grounding techniques are simple, effective, and always available. They don't require equipment, money, or perfect conditions---just willingness to redirect attention from internal distress to present-moment reality.
         </p>
         <p className="mb-6">
           Build a toolkit of grounding techniques that work for you. Practice them regularly. When crisis hits, you'll have reliable tools to help you find your footing again.
@@ -1204,7 +1204,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The vagus nerve is your body's built-in calming system—a biological superhighway running from your brainstem to your organs, constantly communicating between your body and brain. Understanding how it works unlocks powerful tools for regulating stress, anxiety, and emotional states.
+            The vagus nerve is your body's built-in calming system---a biological superhighway running from your brainstem to your organs, constantly communicating between your body and brain. Understanding how it works unlocks powerful tools for regulating stress, anxiety, and emotional states.
           </p>
           <p className="mb-6">
             When functioning optimally, the vagus nerve helps you feel safe, calm, and socially connected. When dysregulated, it contributes to anxiety, panic, depression, and difficulty recovering from stress <Citation id="2" index={2} source="Biological Psychology" year="2020" tier={1} />.
@@ -1227,11 +1227,11 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <li>Other organs</li>
         </ul>
         <p className="mb-6">
-          About 80% of vagus nerve fibers are afferent—meaning they carry information FROM your body TO your brain, not the other way around. Your body is constantly updating your brain about its internal state.
+          About 80% of vagus nerve fibers are afferent---meaning they carry information FROM your body TO your brain, not the other way around. Your body is constantly updating your brain about its internal state.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The vagus nerve is the main component of your parasympathetic nervous system—your "rest and digest" response. When activated, it slows heart rate, lowers blood pressure, aids digestion, and promotes calmness and social engagement.</p>
+          <p>The vagus nerve is the main component of your parasympathetic nervous system---your "rest and digest" response. When activated, it slows heart rate, lowers blood pressure, aids digestion, and promotes calmness and social engagement.</p>
         </ArticleCallout>
 
         <h2 id="polyvagal-theory" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1304,7 +1304,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <li>Greater stress resilience</li>
         </ul>
         <p className="mb-6">
-          Vagal tone is measured through Heart Rate Variability (HRV)—the variation in time between heartbeats <Citation id="4" index={4} source="Frontiers in Public Health" year="2018" tier={1} />. Higher HRV (more variability) indicates higher vagal tone and better health.
+          Vagal tone is measured through Heart Rate Variability (HRV)---the variation in time between heartbeats <Citation id="4" index={4} source="Frontiers in Public Health" year="2018" tier={1} />. Higher HRV (more variability) indicates higher vagal tone and better health.
         </p>
         <p className="mb-6">
           The good news: vagal tone can be improved through specific practices.
@@ -1324,7 +1324,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <li><strong>Chronic inflammation</strong>: The vagus nerve has anti-inflammatory effects; dysfunction increases inflammation</li>
         </ul>
         <p className="mb-6">
-          Vagus nerve stimulation (VNS)—using an implanted device to electrically stimulate the nerve—is FDA-approved for treatment-resistant depression <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2019" tier={1} />. While implanted VNS requires surgery, you can stimulate your vagus nerve naturally.
+          Vagus nerve stimulation (VNS)---using an implanted device to electrically stimulate the nerve---is FDA-approved for treatment-resistant depression <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2019" tier={1} />. While implanted VNS requires surgery, you can stimulate your vagus nerve naturally.
         </p>
 
         <h2 id="activating-vagus-nerve" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1338,7 +1338,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           1. Slow, Deep Breathing
         </h3>
         <p className="mb-6">
-          Especially breathing with extended exhales (2:1 ratio—exhale twice as long as inhale). This directly stimulates ventral vagal pathways.
+          Especially breathing with extended exhales (2:1 ratio---exhale twice as long as inhale). This directly stimulates ventral vagal pathways.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1438,7 +1438,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Helping clients recognize their nervous system states</li>
           <li>Teaching bottom-up regulation (body-to-mind rather than mind-to-body)</li>
-          <li>Using co-regulation—therapist's calm nervous system helping client's settle</li>
+          <li>Using co-regulation---therapist's calm nervous system helping client's settle</li>
           <li>Creating safety cues that activate ventral vagal state</li>
           <li>Trauma therapy that respects nervous system capacity</li>
         </ul>
@@ -1473,7 +1473,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Your vagus nerve is a powerful gateway between body and mind. By understanding and intentionally activating it, you gain a biological tool for regulating stress, improving mood, and building resilience.
         </p>
         <p className="mb-6">
-          The practices that activate the vagus nerve—slow breathing, cold exposure, singing, social connection—aren't just woo-woo wellness trends. They're evidence-based interventions working through real biological pathways.
+          The practices that activate the vagus nerve---slow breathing, cold exposure, singing, social connection---aren't just woo-woo wellness trends. They're evidence-based interventions working through real biological pathways.
         </p>
         <p className="mb-6">
           Your body has its own built-in calming system. Learning to use it changes everything.
@@ -1486,7 +1486,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     id: catId(50),
     slug: 'interoception-reading-body-internal-signals',
     title: "Interoception: Learning to Read Your Body\'s Internal Signals",
-    description: 'Understand interoception—your sense of internal body states—and learn how improving this crucial awareness supports emotional regulation, decision-making, and mental health.',
+    description: 'Understand interoception---your sense of internal body states---and learn how improving this crucial awareness supports emotional regulation, decision-making, and mental health.',
     image: "/images/articles/cat09/cover-050.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 7,
@@ -1556,10 +1556,10 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Right now, without looking down, can you tell if your heart is beating fast or slow? Whether your stomach is empty or full? If your shoulders are tense or relaxed? Your ability to sense these internal states is called interoception—and it's fundamental to emotional health, decision-making, and self-regulation.
+            Right now, without looking down, can you tell if your heart is beating fast or slow? Whether your stomach is empty or full? If your shoulders are tense or relaxed? Your ability to sense these internal states is called interoception---and it's fundamental to emotional health, decision-making, and self-regulation.
           </p>
           <p className="mb-6">
-            While we're all familiar with the five external senses, interoception—the sense of your body's internal condition—is equally important but far less discussed <Citation id="1" index={1} source="Current Opinion in Psychology" year="2019" tier={1} />. Yet research shows it's crucial for mental health and wellbeing.
+            While we're all familiar with the five external senses, interoception---the sense of your body's internal condition---is equally important but far less discussed <Citation id="1" index={1} source="Current Opinion in Psychology" year="2019" tier={1} />. Yet research shows it's crucial for mental health and wellbeing.
           </p>
         </div>
 
@@ -1588,7 +1588,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Interoception isn't just about noticing sensations—it's about accurately interpreting what they mean. Do butterflies in your stomach signal anxiety, excitement, hunger, or illness? Good interoceptive awareness helps you distinguish between these states.</p>
+          <p>Interoception isn't just about noticing sensations---it's about accurately interpreting what they mean. Do butterflies in your stomach signal anxiety, excitement, hunger, or illness? Good interoceptive awareness helps you distinguish between these states.</p>
         </ArticleCallout>
 
         <h2 id="dimensions-of-interoception" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1616,7 +1616,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           3. Interoceptive Awareness
         </h3>
         <p className="mb-6">
-          The match between accuracy and sensibility—knowing how well you actually read your body.
+          The match between accuracy and sensibility---knowing how well you actually read your body.
         </p>
         <p className="mb-6">
           Interestingly, these dimensions don't always align. Some people are confident about their body awareness but inaccurate. Others accurately sense internal states but doubt themselves.
@@ -1630,7 +1630,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           1. Emotional Awareness and Regulation
         </h3>
         <p className="mb-6">
-          Emotions are partly physical experiences—fear involves a racing heart, sadness involves heaviness in the chest, anger involves heat and tension <Citation id="2" index={2} source="Emotion" year="2018" tier={1} />. To recognize and name emotions, you must first sense the body signals associated with them.
+          Emotions are partly physical experiences---fear involves a racing heart, sadness involves heaviness in the chest, anger involves heat and tension <Citation id="2" index={2} source="Emotion" year="2018" tier={1} />. To recognize and name emotions, you must first sense the body signals associated with them.
         </p>
         <p className="mb-6">
           Poor interoception makes it hard to know what you're feeling, leading to alexithymia (difficulty identifying emotions) and poor emotional regulation.
@@ -1640,7 +1640,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           2. Decision-Making
         </h3>
         <p className="mb-6">
-          "Gut feelings" aren't mystical—they're interoceptive signals <Citation id="6" index={6} source="Psychological Science" year="2018" tier={1} />. Your body responds to situations before your conscious mind fully processes them. People with better interoception make better intuitive decisions.
+          "Gut feelings" aren't mystical---they're interoceptive signals <Citation id="6" index={6} source="Psychological Science" year="2018" tier={1} />. Your body responds to situations before your conscious mind fully processes them. People with better interoception make better intuitive decisions.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1678,7 +1678,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Depression
         </h3>
         <p className="mb-6">
-          Reduced interoceptive awareness is common in depression—people feel "numb" or disconnected from body sensations. This contributes to anhedonia (inability to feel pleasure) and difficulty recognizing needs.
+          Reduced interoceptive awareness is common in depression---people feel "numb" or disconnected from body sensations. This contributes to anhedonia (inability to feel pleasure) and difficulty recognizing needs.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1699,7 +1699,7 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           Autism Spectrum
         </h3>
         <p className="mb-6">
-          Many autistic individuals experience interoceptive differences—difficulty recognizing hunger, need to use the bathroom, fatigue, or pain. This isn't insensitivity; it's different processing of these signals.
+          Many autistic individuals experience interoceptive differences---difficulty recognizing hunger, need to use the bathroom, fatigue, or pain. This isn't insensitivity; it's different processing of these signals.
         </p>
 
         <StatCard
@@ -1764,11 +1764,11 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <p className="mb-4"><strong>Daily interoceptive practice (2 minutes):</strong></p>
           <ol className="list-decimal pl-6 space-y-2">
             <li>Sit comfortably, close eyes</li>
-            <li>Notice breathing without changing it—fast, slow, shallow, deep?</li>
-            <li>Sense your heartbeat—can you feel it? Where? Chest? Throat? Fingertips?</li>
-            <li>Scan for tension—where are you holding it?</li>
-            <li>Notice temperature—are hands warm or cold?</li>
-            <li>Check energy level—energized, tired, somewhere between?</li>
+            <li>Notice breathing without changing it---fast, slow, shallow, deep?</li>
+            <li>Sense your heartbeat---can you feel it? Where? Chest? Throat? Fingertips?</li>
+            <li>Scan for tension---where are you holding it?</li>
+            <li>Notice temperature---are hands warm or cold?</li>
+            <li>Check energy level---energized, tired, somewhere between?</li>
             <li>Open eyes, jot down what you noticed</li>
           </ol>
           <p className="mt-4">Do this daily for 2-4 weeks and your interoceptive accuracy will improve.</p>
@@ -1793,14 +1793,14 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <li><strong>Chronic pain</strong>: Excessive body focus can amplify pain perception</li>
         </ul>
         <p className="mb-6">
-          The goal isn't to obsess over every sensation—it's to have balanced, accurate awareness you can tune in to when needed and tune out when not.
+          The goal isn't to obsess over every sensation---it's to have balanced, accurate awareness you can tune in to when needed and tune out when not.
         </p>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Interoception—your ability to read your body's internal signals—is a foundational skill for emotional health, self-care, and wellbeing. Many people move through life disconnected from their bodies, missing crucial information about their needs, emotions, and states.
+          Interoception---your ability to read your body's internal signals---is a foundational skill for emotional health, self-care, and wellbeing. Many people move through life disconnected from their bodies, missing crucial information about their needs, emotions, and states.
         </p>
         <p className="mb-6">
           By intentionally developing interoceptive awareness through body-based practices, you gain access to a rich source of information that supports better emotional regulation, decision-making, and self-understanding.

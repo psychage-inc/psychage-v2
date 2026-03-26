@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 5 — Myths About Men's Mental Health | Articles 41-46
+// Subcategory 5 --- Myths About Men's Mental Health | Articles 41-46
 // ============================================================================
 
 export const mythsAboutMensMentalHealthArticles: Article[] = [
@@ -94,6 +94,15 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
             the deeply internalized conviction that real men solve their own problems.
           </p>
           <p className="mb-6">
+            Consider the mathematics of untreated mental illness in men. Depression affects roughly
+            6 million men in the United States annually. Post-traumatic stress disorder, substance use
+            disorders, and anxiety conditions each add millions more. For every man sitting in a
+            therapist's office working through these conditions, there are two or three who are not --
+            men whose marriages are eroding, whose work performance is declining, whose physical
+            health is deteriorating, all because the idea of asking for professional support feels like
+            an admission that they have fundamentally failed at being male.
+          </p>
+          <p className="mb-6">
             This article examines where that belief comes from, what the evidence actually shows about
             men and therapy, and why dismantling this myth could save lives.
           </p>
@@ -113,6 +122,15 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           of mental illness in themselves, less likely to tell friends or family they are struggling,
           less likely to contact a helpline, and when they do enter treatment, they are more likely
           to drop out prematurely <Citation id="7" index={7} source="Psychological Medicine" year="2018" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The myth also operates through selective definitions of acceptable help. A man who hires a
+          personal trainer to optimize his body is making a smart investment. A man who hires a financial
+          advisor to optimize his portfolio is being responsible. But a man who hires a therapist to
+          optimize his mental health is admitting defeat. The inconsistency reveals that the stigma is
+          not about getting help -- it is specifically about getting emotional help, which is coded as
+          feminine and therefore incompatible with the masculine self-image many men have been trained
+          to protect at all costs.
         </p>
 
         <StatCard
@@ -162,6 +180,47 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           The barrier is not what other people think. It is what men think about themselves
           if they ask for help.
         </p>
+        <p className="mb-6">
+          Fatherhood patterns also transmit the myth across generations. Boys who never see their
+          fathers process difficult emotions openly learn that emotional difficulty is something to be
+          hidden. When a father loses his job, grieves a parent, or struggles with marital conflict
+          behind closed doors without ever naming those experiences to his children, the children absorb
+          a template: men do not talk about what hurts. They handle it. They move on. Each generation
+          of silence teaches the next that therapy is for other people -- people who are not strong
+          enough, disciplined enough, or male enough to manage on their own.
+        </p>
+
+        <h2 id="the-generational-shift" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Generational Shift
+        </h2>
+        <p className="mb-6">
+          There are reasons for cautious optimism. Younger generations of men are engaging with therapy
+          at higher rates than their fathers and grandfathers did. Survey data from the American
+          Psychological Association shows that men between 18 and 34 report significantly more favorable
+          attitudes toward mental health treatment than men over 55. Social media has played an
+          unexpected role in this shift, with male public figures -- athletes, musicians, veterans,
+          and content creators -- discussing their own therapy experiences openly and reaching audiences
+          that traditional public health messaging never penetrated.
+        </p>
+        <p className="mb-6">
+          Professional sports have become a particularly visible arena for change. When high-profile
+          athletes publicly discuss their experiences with therapy, depression, or anxiety, they
+          disrupt the association between masculinity and emotional invulnerability in spaces where
+          that association is most deeply held. The message carries weight precisely because it comes
+          from men whose physical strength and competitive success are beyond question. If a
+          professional boxer or Olympic weightlifter can say "I see a therapist," the equation of
+          therapy with weakness becomes harder to sustain.
+        </p>
+        <p className="mb-6">
+          Workplace wellness programs are also shifting norms, particularly in male-dominated
+          industries. Construction companies, law enforcement agencies, and technology firms have
+          begun offering employee assistance programs with mental health components specifically
+          marketed to their male workforces. The framing matters: when therapy is positioned as
+          performance optimization rather than emotional rescue, male engagement rates increase
+          substantially. This is not ideal -- ideally, men would not need therapy to be rebranded
+          before they would use it -- but it represents meaningful progress in a culture that is
+          slowly renegotiating what masculinity permits.
+        </p>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Research Shows
@@ -178,7 +237,13 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           skill-building, shows particularly strong outcomes for men -- possibly because its
           action-oriented framework aligns with preferences many men bring to the therapeutic setting.
           Men in CBT for depression show remission rates of 50-60%, comparable to or exceeding
-          medication alone.
+          medication alone. Eye movement desensitization and reprocessing (EMDR) has demonstrated
+          strong efficacy for male veterans and first responders with PTSD, populations that were
+          historically among the most resistant to traditional talk therapy. Dialectical behavior
+          therapy (DBT), originally developed for borderline personality disorder, has shown
+          promising results for men struggling with anger regulation and emotional volatility --
+          conditions that are often treated as behavioral problems rather than treatable
+          psychological conditions.
         </p>
         <p className="mb-6">
           The problem is not that therapy does not work for men. The problem is that men do not enter
@@ -235,6 +300,16 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           mistaken for choice. The ripple effects of one man's untreated depression can reshape an
           entire family system.
         </p>
+        <p className="mb-6">
+          The economic costs are substantial as well. Untreated mental health conditions in men
+          contribute to workplace absenteeism, presenteeism (being physically present but functionally
+          impaired), disability claims, and early workforce exit. Estimates suggest that depression
+          alone costs employers over 200 billion dollars annually in lost productivity, and men
+          account for a disproportionate share of that figure because their conditions are less likely
+          to be identified and treated at earlier, less costly stages. The myth that men do not need
+          therapy is not just harmful to individual men -- it is a structural failure with cascading
+          consequences across families, workplaces, and public health systems.
+        </p>
 
         <BeforeAfter
           before={{ title: 'The Myth', items: ['Therapy is for people who can\'t cope', 'Asking for help means you\'re weak', 'Real men figure things out alone', 'Talking about problems makes them worse'] }}
@@ -265,6 +340,17 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           engagement <Citation id="8" index={8} source="Movember Foundation" year="2023" tier={3} />.
           Men do not need to become someone different to benefit from therapy. Therapy can be adapted
           to work with who men already are.
+        </p>
+        <p className="mb-6">
+          The therapist-client relationship itself is worth addressing, because many men's resistance to
+          therapy is shaped by an inaccurate picture of what therapy actually involves. Therapy is not
+          lying on a couch while someone asks about your childhood for years on end. Modern
+          evidence-based treatments are typically structured, goal-oriented, and time-limited. A course
+          of CBT for depression usually involves 12 to 16 sessions focused on identifying thought
+          patterns that maintain distress and building practical skills to change them. Many men who
+          enter therapy expecting to feel vulnerable and exposed instead report feeling more in control --
+          because therapy gives them tools and frameworks for understanding experiences that previously
+          felt chaotic and unmanageable.
         </p>
 
         <ArticleCallout type="key-takeaway" title="The Bottom Line">
@@ -361,6 +447,16 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
             eating disorder research has focused specifically on male
             populations <Citation id="5" index={5} source="International Journal of Eating Disorders" year="2019" tier={1} />.
           </p>
+          <p className="mb-6">
+            The result is a clinical blind spot of staggering proportions. Men sit in emergency rooms
+            with cardiac arrhythmias caused by electrolyte imbalances from purging, and their eating
+            behaviors are never assessed. Men visit primary care providers with fatigue, hair loss, and
+            hormonal disruption caused by chronic caloric restriction, and their relationship with food
+            is never questioned. Men spend thousands of dollars on supplements, meal prep services, and
+            gym memberships in service of an obsession that has crossed the line from dedication to
+            pathology, and no one around them -- including their physicians -- recognizes the disorder
+            hiding behind the discipline.
+          </p>
         </div>
 
         <h2 id="the-myth" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -413,6 +509,17 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           message was clear: if you are male and struggling with food, body image, or compulsive
           exercise, this is not your condition. There is no name for what you
           have <Citation id="10" index={10} source="Clinical Psychology Review" year="2019" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The rise of social media has introduced new pressures that affect male body image in ways
+          earlier generations never experienced. Platforms algorithmically amplify images of
+          extremely lean, muscular male physiques, creating a digital environment where the average
+          male body is virtually absent. Fitness influencers promoting extreme dietary protocols and
+          training regimens -- often while using undisclosed performance-enhancing drugs -- set body
+          standards that are physiologically unattainable for most men without disordered behavior.
+          Young men scrolling through these feeds absorb a new version of the same old message: your
+          body is not enough, and the way to fix it is through more control, more restriction, and
+          more obsession.
         </p>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -484,6 +591,53 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           when the patient is identified as male <Citation id="9" index={9} source="European Eating Disorders Review" year="2020" tier={1} />.
           The myth does not just affect public perception -- it affects clinical judgment.
         </p>
+        <p className="mb-6">
+          Binge eating disorder deserves particular attention because it is the most common eating
+          disorder in men, yet it receives a fraction of the research and public attention devoted to
+          anorexia and bulimia. Men with BED describe recurrent episodes of consuming large quantities
+          of food in a short period, accompanied by a feeling of complete loss of control, followed by
+          intense shame. Unlike the stereotypical binge-purge cycle associated with bulimia, many men
+          with BED do not purge -- they absorb the caloric surplus, which contributes to weight gain
+          that is then attributed to poor self-control rather than recognized as a symptom of a
+          psychiatric condition. The shame cycle is self-reinforcing: the man eats to manage stress,
+          feels ashamed of eating, and eats again to manage the shame <Citation id="7" index={7} source="Psychological Medicine" year="2021" tier={1} />.
+        </p>
+
+        <h2 id="the-clinical-detection-gap" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Clinical Detection Gap
+        </h2>
+        <p className="mb-6">
+          The failure to detect eating disorders in men is not simply a matter of individual
+          clinician bias -- it is a systemic problem embedded in the tools and training that clinicians
+          rely on. The most widely used eating disorder screening instruments were validated primarily
+          on female samples. The Eating Disorder Examination Questionnaire (EDE-Q), the SCOFF
+          questionnaire, and the Eating Attitudes Test (EAT-26) all use language and symptom criteria
+          that center on thinness-seeking, fear of weight gain, and dietary restriction. These
+          instruments systematically miss men whose disordered eating manifests as pursuit of
+          muscularity, obsessive "clean eating," excessive protein consumption, or compulsive exercise
+          regimens that dominate their daily lives.
+        </p>
+        <p className="mb-6">
+          Medical training contributes to the gap. Most psychiatry and psychology training programs
+          dedicate limited time to eating disorders in general, and the case examples they do present
+          are overwhelmingly female. Clinicians graduate with an implicit association between eating
+          disorders and female patients that persists throughout their careers. When a male patient
+          presents with fatigue, hormonal disruption, or gastrointestinal complaints, the differential
+          diagnosis list rarely includes an eating disorder -- even when the clinical picture is
+          entirely consistent with one. The condition is not being hidden. It is being overlooked
+          because the clinical workforce was not trained to look for it in male bodies.
+        </p>
+        <p className="mb-6">
+          The sports and fitness context adds another layer of complexity. Male athletes in
+          weight-class sports (wrestling, boxing, rowing, martial arts) engage in extreme weight
+          manipulation behaviors at rates that would constitute clear eating pathology in any other
+          context. Rapid dehydration, severe caloric restriction, and compulsive exercise before
+          weigh-ins are normalized as "part of the sport." Coaches, teammates, and sports medicine
+          professionals may recognize the behavior but frame it as competitive dedication rather than
+          disordered eating. The athlete himself may never question whether his relationship with
+          food and body weight has crossed a clinical threshold because the environment around him
+          treats that behavior as standard practice.
+        </p>
 
         <h2 id="why-this-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why This Matters
@@ -509,6 +663,18 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           for discipline. The line between "dedicated" and "disordered" is a line our culture
           does not draw for men.
         </p>
+        <p className="mb-6">
+          The anabolic steroid connection is particularly concerning. An estimated 3-4 million
+          Americans have used anabolic-androgenic steroids, the vast majority of them male. While
+          steroid use is not itself an eating disorder, it frequently co-occurs with muscle
+          dysmorphia and represents an escalation of body-image-driven behavior with severe medical
+          consequences including liver damage, cardiovascular disease, hormonal disruption, and
+          psychiatric effects such as aggression and depression. The man who begins injecting
+          testosterone because his natural physique does not match the body he believes he should have
+          is engaging in a behavior that parallels the severity of purging or severe caloric
+          restriction -- yet it is rarely assessed in the context of eating pathology because
+          the clinical frameworks were not built to include it.
+        </p>
 
         <h2 id="the-more-accurate-picture" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The More Accurate Picture
@@ -519,6 +685,16 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           different -- centered on muscularity rather than thinness, on exercise rather than restriction,
           on supplements and performance foods rather than calorie counting -- but they cause equivalent
           suffering and carry equivalent medical risk.
+        </p>
+        <p className="mb-6">
+          Treatment works for men with eating disorders when it is accessible, appropriate, and free
+          from the gendered assumptions that discourage men from seeking it. Cognitive behavioral
+          therapy adapted for eating disorders (CBT-E) shows strong outcomes across genders.
+          Nutritional rehabilitation paired with psychological support addresses both the physical
+          and mental dimensions of recovery. Group therapy settings that include other men can reduce
+          the isolation and shame that many male patients describe as their biggest barriers to
+          engagement. The challenge is not the absence of effective treatments -- it is the absence
+          of recognition that men need them.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Signs to Watch For in Men">
@@ -617,6 +793,15 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
             The myth that men handle stress better is not just wrong. It is one of the reasons men
             die younger.
           </p>
+          <p className="mb-6">
+            Understanding this myth requires separating two things that are routinely confused:
+            the visibility of a stress response and the severity of it. Men have been trained to
+            minimize visible distress reactions -- to keep their voice steady, their face neutral,
+            and their behavior unchanged even when their internal state is turbulent. This performance
+            is so effective that it fools everyone, including the men themselves. They genuinely believe
+            they are handling it. Their blood pressure, their cortisol levels, and their arterial walls
+            tell a different story.
+          </p>
         </div>
 
         <h2 id="the-myth" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -632,6 +817,15 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           stress reactions, observers conclude they are less affected. The absence of tears is mistaken
           for the absence of suffering. The man who does not talk about his problems is presumed
           not to have them <Citation id="1" index={1} source="Personality and Social Psychology Review" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The myth is further sustained by a narrow definition of what stress looks like. When we
+          imagine a stressed person, we tend to picture someone who is visibly anxious, tearful, or
+          overwhelmed. We do not picture someone who is drinking an extra beer every night, snapping
+          at his children over minor infractions, developing unexplained back pain, or working
+          fourteen-hour days to avoid being alone with his own thoughts. These are all stress
+          responses. They are just not the ones our culture has learned to label as such when
+          they occur in men.
         </p>
 
         <h2 id="where-this-comes-from" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -717,6 +911,51 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           professional help) are coded as feminine, leaving men with fewer culturally sanctioned
           alternatives.
         </p>
+        <p className="mb-6">
+          Alexithymia -- the clinical term for difficulty identifying and describing one's own
+          emotional states -- is significantly more prevalent in men than in women, and it
+          represents one of the most underrecognized mediators of the stress-to-disease pathway.
+          Men with alexithymia experience physiological stress activation (elevated heart rate,
+          cortisol release, muscle tension) but cannot connect those sensations to an emotional
+          label. They feel their heart racing and assume it is caffeine. They notice chronic jaw
+          tension and attribute it to dental alignment. They develop insomnia and blame their
+          mattress. The inability to recognize stress as stress means the stress is never addressed --
+          it simply accumulates in the body until it manifests as a diagnosable medical
+          condition <Citation id="9" index={9} source="Journal of Psychosomatic Research" year="2020" tier={1} />.
+        </p>
+
+        <h2 id="the-body-keeps-the-score" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Body Keeps the Score
+        </h2>
+        <p className="mb-6">
+          The physiological consequences of chronic stress suppression in men follow a predictable
+          and well-documented pathway. When the stress response is activated but never consciously
+          processed or resolved, the hypothalamic-pituitary-adrenal (HPA) axis remains in a state
+          of chronic low-grade activation. Cortisol, which is adaptive in short bursts, becomes
+          destructive when elevated continuously. It promotes visceral fat deposition, impairs insulin
+          sensitivity, suppresses immune function, and drives systemic inflammation -- the same
+          inflammatory processes that underlie atherosclerosis, the leading cause of death in men
+          worldwide.
+        </p>
+        <p className="mb-6">
+          The cardiovascular data is particularly stark. Men who score high on emotional suppression
+          measures do not simply have slightly elevated risk. They have measurably thicker carotid
+          artery walls, higher rates of hypertension, and greater incidence of cardiac events even
+          after researchers control for smoking, obesity, physical inactivity, and family history.
+          The emotional pattern itself -- the chronic containment of distress without resolution --
+          appears to function as an independent cardiovascular risk factor, comparable in magnitude
+          to moderately elevated cholesterol. The "strong silent type" is not merely a cultural
+          archetype. It is a clinical profile associated with premature death.
+        </p>
+        <p className="mb-6">
+          Sleep disruption serves as another critical pathway. Men under chronic stress who do not
+          engage in emotional processing or adaptive coping show significantly higher rates of
+          insomnia and sleep fragmentation. Poor sleep, in turn, impairs cognitive function,
+          emotional regulation, immune response, and metabolic health -- creating a compounding
+          cycle where suppressed stress degrades the biological systems that would help manage
+          it. The man who "handles" his stress by pushing through during the day often pays for it
+          during the night, lying awake with a racing mind he has spent all day pretending is calm.
+        </p>
 
         <h2 id="why-this-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why This Matters
@@ -748,6 +987,15 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           Men's typical stress coping strategies (externalization, suppression, substance use,
           withdrawal) are not signs of superior resilience. They are patterns shaped by cultural norms
           that discourage emotional expression and help-seeking.
+        </p>
+        <p className="mb-6">
+          Emerging research on male-specific stress interventions offers a practical path forward.
+          Programs that teach men to recognize their personal stress signals -- physical symptoms,
+          behavioral changes, relational patterns -- without requiring them to adopt unfamiliar
+          emotional vocabulary show promising results. Stress management framed as "performance
+          optimization" or "tactical recovery" engages men who would resist the same content labeled
+          as "emotional wellness." The goal is not to change how men experience stress but to expand
+          their repertoire of responses beyond the narrow set that culture currently permits.
         </p>
 
         <ArticleCallout type="key-takeaway" title="Redefining Resilience">
@@ -845,6 +1093,15 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
             depression. We were taught that depression means sadness. In men, it often means something
             very different <Citation id="1" index={1} source="Psychology of Men & Masculinities" year="2021" tier={1} />.
           </p>
+          <p className="mb-6">
+            The conflation of depression with laziness in men has consequences that extend far beyond
+            hurt feelings. It delays treatment by years. It transforms a medical condition into a moral
+            judgment. It turns the people who should be sources of support -- partners, parents, friends,
+            employers -- into sources of pressure, criticism, and shame. And in the most devastating
+            cases, it leaves men believing that their suffering is their own fault, that they deserve to
+            feel this way because they are simply not trying hard enough. That belief, in men who are
+            already experiencing the hopelessness that depression produces, can be lethal.
+          </p>
         </div>
 
         <h2 id="the-myth" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -889,6 +1146,17 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           seen as weak. This framing prevents men from recognizing their own depression and prevents
           the people around them from responding with support rather than
           judgment <Citation id="10" index={10} source="Movember Foundation" year="2022" tier={3} />.
+        </p>
+        <p className="mb-6">
+          Language itself reinforces the confusion. The word "depression" in common usage has been
+          flattened to mean "feeling sad," which allows people to dismiss it as something that can
+          be overcome through willpower or attitude adjustment. Clinical depression, however, is a
+          neurobiological condition involving measurable changes in brain structure, chemistry, and
+          function. The prefrontal cortex -- responsible for planning, decision-making, and
+          motivation -- shows reduced activity and volume in depressed individuals. The hippocampus,
+          which processes memory and emotional context, shrinks measurably during extended depressive
+          episodes. These are not metaphors. They are observable changes visible on brain imaging
+          that no amount of "trying harder" can reverse without treatment.
         </p>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -942,6 +1210,42 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           them <Citation id="6" index={6} source="National Institute of Mental Health" year="2023" tier={2} />.
         </p>
 
+        <h2 id="the-anger-depression-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Anger-Depression Connection
+        </h2>
+        <p className="mb-6">
+          Among the most clinically significant findings in male depression research is the
+          prevalence of "anger attacks" -- sudden, intense episodes of rage that feel disproportionate
+          to their triggers. A man who throws his phone across the room because he cannot find his
+          keys. A father who screams at his child over a spilled drink and then feels crushing shame.
+          A husband who punches a wall during an argument that, on its surface, was about nothing
+          important. These are not personality flaws. In approximately 30-40% of depressed men, they
+          are direct symptoms of the underlying mood
+          disorder <Citation id="8" index={8} source="Journal of Clinical Psychiatry" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The neuroscience explains why. Depression disrupts serotonin signaling in the prefrontal
+          cortex, the brain region responsible for impulse control and emotional regulation. When
+          this regulatory system is impaired, minor frustrations that would normally be absorbed
+          instead trigger disproportionate limbic activation -- the brain's alarm system fires at
+          full intensity for threats that do not warrant it. The man experiencing this is not choosing
+          to be angry. His brain's capacity to modulate emotional responses has been compromised by
+          a medical condition. Treatment with SSRIs (selective serotonin reuptake inhibitors) often
+          resolves anger attacks within weeks, which provides further evidence that the anger is a
+          symptom of disrupted neurochemistry, not a fixed character trait.
+        </p>
+        <p className="mb-6">
+          The somatic presentation of male depression also deserves attention. Men with depression
+          are significantly more likely than women to present to healthcare providers with physical
+          complaints -- chronic headaches, back pain, digestive disturbance, chest tightness, and
+          unexplained fatigue -- rather than emotional ones. These complaints are genuine, not
+          fabricated. Depression produces real physiological changes including elevated inflammatory
+          markers, altered pain processing, and disrupted autonomic nervous system function. But when
+          the presenting symptom is a headache rather than a mood disturbance, the depression
+          underlying it goes undetected, and the man receives pain medication instead of the
+          antidepressant or psychotherapy that would address the root cause.
+        </p>
+
         <h2 id="why-this-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why This Matters
         </h2>
@@ -980,6 +1284,19 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           When a previously engaged man becomes irritable, withdrawn, and unmotivated, the first
           question should not be "Why is he being so lazy?" It should be "Is he
           okay?" <Citation id="2" index={2} source="Journal of Affective Disorders" year="2020" tier={1} />
+        </p>
+        <p className="mb-6">
+          Treatment for male-pattern depression is effective and increasingly sophisticated. Beyond
+          traditional antidepressants, which target serotonin and norepinephrine systems, newer
+          pharmacological approaches are specifically targeting the dopamine-mediated motivational
+          deficits that are often the most disabling feature of depression in men. Bupropion, for
+          example, has shown particular utility in men whose depression presents primarily as
+          anhedonia and amotivation rather than sadness, because it acts on the dopamine and
+          norepinephrine pathways that drive reward and motivation rather than the serotonin
+          pathways that primarily regulate mood and anxiety. Psychotherapy approaches that emphasize
+          behavioral activation -- systematically re-engaging in activities even when motivation is
+          absent -- directly counter the withdrawal-and-inactivity cycle that depression creates and
+          that the "laziness" label reinforces.
         </p>
 
         <ArticleCallout type="key-takeaway" title="What to Remember">
@@ -1097,6 +1414,16 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           makes them worse. Neuroscience shows the opposite is true on
           both counts <Citation id="1" index={1} source="Psychological Science" year="2007" tier={1} />.
         </p>
+        <p className="mb-6">
+          Research on emotional suppression reveals a consistent paradox: the harder you try not to
+          feel something, the more intensely you feel it. This is known as the "ironic process theory"
+          of mental control -- deliberately suppressing a thought or emotion increases the frequency
+          and intensity of that thought or emotion. The man who tells himself he should not feel
+          anxious, sad, or afraid does not eliminate those feelings. He amplifies them while
+          simultaneously blocking the processing pathways that would resolve them. The emotion does
+          not disappear. It goes underground, where it drives behavior from the shadows -- irritability,
+          insomnia, physical tension, substance use -- without ever being identified or addressed.
+        </p>
 
         <h2 id="where-this-comes-from" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Where This Comes From
@@ -1120,6 +1447,18 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           who express fear are marginalized. Boys who show tenderness are questioned. By adolescence,
           most males have learned that emotional expression is a social liability -- it reduces status,
           invites contempt, and signals that you cannot handle what life throws at you.
+        </p>
+        <p className="mb-6">
+          The pattern begins earlier than most people realize. Observational studies of parent-child
+          interactions show that parents use fewer emotional words when speaking to sons compared to
+          daughters, ask fewer questions about boys' emotional states, and are more likely to distract
+          boys from distress rather than helping them process it. By age five, boys are already less
+          likely than girls to use emotional vocabulary and more likely to convert emotional distress
+          into physical action (hitting, throwing, running) rather than verbal expression. The
+          emotional vocabulary gap that is so often attributed to natural differences between males
+          and females is, in significant part, a training gap -- the result of thousands of
+          interactions in which boys were taught, implicitly and explicitly, that their feelings
+          are not appropriate subjects for conversation.
         </p>
 
         <QuoteBlock
@@ -1187,6 +1526,32 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="the-expressive-writing-evidence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Expressive Writing Evidence
+        </h2>
+        <p className="mb-6">
+          For men who find verbal emotional expression uncomfortable, the research on expressive
+          writing offers an alternative entry point. Psychologist James Pennebaker's foundational
+          work demonstrated that writing about emotionally significant experiences for as little as
+          15-20 minutes per day over three to four consecutive days produces measurable improvements
+          in immune function, reduces physician visits, and lowers cortisol
+          levels <Citation id="10" index={10} source="British Journal of Health Psychology" year="2018" tier={1} />.
+          The mechanism appears to be similar to affect labeling: the act of translating an emotional
+          experience into language -- even written, private language that no one else will ever read --
+          engages cognitive processing pathways that reduce the emotional intensity of the experience.
+        </p>
+        <p className="mb-6">
+          This finding is particularly relevant for men because it separates emotional processing
+          from social performance. Many men resist emotional expression not because they are incapable
+          of introspection but because they associate it with public vulnerability -- with being seen
+          as emotional by others. Expressive writing removes the audience entirely. A man can sit alone
+          with a notebook or a laptop and process grief, anger, confusion, or fear without anyone
+          observing, judging, or responding. The health benefits accrue regardless of whether the
+          writing is ever shared. The brain does not distinguish between emotional processing performed
+          in private and emotional processing performed in a therapist's office -- the regulatory
+          pathways activated are the same.
+        </p>
+
         <h2 id="why-this-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why This Matters
         </h2>
@@ -1195,6 +1560,18 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           most powerful coping mechanisms available to human beings. They cannot process grief, so
           it calcifies into numbness. They cannot name anxiety, so it converts into irritability.
           They cannot share vulnerability, so their relationships remain shallow.
+        </p>
+        <p className="mb-6">
+          The health consequences accumulate across a lifetime. Men who chronically suppress
+          emotional expression show elevated rates of hypertension, coronary artery disease,
+          autoimmune conditions, and chronic pain syndromes. The 35% increase in mortality risk
+          associated with emotional suppression is not an abstract statistic -- it translates to
+          years of life lost for men who have been trained to believe that silence is the price of
+          masculinity. When a man dies of a heart attack at 58 -- a man who never talked about the
+          stress of his job, the grief of his father's death, or the anxiety he felt every morning
+          before work -- the death certificate lists cardiovascular disease as the cause. But the
+          contributing factor was a lifetime of emotional containment that his culture told him was
+          strength.
         </p>
         <p className="mb-6">
           The relational cost is profound. Research consistently shows that emotional vulnerability
@@ -1226,6 +1603,19 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           of naming what you feel -- "This is grief. This is anxiety. This is frustration." -- engages
           the same neural pathways that reduce emotional
           distress <Citation id="10" index={10} source="British Journal of Health Psychology" year="2018" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The concept of emotional granularity is worth understanding in this context. Research shows
+          that people who can distinguish between closely related emotions -- who can tell the
+          difference between frustration and disappointment, between anxiety and excitement, between
+          grief and loneliness -- show better emotional regulation, lower rates of maladaptive
+          coping, and improved mental health outcomes. Men, on average, tend to use broader, less
+          specific emotional categories ("I feel bad" or "I feel fine") compared to women. This is
+          not because men are less capable of emotional differentiation. It is because they have
+          had less practice. Emotional granularity is a skill, and like any skill, it improves with
+          use. The man who begins noticing the difference between being angry and being hurt,
+          between feeling stressed and feeling overwhelmed, between being tired and being depressed,
+          is building a capacity that has measurable effects on his mental and physical health.
         </p>
 
         <ArticleCallout type="key-takeaway" title="The Bottom Line">
@@ -1359,6 +1749,19 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           it?") <Citation id="7" index={7} source="Journal of Social Work" year="2020" tier={1} />.
           These responses teach men that their abuse is invisible, unimportant, or deserved.
         </p>
+        <p className="mb-6">
+          The physical strength argument, perhaps the most common dismissal of male victimhood,
+          fundamentally misunderstands how domestic abuse operates. Abuse is not defined by who could
+          win a physical fight. It is defined by patterns of control, intimidation, and coercion
+          that exploit vulnerability -- and vulnerability takes many forms beyond physical size.
+          A man may be physically stronger than his partner yet unable to defend himself because
+          he knows that any use of physical force, even in self-defense, will result in his arrest.
+          He may be financially dependent. He may fear losing custody of his children. He may have
+          been isolated from friends and family by years of psychological manipulation. He may be
+          bound by the same trauma bonding that affects victims of every gender -- the neurological
+          attachment to an abuser that makes leaving feel impossible even when the rational mind
+          knows it is necessary.
+        </p>
 
         <StatCard
           stats={[
@@ -1396,6 +1799,17 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           for the same reasons women do: fear for children, financial dependence, trauma bonding,
           shame, and the hope that things will
           change <Citation id="7" index={7} source="Journal of Social Work" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The media portrayal of male victimhood has historically oscillated between two equally
+          damaging poles: complete invisibility and comedic trivialization. Television shows and
+          films routinely play male domestic victimization for laughs -- the nagging wife who throws
+          dishes, the girlfriend who slaps her boyfriend, the husband who flinches from his spouse's
+          temper. These portrayals normalize aggression against men while simultaneously teaching
+          male victims that their experience is a joke rather than a crime. The cultural script says
+          that if a man is being hurt by a woman, it is either funny or his fault. Neither response
+          acknowledges the reality that domestic abuse, regardless of the gender configuration
+          involved, causes profound and lasting psychological harm.
         </p>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1485,6 +1899,43 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           victim <Citation id="3" index={3} source="Partner Abuse" year="2019" tier={1} />.
         </p>
 
+        <h2 id="the-custody-and-legal-trap" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Custody and Legal Trap
+        </h2>
+        <p className="mb-6">
+          For male survivors who are fathers, the decision to seek help or leave an abusive
+          relationship is complicated by a family court system that, despite decades of reform,
+          still operates with assumptions that can disadvantage men. Male victims report that
+          abusive partners frequently use the threat of custody loss as a tool of control: "If you
+          leave, I will tell the court you are the abuser, and you will never see your children
+          again." This threat is not empty. In jurisdictions with mandatory arrest policies, the
+          responding officers may arrest the man regardless of who initiated the violence, creating
+          a criminal record that becomes a liability in custody proceedings. The victim becomes the
+          defendant, and the abuser's leverage increases.
+        </p>
+        <p className="mb-6">
+          Financial abuse in male-victimized relationships follows patterns that are often invisible
+          to outside observers. A partner may control the household finances, limit the man's access
+          to his own income, run up debt in his name, or sabotage his employment through constant
+          calls, manufactured crises, or threats that force him to miss work. Financial dependence
+          is not exclusively a female experience -- men in abusive relationships describe the same
+          trapped, resourceless feeling that characterizes financial abuse regardless of who is
+          perpetrating it. The man who cannot leave because he cannot afford a separate apartment,
+          who has no savings because his partner controls the bank accounts, who fears homelessness
+          if he walks out the door, is experiencing the same structural trap that has been well
+          documented in female victim populations.
+        </p>
+        <p className="mb-6">
+          Same-sex relationships add another dimension to male domestic victimization that receives
+          even less attention than heterosexual male victimhood. Men abused by male partners face the
+          compounded stigma of both intimate partner violence and, in many communities, the ongoing
+          stigma associated with their sexual orientation. They may fear that seeking help will require
+          disclosure of their relationship status. They may encounter domestic violence services that
+          are structured around heterosexual dynamics and unprepared to serve same-sex couples. The
+          isolation is often more severe, the resources more scarce, and the cultural scripts for
+          understanding their experience almost entirely absent.
+        </p>
+
         <h2 id="why-this-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why This Matters
         </h2>
@@ -1527,6 +1978,26 @@ export const mythsAboutMensMentalHealthArticles: Article[] = [
           Legal frameworks need to be reviewed for gender bias, particularly mandatory arrest policies
           that disproportionately harm male victims. Public education campaigns need to include male
           survivors in their messaging.
+        </p>
+        <p className="mb-6">
+          Progress is occurring, though unevenly. A growing number of domestic violence organizations
+          have expanded their mission statements and service models to explicitly include male
+          survivors. The ManKind Initiative in the United Kingdom operates a dedicated helpline for
+          male victims. In the United States, organizations like the National Domestic Violence Hotline
+          have improved their training to serve callers of all genders. Some jurisdictions have begun
+          revising mandatory arrest policies to require assessment of the primary aggressor rather than
+          default arrest of the larger or male party. These changes are incremental, but they represent
+          a meaningful shift toward a domestic violence response system that protects everyone --
+          not just the people who fit the traditional victim profile.
+        </p>
+        <p className="mb-6">
+          Mental health professionals have a critical role to play. Therapists, counselors, and
+          social workers who work with men should routinely screen for intimate partner violence
+          using gender-neutral language. The assumption that a male client is the perpetrator rather
+          than the victim of relationship violence is a clinical bias that can cause real harm. Asking
+          open-ended questions about relationship safety, control dynamics, and fear -- without
+          assumptions about who holds which role -- creates space for male survivors to disclose
+          experiences they may have never articulated before.
         </p>
 
         <ArticleCallout type="key-takeaway" title="What Everyone Should Know">

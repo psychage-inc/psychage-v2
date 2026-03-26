@@ -94,10 +94,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Stigma kills more people with mental illness than symptoms do. Not through direct biological mechanisms, but by preventing people from seeking help, destroying relationships, costing jobs, and creating isolation. One in four adults experiences mental illness, yet two-thirds never seek treatment. The primary barrier is not cost or access—it is stigma.
+            Stigma kills more people with mental illness than symptoms do. Not through direct biological mechanisms, but by preventing people from seeking help, destroying relationships, costing jobs, and creating isolation. One in four adults experiences mental illness, yet two-thirds never seek treatment. The primary barrier is not cost or access---it is stigma.
           </p>
           <p className="mb-6">
-            Mental health stigma is a complex social phenomenon involving negative attitudes, beliefs, and behaviors toward people with mental illness <Citation id="1" index={1} source="World Psychiatry" year="2021" tier={1} />. Understanding how stigma works—and how to fight it—is essential for creating a society where mental health is treated like any other health condition.
+            Mental health stigma is a complex social phenomenon involving negative attitudes, beliefs, and behaviors toward people with mental illness <Citation id="1" index={1} source="World Psychiatry" year="2021" tier={1} />. Understanding how stigma works---and how to fight it---is essential for creating a society where mental health is treated like any other health condition.
           </p>
         </div>
 
@@ -203,7 +203,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>3. Language and labels.</strong> Words like "crazy,", "psycho,", "insane,", "lunatic" dehumanize people with mental illness. Even clinical language can stigmatize—being "schizophrenic" becomes an identity, not a condition someone lives with.
+          <strong>3. Language and labels.</strong> Words like "crazy,", "psycho,", "insane,", "lunatic" dehumanize people with mental illness. Even clinical language can stigmatize---being "schizophrenic" becomes an identity, not a condition someone lives with.
         </p>
 
         <p className="mb-6">
@@ -215,7 +215,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="did-you-know" title="The Violence Myth">
-          <p>People with serious mental illness are 10 times more likely to be victims of violent crime than the general population. They commit less than 5% of violent acts. Mental illness alone is a poor predictor of violence—substance use, trauma history, and access to weapons are far stronger predictors.</p>
+          <p>People with serious mental illness are 10 times more likely to be victims of violent crime than the general population. They commit less than 5% of violent acts. Mental illness alone is a poor predictor of violence---substance use, trauma history, and access to weapons are far stronger predictors.</p>
         </ArticleCallout>
 
         <h2 id="how-stigma-causes-harm" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -255,7 +255,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
             {
               title: '2. Education: Correcting Myths',
               description: (
-                <p>Providing accurate information about mental illness—what it is, what causes it, how common it is, how treatable it is—reduces stigma. Mental health literacy programs in schools, workplaces, and communities increase understanding and empathy.</p>
+                <p>Providing accurate information about mental illness---what it is, what causes it, how common it is, how treatable it is---reduces stigma. Mental health literacy programs in schools, workplaces, and communities increase understanding and empathy.</p>
               ),
             },
             {
@@ -273,7 +273,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
             {
               title: '5. Media Responsibility: Accurate Portrayals',
               description: (
-                <p>When media depicts mental illness accurately—showing treatment working, recovery happening, and violence being rare—public attitudes improve. Guidelines for responsible reporting exist but are inconsistently followed.</p>
+                <p>When media depicts mental illness accurately---showing treatment working, recovery happening, and violence being rare---public attitudes improve. Guidelines for responsible reporting exist but are inconsistently followed.</p>
               ),
             },
           ]}
@@ -295,7 +295,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You are not obligated to disclose, but sharing your story (when safe) helps others</li>
           <li>Combat self-stigma by connecting with peer support and hearing recovery stories</li>
-          <li>Advocate for yourself—request accommodations, report discrimination, assert your rights</li>
+          <li>Advocate for yourself---request accommodations, report discrimination, assert your rights</li>
           <li>Join stigma-reduction campaigns and mental health organizations</li>
         </ul>
 
@@ -307,7 +307,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li>Challenge stigmatizing language when you hear it</li>
           <li>Listen to personal stories without judgment</li>
           <li>Support mental health policies and funding</li>
-          <li>Normalize mental health treatment—talk about therapy the way you talk about going to the doctor</li>
+          <li>Normalize mental health treatment---talk about therapy the way you talk about going to the doctor</li>
           <li>Call out media that perpetuates stereotypes</li>
         </ul>
 
@@ -334,7 +334,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     id: catId(12),
     slug: 'self-stigma-internalized-judgment',
     title: "Self-Stigma: When You Apply Society's Judgment to Yourself",
-    description: "Self-stigma—internalizing negative beliefs about mental illness—can be more damaging than the condition itself. Learn how it develops and how to overcome it.",
+    description: "Self-stigma---internalizing negative beliefs about mental illness---can be more damaging than the condition itself. Learn how it develops and how to overcome it.",
     image: "/images/articles/cat12/cover-012.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
     readTime: 6,
@@ -412,10 +412,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A woman with depression tells herself she is weak and should be able to snap out of it. A man with anxiety avoids relationships because he believes no one would want to be with someone "damaged." A college student with bipolar disorder gives up on medical school, convinced people like her do not deserve success. These are not symptoms of mental illness—they are symptoms of self-stigma.
+            A woman with depression tells herself she is weak and should be able to snap out of it. A man with anxiety avoids relationships because he believes no one would want to be with someone "damaged." A college student with bipolar disorder gives up on medical school, convinced people like her do not deserve success. These are not symptoms of mental illness---they are symptoms of self-stigma.
           </p>
           <p className="mb-6">
-            Self-stigma occurs when people with mental illness internalize negative societal attitudes, applying stigmatizing beliefs to themselves <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. While public stigma is harmful, self-stigma can be even more damaging—it attacks from within, sabotaging recovery and reducing quality of life.
+            Self-stigma occurs when people with mental illness internalize negative societal attitudes, applying stigmatizing beliefs to themselves <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. While public stigma is harmful, self-stigma can be even more damaging---it attacks from within, sabotaging recovery and reducing quality of life.
           </p>
         </div>
 
@@ -431,10 +431,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
             <strong>Awareness:</strong> You become aware of negative stereotypes about mental illness (e.g., people with mental illness are weak, dangerous, incompetent, unlikely to recover).
           </li>
           <li>
-            <strong>Agreement:</strong> You agree with these stereotypes—accepting them as legitimate beliefs rather than rejecting them as prejudice.
+            <strong>Agreement:</strong> You agree with these stereotypes---accepting them as legitimate beliefs rather than rejecting them as prejudice.
           </li>
           <li>
-            <strong>Application:</strong> You apply these beliefs to yourself—concluding "I have a mental illness, therefore I am weak/incompetent/unworthy."
+            <strong>Application:</strong> You apply these beliefs to yourself---concluding "I have a mental illness, therefore I am weak/incompetent/unworthy."
           </li>
         </ol>
 
@@ -478,7 +478,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          <strong>Treatment avoidance.</strong> If seeking help means accepting the label of "mentally ill"—which you view as shameful—you may avoid treatment altogether. This is called "label avoidance," and it is one of the primary ways self-stigma prevents recovery.
+          <strong>Treatment avoidance.</strong> If seeking help means accepting the label of "mentally ill"---which you view as shameful---you may avoid treatment altogether. This is called "label avoidance," and it is one of the primary ways self-stigma prevents recovery.
         </p>
 
         <p className="mb-6">
@@ -553,14 +553,14 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>4. Self-compassion practice.</strong>
         </p>
         <p className="mb-6">
-          Self-compassion—treating yourself with the same kindness you would offer a friend—directly counters self-stigma <Citation id="8" index={8} source="Mindfulness" year="2023" tier={1} />. Practices like self-compassion meditation, writing compassionate letters to yourself, and challenging self-criticism reduce shame and increase self-worth.
+          Self-compassion---treating yourself with the same kindness you would offer a friend---directly counters self-stigma <Citation id="8" index={8} source="Mindfulness" year="2023" tier={1} />. Practices like self-compassion meditation, writing compassionate letters to yourself, and challenging self-criticism reduce shame and increase self-worth.
         </p>
 
         <p className="mb-6">
           <strong>5. Psychoeducation.</strong>
         </p>
         <p className="mb-6">
-          Learning accurate information about mental illness—that it is common, biological, treatable, and not your fault—undermines stigmatizing beliefs. Understanding that mental health conditions are health conditions, not character flaws, reduces self-blame.
+          Learning accurate information about mental illness---that it is common, biological, treatable, and not your fault---undermines stigmatizing beliefs. Understanding that mental health conditions are health conditions, not character flaws, reduces self-blame.
         </p>
 
         <p className="mb-6">
@@ -571,7 +571,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Self-stigma convinced me I was too damaged to deserve happiness. Recovery taught me that I was never broken—I was always whole, just struggling. There's a difference."
+          quote="Self-stigma convinced me I was too damaged to deserve happiness. Recovery taught me that I was never broken---I was always whole, just struggling. There's a difference."
           attribution="Anonymous"
           role="Peer Support Specialist"
           source="NAMI Recovery Story"
@@ -599,7 +599,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           </li>
           <li>
             <strong>"People would reject me if they knew."</strong><br />
-            Challenge: Some people may react poorly due to their own ignorance—but those are not your people. Many will respond with empathy. Hiding takes more energy than selective disclosure.
+            Challenge: Some people may react poorly due to their own ignorance---but those are not your people. Many will respond with empathy. Hiding takes more energy than selective disclosure.
           </li>
           <li>
             <strong>"I'm a burden."</strong><br />
@@ -636,7 +636,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li>Incorporate peer support or narrative approaches</li>
         </ul>
         <p className="mb-6">
-          You deserve to see yourself as whole, worthy, and capable of recovery. Self-stigma is learned—and it can be unlearned. Your mental health condition is part of your story, but it is not the whole story, and it is not a reason for shame.
+          You deserve to see yourself as whole, worthy, and capable of recovery. Self-stigma is learned---and it can be unlearned. Your mental health condition is part of your story, but it is not the whole story, and it is not a reason for shame.
         </p>
       </>
     ),
@@ -723,10 +723,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Men die by suicide at nearly four times the rate of women. Yet men are half as likely to seek mental health treatment. This is not because men experience less mental distress—it is because cultural norms around masculinity teach men that admitting struggle is weakness, that emotions should be suppressed, and that asking for help is failure.
+            Men die by suicide at nearly four times the rate of women. Yet men are half as likely to seek mental health treatment. This is not because men experience less mental distress---it is because cultural norms around masculinity teach men that admitting struggle is weakness, that emotions should be suppressed, and that asking for help is failure.
           </p>
           <p className="mb-6">
-            The consequences are deadly. Men account for 75% of suicides in the U.S., often without prior contact with mental health services <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />. Understanding why men do not seek help—and how to change that—is a matter of life and death.
+            The consequences are deadly. Men account for 75% of suicides in the U.S., often without prior contact with mental health services <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />. Understanding why men do not seek help---and how to change that---is a matter of life and death.
           </p>
         </div>
 
@@ -759,7 +759,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           How Traditional Masculinity Creates Barriers to Help-Seeking
         </h2>
         <p className="mb-6">
-          Traditional masculine norms—cultural beliefs about how men "should" be—directly conflict with seeking mental health help <Citation id="1" index={1} source="Psychology of Men & Masculinities" year="2021" tier={1} />.
+          Traditional masculine norms---cultural beliefs about how men "should" be---directly conflict with seeking mental health help <Citation id="1" index={1} source="Psychology of Men & Masculinities" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="info" title="Traditional Masculine Norms">
@@ -787,7 +787,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           The Mask of Masculinity
         </h2>
         <p className="mb-6">
-          Many men learn to wear a "mask" that hides vulnerability, fear, sadness, and pain <Citation id="2" index={2} source="American Journal of Men's Health" year="2022" tier={1} />. Behind the mask, they may be struggling—but to remove it feels like risking rejection, mockery, or loss of status.
+          Many men learn to wear a "mask" that hides vulnerability, fear, sadness, and pain <Citation id="2" index={2} source="American Journal of Men's Health" year="2022" tier={1} />. Behind the mask, they may be struggling---but to remove it feels like risking rejection, mockery, or loss of status.
         </p>
         <p className="mb-6">
           <strong>What this looks like:</strong>
@@ -801,7 +801,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The mask protects men from judgment—but it also prevents connection, support, and healing.
+          The mask protects men from judgment---but it also prevents connection, support, and healing.
         </p>
 
         <h2 id="how-depression-looks-different" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -900,7 +900,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>1. Reframe therapy as strength-building, not weakness.</strong> Position therapy as training (like physical training), skill-building, or performance optimization—language that fits masculine values.
+          <strong>1. Reframe therapy as strength-building, not weakness.</strong> Position therapy as training (like physical training), skill-building, or performance optimization---language that fits masculine values.
         </p>
 
         <p className="mb-6">
@@ -944,10 +944,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>If you care about a man who is struggling:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Normalize mental health conversations—share your own struggles or therapy experiences</li>
+          <li>Normalize mental health conversations---share your own struggles or therapy experiences</li>
           <li>Avoid language that reinforces stigma ("man up,", "toughen up,", "be strong")</li>
           <li>Offer practical support (finding a therapist, going with them to appointments)</li>
-          <li>Be patient—it may take time for him to open up</li>
+          <li>Be patient---it may take time for him to open up</li>
           <li>Express concern without judgment: "I've noticed you seem stressed. I'm here if you want to talk, and I can help you find support."</li>
         </ul>
 
@@ -974,7 +974,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li><strong>Veterans Crisis Line:</strong> 1-800-273-8255, press 1</li>
         </ul>
         <p className="mb-6">
-          Seeking help is not weakness—it is the strongest thing you can do. Men deserve mental health support just as much as anyone else. The culture that tells you to suffer in silence is wrong.
+          Seeking help is not weakness---it is the strongest thing you can do. Men deserve mental health support just as much as anyone else. The culture that tells you to suffer in silence is wrong.
         </p>
       </>
     ),
@@ -1238,7 +1238,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>6. Flexible work arrangements.</strong> Flexibility (remote work, flexible hours, compressed schedules) as standard practice—not a special accommodation—reduces stigma and supports mental health.
+          <strong>6. Flexible work arrangements.</strong> Flexibility (remote work, flexible hours, compressed schedules) as standard practice---not a special accommodation---reduces stigma and supports mental health.
         </p>
 
         <p className="mb-6">
@@ -1246,7 +1246,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Creating a mentally healthy workplace is not about eliminating stress—it's about eliminating the shame of struggling with stress."
+          quote="Creating a mentally healthy workplace is not about eliminating stress---it's about eliminating the shame of struggling with stress."
           attribution="Dr. Michael Freeman"
           role="Psychiatrist and Workplace Mental Health Researcher"
           source="UCSF"
@@ -1259,7 +1259,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>For employees:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Assess workplace culture before disclosing—look for signs of mental health support or stigma</li>
+          <li>Assess workplace culture before disclosing---look for signs of mental health support or stigma</li>
           <li>Know your rights under ADA and FMLA</li>
           <li>Start with trusted HR or a supportive manager if disclosing</li>
           <li>You can disclose selectively (e.g., to HR for accommodations without telling your team)</li>
@@ -1271,7 +1271,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>For managers and leaders:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Create psychological safety—model vulnerability and normalize mental health conversations</li>
+          <li>Create psychological safety---model vulnerability and normalize mental health conversations</li>
           <li>Check in on wellbeing regularly, not just productivity</li>
           <li>Respond to disclosures with empathy, not judgment</li>
           <li>Facilitate accommodations proactively and without making employees "prove" need</li>
@@ -1313,7 +1313,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     id: catId(15),
     slug: 'religion-mental-health-faith-stigma',
     title: 'Religion and Mental Health: When Faith Helps and When Stigma Hurts',
-    description: 'Religion can be a powerful source of healing and community—or a source of stigma and delayed treatment. Understand the complex relationship between faith and mental health.',
+    description: 'Religion can be a powerful source of healing and community---or a source of stigma and delayed treatment. Understand the complex relationship between faith and mental health.',
     image: "/images/articles/cat12/cover-015.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
     readTime: 7,
@@ -1391,10 +1391,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A woman with depression is told by her pastor that she needs more faith, not therapy. A man experiencing psychosis is subjected to exorcism rituals instead of psychiatric care. A teenager with anxiety is taught that mental illness is a punishment for sin. These harmful responses occur in some religious communities—but so do profound examples of compassion, healing, and support. Religion's relationship with mental health is complex.
+            A woman with depression is told by her pastor that she needs more faith, not therapy. A man experiencing psychosis is subjected to exorcism rituals instead of psychiatric care. A teenager with anxiety is taught that mental illness is a punishment for sin. These harmful responses occur in some religious communities---but so do profound examples of compassion, healing, and support. Religion's relationship with mental health is complex.
           </p>
           <p className="mb-6">
-            For billions of people worldwide, religion and spirituality are central to identity, meaning, and wellbeing <Citation id="1" index={1} source="World Psychiatry" year="2021" tier={1} />. Faith can be a powerful protective factor for mental health—or a barrier to care. Understanding this complexity is essential for both people of faith and mental health providers.
+            For billions of people worldwide, religion and spirituality are central to identity, meaning, and wellbeing <Citation id="1" index={1} source="World Psychiatry" year="2021" tier={1} />. Faith can be a powerful protective factor for mental health---or a barrier to care. Understanding this complexity is essential for both people of faith and mental health providers.
           </p>
         </div>
 
@@ -1410,7 +1410,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>2. Community and social support.</strong> Religious congregations offer belonging, practical help (meals during illness, childcare, financial assistance), and social connection. This reduces isolation—a major risk factor for mental illness.
+          <strong>2. Community and social support.</strong> Religious congregations offer belonging, practical help (meals during illness, childcare, financial assistance), and social connection. This reduces isolation---a major risk factor for mental illness.
         </p>
 
         <p className="mb-6">
@@ -1468,7 +1468,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Positive religious coping is associated with better mental health outcomes, while negative religious coping predicts worse outcomes—sometimes even more harm than having no religious coping at all.
+          Positive religious coping is associated with better mental health outcomes, while negative religious coping predicts worse outcomes---sometimes even more harm than having no religious coping at all.
         </p>
 
         <h2 id="when-religion-creates-barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1577,7 +1577,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           Integrating Faith and Mental Health Treatment
         </h2>
         <p className="mb-6">
-          Research shows that integrating spirituality into mental health treatment improves outcomes for religious individuals <Citation id="5" index={5} source="American Psychologist" year="2023" tier={1} />. This does not mean converting therapy into pastoral counseling—it means respecting and incorporating clients" faith into culturally responsive care.
+          Research shows that integrating spirituality into mental health treatment improves outcomes for religious individuals <Citation id="5" index={5} source="American Psychologist" year="2023" tier={1} />. This does not mean converting therapy into pastoral counseling---it means respecting and incorporating clients" faith into culturally responsive care.
         </p>
 
         <p className="mb-6">
@@ -1593,7 +1593,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Faith and mental health treatment are not competing forces—they are complementary. God gave us both prayer and medicine."
+          quote="Faith and mental health treatment are not competing forces---they are complementary. God gave us both prayer and medicine."
           attribution="Rev. Dr. Susan Gregg-Schroeder"
           role="Minister and Mental Health Advocate"
           source="Mental Health Grace Alliance"
@@ -1603,7 +1603,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           Faith-Based Mental Health Services
         </h2>
         <p className="mb-6">
-          Faith-based mental health services—counseling provided by religious organizations or explicitly Christian, Jewish, Muslim, etc. therapists—are growing <Citation id="8" index={8} source="Community Mental Health Journal" year="2023" tier={1} />.
+          Faith-based mental health services---counseling provided by religious organizations or explicitly Christian, Jewish, Muslim, etc. therapists---are growing <Citation id="8" index={8} source="Community Mental Health Journal" year="2023" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1620,7 +1620,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>Potential concerns:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Variable quality—some providers lack proper licensure or training</li>
+          <li>Variable quality---some providers lack proper licensure or training</li>
           <li>Risk of conversion therapy or other harmful practices</li>
           <li>May pathologize non-heterosexual identities or non-traditional beliefs</li>
           <li>Confidentiality concerns in small religious communities</li>
@@ -1644,10 +1644,10 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>If you are a person of faith seeking mental health support:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Mental health treatment and faith are not mutually exclusive—you can honor both</li>
+          <li>Mental health treatment and faith are not mutually exclusive---you can honor both</li>
           <li>Look for providers who respect your faith or specialize in your religious tradition</li>
           <li>If your religious community stigmatizes mental health, seek support from more progressive congregations or faith-based mental health organizations</li>
-          <li>Challenge beliefs that mental illness is a spiritual failing—it is a health condition</li>
+          <li>Challenge beliefs that mental illness is a spiritual failing---it is a health condition</li>
           <li>Consult both clergy and mental health professionals for comprehensive support</li>
         </ul>
 
@@ -1659,7 +1659,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li>Build referral relationships with mental health professionals</li>
           <li>Normalize mental health treatment in sermons and teachings</li>
           <li>Challenge stigma in your congregation</li>
-          <li>Provide both spiritual support and professional referrals—not just prayer</li>
+          <li>Provide both spiritual support and professional referrals---not just prayer</li>
         </ul>
 
         <p className="mb-6">
@@ -1687,7 +1687,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li>Thoughts of death or suicide</li>
         </ul>
         <p className="mb-6">
-          Faith and mental health treatment can work together. You can honor your spirituality while also accessing evidence-based care. Your faith tradition likely teaches that caring for your health—including mental health—is a sacred responsibility.
+          Faith and mental health treatment can work together. You can honor your spirituality while also accessing evidence-based care. Your faith tradition likely teaches that caring for your health---including mental health---is a sacred responsibility.
         </p>
       </>
     ),

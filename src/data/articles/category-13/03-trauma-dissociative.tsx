@@ -754,7 +754,7 @@ export const traumaDissociativeArticles: Article[] = [
       className="my-8"
     />
 
-    <Article Callout type="info" className="my-8">
+    <ArticleCallout type="info" className="my-8">
       <h4 className="font-bold mb-2">Understanding "Alters"</h4>
       <p>Different identity states (alters) may have distinct names, ages, genders, preferences, and even physical characteristics (handwriting, voice). They're not "separate people" but fragmented aspects of one person's psyche that didn't integrate during development. Think of them as survival-based compartments that allowed a child to endure the unendurable by psychologically "going away" during abuse.</p>
     </ArticleCallout>

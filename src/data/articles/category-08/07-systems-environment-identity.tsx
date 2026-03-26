@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Category 8, Subtopic 7: Systems, Environment & Identity-Based Change — Articles 61-65
+// Category 8, Subtopic 7: Systems, Environment & Identity-Based Change --- Articles 61-65
 // ============================================================================
 
 export const systemsEnvironmentIdentityArticles: Article[] = [
@@ -101,7 +101,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <p className="lead">
           The runner who misses a workout feels different than someone "trying to get in shape who
           skipped the gym." The difference? <strong>Identity</strong>. When behavior becomes part of
-          who you are — not just what you do — change becomes self-sustaining.
+          who you are --- not just what you do --- change becomes self-sustaining.
         </p>
 
         <ArticleCallout title="Three Levels of Behavior Change" type="info">
@@ -156,7 +156,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          When your identity supports the behavior, you no longer rely on willpower — you act
+          When your identity supports the behavior, you no longer rely on willpower --- you act
           consistently because it's 'just what I do' <Citation id="2" />. Studies of long-term
           behavior maintainers (people who sustain weight loss, exercise, sobriety for years) show
           they internalize new identities rather than white-knuckling through habits they see as
@@ -164,14 +164,14 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         </p>
 
         <h2>How Identity Shifts Happen (The Two-Way Street)</h2>
-        <p>Identity change isn't a lightning bolt — it's a gradual accumulation of evidence:</p>
+        <p>Identity change isn't a lightning bolt --- it's a gradual accumulation of evidence:</p>
 
         <ProgressSteps
           steps={[
             {
               title: 'Small Actions Create Self-Evidence',
               content:
-                "Each time you exercise, write, or meditate, you cast a 'vote' for that identity. One vote doesn't define you — but 50 votes start to shift how you see yourself.",
+                "Each time you exercise, write, or meditate, you cast a 'vote' for that identity. One vote doesn't define you --- but 50 votes start to shift how you see yourself.",
             },
             {
               title: 'Self-Concept Influences Future Behavior',
@@ -187,7 +187,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          This bidirectional relationship — behavior shapes identity, identity drives behavior — is why
+          This bidirectional relationship --- behavior shapes identity, identity drives behavior --- is why
           starting small matters <Citation id="4" />. You don't need to run marathons to begin
           identifying as a runner. Two 10-minute jogs per week provide enough evidence to shift
           self-perception.
@@ -237,13 +237,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <p>
           Notice the shift from external pressure ('should,", "trying,", "need to") to internal
-          alignment ("I am,", "I value"). The second set reflects ownership — the behavior isn't
+          alignment ("I am,", "I value"). The second set reflects ownership --- the behavior isn't
           imposed; it's <em>chosen</em> because it matches who you are.
         </p>
 
         <h2>Choosing Your Identity Consciously</h2>
         <p>
-          You're not discovering a fixed identity — you're <strong>constructing</strong> one. This is
+          You're not discovering a fixed identity --- you're <strong>constructing</strong> one. This is
           both empowering and daunting. Instead of waiting to 'find yourself," you can decide:
         </p>
 
@@ -311,13 +311,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                     I'm trying to change," reframe:
                   </p>
                   <blockquote className="border-l-4 border-blue-500 pl-4 italic my-4">
-                    "I'm someone who values movement. I started small — just walking twice a week — and
+                    "I'm someone who values movement. I started small --- just walking twice a week --- and
                     now it's part of who I am. I'm still learning, but consistency is something I'm
                     proud of.'
                   </blockquote>
                   <p>
                     This narrative reinforces the identity while leaving room for growth. You're not
-                    perfect — but you're <em>the type of person who</em> shows up.
+                    perfect --- but you're <em>the type of person who</em> shows up.
                   </p>
                 </>
               ),
@@ -327,7 +327,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <h2>When Identity Becomes a Cage</h2>
         <p>
-          Identity is powerful — which means it can also limit. If you've spent years thinking 'I'm
+          Identity is powerful --- which means it can also limit. If you've spent years thinking 'I'm
           not a morning person" or "I'm terrible with money," those beliefs create self-fulfilling
           prophecies. The same mechanism that sustains helpful identities can trap you in outdated
           ones.
@@ -356,26 +356,26 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         </ArticleCallout>
 
         <p>
-          The goal isn't rigid self-definition — it's intentional self-authorship. You can hold
+          The goal isn't rigid self-definition --- it's intentional self-authorship. You can hold
           multiple identities, update them as you grow, and release those that no longer serve you.
         </p>
 
         <h2>Identity Change Is Messy (And That's Normal)</h2>
         <p>
           You won't wake up transformed. Some days you'll act in alignment with your desired identity;
-          other days you won't. That's not failure — that's the process. What matters is the
+          other days you won't. That's not failure --- that's the process. What matters is the
           <em> trend</em>, not perfection.
         </p>
 
         <StatCard
           stat="51%"
           label="Threshold for Identity Shift"
-          description="Research suggests you don't need 100% consistency to internalize a new identity — just enough votes to tip the scale past half. Most days aligned is sufficient."
+          description="Research suggests you don't need 100% consistency to internalize a new identity --- just enough votes to tip the scale past half. Most days aligned is sufficient."
           source={<Citation id="2" />}
         />
 
         <p>
-          If you exercise 4 days a week and skip 3, you're still "someone who exercises" — the
+          If you exercise 4 days a week and skip 3, you're still "someone who exercises" --- the
           majority of your weeks support that identity. Over months, the accumulated evidence reshapes
           how you see yourself, and behavior flows more naturally from that updated self-concept.
         </p>
@@ -412,7 +412,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         </ArticleCallout>
 
         <p>
-          Identity-based change doesn't require dramatic transformation — just consistent,
+          Identity-based change doesn't require dramatic transformation --- just consistent,
           small-scale alignment between who you want to be and what you do daily. Start casting votes.
           Your self-concept will follow.
         </p>
@@ -502,7 +502,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
       <>
         <p className="lead">
           Winners and losers share the same goals. Both the Olympian and the person who quit after
-          three gym sessions wanted to "get in shape." The difference isn't the goal — it's the
+          three gym sessions wanted to "get in shape." The difference isn't the goal --- it's the
           <strong> system</strong>.
         </p>
 
@@ -561,8 +561,8 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          When you fall in love with the system — the daily writing, the meal prep routine, the
-          financial review — outcomes become byproducts <Citation id="1" />. The process itself is
+          When you fall in love with the system --- the daily writing, the meal prep routine, the
+          financial review --- outcomes become byproducts <Citation id="1" />. The process itself is
           rewarding, not just the destination.
         </p>
 
@@ -576,7 +576,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                 <>
                   <p>
                     Goals are binary: you either achieve them or you don't. Once you win (or give up),
-                    motivation collapses. Systems are continuous — there's no finish line, just today's
+                    motivation collapses. Systems are continuous --- there's no finish line, just today's
                     practice.
                   </p>
                   <p className="mt-2">
@@ -609,7 +609,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
               content: (
                 <>
                   <p>
-                    Rigid goals ('lose 2 pounds per week') crumble when life intervenes — injury,
+                    Rigid goals ('lose 2 pounds per week') crumble when life intervenes --- injury,
                     travel, illness, stress. Miss the target, feel like a failure, quit entirely.
                   </p>
                   <p className="mt-2">
@@ -630,7 +630,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                     emphasize marginal gains ("improve nutrition by 1% this week").
                   </p>
                   <p className="mt-2">
-                    Over time, small, consistent improvements compound into extraordinary outcomes —
+                    Over time, small, consistent improvements compound into extraordinary outcomes ---
                     but the system-focused person doesn't fixate on the end result. They trust that
                     process excellence leads to outcome excellence <Citation id="7" />.
                   </p>
@@ -670,7 +670,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          Goal-focused people often report <em>less</em> happiness during pursuit than they expected —
+          Goal-focused people often report <em>less</em> happiness during pursuit than they expected ---
           the journey becomes a slog endured for a future payoff. Systems-focused people enjoy the
           process itself, which paradoxically makes long-term success more likely <Citation id="5" />.
         </p>
@@ -716,14 +716,14 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             <li>Read for 20 minutes before sleep (relaxing ritual)</li>
           </ul>
           <p className="mt-3 text-sm">
-            The system creates the conditions for good sleep. Some nights you'll still sleep poorly —
+            The system creates the conditions for good sleep. Some nights you'll still sleep poorly ---
             but adherence to the system is what you control and celebrate.
           </p>
         </ArticleCallout>
 
         <h2>When Goals Still Matter</h2>
         <p>
-          This isn't anti-goal — it's anti-<em>goal-obsession</em>. Goals serve valuable purposes:
+          This isn't anti-goal --- it's anti-<em>goal-obsession</em>. Goals serve valuable purposes:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 my-4">
@@ -750,7 +750,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <StatCard
           stat="92%"
           label="Goals Not Achieved"
-          description="Research suggests that 92% of New Year's resolutions fail by February. The problem isn't lack of willpower — it's reliance on outcome-focused goals without sustainable systems."
+          description="Research suggests that 92% of New Year's resolutions fail by February. The problem isn't lack of willpower --- it's reliance on outcome-focused goals without sustainable systems."
           source={<Citation id="4" />}
         />
 
@@ -818,7 +818,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         </ArticleCallout>
 
         <p>
-          Goals point you in a direction. Systems get you there — and keep you there. Build systems
+          Goals point you in a direction. Systems get you there --- and keep you there. Build systems
           you enjoy, and success becomes inevitable.
         </p>
       </>
@@ -907,13 +907,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
       <>
         <p className="lead">
           You walk into your kitchen tired. If chips sit on the counter, you'll eat chips. If sliced
-          vegetables sit on the counter, you'll eat vegetables. That's not weak willpower — that's
+          vegetables sit on the counter, you'll eat vegetables. That's not weak willpower --- that's
           <strong> environment design</strong>.
         </p>
 
         <ArticleCallout title='The Power of Defaults' type="info">
           <p>
-            Humans are cognitive misers — we take the path of least resistance. Research shows that:
+            Humans are cognitive misers --- we take the path of least resistance. Research shows that:
           </p>
           <ul className="mt-2 space-y-1">
             <li>
@@ -957,7 +957,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          Environment design isn't about willpower — it's about <strong>choice architecture</strong>:
+          Environment design isn't about willpower --- it's about <strong>choice architecture</strong>:
           structuring your surroundings so the desired behavior is the easiest, most obvious option
           <Citation id="2" />.
         </p>
@@ -1020,7 +1020,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                     </li>
                   </ul>
                   <p className="mt-3 text-sm">
-                    Digital cues work the same as physical ones — visibility drives action
+                    Digital cues work the same as physical ones --- visibility drives action
                     <Citation id="7" />.
                   </p>
                 </>
@@ -1057,7 +1057,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          Notice the pattern: you're not fighting desire — you're making desired behaviors
+          Notice the pattern: you're not fighting desire --- you're making desired behaviors
           <em> slightly easier</em> and undesired behaviors <em>slightly harder</em>. Over hundreds of
           micro-decisions per day, this tilts outcomes dramatically.
         </p>
@@ -1073,7 +1073,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             {
               title: 'Financial Habits',
               content:
-                "Auto-transfer 15% of each paycheck to savings. Auto-pay bills. Auto-invest a fixed amount monthly. You never 'decide' to save — it happens by default.",
+                "Auto-transfer 15% of each paycheck to savings. Auto-pay bills. Auto-invest a fixed amount monthly. You never 'decide' to save --- it happens by default.",
             },
             {
               title: 'Nutrition Habits',
@@ -1140,13 +1140,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             space for rest)
           </li>
           <li>
-            <strong>Desk = deep work only:</strong> Not email, not social media — pure focus work
+            <strong>Desk = deep work only:</strong> Not email, not social media --- pure focus work
           </li>
           <li>
             <strong>Kitchen table = meals + connection:</strong> No screens, just food and conversation
           </li>
           <li>
-            <strong>Couch = relaxation only:</strong> Not work, not stress-scrolling — intentional
+            <strong>Couch = relaxation only:</strong> Not work, not stress-scrolling --- intentional
             downtime
           </li>
         </ul>
@@ -1159,7 +1159,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <h2>Strategy 5: Social Environment Design</h2>
         <p>
-          People are part of your environment — arguably the most influential part. Research shows
+          People are part of your environment --- arguably the most influential part. Research shows
           you're 50% more likely to adopt a behavior if a close friend does it first
           <Citation id="2" />:
         </p>
@@ -1322,7 +1322,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         </ArticleCallout>
 
         <p>
-          You are the architect of your environment. Stop fighting yourself — design a world where
+          You are the architect of your environment. Stop fighting yourself --- design a world where
           good choices are the easiest choices.
         </p>
       </>
@@ -1410,8 +1410,8 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <p className="lead">
-          If your three closest friends smoke, you're 61% more likely to smoke — even if you've never
-          met them <Citation id="1" />. The people around you don't just influence your choices — they
+          If your three closest friends smoke, you're 61% more likely to smoke --- even if you've never
+          met them <Citation id="1" />. The people around you don't just influence your choices --- they
           <strong> become</strong> your choices.
         </p>
 
@@ -1440,7 +1440,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <h2>Why Social Systems Matter More Than Willpower</h2>
         <p>
           Humans are social creatures designed to conform. For most of evolutionary history, fitting
-          in meant survival — rejection from the tribe meant death. That wiring remains:
+          in meant survival --- rejection from the tribe meant death. That wiring remains:
         </p>
 
         <StatCard
@@ -1451,7 +1451,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          You can fight this tendency with willpower — or you can <em>use</em> it by surrounding
+          You can fight this tendency with willpower --- or you can <em>use</em> it by surrounding
           yourself with people whose behaviors you want to adopt. The second approach is dramatically
           more effective <Citation id="2" />.
         </p>
@@ -1466,10 +1466,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                 <>
                   <p>
                     We look to others to determine what's 'normal." If everyone around you exercises,
-                    reads, or meditates, those behaviors feel unremarkable — just "what people do."
+                    reads, or meditates, those behaviors feel unremarkable --- just "what people do."
                   </p>
                   <p className="mt-2">
-                    Conversely, if no one in your circle exercises, doing so feels abnormal — you're
+                    Conversely, if no one in your circle exercises, doing so feels abnormal --- you're
                     the outlier. This psychological friction makes consistency harder
                     <Citation id="6" />.
                   </p>
@@ -1511,7 +1511,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
               content: (
                 <>
                   <p>
-                    We learn behaviors by watching others — especially people we admire or identify
+                    We learn behaviors by watching others --- especially people we admire or identify
                     with. If you see someone similar to you succeed at a behavior, you unconsciously
                     update your belief that <em>you</em> can succeed too.
                   </p>
@@ -1521,7 +1521,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                     <Citation id="2" />.
                   </p>
                   <p className="mt-2">
-                    <strong>How to use it:</strong> Seek out role models 1-2 steps ahead of you —
+                    <strong>How to use it:</strong> Seek out role models 1-2 steps ahead of you ---
                     close enough to relate to, far enough to inspire. Their strategies become your
                     blueprint.
                   </p>
@@ -1538,17 +1538,17 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             {
               title: 'Audit Your Current Network',
               content:
-                'List your 5 closest relationships. Ask: Do they support or undermine the habits I want? Are they growing in directions I admire? No judgment — just data.',
+                'List your 5 closest relationships. Ask: Do they support or undermine the habits I want? Are they growing in directions I admire? No judgment --- just data.',
             },
             {
               title: 'Join One New Community',
               content:
-                "Find a group where your desired behavior is the default: a gym class, a writers' group, a language exchange. Show up consistently for 6 weeks — long enough to feel belonging.",
+                "Find a group where your desired behavior is the default: a gym class, a writers' group, a language exchange. Show up consistently for 6 weeks --- long enough to feel belonging.",
             },
             {
               title: 'Find One Accountability Partner',
               content:
-                `Not a cheerleader — a peer pursuing a similar goal. Weekly check-ins: "What did you commit to? Did you do it? What's this week's commitment?" Keep it structured and judgment-free.`,
+                `Not a cheerleader --- a peer pursuing a similar goal. Weekly check-ins: "What did you commit to? Did you do it? What's this week's commitment?" Keep it structured and judgment-free.`,
             },
             {
               title: 'Share Progress, Not Perfection',
@@ -1560,13 +1560,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <ArticleCallout title="The Power of Weak Ties" type="tip">
           <p>
-            You might assume close friends matter most — but research shows "weak ties" (acquaintances,
+            You might assume close friends matter most --- but research shows "weak ties" (acquaintances,
             classmates, online communities) often drive behavior change more effectively
             <Citation id="4" />:
           </p>
           <ul className="mt-2 space-y-1 list-disc pl-6">
             <li>
-              Close friends already know your habits — they don't provide new models or norms
+              Close friends already know your habits --- they don't provide new models or norms
             </li>
             <li>Weak ties expose you to different behaviors, ideas, and social proof</li>
             <li>Online communities can provide 24/7 support without geographic limits</li>
@@ -1639,7 +1639,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             </li>
           </ul>
           <p className="mt-3 text-sm">
-            This isn't malice — it's insecurity. Compassion helps, but you're not obligated to shrink
+            This isn't malice --- it's insecurity. Compassion helps, but you're not obligated to shrink
             to make others comfortable.
           </p>
         </ArticleCallout>
@@ -1725,7 +1725,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                 <>
                   <p>
                     <strong>Good fit:</strong> Someone pursuing a similar goal (even if the specifics
-                    differ). A writer and a runner can partner — both need consistency.
+                    differ). A writer and a runner can partner --- both need consistency.
                   </p>
                   <p className="mt-2">
                     <strong>Bad fit:</strong> A cheerleader who won't hold you accountable, or someone
@@ -1767,7 +1767,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                     </li>
                   </ol>
                   <p className="mt-2">
-                    No shame, no excuses — just honest reporting and adjustment. The point is
+                    No shame, no excuses --- just honest reporting and adjustment. The point is
                     self-awareness, not perfection.
                   </p>
                 </>
@@ -1778,7 +1778,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
               content: (
                 <>
                   <p>
-                    Acknowledge <em>showing up</em>, not just results. 'You walked 2/3 days — that's
+                    Acknowledge <em>showing up</em>, not just results. 'You walked 2/3 days --- that's
                     progress!" beats "You only did 2? Try harder."
                   </p>
                   <p className="mt-2">
@@ -1827,7 +1827,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <p>
           Most people underestimate how much social systems matter. If you've been trying to change
-          alone for months with little progress, the problem may not be you — it may be isolation.
+          alone for months with little progress, the problem may not be you --- it may be isolation.
         </p>
 
         <ArticleCallout title='Start Here: Build Your First Social System' type="action">
@@ -1840,14 +1840,14 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
               or in-person)
             </li>
             <li>
-              <strong>Find one accountability partner</strong> (not a close friend — someone equally
+              <strong>Find one accountability partner</strong> (not a close friend --- someone equally
               committed)
             </li>
             <li>
               <strong>Set weekly check-ins</strong> (specific day/time, structured format)
             </li>
             <li>
-              <strong>Commit for 8 weeks</strong> before evaluating — long enough to feel the benefits
+              <strong>Commit for 8 weeks</strong> before evaluating --- long enough to feel the benefits
             </li>
           </ol>
           <p className="mt-4 text-sm">
@@ -1945,7 +1945,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     content: (
       <>
         <p className="lead">
-          If you improve by 1% every day for a year, you don't end up 365% better — you end up
+          If you improve by 1% every day for a year, you don't end up 365% better --- you end up
           <strong> 37 times better</strong>. That's the math of compounding, and it's the most
           powerful force in behavior change.
         </p>
@@ -1960,7 +1960,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             Decline by 1% daily for a year → 97% total decline
           </p>
           <p className="mt-4 text-sm">
-            Small daily choices don't seem to matter in the moment — but over months and years, they
+            Small daily choices don't seem to matter in the moment --- but over months and years, they
             determine everything <Citation id="1" />.
           </p>
         </ArticleCallout>
@@ -1969,7 +1969,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <p>
           Human brains evolved to think linearly, not exponentially. We expect effort to produce
           proportional results: work twice as hard, get twice the outcome. But compounding is
-          <em> nonlinear</em> — early gains are invisible, then suddenly explosive
+          <em> nonlinear</em> --- early gains are invisible, then suddenly explosive
           <Citation id="2" />:
         </p>
 
@@ -2020,7 +2020,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <p>
           Notice the curve: for the first 6 months, the 1% improvement group is barely ahead. This is
-          the <strong>Valley of Disappointment</strong> — where most people quit because results feel
+          the <strong>Valley of Disappointment</strong> --- where most people quit because results feel
           underwhelming. But those who persist enter the <strong>Zone of Compounding</strong>, where
           gains accelerate exponentially <Citation id="4" />.
         </p>
@@ -2028,7 +2028,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <h2>The Plateau of Latent Potential</h2>
         <p>
           Imagine an ice cube sitting in a room at 25°F. You increase the temperature by 1 degree.
-          Nothing happens. Another degree. Still frozen. Another. Still nothing. Then at 32°F —
+          Nothing happens. Another degree. Still frozen. Another. Still nothing. Then at 32°F ---
           <em>melting</em>. The breakthrough seems sudden, but it's the result of accumulated,
           invisible progress <Citation id="4" />.
         </p>
@@ -2057,21 +2057,21 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         />
 
         <p>
-          This mismatch — between linear expectations and exponential reality — explains why people
+          This mismatch --- between linear expectations and exponential reality --- explains why people
           quit. They expect steady progress. When they don't see it, they assume the system isn't
-          working. But the system <em>is</em> working — they just quit before the compounding phase
+          working. But the system <em>is</em> working --- they just quit before the compounding phase
           began <Citation id="6" />.
         </p>
 
         <ArticleCallout title="The British Cycling Strategy" type="tip">
           <p>
             In 2003, British Cycling hired Dave Brailsford, who implemented a "marginal gains"
-            strategy: improve everything by 1% — bike seats, tire grip, athlete nutrition, sleep
+            strategy: improve everything by 1% --- bike seats, tire grip, athlete nutrition, sleep
             quality, hand-washing to reduce illness.
           </p>
           <p className="mt-2">
             Result: Within 5 years, British cyclists dominated the Olympics. Within 10 years, they won
-            the Tour de France 5 times. No single change was transformative — but the
+            the Tour de France 5 times. No single change was transformative --- but the
             <em> accumulation</em> was unstoppable <Citation id="1" />.
           </p>
         </ArticleCallout>
@@ -2103,7 +2103,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <p>
           The good news: you can reverse negative compounding the same way you create positive
-          compounding — <em>one small daily choice at a time</em> <Citation id="5" />.
+          compounding --- <em>one small daily choice at a time</em> <Citation id="5" />.
         </p>
 
         <h2>How to Harness Compounding for Behavior Change</h2>
@@ -2118,7 +2118,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             {
               title: 'Make It Ridiculously Small',
               content:
-                "Don't aim for 1 hour of exercise — aim for 2 minutes. The goal is consistency, not intensity. You're building the *habit* of showing up. Intensity comes later, once the behavior is automatic.",
+                "Don't aim for 1 hour of exercise --- aim for 2 minutes. The goal is consistency, not intensity. You're building the *habit* of showing up. Intensity comes later, once the behavior is automatic.",
             },
             {
               title: 'Track the Streak, Not the Outcome',
@@ -2128,7 +2128,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             {
               title: 'Trust the Plateau',
               content:
-                "Months 1-6 will feel like nothing is happening. That's normal. Your job is to show up anyway. The compounding phase will arrive — but only if you persist through the valley.",
+                "Months 1-6 will feel like nothing is happening. That's normal. Your job is to show up anyway. The compounding phase will arrive --- but only if you persist through the valley.",
             },
             {
               title: 'Stack Wins Over Time',
@@ -2140,8 +2140,8 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <h2>The Math of Marginal Gains</h2>
         <p>
-          What does 1% improvement actually look like in practice? It's smaller — and more achievable
-          — than you think:
+          What does 1% improvement actually look like in practice? It's smaller --- and more achievable
+          --- than you think:
         </p>
 
         <ComparisonTable
@@ -2199,7 +2199,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                   </p>
                   <p className="mt-2">
                     <strong>Solution:</strong> Reframe "success" as showing up, not seeing results.
-                    Celebrate the streak, not the outcome — yet.
+                    Celebrate the streak, not the outcome --- yet.
                   </p>
                 </>
               ),
@@ -2211,7 +2211,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                   <p>
                     'I missed one day, so I failed. Might as well quit." This binary thinking ignores
                     compounding's core insight: <em>consistency over perfection</em>. Missing 5% of
-                    days doesn't break compounding — quitting does.
+                    days doesn't break compounding --- quitting does.
                   </p>
                   <p className="mt-2">
                     <strong>Solution:</strong> Aim for 80% consistency. If you slip, restart the next
@@ -2227,7 +2227,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                   <p>
                     You see someone 5 years into their compounding journey and compare yourself (1
                     month in) to their results. You feel hopeless. But they started exactly where you
-                    are now — they just didn't quit.
+                    are now --- they just didn't quit.
                   </p>
                   <p className="mt-2">
                     <strong>Solution:</strong> Compare yourself to <em>past you</em>, not others. Are
@@ -2242,7 +2242,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
                 <>
                   <p>
                     People obsess over adding good habits but ignore removing bad ones. A daily
-                    doomscrolling habit, junk food routine, or late bedtime compounds negatively —
+                    doomscrolling habit, junk food routine, or late bedtime compounds negatively ---
                     canceling out your positive efforts.
                   </p>
                   <p className="mt-2">
@@ -2257,12 +2257,12 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <h2>The Identity Shift of Compounding</h2>
         <p>
-          Compounding doesn't just change your outcomes — it changes <em>who you are</em>. When you
+          Compounding doesn't just change your outcomes --- it changes <em>who you are</em>. When you
           show up daily for months, you begin to internalize a new identity <Citation id="8" />:
         </p>
 
         <QuoteBlock
-          quote="Every action you take is a vote for the type of person you wish to become. Small habits don't add up — they compound. They become the evidence you use to shape your identity."
+          quote="Every action you take is a vote for the type of person you wish to become. Small habits don't add up --- they compound. They become the evidence you use to shape your identity."
           author="James Clear"
           role="Author of Atomic Habits"
         />
@@ -2270,13 +2270,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <p>
           After 100 days of writing, you stop thinking "I'm trying to write' and start thinking "I'm a
           writer." After 200 days of exercise, you stop thinking "I should work out" and start
-          thinking "I'm someone who moves daily." The behavior compounds into self-concept — which then
+          thinking "I'm someone who moves daily." The behavior compounds into self-concept --- which then
           makes the behavior effortless.
         </p>
 
         <h2>Compounding Across Life Domains</h2>
         <p>
-          The compound effect isn't limited to habits — it applies to skills, relationships, knowledge,
+          The compound effect isn't limited to habits --- it applies to skills, relationships, knowledge,
           and wealth:
         </p>
 
@@ -2303,14 +2303,14 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
             ],
           }}
           title="Compound Growth Across Domains Over 10 Years"
-          description="Consistent 1% improvements in skills, relationships, and knowledge compound into mastery, depth, and expertise over years — not months."
+          description="Consistent 1% improvements in skills, relationships, and knowledge compound into mastery, depth, and expertise over years --- not months."
         />
 
         <p>
-          The person who reads 10 pages daily doesn't just finish more books — they build a
+          The person who reads 10 pages daily doesn't just finish more books --- they build a
           <em> compounding knowledge base</em> where each book connects to previous ones, creating
           exponential insight. The person who reaches out to one friend weekly doesn't just have more
-          conversations — they build <em>compounding trust</em> that deepens relationships over years.
+          conversations --- they build <em>compounding trust</em> that deepens relationships over years.
         </p>
 
         <ArticleCallout title='The 10-Year Test' type="tip">
@@ -2333,14 +2333,14 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         <h2>The Patience Paradox</h2>
         <p>
           Compounding requires <strong>urgency in action, patience in results</strong>. You must act
-          <em> today</em> — but you can't expect transformation this month <Citation id="6" />:
+          <em> today</em> --- but you can't expect transformation this month <Citation id="6" />:
         </p>
 
         <BeforeAfter
           before={{
             title: 'Impatient Mindset (Leads to Quitting)',
             points: [
-              "It's been 2 months — I should see results by now",
+              "It's been 2 months --- I should see results by now",
               "This isn't working fast enough",
               'I need dramatic change NOW',
               'Quits before compounding begins',
@@ -2349,7 +2349,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           after={{
             title: 'Patient Mindset (Leads to Compounding)',
             points: [
-              'I trust the process — results will come',
+              'I trust the process --- results will come',
               "I'm 1% better than last month",
               "I'm building long-term systems",
               'Persists through the valley, enters the zone',
@@ -2359,7 +2359,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
 
         <p>
           The irony: people who obsess over fast results quit early. People who accept slow progress
-          persist long enough to achieve <em>extraordinary</em> results — far beyond what 'fast"
+          persist long enough to achieve <em>extraordinary</em> results --- far beyond what 'fast"
           approaches ever deliver.
         </p>
 
@@ -2393,7 +2393,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
         </ArticleCallout>
 
         <p>
-          You don't need to change your life overnight. You need to improve by 1% today — and then do
+          You don't need to change your life overnight. You need to improve by 1% today --- and then do
           it again tomorrow. That's the compound effect. Small. Daily. Exponential.
         </p>
       </>

@@ -102,10 +102,10 @@ export const copingWithDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The internet is full of claims about "depression-fighting superfoods" and restrictive elimination diets that promise to cure mental illness. The reality is more nuanced—but also more hopeful. Emerging research shows that what you eat does influence depression, though it's not as simple as a single food or supplement fixing everything.
+            The internet is full of claims about "depression-fighting superfoods" and restrictive elimination diets that promise to cure mental illness. The reality is more nuanced---but also more hopeful. Emerging research shows that what you eat does influence depression, though it's not as simple as a single food or supplement fixing everything.
           </p>
           <p className="mb-6">
-            This article reviews the current scientific evidence on nutrition and depression, focusing on what we actually know—not what sells supplements <Citation id="1" index={1} source="Proceedings of the Nutrition Society" year="2017" tier={1} />.
+            This article reviews the current scientific evidence on nutrition and depression, focusing on what we actually know---not what sells supplements <Citation id="1" index={1} source="Proceedings of the Nutrition Society" year="2017" tier={1} />.
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           Large-scale studies have found consistent associations between dietary patterns and depression risk. People who eat diets high in whole foods (vegetables, fruits, whole grains, fish, nuts) have lower rates of depression than those who eat diets high in processed foods, refined carbs, and sugar <Citation id="2" index={2} source="Psychiatry Research" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          But <strong>association doesn't prove causation</strong>. It could be that depression causes poor eating (loss of appetite, low energy for cooking, increased cravings for comfort food), rather than poor eating causing depression. To answer the causal question, we need intervention studies—and we're starting to get them.
+          But <strong>association doesn't prove causation</strong>. It could be that depression causes poor eating (loss of appetite, low energy for cooking, increased cravings for comfort food), rather than poor eating causing depression. To answer the causal question, we need intervention studies---and we're starting to get them.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -136,14 +136,14 @@ export const copingWithDepressionArticlesB: Article[] = [
           1. Inflammation
         </h3>
         <p className="mb-6">
-          Diets high in processed foods, sugar, and trans fats promote systemic inflammation. Chronic inflammation is increasingly recognized as a driver of depression—it affects neurotransmitter production, brain structure, and stress hormone regulation. Anti-inflammatory diets (rich in omega-3s, antioxidants, and fiber) may reduce depressive symptoms by lowering inflammation <Citation id="7" index={7} source="World Psychiatry" year="2019" tier={1} />.
+          Diets high in processed foods, sugar, and trans fats promote systemic inflammation. Chronic inflammation is increasingly recognized as a driver of depression---it affects neurotransmitter production, brain structure, and stress hormone regulation. Anti-inflammatory diets (rich in omega-3s, antioxidants, and fiber) may reduce depressive symptoms by lowering inflammation <Citation id="7" index={7} source="World Psychiatry" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           2. The Gut-Brain Axis
         </h3>
         <p className="mb-6">
-          Your gut microbiome (the trillions of bacteria in your digestive system) communicates with your brain via the vagus nerve and produces neurotransmitters like serotonin. An unhealthy microbiome—often caused by a diet low in fiber and high in processed foods—is linked to depression <Citation id="5" index={5} source="Journal of Affective Disorders" year="2019" tier={1} />.
+          Your gut microbiome (the trillions of bacteria in your digestive system) communicates with your brain via the vagus nerve and produces neurotransmitters like serotonin. An unhealthy microbiome---often caused by a diet low in fiber and high in processed foods---is linked to depression <Citation id="5" index={5} source="Journal of Affective Disorders" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -157,7 +157,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           4. Nutrient Deficiencies
         </h3>
         <p className="mb-6">
-          Deficiencies in specific nutrients—B vitamins, vitamin D, magnesium, zinc, omega-3 fatty acids—are more common in people with depression. While supplementation alone doesn't cure depression, correcting deficiencies may improve symptoms.
+          Deficiencies in specific nutrients---B vitamins, vitamin D, magnesium, zinc, omega-3 fatty acids---are more common in people with depression. While supplementation alone doesn't cure depression, correcting deficiencies may improve symptoms.
         </p>
 
         <h2 id="dietary-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -181,7 +181,7 @@ export const copingWithDepressionArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            The Mediterranean diet has the strongest evidence for reducing depression. In the SMILES trial, one-third of participants who improved their diet achieved remission from depression—compared to only 8% in the control group.
+            The Mediterranean diet has the strongest evidence for reducing depression. In the SMILES trial, one-third of participants who improved their diet achieved remission from depression---compared to only 8% in the control group.
           </p>
         </ArticleCallout>
 
@@ -199,7 +199,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           Found in fatty fish (salmon, mackerel, sardines), omega-3s have anti-inflammatory and neuroprotective effects. Meta-analyses show modest antidepressant effects, particularly for EPA-rich supplements <Citation id="4" index={4} source="Oxidative Medicine and Cellular Longevity" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          <strong>Practical tip:</strong> Aim for 2–3 servings of fatty fish per week, or consider an omega-3 supplement (1–2g EPA daily) if you don't eat fish.
+          <strong>Practical tip:</strong> Aim for 2--3 servings of fatty fish per week, or consider an omega-3 supplement (1--2g EPA daily) if you don't eat fish.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -219,7 +219,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           Low vitamin D is common in people with depression, especially in winter months. Supplementation may help those who are deficient, but evidence for universal benefit is weak.
         </p>
         <p className="mb-6">
-          <strong>Check your levels:</strong> A simple blood test can determine if you need supplementation (typically 1,000–2,000 IU daily if deficient).
+          <strong>Check your levels:</strong> A simple blood test can determine if you need supplementation (typically 1,000--2,000 IU daily if deficient).
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -319,7 +319,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           When to Consult a Professional
         </h2>
         <p className="mb-6">
-          If you're considering significant dietary changes or supplementation, consult a registered dietitian or your doctor—especially if you have medical conditions, take medications, or have a history of disordered eating.
+          If you're considering significant dietary changes or supplementation, consult a registered dietitian or your doctor---especially if you have medical conditions, take medications, or have a history of disordered eating.
         </p>
         <p className="mb-6">
           A dietitian can help tailor recommendations to your specific needs, check for deficiencies, and ensure supplements won't interact with medications.
@@ -423,7 +423,7 @@ export const copingWithDepressionArticlesB: Article[] = [
             Depression has a cruel way of making you want the exact opposite of what you need. When connection could help, depression whispers that you're a burden, that no one wants to hear from you, that it's easier to be alone. The urge to withdraw feels like self-protection, but isolation deepens the depression.
           </p>
           <p className="mb-6">
-            Research confirms this bidirectional relationship: depression causes social withdrawal, and social withdrawal worsens depression <Citation id="1" index={1} source="Social Psychiatry and Psychiatric Epidemiology" year="2019" tier={1} />. Breaking this cycle doesn't require forcing yourself into big social events or pretending to be fine. It requires starting small—so small that even a depressed brain can say yes.
+            Research confirms this bidirectional relationship: depression causes social withdrawal, and social withdrawal worsens depression <Citation id="1" index={1} source="Social Psychiatry and Psychiatric Epidemiology" year="2019" tier={1} />. Breaking this cycle doesn't require forcing yourself into big social events or pretending to be fine. It requires starting small---so small that even a depressed brain can say yes.
           </p>
         </div>
 
@@ -431,15 +431,15 @@ export const copingWithDepressionArticlesB: Article[] = [
           Why Social Connection Matters for Depression
         </h2>
         <p className="mb-6">
-          Humans are wired for connection. Social isolation activates the same brain regions as physical pain. Loneliness increases inflammation, disrupts sleep, and impairs immune function—all of which worsen depression <Citation id="2" index={2} source="Psychological Medicine" year="2020" tier={1} />.
+          Humans are wired for connection. Social isolation activates the same brain regions as physical pain. Loneliness increases inflammation, disrupts sleep, and impairs immune function---all of which worsen depression <Citation id="2" index={2} source="Psychological Medicine" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          On the flip side, social connection—even brief, low-intensity interactions—has protective effects. Studies show that people with strong social ties recover from depression faster and are less likely to relapse <Citation id="4" index={4} source="Journal of Affective Disorders" year="2018" tier={1} />.
+          On the flip side, social connection---even brief, low-intensity interactions---has protective effects. Studies show that people with strong social ties recover from depression faster and are less likely to relapse <Citation id="4" index={4} source="Journal of Affective Disorders" year="2018" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            You don't need deep, emotionally intense relationships to benefit from social connection. Research shows that even "weak ties"—brief interactions with acquaintances, neighbors, or baristas—improve mood and reduce feelings of isolation <Citation id="5" index={5} source="Social Psychological and Personality Science" year="2019" tier={1} />.
+            You don't need deep, emotionally intense relationships to benefit from social connection. Research shows that even "weak ties"---brief interactions with acquaintances, neighbors, or baristas---improve mood and reduce feelings of isolation <Citation id="5" index={5} source="Social Psychological and Personality Science" year="2019" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -460,7 +460,7 @@ export const copingWithDepressionArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            These thoughts feel true when you're depressed, but they're symptoms of the illness, not accurate reflections of reality. Most people want to help when someone reaches out—they just don't know you're struggling until you tell them.
+            These thoughts feel true when you're depressed, but they're symptoms of the illness, not accurate reflections of reality. Most people want to help when someone reaches out---they just don't know you're struggling until you tell them.
           </p>
         </ArticleCallout>
 
@@ -468,7 +468,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           Starting Small: Low-Barrier Social Connection
         </h2>
         <p className="mb-6">
-          The goal is not to force yourself into big, draining social events. It's to take the smallest possible step toward connection—one that your current capacity can handle <Citation id="6" index={6} source="Behavior Therapy" year="2020" tier={1} />.
+          The goal is not to force yourself into big, draining social events. It's to take the smallest possible step toward connection---one that your current capacity can handle <Citation id="6" index={6} source="Behavior Therapy" year="2020" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -496,7 +496,7 @@ export const copingWithDepressionArticlesB: Article[] = [
               title: 'Tier 3: Text or message (asynchronous)',
               description: (
                 <div>
-                  <p className="mb-2">Send a text to a friend—doesn't have to be deep. "Thinking of you,", "Hope you're doing well," or even just a meme.</p>
+                  <p className="mb-2">Send a text to a friend---doesn't have to be deep. "Thinking of you,", "Hope you're doing well," or even just a meme.</p>
                   <p>Asynchronous communication gives you control over timing and doesn't require real-time energy.</p>
                 </div>
               ),
@@ -569,13 +569,13 @@ export const copingWithDepressionArticlesB: Article[] = [
           When Connection Feels Fake or Forced
         </h2>
         <p className="mb-6">
-          Depression can make social interaction feel performative—like you're pretending to be okay when you're not. This dissonance is exhausting.
+          Depression can make social interaction feel performative---like you're pretending to be okay when you're not. This dissonance is exhausting.
         </p>
         <p className="mb-6">
           <strong>You don't have to perform wellness.</strong> It's okay to say "I'm not doing great' or "I'm here, but I'm low-energy today." Most people appreciate honesty more than forced cheerfulness.
         </p>
         <p className="mb-6">
-          If someone responds poorly to your honesty, that's a reflection of their discomfort—not a sign that you should hide your struggles. The right people will meet you where you are.
+          If someone responds poorly to your honesty, that's a reflection of their discomfort---not a sign that you should hide your struggles. The right people will meet you where you are.
         </p>
 
         <h2 id="if-you-dont-have-people" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -688,7 +688,7 @@ export const copingWithDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Therapy sessions typically last 50 minutes. That leaves 10,030 minutes in the rest of your week. What you do in those between-session hours matters just as much as what happens in the therapy room—sometimes more.
+            Therapy sessions typically last 50 minutes. That leaves 10,030 minutes in the rest of your week. What you do in those between-session hours matters just as much as what happens in the therapy room---sometimes more.
           </p>
           <p className="mb-6">
             Research shows that clients who actively engage in between-session work (homework, skill practice, self-monitoring) have significantly better therapy outcomes than those who don't <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2019" tier={1} />. This article offers practical strategies to support yourself when your therapist isn't available.
@@ -699,10 +699,10 @@ export const copingWithDepressionArticlesB: Article[] = [
           Why Between-Session Work Matters
         </h2>
         <p className="mb-6">
-          Therapy provides insight, tools, and a safe space to process emotions. But insight alone doesn't create lasting change. <strong>Behavior change happens through practice</strong>—and practice happens between sessions <Citation id="2" index={2} source="Behavior Therapy" year="2018" tier={1} />.
+          Therapy provides insight, tools, and a safe space to process emotions. But insight alone doesn't create lasting change. <strong>Behavior change happens through practice</strong>---and practice happens between sessions <Citation id="2" index={2} source="Behavior Therapy" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          Think of therapy like physical therapy: your PT gives you exercises, but the real healing happens when you do them at home. Mental health works the same way. The strategies you use between sessions—even imperfectly—are where transformation occurs.
+          Think of therapy like physical therapy: your PT gives you exercises, but the real healing happens when you do them at home. Mental health works the same way. The strategies you use between sessions---even imperfectly---are where transformation occurs.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -722,7 +722,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           1. Complete Therapy Homework (If Assigned)
         </h3>
         <p className="mb-6">
-          If your therapist assigns homework—thought records, behavior tracking, exposure tasks—do your best to complete it. Studies show that homework completion is one of the strongest predictors of therapy success <Citation id="2" index={2} source="Behavior Therapy" year="2018" tier={1} />.
+          If your therapist assigns homework---thought records, behavior tracking, exposure tasks---do your best to complete it. Studies show that homework completion is one of the strongest predictors of therapy success <Citation id="2" index={2} source="Behavior Therapy" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>If you struggle with homework:</strong> Tell your therapist. They can adjust the difficulty, clarify instructions, or help you troubleshoot barriers. Not doing homework and hiding it is worse than doing it imperfectly and discussing it.
@@ -732,7 +732,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           2. Practice New Skills (Even Briefly)
         </h3>
         <p className="mb-6">
-          Whatever skills you're learning in therapy—cognitive restructuring, distress tolerance, assertive communication—practice them in real situations. Start small. You don't need to master them; you need to use them.
+          Whatever skills you're learning in therapy---cognitive restructuring, distress tolerance, assertive communication---practice them in real situations. Start small. You don't need to master them; you need to use them.
         </p>
         <p className="mb-6">
           Example: If you're learning to challenge negative thoughts, catch one automatic thought per day and question it. That's practice.
@@ -745,14 +745,14 @@ export const copingWithDepressionArticlesB: Article[] = [
           Keeping a simple log of your mood, sleep, activities, and symptoms helps you and your therapist identify patterns and measure progress <Citation id="3" index={3} source="Depression and Anxiety" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          <strong>How to do it:</strong> Use a journal, notes app, or mood-tracking app. Rate your mood daily (0–10), note any significant events, and track behaviors (exercise, sleep, social contact).
+          <strong>How to do it:</strong> Use a journal, notes app, or mood-tracking app. Rate your mood daily (0--10), note any significant events, and track behaviors (exercise, sleep, social contact).
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           4. Journal About What Came Up in Session
         </h3>
         <p className="mb-6">
-          After a therapy session, spend 10–15 minutes writing about what you discussed, what resonated, and what you want to explore further. This deepens processing and helps you retain insights.
+          After a therapy session, spend 10--15 minutes writing about what you discussed, what resonated, and what you want to explore further. This deepens processing and helps you retain insights.
         </p>
         <p className="mb-6">
           You can also bring these notes to your next session as a starting point.
@@ -762,7 +762,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           5. Review Your Crisis Plan
         </h3>
         <p className="mb-6">
-          If you and your therapist have created a safety or crisis plan, review it regularly—not just when you're in crisis <Citation id="4" index={4} source="Clinical Psychology: Science and Practice" year="2019" tier={1} />. Familiarizing yourself with the plan when you're stable makes it easier to use when you're not.
+          If you and your therapist have created a safety or crisis plan, review it regularly---not just when you're in crisis <Citation id="4" index={4} source="Clinical Psychology: Science and Practice" year="2019" tier={1} />. Familiarizing yourself with the plan when you're stable makes it easier to use when you're not.
         </p>
 
         <ArticleCallout variant="tip">
@@ -775,7 +775,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           What to Do on Difficult Days Between Sessions
         </h2>
         <p className="mb-6">
-          Sometimes the week between sessions feels impossibly long—especially if you're in crisis or experiencing a surge of symptoms. Here's how to manage:
+          Sometimes the week between sessions feels impossibly long---especially if you're in crisis or experiencing a surge of symptoms. Here's how to manage:
         </p>
 
         <ArticleAccordion
@@ -855,7 +855,7 @@ export const copingWithDepressionArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Sleep:</strong> Prioritize consistent sleep and wake times. Poor sleep undermines therapy progress.</li>
-          <li><strong>Movement:</strong> Even 10–15 minutes of walking can stabilize mood and energy.</li>
+          <li><strong>Movement:</strong> Even 10--15 minutes of walking can stabilize mood and energy.</li>
           <li><strong>Nutrition:</strong> Eat regular meals. Depression makes this hard, but irregular eating worsens symptoms.</li>
           <li><strong>Social contact:</strong> Even minimal connection (a text, a brief walk with someone) reduces isolation.</li>
           <li><strong>Medication adherence:</strong> If you're on medication, take it as prescribed. Inconsistent use reduces effectiveness.</li>
@@ -889,7 +889,7 @@ export const copingWithDepressionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          You're not failing if weekly therapy isn't enough. It means you need a higher level of support—and that's okay.
+          You're not failing if weekly therapy isn't enough. It means you need a higher level of support---and that's okay.
         </p>
       </>
     ),
@@ -1014,7 +1014,7 @@ export const copingWithDepressionArticlesB: Article[] = [
                     <li>"I have intrusive thoughts about methods of self-harm"</li>
                     <li>"I feel emotionally numb and disconnected"</li>
                   </ul>
-                  <p className="mt-2">Write down 3–5 specific warning signs. These help you catch the crisis early.</p>
+                  <p className="mt-2">Write down 3--5 specific warning signs. These help you catch the crisis early.</p>
                 </div>
               ),
             },
@@ -1032,7 +1032,7 @@ export const copingWithDepressionArticlesB: Article[] = [
                     <li>Listen to a specific playlist</li>
                     <li>Write in a journal</li>
                   </ul>
-                  <p className="mt-2">List 3–5 strategies that have worked for you before. Keep them simple and accessible.</p>
+                  <p className="mt-2">List 3--5 strategies that have worked for you before. Keep them simple and accessible.</p>
                 </div>
               ),
             },
@@ -1040,7 +1040,7 @@ export const copingWithDepressionArticlesB: Article[] = [
               title: 'Step 3: Contact people who can help distract you',
               description: (
                 <div>
-                  <p className="mb-2"><strong>What to do:</strong> List friends or family members you can reach out to for distraction or low-key support—not necessarily to talk about the crisis, but just to be around.</p>
+                  <p className="mb-2"><strong>What to do:</strong> List friends or family members you can reach out to for distraction or low-key support---not necessarily to talk about the crisis, but just to be around.</p>
                   <p className="mb-2">Include names and phone numbers:</p>
                   <ul className="list-disc pl-5 space-y-1">
                     <li>Friend 1: [Name], [Phone]</li>
@@ -1107,7 +1107,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           You can create your safety plan alone, but it's often more effective to do it with a therapist, counselor, or trusted person. They can help you think of resources and strategies you might miss on your own.
         </p>
         <p className="mb-6">
-          <strong>Write it down.</strong> Don't just think through it—physically write or type it out. Keep copies in multiple places: your phone, wallet, bedside table, with a trusted person.
+          <strong>Write it down.</strong> Don't just think through it---physically write or type it out. Keep copies in multiple places: your phone, wallet, bedside table, with a trusted person.
         </p>
 
         <ArticleCallout variant="tip">
@@ -1143,7 +1143,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           Sharing Your Safety Plan
         </h2>
         <p className="mb-6">
-          Give a copy of your safety plan to at least one trusted person—a family member, close friend, or therapist. This ensures that if you can't access the plan yourself during a crisis, someone else can help guide you through it.
+          Give a copy of your safety plan to at least one trusted person---a family member, close friend, or therapist. This ensures that if you can't access the plan yourself during a crisis, someone else can help guide you through it.
         </p>
         <p className="mb-6">
           Let them know: "This is my crisis plan. If I ever seem like I'm in a really bad place, please help me follow these steps."
@@ -1277,7 +1277,7 @@ export const copingWithDepressionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression has a high relapse rate: after recovering from one episode, there's a 50% chance of experiencing another. After three episodes, the risk climbs to 90%. Mindfulness-Based Cognitive Therapy (MBCT) was specifically designed to break this cycle—and research shows it works.
+            Depression has a high relapse rate: after recovering from one episode, there's a 50% chance of experiencing another. After three episodes, the risk climbs to 90%. Mindfulness-Based Cognitive Therapy (MBCT) was specifically designed to break this cycle---and research shows it works.
           </p>
           <p className="mb-6">
             MBCT combines mindfulness meditation practices with cognitive therapy techniques to help people recognize and disengage from the thought patterns that trigger depression relapse <Citation id="1" index={1} source="Guilford Press" year="2013" tier={5} />. This article explains what MBCT is, how it works, and whether it might be right for you.
@@ -1302,7 +1302,7 @@ export const copingWithDepressionArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The core insight of MBCT: You can't always control what thoughts arise, but you can change your relationship to those thoughts. Instead of getting pulled into a depressive spiral, you learn to notice thoughts as mental events—not facts—and let them pass.
+            The core insight of MBCT: You can't always control what thoughts arise, but you can change your relationship to those thoughts. Instead of getting pulled into a depressive spiral, you learn to notice thoughts as mental events---not facts---and let them pass.
           </p>
         </ArticleCallout>
 
@@ -1310,7 +1310,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           How MBCT Prevents Relapse
         </h2>
         <p className="mb-6">
-          Depression relapse often starts with a small trigger—a stressful event, a low mood, or a negative thought. In people with a history of depression, these triggers activate old depressive thought patterns (rumination, self-criticism, catastrophizing) that spiral into a full episode <Citation id="7" index={7} source="Journal of Abnormal Psychology" year="2018" tier={1} />.
+          Depression relapse often starts with a small trigger---a stressful event, a low mood, or a negative thought. In people with a history of depression, these triggers activate old depressive thought patterns (rumination, self-criticism, catastrophizing) that spiral into a full episode <Citation id="7" index={7} source="Journal of Abnormal Psychology" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           MBCT teaches you to recognize these early warning signs and respond skillfully before they escalate. Instead of trying to "fix" or suppress negative thoughts (which doesn't work), you learn to observe them with curiosity and distance.
@@ -1335,7 +1335,7 @@ export const copingWithDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          This shift—from "I am my thoughts" to "I am noticing thoughts"—is subtle but transformative. It interrupts the automatic link between negative thoughts and depressive mood <Citation id="4" index={4} source="Nature Reviews Neuroscience" year="2019" tier={1} />.
+          This shift---from "I am my thoughts" to "I am noticing thoughts"---is subtle but transformative. It interrupts the automatic link between negative thoughts and depressive mood <Citation id="4" index={4} source="Nature Reviews Neuroscience" year="2019" tier={1} />.
         </p>
 
         <h2 id="evidence-for-effectiveness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1355,7 +1355,7 @@ export const copingWithDepressionArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          A 2015 study published in <em>The Lancet</em> found that MBCT was as effective as maintenance antidepressant medication for preventing relapse—meaning it's a viable alternative for people who want to reduce or discontinue medication <Citation id="5" index={5} source="The Lancet" year="2015" tier={1} />.
+          A 2015 study published in <em>The Lancet</em> found that MBCT was as effective as maintenance antidepressant medication for preventing relapse---meaning it's a viable alternative for people who want to reduce or discontinue medication <Citation id="5" index={5} source="The Lancet" year="2015" tier={1} />.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -1368,7 +1368,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           What Happens in an MBCT Program?
         </h2>
         <p className="mb-6">
-          MBCT is typically delivered in a group setting over 8 weekly sessions, each lasting 2–2.5 hours. Some programs also include a full-day retreat between weeks 6 and 7.
+          MBCT is typically delivered in a group setting over 8 weekly sessions, each lasting 2--2.5 hours. Some programs also include a full-day retreat between weeks 6 and 7.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1379,12 +1379,12 @@ export const copingWithDepressionArticlesB: Article[] = [
           <li><strong>Psychoeducation:</strong> Understanding the relationship between thoughts, emotions, and depression</li>
           <li><strong>Group discussion:</strong> Sharing experiences and insights in a supportive environment</li>
           <li><strong>Cognitive exercises:</strong> Identifying automatic thoughts, exploring alternative perspectives</li>
-          <li><strong>Home practice:</strong> Daily meditation (30–45 minutes) and informal mindfulness exercises</li>
+          <li><strong>Home practice:</strong> Daily meditation (30--45 minutes) and informal mindfulness exercises</li>
         </ul>
 
         <ArticleCallout variant="tip">
           <p>
-            <strong>Home practice is essential.</strong> MBCT requires commitment to daily meditation practice outside of sessions. If you're not willing or able to dedicate 30–45 minutes daily, MBCT may not be the right fit for you right now.
+            <strong>Home practice is essential.</strong> MBCT requires commitment to daily meditation practice outside of sessions. If you're not willing or able to dedicate 30--45 minutes daily, MBCT may not be the right fit for you right now.
           </p>
         </ArticleCallout>
 
@@ -1444,7 +1444,7 @@ export const copingWithDepressionArticlesB: Article[] = [
           What to Expect from MBCT
         </h2>
         <p className="mb-6">
-          MBCT is not a quick fix. It requires sustained practice and patience. Many people don't notice dramatic changes during the 8 weeks—the benefits often emerge over months and years as you integrate the skills into your life <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.
+          MBCT is not a quick fix. It requires sustained practice and patience. Many people don't notice dramatic changes during the 8 weeks---the benefits often emerge over months and years as you integrate the skills into your life <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Some people find meditation challenging or uncomfortable at first. That's normal. The practice is about learning to sit with discomfort, not to eliminate it.
@@ -1454,17 +1454,17 @@ export const copingWithDepressionArticlesB: Article[] = [
           Maintaining MBCT Skills Long-Term
         </h2>
         <p className="mb-6">
-          After completing an 8-week program, continuing a regular mindfulness practice (even 10–20 minutes daily) helps maintain the benefits. Some people join ongoing meditation groups or take refresher courses.
+          After completing an 8-week program, continuing a regular mindfulness practice (even 10--20 minutes daily) helps maintain the benefits. Some people join ongoing meditation groups or take refresher courses.
         </p>
         <p className="mb-6">
-          The goal isn't to meditate perfectly forever—it's to have a skill set you can return to when you notice early warning signs of relapse.
+          The goal isn't to meditate perfectly forever---it's to have a skill set you can return to when you notice early warning signs of relapse.
         </p>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Mindfulness-Based Cognitive Therapy is an evidence-based, structured program that can significantly reduce the risk of depression relapse—especially for people with recurrent depression. It requires commitment and practice, but for many, it offers lasting protection that medication or short-term therapy alone cannot provide.
+          Mindfulness-Based Cognitive Therapy is an evidence-based, structured program that can significantly reduce the risk of depression relapse---especially for people with recurrent depression. It requires commitment and practice, but for many, it offers lasting protection that medication or short-term therapy alone cannot provide.
         </p>
         <p className="mb-6">
           If you've struggled with recurrent depression and want a tool to prevent future episodes, MBCT may be worth exploring.

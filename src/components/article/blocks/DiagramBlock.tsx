@@ -18,10 +18,18 @@ export interface DiagramConnection {
   label?: string;
 }
 
+// Support simple items format (label/value/description) for non-diagram use
+export interface SimpleItem {
+  label: string;
+  value?: string;
+  description?: string;
+}
+
 export interface DiagramBlockProps {
-  type: DiagramType;
+  type?: DiagramType;
   title: string;
-  nodes: DiagramNode[];
+  nodes?: DiagramNode[];
+  items?: SimpleItem[]; // Alternative format for simple lists
   connections?: DiagramConnection[];
   source?: string;
   className?: string;
@@ -32,17 +40,74 @@ export interface DiagramBlockProps {
  * DiagramBlock — SVG-based conceptual diagrams
  * Supports: flowcharts, cycles, hierarchies, venn diagrams, mindmaps, process flows
  * All diagrams include alt text for accessibility
+ * Also supports simple item lists for non-diagram content
  */
 export const DiagramBlock: React.FC<DiagramBlockProps> = ({
   type,
   title,
-  nodes,
+  nodes: propNodes,
+  items,
   connections = [],
   source,
   className = '',
   description,
 }) => {
   const prefersReducedMotion = useReducedMotion();
+
+  // If items are provided instead of nodes, convert them or render as simple list
+  const isSimpleList = items && items.length > 0 && !propNodes;
+  const nodes = propNodes || (items ? items.map((item, i) => ({
+    id: `item-${i}`,
+    label: item.label
+  })) : []);
+
+  // If no type specified and we have items with value/description, render as simple list
+  if (isSimpleList && !type) {
+    return (
+      <motion.div
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 16 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.4, ease: 'easeOut' }}
+        className={`not-prose my-10 scroll-mt-32 ${className}`}
+      >
+        <div className="bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-2xl p-6 shadow-sm">
+          <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-6">
+            {title}
+          </h3>
+          {description && (
+            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{description}</p>
+          )}
+          <div className="grid gap-4">
+            {items.map((item, i) => (
+              <div key={i} className="flex flex-col gap-2 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+                <div className="flex items-baseline justify-between gap-4">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                    {item.label}
+                  </div>
+                  {item.value && (
+                    <div className="text-lg font-bold text-primary">
+                      {item.value}
+                    </div>
+                  )}
+                </div>
+                {item.description && (
+                  <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {item.description}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          {source && (
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-4 italic">
+              {source}
+            </p>
+          )}
+        </div>
+      </motion.div>
+    );
+  }
 
   const renderFlowchart = () => {
     // Simple vertical flowchart with arrows

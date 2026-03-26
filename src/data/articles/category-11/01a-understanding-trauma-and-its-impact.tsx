@@ -100,7 +100,7 @@ export const understandingTraumaArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             The word "trauma" gets thrown around a lot these days. But what does it actually mean? Not every bad
             experience is traumatic, yet the term shows up everywhere from social media to therapy offices. If you've
-            ever wondered whether your experiences count as trauma—or if you're just being dramatic—you're not alone.
+            ever wondered whether your experiences count as trauma---or if you're just being dramatic---you're not alone.
           </p>
           <p className="mb-6">
             Psychological trauma is a specific response to an event or series of events that overwhelms your ability
@@ -156,7 +156,7 @@ export const understandingTraumaArticlesA: Article[] = [
                   </p>
                   <p>
                     This is why some people develop PTSD after a traumatic event while others don't. It's not about
-                    being 'weak' or "strong"—it's about how your unique nervous system processes threat.
+                    being 'weak' or "strong"---it's about how your unique nervous system processes threat.
                   </p>
                 </div>
               ),
@@ -329,7 +329,7 @@ export const understandingTraumaArticlesA: Article[] = [
           Why Understanding Trauma Matters
         </h2>
         <p className="mb-6">
-          Recognizing trauma for what it is—rather than dismissing it as weakness or overreaction—is the first step
+          Recognizing trauma for what it is---rather than dismissing it as weakness or overreaction---is the first step
           toward healing. When you understand that your reactions make sense given what you've been through, you can
           begin to address them with compassion rather than judgment.
         </p>
@@ -337,7 +337,7 @@ export const understandingTraumaArticlesA: Article[] = [
           Trauma is common. According to research, about 60% of men and 50% of women experience at least one traumatic
           event in their lifetime{', '}
           <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />. You're not
-          alone, and you're not broken. Your responses are your nervous system doing its job—sometimes too well.
+          alone, and you're not broken. Your responses are your nervous system doing its job---sometimes too well.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -346,7 +346,7 @@ export const understandingTraumaArticlesA: Article[] = [
           </p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Trauma is about your response to an event, not just the event itself</li>
-            <li>What's traumatic for one person may not be for another—and that's okay</li>
+            <li>What's traumatic for one person may not be for another---and that's okay</li>
             <li>Trauma leaves lasting effects on your body, mind, and behavior</li>
             <li>Understanding trauma is the first step toward healing</li>
             <li>Professional support can make a significant difference in recovery</li>
@@ -459,7 +459,7 @@ export const understandingTraumaArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             When most people think of trauma, they picture major events: natural disasters, car accidents, violence.
             But trauma exists on a spectrum. Mental health professionals often distinguish between "Big T" trauma and
-            "little t" trauma—and both can have significant, lasting effects on your well-being.
+            "little t" trauma---and both can have significant, lasting effects on your well-being.
           </p>
           <p className="mb-6">
             Understanding this spectrum helps validate experiences that don't fit the traditional image of trauma,
@@ -484,7 +484,7 @@ export const understandingTraumaArticlesA: Article[] = [
         <ArticleCallout variant="did-you-know">
           <p>
             Big T traumas are the types of experiences that can lead to a formal diagnosis of Post-Traumatic Stress
-            Disorder (PTSD). However, not everyone who experiences a Big T trauma develops PTSD—and conversely, not all
+            Disorder (PTSD). However, not everyone who experiences a Big T trauma develops PTSD---and conversely, not all
             trauma responses require a Big T event.
           </p>
         </ArticleCallout>
@@ -514,7 +514,7 @@ export const understandingTraumaArticlesA: Article[] = [
           <Citation id="4" index={4} source="American Psychological Association" year="2020" tier={3} />.
         </p>
         <p className="mb-6">
-          The term "little" is misleading—these experiences can feel anything but small. What makes them different is
+          The term "little" is misleading---these experiences can feel anything but small. What makes them different is
           their intensity and the type of threat they pose, not their impact on your mental health.
         </p>
 
@@ -554,7 +554,7 @@ export const understandingTraumaArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           Think of it like a stress bucket. A single Big T trauma can overflow your bucket all at once. But repeated
-          little t traumas—especially when they occur close together or without adequate recovery time—can also fill
+          little t traumas---especially when they occur close together or without adequate recovery time---can also fill
           that bucket to overflowing{', '}
           <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2019" tier={1} />.
         </p>
@@ -591,13 +591,13 @@ export const understandingTraumaArticlesA: Article[] = [
           Microtraumas: The Smallest End of the Spectrum
         </h2>
         <p className="mb-6">
-          Even smaller than little t traumas are what researchers call "microtraumas" or microaggressions—brief,
+          Even smaller than little t traumas are what researchers call "microtraumas" or microaggressions---brief,
           everyday exchanges that send denigrating messages to people based on their identity{', '}
           <Citation id="5" index={5} source="American Psychologist" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          While a single microaggression might seem trivial, experiencing them repeatedly—especially in the context of
-          systemic discrimination—can lead to traumatic stress responses{', '}
+          While a single microaggression might seem trivial, experiencing them repeatedly---especially in the context of
+          systemic discrimination---can lead to traumatic stress responses{', '}
           <Citation id="6" index={6} source="Journal of Health and Social Behavior" year="2017" tier={1} />.
         </p>
 
@@ -659,7 +659,7 @@ export const understandingTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Understanding that your nervous system can be overwhelmed by events that aren't life-threatening helps
-                  you treat yourself with more compassion. You're not weak or overly sensitive—you're human.
+                  you treat yourself with more compassion. You're not weak or overly sensitive---you're human.
                 </p>
               ),
             },
@@ -676,7 +676,7 @@ export const understandingTraumaArticlesA: Article[] = [
           Whether you've experienced Big T trauma, little t trauma, or a combination of both, your distress is valid
           and deserves care{', '}
           <Citation id="8" index={8} source="SAMHSA" year="2022" tier={2} />. The distinction isn't about minimizing
-          certain experiences—it's about understanding the full range of events that can overwhelm our capacity to
+          certain experiences---it's about understanding the full range of events that can overwhelm our capacity to
           cope.
         </p>
 
@@ -797,7 +797,7 @@ export const understandingTraumaArticlesA: Article[] = [
             When people say "trauma changes the brain, ' they're not speaking metaphorically. Decades of neuroscience
             research have revealed specific, measurable changes in brain structure and function following traumatic
             experiences. Understanding what happens in your brain during and after trauma can help explain why certain
-            symptoms occur—and why healing is possible.
+            symptoms occur---and why healing is possible.
           </p>
           <p className="mb-6">
             This article breaks down the neuroscience of trauma in plain language, focusing on three key brain regions:
@@ -813,7 +813,7 @@ export const understandingTraumaArticlesA: Article[] = [
           The Three Key Brain Regions in Trauma
         </h2>
         <p className="mb-6">
-          When it comes to trauma, three brain regions work together—or fail to work together. Let's understand each
+          When it comes to trauma, three brain regions work together---or fail to work together. Let's understand each
           one and what it does:
         </p>
 
@@ -827,7 +827,7 @@ export const understandingTraumaArticlesA: Article[] = [
                   <h3 className="text-xl font-bold mb-3">The Alarm System</h3>
                   <p className="mb-4">
                     The amygdala is a small, almond-shaped structure deep in your brain. Its job is to detect threats
-                    and trigger your fight-flight-freeze response. Think of it as your brain's smoke detector—always
+                    and trigger your fight-flight-freeze response. Think of it as your brain's smoke detector---always
                     scanning for danger.
                   </p>
                   <p className="mb-4">
@@ -887,7 +887,7 @@ export const understandingTraumaArticlesA: Article[] = [
                   </p>
                   <p>
                     <strong>Why this happens:</strong> During extreme stress, blood flow and activity shift away from
-                    the PFC toward the amygdala. Your brain essentially says, "No time for rational thinking—we need to
+                    the PFC toward the amygdala. Your brain essentially says, "No time for rational thinking---we need to
                     survive!" This pattern can persist long after the threat has passed.
                   </p>
                 </div>
@@ -1038,8 +1038,8 @@ export const understandingTraumaArticlesA: Article[] = [
           The Good News: Neuroplasticity and Healing
         </h2>
         <p className="mb-6">
-          Here's the most important thing to know: <strong>the brain can change</strong>. Neuroplasticity—the brain's
-          ability to form new neural connections and reorganize itself—means that trauma's effects are not permanent{', '}
+          Here's the most important thing to know: <strong>the brain can change</strong>. Neuroplasticity---the brain's
+          ability to form new neural connections and reorganize itself---means that trauma's effects are not permanent{', '}
           <Citation id="5" index={5} source="Journal of Psychiatric Research" year="2022" tier={1} />.
         </p>
 
@@ -1070,7 +1070,7 @@ export const understandingTraumaArticlesA: Article[] = [
         <p className="mb-6">Understanding the neuroscience of trauma has practical applications:</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            <strong>Self-compassion</strong>: Your reactions aren't a personal failing—they're your brain doing what
+            <strong>Self-compassion</strong>: Your reactions aren't a personal failing---they're your brain doing what
             traumatized brains do
           </li>
           <li>
@@ -1199,7 +1199,7 @@ export const understandingTraumaArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             In the mid-1990s, two researchers stumbled upon a finding that would transform our understanding of how
             childhood experiences shape lifelong health. The Adverse Childhood Experiences (ACE) Study revealed a
-            stunning connection: what happens to you as a child doesn't just affect your childhood—it can influence
+            stunning connection: what happens to you as a child doesn't just affect your childhood---it can influence
             your physical and mental health for decades to come.
           </p>
           <p className="mb-6">
@@ -1446,7 +1446,7 @@ export const understandingTraumaArticlesA: Article[] = [
               title: 'Social and Economic Impacts',
               description: (
                 <p>
-                  ACEs can affect educational attainment, employment, income, and relationship stability—all of which
+                  ACEs can affect educational attainment, employment, income, and relationship stability---all of which
                   influence health throughout life.
                 </p>
               ),
@@ -1520,7 +1520,7 @@ export const understandingTraumaArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          The ACE framework is a tool for understanding risk and targeting prevention efforts—not a life sentence. With
+          The ACE framework is a tool for understanding risk and targeting prevention efforts---not a life sentence. With
           appropriate support, healing from childhood adversity is absolutely possible{', '}
           <Citation id="9" index={9} source="BMC Public Health" year="2020" tier={1} />.
         </p>
@@ -1549,7 +1549,7 @@ export const understandingTraumaArticlesA: Article[] = [
         </ul>
         <p className="mb-6">
           Understanding ACEs helps us see that many health problems we treat in adults have their roots in childhood
-          experiences—and that prevention should start early.
+          experiences---and that prevention should start early.
         </p>
       </>
     ),
@@ -1639,11 +1639,11 @@ export const understandingTraumaArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Two people survive the same car accident. One develops PTSD with severe flashbacks and anxiety. The other
             processes the experience, feels shaken for a while, and gradually moves on. Why? It's one of the most
-            important questions in trauma research—and the answer reveals a lot about resilience, vulnerability, and
+            important questions in trauma research---and the answer reveals a lot about resilience, vulnerability, and
             what we can do to support healing.
           </p>
           <p className="mb-6">
-            The truth is that trauma is not just about what happens to you—it's about the complex interaction between
+            The truth is that trauma is not just about what happens to you---it's about the complex interaction between
             the event, your biology, your history, your resources, and your interpretation of what happened{', '}
             <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
@@ -1658,7 +1658,7 @@ export const understandingTraumaArticlesA: Article[] = [
         <p className="mb-6">
           The first thing to understand is that <strong>trauma is defined by your response, not by the event
           itself</strong>. What overwhelms one person's capacity to cope may be manageable for another. This doesn't
-          mean one person is 'stronger' or "weaker"—it means human beings are complex, and many factors shape our
+          mean one person is 'stronger' or "weaker"---it means human beings are complex, and many factors shape our
           responses.
         </p>
 
@@ -1666,7 +1666,7 @@ export const understandingTraumaArticlesA: Article[] = [
           <p>
             Research shows that only about 10-20% of people who experience a traumatic event go on to develop PTSD{', '}
             <Citation id="2" index={2} source="Psychological Bulletin" year="2019" tier={1} />. This doesn't mean the
-            other 80-90% weren't affected—many experience distress that doesn't meet the threshold for diagnosis. But it
+            other 80-90% weren't affected---many experience distress that doesn't meet the threshold for diagnosis. But it
             highlights how variable human responses are.
           </p>
         </ArticleCallout>
@@ -1712,8 +1712,8 @@ export const understandingTraumaArticlesA: Article[] = [
                 <div>
                   <h3 className="text-xl font-bold mb-3">Age and Life Stage</h3>
                   <p className="mb-4">
-                    <strong>When it happens matters</strong>. Trauma during childhood—especially during critical
-                    developmental periods—can have more pervasive effects than trauma in adulthood. The developing brain
+                    <strong>When it happens matters</strong>. Trauma during childhood---especially during critical
+                    developmental periods---can have more pervasive effects than trauma in adulthood. The developing brain
                     is more plastic but also more vulnerable{', '}
                     <Citation id="5" index={5} source="JAMA Psychiatry" year="2020" tier={1} />.
                   </p>
@@ -1736,7 +1736,7 @@ export const understandingTraumaArticlesA: Article[] = [
                 <div>
                   <h3 className="text-xl font-bold mb-3">Trauma History and ACEs</h3>
                   <p className="mb-4">
-                    Your history matters enormously. Previous trauma—especially childhood adversity—is one of the
+                    Your history matters enormously. Previous trauma---especially childhood adversity---is one of the
                     strongest predictors of PTSD after a new traumatic event. It's as if each trauma fills your "stress
                     bucket" a bit more, leaving less capacity to handle new stressors.
                   </p>
@@ -1804,7 +1804,7 @@ export const understandingTraumaArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Interpersonal trauma—especially involving betrayal by someone trusted—tends to have particularly profound
+          Interpersonal trauma---especially involving betrayal by someone trusted---tends to have particularly profound
           effects. This is why childhood abuse by a caregiver or sexual assault by an intimate partner can be so
           damaging.
         </p>
@@ -1851,7 +1851,7 @@ export const understandingTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Pre-existing anxiety, depression, or other mental health conditions increase vulnerability to PTSD
-                  after trauma. However, this doesn't mean people with mental health conditions can't recover—it just
+                  after trauma. However, this doesn't mean people with mental health conditions can't recover---it just
                   means they may need more support.
                 </p>
               ),
@@ -1877,7 +1877,7 @@ export const understandingTraumaArticlesA: Article[] = [
           Building Blocks of Resilience
         </h2>
         <p className="mb-6">
-          Research on resilience—the ability to adapt successfully despite adversity—has identified key protective
+          Research on resilience---the ability to adapt successfully despite adversity---has identified key protective
           factors{', '}
           <Citation id="6" index={6} source="World Health Organization" year="2022" tier={2} />:
         </p>
@@ -1935,7 +1935,7 @@ export const understandingTraumaArticlesA: Article[] = [
         </ul>
         <p className="mb-6">
           The good news? Many of these neurobiological patterns can be influenced through therapy, lifestyle changes,
-          and supportive relationships. Resilience isn't just something you're born with—it can be developed.
+          and supportive relationships. Resilience isn't just something you're born with---it can be developed.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1947,7 +1947,7 @@ export const understandingTraumaArticlesA: Article[] = [
             <li>There's no such thing as being "strong enough" to avoid trauma's effects</li>
             <li>Most people are resilient; PTSD is the exception, not the rule</li>
             <li>Protective factors can be cultivated and strengthened</li>
-            <li>Comparison is unhelpful—your response is shaped by factors often outside your control</li>
+            <li>Comparison is unhelpful---your response is shaped by factors often outside your control</li>
           </ul>
         </ArticleCallout>
 

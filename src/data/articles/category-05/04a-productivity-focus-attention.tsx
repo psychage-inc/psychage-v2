@@ -126,11 +126,11 @@ export const productivityFocusAttentionArticlesA: Article[] = [
           Ultradian Rhythms and Natural Work Cycles
         </h2>
         <p className="mb-6">
-          Your body operates on ultradian rhythms—90-120 minute cycles of high and low energy throughout the day <Citation id="4" index={4} source="Work & Stress" year="2021" tier={1} />. Peak cognitive performance occurs during the high-energy phases, followed by natural dips requiring rest.
+          Your body operates on ultradian rhythms---90-120 minute cycles of high and low energy throughout the day <Citation id="4" index={4} source="Work & Stress" year="2021" tier={1} />. Peak cognitive performance occurs during the high-energy phases, followed by natural dips requiring rest.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Productivity Paradox">
-          <p>Strategic rest isn't laziness—it's a biological requirement. Working through natural energy dips doesn't save time; it multiplies errors and extends total task completion time.</p>
+          <p>Strategic rest isn't laziness---it's a biological requirement. Working through natural energy dips doesn't save time; it multiplies errors and extends total task completion time.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -171,7 +171,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
             },
             {
               title: 'Mandatory breaks between blocks',
-              description: <p>15-20 minute breaks for physical movement, hydration, and mental disengagement—not checking email.</p>,
+              description: <p>15-20 minute breaks for physical movement, hydration, and mental disengagement---not checking email.</p>,
             },
             {
               title: 'Daily work hour cap (7-8 hours)',
@@ -188,7 +188,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
           The Four-Day Work Week Evidence
         </h2>
         <p className="mb-6">
-          Large-scale trials of four-day work weeks demonstrate that reducing work hours while maintaining pay does not reduce productivity—and often increases it <Citation id="7" index={7} source="Annual Review of Organizational Psychology" year="2023" tier={1} />. Employees report better mental health, lower stress, and higher job satisfaction.
+          Large-scale trials of four-day work weeks demonstrate that reducing work hours while maintaining pay does not reduce productivity---and often increases it <Citation id="7" index={7} source="Annual Review of Organizational Psychology" year="2023" tier={1} />. Employees report better mental health, lower stress, and higher job satisfaction.
         </p>
 
         <ArticleChart
@@ -222,10 +222,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
               title: 'Individual Actions',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Track your actual productive hours</strong> — not time at desk, but time doing focused work</li>
-                  <li><strong>Experiment with work block lengths</strong> — find your optimal focus period (typically 60-120 minutes)</li>
-                  <li><strong>Protect breaks as rigorously as meetings</strong> — they're essential work infrastructure, not optional</li>
-                  <li><strong>Set a hard stop time</strong> — decide when your workday ends and honor that boundary</li>
+                  <li><strong>Track your actual productive hours</strong> --- not time at desk, but time doing focused work</li>
+                  <li><strong>Experiment with work block lengths</strong> --- find your optimal focus period (typically 60-120 minutes)</li>
+                  <li><strong>Protect breaks as rigorously as meetings</strong> --- they're essential work infrastructure, not optional</li>
+                  <li><strong>Set a hard stop time</strong> --- decide when your workday ends and honor that boundary</li>
                 </ul>
               ),
             },
@@ -234,10 +234,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
               title: 'Advocating for Organizational Change',
               content: (
                 <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Present productivity data</strong> — make the business case using research on output quality and efficiency</li>
-                  <li><strong>Propose pilot programs</strong> — suggest time-limited experiments with protected work hours or compressed weeks</li>
-                  <li><strong>Normalize finishing on time</strong> — be visible about leaving when your productive hours are complete</li>
-                  <li><strong>Challenge "hours worked" as a performance metric</strong> — advocate for output-based evaluation</li>
+                  <li><strong>Present productivity data</strong> --- make the business case using research on output quality and efficiency</li>
+                  <li><strong>Propose pilot programs</strong> --- suggest time-limited experiments with protected work hours or compressed weeks</li>
+                  <li><strong>Normalize finishing on time</strong> --- be visible about leaving when your productive hours are complete</li>
+                  <li><strong>Challenge "hours worked" as a performance metric</strong> --- advocate for output-based evaluation</li>
                 </ul>
               ),
             },
@@ -335,10 +335,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Deep work—prolonged, undistracted focus on cognitively demanding tasks—is both increasingly valuable and increasingly rare. Most modern workdays fragment into shallow work: email, meetings, notifications, and administrative tasks that feel productive but generate minimal value.
+            Deep work---prolonged, undistracted focus on cognitively demanding tasks---is both increasingly valuable and increasingly rare. Most modern workdays fragment into shallow work: email, meetings, notifications, and administrative tasks that feel productive but generate minimal value.
           </p>
           <p className="mb-6">
-            Cal Newport's concept of deep work <Citation id="1" index={1} source="Grand Central Publishing" year="2016" tier={5} /> describes the state where you push your cognitive abilities to their limit, producing high-quality output efficiently. This capacity differentiates high performers across fields—yet it's systematically eroded by digital workplace norms.
+            Cal Newport's concept of deep work <Citation id="1" index={1} source="Grand Central Publishing" year="2016" tier={5} /> describes the state where you push your cognitive abilities to their limit, producing high-quality output efficiently. This capacity differentiates high performers across fields---yet it's systematically eroded by digital workplace norms.
           </p>
         </div>
 
@@ -359,7 +359,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Each interruption—notification, email check, colleague question—forces cognitive context switching, temporarily holding information from the previous task while engaging with the new one. This switching incurs metabolic costs and attention residue that persists after you return to the original task <Citation id="3" index={3} source="Human-Computer Interaction" year="2021" tier={1} />.
+          Each interruption---notification, email check, colleague question---forces cognitive context switching, temporarily holding information from the previous task while engaging with the new one. This switching incurs metabolic costs and attention residue that persists after you return to the original task <Citation id="3" index={3} source="Human-Computer Interaction" year="2021" tier={1} />.
         </p>
 
         <h2 id="shallow-work-trap" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -370,7 +370,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="warning">
-          <p><strong>The visibility trap:</strong> Shallow work is immediately observable by managers and colleagues, while deep work often looks like "doing nothing"—sitting quietly, thinking, writing. Organizations unconsciously reward activity over output, incentivizing constant availability rather than focused productivity.</p>
+          <p><strong>The visibility trap:</strong> Shallow work is immediately observable by managers and colleagues, while deep work often looks like "doing nothing"---sitting quietly, thinking, writing. Organizations unconsciously reward activity over output, incentivizing constant availability rather than focused productivity.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -420,7 +420,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
             {
               id: 'rhythmic',
               title: 'Rhythmic Philosophy: Same Time Daily',
-              content: <p>Establish a consistent deep work routine—same time, same place, same pre-work ritual. This approach leverages habit formation, reducing the activation energy required to begin focused work. Best for people with predictable schedules.</p>,
+              content: <p>Establish a consistent deep work routine---same time, same place, same pre-work ritual. This approach leverages habit formation, reducing the activation energy required to begin focused work. Best for people with predictable schedules.</p>,
             },
             {
               id: 'bimodal',
@@ -443,10 +443,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>No-meeting time blocks</strong> — organization-wide protected hours (e.g., 9-11 AM) for focused work</li>
-          <li><strong>Asynchronous communication norms</strong> — clarify that instant responses aren't expected for non-urgent messages</li>
-          <li><strong>Output-based evaluation</strong> — measure results rather than responsiveness or hours logged</li>
-          <li><strong>Quiet spaces</strong> — provide physical environments designed for concentration, not collaboration</li>
+          <li><strong>No-meeting time blocks</strong> --- organization-wide protected hours (e.g., 9-11 AM) for focused work</li>
+          <li><strong>Asynchronous communication norms</strong> --- clarify that instant responses aren't expected for non-urgent messages</li>
+          <li><strong>Output-based evaluation</strong> --- measure results rather than responsiveness or hours logged</li>
+          <li><strong>Quiet spaces</strong> --- provide physical environments designed for concentration, not collaboration</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -548,7 +548,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you switch from one task to another, your attention doesn't immediately follow. Part of your mind remains engaged with the previous task—a phenomenon researchers call attention residue. This cognitive fragmentation significantly impairs performance on the new task, yet knowledge workers switch tasks every few minutes throughout the workday.
+            When you switch from one task to another, your attention doesn't immediately follow. Part of your mind remains engaged with the previous task---a phenomenon researchers call attention residue. This cognitive fragmentation significantly impairs performance on the new task, yet knowledge workers switch tasks every few minutes throughout the workday.
           </p>
           <p className="mb-6">
             Sophie Leroy's seminal research on attention residue <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2009" tier={1} /> revealed that people experience reduced cognitive performance after switching tasks, especially when the previous task was incomplete or unresolved. The effect persists even when you consciously try to focus fully on the new task.
@@ -640,10 +640,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Email and messaging tools</strong> — average knowledge worker checks email 36 times per hour <Citation id="7" index={7} source="Computers in Human Behavior" year="2019" tier={1} /></li>
-          <li><strong>Open-plan offices</strong> — visual and auditory interruptions every 3-5 minutes on average <Citation id="9" index={9} source="Environment and Behavior" year="2021" tier={1} /></li>
-          <li><strong>Meeting culture</strong> — fragmented calendar with insufficient time blocks for deep work between meetings</li>
-          <li><strong>Notification systems</strong> — push alerts from apps, platforms, and devices throughout the workday</li>
+          <li><strong>Email and messaging tools</strong> --- average knowledge worker checks email 36 times per hour <Citation id="7" index={7} source="Computers in Human Behavior" year="2019" tier={1} /></li>
+          <li><strong>Open-plan offices</strong> --- visual and auditory interruptions every 3-5 minutes on average <Citation id="9" index={9} source="Environment and Behavior" year="2021" tier={1} /></li>
+          <li><strong>Meeting culture</strong> --- fragmented calendar with insufficient time blocks for deep work between meetings</li>
+          <li><strong>Notification systems</strong> --- push alerts from apps, platforms, and devices throughout the workday</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -687,11 +687,11 @@ export const productivityFocusAttentionArticlesA: Article[] = [
           Cognitive Load Theory and Task Management
         </h2>
         <p className="mb-6">
-          Cognitive load theory <Citation id="8" index={8} source="Educational Psychology Review" year="2020" tier={1} /> provides a framework for understanding why attention residue is so damaging. Working memory has limited capacity—roughly 4-7 items simultaneously. When attention residue from previous tasks occupies this space, less remains available for the current task.
+          Cognitive load theory <Citation id="8" index={8} source="Educational Psychology Review" year="2020" tier={1} /> provides a framework for understanding why attention residue is so damaging. Working memory has limited capacity---roughly 4-7 items simultaneously. When attention residue from previous tasks occupies this space, less remains available for the current task.
         </p>
 
         <QuoteBlock
-          quote="The key to performance is not eliminating interruptions—that's impossible in most work contexts—but managing the cognitive residue those interruptions leave behind."
+          quote="The key to performance is not eliminating interruptions---that's impossible in most work contexts---but managing the cognitive residue those interruptions leave behind."
           attribution="Sophie Leroy"
           role="Professor of Management"
           source="Organizational Behavior and Human Decision Processes, 2009"
@@ -709,10 +709,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Track your switches</strong> — spend one day noting every time you switch tasks. The awareness itself often prompts behavior change.</li>
-          <li><strong>Time-block your calendar</strong> — treat focused work as appointments with yourself, not optional time that can be overridden by any incoming request.</li>
-          <li><strong>Establish communication boundaries</strong> — set expectations about response times. "I check email three times daily" is often perfectly adequate.</li>
-          <li><strong>Create a shutdown ritual</strong> — end each workday by completing or documenting the status of all open tasks, clearing cognitive residue before leaving.</li>
+          <li><strong>Track your switches</strong> --- spend one day noting every time you switch tasks. The awareness itself often prompts behavior change.</li>
+          <li><strong>Time-block your calendar</strong> --- treat focused work as appointments with yourself, not optional time that can be overridden by any incoming request.</li>
+          <li><strong>Establish communication boundaries</strong> --- set expectations about response times. "I check email three times daily" is often perfectly adequate.</li>
+          <li><strong>Create a shutdown ritual</strong> --- end each workday by completing or documenting the status of all open tasks, clearing cognitive residue before leaving.</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -806,7 +806,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Productivity techniques promise to transform your work habits: the Pomodoro Technique, time-boxing, Getting Things Done, Eat That Frog. Some have research support. Others are popular despite lacking evidence. Understanding what actually works—and for whom—helps you adopt effective strategies rather than chasing viral productivity trends.
+            Productivity techniques promise to transform your work habits: the Pomodoro Technique, time-boxing, Getting Things Done, Eat That Frog. Some have research support. Others are popular despite lacking evidence. Understanding what actually works---and for whom---helps you adopt effective strategies rather than chasing viral productivity trends.
           </p>
           <p className="mb-6">
             Research on productivity interventions reveals significant individual variation: techniques that boost performance for one person may hinder another <Citation id="5" index={5} source="Personality and Individual Differences" year="2021" tier={1} />. The goal isn't finding the "best" system universally, but identifying what aligns with your cognitive style and constraints.
@@ -836,14 +836,14 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="tip">
-          <p><strong>Adaptation strategy:</strong> Use Pomodoros for administrative tasks, email processing, and editing work—activities that benefit from time boxing. Abandon timers for creative work, complex problem-solving, or writing that requires extended flow states.</p>
+          <p><strong>Adaptation strategy:</strong> Use Pomodoros for administrative tasks, email processing, and editing work---activities that benefit from time boxing. Abandon timers for creative work, complex problem-solving, or writing that requires extended flow states.</p>
         </ArticleCallout>
 
         <h2 id="time-boxing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Time-Boxing: The Core Mechanism That Actually Works
         </h2>
         <p className="mb-6">
-          Time-boxing—allocating fixed time periods to tasks—shows stronger empirical support than specific branded techniques <Citation id="6" index={6} source="Organizational Behavior and Human Decision Processes" year="2020" tier={1} />. The practice addresses two cognitive challenges: Parkinson's Law (work expands to fill available time) and task initiation paralysis.
+          Time-boxing---allocating fixed time periods to tasks---shows stronger empirical support than specific branded techniques <Citation id="6" index={6} source="Organizational Behavior and Human Decision Processes" year="2020" tier={1} />. The practice addresses two cognitive challenges: Parkinson's Law (work expands to fill available time) and task initiation paralysis.
         </p>
 
         <StatCard
@@ -951,10 +951,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Establish baseline</strong> — track one week of work without changing habits to understand your current patterns</li>
-          <li><strong>Test one variable</strong> — change only one element (e.g., time-boxing) while keeping everything else constant</li>
-          <li><strong>Measure outcomes</strong> — track task completion, time estimates vs. actual, and subjective focus quality</li>
-          <li><strong>Iterate based on data</strong> — keep what works, discard what doesn't, adjust based on results rather than theory</li>
+          <li><strong>Establish baseline</strong> --- track one week of work without changing habits to understand your current patterns</li>
+          <li><strong>Test one variable</strong> --- change only one element (e.g., time-boxing) while keeping everything else constant</li>
+          <li><strong>Measure outcomes</strong> --- track task completion, time estimates vs. actual, and subjective focus quality</li>
+          <li><strong>Iterate based on data</strong> --- keep what works, discard what doesn't, adjust based on results rather than theory</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -1052,7 +1052,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Procrastination is often misunderstood as laziness or poor time management. In reality, it's primarily an emotion regulation problem: we avoid tasks that trigger uncomfortable feelings—anxiety, boredom, overwhelm, self-doubt—seeking immediate mood repair through distraction.
+            Procrastination is often misunderstood as laziness or poor time management. In reality, it's primarily an emotion regulation problem: we avoid tasks that trigger uncomfortable feelings---anxiety, boredom, overwhelm, self-doubt---seeking immediate mood repair through distraction.
           </p>
           <p className="mb-6">
             Research consistently demonstrates that procrastination is not about lacking discipline or motivation. It's about prioritizing short-term mood improvement over long-term goals <Citation id="1" index={1} source="Frontiers in Psychology" year="2021" tier={1} />. Understanding this emotional mechanism is essential for addressing procrastination effectively.
@@ -1063,7 +1063,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
           The Emotional Mechanism of Procrastination
         </h2>
         <p className="mb-6">
-          When you think about starting a task, your brain generates an emotional response before you consciously register it. If that response is negative—anxiety about performance, frustration about complexity, boredom anticipating tedium—your brain treats the task as a threat to your current emotional state.
+          When you think about starting a task, your brain generates an emotional response before you consciously register it. If that response is negative---anxiety about performance, frustration about complexity, boredom anticipating tedium---your brain treats the task as a threat to your current emotional state.
           </p>
 
         <StatCard
@@ -1128,10 +1128,10 @@ export const productivityFocusAttentionArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Expectancy</strong> — Your confidence you can complete the task (low expectancy increases procrastination)</li>
-          <li><strong>Value</strong> — How rewarding or meaningful the task feels (low value increases procrastination)</li>
-          <li><strong>Delay</strong> — Time until the deadline or reward (longer delay increases procrastination)</li>
-          <li><strong>Impulsiveness</strong> — Your susceptibility to distractions (high impulsiveness increases procrastination)</li>
+          <li><strong>Expectancy</strong> --- Your confidence you can complete the task (low expectancy increases procrastination)</li>
+          <li><strong>Value</strong> --- How rewarding or meaningful the task feels (low value increases procrastination)</li>
+          <li><strong>Delay</strong> --- Time until the deadline or reward (longer delay increases procrastination)</li>
+          <li><strong>Impulsiveness</strong> --- Your susceptibility to distractions (high impulsiveness increases procrastination)</li>
         </ul>
 
         <ArticleChart
@@ -1154,7 +1154,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
           Self-Compassion as an Intervention
         </h2>
         <p className="mb-6">
-          Self-criticism and shame intensify procrastination by making task-starting even more emotionally aversive. Research demonstrates that self-compassion—treating yourself with the same kindness you'd offer a friend—reduces procrastination more effectively than self-criticism <Citation id="4" index={4} source="Mindfulness" year="2022" tier={1} />.
+          Self-criticism and shame intensify procrastination by making task-starting even more emotionally aversive. Research demonstrates that self-compassion---treating yourself with the same kindness you'd offer a friend---reduces procrastination more effectively than self-criticism <Citation id="4" index={4} source="Mindfulness" year="2022" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip" title="The Self-Compassion Practice">
@@ -1206,7 +1206,7 @@ export const productivityFocusAttentionArticlesA: Article[] = [
           Starting Today
         </h2>
         <p className="mb-6">
-          Choose one avoided task. Before starting, identify the emotion driving avoidance: anxiety, boredom, overwhelm, inadequacy? Once you name the feeling, you can address it directly. Break the task into the smallest possible first step—not "write report" but "open document and type title." Remove environmental distractions. Commit to five minutes. Notice when you're using self-criticism, and replace it with self-compassion.
+          Choose one avoided task. Before starting, identify the emotion driving avoidance: anxiety, boredom, overwhelm, inadequacy? Once you name the feeling, you can address it directly. Break the task into the smallest possible first step---not "write report" but "open document and type title." Remove environmental distractions. Commit to five minutes. Notice when you're using self-criticism, and replace it with self-compassion.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

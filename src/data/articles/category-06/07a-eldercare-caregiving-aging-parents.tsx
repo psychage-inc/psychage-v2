@@ -40,7 +40,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
             Your teenager needs help with college applications. Your mother just fell and broke her hip. Your boss wants the report by Friday. You're exhausted, stretched impossibly thin, and feel guilty about everything you can't do.
           </p>
           <p className="mb-6">
-            The "sandwich generation" — adults caring for both children and aging parents — faces unique stressors that affect health, careers, relationships, and wellbeing <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. Understanding these challenges helps you navigate them without burning out.
+            The "sandwich generation" --- adults caring for both children and aging parents --- faces unique stressors that affect health, careers, relationships, and wellbeing <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. Understanding these challenges helps you navigate them without burning out.
           </p>
         </div>
 
@@ -212,10 +212,10 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You haven't slept through the night in months. You snap at your family. You've stopped exercising, seeing friends, doing anything for yourself. Caring for your aging parent has consumed your life — and you're drowning.
+            You haven't slept through the night in months. You snap at your family. You've stopped exercising, seeing friends, doing anything for yourself. Caring for your aging parent has consumed your life --- and you're drowning.
           </p>
           <p className="mb-6">
-            Caregiver burnout is physical, emotional, and mental exhaustion from prolonged caregiving <Citation id="1" index={1} source="Journal of the American Geriatrics Society" year="2020" tier={1} />. It's not weakness — it's a predictable result of unsustainable demands.
+            Caregiver burnout is physical, emotional, and mental exhaustion from prolonged caregiving <Citation id="1" index={1} source="Journal of the American Geriatrics Society" year="2020" tier={1} />. It's not weakness --- it's a predictable result of unsustainable demands.
           </p>
         </div>
 
@@ -338,7 +338,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
             },
             {
               title: 'Set Boundaries',
-              description: <p>'I can visit Tuesday and Thursday, not every day." Boundaries aren't cruel — they're necessary <Citation id="6" index={6} source="Family Relations" year="2021" tier={1} />.</p>,
+              description: <p>'I can visit Tuesday and Thursday, not every day." Boundaries aren't cruel --- they're necessary <Citation id="6" index={6} source="Family Relations" year="2021" tier={1} />.</p>,
             },
             {
               title: 'Address Guilt',
@@ -346,7 +346,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
             },
             {
               title: 'Maintain ONE Non-Caregiving Activity',
-              description: <p>Exercise class, book club, hobby — something just for you. Preserves identity beyond caregiver.</p>,
+              description: <p>Exercise class, book club, hobby --- something just for you. Preserves identity beyond caregiver.</p>,
             },
           ]}
         />
@@ -371,7 +371,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Caregiver burnout isn't failure — it's a sign you've been trying to do too much for too long. Your health matters. Taking care of yourself isn't selfish; it's necessary for sustainable caregiving <Citation id="8" index={8} source="Psychology and Aging" year="2021" tier={1} />.
+            Caregiver burnout isn't failure --- it's a sign you've been trying to do too much for too long. Your health matters. Taking care of yourself isn't selfish; it's necessary for sustainable caregiving <Citation id="8" index={8} source="Psychology and Aging" year="2021" tier={1} />.
           </p>
         </ArticleCallout>
       </>
@@ -403,7 +403,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your father's driving is dangerous. Your mother's finances are a mess. You need to talk about end-of-life wishes. But every time you try, they shut down or get defensive. These conversations feel impossible — but they're necessary.
+            Your father's driving is dangerous. Your mother's finances are a mess. You need to talk about end-of-life wishes. But every time you try, they shut down or get defensive. These conversations feel impossible --- but they're necessary.
           </p>
           <p className="mb-6">
             Difficult conversations with aging parents require timing, tact, and persistence <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. Here's how to approach them with respect while protecting safety and wellbeing.
@@ -479,7 +479,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
               content: (
                 <div className="space-y-2">
                   <p className="italic">"Mom, I want to make sure I can help if something happens. Can we go over where your important papers are?"</p>
-                  <p className="italic">"I'm doing my own estate planning and it made me think — do you have everything in order? Can we review it together?"</p>
+                  <p className="italic">"I'm doing my own estate planning and it made me think --- do you have everything in order? Can we review it together?"</p>
                 </div>
               ),
             },
@@ -587,10 +587,10 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your mother doesn't remember your name. Your father, once vibrant, sits staring blankly. They're still alive, but the person you knew is slowly disappearing. You're grieving — but they haven't died yet.
+            Your mother doesn't remember your name. Your father, once vibrant, sits staring blankly. They're still alive, but the person you knew is slowly disappearing. You're grieving --- but they haven't died yet.
           </p>
           <p className="mb-6">
-            Anticipatory grief is mourning that begins before death <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. Watching a parent decline through dementia, terminal illness, or frailty creates a unique form of loss — the person is here but also gone.
+            Anticipatory grief is mourning that begins before death <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. Watching a parent decline through dementia, terminal illness, or frailty creates a unique form of loss --- the person is here but also gone.
           </p>
         </div>
 
@@ -618,13 +618,13 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
           Ambiguous Loss
         </h2>
         <p className="mb-6">
-          With dementia especially, you experience "ambiguous loss" — your parent is physically present but psychologically absent <Citation id="6" index={6} source="Dementia" year="2021" tier={1} />. This creates confusing grief:
+          With dementia especially, you experience "ambiguous loss" --- your parent is physically present but psychologically absent <Citation id="6" index={6} source="Dementia" year="2021" tier={1} />. This creates confusing grief:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>They're here, so why do I feel they're gone?</li>
           <li>Should I grieve now or wait until death?</li>
           <li>Am I allowed to be this sad when they're still alive?</li>
-          <li>Others don't understand — 'at least you still have them"</li>
+          <li>Others don't understand --- 'at least you still have them"</li>
         </ul>
 
         <h2 id="common-feelings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -657,7 +657,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
             {
               id: 'relief',
               title: 'Relief',
-              content: <p>Wishing it would end, then feeling guilty for that wish. Relief doesn't mean you don't love them — it means you're exhausted.</p>,
+              content: <p>Wishing it would end, then feeling guilty for that wish. Relief doesn't mean you don't love them --- it means you're exhausted.</p>,
             },
             {
               id: 'isolation',
@@ -736,7 +736,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Watching a parent decline is one of life's hardest experiences. Your grief is real — before and after death. Be gentle with yourself. Connect with others who understand. Allow yourself to mourn while they're still here.
+            Watching a parent decline is one of life's hardest experiences. Your grief is real --- before and after death. Be gentle with yourself. Connect with others who understand. Allow yourself to mourn while they're still here.
           </p>
         </ArticleCallout>
       </>
@@ -790,7 +790,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Personality changes:</strong> Parent becomes childlike, aggressive, or unrecognizable</li>
           <li><strong>Repeated questions:</strong> Answering same question endlessly tests patience</li>
-          <li><strong>Loss of recognition:</strong> They forget who you are — deeply painful</li>
+          <li><strong>Loss of recognition:</strong> They forget who you are --- deeply painful</li>
           <li><strong>Behavioral symptoms:</strong> Aggression, wandering, sundowning, paranoia <Citation id="3" index={3} source="Aging & Mental Health" year="2020" tier={1} /></li>
           <li><strong>No improvement:</strong> Only decline ahead</li>
           <li><strong>Ambiguous loss:</strong> They're here but also gone</li>
@@ -936,7 +936,7 @@ export const eldercareCaregivingAgingParentsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Dementia caregiving tests limits you didn't know you had. Protect your mental health through respite, support, and self-compassion. You're doing something incredibly hard with love — that matters, even when they can't remember <Citation id="7" index={7} source="Clinical Gerontologist" year="2020" tier={1} />.
+            Dementia caregiving tests limits you didn't know you had. Protect your mental health through respite, support, and self-compassion. You're doing something incredibly hard with love --- that matters, even when they can't remember <Citation id="7" index={7} source="Clinical Gerontologist" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
       </>

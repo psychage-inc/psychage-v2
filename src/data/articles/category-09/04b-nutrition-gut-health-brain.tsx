@@ -109,7 +109,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Eating disorders are complex mental health conditions that profoundly affect both brain and body. While traditionally understood as primarily psychological disorders, emerging research reveals that eating disorders fundamentally disrupt the gut-brain axis—the bidirectional communication system between your digestive system and brain.
+            Eating disorders are complex mental health conditions that profoundly affect both brain and body. While traditionally understood as primarily psychological disorders, emerging research reveals that eating disorders fundamentally disrupt the gut-brain axis---the bidirectional communication system between your digestive system and brain.
           </p>
           <p className="mb-6">
             This disruption runs in both directions: eating disorder behaviors damage gut health, while gut dysfunction may contribute to the persistence of disordered eating patterns <Citation id="1" index={1} source="Psychopharmacology" year="2021" tier={1} />. Understanding these connections opens new possibilities for supporting recovery.
@@ -132,8 +132,8 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           <li><strong>Anorexia Nervosa (AN)</strong>: Restriction of food intake leading to significantly low body weight, intense fear of weight gain, and distorted body image</li>
           <li><strong>Bulimia Nervosa (BN)</strong>: Recurrent binge eating followed by compensatory behaviors like purging, fasting, or excessive exercise</li>
           <li><strong>Binge Eating Disorder (BED)</strong>: Recurrent binge eating without regular compensatory behaviors</li>
-          <li><strong>ARFID</strong>: Avoidant/Restrictive Food Intake Disorder—eating restrictions not driven by weight/shape concerns</li>
-          <li><strong>OSFED</strong>: Other Specified Feeding or Eating Disorder—clinically significant symptoms that don't meet full criteria for other disorders</li>
+          <li><strong>ARFID</strong>: Avoidant/Restrictive Food Intake Disorder---eating restrictions not driven by weight/shape concerns</li>
+          <li><strong>OSFED</strong>: Other Specified Feeding or Eating Disorder---clinically significant symptoms that don't meet full criteria for other disorders</li>
         </ul>
 
         <StatCard
@@ -240,7 +240,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           3. Inflammatory Signaling
         </h3>
         <p className="mb-6">
-          A damaged gut lining allows bacterial products into the bloodstream, triggering systemic inflammation. Brain inflammation is linked to anxiety, depression, and cognitive rigidity—all common in eating disorders.
+          A damaged gut lining allows bacterial products into the bloodstream, triggering systemic inflammation. Brain inflammation is linked to anxiety, depression, and cognitive rigidity---all common in eating disorders.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -254,7 +254,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Refeeding: Physical and Psychological Challenges
         </h2>
         <p className="mb-6">
-          When people with anorexia nervosa begin eating adequate amounts again, they often experience uncomfortable gastrointestinal symptoms—bloating, fullness, constipation, pain—that can trigger relapse <Citation id="8" index={8} source="BMJ" year="2008" tier={1} />.
+          When people with anorexia nervosa begin eating adequate amounts again, they often experience uncomfortable gastrointestinal symptoms---bloating, fullness, constipation, pain---that can trigger relapse <Citation id="8" index={8} source="BMJ" year="2008" tier={1} />.
         </p>
         <p className="mb-6">
           These symptoms result from the gut's impaired function after prolonged restriction. The digestive system needs time to "wake up" and return to normal motility, enzyme production, and microbiome diversity.
@@ -263,7 +263,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
         <ArticleCallout variant="clinical-note">
           <p className="mb-4"><strong>Refeeding Syndrome</strong></p>
           <p className="mb-4">In severe cases, rapid refeeding can trigger dangerous electrolyte and fluid shifts called refeeding syndrome. This is why medical supervision during nutritional rehabilitation is essential for anyone with severe or prolonged restriction.</p>
-          <p>Early refeeding symptoms don't mean the person is eating "too much"—they mean the gut is adapting. With gradual, supervised refeeding, these symptoms typically improve within weeks to months.</p>
+          <p>Early refeeding symptoms don't mean the person is eating "too much"---they mean the gut is adapting. With gradual, supervised refeeding, these symptoms typically improve within weeks to months.</p>
         </ArticleCallout>
 
         <h2 id="recovery-gut-healing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -358,7 +358,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           The Importance of Comprehensive Treatment
         </h2>
         <p className="mb-6">
-          Understanding the gut-brain connection in eating disorders doesn't mean these are primarily physical illnesses—they remain complex mental health conditions requiring specialized psychological treatment.
+          Understanding the gut-brain connection in eating disorders doesn't mean these are primarily physical illnesses---they remain complex mental health conditions requiring specialized psychological treatment.
         </p>
         <p className="mb-6">
           Rather, recognizing gut dysfunction as both a consequence and potential maintaining factor of eating disorders highlights the need for integrated treatment addressing mind, brain, and body together.
@@ -380,10 +380,10 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Hope and Recovery
         </h2>
         <p className="mb-6">
-          Recovery from eating disorders is possible. While the journey can be challenging—especially when navigating uncomfortable physical symptoms during refeeding—millions of people achieve full recovery and go on to live healthy, fulfilling lives.
+          Recovery from eating disorders is possible. While the journey can be challenging---especially when navigating uncomfortable physical symptoms during refeeding---millions of people achieve full recovery and go on to live healthy, fulfilling lives.
         </p>
         <p className="mb-6">
-          Understanding the gut-brain connection offers hope: as you nourish your body consistently in recovery, you're not just gaining weight or following a meal plan—you're healing your gut, rebalancing your microbiome, and restoring the signals between your digestive system and brain.
+          Understanding the gut-brain connection offers hope: as you nourish your body consistently in recovery, you're not just gaining weight or following a meal plan---you're healing your gut, rebalancing your microbiome, and restoring the signals between your digestive system and brain.
         </p>
         <p className="mb-6">
           Every meal in recovery is an act of healing, both psychological and physiological.
@@ -482,7 +482,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Can changing what you eat actually treat depression? It sounds too simple—yet a growing body of research suggests that dietary interventions can be legitimate mental health treatments, not just lifestyle recommendations.
+            Can changing what you eat actually treat depression? It sounds too simple---yet a growing body of research suggests that dietary interventions can be legitimate mental health treatments, not just lifestyle recommendations.
           </p>
           <p className="mb-6">
             Nutritional psychiatry is an emerging field examining how diet and nutrition affect mental health <Citation id="2" index={2} source="The Lancet Psychiatry" year="2015" tier={2} />. While still young, the evidence is substantial enough that major psychiatric organizations now recognize nutrition as an important component of mental health care.
@@ -493,7 +493,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           What Is Nutritional Psychiatry?
         </h2>
         <p className="mb-6">
-          Nutritional psychiatry studies the relationship between dietary patterns, specific nutrients, and mental health outcomes <Citation id="4" index={4} source="Proceedings of the Nutrition Society" year="2017" tier={1} />. It operates on the premise that food is not just fuel—it's information that affects brain structure, chemistry, and function.
+          Nutritional psychiatry studies the relationship between dietary patterns, specific nutrients, and mental health outcomes <Citation id="4" index={4} source="Proceedings of the Nutrition Society" year="2017" tier={1} />. It operates on the premise that food is not just fuel---it's information that affects brain structure, chemistry, and function.
         </p>
         <p className="mb-6">
           The field integrates knowledge from neuroscience, gastroenterology, immunology, and nutrition science to understand how what we eat influences conditions like depression, anxiety, ADHD, bipolar disorder, and schizophrenia.
@@ -501,7 +501,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4"><strong>Key Principle:</strong></p>
-          <p>Nutritional psychiatry doesn't claim that mental health conditions are "just" nutritional deficiencies, or that diet can replace medications or therapy. Instead, it recognizes nutrition as a modifiable factor that—alongside other treatments—can significantly impact mental health outcomes.</p>
+          <p>Nutritional psychiatry doesn't claim that mental health conditions are "just" nutritional deficiencies, or that diet can replace medications or therapy. Instead, it recognizes nutrition as a modifiable factor that---alongside other treatments---can significantly impact mental health outcomes.</p>
         </ArticleCallout>
 
         <h2 id="landmark-smiles-trial" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -518,7 +518,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           <li><strong>Social support (control)</strong>: Seven sessions of befriending and social support</li>
         </ul>
         <p className="mb-6">
-          Both groups continued their existing medications and therapies—this was about adding dietary intervention, not replacing standard treatment.
+          Both groups continued their existing medications and therapies---this was about adding dietary intervention, not replacing standard treatment.
         </p>
 
         <StatCard
@@ -535,7 +535,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note">
-          <p>This trial established that dietary intervention can be an evidence-based treatment for depression—not just a wellness recommendation but an actual therapeutic intervention with measurable outcomes comparable to many antidepressant medications.</p>
+          <p>This trial established that dietary intervention can be an evidence-based treatment for depression---not just a wellness recommendation but an actual therapeutic intervention with measurable outcomes comparable to many antidepressant medications.</p>
         </ArticleCallout>
 
         <h2 id="evidence-by-condition" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -621,7 +621,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
               id: 'neuroplasticity',
               title: 'Neuroplasticity Support',
               content: (
-                <p>Nutrients like omega-3 DHA, B vitamins, and antioxidants support BDNF production and neuroplasticity—the brain's ability to form new connections and adapt. Higher diet quality correlates with greater brain volume in key regions.</p>
+                <p>Nutrients like omega-3 DHA, B vitamins, and antioxidants support BDNF production and neuroplasticity---the brain's ability to form new connections and adapt. Higher diet quality correlates with greater brain volume in key regions.</p>
               ),
             },
             {
@@ -765,7 +765,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Can diet treat mental health conditions? The evidence says: sometimes, partially, and in combination with other treatments.
         </p>
         <p className="mb-6">
-          Nutritional psychiatry represents a paradigm shift—recognizing that mental health isn't solely "in your head" but is influenced by whole-body health, including what you eat. While not a panacea, diet is an evidence-based, modifiable factor that deserves serious consideration in mental health prevention and treatment.
+          Nutritional psychiatry represents a paradigm shift---recognizing that mental health isn't solely "in your head" but is influenced by whole-body health, including what you eat. While not a panacea, diet is an evidence-based, modifiable factor that deserves serious consideration in mental health prevention and treatment.
         </p>
         <p className="mb-6">
           The most responsible approach: use nutrition as one component of comprehensive mental health care, alongside therapy, social support, medication when needed, and other evidence-based interventions.
@@ -856,16 +856,16 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Understanding that nutrition affects mental health is one thing—actually changing what you eat is another. This article translates nutritional psychiatry research into practical, sustainable eating strategies you can implement today.
+            Understanding that nutrition affects mental health is one thing---actually changing what you eat is another. This article translates nutritional psychiatry research into practical, sustainable eating strategies you can implement today.
           </p>
           <p className="mb-6">
-            These recommendations are based on the eating patterns shown to support mental health in clinical trials, particularly the Mediterranean-style diet used in the SMILES trial <Citation id="1" index={1} source="BMC Medicine" year="2017" tier={1} />. No extreme restrictions, no expensive supplements—just evidence-based, realistic nutrition.
+            These recommendations are based on the eating patterns shown to support mental health in clinical trials, particularly the Mediterranean-style diet used in the SMILES trial <Citation id="1" index={1} source="BMC Medicine" year="2017" tier={1} />. No extreme restrictions, no expensive supplements---just evidence-based, realistic nutrition.
           </p>
         </div>
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4"><strong>Core Principle:</strong></p>
-          <p>Eating for mental health isn't about perfection—it's about patterns. What you eat most of the time matters more than occasional indulgences. Small, sustainable improvements add up to meaningful benefits.</p>
+          <p>Eating for mental health isn't about perfection---it's about patterns. What you eat most of the time matters more than occasional indulgences. Small, sustainable improvements add up to meaningful benefits.</p>
         </ArticleCallout>
 
         <h2 id="build-your-plate" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1002,7 +1002,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           <li><strong>Fermented foods</strong>: Yogurt, kefir, sauerkraut, kimchi (probiotics for gut health)</li>
           <li><strong>Eggs</strong>: Whole eggs (choline, protein, B vitamins)</li>
           <li><strong>Olive oil</strong>: Extra virgin (anti-inflammatory fats, polyphenols)</li>
-          <li><strong>Dark chocolate</strong>: 70%+ cacao (flavonoids, mood-boosting compounds—in moderation)</li>
+          <li><strong>Dark chocolate</strong>: 70%+ cacao (flavonoids, mood-boosting compounds---in moderation)</li>
         </ul>
 
         <h2 id="foods-to-limit" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1022,7 +1022,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4"><strong>Important: This isn't about restriction</strong></p>
-          <p className="mb-4">Rigid food rules and "good food/bad food" thinking can harm mental health, especially for people prone to disordered eating. The goal is gentle prioritization of whole foods most of the time—not perfection.</p>
+          <p className="mb-4">Rigid food rules and "good food/bad food" thinking can harm mental health, especially for people prone to disordered eating. The goal is gentle prioritization of whole foods most of the time---not perfection.</p>
           <p>An 80/20 approach (whole foods 80% of the time, flexibility 20%) is sustainable and effective.</p>
         </ArticleCallout>
 
@@ -1030,7 +1030,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Hydration: The Forgotten Mental Health Tool
         </h2>
         <p className="mb-6">
-          Even mild dehydration (1-2% body water loss) impairs mood, concentration, and energy <Citation id="6" index={6} source="Nutrients" year="2019" tier={1} />. Your brain is 73% water—adequate hydration is non-negotiable for optimal function.
+          Even mild dehydration (1-2% body water loss) impairs mood, concentration, and energy <Citation id="6" index={6} source="Nutrients" year="2019" tier={1} />. Your brain is 73% water---adequate hydration is non-negotiable for optimal function.
         </p>
         <p className="mb-6">
           <strong>Hydration strategy</strong>: Drink a glass of water upon waking, with each meal, and between meals. Aim for pale yellow urine as a hydration indicator.
@@ -1090,7 +1090,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Balancing Structure with Intuition
         </h2>
         <p className="mb-6">
-          While structure helps mental health, rigid dietary rules can create anxiety <Citation id="8" index={8} source="Eating Behaviors" year="2021" tier={1} />. The goal is "gentle nutrition"—making choices that support your body most of the time while respecting hunger, fullness, and enjoyment.
+          While structure helps mental health, rigid dietary rules can create anxiety <Citation id="8" index={8} source="Eating Behaviors" year="2021" tier={1} />. The goal is "gentle nutrition"---making choices that support your body most of the time while respecting hunger, fullness, and enjoyment.
         </p>
         <p className="mb-6">
           This means:
@@ -1125,7 +1125,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Be Patient with the Process
         </h2>
         <p className="mb-6">
-          Dietary changes affect mental health gradually—not overnight. In the SMILES trial, participants worked with dietitians for 12 weeks before seeing significant depression improvements. Your gut microbiome, inflammatory markers, and nutrient status take time to shift.
+          Dietary changes affect mental health gradually---not overnight. In the SMILES trial, participants worked with dietitians for 12 weeks before seeing significant depression improvements. Your gut microbiome, inflammatory markers, and nutrient status take time to shift.
         </p>
         <p className="mb-6">
           Give yourself at least 4-6 weeks of consistent dietary changes before evaluating whether they're helping. And remember: small, sustainable changes maintained long-term beat dramatic overhauls abandoned in weeks.
@@ -1230,7 +1230,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
             Walk into any health store and you'll find dozens of supplements claiming to boost mood, reduce anxiety, or sharpen focus. Some have solid scientific backing. Many don't. This article cuts through the hype to examine what the research actually shows.
           </p>
           <p className="mb-6">
-            We'll evaluate the most popular mental health supplements based on systematic reviews and clinical trials, not marketing claims or testimonials. The goal: help you make informed decisions about what might actually help—and what's likely a waste of money.
+            We'll evaluate the most popular mental health supplements based on systematic reviews and clinical trials, not marketing claims or testimonials. The goal: help you make informed decisions about what might actually help---and what's likely a waste of money.
           </p>
         </div>
 
@@ -1477,7 +1477,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Choosing Quality Supplements
         </h2>
         <p className="mb-6">
-          Supplements are poorly regulated—products may not contain what labels claim <Citation id="8" index={8} source="Journal of the American Medical Association" year="2019" tier={1} />. To ensure quality:
+          Supplements are poorly regulated---products may not contain what labels claim <Citation id="8" index={8} source="Journal of the American Medical Association" year="2019" tier={1} />. To ensure quality:
         </p>
 
         <ArticleCallout variant="tip">
@@ -1495,7 +1495,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Setting Realistic Expectations
         </h2>
         <p className="mb-6">
-          Even the best-supported supplements show modest effects—typically smaller than medications or therapy. They work best as:
+          Even the best-supported supplements show modest effects---typically smaller than medications or therapy. They work best as:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Adjunct treatments</strong>: Supporting standard therapies, not replacing them</li>
@@ -1526,21 +1526,21 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Most mental health supplements have weak to moderate evidence at best. The exceptions—omega-3s, vitamin D (if deficient), and B vitamins (if at-risk)—have solid backing for specific uses.
+          Most mental health supplements have weak to moderate evidence at best. The exceptions---omega-3s, vitamin D (if deficient), and B vitamins (if at-risk)---have solid backing for specific uses.
         </p>
         <p className="mb-6">
           Before spending money on supplements:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>Get tested for deficiencies (vitamin D, B12, etc.)</li>
-          <li>Optimize your diet first—food-based nutrition is more effective than supplementing a poor diet</li>
+          <li>Optimize your diet first---food-based nutrition is more effective than supplementing a poor diet</li>
           <li>Discuss with your healthcare provider to avoid interactions</li>
           <li>Choose quality products with third-party testing</li>
           <li>Give supplements 4-8 weeks to work before deciding if they help</li>
           <li>Don't neglect proven treatments (therapy, medications when needed)</li>
         </ol>
         <p className="mb-6">
-          Supplements can play a supporting role in mental health, but they're not magic pills. The strongest evidence remains for therapy, medications when needed, exercise, sleep, social connection, and overall dietary patterns—not bottles of pills.
+          Supplements can play a supporting role in mental health, but they're not magic pills. The strongest evidence remains for therapy, medications when needed, exercise, sleep, social connection, and overall dietary patterns---not bottles of pills.
         </p>
       </>
     ),
@@ -1550,7 +1550,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
     id: catId(40),
     slug: 'disordered-eating-restrictive-diets-mental-health',
     title: 'Disordered Eating, Restrictive Diets, and Mental Health Risks',
-    description: 'Understand the mental health risks of restrictive diets, orthorexia, and disordered eating patterns—and learn to distinguish healthy nutrition from harmful restriction.',
+    description: 'Understand the mental health risks of restrictive diets, orthorexia, and disordered eating patterns---and learn to distinguish healthy nutrition from harmful restriction.',
     image: "/images/articles/cat09/cover-040.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 7,
@@ -1631,7 +1631,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
             There's a fine line between healthy nutrition and unhealthy obsession. While eating well supports mental health, rigid dietary rules, elimination of entire food groups, and constant food anxiety can create or worsen mental health problems.
           </p>
           <p className="mb-6">
-            This article explores the mental health risks of restrictive diets and disordered eating patterns—helping you recognize when "healthy eating" crosses into harmful territory.
+            This article explores the mental health risks of restrictive diets and disordered eating patterns---helping you recognize when "healthy eating" crosses into harmful territory.
           </p>
         </div>
 
@@ -1659,7 +1659,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           The Mental Health Cost of Restrictive Diets
         </h2>
         <p className="mb-6">
-          Research consistently shows that restrictive dieting—especially chronic, rigid dieting—harms mental health <Citation id="4" index={4} source="Current Opinion in Psychology" year="2019" tier={1} />:
+          Research consistently shows that restrictive dieting---especially chronic, rigid dieting---harms mental health <Citation id="4" index={4} source="Current Opinion in Psychology" year="2019" tier={1} />:
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1678,7 +1678,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           The Restrict-Binge Cycle
         </h3>
         <p className="mb-6">
-          Restrictive dieting often backfires, triggering binge eating—not due to lack of willpower, but as a biological and psychological response to deprivation <Citation id="2" index={2} source="International Journal of Eating Disorders" year="2018" tier={1} />.
+          Restrictive dieting often backfires, triggering binge eating---not due to lack of willpower, but as a biological and psychological response to deprivation <Citation id="2" index={2} source="International Journal of Eating Disorders" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           The cycle works like this: Restriction → Intense cravings and hunger → "Breaking" diet rules → Feeling guilty and ashamed → More restriction to "make up for it" → Repeat.
@@ -1697,7 +1697,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Orthorexia: When "Healthy Eating" Becomes Unhealthy
         </h2>
         <p className="mb-6">
-          Orthorexia nervosa—though not yet an official diagnosis—describes an obsession with eating "pure,", "clean," or "healthy" foods <Citation id="1" index={1} source="Eating and Weight Disorders" year="2019" tier={1} />.
+          Orthorexia nervosa---though not yet an official diagnosis---describes an obsession with eating "pure,", "clean," or "healthy" foods <Citation id="1" index={1} source="Eating and Weight Disorders" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Unlike anorexia (focused on quantity and weight), orthorexia focuses on food quality and purity. But the consequences are similar: anxiety, social isolation, nutritional deficiencies, and diminished quality of life <Citation id="8" index={8} source="Nutrients" year="2020" tier={1} />.
@@ -1721,13 +1721,13 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Diet Culture and Social Media
         </h2>
         <p className="mb-6">
-          Diet culture—the system of beliefs that worships thinness, equates weight with health and moral virtue, and promotes weight loss above wellbeing—creates fertile ground for disordered eating <Citation id="6" index={6} source="Journal of Nutrition Education and Behavior" year="2021" tier={1} />.
+          Diet culture---the system of beliefs that worships thinness, equates weight with health and moral virtue, and promotes weight loss above wellbeing---creates fertile ground for disordered eating <Citation id="6" index={6} source="Journal of Nutrition Education and Behavior" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Social media amplifies these messages. Platforms like Instagram and TikTok expose users to constant images of "perfect" bodies, restrictive meal plans disguised as "wellness," and before-after weight loss transformations <Citation id="5" index={5} source="European Eating Disorders Review" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          For vulnerable individuals—particularly adolescents and young adults—this exposure significantly increases eating disorder risk.
+          For vulnerable individuals---particularly adolescents and young adults---this exposure significantly increases eating disorder risk.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1744,7 +1744,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           <li>"Biohacking" → Obsessive control over intake</li>
         </ul>
         <p className="mb-6">
-          Not everyone who tries these approaches develops disordered eating—but for vulnerable individuals, wellness language provides socially acceptable cover for eating disorder behaviors.
+          Not everyone who tries these approaches develops disordered eating---but for vulnerable individuals, wellness language provides socially acceptable cover for eating disorder behaviors.
         </p>
 
         <h2 id="who-is-at-risk" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1806,7 +1806,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           Moving Toward Balance: Intuitive Eating
         </h2>
         <p className="mb-6">
-          Intuitive eating—an evidence-based approach that emphasizes internal cues over external rules—shows promising benefits for both physical and mental health <Citation id="3" index={3} source="Appetite" year="2020" tier={1} />.
+          Intuitive eating---an evidence-based approach that emphasizes internal cues over external rules---shows promising benefits for both physical and mental health <Citation id="3" index={3} source="Appetite" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           The principles:
@@ -1841,7 +1841,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           <li>Avoid expanding restrictions beyond medical necessity</li>
           <li>Maintain flexibility within your required restrictions</li>
           <li>Monitor for anxiety, obsession, or social isolation related to restrictions</li>
-          <li>Seek mental health support if needed—many therapists specialize in chronic illness and eating concerns</li>
+          <li>Seek mental health support if needed---many therapists specialize in chronic illness and eating concerns</li>
         </ul>
 
         <h2 id="recovery-and-healing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1881,7 +1881,7 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
             {
               title: 'Address Underlying Issues',
               description: (
-                <p>Disordered eating often serves a function—coping with anxiety, seeking control, managing perfectionism. Therapy helps address root causes.</p>
+                <p>Disordered eating often serves a function---coping with anxiety, seeking control, managing perfectionism. Therapy helps address root causes.</p>
               ),
             },
             {
@@ -1913,13 +1913,13 @@ export const nutritionGutHealthBrainArticlesB: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Nutrition can support mental health—but only when approached flexibly, compassionately, and without rigidity. The moment food becomes a source of anxiety, obsession, or social isolation, it's no longer serving your wellbeing.
+          Nutrition can support mental health---but only when approached flexibly, compassionately, and without rigidity. The moment food becomes a source of anxiety, obsession, or social isolation, it's no longer serving your wellbeing.
         </p>
         <p className="mb-6">
-          If this article resonated with you, please know: you're not alone, your struggles are valid, and recovery is possible. Healing your relationship with food is as important as any nutritional intervention—perhaps more so.
+          If this article resonated with you, please know: you're not alone, your struggles are valid, and recovery is possible. Healing your relationship with food is as important as any nutritional intervention---perhaps more so.
         </p>
         <p className="mb-6">
-          True health includes mental, emotional, and social wellbeing—not just what's on your plate.
+          True health includes mental, emotional, and social wellbeing---not just what's on your plate.
         </p>
       </>
     ),

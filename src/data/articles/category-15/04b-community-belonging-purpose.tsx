@@ -22,7 +22,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
     id: catId(36),
     slug: 'third-place-spaces-not-home-work',
     title: "The Third Place: Why We Need Spaces That Aren\'t Home or Work",
-    description: 'Third places — coffee shops, libraries, parks — are disappearing. Learn why these informal gathering spaces are essential for mental health and community.',
+    description: 'Third places --- coffee shops, libraries, parks --- are disappearing. Learn why these informal gathering spaces are essential for mental health and community.',
     image: "/images/articles/cat15/cover-036.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
     readTime: 6,
@@ -103,7 +103,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             Home. Work. And... where? Where do you go when you are not at home and not at work? For many people, the answer is: nowhere. And that is a problem.
           </p>
           <p className="mb-6">
-            Sociologist Ray Oldenburg coined the term "third place" in 1989 to describe the informal public spaces where people gather outside of home (first place) and work (second place) <Citation id="1" index={1} source="Marlowe & Company" year="1989" tier={5} />. Coffee shops, parks, libraries, bookstores, bars, barbershops — places where you can just be, without a formal agenda.
+            Sociologist Ray Oldenburg coined the term "third place" in 1989 to describe the informal public spaces where people gather outside of home (first place) and work (second place) <Citation id="1" index={1} source="Marlowe & Company" year="1989" tier={5} />. Coffee shops, parks, libraries, bookstores, bars, barbershops --- places where you can just be, without a formal agenda.
           </p>
           <p className="mb-6">
             These spaces are disappearing. And as they vanish, so does community. This article explores why third places matter for mental health, what happens when they are lost, and how to rebuild them.
@@ -212,7 +212,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               title: 'Time Poverty',
               content: (
                 <p>
-                  Longer work hours, longer commutes, and busier schedules left no time for casual socializing. Third places require time to linger — something many people no longer have.
+                  Longer work hours, longer commutes, and busier schedules left no time for casual socializing. Third places require time to linger --- something many people no longer have.
                 </p>
               ),
             },
@@ -236,7 +236,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Without third places, people lose "weak ties" — the acquaintances, familiar faces, and casual connections that provide a sense of belonging without the intensity of close friendship <Citation id="4" index={4} source="Journal of Community Psychology" year="2021" tier={1} />.
+          Without third places, people lose "weak ties" --- the acquaintances, familiar faces, and casual connections that provide a sense of belonging without the intensity of close friendship <Citation id="4" index={4} source="Journal of Community Psychology" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Weak ties buffer against loneliness. They make you feel part of a community. They provide informal support, information, and social safety nets. When third places disappear, these ties dissolve.
@@ -265,7 +265,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
           Research on urban parks shows they function as critical third places, providing accessible, neutral ground for social interaction <Citation id="3" index={3} source="Cities" year="2019" tier={1} />. Time in green spaces is also linked to lower depression and anxiety <Citation id="6" index={6} source="Environmental Research" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          Public libraries are among the last truly free, accessible third places in many communities <Citation id="7" index={7} source="American Library Association" year="2022" tier={3} />. They require nothing of you — no purchase, no performance, just presence.
+          Public libraries are among the last truly free, accessible third places in many communities <Citation id="7" index={7} source="American Library Association" year="2022" tier={3} />. They require nothing of you --- no purchase, no performance, just presence.
         </p>
 
         <h2 id="how-to-find-third-places" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -290,7 +290,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               title: 'Go at the same time regularly',
               description: (
                 <p>
-                  Familiarity builds community. If you show up at the same cafe every Saturday morning, you will start to recognize faces — and they will recognize you.
+                  Familiarity builds community. If you show up at the same cafe every Saturday morning, you will start to recognize faces --- and they will recognize you.
                 </p>
               ),
             },
@@ -314,7 +314,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="tip" title="Create Your Own Third Place">
-          <p>If your community lacks good third places, create one. Host a regular park meetup. Start a front-porch coffee hour. Organize a neighborhood walking group. Third places do not have to be commercial — they just have to be consistent and welcoming.</p>
+          <p>If your community lacks good third places, create one. Host a regular park meetup. Start a front-porch coffee hour. Organize a neighborhood walking group. Third places do not have to be commercial --- they just have to be consistent and welcoming.</p>
         </ArticleCallout>
 
         <h2 id="conclusion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -424,7 +424,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               Viktor Frankl, a psychiatrist who survived the Holocaust, wrote that "those who have a "why" to live can bear with almost any 'how' <Citation id="3" index={3} source="Beacon Press" year="2006" tier={5} />. Purpose does not eliminate the need for connection, but it changes how we experience being alone.
             </p>
             <p className="mb-6">
-              This article explores the relationship between purpose, meaning, and loneliness — and how cultivating a sense of purpose can buffer against social isolation.
+              This article explores the relationship between purpose, meaning, and loneliness --- and how cultivating a sense of purpose can buffer against social isolation.
             </p>
           </div>
 
@@ -466,7 +466,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                 title: 'Reframes Alone Time as Productive, Not Isolating',
                 content: (
                   <p>
-                    When you have a meaningful project, alone time becomes an opportunity to make progress. You are not isolated — you are focused. This shifts the emotional quality of being alone <Citation id="8" index={8} source="Journal of Personality" year="2021" tier={1} />.
+                    When you have a meaningful project, alone time becomes an opportunity to make progress. You are not isolated --- you are focused. This shifts the emotional quality of being alone <Citation id="8" index={8} source="Journal of Personality" year="2021" tier={1} />.
                   </p>
                 ),
               },
@@ -554,7 +554,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             <li>What you can be rewarded for</li>
           </ul>
           <p className="mb-6">
-            When all four align, you have found your ikigai. But even partial alignment — finding something you love that helps others — can provide a sense of purpose.
+            When all four align, you have found your ikigai. But even partial alignment --- finding something you love that helps others --- can provide a sense of purpose.
           </p>
 
           <h2 id="finding-purpose" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -587,7 +587,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                 title: 'Contribute to others',
                 description: (
                   <p>
-                    Purpose is often found in service. Volunteering, mentoring, creating, teaching — when your actions help others, they feel meaningful.
+                    Purpose is often found in service. Volunteering, mentoring, creating, teaching --- when your actions help others, they feel meaningful.
                   </p>
                 ),
               },
@@ -621,7 +621,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             The relationship between loneliness and purpose is bidirectional. Just as purpose protects against loneliness, chronic loneliness can erode your sense of purpose <Citation id="1" index={1} source="Psychology and Aging" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            When you feel isolated, it is harder to see the point of your efforts. "Why does any of this matter if no one cares?" This is why severe loneliness often leads to depression — it strips life of meaning.
+            When you feel isolated, it is harder to see the point of your efforts. "Why does any of this matter if no one cares?" This is why severe loneliness often leads to depression --- it strips life of meaning.
           </p>
           <p className="mb-6">
             If you are in this place, reconnecting with purpose might require reconnecting with people first. Reach out. Join a group. Volunteer. Sometimes purpose is rebuilt through connection.
@@ -725,10 +725,10 @@ export const communityBelongingPurposeArticlesB: Article[] = [
         <>
           <div id="introduction" className="scroll-mt-32">
             <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              "Just go to a social event and meet people" is terrible advice for someone who finds socializing exhausting. What if there was a different way — activities where connection happens naturally, without the pressure of performance?
+              "Just go to a social event and meet people" is terrible advice for someone who finds socializing exhausting. What if there was a different way --- activities where connection happens naturally, without the pressure of performance?
             </p>
             <p className="mb-6">
-              Community gardens. Book clubs. Running groups. These are low-barrier entry points into social connection. You show up, you do the thing, and connection happens as a byproduct — not as the main event <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2018" tier={1} />.
+              Community gardens. Book clubs. Running groups. These are low-barrier entry points into social connection. You show up, you do the thing, and connection happens as a byproduct --- not as the main event <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2018" tier={1} />.
             </p>
             <p className="mb-6">
               This article explores why activity-based groups are easier for many people, which types of groups work best, and how to find one that fits you.
@@ -739,10 +739,10 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             Why Activity-Based Connection Works
           </h2>
           <p className="mb-6">
-              Traditional socializing — parties, networking events, "getting coffee" with someone you barely know — requires performing. You have to think of things to say, maintain eye contact, manage awkward silences.
+              Traditional socializing --- parties, networking events, "getting coffee" with someone you barely know --- requires performing. You have to think of things to say, maintain eye contact, manage awkward silences.
             </p>
             <p className="mb-6">
-              Activity-based groups remove this pressure. You are there to garden, or read, or run. Conversation is secondary. This parallel structure — doing something side-by-side rather than face-to-face — makes connection feel easier <Citation id="8" index={8} source="Personality and Social Psychology Bulletin" year="2017" tier={1} />.
+              Activity-based groups remove this pressure. You are there to garden, or read, or run. Conversation is secondary. This parallel structure --- doing something side-by-side rather than face-to-face --- makes connection feel easier <Citation id="8" index={8} source="Personality and Social Psychology Bulletin" year="2017" tier={1} />.
             </p>
 
             <ArticleCallout variant="key-takeaway" title="Parallel Play for Adults">
@@ -815,7 +815,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                         <strong>Best for:</strong> People who want to feel useful, connect through action rather than words, or build relationships grounded in shared values.
                       </p>
                       <p>
-                        <strong>Example success story:</strong> Community gardens not only grow vegetables — they grow social capital. Participants report higher trust, more neighborhood friendships, and reduced loneliness <Citation id="5" index={5} source="Journal of Community Psychology" year="2020" tier={1} />.
+                        <strong>Example success story:</strong> Community gardens not only grow vegetables --- they grow social capital. Participants report higher trust, more neighborhood friendships, and reduced loneliness <Citation id="5" index={5} source="Journal of Community Psychology" year="2020" tier={1} />.
                       </p>
                     </div>
                   ),
@@ -950,7 +950,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                     <li>No one else knew anyone once either</li>
                     <li>Beginner groups expect beginners</li>
                     <li>Everyone is focused on themselves, not you</li>
-                    <li>The activity fills silence — no small talk required</li>
+                    <li>The activity fills silence --- no small talk required</li>
                     <li>Fitting in takes time; expect awkwardness at first</li>
                   </ul>
                 ),
@@ -961,7 +961,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               Connection Without Performance
             </h2>
             <p className="mb-6">
-              If traditional socializing feels exhausting, you do not have to force it. There are other paths to connection — paths that feel less like performance and more like just showing up to do something you enjoy.
+              If traditional socializing feels exhausting, you do not have to force it. There are other paths to connection --- paths that feel less like performance and more like just showing up to do something you enjoy.
             </p>
             <p className="mb-6">
               Community gardens. Book clubs. Running groups. These are not consolation prizes for people who "can't socialize normally." They are valid, powerful ways to build belonging.
@@ -1104,7 +1104,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                   content: (
                     <div>
                       <p className="mb-4">
-                        For LGBTQ+ youth in conservative areas, for people leaving high-control religions, for victims of domestic violence planning to leave — online communities can be lifesaving safe spaces <Citation id="5" index={5} source="Journal of Adolescent Health" year="2020" tier={1} />.
+                        For LGBTQ+ youth in conservative areas, for people leaving high-control religions, for victims of domestic violence planning to leave --- online communities can be lifesaving safe spaces <Citation id="5" index={5} source="Journal of Adolescent Health" year="2020" tier={1} />.
                       </p>
                       <p><strong>Examples:</strong> LGBTQ+ Discord servers, ex-religion subreddits, domestic violence survivor forums.</p>
                     </div>
@@ -1116,7 +1116,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                   content: (
                     <div>
                       <p className="mb-4">
-                        People with chronic illness, disabilities, caregiving responsibilities, or geographic isolation may not be able to access in-person communities. Online connection is not a substitute — it is access <Citation id="8" index={8} source="New Media & Society" year="2020" tier={1} />.
+                        People with chronic illness, disabilities, caregiving responsibilities, or geographic isolation may not be able to access in-person communities. Online connection is not a substitute --- it is access <Citation id="8" index={8} source="New Media & Society" year="2020" tier={1} />.
                       </p>
                       <p><strong>Examples:</strong> Chronic pain support groups, caregiver forums, rural LGBTQ+ networks.</p>
                     </div>
@@ -1141,7 +1141,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               What the Research Shows
             </h2>
             <p className="mb-6">
-              A systematic review of online communities and mental health found that participation reduces loneliness, increases social support, and improves coping — particularly for people with limited offline options <Citation id="1" index={1} source="Cyberpsychology, Behavior, and Social Networking" year="2020" tier={1} />.
+              A systematic review of online communities and mental health found that participation reduces loneliness, increases social support, and improves coping --- particularly for people with limited offline options <Citation id="1" index={1} source="Cyberpsychology, Behavior, and Social Networking" year="2020" tier={1} />.
             </p>
 
             <StatCard
@@ -1154,7 +1154,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             />
 
             <p className="mb-6">
-              A content analysis of Reddit mental health communities found that users provide peer support, share coping strategies, validate experiences, and offer hope — often in ways that feel more authentic than formal therapy <Citation id="2" index={2} source="Journal of Medical Internet Research" year="2021" tier={1} />.
+              A content analysis of Reddit mental health communities found that users provide peer support, share coping strategies, validate experiences, and offer hope --- often in ways that feel more authentic than formal therapy <Citation id="2" index={2} source="Journal of Medical Internet Research" year="2021" tier={1} />.
             </p>
 
             <h2 id="what-makes-them-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1192,7 +1192,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                 <li>Conspiracy communities that isolate members from reality</li>
               </ul>
               <p className="mt-4">
-                If a community glorifies harm, demonizes recovery, or demands isolation from outsiders, it is not a support group — it is a trap <Citation id="7" index={7} source="Computers in Human Behavior" year="2021" tier={1} />.
+                If a community glorifies harm, demonizes recovery, or demands isolation from outsiders, it is not a support group --- it is a trap <Citation id="7" index={7} source="Computers in Human Behavior" year="2021" tier={1} />.
               </p>
             </ArticleCallout>
 
@@ -1200,7 +1200,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               Parasocial Relationships: One-Way Connection
             </h2>
             <p className="mb-6">
-              Some people feel deeply connected to content creators — YouTubers, streamers, podcasters — even though the relationship is one-way. These are called <strong>parasocial relationships</strong>.
+              Some people feel deeply connected to content creators --- YouTubers, streamers, podcasters --- even though the relationship is one-way. These are called <strong>parasocial relationships</strong>.
             </p>
             <p className="mb-6">
               Research shows parasocial relationships can reduce loneliness and provide comfort, but they cannot fully replace reciprocal friendships <Citation id="6" index={6} source="Psychology of Popular Media" year="2021" tier={1} />. They work best as supplements, not substitutes.
@@ -1266,7 +1266,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
                   title: 'Choose communities with healthy norms',
                   description: (
                     <p>
-                      Look for active moderation, clear rules, and cultures that encourage growth — not just venting.
+                      Look for active moderation, clear rules, and cultures that encourage growth --- not just venting.
                     </p>
                   ),
                 },
@@ -1328,7 +1328,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
         id: catId(40),
         slug: 'social-prescribing-connection-instead-medication',
         title: 'Social Prescribing: How Doctors Are Prescribing Connection Instead of Medication',
-        description: 'Social prescribing — referring patients to community activities instead of pills — is transforming healthcare. Learn how connection is being treated as medicine.',
+        description: 'Social prescribing --- referring patients to community activities instead of pills --- is transforming healthcare. Learn how connection is being treated as medicine.',
         image: "/images/articles/cat15/cover-040.svg",
         category: CATEGORY_LONELINESS_CONNECTION,
         readTime: 8,
@@ -1422,7 +1422,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
           <>
             <div id="introduction" className="scroll-mt-32">
               <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                Imagine going to your doctor for depression and leaving with a prescription — not for medication, but for a weekly cooking class, a walking group, or a community garden.
+                Imagine going to your doctor for depression and leaving with a prescription --- not for medication, but for a weekly cooking class, a walking group, or a community garden.
               </p>
               <p className="mb-6">
                 This is social prescribing: a healthcare approach that recognizes that loneliness, isolation, and lack of purpose often require social solutions, not pharmaceutical ones <Citation id="1" index={1} source="British Journal of General Practice" year="2020" tier={1} />.
@@ -1456,7 +1456,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             </p>
 
             <ArticleCallout variant="key-takeaway" title="The Core Principle">
-              <p>Social prescribing treats the social determinants of health. It recognizes that many health problems are rooted in loneliness, lack of purpose, poverty, and social disconnection — problems that pills cannot fix.</p>
+              <p>Social prescribing treats the social determinants of health. It recognizes that many health problems are rooted in loneliness, lack of purpose, poverty, and social disconnection --- problems that pills cannot fix.</p>
             </ArticleCallout>
 
             <h2 id="how-it-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1497,7 +1497,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
             />
 
             <ArticleCallout variant="tip" title="Link Workers Are Key">
-              <p>Link workers are not therapists or social workers. They are community connectors — people who know the local landscape and can match patients to resources. Their role is critical to making social prescribing work <Citation id="4" index={4} source="Health & Social Care in the Community" year="2020" tier={1} />.</p>
+              <p>Link workers are not therapists or social workers. They are community connectors --- people who know the local landscape and can match patients to resources. Their role is critical to making social prescribing work <Citation id="4" index={4} source="Health & Social Care in the Community" year="2020" tier={1} />.</p>
             </ArticleCallout>
 
             <h2 id="research-findings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1653,7 +1653,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
               Connection as Medicine
             </h2>
             <p className="mb-6">
-              The loneliness epidemic cannot be solved with pills. It requires structural change — communities designed for connection, healthcare systems that address social needs, and recognition that human beings need more than functional bodies to thrive.
+              The loneliness epidemic cannot be solved with pills. It requires structural change --- communities designed for connection, healthcare systems that address social needs, and recognition that human beings need more than functional bodies to thrive.
             </p>
             <p className="mb-6">
               Social prescribing is not a panacea. But it is a step toward treating the whole person, not just the symptoms. It is healthcare that acknowledges a fundamental truth: we are social creatures, and our health depends on connection <Citation id="6" index={6} source="American Journal of Public Health" year="2020" tier={1} />.

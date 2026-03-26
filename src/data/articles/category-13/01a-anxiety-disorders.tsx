@@ -18,7 +18,7 @@ export const anxietyDisordersArticlesA: Article[] = [
     id: catId(1),
     slug: 'generalized-anxiety-disorder-living-with-chronic-worry',
     title: 'Generalized Anxiety Disorder: Living with Chronic Worry',
-    description: 'Understanding GAD — the persistent, excessive worry that affects millions. Learn about symptoms, causes, diagnosis, and evidence-based treatments for this common anxiety disorder.',
+    description: 'Understanding GAD --- the persistent, excessive worry that affects millions. Learn about symptoms, causes, diagnosis, and evidence-based treatments for this common anxiety disorder.',
     image: "/images/articles/cat13/cover-001.svg",
     category: CATEGORY_MENTAL_HEALTH_CONDITIONS,
     readTime: 13,
@@ -155,7 +155,7 @@ export const anxietyDisordersArticlesA: Article[] = [
                   <ul className="list-disc pl-6 mb-6 space-y-2">
                     <li>Persistent worry about everyday situations</li>
                     <li>Difficulty concentrating or mind going blank</li>
-                    <li>Catastrophizing — always expecting the worst outcome</li>
+                    <li>Catastrophizing --- always expecting the worst outcome</li>
                     <li>Overthinking plans and solutions to worst-case scenarios</li>
                     <li>Trouble making decisions due to fear of making the wrong choice</li>
                     <li>Difficulty tolerating uncertainty</li>
@@ -198,7 +198,7 @@ export const anxietyDisordersArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note" title="Intolerance of Uncertainty">
-          <p>Research shows that a core feature of GAD is intolerance of uncertainty — the tendency to find uncertain situations stressful and upsetting <Citation id="4" index={4} source="Cognitive Behaviour Therapy" year="2019" tier={1} />. People with GAD often say they would rather know something bad is going to happen than not know what will happen at all.</p>
+          <p>Research shows that a core feature of GAD is intolerance of uncertainty --- the tendency to find uncertain situations stressful and upsetting <Citation id="4" index={4} source="Cognitive Behaviour Therapy" year="2019" tier={1} />. People with GAD often say they would rather know something bad is going to happen than not know what will happen at all.</p>
         </ArticleCallout>
 
         <h2 id="causes-risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -231,7 +231,7 @@ export const anxietyDisordersArticlesA: Article[] = [
                   <p className="mb-4">
                     GAD tends to run in families. If you have a first-degree relative with GAD, you are more likely to develop the condition yourself <Citation id="3" index={6} source="Archives of General Psychiatry" year="2005" tier={1} />.
                   </p>
-                  <p>However, genetics are not destiny — environmental factors also play a critical role.</p>
+                  <p>However, genetics are not destiny --- environmental factors also play a critical role.</p>
                 </div>
               ),
             },
@@ -299,7 +299,7 @@ export const anxietyDisordersArticlesA: Article[] = [
               feature: 'Cognitive Behavioral Therapy (CBT)',
               values: [
                 'Identifies and changes anxious thought patterns and behaviors',
-                'Highly effective — gold standard treatment',
+                'Highly effective --- gold standard treatment',
               ],
             },
             {
@@ -390,7 +390,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If worry is interfering with your daily life — affecting your work, relationships, or physical health — it is time to seek help. You do not need to wait until anxiety becomes unbearable.
+          If worry is interfering with your daily life --- affecting your work, relationships, or physical health --- it is time to seek help. You do not need to wait until anxiety becomes unbearable.
         </p>
         <p className="mb-6">
           Reach out to a mental health professional if you experience:
@@ -577,7 +577,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           Neurobiological research shows that the amygdala, the brain region responsible for processing fear, is hyperactive in people with social anxiety disorder <Citation id="4" index={5} source="Journal of Clinical Psychiatry" year="2019" tier={1} />. This heightened activity leads to an exaggerated fear response in social situations.
         </p>
         <p className="mb-6">
-          Temperament also plays a role. Children who are behaviorally inhibited — meaning they are shy, fearful, and withdrawn around new people or situations — are at higher risk of developing social anxiety disorder later in life <Citation id="5" index={6} source="Clinical Psychology Review" year="2018" tier={1} />.
+          Temperament also plays a role. Children who are behaviorally inhibited --- meaning they are shy, fearful, and withdrawn around new people or situations --- are at higher risk of developing social anxiety disorder later in life <Citation id="5" index={6} source="Clinical Psychology Review" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           Environmental factors include:
@@ -669,11 +669,11 @@ export const anxietyDisordersArticlesA: Article[] = [
           However, with treatment and practice, people can learn to manage their anxiety and re-engage with social life. Here are some strategies that help:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Start small with exposure — practice in low-stakes situations before tackling bigger challenges</li>
-          <li>Focus on others, not yourself — shift attention outward to reduce self-consciousness</li>
-          <li>Challenge cognitive distortions — ask yourself if your fears are based on facts or assumptions</li>
-          <li>Practice self-compassion — treat yourself with the same kindness you would offer a friend</li>
-          <li>Build a support network — connect with others who understand what you are going through</li>
+          <li>Start small with exposure --- practice in low-stakes situations before tackling bigger challenges</li>
+          <li>Focus on others, not yourself --- shift attention outward to reduce self-consciousness</li>
+          <li>Challenge cognitive distortions --- ask yourself if your fears are based on facts or assumptions</li>
+          <li>Practice self-compassion --- treat yourself with the same kindness you would offer a friend</li>
+          <li>Build a support network --- connect with others who understand what you are going through</li>
         </ul>
 
         <QuoteBlock
@@ -688,7 +688,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If social anxiety is limiting your life — preventing you from attending school, advancing your career, forming relationships, or enjoying activities you once loved — it is time to seek help.
+          If social anxiety is limiting your life --- preventing you from attending school, advancing your career, forming relationships, or enjoying activities you once loved --- it is time to seek help.
         </p>
         <p className="mb-6">
           Reach out to a mental health professional if you:
@@ -819,7 +819,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           Panic disorder is characterized by recurrent, unexpected panic attacks followed by at least one month of worry about having another attack or significant changes in behavior to avoid attacks <Citation id="6" index={2} source="DSM-5-TR" year="2022" tier={4} />.
         </p>
         <p className="mb-6">
-          The key feature is that panic attacks in panic disorder are <strong>unexpected</strong> — they occur "out of the blue" without an obvious trigger. This unpredictability creates a cycle of fear and avoidance that can be debilitating.
+          The key feature is that panic attacks in panic disorder are <strong>unexpected</strong> --- they occur "out of the blue" without an obvious trigger. This unpredictability creates a cycle of fear and avoidance that can be debilitating.
         </p>
 
         <StatCard
@@ -889,7 +889,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           Panic disorder arises from a combination of genetic, neurobiological, and psychological factors.
         </p>
         <p className="mb-6">
-          Research shows that the fear network in the brain — including the amygdala, hippocampus, and prefrontal cortex — functions differently in people with panic disorder <Citation id="3" index={5} source="Journal of Affective Disorders" year="2021" tier={1} />. This heightened sensitivity makes the brain more likely to interpret bodily sensations as dangerous.
+          Research shows that the fear network in the brain --- including the amygdala, hippocampus, and prefrontal cortex --- functions differently in people with panic disorder <Citation id="3" index={5} source="Journal of Affective Disorders" year="2021" tier={1} />. This heightened sensitivity makes the brain more likely to interpret bodily sensations as dangerous.
         </p>
         <p className="mb-6">
           A core psychological mechanism is <strong>catastrophic misinterpretation</strong> of bodily sensations <Citation id="8" index={6} source="Behaviour Research and Therapy" year="2019" tier={1} />. For example, someone feels their heart racing (perhaps from caffeine or exercise) and interprets it as a sign of an impending heart attack. This interpretation triggers the panic response.
@@ -959,7 +959,7 @@ export const anxietyDisordersArticlesA: Article[] = [
               feature: 'Cognitive Behavioral Therapy (CBT)',
               values: [
                 'Challenges catastrophic thoughts and includes exposure to feared sensations',
-                'Gold standard — 60-80% improvement rate',
+                'Gold standard --- 60-80% improvement rate',
               ],
             },
             {
@@ -988,7 +988,7 @@ export const anxietyDisordersArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          A particularly powerful component of CBT for panic disorder is <strong>interoceptive exposure</strong> — exercises that deliberately induce physical sensations similar to panic (e.g., spinning to induce dizziness, breathing through a straw to induce shortness of breath) <Citation id="4" index={10} source="Clinical Psychology Review" year="2019" tier={1} />. This helps you learn that these sensations are not dangerous.
+          A particularly powerful component of CBT for panic disorder is <strong>interoceptive exposure</strong> --- exercises that deliberately induce physical sensations similar to panic (e.g., spinning to induce dizziness, breathing through a straw to induce shortness of breath) <Citation id="4" index={10} source="Clinical Psychology Review" year="2019" tier={1} />. This helps you learn that these sensations are not dangerous.
         </p>
         <p className="mb-6">
           Medication can be helpful, especially when panic attacks are frequent or severe. SSRIs are the first-line pharmacological treatment <Citation id="5" index={11} source="Cochrane Reviews" year="2020" tier={1} />. Benzodiazepines provide rapid relief but are generally recommended only for short-term use due to dependence risks.
@@ -998,7 +998,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           Living with Panic Disorder
         </h2>
         <p className="mb-6">
-          Panic disorder can significantly impact quality of life, leading to missed work, social isolation, and avoidance of places or activities <Citation id="9" index={12} source="Journal of Psychiatric Research" year="2020" tier={1} />. Many people develop agoraphobia — fear of places or situations where escape might be difficult if a panic attack occurs.
+          Panic disorder can significantly impact quality of life, leading to missed work, social isolation, and avoidance of places or activities <Citation id="9" index={12} source="Journal of Psychiatric Research" year="2020" tier={1} />. Many people develop agoraphobia --- fear of places or situations where escape might be difficult if a panic attack occurs.
         </p>
         <p className="mb-6">
           However, with treatment, most people can manage their symptoms and return to full functioning. Here are strategies that help:
@@ -1205,7 +1205,7 @@ export const anxietyDisordersArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Blood-Injection-Injury Phobia Is Different">
           <p>
-            Most phobias cause an increase in heart rate and blood pressure. Blood-injection-injury phobia is unique — it often causes a drop in blood pressure and fainting (vasovagal syncope) <Citation id="7" index={3} source="Journal of Behavior Therapy" year="2020" tier={1} />. Treatment for this type of phobia includes applied tension techniques to prevent fainting.
+            Most phobias cause an increase in heart rate and blood pressure. Blood-injection-injury phobia is unique --- it often causes a drop in blood pressure and fainting (vasovagal syncope) <Citation id="7" index={3} source="Journal of Behavior Therapy" year="2020" tier={1} />. Treatment for this type of phobia includes applied tension techniques to prevent fainting.
           </p>
         </ArticleCallout>
 
@@ -1234,7 +1234,7 @@ export const anxietyDisordersArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Humans may be biologically prepared to fear certain objects that posed survival threats to our ancestors — snakes, spiders, heights, and predators <Citation id="5" index={4} source="Evolutionary Psychology" year="2019" tier={1} />.
+                    Humans may be biologically prepared to fear certain objects that posed survival threats to our ancestors --- snakes, spiders, heights, and predators <Citation id="5" index={4} source="Evolutionary Psychology" year="2019" tier={1} />.
                   </p>
                   <p>This explains why phobias of these stimuli are more common than phobias of modern dangers like cars or electrical outlets.</p>
                 </div>
@@ -1583,7 +1583,7 @@ export const anxietyDisordersArticlesA: Article[] = [
           Causes and Risk Factors
         </h2>
         <p className="mb-6">
-          Agoraphobia typically develops as a complication of panic disorder, though it can occur independently. The key psychological mechanism is <strong>fear of fear</strong> — you become afraid of the physical sensations of anxiety themselves <Citation id="5" index={6} source="Clinical Psychology Review" year="2021" tier={1} />.
+          Agoraphobia typically develops as a complication of panic disorder, though it can occur independently. The key psychological mechanism is <strong>fear of fear</strong> --- you become afraid of the physical sensations of anxiety themselves <Citation id="5" index={6} source="Clinical Psychology Review" year="2021" tier={1} />.
         </p>
 
         <StatCard

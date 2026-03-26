@@ -99,10 +99,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You walk into your childhood home and feel instantly small. Your phone buzzes with a work email and anxiety floods your chest before you've even read it. Someone criticizes you and shame washes over you like clockwork. These aren't random reactions—they're emotional habits, deeply grooved patterns your brain has learned to run automatically.
+            You walk into your childhood home and feel instantly small. Your phone buzzes with a work email and anxiety floods your chest before you've even read it. Someone criticizes you and shame washes over you like clockwork. These aren't random reactions---they're emotional habits, deeply grooved patterns your brain has learned to run automatically.
           </p>
           <p className="mb-6">
-            Just like behavioral habits (brushing your teeth, checking your phone), emotional habits are learned responses that become automatic through repetition <Citation id="1" index={1} source="Nature Neuroscience" year="2020" tier={1} />. The good news? What's been learned can be unlearned—but first, you need to understand how these patterns form and why they stick.
+            Just like behavioral habits (brushing your teeth, checking your phone), emotional habits are learned responses that become automatic through repetition <Citation id="1" index={1} source="Nature Neuroscience" year="2020" tier={1} />. The good news? What's been learned can be unlearned---but first, you need to understand how these patterns form and why they stick.
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           What Are Emotional Habits?
         </h2>
         <p className="mb-6">
-          An emotional habit is a consistent emotional response to a specific trigger—so automatic that it feels like the only possible reaction. It's the pattern that makes you always feel anxious before social events, always get defensive when receiving feedback, or always withdraw when conflict arises <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
+          An emotional habit is a consistent emotional response to a specific trigger---so automatic that it feels like the only possible reaction. It's the pattern that makes you always feel anxious before social events, always get defensive when receiving feedback, or always withdraw when conflict arises <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -125,7 +125,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Emotional habits are not character flaws—they're learned patterns that once served a purpose. Your brain created them to keep you safe, even if they no longer work.</p>
+          <p>Emotional habits are not character flaws---they're learned patterns that once served a purpose. Your brain created them to keep you safe, even if they no longer work.</p>
         </ArticleCallout>
 
         <h2 id="how-they-form" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -148,20 +148,20 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
             },
             {
               title: 'Reward (What You Get)',
-              description: <p>The payoff that reinforces the habit—even if it's painful. Example: The anxiety motivates hypervigilance, which feels like protection. Or rumination gives you the illusion of control.</p>,
+              description: <p>The payoff that reinforces the habit---even if it's painful. Example: The anxiety motivates hypervigilance, which feels like protection. Or rumination gives you the illusion of control.</p>,
             },
           ]}
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>Your brain doesn't distinguish between "good" and "bad" habits—it reinforces whatever gets repeated, regardless of whether it serves you <Citation id="1" index={1} source="Nature Neuroscience" year="2020" tier={1} />.</p>
+          <p>Your brain doesn't distinguish between "good" and "bad" habits---it reinforces whatever gets repeated, regardless of whether it serves you <Citation id="1" index={1} source="Nature Neuroscience" year="2020" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="neural-pathways" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Neuroscience: Why Patterns Become Automatic
         </h2>
         <p className="mb-6">
-          Every time you experience a specific emotional response to a trigger, you strengthen the neural pathway connecting the two. It's like walking through a field of tall grass—the first time is hard, but the 100th time, there's a clear path <Citation id="3" index={3} source="Developmental Cognitive Neuroscience" year="2021" tier={1} />.
+          Every time you experience a specific emotional response to a trigger, you strengthen the neural pathway connecting the two. It's like walking through a field of tall grass---the first time is hard, but the 100th time, there's a clear path <Citation id="3" index={3} source="Developmental Cognitive Neuroscience" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           This process is called Hebbian learning: "Neurons that fire together, wire together." The more you feel shame in response to criticism, the more automatic that connection becomes. Eventually, the pathway is so well-worn that the emotion fires before conscious thought.
@@ -186,7 +186,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
             {
               id: 'anxiety',
               title: 'Habitual Anxiety',
-              content: <p><strong>Pattern:</strong> Anticipating the worst-case scenario in ambiguous situations. <strong>Cue:</strong> Uncertainty or lack of control. <strong>Reward:</strong> The illusion of preparedness—"If I worry about it, I won't be blindsided."</p>,
+              content: <p><strong>Pattern:</strong> Anticipating the worst-case scenario in ambiguous situations. <strong>Cue:</strong> Uncertainty or lack of control. <strong>Reward:</strong> The illusion of preparedness---"If I worry about it, I won't be blindsided."</p>,
             },
             {
               id: 'shame',
@@ -196,7 +196,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
             {
               id: 'anger',
               title: 'Habitual Anger/Defensiveness',
-              content: <p><strong>Pattern:</strong> Reacting with defensiveness or anger when feeling criticized or controlled. <strong>Cue:</strong> Perceived threat to autonomy or self-image. <strong>Reward:</strong> Protection from vulnerability—anger feels stronger than hurt.</p>,
+              content: <p><strong>Pattern:</strong> Reacting with defensiveness or anger when feeling criticized or controlled. <strong>Cue:</strong> Perceived threat to autonomy or self-image. <strong>Reward:</strong> Protection from vulnerability---anger feels stronger than hurt.</p>,
             },
             {
               id: 'withdrawal',
@@ -215,7 +215,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Childhood environment:</strong> If expressing anger led to punishment, you learned to suppress it. If crying brought comfort, you learned to cry when overwhelmed.</li>
           <li><strong>Attachment patterns:</strong> Anxious attachment creates habitual fear of abandonment. Avoidant attachment creates habitual emotional distance.</li>
-          <li><strong>Trauma:</strong> A single intense experience can create a lasting emotional habit—hypervigilance after assault, panic in enclosed spaces after being trapped.</li>
+          <li><strong>Trauma:</strong> A single intense experience can create a lasting emotional habit---hypervigilance after assault, panic in enclosed spaces after being trapped.</li>
           <li><strong>Modeling:</strong> You learned emotional patterns by watching caregivers. If your parent always catastrophized, you may do the same.</li>
         </ul>
 
@@ -245,7 +245,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           How to Change an Emotional Habit
         </h2>
         <p className="mb-6">
-          Research on habit reversal shows that you can't delete a neural pathway—but you can build a new one that eventually becomes stronger <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />.
+          Research on habit reversal shows that you can't delete a neural pathway---but you can build a new one that eventually becomes stronger <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -257,7 +257,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
             },
             {
               title: '2. Catch the Cue Early',
-              description: <p>The earlier you catch the cue, the easier it is to interrupt. Learn your personal warning signs—physical sensations, thoughts, situations.</p>,
+              description: <p>The earlier you catch the cue, the easier it is to interrupt. Learn your personal warning signs---physical sensations, thoughts, situations.</p>,
             },
             {
               title: '3. Pause Before the Routine',
@@ -275,14 +275,14 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="tip" title="Habit Replacement, Not Elimination">
-          <p>Don't try to stop the old habit—replace it. Your brain needs a new script to run when the old cue appears. If your habit is to withdraw when criticized, the new habit might be to pause, breathe, and ask a clarifying question.</p>
+          <p>Don't try to stop the old habit---replace it. Your brain needs a new script to run when the old cue appears. If your habit is to withdraw when criticized, the new habit might be to pause, breathe, and ask a clarifying question.</p>
         </ArticleCallout>
 
         <h2 id="self-compassion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Self-Compassion Matters Here
         </h2>
         <p className="mb-6">
-          Emotional habits developed for a reason—they were adaptive at some point in your life. Shame about having them only reinforces the pattern <Citation id="6" index={6} source="Annual Review of Clinical Psychology" year="2020" tier={1} />.
+          Emotional habits developed for a reason---they were adaptive at some point in your life. Shame about having them only reinforces the pattern <Citation id="6" index={6} source="Annual Review of Clinical Psychology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Instead of "Why do I always do this? What's wrong with me?" try: "This pattern made sense once. It's not serving me anymore. I'm learning a new way."
@@ -292,7 +292,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If emotional habits are interfering with your functioning—causing relationship damage, work problems, or significant distress—therapy can help. Habit Reversal Training (HRT), Cognitive Behavioral Therapy (CBT), and Dialectical Behavior Therapy (DBT) all target habitual emotional patterns <Citation id="8" index={8} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
+          If emotional habits are interfering with your functioning---causing relationship damage, work problems, or significant distress---therapy can help. Habit Reversal Training (HRT), Cognitive Behavioral Therapy (CBT), and Dialectical Behavior Therapy (DBT) all target habitual emotional patterns <Citation id="8" index={8} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Emotional habits are not permanent. They're just well-practiced. And with awareness, patience, and deliberate practice, you can teach your brain a new way to respond.
@@ -308,7 +308,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     id: catId(42),
     slug: 'why-you-always-react-the-same-way-understanding-emotional-triggers',
     title: 'Why You Always React the Same Way: Understanding Emotional Triggers',
-    description: 'Discover what triggers are, how they form, and why certain situations provoke intense reactions—plus how to identify and defuse your personal triggers.',
+    description: 'Discover what triggers are, how they form, and why certain situations provoke intense reactions---plus how to identify and defuse your personal triggers.',
     image: "/images/articles/cat01/cover-042.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -386,10 +386,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A colleague says "We need to talk, ' and your heart races. Someone raises their voice slightly and you shut down completely. You see a car accident on the highway and panic floods your system hours later. These aren't overreactions—they're triggers, and understanding them is key to breaking free from automatic emotional patterns.
+            A colleague says "We need to talk, ' and your heart races. Someone raises their voice slightly and you shut down completely. You see a car accident on the highway and panic floods your system hours later. These aren't overreactions---they're triggers, and understanding them is key to breaking free from automatic emotional patterns.
           </p>
           <p className="mb-6">
-            A trigger is a stimulus—internal or external—that activates an intense emotional response disproportionate to the current situation <Citation id="1" index={1} source="Biological Psychiatry" year="2020" tier={1} />. The intensity is because your brain has connected this stimulus to a past experience, and it's responding to the old threat, not the present moment.
+            A trigger is a stimulus---internal or external---that activates an intense emotional response disproportionate to the current situation <Citation id="1" index={1} source="Biological Psychiatry" year="2020" tier={1} />. The intensity is because your brain has connected this stimulus to a past experience, and it's responding to the old threat, not the present moment.
           </p>
         </div>
 
@@ -397,7 +397,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           What Exactly Is a Trigger?
         </h2>
         <p className="mb-6">
-          A trigger is any sensory or emotional experience that your brain has associated with danger, pain, or threat—usually because of a past event <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2019" tier={1} />. When you encounter that stimulus again, your brain bypasses rational thought and activates the threat response.
+          A trigger is any sensory or emotional experience that your brain has associated with danger, pain, or threat---usually because of a past event <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2019" tier={1} />. When you encounter that stimulus again, your brain bypasses rational thought and activates the threat response.
         </p>
 
         <ComparisonTable
@@ -412,7 +412,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>When you're triggered, you're not responding to what's happening now—you're responding to what happened then. Your brain is trying to protect you from a threat that no longer exists.</p>
+          <p>When you're triggered, you're not responding to what's happening now---you're responding to what happened then. Your brain is trying to protect you from a threat that no longer exists.</p>
         </ArticleCallout>
 
         <h2 id="types-of-triggers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -469,10 +469,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           How Triggers Form: The Neuroscience
         </h2>
         <p className="mb-6">
-          Triggers are created through associative learning <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2019" tier={1} />. When you experience a threatening or painful event, your brain encodes everything present at the time—sights, sounds, smells, emotions, body sensations—into the memory.
+          Triggers are created through associative learning <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2019" tier={1} />. When you experience a threatening or painful event, your brain encodes everything present at the time---sights, sounds, smells, emotions, body sensations---into the memory.
         </p>
         <p className="mb-6">
-          Later, when you encounter any part of that sensory constellation, your amygdala (threat detection center) lights up and activates the fight-flight-freeze response—even if the current situation is objectively safe.
+          Later, when you encounter any part of that sensory constellation, your amygdala (threat detection center) lights up and activates the fight-flight-freeze response---even if the current situation is objectively safe.
         </p>
 
         <StatCard
@@ -485,21 +485,21 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>Traumatic memories are often stored as fragmented sensory experiences rather than coherent narratives. This is why triggers can feel so confusing—you feel terror without knowing why <Citation id="5" index={5} source="Norton Professional Books" year="2006" tier={5} />.</p>
+          <p>Traumatic memories are often stored as fragmented sensory experiences rather than coherent narratives. This is why triggers can feel so confusing---you feel terror without knowing why <Citation id="5" index={5} source="Norton Professional Books" year="2006" tier={5} />.</p>
         </ArticleCallout>
 
         <h2 id="window-of-tolerance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Window of Tolerance
         </h2>
         <p className="mb-6">
-          Psychiatrist Dan Siegel introduced the concept of the "window of tolerance"—the zone in which you can process emotions and stress without becoming dysregulated <Citation id="8" index={8} source="Journal of Psychotherapy Integration" year="2018" tier={1} />.
+          Psychiatrist Dan Siegel introduced the concept of the "window of tolerance"---the zone in which you can process emotions and stress without becoming dysregulated <Citation id="8" index={8} source="Journal of Psychotherapy Integration" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           When you're within your window, you can think clearly, make decisions, and manage emotions. When a trigger pushes you outside your window, you either:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Hyperarousal (above the window):</strong> Fight or flight—racing heart, panic, anger, hypervigilance</li>
-          <li><strong>Hypoarousal (below the window):</strong> Freeze or collapse—numbness, dissociation, shutdown, emptiness</li>
+          <li><strong>Hyperarousal (above the window):</strong> Fight or flight---racing heart, panic, anger, hypervigilance</li>
+          <li><strong>Hypoarousal (below the window):</strong> Freeze or collapse---numbness, dissociation, shutdown, emptiness</li>
         </ul>
 
         <ArticleChart
@@ -568,7 +568,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
         <ul className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Name it:</strong> "I'm being triggered right now." Labeling the experience activates the prefrontal cortex and reduces amygdala activation.</li>
           <li><strong>Ground yourself:</strong> Use the 5-4-3-2-1 technique (5 things you see, 4 you hear, 3 you touch, 2 you smell, 1 you taste) to anchor in the present.</li>
-          <li><strong>Regulate your nervous system:</strong> Deep breathing, cold water on your face, progressive muscle relaxation—physiological interventions calm the threat response.</li>
+          <li><strong>Regulate your nervous system:</strong> Deep breathing, cold water on your face, progressive muscle relaxation---physiological interventions calm the threat response.</li>
           <li><strong>Remind yourself of safety:</strong> "That was then, this is now. I am safe. I am an adult. I have choices."</li>
           <li><strong>Remove yourself if needed:</strong> It's okay to say "I need a break" and step away until you're regulated.</li>
         </ul>
@@ -618,10 +618,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If triggers are interfering with daily functioning—causing avoidance of important activities, damaging relationships, or creating constant hypervigilance—therapy can help. Trauma-focused treatments are highly effective at reducing trigger sensitivity.
+          If triggers are interfering with daily functioning---causing avoidance of important activities, damaging relationships, or creating constant hypervigilance---therapy can help. Trauma-focused treatments are highly effective at reducing trigger sensitivity.
         </p>
         <p className="mb-6">
-          Understanding your triggers is not about eliminating all discomfort—it's about recognizing when the past is hijacking the present, and giving yourself the tools to stay anchored in now.
+          Understanding your triggers is not about eliminating all discomfort---it's about recognizing when the past is hijacking the present, and giving yourself the tools to stay anchored in now.
         </p>
       </>
     ),
@@ -634,7 +634,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     id: catId(43),
     slug: 'the-cycle-of-emotional-avoidance-why-running-from-feelings-makes-them-louder',
     title: 'The Cycle of Emotional Avoidance: Why Running from Feelings Makes Them Louder',
-    description: 'Discover why avoiding painful emotions paradoxically intensifies them—and how to break the avoidance cycle for lasting relief.',
+    description: 'Discover why avoiding painful emotions paradoxically intensifies them---and how to break the avoidance cycle for lasting relief.',
     image: "/images/articles/cat01/cover-043.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 6,
@@ -653,10 +653,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Just don't think about it.", "Distract yourself.", "Keep busy." We've all tried to outrun uncomfortable emotions. And for a moment, it works—until the feeling comes back stronger, more persistent, demanding to be felt.
+            "Just don't think about it.", "Distract yourself.", "Keep busy." We've all tried to outrun uncomfortable emotions. And for a moment, it works---until the feeling comes back stronger, more persistent, demanding to be felt.
           </p>
           <p className="mb-6">
-            Emotional avoidance is the attempt to escape, suppress, or control unwanted emotions, thoughts, or sensations <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />. It's one of the most common coping strategies—and also one of the most destructive. Because avoiding emotions doesn't make them disappear. It makes them grow.
+            Emotional avoidance is the attempt to escape, suppress, or control unwanted emotions, thoughts, or sensations <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />. It's one of the most common coping strategies---and also one of the most destructive. Because avoiding emotions doesn't make them disappear. It makes them grow.
           </p>
         </div>
 
@@ -667,22 +667,22 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           In a famous study, participants were told "Don't think about a white bear." Predictably, they couldn't stop thinking about white bears. This is the ironic process theory: trying to suppress a thought makes it more intrusive <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          The same principle applies to emotions. When you try to push away sadness, anxiety, or anger, your brain allocates more resources to monitoring and suppressing that emotion—which keeps it front and center. The emotion doesn't fade; it intensifies.
+          The same principle applies to emotions. When you try to push away sadness, anxiety, or anger, your brain allocates more resources to monitoring and suppressing that emotion---which keeps it front and center. The emotion doesn't fade; it intensifies.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>What you resist persists. Emotions that aren't acknowledged and processed don't disappear—they go underground and leak out in unexpected ways.</p>
+          <p>What you resist persists. Emotions that aren't acknowledged and processed don't disappear---they go underground and leak out in unexpected ways.</p>
         </ArticleCallout>
 
         <h2 id="forms-of-avoidance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Forms of Emotional Avoidance
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Distraction:</strong> Constantly keeping busy, scrolling, working, socializing—anything to avoid stillness where feelings arise</li>
-          <li><strong>Numbing:</strong> Alcohol, drugs, overeating, oversleeping—dulling all sensation to escape the painful ones</li>
-          <li><strong>Intellectualization:</strong> Analyzing feelings instead of feeling them—"I know why I feel this way" without actually experiencing it</li>
+          <li><strong>Distraction:</strong> Constantly keeping busy, scrolling, working, socializing---anything to avoid stillness where feelings arise</li>
+          <li><strong>Numbing:</strong> Alcohol, drugs, overeating, oversleeping---dulling all sensation to escape the painful ones</li>
+          <li><strong>Intellectualization:</strong> Analyzing feelings instead of feeling them---"I know why I feel this way" without actually experiencing it</li>
           <li><strong>Suppression:</strong> Pushing feelings down, white-knuckling through, "staying strong"</li>
-          <li><strong>Rumination:</strong> Obsessing about the situation instead of feeling the emotion—thinking about sadness rather than crying</li>
+          <li><strong>Rumination:</strong> Obsessing about the situation instead of feeling the emotion---thinking about sadness rather than crying</li>
         </ul>
 
         <h2 id="why-it-backfires" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -696,8 +696,8 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           steps={[
             { title: 'Uncomfortable emotion arises', description: <p>You feel sadness, fear, anger, or shame.</p> },
             { title: 'You avoid the feeling', description: <p>You distract, suppress, or numb.</p> },
-            { title: 'Short-term relief', description: <p>The emotion temporarily decreases—this rewards the avoidance.</p> },
-            { title: 'Emotion returns stronger', description: <p>Unprocessed emotions don't resolve—they accumulate.</p> },
+            { title: 'Short-term relief', description: <p>The emotion temporarily decreases---this rewards the avoidance.</p> },
+            { title: 'Emotion returns stronger', description: <p>Unprocessed emotions don't resolve---they accumulate.</p> },
             { title: 'Avoidance becomes habitual', description: <p>Your brain learns: 'Avoidance works!" and does it more.</p> },
           ]}
         />
@@ -706,17 +706,17 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           Breaking the Cycle: Radical Acceptance
         </h2>
         <p className="mb-6">
-          The alternative to avoidance is acceptance—willingly experiencing emotions without trying to change, escape, or judge them <Citation id="3" index={3} source="Behavior Therapy" year="2021" tier={1} />. This doesn't mean liking the emotion. It means making room for it.
+          The alternative to avoidance is acceptance---willingly experiencing emotions without trying to change, escape, or judge them <Citation id="3" index={3} source="Behavior Therapy" year="2021" tier={1} />. This doesn't mean liking the emotion. It means making room for it.
         </p>
         <ArticleCallout variant="tip">
-          <p>Ask yourself: "Can I let this feeling be here, just for now, without fighting it?" The answer is usually yes—and the emotion often softens when you stop resisting it.</p>
+          <p>Ask yourself: "Can I let this feeling be here, just for now, without fighting it?" The answer is usually yes---and the emotion often softens when you stop resisting it.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If avoidance is interfering with your life—substance use, compulsive behaviors, chronic numbing—therapy can help. Acceptance and Commitment Therapy (ACT) specifically targets experiential avoidance and teaches psychological flexibility.
+          If avoidance is interfering with your life---substance use, compulsive behaviors, chronic numbing---therapy can help. Acceptance and Commitment Therapy (ACT) specifically targets experiential avoidance and teaches psychological flexibility.
         </p>
         <p className="mb-6">
           You don't have to like your emotions. But learning to coexist with them, rather than running from them, is what creates lasting peace.
@@ -732,7 +732,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     id: catId(44),
     slug: 'emotional-eating-shopping-scrolling-understanding-coping-mechanisms',
     title: 'Emotional Eating, Shopping, and Scrolling: Understanding Coping Mechanisms',
-    description: 'Why we turn to food, spending, and screens to manage feelings—and how to develop healthier ways to cope with emotional discomfort.',
+    description: 'Why we turn to food, spending, and screens to manage feelings---and how to develop healthier ways to cope with emotional discomfort.',
     image: "/images/articles/cat01/cover-044.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 6,
@@ -751,10 +751,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're not hungry, but you're standing in front of the fridge. You don't need anything, but your shopping cart has five items. You're exhausted, but you've been scrolling for an hour. These aren't random behaviors—they're emotional coping mechanisms in disguise.
+            You're not hungry, but you're standing in front of the fridge. You don't need anything, but your shopping cart has five items. You're exhausted, but you've been scrolling for an hour. These aren't random behaviors---they're emotional coping mechanisms in disguise.
           </p>
           <p className="mb-6">
-            When uncomfortable emotions arise and we don't know how to process them, we often turn to behaviors that provide immediate relief: eating, shopping, scrolling, gaming, binge-watching. These aren't inherently bad—but when they become our primary way of managing emotions, they create more problems than they solve.
+            When uncomfortable emotions arise and we don't know how to process them, we often turn to behaviors that provide immediate relief: eating, shopping, scrolling, gaming, binge-watching. These aren't inherently bad---but when they become our primary way of managing emotions, they create more problems than they solve.
           </p>
         </div>
 
@@ -775,7 +775,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           Emotional Eating: Food as Comfort
         </h2>
         <p className="mb-6">
-          Emotional eating is using food to manage emotions rather than satisfy physical hunger <Citation id="1" index={1} source="Appetite" year="2020" tier={1} />. It's not about lack of willpower—it's about unprocessed feelings.
+          Emotional eating is using food to manage emotions rather than satisfy physical hunger <Citation id="1" index={1} source="Appetite" year="2020" tier={1} />. It's not about lack of willpower---it's about unprocessed feelings.
         </p>
         <p className="mb-6">
           Common triggers: stress, boredom, loneliness, sadness, anxiety. The cycle: feel uncomfortable → eat to soothe → temporary relief → guilt/shame → repeat.
@@ -788,7 +788,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           Compulsive Shopping: Buying Feelings Away
         </h2>
         <p className="mb-6">
-          Shopping provides a temporary mood boost and sense of control <Citation id="2" index={2} source="Journal of Behavioral Addictions" year="2019" tier={1} />. But when it becomes compulsive—shopping to escape emotions rather than meet needs—it creates financial stress and guilt.
+          Shopping provides a temporary mood boost and sense of control <Citation id="2" index={2} source="Journal of Behavioral Addictions" year="2019" tier={1} />. But when it becomes compulsive---shopping to escape emotions rather than meet needs---it creates financial stress and guilt.
         </p>
         <p className="mb-6">
           Warning signs: buying things you don't need, hiding purchases, feeling regret immediately after, shopping to cope with negative emotions.
@@ -798,7 +798,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           Endless Scrolling: Numbing Through Screens
         </h2>
         <p className="mb-6">
-          Phones and social media provide infinite distraction from uncomfortable internal states <Citation id="3" index={3} source="Computers in Human Behavior" year="2021" tier={1} />. You're not scrolling because the content is valuable—you're scrolling to avoid feeling.
+          Phones and social media provide infinite distraction from uncomfortable internal states <Citation id="3" index={3} source="Computers in Human Behavior" year="2021" tier={1} />. You're not scrolling because the content is valuable---you're scrolling to avoid feeling.
         </p>
         <p className="mb-6">
           The problem: digital distraction prevents you from processing emotions, and the comparison and negativity online often worsen the feelings you were trying to escape.
@@ -821,10 +821,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If these behaviors are causing significant distress—financial problems, health issues, or interfering with daily life—consider therapy. Behavioral Activation, DBT, and mindfulness-based interventions address maladaptive coping <Citation id="4" index={4} source="Behavior Therapy" year="2020" tier={1} />.
+          If these behaviors are causing significant distress---financial problems, health issues, or interfering with daily life---consider therapy. Behavioral Activation, DBT, and mindfulness-based interventions address maladaptive coping <Citation id="4" index={4} source="Behavior Therapy" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          These behaviors aren't the problem—they're symptoms of unmet emotional needs. Healing means learning to meet those needs directly rather than through temporary escapes.
+          These behaviors aren't the problem---they're symptoms of unmet emotional needs. Healing means learning to meet those needs directly rather than through temporary escapes.
         </p>
       </>
     ),
@@ -837,7 +837,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
     id: catId(45),
     slug: 'how-childhood-experiences-shape-your-adult-emotional-patterns',
     title: 'How Childhood Experiences Shape Your Adult Emotional Patterns',
-    description: 'Discover how early relationships and experiences create lasting emotional blueprints—and how awareness can help you rewrite old patterns.',
+    description: 'Discover how early relationships and experiences create lasting emotional blueprints---and how awareness can help you rewrite old patterns.',
     image: "/images/articles/cat01/cover-045.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
     readTime: 7,
@@ -856,10 +856,10 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Why do I always shut down when someone gets angry?", "Why do I panic when people get too close?", "Why do I feel responsible for everyone's emotions?" The answers often trace back to childhood—not because you're stuck in the past, but because your brain learned patterns early that it still runs today.
+            "Why do I always shut down when someone gets angry?", "Why do I panic when people get too close?", "Why do I feel responsible for everyone's emotions?" The answers often trace back to childhood---not because you're stuck in the past, but because your brain learned patterns early that it still runs today.
           </p>
           <p className="mb-6">
-            Your early experiences—especially with caregivers—taught you what emotions are safe to feel, how to get your needs met, and how to navigate relationships <Citation id="1" index={1} source="Nature Neuroscience" year="2020" tier={1} />. These lessons became your emotional blueprint. Understanding this blueprint is the first step to rewriting it.
+            Your early experiences---especially with caregivers---taught you what emotions are safe to feel, how to get your needs met, and how to navigate relationships <Citation id="1" index={1} source="Nature Neuroscience" year="2020" tier={1} />. These lessons became your emotional blueprint. Understanding this blueprint is the first step to rewriting it.
           </p>
         </div>
 
@@ -896,7 +896,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           Adverse Childhood Experiences (ACEs)
         </h2>
         <p className="mb-6">
-          ACEs—trauma, neglect, household dysfunction—have lasting effects on emotional regulation <Citation id="3" index={3} source="Journal of Traumatic Stress" year="2021" tier={1} />. Common patterns from ACEs:
+          ACEs---trauma, neglect, household dysfunction---have lasting effects on emotional regulation <Citation id="3" index={3} source="Journal of Traumatic Stress" year="2021" tier={1} />. Common patterns from ACEs:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Hypervigilance to threat, difficulty relaxing</li>
@@ -905,7 +905,7 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           <li>Shame, worthlessness, or self-blame</li>
         </ul>
         <ArticleCallout variant="info">
-          <p>If you experienced ACEs, your emotional patterns make sense—they were survival strategies. Healing is possible through neuroplasticity and therapeutic support <Citation id="5" index={5} source="Biological Psychiatry" year="2021" tier={1} />.</p>
+          <p>If you experienced ACEs, your emotional patterns make sense---they were survival strategies. Healing is possible through neuroplasticity and therapeutic support <Citation id="5" index={5} source="Biological Psychiatry" year="2021" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="recognizing-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -930,17 +930,17 @@ export const emotionalPatternsHabitsArticlesA: Article[] = [
           <li><strong>Naming the origin:</strong> "I learned this pattern as a child to stay safe."</li>
           <li><strong>Challenging the belief:</strong> "Is this still true? Do I still need this strategy?"</li>
           <li><strong>Practicing new responses:</strong> Deliberately choosing different emotional reactions</li>
-          <li><strong>Reparenting yourself:</strong> Giving yourself what you didn't receive—validation, comfort, permission to feel</li>
+          <li><strong>Reparenting yourself:</strong> Giving yourself what you didn't receive---validation, comfort, permission to feel</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If childhood patterns are causing significant suffering—relationship problems, chronic dysregulation, unresolved trauma—therapy helps. Schema Therapy, EMDR, and attachment-based therapies target these early patterns <Citation id="4" index={4} source="Clinical Psychology Review" year="2020" tier={1} />.
+          If childhood patterns are causing significant suffering---relationship problems, chronic dysregulation, unresolved trauma---therapy helps. Schema Therapy, EMDR, and attachment-based therapies target these early patterns <Citation id="4" index={4} source="Clinical Psychology Review" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          Your past doesn't have to be your future. With awareness, compassion, and deliberate practice, you can build new emotional patterns—ones that serve the adult you are now, not the child you were then.
+          Your past doesn't have to be your future. With awareness, compassion, and deliberate practice, you can build new emotional patterns---ones that serve the adult you are now, not the child you were then.
         </p>
       </>
     ),

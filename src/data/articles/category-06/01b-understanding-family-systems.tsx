@@ -17,7 +17,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     id: catId(6),
     slug: 'triangulation-when-two-people-use-a-third-to-manage-conflict',
     title: 'Triangulation: When Two People Use a Third to Manage Conflict',
-    description: 'Learn how triangulation — a common but damaging family pattern — uses a third person to avoid direct conflict and creates lasting relational dysfunction.',
+    description: 'Learn how triangulation --- a common but damaging family pattern --- uses a third person to avoid direct conflict and creates lasting relational dysfunction.',
     image: "/images/articles/cat06/cover-006.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 7,
@@ -95,13 +95,13 @@ export const understandingFamilySystemsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When two people have a conflict they can't resolve, they often pull in a third person to reduce anxiety. This pattern — called triangulation — is one of the most common and damaging dynamics in families.
+            When two people have a conflict they can't resolve, they often pull in a third person to reduce anxiety. This pattern --- called triangulation --- is one of the most common and damaging dynamics in families.
           </p>
           <p className="mb-6">
-            Murray Bowen, founder of family systems theory, identified triangulation as a fundamental way that families manage tension <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2020" tier={1} />. Instead of addressing problems directly, two people unconsciously recruit a third to stabilize their relationship — usually at significant cost to that third person.
+            Murray Bowen, founder of family systems theory, identified triangulation as a fundamental way that families manage tension <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2020" tier={1} />. Instead of addressing problems directly, two people unconsciously recruit a third to stabilize their relationship --- usually at significant cost to that third person.
           </p>
           <p className="mb-6">
-            Understanding triangulation matters because once you recognize the pattern, you can see it everywhere — in families, workplaces, friendships, and organizations <Citation id="2" index={2} source="Family Process" year="2021" tier={1} />.
+            Understanding triangulation matters because once you recognize the pattern, you can see it everywhere --- in families, workplaces, friendships, and organizations <Citation id="2" index={2} source="Family Process" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
           What Is Triangulation?
         </h2>
         <p className="mb-6">
-          Triangulation occurs when the tension between two people becomes so uncomfortable that they pull in a third person to reduce the anxiety. The classic example: parents who have marital conflict but instead of addressing it directly, they focus their energy on a child — either by forming an alliance with the child against the other parent, or by uniting as parents to manage the child's "problem behavior."
+          Triangulation occurs when the tension between two people becomes so uncomfortable that they pull in a third person to reduce the anxiety. The classic example: parents who have marital conflict but instead of addressing it directly, they focus their energy on a child --- either by forming an alliance with the child against the other parent, or by uniting as parents to manage the child's "problem behavior."
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -219,7 +219,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>Triangulation is most common in relationships where direct conflict feels dangerous — either because conflict was never modeled healthily, or because past conflicts led to devastating outcomes.</p>
+          <p>Triangulation is most common in relationships where direct conflict feels dangerous --- either because conflict was never modeled healthily, or because past conflicts led to devastating outcomes.</p>
         </ArticleCallout>
 
         <h2 id="recognizing-your-role" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -283,7 +283,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>Cannot tolerate others working out their own conflicts</li>
-                <li>Difficulty with direct communication — always involves third parties</li>
+                <li>Difficulty with direct communication --- always involves third parties</li>
                 <li>Attracts triangulated situations or unconsciously creates them</li>
                 <li>People-pleasing and conflict avoidance</li>
                 <li>Difficulty maintaining boundaries in relationships</li>
@@ -382,7 +382,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     id: catId(7),
     slug: 'how-your-birth-order-affects-your-psychological-development',
     title: 'How Your Birth Order Affects Your Psychological Development',
-    description: 'Explore what research reveals about birth order effects on personality, achievement, and relationships — separating myth from evidence.',
+    description: 'Explore what research reveals about birth order effects on personality, achievement, and relationships --- separating myth from evidence.',
     image: "/images/articles/cat06/cover-007.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 8,
@@ -505,7 +505,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
           Intelligence and Achievement: The Firstborn Advantage?
         </h2>
         <p className="mb-6">
-          One of the most replicated findings is a small IQ advantage for firstborns — about 1-3 points on average <Citation id="3" index={3} source="Intelligence" year="2017" tier={1} />. This likely reflects not genetic differences but environmental factors:
+          One of the most replicated findings is a small IQ advantage for firstborns --- about 1-3 points on average <Citation id="3" index={3} source="Intelligence" year="2017" tier={1} />. This likely reflects not genetic differences but environmental factors:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Undivided attention:</strong> Firstborns receive exclusive parental attention during their early years</li>
@@ -515,7 +515,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Firstborns are also statistically overrepresented among high achievers, CEOs, and academic positions — though this may reflect parental expectations and cultural norms as much as individual ability.
+          Firstborns are also statistically overrepresented among high achievers, CEOs, and academic positions --- though this may reflect parental expectations and cultural norms as much as individual ability.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -654,7 +654,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
           Sibling Deidentification: Creating Your Own Niche
         </h2>
         <p className="mb-6">
-          One of the most interesting dynamics related to birth order is sibling deidentification — the process by which siblings in the same family develop contrasting identities to reduce competition and establish individual identity <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.
+          One of the most interesting dynamics related to birth order is sibling deidentification --- the process by which siblings in the same family develop contrasting identities to reduce competition and establish individual identity <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -716,7 +716,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'family-rules-written-and-unwritten-how-they-shape-your-beliefs',
-    title: 'Family Rules — Written and Unwritten: How They Shape Your Beliefs',
+    title: 'Family Rules --- Written and Unwritten: How They Shape Your Beliefs',
     description: 'Explore the invisible rulebook every family operates by, and how these spoken and unspoken rules shape your beliefs, behaviors, and mental health.',
     image: "/images/articles/cat06/cover-008.svg",
     category: CATEGORY_FAMILY_PARENTING,
@@ -795,13 +795,13 @@ export const understandingFamilySystemsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every family operates according to a set of rules — some explicit and discussed, others so deeply embedded they become invisible. These rules govern everything from who can express anger to whether asking for help is acceptable.
+            Every family operates according to a set of rules --- some explicit and discussed, others so deeply embedded they become invisible. These rules govern everything from who can express anger to whether asking for help is acceptable.
           </p>
           <p className="mb-6">
             Written rules are straightforward: "No phones at dinner.", "Be home by 10pm.", "Always say please and thank you." Unwritten rules are more insidious because they're never stated aloud yet everyone knows them: "We don't talk about Dad's drinking.", "Mom's feelings come first.", "Showing weakness is unacceptable."
           </p>
           <p className="mb-6">
-            These rules — particularly the unwritten ones — shape your beliefs about yourself, relationships, emotions, and the world in profound ways <Citation id="2" index={2} source="Family Process" year="2021" tier={1} />. You carry them into adulthood, often without realizing they're family-specific rather than universal truths.
+            These rules --- particularly the unwritten ones --- shape your beliefs about yourself, relationships, emotions, and the world in profound ways <Citation id="2" index={2} source="Family Process" year="2021" tier={1} />. You carry them into adulthood, often without realizing they're family-specific rather than universal truths.
           </p>
         </div>
 
@@ -967,7 +967,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
           How Rules Travel Through Generations
         </h2>
         <p className="mb-6">
-          Family rules don't originate with your parents — they often trace back multiple generations <Citation id="3" index={3} source="Journal of Marital and Family Therapy" year="2019" tier={1} />. Your grandparents" rules became your parents' rules, which became your rules, which may become your children's rules — unless someone consciously examines and changes them.
+          Family rules don't originate with your parents --- they often trace back multiple generations <Citation id="3" index={3} source="Journal of Marital and Family Therapy" year="2019" tier={1} />. Your grandparents" rules became your parents' rules, which became your rules, which may become your children's rules --- unless someone consciously examines and changes them.
         </p>
 
         <QuoteBlock
@@ -989,7 +989,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="tip">
-          <p>The question isn't whether your family rules match a universal standard — it's whether they serve your wellbeing and support healthy development within your cultural context.</p>
+          <p>The question isn't whether your family rules match a universal standard --- it's whether they serve your wellbeing and support healthy development within your cultural context.</p>
         </ArticleCallout>
 
         <h2 id="identifying-your-rules" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1049,7 +1049,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
             {
               title: 'Expect internal resistance',
               description: (
-                <p>Violating family rules — even ones you disagree with — often triggers guilt and anxiety. This is your nervous system responding to the perceived threat of breaking from the family system.</p>
+                <p>Violating family rules --- even ones you disagree with --- often triggers guilt and anxiety. This is your nervous system responding to the perceived threat of breaking from the family system.</p>
               ),
             },
           ]}
@@ -1075,7 +1075,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
     id: catId(9),
     slug: 'the-identified-patient-when-one-person-carries-the-familys-pain',
     title: "The Identified Patient: When One Person Carries the Family\'s Pain",
-    description: "Discover the identified patient dynamic — when one family member becomes the repository for the entire family's dysfunction and distress.",
+    description: "Discover the identified patient dynamic --- when one family member becomes the repository for the entire family's dysfunction and distress.",
     image: '/images/articles/cat06/cover-009.svg',
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 7,
@@ -1153,10 +1153,10 @@ export const understandingFamilySystemsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In every dysfunctional family system, someone becomes the "problem." This person — called the identified patient or symptom bearer — develops visible struggles that distract from the real issues affecting the whole family.
+            In every dysfunctional family system, someone becomes the "problem." This person --- called the identified patient or symptom bearer --- develops visible struggles that distract from the real issues affecting the whole family.
           </p>
           <p className="mb-6">
-            The identified patient is the family member whose symptoms bring the family to therapy: the anxious child, the depressed teenager, the acting-out adolescent, the addicted adult child. Family therapists recognized that this person isn't "the problem" — they're the person expressing the family's problem <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2020" tier={1} />.
+            The identified patient is the family member whose symptoms bring the family to therapy: the anxious child, the depressed teenager, the acting-out adolescent, the addicted adult child. Family therapists recognized that this person isn't "the problem" --- they're the person expressing the family's problem <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             Understanding this dynamic is crucial because treating the identified patient in isolation often fails. Their symptoms serve a function in the family system, and individual improvement can paradoxically destabilize the entire family <Citation id="2" index={2} source="Family Process" year="2021" tier={1} />.
@@ -1167,7 +1167,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
           What Is the Identified Patient?
         </h2>
         <p className="mb-6">
-          The identified patient is the family member who manifests psychological or behavioral symptoms that actually reflect dysfunction in the larger family system. Their symptoms are real and cause genuine distress — but they are also symptomatic of family patterns, not solely individual pathology.
+          The identified patient is the family member who manifests psychological or behavioral symptoms that actually reflect dysfunction in the larger family system. Their symptoms are real and cause genuine distress --- but they are also symptomatic of family patterns, not solely individual pathology.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1346,7 +1346,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
             {
               title: 'Recognize the pattern',
               description: (
-                <p>Understanding that you're the identified patient — not inherently broken — is the first step. Your symptoms are real, but they exist in a context.</p>
+                <p>Understanding that you're the identified patient --- not inherently broken --- is the first step. Your symptoms are real, but they exist in a context.</p>
               ),
             },
             {
@@ -1370,7 +1370,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
             {
               title: 'Build external support',
               description: (
-                <p>Recovery often requires support outside the family system — friends, therapist, support groups — who can validate your progress when family cannot.</p>
+                <p>Recovery often requires support outside the family system --- friends, therapist, support groups --- who can validate your progress when family cannot.</p>
               ),
             },
             {
@@ -1508,7 +1508,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Family systems can and do change — but not in the way most people expect. Change doesn't happen by fixing one person or implementing new rules. It requires shifting the invisible patterns that govern how the entire family operates.
+            Family systems can and do change --- but not in the way most people expect. Change doesn't happen by fixing one person or implementing new rules. It requires shifting the invisible patterns that govern how the entire family operates.
           </p>
           <p className="mb-6">
             Family therapy approaches this challenge differently than individual therapy. Instead of treating symptoms in isolation, family therapists work with the relationships and patterns between family members <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2021" tier={1} />. The family itself becomes the client, not any individual within it.
@@ -1535,7 +1535,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>For many issues — particularly those involving children and adolescents — family therapy is MORE effective than individual therapy alone because it addresses the context in which symptoms exist.</p>
+          <p>For many issues --- particularly those involving children and adolescents --- family therapy is MORE effective than individual therapy alone because it addresses the context in which symptoms exist.</p>
         </ArticleCallout>
 
         <h2 id="what-family-therapy-addresses" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1777,7 +1777,7 @@ export const understandingFamilySystemsArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>One or more members refuse to participate</li>
           <li>Family is invested in maintaining current patterns (homeostasis is stronger than desire for change)</li>
-          <li>Blame is too entrenched — everyone wants therapist to "fix" someone else</li>
+          <li>Blame is too entrenched --- everyone wants therapist to "fix" someone else</li>
           <li>Therapist becomes triangulated into family system</li>
           <li>Change threatens family member's individual stability</li>
           <li>Cultural mismatch between therapist approach and family values</li>

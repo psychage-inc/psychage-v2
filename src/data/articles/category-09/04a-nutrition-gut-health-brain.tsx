@@ -93,7 +93,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've probably heard the phrase "gut feeling" or felt "butterflies in your stomach." These expressions aren't just metaphors—they reflect a profound biological truth about the intimate connection between your digestive system and your brain.
+            You've probably heard the phrase "gut feeling" or felt "butterflies in your stomach." These expressions aren't just metaphors---they reflect a profound biological truth about the intimate connection between your digestive system and your brain.
           </p>
           <p className="mb-6">
             The gut-brain axis is a bidirectional communication network linking your gastrointestinal tract and central nervous system <Citation id="1" index={1} source="Annals of Gastroenterology" year="2015" tier={1} />. This highway of signals helps explain why digestive issues often accompany mental health conditions, and why what you eat can influence how you feel.
@@ -104,7 +104,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           What Is the Gut-Brain Axis?
         </h2>
         <p className="mb-6">
-          The gut-brain axis is a complex communication system involving neural, hormonal, and immunological signaling pathways <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2012" tier={1} />. Think of it as a superhighway with traffic flowing in both directions—your brain sends signals to your gut, and your gut sends signals back to your brain.
+          The gut-brain axis is a complex communication system involving neural, hormonal, and immunological signaling pathways <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2012" tier={1} />. Think of it as a superhighway with traffic flowing in both directions---your brain sends signals to your gut, and your gut sends signals back to your brain.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Three Main Communication Routes">
@@ -120,7 +120,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           The Vagus Nerve: Your Body's Information Superhighway
         </h2>
         <p className="mb-6">
-          The vagus nerve is the longest cranial nerve in your body, running from your brainstem to your abdomen <Citation id="7" index={7} source="Cold Spring Harbor Perspectives in Medicine" year="2019" tier={1} />. About 80-90% of the fibers in the vagus nerve carry information from your gut to your brain—not the other way around.
+          The vagus nerve is the longest cranial nerve in your body, running from your brainstem to your abdomen <Citation id="7" index={7} source="Cold Spring Harbor Perspectives in Medicine" year="2019" tier={1} />. About 80-90% of the fibers in the vagus nerve carry information from your gut to your brain---not the other way around.
         </p>
         <p className="mb-6">
           This means your gut is constantly sending status reports to your brain about digestive health, nutrient levels, and the state of your microbiome. When something is off in your gut, your brain knows about it, often before you consciously feel symptoms.
@@ -139,7 +139,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Your Gut Bacteria Are Chemical Factories
         </h2>
         <p className="mb-6">
-          The trillions of microorganisms living in your digestive tract—collectively called your gut microbiome—produce many of the same neurotransmitters your brain uses to regulate mood <Citation id="3" index={3} source="Psychoneuroendocrinology" year="2020" tier={1} />.
+          The trillions of microorganisms living in your digestive tract---collectively called your gut microbiome---produce many of the same neurotransmitters your brain uses to regulate mood <Citation id="3" index={3} source="Psychoneuroendocrinology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Your gut bacteria produce serotonin (mood regulation), dopamine (motivation and pleasure), GABA (calming), and norepinephrine (alertness). While most of these gut-produced neurotransmitters don't cross the blood-brain barrier directly, they influence brain function through vagal nerve signaling and inflammatory pathways.
@@ -153,7 +153,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">About 90% of your body's serotonin is produced in your gut by enterochromaffin cells and gut bacteria. Gut serotonin regulates digestive function and sends signals to the brain via the vagus nerve.</p>
-                  <p>Low serotonin levels are associated with depression and anxiety—and gut health plays a surprising role in maintaining adequate levels.</p>
+                  <p>Low serotonin levels are associated with depression and anxiety---and gut health plays a surprising role in maintaining adequate levels.</p>
                 </div>
               ),
             },
@@ -218,7 +218,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Understanding the gut-brain axis opens new possibilities for supporting mental health through digestive wellness. While gut health isn't a cure-all for mental health conditions, it's an important piece of the puzzle that deserves attention.
         </p>
         <p className="mb-6">
-          Simple changes like eating more fiber, consuming fermented foods, reducing processed foods, managing stress, and getting adequate sleep can all support a healthy gut microbiome—and potentially improve your mood and mental clarity <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2011" tier={1} />.
+          Simple changes like eating more fiber, consuming fermented foods, reducing processed foods, managing stress, and getting adequate sleep can all support a healthy gut microbiome---and potentially improve your mood and mental clarity <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2011" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip">
@@ -238,7 +238,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Scientists are investigating whether specific probiotic strains (sometimes called "psychobiotics") can be used as adjunct treatments for depression and anxiety. Early results are promising, though more research is needed to determine which strains work best for which conditions.
         </p>
         <p className="mb-6">
-          The gut-brain axis represents a frontier in mental health research—one that may lead to new, personalized interventions based on your unique microbiome composition.
+          The gut-brain axis represents a frontier in mental health research---one that may lead to new, personalized interventions based on your unique microbiome composition.
         </p>
       </>
     ),
@@ -329,7 +329,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
             Food is medicine for your brain. While nutrition alone can't cure mental health conditions, what you eat profoundly influences your mood, energy, focus, and emotional resilience.
           </p>
           <p className="mb-6">
-            Nutritional psychiatry—the study of how diet affects mental health—has exploded in recent years, revealing clear patterns: certain foods consistently support brain function, while others undermine it <Citation id="1" index={1} source="Proceedings of the Nutrition Society" year="2017" tier={1} />.
+            Nutritional psychiatry---the study of how diet affects mental health---has exploded in recent years, revealing clear patterns: certain foods consistently support brain function, while others undermine it <Citation id="1" index={1} source="Proceedings of the Nutrition Society" year="2017" tier={1} />.
           </p>
         </div>
 
@@ -337,7 +337,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Dietary Patterns Matter More Than Individual Foods
         </h2>
         <p className="mb-6">
-          Rather than focusing on single "superfoods," research shows that overall dietary patterns have the strongest impact on mental health <Citation id="2" index={2} source="Nutritional Neuroscience" year="2019" tier={1} />. The Mediterranean diet—rich in vegetables, fruits, whole grains, fish, olive oil, and nuts—has the most robust evidence for supporting mental wellness.
+          Rather than focusing on single "superfoods," research shows that overall dietary patterns have the strongest impact on mental health <Citation id="2" index={2} source="Nutritional Neuroscience" year="2019" tier={1} />. The Mediterranean diet---rich in vegetables, fruits, whole grains, fish, olive oil, and nuts---has the most robust evidence for supporting mental wellness.
         </p>
         <p className="mb-6">
           Studies comparing different eating patterns consistently find that people who eat Mediterranean-style diets have lower rates of depression and anxiety compared to those eating typical Western diets high in processed foods, refined sugars, and unhealthy fats <Citation id="3" index={3} source="Psychiatry Research" year="2017" tier={1} />.
@@ -475,7 +475,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           <li>Incorporate beans, lentils, or chickpeas several times weekly</li>
           <li>Use olive oil as your primary cooking fat</li>
           <li>Limit ultra-processed snacks and meals</li>
-          <li>Stay hydrated—even mild dehydration affects mood and cognition</li>
+          <li>Stay hydrated---even mild dehydration affects mood and cognition</li>
         </ul>
 
         <QuoteBlock
@@ -489,7 +489,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           When Nutrition Isn't Enough
         </h2>
         <p className="mb-6">
-          Nutrition is one piece of mental health—not the whole picture. If you're experiencing persistent low mood, anxiety, or other mental health symptoms, work with a mental health professional. Nutrition can support treatment but shouldn't replace evidence-based therapies or medications when needed.
+          Nutrition is one piece of mental health---not the whole picture. If you're experiencing persistent low mood, anxiety, or other mental health symptoms, work with a mental health professional. Nutrition can support treatment but shouldn't replace evidence-based therapies or medications when needed.
         </p>
         <p className="mb-6">
           Consider consulting a registered dietitian who specializes in mental health if you want personalized nutrition guidance, especially if you have specific dietary restrictions or medical conditions.
@@ -588,10 +588,10 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're not just human—you're a walking ecosystem. The trillions of bacteria, viruses, fungi, and other microorganisms living in your gut outnumber your human cells, and they're quietly influencing your brain in ways scientists are only beginning to understand.
+            You're not just human---you're a walking ecosystem. The trillions of bacteria, viruses, fungi, and other microorganisms living in your gut outnumber your human cells, and they're quietly influencing your brain in ways scientists are only beginning to understand.
           </p>
           <p className="mb-6">
-            The gut microbiome—this vast community of microorganisms—is emerging as a major player in mental health, with research revealing surprising connections between gut bacteria composition and conditions like depression, anxiety, and even autism <Citation id="1" index={1} source="Physiological Reviews" year="2019" tier={1} />.
+            The gut microbiome---this vast community of microorganisms---is emerging as a major player in mental health, with research revealing surprising connections between gut bacteria composition and conditions like depression, anxiety, and even autism <Citation id="1" index={1} source="Physiological Reviews" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -608,14 +608,14 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           What Is the Gut Microbiome?
         </h2>
         <p className="mb-6">
-          Your gut microbiome is the collection of all microorganisms—bacteria, archaea, viruses, and fungi—living in your digestive tract. While we often talk about "gut bacteria," the microbiome is far more diverse and complex.
+          Your gut microbiome is the collection of all microorganisms---bacteria, archaea, viruses, and fungi---living in your digestive tract. While we often talk about "gut bacteria," the microbiome is far more diverse and complex.
         </p>
         <p className="mb-6">
           Each person's microbiome is unique, like a fingerprint. Your microbiome composition is influenced by genetics, birth method (vaginal vs. cesarean), infant feeding (breast vs. formula), diet, medications (especially antibiotics), stress, sleep, and environmental exposures <Citation id="8" index={8} source="British Journal of Nutrition" year="2013" tier={1} />.
         </p>
 
         <ArticleCallout variant="did-you-know">
-          <p>Your gut microbiome weighs about 1-2 kilograms (2-4 pounds)—roughly the same as your brain. These two organs are in constant communication.</p>
+          <p>Your gut microbiome weighs about 1-2 kilograms (2-4 pounds)---roughly the same as your brain. These two organs are in constant communication.</p>
         </ArticleCallout>
 
         <h2 id="how-microbiome-affects-brain" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -660,7 +660,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Some of the most compelling research comes from "fecal transplant" studies in animals. When researchers transfer gut bacteria from depressed humans into healthy, germ-free mice, the mice develop depression-like behaviors <Citation id="4" index={4} source="Journal of Psychiatric Research" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
-          This remarkable finding suggests that gut bacteria composition doesn't just correlate with depression—it may actually cause behavioral changes.
+          This remarkable finding suggests that gut bacteria composition doesn't just correlate with depression---it may actually cause behavioral changes.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -684,7 +684,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           <strong>Beneficial strains</strong>: <em>Lactobacillus</em> and <em>Bifidobacterium</em> species are most consistently linked to positive mental health outcomes. These bacteria produce GABA and reduce inflammation <Citation id="5" index={5} source="CNS & Neurological Disorders Drug Targets" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          <strong>Problematic patterns</strong>: People with depression often have reduced levels of <em>Faecalibacterium</em> and <em>Coprococcus</em>—bacteria that produce butyrate, an anti-inflammatory SCFA. They also tend to have higher levels of bacteria associated with inflammation.
+          <strong>Problematic patterns</strong>: People with depression often have reduced levels of <em>Faecalibacterium</em> and <em>Coprococcus</em>---bacteria that produce butyrate, an anti-inflammatory SCFA. They also tend to have higher levels of bacteria associated with inflammation.
         </p>
 
         <h2 id="psychobiotics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -694,7 +694,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           "Psychobiotics" are live bacteria that, when consumed in adequate amounts, produce mental health benefits. While research is still in early stages, several probiotic strains show promise for reducing anxiety and depression symptoms when used alongside standard treatment.
         </p>
         <p className="mb-6">
-          The most-studied psychobiotic strains include <em>Lactobacillus helveticus</em> R0052, <em>Bifidobacterium longum</em> 1714, and <em>Lactobacillus rhamnosus</em> JB-1. However, not all probiotics are psychobiotics—effects are highly strain-specific.
+          The most-studied psychobiotic strains include <em>Lactobacillus helveticus</em> R0052, <em>Bifidobacterium longum</em> 1714, and <em>Lactobacillus rhamnosus</em> JB-1. However, not all probiotics are psychobiotics---effects are highly strain-specific.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -708,7 +708,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Emerging research reveals bidirectional relationships between your microbiome and sleep. Greater microbiome diversity is associated with better sleep efficiency and total sleep time <Citation id="7" index={7} source="PLOS ONE" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          Poor sleep disrupts the microbiome, and microbiome disruption worsens sleep—creating potential vicious cycles. Supporting your microbiome may support better sleep, which in turn supports mental health.
+          Poor sleep disrupts the microbiome, and microbiome disruption worsens sleep---creating potential vicious cycles. Supporting your microbiome may support better sleep, which in turn supports mental health.
         </p>
 
         <h2 id="factors-that-disrupt-microbiome" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -754,7 +754,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Researchers are working toward personalized microbiome analysis and targeted interventions for mental health. Imagine testing your microbiome composition and receiving customized dietary recommendations or specific probiotic strains to support your unique mental health needs <Citation id="9" index={9} source="Trends in Molecular Medicine" year="2014" tier={1} />.
         </p>
         <p className="mb-6">
-          While we're not there yet, the microbiome represents one of the most exciting frontiers in mental health research—one that connects the ancient wisdom of "gut feelings" with cutting-edge neuroscience.
+          While we're not there yet, the microbiome represents one of the most exciting frontiers in mental health research---one that connects the ancient wisdom of "gut feelings" with cutting-edge neuroscience.
         </p>
       </>
     ),
@@ -853,7 +853,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           What Are Omega-3 Fatty Acids?
         </h2>
         <p className="mb-6">
-          Omega-3s are polyunsaturated fatty acids that your body cannot produce on its own—making them "essential" nutrients you must obtain from food or supplements.
+          Omega-3s are polyunsaturated fatty acids that your body cannot produce on its own---making them "essential" nutrients you must obtain from food or supplements.
         </p>
         <p className="mb-6">
           There are three main types:
@@ -910,7 +910,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Omega-3s and Mental Health: The Evidence
         </h2>
         <p className="mb-6">
-          The strongest evidence for omega-3 supplementation comes from depression research. Multiple meta-analyses have found that omega-3 supplements—particularly those high in EPA—can reduce depressive symptoms <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2016" tier={1} />.
+          The strongest evidence for omega-3 supplementation comes from depression research. Multiple meta-analyses have found that omega-3 supplements---particularly those high in EPA---can reduce depressive symptoms <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
           A 2020 meta-analysis found that omega-3 supplementation (at doses around 1-2 grams of EPA daily) shows small to moderate benefits for depression, with effects comparable to some pharmaceutical antidepressants in certain populations <Citation id="6" index={6} source="Molecular Psychiatry" year="2020" tier={1} />.
@@ -937,7 +937,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li>Supplements with higher EPA (relative to DHA) show stronger antidepressant effects</li>
             <li>Omega-3s work best when baseline levels are low (they're less effective if you already have adequate levels)</li>
-            <li>Effects are modest—omega-3s aren't a replacement for standard depression treatments but may enhance them</li>
+            <li>Effects are modest---omega-3s aren't a replacement for standard depression treatments but may enhance them</li>
             <li>Response varies individually; some people respond strongly, others minimally</li>
           </ul>
         </ArticleCallout>
@@ -949,7 +949,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Research shows that your actual blood omega-3 levels predict mental health outcomes better than your dietary intake <Citation id="5" index={5} source="Psychiatry Research" year="2015" tier={1} />. People with higher blood levels of omega-3s tend to have better treatment responses to antidepressants.
         </p>
         <p className="mb-6">
-          The Omega-3 Index—a measure of EPA and DHA in red blood cell membranes—is considered the gold standard for assessing omega-3 status. An index of 8% or higher is associated with optimal brain health, while most Americans fall below 5%.
+          The Omega-3 Index---a measure of EPA and DHA in red blood cell membranes---is considered the gold standard for assessing omega-3 status. An index of 8% or higher is associated with optimal brain health, while most Americans fall below 5%.
         </p>
 
         <StatCard
@@ -1015,7 +1015,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>High doses may increase bleeding risk, especially if combined with blood thinners</li>
           <li>Some people experience mild digestive upset or fishy aftertaste</li>
-          <li>Quality matters—low-quality supplements may contain contaminants or oxidized fats</li>
+          <li>Quality matters---low-quality supplements may contain contaminants or oxidized fats</li>
           <li>If taking medications or have health conditions, consult your healthcare provider before supplementing</li>
         </ul>
 
@@ -1023,7 +1023,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Omega-3 fatty acids are essential for optimal brain function, and most people don't get enough. While they're not a magic bullet for mental health, adequate omega-3 intake—whether through diet or supplementation—supports mood, cognitive function, and long-term brain health.
+          Omega-3 fatty acids are essential for optimal brain function, and most people don't get enough. While they're not a magic bullet for mental health, adequate omega-3 intake---whether through diet or supplementation---supports mood, cognitive function, and long-term brain health.
         </p>
         <p className="mb-6">
           The best approach is to eat fatty fish 2-3 times weekly. If that's not realistic, a quality omega-3 supplement providing 1,000-2,000 mg EPA+DHA daily is a reasonable evidence-based intervention to support brain health.
@@ -1114,10 +1114,10 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Have you ever felt irritable, anxious, or mentally foggy when you've gone too long without eating? Or noticed mood crashes after eating sugary foods? These aren't just coincidences—they reflect powerful connections between blood sugar regulation, inflammation, and brain function.
+            Have you ever felt irritable, anxious, or mentally foggy when you've gone too long without eating? Or noticed mood crashes after eating sugary foods? These aren't just coincidences---they reflect powerful connections between blood sugar regulation, inflammation, and brain function.
           </p>
           <p className="mb-6">
-            Your brain consumes about 20% of your body's glucose, making it extremely sensitive to blood sugar fluctuations <Citation id="4" index={4} source="Current Diabetes Reports" year="2018" tier={1} />. Meanwhile, chronic inflammation—often driven by metabolic dysfunction—is now recognized as a major contributor to depression, anxiety, and cognitive decline.
+            Your brain consumes about 20% of your body's glucose, making it extremely sensitive to blood sugar fluctuations <Citation id="4" index={4} source="Current Diabetes Reports" year="2018" tier={1} />. Meanwhile, chronic inflammation---often driven by metabolic dysfunction---is now recognized as a major contributor to depression, anxiety, and cognitive decline.
           </p>
         </div>
 
@@ -1128,7 +1128,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           When you eat carbohydrates, your body breaks them down into glucose (blood sugar), which enters your bloodstream. Your pancreas releases insulin to help cells absorb this glucose for energy. This is a normal, healthy process.
         </p>
         <p className="mb-6">
-          Problems arise when blood sugar swings too dramatically—spiking high after meals and crashing low between them. These fluctuations, called glycemic variability, affect brain function, mood, and energy in predictable ways.
+          Problems arise when blood sugar swings too dramatically---spiking high after meals and crashing low between them. These fluctuations, called glycemic variability, affect brain function, mood, and energy in predictable ways.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1164,7 +1164,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Blood sugar instability affects neurotransmitter production. Your brain needs steady glucose to produce serotonin, dopamine, and other mood-regulating chemicals. When glucose delivery is erratic, neurotransmitter synthesis becomes inconsistent, contributing to mood instability.
         </p>
         <p className="mb-6">
-          Additionally, the rapid insulin spikes that follow high-carbohydrate meals can temporarily increase tryptophan (serotonin's precursor) reaching the brain—creating brief mood lifts followed by longer periods of low serotonin as blood sugar crashes.
+          Additionally, the rapid insulin spikes that follow high-carbohydrate meals can temporarily increase tryptophan (serotonin's precursor) reaching the brain---creating brief mood lifts followed by longer periods of low serotonin as blood sugar crashes.
         </p>
 
         <h2 id="inflammation-brain-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1174,7 +1174,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Chronic low-grade inflammation has emerged as one of the most important biological mechanisms underlying depression and anxiety <Citation id="2" index={2} source="Biological Psychiatry" year="2009" tier={1} />. About 30-40% of people with depression show elevated inflammatory markers in their blood.
         </p>
         <p className="mb-6">
-          Inflammatory molecules called cytokines—particularly IL-6, TNF-alpha, and CRP—can cross the blood-brain barrier and directly affect brain function <Citation id="3" index={3} source="Nature Reviews Immunology" year="2016" tier={1} />. Once in the brain, these inflammatory signals:
+          Inflammatory molecules called cytokines---particularly IL-6, TNF-alpha, and CRP---can cross the blood-brain barrier and directly affect brain function <Citation id="3" index={3} source="Nature Reviews Immunology" year="2016" tier={1} />. Once in the brain, these inflammatory signals:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Reduce serotonin and dopamine production</li>
@@ -1201,7 +1201,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           The Link Between Blood Sugar and Inflammation
         </h2>
         <p className="mb-6">
-          Blood sugar dysregulation and inflammation aren't separate issues—they're intimately connected <Citation id="6" index={6} source="Neuropharmacology" year="2012" tier={1} />:
+          Blood sugar dysregulation and inflammation aren't separate issues---they're intimately connected <Citation id="6" index={6} source="Neuropharmacology" year="2012" tier={1} />:
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1222,7 +1222,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           3. Refined Carbohydrates Spike Inflammatory Markers
         </h3>
         <p className="mb-6">
-          Diets high in refined carbohydrates and sugars—which cause rapid blood sugar spikes—are associated with elevated inflammatory markers like CRP (C-reactive protein) <Citation id="5" index={5} source="Egyptian Heart Journal" year="2018" tier={1} />.
+          Diets high in refined carbohydrates and sugars---which cause rapid blood sugar spikes---are associated with elevated inflammatory markers like CRP (C-reactive protein) <Citation id="5" index={5} source="Egyptian Heart Journal" year="2018" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1236,7 +1236,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           The Modern Diet Problem
         </h2>
         <p className="mb-6">
-          The typical Western diet—high in refined carbohydrates, added sugars, and processed foods—creates perfect conditions for blood sugar instability and chronic inflammation <Citation id="7" index={7} source="Current Opinion in Lipidology" year="2013" tier={1} />.
+          The typical Western diet---high in refined carbohydrates, added sugars, and processed foods---creates perfect conditions for blood sugar instability and chronic inflammation <Citation id="7" index={7} source="Current Opinion in Lipidology" year="2013" tier={1} />.
         </p>
         <p className="mb-6">
           Some researchers argue that rising depression rates over the past century correlate with dramatic dietary changes, particularly increased consumption of refined sugars and decreased consumption of anti-inflammatory whole foods <Citation id="8" index={8} source="Journal of Affective Disorders" year="2010" tier={1} />.

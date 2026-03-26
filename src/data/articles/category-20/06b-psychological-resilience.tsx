@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 6b — Psychological Resilience in Medical Settings | Articles 57–62
+// Subcategory 6b --- Psychological Resilience in Medical Settings | Articles 57--62
 // ============================================================================
 
 export const psychologicalResilienceArticlesB: Article[] = [
@@ -49,15 +49,15 @@ export const psychologicalResilienceArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'A child with a chronic illness is not a small adult. They are a developing person whose understanding of their own body, their place among peers, and their future is being shaped in real time by experiences most children never face. Supporting them means meeting them where they are — not where the diagnosis places them.',
+      'A child with a chronic illness is not a small adult. They are a developing person whose understanding of their own body, their place among peers, and their future is being shaped in real time by experiences most children never face. Supporting them means meeting them where they are --- not where the diagnosis places them.',
 
     practicalExercise: {
       title: 'The Feelings Check-In Routine',
       steps: [
-        { title: 'Create a daily check-in time', description: 'Choose a consistent, low-pressure moment each day — like after dinner or before bed — to ask your child how they are feeling. Use open-ended prompts: "What was the hardest part of today?" or "What made you smile today?"' },
+        { title: 'Create a daily check-in time', description: 'Choose a consistent, low-pressure moment each day --- like after dinner or before bed --- to ask your child how they are feeling. Use open-ended prompts: "What was the hardest part of today?" or "What made you smile today?"' },
         { title: 'Use a feelings chart or scale', description: 'For younger children, provide a visual tool with faces or colors representing different emotions. Let them point to how they feel rather than requiring verbal expression. This lowers the barrier to communication.' },
         { title: 'Validate without fixing', description: 'When your child shares a difficult feeling, resist the urge to immediately solve it. Instead, reflect it back: "It sounds like you felt really frustrated when you had to sit out at recess. That makes sense." Validation builds emotional safety.' },
-        { title: 'Track patterns over time', description: 'Notice recurring themes — anxiety before doctor visits, sadness after missing activities, anger about dietary restrictions. These patterns can help you anticipate needs and inform conversations with your child\'s care team.' },
+        { title: 'Track patterns over time', description: 'Notice recurring themes --- anxiety before doctor visits, sadness after missing activities, anger about dietary restrictions. These patterns can help you anticipate needs and inform conversations with your child\'s care team.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Child\'s Emotional Wellbeing',
@@ -81,7 +81,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             When a child is diagnosed with a chronic illness, the focus understandably centers on
-            the medical — medications, specialist appointments, treatment protocols, symptom management.
+            the medical --- medications, specialist appointments, treatment protocols, symptom management.
             But beneath the clinical logistics, there is a child trying to make sense of why their
             body works differently from their classmates, why they cannot always do what other
             children do, and what this means for who they are becoming.
@@ -99,9 +99,30 @@ export const psychologicalResilienceArticlesB: Article[] = [
           <p className="mb-6">
             This is not because families are unaware that their child is struggling. It is often because
             the demands of managing the medical condition consume all available energy, and psychological
-            concerns get categorized as secondary — something to address later, when things stabilize.
+            concerns get categorized as secondary --- something to address later, when things stabilize.
             But chronic illness, by definition, does not stabilize in the way acute illness does. The
             psychological dimension is not a side effect of the condition. It is part of the condition.
+          </p>
+          <p className="mb-6">
+            The challenges are compounded by a healthcare system that often treats pediatric chronic illness
+            through a purely biomedical lens. Specialists manage organs and symptoms, but the child sitting
+            in the examination room --- the one who is afraid, who feels different from their friends, who is
+            quietly building a narrative about what their body means for their future --- frequently goes
+            unaddressed. Pediatric psychologists and behavioral health consultants are increasingly
+            recognized as essential members of the care team, yet their presence remains the exception
+            rather than the rule in most pediatric medical settings. The result is that many children develop
+            their understanding of illness in isolation, piecing together meaning from overheard conversations,
+            internet searches, and the visible anxiety of their caregivers.
+          </p>
+          <p className="mb-6">
+            Understanding the psychological landscape of childhood chronic illness requires looking beyond
+            diagnostic categories. Whether the condition is asthma, juvenile arthritis, sickle cell disease,
+            or inflammatory bowel disease, the emotional experiences share common threads: disrupted normalcy,
+            altered peer relationships, medical procedures that feel invasive and frightening, and the ongoing
+            effort to construct a sense of self in a body that does not behave the way other children's
+            bodies do. These shared experiences are the foundation for effective psychological support, and
+            they begin with recognizing that every medical appointment is also an emotional event for the
+            child who sits through it.
           </p>
         </div>
 
@@ -119,11 +140,32 @@ export const psychologicalResilienceArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Each developmental stage brings distinct challenges. Younger children often engage in magical
-          thinking — believing they caused their illness through bad behavior or that it is a punishment.
+          thinking --- believing they caused their illness through bad behavior or that it is a punishment.
           School-age children begin to understand the permanence of chronic conditions, which can trigger
           grief-like responses and existential questions that feel overwhelming for their age. Adolescents
           face the collision of illness management with the normative developmental tasks of identity
           formation, autonomy-seeking, and peer belonging<Citation id="6" index={6} />.
+        </p>
+        <p className="mb-6">
+          The impact extends beyond emotional distress into the fundamental architecture of how children
+          learn to relate to their own bodies. Healthy children develop an implicit trust in their bodies
+          --- a background confidence that their body will do what they need it to do. Chronically ill
+          children learn a different lesson: that their body is unpredictable, sometimes painful, and
+          requires vigilance. This altered body relationship can shape everything from their willingness
+          to try new physical activities to their comfort with intimacy in later relationships. Research
+          on body image in pediatric chronic illness populations reveals elevated rates of body
+          dissatisfaction that persist well beyond the acute phases of illness management.
+        </p>
+        <p className="mb-6">
+          Cognitive development is also affected in ways that are not always visible. Children who miss
+          significant amounts of school due to illness may develop gaps in foundational academic skills,
+          but they also miss the informal social learning that happens in classrooms and on playgrounds ---
+          how to negotiate conflicts, how to read social cues, how to navigate group dynamics. These social
+          learning experiences are difficult to replicate at home, and their absence can create a subtle
+          but persistent sense of social disconnection that compounds over time. Additionally, the cognitive
+          load of managing a chronic condition --- remembering medications, monitoring symptoms, anticipating
+          triggers --- consumes mental resources that other children have available for learning, play, and
+          creative exploration.
         </p>
 
         <ArticleTabs tabs={[
@@ -133,7 +175,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
               <div className="space-y-3">
                 <p className="font-medium text-gray-900 dark:text-white">Developmental challenges at this stage:</p>
                 <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
-                  <li>Magical thinking about illness causation — believing they did something wrong</li>
+                  <li>Magical thinking about illness causation --- believing they did something wrong</li>
                   <li>Difficulty understanding why painful treatments are necessary</li>
                   <li>Separation anxiety intensified by hospital visits and caregiver stress</li>
                   <li>Regression in developmental milestones during flare-ups or hospitalizations</li>
@@ -178,10 +220,10 @@ export const psychologicalResilienceArticlesB: Article[] = [
           The Invisible Burden on Families
         </h2>
         <p className="mb-6">
-          A child's chronic illness does not exist in isolation — it reshapes the entire family system.
+          A child's chronic illness does not exist in isolation --- it reshapes the entire family system.
           Parents often experience their own grief, guilt, anxiety, and exhaustion, which can inadvertently
           affect the emotional climate the child develops in. Research on family-based interventions
-          demonstrates that addressing parental distress is not separate from supporting the child —
+          demonstrates that addressing parental distress is not separate from supporting the child ---
           it is one of the most effective ways to improve the child's psychological
           outcomes<Citation id="4" index={4} />.
         </p>
@@ -190,8 +232,30 @@ export const psychologicalResilienceArticlesB: Article[] = [
           chronically ill children are at elevated risk for emotional and behavioral difficulties,
           including feelings of neglect, jealousy, guilt about their own health, and anxiety about
           their sibling's future<Citation id="9" index={9} />. They may suppress their own needs
-          because they perceive — correctly or not — that their problems are trivial compared to
+          because they perceive --- correctly or not --- that their problems are trivial compared to
           their sibling's.
+        </p>
+        <p className="mb-6">
+          The marital relationship is often strained by the demands of managing a child's chronic
+          condition. Parents may disagree about treatment decisions, about how much to push the child
+          toward normalcy versus accommodation, or about how to divide the relentless caregiving labor.
+          Research on parental couples in pediatric chronic illness contexts shows elevated rates of
+          relationship conflict, communication breakdown, and sexual dissatisfaction compared to parents
+          of healthy children. When the parental relationship deteriorates, the emotional climate of the
+          entire household shifts, creating additional stressors for the chronically ill child and their
+          siblings alike. Addressing the parental relationship as part of the overall care plan is not a
+          luxury --- it is a clinical necessity that directly affects the child's psychological environment.
+        </p>
+        <p className="mb-6">
+          Financial stress is another dimension that frequently goes unexamined in discussions of
+          pediatric chronic illness. The costs of ongoing medical care --- specialist visits, medications,
+          medical equipment, travel to treatment centers, lost work time for caregiving --- can create
+          persistent economic pressure that permeates every aspect of family life. Children are remarkably
+          perceptive about family financial stress, even when parents try to shield them. A child who
+          overhears arguments about medical bills may internalize the belief that their illness is a
+          burden on the family, adding guilt to their already complex emotional landscape. Financial
+          counseling and connection to assistance programs should be standard components of pediatric
+          chronic illness care, yet they are rarely offered proactively.
         </p>
 
         <StatCard
@@ -206,7 +270,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             When a child has a chronic illness, the entire family lives with that condition. Parents
             manage complex medical regimens while trying to maintain normalcy. Siblings navigate
             disrupted routines and divided parental attention. Effective psychological support
-            recognizes that the family system — not just the diagnosed child — needs care. Research
+            recognizes that the family system --- not just the diagnosed child --- needs care. Research
             consistently shows that family-based interventions produce better outcomes for the child
             than child-only approaches.
           </p>
@@ -227,7 +291,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           may not understand: leaving class for medication, sitting out during physical activities,
           managing dietary restrictions at lunch, or coping with visible symptoms like skin conditions
           or medical devices. Each of these moments carries the potential for self-consciousness,
-          embarrassment, or bullying — and the cumulative effect can be a child who begins to define
+          embarrassment, or bullying --- and the cumulative effect can be a child who begins to define
           themselves primarily through the lens of their illness.
         </p>
         <p className="mb-6">
@@ -237,12 +301,61 @@ export const psychologicalResilienceArticlesB: Article[] = [
           recognize signs of distress, and facilitating re-integration after extended
           absences<Citation id="10" index={10} />.
         </p>
+        <p className="mb-6">
+          The social dimensions of chronic illness in childhood also include the challenge of disclosure.
+          Children with invisible illnesses --- conditions that are not immediately apparent to others ---
+          face repeated decisions about whether to tell classmates, teachers, and friends about their
+          condition. Each disclosure carries risk: the possibility of being treated differently, being
+          pitied, being excluded, or having their illness become the defining feature of how others see
+          them. Many children develop sophisticated strategies for managing information about their health,
+          but this ongoing calculation is itself a psychological burden that healthy children never
+          experience. Teaching children age-appropriate disclosure skills and helping them develop language
+          for talking about their condition on their own terms can significantly reduce this burden.
+        </p>
+
+        <h2 id="the-transition-to-adult-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Transition to Adult Care
+        </h2>
+        <p className="mb-6">
+          One of the most psychologically significant moments in a young person's experience with chronic
+          illness is the transition from pediatric to adult healthcare, typically occurring between ages
+          sixteen and twenty-one. This transition involves not only a change in medical providers but a
+          fundamental shift in the healthcare relationship. Pediatric care tends to be family-centered,
+          with parents serving as primary advocates and decision-makers. Adult care expects the patient
+          to manage their own appointments, communicate their own symptoms, navigate insurance systems,
+          and advocate for themselves in settings that may be less accommodating of their developmental
+          needs. For young people who have spent their entire lives in pediatric systems, this shift can
+          feel abrupt and disorienting.
+        </p>
+        <p className="mb-6">
+          Research on healthcare transitions for young people with chronic conditions consistently
+          identifies this period as one of elevated risk for treatment non-adherence, psychological
+          distress, and deterioration in health outcomes. The young person may lose the relationships
+          with providers who have known them since childhood, encounter adult healthcare professionals
+          who are less familiar with developmental considerations, and face new expectations for
+          self-management at a time when they are simultaneously navigating the broader developmental
+          challenges of emerging adulthood --- leaving home, starting college or work, forming romantic
+          relationships, and establishing an independent identity. Structured transition programs that
+          begin preparation years before the actual transfer, that involve both pediatric and adult
+          providers, and that include psychological support for the emotional dimensions of this
+          change have been shown to significantly improve both health and psychological outcomes.
+        </p>
+        <p className="mb-6">
+          The transition period also raises important questions about identity and autonomy. A young
+          person who has always had their parents manage their medical care must learn to own their
+          condition in a new way --- to see themselves not as a child who has an illness that adults
+          manage, but as an adult who manages their own health. This identity shift is both a challenge
+          and an opportunity. When supported well, it can become a source of genuine self-efficacy and
+          maturity. When handled poorly --- when the young person is simply discharged from pediatric care
+          without preparation --- it can lead to disengagement from treatment, avoidance of medical
+          appointments, and a sense of being abandoned by the systems that once provided safety.
+        </p>
 
         <h2 id="building-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Building Resilience: What the Evidence Shows
         </h2>
         <p className="mb-6">
-          Resilience in chronically ill children is not an innate trait — it is built through specific
+          Resilience in chronically ill children is not an innate trait --- it is built through specific
           protective factors that families, clinicians, and communities can actively cultivate. Research
           identifies several key components: a strong sense of self-efficacy around illness management,
           supportive family relationships, meaningful peer connections, and access to psychological
@@ -260,11 +373,11 @@ export const psychologicalResilienceArticlesB: Article[] = [
           },
           {
             title: 'Normalize emotional responses',
-            description: 'Children need permission to feel angry, sad, scared, or frustrated about their condition — without those emotions being pathologized or dismissed. Normalizing the full range of emotional responses teaches children that their feelings are valid and manageable, not dangerous.',
+            description: 'Children need permission to feel angry, sad, scared, or frustrated about their condition --- without those emotions being pathologized or dismissed. Normalizing the full range of emotional responses teaches children that their feelings are valid and manageable, not dangerous.',
           },
           {
             title: 'Connect with peers who understand',
-            description: 'Peer support programs — whether in-person camps, hospital-based groups, or online communities — provide chronically ill children with something no adult can offer: the experience of being understood by someone their own age who truly gets it. Research shows these connections improve self-esteem and treatment adherence.',
+            description: 'Peer support programs --- whether in-person camps, hospital-based groups, or online communities --- provide chronically ill children with something no adult can offer: the experience of being understood by someone their own age who truly gets it. Research shows these connections improve self-esteem and treatment adherence.',
           },
         ]} />
 
@@ -293,14 +406,14 @@ export const psychologicalResilienceArticlesB: Article[] = [
           medical populations, family therapy that addresses the systemic impact of illness, and
           integrated behavioral health models where psychologists work alongside the child's
           medical team<Citation id="4" index={4} />. The most effective approaches do not treat
-          the psychological and medical dimensions as separate problems — they recognize that a
+          the psychological and medical dimensions as separate problems --- they recognize that a
           child's emotional state directly affects their physical health outcomes, and vice versa.
         </p>
 
         <ArticleCallout type="info" title="Integrated Care Makes a Difference">
           <p>
-            Children who receive psychological support that is integrated with their medical care —
-            rather than referred out to a separate mental health system — show better outcomes on
+            Children who receive psychological support that is integrated with their medical care ---
+            rather than referred out to a separate mental health system --- show better outcomes on
             both fronts. Integrated models reduce the stigma of mental health treatment, improve
             communication between providers, and make it easier for families who are already
             managing complex medical schedules to access psychological support without additional
@@ -308,9 +421,33 @@ export const psychologicalResilienceArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="long-term-outcomes-and-hope" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Long-Term Outcomes and Hope
+        </h2>
+        <p className="mb-6">
+          Longitudinal research tracking children with chronic illness into adulthood offers a nuanced
+          picture that is more hopeful than many parents fear. While childhood chronic illness does
+          increase the statistical risk for certain psychological difficulties, the majority of children
+          with chronic conditions grow into psychologically healthy adults --- particularly when they
+          have received adequate emotional support during their formative years. The protective factors
+          that matter most are not the absence of difficulty but the presence of responsive relationships,
+          open communication, and opportunities to develop competence and autonomy within the context
+          of their condition. Children who are given these resources do not just survive their illness
+          experience --- they often develop capacities for empathy, self-awareness, and emotional depth
+          that serve them throughout their lives.
+        </p>
+        <p className="mb-6">
+          Adults who grew up with chronic illness frequently report that their childhood experiences,
+          while difficult, contributed to strengths they might not have developed otherwise. They describe
+          heightened emotional intelligence, an ability to adapt to changing circumstances, deeper
+          appreciation for relationships and health, and a practical resilience that comes from having
+          faced genuine hardship at a young age. These outcomes are not automatic --- they are the product
+          of families, clinicians, and communities that took the psychological dimensions of childhood
+          illness seriously and invested in the child's emotional development alongside their physical care.
+        </p>
         <p className="mb-6">
           Supporting a child's mental health through chronic illness is not about eliminating
-          difficulty — it is about ensuring that difficulty does not define them. With the right
+          difficulty --- it is about ensuring that difficulty does not define them. With the right
           support, children with chronic conditions can develop psychological strengths that serve
           them throughout their lives: adaptability, empathy, self-awareness, and a resilience
           that comes not from avoiding hardship, but from learning to navigate it with people who
@@ -351,13 +488,13 @@ export const psychologicalResilienceArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'Being a parent with chronic illness does not make you a lesser parent. It makes you a parent who must be more intentional about how you spend your energy, more honest about your limitations, and more creative in how you show your children what love looks like — even on the days when love looks like resting on the couch while they read you a story.',
+      'Being a parent with chronic illness does not make you a lesser parent. It makes you a parent who must be more intentional about how you spend your energy, more honest about your limitations, and more creative in how you show your children what love looks like --- even on the days when love looks like resting on the couch while they read you a story.',
 
     practicalExercise: {
       title: 'The Energy Budget Conversation',
       steps: [
-        { title: 'Map your weekly energy patterns', description: 'Over one week, notice when your energy is highest and lowest. Most people with chronic illness have predictable patterns — mornings may be better than afternoons, or certain days after treatment may be consistently difficult. Understanding your pattern is the foundation for planning.' },
-        { title: 'Identify your non-negotiable parenting moments', description: 'Choose two or three activities each week that matter most to you as a parent — reading bedtime stories, attending one sports game, cooking Sunday breakfast together. Protect these by planning rest before and after them.' },
+        { title: 'Map your weekly energy patterns', description: 'Over one week, notice when your energy is highest and lowest. Most people with chronic illness have predictable patterns --- mornings may be better than afternoons, or certain days after treatment may be consistently difficult. Understanding your pattern is the foundation for planning.' },
+        { title: 'Identify your non-negotiable parenting moments', description: 'Choose two or three activities each week that matter most to you as a parent --- reading bedtime stories, attending one sports game, cooking Sunday breakfast together. Protect these by planning rest before and after them.' },
         { title: 'Have an age-appropriate energy talk with your children', description: 'Explain in simple terms: "My body has a limited amount of energy each day, like a battery. Some days it charges more than others. When I rest, I am recharging so I can be with you." Children respond well to concrete metaphors.' },
         { title: 'Create a family flexibility plan', description: 'Develop backup plans for low-energy days that still feel connected: movie nights instead of outings, baking together instead of going to the park, phone calls with grandparents while you rest nearby. The goal is presence, not performance.' },
       ],
@@ -387,7 +524,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             parents running alongside their children at the park, and by an internal voice that measures
             your worth by what you can physically do for your family on any given day. The guilt is
             constant, and it is rarely addressed in either the parenting literature or the chronic
-            illness literature — because each field treats you as only half of who you are.
+            illness literature --- because each field treats you as only half of who you are.
           </p>
           <p className="mb-6">
             An estimated 10 to 15 percent of parents in Western countries live with at least one
@@ -400,8 +537,20 @@ export const psychologicalResilienceArticlesB: Article[] = [
           </p>
           <p className="mb-6">
             This article is for those parents. Not to minimize the difficulty of what you face, but to
-            examine what the research actually says — about the effects on children, the strategies that
+            examine what the research actually says --- about the effects on children, the strategies that
             help, and the permission you may need to parent differently without parenting less.
+          </p>
+          <p className="mb-6">
+            The intersection of chronic illness and parenting creates a unique psychological experience
+            that neither the parenting literature nor the chronic illness literature adequately addresses
+            in isolation. Parenting advice assumes energy and physical capacity. Chronic illness resources
+            assume the patient's primary concern is their own wellbeing. But the parent with chronic
+            illness exists at the junction of these two identities, carrying the weight of both simultaneously.
+            Their health decisions are never just about themselves --- every choice about rest, treatment,
+            medication side effects, and energy allocation ripples through their family. Understanding
+            this dual identity is the starting point for any meaningful support, because it acknowledges
+            that these parents are not simply patients who happen to have children or parents who happen
+            to be sick. They are navigating a complexity that requires its own framework of understanding.
           </p>
         </div>
 
@@ -411,7 +560,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           If there is one psychological experience that unites parents with chronic illness across
           diagnoses, it is guilt. Research consistently identifies parental guilt as the most commonly
-          reported psychological challenge in this population — more prevalent than depression, anxiety,
+          reported psychological challenge in this population --- more prevalent than depression, anxiety,
           or grief about the illness itself<Citation id="3" index={3} />. Parents describe feeling
           guilty for needing rest when their children want to play, for missing school events during
           flare-ups, for relying on partners or extended family to cover responsibilities they wish
@@ -426,9 +575,32 @@ export const psychologicalResilienceArticlesB: Article[] = [
           because they are too fatigued to go, is left to wonder whether they are failing the people
           they love most<Citation id="3" index={3} />.
         </p>
+        <p className="mb-6">
+          The guilt operates on multiple levels simultaneously. There is the immediate, situational guilt
+          of specific missed moments --- the birthday party you could not attend, the homework session you
+          had to cut short because of pain, the bedtime routine you handed off to your partner because
+          your body simply could not manage another hour of being upright. But beneath these specific
+          instances lies a deeper, existential guilt about the kind of childhood you believe you are
+          providing. Parents with chronic illness often carry an internal narrative that their children
+          are missing out on something essential, that the childhood they are offering is somehow
+          diminished compared to what a healthy parent could provide. This narrative is powerful,
+          persistent, and largely unexamined --- because it feels so obviously true that questioning
+          it seems like denial rather than clarity.
+        </p>
+        <p className="mb-6">
+          What the research reveals, however, is that this guilt narrative is based on assumptions about
+          parenting that do not hold up under scrutiny. The qualities that children most consistently
+          identify as important in their parents --- emotional availability, honesty, warmth, and the
+          feeling of being genuinely known --- are not dependent on physical capacity. A parent who is
+          lying on the couch but fully emotionally present and engaged in conversation with their child
+          is providing something more valuable than a parent who is physically active but emotionally
+          distracted. The guilt tells parents that quantity of activity equals quality of parenting, but
+          decades of attachment research suggests otherwise. What children need most is not a parent
+          who can do everything, but a parent who shows up emotionally with whatever they have.
+        </p>
 
         <QuoteBlock
-          quote="Guilt told me I was failing because I couldn't be the mother I imagined I would be. Therapy helped me see that my children didn't need that imagined mother. They needed the real one — the one who showed up with whatever she had that day."
+          quote="Guilt told me I was failing because I couldn't be the mother I imagined I would be. Therapy helped me see that my children didn't need that imagined mother. They needed the real one --- the one who showed up with whatever she had that day."
           attribution="Research participant"
           role="Mother living with multiple sclerosis"
           source="Psychology & Health, 2022"
@@ -450,7 +622,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           One of the most persistent fears among parents with chronic illness is that their condition
           is harming their children. This fear deserves honest examination. Research does indicate
-          that parental chronic illness can affect children — but the effects are far more nuanced
+          that parental chronic illness can affect children --- but the effects are far more nuanced
           than many parents fear, and they are heavily mediated by factors within the family's
           control<Citation id="5" index={5} />.
         </p>
@@ -461,7 +633,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           are acknowledged and met, when support systems are in place, and when the ill parent
           maintains emotional availability even when physical availability is
           limited<Citation id="5" index={5} />. The key finding is that it is not the illness
-          itself that determines child outcomes — it is how the family navigates it.
+          itself that determines child outcomes --- it is how the family navigates it.
         </p>
 
         <StatCard
@@ -476,9 +648,9 @@ export const psychologicalResilienceArticlesB: Article[] = [
             Research is clear: age-appropriate, honest communication about a parent's illness is
             the single strongest protective factor for child adjustment<Citation id="4" index={4} />.
             Children who are kept in the dark tend to fill informational gaps with anxiety and
-            catastrophic imaginings. Children who are given simple, truthful explanations — "Mama
+            catastrophic imaginings. Children who are given simple, truthful explanations --- "Mama
             has a condition that makes her very tired sometimes, and that is why she rests more
-            than other parents" — develop better coping skills and show less anxiety about their
+            than other parents" --- develop better coping skills and show less anxiety about their
             parent's health.
           </p>
         </ArticleCallout>
@@ -487,11 +659,11 @@ export const psychologicalResilienceArticlesB: Article[] = [
           The Parentification Risk: When Children Take On Too Much
         </h2>
         <p className="mb-6">
-          One legitimate concern is parentification — the process by which children assume caregiving
+          One legitimate concern is parentification --- the process by which children assume caregiving
           responsibilities that exceed what is developmentally appropriate. Research shows that
           parental chronic illness is associated with increased caregiving roles for children,
           particularly older daughters<Citation id="2" index={2} />. A certain degree of helping
-          is normal and even beneficial — children who contribute to family functioning develop
+          is normal and even beneficial --- children who contribute to family functioning develop
           empathy and competence. But when a child becomes a primary caregiver, managing medications,
           providing emotional support to a parent, or consistently prioritizing the parent's needs
           over their own, the developmental cost can be significant<Citation id="10" index={10} />.
@@ -533,9 +705,9 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           Chronic illness inevitably affects the couple relationship, and the quality of the parental
           partnership is one of the strongest predictors of child outcomes in these
-          families<Citation id="9" index={9} />. When the couple relationship is strained — by
+          families<Citation id="9" index={9} />. When the couple relationship is strained --- by
           resentment over unequal responsibilities, disagreements about how to discuss the illness
-          with children, or the healthy partner's own unacknowledged needs — children feel the
+          with children, or the healthy partner's own unacknowledged needs --- children feel the
           tension regardless of whether it is explicitly expressed.
         </p>
         <p className="mb-6">
@@ -548,11 +720,47 @@ export const psychologicalResilienceArticlesB: Article[] = [
           relationship satisfaction and child adjustment outcomes.
         </p>
 
+        <h2 id="navigating-flare-ups-as-a-parent" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating Flare-Ups as a Parent
+        </h2>
+        <p className="mb-6">
+          Perhaps no aspect of parenting with chronic illness is more psychologically demanding than
+          managing flare-ups --- periods when the condition worsens unpredictably and the parent's
+          capacity drops significantly. Flare-ups disrupt established routines, force last-minute changes
+          to plans, and can frighten children who do not understand why their parent has suddenly become
+          more limited. The parent, meanwhile, is managing physical symptoms while simultaneously
+          worrying about the impact on their children, arranging alternative care, and coping with the
+          guilt and frustration of having their body override their intentions. Research on parental
+          chronic pain shows that children are acutely sensitive to changes in their parent's functioning,
+          and that the parent's emotional response to a flare-up --- more than the flare-up itself ---
+          shapes how children experience these periods<Citation id="7" index={7} />.
+        </p>
+        <p className="mb-6">
+          Developing a family flare-up protocol can significantly reduce the psychological chaos these
+          episodes create. This protocol might include a pre-arranged list of people who can help on
+          short notice, a set of low-energy activities that the family can do together even when the
+          parent is limited, age-appropriate language for explaining what is happening, and a routine
+          for reconnection once the flare-up passes. Children cope better with disruptions when the
+          disruptions are framed as temporary and manageable rather than catastrophic, and when they
+          have a role --- however small --- in the family's response. The child who fetches a blanket for
+          their parent or chooses the movie for a quiet afternoon feels useful rather than helpless,
+          and this sense of contribution is psychologically protective for both the child and the parent.
+        </p>
+        <p className="mb-6">
+          The aftermath of a flare-up also deserves attention. Many parents with chronic illness describe
+          a cycle of flare-up, guilt, and compensatory overexertion --- pushing themselves to "make up" for
+          lost time with their children, which often triggers another flare-up. Breaking this cycle
+          requires the same principle that applies to all energy management in chronic illness:
+          sustainability over performance. The goal after a flare-up is not to compensate but to return
+          to a steady baseline that the body can maintain. Children benefit more from consistent,
+          moderate parental presence than from an oscillation between overexertion and collapse.
+        </p>
+
         <h2 id="building-a-sustainable-family-life" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Building a Sustainable Family Life
         </h2>
         <p className="mb-6">
-          Sustainability — not perfection — is the goal for families navigating parental chronic
+          Sustainability --- not perfection --- is the goal for families navigating parental chronic
           illness. This means building structures that accommodate the reality of fluctuating
           health rather than pretending it does not exist. It means accepting help without shame,
           communicating honestly with children about limitations, and redefining what quality
@@ -566,7 +774,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
               <p>
                 Quality time does not require physical activity or elaborate planning. Reading together,
                 watching a movie, talking in the car, or simply being in the same room while each person
-                does their own thing — these are all forms of connection that children value deeply. Research
+                does their own thing --- these are all forms of connection that children value deeply. Research
                 on child attachment shows that what matters most is emotional availability and responsiveness,
                 not the intensity of the shared activity.
               </p>
@@ -576,7 +784,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             title: 'Build a support network before you need it',
             content: (
               <p>
-                Identify two or three people — family members, friends, neighbors, other parents — who
+                Identify two or three people --- family members, friends, neighbors, other parents --- who
                 can step in during flare-ups. Having this network in place before a crisis reduces the
                 stress of scrambling for help during difficult periods. Be specific about what you need:
                 school pickup on bad days, an emergency dinner delivery, or someone to take the kids for
@@ -591,7 +799,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
                 When chronic illness and parenting consume all available energy, personal identity can
                 erode. Maintaining even small connections to interests, friendships, or activities that
                 are not about illness or children helps preserve the sense of self that sustains you
-                through difficult periods. This is not selfish — it is a form of psychological maintenance
+                through difficult periods. This is not selfish --- it is a form of psychological maintenance
                 that benefits the entire family.
               </p>
             ),
@@ -609,6 +817,30 @@ export const psychologicalResilienceArticlesB: Article[] = [
           },
         ]} />
 
+        <h2 id="modeling-resilience-for-your-children" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Modeling Resilience for Your Children
+        </h2>
+        <p className="mb-6">
+          One of the most overlooked gifts that parents with chronic illness can offer their children is
+          the lived example of how to cope with difficulty. Children learn more from watching their
+          parents navigate challenges than from any lesson they are explicitly taught. A parent who
+          acknowledges their limitations honestly, who asks for help without shame, who adjusts plans
+          without spiraling into self-blame, and who continues to pursue meaningful activities within
+          their capacity is modeling resilience in its most authentic form. This is not the idealized
+          resilience of overcoming obstacles through sheer determination --- it is the everyday resilience
+          of adapting to what is, finding joy where it exists, and treating oneself with compassion
+          when things are hard.
+        </p>
+        <p className="mb-6">
+          Research on children's development of coping skills shows that parental modeling is one of the
+          most powerful determinants of how children learn to manage their own difficulties. A child who
+          grows up watching their parent practice self-care, set boundaries, communicate needs, and
+          maintain relationships despite physical limitations is learning skills that will serve them
+          throughout their entire life --- regardless of whether they ever face chronic illness themselves.
+          The emotional vocabulary, the comfort with vulnerability, the understanding that rest is not
+          weakness and asking for help is not failure --- these are lessons that many children never receive,
+          and they are lessons that parents with chronic illness are uniquely positioned to teach.
+        </p>
         <p className="mb-6">
           Living with chronic illness while raising children is one of the most demanding combinations
           a person can face. But the research offers a consistent message of hope: children are
@@ -641,7 +873,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     tags: ['Palliative Psychology', 'Chronic Illness', 'Quality of Life', 'Meaning-Making', 'Suffering'],
 
     summary:
-      'Palliative care is widely associated with terminal illness and end-of-life support, but its psychological principles — relieving suffering, improving quality of life, and helping people find meaning amid limitation — are profoundly relevant to the millions of people living with chronic, non-terminal conditions. Palliative psychology offers a framework for addressing the existential, emotional, and relational dimensions of ongoing illness that standard medical care often overlooks. Research increasingly supports integrating palliative psychological approaches into chronic disease management, showing improvements in mood, coping, and overall quality of life. This article explores what palliative psychology means outside the hospice context and how its principles can transform the experience of living with conditions that will not end but can be navigated with greater dignity and purpose.',
+      'Palliative care is widely associated with terminal illness and end-of-life support, but its psychological principles --- relieving suffering, improving quality of life, and helping people find meaning amid limitation --- are profoundly relevant to the millions of people living with chronic, non-terminal conditions. Palliative psychology offers a framework for addressing the existential, emotional, and relational dimensions of ongoing illness that standard medical care often overlooks. Research increasingly supports integrating palliative psychological approaches into chronic disease management, showing improvements in mood, coping, and overall quality of life. This article explores what palliative psychology means outside the hospice context and how its principles can transform the experience of living with conditions that will not end but can be navigated with greater dignity and purpose.',
 
     keyFacts: [
       { text: 'The World Health Organization defines palliative care as applicable early in the course of illness, not only at end of life', citationIndex: 1 },
@@ -654,12 +886,12 @@ export const psychologicalResilienceArticlesB: Article[] = [
     videoStatus: 'planned' as const,
 
     sparkMoment:
-      'Palliative psychology does not ask how to cure what cannot be cured. It asks a different question entirely: given that this condition will be part of your life, how do we ensure that your life remains yours — with meaning, connection, and the dignity of being treated as a whole person, not a diagnosis?',
+      'Palliative psychology does not ask how to cure what cannot be cured. It asks a different question entirely: given that this condition will be part of your life, how do we ensure that your life remains yours --- with meaning, connection, and the dignity of being treated as a whole person, not a diagnosis?',
 
     practicalExercise: {
       title: 'The Values Compass Exercise',
       steps: [
-        { title: 'Identify your core values', description: 'Write down three to five values that matter most to you — not what you think should matter, but what genuinely does. Examples might include connection, creativity, independence, learning, or contribution. These are your compass points.' },
+        { title: 'Identify your core values', description: 'Write down three to five values that matter most to you --- not what you think should matter, but what genuinely does. Examples might include connection, creativity, independence, learning, or contribution. These are your compass points.' },
         { title: 'Assess current alignment', description: 'For each value, rate on a scale of 1-10 how well your current life reflects that value. Be honest. Chronic illness often creates gaps between values and lived reality, and naming those gaps is the first step toward closing them.' },
         { title: 'Choose one small value-aligned action', description: 'Pick the value with the largest gap and identify one small, achievable action you could take this week that moves you closer to it. If connection is your value but isolation has grown, the action might be calling one friend. Small steps count.' },
         { title: 'Reflect on meaning, not outcome', description: 'After taking the action, reflect not on whether it fixed anything, but on how it felt to move toward what matters. Palliative psychology emphasizes that meaning is found in the direction you face, not the distance you travel.' },
@@ -686,12 +918,12 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             When most people hear the word "palliative," they think of hospice, terminal diagnoses,
-            and end-of-life care. This association is understandable but incomplete — and for the
+            and end-of-life care. This association is understandable but incomplete --- and for the
             hundreds of millions of people worldwide living with chronic, non-terminal conditions,
             it has created a gap in care that leaves profound suffering unaddressed. The person with
             fibromyalgia who has been told to "learn to live with it," the person with multiple
             sclerosis watching their independence narrow, the person with lupus navigating years of
-            unpredictable flares — they are not dying, but they are grieving. And the psychological
+            unpredictable flares --- they are not dying, but they are grieving. And the psychological
             dimensions of that grief deserve the same quality of attention that palliative care
             provides at end of life.
           </p>
@@ -701,15 +933,27 @@ export const psychologicalResilienceArticlesB: Article[] = [
             life"<Citation id="1" index={1} />. This definition explicitly extends beyond terminal
             prognoses. Yet in practice, palliative psychological services remain overwhelmingly
             concentrated in oncology and hospice settings, while people with chronic non-malignant
-            conditions — who may live for decades with significant suffering — are largely expected
+            conditions --- who may live for decades with significant suffering --- are largely expected
             to cope on their own.
           </p>
           <p className="mb-6">
             Palliative psychology offers a fundamentally different orientation than standard medical
             psychology. Rather than focusing primarily on symptom reduction or behavior change, it
-            asks: how do we address the full spectrum of suffering — physical, emotional, existential,
-            and social — in a person whose condition will not resolve but whose life continues to
+            asks: how do we address the full spectrum of suffering --- physical, emotional, existential,
+            and social --- in a person whose condition will not resolve but whose life continues to
             demand meaning?
+          </p>
+          <p className="mb-6">
+            The need for this reorientation is becoming increasingly urgent as the demographics of chronic
+            illness shift. Medical advances have transformed many conditions that were once rapidly fatal
+            into long-term illnesses that people live with for decades. This is, in many ways, a triumph
+            of modern medicine. But it has created a population of patients whose psychological needs
+            extend far beyond what acute care models were designed to address. A person diagnosed with
+            multiple sclerosis at thirty may live another forty or fifty years with progressive disability.
+            A person with systemic lupus may spend decades managing unpredictable flares, medication side
+            effects, and the gradual accumulation of organ damage. These are not problems that resolve
+            with a course of treatment. They are ongoing life circumstances that demand ongoing
+            psychological attention --- attention that palliative psychology is uniquely equipped to provide.
           </p>
         </div>
 
@@ -718,7 +962,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Dame Cicely Saunders, the founder of the modern hospice movement, introduced the concept of
-          "total pain" — the idea that suffering has physical, psychological, social, and spiritual
+          "total pain" --- the idea that suffering has physical, psychological, social, and spiritual
           dimensions that are inseparable and must be addressed together. This framework, originally
           developed for cancer patients, has been increasingly recognized as directly applicable to
           chronic non-terminal conditions<Citation id="7" index={7} />.
@@ -729,6 +973,19 @@ export const psychologicalResilienceArticlesB: Article[] = [
           relationships and careers, and the existential pain of a life that has contracted around
           their limitations. Standard medical care typically addresses only the physical dimension.
           Palliative psychology addresses all four.
+        </p>
+        <p className="mb-6">
+          Understanding total suffering also means recognizing that these dimensions interact with and
+          amplify one another in ways that cannot be addressed in isolation. Physical pain is experienced
+          more intensely when a person feels socially isolated, psychologically hopeless, or existentially
+          adrift. Depression deepens when physical symptoms are uncontrolled and social connections have
+          eroded. Existential distress --- the feeling that life has lost its meaning or purpose --- can
+          make even well-managed physical symptoms feel unbearable. This interconnection explains why
+          treating only one dimension of suffering often produces disappointing results. A person whose
+          pain is medically managed but who feels profoundly alone and purposeless will not report
+          improved quality of life, because the suffering that matters most to them has not been touched.
+          Palliative psychology insists on addressing the whole picture, not because it is philosophically
+          appealing, but because the evidence shows it is clinically necessary.
         </p>
 
         <ComparisonTable
@@ -745,7 +1002,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           Research shows that up to 60% of people with chronic non-terminal conditions report
           unaddressed existential or psychological suffering that they feel their medical team has
           not acknowledged or attempted to help with<Citation id="2" index={2} />. This is not a
-          failure of the individuals to cope — it is a gap in the systems designed to care for them.
+          failure of the individuals to cope --- it is a gap in the systems designed to care for them.
         </p>
 
         <h2 id="grief-without-death" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -754,7 +1011,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           One of palliative psychology's most important contributions to chronic illness care is
           the recognition that grief is not only about death. People with chronic conditions
-          experience what researchers call "non-death losses" — the loss of health, physical
+          experience what researchers call "non-death losses" --- the loss of health, physical
           capability, career identity, social roles, financial security, spontaneity, and the
           future they had imagined<Citation id="8" index={8} />. These losses are real, cumulative,
           and often unrecognized by others because no one has died.
@@ -767,13 +1024,26 @@ export const psychologicalResilienceArticlesB: Article[] = [
           is told they should be grateful for not having a terminal diagnosis, which effectively
           silences their legitimate suffering<Citation id="8" index={8} />.
         </p>
+        <p className="mb-6">
+          The recursive nature of chronic illness grief is particularly difficult because it offers no
+          sense of completion. In bereavement, there is --- eventually --- an adaptation to the new reality.
+          The loss is painful but stable. In chronic illness, the losses keep accumulating. The person
+          who grieves the loss of their career may, a year later, grieve the loss of their ability to
+          drive. The person who adapted to needing a cane may later need to adapt to a wheelchair. Each
+          new loss reopens the grief process and can feel like starting over, even though the person has
+          already demonstrated remarkable capacity for adaptation. Clinicians who work with this
+          population must understand that returning to grief is not a failure of coping --- it is a
+          normal response to genuinely new losses that deserve their own period of acknowledgment and
+          processing. The goal is not to grieve once and be done, but to develop a relationship with
+          grief that allows it to coexist with continued engagement in life.
+        </p>
 
         <ArticleCallout type="clinical-note" title="Non-Death Losses Deserve Recognition">
           <p>
             Clinicians working with chronically ill populations should explicitly name and validate
             non-death losses. Many patients have never been given language for what they are
-            experiencing. Hearing a professional say "You are grieving real losses — your career,
-            your independence, the future you planned — and that grief is legitimate" can be
+            experiencing. Hearing a professional say "You are grieving real losses --- your career,
+            your independence, the future you planned --- and that grief is legitimate" can be
             profoundly therapeutic in itself. It moves the experience from private confusion to
             recognized human suffering.
           </p>
@@ -785,8 +1055,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           If palliative psychology has a central therapeutic principle, it is this: people can
           endure remarkable difficulty when they experience their lives as meaningful. The question
-          for chronic illness is not whether meaning is possible within limitation — research
-          consistently shows that it is — but how to support people in finding it when their
+          for chronic illness is not whether meaning is possible within limitation --- research
+          consistently shows that it is --- but how to support people in finding it when their
           previous sources of meaning have been disrupted<Citation id="3" index={3} />.
         </p>
         <p className="mb-6">
@@ -832,7 +1102,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             title: 'Acceptance and Commitment Therapy (ACT)',
             content: (
               <p>
-                ACT helps people develop psychological flexibility — the ability to be present with
+                ACT helps people develop psychological flexibility --- the ability to be present with
                 difficult experiences without being controlled by them, while continuing to move toward
                 what matters. For chronic illness, this means learning to hold pain, fatigue, or
                 limitation alongside meaningful engagement rather than waiting for symptoms to resolve
@@ -847,7 +1117,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
               <p>
                 Originally developed for end-of-life care, dignity therapy has been adapted for
                 non-terminal chronic conditions. It involves guided conversations about what matters
-                most to the person — their values, their legacy, what they want remembered, and what
+                most to the person --- their values, their legacy, what they want remembered, and what
                 they want to say to people they love. A pilot trial found that the adapted version
                 improved sense of dignity, purpose, and will to live in people with chronic
                 conditions<Citation id="6" index={6} />.
@@ -859,8 +1129,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
             content: (
               <p>
                 Structured group programs that use didactic, experiential, and discussion-based
-                approaches to explore sources of meaning — historical, attitudinal, creative, and
-                experiential — have been adapted from oncology settings to chronic illness populations.
+                approaches to explore sources of meaning --- historical, attitudinal, creative, and
+                experiential --- have been adapted from oncology settings to chronic illness populations.
                 The group format adds the therapeutic element of shared experience, reducing the
                 isolation that compounds existential suffering.
               </p>
@@ -870,7 +1140,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             title: 'Compassion-focused therapy',
             content: (
               <p>
-                Many people with chronic illness develop harsh self-critical patterns — blaming
+                Many people with chronic illness develop harsh self-critical patterns --- blaming
                 themselves for their limitations, feeling they are burdens to others, or believing
                 they are failing at illness. Compassion-focused therapy specifically targets this
                 self-relationship, helping people develop the same understanding toward themselves
@@ -879,6 +1149,33 @@ export const psychologicalResilienceArticlesB: Article[] = [
             ),
           },
         ]} />
+
+        <h2 id="the-role-of-relationships" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Role of Relationships in Palliative Psychology
+        </h2>
+        <p className="mb-6">
+          Chronic illness does not only affect the individual --- it reshapes every significant
+          relationship in their life. Partners may struggle with their own grief about the life they
+          imagined together, friendships may thin as the person's capacity for social engagement
+          diminishes, and family dynamics may shift as roles are renegotiated around the reality of
+          ongoing limitation. Palliative psychology recognizes that relationships are both a source of
+          suffering and a source of healing in chronic illness, and that addressing the relational
+          dimension is essential to comprehensive care. A person who feels deeply connected to others ---
+          who feels known, valued, and supported --- can tolerate physical and existential suffering with
+          far greater resilience than a person who faces the same symptoms in isolation.
+        </p>
+        <p className="mb-6">
+          The relational challenges of chronic illness are often subtle and cumulative. Friends may
+          stop calling because they do not know what to say, or because repeated cancellations have
+          eroded the rhythm of the friendship. The person with chronic illness may withdraw preemptively,
+          avoiding social situations to spare themselves the embarrassment of visible symptoms or the
+          effort of explaining their limitations. Over time, the social world contracts --- not through
+          any single dramatic event, but through a gradual erosion of connection that leaves the person
+          increasingly alone with their suffering. Palliative psychology interventions that address
+          relational isolation --- through group therapy, facilitated family conversations, or support
+          for rebuilding social connections within realistic energy constraints --- can meaningfully
+          improve quality of life even when the underlying condition remains unchanged.
+        </p>
 
         <h2 id="integrating-palliative-psychology" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Making the Case for Integration
@@ -894,7 +1191,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           Yet the data on palliative care integration in chronic disease management is compelling.
           Research shows that palliative approaches reduce emergency department visits, decrease
-          overall healthcare costs, and — most importantly — significantly improve patient-reported
+          overall healthcare costs, and --- most importantly --- significantly improve patient-reported
           quality of life<Citation id="4" index={4} />. Patients consistently report that having
           their suffering taken seriously in all its dimensions transforms their relationship
           with their condition, even when the condition itself does not
@@ -904,9 +1201,22 @@ export const psychologicalResilienceArticlesB: Article[] = [
           Palliative psychology in chronic illness is not about giving up on improvement. It is
           about recognizing that quality of life cannot wait for a cure that may never come. It is
           about treating the person who lives with the condition as worthy of the same depth of
-          care that we extend to people at the end of life — because living with chronic illness
+          care that we extend to people at the end of life --- because living with chronic illness
           for decades is not a lesser form of suffering. It is simply a different one, and it
           deserves its own dedicated, evidence-based response.
+        </p>
+        <p className="mb-6">
+          The path forward requires both systemic change and individual advocacy. At the systemic level,
+          healthcare organizations need to recognize that chronic non-terminal conditions generate
+          suffering that is equivalent in severity --- if not in urgency --- to that experienced by people
+          at end of life, and that this suffering responds to the same quality of psychological
+          intervention. At the individual level, people living with chronic conditions deserve to know
+          that their existential distress is not a personal failing, that their grief over lost
+          possibilities is legitimate, and that there are therapeutic approaches specifically designed
+          to help them find meaning, connection, and dignity within the reality of their circumstances.
+          Palliative psychology does not promise to make chronic illness easier. It promises to ensure
+          that the person living with it is seen, heard, and supported in all the dimensions of their
+          experience --- not just the ones that show up on a lab report.
         </p>
       </>
     ),
@@ -930,7 +1240,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     tags: ['Rehabilitation Psychology', 'Physical Recovery', 'Adjustment', 'Disability', 'Treatment Guide'],
 
     summary:
-      'Physical recovery from injury, surgery, or serious illness is never purely physical. The person learning to walk again after a stroke, the athlete rebuilding strength after a spinal cord injury, the individual adapting to life after amputation — each faces psychological challenges that are as real and as consequential as their physical ones. Rehabilitation psychology is the specialty dedicated to understanding and addressing these challenges, and research consistently shows that psychological support during physical recovery improves both mental health outcomes and functional rehabilitation results. This article explores the core principles of rehabilitation psychology, the emotional stages of recovery, the most common psychological barriers to rehabilitation, and the evidence-based interventions that help people navigate the difficult terrain between who they were before and who they are becoming.',
+      'Physical recovery from injury, surgery, or serious illness is never purely physical. The person learning to walk again after a stroke, the athlete rebuilding strength after a spinal cord injury, the individual adapting to life after amputation --- each faces psychological challenges that are as real and as consequential as their physical ones. Rehabilitation psychology is the specialty dedicated to understanding and addressing these challenges, and research consistently shows that psychological support during physical recovery improves both mental health outcomes and functional rehabilitation results. This article explores the core principles of rehabilitation psychology, the emotional stages of recovery, the most common psychological barriers to rehabilitation, and the evidence-based interventions that help people navigate the difficult terrain between who they were before and who they are becoming.',
 
     keyFacts: [
       { text: 'Up to 40% of rehabilitation patients experience clinically significant depression that impedes physical recovery', citationIndex: 1 },
@@ -948,7 +1258,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     practicalExercise: {
       title: 'The Recovery Milestone Map',
       steps: [
-        { title: 'Identify your starting point honestly', description: 'Write down your current functional abilities without comparison to your pre-injury self. This is not about what you have lost — it is about establishing a clear, honest baseline from which progress can be measured. Every recovery starts somewhere.' },
+        { title: 'Identify your starting point honestly', description: 'Write down your current functional abilities without comparison to your pre-injury self. This is not about what you have lost --- it is about establishing a clear, honest baseline from which progress can be measured. Every recovery starts somewhere.' },
         { title: 'Set three tiers of goals', description: 'Create short-term goals (this week), medium-term goals (this month), and long-term goals (three to six months). Make each tier specific and achievable: "Stand for 30 seconds unassisted" rather than "get better." Specificity allows you to see progress.' },
         { title: 'Record emotional milestones alongside physical ones', description: 'Track not only physical achievements but emotional ones: the first day you felt hopeful, the moment you asked for help without shame, the day you laughed during therapy. Recovery is psychological as much as physical, and these milestones deserve recognition.' },
         { title: 'Review and adjust weekly', description: 'Each week, review your goals with your rehabilitation team. Adjust what needs adjusting without treating changes as failures. Rehabilitation is rarely linear, and a good plan adapts to the body\'s actual pace rather than forcing the body to match the plan.' },
@@ -977,10 +1287,10 @@ export const psychologicalResilienceArticlesB: Article[] = [
             Physical rehabilitation is one of the most demanding experiences a person can undergo.
             It requires showing up every day to do difficult, often painful work with uncertain
             outcomes, in a body that feels foreign. The popular narrative frames rehabilitation as
-            a story of determination and triumph — the montage of someone learning to walk again,
+            a story of determination and triumph --- the montage of someone learning to walk again,
             set to inspirational music. The reality is far messier. It involves frustration,
             grief, fear, boredom, anger, and days when the person genuinely does not know whether
-            the effort is worth it. This is where rehabilitation psychology enters — not to
+            the effort is worth it. This is where rehabilitation psychology enters --- not to
             provide motivational speeches, but to address the psychological complexity that
             determines whether physical rehabilitation succeeds or fails.
           </p>
@@ -988,7 +1298,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             Research is unequivocal on one point: psychological factors are among the strongest
             predictors of rehabilitation outcomes. A person's beliefs about their recovery,
             their emotional state, their social support, and their capacity to tolerate
-            frustration all influence how effectively they engage with physical rehabilitation —
+            frustration all influence how effectively they engage with physical rehabilitation ---
             and by extension, how much function they ultimately
             regain<Citation id="2" index={2} />. Up to 40% of rehabilitation patients
             experience clinically significant depression, which directly impedes their physical
@@ -1001,6 +1311,28 @@ export const psychologicalResilienceArticlesB: Article[] = [
             to understanding how people adapt to injury, illness, and disability, and to
             providing evidence-based interventions that support both psychological adjustment
             and physical recovery.
+          </p>
+          <p className="mb-6">
+            The scope of rehabilitation psychology extends across a remarkable range of conditions and
+            contexts: spinal cord injuries, traumatic brain injuries, stroke recovery, amputation,
+            burns, orthopedic surgeries, cardiac rehabilitation, and chronic pain programs, among others.
+            What unites these diverse populations is the shared experience of confronting significant
+            physical change and the psychological work of adapting to a body that functions differently
+            than it did before. The rehabilitation psychologist brings specialized knowledge of how
+            cognitive, emotional, and social factors interact with physical recovery processes, and
+            how targeted psychological interventions can remove barriers that would otherwise limit
+            rehabilitation outcomes. This is not supplementary care --- in many rehabilitation settings,
+            psychological factors account for more variance in outcomes than the severity of the
+            physical injury itself.
+          </p>
+          <p className="mb-6">
+            The field has evolved considerably from its origins in World War II-era veterans' rehabilitation
+            programs, where the focus was primarily on vocational re-entry and basic adjustment. Contemporary
+            rehabilitation psychology draws on cognitive neuroscience, health psychology, clinical
+            psychology, and disability studies to offer a sophisticated understanding of how people
+            reconstruct their lives after catastrophic physical change. It recognizes that recovery
+            is not merely the restoration of physical function but the reconstruction of identity,
+            purpose, and social connection in a fundamentally altered context.
           </p>
         </div>
 
@@ -1019,11 +1351,11 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <ProgressSteps steps={[
           {
             title: 'Acute reaction and disorientation',
-            description: 'In the immediate aftermath of injury or diagnosis, many people experience shock, confusion, and emotional numbness. The brain is processing a fundamental disruption to their sense of self and future. This period is not the time for goal-setting or motivational interventions — it is the time for stabilization, safety, and basic emotional support.',
+            description: 'In the immediate aftermath of injury or diagnosis, many people experience shock, confusion, and emotional numbness. The brain is processing a fundamental disruption to their sense of self and future. This period is not the time for goal-setting or motivational interventions --- it is the time for stabilization, safety, and basic emotional support.',
           },
           {
             title: 'Grief and emotional turbulence',
-            description: 'As the reality of the situation becomes clearer, grief responses emerge — sadness about lost abilities, anger at the circumstances, anxiety about the future, and sometimes guilt or self-blame. These are normal, adaptive responses to real losses, not symptoms to be suppressed or rushed through.',
+            description: 'As the reality of the situation becomes clearer, grief responses emerge --- sadness about lost abilities, anger at the circumstances, anxiety about the future, and sometimes guilt or self-blame. These are normal, adaptive responses to real losses, not symptoms to be suppressed or rushed through.',
           },
           {
             title: 'Effortful engagement',
@@ -1031,7 +1363,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           },
           {
             title: 'Integration and adaptation',
-            description: 'Gradually, the person integrates their changed abilities into a revised sense of self. This does not mean accepting limitation passively — it means building a life that accommodates reality while preserving meaning, autonomy, and connection. Many people in this phase report unexpected growth alongside their losses.',
+            description: 'Gradually, the person integrates their changed abilities into a revised sense of self. This does not mean accepting limitation passively --- it means building a life that accommodates reality while preserving meaning, autonomy, and connection. Many people in this phase report unexpected growth alongside their losses.',
           },
         ]} />
 
@@ -1042,6 +1374,28 @@ export const psychologicalResilienceArticlesB: Article[] = [
           engagement may cycle through acute distress when setbacks occur. Effective rehabilitation
           psychology normalizes this non-linearity and helps patients understand that returning to
           an earlier emotional state does not mean they have lost progress.
+        </p>
+        <p className="mb-6">
+          The concept of psychological readiness is central to understanding why some patients progress
+          through rehabilitation faster than others with comparable injuries. Psychological readiness
+          encompasses the patient's beliefs about their capacity to recover, their motivation to engage
+          with treatment, their tolerance for frustration and discomfort, and their ability to maintain
+          hope in the face of slow or uncertain progress. Research has established that psychological
+          readiness is one of the strongest predictors of rehabilitation outcomes, independent of injury
+          severity<Citation id="2" index={2} />. Two patients with identical physical injuries can have
+          vastly different recovery trajectories based on their psychological state --- which is why
+          assessing and supporting psychological readiness is not optional in quality rehabilitation
+          care. It is a clinical imperative that directly affects functional outcomes.
+        </p>
+        <p className="mb-6">
+          Understanding the psychological stages of recovery also helps family members and caregivers
+          calibrate their expectations and responses. Well-meaning family members sometimes pressure
+          patients to "stay positive" or to move through emotional responses more quickly than is
+          natural, inadvertently adding shame to an already difficult emotional landscape. When families
+          understand that grief, anger, and frustration are normal and necessary parts of adaptation ---
+          not obstacles to recovery --- they can provide the kind of support that genuinely helps:
+          presence without pressure, validation without minimization, and patience with a process
+          that unfolds on its own timeline.
         </p>
 
         <h2 id="psychological-barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1062,8 +1416,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
                   Depression in rehabilitation is both common and consequential. It reduces engagement
                   with therapy, increases pain perception, interferes with sleep and appetite, and
                   impairs the cognitive functions needed for motor learning. Critically, depression
-                  in rehabilitation often goes undetected because its symptoms — fatigue, low motivation,
-                  poor concentration — overlap with the physical effects of injury. Routine screening
+                  in rehabilitation often goes undetected because its symptoms --- fatigue, low motivation,
+                  poor concentration --- overlap with the physical effects of injury. Routine screening
                   and integrated treatment are essential<Citation id="1" index={1} />.
                 </p>
               </div>
@@ -1074,8 +1428,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="text-gray-700 dark:text-gray-300">
-                  Pain catastrophizing — the tendency to ruminate about pain, magnify its threat, and
-                  feel helpless in response to it — is one of the strongest psychological predictors
+                  Pain catastrophizing --- the tendency to ruminate about pain, magnify its threat, and
+                  feel helpless in response to it --- is one of the strongest psychological predictors
                   of poor rehabilitation outcomes. It leads to avoidance of therapeutic exercises,
                   increased analgesic use, and prolonged disability independent of objective injury
                   severity. Cognitive behavioral interventions targeting catastrophizing have been
@@ -1094,7 +1448,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
                   pain, they enter a cycle that paradoxically worsens their condition. Muscles weaken,
                   joints stiffen, and the nervous system becomes increasingly sensitized. Breaking the
                   fear-avoidance cycle is a central task of rehabilitation psychology, typically through
-                  graded exposure — systematically increasing activity levels while providing
+                  graded exposure --- systematically increasing activity levels while providing
                   psychological support to manage the fear response.
                 </p>
               </div>
@@ -1105,10 +1459,10 @@ export const psychologicalResilienceArticlesB: Article[] = [
             content: (
               <div className="space-y-3">
                 <p className="text-gray-700 dark:text-gray-300">
-                  When physical abilities are central to a person's identity — the athlete, the manual
-                  laborer, the independent elder — injury creates not just a functional loss but an
+                  When physical abilities are central to a person's identity --- the athlete, the manual
+                  laborer, the independent elder --- injury creates not just a functional loss but an
                   identity crisis. The question "Who am I if I cannot do what defined me?" is not
-                  peripheral to rehabilitation — it is often the core psychological challenge. Therapy
+                  peripheral to rehabilitation --- it is often the core psychological challenge. Therapy
                   that addresses identity reconstruction alongside physical recovery produces better
                   long-term adjustment outcomes<Citation id="6" index={6} />.
                 </p>
@@ -1141,20 +1495,47 @@ export const psychologicalResilienceArticlesB: Article[] = [
           rehabilitation patients who are ambivalent about their recovery or struggling with
           engagement. A randomized controlled trial found that motivational interviewing
           integrated into physical rehabilitation improved adherence to exercise programs,
-          reduced dropout rates, and enhanced self-efficacy — the person's belief in their
+          reduced dropout rates, and enhanced self-efficacy --- the person's belief in their
           capacity to influence their own recovery<Citation id="7" index={7} />.
         </p>
 
         <ArticleCallout type="key-takeaway" title="The Mind-Body Connection in Recovery">
           <p>
-            Rehabilitation psychology is not an add-on to physical recovery — it is a determinant
+            Rehabilitation psychology is not an add-on to physical recovery --- it is a determinant
             of it. The person's beliefs about their prognosis, their emotional state, their
             relationship with pain, and their sense of purpose directly influence neuroplasticity,
             motor learning, tissue healing, and immune function. Treating the mind and body as
-            separate during rehabilitation is not just incomplete — it is clinically
+            separate during rehabilitation is not just incomplete --- it is clinically
             ineffective<Citation id="3" index={3} />.
           </p>
         </ArticleCallout>
+
+        <h2 id="neuroplasticity-and-psychological-state" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Neuroplasticity, Psychological State, and Recovery Potential
+        </h2>
+        <p className="mb-6">
+          One of the most compelling reasons for integrating psychology into rehabilitation is the growing
+          understanding of how psychological state directly influences the brain's capacity for physical
+          recovery. Neuroplasticity --- the brain's ability to reorganize neural pathways in response to
+          experience --- is the biological mechanism that underlies much of physical rehabilitation. When
+          a person practices a movement repeatedly during therapy, the brain is literally rewiring itself
+          to support that function. But neuroplasticity does not operate in a vacuum. Research shows that
+          stress, depression, anxiety, and sleep disruption all impair neuroplastic processes, reducing
+          the brain's ability to form new connections and consolidate motor learning. Conversely,
+          positive emotional states, adequate sleep, social engagement, and a sense of purpose enhance
+          neuroplasticity, creating a more fertile neurological environment for recovery.
+        </p>
+        <p className="mb-6">
+          This means that the hours spent in psychological support during rehabilitation are not time
+          taken away from physical recovery --- they are time invested in optimizing the biological
+          conditions that make physical recovery possible. The patient who sleeps better because their
+          anxiety is managed, who engages more fully in therapy because their depression is treated,
+          who practices with greater consistency because their motivation is supported --- that patient
+          is not just psychologically healthier. They are physically recovering more effectively
+          because their brain is in a better state to learn, adapt, and rewire. This understanding
+          transforms rehabilitation psychology from a supportive service into a core component of
+          the recovery process itself.
+        </p>
 
         <h2 id="family-and-social-dimensions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Family and Social Dimensions of Recovery
@@ -1163,8 +1544,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
           Rehabilitation does not happen in a vacuum. Family members are profoundly affected by
           their loved one's injury or illness, and they play a critical role in the recovery
           process. Research shows that family involvement in rehabilitation improves patient
-          outcomes across multiple domains — functional recovery, treatment adherence, and
-          psychological adjustment — while also reducing caregiver burnout when families
+          outcomes across multiple domains --- functional recovery, treatment adherence, and
+          psychological adjustment --- while also reducing caregiver burnout when families
           receive their own support<Citation id="9" index={9} />.
         </p>
         <p className="mb-6">
@@ -1181,7 +1562,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           One of the most striking findings in rehabilitation research is the prevalence of
-          post-traumatic growth — positive psychological change that emerges from the struggle
+          post-traumatic growth --- positive psychological change that emerges from the struggle
           with highly challenging life circumstances. Between 30 and 70 percent of people who
           undergo significant physical rehabilitation report experiencing some form of growth,
           including deeper appreciation for life, strengthened relationships, discovery of new
@@ -1192,17 +1573,43 @@ export const psychologicalResilienceArticlesB: Article[] = [
           It is essential to approach this finding carefully. Post-traumatic growth is not an
           expectation that should be placed on patients, and it does not negate or replace the
           genuine losses they have experienced. It is also not the result of positive thinking
-          or determination — it emerges through the cognitive and emotional processing of
+          or determination --- it emerges through the cognitive and emotional processing of
           difficulty, often supported by reflective practices and therapeutic
           relationships<Citation id="5" index={5} />.
         </p>
         <p className="mb-6">
           The rehabilitation psychologist's role is not to promise growth or suggest that
-          suffering is necessary for it. It is to create the conditions — psychological safety,
-          narrative coherence, meaning-making, and social connection — in which growth becomes
+          suffering is necessary for it. It is to create the conditions --- psychological safety,
+          narrative coherence, meaning-making, and social connection --- in which growth becomes
           possible for those who are ready to find it. Recovery is never about returning to
           who you were. It is about discovering who you can become with the resources you
           have now<Citation id="10" index={10} />.
+        </p>
+
+        <h2 id="building-a-new-normal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building a New Normal After Rehabilitation
+        </h2>
+        <p className="mb-6">
+          The transition from intensive rehabilitation back to daily life is itself a psychologically
+          complex phase that deserves more attention than it typically receives. During inpatient or
+          intensive outpatient rehabilitation, the patient is surrounded by professionals who understand
+          their condition, by peers who share similar experiences, and by a structured environment that
+          is entirely organized around their recovery. Leaving this environment --- returning to a home
+          that may need physical modifications, to a workplace that may not accommodate their new
+          limitations, to social relationships that have shifted during their absence --- can feel like
+          losing a safety net at the moment it is most needed.
+        </p>
+        <p className="mb-6">
+          Research on post-rehabilitation adjustment shows that the first three to six months after
+          discharge are a period of elevated risk for depression, anxiety, and social withdrawal.
+          The gains made during rehabilitation may plateau or even temporarily regress as the person
+          encounters the real-world challenges of living with their changed abilities outside a
+          supported environment. Ongoing outpatient psychological support during this transition
+          period can significantly reduce these risks, helping the person translate the skills learned
+          in rehabilitation into sustainable daily practices. The goal of rehabilitation is not to
+          produce a discharge summary with improved functional scores. It is to produce a person who
+          can build a life they find meaningful with the abilities they have --- and that work extends
+          well beyond the walls of any facility.
         </p>
       </>
     ),
@@ -1226,14 +1633,14 @@ export const psychologicalResilienceArticlesB: Article[] = [
     tags: ['Travel Anxiety', 'Chronic Illness', 'Self-Help', 'Coping Strategies', 'Medical Planning'],
 
     summary:
-      'For people living with chronic illness, travel represents a particular psychological paradox: it promises freedom, novelty, and connection, but it also means leaving the safety net of familiar doctors, pharmacies, and hospitals. Travel anxiety in this population is not irrational — it is a calibrated response to real risk. Yet when that anxiety becomes the deciding factor in every travel decision, it can progressively shrink a person\'s world until the illness dictates not just what they can do, but where they are allowed to be. Research on health-related travel anxiety shows that it is common, underreported, and responsive to structured intervention. This article examines the psychology behind travel anxiety in chronic illness, provides evidence-informed preparation strategies, and offers a framework for making travel decisions that honor both your health needs and your need for a life beyond them.',
+      'For people living with chronic illness, travel represents a particular psychological paradox: it promises freedom, novelty, and connection, but it also means leaving the safety net of familiar doctors, pharmacies, and hospitals. Travel anxiety in this population is not irrational --- it is a calibrated response to real risk. Yet when that anxiety becomes the deciding factor in every travel decision, it can progressively shrink a person\'s world until the illness dictates not just what they can do, but where they are allowed to be. Research on health-related travel anxiety shows that it is common, underreported, and responsive to structured intervention. This article examines the psychology behind travel anxiety in chronic illness, provides evidence-informed preparation strategies, and offers a framework for making travel decisions that honor both your health needs and your need for a life beyond them.',
 
     keyFacts: [
       { text: 'Over 50% of people with chronic conditions report avoiding travel due to health-related anxiety', citationIndex: 1 },
       { text: 'Preparation-based interventions reduce travel anxiety by up to 45% in chronically ill populations', citationIndex: 2 },
       { text: 'Travel avoidance in chronic illness is associated with increased social isolation and reduced quality of life', citationIndex: 3 },
       { text: 'Cognitive behavioral strategies for health anxiety are effective when adapted for travel-specific scenarios', citationIndex: 4 },
-      { text: 'Gradual exposure to travel — starting with short, low-risk trips — builds confidence and reduces anticipatory anxiety', citationIndex: 5 },
+      { text: 'Gradual exposure to travel --- starting with short, low-risk trips --- builds confidence and reduces anticipatory anxiety', citationIndex: 5 },
     ],
 
     videoStatus: 'planned' as const,
@@ -1244,7 +1651,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
     practicalExercise: {
       title: 'The Travel Anxiety Ladder',
       steps: [
-        { title: 'List your travel fears in order of intensity', description: 'Write down every travel-related fear you have — from mild (forgetting medication) to severe (having a medical emergency in a foreign country). Rank them from 1 (least anxiety) to 10 (most anxiety). This is your anxiety ladder.' },
+        { title: 'List your travel fears in order of intensity', description: 'Write down every travel-related fear you have --- from mild (forgetting medication) to severe (having a medical emergency in a foreign country). Rank them from 1 (least anxiety) to 10 (most anxiety). This is your anxiety ladder.' },
         { title: 'Address the bottom three with preparation', description: 'For the three lowest-ranked fears, create a specific preparation plan that neutralizes them. If you fear forgetting medication, pack a labeled travel pharmacy kit. If you worry about food triggers, research restaurant options in advance. Preparation converts anxiety into action.' },
         { title: 'Practice with a short, low-stakes trip', description: 'Before attempting a major trip, plan a one-night stay within two hours of home. Practice your preparation strategies in a low-risk environment. Notice what went well and what needs adjustment. This builds evidence that you can manage away from home.' },
         { title: 'Debrief and update your plan after each trip', description: 'After any trip, write down what worked, what surprised you, and what you would change next time. Over time, this creates a personalized travel playbook that reduces anxiety because it is built on your own successful experiences, not hypothetical fears.' },
@@ -1280,7 +1687,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           <p className="mb-6">
             This experience is remarkably common. Research shows that over 50% of people with
             chronic health conditions report avoiding travel due to health-related
-            anxiety<Citation id="1" index={1} />. This is not weakness or excessive worry — it
+            anxiety<Citation id="1" index={1} />. This is not weakness or excessive worry --- it
             is a reasonable response to the real complexities of managing a chronic condition
             away from familiar medical infrastructure. But when avoidance becomes the default
             response, it carries its own costs: increased social isolation, missed opportunities
@@ -1289,8 +1696,19 @@ export const psychologicalResilienceArticlesB: Article[] = [
           </p>
           <p className="mb-6">
             The goal of addressing travel anxiety is not to dismiss risk or encourage recklessness.
-            It is to separate legitimate medical planning from anxiety-driven avoidance — because
+            It is to separate legitimate medical planning from anxiety-driven avoidance --- because
             these two things feel identical from the inside but lead to very different outcomes.
+          </p>
+          <p className="mb-6">
+            The psychological impact of travel avoidance extends beyond the specific trips that are
+            declined. Over time, it reshapes a person's relationship with possibility itself. When the
+            default response to any opportunity that involves leaving home becomes "I cannot because of
+            my health," the person begins to construct an identity organized around limitation rather
+            than adaptation. This is not about minimizing real health concerns --- there are genuine
+            medical reasons to plan carefully and sometimes to decline. But there is a meaningful
+            difference between a considered decision and an automatic refusal, and the space between
+            those two responses is where psychological intervention can make a significant difference
+            in quality of life.
           </p>
         </div>
 
@@ -1302,7 +1720,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           more broadly, but with an added dimension: the genuine uncertainty of being in an
           unfamiliar environment where your usual safety systems do not exist. This is not the
           same as generalized travel nervousness. It is specifically tied to the anticipated
-          loss of medical safety — the feeling that you are moving beyond the reach of people
+          loss of medical safety --- the feeling that you are moving beyond the reach of people
           who understand your condition and can help if something goes
           wrong<Citation id="4" index={4} />.
         </p>
@@ -1312,8 +1730,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
           flare-up") into an unmanageable catastrophe ("I will have a flare-up, I will not be
           able to get help, and something terrible will happen"). Probability overestimation
           leads people to believe worst-case scenarios are far more likely than they actually
-          are. And safety behaviors — the habits people develop to manage anxiety, like only
-          traveling to destinations with specific hospitals nearby — can paradoxically maintain
+          are. And safety behaviors --- the habits people develop to manage anxiety, like only
+          traveling to destinations with specific hospitals nearby --- can paradoxically maintain
           the anxiety by preventing the person from learning that they can cope in a wider
           range of situations<Citation id="7" index={7} />.
         </p>
@@ -1344,7 +1762,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <p className="mb-6">
           Travel avoidance may feel protective in the moment, but research documents its cumulative
           cost. People who avoid travel due to chronic illness report lower quality of life, greater
-          social isolation, and reduced sense of self-efficacy — the belief in their ability to
+          social isolation, and reduced sense of self-efficacy --- the belief in their ability to
           manage their condition in different circumstances<Citation id="3" index={3} />. Over
           time, avoidance teaches the brain that the feared situation truly is dangerous, because
           the person never gathers evidence to the contrary. Each declined invitation reinforces
@@ -1357,12 +1775,33 @@ export const psychologicalResilienceArticlesB: Article[] = [
           world of the person with chronic illness contracts not only because of the illness
           itself but because of the behavioral patterns that anxiety builds around it.
         </p>
+        <p className="mb-6">
+          The psychological mechanism behind this contraction is well understood in anxiety research. When
+          a person avoids a feared situation and nothing bad happens, the brain does not learn that the
+          situation is safe --- it learns that avoidance is what kept them safe. This reinforcement cycle
+          means that each successful avoidance strengthens the belief that the feared situation would
+          have been dangerous, making future avoidance more likely and more automatic. Over time, the
+          threshold for triggering avoidance drops: what began as avoiding international travel becomes
+          avoiding any trip more than an hour from home, then avoiding any overnight stay, then avoiding
+          leaving the house for extended periods. This progressive narrowing is not inevitable, but
+          without intervention it is a common trajectory, and reversing it becomes more difficult the
+          longer it continues.
+        </p>
+        <p className="mb-6">
+          There is also an identity cost to prolonged travel avoidance. Many people with chronic illness
+          describe travel as something that connects them to who they were before their diagnosis --- to
+          the curious, adventurous, spontaneous person they still feel themselves to be internally, even
+          when their body imposes constraints. When travel is eliminated entirely, it can feel like
+          losing a piece of identity that the illness had not directly taken. Reclaiming the ability
+          to travel, even in modified form, often represents something far larger than the trip itself:
+          it represents the refusal to let illness determine the boundaries of one's entire existence.
+        </p>
 
         <h2 id="evidence-based-preparation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Preparation Strategies
         </h2>
         <p className="mb-6">
-          The most effective approach to travel anxiety in chronic illness is not reassurance —
+          The most effective approach to travel anxiety in chronic illness is not reassurance ---
           it is preparation. Research shows that structured pre-travel preparation interventions
           reduce travel anxiety by up to 45% in chronically ill
           populations<Citation id="2" index={2} />. These interventions work because they
@@ -1390,7 +1829,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
                 Before you travel, identify the nearest hospital or urgent care facility to where
                 you will be staying, locate a pharmacy that carries your medications, and if
                 relevant, find specialists in your condition. Save addresses and phone numbers
-                in your phone. This is preparation, not obsession — do it once, save the information,
+                in your phone. This is preparation, not obsession --- do it once, save the information,
                 and then let it sit in the background as a safety net rather than checking it repeatedly.
               </p>
             ),
@@ -1399,7 +1838,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             title: 'Pack a travel health kit with redundancy',
             content: (
               <p>
-                Bring more medication than you think you will need — enough for your trip plus
+                Bring more medication than you think you will need --- enough for your trip plus
                 three to five extra days. Split medications between your carry-on and checked
                 luggage. Include copies of prescriptions, a basic first-aid kit, and any
                 condition-specific supplies. For travelers with respiratory or cardiovascular
@@ -1417,7 +1856,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
                 Specialized insurers offer coverage that includes pre-existing conditions, but
                 policies vary significantly. Research shows that having adequate insurance reduces
                 travel anxiety independent of whether a claim is ever
-                made<Citation id="9" index={9} /> — the psychological value is in knowing
+                made<Citation id="9" index={9} /> --- the psychological value is in knowing
                 you are covered.
               </p>
             ),
@@ -1449,6 +1888,44 @@ export const psychologicalResilienceArticlesB: Article[] = [
           a longer trip to an unfamiliar city. Each successful experience provides the
           brain with evidence that contradicts the fear, gradually expanding the range
           of what feels manageable<Citation id="5" index={5} />.
+        </p>
+        <p className="mb-6">
+          Self-compassion is another important component of managing travel anxiety. People with chronic
+          illness often hold themselves to the same travel standards they had before their diagnosis,
+          and then feel inadequate when they cannot meet those standards. Shifting the internal benchmark
+          from "travel the way I used to" to "travel in the way that works for my body now" is not
+          lowering expectations --- it is aligning expectations with reality, which is the foundation of
+          all effective coping. A trip that includes extra rest days, a slower pace, and careful planning
+          is not a lesser trip. It is a trip that accommodates the whole person, and that accommodation
+          is a form of self-respect rather than defeat.
+        </p>
+
+        <h2 id="building-a-travel-support-system" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building a Travel Support System
+        </h2>
+        <p className="mb-6">
+          Traveling with chronic illness is significantly easier when you are not navigating it alone.
+          Building a travel support system means identifying the people, tools, and resources that can
+          help you manage your health while away from home. This might include a travel companion who
+          understands your condition and knows how to respond during a flare-up, a telemedicine provider
+          who can offer consultations regardless of your location, a pharmacy network that can fill
+          prescriptions across state or national borders, and a community of other travelers with
+          chronic illness who can share destination-specific advice and encouragement. Online communities
+          for chronic illness travelers have grown substantially in recent years, offering practical
+          information about accessible accommodations, condition-friendly destinations, and strategies
+          for managing specific challenges like airport security with medical devices or dietary
+          restrictions in unfamiliar food cultures.
+        </p>
+        <p className="mb-6">
+          Communication with your medical team before travel is another essential component of the
+          support system. Discussing your travel plans with your primary care provider or specialist
+          allows them to anticipate potential issues, adjust medications if needed, provide letters of
+          medical necessity for airline accommodations or customs inspections, and offer condition-specific
+          travel guidance<Citation id="6" index={6} />. Many patients feel reluctant to "bother" their
+          doctors with travel questions, but pre-travel medical consultations are a standard component
+          of chronic disease management that can prevent complications and reduce anxiety simultaneously.
+          Knowing that your medical team has reviewed your travel plan and considers it manageable
+          provides a form of professional reassurance that no amount of independent research can replace.
         </p>
 
         <BeforeAfter
@@ -1487,8 +1964,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
           Research on self-efficacy in chronic illness shows that people who successfully
           manage their conditions in varied environments develop a broader, more robust
           sense of capability that transfers to other areas of their
-          lives<Citation id="10" index={10} />. Each trip you take — even an imperfect one
-          where a flare-up happened and you managed it — adds to a body of evidence that
+          lives<Citation id="10" index={10} />. Each trip you take --- even an imperfect one
+          where a flare-up happened and you managed it --- adds to a body of evidence that
           your illness is part of you, not all of you. And that the world, with all its
           unfamiliarity, is still a place where you are allowed to be.
         </p>
@@ -1497,6 +1974,17 @@ export const psychologicalResilienceArticlesB: Article[] = [
           question is whether you will let anxiety make the decision for you, or whether
           you will let preparation make the decision instead. They lead to very different
           lives.
+        </p>
+        <p className="mb-6">
+          Every person with chronic illness who travels successfully --- who manages a flare-up in an
+          unfamiliar city, who navigates an airport with mobility aids, who finds a pharmacy in another
+          country, who attends a wedding they almost declined --- is building evidence that directly
+          contradicts the anxiety's central claim: that they cannot manage outside their familiar
+          environment. This evidence is cumulative and powerful. It does not eliminate future anxiety
+          entirely, but it changes the internal conversation from "I cannot do this" to "I have done
+          this before, and I can do it again." That shift --- from fear-based certainty to experience-based
+          confidence --- is the essence of what cognitive behavioral approaches aim to achieve, and each
+          trip provides another data point in support of capability rather than limitation.
         </p>
       </>
     ),
@@ -1520,12 +2008,12 @@ export const psychologicalResilienceArticlesB: Article[] = [
     tags: ['Spoon Theory', 'Energy Management', 'Chronic Illness', 'Self-Help', 'Communication'],
 
     summary:
-      'The Spoon Theory, created by Christine Miserandino in 2003, has become one of the most widely recognized frameworks for explaining what it feels like to live with limited energy due to chronic illness. By comparing daily energy to a finite number of spoons — each activity costs a spoon, and when the spoons are gone, they are gone — the metaphor gives language to an experience that is otherwise difficult to communicate to people who have never lived it. This article explains the Spoon Theory in depth, examines the psychological research behind energy limitation in chronic illness, explores both the strengths and limitations of the framework, and provides practical energy management strategies grounded in the theory\'s core insight: that energy is a resource that must be budgeted, not a willpower problem to be overcome.',
+      'The Spoon Theory, created by Christine Miserandino in 2003, has become one of the most widely recognized frameworks for explaining what it feels like to live with limited energy due to chronic illness. By comparing daily energy to a finite number of spoons --- each activity costs a spoon, and when the spoons are gone, they are gone --- the metaphor gives language to an experience that is otherwise difficult to communicate to people who have never lived it. This article explains the Spoon Theory in depth, examines the psychological research behind energy limitation in chronic illness, explores both the strengths and limitations of the framework, and provides practical energy management strategies grounded in the theory\'s core insight: that energy is a resource that must be budgeted, not a willpower problem to be overcome.',
 
     keyFacts: [
       { text: 'The Spoon Theory was created by Christine Miserandino in 2003 to explain life with lupus to a friend over dinner', citationIndex: 1 },
       { text: 'Fatigue is the most common and debilitating symptom reported across chronic illness populations, affecting 40-80% of patients', citationIndex: 2 },
-      { text: 'Activity pacing — the clinical principle behind spoon counting — reduces fatigue severity and improves daily functioning', citationIndex: 3 },
+      { text: 'Activity pacing --- the clinical principle behind spoon counting --- reduces fatigue severity and improves daily functioning', citationIndex: 3 },
       { text: 'The Spoon Theory has been adopted across dozens of chronic illness communities as shared language for energy limitation', citationIndex: 4 },
       { text: 'Energy management education reduces boom-bust cycling and improves quality of life in chronic fatigue populations', citationIndex: 5 },
     ],
@@ -1538,9 +2026,9 @@ export const psychologicalResilienceArticlesB: Article[] = [
     practicalExercise: {
       title: 'The Daily Spoon Audit',
       steps: [
-        { title: 'Estimate your daily spoon count', description: 'On a typical day, rate your total available energy on a scale of 1 to 12 spoons. This number will vary — some days you may wake up with 8, others with 4. The first step is honest assessment, not aspiration. Start your day by checking in with your body and assigning today\'s number.' },
+        { title: 'Estimate your daily spoon count', description: 'On a typical day, rate your total available energy on a scale of 1 to 12 spoons. This number will vary --- some days you may wake up with 8, others with 4. The first step is honest assessment, not aspiration. Start your day by checking in with your body and assigning today\'s number.' },
         { title: 'Assign spoon costs to your activities', description: 'List your planned activities and estimate how many spoons each will cost. Showering might be 1 spoon for some people and 3 for others. Work might be 4 spoons. Cooking dinner might be 2. Be honest about what things actually cost you, not what you think they should cost.' },
-        { title: 'Budget before you spend', description: 'Before your day begins, add up the spoon cost of your planned activities. If the total exceeds your available spoons, something needs to change: eliminate an activity, delegate a task, modify how you do something, or accept that tomorrow will start with a deficit. This is not failure — it is planning.' },
+        { title: 'Budget before you spend', description: 'Before your day begins, add up the spoon cost of your planned activities. If the total exceeds your available spoons, something needs to change: eliminate an activity, delegate a task, modify how you do something, or accept that tomorrow will start with a deficit. This is not failure --- it is planning.' },
         { title: 'Track patterns over two weeks', description: 'Record your daily spoon count and how you spent them for at least two weeks. Patterns will emerge: which activities cost more than expected, which days are consistently lower, whether certain triggers deplete spoons faster. This data becomes the foundation for sustainable energy management.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -1571,15 +2059,15 @@ export const psychologicalResilienceArticlesB: Article[] = [
             each day with this many. Every activity costs you a spoon. When they are gone, they
             are gone."<Citation id="1" index={1} /> What followed was an improvised demonstration
             that has since become one of the most influential illness metaphors of the 21st
-            century — adopted by millions of people across dozens of chronic conditions as a way
+            century --- adopted by millions of people across dozens of chronic conditions as a way
             to explain something that words alone had failed to convey.
           </p>
           <p className="mb-6">
             The Spoon Theory is not a clinical tool, and it was never designed to be one. It is
             an experiential metaphor that makes the invisible visible: the finite nature of
             energy when your body does not replenish it the way healthy bodies do. But the
-            reason it resonated so powerfully — spreading across blogs, support groups, social
-            media, and eventually into mainstream awareness — is that it names a reality that
+            reason it resonated so powerfully --- spreading across blogs, support groups, social
+            media, and eventually into mainstream awareness --- is that it names a reality that
             medical language had largely failed to capture. Fatigue, the most common symptom
             across chronic illness populations, affecting 40 to 80 percent of
             patients<Citation id="2" index={2} />, is routinely dismissed, misunderstood, or
@@ -1591,6 +2079,17 @@ export const psychologicalResilienceArticlesB: Article[] = [
             framework, explores the clinical science behind the energy limitation it describes,
             and provides strategies for applying its core insight in daily life.
           </p>
+          <p className="mb-6">
+            What makes the Spoon Theory unique among illness metaphors is its emphasis on choice and
+            trade-off rather than simply limitation. It does not say "you cannot do things" --- it says
+            "you must choose which things to do, because doing everything is not an option." This
+            distinction is psychologically important because it preserves agency. The person counting
+            spoons is not passive. They are making active decisions about how to allocate a scarce
+            resource, and those decisions reflect their values, priorities, and the particular demands
+            of each day. In this way, the Spoon Theory reframes energy limitation from a story of
+            deficit to a story of resourceful management --- and for many people with chronic illness,
+            that reframing is itself therapeutic.
+          </p>
         </div>
 
         <h2 id="the-original-metaphor" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1601,7 +2100,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           her through a typical day. Getting dressed: one spoon. Showering: one spoon. Making
           breakfast: one spoon. Getting to work: one spoon. By midday, the friend had used
           most of her spoons and still had half a day to get through. The moment of insight
-          came when the friend realized she would have to make choices — skip dinner to save
+          came when the friend realized she would have to make choices --- skip dinner to save
           energy for the commute home, or eat but then not have enough spoons to get ready
           for bed<Citation id="1" index={1} />.
         </p>
@@ -1611,7 +2110,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
           understand being tired after a long day, but they cannot easily grasp starting
           the day already depleted, or the concept that basic activities like bathing and
           eating consume resources that may not be available for anything else. Spoons
-          make the abstract tangible — you can count them, you can watch them disappear,
+          make the abstract tangible --- you can count them, you can watch them disappear,
           and you can feel the anxiety of running low.
         </p>
 
@@ -1628,9 +2127,23 @@ export const psychologicalResilienceArticlesB: Article[] = [
           within chronic illness communities, reducing isolation by allowing people to say
           "I'm low on spoons" and be immediately understood. It has provided a framework for
           self-advocacy, giving people a way to set boundaries without lengthy medical
-          explanations. And it has fostered community identity — the term "spoonie" has
+          explanations. And it has fostered community identity --- the term "spoonie" has
           become a self-descriptor used across illness groups to signal shared
           experience<Citation id="4" index={4} />.
+        </p>
+        <p className="mb-6">
+          The Spoon Theory also addresses one of the most frustrating aspects of chronic illness
+          communication: the invisibility of the condition. Many chronic illnesses produce no visible
+          external signs, leaving the person looking "fine" to outside observers even on their worst
+          days. This invisibility creates a persistent credibility gap --- people have difficulty
+          believing in limitations they cannot see, and the person with chronic illness is left
+          repeatedly justifying their need for rest, accommodation, or assistance. The phrase "But
+          you don't look sick," which Miserandino chose as the name for her website, captures this
+          frustration precisely. The Spoon Theory provides a counter-narrative: it makes the invisible
+          visible by giving energy limitation a concrete, countable form that others can grasp even
+          when they cannot see the underlying condition. For many people, this has been the most
+          practically useful aspect of the framework --- not as a tool for self-understanding, but as
+          a tool for being understood by others.
         </p>
 
         <h2 id="the-science-of-energy-limitation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1660,8 +2173,8 @@ export const psychologicalResilienceArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Post-exertional malaise (PEM) — the phenomenon where activity beyond a person's
-          energy threshold triggers a delayed and disproportionate crash — is one of the
+          Post-exertional malaise (PEM) --- the phenomenon where activity beyond a person's
+          energy threshold triggers a delayed and disproportionate crash --- is one of the
           most clinically significant aspects of chronic illness fatigue. In conditions like
           myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS), PEM is a defining
           feature: exceeding the energy envelope does not just cause tiredness but triggers
@@ -1669,12 +2182,36 @@ export const psychologicalResilienceArticlesB: Article[] = [
           is the biological reality behind the Spoon Theory's central warning: when the
           spoons are gone, borrowing from tomorrow has a real and measurable cost.
         </p>
+        <p className="mb-6">
+          The cognitive dimension of chronic illness fatigue is particularly under-recognized. Often
+          described as "brain fog," this experience involves difficulty concentrating, slowed processing
+          speed, word-finding problems, and impaired working memory. For many people with chronic illness,
+          cognitive fatigue is as limiting as physical fatigue --- and sometimes more so, because it
+          affects their ability to work, make decisions, manage their own medical care, and engage in
+          conversations. The Spoon Theory implicitly captures this by framing energy as a unified resource
+          that gets depleted across all types of activity, including cognitive ones. A person who has
+          spent most of their spoons on a mentally demanding work task may have nothing left for a
+          physical activity that would normally be manageable, because cognitive and physical energy draw
+          from the same limited pool.
+        </p>
+        <p className="mb-6">
+          Understanding the biological basis of chronic illness fatigue also helps counter the pervasive
+          misconception that energy limitation is a motivational problem. When healthcare providers,
+          employers, or family members suggest that the person just needs to "push through" or "build
+          up stamina," they are applying a model of fatigue that is appropriate for healthy bodies but
+          potentially harmful for chronically ill ones. In many conditions, pushing through fatigue does
+          not build endurance --- it triggers inflammatory cascades, immune activation, and autonomic
+          dysfunction that worsen the underlying condition. The Spoon Theory, while not a medical
+          framework, communicates this distinction intuitively: you would not tell someone to spend
+          money they do not have, and you should not tell someone with chronic illness to spend energy
+          their body has not produced.
+        </p>
 
         <h2 id="practical-energy-management" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Practical Energy Management: From Metaphor to Method
         </h2>
         <p className="mb-6">
-          The clinical equivalent of spoon counting is called activity pacing — a structured
+          The clinical equivalent of spoon counting is called activity pacing --- a structured
           approach to balancing activity and rest that has been shown to reduce fatigue severity
           and improve daily functioning across chronic illness
           populations<Citation id="3" index={3} />. Activity pacing addresses one of the most
@@ -1693,7 +2230,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <ProgressSteps steps={[
           {
             title: 'Establish your baseline',
-            description: 'Track your activities and energy levels for one to two weeks without trying to change anything. The goal is to identify your actual energy envelope — the amount of activity you can sustain without triggering a crash. This baseline is your starting spoon count.',
+            description: 'Track your activities and energy levels for one to two weeks without trying to change anything. The goal is to identify your actual energy envelope --- the amount of activity you can sustain without triggering a crash. This baseline is your starting spoon count.',
           },
           {
             title: 'Break activities into smaller units',
@@ -1701,17 +2238,17 @@ export const psychologicalResilienceArticlesB: Article[] = [
           },
           {
             title: 'Schedule rest proactively',
-            description: 'Rest should not be something you resort to when you are already depleted. Build scheduled rest periods into your day before you need them. This is not laziness — it is the clinical strategy most consistently associated with reduced fatigue and improved functioning in chronic illness populations.',
+            description: 'Rest should not be something you resort to when you are already depleted. Build scheduled rest periods into your day before you need them. This is not laziness --- it is the clinical strategy most consistently associated with reduced fatigue and improved functioning in chronic illness populations.',
           },
           {
             title: 'Gradually expand the envelope',
-            description: 'Once you have stabilized within your baseline for several weeks, you can cautiously increase activity by small increments — 5 to 10 percent at a time. If the increase triggers a crash, return to baseline and try again later. The goal is sustainable expansion, not heroic endurance.',
+            description: 'Once you have stabilized within your baseline for several weeks, you can cautiously increase activity by small increments --- 5 to 10 percent at a time. If the increase triggers a crash, return to baseline and try again later. The goal is sustainable expansion, not heroic endurance.',
           },
         ]} />
 
         <p className="mb-6">
-          Energy management education — formal programs that teach pacing, prioritization, and
-          activity modification — has been shown in randomized controlled trials to reduce
+          Energy management education --- formal programs that teach pacing, prioritization, and
+          activity modification --- has been shown in randomized controlled trials to reduce
           fatigue severity, decrease boom-bust cycling, and improve quality of life in chronic
           fatigue populations<Citation id="5" index={5} />. These programs translate the Spoon
           Theory's intuitive insight into a systematic approach.
@@ -1731,12 +2268,12 @@ export const psychologicalResilienceArticlesB: Article[] = [
         <ArticleCallout type="reflection" title="What the Spoon Theory Cannot Do">
           <p>
             The Spoon Theory is a communication tool, not a clinical framework. It does not
-            capture the variability between conditions — the energy limitation of lupus is
+            capture the variability between conditions --- the energy limitation of lupus is
             physiologically different from that of depression, which is different from that of
             multiple sclerosis. It can also inadvertently encourage rigid self-monitoring that
             increases anxiety about energy expenditure. And it does not address the social and
-            systemic factors — workplace inflexibility, inadequate disability support, healthcare
-            dismissiveness — that make energy limitation harder to manage. Acknowledging these
+            systemic factors --- workplace inflexibility, inadequate disability support, healthcare
+            dismissiveness --- that make energy limitation harder to manage. Acknowledging these
             limitations does not diminish the theory's value. It simply means the theory is a
             starting point, not a complete answer.
           </p>
@@ -1747,8 +2284,35 @@ export const psychologicalResilienceArticlesB: Article[] = [
           sometimes reinforce a deficit-based identity where the person defines themselves
           primarily through limitation<Citation id="8" index={8} />. The healthiest
           relationship with the framework may be one where spoons are a planning tool
-          rather than an identity — a way to make decisions about how to spend energy,
+          rather than an identity --- a way to make decisions about how to spend energy,
           not a label that defines who you are.
+        </p>
+
+        <h2 id="the-emotional-labor-of-energy-management" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Emotional Labor of Energy Management
+        </h2>
+        <p className="mb-6">
+          What the clinical literature on activity pacing sometimes overlooks is the emotional dimension
+          of energy management. Counting spoons is not just a logistical exercise --- it is an ongoing
+          confrontation with limitation that carries its own psychological weight. Every time a person
+          calculates whether they have enough energy for an activity, they are reminded of what their
+          body cannot do. Every time they decline an invitation or modify a plan, they face a small
+          grief about the life they would be living if their body cooperated. This emotional labor is
+          invisible to others but constant for the person doing it, and it consumes its own share of
+          the limited energy supply. The irony is that the act of managing energy is itself an
+          energy-consuming activity --- one that healthy people never have to perform.
+        </p>
+        <p className="mb-6">
+          Acknowledging this emotional dimension is important for both the person with chronic illness
+          and their support network. The frustration of having to plan every activity, the sadness of
+          choosing between two things you want to do because you cannot afford both, the resentment
+          that arises when your body imposes limitations that feel arbitrary and unfair --- these are
+          legitimate emotional responses, not signs of poor adjustment. Psychological support that
+          addresses the emotional toll of energy management, alongside the practical strategies for
+          doing it effectively, is more complete and more sustainable than approaches that treat pacing
+          as a purely cognitive exercise. The person who can acknowledge their frustration about counting
+          spoons while still doing it effectively is in a healthier psychological position than the
+          person who paces perfectly but never allows themselves to grieve what the pacing represents.
         </p>
 
         <h2 id="communicating-with-others" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1766,14 +2330,14 @@ export const psychologicalResilienceArticlesB: Article[] = [
           Saying "I only have two spoons left today" to a partner, friend, or colleague who
           understands the framework communicates both the reality and the regret without
           requiring justification. It also opens the door to practical problem-solving:
-          "I'm low on spoons — can we do a quiet evening instead of going out?" is easier
+          "I'm low on spoons --- can we do a quiet evening instead of going out?" is easier
           to say and easier to receive than "I'm too sick to do what you want to do."
         </p>
         <p className="mb-6">
           For people who have not encountered the theory, sharing Miserandino's original essay
           can be a powerful way to help them understand. Many people report that the Spoon
           Theory was the first explanation of their condition that their family members actually
-          understood — not because the medical information was insufficient, but because the
+          understood --- not because the medical information was insufficient, but because the
           metaphor created an emotional bridge that clinical language could
           not<Citation id="10" index={10} />.
         </p>
@@ -1786,7 +2350,7 @@ export const psychologicalResilienceArticlesB: Article[] = [
             than obligation, delegating or eliminating tasks that drain spoons without returning
             meaning, batching similar activities to reduce transition costs, and building in
             recovery time after high-spoon activities rather than hoping the crash will not come.
-            The common thread is intentionality — spending energy on purpose rather than by default.
+            The common thread is intentionality --- spending energy on purpose rather than by default.
           </p>
         </ArticleCallout>
 
@@ -1794,9 +2358,22 @@ export const psychologicalResilienceArticlesB: Article[] = [
           The Spoon Theory began as one woman's attempt to explain her daily reality to a
           friend. It has since become a global framework because it named something that
           millions of people recognized but could not articulate. Its lasting contribution
-          is not the metaphor itself — it is the permission it gave people to say: my energy
+          is not the metaphor itself --- it is the permission it gave people to say: my energy
           is limited, that limitation is real, and managing it is not a personal failure. It
           is simply what living with this body requires.
+        </p>
+        <p className="mb-6">
+          Perhaps the most important insight the Spoon Theory offers is not about limitation at all ---
+          it is about intentionality. When energy is unlimited, people spend it without thinking. When
+          energy is scarce, every expenditure becomes a choice, and choices reveal values. The person
+          who saves their last spoon for reading to their child at bedtime is making a statement about
+          what matters to them. The person who spends spoons on creative work rather than housework is
+          choosing meaning over obligation. In this sense, the constraint imposed by chronic illness
+          can paradoxically lead to a more examined and values-driven life than most healthy people
+          ever achieve --- not because illness is a gift, but because scarcity forces a clarity about
+          priorities that abundance never demands. The Spoon Theory, at its best, is not just a tool
+          for managing limitation. It is a framework for living deliberately, with whatever you have,
+          in the direction of what matters most.
         </p>
       </>
     ),

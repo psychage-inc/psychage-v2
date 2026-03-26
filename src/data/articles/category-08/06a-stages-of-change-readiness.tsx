@@ -13,7 +13,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Category 8, Subtopic 6: Stages of Change & Readiness — Articles 51-55
+// Category 8, Subtopic 6: Stages of Change & Readiness --- Articles 51-55
 // ============================================================================
 
 export const stagesOfChangeReadinessArticlesA: Article[] = [
@@ -126,7 +126,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           The model identifies five distinct stages, each with different thoughts, emotions, and
-          readiness levels. Most people don't progress linearly — movement back and forth between
+          readiness levels. Most people don't progress linearly --- movement back and forth between
           stages is normal <Citation id="3" index={4} source="Journal of Substance Abuse" year="1992" tier={1} />.
         </p>
 
@@ -197,7 +197,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Accurately identifying where you are is the first step toward effective change.
-          Research shows that people often overestimate their readiness — believing they're in
+          Research shows that people often overestimate their readiness --- believing they're in
           preparation when they're still in contemplation, or thinking they're ready for action
           when they haven't yet built the necessary foundation <Citation id="6" index={6} source="Journal of Studies on Alcohol" year="2001" tier={1} />.
         </p>
@@ -222,7 +222,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
                   </ul>
                   <p>
                     <strong>What helps:</strong> Gentle information, personal reflection, and
-                    feedback from trusted sources — not pressure or confrontation.
+                    feedback from trusted sources --- not pressure or confrontation.
                   </p>
                 </div>
               ),
@@ -459,7 +459,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           While the Stages of Change model is a self-help framework, professional guidance can
-          accelerate progress — especially if you've been stuck in the same stage for an extended
+          accelerate progress --- especially if you've been stuck in the same stage for an extended
           period. Consider seeking support if:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -561,7 +561,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             "I don't have a problem.", "Everyone does this.", "People are overreacting." If you've
-            ever said — or heard — these phrases, you're witnessing pre-contemplation, the stage
+            ever said --- or heard --- these phrases, you're witnessing pre-contemplation, the stage
             where change hasn't yet entered the radar. It's not stubbornness; it's where awareness
             has yet to arrive.
           </p>
@@ -569,12 +569,12 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             Pre-contemplation is the first stage of the Stages of Change model, and it's defined
             by one key characteristic: the person doesn't yet recognize that a behavior needs to
             change <Citation id="1" index={1} source="American Journal of Health Promotion" year="1997" tier={1} />. This
-            lack of awareness can take different forms — genuine unawareness, active denial,
+            lack of awareness can take different forms --- genuine unawareness, active denial,
             demoralization from past failures, or rationalization <Citation id="2" index={2} source="Addictive Behaviors" year="2002" tier={1} />.
           </p>
           <p className="mb-6">
             Understanding pre-contemplation is crucial, because pressure and confrontation at this
-            stage typically backfire. People in pre-contemplation don't need to be convinced —
+            stage typically backfire. People in pre-contemplation don't need to be convinced ---
             they need conditions that allow awareness to emerge naturally <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2004" tier={1} />.
           </p>
         </div>
@@ -650,7 +650,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
                   <p className="mb-4">
                     <strong>Example:</strong> Someone who's attempted multiple diets and regained
                     the weight each time. They say "Why bother trying again? Nothing works for
-                    me." This isn't denial — it's learned helplessness.
+                    me." This isn't denial --- it's learned helplessness.
                   </p>
                   <p>
                     <strong>What helps:</strong> Restoring hope through small wins, reframing
@@ -694,7 +694,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Pre-contemplation serves a psychological function. Understanding the "why" behind
-          resistance can transform frustration into compassion — whether you're trying to
+          resistance can transform frustration into compassion --- whether you're trying to
           understand yourself or someone else.
         </p>
 
@@ -741,7 +741,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <p>
             In clinical settings, pre-contemplation is sometimes misinterpreted as resistance or
             lack of cooperation. Research shows that this stage reflects a mismatch between the
-            intervention and the person's readiness — not a character flaw <Citation id="4" index={6} source="Guilford Press" year="2012" tier={5} />.
+            intervention and the person's readiness --- not a character flaw <Citation id="4" index={6} source="Guilford Press" year="2012" tier={5} />.
           </p>
         </ArticleCallout>
 
@@ -754,7 +754,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6">
           If someone you care about is in pre-contemplation, your instinct may be to point out the
           problem, present evidence, or urge them to change. Research shows these approaches
-          typically fail — and can actually strengthen resistance <Citation id="7" index={7} source="Clinical Psychology Review" year="2003" tier={1} />.
+          typically fail --- and can actually strengthen resistance <Citation id="7" index={7} source="Clinical Psychology Review" year="2003" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -789,7 +789,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6 mt-6">
           The core principle: <strong>raise awareness, don't force awareness</strong>. Questions
           like "Have you noticed...?" or "How do you feel about...?" invite reflection without
-          triggering defenses. The goal isn't to win an argument — it's to plant seeds that can
+          triggering defenses. The goal isn't to win an argument --- it's to plant seeds that can
           grow over time.
         </p>
 
@@ -801,8 +801,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Reading this article suggests you may be moving out of pre-contemplation and into
-          contemplation. But if part of you still isn't sure there's a problem — or if you're
-          reading this about someone else's behavior — here are gentle ways to explore:
+          contemplation. But if part of you still isn't sure there's a problem --- or if you're
+          reading this about someone else's behavior --- here are gentle ways to explore:
         </p>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-6 rounded-lg mb-6">
@@ -812,7 +812,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <ol className="list-decimal pl-6 space-y-3 text-gray-700 dark:text-gray-300">
             <li>
               <strong>What would my closest friend or family member say</strong> about this
-              behavior? (Not whether they're right — just what would they say?)
+              behavior? (Not whether they're right --- just what would they say?)
             </li>
             <li>
               <strong>If I imagine my life five years from now</strong> continuing exactly as it
@@ -823,7 +823,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               problem does it solve?
             </li>
             <li>
-              <strong>When have I felt uncomfortable</strong> about this behavior — even briefly?
+              <strong>When have I felt uncomfortable</strong> about this behavior --- even briefly?
               What triggered that feeling?
             </li>
             <li>
@@ -836,7 +836,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <ArticleCallout variant="tip" title="The Power of Curiosity">
           <p>
             You don't have to decide right now whether change is necessary. The goal in
-            pre-contemplation isn't commitment — it's simply allowing yourself to become curious.
+            pre-contemplation isn't commitment --- it's simply allowing yourself to become curious.
             Questions like 'I wonder why this bothers other people?" or "What would need to be
             different for me to see this differently?" open the door without requiring immediate
             action <Citation id="6" index={8} source="Substance Abuse and Mental Health Services Administration" year="2020" tier={2} />.
@@ -850,7 +850,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           Moving from Pre-Contemplation to Contemplation
         </h2>
         <p className="mb-6">
-          Progress at this stage doesn't mean taking action or even deciding to change — it means
+          Progress at this stage doesn't mean taking action or even deciding to change --- it means
           awareness begins to emerge. Signs you're moving toward contemplation include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -874,8 +874,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           When to Seek Professional Guidance
         </h2>
         <p className="mb-6">
-          If you're concerned about someone in pre-contemplation — or you're wondering whether
-          your own lack of concern is part of a larger pattern — professional support can help.
+          If you're concerned about someone in pre-contemplation --- or you're wondering whether
+          your own lack of concern is part of a larger pattern --- professional support can help.
           Consider reaching out if:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -887,7 +887,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </ul>
         <p className="mb-6">
           Therapists trained in motivational interviewing are skilled at working with
-          pre-contemplation without creating resistance. The goal isn't to convince — it's to
+          pre-contemplation without creating resistance. The goal isn't to convince --- it's to
           create a space where awareness can safely emerge.
         </p>
       </>
@@ -989,7 +989,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </p>
           <p className="mb-6">
             This stage can last weeks, months, or even years. Research shows that many people
-            become "chronic contemplators" — perpetually thinking about change without taking
+            become "chronic contemplators" --- perpetually thinking about change without taking
             action <Citation id="4" index={2} source="Addictive Behaviors" year="2001" tier={1} />. Understanding why contemplation becomes
             a holding pattern is the first step toward breaking free.
           </p>
@@ -1011,7 +1011,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <ArticleCallout variant="did-you-know" title="The Seesaw Effect">
           <p>
             Research shows that when someone in contemplation articulates reasons to change,
-            they'll often immediately follow with reasons not to change — like a seesaw balancing
+            they'll often immediately follow with reasons not to change --- like a seesaw balancing
             itself <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2009" tier={1} />. This isn't resistance; it's
             the brain's attempt to resolve internal conflict by examining both sides equally.
           </p>
@@ -1021,7 +1021,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           The Decisional Balance
         </h3>
         <p className="mb-6">
-          At the heart of contemplation is what researchers call the "decisional balance" — the
+          At the heart of contemplation is what researchers call the "decisional balance" --- the
           mental weighing of pros and cons <Citation id="1" index={4} source="Health Psychology" year="1994" tier={1} />. In contemplation,
           the pros of changing are roughly equal to the pros of staying the same. Neither side
           clearly outweighs the other.
@@ -1051,7 +1051,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6 mt-6">
           Movement out of contemplation happens when the balance tips: the costs of staying the
           same begin to outweigh the benefits, and the benefits of change start to outweigh the
-          costs. But tipping that balance is rarely a logical process — it's emotional and
+          costs. But tipping that balance is rarely a logical process --- it's emotional and
           value-driven.
         </p>
 
@@ -1062,7 +1062,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           Why People Get Stuck in Contemplation
         </h2>
         <p className="mb-6">
-          Chronic contemplation — thinking about change without committing — serves a
+          Chronic contemplation --- thinking about change without committing --- serves a
           psychological purpose. Understanding these underlying dynamics can help you recognize
           what's keeping you stuck.
         </p>
@@ -1113,7 +1113,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
                 <div>
                   <p className="mb-4">
                     Even if you believe change would be beneficial, you may doubt your ability to
-                    pull it off. This is different from fear of failure — it's a deeper belief
+                    pull it off. This is different from fear of failure --- it's a deeper belief
                     that you lack the skills, resources, or willpower required.
                   </p>
                   <p>
@@ -1186,11 +1186,11 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <li>You feel guilty about not changing, but not guilty enough to commit</li>
           <li>When others encourage you, you respond with "Yes, but..."</li>
           <li>You set start dates and then postpone them</li>
-          <li>You experience cognitive dissonance — knowing your behavior conflicts with your values</li>
+          <li>You experience cognitive dissonance --- knowing your behavior conflicts with your values</li>
         </ul>
         <p className="mb-6">
           This awareness itself is valuable. Many people in contemplation feel frustrated with
-          themselves, believing they lack willpower. But contemplation isn't a character flaw —
+          themselves, believing they lack willpower. But contemplation isn't a character flaw ---
           it's a predictable stage that requires specific strategies to move through.
         </p>
 
@@ -1201,7 +1201,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           Strategies to Move from Contemplation to Preparation
         </h2>
         <p className="mb-6">
-          The goal isn't to force yourself into action prematurely — that typically leads to
+          The goal isn't to force yourself into action prematurely --- that typically leads to
           failure and a return to contemplation. Instead, use strategies designed to resolve
           ambivalence and tip the decisional balance <Citation id="8" index={7} source="Journal of Consulting and Clinical Psychology" year="2005" tier={1} />.
         </p>
@@ -1213,7 +1213,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               Write out all four quadrants: (1) Benefits of staying the same, (2) Costs of staying
-              the same, (3) Benefits of changing, (4) Costs of changing. Be brutally honest —
+              the same, (3) Benefits of changing, (4) Costs of changing. Be brutally honest ---
               including uncomfortable truths.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
@@ -1259,8 +1259,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               4. Talk to People Who've Made the Change
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              Hearing firsthand stories from people who were once where you are — and who
-              successfully changed — can increase self-efficacy and make change feel achievable.
+              Hearing firsthand stories from people who were once where you are --- and who
+              successfully changed --- can increase self-efficacy and make change feel achievable.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               <strong>Key insight:</strong> Ask them specifically about their ambivalence. How did
@@ -1273,7 +1273,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               5. Set a Decision Deadline
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              Chronic contemplation thrives on indefinite postponement. Give yourself a date — not
+              Chronic contemplation thrives on indefinite postponement. Give yourself a date --- not
               to start the change, but to <em>decide</em> whether you're committing.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
@@ -1300,8 +1300,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           When Professional Support Can Help
         </h2>
         <p className="mb-6">
-          If you've been in contemplation for an extended period — especially if it's causing
-          distress or the behavior is causing harm — working with a therapist trained in
+          If you've been in contemplation for an extended period --- especially if it's causing
+          distress or the behavior is causing harm --- working with a therapist trained in
           motivational interviewing can be transformative. Consider reaching out if:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1312,7 +1312,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <li>You need help identifying barriers or clarifying values</li>
         </ul>
         <p className="mb-6">
-          Therapists skilled in this stage don't push you toward action — they help you explore
+          Therapists skilled in this stage don't push you toward action --- they help you explore
           your ambivalence with curiosity and compassion, creating the conditions for your own
           commitment to emerge naturally. The decision to change has to come from within, but that
           doesn't mean you have to figure it out alone.
@@ -1404,20 +1404,20 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You've decided you're ready. You've moved past ambivalence, committed to change, and
-            set a start date. This is the preparation stage — and it's more important than you
+            set a start date. This is the preparation stage --- and it's more important than you
             might think. How you prepare determines whether your action stage will be sustainable
             or short-lived.
           </p>
           <p className="mb-6">
             The preparation stage typically spans the period from making a commitment to actually
-            beginning the behavior change — usually less than 30 days <Citation id="4" index={1} source="Journal of Substance Abuse Treatment" year="2003" tier={1} />. It's
+            beginning the behavior change --- usually less than 30 days <Citation id="4" index={1} source="Journal of Substance Abuse Treatment" year="2003" tier={1} />. It's
             characterized by concrete planning, small preliminary steps, and building the
             infrastructure needed to support your new behavior.
           </p>
           <p className="mb-6">
             Research shows that people who thoroughly prepare before taking action are
             significantly more likely to succeed <Citation id="1" index={2} source="Psychological Bulletin" year="2006" tier={1} />. Yet many people skip this
-            stage entirely, jumping from contemplation straight into action — and then wondering
+            stage entirely, jumping from contemplation straight into action --- and then wondering
             why motivation fades so quickly.
           </p>
         </div>
@@ -1491,7 +1491,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               2. Identify and Address Potential Obstacles
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              Mental contrasting — vividly imagining both success <em>and</em> obstacles — is more
+              Mental contrasting --- vividly imagining both success <em>and</em> obstacles --- is more
               effective than positive visualization alone <Citation id="6" index={5} source="Cognitive Therapy and Research" year="2016" tier={1} />. When you
               anticipate barriers in advance, you can plan how to overcome them.
             </p>
@@ -1509,7 +1509,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               Social support is one of the strongest predictors of successful behavior change <Citation id="3" index={6} source="Health Psychology" year="2000" tier={1} />. But
-              support doesn't happen automatically — you need to actively build it during the
+              support doesn't happen automatically --- you need to actively build it during the
               preparation stage.
             </p>
             <p className="mb-3 font-semibold text-gray-900 dark:text-white">Action steps:</p>
@@ -1528,8 +1528,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
               Your environment shapes behavior more powerfully than willpower. Environmental
-              restructuring — changing your physical and social surroundings to make the desired
-              behavior easier and undesired behavior harder — is one of the most effective
+              restructuring --- changing your physical and social surroundings to make the desired
+              behavior easier and undesired behavior harder --- is one of the most effective
               preparation strategies <Citation id="7" index={7} source="American Journal of Preventive Medicine" year="2018" tier={1} />.
             </p>
             <p className="mb-3 font-semibold text-gray-900 dark:text-white">Examples:</p>
@@ -1561,7 +1561,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           Taking Small Steps Before the Start Date
         </h2>
         <p className="mb-6">
-          Preparation isn't just planning — it's also taking preliminary actions that build
+          Preparation isn't just planning --- it's also taking preliminary actions that build
           momentum and confidence. Research shows that people who take small steps during
           preparation are more likely to follow through with full action <Citation id="8" index={8} source="Addictive Behaviors" year="1999" tier={1} />.
         </p>
@@ -1628,7 +1628,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
 
         <ArticleCallout variant="warning" title="The Danger of Over-Preparation">
           <p>
-            While preparation is crucial, there's a trap called "analysis paralysis" — spending so
+            While preparation is crucial, there's a trap called "analysis paralysis" --- spending so
             much time preparing that you never actually start. If you've been in preparation for
             more than a month, or if you're postponing your start date repeatedly, you may have
             slipped back into contemplation. Preparation should feel energizing, not paralyzing.
@@ -1713,7 +1713,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
 
         <p className="mb-6">
           If you checked most of these boxes, you're ready to move into action. If several are
-          missing, spend a few more days in preparation — it will pay dividends once you begin.
+          missing, spend a few more days in preparation --- it will pay dividends once you begin.
         </p>
 
         <h2
@@ -1832,7 +1832,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've started. You're doing the thing. This is the action stage — the most visible,
+            You've started. You're doing the thing. This is the action stage --- the most visible,
             demanding, and psychologically intense phase of behavior change. It's where motivation
             meets reality, where plans collide with obstacles, and where most people either build
             momentum or give up.
@@ -1845,7 +1845,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </p>
           <p className="mb-6">
             This stage is both exhilarating and exhausting. Research shows that the first 90 days
-            are the most critical — it's when habits begin to form, but also when relapse risk is
+            are the most critical --- it's when habits begin to form, but also when relapse risk is
             highest <Citation id="2" index={2} source="European Journal of Social Psychology" year="2009" tier={1} />. Understanding what
             to expect and how to navigate early challenges dramatically increases your chances of
             long-term success.
@@ -1902,7 +1902,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
                   </p>
                   <p>
                     <strong>What helps:</strong> Expect this dip. It's not a sign you're failing
-                    — it's a predictable stage. Lean on your if-then plans and environmental
+                    --- it's a predictable stage. Lean on your if-then plans and environmental
                     supports.
                   </p>
                 </div>
@@ -1914,7 +1914,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
                 <div>
                   <p className="mb-3">
                     <strong>What it feels like:</strong> Research shows that the average time to
-                    form a new habit is 66 days — with significant variation depending on
+                    form a new habit is 66 days --- with significant variation depending on
                     complexity <Citation id="2" index={3} source="European Journal of Social Psychology" year="2009" tier={1} />. This
                     is when the behavior starts to feel less effortful, but isn't yet automatic.
                   </p>
@@ -1970,15 +1970,15 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6">
           One of the most universal experiences in the action stage is the motivation drop. You
           started with fire, but by week three, it feels like you're dragging yourself through
-          quicksand. This isn't failure — it's neuroscience.
+          quicksand. This isn't failure --- it's neuroscience.
         </p>
 
         <ArticleCallout variant="did-you-know" title="The Motivation-Volition Gap">
           <p>
-            Researchers identify a "motivation-volition gap" — the space between wanting to do
+            Researchers identify a "motivation-volition gap" --- the space between wanting to do
             something and actually doing it <Citation id="3" index={4} source="Journal of Sport and Exercise Psychology" year="2002" tier={1} />. In the
             preparation stage, motivation is high. But in action, motivation is unreliable. What
-            bridges the gap? Systems, habits, and volitional control — choosing to do it even when
+            bridges the gap? Systems, habits, and volitional control --- choosing to do it even when
             you don't feel like it.
           </p>
         </ArticleCallout>
@@ -1993,13 +1993,13 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
               1. Track Everything (Self-Monitoring)
             </h4>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              Self-monitoring — consistently tracking your behavior — is one of the most powerful
+              Self-monitoring --- consistently tracking your behavior --- is one of the most powerful
               action-stage strategies. A meta-analysis of 138 studies found that people who track
               their behavior change twice as much as those who don't <Citation id="4" index={5} source="Psychological Bulletin" year="2011" tier={1} />.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
               <strong>How to do it:</strong> Use a habit tracker, journal, or app. Don't just
-              track whether you did the behavior — track context (time, mood, obstacles) so you
+              track whether you did the behavior --- track context (time, mood, obstacles) so you
               can identify patterns.
             </p>
           </div>
@@ -2064,7 +2064,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             <p className="text-gray-700 dark:text-gray-300">
               <strong>How to do it:</strong> Check in weekly with your accountability partner.
               Join a group or community. Share updates (even small ones) publicly or with trusted
-              people. Ask for help when you're struggling — don't wait until you've already
+              people. Ask for help when you're struggling --- don't wait until you've already
               relapsed.
             </p>
           </div>
@@ -2077,8 +2077,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           How to Handle Setbacks Without Spiraling
         </h2>
         <p className="mb-6">
-          A lapse — a single slip or missed day — is normal and expected. A relapse — returning
-          fully to the old behavior — is not inevitable. The difference comes down to how you
+          A lapse --- a single slip or missed day --- is normal and expected. A relapse --- returning
+          fully to the old behavior --- is not inevitable. The difference comes down to how you
           interpret and respond to setbacks.
         </p>
 
@@ -2122,7 +2122,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <p>
             If you miss a day or slip up, give yourself a 48-hour window to get back on track. Use
             that time to figure out what went wrong, adjust your plan if needed, and recommit. But
-            don't let more than two days pass — the longer the gap, the harder the restart.
+            don't let more than two days pass --- the longer the gap, the harder the restart.
           </p>
         </ArticleCallout>
 
@@ -2133,7 +2133,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           When Action Feels Impossible: Scaling Back Without Giving Up
         </h2>
         <p className="mb-6">
-          Sometimes life circumstances — illness, major stress, grief, or crisis — make maintaining
+          Sometimes life circumstances --- illness, major stress, grief, or crisis --- make maintaining
           your new behavior feel impossible. In these moments, all-or-nothing thinking leads to
           relapse. A better strategy: scale back to a minimal viable version.
         </p>
@@ -2159,8 +2159,8 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
             </li>
           </ul>
           <p className="mt-4 text-gray-700 dark:text-gray-300">
-            Research shows that maintaining the <em>frequency</em> of a behavior — even in reduced
-            form — is more important than maintaining intensity during difficult periods. You can
+            Research shows that maintaining the <em>frequency</em> of a behavior --- even in reduced
+            form --- is more important than maintaining intensity during difficult periods. You can
             always ramp back up when life stabilizes.
           </p>
         </div>
@@ -2181,7 +2181,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <li>Missing the behavior feels uncomfortable or "off"</li>
           <li>You've successfully maintained it through at least one disruption (vacation, illness, stress)</li>
           <li>You no longer track it daily because it feels automatic</li>
-          <li>Your identity has shifted — you now see yourself as someone who does this</li>
+          <li>Your identity has shifted --- you now see yourself as someone who does this</li>
         </ul>
         <p className="mb-6">
           These shifts don't mean the work is over, but they signal that the most intense phase is
@@ -2210,7 +2210,7 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           Therapists, coaches, and support groups can provide the accountability, skill-building,
           and emotional support that make the difference between relapse and lasting change.
           Remember: the action stage is the hardest phase. Asking for help doesn't mean you've
-          failed — it means you're serious about succeeding.
+          failed --- it means you're serious about succeeding.
         </p>
       </>
     ),

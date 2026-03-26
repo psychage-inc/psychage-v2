@@ -94,7 +94,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A cancer diagnosis changes everything—not just physically, but emotionally, psychologically, and existentially. The emotional journey through diagnosis, treatment, and survivorship is as real and significant as the medical journey, yet it often receives far less attention.
+            A cancer diagnosis changes everything---not just physically, but emotionally, psychologically, and existentially. The emotional journey through diagnosis, treatment, and survivorship is as real and significant as the medical journey, yet it often receives far less attention.
           </p>
           <p className="mb-6">
             Research shows that 30-40% of cancer patients experience clinically significant psychological distress, including depression, anxiety, and adjustment disorders <Citation id="1" index={1} source="Journal of Clinical Oncology" year="2021" tier={1} />. Yet fewer than half receive mental health support <Citation id="2" index={2} source="NCCN" year="2023" tier={4} />. Understanding the common psychological challenges and evidence-based coping strategies can make a profound difference in quality of life during and after cancer treatment.
@@ -105,7 +105,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           The Emotional Landscape of Cancer
         </h2>
         <p className="mb-6">
-          There is no single emotional trajectory through cancer—people experience a wide range of responses, and all are valid. However, certain psychological challenges are common across the cancer experience.
+          There is no single emotional trajectory through cancer---people experience a wide range of responses, and all are valid. However, certain psychological challenges are common across the cancer experience.
         </p>
 
         <ArticleAccordion
@@ -184,7 +184,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note" title="When Distress Requires Professional Support">
-          <p className="mb-3">Not all emotional distress during cancer requires formal mental health treatment—some is a normal response to an abnormal situation. However, seek professional psychological support if you experience:</p>
+          <p className="mb-3">Not all emotional distress during cancer requires formal mental health treatment---some is a normal response to an abnormal situation. However, seek professional psychological support if you experience:</p>
           <ul className="list-disc pl-6 space-y-2">
             <li>Persistent thoughts of death or suicide</li>
             <li>Inability to care for yourself or make decisions</li>
@@ -209,7 +209,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Build a Support Network',
               description: (
                 <div className="space-y-3">
-                  <p>Social support is one of the strongest predictors of quality of life in cancer survivorship <Citation id="7" index={7} source="Cancer" year="2020" tier={1} />. This doesn't mean forcing yourself to be social—it means identifying who and what types of support are most helpful for you.</p>
+                  <p>Social support is one of the strongest predictors of quality of life in cancer survivorship <Citation id="7" index={7} source="Cancer" year="2020" tier={1} />. This doesn't mean forcing yourself to be social---it means identifying who and what types of support are most helpful for you.</p>
                   <ul className="list-disc pl-6 space-y-2 mt-3">
                     <li><strong>Practical support</strong>: People who help with meals, rides, childcare, household tasks</li>
                     <li><strong>Emotional support</strong>: People you can talk to honestly without feeling judged</li>
@@ -239,7 +239,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Engage in Meaning-Making',
               description: (
                 <div className="space-y-3">
-                  <p>Many cancer survivors report that actively searching for meaning in their experience—rather than waiting for meaning to appear—is associated with better psychological adjustment <Citation id="8" index={8} source="Health Psychology Review" year="2022" tier={1} />.</p>
+                  <p>Many cancer survivors report that actively searching for meaning in their experience---rather than waiting for meaning to appear---is associated with better psychological adjustment <Citation id="8" index={8} source="Health Psychology Review" year="2022" tier={1} />.</p>
                   <p className="font-semibold mt-3">Ways to engage in meaning-making:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Reflective journaling</strong>: Write about what cancer has taught you or changed in you</li>
@@ -272,7 +272,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           Post-Traumatic Growth: Finding Strength Through Adversity
         </h2>
         <p className="mb-6">
-          While cancer is undeniably traumatic, research on post-traumatic growth shows that many survivors report positive psychological changes alongside their suffering <Citation id="3" index={3} source="Psycho-Oncology" year="2020" tier={1} />. This isn't about "silver linings" or minimizing pain—it's about recognizing that growth and suffering can coexist.
+          While cancer is undeniably traumatic, research on post-traumatic growth shows that many survivors report positive psychological changes alongside their suffering <Citation id="3" index={3} source="Psycho-Oncology" year="2020" tier={1} />. This isn't about "silver linings" or minimizing pain---it's about recognizing that growth and suffering can coexist.
         </p>
 
         <ArticleChart
@@ -289,14 +289,14 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Growth doesn't happen automatically—it requires active engagement with your experience, social support, and often professional guidance. It's also completely okay if you don't experience post-traumatic growth; there is no 'right way' to respond to cancer.
+          Growth doesn't happen automatically---it requires active engagement with your experience, social support, and often professional guidance. It's also completely okay if you don't experience post-traumatic growth; there is no 'right way' to respond to cancer.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started
         </h2>
         <p className="mb-6">
-          Beginning to address the psychological impact of cancer doesn't require dramatic changes—small, consistent steps make a significant difference.
+          Beginning to address the psychological impact of cancer doesn't require dramatic changes---small, consistent steps make a significant difference.
         </p>
 
         <BeforeAfter
@@ -304,7 +304,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
             title: 'Common Barriers',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>"I should be grateful to be alive—I shouldn't complain"</li>
+                <li>"I should be grateful to be alive---I shouldn't complain"</li>
                 <li>"I need to stay positive for my family"</li>
                 <li>"My medical team is too busy to hear about my feelings"</li>
                 <li>"Mental health support is only for people who can't cope"</li>
@@ -316,11 +316,11 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
             title: 'Helpful Reframes',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Gratitude and grief can coexist—both are valid</li>
+                <li>Gratitude and grief can coexist---both are valid</li>
                 <li>Authentic emotion supports better relationships than forced positivity</li>
                 <li>Addressing emotional needs improves treatment outcomes</li>
                 <li>Support is a sign of wisdom, not weakness</li>
-                <li>Cancer affects mind and body—both deserve care</li>
+                <li>Cancer affects mind and body---both deserve care</li>
               </ul>
             ),
           }}
@@ -426,7 +426,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you've been diagnosed with a real medical condition—cancer, autoimmune disease, heart disease, chronic pain—paying attention to your body is not only appropriate, it's necessary. But where's the line between healthy vigilance and debilitating health anxiety?
+            When you've been diagnosed with a real medical condition---cancer, autoimmune disease, heart disease, chronic pain---paying attention to your body is not only appropriate, it's necessary. But where's the line between healthy vigilance and debilitating health anxiety?
           </p>
           <p className="mb-6">
             This is the confusing territory many people with chronic or serious medical conditions find themselves in. Unlike those whose health anxiety is rooted in catastrophic thinking about unlikely diseases, your concerns are anchored in a real diagnosis <Citation id="1" index={1} source="General Hospital Psychiatry" year="2021" tier={1} />. The challenge is learning to monitor your health responsibly without letting fear take over your life.
@@ -437,7 +437,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           Appropriate Vigilance vs. Excessive Anxiety
         </h2>
         <p className="mb-6">
-          The difference between appropriate medical vigilance and health anxiety isn't about the presence of worry—it's about the impact on your functioning and quality of life <Citation id="4" index={4} source="Journal of Psychosomatic Research" year="2021" tier={1} />.
+          The difference between appropriate medical vigilance and health anxiety isn't about the presence of worry---it's about the impact on your functioning and quality of life <Citation id="4" index={4} source="Journal of Psychosomatic Research" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -469,7 +469,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Fear of Recurrence or Progression',
               content: (
                 <div className="space-y-3">
-                  <p>For those who've experienced cancer, autoimmune flares, or other episodic conditions, fear of recurrence is nearly universal—affecting 50-70% of survivors <Citation id="2" index={2} source="Oncology" year="2020" tier={1} />.</p>
+                  <p>For those who've experienced cancer, autoimmune flares, or other episodic conditions, fear of recurrence is nearly universal---affecting 50-70% of survivors <Citation id="2" index={2} source="Oncology" year="2020" tier={1} />.</p>
                   <p className="font-semibold mt-3">When fear becomes excessive:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Every minor symptom triggers panic about recurrence</li>
@@ -485,7 +485,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Ambiguous Symptoms',
               content: (
                 <div className="space-y-3">
-                  <p>Many chronic conditions involve variable, non-specific symptoms—fatigue, pain, digestive issues—that fluctuate unpredictably. This ambiguity makes it difficult to know when to worry.</p>
+                  <p>Many chronic conditions involve variable, non-specific symptoms---fatigue, pain, digestive issues---that fluctuate unpredictably. This ambiguity makes it difficult to know when to worry.</p>
                   <p className="font-semibold mt-3">When symptom vigilance becomes problematic:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>You interpret every symptom through the worst-case lens</li>
@@ -501,7 +501,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Medical Appointments and Test Results',
               content: (
                 <div className="space-y-3">
-                  <p>Routine monitoring—blood tests, imaging, physical exams—is medically necessary. But anticipating these appointments can trigger significant anxiety, especially if you've received bad news in the past.</p>
+                  <p>Routine monitoring---blood tests, imaging, physical exams---is medically necessary. But anticipating these appointments can trigger significant anxiety, especially if you've received bad news in the past.</p>
                   <p className="font-semibold mt-3">Signs of excessive anticipatory anxiety:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Sleep disruption for days or weeks before appointments</li>
@@ -517,7 +517,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: "Hearing Others\' Medical Stories",
               content: (
                 <div className="space-y-3">
-                  <p>When you have a medical condition, stories about others with the same diagnosis—especially negative outcomes—can feel personally threatening and trigger anxiety spirals.</p>
+                  <p>When you have a medical condition, stories about others with the same diagnosis---especially negative outcomes---can feel personally threatening and trigger anxiety spirals.</p>
                   <p className="font-semibold mt-3">When vicarious experiences become overwhelming:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>You avoid support groups because hearing others" struggles is too anxiety-provoking</li>
@@ -573,7 +573,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Practice Tolerance of Uncertainty',
               description: (
                 <div className="space-y-3">
-                  <p>Chronic illness inherently involves medical uncertainty—future outcomes, symptom fluctuations, treatment effectiveness. Intolerance of this uncertainty fuels health anxiety <Citation id="5" index={5} source="Cognitive Behaviour Therapy" year="2020" tier={1} />.</p>
+                  <p>Chronic illness inherently involves medical uncertainty---future outcomes, symptom fluctuations, treatment effectiveness. Intolerance of this uncertainty fuels health anxiety <Citation id="5" index={5} source="Cognitive Behaviour Therapy" year="2020" tier={1} />.</p>
                   <p className="font-semibold mt-3">Build uncertainty tolerance:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Notice reassurance-seeking urges</strong>: When you want to Google symptoms or call your doctor for the third time, pause and notice the urge without immediately acting on it</li>
@@ -610,7 +610,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                     <li><strong>Recognize thoughts as events, not facts</strong>: "I'm having the thought that this symptom is serious' rather than "This symptom IS serious"</li>
                     <li><strong>Observe worry without engaging</strong>: Notice the worry, acknowledge it's there, but don't try to solve it mentally</li>
                     <li><strong>Postpone worry</strong>: Designate a 15-minute 'worry time' each day rather than worrying continuously</li>
-                    <li><strong>Let thoughts pass</strong>: Imagine health thoughts as clouds passing through the sky—present but temporary</li>
+                    <li><strong>Let thoughts pass</strong>: Imagine health thoughts as clouds passing through the sky---present but temporary</li>
                   </ul>
                 </div>
               ),
@@ -751,7 +751,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "But you don't look sick." These five words capture the core challenge of living with an invisible illness—chronic conditions that profoundly affect your daily life but leave no visible trace on your body.
+            "But you don't look sick." These five words capture the core challenge of living with an invisible illness---chronic conditions that profoundly affect your daily life but leave no visible trace on your body.
           </p>
           <p className="mb-6">
             Conditions like fibromyalgia, chronic fatigue syndrome, autoimmune diseases, chronic pain, migraines, digestive disorders, and many mental health conditions share this common feature: they're real, they're debilitating, and they're invisible to others <Citation id="1" index={1} source="Journal of Health Psychology" year="2021" tier={1} />. This invisibility creates a unique set of psychological challenges that compound the already difficult experience of living with chronic illness.
@@ -773,7 +773,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Chronic Invalidation and Disbelief',
               content: (
                 <div className="space-y-3">
-                  <p>When your illness isn't visible, others—including sometimes medical professionals—may question whether it's real. This constant invalidation is psychologically corrosive <Citation id="5" index={5} source="Pain" year="2020" tier={1} />.</p>
+                  <p>When your illness isn't visible, others---including sometimes medical professionals---may question whether it's real. This constant invalidation is psychologically corrosive <Citation id="5" index={5} source="Pain" year="2020" tier={1} />.</p>
                   <p className="font-semibold mt-4">Common invalidating messages:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"You're too young to be that tired"</li>
@@ -861,7 +861,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note" title="Medical Gaslighting">
-          <p className="mb-3">Many people with invisible illnesses experience "medical gaslighting"—when healthcare providers dismiss, minimize, or attribute physical symptoms to psychological causes without proper investigation. This is especially common for women, people of color, and those with complex or poorly understood conditions.</p>
+          <p className="mb-3">Many people with invisible illnesses experience "medical gaslighting"---when healthcare providers dismiss, minimize, or attribute physical symptoms to psychological causes without proper investigation. This is especially common for women, people of color, and those with complex or poorly understood conditions.</p>
           <p>Medical gaslighting can lead to delayed diagnosis, inadequate treatment, and significant psychological harm including medical trauma and reluctance to seek care.</p>
         </ArticleCallout>
 
@@ -885,7 +885,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                     <li><strong>Keep a symptom journal</strong>: Track your experience to counteract gaslighting and validate your patterns</li>
                     <li><strong>Name the invalidation</strong>: "That was invalidating" or "My experience is real even if it's invisible"</li>
                     <li><strong>Separate your worth from productivity</strong>: You are valuable regardless of what you can accomplish on any given day</li>
-                    <li><strong>Trust your body's signals</strong>: If your body says rest, rest—even if others don't understand</li>
+                    <li><strong>Trust your body's signals</strong>: If your body says rest, rest---even if others don't understand</li>
                   </ul>
                 </div>
               ),
@@ -915,7 +915,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Build Self-Advocacy Skills',
               description: (
                 <div className="space-y-3">
-                  <p>Self-advocacy is especially important when your condition isn't visible—you must actively communicate your needs rather than expecting others to recognize them <Citation id="6" index={6} source="Patient Education and Counseling" year="2021" tier={1} />.</p>
+                  <p>Self-advocacy is especially important when your condition isn't visible---you must actively communicate your needs rather than expecting others to recognize them <Citation id="6" index={6} source="Patient Education and Counseling" year="2021" tier={1} />.</p>
                   <p className="font-semibold mt-3">Self-advocacy framework:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Know your rights</strong>: Understand ADA protections, FMLA, and workplace accommodations</li>
@@ -939,7 +939,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                     <li><strong>Patient advocacy organizations</strong>: Groups fighting for awareness and research</li>
                     <li><strong>Online forums and Reddit communities</strong>: Accessible spaces to connect and share</li>
                   </ul>
-                  <p className="mt-3">Balance community connection with self-care—sometimes reading others" struggles can increase rather than decrease distress.</p>
+                  <p className="mt-3">Balance community connection with self-care---sometimes reading others" struggles can increase rather than decrease distress.</p>
                 </div>
               ),
             },
@@ -957,12 +957,12 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           title="Invalidating Comments and Possible Responses"
           columns={['Invalidating Comment', 'Boundary-Setting Response']}
           items={[
-            { feature: "But you don't look sick", values: ["Chronic illness is often invisible—that doesn't make it less real"] },
+            { feature: "But you don't look sick", values: ["Chronic illness is often invisible---that doesn't make it less real"] },
             { feature: 'Have you tried yoga/diet/exercise?', values: ['I work closely with my medical team on my treatment plan'] },
             { feature: "You're too young to be this tired", values: ["Chronic illness doesn't have an age requirement"] },
             { feature: "Maybe it's just stress", values: ['This is a diagnosed medical condition, not a stress response'] },
-            { feature: 'You were fine yesterday', values: ["Chronic illness often fluctuates—good days don't mean I'm cured"] },
-            { feature: "At least it's not cancer", values: ["Comparing illnesses isn't helpful—all chronic conditions are difficult"] },
+            { feature: 'You were fine yesterday', values: ["Chronic illness often fluctuates---good days don't mean I'm cured"] },
+            { feature: "At least it's not cancer", values: ["Comparing illnesses isn't helpful---all chronic conditions are difficult"] },
           ]}
           highlightColumn={1}
         />
@@ -1006,7 +1006,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="tip" title="First Step: Find One Understanding Person">
-          <p>Identify one person—a friend, family member, therapist, or online community member—who validates your experience and doesn't require you to prove your illness. Having even one relationship where you don't have to perform wellness or justify limitations can be profoundly stabilizing.</p>
+          <p>Identify one person---a friend, family member, therapist, or online community member---who validates your experience and doesn't require you to prove your illness. Having even one relationship where you don't have to perform wellness or justify limitations can be profoundly stabilizing.</p>
         </ArticleCallout>
 
         <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1112,7 +1112,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're preparing for surgery, medical teams focus on the physical: the procedure itself, anesthesia protocols, post-operative care instructions. But surgery is not just a physical event—it's a psychological one that can trigger anxiety, depression, trauma, and significant emotional adjustment.
+            When you're preparing for surgery, medical teams focus on the physical: the procedure itself, anesthesia protocols, post-operative care instructions. But surgery is not just a physical event---it's a psychological one that can trigger anxiety, depression, trauma, and significant emotional adjustment.
           </p>
           <p className="mb-6">
             Research shows that psychological factors before, during, and after surgery significantly affect recovery outcomes, pain levels, and overall well-being <Citation id="1" index={1} source="Annals of Surgery" year="2021" tier={1} />. Yet these mental health aspects often receive minimal attention in surgical care. Understanding the emotional landscape of surgery can help you prepare more holistically and seek support when needed.
@@ -1133,7 +1133,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Pre-Surgical Anxiety',
               description: (
                 <div className="space-y-3">
-                  <p>Anticipatory anxiety before surgery is nearly universal, affecting 60-80% of surgical patients <Citation id="2" index={2} source="British Journal of Anaesthesia" year="2020" tier={1} />. This anxiety isn't just distressing—it's associated with worse pain outcomes, slower healing, and longer hospital stays.</p>
+                  <p>Anticipatory anxiety before surgery is nearly universal, affecting 60-80% of surgical patients <Citation id="2" index={2} source="British Journal of Anaesthesia" year="2020" tier={1} />. This anxiety isn't just distressing---it's associated with worse pain outcomes, slower healing, and longer hospital stays.</p>
                   <p className="font-semibold mt-4">Common pre-surgical fears:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Fear of anesthesia</strong>: Worry about not waking up or experiencing awareness during surgery</li>
@@ -1164,7 +1164,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Post-Surgical Depression and Adjustment',
               description: (
                 <div className="space-y-3">
-                  <p>Depression after surgery is common, affecting 10-30% of surgical patients depending on the type of procedure <Citation id="3" index={3} source="Journal of Affective Disorders" year="2021" tier={1} />. This isn't just "feeling down"—it's a clinical phenomenon with identifiable risk factors and treatment options.</p>
+                  <p>Depression after surgery is common, affecting 10-30% of surgical patients depending on the type of procedure <Citation id="3" index={3} source="Journal of Affective Disorders" year="2021" tier={1} />. This isn't just "feeling down"---it's a clinical phenomenon with identifiable risk factors and treatment options.</p>
                   <p className="font-semibold mt-4">Contributors to post-surgical depression:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Physical pain and limited mobility creating functional losses</li>
@@ -1197,7 +1197,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note" title="Cognitive Changes After Surgery">
-          <p className="mb-3">Post-operative cognitive dysfunction (POCD) is a real phenomenon where some patients—especially older adults—experience memory problems, confusion, or difficulty concentrating after surgery and anesthesia <Citation id="7" index={7} source="JAMA Surgery" year="2022" tier={1} />.</p>
+          <p className="mb-3">Post-operative cognitive dysfunction (POCD) is a real phenomenon where some patients---especially older adults---experience memory problems, confusion, or difficulty concentrating after surgery and anesthesia <Citation id="7" index={7} source="JAMA Surgery" year="2022" tier={1} />.</p>
           <p>Most cognitive changes resolve within weeks to months, but some persist. If you notice significant cognitive difficulties after surgery, discuss them with your medical team rather than assuming they're normal aging or inevitable.</p>
         </ArticleCallout>
 
@@ -1227,7 +1227,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           Psychological Preparation for Surgery
         </h2>
         <p className="mb-6">
-          Psychological preparation for surgery—beyond just medical preparation—can improve outcomes and reduce distress <Citation id="4" index={4} source="American Psychologist" year="2022" tier={1} />.
+          Psychological preparation for surgery---beyond just medical preparation---can improve outcomes and reduce distress <Citation id="4" index={4} source="American Psychologist" year="2022" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -1287,7 +1287,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
               title: 'Set Realistic Expectations',
               content: (
                 <div className="space-y-3">
-                  <p>Unrealistic expectations about recovery—often fueled by best-case scenarios—can lead to disappointment and depression when recovery is slower or more difficult than anticipated.</p>
+                  <p>Unrealistic expectations about recovery---often fueled by best-case scenarios---can lead to disappointment and depression when recovery is slower or more difficult than anticipated.</p>
                   <p className="font-semibold mt-3">Questions to clarify expectations:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"What's a typical recovery timeline, not just the best-case?"</li>
@@ -1336,14 +1336,14 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="tip" title={`The "Recovery Isn't Linear" Reminder`}>
-          <p>Recovery from surgery—both physical and psychological—rarely follows a smooth upward trajectory. Expect setbacks, bad days, and emotional waves. A difficult day doesn't mean you're failing at recovery; it means you're human and healing is complex.</p>
+          <p>Recovery from surgery---both physical and psychological---rarely follows a smooth upward trajectory. Expect setbacks, bad days, and emotional waves. A difficult day doesn't mean you're failing at recovery; it means you're human and healing is complex.</p>
         </ArticleCallout>
 
         <h2 id="body-image" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Body Image Changes After Surgery
         </h2>
         <p className="mb-6">
-          Surgeries that change your appearance—scars, amputations, ostomies, mastectomies, bariatric procedures—require psychological adjustment to a changed body <Citation id="5" index={5} source="Body Image" year="2020" tier={1} />.
+          Surgeries that change your appearance---scars, amputations, ostomies, mastectomies, bariatric procedures---require psychological adjustment to a changed body <Citation id="5" index={5} source="Body Image" year="2020" tier={1} />.
         </p>
 
         <ArticleChart
@@ -1360,7 +1360,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Adjusting to body changes takes time—often much longer than the physical healing process. Consider working with a therapist specializing in body image or medical trauma if you're struggling to accept post-surgical changes.
+          Adjusting to body changes takes time---often much longer than the physical healing process. Consider working with a therapist specializing in body image or medical trauma if you're struggling to accept post-surgical changes.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1476,7 +1476,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Be your own advocate." Healthcare providers say it often, but rarely explain what it actually means or how to do it—especially when you're overwhelmed, unwell, or navigating a system that can feel dismissive or confusing.
+            "Be your own advocate." Healthcare providers say it often, but rarely explain what it actually means or how to do it---especially when you're overwhelmed, unwell, or navigating a system that can feel dismissive or confusing.
           </p>
           <p className="mb-6">
             Self-advocacy in healthcare means actively participating in your own care: asking questions, communicating your needs clearly, seeking second opinions when needed, and ensuring your concerns are heard and addressed <Citation id="1" index={1} source="Patient Education and Counseling" year="2021" tier={1} />. Strong self-advocacy skills are associated with better health outcomes, higher satisfaction with care, and reduced medical errors <Citation id="4" index={4} source="BMJ Quality & Safety" year="2021" tier={1} />. This guide provides practical strategies to navigate the medical system more effectively.
@@ -1504,12 +1504,12 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          These barriers are systemic—they're not your fault. But learning to navigate them effectively can significantly improve your healthcare experience <Citation id="2" index={2} source="Journal of General Internal Medicine" year="2020" tier={2} />.
+          These barriers are systemic---they're not your fault. But learning to navigate them effectively can significantly improve your healthcare experience <Citation id="2" index={2} source="Journal of General Internal Medicine" year="2020" tier={2} />.
         </p>
 
         <ArticleCallout variant="did-you-know" title="The Gender and Race Gap in Medical Advocacy">
           <p className="mb-3">Research consistently shows that women, people of color, and other marginalized groups face higher rates of medical dismissal and gaslighting <Citation id="5" index={5} source="Journal of Women's Health" year="2022" tier={1} />. Women's pain is more likely to be attributed to psychological causes, and Black patients" symptoms are more likely to be underestimated.</p>
-          <p>Self-advocacy skills are especially important for those who face systemic bias in healthcare, though the burden of advocating shouldn't fall solely on patients—the system needs to change.</p>
+          <p>Self-advocacy skills are especially important for those who face systemic bias in healthcare, though the burden of advocating shouldn't fall solely on patients---the system needs to change.</p>
         </ArticleCallout>
 
         <h2 id="before-appointment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1535,7 +1535,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                     <li><strong>Triggers and relieving factors</strong>: What makes it worse or better</li>
                     <li><strong>Previous treatments tried</strong>: What you've done and whether it helped</li>
                   </ul>
-                  <p className="mt-3">Bring this written timeline to your appointment—you're more likely to remember important details.</p>
+                  <p className="mt-3">Bring this written timeline to your appointment---you're more likely to remember important details.</p>
                 </div>
               ),
             },
@@ -1546,7 +1546,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                   <p>List your top 2-3 priorities for the visit. With limited time, clarity about your goals ensures the most important issues get addressed.</p>
                   <p className="font-semibold mt-3">Sample agenda format:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Priority 1</strong>: Discuss worsening fatigue—need evaluation for causes</li>
+                    <li><strong>Priority 1</strong>: Discuss worsening fatigue---need evaluation for causes</li>
                     <li><strong>Priority 2</strong>: Refill prescriptions for [medications]</li>
                     <li><strong>Priority 3</strong>: Review recent lab results and next steps</li>
                   </ul>
@@ -1634,12 +1634,12 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                   <p>Explaining how symptoms affect your daily life conveys severity more effectively than describing symptoms alone.</p>
                   <p className="font-semibold mt-3">Examples of functional impact statements:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>"The pain prevents me from working—I've missed 5 days this month"</li>
+                    <li>"The pain prevents me from working---I've missed 5 days this month"</li>
                     <li>"I can't climb stairs without becoming breathless"</li>
                     <li>"The fatigue is so severe I can't prepare meals for my children"</li>
                     <li>"I've stopped driving because the dizziness is unpredictable"</li>
                   </ul>
-                  <p className="mt-3">Functional impact demonstrates that symptoms aren't minor annoyances—they're affecting your quality of life.</p>
+                  <p className="mt-3">Functional impact demonstrates that symptoms aren't minor annoyances---they're affecting your quality of life.</p>
                 </div>
               ),
             },
@@ -1674,7 +1674,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
                   <p className="font-semibold mt-3">Phrases to use when dismissed:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"I understand this might seem minor, but it's significantly affecting my quality of life and I need it addressed"</li>
-                    <li>"I've tried those recommendations—they haven't helped. What else can we try?"</li>
+                    <li>"I've tried those recommendations---they haven't helped. What else can we try?"</li>
                     <li>"I'd like this documented in my chart even if you don't think further testing is needed right now"</li>
                     <li>"I'd like a second opinion. Can you provide a referral?"</li>
                     <li>"If we're not going to investigate this further, please document your reasoning in my chart"</li>
@@ -1729,7 +1729,7 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           Document Everything
         </h2>
         <p className="mb-6">
-          Maintaining your own health records—separate from your provider's chart—is one of the most powerful advocacy tools.
+          Maintaining your own health records---separate from your provider's chart---is one of the most powerful advocacy tools.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1777,14 +1777,14 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="tip" title="First Step: Prepare for Your Next Appointment">
-          <p>Before your next medical appointment—even a routine one—create a simple agenda: list your top 2-3 priorities and write down 3 questions you want answered. Bring the written agenda with you and state it at the beginning of the visit. This single practice will significantly improve your appointment outcomes.</p>
+          <p>Before your next medical appointment---even a routine one---create a simple agenda: list your top 2-3 priorities and write down 3 questions you want answered. Bring the written agenda with you and state it at the beginning of the visit. This single practice will significantly improve your appointment outcomes.</p>
         </ArticleCallout>
 
         <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Additional Support
         </h2>
         <p className="mb-6">
-          Sometimes you need more than self-advocacy—you need professional advocates or specialized support.
+          Sometimes you need more than self-advocacy---you need professional advocates or specialized support.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Patient advocates</strong>: Professionals who navigate medical systems on your behalf (ask hospital social workers for referrals)</li>

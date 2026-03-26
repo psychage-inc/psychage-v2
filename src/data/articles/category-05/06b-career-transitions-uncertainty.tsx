@@ -95,13 +95,13 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After decades of structure, purpose, and professional identity, retirement can feel like stepping off a cliff into the unknown. For many, it's not the financial transition that's hardest—it's the psychological one.
+            After decades of structure, purpose, and professional identity, retirement can feel like stepping off a cliff into the unknown. For many, it's not the financial transition that's hardest---it's the psychological one.
           </p>
           <p className="mb-6">
             Research shows that while retirement can improve life satisfaction for some, it also triggers significant identity disruption and mental health challenges for others <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2019" tier={1} />. Studies have found that the transition to retirement is associated with increased risk of depression, particularly in the first year after leaving work <Citation id="2" index={2} source="Social Science & Medicine" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            The anxiety around retirement isn't about laziness or fear of free time—it's about losing a core part of your identity, structure that organized your days, and social connections that gave meaning to your weeks. Understanding this psychological dimension is the first step toward preparing your mental health for life after work.
+            The anxiety around retirement isn't about laziness or fear of free time---it's about losing a core part of your identity, structure that organized your days, and social connections that gave meaning to your weeks. Understanding this psychological dimension is the first step toward preparing your mental health for life after work.
           </p>
         </div>
 
@@ -148,7 +148,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             {
               title: 'Gradually reduce work hours if possible (1-2 years before)',
               description: (
-                <p>Phased retirement—where you reduce to part-time or consulting before full retirement—gives your brain time to adjust. Research shows this gradual transition significantly reduces depression and anxiety compared to abrupt retirement.</p>
+                <p>Phased retirement---where you reduce to part-time or consulting before full retirement---gives your brain time to adjust. Research shows this gradual transition significantly reduces depression and anxiety compared to abrupt retirement.</p>
               ),
             },
             {
@@ -188,7 +188,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Purpose doesn't have to be grand or world-changing. Research shows that what matters most is feeling that your time is meaningful and that you're making some kind of contribution—whether that's to family, community, or personal growth.
+          Purpose doesn't have to be grand or world-changing. Research shows that what matters most is feeling that your time is meaningful and that you're making some kind of contribution---whether that's to family, community, or personal growth.
         </p>
 
         <ArticleCallout variant="tip" title="Purpose-Building Questions">
@@ -205,10 +205,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Maintaining Social Connections
         </h2>
         <p className="mb-6">
-          Social connection is one of the strongest predictors of mental health in retirement <Citation id="5" index={5} source="Aging & Mental Health" year="2020" tier={1} />. The challenge is that work often provided automatic social interaction—you didn't have to plan it or make effort to see people regularly.
+          Social connection is one of the strongest predictors of mental health in retirement <Citation id="5" index={5} source="Aging & Mental Health" year="2020" tier={1} />. The challenge is that work often provided automatic social interaction---you didn't have to plan it or make effort to see people regularly.
         </p>
         <p className="mb-6">
-          In retirement, social connection requires intentionality. Research shows that retirees who build regular social routines—weekly coffee with friends, monthly book clubs, daily dog park visits—maintain better mental health than those who wait for social opportunities to arise spontaneously.
+          In retirement, social connection requires intentionality. Research shows that retirees who build regular social routines---weekly coffee with friends, monthly book clubs, daily dog park visits---maintain better mental health than those who wait for social opportunities to arise spontaneously.
         </p>
 
         <ComparisonTable
@@ -219,7 +219,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             { feature: 'Diversity', values: ['Broad network', 'Risk of narrowing'] },
             { feature: 'Purpose', values: ['Built into structure', 'Must be intentional'] },
             { feature: 'Status', values: ['Professional role creates connection', 'Personal qualities matter more'] },
-            { feature: 'Effort', values: ['Low—happens naturally', 'High—requires initiative'] },
+            { feature: 'Effort', values: ['Low---happens naturally', 'High---requires initiative'] },
           ]}
           highlightColumn={2}
         />
@@ -285,7 +285,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     id: catId(57),
     slug: 'freelancing-mental-health-hidden-costs-independence',
     title: 'Freelancing and Mental Health: The Hidden Costs of Independence',
-    description: 'Freelancing offers freedom but brings unique mental health challenges—isolation, financial stress, and blurred work-life boundaries. Learn evidence-based strategies to protect your wellbeing while working independently.',
+    description: 'Freelancing offers freedom but brings unique mental health challenges---isolation, financial stress, and blurred work-life boundaries. Learn evidence-based strategies to protect your wellbeing while working independently.',
     image: "/images/articles/cat05/cover-057.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -363,7 +363,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Be your own boss.", "Work from anywhere.", "Choose your own hours." The promises of freelancing are seductive—but they rarely mention the mental health costs that come with independence.
+            "Be your own boss.", "Work from anywhere.", "Choose your own hours." The promises of freelancing are seductive---but they rarely mention the mental health costs that come with independence.
           </p>
           <p className="mb-6">
             Research on gig economy and freelance workers reveals a complex mental health picture. While autonomy and flexibility can improve wellbeing for some, studies consistently show that freelancers experience higher rates of anxiety, depression, and burnout compared to traditional employees <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />.
@@ -384,7 +384,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           <p className="mb-4"><strong>Income predictability:</strong> The anxiety of not knowing what you'll earn next month or whether clients will renew.</p>
           <p className="mb-4"><strong>Workplace community:</strong> No colleagues to chat with, share frustrations with, or celebrate wins with.</p>
           <p className="mb-4"><strong>Clear work-life boundaries:</strong> When your home is your office and your laptop is always there, it's hard to truly "leave work."</p>
-          <p className="mb-4"><strong>External validation:</strong> No performance reviews, promotions, or recognition—you have to provide all your own feedback.</p>
+          <p className="mb-4"><strong>External validation:</strong> No performance reviews, promotions, or recognition---you have to provide all your own feedback.</p>
           <p><strong>Safety net:</strong> No paid time off, health insurance, or unemployment benefits if work dries up.</p>
         </ArticleCallout>
 
@@ -434,7 +434,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Studies show that freelancers experience significantly higher loneliness and social isolation than traditionally employed workers, even when controlling for personality factors <Citation id="3" index={3} source="International Journal of Environmental Research and Public Health" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          The isolation isn't just about working alone—it's about losing the automatic social structure that workplaces provide. No one sees when you're struggling. No one notices if you don't leave the house for three days. There's no watercooler chat to break up intense focus or give your brain a rest.
+          The isolation isn't just about working alone---it's about losing the automatic social structure that workplaces provide. No one sees when you're struggling. No one notices if you don't leave the house for three days. There's no watercooler chat to break up intense focus or give your brain a rest.
         </p>
 
         <ArticleAccordion
@@ -458,7 +458,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               id: 'boundaries',
               title: 'How do I maintain friendships when I work weird hours?',
               content: (
-                <p>Schedule social time with the same rigor you schedule client work. Put friend dates in your calendar weeks in advance and treat them as non-negotiable appointments. Be proactive about initiating plans—don't wait for others to accommodate your schedule. Consider joining groups with regular meeting times (sports leagues, classes) that create automatic social structure.</p>
+                <p>Schedule social time with the same rigor you schedule client work. Put friend dates in your calendar weeks in advance and treat them as non-negotiable appointments. Be proactive about initiating plans---don't wait for others to accommodate your schedule. Consider joining groups with regular meeting times (sports leagues, classes) that create automatic social structure.</p>
               ),
             },
           ]}
@@ -471,7 +471,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Research on work-life boundaries in freelancing reveals a paradox: while freelancers choose independent work partly for flexibility, they often end up with worse work-life boundaries than employees <Citation id="4" index={4} source="Journal of Vocational Behavior" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          Without external structure (office hours, commute, colleagues leaving at 5pm), you have to create all your own boundaries. The constant availability of work—your laptop is always right there—combined with financial anxiety and the need to be responsive to clients creates psychological pressure to always be "on."
+          Without external structure (office hours, commute, colleagues leaving at 5pm), you have to create all your own boundaries. The constant availability of work---your laptop is always right there---combined with financial anxiety and the need to be responsive to clients creates psychological pressure to always be "on."
         </p>
 
         <ComparisonTable
@@ -491,7 +491,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Imposter Syndrome and Visibility
         </h2>
         <p className="mb-6">
-          Freelancers report particularly high rates of imposter syndrome—the persistent belief that you're not as competent as others perceive and will eventually be "found out" <Citation id="6" index={6} source="Journal of Business and Psychology" year="2020" tier={1} />.
+          Freelancers report particularly high rates of imposter syndrome---the persistent belief that you're not as competent as others perceive and will eventually be "found out" <Citation id="6" index={6} source="Journal of Business and Psychology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           This is partly structural: without regular performance feedback, promotions, or peer comparison, you lose external markers of competence. You're constantly marketing yourself, which feels like constant self-promotion. And you see everyone else's polished marketing while experiencing your own messy behind-the-scenes reality.
@@ -526,7 +526,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             {
               title: 'Proactively manage social connection',
               description: (
-                <p>Don't wait to feel lonely—build regular social rhythms before isolation sets in. Schedule weekly co-working sessions, join freelancer meetups or professional groups, maintain friendships with non-negotiable calendar time, and communicate proactively with other freelancers for peer support.</p>
+                <p>Don't wait to feel lonely---build regular social rhythms before isolation sets in. Schedule weekly co-working sessions, join freelancer meetups or professional groups, maintain friendships with non-negotiable calendar time, and communicate proactively with other freelancers for peer support.</p>
               ),
             },
             {
@@ -574,7 +574,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Assess your vulnerability factors</strong>: Do you already struggle with isolation, anxiety, or financial stress? If so, build extra supports before going independent.</li>
-          <li><strong>Create non-negotiable work hours</strong> and communicate them clearly to clients—boundaries you don't enforce don't exist</li>
+          <li><strong>Create non-negotiable work hours</strong> and communicate them clearly to clients---boundaries you don't enforce don't exist</li>
           <li><strong>Schedule one social activity per week</strong> that has nothing to do with work or networking</li>
           <li><strong>Join one freelancer community</strong> (online or local) for peer support and reality checks</li>
           <li><strong>Set up separate spaces</strong> for work and non-work, even if it's just different rooms or corners of your home</li>
@@ -606,7 +606,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     id: catId(58),
     slug: 'going-back-to-school-managing-stress-career-reinvention',
     title: 'Going Back to School: Managing the Stress of Career Reinvention',
-    description: 'Returning to education as an adult brings unique stressors—financial pressure, imposter syndrome, and juggling multiple life roles. Learn strategies to manage the mental health challenges of career reinvention through education.',
+    description: 'Returning to education as an adult brings unique stressors---financial pressure, imposter syndrome, and juggling multiple life roles. Learn strategies to manage the mental health challenges of career reinvention through education.',
     image: "/images/articles/cat05/cover-058.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -687,10 +687,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             You're 35, sitting in a lecture hall next to 19-year-olds who seem to understand everything instantly. You have a mortgage, two kids, and a full-time job. And you're wondering: What was I thinking?
           </p>
           <p className="mb-6">
-            Going back to school as an adult is increasingly common—over 40% of US college students are now over age 25 <Citation id="1" index={1} source="Journal of Adult Development" year="2020" tier={1} />. But while career reinvention through education can be transformative, research shows adult learners face distinct mental health challenges compared to traditional students.
+            Going back to school as an adult is increasingly common---over 40% of US college students are now over age 25 <Citation id="1" index={1} source="Journal of Adult Development" year="2020" tier={1} />. But while career reinvention through education can be transformative, research shows adult learners face distinct mental health challenges compared to traditional students.
           </p>
           <p className="mb-6">
-            Adult students report significantly higher stress, anxiety, and role conflict than traditional-age students <Citation id="2" index={2} source="Journal of Further and Higher Education" year="2021" tier={1} />. The difference isn't just age—it's that adult learners are simultaneously managing multiple demanding roles (worker, parent, student, partner) while facing financial pressures and identity shifts that traditional students don't yet experience.
+            Adult students report significantly higher stress, anxiety, and role conflict than traditional-age students <Citation id="2" index={2} source="Journal of Further and Higher Education" year="2021" tier={1} />. The difference isn't just age---it's that adult learners are simultaneously managing multiple demanding roles (worker, parent, student, partner) while facing financial pressures and identity shifts that traditional students don't yet experience.
           </p>
         </div>
 
@@ -702,9 +702,9 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="What Makes Adult Learning Different">
-          <p className="mb-4"><strong>Role overload:</strong> You're not just a student—you're also maintaining work responsibilities, family obligations, and household management.</p>
+          <p className="mb-4"><strong>Role overload:</strong> You're not just a student---you're also maintaining work responsibilities, family obligations, and household management.</p>
           <p className="mb-4"><strong>Financial sacrifice:</strong> You're paying tuition while often earning less or giving up income, with existing financial responsibilities.</p>
-          <p className="mb-4"><strong>Higher stakes:</strong> This isn't just about grades—it's about career change, family stability, and years of investment.</p>
+          <p className="mb-4"><strong>Higher stakes:</strong> This isn't just about grades---it's about career change, family stability, and years of investment.</p>
           <p className="mb-4"><strong>Age-related imposter syndrome:</strong> Being older than classmates and professors can trigger feelings of being "behind" or not belonging.</p>
           <p><strong>Skill anxiety:</strong> Technology, learning platforms, and academic expectations have changed since you were last in school.</p>
         </ArticleCallout>
@@ -722,7 +722,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Financial Stress and Mental Health
         </h2>
         <p className="mb-6">
-          Financial anxiety is one of the most significant mental health challenges for adult learners <Citation id="3" index={3} source="Journal of Student Financial Aid" year="2019" tier={1} />. Unlike traditional students who may be supported by parents, adult learners are often financially independent with existing obligations—mortgages, dependents, debt.
+          Financial anxiety is one of the most significant mental health challenges for adult learners <Citation id="3" index={3} source="Journal of Student Financial Aid" year="2019" tier={1} />. Unlike traditional students who may be supported by parents, adult learners are often financially independent with existing obligations---mortgages, dependents, debt.
         </p>
         <p className="mb-6">
           The financial stress is multifaceted: direct costs of tuition and materials, opportunity cost of reduced work hours or lost income, and the psychological burden of accumulating debt later in life when you have less time to recover financially.
@@ -750,10 +750,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Managing Multiple Roles Simultaneously
         </h2>
         <p className="mb-6">
-          Role conflict—the stress of trying to meet incompatible demands from different life roles—is the primary predictor of poor mental health outcomes in adult learners <Citation id="2" index={2} source="Journal of Further and Higher Education" year="2021" tier={1} />.
+          Role conflict---the stress of trying to meet incompatible demands from different life roles---is the primary predictor of poor mental health outcomes in adult learners <Citation id="2" index={2} source="Journal of Further and Higher Education" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
-          The challenge isn't just time management—it's psychological. When you're studying, you feel guilty about not being with your kids. When you're with your kids, you're anxious about the assignment due tomorrow. At work, you're distracted by upcoming exams. There's rarely a moment when you feel fully present and guilt-free in any role.
+          The challenge isn't just time management---it's psychological. When you're studying, you feel guilty about not being with your kids. When you're with your kids, you're anxious about the assignment due tomorrow. At work, you're distracted by upcoming exams. There's rarely a moment when you feel fully present and guilt-free in any role.
         </p>
 
         <ComparisonTable
@@ -773,7 +773,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Imposter Syndrome and Age-Related Anxiety
         </h2>
         <p className="mb-6">
-          Adult learners report particularly high rates of imposter syndrome—the persistent belief that you don't belong and aren't capable despite evidence of success <Citation id="4" index={4} source="International Journal of STEM Education" year="2020" tier={1} />.
+          Adult learners report particularly high rates of imposter syndrome---the persistent belief that you don't belong and aren't capable despite evidence of success <Citation id="4" index={4} source="International Journal of STEM Education" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Age-related imposter syndrome has specific triggers: being older than most classmates, being older than some professors, technology skills gaps, comparing your career experience to academic theory, and feeling "behind" peers who went straight through college.
@@ -793,14 +793,14 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               id: 'tech-anxiety',
               title: 'What if I struggle with learning management systems and technology?',
               content: (
-                <p>Most schools have technology support specifically for adult learners. Use it without shame—it's normal and expected. Many younger students also struggle with new platforms; they just grew up hiding confusion better. Take advantage of tutorials, orientation sessions, and student support. The first few weeks are hardest; technology becomes routine quickly.</p>
+                <p>Most schools have technology support specifically for adult learners. Use it without shame---it's normal and expected. Many younger students also struggle with new platforms; they just grew up hiding confusion better. Take advantage of tutorials, orientation sessions, and student support. The first few weeks are hardest; technology becomes routine quickly.</p>
               ),
             },
             {
               id: 'academic-skills',
               title: 'What if my writing and study skills are rusty?',
               content: (
-                <p>Most institutions have writing centers and academic support services. Use them early and often—they're there specifically for students who need to refresh skills. Consider taking a 'learning how to learn' workshop early in your program. Research shows that adult learners who seek help early perform significantly better than those who struggle alone until crisis points.</p>
+                <p>Most institutions have writing centers and academic support services. Use them early and often---they're there specifically for students who need to refresh skills. Consider taking a 'learning how to learn' workshop early in your program. Research shows that adult learners who seek help early perform significantly better than those who struggle alone until crisis points.</p>
               ),
             },
           ]}
@@ -828,7 +828,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Building Support Systems
         </h2>
         <p className="mb-6">
-          Social support is the strongest protective factor against mental health challenges in adult learners <Citation id="5" index={5} source="Educational Psychology Review" year="2021" tier={1} />. But adult learners often feel isolated—you're not living in dorms, you rush home after class, and you don't have time for campus social life.
+          Social support is the strongest protective factor against mental health challenges in adult learners <Citation id="5" index={5} source="Educational Psychology Review" year="2021" tier={1} />. But adult learners often feel isolated---you're not living in dorms, you rush home after class, and you don't have time for campus social life.
         </p>
 
         <ProgressSteps
@@ -849,7 +849,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             {
               title: 'Negotiate workplace support',
               description: (
-                <p>If your employer knows you're pursuing education, negotiate flexibility around exam periods or major deadlines. Frame it as professional development that benefits them. Even small accommodations—leaving early once a month, study time during slow periods—reduce stress significantly.</p>
+                <p>If your employer knows you're pursuing education, negotiate flexibility around exam periods or major deadlines. Frame it as professional development that benefits them. Even small accommodations---leaving early once a month, study time during slow periods---reduce stress significantly.</p>
               ),
             },
             {
@@ -865,7 +865,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Building Academic Self-Efficacy
         </h2>
         <p className="mb-6">
-          Self-efficacy—your belief in your ability to succeed academically—is a stronger predictor of actual academic success than prior education or test scores for adult learners <Citation id="6" index={6} source="Studies in Higher Education" year="2020" tier={1} />.
+          Self-efficacy---your belief in your ability to succeed academically---is a stronger predictor of actual academic success than prior education or test scores for adult learners <Citation id="6" index={6} source="Studies in Higher Education" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Adult learners often start with low academic self-efficacy, especially if they struggled in school previously or haven't been in academic settings for years. But self-efficacy is built through experience, not innate ability. Small successes compound: turning in an assignment on time, asking a question in class, getting positive feedback on a paper.
@@ -885,12 +885,12 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Evidence-based approaches for managing the stress of adult learning:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Start with a lighter course load</strong> than you think you can handle—you're adjusting to a major life change</li>
-          <li><strong>Time-block rather than "find time"</strong>—schedule specific study hours like appointments</li>
+          <li><strong>Start with a lighter course load</strong> than you think you can handle---you're adjusting to a major life change</li>
+          <li><strong>Time-block rather than "find time"</strong>---schedule specific study hours like appointments</li>
           <li><strong>Create a dedicated study space</strong> if possible, even a small corner, to separate school from other roles</li>
-          <li><strong>Use "good enough" standards</strong> for life maintenance during school—frozen meals, less cleaning, simplified routines</li>
+          <li><strong>Use "good enough" standards</strong> for life maintenance during school---frozen meals, less cleaning, simplified routines</li>
           <li><strong>Practice saying no</strong> to new commitments until you know your sustainable baseline</li>
-          <li><strong>Celebrate small wins</strong> rather than waiting for major milestones—submitted assignment, understanding difficult concept, finishing a week</li>
+          <li><strong>Celebrate small wins</strong> rather than waiting for major milestones---submitted assignment, understanding difficult concept, finishing a week</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -902,10 +902,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
         <ul className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Calculate the full financial picture</strong> including hidden costs (childcare, transportation, reduced work hours) before committing</li>
           <li><strong>Have explicit conversations with family</strong> about what will change and what support you need</li>
-          <li><strong>Research adult-learner-friendly programs</strong>—some schools have cohorts, flexible scheduling, or support systems specifically for adult students</li>
+          <li><strong>Research adult-learner-friendly programs</strong>---some schools have cohorts, flexible scheduling, or support systems specifically for adult students</li>
           <li><strong>Start with one or two courses</strong> to test your capacity rather than jumping to full-time</li>
-          <li><strong>Identify potential support people</strong> now—who can watch kids during exams, who you can study with, who will listen when you're stressed</li>
-          <li><strong>Accept that something will give</strong>—you can't add 20 hours of school per week without reducing something else</li>
+          <li><strong>Identify potential support people</strong> now---who can watch kids during exams, who you can study with, who will listen when you're stressed</li>
+          <li><strong>Accept that something will give</strong>---you can't add 20 hours of school per week without reducing something else</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -924,7 +924,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           <li>Using alcohol or substances to cope with academic stress</li>
         </ul>
         <p className="mb-6">
-          Many campus counseling centers have specific experience with adult learner challenges like role conflict, financial stress, and imposter syndrome. Don't wait until you're in crisis—early intervention is significantly more effective.
+          Many campus counseling centers have specific experience with adult learner challenges like role conflict, financial stress, and imposter syndrome. Don't wait until you're in crisis---early intervention is significantly more effective.
         </p>
       </>
     ),
@@ -933,7 +933,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
     id: catId(59),
     slug: 'how-economic-uncertainty-affects-mental-health',
     title: 'How Economic Uncertainty Affects Mental Health',
-    description: 'Economic instability creates chronic stress that impacts mental health in profound ways—from sleep disruption to relationship strain. Understand the psychological mechanisms and protective strategies for uncertain financial times.',
+    description: 'Economic instability creates chronic stress that impacts mental health in profound ways---from sleep disruption to relationship strain. Understand the psychological mechanisms and protective strategies for uncertain financial times.',
     image: "/images/articles/cat05/cover-059.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -1014,10 +1014,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             You wake at 3 AM with your heart racing, mind calculating: How many months until savings run out? What if layoffs hit? Can we afford rent next year? The numbers don't add up, and sleep won't come.
           </p>
           <p className="mb-6">
-            Economic uncertainty—whether personal financial instability or broader economic turbulence—is one of the most potent stressors for mental health. Research consistently shows that financial insecurity increases risk of anxiety, depression, and stress-related physical health problems <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />.
+            Economic uncertainty---whether personal financial instability or broader economic turbulence---is one of the most potent stressors for mental health. Research consistently shows that financial insecurity increases risk of anxiety, depression, and stress-related physical health problems <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            What makes economic stress particularly damaging is its chronicity. Unlike acute stressors that resolve, financial uncertainty can persist for months or years, keeping your nervous system in sustained high-alert mode <Citation id="4" index={4} source="Psychoneuroendocrinology" year="2021" tier={1} />. Understanding how economic uncertainty affects mental health—and what actually helps—is essential for protecting your wellbeing during financially turbulent times.
+            What makes economic stress particularly damaging is its chronicity. Unlike acute stressors that resolve, financial uncertainty can persist for months or years, keeping your nervous system in sustained high-alert mode <Citation id="4" index={4} source="Psychoneuroendocrinology" year="2021" tier={1} />. Understanding how economic uncertainty affects mental health---and what actually helps---is essential for protecting your wellbeing during financially turbulent times.
           </p>
         </div>
 
@@ -1049,10 +1049,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           Uncertainty vs. Actual Scarcity
         </h2>
         <p className="mb-6">
-          Research reveals an important distinction: it's not only absolute poverty that damages mental health, but the uncertainty itself <Citation id="2" index={2} source="Journal of Economic Psychology" year="2020" tier={1} />. People with unpredictable income—even if adequate on average—experience worse mental health outcomes than those with predictable lower income.
+          Research reveals an important distinction: it's not only absolute poverty that damages mental health, but the uncertainty itself <Citation id="2" index={2} source="Journal of Economic Psychology" year="2020" tier={1} />. People with unpredictable income---even if adequate on average---experience worse mental health outcomes than those with predictable lower income.
         </p>
         <p className="mb-6">
-          This is because humans are remarkably adaptable to stable conditions, even difficult ones. What we struggle with is unpredictability—not knowing whether you can pay rent next month, whether your job is secure, whether unexpected expenses will create crisis.
+          This is because humans are remarkably adaptable to stable conditions, even difficult ones. What we struggle with is unpredictability---not knowing whether you can pay rent next month, whether your job is secure, whether unexpected expenses will create crisis.
         </p>
 
         <ComparisonTable
@@ -1072,7 +1072,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
           The Body Keeps the Score
         </h2>
         <p className="mb-6">
-            Financial stress doesn't just affect mood—it creates measurable biological changes. Studies show that people experiencing chronic economic insecurity have dysregulated cortisol patterns, elevated inflammatory markers, and higher rates of cardiovascular problems <Citation id="4" index={4} source="Psychoneuroendocrinology" year="2021" tier={1} />.
+            Financial stress doesn't just affect mood---it creates measurable biological changes. Studies show that people experiencing chronic economic insecurity have dysregulated cortisol patterns, elevated inflammatory markers, and higher rates of cardiovascular problems <Citation id="4" index={4} source="Psychoneuroendocrinology" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Your body treats financial uncertainty as a survival threat. The stress response that evolved to help you escape predators stays activated for months or years, wearing down your immune system, disrupting sleep, and impairing cognitive function. This creates a vicious cycle: stress about money impairs your ability to think clearly and work effectively, which worsens your economic situation, which increases stress.
@@ -1096,10 +1096,10 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Economic Stress and Relationships
           </h2>
           <p className="mb-6">
-            Economic uncertainty places enormous strain on relationships. Financial stress is consistently cited as one of the top sources of conflict in marriages and partnerships. But it's not just about the money—it's about what financial insecurity represents: safety, competence, trust, and shared future.
+            Economic uncertainty places enormous strain on relationships. Financial stress is consistently cited as one of the top sources of conflict in marriages and partnerships. But it's not just about the money---it's about what financial insecurity represents: safety, competence, trust, and shared future.
           </p>
           <p className="mb-6">
-            Partners often cope differently with financial stress—one may want to talk about it constantly while the other avoids the subject. One may respond with increased frugality while the other makes impulsive purchases as stress relief. These differences create conflict that extends beyond the financial stressor itself.
+            Partners often cope differently with financial stress---one may want to talk about it constantly while the other avoids the subject. One may respond with increased frugality while the other makes impulsive purchases as stress relief. These differences create conflict that extends beyond the financial stressor itself.
           </p>
 
           <ArticleCallout variant="tip" title="Protecting Relationships During Economic Stress">
@@ -1107,7 +1107,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               <li>Schedule specific "money talks" rather than letting financial anxiety bleed into all interactions</li>
               <li>Acknowledge that both partners are stressed, even if they show it differently</li>
               <li>Focus on "we're in this together' framing rather than blame or criticism</li>
-              <li>Maintain non-financial connection points—time together that isn't about problem-solving</li>
+              <li>Maintain non-financial connection points---time together that isn't about problem-solving</li>
               <li>Seek professional help (therapist or financial counselor) before conflict becomes entrenched</li>
             </ul>
           </ArticleCallout>
@@ -1137,7 +1137,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               {
                 title: 'Meaning-making',
                 description: (
-                  <p>Finding purpose or growth within financial hardship—learning resourcefulness, clarifying values, building resilience—significantly improves mental health outcomes. This isn't toxic positivity; it's acknowledging that suffering can coexist with meaning.</p>
+                  <p>Finding purpose or growth within financial hardship---learning resourcefulness, clarifying values, building resilience---significantly improves mental health outcomes. This isn't toxic positivity; it's acknowledging that suffering can coexist with meaning.</p>
                 ),
               },
               {
@@ -1171,7 +1171,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Many people experiencing financial stress don't access available resources due to shame, lack of awareness, or assumption they "don't qualify." The Consumer Financial Protection Bureau provides free financial education and counseling referrals <Citation id="7" index={7} source="Consumer Financial Protection Bureau" year="2023" tier={2} />.
           </p>
           <p className="mb-6">
-            Additional resources include: non-profit credit counseling services, community assistance programs, unemployment benefits, food assistance (SNAP), utility payment plans, sliding-scale therapy, and employer assistance programs. Accessing help is not failure—it's strategic resource management.
+            Additional resources include: non-profit credit counseling services, community assistance programs, unemployment benefits, food assistance (SNAP), utility payment plans, sliding-scale therapy, and employer assistance programs. Accessing help is not failure---it's strategic resource management.
           </p>
 
           <QuoteBlock
@@ -1188,7 +1188,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             While economic uncertainty causes significant distress, research also documents post-traumatic growth following financial hardship <Citation id="8" index={8} source="Journal of Positive Psychology" year="2021" tier={1} />. Many people report:
           </p>
           <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li>Clarified values—realizing what truly matters beyond money</li>
+            <li>Clarified values---realizing what truly matters beyond money</li>
             <li>Increased resourcefulness and confidence in ability to survive challenges</li>
             <li>Deeper relationships from sharing vulnerability and mutual support</li>
             <li>Liberation from keeping up appearances or consumer culture</li>
@@ -1203,12 +1203,12 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             If you're experiencing economic stress:
           </p>
           <ul className="list-decimal pl-6 mb-6 space-y-2">
-            <li><strong>Name the stressor</strong> explicitly—acknowledging "I'm stressed about money' rather than generalized anxiety</li>
-            <li><strong>Separate controllable from uncontrollable</strong>—focus energy on what you can influence</li>
-            <li><strong>Limit financial news consumption</strong>—constant economic doom-scrolling increases anxiety without providing actionable information</li>
-            <li><strong>Talk about it</strong> with at least one trusted person—shame thrives in secrecy</li>
-            <li><strong>Maintain routines and self-care</strong>—when resources are tight, protect sleep, movement, and connection</li>
-            <li><strong>Access one resource</strong> you haven't tried—financial counseling, assistance program, or support group</li>
+            <li><strong>Name the stressor</strong> explicitly---acknowledging "I'm stressed about money' rather than generalized anxiety</li>
+            <li><strong>Separate controllable from uncontrollable</strong>---focus energy on what you can influence</li>
+            <li><strong>Limit financial news consumption</strong>---constant economic doom-scrolling increases anxiety without providing actionable information</li>
+            <li><strong>Talk about it</strong> with at least one trusted person---shame thrives in secrecy</li>
+            <li><strong>Maintain routines and self-care</strong>---when resources are tight, protect sleep, movement, and connection</li>
+            <li><strong>Access one resource</strong> you haven't tried---financial counseling, assistance program, or support group</li>
           </ul>
 
           <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1227,7 +1227,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             <li>Sleep disturbances lasting more than two weeks</li>
           </ul>
           <p className="mb-6">
-            Many therapists offer sliding-scale fees for clients experiencing financial hardship. Community mental health centers provide low-cost services. Your mental health is not a luxury—it's essential for navigating economic challenges effectively.
+            Many therapists offer sliding-scale fees for clients experiencing financial hardship. Community mental health centers provide low-cost services. Your mental health is not a luxury---it's essential for navigating economic challenges effectively.
           </p>
         </>
       ),
@@ -1314,13 +1314,13 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
         <>
           <div id="introduction" className="scroll-mt-32">
             <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Career transitions—whether chosen or forced—are among life's most significant stressors. The job you lose, the field you leave, the promotion that doesn't come, the career that no longer fits: each challenges your sense of competence, identity, and future.
+              Career transitions---whether chosen or forced---are among life's most significant stressors. The job you lose, the field you leave, the promotion that doesn't come, the career that no longer fits: each challenges your sense of competence, identity, and future.
             </p>
             <p className="mb-6">
-              Resilience is often misunderstood as toughness or the ability to "bounce back" unaffected. But research shows that true resilience is more nuanced—it's the capacity to adapt, grow, and find meaning through difficulty while acknowledging genuine struggle <Citation id="1" index={1} source="Journal of Career Development" year="2021" tier={1} />.
+              Resilience is often misunderstood as toughness or the ability to "bounce back" unaffected. But research shows that true resilience is more nuanced---it's the capacity to adapt, grow, and find meaning through difficulty while acknowledging genuine struggle <Citation id="1" index={1} source="Journal of Career Development" year="2021" tier={1} />.
             </p>
             <p className="mb-6">
-              Career transitions test resilience precisely because they're not just about employment—they're about identity, purpose, financial security, and how you structure your days. Understanding what builds psychological resilience during these transitions can mean the difference between chronic distress and adaptive growth <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />.
+              Career transitions test resilience precisely because they're not just about employment---they're about identity, purpose, financial security, and how you structure your days. Understanding what builds psychological resilience during these transitions can mean the difference between chronic distress and adaptive growth <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />.
             </p>
           </div>
 
@@ -1353,7 +1353,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Cognitive Flexibility: The Core of Adaptation
           </h2>
           <p className="mb-6">
-            Cognitive flexibility—the ability to shift your thinking when circumstances change—is the single strongest predictor of successful career transitions <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />.
+            Cognitive flexibility---the ability to shift your thinking when circumstances change---is the single strongest predictor of successful career transitions <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             People with high cognitive flexibility can reframe setbacks ("I didn't fail, I learned what doesn't work"), generate multiple paths forward ("If Plan A doesn't work, here are B through D"), and update their career identity ("I'm not just a teacher, I'm someone who helps people learn").
@@ -1380,7 +1380,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             The Surprising Power of Self-Compassion
           </h2>
           <p className="mb-6">
-            Self-compassion—treating yourself with the same kindness you'd offer a struggling friend—is a powerful protective factor during career difficulties <Citation id="4" index={4} source="Journal of Counseling Psychology" year="2020" tier={1} />.
+            Self-compassion---treating yourself with the same kindness you'd offer a struggling friend---is a powerful protective factor during career difficulties <Citation id="4" index={4} source="Journal of Counseling Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             Many people believe self-criticism is motivating ("I need to be hard on myself to improve"). But research consistently shows the opposite: self-compassion is associated with better performance, greater persistence after failure, and more willingness to take risks. Self-criticism, in contrast, increases anxiety and avoidance.
@@ -1391,7 +1391,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               <li><strong>Notice self-talk:</strong> Would you say these things to a friend in the same situation?</li>
               <li><strong>Common humanity:</strong> Remind yourself that career struggles are universal, not personal failures</li>
               <li><strong>Self-kindness phrases:</strong> "This is really hard" instead of "I should be handling this better"</li>
-              <li><strong>Physical self-soothing:</strong> Hand on heart, deep breaths—your body responds to kindness</li>
+              <li><strong>Physical self-soothing:</strong> Hand on heart, deep breaths---your body responds to kindness</li>
               <li><strong>Separate worth from outcomes:</strong> Your value as a person is not determined by career success</li>
             </ul>
           </ArticleCallout>
@@ -1425,7 +1425,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Reconstructing Professional Identity
           </h2>
           <p className="mb-6">
-            Career transitions often require identity reconstruction—reimagining who you are professionally when your previous role no longer fits <Citation id="5" index={5} source="Journal of Vocational Behavior" year="2019" tier={1} />.
+            Career transitions often require identity reconstruction---reimagining who you are professionally when your previous role no longer fits <Citation id="5" index={5} source="Journal of Vocational Behavior" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
             This is particularly challenging when career and identity were tightly intertwined. If you introduced yourself as "I'm a lawyer' or "I'm a teacher," losing that role can feel like losing yourself. Resilient career transitions involve gradually building a new professional identity that integrates the past without being defined by it.
@@ -1437,13 +1437,13 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
               {
                 title: 'Acknowledge the loss',
                 description: (
-                  <p>Recognize that losing a career identity involves genuine grief. You're not being dramatic—you've lost something that gave your life structure and meaning. Allow yourself to mourn before rushing to 'move on."</p>
+                  <p>Recognize that losing a career identity involves genuine grief. You're not being dramatic---you've lost something that gave your life structure and meaning. Allow yourself to mourn before rushing to 'move on."</p>
                 ),
               },
               {
                 title: 'Identify transferable skills',
                 description: (
-                  <p>What underlying abilities transcend the specific role? Project management, communication, problem-solving, empathy—these don't disappear when job titles change. List skills separately from roles to see continuity.</p>
+                  <p>What underlying abilities transcend the specific role? Project management, communication, problem-solving, empathy---these don't disappear when job titles change. List skills separately from roles to see continuity.</p>
                 ),
               },
               {
@@ -1465,14 +1465,14 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Growth Mindset in Career Transitions
           </h2>
           <p className="mb-6">
-            People with growth mindsets—the belief that abilities can be developed through effort—show significantly better career adaptability and resilience than those with fixed mindsets <Citation id="6" index={6} source="Journal of Career Assessment" year="2021" tier={1} />.
+            People with growth mindsets---the belief that abilities can be developed through effort---show significantly better career adaptability and resilience than those with fixed mindsets <Citation id="6" index={6} source="Journal of Career Assessment" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Growth mindset doesn't mean believing you can do anything with enough effort. It means seeing challenges as opportunities to learn rather than evidence of inadequacy. When you don't get a job, growth mindset asks 'What can I learn from this?" rather than concluding "I'm not good enough for this field."
           </p>
 
           <QuoteBlock
-            quote="Career resilience isn't about returning to who you were before the transition. It's about integrating the experience—the skills gained, the insights learned, the values clarified—into a new version of yourself that didn't exist before."
+            quote="Career resilience isn't about returning to who you were before the transition. It's about integrating the experience---the skills gained, the insights learned, the values clarified---into a new version of yourself that didn't exist before."
             attribution="Dr. Lisa Chen"
             role="Career Development Researcher"
             source="Journal of Career Development, 2022"
@@ -1482,7 +1482,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Post-Traumatic Growth
           </h2>
           <p className="mb-6">
-            Many people who experience involuntary career transitions—layoffs, firings, industry collapse—report post-traumatic growth: positive psychological changes that wouldn't have occurred without the difficult experience <Citation id="7" index={7} source="Journal of Occupational Health Psychology" year="2020" tier={1} />.
+            Many people who experience involuntary career transitions---layoffs, firings, industry collapse---report post-traumatic growth: positive psychological changes that wouldn't have occurred without the difficult experience <Citation id="7" index={7} source="Journal of Occupational Health Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             Common areas of growth include: greater appreciation for what truly matters, improved relationships (from shared vulnerability), discovery of personal strength, new life directions that wouldn't have been considered, and spiritual or philosophical deepening.
@@ -1495,7 +1495,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             The Importance of Meaning-Making
           </h2>
           <p className="mb-6">
-            Meaning-making—the process of finding significance in difficult experiences—is strongly associated with career resilience <Citation id="8" index={8} source="Journal of Career Development" year="2022" tier={1} />. This doesn't mean forcing silver linings or toxic positivity.
+            Meaning-making---the process of finding significance in difficult experiences---is strongly associated with career resilience <Citation id="8" index={8} source="Journal of Career Development" year="2022" tier={1} />. This doesn't mean forcing silver linings or toxic positivity.
           </p>
           <p className="mb-6">
             Effective meaning-making asks: What did this experience teach me? How has it changed my priorities? What do I want differently going forward? What strengths did I discover? These questions acknowledge reality while moving toward integration and growth.
@@ -1516,11 +1516,11 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             Daily Practices for Building Resilience
           </h2>
           <p className="mb-6">
-            Resilience isn't built through dramatic gestures—it's built through small, consistent practices:
+            Resilience isn't built through dramatic gestures---it's built through small, consistent practices:
           </p>
           <ul className="list-disc pl-6 mb-6 space-y-2">
             <li><strong>Maintain routines:</strong> When career structure disappears, create daily rhythms that provide stability</li>
-            <li><strong>Take small actions:</strong> One job application, one networking message, one skill-building hour—momentum matters more than magnitude</li>
+            <li><strong>Take small actions:</strong> One job application, one networking message, one skill-building hour---momentum matters more than magnitude</li>
             <li><strong>Practice self-compassion:</strong> Notice harsh self-talk and deliberately soften it</li>
             <li><strong>Connect with others:</strong> Even brief interactions reduce isolation and stress</li>
             <li><strong>Protect basics:</strong> Sleep, movement, nutrition become more important during stress, not less</li>
@@ -1534,11 +1534,11 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             To begin building career transition resilience:
           </p>
           <ul className="list-decimal pl-6 mb-6 space-y-2">
-            <li><strong>Acknowledge where you are</strong> without judgment—"This is really difficult" is a starting point, not weakness</li>
-            <li><strong>Identify one resilience strength</strong> you already have—cognitive flexibility, self-compassion, social support, meaning-making</li>
-            <li><strong>Choose one practice</strong> from this article to implement this week—start small and specific</li>
-            <li><strong>Reach out to one person</strong> for support—vulnerability builds connection</li>
-            <li><strong>Write down transferable skills</strong> from your career history—see continuity across transitions</li>
+            <li><strong>Acknowledge where you are</strong> without judgment---"This is really difficult" is a starting point, not weakness</li>
+            <li><strong>Identify one resilience strength</strong> you already have---cognitive flexibility, self-compassion, social support, meaning-making</li>
+            <li><strong>Choose one practice</strong> from this article to implement this week---start small and specific</li>
+            <li><strong>Reach out to one person</strong> for support---vulnerability builds connection</li>
+            <li><strong>Write down transferable skills</strong> from your career history---see continuity across transitions</li>
             <li><strong>Practice one self-compassion phrase</strong> when you notice self-criticism</li>
           </ul>
 
@@ -1558,7 +1558,7 @@ export const careerTransitionsUncertaintyArticlesB: Article[] = [
             <li>Chronic rage or bitterness that affects your life quality</li>
           </ul>
           <p className="mb-6">
-            Many therapists specialize in career transitions and identity work. Cognitive-behavioral therapy (CBT), acceptance and commitment therapy (ACT), and narrative therapy are all evidence-based approaches for building resilience during major life changes. Seeking support is itself an act of resilience—recognizing when you need help and accepting it.
+            Many therapists specialize in career transitions and identity work. Cognitive-behavioral therapy (CBT), acceptance and commitment therapy (ACT), and narrative therapy are all evidence-based approaches for building resilience during major life changes. Seeking support is itself an act of resilience---recognizing when you need help and accepting it.
           </p>
         </>
       ),

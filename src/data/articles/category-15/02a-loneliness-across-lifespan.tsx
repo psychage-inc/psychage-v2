@@ -89,10 +89,10 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The image of a lonely child sitting alone at lunch, left out of playground games, captures a pain that runs deeper than many adults realize. Loneliness in childhood and adolescence is not a minor inconvenience — it's a serious experience that shapes mental health, development, and life trajectories.
+            The image of a lonely child sitting alone at lunch, left out of playground games, captures a pain that runs deeper than many adults realize. Loneliness in childhood and adolescence is not a minor inconvenience --- it's a serious experience that shapes mental health, development, and life trajectories.
           </p>
           <p className="mb-6">
-            Today's young people report higher rates of loneliness than any previous generation <Citation id="1" index={1} source="Development and Psychopathology" year="2020" tier={1} />. Understanding why — and how to help — requires looking at developmental needs, social pressures, and the unique challenges of growing up in a digital age.
+            Today's young people report higher rates of loneliness than any previous generation <Citation id="1" index={1} source="Development and Psychopathology" year="2020" tier={1} />. Understanding why --- and how to help --- requires looking at developmental needs, social pressures, and the unique challenges of growing up in a digital age.
           </p>
         </div>
 
@@ -113,7 +113,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>Loneliness in childhood and adolescence is not a phase to outgrow — it's a risk factor for later mental health problems, academic difficulties, and social struggles that can persist into adulthood <Citation id="3" index={3} source="Journal of Child Psychology and Psychiatry" year="2018" tier={1} />.</p>
+          <p>Loneliness in childhood and adolescence is not a phase to outgrow --- it's a risk factor for later mental health problems, academic difficulties, and social struggles that can persist into adulthood <Citation id="3" index={3} source="Journal of Child Psychology and Psychiatry" year="2018" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="developmental-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -135,7 +135,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
                     During adolescence, peer relationships become the primary context for developing identity and self-worth. Teens are biologically and psychologically driven to seek peer acceptance.
                   </p>
                   <p className="mb-4">
-                    <strong>Why this increases loneliness:</strong> Rejection by peers feels existentially threatening. Being left out isn't just unpleasant — it challenges a young person's sense of self and belonging.
+                    <strong>Why this increases loneliness:</strong> Rejection by peers feels existentially threatening. Being left out isn't just unpleasant --- it challenges a young person's sense of self and belonging.
                   </p>
                 </div>
               ),
@@ -323,7 +323,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
           School Belonging Matters Profoundly
         </h2>
         <p className="mb-6">
-          Students spend most of their waking hours at school. Feeling like you belong there — or don't — has major implications for loneliness <Citation id="7" index={7} source="School Psychology Review" year="2021" tier={1} />:
+          Students spend most of their waking hours at school. Feeling like you belong there --- or don't --- has major implications for loneliness <Citation id="7" index={7} source="School Psychology Review" year="2021" tier={1} />:
         </p>
 
         <ArticleChart
@@ -388,7 +388,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
             {
               title: 'Teach Social Skills',
               description: (
-                <p>Some young people need explicit coaching in conversation skills, conflict resolution, and reading social cues. This is not a character flaw — it's a skill gap that can be addressed.</p>
+                <p>Some young people need explicit coaching in conversation skills, conflict resolution, and reading social cues. This is not a character flaw --- it's a skill gap that can be addressed.</p>
               ),
             },
             {
@@ -523,7 +523,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>Loneliness in college is not just emotional distress — it's associated with lower GPAs, higher dropout rates, increased substance use, and elevated risk of depression and anxiety <Citation id="2" index={2} source="Journal of American College Health" year="2019" tier={1} />.</p>
+          <p>Loneliness in college is not just emotional distress --- it's associated with lower GPAs, higher dropout rates, increased substance use, and elevated risk of depression and anxiety <Citation id="2" index={2} source="Journal of American College Health" year="2019" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="why-college" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -551,7 +551,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
                     <li>You're starting from zero in building a new social network</li>
                   </ul>
                   <p>
-                    Unlike other life transitions, this one is expected to be easy and exciting — which makes the loneliness feel shameful and isolating.
+                    Unlike other life transitions, this one is expected to be easy and exciting --- which makes the loneliness feel shameful and isolating.
                   </p>
                 </div>
               ),
@@ -562,10 +562,10 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    You're surrounded by people — in dorms, dining halls, classes. You have hundreds of acquaintances. But deep, trusted friendships take time to build.
+                    You're surrounded by people --- in dorms, dining halls, classes. You have hundreds of acquaintances. But deep, trusted friendships take time to build.
                   </p>
                   <p className="mb-4">
-                    <strong>The paradox:</strong> Being around people without meaningful connection can feel lonelier than being physically alone. You feel like you should be making friends — everyone else seems to be — which makes the isolation more painful.
+                    <strong>The paradox:</strong> Being around people without meaningful connection can feel lonelier than being physically alone. You feel like you should be making friends --- everyone else seems to be --- which makes the isolation more painful.
                   </p>
                 </div>
               ),
@@ -774,7 +774,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>Campus counseling centers exist precisely for issues like this. You're not taking resources from "people with real problems" — loneliness IS a real problem, and you deserve support.</p>
+          <p>Campus counseling centers exist precisely for issues like this. You're not taking resources from "people with real problems" --- loneliness IS a real problem, and you deserve support.</p>
         </ArticleCallout>
       </>
     ),
@@ -849,7 +849,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
             In high school and college, friendships felt effortless. You saw the same people every day, had endless free time, and bonded over shared experiences. Then you hit your mid-20s, and suddenly maintaining friendships feels like a second job you don't have time for.
           </p>
           <p className="mb-6">
-            Your 20s and 30s mark a natural narrowing of social networks <Citation id="1" index={1} source="Perspectives on Psychological Science" year="2020" tier={1} />. This isn't failure — it's a predictable developmental shift. But it can feel profoundly lonely, especially when you're not prepared for it.
+            Your 20s and 30s mark a natural narrowing of social networks <Citation id="1" index={1} source="Perspectives on Psychological Science" year="2020" tier={1} />. This isn't failure --- it's a predictable developmental shift. But it can feel profoundly lonely, especially when you're not prepared for it.
           </p>
         </div>
 
@@ -946,7 +946,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Research shows that people naturally narrow their social networks as they age <Citation id="3" index={3} source="Developmental Psychology" year="2018" tier={1} />. This is developmentally normal — not a problem.
+                    Research shows that people naturally narrow their social networks as they age <Citation id="3" index={3} source="Developmental Psychology" year="2018" tier={1} />. This is developmentally normal --- not a problem.
                   </p>
                   <p className="mb-4">
                     <strong>Why this happens:</strong> You become more selective about who deserves your limited time and energy. You prioritize depth over breadth.
@@ -992,7 +992,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Building a career often requires sacrificing social life — long hours, travel, moving for promotions, constant availability.
+                    Building a career often requires sacrificing social life --- long hours, travel, moving for promotions, constant availability.
                   </p>
                   <p className="mb-4">
                     When work becomes your primary identity and time commitment, friendships atrophy. Then, when you surface for air, you realize you're isolated.
@@ -1088,7 +1088,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
             {
               title: 'Accept That Friendships Require Effort Now',
               description: (
-                <p>Friendships won't happen passively anymore. Schedule them like you schedule work meetings. This isn't sad — it's realistic.</p>
+                <p>Friendships won't happen passively anymore. Schedule them like you schedule work meetings. This isn't sad --- it's realistic.</p>
               ),
             },
             {
@@ -1225,7 +1225,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You imagined becoming a parent would bring you into a warm community of other parents. You'd have something profound in common with millions of others. You'd never be alone — you'd have this tiny person who needs you constantly. So why do you feel so desperately, achingly lonely?
+            You imagined becoming a parent would bring you into a warm community of other parents. You'd have something profound in common with millions of others. You'd never be alone --- you'd have this tiny person who needs you constantly. So why do you feel so desperately, achingly lonely?
           </p>
           <p className="mb-6">
             Loneliness is one of the most common but least discussed experiences of new parenthood <Citation id="1" index={1} source="Archives of Women's Mental Health" year="2020" tier={1} />. It's not how you're supposed to feel when you "have everything," which makes the isolation even harder to name or seek help for.
@@ -1249,7 +1249,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="warning">
-          <p>Loneliness in new parents is strongly associated with postpartum depression and anxiety <Citation id="2" index={2} source="Journal of Affective Disorders" year="2019" tier={1} />. It's not just an emotional discomfort — it's a mental health risk factor.</p>
+          <p>Loneliness in new parents is strongly associated with postpartum depression and anxiety <Citation id="2" index={2} source="Journal of Affective Disorders" year="2019" tier={1} />. It's not just an emotional discomfort --- it's a mental health risk factor.</p>
         </ArticleCallout>
 
         <h2 id="why-it-happens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1336,7 +1336,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
                     <li>You're both overwhelmed and have little to give each other</li>
                   </ul>
                   <p>
-                    Paradoxically, you can feel lonely while your partner is right there — because they're as depleted as you are.
+                    Paradoxically, you can feel lonely while your partner is right there --- because they're as depleted as you are.
                   </p>
                 </div>
               ),
@@ -1372,7 +1372,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Families are geographically dispersed</li>
                     <li>Parental leave is limited or nonexistent</li>
-                    <li>There's no "village" — you're expected to manage alone</li>
+                    <li>There's no "village" --- you're expected to manage alone</li>
                     <li>Asking for help feels like admitting failure</li>
                   </ul>
                 </div>
@@ -1385,7 +1385,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
           The Sleep Deprivation Factor
         </h2>
         <p className="mb-6">
-          Sleep deprivation doesn't just make you tired — it profoundly affects emotional regulation and social connection <Citation id="5" index={5} source="Sleep Medicine" year="2017" tier={1} />:
+          Sleep deprivation doesn't just make you tired --- it profoundly affects emotional regulation and social connection <Citation id="5" index={5} source="Sleep Medicine" year="2017" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -1401,7 +1401,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Parents with infants who sleep poorly report significantly higher loneliness than those whose babies sleep better — not because of the baby, but because chronic sleep deprivation makes connection feel impossible.
+          Parents with infants who sleep poorly report significantly higher loneliness than those whose babies sleep better --- not because of the baby, but because chronic sleep deprivation makes connection feel impossible.
         </p>
 
         <h2 id="fathers-loneliness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1473,7 +1473,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
             {
               title: 'Advocate for What You Need',
               description: (
-                <p>Tell your partner you need help, adult conversation, or time alone. Ask family for specific support (not 'let me know if you need anything' — that's too vague).</p>
+                <p>Tell your partner you need help, adult conversation, or time alone. Ask family for specific support (not 'let me know if you need anything' --- that's too vague).</p>
               ),
             },
           ]}
@@ -1626,7 +1626,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
                     For parents, social life often revolves around children's activities: sports games, school events, playdates with other parents.
                   </p>
                   <p className="mb-4">
-                    <strong>The problem:</strong> These aren't deep friendships built on mutual interest — they're logistical alliances. When kids age out, the connections disappear.
+                    <strong>The problem:</strong> These aren't deep friendships built on mutual interest --- they're logistical alliances. When kids age out, the connections disappear.
                   </p>
                 </div>
               ),
@@ -1745,7 +1745,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
                     <strong>Key question:</strong> How many hours did you spend in meaningful social interaction? If it's less than 2-3 hours per week, that's a red flag.
                   </p>
                   <p>
-                    Identify where you can carve out time. Often, it's not that you don't have time — it's that social connection isn't prioritized.
+                    Identify where you can carve out time. Often, it's not that you don't have time --- it's that social connection isn't prioritized.
                   </p>
                 </div>
               ),
@@ -1788,7 +1788,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    If you're partnered, couple friendships can be efficient — you're both getting social time together.
+                    If you're partnered, couple friendships can be efficient --- you're both getting social time together.
                   </p>
                   <p className="mb-4">
                     <strong>How to build them:</strong> Host casual dinners or game nights. Suggest regular plans (monthly trivia, seasonal hikes) so it becomes a standing commitment.
@@ -1802,7 +1802,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Even if you're partnered, you need friendships that are yours alone — not couple-based or child-based.
+                    Even if you're partnered, you need friendships that are yours alone --- not couple-based or child-based.
                   </p>
                   <p>
                     These friendships protect you if your romantic relationship ends and provide a space to be yourself beyond your family role.
@@ -1827,7 +1827,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>Midlife is not too late to rebuild your social network. People successfully make new friends in their 40s, 50s, and beyond — it just requires acknowledging the need and taking intentional action.</p>
+          <p>Midlife is not too late to rebuild your social network. People successfully make new friends in their 40s, 50s, and beyond --- it just requires acknowledging the need and taking intentional action.</p>
         </ArticleCallout>
       </>
     ),

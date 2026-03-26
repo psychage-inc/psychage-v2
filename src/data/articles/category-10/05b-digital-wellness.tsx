@@ -89,10 +89,10 @@ export const digitalWellnessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When was the last time you did something purely for enjoyment that didn't involve a screen? Painted, played an instrument, baked bread, worked with your hands, played a board game? If you can't remember, you're not alone — and you're missing out on a powerful source of mental well-being.
+            When was the last time you did something purely for enjoyment that didn't involve a screen? Painted, played an instrument, baked bread, worked with your hands, played a board game? If you can't remember, you're not alone --- and you're missing out on a powerful source of mental well-being.
           </p>
           <p className="mb-6">
-            Analog activities — hobbies and pursuits that don't require electricity or internet — have become countercultural in the digital age. Yet research shows they provide unique mental health benefits that digital activities cannot replicate <Citation id="1" index={1} source="Leisure Studies" year="2023" tier={1} />. From reducing stress to fostering creativity to building genuine connection, offline activities are essential for psychological balance in a hyperconnected world <Citation id="2" index={2} source="Journal of Positive Psychology" year="2022" tier={1} />.
+            Analog activities --- hobbies and pursuits that don't require electricity or internet --- have become countercultural in the digital age. Yet research shows they provide unique mental health benefits that digital activities cannot replicate <Citation id="1" index={1} source="Leisure Studies" year="2023" tier={1} />. From reducing stress to fostering creativity to building genuine connection, offline activities are essential for psychological balance in a hyperconnected world <Citation id="2" index={2} source="Journal of Positive Psychology" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export const digitalWellnessArticlesB: Article[] = [
               title: 'Facilitates Flow States',
               content: (
                 <div className="space-y-3">
-                  <p>Flow — complete absorption in an activity where time disappears and you're fully present — is associated with happiness and life satisfaction <Citation id="3" index={3} source="Creativity Research Journal" year="2023" tier={1} />.</p>
+                  <p>Flow --- complete absorption in an activity where time disappears and you're fully present --- is associated with happiness and life satisfaction <Citation id="3" index={3} source="Creativity Research Journal" year="2023" tier={1} />.</p>
                   <p>Analog activities (painting, woodworking, knitting, playing music) facilitate flow more easily than digital activities because they involve sustained attention without external interruptions.</p>
                   <p>When was the last time you experienced flow while scrolling social media? Probably never. When was the last time while crafting or playing an instrument? More likely.</p>
                 </div>
@@ -151,7 +151,7 @@ export const digitalWellnessArticlesB: Article[] = [
               title: 'Provides Tangible Accomplishment',
               content: (
                 <div className="space-y-3">
-                  <p>When you finish a painting, a loaf of bread, a chair you built, a quilt you sewed — you have a physical object that didn't exist before. This tangible evidence of your effort is deeply satisfying.</p>
+                  <p>When you finish a painting, a loaf of bread, a chair you built, a quilt you sewed --- you have a physical object that didn't exist before. This tangible evidence of your effort is deeply satisfying.</p>
                   <p>Digital work often feels ephemeral and intangible. Analog hobbies create something real you can hold, use, or give to others. This matters for self-efficacy and self-worth.</p>
                 </div>
               ),
@@ -201,7 +201,7 @@ export const digitalWellnessArticlesB: Article[] = [
               description: (
                 <div className="space-y-2">
                   <p>What did you love doing before screens dominated your life? As a child? As a teenager? In your twenties?</p>
-                  <p>Common answers: drawing, playing music, sports, crafts, cooking, reading, building things, gardening. Start there — you likely still have that interest buried under digital habits.</p>
+                  <p>Common answers: drawing, playing music, sports, crafts, cooking, reading, building things, gardening. Start there --- you likely still have that interest buried under digital habits.</p>
                 </div>
               ),
             },
@@ -238,7 +238,7 @@ export const digitalWellnessArticlesB: Article[] = [
             {
               title: 'Embrace Imperfection',
               description: (
-                <p>Digital culture is all about curated perfection. Analog hobbies are liberating precisely because they're imperfect. Your crooked pottery bowl, your messy garden, your off-key singing — all beautiful because they're real and yours.</p>
+                <p>Digital culture is all about curated perfection. Analog hobbies are liberating precisely because they're imperfect. Your crooked pottery bowl, your messy garden, your off-key singing --- all beautiful because they're real and yours.</p>
               ),
             },
           ]}
@@ -346,7 +346,7 @@ export const digitalWellnessArticlesB: Article[] = [
           </li>
           <li>
             <strong>Obstacle:</strong> "I'm not good at creative things."<br />
-            <strong>Solution:</strong> The point isn't to be good — it's to enjoy the process. No one is judging your messy watercolor or beginner guitar playing except you. Let go of perfectionism.
+            <strong>Solution:</strong> The point isn't to be good --- it's to enjoy the process. No one is judging your messy watercolor or beginner guitar playing except you. Let go of perfectionism.
           </li>
           <li>
             <strong>Obstacle:</strong> 'It feels wasteful/unproductive."<br />
@@ -446,10 +446,10 @@ export const digitalWellnessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imagine putting on a VR headset to safely practice public speaking in a simulated auditorium. Or an AI that detects early warning signs of depression from your phone usage patterns weeks before you consciously feel symptoms. Or a chatbot therapist available 24/7 for a fraction of the cost of human therapy. This isn't science fiction — it's already happening.
+            Imagine putting on a VR headset to safely practice public speaking in a simulated auditorium. Or an AI that detects early warning signs of depression from your phone usage patterns weeks before you consciously feel symptoms. Or a chatbot therapist available 24/7 for a fraction of the cost of human therapy. This isn't science fiction --- it's already happening.
           </p>
           <p className="mb-6">
-            Technology is transforming mental health care at an unprecedented pace. While we've explored the challenges technology creates for mental health, it's equally important to understand how emerging technologies are being harnessed to <em>improve</em> mental health outcomes <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />. Here's what's coming — and what it means for the future of mental wellness <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />.
+            Technology is transforming mental health care at an unprecedented pace. While we've explored the challenges technology creates for mental health, it's equally important to understand how emerging technologies are being harnessed to <em>improve</em> mental health outcomes <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />. Here's what's coming --- and what it means for the future of mental wellness <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />.
           </p>
         </div>
 
@@ -495,12 +495,12 @@ export const digitalWellnessArticlesB: Article[] = [
                   <p>"Digital phenotyping" uses smartphone sensors and usage patterns to detect mental health changes before you're consciously aware of them <Citation id="3" index={3} source="Nature Medicine" year="2023" tier={1} />.</p>
                   <p><strong>What it tracks:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>Movement patterns (GPS, accelerometer) — decreased activity can signal depression</li>
-                    <li>Social behavior (call/text frequency) — withdrawal often precedes mood episodes</li>
-                    <li>Sleep patterns (screen use timing) — disrupted sleep predicts mental health decline</li>
-                    <li>Typing speed and patterns — changes correlate with mood states</li>
+                    <li>Movement patterns (GPS, accelerometer) --- decreased activity can signal depression</li>
+                    <li>Social behavior (call/text frequency) --- withdrawal often precedes mood episodes</li>
+                    <li>Sleep patterns (screen use timing) --- disrupted sleep predicts mental health decline</li>
+                    <li>Typing speed and patterns --- changes correlate with mood states</li>
                   </ul>
-                  <p><strong>Potential:</strong> Early intervention. An app could alert you "Your patterns suggest declining mood — consider reaching out to your therapist."</p>
+                  <p><strong>Potential:</strong> Early intervention. An app could alert you "Your patterns suggest declining mood --- consider reaching out to your therapist."</p>
                   <p><strong>Concerns:</strong> Surveillance, privacy, false positives causing unnecessary anxiety, algorithmic bias.</p>
                 </div>
               ),
@@ -537,7 +537,7 @@ export const digitalWellnessArticlesB: Article[] = [
                     <li><strong>Fear of flying:</strong> Simulate airplane boarding, takeoff, turbulence</li>
                     <li><strong>Social anxiety:</strong> Practice public speaking in virtual auditoriums</li>
                     <li><strong>PTSD:</strong> Gradual exposure to trauma-related environments (with therapist guidance)</li>
-                    <li><strong>Phobias:</strong> Spiders, heights, enclosed spaces — all can be simulated and gradually confronted</li>
+                    <li><strong>Phobias:</strong> Spiders, heights, enclosed spaces --- all can be simulated and gradually confronted</li>
                   </ul>
                   <p className="mt-3"><strong>Evidence:</strong> Research shows VR exposure therapy is as effective as real-world exposure for many anxiety disorders, with higher treatment completion rates (less avoidance).</p>
                 </div>
@@ -650,7 +650,7 @@ export const digitalWellnessArticlesB: Article[] = [
               description: (
                 <div className="space-y-2">
                   <p><strong>Question:</strong> Will these tools democratize mental health care or create a two-tier system where wealthy people get human therapists and everyone else gets chatbots?</p>
-                  <p>Digital tools could expand access in underserved areas, but they require smartphones, internet, and digital literacy — not universally available.</p>
+                  <p>Digital tools could expand access in underserved areas, but they require smartphones, internet, and digital literacy --- not universally available.</p>
                 </div>
               ),
             },
@@ -708,7 +708,7 @@ export const digitalWellnessArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Technology in mental health is neither savior nor villain. It's a tool. The question is: will we use it wisely — to expand access, enhance care, and empower individuals — or will we let it become another source of surveillance, inequality, and alienation? That choice is still being made <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />.</p>
+          <p>Technology in mental health is neither savior nor villain. It's a tool. The question is: will we use it wisely --- to expand access, enhance care, and empower individuals --- or will we let it become another source of surveillance, inequality, and alienation? That choice is still being made <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />.</p>
         </ArticleCallout>
       </>
     ),
@@ -787,10 +787,10 @@ export const digitalWellnessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your five-year-old can navigate YouTube better than you can navigate your work email. Your ten-year-old knows every TikTok trend before it hits mainstream news. Your teenager spends hours in group chats you don't understand. Welcome to digital parenting in 2026 — where the technology changes faster than the advice.
+            Your five-year-old can navigate YouTube better than you can navigate your work email. Your ten-year-old knows every TikTok trend before it hits mainstream news. Your teenager spends hours in group chats you don't understand. Welcome to digital parenting in 2026 --- where the technology changes faster than the advice.
           </p>
           <p className="mb-6">
-            Digital literacy — the ability to find, evaluate, create, and communicate information using digital technologies — is no longer optional for children. It's as fundamental as reading and writing <Citation id="1" index={1} source="Developmental Psychology" year="2023" tier={1} />. But teaching it requires more than setting time limits or installing parental controls. It means raising children who can think critically, engage responsibly, and protect their well-being in digital spaces <Citation id="3" index={3} source="Journal of Media Literacy Education" year="2023" tier={1} />. Here's how.
+            Digital literacy --- the ability to find, evaluate, create, and communicate information using digital technologies --- is no longer optional for children. It's as fundamental as reading and writing <Citation id="1" index={1} source="Developmental Psychology" year="2023" tier={1} />. But teaching it requires more than setting time limits or installing parental controls. It means raising children who can think critically, engage responsibly, and protect their well-being in digital spaces <Citation id="3" index={3} source="Journal of Media Literacy Education" year="2023" tier={1} />. Here's how.
           </p>
         </div>
 
@@ -944,9 +944,9 @@ export const digitalWellnessArticlesB: Article[] = [
                 <div className="space-y-2">
                   <p>Help them see behind the curtain:</p>
                   <ul className="list-disc pl-5 space-y-1 mt-2">
-                    <li>"Your feed is designed to keep you scrolling. It's not showing you 'everything' — it's showing you what keeps you engaged."</li>
+                    <li>"Your feed is designed to keep you scrolling. It's not showing you 'everything' --- it's showing you what keeps you engaged."</li>
                     <li>"Influencers are often paid to promote products. They're not just sharing because they love it."</li>
-                    <li>"Comparison on social media is unfair — you're comparing your behind-the-scenes to everyone else's highlight reel."</li>
+                    <li>"Comparison on social media is unfair --- you're comparing your behind-the-scenes to everyone else's highlight reel."</li>
                   </ul>
                 </div>
               ),
@@ -1032,7 +1032,7 @@ export const digitalWellnessArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Digital literacy isn't about making kids afraid of technology — it's about empowering them to use it wisely, critically, and safely. The goal isn't perfect protection (impossible), but resilience: kids who can navigate challenges, think critically, and come to you when things go wrong.</p>
+          <p>Digital literacy isn't about making kids afraid of technology --- it's about empowering them to use it wisely, critically, and safely. The goal isn't perfect protection (impossible), but resilience: kids who can navigate challenges, think critically, and come to you when things go wrong.</p>
         </ArticleCallout>
       </>
     ),
@@ -1111,10 +1111,10 @@ export const digitalWellnessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            There are over 20,000 mental health apps available. Some are evidence-based tools that genuinely help. Most are digital snake oil — unproven, ineffective, or even harmful. How do you tell the difference? And which ones are actually worth your time, money, and trust?
+            There are over 20,000 mental health apps available. Some are evidence-based tools that genuinely help. Most are digital snake oil --- unproven, ineffective, or even harmful. How do you tell the difference? And which ones are actually worth your time, money, and trust?
           </p>
           <p className="mb-6">
-            This article cuts through the noise. We'll focus on apps and digital tools with research backing, clear use cases, and demonstrated effectiveness <Citation id="1" index={1} source="Journal of Medical Internet Research" year="2023" tier={1} />. Technology can support mental health — when you choose wisely.
+            This article cuts through the noise. We'll focus on apps and digital tools with research backing, clear use cases, and demonstrated effectiveness <Citation id="1" index={1} source="Journal of Medical Internet Research" year="2023" tier={1} />. Technology can support mental health --- when you choose wisely.
           </p>
         </div>
 
@@ -1135,9 +1135,9 @@ export const digitalWellnessArticlesB: Article[] = [
                   <p><strong>Best for:</strong> Depression, generalized anxiety, social anxiety, panic disorder, insomnia.</p>
                   <p><strong>Examples with evidence:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>SilverCloud</strong> — Clinically validated, often prescribed by providers</li>
-                    <li><strong>MindShift CBT</strong> — Free, developed by Anxiety Canada, evidence-based</li>
-                    <li><strong>Sleepio</strong> — Digital CBT-I (for insomnia), FDA-cleared, strong RCT evidence</li>
+                    <li><strong>SilverCloud</strong> --- Clinically validated, often prescribed by providers</li>
+                    <li><strong>MindShift CBT</strong> --- Free, developed by Anxiety Canada, evidence-based</li>
+                    <li><strong>Sleepio</strong> --- Digital CBT-I (for insomnia), FDA-cleared, strong RCT evidence</li>
                   </ul>
                   <p><strong>Cost:</strong> Free to $100-$200 for full programs. Some covered by insurance.</p>
                   <p><strong>Limitation:</strong> Requires motivation and follow-through. Not suitable for severe mental illness or crisis.</p>
@@ -1154,10 +1154,10 @@ export const digitalWellnessArticlesB: Article[] = [
                   <p><strong>Best for:</strong> Stress management, mild anxiety, building mindfulness skills, sleep.</p>
                   <p><strong>Examples with evidence:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>Headspace</strong> — Multiple RCTs showing stress and anxiety reduction</li>
-                    <li><strong>Calm</strong> — Evidence for sleep and anxiety benefits</li>
-                    <li><strong>Insight Timer</strong> — Free, large library, community features</li>
-                    <li><strong>Ten Percent Happier</strong> — Science-based, straightforward approach</li>
+                    <li><strong>Headspace</strong> --- Multiple RCTs showing stress and anxiety reduction</li>
+                    <li><strong>Calm</strong> --- Evidence for sleep and anxiety benefits</li>
+                    <li><strong>Insight Timer</strong> --- Free, large library, community features</li>
+                    <li><strong>Ten Percent Happier</strong> --- Science-based, straightforward approach</li>
                   </ul>
                   <p><strong>Cost:</strong> $0-$70/year. Many offer free versions.</p>
                   <p><strong>Key:</strong> Consistency matters more than app choice. Pick one you'll actually use.</p>
@@ -1174,12 +1174,12 @@ export const digitalWellnessArticlesB: Article[] = [
                   <p><strong>Best for:</strong> Depression, bipolar disorder, anxiety, general self-awareness.</p>
                   <p><strong>Examples:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>Daylio</strong> — Simple, visual mood tracking without typing</li>
-                    <li><strong>eMoods</strong> — Designed for bipolar disorder, tracks mood cycles</li>
-                    <li><strong>Bearable</strong> — Comprehensive tracking (mood, symptoms, medications, sleep, etc.)</li>
+                    <li><strong>Daylio</strong> --- Simple, visual mood tracking without typing</li>
+                    <li><strong>eMoods</strong> --- Designed for bipolar disorder, tracks mood cycles</li>
+                    <li><strong>Bearable</strong> --- Comprehensive tracking (mood, symptoms, medications, sleep, etc.)</li>
                   </ul>
                   <p><strong>Cost:</strong> Free with premium options ($20-$50/year).</p>
-                  <p><strong>Tip:</strong> Share reports with your therapist — the data helps guide treatment.</p>
+                  <p><strong>Tip:</strong> Share reports with your therapist --- the data helps guide treatment.</p>
                 </div>
               ),
             },
@@ -1193,9 +1193,9 @@ export const digitalWellnessArticlesB: Article[] = [
                   <p><strong>Best for:</strong> Insomnia, sleep hygiene improvement, understanding sleep patterns.</p>
                   <p><strong>Examples:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>Sleepio</strong> — Digital CBT-I, FDA-cleared, excellent evidence</li>
-                    <li><strong>Sleep Cycle</strong> — Tracks sleep using phone sensors, smart alarm</li>
-                    <li><strong>Oura Ring / Fitbit / Apple Watch</strong> — Wearables with sleep tracking</li>
+                    <li><strong>Sleepio</strong> --- Digital CBT-I, FDA-cleared, excellent evidence</li>
+                    <li><strong>Sleep Cycle</strong> --- Tracks sleep using phone sensors, smart alarm</li>
+                    <li><strong>Oura Ring / Fitbit / Apple Watch</strong> --- Wearables with sleep tracking</li>
                   </ul>
                   <p><strong>Cost:</strong> Apps: $0-$100/year. Wearables: $100-$500.</p>
                   <p><strong>Note:</strong> Don't let sleep tracking create anxiety ("sleep performance anxiety"). Use data as information, not judgment.</p>
@@ -1212,10 +1212,10 @@ export const digitalWellnessArticlesB: Article[] = [
                   <p><strong>Best for:</strong> Suicide risk, self-harm urges, acute distress, PTSD.</p>
                   <p><strong>Examples:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li><strong>MY3</strong> — Suicide safety planning, crisis contacts</li>
-                    <li><strong>notOK</strong> — One-tap alerts to your support network when in distress</li>
-                    <li><strong>PTSD Coach</strong> — Developed by VA, evidence-based tools for PTSD</li>
-                    <li><strong>Virtual Hope Box</strong> — Coping tools, distraction techniques, supportive messages</li>
+                    <li><strong>MY3</strong> --- Suicide safety planning, crisis contacts</li>
+                    <li><strong>notOK</strong> --- One-tap alerts to your support network when in distress</li>
+                    <li><strong>PTSD Coach</strong> --- Developed by VA, evidence-based tools for PTSD</li>
+                    <li><strong>Virtual Hope Box</strong> --- Coping tools, distraction techniques, supportive messages</li>
                   </ul>
                   <p><strong>Cost:</strong> Typically free.</p>
                   <p><strong>Critical:</strong> These are <em>supplements</em> to professional help, not replacements. If in crisis, call 988 (Suicide & Crisis Lifeline) or go to the ER.</p>
@@ -1298,7 +1298,7 @@ export const digitalWellnessArticlesB: Article[] = [
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>No credentials:</strong> Not developed or reviewed by mental health professionals</li>
-          <li><strong>Unrealistic promises:</strong> "Cure depression in 7 days!" — if it sounds too good to be true, it is</li>
+          <li><strong>Unrealistic promises:</strong> "Cure depression in 7 days!" --- if it sounds too good to be true, it is</li>
           <li><strong>Predatory pricing:</strong> Expensive subscriptions with no free trial or evidence</li>
           <li><strong>Poor privacy practices:</strong> Selling your data, no encryption, vague policies</li>
           <li><strong>Harmful content:</strong> Pro-eating disorder, pro-self-harm, or content that could trigger or worsen symptoms</li>
@@ -1536,7 +1536,7 @@ export const digitalWellnessArticlesB: Article[] = [
           Step 4: Choose Specific Strategies
         </h2>
         <p className="mb-6">
-          For each goal, identify concrete strategies. Use implementation intentions ("If X happens, then I will Y") — research shows they double success rates <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2022" tier={1} />.
+          For each goal, identify concrete strategies. Use implementation intentions ("If X happens, then I will Y") --- research shows they double success rates <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2022" tier={1} />.
         </p>
 
         <ArticleTabs
@@ -1607,7 +1607,7 @@ export const digitalWellnessArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-3">
           <li>
             <strong>Barrier:</strong> "I'll feel anxious without constant access to my phone."<br />
-            <strong>Solution:</strong> Start gradually. First hour of morning phone-free, then expand. Practice tolerating the anxiety — it usually subsides in 10-15 minutes.
+            <strong>Solution:</strong> Start gradually. First hour of morning phone-free, then expand. Practice tolerating the anxiety --- it usually subsides in 10-15 minutes.
           </li>
           <li>
             <strong>Barrier:</strong> "My work requires constant availability."<br />
@@ -1641,7 +1641,7 @@ export const digitalWellnessArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip" title="The 30-Day Rule">
-          <p>Research suggests it takes about 30 days of consistent practice for a new behavior to feel automatic <Citation id="6" index={6} source="Annual Review of Psychology" year="2023" tier={1} />. Commit to your plan for at least 30 days before evaluating whether it's working. Early discomfort doesn't mean failure — it means you're changing.</p>
+          <p>Research suggests it takes about 30 days of consistent practice for a new behavior to feel automatic <Citation id="6" index={6} source="Annual Review of Psychology" year="2023" tier={1} />. Commit to your plan for at least 30 days before evaluating whether it's working. Early discomfort doesn't mean failure --- it means you're changing.</p>
         </ArticleCallout>
 
         <h2 id="step-7-monitor" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

@@ -95,7 +95,7 @@ export const buildingConfidenceArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most people wait to feel confident before they act. But research shows this is backward—confidence comes from action, not before it.
+            Most people wait to feel confident before they act. But research shows this is backward---confidence comes from action, not before it.
           </p>
           <p className="mb-6">
             The "confidence gap" refers to the space between how confident you feel and how confident you need to feel to take action <Citation id="1" index={1} source="HarperCollins" year="2014" tier={5} />. Studies show that competence often develops <em>after</em> we begin, not before <Citation id="3" index={3} source="Journal of Applied Psychology" year="2018" tier={1} />.
@@ -138,7 +138,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           How Action Builds Confidence
         </h2>
         <p className="mb-6">
-          Albert Bandura's self-efficacy theory identifies mastery experiences—successfully completing a task—as the most powerful source of confidence <Citation id="2" index={2} source="Psychological Review" year="1977" tier={1} />. Each time you act despite uncertainty, you gather evidence of your capability <Citation id="6" index={6} source="Self and Identity" year="2017" tier={1} />.
+          Albert Bandura's self-efficacy theory identifies mastery experiences---successfully completing a task---as the most powerful source of confidence <Citation id="2" index={2} source="Psychological Review" year="1977" tier={1} />. Each time you act despite uncertainty, you gather evidence of your capability <Citation id="6" index={6} source="Self and Identity" year="2017" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -180,7 +180,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           "Acting As If" Strategy
         </h2>
         <p className="mb-6">
-          Behavioral psychology supports the "fake it till you make it" approach—not as deception, but as a learning tool <Citation id="3" index={3} source="Journal of Applied Psychology" year="2018" tier={1} />. When you act confident, you create opportunities to build real competence <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2016" tier={1} />.
+          Behavioral psychology supports the "fake it till you make it" approach---not as deception, but as a learning tool <Citation id="3" index={3} source="Journal of Applied Psychology" year="2018" tier={1} />. When you act confident, you create opportunities to build real competence <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2016" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -207,7 +207,7 @@ export const buildingConfidenceArticlesA: Article[] = [
               title: 'Start with micro-actions',
               content: (
                 <p>
-                  Don't wait for major confidence to take major action. Start ridiculously small—send one email, make one phone call, attend one event. Small actions build momentum.
+                  Don't wait for major confidence to take major action. Start ridiculously small---send one email, make one phone call, attend one event. Small actions build momentum.
                 </p>
               ),
             },
@@ -234,7 +234,7 @@ export const buildingConfidenceArticlesA: Article[] = [
               title: 'Reframe discomfort as growth',
               content: (
                 <p>
-                  Feeling uncomfortable means you're learning. Confidence in familiar situations isn't confidence—it's comfort. Real confidence develops at the edge of your ability.
+                  Feeling uncomfortable means you're learning. Confidence in familiar situations isn't confidence---it's comfort. Real confidence develops at the edge of your ability.
                 </p>
               ),
             },
@@ -344,7 +344,7 @@ export const buildingConfidenceArticlesA: Article[] = [
             In 1977, psychologist Albert Bandura proposed a revolutionary idea: your belief in your ability to succeed influences your actual success more than your objective skills.
           </p>
           <p className="mb-6">
-            Self-efficacy—the conviction that you can execute the behaviors required to produce specific outcomes—has become one of the most researched constructs in psychology <Citation id="1" index={1} source="Psychological Review" year="1977" tier={1} />. Decades of research confirm that people with high self-efficacy set harder goals, persist longer, and achieve more than equally capable peers with lower self-efficacy <Citation id="2" index={2} source="W.H. Freeman and Company" year="1997" tier={5} />.
+            Self-efficacy---the conviction that you can execute the behaviors required to produce specific outcomes---has become one of the most researched constructs in psychology <Citation id="1" index={1} source="Psychological Review" year="1977" tier={1} />. Decades of research confirm that people with high self-efficacy set harder goals, persist longer, and achieve more than equally capable peers with lower self-efficacy <Citation id="2" index={2} source="W.H. Freeman and Company" year="1997" tier={5} />.
           </p>
         </div>
 
@@ -454,7 +454,7 @@ export const buildingConfidenceArticlesA: Article[] = [
             <strong>Academic Performance:</strong> Self-efficacy predicts academic achievement better than previous grades, IQ, or socioeconomic status <Citation id="3" index={3} source="Educational Psychology Review" year="2018" tier={1} />.
           </p>
           <p className="mb-4">
-            <strong>Work Performance:</strong> A meta-analysis of 114 studies found self-efficacy correlates .48 with job performance—one of the strongest predictors in organizational psychology <Citation id="5" index={5} source="Psychological Bulletin" year="2018" tier={1} />.
+            <strong>Work Performance:</strong> A meta-analysis of 114 studies found self-efficacy correlates .48 with job performance---one of the strongest predictors in organizational psychology <Citation id="5" index={5} source="Psychological Bulletin" year="2018" tier={1} />.
           </p>
           <p className="mb-4">
             <strong>Health Behaviors:</strong> People with high self-efficacy are more likely to exercise, quit smoking, manage chronic disease, and stick to treatment plans <Citation id="4" index={4} source="Journal of Health Psychology" year="2016" tier={1} />.
@@ -493,7 +493,7 @@ export const buildingConfidenceArticlesA: Article[] = [
             },
             {
               title: 'Focus on process, not just outcomes',
-              description: <p>Celebrate effort, strategy, and progress—not just final results. This builds sustainable self-efficacy.</p>,
+              description: <p>Celebrate effort, strategy, and progress---not just final results. This builds sustainable self-efficacy.</p>,
             },
             {
               title: 'Reframe setbacks as information',
@@ -514,7 +514,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           Why This Matters
         </h2>
         <p className="mb-6">
-          Self-efficacy is not about positive thinking or wishful confidence. It's about developing accurate beliefs in your capability through evidence—primarily through doing the thing you doubt you can do <Citation id="7" index={7} source="American Psychologist" year="2000" tier={1} />.
+          Self-efficacy is not about positive thinking or wishful confidence. It's about developing accurate beliefs in your capability through evidence---primarily through doing the thing you doubt you can do <Citation id="7" index={7} source="American Psychologist" year="2000" tier={1} />.
         </p>
         <p className="mb-6">
           The practical implication: you don't need to believe you'll succeed to start. You need to start to build the belief that you can succeed. Action comes first; self-efficacy follows <Citation id="9" index={9} source="Motivation Science" year="2020" tier={1} />.
@@ -605,7 +605,7 @@ export const buildingConfidenceArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Big goals can feel paralyzing. Small wins—minor but meaningful accomplishments—create momentum that builds confidence and sustains progress.
+            Big goals can feel paralyzing. Small wins---minor but meaningful accomplishments---create momentum that builds confidence and sustains progress.
           </p>
           <p className="mb-6">
             Psychologist Karl Weick introduced the "small wins" concept in 1984, arguing that breaking overwhelming problems into manageable pieces makes them solvable <Citation id="1" index={1} source="American Psychologist" year="1984" tier={1} />. Research now shows this approach works for everything from organizational change to personal development <Citation id="2" index={2} source="Harvard Business Review Press" year="2011" tier={5} />.
@@ -644,7 +644,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           The Goal Gradient Effect
         </h2>
         <p className="mb-6">
-          Research shows people accelerate effort as they get closer to a goal—a phenomenon called the goal gradient effect <Citation id="3" index={3} source="Journal of Experimental Psychology" year="2006" tier={1} />. Small wins create more frequent "close to the goal" experiences, maintaining higher motivation throughout the process.
+          Research shows people accelerate effort as they get closer to a goal---a phenomenon called the goal gradient effect <Citation id="3" index={3} source="Journal of Experimental Psychology" year="2006" tier={1} />. Small wins create more frequent "close to the goal" experiences, maintaining higher motivation throughout the process.
         </p>
 
         <ComparisonTable
@@ -722,7 +722,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           Small Wins in Depression Treatment
         </h2>
         <p className="mb-6">
-          Behavioral activation—a highly effective depression treatment—works by accumulating small wins <Citation id="5" index={5} source="Behavior Therapy" year="2015" tier={1} />. Therapists help clients identify tiny, achievable actions (getting out of bed, taking a shower, walking around the block) and build from there.
+          Behavioral activation---a highly effective depression treatment---works by accumulating small wins <Citation id="5" index={5} source="Behavior Therapy" year="2015" tier={1} />. Therapists help clients identify tiny, achievable actions (getting out of bed, taking a shower, walking around the block) and build from there.
         </p>
         <p className="mb-6">
           The approach recognizes that depression often makes big goals feel impossible. Small wins break the inertia, provide evidence that change is possible, and create positive momentum <Citation id="6" index={6} source="Journal of Applied Behavior Analysis" year="2018" tier={1} />.
@@ -868,10 +868,10 @@ export const buildingConfidenceArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The comfort zone isn't just a cliché—it's a psychological reality. Growth requires moving beyond it, but too far outside comfort becomes counterproductive.
+            The comfort zone isn't just a cliché---it's a psychological reality. Growth requires moving beyond it, but too far outside comfort becomes counterproductive.
           </p>
           <p className="mb-6">
-            The Yerkes-Dodson law, established in 1908, shows that performance improves with arousal up to a point, then declines <Citation id="1" index={1} source="British Journal of Psychology" year="1908" tier={1} />. The key is finding the "learning zone"—the space between boring comfort and overwhelming panic.
+            The Yerkes-Dodson law, established in 1908, shows that performance improves with arousal up to a point, then declines <Citation id="1" index={1} source="British Journal of Psychology" year="1908" tier={1} />. The key is finding the "learning zone"---the space between boring comfort and overwhelming panic.
           </p>
         </div>
 
@@ -913,7 +913,7 @@ export const buildingConfidenceArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    The learning zone involves tasks just beyond your current capability—difficult enough to require effort, but not so hard you shut down. This is where skill development happens <Citation id="5" index={5} source="Nature Neuroscience" year="2015" tier={1} />.
+                    The learning zone involves tasks just beyond your current capability---difficult enough to require effort, but not so hard you shut down. This is where skill development happens <Citation id="5" index={5} source="Nature Neuroscience" year="2015" tier={1} />.
                   </p>
                   <p>
                     <strong>Examples:</strong> Learning a new skill with instruction, having a difficult conversation with preparation, presenting to a small group
@@ -973,12 +973,12 @@ export const buildingConfidenceArticlesA: Article[] = [
           Flow: The Sweet Spot
         </h2>
         <p className="mb-6">
-          Psychologist Mihaly Csikszentmihalyi identified "flow"—a state of complete absorption in an activity—as occurring when challenge and skill are balanced <Citation id="2" index={2} source="Harper & Row" year="1990" tier={5} />. Too easy (low challenge, high skill) = boredom. Too hard (high challenge, low skill) = anxiety.
+          Psychologist Mihaly Csikszentmihalyi identified "flow"---a state of complete absorption in an activity---as occurring when challenge and skill are balanced <Citation id="2" index={2} source="Harper & Row" year="1990" tier={5} />. Too easy (low challenge, high skill) = boredom. Too hard (high challenge, low skill) = anxiety.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Flow occurs when you're working at approximately 4% above your current skill level—challenging enough to engage full attention, but not so difficult you feel overwhelmed.
+            Flow occurs when you're working at approximately 4% above your current skill level---challenging enough to engage full attention, but not so difficult you feel overwhelmed.
           </p>
         </ArticleCallout>
 
@@ -986,7 +986,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           Graduated Exposure: Expanding Your Comfort Zone
         </h2>
         <p className="mb-6">
-          The most effective way to expand your comfort zone is through graduated exposure—progressively facing increasingly challenging situations <Citation id="7" index={7} source="Clinical Psychology Review" year="2018" tier={1} />. This approach, used successfully in anxiety treatment, works for all skill development.
+          The most effective way to expand your comfort zone is through graduated exposure---progressively facing increasingly challenging situations <Citation id="7" index={7} source="Clinical Psychology Review" year="2018" tier={1} />. This approach, used successfully in anxiety treatment, works for all skill development.
         </p>
 
         <ProgressSteps
@@ -994,7 +994,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           steps={[
             {
               title: 'Start at your edge',
-              description: <p>Identify activities that feel like a 4-5 out of 10 difficulty—uncomfortable but manageable.</p>,
+              description: <p>Identify activities that feel like a 4-5 out of 10 difficulty---uncomfortable but manageable.</p>,
             },
             {
               title: 'Repeat until comfortable',
@@ -1036,7 +1036,7 @@ export const buildingConfidenceArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="The 10% Rule">
           <p>
-            Expand your comfort zone by approximately 10% at a time. If you're comfortable running 2 miles, try 2.2 miles—not 5 miles. Small incremental challenges create sustainable growth without triggering avoidance.
+            Expand your comfort zone by approximately 10% at a time. If you're comfortable running 2 miles, try 2.2 miles---not 5 miles. Small incremental challenges create sustainable growth without triggering avoidance.
           </p>
         </ArticleCallout>
 
@@ -1147,10 +1147,10 @@ export const buildingConfidenceArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You scroll through social media and everyone seems happier, more successful, and more put-together than you. The comparison reflex is automatic—and damaging.
+            You scroll through social media and everyone seems happier, more successful, and more put-together than you. The comparison reflex is automatic---and damaging.
           </p>
           <p className="mb-6">
-            Social comparison is a fundamental human tendency identified by psychologist Leon Festinger in 1954 <Citation id="1" index={1} source="Human Relations" year="1954" tier={1} />. We evaluate ourselves by comparing to others. The problem isn't comparison itself—it's chronic, upward comparison that erodes wellbeing <Citation id="2" index={2} source="Journal of Social and Clinical Psychology" year="2016" tier={1} />.
+            Social comparison is a fundamental human tendency identified by psychologist Leon Festinger in 1954 <Citation id="1" index={1} source="Human Relations" year="1954" tier={1} />. We evaluate ourselves by comparing to others. The problem isn't comparison itself---it's chronic, upward comparison that erodes wellbeing <Citation id="2" index={2} source="Journal of Social and Clinical Psychology" year="2016" tier={1} />.
           </p>
         </div>
 
@@ -1158,7 +1158,7 @@ export const buildingConfidenceArticlesA: Article[] = [
           Why We Compare
         </h2>
         <p className="mb-6">
-          Comparison serves evolutionary purposes: it helps us evaluate our standing, identify areas for improvement, and learn from others. In small doses, comparison can be motivating. But constant comparison—especially on social media—creates problems <Citation id="3" index={3} source="Journal of Affective Disorders" year="2021" tier={1} />.
+          Comparison serves evolutionary purposes: it helps us evaluate our standing, identify areas for improvement, and learn from others. In small doses, comparison can be motivating. But constant comparison---especially on social media---creates problems <Citation id="3" index={3} source="Journal of Affective Disorders" year="2021" tier={1} />.
         </p>
 
         <StatCard
@@ -1209,7 +1209,7 @@ export const buildingConfidenceArticlesA: Article[] = [
               title: 'Multidimensional Comparison',
               content: (
                 <p>
-                  You compare yourself to different people on different dimensions—this person's career, that person's relationship, another's appearance—creating a composite that no real person matches.
+                  You compare yourself to different people on different dimensions---this person's career, that person's relationship, another's appearance---creating a composite that no real person matches.
                 </p>
               ),
             },

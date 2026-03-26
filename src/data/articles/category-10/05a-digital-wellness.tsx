@@ -128,7 +128,7 @@ export const digitalWellnessArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Ensuring technology doesn't crowd out other important activities: face-to-face relationships, physical movement, nature, creative pursuits, rest.</p>
-                  <p>Balance doesn't mean equal time — it means appropriate allocation based on your values and needs.</p>
+                  <p>Balance doesn't mean equal time --- it means appropriate allocation based on your values and needs.</p>
                 </div>
               ),
             },
@@ -198,7 +198,7 @@ export const digitalWellnessArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Research shows that it's not <em>how much</em> technology you use that matters most for mental health — it's <em>how intentionally</em> you use it <Citation id="4" index={4} source="Cyberpsychology, Behavior, and Social Networking" year="2023" tier={1} />. Mindful, purposeful use can enhance well-being. Passive, compulsive use harms it.</p>
+          <p>Research shows that it's not <em>how much</em> technology you use that matters most for mental health --- it's <em>how intentionally</em> you use it <Citation id="4" index={4} source="Cyberpsychology, Behavior, and Social Networking" year="2023" tier={1} />. Mindful, purposeful use can enhance well-being. Passive, compulsive use harms it.</p>
         </ArticleCallout>
 
         <h2 id="core-principles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -230,7 +230,7 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Build Friction for Unhealthy Behaviors',
               description: (
                 <div className="space-y-2">
-                  <p>If you want to reduce social media use, delete the app from your phone. Make it harder to access — you have to log in on a browser, which creates a pause for reflection.</p>
+                  <p>If you want to reduce social media use, delete the app from your phone. Make it harder to access --- you have to log in on a browser, which creates a pause for reflection.</p>
                   <p>Conversely, reduce friction for healthy behaviors: keep a book where you usually grab your phone, have a meditation app on your home screen.</p>
                 </div>
               ),
@@ -239,7 +239,7 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Protect Your Attention as a Finite Resource',
               description: (
                 <div className="space-y-2">
-                  <p>Your attention is limited and precious. Every notification, app, and platform is competing for it. Treat your attention like money — spend it carefully on things that matter.</p>
+                  <p>Your attention is limited and precious. Every notification, app, and platform is competing for it. Treat your attention like money --- spend it carefully on things that matter.</p>
                   <p>Turn off all non-essential notifications. Batch-check messages rather than responding in real-time. Protect deep work time.</p>
                 </div>
               ),
@@ -247,7 +247,7 @@ export const digitalWellnessArticlesA: Article[] = [
             {
               title: 'Embrace Analog Experiences',
               description: (
-                <p>Digital wellness includes deliberately choosing non-digital activities: reading physical books, playing board games, cooking, hiking, having face-to-face conversations. These aren't 'technology breaks' — they're life.</p>
+                <p>Digital wellness includes deliberately choosing non-digital activities: reading physical books, playing board games, cooking, hiking, having face-to-face conversations. These aren't 'technology breaks' --- they're life.</p>
               ),
             },
             {
@@ -333,7 +333,7 @@ export const digitalWellnessArticlesA: Article[] = [
           <li>Technology use is contributing to depression, anxiety, or other mental health issues</li>
         </ul>
         <p className="mb-6">
-          Therapists who specialize in digital wellness or behavioral addictions can help you develop healthier patterns and address underlying issues <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. Technology is here to stay — but you can learn to use it in ways that enhance rather than diminish your life.
+          Therapists who specialize in digital wellness or behavioral addictions can help you develop healthier patterns and address underlying issues <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. Technology is here to stay --- but you can learn to use it in ways that enhance rather than diminish your life.
         </p>
       </>
     ),
@@ -473,7 +473,7 @@ export const digitalWellnessArticlesA: Article[] = [
                 <div className="space-y-3">
                   <p>Many digital detox retreats are in beautiful natural settings (mountains, beaches, forests). Research suggests that much of the benefit comes from nature exposure, not technology absence <Citation id="5" index={5} source="Journal of Environmental Psychology" year="2022" tier={1} />.</p>
                   <p>Nature has well-documented restorative effects on attention, stress, and mood. When studies control for environment, the added benefit of complete technology abstinence becomes less clear.</p>
-                  <p>This means a week camping without your phone might provide similar benefits to an expensive retreat — and teach you a replicable practice.</p>
+                  <p>This means a week camping without your phone might provide similar benefits to an expensive retreat --- and teach you a replicable practice.</p>
                 </div>
               ),
             },
@@ -484,7 +484,7 @@ export const digitalWellnessArticlesA: Article[] = [
                 <div className="space-y-3">
                   <p>Participants frequently report withdrawal-like symptoms in the first 24-72 hours: anxiety, irritability, boredom, compulsive urges to check devices, and fear of missing out.</p>
                   <p>These symptoms usually subside, but they're uncomfortable. Some people find them so distressing they leave early or cheat by sneaking device use.</p>
-                  <p>This withdrawal period is actually valuable data — it reveals just how dependent you've become on technology. But it's rarely pleasant.</p>
+                  <p>This withdrawal period is actually valuable data --- it reveals just how dependent you've become on technology. But it's rarely pleasant.</p>
                 </div>
               ),
             },
@@ -531,7 +531,7 @@ export const digitalWellnessArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>Verdict:</strong> For most people, digital detox retreats are a luxury that provides short-term relief but limited long-term value relative to cost. However, for some (particularly those who can easily afford it and need a dramatic intervention), they can serve as a powerful catalyst for change — if followed by ongoing effort.
+          <strong>Verdict:</strong> For most people, digital detox retreats are a luxury that provides short-term relief but limited long-term value relative to cost. However, for some (particularly those who can easily afford it and need a dramatic intervention), they can serve as a powerful catalyst for change --- if followed by ongoing effort.
         </p>
 
         <h2 id="alternatives" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -610,10 +610,10 @@ export const digitalWellnessArticlesA: Article[] = [
           Bottom Line
         </h2>
         <p className="mb-6">
-          Digital detox retreats are not scams — they provide real, measurable short-term benefits. But they're also not magic bullets. For most people, they're an expensive way to achieve something you could accomplish with discipline, structure, and possibly therapy at a fraction of the cost.
+          Digital detox retreats are not scams --- they provide real, measurable short-term benefits. But they're also not magic bullets. For most people, they're an expensive way to achieve something you could accomplish with discipline, structure, and possibly therapy at a fraction of the cost.
         </p>
         <p className="mb-6">
-          If you have disposable income and value the retreat experience (beautiful setting, community, forced accountability), go for it. But know that the hard work — building sustainable digital wellness practices — happens after you return home.
+          If you have disposable income and value the retreat experience (beautiful setting, community, forced accountability), go for it. But know that the hard work --- building sustainable digital wellness practices --- happens after you return home.
         </p>
         <p className="mb-6">
           If you're on a budget or skeptical of the value, there are many free or low-cost alternatives that research suggests are equally or more effective for long-term behavior change <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. The best digital detox is the one you can repeat regularly, not the one you do once a year at great expense.
@@ -695,10 +695,10 @@ export const digitalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            It's 9 PM on a Saturday. You're with your family when your work Slack pings. Your manager needs 'just a quick answer." You respond. Ten minutes later, you're in a full work conversation. Your weekend has been interrupted. This is now normal — but should it be?
+            It's 9 PM on a Saturday. You're with your family when your work Slack pings. Your manager needs 'just a quick answer." You respond. Ten minutes later, you're in a full work conversation. Your weekend has been interrupted. This is now normal --- but should it be?
           </p>
           <p className="mb-6">
-            The "right to disconnect" is a growing global movement asserting that workers have a fundamental right to be offline and unavailable outside of working hours <Citation id="1" index={1} source="International Journal of Comparative Labour Law" year="2023" tier={1} />. Several countries have enshrined this right in law. Research overwhelmingly shows that constant connectivity to work harms mental health, relationships, and even productivity <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Here's why boundaries aren't optional — they're essential.
+            The "right to disconnect" is a growing global movement asserting that workers have a fundamental right to be offline and unavailable outside of working hours <Citation id="1" index={1} source="International Journal of Comparative Labour Law" year="2023" tier={1} />. Several countries have enshrined this right in law. Research overwhelmingly shows that constant connectivity to work harms mental health, relationships, and even productivity <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Here's why boundaries aren't optional --- they're essential.
           </p>
         </div>
 
@@ -746,7 +746,7 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Prevents Psychological Recovery',
               content: (
                 <div className="space-y-3">
-                  <p>Your brain needs time to recover from work stress. Recovery happens when you psychologically detach — stop thinking about work, stop monitoring work communications <Citation id="6" index={6} source="Annual Review of Organizational Psychology" year="2023" tier={1} />.</p>
+                  <p>Your brain needs time to recover from work stress. Recovery happens when you psychologically detach --- stop thinking about work, stop monitoring work communications <Citation id="6" index={6} source="Annual Review of Organizational Psychology" year="2023" tier={1} />.</p>
                   <p>When you're "always on, ' you never fully detach. Even if you're not actively working, knowing you <em>might</em> be contacted keeps your stress response partially activated. This prevents true rest and recovery.</p>
                   <p>Over time, insufficient recovery leads to chronic fatigue, burnout, and mental health problems.</p>
                 </div>
@@ -757,7 +757,7 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Erodes Work-Life Boundaries',
               content: (
                 <div className="space-y-3">
-                  <p>When work can intrude at any time, there's no "safe" personal time. Dinner with family, exercise, relaxation — all can be interrupted <Citation id="5" index={5} source="Journal of Applied Psychology" year="2022" tier={1} />.</p>
+                  <p>When work can intrude at any time, there's no "safe" personal time. Dinner with family, exercise, relaxation --- all can be interrupted <Citation id="5" index={5} source="Journal of Applied Psychology" year="2022" tier={1} />.</p>
                   <p>This creates work-life conflict: the feeling that work and personal life are constantly competing and interfering with each other. Research links this to decreased life satisfaction, relationship strain, and parental guilt.</p>
                 </div>
               ),
@@ -793,7 +793,7 @@ export const digitalWellnessArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>Research consistently shows that inability to disconnect from work is one of the strongest predictors of burnout <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />.</p>
-                  <p>Burnout isn't just fatigue — it's emotional exhaustion, cynicism, and reduced professional efficacy. It requires recovery time, which constant connectivity prevents.</p>
+                  <p>Burnout isn't just fatigue --- it's emotional exhaustion, cynicism, and reduced professional efficacy. It requires recovery time, which constant connectivity prevents.</p>
                 </div>
               ),
             },
@@ -919,7 +919,7 @@ export const digitalWellnessArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>Remember:</strong> You are not a machine. Rest, recovery, and personal time aren't luxuries — they're biological and psychological necessities. The right to disconnect isn't about being lazy or uncommitted. It's about being human.
+          <strong>Remember:</strong> You are not a machine. Rest, recovery, and personal time aren't luxuries --- they're biological and psychological necessities. The right to disconnect isn't about being lazy or uncommitted. It's about being human.
         </p>
       </>
     ),
@@ -1018,7 +1018,7 @@ export const digitalWellnessArticlesA: Article[] = [
           Understanding Attention: What We've Lost
         </h2>
         <p className="mb-6">
-          Attention isn't a single thing — it's a system with different components:
+          Attention isn't a single thing --- it's a system with different components:
         </p>
 
         <ArticleAccordion
@@ -1060,7 +1060,7 @@ export const digitalWellnessArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>The ability to direct your attention deliberately, resist impulses, and stay on task despite temptation.</p>
-                  <p><strong>What's happened:</strong> Platforms are designed to capture attention — notifications, infinite scroll, autoplay. Your executive control is constantly battling engineered distraction. It's exhausting and often losing.</p>
+                  <p><strong>What's happened:</strong> Platforms are designed to capture attention --- notifications, infinite scroll, autoplay. Your executive control is constantly battling engineered distraction. It's exhausting and often losing.</p>
                 </div>
               ),
             },
@@ -1150,7 +1150,7 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Step 6: Build Gradually',
               description: (
                 <div className="space-y-2">
-                  <p>Attention is like a muscle — you can't go from atrophied to strong overnight:</p>
+                  <p>Attention is like a muscle --- you can't go from atrophied to strong overnight:</p>
                   <ul className="list-disc pl-5 space-y-1 mt-2">
                     <li>Week 1-2: Aim for 25-minute focused sessions</li>
                     <li>Week 3-4: Extend to 45-minute sessions</li>
@@ -1164,7 +1164,7 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Step 7: Schedule Distraction Time',
               description: (
                 <div className="space-y-2">
-                  <p>Don't try to eliminate all distraction — just contain it:</p>
+                  <p>Don't try to eliminate all distraction --- just contain it:</p>
                   <ul className="list-disc pl-5 space-y-1 mt-2">
                     <li>Designate specific times for email, social media, news (e.g., 12-12:30 PM, 5-5:30 PM)</li>
                     <li>Outside those times, don't check. When you feel the urge, note it and return to your task.</li>
@@ -1188,7 +1188,7 @@ export const digitalWellnessArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p><strong>Obstacle:</strong> "I get bored easily. I need stimulation."</p>
-                  <p><strong>Solution:</strong> Boredom tolerance is crucial for deep work. When you feel bored, resist the urge to switch tasks. Sit with it. Notice it. Often, if you push through the first 5-10 minutes of boredom, you enter flow. Your brain has been trained to expect constant novelty — you're retraining it.</p>
+                  <p><strong>Solution:</strong> Boredom tolerance is crucial for deep work. When you feel bored, resist the urge to switch tasks. Sit with it. Notice it. Often, if you push through the first 5-10 minutes of boredom, you enter flow. Your brain has been trained to expect constant novelty --- you're retraining it.</p>
                 </div>
               ),
             },
@@ -1208,7 +1208,7 @@ export const digitalWellnessArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p><strong>Obstacle:</strong> "My job requires constant availability."</p>
-                  <p><strong>Solution:</strong> Very few jobs truly require instant responses. Negotiate focus time with your manager. Use status indicators ("In deep work — will respond by 2 PM"). Batch communications. Most interruptions are habitual, not necessary.</p>
+                  <p><strong>Solution:</strong> Very few jobs truly require instant responses. Negotiate focus time with your manager. Use status indicators ("In deep work --- will respond by 2 PM"). Batch communications. Most interruptions are habitual, not necessary.</p>
                 </div>
               ),
             },
@@ -1229,7 +1229,7 @@ export const digitalWellnessArticlesA: Article[] = [
           When Difficulty Focusing Is More Than Distraction
         </h2>
         <p className="mb-6">
-          If you've consistently struggled with attention your entire life — not just since smartphones — you may have ADHD or another attention-related condition <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />. Signs include:
+          If you've consistently struggled with attention your entire life --- not just since smartphones --- you may have ADHD or another attention-related condition <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />. Signs include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Chronic difficulty sustaining attention even in low-distraction environments</li>
@@ -1243,7 +1243,7 @@ export const digitalWellnessArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Attention is not a fixed trait. It's a skill that can be developed, strengthened, and protected. In a world designed to fracture your focus, reclaiming your attention is an act of resistance — and self-care.</p>
+          <p>Attention is not a fixed trait. It's a skill that can be developed, strengthened, and protected. In a world designed to fracture your focus, reclaiming your attention is an act of resistance --- and self-care.</p>
         </ArticleCallout>
       </>
     ),
@@ -1322,7 +1322,7 @@ export const digitalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After hours of staring at screens, your eyes are strained, your mind is scattered, and your body feels restless. Then you step outside. Within minutes, you notice a shift — your breathing slows, your shoulders relax, your thoughts clear. This isn't imagination. It's neuroscience.
+            After hours of staring at screens, your eyes are strained, your mind is scattered, and your body feels restless. Then you step outside. Within minutes, you notice a shift --- your breathing slows, your shoulders relax, your thoughts clear. This isn't imagination. It's neuroscience.
           </p>
           <p className="mb-6">
             Research consistently shows that time in nature provides a powerful antidote to the mental health effects of digital overload <Citation id="1" index={1} source="Environmental Research" year="2023" tier={1} />. From restoring depleted attention to regulating stress responses, nature offers what screens cannot: genuine psychological restoration <Citation id="2" index={2} source="Journal of Environmental Psychology" year="2023" tier={1} />. Here's why getting outside is essential digital wellness.
@@ -1375,8 +1375,8 @@ export const digitalWellnessArticlesA: Article[] = [
               title: 'Directed vs. Involuntary Attention',
               content: (
                 <div className="space-y-3">
-                  <p>Screens demand <strong>directed attention</strong> — you must actively focus, filter distractions, and exert cognitive control. This is mentally exhausting.</p>
-                  <p>Nature engages <strong>involuntary attention</strong> (also called "soft fascination") — your attention is captured effortlessly by rustling leaves, birdsong, flowing water. This allows directed attention systems to rest and restore.</p>
+                  <p>Screens demand <strong>directed attention</strong> --- you must actively focus, filter distractions, and exert cognitive control. This is mentally exhausting.</p>
+                  <p>Nature engages <strong>involuntary attention</strong> (also called "soft fascination") --- your attention is captured effortlessly by rustling leaves, birdsong, flowing water. This allows directed attention systems to rest and restore.</p>
                   <p>After as little as 20 minutes in nature, people show improved performance on attention tasks.</p>
                 </div>
               ),
@@ -1404,7 +1404,7 @@ export const digitalWellnessArticlesA: Article[] = [
           Physiological Benefits: Stress Reduction and Nervous System Regulation
         </h2>
         <p className="mb-6">
-          Nature doesn't just help your mind — it changes your body <Citation id="4" index={4} source="Frontiers in Psychology" year="2023" tier={1} />:
+          Nature doesn't just help your mind --- it changes your body <Citation id="4" index={4} source="Frontiers in Psychology" year="2023" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Lowers cortisol:</strong> The stress hormone drops measurably after 20-30 minutes in green spaces</li>
@@ -1415,7 +1415,7 @@ export const digitalWellnessArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>The Japanese practice of "forest bathing" (Shinrin-yoku) — spending time in forests — has been extensively studied. Research shows 2-hour forest walks significantly reduce stress hormones, anxiety, and depression while boosting mood and immune function <Citation id="5" index={5} source="International Journal of Environmental Research and Public Health" year="2022" tier={1} />.</p>
+          <p>The Japanese practice of "forest bathing" (Shinrin-yoku) --- spending time in forests --- has been extensively studied. Research shows 2-hour forest walks significantly reduce stress hormones, anxiety, and depression while boosting mood and immune function <Citation id="5" index={5} source="International Journal of Environmental Research and Public Health" year="2022" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="how-much-needed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1440,7 +1440,7 @@ export const digitalWellnessArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          <strong>Important:</strong> Even modest nature exposure helps. You don't need wilderness — urban parks, tree-lined streets, and gardens provide measurable benefits.
+          <strong>Important:</strong> Even modest nature exposure helps. You don't need wilderness --- urban parks, tree-lined streets, and gardens provide measurable benefits.
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1483,7 +1483,7 @@ export const digitalWellnessArticlesA: Article[] = [
             {
               title: 'Weekend Nature Immersion',
               description: (
-                <p>Spend at least one weekend morning or afternoon in a larger green space — park, forest, beach. Aim for 1-2 hours of walking, sitting, or gentle activity.</p>
+                <p>Spend at least one weekend morning or afternoon in a larger green space --- park, forest, beach. Aim for 1-2 hours of walking, sitting, or gentle activity.</p>
               ),
             },
             {
@@ -1510,7 +1510,7 @@ export const digitalWellnessArticlesA: Article[] = [
           <li><strong>"I live in a city with no green space":</strong> Even small patches help. Tree-lined streets, community gardens, rooftop gardens, potted plants on a balcony all provide some benefit. Seek out what's available, even if it's not pristine wilderness.</li>
           <li><strong>"I don't have time':</strong> You have time to scroll social media. Reallocate 20 minutes from screen time to nature time. It's a trade worth making.</li>
           <li><strong>"I don't like being outside':</strong> Start small. Five minutes sitting on a porch. Work up gradually. The benefits often shift perception over time.</li>
-          <li><strong>"Weather is bad":</strong> Dress appropriately. Rain walks, snow walks, and cloudy-day walks all provide nature benefits. Exception: extreme heat/cold or dangerous conditions — use indoor nature substitutes.</li>
+          <li><strong>"Weather is bad":</strong> Dress appropriately. Rain walks, snow walks, and cloudy-day walks all provide nature benefits. Exception: extreme heat/cold or dangerous conditions --- use indoor nature substitutes.</li>
         </ul>
 
         <h2 id="nature-screens-balance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1526,7 +1526,7 @@ export const digitalWellnessArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Nature isn't a luxury or a "nice-to-have." It's a biological necessity for mental health, especially in a screen-saturated world. Prioritize it the same way you prioritize sleep, nutrition, and exercise — because it's that fundamental <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />.</p>
+          <p>Nature isn't a luxury or a "nice-to-have." It's a biological necessity for mental health, especially in a screen-saturated world. Prioritize it the same way you prioritize sleep, nutrition, and exercise --- because it's that fundamental <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />.</p>
         </ArticleCallout>
       </>
     ),

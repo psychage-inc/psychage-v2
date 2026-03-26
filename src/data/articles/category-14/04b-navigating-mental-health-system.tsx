@@ -96,7 +96,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
             You know you need help, but who should you call? A psychiatrist? Psychologist? Therapist? Counselor? The alphabet soup of mental health credentials can feel overwhelming when all you want is someone who can actually help.
           </p>
           <p className="mb-6">
-            The mental health field includes many different types of professionals, each with distinct training, capabilities, and approaches <Citation id="1" index={1} source="APA" year="2023" tier={3} />. Understanding these differences can help you find the right match for your needs—and avoid frustration along the way.
+            The mental health field includes many different types of professionals, each with distinct training, capabilities, and approaches <Citation id="1" index={1} source="APA" year="2023" tier={3} />. Understanding these differences can help you find the right match for your needs---and avoid frustration along the way.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           The Power of Team-Based Care
         </h2>
         <p className="mb-6">
-          You don't have to choose just one provider type. Many people benefit from collaborative care—for example, seeing a psychiatrist or nurse practitioner for medication management while working with a therapist for weekly counseling <Citation id="5" index={5} source="JAMA Psychiatry" year="2023" tier={1} />.
+          You don't have to choose just one provider type. Many people benefit from collaborative care---for example, seeing a psychiatrist or nurse practitioner for medication management while working with a therapist for weekly counseling <Citation id="5" index={5} source="JAMA Psychiatry" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           This approach combines the strengths of different professionals: the medication expertise of prescribers with the deeper therapeutic work that happens in regular talk therapy sessions <Citation id="3" index={3} source="American Counseling Association" year="2023" tier={3} />.
@@ -170,7 +170,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           <li><strong>What's my primary goal?</strong> Processing trauma, changing thought patterns, improving relationships, or managing symptoms? This helps narrow provider specialties.</li>
         </ul>
         <p className="mb-6">
-          Then check credentials, availability, insurance acceptance, and—most importantly—whether you feel comfortable with them in an initial consultation <Citation id="4" index={4} source="Clinical Social Work Journal" year="2021" tier={1} />.
+          Then check credentials, availability, insurance acceptance, and---most importantly---whether you feel comfortable with them in an initial consultation <Citation id="4" index={4} source="Clinical Social Work Journal" year="2021" tier={1} />.
         </p>
       </>
     ),
@@ -279,7 +279,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           A 2023 systematic review found that while app-based interventions can be effective for mild-to-moderate depression and anxiety, the majority of popular apps lack peer-reviewed research <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />. Many apps make health claims based on user testimonials rather than rigorous clinical trials.
         </p>
         <p className="mb-6">
-          The difference between a <strong>digital therapeutic</strong> (FDA-regulated, clinically validated) and a <strong>wellness app</strong> (unregulated, minimal evidence) is enormous—yet both appear side-by-side in app stores with similar marketing claims <Citation id="7" index={7} source="npj Digital Medicine" year="2023" tier={1} />.
+          The difference between a <strong>digital therapeutic</strong> (FDA-regulated, clinically validated) and a <strong>wellness app</strong> (unregulated, minimal evidence) is enormous---yet both appear side-by-side in app stores with similar marketing claims <Citation id="7" index={7} source="npj Digital Medicine" year="2023" tier={1} />.
         </p>
 
         <ArticleCallout variant="warning" title="Privacy Red Flag">
@@ -473,7 +473,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You walked into your appointment with vague symptoms and walked out with a diagnosis. Maybe you felt relief—finally, a name for what you've been experiencing. Or maybe you felt overwhelmed, reduced to a label, unsure what it means for your future.
+            You walked into your appointment with vague symptoms and walked out with a diagnosis. Maybe you felt relief---finally, a name for what you've been experiencing. Or maybe you felt overwhelmed, reduced to a label, unsure what it means for your future.
           </p>
           <p className="mb-6">
             Receiving a mental health diagnosis is rarely simple. It can be clarifying and confusing, validating and stigmatizing, all at once <Citation id="2" index={2} source="BMC Psychiatry" year="2022" tier={1} />. This guide will help you understand what your diagnosis actually means and what to do next.
@@ -484,7 +484,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           What a Diagnosis Actually Is (and Isn't)
         </h2>
         <p className="mb-6">
-          A mental health diagnosis is a <strong>clinical shorthand</strong>—a way for professionals to communicate about a cluster of symptoms that tend to occur together and respond to similar treatments <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. It's not:
+          A mental health diagnosis is a <strong>clinical shorthand</strong>---a way for professionals to communicate about a cluster of symptoms that tend to occur together and respond to similar treatments <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. It's not:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>A permanent label or identity</li>
@@ -498,7 +498,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note" title="Understanding Diagnostic Criteria">
-          <p>Most mental health diagnoses require that symptoms: (1) cause significant distress or impairment, (2) persist for a specific duration, and (3) aren't better explained by another condition or substance use. This is why diagnosis involves more than just "checking boxes"—context and clinical judgment matter.</p>
+          <p>Most mental health diagnoses require that symptoms: (1) cause significant distress or impairment, (2) persist for a specific duration, and (3) aren't better explained by another condition or substance use. This is why diagnosis involves more than just "checking boxes"---context and clinical judgment matter.</p>
         </ArticleCallout>
 
         <h2 id="benefits-and-limitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -571,7 +571,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
             {
               title: 'Decide who to tell (and when)',
               description: (
-                <p>You're not required to disclose your diagnosis to anyone except in specific contexts (like if seeking workplace accommodations). Tell trusted people on your own timeline. You can share the diagnosis, the symptoms, or just that you're 'working on some health stuff"—your choice.</p>
+                <p>You're not required to disclose your diagnosis to anyone except in specific contexts (like if seeking workplace accommodations). Tell trusted people on your own timeline. You can share the diagnosis, the symptoms, or just that you're 'working on some health stuff"---your choice.</p>
               ),
             },
             {
@@ -587,14 +587,14 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           When Diagnoses Change
         </h2>
         <p className="mb-6">
-          It's not uncommon for diagnoses to be revised as providers learn more about your symptoms over time. What initially looked like depression might later be recognized as bipolar disorder. What seemed like ADHD might actually be anxiety. This doesn't mean the original diagnosis was 'wrong"—mental health presentations can evolve, and symptoms can overlap significantly <Citation id="4" index={4} source="Annual Review of Clinical Psychology" year="2022" tier={1} />.
+          It's not uncommon for diagnoses to be revised as providers learn more about your symptoms over time. What initially looked like depression might later be recognized as bipolar disorder. What seemed like ADHD might actually be anxiety. This doesn't mean the original diagnosis was 'wrong"---mental health presentations can evolve, and symptoms can overlap significantly <Citation id="4" index={4} source="Annual Review of Clinical Psychology" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
           If your diagnosis changes, go through the same process: ask questions, research the new diagnosis, and adjust your treatment plan accordingly.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>A diagnosis is a tool, not a verdict. It should help you access treatment and understand your experiences—but it doesn't define your worth, limit your potential, or predict your future. You are more than any diagnosis.</p>
+          <p>A diagnosis is a tool, not a verdict. It should help you access treatment and understand your experiences---but it doesn't define your worth, limit your potential, or predict your future. You are more than any diagnosis.</p>
         </ArticleCallout>
       </>
     ),
@@ -684,7 +684,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
             Every time you see a therapist, psychiatrist, or mental health professional, notes go into your medical record. But what's actually written in there? Who can read it? And what rights do you have over your own mental health information?
           </p>
           <p className="mb-6">
-            Mental health records carry special privacy protections—but those protections have limits. Understanding what's in your file, who has access, and how to protect your privacy can help you navigate treatment with more confidence <Citation id="1" index={1} source="HHS" year="2023" tier={2} />.
+            Mental health records carry special privacy protections---but those protections have limits. Understanding what's in your file, who has access, and how to protect your privacy can help you navigate treatment with more confidence <Citation id="1" index={1} source="HHS" year="2023" tier={2} />.
           </p>
         </div>
 
@@ -708,7 +708,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note" title="Psychotherapy Notes vs Medical Records">
-          <p>Psychotherapy notes are your therapist's private process notes—not part of your official medical record. These notes can't be accessed by insurance companies, other doctors, or even you without specific consent. The clinical summary in your medical record is different and more accessible <Citation id="4" index={4} source="APA" year="2023" tier={3} />.</p>
+          <p>Psychotherapy notes are your therapist's private process notes---not part of your official medical record. These notes can't be accessed by insurance companies, other doctors, or even you without specific consent. The clinical summary in your medical record is different and more accessible <Citation id="4" index={4} source="APA" year="2023" tier={3} />.</p>
         </ArticleCallout>
 
         <h2 id="hipaa-protections" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -742,7 +742,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           <li><strong>Public health authorities</strong>: For disease reporting or safety investigations</li>
         </ul>
         <p className="mb-6">
-          Your records <strong>cannot</strong> be shared with employers, family members, friends, or other providers without your written authorization—with the exceptions noted above <Citation id="3" index={3} source="EEOC" year="2023" tier={2} />.
+          Your records <strong>cannot</strong> be shared with employers, family members, friends, or other providers without your written authorization---with the exceptions noted above <Citation id="3" index={3} source="EEOC" year="2023" tier={2} />.
         </p>
 
         <ArticleCallout variant="warning" title="Digital Privacy Concerns">
@@ -761,7 +761,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           <li><strong>Request a copy of your records</strong> periodically to see what's documented and ensure accuracy <Citation id="5" index={5} source="Psychiatric Services" year="2022" tier={1} />.</li>
           <li><strong>Understand confidentiality limits</strong> upfront. Ask your therapist to explain when they would be required to break confidentiality.</li>
           <li><strong>Be strategic about what you disclose</strong> if you're concerned about records. You can receive effective treatment while keeping the most sensitive details in psychotherapy notes rather than the medical record.</li>
-          <li><strong>Use caution with mental health apps</strong> that aren't HIPAA-compliant—they may share or sell your data without the same protections as medical providers.</li>
+          <li><strong>Use caution with mental health apps</strong> that aren't HIPAA-compliant---they may share or sell your data without the same protections as medical providers.</li>
         </ul>
 
         <h2 id="viewing-your-records" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -775,11 +775,11 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           <li>Specify which records you want (date ranges, specific providers, etc.)</li>
           <li>Expect a response within 30 days (some states require faster turnaround)</li>
           <li>You may be charged reasonable copying fees</li>
-          <li>In rare cases, a provider may deny access if they believe seeing the records could cause you serious harm—but you can request an independent review of that decision <Citation id="1" index={1} source="HHS" year="2023" tier={2} /></li>
+          <li>In rare cases, a provider may deny access if they believe seeing the records could cause you serious harm---but you can request an independent review of that decision <Citation id="1" index={1} source="HHS" year="2023" tier={2} /></li>
         </ol>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Your mental health records belong to you. While providers create and maintain them, you have the right to know what's in them, who can see them, and how they're used. Don't be afraid to ask questions or advocate for your privacy—it's part of being an informed patient.</p>
+          <p>Your mental health records belong to you. While providers create and maintain them, you have the right to know what's in them, who can see them, and how they're used. Don't be afraid to ask questions or advocate for your privacy---it's part of being an informed patient.</p>
         </ArticleCallout>
       </>
     ),
@@ -877,7 +877,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
             You sit in the therapist's office, nodding along even though the treatment plan doesn't feel right. The psychiatrist rushes through your appointment, barely making eye contact. Your insurance denies coverage, and you don't know where to turn. Sound familiar?
           </p>
           <p className="mb-6">
-            Navigating the mental health system requires more than just showing up to appointments—it requires advocacy. Research shows that patients who actively participate in their treatment decisions experience better outcomes and greater satisfaction with care <Citation id="4" index={4} source="Psychiatric Services" year="2022" tier={1} />. Here's how to advocate for yourself effectively.
+            Navigating the mental health system requires more than just showing up to appointments---it requires advocacy. Research shows that patients who actively participate in their treatment decisions experience better outcomes and greater satisfaction with care <Citation id="4" index={4} source="Psychiatric Services" year="2022" tier={1} />. Here's how to advocate for yourself effectively.
           </p>
         </div>
 
@@ -892,7 +892,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="The patient who is actively engaged in their care is not a difficult patient—they are an informed partner. We need to create systems that encourage rather than discourage self-advocacy."
+          quote="The patient who is actively engaged in their care is not a difficult patient---they are an informed partner. We need to create systems that encourage rather than discourage self-advocacy."
           attribution="Dr. Lisa Dixon"
           role="Professor of Psychiatry"
           source="Shared Decision-Making in Mental Health Treatment, 2023"
@@ -939,7 +939,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
             {
               title: 'Ask for clarification',
               description: (
-                <p>If your provider uses jargon, interrupt and ask for plain language. Good providers appreciate clarification requests—it ensures you truly understand your treatment. Try: 'Can you explain that in everyday terms?" or "What does that diagnosis mean for my daily life?"</p>
+                <p>If your provider uses jargon, interrupt and ask for plain language. Good providers appreciate clarification requests---it ensures you truly understand your treatment. Try: 'Can you explain that in everyday terms?" or "What does that diagnosis mean for my daily life?"</p>
               ),
             },
             {
@@ -957,7 +957,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="When treatment isn't working">
           <p className="mb-2"><strong>What to say</strong>: "I've been following the treatment plan for [X weeks/months], but I'm not seeing improvement in [specific symptoms]. Can we discuss alternative approaches or adjustments?"</p>
-          <p className="mb-2"><strong>Why this works</strong>: You're providing specific information (duration, lack of progress) while remaining open to collaboration. You're not blaming or demanding—you're problem-solving together <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />.</p>
+          <p className="mb-2"><strong>Why this works</strong>: You're providing specific information (duration, lack of progress) while remaining open to collaboration. You're not blaming or demanding---you're problem-solving together <Citation id="3" index={3} source="JAMA Psychiatry" year="2023" tier={1} />.</p>
         </ArticleCallout>
 
         <ArticleCallout variant="tip" title="When you disagree with a diagnosis">
@@ -979,7 +979,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
           Navigating Systemic Barriers
         </h2>
         <p className="mb-6">
-          Sometimes the problem isn't your provider—it's the system. When facing systemic barriers:
+          Sometimes the problem isn't your provider---it's the system. When facing systemic barriers:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Insurance denials</strong>: Request a written explanation, understand your appeal rights under the Mental Health Parity Act <Citation id="7" index={7} source="U.S. Department of Labor" year="2023" tier={2} />, and ask your provider to submit a letter of medical necessity.</li>
@@ -1003,7 +1003,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
         </ol>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Self-advocacy isn't about being aggressive or difficult—it's about being informed, prepared, and willing to speak up for your needs. The mental health system can be frustrating and complex, but you have more power than you think. Use it.</p>
+          <p>Self-advocacy isn't about being aggressive or difficult---it's about being informed, prepared, and willing to speak up for your needs. The mental health system can be frustrating and complex, but you have more power than you think. Use it.</p>
         </ArticleCallout>
       </>
     ),

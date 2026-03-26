@@ -13,6 +13,12 @@ export { MythVsFactBlock } from './MythVsFactBlock';
 export { RelatedToolsBlock } from './RelatedToolsBlock';
 export { DiagramBlock } from './DiagramBlock';
 
+// Re-export components from parent article directory for backward compatibility
+export { default as KeyFacts } from '../KeyFacts';
+export { default as SummaryBox } from '../SummaryBox';
+export { default as PracticalExercise } from '../PracticalExercise';
+export { default as SparkMoment } from '../SparkMoment';
+
 // Types
 export type { CalloutVariant, ArticleCalloutProps } from './ArticleCallout';
 export type { ChartType, ChartDataPoint, ArticleChartProps } from './ArticleChart';
@@ -27,3 +33,6 @@ export type { BeforeAfterPanel, BeforeAfterProps } from './BeforeAfter';
 export type { MythVsFactBlockProps } from './MythVsFactBlock';
 export type { RelatedToolsBlockProps, RelatedTool } from './RelatedToolsBlock';
 export type { DiagramBlockProps, DiagramType, DiagramNode, DiagramConnection } from './DiagramBlock';
+
+// Re-exported types from parent article directory
+export type { KeyFact } from '../KeyFacts';

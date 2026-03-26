@@ -96,7 +96,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Despite promotions, accomplishments, and external validation, many high-achieving professionals feel like frauds—convinced they've somehow fooled everyone and will eventually be exposed as incompetent. This imposter phenomenon affects up to 70% of people at some point, particularly during transitions or new challenges.
+            Despite promotions, accomplishments, and external validation, many high-achieving professionals feel like frauds---convinced they've somehow fooled everyone and will eventually be exposed as incompetent. This imposter phenomenon affects up to 70% of people at some point, particularly during transitions or new challenges.
           </p>
           <p className="mb-6">
             First identified by psychologists Clance and Imes in 1978 <Citation id="1" index={1} source="International Journal of Behavioral Science" year="1978" tier={1} />, imposter phenomenon describes the persistent internal experience of fraudulence despite objective evidence of competence. It's not a clinical disorder, but it significantly impacts mental health, career progression, and workplace satisfaction <Citation id="2" index={2} source="Journal of General Internal Medicine" year="2020" tier={2} />.
@@ -111,12 +111,12 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Attributing success to luck</strong> — "I just got lucky" rather than recognizing skill</li>
-          <li><strong>Fear of exposure</strong> — persistent anxiety that people will discover you're not as competent as they think</li>
-          <li><strong>Discounting praise</strong> — "They're just being nice' when receiving compliments</li>
-          <li><strong>Overworking</strong> — extreme preparation to prevent "being found out"</li>
-          <li><strong>Perfectionism</strong> — unrealistic standards to prove you deserve your position</li>
-          <li><strong>Avoiding challenges</strong> — declining opportunities for fear of revealing incompetence</li>
+          <li><strong>Attributing success to luck</strong> --- "I just got lucky" rather than recognizing skill</li>
+          <li><strong>Fear of exposure</strong> --- persistent anxiety that people will discover you're not as competent as they think</li>
+          <li><strong>Discounting praise</strong> --- "They're just being nice' when receiving compliments</li>
+          <li><strong>Overworking</strong> --- extreme preparation to prevent "being found out"</li>
+          <li><strong>Perfectionism</strong> --- unrealistic standards to prove you deserve your position</li>
+          <li><strong>Avoiding challenges</strong> --- declining opportunities for fear of revealing incompetence</li>
         </ul>
 
         <StatCard
@@ -148,7 +148,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>People with imposter feelings attribute success externally (luck, circumstances) and failure internally (personal inadequacy). Reversing this pattern—recognizing skill in success and learning in failure—reduces imposter thoughts.</p>
+          <p>People with imposter feelings attribute success externally (luck, circumstances) and failure internally (personal inadequacy). Reversing this pattern---recognizing skill in success and learning in failure---reduces imposter thoughts.</p>
         </ArticleCallout>
 
         <h2 id="who" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -159,16 +159,16 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>High achievers and perfectionists</strong> — success raises the bar rather than building confidence</li>
-          <li><strong>First-generation professionals</strong> — no family model for navigating professional environments</li>
-          <li><strong>Women in male-dominated fields</strong> — chronic "only one" status reinforces not-belonging</li>
-          <li><strong>People of color in predominantly white workplaces</strong> — stereotype threat amplifies self-doubt</li>
-          <li><strong>Career changers or promotions</strong> — transitioning to unfamiliar territory triggers uncertainty</li>
-          <li><strong>People with early messages about not being good enough</strong> — childhood narratives persist into adulthood</li>
+          <li><strong>High achievers and perfectionists</strong> --- success raises the bar rather than building confidence</li>
+          <li><strong>First-generation professionals</strong> --- no family model for navigating professional environments</li>
+          <li><strong>Women in male-dominated fields</strong> --- chronic "only one" status reinforces not-belonging</li>
+          <li><strong>People of color in predominantly white workplaces</strong> --- stereotype threat amplifies self-doubt</li>
+          <li><strong>Career changers or promotions</strong> --- transitioning to unfamiliar territory triggers uncertainty</li>
+          <li><strong>People with early messages about not being good enough</strong> --- childhood narratives persist into adulthood</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>Imposter feelings aren't always internal psychological issues—they're often rational responses to actual exclusion, bias, or hostile environments. Addressing the environment (increasing representation, challenging stereotypes) matters as much as individual coping strategies.</p>
+          <p>Imposter feelings aren't always internal psychological issues---they're often rational responses to actual exclusion, bias, or hostile environments. Addressing the environment (increasing representation, challenging stereotypes) matters as much as individual coping strategies.</p>
         </ArticleCallout>
 
         <h2 id="costs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -179,11 +179,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Anxiety and depression</strong> — constant self-doubt and fear of exposure</li>
-          <li><strong>Burnout</strong> — overworking to compensate for perceived inadequacy</li>
-          <li><strong>Career stagnation</strong> — avoiding promotions or new opportunities</li>
-          <li><strong>Reduced job satisfaction</strong> — difficulty enjoying accomplishments</li>
-          <li><strong>Lower salary negotiation</strong> — feeling undeserving of fair compensation</li>
+          <li><strong>Anxiety and depression</strong> --- constant self-doubt and fear of exposure</li>
+          <li><strong>Burnout</strong> --- overworking to compensate for perceived inadequacy</li>
+          <li><strong>Career stagnation</strong> --- avoiding promotions or new opportunities</li>
+          <li><strong>Reduced job satisfaction</strong> --- difficulty enjoying accomplishments</li>
+          <li><strong>Lower salary negotiation</strong> --- feeling undeserving of fair compensation</li>
         </ul>
 
         <ArticleChart
@@ -211,7 +211,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
             },
             {
               title: 'Collect objective evidence',
-              description: <p>Keep a 'wins folder"—emails praising your work, project successes, positive evaluations. Review when imposter thoughts spike to counteract subjective fraudulence feelings with objective data <Citation id="4" index={4} source="Journal of Counseling Psychology" year="2021" tier={1} />.</p>,
+              description: <p>Keep a 'wins folder"---emails praising your work, project successes, positive evaluations. Review when imposter thoughts spike to counteract subjective fraudulence feelings with objective data <Citation id="4" index={4} source="Journal of Counseling Psychology" year="2021" tier={1} />.</p>,
             },
             {
               title: 'Share feelings strategically',
@@ -236,10 +236,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Find your people</strong> — affinity groups, mentors, communities where you're not "the only one"</li>
-          <li><strong>Contribute visibly</strong> — share knowledge, help colleagues, participate in meetings; active contribution builds belonging</li>
-          <li><strong>Challenge imposter-reinforcing environments</strong> — workplaces that pit people against each other or celebrate overwork exacerbate imposter feelings</li>
-          <li><strong>Seek representation</strong> — seeing people like you in senior roles provides evidence that you belong</li>
+          <li><strong>Find your people</strong> --- affinity groups, mentors, communities where you're not "the only one"</li>
+          <li><strong>Contribute visibly</strong> --- share knowledge, help colleagues, participate in meetings; active contribution builds belonging</li>
+          <li><strong>Challenge imposter-reinforcing environments</strong> --- workplaces that pit people against each other or celebrate overwork exacerbate imposter feelings</li>
+          <li><strong>Seek representation</strong> --- seeing people like you in senior roles provides evidence that you belong</li>
         </ul>
 
         <QuoteBlock
@@ -257,8 +257,8 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Anxiety disorders</strong> — generalized anxiety or social anxiety disorder</li>
-          <li><strong>Depression</strong> — low self-worth independent of competence feedback</li>
+          <li><strong>Anxiety disorders</strong> --- generalized anxiety or social anxiety disorder</li>
+          <li><strong>Depression</strong> --- low self-worth independent of competence feedback</li>
           <li><strong>Perfectionism with self-critical patterns</strong></li>
           <li><strong>History of invalidating or hyper-critical environments</strong></li>
         </ul>
@@ -275,11 +275,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Normalize struggle and learning</strong> — leaders sharing their own challenges and uncertainties</li>
-          <li><strong>Provide clear feedback</strong> — specific, frequent feedback reduces uncertainty about performance</li>
-          <li><strong>Celebrate process, not just outcomes</strong> — recognizing effort and learning, not only flawless execution</li>
-          <li><strong>Increase representation</strong> — diverse leadership reduces "only one" phenomenon</li>
-          <li><strong>Challenge toxic competitiveness</strong> — zero-sum environments amplify imposter feelings</li>
+          <li><strong>Normalize struggle and learning</strong> --- leaders sharing their own challenges and uncertainties</li>
+          <li><strong>Provide clear feedback</strong> --- specific, frequent feedback reduces uncertainty about performance</li>
+          <li><strong>Celebrate process, not just outcomes</strong> --- recognizing effort and learning, not only flawless execution</li>
+          <li><strong>Increase representation</strong> --- diverse leadership reduces "only one" phenomenon</li>
+          <li><strong>Challenge toxic competitiveness</strong> --- zero-sum environments amplify imposter feelings</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -373,7 +373,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Feedback—information about performance that enables adjustment—is essential for growth. Yet both giving and receiving it triggers anxiety: fear of hurting feelings, damaging relationships, or discovering you're inadequate. These emotional barriers prevent the very learning feedback enables.
+            Feedback---information about performance that enables adjustment---is essential for growth. Yet both giving and receiving it triggers anxiety: fear of hurting feelings, damaging relationships, or discovering you're inadequate. These emotional barriers prevent the very learning feedback enables.
           </p>
           <p className="mb-6">
             Research demonstrates that feedback's effectiveness depends more on how it's delivered and received than its content <Citation id="1" index={1} source="Psychological Bulletin" year="1996" tier={1} />. Understanding the psychology of feedback helps you navigate these conversations productively despite emotional activation.
@@ -384,14 +384,14 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           Why Feedback Triggers Anxiety
         </h2>
         <p className="mb-6">
-          Feedback activates threat responses for evolutionary reasons—social rejection historically meant survival risk <Citation id="2" index={2} source="Journal of Applied Psychology" year="2021" tier={1} />. Modern brains still respond to criticism as threat:
+          Feedback activates threat responses for evolutionary reasons---social rejection historically meant survival risk <Citation id="2" index={2} source="Journal of Applied Psychology" year="2021" tier={1} />. Modern brains still respond to criticism as threat:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Identity threat</strong> — feedback challenges self-perception ("I'm competent")</li>
-          <li><strong>Relationship threat</strong> — fear that criticism means rejection or damaged connection</li>
-          <li><strong>Status threat</strong> — concern about losing standing or respect</li>
-          <li><strong>Uncertainty</strong> — not knowing what feedback will reveal or require</li>
+          <li><strong>Identity threat</strong> --- feedback challenges self-perception ("I'm competent")</li>
+          <li><strong>Relationship threat</strong> --- fear that criticism means rejection or damaged connection</li>
+          <li><strong>Status threat</strong> --- concern about losing standing or respect</li>
+          <li><strong>Uncertainty</strong> --- not knowing what feedback will reveal or require</li>
         </ul>
 
         <StatCard
@@ -445,7 +445,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           Self-Compassion: The Feedback Superpower
         </h2>
         <p className="mb-6">
-          Self-compassion—treating yourself kindly during difficulty—predicts better feedback receptivity <Citation id="6" index={6} source="Self and Identity" year="2020" tier={1} />. People high in self-compassion:
+          Self-compassion---treating yourself kindly during difficulty---predicts better feedback receptivity <Citation id="6" index={6} source="Self and Identity" year="2020" tier={1} />. People high in self-compassion:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -457,7 +457,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The mechanism: self-compassion decouples performance from self-worth. Mistakes don't mean you're worthless—they mean you're human and learning. This psychological safety enables honest self-assessment without defensive distortion.
+          The mechanism: self-compassion decouples performance from self-worth. Mistakes don't mean you're worthless---they mean you're human and learning. This psychological safety enables honest self-assessment without defensive distortion.
         </p>
 
         <h2 id="giving" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -513,7 +513,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Most people default to "ruinous empathy"—caring about feelings so much that they withhold necessary truth. This protects you from discomfort but deprives others of information they need to improve.
+          Most people default to "ruinous empathy"---caring about feelings so much that they withhold necessary truth. This protects you from discomfort but deprives others of information they need to improve.
         </p>
 
         <h2 id="timing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -524,10 +524,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Timeliness</strong> — feedback loses impact with delay; give it soon after the behavior</li>
-          <li><strong>Privacy</strong> — critical feedback delivered publicly humiliates; praise publicly, criticize privately</li>
-          <li><strong>Emotional state</strong> — don't give feedback when you or the recipient is angry, overwhelmed, or highly stressed</li>
-          <li><strong>Receptivity signals</strong> — if someone seems defensive or shut down, pause: "I notice you seem frustrated. Should we continue this later?"</li>
+          <li><strong>Timeliness</strong> --- feedback loses impact with delay; give it soon after the behavior</li>
+          <li><strong>Privacy</strong> --- critical feedback delivered publicly humiliates; praise publicly, criticize privately</li>
+          <li><strong>Emotional state</strong> --- don't give feedback when you or the recipient is angry, overwhelmed, or highly stressed</li>
+          <li><strong>Receptivity signals</strong> --- if someone seems defensive or shut down, pause: "I notice you seem frustrated. Should we continue this later?"</li>
         </ul>
 
         <h2 id="cultural" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -538,9 +538,9 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Direct vs. indirect cultures</strong> — U.S./Germany prefer explicit feedback; Japan/China use more indirect communication</li>
-          <li><strong>Individual vs. collective</strong> — individualistic cultures (U.S., Australia) accept public recognition; collectivist cultures (China, Korea) may find it uncomfortable</li>
-          <li><strong>Power distance</strong> — low power distance cultures (Scandinavia) expect subordinates to challenge bosses; high power distance cultures (India, Mexico) may see this as disrespectful</li>
+          <li><strong>Direct vs. indirect cultures</strong> --- U.S./Germany prefer explicit feedback; Japan/China use more indirect communication</li>
+          <li><strong>Individual vs. collective</strong> --- individualistic cultures (U.S., Australia) accept public recognition; collectivist cultures (China, Korea) may find it uncomfortable</li>
+          <li><strong>Power distance</strong> --- low power distance cultures (Scandinavia) expect subordinates to challenge bosses; high power distance cultures (India, Mexico) may see this as disrespectful</li>
         </ul>
 
         <p className="mb-6">
@@ -555,14 +555,14 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Ask specific questions</strong> — "What's one thing I could do differently in meetings?" is easier to answer than "How am I doing?"</li>
-          <li><strong>Request behavioral examples</strong> — "Can you give me an example of when I did that?" makes feedback concrete</li>
-          <li><strong>Check understanding</strong> — "So you're saying I should... Is that right?" confirms you've interpreted correctly</li>
-          <li><strong>Thank people</strong> — "I appreciate you telling me that" reinforces that feedback is valued, increasing future willingness</li>
+          <li><strong>Ask specific questions</strong> --- "What's one thing I could do differently in meetings?" is easier to answer than "How am I doing?"</li>
+          <li><strong>Request behavioral examples</strong> --- "Can you give me an example of when I did that?" makes feedback concrete</li>
+          <li><strong>Check understanding</strong> --- "So you're saying I should... Is that right?" confirms you've interpreted correctly</li>
+          <li><strong>Thank people</strong> --- "I appreciate you telling me that" reinforces that feedback is valued, increasing future willingness</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The people who receive the most feedback aren't those who perform best—they're those who seek it most actively. Asking for feedback signals openness to growth and gives you information competitors lack.</p>
+          <p>The people who receive the most feedback aren't those who perform best---they're those who seek it most actively. Asking for feedback signals openness to growth and gives you information competitors lack.</p>
         </ArticleCallout>
 
         <h2 id="feedback-culture" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -573,11 +573,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Model from the top</strong> — leaders publicly seeking and acting on feedback normalize the practice</li>
-          <li><strong>Separate development from evaluation</strong> — coaching conversations shouldn't directly influence performance ratings</li>
-          <li><strong>Provide training</strong> — most people never learn how to give or receive feedback skillfully</li>
-          <li><strong>Reward feedback-seeking</strong> — recognize people who actively solicit input, not just those who perform well initially</li>
-          <li><strong>Create multiple channels</strong> — 360 reviews, peer feedback, upward feedback, regular one-on-ones</li>
+          <li><strong>Model from the top</strong> --- leaders publicly seeking and acting on feedback normalize the practice</li>
+          <li><strong>Separate development from evaluation</strong> --- coaching conversations shouldn't directly influence performance ratings</li>
+          <li><strong>Provide training</strong> --- most people never learn how to give or receive feedback skillfully</li>
+          <li><strong>Reward feedback-seeking</strong> --- recognize people who actively solicit input, not just those who perform well initially</li>
+          <li><strong>Create multiple channels</strong> --- 360 reviews, peer feedback, upward feedback, regular one-on-ones</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -671,7 +671,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            We spend more waking hours with coworkers than family or friends. It's natural that friendships form—yet workplace friendships exist in ambiguous territory between professional and personal, creating both significant benefits and potential complications.
+            We spend more waking hours with coworkers than family or friends. It's natural that friendships form---yet workplace friendships exist in ambiguous territory between professional and personal, creating both significant benefits and potential complications.
           </p>
           <p className="mb-6">
             Research consistently demonstrates that having friends at work predicts higher job satisfaction, engagement, productivity, and retention <Citation id="1" index={1} source="Journal of Management" year="2021" tier={1} />. Yet these same relationships can create conflicts of interest, boundary challenges, and painful complications if things go wrong.
@@ -695,11 +695,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         />
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Emotional support</strong> — someone who understands work stressors because they share the context</li>
-          <li><strong>Information sharing</strong> — friends share useful knowledge, advice, and organizational intelligence</li>
-          <li><strong>Motivation and accountability</strong> — mutual encouragement and commitment</li>
-          <li><strong>Reduced loneliness</strong> — workplace loneliness predicts depression, anxiety, and poor job performance <Citation id="7" index={7} source="Journal of Occupational Health Psychology" year="2021" tier={1} /></li>
-          <li><strong>Fun and enjoyment</strong> — work is more enjoyable when you genuinely like the people</li>
+          <li><strong>Emotional support</strong> --- someone who understands work stressors because they share the context</li>
+          <li><strong>Information sharing</strong> --- friends share useful knowledge, advice, and organizational intelligence</li>
+          <li><strong>Motivation and accountability</strong> --- mutual encouragement and commitment</li>
+          <li><strong>Reduced loneliness</strong> --- workplace loneliness predicts depression, anxiety, and poor job performance <Citation id="7" index={7} source="Journal of Occupational Health Psychology" year="2021" tier={1} /></li>
+          <li><strong>Fun and enjoyment</strong> --- work is more enjoyable when you genuinely like the people</li>
         </ul>
 
         <h2 id="types" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -722,7 +722,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Most workplace relationships cluster in "work friend" territory—closer than pure colleagues but not intimate friendships. That's healthy; not all work relationships need to or should become deep friendships.
+          Most workplace relationships cluster in "work friend" territory---closer than pure colleagues but not intimate friendships. That's healthy; not all work relationships need to or should become deep friendships.
         </p>
 
         <h2 id="boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -737,10 +737,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </ArticleCallout>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Set explicit boundaries early</strong> — "I don't like talking about work outside of work hours' prevents assumptions</li>
-          <li><strong>Maintain professionalism in work settings</strong> — inside jokes, excessive socializing, and visible favoritism create problems</li>
-          <li><strong>Protect confidentiality</strong> — information shared as a friend shouldn't automatically transfer to work context</li>
-          <li><strong>Address conflicts directly</strong> — "This is hard because we're friends, but professionally I need to address..."</li>
+          <li><strong>Set explicit boundaries early</strong> --- "I don't like talking about work outside of work hours' prevents assumptions</li>
+          <li><strong>Maintain professionalism in work settings</strong> --- inside jokes, excessive socializing, and visible favoritism create problems</li>
+          <li><strong>Protect confidentiality</strong> --- information shared as a friend shouldn't automatically transfer to work context</li>
+          <li><strong>Address conflicts directly</strong> --- "This is hard because we're friends, but professionally I need to address..."</li>
         </ul>
 
         <h2 id="hierarchical" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -751,10 +751,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Real favoritism</strong> — managers may unconsciously give friends better assignments, evaluations, or opportunities</li>
-          <li><strong>Perceived favoritism</strong> — even when fair, others perceive unfairness, damaging team dynamics</li>
-          <li><strong>Difficult feedback</strong> — friendship makes delivering critical feedback harder</li>
-          <li><strong>Power imbalance</strong> — subordinates may feel unable to refuse friendship or set boundaries</li>
+          <li><strong>Real favoritism</strong> --- managers may unconsciously give friends better assignments, evaluations, or opportunities</li>
+          <li><strong>Perceived favoritism</strong> --- even when fair, others perceive unfairness, damaging team dynamics</li>
+          <li><strong>Difficult feedback</strong> --- friendship makes delivering critical feedback harder</li>
+          <li><strong>Power imbalance</strong> --- subordinates may feel unable to refuse friendship or set boundaries</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -769,11 +769,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Betrayal</strong> — friend shares confidential information, takes credit for your work, or undermines you</li>
-          <li><strong>Changing roles</strong> — one person gets promoted over the other, creating power imbalance</li>
-          <li><strong>Values conflicts</strong> — discovering fundamental disagreements about work ethics or behavior</li>
-          <li><strong>Natural drift</strong> — friendship fades but you still work together daily</li>
-          <li><strong>Romantic complications</strong> — attraction or relationship attempts that damage the friendship</li>
+          <li><strong>Betrayal</strong> --- friend shares confidential information, takes credit for your work, or undermines you</li>
+          <li><strong>Changing roles</strong> --- one person gets promoted over the other, creating power imbalance</li>
+          <li><strong>Values conflicts</strong> --- discovering fundamental disagreements about work ethics or behavior</li>
+          <li><strong>Natural drift</strong> --- friendship fades but you still work together daily</li>
+          <li><strong>Romantic complications</strong> --- attraction or relationship attempts that damage the friendship</li>
         </ul>
 
         <p className="mb-6">
@@ -788,10 +788,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Fewer spontaneous interactions</strong> — no watercooler conversations, lunch, or casual desk visits</li>
-          <li><strong>Intentional effort required</strong> — friendships must be deliberately cultivated rather than emerging naturally</li>
-          <li><strong>Weaker social ties</strong> — easier to maintain existing friendships than form new ones remotely</li>
-          <li><strong>Zoom fatigue</strong> — video socializing feels more draining than in-person</li>
+          <li><strong>Fewer spontaneous interactions</strong> --- no watercooler conversations, lunch, or casual desk visits</li>
+          <li><strong>Intentional effort required</strong> --- friendships must be deliberately cultivated rather than emerging naturally</li>
+          <li><strong>Weaker social ties</strong> --- easier to maintain existing friendships than form new ones remotely</li>
+          <li><strong>Zoom fatigue</strong> --- video socializing feels more draining than in-person</li>
         </ul>
 
         <p className="mb-6">
@@ -808,7 +808,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
             {
               id: 'venting',
               title: 'Venting About Work',
-              content: <p>Some venting to work friends is normal stress relief. Excessive complaining becomes toxic and creates perception you're disengaged. Balance: acknowledge frustrations but don't let negativity dominate conversations. Never vent about the friend's direct manager or people they're close to—puts them in awkward position.</p>,
+              content: <p>Some venting to work friends is normal stress relief. Excessive complaining becomes toxic and creates perception you're disengaged. Balance: acknowledge frustrations but don't let negativity dominate conversations. Never vent about the friend's direct manager or people they're close to---puts them in awkward position.</p>,
             },
             {
               id: 'socializing',
@@ -832,7 +832,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           Assessing Your Workplace Friendships
         </h2>
         <p className="mb-6">
-          Reflect on your current work relationships: Who do you consider work friends? Do these friendships enhance or complicate your work life? Are boundaries clear and respected? Are you lonely at work, and if so, what small step could you take to build connection—eating lunch with someone, initiating a personal conversation, joining a company social group? Workplace friendships require more intentional management than pure friendships, but the benefits to both wellbeing and job satisfaction make that effort worthwhile.
+          Reflect on your current work relationships: Who do you consider work friends? Do these friendships enhance or complicate your work life? Are boundaries clear and respected? Are you lonely at work, and if so, what small step could you take to build connection---eating lunch with someone, initiating a personal conversation, joining a company social group? Workplace friendships require more intentional management than pure friendships, but the benefits to both wellbeing and job satisfaction make that effort worthwhile.
         </p>
       </>
     ),
@@ -922,7 +922,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
             Diversity, equity, and inclusion (DEI) initiatives are often framed as business imperatives or moral obligations. Less discussed but equally important: DEI is fundamentally a mental health issue. Workplaces where people feel they don't belong, face discrimination, or must hide aspects of identity exact severe psychological costs.
           </p>
           <p className="mb-6">
-            Research demonstrates that workplace discrimination and exclusion predict anxiety, depression, PTSD symptoms, substance use, and physical health problems <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Creating inclusive environments isn't optional—it's essential for employee wellbeing.
+            Research demonstrates that workplace discrimination and exclusion predict anxiety, depression, PTSD symptoms, substance use, and physical health problems <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />. Creating inclusive environments isn't optional---it's essential for employee wellbeing.
           </p>
         </div>
 
@@ -930,7 +930,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           The Mental Health Impact of Exclusion
         </h2>
         <p className="mb-6">
-          Workplace discrimination—differential treatment based on race, gender, sexuality, disability, age, or other identities—creates measurable harm <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />:
+          Workplace discrimination---differential treatment based on race, gender, sexuality, disability, age, or other identities---creates measurable harm <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />:
         </p>
 
         <StatCard
@@ -943,18 +943,18 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         />
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Chronic stress activation</strong> — hypervigilance about potential discrimination keeps stress systems activated</li>
-          <li><strong>Identity concealment</strong> — hiding aspects of yourself (sexuality, religion, mental health conditions) requires constant cognitive effort</li>
-          <li><strong>Imposter phenomenon</strong> — being "the only one" reinforces feelings of not belonging</li>
-          <li><strong>Reduced psychological safety</strong> — fear of judgment prevents speaking up, admitting mistakes, or seeking help</li>
-          <li><strong>Weathering</strong> — accumulated stress from discrimination accelerates biological aging and health decline</li>
+          <li><strong>Chronic stress activation</strong> --- hypervigilance about potential discrimination keeps stress systems activated</li>
+          <li><strong>Identity concealment</strong> --- hiding aspects of yourself (sexuality, religion, mental health conditions) requires constant cognitive effort</li>
+          <li><strong>Imposter phenomenon</strong> --- being "the only one" reinforces feelings of not belonging</li>
+          <li><strong>Reduced psychological safety</strong> --- fear of judgment prevents speaking up, admitting mistakes, or seeking help</li>
+          <li><strong>Weathering</strong> --- accumulated stress from discrimination accelerates biological aging and health decline</li>
         </ul>
 
         <h2 id="microaggressions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Microaggressions: Death by a Thousand Cuts
         </h2>
         <p className="mb-6">
-          Microaggressions—subtle, often unintentional expressions of bias—accumulate into significant mental health burden <Citation id="3" index={3} source="American Psychologist" year="2020" tier={1} />:
+          Microaggressions---subtle, often unintentional expressions of bias---accumulate into significant mental health burden <Citation id="3" index={3} source="American Psychologist" year="2020" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -971,7 +971,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Individual microaggressions may seem minor. Experiencing dozens weekly creates chronic stress comparable to overt discrimination but harder to address—perpetrators often deny intent, leaving targets feeling gaslit.
+          Individual microaggressions may seem minor. Experiencing dozens weekly creates chronic stress comparable to overt discrimination but harder to address---perpetrators often deny intent, leaving targets feeling gaslit.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -986,10 +986,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Distal stressors</strong> — objective discrimination and violence</li>
-          <li><strong>Proximal stressors</strong> — expectations of rejection, identity concealment, internalized stigma</li>
-          <li><strong>Chronic nature</strong> — these stressors don't resolve; they're ongoing conditions of living in discriminatory societies</li>
-          <li><strong>Additive burden</strong> — minority stress adds to general life stressors, compounding total stress load</li>
+          <li><strong>Distal stressors</strong> --- objective discrimination and violence</li>
+          <li><strong>Proximal stressors</strong> --- expectations of rejection, identity concealment, internalized stigma</li>
+          <li><strong>Chronic nature</strong> --- these stressors don't resolve; they're ongoing conditions of living in discriminatory societies</li>
+          <li><strong>Additive burden</strong> --- minority stress adds to general life stressors, compounding total stress load</li>
         </ul>
 
         <p className="mb-6">
@@ -1004,21 +1004,21 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Diversity</strong> — hiring people from different backgrounds (necessary but insufficient)</li>
-          <li><strong>Equity</strong> — fair treatment, access, and advancement (systems that enable all to succeed)</li>
-          <li><strong>Inclusion</strong> — people feel respected, heard, and able to contribute fully</li>
-          <li><strong>Belonging</strong> — people feel they can bring their whole selves without conforming to dominant culture norms</li>
+          <li><strong>Diversity</strong> --- hiring people from different backgrounds (necessary but insufficient)</li>
+          <li><strong>Equity</strong> --- fair treatment, access, and advancement (systems that enable all to succeed)</li>
+          <li><strong>Inclusion</strong> --- people feel respected, heard, and able to contribute fully</li>
+          <li><strong>Belonging</strong> --- people feel they can bring their whole selves without conforming to dominant culture norms</li>
         </ul>
 
         <p className="mb-6">
-          Many organizations achieve diversity without belonging—hiring diverse people but expecting them to assimilate to majority culture, keeping marginalized identities invisible, or tokenizing rather than genuinely valuing difference.
+          Many organizations achieve diversity without belonging---hiring diverse people but expecting them to assimilate to majority culture, keeping marginalized identities invisible, or tokenizing rather than genuinely valuing difference.
         </p>
 
         <h2 id="psychological-safety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Psychological Safety and Inclusion
         </h2>
         <p className="mb-6">
-          Psychological safety—feeling safe to take risks and be vulnerable—is particularly important for marginalized employees <Citation id="5" index={5} source="Academy of Management Journal" year="2021" tier={1} />:
+          Psychological safety---feeling safe to take risks and be vulnerable---is particularly important for marginalized employees <Citation id="5" index={5} source="Academy of Management Journal" year="2021" tier={1} />:
         </p>
 
         <ArticleCallout variant="tip" title="Inclusive Leadership Behaviors">
@@ -1033,19 +1033,19 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           Employee Resource Groups as Mental Health Support
         </h2>
         <p className="mb-6">
-          Employee Resource Groups (ERGs)—voluntary employee-led groups for people sharing identities—provide crucial psychological support <Citation id="7" index={7} source="Equality, Diversity and Inclusion" year="2021" tier={1} />:
+          Employee Resource Groups (ERGs)---voluntary employee-led groups for people sharing identities---provide crucial psychological support <Citation id="7" index={7} source="Equality, Diversity and Inclusion" year="2021" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Community and belonging</strong> — finding "your people" in the organization</li>
-          <li><strong>Validation</strong> — shared experiences normalize rather than pathologize reactions to discrimination</li>
-          <li><strong>Mentorship</strong> — senior members guide navigation of organizational challenges</li>
-          <li><strong>Advocacy</strong> — collective voice for systemic changes</li>
-          <li><strong>Cultural celebration</strong> — opportunities to express and share identity</li>
+          <li><strong>Community and belonging</strong> --- finding "your people" in the organization</li>
+          <li><strong>Validation</strong> --- shared experiences normalize rather than pathologize reactions to discrimination</li>
+          <li><strong>Mentorship</strong> --- senior members guide navigation of organizational challenges</li>
+          <li><strong>Advocacy</strong> --- collective voice for systemic changes</li>
+          <li><strong>Cultural celebration</strong> --- opportunities to express and share identity</li>
         </ul>
 
         <p className="mb-6">
-          Organizations should fund ERGs adequately, count ERG leadership as professional development, and implement ERG recommendations—not treat them as free diversity consulting.
+          Organizations should fund ERGs adequately, count ERG leadership as professional development, and implement ERG recommendations---not treat them as free diversity consulting.
         </p>
 
         <h2 id="intersectionality" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1074,12 +1074,12 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Name the pattern</strong> — recognizing discrimination as systemic rather than personal failing</li>
-          <li><strong>Find community</strong> — connect with others sharing your experience</li>
-          <li><strong>Document incidents</strong> — keep records of discrimination for potential formal complaints</li>
-          <li><strong>Seek support</strong> — therapy with culturally competent providers who understand marginalization</li>
-          <li><strong>Set boundaries</strong> — you're not obligated to educate every person who asks invasive questions</li>
-          <li><strong>Assess safety</strong> — chronic exclusion isn't your fault; consider whether environment will improve or if leaving protects your wellbeing</li>
+          <li><strong>Name the pattern</strong> --- recognizing discrimination as systemic rather than personal failing</li>
+          <li><strong>Find community</strong> --- connect with others sharing your experience</li>
+          <li><strong>Document incidents</strong> --- keep records of discrimination for potential formal complaints</li>
+          <li><strong>Seek support</strong> --- therapy with culturally competent providers who understand marginalization</li>
+          <li><strong>Set boundaries</strong> --- you're not obligated to educate every person who asks invasive questions</li>
+          <li><strong>Assess safety</strong> --- chronic exclusion isn't your fault; consider whether environment will improve or if leaving protects your wellbeing</li>
         </ul>
 
         <p className="mb-6">
@@ -1087,11 +1087,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Educate yourself</strong> — don't ask marginalized colleagues to teach you; seek resources independently</li>
-          <li><strong>Interrupt bias</strong> — speak up when witnessing discrimination or microaggressions</li>
-          <li><strong>Amplify marginalized voices</strong> — ensure credit goes to idea originators, not louder voices who repeat them</li>
-          <li><strong>Examine own behavior</strong> — reflect on how your actions might inadvertently exclude</li>
-          <li><strong>Advocate for systemic change</strong> — use your privilege to push leadership for inclusive policies</li>
+          <li><strong>Educate yourself</strong> --- don't ask marginalized colleagues to teach you; seek resources independently</li>
+          <li><strong>Interrupt bias</strong> --- speak up when witnessing discrimination or microaggressions</li>
+          <li><strong>Amplify marginalized voices</strong> --- ensure credit goes to idea originators, not louder voices who repeat them</li>
+          <li><strong>Examine own behavior</strong> --- reflect on how your actions might inadvertently exclude</li>
+          <li><strong>Advocate for systemic change</strong> --- use your privilege to push leadership for inclusive policies</li>
         </ul>
 
         <h2 id="organizational" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1102,19 +1102,19 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Diverse hiring and promotion</strong> — representation at all levels, especially leadership</li>
-          <li><strong>Pay equity audits</strong> — identifying and correcting wage gaps</li>
-          <li><strong>Inclusive benefits</strong> — parental leave for all genders, fertility support, mental health coverage</li>
-          <li><strong>Bias training that works</strong> — ongoing practice, not one-time workshops</li>
-          <li><strong>Accountability</strong> — DEI metrics tied to leadership performance evaluation</li>
-          <li><strong>Accessible mental health support</strong> — providers competent in treating marginalization-related trauma</li>
+          <li><strong>Diverse hiring and promotion</strong> --- representation at all levels, especially leadership</li>
+          <li><strong>Pay equity audits</strong> --- identifying and correcting wage gaps</li>
+          <li><strong>Inclusive benefits</strong> --- parental leave for all genders, fertility support, mental health coverage</li>
+          <li><strong>Bias training that works</strong> --- ongoing practice, not one-time workshops</li>
+          <li><strong>Accountability</strong> --- DEI metrics tied to leadership performance evaluation</li>
+          <li><strong>Accessible mental health support</strong> --- providers competent in treating marginalization-related trauma</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           This Week: One Action
         </h2>
         <p className="mb-6">
-          If your workplace lacks belonging for you: Reach out to one person—colleague, ERG member, friend outside work—and share your experience. Isolation amplifies harm; connection provides validation and support. If you hold privilege: Notice one moment this week where you could interrupt bias, amplify a marginalized voice, or question an exclusionary practice. Taking action, even small actions, chips away at systems that harm mental health.
+          If your workplace lacks belonging for you: Reach out to one person---colleague, ERG member, friend outside work---and share your experience. Isolation amplifies harm; connection provides validation and support. If you hold privilege: Notice one moment this week where you could interrupt bias, amplify a marginalized voice, or question an exclusionary practice. Taking action, even small actions, chips away at systems that harm mental health.
         </p>
       </>
     ),
@@ -1265,15 +1265,15 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           Creating Social Presence
         </h2>
         <p className="mb-6">
-          Social presence—feeling others are "there" despite distance—predicts remote team satisfaction and performance <Citation id="5" index={5} source="Computers in Human Behavior" year="2021" tier={1} />:
+          Social presence---feeling others are "there" despite distance---predicts remote team satisfaction and performance <Citation id="5" index={5} source="Computers in Human Behavior" year="2021" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Video on for important conversations</strong> — facial expressions and body language convey emotional content text misses</li>
-          <li><strong>Personal sharing rituals</strong> — start meetings with brief personal check-ins, create Slack channels for non-work topics</li>
-          <li><strong>Virtual watercooler</strong> — random pairing for coffee chats, optional social hangouts, shared playlists or photos</li>
-          <li><strong>Celebrate milestones</strong> — birthdays, work anniversaries, project completions acknowledged publicly</li>
-          <li><strong>Show your workspace</strong> — sharing glimpses of home offices humanizes and creates connection</li>
+          <li><strong>Video on for important conversations</strong> --- facial expressions and body language convey emotional content text misses</li>
+          <li><strong>Personal sharing rituals</strong> --- start meetings with brief personal check-ins, create Slack channels for non-work topics</li>
+          <li><strong>Virtual watercooler</strong> --- random pairing for coffee chats, optional social hangouts, shared playlists or photos</li>
+          <li><strong>Celebrate milestones</strong> --- birthdays, work anniversaries, project completions acknowledged publicly</li>
+          <li><strong>Show your workspace</strong> --- sharing glimpses of home offices humanizes and creates connection</li>
         </ul>
 
         <p className="mb-6">
@@ -1288,11 +1288,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Buddy system</strong> — assign experienced teammate to answer questions, provide context, facilitate introductions</li>
-          <li><strong>Structured first week</strong> — clear schedule of meetings, training, relationship-building calls</li>
-          <li><strong>Over-explain norms</strong> — things office workers learn through osmosis must be explicitly taught remotely</li>
-          <li><strong>Frequent check-ins</strong> — manager touching base daily first week, several times weekly first month</li>
-          <li><strong>Social integration</strong> — introductions to team, informal virtual lunches, early inclusion in social channels</li>
+          <li><strong>Buddy system</strong> --- assign experienced teammate to answer questions, provide context, facilitate introductions</li>
+          <li><strong>Structured first week</strong> --- clear schedule of meetings, training, relationship-building calls</li>
+          <li><strong>Over-explain norms</strong> --- things office workers learn through osmosis must be explicitly taught remotely</li>
+          <li><strong>Frequent check-ins</strong> --- manager touching base daily first week, several times weekly first month</li>
+          <li><strong>Social integration</strong> --- introductions to team, informal virtual lunches, early inclusion in social channels</li>
         </ul>
 
         <ArticleCallout variant="warning">
@@ -1303,7 +1303,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           Hybrid Teams: The Hardest Model
         </h2>
         <p className="mb-6">
-          Hybrid teams—some members in-office, some remote—face unique challenges <Citation id="6" index={6} source="Harvard Business Review" year="2021" tier={3} />:
+          Hybrid teams---some members in-office, some remote---face unique challenges <Citation id="6" index={6} source="Harvard Business Review" year="2021" tier={3} />:
         </p>
 
         <ComparisonTable
@@ -1330,11 +1330,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Rotate meeting times</strong> — don't always burden the same people with inconvenient hours</li>
-          <li><strong>Record meetings</strong> — enable async viewing for those who can't attend live</li>
-          <li><strong>Overlap hours</strong> — identify shared working hours for real-time collaboration</li>
-          <li><strong>Async-first mindset</strong> — design work to minimize synchronous requirements</li>
-          <li><strong>Respect off-hours</strong> — don't expect responses outside working hours; use scheduled sends</li>
+          <li><strong>Rotate meeting times</strong> --- don't always burden the same people with inconvenient hours</li>
+          <li><strong>Record meetings</strong> --- enable async viewing for those who can't attend live</li>
+          <li><strong>Overlap hours</strong> --- identify shared working hours for real-time collaboration</li>
+          <li><strong>Async-first mindset</strong> --- design work to minimize synchronous requirements</li>
+          <li><strong>Respect off-hours</strong> --- don't expect responses outside working hours; use scheduled sends</li>
         </ul>
 
         <h2 id="leadership" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1345,11 +1345,11 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Results focus over activity monitoring</strong> — judge output, not hours logged or availability signals</li>
-          <li><strong>Proactive communication</strong> — more frequent updates, clearer expectations, explicit feedback</li>
-          <li><strong>Individual attention</strong> — regular one-on-ones more critical remotely to prevent isolation</li>
-          <li><strong>Psychological safety</strong> — explicitly invite dissent, normalize struggle, model vulnerability</li>
-          <li><strong>Technology enablement</strong> — ensure everyone has tools and training for effective remote work</li>
+          <li><strong>Results focus over activity monitoring</strong> --- judge output, not hours logged or availability signals</li>
+          <li><strong>Proactive communication</strong> --- more frequent updates, clearer expectations, explicit feedback</li>
+          <li><strong>Individual attention</strong> --- regular one-on-ones more critical remotely to prevent isolation</li>
+          <li><strong>Psychological safety</strong> --- explicitly invite dissent, normalize struggle, model vulnerability</li>
+          <li><strong>Technology enablement</strong> --- ensure everyone has tools and training for effective remote work</li>
         </ul>
 
         <p className="mb-6">
@@ -1364,10 +1364,10 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Isolation risk</strong> — particularly for people living alone or in new cities</li>
-          <li><strong>Boundary challenges</strong> — work bleeding into personal time when home is office</li>
-          <li><strong>Reduced casual support</strong> — no spontaneous venting or support from office friends</li>
-          <li><strong>Visibility anxiety</strong> — worry about being forgotten or overlooked for opportunities</li>
+          <li><strong>Isolation risk</strong> --- particularly for people living alone or in new cities</li>
+          <li><strong>Boundary challenges</strong> --- work bleeding into personal time when home is office</li>
+          <li><strong>Reduced casual support</strong> --- no spontaneous venting or support from office friends</li>
+          <li><strong>Visibility anxiety</strong> --- worry about being forgotten or overlooked for opportunities</li>
         </ul>
 
         <p className="mb-6">
@@ -1378,7 +1378,7 @@ export const workplaceRelationshipsDynamicsArticlesB: Article[] = [
           One Change This Week
         </h2>
         <p className="mb-6">
-          If you lead a remote team: Schedule a brief one-on-one with each team member this week focused only on how they're doing, not work updates. Ask: "How are you actually doing? Feeling connected to the team? Anything you need from me?" If you're a remote team member: Reach out to one teammate for a virtual coffee chat—agenda-free personal conversation. Small intentional connection compounds into strong remote team culture over time.
+          If you lead a remote team: Schedule a brief one-on-one with each team member this week focused only on how they're doing, not work updates. Ask: "How are you actually doing? Feeling connected to the team? Anything you need from me?" If you're a remote team member: Reach out to one teammate for a virtual coffee chat---agenda-free personal conversation. Small intentional connection compounds into strong remote team culture over time.
         </p>
       </>
     ),

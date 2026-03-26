@@ -16,7 +16,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     id: catId(36),
     slug: 'pet-ownership-companionship-mental-health-older-adults',
     title: 'Pet Ownership and Companionship for Mental Health in Older Adults',
-    description: `Pets reduce loneliness, lower blood pressure, increase physical activity, and provide purpose—but require realistic assessment of care capacity and costs.`,
+    description: `Pets reduce loneliness, lower blood pressure, increase physical activity, and provide purpose---but require realistic assessment of care capacity and costs.`,
     image: '/images/articles/cat17/cover-036.svg',
     category: CATEGORY_AGING,
     readTime: 10,
@@ -37,7 +37,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
         citationIndex: 2,
       },
       {
-        text: `Pets cost $500-2,000/year (food, vet, grooming) and require physical capacity to walk, clean, and lift—many seniors adopt pets without planning for these realities.`,
+        text: `Pets cost $500-2,000/year (food, vet, grooming) and require physical capacity to walk, clean, and lift---many seniors adopt pets without planning for these realities.`,
         citationIndex: 3,
       },
     ],
@@ -96,7 +96,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Mrs. Garcia has been a widow for three years. She lives alone. Some days she does not speak to anyone. Her daughter suggests getting a dog. Mrs. Garcia adopts a small terrier named Max. Every morning, Max wakes her at 7 a.m. for breakfast. They walk around the block—slowly, but daily. Other dog owners stop to chat. Max sits on her lap while she reads. She is no longer alone. She has purpose: Max needs her.
+          Mrs. Garcia has been a widow for three years. She lives alone. Some days she does not speak to anyone. Her daughter suggests getting a dog. Mrs. Garcia adopts a small terrier named Max. Every morning, Max wakes her at 7 a.m. for breakfast. They walk around the block---slowly, but daily. Other dog owners stop to chat. Max sits on her lap while she reads. She is no longer alone. She has purpose: Max needs her.
           <Citation index={1} />
         </p>
 
@@ -114,12 +114,12 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <h2>Realistic Considerations</h2>
         <p>
-          Pet ownership requires physical and financial capacity. Dogs need daily walks (can you walk 15-30 minutes?), vet visits (can you transport pet?), grooming. Cats need litter box cleaning (can you bend, scoop, lift?). Costs: food, vet, medications, emergencies. Contingency planning: who cares for pet if you are hospitalized, move to assisted living, or die? Many seniors adopt pets without addressing these realities—leading to surrender or neglect.
+          Pet ownership requires physical and financial capacity. Dogs need daily walks (can you walk 15-30 minutes?), vet visits (can you transport pet?), grooming. Cats need litter box cleaning (can you bend, scoop, lift?). Costs: food, vet, medications, emergencies. Contingency planning: who cares for pet if you are hospitalized, move to assisted living, or die? Many seniors adopt pets without addressing these realities---leading to surrender or neglect.
           <Citation index={3} />
         </p>
 
         <QuoteBlock
-          quote="A pet is not a cure for loneliness—but for someone living alone in silence, a creature that greets you at the door with joy is medicine."
+          quote="A pet is not a cure for loneliness---but for someone living alone in silence, a creature that greets you at the door with joy is medicine."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -129,7 +129,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     id: catId(37),
     slug: 'intergenerational-programs-relationships-mental-health',
     title: 'Intergenerational Programs and Relationships for Mental Health',
-    description: `Intergenerational programs—pairing seniors with children or young adults—reduce loneliness, increase purpose, and benefit both generations through mutual support.`,
+    description: `Intergenerational programs---pairing seniors with children or young adults---reduce loneliness, increase purpose, and benefit both generations through mutual support.`,
     image: '/images/articles/cat17/cover-037.svg',
     category: CATEGORY_AGING,
     readTime: 10,
@@ -138,7 +138,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Intergenerational Programs', 'Mentoring', 'Purpose', 'Connection'],
 
-    summary: `Intergenerational programs pair older adults with children, teens, or young adults for mutual benefit. Examples: seniors mentor students, read to preschoolers, teach life skills, or share housing with college students. Benefits for seniors: reduced loneliness (40% decrease), increased purpose, cognitive stimulation. Benefits for youth: improved academic performance, reduced ageism, emotional support. These programs combat age segregation—a modern phenomenon where old and young never interact.`,
+    summary: `Intergenerational programs pair older adults with children, teens, or young adults for mutual benefit. Examples: seniors mentor students, read to preschoolers, teach life skills, or share housing with college students. Benefits for seniors: reduced loneliness (40% decrease), increased purpose, cognitive stimulation. Benefits for youth: improved academic performance, reduced ageism, emotional support. These programs combat age segregation---a modern phenomenon where old and young never interact.`,
 
     keyFacts: [
       {
@@ -157,7 +157,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Loneliness is partly a product of age segregation—we warehouse old people separately from young people. Intergenerational connection is not charity; it is restoring what used to be normal.`,
+    sparkMoment: `Loneliness is partly a product of age segregation---we warehouse old people separately from young people. Intergenerational connection is not charity; it is restoring what used to be normal.`,
 
     practicalExercise: {
       title: 'Get Involved in Intergenerational Programs',
@@ -209,13 +209,13 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Mr. Thompson volunteers at the elementary school library every Tuesday. He reads to kindergarteners. They sit in a circle, wide-eyed, as he acts out voices from picture books. They call him "Mr. T." One child asks, "Are you my grandpa?" He is not—his own grandchildren live 1,000 miles away. But for one hour a week, he is someone's grandpa. That is enough.
+          Mr. Thompson volunteers at the elementary school library every Tuesday. He reads to kindergarteners. They sit in a circle, wide-eyed, as he acts out voices from picture books. They call him "Mr. T." One child asks, "Are you my grandpa?" He is not---his own grandchildren live 1,000 miles away. But for one hour a week, he is someone's grandpa. That is enough.
           <Citation index={1} />
         </p>
 
         <h2>What Are Intergenerational Programs?</h2>
         <p>
-          Intergenerational programs intentionally bring together old and young people for mutual benefit. Examples: seniors read to preschoolers, tutor students, mentor teens on career skills, teach art or music, share housing with college students (student lives rent-free in exchange for companionship and light chores). These programs combat age segregation—a modern phenomenon where generations never interact.
+          Intergenerational programs intentionally bring together old and young people for mutual benefit. Examples: seniors read to preschoolers, tutor students, mentor teens on career skills, teach art or music, share housing with college students (student lives rent-free in exchange for companionship and light chores). These programs combat age segregation---a modern phenomenon where generations never interact.
           <Citation index={2} />
         </p>
 
@@ -232,7 +232,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Intergenerational programs are not charity—they are exchange. The old give wisdom; the young give energy. Both need what the other has."
+          quote="Intergenerational programs are not charity---they are exchange. The old give wisdom; the young give energy. Both need what the other has."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -242,7 +242,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     id: catId(38),
     slug: 'overcoming-barriers-socialization-mobility-hearing-transportation',
     title: 'Overcoming Barriers to Socialization: Mobility, Hearing Loss, Transportation',
-    description: `Physical barriers (mobility issues, hearing loss, lack of transportation) isolate older adults—but each barrier has practical solutions that restore connection.`,
+    description: `Physical barriers (mobility issues, hearing loss, lack of transportation) isolate older adults---but each barrier has practical solutions that restore connection.`,
     image: '/images/articles/cat17/cover-038.svg',
     category: CATEGORY_AGING,
     readTime: 11,
@@ -259,7 +259,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Untreated hearing loss increases social isolation by 50%—conversations are exhausting, group settings overwhelming—yet only 30% of adults with hearing loss use hearing aids.`,
+        text: `Untreated hearing loss increases social isolation by 50%---conversations are exhausting, group settings overwhelming---yet only 30% of adults with hearing loss use hearing aids.`,
         citationIndex: 2,
       },
       {
@@ -270,7 +270,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Isolation is not always a choice. Sometimes it is a wheelchair-inaccessible building, a conversation you cannot hear, or a ride you cannot afford. Fixing these barriers is not luxury—it is basic dignity.`,
+    sparkMoment: `Isolation is not always a choice. Sometimes it is a wheelchair-inaccessible building, a conversation you cannot hear, or a ride you cannot afford. Fixing these barriers is not luxury---it is basic dignity.`,
 
     practicalExercise: {
       title: 'Identify and Solve Barriers',
@@ -285,7 +285,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
         },
         {
           title: 'Ask for Accommodations',
-          description: `Call venue: "Do you have wheelchair access? Hearing loop? Seating?" Many places accommodate if asked. Do not assume—ask.`,
+          description: `Call venue: "Do you have wheelchair access? Hearing loop? Seating?" Many places accommodate if asked. Do not assume---ask.`,
         },
       ],
       toolLink: '/learn',
@@ -322,7 +322,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Mrs. Lee loves her book club—or she did, before her hearing got worse. Now she sits in meetings straining to follow conversations. Everyone talks over each other. She smiles and nods but understands half. Afterward, she is exhausted. She stops going. She tells herself it is fine. But she is lonelier than ever.
+          Mrs. Lee loves her book club---or she did, before her hearing got worse. Now she sits in meetings straining to follow conversations. Everyone talks over each other. She smiles and nods but understands half. Afterward, she is exhausted. She stops going. She tells herself it is fine. But she is lonelier than ever.
           <Citation index={1} />
         </p>
 
@@ -355,7 +355,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     id: catId(39),
     slug: 'making-friends-after-65-social-connection-strategies',
     title: 'Making Friends After 65: Strategies for Social Connection in Late Life',
-    description: `Making friends after 65 is hard—you lack work environment, childhood connections died or moved—but structured activities, vulnerability, and consistency work.`,
+    description: `Making friends after 65 is hard---you lack work environment, childhood connections died or moved---but structured activities, vulnerability, and consistency work.`,
     image: '/images/articles/cat17/cover-039.svg',
     category: CATEGORY_AGING,
     readTime: 10,
@@ -368,7 +368,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
     keyFacts: [
       {
-        text: `Developing a casual friendship requires approximately 50 hours of interaction; close friendship requires 200+ hours—meaning consistency and repeated contact are essential.`,
+        text: `Developing a casual friendship requires approximately 50 hours of interaction; close friendship requires 200+ hours---meaning consistency and repeated contact are essential.`,
         citationIndex: 1,
       },
       {
@@ -383,14 +383,14 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Making friends at 70 is harder than making friends at 7—but the friends you make now are chosen, not assigned. They are built on shared values, not shared zip codes. That makes them worth the effort.`,
+    sparkMoment: `Making friends at 70 is harder than making friends at 7---but the friends you make now are chosen, not assigned. They are built on shared values, not shared zip codes. That makes them worth the effort.`,
 
     practicalExercise: {
       title: 'Build New Friendships',
       steps: [
         {
           title: 'Join Structured Activity',
-          description: `Class (art, exercise, language), club (book club, gardening), volunteer work (library, food bank). Shared activity creates repeated contact—foundation of friendship.`,
+          description: `Class (art, exercise, language), club (book club, gardening), volunteer work (library, food bank). Shared activity creates repeated contact---foundation of friendship.`,
         },
         {
           title: 'Show Up Consistently',
@@ -435,25 +435,25 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     content: (
       <>
         <p>
-          You are 68 years old. You retired two years ago. Your work friends have drifted away. Your childhood best friend died last year. Your spouse is your only close relationship—and you worry about putting all your social needs on one person. You want friends. But how do you make friends at 68? You do not go to bars. You do not have kids in school to connect with other parents. You feel awkward introducing yourself at senior center. Where do you even start?
+          You are 68 years old. You retired two years ago. Your work friends have drifted away. Your childhood best friend died last year. Your spouse is your only close relationship---and you worry about putting all your social needs on one person. You want friends. But how do you make friends at 68? You do not go to bars. You do not have kids in school to connect with other parents. You feel awkward introducing yourself at senior center. Where do you even start?
           <Citation index={1} />
         </p>
 
         <h2>Why Friendship Is Hard After 65</h2>
         <p>
-          Making friends requires proximity (seeing same people repeatedly) and shared context (common interests, life stage). Childhood and work provide both. After retirement, both disappear. Proximity: no longer see coworkers daily. Shared context: no longer bonding over deadlines, projects, office politics. Add mobility limitations, hearing loss, transportation barriers, and friend-making becomes structurally difficult—not a personal failing.
+          Making friends requires proximity (seeing same people repeatedly) and shared context (common interests, life stage). Childhood and work provide both. After retirement, both disappear. Proximity: no longer see coworkers daily. Shared context: no longer bonding over deadlines, projects, office politics. Add mobility limitations, hearing loss, transportation barriers, and friend-making becomes structurally difficult---not a personal failing.
           <Citation index={2} />
         </p>
 
         <StatCard
           value="50 hours"
           label="of interaction required to develop a casual friendship"
-          description="Close friendship requires 200+ hours. Friendship is not instant—it is built through consistent, repeated contact over time."
+          description="Close friendship requires 200+ hours. Friendship is not instant---it is built through consistent, repeated contact over time."
         />
 
         <h2>Strategies That Work</h2>
         <p>
-          Join structured activities: Classes, clubs, volunteer work provide proximity and shared context. Show up weekly—consistency builds familiarity. Take initiative: After class, invite someone for coffee. Do not wait for others to approach you. Practice vulnerability: Share something personal (not trauma, but real). Ask for help (builds connection). Emotional openness deepens bonds faster than small talk.
+          Join structured activities: Classes, clubs, volunteer work provide proximity and shared context. Show up weekly---consistency builds familiarity. Take initiative: After class, invite someone for coffee. Do not wait for others to approach you. Practice vulnerability: Share something personal (not trauma, but real). Ask for help (builds connection). Emotional openness deepens bonds faster than small talk.
           <Citation index={3} />
         </p>
 
@@ -468,7 +468,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     id: catId(40),
     slug: 'coping-outliving-friends-spouse-grief-isolation',
     title: 'Coping with Outliving Friends and Spouse: Grief and Isolation',
-    description: `Outliving your peers brings cumulative grief and shrinking social networks—yet strategies exist to grieve losses while building new connections.`,
+    description: `Outliving your peers brings cumulative grief and shrinking social networks---yet strategies exist to grieve losses while building new connections.`,
     image: '/images/articles/cat17/cover-040.svg',
     category: CATEGORY_AGING,
     readTime: 11,
@@ -477,15 +477,15 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Grief', 'Widowhood', 'Cumulative Loss', 'Social Networks'],
 
-    summary: `Outliving your peers brings cumulative grief: you lose spouse, siblings, lifelong friends, and with each loss, your social network shrinks. This is not normal grief—it is serial bereavement with no time to recover between losses. The result: social isolation (no one left who remembers your history), identity erosion (you are the last one standing), and depression (grief stacks without resolution). Coping requires: allowing cumulative grief, building intergenerational friendships (not just age peers), and finding meaning beyond "the last one left."`,
+    summary: `Outliving your peers brings cumulative grief: you lose spouse, siblings, lifelong friends, and with each loss, your social network shrinks. This is not normal grief---it is serial bereavement with no time to recover between losses. The result: social isolation (no one left who remembers your history), identity erosion (you are the last one standing), and depression (grief stacks without resolution). Coping requires: allowing cumulative grief, building intergenerational friendships (not just age peers), and finding meaning beyond "the last one left."`,
 
     keyFacts: [
       {
-        text: `Adults 80+ experience an average of 8-12 significant losses (spouse, siblings, close friends) within a decade—cumulative bereavement without time to fully grieve between losses.`,
+        text: `Adults 80+ experience an average of 8-12 significant losses (spouse, siblings, close friends) within a decade---cumulative bereavement without time to fully grieve between losses.`,
         citationIndex: 1,
       },
       {
-        text: `Widowhood increases social isolation by 50% because couple-based friendships dissolve—married friends stop inviting the widow, who feels like "third wheel."`,
+        text: `Widowhood increases social isolation by 50% because couple-based friendships dissolve---married friends stop inviting the widow, who feels like "third wheel."`,
         citationIndex: 2,
       },
       {
@@ -496,14 +496,14 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Outliving everyone you love is not a badge of honor—it is cumulative loss without reprieve. The question is not how to avoid grief, but how to grieve and still choose to connect.`,
+    sparkMoment: `Outliving everyone you love is not a badge of honor---it is cumulative loss without reprieve. The question is not how to avoid grief, but how to grieve and still choose to connect.`,
 
     practicalExercise: {
       title: 'Navigate Cumulative Grief',
       steps: [
         {
           title: 'Acknowledge Cumulative Loss',
-          description: `List everyone you have lost in the past 10 years. Recognize that grief stacks—you are mourning multiple people simultaneously. This is harder than single loss.`,
+          description: `List everyone you have lost in the past 10 years. Recognize that grief stacks---you are mourning multiple people simultaneously. This is harder than single loss.`,
         },
         {
           title: 'Seek Bereavement Support',
@@ -554,7 +554,7 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <h2>Cumulative Grief</h2>
         <p>
-          Adults 80+ experience serial bereavement: spouse, siblings, lifelong friends die within years of each other. This is not normal grief—it is cumulative loss without time to recover. Each new death reopens old wounds. Grief stacks. The result: depression (unresolved grief accumulates), social isolation (network shrinks with each death), identity erosion (no one left who remembers your history).
+          Adults 80+ experience serial bereavement: spouse, siblings, lifelong friends die within years of each other. This is not normal grief---it is cumulative loss without time to recover. Each new death reopens old wounds. Grief stacks. The result: depression (unresolved grief accumulates), social isolation (network shrinks with each death), identity erosion (no one left who remembers your history).
           <Citation index={2} />
         </p>
 
@@ -566,12 +566,12 @@ export const socialIsolationLonelinessArticlesB: Article[] = [
 
         <h2>Building Continuity</h2>
         <p>
-          If you rely only on age peers for friendship, your social network will disappear as they die. Strategy: build intergenerational connections. Volunteer with younger people. Mentor. Stay close to younger family members (nieces, nephews, cousins). These relationships provide social continuity when age peers are gone. You will still grieve losses—but you will not be alone.
+          If you rely only on age peers for friendship, your social network will disappear as they die. Strategy: build intergenerational connections. Volunteer with younger people. Mentor. Stay close to younger family members (nieces, nephews, cousins). These relationships provide social continuity when age peers are gone. You will still grieve losses---but you will not be alone.
           <Citation index={3} />
         </p>
 
         <QuoteBlock
-          quote="You cannot avoid outliving people you love. But you can choose to keep connecting—to younger people, to new friends, to the world. Grief and connection are not opposites. They coexist."
+          quote="You cannot avoid outliving people you love. But you can choose to keep connecting---to younger people, to new friends, to the world. Grief and connection are not opposites. They coexist."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>

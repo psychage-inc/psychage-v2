@@ -95,10 +95,10 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're forty-five years old, successful by any measure. But when your sister casually mentions her promotion, you feel that familiar twist in your gut—the same competitive ache you felt at eight when she won the spelling bee. Sibling rivalry doesn't end with childhood. For many, it shapes a lifetime of relationships, achievements, and self-worth.
+            You're forty-five years old, successful by any measure. But when your sister casually mentions her promotion, you feel that familiar twist in your gut---the same competitive ache you felt at eight when she won the spelling bee. Sibling rivalry doesn't end with childhood. For many, it shapes a lifetime of relationships, achievements, and self-worth.
           </p>
           <p className="mb-6">
-            Sibling relationships are among the longest-lasting relationships in most people's lives, often spanning 60+ years <Citation id="1" index={1} source="Child Development Perspectives" year="2020" tier={1} />. These relationships are characterized by unique intimacy and unique conflict—brothers and sisters who know each other's vulnerabilities and histories like no one else, who can be closest allies or fiercest competitors, sometimes simultaneously.
+            Sibling relationships are among the longest-lasting relationships in most people's lives, often spanning 60+ years <Citation id="1" index={1} source="Child Development Perspectives" year="2020" tier={1} />. These relationships are characterized by unique intimacy and unique conflict---brothers and sisters who know each other's vulnerabilities and histories like no one else, who can be closest allies or fiercest competitors, sometimes simultaneously.
           </p>
         </div>
 
@@ -106,11 +106,11 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           Why Siblings Compete: The Developmental Roots
         </h2>
         <p className="mb-6">
-          Sibling rivalry has deep evolutionary and psychological origins <Citation id="2" index={2} source="Developmental Psychology" year="2019" tier={1} />. From an evolutionary perspective, siblings compete for finite parental resources—attention, time, emotional investment, and material support. The child who successfully secures more parental investment historically had better survival outcomes.
+          Sibling rivalry has deep evolutionary and psychological origins <Citation id="2" index={2} source="Developmental Psychology" year="2019" tier={1} />. From an evolutionary perspective, siblings compete for finite parental resources---attention, time, emotional investment, and material support. The child who successfully secures more parental investment historically had better survival outcomes.
         </p>
 
         <p className="mb-6">
-          Psychologically, children are exquisitely attuned to fairness and parental attention. When a new sibling arrives, the existing child experiences a profound threat: someone else now shares what was once exclusively theirs. This isn't irrational jealousy—it's an appropriate response to changed circumstances.
+          Psychologically, children are exquisitely attuned to fairness and parental attention. When a new sibling arrives, the existing child experiences a profound threat: someone else now shares what was once exclusively theirs. This isn't irrational jealousy---it's an appropriate response to changed circumstances.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -123,11 +123,11 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           The Role of Parental Favoritism
         </h2>
         <p className="mb-6">
-          Research consistently shows that most parents do have a favorite child, though they rarely admit it <Citation id="3" index={3} source="Journal of Family Psychology" year="2021" tier={1} />. More importantly, children's perception of favoritism—whether accurate or not—significantly affects their mental health outcomes decades later.
+          Research consistently shows that most parents do have a favorite child, though they rarely admit it <Citation id="3" index={3} source="Journal of Family Psychology" year="2021" tier={1} />. More importantly, children's perception of favoritism---whether accurate or not---significantly affects their mental health outcomes decades later.
         </p>
 
         <p className="mb-6">
-          Adults who perceived themselves as the less-favored child report higher rates of depression, anxiety, lower self-esteem, and more difficult relationships in adulthood. Even the "golden child" often suffers—feeling pressure to maintain their favored status, guilt about advantages, or resentment of the role they were assigned.
+          Adults who perceived themselves as the less-favored child report higher rates of depression, anxiety, lower self-esteem, and more difficult relationships in adulthood. Even the "golden child" often suffers---feeling pressure to maintain their favored status, guilt about advantages, or resentment of the role they were assigned.
         </p>
 
         <ComparisonTable
@@ -247,7 +247,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="I realized I'd chosen my entire career path to be different from my brother. He was the science kid, so I did humanities. He went corporate, so I went nonprofit. I was forty before I admitted I actually loved science—I'd just needed to not compete in his domain."
+          quote="I realized I'd chosen my entire career path to be different from my brother. He was the science kid, so I did humanities. He went corporate, so I went nonprofit. I was forty before I admitted I actually loved science---I'd just needed to not compete in his domain."
           attribution="Elena, age 42"
           role="Adult exploring career aligned with authentic interests"
           variant="large"
@@ -333,7 +333,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Share vulnerabilities, not just achievements',
               description: (
                 <p>
-                  Move beyond the competitive update exchange ('I got promoted' / "Well, I bought a house") to sharing fears, struggles, and uncertainties. Vulnerability breaks competitive patterns and builds genuine connection. This requires risk—your sibling might not reciprocate initially.
+                  Move beyond the competitive update exchange ('I got promoted' / "Well, I bought a house") to sharing fears, struggles, and uncertainties. Vulnerability breaks competitive patterns and builds genuine connection. This requires risk---your sibling might not reciprocate initially.
                 </p>
               ),
             },
@@ -349,7 +349,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Create new shared experiences',
               description: (
                 <p>
-                  Build adult sibling relationships based on current interests, not just childhood history. Shared activities—hobbies, travel, projects—create new positive memories that aren't rooted in competition. Who you are together as adults can differ from childhood patterns.
+                  Build adult sibling relationships based on current interests, not just childhood history. Shared activities---hobbies, travel, projects---create new positive memories that aren't rooted in competition. Who you are together as adults can differ from childhood patterns.
                 </p>
               ),
             },
@@ -483,10 +483,10 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When your sibling dies, people ask how your parents are doing. Friends offer condolences, then move on. No one recognizes that you didn't just lose a sibling—you lost the person who shared your entire childhood, who knew your family's secrets, who would have been there for the rest of your life. The grief is profound, but the support often isn't.
+            When your sibling dies, people ask how your parents are doing. Friends offer condolences, then move on. No one recognizes that you didn't just lose a sibling---you lost the person who shared your entire childhood, who knew your family's secrets, who would have been there for the rest of your life. The grief is profound, but the support often isn't.
           </p>
           <p className="mb-6">
-            Sibling loss is one of the most common forms of bereavement, yet it's systematically minimized by social support systems that center parental and spousal grief <Citation id="1" index={1} source="Death Studies" year="2020" tier={1} />. This creates what grief researchers call "disenfranchised grief"—grief that society doesn't fully acknowledge or support, leaving bereaved siblings feeling isolated and invalidated in their mourning.
+            Sibling loss is one of the most common forms of bereavement, yet it's systematically minimized by social support systems that center parental and spousal grief <Citation id="1" index={1} source="Death Studies" year="2020" tier={1} />. This creates what grief researchers call "disenfranchised grief"---grief that society doesn't fully acknowledge or support, leaving bereaved siblings feeling isolated and invalidated in their mourning.
           </p>
         </div>
 
@@ -502,13 +502,13 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
             <strong>Shared history:</strong> Your sibling knew you before you had conscious memories, witnessed your entire development, and held knowledge of your family that no one else shares. They're irreplaceable as witnesses to your life.
           </li>
           <li>
-            <strong>Future loss:</strong> You lose not just the past but the entire imagined future—growing old together, your children knowing their cousins, shared caregiving for aging parents, decades of holidays and milestones.
+            <strong>Future loss:</strong> You lose not just the past but the entire imagined future---growing old together, your children knowing their cousins, shared caregiving for aging parents, decades of holidays and milestones.
           </li>
           <li>
             <strong>Identity shift:</strong> Being a sibling is a core identity. Losing that person changes who you are. Oldest children who lose younger siblings lose their role; youngest children lose their lifelong status; only surviving children face new isolation.
           </li>
           <li>
-            <strong>Complicated grief:</strong> Sibling relationships are complex—love mixed with rivalry, closeness with conflict. You may grieve both the relationship you had and the one you wish you'd had.
+            <strong>Complicated grief:</strong> Sibling relationships are complex---love mixed with rivalry, closeness with conflict. You may grieve both the relationship you had and the one you wish you'd had.
           </li>
           <li>
             <strong>Mortality confrontation:</strong> Especially when siblings are close in age, their death confronts you with your own mortality in ways other deaths may not.
@@ -592,7 +592,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Childhood sibling loss',
               content: (
                 <p>
-                  Children who lose siblings face elevated mental health risks into adulthood <Citation id="4" index={4} source="JAMA Pediatrics" year="2020" tier={1} />. They may blame themselves, struggle to understand death's permanence, or feel abandoned. Surviving siblings sometimes become "replacement children"—expected to fulfill the lost child's role or compensate for parental grief. The impact depends heavily on how adults support the child's grief.
+                  Children who lose siblings face elevated mental health risks into adulthood <Citation id="4" index={4} source="JAMA Pediatrics" year="2020" tier={1} />. They may blame themselves, struggle to understand death's permanence, or feel abandoned. Surviving siblings sometimes become "replacement children"---expected to fulfill the lost child's role or compensate for parental grief. The impact depends heavily on how adults support the child's grief.
                 </p>
               ),
             },
@@ -654,21 +654,21 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Birth order shifts (the middle child becomes the oldest; the younger becomes an only child)</li>
-          <li>Family roles reassign (the responsible one, the funny one, the successful one—roles may transfer)</li>
+          <li>Family roles reassign (the responsible one, the funny one, the successful one---roles may transfer)</li>
           <li>Parental relationships change (you may become the primary emotional support for grieving parents)</li>
           <li>Holidays and gatherings feel wrong (the missing chair, the changed traditions, the family that's permanently smaller)</li>
           <li>Relationships with surviving siblings may intensify or become strained by different grieving styles</li>
         </ul>
 
         <p className="mb-6">
-          Some families grow closer through shared grief; others fracture as members grieve differently or blame each other. Neither pattern is right or wrong—families under extreme stress respond in varied ways.
+          Some families grow closer through shared grief; others fracture as members grieve differently or blame each other. Neither pattern is right or wrong---families under extreme stress respond in varied ways.
         </p>
 
         <h2 id="continuing-bonds" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Maintaining Connection: Continuing Bonds
         </h2>
         <p className="mb-6">
-          Modern grief theory recognizes that healthy grieving doesn't mean "letting go" or "moving on" from the deceased <Citation id="5" index={5} source="Omega: Journal of Death and Dying" year="2021" tier={1} />. Instead, continuing bonds—maintaining connection while integrating the loss—supports healing.
+          Modern grief theory recognizes that healthy grieving doesn't mean "letting go" or "moving on" from the deceased <Citation id="5" index={5} source="Omega: Journal of Death and Dying" year="2021" tier={1} />. Instead, continuing bonds---maintaining connection while integrating the loss---supports healing.
         </p>
 
         <p className="mb-6">
@@ -686,7 +686,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            You don't have to "get over" your sibling's death. Grief doesn't have a timeline or an endpoint. You learn to carry the loss differently over time—it becomes integrated into who you are rather than something you overcome.
+            You don't have to "get over" your sibling's death. Grief doesn't have a timeline or an endpoint. You learn to carry the loss differently over time---it becomes integrated into who you are rather than something you overcome.
           </p>
         </ArticleCallout>
 
@@ -715,7 +715,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          All of these reactions are valid. Complicated relationships create complicated grief, and that grief deserves acknowledgment and support even—especially—when the relationship wasn't simple.
+          All of these reactions are valid. Complicated relationships create complicated grief, and that grief deserves acknowledgment and support even---especially---when the relationship wasn't simple.
         </p>
 
         <h2 id="finding-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -876,7 +876,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You haven't spoken to your sister in three years. When people ask if you have siblings, you pause—do you say yes and face questions about why you're not in contact? Say no and erase her existence? The social pressure to maintain family relationships is intense, but sometimes distance isn't dysfunction—it's self-preservation.
+            You haven't spoken to your sister in three years. When people ask if you have siblings, you pause---do you say yes and face questions about why you're not in contact? Say no and erase her existence? The social pressure to maintain family relationships is intense, but sometimes distance isn't dysfunction---it's self-preservation.
           </p>
           <p className="mb-6">
             Sibling estrangement affects approximately 20-30% of American adults at some point in their lives <Citation id="1" index={1} source="Journal of Family Psychology" year="2021" tier={1} />. Despite its prevalence, estrangement carries significant stigma. The cultural narrative that "family is everything" leaves people who choose distance feeling guilty, defective, or isolated even when estrangement protects their mental health and wellbeing.
@@ -898,7 +898,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Childhood abuse or current abusive behavior',
               content: (
                 <p>
-                  Physical, emotional, or sexual abuse by a sibling—whether in childhood or continuing into adulthood—is a clear reason for estrangement. This includes siblings who gaslight, manipulate, or engage in patterns of emotional cruelty. Protecting yourself from abuse is always valid, regardless of family ties.
+                  Physical, emotional, or sexual abuse by a sibling---whether in childhood or continuing into adulthood---is a clear reason for estrangement. This includes siblings who gaslight, manipulate, or engage in patterns of emotional cruelty. Protecting yourself from abuse is always valid, regardless of family ties.
                 </p>
               ),
             },
@@ -907,7 +907,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Unresolved conflict or betrayal',
               content: (
                 <p>
-                  Major betrayals—financial exploitation, affairs with partners, custody battles, theft, or violation of trust—can fracture sibling bonds permanently. If attempts to address the conflict fail or the sibling refuses accountability, estrangement may be the only path forward.
+                  Major betrayals---financial exploitation, affairs with partners, custody battles, theft, or violation of trust---can fracture sibling bonds permanently. If attempts to address the conflict fail or the sibling refuses accountability, estrangement may be the only path forward.
                 </p>
               ),
             },
@@ -916,7 +916,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Fundamental value differences',
               content: (
                 <p>
-                  Siblings with incompatible core values—political, religious, lifestyle, or parenting—may find the relationship creates constant conflict. When every interaction becomes an argument and neither can accept the other's choices, distance may preserve wellbeing.
+                  Siblings with incompatible core values---political, religious, lifestyle, or parenting---may find the relationship creates constant conflict. When every interaction becomes an argument and neither can accept the other's choices, distance may preserve wellbeing.
                 </p>
               ),
             },
@@ -943,7 +943,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Simple incompatibility',
               content: (
                 <p>
-                  Sometimes siblings are just fundamentally incompatible—different personalities, different life paths, no shared interests, no real affection. The relationship exists only because of shared DNA. Drifting apart isn't always pathological; it can be neutral acknowledgment of incompatibility.
+                  Sometimes siblings are just fundamentally incompatible---different personalities, different life paths, no shared interests, no real affection. The relationship exists only because of shared DNA. Drifting apart isn't always pathological; it can be neutral acknowledgment of incompatibility.
                 </p>
               ),
             },
@@ -1059,7 +1059,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           Grieving Ambiguous Loss
         </h2>
         <p className="mb-6">
-          Estrangement creates what researchers call "ambiguous loss"—the person is alive but absent from your life <Citation id="5" index={5} source="Family Process" year="2019" tier={1} />. This type of loss is complicated because:
+          Estrangement creates what researchers call "ambiguous loss"---the person is alive but absent from your life <Citation id="5" index={5} source="Family Process" year="2019" tier={1} />. This type of loss is complicated because:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1075,7 +1075,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote={`I grieved my brother twice—once when I cut contact, and again when he died five years later. People said, "At least you have closure now." But there's no closure to a relationship that was broken long before death. I'm still grieving what never was and now never can be.`}
+          quote={`I grieved my brother twice---once when I cut contact, and again when he died five years later. People said, "At least you have closure now." But there's no closure to a relationship that was broken long before death. I'm still grieving what never was and now never can be.`}
           attribution="Sarah, age 52"
           role="Estranged from brother for 8 years before his death"
           variant="large"
@@ -1171,7 +1171,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           Choosing Acceptance Over Reconciliation
         </h2>
         <p className="mb-6">
-          Sometimes the healthiest path isn't reconciliation but acceptance—accepting that:
+          Sometimes the healthiest path isn't reconciliation but acceptance---accepting that:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1295,10 +1295,10 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're forty years old, successful, self-aware, in therapy. But the moment you're with your siblings, you're eight again—fighting over the front seat, competing for attention, falling into patterns you thought you'd outgrown decades ago. Adult sibling relationships carry the weight of a lifetime of history, and transforming them requires intention, boundary-setting, and the courage to relate as who you are now rather than who you were then.
+            You're forty years old, successful, self-aware, in therapy. But the moment you're with your siblings, you're eight again---fighting over the front seat, competing for attention, falling into patterns you thought you'd outgrown decades ago. Adult sibling relationships carry the weight of a lifetime of history, and transforming them requires intention, boundary-setting, and the courage to relate as who you are now rather than who you were then.
           </p>
           <p className="mb-6">
-            Sibling relationships are unique in their duration and evolution. They typically span more years than any other relationship in your life—often 60, 70, even 80 years <Citation id="1" index={1} source="Current Opinion in Psychology" year="2021" tier={1} />. These relationships shape your identity, influence your mental health, and affect how you navigate other relationships throughout life.
+            Sibling relationships are unique in their duration and evolution. They typically span more years than any other relationship in your life---often 60, 70, even 80 years <Citation id="1" index={1} source="Current Opinion in Psychology" year="2021" tier={1} />. These relationships shape your identity, influence your mental health, and affect how you navigate other relationships throughout life.
           </p>
         </div>
 
@@ -1311,7 +1311,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            <strong>Established roles:</strong> "The responsible one,", "the funny one,", "the troublemaker"—these identities were assigned early and reinforced over years. Families unconsciously pressure members to maintain their roles.
+            <strong>Established roles:</strong> "The responsible one,", "the funny one,", "the troublemaker"---these identities were assigned early and reinforced over years. Families unconsciously pressure members to maintain their roles.
           </li>
           <li>
             <strong>Shared history triggers:</strong> Being with siblings activates memories and emotions from childhood. Your sibling's voice, mannerisms, or criticisms can trigger old wounds instantly.
@@ -1320,7 +1320,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
             <strong>Family systems resistance to change:</strong> When one person tries to change, the family system pushes back to maintain equilibrium. Your growth threatens existing dynamics.
           </li>
           <li>
-            <strong>Unresolved conflicts:</strong> Issues from childhood—favoritism, injustice, hurt—remain active if never addressed. The 35-year-old argument about who got the bigger room still generates heat.
+            <strong>Unresolved conflicts:</strong> Issues from childhood---favoritism, injustice, hurt---remain active if never addressed. The 35-year-old argument about who got the bigger room still generates heat.
           </li>
           <li>
             <strong>Limited updated information:</strong> If you see siblings infrequently, they may relate to outdated versions of you from years ago.
@@ -1329,7 +1329,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Research shows that adults often report feeling and behaving younger when with siblings than in any other context. This "age regression" is neurological—sibling interactions activate neural pathways formed in childhood, temporarily overriding adult patterns.
+            Research shows that adults often report feeling and behaving younger when with siblings than in any other context. This "age regression" is neurological---sibling interactions activate neural pathways formed in childhood, temporarily overriding adult patterns.
           </p>
         </ArticleCallout>
 
@@ -1431,7 +1431,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Create new shared experiences',
               description: (
                 <p>
-                  Build adult relationship history separate from childhood. Plan trips, share hobbies, create traditions that reflect who you are now. These new positive experiences can gradually outweigh old negative patterns—you're writing new chapters rather than endlessly rereading old ones.
+                  Build adult relationship history separate from childhood. Plan trips, share hobbies, create traditions that reflect who you are now. These new positive experiences can gradually outweigh old negative patterns---you're writing new chapters rather than endlessly rereading old ones.
                 </p>
               ),
             },
@@ -1478,7 +1478,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Navigating this requires accepting that your sibling's spouse is permanent and treating them with respect even if you're not close. It also means not expecting your sibling to choose you over their spouse—that's not a reasonable ask in healthy marriages.
+          Navigating this requires accepting that your sibling's spouse is permanent and treating them with respect even if you're not close. It also means not expecting your sibling to choose you over their spouse---that's not a reasonable ask in healthy marriages.
         </p>
 
         <h2 id="conflict-resolution" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1496,7 +1496,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: 'Address issues directly instead of through parents',
               content: (
                 <p>
-                  Don't complain to Mom about your brother—talk to your brother. Using parents as intermediaries is a childhood pattern that undermines adult relationships. Direct communication builds respect even when disagreement remains.
+                  Don't complain to Mom about your brother---talk to your brother. Using parents as intermediaries is a childhood pattern that undermines adult relationships. Direct communication builds respect even when disagreement remains.
                 </p>
               ),
             },
@@ -1523,7 +1523,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
               title: "Apologize when you're wrong",
               content: (
                 <p>
-                  'I was wrong to say that' or "I shouldn't have done that' without justifications or "but you..." Adult relationships require accountability. Model it even if your sibling doesn't reciprocate—you're building integrity, not negotiating.
+                  'I was wrong to say that' or "I shouldn't have done that' without justifications or "but you..." Adult relationships require accountability. Model it even if your sibling doesn't reciprocate---you're building integrity, not negotiating.
                 </p>
               ),
             },
@@ -1578,7 +1578,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           <li>Cordial, respectful distance can be a healthy endpoint</li>
           <li>You don't have to like everything about them to maintain relationship</li>
           <li>Low-conflict coexistence is sometimes the best achievable outcome</li>
-          <li>Quality matters more than frequency—meaningful quarterly contact beats obligatory weekly calls</li>
+          <li>Quality matters more than frequency---meaningful quarterly contact beats obligatory weekly calls</li>
         </ul>
 
         <p className="mb-6">
@@ -1690,7 +1690,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
             "You're an only child? That explains so much." The stereotypes are persistent: spoiled, selfish, socially awkward, unable to share. But what does research actually show about people who grow up without siblings? The reality is far more nuanced and often surprising.
           </p>
           <p className="mb-6">
-            Only children now represent approximately 20-25% of families in the United States and over 40% in some urban areas and countries with low birth rates <Citation id="6" index={6} source="Pew Research Center" year="2022" tier={2} />. Despite their prevalence, cultural myths about only children persist, affecting how parents, educators, and society view and treat them. Understanding what research actually shows—as opposed to stereotype—matters both for only children navigating these assumptions and for parents making family size decisions.
+            Only children now represent approximately 20-25% of families in the United States and over 40% in some urban areas and countries with low birth rates <Citation id="6" index={6} source="Pew Research Center" year="2022" tier={2} />. Despite their prevalence, cultural myths about only children persist, affecting how parents, educators, and society view and treat them. Understanding what research actually shows---as opposed to stereotype---matters both for only children navigating these assumptions and for parents making family size decisions.
           </p>
         </div>
 
@@ -1859,7 +1859,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           The Impact of Parenting Intensity
         </h2>
         <p className="mb-6">
-          Only children often experience more intensive parenting—both its benefits and its drawbacks <Citation id="7" index={7} source="Parenting: Science and Practice" year="2020" tier={1} />:
+          Only children often experience more intensive parenting---both its benefits and its drawbacks <Citation id="7" index={7} source="Parenting: Science and Practice" year="2020" tier={1} />:
         </p>
 
         <p className="mb-6">
@@ -1936,11 +1936,11 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Adult only children often report that their biggest challenge isn't social skills or personality—it's the practical reality of being solely responsible for aging parents and having no family members of their generation.
+          Adult only children often report that their biggest challenge isn't social skills or personality---it's the practical reality of being solely responsible for aging parents and having no family members of their generation.
         </p>
 
         <QuoteBlock
-          quote={`Being an only child was fine growing up. The hard part is now—my mother has dementia, and I'm managing it alone. No one to call and say "What should we do?" No one who remembers our childhood the way I do. That loneliness is real.`}
+          quote={`Being an only child was fine growing up. The hard part is now---my mother has dementia, and I'm managing it alone. No one to call and say "What should we do?" No one who remembers our childhood the way I do. That loneliness is real.`}
           attribution="Claire, age 48"
           role="Only child caring for mother with dementia"
           variant="large"
@@ -1956,7 +1956,7 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Your child will develop normally socially, emotionally, and cognitively</li>
           <li>Focus on providing peer interaction opportunities, not creating sibling substitutes</li>
-          <li>Avoid overprotection and excessive pressure—common only-child parenting pitfalls</li>
+          <li>Avoid overprotection and excessive pressure---common only-child parenting pitfalls</li>
           <li>Ensure your child has life separate from you (friends, activities, interests)</li>
           <li>Build community and extended family connections to provide support network</li>
           <li>Don't treat your child as a small adult or burden them with your emotional needs</li>
@@ -1971,13 +1971,13 @@ export const siblingRelationshipsFamilyRolesArticlesA: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Decades of research converge on a clear conclusion: being an only child is neither an advantage nor a disadvantage for healthy development. Only children are not spoiled, lonely, or maladjusted—these are myths unsupported by evidence.
+          Decades of research converge on a clear conclusion: being an only child is neither an advantage nor a disadvantage for healthy development. Only children are not spoiled, lonely, or maladjusted---these are myths unsupported by evidence.
         </p>
         <p className="mb-6">
           What matters far more than number of siblings is quality of parenting, economic resources, peer relationships, and individual temperament. Only children face unique experiences but not inherent deficits. They develop into psychologically healthy adults at the same rates as people with siblings.
         </p>
         <p className="mb-6">
-          The challenges only children face are real but specific: intensive parenting that can become overbearing, sole responsibility for aging parents, and lack of sibling support in adulthood. With awareness and intentional parenting, these challenges can be managed. The stereotypes, however, can be dismissed. Only children are simply children—no more, no less.
+          The challenges only children face are real but specific: intensive parenting that can become overbearing, sole responsibility for aging parents, and lack of sibling support in adulthood. With awareness and intentional parenting, these challenges can be managed. The stereotypes, however, can be dismissed. Only children are simply children---no more, no less.
         </p>
       </>
     ),

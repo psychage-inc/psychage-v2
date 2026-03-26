@@ -35,23 +35,23 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            If exercise came in pill form, it would be the most widely prescribed medication for mental health. Research shows that regular physical activity is as effective as antidepressants for treating mild-to-moderate depression—and it works for anxiety, too <Citation id="1" index={1} source="Cochrane Database of Systematic Reviews" year="2013" tier={1} />.
+            If exercise came in pill form, it would be the most widely prescribed medication for mental health. Research shows that regular physical activity is as effective as antidepressants for treating mild-to-moderate depression---and it works for anxiety, too <Citation id="1" index={1} source="Cochrane Database of Systematic Reviews" year="2013" tier={1} />.
           </p>
           <p className="mb-6">
-            Movement isn't just good for your body—it fundamentally changes your brain, improving mood, reducing stress, enhancing cognition, and building resilience. Understanding how and why exercise works can motivate you to make movement a core part of your mental health toolkit.
+            Movement isn't just good for your body---it fundamentally changes your brain, improving mood, reducing stress, enhancing cognition, and building resilience. Understanding how and why exercise works can motivate you to make movement a core part of your mental health toolkit.
           </p>
         </div>
 
         <StatCard stats={[{value: 30, suffix: '%', label: 'Reduction in depression risk with regular exercise'}, {value: 43, suffix: '%', label: 'Reduction in anxiety symptoms'}, {value: 150, suffix: ' min/wk', label: 'WHO-recommended moderate activity for adults'}]} source="JAMA Psychiatry, 2019; WHO, 2020" />
 
         <h2 id="depression-evidence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Evidence for Depression</h2>
-        <p className="mb-6">Meta-analyses consistently show exercise reduces depressive symptoms with effect sizes comparable to psychotherapy and medication <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />. It works for mild, moderate, and—when combined with other treatments—severe depression.</p>
+        <p className="mb-6">Meta-analyses consistently show exercise reduces depressive symptoms with effect sizes comparable to psychotherapy and medication <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />. It works for mild, moderate, and---when combined with other treatments---severe depression.</p>
         <p className="mb-6"><strong>Dose matters:</strong> More is better, but even modest amounts help. One study found that just 1 hour per week of any exercise reduced depression risk by 12% <Citation id="4" index={4} source="American Journal of Psychiatry" year="2018" tier={1} />.</p>
 
         <h2 id="anxiety-evidence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Evidence for Anxiety</h2>
         <p className="mb-6">Exercise reduces symptoms of generalized anxiety, panic disorder, social anxiety, and PTSD <Citation id="2" index={2} source="Depression and Anxiety" year="2020" tier={1} />. Both aerobic exercise (running, cycling) and resistance training (weightlifting) are effective.</p>
 
-        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Exercise is as effective as antidepressants</strong> for mild-moderate depression.</li><li><strong>Anxiety symptoms decrease 30-50%</strong> with regular physical activity.</li><li><strong>Benefits appear within 2-4 weeks</strong> of consistent exercise.</li><li><strong>Any amount helps</strong>—even 1 hour/week reduces depression risk.</li></ul></ArticleCallout>
+        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Exercise is as effective as antidepressants</strong> for mild-moderate depression.</li><li><strong>Anxiety symptoms decrease 30-50%</strong> with regular physical activity.</li><li><strong>Benefits appear within 2-4 weeks</strong> of consistent exercise.</li><li><strong>Any amount helps</strong>---even 1 hour/week reduces depression risk.</li></ul></ArticleCallout>
       </>
     ),
   },
@@ -60,7 +60,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     id: catId(22),
     slug: 'exercise-changes-brain-neuroplasticity-bdnf-mood',
     title: 'How Exercise Changes Your Brain: Neuroplasticity, BDNF, and Mood',
-    description: 'Exercise triggers cascades of neurochemical changes—boosting BDNF, growing new neurons, and rewiring circuits involved in mood and stress.',
+    description: 'Exercise triggers cascades of neurochemical changes---boosting BDNF, growing new neurons, and rewiring circuits involved in mood and stress.',
     image: "/images/articles/cat09/cover-022.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 8,
@@ -77,15 +77,15 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Exercise doesn't just make you feel better temporarily—it changes your brain's structure and function. Movement triggers the release of brain-derived neurotrophic factor (BDNF), grows new neurons, and strengthens neural networks involved in mood regulation.
+            Exercise doesn't just make you feel better temporarily---it changes your brain's structure and function. Movement triggers the release of brain-derived neurotrophic factor (BDNF), grows new neurons, and strengthens neural networks involved in mood regulation.
           </p>
         </div>
 
         <h2 id="bdnf" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">BDNF: The Brain's Miracle-Gro</h2>
-        <p className="mb-6">BDNF is a protein that supports neuron survival, growth, and differentiation. Exercise dramatically increases BDNF levels <Citation id="2" index={2} source="Trends in Neurosciences" year="2020" tier={2} />. Low BDNF is implicated in depression—antidepressants work partly by increasing BDNF. Exercise does the same thing, naturally.</p>
+        <p className="mb-6">BDNF is a protein that supports neuron survival, growth, and differentiation. Exercise dramatically increases BDNF levels <Citation id="2" index={2} source="Trends in Neurosciences" year="2020" tier={2} />. Low BDNF is implicated in depression---antidepressants work partly by increasing BDNF. Exercise does the same thing, naturally.</p>
 
         <h2 id="neurogenesis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Adult Neurogenesis</h2>
-        <p className="mb-6">For decades, scientists believed adults couldn't grow new brain cells. We now know aerobic exercise stimulates neurogenesis in the hippocampus—critical for learning, memory, and mood <Citation id="3" index={3} source="Cell Metabolism" year="2019" tier={1} />.</p>
+        <p className="mb-6">For decades, scientists believed adults couldn't grow new brain cells. We now know aerobic exercise stimulates neurogenesis in the hippocampus---critical for learning, memory, and mood <Citation id="3" index={3} source="Cell Metabolism" year="2019" tier={1} />.</p>
 
         <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Exercise boosts BDNF</strong>, supporting neuron health and growth.</li><li><strong>New neurons form in the hippocampus</strong> from regular aerobic activity.</li><li><strong>Brain plasticity increases</strong>, making it easier to learn and adapt.</li></ul></ArticleCallout>
       </>
@@ -96,7 +96,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
     id: catId(23),
     slug: 'best-exercise-types-anxiety-research-recommends',
     title: 'The Best Types of Exercise for Anxiety: What the Research Recommends',
-    description: 'Aerobic exercise, strength training, and yoga all reduce anxiety—but they work through different mechanisms. Learn which approach suits you best.',
+    description: 'Aerobic exercise, strength training, and yoga all reduce anxiety---but they work through different mechanisms. Learn which approach suits you best.',
     image: "/images/articles/cat09/cover-023.svg",
     category: CATEGORY_SLEEP_BODY,
     readTime: 6,
@@ -117,13 +117,13 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
         </div>
 
         <h2 id="aerobic" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Aerobic Exercise: Burning Off Anxiety</h2>
-        <p className="mb-6">Running, cycling, swimming—anything that elevates heart rate for sustained periods—reduces anxiety by lowering cortisol, increasing endorphins, and promoting post-exercise relaxation <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />.</p>
+        <p className="mb-6">Running, cycling, swimming---anything that elevates heart rate for sustained periods---reduces anxiety by lowering cortisol, increasing endorphins, and promoting post-exercise relaxation <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />.</p>
         <p className="mb-6"><strong>Recommended dose:</strong> 20-30 minutes, moderate intensity, 3-5x/week.</p>
 
         <h2 id="strength" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strength Training: Building Resilience</h2>
         <p className="mb-6">Lifting weights reduces anxiety as much as aerobic exercise <Citation id="2" index={2} source="Sports Medicine" year="2020" tier={2} />. Benefits include mastery experiences (confidence from getting stronger) and neurochemical changes.</p>
 
-        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Both aerobic and strength training work</strong> for anxiety reduction.</li><li><strong>Consistency matters more than intensity</strong>—moderate, regular exercise beats intense, sporadic workouts.</li><li><strong>Choose what you enjoy</strong>—adherence is key to long-term benefits.</li></ul></ArticleCallout>
+        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Both aerobic and strength training work</strong> for anxiety reduction.</li><li><strong>Consistency matters more than intensity</strong>---moderate, regular exercise beats intense, sporadic workouts.</li><li><strong>Choose what you enjoy</strong>---adherence is key to long-term benefits.</li></ul></ArticleCallout>
       </>
     ),
   },
@@ -148,7 +148,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're depressed, movement feels impossible. But exercise is one of the most effective non-pharmaceutical interventions for depression—and it works regardless of intensity.
+            When you're depressed, movement feels impossible. But exercise is one of the most effective non-pharmaceutical interventions for depression---and it works regardless of intensity.
           </p>
         </div>
 
@@ -158,7 +158,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
         <h2 id="starting-low" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Starting When Motivation Is Low</h2>
         <ProgressSteps variant="vertical" steps={[{title: 'Start Small', description: <p>5-10 minutes counts. Even a walk around the block initiates neurochemical changes.</p>}, {title: 'Schedule It', description: <p>Treat it like a prescription. Same time daily removes decision fatigue.</p>}, {title: 'Lower the Bar', description: <p>Goal: move, not "work out." Any movement {'>'} no movement.</p>}]} />
 
-        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>All exercise types help depression</strong>—aerobic, strength, even gentle walking.</li><li><strong>Intensity doesn't determine effectiveness</strong>—moderate exercise works as well as vigorous <Citation id="1" index={1} source="BMJ" year="2019" tier={1} />.</li><li><strong>Consistency beats intensity</strong>—3x/week moderate is better than 1x/week intense.</li></ul></ArticleCallout>
+        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>All exercise types help depression</strong>---aerobic, strength, even gentle walking.</li><li><strong>Intensity doesn't determine effectiveness</strong>---moderate exercise works as well as vigorous <Citation id="1" index={1} source="BMJ" year="2019" tier={1} />.</li><li><strong>Consistency beats intensity</strong>---3x/week moderate is better than 1x/week intense.</li></ul></ArticleCallout>
       </>
     ),
   },
@@ -183,7 +183,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You don't need a gym membership, special equipment, or athletic ability. Walking—the most accessible form of exercise—has robust evidence for improving mental health.
+            You don't need a gym membership, special equipment, or athletic ability. Walking---the most accessible form of exercise---has robust evidence for improving mental health.
           </p>
         </div>
 
@@ -192,9 +192,9 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
         <p className="mb-6"><strong>Nature walks amplify benefits:</strong> Walking in green spaces reduces rumination and anxiety more than urban walking <Citation id="2" index={2} source="Environmental Science & Technology" year="2019" tier={2} />.</p>
 
         <h2 id="how-to-start" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How to Start</h2>
-        <ul className="list-disc pl-6 mb-6 space-y-2"><li><strong>Start with 10 minutes</strong>—build gradually</li><li><strong>Walk at a pace where you can talk</strong> but feel slightly challenged</li><li><strong>Make it a habit</strong>—same time daily</li><li><strong>Vary routes</strong> to maintain interest</li></ul>
+        <ul className="list-disc pl-6 mb-6 space-y-2"><li><strong>Start with 10 minutes</strong>---build gradually</li><li><strong>Walk at a pace where you can talk</strong> but feel slightly challenged</li><li><strong>Make it a habit</strong>---same time daily</li><li><strong>Vary routes</strong> to maintain interest</li></ul>
 
-        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>30 min/day, 5 days/week reduces depression risk by 26%</strong>.</li><li><strong>Even 10 minutes improves mood</strong> immediately.</li><li><strong>Nature walks are more beneficial</strong> than urban walks.</li><li><strong>No special equipment needed</strong>—most accessible exercise.</li></ul></ArticleCallout>
+        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>30 min/day, 5 days/week reduces depression risk by 26%</strong>.</li><li><strong>Even 10 minutes improves mood</strong> immediately.</li><li><strong>Nature walks are more beneficial</strong> than urban walks.</li><li><strong>No special equipment needed</strong>---most accessible exercise.</li></ul></ArticleCallout>
       </>
     ),
   },

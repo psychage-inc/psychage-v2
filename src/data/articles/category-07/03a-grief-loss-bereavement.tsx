@@ -17,7 +17,7 @@ export const griefLossArticlesA: Article[] = [
     id: catId(21),
     slug: 'what-is-grief-universal-experience',
     title: 'What Is Grief? Understanding the Universal Experience of Loss',
-    description: `Grief is the natural response to loss—any kind of loss. Learn what grief is, its many forms, why it's essential, and what healthy grieving looks like.`,
+    description: `Grief is the natural response to loss---any kind of loss. Learn what grief is, its many forms, why it's essential, and what healthy grieving looks like.`,
     image: '/images/articles/cat07/cover-021.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 7,
@@ -87,10 +87,10 @@ export const griefLossArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Grief is love with nowhere to go. It's the price we pay for attachment, the shadow that meaningful connection casts. Every person who has loved will grieve. It's not a disorder, not something to 'get over"—it's a fundamental human experience, as universal as joy or fear.
+            Grief is love with nowhere to go. It's the price we pay for attachment, the shadow that meaningful connection casts. Every person who has loved will grieve. It's not a disorder, not something to 'get over"---it's a fundamental human experience, as universal as joy or fear.
           </p>
           <p className="mb-6">
-            Grief is the natural psychological, emotional, and physical response to loss <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2021" tier={1} />. While we most often associate grief with death, it encompasses all forms of loss: relationships, health, identity, safety, dreams, roles, and possibilities. Grieving is not passive suffering—it's active processing, the psychological work of adjusting to a world that no longer contains what was lost <Citation id="1" index={1} source="Psychological Review" year="2020" tier={1} />.
+            Grief is the natural psychological, emotional, and physical response to loss <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2021" tier={1} />. While we most often associate grief with death, it encompasses all forms of loss: relationships, health, identity, safety, dreams, roles, and possibilities. Grieving is not passive suffering---it's active processing, the psychological work of adjusting to a world that no longer contains what was lost <Citation id="1" index={1} source="Psychological Review" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -108,14 +108,14 @@ export const griefLossArticlesA: Article[] = [
               id: 'death',
               title: 'Death of a Loved One',
               content: (
-                <p>The most recognized form of grief. Loss of a person who was part of your world—parent, partner, child, sibling, friend, pet.</p>
+                <p>The most recognized form of grief. Loss of a person who was part of your world---parent, partner, child, sibling, friend, pet.</p>
               ),
             },
             {
               id: 'relationships',
               title: 'Relationship Loss',
               content: (
-                <p>Divorce, breakups, estrangement, friendship endings. The person still lives, but the relationship is gone—sometimes creating ambiguous grief.</p>
+                <p>Divorce, breakups, estrangement, friendship endings. The person still lives, but the relationship is gone---sometimes creating ambiguous grief.</p>
               ),
             },
             {
@@ -157,14 +157,14 @@ export const griefLossArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>Many losses are <strong>disenfranchised</strong>—not socially recognized or validated <Citation id="4" index={4} source="Death Studies" year="2020" tier={1} />. Miscarriage, pet loss, loss of estranged relationships, or losses related to stigmatized identities often receive little social support, making grief more isolating.</p>
+          <p>Many losses are <strong>disenfranchised</strong>---not socially recognized or validated <Citation id="4" index={4} source="Death Studies" year="2020" tier={1} />. Miscarriage, pet loss, loss of estranged relationships, or losses related to stigmatized identities often receive little social support, making grief more isolating.</p>
         </ArticleCallout>
 
         <h2 id="manifestations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How Grief Manifests
         </h2>
         <p className="mb-6">
-          Grief is not just sadness—it's a whole-person experience affecting emotions, body, thoughts, and behavior:
+          Grief is not just sadness---it's a whole-person experience affecting emotions, body, thoughts, and behavior:
         </p>
 
         <ComparisonTable
@@ -199,7 +199,7 @@ export const griefLossArticlesA: Article[] = [
           The Purpose of Grief
         </h2>
         <p className="mb-6">
-          Grief is not pathological—it serves adaptive functions <Citation id="6" index={6} source="Behavioral and Brain Sciences" year="2018" tier={1} />:
+          Grief is not pathological---it serves adaptive functions <Citation id="6" index={6} source="Behavioral and Brain Sciences" year="2018" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -232,7 +232,7 @@ export const griefLossArticlesA: Article[] = [
             {
               title: 'Continuing bonds',
               description: (
-                <p>Finding ways to maintain connection to what was lost while moving forward—memories, rituals, internalized values, legacy.</p>
+                <p>Finding ways to maintain connection to what was lost while moving forward---memories, rituals, internalized values, legacy.</p>
               ),
             },
           ]}
@@ -245,11 +245,11 @@ export const griefLossArticlesA: Article[] = [
         <ArticleCallout variant="warning" title="Common Misconceptions">
           <ul className="list-disc pl-6 space-y-2">
             <li><strong>Myth: Grief follows predictable stages.</strong> Reality: Grief is not linear. You don't move through orderly stages; you oscillate between different states.</li>
-            <li><strong>Myth: You should be "over it" by a certain time.</strong> Reality: There's no timeline. Some losses are never "gotten over"—you learn to carry them.</li>
+            <li><strong>Myth: You should be "over it" by a certain time.</strong> Reality: There's no timeline. Some losses are never "gotten over"---you learn to carry them.</li>
             <li><strong>Myth: Strong grief means weak coping.</strong> Reality: Intense grief often reflects the depth of love and connection. It's not weakness.</li>
             <li><strong>Myth: You need "closure."</strong> Reality: Closure is often impossible and unnecessary. You learn to live with the loss, not close it.</li>
             <li><strong>Myth: Grief is only about sadness.</strong> Reality: Grief encompasses anger, guilt, relief, anxiety, even joy in memories. It's complex.</li>
-            <li><strong>Myth: Avoiding grief prevents pain.</strong> Reality: Avoided grief doesn't disappear—it goes underground and emerges in other ways.</li>
+            <li><strong>Myth: Avoiding grief prevents pain.</strong> Reality: Avoided grief doesn't disappear---it goes underground and emerges in other ways.</li>
           </ul>
         </ArticleCallout>
 
@@ -261,7 +261,7 @@ export const griefLossArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Allowing yourself to feel:</strong> Not suppressing emotions, but also not forcing them. Emotions come in waves—let them.</li>
+          <li><strong>Allowing yourself to feel:</strong> Not suppressing emotions, but also not forcing them. Emotions come in waves---let them.</li>
           <li><strong>Oscillating between confrontation and avoidance:</strong> Sometimes facing the loss, sometimes taking breaks. Both are necessary.</li>
           <li><strong>Finding meaning:</strong> Making sense of the loss in a way that fits your values and beliefs.</li>
           <li><strong>Maintaining connections:</strong> To the lost person/thing (through memory, ritual) and to the living (social support).</li>
@@ -277,7 +277,7 @@ export const griefLossArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Rituals:</strong> Funerals, wakes, sitting shiva, Day of the Dead—cultures provide structures for grief</li>
+          <li><strong>Rituals:</strong> Funerals, wakes, sitting shiva, Day of the Dead---cultures provide structures for grief</li>
           <li><strong>Expression norms:</strong> Some cultures value stoicism, others value open emotional expression</li>
           <li><strong>Beliefs about death:</strong> Religious/spiritual frameworks influence grief experience</li>
           <li><strong>Community vs. individual:</strong> Some cultures grieve communally, others privately</li>
@@ -292,7 +292,7 @@ export const griefLossArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          If you're grieving, know that what you're experiencing is natural and necessary. There's no timeline, no correct way, no point at which you should be 'over it." Grief is not something to overcome—it's something to move through, at your own pace, in your own way. Allow yourself to feel, seek support when needed, and trust that healing doesn't mean forgetting—it means learning to carry the loss while still engaging with life.
+          If you're grieving, know that what you're experiencing is natural and necessary. There's no timeline, no correct way, no point at which you should be 'over it." Grief is not something to overcome---it's something to move through, at your own pace, in your own way. Allow yourself to feel, seek support when needed, and trust that healing doesn't mean forgetting---it means learning to carry the loss while still engaging with life.
         </p>
       </>
     ),
@@ -364,10 +364,10 @@ export const griefLossArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "You're in denial.", "You'll move to anger next.", "Once you accept it, you'll be done grieving." If you've heard these phrases after a loss, you've encountered the five stages model—and its damaging misapplication. This widely known framework has become grief's most pervasive myth, causing people to feel they're 'doing grief wrong' when they don't experience stages in order or at all.
+            "You're in denial.", "You'll move to anger next.", "Once you accept it, you'll be done grieving." If you've heard these phrases after a loss, you've encountered the five stages model---and its damaging misapplication. This widely known framework has become grief's most pervasive myth, causing people to feel they're 'doing grief wrong' when they don't experience stages in order or at all.
           </p>
           <p className="mb-6">
-            Elisabeth Kübler-Ross's five stages—denial, anger, bargaining, depression, acceptance—were never meant to describe how people grieve <Citation id="1" index={1} source="Elisabeth Kübler-Ross" year="1969" tier={5} />. They described how dying patients sometimes process their own approaching death. The model was misappropriated to bereaved people, oversimplified, and treated as prescriptive <Citation id="2" index={2} source="Death Studies" year="2020" tier={1} />. Modern grief research shows grief is far more complex, non-linear, and individual than stages suggest.
+            Elisabeth Kübler-Ross's five stages---denial, anger, bargaining, depression, acceptance---were never meant to describe how people grieve <Citation id="1" index={1} source="Elisabeth Kübler-Ross" year="1969" tier={5} />. They described how dying patients sometimes process their own approaching death. The model was misappropriated to bereaved people, oversimplified, and treated as prescriptive <Citation id="2" index={2} source="Death Studies" year="2020" tier={1} />. Modern grief research shows grief is far more complex, non-linear, and individual than stages suggest.
           </p>
         </div>
 
@@ -415,7 +415,7 @@ export const griefLossArticlesA: Article[] = [
           <li><strong>Acceptance is not the endpoint:</strong> Most people experience acceptance early and ongoing, not as a final stage</li>
           <li><strong>Multiple emotions coexist:</strong> People feel contradictory emotions simultaneously (sadness and relief, anger and love)</li>
           <li><strong>Highly individual:</strong> Grief manifestations vary enormously based on relationship, loss type, culture, personality, support</li>
-          <li><strong>Ongoing process:</strong> Grief doesn't end—it evolves. You don't 'complete' grief; you integrate it into your life</li>
+          <li><strong>Ongoing process:</strong> Grief doesn't end---it evolves. You don't 'complete' grief; you integrate it into your life</li>
         </ul>
 
         <h2 id="modern-models" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -437,7 +437,7 @@ export const griefLossArticlesA: Article[] = [
                     <li><strong>Loss-oriented:</strong> Confronting the loss, feeling grief, processing emotions, yearning</li>
                     <li><strong>Restoration-oriented:</strong> Adapting to life changes, taking breaks from grief, engaging in new activities, building new identity</li>
                   </ul>
-                  <p className="mt-4">Healthy grief involves moving back and forth between both—not staying stuck in one. Sometimes you grieve, sometimes you live.</p>
+                  <p className="mt-4">Healthy grief involves moving back and forth between both---not staying stuck in one. Sometimes you grieve, sometimes you live.</p>
                 </div>
               ),
             },
@@ -448,7 +448,7 @@ export const griefLossArticlesA: Article[] = [
                   <p className="mb-4">Challenges the idea that you must "let go" to heal <Citation id="6" index={6} source="Death Studies" year="2019" tier={1} />:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Maintaining connections to deceased (memories, rituals, internalized values) is healthy and normal</li>
-                    <li>You don't "get over" profound losses—you learn to carry them while still engaging with life</li>
+                    <li>You don't "get over" profound losses---you learn to carry them while still engaging with life</li>
                     <li>Grief transforms but doesn't disappear</li>
                   </ul>
                 </div>
@@ -516,7 +516,7 @@ export const griefLossArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          If you're grieving and don't fit the stages model, you're not doing it wrong—the model is wrong. Your grief is yours. It doesn't have to look like anyone else's. It doesn't have to follow a path. It doesn't have to end. You are allowed to grieve in whatever way feels true to you, for as long as you need. There is no deadline for love.
+          If you're grieving and don't fit the stages model, you're not doing it wrong---the model is wrong. Your grief is yours. It doesn't have to look like anyone else's. It doesn't have to follow a path. It doesn't have to end. You are allowed to grieve in whatever way feels true to you, for as long as you need. There is no deadline for love.
         </p>
       </>
     ),
@@ -588,7 +588,7 @@ export const griefLossArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            One moment you're sobbing over old photos, overwhelmed by loss. An hour later, you're grocery shopping, planning dinner, handling practical tasks. Then guilt hits: 'How can I be thinking about groceries when my loved one just died? Am I not grieving properly?" This oscillation—between confronting grief and engaging with life—isn't a failure of grief. It's exactly how healthy grief works.
+            One moment you're sobbing over old photos, overwhelmed by loss. An hour later, you're grocery shopping, planning dinner, handling practical tasks. Then guilt hits: 'How can I be thinking about groceries when my loved one just died? Am I not grieving properly?" This oscillation---between confronting grief and engaging with life---isn't a failure of grief. It's exactly how healthy grief works.
           </p>
           <p className="mb-6">
             The Dual Process Model, developed by Margaret Stroebe and Henk Schut, describes grief as dynamic oscillation between two orientations: loss-oriented (confronting the loss, processing emotions) and restoration-oriented (adapting to life changes, taking breaks from grief) <Citation id="1" index={1} source="Death Studies" year="1999" tier={1} />. Rather than moving through linear stages, bereaved people shift back and forth between facing grief and engaging with the practical and emotional demands of continuing to live <Citation id="2" index={2} source="OMEGA - Journal of Death and Dying" year="2010" tier={2} />.
@@ -627,7 +627,7 @@ export const griefLossArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>The model explicitly normalizes "taking breaks" from grief—watching TV, laughing, engaging in hobbies, planning for the future. These aren't avoidance or denial; they're restoration-oriented coping, which is just as important as loss-oriented grief work <Citation id="4" index={4} source="Bereavement Care" year="2019" tier={1} />.</p>
+          <p>The model explicitly normalizes "taking breaks" from grief---watching TV, laughing, engaging in hobbies, planning for the future. These aren't avoidance or denial; they're restoration-oriented coping, which is just as important as loss-oriented grief work <Citation id="4" index={4} source="Bereavement Care" year="2019" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="why-both-matter" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -684,7 +684,7 @@ export const griefLossArticlesA: Article[] = [
           <ul className="list-disc pl-6 mb-4 space-y-2">
             <li>Set specific grief time (e.g., 30 minutes daily to look at photos, cry, remember)</li>
             <li>Then deliberately shift to practical tasks or distractions</li>
-            <li>Give yourself permission to take breaks—it's not betrayal</li>
+            <li>Give yourself permission to take breaks---it's not betrayal</li>
           </ul>
           <p className="mb-4"><strong>Too much restoration-orientation (avoiding grief):</strong></p>
           <ul className="list-disc pl-6 space-y-2">
@@ -708,11 +708,11 @@ export const griefLossArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Healthy grief involves <strong>flexible oscillation</strong>—moving between both as needed. Problematic grief involves <strong>rigid adherence</strong> to one orientation or inability to access one.
+          Healthy grief involves <strong>flexible oscillation</strong>---moving between both as needed. Problematic grief involves <strong>rigid adherence</strong> to one orientation or inability to access one.
         </p>
 
         <QuoteBlock
-          quote="Grieving is not a steady state. It's a dynamic process of confronting and avoiding, feeling and doing, remembering and living. The key is not choosing one—it's learning to dance between both."
+          quote="Grieving is not a steady state. It's a dynamic process of confronting and avoiding, feeling and doing, remembering and living. The key is not choosing one---it's learning to dance between both."
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -734,7 +734,7 @@ export const griefLossArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Grief is not a problem to solve or a process to complete. It's a dynamic dance between facing loss and living life. You don't have to choose one—you need both. Allow yourself to oscillate. Sometimes grieve, sometimes live. Both honor the loss and the life that continues.
+          Grief is not a problem to solve or a process to complete. It's a dynamic dance between facing loss and living life. You don't have to choose one---you need both. Allow yourself to oscillate. Sometimes grieve, sometimes live. Both honor the loss and the life that continues.
         </p>
       </>
     ),
@@ -806,7 +806,7 @@ export const griefLossArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            It's been two years since they died. Friends say you should be "moving on." You feel you should be feeling better by now. But the yearning hasn't eased. The disbelief that they're gone persists. You can't engage with life, can't imagine a future. Every day feels like the first day of loss. This isn't "just grief"—it may be prolonged grief disorder, a newly recognized condition that affects approximately 10% of bereaved people.
+            It's been two years since they died. Friends say you should be "moving on." You feel you should be feeling better by now. But the yearning hasn't eased. The disbelief that they're gone persists. You can't engage with life, can't imagine a future. Every day feels like the first day of loss. This isn't "just grief"---it may be prolonged grief disorder, a newly recognized condition that affects approximately 10% of bereaved people.
           </p>
           <p className="mb-6">
             Prolonged Grief Disorder (PGD), also called complicated grief, is intense, persistent grief that doesn't ease with time and significantly impairs functioning <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />. While intense grief is normal in the months following a loss, PGD is characterized by grief that remains as acute a year or more later as it was in the first weeks <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={4} />. It's distinct from normal grief in its intensity, duration, and degree of impairment.
@@ -859,7 +859,7 @@ export const griefLossArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>The key distinction: <strong>In normal grief, intensity and impairment gradually lessen over time.</strong> In PGD, grief remains as intense and disabling months or years later as it was in the acute phase. You're not "getting better"—you're stuck.</p>
+          <p>The key distinction: <strong>In normal grief, intensity and impairment gradually lessen over time.</strong> In PGD, grief remains as intense and disabling months or years later as it was in the acute phase. You're not "getting better"---you're stuck.</p>
         </ArticleCallout>
 
         <h2 id="vs-depression" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -878,7 +878,7 @@ export const griefLossArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          About 50% of people with PGD also have major depression. They can occur together, but PGD is not just depression triggered by loss—it's a distinct grief-specific condition.
+          About 50% of people with PGD also have major depression. They can occur together, but PGD is not just depression triggered by loss---it's a distinct grief-specific condition.
         </p>
 
         <h2 id="risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -985,7 +985,7 @@ export const griefLossArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote={`Prolonged grief isn't about how much you loved them—it's about being unable to process and integrate the loss. With the right help, you can honor your love while still engaging with life. Healing doesn't mean forgetting or "getting over it." It means learning to carry the loss without it consuming you.`}
+          quote={`Prolonged grief isn't about how much you loved them---it's about being unable to process and integrate the loss. With the right help, you can honor your love while still engaging with life. Healing doesn't mean forgetting or "getting over it." It means learning to carry the loss without it consuming you.`}
           attribution="Raima"
           role="Clinical Psychologist"
           variant="large"
@@ -999,7 +999,7 @@ export const griefLossArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Grief feels as intense as it did initially—no lessening over time</li>
+          <li>Grief feels as intense as it did initially---no lessening over time</li>
           <li>You're still struggling to accept the death is real</li>
           <li>Yearning and longing for deceased dominates your daily experience</li>
           <li>You feel unable to engage with life, relationships, or activities</li>
@@ -1020,7 +1020,7 @@ export const griefLossArticlesA: Article[] = [
     id: catId(25),
     slug: 'anticipatory-grief',
     title: `Anticipatory Grief: Mourning a Loss That Hasn't Happened Yet`,
-    description: "Anticipatory grief is mourning an expected future loss—terminal illness, progressive disease, impending death. Learn what it is, how it differs from grief after loss, and coping strategies.",
+    description: "Anticipatory grief is mourning an expected future loss---terminal illness, progressive disease, impending death. Learn what it is, how it differs from grief after loss, and coping strategies.",
     image: "/images/articles/cat07/cover-025.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 7,
@@ -1074,7 +1074,7 @@ export const griefLossArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your parent has terminal cancer. Your partner's Alzheimer's is progressing. You're watching someone you love fade before your eyes. They're still alive, yet you're already grieving—mourning the person they were, the future you won't have together, the inevitable loss approaching. You feel guilty for grieving someone who's still here. This is anticipatory grief, and it's a natural response to impending loss.
+            Your parent has terminal cancer. Your partner's Alzheimer's is progressing. You're watching someone you love fade before your eyes. They're still alive, yet you're already grieving---mourning the person they were, the future you won't have together, the inevitable loss approaching. You feel guilty for grieving someone who's still here. This is anticipatory grief, and it's a natural response to impending loss.
           </p>
           <p className="mb-6">
             Anticipatory grief is grief that occurs before an actual loss, when death or significant loss is expected <Citation id="1" index={1} source="Journal of Advanced Nursing" year="2020" tier={1} />. It's the emotional response to the awareness that someone you love will die or that a cherished relationship/role will end. Common in caregivers of terminally ill patients, family members of those with progressive diseases, and sometimes in the dying person themselves <Citation id="3" index={3} source="Death Studies" year="2021" tier={1} />.
@@ -1094,7 +1094,7 @@ export const griefLossArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Anticipatory grief is especially prominent in progressive diseases like dementia, where the person is "lost" gradually over years before physical death <Citation id="2" index={2} source="Journal of Alzheimer's Disease" year="2019" tier={2} />. Caregivers grieve the person's cognitive decline, personality changes, and loss of recognition—experiencing profound loss while the person is still living.</p>
+          <p>Anticipatory grief is especially prominent in progressive diseases like dementia, where the person is "lost" gradually over years before physical death <Citation id="2" index={2} source="Journal of Alzheimer's Disease" year="2019" tier={2} />. Caregivers grieve the person's cognitive decline, personality changes, and loss of recognition---experiencing profound loss while the person is still living.</p>
         </ArticleCallout>
 
         <h2 id="what-it-feels-like" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1142,7 +1142,7 @@ export const griefLossArticlesA: Article[] = [
             {
               title: 'Prolonged stress',
               description: (
-                <p>Grief extends over months or years, combined with caregiving exhaustion. No relief until the loss occurs—which brings guilt for wanting it to be over.</p>
+                <p>Grief extends over months or years, combined with caregiving exhaustion. No relief until the loss occurs---which brings guilt for wanting it to be over.</p>
               ),
             },
             {
@@ -1175,7 +1175,7 @@ export const griefLossArticlesA: Article[] = [
           <li><strong>Some preparation occurs:</strong> You've begun psychological adjustment, said things you needed to say, made practical arrangements. This can ease immediate post-death shock.</li>
           <li><strong>But death still hurts:</strong> Anticipatory grief doesn't prevent or replace grief after death. You grieve both before and after. They're not interchangeable.</li>
           <li><strong>Quality of relationship matters:</strong> If anticipatory grief brought you closer (meaningful conversations, time together), post-death grief may be less complicated. If it led to withdrawal or conflict, post-death grief may be harder.</li>
-          <li><strong>Prolonged suffering complicates it:</strong> Long illness with suffering can make the actual death bring relief—which then triggers guilt in bereavement.</li>
+          <li><strong>Prolonged suffering complicates it:</strong> Long illness with suffering can make the actual death bring relief---which then triggers guilt in bereavement.</li>
         </ul>
 
         <h2 id="coping" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1196,7 +1196,7 @@ export const griefLossArticlesA: Article[] = [
               id: 'presence',
               title: 'Be present while you can',
               content: (
-                <p>Anticipatory grief can pull you into the future (dreading what's coming) or the past (grieving who they were). When possible, be present now—in the moments you still have together. Small moments of connection matter.</p>
+                <p>Anticipatory grief can pull you into the future (dreading what's coming) or the past (grieving who they were). When possible, be present now---in the moments you still have together. Small moments of connection matter.</p>
               ),
             },
             {
@@ -1210,7 +1210,7 @@ export const griefLossArticlesA: Article[] = [
               id: 'self-care',
               title: 'Prioritize self-care',
               content: (
-                <p>Caregiving and grief are exhausting. You cannot pour from an empty cup. Accept help, take breaks, maintain your own health. This isn't selfish—it's necessary for you to show up for them and for yourself.</p>
+                <p>Caregiving and grief are exhausting. You cannot pour from an empty cup. Accept help, take breaks, maintain your own health. This isn't selfish---it's necessary for you to show up for them and for yourself.</p>
               ),
             },
             {

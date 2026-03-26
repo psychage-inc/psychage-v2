@@ -110,31 +110,31 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <p>
-          Your mother has advanced dementia. She cannot bathe, dress, or toilet herself. She needs 24-hour supervision. You assume Medicare will cover a nursing home. You are wrong. Medicare covers hospitalization, surgery, doctor visits—not custodial care. The gap between what Medicare covers and what older adults need is the financial cliff of American aging.
+          Your mother has advanced dementia. She cannot bathe, dress, or toilet herself. She needs 24-hour supervision. You assume Medicare will cover a nursing home. You are wrong. Medicare covers hospitalization, surgery, doctor visits---not custodial care. The gap between what Medicare covers and what older adults need is the financial cliff of American aging.
           <Citation index={1} />
         </p>
 
         <h2>What Medicare Covers (and Doesn't)</h2>
         <p>
-          Medicare is federal health insurance for people 65+ and younger people with disabilities. It covers acute care—treatment for illness or injury—but NOT long-term custodial care. Medicare does NOT cover: nursing home stays beyond 100 days post-hospitalization, assisted living, in-home help with bathing/dressing/eating, adult day care, memory care.
+          Medicare is federal health insurance for people 65+ and younger people with disabilities. It covers acute care---treatment for illness or injury---but NOT long-term custodial care. Medicare does NOT cover: nursing home stays beyond 100 days post-hospitalization, assisted living, in-home help with bathing/dressing/eating, adult day care, memory care.
           <Citation index={2} />
         </p>
 
         <StatCard
           value="$250,000"
           label="average total out-of-pocket cost for 2.5 years of nursing home care before Medicaid eligibility"
-          description="Most families must spend down assets—paying $8,500-12,000/month—until they qualify for Medicaid."
+          description="Most families must spend down assets---paying $8,500-12,000/month---until they qualify for Medicaid."
         />
 
         <h2>Medicaid: The Safety Net</h2>
         <p>
-          Medicaid is a joint federal-state program that covers healthcare for low-income individuals. Unlike Medicare, Medicaid DOES cover long-term custodial care. But there is a catch: you must be poor—or become poor—to qualify. Asset limit: $2,000-3,000 for individual. Look-back period: Medicaid reviews 5 years of financial records; gifts or asset transfers within 5 years cause penalties.
+          Medicaid is a joint federal-state program that covers healthcare for low-income individuals. Unlike Medicare, Medicaid DOES cover long-term custodial care. But there is a catch: you must be poor---or become poor---to qualify. Asset limit: $2,000-3,000 for individual. Look-back period: Medicaid reviews 5 years of financial records; gifts or asset transfers within 5 years cause penalties.
           <Citation index={3} />
         </p>
 
         <ArticleCallout variant="warning" title="The Medicaid Spend-Down">
           <p>
-            If your parent has assets above the Medicaid limit, they must "spend down"—use their money to pay for care—until they qualify. Example: Your father has $150,000 in savings. Nursing home costs $10,000/month. He pays out-of-pocket for 15 months, reducing savings to $0. He then qualifies for Medicaid. Spend-down is financially devastating for families.
+            If your parent has assets above the Medicaid limit, they must "spend down"---use their money to pay for care---until they qualify. Example: Your father has $150,000 in savings. Nursing home costs $10,000/month. He pays out-of-pocket for 15 months, reducing savings to $0. He then qualifies for Medicaid. Spend-down is financially devastating for families.
           </p>
         </ArticleCallout>
 
@@ -172,7 +172,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Filial piety—the cultural expectation that adult children care for aging parents—is strong in Asian, Hispanic, and Middle Eastern cultures, often creating guilt when institutional care is needed.`,
+        text: `Filial piety---the cultural expectation that adult children care for aging parents---is strong in Asian, Hispanic, and Middle Eastern cultures, often creating guilt when institutional care is needed.`,
         citationIndex: 2,
       },
       {
@@ -198,7 +198,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
         },
         {
           title: 'Explore Culturally Sensitive Options',
-          description: `Hybrid model—family provides some care, professional aides provide rest. Adult day care. Assisted living with cultural affinity. Family conference with social worker.`,
+          description: `Hybrid model---family provides some care, professional aides provide rest. Adult day care. Assisted living with cultural affinity. Family conference with social worker.`,
         },
       ],
       toolLink: '/learn',
@@ -235,13 +235,13 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <p>
-          You are a 45-year-old Chinese American woman. Your mother has dementia. Your father insists she stay at home—nursing homes are for people who have no family. Your brother lives across the country. Your mother wanders at night, forgets the stove, does not recognize you. You work full-time, have two teenagers, sleep four hours a night. You are drowning. But when you mention assisted living, your father says: "What will people think?"
+          You are a 45-year-old Chinese American woman. Your mother has dementia. Your father insists she stay at home---nursing homes are for people who have no family. Your brother lives across the country. Your mother wanders at night, forgets the stove, does not recognize you. You work full-time, have two teenagers, sleep four hours a night. You are drowning. But when you mention assisted living, your father says: "What will people think?"
           <Citation index={1} />
         </p>
 
         <h2>Cultural Norms Around Elder Care</h2>
         <p>
-          Different cultures have different expectations: Asian cultures value filial piety—adult children are expected to care for aging parents at home. Hispanic cultures emphasize familismo—family loyalty and interdependence. African American cultures rely on extended family networks and church community. Middle Eastern cultures view nursing home placement as taboo.
+          Different cultures have different expectations: Asian cultures value filial piety---adult children are expected to care for aging parents at home. Hispanic cultures emphasize familismo---family loyalty and interdependence. African American cultures rely on extended family networks and church community. Middle Eastern cultures view nursing home placement as taboo.
           <Citation index={2} />
         </p>
 
@@ -258,7 +258,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="You are not betraying your culture by setting limits. You are honoring it by caring for your family in the only way that is sustainable. Tradition that demands self-destruction is not tradition—it is trauma dressed as duty."
+          quote="You are not betraying your culture by setting limits. You are honoring it by caring for your family in the only way that is sustainable. Tradition that demands self-destruction is not tradition---it is trauma dressed as duty."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -277,7 +277,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sandwich Generation', 'Dual Caregiving', 'Work-Life Balance', 'Financial Strain'],
 
-    summary: `You are 48 years old. Your mother has dementia; your youngest child is 14. You manage medications and doctor appointments while driving carpool and helping with homework. You work full-time because you need the income and health insurance. You are the "sandwich generation"—squeezed between aging parents and dependent children, with no time, money, or energy left for yourself. Nearly half of adults in their 40s and 50s are in this position.`,
+    summary: `You are 48 years old. Your mother has dementia; your youngest child is 14. You manage medications and doctor appointments while driving carpool and helping with homework. You work full-time because you need the income and health insurance. You are the "sandwich generation"---squeezed between aging parents and dependent children, with no time, money, or energy left for yourself. Nearly half of adults in their 40s and 50s are in this position.`,
 
     keyFacts: [
       {
@@ -296,7 +296,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The sandwich generation lives in permanent triage: Which need is most urgent—your mother's fall, your daughter's college application, or your own chest pain? The answer is always someone else's crisis, never your own.`,
+    sparkMoment: `The sandwich generation lives in permanent triage: Which need is most urgent---your mother's fall, your daughter's college application, or your own chest pain? The answer is always someone else's crisis, never your own.`,
 
     practicalExercise: {
       title: 'Triage and Delegation System',
@@ -352,7 +352,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <p>
-          It is Tuesday. You wake at 5:30 a.m. to pack your son's lunch, drive him to school, then race to your mother's apartment. She has not bathed in three days. You help her shower, argue about pills, drive her to dialysis. You arrive at work two hours late. At lunch, your daughter calls crying—she failed a math test. After work, you shop for groceries, cook two dinners, help with homework. At 11 p.m., you collapse. Tomorrow, repeat.
+          It is Tuesday. You wake at 5:30 a.m. to pack your son's lunch, drive him to school, then race to your mother's apartment. She has not bathed in three days. You help her shower, argue about pills, drive her to dialysis. You arrive at work two hours late. At lunch, your daughter calls crying---she failed a math test. After work, you shop for groceries, cook two dinners, help with homework. At 11 p.m., you collapse. Tomorrow, repeat.
           <Citation index={1} />
         </p>
 
@@ -370,7 +370,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <h2>Financial Strain: Paying for Two Generations</h2>
         <p>
-          Sandwich caregivers face dual financial burdens: parent care costs ($10,000/year average out-of-pocket) and child expenses (childcare, school, college). Plus mortgage, healthcare, retirement savings. Many are simultaneously paying for children's college and parents' nursing home—while earning less because they reduced work hours for caregiving.
+          Sandwich caregivers face dual financial burdens: parent care costs ($10,000/year average out-of-pocket) and child expenses (childcare, school, college). Plus mortgage, healthcare, retirement savings. Many are simultaneously paying for children's college and parents' nursing home---while earning less because they reduced work hours for caregiving.
           <Citation index={3} />
         </p>
 
@@ -394,7 +394,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregiver Grief', 'Bereavement', 'Identity Transition', 'Complicated Grief'],
 
-    summary: `For five years, you were a caregiver. Your identity, schedule, and purpose revolved around your mother. Then she dies. Suddenly, the phone stops ringing with crisis calls. The calendar is empty. You feel relief. Then guilt for feeling relieved. Then emptiness. Who are you if you are not a caregiver? Grief after long-term caregiving is complicated—it mixes sorrow with liberation, guilt with exhaustion, and the disorienting task of rebuilding an identity consumed by caregiving.`,
+    summary: `For five years, you were a caregiver. Your identity, schedule, and purpose revolved around your mother. Then she dies. Suddenly, the phone stops ringing with crisis calls. The calendar is empty. You feel relief. Then guilt for feeling relieved. Then emptiness. Who are you if you are not a caregiver? Grief after long-term caregiving is complicated---it mixes sorrow with liberation, guilt with exhaustion, and the disorienting task of rebuilding an identity consumed by caregiving.`,
 
     keyFacts: [
       {
@@ -402,7 +402,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Caregivers experience anticipatory grief—mourning losses while the person is still alive—which can make post-death grief feel anticlimactic or confusing.`,
+        text: `Caregivers experience anticipatory grief---mourning losses while the person is still alive---which can make post-death grief feel anticlimactic or confusing.`,
         citationIndex: 2,
       },
       {
@@ -413,14 +413,14 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Grief after caregiving is not just mourning a person—it is mourning the version of yourself who existed only in relation to them. You are not returning to your old life. There is no old life. There is only the strange, guilty work of building a new one.`,
+    sparkMoment: `Grief after caregiving is not just mourning a person---it is mourning the version of yourself who existed only in relation to them. You are not returning to your old life. There is no old life. There is only the strange, guilty work of building a new one.`,
 
     practicalExercise: {
       title: 'Rebuilding After Caregiving',
       steps: [
         {
           title: 'Acknowledge All Feelings',
-          description: `Write down every feeling—sadness, relief, guilt, anger, numbness, peace. All are valid. Relief does not mean you did not love them.`,
+          description: `Write down every feeling---sadness, relief, guilt, anger, numbness, peace. All are valid. Relief does not mean you did not love them.`,
         },
         {
           title: 'Grieve What Was Lost Before Death',
@@ -475,24 +475,24 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
         <h2>Anticipatory Grief: Mourning Before Death</h2>
         <p>
-          Anticipatory grief is the mourning that happens before death—grieving losses while the person is still alive. For dementia caregivers, this is acute: You grieve the loss of conversation, the loss of the parent-child relationship, the loss of her personality. By the time death comes, much of your grief has already occurred. This is why post-death grief can feel anticlimactic or "not sad enough." You are not cold—you already mourned.
+          Anticipatory grief is the mourning that happens before death---grieving losses while the person is still alive. For dementia caregivers, this is acute: You grieve the loss of conversation, the loss of the parent-child relationship, the loss of her personality. By the time death comes, much of your grief has already occurred. This is why post-death grief can feel anticlimactic or "not sad enough." You are not cold---you already mourned.
           <Citation index={2} />
         </p>
 
         <StatCard
           value="72%"
           label="of bereaved caregivers report feeling relief at their loved one's death"
-          description="This is immediately followed by guilt. Relief is not evidence of lack of love—it is evidence that caregiving was hard and death ended suffering."
+          description="This is immediately followed by guilt. Relief is not evidence of lack of love---it is evidence that caregiving was hard and death ended suffering."
         />
 
         <h2>Identity Crisis: Who Am I Now?</h2>
         <p>
-          For years, caregiving consumed your identity. You introduced yourself as "my mom's caregiver." Your schedule revolved around her needs. Now she is gone—and so is your role. Your calendar is empty. Your identity is erased. Your social circle has shrunk. Many former caregivers describe feeling "lost," "purposeless," or "like a ghost." This is identity grief—mourning the version of yourself that existed only in relation to caregiving.
+          For years, caregiving consumed your identity. You introduced yourself as "my mom's caregiver." Your schedule revolved around her needs. Now she is gone---and so is your role. Your calendar is empty. Your identity is erased. Your social circle has shrunk. Many former caregivers describe feeling "lost," "purposeless," or "like a ghost." This is identity grief---mourning the version of yourself that existed only in relation to caregiving.
           <Citation index={3} />
         </p>
 
         <QuoteBlock
-          quote="Grief after caregiving is not just mourning a death—it is mourning the life you gave up, the self you lost, and the future you will never have with them. It is complex because the loss is layered. Be patient with yourself."
+          quote="Grief after caregiving is not just mourning a death---it is mourning the life you gave up, the self you lost, and the future you will never have with them. It is complex because the loss is layered. Be patient with yourself."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -511,7 +511,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Elder Abuse', 'Neglect', 'Protective Services', 'Reporting'],
 
-    summary: `One in ten older adults experiences abuse—physical violence, financial exploitation, emotional manipulation, or neglect. Most abuse occurs at home, committed by family members or paid caregivers. Victims are often isolated, cognitively impaired, or financially dependent on the abuser. Warning signs include unexplained bruises, sudden financial changes, fearfulness, poor hygiene, and malnutrition. If you suspect elder abuse, you are legally required to report it in most states.`,
+    summary: `One in ten older adults experiences abuse---physical violence, financial exploitation, emotional manipulation, or neglect. Most abuse occurs at home, committed by family members or paid caregivers. Victims are often isolated, cognitively impaired, or financially dependent on the abuser. Warning signs include unexplained bruises, sudden financial changes, fearfulness, poor hygiene, and malnutrition. If you suspect elder abuse, you are legally required to report it in most states.`,
 
     keyFacts: [
       {
@@ -530,7 +530,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Elder abuse is invisible because we do not want to see it. We want to believe that families protect their elders, that nursing homes are safe, that the bruises are from falls. But abuse thrives in denial. Seeing it—and reporting it—is an act of courage.`,
+    sparkMoment: `Elder abuse is invisible because we do not want to see it. We want to believe that families protect their elders, that nursing homes are safe, that the bruises are from falls. But abuse thrives in denial. Seeing it---and reporting it---is an act of courage.`,
 
     practicalExercise: {
       title: 'Recognizing and Reporting Abuse',
@@ -586,7 +586,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
     content: (
       <>
         <p>
-          You visit your uncle in his home. He is 82, has diabetes, lives with his adult son. You notice bruises on his arms ("I fell"), unpaid bills on the table despite his pension income ("My son handles the money"), and a fearful look when his son enters the room. Your uncle says he is fine. His son says, "Dad is just clumsy—you know how old people are." You want to believe them. But something is wrong.
+          You visit your uncle in his home. He is 82, has diabetes, lives with his adult son. You notice bruises on his arms ("I fell"), unpaid bills on the table despite his pension income ("My son handles the money"), and a fearful look when his son enters the room. Your uncle says he is fine. His son says, "Dad is just clumsy---you know how old people are." You want to believe them. But something is wrong.
           <Citation index={1} />
         </p>
 
@@ -609,7 +609,7 @@ export const caregivingFamilySupportArticlesB: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Elder abuse is invisible because we do not want to see it. Families are supposed to protect, not harm. But denial does not prevent abuse—it enables it. Seeing and reporting abuse is an act of protection."
+          quote="Elder abuse is invisible because we do not want to see it. Families are supposed to protect, not harm. But denial does not prevent abuse---it enables it. Seeing and reporting abuse is an act of protection."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>

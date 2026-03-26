@@ -145,7 +145,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     id: catId(13),
     slug: 'the-long-shadow-of-emotional-neglect-what-happens-when-feelings-arent-validated',
     title: "The Long Shadow of Emotional Neglect: What Happens When Feelings Aren\'t Validated",
-    description: 'Explore childhood emotional neglect — the invisible wound that affects adult emotional life and relationships.',
+    description: 'Explore childhood emotional neglect --- the invisible wound that affects adult emotional life and relationships.',
     image: "/images/articles/cat06/cover-013.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 7,
@@ -170,7 +170,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
             Emotional neglect leaves no visible scars, yet its effects can be more lasting than physical abuse.
           </p>
           <p className="mb-6">
-            Childhood emotional neglect (CEN) occurs when parents fail to respond adequately to a child's emotional needs <Citation id="1" index={1} source="Child Abuse & Neglect" year="2020" tier={1} />. It's not what happened — it's what didn't happen.
+            Childhood emotional neglect (CEN) occurs when parents fail to respond adequately to a child's emotional needs <Citation id="1" index={1} source="Child Abuse & Neglect" year="2020" tier={1} />. It's not what happened --- it's what didn't happen.
           </p>
         </div>
 
@@ -223,7 +223,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
     id: catId(14),
     slug: 'parentification-when-children-become-caregivers-too-soon',
     title: 'Parentification: When Children Become Caregivers Too Soon',
-    description: 'Understand parentification — when children take on adult responsibilities — and its lasting effects on identity and relationships.',
+    description: 'Understand parentification --- when children take on adult responsibilities --- and its lasting effects on identity and relationships.',
     image: "/images/articles/cat06/cover-014.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 7,
@@ -335,7 +335,7 @@ export const childhoodExperiencesAdultPatternsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>The unpredictability itself creates lasting anxiety <Citation id="4" index={4} source="Development and Psychopathology" year="2020" tier={1} />. Children never know which parent will show up — the sober one or the intoxicated one.</p>
+          <p>The unpredictability itself creates lasting anxiety <Citation id="4" index={4} source="Development and Psychopathology" year="2020" tier={1} />. Children never know which parent will show up --- the sober one or the intoxicated one.</p>
         </ArticleCallout>
 
         <h2 id="common-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

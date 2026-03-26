@@ -111,7 +111,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Traditional trauma therapy asks you to talk about what happened. Somatic Experiencing (SE) asks you to feel what your body is holding. Developed by Dr. Peter Levine, SE is built on a simple observation: animals in the wild experience life-threatening events constantly but don't develop PTSD. Why? Because they complete the biological survival response—shaking, trembling, discharging the trapped energy. Humans, with our complex brains, often interrupt this process. SE helps you finish what your body started.
+            Traditional trauma therapy asks you to talk about what happened. Somatic Experiencing (SE) asks you to feel what your body is holding. Developed by Dr. Peter Levine, SE is built on a simple observation: animals in the wild experience life-threatening events constantly but don't develop PTSD. Why? Because they complete the biological survival response---shaking, trembling, discharging the trapped energy. Humans, with our complex brains, often interrupt this process. SE helps you finish what your body started.
           </p>
           <p className="mb-6">
             Somatic Experiencing is a body-oriented approach to healing trauma that focuses on releasing the physiological patterns stored in the nervous system <Citation id="1" index={1} source="Frontiers in Psychology" year="2021" tier={1} />. Rather than retelling the trauma story, SE works with sensations, movements, and autonomic states to help your nervous system learn: <em>The danger is over. I survived. It's safe to let go.</em>
@@ -145,10 +145,10 @@ export const bodyBasedHealingArticlesA: Article[] = [
           How Trauma Gets Stuck in the Body
         </h2>
         <p className="mb-6">
-          During a traumatic event, your sympathetic nervous system mobilizes massive energy for fight or flight. But if you couldn't fight (you were overpowered) or flee (you were trapped), your system shifted into freeze—a state of tonic immobility where the energy is <strong>held</strong> rather than discharged <Citation id="4" index={4} source="Clinical Neuropsychiatry" year="2020" tier={1} />.
+          During a traumatic event, your sympathetic nervous system mobilizes massive energy for fight or flight. But if you couldn't fight (you were overpowered) or flee (you were trapped), your system shifted into freeze---a state of tonic immobility where the energy is <strong>held</strong> rather than discharged <Citation id="4" index={4} source="Clinical Neuropsychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          In animals, once the threat passes, they shake, tremble, or run—completing the cycle and releasing the energy. Humans, however, often suppress these discharge behaviors ("Don't cry,", "Be strong,", "Pull yourself together"). The result: the survival energy remains trapped in your nervous system, creating chronic symptoms:
+          In animals, once the threat passes, they shake, tremble, or run---completing the cycle and releasing the energy. Humans, however, often suppress these discharge behaviors ("Don't cry,", "Be strong,", "Pull yourself together"). The result: the survival energy remains trapped in your nervous system, creating chronic symptoms:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Hypervigilance and chronic anxiety</li>
@@ -159,7 +159,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Core SE insight:</strong> PTSD symptoms aren't the problem—they're your body's attempt to complete an interrupted survival response. SE helps you finish what was left incomplete.</p>
+          <p><strong>Core SE insight:</strong> PTSD symptoms aren't the problem---they're your body's attempt to complete an interrupted survival response. SE helps you finish what was left incomplete.</p>
         </ArticleCallout>
 
         <h2 id="how-se-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -173,7 +173,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           variant="vertical"
           steps={[
             { title: 'Establish resources', description: <p>Before touching trauma, the therapist helps you identify internal resources: safe memories, places in your body that feel calm, supportive relationships. This creates a foundation of safety.</p> },
-            { title: 'Track sensations', description: <p>You're guided to notice body sensations: warmth, tightness, tingling, numbness. Not emotions or thoughts—pure physical awareness.</p> },
+            { title: 'Track sensations', description: <p>You're guided to notice body sensations: warmth, tightness, tingling, numbness. Not emotions or thoughts---pure physical awareness.</p> },
             { title: 'Titrate trauma activation', description: <p>The therapist brings in a small 'dose' of trauma (a brief image, thought, or sensation) and tracks what happens in your body. You might notice your chest tightening or breath quickening.</p> },
             { title: 'Pendulate between activation and regulation', description: <p>When activation rises, the therapist guides you back to your resources ('Notice your feet on the ground') to re-establish safety. You move back and forth: trauma activation → regulation → trauma → regulation.</p> },
             { title: 'Follow discharge impulses', description: <p>If your body wants to push, shake, turn away, or orient toward something, you're encouraged to follow that impulse slowly. This is the body completing its protective response.</p> },
@@ -193,7 +193,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
               title: 'Titration: Small Doses, Big Healing',
               content: (
                 <div>
-                  <p className="mb-4">Titration means working with trauma in manageable pieces <Citation id="9" index={9} source="International Journal of Psychotherapy" year="2019" tier={1} />. Instead of flooding you with the full trauma memory, SE therapists touch the edge—just enough activation to work with, not so much that you become overwhelmed.</p>
+                  <p className="mb-4">Titration means working with trauma in manageable pieces <Citation id="9" index={9} source="International Journal of Psychotherapy" year="2019" tier={1} />. Instead of flooding you with the full trauma memory, SE therapists touch the edge---just enough activation to work with, not so much that you become overwhelmed.</p>
                   <p className="mb-4">Why it works: Your nervous system can't heal when it's in overwhelm. Titration keeps you in the 'window of tolerance' where processing is possible.</p>
                 </div>
               ),
@@ -204,7 +204,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Pendulation is the natural rhythm of moving between contraction (trauma activation) and expansion (regulation, safety). In SE, you're guided to notice activation, then shift attention back to resources or neutral sensations.</p>
-                  <p className="mb-4">This builds <strong>resilience</strong>—the capacity to touch pain and return to calm. Over time, the swings become smaller, and you spend more time in the "safe" zone.</p>
+                  <p className="mb-4">This builds <strong>resilience</strong>---the capacity to touch pain and return to calm. Over time, the swings become smaller, and you spend more time in the "safe" zone.</p>
                 </div>
               ),
             },
@@ -221,7 +221,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
                     <li>Pushing movements (as if pushing away a threat)</li>
                     <li>Orienting (turning toward safety or away from danger)</li>
                   </ul>
-                  <p>In SE, these aren't suppressed—they're encouraged and supported. This is your nervous system completing what it couldn't do during the trauma.</p>
+                  <p>In SE, these aren't suppressed---they're encouraged and supported. This is your nervous system completing what it couldn't do during the trauma.</p>
                 </div>
               ),
             },
@@ -257,7 +257,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>"What wants to happen next?"</li>
         </ul>
         <p className="mb-6">
-          You're not expected to revisit the trauma story in detail. Some clients never talk about what happened—they work purely with body sensations. This makes SE especially helpful for:
+          You're not expected to revisit the trauma story in detail. Some clients never talk about what happened---they work purely with body sensations. This makes SE especially helpful for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Preverbal trauma (infancy, early childhood)</li>
@@ -319,7 +319,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>You're highly dissociative or have difficulty staying present</li>
         </ul>
         <p className="mb-6">
-          SE is gentle but powerful. It doesn't force you to confront what you're not ready for. Instead, it follows your body's pace—trusting that given safety, support, and time, your nervous system knows how to heal itself.
+          SE is gentle but powerful. It doesn't force you to confront what you're not ready for. Instead, it follows your body's pace---trusting that given safety, support, and time, your nervous system knows how to heal itself.
         </p>
 
         <QuoteBlock
@@ -429,10 +429,10 @@ export const bodyBasedHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You sit across from your therapist, who asks you to recall the traumatic memory while following their fingers back and forth with your eyes. It sounds strange—almost too simple. But within minutes, the memory begins to shift. The terror softens. Details you couldn't remember emerge. By the end of the session, the memory that once haunted you feels distant, like something that happened to someone else, long ago. This is EMDR: Eye Movement Desensitization and Reprocessing, one of the most researched and effective treatments for trauma.
+            You sit across from your therapist, who asks you to recall the traumatic memory while following their fingers back and forth with your eyes. It sounds strange---almost too simple. But within minutes, the memory begins to shift. The terror softens. Details you couldn't remember emerge. By the end of the session, the memory that once haunted you feels distant, like something that happened to someone else, long ago. This is EMDR: Eye Movement Desensitization and Reprocessing, one of the most researched and effective treatments for trauma.
           </p>
           <p className="mb-6">
-            Developed in 1987 by Dr. Francine Shapiro, EMDR is now recognized by the WHO, American Psychological Association, and Department of Veterans Affairs as a first-line treatment for PTSD <Citation id="8" index={8} source="American Psychological Association" year="2022" tier={3} />. What makes it unique: you don't have to talk in detail about what happened—yet the trauma gets processed. And it often works faster than traditional talk therapy.
+            Developed in 1987 by Dr. Francine Shapiro, EMDR is now recognized by the WHO, American Psychological Association, and Department of Veterans Affairs as a first-line treatment for PTSD <Citation id="8" index={8} source="American Psychological Association" year="2022" tier={3} />. What makes it unique: you don't have to talk in detail about what happened---yet the trauma gets processed. And it often works faster than traditional talk therapy.
           </p>
         </div>
 
@@ -443,7 +443,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           EMDR is a structured, eight-phase psychotherapy that uses <strong>bilateral stimulation</strong> (typically eye movements, but also taps or sounds) to help the brain reprocess traumatic memories <Citation id="1" index={1} source="Eye Movement Desensitization and Reprocessing" year="2018" tier={5} />. The core idea:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Traumatic memories are "stuck":</strong> They're stored in raw, unprocessed form—vivid, emotionally charged, and disconnected from context.</li>
+          <li><strong>Traumatic memories are "stuck":</strong> They're stored in raw, unprocessed form---vivid, emotionally charged, and disconnected from context.</li>
           <li><strong>The brain can heal itself:</strong> Given the right conditions, your brain has an innate capacity to process and integrate these memories.</li>
           <li><strong>Bilateral stimulation activates processing:</strong> Eye movements (or other bilateral input) mimic the brain state during REM sleep, when memory consolidation naturally occurs.</li>
         </ul>
@@ -465,8 +465,8 @@ export const bodyBasedHealingArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Your brain is designed to process experiences and file them away as "the past."</li>
-          <li>During trauma, this system is overwhelmed. The memory gets stored in fragments—images, sounds, sensations, emotions—without proper integration.</li>
-          <li>These unprocessed memories are <strong>state-dependent</strong>: when triggered, you don't just remember the trauma—you re-experience it.</li>
+          <li>During trauma, this system is overwhelmed. The memory gets stored in fragments---images, sounds, sensations, emotions---without proper integration.</li>
+          <li>These unprocessed memories are <strong>state-dependent</strong>: when triggered, you don't just remember the trauma---you re-experience it.</li>
           <li>EMDR "unlocks" the memory, allowing your brain to complete the processing it couldn't do during the trauma.</li>
         </ul>
 
@@ -484,7 +484,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
         <ProgressSteps
           variant="vertical"
           steps={[
-            { title: 'Phase 1: History and treatment planning', description: <p>Your therapist gathers your trauma history and identifies 'target' memories to process. Not all memories are addressed—focus is on the most distressing or formative ones.</p> },
+            { title: 'Phase 1: History and treatment planning', description: <p>Your therapist gathers your trauma history and identifies 'target' memories to process. Not all memories are addressed---focus is on the most distressing or formative ones.</p> },
             { title: 'Phase 2: Preparation', description: <p>You learn grounding and self-soothing techniques. The therapist explains the process and establishes a 'safe place' visualization you can return to if overwhelmed.</p> },
             { title: 'Phase 3: Assessment', description: <p>You identify the memory's worst image, a negative belief ("I'm powerless"), and a positive belief you'd prefer ("I have control now"). You rate distress (0-10) and belief validity (1-7).</p> },
             { title: 'Phase 4: Desensitization', description: <p>While holding the memory in mind, you follow the therapist's fingers (or tap/listen to bilateral tones) for 15-30 second sets. After each set, you report what comes up. This continues until distress drops to 0-1.</p> },
@@ -503,7 +503,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Images shift:</strong> The memory may change perspective (seeing it from above, from outside your body), lose color, or blur.</li>
-          <li><strong>Insights emerge:</strong> "I did the best I could.", "It wasn't my fault." These aren't therapist-supplied—they arise organically.</li>
+          <li><strong>Insights emerge:</strong> "I did the best I could.", "It wasn't my fault." These aren't therapist-supplied---they arise organically.</li>
           <li><strong>Emotions change:</strong> Terror might soften to sadness, then to acceptance, then to calm.</li>
           <li><strong>Body sensations shift:</strong> Tightness in your chest may release. Warmth or tingling may arise.</li>
           <li><strong>Associations surface:</strong> Other memories, dreams, or thoughts may appear, linking the trauma to a broader context.</li>
@@ -543,7 +543,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li><strong>Faster results:</strong> Single-incident trauma can often be resolved in 3-6 sessions <Citation id="9" index={9} source="Behaviour Research and Therapy" year="2021" tier={1} />.</li>
           <li><strong>Access to preverbal trauma:</strong> Because EMDR works with images and sensations, it can reach trauma from early childhood before language developed.</li>
           <li><strong>No homework:</strong> Unlike CPT or PE, there are no between-session assignments (though some therapists assign grounding practice).</li>
-          <li><strong>Client-led processing:</strong> The therapist facilitates, but your brain does the work. You're not taught what to think—you discover it.</li>
+          <li><strong>Client-led processing:</strong> The therapist facilitates, but your brain does the work. You're not taught what to think---you discover it.</li>
         </ul>
 
         <h2 id="what-to-expect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -554,7 +554,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>You're in control:</strong> You can stop at any time. You don't have to disclose details you're not ready to share.</li>
-          <li><strong>It's not hypnosis:</strong> You're fully conscious and aware. The bilateral stimulation doesn't 'make' you do anything—it just creates conditions for processing.</li>
+          <li><strong>It's not hypnosis:</strong> You're fully conscious and aware. The bilateral stimulation doesn't 'make' you do anything---it just creates conditions for processing.</li>
           <li><strong>You may feel tired afterward:</strong> Memory reprocessing is neurologically demanding. Rest, hydrate, and be gentle with yourself.</li>
           <li><strong>Between-session processing:</strong> Dreams, memories, or insights may emerge between sessions. This is normal and means the work is continuing.</li>
         </ul>
@@ -592,7 +592,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>You want a time-limited, structured approach</li>
         </ul>
         <p className="mb-6">
-          EMDR isn't magic—but for many people, it feels close. Memories that once controlled your life become "just memories." The past stays in the past. And you reclaim your present.
+          EMDR isn't magic---but for many people, it feels close. Memories that once controlled your life become "just memories." The past stays in the past. And you reclaim your present.
         </p>
 
         <QuoteBlock
@@ -608,7 +608,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
     id: catId(33),
     slug: 'yoga-trauma-therapy-research-movement-healing',
     title: 'Yoga as Trauma Therapy: What the Research Says About Movement and Healing',
-    description: 'Discover the evidence behind trauma-informed yoga—how mindful movement helps regulate the nervous system and reclaim your body after trauma.',
+    description: 'Discover the evidence behind trauma-informed yoga---how mindful movement helps regulate the nervous system and reclaim your body after trauma.',
     image: "/images/articles/cat11/cover-033.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 10,
@@ -702,10 +702,10 @@ export const bodyBasedHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After trauma, your body can feel like enemy territory—numb, unsafe, or disconnected. You may avoid feeling anything below your neck because sensation brings pain. Yoga, when adapted for trauma, offers a different path: not forcing you into poses, but inviting you back into your body at your own pace. It's not about flexibility or perfection. It's about reclaiming what trauma took—your sense of ownership, safety, and home within your own skin.
+            After trauma, your body can feel like enemy territory---numb, unsafe, or disconnected. You may avoid feeling anything below your neck because sensation brings pain. Yoga, when adapted for trauma, offers a different path: not forcing you into poses, but inviting you back into your body at your own pace. It's not about flexibility or perfection. It's about reclaiming what trauma took---your sense of ownership, safety, and home within your own skin.
           </p>
           <p className="mb-6">
-            Trauma-sensitive yoga is an evidence-based adjunct treatment for PTSD <Citation id="1" index={1} source="Frontiers in Psychiatry" year="2021" tier={1} />. Unlike traditional yoga, it's designed with an understanding of how trauma lives in the body—and it prioritizes safety, choice, and interoception (the ability to sense what's happening inside you) over achieving any particular pose.
+            Trauma-sensitive yoga is an evidence-based adjunct treatment for PTSD <Citation id="1" index={1} source="Frontiers in Psychiatry" year="2021" tier={1} />. Unlike traditional yoga, it's designed with an understanding of how trauma lives in the body---and it prioritizes safety, choice, and interoception (the ability to sense what's happening inside you) over achieving any particular pose.
           </p>
         </div>
 
@@ -798,7 +798,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Yoga activates the parasympathetic nervous system (rest/digest), counteracting chronic hyperarousal. Breath practices (pranayama) directly stimulate the vagus nerve, shifting you from fight/flight to calm.</p>
-                  <p className="mb-4">Studies show yoga practitioners have increased heart rate variability (HRV)—a marker of nervous system flexibility and resilience.</p>
+                  <p className="mb-4">Studies show yoga practitioners have increased heart rate variability (HRV)---a marker of nervous system flexibility and resilience.</p>
                 </div>
               ),
             },
@@ -807,7 +807,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
               title: '2. Rebuilding Interoception',
               content: (
                 <div>
-                  <p className="mb-4">Interoception is your ability to sense what's happening inside your body. Trauma disrupts this—you may not feel hunger, pain, arousal, or fullness <Citation id="6" index={6} source="Frontiers in Human Neuroscience" year="2021" tier={1} />.</p>
+                  <p className="mb-4">Interoception is your ability to sense what's happening inside your body. Trauma disrupts this---you may not feel hunger, pain, arousal, or fullness <Citation id="6" index={6} source="Frontiers in Human Neuroscience" year="2021" tier={1} />.</p>
                   <p className="mb-4">Yoga invites you to notice: "Where do I feel this stretch? Is my breath shallow or deep? Do I feel safe or activated?" Over time, this rebuilds the mind-body connection trauma severed.</p>
                 </div>
               ),
@@ -817,7 +817,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
               title: '3. Embodiment: Coming Home to Your Body',
               content: (
                 <div>
-                  <p className="mb-4">Trauma often causes dissociation—feeling like you're outside your body, watching from a distance. Yoga is a practice of <strong>embodiment</strong>: inhabiting your body fully, feeling sensations without judgment <Citation id="8" index={8} source="Body, Movement and Dance in Psychotherapy" year="2019" tier={1} />.</p>
+                  <p className="mb-4">Trauma often causes dissociation---feeling like you're outside your body, watching from a distance. Yoga is a practice of <strong>embodiment</strong>: inhabiting your body fully, feeling sensations without judgment <Citation id="8" index={8} source="Body, Movement and Dance in Psychotherapy" year="2019" tier={1} />.</p>
                   <p className="mb-4">This is radical for survivors: your body is not a threat. It's safe to be here.</p>
                 </div>
               ),
@@ -837,7 +837,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
               title: '5. Somatic Release',
               content: (
                 <div>
-                  <p className="mb-4">Certain poses (hip openers, backbends, twists) can release stored emotional and physical tension. You may cry, shake, or feel sudden emotion. This is healthy—it's trauma energy moving through and out.</p>
+                  <p className="mb-4">Certain poses (hip openers, backbends, twists) can release stored emotional and physical tension. You may cry, shake, or feel sudden emotion. This is healthy---it's trauma energy moving through and out.</p>
                   <p className="mb-4">In trauma-sensitive classes, this is normalized and supported, not pathologized.</p>
                 </div>
               ),
@@ -857,7 +857,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>Significant improvements in anxiety, depression, and quality of life</li>
         </ul>
         <p className="mb-6">
-          A 2020 meta-analysis of yoga for military veterans found similar results <Citation id="7" index={7} source="Psychological Services" year="2020" tier={1} />. And critically: yoga works as an <strong>adjunct</strong> to therapy—it enhances outcomes when combined with EMDR, CPT, or other trauma-focused treatments <Citation id="10" index={10} source="SAMHSA" year="2022" tier={2} />.
+          A 2020 meta-analysis of yoga for military veterans found similar results <Citation id="7" index={7} source="Psychological Services" year="2020" tier={1} />. And critically: yoga works as an <strong>adjunct</strong> to therapy---it enhances outcomes when combined with EMDR, CPT, or other trauma-focused treatments <Citation id="10" index={10} source="SAMHSA" year="2022" tier={2} />.
         </p>
 
         <h2 id="what-to-expect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -871,10 +871,10 @@ export const bodyBasedHealingArticlesA: Article[] = [
           variant="vertical"
           steps={[
             { title: 'Grounding and centering', description: <p>The class begins with seated breathing, inviting you to notice where you are, that you're safe. No forced eye-closing.</p> },
-            { title: 'Gentle warm-up', description: <p>Slow movements—neck rolls, shoulder shrugs, spinal twists—to wake up the body without overwhelm.</p> },
-            { title: 'Standing poses', description: <p>Warrior, tree, mountain—poses that emphasize feeling your feet on the ground, finding stability. Invitational cues: 'If it feels right, lift your arms.'</p> },
+            { title: 'Gentle warm-up', description: <p>Slow movements---neck rolls, shoulder shrugs, spinal twists---to wake up the body without overwhelm.</p> },
+            { title: 'Standing poses', description: <p>Warrior, tree, mountain---poses that emphasize feeling your feet on the ground, finding stability. Invitational cues: 'If it feels right, lift your arms.'</p> },
             { title: 'Floor poses', description: <p>Child's pose, cat-cow, gentle backbends. The teacher offers options: 'You might stay here, or you might explore..." No one pose is "right.'</p> },
-            { title: 'Rest and integration', description: <p>Savasana (final relaxation)—but with permission to modify. You can lie on your back, side, or sit. Eyes open if closed feels unsafe. This is where the nervous system integrates the work.</p> },
+            { title: 'Rest and integration', description: <p>Savasana (final relaxation)---but with permission to modify. You can lie on your back, side, or sit. Eyes open if closed feels unsafe. This is where the nervous system integrates the work.</p> },
           ]}
         />
 
@@ -892,7 +892,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li><strong>Certification:</strong> Trauma Center Trauma-Sensitive Yoga (TCTSY) is the gold standard, developed at the Trauma Center in Boston.</li>
           <li><strong>Language:</strong> Classes described as "trauma-informed,", "trauma-sensitive," or "adaptive yoga."</li>
           <li><strong>No touch policy:</strong> Teachers should never adjust you without explicit consent.</li>
-          <li><strong>Invitational cues:</strong> "Notice,", "if it feels right,", "you might"—not "you should" or "everyone does this."</li>
+          <li><strong>Invitational cues:</strong> "Notice,", "if it feels right,", "you might"---not "you should" or "everyone does this."</li>
         </ul>
         <p className="mb-6">
           Search directories: <strong>traumasensitiveyoga.com</strong> or ask local therapists for referrals.
@@ -916,11 +916,11 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>You struggle with hypervigilance or difficulty relaxing</li>
         </ul>
         <p className="mb-6">
-          It's not a replacement for trauma therapy—it's a complement. The combination of EMDR (or CPT, SE) + trauma-sensitive yoga addresses both the mind and the body, creating a more complete path to healing.
+          It's not a replacement for trauma therapy---it's a complement. The combination of EMDR (or CPT, SE) + trauma-sensitive yoga addresses both the mind and the body, creating a more complete path to healing.
         </p>
 
         <p className="mb-6">
-          You don't need to be flexible. You don't need to be 'good' at yoga. You just need to be willing to come back—slowly, gently, safely—to the body that carried you through.
+          You don't need to be flexible. You don't need to be 'good' at yoga. You just need to be willing to come back---slowly, gently, safely---to the body that carried you through.
         </p>
       </>
     ),
@@ -1007,10 +1007,10 @@ export const bodyBasedHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Inside your body runs a superhighway of communication between your brain and your organs. The vagus nerve—the longest nerve in your autonomic nervous system—is your body's "brake pedal, ' the pathway that says: <em>It's safe. You can rest now.</em> After trauma, this brake often stops working. Your nervous system stays in overdrive, unable to downshift into calm. Learning to activate your vagus nerve is like learning to press that brake yourself—bringing your body back to a state where healing is possible.
+            Inside your body runs a superhighway of communication between your brain and your organs. The vagus nerve---the longest nerve in your autonomic nervous system---is your body's "brake pedal, ' the pathway that says: <em>It's safe. You can rest now.</em> After trauma, this brake often stops working. Your nervous system stays in overdrive, unable to downshift into calm. Learning to activate your vagus nerve is like learning to press that brake yourself---bringing your body back to a state where healing is possible.
           </p>
           <p className="mb-6">
-            The vagus nerve is central to polyvagal theory, developed by Dr. Stephen Porges <Citation id="1" index={1} source="International Journal of Psychophysiology" year="2001" tier={1} />. Understanding how it works—and how to activate it—gives you a powerful tool for self-regulation and trauma recovery.
+            The vagus nerve is central to polyvagal theory, developed by Dr. Stephen Porges <Citation id="1" index={1} source="International Journal of Psychophysiology" year="2001" tier={1} />. Understanding how it works---and how to activate it---gives you a powerful tool for self-regulation and trauma recovery.
           </p>
         </div>
 
@@ -1018,7 +1018,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           What Is the Vagus Nerve?
         </h2>
         <p className="mb-6">
-          The vagus nerve is the tenth cranial nerve, running from your brainstem through your face, throat, heart, lungs, and digestive system. It's the primary pathway of the <strong>parasympathetic nervous system</strong>—the "rest and digest" system that counterbalances the sympathetic "fight or flight" system <Citation id="3" index={3} source="Cleveland Clinic Journal of Medicine" year="2020" tier={1} />.
+          The vagus nerve is the tenth cranial nerve, running from your brainstem through your face, throat, heart, lungs, and digestive system. It's the primary pathway of the <strong>parasympathetic nervous system</strong>---the "rest and digest" system that counterbalances the sympathetic "fight or flight" system <Citation id="3" index={3} source="Cleveland Clinic Journal of Medicine" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           The vagus nerve regulates:
@@ -1033,7 +1033,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p><strong>Critical insight:</strong> The vagus nerve has two branches—ventral (safe/social) and dorsal (shutdown). In trauma, you can get stuck in dorsal (freeze) or lose access to ventral (connection). Healing means strengthening ventral vagal tone.</p>
+          <p><strong>Critical insight:</strong> The vagus nerve has two branches---ventral (safe/social) and dorsal (shutdown). In trauma, you can get stuck in dorsal (freeze) or lose access to ventral (connection). Healing means strengthening ventral vagal tone.</p>
         </ArticleCallout>
 
         <h2 id="polyvagal-theory" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1063,7 +1063,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
                   <p className="mb-4"><strong>State:</strong> Calm, connected, engaged. You feel safe.</p>
                   <p className="mb-4"><strong>Physiology:</strong> Slow heart rate, deep breathing, relaxed muscles, good digestion.</p>
                   <p className="mb-4"><strong>Social behavior:</strong> Open facial expressions, warm voice, eye contact, empathy.</p>
-                  <p className="mb-4">This is the state where healing, connection, and growth happen. It's mediated by the <strong>ventral vagal complex</strong>—the newest evolutionary branch.</p>
+                  <p className="mb-4">This is the state where healing, connection, and growth happen. It's mediated by the <strong>ventral vagal complex</strong>---the newest evolutionary branch.</p>
                 </div>
               ),
             },
@@ -1075,7 +1075,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
                   <p className="mb-4"><strong>State:</strong> Activated, anxious, alert. You perceive threat.</p>
                   <p className="mb-4"><strong>Physiology:</strong> Rapid heart rate, shallow breathing, muscle tension, adrenaline surge.</p>
                   <p className="mb-4"><strong>Behavior:</strong> Hypervigilance, irritability, difficulty concentrating, urge to flee or fight.</p>
-                  <p className="mb-4">This is adaptive in short bursts. In PTSD, it becomes chronic—your body never downshifts.</p>
+                  <p className="mb-4">This is adaptive in short bursts. In PTSD, it becomes chronic---your body never downshifts.</p>
                 </div>
               ),
             },
@@ -1087,7 +1087,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
                   <p className="mb-4"><strong>State:</strong> Collapsed, numb, dissociated. You've given up.</p>
                   <p className="mb-4"><strong>Physiology:</strong> Slow heart rate, low blood pressure, shallow breathing, feeling "dead inside."</p>
                   <p className="mb-4"><strong>Behavior:</strong> Withdrawal, helplessness, immobility, hopelessness.</p>
-                  <p className="mb-4">This is mediated by the <strong>dorsal vagal complex</strong>—the oldest evolutionary system. It's protective (freeze to survive), but chronic dorsal activation is depression, dissociation, and despair.</p>
+                  <p className="mb-4">This is mediated by the <strong>dorsal vagal complex</strong>---the oldest evolutionary system. It's protective (freeze to survive), but chronic dorsal activation is depression, dissociation, and despair.</p>
                 </div>
               ),
             },
@@ -1098,7 +1098,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           Trauma and Vagal Tone
         </h2>
         <p className="mb-6">
-          <strong>Vagal tone</strong> refers to the activity level of the vagus nerve. High vagal tone = your body can shift flexibly between states. Low vagal tone = you're stuck—either in hyperarousal (sympathetic) or shutdown (dorsal vagal) <Citation id="4" index={4} source="Biological Psychiatry" year="2021" tier={1} />.
+          <strong>Vagal tone</strong> refers to the activity level of the vagus nerve. High vagal tone = your body can shift flexibly between states. Low vagal tone = you're stuck---either in hyperarousal (sympathetic) or shutdown (dorsal vagal) <Citation id="4" index={4} source="Biological Psychiatry" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           People with PTSD often have <strong>low vagal tone</strong>, measured by heart rate variability (HRV). This means:
@@ -1135,7 +1135,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="tip">
-          <p><strong>Daily practice:</strong> Pick 2-3 techniques and do them daily for 2 weeks. Track your stress levels. Most people notice a difference within a week—better sleep, less reactivity, more capacity for calm.</p>
+          <p><strong>Daily practice:</strong> Pick 2-3 techniques and do them daily for 2 weeks. Track your stress levels. Most people notice a difference within a week---better sleep, less reactivity, more capacity for calm.</p>
         </ArticleCallout>
 
         <h2 id="building-vagal-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1165,11 +1165,11 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>You need help processing the trauma itself, not just managing symptoms</li>
         </ul>
         <p className="mb-6">
-          Therapists trained in polyvagal-informed approaches (Somatic Experiencing, Sensorimotor Psychotherapy) can help you build a stronger ventral vagal "anchor" so you spend more time in the safe, connected state—and less time stuck in fight/flight or freeze.
+          Therapists trained in polyvagal-informed approaches (Somatic Experiencing, Sensorimotor Psychotherapy) can help you build a stronger ventral vagal "anchor" so you spend more time in the safe, connected state---and less time stuck in fight/flight or freeze.
         </p>
 
         <p className="mb-6">
-          Your vagus nerve is your body's built-in reset button. Learning to press it is one of the most powerful tools you have for healing trauma—and reclaiming your nervous system's capacity for peace.
+          Your vagus nerve is your body's built-in reset button. Learning to press it is one of the most powerful tools you have for healing trauma---and reclaiming your nervous system's capacity for peace.
         </p>
       </>
     ),
@@ -1256,7 +1256,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your breath is the only part of your autonomic nervous system you can control. You can't consciously slow your heart rate or tell your adrenals to stop pumping cortisol—but you <em>can</em> change your breathing. And when you do, everything else follows. Slow, deep breaths signal safety to your brain. Rapid breaths mobilize energy. Held breath mirrors freeze. Breathwork isn't just relaxation—it's a direct pathway to rewiring your trauma response.
+            Your breath is the only part of your autonomic nervous system you can control. You can't consciously slow your heart rate or tell your adrenals to stop pumping cortisol---but you <em>can</em> change your breathing. And when you do, everything else follows. Slow, deep breaths signal safety to your brain. Rapid breaths mobilize energy. Held breath mirrors freeze. Breathwork isn't just relaxation---it's a direct pathway to rewiring your trauma response.
           </p>
           <p className="mb-6">
             Research shows that controlled breathing can reduce PTSD symptoms, improve emotional regulation, and increase heart rate variability (a marker of nervous system resilience) <Citation id="1" index={1} source="Frontiers in Human Neuroscience" year="2021" tier={1} />. Unlike medications or therapy that require resources, your breath is free, portable, and always available.
@@ -1267,14 +1267,14 @@ export const bodyBasedHealingArticlesA: Article[] = [
           Why Breathwork Works for Trauma
         </h2>
         <p className="mb-6">
-          After trauma, your breath often becomes shallow, rapid, or restricted. This isn't just a symptom—it <strong>maintains</strong> the trauma response <Citation id="2" index={2} source="Biological Psychology" year="2020" tier={1} />. Here's why breathwork is so powerful:
+          After trauma, your breath often becomes shallow, rapid, or restricted. This isn't just a symptom---it <strong>maintains</strong> the trauma response <Citation id="2" index={2} source="Biological Psychology" year="2020" tier={1} />. Here's why breathwork is so powerful:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Direct vagus nerve activation:</strong> Slow, deep breathing stimulates the vagus nerve, shifting you from fight/flight to rest/digest.</li>
           <li><strong>Regulates CO2 and O2:</strong> Trauma survivors often hyperventilate (even subtly), creating an imbalance that fuels anxiety. Controlled breathing restores balance.</li>
           <li><strong>Interrupts freeze states:</strong> Breath is movement. When you're frozen, intentional breathing can unlock the immobility.</li>
           <li><strong>Accesses trauma energy:</strong> Certain breathwork patterns can release stored somatic tension and emotion.</li>
-          <li><strong>Increases interoception:</strong> Paying attention to breath builds awareness of your internal state—the foundation of self-regulation.</li>
+          <li><strong>Increases interoception:</strong> Paying attention to breath builds awareness of your internal state---the foundation of self-regulation.</li>
         </ul>
 
         <StatCard
@@ -1469,7 +1469,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
           <li>You want guidance integrating breathwork with trauma processing</li>
         </ul>
         <p className="mb-6">
-          Your breath is the bridge between body and mind, between past and present. Learning to breathe differently is learning to <em>be</em> differently—calmer, more grounded, and more in control of the nervous system that once felt like it controlled you.
+          Your breath is the bridge between body and mind, between past and present. Learning to breathe differently is learning to <em>be</em> differently---calmer, more grounded, and more in control of the nervous system that once felt like it controlled you.
         </p>
 
         <QuoteBlock

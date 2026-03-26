@@ -156,7 +156,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
               title: 'Breath Awareness (5 minutes)',
               content: (
                 <div>
-                  <p className="mb-4">Sit comfortably. Close your eyes. Focus on the sensation of breathing — the air entering your nose, your chest rising, your belly expanding. When your mind wanders (it will), gently bring it back. Each return is a repetition, like a bicep curl for your attention muscle.</p>
+                  <p className="mb-4">Sit comfortably. Close your eyes. Focus on the sensation of breathing --- the air entering your nose, your chest rising, your belly expanding. When your mind wanders (it will), gently bring it back. Each return is a repetition, like a bicep curl for your attention muscle.</p>
                   <p>This is the foundation practice. It builds the capacity to notice where your attention goes, which is the first step to noticing where your emotions go.</p>
                 </div>
               ),
@@ -166,7 +166,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
               title: 'Emotion Noting (5-10 minutes)',
               content: (
                 <div>
-                  <p className="mb-4">Sit in quiet and turn your attention inward. Instead of focusing on breath, notice whatever emotion is present. Label it silently: "worry,", "boredom,", "contentment,", "irritation." Do not engage with the story behind the emotion — just name it and move on.</p>
+                  <p className="mb-4">Sit in quiet and turn your attention inward. Instead of focusing on breath, notice whatever emotion is present. Label it silently: "worry,", "boredom,", "contentment,", "irritation." Do not engage with the story behind the emotion --- just name it and move on.</p>
                   <p>This practice builds emotional granularity and the observer perspective simultaneously.</p>
                 </div>
               ),
@@ -176,7 +176,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
               title: 'Informal Mindfulness (anytime)',
               content: (
                 <div>
-                  <p className="mb-4">Choose one daily activity — brushing your teeth, washing dishes, walking to your car — and do it with full attention. Notice every sensation: the temperature of the water, the texture of the brush, the sound of your footsteps. When your mind wanders, bring it back.</p>
+                  <p className="mb-4">Choose one daily activity --- brushing your teeth, washing dishes, walking to your car --- and do it with full attention. Notice every sensation: the temperature of the water, the texture of the brush, the sound of your footsteps. When your mind wanders, bring it back.</p>
                   <p>Informal mindfulness integrates present-moment awareness into your existing routine without requiring extra time.</p>
                 </div>
               ),
@@ -188,7 +188,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Research on dose suggests that even 5-10 minutes of daily mindfulness practice produces measurable benefits <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />. Start with breath awareness for five minutes each morning. After two weeks, add emotion noting for five minutes in the evening. Build gradually — consistency matters more than duration.
+          Research on dose suggests that even 5-10 minutes of daily mindfulness practice produces measurable benefits <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />. Start with breath awareness for five minutes each morning. After two weeks, add emotion noting for five minutes in the evening. Build gradually --- consistency matters more than duration.
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Week 1-2:</strong> 5 minutes of breath awareness daily.</li>
@@ -205,7 +205,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Mindfulness is not about emptying your mind or achieving a state of bliss. It is about building the capacity to be present with whatever arises — comfortable or uncomfortable — without being controlled by it. Start with five minutes a day and let the practice grow from there.</p>
+          <p>Mindfulness is not about emptying your mind or achieving a state of bliss. It is about building the capacity to be present with whatever arises --- comfortable or uncomfortable --- without being controlled by it. Start with five minutes a day and let the practice grow from there.</p>
         </ArticleCallout>
       </>
     ),
@@ -294,7 +294,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You might think you are angry when you are actually hurt. You might believe you are "fine" when your body is flooded with anxiety. You might not realize that the heaviness you feel every morning is grief you have never processed. These are emotional blind spots — feelings that influence your behavior without your conscious awareness.
+            You might think you are angry when you are actually hurt. You might believe you are "fine" when your body is flooded with anxiety. You might not realize that the heaviness you feel every morning is grief you have never processed. These are emotional blind spots --- feelings that influence your behavior without your conscious awareness.
           </p>
           <p className="mb-6">
             Research on unconscious emotion shows that our brains process emotional information even when we are not aware of it <Citation id="1" index={1} source="Neuroscience and Biobehavioral Reviews" year="2012" tier={1} />. These unrecognized emotions still drive behavior, decision-making, and physical health. A meta-analysis on emotional awareness found that people with greater awareness of their own emotions had significantly better mental health outcomes <Citation id="4" index={4} source="Emotion Review" year="2020" tier={1} />.
@@ -308,10 +308,10 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           Emotional blind spots develop for several reasons <Citation id="3" index={3} source="Journal of Personality" year="2015" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Childhood conditioning</strong> — if certain emotions were punished or dismissed ("boys do not cry,", "do not be so sensitive"), you learned to suppress them automatically.</li>
-          <li><strong>Defense mechanisms</strong> — your psyche protects you from overwhelming feelings through denial, intellectualization, or projection.</li>
-          <li><strong>Cultural norms</strong> — some cultures discourage expressing vulnerability, anger, or sadness.</li>
-          <li><strong>Habit</strong> — years of ignoring certain feelings create neural pathways that bypass emotional awareness.</li>
+          <li><strong>Childhood conditioning</strong> --- if certain emotions were punished or dismissed ("boys do not cry,", "do not be so sensitive"), you learned to suppress them automatically.</li>
+          <li><strong>Defense mechanisms</strong> --- your psyche protects you from overwhelming feelings through denial, intellectualization, or projection.</li>
+          <li><strong>Cultural norms</strong> --- some cultures discourage expressing vulnerability, anger, or sadness.</li>
+          <li><strong>Habit</strong> --- years of ignoring certain feelings create neural pathways that bypass emotional awareness.</li>
         </ul>
 
         <h2 id="common-blind-spots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -334,7 +334,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
               label: 'Loneliness',
               content: (
                 <div>
-                  <p className="mb-4">Many people feel lonely but interpret it as boredom, restlessness, or irritability. You might scroll endlessly, stay busy, or overwork — all to avoid the ache of disconnection. Research shows loneliness is as harmful to health as smoking 15 cigarettes a day, yet it remains one of the most stigmatized and least recognized emotions.</p>
+                  <p className="mb-4">Many people feel lonely but interpret it as boredom, restlessness, or irritability. You might scroll endlessly, stay busy, or overwork --- all to avoid the ache of disconnection. Research shows loneliness is as harmful to health as smoking 15 cigarettes a day, yet it remains one of the most stigmatized and least recognized emotions.</p>
                 </div>
               ),
             },
@@ -352,7 +352,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
               label: 'Fear Disguised as Anger',
               content: (
                 <div>
-                  <p className="mb-4">Anger is often a "secondary emotion" — a protective layer over a more vulnerable feeling like fear, hurt, or helplessness. If you default to anger in many situations, the blind spot may be the fear underneath. "I am furious at my partner" might actually be "I am terrified of losing them."</p>
+                  <p className="mb-4">Anger is often a "secondary emotion" --- a protective layer over a more vulnerable feeling like fear, hurt, or helplessness. If you default to anger in many situations, the blind spot may be the fear underneath. "I am furious at my partner" might actually be "I am terrified of losing them."</p>
                 </div>
               ),
             },
@@ -393,7 +393,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you recognize that significant emotions have been outside your awareness — especially shame, grief, or trauma-related fear — therapy is one of the most effective ways to safely explore these blind spots <Citation id="6" index={6} source="Clinical Psychology Review" year="2019" tier={1} />. A skilled therapist creates a safe environment where hidden emotions can surface without overwhelming you.
+          If you recognize that significant emotions have been outside your awareness --- especially shame, grief, or trauma-related fear --- therapy is one of the most effective ways to safely explore these blind spots <Citation id="6" index={6} source="Clinical Psychology Review" year="2019" tier={1} />. A skilled therapist creates a safe environment where hidden emotions can surface without overwhelming you.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
@@ -489,7 +489,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
             You cannot see your own face without a mirror. In the same way, you cannot fully see your emotional patterns without the reflection of others. The people around you notice things you miss: the way you shut down when criticized, how you deflect with humor when you are hurt, or the pattern of withdrawing when you are stressed.
           </p>
           <p className="mb-6">
-            Research on self-awareness shows that internal reflection alone is not enough. Tasha Eurich's research found that people who scored highest in self-awareness actively sought feedback from others <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2017" tier={1} />. External feedback provides the missing piece — how your internal experience translates into observable behavior and how that behavior affects the people around you.
+            Research on self-awareness shows that internal reflection alone is not enough. Tasha Eurich's research found that people who scored highest in self-awareness actively sought feedback from others <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2017" tier={1} />. External feedback provides the missing piece --- how your internal experience translates into observable behavior and how that behavior affects the people around you.
           </p>
         </div>
 
@@ -555,24 +555,24 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           items={[
             {
               id: 'truth',
-              title: "Truth Triggers — 'That is wrong'",
+              title: "Truth Triggers --- 'That is wrong'",
               content: <p>You reject the feedback because you believe it is inaccurate. Before dismissing it, consider: could there be some truth in it, even if the delivery was imperfect?</p>,
             },
             {
               id: 'relationship',
-              title: "Relationship Triggers — 'Who are you to tell me?",
+              title: "Relationship Triggers --- 'Who are you to tell me?",
               content: <p>You reject the feedback because of who delivered it. Separate the message from the messenger. Even imperfect people can offer valuable observations.</p>,
             },
             {
               id: 'identity',
-              title: "Identity Triggers — 'That is not who I am'",
+              title: "Identity Triggers --- 'That is not who I am'",
               content: <p>The feedback threatens your self-image. This is the deepest trigger. Remember: receiving feedback about behavior does not define your worth as a person. A growth mindset helps here.</p>,
             },
           ]}
         />
 
         <p className="mb-6">
-          People with a growth mindset — who believe abilities can be developed — are significantly better at receiving and using feedback than those with a fixed mindset <Citation id="7" index={7} source="Psychological Science" year="2016" tier={1} />.
+          People with a growth mindset --- who believe abilities can be developed --- are significantly better at receiving and using feedback than those with a fixed mindset <Citation id="7" index={7} source="Psychological Science" year="2016" tier={1} />.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -589,7 +589,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If feedback consistently triggers intense shame, defensiveness, or emotional shutdowns that you cannot manage, a therapist can help you build resilience around receiving challenging information <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />. Therapy itself is a form of expert feedback — a therapist reflects back what they observe in a safe, structured environment.
+          If feedback consistently triggers intense shame, defensiveness, or emotional shutdowns that you cannot manage, a therapist can help you build resilience around receiving challenging information <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />. Therapy itself is a form of expert feedback --- a therapist reflects back what they observe in a safe, structured environment.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
@@ -682,10 +682,10 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Why does a cutting comment from your boss sting more than one from a stranger? Why does canceling plans with a close friend trigger guilt while skipping a work social does not? The answer lies in your values. Your emotions are not random — they are signals about what matters most to you.
+            Why does a cutting comment from your boss sting more than one from a stranger? Why does canceling plans with a close friend trigger guilt while skipping a work social does not? The answer lies in your values. Your emotions are not random --- they are signals about what matters most to you.
           </p>
           <p className="mb-6">
-            Research in acceptance and commitment therapy (ACT) shows that knowing your values — and living in alignment with them — is one of the strongest predictors of psychological well-being <Citation id="1" index={1} source="Journal of Contextual Behavioral Science" year="2019" tier={1} />. Values act as a compass for both your emotions and your choices. When you live in alignment, you feel fulfilled. When you drift from your values, you feel anxious, empty, or lost <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />.
+            Research in acceptance and commitment therapy (ACT) shows that knowing your values --- and living in alignment with them --- is one of the strongest predictors of psychological well-being <Citation id="1" index={1} source="Journal of Contextual Behavioral Science" year="2019" tier={1} />. Values act as a compass for both your emotions and your choices. When you live in alignment, you feel fulfilled. When you drift from your values, you feel anxious, empty, or lost <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -716,7 +716,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           How to Identify Your Core Values
         </h2>
         <p className="mb-6">
-          Values are not goals — they are directions. Goals can be achieved and checked off. Values are ongoing commitments that guide how you want to live. "Get promoted" is a goal. "Pursue meaningful work" is a value <Citation id="5" index={5} source="Clinical Psychology Review" year="2017" tier={1} />.
+          Values are not goals --- they are directions. Goals can be achieved and checked off. Values are ongoing commitments that guide how you want to live. "Get promoted" is a goal. "Pursue meaningful work" is a value <Citation id="5" index={5} source="Clinical Psychology Review" year="2017" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -735,12 +735,12 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
             {
               id: 'admiration',
               title: 'The Admiration Test',
-              content: <p>Think of three people you deeply admire. What qualities do they embody that you respect most? These qualities often reflect your own aspirational values — the way you want to show up in the world.</p>,
+              content: <p>Think of three people you deeply admire. What qualities do they embody that you respect most? These qualities often reflect your own aspirational values --- the way you want to show up in the world.</p>,
             },
             {
               id: 'deathbed',
               title: 'The Looking-Back Exercise',
-              content: <p>Imagine looking back on your life at age 90. What would you regret not doing? What would you be proud of? The answers point to your deepest values — the things that matter when everything else falls away.</p>,
+              content: <p>Imagine looking back on your life at age 90. What would you regret not doing? What would you be proud of? The answers point to your deepest values --- the things that matter when everything else falls away.</p>,
             },
           ]}
         />
@@ -752,7 +752,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           Values are a powerful anchor during emotional storms. When you are overwhelmed, asking "What do my values say about how to handle this?" cuts through confusion and provides clarity. Self-affirmation research shows that reflecting on personal values during stressful moments reduces cortisol and improves decision-making <Citation id="2" index={2} source="Advances in Experimental Social Psychology" year="2014" tier={1} />.
         </p>
         <p className="mb-6">
-          Living in alignment with your values also creates what researchers call self-concordance — a sense that your daily actions match your deeper self. Self-concordance is strongly associated with greater well-being, persistence, and life satisfaction <Citation id="7" index={7} source="Journal of Personality" year="2005" tier={1} />.
+          Living in alignment with your values also creates what researchers call self-concordance --- a sense that your daily actions match your deeper self. Self-concordance is strongly associated with greater well-being, persistence, and life satisfaction <Citation id="7" index={7} source="Journal of Personality" year="2005" tier={1} />.
         </p>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -770,7 +770,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Your emotions are not random disruptions — they are signals about what you value. Anger points to violated values. Joy points to honored values. When you understand the connection between your feelings and your values, every emotion becomes useful information for living a more intentional life.</p>
+          <p>Your emotions are not random disruptions --- they are signals about what you value. Anger points to violated values. Joy points to honored values. When you understand the connection between your feelings and your values, every emotion becomes useful information for living a more intentional life.</p>
         </ArticleCallout>
       </>
     ),
@@ -859,10 +859,10 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            There is a cruel irony in self-awareness work: the more you see about yourself, the more material your inner critic has to work with. You start noticing your patterns — your avoidance, your defensiveness, your anxiety — and instead of growth, you feel worse. The missing ingredient is not more awareness. It is self-compassion.
+            There is a cruel irony in self-awareness work: the more you see about yourself, the more material your inner critic has to work with. You start noticing your patterns --- your avoidance, your defensiveness, your anxiety --- and instead of growth, you feel worse. The missing ingredient is not more awareness. It is self-compassion.
           </p>
           <p className="mb-6">
-            Kristin Neff, the pioneering researcher on self-compassion, defines it as treating yourself with the same kindness, concern, and support you would offer a good friend who is struggling <Citation id="1" index={1} source="Self and Identity" year="2003" tier={1} />. Research shows that self-compassion is not self-indulgence — it is associated with greater motivation, more accountability, and better emotional regulation than self-criticism <Citation id="2" index={2} source="Journal of Research in Personality" year="2007" tier={1} />.
+            Kristin Neff, the pioneering researcher on self-compassion, defines it as treating yourself with the same kindness, concern, and support you would offer a good friend who is struggling <Citation id="1" index={1} source="Self and Identity" year="2003" tier={1} />. Research shows that self-compassion is not self-indulgence --- it is associated with greater motivation, more accountability, and better emotional regulation than self-criticism <Citation id="2" index={2} source="Journal of Research in Personality" year="2007" tier={1} />.
           </p>
         </div>
 
@@ -870,10 +870,10 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           The Self-Criticism Trap
         </h2>
         <p className="mb-6">
-          Many people believe that being hard on themselves keeps them motivated. But the research tells a different story. Self-criticism activates the threat system in your brain — the same fight-or-flight response that fires when you face external danger. Your body releases cortisol, your heart rate increases, and your thinking becomes rigid and narrow <Citation id="6" index={6} source="Clinical Psychological Science" year="2014" tier={1} />.
+          Many people believe that being hard on themselves keeps them motivated. But the research tells a different story. Self-criticism activates the threat system in your brain --- the same fight-or-flight response that fires when you face external danger. Your body releases cortisol, your heart rate increases, and your thinking becomes rigid and narrow <Citation id="6" index={6} source="Clinical Psychological Science" year="2014" tier={1} />.
         </p>
         <p className="mb-6">
-          Self-compassion, by contrast, activates the care system — releasing oxytocin, lowering cortisol, and increasing heart rate variability (a marker of emotional resilience). You think more clearly, feel safer, and are more willing to confront difficult truths about yourself <Citation id="5" index={5} source="Journal of Personality and Social Psychology" year="2018" tier={1} />.
+          Self-compassion, by contrast, activates the care system --- releasing oxytocin, lowering cortisol, and increasing heart rate variability (a marker of emotional resilience). You think more clearly, feel safer, and are more willing to confront difficult truths about yourself <Citation id="5" index={5} source="Journal of Personality and Social Psychology" year="2018" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -917,7 +917,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
             },
             {
               title: 'Common Humanity (vs. Isolation)',
-              description: <p>Recognize that imperfection is part of the shared human experience. Everyone struggles. Everyone has patterns they wish they could change. You are not uniquely flawed — you are human.</p>,
+              description: <p>Recognize that imperfection is part of the shared human experience. Everyone struggles. Everyone has patterns they wish they could change. You are not uniquely flawed --- you are human.</p>,
             },
             {
               title: 'Mindfulness (vs. Over-Identification)',
@@ -940,7 +940,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          A meta-analysis of self-compassion interventions found significant improvements in depression, anxiety, and stress across diverse populations <Citation id="4" index={4} source="Mindfulness" year="2019" tier={1} />. Self-compassion buffers the relationship between self-criticism and depression — even in people who are naturally self-critical, self-compassion reduces their risk of depressive episodes <Citation id="3" index={3} source="Clinical Psychology and Psychotherapy" year="2016" tier={1} />.
+          A meta-analysis of self-compassion interventions found significant improvements in depression, anxiety, and stress across diverse populations <Citation id="4" index={4} source="Mindfulness" year="2019" tier={1} />. Self-compassion buffers the relationship between self-criticism and depression --- even in people who are naturally self-critical, self-compassion reduces their risk of depressive episodes <Citation id="3" index={3} source="Clinical Psychology and Psychotherapy" year="2016" tier={1} />.
         </p>
 
         <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -957,14 +957,14 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Start with the self-compassion break. Practice it three times this week when you notice self-critical thoughts. It will feel awkward at first — that is normal. Self-compassion is a skill, not a feeling, and it strengthens with practice <Citation id="8" index={8} source="Handbook of Mindfulness and Self-Regulation" year="2015" tier={1} />.
+          Start with the self-compassion break. Practice it three times this week when you notice self-critical thoughts. It will feel awkward at first --- that is normal. Self-compassion is a skill, not a feeling, and it strengthens with practice <Citation id="8" index={8} source="Handbook of Mindfulness and Self-Regulation" year="2015" tier={1} />.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If self-criticism is deeply entrenched — if kindness toward yourself feels impossible or triggers more shame — a therapist trained in compassion-focused therapy (CFT) or mindful self-compassion (MSC) can help. These approaches are specifically designed to help people who find self-compassion challenging <Citation id="4" index={4} source="Mindfulness" year="2019" tier={1} />.
+          If self-criticism is deeply entrenched --- if kindness toward yourself feels impossible or triggers more shame --- a therapist trained in compassion-focused therapy (CFT) or mindful self-compassion (MSC) can help. These approaches are specifically designed to help people who find self-compassion challenging <Citation id="4" index={4} source="Mindfulness" year="2019" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">

@@ -98,7 +98,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
             You already perform dozens of habits every day without thinking: brushing your teeth, making coffee, checking your phone after you wake up. What if you could hijack these existing routines and use them as launching pads for new behaviors you want to build?
           </p>
           <p className="mb-6">
-            This is the power of habit stacking—a technique that leverages your brain's existing neural pathways to make new habits stick faster and with less willpower <Citation id="2" index={2} source="Avery" year="2018" tier={5} />. Instead of finding a new cue for a new behavior, you pair the new behavior with a habit you already do automatically. The result: faster automaticity and higher success rates.
+            This is the power of habit stacking---a technique that leverages your brain's existing neural pathways to make new habits stick faster and with less willpower <Citation id="2" index={2} source="Avery" year="2018" tier={5} />. Instead of finding a new cue for a new behavior, you pair the new behavior with a habit you already do automatically. The result: faster automaticity and higher success rates.
           </p>
         </div>
 
@@ -106,7 +106,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           What Is Habit Stacking?
         </h2>
         <p className="mb-6">
-          Habit stacking is a specific form of implementation intention—a psychological strategy where you pre-decide when and where you'll perform a behavior <Citation id="4" index={4} source="American Psychologist" year="1999" tier={1} />. The formula is simple:
+          Habit stacking is a specific form of implementation intention---a psychological strategy where you pre-decide when and where you'll perform a behavior <Citation id="4" index={4} source="American Psychologist" year="1999" tier={1} />. The formula is simple:
         </p>
 
         <ArticleCallout variant="info">
@@ -126,7 +126,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The key is that the current habit acts as the cue for the new habit. You're not relying on motivation, time-based reminders, or willpower—you're relying on a behavior you already do automatically <Citation id="3" index={3} source="European Journal of Social Psychology" year="2010" tier={1} />.
+          The key is that the current habit acts as the cue for the new habit. You're not relying on motivation, time-based reminders, or willpower---you're relying on a behavior you already do automatically <Citation id="3" index={3} source="European Journal of Social Psychology" year="2010" tier={1} />.
         </p>
 
         <h2 id="why-it-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -162,7 +162,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               title: 'Week 5-8: Automaticity Develops',
               description: (
                 <p>
-                  The two behaviors feel like one action. Skipping the second behavior feels unnatural—like stopping halfway through brushing your teeth. The basal ganglia has chunked the stack into a single habit loop <Citation id="8" index={8} source="Trends in Neurosciences" year="2020" tier={1} />.
+                  The two behaviors feel like one action. Skipping the second behavior feels unnatural---like stopping halfway through brushing your teeth. The basal ganglia has chunked the stack into a single habit loop <Citation id="8" index={8} source="Trends in Neurosciences" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -173,10 +173,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           The Power of Implementation Intentions
         </h2>
         <p className="mb-6">
-          Habit stacking is a specific application of implementation intentions—"if-then" plans that specify when, where, and how you'll perform a behavior. Research on implementation intentions is robust: they increase goal achievement rates by an average of 20-30% <Citation id="1" index={1} source="Advances in Experimental Social Psychology" year="2006" tier={1} />.
+          Habit stacking is a specific application of implementation intentions---"if-then" plans that specify when, where, and how you'll perform a behavior. Research on implementation intentions is robust: they increase goal achievement rates by an average of 20-30% <Citation id="1" index={1} source="Advances in Experimental Social Psychology" year="2006" tier={1} />.
         </p>
         <p className="mb-6">
-          Why are they so effective? Implementation intentions bypass the need for conscious decision-making. When the cue appears (finishing your coffee, closing your laptop), the behavior is pre-programmed. You don't have to decide whether to do it or when to do it—you already decided.
+          Why are they so effective? Implementation intentions bypass the need for conscious decision-making. When the cue appears (finishing your coffee, closing your laptop), the behavior is pre-programmed. You don't have to decide whether to do it or when to do it---you already decided.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -206,7 +206,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                   <p className="mb-3">The anchor must be:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Daily and consistent:</strong> You do it at roughly the same time, in the same place, every day</li>
-                    <li><strong>Already automatic:</strong> You don't have to think about doing it—it just happens</li>
+                    <li><strong>Already automatic:</strong> You don't have to think about doing it---it just happens</li>
                     <li><strong>Specific:</strong> "After I wake up" is too vague. "After I turn off my alarm and sit up in bed" is specific.</li>
                   </ul>
                   <p className="mt-3">
@@ -221,7 +221,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Start absurdly small—much smaller than you think you need to. The goal is to make the new behavior so easy it can't fail:
+                    Start absurdly small---much smaller than you think you need to. The goal is to make the new behavior so easy it can't fail:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"After I pour coffee, I will do 1 pushup" (not 20 pushups)</li>
@@ -277,7 +277,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                     <li>After I put on workout clothes, I will do 5 minutes of stretching.</li>
                   </ol>
                   <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-                    This creates a 5-behavior chain, each one triggering the next. By the end, you're dressed and stretched—ready to exercise—without making a single decision.
+                    This creates a 5-behavior chain, each one triggering the next. By the end, you're dressed and stretched---ready to exercise---without making a single decision.
                   </p>
                 </div>
               ),
@@ -355,10 +355,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
             title: 'Ineffective Habit Stack',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>"When I have time, I will meditate" — Vague cue, never triggers</li>
-                <li>"After I wake up, I will exercise for 60 minutes" — Anchor too broad, new habit too big</li>
-                <li>"After I feel stressed, I will take deep breaths" — Emotional cue is inconsistent</li>
-                <li>"After I eat dinner, I will run 5 miles" — New habit too complex for beginners</li>
+                <li>"When I have time, I will meditate" --- Vague cue, never triggers</li>
+                <li>"After I wake up, I will exercise for 60 minutes" --- Anchor too broad, new habit too big</li>
+                <li>"After I feel stressed, I will take deep breaths" --- Emotional cue is inconsistent</li>
+                <li>"After I eat dinner, I will run 5 miles" --- New habit too complex for beginners</li>
               </ul>
             ),
           }}
@@ -366,10 +366,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
             title: 'Effective Habit Stack',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>"After I pour my morning coffee, I will sit for 2 minutes of meditation" — Specific cue, small habit</li>
-                <li>"After I sit up in bed, I will put on workout clothes" — Clear anchor, minimal effort</li>
-                <li>"After I close my laptop at 5pm, I will take 5 deep breaths" — Consistent daily cue</li>
-                <li>"After I eat dinner, I will put on running shoes" — Scales the commitment down</li>
+                <li>"After I pour my morning coffee, I will sit for 2 minutes of meditation" --- Specific cue, small habit</li>
+                <li>"After I sit up in bed, I will put on workout clothes" --- Clear anchor, minimal effort</li>
+                <li>"After I close my laptop at 5pm, I will take 5 deep breaths" --- Consistent daily cue</li>
+                <li>"After I eat dinner, I will put on running shoes" --- Scales the commitment down</li>
               </ul>
             ),
           }}
@@ -409,7 +409,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           <li>Habit stacking pairs a new behavior with an existing automatic habit using the formula: "After I [CURRENT HABIT], I will [NEW HABIT]"</li>
           <li>It works by piggybacking on neural pathways already encoded in the basal ganglia</li>
           <li>Choose anchor habits that are daily, automatic, and happen in consistent contexts</li>
-          <li>Start with absurdly small new behaviors—scale up after the stack is automatic</li>
+          <li>Start with absurdly small new behaviors---scale up after the stack is automatic</li>
           <li>Implementation intentions increase goal achievement by 20-30% by pre-deciding when and where you'll act</li>
           <li>You can build chains of 3-5 stacked habits, each one triggering the next</li>
         </ul>
@@ -514,10 +514,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You walk into your kitchen and see a bowl of fruit on the counter. Without conscious thought, you grab an apple. The next day, the fruit bowl is replaced with a jar of cookies. You grab a cookie. Same you, same intention to eat healthy, different outcome—because the environment changed.
+            You walk into your kitchen and see a bowl of fruit on the counter. Without conscious thought, you grab an apple. The next day, the fruit bowl is replaced with a jar of cookies. You grab a cookie. Same you, same intention to eat healthy, different outcome---because the environment changed.
           </p>
           <p className="mb-6">
-            This is the power of environmental design: your surroundings shape your behavior far more than you realize. Research shows that willpower and motivation account for only a fraction of your daily choices—most behaviors are cued by your environment <Citation id="1" index={1} source="Annual Review of Public Health" year="2008" tier={1} />. The good news? You can intentionally design your spaces to make good habits easier and bad habits harder.
+            This is the power of environmental design: your surroundings shape your behavior far more than you realize. Research shows that willpower and motivation account for only a fraction of your daily choices---most behaviors are cued by your environment <Citation id="1" index={1} source="Annual Review of Public Health" year="2008" tier={1} />. The good news? You can intentionally design your spaces to make good habits easier and bad habits harder.
           </p>
         </div>
 
@@ -525,7 +525,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Why Environment Trumps Willpower
         </h2>
         <p className="mb-6">
-          Behavioral economics research, popularized by books like <em>Nudge</em> <Citation id="2" index={2} source="Yale University Press" year="2008" tier={5} />, has demonstrated a fundamental truth: people take the path of least resistance. When healthy food is visible and accessible, people eat more of it. When junk food requires opening cabinets and unwrapping layers, consumption drops—without any change in personal motivation <Citation id="4" index={4} source="Journal of Consumer Research" year="2012" tier={1} />.
+          Behavioral economics research, popularized by books like <em>Nudge</em> <Citation id="2" index={2} source="Yale University Press" year="2008" tier={5} />, has demonstrated a fundamental truth: people take the path of least resistance. When healthy food is visible and accessible, people eat more of it. When junk food requires opening cabinets and unwrapping layers, consumption drops---without any change in personal motivation <Citation id="4" index={4} source="Journal of Consumer Research" year="2012" tier={1} />.
         </p>
         <p className="mb-6">
           Your brain is constantly scanning the environment for cues. When it spots a familiar trigger (your phone on the nightstand, the TV remote on the couch), the basal ganglia initiates the associated habit loop automatically. You reach for your phone before you consciously decide to. The environment cues the behavior faster than your conscious mind can intervene.
@@ -533,7 +533,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>The most successful people aren't more disciplined—they design environments that don't require discipline.</strong>
+            <strong>The most successful people aren't more disciplined---they design environments that don't require discipline.</strong>
           </p>
           <p>
             If you have to resist temptation 10 times a day, you'll eventually fail. If you design your environment so temptation never appears, you can't fail. The environment does the work for you.
@@ -667,7 +667,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                   <p className="mb-3"><strong>Make unhealthy eating difficult:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Store junk food in opaque containers in high cabinets</li>
-                    <li>Don't buy snacks you want to avoid—remove them from the environment entirely</li>
+                    <li>Don't buy snacks you want to avoid---remove them from the environment entirely</li>
                     <li>Keep your phone out of the kitchen (mindless eating while scrolling)</li>
                   </ul>
                 </div>
@@ -769,7 +769,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Designing Your Mental Environment
         </h2>
         <p className="mb-6">
-          Environment design isn't just about physical spaces—it's also about your informational and social environments:
+          Environment design isn't just about physical spaces---it's also about your informational and social environments:
         </p>
 
         <ArticleTabs
@@ -780,11 +780,11 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               content: (
                 <div>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Unfollow accounts that trigger comparison or negativity</strong> — curate your feed to support your values</li>
-                    <li><strong>Unsubscribe from marketing emails</strong> — reduce temptation and decision fatigue</li>
-                    <li><strong>Delete apps you want to use less</strong> — mobile web versions add friction</li>
-                    <li><strong>Turn off all non-essential notifications</strong> — protect your attention</li>
-                    <li><strong>Use grayscale mode on your phone</strong> — reduces dopamine hits from colorful apps</li>
+                    <li><strong>Unfollow accounts that trigger comparison or negativity</strong> --- curate your feed to support your values</li>
+                    <li><strong>Unsubscribe from marketing emails</strong> --- reduce temptation and decision fatigue</li>
+                    <li><strong>Delete apps you want to use less</strong> --- mobile web versions add friction</li>
+                    <li><strong>Turn off all non-essential notifications</strong> --- protect your attention</li>
+                    <li><strong>Use grayscale mode on your phone</strong> --- reduces dopamine hits from colorful apps</li>
                   </ul>
                 </div>
               ),
@@ -795,10 +795,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               content: (
                 <div>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Spend more time with people who embody the habits you want</strong> — behavior is contagious</li>
-                    <li><strong>Join communities aligned with your goals</strong> — running clubs, book clubs, support groups</li>
-                    <li><strong>Set boundaries with people who undermine your progress</strong> — you don't owe access to everyone</li>
-                    <li><strong>Find an accountability partner</strong> — external commitment increases follow-through</li>
+                    <li><strong>Spend more time with people who embody the habits you want</strong> --- behavior is contagious</li>
+                    <li><strong>Join communities aligned with your goals</strong> --- running clubs, book clubs, support groups</li>
+                    <li><strong>Set boundaries with people who undermine your progress</strong> --- you don't owe access to everyone</li>
+                    <li><strong>Find an accountability partner</strong> --- external commitment increases follow-through</li>
                   </ul>
                 </div>
               ),
@@ -809,10 +809,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               content: (
                 <div>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Subscribe to newsletters that teach skills you want to develop</strong> — passive learning through curation</li>
-                    <li><strong>Queue up podcasts or audiobooks that support your goals</strong> — make commute time learning time</li>
-                    <li><strong>Unsubscribe from news that induces anxiety without actionable value</strong> — protect your mental bandwidth</li>
-                    <li><strong>Curate a reading list and keep it visible</strong> — external reminder of learning intentions</li>
+                    <li><strong>Subscribe to newsletters that teach skills you want to develop</strong> --- passive learning through curation</li>
+                    <li><strong>Queue up podcasts or audiobooks that support your goals</strong> --- make commute time learning time</li>
+                    <li><strong>Unsubscribe from news that induces anxiety without actionable value</strong> --- protect your mental bandwidth</li>
+                    <li><strong>Curate a reading list and keep it visible</strong> --- external reminder of learning intentions</li>
                   </ul>
                 </div>
               ),
@@ -824,10 +824,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Key Takeaways
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Your environment shapes behavior more than willpower—design spaces to support your habits</li>
+          <li>Your environment shapes behavior more than willpower---design spaces to support your habits</li>
           <li>Four principles: make good cues obvious, bad cues invisible, reduce friction for good habits, add friction to bad habits</li>
           <li>Apply room-by-room design: bedroom for sleep, kitchen for nutrition, workspace for focus</li>
-          <li>Default options are powerful—design your life so the easiest choice is the right choice</li>
+          <li>Default options are powerful---design your life so the easiest choice is the right choice</li>
           <li>Small environmental changes (water bottles on desks, fruit at eye level) produce measurable behavior shifts</li>
           <li>Design digital, social, and informational environments with the same intentionality as physical spaces</li>
         </ul>
@@ -932,10 +932,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I just need more willpower." This is the diagnosis most people give themselves when they fail to change a behavior. If only you had more discipline, more self-control, more strength to resist temptation—then you'd succeed. But what if the problem isn't your willpower? What if you're fighting the wrong battle entirely?
+            "I just need more willpower." This is the diagnosis most people give themselves when they fail to change a behavior. If only you had more discipline, more self-control, more strength to resist temptation---then you'd succeed. But what if the problem isn't your willpower? What if you're fighting the wrong battle entirely?
           </p>
           <p className="mb-6">
-            Research on self-control suggests that willpower is a limited resource that gets depleted throughout the day <Citation id="1" index={1} source="Penguin Press" year="2011" tier={5} />. Relying on it to drive behavior change is like trying to run a marathon on a single energy bar—you'll run out before you reach the finish line. The smarter strategy: reduce friction so the behavior requires minimal willpower in the first place.
+            Research on self-control suggests that willpower is a limited resource that gets depleted throughout the day <Citation id="1" index={1} source="Penguin Press" year="2011" tier={5} />. Relying on it to drive behavior change is like trying to run a marathon on a single energy bar---you'll run out before you reach the finish line. The smarter strategy: reduce friction so the behavior requires minimal willpower in the first place.
           </p>
         </div>
 
@@ -943,7 +943,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           The Willpower Myth: Why It's Not a Character Flaw
         </h2>
         <p className="mb-6">
-          For decades, psychologists believed willpower was like a muscle—finite and depletable. The "ego depletion" hypothesis suggested that exerting self-control in one domain (resisting a donut) would drain your ability to exert self-control in another domain (staying focused on work) <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2007" tier={1} />.
+          For decades, psychologists believed willpower was like a muscle---finite and depletable. The "ego depletion" hypothesis suggested that exerting self-control in one domain (resisting a donut) would drain your ability to exert self-control in another domain (staying focused on work) <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2007" tier={1} />.
         </p>
         <p className="mb-6">
           More recent research has complicated this picture. Large replication studies have found mixed evidence for ego depletion <Citation id="2" index={2} source="Perspectives on Psychological Science" year="2016" tier={1} />. What's clear, though, is that self-control is not unlimited. Factors like sleep deprivation, stress, hunger, and decision fatigue all impair your ability to resist temptation <Citation id="8" index={8} source="Sleep Medicine Reviews" year="2020" tier={1} />.
@@ -951,10 +951,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>The takeaway isn't that willpower doesn't exist—it's that it's unreliable.</strong>
+            <strong>The takeaway isn't that willpower doesn't exist---it's that it's unreliable.</strong>
           </p>
           <p>
-            On a good day, when you're well-rested, well-fed, and low-stress, you might resist the cookie jar 10 times. But on a bad day—tired, stressed, hungry—you'll cave on attempt number 3. Building a life that depends on winning every willpower battle is a losing strategy.
+            On a good day, when you're well-rested, well-fed, and low-stress, you might resist the cookie jar 10 times. But on a bad day---tired, stressed, hungry---you'll cave on attempt number 3. Building a life that depends on winning every willpower battle is a losing strategy.
           </p>
         </ArticleCallout>
 
@@ -1112,7 +1112,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                   <p className="mb-3">The most effective friction is removal:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Delete apps</strong> you want to use less (you can still access via mobile web, but it's slower)</li>
-                    <li><strong>Don't buy junk food</strong>—you can't eat what isn't there</li>
+                    <li><strong>Don't buy junk food</strong>---you can't eat what isn't there</li>
                     <li><strong>Cancel subscriptions</strong> that encourage mindless consumption</li>
                     <li><strong>Unfollow accounts</strong> that trigger comparison or negativity</li>
                   </ul>
@@ -1146,7 +1146,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               <ul className="list-disc pl-5 space-y-2">
                 <li><strong>Goal: Exercise regularly</strong><br />Join gym on commute route, pack bag night before, go straight after work (no debate)</li>
                 <li><strong>Goal: Eat healthier</strong><br />Don't buy snacks; pre-cut vegetables visible in fridge; healthy eating is now the default</li>
-                <li><strong>Goal: Reduce phone use</strong><br />Delete distracting apps, enable grayscale, keep phone in another room—can't scroll what you can't access</li>
+                <li><strong>Goal: Reduce phone use</strong><br />Delete distracting apps, enable grayscale, keep phone in another room---can't scroll what you can't access</li>
               </ul>
             ),
           }}
@@ -1156,7 +1156,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           When Willpower Actually Helps
         </h2>
         <p className="mb-6">
-          This isn't to say willpower is useless—it has a role. Self-control is valuable for:
+          This isn't to say willpower is useless---it has a role. Self-control is valuable for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>One-time decisions with lasting impact:</strong> Choosing a gym close to home, deleting social media apps, setting up autopay. Use willpower once to create systems that don't require willpower daily.</li>
@@ -1177,7 +1177,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Key Takeaways
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Willpower is unreliable—it gets depleted by stress, sleep loss, decision fatigue, and hunger</li>
+          <li>Willpower is unreliable---it gets depleted by stress, sleep loss, decision fatigue, and hunger</li>
           <li>Instead of relying on self-control, reduce friction for good habits and add friction to bad habits</li>
           <li>Reduce friction by: priming your environment, reducing steps, automating decisions, scaling down to "too easy to fail"</li>
           <li>Add friction by: adding delays, increasing steps, using precommitment devices, eliminating cues</li>
@@ -1288,7 +1288,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
             You reach for your phone before your eyes fully open. You check it while brushing your teeth, eating breakfast, commuting to work. You pull it out in the elevator, in line at the coffee shop, during commercial breaks. You check it one last time before bed. On average, you'll touch your phone 2,617 times today.
           </p>
           <p className="mb-6">
-            This isn't an accident. Your phone was designed by teams of engineers, psychologists, and designers whose job is to maximize engagement—a polite term for capturing your attention and keeping it as long as possible <Citation id="3" index={3} source="Science in the News (Harvard University)" year="2018" tier={2} />. Understanding the psychological mechanisms at play is the first step to reclaiming control over your digital habits.
+            This isn't an accident. Your phone was designed by teams of engineers, psychologists, and designers whose job is to maximize engagement---a polite term for capturing your attention and keeping it as long as possible <Citation id="3" index={3} source="Science in the News (Harvard University)" year="2018" tier={2} />. Understanding the psychological mechanisms at play is the first step to reclaiming control over your digital habits.
           </p>
         </div>
 
@@ -1296,7 +1296,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Variable Rewards: The Slot Machine in Your Pocket
         </h2>
         <p className="mb-6">
-          The most powerful psychological mechanism built into your phone is variable reinforcement—the same principle that makes slot machines addictive <Citation id="4" index={4} source="Journal of the Experimental Analysis of Behavior" year="2016" tier={1} />.
+          The most powerful psychological mechanism built into your phone is variable reinforcement---the same principle that makes slot machines addictive <Citation id="4" index={4} source="Journal of the Experimental Analysis of Behavior" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
           When you pull to refresh your email or social media feed, you don't know what you'll get. Sometimes it's a like. Sometimes it's a message. Sometimes it's nothing. This unpredictability activates the dopamine system in your brain more powerfully than a predictable reward would.
@@ -1309,17 +1309,17 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          This is why scrolling feels compulsive. You're not searching for something specific—you're chasing the dopamine hit of <em>maybe</em> finding something interesting. The variable ratio schedule keeps you checking 'just one more time."
+          This is why scrolling feels compulsive. You're not searching for something specific---you're chasing the dopamine hit of <em>maybe</em> finding something interesting. The variable ratio schedule keeps you checking 'just one more time."
         </p>
 
         <h2 id="notification-hijacking" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Notification Hijacking: Interruption as Design
         </h2>
         <p className="mb-6">
-          Every notification is an intentional interruption—a bid for your attention. Research shows that notifications don't just disrupt your current task; they degrade performance for minutes afterward, even if you don't respond to them <Citation id="5" index={5} source="Human Factors" year="2019" tier={1} />.
+          Every notification is an intentional interruption---a bid for your attention. Research shows that notifications don't just disrupt your current task; they degrade performance for minutes afterward, even if you don't respond to them <Citation id="5" index={5} source="Human Factors" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          The average smartphone user receives 46 push notifications per day. Each one fragments your attention, making sustained focus nearly impossible. And because notifications are unpredictable (there's that variable reinforcement again), you can't ignore them—you have to check, because it <em>might</em> be important.
+          The average smartphone user receives 46 push notifications per day. Each one fragments your attention, making sustained focus nearly impossible. And because notifications are unpredictable (there's that variable reinforcement again), you can't ignore them---you have to check, because it <em>might</em> be important.
         </p>
 
         <ComparisonTable
@@ -1338,7 +1338,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           FOMO and Social Comparison: The Anxiety Engine
         </h2>
         <p className="mb-6">
-          Fear of missing out (FOMO) is a powerful psychological driver of phone use <Citation id="8" index={8} source="Motivation and Emotion" year="2016" tier={1} />. Social media platforms exploit this by showing you curated highlights of other people's lives—vacations, achievements, social gatherings you weren't invited to.
+          Fear of missing out (FOMO) is a powerful psychological driver of phone use <Citation id="8" index={8} source="Motivation and Emotion" year="2016" tier={1} />. Social media platforms exploit this by showing you curated highlights of other people's lives---vacations, achievements, social gatherings you weren't invited to.
         </p>
         <p className="mb-6">
           Your brain doesn't know these are highlights. It sees evidence that everyone else is having more fun, more success, more connection. This triggers upward social comparison, which is consistently linked to lower mood, higher anxiety, and reduced life satisfaction <Citation id="6" index={6} source="The Lancet Child & Adolescent Health" year="2019" tier={1} />.
@@ -1349,7 +1349,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
             <strong>You're comparing your behind-the-scenes to everyone else's highlight reel.</strong> This is a rigged game you can't win.
           </p>
           <p>
-            The solution isn't to post more highlights yourself—it's to recognize that the entire comparison is based on incomplete, distorted information. What you see on social media is performance, not reality.
+            The solution isn't to post more highlights yourself---it's to recognize that the entire comparison is based on incomplete, distorted information. What you see on social media is performance, not reality.
           </p>
         </ArticleCallout>
 
@@ -1360,7 +1360,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Have you ever felt your phone vibrate, only to check and find no notification? These "phantom vibrations" happen because your brain has learned to anticipate the sensation so strongly that it generates the feeling even when the phone is silent <Citation id="2" index={2} source="Journal of Computer-Mediated Communication" year="2015" tier={1} />.
         </p>
         <p className="mb-6">
-          This same study found that being separated from your phone—even just having it on silent in another room—produces measurable increases in heart rate, blood pressure, anxiety, and cognitive impairment. People performed worse on tasks when their phones were out of reach, not because they needed the phone for the task, but because the psychological discomfort of separation drained cognitive resources.
+          This same study found that being separated from your phone---even just having it on silent in another room---produces measurable increases in heart rate, blood pressure, anxiety, and cognitive impairment. People performed worse on tasks when their phones were out of reach, not because they needed the phone for the task, but because the psychological discomfort of separation drained cognitive resources.
         </p>
 
         <ArticleChart
@@ -1410,11 +1410,11 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                 <div>
                   <p className="mb-3">Small barriers dramatically reduce usage:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>Delete apps from your home screen</strong> — keep them but require searching to open</li>
-                    <li><strong>Enable grayscale mode</strong> — removes the dopamine-triggering color</li>
-                    <li><strong>Log out after every session</strong> — re-entering password creates pause to reconsider</li>
-                    <li><strong>Use app timers</strong> — iOS Screen Time or Android Digital Wellbeing lock you out after 15-30 minutes</li>
-                    <li><strong>Keep phone in another room</strong> — especially during sleep, meals, and focused work</li>
+                    <li><strong>Delete apps from your home screen</strong> --- keep them but require searching to open</li>
+                    <li><strong>Enable grayscale mode</strong> --- removes the dopamine-triggering color</li>
+                    <li><strong>Log out after every session</strong> --- re-entering password creates pause to reconsider</li>
+                    <li><strong>Use app timers</strong> --- iOS Screen Time or Android Digital Wellbeing lock you out after 15-30 minutes</li>
+                    <li><strong>Keep phone in another room</strong> --- especially during sleep, meals, and focused work</li>
                   </ul>
                 </div>
               ),
@@ -1441,10 +1441,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                 <div>
                   <p className="mb-3">Designate phone-free zones and times:</p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li><strong>No phones at meals</strong> — family dinner, lunch with friends</li>
-                    <li><strong>No phones in bedroom</strong> — use an alarm clock, keep phone charging in another room</li>
-                    <li><strong>No phones first hour of the day</strong> — start with morning routine, not inbox</li>
-                    <li><strong>No phones during focused work</strong> — use Pomodoro technique with phone on airplane mode</li>
+                    <li><strong>No phones at meals</strong> --- family dinner, lunch with friends</li>
+                    <li><strong>No phones in bedroom</strong> --- use an alarm clock, keep phone charging in another room</li>
+                    <li><strong>No phones first hour of the day</strong> --- start with morning routine, not inbox</li>
+                    <li><strong>No phones during focused work</strong> --- use Pomodoro technique with phone on airplane mode</li>
                   </ul>
                 </div>
               ),
@@ -1500,14 +1500,14 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Realistic Expectations: You Don't Need to Quit Entirely
         </h2>
         <p className="mb-6">
-          The goal isn't to abandon technology—it's to use it intentionally rather than compulsively. Phones are tools. They're useful for navigation, communication, learning, creativity. The problem is when they become default behaviors: check phone while waiting, check phone when bored, check phone because it's been 3 minutes.
+          The goal isn't to abandon technology---it's to use it intentionally rather than compulsively. Phones are tools. They're useful for navigation, communication, learning, creativity. The problem is when they become default behaviors: check phone while waiting, check phone when bored, check phone because it's been 3 minutes.
         </p>
         <p className="mb-6">
           Aim for <strong>intentional use</strong>:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>"I'm going to check my messages and respond to friends' — intentional</li>
-          <li>"I'm going to scroll until I find something interesting' — compulsive</li>
+          <li>"I'm going to check my messages and respond to friends' --- intentional</li>
+          <li>"I'm going to scroll until I find something interesting' --- compulsive</li>
         </ul>
         <p className="mb-6">
           If you can answer "Why am I on my phone right now?" with a specific purpose, you're using it intentionally. If the answer is "I don't know, I just picked it up, " that's the habit you're trying to break.
@@ -1518,11 +1518,11 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Phones are designed to be addictive using variable reinforcement, notifications, and FOMO</li>
-          <li>Dopamine spikes from anticipating rewards, not receiving them—this drives compulsive checking</li>
+          <li>Dopamine spikes from anticipating rewards, not receiving them---this drives compulsive checking</li>
           <li>Phantom vibrations and separation anxiety are signs of habit formation</li>
           <li>Effective strategies: turn off notifications, add friction, replace routines, create boundaries, track usage</li>
           <li>Reducing phone use improves sleep, mood, focus, and relationship quality within weeks</li>
-          <li>Goal is intentional use, not total abstinence—phones are tools, not defaults</li>
+          <li>Goal is intentional use, not total abstinence---phones are tools, not defaults</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1626,7 +1626,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Habit trackers are everywhere: apps with streak counters, bullet journals with hand-drawn grids, wall calendars with satisfying X's marked in permanent marker. The promise is simple—track your behavior, and you'll do more of it. But does the research support this? And if tracking works, why do so many people abandon their trackers after a few weeks?
+            Habit trackers are everywhere: apps with streak counters, bullet journals with hand-drawn grids, wall calendars with satisfying X's marked in permanent marker. The promise is simple---track your behavior, and you'll do more of it. But does the research support this? And if tracking works, why do so many people abandon their trackers after a few weeks?
           </p>
           <p className="mb-6">
             The science on self-monitoring is clear: tracking can be a powerful behavior change tool, but only when used strategically <Citation id="1" index={1} source="American Journal of Preventive Medicine" year="2011" tier={1} />. Used poorly, it becomes just another source of guilt and burnout. Let's explore when tracking works, when it backfires, and how to use it effectively.
@@ -1663,7 +1663,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
               title: '3. Commitment and Accountability',
               description: (
                 <p>
-                  Writing down a goal or putting it in a tracker creates psychological commitment <Citation id="8" index={8} source="Translational Behavioral Medicine" year="2020" tier={1} />. The act of recording makes the intention more concrete than a vague mental note. And seeing a visual streak (7 days, 30 days) creates loss aversion—you don't want to break the chain.
+                  Writing down a goal or putting it in a tracker creates psychological commitment <Citation id="8" index={8} source="Translational Behavioral Medicine" year="2020" tier={1} />. The act of recording makes the intention more concrete than a vague mental note. And seeing a visual streak (7 days, 30 days) creates loss aversion---you don't want to break the chain.
                 </p>
               ),
             },
@@ -1680,7 +1680,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>The tracker isn't the goal—the behavior is.</strong> The best tracking systems are so simple that marking completion takes less than 5 seconds. If tracking becomes a chore, you've defeated the purpose.
+            <strong>The tracker isn't the goal---the behavior is.</strong> The best tracking systems are so simple that marking completion takes less than 5 seconds. If tracking becomes a chore, you've defeated the purpose.
           </p>
         </ArticleCallout>
 
@@ -1708,10 +1708,10 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Why inputs beat outputs:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>You control inputs</strong> — you can't force weight loss, but you can decide to exercise</li>
-          <li><strong>Inputs are binary</strong> — either you did it or you didn't, no ambiguity</li>
-          <li><strong>Inputs are immediate</strong> — you get feedback today, not weeks from now</li>
-          <li><strong>Inputs build identity</strong> — "I'm someone who exercises daily' vs. "I'm trying to lose weight"</li>
+          <li><strong>You control inputs</strong> --- you can't force weight loss, but you can decide to exercise</li>
+          <li><strong>Inputs are binary</strong> --- either you did it or you didn't, no ambiguity</li>
+          <li><strong>Inputs are immediate</strong> --- you get feedback today, not weeks from now</li>
+          <li><strong>Inputs build identity</strong> --- "I'm someone who exercises daily' vs. "I'm trying to lose weight"</li>
         </ul>
 
         <h2 id="when-tracking-backfires" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1735,7 +1735,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
                   <p className="mb-3"><strong>Solution:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Track completion rate, not streaks (e.g., "5 out of 7 days" instead of "7-day streak broken")</li>
-                    <li>Follow the "never miss twice" rule—missing once is an accident, missing twice is the start of a new habit</li>
+                    <li>Follow the "never miss twice" rule---missing once is an accident, missing twice is the start of a new habit</li>
                     <li>Celebrate 80% consistency as success, not failure</li>
                   </ul>
                 </div>
@@ -1799,7 +1799,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           Tracking Methods: Apps vs. Analog
         </h2>
         <p className="mb-6">
-          There's no "best" tracking method—effectiveness depends on your preferences and the habit you're building. Here's how different approaches compare:
+          There's no "best" tracking method---effectiveness depends on your preferences and the habit you're building. Here's how different approaches compare:
         </p>
 
         <ArticleTabs
@@ -1950,7 +1950,7 @@ export const scienceOfHabitFormationArticlesB: Article[] = [
           <li>Tracking works by providing immediate feedback, increasing awareness, and creating accountability</li>
           <li>Track inputs (behaviors you control) not outputs (outcomes influenced by many factors)</li>
           <li>Common pitfalls: perfection trap, tracking too much, gaming the metric, replacing intrinsic motivation</li>
-          <li>Method matters less than consistency—choose app, paper, or hybrid based on preference</li>
+          <li>Method matters less than consistency---choose app, paper, or hybrid based on preference</li>
           <li>Research shows tracking doubles success rates for weight loss, exercise, and medication adherence</li>
           <li>Keep it simple: binary yes/no tracking is as effective as complex analytics</li>
         </ul>

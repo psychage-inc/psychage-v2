@@ -93,7 +93,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've noticed the signs—your friend, partner, or family member is struggling. You want to suggest therapy, but every time you bring it up, they shut down, get defensive, or pull away. How do you express concern without making them feel attacked, broken, or pushed into something they're not ready for?
+            You've noticed the signs---your friend, partner, or family member is struggling. You want to suggest therapy, but every time you bring it up, they shut down, get defensive, or pull away. How do you express concern without making them feel attacked, broken, or pushed into something they're not ready for?
           </p>
           <p className="mb-6">
             The way you approach this conversation matters enormously. Research shows that people are more likely to seek help when encouraged through collaborative, non-judgmental conversations rather than confrontation or pressure <Citation id="2" index={2} source="Journal of Consulting and Clinical Psychology" year="2023" tier={1} />. Here's how to have that conversation effectively.
@@ -138,7 +138,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           The Conversation Framework: OARS
         </h2>
         <p className="mb-6">
-          Motivational interviewing—a research-backed approach for encouraging behavior change—uses the OARS technique <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2023" tier={1} />:
+          Motivational interviewing---a research-backed approach for encouraging behavior change---uses the OARS technique <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2023" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -168,7 +168,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
                   <ul className="list-disc pl-5 space-y-1 text-sm mb-3">
                     <li>"I admire how hard you've been working despite how you're feeling."</li>
                     <li>"It takes courage to talk about this."</li>
-                    <li>"You've handled difficult things before—I trust your judgment."</li>
+                    <li>"You've handled difficult things before---I trust your judgment."</li>
                   </ul>
                   <p className="text-sm">Affirmations build trust and reduce the perception that you're trying to fix or control them.</p>
                 </div>
@@ -184,7 +184,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
                     <li>Them: "I'm just tired all the time." You: "It sounds like exhaustion is overwhelming you."</li>
                     <li>Them: "I don't think it's that bad." You: "You're not sure therapy is necessary right now."</li>
                   </ul>
-                  <p className="text-sm">Reflection validates their experience without agreeing or disagreeing—it creates space for them to explore their own thoughts <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2023" tier={1} />.</p>
+                  <p className="text-sm">Reflection validates their experience without agreeing or disagreeing---it creates space for them to explore their own thoughts <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2023" tier={1} />.</p>
                 </div>
               ),
             },
@@ -237,12 +237,12 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="info" title={`Objection: "I don't need therapy"`}>
-          <p className="mb-2"><strong>Don't say</strong>: "Yes you do—you're clearly struggling!"</p>
+          <p className="mb-2"><strong>Don't say</strong>: "Yes you do---you're clearly struggling!"</p>
           <p><strong>Try instead</strong>: "What makes you feel that way? I'm curious what you think would be helpful instead."</p>
         </ArticleCallout>
 
         <ArticleCallout variant="info" title={`Objection: "Therapy doesn't work"`}>
-          <p className="mb-2"><strong>Don't say</strong>: "That's not true—look at the research!"</p>
+          <p className="mb-2"><strong>Don't say</strong>: "That's not true---look at the research!"</p>
           <p><strong>Try instead</strong>: "Have you had a bad experience with therapy before? What would need to be different for it to feel worth trying?"</p>
         </ArticleCallout>
 
@@ -303,7 +303,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           <li>In some cultures, seeking outside help for family problems is seen as shameful. Frame therapy as strength, not weakness.</li>
           <li>If they've had negative experiences with healthcare (discrimination, dismissal), acknowledge that barrier: "I understand why you might not trust doctors. What would make you feel safer?"</li>
           <li>Offer culturally specific resources if available (therapists who share their background, community organizations, faith-based counseling).</li>
-          <li>Respect that Western therapy isn't the only path—traditional healers, spiritual advisors, or community elders might be more acceptable starting points.</li>
+          <li>Respect that Western therapy isn't the only path---traditional healers, spiritual advisors, or community elders might be more acceptable starting points.</li>
         </ul>
 
         <h2 id="if-they-refuse" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -323,7 +323,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The goal isn't to win an argument or force compliance—it's to open a door and let them decide whether to walk through it. Approach with curiosity, compassion, and respect for their autonomy, and you'll create conditions where change becomes possible.</p>
+          <p>The goal isn't to win an argument or force compliance---it's to open a door and let them decide whether to walk through it. Approach with curiosity, compassion, and respect for their autonomy, and you'll create conditions where change becomes possible.</p>
         </ArticleCallout>
       </>
     ),
@@ -410,10 +410,10 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            They're clearly suffering—depressed, anxious, addicted, psychotic—but they refuse to get help. You've tried everything: gentle suggestions, ultimatums, research articles, offers to find providers and pay for treatment. Nothing works. They insist they're fine, or they acknowledge the problem but won't do anything about it. And you're left watching someone you love deteriorate while feeling powerless to stop it.
+            They're clearly suffering---depressed, anxious, addicted, psychotic---but they refuse to get help. You've tried everything: gentle suggestions, ultimatums, research articles, offers to find providers and pay for treatment. Nothing works. They insist they're fine, or they acknowledge the problem but won't do anything about it. And you're left watching someone you love deteriorate while feeling powerless to stop it.
           </p>
           <p className="mb-6">
-            This is one of the most painful positions a loved one can be in. You cannot force someone into recovery—yet walking away feels like abandonment. Here's how to navigate this impossible situation.
+            This is one of the most painful positions a loved one can be in. You cannot force someone into recovery---yet walking away feels like abandonment. Here's how to navigate this impossible situation.
           </p>
         </div>
 
@@ -424,11 +424,11 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           Before you can respond effectively, understand what's driving their refusal:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Anosognosia</strong>: In severe mental illness (schizophrenia, bipolar disorder, some depression), brain changes can prevent the person from recognizing they're ill. This isn't denial—it's a symptom <Citation id="1" index={1} source="Schizophrenia Bulletin" year="2023" tier={1} />.</li>
+          <li><strong>Anosognosia</strong>: In severe mental illness (schizophrenia, bipolar disorder, some depression), brain changes can prevent the person from recognizing they're ill. This isn't denial---it's a symptom <Citation id="1" index={1} source="Schizophrenia Bulletin" year="2023" tier={1} />.</li>
           <li><strong>Fear and stigma</strong>: Seeking treatment means admitting something is "wrong" with them, which can feel shameful or scary.</li>
           <li><strong>Past negative experiences</strong>: If they've had unhelpful therapy, terrible side effects from medication, or felt dismissed by providers, they may have lost trust in the system.</li>
-          <li><strong>Lack of insight into severity</strong>: They may genuinely not realize how bad things have gotten—their baseline has shifted.</li>
-          <li><strong>Autonomy and control</strong>: Being pushed into treatment can trigger reactance—the psychological impulse to resist when we feel our freedom is threatened.</li>
+          <li><strong>Lack of insight into severity</strong>: They may genuinely not realize how bad things have gotten---their baseline has shifted.</li>
+          <li><strong>Autonomy and control</strong>: Being pushed into treatment can trigger reactance---the psychological impulse to resist when we feel our freedom is threatened.</li>
           <li><strong>Practical barriers</strong>: Cost, transportation, time, childcare, or lack of culturally competent providers can make treatment feel impossible.</li>
         </ul>
         <p className="mb-6">
@@ -460,7 +460,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Set clear boundaries',
               description: (
-                <p>"I can't keep doing [enabling behavior] while you're refusing treatment." Follow through on consequences—not as punishment, but as self-protection <Citation id="3" index={3} source="Journal of Family Psychology" year="2023" tier={1} />.</p>
+                <p>"I can't keep doing [enabling behavior] while you're refusing treatment." Follow through on consequences---not as punishment, but as self-protection <Citation id="3" index={3} source="Journal of Family Psychology" year="2023" tier={1} />.</p>
               ),
             },
             {
@@ -472,7 +472,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Focus on your own well-being',
               description: (
-                <p>You can't control their choices, but you can control yours. Get your own therapy, join a support group (NAMI, Al-Anon), set aside time for self-care. Taking care of yourself isn't selfish—it's survival <Citation id="7" index={7} source="Family Process" year="2023" tier={1} />.</p>
+                <p>You can't control their choices, but you can control yours. Get your own therapy, join a support group (NAMI, Al-Anon), set aside time for self-care. Taking care of yourself isn't selfish---it's survival <Citation id="7" index={7} source="Family Process" year="2023" tier={1} />.</p>
               ),
             },
           ]}
@@ -482,13 +482,13 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           The Concept of "Detachment with Love"
         </h2>
         <p className="mb-6">
-          Al-Anon (for families of people with addiction) teaches a principle called "detachment with love"—and it applies to mental illness too <Citation id="3" index={3} source="Journal of Family Psychology" year="2023" tier={1} />:
+          Al-Anon (for families of people with addiction) teaches a principle called "detachment with love"---and it applies to mental illness too <Citation id="3" index={3} source="Journal of Family Psychology" year="2023" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>You can love someone without controlling them</strong>: Your care for them doesn't require fixing them or managing their life.</li>
-          <li><strong>You can detach from the outcome while staying emotionally connected</strong>: You don't have to cut them off—but you do have to accept that their recovery is their responsibility, not yours.</li>
+          <li><strong>You can detach from the outcome while staying emotionally connected</strong>: You don't have to cut them off---but you do have to accept that their recovery is their responsibility, not yours.</li>
           <li><strong>You allow natural consequences</strong>: Stepping back doesn't mean you don't care. It means you're letting them experience the consequences of their choices, which may ultimately motivate change.</li>
-          <li><strong>You stop trying to control the uncontrollable</strong>: Their treatment refusal is their choice. Accepting that doesn't mean you approve—it means you acknowledge reality <Citation id="4" index={4} source="Clinical Psychology Review" year="2023" tier={1} />.</li>
+          <li><strong>You stop trying to control the uncontrollable</strong>: Their treatment refusal is their choice. Accepting that doesn't mean you approve---it means you acknowledge reality <Citation id="4" index={4} source="Clinical Psychology Review" year="2023" tier={1} />.</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="What Detachment Is NOT">
@@ -506,12 +506,12 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           When to Consider Legal Intervention
         </h2>
         <p className="mb-6">
-          In extreme cases where the person is a danger to themselves or others, legal options exist—but they come with significant ethical and practical considerations <Citation id="5" index={5} source="Journal of the American Academy of Psychiatry and the Law" year="2023" tier={1} />:
+          In extreme cases where the person is a danger to themselves or others, legal options exist---but they come with significant ethical and practical considerations <Citation id="5" index={5} source="Journal of the American Academy of Psychiatry and the Law" year="2023" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Emergency psychiatric hold (5150, Baker Act, etc.)</strong>: Allows involuntary hospitalization for 72 hours if the person is gravely disabled or poses imminent risk. Criteria and procedures vary by state.</li>
           <li><strong>Court-ordered outpatient treatment</strong>: Some states allow families to petition for mandated treatment for individuals with severe mental illness who repeatedly refuse care.</li>
-          <li><strong>Conservatorship/guardianship</strong>: Legal authority over someone unable to care for themselves—a last resort that's costly, time-consuming, and ethically complex.</li>
+          <li><strong>Conservatorship/guardianship</strong>: Legal authority over someone unable to care for themselves---a last resort that's costly, time-consuming, and ethically complex.</li>
         </ul>
         <p className="mb-6">
           These options should be used only when voluntary treatment has repeatedly failed and safety is at immediate risk. Involuntary treatment can damage trust and isn't always effective long-term <Citation id="2" index={2} source="Psychiatric Services" year="2022" tier={1} />.
@@ -531,7 +531,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
               id: 'boundaries',
               title: 'Set firm boundaries',
               content: (
-                <p>Decide what you're willing and not willing to do. "I'll help you find treatment, but I won't give you money" or "I'll visit once a week, but you can't live with me unless you're in treatment." Boundaries aren't punishments—they're self-preservation <Citation id="4" index={4} source="Clinical Psychology Review" year="2023" tier={1} />.</p>
+                <p>Decide what you're willing and not willing to do. "I'll help you find treatment, but I won't give you money" or "I'll visit once a week, but you can't live with me unless you're in treatment." Boundaries aren't punishments---they're self-preservation <Citation id="4" index={4} source="Clinical Psychology Review" year="2023" tier={1} />.</p>
               ),
             },
             {
@@ -545,14 +545,14 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
               id: 'grief',
               title: "Grieve the person you thought they'd be",
               content: (
-                <p>You may need to mourn the relationship or life you imagined. This grief is real and valid—and processing it helps you accept what is rather than fighting for what you wish could be.</p>
+                <p>You may need to mourn the relationship or life you imagined. This grief is real and valid---and processing it helps you accept what is rather than fighting for what you wish could be.</p>
               ),
             },
             {
               id: 'permission',
               title: 'Give yourself permission to step back',
               description: (
-                <p>If supporting them is destroying your own mental health, marriage, parenting, or career, you're allowed to reduce contact or step away entirely. This doesn't make you a bad person—it makes you a human being with limits <Citation id="7" index={7} source="Family Process" year="2023" tier={1} />.</p>
+                <p>If supporting them is destroying your own mental health, marriage, parenting, or career, you're allowed to reduce contact or step away entirely. This doesn't make you a bad person---it makes you a human being with limits <Citation id="7" index={7} source="Family Process" year="2023" tier={1} />.</p>
               ),
             },
           ]}
@@ -572,11 +572,11 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           <li>They finally feel ready to try something different</li>
         </ul>
         <p className="mb-6">
-          Your job isn't to force that moment—it's to stay safe and healthy enough that you're still standing when (or if) they're ready to accept help.
+          Your job isn't to force that moment---it's to stay safe and healthy enough that you're still standing when (or if) they're ready to accept help.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>You cannot save someone who doesn't want to be saved. What you can do is love them, set boundaries, take care of yourself, and keep the door open for the day they might choose differently. That's not giving up—it's accepting reality while holding onto hope.</p>
+          <p>You cannot save someone who doesn't want to be saved. What you can do is love them, set boundaries, take care of yourself, and keep the door open for the day they might choose differently. That's not giving up---it's accepting reality while holding onto hope.</p>
         </ArticleCallout>
       </>
     ),
@@ -663,7 +663,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your loved one is coming home from psychiatric hospitalization. Maybe you're relieved—they're safe and hopefully stabilized. Maybe you're terrified—what if it happens again? Maybe you're uncertain how to act around them now. Do you tiptoe around their emotions? Return to normal immediately? Watch them constantly?
+            Your loved one is coming home from psychiatric hospitalization. Maybe you're relieved---they're safe and hopefully stabilized. Maybe you're terrified---what if it happens again? Maybe you're uncertain how to act around them now. Do you tiptoe around their emotions? Return to normal immediately? Watch them constantly?
           </p>
           <p className="mb-6">
             The weeks and months after psychiatric discharge are critical. Research shows that nearly 20% of patients are readmitted within 30 days, often because post-discharge support is inadequate <Citation id="1" index={1} source="JAMA Psychiatry" year="2023" tier={1} />. Here's how to support your loved one's recovery while protecting your own well-being.
@@ -681,7 +681,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           <li><strong>Fatigue</strong>: Hospitalization is exhausting; sleep schedules are disrupted; medication adjustments cause drowsiness</li>
           <li><strong>Shame or embarrassment</strong>: About what happened, what others think, or feeling like they've "failed"</li>
           <li><strong>Disorientation</strong>: Adjusting back to daily routines after structured hospital life</li>
-          <li><strong>Vulnerability</strong>: The problems that led to hospitalization haven't disappeared—they're just beginning to be addressed</li>
+          <li><strong>Vulnerability</strong>: The problems that led to hospitalization haven't disappeared---they're just beginning to be addressed</li>
         </ul>
         <p className="mb-6">
           Create a calm, low-stress environment in those first days. Avoid big social gatherings, intense conversations, or dramatic changes <Citation id="3" index={3} source="Hospital & Community Psychiatry" year="2023" tier={1} />.
@@ -700,13 +700,13 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Medication plan',
               description: (
-                <p>Know what medications they're on, dosages, timing, and side effects to watch for. Many relapses occur because medication adherence drops after discharge <Citation id="5" index={5} source="Journal of Clinical Psychiatry" year="2022" tier={1} />. Help them set up pill organizers, phone reminders, or whatever system works for them—without being controlling.</p>
+                <p>Know what medications they're on, dosages, timing, and side effects to watch for. Many relapses occur because medication adherence drops after discharge <Citation id="5" index={5} source="Journal of Clinical Psychiatry" year="2022" tier={1} />. Help them set up pill organizers, phone reminders, or whatever system works for them---without being controlling.</p>
               ),
             },
             {
               title: 'Follow-up appointments',
               description: (
-                <p>The first outpatient appointment should be within 7 days of discharge (ideally within 48-72 hours). Confirm the appointment before leaving the hospital. Offer to drive or remind them—early follow-up dramatically reduces readmission risk <Citation id="8" index={8} source="Psychiatric Rehabilitation Journal" year="2022" tier={1} />.</p>
+                <p>The first outpatient appointment should be within 7 days of discharge (ideally within 48-72 hours). Confirm the appointment before leaving the hospital. Offer to drive or remind them---early follow-up dramatically reduces readmission risk <Citation id="8" index={8} source="Psychiatric Rehabilitation Journal" year="2022" tier={1} />.</p>
               ),
             },
             {
@@ -724,7 +724,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Lifestyle recommendations',
               description: (
-                <p>Sleep schedule, substance use restrictions, stress management techniques—these aren't optional. Help create an environment where they can follow these recommendations.</p>
+                <p>Sleep schedule, substance use restrictions, stress management techniques---these aren't optional. Help create an environment where they can follow these recommendations.</p>
               ),
             },
           ]}
@@ -771,8 +771,8 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           Concrete support is often more helpful than emotional platitudes:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Help with basic tasks</strong>: Grocery shopping, meal prep, laundry—these can feel overwhelming post-discharge</li>
-          <li><strong>Reduce decision fatigue</strong>: Offer specific help ("I'm going to the store—what do you need?") rather than open-ended ("Let me know if you need anything")</li>
+          <li><strong>Help with basic tasks</strong>: Grocery shopping, meal prep, laundry---these can feel overwhelming post-discharge</li>
+          <li><strong>Reduce decision fatigue</strong>: Offer specific help ("I'm going to the store---what do you need?") rather than open-ended ("Let me know if you need anything")</li>
           <li><strong>Create structure</strong>: Help establish routines (regular sleep, meals, activity) without being rigid or controlling</li>
           <li><strong>Facilitate social connection</strong>: Invite them to low-key activities, but respect if they decline. Isolation is a risk factor for relapse.</li>
           <li><strong>Be a medication accountability partner (if they want one)</strong>: "Have you taken your evening meds?" as a gentle reminder, not surveillance</li>
@@ -827,9 +827,9 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Set boundaries</strong>: You're allowed to have your own life, needs, and limits</li>
           <li><strong>Get your own therapy or join a support group</strong>: NAMI Family Support Groups specifically address these situations</li>
-          <li><strong>Ask for help from others</strong>: You can't be the sole support person—build a team</li>
-          <li><strong>Maintain your own routines</strong>: Work, hobbies, friendships—don't put your entire life on hold</li>
-          <li><strong>Process your own emotions</strong>: Fear, anger, grief, relief—you're allowed to feel all of it</li>
+          <li><strong>Ask for help from others</strong>: You can't be the sole support person---build a team</li>
+          <li><strong>Maintain your own routines</strong>: Work, hobbies, friendships---don't put your entire life on hold</li>
+          <li><strong>Process your own emotions</strong>: Fear, anger, grief, relief---you're allowed to feel all of it</li>
         </ul>
 
         <h2 id="long-term-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -840,15 +840,15 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Celebrate progress, even small wins</li>
-          <li>Don't define them by their hospitalization—they are more than their diagnosis</li>
+          <li>Don't define them by their hospitalization---they are more than their diagnosis</li>
           <li>Encourage independence as they stabilize</li>
           <li>Stay informed about their condition and treatment</li>
           <li>Advocate for them when needed (insurance, providers, systems) but let them lead when they're able</li>
-          <li>Maintain hope while being realistic—recovery is possible, but it takes time</li>
+          <li>Maintain hope while being realistic---recovery is possible, but it takes time</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>The weeks after psychiatric hospitalization are vulnerable but also full of potential. With the right support, many people go on to manage their conditions successfully and avoid future hospitalizations. Your steady, balanced presence can make all the difference—but remember, you can't do it alone, and you can't do it perfectly. Good enough is good enough.</p>
+          <p>The weeks after psychiatric hospitalization are vulnerable but also full of potential. With the right support, many people go on to manage their conditions successfully and avoid future hospitalizations. Your steady, balanced presence can make all the difference---but remember, you can't do it alone, and you can't do it perfectly. Good enough is good enough.</p>
         </ArticleCallout>
       </>
     ),
@@ -943,10 +943,10 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When someone in your family has a mental health condition, everyone is affected. Dinners become tense. Plans get canceled. Conversations feel like navigating a minefield. You want to help, but you're not sure how—and you're exhausted from trying to hold everything together while your own needs go unmet.
+            When someone in your family has a mental health condition, everyone is affected. Dinners become tense. Plans get canceled. Conversations feel like navigating a minefield. You want to help, but you're not sure how---and you're exhausted from trying to hold everything together while your own needs go unmet.
           </p>
           <p className="mb-6">
-            Research consistently shows that family involvement significantly improves mental health recovery outcomes—but only when that involvement is informed, boundaried, and sustainable <Citation id="1" index={1} source="Schizophrenia Bulletin" year="2023" tier={1} />. Here's how to support your loved one's recovery without losing yourself in the process.
+            Research consistently shows that family involvement significantly improves mental health recovery outcomes---but only when that involvement is informed, boundaried, and sustainable <Citation id="1" index={1} source="Schizophrenia Bulletin" year="2023" tier={1} />. Here's how to support your loved one's recovery without losing yourself in the process.
           </p>
         </div>
 
@@ -954,7 +954,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           Understanding Your Family's Influence
         </h2>
         <p className="mb-6">
-          Family dynamics don't <em>cause</em> mental illness, but they can significantly affect the course of recovery. Research identifies a pattern called "expressed emotion" (EE)—family communication characterized by criticism, hostility, or emotional over-involvement—that predicts higher relapse rates in conditions like schizophrenia, bipolar disorder, and depression <Citation id="2" index={2} source="British Journal of Psychiatry" year="2022" tier={1} />.
+          Family dynamics don't <em>cause</em> mental illness, but they can significantly affect the course of recovery. Research identifies a pattern called "expressed emotion" (EE)---family communication characterized by criticism, hostility, or emotional over-involvement---that predicts higher relapse rates in conditions like schizophrenia, bipolar disorder, and depression <Citation id="2" index={2} source="British Journal of Psychiatry" year="2022" tier={1} />.
         </p>
 
         <StatCard
@@ -967,7 +967,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          This doesn't mean you caused their illness or that you should walk on eggshells. It means your communication style matters—and you can learn patterns that support recovery <Citation id="7" index={7} source="Journal of Abnormal Psychology" year="2022" tier={1} />.
+          This doesn't mean you caused their illness or that you should walk on eggshells. It means your communication style matters---and you can learn patterns that support recovery <Citation id="7" index={7} source="Journal of Abnormal Psychology" year="2022" tier={1} />.
         </p>
 
         <h2 id="low-ee-communication" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -984,7 +984,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
               <ul className="list-disc pl-5 space-y-2">
                 <li>"You're not even trying to get better."</li>
                 <li>"You're being lazy and manipulative."</li>
-                <li>"Everyone else can manage their lives—why can't you?"</li>
+                <li>"Everyone else can manage their lives---why can't you?"</li>
                 <li>"I've sacrificed everything for you and this is how you repay me?"</li>
                 <li>Constant worry, hovering, doing everything for them</li>
                 <li>Dramatic emotional reactions to setbacks</li>
@@ -996,7 +996,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>"I notice you're struggling. What kind of support would help?"</li>
-                <li>"Recovery isn't linear—setbacks happen."</li>
+                <li>"Recovery isn't linear---setbacks happen."</li>
                 <li>"You're managing an illness. That takes work I can't fully understand."</li>
                 <li>"I care about you. I also need to take care of myself."</li>
                 <li>Calm problem-solving, reasonable expectations</li>
@@ -1007,14 +1007,14 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Low EE doesn't mean emotionless or detached—it means regulated, respectful, and realistic <Citation id="5" index={5} source="Clinical Psychology Review" year="2023" tier={1} />.
+          Low EE doesn't mean emotionless or detached---it means regulated, respectful, and realistic <Citation id="5" index={5} source="Clinical Psychology Review" year="2023" tier={1} />.
         </p>
 
         <h2 id="boundaries-framework" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Boundaries Framework
         </h2>
         <p className="mb-6">
-          Healthy boundaries aren't about building walls—they're about sustainable love <Citation id="3" index={3} source="Family Process" year="2023" tier={1} />:
+          Healthy boundaries aren't about building walls---they're about sustainable love <Citation id="3" index={3} source="Family Process" year="2023" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -1102,13 +1102,13 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Support treatment adherence without controlling',
               description: (
-                <p>'Have you taken your medication today?" can be supportive if delivered calmly and occasionally—or controlling if it's constant surveillance. Ask them how they want to be supported with treatment.</p>
+                <p>'Have you taken your medication today?" can be supportive if delivered calmly and occasionally---or controlling if it's constant surveillance. Ask them how they want to be supported with treatment.</p>
               ),
             },
             {
               title: 'Validate their experience',
               description: (
-                <p>'That sounds really hard' is more helpful than "It's not that bad' or "Just think positive." Validation doesn't mean agreement—it means acknowledging their subjective reality.</p>
+                <p>'That sounds really hard' is more helpful than "It's not that bad' or "Just think positive." Validation doesn't mean agreement---it means acknowledging their subjective reality.</p>
               ),
             },
             {
@@ -1136,7 +1136,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           When to Consider Family Therapy
         </h2>
         <p className="mb-6">
-          Sometimes individual treatment isn't enough—family patterns need to change too. Consider family therapy if <Citation id="8" index={8} source="Journal of Marital and Family Therapy" year="2023" tier={1} />:
+          Sometimes individual treatment isn't enough---family patterns need to change too. Consider family therapy if <Citation id="8" index={8} source="Journal of Marital and Family Therapy" year="2023" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Communication has broken down completely</li>
@@ -1147,18 +1147,18 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           <li>There's been a major transition (hospitalization, diagnosis, living situation change)</li>
         </ul>
         <p className="mb-6">
-          Family therapy isn't about blaming anyone—it's about improving communication, reducing stress, and creating an environment that supports everyone's well-being.
+          Family therapy isn't about blaming anyone---it's about improving communication, reducing stress, and creating an environment that supports everyone's well-being.
         </p>
 
         <h2 id="caregiver-self-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Non-Negotiable Self-Care for Family Members
         </h2>
         <p className="mb-6">
-          Family caregivers have 40-70% rates of depression and anxiety <Citation id="4" index={4} source="Psychological Medicine" year="2023" tier={1} />. Self-care isn't optional—it's essential:
+          Family caregivers have 40-70% rates of depression and anxiety <Citation id="4" index={4} source="Psychological Medicine" year="2023" tier={1} />. Self-care isn't optional---it's essential:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Get your own therapy or join a support group</strong>: You need a space to process your own emotions, grief, and stress <Citation id="9" index={9} source="JAMA Psychiatry" year="2023" tier={1} /></li>
-          <li><strong>Maintain your own life</strong>: Friendships, hobbies, work, interests—don't let caregiving consume your entire identity</li>
+          <li><strong>Maintain your own life</strong>: Friendships, hobbies, work, interests---don't let caregiving consume your entire identity</li>
           <li><strong>Share caregiving responsibilities</strong>: Don't be the sole support person. Build a team of family, friends, and professionals.</li>
           <li><strong>Take regular breaks</strong>: Respite care, even short breaks, significantly reduces burnout</li>
           <li><strong>Set and enforce boundaries</strong>: Even when it feels selfish, even when they're in crisis</li>
@@ -1166,7 +1166,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Your family's role in recovery is important—but it's not to sacrifice yourself on the altar of their healing. The most sustainable support comes from families who are educated, boundaried, compassionate, and taking care of their own well-being. You can love someone without losing yourself in the process.</p>
+          <p>Your family's role in recovery is important---but it's not to sacrifice yourself on the altar of their healing. The most sustainable support comes from families who are educated, boundaried, compassionate, and taking care of their own well-being. You can love someone without losing yourself in the process.</p>
         </ArticleCallout>
       </>
     ),
@@ -1175,7 +1175,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     id: catId(50),
     slug: 'building-support-network-mental-health',
     title: 'Building a Support Network: Because No One Should Navigate Mental Health Alone',
-    description: 'How to build, maintain, and benefit from a diverse support network for mental health—because community is part of healing.',
+    description: 'How to build, maintain, and benefit from a diverse support network for mental health---because community is part of healing.',
     image: "/images/articles/cat14/cover-050.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
     readTime: 10,
@@ -1261,10 +1261,10 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're struggling with your mental health, it can feel like you're navigating a dark forest alone. Your therapist sees you once a week. Your medication helps, but pills don't understand what you're going through. Your family tries, but they don't really get it. And your friends—well, you're not sure how much to burden them.
+            When you're struggling with your mental health, it can feel like you're navigating a dark forest alone. Your therapist sees you once a week. Your medication helps, but pills don't understand what you're going through. Your family tries, but they don't really get it. And your friends---well, you're not sure how much to burden them.
           </p>
           <p className="mb-6">
-            Here's the truth that research consistently confirms: social support is one of the strongest predictors of mental health recovery. Not just "nice to have"—essential <Citation id="1" index={1} source="Clinical Psychology Review" year="2023" tier={1} />. But building and maintaining a support network when you're already depleted takes intention. Here's how to do it.
+            Here's the truth that research consistently confirms: social support is one of the strongest predictors of mental health recovery. Not just "nice to have"---essential <Citation id="1" index={1} source="Clinical Psychology Review" year="2023" tier={1} />. But building and maintaining a support network when you're already depleted takes intention. Here's how to do it.
           </p>
         </div>
 
@@ -1337,7 +1337,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
                   <p className="mb-2"><strong>Who</strong>: Parents, siblings, partners, children</p>
                   <p className="mb-2"><strong>What they provide</strong>: Long-term commitment, practical help, unconditional love (ideally)</p>
                   <p className="mb-2"><strong>Limitation</strong>: May not understand, can be enmeshed or have unhelpful dynamics, aren't always safe or supportive</p>
-                  <p className="text-sm">Family can be your anchor—or your trigger. It's okay if family isn't your primary support.</p>
+                  <p className="text-sm">Family can be your anchor---or your trigger. It's okay if family isn't your primary support.</p>
                 </div>
               ),
             },
@@ -1381,7 +1381,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Start with one structured connection',
               description: (
-                <p>Join one support group—NAMI Connection, DBSA, Alcoholics Anonymous, an online group. Structured settings reduce the social pressure of 'making friends' while providing connection <Citation id="6" index={6} source="Psychiatric Rehabilitation Journal" year="2023" tier={1} />.</p>
+                <p>Join one support group---NAMI Connection, DBSA, Alcoholics Anonymous, an online group. Structured settings reduce the social pressure of 'making friends' while providing connection <Citation id="6" index={6} source="Psychiatric Rehabilitation Journal" year="2023" tier={1} />.</p>
               ),
             },
             {
@@ -1393,7 +1393,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
             {
               title: 'Show up consistently to one activity',
               description: (
-                <p>A class, volunteer opportunity, book club, or hobby group. Repeated exposure builds connection—even if you don't actively 'make friends, ' you'll become a familiar face to people.</p>
+                <p>A class, volunteer opportunity, book club, or hobby group. Repeated exposure builds connection---even if you don't actively 'make friends, ' you'll become a familiar face to people.</p>
               ),
             },
             {
@@ -1415,13 +1415,13 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           Maintaining Your Support Network
         </h2>
         <p className="mb-6">
-          Building the network is step one. Sustaining it requires effort—even when you're depleted:
+          Building the network is step one. Sustaining it requires effort---even when you're depleted:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Reciprocity matters</strong>: Support networks thrive on mutual give-and-take. When you're able, show up for others too <Citation id="8" index={8} source="Journal of Social and Personal Relationships" year="2022" tier={1} />.</li>
           <li><strong>Communicate your needs</strong>: People aren't mind readers. "I need someone to listen without advice" or "I need distraction, not processing" helps them support you effectively.</li>
           <li><strong>Accept imperfect support</strong>: Not everyone will say the right thing. Appreciate effort over perfection.</li>
-          <li><strong>Show up even when you don't feel like it</strong>: Depression lies and says you're a burden. Go to the group, answer the text, show your face—even briefly.</li>
+          <li><strong>Show up even when you don't feel like it</strong>: Depression lies and says you're a burden. Go to the group, answer the text, show your face---even briefly.</li>
           <li><strong>Let go of people who harm more than help</strong>: Toxic relationships, even well-meaning ones, drain your energy. It's okay to create distance.</li>
         </ul>
 
@@ -1438,7 +1438,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           <li>Your depression is lying to you that you're a burden (even though people care)</li>
         </ul>
         <p className="mb-6">
-          The solution: deepen one connection. Pick the safest person and increase vulnerability incrementally. Loneliness isn't about quantity—it's about quality and authenticity <Citation id="7" index={7} source="JAMA Psychiatry" year="2023" tier={1} />.
+          The solution: deepen one connection. Pick the safest person and increase vulnerability incrementally. Loneliness isn't about quantity---it's about quality and authenticity <Citation id="7" index={7} source="JAMA Psychiatry" year="2023" tier={1} />.
         </p>
 
         <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1455,7 +1455,7 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>You don't need dozens of people—you need a few solid connections who show up, believe you, and remind you that you're not navigating this alone. Building that network takes courage when you feel most isolated, but it's one of the most powerful things you can do for your recovery. Start with one person. One group. One conversation. You deserve community.</p>
+          <p>You don't need dozens of people---you need a few solid connections who show up, believe you, and remind you that you're not navigating this alone. Building that network takes courage when you feel most isolated, but it's one of the most powerful things you can do for your recovery. Start with one person. One group. One conversation. You deserve community.</p>
         </ArticleCallout>
       </>
     ),

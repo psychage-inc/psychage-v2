@@ -87,10 +87,10 @@ export const romanticRelationshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A flash of unease when your partner mentions an attractive coworker. A tightness in your chest when they're texting someone you don't know. Jealousy is one of the most common—and most misunderstood—emotions in romantic relationships. Some level of jealousy is normal, even protective. But when it crosses into controlling behavior, constant suspicion, or emotional manipulation, it becomes toxic <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />.
+            A flash of unease when your partner mentions an attractive coworker. A tightness in your chest when they're texting someone you don't know. Jealousy is one of the most common---and most misunderstood---emotions in romantic relationships. Some level of jealousy is normal, even protective. But when it crosses into controlling behavior, constant suspicion, or emotional manipulation, it becomes toxic <Citation id="1" index={1} source="Psychological Bulletin" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding the difference between healthy jealousy and unhealthy jealousy—and learning to manage it constructively—can mean the difference between a relationship built on trust and one suffocated by insecurity <Citation id="3" index={3} source="Journal of Couple & Relationship Therapy" year="2019" tier={1} />.
+            Understanding the difference between healthy jealousy and unhealthy jealousy---and learning to manage it constructively---can mean the difference between a relationship built on trust and one suffocated by insecurity <Citation id="3" index={3} source="Journal of Couple & Relationship Therapy" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -141,7 +141,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
           4. Relationship Threat (Actual or Perceived)
         </h3>
         <p className="mb-6">
-          Sometimes jealousy signals a real problem—your partner is being inappropriate with someone else, or the relationship lacks intimacy and you're feeling threatened. Dismissing all jealousy as "irrational" can miss genuine warning signs.
+          Sometimes jealousy signals a real problem---your partner is being inappropriate with someone else, or the relationship lacks intimacy and you're feeling threatened. Dismissing all jealousy as "irrational" can miss genuine warning signs.
         </p>
 
         <h2 id="red-flags" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -222,7 +222,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Work on your self-worth',
               description: (
                 <p>
-                  If jealousy stems from feeling 'not good enough, ' no amount of reassurance from your partner will fix it. That's internal work—therapy, self-compassion, building confidence outside the relationship.
+                  If jealousy stems from feeling 'not good enough, ' no amount of reassurance from your partner will fix it. That's internal work---therapy, self-compassion, building confidence outside the relationship.
                 </p>
               ),
             },
@@ -270,11 +270,11 @@ export const romanticRelationshipsArticlesB: Article[] = [
           When Jealousy Is Justified: Rebuilding After Betrayal
         </h2>
         <p className="mb-6">
-          If there's been actual infidelity or broken trust, jealousy isn't irrational—it's a natural response to real harm. Rebuilding requires the person who broke trust to accept that they've lost the benefit of the doubt <Citation id="6" index={6} source="Harper" year="2017" tier={5} />.
+          If there's been actual infidelity or broken trust, jealousy isn't irrational---it's a natural response to real harm. Rebuilding requires the person who broke trust to accept that they've lost the benefit of the doubt <Citation id="6" index={6} source="Harper" year="2017" tier={5} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Transparency (temporarily):</strong> The person who cheated may need to be more open about their whereabouts and communications—not forever, but while trust rebuilds</li>
+          <li><strong>Transparency (temporarily):</strong> The person who cheated may need to be more open about their whereabouts and communications---not forever, but while trust rebuilds</li>
           <li><strong>Patience:</strong> Trust isn't rebuilt overnight. The betrayed partner will need time and consistent reassurance</li>
           <li><strong>Therapy:</strong> Couples therapy can provide structure for processing betrayal and rebuilding</li>
           <li><strong>Clear agreements:</strong> What does "rebuilding trust" look like concretely? What behaviors need to change?</li>
@@ -309,7 +309,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Jealousy isn't inherently bad—it's a signal. Sometimes it signals insecurity that needs internal work. Sometimes it signals a relationship dynamic that needs addressing. And sometimes it signals real betrayal. The key is learning to distinguish between them, to communicate feelings without resorting to control, and to build relationships where trust is the default, not the exception.
+            Jealousy isn't inherently bad---it's a signal. Sometimes it signals insecurity that needs internal work. Sometimes it signals a relationship dynamic that needs addressing. And sometimes it signals real betrayal. The key is learning to distinguish between them, to communicate feelings without resorting to control, and to build relationships where trust is the default, not the exception.
           </p>
         </ArticleCallout>
       </>
@@ -381,7 +381,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Long-distance relationships (LDRs) have a bad reputation. "It'll never work.", "Out of sight, out of mind.", "Long-distance is just delaying the inevitable." But research tells a more nuanced story. While LDRs face unique challenges, they don't fail at higher rates than geographically close relationships—and in some ways, they can be even more satisfying <Citation id="1" index={1} source="Personal Relationships" year="2020" tier={1} />.
+            Long-distance relationships (LDRs) have a bad reputation. "It'll never work.", "Out of sight, out of mind.", "Long-distance is just delaying the inevitable." But research tells a more nuanced story. While LDRs face unique challenges, they don't fail at higher rates than geographically close relationships---and in some ways, they can be even more satisfying <Citation id="1" index={1} source="Personal Relationships" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             The key is intentionality. Long-distance couples can't rely on physical proximity to maintain connection. They have to work harder to communicate, to stay emotionally intimate, and to keep the relationship a priority. Here's what research says actually works <Citation id="6" index={6} source="American Psychological Association" year="2021" tier={2} />.
@@ -401,7 +401,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-2">
-                    <strong>Reality:</strong> Research shows that LDRs have similar breakup rates to geographically close relationships <Citation id="1" index={1} source="Personal Relationships" year="2020" tier={1} />. The difference isn't whether they last—it's whether couples can successfully transition to geographic closeness when the time comes.
+                    <strong>Reality:</strong> Research shows that LDRs have similar breakup rates to geographically close relationships <Citation id="1" index={1} source="Personal Relationships" year="2020" tier={1} />. The difference isn't whether they last---it's whether couples can successfully transition to geographic closeness when the time comes.
                   </p>
                 </div>
               ),
@@ -429,7 +429,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: `Myth: LDRs are easier because there's no daily conflict`,
               content: (
                 <p>
-                  <strong>Reality:</strong> While you might avoid fights about dishes or household chores, LDRs have their own conflicts—miscommunication over text, jealousy, unmet expectations for communication, and the stress of not knowing when you'll see each other next.
+                  <strong>Reality:</strong> While you might avoid fights about dishes or household chores, LDRs have their own conflicts---miscommunication over text, jealousy, unmet expectations for communication, and the stress of not knowing when you'll see each other next.
                 </p>
               ),
             },
@@ -476,7 +476,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
           3. Shared Experiences (Even from Afar)
         </h3>
         <p className="mb-6">
-          Couples who create shared experiences—even remotely—feel more connected. Technology makes this easier than ever <Citation id="3" index={3} source="Computers in Human Behavior" year="2020" tier={1} />.
+          Couples who create shared experiences---even remotely---feel more connected. Technology makes this easier than ever <Citation id="3" index={3} source="Computers in Human Behavior" year="2020" tier={1} />.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -525,7 +525,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
           5. Maintaining Individual Lives
         </h3>
         <p className="mb-6">
-          Ironically, LDR couples who each have full, independent lives tend to be happier than those who put life on hold waiting for their partner. Build a life where you are—friends, hobbies, routines—so the relationship enhances your life rather than becomes your only source of connection.
+          Ironically, LDR couples who each have full, independent lives tend to be happier than those who put life on hold waiting for their partner. Build a life where you are---friends, hobbies, routines---so the relationship enhances your life rather than becomes your only source of connection.
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -539,7 +539,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Schedule regular video calls',
               description: (
                 <p>
-                  Not "let's video chat whenever"—specific times: "Every Sunday at 7pm, we video call for at least an hour." Structure creates reliability and anticipation.
+                  Not "let's video chat whenever"---specific times: "Every Sunday at 7pm, we video call for at least an hour." Structure creates reliability and anticipation.
                 </p>
               ),
             },
@@ -547,7 +547,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Send surprise care packages',
               description: (
                 <p>
-                  Physical objects create tangible connection. A handwritten letter, their favorite snack, a shirt that smells like you—small gestures that say "I'm thinking of you."
+                  Physical objects create tangible connection. A handwritten letter, their favorite snack, a shirt that smells like you---small gestures that say "I'm thinking of you."
                 </p>
               ),
             },
@@ -555,7 +555,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Create rituals',
               description: (
                 <p>
-                  'Good morning' texts, nightly voice notes, Sunday morning coffee dates over video—rituals create rhythm and reliability in a relationship that lacks daily physical presence.
+                  'Good morning' texts, nightly voice notes, Sunday morning coffee dates over video---rituals create rhythm and reliability in a relationship that lacks daily physical presence.
                 </p>
               ),
             },
@@ -579,7 +579,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Be transparent about needs',
               description: (
                 <p>
-                  'I need more communication than this' or "I'm feeling overwhelmed by constant texting—can we scale back?" Long-distance magnifies miscommunication, so overcommunicate about communication itself.
+                  'I need more communication than this' or "I'm feeling overwhelmed by constant texting---can we scale back?" Long-distance magnifies miscommunication, so overcommunicate about communication itself.
                 </p>
               ),
             },
@@ -598,8 +598,8 @@ export const romanticRelationshipsArticlesB: Article[] = [
             <strong>Common challenges after closing the gap:</strong>
           </p>
           <ul className="list-disc pl-5 space-y-2 mt-2">
-            <li>You've idealized each other during distance—real daily habits can be jarring</li>
-            <li>You're used to only seeing each other during 'quality time' visits—now you see each other during mundane life too</li>
+            <li>You've idealized each other during distance---real daily habits can be jarring</li>
+            <li>You're used to only seeing each other during 'quality time' visits---now you see each other during mundane life too</li>
             <li>You've been independent for so long that merging lives requires adjustment</li>
             <li>Expectations don't match reality: 'I thought it would be perfect once we were finally together'</li>
           </ul>
@@ -616,7 +616,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Long-distance relationships aren't easier or harder than geographically close ones—they're just different. They require more intentional communication, more creativity in staying connected, and more trust. But they can also create deeper emotional intimacy, because you can't coast on physical presence. You have to actually talk, listen, and choose each other every day, across the miles.
+            Long-distance relationships aren't easier or harder than geographically close ones---they're just different. They require more intentional communication, more creativity in staying connected, and more trust. But they can also create deeper emotional intimacy, because you can't coast on physical presence. You have to actually talk, listen, and choose each other every day, across the miles.
           </p>
         </ArticleCallout>
       </>
@@ -683,7 +683,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
             Most couples only have deep conversations about their relationship when something is wrong. By the time you're sitting down to "talk, " there's already resentment, hurt, or distance. Relationship check-ins flip this script: instead of waiting for problems to build, you create a regular space to address small issues before they become big ones <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            A relationship check-in is a structured, recurring conversation where both partners share how they're feeling about the relationship, what's working, what needs attention, and what they need from each other. Research shows that couples who practice preventive relationship maintenance—addressing issues proactively—report higher satisfaction and lower rates of dissolution <Citation id="3" index={3} source="Personal Relationships" year="2019" tier={1} />.
+            A relationship check-in is a structured, recurring conversation where both partners share how they're feeling about the relationship, what's working, what needs attention, and what they need from each other. Research shows that couples who practice preventive relationship maintenance---addressing issues proactively---report higher satisfaction and lower rates of dissolution <Citation id="3" index={3} source="Personal Relationships" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -694,7 +694,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>They normalize talking about the relationship:</strong> Instead of "We need to talk" feeling like a crisis, it's just part of your routine</li>
           <li><strong>They catch small issues early:</strong> "I've been feeling a little disconnected this week' is easier to address than "I've felt disconnected for months and now I resent you"</li>
-          <li><strong>They create space for appreciation:</strong> It's easy to forget to say "thank you" or "I noticed you did that"—check-ins build that in</li>
+          <li><strong>They create space for appreciation:</strong> It's easy to forget to say "thank you" or "I noticed you did that"---check-ins build that in</li>
           <li><strong>They reduce ambiguity:</strong> Instead of assuming you know how your partner feels, you ask and listen</li>
           <li><strong>They prevent resentment:</strong> Small grievances aired weekly don't have time to fester into big resentments</li>
         </ul>
@@ -713,7 +713,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Set a regular time',
               description: (
                 <p>
-                  Sunday evenings, Friday mornings, Wednesday night—whatever works. The key is consistency. Don't skip it just because "everything's fine." That's when it's most valuable.
+                  Sunday evenings, Friday mornings, Wednesday night---whatever works. The key is consistency. Don't skip it just because "everything's fine." That's when it's most valuable.
                 </p>
               ),
             },
@@ -721,7 +721,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Create a calm environment',
               description: (
                 <p>
-                  No TV, no phones, no distractions. Sit facing each other. Make tea or pour wine. This isn't a business meeting—it's a connection ritual.
+                  No TV, no phones, no distractions. Sit facing each other. Make tea or pour wine. This isn't a business meeting---it's a connection ritual.
                 </p>
               ),
             },
@@ -750,7 +750,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Address what needs attention (10-15 minutes)',
               description: (
                 <p>
-                  This isn't a complaints session—it's needs-based. "I've been feeling a little distant this week. Can we make more time to connect?" or "I need help with the household chores. Can we redistribute?"
+                  This isn't a complaints session---it's needs-based. "I've been feeling a little distant this week. Can we make more time to connect?" or "I need help with the household chores. Can we redistribute?"
                 </p>
               ),
             },
@@ -874,7 +874,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Relationship check-ins aren't a sign that something is wrong—they're a sign that you're invested in keeping things right. The best time to address small disconnections is before they become big chasms. Thirty minutes a week to check in with each other is a small investment with massive returns: less resentment, more connection, and a relationship that evolves intentionally instead of drifting apart by accident.
+            Relationship check-ins aren't a sign that something is wrong---they're a sign that you're invested in keeping things right. The best time to address small disconnections is before they become big chasms. Thirty minutes a week to check in with each other is a small investment with massive returns: less resentment, more connection, and a relationship that evolves intentionally instead of drifting apart by accident.
           </p>
         </ArticleCallout>
       </>
@@ -884,7 +884,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
     id: catId(49),
     slug: 'partners-different-needs-navigating-incompatibility',
     title: 'When Partners Have Different Needs: Navigating Incompatibility',
-    description: 'Learn how to handle mismatched needs in relationships—from intimacy to socializing to life goals—and when compromise is possible.',
+    description: 'Learn how to handle mismatched needs in relationships---from intimacy to socializing to life goals---and when compromise is possible.',
     image: "/images/articles/cat03/cover-049.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 7,
@@ -946,10 +946,10 @@ export const romanticRelationshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You want sex three times a week; they're happy with once a month. You need constant social interaction; they need solitude to recharge. You dream of adventure and travel; they value stability and routine. When partners have fundamentally different needs, it can feel like an impossible gap to bridge. But research shows that many couples successfully navigate these differences—while others recognize when incompatibility is too great to overcome <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2021" tier={1} />.
+            You want sex three times a week; they're happy with once a month. You need constant social interaction; they need solitude to recharge. You dream of adventure and travel; they value stability and routine. When partners have fundamentally different needs, it can feel like an impossible gap to bridge. But research shows that many couples successfully navigate these differences---while others recognize when incompatibility is too great to overcome <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            The question isn't whether you'll have differences—all couples do. The question is: which differences can be negotiated, which require compromise, and which are dealbreakers? Here's how to navigate mismatched needs with honesty, creativity, and care <Citation id="6" index={6} source="American Psychological Association" year="2021" tier={2} />.
+            The question isn't whether you'll have differences---all couples do. The question is: which differences can be negotiated, which require compromise, and which are dealbreakers? Here's how to navigate mismatched needs with honesty, creativity, and care <Citation id="6" index={6} source="American Psychological Association" year="2021" tier={2} />.
           </p>
         </div>
 
@@ -989,7 +989,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
           5. Life Goals and Timelines
         </h3>
         <p className="mb-6">
-          Wanting children vs. not wanting children. Wanting them now vs. wanting them in 5-10 years. Career ambition vs. work-life balance. City life vs. suburban life. These aren't small differences—they're fundamental life paths.
+          Wanting children vs. not wanting children. Wanting them now vs. wanting them in 5-10 years. Career ambition vs. work-life balance. City life vs. suburban life. These aren't small differences---they're fundamental life paths.
         </p>
 
         <h2 id="can-it-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1001,8 +1001,8 @@ export const romanticRelationshipsArticlesB: Article[] = [
           columns={['Often Negotiable', 'Often Non-Negotiable']}
           items={[
             { feature: 'Examples', values: ['Different social needs, different hobbies, different cleanliness standards', 'Wanting kids vs. not wanting kids, monogamy vs. non-monogamy, core values conflicts'] },
-            { feature: 'Why', values: ['Preferences can be adjusted, both can get needs met in different ways', 'Fundamental incompatibility—one person cannot get their core need met'] },
-            { feature: 'Compromise possible?', values: ['Yes, through creative problem-solving', 'No—someone has to sacrifice something essential to who they are'] },
+            { feature: 'Why', values: ['Preferences can be adjusted, both can get needs met in different ways', 'Fundamental incompatibility---one person cannot get their core need met'] },
+            { feature: 'Compromise possible?', values: ['Yes, through creative problem-solving', 'No---someone has to sacrifice something essential to who they are'] },
             { feature: 'Long-term outlook', values: ['Can thrive if both are flexible', 'Leads to resentment, eventual breakdown'] },
           ]}
         />
@@ -1042,7 +1042,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
               title: 'Get needs met outside the relationship',
               description: (
                 <p>
-                  Not all needs have to be met by your partner. If one person needs more socializing, they can maintain a robust friend group. If one needs more physical activity, they can join a gym or sports league. This isn't abandoning each other—it's taking pressure off the relationship <Citation id="3" index={3} source="Personal Relationships" year="2019" tier={1} />.
+                  Not all needs have to be met by your partner. If one person needs more socializing, they can maintain a robust friend group. If one needs more physical activity, they can join a gym or sports league. This isn't abandoning each other---it's taking pressure off the relationship <Citation id="3" index={3} source="Personal Relationships" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -1081,9 +1081,9 @@ export const romanticRelationshipsArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li><strong>Separate affection from sex:</strong> Hugs and kisses don't always have to lead somewhere</li>
-                <li><strong>Scheduled intimacy:</strong> It's not 'unromantic"—it's intentional. Both people can prepare mentally</li>
+                <li><strong>Scheduled intimacy:</strong> It's not 'unromantic"---it's intentional. Both people can prepare mentally</li>
                 <li><strong>Expand definition of intimacy:</strong> Esther Perel: "Sometimes desire follows arousal" <Citation id="5" index={5} source="Harper" year="2006" tier={5} />. Try starting physical connection without expectations</li>
-                <li><strong>Address underlying causes:</strong> Stress, hormones, medication, unresolved conflict—these all affect desire</li>
+                <li><strong>Address underlying causes:</strong> Stress, hormones, medication, unresolved conflict---these all affect desire</li>
               </ul>
             ),
           }}
@@ -1106,7 +1106,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>Warning sign:</strong> If addressing the incompatibility requires one person to fundamentally change who they are or give up something essential to their identity, it's likely a dealbreaker—not a negotiable difference.
+            <strong>Warning sign:</strong> If addressing the incompatibility requires one person to fundamentally change who they are or give up something essential to their identity, it's likely a dealbreaker---not a negotiable difference.
           </p>
         </ArticleCallout>
 
@@ -1148,14 +1148,14 @@ export const romanticRelationshipsArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="Love is not enough. It never was. We also need respect, communication, flexibility, and a willingness to meet each other halfway—again and again."
+          quote="Love is not enough. It never was. We also need respect, communication, flexibility, and a willingness to meet each other halfway---again and again."
           attribution="Unknown"
           variant="default"
         />
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Different needs aren't inherently a problem—they're an opportunity to practice flexibility, creativity, and compromise. But there's a difference between 'We approach this differently' and "We want fundamentally different lives." The former can be navigated with effort and goodwill. The latter often can't, no matter how much you love each other. Knowing which you're facing is one of the hardest—and most important—relationship skills you can develop.
+            Different needs aren't inherently a problem---they're an opportunity to practice flexibility, creativity, and compromise. But there's a difference between 'We approach this differently' and "We want fundamentally different lives." The former can be navigated with effort and goodwill. The latter often can't, no matter how much you love each other. Knowing which you're facing is one of the hardest---and most important---relationship skills you can develop.
           </p>
         </ArticleCallout>
       </>
@@ -1243,10 +1243,10 @@ export const romanticRelationshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "We should go to couples therapy" is often said during a fight, when things are already falling apart. But waiting until a relationship is in crisis is like waiting to see a doctor until you're in the emergency room. Couples therapy is most effective when it's used proactively—not as a last resort, but as a tool for growth, communication, and preventing small problems from becoming insurmountable ones <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.
+            "We should go to couples therapy" is often said during a fight, when things are already falling apart. But waiting until a relationship is in crisis is like waiting to see a doctor until you're in the emergency room. Couples therapy is most effective when it's used proactively---not as a last resort, but as a tool for growth, communication, and preventing small problems from becoming insurmountable ones <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Research shows that couples therapy can significantly improve relationship satisfaction, communication, and emotional connection—and that 70% of couples who attend therapy report meaningful improvement <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2020" tier={1} />. Here's when to go, what happens in sessions, and how to find the right therapist.
+            Research shows that couples therapy can significantly improve relationship satisfaction, communication, and emotional connection---and that 70% of couples who attend therapy report meaningful improvement <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2020" tier={1} />. Here's when to go, what happens in sessions, and how to find the right therapist.
           </p>
         </div>
 
@@ -1255,7 +1255,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
         </h2>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
-          Don't Wait for Crisis—Go Preventively
+          Don't Wait for Crisis---Go Preventively
         </h3>
         <p className="mb-6">
           The average couple waits six years from when problems start to when they seek therapy <Citation id="4" index={4} source="Journal of Family Psychology" year="2020" tier={1} />. By then, resentment is deep, patterns are entrenched, and repair is harder. Consider therapy when:
@@ -1277,7 +1277,7 @@ export const romanticRelationshipsArticlesB: Article[] = [
           stats={[
             { value: 70, suffix: '%', label: 'Of couples report improvement after therapy' },
             { value: 6, suffix: ' yrs', label: 'Average delay before seeking help (too long!)' },
-            { value: 12, suffix: '–20', label: 'Typical number of therapy sessions' },
+            { value: 12, suffix: '--20', label: 'Typical number of therapy sessions' },
           ]}
           source="Journal of Marital and Family Therapy, 2020"
         />
@@ -1522,12 +1522,12 @@ export const romanticRelationshipsArticlesB: Article[] = [
           <li><strong>Commitment to the process:</strong> Therapy requires consistent attendance and homework between sessions</li>
           <li><strong>Willingness to be vulnerable:</strong> Growth happens when you're honest about fears, needs, and pain</li>
           <li><strong>Both people want the relationship to work:</strong> If one person has already checked out, therapy can't force them back in</li>
-          <li><strong>You do the work outside of sessions:</strong> 50 minutes per week isn't enough—you have to practice new skills daily</li>
+          <li><strong>You do the work outside of sessions:</strong> 50 minutes per week isn't enough---you have to practice new skills daily</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Couples therapy isn't a magic fix, and it's not just for relationships on the brink of collapse. It's a structured, evidence-based process for improving communication, deepening connection, and learning how to navigate conflict constructively. The couples who benefit most are those who go early, show up consistently, and do the hard work of changing patterns that no longer serve them. If you're considering therapy, don't wait. The sooner you go, the better your chances of not just surviving—but thriving.
+            Couples therapy isn't a magic fix, and it's not just for relationships on the brink of collapse. It's a structured, evidence-based process for improving communication, deepening connection, and learning how to navigate conflict constructively. The couples who benefit most are those who go early, show up consistently, and do the hard work of changing patterns that no longer serve them. If you're considering therapy, don't wait. The sooner you go, the better your chances of not just surviving---but thriving.
           </p>
         </ArticleCallout>
       </>

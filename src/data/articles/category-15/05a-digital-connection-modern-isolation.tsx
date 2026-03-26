@@ -33,7 +33,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
     citations: [
       {
         id: '1',
-        text: 'The Loneliness Epidemic: Why So Many of Us Feel Alone — and How Leaders Can Respond',
+        text: 'The Loneliness Epidemic: Why So Many of Us Feel Alone --- and How Leaders Can Respond',
         source: 'Harvard Business Review',
         year: '2020',
         link: 'https://hbr.org/2020/02/the-loneliness-epidemic',
@@ -127,14 +127,14 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          The trend is strongest among young people — the generation that grew up with smartphones. A study of young adults found that those who spend more than two hours per day on social media are twice as likely to report high levels of loneliness <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2017" tier={1} />.
+          The trend is strongest among young people --- the generation that grew up with smartphones. A study of young adults found that those who spend more than two hours per day on social media are twice as likely to report high levels of loneliness <Citation id="3" index={3} source="American Journal of Preventive Medicine" year="2017" tier={1} />.
         </p>
 
         <h2 id="why-connection-fails" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Digital Connection Does Not Fill the Void
         </h2>
         <p className="mb-6">
-          More contact does not equal less loneliness. In fact, research shows that the relationship between social media use and loneliness is complex — and often harmful <Citation id="2" index={2} source="Computers in Human Behavior" year="2021" tier={1} />.
+          More contact does not equal less loneliness. In fact, research shows that the relationship between social media use and loneliness is complex --- and often harmful <Citation id="2" index={2} source="Computers in Human Behavior" year="2021" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -145,7 +145,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
               title: 'Passive Consumption Increases Loneliness',
               content: (
                 <p>
-                  Scrolling through feeds — watching others' lives without interaction — predicts higher loneliness. Active engagement (commenting, messaging) has weaker or no effect. Passive use triggers social comparison and feelings of exclusion <Citation id="6" index={6} source="Journal of Affective Disorders" year="2021" tier={1} />.
+                  Scrolling through feeds --- watching others' lives without interaction --- predicts higher loneliness. Active engagement (commenting, messaging) has weaker or no effect. Passive use triggers social comparison and feelings of exclusion <Citation id="6" index={6} source="Journal of Affective Disorders" year="2021" tier={1} />.
                 </p>
               ),
             },
@@ -154,7 +154,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
               title: 'Digital Interaction Is Often Superficial',
               content: (
                 <p>
-                  Likes and brief comments do not provide the depth of connection humans need. Real intimacy requires vulnerability, sustained attention, and presence — things hard to achieve through a screen.
+                  Likes and brief comments do not provide the depth of connection humans need. Real intimacy requires vulnerability, sustained attention, and presence --- things hard to achieve through a screen.
                 </p>
               ),
             },
@@ -399,7 +399,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
             You have never met them in person. You have never heard their voice. But when something good happens, they are among the first people you want to tell. Are they really your friend?
           </p>
           <p className="mb-6">
-            Online friendships — formed and maintained primarily through social media, gaming, or online communities — are increasingly common. For some people, their closest friendships exist entirely online.
+            Online friendships --- formed and maintained primarily through social media, gaming, or online communities --- are increasingly common. For some people, their closest friendships exist entirely online.
           </p>
           <p className="mb-6">
             But do these relationships "count"? Can digital friendships provide the same benefits as offline ones? This article examines what research says about the quality and impact of online connections.
@@ -423,7 +423,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Research comparing online and offline friendships finds that both can provide emotional support, companionship, and belonging — but they differ in key ways <Citation id="3" index={3} source="Cyberpsychology, Behavior, and Social Networking" year="2021" tier={1} />.
+          Research comparing online and offline friendships finds that both can provide emotional support, companionship, and belonging --- but they differ in key ways <Citation id="3" index={3} source="Cyberpsychology, Behavior, and Social Networking" year="2021" tier={1} />.
         </p>
 
         <h2 id="what-online-friendships-provide" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -519,7 +519,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           The Value of Weak Ties
         </h2>
         <p className="mb-6">
-          Social media also maintains "weak ties" — acquaintances, former classmates, people you met once. Research shows these weak ties have unique value <Citation id="5" index={5} source="New Media & Society" year="2021" tier={1} />:
+          Social media also maintains "weak ties" --- acquaintances, former classmates, people you met once. Research shows these weak ties have unique value <Citation id="5" index={5} source="New Media & Society" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>They provide diverse perspectives and information</li>
@@ -540,7 +540,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           Should Online Friendships Become Offline?
         </h2>
         <p className="mb-6">
-          Many online friendships eventually meet in person. Research shows that this transition strengthens the bond — but only if both people want it <Citation id="7" index={7} source="Information, Communication & Society" year="2019" tier={1} />.
+          Many online friendships eventually meet in person. Research shows that this transition strengthens the bond --- but only if both people want it <Citation id="7" index={7} source="Information, Communication & Society" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           However, not all online friendships need to become offline. Some people prefer the boundaries of digital-only relationships. Some friendships are geographically impossible. And some people value online friends specifically because they offer connection without the demands of in-person socializing.
@@ -578,7 +578,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
           The question "Are online friendships real?" misses the point. The better question is: "Do they meet your needs?"
         </p>
         <p className="mb-6">
-          For some people, online friendships are supplemental — nice to have, but not central. For others, they are essential — providing connection that is not available offline.
+          For some people, online friendships are supplemental --- nice to have, but not central. For others, they are essential --- providing connection that is not available offline.
         </p>
         <p className="mb-6">
           If your online friends make you feel seen, supported, and less alone, they count. Full stop.
@@ -675,7 +675,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
             Working from home sounded like a dream. No commute. No office politics. Total flexibility. Then you realized: you miss people.
           </p>
           <p className="mb-6">
-            Remote work has transformed how millions work, offering freedom and flexibility. But it has also created a new form of isolation. When your office is your bedroom and your coworkers are Zoom squares, social connection becomes optional — and often forgotten <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />.
+            Remote work has transformed how millions work, offering freedom and flexibility. But it has also created a new form of isolation. When your office is your bedroom and your coworkers are Zoom squares, social connection becomes optional --- and often forgotten <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             This article explores how remote work affects social connection, who is most at risk for isolation, and strategies for maintaining community while working from home.
@@ -775,7 +775,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
             Living with chronic illness is hard enough. But one of the cruelest parts is often invisible: the profound isolation it creates.
           </p>
           <p className="mb-6">
-            When pain, fatigue, or unpredictable symptoms make it hard to leave the house, when friends stop inviting you because you cancel so often, when your life revolves around doctor appointments and managing symptoms — loneliness becomes a constant companion <Citation id="1" index={1} source="Health Psychology Review" year="2020" tier={1} />.
+            When pain, fatigue, or unpredictable symptoms make it hard to leave the house, when friends stop inviting you because you cancel so often, when your life revolves around doctor appointments and managing symptoms --- loneliness becomes a constant companion <Citation id="1" index={1} source="Health Psychology Review" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             This article explores why chronic illness increases isolation, how to navigate friendships when your health is a barrier, and where to find community that understands.

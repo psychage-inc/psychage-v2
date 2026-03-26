@@ -106,7 +106,7 @@ export const attachmentStylesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The way you love as an adult has roots in the relationships you formed in your first years of life. This isn't about blame—it's about understanding a powerful psychological framework that explains why you seek closeness or distance, trust easily or struggle with vulnerability, and react the way you do when relationships feel uncertain.
+            The way you love as an adult has roots in the relationships you formed in your first years of life. This isn't about blame---it's about understanding a powerful psychological framework that explains why you seek closeness or distance, trust easily or struggle with vulnerability, and react the way you do when relationships feel uncertain.
           </p>
           <p className="mb-6">
             Attachment theory, first developed by psychiatrist John Bowlby in the 1960s, proposes that early experiences with caregivers create internal working models for how we expect relationships to function <Citation id="1" index={1} source="Basic Books" year="1969" tier={5} />. These patterns follow us into adulthood, shaping how we navigate romantic relationships, friendships, and even professional connections <Citation id="2" index={2} source="Current Opinion in Psychology" year="2019" tier={1} />.
@@ -214,7 +214,7 @@ export const attachmentStylesArticlesA: Article[] = [
           title="Attachment Styles: Key Differences"
           columns={['Style', 'View of Self', 'View of Others', 'Primary Fear']}
           items={[
-            { feature: 'Secure', values: ['Worthy', 'Trustworthy', 'Neither—balanced'] },
+            { feature: 'Secure', values: ['Worthy', 'Trustworthy', 'Neither---balanced'] },
             { feature: 'Anxious', values: ['Unworthy', 'Trustworthy but unreliable', 'Abandonment'] },
             { feature: 'Avoidant', values: ['Self-sufficient', 'Unreliable', 'Losing independence'] },
             { feature: 'Disorganized', values: ['Unworthy', 'Unpredictable', 'Both intimacy and rejection'] },
@@ -229,7 +229,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Attachment patterns influence everything from how you handle conflict to how you interpret a partner's silence. A text that goes unanswered might feel neutral to a secure person, alarming to an anxious person, and like welcome space to an avoidant person.
         </p>
         <p className="mb-6">
-          Understanding your style isn't about labeling yourself—it's about recognizing patterns so you can make conscious choices instead of automatic reactions.
+          Understanding your style isn't about labeling yourself---it's about recognizing patterns so you can make conscious choices instead of automatic reactions.
         </p>
 
         <ArticleCallout variant="tip">
@@ -253,7 +253,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Early caregiver responsiveness is the primary factor. Consistent, attuned care fosters secure attachment. Inconsistent care (sometimes responsive, sometimes not) creates anxious attachment. Neglectful or dismissive care leads to avoidant patterns. Frightening or chaotic care results in disorganized attachment.
         </p>
         <p className="mb-6">
-          But attachment isn't fixed at age five. Significant relationships throughout life—romantic partners, close friends, therapists—can gradually shift your internal working models toward greater security.
+          But attachment isn't fixed at age five. Significant relationships throughout life---romantic partners, close friends, therapists---can gradually shift your internal working models toward greater security.
         </p>
 
         <h2 id="recognizing-your-pattern" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -277,7 +277,7 @@ export const attachmentStylesArticlesA: Article[] = [
           What Comes Next
         </h2>
         <p className="mb-6">
-          Knowing your attachment style is the first step. The subsequent articles in this series dive deeper into each style, exploring how they manifest in daily life and what healing looks like. Understanding attachment doesn't fix everything overnight, but it does offer a map—one that explains where your relationship patterns come from and, crucially, how they can change.
+          Knowing your attachment style is the first step. The subsequent articles in this series dive deeper into each style, exploring how they manifest in daily life and what healing looks like. Understanding attachment doesn't fix everything overnight, but it does offer a map---one that explains where your relationship patterns come from and, crucially, how they can change.
         </p>
         <p className="mb-6">
           You're not stuck with the attachment style you developed in childhood. With awareness, intention, and often the support of therapy or secure relationships, movement toward earned secure attachment is possible.
@@ -293,7 +293,7 @@ export const attachmentStylesArticlesA: Article[] = [
     id: catId(2),
     slug: 'anxious-attachment-when-fear-of-abandonment-drives-relationships',
     title: 'Anxious Attachment: When Fear of Abandonment Drives Your Relationships',
-    description: 'Explore the patterns of anxious attachment—chronic worry about rejection, emotional intensity, and the constant need for reassurance in relationships.',
+    description: 'Explore the patterns of anxious attachment---chronic worry about rejection, emotional intensity, and the constant need for reassurance in relationships.',
     image: "/images/articles/cat03/cover-002.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 9,
@@ -379,10 +379,10 @@ export const attachmentStylesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You check your phone for the tenth time in an hour. Your partner hasn't responded to your text, and your mind floods with explanations: They're upset. They're losing interest. You did something wrong. The anxiety builds until you send another message—then immediately regret it.
+            You check your phone for the tenth time in an hour. Your partner hasn't responded to your text, and your mind floods with explanations: They're upset. They're losing interest. You did something wrong. The anxiety builds until you send another message---then immediately regret it.
           </p>
           <p className="mb-6">
-            This pattern isn't weakness or neediness. It's anxious attachment—a relationship style rooted in early experiences where love felt conditional or unpredictable <Citation id="1" index={1} source="NeuroImage" year="2017" tier={1} />. People with anxious attachment crave closeness but live with a persistent fear that it will be taken away.
+            This pattern isn't weakness or neediness. It's anxious attachment---a relationship style rooted in early experiences where love felt conditional or unpredictable <Citation id="1" index={1} source="NeuroImage" year="2017" tier={1} />. People with anxious attachment crave closeness but live with a persistent fear that it will be taken away.
           </p>
         </div>
 
@@ -390,7 +390,7 @@ export const attachmentStylesArticlesA: Article[] = [
           What Is Anxious Attachment?
         </h2>
         <p className="mb-6">
-          Anxious attachment (also called preoccupied attachment) is characterized by high anxiety about rejection and low avoidance of intimacy. You want to be close—very close—but you're haunted by the fear that others won't want the same level of connection <Citation id="2" index={2} source="Journal of Experimental Social Psychology" year="2013" tier={1} />.
+          Anxious attachment (also called preoccupied attachment) is characterized by high anxiety about rejection and low avoidance of intimacy. You want to be close---very close---but you're haunted by the fear that others won't want the same level of connection <Citation id="2" index={2} source="Journal of Experimental Social Psychology" year="2013" tier={1} />.
         </p>
         <p className="mb-6">
           This style typically develops when caregivers were inconsistent in their responsiveness. Sometimes they were attuned and loving; other times they were distracted, dismissive, or unavailable. The child learns: "I need to work hard for love. I can't trust that it will be there unless I constantly check."
@@ -409,7 +409,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Core Patterns of Anxious Attachment
         </h2>
         <p className="mb-6">
-          Anxious attachment manifests through what researchers call "hyperactivating strategies"—behaviors designed to increase closeness and elicit caregiving responses from others <Citation id="4" index={4} source="Attachment & Human Development" year="2011" tier={1} />.
+          Anxious attachment manifests through what researchers call "hyperactivating strategies"---behaviors designed to increase closeness and elicit caregiving responses from others <Citation id="4" index={4} source="Attachment & Human Development" year="2011" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -430,14 +430,14 @@ export const attachmentStylesArticlesA: Article[] = [
           3. Fear of Abandonment
         </h3>
         <p className="mb-6">
-          The thought of being left feels catastrophic. This fear can lead to behaviors designed to prevent abandonment—clinging, monitoring, or suppressing your own needs to avoid conflict <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2006" tier={1} />.
+          The thought of being left feels catastrophic. This fear can lead to behaviors designed to prevent abandonment---clinging, monitoring, or suppressing your own needs to avoid conflict <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2006" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           4. Protest Behavior
         </h3>
         <p className="mb-6">
-          When you feel distance from a partner, you may engage in behaviors to regain their attention: excessive calling or texting, emotional outbursts, or creating drama to elicit a response—any response—that confirms you still matter.
+          When you feel distance from a partner, you may engage in behaviors to regain their attention: excessive calling or texting, emotional outbursts, or creating drama to elicit a response---any response---that confirms you still matter.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -474,10 +474,10 @@ export const attachmentStylesArticlesA: Article[] = [
           The Internal Experience
         </h2>
         <p className="mb-6">
-          From the outside, anxious attachment might look like clinginess or drama. From the inside, it feels like survival. The threat of abandonment activates the same neural pathways as physical danger. The need for reassurance isn't manipulation—it's a desperate attempt to regulate overwhelming fear.
+          From the outside, anxious attachment might look like clinginess or drama. From the inside, it feels like survival. The threat of abandonment activates the same neural pathways as physical danger. The need for reassurance isn't manipulation---it's a desperate attempt to regulate overwhelming fear.
         </p>
         <p className="mb-6">
-          Many people with anxious attachment describe feeling like they're "too much"—too emotional, too needy, too intense. This shame compounds the original wound, creating a cycle where you need reassurance that you're worthy of love while believing you're fundamentally unworthy <Citation id="9" index={9} source="Personality and Individual Differences" year="2020" tier={1} />.
+          Many people with anxious attachment describe feeling like they're "too much"---too emotional, too needy, too intense. This shame compounds the original wound, creating a cycle where you need reassurance that you're worthy of love while believing you're fundamentally unworthy <Citation id="9" index={9} source="Personality and Individual Differences" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -501,7 +501,7 @@ export const attachmentStylesArticlesA: Article[] = [
           The Self-Disclosure Paradox
         </h2>
         <p className="mb-6">
-          Research shows that anxiously attached individuals tend to over-disclose early in relationships—sharing intimate details quickly in an attempt to accelerate bonding <Citation id="6" index={6} source="Personal Relationships" year="2012" tier={1} />. This can create a false sense of intimacy before trust has been built, setting up later disappointment when the relationship doesn't deepen as quickly as hoped.
+          Research shows that anxiously attached individuals tend to over-disclose early in relationships---sharing intimate details quickly in an attempt to accelerate bonding <Citation id="6" index={6} source="Personal Relationships" year="2012" tier={1} />. This can create a false sense of intimacy before trust has been built, setting up later disappointment when the relationship doesn't deepen as quickly as hoped.
         </p>
 
         <h2 id="recognizing-pattern" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -525,7 +525,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Moving Toward Security
         </h2>
         <p className="mb-6">
-          Anxious attachment can shift. It requires building new internal working models—learning through experience that you can be loved without constantly earning it, that absence doesn't equal abandonment, and that you can self-soothe without external validation.
+          Anxious attachment can shift. It requires building new internal working models---learning through experience that you can be loved without constantly earning it, that absence doesn't equal abandonment, and that you can self-soothe without external validation.
         </p>
         <p className="mb-6">
           This often happens through:
@@ -539,7 +539,7 @@ export const attachmentStylesArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The goal isn't to eliminate the need for connection—that's human. The goal is to trust that connection can exist without constant vigilance, and that you're worthy of love even when you're not actively working for it.
+          The goal isn't to eliminate the need for connection---that's human. The goal is to trust that connection can exist without constant vigilance, and that you're worthy of love even when you're not actively working for it.
         </p>
       </>
     ),
@@ -552,7 +552,7 @@ export const attachmentStylesArticlesA: Article[] = [
     id: catId(3),
     slug: 'avoidant-attachment-when-closeness-feels-like-a-threat',
     title: 'Avoidant Attachment: When Closeness Feels Like a Threat',
-    description: 'Understand the patterns of avoidant attachment—emotional distance, discomfort with vulnerability, and the prioritization of independence over intimacy.',
+    description: 'Understand the patterns of avoidant attachment---emotional distance, discomfort with vulnerability, and the prioritization of independence over intimacy.',
     image: "/images/articles/cat03/cover-003.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 9,
@@ -638,10 +638,10 @@ export const attachmentStylesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your partner says "I love you," and instead of warmth, you feel trapped. They want to spend more time together, and you suddenly remember everything you need to get done alone. Vulnerability feels like weakness. Depending on someone feels dangerous. You pride yourself on not needing anyone—but deep down, the isolation aches.
+            Your partner says "I love you," and instead of warmth, you feel trapped. They want to spend more time together, and you suddenly remember everything you need to get done alone. Vulnerability feels like weakness. Depending on someone feels dangerous. You pride yourself on not needing anyone---but deep down, the isolation aches.
           </p>
           <p className="mb-6">
-            This is avoidant attachment—a protective strategy that equates closeness with loss of autonomy and emotional expression with risk <Citation id="1" index={1} source="Developmental Cognitive Neuroscience" year="2019" tier={1} />. It's not that you don't want connection. It's that connection has historically felt unsafe, so you've learned to survive by not needing it.
+            This is avoidant attachment---a protective strategy that equates closeness with loss of autonomy and emotional expression with risk <Citation id="1" index={1} source="Developmental Cognitive Neuroscience" year="2019" tier={1} />. It's not that you don't want connection. It's that connection has historically felt unsafe, so you've learned to survive by not needing it.
           </p>
         </div>
 
@@ -656,14 +656,14 @@ export const attachmentStylesArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Avoidant attachment isn't about not having emotions—it's about learning to hide them so well that even you forget they're there.</p>
+          <p>Avoidant attachment isn't about not having emotions---it's about learning to hide them so well that even you forget they're there.</p>
         </ArticleCallout>
 
         <h2 id="core-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Core Patterns of Avoidant Attachment
         </h2>
         <p className="mb-6">
-          Avoidant attachment operates through "deactivating strategies"—behaviors designed to suppress attachment needs and maintain emotional distance <Citation id="2" index={2} source="Attachment & Human Development" year="2011" tier={1} />.
+          Avoidant attachment operates through "deactivating strategies"---behaviors designed to suppress attachment needs and maintain emotional distance <Citation id="2" index={2} source="Attachment & Human Development" year="2011" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -673,7 +673,7 @@ export const attachmentStylesArticlesA: Article[] = [
               title: 'Suppression of Emotions',
               description: (
                 <p>
-                  Feelings—especially vulnerable ones like sadness, fear, or longing—are minimized, rationalized, or ignored. "I'm fine" becomes the default response, even when it's not true <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2016" tier={1} />.
+                  Feelings---especially vulnerable ones like sadness, fear, or longing---are minimized, rationalized, or ignored. "I'm fine" becomes the default response, even when it's not true <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2016" tier={1} />.
                 </p>
               ),
             },
@@ -697,7 +697,7 @@ export const attachmentStylesArticlesA: Article[] = [
               title: 'Withdrawal During Conflict',
               description: (
                 <p>
-                  When things get emotionally intense, you shut down, change the subject, or leave. Conflict feels threatening, so you avoid it—which prevents resolution and deepens disconnect.
+                  When things get emotionally intense, you shut down, change the subject, or leave. Conflict feels threatening, so you avoid it---which prevents resolution and deepens disconnect.
                 </p>
               ),
             },
@@ -739,14 +739,14 @@ export const attachmentStylesArticlesA: Article[] = [
           The Physiology of Avoidance
         </h2>
         <p className="mb-6">
-          Brain imaging and psychophysiological studies reveal that avoidant individuals experience heightened stress responses to intimacy-related cues—but they're skilled at suppressing the outward signs <Citation id="9" index={9} source="Psychophysiology" year="2019" tier={1} />. Heart rate variability studies show that while they appear calm during conflict, their nervous systems are highly activated.
+          Brain imaging and psychophysiological studies reveal that avoidant individuals experience heightened stress responses to intimacy-related cues---but they're skilled at suppressing the outward signs <Citation id="9" index={9} source="Psychophysiology" year="2019" tier={1} />. Heart rate variability studies show that while they appear calm during conflict, their nervous systems are highly activated.
         </p>
         <p className="mb-6">
-          This means the discomfort with closeness isn't just psychological—it's embodied. Intimacy literally feels physiologically threatening, even when there's no real danger.
+          This means the discomfort with closeness isn't just psychological---it's embodied. Intimacy literally feels physiologically threatening, even when there's no real danger.
         </p>
 
         <ArticleCallout variant="clinical-note">
-          <p>Avoidant attachment often co-occurs with alexithymia—difficulty identifying and describing one's own emotions. This isn't intentional withholding; it's a genuine disconnect from internal emotional experience.</p>
+          <p>Avoidant attachment often co-occurs with alexithymia---difficulty identifying and describing one's own emotions. This isn't intentional withholding; it's a genuine disconnect from internal emotional experience.</p>
         </ArticleCallout>
 
         <h2 id="internal-experience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -789,7 +789,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Common Relationship Patterns
         </h2>
         <p className="mb-6">
-          Avoidant individuals often find themselves in relationships with anxiously attached partners—creating a toxic cycle where one person pursues connection and the other retreats. The pursuit intensifies the avoidance, which intensifies the pursuit.
+          Avoidant individuals often find themselves in relationships with anxiously attached partners---creating a toxic cycle where one person pursues connection and the other retreats. The pursuit intensifies the avoidance, which intensifies the pursuit.
         </p>
         <p className="mb-6">
           Alternatively, they may stay in relationships that remain surface-level or choose emotionally unavailable partners (safely keeping intimacy at bay), or repeatedly end relationships when they start to deepen.
@@ -817,7 +817,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Moving Toward Security
         </h2>
         <p className="mb-6">
-          Shifting from avoidant to earned secure attachment requires learning that vulnerability doesn't equal weakness and that depending on others doesn't mean losing yourself. This is uncomfortable work—it involves deliberately doing the things your nervous system has learned to avoid.
+          Shifting from avoidant to earned secure attachment requires learning that vulnerability doesn't equal weakness and that depending on others doesn't mean losing yourself. This is uncomfortable work---it involves deliberately doing the things your nervous system has learned to avoid.
         </p>
         <p className="mb-6">
           Healing strategies include:
@@ -836,7 +836,7 @@ export const attachmentStylesArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          The goal isn't to become emotionally dependent or lose your autonomy. It's to discover that closeness and independence can coexist—that you can be both connected and free, vulnerable and safe.
+          The goal isn't to become emotionally dependent or lose your autonomy. It's to discover that closeness and independence can coexist---that you can be both connected and free, vulnerable and safe.
         </p>
       </>
     ),
@@ -849,7 +849,7 @@ export const attachmentStylesArticlesA: Article[] = [
     id: catId(4),
     slug: 'disorganized-attachment-push-pull-pattern-confuses-everyone',
     title: 'Disorganized Attachment: The Push-Pull Pattern That Confuses Everyone',
-    description: 'Explore the complexities of disorganized attachment—simultaneous fear of intimacy and abandonment, often rooted in trauma or chaotic early caregiving.',
+    description: 'Explore the complexities of disorganized attachment---simultaneous fear of intimacy and abandonment, often rooted in trauma or chaotic early caregiving.',
     image: "/images/articles/cat03/cover-004.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 10,
@@ -927,10 +927,10 @@ export const attachmentStylesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You want to be close—desperately close. Then, the moment someone gets near, you panic and push them away. You crave connection but expect betrayal. You seek safety in relationships but feel most threatened when you find it. Your partners are confused. You're confused. Nothing feels stable, not even your own feelings.
+            You want to be close---desperately close. Then, the moment someone gets near, you panic and push them away. You crave connection but expect betrayal. You seek safety in relationships but feel most threatened when you find it. Your partners are confused. You're confused. Nothing feels stable, not even your own feelings.
           </p>
           <p className="mb-6">
-            This is disorganized attachment—sometimes called fearful-avoidant attachment. It's the rarest and most challenging attachment style, characterized by the simultaneous activation of two contradictory impulses: the drive toward connection and the urge to flee from it <Citation id="1" index={1} source="Review of General Psychology" year="2017" tier={1} />.
+            This is disorganized attachment---sometimes called fearful-avoidant attachment. It's the rarest and most challenging attachment style, characterized by the simultaneous activation of two contradictory impulses: the drive toward connection and the urge to flee from it <Citation id="1" index={1} source="Review of General Psychology" year="2017" tier={1} />.
           </p>
         </div>
 
@@ -941,7 +941,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Disorganized attachment combines high anxiety about rejection with high avoidance of intimacy. Unlike anxious or avoidant styles, which have clear strategies (pursue or withdraw), disorganized attachment has no consistent strategy. The attachment system is in perpetual conflict <Citation id="7" index={7} source="Journal of Research in Personality" year="2014" tier={1} />.
         </p>
         <p className="mb-6">
-          This pattern typically develops when caregivers were both the source of comfort and the source of fear—often in cases of trauma, abuse, severe neglect, or frightening caregiver behavior <Citation id="2" index={2} source="Development and Psychopathology" year="2015" tier={2} />. The child's dilemma becomes impossible: "I need you to survive, but you hurt me."
+          This pattern typically develops when caregivers were both the source of comfort and the source of fear---often in cases of trauma, abuse, severe neglect, or frightening caregiver behavior <Citation id="2" index={2} source="Development and Psychopathology" year="2015" tier={2} />. The child's dilemma becomes impossible: "I need you to survive, but you hurt me."
         </p>
 
         <StatCard
@@ -954,7 +954,7 @@ export const attachmentStylesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Disorganized attachment is not a personality flaw or emotional instability—it's an adaptive response to an environment where the source of safety was also the source of threat.</p>
+          <p>Disorganized attachment is not a personality flaw or emotional instability---it's an adaptive response to an environment where the source of safety was also the source of threat.</p>
         </ArticleCallout>
 
         <h2 id="core-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -968,7 +968,7 @@ export const attachmentStylesArticlesA: Article[] = [
           1. The Push-Pull Dynamic
         </h3>
         <p className="mb-6">
-          You oscillate between clinging and distancing. When apart, you desperately seek closeness. When close, you feel trapped and push away. Neither state feels safe—distance triggers abandonment fears, intimacy triggers engulfment fears <Citation id="4" index={4} source="Attachment & Human Development" year="2016" tier={1} />.
+          You oscillate between clinging and distancing. When apart, you desperately seek closeness. When close, you feel trapped and push away. Neither state feels safe---distance triggers abandonment fears, intimacy triggers engulfment fears <Citation id="4" index={4} source="Attachment & Human Development" year="2016" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1022,7 +1022,7 @@ export const attachmentStylesArticlesA: Article[] = [
           <li>Witnessing domestic violence or other trauma</li>
         </ul>
         <p className="mb-6">
-          The child learns that the person meant to protect them is also unpredictable or dangerous. There's no safe strategy—approaching is risky, but so is staying away. This impossible bind creates a disorganized response <Citation id="2" index={2} source="Development and Psychopathology" year="2015" tier={1} />.
+          The child learns that the person meant to protect them is also unpredictable or dangerous. There's no safe strategy---approaching is risky, but so is staying away. This impossible bind creates a disorganized response <Citation id="2" index={2} source="Development and Psychopathology" year="2015" tier={1} />.
         </p>
 
         <h2 id="how-it-affects-relationships" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1049,7 +1049,7 @@ export const attachmentStylesArticlesA: Article[] = [
               title: 'Testing Behavior',
               content: (
                 <p>
-                  You may unconsciously test partners to see if they'll leave—pushing boundaries, creating conflict, or withdrawing suddenly. It's a way of confirming the belief that people always leave, while also hoping to be proven wrong.
+                  You may unconsciously test partners to see if they'll leave---pushing boundaries, creating conflict, or withdrawing suddenly. It's a way of confirming the belief that people always leave, while also hoping to be proven wrong.
                 </p>
               ),
             },
@@ -1086,7 +1086,7 @@ export const attachmentStylesArticlesA: Article[] = [
           <li><strong>Reactive Attachment Disorder:</strong> Severe disruption in early attachment bonds</li>
         </ul>
         <p className="mb-6">
-          This doesn't mean disorganized attachment <em>is</em> a disorder—it's a pattern. But it does mean professional support is often helpful for healing.
+          This doesn't mean disorganized attachment <em>is</em> a disorder---it's a pattern. But it does mean professional support is often helpful for healing.
         </p>
 
         <h2 id="internal-experience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1129,7 +1129,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Healing Is Possible
         </h2>
         <p className="mb-6">
-          Disorganized attachment is the most challenging to shift, but it's absolutely possible. Healing involves building a new internal working model—learning through experience that closeness doesn't always lead to harm, and that you can survive both intimacy and distance <Citation id="8" index={8} source="Psychotherapy Research" year="2021" tier={1} />.
+          Disorganized attachment is the most challenging to shift, but it's absolutely possible. Healing involves building a new internal working model---learning through experience that closeness doesn't always lead to harm, and that you can survive both intimacy and distance <Citation id="8" index={8} source="Psychotherapy Research" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Effective approaches include:
@@ -1144,7 +1144,7 @@ export const attachmentStylesArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The journey isn't linear. There will be setbacks. But with support, disorganized attachment can evolve into earned secure attachment—a place where you can hold both your need for connection and your need for autonomy without them being in constant war.
+          The journey isn't linear. There will be setbacks. But with support, disorganized attachment can evolve into earned secure attachment---a place where you can hold both your need for connection and your need for autonomy without them being in constant war.
         </p>
 
         <ArticleCallout variant="tip">
@@ -1161,7 +1161,7 @@ export const attachmentStylesArticlesA: Article[] = [
     id: catId(5),
     slug: 'can-you-change-attachment-style-what-research-says',
     title: 'Can You Change Your Attachment Style? What the Research Says',
-    description: 'Examine the scientific evidence on attachment stability and change—exploring earned secure attachment, neuroplasticity, and pathways to transformation.',
+    description: 'Examine the scientific evidence on attachment stability and change---exploring earned secure attachment, neuroplasticity, and pathways to transformation.',
     image: "/images/articles/cat03/cover-005.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 10,
@@ -1255,10 +1255,10 @@ export const attachmentStylesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've read about attachment styles. You recognize your pattern—maybe the anxious clinging, the avoidant distance, or the disorganized push-pull. And now you're wondering: Am I stuck like this forever? Can patterns formed in infancy really change decades later?
+            You've read about attachment styles. You recognize your pattern---maybe the anxious clinging, the avoidant distance, or the disorganized push-pull. And now you're wondering: Am I stuck like this forever? Can patterns formed in infancy really change decades later?
           </p>
           <p className="mb-6">
-            The short answer: Yes, attachment styles can change. The longer answer: It's not easy, it's not instant, and it doesn't happen by simply understanding your pattern. But decades of research show that attachment security is not destiny—it's malleable, influenced by new relationships, life experiences, and intentional therapeutic work <Citation id="1" index={1} source="Monographs of the Society for Research in Child Development" year="2018" tier={1} />.
+            The short answer: Yes, attachment styles can change. The longer answer: It's not easy, it's not instant, and it doesn't happen by simply understanding your pattern. But decades of research show that attachment security is not destiny---it's malleable, influenced by new relationships, life experiences, and intentional therapeutic work <Citation id="1" index={1} source="Monographs of the Society for Research in Child Development" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -1266,7 +1266,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Stability vs. Change: What the Numbers Say
         </h2>
         <p className="mb-6">
-          Attachment styles show moderate stability over time. Longitudinal studies—following the same people for years or decades—reveal that about 60-70% of individuals maintain the same attachment classification across adulthood <Citation id="10" index={10} source="Journal of Personality and Social Psychology" year="2015" tier={1} />.
+          Attachment styles show moderate stability over time. Longitudinal studies---following the same people for years or decades---reveal that about 60-70% of individuals maintain the same attachment classification across adulthood <Citation id="10" index={10} source="Journal of Personality and Social Psychology" year="2015" tier={1} />.
         </p>
         <p className="mb-6">
           But that means 30-40% <em>do</em> change. And even among those who stay in the same category, the intensity of anxious or avoidant tendencies can shift significantly.
@@ -1283,14 +1283,14 @@ export const attachmentStylesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Attachment is not a fixed trait like eye color. It's a working model shaped by ongoing relational experiences. Your brain is plastic—capable of forming new neural pathways based on new relational input.</p>
+          <p>Attachment is not a fixed trait like eye color. It's a working model shaped by ongoing relational experiences. Your brain is plastic---capable of forming new neural pathways based on new relational input.</p>
         </ArticleCallout>
 
         <h2 id="what-drives-change" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Drives Attachment Change?
         </h2>
         <p className="mb-6">
-          Attachment styles shift in response to significant relational experiences—both positive and negative <Citation id="6" index={6} source="Development and Psychopathology" year="2016" tier={1} />.
+          Attachment styles shift in response to significant relational experiences---both positive and negative <Citation id="6" index={6} source="Development and Psychopathology" year="2016" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1317,10 +1317,10 @@ export const attachmentStylesArticlesA: Article[] = [
           Earned Secure Attachment
         </h2>
         <p className="mb-6">
-          One of the most hopeful concepts in attachment research is "earned secure attachment"—individuals who had insecure or traumatic childhoods but develop secure attachment patterns in adulthood <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />.
+          One of the most hopeful concepts in attachment research is "earned secure attachment"---individuals who had insecure or traumatic childhoods but develop secure attachment patterns in adulthood <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          These individuals aren't denying or forgetting their past. Instead, they've processed their early experiences—often through therapy, meaningful relationships, or intentional self-work—in a way that no longer controls their current relational behavior.
+          These individuals aren't denying or forgetting their past. Instead, they've processed their early experiences---often through therapy, meaningful relationships, or intentional self-work---in a way that no longer controls their current relational behavior.
         </p>
         <p className="mb-6">
           Earned secure individuals can:
@@ -1344,7 +1344,7 @@ export const attachmentStylesArticlesA: Article[] = [
           The Neuroscience of Change
         </h2>
         <p className="mb-6">
-          The brain's capacity for change—neuroplasticity—is central to attachment transformation. Repeated relational experiences create and strengthen neural pathways. Early attachment patterns carve deep grooves, but new experiences can create new grooves <Citation id="5" index={5} source="Developmental Cognitive Neuroscience" year="2020" tier={1} />.
+          The brain's capacity for change---neuroplasticity---is central to attachment transformation. Repeated relational experiences create and strengthen neural pathways. Early attachment patterns carve deep grooves, but new experiences can create new grooves <Citation id="5" index={5} source="Developmental Cognitive Neuroscience" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Neuroimaging studies show that:
@@ -1352,11 +1352,11 @@ export const attachmentStylesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Insecure attachment is associated with hyperactivity in threat-detection brain regions (amygdala) and reduced connectivity with emotion regulation regions (prefrontal cortex)</li>
           <li>Successful therapy can normalize these patterns, showing increased prefrontal activity and decreased amygdala reactivity</li>
-          <li>The brain's social circuitry remains plastic throughout life—change is possible at any age</li>
+          <li>The brain's social circuitry remains plastic throughout life---change is possible at any age</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>Neuroplasticity doesn't mean change is effortless. It means the brain <em>can</em> change with sufficient repetition of new experiences. Think of it like learning a new language after speaking only one for 30 years—possible, but requiring consistent practice and immersion.</p>
+          <p>Neuroplasticity doesn't mean change is effortless. It means the brain <em>can</em> change with sufficient repetition of new experiences. Think of it like learning a new language after speaking only one for 30 years---possible, but requiring consistent practice and immersion.</p>
         </ArticleCallout>
 
         <h2 id="role-of-therapy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1383,14 +1383,14 @@ export const attachmentStylesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          The therapeutic relationship itself is a key change agent. A therapist who is consistently attuned, non-judgmental, and reliable provides a "secure base" experience—often the first one a client has had <Citation id="9" index={9} source="Psychotherapy Research" year="2019" tier={1} />.
+          The therapeutic relationship itself is a key change agent. A therapist who is consistently attuned, non-judgmental, and reliable provides a "secure base" experience---often the first one a client has had <Citation id="9" index={9} source="Psychotherapy Research" year="2019" tier={1} />.
         </p>
 
         <h2 id="role-of-relationships" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Role of Romantic Relationships
         </h2>
         <p className="mb-6">
-          Romantic partners can be powerful catalysts for attachment change—but only under certain conditions <Citation id="3" index={3} source="Psychological Science" year="2007" tier={1} />.
+          Romantic partners can be powerful catalysts for attachment change---but only under certain conditions <Citation id="3" index={3} source="Psychological Science" year="2007" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>What helps:</strong>
@@ -1428,7 +1428,7 @@ export const attachmentStylesArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p><strong>Start here:</strong> Notice your automatic reaction when a partner needs space or when they seek closeness. Can you pause between stimulus and response? That pause—however brief—is where change begins.</p>
+          <p><strong>Start here:</strong> Notice your automatic reaction when a partner needs space or when they seek closeness. Can you pause between stimulus and response? That pause---however brief---is where change begins.</p>
         </ArticleCallout>
 
         <h2 id="timeline" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1443,7 +1443,7 @@ export const attachmentStylesArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>At least 1-2 years of consistent therapy or stable secure relationships</li>
           <li>Multiple corrective relational experiences, not just one</li>
-          <li>Active engagement—passive exposure to secure people isn't enough</li>
+          <li>Active engagement---passive exposure to secure people isn't enough</li>
         </ul>
 
         <StatCard
@@ -1459,7 +1459,7 @@ export const attachmentStylesArticlesA: Article[] = [
           Realistic Expectations
         </h2>
         <p className="mb-6">
-          Change is not linear. You'll have moments where old patterns resurface, especially under stress. This doesn't mean failure—it's part of the process.
+          Change is not linear. You'll have moments where old patterns resurface, especially under stress. This doesn't mean failure---it's part of the process.
         </p>
         <p className="mb-6">
           What to expect:
@@ -1476,14 +1476,14 @@ export const attachmentStylesArticlesA: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          You are not locked into your childhood attachment style. The patterns are real, they're powerful, and they matter—but they're not permanent. With awareness, supportive relationships, and often professional help, insecure attachment can evolve into earned security.
+          You are not locked into your childhood attachment style. The patterns are real, they're powerful, and they matter---but they're not permanent. With awareness, supportive relationships, and often professional help, insecure attachment can evolve into earned security.
         </p>
         <p className="mb-6">
-          The process isn't easy. It requires vulnerability, patience, and the willingness to trust new relational experiences even when your nervous system screams that it's unsafe. But the research is clear: change is not only possible—it happens all the time.
+          The process isn't easy. It requires vulnerability, patience, and the willingness to trust new relational experiences even when your nervous system screams that it's unsafe. But the research is clear: change is not only possible---it happens all the time.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Your attachment style was an adaptive response to your early environment. If that environment changes—through new relationships, therapy, or conscious effort—your attachment patterns can change too. You're not rewriting your past; you're writing a new future.</p>
+          <p>Your attachment style was an adaptive response to your early environment. If that environment changes---through new relationships, therapy, or conscious effort---your attachment patterns can change too. You're not rewriting your past; you're writing a new future.</p>
         </ArticleCallout>
       </>
     ),

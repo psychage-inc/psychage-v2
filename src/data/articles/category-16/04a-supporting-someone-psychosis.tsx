@@ -15,7 +15,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 4 — Supporting Someone With Psychosis | Articles 31–35
+// Subcategory 4 --- Supporting Someone With Psychosis | Articles 31--35
 // ============================================================================
 
 export const supportingSomeoneArticlesA: Article[] = [
@@ -26,7 +26,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     id: catId(31),
     slug: 'how-to-talk-to-someone-experiencing-psychosis',
     title: 'How to Talk to Someone Experiencing Psychosis: A Communication Guide',
-    description: 'Practical communication strategies for talking to someone who is hearing voices, experiencing delusions, or otherwise disconnected from shared reality — what helps, what hurts, and why.',
+    description: 'Practical communication strategies for talking to someone who is hearing voices, experiencing delusions, or otherwise disconnected from shared reality --- what helps, what hurts, and why.',
     image: '/images/articles/cat16/cover-031.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -35,10 +35,10 @@ export const supportingSomeoneArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Communication', 'Family Support', 'Practical Guide', 'Psychosis'],
 
-    summary: 'When someone you care about is experiencing psychosis — hearing voices, expressing beliefs that don\'t match reality, speaking in ways that are difficult to follow — every instinct tells you to argue them back to reality. But decades of clinical experience and research show that direct confrontation almost always makes things worse. Effective communication during psychosis requires a different approach: one that prioritizes connection over correction, validates emotional experience without endorsing false beliefs, and maintains the relationship even when shared reality has temporarily fractured. This guide provides concrete, evidence-based strategies for talking to someone in psychosis — whether during acute episodes, ongoing symptoms, or the delicate conversations about treatment and recovery.',
+    summary: 'When someone you care about is experiencing psychosis --- hearing voices, expressing beliefs that don\'t match reality, speaking in ways that are difficult to follow --- every instinct tells you to argue them back to reality. But decades of clinical experience and research show that direct confrontation almost always makes things worse. Effective communication during psychosis requires a different approach: one that prioritizes connection over correction, validates emotional experience without endorsing false beliefs, and maintains the relationship even when shared reality has temporarily fractured. This guide provides concrete, evidence-based strategies for talking to someone in psychosis --- whether during acute episodes, ongoing symptoms, or the delicate conversations about treatment and recovery.',
 
     keyFacts: [
-      { text: 'Direct confrontation of delusional beliefs typically strengthens conviction rather than weakening it — the person\'s brain treats the challenge as further evidence', citationIndex: 1 },
+      { text: 'Direct confrontation of delusional beliefs typically strengthens conviction rather than weakening it --- the person\'s brain treats the challenge as further evidence', citationIndex: 1 },
       { text: 'Empathic, non-confrontational communication is associated with lower expressed emotion, which reduces relapse risk by 50%', citationIndex: 2 },
       { text: 'People in psychosis often retain the ability to perceive emotional tone and sincerity even when content processing is impaired', citationIndex: 3 },
       { text: 'Using the person\'s name, speaking slowly, and asking simple closed questions improves comprehension during acute episodes', citationIndex: 4 },
@@ -46,14 +46,14 @@ export const supportingSomeoneArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'You don\'t need to enter someone\'s delusion to reach them, and you don\'t need to shatter it to help them. The middle path — acknowledging their emotional experience while gently holding open the door to alternative perspectives — is both more effective and more humane than either agreement or argument.',
+    sparkMoment: 'You don\'t need to enter someone\'s delusion to reach them, and you don\'t need to shatter it to help them. The middle path --- acknowledging their emotional experience while gently holding open the door to alternative perspectives --- is both more effective and more humane than either agreement or argument.',
 
     practicalExercise: {
       title: 'Practicing Empathic Communication',
       steps: [
         { title: 'Replace "that\'s not real" with "that sounds frightening"', description: 'Practice responding to the emotion behind the statement rather than its factual accuracy. If someone says "they\'re poisoning my food," respond to the fear: "That must be terrifying. I want you to feel safe." This validates without confirming.' },
-        { title: 'Use "I" statements instead of "you" statements', description: 'Replace "You need to take your medication" with "I\'m worried about you and I want to help." Replace "You\'re not making sense" with "I\'m having trouble following — can you help me understand?" This reduces defensiveness.' },
-        { title: 'Ask one question at a time', description: 'During acute psychosis, information processing is impaired. Ask simple, closed questions: "Are you hungry?" rather than "What do you want to eat for dinner — we could do pasta or there are leftovers?" Wait for a response before asking the next question.' },
+        { title: 'Use "I" statements instead of "you" statements', description: 'Replace "You need to take your medication" with "I\'m worried about you and I want to help." Replace "You\'re not making sense" with "I\'m having trouble following --- can you help me understand?" This reduces defensiveness.' },
+        { title: 'Ask one question at a time', description: 'During acute psychosis, information processing is impaired. Ask simple, closed questions: "Are you hungry?" rather than "What do you want to eat for dinner --- we could do pasta or there are leftovers?" Wait for a response before asking the next question.' },
         { title: 'Practice comfortable silence', description: 'You don\'t always need to fill silence. Being present without speaking can communicate safety and acceptance. Sit nearby, offer a drink, and simply be there. Connection doesn\'t always require conversation.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -80,7 +80,7 @@ export const supportingSomeoneArticlesA: Article[] = [
             Your mother says she's been receiving messages from God through the television.
             Your partner sits in silence, staring at the wall, unreachable. In each case, your
             instinct is the same: fix it. Argue the delusion away. Force a response from the
-            silence. Insist on reality. And in each case, that instinct — however loving — is
+            silence. Insist on reality. And in each case, that instinct --- however loving --- is
             likely to make things
             worse <Citation id="1" index={1} source="Psychological Medicine" year="2019" tier={1} />.
             Communicating with someone experiencing psychosis requires different tools than
@@ -93,7 +93,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           Why Arguing Doesn't Work
         </h2>
         <p className="mb-6">
-          When someone holds a delusional belief, it doesn't feel like a belief to them — it
+          When someone holds a delusional belief, it doesn't feel like a belief to them --- it
           feels like reality. The same way you "know" the sky is blue, they "know" the
           neighbors are spying. Challenging this conviction activates the same psychological
           defenses that protect any deeply held belief: the person doubles down, finds
@@ -102,7 +102,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           problem <Citation id="1" index={1} source="Psychological Medicine" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          This isn't stubbornness — it's how delusional cognition works. The belief is
+          This isn't stubbornness --- it's how delusional cognition works. The belief is
           maintained by a bias toward confirmatory evidence and away from disconfirmatory
           evidence. Presenting contrary evidence doesn't weaken the delusion; it's
           reinterpreted to fit the existing framework. The argument escalates, the
@@ -113,7 +113,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           before={{
             title: 'What We Instinctively Say',
             items: [
-              '"That\'s not real — nobody is watching you"',
+              '"That\'s not real --- nobody is watching you"',
               '"You need to snap out of this"',
               '"Take your medication right now"',
               '"You\'re not making any sense"',
@@ -126,7 +126,7 @@ export const supportingSomeoneArticlesA: Article[] = [
               '"That sounds really frightening. I want you to feel safe"',
               '"I can see you\'re going through something difficult"',
               '"What do you think might help right now?"',
-              '"I want to understand — can you tell me more?"',
+              '"I want to understand --- can you tell me more?"',
               '"I\'m here with you, and I\'m not going anywhere"',
             ],
           }}
@@ -136,7 +136,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           During Acute Episodes: De-Escalation Basics
         </h2>
         <p className="mb-6">
-          When someone is acutely psychotic — visibly distressed, disorganized, or agitated —
+          When someone is acutely psychotic --- visibly distressed, disorganized, or agitated ---
           the communication goal shifts from therapeutic conversation to immediate safety
           and
           de-escalation <Citation id="4" index={4} source="Aggression and Violent Behavior" year="2020" tier={1} />.
@@ -146,10 +146,10 @@ export const supportingSomeoneArticlesA: Article[] = [
         <ProgressSteps
           steps={[
             { title: 'Ensure safety first', description: 'Assess whether anyone is in immediate danger. If so, call emergency services. If not, focus on creating a calm, safe environment. Remove potential hazards, reduce stimulation (turn off the TV, dim lights), and position yourself near an exit without blocking theirs.' },
-            { title: 'Lower your voice and slow down', description: 'Speak softly, slowly, and simply. Use the person\'s name. Avoid rapid-fire questions or complex explanations. Your calm tone communicates safety more than your words do — people in acute psychosis often process emotional tone better than verbal content.' },
+            { title: 'Lower your voice and slow down', description: 'Speak softly, slowly, and simply. Use the person\'s name. Avoid rapid-fire questions or complex explanations. Your calm tone communicates safety more than your words do --- people in acute psychosis often process emotional tone better than verbal content.' },
             { title: 'Validate the emotion, not the content', description: '"You seem really scared right now" validates their emotional experience without agreeing that the threat is real. This approach acknowledges their suffering without reinforcing the delusion.' },
             { title: 'Offer simple, concrete choices', description: '"Would you like to sit down?" "Can I get you a glass of water?" Simple offers of care ground the interaction in practical reality and give the person a sense of agency. Avoid open-ended questions during acute distress.' },
-            { title: 'Know when to step back', description: 'If your presence is increasing agitation — if you\'re being incorporated into the delusion as a threat — it\'s okay to step back. Say "I\'m going to give you some space. I\'ll be in the next room if you need me." Leaving isn\'t abandonment; it\'s strategic compassion.' },
+            { title: 'Know when to step back', description: 'If your presence is increasing agitation --- if you\'re being incorporated into the delusion as a threat --- it\'s okay to step back. Say "I\'m going to give you some space. I\'ll be in the next room if you need me." Leaving isn\'t abandonment; it\'s strategic compassion.' },
           ]}
         />
 
@@ -158,14 +158,14 @@ export const supportingSomeoneArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Most communication with someone who has a psychotic condition doesn't happen during
-          acute crises — it happens in the daily, ordinary interactions that make up a
+          acute crises --- it happens in the daily, ordinary interactions that make up a
           relationship. Research on expressed emotion shows that the communication patterns
           families use every day predict relapse risk more powerfully than almost any other
           factor <Citation id="2" index={2} source="Psychological Medicine" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          Low expressed emotion — characterized by warmth, acceptance, and appropriate
-          boundaries — doesn't mean suppressing your feelings. It means expressing them
+          Low expressed emotion --- characterized by warmth, acceptance, and appropriate
+          boundaries --- doesn't mean suppressing your feelings. It means expressing them
           skillfully. You can say "I feel worried when you stop taking your medication"
           (an "I" statement expressing genuine concern) without saying "You always stop
           your medication" (a critical generalization that triggers
@@ -175,10 +175,10 @@ export const supportingSomeoneArticlesA: Article[] = [
         <ArticleCallout type="tip" title="The 5:1 Ratio">
           Relationship research suggests that stable relationships maintain approximately
           five positive interactions for every negative one. In families affected by
-          psychosis, the ratio often inverts — conversations become dominated by
-          criticism, worry, and conflict. Deliberately increasing positive interactions —
+          psychosis, the ratio often inverts --- conversations become dominated by
+          criticism, worry, and conflict. Deliberately increasing positive interactions ---
           shared meals, brief conversations about interests, simple expressions of
-          affection — rebuilds the relational foundation that makes difficult
+          affection --- rebuilds the relational foundation that makes difficult
           conversations
           possible <Citation id="6" index={6} source="Cochrane Database of Systematic Reviews" year="2020" tier={1} />.
         </ArticleCallout>
@@ -203,8 +203,8 @@ export const supportingSomeoneArticlesA: Article[] = [
           managed <Citation id="8" index={8} source="National Institute for Health and Care Excellence" year="2024" tier={3} />.
         </p>
         <p className="mb-6">
-          And when all else fails — when the conversation goes nowhere, when the person
-          won't engage, when you've said everything and it hasn't landed — remember that
+          And when all else fails --- when the conversation goes nowhere, when the person
+          won't engage, when you've said everything and it hasn't landed --- remember that
           your continued presence is itself a communication. Showing up, maintaining the
           relationship, and keeping the door open for future conversations matters more
           than winning any single
@@ -221,7 +221,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     id: catId(32),
     slug: 'caregiver-burnout-psychosis-recognizing-preventing-recovering',
     title: 'Caregiver Burnout in Psychosis: Recognizing, Preventing, and Recovering',
-    description: 'How caring for someone with psychosis affects caregiver mental and physical health — the signs of burnout, evidence-based coping strategies, and why self-care isn\'t selfish.',
+    description: 'How caring for someone with psychosis affects caregiver mental and physical health --- the signs of burnout, evidence-based coping strategies, and why self-care isn\'t selfish.',
     image: '/images/articles/cat16/cover-032.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -230,26 +230,26 @@ export const supportingSomeoneArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregiver Health', 'Burnout', 'Self-Care', 'Family Support'],
 
-    summary: 'Caring for someone with a psychotic condition is one of the most demanding roles a person can inhabit — and one of the least supported. Caregivers of people with schizophrenia report rates of depression, anxiety, and physical health problems that significantly exceed the general population. They provide an estimated 5–20 hours of informal care per week, manage crises without training, navigate complex service systems, and do so while processing their own grief, fear, and exhaustion. Yet mental health services have historically treated caregivers as resources to be utilized rather than people who deserve care in their own right. This article addresses caregiver burnout directly — what it looks like, why it happens, and what evidence-based strategies can prevent or reverse it.',
+    summary: 'Caring for someone with a psychotic condition is one of the most demanding roles a person can inhabit --- and one of the least supported. Caregivers of people with schizophrenia report rates of depression, anxiety, and physical health problems that significantly exceed the general population. They provide an estimated 5--20 hours of informal care per week, manage crises without training, navigate complex service systems, and do so while processing their own grief, fear, and exhaustion. Yet mental health services have historically treated caregivers as resources to be utilized rather than people who deserve care in their own right. This article addresses caregiver burnout directly --- what it looks like, why it happens, and what evidence-based strategies can prevent or reverse it.',
 
     keyFacts: [
-      { text: 'Approximately 40–60% of caregivers of people with schizophrenia meet criteria for clinically significant depression or anxiety', citationIndex: 1 },
-      { text: 'Caregiver burden is associated with worse outcomes for the person with psychosis — when caregivers burn out, everyone suffers', citationIndex: 2 },
+      { text: 'Approximately 40--60% of caregivers of people with schizophrenia meet criteria for clinically significant depression or anxiety', citationIndex: 1 },
+      { text: 'Caregiver burden is associated with worse outcomes for the person with psychosis --- when caregivers burn out, everyone suffers', citationIndex: 2 },
       { text: 'Caregiver support programs reduce depression, anxiety, and subjective burden with moderate to large effect sizes', citationIndex: 3 },
       { text: 'Most caregivers receive no formal support, training, or assessment of their own needs from mental health services', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The airplane safety instruction — put your own oxygen mask on first — is a cliché because it\'s true. A caregiver who collapses from exhaustion can\'t help anyone. Self-care in this context isn\'t selfish; it\'s a prerequisite for sustainable caregiving. The evidence shows that when caregivers are supported, everyone in the family does better.',
+    sparkMoment: 'The airplane safety instruction --- put your own oxygen mask on first --- is a cliché because it\'s true. A caregiver who collapses from exhaustion can\'t help anyone. Self-care in this context isn\'t selfish; it\'s a prerequisite for sustainable caregiving. The evidence shows that when caregivers are supported, everyone in the family does better.',
 
     practicalExercise: {
       title: 'Caregiver Burnout Assessment',
       steps: [
-        { title: 'Check your warning signs', description: 'Rate each on a 0–10 scale: physical exhaustion, emotional numbness or irritability, social isolation, resentment toward the person you care for, neglecting your own health, feeling trapped. If three or more are above 6, you are likely experiencing significant burnout.' },
-        { title: 'Identify one thing to reclaim', description: 'Choose one activity you\'ve given up since becoming a caregiver — a hobby, a friendship, regular exercise, a weekly outing. Make a concrete plan to reintroduce it this week, even in a small way. Reclaiming one piece of your pre-caregiving identity is therapeutic.' },
-        { title: 'Set one boundary', description: 'Identify one area where you overfunction — something you do that the person could do themselves, or something that crosses your personal limits. Practice saying: "I love you and I need to take care of myself too." Start with the easiest boundary first.' },
-        { title: 'Connect with another caregiver', description: 'Join a support group — NAMI\'s Family Support Group, an online community, or a local carers\' group. Speaking with someone who truly understands your experience is often described by caregivers as the single most helpful intervention.' },
+        { title: 'Check your warning signs', description: 'Rate each on a 0--10 scale: physical exhaustion, emotional numbness or irritability, social isolation, resentment toward the person you care for, neglecting your own health, feeling trapped. If three or more are above 6, you are likely experiencing significant burnout.' },
+        { title: 'Identify one thing to reclaim', description: 'Choose one activity you\'ve given up since becoming a caregiver --- a hobby, a friendship, regular exercise, a weekly outing. Make a concrete plan to reintroduce it this week, even in a small way. Reclaiming one piece of your pre-caregiving identity is therapeutic.' },
+        { title: 'Set one boundary', description: 'Identify one area where you overfunction --- something you do that the person could do themselves, or something that crosses your personal limits. Practice saying: "I love you and I need to take care of myself too." Start with the easiest boundary first.' },
+        { title: 'Connect with another caregiver', description: 'Join a support group --- NAMI\'s Family Support Group, an online community, or a local carers\' group. Speaking with someone who truly understands your experience is often described by caregivers as the single most helpful intervention.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Wellbeing',
@@ -274,7 +274,7 @@ export const supportingSomeoneArticlesA: Article[] = [
             Nobody trains you for this. One day your child, partner, sibling, or parent
             develops psychosis, and suddenly you're managing medication schedules, interpreting
             bizarre behavior, fielding crisis calls, battling insurance companies, and holding
-            the entire family together — all while grieving the person you remember and trying
+            the entire family together --- all while grieving the person you remember and trying
             to understand the person they've
             become <Citation id="5" index={5} source="Qualitative Health Research" year="2019" tier={1} />.
             Caregiver burnout in psychosis isn't a sign of weakness. It's the predictable
@@ -287,7 +287,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           What Caregiver Burnout Actually Looks Like
         </h2>
         <p className="mb-6">
-          Burnout doesn't arrive suddenly. It accumulates — a slow erosion of energy, empathy,
+          Burnout doesn't arrive suddenly. It accumulates --- a slow erosion of energy, empathy,
           and identity that many caregivers don't recognize until they're deeply in
           it <Citation id="1" index={1} source="Schizophrenia Research" year="2020" tier={1} />.
           The signs often include:
@@ -301,7 +301,7 @@ export const supportingSomeoneArticlesA: Article[] = [
             },
             {
               label: 'Emotional Signs',
-              content: 'Emotional numbness — feeling nothing where you used to feel intensely. Irritability out of proportion to triggers. Resentment toward the person you\'re caring for — followed by guilt about the resentment. Hopelessness about the future. Crying unexpectedly or being unable to cry at all.',
+              content: 'Emotional numbness --- feeling nothing where you used to feel intensely. Irritability out of proportion to triggers. Resentment toward the person you\'re caring for --- followed by guilt about the resentment. Hopelessness about the future. Crying unexpectedly or being unable to cry at all.',
             },
             {
               label: 'Social Signs',
@@ -319,31 +319,31 @@ export const supportingSomeoneArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Caregivers of people with psychosis often experience a form of grief that
-          psychologists call "ambiguous loss" — grief for someone who is still physically
+          psychologists call "ambiguous loss" --- grief for someone who is still physically
           present but psychologically
           changed <Citation id="5" index={5} source="Qualitative Health Research" year="2019" tier={1} />.
-          Parents grieve the child they raised — the personality they knew, the future
+          Parents grieve the child they raised --- the personality they knew, the future
           they imagined. Partners grieve the relationship they had. Siblings grieve the
           brother or sister they grew up with.
         </p>
         <p className="mb-6">
           This grief is complicated by the fact that the person is still alive. Society
-          has rituals and support structures for bereavement — but no equivalent for the
+          has rituals and support structures for bereavement --- but no equivalent for the
           grief of watching someone change before your eyes while being told to "stay
-          positive" and "be supportive." Acknowledging this grief — naming it, allowing
-          it, sharing it with others who understand — is not disloyalty to the person
+          positive" and "be supportive." Acknowledging this grief --- naming it, allowing
+          it, sharing it with others who understand --- is not disloyalty to the person
           you love. It's an essential part of processing an extraordinarily difficult
           experience.
         </p>
 
         <ArticleCallout type="insight" title="A Bidirectional Relationship">
-          Research shows that caregiver burnout doesn't just harm the caregiver — it
+          Research shows that caregiver burnout doesn't just harm the caregiver --- it
           directly affects outcomes for the person with
           psychosis <Citation id="2" index={2} source="Psychological Medicine" year="2019" tier={1} />.
           Burned-out caregivers have higher expressed emotion (criticism, hostility,
           over-involvement), which increases relapse risk. They're less able to provide
           the stable, warm environment that supports recovery. Taking care of yourself
-          isn't a diversion from caring for your loved one — it's a prerequisite for it.
+          isn't a diversion from caring for your loved one --- it's a prerequisite for it.
         </ArticleCallout>
 
         <h2 id="evidence-based-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -359,19 +359,19 @@ export const supportingSomeoneArticlesA: Article[] = [
           items={[
             {
               title: 'Family Psychoeducation Programs',
-              content: 'Structured programs like NAMI\'s Family-to-Family provide education about psychosis, communication skills, and peer support in an 8-week format. Research shows significant improvements in caregiver knowledge, coping strategies, and emotional distress. The peer-led format means you learn from people who have walked the same path — not from clinicians who observe it from outside.',
+              content: 'Structured programs like NAMI\'s Family-to-Family provide education about psychosis, communication skills, and peer support in an 8-week format. Research shows significant improvements in caregiver knowledge, coping strategies, and emotional distress. The peer-led format means you learn from people who have walked the same path --- not from clinicians who observe it from outside.',
             },
             {
               title: 'Mindfulness-Based Interventions',
-              content: 'Adapted mindfulness programs for caregivers show reductions in anxiety, depression, and subjective burden. Even brief practices — 10 minutes of guided mindfulness daily — can reduce the chronic stress activation that drives burnout. The evidence suggests that mindfulness works not by changing the caregiving situation but by changing the caregiver\'s relationship to it.',
+              content: 'Adapted mindfulness programs for caregivers show reductions in anxiety, depression, and subjective burden. Even brief practices --- 10 minutes of guided mindfulness daily --- can reduce the chronic stress activation that drives burnout. The evidence suggests that mindfulness works not by changing the caregiving situation but by changing the caregiver\'s relationship to it.',
             },
             {
               title: 'Peer Support Groups',
-              content: 'Regular connection with other caregivers who understand your experience reduces isolation and normalizes the emotions — including anger, grief, and ambivalence — that many caregivers feel ashamed of. Online groups can be particularly accessible for caregivers whose schedules make in-person meetings difficult.',
+              content: 'Regular connection with other caregivers who understand your experience reduces isolation and normalizes the emotions --- including anger, grief, and ambivalence --- that many caregivers feel ashamed of. Online groups can be particularly accessible for caregivers whose schedules make in-person meetings difficult.',
             },
             {
               title: 'Respite Care',
-              content: 'Planned breaks from caregiving — whether for hours, days, or weeks — are associated with reduced burnout and sustained caregiving capacity over time. Respite isn\'t a luxury; it\'s a clinical intervention for the caregiver. Accessing it requires planning and often advocacy, but it\'s one of the most effective burnout prevention strategies available.',
+              content: 'Planned breaks from caregiving --- whether for hours, days, or weeks --- are associated with reduced burnout and sustained caregiving capacity over time. Respite isn\'t a luxury; it\'s a clinical intervention for the caregiver. Accessing it requires planning and often advocacy, but it\'s one of the most effective burnout prevention strategies available.',
             },
           ]}
         />
@@ -408,7 +408,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     id: catId(33),
     slug: 'when-someone-refuses-treatment-psychosis-what-families-can-do',
     title: 'When Someone Refuses Treatment for Psychosis: What Families Can Do',
-    description: 'Navigating the agonizing situation when someone with psychosis refuses treatment — understanding anosognosia, legal options, therapeutic engagement strategies, and when to seek involuntary evaluation.',
+    description: 'Navigating the agonizing situation when someone with psychosis refuses treatment --- understanding anosognosia, legal options, therapeutic engagement strategies, and when to seek involuntary evaluation.',
     image: '/images/articles/cat16/cover-033.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 13,
@@ -417,10 +417,10 @@ export const supportingSomeoneArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Treatment Refusal', 'Anosognosia', 'Family Support', 'Legal Rights'],
 
-    summary: 'One of the most agonizing experiences for families of people with psychosis is watching someone they love refuse treatment — not out of informed disagreement, but because the illness itself impairs their ability to recognize that they are ill. This phenomenon, called anosognosia, affects approximately 50% of people with schizophrenia and is not the same as denial. It is a neurological symptom — damage to brain circuits responsible for self-awareness — as real as any hallucination. When someone genuinely cannot perceive their own illness, the usual approaches to persuasion fail. This article explores what anosognosia is, why standard arguments for treatment don\'t work, what strategies can improve engagement, and when involuntary evaluation becomes appropriate.',
+    summary: 'One of the most agonizing experiences for families of people with psychosis is watching someone they love refuse treatment --- not out of informed disagreement, but because the illness itself impairs their ability to recognize that they are ill. This phenomenon, called anosognosia, affects approximately 50% of people with schizophrenia and is not the same as denial. It is a neurological symptom --- damage to brain circuits responsible for self-awareness --- as real as any hallucination. When someone genuinely cannot perceive their own illness, the usual approaches to persuasion fail. This article explores what anosognosia is, why standard arguments for treatment don\'t work, what strategies can improve engagement, and when involuntary evaluation becomes appropriate.',
 
     keyFacts: [
-      { text: 'Anosognosia — the inability to recognize one\'s own illness — affects approximately 50% of people with schizophrenia and 40% with bipolar disorder', citationIndex: 1 },
+      { text: 'Anosognosia --- the inability to recognize one\'s own illness --- affects approximately 50% of people with schizophrenia and 40% with bipolar disorder', citationIndex: 1 },
       { text: 'Anosognosia is a neurological symptom caused by impaired functioning of the prefrontal cortex, not psychological denial', citationIndex: 2 },
       { text: 'Motivational interviewing and LEAP (Listen, Empathize, Agree, Partner) approaches significantly improve treatment engagement compared to direct confrontation', citationIndex: 3 },
       { text: 'Involuntary treatment criteria vary by jurisdiction but generally require imminent danger to self or others or grave inability to care for oneself', citationIndex: 4 },
@@ -428,13 +428,13 @@ export const supportingSomeoneArticlesA: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'Imagine having a brain injury that specifically damaged the part of your brain that lets you know you have a brain injury. That\'s anosognosia. The person isn\'t being difficult, stubborn, or in denial — they genuinely cannot perceive what is happening to them, the same way a person with damage to their visual cortex cannot see.',
+    sparkMoment: 'Imagine having a brain injury that specifically damaged the part of your brain that lets you know you have a brain injury. That\'s anosognosia. The person isn\'t being difficult, stubborn, or in denial --- they genuinely cannot perceive what is happening to them, the same way a person with damage to their visual cortex cannot see.',
 
     practicalExercise: {
       title: 'The LEAP Approach to Engagement',
       steps: [
-        { title: 'Listen reflectively', description: 'Set aside your agenda and genuinely listen to the person\'s perspective. What do they think is happening? What are their concerns? What do they want? Reflective listening doesn\'t mean agreeing — it means demonstrating that you\'ve heard and understood their point of view.' },
-        { title: 'Empathize strategically', description: 'Find the emotional truth in their experience. If they say "I don\'t need medication — I\'m fine," empathize with the desire for autonomy: "I understand you want to make your own decisions about your body. That makes sense to me." This builds alliance rather than opposition.' },
+        { title: 'Listen reflectively', description: 'Set aside your agenda and genuinely listen to the person\'s perspective. What do they think is happening? What are their concerns? What do they want? Reflective listening doesn\'t mean agreeing --- it means demonstrating that you\'ve heard and understood their point of view.' },
+        { title: 'Empathize strategically', description: 'Find the emotional truth in their experience. If they say "I don\'t need medication --- I\'m fine," empathize with the desire for autonomy: "I understand you want to make your own decisions about your body. That makes sense to me." This builds alliance rather than opposition.' },
         { title: 'Agree on common ground', description: 'Find something you genuinely agree on. You might both agree that sleep problems are an issue, that stress is difficult, or that side effects are unpleasant. Starting from agreement rather than disagreement changes the entire dynamic.' },
         { title: 'Partner on shared goals', description: 'Once you\'ve found common ground, partner on the agreed-upon concern: "Since we both agree sleep is a problem, would you be willing to talk to someone about that?" This opens a door to treatment without requiring the person to accept a diagnosis they can\'t perceive.' },
       ],
@@ -459,8 +459,8 @@ export const supportingSomeoneArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             "I'm not sick. There's nothing wrong with me. I don't need medication." For families
-            of people with psychosis, these words — spoken with absolute conviction by someone
-            who is clearly unwell — represent one of the most painful and confusing aspects of the
+            of people with psychosis, these words --- spoken with absolute conviction by someone
+            who is clearly unwell --- represent one of the most painful and confusing aspects of the
             illness. The instinct is to present evidence: "But you were just hospitalized." "The
             doctor said you have schizophrenia." "Don't you remember what happened?" And the
             evidence bounces off. Not because the person is stubborn. Not because they're in
@@ -474,7 +474,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           Anosognosia: Not Denial, Not Stubbornness
         </h2>
         <p className="mb-6">
-          Anosognosia — from the Greek for "without knowledge of disease" — is a neurological
+          Anosognosia --- from the Greek for "without knowledge of disease" --- is a neurological
           condition in which a person cannot perceive their own illness. It was first described
           in stroke patients who couldn't recognize their own paralysis, and it occurs in
           approximately 50% of people with
@@ -482,7 +482,7 @@ export const supportingSomeoneArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           Neuroimaging studies show that anosognosia in schizophrenia is associated with
-          structural and functional changes in the prefrontal cortex — the brain region
+          structural and functional changes in the prefrontal cortex --- the brain region
           responsible for self-monitoring, self-reflection, and updating self-related
           beliefs <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2019" tier={1} />.
           In other words, the very brain circuitry needed to recognize "something is wrong
@@ -512,15 +512,15 @@ export const supportingSomeoneArticlesA: Article[] = [
           rows={[
             ['LEAP (Listen, Empathize, Agree, Partner)', 'Build alliance around shared goals rather than requiring illness acceptance', 'Developed by Dr. Xavier Amador; widely used in clinical practice'],
             ['Motivational Interviewing', 'Explore ambivalence non-judgmentally, support self-efficacy, elicit the person\'s own reasons for change', 'Systematic review shows improved engagement and adherence'],
-            ['Problem-focused framing', '"You\'ve been having trouble sleeping — would you talk to someone about that?" bypasses the diagnosis debate', 'Clinical practice evidence; recommended in NICE guidelines'],
+            ['Problem-focused framing', '"You\'ve been having trouble sleeping --- would you talk to someone about that?" bypasses the diagnosis debate', 'Clinical practice evidence; recommended in NICE guidelines'],
             ['Offering choices', '"Would you prefer to talk to a counselor or a doctor?" preserves autonomy while moving toward treatment', 'Shared decision-making literature supports this approach'],
           ]}
         />
 
         <p className="mt-6 mb-6">
           The common thread across these approaches is that none of them requires the person
-          to accept a diagnosis. They work with whatever the person does recognize — sleep
-          problems, stress, difficulty at work, relationship conflict — and use that
+          to accept a diagnosis. They work with whatever the person does recognize --- sleep
+          problems, stress, difficulty at work, relationship conflict --- and use that
           acknowledged concern as the entry point for
           treatment <Citation id="6" index={6} source="Schizophrenia Research" year="2019" tier={1} />.
         </p>
@@ -530,7 +530,7 @@ export const supportingSomeoneArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Most families agonize over the question of involuntary treatment. It feels like a
-          betrayal — calling the police or petitioning a court to force treatment on someone
+          betrayal --- calling the police or petitioning a court to force treatment on someone
           you love. But when someone is at imminent risk of harming themselves or others, or
           has deteriorated to the point where they cannot meet their own basic needs,
           involuntary evaluation may be
@@ -584,7 +584,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     id: catId(34),
     slug: 'housing-independent-living-psychosis-options-support',
     title: 'Housing and Independent Living With Psychosis: Options and Support',
-    description: 'A practical guide to housing options for people with psychotic conditions — from supported housing to independent living, including how to access services and maintain stable accommodation.',
+    description: 'A practical guide to housing options for people with psychotic conditions --- from supported housing to independent living, including how to access services and maintain stable accommodation.',
     image: '/images/articles/cat16/cover-034.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 11,
@@ -593,25 +593,25 @@ export const supportingSomeoneArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Housing', 'Independent Living', 'Practical Guide', 'Recovery'],
 
-    summary: 'Stable housing is not just a practical necessity for people with psychosis — it is a clinical intervention. Research consistently shows that housing stability is among the strongest predictors of psychiatric stability, treatment engagement, and recovery. Yet people with psychotic conditions face enormous barriers to obtaining and maintaining housing: discrimination, poverty, the cycling between hospitals and streets, and a chronic shortage of supportive housing options. This article maps the housing landscape for people with psychotic conditions — from crisis accommodation to fully independent living — and provides practical guidance on accessing housing services, understanding your rights, and building the skills and support systems that make independent living sustainable.',
+    summary: 'Stable housing is not just a practical necessity for people with psychosis --- it is a clinical intervention. Research consistently shows that housing stability is among the strongest predictors of psychiatric stability, treatment engagement, and recovery. Yet people with psychotic conditions face enormous barriers to obtaining and maintaining housing: discrimination, poverty, the cycling between hospitals and streets, and a chronic shortage of supportive housing options. This article maps the housing landscape for people with psychotic conditions --- from crisis accommodation to fully independent living --- and provides practical guidance on accessing housing services, understanding your rights, and building the skills and support systems that make independent living sustainable.',
 
     keyFacts: [
       { text: 'People with schizophrenia are approximately 10 times more likely to experience homelessness than the general population', citationIndex: 1 },
-      { text: 'Housing First programs — providing housing without preconditions — achieve housing retention rates of 80–90% for people with serious mental illness', citationIndex: 2 },
+      { text: 'Housing First programs --- providing housing without preconditions --- achieve housing retention rates of 80--90% for people with serious mental illness', citationIndex: 2 },
       { text: 'Stable housing is associated with reduced hospitalization, improved medication adherence, and better psychiatric outcomes', citationIndex: 3 },
       { text: 'Fair housing laws in most countries prohibit discrimination based on mental health disability in housing applications', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The old model said: get treatment, achieve stability, earn housing. Housing First says: provide housing, then everything else becomes possible. When you\'re not sleeping under a bridge, you can make your appointments. When you have a door that locks, you can feel safe enough to take medication. Housing isn\'t the reward for recovery — it\'s the foundation.',
+    sparkMoment: 'The old model said: get treatment, achieve stability, earn housing. Housing First says: provide housing, then everything else becomes possible. When you\'re not sleeping under a bridge, you can make your appointments. When you have a door that locks, you can feel safe enough to take medication. Housing isn\'t the reward for recovery --- it\'s the foundation.',
 
     practicalExercise: {
       title: 'Assessing Housing Readiness and Needs',
       steps: [
         { title: 'Identify your current housing situation', description: 'Where are you living now? Is it safe? Stable? Affordable? If any of these answers is "no," you may benefit from housing support services. Be honest with yourself and your treatment team about housing concerns.' },
-        { title: 'Determine your support level', description: 'What level of support do you need to live successfully? This isn\'t about judgment — it\'s about finding the right fit. Do you need help with medication reminders? Cooking? Budgeting? Crisis response? The answer determines which housing option will work best.' },
-        { title: 'Contact your local housing authority', description: 'Ask about Section 8/Housing Choice Vouchers (US), social housing applications (UK), or equivalent programs in your country. Wait lists can be long, so applying early — even before you urgently need it — is strategic.' },
+        { title: 'Determine your support level', description: 'What level of support do you need to live successfully? This isn\'t about judgment --- it\'s about finding the right fit. Do you need help with medication reminders? Cooking? Budgeting? Crisis response? The answer determines which housing option will work best.' },
+        { title: 'Contact your local housing authority', description: 'Ask about Section 8/Housing Choice Vouchers (US), social housing applications (UK), or equivalent programs in your country. Wait lists can be long, so applying early --- even before you urgently need it --- is strategic.' },
         { title: 'Know your rights', description: 'Landlords cannot legally refuse to rent to you based on a mental health diagnosis in most jurisdictions. If you suspect discrimination, contact a disability rights organization. You have the right to reasonable accommodations such as modified lease terms or flexible notice periods.' },
       ],
       toolLink: '/tools/mood-journal',
@@ -639,7 +639,7 @@ export const supportingSomeoneArticlesA: Article[] = [
             You can't focus on rehabilitation if you're in survival
             mode <Citation id="3" index={3} source="Social Psychiatry and Psychiatric Epidemiology" year="2019" tier={1} />.
             Yet the intersection of psychosis and housing remains one of the most
-            poorly addressed areas in mental health care — a space where clinical needs,
+            poorly addressed areas in mental health care --- a space where clinical needs,
             social policy, and individual rights collide in ways that too often leave
             people without the foundation they need.
           </p>
@@ -660,7 +660,7 @@ export const supportingSomeoneArticlesA: Article[] = [
             { title: 'Residential Treatment Facilities', description: 'Structured group settings with 24-hour staffing, medication management, daily activities, and therapeutic programming. Appropriate during periods of acute instability or when intensive skill-building is needed.' },
             { title: 'Supported Housing (Staff on-site)', description: 'Group homes or shared living arrangements with regular staff support. Residents have their own rooms and share common areas. Staff assist with medication, cooking, budgeting, and crisis response.' },
             { title: 'Supported Housing (Floating support)', description: 'Independent apartments with regular visits from support workers. The person lives independently but has scheduled check-ins and access to crisis support. This is the most common model for people who are stable but need some ongoing assistance.' },
-            { title: 'Fully Independent Housing', description: 'The person lives independently in their own apartment or house, managing their own tenancy. They may use community mental health services but don\'t receive housing-specific support. This is the goal for many — and a realistic one with adequate preparation.' },
+            { title: 'Fully Independent Housing', description: 'The person lives independently in their own apartment or house, managing their own tenancy. They may use community mental health services but don\'t receive housing-specific support. This is the goal for many --- and a realistic one with adequate preparation.' },
           ]}
         />
 
@@ -668,19 +668,19 @@ export const supportingSomeoneArticlesA: Article[] = [
           Housing First: The Evidence-Based Paradigm Shift
         </h2>
         <p className="mb-6">
-          The Housing First model — originally developed for people experiencing homelessness
-          and mental illness — represents a fundamental shift in how housing is provided. The
-          traditional approach required people to demonstrate "housing readiness" — sobriety,
-          treatment compliance, stable symptoms — before being offered permanent housing.
+          The Housing First model --- originally developed for people experiencing homelessness
+          and mental illness --- represents a fundamental shift in how housing is provided. The
+          traditional approach required people to demonstrate "housing readiness" --- sobriety,
+          treatment compliance, stable symptoms --- before being offered permanent housing.
           Housing First eliminates these
           preconditions <Citation id="2" index={2} source="The Lancet Psychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           The evidence is compelling. Housing First programs achieve housing retention rates
-          of 80–90% — dramatically higher than traditional approaches. Participants show
+          of 80--90% --- dramatically higher than traditional approaches. Participants show
           improvements in psychiatric symptoms, substance use, and quality of life. And
           counterintuitively, providing housing without preconditions often leads to
-          greater treatment engagement, not less — because the stability of housing
+          greater treatment engagement, not less --- because the stability of housing
           creates the conditions under which treatment becomes possible.
         </p>
 
@@ -697,8 +697,8 @@ export const supportingSomeoneArticlesA: Article[] = [
           Building Independent Living Skills
         </h2>
         <p className="mb-6">
-          For many people with psychosis, the cognitive symptoms of their condition — difficulties
-          with planning, organization, memory, and problem-solving — make independent living
+          For many people with psychosis, the cognitive symptoms of their condition --- difficulties
+          with planning, organization, memory, and problem-solving --- make independent living
           challenging even when symptoms are well
           managed <Citation id="6" index={6} source="Psychiatric Rehabilitation Journal" year="2020" tier={1} />.
           Independent living skills programs address this by teaching and practicing specific
@@ -707,7 +707,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           administrative tasks (paying bills, communicating with landlords).
         </p>
         <p className="mb-6">
-          The most effective programs use compensatory strategies — external supports that
+          The most effective programs use compensatory strategies --- external supports that
           bypass cognitive deficits rather than trying to remediate them. Automatic bill
           payments, medication organizers with alarms, visual checklists for household tasks,
           and simplified cooking methods all reduce the cognitive load of daily living.
@@ -720,7 +720,7 @@ export const supportingSomeoneArticlesA: Article[] = [
           The most common reasons people with psychosis lose housing are: rent arrears (often
           related to financial management difficulties), neighbor complaints (often related
           to symptoms), and lease violations (often related to crisis behaviors). Proactive
-          communication with your landlord — ideally through a support worker who can mediate —
+          communication with your landlord --- ideally through a support worker who can mediate ---
           and having a crisis plan that doesn't involve property damage or noise disturbance
           can prevent many of these
           situations <Citation id="8" index={8} source="National Institute for Health and Care Excellence" year="2024" tier={3} />.
@@ -736,7 +736,7 @@ export const supportingSomeoneArticlesA: Article[] = [
     id: catId(35),
     slug: 'psychosis-criminal-justice-system-rights-diversion-support',
     title: 'Psychosis and the Criminal Justice System: Rights, Diversion, and Support',
-    description: 'How people with psychosis interact with the criminal justice system — the overrepresentation problem, diversion programs, legal rights, and what families need to know.',
+    description: 'How people with psychosis interact with the criminal justice system --- the overrepresentation problem, diversion programs, legal rights, and what families need to know.',
     image: '/images/articles/cat16/cover-035.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -745,18 +745,18 @@ export const supportingSomeoneArticlesA: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Criminal Justice', 'Rights', 'Diversion', 'Advocacy'],
 
-    summary: 'People with psychotic conditions are dramatically overrepresented in the criminal justice system — not because psychosis causes crime, but because a cascade of systemic failures channels people with untreated mental illness toward incarceration rather than treatment. Inadequate community mental health services, the criminalization of behaviors driven by untreated symptoms, and police encounters that escalate rather than de-escalate create a pipeline from hospital closures to jail cells. Meanwhile, the violence risk associated with psychosis — massively overstated by media — is far smaller than the risk of people with psychosis being victims of violence. This article examines how people with psychosis end up in the criminal justice system, what their legal rights are, how mental health courts and diversion programs work, and what families can do when a loved one faces criminal charges.',
+    summary: 'People with psychotic conditions are dramatically overrepresented in the criminal justice system --- not because psychosis causes crime, but because a cascade of systemic failures channels people with untreated mental illness toward incarceration rather than treatment. Inadequate community mental health services, the criminalization of behaviors driven by untreated symptoms, and police encounters that escalate rather than de-escalate create a pipeline from hospital closures to jail cells. Meanwhile, the violence risk associated with psychosis --- massively overstated by media --- is far smaller than the risk of people with psychosis being victims of violence. This article examines how people with psychosis end up in the criminal justice system, what their legal rights are, how mental health courts and diversion programs work, and what families can do when a loved one faces criminal charges.',
 
     keyFacts: [
       { text: 'People with serious mental illness are 10 times more likely to be in jail or prison than in a state psychiatric hospital in the US', citationIndex: 1 },
-      { text: 'The attributable risk of violence due to psychosis alone (without substance use) is approximately 3–5% — the vast majority of violent acts are committed by people without mental illness', citationIndex: 2 },
+      { text: 'The attributable risk of violence due to psychosis alone (without substance use) is approximately 3--5% --- the vast majority of violent acts are committed by people without mental illness', citationIndex: 2 },
       { text: 'Mental health courts reduce recidivism by approximately 20% compared to standard criminal processing', citationIndex: 3 },
       { text: 'People with psychosis are 14 times more likely to be victims of violent crime than to be perpetrators', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The largest providers of mental health care in the United States are not hospitals — they are jails and prisons. Cook County Jail, Los Angeles County Jail, and Rikers Island each house more people with serious mental illness than any psychiatric hospital in the country. This is not a criminal justice problem. It is a mental health system failure.',
+    sparkMoment: 'The largest providers of mental health care in the United States are not hospitals --- they are jails and prisons. Cook County Jail, Los Angeles County Jail, and Rikers Island each house more people with serious mental illness than any psychiatric hospital in the country. This is not a criminal justice problem. It is a mental health system failure.',
 
     practicalExercise: {
       title: 'Preparing for Criminal Justice Contact',
@@ -785,14 +785,14 @@ export const supportingSomeoneArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In the 1960s, the United States began closing its state psychiatric hospitals —
-            a process called deinstitutionalization — with the promise that community-based
+            In the 1960s, the United States began closing its state psychiatric hospitals ---
+            a process called deinstitutionalization --- with the promise that community-based
             mental health services would replace them. The hospitals closed. The community
             services never fully materialized. The result, decades later, is a system in
             which jails and prisons have become the de facto mental health institutions of
             last
             resort <Citation id="6" index={6} source="The Lancet Psychiatry" year="2020" tier={1} />.
-            Understanding how this happened — and what can be done about it — matters for
+            Understanding how this happened --- and what can be done about it --- matters for
             anyone whose loved one with psychosis might come into contact with the criminal
             justice system.
           </p>
@@ -802,8 +802,8 @@ export const supportingSomeoneArticlesA: Article[] = [
           The Overrepresentation Problem
         </h2>
         <p className="mb-6">
-          The numbers are stark. Approximately 15–20% of people in US jails and prisons have
-          a serious mental illness — compared to approximately 4% of the general population.
+          The numbers are stark. Approximately 15--20% of people in US jails and prisons have
+          a serious mental illness --- compared to approximately 4% of the general population.
           People with serious mental illness are 10 times more likely to be incarcerated than
           to be receiving treatment in a state psychiatric
           hospital <Citation id="1" index={1} source="Treatment Advocacy Center" year="2022" tier={3} />.
@@ -831,17 +831,17 @@ export const supportingSomeoneArticlesA: Article[] = [
           The Violence Myth: Victims, Not Perpetrators
         </h2>
         <p className="mb-6">
-          Media portrayals consistently link psychosis with violence — and this misconception
+          Media portrayals consistently link psychosis with violence --- and this misconception
           has real consequences for how people with psychotic conditions are treated by the
           justice system and society. The actual evidence tells a very different
           story <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           When substance use is controlled for, the attributable risk of violence due to
-          psychosis alone is approximately 3–5%. The vast majority of violent acts in society
+          psychosis alone is approximately 3--5%. The vast majority of violent acts in society
           are committed by people without mental illness. Meanwhile, people with psychosis
-          are 14 times more likely to be victims of violent crime — assault, robbery, sexual
-          violence — than to be
+          are 14 times more likely to be victims of violent crime --- assault, robbery, sexual
+          violence --- than to be
           perpetrators <Citation id="4" index={4} source="Schizophrenia Bulletin" year="2019" tier={1} />.
           They are among the most victimized populations in society, yet public discourse
           consistently frames them as threats rather than vulnerable people in need of
@@ -863,16 +863,16 @@ export const supportingSomeoneArticlesA: Article[] = [
           Crisis Intervention Teams: Changing Police Response
         </h2>
         <p className="mb-6">
-          Crisis Intervention Team (CIT) training — a 40-hour program that teaches law
+          Crisis Intervention Team (CIT) training --- a 40-hour program that teaches law
           enforcement officers to recognize mental health crises and de-escalate rather
-          than arrest — has been implemented in communities across the United
+          than arrest --- has been implemented in communities across the United
           States <Citation id="5" index={5} source="Psychiatric Services" year="2020" tier={1} />.
           CIT-trained officers are more likely to connect people to mental health services
           and less likely to use force or make arrests for behaviors driven by mental illness.
         </p>
         <p className="mb-6">
-          Co-responder models — where a mental health professional accompanies police to
-          mental health calls — go further, providing on-scene clinical assessment and
+          Co-responder models --- where a mental health professional accompanies police to
+          mental health calls --- go further, providing on-scene clinical assessment and
           direct connection to treatment. Some jurisdictions have implemented non-police
           crisis response entirely: trained mental health professionals responding to
           crisis calls without law enforcement involvement. These models show promising
@@ -894,11 +894,11 @@ export const supportingSomeoneArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           Prevention is equally important. Having a crisis plan that identifies alternatives
-          to police — crisis hotlines, mobile crisis teams, crisis stabilization centers —
+          to police --- crisis hotlines, mobile crisis teams, crisis stabilization centers ---
           can prevent criminal justice involvement entirely. Some communities offer voluntary
           crisis registries where families can pre-register information about a person's
           mental health condition so that responding officers arrive informed rather than
-          uninformed. The goal isn't to excuse illegal behavior — it's to ensure that
+          uninformed. The goal isn't to excuse illegal behavior --- it's to ensure that
           behavior driven by illness is met with treatment rather than punishment.
         </p>
       </>

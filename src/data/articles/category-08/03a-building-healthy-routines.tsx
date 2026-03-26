@@ -20,7 +20,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     id: catId(21),
     slug: 'morning-routines-mental-health-what-works',
     title: 'Morning Routines That Support Mental Health: What Actually Works',
-    description: 'Evidence-based morning routine strategies that genuinely improve mood, focus, and emotional regulation—backed by research, not influencer trends.',
+    description: 'Evidence-based morning routine strategies that genuinely improve mood, focus, and emotional regulation---backed by research, not influencer trends.',
     image: "/images/articles/cat08/cover-021.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -106,10 +106,10 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The 5 AM ice bath followed by journaling and a green smoothie looks great on Instagram. But does it actually work? Most viral morning routines are built on aspiration, not science. Let's look at what genuinely supports mental health in the morning hours—and what's just wellness theater.
+            The 5 AM ice bath followed by journaling and a green smoothie looks great on Instagram. But does it actually work? Most viral morning routines are built on aspiration, not science. Let's look at what genuinely supports mental health in the morning hours---and what's just wellness theater.
           </p>
           <p className="mb-6">
-            Research on circadian rhythms, cortisol awakening response, and behavioral activation shows that how you start your day has measurable effects on mood, focus, and emotional regulation throughout the day <Citation id="1" index={1} source="Nature and Science of Sleep" year="2022" tier={1} />. But the "perfect" morning routine isn't a one-size-fits-all prescription—it's about understanding the mechanisms and building a system that fits your life.
+            Research on circadian rhythms, cortisol awakening response, and behavioral activation shows that how you start your day has measurable effects on mood, focus, and emotional regulation throughout the day <Citation id="1" index={1} source="Nature and Science of Sleep" year="2022" tier={1} />. But the "perfect" morning routine isn't a one-size-fits-all prescription---it's about understanding the mechanisms and building a system that fits your life.
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'For Late Risers (Sleep Past Sunrise)',
               content: (
                 <p>
-                  Go outside within 30 minutes of waking. Even if it's 10 AM, the light exposure still helps regulate your rhythm. Avoid wearing sunglasses during this time—your eyes need the light signal.
+                  Go outside within 30 minutes of waking. Even if it's 10 AM, the light exposure still helps regulate your rhythm. Avoid wearing sunglasses during this time---your eyes need the light signal.
                 </p>
               ),
             },
@@ -169,7 +169,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Movement: More Than Just Exercise
         </h2>
         <p className="mb-6">
-          You don't need an intense workout. Research shows that even 10-15 minutes of moderate movement in the morning improves mood, reduces anxiety, and enhances cognitive function throughout the day <Citation id="4" index={4} source="Neuropsychobiology" year="2021" tier={1} />. The key word is "moderate"—you're trying to activate your nervous system, not exhaust it.
+          You don't need an intense workout. Research shows that even 10-15 minutes of moderate movement in the morning improves mood, reduces anxiety, and enhances cognitive function throughout the day <Citation id="4" index={4} source="Neuropsychobiology" year="2021" tier={1} />. The key word is "moderate"---you're trying to activate your nervous system, not exhaust it.
         </p>
 
         <ComparisonTable
@@ -183,7 +183,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The mechanism: morning exercise increases endorphins, dopamine, and norepinephrine—neurotransmitters that improve mood and focus. It also increases core body temperature, signaling to your body that it's "daytime," which reinforces your circadian rhythm.
+          The mechanism: morning exercise increases endorphins, dopamine, and norepinephrine---neurotransmitters that improve mood and focus. It also increases core body temperature, signaling to your body that it's "daytime," which reinforces your circadian rhythm.
         </p>
 
         <ArticleCallout variant="tip" title="Start Embarrassingly Small">
@@ -206,7 +206,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: `If You're Hungry: Eat`,
               description: (
                 <p>
-                  Choose protein + fat + complex carbs to stabilize blood sugar. Examples: eggs with whole grain toast, Greek yogurt with berries and nuts, oatmeal with nut butter. Avoid high-sugar breakfasts that spike and crash blood sugar—this creates mood instability.
+                  Choose protein + fat + complex carbs to stabilize blood sugar. Examples: eggs with whole grain toast, Greek yogurt with berries and nuts, oatmeal with nut butter. Avoid high-sugar breakfasts that spike and crash blood sugar---this creates mood instability.
                 </p>
               ),
             },
@@ -214,7 +214,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: `If You're Not Hungry: Wait`,
               description: (
                 <p>
-                  Forcing breakfast when you're not hungry can create digestive discomfort. Some people naturally prefer eating later. However, if you're skipping breakfast due to morning anxiety or rushing, that's different—address the underlying issue.
+                  Forcing breakfast when you're not hungry can create digestive discomfort. Some people naturally prefer eating later. However, if you're skipping breakfast due to morning anxiety or rushing, that's different---address the underlying issue.
                 </p>
               ),
             },
@@ -260,7 +260,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The goal isn't phone abstinence—it's sequence. Do something for yourself before you do something for the outside world. Even 15-30 minutes makes a difference.
+          The goal isn't phone abstinence---it's sequence. Do something for yourself before you do something for the outside world. Even 15-30 minutes makes a difference.
         </p>
 
         <h2 id="mindfulness-brevity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -287,7 +287,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               label: 'Body Scan (5 minutes)',
               content: (
                 <div>
-                  <p className="mb-3">Mentally scan from head to toes, noticing sensations without judgment. Acknowledge tension, pain, or comfort—just observe.</p>
+                  <p className="mb-3">Mentally scan from head to toes, noticing sensations without judgment. Acknowledge tension, pain, or comfort---just observe.</p>
                   <p><strong>Why it works:</strong> Increases body awareness and reduces dissociation.</p>
                 </div>
               ),
@@ -297,7 +297,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               label: 'Gratitude (2 minutes)',
               content: (
                 <div>
-                  <p className="mb-3">Think of three specific things you're grateful for. Be specific—not "my family," but "my partner made coffee this morning."</p>
+                  <p className="mb-3">Think of three specific things you're grateful for. Be specific---not "my family," but "my partner made coffee this morning."</p>
                   <p><strong>Why it works:</strong> Activates positive emotion networks and reduces negativity bias.</p>
                 </div>
               ),
@@ -314,7 +314,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <ArticleCallout variant="warning" title="Approach With Caution">
           <p>
-            If you try cold showers, start with warm-to-cold transitions (30 seconds cold at the end). Don't force it—if it creates significant distress, the stress response outweighs potential benefits. Some people genuinely feel better; others just feel cold and miserable. Both are valid.
+            If you try cold showers, start with warm-to-cold transitions (30 seconds cold at the end). Don't force it---if it creates significant distress, the stress response outweighs potential benefits. Some people genuinely feel better; others just feel cold and miserable. Both are valid.
           </p>
         </ArticleCallout>
 
@@ -322,7 +322,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           A Realistic Morning Routine (20-30 Minutes)
         </h2>
         <p className="mb-6">
-          Here's what an evidence-based morning routine actually looks like—not a two-hour ritual, but a manageable sequence:
+          Here's what an evidence-based morning routine actually looks like---not a two-hour ritual, but a manageable sequence:
         </p>
 
         <ProgressSteps
@@ -348,7 +348,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'Mindfulness (5 min)',
               description: (
                 <p>
-                  Brief meditation, breathing, or gratitude practice. Shorter is fine—consistency matters more.
+                  Brief meditation, breathing, or gratitude practice. Shorter is fine---consistency matters more.
                 </p>
               ),
             },
@@ -394,17 +394,17 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Once one element becomes automatic (usually 2-3 weeks), add another. Slow, sequential building creates lasting change—trying to implement everything at once usually results in quitting everything within a week.
+          Once one element becomes automatic (usually 2-3 weeks), add another. Slow, sequential building creates lasting change---trying to implement everything at once usually results in quitting everything within a week.
         </p>
 
         <ArticleCallout variant="success" title="The Real Goal">
           <p>
-            A morning routine isn't about being productive or optimized. It's about creating a buffer between sleep and the demands of the day—a space where you establish your own mental and emotional state before external factors take over. That's the actual mental health benefit.
+            A morning routine isn't about being productive or optimized. It's about creating a buffer between sleep and the demands of the day---a space where you establish your own mental and emotional state before external factors take over. That's the actual mental health benefit.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="The morning routine isn't what you do—it's who you become by doing it consistently."
+          quote="The morning routine isn't what you do---it's who you become by doing it consistently."
           author="Raima"
           role="Clinical Psychologist"
         />
@@ -417,7 +417,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     id: catId(22),
     slug: 'evening-wind-down-routines-sleep-anxiety',
     title: 'Evening Wind-Down Routines for Better Sleep and Less Anxiety',
-    description: 'Build an evening routine that signals your nervous system to transition from activity to rest—reducing anxiety and improving sleep quality.',
+    description: 'Build an evening routine that signals your nervous system to transition from activity to rest---reducing anxiety and improving sleep quality.',
     image: "/images/articles/cat08/cover-022.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 7,
@@ -495,16 +495,16 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can't force your brain to fall asleep. But you can create conditions that make sleep more likely. An evening wind-down routine isn't about herbal tea and face masks—it's about systematically downregulating your nervous system and signaling to your body that it's safe to rest.
+            You can't force your brain to fall asleep. But you can create conditions that make sleep more likely. An evening wind-down routine isn't about herbal tea and face masks---it's about systematically downregulating your nervous system and signaling to your body that it's safe to rest.
           </p>
           <p className="mb-6">
-            Research shows that sleep quality is bidirectionally linked with mental health—poor sleep worsens anxiety and depression, while anxiety and depression disrupt sleep <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />. Breaking this cycle requires intentional transition time between waking activity and sleep. Most people try to go from 100% to 0% instantly—and then wonder why they can't fall asleep.
+            Research shows that sleep quality is bidirectionally linked with mental health---poor sleep worsens anxiety and depression, while anxiety and depression disrupt sleep <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />. Breaking this cycle requires intentional transition time between waking activity and sleep. Most people try to go from 100% to 0% instantly---and then wonder why they can't fall asleep.
           </p>
         </div>
 
         <ArticleCallout variant="warning" title="The 60-90 Minute Window">
           <p>
-            Your body needs 60-90 minutes to transition from alertness to sleep readiness. Trying to go from working on your laptop to sleeping in 10 minutes rarely works. This isn't a personal failing—it's biology. Your nervous system needs time to downshift.
+            Your body needs 60-90 minutes to transition from alertness to sleep readiness. Trying to go from working on your laptop to sleeping in 10 minutes rarely works. This isn't a personal failing---it's biology. Your nervous system needs time to downshift.
           </p>
         </ArticleCallout>
 
@@ -538,7 +538,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: '30 Minutes Before Bed: Darkness Cues',
               description: (
                 <p>
-                  Turn off most lights. Use only dim task lighting if needed. Your bedroom should be very dark—blackout curtains, cover LED lights from electronics. Darkness signals melatonin release.
+                  Turn off most lights. Use only dim task lighting if needed. Your bedroom should be very dark---blackout curtains, cover LED lights from electronics. Darkness signals melatonin release.
                 </p>
               ),
             },
@@ -569,14 +569,14 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The warm bath paradox: taking a warm bath 60-90 minutes before bed actually helps you sleep because your body temperature drops rapidly afterward, signaling sleep time. Don't take a hot bath immediately before bed—it will keep you awake.
+          The warm bath paradox: taking a warm bath 60-90 minutes before bed actually helps you sleep because your body temperature drops rapidly afterward, signaling sleep time. Don't take a hot bath immediately before bed---it will keep you awake.
         </p>
 
         <h2 id="anxiety-shutdown" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Shutting Down the Worry Machine
         </h2>
         <p className="mb-6">
-          Cognitive arousal—ruminating on problems, planning tomorrow, replaying conversations—is one of the primary causes of sleep-onset insomnia. Your brain doesn't naturally "turn off" when it's time for bed. You need a deliberate shutdown ritual <Citation id="6" index={6} source="Sleep Medicine" year="2019" tier={1} />.
+          Cognitive arousal---ruminating on problems, planning tomorrow, replaying conversations---is one of the primary causes of sleep-onset insomnia. Your brain doesn't naturally "turn off" when it's time for bed. You need a deliberate shutdown ritual <Citation id="6" index={6} source="Sleep Medicine" year="2019" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -585,7 +585,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'The Brain Dump (10 minutes)',
               content: (
                 <div>
-                  <p className="mb-3">Write down everything on your mind: to-dos, worries, thoughts, reminders. Don't organize it—just get it out of your head and onto paper. This externalizes the mental load.</p>
+                  <p className="mb-3">Write down everything on your mind: to-dos, worries, thoughts, reminders. Don't organize it---just get it out of your head and onto paper. This externalizes the mental load.</p>
                   <p><strong>Why it works:</strong> Once tasks are written down, your brain stops trying to actively remember them (the Zeigarnik effect). The worry is contained.</p>
                 </div>
               ),
@@ -603,7 +603,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: `The "Tomorrow" List`,
               content: (
                 <div>
-                  <p className="mb-3">Before bed, write your top 3 priorities for tomorrow. Not a full to-do list—just three things. This creates closure on today and clarity for tomorrow.</p>
+                  <p className="mb-3">Before bed, write your top 3 priorities for tomorrow. Not a full to-do list---just three things. This creates closure on today and clarity for tomorrow.</p>
                   <p><strong>Why it works:</strong> Reduces anticipatory anxiety about the next day and creates a sense of control.</p>
                 </div>
               ),
@@ -613,7 +613,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title={`The "Not Now' Technique`}>
           <p>
-            When anxious thoughts arise as you're trying to sleep, don't fight them (creates more arousal). Instead, mentally say "not now—I'll think about this tomorrow at 7 PM during worry time." You're not suppressing; you're postponing. This reduces immediate pressure.
+            When anxious thoughts arise as you're trying to sleep, don't fight them (creates more arousal). Instead, mentally say "not now---I'll think about this tomorrow at 7 PM during worry time." You're not suppressing; you're postponing. This reduces immediate pressure.
           </p>
         </ArticleCallout>
 
@@ -621,7 +621,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Progressive Muscle Relaxation: The Body Route
         </h2>
         <p className="mb-6">
-          You can't think your way into relaxation when your body is tense. Progressive muscle relaxation (PMR)—systematically tensing and releasing muscle groups—activates the parasympathetic nervous system (rest mode) and reduces physical arousal. Research shows PMR significantly reduces anxiety and improves sleep quality <Citation id="5" index={5} source="Complementary Therapies in Clinical Practice" year="2021" tier={1} />.
+          You can't think your way into relaxation when your body is tense. Progressive muscle relaxation (PMR)---systematically tensing and releasing muscle groups---activates the parasympathetic nervous system (rest mode) and reduces physical arousal. Research shows PMR significantly reduces anxiety and improves sleep quality <Citation id="5" index={5} source="Complementary Therapies in Clinical Practice" year="2021" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -731,7 +731,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Consistency: The Secret Ingredient
         </h2>
         <p className="mb-6">
-          Your body thrives on predictability. A consistent bedtime routine—same sequence, same timing—creates conditioned associations. Your brain starts initiating the sleep process when you begin the routine, not just when you get into bed. Research shows that irregular sleep schedules (varying by more than 2 hours night to night) are associated with higher stress and anxiety <Citation id="7" index={7} source="Psychosomatic Medicine" year="2018" tier={1} />.
+          Your body thrives on predictability. A consistent bedtime routine---same sequence, same timing---creates conditioned associations. Your brain starts initiating the sleep process when you begin the routine, not just when you get into bed. Research shows that irregular sleep schedules (varying by more than 2 hours night to night) are associated with higher stress and anxiety <Citation id="7" index={7} source="Psychosomatic Medicine" year="2018" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -758,7 +758,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The routine doesn't need to be elaborate. It needs to be consistent. Even a 20-minute sequence—same order, same timing—trains your nervous system to downregulate on cue.
+          The routine doesn't need to be elaborate. It needs to be consistent. Even a 20-minute sequence---same order, same timing---trains your nervous system to downregulate on cue.
         </p>
 
         <h2 id="sample-routines" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -815,7 +815,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'Underlying Sleep Disorder',
               content: (
                 <p>
-                  If you snore loudly, gasp during sleep, or feel exhausted despite 7-8 hours in bed, you may have sleep apnea. If you have restless legs or strong urges to move at night, consider restless leg syndrome. These require medical evaluation—a wind-down routine won't fix a physiological disorder.
+                  If you snore loudly, gasp during sleep, or feel exhausted despite 7-8 hours in bed, you may have sleep apnea. If you have restless legs or strong urges to move at night, consider restless leg syndrome. These require medical evaluation---a wind-down routine won't fix a physiological disorder.
                 </p>
               ),
             },
@@ -831,7 +831,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'The Routine Itself Is Stressful',
               content: (
                 <p>
-                  If your wind-down routine feels like another obligation you're failing at, it's counterproductive. Simplify. Start with just two elements: dim lights 90 minutes before bed, and brain dump before bed. That's enough. You're not trying to achieve perfection—you're trying to signal rest.
+                  If your wind-down routine feels like another obligation you're failing at, it's counterproductive. Simplify. Start with just two elements: dim lights 90 minutes before bed, and brain dump before bed. That's enough. You're not trying to achieve perfection---you're trying to signal rest.
                 </p>
               ),
             },
@@ -840,12 +840,12 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <ArticleCallout variant="success" title="The Real Goal">
           <p>
-            An evening wind-down routine isn't about forcing sleep. It's about creating conditions that make sleep more likely by downregulating your nervous system, reducing cognitive arousal, and signaling to your body that it's safe to rest. You can't control whether you fall asleep—but you can control the transition.
+            An evening wind-down routine isn't about forcing sleep. It's about creating conditions that make sleep more likely by downregulating your nervous system, reducing cognitive arousal, and signaling to your body that it's safe to rest. You can't control whether you fall asleep---but you can control the transition.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="Sleep is not a switch you flip. It's a process you enter—and that process begins long before you close your eyes."
+          quote="Sleep is not a switch you flip. It's a process you enter---and that process begins long before you close your eyes."
           author="Raima"
           role="Clinical Psychologist"
         />
@@ -858,7 +858,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     id: catId(23),
     slug: 'build-exercise-routine-hate-working-out',
     title: 'How to Build an Exercise Routine When You Hate Working Out',
-    description: 'Evidence-based strategies to make movement sustainable when you genuinely dislike traditional exercise—focusing on mental health benefits, not fitness goals.',
+    description: 'Evidence-based strategies to make movement sustainable when you genuinely dislike traditional exercise---focusing on mental health benefits, not fitness goals.',
     image: "/images/articles/cat08/cover-023.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -944,16 +944,16 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Just exercise!" is the advice you've heard a thousand times for anxiety and depression. And it's infuriating—because you know exercise helps, but you genuinely hate working out. The sweating, the discomfort, the gym culture, the whole performance of it. You're not lazy. You just don't want to do burpees in compression pants.
+            "Just exercise!" is the advice you've heard a thousand times for anxiety and depression. And it's infuriating---because you know exercise helps, but you genuinely hate working out. The sweating, the discomfort, the gym culture, the whole performance of it. You're not lazy. You just don't want to do burpees in compression pants.
           </p>
           <p className="mb-6">
-            Here's the good news: the research on exercise and mental health isn't about CrossFit or marathon running. It's about movement—any movement. And the minimum effective dose is much lower than you think. Studies show that even 15 minutes of moderate activity daily reduces depression risk by 26% <Citation id="5" index={5} source="Mental Health and Physical Activity" year="2017" tier={1} />. You don't need to love exercise. You just need to find movement you don't actively hate.
+            Here's the good news: the research on exercise and mental health isn't about CrossFit or marathon running. It's about movement---any movement. And the minimum effective dose is much lower than you think. Studies show that even 15 minutes of moderate activity daily reduces depression risk by 26% <Citation id="5" index={5} source="Mental Health and Physical Activity" year="2017" tier={1} />. You don't need to love exercise. You just need to find movement you don't actively hate.
           </p>
         </div>
 
         <ArticleCallout variant="info" title="Reframe: Movement, Not Exercise">
           <p>
-            Stop calling it "exercise" or "working out." Those words carry baggage—performance expectations, fitness goals, comparison. Call it "movement" instead. You're not trying to optimize your body; you're trying to regulate your nervous system. Different goal, different approach.
+            Stop calling it "exercise" or "working out." Those words carry baggage---performance expectations, fitness goals, comparison. Call it "movement" instead. You're not trying to optimize your body; you're trying to regulate your nervous system. Different goal, different approach.
           </p>
         </ArticleCallout>
 
@@ -961,7 +961,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Why Movement Helps Mental Health (Even When You Hate It)
         </h2>
         <p className="mb-6">
-          The mental health benefits of exercise aren't about burning calories or building muscle. They're neurochemical and psychological. Movement increases endorphins, dopamine, serotonin, and brain-derived neurotrophic factor (BDNF)—all of which improve mood, reduce anxiety, and enhance cognitive function <Citation id="2" index={2} source="Neuropsychobiology" year="2021" tier={1} />.
+          The mental health benefits of exercise aren't about burning calories or building muscle. They're neurochemical and psychological. Movement increases endorphins, dopamine, serotonin, and brain-derived neurotrophic factor (BDNF)---all of which improve mood, reduce anxiety, and enhance cognitive function <Citation id="2" index={2} source="Neuropsychobiology" year="2021" tier={1} />.
         </p>
 
         <StatCard
@@ -971,7 +971,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          But here's the critical part: these benefits don't require intensity. You don't need to be out of breath or dripping sweat. Research shows that low-to-moderate intensity movement provides similar mental health benefits to high-intensity exercise—and is more sustainable for most people <Citation id="4" index={4} source="Medicine & Science in Sports & Exercise" year="2020" tier={1} />.
+          But here's the critical part: these benefits don't require intensity. You don't need to be out of breath or dripping sweat. Research shows that low-to-moderate intensity movement provides similar mental health benefits to high-intensity exercise---and is more sustainable for most people <Citation id="4" index={4} source="Medicine & Science in Sports & Exercise" year="2020" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1002,7 +1002,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
             { label: '90 min/day', value: 92 },
           ]}
           title="Mental Health Benefit vs. Daily Movement Duration"
-          description="Mental health improvement follows a curve—the biggest gains come from 0 to 20 minutes"
+          description="Mental health improvement follows a curve---the biggest gains come from 0 to 20 minutes"
           yAxisLabel="Mental Health Benefit (%)"
           xAxisLabel="Daily Movement Duration"
         />
@@ -1021,7 +1021,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Finding Movement You Don't Hate
         </h2>
         <p className="mb-6">
-          The number one predictor of exercise adherence isn't motivation or discipline—it's enjoyment. If you hate it, you won't sustain it, no matter how much willpower you have <Citation id="8" index={8} source="Sport, Exercise, and Performance Psychology" year="2020" tier={1} />. So stop trying to force yourself into movement you despise. Find something tolerable.
+          The number one predictor of exercise adherence isn't motivation or discipline---it's enjoyment. If you hate it, you won't sustain it, no matter how much willpower you have <Citation id="8" index={8} source="Sport, Exercise, and Performance Psychology" year="2020" tier={1} />. So stop trying to force yourself into movement you despise. Find something tolerable.
         </p>
 
         <ArticleTabs
@@ -1035,7 +1035,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                   <p className="mb-3"><strong>How to make it better:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Walk in nature (research shows outdoor walking reduces anxiety more than indoor) <Citation id="6" index={6} source="International Journal of Environmental Research and Public Health" year="2021" tier={1} /></li>
-                    <li>Listen to podcasts, audiobooks, or music—distract your brain from the effort</li>
+                    <li>Listen to podcasts, audiobooks, or music---distract your brain from the effort</li>
                     <li>Walk with a friend (social connection + movement = compounded benefit)</li>
                     <li>Make it utilitarian: walk to errands, walk during phone calls</li>
                   </ul>
@@ -1050,10 +1050,10 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                   <p className="mb-3"><strong>Why it works:</strong> Feels like fun, not exercise. Music activates reward centers. Can be done alone at home.</p>
                   <p className="mb-3"><strong>How to make it better:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>No choreography required—just move to music you genuinely like</li>
+                    <li>No choreography required---just move to music you genuinely like</li>
                     <li>Start with one song (3-4 minutes). That's enough.</li>
                     <li>YouTube dance workouts (if structure helps) or free-form in your room (if structure feels oppressive)</li>
-                    <li>Close the blinds, lock the door—eliminate self-consciousness</li>
+                    <li>Close the blinds, lock the door---eliminate self-consciousness</li>
                   </ul>
                 </div>
               ),
@@ -1063,7 +1063,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               label: 'Activity-Based Movement',
               content: (
                 <div>
-                  <p className="mb-3"><strong>Why it works:</strong> Movement is a byproduct of doing something else. You're not "exercising"—you're cleaning, gardening, playing with kids/pets.</p>
+                  <p className="mb-3"><strong>Why it works:</strong> Movement is a byproduct of doing something else. You're not "exercising"---you're cleaning, gardening, playing with kids/pets.</p>
                   <p className="mb-3"><strong>Examples:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Gardening (physical but meditative)</li>
@@ -1079,13 +1079,13 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               label: 'Gentle Practices',
               content: (
                 <div>
-                  <p className="mb-3"><strong>Why it works:</strong> Low intensity, focuses on body awareness and breath—less about performance, more about presence.</p>
+                  <p className="mb-3"><strong>Why it works:</strong> Low intensity, focuses on body awareness and breath---less about performance, more about presence.</p>
                   <p className="mb-3"><strong>Options:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Yoga (YouTube free classes, start with 10-15 min beginner)</li>
                     <li>Tai chi (slow, meditative, good for anxiety)</li>
                     <li>Stretching routines (feels productive, low effort)</li>
-                    <li>Swimming (if you have access—gentle on joints, meditative)</li>
+                    <li>Swimming (if you have access---gentle on joints, meditative)</li>
                   </ul>
                 </div>
               ),
@@ -1097,7 +1097,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Overcoming Common Barriers
         </h2>
         <p className="mb-6">
-          Let's address the real reasons people who hate exercise don't move—and practical solutions:
+          Let's address the real reasons people who hate exercise don't move---and practical solutions:
         </p>
 
         <ArticleAccordion
@@ -1107,7 +1107,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3"><strong>The paradox:</strong> Movement actually increases energy (counterintuitive but true). Low-to-moderate exercise activates your nervous system and improves mitochondrial function.</p>
-                  <p><strong>Solution:</strong> Start with just 5 minutes. Tell yourself you'll stop after 5 if you want. Usually, once you start, you'll continue. If you genuinely need rest, rest—but test whether movement might energize you first.</p>
+                  <p><strong>Solution:</strong> Start with just 5 minutes. Tell yourself you'll stop after 5 if you want. Usually, once you start, you'll continue. If you genuinely need rest, rest---but test whether movement might energize you first.</p>
                 </div>
               ),
             },
@@ -1115,7 +1115,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: `Barrier: "I don't have time`,
               content: (
                 <div>
-                  <p className="mb-3"><strong>Translation:</strong> "It's not a priority" (and that's okay—be honest). But if mental health is the priority, you can find 10 minutes.</p>
+                  <p className="mb-3"><strong>Translation:</strong> "It's not a priority" (and that's okay---be honest). But if mental health is the priority, you can find 10 minutes.</p>
                   <p><strong>Solution:</strong> Integrate movement into existing activities. Walk during lunch break. Stretch while watching TV. Dance while cooking. Park farther away. Take stairs. Movement doesn't require dedicated 'workout time."</p>
                 </div>
               ),
@@ -1133,7 +1133,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: `Barrier: "It hurts/I'm out of shape`,
               content: (
                 <div>
-                  <p className="mb-3"><strong>Important distinction:</strong> Discomfort from exertion is normal. Pain (joint, muscle, chest) is not—stop and consult a doctor if you experience pain.</p>
+                  <p className="mb-3"><strong>Important distinction:</strong> Discomfort from exertion is normal. Pain (joint, muscle, chest) is not---stop and consult a doctor if you experience pain.</p>
                   <p><strong>Solution:</strong> Start at embarrassingly low intensity. Walk slowly. Do 5 squats. Stretch for 3 minutes. You're building tolerance and habit first, fitness later. Being "out of shape" means you need to start gently, not that you can't start.</p>
                 </div>
               ),
@@ -1196,7 +1196,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'Track Completion, Not Performance',
               description: (
                 <p>
-                  Don't track distance, calories, or speed. Just check off 'did I move for 10+ minutes today?" Completion is the goal. You're building identity—"I'm someone who moves regularly"—not fitness metrics.
+                  Don't track distance, calories, or speed. Just check off 'did I move for 10+ minutes today?" Completion is the goal. You're building identity---"I'm someone who moves regularly"---not fitness metrics.
                 </p>
               ),
             },
@@ -1230,7 +1230,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Movement When You're Depressed: Special Considerations
         </h2>
         <p className="mb-6">
-          Depression makes everything harder—including movement. The fatigue, lack of motivation, and anhedonia (inability to feel pleasure) mean the strategies that work for others might not work for you. Research shows exercise is as effective as antidepressants for mild-to-moderate depression <Citation id="7" index={7} source="Journal of Affective Disorders" year="2020" tier={1} />—but getting started requires modified approaches.
+          Depression makes everything harder---including movement. The fatigue, lack of motivation, and anhedonia (inability to feel pleasure) mean the strategies that work for others might not work for you. Research shows exercise is as effective as antidepressants for mild-to-moderate depression <Citation id="7" index={7} source="Journal of Affective Disorders" year="2020" tier={1} />---but getting started requires modified approaches.
         </p>
 
         <ArticleCallout variant="warning" title="When You're in an Acute Depressive Episode">
@@ -1243,22 +1243,22 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           headers={['Depression Symptom', 'Movement Adaptation', 'Why It Helps']}
           rows={[
             ['Extreme fatigue', 'Start with 3-5 minutes only', 'Paradoxically increases energy without overwhelming system'],
-            ['No motivation', 'Remove all decisions—automate the routine', 'Reduces executive function burden'],
-            ["Anhedonia (no pleasure)", "Track mood before/after—you may not feel 'good' but less bad", 'Provides objective evidence when subjective experience is numb'],
+            ['No motivation', 'Remove all decisions---automate the routine', 'Reduces executive function burden'],
+            ["Anhedonia (no pleasure)", "Track mood before/after---you may not feel 'good' but less bad", 'Provides objective evidence when subjective experience is numb'],
             ['Worthlessness', 'Frame as self-care, not achievement', 'Reduces pressure, emphasizes inherent worth'],
             ['Social withdrawal', 'Start solo, add social component when ready', 'Meets you where you are, scales up gradually'],
           ]}
         />
 
         <p className="mb-6 mt-6">
-          If you're on antidepressants, movement can enhance their effectiveness. If you're not, movement is one of the few interventions with research backing comparable to medication. Either way, think of movement as medicine—you don't need to enjoy taking medicine for it to work.
+          If you're on antidepressants, movement can enhance their effectiveness. If you're not, movement is one of the few interventions with research backing comparable to medication. Either way, think of movement as medicine---you don't need to enjoy taking medicine for it to work.
         </p>
 
         <h2 id="measure-success" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Measuring Success: Not What You Think
         </h2>
         <p className="mb-6">
-          Forget fitness goals. You're not trying to lose weight, run faster, or build muscle (unless you want to—but that's separate). You're trying to regulate your nervous system and improve mental health. Success looks different:
+          Forget fitness goals. You're not trying to lose weight, run faster, or build muscle (unless you want to---but that's separate). You're trying to regulate your nervous system and improve mental health. Success looks different:
         </p>
 
         <ArticleAccordion
@@ -1283,7 +1283,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'Success Metric: Reduced Anxiety',
               content: (
                 <p>
-                  Does walking for 15 minutes reduce your rumination or physical tension? If yes, it's working—regardless of step count or calories.
+                  Does walking for 15 minutes reduce your rumination or physical tension? If yes, it's working---regardless of step count or calories.
                 </p>
               ),
             },
@@ -1313,7 +1313,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         </ArticleCallout>
 
         <QuoteBlock
-          quote="The best exercise routine is the one you'll actually do—even if it's just walking around the block while listening to a podcast you love."
+          quote="The best exercise routine is the one you'll actually do---even if it's just walking around the block while listening to a podcast you love."
           author="Raima"
           role="Clinical Psychologist"
         />
@@ -1326,7 +1326,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     id: catId(24),
     slug: 'sustainable-self-care-routine-not-face-mask',
     title: `Creating a Self-Care Routine That's Sustainable (Not Just a Face Mask)`,
-    description: "Build a self-care routine based on actual needs and emotional regulation—not trendy wellness products or social media aesthetics.",
+    description: "Build a self-care routine based on actual needs and emotional regulation---not trendy wellness products or social media aesthetics.",
     image: "/images/articles/cat08/cover-024.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 7,
@@ -1404,16 +1404,16 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Self-care has been hijacked by the wellness industry. It's now synonymous with bubble baths, jade rollers, and $80 candles. But real self-care—the kind that actually sustains mental health—isn't aesthetic. It's often boring, unglamorous, and involves saying 'no' to people. It's going to bed on time when you'd rather scroll. It's eating when you're hungry even though you're behind on work. It's setting boundaries that make you temporarily uncomfortable.
+            Self-care has been hijacked by the wellness industry. It's now synonymous with bubble baths, jade rollers, and $80 candles. But real self-care---the kind that actually sustains mental health---isn't aesthetic. It's often boring, unglamorous, and involves saying 'no' to people. It's going to bed on time when you'd rather scroll. It's eating when you're hungry even though you're behind on work. It's setting boundaries that make you temporarily uncomfortable.
           </p>
           <p className="mb-6">
-            The clinical definition of self-care is "the practice of activities that individuals initiate and perform on their own behalf to maintain life, health, and wellbeing" <Citation id="2" index={2} source="International Journal of Nursing Sciences" year="2017" tier={1} />. Notice what's absent: luxury, indulgence, or performance. Self-care is maintenance—like changing your car's oil or paying bills. It's not optional when you want your system to keep running.
+            The clinical definition of self-care is "the practice of activities that individuals initiate and perform on their own behalf to maintain life, health, and wellbeing" <Citation id="2" index={2} source="International Journal of Nursing Sciences" year="2017" tier={1} />. Notice what's absent: luxury, indulgence, or performance. Self-care is maintenance---like changing your car's oil or paying bills. It's not optional when you want your system to keep running.
           </p>
         </div>
 
         <ArticleCallout variant="warning" title="Self-Care Is Not Selfish">
           <p>
-            The guilt around prioritizing self-care is often the biggest barrier. But research shows that neglecting basic self-care leads to burnout, compassion fatigue, and reduced ability to care for others <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />. You can't pour from an empty cup—cliché, but physiologically accurate.
+            The guilt around prioritizing self-care is often the biggest barrier. But research shows that neglecting basic self-care leads to burnout, compassion fatigue, and reduced ability to care for others <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />. You can't pour from an empty cup---cliché, but physiologically accurate.
           </p>
         </ArticleCallout>
 
@@ -1476,7 +1476,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          A sustainable self-care routine touches all five domains—but not necessarily every day. The goal is balance over time, not perfection in any moment.
+          A sustainable self-care routine touches all five domains---but not necessarily every day. The goal is balance over time, not perfection in any moment.
         </p>
 
         <h2 id="instagram-vs-real" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1524,7 +1524,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
 
         <ArticleCallout variant="info" title="It Can Be Both">
           <p>
-            This isn't to say bubble baths or face masks are bad. If they genuinely help you relax and you enjoy them, great. The problem is when they become a substitute for the unglamorous work of maintaining your mental health—like sleeping enough, eating regularly, and setting boundaries.
+            This isn't to say bubble baths or face masks are bad. If they genuinely help you relax and you enjoy them, great. The problem is when they become a substitute for the unglamorous work of maintaining your mental health---like sleeping enough, eating regularly, and setting boundaries.
           </p>
         </ArticleCallout>
 
@@ -1551,7 +1551,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3"><strong>Signs you're neglecting this:</strong> Emotional numbness or volatility, frequent crying or anger outbursts, suppressing feelings until they explode, no outlet for processing emotions, feeling resentful often.</p>
-                  <p><strong>Priority action:</strong> Create a processing ritual—journaling, talking to someone, or therapy. Emotions don't disappear when ignored; they accumulate.</p>
+                  <p><strong>Priority action:</strong> Create a processing ritual---journaling, talking to someone, or therapy. Emotions don't disappear when ignored; they accumulate.</p>
                 </div>
               ),
             },
@@ -1560,7 +1560,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3"><strong>Signs you're neglecting this:</strong> Feeling isolated or lonely, canceling plans consistently, not reaching out when struggling, only interacting transactionally (work, errands), or conversely, no alone time because you can't say no.</p>
-                  <p><strong>Priority action:</strong> Schedule one meaningful connection per week—coffee with a friend, phone call with family, even a quality conversation. Social connection is as important as sleep for mental health <Citation id="7" index={7} source="PLoS Medicine" year="2010" tier={1} />.</p>
+                  <p><strong>Priority action:</strong> Schedule one meaningful connection per week---coffee with a friend, phone call with family, even a quality conversation. Social connection is as important as sleep for mental health <Citation id="7" index={7} source="PLoS Medicine" year="2010" tier={1} />.</p>
                 </div>
               ),
             },
@@ -1589,7 +1589,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Building a Sustainable Routine (Not an Overwhelming Overhaul)
         </h2>
         <p className="mb-6">
-          The biggest mistake is trying to implement perfect self-care across all five domains immediately. That's a recipe for burnout and abandonment. Instead, start with your biggest gap—the domain you're most consistently neglecting—and add one small, sustainable practice.
+          The biggest mistake is trying to implement perfect self-care across all five domains immediately. That's a recipe for burnout and abandonment. Instead, start with your biggest gap---the domain you're most consistently neglecting---and add one small, sustainable practice.
         </p>
 
         <BeforeAfter
@@ -1642,7 +1642,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                     <li><strong>Mental:</strong> Audiobook or podcast during chores instead of mental to-do lists</li>
                     <li><strong>Spiritual:</strong> 3 minutes of gratitude practice while kids are eating breakfast</li>
                   </ul>
-                  <p><strong>Key principle:</strong> Stack self-care with existing activities—doesn't require additional time carved out.</p>
+                  <p><strong>Key principle:</strong> Stack self-care with existing activities---doesn't require additional time carved out.</p>
                 </div>
               ),
             },
@@ -1657,7 +1657,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                     <li><strong>Physical:</strong> Consistent sleep (same bedtime even on weekends) + walk between classes</li>
                     <li><strong>Emotional:</strong> Weekly therapy or peer support group, brain dump before exams</li>
                     <li><strong>Social:</strong> Quality time with close friends (not just party/drinking contexts)</li>
-                    <li><strong>Mental:</strong> Designated "no study" time—read for fun, hobbies, non-academic pursuits</li>
+                    <li><strong>Mental:</strong> Designated "no study" time---read for fun, hobbies, non-academic pursuits</li>
                     <li><strong>Spiritual:</strong> Join club aligned with values, volunteer work, nature time on weekends</li>
                   </ul>
                   <p><strong>Key principle:</strong> Protect sleep and create boundaries between academic stress and rest time.</p>
@@ -1678,7 +1678,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                     <li><strong>Mental:</strong> Hard stop work time (no email after 7 PM), weekend morning without work thoughts</li>
                     <li><strong>Spiritual:</strong> Sunday morning walk in nature, monthly volunteer day, creative hobby</li>
                   </ul>
-                  <p><strong>Key principle:</strong> Set and defend boundaries with work—your job will take everything if you let it.</p>
+                  <p><strong>Key principle:</strong> Set and defend boundaries with work---your job will take everything if you let it.</p>
                 </div>
               ),
             },
@@ -1694,9 +1694,9 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                     <li><strong>Emotional:</strong> Caregiver support group (in-person or online), therapy focused on caregiver burnout</li>
                     <li><strong>Social:</strong> Maintain one friendship outside caregiving role, connect with other caregivers</li>
                     <li><strong>Mental:</strong> 15 minutes completely disengaged daily (walk, read, listen to music with headphones)</li>
-                    <li><strong>Spiritual:</strong> Meditation, prayer, or reflective practice—even 5 minutes helps with meaning-making</li>
+                    <li><strong>Spiritual:</strong> Meditation, prayer, or reflective practice---even 5 minutes helps with meaning-making</li>
                   </ul>
-                  <p><strong>Key principle:</strong> Self-care is not selfish—you cannot sustain caregiving without maintaining yourself <Citation id="4" index={4} source="Mindfulness" year="2021" tier={1} />.</p>
+                  <p><strong>Key principle:</strong> Self-care is not selfish---you cannot sustain caregiving without maintaining yourself <Citation id="4" index={4} source="Mindfulness" year="2021" tier={1} />.</p>
                 </div>
               ),
             },
@@ -1707,27 +1707,27 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Boundaries Are Self-Care (The Hardest Part)
         </h2>
         <p className="mb-6">
-          The most important—and most uncomfortable—aspect of self-care is boundary-setting. Research shows that poor boundaries are strongly linked to burnout, compassion fatigue, and mental health decline in both professional and personal contexts <Citation id="5" index={5} source="Professional Psychology: Research and Practice" year="2019" tier={1} />.
+          The most important---and most uncomfortable---aspect of self-care is boundary-setting. Research shows that poor boundaries are strongly linked to burnout, compassion fatigue, and mental health decline in both professional and personal contexts <Citation id="5" index={5} source="Professional Psychology: Research and Practice" year="2019" tier={1} />.
         </p>
 
         <ComparisonTable
           headers={['Domain', 'Boundary Example', "Why It's Hard"]}
           rows={[
             ['Time', "I can't take on additional projects this month", 'Fear of disappointing others, being seen as uncooperative'],
-            ['Energy', "I need to leave the gathering early—I'm tapped out", "Social pressure, guilt about not being 'fun enough'"],
-            ['Emotional Labor', "I can't be your therapist—you need professional help", 'Worry about abandoning someone, guilt about prioritizing self'],
+            ['Energy', "I need to leave the gathering early---I'm tapped out", "Social pressure, guilt about not being 'fun enough'"],
+            ['Emotional Labor', "I can't be your therapist---you need professional help", 'Worry about abandoning someone, guilt about prioritizing self'],
             ['Physical Space', 'I need alone time this weekend to recharge', 'Partner/family may feel rejected or hurt'],
             ['Digital', "I'm not checking work email after 7 PM", 'Fear of missing something important, appearing uncommitted'],
           ]}
         />
 
         <p className="mb-6 mt-6">
-          Boundaries feel selfish because they prioritize your needs over others" wants. But chronic boundary violations lead to resentment, burnout, and inability to show up meaningfully for anyone—including yourself. Setting boundaries is an investment in long-term relational health, not a withdrawal from it.
+          Boundaries feel selfish because they prioritize your needs over others" wants. But chronic boundary violations lead to resentment, burnout, and inability to show up meaningfully for anyone---including yourself. Setting boundaries is an investment in long-term relational health, not a withdrawal from it.
         </p>
 
         <ArticleCallout variant="tip" title="Practice the Script">
           <p>
-            Many people know they need boundaries but freeze when the moment comes. Pre-script your responses: "I appreciate you thinking of me, but I can't commit to that right now.", "I'm not available this weekend—I need rest time.", "I can talk for 10 minutes, but then I need to go." Practice makes the discomfort more manageable.
+            Many people know they need boundaries but freeze when the moment comes. Pre-script your responses: "I appreciate you thinking of me, but I can't commit to that right now.", "I'm not available this weekend---I need rest time.", "I can talk for 10 minutes, but then I need to go." Practice makes the discomfort more manageable.
           </p>
         </ArticleCallout>
 
@@ -1735,7 +1735,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           When Self-Care Isn't Enough
         </h2>
         <p className="mb-6">
-          Self-care is necessary but not always sufficient. If you're doing the basics—sleeping, eating, moving, processing emotions, setting boundaries—and still struggling with significant anxiety, depression, or other mental health symptoms, you need professional support. Self-care is maintenance; therapy and medication (when needed) are treatment.
+          Self-care is necessary but not always sufficient. If you're doing the basics---sleeping, eating, moving, processing emotions, setting boundaries---and still struggling with significant anxiety, depression, or other mental health symptoms, you need professional support. Self-care is maintenance; therapy and medication (when needed) are treatment.
         </p>
 
         <ArticleAccordion
@@ -1767,17 +1767,17 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          If you're maintaining self-care practices and still experiencing significant impairment in functioning (can't work, can't maintain relationships, persistent suicidal thoughts, substance use to cope), that's a signal to seek professional help—not to try harder at self-care.
+          If you're maintaining self-care practices and still experiencing significant impairment in functioning (can't work, can't maintain relationships, persistent suicidal thoughts, substance use to cope), that's a signal to seek professional help---not to try harder at self-care.
         </p>
 
         <ArticleCallout variant="success" title="The Real Goal">
           <p>
-            Sustainable self-care is boring. It's going to bed on time, eating regular meals, saying no to protect your energy, and processing emotions instead of avoiding them. It's not Instagram-worthy. But it's what actually keeps your mental health functioning—and that's more valuable than any aesthetic.
+            Sustainable self-care is boring. It's going to bed on time, eating regular meals, saying no to protect your energy, and processing emotions instead of avoiding them. It's not Instagram-worthy. But it's what actually keeps your mental health functioning---and that's more valuable than any aesthetic.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="Self-care is not self-indulgence. It's self-preservation—and that is an act of survival, not luxury."
+          quote="Self-care is not self-indulgence. It's self-preservation---and that is an act of survival, not luxury."
           author="Raima"
           role="Clinical Psychologist"
         />
@@ -1790,7 +1790,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
     id: catId(25),
     slug: 'minimum-effective-dose-smallest-routine',
     title: 'The Minimum Effective Dose: The Smallest Routine That Still Moves the Needle',
-    description: 'Find the absolute minimum routine that produces meaningful mental health benefits—because perfection is the enemy of consistency.',
+    description: 'Find the absolute minimum routine that produces meaningful mental health benefits---because perfection is the enemy of consistency.',
     image: "/images/articles/cat08/cover-025.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 7,
@@ -1868,16 +1868,16 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've seen the morning routines: wake at 5 AM, meditate for 30 minutes, journal for 20, cold shower, green smoothie, workout for an hour, read for 30 minutes—all before 8 AM. It's impressive. It's also completely unrealistic for most people's lives. And here's the secret: you don't need it. You need the minimum effective dose—the smallest routine that still produces meaningful results.
+            You've seen the morning routines: wake at 5 AM, meditate for 30 minutes, journal for 20, cold shower, green smoothie, workout for an hour, read for 30 minutes---all before 8 AM. It's impressive. It's also completely unrealistic for most people's lives. And here's the secret: you don't need it. You need the minimum effective dose---the smallest routine that still produces meaningful results.
           </p>
           <p className="mb-6">
-            Research on habit formation shows that consistency matters far more than intensity. A study tracking habit formation found that behaviors performed daily became automatic faster than those performed less frequently—regardless of complexity <Citation id="1" index={1} source="European Journal of Social Psychology" year="2010" tier={1} />. The goal isn't an elaborate routine you can't sustain. It's identifying the 20% of actions that produce 80% of mental health benefits—and doing those consistently.
+            Research on habit formation shows that consistency matters far more than intensity. A study tracking habit formation found that behaviors performed daily became automatic faster than those performed less frequently---regardless of complexity <Citation id="1" index={1} source="European Journal of Social Psychology" year="2010" tier={1} />. The goal isn't an elaborate routine you can't sustain. It's identifying the 20% of actions that produce 80% of mental health benefits---and doing those consistently.
           </p>
         </div>
 
         <ArticleCallout variant="info" title="The MED Principle">
           <p>
-            The Minimum Effective Dose (MED) is a concept from pharmacology: the smallest amount of a substance that produces a measurable effect. Applied to routines: what's the smallest investment that produces meaningful mental health improvement? This is your target—not perfection, but sufficiency.
+            The Minimum Effective Dose (MED) is a concept from pharmacology: the smallest amount of a substance that produces a measurable effect. Applied to routines: what's the smallest investment that produces meaningful mental health improvement? This is your target---not perfection, but sufficiency.
           </p>
         </ArticleCallout>
 
@@ -1885,7 +1885,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Why Minimal Routines Work Better
         </h2>
         <p className="mb-6">
-          Elaborate routines fail for predictable reasons: they require significant time, energy, and willpower—all of which are limited resources. When life gets stressful (which it inevitably does), the 2-hour morning routine is the first thing to go. Then you feel like a failure, abandon the routine entirely, and lose all benefits.
+          Elaborate routines fail for predictable reasons: they require significant time, energy, and willpower---all of which are limited resources. When life gets stressful (which it inevitably does), the 2-hour morning routine is the first thing to go. Then you feel like a failure, abandon the routine entirely, and lose all benefits.
         </p>
 
         <BeforeAfter
@@ -1912,7 +1912,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Minimal interventions also leverage the "small wins" effect—research shows that achieving small, consistent goals builds momentum and self-efficacy, which leads to sustained behavior change <Citation id="4" index={4} source="Journal of Applied Psychology" year="2011" tier={1} />. You're more likely to maintain a 10-minute routine for years than a 90-minute routine for weeks.
+          Minimal interventions also leverage the "small wins" effect---research shows that achieving small, consistent goals builds momentum and self-efficacy, which leads to sustained behavior change <Citation id="4" index={4} source="Journal of Applied Psychology" year="2011" tier={1} />. You're more likely to maintain a 10-minute routine for years than a 90-minute routine for weeks.
         </p>
 
         <h2 id="identifying-your-med" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1935,7 +1935,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Once you've maintained that single action for 2-3 weeks and it feels automatic, you can add a second element. But don't add more until the first is truly habitual—this takes longer than you think (average 66 days for automaticity) <Citation id="1" index={1} source="European Journal of Social Psychology" year="2010" tier={1} />.
+          Once you've maintained that single action for 2-3 weeks and it feels automatic, you can add a second element. But don't add more until the first is truly habitual---this takes longer than you think (average 66 days for automaticity) <Citation id="1" index={1} source="European Journal of Social Psychology" year="2010" tier={1} />.
         </p>
 
         <h2 id="five-core-elements" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1961,7 +1961,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: '2. Daily Movement (15-20 minutes, moderate intensity)',
               content: (
                 <div>
-                  <p className="mb-3"><strong>Why it matters:</strong> Movement increases endorphins, dopamine, and BDNF—all critical for mood regulation. Even 15 minutes of walking reduces depression and anxiety symptoms <Citation id="6" index={6} source="British Journal of Sports Medicine" year="2020" tier={1} />.</p>
+                  <p className="mb-3"><strong>Why it matters:</strong> Movement increases endorphins, dopamine, and BDNF---all critical for mood regulation. Even 15 minutes of walking reduces depression and anxiety symptoms <Citation id="6" index={6} source="British Journal of Sports Medicine" year="2020" tier={1} />.</p>
                   <p className="mb-3"><strong>Minimum effective dose:</strong> 15-minute walk outdoors, or 20 minutes of any activity you don't hate.</p>
                   <p><strong>Lower the bar:</strong> If 15 feels impossible, start with 5. Consistency before intensity.</p>
                 </div>
@@ -1971,7 +1971,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: '3. Emotional Processing (5-10 minutes daily)',
               content: (
                 <div>
-                  <p className="mb-3"><strong>Why it matters:</strong> Suppressed emotions don't disappear—they accumulate and eventually explode or manifest as physical symptoms. Regular emotional processing prevents buildup.</p>
+                  <p className="mb-3"><strong>Why it matters:</strong> Suppressed emotions don't disappear---they accumulate and eventually explode or manifest as physical symptoms. Regular emotional processing prevents buildup.</p>
                   <p className="mb-3"><strong>Minimum effective dose:</strong> 5-minute journal, voice memo processing your day, or conversation with a trusted person.</p>
                   <p><strong>It doesn't have to be formal:</strong> Just name what you're feeling and why. That's processing.</p>
                 </div>
@@ -1992,7 +1992,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3"><strong>Why it matters:</strong> Social connection is as protective for mental health as exercise and sleep. Isolation is a major risk factor for depression and anxiety.</p>
-                  <p className="mb-3"><strong>Minimum effective dose:</strong> One genuine conversation per week—phone call, coffee, quality time with partner/friend.</p>
+                  <p className="mb-3"><strong>Minimum effective dose:</strong> One genuine conversation per week---phone call, coffee, quality time with partner/friend.</p>
                   <p><strong>Quality over quantity:</strong> One 30-minute meaningful interaction beats hours of surface-level socializing.</p>
                 </div>
               ),
@@ -2008,7 +2008,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Sample Minimal Routines (10-20 Minutes Total)
         </h2>
         <p className="mb-6">
-          Here's what MED routines actually look like—broken down by time available:
+          Here's what MED routines actually look like---broken down by time available:
         </p>
 
         <ArticleTabs
@@ -2076,7 +2076,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Notice what's absent: cold showers, elaborate meal prep, hour-long gym sessions, extensive journaling, 30-minute meditations. None of those are necessary for mental health maintenance. They're optional enhancements if you enjoy them—but not requirements.
+          Notice what's absent: cold showers, elaborate meal prep, hour-long gym sessions, extensive journaling, 30-minute meditations. None of those are necessary for mental health maintenance. They're optional enhancements if you enjoy them---but not requirements.
         </p>
 
         <h2 id="flexibility-not-rigidity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -2101,7 +2101,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
               title: 'Minimal Version (Busy Day)',
               description: (
                 <p>
-                  The absolute minimum that still counts. Example: 5-minute walk or 5-minute brain dump before bed. Pick one element—don't try to do all.
+                  The absolute minimum that still counts. Example: 5-minute walk or 5-minute brain dump before bed. Pick one element---don't try to do all.
                 </p>
               ),
             },
@@ -2130,7 +2130,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Avoiding Routine Creep
         </h2>
         <p className="mb-6">
-          Once a minimal routine feels easy, there's a temptation to keep adding: "If 10 minutes helps, 30 minutes must be better!" This is routine creep—and it's how sustainable routines become unsustainable. More isn't always better. The relationship between routine length and benefit follows diminishing returns:
+          Once a minimal routine feels easy, there's a temptation to keep adding: "If 10 minutes helps, 30 minutes must be better!" This is routine creep---and it's how sustainable routines become unsustainable. More isn't always better. The relationship between routine length and benefit follows diminishing returns:
         </p>
 
         <ArticleChart
@@ -2143,7 +2143,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
             { label: '90 min', value: 94 },
           ]}
           title="Routine Length vs. Mental Health Benefit"
-          description="The biggest gains come from 0 to 20 minutes—after that, returns diminish rapidly"
+          description="The biggest gains come from 0 to 20 minutes---after that, returns diminish rapidly"
           yAxisLabel="Mental Health Benefit (%)"
           xAxisLabel="Daily Routine Duration"
         />
@@ -2173,7 +2173,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
                   <li>You skip 2+ days per week</li>
                   <li>You're adding because someone else's routine looks better</li>
                   <li>You're in a stressful life period (job change, move, relationship issue)</li>
-                  <li>The current routine is working—if it's not broken, don't fix it</li>
+                  <li>The current routine is working---if it's not broken, don't fix it</li>
                 </ul>
               ),
             },
@@ -2184,7 +2184,7 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
           Shifting Identity, Not Just Behavior
         </h2>
         <p className="mb-6">
-          The ultimate goal of a minimal routine isn't the behaviors themselves—it's the identity shift. You're becoming 'someone who takes care of their mental health" rather than "someone trying to fix themselves." This identity change is what makes behaviors stick long-term <Citation id="3" index={3} source="Social Cognition" year="2017" tier={1} />.
+          The ultimate goal of a minimal routine isn't the behaviors themselves---it's the identity shift. You're becoming 'someone who takes care of their mental health" rather than "someone trying to fix themselves." This identity change is what makes behaviors stick long-term <Citation id="3" index={3} source="Social Cognition" year="2017" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -2214,12 +2214,12 @@ export const buildingHealthyRoutinesArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Every time you complete your minimal routine, you're casting a vote for this identity. The routine itself is small—10 minutes. But the accumulation of those votes over weeks and months shifts how you see yourself. That's the real transformation.
+          Every time you complete your minimal routine, you're casting a vote for this identity. The routine itself is small---10 minutes. But the accumulation of those votes over weeks and months shifts how you see yourself. That's the real transformation.
         </p>
 
         <ArticleCallout variant="success" title="The Real Goal">
           <p>
-            The minimum effective dose isn't about doing less because you're lazy. It's about doing exactly enough to produce meaningful results while being sustainable for years, not weeks. Consistency at 70% beats perfection at 5%. Find your 70%—and protect it fiercely.
+            The minimum effective dose isn't about doing less because you're lazy. It's about doing exactly enough to produce meaningful results while being sustainable for years, not weeks. Consistency at 70% beats perfection at 5%. Find your 70%---and protect it fiercely.
           </p>
         </ArticleCallout>
 

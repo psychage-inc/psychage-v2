@@ -113,7 +113,7 @@ export const moodDisordersArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You wake up exhausted even after sleeping for ten hours. Nothing brings you joy — not your favorite music, not time with friends, not the activities you once loved. You feel like you are moving through life in slow motion, underwater, disconnected from everything. This is what a major depressive episode feels like.
+            You wake up exhausted even after sleeping for ten hours. Nothing brings you joy --- not your favorite music, not time with friends, not the activities you once loved. You feel like you are moving through life in slow motion, underwater, disconnected from everything. This is what a major depressive episode feels like.
           </p>
           <p className="mb-6">
             A major depressive episode (MDE) is the defining feature of major depressive disorder (MDD). It is not simply feeling sad or having a bad week. It is a debilitating condition that affects mood, thinking, physical health, and functioning <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Approximately 21 percent of adults will experience at least one major depressive episode in their lifetime <Citation id="3" index={2} source="JAMA" year="2003" tier={1} />.
@@ -509,7 +509,7 @@ export const moodDisordersArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You cannot remember a time when you did not feel this way. The sadness, the fatigue, the low self-esteem — these are not episodes. They are your normal. You have felt this way for so long that you wonder if this is just who you are. This is what persistent depressive disorder feels like.
+            You cannot remember a time when you did not feel this way. The sadness, the fatigue, the low self-esteem --- these are not episodes. They are your normal. You have felt this way for so long that you wonder if this is just who you are. This is what persistent depressive disorder feels like.
           </p>
           <p className="mb-6">
             Persistent depressive disorder (PDD), formerly known as dysthymia, is a chronic form of depression in which symptoms last for at least two years in adults (one year in children and adolescents) <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. It affects approximately 1.5 percent of adults in the United States <Citation id="1" index={2} source="NIMH" year="2023" tier={2} />.
@@ -523,7 +523,7 @@ export const moodDisordersArticlesA: Article[] = [
           PDD is characterized by a depressed mood that lasts for most of the day, more days than not, for at least two years <Citation id="2" index={3} source="DSM-5-TR" year="2022" tier={4} />. The symptoms are typically less severe than a major depressive episode but are chronic and persistent.
           </p>
         <p className="mb-6">
-          People with PDD often describe feeling like they have always been this way. The depression becomes integrated into their identity — they cannot remember what it feels like to not be depressed.
+          People with PDD often describe feeling like they have always been this way. The depression becomes integrated into their identity --- they cannot remember what it feels like to not be depressed.
         </p>
 
         <ArticleChart
@@ -721,7 +721,7 @@ export const moodDisordersArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="tip">
-          <p>Because PDD is chronic, treatment focuses not just on symptom reduction but on <strong>improving quality of life</strong> — helping you engage in meaningful activities, build relationships, and develop a sense of purpose despite ongoing vulnerability to low mood.</p>
+          <p>Because PDD is chronic, treatment focuses not just on symptom reduction but on <strong>improving quality of life</strong> --- helping you engage in meaningful activities, build relationships, and develop a sense of purpose despite ongoing vulnerability to low mood.</p>
         </ArticleCallout>
 
         <h2 id="living-with-pdd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

@@ -98,7 +98,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             It's 9 PM. You're watching TV with your phone nearby. Slack notification. Your manager asking a 'quick question." You could ignore it until tomorrow. But your status will show "active" if you open it. They'll know you saw it. You respond. It wasn't quick. Now it's 10 PM.
           </p>
           <p className="mb-6">
-            Digital presenteeism—the pressure to appear constantly available and responsive online—has become one of remote work's most insidious mental health challenges. Research shows that 63% of remote workers feel pressure to respond to messages outside work hours, with many reporting that being "always on" is an unspoken expectation <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2023" tier={1} />.
+            Digital presenteeism---the pressure to appear constantly available and responsive online---has become one of remote work's most insidious mental health challenges. Research shows that 63% of remote workers feel pressure to respond to messages outside work hours, with many reporting that being "always on" is an unspoken expectation <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
             Unlike traditional presenteeism (showing up sick to the office), digital presenteeism is harder to see and harder to resist. Your availability status, response times, and online activity create a constant digital footprint that managers and colleagues can monitor. Studies show this "always-on" culture significantly increases stress, burnout, and work-family conflict <Citation id="2" index={2} source="New Technology, Work and Employment" year="2023" tier={1} />.
@@ -153,7 +153,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           The Response Time Trap
         </h2>
         <p className="mb-6">
-          Studies on response time expectations reveal a concerning pattern. Research tracking Slack conversations shows that average response times have decreased dramatically—from 24 hours in early remote work to under 30 minutes in many organizations <Citation id="3" index={3} source="Computers in Human Behavior" year="2023" tier={1} />.
+          Studies on response time expectations reveal a concerning pattern. Research tracking Slack conversations shows that average response times have decreased dramatically---from 24 hours in early remote work to under 30 minutes in many organizations <Citation id="3" index={3} source="Computers in Human Behavior" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           This creates a vicious cycle: Fast responses become normal. Normal becomes expected. Expected becomes pressured. You check messages constantly "just in case" something urgent comes in. The mere possibility of missing something creates low-grade anxiety throughout the day and evening.
@@ -172,7 +172,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Importantly, research shows that faster response times do NOT correlate with better work outcomes. Teams with 2-hour average response times perform comparably to teams with 15-minute response times—but the latter experience significantly higher stress and burnout.
+          Importantly, research shows that faster response times do NOT correlate with better work outcomes. Teams with 2-hour average response times perform comparably to teams with 15-minute response times---but the latter experience significantly higher stress and burnout.
         </p>
 
         <h2 id="status-indicator-anxiety" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -190,7 +190,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note" title="The Panopticon Effect">
-          <p>Status indicators create a digital version of Jeremy Bentham's panopticon—a prison where inmates might always be watched, so they behave as if they always ARE watched. Even when no one is actually monitoring your status, the possibility of surveillance shapes your behavior. This constant self-regulation is exhausting.</p>
+          <p>Status indicators create a digital version of Jeremy Bentham's panopticon---a prison where inmates might always be watched, so they behave as if they always ARE watched. Even when no one is actually monitoring your status, the possibility of surveillance shapes your behavior. This constant self-regulation is exhausting.</p>
         </ArticleCallout>
 
         <h2 id="mental-health-costs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -203,7 +203,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           <li><strong>Work-life boundary erosion:</strong> Can't fully "leave" work when always expected to be available</li>
           <li><strong>Increased stress and anxiety:</strong> Constant vigilance about availability and response times</li>
           <li><strong>Sleep disruption:</strong> Late-night messages and expectation of checking before bed impair sleep</li>
-          <li><strong>Relationship strain:</strong> Half-presence during personal time—physically present but mentally monitoring work</li>
+          <li><strong>Relationship strain:</strong> Half-presence during personal time---physically present but mentally monitoring work</li>
           <li><strong>Burnout risk:</strong> Never truly disconnecting prevents psychological recovery</li>
           <li><strong>Reduced autonomy:</strong> Flexibility benefit of remote work disappears under always-on expectations</li>
         </ul>
@@ -236,7 +236,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
               id: 'us',
               title: 'What about countries without these laws?',
               content: (
-                <p>Without legal protection, individuals and organizations must create their own boundaries. Research shows that clear, explicit team norms about communication expectations are nearly as effective as legislation. The key is making implicit expectations explicit—when is response expected versus optional? What constitutes genuine urgency? Who handles true emergencies?</p>
+                <p>Without legal protection, individuals and organizations must create their own boundaries. Research shows that clear, explicit team norms about communication expectations are nearly as effective as legislation. The key is making implicit expectations explicit---when is response expected versus optional? What constitutes genuine urgency? Who handles true emergencies?</p>
               ),
             },
           ]}
@@ -301,7 +301,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           When the Problem Is Organizational
         </h2>
         <p className="mb-6">
-          Individual boundary-setting can only go so far. Research shows that organizational culture is the strongest predictor of digital presenteeism—stronger than individual personality or preferences <Citation id="7" index={7} source="Academy of Management Journal" year="2023" tier={1} />.
+          Individual boundary-setting can only go so far. Research shows that organizational culture is the strongest predictor of digital presenteeism---stronger than individual personality or preferences <Citation id="7" index={7} source="Academy of Management Journal" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           Signs the problem is systemic, not personal:
@@ -329,12 +329,12 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Even in challenging organizational cultures, these strategies can help:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Quit Slack/Teams on phone</strong>—keep work communication on computer only, not in your pocket</li>
-          <li><strong>Use "Do Not Disturb" liberally</strong>—normalize being unreachable during focus time and personal time</li>
-          <li><strong>Batch communications</strong>—check/respond 2-3 times daily instead of constantly</li>
-          <li><strong>Disable read receipts</strong>—don't let others know when you've seen their message</li>
-          <li><strong>Set explicit working hours in calendar</strong>—block personal time like meetings</li>
-          <li><strong>Find allies</strong>—coordinate boundary-setting with colleagues for mutual support and normalization</li>
+          <li><strong>Quit Slack/Teams on phone</strong>---keep work communication on computer only, not in your pocket</li>
+          <li><strong>Use "Do Not Disturb" liberally</strong>---normalize being unreachable during focus time and personal time</li>
+          <li><strong>Batch communications</strong>---check/respond 2-3 times daily instead of constantly</li>
+          <li><strong>Disable read receipts</strong>---don't let others know when you've seen their message</li>
+          <li><strong>Set explicit working hours in calendar</strong>---block personal time like meetings</li>
+          <li><strong>Find allies</strong>---coordinate boundary-setting with colleagues for mutual support and normalization</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -370,7 +370,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           <li>Feeling trapped in unsustainable always-on expectations</li>
         </ul>
         <p className="mb-6">
-          These signs may indicate the need for bigger changes—whether that's advocating for organizational culture shift, seeking new role with healthier boundaries, or working with therapist to address anxiety and boundary-setting skills. Digital presenteeism is organizational problem requiring organizational solutions, but individual wellbeing matters too much to sacrifice while waiting for culture to change.
+          These signs may indicate the need for bigger changes---whether that's advocating for organizational culture shift, seeking new role with healthier boundaries, or working with therapist to address anxiety and boundary-setting skills. Digital presenteeism is organizational problem requiring organizational solutions, but individual wellbeing matters too much to sacrifice while waiting for culture to change.
         </p>
       </>
     ),
@@ -463,7 +463,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             Research on digital communication tools shows that constant interruptions from Slack, Teams, and similar platforms significantly impair cognitive performance, increase stress, and reduce work quality <Citation id="1" index={1} source="Computers in Human Behavior" year="2023" tier={1} />. The average knowledge worker checks messaging apps 85 times per day, with each interruption requiring 23 minutes to fully refocus <Citation id="3" index={3} source="Journal of Applied Psychology" year="2022" tier={1} />.
           </p>
           <p className="mb-6">
-            The problem isn't the tools themselves—it's how we're using them. These platforms were designed for asynchronous, thoughtful communication but have evolved into expectation of constant availability and instant response. Learning to manage digital communication without mental health costs requires both personal boundaries and team-level norms <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />.
+            The problem isn't the tools themselves---it's how we're using them. These platforms were designed for asynchronous, thoughtful communication but have evolved into expectation of constant availability and instant response. Learning to manage digital communication without mental health costs requires both personal boundaries and team-level norms <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />.
           </p>
         </div>
 
@@ -471,7 +471,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           The Cognitive Cost of Constant Interruption
         </h2>
         <p className="mb-6">
-          Every notification triggers attention shift—even if you don't respond. Research shows that merely seeing notification creates cognitive load. Your brain must: recognize the interruption, decide whether to respond, suppress the urge if not responding, remember where you were in your task, and refocus on original work.
+          Every notification triggers attention shift---even if you don't respond. Research shows that merely seeing notification creates cognitive load. Your brain must: recognize the interruption, decide whether to respond, suppress the urge if not responding, remember where you were in your task, and refocus on original work.
         </p>
 
         <StatCard
@@ -487,7 +487,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Batch Processing vs. Continuous Checking
         </h2>
         <p className="mb-6">
-          Experimental research comparing communication strategies finds that batch processing—checking messages at scheduled intervals—outperforms continuous checking on every metric: productivity, accuracy, stress, and even response quality <Citation id="4" index={4} source="Organizational Behavior and Human Decision Processes" year="2023" tier={1} />.
+          Experimental research comparing communication strategies finds that batch processing---checking messages at scheduled intervals---outperforms continuous checking on every metric: productivity, accuracy, stress, and even response quality <Citation id="4" index={4} source="Organizational Behavior and Human Decision Processes" year="2023" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -669,7 +669,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             Remote work fundamentally changes household dynamics. Research tracking couples through the work-from-home transition shows both benefits (more shared meals, flexibility for family needs) and challenges (constant proximity, blurred boundaries, increased conflict over space and chores) <Citation id="1" index={1} source="Journal of Marriage and Family" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
-            Studies reveal that relationship quality in remote-working couples depends heavily on how intentionally they navigate new dynamics. Without explicit conversations about space, time, and expectations, conflict increases significantly <Citation id="5" index={5} source="Journal of Social and Personal Relationships" year="2023" tier={1} />. Understanding these challenges and implementing evidence-based strategies can protect—and even strengthen—relationships during work-from-home arrangements.
+            Studies reveal that relationship quality in remote-working couples depends heavily on how intentionally they navigate new dynamics. Without explicit conversations about space, time, and expectations, conflict increases significantly <Citation id="5" index={5} source="Journal of Social and Personal Relationships" year="2023" tier={1} />. Understanding these challenges and implementing evidence-based strategies can protect---and even strengthen---relationships during work-from-home arrangements.
           </p>
         </div>
 
@@ -693,14 +693,14 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Spatial Boundaries and Relationship Satisfaction
         </h2>
         <p className="mb-6">
-          Research shows that couples with separate dedicated workspaces report 43% higher relationship satisfaction than those sharing space or working from common areas <Citation id="2" index={2} source="Journal of Family Psychology" year="2023" tier={1} />. The ability to physically separate work from home—and from each other—matters significantly.
+          Research shows that couples with separate dedicated workspaces report 43% higher relationship satisfaction than those sharing space or working from common areas <Citation id="2" index={2} source="Journal of Family Psychology" year="2023" tier={1} />. The ability to physically separate work from home---and from each other---matters significantly.
         </p>
 
         <ArticleCallout variant="tip" title="When Separate Offices Aren't Possible">
           <ul className="list-disc pl-6 space-y-2">
             <li>Use visual/audio signals: headphones = do not disturb, door cracked = okay to interrupt</li>
             <li>Stagger schedules when possible: one person takes morning deep work, other afternoon</li>
-            <li>Designate "priority spaces" for important calls—other person yields that space during those times</li>
+            <li>Designate "priority spaces" for important calls---other person yields that space during those times</li>
             <li>Create portable "office in a box" that can move to different rooms based on need</li>
           </ul>
         </ArticleCallout>
@@ -709,7 +709,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Division of Household Labor
         </h2>
         <p className="mb-6">
-          Studies on dual-remote-work couples reveal that being home doesn't automatically lead to more equitable household labor distribution. In fact, research shows that without explicit renegotiation, traditional gender patterns often persist or intensify—with women doing more housework and childcare despite also working full-time <Citation id="3" index={3} source="Sex Roles" year="2023" tier={1} />.
+          Studies on dual-remote-work couples reveal that being home doesn't automatically lead to more equitable household labor distribution. In fact, research shows that without explicit renegotiation, traditional gender patterns often persist or intensify---with women doing more housework and childcare despite also working full-time <Citation id="3" index={3} source="Sex Roles" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           The key finding: couples who explicitly discuss and redistribute household tasks during remote work transition report higher satisfaction than those who assume fairness will happen automatically <Citation id="7" index={7} source="Family Relations" year="2023" tier={1} />.
@@ -719,7 +719,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           The Childcare Factor
         </h2>
         <p className="mb-6">
-          Research on remote work with children reveals a gendered pattern: fathers report increased involvement and satisfaction with parenting, while mothers report increased stress from managing work interruptions and children's needs <Citation id="4" index={4} source="Work and Occupations" year="2023" tier={1} />. Being physically present doesn't mean being available—but children (especially young ones) struggle with that distinction.
+          Research on remote work with children reveals a gendered pattern: fathers report increased involvement and satisfaction with parenting, while mothers report increased stress from managing work interruptions and children's needs <Citation id="4" index={4} source="Work and Occupations" year="2023" tier={1} />. Being physically present doesn't mean being available---but children (especially young ones) struggle with that distinction.
         </p>
 
         <StatCard
@@ -748,7 +748,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             {
               title: 'Have the space conversation',
               description: (
-                <p>Explicitly discuss who works where and when. Don't assume—negotiate and adjust regularly based on what actually happens.</p>
+                <p>Explicitly discuss who works where and when. Don't assume---negotiate and adjust regularly based on what actually happens.</p>
               ),
             },
             {
@@ -779,11 +779,11 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           If you haven't explicitly discussed remote work dynamics with your partner/family:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Schedule a conversation</strong>—don't have this talk spontaneously when tensions are high</li>
-          <li><strong>Share what's not working</strong>—be specific about friction points you're experiencing</li>
-          <li><strong>Ask what they need</strong>—their challenges may be different from yours</li>
-          <li><strong>Agree on one small change</strong>—don't try to solve everything at once</li>
-          <li><strong>Set check-in date</strong>—revisit in 2 weeks to assess and adjust</li>
+          <li><strong>Schedule a conversation</strong>---don't have this talk spontaneously when tensions are high</li>
+          <li><strong>Share what's not working</strong>---be specific about friction points you're experiencing</li>
+          <li><strong>Ask what they need</strong>---their challenges may be different from yours</li>
+          <li><strong>Agree on one small change</strong>---don't try to solve everything at once</li>
+          <li><strong>Set check-in date</strong>---revisit in 2 weeks to assess and adjust</li>
         </ul>
       </>
     ),
@@ -792,7 +792,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     id: catId(69),
     slug: 'building-career-development-when-no-one-sees-you',
     title: 'Building Career Development When No One Can See You',
-    description: 'Remote work creates unique career development challenges—reduced visibility, fewer mentorship opportunities, and concerns about advancement. Learn strategies to build your career when working out of sight.',
+    description: 'Remote work creates unique career development challenges---reduced visibility, fewer mentorship opportunities, and concerns about advancement. Learn strategies to build your career when working out of sight.',
     image: "/images/articles/cat05/cover-069.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -876,7 +876,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             Research on remote work career outcomes reveals an uncomfortable truth: remote workers receive fewer promotions and smaller pay increases than office-based workers doing similar quality work <Citation id="1" index={1} source="Journal of Vocational Behavior" year="2024" tier={1} />. Studies show this "proximity bias" persists even in organizations officially supporting remote work <Citation id="2" index={2} source="Personnel Psychology" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
-            The challenge isn't just visibility—it's the loss of informal learning, mentorship access, and network building that happen organically in offices but require intentional effort remotely <Citation id="3" index={3} source="Journal of Applied Psychology" year="2023" tier={1} />. Building a career when no one can see you demands strategic, proactive behaviors that weren't necessary in traditional work arrangements.
+            The challenge isn't just visibility---it's the loss of informal learning, mentorship access, and network building that happen organically in offices but require intentional effort remotely <Citation id="3" index={3} source="Journal of Applied Psychology" year="2023" tier={1} />. Building a career when no one can see you demands strategic, proactive behaviors that weren't necessary in traditional work arrangements.
           </p>
         </div>
 
@@ -897,7 +897,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Importantly, these disparities exist even when controlling for performance ratings. The bias isn't about actual work quality—it's about visibility, perceived commitment, and who comes to mind when opportunities arise.
+          Importantly, these disparities exist even when controlling for performance ratings. The bias isn't about actual work quality---it's about visibility, perceived commitment, and who comes to mind when opportunities arise.
         </p>
 
         <h2 id="what-gets-lost" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -931,13 +931,13 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             {
               title: 'Strategic meeting participation',
               description: (
-                <p>Contribute meaningfully in visible settings—company all-hands, cross-functional meetings, presentations. This is where decision-makers notice you. Quality over quantity—one insightful comment beats ten mediocre ones.</p>
+                <p>Contribute meaningfully in visible settings---company all-hands, cross-functional meetings, presentations. This is where decision-makers notice you. Quality over quantity---one insightful comment beats ten mediocre ones.</p>
               ),
             },
             {
               title: 'Intentional networking',
               description: (
-                <p>Schedule virtual coffee with people across organization. Don't wait for serendipity—create it deliberately. Research shows remote workers who proactively build networks advance at similar rates to office workers.</p>
+                <p>Schedule virtual coffee with people across organization. Don't wait for serendipity---create it deliberately. Research shows remote workers who proactively build networks advance at similar rates to office workers.</p>
               ),
             },
             {
@@ -960,20 +960,20 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Finding Mentorship Remotely
         </h2>
         <p className="mb-6">
-          Mentorship doesn't happen organically in remote work—it must be explicitly requested. Evidence-based approaches:
+          Mentorship doesn't happen organically in remote work---it must be explicitly requested. Evidence-based approaches:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Directly ask for mentorship</strong>—specific request ("Would you be willing to meet monthly?") gets better results than waiting to be noticed</li>
-          <li><strong>Make it easy</strong>—propose specific times, come with questions prepared, demonstrate you value their time</li>
-          <li><strong>Formal programs</strong>—advocate for organizational mentorship programs with structure and accountability</li>
-          <li><strong>Peer mentorship</strong>—colleagues at similar level can provide valuable support and learning</li>
+          <li><strong>Directly ask for mentorship</strong>---specific request ("Would you be willing to meet monthly?") gets better results than waiting to be noticed</li>
+          <li><strong>Make it easy</strong>---propose specific times, come with questions prepared, demonstrate you value their time</li>
+          <li><strong>Formal programs</strong>---advocate for organizational mentorship programs with structure and accountability</li>
+          <li><strong>Peer mentorship</strong>---colleagues at similar level can provide valuable support and learning</li>
         </ul>
 
         <h2 id="self-advocacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Importance of Self-Advocacy
         </h2>
         <p className="mb-6">
-          Studies show that remote workers who actively advocate for themselves—explicitly discussing career goals with managers, requesting stretch assignments, and negotiating for opportunities—mitigate much of the proximity bias disadvantage <Citation id="6" index={6} source="Career Development International" year="2023" tier={1} />.
+          Studies show that remote workers who actively advocate for themselves---explicitly discussing career goals with managers, requesting stretch assignments, and negotiating for opportunities---mitigate much of the proximity bias disadvantage <Citation id="6" index={6} source="Career Development International" year="2023" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip" title="Self-Advocacy Script">
@@ -986,7 +986,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
         <ul className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Schedule one networking conversation</strong> with someone outside your immediate team</li>
           <li><strong>Send accomplishments update</strong> to your manager highlighting recent wins</li>
-          <li><strong>Request one development opportunity</strong>—training, project, or mentorship conversation</li>
+          <li><strong>Request one development opportunity</strong>---training, project, or mentorship conversation</li>
         </ul>
       </>
     ),
@@ -995,7 +995,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
     id: catId(70),
     slug: 'future-work-mental-health-trends-wellbeing',
     title: 'The Future of Work and Mental Health: What Trends Mean for Your Wellbeing',
-    description: 'Work is evolving rapidly—AI integration, remote/hybrid models, gig economy growth. Understand emerging workplace trends and their mental health implications to prepare for the future of work.',
+    description: 'Work is evolving rapidly---AI integration, remote/hybrid models, gig economy growth. Understand emerging workplace trends and their mental health implications to prepare for the future of work.',
     image: "/images/articles/cat05/cover-070.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -1146,28 +1146,28 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Research on gig economy workers reveals concerning mental health patterns: income instability, lack of benefits, algorithmic management stress, social isolation, and constant availability pressure <Citation id="3" index={3} source="Work, Employment and Society" year="2024" tier={1} />.
         </p>
         <p className="mb-6">
-          Gig workers show higher rates of anxiety, depression, and burnout than traditional employees—not because the work itself is harder, but because of precarity and lack of protections. Some jurisdictions are beginning to address this through portable benefits, minimum pay standards, and right-to-disconnect laws for gig workers.
+          Gig workers show higher rates of anxiety, depression, and burnout than traditional employees---not because the work itself is harder, but because of precarity and lack of protections. Some jurisdictions are beginning to address this through portable benefits, minimum pay standards, and right-to-disconnect laws for gig workers.
         </p>
 
         <h2 id="continuous-learning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Continuous Learning Pressure
         </h2>
         <p className="mb-6">
-          As technology evolves rapidly, "skills obsolescence anxiety"—fear that your expertise will become irrelevant—affects increasing numbers of workers <Citation id="5" index={5} source="Personnel Psychology" year="2024" tier={1} />.
+          As technology evolves rapidly, "skills obsolescence anxiety"---fear that your expertise will become irrelevant---affects increasing numbers of workers <Citation id="5" index={5} source="Personnel Psychology" year="2024" tier={1} />.
         </p>
         <p className="mb-6">
           The expectation of continuous upskilling creates mental load: when is there time to learn when you're also working full-time? Who pays for training? What if you invest in skills that also become obsolete? This chronic uncertainty contributes to workplace stress.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Adaptive Mindset Over Specific Skills">
-          <p>Research suggests focusing on meta-skills—learning how to learn, adaptability, critical thinking—rather than chasing every new technology reduces anxiety while maintaining career resilience.</p>
+          <p>Research suggests focusing on meta-skills---learning how to learn, adaptability, critical thinking---rather than chasing every new technology reduces anxiety while maintaining career resilience.</p>
         </ArticleCallout>
 
         <h2 id="worker-surveillance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Employee Monitoring Technology
         </h2>
         <p className="mb-6">
-          The rise of worker surveillance technology—keystroke tracking, mouse movement monitoring, screenshot capture, productivity scores—creates significant psychological distress <Citation id="7" index={7} source="New Technology, Work and Employment" year="2024" tier={1} />.
+          The rise of worker surveillance technology---keystroke tracking, mouse movement monitoring, screenshot capture, productivity scores---creates significant psychological distress <Citation id="7" index={7} source="New Technology, Work and Employment" year="2024" tier={1} />.
         </p>
         <p className="mb-6">
           Studies show that invasive monitoring: increases stress and anxiety, reduces trust and autonomy, decreases job satisfaction, and paradoxically often reduces productivity as workers focus on "looking busy" rather than actual work.
@@ -1183,11 +1183,11 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
           Global trends in worker protection legislation <Citation id="8" index={8} source="International Labour Review" year="2024" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Right to disconnect laws</strong>—protecting workers from after-hours contact (France, Spain, Portugal, Ireland)</li>
-          <li><strong>AI transparency requirements</strong>—companies must disclose AI use in hiring and management decisions (EU)</li>
-          <li><strong>Gig worker protections</strong>—minimum pay, benefits access, anti-retaliation protections (California, UK)</li>
-          <li><strong>Monitoring limitations</strong>—restrictions on invasive surveillance technology (several US states proposed)</li>
-          <li><strong>Mental health accommodations</strong>—explicit protections for mental health conditions like physical disabilities</li>
+          <li><strong>Right to disconnect laws</strong>---protecting workers from after-hours contact (France, Spain, Portugal, Ireland)</li>
+          <li><strong>AI transparency requirements</strong>---companies must disclose AI use in hiring and management decisions (EU)</li>
+          <li><strong>Gig worker protections</strong>---minimum pay, benefits access, anti-retaliation protections (California, UK)</li>
+          <li><strong>Monitoring limitations</strong>---restrictions on invasive surveillance technology (several US states proposed)</li>
+          <li><strong>Mental health accommodations</strong>---explicit protections for mental health conditions like physical disabilities</li>
         </ul>
 
         <h2 id="what-you-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1215,7 +1215,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
             {
               title: 'Advocate collectively',
               description: (
-                <p>Individual boundary-setting only goes so far. Collective advocacy—whether through unions, employee resource groups, or informal organizing—drives systemic change.</p>
+                <p>Individual boundary-setting only goes so far. Collective advocacy---whether through unions, employee resource groups, or informal organizing---drives systemic change.</p>
               ),
             },
             {
@@ -1249,7 +1249,7 @@ export const remoteWorkDigitalWorkplaceArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The workplace is changing rapidly—but you're not powerless in that change. Understanding trends, protecting your wellbeing, and advocating for humane work practices positions you to navigate uncertainty while maintaining mental health.
+          The workplace is changing rapidly---but you're not powerless in that change. Understanding trends, protecting your wellbeing, and advocating for humane work practices positions you to navigate uncertainty while maintaining mental health.
         </p>
       </>
     ),

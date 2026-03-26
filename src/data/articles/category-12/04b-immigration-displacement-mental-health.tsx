@@ -81,10 +81,10 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You live in constant fear. Every knock on the door could be ICE. You avoid driving because a traffic stop could mean deportation. You can't report abuse or crime because involving police puts you at risk. You work long hours for low pay, but you can't complain—your employer knows you're undocumented. You're always looking over your shoulder, always afraid.
+            You live in constant fear. Every knock on the door could be ICE. You avoid driving because a traffic stop could mean deportation. You can't report abuse or crime because involving police puts you at risk. You work long hours for low pay, but you can't complain---your employer knows you're undocumented. You're always looking over your shoulder, always afraid.
           </p>
           <p className="mb-6">
-            Living without legal status in the United States creates chronic, toxic stress that damages mental health <Citation id="1" index={1} source="Journal of Immigrant and Minority Health" year="2020" tier={1} />. Undocumented immigrants face rates of anxiety, depression, and PTSD that are significantly higher than both the general population and documented immigrants <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={2} />. This is not weakness—it's the predictable result of living in perpetual precarity and fear.
+            Living without legal status in the United States creates chronic, toxic stress that damages mental health <Citation id="1" index={1} source="Journal of Immigrant and Minority Health" year="2020" tier={1} />. Undocumented immigrants face rates of anxiety, depression, and PTSD that are significantly higher than both the general population and documented immigrants <Citation id="2" index={2} source="American Journal of Public Health" year="2019" tier={2} />. This is not weakness---it's the predictable result of living in perpetual precarity and fear.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    The constant threat of being discovered, detained, and deported—separated from your family and sent back to danger or poverty—produces hypervigilance and chronic anxiety <Citation id="3" index={3} source="Social Science & Medicine" year="2021" tier={1} />.
+                    The constant threat of being discovered, detained, and deported---separated from your family and sent back to danger or poverty---produces hypervigilance and chronic anxiety <Citation id="3" index={3} source="Social Science & Medicine" year="2021" tier={1} />.
                   </p>
                   <p className="mb-4"><strong>Daily impact:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
@@ -162,7 +162,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
                   </p>
                   <p className="mb-4"><strong>Mental health impacts:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Parents" constant fear affects children—kids internalize their parents' anxiety</li>
+                    <li>Parents" constant fear affects children---kids internalize their parents' anxiety</li>
                     <li>Worry about what will happen to children if parents are deported</li>
                     <li>Guilt for 'bringing children into this situation"</li>
                     <li>Separated families (when some members are deported) experience profound grief and trauma</li>
@@ -182,10 +182,10 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
                     <li>No health insurance (most cannot afford private insurance)</li>
                     <li>No SNAP (food stamps), housing assistance, or unemployment benefits</li>
                     <li>Cannot get driver's licenses in most states</li>
-                    <li>Cannot legally work—forcing reliance on informal economy</li>
+                    <li>Cannot legally work---forcing reliance on informal economy</li>
                   </ul>
                   <p className="mt-4">
-                    This creates financial precarity, housing instability, and food insecurity—all of which harm mental health.
+                    This creates financial precarity, housing instability, and food insecurity---all of which harm mental health.
                   </p>
                 </>
               ),
@@ -196,7 +196,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    For most undocumented immigrants, there is no clear path to legal status. You're stuck—unable to move forward, unable to go back.
+                    For most undocumented immigrants, there is no clear path to legal status. You're stuck---unable to move forward, unable to go back.
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Cannot plan for the future (career, education, homeownership)</li>
@@ -216,7 +216,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
           Impact on Children
         </h2>
         <p className="mb-6">
-          Children in mixed-status families—even if they're U.S. citizens—are affected by their parents' undocumented status <Citation id="4" index={4} source="Journal of Family Psychology" year="2018" tier={1} />:
+          Children in mixed-status families---even if they're U.S. citizens---are affected by their parents' undocumented status <Citation id="4" index={4} source="Journal of Family Psychology" year="2018" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Anxiety and hypervigilance</strong>: Constant worry about parents being taken away</li>
@@ -228,7 +228,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Studies show that even the threat of deportation—without it actually happening—harms children's mental health and development. Immigration enforcement creates toxic stress for millions of U.S.-citizen children.
+            Studies show that even the threat of deportation---without it actually happening---harms children's mental health and development. Immigration enforcement creates toxic stress for millions of U.S.-citizen children.
           </p>
         </ArticleCallout>
 
@@ -312,7 +312,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Crisis Support (Always Confidential)',
               description: (
                 <p>
-                  <strong>988 Suicide & Crisis Lifeline</strong>: Call or text 988. Free, multilingual, 24/7. Your immigration status does not matter—crisis support is confidential and available to everyone.
+                  <strong>988 Suicide & Crisis Lifeline</strong>: Call or text 988. Free, multilingual, 24/7. Your immigration status does not matter---crisis support is confidential and available to everyone.
                 </p>
               ),
             },
@@ -329,12 +329,12 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
           Coping with Chronic Fear and Uncertainty
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Build community</strong>: Connect with others who share your experience—mutual aid, support groups, immigrant advocacy organizations</li>
+          <li><strong>Build community</strong>: Connect with others who share your experience---mutual aid, support groups, immigrant advocacy organizations</li>
           <li><strong>Document your rights</strong>: Carry a "Know Your Rights" card; have a safety plan for your family if ICE comes</li>
           <li><strong>Limit news consumption</strong>: Stay informed, but constant exposure to deportation stories worsens anxiety</li>
           <li><strong>Practice grounding</strong>: Breathing exercises, mindfulness, and body-based practices help manage hypervigilance</li>
-          <li><strong>Find moments of joy</strong>: Despite fear, seek connection, laughter, and meaning—survival is not just avoiding harm, it's living</li>
-          <li><strong>Seek legal support</strong>: Consult with immigration attorneys about your options—some organizations offer free consultations</li>
+          <li><strong>Find moments of joy</strong>: Despite fear, seek connection, laughter, and meaning---survival is not just avoiding harm, it's living</li>
+          <li><strong>Seek legal support</strong>: Consult with immigration attorneys about your options---some organizations offer free consultations</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -352,7 +352,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Living without status is unimaginably hard. Your mental health struggles are not your fault—they're the result of an unjust system. You deserve safety, dignity, and healing. Support exists, and it's confidential.
+          Living without status is unimaginably hard. Your mental health struggles are not your fault---they're the result of an unjust system. You deserve safety, dignity, and healing. Support exists, and it's confidential.
         </p>
       </>
     ),
@@ -427,10 +427,10 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            At home, you speak one language, follow certain rules, and are expected to honor traditions. At school, you speak another language, follow different norms, and feel pressure to fit in. You translate for your parents at the doctor's office. You mediate their conflicts. You feel caught between two worlds—not fully belonging to either.
+            At home, you speak one language, follow certain rules, and are expected to honor traditions. At school, you speak another language, follow different norms, and feel pressure to fit in. You translate for your parents at the doctor's office. You mediate their conflicts. You feel caught between two worlds---not fully belonging to either.
           </p>
           <p className="mb-6">
-            Children of immigrants—whether first-generation (born abroad) or second-generation (born in the host country)—face unique mental health challenges <Citation id="1" index={1} source="Journal of Immigrant and Minority Health" year="2020" tier={1} />. Navigating dual cultures, translating for parents, managing family expectations, and forming identity across conflicting values creates stress. Yet this complexity can also be a source of strength, resilience, and rich identity <Citation id="4" index={4} source="Journal of Youth and Adolescence" year="2021" tier={1} />.
+            Children of immigrants---whether first-generation (born abroad) or second-generation (born in the host country)---face unique mental health challenges <Citation id="1" index={1} source="Journal of Immigrant and Minority Health" year="2020" tier={1} />. Navigating dual cultures, translating for parents, managing family expectations, and forming identity across conflicting values creates stress. Yet this complexity can also be a source of strength, resilience, and rich identity <Citation id="4" index={4} source="Journal of Youth and Adolescence" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -475,22 +475,22 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
           2. Parentification
         </h3>
         <p className="mb-6">
-          Many children of immigrants take on adult roles—translating, managing bills, navigating bureaucracy—that place them in caretaking positions for their parents <Citation id="3" index={3} source="Journal of Family Psychology" year="2018" tier={1} />. This is called parentification.
+          Many children of immigrants take on adult roles---translating, managing bills, navigating bureaucracy---that place them in caretaking positions for their parents <Citation id="3" index={3} source="Journal of Family Psychology" year="2018" tier={1} />. This is called parentification.
         </p>
         <p className="mb-6">
           <strong>Mental health impacts:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Loss of childhood—missing out on play, spontaneity, and age-appropriate experiences</li>
+          <li>Loss of childhood---missing out on play, spontaneity, and age-appropriate experiences</li>
           <li>Stress and anxiety from adult responsibilities</li>
           <li>Resentment toward parents for the burden</li>
-          <li>Role confusion—blurred boundaries between parent and child</li>
+          <li>Role confusion---blurred boundaries between parent and child</li>
           <li>Perfectionism and hyper-responsibility in adulthood</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="Parentification Is Not Your Fault">
           <p>
-            If you translated for your parents, managed family logistics, or cared for siblings from a young age, that was not your responsibility—it was placed on you. The stress you carry from this is valid. Therapy can help you process resentment, set boundaries, and reclaim parts of yourself that were lost.
+            If you translated for your parents, managed family logistics, or cared for siblings from a young age, that was not your responsibility---it was placed on you. The stress you carry from this is valid. Therapy can help you process resentment, set boundaries, and reclaim parts of yourself that were lost.
           </p>
         </ArticleCallout>
 
@@ -504,20 +504,20 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
           <li><strong>At home</strong>: "You're too American. You don't respect our culture."</li>
           <li><strong>At school/work</strong>: "You're too [ethnic identity]. You'll never fully belong here."</li>
           <li>Feeling like you're not [heritage culture] enough and not [host culture] enough</li>
-          <li>Constant code-switching—changing how you speak, act, and present depending on context</li>
+          <li>Constant code-switching---changing how you speak, act, and present depending on context</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           4. High Parental Expectations
         </h3>
         <p className="mb-6">
-          Immigrant parents often have high expectations for their children's academic and professional success—seeing it as justification for the sacrifices they made in leaving their home country.
+          Immigrant parents often have high expectations for their children's academic and professional success---seeing it as justification for the sacrifices they made in leaving their home country.
         </p>
         <p className="mb-6">
           <strong>Mental health toll:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Pressure to be perfect—failure feels like betraying the family</li>
+          <li>Pressure to be perfect---failure feels like betraying the family</li>
           <li>Limited freedom to pursue passions that don't align with "practical" careers (medicine, law, engineering)</li>
           <li>Guilt for wanting something different than what parents want for you</li>
           <li>Fear of disappointing or bringing shame to the family</li>
@@ -527,7 +527,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
           5. Stereotype Threat and the Model Minority Myth
         </h3>
         <p className="mb-6">
-          Asian American children of immigrants, in particular, face pressure from the model minority stereotype—the expectation that they should be high-achieving, quiet, and problem-free <Citation id="5" index={5} source="Asian American Journal of Psychology" year="2019" tier={1} />.
+          Asian American children of immigrants, in particular, face pressure from the model minority stereotype---the expectation that they should be high-achieving, quiet, and problem-free <Citation id="5" index={5} source="Asian American Journal of Psychology" year="2019" tier={1} />.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Mental health struggles are dismissed: "You're doing well in school, what's wrong?"</li>
@@ -561,7 +561,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Claim Your Bicultural Identity',
               description: (
                 <p>
-                  You don't have to choose. You can be both. Reject 'either/or" thinking and embrace "both/and." Your complexity is not a problem—it's your reality, and it's valuable <Citation id="6" index={6} source="APA" year="2021" tier={3} />.
+                  You don't have to choose. You can be both. Reject 'either/or" thinking and embrace "both/and." Your complexity is not a problem---it's your reality, and it's valuable <Citation id="6" index={6} source="APA" year="2021" tier={3} />.
                 </p>
               ),
             },
@@ -609,7 +609,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="Growing up between two cultures isn't about choosing—it's about integrating. You can honor your heritage while creating your own path. That's not betrayal; it's evolution."
+          quote="Growing up between two cultures isn't about choosing---it's about integrating. You can honor your heritage while creating your own path. That's not betrayal; it's evolution."
           attribution="Dr. Jennifer Lee"
           role="Sociologist and researcher on second-generation immigrants"
           variant="large"
@@ -630,7 +630,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          You're not failing by struggling. Navigating two worlds is hard. You deserve support that honors all of who you are—both the culture you come from and the one you're building.
+          You're not failing by struggling. Navigating two worlds is hard. You deserve support that honors all of who you are---both the culture you come from and the one you're building.
         </p>
       </>
     ),
@@ -697,10 +697,10 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You spent years abroad. You adapted, grew, and changed. Now you're back "home"—except it doesn't feel like home anymore. Your friends don't understand your experiences. Your family thinks you've become "too different." The place that used to feel familiar now feels small, stifling, or just... wrong. You thought coming home would be a relief, but instead, you feel more lost than you did abroad.
+            You spent years abroad. You adapted, grew, and changed. Now you're back "home"---except it doesn't feel like home anymore. Your friends don't understand your experiences. Your family thinks you've become "too different." The place that used to feel familiar now feels small, stifling, or just... wrong. You thought coming home would be a relief, but instead, you feel more lost than you did abroad.
           </p>
           <p className="mb-6">
-            This is reverse culture shock—the disorientation and distress that occurs when returning to your home country after extended time abroad <Citation id="1" index={1} source="International Journal of Intercultural Relations" year="2019" tier={1} />. It's often more difficult than the original culture shock of leaving, because it's unexpected. People assume going 'home' should be easy—but when you've changed and home hasn't, the mismatch can be profoundly alienating.
+            This is reverse culture shock---the disorientation and distress that occurs when returning to your home country after extended time abroad <Citation id="1" index={1} source="International Journal of Intercultural Relations" year="2019" tier={1} />. It's often more difficult than the original culture shock of leaving, because it's unexpected. People assume going 'home' should be easy---but when you've changed and home hasn't, the mismatch can be profoundly alienating.
           </p>
         </div>
 
@@ -721,7 +721,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Why It's Harder Than Original Culture Shock">
           <p>
-            When you first went abroad, you expected adjustment to be hard. But coming home? Everyone—including you—expects it to be easy. No one validates your struggle. There's no orientation program for returning home. The lack of support and the expectation that you should "just be happy to be back" makes reverse culture shock uniquely isolating <Citation id="1" index={1} source="International Journal of Intercultural Relations" year="2019" tier={1} />.
+            When you first went abroad, you expected adjustment to be hard. But coming home? Everyone---including you---expects it to be easy. No one validates your struggle. There's no orientation program for returning home. The lack of support and the expectation that you should "just be happy to be back" makes reverse culture shock uniquely isolating <Citation id="1" index={1} source="International Journal of Intercultural Relations" year="2019" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -730,7 +730,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>You've changed, but home hasn't</strong>: Your worldview, values, and identity evolved abroad. Your hometown stayed the same.</li>
-          <li><strong>Loss of international identity</strong>: Abroad, you were 'the expat' or "the foreigner"—a unique identity. At home, you're just... ordinary <Citation id="3" index={3} source="Journal of Studies in International Education" year="2018" tier={1} />.</li>
+          <li><strong>Loss of international identity</strong>: Abroad, you were 'the expat' or "the foreigner"---a unique identity. At home, you're just... ordinary <Citation id="3" index={3} source="Journal of Studies in International Education" year="2018" tier={1} />.</li>
           <li><strong>Mourning what you left behind</strong>: Friends, routines, a sense of adventure, a version of yourself you liked</li>
           <li><strong>Unrealistic expectations</strong>: You romanticized home while abroad, forgetting the negatives</li>
           <li><strong>No one to talk to</strong>: Friends and family can't relate to your experiences; they may be dismissive or envious</li>
@@ -819,7 +819,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Grieve What You Lost',
               description: (
                 <p>
-                  Allow yourself to mourn the life, friends, and version of yourself you left behind. Grief is appropriate—you experienced a significant loss <Citation id="2" index={2} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />.
+                  Allow yourself to mourn the life, friends, and version of yourself you left behind. Grief is appropriate---you experienced a significant loss <Citation id="2" index={2} source="Journal of Cross-Cultural Psychology" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -827,7 +827,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Find Your Tribe',
               description: (
                 <p>
-                  Connect with other returnees—people who've lived abroad and understand what you're going through. Online communities, expat groups, or university international alumni networks can help.
+                  Connect with other returnees---people who've lived abroad and understand what you're going through. Online communities, expat groups, or university international alumni networks can help.
                 </p>
               ),
             },
@@ -835,7 +835,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Be Patient with Yourself and Others',
               description: (
                 <p>
-                  Adjustment takes time—usually 6-12 months. Your friends and family aren't trying to be dismissive; they genuinely don't understand. Educate them gently about what you're experiencing.
+                  Adjustment takes time---usually 6-12 months. Your friends and family aren't trying to be dismissive; they genuinely don't understand. Educate them gently about what you're experiencing.
                 </p>
               ),
             },
@@ -881,7 +881,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Coming "home" isn't supposed to feel this hard—but it does. You're not broken. You've grown, and growth can feel disorienting. With time, support, and patience, you'll find a new sense of home—one that honors both where you've been and where you are now.
+          Coming "home" isn't supposed to feel this hard---but it does. You're not broken. You've grown, and growth can feel disorienting. With time, support, and patience, you'll find a new sense of home---one that honors both where you've been and where you are now.
         </p>
       </>
     ),
@@ -948,10 +948,10 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You came here for opportunity—better education, a brighter future. But you didn't expect the loneliness. You didn't expect to struggle with the language in class, to miss your family every day, to feel like an outsider everywhere you go. The academic pressure is immense. Your visa status feels precarious. You can't afford to fail, but you're not sure you can keep going.
+            You came here for opportunity---better education, a brighter future. But you didn't expect the loneliness. You didn't expect to struggle with the language in class, to miss your family every day, to feel like an outsider everywhere you go. The academic pressure is immense. Your visa status feels precarious. You can't afford to fail, but you're not sure you can keep going.
           </p>
           <p className="mb-6">
-            International students face unique and severe mental health challenges <Citation id="1" index={1} source="Journal of American College Health" year="2020" tier={1} />. Rates of depression, anxiety, and suicidal ideation are significantly higher than domestic students, yet international students use mental health services at much lower rates <Citation id="3" index={3} source="Journal of Counseling Psychology" year="2021" tier={1} />. Understanding these challenges—and knowing where to find support—can be lifesaving.
+            International students face unique and severe mental health challenges <Citation id="1" index={1} source="Journal of American College Health" year="2020" tier={1} />. Rates of depression, anxiety, and suicidal ideation are significantly higher than domestic students, yet international students use mental health services at much lower rates <Citation id="3" index={3} source="Journal of Counseling Psychology" year="2021" tier={1} />. Understanding these challenges---and knowing where to find support---can be lifesaving.
           </p>
         </div>
 
@@ -1098,7 +1098,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Crisis Support (Always Available)',
               description: (
                 <p>
-                  <strong>988 Suicide & Crisis Lifeline</strong>: Call or text 988. Free, multilingual, 24/7. Your visa status does not matter—crisis services are confidential and available to everyone.
+                  <strong>988 Suicide & Crisis Lifeline</strong>: Call or text 988. Free, multilingual, 24/7. Your visa status does not matter---crisis services are confidential and available to everyone.
                 </p>
               ),
             },
@@ -1111,10 +1111,10 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Build a support network</strong>: Connect with other international students and sympathetic domestic students</li>
           <li><strong>Stay connected to home</strong>: Regular video calls with family and friends</li>
-          <li><strong>Practice self-compassion</strong>: Adjusting to a new country while excelling academically is incredibly hard—be kind to yourself</li>
+          <li><strong>Practice self-compassion</strong>: Adjusting to a new country while excelling academically is incredibly hard---be kind to yourself</li>
           <li><strong>Set realistic expectations</strong>: You don't have to be perfect; passing is enough</li>
-          <li><strong>Use campus resources</strong>: Writing centers, tutoring, academic advising—you're entitled to help</li>
-          <li><strong>Maintain cultural identity</strong>: Celebrate your holidays, cook your food, speak your language—don't lose yourself trying to assimilate</li>
+          <li><strong>Use campus resources</strong>: Writing centers, tutoring, academic advising---you're entitled to help</li>
+          <li><strong>Maintain cultural identity</strong>: Celebrate your holidays, cook your food, speak your language---don't lose yourself trying to assimilate</li>
           <li><strong>Know your visa rights</strong>: Educate yourself on what triggers visa issues (it's rarely mental health care)</li>
         </ul>
 
@@ -1135,12 +1135,12 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="info" title="Your Mental Health Does NOT Affect Your Visa">
           <p>
-            Seeking mental health care will NOT jeopardize your visa status. Counseling records are confidential under HIPAA and are not shared with immigration authorities. Taking care of your mental health is taking care of your academic success—they're connected <Citation id="5" index={5} source="NAFSA" year="2022" tier={3} />.
+            Seeking mental health care will NOT jeopardize your visa status. Counseling records are confidential under HIPAA and are not shared with immigration authorities. Taking care of your mental health is taking care of your academic success---they're connected <Citation id="5" index={5} source="NAFSA" year="2022" tier={3} />.
           </p>
         </ArticleCallout>
 
         <p className="mb-6">
-          Being an international student is one of the hardest things you'll ever do. You're navigating a new country, a new language, intense academic pressure, and distance from everything familiar—all at once. You're not failing if you're struggling. You're human. Support exists, and asking for help is strength, not weakness.
+          Being an international student is one of the hardest things you'll ever do. You're navigating a new country, a new language, intense academic pressure, and distance from everything familiar---all at once. You're not failing if you're struggling. You're human. Support exists, and asking for help is strength, not weakness.
         </p>
       </>
     ),
@@ -1215,7 +1215,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Immigrants and refugees face some of the highest rates of mental health challenges—yet they're among the least likely to receive care. Language barriers, cultural stigma, fear of authorities, and lack of culturally responsive services create a chasm between need and access. Mental health systems weren't built with newcomers in mind, and the results are devastating.
+            Immigrants and refugees face some of the highest rates of mental health challenges---yet they're among the least likely to receive care. Language barriers, cultural stigma, fear of authorities, and lack of culturally responsive services create a chasm between need and access. Mental health systems weren't built with newcomers in mind, and the results are devastating.
           </p>
           <p className="mb-6">
             Building truly culturally responsive mental health services for immigrants, refugees, and newcomers requires more than translation services or a few bilingual therapists. It demands systemic change: workforce diversity, community partnerships, trauma-informed care, and dismantling structural barriers <Citation id="1" index={1} source="American Journal of Orthopsychiatry" year="2020" tier={1} />. This article outlines what mental health systems must do to serve newcomers with dignity and effectiveness.
@@ -1242,7 +1242,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Offer services regardless of insurance, immigration status, or ability to pay</li>
-                    <li>Locate services in communities where newcomers live—not just hospitals or clinics</li>
+                    <li>Locate services in communities where newcomers live---not just hospitals or clinics</li>
                     <li>Provide flexible hours (evenings, weekends) to accommodate work schedules</li>
                     <li>Offer telehealth to reduce transportation barriers</li>
                     <li>Eliminate complex intake processes that assume literacy or familiarity with systems</li>
@@ -1256,7 +1256,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Language is not optional—it's foundational <Citation id="3" index={3} source="Psychiatric Services" year="2021" tier={1} />:
+                    Language is not optional---it's foundational <Citation id="3" index={3} source="Psychiatric Services" year="2021" tier={1} />:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Provide services in clients" native languages through bilingual/multilingual staff</li>
@@ -1274,7 +1274,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Cultural competence isn't enough—cultural humility is the goal. This means:
+                    Cultural competence isn't enough---cultural humility is the goal. This means:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Approaching each client as the expert on their own culture</li>
@@ -1292,13 +1292,13 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Assume all newcomers have experienced trauma—and design systems that don't retraumatize <Citation id="5" index={5} source="Journal of Traumatic Stress" year="2020" tier={1} />:
+                    Assume all newcomers have experienced trauma---and design systems that don't retraumatize <Citation id="5" index={5} source="Journal of Traumatic Stress" year="2020" tier={1} />:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Create physically and emotionally safe environments</li>
                     <li>Give clients choice and control over their care</li>
                     <li>Recognize that behaviors may be trauma responses, not resistance</li>
-                    <li>Avoid re-interrogation—don't make clients repeatedly recount traumatic events to different staff</li>
+                    <li>Avoid re-interrogation---don't make clients repeatedly recount traumatic events to different staff</li>
                     <li>Train all staff (not just therapists) in trauma-informed principles</li>
                   </ul>
                 </>
@@ -1346,7 +1346,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Co-create services with community members</strong>: Ask: "What do you need? What are the barriers? What does healing look like in your culture?"</li>
           <li><strong>Partner with trusted community organizations</strong>: Faith-based institutions, cultural centers, mutual aid groups, immigrant rights organizations</li>
-          <li><strong>Embed services in community settings</strong>: Offer mental health care at mosques, churches, community centers, schools—not just clinics</li>
+          <li><strong>Embed services in community settings</strong>: Offer mental health care at mosques, churches, community centers, schools---not just clinics</li>
           <li><strong>Employ community members</strong>: Hire outreach workers, navigators, and peer counselors from the community</li>
           <li><strong>Share power and decision-making</strong>: Include community members on advisory boards, evaluation teams, and leadership</li>
         </ul>
@@ -1365,7 +1365,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Screen for Trauma and Mental Health Needs Early',
               description: (
                 <p>
-                  Integrate mental health screening into resettlement intake—but do so sensitively, using culturally appropriate tools and trained interpreters.
+                  Integrate mental health screening into resettlement intake---but do so sensitively, using culturally appropriate tools and trained interpreters.
                 </p>
               ),
             },
@@ -1381,7 +1381,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
               title: 'Address Ongoing Stressors',
               description: (
                 <p>
-                  Don't only focus on past trauma—address present-day stressors like asylum uncertainty, family separation, poverty, discrimination. Healing can't happen while threats continue.
+                  Don't only focus on past trauma---address present-day stressors like asylum uncertainty, family separation, poverty, discrimination. Healing can't happen while threats continue.
                 </p>
               ),
             },
@@ -1408,12 +1408,12 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
           Policy and Systems Changes Needed
         </h2>
         <p className="mb-6">
-          Individual programs aren't enough—systemic barriers must be dismantled <Citation id="6" index={6} source="SAMHSA" year="2022" tier={2} />:
+          Individual programs aren't enough---systemic barriers must be dismantled <Citation id="6" index={6} source="SAMHSA" year="2022" tier={2} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Expand Medicaid and insurance coverage</strong>: Include all immigrants and refugees regardless of status; eliminate waiting periods</li>
           <li><strong>Increase funding for community mental health centers</strong>: Support FQHCs and immigrant-serving nonprofits to provide accessible care</li>
-          <li><strong>Mandate language access</strong>: Enforce Title VI compliance—no client should be denied care due to language barriers</li>
+          <li><strong>Mandate language access</strong>: Enforce Title VI compliance---no client should be denied care due to language barriers</li>
           <li><strong>Protect confidentiality</strong>: Strengthen HIPAA protections to assure newcomers that seeking care won't jeopardize immigration status</li>
           <li><strong>End immigration enforcement in healthcare settings</strong>: Hospitals, clinics, and social service agencies should be "sensitive locations" free from ICE activity</li>
           <li><strong>Fund workforce diversity initiatives</strong>: Scholarships, loan forgiveness, and pipeline programs for mental health professionals from underrepresented communities</li>
@@ -1436,7 +1436,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The most important measure: Do the people you're trying to serve feel safe, seen, and supported? If not, the system isn't working—no matter how many services exist on paper.
+            The most important measure: Do the people you're trying to serve feel safe, seen, and supported? If not, the system isn't working---no matter how many services exist on paper.
           </p>
         </ArticleCallout>
 

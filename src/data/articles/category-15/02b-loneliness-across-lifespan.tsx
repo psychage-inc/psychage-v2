@@ -92,7 +92,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
             Aging alone is not inevitable, but it's increasingly common. Spouses die. Friends pass away or move to be closer to family. Children live far away. Mobility declines. And social infrastructure for older adults is sparse. The result: profound loneliness in late life.
           </p>
           <p className="mb-6">
-            Loneliness among older adults is not just an emotional problem — it's a major predictor of mortality, functional decline, and cognitive deterioration <Citation id="1" index={1} source="Archives of Internal Medicine" year="2012" tier={1} />. Understanding and addressing elder loneliness is a critical public health challenge.
+            Loneliness among older adults is not just an emotional problem --- it's a major predictor of mortality, functional decline, and cognitive deterioration <Citation id="1" index={1} source="Archives of Internal Medicine" year="2012" tier={1} />. Understanding and addressing elder loneliness is a critical public health challenge.
           </p>
         </div>
 
@@ -135,9 +135,9 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     Aging inevitably brings loss:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
-                    <li><strong>Death of spouse/partner</strong> — The single strongest predictor of loneliness in late life</li>
-                    <li><strong>Death of friends</strong> — Your cohort shrinks as peers pass away</li>
-                    <li><strong>Death of siblings</strong> — Often the last people who knew you as a child</li>
+                    <li><strong>Death of spouse/partner</strong> --- The single strongest predictor of loneliness in late life</li>
+                    <li><strong>Death of friends</strong> --- Your cohort shrinks as peers pass away</li>
+                    <li><strong>Death of siblings</strong> --- Often the last people who knew you as a child</li>
                   </ul>
                   <p>
                     Each loss narrows your social world. Unlike younger adults, it's harder to replace these irreplaceable relationships.
@@ -188,7 +188,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     Adult children often live far away, pursuing jobs or lives in other cities or states. Grandchildren grow up at a distance. Video calls help, but don't replace in-person connection.
                   </p>
                   <p>
-                    <strong>The irony:</strong> Technology can make the distance feel worse — you see your grandkids growing up without you in real-time.
+                    <strong>The irony:</strong> Technology can make the distance feel worse --- you see your grandkids growing up without you in real-time.
                   </p>
                 </div>
               ),
@@ -213,7 +213,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Losing a spouse after decades together creates a unique and devastating loneliness. You don't just lose a person — you lose:
+                    Losing a spouse after decades together creates a unique and devastating loneliness. You don't just lose a person --- you lose:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Your primary companion and confidant</li>
@@ -274,10 +274,10 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           <strong>Proposed mechanisms:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Cognitive stimulation</strong> — Social interaction keeps the brain active and engaged</li>
-          <li><strong>Stress</strong> — Chronic loneliness increases cortisol, which damages the hippocampus</li>
-          <li><strong>Depression</strong> — Loneliness leads to depression, which is itself a dementia risk factor</li>
-          <li><strong>Health behaviors</strong> — Lonely older adults exercise less, eat worse, and are less adherent to medications</li>
+          <li><strong>Cognitive stimulation</strong> --- Social interaction keeps the brain active and engaged</li>
+          <li><strong>Stress</strong> --- Chronic loneliness increases cortisol, which damages the hippocampus</li>
+          <li><strong>Depression</strong> --- Loneliness leads to depression, which is itself a dementia risk factor</li>
+          <li><strong>Health behaviors</strong> --- Lonely older adults exercise less, eat worse, and are less adherent to medications</li>
         </ul>
 
         <h2 id="covid-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -327,7 +327,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Older adults with a sense of purpose — through volunteering, hobbies, caregiving, or creative pursuits — experience less loneliness.
+                    Older adults with a sense of purpose --- through volunteering, hobbies, caregiving, or creative pursuits --- experience less loneliness.
                   </p>
                   <p>
                     Purpose provides structure, identity beyond family roles, and opportunities for connection through shared activity.
@@ -433,7 +433,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>Addressing loneliness in older adults is not just compassionate — it's a medical intervention that can extend lifespan, preserve cognitive function, and improve quality of life. Connection is healthcare.</p>
+          <p>Addressing loneliness in older adults is not just compassionate --- it's a medical intervention that can extend lifespan, preserve cognitive function, and improve quality of life. Connection is healthcare.</p>
         </ArticleCallout>
       </>
     ),
@@ -556,7 +556,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Work — even work you didn't love — provides a sense of being needed, contributing, and mattering. You produce something, help someone, solve problems.
+                    Work --- even work you didn't love --- provides a sense of being needed, contributing, and mattering. You produce something, help someone, solve problems.
                   </p>
                   <p className="mb-4">
                     <strong>After retirement:</strong> You may feel useless, irrelevant, or like you no longer matter. This existential loss can be more painful than losing the paycheck.
@@ -573,7 +573,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     For many people, work is central to identity. You're "a teacher,", "an engineer,", "a manager" <Citation id="4" index={4} source="Journal of Vocational Behavior" year="2017" tier={1} />.
                   </p>
                   <p className="mb-4">
-                    <strong>After retirement:</strong> Who are you now? When someone asks what you do, you say "I'm retired' — which feels like saying "I used to be someone."
+                    <strong>After retirement:</strong> Who are you now? When someone asks what you do, you say "I'm retired' --- which feels like saying "I used to be someone."
                   </p>
                   <p>
                     This identity loss is especially acute for people whose careers were central to their self-concept.
@@ -715,11 +715,11 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     Purpose protects against loneliness. Ways to find it in retirement:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
-                    <li><strong>Volunteering</strong> — Use your skills to help others <Citation id="5" index={5} source="The Gerontologist" year="2019" tier={1} /></li>
-                    <li><strong>Mentoring</strong> — Share your expertise with younger people</li>
-                    <li><strong>Creative pursuits</strong> — Art, writing, music, crafts</li>
-                    <li><strong>Caregiving</strong> — Helping with grandchildren or aging relatives</li>
-                    <li><strong>Part-time work</strong> — Flexible work that provides structure without stress</li>
+                    <li><strong>Volunteering</strong> --- Use your skills to help others <Citation id="5" index={5} source="The Gerontologist" year="2019" tier={1} /></li>
+                    <li><strong>Mentoring</strong> --- Share your expertise with younger people</li>
+                    <li><strong>Creative pursuits</strong> --- Art, writing, music, crafts</li>
+                    <li><strong>Caregiving</strong> --- Helping with grandchildren or aging relatives</li>
+                    <li><strong>Part-time work</strong> --- Flexible work that provides structure without stress</li>
                   </ul>
                 </div>
               ),
@@ -862,7 +862,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Grief is the love you still carry for someone who's gone. Loneliness after loss is the permanent absence of the person you shared your life with. Your spouse, parent, best friend — whoever was your "person" — is gone. And no one can fill that specific void.
+            Grief is the love you still carry for someone who's gone. Loneliness after loss is the permanent absence of the person you shared your life with. Your spouse, parent, best friend --- whoever was your "person" --- is gone. And no one can fill that specific void.
           </p>
           <p className="mb-6">
             Bereavement loneliness is different from other forms of loneliness <Citation id="1" index={1} source="Social Science & Medicine" year="2020" tier={1} />. It's not just missing someone. It's the reorganization of your entire life around a permanent absence. Understanding this distinct experience is critical for healing.
@@ -951,7 +951,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Your spouse knew your full story — your childhood, your evolution, your inside jokes. No one else carries that shared memory.
+                    Your spouse knew your full story --- your childhood, your evolution, your inside jokes. No one else carries that shared memory.
                   </p>
                   <p>
                     <strong>Loneliness dimension:</strong> You feel like your past is erased because the only other person who remembered it is gone.
@@ -1028,12 +1028,12 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           Losing a Best Friend
         </h2>
         <p className="mb-6">
-          The death of a best friend is often disenfranchised grief — society doesn't recognize its magnitude. But the loneliness is real:
+          The death of a best friend is often disenfranchised grief --- society doesn't recognize its magnitude. But the loneliness is real:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You lose the person who knew you best (sometimes better than family)</li>
           <li>Shared experiences and inside jokes have no one to remember them with</li>
-          <li>You lose your confidant — the person you called first with news</li>
+          <li>You lose your confidant --- the person you called first with news</li>
           <li>Others don't understand the depth of the loss ("it's just a friend")</li>
         </ul>
 
@@ -1181,10 +1181,10 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're surrounded by people — family, healthcare workers, the person you're caring for. And yet you feel profoundly, achingly alone. Caregiving is one of the loneliest experiences there is, even though it's defined by being with someone constantly.
+            You're surrounded by people --- family, healthcare workers, the person you're caring for. And yet you feel profoundly, achingly alone. Caregiving is one of the loneliest experiences there is, even though it's defined by being with someone constantly.
           </p>
           <p className="mb-6">
-            Family caregivers report some of the highest rates of loneliness of any group <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. The demands of caregiving — physical, emotional, and logistical — create isolation that compounds over time.
+            Family caregivers report some of the highest rates of loneliness of any group <Citation id="1" index={1} source="The Gerontologist" year="2020" tier={1} />. The demands of caregiving --- physical, emotional, and logistical --- create isolation that compounds over time.
           </p>
         </div>
 
@@ -1241,7 +1241,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     Many caregivers can't leave the person they're caring for. Whether due to safety concerns, lack of respite care, or the person's needs, caregivers become house-bound.
                   </p>
                   <p>
-                    This physical isolation mirrors the isolation of new parents — except it often lasts years, not months.
+                    This physical isolation mirrors the isolation of new parents --- except it often lasts years, not months.
                   </p>
                 </div>
               ),
@@ -1272,7 +1272,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     <strong>Common experience:</strong> Friends offer well-meaning but useless advice ("Just take a break!") or minimize your struggle ("At least you get to spend time with them").
                   </p>
                   <p>
-                    This lack of understanding creates emotional isolation — no one truly gets what you're going through.
+                    This lack of understanding creates emotional isolation --- no one truly gets what you're going through.
                   </p>
                 </div>
               ),
@@ -1283,7 +1283,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Caregiving can consume your identity. You're no longer a professional, friend, hobbyist — you're 'the caregiver."
+                    Caregiving can consume your identity. You're no longer a professional, friend, hobbyist --- you're 'the caregiver."
                   </p>
                   <p>
                     This identity narrowing creates disconnection from the parts of yourself that aren't defined by caregiving.
@@ -1329,9 +1329,9 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
                     <strong>Unique loneliness factors:</strong>
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
-                    <li>Loss of partnership — they can't share decisions or emotional load</li>
+                    <li>Loss of partnership --- they can't share decisions or emotional load</li>
                     <li>Loss of intimacy (emotional and physical)</li>
-                    <li>Ambiguous loss — they're here but not fully present (especially with dementia)</li>
+                    <li>Ambiguous loss --- they're here but not fully present (especially with dementia)</li>
                     <li>Couple-based social life disappears</li>
                   </ul>
                 </div>
@@ -1418,13 +1418,13 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
             {
               title: 'Maintain One Non-Caregiving Activity',
               description: (
-                <p>Protect one weekly activity that's just for you — a class, hobby, exercise, or social time. This maintains your identity beyond caregiving and provides essential connection.</p>
+                <p>Protect one weekly activity that's just for you --- a class, hobby, exercise, or social time. This maintains your identity beyond caregiving and provides essential connection.</p>
               ),
             },
             {
               title: 'Use Technology for Connection',
               description: (
-                <p>Video calls, texting, online communities — imperfect as they are, these tools can reduce isolation when you can't leave the house.</p>
+                <p>Video calls, texting, online communities --- imperfect as they are, these tools can reduce isolation when you can't leave the house.</p>
               ),
             },
             {
@@ -1534,7 +1534,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
             Growing up LGBTQ+ often means growing up feeling different, isolated, and unable to be fully yourself. Even in accepting environments, the experience of navigating a world built for straight, cisgender people creates a unique form of loneliness.
           </p>
           <p className="mb-6">
-            LGBTQ+ individuals report significantly higher rates of loneliness than their heterosexual and cisgender peers <Citation id="1" index={1} source="Journal of Homosexuality" year="2020" tier={1} />. This isn't coincidence — it's the result of minority stress, discrimination, and the ongoing search for belonging in a society that often marginalizes LGBTQ+ identities.
+            LGBTQ+ individuals report significantly higher rates of loneliness than their heterosexual and cisgender peers <Citation id="1" index={1} source="Journal of Homosexuality" year="2020" tier={1} />. This isn't coincidence --- it's the result of minority stress, discrimination, and the ongoing search for belonging in a society that often marginalizes LGBTQ+ identities.
           </p>
         </div>
 
@@ -1628,7 +1628,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    LGBTQ+ individuals often anticipate rejection even in neutral situations. This hypervigilance is protective but isolating — you withdraw to avoid anticipated harm.
+                    LGBTQ+ individuals often anticipate rejection even in neutral situations. This hypervigilance is protective but isolating --- you withdraw to avoid anticipated harm.
                   </p>
                 </div>
               ),
@@ -1674,7 +1674,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    The distress of living in a body or with a gender role that doesn't match your identity creates profound disconnection from yourself — a form of internal loneliness.
+                    The distress of living in a body or with a gender role that doesn't match your identity creates profound disconnection from yourself --- a form of internal loneliness.
                   </p>
                 </div>
               ),
@@ -1791,7 +1791,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
             {
               title: 'Seek Affirming Spaces',
               description: (
-                <p>Prioritize environments where you can be fully yourself — LGBTQ+-affirming workplaces, religious communities, healthcare providers. Authenticity reduces loneliness.</p>
+                <p>Prioritize environments where you can be fully yourself --- LGBTQ+-affirming workplaces, religious communities, healthcare providers. Authenticity reduces loneliness.</p>
               ),
             },
             {
@@ -1831,9 +1831,9 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           <strong>Resources:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Trevor Project</strong> — Crisis support for LGBTQ+ youth (call/text 988, then press 3)</li>
-          <li><strong>Trans Lifeline</strong> — Support hotline run by and for trans people</li>
-          <li><strong>SAGE</strong> — Services and support for LGBTQ+ elders</li>
+          <li><strong>Trevor Project</strong> --- Crisis support for LGBTQ+ youth (call/text 988, then press 3)</li>
+          <li><strong>Trans Lifeline</strong> --- Support hotline run by and for trans people</li>
+          <li><strong>SAGE</strong> --- Services and support for LGBTQ+ elders</li>
         </ul>
 
         <ArticleCallout variant="tip">

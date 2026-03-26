@@ -42,7 +42,7 @@ export const moodDisordersArticlesB: Article[] = [
             For a week, you feel invincible. You sleep two hours a night and wake up energized. Ideas pour from your mind faster than you can write them down. You make impulsive decisions that later seem reckless. Then the crash comes, and you plunge into deep depression. This is Bipolar I Disorder.
           </p>
           <p className="mb-6">
-            Bipolar I is defined by manic episodes—periods of abnormally elevated mood and energy lasting at least one week <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Most people with Bipolar I also experience depressive episodes, creating dramatic mood swings that can devastate functioning <Citation id="3" index={2} source="Lancet" year="2020" tier={1} />.
+            Bipolar I is defined by manic episodes---periods of abnormally elevated mood and energy lasting at least one week <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Most people with Bipolar I also experience depressive episodes, creating dramatic mood swings that can devastate functioning <Citation id="3" index={2} source="Lancet" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export const moodDisordersArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You have been treated for depression for years, but the medications never seem to work quite right. Sometimes you feel great—productive, social, energized—but those periods are brief. Then you crash back into deep depression. You may have Bipolar II, not depression.
+            You have been treated for depression for years, but the medications never seem to work quite right. Sometimes you feel great---productive, social, energized---but those periods are brief. Then you crash back into deep depression. You may have Bipolar II, not depression.
           </p>
           <p className="mb-6">
             Bipolar II is characterized by hypomanic episodes and major depressive episodes <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Unlike Bipolar I, there are no full manic episodes. Hypomania is less severe but still represents a distinct change from normal functioning <Citation id="2" index={2} source="American Journal of Psychiatry" year="2020" tier={1} />.
@@ -205,8 +205,8 @@ export const moodDisordersArticlesB: Article[] = [
 
         <h2 id="signs-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Signs and Symptoms</h2>
         <ArticleTabs tabs={[
-          { id: 'hypo', label: 'Hypomanic Symptoms', content: <div><p className="mb-4">Periods of elevated mood, increased energy, decreased sleep need, talkativeness, racing thoughts—but not severe enough for hypomania diagnosis.</p></div> },
-          { id: 'dep', label: 'Depressive Symptoms', content: <div><p className="mb-4">Periods of low mood, fatigue, hopelessness, low self-esteem—but not severe enough for major depression diagnosis.</p></div> },
+          { id: 'hypo', label: 'Hypomanic Symptoms', content: <div><p className="mb-4">Periods of elevated mood, increased energy, decreased sleep need, talkativeness, racing thoughts---but not severe enough for hypomania diagnosis.</p></div> },
+          { id: 'dep', label: 'Depressive Symptoms', content: <div><p className="mb-4">Periods of low mood, fatigue, hopelessness, low self-esteem---but not severe enough for major depression diagnosis.</p></div> },
         ]} />
 
         <h2 id="diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Diagnosis</h2>

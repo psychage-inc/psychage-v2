@@ -19,7 +19,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     id: catId(1),
     slug: 'why-sleep-foundation-mental-health-research',
     title: 'Why Sleep Is the Foundation of Mental Health: What the Research Shows',
-    description: "Sleep isn't just rest—it's essential mental health infrastructure. Explore the research showing how sleep regulates emotion, consolidates memory, and protects psychological wellbeing.",
+    description: "Sleep isn't just rest---it's essential mental health infrastructure. Explore the research showing how sleep regulates emotion, consolidates memory, and protects psychological wellbeing.",
     image: '/images/articles/cat09/cover-001.svg',
     category: CATEGORY_SLEEP_BODY,
     readTime: 8,
@@ -113,7 +113,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            If mental health were a house, sleep would be the foundation. Not the furniture you add later, not the paint on the walls—the actual structural base that everything else depends on.
+            If mental health were a house, sleep would be the foundation. Not the furniture you add later, not the paint on the walls---the actual structural base that everything else depends on.
           </p>
           <p className="mb-6">
             Decades of research have revealed that sleep isn't just a passive state of rest. It's an active, highly orchestrated biological process during which your brain consolidates memories, clears metabolic waste, regulates emotions, and recalibrates neural circuits <Citation id="1" index={1} source="Behavioral Sleep Medicine" year="2023" tier={1} />. When sleep is disrupted, nearly every dimension of mental health suffers.
@@ -147,7 +147,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               title: 'Emotional Regulation',
               content: (
                 <p>
-                  Sleep—especially REM sleep—recalibrates the brain's emotional processing systems. When you're sleep-deprived, the amygdala (your brain's threat detector) becomes hyperactive, while the prefrontal cortex (which helps regulate emotional responses) becomes less effective. This makes you more reactive, more irritable, and less able to cope with stress.
+                  Sleep---especially REM sleep---recalibrates the brain's emotional processing systems. When you're sleep-deprived, the amygdala (your brain's threat detector) becomes hyperactive, while the prefrontal cortex (which helps regulate emotional responses) becomes less effective. This makes you more reactive, more irritable, and less able to cope with stress.
                 </p>
               ),
             },
@@ -165,7 +165,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               title: 'Waste Clearance',
               content: (
                 <p>
-                  The brain's glymphatic system—a waste-removal system—becomes 10 times more active during sleep. It clears out metabolic byproducts, including proteins associated with neurodegenerative diseases. Without adequate sleep, this system can't function effectively.
+                  The brain's glymphatic system---a waste-removal system---becomes 10 times more active during sleep. It clears out metabolic byproducts, including proteins associated with neurodegenerative diseases. Without adequate sleep, this system can't function effectively.
                 </p>
               ),
             },
@@ -185,7 +185,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Sleep and Specific Mental Health Conditions
         </h2>
         <p className="mb-6">
-          Sleep disturbances are so common across mental health conditions that they're often considered a transdiagnostic risk factor—meaning they contribute to many different disorders <Citation id="4" index={4} source="World Journal of Biological Psychiatry" year="2021" tier={1} />.
+          Sleep disturbances are so common across mental health conditions that they're often considered a transdiagnostic risk factor---meaning they contribute to many different disorders <Citation id="4" index={4} source="World Journal of Biological Psychiatry" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -207,7 +207,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           REM (Rapid Eye Movement) sleep is when most dreaming occurs, and it plays a unique role in emotional health <Citation id="5" index={5} source="Nature Neuroscience" year="2019" tier={1} />. During REM, the brain reprocesses emotional experiences from the day, separating the emotional charge from the memory itself.
         </p>
         <p className="mb-6">
-          This is why, after a good night's sleep, yesterday's stressful event often feels less overwhelming. Your brain has had time to process it, integrate it, and reduce its emotional intensity. When REM sleep is disrupted—through stress, medication, or sleep disorders—this emotional processing doesn't happen, and negative emotions linger.
+          This is why, after a good night's sleep, yesterday's stressful event often feels less overwhelming. Your brain has had time to process it, integrate it, and reduce its emotional intensity. When REM sleep is disrupted---through stress, medication, or sleep disorders---this emotional processing doesn't happen, and negative emotions linger.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Clinical Insight">
@@ -220,10 +220,10 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           How Sleep Affects Brain Connectivity
         </h2>
         <p className="mb-6">
-          Recent neuroimaging research has shown that sleep directly impacts functional connectivity—the way different brain regions communicate with each other <Citation id="6" index={6} source="JAMA Psychiatry" year="2022" tier={1} />. Chronic sleep deprivation weakens connections in the default mode network (involved in self-referential thinking), the salience network (detecting important stimuli), and the executive control network (planning and decision-making).
+          Recent neuroimaging research has shown that sleep directly impacts functional connectivity---the way different brain regions communicate with each other <Citation id="6" index={6} source="JAMA Psychiatry" year="2022" tier={1} />. Chronic sleep deprivation weakens connections in the default mode network (involved in self-referential thinking), the salience network (detecting important stimuli), and the executive control network (planning and decision-making).
         </p>
         <p className="mb-6">
-          These disruptions mirror the brain connectivity patterns seen in depression, anxiety, and other psychiatric conditions. In other words, chronic sleep loss doesn't just make you tired—it reconfigures your brain in ways that increase vulnerability to mental illness.
+          These disruptions mirror the brain connectivity patterns seen in depression, anxiety, and other psychiatric conditions. In other words, chronic sleep loss doesn't just make you tired---it reconfigures your brain in ways that increase vulnerability to mental illness.
         </p>
 
         <ArticleChart
@@ -243,7 +243,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Sleep Deprivation as a Public Health Crisis
         </h2>
         <p className="mb-6">
-          The CDC has classified insufficient sleep as a public health epidemic <Citation id="7" index={7} source="Centers for Disease Control and Prevention" year="2022" tier={2} />. More than one-third of American adults regularly get less than 7 hours of sleep per night—the minimum recommended for health.
+          The CDC has classified insufficient sleep as a public health epidemic <Citation id="7" index={7} source="Centers for Disease Control and Prevention" year="2022" tier={2} />. More than one-third of American adults regularly get less than 7 hours of sleep per night---the minimum recommended for health.
         </p>
         <p className="mb-6">
           This isn't just about feeling tired. Chronic sleep deprivation increases the risk of obesity, diabetes, cardiovascular disease, and premature death. It also significantly raises the risk of developing mental health conditions, and it worsens symptoms in people who already have them.
@@ -251,7 +251,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            After just one night of total sleep deprivation, brain scans show a 60% increase in amygdala reactivity to negative emotional stimuli—equivalent to the reactivity seen in people with anxiety disorders.
+            After just one night of total sleep deprivation, brain scans show a 60% increase in amygdala reactivity to negative emotional stimuli---equivalent to the reactivity seen in people with anxiety disorders.
           </p>
         </ArticleCallout>
 
@@ -259,7 +259,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           The Neuroprotective Role of Sleep
         </h2>
         <p className="mb-6">
-          Beyond its immediate effects on mood and cognition, sleep has long-term neuroprotective benefits <Citation id="9" index={9} source="Science" year="2019" tier={1} />. During sleep, the brain clears beta-amyloid and tau proteins—toxic proteins implicated in Alzheimer's disease. It also promotes neuroplasticity, the brain's ability to form new connections and adapt to new information.
+          Beyond its immediate effects on mood and cognition, sleep has long-term neuroprotective benefits <Citation id="9" index={9} source="Science" year="2019" tier={1} />. During sleep, the brain clears beta-amyloid and tau proteins---toxic proteins implicated in Alzheimer's disease. It also promotes neuroplasticity, the brain's ability to form new connections and adapt to new information.
         </p>
         <p className="mb-6">
           People who consistently sleep poorly in midlife have a higher risk of developing dementia later in life. While correlation isn't causation, the biological mechanisms strongly suggest that sleep is protective against cognitive decline.
@@ -272,7 +272,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
             Research consistently shows that sleep deprivation amplifies negative emotional responses while blunting positive ones <Citation id="10" index={10} source="Current Directions in Psychological Science" year="2020" tier={1} />. After a night of poor sleep, people rate neutral faces as more threatening, perceive minor setbacks as catastrophic, and struggle to experience joy or gratitude.
           </p>
           <p className="mb-6">
-            This emotional dysregulation creates a vicious cycle: stress disrupts sleep, poor sleep increases emotional reactivity, heightened reactivity generates more stress. Breaking this cycle requires targeted intervention—sometimes through therapy, sometimes through structured sleep improvement strategies.
+            This emotional dysregulation creates a vicious cycle: stress disrupts sleep, poor sleep increases emotional reactivity, heightened reactivity generates more stress. Breaking this cycle requires targeted intervention---sometimes through therapy, sometimes through structured sleep improvement strategies.
           </p>
 
         <BeforeAfter
@@ -327,7 +327,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               title: 'Track Your Sleep Patterns',
               description: (
                 <p>
-                  For one week, note your bedtime, wake time, and subjective sleep quality. Look for patterns—do you sleep worse on certain days? After certain activities?
+                  For one week, note your bedtime, wake time, and subjective sleep quality. Look for patterns---do you sleep worse on certain days? After certain activities?
                 </p>
               ),
             },
@@ -365,7 +365,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     id: catId(2),
     slug: 'sleep-deprivation-mood-thinking-relationships',
     title: 'How Sleep Deprivation Affects Your Mood, Thinking, and Relationships',
-    description: "Sleep loss doesn't just make you tired—it changes how you think, feel, and connect with others. Learn the specific ways sleep deprivation impacts daily life.",
+    description: "Sleep loss doesn't just make you tired---it changes how you think, feel, and connect with others. Learn the specific ways sleep deprivation impacts daily life.",
     image: '/images/articles/cat09/cover-002.svg',
     category: CATEGORY_SLEEP_BODY,
     readTime: 7,
@@ -446,7 +446,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
             You know the feeling: after a night of poor sleep, everything is harder. Small frustrations feel enormous. Your partner's innocent comment sparks irritation. You can't remember where you put your keys five minutes ago.
           </p>
           <p className="mb-6">
-            This isn't weakness or character failure—it's neurobiology. Sleep deprivation systematically impairs the brain systems responsible for emotional regulation, cognitive performance, and social interaction <Citation id="1" index={1} source="Journal of Sleep Research" year="2021" tier={1} />. Understanding exactly how sleep loss affects you can help you recognize when you're operating on insufficient rest—and why it matters.
+            This isn't weakness or character failure---it's neurobiology. Sleep deprivation systematically impairs the brain systems responsible for emotional regulation, cognitive performance, and social interaction <Citation id="1" index={1} source="Journal of Sleep Research" year="2021" tier={1} />. Understanding exactly how sleep loss affects you can help you recognize when you're operating on insufficient rest---and why it matters.
           </p>
         </div>
 
@@ -454,7 +454,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           How Sleep Loss Changes Your Mood
         </h2>
         <p className="mb-6">
-          The most immediate effect of sleep deprivation is mood disruption. Even one night of poor sleep increases irritability, anxiety, and emotional volatility. Chronic sleep loss creates a persistent low-grade emotional dysregulation that mimics—and often contributes to—mood disorders.
+          The most immediate effect of sleep deprivation is mood disruption. Even one night of poor sleep increases irritability, anxiety, and emotional volatility. Chronic sleep loss creates a persistent low-grade emotional dysregulation that mimics---and often contributes to---mood disorders.
         </p>
 
         <ArticleTabs
@@ -508,7 +508,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           How Sleep Loss Impairs Thinking
         </h2>
         <p className="mb-6">
-          Sleep deprivation affects nearly every aspect of cognitive function—from basic attention to complex decision-making <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />. What's worse, sleep-deprived people often don't realize how impaired they are.
+          Sleep deprivation affects nearly every aspect of cognitive function---from basic attention to complex decision-making <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />. What's worse, sleep-deprived people often don't realize how impaired they are.
         </p>
 
         <ComparisonTable
@@ -540,7 +540,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="The Microsleep Phenomenon">
           <p>
-            When you're sleep-deprived, your brain briefly "checks out" in microsleeps—lapses lasting 1-10 seconds where you're functionally asleep even though your eyes are open. These happen most often during monotonous tasks (like driving or reading) and dramatically increase accident risk.
+            When you're sleep-deprived, your brain briefly "checks out" in microsleeps---lapses lasting 1-10 seconds where you're functionally asleep even though your eyes are open. These happen most often during monotonous tasks (like driving or reading) and dramatically increase accident risk.
           </p>
         </ArticleCallout>
 
@@ -551,7 +551,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Sleep is when the brain consolidates new memories and integrates new information <Citation id="3" index={3} source="Sleep" year="2019" tier={1} />. If you're studying for an exam, learning a new skill, or trying to remember important details, sleep deprivation sabotages those efforts.
           </p>
           <p className="mb-6">
-            Without adequate sleep, information doesn't transfer from short-term to long-term memory effectively. You might feel like you're learning in the moment, but retention is poor. This is why 'pulling an all-nighter' before an exam often backfires—you're trading memory consolidation for a few extra hours of cramming.
+            Without adequate sleep, information doesn't transfer from short-term to long-term memory effectively. You might feel like you're learning in the moment, but retention is poor. This is why 'pulling an all-nighter' before an exam often backfires---you're trading memory consolidation for a few extra hours of cramming.
           </p>
 
         <ArticleChart
@@ -605,7 +605,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               title: 'Withdrawal and Isolation',
               description: (
                 <p>
-                  Chronic sleep deprivation is exhausting—not just physically but emotionally. Many people cope by withdrawing from social interaction, canceling plans, and avoiding connection. This isolation worsens mood and perpetuates the cycle.
+                  Chronic sleep deprivation is exhausting---not just physically but emotionally. Many people cope by withdrawing from social interaction, canceling plans, and avoiding connection. This isolation worsens mood and perpetuates the cycle.
                 </p>
               ),
             },
@@ -616,7 +616,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Sleep and Romantic Relationships
         </h2>
         <p className="mb-6">
-          Studies on couples reveal that sleep quality directly predicts relationship satisfaction <Citation id="7" index={7} source="Journal of Family Psychology" year="2021" tier={1} />. When both partners sleep poorly, they report more conflict, less intimacy, and lower overall relationship quality. Interestingly, one partner's poor sleep can negatively affect the other partner's mood the next day—sleep problems are contagious within relationships.
+          Studies on couples reveal that sleep quality directly predicts relationship satisfaction <Citation id="7" index={7} source="Journal of Family Psychology" year="2021" tier={1} />. When both partners sleep poorly, they report more conflict, less intimacy, and lower overall relationship quality. Interestingly, one partner's poor sleep can negatively affect the other partner's mood the next day---sleep problems are contagious within relationships.
           </p>
         <p className="mb-6">
           Couples who prioritize sleep report higher relationship satisfaction, better communication, and more effective conflict resolution <Citation id="8" index={8} source="Sleep Health" year="2020" tier={1} />. The takeaway: protecting your sleep is an act of care not just for yourself, but for your relationship.
@@ -633,10 +633,10 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           The Long-Term Effects of Chronic Sleep Restriction
         </h2>
         <p className="mb-6">
-          While occasional poor sleep is recoverable, chronic sleep restriction—getting 6 hours or less per night for weeks or months—has cumulative effects <Citation id="6" index={6} source="Behavioral and Brain Sciences" year="2019" tier={1} />. The brain adapts to operating in a degraded state, and you may stop noticing how impaired you are. This is dangerous because performance continues to decline even as subjective awareness of impairment fades.
+          While occasional poor sleep is recoverable, chronic sleep restriction---getting 6 hours or less per night for weeks or months---has cumulative effects <Citation id="6" index={6} source="Behavioral and Brain Sciences" year="2019" tier={1} />. The brain adapts to operating in a degraded state, and you may stop noticing how impaired you are. This is dangerous because performance continues to decline even as subjective awareness of impairment fades.
           </p>
         <p className="mb-6">
-          People who chronically sleep 6 hours per night for two weeks show cognitive impairment equivalent to two nights of total sleep deprivation—but they don't feel that impaired. This "adaptation" is an illusion; objective testing reveals significant deficits.
+          People who chronically sleep 6 hours per night for two weeks show cognitive impairment equivalent to two nights of total sleep deprivation---but they don't feel that impaired. This "adaptation" is an illusion; objective testing reveals significant deficits.
         </p>
 
         <ArticleCallout variant="warning">
@@ -660,7 +660,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           <li>Have people commented that I seem more irritable or forgetful lately?</li>
         </ul>
         <p className="mb-6">
-          If you answered yes to several of these, you're likely operating on insufficient sleep—and it's affecting your mood, thinking, and relationships more than you realize.
+          If you answered yes to several of these, you're likely operating on insufficient sleep---and it's affecting your mood, thinking, and relationships more than you realize.
         </p>
 
         <BeforeAfter
@@ -699,7 +699,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     id: catId(3),
     slug: 'sleep-cycle-rem-deep-sleep-stages',
     title: 'The Sleep Cycle Explained: REM, Deep Sleep, and Why Each Stage Matters',
-    description: "Sleep isn't one uniform state—it's a complex cycle of distinct stages, each serving critical functions for brain and body health. Learn what happens during each phase.",
+    description: "Sleep isn't one uniform state---it's a complex cycle of distinct stages, each serving critical functions for brain and body health. Learn what happens during each phase.",
     image: '/images/articles/cat09/cover-003.svg',
     category: CATEGORY_SLEEP_BODY,
     readTime: 9,
@@ -793,7 +793,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You might think of sleep as an "off switch" for your brain—a uniform state of rest that lasts until morning. In reality, sleep is a dynamic, highly organized process that cycles through distinct stages, each with its own biological purpose and brain activity pattern.
+            You might think of sleep as an "off switch" for your brain---a uniform state of rest that lasts until morning. In reality, sleep is a dynamic, highly organized process that cycles through distinct stages, each with its own biological purpose and brain activity pattern.
           </p>
           <p className="mb-6">
             Understanding the sleep cycle helps explain why a full night's sleep feels so different from a fragmented one, why alcohol disrupts rest quality even when it helps you fall asleep, and why certain medications affect your dreams <Citation id="1" index={1} source="Sleep Medicine Clinics" year="2022" tier={1} />.
@@ -804,7 +804,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           The Four Stages of Sleep
         </h2>
         <p className="mb-6">
-          Sleep is divided into two main categories: <strong>Non-REM (NREM) sleep</strong> and <strong>REM (Rapid Eye Movement) sleep</strong> <Citation id="9" index={9} source="National Institute of Neurological Disorders and Stroke" year="2023" tier={2} />. NREM sleep has three stages (N1, N2, N3), and together with REM, these four stages repeat in cycles throughout the night—typically 4-6 cycles per night, each lasting about 90 minutes.
+          Sleep is divided into two main categories: <strong>Non-REM (NREM) sleep</strong> and <strong>REM (Rapid Eye Movement) sleep</strong> <Citation id="9" index={9} source="National Institute of Neurological Disorders and Stroke" year="2023" tier={2} />. NREM sleep has three stages (N1, N2, N3), and together with REM, these four stages repeat in cycles throughout the night---typically 4-6 cycles per night, each lasting about 90 minutes.
         </p>
 
         <ArticleChart
@@ -827,7 +827,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
         <p className="mb-6">
           <strong>Duration:</strong> 1-5 minutes per cycle<br />
           <strong>Brain waves:</strong> Theta waves<br />
-          <strong>Characteristics:</strong> This is the lightest stage of sleep—the transition between wakefulness and sleep. Your muscles begin to relax, your breathing slows, and you might experience sudden muscle jerks (hypnic jerks).
+          <strong>Characteristics:</strong> This is the lightest stage of sleep---the transition between wakefulness and sleep. Your muscles begin to relax, your breathing slows, and you might experience sudden muscle jerks (hypnic jerks).
         </p>
         <p className="mb-6">
           You can be easily awakened during N1, and if woken, you might not even realize you were asleep. This stage comprises only about 5% of total sleep time in adults.
@@ -835,7 +835,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Hypnic jerks—those sudden muscle twitches that sometimes startle you awake just as you're drifting off—are completely normal. They're thought to be a vestigial reflex from our evolutionary past, when our ancestors slept in trees and needed to wake quickly if they started to fall.
+            Hypnic jerks---those sudden muscle twitches that sometimes startle you awake just as you're drifting off---are completely normal. They're thought to be a vestigial reflex from our evolutionary past, when our ancestors slept in trees and needed to wake quickly if they started to fall.
           </p>
         </ArticleCallout>
 
@@ -848,7 +848,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           <strong>Characteristics:</strong> Your body temperature drops, heart rate slows, and you become less aware of your surroundings. N2 is still considered "light sleep, ' but it's deeper than N1.
         </p>
         <p className="mb-6">
-          This stage makes up about 45-55% of total sleep time and is where much of your sleep actually happens <Citation id="5" index={5} source="Neuron" year="2020" tier={1} />. Sleep spindles—brief bursts of brain activity—are thought to play a role in memory consolidation and blocking external stimuli so you stay asleep.
+          This stage makes up about 45-55% of total sleep time and is where much of your sleep actually happens <Citation id="5" index={5} source="Neuron" year="2020" tier={1} />. Sleep spindles---brief bursts of brain activity---are thought to play a role in memory consolidation and blocking external stimuli so you stay asleep.
         </p>
 
         <ComparisonTable
@@ -871,7 +871,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           <strong>Characteristics:</strong> This is the deepest, most restorative stage of sleep. It's very difficult to wake someone during N3, and if awakened, they often feel groggy and disoriented.
         </p>
         <p className="mb-6">
-          During deep sleep, your body focuses on physical restoration: tissue repair, muscle growth, immune system strengthening, and hormone regulation (including growth hormone release) <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. The brain also consolidates declarative memories—facts, events, and knowledge <Citation id="4" index={4} source="Psychological Bulletin" year="2019" tier={1} />.
+          During deep sleep, your body focuses on physical restoration: tissue repair, muscle growth, immune system strengthening, and hormone regulation (including growth hormone release) <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. The brain also consolidates declarative memories---facts, events, and knowledge <Citation id="4" index={4} source="Psychological Bulletin" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           Deep sleep is also when the glymphatic system is most active, clearing metabolic waste products from the brain <Citation id="6" index={6} source="Science" year="2019" tier={1} />. This waste removal is critical for long-term brain health.
@@ -889,7 +889,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
         <p className="mb-6">
           <strong>Duration:</strong> 10 minutes in first cycle, up to 60 minutes in later cycles<br />
           <strong>Brain waves:</strong> Fast, desynchronized (similar to waking)<br />
-          <strong>Characteristics:</strong> REM sleep is the stage most associated with vivid dreaming. Your brain is highly active—almost as active as when you're awake—but your body is temporarily paralyzed (except for your eyes and diaphragm) to prevent you from acting out your dreams.
+          <strong>Characteristics:</strong> REM sleep is the stage most associated with vivid dreaming. Your brain is highly active---almost as active as when you're awake---but your body is temporarily paralyzed (except for your eyes and diaphragm) to prevent you from acting out your dreams.
         </p>
         <p className="mb-6">
           REM sleep serves several critical functions <Citation id="2" index={2} source="Current Biology" year="2020" tier={1} />:
@@ -915,7 +915,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           One of REM sleep's most important functions is emotional memory processing <Citation id="8" index={8} source="Current Opinion in Behavioral Sciences" year="2020" tier={1} />. During REM, the brain reactivates emotional memories from the day but does so in a low-noradrenaline environment. Noradrenaline is a stress-related neurotransmitter, and its absence during REM allows the brain to tag and file the memory without the same emotional intensity.
         </p>
         <p className="mb-6">
-          This is why a stressful event from yesterday might feel more manageable today—your brain has literally "slept on it, ' reducing the emotional charge while preserving the memory. When REM sleep is disrupted (by stress, alcohol, or certain medications), this emotional processing doesn't happen, and negative feelings persist.
+          This is why a stressful event from yesterday might feel more manageable today---your brain has literally "slept on it, ' reducing the emotional charge while preserving the memory. When REM sleep is disrupted (by stress, alcohol, or certain medications), this emotional processing doesn't happen, and negative feelings persist.
         </p>
 
         <ArticleAccordion
@@ -926,7 +926,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               title: 'Why are you paralyzed during REM?',
               content: (
                 <p>
-                  The brain stem sends signals that inhibit motor neurons, preventing muscle movement. This mechanism protects you from physically acting out your dreams. When this paralysis fails, the result is REM Sleep Behavior Disorder, where people literally act out their dreams—sometimes violently.
+                  The brain stem sends signals that inhibit motor neurons, preventing muscle movement. This mechanism protects you from physically acting out your dreams. When this paralysis fails, the result is REM Sleep Behavior Disorder, where people literally act out their dreams---sometimes violently.
                 </p>
               ),
             },
@@ -962,7 +962,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           <li><strong>Second half of the night:</strong> More REM sleep, with longer and more intense REM periods. Your brain prioritizes emotional and cognitive processing later.</li>
         </ul>
         <p className="mb-6">
-          This is why cutting your sleep short—even by an hour—disproportionately affects REM sleep. If you normally sleep 8 hours but only get 7, you're losing a significant portion of your most REM-rich sleep.
+          This is why cutting your sleep short---even by an hour---disproportionately affects REM sleep. If you normally sleep 8 hours but only get 7, you're losing a significant portion of your most REM-rich sleep.
         </p>
 
         <ArticleChart
@@ -982,7 +982,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           What Disrupts the Sleep Cycle?
         </h2>
         <p className="mb-6">
-          Anything that fragments your sleep or prevents you from completing full cycles will impair sleep quality—even if total sleep time is adequate.
+          Anything that fragments your sleep or prevents you from completing full cycles will impair sleep quality---even if total sleep time is adequate.
         </p>
 
         <ArticleTabs
@@ -1170,7 +1170,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "How much sleep do I need?" It's one of the most common questions in sleep medicine—and the answer is both simpler and more complicated than you might expect.
+            "How much sleep do I need?" It's one of the most common questions in sleep medicine---and the answer is both simpler and more complicated than you might expect.
           </p>
           <p className="mb-6">
             While there are evidence-based recommendations for every age group, sleep need is also highly individual. Genetics, health status, lifestyle, and even the quality of your sleep all influence how much rest your body requires <Citation id="1" index={1} source="Journal of Clinical Sleep Medicine" year="2015" tier={1} />.
@@ -1220,7 +1220,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Teenagers Need More Sleep (And Get the Least)
         </h2>
         <p className="mb-6">
-          Adolescents aged 14-17 need <strong>8-10 hours</strong> of sleep per night—more than adults—yet they're among the most sleep-deprived age groups <Citation id="6" index={6} source="Current Opinion in Physiology" year="2020" tier={1} />.
+          Adolescents aged 14-17 need <strong>8-10 hours</strong> of sleep per night---more than adults---yet they're among the most sleep-deprived age groups <Citation id="6" index={6} source="Current Opinion in Physiology" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           During puberty, the brain undergoes massive reorganization. Sleep is critical for this process, supporting neural pruning, myelination, and synaptic refinement. Insufficient sleep during adolescence is linked to academic struggles, mood disorders, risky behaviors, and impaired decision-making.
@@ -1231,7 +1231,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            Many sleep researchers advocate for later school start times for middle and high schools—ideally no earlier than 8:30 AM. Schools that have implemented later start times report improved attendance, better grades, and fewer car accidents among teen drivers.
+            Many sleep researchers advocate for later school start times for middle and high schools---ideally no earlier than 8:30 AM. Schools that have implemented later start times report improved attendance, better grades, and fewer car accidents among teen drivers.
           </p>
         </ArticleCallout>
 
@@ -1239,7 +1239,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Older Adults: Quality Becomes More Important Than Quantity
         </h2>
         <p className="mb-6">
-          Adults aged 65 and older need <strong>7-8 hours</strong> of sleep per night—slightly less than younger adults, but not dramatically so <Citation id="5" index={5} source="Clinics in Geriatric Medicine" year="2021" tier={1} />.
+          Adults aged 65 and older need <strong>7-8 hours</strong> of sleep per night---slightly less than younger adults, but not dramatically so <Citation id="5" index={5} source="Clinics in Geriatric Medicine" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           What changes with age is sleep architecture. Older adults spend less time in deep sleep (N3) and more time in lighter stages, leading to more frequent nighttime awakenings. They may also experience earlier circadian timing, causing them to feel sleepy earlier in the evening and wake earlier in the morning.
@@ -1278,7 +1278,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               title: "Can you really be a 'short sleeper'?",
               content: (
                 <p>
-                  True short sleepers—people who genetically require less than 6 hours and experience no negative consequences—make up less than 1% of the population. Most people who claim to need only 5-6 hours are chronically sleep-deprived and have adapted to feeling suboptimal, mistaking it for normal.
+                  True short sleepers---people who genetically require less than 6 hours and experience no negative consequences---make up less than 1% of the population. Most people who claim to need only 5-6 hours are chronically sleep-deprived and have adapted to feeling suboptimal, mistaking it for normal.
                 </p>
               ),
             },
@@ -1385,7 +1385,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
             <li><strong>Teenagers need more</strong> (8-10 hours), yet they're among the most sleep-deprived groups.</li>
             <li><strong>Older adults still need 7-8 hours</strong>, but sleep quality often declines with age.</li>
             <li><strong>Individual variation exists</strong>, but true short sleepers are extremely rare (&lt;1%).</li>
-            <li><strong>Quality and quantity both matter</strong>—you can't trade one for the other.</li>
+            <li><strong>Quality and quantity both matter</strong>---you can't trade one for the other.</li>
             <li><strong>Listen to your body</strong>: If you feel chronically tired, you likely need more sleep.</li>
           </ul>
         </ArticleCallout>
@@ -1494,7 +1494,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
             It's the question at the heart of countless sleepless nights: Is my anxiety keeping me awake, or is my lack of sleep making me anxious? The answer is often both.
           </p>
           <p className="mb-6">
-            Sleep and mental health exist in a bidirectional relationship—each influences the other in a continuous feedback loop <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />. Poor sleep increases the risk of developing mental health conditions, and mental health conditions disrupt sleep. Once the cycle begins, it can be difficult to break without targeted intervention.
+            Sleep and mental health exist in a bidirectional relationship---each influences the other in a continuous feedback loop <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2020" tier={1} />. Poor sleep increases the risk of developing mental health conditions, and mental health conditions disrupt sleep. Once the cycle begins, it can be difficult to break without targeted intervention.
           </p>
           <p className="mb-6">
             Understanding this two-way relationship is critical for both prevention and treatment. It explains why addressing sleep problems can improve mental health outcomes, and why treating mental health conditions often requires attention to sleep.
@@ -1516,7 +1516,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Sleep regulates neurotransmitters like serotonin, dopamine, and norepinephrine—all of which are implicated in mood disorders. Poor sleep disrupts this balance, creating a neurochemical environment that resembles depression or anxiety.
+                    Sleep regulates neurotransmitters like serotonin, dopamine, and norepinephrine---all of which are implicated in mood disorders. Poor sleep disrupts this balance, creating a neurochemical environment that resembles depression or anxiety.
                   </p>
                   <p>
                     Conversely, mental health conditions alter neurotransmitter systems in ways that interfere with sleep regulation, creating insomnia, hypersomnia, or fragmented sleep.
@@ -1530,7 +1530,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Sleep loss increases cortisol (the stress hormone) and activates the HPA axis (the body's stress response system). This creates a state of physiological hyperarousal that makes it harder to fall asleep—perpetuating the cycle.
+                    Sleep loss increases cortisol (the stress hormone) and activates the HPA axis (the body's stress response system). This creates a state of physiological hyperarousal that makes it harder to fall asleep---perpetuating the cycle.
                   </p>
                   <p>
                     Anxiety and depression also dysregulate the HPA axis, leading to chronic stress activation and sleep disruption.
@@ -1544,7 +1544,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Sleep—especially REM sleep—is critical for emotional processing. Without it, negative emotions persist and intensify. Over time, this emotional dysregulation can contribute to the development of mood and anxiety disorders.
+                    Sleep---especially REM sleep---is critical for emotional processing. Without it, negative emotions persist and intensify. Over time, this emotional dysregulation can contribute to the development of mood and anxiety disorders.
                   </p>
                   <p>
                     Mental health conditions impair emotional regulation, which in turn disrupts sleep quality and duration.
@@ -1579,17 +1579,17 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Depression and Sleep: A Vicious Cycle
         </h2>
         <p className="mb-6">
-          About 75% of people with depression experience sleep problems—most commonly insomnia, but also hypersomnia (excessive sleep) and early morning awakening. The relationship is so strong that sleep disturbance is a diagnostic criterion for major depressive disorder.
+          About 75% of people with depression experience sleep problems---most commonly insomnia, but also hypersomnia (excessive sleep) and early morning awakening. The relationship is so strong that sleep disturbance is a diagnostic criterion for major depressive disorder.
         </p>
         <p className="mb-6">
           <strong>How depression disrupts sleep:</strong> Depression alters sleep architecture, reducing deep sleep and REM sleep. It also increases nighttime awakenings and makes it harder to fall asleep due to rumination, hopelessness, and physiological hyperarousal.
         </p>
         <p className="mb-6">
-          <strong>How sleep loss contributes to depression:</strong> Chronic sleep deprivation lowers serotonin and dopamine, increases inflammation, and impairs the prefrontal cortex's ability to regulate negative emotions—all of which increase vulnerability to depression.
+          <strong>How sleep loss contributes to depression:</strong> Chronic sleep deprivation lowers serotonin and dopamine, increases inflammation, and impairs the prefrontal cortex's ability to regulate negative emotions---all of which increase vulnerability to depression.
         </p>
 
         <QuoteBlock
-          quote="Insomnia is not just a symptom of depression—it's a risk factor. Treating sleep problems can prevent the onset of depression and improve outcomes in people who already have it."
+          quote="Insomnia is not just a symptom of depression---it's a risk factor. Treating sleep problems can prevent the onset of depression and improve outcomes in people who already have it."
           attribution="Dr. Michael Perlis"
           role="Sleep Researcher"
           source="University of Pennsylvania, 2022"
@@ -1599,7 +1599,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           Anxiety and Sleep: Hyperarousal and Rumination
         </h2>
         <p className="mb-6">
-          Anxiety disorders are characterized by hyperarousal—a state of heightened physiological and cognitive activation that makes it difficult to relax and fall asleep <Citation id="3" index={3} source="Current Psychiatry Reports" year="2020" tier={1} />. Racing thoughts, worry about not sleeping, and physical tension all interfere with sleep onset.
+          Anxiety disorders are characterized by hyperarousal---a state of heightened physiological and cognitive activation that makes it difficult to relax and fall asleep <Citation id="3" index={3} source="Current Psychiatry Reports" year="2020" tier={1} />. Racing thoughts, worry about not sleeping, and physical tension all interfere with sleep onset.
         </p>
         <p className="mb-6">
           <strong>How anxiety disrupts sleep:</strong> Anxiety activates the fight-or-flight response, increasing heart rate, cortisol, and alertness. Cognitive symptoms like worry and rumination keep the mind active when it should be winding down.
@@ -1639,7 +1639,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           PTSD and Sleep: Nightmares and Hypervigilance
         </h2>
         <p className="mb-6">
-          Sleep problems are nearly universal in PTSD, affecting 70-90% of people with the condition <Citation id="6" index={6} source="Current Psychiatry Reports" year="2021" tier={1} />. The hallmark symptoms—nightmares, hypervigilance, and re-experiencing trauma—directly interfere with the ability to feel safe enough to sleep.
+          Sleep problems are nearly universal in PTSD, affecting 70-90% of people with the condition <Citation id="6" index={6} source="Current Psychiatry Reports" year="2021" tier={1} />. The hallmark symptoms---nightmares, hypervigilance, and re-experiencing trauma---directly interfere with the ability to feel safe enough to sleep.
         </p>
         <p className="mb-6">
           <strong>How PTSD disrupts sleep:</strong> Nightmares cause fear of sleep itself. Hyperarousal keeps the nervous system in a constant state of alertness. Trauma-related thoughts intrude at bedtime.
@@ -1737,7 +1737,7 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
           A landmark 2022 study published in <em>JAMA Psychiatry</em> found that treating insomnia with CBT-I significantly reduced depressive symptoms, even in people who weren't receiving treatment for depression <Citation id="8" index={8} source="JAMA Psychiatry" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          This suggests that <strong>improving sleep can prevent or reduce depression</strong>—not just relieve a symptom, but address an underlying mechanism. It's a powerful reminder that sleep is not a secondary concern in mental health treatment; it's a primary target.
+          This suggests that <strong>improving sleep can prevent or reduce depression</strong>---not just relieve a symptom, but address an underlying mechanism. It's a powerful reminder that sleep is not a secondary concern in mental health treatment; it's a primary target.
         </p>
 
         <BeforeAfter

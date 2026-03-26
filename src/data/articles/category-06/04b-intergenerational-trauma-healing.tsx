@@ -42,7 +42,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
             Your grandmother lost a child but never spoke about it. Your mother grew up in a house filled with unnameable sadness. Now you have anxiety you can't fully explain. This is how unprocessed grief echoes through families.
           </p>
           <p className="mb-6">
-            When grief isn't fully processed in one generation, it doesn't disappear — it transforms. Children and grandchildren may experience anxiety, depression, or hypervigilance without understanding the source <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2019" tier={1} />.
+            When grief isn't fully processed in one generation, it doesn't disappear --- it transforms. Children and grandchildren may experience anxiety, depression, or hypervigilance without understanding the source <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Disenfranchised Grief',
               content: (
                 <p>
-                  Losses that society doesn't fully recognize — miscarriage, abortion, estrangement, loss of a stigmatized relationship — often go unmourned because there's no social permission to grieve <Citation id="5" index={5} source="OMEGA - Journal of Death and Dying" year="2019" tier={1} />. This suppressed grief becomes family anxiety.
+                  Losses that society doesn't fully recognize --- miscarriage, abortion, estrangement, loss of a stigmatized relationship --- often go unmourned because there's no social permission to grieve <Citation id="5" index={5} source="OMEGA - Journal of Death and Dying" year="2019" tier={1} />. This suppressed grief becomes family anxiety.
                 </p>
               ),
             },
@@ -101,7 +101,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Ambiguous Loss',
               content: (
                 <p>
-                  When loss is unclear or incomplete — a missing person, a parent with dementia, an estranged family member — grief has no endpoint <Citation id="3" index={3} source="Family Process" year="2018" tier={3} />. This creates ongoing uncertainty that manifests as generalized anxiety.
+                  When loss is unclear or incomplete --- a missing person, a parent with dementia, an estranged family member --- grief has no endpoint <Citation id="3" index={3} source="Family Process" year="2018" tier={3} />. This creates ongoing uncertainty that manifests as generalized anxiety.
                 </p>
               ),
             },
@@ -160,7 +160,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
             },
             {
               title: 'Name the Grief',
-              description: <p>Acknowledge that you may be carrying grief for losses that weren't yours. Naming it — "I think I'm holding my grandmother's unexpressed sorrow' — creates clarity.</p>,
+              description: <p>Acknowledge that you may be carrying grief for losses that weren't yours. Naming it --- "I think I'm holding my grandmother's unexpressed sorrow' --- creates clarity.</p>,
             },
             {
               title: 'Give Yourself Permission to Grieve',
@@ -179,7 +179,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Completing grief work that previous generations couldn't do is a profound act of healing — for yourself, for them, and for future generations who won't have to carry the same weight.
+            Completing grief work that previous generations couldn't do is a profound act of healing --- for yourself, for them, and for future generations who won't have to carry the same weight.
           </p>
         </ArticleCallout>
       </>
@@ -189,7 +189,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
     id: catId(37),
     slug: 'genogram-mapping-family-emotional-history',
     title: "The Genogram: Mapping Your Family's Emotional History",
-    description: "Learn how to create a genogram — a powerful tool that maps family relationships, patterns, and emotional legacies across generations.",
+    description: "Learn how to create a genogram --- a powerful tool that maps family relationships, patterns, and emotional legacies across generations.",
     image: "/images/articles/cat06/cover-037.svg",
     category: CATEGORY_FAMILY_PARENTING,
     readTime: 6,
@@ -214,7 +214,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
             A genogram is like a family tree on steroids. It maps not just who's related to whom, but the emotional patterns, relationship dynamics, and mental health patterns that run through your family across generations.
           </p>
           <p className="mb-6">
-            Developed by family therapists, genograms reveal repeating patterns you might not otherwise see — the anxiety that shows up every few generations, the relationship conflicts that mirror your grandparents", the strengths that run through your family line <Citation id="1" index={1} source="Family Process" year="2018" tier={1} />.
+            Developed by family therapists, genograms reveal repeating patterns you might not otherwise see --- the anxiety that shows up every few generations, the relationship conflicts that mirror your grandparents", the strengths that run through your family line <Citation id="1" index={1} source="Family Process" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -272,7 +272,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Family Roles',
               content: (
                 <p>
-                  The responsible one, the rebel, the peacemaker, the scapegoat — roles often repeat. You might be playing the same role your parent or grandparent did <Citation id="5" index={5} source="Journal of Family Theory & Review" year="2019" tier={1} />.
+                  The responsible one, the rebel, the peacemaker, the scapegoat --- roles often repeat. You might be playing the same role your parent or grandparent did <Citation id="5" index={5} source="Journal of Family Theory & Review" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -290,7 +290,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Family Strengths',
               content: (
                 <p>
-                  Not just problems! Resilience, education, creativity, community involvement — positive patterns that you can consciously continue.
+                  Not just problems! Resilience, education, creativity, community involvement --- positive patterns that you can consciously continue.
                 </p>
               ),
             },
@@ -349,7 +349,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            A genogram doesn't determine your destiny — it illuminates it. Knowing your family patterns gives you the power to choose which to continue and which to change.
+            A genogram doesn't determine your destiny --- it illuminates it. Knowing your family patterns gives you the power to choose which to continue and which to change.
           </p>
         </ArticleCallout>
       </>
@@ -440,7 +440,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Internal Family Systems (IFS)',
               content: (
                 <p>
-                  IFS views inherited trauma as 'legacy burdens' — emotional weights passed down that aren't originally yours <Citation id="4" index={4} source="Psychotherapy" year="2020" tier={1} />. The therapy helps you identify and release these burdens while honoring your family's story.
+                  IFS views inherited trauma as 'legacy burdens' --- emotional weights passed down that aren't originally yours <Citation id="4" index={4} source="Psychotherapy" year="2020" tier={1} />. The therapy helps you identify and release these burdens while honoring your family's story.
                 </p>
               ),
             },
@@ -481,7 +481,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           You will slip into old patterns. You'll hear your parent's words in your mouth. You'll react in ways you swore you wouldn't. This is normal <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          Self-compassion isn't self-indulgence — it's acknowledging that you're doing hard work while carrying generations of pain. Treat yourself with the kindness you'd offer a friend facing the same challenges.
+          Self-compassion isn't self-indulgence --- it's acknowledging that you're doing hard work while carrying generations of pain. Treat yourself with the kindness you'd offer a friend facing the same challenges.
         </p>
 
         <h2 id="create-new-rituals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -501,7 +501,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           Step 6: Connect with Community
         </h2>
         <p className="mb-6">
-          Healing doesn't happen in isolation. Connect with others doing similar work — support groups, online communities, cultural healing spaces <Citation id="7" index={7} source="American Journal of Community Psychology" year="2021" tier={1} />. Shared understanding reduces isolation and provides practical strategies.
+          Healing doesn't happen in isolation. Connect with others doing similar work --- support groups, online communities, cultural healing spaces <Citation id="7" index={7} source="American Journal of Community Psychology" year="2021" tier={1} />. Shared understanding reduces isolation and provides practical strategies.
         </p>
 
         <ProgressSteps
@@ -509,11 +509,11 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           steps={[
             {
               title: 'Acknowledge the Work',
-              description: <p>Recognize that healing family legacy is real, valuable work — not self-indulgence or betrayal.</p>,
+              description: <p>Recognize that healing family legacy is real, valuable work --- not self-indulgence or betrayal.</p>,
             },
             {
               title: 'Start Small',
-              description: <p>Choose one pattern to work on. Change builds momentum — you don't have to fix everything at once.</p>,
+              description: <p>Choose one pattern to work on. Change builds momentum --- you don't have to fix everything at once.</p>,
             },
             {
               title: 'Expect Resistance',
@@ -579,7 +579,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Myth: You Must Forgive to Heal',
               content: (
                 <p>
-                  <strong>Reality:</strong> Research shows that people can fully recover from trauma without forgiving those who harmed them <Citation id="3" index={3} source="Clinical Psychology Review" year="2021" tier={1} />. Acceptance, letting go of rumination, and building a meaningful life are what matter — forgiveness is one possible path, not the only one.
+                  <strong>Reality:</strong> Research shows that people can fully recover from trauma without forgiving those who harmed them <Citation id="3" index={3} source="Clinical Psychology Review" year="2021" tier={1} />. Acceptance, letting go of rumination, and building a meaningful life are what matter --- forgiveness is one possible path, not the only one.
                 </p>
               ),
             },
@@ -606,7 +606,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
               title: 'Myth: Forgiveness Is a One-Time Decision',
               content: (
                 <p>
-                  <strong>Reality:</strong> If you choose forgiveness, it's typically a process — not an event. You might forgive and then feel anger again. This doesn't mean you failed; it means healing isn't linear.
+                  <strong>Reality:</strong> If you choose forgiveness, it's typically a process --- not an event. You might forgive and then feel anger again. This doesn't mean you failed; it means healing isn't linear.
                 </p>
               ),
             },
@@ -629,7 +629,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Beware of premature forgiveness — forgiving too quickly to avoid feeling anger or pain. This can bypass necessary grief and validation <Citation id="2" index={2} source="Trauma, Violence, & Abuse" year="2020" tier={1} />. You must first fully acknowledge the harm before forgiveness can be genuine.
+            Beware of premature forgiveness --- forgiving too quickly to avoid feeling anger or pain. This can bypass necessary grief and validation <Citation id="2" index={2} source="Trauma, Violence, & Abuse" year="2020" tier={1} />. You must first fully acknowledge the harm before forgiveness can be genuine.
           </p>
         </ArticleCallout>
 
@@ -686,14 +686,14 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           Forgiveness norms vary widely across cultures <Citation id="4" index={4} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. Some cultures prioritize family harmony and forgiveness; others emphasize justice and accountability. There's no universal "right" approach.
         </p>
         <p className="mb-6">
-          Your healing path should align with your values — not external pressure from family, religion, or therapeutic trends.
+          Your healing path should align with your values --- not external pressure from family, religion, or therapeutic trends.
         </p>
 
         <h2 id="self-forgiveness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Self-Forgiveness Matters More
         </h2>
         <p className="mb-6">
-          Often, the most important forgiveness is self-forgiveness — for not leaving sooner, for repeating patterns, for how trauma changed you <Citation id="6" index={6} source="Journal of Family Psychology" year="2020" tier={1} />. You did the best you could with the tools and awareness you had at the time.
+          Often, the most important forgiveness is self-forgiveness --- for not leaving sooner, for repeating patterns, for how trauma changed you <Citation id="6" index={6} source="Journal of Family Psychology" year="2020" tier={1} />. You did the best you could with the tools and awareness you had at the time.
         </p>
 
         <QuoteBlock
@@ -741,7 +741,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
             "But it's family." These three words carry enormous weight. We're taught that family bonds are sacred, that blood is thicker than water, that you should always try to make it work. But sometimes, the healthiest choice is to step away.
           </p>
           <p className="mb-6">
-            Family estrangement — cutting off contact with family members — is more common than many people realize. Studies suggest 12-27% of adults are estranged from at least one family member <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />.
+            Family estrangement --- cutting off contact with family members --- is more common than many people realize. Studies suggest 12-27% of adults are estranged from at least one family member <Citation id="1" index={1} source="Journal of Family Psychology" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -774,11 +774,11 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           It's Not "Giving Up"
         </h2>
         <p className="mb-6">
-          Estrangement isn't failure or selfishness — it's a boundary. For many people, stepping away is the only way to protect their mental health, create stability, or stop repeating harmful patterns <Citation id="6" index={6} source="Journal of Interpersonal Violence" year="2019" tier={1} />.
+          Estrangement isn't failure or selfishness --- it's a boundary. For many people, stepping away is the only way to protect their mental health, create stability, or stop repeating harmful patterns <Citation id="6" index={6} source="Journal of Interpersonal Violence" year="2019" tier={1} />.
         </p>
 
         <QuoteBlock
-          quote="Choosing yourself over a harmful family dynamic isn't selfish. It's survival. And sometimes it's the most loving thing you can do — for yourself and even for them."
+          quote="Choosing yourself over a harmful family dynamic isn't selfish. It's survival. And sometimes it's the most loving thing you can do --- for yourself and even for them."
           attribution="Dr. Joshua Coleman"
           role="Family Estrangement Researcher"
           source="Rules of Estrangement"
@@ -789,7 +789,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
           The Complicated Grief of Estrangement
         </h2>
         <p className="mb-6">
-          Estrangement creates a unique form of grief called ambiguous loss — the family member is alive but absent from your life <Citation id="3" index={3} source="Family Process" year="2021" tier={1} />. This grief is often disenfranchised — others don't recognize it as legitimate <Citation id="4" index={4} source="Death Studies" year="2020" tier={1} />.
+          Estrangement creates a unique form of grief called ambiguous loss --- the family member is alive but absent from your life <Citation id="3" index={3} source="Family Process" year="2021" tier={1} />. This grief is often disenfranchised --- others don't recognize it as legitimate <Citation id="4" index={4} source="Death Studies" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           You may grieve:
@@ -825,7 +825,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
             },
             {
               title: 'Consider Your Values',
-              description: <p>What do you value more: maintaining family ties or protecting your wellbeing? There's no 'right' answer — only what's right for you.</p>,
+              description: <p>What do you value more: maintaining family ties or protecting your wellbeing? There's no 'right' answer --- only what's right for you.</p>,
             },
             {
               title: 'Seek Support',
@@ -844,9 +844,9 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Build chosen family:</strong> Friendships, community, and chosen relationships can provide belonging <Citation id="7" index={7} source="Journal of Social and Personal Relationships" year="2020" tier={1} /></li>
           <li><strong>Create new rituals:</strong> Design holiday and milestone celebrations that reflect your values rather than painful traditions</li>
-          <li><strong>Process the grief:</strong> Allow yourself to mourn what you lost — even if cutting off was the right choice</li>
+          <li><strong>Process the grief:</strong> Allow yourself to mourn what you lost --- even if cutting off was the right choice</li>
           <li><strong>Set firm boundaries:</strong> Decide in advance how you'll handle flying monkeys (people who pressure you on behalf of estranged family)</li>
-          <li><strong>Anticipate triggers:</strong> Holidays, social media, others' family stories may bring up pain — plan self-care strategies</li>
+          <li><strong>Anticipate triggers:</strong> Holidays, social media, others' family stories may bring up pain --- plan self-care strategies</li>
         </ul>
 
         <ArticleCallout variant="tip">
@@ -870,7 +870,7 @@ export const intergenerationalTraumaHealingArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Family isn't just biology — it's mutual care, respect, and safety. If those elements aren't present, stepping away isn't betrayal. It's self-preservation. You deserve relationships that don't require sacrificing your mental health.
+            Family isn't just biology --- it's mutual care, respect, and safety. If those elements aren't present, stepping away isn't betrayal. It's self-preservation. You deserve relationships that don't require sacrificing your mental health.
           </p>
         </ArticleCallout>
       </>

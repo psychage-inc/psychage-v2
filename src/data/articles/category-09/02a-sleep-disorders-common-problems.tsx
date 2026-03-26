@@ -113,13 +113,13 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Lying awake at 2 AM, watching the clock, calculating how many hours of sleep you'll get if you fall asleep <em>right now</em>—this is the exhausting reality of insomnia, the most common sleep disorder worldwide.
+            Lying awake at 2 AM, watching the clock, calculating how many hours of sleep you'll get if you fall asleep <em>right now</em>---this is the exhausting reality of insomnia, the most common sleep disorder worldwide.
           </p>
           <p className="mb-6">
             Insomnia isn't just difficulty falling asleep. It's a complex condition characterized by persistent problems initiating or maintaining sleep, despite adequate opportunity to sleep, that causes significant distress or impairment during the day <Citation id="1" index={1} source="American Academy of Sleep Medicine" year="2014" tier={4} />.
           </p>
           <p className="mb-6">
-            About 10-30% of adults experience chronic insomnia at any given time <Citation id="2" index={2} source="Journal of Clinical Sleep Medicine" year="2007" tier={1} />, making it one of the most prevalent yet undertreated health conditions. Understanding insomnia—its causes, types, and evidence-based treatments—is the first step toward breaking the cycle.
+            About 10-30% of adults experience chronic insomnia at any given time <Citation id="2" index={2} source="Journal of Clinical Sleep Medicine" year="2007" tier={1} />, making it one of the most prevalent yet undertreated health conditions. Understanding insomnia---its causes, types, and evidence-based treatments---is the first step toward breaking the cycle.
           </p>
         </div>
 
@@ -164,7 +164,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>Difficulty falling asleep</strong> — often lying awake for 30+ minutes after lights out. This type is common in people with anxiety, racing thoughts, or heightened arousal at bedtime.
+                    <strong>Difficulty falling asleep</strong> --- often lying awake for 30+ minutes after lights out. This type is common in people with anxiety, racing thoughts, or heightened arousal at bedtime.
                   </p>
                   <p>
                     <strong>Typical pattern:</strong> Normal sleep once achieved, but the struggle to initiate sleep causes sleep deprivation over time.
@@ -178,7 +178,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>Difficulty staying asleep</strong> — frequent nighttime awakenings (often 3+ times per night) with trouble returning to sleep. This type is common in older adults and people with chronic pain or sleep apnea.
+                    <strong>Difficulty staying asleep</strong> --- frequent nighttime awakenings (often 3+ times per night) with trouble returning to sleep. This type is common in older adults and people with chronic pain or sleep apnea.
                   </p>
                   <p>
                     <strong>Typical pattern:</strong> Fragmented sleep, feeling like you "never slept deeply."
@@ -206,7 +206,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>Combination of types</strong> — difficulty falling asleep, staying asleep, and/or early awakening. Often the most severe and impairing form.
+                    <strong>Combination of types</strong> --- difficulty falling asleep, staying asleep, and/or early awakening. Often the most severe and impairing form.
                   </p>
                 </div>
               ),
@@ -244,7 +244,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           The Hyperarousal Theory
         </h2>
         <p className="mb-6">
-          One of the most well-supported explanations for chronic insomnia is the <strong>hyperarousal model</strong> <Citation id="4" index={4} source="Sleep Medicine Reviews" year="2020" tier={1} />. People with insomnia show elevated physiological, cognitive, and emotional arousal—not just at bedtime, but throughout the 24-hour day.
+          One of the most well-supported explanations for chronic insomnia is the <strong>hyperarousal model</strong> <Citation id="4" index={4} source="Sleep Medicine Reviews" year="2020" tier={1} />. People with insomnia show elevated physiological, cognitive, and emotional arousal---not just at bedtime, but throughout the 24-hour day.
         </p>
         <p className="mb-6">
           <strong>Evidence of hyperarousal:</strong>
@@ -255,11 +255,11 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           <li><strong>Emotional:</strong> Heightened anxiety, frustration, distress about sleep</li>
         </ul>
         <p className="mb-6">
-          This state of hyperarousal makes it biologically difficult to transition into sleep, even when the person is tired. It's not that they're 'choosing' to stay awake—their nervous system is stuck in a wakefulness mode.
+          This state of hyperarousal makes it biologically difficult to transition into sleep, even when the person is tired. It's not that they're 'choosing' to stay awake---their nervous system is stuck in a wakefulness mode.
         </p>
 
         <QuoteBlock
-          quote={`Insomnia isn't about not being tired enough. It's about being too "awake"—your brain and body are on high alert, and sleep feels impossible even when you're exhausted.`}
+          quote={`Insomnia isn't about not being tired enough. It's about being too "awake"---your brain and body are on high alert, and sleep feels impossible even when you're exhausted.`}
           attribution="Dr. Charles Morin"
           role="Insomnia Researcher"
           source="Université Laval, 2020"
@@ -427,7 +427,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
               title: 'Are sleep medications ever appropriate?',
               content: (
                 <p>
-                  Yes, for short-term use (2-4 weeks) during acute insomnia or as a bridge while starting CBT-I. However, they're not a long-term solution and should always be combined with behavioral strategies. Never stop sleep medications abruptly—work with your provider to taper safely.
+                  Yes, for short-term use (2-4 weeks) during acute insomnia or as a bridge while starting CBT-I. However, they're not a long-term solution and should always be combined with behavioral strategies. Never stop sleep medications abruptly---work with your provider to taper safely.
                 </p>
               ),
             },
@@ -452,7 +452,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
             <li><strong>Chronic insomnia</strong> persists for 3+ months, occurs 3+ nights/week, and causes daytime impairment.</li>
             <li><strong>Perpetuating behaviors</strong> (excessive time in bed, napping, irregular schedules) maintain insomnia even after triggers resolve.</li>
             <li><strong>CBT-I is the gold-standard treatment</strong>, with 70-80% effectiveness and lasting results.</li>
-            <li><strong>Insomnia and mental health</strong> are bidirectionally linked—treating one improves the other.</li>
+            <li><strong>Insomnia and mental health</strong> are bidirectionally linked---treating one improves the other.</li>
             <li><strong>Seek professional help</strong> if insomnia persists despite self-help efforts or significantly impairs your life.</li>
           </ul>
         </ArticleCallout>
@@ -622,7 +622,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           Sleep Restriction: The Counterintuitive Core of CBT-I
         </h2>
         <p className="mb-6">
-          Sleep restriction therapy is often the most challenging—and most effective—component of CBT-I. It feels counterintuitive: limiting sleep when you're already sleep-deprived. But the logic is sound.
+          Sleep restriction therapy is often the most challenging---and most effective---component of CBT-I. It feels counterintuitive: limiting sleep when you're already sleep-deprived. But the logic is sound.
         </p>
 
         <ArticleTabs
@@ -633,7 +633,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    People with insomnia often spend excessive time in bed trying to "catch up" on sleep. This dilutes sleep pressure (the biological drive to sleep) and creates long periods of wakefulness in bed—which trains the brain to associate the bed with being awake, not sleeping.
+                    People with insomnia often spend excessive time in bed trying to "catch up" on sleep. This dilutes sleep pressure (the biological drive to sleep) and creates long periods of wakefulness in bed---which trains the brain to associate the bed with being awake, not sleeping.
                   </p>
                   <p>
                     Sleep restriction creates mild sleep deprivation, which increases sleep drive and makes it easier to fall asleep and stay asleep. Over time, this consolidates sleep into a shorter, more efficient window.
@@ -682,13 +682,13 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           Stimulus Control: Re-Training Your Brain
         </h2>
         <p className="mb-6">
-          Stimulus control is based on classical conditioning: if you spend hours lying awake in bed (trying to sleep, worrying, watching TV), your brain learns to associate the bed with wakefulness and frustration—not sleep.
+          Stimulus control is based on classical conditioning: if you spend hours lying awake in bed (trying to sleep, worrying, watching TV), your brain learns to associate the bed with wakefulness and frustration---not sleep.
         </p>
         <p className="mb-6">
           <strong>The rules:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Go to bed only when sleepy (not just tired—actually ready to sleep)</li>
+          <li>Go to bed only when sleepy (not just tired---actually ready to sleep)</li>
           <li>If you can't fall asleep within 15-20 minutes, get out of bed and do a quiet, non-stimulating activity until you feel sleepy again</li>
           <li>Use the bed only for sleep and intimacy (no TV, work, scrolling, or reading)</li>
           <li>Wake up at the same time every day, regardless of how much you slept</li>
@@ -696,7 +696,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Stimulus control is about breaking the association between your bed and frustration. If you're lying there awake, your bed becomes a place of stress. By getting up and returning only when sleepy, you retrain your brain to see the bed as a place for sleep—and only sleep."
+          quote="Stimulus control is about breaking the association between your bed and frustration. If you're lying there awake, your bed becomes a place of stress. By getting up and returning only when sleepy, you retrain your brain to see the bed as a place for sleep---and only sleep."
           attribution="Dr. Richard Bootzin"
           role="Developer of Stimulus Control Therapy"
           source="University of Arizona, 1972"
@@ -783,7 +783,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           Digital CBT-I: Increasing Access
         </h2>
         <p className="mb-6">
-          One barrier to CBT-I has been access—not enough trained clinicians, high cost, and geographic limitations. Digital CBT-I programs (delivered via apps or websites) are addressing this gap <Citation id="5" index={5} source="Sleep" year="2021" tier={1} />.
+          One barrier to CBT-I has been access---not enough trained clinicians, high cost, and geographic limitations. Digital CBT-I programs (delivered via apps or websites) are addressing this gap <Citation id="5" index={5} source="Sleep" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Effective digital programs include:</strong>
@@ -843,7 +843,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
               title: 'My sleep got worse in the first week. Is that normal?',
               content: (
                 <p>
-                  Yes. Sleep restriction creates short-term sleep deprivation, which can feel uncomfortable. This is temporary—most people see improvement by week 2-3. Stick with the program.
+                  Yes. Sleep restriction creates short-term sleep deprivation, which can feel uncomfortable. This is temporary---most people see improvement by week 2-3. Stick with the program.
                 </p>
               ),
             },
@@ -877,7 +877,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
             <li><strong>It works by addressing root causes</strong>: sleep restriction consolidates sleep, stimulus control re-associates the bed with sleep, and cognitive restructuring reduces sleep-related anxiety.</li>
             <li><strong>Benefits are long-lasting</strong>, unlike medication which only works while being taken.</li>
             <li><strong>Digital CBT-I</strong> makes the treatment more accessible and is nearly as effective as in-person therapy.</li>
-            <li><strong>The first 1-2 weeks can be challenging</strong>, but improvement typically follows quickly—persistence is key.</li>
+            <li><strong>The first 1-2 weeks can be challenging</strong>, but improvement typically follows quickly---persistence is key.</li>
             <li><strong>CBT-I works even with comorbid conditions</strong> like depression, anxiety, and chronic pain.</li>
           </ul>
         </ArticleCallout>
@@ -908,7 +908,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You sleep 8 hours but wake exhausted. Your partner says you snore loudly and sometimes stop breathing. You fall asleep during the day despite "full nights" of sleep. These are hallmarks of sleep apnea—a serious disorder affecting 25 million Americans.
+            You sleep 8 hours but wake exhausted. Your partner says you snore loudly and sometimes stop breathing. You fall asleep during the day despite "full nights" of sleep. These are hallmarks of sleep apnea---a serious disorder affecting 25 million Americans.
           </p>
           <p className="mb-6">
             Sleep apnea causes repeated interruptions in breathing during sleep, fragmenting rest and depriving the brain of oxygen <Citation id="1" index={1} source="Mayo Clinic Proceedings" year="2020" tier={5} />. Beyond physical health risks (hypertension, heart disease, stroke), untreated sleep apnea significantly impacts mental health, increasing rates of depression, anxiety, and cognitive decline <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2021" tier={1} />.
@@ -919,7 +919,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
           Obstructive Sleep Apnea: The Most Common Type
         </h2>
         <p className="mb-6">
-          <strong>Obstructive Sleep Apnea (OSA)</strong> occurs when throat muscles relax during sleep, blocking the airway. This causes breathing to stop repeatedly—sometimes hundreds of times per night—for 10 seconds or longer. Each time, the brain briefly wakes you (though you often don't remember it) to restart breathing.
+          <strong>Obstructive Sleep Apnea (OSA)</strong> occurs when throat muscles relax during sleep, blocking the airway. This causes breathing to stop repeatedly---sometimes hundreds of times per night---for 10 seconds or longer. Each time, the brain briefly wakes you (though you often don't remember it) to restart breathing.
         </p>
         <ComparisonTable title="Types of Sleep Apnea" columns={['Type', 'Cause', 'Prevalence']} items={[{feature: 'Obstructive (OSA)', values: ['Airway blockage', '80-90% of cases']}, {feature: 'Central (CSA)', values: ['Brain signal failure', '5-10% of cases']}, {feature: 'Mixed/Complex', values: ['Both mechanisms', '5-10% of cases']}]} />
 
@@ -968,7 +968,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Just as you're about to fall asleep, an overwhelming urge to move your legs jolts you awake. Your legs feel tingly, crawling, aching—relief comes only with movement. This is Restless Leg Syndrome (RLS), a neurological disorder affecting 5-10% of adults.
+            Just as you're about to fall asleep, an overwhelming urge to move your legs jolts you awake. Your legs feel tingly, crawling, aching---relief comes only with movement. This is Restless Leg Syndrome (RLS), a neurological disorder affecting 5-10% of adults.
           </p>
           <p className="mb-6">
             RLS is characterized by an irresistible urge to move the legs, usually accompanied by uncomfortable sensations <Citation id="1" index={1} source="The Lancet Neurology" year="2020" tier={1} />. Symptoms worsen at rest and in the evening, making it difficult to fall asleep or stay seated during activities like movies or flights.
@@ -990,14 +990,14 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Treatment Options
         </h2>
-        <ProgressSteps variant="vertical" steps={[{title: 'Correct Iron Deficiency', description: <p>Check ferritin levels—if low ({'<'}75 μg/L), iron supplementation often improves or resolves RLS.</p>}, {title: 'Dopaminergic Medications', description: <p>Pramipexole, ropinirole—first-line for moderate-severe RLS <Citation id="3" index={3} source="Movement Disorders" year="2020" tier={1} />. Risk: augmentation (worsening symptoms over time).</p>}, {title: 'Alpha-2-Delta Ligands', description: <p>Gabapentin, pregabalin—effective with lower augmentation risk.</p>}, {title: 'Lifestyle Modifications', description: <p>Exercise, massage, warm baths, leg compression, avoiding triggers (caffeine, alcohol, nicotine).</p>}]} />
+        <ProgressSteps variant="vertical" steps={[{title: 'Correct Iron Deficiency', description: <p>Check ferritin levels---if low ({'<'}75 μg/L), iron supplementation often improves or resolves RLS.</p>}, {title: 'Dopaminergic Medications', description: <p>Pramipexole, ropinirole---first-line for moderate-severe RLS <Citation id="3" index={3} source="Movement Disorders" year="2020" tier={1} />. Risk: augmentation (worsening symptoms over time).</p>}, {title: 'Alpha-2-Delta Ligands', description: <p>Gabapentin, pregabalin---effective with lower augmentation risk.</p>}, {title: 'Lifestyle Modifications', description: <p>Exercise, massage, warm baths, leg compression, avoiding triggers (caffeine, alcohol, nicotine).</p>}]} />
 
         <h2 id="mental-health-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           RLS and Mental Health
         </h2>
-        <p className="mb-6">Chronic sleep disruption from RLS increases risk of depression and anxiety <Citation id="4" index={4} source="Journal of Psychosomatic Research" year="2019" tier={1} />. The condition itself is also frustrating and isolating—many people don't understand why you can't sit still or need to pace during meetings or social events.</p>
+        <p className="mb-6">Chronic sleep disruption from RLS increases risk of depression and anxiety <Citation id="4" index={4} source="Journal of Psychosomatic Research" year="2019" tier={1} />. The condition itself is also frustrating and isolating---many people don't understand why you can't sit still or need to pace during meetings or social events.</p>
 
-        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>RLS causes an irresistible urge to move legs</strong>, worsening at rest and in evenings.</li><li><strong>Iron deficiency is a common trigger</strong>—check ferritin levels first.</li><li><strong>Medications are effective</strong>: dopamine agonists or gabapentinoids.</li><li><strong>RLS significantly impacts sleep quality</strong>, leading to insomnia and daytime fatigue.</li><li><strong>Mental health comorbidity is common</strong>: depression and anxiety rates are 2-3x higher.</li></ul></ArticleCallout>
+        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>RLS causes an irresistible urge to move legs</strong>, worsening at rest and in evenings.</li><li><strong>Iron deficiency is a common trigger</strong>---check ferritin levels first.</li><li><strong>Medications are effective</strong>: dopamine agonists or gabapentinoids.</li><li><strong>RLS significantly impacts sleep quality</strong>, leading to insomnia and daytime fatigue.</li><li><strong>Mental health comorbidity is common</strong>: depression and anxiety rates are 2-3x higher.</li></ul></ArticleCallout>
       </>
     ),
   },
@@ -1024,7 +1024,7 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Movies depict narcolepsy as people randomly collapsing into sleep mid-sentence. The reality is more complex—and more challenging. Narcolepsy is a chronic neurological disorder affecting the brain's ability to regulate sleep-wake cycles.
+            Movies depict narcolepsy as people randomly collapsing into sleep mid-sentence. The reality is more complex---and more challenging. Narcolepsy is a chronic neurological disorder affecting the brain's ability to regulate sleep-wake cycles.
           </p>
           <p className="mb-6">
             People with narcolepsy experience excessive daytime sleepiness, sudden muscle weakness (cataplexy), sleep paralysis, and vivid hallucinations <Citation id="1" index={1} source="Nature Reviews Neurology" year="2020" tier={1} />. These symptoms result from the brain's inability to maintain stable wakefulness and prevent REM sleep from intruding into waking life.
@@ -1039,30 +1039,30 @@ export const sleepDisordersCommonProblemsArticlesA: Article[] = [
         <h2 id="core-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Core Symptoms
         </h2>
-        <ArticleTabs tabs={[{id: 'eds', label: 'Excessive Daytime Sleepiness', content: <div><p className="mb-4">Overwhelming, irresistible urge to sleep during the day despite adequate nighttime sleep. Can occur during any activity—driving, eating, talking.</p></div>}, {id: 'cataplexy', label: 'Cataplexy', content: <div><p className="mb-4">Sudden loss of muscle tone triggered by strong emotions (laughter, surprise, anger). Ranges from mild (drooping face) to severe (complete collapse). Only in Type 1.</p></div>}, {id: 'paralysis', label: 'Sleep Paralysis', content: <div><p className="mb-4">Temporary inability to move or speak while falling asleep or waking up. Can be terrifying—you're conscious but can't move.</p></div>}, {id: 'hallucinations', label: 'Hypnagogic Hallucinations', content: <div><p className="mb-4">Vivid, dreamlike experiences while falling asleep or waking. Visual, auditory, or tactile sensations that feel real.</p></div>}]} />
+        <ArticleTabs tabs={[{id: 'eds', label: 'Excessive Daytime Sleepiness', content: <div><p className="mb-4">Overwhelming, irresistible urge to sleep during the day despite adequate nighttime sleep. Can occur during any activity---driving, eating, talking.</p></div>}, {id: 'cataplexy', label: 'Cataplexy', content: <div><p className="mb-4">Sudden loss of muscle tone triggered by strong emotions (laughter, surprise, anger). Ranges from mild (drooping face) to severe (complete collapse). Only in Type 1.</p></div>}, {id: 'paralysis', label: 'Sleep Paralysis', content: <div><p className="mb-4">Temporary inability to move or speak while falling asleep or waking up. Can be terrifying---you're conscious but can't move.</p></div>}, {id: 'hallucinations', label: 'Hypnagogic Hallucinations', content: <div><p className="mb-4">Vivid, dreamlike experiences while falling asleep or waking. Visual, auditory, or tactile sensations that feel real.</p></div>}]} />
 
         <h2 id="cause" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Causes Narcolepsy?
         </h2>
-        <p className="mb-6">Type 1 narcolepsy is caused by loss of hypocretin (orexin)-producing neurons in the hypothalamus <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2019" tier={1} />. Hypocretin regulates wakefulness—without it, the brain can't maintain stable arousal and REM sleep intrudes into waking.</p>
+        <p className="mb-6">Type 1 narcolepsy is caused by loss of hypocretin (orexin)-producing neurons in the hypothalamus <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2019" tier={1} />. Hypocretin regulates wakefulness---without it, the brain can't maintain stable arousal and REM sleep intrudes into waking.</p>
         <p className="mb-6"><strong>Why neurons die:</strong> Likely autoimmune process triggered by genetic predisposition + environmental factor (possibly infection). Type 2 cause is unknown.</p>
 
         <h2 id="diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Diagnosis
         </h2>
-        <p className="mb-6">Requires sleep study (polysomnography) + Multiple Sleep Latency Test (MSLT). MSLT measures how quickly you fall asleep during daytime naps—narcolepsy patients fall asleep in {'<'}8 minutes on average and enter REM sleep during naps (abnormal).</p>
+        <p className="mb-6">Requires sleep study (polysomnography) + Multiple Sleep Latency Test (MSLT). MSLT measures how quickly you fall asleep during daytime naps---narcolepsy patients fall asleep in {'<'}8 minutes on average and enter REM sleep during naps (abnormal).</p>
 
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Treatment
         </h2>
-        <ProgressSteps variant="vertical" steps={[{title: 'Wakefulness-Promoting Agents', description: <p>Modafinil, armodafinil, solriamfetol—reduce daytime sleepiness <Citation id="4" index={4} source="American Academy of Sleep Medicine" year="2021" tier={4} />.</p>}, {title: 'Sodium Oxybate', description: <p>Highly effective for both sleepiness and cataplexy. Taken twice nightly (requires waking to take second dose).</p>}, {title: 'Antidepressants', description: <p>SSRIs, SNRIs—can reduce cataplexy, sleep paralysis, and hallucinations.</p>}, {title: 'Scheduled Naps', description: <p>20-minute naps 2-3x/day can reduce sleepiness attacks.</p>}]} />
+        <ProgressSteps variant="vertical" steps={[{title: 'Wakefulness-Promoting Agents', description: <p>Modafinil, armodafinil, solriamfetol---reduce daytime sleepiness <Citation id="4" index={4} source="American Academy of Sleep Medicine" year="2021" tier={4} />.</p>}, {title: 'Sodium Oxybate', description: <p>Highly effective for both sleepiness and cataplexy. Taken twice nightly (requires waking to take second dose).</p>}, {title: 'Antidepressants', description: <p>SSRIs, SNRIs---can reduce cataplexy, sleep paralysis, and hallucinations.</p>}, {title: 'Scheduled Naps', description: <p>20-minute naps 2-3x/day can reduce sleepiness attacks.</p>}]} />
 
         <h2 id="psychosocial-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Living with Narcolepsy
         </h2>
         <p className="mb-6">Narcolepsy profoundly impacts quality of life <Citation id="3" index={3} source="Sleep Medicine" year="2020" tier={1} />. Many face stigma ("you're just lazy"), employment discrimination, and social isolation. Depression and anxiety rates are significantly elevated.</p>
 
-        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Narcolepsy is a neurological disorder</strong> caused by loss of hypocretin neurons (Type 1) or unknown mechanisms (Type 2).</li><li><strong>Core symptom is excessive daytime sleepiness</strong>—not just "tiredness" but irresistible sleep attacks.</li><li><strong>Cataplexy (sudden muscle weakness)</strong> is specific to Type 1 and triggered by strong emotions.</li><li><strong>Treatment combines medication and behavioral strategies</strong>—no cure exists, but symptoms are manageable.</li><li><strong>Psychosocial impact is significant</strong>: stigma, employment challenges, and mental health comorbidity are common.</li></ul></ArticleCallout>
+        <ArticleCallout variant="key-takeaway"><ul className="list-disc pl-5 space-y-2"><li><strong>Narcolepsy is a neurological disorder</strong> caused by loss of hypocretin neurons (Type 1) or unknown mechanisms (Type 2).</li><li><strong>Core symptom is excessive daytime sleepiness</strong>---not just "tiredness" but irresistible sleep attacks.</li><li><strong>Cataplexy (sudden muscle weakness)</strong> is specific to Type 1 and triggered by strong emotions.</li><li><strong>Treatment combines medication and behavioral strategies</strong>---no cure exists, but symptoms are manageable.</li><li><strong>Psychosocial impact is significant</strong>: stigma, employment challenges, and mental health comorbidity are common.</li></ul></ArticleCallout>
       </>
     ),
   },

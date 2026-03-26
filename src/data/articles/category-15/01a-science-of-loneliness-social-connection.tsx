@@ -111,10 +111,10 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           Loneliness is the distressing feeling that arises when your social needs are not being met <Citation id="2" index={2} source="Cognition and Emotion" year="2018" tier={1} />. It's important to understand that loneliness is:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Subjective</strong> — It's about how you feel, not your objective social situation</li>
-          <li><strong>Perceived</strong> — It's the discrepancy between desired and actual connection</li>
-          <li><strong>Universal</strong> — Everyone experiences loneliness at some point in life</li>
-          <li><strong>Painful</strong> — It activates the same brain regions as physical pain</li>
+          <li><strong>Subjective</strong> --- It's about how you feel, not your objective social situation</li>
+          <li><strong>Perceived</strong> --- It's the discrepancy between desired and actual connection</li>
+          <li><strong>Universal</strong> --- Everyone experiences loneliness at some point in life</li>
+          <li><strong>Painful</strong> --- It activates the same brain regions as physical pain</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
@@ -125,7 +125,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           Being Alone vs. Feeling Lonely
         </h2>
         <p className="mb-6">
-          The distinction between being alone and feeling lonely is critical. Being alone is an objective state — you are physically by yourself. Feeling lonely is a subjective experience that can occur regardless of how many people surround you <Citation id="4" index={4} source="Trends in Cognitive Sciences" year="2009" tier={1} />.
+          The distinction between being alone and feeling lonely is critical. Being alone is an objective state --- you are physically by yourself. Feeling lonely is a subjective experience that can occur regardless of how many people surround you <Citation id="4" index={4} source="Trends in Cognitive Sciences" year="2009" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -212,7 +212,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           The pain of loneliness is not metaphorical. Brain imaging studies show that social rejection and loneliness activate the same neural pathways as physical pain <Citation id="7" index={7} source="Current Biology" year="2018" tier={1} />. This is because social connection was essential for survival in our evolutionary past.
         </p>
         <p className="mb-6">
-          When our ancestors were separated from the group, they faced increased risk of predation, starvation, and death. The brain evolved to treat social disconnection as a threat — generating pain signals that motivate us to reconnect with others <Citation id="2" index={2} source="Cognition and Emotion" year="2018" tier={1} />.
+          When our ancestors were separated from the group, they faced increased risk of predation, starvation, and death. The brain evolved to treat social disconnection as a threat --- generating pain signals that motivate us to reconnect with others <Citation id="2" index={2} source="Cognition and Emotion" year="2018" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -243,7 +243,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     id: catId(2),
     slug: 'neuroscience-of-social-connection-why-brain-needs-other-people',
     title: 'The Neuroscience of Social Connection: Why Your Brain Needs Other People',
-    description: 'Discover how social connection shapes brain structure, chemistry, and function — and why isolation triggers the same threat response as physical danger.',
+    description: 'Discover how social connection shapes brain structure, chemistry, and function --- and why isolation triggers the same threat response as physical danger.',
     image: "/images/articles/cat15/cover-002.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
     readTime: 8,
@@ -332,7 +332,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
             Your brain is fundamentally social. It evolved not in isolation, but in groups. Every neural circuit, neurotransmitter system, and brain structure was shaped by hundreds of thousands of years of social living.
           </p>
           <p className="mb-6">
-            Recent neuroscience research reveals that social connection is not a luxury — it's a biological imperative hardwired into your nervous system <Citation id="1" index={1} source="Annual Review of Psychology" year="2009" tier={1} />. Understanding how your brain processes social connection helps explain why isolation feels so painful and why relationships are essential for mental health.
+            Recent neuroscience research reveals that social connection is not a luxury --- it's a biological imperative hardwired into your nervous system <Citation id="1" index={1} source="Annual Review of Psychology" year="2009" tier={1} />. Understanding how your brain processes social connection helps explain why isolation feels so painful and why relationships are essential for mental health.
           </p>
         </div>
 
@@ -346,7 +346,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
         <StatCard
           stats={[
             { value: 20, suffix: '%', label: 'of brain volume devoted to social processing' },
-            { value: 150, suffix: '', label: 'Dunbar number — cognitive limit of stable relationships' },
+            { value: 150, suffix: '', label: 'Dunbar number --- cognitive limit of stable relationships' },
             { value: 40, suffix: '%', label: 'increase in cortisol from chronic social isolation' },
           ]}
           source="Nature Neuroscience, 2012; Cell, 2020"
@@ -505,7 +505,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           Mirror neurons are brain cells that fire both when you perform an action and when you watch someone else perform the same action <Citation id="9" index={9} source="Trends in Cognitive Sciences" year="2004" tier={1} />. This neural mirroring is thought to be the foundation of empathy, imitation, and understanding others" intentions.
         </p>
         <p className="mb-6">
-          When you see someone smile, your mirror neurons activate the same neural circuits that fire when you smile. This allows you to literally feel what others are experiencing — the neural basis of emotional resonance and connection.
+          When you see someone smile, your mirror neurons activate the same neural circuits that fire when you smile. This allows you to literally feel what others are experiencing --- the neural basis of emotional resonance and connection.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -527,7 +527,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          A 2019 study in <em>JAMA Psychiatry</em> found that older adults with limited social contact showed accelerated brain atrophy — essentially, their brains aged faster <Citation id="8" index={8} source="JAMA Psychiatry" year="2019" tier={1} />.
+          A 2019 study in <em>JAMA Psychiatry</em> found that older adults with limited social contact showed accelerated brain atrophy --- essentially, their brains aged faster <Citation id="8" index={8} source="JAMA Psychiatry" year="2019" tier={1} />.
         </p>
 
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -595,7 +595,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     id: catId(3),
     slug: 'health-impacts-of-loneliness-why-isolation-dangerous-as-smoking',
     title: 'The Health Impacts of Loneliness: Why Isolation Is as Dangerous as Smoking',
-    description: "Loneliness is not just an emotional experience — it's a major public health crisis that increases mortality risk, weakens immunity, and accelerates aging.",
+    description: "Loneliness is not just an emotional experience --- it's a major public health crisis that increases mortality risk, weakens immunity, and accelerates aging.",
     image: '/images/articles/cat15/cover-003.svg',
     category: CATEGORY_LONELINESS_CONNECTION,
     readTime: 9,
@@ -689,7 +689,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In 2015, a landmark meta-analysis of 70 studies involving over 3.4 million people reached a startling conclusion: loneliness and social isolation increase your risk of early death by 26-32% — comparable to smoking 15 cigarettes a day.
+            In 2015, a landmark meta-analysis of 70 studies involving over 3.4 million people reached a startling conclusion: loneliness and social isolation increase your risk of early death by 26-32% --- comparable to smoking 15 cigarettes a day.
           </p>
           <p className="mb-6">
             This finding transformed how the medical community views loneliness. It's no longer seen as merely an emotional state, but as a serious public health crisis with measurable, devastating consequences for physical health <Citation id="1" index={1} source="Perspectives on Psychological Science" year="2015" tier={1} />.
@@ -776,7 +776,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           Weakened Immune Function
         </h2>
         <p className="mb-6">
-          Loneliness doesn't just affect your heart — it compromises your body's ability to fight off infections and disease <Citation id="8" index={8} source="Immunity & Ageing" year="2015" tier={1} />. Studies show that socially isolated individuals have:
+          Loneliness doesn't just affect your heart --- it compromises your body's ability to fight off infections and disease <Citation id="8" index={8} source="Immunity & Ageing" year="2015" tier={1} />. Studies show that socially isolated individuals have:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Reduced natural killer cell activity (important for fighting viruses and cancer)</li>
@@ -1149,7 +1149,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
                     Modern communities are often designed for cars, not people. Sprawling suburbs, long commutes, and lack of public gathering spaces reduce spontaneous social encounters.
                   </p>
                   <p>
-                    The decline of "third places" — spaces that aren't home or work, like community centers, libraries, cafes, and parks — means fewer opportunities for social connection.
+                    The decline of "third places" --- spaces that aren't home or work, like community centers, libraries, cafes, and parks --- means fewer opportunities for social connection.
                   </p>
                 </div>
               ),
@@ -1297,7 +1297,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           What This Advisory Means in Practice
         </h2>
         <p className="mb-6">
-          Surgeon General advisories are rare — typically issued only for the most urgent public health threats (past topics include smoking, HIV/AIDS, and opioid addiction). This advisory signals that:
+          Surgeon General advisories are rare --- typically issued only for the most urgent public health threats (past topics include smoking, HIV/AIDS, and opioid addiction). This advisory signals that:
         </p>
 
         <ComparisonTable
@@ -1320,9 +1320,9 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           While the advisory has been widely praised, some critiques have emerged:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Lack of binding action</strong> — The advisory is not law or policy. It recommends action but does not mandate funding or implementation.</li>
-          <li><strong>Individual vs. structural focus</strong> — Some critics argue it places too much emphasis on individual behavior change rather than addressing root causes like economic inequality and systemic racism.</li>
-          <li><strong>Technology blame</strong> — While social media is mentioned, the advisory doesn't fully address how tech companies profit from addictive design that undermines connection.</li>
+          <li><strong>Lack of binding action</strong> --- The advisory is not law or policy. It recommends action but does not mandate funding or implementation.</li>
+          <li><strong>Individual vs. structural focus</strong> --- Some critics argue it places too much emphasis on individual behavior change rather than addressing root causes like economic inequality and systemic racism.</li>
+          <li><strong>Technology blame</strong> --- While social media is mentioned, the advisory doesn't fully address how tech companies profit from addictive design that undermines connection.</li>
         </ul>
 
         <h2 id="whats-next" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1338,7 +1338,7 @@ export const scienceOfLonelinessArticlesA: Article[] = [
           <li>Corporate wellness programs incorporating connection initiatives</li>
         </ul>
         <p className="mb-6">
-          The question now is whether this moment of attention translates into sustained investment and meaningful change — or fades as public attention shifts to the next crisis.
+          The question now is whether this moment of attention translates into sustained investment and meaningful change --- or fades as public attention shifts to the next crisis.
         </p>
       </>
     ),
@@ -1546,15 +1546,15 @@ export const scienceOfLonelinessArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Avoiding connection out of fear</strong> — You turn down social opportunities not because you need rest, but because social interaction feels threatening or anxiety-provoking</li>
-          <li><strong>Prolonged isolation</strong> — Days or weeks pass without meaningful human contact</li>
-          <li><strong>Rumination and negative thinking</strong> — Alone time is dominated by self-criticism, worry, or dwelling on problems without resolution</li>
-          <li><strong>Loss of social skills</strong> — Extended isolation makes social interaction feel increasingly awkward or difficult, creating a vicious cycle</li>
-          <li><strong>Declining self-care</strong> — You stop maintaining routines, hygiene, or healthy habits</li>
+          <li><strong>Avoiding connection out of fear</strong> --- You turn down social opportunities not because you need rest, but because social interaction feels threatening or anxiety-provoking</li>
+          <li><strong>Prolonged isolation</strong> --- Days or weeks pass without meaningful human contact</li>
+          <li><strong>Rumination and negative thinking</strong> --- Alone time is dominated by self-criticism, worry, or dwelling on problems without resolution</li>
+          <li><strong>Loss of social skills</strong> --- Extended isolation makes social interaction feel increasingly awkward or difficult, creating a vicious cycle</li>
+          <li><strong>Declining self-care</strong> --- You stop maintaining routines, hygiene, or healthy habits</li>
         </ul>
 
         <ArticleCallout variant="warning">
-          <p>If alone time consistently leaves you feeling worse — more anxious, depressed, or disconnected — it may have crossed from solitude into harmful isolation. Consider reaching out for support.</p>
+          <p>If alone time consistently leaves you feeling worse --- more anxious, depressed, or disconnected --- it may have crossed from solitude into harmful isolation. Consider reaching out for support.</p>
         </ArticleCallout>
 
         <h2 id="healthy-balance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

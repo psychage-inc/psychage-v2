@@ -95,7 +95,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know you should put your phone away before bed. But you scroll anyway—just one more video, one more post. An hour later, you're still awake, mind racing, unable to fall asleep. This isn't willpower failure. It's biology. Screens at night hijack the systems that regulate sleep.
+            You know you should put your phone away before bed. But you scroll anyway---just one more video, one more post. An hour later, you're still awake, mind racing, unable to fall asleep. This isn't willpower failure. It's biology. Screens at night hijack the systems that regulate sleep.
           </p>
           <p className="mb-6">
             A 2022 meta-analysis of 49 studies found that screen use within two hours of bedtime delays sleep onset by an average of 30 minutes and reduces total sleep time by 45 minutes per night <Citation id="2" index={2} source="Sleep Medicine" year="2022" tier={1} />. The effects are stronger in children and adolescents, whose brains are more sensitive to light and stimulation.
@@ -124,7 +124,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           The Blue Light Problem
         </h2>
         <p className="mb-6">
-          Your brain uses light to regulate the circadian rhythm—your 24-hour sleep-wake cycle. When your eyes detect light, especially blue wavelengths (450-480 nanometers), your brain interprets this as daytime and suppresses melatonin, the hormone that makes you sleepy.
+          Your brain uses light to regulate the circadian rhythm---your 24-hour sleep-wake cycle. When your eyes detect light, especially blue wavelengths (450-480 nanometers), your brain interprets this as daytime and suppresses melatonin, the hormone that makes you sleepy.
         </p>
         <p className="mb-6">
           Screens emit significant blue light. A 2021 systematic review found that two hours of evening screen time suppresses melatonin by 22% on average, with peak suppression reaching 50% in some individuals <Citation id="1" index={1} source="Sleep Medicine Reviews" year="2021" tier={1} />. Your brain thinks it's midday when it should be preparing for sleep.
@@ -140,7 +140,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="did-you-know">
-          <p>Blue light isn't inherently harmful—it's beneficial during the day, helping you stay alert. The problem is timing. Getting blue light exposure in the morning helps set your circadian rhythm. Getting it at night confuses your body about when to sleep.</p>
+          <p>Blue light isn't inherently harmful---it's beneficial during the day, helping you stay alert. The problem is timing. Getting blue light exposure in the morning helps set your circadian rhythm. Getting it at night confuses your body about when to sleep.</p>
         </ArticleCallout>
 
         <h2 id="psychological-arousal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -161,7 +161,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Research specifically on social media scrolling found that participants who spent 30 minutes on Instagram before bed took 14 minutes longer to fall asleep than those who didn't use screens <Citation id="7" index={7} source="Computers in Human Behavior" year="2021" tier={1} />. The effect was mediated by rumination—participants couldn't stop thinking about what they'd seen.
+          Research specifically on social media scrolling found that participants who spent 30 minutes on Instagram before bed took 14 minutes longer to fall asleep than those who didn't use screens <Citation id="7" index={7} source="Computers in Human Behavior" year="2021" tier={1} />. The effect was mediated by rumination---participants couldn't stop thinking about what they'd seen.
         </p>
 
         <h2 id="who-affected-most" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -257,7 +257,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
             },
             {
               title: `Use blue-light filters (but don't rely on them)`,
-              description: <p>Enable Night Shift (iOS) or Night Light (Android) starting at sunset. Blue-light blocking glasses also help. But these only address part of the problem—psychological arousal remains <Citation id="8" index={8} source="Chronobiology International" year="2020" tier={1} />.</p>,
+              description: <p>Enable Night Shift (iOS) or Night Light (Android) starting at sunset. Blue-light blocking glasses also help. But these only address part of the problem---psychological arousal remains <Citation id="8" index={8} source="Chronobiology International" year="2020" tier={1} />.</p>,
             },
             {
               title: 'Replace scrolling with a wind-down routine',
@@ -422,7 +422,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The dopamine detox trend promises to "reset your brain" by avoiding all pleasurable activities—no social media, no music, no tasty food, sometimes not even conversation or eye contact. Advocates claim this resets your dopamine receptors and restores your ability to enjoy simple things. It sounds scientific. But is it?
+            The dopamine detox trend promises to "reset your brain" by avoiding all pleasurable activities---no social media, no music, no tasty food, sometimes not even conversation or eye contact. Advocates claim this resets your dopamine receptors and restores your ability to enjoy simple things. It sounds scientific. But is it?
           </p>
           <p className="mb-6">
             The short answer: no. Dopamine doesn't work the way the trend claims, and you can't 'detox' from it. A 2022 review in <em>Frontiers in Psychology</em> analyzed the neuroscience behind dopamine fasting and concluded it's based on fundamental misunderstandings of brain chemistry <Citation id="2" index={2} source="Frontiers in Psychology" year="2022" tier={1} />. But that doesn't mean the underlying concern about overstimulation is wrong.
@@ -433,7 +433,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           What Dopamine Actually Is
         </h2>
         <p className="mb-6">
-          Dopamine is a neurotransmitter—a chemical messenger in your brain. It plays multiple roles, but its most famous function is in the reward system. When you do something your brain interprets as beneficial for survival, dopamine is released, creating a sense of pleasure and motivation to repeat the behavior.
+          Dopamine is a neurotransmitter---a chemical messenger in your brain. It plays multiple roles, but its most famous function is in the reward system. When you do something your brain interprets as beneficial for survival, dopamine is released, creating a sense of pleasure and motivation to repeat the behavior.
         </p>
         <p className="mb-6">
           Here's where the dopamine detox trend gets it wrong:
@@ -462,7 +462,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           Dopamine fasting emerged from Silicon Valley around 2019, popularized by psychologist Dr. Cameron Sepah. His original concept was more modest: temporarily abstaining from <em>specific</em> compulsive behaviors (social media, gaming, junk food) to reduce automatic reward-seeking.
         </p>
         <p className="mb-6">
-          But as the trend spread, it mutated into something more extreme. Some versions advocate avoiding all pleasure for 24 hours or longer—no talking, no eye contact, no enjoyment of any kind. This extreme version has no scientific basis and misrepresents how dopamine works.
+          But as the trend spread, it mutated into something more extreme. Some versions advocate avoiding all pleasure for 24 hours or longer---no talking, no eye contact, no enjoyment of any kind. This extreme version has no scientific basis and misrepresents how dopamine works.
         </p>
 
         <h2 id="what-is-real" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -472,7 +472,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           While dopamine detox is pseudoscience, the concern about overstimulation has merit. Modern life provides constant, intense dopamine hits: social media notifications, junk food, streaming video, online shopping. This isn't how human brains evolved.
         </p>
         <p className="mb-6">
-          Research shows that chronic exposure to highly rewarding stimuli can lead to <strong>tolerance</strong>—you need more stimulation to feel the same pleasure <Citation id="7" index={7} source="Current Opinion in Behavioral Sciences" year="2021" tier={1} />. This is similar to drug tolerance. Your brain's reward system adapts by downregulating dopamine receptors.
+          Research shows that chronic exposure to highly rewarding stimuli can lead to <strong>tolerance</strong>---you need more stimulation to feel the same pleasure <Citation id="7" index={7} source="Current Opinion in Behavioral Sciences" year="2021" tier={1} />. This is similar to drug tolerance. Your brain's reward system adapts by downregulating dopamine receptors.
         </p>
 
         <StatCard
@@ -509,7 +509,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
               id: 'reduce-novelty',
               title: 'Reduce Novelty-Seeking',
               content: (
-                <p>Apps are designed to provide unpredictable rewards (variable reinforcement), which is the most addictive pattern. Breaking the habit of checking for the next new thing helps restore baseline reward sensitivity. This doesn't require avoiding all pleasure—just breaking the compulsive checking cycle.</p>
+                <p>Apps are designed to provide unpredictable rewards (variable reinforcement), which is the most addictive pattern. Breaking the habit of checking for the next new thing helps restore baseline reward sensitivity. This doesn't require avoiding all pleasure---just breaking the compulsive checking cycle.</p>
               ),
             },
             {
@@ -570,7 +570,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
             },
             {
               title: 'Take targeted breaks',
-              description: <p>Choose 1-2 specific behaviors to reduce or eliminate for 1-4 weeks. Not all pleasure—just the ones that feel out of control.</p>,
+              description: <p>Choose 1-2 specific behaviors to reduce or eliminate for 1-4 weeks. Not all pleasure---just the ones that feel out of control.</p>,
             },
             {
               title: 'Replace with effortful rewards',
@@ -615,7 +615,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="The Real Takeaway">
-          <p>Dopamine detox is based on misunderstandings of neuroscience. You can't detox from a neurotransmitter your brain makes constantly, and avoiding all pleasure doesn't reset anything. But the underlying concern—that modern life overstimulates our reward systems—has merit. Instead of extreme fasting, take targeted breaks from specific compulsive behaviors, add friction to automatic checking, and practice intentional engagement with activities that require effort and provide genuine satisfaction. That's what the research actually supports.</p>
+          <p>Dopamine detox is based on misunderstandings of neuroscience. You can't detox from a neurotransmitter your brain makes constantly, and avoiding all pleasure doesn't reset anything. But the underlying concern---that modern life overstimulates our reward systems---has merit. Instead of extreme fasting, take targeted breaks from specific compulsive behaviors, add friction to automatic checking, and practice intentional engagement with activities that require effort and provide genuine satisfaction. That's what the research actually supports.</p>
         </ArticleCallout>
       </>
     ),
@@ -690,7 +690,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
             Your phone's default settings are designed to maximize engagement, not your well-being. Every notification, every colorful app icon, every placement decision is calibrated to capture attention and keep you checking. But you can reconfigure your device to work for you instead of against you.
           </p>
           <p className="mb-6">
-            A 2022 experimental study found that participants who customized their phones using mental-health-focused settings reduced screen time by 38% and reported significant improvements in anxiety, focus, and sleep quality <Citation id="1" index={1} source="Computers in Human Behavior" year="2022" tier={1} />. The changes didn't require willpower—they changed the environment to make healthier choices easier.
+            A 2022 experimental study found that participants who customized their phones using mental-health-focused settings reduced screen time by 38% and reported significant improvements in anxiety, focus, and sleep quality <Citation id="1" index={1} source="Computers in Human Behavior" year="2022" tier={1} />. The changes didn't require willpower---they changed the environment to make healthier choices easier.
           </p>
         </div>
 
@@ -708,7 +708,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
         </ol>
 
         <p className="mb-6">
-          What follows is a comprehensive setup guide for both iOS and Android. You don't need to implement everything at once—pick 3-5 changes to start.
+          What follows is a comprehensive setup guide for both iOS and Android. You don't need to implement everything at once---pick 3-5 changes to start.
         </p>
 
         <h2 id="step1-notifications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -736,7 +736,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
             <li>Phone calls and texts (from contacts only, not everyone)</li>
             <li>Calendar reminders</li>
             <li>Critical apps (banking fraud alerts, home security)</li>
-            <li>Apps you use for work (Slack, email—during work hours only)</li>
+            <li>Apps you use for work (Slack, email---during work hours only)</li>
           </ul>
 
           <p className="font-semibold">Turn OFF notifications for:</p>
@@ -805,7 +805,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           steps={[
             {
               title: 'Delete social media apps (or move to last page)',
-              description: <p>Instagram, TikTok, Twitter, Facebook—delete them or move to the farthest page. Use the mobile website instead (it's less engaging by design). If you must keep apps, bury them in folders.</p>,
+              description: <p>Instagram, TikTok, Twitter, Facebook---delete them or move to the farthest page. Use the mobile website instead (it's less engaging by design). If you must keep apps, bury them in folders.</p>,
             },
             {
               title: 'Keep only tools on your home screen',
@@ -938,9 +938,9 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           <ul className="list-disc pl-5 space-y-2">
             <li>Review Screen Time/Digital Wellbeing report</li>
             <li>Delete apps you haven't used in a week</li>
-            <li>Check notification settings—did any new apps turn on alerts?</li>
+            <li>Check notification settings---did any new apps turn on alerts?</li>
             <li>Evaluate whether time limits are working or need adjustment</li>
-            <li>Clean up home screen—did any distracting apps creep back?</li>
+            <li>Clean up home screen---did any distracting apps creep back?</li>
             <li>Ask: What worked this week? What needs to change?</li>
           </ul>
         </ArticleCallout>
@@ -949,7 +949,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           Expect an Adjustment Period
         </h2>
         <p className="mb-6">
-          These changes will feel restrictive at first. You'll reach for your phone out of habit and find the app you wanted is buried or time-limited. This discomfort is the point—it's breaking automatic behavior.
+          These changes will feel restrictive at first. You'll reach for your phone out of habit and find the app you wanted is buried or time-limited. This discomfort is the point---it's breaking automatic behavior.
         </p>
         <p className="mb-6">
           Research shows the adjustment period lasts about 2 weeks. After that, the new configuration feels normal, and most people don't want to go back to their old setup <Citation id="1" index={1} source="Computers in Human Behavior" year="2022" tier={1} />.
@@ -1094,7 +1094,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
               id: 'tool-management',
               title: '3. Tool Management Overhead',
               content: (
-                <p>Each tool requires setup, learning, updates, troubleshooting, and integration with other tools. This is meta-work—work about work—that doesn't contribute to output. Research shows that workers with 7+ productivity tools spend 2+ hours per day on tool management <Citation id="4" index={4} source="Computers in Human Behavior" year="2022" tier={1} />.</p>
+                <p>Each tool requires setup, learning, updates, troubleshooting, and integration with other tools. This is meta-work---work about work---that doesn't contribute to output. Research shows that workers with 7+ productivity tools spend 2+ hours per day on tool management <Citation id="4" index={4} source="Computers in Human Behavior" year="2022" tier={1} />.</p>
               ),
             },
             {
@@ -1189,7 +1189,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           Shift to Async-First Communication
         </h2>
         <p className="mb-6">
-          Much of the productivity paradox stems from real-time communication expectations. Async-first work—where communication doesn't require immediate response—addresses this <Citation id="6" index={6} source="Harvard Business Review" year="2022" tier={3} />.
+          Much of the productivity paradox stems from real-time communication expectations. Async-first work---where communication doesn't require immediate response---addresses this <Citation id="6" index={6} source="Harvard Business Review" year="2022" tier={3} />.
         </p>
 
         <ComparisonTable
@@ -1217,7 +1217,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           <ol className="list-decimal pl-5 space-y-3">
             <li><strong>Default to "no" for new tools.</strong> The burden of proof is on the tool to justify its existence in your stack.</li>
             <li><strong>Batch-process tool interactions.</strong> Check Slack 3x/day, not constantly. Process email twice per day. Don't stay logged in.</li>
-            <li><strong>Turn off all non-critical notifications.</strong> Communication tools should not interrupt you—you should check them on your schedule.</li>
+            <li><strong>Turn off all non-critical notifications.</strong> Communication tools should not interrupt you---you should check them on your schedule.</li>
             <li><strong>Use single-purpose tools.</strong> Apps that try to do everything (all-in-one productivity suites) often do nothing well. Specialized, focused tools are better.</li>
             <li><strong>Choose tools with minimal friction.</strong> If a tool requires extensive setup, training, or maintenance, the overhead may exceed the benefit.</li>
             <li><strong>Prefer simple over feature-rich.</strong> A text file can be a to-do list. You don't need AI-powered task prediction and 47 integrations.</li>
@@ -1250,7 +1250,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="Escape the Paradox">
-          <p>The productivity paradox is real: more tools often mean less output. Context-switching, notification overload, tool management overhead, and always-on expectations consume time and attention without delivering proportional value. The solution is counterintuitive—use fewer tools, not more. Audit your stack, consolidate ruthlessly, resist new tool additions, and shift toward async-first work. Simplicity isn't a sacrifice. It's the path to actually getting things done.</p>
+          <p>The productivity paradox is real: more tools often mean less output. Context-switching, notification overload, tool management overhead, and always-on expectations consume time and attention without delivering proportional value. The solution is counterintuitive---use fewer tools, not more. Audit your stack, consolidate ruthlessly, resist new tool additions, and shift toward async-first work. Simplicity isn't a sacrifice. It's the path to actually getting things done.</p>
         </ArticleCallout>
       </>
     ),
@@ -1333,7 +1333,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
             Screen time rules are easy to set and hard to enforce. Parents say "no phones at dinner," then check work email at the table. Kids agree to limits, then negotiate exceptions until the rule dissolves. Without a clear, agreed-upon framework, digital boundaries become a source of constant conflict.
           </p>
           <p className="mb-6">
-            Research shows that families with explicit technology agreements have healthier screen time patterns, better communication, and less parent-child conflict than those relying on ad-hoc rules <Citation id="1" index={1} source="Pediatrics" year="2022" tier={1} />. The key isn't strictness—it's clarity, consistency, and collaboration.
+            Research shows that families with explicit technology agreements have healthier screen time patterns, better communication, and less parent-child conflict than those relying on ad-hoc rules <Citation id="1" index={1} source="Pediatrics" year="2022" tier={1} />. The key isn't strictness---it's clarity, consistency, and collaboration.
           </p>
         </div>
 
@@ -1551,7 +1551,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-3">
           <li><strong>Young children (5-8):</strong> Keep it simple. Focus on screen-free zones and times. Use visual reminders (e.g., a basket for devices at dinner). Explain rules in terms they understand ("Screens hurt sleep, so we put them away before bed").</li>
-          <li><strong>Pre-teens (9-12):</strong> Involve them in creating the agreement. They can understand cause-and-effect and appreciate having input. Start teaching digital citizenship—online kindness, privacy, recognizing ads.</li>
+          <li><strong>Pre-teens (9-12):</strong> Involve them in creating the agreement. They can understand cause-and-effect and appreciate having input. Start teaching digital citizenship---online kindness, privacy, recognizing ads.</li>
           <li><strong>Teens (13-17):</strong> Give them significant autonomy within clear boundaries. Focus on values rather than rigid rules. Discuss the "why" behind limits. Research shows teens respond better to explanation and negotiation than to commands <Citation id="3" index={3} source="Developmental Psychology" year="2020" tier={1} />.</li>
         </ul>
 
@@ -1559,7 +1559,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
           Enforcement: Consistency Is Everything
         </h2>
         <p className="mb-6">
-          The best-designed agreement fails without consistent enforcement. Research shows that inconsistent enforcement is worse than having no rules at all—it breeds confusion and resentment <Citation id="7" index={7} source="Child Development" year="2021" tier={1} />.
+          The best-designed agreement fails without consistent enforcement. Research shows that inconsistent enforcement is worse than having no rules at all---it breeds confusion and resentment <Citation id="7" index={7} source="Child Development" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Tips for consistency:
@@ -1597,7 +1597,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="Start Today">
-          <p>Digital boundaries don't have to be a battleground. Create a collaborative family technology agreement that applies to everyone, focuses on context over quantity, builds in flexibility, and gets revised regularly. The American Academy of Pediatrics provides a free Family Media Plan tool to get you started. Schedule a family meeting this week. An hour of planning prevents months of conflict. Your family's relationship with technology—and with each other—will improve.</p>
+          <p>Digital boundaries don't have to be a battleground. Create a collaborative family technology agreement that applies to everyone, focuses on context over quantity, builds in flexibility, and gets revised regularly. The American Academy of Pediatrics provides a free Family Media Plan tool to get you started. Schedule a family meeting this week. An hour of planning prevents months of conflict. Your family's relationship with technology---and with each other---will improve.</p>
         </ArticleCallout>
       </>
     ),

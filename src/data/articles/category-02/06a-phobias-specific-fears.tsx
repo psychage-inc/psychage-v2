@@ -23,7 +23,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     description: 'Explore the difference between everyday fears and clinical phobias, what makes phobias so persistent, and why they feel irrational yet overwhelming.',
     image: "/images/articles/cat02/cover-051.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -98,10 +98,10 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know the fear is irrational. You know the spider in the corner can't hurt you, that the airplane is statistically safer than your car, that the elevator won't suddenly plummet. But knowing doesn't matter. Your heart races, your palms sweat, your mind screams danger — and you can't logic your way out of it.
+            You know the fear is irrational. You know the spider in the corner can't hurt you, that the airplane is statistically safer than your car, that the elevator won't suddenly plummet. But knowing doesn't matter. Your heart races, your palms sweat, your mind screams danger --- and you can't logic your way out of it.
           </p>
           <p className="mb-6">
-            This is the paradox of phobias: intense, automatic fear responses to specific objects or situations that most people find harmless. Phobias are more than just being scared — they're one of the most common anxiety disorders, affecting about 12% of people at some point in their lives <Citation id="1" index={1} source="Annual Review of Clinical Psychology" year="2018" tier={1} />.
+            This is the paradox of phobias: intense, automatic fear responses to specific objects or situations that most people find harmless. Phobias are more than just being scared --- they're one of the most common anxiety disorders, affecting about 12% of people at some point in their lives <Citation id="1" index={1} source="Annual Review of Clinical Psychology" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           What Is a Phobia?
         </h2>
         <p className="mb-6">
-          A phobia is an intense, persistent fear of a specific object, situation, or activity that is disproportionate to the actual danger <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={4} />. It's not just dislike or nervousness — it's a level of fear that:
+          A phobia is an intense, persistent fear of a specific object, situation, or activity that is disproportionate to the actual danger <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={4} />. It's not just dislike or nervousness --- it's a level of fear that:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -166,7 +166,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Fear of animals or insects — spiders, snakes, dogs, birds, mice. These often begin in childhood and may have evolutionary roots (fears of creatures that historically posed threats).
+                    Fear of animals or insects --- spiders, snakes, dogs, birds, mice. These often begin in childhood and may have evolutionary roots (fears of creatures that historically posed threats).
                   </p>
                   <p>
                     Common examples: Arachnophobia (spiders), ophidiophobia (snakes), cynophobia (dogs).
@@ -180,7 +180,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Fear of natural phenomena — heights, storms, water, darkness. These also often start young and can be linked to traumatic experiences or evolutionary preparedness.
+                    Fear of natural phenomena --- heights, storms, water, darkness. These also often start young and can be linked to traumatic experiences or evolutionary preparedness.
                   </p>
                   <p>
                     Common examples: Acrophobia (heights), aquaphobia (water), astraphobia (thunder/lightning).
@@ -208,7 +208,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Fear of specific situations — flying, driving, enclosed spaces, bridges. These often develop in the mid-20s and may be triggered by a panic attack in that situation.
+                    Fear of specific situations --- flying, driving, enclosed spaces, bridges. These often develop in the mid-20s and may be triggered by a panic attack in that situation.
                   </p>
                   <p>
                     Common examples: Aviophobia (flying), claustrophobia (enclosed spaces), driving phobia.
@@ -222,7 +222,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Phobias that don't fit neatly into the above categories — vomiting, choking, loud noises, costumed characters, clowns. These are often less understood but just as impairing.
+                    Phobias that don't fit neatly into the above categories --- vomiting, choking, loud noises, costumed characters, clowns. These are often less understood but just as impairing.
                   </p>
                   <p>
                     Common examples: Emetophobia (vomiting), phonophobia (loud sounds), coulrophobia (clowns).
@@ -243,7 +243,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Amygdala</strong>: Your brain's fear detector goes into overdrive when you encounter the phobic stimulus, triggering immediate panic</li>
           <li><strong>Hippocampus</strong>: Stores the memory of the feared object/situation, activating fear even when just thinking about it</li>
-          <li><strong>Prefrontal cortex</strong>: The rational, thinking part of your brain struggles to override the amygdala's alarm — "I know it's safe' can't compete with "DANGER!"</li>
+          <li><strong>Prefrontal cortex</strong>: The rational, thinking part of your brain struggles to override the amygdala's alarm --- "I know it's safe' can't compete with "DANGER!"</li>
           <li><strong>Insula</strong>: Processes physical sensations of disgust and threat, amplifying the visceral reaction</li>
         </ul>
 
@@ -310,9 +310,124 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Only about 1 in 5 people with phobias seek treatment <Citation id="8" index={8} source="National Institute of Mental Health" year="2021" tier={2} />. Many suffer in silence, believing "it's just how I am" or that nothing can help. But treatment works — and it works well.
+            Only about 1 in 5 people with phobias seek treatment <Citation id="8" index={8} source="National Institute of Mental Health" year="2021" tier={2} />. Many suffer in silence, believing "it's just how I am" or that nothing can help. But treatment works --- and it works well.
           </p>
         </ArticleCallout>
+
+        <h2 id="real-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-Life Examples: What Phobias Look Like
+        </h2>
+
+        <p className="mb-6">
+          Phobias manifest differently for different people. Here are concrete examples of how specific phobias impact real lives:
+        </p>
+
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Example 1: Emetophobia (Fear of Vomiting)
+          </h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Rachel, 28, avoids restaurants, airplanes, and any situation where someone might get sick. She checks expiration dates obsessively, washes her hands dozens of times daily, and experiences panic attacks when she hears someone cough. She turned down a promotion requiring travel and limits social activities. The fear isn't about the discomfort of vomiting --- it's a terror so intense that her entire life revolves around prevention.
+          </p>
+        </div>
+
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Example 2: Claustrophobia (Fear of Enclosed Spaces)
+          </h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            James, 42, can't use elevators or MRI machines. He walks up 12 flights of stairs to his office daily. When he needed an MRI for a knee injury, he postponed it for eight months, worsening the damage. He feels his heart pound and chest tighten even thinking about small spaces. He knows it's irrational --- but when the elevator doors close, logic disappears.
+          </p>
+        </div>
+
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Example 3: Arachnophobia (Fear of Spiders)
+          </h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Maria, 35, moved out of her apartment after seeing two spiders in one week. She checks her bed every night, won't go camping, and once abandoned a full grocery cart mid-shop when she saw a spider on a product. Her partner finds it frustrating ("Just kill it!"), but Maria's fear is so visceral that even photos of spiders trigger panic. She intellectually knows most spiders are harmless --- but her body reacts as if facing mortal danger.
+          </p>
+        </div>
+
+        <div className="mb-6 p-5 bg-gray-50 dark:bg-gray-800/50 rounded-xl">
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Example 4: Aviophobia (Fear of Flying)
+          </h3>
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            Tom, 50, hasn't seen his daughter in six years because she lives overseas. He drives 14 hours instead of taking a 90-minute flight. He missed his father's funeral because flying felt impossible. He's tried alcohol, medication, and breathing exercises --- nothing touches the terror he feels at the thought of boarding a plane. He's watched the safety videos, read the statistics, talked to pilots. None of it helps when he imagines the cabin door closing.
+          </p>
+        </div>
+
+        <p className="mb-6">
+          Notice the common threads: the fear is <strong>intense</strong> (often described as panic or terror), <strong>persistent</strong> (lasts years without treatment), <strong>avoidant</strong> (life reorganizes around the fear), and <strong>distressing</strong> (people know it's irrational but can't stop it).
+        </p>
+
+        <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Exercises: Understanding Your Phobia
+        </h2>
+
+        <p className="mb-6">
+          These exercises won't cure a phobia (that requires professional treatment, usually exposure therapy), but they can help you understand your fear and assess whether it meets the criteria for a clinical phobia.
+        </p>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 1: Create a Fear Ladder
+          </h3>
+          <p className="mb-4">
+            Map the intensity of your fear across different levels of exposure.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Identify your feared object/situation</strong> (e.g., spiders, heights, flying)</li>
+            <li><strong>List scenarios from least to most anxiety-provoking</strong>, rating each 0-100:
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li>Example (spider phobia): Thinking about a spider (20), seeing a photo of a spider (40), seeing a spider across the room (60), spider within arm's reach (80), touching a dead spider (95), holding a live spider (100)</li>
+              </ul>
+            </li>
+            <li><strong>Notice where the ratings jump sharply</strong> --- those are key fear thresholds</li>
+            <li><strong>Identify your avoidance patterns</strong> --- what do you do to prevent encountering items rated 60+?</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Purpose:</strong> This ladder (called a "fear hierarchy") is foundational for exposure therapy. It clarifies what specifically triggers fear and helps you see that not all exposure is equally terrifying.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 2: Avoidance Audit
+          </h3>
+          <p className="mb-4">
+            Recognize how much your life has narrowed around the fear.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>List 5 things you've avoided in the past year</strong> because of the fear (opportunities, places, activities, medical procedures, social events)</li>
+            <li><strong>For each, ask:</strong> "If I didn't have this fear, would I have done this?" and "What did avoiding this cost me?" (relationships, health, career, experiences)</li>
+            <li><strong>Calculate the cumulative cost:</strong> How much has this fear shaped your life choices over the past 5 years?</li>
+            <li><strong>Consider:</strong> Is the cost of avoidance now greater than the discomfort of facing the fear?</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Insight:</strong> Many people with phobias underestimate how much avoidance has restricted their lives. This exercise illuminates the true cost --- and can motivate seeking treatment.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 3: Catastrophe Check
+          </h3>
+          <p className="mb-4">
+            Examine the worst-case scenario you imagine and test its realism.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>When you imagine encountering the feared thing, what's the worst you think will happen?</strong> Write it down specifically (e.g., "I'll vomit in public," "The plane will crash," "The spider will bite me and I'll die")</li>
+            <li><strong>Rate how likely this is to actually occur:</strong> 0-100% probability</li>
+            <li><strong>Ask:</strong> "Has this worst-case scenario ever actually happened to me?" If yes, how did you handle it? If no, why not?</li>
+            <li><strong>Reality-test:</strong> Look up actual statistics if applicable (e.g., spider bite fatality rates, plane crash odds)</li>
+            <li><strong>Separate fear from fact:</strong> "My fear tells me X. The evidence shows Y."</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Note:</strong> This won't eliminate the fear (phobias aren't logic-based), but it can slightly reduce anticipatory anxiety and help you recognize when the amygdala is lying to you.
+          </p>
+        </div>
 
         <h2 id="when-to-get-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Help
@@ -347,7 +462,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
     description: 'A comprehensive guide to the most prevalent specific phobias, why they develop, and what makes each one unique in how it affects people.',
     image: "/images/articles/cat02/cover-052.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -422,7 +537,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Some phobias are so common they have household names: fear of heights, spiders, flying, needles. Others are less known but equally debilitating. If you live with a phobia, you're far from alone — and understanding what makes your specific fear tick is the first step toward overcoming it.
+            Some phobias are so common they have household names: fear of heights, spiders, flying, needles. Others are less known but equally debilitating. If you live with a phobia, you're far from alone --- and understanding what makes your specific fear tick is the first step toward overcoming it.
           </p>
           <p className="mb-6">
             While there are hundreds of recognized phobias, a handful dominate in prevalence and impact. Let's explore the most common ones, what they look like, and why they develop <Citation id="1" index={1} source="Journal of Affective Disorders" year="2019" tier={1} />.
@@ -439,7 +554,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           <strong>What it looks like:</strong> Intense anxiety when on high floors, bridges, balconies, or even looking out of windows. Physical symptoms include dizziness, nausea, sweating, and a sensation of being pulled toward the edge.
         </p>
         <p className="mb-6">
-          <strong>Why it develops:</strong> Some fear of heights is adaptive — falling is dangerous. But acrophobia involves an exaggerated perception of instability and risk. Research shows people with acrophobia have altered balance perception and visual-spatial processing <Citation id="2" index={2} source="Frontiers in Human Neuroscience" year="2018" tier={1} />.
+          <strong>Why it develops:</strong> Some fear of heights is adaptive --- falling is dangerous. But acrophobia involves an exaggerated perception of instability and risk. Research shows people with acrophobia have altered balance perception and visual-spatial processing <Citation id="2" index={2} source="Frontiers in Human Neuroscience" year="2018" tier={1} />.
         </p>
         <ArticleCallout variant="did-you-know">
           <p>
@@ -514,7 +629,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Claustrophobia can create serious medical complications. Many people avoid MRI scans or necessary medical procedures due to fear of enclosed spaces. Open MRI machines and sedation are available options — always discuss concerns with your healthcare provider.
+            Claustrophobia can create serious medical complications. Many people avoid MRI scans or necessary medical procedures due to fear of enclosed spaces. Open MRI machines and sedation are available options --- always discuss concerns with your healthcare provider.
           </p>
         </ArticleCallout>
 
@@ -556,6 +671,99 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Exercises: Identifying Your Phobia Pattern
+        </h2>
+
+        <p className="mb-6">
+          These exercises help you understand your specific phobia's triggers and patterns. They're not treatment (professional exposure therapy is needed for that), but they're valuable for self-awareness and preparation before seeking help.
+        </p>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 1: Fear Hierarchy Creation
+          </h3>
+          <p className="mb-4">
+            Build a ladder of fear from least to most triggering scenarios for your specific phobia.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Choose your phobia</strong> (e.g., heights, flying, spiders, needles)</li>
+            <li><strong>Brainstorm 10-15 situations</strong> involving that fear, from mild to extreme</li>
+            <li><strong>Rate each 0-100</strong> for anxiety intensity (0 = no fear, 100 = maximum panic)</li>
+            <li><strong>Arrange them in order</strong> from lowest to highest rating</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Example (Fear of Heights):</strong> Photo of a tall building (15), watching a video from a high place (30), looking out a 3rd-floor window (45), standing on a balcony - 5th floor (60), glass elevator ride (75), observation deck visit (90), bungee jumping (100).
+          </p>
+          <p className="mt-2 text-sm italic">
+            <strong>Purpose:</strong> This hierarchy will be invaluable if you pursue exposure therapy --- it maps exactly where to start and what the progression looks like.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 2: Progressive Muscle Relaxation Practice
+          </h3>
+          <p className="mb-4">
+            Learn to physically relax your body when facing phobia-related anxiety (useful skill before and during exposure therapy).
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Find a quiet space</strong> and sit comfortably</li>
+            <li><strong>Tense each muscle group for 5 seconds, then release for 10 seconds</strong>, moving through:
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li>Hands and forearms (make fists)</li>
+                <li>Biceps (bend elbows, flex)</li>
+                <li>Shoulders (raise toward ears)</li>
+                <li>Forehead (raise eyebrows)</li>
+                <li>Eyes and nose (squeeze shut)</li>
+                <li>Mouth and jaw (clench teeth, open wide)</li>
+                <li>Neck (press head back)</li>
+                <li>Chest (deep breath, hold)</li>
+                <li>Abdomen (tighten stomach)</li>
+                <li>Legs and feet (point toes, flex)</li>
+              </ul>
+            </li>
+            <li><strong>Notice the difference</strong> between tension and relaxation</li>
+            <li><strong>Practice daily for 2 weeks</strong> until you can induce relaxation quickly</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Why this matters:</strong> You can't be physically relaxed and panicked simultaneously. This technique gives you a tool to counteract the physical symptoms of phobic anxiety.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 3: Cost-Benefit Analysis
+          </h3>
+          <p className="mb-4">
+            Weigh the costs of maintaining the phobia against the discomfort of treating it.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Create two columns:</strong> "Costs of Keeping the Phobia" | "Costs of Facing the Fear"</li>
+            <li><strong>In the left column, list:</strong>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li>Opportunities you've missed (jobs, travel, relationships)</li>
+                <li>Ongoing stress and vigilance</li>
+                <li>How your life has narrowed</li>
+                <li>Impact on loved ones</li>
+                <li>Shame or embarrassment you feel</li>
+                <li>What you'll miss if this continues 5, 10, 20 more years</li>
+              </ul>
+            </li>
+            <li><strong>In the right column, list:</strong>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li>Short-term discomfort of exposure therapy</li>
+                <li>Time and cost of treatment</li>
+                <li>Anxiety of facing the fear gradually</li>
+              </ul>
+            </li>
+            <li><strong>Compare:</strong> Which side has greater cumulative cost over your lifetime?</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Insight:</strong> Most people realize the long-term cost of avoidance vastly outweighs the short-term discomfort of treatment. This can be motivating when you're on the fence about seeking help.
+          </p>
+        </div>
+
         <h2 id="why-these-phobias" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Are These Phobias So Common?
         </h2>
@@ -564,7 +772,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Were historically dangerous</strong>: Snakes, spiders, heights, predators — our ancestors needed to fear these to survive</li>
+          <li><strong>Were historically dangerous</strong>: Snakes, spiders, heights, predators --- our ancestors needed to fear these to survive</li>
           <li><strong>Involve loss of control</strong>: Flying, enclosed spaces, medical procedures</li>
           <li><strong>Are unpredictable</strong>: Animals that move suddenly, situations you can't escape easily</li>
           <li><strong>Are socially transmitted</strong>: We learn fear from watching others react with fear</li>
@@ -688,7 +896,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           The Foundation: Classical Conditioning
         </h2>
         <p className="mb-6">
-          It all started with dogs and bells. Ivan Pavlov discovered that when he repeatedly paired a bell (neutral stimulus) with food (which naturally triggers salivation), dogs eventually salivated at the sound of the bell alone. The bell had become a <strong>conditioned stimulus</strong> — it triggered a response through learned association.
+          It all started with dogs and bells. Ivan Pavlov discovered that when he repeatedly paired a bell (neutral stimulus) with food (which naturally triggers salivation), dogs eventually salivated at the sound of the bell alone. The bell had become a <strong>conditioned stimulus</strong> --- it triggered a response through learned association.
         </p>
         <p className="mb-6">
           This same mechanism underlies phobia development. A previously neutral object or situation becomes fear-inducing when paired with a frightening or painful experience.
@@ -699,7 +907,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
             Psychologists John Watson and Rosalie Rayner famously (and unethically) demonstrated fear conditioning in a 9-month-old baby nicknamed "Little Albert" <Citation id="2" index={2} source="Journal of Experimental Psychology" year="1920" tier={1} />.
           </p>
           <p className="mb-4">
-            They showed Albert a white rat (which he initially wasn't afraid of) and simultaneously struck a loud metal bar behind his head. After just a few pairings, Albert began crying and trying to escape whenever he saw the rat — even without the loud noise.
+            They showed Albert a white rat (which he initially wasn't afraid of) and simultaneously struck a loud metal bar behind his head. After just a few pairings, Albert began crying and trying to escape whenever he saw the rat --- even without the loud noise.
           </p>
           <p>
             The fear generalized to similar white, furry objects (rabbits, cotton, a Santa Claus mask). This experiment, though ethically problematic by today's standards, demonstrated how quickly phobias can form through conditioning.
@@ -777,7 +985,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Amygdala activation</strong>: The amygdala (fear center) forms a strong association between the neutral stimulus (spider, airplane) and danger</li>
           <li><strong>Hippocampal encoding</strong>: The hippocampus stores the context (where you were, what it looked like), so similar situations trigger the fear response</li>
-          <li><strong>Prefrontal cortex failure</strong>: The rational brain struggles to suppress the fear response — you know it's irrational but can't stop the panic</li>
+          <li><strong>Prefrontal cortex failure</strong>: The rational brain struggles to suppress the fear response --- you know it's irrational but can't stop the panic</li>
           <li><strong>Synaptic strengthening</strong>: Repeated avoidance reinforces the neural pathways, making the phobia more entrenched</li>
         </ul>
 
@@ -797,7 +1005,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           Prepared Learning: Why Some Phobias Form Faster
         </h2>
         <p className="mb-6">
-          Not all stimuli are equally easy to condition. You can develop a phobia of spiders or snakes after a single bad encounter, but it's nearly impossible to develop a phobia of flowers or pillows — even if you experience something unpleasant involving them.
+          Not all stimuli are equally easy to condition. You can develop a phobia of spiders or snakes after a single bad encounter, but it's nearly impossible to develop a phobia of flowers or pillows --- even if you experience something unpleasant involving them.
         </p>
         <p className="mb-6">
           This is <strong>prepared learning</strong>: our brains are evolutionarily primed to fear certain things that were historically dangerous <Citation id="5" index={5} source="Evolution and Human Behavior" year="2018" tier={1} />:
@@ -810,13 +1018,13 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
             { feature: 'Examples', values: ['Snakes, spiders, heights, predators', 'Cars, guns, electrical outlets'] },
             { feature: 'Evolutionary history', values: ['Ancient threats', 'Modern threats'] },
             { feature: 'Speed of conditioning', values: ['Rapid (1-2 exposures)', 'Slow or impossible'] },
-            { feature: 'Resistance to extinction', values: ['Strong — fear persists', 'Weak — easily unlearned'] },
+            { feature: 'Resistance to extinction', values: ['Strong --- fear persists', 'Weak --- easily unlearned'] },
           ]}
           highlightColumn={1}
         />
 
         <p className="mb-6">
-          This explains why spider phobia is common but "car phobia" is rare — despite cars being statistically far more dangerous. Our brains haven't had time to evolve prepared learning for modern threats.
+          This explains why spider phobia is common but "car phobia" is rare --- despite cars being statistically far more dangerous. Our brains haven't had time to evolve prepared learning for modern threats.
         </p>
 
         <h2 id="genetic-vulnerability" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -857,6 +1065,88 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           role="Psychologist, Exposure Therapy Pioneer"
           variant="default"
         />
+
+        <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Exercises: Tracing Your Phobia's Origin
+        </h2>
+
+        <p className="mb-6">
+          Understanding how your specific phobia developed can provide insight into why it persists and what treatment approach might work best. These exercises help you trace the origins of your fear.
+        </p>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 1: Tracing the Fear Origin
+          </h3>
+          <p className="mb-4">
+            Identify which pathway (direct experience, observation, or information) led to your phobia.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Think back to the earliest memory you have of this fear.</strong> How old were you? What was happening?</li>
+            <li><strong>Ask yourself:</strong>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li><strong>Direct experience:</strong> Did something bad happen to me involving this thing? (dog bite, turbulent flight, getting stuck in an elevator)</li>
+                <li><strong>Observational:</strong> Did I see someone else react with terror to this thing? (parent screaming at a spider, friend panicking on a plane)</li>
+                <li><strong>Informational:</strong> Did I hear frightening stories or warnings about this? (news coverage of plane crashes, being told "never go near dogs")</li>
+              </ul>
+            </li>
+            <li><strong>Which pathway best fits your memory?</strong> You may have multiple pathways contributing.</li>
+            <li><strong>Consider:</strong> Knowing the origin, what would help "unteach" the fear? (corrective experience, seeing others calm around the thing, accurate information)</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Insight:</strong> Phobias acquired through direct trauma often require more gradual exposure in treatment. Observational or informational phobias may respond faster because there's no personal trauma to process.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 2: Mapping the Avoidance Cycle
+          </h3>
+          <p className="mb-4">
+            Visualize how avoidance maintains your phobia through a self-reinforcing loop.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Draw a circle</strong> (or visualize one) representing the phobia cycle</li>
+            <li><strong>Fill in each stage:</strong>
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li><strong>Stage 1:</strong> Encounter (or think about) the feared thing → Anxiety spikes</li>
+                <li><strong>Stage 2:</strong> Avoid the thing → Immediate relief (anxiety drops)</li>
+                <li><strong>Stage 3:</strong> Brain learns "Avoidance = safety" → Fear strengthens</li>
+                <li><strong>Stage 4:</strong> Next encounter triggers even more anxiety → Back to Stage 1</li>
+              </ul>
+            </li>
+            <li><strong>Identify your specific avoidance behaviors</strong> (what do you do to prevent encountering the fear?)</li>
+            <li><strong>Consider:</strong> How could you break this cycle? (Hint: The answer is controlled, gradual exposure --- the opposite of avoidance)</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Why this matters:</strong> Seeing the cycle on paper helps you recognize that the short-term relief of avoidance creates long-term suffering. Breaking the cycle requires tolerating short-term discomfort (exposure) for long-term freedom.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 3: "What If" Experiment (Thought Exposure)
+          </h3>
+          <p className="mb-4">
+            Practice tolerating fear-related thoughts without avoidance or distraction.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Set a timer for 5 minutes</strong></li>
+            <li><strong>Deliberately think about your feared thing</strong> in detail:
+              <ul className="list-disc pl-6 mt-2 space-y-1 text-sm">
+                <li>What does it look like? (visualize it clearly)</li>
+                <li>Where might you encounter it?</li>
+                <li>What would happen if you encountered it right now?</li>
+              </ul>
+            </li>
+            <li><strong>Notice your anxiety level (0-10)</strong> at 1-minute intervals. Write it down.</li>
+            <li><strong>Don't try to reduce the anxiety</strong> --- just observe it. Let the thoughts be there.</li>
+            <li><strong>After 5 minutes, check:</strong> Did the anxiety peak and then start to drop? (This is habituation --- the foundation of exposure therapy)</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>What you're practicing:</strong> Staying present with fear without avoiding it. Most people find their anxiety peaks around 2-3 minutes, then gradually declines even though nothing changed except their willingness to sit with it.
+          </p>
+        </div>
 
         <h2 id="implications-for-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What This Means for Treatment
@@ -979,7 +1269,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The idea sounds terrifying: to overcome your fear of spiders, you have to be near spiders. To conquer your fear of flying, you have to get on a plane. It feels counterintuitive, even cruel. But exposure therapy — systematically facing your fears in a controlled, gradual way — is the most effective treatment for phobias, with success rates often exceeding 80%.
+            The idea sounds terrifying: to overcome your fear of spiders, you have to be near spiders. To conquer your fear of flying, you have to get on a plane. It feels counterintuitive, even cruel. But exposure therapy --- systematically facing your fears in a controlled, gradual way --- is the most effective treatment for phobias, with success rates often exceeding 80%.
           </p>
           <p className="mb-6">
             Let's demystify exposure therapy. What actually happens in sessions? How does confronting your fear make it go away? And what can you expect if you decide to pursue this evidence-based treatment <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2018" tier={1} />?
@@ -990,7 +1280,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           What Is Exposure Therapy?
         </h2>
         <p className="mb-6">
-          Exposure therapy is a type of cognitive-behavioral therapy (CBT) that involves systematically and repeatedly confronting feared objects, situations, or activities in a safe, controlled manner. The goal is <strong>not</strong> to make the fear disappear instantly — it's to teach your brain that the feared thing is not actually dangerous.
+          Exposure therapy is a type of cognitive-behavioral therapy (CBT) that involves systematically and repeatedly confronting feared objects, situations, or activities in a safe, controlled manner. The goal is <strong>not</strong> to make the fear disappear instantly --- it's to teach your brain that the feared thing is not actually dangerous.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1053,7 +1343,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2">
-                    <strong>What it is:</strong> You create a "fear hierarchy" — a list of situations ranked from least to most fear-inducing. You start at the bottom and gradually work your way up.
+                    <strong>What it is:</strong> You create a "fear hierarchy" --- a list of situations ranked from least to most fear-inducing. You start at the bottom and gradually work your way up.
                   </p>
                   <p className="mb-2">
                     <strong>Example for spider phobia:</strong> (1) Look at cartoon spiders, (2) View photos of real spiders, (3) Watch videos of spiders, (4) Be in the same room as a spider in a jar, (5) Stand near an open container with a spider, (6) Touch a spider.
@@ -1090,7 +1380,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
                     <strong>What it is:</strong> You vividly imagine the feared scenario in detail while in session with your therapist. Used when real-life exposure is impractical or as a stepping stone to in-vivo exposure.
                   </p>
                   <p className="mb-2">
-                    <strong>Example:</strong> If you fear plane crashes, you might imagine boarding a plane, feeling turbulence, and landing safely — rehearsing the experience mentally.
+                    <strong>Example:</strong> If you fear plane crashes, you might imagine boarding a plane, feeling turbulence, and landing safely --- rehearsing the experience mentally.
                   </p>
                   <p>
                     <strong>Limitation:</strong> Less powerful than real exposure for most phobias, but useful for initial habituation.
@@ -1195,7 +1485,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
 
         <ArticleCallout variant="warning" title="Myth: If you panic during exposure, the treatment failed">
           <p className="mb-4">
-            <strong>Reality:</strong> Anxiety during exposure is expected and necessary. The goal is not to avoid anxiety — it's to learn you can tolerate it and that it decreases naturally. Panic doesn't mean failure; it's part of the learning process <Citation id="9" index={9} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
+            <strong>Reality:</strong> Anxiety during exposure is expected and necessary. The goal is not to avoid anxiety --- it's to learn you can tolerate it and that it decreases naturally. Panic doesn't mean failure; it's part of the learning process <Citation id="9" index={9} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1352,7 +1642,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You avoid the dentist for years. You skip flu shots. You panic when bloodwork is ordered. Just the thought of a needle approaching your arm makes you lightheaded. You know it's "just a little poke, ' but your body reacts as if you're facing mortal danger — and sometimes, you faint.
+            You avoid the dentist for years. You skip flu shots. You panic when bloodwork is ordered. Just the thought of a needle approaching your arm makes you lightheaded. You know it's "just a little poke, ' but your body reacts as if you're facing mortal danger --- and sometimes, you faint.
           </p>
           <p className="mb-6">
             Needle phobia (trypanophobia) is one of the most common phobias, affecting 20-50% of adolescents and 20-30% of adults to some degree. For about 10%, it's severe enough to significantly interfere with medical care <Citation id="1" index={1} source="Vaccine" year="2018" tier={1} />.
@@ -1372,7 +1662,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           Why Needle Phobia Makes You Faint
         </h2>
         <p className="mb-6">
-          Needle phobia is part of the blood-injection-injury (BII) phobia subtype, and it's unique among phobias because it can cause <strong>vasovagal syncope</strong> — fainting <Citation id="2" index={2} source="Psychophysiology" year="2017" tier={1} />.
+          Needle phobia is part of the blood-injection-injury (BII) phobia subtype, and it's unique among phobias because it can cause <strong>vasovagal syncope</strong> --- fainting <Citation id="2" index={2} source="Psychophysiology" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
           Here's what happens:
@@ -1387,7 +1677,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            This biphasic response (spike then drop) is unique to blood-injection-injury phobias. Most other phobias cause sustained increases in heart rate and blood pressure. The fainting response is thought to be evolutionary — if you were injured and bleeding, fainting would reduce blood loss by lowering blood pressure.
+            This biphasic response (spike then drop) is unique to blood-injection-injury phobias. Most other phobias cause sustained increases in heart rate and blood pressure. The fainting response is thought to be evolutionary --- if you were injured and bleeding, fainting would reduce blood loss by lowering blood pressure.
           </p>
         </ArticleCallout>
 
@@ -1457,7 +1747,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            If needle phobia is preventing you from getting necessary medical care, it's no longer "just a phobia" — it's a medical emergency. Treatment is available and highly effective.
+            If needle phobia is preventing you from getting necessary medical care, it's no longer "just a phobia" --- it's a medical emergency. Treatment is available and highly effective.
           </p>
         </ArticleCallout>
 
@@ -1538,8 +1828,8 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Tell the provider</strong> about your fear and history of fainting — they can adjust the approach</li>
-          <li><strong>Stay hydrated and eat beforehand</strong> — low blood sugar and dehydration worsen fainting risk</li>
+          <li><strong>Tell the provider</strong> about your fear and history of fainting --- they can adjust the approach</li>
+          <li><strong>Stay hydrated and eat beforehand</strong> --- low blood sugar and dehydration worsen fainting risk</li>
           <li><strong>Ask to lie down</strong> for the procedure if you have a fainting history</li>
           <li><strong>Use smaller needles</strong> when possible (butterfly needles for blood draws)</li>
           <li><strong>Bring a support person</strong> who can help distract or calm you</li>
@@ -1567,7 +1857,7 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          If needle phobia is limiting your healthcare access, know that treatment works and it works quickly. You don't have to live with this fear forever — or let it endanger your health.
+          If needle phobia is limiting your healthcare access, know that treatment works and it works quickly. You don't have to live with this fear forever --- or let it endanger your health.
         </p>
       </>
     ),

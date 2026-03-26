@@ -94,13 +94,13 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            LGBTQ+ individuals experience depression at rates two to three times higher than their heterosexual and cisgender peers—not because of their identity, but because of how society treats them.
+            LGBTQ+ individuals experience depression at rates two to three times higher than their heterosexual and cisgender peers---not because of their identity, but because of how society treats them.
           </p>
           <p className="mb-6">
             The minority stress model explains how chronic experiences of discrimination, stigma, and rejection create a persistent burden that increases vulnerability to depression and other mental health conditions <Citation id="2" index={2} source="Journal of Health and Social Behavior" year="2003" tier={1} />. LGBTQ+ people face unique challenges including family rejection, workplace discrimination, lack of legal protections, and limited access to affirming healthcare <Citation id="1" index={1} source="American Journal of Public Health" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding these specific risk factors—and the protective role of community, affirming relationships, and identity acceptance—is essential for addressing depression in LGBTQ+ populations effectively.
+            Understanding these specific risk factors---and the protective role of community, affirming relationships, and identity acceptance---is essential for addressing depression in LGBTQ+ populations effectively.
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Family rejection is one of the strongest predictors of mental health problems in LGBTQ+ youth. Young people who experience high levels of family rejection are eight times more likely to attempt suicide and six times more likely to report depression <Citation id="7" index={7} source="Journal of Child and Adolescent Psychiatric Nursing" year="2010" tier={1} />.
                   </p>
                   <p>
-                    Even subtle forms of non-acceptance—refusing to use correct pronouns, excluding same-gender partners from family events, expressing "disappointment"—contribute to increased depression risk.
+                    Even subtle forms of non-acceptance---refusing to use correct pronouns, excluding same-gender partners from family events, expressing "disappointment"---contribute to increased depression risk.
                   </p>
                 </div>
               ),
@@ -187,7 +187,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     LGBTQ+ individuals face discrimination in employment, housing, healthcare, and public spaces. Transgender individuals experience particularly high rates of violence and harassment <Citation id="4" index={4} source="Pediatrics" year="2018" tier={1} />.
                   </p>
                   <p>
-                    Chronic exposure to discrimination creates hypervigilance, shame, and learned helplessness—all risk factors for depression.
+                    Chronic exposure to discrimination creates hypervigilance, shame, and learned helplessness---all risk factors for depression.
                   </p>
                 </div>
               ),
@@ -201,7 +201,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Hiding one's identity to avoid discrimination creates psychological burden. The constant effort of monitoring behavior, censoring speech, and maintaining a false identity is exhausting and isolating.
                   </p>
                   <p>
-                    Living inauthentically undermines self-worth and prevents genuine connection—both protective factors against depression.
+                    Living inauthentically undermines self-worth and prevents genuine connection---both protective factors against depression.
                   </p>
                 </div>
               ),
@@ -259,7 +259,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Research consistently shows that access to gender-affirming care—including social transition, hormone therapy when desired, and supportive environments—leads to significant reductions in depression and suicidality among transgender individuals <Citation id="6" index={6} source="Journal of Consulting and Clinical Psychology" year="2016" tier={1} />.
+            Research consistently shows that access to gender-affirming care---including social transition, hormone therapy when desired, and supportive environments---leads to significant reductions in depression and suicidality among transgender individuals <Citation id="6" index={6} source="Journal of Consulting and Clinical Psychology" year="2016" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -293,7 +293,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Community Connection',
               description: (
                 <p>
-                  Connection to LGBTQ+ community—through friends, support groups, advocacy organizations, or cultural spaces—provides validation, role models, and shared understanding.
+                  Connection to LGBTQ+ community---through friends, support groups, advocacy organizations, or cultural spaces---provides validation, role models, and shared understanding.
                 </p>
               ),
             },
@@ -360,7 +360,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Depression in LGBTQ+ communities is not inevitable—it is a response to minority stress and discrimination that can be addressed through affirming care, supportive relationships, and structural changes that promote equality and acceptance. You deserve support that honors your full identity.
+          Depression in LGBTQ+ communities is not inevitable---it is a response to minority stress and discrimination that can be addressed through affirming care, supportive relationships, and structural changes that promote equality and acceptance. You deserve support that honors your full identity.
         </p>
       </>
     ),
@@ -368,7 +368,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
   {
     id: catId(57),
     slug: 'depression-new-parents-postpartum-partners',
-    title: 'Depression in New Parents: Beyond Postpartum — Partners Are Affected Too',
+    title: 'Depression in New Parents: Beyond Postpartum --- Partners Are Affected Too',
     description: 'Postpartum depression affects both birthing and non-birthing parents. Understanding the symptoms, risk factors, and treatment options for all new parents is crucial for family wellbeing.',
     image: "/images/articles/cat07/cover-057.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
@@ -447,10 +447,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When we talk about postpartum depression, most people picture a new mother struggling after childbirth. But depression affects non-birthing parents too—and it's far more common than many realize.
+            When we talk about postpartum depression, most people picture a new mother struggling after childbirth. But depression affects non-birthing parents too---and it's far more common than many realize.
           </p>
           <p className="mb-6">
-            Postpartum depression (PPD) affects approximately 1 in 7 birthing parents and 1 in 10 non-birthing partners <Citation id="1" index={1} source="Obstetrics & Gynecology" year="2020" tier={1} />. It's a medical condition, not a personal failure or sign of weakness. Understanding that depression can affect any new parent—regardless of gender or biological connection to pregnancy—is essential for early identification and treatment <Citation id="2" index={2} source="Archives of Women's Mental Health" year="2018" tier={1} />.
+            Postpartum depression (PPD) affects approximately 1 in 7 birthing parents and 1 in 10 non-birthing partners <Citation id="1" index={1} source="Obstetrics & Gynecology" year="2020" tier={1} />. It's a medical condition, not a personal failure or sign of weakness. Understanding that depression can affect any new parent---regardless of gender or biological connection to pregnancy---is essential for early identification and treatment <Citation id="2" index={2} source="Archives of Women's Mental Health" year="2018" tier={1} />.
           </p>
           <p className="mb-6">
             This article explores postpartum depression in all parents, including non-birthing partners, adoptive parents, and LGBTQ+ families.
@@ -470,7 +470,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           What Is Postpartum Depression?
         </h2>
         <p className="mb-6">
-          Postpartum depression is a mood disorder that develops during pregnancy or in the first year after a child arrives (through birth, adoption, surrogacy, or fostering). It goes beyond the "baby blues"—temporary mood swings and crying spells that affect up to 80% of new parents in the first two weeks.
+          Postpartum depression is a mood disorder that develops during pregnancy or in the first year after a child arrives (through birth, adoption, surrogacy, or fostering). It goes beyond the "baby blues"---temporary mood swings and crying spells that affect up to 80% of new parents in the first two weeks.
         </p>
 
         <ComparisonTable
@@ -488,7 +488,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            If symptoms persist beyond two weeks, interfere with daily functioning, or include thoughts of harming yourself or the baby, this is <strong>not</strong> baby blues—it's postpartum depression and requires professional support.
+            If symptoms persist beyond two weeks, interfere with daily functioning, or include thoughts of harming yourself or the baby, this is <strong>not</strong> baby blues---it's postpartum depression and requires professional support.
           </p>
         </ArticleCallout>
 
@@ -586,7 +586,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'History of Depression or Anxiety',
               description: (
                 <p>
-                  Previous mental health conditions—especially depression during pregnancy—are the strongest predictors of postpartum depression.
+                  Previous mental health conditions---especially depression during pregnancy---are the strongest predictors of postpartum depression.
                 </p>
               ),
             },
@@ -812,10 +812,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're managing diabetes, autoimmune disease, chronic pain, or any long-term health condition, depression isn't just an unfortunate coincidence—it's a common and often overlooked part of the experience.
+            When you're managing diabetes, autoimmune disease, chronic pain, or any long-term health condition, depression isn't just an unfortunate coincidence---it's a common and often overlooked part of the experience.
           </p>
           <p className="mb-6">
-            People living with chronic illness are two to three times more likely to experience depression than the general population <Citation id="2" index={2} source="Psychosomatic Medicine" year="2019" tier={1} />. This isn't weakness or "giving in"—it's a natural response to living with persistent symptoms, functional limitations, medical uncertainty, and the emotional weight of managing an illness that won't go away <Citation id="1" index={1} source="NICE" year="2022" tier={4} />.
+            People living with chronic illness are two to three times more likely to experience depression than the general population <Citation id="2" index={2} source="Psychosomatic Medicine" year="2019" tier={1} />. This isn't weakness or "giving in"---it's a natural response to living with persistent symptoms, functional limitations, medical uncertainty, and the emotional weight of managing an illness that won't go away <Citation id="1" index={1} source="NICE" year="2022" tier={4} />.
           </p>
           <p className="mb-6">
             Understanding the complex relationship between physical and mental health is the first step toward comprehensive care that addresses both.
@@ -835,7 +835,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           The Bidirectional Relationship
         </h2>
         <p className="mb-6">
-          Depression and chronic illness influence each other in both directions—chronic illness increases depression risk, and depression worsens physical health outcomes <Citation id="3" index={3} source="Journal of Psychosomatic Research" year="2021" tier={1} />.
+          Depression and chronic illness influence each other in both directions---chronic illness increases depression risk, and depression worsens physical health outcomes <Citation id="3" index={3} source="Journal of Psychosomatic Research" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -859,7 +859,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Treating depression isn't just about mental health—it often leads to measurable improvements in physical symptoms, disease management, and quality of life. Integrated care that addresses both physical and mental health produces the best outcomes <Citation id="6" index={6} source="Annual Review of Clinical Psychology" year="2020" tier={1} />.
+            Treating depression isn't just about mental health---it often leads to measurable improvements in physical symptoms, disease management, and quality of life. Integrated care that addresses both physical and mental health produces the best outcomes <Citation id="6" index={6} source="Annual Review of Clinical Psychology" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -893,7 +893,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Chronic illness often limits what you can do—physically, socially, and professionally. Losing abilities you once took for granted creates a grief process that can evolve into depression.
+                    Chronic illness often limits what you can do---physically, socially, and professionally. Losing abilities you once took for granted creates a grief process that can evolve into depression.
                   </p>
                   <p>
                     Needing help with tasks you used to do independently, giving up hobbies, reducing work hours, or canceling plans due to symptoms erodes self-esteem and sense of identity.
@@ -910,7 +910,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Pain and depression share overlapping brain pathways and neurotransmitter systems. Approximately 50% of people with chronic pain also have depression <Citation id="4" index={4} source="Pain Medicine" year="2020" tier={1} />.
                   </p>
                   <p>
-                    Constant pain is exhausting. It disrupts sleep, limits activity, and creates hypervigilance. Over time, the persistence of pain without relief can lead to hopelessness—a core feature of depression.
+                    Constant pain is exhausting. It disrupts sleep, limits activity, and creates hypervigilance. Over time, the persistence of pain without relief can lead to hopelessness---a core feature of depression.
                   </p>
                 </div>
               ),
@@ -921,7 +921,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Many chronic illnesses follow unpredictable courses with symptom flares, progressive decline, or periods of remission and relapse. Not knowing what tomorrow will bring—or whether treatment will work—creates persistent anxiety that can transition into depression.
+                    Many chronic illnesses follow unpredictable courses with symptom flares, progressive decline, or periods of remission and relapse. Not knowing what tomorrow will bring---or whether treatment will work---creates persistent anxiety that can transition into depression.
                   </p>
                   <p>
                     Fear of disease progression, complications, or early death adds to emotional burden.
@@ -938,7 +938,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Chronic illness can be isolating. You might cancel plans due to symptoms, withdraw because others don't understand your experience, or lose friendships with people who can't relate to your 'new normal."
                   </p>
                   <p>
-                    When your social world shrinks, you lose buffering factors that protect against depression—connection, purpose, and distraction from symptoms.
+                    When your social world shrinks, you lose buffering factors that protect against depression---connection, purpose, and distraction from symptoms.
                   </p>
                 </div>
               ),
@@ -949,7 +949,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p>
-                    People with chronic illness—especially 'invisible' conditions like fibromyalgia, chronic fatigue syndrome, or autoimmune diseases—often face disbelief, minimization, or blame ("Have you tried yoga?", "Maybe you're just stressed"). This invalidation compounds the psychological burden and increases depression risk.
+                    People with chronic illness---especially 'invisible' conditions like fibromyalgia, chronic fatigue syndrome, or autoimmune diseases---often face disbelief, minimization, or blame ("Have you tried yoga?", "Maybe you're just stressed"). This invalidation compounds the psychological burden and increases depression risk.
                   </p>
                 </div>
               ),
@@ -961,7 +961,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Recognizing Depression in the Context of Chronic Illness
         </h2>
         <p className="mb-6">
-          Diagnosing depression when you have a chronic illness can be tricky because many symptoms overlap—fatigue, sleep changes, appetite changes, and difficulty concentrating occur in both conditions.
+          Diagnosing depression when you have a chronic illness can be tricky because many symptoms overlap---fatigue, sleep changes, appetite changes, and difficulty concentrating occur in both conditions.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -997,7 +997,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Integrated Medical and Mental Health Care',
               description: (
                 <p>
-                  Best outcomes occur when your physical health providers and mental health providers communicate and coordinate care. Collaborative care models—where mental health specialists work within primary care—show strong effectiveness for depression in chronic illness <Citation id="6" index={6} source="Annual Review of Clinical Psychology" year="2020" tier={1} />.
+                  Best outcomes occur when your physical health providers and mental health providers communicate and coordinate care. Collaborative care models---where mental health specialists work within primary care---show strong effectiveness for depression in chronic illness <Citation id="6" index={6} source="Annual Review of Clinical Psychology" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -1013,7 +1013,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Acceptance and Commitment Therapy (ACT)',
               description: (
                 <p>
-                  ACT helps you build psychological flexibility—accepting limitations you can't change while committing to values-based action within those constraints. This approach is particularly helpful for chronic illness, where 'fixing' the problem isn't always possible.
+                  ACT helps you build psychological flexibility---accepting limitations you can't change while committing to values-based action within those constraints. This approach is particularly helpful for chronic illness, where 'fixing' the problem isn't always possible.
                 </p>
               ),
             },
@@ -1029,7 +1029,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Self-Management Programs',
               description: (
                 <p>
-                  Structured programs that teach disease management skills—symptom monitoring, pacing, problem-solving, communication with providers—improve both physical and mental health outcomes <Citation id="7" index={7} source="Health Psychology Review" year="2019" tier={1} />.
+                  Structured programs that teach disease management skills---symptom monitoring, pacing, problem-solving, communication with providers---improve both physical and mental health outcomes <Citation id="7" index={7} source="Health Psychology Review" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -1060,7 +1060,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
             title: 'Helpful Strategies',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Pacing and energy conservation—activity within your limits</li>
+                <li>Pacing and energy conservation---activity within your limits</li>
                 <li>Connecting with others who understand chronic illness</li>
                 <li>Treating mental health as equally important as physical health</li>
                 <li>Celebrating small wins and adjusted goals</li>
@@ -1108,7 +1108,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Living with chronic illness is hard. Developing depression doesn't mean you're weak—it means you're human. Treatment for depression can help you reclaim quality of life, improve your physical health management, and find meaning even within the constraints of chronic illness. Resources and support are available through organizations like NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Living with chronic illness is hard. Developing depression doesn't mean you're weak---it means you're human. Treatment for depression can help you reclaim quality of life, improve your physical health management, and find meaning even within the constraints of chronic illness. Resources and support are available through organizations like NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -1195,13 +1195,13 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Healthcare workers dedicate their lives to caring for others. But who cares for them? Depression among physicians, nurses, EMTs, and other healthcare professionals occurs at rates significantly higher than the general population—and it's often hidden behind a culture of stoicism and self-sacrifice.
+            Healthcare workers dedicate their lives to caring for others. But who cares for them? Depression among physicians, nurses, EMTs, and other healthcare professionals occurs at rates significantly higher than the general population---and it's often hidden behind a culture of stoicism and self-sacrifice.
           </p>
           <p className="mb-6">
-            Medical students show depression rates of 27%, nearly triple that of age-matched peers <Citation id="1" index={1} source="JAMA" year="2016" tier={1} />. Nurses and physicians experience burnout—closely linked to depression—at rates exceeding 50% in some specialties <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />. The COVID-19 pandemic worsened this crisis, with healthcare workers reporting unprecedented levels of anxiety, depression, and post-traumatic stress <Citation id="2" index={2} source="BJPsych Open" year="2021" tier={1} />.
+            Medical students show depression rates of 27%, nearly triple that of age-matched peers <Citation id="1" index={1} source="JAMA" year="2016" tier={1} />. Nurses and physicians experience burnout---closely linked to depression---at rates exceeding 50% in some specialties <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />. The COVID-19 pandemic worsened this crisis, with healthcare workers reporting unprecedented levels of anxiety, depression, and post-traumatic stress <Citation id="2" index={2} source="BJPsych Open" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding the unique factors that contribute to depression in healthcare workers—and dismantling barriers to seeking help—is essential for supporting those who care for all of us.
+            Understanding the unique factors that contribute to depression in healthcare workers---and dismantling barriers to seeking help---is essential for supporting those who care for all of us.
           </p>
         </div>
 
@@ -1230,7 +1230,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Long shifts, overnight calls, back-to-back patients, and administrative burden leave healthcare workers chronically sleep-deprived and physically exhausted—both major risk factors for depression.
+                    Long shifts, overnight calls, back-to-back patients, and administrative burden leave healthcare workers chronically sleep-deprived and physically exhausted---both major risk factors for depression.
                   </p>
                   <p>
                     Electronic medical records, insurance authorization battles, and productivity metrics add hours of work that don't involve patient care, increasing frustration and time pressure.
@@ -1244,10 +1244,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Healthcare work requires constant emotional regulation—staying calm during emergencies, delivering bad news compassionately, comforting grieving families, managing angry patients—all while suppressing your own emotional responses.
+                    Healthcare work requires constant emotional regulation---staying calm during emergencies, delivering bad news compassionately, comforting grieving families, managing angry patients---all while suppressing your own emotional responses.
                   </p>
                   <p>
-                    Over time, this emotional labor leads to compassion fatigue—a depleted capacity for empathy that mirrors symptoms of depression (emotional numbness, detachment, hopelessness) <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />.
+                    Over time, this emotional labor leads to compassion fatigue---a depleted capacity for empathy that mirrors symptoms of depression (emotional numbness, detachment, hopelessness) <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />.
                   </p>
                 </div>
               ),
@@ -1258,13 +1258,13 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Moral injury occurs when healthcare workers are forced to act—or prevented from acting—in ways that violate their core values and ethical commitments <Citation id="4" index={4} source="Journal of Clinical Nursing" year="2022" tier={1} />.
+                    Moral injury occurs when healthcare workers are forced to act---or prevented from acting---in ways that violate their core values and ethical commitments <Citation id="4" index={4} source="Journal of Clinical Nursing" year="2022" tier={1} />.
                   </p>
                   <p className="mb-4">
                     Examples include: being unable to provide adequate care due to resource constraints, discharging patients who aren't medically ready because of insurance denials, witnessing preventable suffering due to system failures, or being forced to prioritize profit over patient wellbeing.
                   </p>
                   <p>
-                    Moral injury creates feelings of guilt, shame, and betrayal—emotions strongly associated with depression.
+                    Moral injury creates feelings of guilt, shame, and betrayal---emotions strongly associated with depression.
                   </p>
                 </div>
               ),
@@ -1278,7 +1278,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Healthcare workers regularly witness suffering, death, and traumatic events. Emergency medicine, ICU, oncology, and pediatric specialties involve particularly high exposure.
                   </p>
                   <p>
-                    Cumulative trauma—even without a single catastrophic event—can lead to secondary traumatic stress and depression, particularly when there's no space to process these experiences.
+                    Cumulative trauma---even without a single catastrophic event---can lead to secondary traumatic stress and depression, particularly when there's no space to process these experiences.
                   </p>
                 </div>
               ),
@@ -1292,7 +1292,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Healthcare culture often valorizes self-sacrifice and discourages vulnerability. Admitting mental health struggles is seen as weakness, failure, or unsuitability for the profession.
                   </p>
                   <p className="mb-4">
-                    Many healthcare workers fear professional consequences—license questions, fitness-for-duty evaluations, loss of hospital privileges, or discrimination—if they seek mental health treatment <Citation id="7" index={7} source="NIOSH" year="2023" tier={2} />.
+                    Many healthcare workers fear professional consequences---license questions, fitness-for-duty evaluations, loss of hospital privileges, or discrimination---if they seek mental health treatment <Citation id="7" index={7} source="NIOSH" year="2023" tier={2} />.
                   </p>
                   <p>
                     This stigma keeps depression hidden and untreated, worsening outcomes.
@@ -1309,7 +1309,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Medical training selects for high-achieving perfectionists. While attention to detail saves lives, perfectionism also creates vulnerability to depression when mistakes inevitably happen.
                   </p>
                   <p>
-                    The knowledge that errors can harm patients creates intense pressure and self-criticism—especially in a "no-mistake" culture that provides little support for processing medical errors.
+                    The knowledge that errors can harm patients creates intense pressure and self-criticism---especially in a "no-mistake" culture that provides little support for processing medical errors.
                   </p>
                 </div>
               ),
@@ -1338,7 +1338,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Burnout and depression frequently co-occur. Chronic burnout is a risk factor for developing clinical depression, and depression worsens burnout symptoms. Both deserve attention and treatment—addressing one without the other often fails <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />.
+            Burnout and depression frequently co-occur. Chronic burnout is a risk factor for developing clinical depression, and depression worsens burnout symptoms. Both deserve attention and treatment---addressing one without the other often fails <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1386,7 +1386,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     <strong>Psychotherapy:</strong> CBT, ACT, and trauma-focused therapies address depression, moral injury, and secondary traumatic stress.
                   </p>
                   <p className="mb-3">
-                    <strong>Medication:</strong> Antidepressants are effective and don't impair professional performance. Concerns about licensing boards are often overblown—most states have removed mental health questions from licensing applications.
+                    <strong>Medication:</strong> Antidepressants are effective and don't impair professional performance. Concerns about licensing boards are often overblown---most states have removed mental health questions from licensing applications.
                   </p>
                   <p>
                     <strong>Peer support:</strong> Schwartz Rounds, Balint groups, and peer support programs provide space to process difficult cases and emotions with colleagues who understand.
@@ -1448,7 +1448,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Healthcare work is meaningful, but it shouldn't cost you your mental health. Depression is not a sign that you're unsuited for this work—it's a sign that the system needs to change and that you deserve support. Seeking help is not weakness; it's a professional responsibility to yourself and your patients. You cannot pour from an empty cup.
+          Healthcare work is meaningful, but it shouldn't cost you your mental health. Depression is not a sign that you're unsuited for this work---it's a sign that the system needs to change and that you deserve support. Seeking help is not weakness; it's a professional responsibility to yourself and your patients. You cannot pour from an empty cup.
         </p>
       </>
     ),
@@ -1535,13 +1535,13 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Leaving your homeland—whether by choice or force—is one of life's most psychologically demanding experiences. Immigration and forced displacement involve loss, uncertainty, cultural disorientation, and often trauma that significantly increase depression risk.
+            Leaving your homeland---whether by choice or force---is one of life's most psychologically demanding experiences. Immigration and forced displacement involve loss, uncertainty, cultural disorientation, and often trauma that significantly increase depression risk.
           </p>
           <p className="mb-6">
             Refugees and asylum seekers show depression rates of 30-40%, three to four times higher than the general population <Citation id="1" index={1} source="Journal of Nervous and Mental Disease" year="2020" tier={1} />. Even voluntary immigrants face elevated mental health challenges, particularly during the first years after arrival when they navigate language barriers, economic instability, discrimination, and separation from family <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding the unique stressors that immigrants and refugees face—and the protective factors that support resilience—is essential for providing culturally responsive mental health care.
+            Understanding the unique stressors that immigrants and refugees face---and the protective factors that support resilience---is essential for providing culturally responsive mental health care.
           </p>
         </div>
 
@@ -1573,7 +1573,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
                     Refugees fleeing conflict zones often witnessed or experienced violence, lost family members, saw communities destroyed, or faced direct persecution based on ethnicity, religion, political beliefs, or identity.
                   </p>
                   <p>
-                    These traumatic experiences create risk for both PTSD and depression—conditions that frequently co-occur in refugee populations.
+                    These traumatic experiences create risk for both PTSD and depression---conditions that frequently co-occur in refugee populations.
                   </p>
                 </div>
               ),
@@ -1584,10 +1584,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Many immigrants and refugees leave behind children, parents, spouses, or other loved ones—either temporarily due to immigration processes or permanently due to loss. This separation creates profound grief and ongoing worry.
+                    Many immigrants and refugees leave behind children, parents, spouses, or other loved ones---either temporarily due to immigration processes or permanently due to loss. This separation creates profound grief and ongoing worry.
                   </p>
                   <p>
-                    "Ambiguous loss"—when you don't know if separated family members are safe, when you'll see them again, or if they're still alive—creates particularly complex grief that increases depression risk.
+                    "Ambiguous loss"---when you don't know if separated family members are safe, when you'll see them again, or if they're still alive---creates particularly complex grief that increases depression risk.
                   </p>
                 </div>
               ),
@@ -1613,7 +1613,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Post-Migration Challenges
         </h2>
         <p className="mb-6">
-          Arriving in the new country doesn't end the stress—it creates new challenges that compound pre-migration trauma <Citation id="3" index={3} source="Social Science & Medicine" year="2021" tier={1} />.
+          Arriving in the new country doesn't end the stress---it creates new challenges that compound pre-migration trauma <Citation id="3" index={3} source="Social Science & Medicine" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1663,7 +1663,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Acculturation and Identity
         </h2>
         <p className="mb-6">
-          Acculturation—the process of adapting to a new culture—creates psychological stress as immigrants navigate between maintaining heritage culture and adopting aspects of the new culture <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
+          Acculturation---the process of adapting to a new culture---creates psychological stress as immigrants navigate between maintaining heritage culture and adopting aspects of the new culture <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1704,7 +1704,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Bicultural Identity',
               description: (
                 <p>
-                  Successfully integrating both heritage and new cultures—feeling pride in cultural background while also participating in the new society—predicts better mental health outcomes than assimilation or separation <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
+                  Successfully integrating both heritage and new cultures---feeling pride in cultural background while also participating in the new society---predicts better mental health outcomes than assimilation or separation <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -1720,7 +1720,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Economic Opportunity',
               description: (
                 <p>
-                  Meaningful employment—especially work that utilizes skills and education—improves self-esteem, provides purpose, and reduces economic stress.
+                  Meaningful employment---especially work that utilizes skills and education---improves self-esteem, provides purpose, and reduces economic stress.
                 </p>
               ),
             },
@@ -1736,7 +1736,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
               title: 'Sense of Purpose and Hope',
               description: (
                 <p>
-                  Believing that migration—despite its hardships—will create better opportunities for children or allow escape from persecution provides meaning that buffers against depression.
+                  Believing that migration---despite its hardships---will create better opportunities for children or allow escape from persecution provides meaning that buffers against depression.
                 </p>
               ),
             },
@@ -1798,7 +1798,7 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Immigration and displacement involve profound losses—of home, community, identity, and sometimes loved ones. Depression in this context is not weakness; it's a human response to extraordinary circumstances. Culturally responsive support can help you heal from past trauma, navigate the challenges of your new life, and build a future that honors both where you came from and where you are now. Resources are available through SAMHSA <Citation id="7" index={7} source="SAMHSA" year="2023" tier={2} /> and NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Immigration and displacement involve profound losses---of home, community, identity, and sometimes loved ones. Depression in this context is not weakness; it's a human response to extraordinary circumstances. Culturally responsive support can help you heal from past trauma, navigate the challenges of your new life, and build a future that honors both where you came from and where you are now. Resources are available through SAMHSA <Citation id="7" index={7} source="SAMHSA" year="2023" tier={2} /> and NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),

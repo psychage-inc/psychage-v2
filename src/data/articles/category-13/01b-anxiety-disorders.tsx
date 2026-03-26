@@ -119,7 +119,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           Separation anxiety disorder in adults is characterized by excessive fear or anxiety about separation from people to whom the individual is attached <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />. These attachment figures are typically romantic partners, parents, or children.
         </p>
         <p className="mb-6">
-          The fear is not about being alone in general — it is specifically about being separated from particular people. Adults with separation anxiety worry excessively about harm coming to their attachment figures or fear that something will happen that causes permanent separation (e.g., getting lost, having an accident, dying).
+          The fear is not about being alone in general --- it is specifically about being separated from particular people. Adults with separation anxiety worry excessively about harm coming to their attachment figures or fear that something will happen that causes permanent separation (e.g., getting lost, having an accident, dying).
         </p>
 
         <StatCard
@@ -210,7 +210,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           Causes and Risk Factors
         </h2>
         <p className="mb-6">
-          Adult separation anxiety disorder is closely linked to attachment theory — the way we form emotional bonds with caregivers in childhood shapes our relationships throughout life <Citation id="4" index={5} source="Attachment and Human Development" year="2021" tier={1} />.
+          Adult separation anxiety disorder is closely linked to attachment theory --- the way we form emotional bonds with caregivers in childhood shapes our relationships throughout life <Citation id="4" index={5} source="Attachment and Human Development" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -384,7 +384,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           <li>Has lasted six months or longer</li>
         </ul>
         <p className="mb-6">
-          With treatment, you can learn to maintain close connections while also developing healthy independence. Secure attachment does not mean constant proximity — it means trusting that the bond will endure even when you are apart.
+          With treatment, you can learn to maintain close connections while also developing healthy independence. Secure attachment does not mean constant proximity --- it means trusting that the bond will endure even when you are apart.
         </p>
       </>
     ),
@@ -480,7 +480,7 @@ export const anxietyDisordersArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            At home, she is a chatterbox — telling stories, singing songs, asking endless questions. But at school, she is silent. Not shy. Not quiet. Completely silent. Her teachers wonder if she can speak at all. Her parents know she can, but they cannot figure out why she will not. This is selective mutism.
+            At home, she is a chatterbox --- telling stories, singing songs, asking endless questions. But at school, she is silent. Not shy. Not quiet. Completely silent. Her teachers wonder if she can speak at all. Her parents know she can, but they cannot figure out why she will not. This is selective mutism.
           </p>
           <p className="mb-6">
             Selective mutism is a childhood anxiety disorder in which a child consistently fails to speak in specific social situations (e.g., school, public places) despite speaking in other situations (e.g., at home) <Citation id="1" index={1} source="Child Psychiatry and Human Development" year="2020" tier={1} />. It affects approximately 1 in 140 children <Citation id="1" index={2} source="Child Psychiatry and Human Development" year="2020" tier={1} />.
@@ -494,7 +494,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           Selective mutism is not a speech or language disorder. It is not defiance or willful refusal to speak. It is an <strong>anxiety disorder</strong> in which the child is so overwhelmed by anxiety in certain social settings that they become physiologically unable to speak <Citation id="2" index={3} source="DSM-5-TR" year="2022" tier={4} />.
         </p>
         <p className="mb-6">
-          The "selective" in selective mutism refers to the specific situations where speech is absent — not a selective choice. Children with selective mutism desperately want to speak but cannot overcome the paralyzing anxiety that prevents them from doing so.
+          The "selective" in selective mutism refers to the specific situations where speech is absent --- not a selective choice. Children with selective mutism desperately want to speak but cannot overcome the paralyzing anxiety that prevents them from doing so.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -580,7 +580,7 @@ export const anxietyDisordersArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Children with selective mutism often have a family history of anxiety disorders, especially social anxiety.</p>
-                  <p>Temperamentally, these children tend to be behaviorally inhibited — shy, fearful, and slow to warm up in new situations.</p>
+                  <p>Temperamentally, these children tend to be behaviorally inhibited --- shy, fearful, and slow to warm up in new situations.</p>
                 </div>
               ),
             },
@@ -893,7 +893,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           Shared Biological Mechanisms
         </h2>
         <p className="mb-6">
-          Why do anxiety disorders so often co-occur? Research points to shared underlying mechanisms — biological, psychological, and cognitive.
+          Why do anxiety disorders so often co-occur? Research points to shared underlying mechanisms --- biological, psychological, and cognitive.
         </p>
 
         <ArticleTabs
@@ -989,12 +989,12 @@ export const anxietyDisordersArticlesB: Article[] = [
           <strong>Intolerance of uncertainty</strong> is a core feature across anxiety disorders <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} />. People with anxiety struggle with "not knowing" and require excessive certainty to feel safe.
         </p>
         <p className="mb-6">
-          <strong>Anxiety sensitivity</strong> — fear of the physical sensations of anxiety — is another transdiagnostic factor <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2020" tier={1} />. If you fear your racing heart, you are vulnerable to panic disorder. If you fear blushing, you are vulnerable to social anxiety.
+          <strong>Anxiety sensitivity</strong> --- fear of the physical sensations of anxiety --- is another transdiagnostic factor <Citation id="6" index={6} source="Behaviour Research and Therapy" year="2020" tier={1} />. If you fear your racing heart, you are vulnerable to panic disorder. If you fear blushing, you are vulnerable to social anxiety.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Understanding shared mechanisms has led to the development of transdiagnostic treatments — therapies that target the common roots of anxiety rather than treating each disorder separately <Citation id="4" index={7} source="Clinical Psychology: Science and Practice" year="2020" tier={1} />.
+            Understanding shared mechanisms has led to the development of transdiagnostic treatments --- therapies that target the common roots of anxiety rather than treating each disorder separately <Citation id="4" index={7} source="Clinical Psychology: Science and Practice" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1010,7 +1010,7 @@ export const anxietyDisordersArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Some researchers believe that anxiety and depression may not be separate conditions at all, but rather different expressions of a single underlying vulnerability to "negative affectivity" — a tendency to experience distressing emotions.
+            Some researchers believe that anxiety and depression may not be separate conditions at all, but rather different expressions of a single underlying vulnerability to "negative affectivity" --- a tendency to experience distressing emotions.
           </p>
         </ArticleCallout>
 
@@ -1042,7 +1042,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           If you have been diagnosed with multiple anxiety disorders, you are not "broken" or uniquely complicated. You are experiencing a common pattern driven by shared vulnerabilities.
         </p>
         <p className="mb-6">
-          Treatment does not need to address each disorder separately. By targeting the common roots — whether biological, cognitive, or behavioral — you can make progress across all your anxiety symptoms simultaneously.
+          Treatment does not need to address each disorder separately. By targeting the common roots --- whether biological, cognitive, or behavioral --- you can make progress across all your anxiety symptoms simultaneously.
         </p>
       </>
     ),
@@ -1402,7 +1402,7 @@ export const anxietyDisordersArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Why does your heart race when you think about giving a presentation? Why do you feel a knot in your stomach before a first date? The answer lies deep in your brain — in ancient circuits designed to protect you from danger, now misfiring in response to modern stressors.
+            Why does your heart race when you think about giving a presentation? Why do you feel a knot in your stomach before a first date? The answer lies deep in your brain --- in ancient circuits designed to protect you from danger, now misfiring in response to modern stressors.
           </p>
           <p className="mb-6">
             Anxiety disorders are not "all in your head" in the dismissive sense. They are very real neurobiological conditions involving specific brain circuits, neurotransmitter imbalances, and genetic vulnerabilities <Citation id="1" index={1} source="Psychiatric Clinics of North America" year="2020" tier={1} />. Understanding the neuroscience of anxiety helps demystify why it feels the way it does and why treatment works.
@@ -1424,7 +1424,7 @@ export const anxietyDisordersArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    The amygdala is the brain's alarm system. It detects threats and triggers the fear response. In anxiety disorders, the amygdala is <strong>hyperactive</strong> — it perceives danger even when there is none <Citation id="3" index={3} source="Biological Psychiatry" year="2020" tier={1} />.
+                    The amygdala is the brain's alarm system. It detects threats and triggers the fear response. In anxiety disorders, the amygdala is <strong>hyperactive</strong> --- it perceives danger even when there is none <Citation id="3" index={3} source="Biological Psychiatry" year="2020" tier={1} />.
                   </p>
                   <p>This is why you may feel intense fear in objectively safe situations (e.g., a social gathering, a subway ride).</p>
                 </div>
@@ -1459,7 +1459,7 @@ export const anxietyDisordersArticlesB: Article[] = [
               label: 'Insula',
               content: (
                 <div>
-                  <p>The insula processes interoceptive signals — sensations from inside your body (e.g., heartbeat, breathing). Hyperactivity in the insula is linked to anxiety sensitivity and panic disorder, where people fear the physical sensations of anxiety themselves.</p>
+                  <p>The insula processes interoceptive signals --- sensations from inside your body (e.g., heartbeat, breathing). Hyperactivity in the insula is linked to anxiety sensitivity and panic disorder, where people fear the physical sensations of anxiety themselves.</p>
                 </div>
               ),
             },
@@ -1531,7 +1531,7 @@ export const anxietyDisordersArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="did-you-know">
-          <p>Gene-environment interactions are crucial. Having genetic vulnerability does not guarantee you will develop an anxiety disorder — environmental factors (stress, trauma, parenting) interact with genes to determine risk.</p>
+          <p>Gene-environment interactions are crucial. Having genetic vulnerability does not guarantee you will develop an anxiety disorder --- environmental factors (stress, trauma, parenting) interact with genes to determine risk.</p>
         </ArticleCallout>
 
         <h2 id="stress-response" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1553,7 +1553,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           Neuroplasticity: Treatment Changes the Brain
         </h2>
         <p className="mb-6">
-          The good news is that the brain is plastic — it can change in response to experience. Treatment for anxiety disorders actually changes brain structure and function <Citation id="7" index={7} source="Trends in Cognitive Sciences" year="2021" tier={1} />.
+          The good news is that the brain is plastic --- it can change in response to experience. Treatment for anxiety disorders actually changes brain structure and function <Citation id="7" index={7} source="Trends in Cognitive Sciences" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Studies show that after successful CBT or medication treatment:
@@ -1565,7 +1565,7 @@ export const anxietyDisordersArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="The brain is not static. Every thought, every experience reshapes it. Treatment for anxiety is not just symptom reduction — it is brain remodeling."
+          quote="The brain is not static. Every thought, every experience reshapes it. Treatment for anxiety is not just symptom reduction --- it is brain remodeling."
           attribution="Dr. Joseph LeDoux"
           role="Neuroscientist"
           source="Anxious: Using the Brain to Understand and Treat Fear and Anxiety"
@@ -1579,10 +1579,10 @@ export const anxietyDisordersArticlesB: Article[] = [
           Understanding the neurobiology of anxiety helps validate that your experience is real and biological. It also explains why:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>You cannot simply "think your way out" of anxiety — the circuits are wired for fear</li>
-          <li>Medication works — it corrects neurotransmitter imbalances</li>
-          <li>Therapy works — exposure and cognitive restructuring rewire fear circuits</li>
-          <li>Treatment takes time — neuroplasticity is a gradual process</li>
+          <li>You cannot simply "think your way out" of anxiety --- the circuits are wired for fear</li>
+          <li>Medication works --- it corrects neurotransmitter imbalances</li>
+          <li>Therapy works --- exposure and cognitive restructuring rewire fear circuits</li>
+          <li>Treatment takes time --- neuroplasticity is a gradual process</li>
         </ul>
         <p className="mb-6">
           Your brain can change. With the right treatment, you can quiet the overactive alarm system and strengthen the regulatory circuits that keep anxiety in check.

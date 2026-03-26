@@ -254,7 +254,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Why People Enable
         </h2>
         <p className="mb-6">
-          Enabling isn't malicious—it's often driven by:
+          Enabling isn't malicious---it's often driven by:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -285,7 +285,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>No motivation to change because there are no consequences</li>
-          <li>Learned helplessness—belief they can't solve their own problems</li>
+          <li>Learned helplessness---belief they can't solve their own problems</li>
           <li>Prolonged addiction, dysfunction, or destructive patterns</li>
           <li>Resentment toward the enabler (even while depending on them)</li>
           <li>Delayed recovery or growth</li>
@@ -381,7 +381,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4">
-            <strong>Expect pushback</strong>: When you stop enabling, the person will likely escalate—anger, guilt-tripping, threats, or crisis. This is their attempt to reinstate the old dynamic. Stay firm. The discomfort is temporary; the dysfunction is permanent if nothing changes.
+            <strong>Expect pushback</strong>: When you stop enabling, the person will likely escalate---anger, guilt-tripping, threats, or crisis. This is their attempt to reinstate the old dynamic. Stay firm. The discomfort is temporary; the dysfunction is permanent if nothing changes.
           </p>
         </ArticleCallout>
 
@@ -552,7 +552,7 @@ export const toxicDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can't make a decision without consulting them first. They know your passwords, read your texts, and feel entitled to every detail of your life. When you try to assert independence, they act wounded: "I thought we were close,", "You're shutting me out,", "Family doesn't keep secrets." This isn't closeness. This is enmeshment—a toxic fusion where boundaries dissolve and individual identity gets lost.
+            You can't make a decision without consulting them first. They know your passwords, read your texts, and feel entitled to every detail of your life. When you try to assert independence, they act wounded: "I thought we were close,", "You're shutting me out,", "Family doesn't keep secrets." This isn't closeness. This is enmeshment---a toxic fusion where boundaries dissolve and individual identity gets lost.
           </p>
           <p className="mb-6">
             Enmeshment is a family systems concept describing relationships where personal boundaries are so blurred that family members cannot function as separate individuals <Citation id="1" index={1} source="Family Process" year="2019" tier={1} />. While often rooted in family of origin, enmeshment can occur in any intimate relationship. It feels like love but functions like control.
@@ -842,7 +842,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '6. Seek Therapy',
               description: (
                 <p>
-                  A therapist trained in family systems can help you differentiate (develop a separate self) while maintaining connection. This is skilled work—don't try to do it alone.
+                  A therapist trained in family systems can help you differentiate (develop a separate self) while maintaining connection. This is skilled work---don't try to do it alone.
                 </p>
               ),
             },
@@ -850,7 +850,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '7. Consider Physical Distance (If Needed)',
               description: (
                 <p>
-                  Sometimes creating geographical space is necessary to establish psychological space. This doesn't mean cutting off—it means creating room to breathe.
+                  Sometimes creating geographical space is necessary to establish psychological space. This doesn't mean cutting off---it means creating room to breathe.
                 </p>
               ),
             },
@@ -859,7 +859,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4">
-            <strong>Expect an extinction burst</strong>: When you first set boundaries, the enmeshed person will escalate their attempts to pull you back in—crying, anger, guilt, threats. This is temporary. If you hold firm, the behavior will eventually decrease.
+            <strong>Expect an extinction burst</strong>: When you first set boundaries, the enmeshed person will escalate their attempts to pull you back in---crying, anger, guilt, threats. This is temporary. If you hold firm, the behavior will eventually decrease.
           </p>
         </ArticleCallout>
 
@@ -867,7 +867,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Building Healthy Interdependence
         </h2>
         <p className="mb-6">
-          The goal isn't isolation—it's differentiation: being able to maintain your sense of self while staying connected.
+          The goal isn't isolation---it's differentiation: being able to maintain your sense of self while staying connected.
         </p>
 
         <BeforeAfter
@@ -924,7 +924,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Breaking free from enmeshment is grief work—you're mourning the fantasy of perfect fusion and accepting the reality that separateness doesn't mean abandonment. But on the other side is freedom: the ability to love others fully while remaining whole yourself.
+          Breaking free from enmeshment is grief work---you're mourning the fantasy of perfect fusion and accepting the reality that separateness doesn't mean abandonment. But on the other side is freedom: the ability to love others fully while remaining whole yourself.
         </p>
       </>
     ),
@@ -1011,7 +1011,7 @@ export const toxicDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            One person controls the money, making all financial decisions while the other must ask for permission to spend. A 40-year-old dates a 22-year-old, leveraging life experience and resources to maintain control. A celebrity uses fame to manipulate partners who feel lucky to be chosen. These are power imbalances—structural inequalities that shape who gets to decide, who gets believed, and who holds leverage.
+            One person controls the money, making all financial decisions while the other must ask for permission to spend. A 40-year-old dates a 22-year-old, leveraging life experience and resources to maintain control. A celebrity uses fame to manipulate partners who feel lucky to be chosen. These are power imbalances---structural inequalities that shape who gets to decide, who gets believed, and who holds leverage.
           </p>
           <p className="mb-6">
             All relationships have some degree of power differential. The question isn't whether imbalance exists, but whether it's used to exploit, control, or harm <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. Understanding the sources and impacts of power imbalances is essential for building equitable, respectful partnerships.
@@ -1167,7 +1167,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Believability differential</strong>: Who will people believe if you speak out—the famous person or you?</li>
+          <li><strong>Believability differential</strong>: Who will people believe if you speak out---the famous person or you?</li>
           <li><strong>Access to resources</strong>: Legal teams, PR firms, powerful connections</li>
           <li><strong>Social capital</strong>: Ability to damage your reputation or career</li>
           <li><strong>Isolation</strong>: Their life is high-profile; you're expected to stay invisible</li>
@@ -1234,7 +1234,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p className="mb-4">
-            <strong>Consent and power</strong>: True consent requires the ability to say no without fear of negative consequences. When power imbalances are extreme, consent can be compromised—even if it looks voluntary from the outside <Citation id="6" index={6} source="National Domestic Violence Hotline" year="2022" tier={3} />.
+            <strong>Consent and power</strong>: True consent requires the ability to say no without fear of negative consequences. When power imbalances are extreme, consent can be compromised---even if it looks voluntary from the outside <Citation id="6" index={6} source="National Domestic Violence Hotline" year="2022" tier={3} />.
           </p>
         </ArticleCallout>
 
@@ -1292,7 +1292,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '6. Seek Couples Counseling',
               description: (
                 <p>
-                  A therapist can facilitate conversations about power and help create more equitable dynamics (only if abuse is not present—couples counseling is contraindicated in abusive relationships).
+                  A therapist can facilitate conversations about power and help create more equitable dynamics (only if abuse is not present---couples counseling is contraindicated in abusive relationships).
                 </p>
               ),
             },
@@ -1315,7 +1315,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          In these cases, the goal isn't fixing the relationship—it's safely exiting it. Resources:
+          In these cases, the goal isn't fixing the relationship---it's safely exiting it. Resources:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1326,7 +1326,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Power imbalances don't doom relationships, but they require active management, transparency, and goodwill from the person with more power. If those elements are missing, the relationship isn't a partnership—it's a hierarchy. And hierarchies in intimate relationships are fertile ground for abuse.
+          Power imbalances don't doom relationships, but they require active management, transparency, and goodwill from the person with more power. If those elements are missing, the relationship isn't a partnership---it's a hierarchy. And hierarchies in intimate relationships are fertile ground for abuse.
         </p>
       </>
     ),
@@ -1413,10 +1413,10 @@ export const toxicDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know the relationship is draining you, but you're not ready—or not able—to leave. Maybe there are children involved, financial constraints, or you're still holding out hope for change. Leaving isn't always immediate or possible. In the meantime, you need strategies to protect your mental health while navigating a difficult dynamic.
+            You know the relationship is draining you, but you're not ready---or not able---to leave. Maybe there are children involved, financial constraints, or you're still holding out hope for change. Leaving isn't always immediate or possible. In the meantime, you need strategies to protect your mental health while navigating a difficult dynamic.
           </p>
           <p className="mb-6">
-            Research shows that people can maintain wellbeing even in challenging relationships if they implement effective boundaries, self-care practices, and external support <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />. This article provides evidence-based strategies for psychological survival when you're staying—by choice or circumstance.
+            Research shows that people can maintain wellbeing even in challenging relationships if they implement effective boundaries, self-care practices, and external support <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />. This article provides evidence-based strategies for psychological survival when you're staying---by choice or circumstance.
           </p>
         </div>
 
@@ -1472,7 +1472,7 @@ export const toxicDynamicsArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Remind yourself: "Their anger is theirs to manage, not mine to fix"</li>
                     <li>Practice emotional detachment: observe their feelings without absorbing them</li>
-                    <li>Stop trying to regulate their moods—it's not your job</li>
+                    <li>Stop trying to regulate their moods---it's not your job</li>
                     <li>Allow them to experience consequences of their actions without rescuing</li>
                   </ul>
                 </div>
@@ -1492,7 +1492,7 @@ export const toxicDynamicsArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Schedule non-negotiable time alone (walks, hobbies, errands solo)</li>
                     <li>Maintain friendships and outside activities even if they protest</li>
-                    <li>Limit time spent in difficult conversations—you can end discussions</li>
+                    <li>Limit time spent in difficult conversations---you can end discussions</li>
                     <li>"I need some time to myself" is a complete sentence</li>
                   </ul>
                 </div>
@@ -1512,7 +1512,7 @@ export const toxicDynamicsArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"I'm not discussing this right now"</li>
                     <li>"We've been over this. I'm done talking about it"</li>
-                    <li>Don't JADE (Justify, Argue, Defend, Explain)—state the boundary and stop</li>
+                    <li>Don't JADE (Justify, Argue, Defend, Explain)---state the boundary and stop</li>
                     <li>Leave the room if they won't drop a topic</li>
                   </ul>
                 </div>
@@ -1551,7 +1551,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Non-Negotiable Self-Care Practices
         </h2>
         <p className="mb-6">
-          Self-care in difficult relationships isn't optional—it's survival <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={2} />:
+          Self-care in difficult relationships isn't optional---it's survival <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={2} />:
         </p>
 
         <ProgressSteps
@@ -1569,7 +1569,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '2. Protect Your Sleep',
               description: (
                 <p>
-                  Sleep deprivation makes everything worse—emotions intensify, judgment falters, resilience drops. Set a consistent sleep schedule and protect it fiercely.
+                  Sleep deprivation makes everything worse---emotions intensify, judgment falters, resilience drops. Set a consistent sleep schedule and protect it fiercely.
                 </p>
               ),
             },
@@ -1585,7 +1585,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '4. Engage in Activities You Control',
               description: (
                 <p>
-                  Hobbies, creative projects, volunteer work—things where you make the decisions and see results. This counteracts the powerlessness of a difficult relationship.
+                  Hobbies, creative projects, volunteer work---things where you make the decisions and see results. This counteracts the powerlessness of a difficult relationship.
                 </p>
               ),
             },
@@ -1625,7 +1625,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p className="mb-4">
-            <strong>The gray rock method</strong>: When dealing with manipulative or volatile people, become emotionally uninteresting—short, boring responses, no emotional engagement. You're a gray rock: present but not reactive. This reduces drama and protects your energy.
+            <strong>The gray rock method</strong>: When dealing with manipulative or volatile people, become emotionally uninteresting---short, boring responses, no emotional engagement. You're a gray rock: present but not reactive. This reduces drama and protects your energy.
           </p>
         </ArticleCallout>
 
@@ -1640,7 +1640,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li><strong>Document abuse</strong>: Keep a private journal (stored safely), screenshot threatening messages, photograph injuries</li>
           <li><strong>Financial preparation</strong>: If possible, stash emergency cash, open a separate bank account, know where important documents are (passport, birth certificates)</li>
           <li><strong>Know where you'd go</strong>: Identify a friend's house, shelter, or hotel you could access quickly</li>
-          <li><strong>Pack an emergency bag</strong>: Clothes, medications, copies of documents, phone charger—kept somewhere accessible</li>
+          <li><strong>Pack an emergency bag</strong>: Clothes, medications, copies of documents, phone charger---kept somewhere accessible</li>
           <li><strong>Share your situation with someone</strong>: At least one person should know what's happening and have a code word you can use if you need help</li>
         </ul>
 
@@ -1661,7 +1661,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          <strong>Important</strong>: Individual therapy is recommended. Couples therapy is contraindicated in abusive relationships—it gives abusers more tools to manipulate and can escalate danger.
+          <strong>Important</strong>: Individual therapy is recommended. Couples therapy is contraindicated in abusive relationships---it gives abusers more tools to manipulate and can escalate danger.
         </p>
 
         <h2 id="when-to-reconsider" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1682,7 +1682,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          These signs suggest the cost of staying has become too high. Leaving is not failure—it's self-preservation.
+          These signs suggest the cost of staying has become too high. Leaving is not failure---it's self-preservation.
         </p>
 
         <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1719,7 +1719,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          You can survive a difficult relationship with your mental health intact—but it requires active, intentional protection. Set boundaries, maintain your identity, nurture outside connections, and stay honest with yourself about whether staying is sustainable. You deserve better, whether that's a changed relationship or eventually finding the strength to leave.
+          You can survive a difficult relationship with your mental health intact---but it requires active, intentional protection. Set boundaries, maintain your identity, nurture outside connections, and stay honest with yourself about whether staying is sustainable. You deserve better, whether that's a changed relationship or eventually finding the strength to leave.
         </p>
       </>
     ),
@@ -1806,10 +1806,10 @@ export const toxicDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You love them. You genuinely do. But you're exhausted, diminished, and losing yourself. You keep thinking, "If I just love them enough, it'll get better." But love—real, deep, committed love—isn't always sufficient to sustain a relationship. Sometimes love exists alongside incompatibility, toxicity, or fundamental misalignment. And sometimes, the most loving thing you can do is walk away.
+            You love them. You genuinely do. But you're exhausted, diminished, and losing yourself. You keep thinking, "If I just love them enough, it'll get better." But love---real, deep, committed love---isn't always sufficient to sustain a relationship. Sometimes love exists alongside incompatibility, toxicity, or fundamental misalignment. And sometimes, the most loving thing you can do is walk away.
           </p>
           <p className="mb-6">
-            Research shows that relationship satisfaction predicts mental health outcomes more strongly than relationship status—being in a bad relationship is worse for wellbeing than being single <Citation id="4" index={4} source="Journal of Family Psychology" year="2021" tier={1} />. Knowing when to leave despite your feelings is one of the hardest but most important skills in relationship navigation.
+            Research shows that relationship satisfaction predicts mental health outcomes more strongly than relationship status---being in a bad relationship is worse for wellbeing than being single <Citation id="4" index={4} source="Journal of Family Psychology" year="2021" tier={1} />. Knowing when to leave despite your feelings is one of the hardest but most important skills in relationship navigation.
           </p>
         </div>
 
@@ -1831,12 +1831,12 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          When love exists without these elements, the relationship becomes unsustainable—no matter how intense the feelings are.
+          When love exists without these elements, the relationship becomes unsustainable---no matter how intense the feelings are.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>Love is necessary but not sufficient</strong>: You can love someone and still need to leave. This isn't a contradiction—it's recognition that you deserve more than just affection. You deserve a relationship that supports your wellbeing.
+            <strong>Love is necessary but not sufficient</strong>: You can love someone and still need to leave. This isn't a contradiction---it's recognition that you deserve more than just affection. You deserve a relationship that supports your wellbeing.
           </p>
         </ArticleCallout>
 
@@ -1856,7 +1856,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Physical, emotional, sexual, financial, or psychological abuse. If you're being harmed, love doesn't fix it—leaving does <Citation id="5" index={5} source="Violence Against Women" year="2020" tier={1} />.
+                    Physical, emotional, sexual, financial, or psychological abuse. If you're being harmed, love doesn't fix it---leaving does <Citation id="5" index={5} source="Violence Against Women" year="2020" tier={1} />.
                   </p>
                   <p>
                     <strong>Non-negotiable</strong>: Abuse escalates. It doesn't get better with time or love.
@@ -1884,7 +1884,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    You're doing all the work—initiating communication, planning quality time, working on issues. They're passive or indifferent.
+                    You're doing all the work---initiating communication, planning quality time, working on issues. They're passive or indifferent.
                   </p>
                   <p>
                     <strong>Reality</strong>: You can't carry a relationship alone.
@@ -1901,7 +1901,7 @@ export const toxicDynamicsArticlesB: Article[] = [
                     You disagree on core issues: whether to have kids, where to live, financial priorities, political/religious beliefs, fidelity <Citation id="8" index={8} source="Journal of Marriage and Family" year="2020" tier={1} />.
                   </p>
                   <p className="mb-4">
-                    <strong>Important</strong>: These aren't surface disagreements—they're deal-breakers. Compromise on these often breeds resentment.
+                    <strong>Important</strong>: These aren't surface disagreements---they're deal-breakers. Compromise on these often breeds resentment.
                   </p>
                 </div>
               ),
@@ -1915,7 +1915,7 @@ export const toxicDynamicsArticlesB: Article[] = [
                     Repeated infidelity, lies, or betrayals. Or one major betrayal where the person won't do the work to rebuild trust.
                   </p>
                   <p>
-                    <strong>Test</strong>: Are you constantly monitoring, checking, and unable to relax? That's not a relationship—that's a surveillance mission.
+                    <strong>Test</strong>: Are you constantly monitoring, checking, and unable to relax? That's not a relationship---that's a surveillance mission.
                   </p>
                 </div>
               ),
@@ -1940,7 +1940,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    You've had the same fight 50 times. You've tried therapy, conversations, ultimatums—nothing shifts. The cycle just repeats.
+                    You've had the same fight 50 times. You've tried therapy, conversations, ultimatums---nothing shifts. The cycle just repeats.
                   </p>
                   <p>
                     <strong>Reality check</strong>: If someone wanted to change, they would. Lack of change is a choice.
@@ -1997,7 +1997,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           The Sunk Cost Fallacy: Why Time Invested Shouldn't Trap You
         </h2>
         <p className="mb-6">
-          "I've already spent 5 years in this relationship—I can't leave now." This is the sunk cost fallacy: continuing something because you've already invested in it, even when continuing causes harm <Citation id="3" index={3} source="Current Directions in Psychological Science" year="2018" tier={3} />.
+          "I've already spent 5 years in this relationship---I can't leave now." This is the sunk cost fallacy: continuing something because you've already invested in it, even when continuing causes harm <Citation id="3" index={3} source="Current Directions in Psychological Science" year="2018" tier={3} />.
         </p>
 
         <p className="mb-6">
@@ -2005,7 +2005,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Five more years in a bad relationship doesn't make the first five worth it—it compounds the loss.
+          Five more years in a bad relationship doesn't make the first five worth it---it compounds the loss.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -2029,7 +2029,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               feature: 'Is the relationship safe?',
               values: [
                 'Yes, emotionally and physically',
-                'No—abuse of any kind is present',
+                'No---abuse of any kind is present',
               ],
             },
             {
@@ -2101,7 +2101,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '3. Talk to People Outside the Relationship',
               description: (
                 <p>
-                  Friends, family, therapist—people who can offer perspective. Isolation amplifies denial.
+                  Friends, family, therapist---people who can offer perspective. Isolation amplifies denial.
                 </p>
               ),
             },
@@ -2134,7 +2134,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p className="mb-4">
-            <strong>Trial separation</strong>: If you're uncertain, consider a temporary separation (1-3 months). Space often clarifies whether you're relieved or bereft—both are useful data.
+            <strong>Trial separation</strong>: If you're uncertain, consider a temporary separation (1-3 months). Space often clarifies whether you're relieved or bereft---both are useful data.
           </p>
         </ArticleCallout>
 
@@ -2147,9 +2147,9 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Grief</strong>: Even when leaving is right, you'll mourn the loss and the dreams you had</li>
-          <li><strong>Doubt</strong>: "Did I give up too soon?" is normal—hold firm through the wavering</li>
+          <li><strong>Doubt</strong>: "Did I give up too soon?" is normal---hold firm through the wavering</li>
           <li><strong>Loneliness</strong>: Being alone feels scary after being in a relationship, even a bad one</li>
-          <li><strong>Relief</strong>: Often coexisting with grief—freedom from the stress and dysfunction</li>
+          <li><strong>Relief</strong>: Often coexisting with grief---freedom from the stress and dysfunction</li>
           <li><strong>Identity rebuilding</strong>: Rediscovering who you are outside the relationship</li>
         </ul>
 
@@ -2224,7 +2224,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Love is beautiful, essential, and powerful. But it's not magic. It doesn't heal incompatibility, erase abuse, or sustain you alone. Sometimes the most loving thing you can do—for yourself and even for them—is to walk away. You deserve a relationship where love is paired with respect, safety, and mutual effort. Anything less isn't a relationship worth keeping, no matter how much you care.
+          Love is beautiful, essential, and powerful. But it's not magic. It doesn't heal incompatibility, erase abuse, or sustain you alone. Sometimes the most loving thing you can do---for yourself and even for them---is to walk away. You deserve a relationship where love is paired with respect, safety, and mutual effort. Anything less isn't a relationship worth keeping, no matter how much you care.
         </p>
       </>
     ),

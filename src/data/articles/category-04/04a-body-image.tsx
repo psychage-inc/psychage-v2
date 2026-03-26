@@ -95,7 +95,7 @@ export const bodyImageArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you look in the mirror, you're not seeing objective reality. You're seeing an image filtered through beliefs, comparisons, and cultural messages about what bodies 'should' look like. This perception—your body image—isn't superficial vanity. It's deeply connected to your mental health, self-worth, and overall wellbeing.
+            When you look in the mirror, you're not seeing objective reality. You're seeing an image filtered through beliefs, comparisons, and cultural messages about what bodies 'should' look like. This perception---your body image---isn't superficial vanity. It's deeply connected to your mental health, self-worth, and overall wellbeing.
           </p>
           <p className="mb-6">
             Body image refers to how you perceive, think about, and feel about your physical appearance. Research shows that negative body image correlates significantly with depression, anxiety, low self-esteem, and eating disorders <Citation id="1" index={1} source="Journal of Eating Disorders" year="2020" tier={1} />. The relationship is bidirectional: poor body image contributes to mental health struggles, and mental health difficulties can worsen body image <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
@@ -117,7 +117,7 @@ export const bodyImageArticlesA: Article[] = [
               title: 'Perceptual Component',
               content: (
                 <p>
-                  How you perceive your body size, shape, and appearance. This can be distorted—you may perceive yourself as larger, smaller, or different than you objectively are. Body dysmorphia represents an extreme version of perceptual distortion.
+                  How you perceive your body size, shape, and appearance. This can be distorted---you may perceive yourself as larger, smaller, or different than you objectively are. Body dysmorphia represents an extreme version of perceptual distortion.
                 </p>
               ),
             },
@@ -155,7 +155,7 @@ export const bodyImageArticlesA: Article[] = [
           The Body Image-Mental Health Connection
         </h2>
         <p className="mb-6">
-          Negative body image doesn't just mean feeling bad about your appearance—it's linked to a range of mental health outcomes:
+          Negative body image doesn't just mean feeling bad about your appearance---it's linked to a range of mental health outcomes:
         </p>
 
         <StatCard
@@ -268,7 +268,7 @@ export const bodyImageArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Body appreciation—actively valuing your body for its functionality and treating it with care—is particularly protective for mental health <Citation id="6" index={6} source="Body Image" year="2019" tier={1} />.
+          Body appreciation---actively valuing your body for its functionality and treating it with care---is particularly protective for mental health <Citation id="6" index={6} source="Body Image" year="2019" tier={1} />.
         </p>
 
         <h2 id="influences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -346,7 +346,7 @@ export const bodyImageArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Body image—how you perceive, think about, and feel about your physical appearance—is intimately connected to mental health. Negative body image significantly increases risk for depression, anxiety, low self-esteem, and eating disorders. Improving body image isn't about achieving a certain appearance; it's about developing a flexible, compassionate relationship with your body that doesn't tie your worth to how you look. This shift can profoundly improve overall psychological wellbeing.
+            Body image---how you perceive, think about, and feel about your physical appearance---is intimately connected to mental health. Negative body image significantly increases risk for depression, anxiety, low self-esteem, and eating disorders. Improving body image isn't about achieving a certain appearance; it's about developing a flexible, compassionate relationship with your body that doesn't tie your worth to how you look. This shift can profoundly improve overall psychological wellbeing.
           </p>
         </ArticleCallout>
       </>
@@ -442,7 +442,7 @@ export const bodyImageArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most people have body parts they wish looked different. But for some, perceived flaws become an obsession that dominates daily life—hours spent in the mirror, avoiding social situations, seeking cosmetic procedures that never satisfy. This is the line between normal body dissatisfaction and body dysmorphic disorder (BDD), and it's important to recognize.
+            Most people have body parts they wish looked different. But for some, perceived flaws become an obsession that dominates daily life---hours spent in the mirror, avoiding social situations, seeking cosmetic procedures that never satisfy. This is the line between normal body dissatisfaction and body dysmorphic disorder (BDD), and it's important to recognize.
           </p>
           <p className="mb-6">
             Body dysmorphic disorder is a mental health condition characterized by obsessive preoccupation with perceived defects in appearance that are either minimal or not observable to others <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. While 60% of adults report some body dissatisfaction, only about 2-3% meet criteria for BDD <Citation id="2" index={2} source="Journal of Psychiatric Research" year="2021" tier={1} />. The difference is one of degree, intensity, and impact on functioning.
@@ -579,7 +579,7 @@ export const bodyImageArticlesA: Article[] = [
               title: '2. Perceptual Distortion',
               content: (
                 <p>
-                  The brain's visual processing becomes distorted—magnifying, exaggerating, or even hallucinating the perceived defect. Neuroimaging shows people with BDD process visual information differently, focusing on details rather than the whole.
+                  The brain's visual processing becomes distorted---magnifying, exaggerating, or even hallucinating the perceived defect. Neuroimaging shows people with BDD process visual information differently, focusing on details rather than the whole.
                 </p>
               ),
             },
@@ -703,7 +703,7 @@ export const bodyImageArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The goal of treatment isn't to convince someone they're attractive—it's to reduce the obsessive focus on appearance, improve functioning, and help people engage in life despite imperfections.
+          The goal of treatment isn't to convince someone they're attractive---it's to reduce the obsessive focus on appearance, improve functioning, and help people engage in life despite imperfections.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -738,10 +738,10 @@ export const bodyImageArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You scroll through Instagram and see flawless skin, perfect bodies, aspirational lifestyles. What you're seeing isn't reality—it's a heavily curated, edited version. Yet your brain processes these images as comparisons, and your body image suffers. Social media hasn't just changed how we communicate; it's fundamentally altered how we perceive ourselves.
+            You scroll through Instagram and see flawless skin, perfect bodies, aspirational lifestyles. What you're seeing isn't reality---it's a heavily curated, edited version. Yet your brain processes these images as comparisons, and your body image suffers. Social media hasn't just changed how we communicate; it's fundamentally altered how we perceive ourselves.
           </p>
           <p className="mb-6">
-            Research shows that increased social media use correlates with higher body dissatisfaction, especially among adolescents and young adults <Citation id="1" index={1} source="Body Image" year="2021" tier={1} />. The "filter effect"—both literal (photo filters) and metaphorical (selective sharing)—creates unrealistic beauty standards that even the people posting don't actually meet <Citation id="2" index={2} source="Computers in Human Behavior" year="2022" tier={1} />.
+            Research shows that increased social media use correlates with higher body dissatisfaction, especially among adolescents and young adults <Citation id="1" index={1} source="Body Image" year="2021" tier={1} />. The "filter effect"---both literal (photo filters) and metaphorical (selective sharing)---creates unrealistic beauty standards that even the people posting don't actually meet <Citation id="2" index={2} source="Computers in Human Behavior" year="2022" tier={1} />.
           </p>
         </div>
 
@@ -753,7 +753,7 @@ export const bodyImageArticlesA: Article[] = [
           type="multiple"
           items={[
             { id: 'comparison', title: 'Upward Social Comparison', content: <p>You compare your behind-the-scenes reality to others" highlight reels. Seeing 'better' bodies triggers feelings of inadequacy, even though the comparison is fundamentally unfair <Citation id="3" index={3} source="Psychology of Popular Media" year="2020" tier={1} />.</p> },
-            { id: 'filters', title: 'Normalization of Digital Alteration', content: <p>Filters smooth skin, enlarge eyes, slim faces. When filtered images become the norm, unedited reality looks 'wrong." This creates "Snapchat dysmorphia"—people seeking cosmetic procedures to look like their filtered selves <Citation id="5" index={5} source="JAMA Facial Plastic Surgery" year="2018" tier={1} />.</p> },
+            { id: 'filters', title: 'Normalization of Digital Alteration', content: <p>Filters smooth skin, enlarge eyes, slim faces. When filtered images become the norm, unedited reality looks 'wrong." This creates "Snapchat dysmorphia"---people seeking cosmetic procedures to look like their filtered selves <Citation id="5" index={5} source="JAMA Facial Plastic Surgery" year="2018" tier={1} />.</p> },
             { id: 'algorithms', title: 'Algorithm-Driven Exposure', content: <p>Platforms show you content similar to what you engage with. If you interact with fitness or beauty content, the algorithm floods your feed with idealized bodies, intensifying comparison.</p> },
             { id: 'validation', title: 'Likes as Appearance Validation', content: <p>When appearance-based posts get likes, it reinforces tying self-worth to looks. The pursuit of validation becomes addictive and anxiety-inducing.</p> },
           ]}
@@ -783,7 +783,7 @@ export const bodyImageArticlesA: Article[] = [
     id: catId(34),
     slug: 'male-body-image-issues-overlooked-crisis',
     title: 'Male Body Image Issues: The Overlooked Crisis',
-    description: 'Men face significant body image pressures—muscle dysmorphia, height anxiety, hair loss. Learn why male body dissatisfaction is rising and under-discussed.',
+    description: 'Men face significant body image pressures---muscle dysmorphia, height anxiety, hair loss. Learn why male body dissatisfaction is rising and under-discussed.',
     image: "/images/articles/cat04/cover-034.svg",
     category: CATEGORY_SELF_WORTH,
     readTime: 6,
@@ -802,7 +802,7 @@ export const bodyImageArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Body image issues are often framed as a women's problem. But research shows men experience significant body dissatisfaction too—it just manifests differently. While women face pressure to be thin, men face pressure to be muscular, tall, and have a full head of hair. And unlike women's body image struggles, men's are rarely discussed.
+            Body image issues are often framed as a women's problem. But research shows men experience significant body dissatisfaction too---it just manifests differently. While women face pressure to be thin, men face pressure to be muscular, tall, and have a full head of hair. And unlike women's body image struggles, men's are rarely discussed.
           </p>
           <p className="mb-6">
             Studies find 90% of teen boys and 70% of adult men report body dissatisfaction <Citation id="1" index={1} source="Body Image" year="2020" tier={1} />. Male body image concerns are rising, linked to social media exposure, idealized male physiques in media, and cultural messages about masculinity <Citation id="4" index={4} source="Journal of Health Psychology" year="2021" tier={1} />.
@@ -859,11 +859,11 @@ export const bodyImageArticlesA: Article[] = [
           Social Media's Role
         </h2>
         <p className="mb-6">
-          Instagram and TikTok expose men to idealized physiques—often achieved through professional lighting, posing, dehydration for photo shoots, and steroids. Yet these images are processed as realistic comparisons <Citation id="5" index={5} source="New Media & Society" year="2020" tier={1} />.
+          Instagram and TikTok expose men to idealized physiques---often achieved through professional lighting, posing, dehydration for photo shoots, and steroids. Yet these images are processed as realistic comparisons <Citation id="5" index={5} source="New Media & Society" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Male body image issues are common, serious, and under-discussed. The muscular ideal, height anxiety, and hair loss create significant distress. Men need permission to acknowledge these struggles without it being seen as unmasculine. Body image isn't a gendered issue—it affects everyone, just differently.</p>
+          <p>Male body image issues are common, serious, and under-discussed. The muscular ideal, height anxiety, and hair loss create significant distress. Men need permission to acknowledge these struggles without it being seen as unmasculine. Body image isn't a gendered issue---it affects everyone, just differently.</p>
         </ArticleCallout>
       </>
     ),
@@ -904,7 +904,7 @@ export const bodyImageArticlesA: Article[] = [
           title="Two Approaches to Body Image"
           columns={['Aspect', 'Body Positivity', 'Body Neutrality']}
           items={[
-            { feature: 'Core message', values: ['Love your body as it is', 'Your body is neutral—neither good nor bad'] },
+            { feature: 'Core message', values: ['Love your body as it is', 'Your body is neutral---neither good nor bad'] },
             { feature: 'Focus', values: ['Appearance (reframed positively)', 'Functionality and acceptance'] },
             { feature: 'Emotional goal', values: ['Positive feelings about appearance', "Neutral acceptance; appearance isn't identity"] },
             { feature: 'When helpful', values: ['Countering negative body talk', 'When forcing positivity feels inauthentic'] },
@@ -919,10 +919,10 @@ export const bodyImageArticlesA: Article[] = [
         <ProgressSteps
           variant="vertical"
           steps={[
-            { title: 'Your Body Is an Instrument, Not an Ornament', description: <p>Shift from 'How does it look?" to "What can it do?" Appreciate movement, sensation, healing—not aesthetics <Citation id="2" index={2} source="Psychology of Women Quarterly" year="2020" tier={1} />.</p> },
-            { title: `Appearance Doesn't Define Worth`, description: <p>You are not your body. Your value comes from who you are, what you do, how you treat others—not how you look.</p> },
+            { title: 'Your Body Is an Instrument, Not an Ornament', description: <p>Shift from 'How does it look?" to "What can it do?" Appreciate movement, sensation, healing---not aesthetics <Citation id="2" index={2} source="Psychology of Women Quarterly" year="2020" tier={1} />.</p> },
+            { title: `Appearance Doesn't Define Worth`, description: <p>You are not your body. Your value comes from who you are, what you do, how you treat others---not how you look.</p> },
             { title: 'Acceptance Without Obsession', description: <p>You don't have to love or hate your body. Acceptance means "this is my body, and that's okay' without constant evaluation.</p> },
-            { title: 'Opt Out of Appearance Conversation', description: <p>Reduce body talk—positive or negative. Stop commenting on your own or others' appearances. Redirect focus elsewhere.</p> },
+            { title: 'Opt Out of Appearance Conversation', description: <p>Reduce body talk---positive or negative. Stop commenting on your own or others' appearances. Redirect focus elsewhere.</p> },
           ]}
         />
 
@@ -931,7 +931,7 @@ export const bodyImageArticlesA: Article[] = [
         </h2>
         <ArticleCallout variant="tip">
           <ul className="list-disc pl-5 space-y-2">
-            <li><strong>Reframe body-checking thoughts:</strong> Instead of "My stomach looks bloated," try "My stomach is digesting food—it's doing its job."</li>
+            <li><strong>Reframe body-checking thoughts:</strong> Instead of "My stomach looks bloated," try "My stomach is digesting food---it's doing its job."</li>
             <li><strong>Focus on function:</strong> "My legs carried me on a walk" vs. "My thighs are too big."</li>
             <li><strong>Reduce mirror time:</strong> Check appearance for practical reasons (hair neat, food in teeth), not evaluation.</li>
             <li><strong>Unfollow appearance-focused accounts:</strong> Even "body positive" content centers appearance. Follow function/hobby-focused content instead.</li>
@@ -940,7 +940,7 @@ export const bodyImageArticlesA: Article[] = [
         </ArticleCallout>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Body neutrality offers a middle path between body hatred and forced positivity. It de-centers appearance, emphasizes functionality, and allows you to simply exist in your body without constant evaluation. You don't have to love your body—accepting it as neutral is enough <Citation id="3" index={3} source="Body Image" year="2019" tier={1} />.</p>
+          <p>Body neutrality offers a middle path between body hatred and forced positivity. It de-centers appearance, emphasizes functionality, and allows you to simply exist in your body without constant evaluation. You don't have to love your body---accepting it as neutral is enough <Citation id="3" index={3} source="Body Image" year="2019" tier={1} />.</p>
         </ArticleCallout>
       </>
     ),

@@ -89,7 +89,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: 'How much do I have to share?',
               content: (
                 <div>
-                  <p className="mb-4">As much or as little as you're comfortable with. You're not required to spill your entire life story in session one. Therapy builds trust over time — you'll share more as you feel safer.</p>
+                  <p className="mb-4">As much or as little as you're comfortable with. You're not required to spill your entire life story in session one. Therapy builds trust over time --- you'll share more as you feel safer.</p>
                   <p className="mb-4"><strong>It's okay to say:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"I'm not ready to talk about that yet"</li>
@@ -115,7 +115,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: 'Will there be homework?',
               content: (
                 <div>
-                  <p className="mb-4">Depends on the type of therapy. CBT and DBT often include "homework" — practicing skills, tracking thoughts, doing exposures. Psychodynamic or person-centered therapy typically doesn't.</p>
+                  <p className="mb-4">Depends on the type of therapy. CBT and DBT often include "homework" --- practicing skills, tracking thoughts, doing exposures. Psychodynamic or person-centered therapy typically doesn't.</p>
                   <p className="mb-4"><strong>If you hate the idea of homework:</strong> Ask the therapist upfront. Many will adjust their approach. But know that practicing between sessions often leads to faster progress.</p>
                 </div>
               ),
@@ -125,7 +125,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: `What if there's awkward silence?`,
               content: (
                 <div>
-                  <p className="mb-4">Silence happens. It's not always awkward — sometimes it's processing time. Good therapists are comfortable with silence and won't rush to fill it.</p>
+                  <p className="mb-4">Silence happens. It's not always awkward --- sometimes it's processing time. Good therapists are comfortable with silence and won't rush to fill it.</p>
                   <p><strong>If silence makes you anxious, just say so:</strong> "I don't know what to say' or "This silence feels uncomfortable." That's useful information for the therapist.</p>
                 </div>
               ),
@@ -161,7 +161,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               id: 'bring-tissues',
               title: 'Should I bring my own tissues?',
               content: (
-                <p>No need — therapists always have tissues. It's part of the job. Crying is normal and expected.</p>
+                <p>No need --- therapists always have tissues. It's part of the job. Crying is normal and expected.</p>
               ),
             },
           ]}
@@ -242,11 +242,11 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
           What Therapy Actually Feels Like
         </h2>
         <p className="mb-6">
-          Therapy isn't magic. It's not one big breakthrough moment. It's a series of small shifts — noticing patterns, trying new responses, building skills, processing feelings you've been avoiding <Citation id="3" index={3} source="American Psychological Association" year="2022" tier={4} />.
+          Therapy isn't magic. It's not one big breakthrough moment. It's a series of small shifts --- noticing patterns, trying new responses, building skills, processing feelings you've been avoiding <Citation id="3" index={3} source="American Psychological Association" year="2022" tier={4} />.
         </p>
 
         <QuoteBlock
-          quote="I thought therapy would be this profound experience where everything suddenly made sense. It wasn't. It was slow, sometimes frustrating, often uncomfortable. But over months, I started handling things differently. I noticed I was less reactive, more aware of my patterns. It wasn't dramatic — it was gradual and real."
+          quote="I thought therapy would be this profound experience where everything suddenly made sense. It wasn't. It was slow, sometimes frustrating, often uncomfortable. But over months, I started handling things differently. I noticed I was less reactive, more aware of my patterns. It wasn't dramatic --- it was gradual and real."
           attribution="First-Time Therapy Client"
           role="Patient Perspective"
           variant="large"
@@ -254,7 +254,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
 
         <StatCard
           stats={[
-            { value: 12, suffix: '–20', label: 'Sessions most people attend for issue-focused therapy' },
+            { value: 12, suffix: '--20', label: 'Sessions most people attend for issue-focused therapy' },
             { value: 50, suffix: '%', label: 'Report noticeable improvement by session 8' },
             { value: 75, suffix: '%', label: 'Feel therapy was helpful overall' },
           ]}
@@ -265,7 +265,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
           When Does It Start to Feel Worth It?
         </h2>
         <p className="mb-6">
-          Most people don't feel immediate relief. The first few sessions are often just getting to know each other and figuring out goals. Around session 4-6, therapy starts to feel more productive. By session 10, you'll likely notice changes — not huge, but meaningful.
+          Most people don't feel immediate relief. The first few sessions are often just getting to know each other and figuring out goals. Around session 4-6, therapy starts to feel more productive. By session 10, you'll likely notice changes --- not huge, but meaningful.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -355,7 +355,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Bringing up mental health with your doctor can feel awkward. You're there for a physical, and suddenly you're supposed to say "I think I'm depressed"? Many people avoid the topic entirely — but primary care doctors are increasingly trained to screen for and treat mental health conditions <Citation id="1" index={1} source="JAMA" year="2021" tier={1} />.
+            Bringing up mental health with your doctor can feel awkward. You're there for a physical, and suddenly you're supposed to say "I think I'm depressed"? Many people avoid the topic entirely --- but primary care doctors are increasingly trained to screen for and treat mental health conditions <Citation id="1" index={1} source="JAMA" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Here's how to start the conversation, what to expect, and what your doctor can (and can't) do to help.
@@ -434,7 +434,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
                     <li>Feeling tired or having little energy?</li>
                     <li>Thoughts that you would be better off dead or hurting yourself?</li>
                   </ul>
-                  <p className="mt-4">These are standardized questions — answer honestly. Your score helps determine severity and treatment options.</p>
+                  <p className="mt-4">These are standardized questions --- answer honestly. Your score helps determine severity and treatment options.</p>
                 </div>
               ),
             },
@@ -481,7 +481,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
                     <li>Anemia</li>
                     <li>Blood sugar issues</li>
                   </ul>
-                  <p className="mt-4">This doesn't mean your mental health concerns aren't real — it's just making sure there isn't a treatable medical cause.</p>
+                  <p className="mt-4">This doesn't mean your mental health concerns aren't real --- it's just making sure there isn't a treatable medical cause.</p>
                 </div>
               ),
             },
@@ -499,7 +499,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
             { feature: 'Medication (SSRIs/SNRIs)', values: ['Doctor prescribes antidepressants, monitors for side effects, adjusts dose'] },
             { feature: 'Referral to therapist', values: ['Doctor provides list of therapists or refers to in-network mental health provider'] },
             { feature: 'Referral to psychiatrist', values: ["For complex cases, medication management, or if PCP doesn't feel comfortable prescribing psych meds"] },
-            { feature: 'Lifestyle recommendations', values: ['Exercise, sleep hygiene, stress reduction — supportive but not sufficient alone for moderate-severe cases'] },
+            { feature: 'Lifestyle recommendations', values: ['Exercise, sleep hygiene, stress reduction --- supportive but not sufficient alone for moderate-severe cases'] },
             { feature: 'Follow-up appointments', values: ['Check-ins every 4-6 weeks to monitor symptoms and medication response'] },
             { feature: 'Integrated care (if available)', values: ['Some clinics have mental health providers on-site for same-day consultation'] },
           ]}
@@ -541,7 +541,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: `Barrier: "I'm embarrassed`,
               description: (
                 <div>
-                  <p className="mb-4">Doctors hear this all the time. Mental health visits are routine — one of the most common reasons people see primary care doctors.</p>
+                  <p className="mb-4">Doctors hear this all the time. Mental health visits are routine --- one of the most common reasons people see primary care doctors.</p>
                   <p>Remember: Your doctor has heard far more embarrassing things than "I'm anxious." This is their job.</p>
                 </div>
               ),
@@ -573,7 +573,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="I finally told my doctor I thought I had depression. She didn't make it a big deal — just asked some questions, ran blood work to check my thyroid, and started me on an SSRI. I felt silly for putting it off for so long. It was easier than I expected."
+          quote="I finally told my doctor I thought I had depression. She didn't make it a big deal --- just asked some questions, ran blood work to check my thyroid, and started me on an SSRI. I felt silly for putting it off for so long. It was easier than I expected."
           attribution="Person Who Talked to Their Doctor"
           role="Patient Perspective"
           variant="large"
@@ -659,7 +659,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
             You've been in therapy for months. You're showing up, doing the work, and yet… nothing feels different. Maybe you're worse. Maybe you're the same. You're starting to wonder: is therapy not working, or am I not doing it right?
           </p>
           <p className="mb-6">
-            This is a common and frustrating experience. But "therapy isn't working" can mean many things — wrong therapist, wrong approach, not enough time, or a condition that needs more intensive treatment <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />. Here's how to figure out what's going on and what to do about it.
+            This is a common and frustrating experience. But "therapy isn't working" can mean many things --- wrong therapist, wrong approach, not enough time, or a condition that needs more intensive treatment <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />. Here's how to figure out what's going on and what to do about it.
           </p>
         </div>
 
@@ -673,7 +673,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         <ArticleCallout variant="tip" title="Signs Therapy IS Working (Even If It Doesn't Feel Like It)">
           <ul className="list-disc pl-6 space-y-2">
             <li>You're noticing patterns you didn't see before</li>
-            <li>You catch yourself using coping skills — even if they don't always work</li>
+            <li>You catch yourself using coping skills --- even if they don't always work</li>
             <li>You're more aware of your emotions, even if they're still overwhelming</li>
             <li>Small things that used to derail you don't anymore</li>
             <li>You handled one situation differently than you would have before therapy</li>
@@ -704,7 +704,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: '1. Wrong Therapist (Poor Fit)',
               content: (
                 <div>
-                  <p className="mb-4">Therapeutic alliance (the relationship between you and your therapist) is <strong>the strongest predictor</strong> of therapy success <Citation id="4" index={4} source="American Psychologist" year="2022" tier={4} />. If you don't feel heard, understood, or safe, therapy won't work — even if the therapist is technically competent.</p>
+                  <p className="mb-4">Therapeutic alliance (the relationship between you and your therapist) is <strong>the strongest predictor</strong> of therapy success <Citation id="4" index={4} source="American Psychologist" year="2022" tier={4} />. If you don't feel heard, understood, or safe, therapy won't work --- even if the therapist is technically competent.</p>
                   <p className="mb-4"><strong>Signs of poor fit:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>You edit yourself or hold back</li>
@@ -773,8 +773,8 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
                   <p className="mb-4"><strong>You may need:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Twice-weekly therapy</li>
-                    <li>Intensive outpatient program (IOP) — 3-5 days/week, 3-4 hours/day</li>
-                    <li>Partial hospitalization (PHP) — full-day treatment, 5 days/week</li>
+                    <li>Intensive outpatient program (IOP) --- 3-5 days/week, 3-4 hours/day</li>
+                    <li>Partial hospitalization (PHP) --- full-day treatment, 5 days/week</li>
                     <li>Inpatient hospitalization (for acute crises)</li>
                   </ul>
                   <p className="mt-4"><strong>Solution:</strong> Talk to your therapist or psychiatrist about higher levels of care.</p>
@@ -787,7 +787,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">For moderate-severe depression, anxiety, bipolar disorder, or psychotic conditions, therapy alone often isn't enough. Medication + therapy is more effective than either alone.</p>
-                  <p><strong>Solution:</strong> Talk to your therapist about a psychiatry referral. Starting medication doesn't mean therapy failed — it means your brain needs both.</p>
+                  <p><strong>Solution:</strong> Talk to your therapist about a psychiatry referral. Starting medication doesn't mean therapy failed --- it means your brain needs both.</p>
                 </div>
               ),
             },
@@ -846,14 +846,14 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
             {
               title: `You Don't Need Permission to Switch`,
               description: (
-                <p>You can say "I'd like to pause therapy' or "I'm going to try a different therapist." You don't owe them an explanation. It's your mental health — you're allowed to prioritize fit.</p>
+                <p>You can say "I'd like to pause therapy' or "I'm going to try a different therapist." You don't owe them an explanation. It's your mental health --- you're allowed to prioritize fit.</p>
               ),
             },
           ]}
         />
 
         <QuoteBlock
-          quote="I saw the same therapist for a year and felt stuck. I thought therapy just didn't work for me. Then I tried someone new — a trauma-focused therapist — and within three months I made more progress than the entire previous year. It wasn't therapy that wasn't working. It was the wrong therapist for my needs."
+          quote="I saw the same therapist for a year and felt stuck. I thought therapy just didn't work for me. Then I tried someone new --- a trauma-focused therapist --- and within three months I made more progress than the entire previous year. It wasn't therapy that wasn't working. It was the wrong therapist for my needs."
           attribution="Person Who Switched Therapists"
           role="Patient Perspective"
           variant="large"
@@ -878,7 +878,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Therapy not working doesn't mean you're broken. It means something in the equation needs adjusting — therapist, approach, timing, or intensity. Keep advocating for yourself until you find what works.
+          Therapy not working doesn't mean you're broken. It means something in the equation needs adjusting --- therapist, approach, timing, or intensity. Keep advocating for yourself until you find what works.
         </p>
       </>
     ),
@@ -941,10 +941,10 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "How long will I be in therapy?" It's one of the first questions people ask — and one of the hardest to answer. Therapy isn't one-size-fits-all. Some people see meaningful improvement in 8-12 sessions. Others benefit from years of ongoing work. Most fall somewhere in between <Citation id="1" index={1} source="The Lancet Psychiatry" year="2021" tier={1} />.
+            "How long will I be in therapy?" It's one of the first questions people ask --- and one of the hardest to answer. Therapy isn't one-size-fits-all. Some people see meaningful improvement in 8-12 sessions. Others benefit from years of ongoing work. Most fall somewhere in between <Citation id="1" index={1} source="The Lancet Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Here's what research says about therapy duration for different goals, conditions, and situations — so you can set realistic expectations.
+            Here's what research says about therapy duration for different goals, conditions, and situations --- so you can set realistic expectations.
           </p>
         </div>
 
@@ -987,7 +987,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
                     <li><strong>Sessions 5-12:</strong> Learning and practicing skills (cognitive restructuring, behavioral activation)</li>
                     <li><strong>Sessions 13-20:</strong> Applying skills to real-life situations, relapse prevention planning</li>
                   </ul>
-                  <p className="mb-4"><strong>After 20 sessions:</strong> Many people transition to "maintenance" — biweekly or monthly check-ins — or end therapy with an open-door policy (come back if symptoms return).</p>
+                  <p className="mb-4"><strong>After 20 sessions:</strong> Many people transition to "maintenance" --- biweekly or monthly check-ins --- or end therapy with an open-door policy (come back if symptoms return).</p>
                 </div>
               ),
             },
@@ -997,7 +997,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Single-incident trauma (e.g., car accident, assault):</strong> Trauma-focused therapies like Prolonged Exposure (PE) or Cognitive Processing Therapy (CPT) typically take <strong>12-16 weekly sessions</strong>.</p>
-                  <p className="mb-4"><strong>Complex trauma (e.g., childhood abuse, multiple traumas):</strong> Requires longer-term therapy — often 1-2+ years. This includes stabilization, processing trauma, and rebuilding sense of self <Citation id="4" index={4} source="American Psychologist" year="2022" tier={1} />.</p>
+                  <p className="mb-4"><strong>Complex trauma (e.g., childhood abuse, multiple traumas):</strong> Requires longer-term therapy --- often 1-2+ years. This includes stabilization, processing trauma, and rebuilding sense of self <Citation id="4" index={4} source="American Psychologist" year="2022" tier={1} />.</p>
                   <p><strong>EMDR:</strong> Some people see results in 6-12 sessions, but complex cases take longer.</p>
                 </div>
               ),
@@ -1029,7 +1029,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: 'Life Transitions or Grief: 8-15 Sessions',
               content: (
                 <div>
-                  <p className="mb-4">Divorce, job loss, relocation, death of a loved one — these are often addressed in <strong>8-15 sessions</strong>, depending on complexity.</p>
+                  <p className="mb-4">Divorce, job loss, relocation, death of a loved one --- these are often addressed in <strong>8-15 sessions</strong>, depending on complexity.</p>
                   <p className="mb-4"><strong>Complicated grief:</strong> When grief doesn't resolve naturally, specialized grief therapy may take 12-20 sessions.</p>
                 </div>
               ),
@@ -1039,7 +1039,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: 'Chronic Conditions: Ongoing',
               content: (
                 <div>
-                  <p className="mb-4">Bipolar disorder, schizophrenia, chronic/recurrent depression, personality disorders — these often require <strong>long-term therapy</strong> (years) as part of ongoing management, similar to medication for chronic physical illness <Citation id="5" index={5} source="JAMA Psychiatry" year="2020" tier={1} />.</p>
+                  <p className="mb-4">Bipolar disorder, schizophrenia, chronic/recurrent depression, personality disorders --- these often require <strong>long-term therapy</strong> (years) as part of ongoing management, similar to medication for chronic physical illness <Citation id="5" index={5} source="JAMA Psychiatry" year="2020" tier={1} />.</p>
                   <p><strong>Structure:</strong> Weekly initially, then biweekly or monthly maintenance to prevent relapse.</p>
                 </div>
               ),
@@ -1079,7 +1079,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway" title="The Takeaway">
-          <p>Most people see significant improvement in 12-20 sessions. But more sessions don't always mean more progress — it depends on the person, the condition, and the approach. Quality of therapy matters more than quantity.</p>
+          <p>Most people see significant improvement in 12-20 sessions. But more sessions don't always mean more progress --- it depends on the person, the condition, and the approach. Quality of therapy matters more than quantity.</p>
         </ArticleCallout>
 
         <h2 id="frequency-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1119,14 +1119,14 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip" title="Ending Therapy Doesn't Mean It Failed">
-          <p>Graduating from therapy is a success, not a failure. You can always come back for "tune-ups" if life gets hard again. Many therapists offer an open-door policy — no need to start from scratch.</p>
+          <p>Graduating from therapy is a success, not a failure. You can always come back for "tune-ups" if life gets hard again. Many therapists offer an open-door policy --- no need to start from scratch.</p>
         </ArticleCallout>
 
         <h2 id="long-term-therapy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Is Long-Term Therapy Appropriate?
         </h2>
         <p className="mb-6">
-          Some people stay in therapy for years — not because they're "not getting better," but because ongoing therapy is part of managing a chronic condition or supporting deep personal growth <Citation id="4" index={4} source="American Psychologist" year="2022" tier={1} />.
+          Some people stay in therapy for years --- not because they're "not getting better," but because ongoing therapy is part of managing a chronic condition or supporting deep personal growth <Citation id="4" index={4} source="American Psychologist" year="2022" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1141,7 +1141,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="I've been in therapy for three years. Not because I'm broken, but because it's like having a personal coach for my mental health. I go biweekly now, and it keeps me grounded. I don't see it ending anytime soon — and that's okay."
+          quote="I've been in therapy for three years. Not because I'm broken, but because it's like having a personal coach for my mental health. I go biweekly now, and it keeps me grounded. I don't see it ending anytime soon --- and that's okay."
           attribution="Long-Term Therapy Client"
           role="Patient Perspective"
           variant="large"
@@ -1163,7 +1163,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
 
         <StatCard
           stats={[
-            { value: 12, suffix: '–20', label: 'Sessions for most common mental health issues' },
+            { value: 12, suffix: '--20', label: 'Sessions for most common mental health issues' },
             { value: 8, suffix: '', label: 'Sessions before 50% see improvement' },
             { value: 26, suffix: '+', label: 'Sessions for complex or chronic conditions' },
           ]}
@@ -1171,7 +1171,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          There's no magic number. Therapy lasts as long as it's helpful. For some, that's 10 sessions. For others, it's years. The key is finding a therapist who helps you progress — not just show up.
+          There's no magic number. Therapy lasts as long as it's helpful. For some, that's 10 sessions. For others, it's years. The key is finding a therapist who helps you progress --- not just show up.
         </p>
       </>
     ),
@@ -1180,7 +1180,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
     id: catId(30),
     slug: 'therapeutic-relationship-why-bond-with-therapist-matters-most',
     title: 'The Therapeutic Relationship: Why the Bond with Your Therapist Matters Most',
-    description: 'Research shows the therapeutic alliance is the strongest predictor of therapy success — stronger than technique or credentials.',
+    description: 'Research shows the therapeutic alliance is the strongest predictor of therapy success --- stronger than technique or credentials.',
     image: "/images/articles/cat14/cover-030.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
     readTime: 8,
@@ -1250,10 +1250,10 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Decades of research has tried to answer: What makes therapy work? Is it the technique (CBT vs. psychodynamic)? The therapist's credentials? The number of sessions? The answer is surprising: <strong>the relationship between you and your therapist</strong> — called the therapeutic alliance — is the <strong>strongest predictor</strong> of whether therapy works <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.
+            Decades of research has tried to answer: What makes therapy work? Is it the technique (CBT vs. psychodynamic)? The therapist's credentials? The number of sessions? The answer is surprising: <strong>the relationship between you and your therapist</strong> --- called the therapeutic alliance --- is the <strong>strongest predictor</strong> of whether therapy works <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            More than the method, more than the therapist's experience, the bond you form with your therapist determines success. Here's what the research shows — and why it matters for choosing a therapist.
+            More than the method, more than the therapist's experience, the bond you form with your therapist determines success. Here's what the research shows --- and why it matters for choosing a therapist.
           </p>
         </div>
 
@@ -1276,13 +1276,13 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
             {
               title: 'Agreement on Tasks',
               description: (
-                <p>You both agree on <em>how</em> to reach those goals — the methods, homework, or approach. If your therapist assigns homework you find useless, or uses techniques you don't understand, the alliance weakens.</p>
+                <p>You both agree on <em>how</em> to reach those goals --- the methods, homework, or approach. If your therapist assigns homework you find useless, or uses techniques you don't understand, the alliance weakens.</p>
               ),
             },
             {
               title: 'Emotional Bond',
               description: (
-                <p>You feel trust, warmth, and safety with your therapist. This isn't about being friends — it's about feeling understood, respected, and supported <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2021" tier={1} />.</p>
+                <p>You feel trust, warmth, and safety with your therapist. This isn't about being friends --- it's about feeling understood, respected, and supported <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2021" tier={1} />.</p>
               ),
             },
           ]}
@@ -1318,8 +1318,8 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
               title: '1. Strong Alliance = Better Outcomes',
               content: (
                 <div>
-                  <p className="mb-4">People with a strong therapeutic alliance show <strong>significantly better symptom reduction</strong> than those with a weak alliance — regardless of the type of therapy <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.</p>
-                  <p><strong>Effect size:</strong> The alliance accounts for about 30% of variance in outcomes — more than any single therapy technique.</p>
+                  <p className="mb-4">People with a strong therapeutic alliance show <strong>significantly better symptom reduction</strong> than those with a weak alliance --- regardless of the type of therapy <Citation id="1" index={1} source="Psychotherapy Research" year="2021" tier={1} />.</p>
+                  <p><strong>Effect size:</strong> The alliance accounts for about 30% of variance in outcomes --- more than any single therapy technique.</p>
                 </div>
               ),
             },
@@ -1336,7 +1336,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
                     <li>Repairing alliance ruptures (see below)</li>
                     <li>Creating a sense of safety and trust</li>
                   </ul>
-                  <p className="mt-4">This is called the "therapist effect" — and it's more important than credentials or years of experience.</p>
+                  <p className="mt-4">This is called the "therapist effect" --- and it's more important than credentials or years of experience.</p>
                 </div>
               ),
             },
@@ -1369,7 +1369,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
           Rupture and Repair: When the Alliance Breaks
         </h2>
         <p className="mb-6">
-          Even in good therapy, the alliance sometimes breaks — called a "rupture." This could be:
+          Even in good therapy, the alliance sometimes breaks --- called a "rupture." This could be:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>You feel misunderstood or judged</li>
@@ -1389,7 +1389,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
             <li>"I don't think we're on the same page about my goals."</li>
             <li>"I'm feeling disconnected from therapy lately."</li>
           </ul>
-          <p className="mt-4"><strong>A good therapist will welcome this and work to repair.</strong> If they get defensive or dismissive, that's a sign the therapist isn't skilled in alliance work — and you may want to switch.</p>
+          <p className="mt-4"><strong>A good therapist will welcome this and work to repair.</strong> If they get defensive or dismissive, that's a sign the therapist isn't skilled in alliance work --- and you may want to switch.</p>
         </ArticleCallout>
 
         <h2 id="cultural-considerations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1443,7 +1443,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="I've had three therapists. The first two were fine — educated, professional, used evidence-based methods. But I never felt truly understood. My current therapist just gets me. I feel safe being completely honest. That trust has made all the difference. I've made more progress in six months than I did in two years with the others."
+          quote="I've had three therapists. The first two were fine --- educated, professional, used evidence-based methods. But I never felt truly understood. My current therapist just gets me. I feel safe being completely honest. That trust has made all the difference. I've made more progress in six months than I did in two years with the others."
           attribution="Therapy Client"
           role="Patient Perspective"
           variant="large"
@@ -1465,26 +1465,26 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
             {
               title: 'Trust Your Gut in the First Few Sessions',
               description: (
-                <p>If you don't feel a sense of safety, warmth, or connection by session 3-4, consider trying a different therapist. The alliance forms early — and it matters.</p>
+                <p>If you don't feel a sense of safety, warmth, or connection by session 3-4, consider trying a different therapist. The alliance forms early --- and it matters.</p>
               ),
             },
             {
               title: 'Speak Up About the Relationship',
               description: (
-                <p>Therapy isn't just about solving problems — it's about the process of solving them together. If something feels off, address it. A good therapist will work with you to strengthen the alliance.</p>
+                <p>Therapy isn't just about solving problems --- it's about the process of solving them together. If something feels off, address it. A good therapist will work with you to strengthen the alliance.</p>
               ),
             },
             {
               title: `Don't Stay with a Therapist Out of Guilt`,
               description: (
-                <p>If the alliance isn't there, it's okay to switch. You're not being difficult — you're advocating for your mental health. The right therapist is out there.</p>
+                <p>If the alliance isn't there, it's okay to switch. You're not being difficult --- you're advocating for your mental health. The right therapist is out there.</p>
               ),
             },
           ]}
         />
 
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
-          <p>Therapy works best when you feel truly seen, heard, and understood. Techniques matter. Credentials matter. But the relationship matters most. Choose a therapist you connect with — not just one who looks good on paper.</p>
+          <p>Therapy works best when you feel truly seen, heard, and understood. Techniques matter. Credentials matter. But the relationship matters most. Choose a therapist you connect with --- not just one who looks good on paper.</p>
         </ArticleCallout>
 
         <p className="mb-6 mt-6">

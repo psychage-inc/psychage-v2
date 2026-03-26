@@ -91,7 +91,7 @@ export const settingBoundariesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Boundaries are one of the most misunderstood concepts in mental health and relationships. They're often confused with walls, ultimatums, or selfishness. But healthy boundaries aren't about shutting people out or being rigid—they're about defining where you end and others begin.
+            Boundaries are one of the most misunderstood concepts in mental health and relationships. They're often confused with walls, ultimatums, or selfishness. But healthy boundaries aren't about shutting people out or being rigid---they're about defining where you end and others begin.
           </p>
           <p className="mb-6">
             At their core, boundaries are the invisible lines that protect your physical, emotional, and mental wellbeing <Citation id="1" index={1} source="Journal of Mental Health Counseling" year="2018" tier={1} />. They're how you communicate what's okay and what's not okay in your relationships, work, and daily life.
@@ -109,7 +109,7 @@ export const settingBoundariesArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Boundaries define your limits. They're not about changing other people's behavior—they're about protecting your own wellbeing and making clear what you will and won't tolerate.</p>
+          <p>Boundaries define your limits. They're not about changing other people's behavior---they're about protecting your own wellbeing and making clear what you will and won't tolerate.</p>
         </ArticleCallout>
 
         <h2 id="not-boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -357,7 +357,7 @@ export const settingBoundariesArticlesA: Article[] = [
               title: 'Myth: Setting boundaries makes you mean or rude',
               content: (
                 <p>
-                  Reality: Boundaries can be set kindly and respectfully. Saying no with compassion is not mean—it's honest. What's unkind is agreeing to things you resent or can't sustain.
+                  Reality: Boundaries can be set kindly and respectfully. Saying no with compassion is not mean---it's honest. What's unkind is agreeing to things you resent or can't sustain.
                 </p>
               ),
             },
@@ -375,7 +375,7 @@ export const settingBoundariesArticlesA: Article[] = [
               title: 'Myth: Boundaries should be the same with everyone',
               content: (
                 <p>
-                  Reality: Boundaries are context-dependent. You might have different boundaries with your partner vs. a coworker vs. a stranger. This isn't hypocrisy—it's appropriate differentiation.
+                  Reality: Boundaries are context-dependent. You might have different boundaries with your partner vs. a coworker vs. a stranger. This isn't hypocrisy---it's appropriate differentiation.
                 </p>
               ),
             },
@@ -391,7 +391,7 @@ export const settingBoundariesArticlesA: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Identify your limits:</strong> What makes you uncomfortable, resentful, or drained?</li>
           <li><strong>Start small:</strong> Practice saying no to low-stakes requests</li>
-          <li><strong>Notice guilt:</strong> Feeling guilty after setting a boundary is normal at first—it doesn't mean the boundary is wrong</li>
+          <li><strong>Notice guilt:</strong> Feeling guilty after setting a boundary is normal at first---it doesn't mean the boundary is wrong</li>
           <li><strong>Communicate clearly:</strong> Use simple, direct language without over-explaining</li>
           <li><strong>Be consistent:</strong> Follow through on the boundaries you set</li>
           <li><strong>Prepare for pushback:</strong> Not everyone will like your boundaries. That's okay.</li>
@@ -481,7 +481,7 @@ export const settingBoundariesArticlesA: Article[] = [
     id: catId(12),
     slug: 'why-setting-boundaries-feels-uncomfortable-worth-it',
     title: `Why Setting Boundaries Feels So Uncomfortable (And Why It's Worth It)`,
-    description: "Explore the psychological reasons why boundary-setting triggers guilt, fear, and discomfort—and how to work through it.",
+    description: "Explore the psychological reasons why boundary-setting triggers guilt, fear, and discomfort---and how to work through it.",
     image: "/images/articles/cat03/cover-012.svg",
     category: CATEGORY_RELATIONSHIPS,
     readTime: 8,
@@ -559,10 +559,10 @@ export const settingBoundariesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You know you need to say no. You've practiced the words. You understand intellectually that boundaries are healthy. But when the moment comes, your stomach drops, your heart races, and a wave of guilt washes over you. So you say yes—again—and spend the next week resenting it.
+            You know you need to say no. You've practiced the words. You understand intellectually that boundaries are healthy. But when the moment comes, your stomach drops, your heart races, and a wave of guilt washes over you. So you say yes---again---and spend the next week resenting it.
           </p>
           <p className="mb-6">
-            If boundary-setting feels uncomfortable, even terrifying, you're not broken—you're experiencing a predictable psychological response shaped by years of conditioning <Citation id="1" index={1} source="Journal of Clinical Psychology" year="2019" tier={1} />. Understanding why it feels this way is the first step toward working through it.
+            If boundary-setting feels uncomfortable, even terrifying, you're not broken---you're experiencing a predictable psychological response shaped by years of conditioning <Citation id="1" index={1} source="Journal of Clinical Psychology" year="2019" tier={1} />. Understanding why it feels this way is the first step toward working through it.
           </p>
         </div>
 
@@ -600,10 +600,10 @@ export const settingBoundariesArticlesA: Article[] = [
           3. Unfamiliarity and Lack of Practice
         </h3>
         <p className="mb-6">
-          If you didn't see healthy boundaries modeled growing up, you never learned how to set them <Citation id="3" index={3} source="Development and Psychopathology" year="2018" tier={1} />. The discomfort you feel isn't about doing something wrong—it's about doing something new.
+          If you didn't see healthy boundaries modeled growing up, you never learned how to set them <Citation id="3" index={3} source="Development and Psychopathology" year="2018" tier={1} />. The discomfort you feel isn't about doing something wrong---it's about doing something new.
         </p>
         <p className="mb-6">
-          Anything unfamiliar activates your brain's threat detection system. Your nervous system doesn't distinguish between 'new and good' and "new and dangerous"—it just registers "unfamiliar" as "potentially unsafe."
+          Anything unfamiliar activates your brain's threat detection system. Your nervous system doesn't distinguish between 'new and good' and "new and dangerous"---it just registers "unfamiliar" as "potentially unsafe."
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -655,7 +655,7 @@ export const settingBoundariesArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          If you feel guilty for setting a boundary that protects your wellbeing, that's unhealthy guilt—a learned response, not a moral compass.
+          If you feel guilty for setting a boundary that protects your wellbeing, that's unhealthy guilt---a learned response, not a moral compass.
         </p>
 
         <h2 id="common-fears" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -681,7 +681,7 @@ export const settingBoundariesArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-2"><strong>Reality:</strong> Selfishness is disregarding others" needs to serve yourself at their expense. Boundaries are meeting your own needs so you can sustainably show up for others.</p>
-                  <p>Protecting your energy isn't selfish—it's responsible.</p>
+                  <p>Protecting your energy isn't selfish---it's responsible.</p>
                 </div>
               ),
             },
@@ -891,7 +891,7 @@ export const settingBoundariesArticlesA: Article[] = [
           Neuroplasticity means your brain can rewire. Repeated boundary-setting creates new neural pathways that say, "This is okay. I can do this." The discomfort decreases over time.
         </p>
         <p className="mb-6">
-          You won't feel guilty forever. One day, saying no will feel neutral—maybe even empowering.
+          You won't feel guilty forever. One day, saying no will feel neutral---maybe even empowering.
         </p>
 
         <QuoteBlock
@@ -906,10 +906,10 @@ export const settingBoundariesArticlesA: Article[] = [
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Boundary-setting feels uncomfortable because you're unlearning years of conditioning that taught you your needs don't matter. That discomfort is not a sign you're doing something wrong—it's a sign you're doing something brave.
+          Boundary-setting feels uncomfortable because you're unlearning years of conditioning that taught you your needs don't matter. That discomfort is not a sign you're doing something wrong---it's a sign you're doing something brave.
         </p>
         <p className="mb-6">
-          The people who truly love you will respect your boundaries. The people who don't? They were never respecting you—they were using you. Boundaries reveal who's in your life for you, and who's there for what you can give.
+          The people who truly love you will respect your boundaries. The people who don't? They were never respecting you---they were using you. Boundaries reveal who's in your life for you, and who's there for what you can give.
         </p>
         <p className="mb-6">
           Yes, it's uncomfortable. But it's also the path to self-respect, authentic relationships, and a life where you're not constantly drained by giving what you don't have.

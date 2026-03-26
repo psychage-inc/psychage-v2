@@ -40,7 +40,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     content: (
       <>
         <SummaryBox>
-          For millions of people worldwide, faith communities provide the first—and sometimes only—source of support during mental health crises. Pastors, rabbis, imams, and spiritual leaders often serve as de facto counselors, offering comfort, guidance, and meaning-making through religious frameworks. Faith-based counseling blends spiritual support with psychological principles, while pastoral care focuses primarily on spiritual wellness and moral guidance. But when does religious support help mental health, and when can it cause harm? This article explores the intersection of faith and therapy, examines the evidence for religious coping and faith-based interventions, and offers guidance on integrating spirituality into clinical care or knowing when to seek professional mental health treatment beyond religious counsel.
+          For millions of people worldwide, faith communities provide the first---and sometimes only---source of support during mental health crises. Pastors, rabbis, imams, and spiritual leaders often serve as de facto counselors, offering comfort, guidance, and meaning-making through religious frameworks. Faith-based counseling blends spiritual support with psychological principles, while pastoral care focuses primarily on spiritual wellness and moral guidance. But when does religious support help mental health, and when can it cause harm? This article explores the intersection of faith and therapy, examines the evidence for religious coping and faith-based interventions, and offers guidance on integrating spirituality into clinical care or knowing when to seek professional mental health treatment beyond religious counsel.
         </SummaryBox>
 
         <KeyFacts>
@@ -63,10 +63,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>The Landscape: Faith, Spirituality, and Mental Health</h2>
         <p>
-          Religion and spirituality aren't identical. Religion typically involves organized belief systems, communal practices, and institutional structures (churches, mosques, temples, synagogues). Spirituality can be religious or secular, referring to a sense of connection to something larger than oneself—whether that's God, nature, humanity, or transcendent meaning.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[0]" /> Both can profoundly influence mental health, for better or worse.
+          Religion and spirituality aren't identical. Religion typically involves organized belief systems, communal practices, and institutional structures (churches, mosques, temples, synagogues). Spirituality can be religious or secular, referring to a sense of connection to something larger than oneself---whether that's God, nature, humanity, or transcendent meaning.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[0]" /> Both can profoundly influence mental health, for better or worse.
         </p>
         <p>
-          For many people, faith provides community, purpose, moral framework, comfort during suffering, and rituals that mark life transitions. Religious practices like prayer, meditation, scripture study, and worship can reduce stress, increase hope, and foster social support. Faith communities often mobilize material aid—meals, childcare, financial assistance—that addresses social determinants of mental health.
+          For many people, faith provides community, purpose, moral framework, comfort during suffering, and rituals that mark life transitions. Religious practices like prayer, meditation, scripture study, and worship can reduce stress, increase hope, and foster social support. Faith communities often mobilize material aid---meals, childcare, financial assistance---that addresses social determinants of mental health.
         </p>
         <p>
           But religion can also harm mental health when it promotes guilt, shame, or toxic beliefs (suffering as punishment, mental illness as spiritual failure, LGBTQ+ identities as sinful), when it enables abuse through authority structures, or when it discourages professional help in favor of "pray harder" approaches that leave serious illness untreated.
@@ -77,7 +77,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           Not all religious coping is equal. Research distinguishes between positive and negative forms, with dramatically different mental health outcomes.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[0]" /> Positive religious coping includes: seeking spiritual support from God or community, reframing hardships as meaningful tests or opportunities for growth, finding comfort in religious rituals and prayer, and trusting that suffering has purpose even when incomprehensible.
         </p>
         <p>
-          Negative religious coping involves: believing suffering is divine punishment for sin, feeling abandoned or unloved by God, experiencing religious doubt as catastrophic, questioning one's faith in destructive ways, or passively deferring all agency to God while refusing to take action. Systematic reviews consistently find that positive religious coping predicts better mental health outcomes—lower depression and anxiety, faster recovery from illness, greater life satisfaction—while negative coping predicts worse outcomes, sometimes rivaling the impact of severe life stressors.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[0]" />
+          Negative religious coping involves: believing suffering is divine punishment for sin, feeling abandoned or unloved by God, experiencing religious doubt as catastrophic, questioning one's faith in destructive ways, or passively deferring all agency to God while refusing to take action. Systematic reviews consistently find that positive religious coping predicts better mental health outcomes---lower depression and anxiety, faster recovery from illness, greater life satisfaction---while negative coping predicts worse outcomes, sometimes rivaling the impact of severe life stressors.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[0]" />
         </p>
         <p>
           For clinicians, this means assessing not just whether clients are religious, but how they use their faith. A client who prays for strength while also attending therapy and taking medication may benefit from spiritual support. A client who refuses treatment because "God will heal me" or believes depression means they lack faith needs gentle redirection toward evidence-based care alongside spiritual support.
@@ -108,13 +108,13 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Faith-Based Interventions: What the Research Shows</h2>
         <p>
-          Faith-based interventions—treatments that explicitly incorporate religious or spiritual elements—have been studied primarily in Christian contexts but increasingly across other faiths. A 2020 meta-analysis of 156 studies found that religiously integrated psychotherapy produces small to moderate benefits for depression and anxiety, with slightly stronger effects for highly religious clients who prefer faith-aligned treatment.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[0]" />
+          Faith-based interventions---treatments that explicitly incorporate religious or spiritual elements---have been studied primarily in Christian contexts but increasingly across other faiths. A 2020 meta-analysis of 156 studies found that religiously integrated psychotherapy produces small to moderate benefits for depression and anxiety, with slightly stronger effects for highly religious clients who prefer faith-aligned treatment.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[0]" />
         </p>
         <p>
-          What do these interventions look like? Examples include: cognitive therapy that incorporates prayer and scripture alongside thought restructuring, mindfulness meditation framed through Christian contemplative practice or Islamic dhikr, group therapy held in churches with opening prayers, and therapists who explicitly discuss how faith can support recovery. The key is matching the intervention to the client's beliefs—a devout Muslim won't benefit from Christian-framed therapy, and a secular client may feel alienated by any religious content.
+          What do these interventions look like? Examples include: cognitive therapy that incorporates prayer and scripture alongside thought restructuring, mindfulness meditation framed through Christian contemplative practice or Islamic dhikr, group therapy held in churches with opening prayers, and therapists who explicitly discuss how faith can support recovery. The key is matching the intervention to the client's beliefs---a devout Muslim won't benefit from Christian-framed therapy, and a secular client may feel alienated by any religious content.
         </p>
         <p>
-          Importantly, religiously integrated therapy doesn't appear superior to secular evidence-based therapy for most conditions—it's about preference and cultural fit. For clients who view mental health through a spiritual lens, faith-integrated care may feel more congruent and therefore improve engagement. For others, separating therapy from religion preserves important boundaries.
+          Importantly, religiously integrated therapy doesn't appear superior to secular evidence-based therapy for most conditions---it's about preference and cultural fit. For clients who view mental health through a spiritual lens, faith-integrated care may feel more congruent and therefore improve engagement. For others, separating therapy from religion preserves important boundaries.
         </p>
 
         <h2>Pastoral Counseling: Trained Spiritual Care vs. Informal Support</h2>
@@ -122,7 +122,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           Pastoral counseling as a profession involves graduate-level training in both theology and counseling psychology, with certification from bodies like the American Association of Pastoral Counselors. Trained pastoral counselors can address mental health concerns within a spiritual framework, recognize when to refer for psychiatric care, and maintain ethical boundaries.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[0]" />
         </p>
         <p>
-          In contrast, many religious leaders offer informal spiritual support without mental health training. They provide valuable comfort, community, and moral guidance—but may not recognize serious mental illness, may give harmful advice (like suggesting prayer will cure bipolar disorder), or may lack boundaries around confidentiality and dual relationships. The distinction matters: professional pastoral counselors are equipped to handle complex mental health issues; well-meaning but untrained clergy often are not.
+          In contrast, many religious leaders offer informal spiritual support without mental health training. They provide valuable comfort, community, and moral guidance---but may not recognize serious mental illness, may give harmful advice (like suggesting prayer will cure bipolar disorder), or may lack boundaries around confidentiality and dual relationships. The distinction matters: professional pastoral counselors are equipped to handle complex mental health issues; well-meaning but untrained clergy often are not.
         </p>
 
         <ComparisonTable
@@ -166,10 +166,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Collaborative Care: Faith Communities as Mental Health Partners</h2>
         <p>
-          Rather than viewing faith and therapy as competing, the most effective models create partnerships. Faith communities can serve as mental health access points—religious leaders trained in mental health first aid can recognize warning signs, reduce stigma through education, provide referrals to clinical services, and offer community support that complements professional treatment.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[0]" />
+          Rather than viewing faith and therapy as competing, the most effective models create partnerships. Faith communities can serve as mental health access points---religious leaders trained in mental health first aid can recognize warning signs, reduce stigma through education, provide referrals to clinical services, and offer community support that complements professional treatment.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[0]" />
         </p>
         <p>
-          Programs like Mental Health First Aid for Faith Communities train clergy and lay leaders to identify mental health crises, have supportive conversations, and connect people to resources. Research shows these programs increase mental health knowledge, reduce stigma, and improve referral rates—particularly important in communities where religious authority figures' endorsement of mental health care can overcome cultural barriers.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[0]" />
+          Programs like Mental Health First Aid for Faith Communities train clergy and lay leaders to identify mental health crises, have supportive conversations, and connect people to resources. Research shows these programs increase mental health knowledge, reduce stigma, and improve referral rates---particularly important in communities where religious authority figures' endorsement of mental health care can overcome cultural barriers.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[0]" />
         </p>
         <p>
           For therapists, collaboration might mean: asking permission to consult with a client's religious leader (with appropriate releases), attending to how religious beliefs affect presenting problems and treatment goals, recommending faith-based support groups as adjuncts to therapy, or referring to pastoral counselors when spiritual crises intersect with mental health.
@@ -180,10 +180,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           Religious trauma is real. Harmful religious teachings and practices can cause lasting psychological damage: purity culture that instills sexual shame, spiritual abuse by authority figures, ostracism for questioning doctrine, condemnation of LGBTQ+ identities, teachings that mental illness reflects spiritual weakness or demonic influence, and demands for unquestioning obedience to leaders.
         </p>
         <p>
-          People leaving high-control religious groups often experience complex grief—losing community, identity, worldview, and sometimes family relationships all at once. They may struggle with lingering guilt, difficulty trusting others, and existential questions about meaning and morality outside their former faith. Therapists working with religious trauma need specialized training to avoid minimizing these experiences or inadvertently reinforcing harmful beliefs.
+          People leaving high-control religious groups often experience complex grief---losing community, identity, worldview, and sometimes family relationships all at once. They may struggle with lingering guilt, difficulty trusting others, and existential questions about meaning and morality outside their former faith. Therapists working with religious trauma need specialized training to avoid minimizing these experiences or inadvertently reinforcing harmful beliefs.
         </p>
         <p>
-          Not all critique of religion constitutes therapy bias—affirming LGBTQ+ identities, naming spiritual abuse, or encouraging clients to question harmful teachings is good clinical care, not anti-religious prejudice. The line is honoring clients' right to their beliefs while not supporting teachings that demonstrably harm mental health.
+          Not all critique of religion constitutes therapy bias---affirming LGBTQ+ identities, naming spiritual abuse, or encouraging clients to question harmful teachings is good clinical care, not anti-religious prejudice. The line is honoring clients' right to their beliefs while not supporting teachings that demonstrably harm mental health.
         </p>
 
         <PracticalExercise
@@ -204,11 +204,11 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             },
             {
               instruction: 'Consider integration preferences',
-              details: 'Would you prefer therapy that explicitly incorporates your faith, therapy that respects but doesn\'t focus on spirituality, or completely secular treatment? There\'s no wrong answer—it\'s about fit.'
+              details: 'Would you prefer therapy that explicitly incorporates your faith, therapy that respects but doesn\'t focus on spirituality, or completely secular treatment? There\'s no wrong answer---it\'s about fit.'
             },
             {
               instruction: 'Know when to seek professional help',
-              details: 'If religious support alone isn\'t resolving symptoms, if you\'re experiencing suicidal thoughts, severe anxiety/depression, or impaired functioning, clinical mental health care is essential—and doesn\'t conflict with continued spiritual support.'
+              details: 'If religious support alone isn\'t resolving symptoms, if you\'re experiencing suicidal thoughts, severe anxiety/depression, or impaired functioning, clinical mental health care is essential---and doesn\'t conflict with continued spiritual support.'
             }
           ]}
           timeEstimate="30-45 minutes for reflection; ongoing as you navigate care"
@@ -219,7 +219,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
         </ArticleCallout>
 
         <SparkMoment>
-          At its best, faith offers what therapy sometimes can't: transcendent meaning, connection to something eternal, community that endures beyond treatment, and frameworks for making sense of suffering that go beyond symptom reduction. At its worst, religion deepens wounds, compounds shame, and barriers to healing. The future of mental health care isn't choosing between faith and therapy—it's creating space for both to coexist, where spirituality enhances clinical treatment when desired, where religious communities become allies in destigmatizing mental illness, and where no one has to choose between their faith and their wellbeing.
+          At its best, faith offers what therapy sometimes can't: transcendent meaning, connection to something eternal, community that endures beyond treatment, and frameworks for making sense of suffering that go beyond symptom reduction. At its worst, religion deepens wounds, compounds shame, and barriers to healing. The future of mental health care isn't choosing between faith and therapy---it's creating space for both to coexist, where spirituality enhances clinical treatment when desired, where religious communities become allies in destigmatizing mental illness, and where no one has to choose between their faith and their wellbeing.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -263,7 +263,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     content: (
       <>
         <SummaryBox>
-          When words fail—across language barriers, cultural divides, or the unspeakable depths of trauma—images, colors, and creative expression can speak. Art therapy uses visual arts, sculpture, collage, and other creative media within a therapeutic relationship to support mental health, process emotions, and facilitate healing. Unlike talk therapy that relies heavily on verbal articulation and shared language, art therapy offers a more universal mode of expression that transcends linguistic and cultural boundaries. This makes it particularly powerful for refugees, trauma survivors, children, and anyone whose experiences resist language. This article explores the evidence for art therapy, its unique cross-cultural applications, and how creative expression becomes a bridge to healing across diverse contexts.
+          When words fail---across language barriers, cultural divides, or the unspeakable depths of trauma---images, colors, and creative expression can speak. Art therapy uses visual arts, sculpture, collage, and other creative media within a therapeutic relationship to support mental health, process emotions, and facilitate healing. Unlike talk therapy that relies heavily on verbal articulation and shared language, art therapy offers a more universal mode of expression that transcends linguistic and cultural boundaries. This makes it particularly powerful for refugees, trauma survivors, children, and anyone whose experiences resist language. This article explores the evidence for art therapy, its unique cross-cultural applications, and how creative expression becomes a bridge to healing across diverse contexts.
         </SummaryBox>
 
         <KeyFacts>
@@ -280,19 +280,19 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             Expressive therapies can bypass cultural taboos around direct verbal disclosure while still facilitating emotional processing
           </Citation>
           <Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[1]">
-            Art therapy is practiced by credentialed professionals with master's-level training in both art and clinical psychology—it's not simply "art class" or recreational creativity
+            Art therapy is practiced by credentialed professionals with master's-level training in both art and clinical psychology---it's not simply "art class" or recreational creativity
           </Citation>
         </KeyFacts>
 
         <h2>What Is Art Therapy? More Than Creative Self-Care</h2>
         <p>
-          Art therapy is a regulated mental health profession requiring a master's degree in art therapy, supervised clinical hours, and often state licensure or board certification.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[1]" /> It's distinct from art classes, recreational painting, or "adult coloring books for stress relief"—though those activities have their own value. In art therapy, a trained clinician uses the creative process and resulting artwork as tools for assessment, communication, and therapeutic intervention within a defined treatment relationship.
+          Art therapy is a regulated mental health profession requiring a master's degree in art therapy, supervised clinical hours, and often state licensure or board certification.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[1]" /> It's distinct from art classes, recreational painting, or "adult coloring books for stress relief"---though those activities have their own value. In art therapy, a trained clinician uses the creative process and resulting artwork as tools for assessment, communication, and therapeutic intervention within a defined treatment relationship.
         </p>
         <p>
           Sessions might involve drawing feelings, sculpting representations of relationships, creating collages about identity, painting safe places, or using clay to externalize and reshape difficult emotions. The therapist attends to both the process (how the client engages with materials) and the product (what emerges), facilitating reflection without imposing interpretations. A child who can't verbalize abuse might draw it; a refugee who lacks words for displacement might sculpt fragments of home and journey.
         </p>
         <p>
-          Art therapy integrates with various theoretical orientations—psychodynamic art therapy explores unconscious symbolism, CBT-informed art therapy challenges cognitive distortions through creative restructuring, trauma-focused art therapy uses imagery to process traumatic memories with safety and control. The common thread is using visual and sensory expression to access and transform psychological material.
+          Art therapy integrates with various theoretical orientations---psychodynamic art therapy explores unconscious symbolism, CBT-informed art therapy challenges cognitive distortions through creative restructuring, trauma-focused art therapy uses imagery to process traumatic memories with safety and control. The common thread is using visual and sensory expression to access and transform psychological material.
         </p>
 
         <h2>The Evidence: Art Therapy for Trauma and Beyond</h2>
@@ -300,7 +300,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           Art therapy's strongest evidence base is in trauma treatment. A 2020 systematic review and meta-analysis of 27 studies found that art therapy significantly reduces PTSD symptoms, depression, and anxiety in trauma survivors, with effect sizes ranging from moderate (0.50) to large (0.80) depending on population and intervention intensity.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[1]" /> Benefits appear particularly strong for complex developmental trauma, sexual abuse survivors, and veterans with combat-related PTSD.
         </p>
         <p>
-          Why does art help trauma? Traumatic memories often encode in sensory and visual fragments rather than coherent narratives. Traditional talk therapy's demand for verbal storytelling can be retraumatizing or simply impossible when words don't capture the experience. Art therapy allows trauma processing through imagery and sensation—drawing the nightmare, sculpting the body sensation, painting the safe place—engaging the non-verbal, right-hemisphere processing that holds much of trauma's imprint.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[1]" />
+          Why does art help trauma? Traumatic memories often encode in sensory and visual fragments rather than coherent narratives. Traditional talk therapy's demand for verbal storytelling can be retraumatizing or simply impossible when words don't capture the experience. Art therapy allows trauma processing through imagery and sensation---drawing the nightmare, sculpting the body sensation, painting the safe place---engaging the non-verbal, right-hemisphere processing that holds much of trauma's imprint.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[1]" />
         </p>
         <p>
           Beyond trauma, art therapy shows promise for depression, anxiety, eating disorders, dementia, and serious mental illness. Research is more limited for these applications, but consistent themes emerge: art provides externalization of internal states, creates distance for safe reflection, offers sense of agency and control, and produces tangible evidence of growth and change.
@@ -314,7 +314,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             { id: '2', label: 'Externalization', description: 'Trauma moves from internal overwhelm to external, containable image' },
             { id: '3', label: 'Distance & Perspective', description: 'Artwork creates safe psychological distance for viewing trauma' },
             { id: '4', label: 'Narrative Integration', description: 'Visual expression helps organize fragmented traumatic memories' },
-            { id: '5', label: 'Transformation', description: 'Client can reshape, recolor, or recreate imagery—reclaiming agency' }
+            { id: '5', label: 'Transformation', description: 'Client can reshape, recolor, or recreate imagery---reclaiming agency' }
           ]}
           connections={[
             { from: '1', to: '2' },
@@ -327,10 +327,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Art Therapy Across Cultures: Universal Expression, Culturally Specific Meaning</h2>
         <p>
-          One of art therapy's great strengths is its potential for cross-cultural application—visual expression doesn't require shared language, and creating images is a human universal found across all cultures. But this universality has limits. Colors, symbols, and artistic expressions carry culturally specific meanings that Western-trained art therapists must learn to recognize rather than impose their own interpretations.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[1]" />
+          One of art therapy's great strengths is its potential for cross-cultural application---visual expression doesn't require shared language, and creating images is a human universal found across all cultures. But this universality has limits. Colors, symbols, and artistic expressions carry culturally specific meanings that Western-trained art therapists must learn to recognize rather than impose their own interpretations.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[1]" />
         </p>
         <p>
-          For example: white symbolizes death and mourning in many East Asian cultures, but purity and weddings in Western contexts. Red means luck and celebration in China, danger or anger in the U.S. Depicting the human figure is taboo in some Islamic traditions. Eye contact in portraits varies in meaning—direct gaze as confidence or aggression, averted gaze as respect or shame depending on cultural norms.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[1]" />
+          For example: white symbolizes death and mourning in many East Asian cultures, but purity and weddings in Western contexts. Red means luck and celebration in China, danger or anger in the U.S. Depicting the human figure is taboo in some Islamic traditions. Eye contact in portraits varies in meaning---direct gaze as confidence or aggression, averted gaze as respect or shame depending on cultural norms.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[1]" />
         </p>
         <p>
           Culturally responsive art therapy means: asking clients what their imagery means to them rather than interpreting through Western symbolic frameworks, offering diverse art materials and techniques that align with clients' cultural traditions, understanding that artistic "skill" and "aesthetics" are culturally defined, and recognizing when cultural values around emotional expression affect willingness to create vulnerable artwork.
@@ -388,18 +388,18 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           Art therapy isn't universally helpful. Some people find creative expression activating rather than soothing, particularly those with perfectionism or high self-criticism who become distressed by "bad" artwork. Others experience art-making as too exposing or vulnerable, especially in cultures where emotional restraint is valued. And for some trauma survivors, imagery work can trigger overwhelming flashbacks without providing the safety that talk therapy's pacing and verbal containment offer.
         </p>
         <p>
-          Art therapy also requires resources—materials, dedicated space, and trained professionals who often aren't covered by insurance. Access is limited in many settings, creating equity concerns. Additionally, research quality varies; while trauma studies are increasingly rigorous, much art therapy research relies on small samples and qualitative methods that, though valuable, don't provide the same level of evidence as large RCTs.
+          Art therapy also requires resources---materials, dedicated space, and trained professionals who often aren't covered by insurance. Access is limited in many settings, creating equity concerns. Additionally, research quality varies; while trauma studies are increasingly rigorous, much art therapy research relies on small samples and qualitative methods that, though valuable, don't provide the same level of evidence as large RCTs.
         </p>
         <p>
-          Culturally, therapists must avoid romanticizing art as a "universal language" that somehow transcends all difference. Power dynamics, cultural values, and historical context still matter. An Indigenous client creating traditional artwork in a Western therapeutic setting engages in a culturally complex act that a White therapist may not fully understand—requiring humility, cultural consultation, and recognition of what remains unknowable across cultural difference.
+          Culturally, therapists must avoid romanticizing art as a "universal language" that somehow transcends all difference. Power dynamics, cultural values, and historical context still matter. An Indigenous client creating traditional artwork in a Western therapeutic setting engages in a culturally complex act that a White therapist may not fully understand---requiring humility, cultural consultation, and recognition of what remains unknowable across cultural difference.
         </p>
 
         <h2>Art Therapy as Expressive Arts: Music, Dance, Drama, and More</h2>
         <p>
-          Art therapy is part of a broader field of expressive arts therapies including music therapy, dance/movement therapy, drama therapy, and poetry therapy—each using creative expression within therapeutic relationships. These modalities often work together in integrative expressive arts therapy that draws on multiple forms.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[1]" />
+          Art therapy is part of a broader field of expressive arts therapies including music therapy, dance/movement therapy, drama therapy, and poetry therapy---each using creative expression within therapeutic relationships. These modalities often work together in integrative expressive arts therapy that draws on multiple forms.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[1]" />
         </p>
         <p>
-          Cross-cultural applications expand when considering all expressive modalities: drumming and rhythm appear across virtually all cultures, movement and dance hold therapeutic power in traditions worldwide, storytelling and drama are universal meaning-making tools. Combining modalities can enhance cultural fit—perhaps a refugee creates visual art depicting their journey, then uses movement to embody the emotional landscape, and finally narrates the story when words become accessible.
+          Cross-cultural applications expand when considering all expressive modalities: drumming and rhythm appear across virtually all cultures, movement and dance hold therapeutic power in traditions worldwide, storytelling and drama are universal meaning-making tools. Combining modalities can enhance cultural fit---perhaps a refugee creates visual art depicting their journey, then uses movement to embody the emotional landscape, and finally narrates the story when words become accessible.
         </p>
 
         <PracticalExercise
@@ -408,7 +408,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           steps={[
             {
               instruction: 'Create without judgment',
-              details: 'Set a timer for 15 minutes. Using any materials (crayons, collage, clay, digital tools), create an image representing how you feel right now. No artistic skill required—focus on colors, shapes, sensations. Notice if expression feels helpful or activating.'
+              details: 'Set a timer for 15 minutes. Using any materials (crayons, collage, clay, digital tools), create an image representing how you feel right now. No artistic skill required---focus on colors, shapes, sensations. Notice if expression feels helpful or activating.'
             },
             {
               instruction: 'Externalize a struggle',
@@ -420,7 +420,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             },
             {
               instruction: 'Try safe-place imagery',
-              details: 'Draw or paint a real or imagined place where you feel completely safe. Include sensory details—colors, textures, elements. Can you return to this image when you need grounding?'
+              details: 'Draw or paint a real or imagined place where you feel completely safe. Include sensory details---colors, textures, elements. Can you return to this image when you need grounding?'
             },
             {
               instruction: 'Reflect on your experience',
@@ -435,7 +435,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
         </ArticleCallout>
 
         <SparkMoment>
-          When trauma has stolen words, when language barriers separate healer and wounded, when cultural taboos silence direct expression, when children lack vocabulary for violation, when refugees carry losses that transcend translation—art speaks. Not as a replacement for language, but as a parallel tongue that honors what words cannot hold: the texture of grief, the color of displacement, the shape of healing, the image of hope slowly reconstructed stroke by stroke. Art therapy doesn't pretend that a drawing solves systemic trauma or that paint erases violence. It offers something quieter and more powerful: a space where the unspeakable can be seen, held, witnessed, and slowly transformed through the ancient human act of making meaning from chaos.
+          When trauma has stolen words, when language barriers separate healer and wounded, when cultural taboos silence direct expression, when children lack vocabulary for violation, when refugees carry losses that transcend translation---art speaks. Not as a replacement for language, but as a parallel tongue that honors what words cannot hold: the texture of grief, the color of displacement, the shape of healing, the image of hope slowly reconstructed stroke by stroke. Art therapy doesn't pretend that a drawing solves systemic trauma or that paint erases violence. It offers something quieter and more powerful: a space where the unspeakable can be seen, held, witnessed, and slowly transformed through the ancient human act of making meaning from chaos.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -479,18 +479,18 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     content: (
       <>
         <SummaryBox>
-          Western psychiatry often treats mental illness as an individual problem requiring individual treatment: one patient, one therapist, fifty-minute sessions, diagnosis and cure located within a single brain. But across much of the world—particularly in collectivist cultures and low-resource settings—mental health care looks fundamentally different. Community-based models prioritize collective wellbeing over individual pathology, involve families and communities as primary healing agents, and address mental distress through social connection rather than clinical isolation. From Ubuntu philosophy in Southern Africa to collective healing circles in Indigenous communities to task-shifting models that train non-specialists as community mental health workers, these approaches offer powerful alternatives to Western individualism—often achieving better engagement, lower stigma, and more sustainable outcomes.
+          Western psychiatry often treats mental illness as an individual problem requiring individual treatment: one patient, one therapist, fifty-minute sessions, diagnosis and cure located within a single brain. But across much of the world---particularly in collectivist cultures and low-resource settings---mental health care looks fundamentally different. Community-based models prioritize collective wellbeing over individual pathology, involve families and communities as primary healing agents, and address mental distress through social connection rather than clinical isolation. From Ubuntu philosophy in Southern Africa to collective healing circles in Indigenous communities to task-shifting models that train non-specialists as community mental health workers, these approaches offer powerful alternatives to Western individualism---often achieving better engagement, lower stigma, and more sustainable outcomes.
         </SummaryBox>
 
         <KeyFacts>
           <Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]">
-            Ubuntu philosophy—"I am because we are"—frames mental wellness as inseparable from community health, emphasizing collective responsibility for individual suffering
+            Ubuntu philosophy---"I am because we are"---frames mental wellness as inseparable from community health, emphasizing collective responsibility for individual suffering
           </Citation>
           <Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[2]">
             Community-based mental health care in low-resource settings demonstrates outcomes comparable to specialist care while dramatically increasing access and reducing costs
           </Citation>
           <Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]">
-            Task-shifting—training community health workers to deliver mental health interventions—has successfully treated millions of people where psychiatrists are scarce or absent
+            Task-shifting---training community health workers to deliver mental health interventions---has successfully treated millions of people where psychiatrists are scarce or absent
           </Citation>
           <Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]">
             Collective healing approaches address shared trauma (colonization, violence, displacement) rather than treating individuals in isolation from their social context
@@ -502,24 +502,24 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Ubuntu and African Communal Mental Health</h2>
         <p>
-          Ubuntu—a Nguni Bantu term from Southern Africa—translates roughly as "I am because we are" or "humanity toward others." It's both a philosophy and a way of life emphasizing interconnectedness, shared humanity, and collective responsibility.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]" /> In mental health terms, Ubuntu means that individual suffering is never just individual—it reflects and affects the entire community, requiring communal response and healing.
+          Ubuntu---a Nguni Bantu term from Southern Africa---translates roughly as "I am because we are" or "humanity toward others." It's both a philosophy and a way of life emphasizing interconnectedness, shared humanity, and collective responsibility.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]" /> In mental health terms, Ubuntu means that individual suffering is never just individual---it reflects and affects the entire community, requiring communal response and healing.
         </p>
         <p>
-          Under Ubuntu frameworks, someone experiencing depression isn't simply diagnosed and medicated in isolation. Instead, the community gathers to understand what imbalances in relationships, social roles, or collective harmony might contribute to distress. Healing involves restoring the person's connection to community, addressing social determinants like poverty or exclusion, and ensuring the community takes responsibility for supporting wellness—not as a medical intervention, but as a moral obligation rooted in shared humanity.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+          Under Ubuntu frameworks, someone experiencing depression isn't simply diagnosed and medicated in isolation. Instead, the community gathers to understand what imbalances in relationships, social roles, or collective harmony might contribute to distress. Healing involves restoring the person's connection to community, addressing social determinants like poverty or exclusion, and ensuring the community takes responsibility for supporting wellness---not as a medical intervention, but as a moral obligation rooted in shared humanity.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[2]" />
         </p>
         <p>
-          This doesn't mean ignoring individual clinical needs—Ubuntu-informed mental health programs often integrate Western psychiatric treatments—but it reframes them within collective contexts. Medication might treat symptoms, but community support, restored relationships, and meaningful social roles sustain recovery.
+          This doesn't mean ignoring individual clinical needs---Ubuntu-informed mental health programs often integrate Western psychiatric treatments---but it reframes them within collective contexts. Medication might treat symptoms, but community support, restored relationships, and meaningful social roles sustain recovery.
         </p>
 
         <h2>Task-Shifting: Community Health Workers as Mental Health Providers</h2>
         <p>
-          In much of the world, psychiatrists are vanishingly rare—sub-Saharan Africa averages one psychiatrist per 500,000 people; some countries have none. Task-shifting addresses this crisis by training non-specialist community health workers, peers, teachers, or even motivated community members to deliver evidence-based mental health interventions under supervision.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+          In much of the world, psychiatrists are vanishingly rare---sub-Saharan Africa averages one psychiatrist per 500,000 people; some countries have none. Task-shifting addresses this crisis by training non-specialist community health workers, peers, teachers, or even motivated community members to deliver evidence-based mental health interventions under supervision.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]" />
         </p>
         <p>
-          Programs like the WHO's Mental Health Gap Action Programme (mhGAP) provide training protocols for community workers to assess, manage, and refer mental health conditions. Studies across low- and middle-income countries show task-shifted interventions—delivered by trained lay workers—achieve outcomes comparable to specialist care for depression, anxiety, PTSD, and serious mental illness, while dramatically increasing access and reducing costs.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+          Programs like the WHO's Mental Health Gap Action Programme (mhGAP) provide training protocols for community workers to assess, manage, and refer mental health conditions. Studies across low- and middle-income countries show task-shifted interventions---delivered by trained lay workers---achieve outcomes comparable to specialist care for depression, anxiety, PTSD, and serious mental illness, while dramatically increasing access and reducing costs.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[2]" />
         </p>
         <p>
-          Why does it work? Community health workers share language, culture, and social context with the people they serve. They're trusted community members, not distant medical authorities. They provide care in homes, community centers, and familiar settings rather than intimidating hospitals. And they address social determinants—helping clients access food, employment, housing—alongside mental health symptoms, recognizing that poverty and distress are inseparable.
+          Why does it work? Community health workers share language, culture, and social context with the people they serve. They're trusted community members, not distant medical authorities. They provide care in homes, community centers, and familiar settings rather than intimidating hospitals. And they address social determinants---helping clients access food, employment, housing---alongside mental health symptoms, recognizing that poverty and distress are inseparable.
         </p>
 
         <DiagramBlock
@@ -544,10 +544,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Collective Healing for Collective Trauma</h2>
         <p>
-          Some suffering isn't individual—it's collective. Genocide, colonization, war, displacement, systemic oppression create shared wounds that can't be adequately addressed through individual therapy. Collective healing approaches bring communities together to process shared trauma, rebuild social fabric, and restore collective identity.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+          Some suffering isn't individual---it's collective. Genocide, colonization, war, displacement, systemic oppression create shared wounds that can't be adequately addressed through individual therapy. Collective healing approaches bring communities together to process shared trauma, rebuild social fabric, and restore collective identity.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]" />
         </p>
         <p>
-          Examples include: truth and reconciliation processes that create space for collective witnessing and accountability, community healing circles that address intergenerational trauma, memorial practices that honor collective loss, and cultural revitalization programs that restore practices colonization tried to erase. Research in post-conflict settings and Indigenous communities shows collective approaches reduce individual trauma symptoms while strengthening social cohesion—outcomes individual therapy alone can't achieve.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+          Examples include: truth and reconciliation processes that create space for collective witnessing and accountability, community healing circles that address intergenerational trauma, memorial practices that honor collective loss, and cultural revitalization programs that restore practices colonization tried to erase. Research in post-conflict settings and Indigenous communities shows collective approaches reduce individual trauma symptoms while strengthening social cohesion---outcomes individual therapy alone can't achieve.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[2]" />
         </p>
 
         <h2>Comparing Individualist vs Collectivist Mental Health Models</h2>
@@ -603,7 +603,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Integrating Models: Community and Clinical Care Together</h2>
         <p>
-          The goal isn't to replace Western clinical care with community models—it's integration. Psychiatric medications can save lives during acute crises; evidence-based psychotherapy offers powerful tools for specific conditions; specialized assessment prevents misdiagnosis. But wrapping these interventions in community-based care enhances effectiveness, reduces stigma, and creates sustainable support.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[2]" />
+          The goal isn't to replace Western clinical care with community models---it's integration. Psychiatric medications can save lives during acute crises; evidence-based psychotherapy offers powerful tools for specific conditions; specialized assessment prevents misdiagnosis. But wrapping these interventions in community-based care enhances effectiveness, reduces stigma, and creates sustainable support.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[2]" />
         </p>
         <p>
           Best-practice models include: community health workers as first contact who assess, provide basic interventions, and refer complex cases; peer support groups that reduce isolation and provide ongoing community; family psychoeducation that involves loved ones as healing partners; and community mental health centers that deliver clinical services within culturally familiar, accessible settings rather than imposing institutional care.
@@ -638,11 +638,11 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="info" title="Community Models in High-Income Countries">
-          Community-based mental health isn't just for low-resource settings. In the U.S., peer support specialists, certified recovery coaches, and community mental health workers increasingly deliver care. Clubhouse programs, WRAP (Wellness Recovery Action Plan), and peer-run organizations demonstrate that community models improve outcomes even where specialists are abundant. The question isn't resources alone—it's philosophy: do we treat mental illness as individual pathology or as suffering that requires both clinical intervention and community care?
+          Community-based mental health isn't just for low-resource settings. In the U.S., peer support specialists, certified recovery coaches, and community mental health workers increasingly deliver care. Clubhouse programs, WRAP (Wellness Recovery Action Plan), and peer-run organizations demonstrate that community models improve outcomes even where specialists are abundant. The question isn't resources alone---it's philosophy: do we treat mental illness as individual pathology or as suffering that requires both clinical intervention and community care?
         </ArticleCallout>
 
         <SparkMoment>
-          In collectivist frameworks, there's no paradox between "I" and "we"—the self exists only in relation, wellness arises through connection, and suffering in one person ripples through the community demanding collective response. Western individualism asks: what's wrong with you? Community models ask: what happened to us, and how do we heal together? This shift—from pathology to context, from isolation to connection, from specialist-only care to community healing—doesn't reject clinical expertise. It places it within a richer understanding: that mental health lives not just in neurons and neurotransmitters, but in the quality of our relationships, the strength of our communities, and the collective commitment to each other's flourishing.
+          In collectivist frameworks, there's no paradox between "I" and "we"---the self exists only in relation, wellness arises through connection, and suffering in one person ripples through the community demanding collective response. Western individualism asks: what's wrong with you? Community models ask: what happened to us, and how do we heal together? This shift---from pathology to context, from isolation to connection, from specialist-only care to community healing---doesn't reject clinical expertise. It places it within a richer understanding: that mental health lives not just in neurons and neurotransmitters, but in the quality of our relationships, the strength of our communities, and the collective commitment to each other's flourishing.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -686,7 +686,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     content: (
       <>
         <SummaryBox>
-          Nearly one billion people worldwide live with mental health conditions. Depression is a leading cause of disability globally. Suicide claims over 700,000 lives each year. Yet in low-income countries, more than 75% of people with mental illness receive no treatment at all—a crisis WHO calls the "treatment gap." This isn't just about scarcity of psychiatrists or medications. It's about broken mental health systems, inadequate funding, human rights violations in institutions, stigma that prevents care-seeking, and policy failures that treat mental health as a luxury rather than a fundamental right. This article examines the global mental health landscape through WHO data and frameworks, explores why the treatment gap persists, and outlines policy solutions for achieving mental health equity worldwide.
+          Nearly one billion people worldwide live with mental health conditions. Depression is a leading cause of disability globally. Suicide claims over 700,000 lives each year. Yet in low-income countries, more than 75% of people with mental illness receive no treatment at all---a crisis WHO calls the "treatment gap." This isn't just about scarcity of psychiatrists or medications. It's about broken mental health systems, inadequate funding, human rights violations in institutions, stigma that prevents care-seeking, and policy failures that treat mental health as a luxury rather than a fundamental right. This article examines the global mental health landscape through WHO data and frameworks, explores why the treatment gap persists, and outlines policy solutions for achieving mental health equity worldwide.
         </SummaryBox>
 
         <KeyFacts>
@@ -694,7 +694,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             WHO's 2022 World Mental Health Report calls for "transforming mental health for all," with community-based care, human rights protection, and cross-sector collaboration as core strategies
           </Citation>
           <Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[3]">
-            The treatment gap—proportion of people with mental illness who receive no care—exceeds 75% in low-income countries and reaches 35-50% even in high-income nations
+            The treatment gap---proportion of people with mental illness who receive no care---exceeds 75% in low-income countries and reaches 35-50% even in high-income nations
           </Citation>
           <Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]">
             Mental health receives less than 2% of national health budgets on average, despite causing 10% of global disease burden
@@ -709,10 +709,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>The Scale of the Crisis: Global Mental Health by the Numbers</h2>
         <p>
-          WHO's 2022 World Mental Health Report paints a sobering picture. Nearly one in eight people globally live with a mental disorder—970 million people. Depression affects 280 million, anxiety 301 million. Psychotic disorders like schizophrenia affect 24 million. Every 40 seconds, someone dies by suicide.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+          WHO's 2022 World Mental Health Report paints a sobering picture. Nearly one in eight people globally live with a mental disorder---970 million people. Depression affects 280 million, anxiety 301 million. Psychotic disorders like schizophrenia affect 24 million. Every 40 seconds, someone dies by suicide.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesB[3]" />
         </p>
         <p>
-          The burden is unevenly distributed. Low- and middle-income countries (LMICs) account for 80% of the global population but have just 20% of mental health resources. Sub-Saharan Africa averages 0.1 psychiatrists per 100,000 people; high-income countries average 10-20. In some countries, an entire nation shares a single psychiatrist—or none.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+          The burden is unevenly distributed. Low- and middle-income countries (LMICs) account for 80% of the global population but have just 20% of mental health resources. Sub-Saharan Africa averages 0.1 psychiatrists per 100,000 people; high-income countries average 10-20. In some countries, an entire nation shares a single psychiatrist---or none.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
         </p>
         <p>
           Even where services exist, quality is abysmal. Mental health institutions in many countries violate basic human rights: people chained to beds, held without consent indefinitely, subjected to forced treatment and abuse. Community-based care remains rare; institutionalization persists as the default despite decades of evidence showing it harms more than helps.
@@ -752,10 +752,10 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Scaling Up: What Works in Resource-Poor Settings</h2>
         <p>
-          The treatment gap isn't inevitable. Evidence-based strategies can dramatically expand access even without massive resource infusion.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[3]" /> Task-shifting—training non-specialists to deliver mental health care—has successfully treated millions. Programs in Ethiopia, India, Uganda, and elsewhere show community health workers can effectively manage depression, psychosis, and substance use with outcomes comparable to specialist care.
+          The treatment gap isn't inevitable. Evidence-based strategies can dramatically expand access even without massive resource infusion.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[3]" /> Task-shifting---training non-specialists to deliver mental health care---has successfully treated millions. Programs in Ethiopia, India, Uganda, and elsewhere show community health workers can effectively manage depression, psychosis, and substance use with outcomes comparable to specialist care.
         </p>
         <p>
-          Integration into primary care works. When general doctors and nurses receive brief training in mental health assessment and management, treatment rates rise dramatically. Digital mental health tools—apps, teletherapy, AI chatbots—expand access in areas without providers, though equity concerns persist when technology requires smartphones and internet.
+          Integration into primary care works. When general doctors and nurses receive brief training in mental health assessment and management, treatment rates rise dramatically. Digital mental health tools---apps, teletherapy, AI chatbots---expand access in areas without providers, though equity concerns persist when technology requires smartphones and internet.
         </p>
 
         <ComparisonTable
@@ -799,15 +799,15 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>The Funding Crisis: Mental Health as "Luxury"</h2>
         <p>
-          Follow the money, and you'll understand the treatment gap. Despite causing roughly 10% of global disease burden, mental health receives less than 2% of health budgets—and in LMICs, often under 1%. Of this paltry funding, most goes to psychiatric hospitals rather than community services.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+          Follow the money, and you'll understand the treatment gap. Despite causing roughly 10% of global disease burden, mental health receives less than 2% of health budgets---and in LMICs, often under 1%. Of this paltry funding, most goes to psychiatric hospitals rather than community services.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
         </p>
         <p>
-          This reflects mental health's perception as a "luxury" that countries will address after infectious disease, maternal health, and physical illness are "solved"—a false dichotomy that ignores how mental and physical health intertwine. Depression worsens diabetes and heart disease. Untreated mental illness drives premature mortality. Investing in mental health produces economic returns of $4-5 for every dollar spent through improved productivity and reduced healthcare costs.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+          This reflects mental health's perception as a "luxury" that countries will address after infectious disease, maternal health, and physical illness are "solved"---a false dichotomy that ignores how mental and physical health intertwine. Depression worsens diabetes and heart disease. Untreated mental illness drives premature mortality. Investing in mental health produces economic returns of $4-5 for every dollar spent through improved productivity and reduced healthcare costs.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[3]" />
         </p>
 
         <h2>Governance Gaps: Who's Accountable?</h2>
         <p>
-          Even when policies exist, implementation fails. Mental health governance—leadership, coordination, accountability mechanisms—is weak globally. Responsibility fragments across multiple ministries (health, social welfare, justice) with no clear authority. Funding mechanisms lack transparency. Policies collect dust while practices violate them with impunity.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[3]" />
+          Even when policies exist, implementation fails. Mental health governance---leadership, coordination, accountability mechanisms---is weak globally. Responsibility fragments across multiple ministries (health, social welfare, justice) with no clear authority. Funding mechanisms lack transparency. Policies collect dust while practices violate them with impunity.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesB[3]" />
         </p>
         <p>
           Accountability requires: designated mental health leadership at national and regional levels, legislation enshrining mental health rights with enforcement mechanisms, transparent budgets showing mental health spending, independent monitoring of service quality and rights violations, and meaningful participation of people with lived experience in governance.
@@ -819,7 +819,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           steps={[
             {
               instruction: 'Educate yourself on global burden',
-              details: 'Read WHO's World Mental Health Report. Understand the treatment gap, human rights violations, and funding disparities. Knowledge precedes advocacy.'
+              details: "Read WHO's World Mental Health Report. Understand the treatment gap, human rights violations, and funding disparities. Knowledge precedes advocacy."
             },
             {
               instruction: 'Support global mental health organizations',
@@ -827,7 +827,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             },
             {
               instruction: 'Advocate to policymakers',
-              details: 'Contact your country's representatives about foreign aid for mental health, support for WHO programs, and domestic mental health parity laws.'
+              details: "Contact your country's representatives about foreign aid for mental health, support for WHO programs, and domestic mental health parity laws."
             },
             {
               instruction: 'Amplify voices from LMICs',
@@ -846,7 +846,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
         </ArticleCallout>
 
         <SparkMoment>
-          The treatment gap isn't a natural disaster or an unfortunate scarcity—it's a policy choice. Every government that spends less than 2% of health budgets on mental health while mental illness causes 10% of disease burden makes a choice. Every institution that chains people with psychosis instead of providing humane community care makes a choice. Every nation that trains specialists for wealthy urban centers while rural millions go without makes a choice. The gap closes when we choose differently: when we fund community care over warehousing, when we respect rights over coercion, when we invest in equity over maintaining systems that serve the few at the expense of the many.
+          The treatment gap isn't a natural disaster or an unfortunate scarcity---it's a policy choice. Every government that spends less than 2% of health budgets on mental health while mental illness causes 10% of disease burden makes a choice. Every institution that chains people with psychosis instead of providing humane community care makes a choice. Every nation that trains specialists for wealthy urban centers while rural millions go without makes a choice. The gap closes when we choose differently: when we fund community care over warehousing, when we respect rights over coercion, when we invest in equity over maintaining systems that serve the few at the expense of the many.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -890,7 +890,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
     content: (
       <>
         <SummaryBox>
-          The future of mental health care isn't a choice between Western psychiatry and traditional healing, between evidence-based practice and cultural wisdom, between individual therapy and community support. It's integration: systems where multiple knowledge traditions coexist with mutual respect, where biomedical interventions and spiritual practices work together, where clinical expertise and lived experience share authority, where no one has to abandon their cultural identity to access care. This vision—call it pluralistic, integrative, or decolonized mental health—represents a profound shift from universalist models that impose one approach globally to contextualized care that honors diversity. This article explores what culturally responsive mental healthcare looks like in practice, the barriers blocking its realization, and the innovations pointing toward more equitable, effective, and human-centered healing systems.
+          The future of mental health care isn't a choice between Western psychiatry and traditional healing, between evidence-based practice and cultural wisdom, between individual therapy and community support. It's integration: systems where multiple knowledge traditions coexist with mutual respect, where biomedical interventions and spiritual practices work together, where clinical expertise and lived experience share authority, where no one has to abandon their cultural identity to access care. This vision---call it pluralistic, integrative, or decolonized mental health---represents a profound shift from universalist models that impose one approach globally to contextualized care that honors diversity. This article explores what culturally responsive mental healthcare looks like in practice, the barriers blocking its realization, and the innovations pointing toward more equitable, effective, and human-centered healing systems.
         </SummaryBox>
 
         <KeyFacts>
@@ -901,7 +901,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
             Decolonizing mental health requires epistemic justice: recognizing that Western psychiatry is one knowledge system among many, not the universal authority on suffering and healing
           </Citation>
           <Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]">
-            Cultural humility—ongoing self-reflection about power, privilege, and cultural limitations—surpasses cultural competence as a framework for respectful cross-cultural care
+            Cultural humility---ongoing self-reflection about power, privilege, and cultural limitations---surpasses cultural competence as a framework for respectful cross-cultural care
           </Citation>
           <Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[4]">
             Pluralistic mental health systems allow multiple healing traditions to coexist, letting communities and individuals choose what aligns with their values and needs
@@ -913,13 +913,13 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>From Cultural Competence to Cultural Humility</h2>
         <p>
-          For decades, mental health training emphasized "cultural competence"—learning about different cultures to provide better care. While well-intentioned, this approach often reduces cultures to lists of traits, reinforces stereotypes, and positions the (usually Western) provider as expert learning about "others." It doesn't address power imbalances or challenge whose knowledge counts as legitimate.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+          For decades, mental health training emphasized "cultural competence"---learning about different cultures to provide better care. While well-intentioned, this approach often reduces cultures to lists of traits, reinforces stereotypes, and positions the (usually Western) provider as expert learning about "others." It doesn't address power imbalances or challenge whose knowledge counts as legitimate.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]" />
         </p>
         <p>
           Cultural humility offers a different path. Rather than claiming competence or mastery, practitioners commit to lifelong self-reflection: examining their own biases, acknowledging power differentials, recognizing what they don't and can't know about others' experiences, and letting clients be the experts on their own lives and cultures.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesB[4]" /> It means asking, not assuming. Learning from mistakes without defensiveness. Partnering rather than diagnosing.
         </p>
         <p>
-          Cultural humility also challenges institutional power—advocating for policies that reduce barriers, hiring diverse staff, changing systems that exclude marginalized communities, and supporting community-led healing initiatives rather than imposing top-down interventions.
+          Cultural humility also challenges institutional power---advocating for policies that reduce barriers, hiring diverse staff, changing systems that exclude marginalized communities, and supporting community-led healing initiatives rather than imposing top-down interventions.
         </p>
 
         <DiagramBlock
@@ -944,7 +944,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Pluralistic Systems: Multiple Healing Pathways</h2>
         <p>
-          Pluralistic mental health systems recognize that diverse healing traditions can coexist, each with value, each appropriate for different contexts and preferences. This doesn't mean uncritical acceptance of everything—safety, ethics, and evidence still matter—but it rejects the hierarchy that places Western psychiatry at the top with all other systems as "alternative."<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+          Pluralistic mental health systems recognize that diverse healing traditions can coexist, each with value, each appropriate for different contexts and preferences. This doesn't mean uncritical acceptance of everything---safety, ethics, and evidence still matter---but it rejects the hierarchy that places Western psychiatry at the top with all other systems as "alternative."<Citation id="4" article="traditionalHealingGlobalApproachesArticlesB[4]" />
         </p>
         <p>
           What pluralism looks like in practice: mental health facilities that employ both psychiatrists and traditional healers; insurance covering acupuncture, art therapy, and pastoral counseling alongside medications and psychotherapy; research funding for studying Indigenous healing practices using methodologies that respect their paradigms; licensing pathways for non-Western practitioners; and most critically, letting communities define what healing means for them.
@@ -952,7 +952,7 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
 
         <h2>Decolonizing Mental Health: Epistemic Justice</h2>
         <p>
-          Colonization didn't just steal land and resources—it imposed epistemological dominance, declaring Western knowledge the only valid form of knowing while dismissing Indigenous, traditional, and non-Western systems as primitive superstition. Decolonizing mental health means challenging this hierarchy and working toward epistemic justice: the recognition that multiple ways of understanding suffering and healing have legitimacy.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[4]" />
+          Colonization didn't just steal land and resources---it imposed epistemological dominance, declaring Western knowledge the only valid form of knowing while dismissing Indigenous, traditional, and non-Western systems as primitive superstition. Decolonizing mental health means challenging this hierarchy and working toward epistemic justice: the recognition that multiple ways of understanding suffering and healing have legitimacy.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesB[4]" />
         </p>
         <p>
           This requires: centering marginalized communities as authorities on their own mental health needs; compensating traditional knowledge keepers fairly when their wisdom informs research or practice; deconstructing diagnostic categories that pathologize cultural differences; questioning which research methods get funded and whose voices count as expertise; and confronting how psychiatry has been weaponized against Indigenous peoples, people of color, LGBTQ+ communities, and political dissidents.
@@ -1022,11 +1022,11 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
           description="Actions at individual, community, and systems levels:"
           steps={[
             {
-              instruction: 'If you're a provider: commit to cultural humility',
+              instruction: "If you're a provider: commit to cultural humility",
               details: 'Examine your biases, seek supervision on cultural issues, learn from clients, advocate institutionally for equitable practices, support hiring diverse staff, compensate traditional healers fairly when collaborating.'
             },
             {
-              instruction: 'If you're seeking care: advocate for your needs',
+              instruction: "If you're seeking care: advocate for your needs",
               details: 'Request providers who understand your cultural background, ask about integrating traditional practices, give feedback when care feels culturally misaligned, know you have the right to culturally responsive treatment.'
             },
             {
@@ -1046,11 +1046,11 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
         />
 
         <ArticleCallout variant="info" title="Integration Doesn't Mean Everything Works Together">
-          Not all healing systems are compatible in all contexts. Some people want strictly biomedical care. Others want only traditional approaches. Integration means creating space for multiple pathways, not forcing one blended model. The goal is choice, informed by cultural values and individual preferences—not prescribing integration as a new universal standard that everyone must follow.
+          Not all healing systems are compatible in all contexts. Some people want strictly biomedical care. Others want only traditional approaches. Integration means creating space for multiple pathways, not forcing one blended model. The goal is choice, informed by cultural values and individual preferences---not prescribing integration as a new universal standard that everyone must follow.
         </ArticleCallout>
 
         <SparkMoment>
-          The future we're building isn't a polite coexistence where Western psychiatry condescends to "allow" traditional healing a small corner. It's a fundamental reorganization of power, knowledge, and healing—where an Ayurvedic practitioner and a psychiatrist sit as equals, where Indigenous Elders' wisdom carries the same weight as peer-reviewed studies, where communities define what wellness means rather than having it defined for them, where no one's culture becomes the price of mental health care. This future is already emerging in pockets worldwide—community-governed clinics, pluralistic systems, decolonized research. The question isn't whether it's possible, but whether those holding power will redistribute it, whether those benefiting from current systems will join the transformation, whether we collectively choose justice over maintaining convenient hierarchies.
+          The future we're building isn't a polite coexistence where Western psychiatry condescends to "allow" traditional healing a small corner. It's a fundamental reorganization of power, knowledge, and healing---where an Ayurvedic practitioner and a psychiatrist sit as equals, where Indigenous Elders' wisdom carries the same weight as peer-reviewed studies, where communities define what wellness means rather than having it defined for them, where no one's culture becomes the price of mental health care. This future is already emerging in pockets worldwide---community-governed clinics, pluralistic systems, decolonized research. The question isn't whether it's possible, but whether those holding power will redistribute it, whether those benefiting from current systems will join the transformation, whether we collectively choose justice over maintaining convenient hierarchies.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -1071,7 +1071,5 @@ export const traditionalHealingGlobalApproachesArticlesB: Article[] = [
         <ReferenceList article="traditionalHealingGlobalApproachesArticlesB[4]" />
       </>
     )
-  },
-];
   },
 ];

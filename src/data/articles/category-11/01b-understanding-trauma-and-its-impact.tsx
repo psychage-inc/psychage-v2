@@ -19,7 +19,7 @@ export const understandingTraumaArticlesB: Article[] = [
     id: catId(6),
     slug: 'trauma-and-body-unprocessed-experiences-nervous-system',
     title: 'Trauma and the Body: How Unprocessed Experiences Live in Your Nervous System',
-    description: "Trauma isn't just in your mind—it lives in your body. Learn how unprocessed trauma affects your nervous system and why body-based healing matters.",
+    description: "Trauma isn't just in your mind---it lives in your body. Learn how unprocessed trauma affects your nervous system and why body-based healing matters.",
     image: '/images/articles/cat11/cover-006.svg',
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 7,
@@ -97,14 +97,14 @@ export const understandingTraumaArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You might have heard the phrase "the body keeps the score"—and it's more than a catchy title. Trauma
+            You might have heard the phrase "the body keeps the score"---and it's more than a catchy title. Trauma
             doesn't just create psychological symptoms; it fundamentally changes how your body functions. Unprocessed
             traumatic experiences live on in your nervous system, manifesting as physical sensations, chronic tension,
             pain, and dysregulated responses to everyday stress.
           </p>
           <p className="mb-6">
             Understanding how trauma lives in your body is crucial because it explains why talk therapy alone sometimes
-            isn't enough—and why body-based approaches can be so powerful{', '}
+            isn't enough---and why body-based approaches can be so powerful{', '}
             <Citation id="1" index={1} source="Viking Press" year="2014" tier={5} />.
           </p>
         </div>
@@ -182,7 +182,7 @@ export const understandingTraumaArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           During a traumatic event, your nervous system floods with activation. Your body prepares to fight, flee, or
-          freeze. Energy mobilizes in your muscles, your heart pounds, adrenaline surges. This is adaptive—it helps you
+          freeze. Energy mobilizes in your muscles, your heart pounds, adrenaline surges. This is adaptive---it helps you
           survive.
         </p>
         <p className="mb-6">
@@ -194,7 +194,7 @@ export const understandingTraumaArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Animals in the wild shake, tremble, or run after escaping threats—they discharge the stress energy.
+            Animals in the wild shake, tremble, or run after escaping threats---they discharge the stress energy.
             Humans, due to social conditioning and cognitive interference, often suppress these natural discharge
             mechanisms, leading to trapped activation.
           </p>
@@ -218,7 +218,7 @@ export const understandingTraumaArticlesB: Article[] = [
                 <p>
                   Your body remains braced for threat. You might hold tension in your shoulders, jaw, neck, or back.
                   This chronic contraction can lead to pain, headaches, and fatigue. The tension is your body's way of
-                  staying prepared—but it never fully relaxes.
+                  staying prepared---but it never fully relaxes.
                 </p>
               ),
             },
@@ -289,7 +289,7 @@ export const understandingTraumaArticlesB: Article[] = [
           Trauma and Interoception
         </h2>
         <p className="mb-6">
-          Interoception is your ability to sense what's happening inside your body—your heartbeat, breathing, tension,
+          Interoception is your ability to sense what's happening inside your body---your heartbeat, breathing, tension,
           temperature, hunger, and emotions. It's how you know you're anxious, tired, or need to use the bathroom{', '}
           <Citation id="4" index={4} source="Annals of the New York Academy of Sciences" year="2019" tier={1} />.
         </p>
@@ -334,7 +334,7 @@ export const understandingTraumaArticlesB: Article[] = [
         <p className="mb-6">Here's the crucial point: <strong>trauma is stored below the level of language</strong>.</p>
         <p className="mb-6">
           When you experience trauma, your brain's language centers (in the prefrontal cortex) go offline. The amygdala
-          and brain stem—subcortical regions that don't use words—process and store the experience. This is why:
+          and brain stem---subcortical regions that don't use words---process and store the experience. This is why:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Trauma memories often come as body sensations, images, or emotions rather than coherent narratives</li>
@@ -432,7 +432,7 @@ export const understandingTraumaArticlesB: Article[] = [
               title: 'Gentle Movement',
               description: (
                 <p>
-                  Walking, stretching, or yoga helps discharge trapped energy. Listen to your body's impulses—you might
+                  Walking, stretching, or yoga helps discharge trapped energy. Listen to your body's impulses---you might
                   need to shake, stretch, or move slowly.
                 </p>
               ),
@@ -473,7 +473,7 @@ export const understandingTraumaArticlesB: Article[] = [
           Your Body Can Heal
         </h2>
         <p className="mb-6">
-          The nervous system is plastic—it can change. Trapped energy can be released. Dysregulated patterns can be
+          The nervous system is plastic---it can change. Trapped energy can be released. Dysregulated patterns can be
           retrained. Your body has an innate capacity to return to regulation, given the right conditions and support.
         </p>
         <p className="mb-6">
@@ -502,7 +502,7 @@ export const understandingTraumaArticlesB: Article[] = [
     id: catId(7),
     slug: 'window-of-tolerance-understanding-capacity-for-stress',
     title: 'The Window of Tolerance: Understanding Your Capacity for Stress',
-    description: 'Learn about the window of tolerance—your optimal zone of arousal. Discover what happens when you move outside this window and how to expand it over time.',
+    description: 'Learn about the window of tolerance---your optimal zone of arousal. Discover what happens when you move outside this window and how to expand it over time.',
     image: "/images/articles/cat11/cover-007.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 6,
@@ -582,7 +582,7 @@ export const understandingTraumaArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Have you ever noticed that sometimes you can handle a stressful situation just fine, but at other times the
             same situation completely overwhelms you? Or that certain people seem to stay calm in circumstances that
-            would send you spiraling? The answer lies in something called the "window of tolerance"—a concept that
+            would send you spiraling? The answer lies in something called the "window of tolerance"---a concept that
             explains your nervous system's capacity for stress.
           </p>
           <p className="mb-6">
@@ -678,7 +678,7 @@ export const understandingTraumaArticlesB: Article[] = [
                   <h3 className="text-xl font-bold mb-3">Above the Window (Fight/Flight)</h3>
                   <p className="mb-4">
                     Hyperarousal is the zone of too much activation. Your sympathetic nervous system dominates. You're
-                    in survival mode—fight or flight.
+                    in survival mode---fight or flight.
                   </p>
                   <p className="mb-4">
                     <strong>How it feels:</strong>
@@ -738,7 +738,7 @@ export const understandingTraumaArticlesB: Article[] = [
           How Trauma Narrows Your Window
         </h2>
         <p className="mb-6">
-          Trauma doesn't just push you outside your window temporarily—it can make the window itself narrower{', '}
+          Trauma doesn't just push you outside your window temporarily---it can make the window itself narrower{', '}
           <Citation id="6" index={6} source="National Center for PTSD" year="2023" tier={2} />. This means:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -784,7 +784,7 @@ export const understandingTraumaArticlesB: Article[] = [
               content: (
                 <p>
                   Some people are born with more sensitive nervous systems. Highly sensitive people (HSPs) naturally
-                  have narrower windows—they feel things more intensely and are more easily overwhelmed.
+                  have narrower windows---they feel things more intensely and are more easily overwhelmed.
                 </p>
               ),
             },
@@ -813,7 +813,7 @@ export const understandingTraumaArticlesB: Article[] = [
               title: 'Current Stress Load',
               content: (
                 <p>
-                  Your window isn't fixed—it changes based on what's happening in your life. High stress, illness, lack
+                  Your window isn't fixed---it changes based on what's happening in your life. High stress, illness, lack
                   of sleep, or major life changes can temporarily narrow your window.
                 </p>
               ),
@@ -850,7 +850,7 @@ export const understandingTraumaArticlesB: Article[] = [
               title: 'Build Awareness',
               description: (
                 <p>
-                  Learn to recognize when you're moving outside your window. Notice your early warning signs—tension,
+                  Learn to recognize when you're moving outside your window. Notice your early warning signs---tension,
                   irritability, foggy thinking. The sooner you catch it, the easier it is to return.
                 </p>
               ),
@@ -900,7 +900,7 @@ export const understandingTraumaArticlesB: Article[] = [
               description: (
                 <p>
                   Carefully, with support, practice tolerating slightly more arousal than usual. This is called
-                  'titration"—increasing your capacity in small, manageable doses. Never push beyond what feels safe.
+                  'titration"---increasing your capacity in small, manageable doses. Never push beyond what feels safe.
                 </p>
               ),
             },
@@ -910,7 +910,7 @@ export const understandingTraumaArticlesB: Article[] = [
         <ArticleCallout variant="warning" title="Go Slow">
           <p>
             Expanding your window is a gradual process. Trying to force yourself to "toughen up" or pushing too hard can
-            actually narrow your window further. Healing happens through gentle, consistent practice—not willpower.
+            actually narrow your window further. Healing happens through gentle, consistent practice---not willpower.
           </p>
         </ArticleCallout>
 
@@ -932,7 +932,7 @@ export const understandingTraumaArticlesB: Article[] = [
             <strong>Ask for help</strong>: Communicate when you're getting close to your edge
           </li>
           <li>
-            <strong>Be self-compassionate</strong>: Understand that dysregulation isn't a character flaw—it's a nervous
+            <strong>Be self-compassionate</strong>: Understand that dysregulation isn't a character flaw---it's a nervous
             system response
           </li>
           <li>
@@ -1042,11 +1042,11 @@ export const understandingTraumaArticlesB: Article[] = [
             You don't have to experience trauma firsthand for it to affect you. Therapists who listen to stories of
             abuse, emergency responders who witness accidents, nurses who care for suffering patients, and even friends
             who support trauma survivors can develop real trauma symptoms from indirect exposure. This phenomenon is
-            called secondary trauma—and it's more common than most people realize.
+            called secondary trauma---and it's more common than most people realize.
           </p>
           <p className="mb-6">
             If you work with or care for people who have experienced trauma, understanding secondary trauma isn't
-            optional—it's essential for your own well-being and your capacity to continue helping others{', '}
+            optional---it's essential for your own well-being and your capacity to continue helping others{', '}
             <Citation id="1" index={1} source="National Child Traumatic Stress Network" year="2022" tier={2} />.
           </p>
         </div>
@@ -1064,8 +1064,8 @@ export const understandingTraumaArticlesB: Article[] = [
           <Citation id="2" index={2} source="Traumatology" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          The key point: <strong>you don't have to experience the trauma yourself</strong>. Simply bearing witness—listening
-          to details, seeing images, treating injuries, or supporting someone through their pain—can create trauma responses
+          The key point: <strong>you don't have to experience the trauma yourself</strong>. Simply bearing witness---listening
+          to details, seeing images, treating injuries, or supporting someone through their pain---can create trauma responses
           in your own nervous system.
         </p>
 
@@ -1131,7 +1131,7 @@ export const understandingTraumaArticlesB: Article[] = [
               content: (
                 <p>
                   Child protective services workers, domestic violence advocates, and case managers regularly encounter
-                  stories of abuse, neglect, and hardship—often with high caseloads and limited resources.
+                  stories of abuse, neglect, and hardship---often with high caseloads and limited resources.
                 </p>
               ),
             },
@@ -1363,7 +1363,7 @@ export const understandingTraumaArticlesB: Article[] = [
               content: (
                 <p>
                   Set limits on when and how you're available. Don't take on more than you can handle. Learn to say no.
-                  Leave work at work when possible—both physically and mentally.
+                  Leave work at work when possible---both physically and mentally.
                 </p>
               ),
             },
@@ -1382,7 +1382,7 @@ export const understandingTraumaArticlesB: Article[] = [
               title: 'Prioritize Self-Care',
               content: (
                 <p>
-                  This isn't optional or indulgent—it's essential{', '}
+                  This isn't optional or indulgent---it's essential{', '}
                   <Citation id="7" index={7} source="SAMHSA" year="2022" tier={2} />. Exercise, sleep, nutrition,
                   hobbies, relationships, and activities that restore you are protective factors.
                 </p>
@@ -1438,7 +1438,7 @@ export const understandingTraumaArticlesB: Article[] = [
           Organizational Responsibility
         </h2>
         <p className="mb-6">
-          Secondary trauma isn't just an individual problem—it's an organizational issue. Employers have a
+          Secondary trauma isn't just an individual problem---it's an organizational issue. Employers have a
           responsibility to:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1460,7 +1460,7 @@ export const understandingTraumaArticlesB: Article[] = [
             <li>Anyone who works with trauma survivors or traumatic material is at risk</li>
             <li>Symptoms can mirror PTSD: intrusive thoughts, avoidance, hyperarousal, worldview changes</li>
             <li>Prevention requires both individual self-care and organizational support</li>
-            <li>Seeking help for secondary trauma isn't weakness—it's professional responsibility</li>
+            <li>Seeking help for secondary trauma isn't weakness---it's professional responsibility</li>
           </ul>
         </ArticleCallout>
 
@@ -1480,7 +1480,7 @@ export const understandingTraumaArticlesB: Article[] = [
         </ul>
         <p className="mb-6">
           It's time to seek professional support. Early intervention prevents secondary trauma from becoming chronic.
-          You can't pour from an empty cup—taking care of yourself ensures you can continue helping others.
+          You can't pour from an empty cup---taking care of yourself ensures you can continue helping others.
         </p>
       </>
     ),
@@ -1569,7 +1569,7 @@ export const understandingTraumaArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             There's a crucial distinction in the trauma field that doesn't get enough attention: the difference between
-            experiencing a single traumatic event and living through prolonged, repeated trauma—especially in
+            experiencing a single traumatic event and living through prolonged, repeated trauma---especially in
             childhood. While both are serious, they affect people differently and require different approaches to
             healing. Understanding this distinction can be life-changing for survivors who've wondered why standard
             trauma treatments haven't fully worked for them.
@@ -1830,7 +1830,7 @@ export const understandingTraumaArticlesB: Article[] = [
               content: (
                 <p>
                   Understanding that your struggles with emotion regulation, relationships, and self-worth are
-                  <em>symptoms</em> of complex trauma—not character flaws—can reduce shame and self-blame.
+                  <em>symptoms</em> of complex trauma---not character flaws---can reduce shame and self-blame.
                 </p>
               ),
             },
@@ -1844,7 +1844,7 @@ export const understandingTraumaArticlesB: Article[] = [
           The Developmental Impact
         </h2>
         <p className="mb-6">
-          When trauma occurs during childhood, it doesn't just create memories to process—it shapes development{', '}
+          When trauma occurs during childhood, it doesn't just create memories to process---it shapes development{', '}
           <Citation id="5" index={5} source="Attachment & Human Development" year="2020" tier={1} />. Children
           experiencing ongoing trauma develop in a context of threat, which affects:
         </p>
@@ -1857,7 +1857,7 @@ export const understandingTraumaArticlesB: Article[] = [
               description: (
                 <p>
                   Secure attachment requires consistent, safe caregiving. Trauma from caregivers creates disorganized
-                  attachment—the person you need for safety is also the source of danger. This fundamentally shapes how
+                  attachment---the person you need for safety is also the source of danger. This fundamentally shapes how
                   you relate to others throughout life.
                 </p>
               ),
@@ -1875,7 +1875,7 @@ export const understandingTraumaArticlesB: Article[] = [
               title: 'Sense of Self',
               description: (
                 <p>
-                  Identity forms through reflected appraisals—how others treat you tells you who you are. Abuse and
+                  Identity forms through reflected appraisals---how others treat you tells you who you are. Abuse and
                   neglect teach children they are worthless, unlovable, or bad, shaping core beliefs that persist into
                   adulthood.
                 </p>
@@ -1965,7 +1965,7 @@ export const understandingTraumaArticlesB: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li>Complex trauma involves repeated, prolonged exposure, often in childhood</li>
             <li>C-PTSD includes PTSD symptoms plus emotion dysregulation, negative self-concept, and relationship difficulties</li>
-            <li>Developmental timing matters—childhood trauma shapes identity and capacities</li>
+            <li>Developmental timing matters---childhood trauma shapes identity and capacities</li>
             <li>Treatment for complex trauma requires phase-based approach, not just trauma processing</li>
             <li>Recovery is possible but takes time, patience, and the right therapeutic approach</li>
           </ul>
@@ -2095,13 +2095,13 @@ export const understandingTraumaArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            One of the most isolating aspects of trauma is the feeling that you're alone—that what happened to you is
+            One of the most isolating aspects of trauma is the feeling that you're alone---that what happened to you is
             rare, that others wouldn't understand, that you should just be able to 'get over it." But here's the truth:
             traumatic experiences are strikingly common. Understanding just how prevalent trauma is can be validating,
             reduce shame, and help you realize that your struggles are shared by millions of others.
           </p>
           <p className="mb-6">
-            This article presents the data on trauma prevalence—not to minimize your experience, but to show that trauma
+            This article presents the data on trauma prevalence---not to minimize your experience, but to show that trauma
             is a major public health issue affecting the majority of people at some point in their lives{', '}
             <Citation id="1" index={1} source="European Journal of Psychotraumatology" year="2017" tier={1} />.
           </p>
@@ -2210,8 +2210,8 @@ export const understandingTraumaArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Important Context">
           <p>
-            These statistics likely <em>underestimate</em> true prevalence. Many traumatic experiences—especially sexual
-            abuse, domestic violence, and emotional abuse—are significantly underreported due to shame, fear,
+            These statistics likely <em>underestimate</em> true prevalence. Many traumatic experiences---especially sexual
+            abuse, domestic violence, and emotional abuse---are significantly underreported due to shame, fear,
             minimization, or memory suppression.
           </p>
         </ArticleCallout>
@@ -2223,7 +2223,7 @@ export const understandingTraumaArticlesB: Article[] = [
           PTSD Prevalence: Not Everyone Develops the Disorder
         </h2>
         <p className="mb-6">
-          While trauma exposure is very common, Post-Traumatic Stress Disorder (PTSD) is less so—though still affects
+          While trauma exposure is very common, Post-Traumatic Stress Disorder (PTSD) is less so---though still affects
           millions. About 6-8% of the U.S. population will have PTSD at some point in their lives{', '}
           <Citation id="2" index={2} source="JAMA Psychiatry" year="2020" tier={1} />.
         </p>
@@ -2373,7 +2373,7 @@ export const understandingTraumaArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          This high comorbidity rate reflects how trauma affects multiple systems—brain chemistry, stress response,
+          This high comorbidity rate reflects how trauma affects multiple systems---brain chemistry, stress response,
           emotion regulation, and physical health. It also means that effective treatment often needs to address
           multiple conditions, not just PTSD in isolation.
         </p>
@@ -2393,7 +2393,7 @@ export const understandingTraumaArticlesB: Article[] = [
               title: 'You Are Not Alone',
               description: (
                 <p>
-                  If you've experienced trauma, you are one of millions. This isn't about minimizing your experience—it's
+                  If you've experienced trauma, you are one of millions. This isn't about minimizing your experience---it's
                   about recognizing that trauma is a shared human experience, not an isolated or rare occurrence.
                 </p>
               ),
@@ -2412,7 +2412,7 @@ export const understandingTraumaArticlesB: Article[] = [
               description: (
                 <p>
                   When we understand how common trauma is, it becomes harder to maintain stigma. Seeking help for trauma
-                  is not unusual or shameful—it's a reasonable response to a widespread problem.
+                  is not unusual or shameful---it's a reasonable response to a widespread problem.
                 </p>
               ),
             },
@@ -2437,7 +2437,7 @@ export const understandingTraumaArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Despite high prevalence, many trauma survivors don't seek help. Studies show that only about half of people
-          with PTSD ever receive treatment—and of those who do, many wait a decade or more after symptom onset.
+          with PTSD ever receive treatment---and of those who do, many wait a decade or more after symptom onset.
         </p>
         <p className="mb-6">Barriers include:</p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -2449,7 +2449,7 @@ export const understandingTraumaArticlesB: Article[] = [
           <li>Fear of being labeled or misunderstood</li>
         </ul>
         <p className="mb-6">
-          If you're struggling with trauma symptoms, know that effective treatments exist—and you deserve access to
+          If you're struggling with trauma symptoms, know that effective treatments exist---and you deserve access to
           them. Early intervention leads to better outcomes, so seeking help sooner rather than later makes a real
           difference.
         </p>
@@ -2464,7 +2464,7 @@ export const understandingTraumaArticlesB: Article[] = [
             <li>About 6-8% develop PTSD, meaning most trauma survivors are resilient</li>
             <li>Certain populations (veterans, refugees, assault survivors) have higher rates</li>
             <li>Trauma is a major public health issue requiring systemic response</li>
-            <li>You are not alone—millions share this experience and recovery is possible</li>
+            <li>You are not alone---millions share this experience and recovery is possible</li>
           </ul>
         </ArticleCallout>
       </>

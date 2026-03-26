@@ -93,10 +93,10 @@ export const friendshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're always the one texting first. You suggest plans; they say "yes, definitely!" but never propose anything themselves. You stop reaching out to test if they'll notice—and they don't. One-sided friendships are exhausting, and recognizing the pattern is the first step toward either fixing it or freeing yourself.
+            You're always the one texting first. You suggest plans; they say "yes, definitely!" but never propose anything themselves. You stop reaching out to test if they'll notice---and they don't. One-sided friendships are exhausting, and recognizing the pattern is the first step toward either fixing it or freeing yourself.
           </p>
           <p className="mb-6">
-            Research shows that reciprocity—the balance of give-and-take—is one of the strongest predictors of friendship satisfaction and longevity <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2018" tier={1} />. When one person carries the entire weight of maintaining contact, the friendship becomes unsustainable and often leaves the initiator feeling undervalued and resentful.
+            Research shows that reciprocity---the balance of give-and-take---is one of the strongest predictors of friendship satisfaction and longevity <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2018" tier={1} />. When one person carries the entire weight of maintaining contact, the friendship becomes unsustainable and often leaves the initiator feeling undervalued and resentful.
           </p>
         </div>
 
@@ -169,7 +169,7 @@ export const friendshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The test</strong>: Stop initiating for 2-4 weeks. If they reach out within that time, the friendship has some reciprocity—they may just not be natural initiators. If weeks pass with no contact, you have your answer about how much they're investing.
+            <strong>The test</strong>: Stop initiating for 2-4 weeks. If they reach out within that time, the friendship has some reciprocity---they may just not be natural initiators. If weeks pass with no contact, you have your answer about how much they're investing.
           </p>
         </ArticleCallout>
 
@@ -188,21 +188,21 @@ export const friendshipsArticlesB: Article[] = [
               feature: 'Different communication styles',
               values: [
                 true,
-                "They're not natural initiators but do value the friendship—they just need permission to be the 'responder'",
+                "They're not natural initiators but do value the friendship---they just need permission to be the 'responder'",
               ],
             },
             {
               feature: 'Life crisis or overwhelm',
               values: [
                 true,
-                "Temporary capacity issue—they're drowning and can't maintain friendships right now",
+                "Temporary capacity issue---they're drowning and can't maintain friendships right now",
               ],
             },
             {
               feature: 'Unaware of the imbalance',
               values: [
                 true,
-                "Some people genuinely don't notice—they assume you'll say something if it bothers you",
+                "Some people genuinely don't notice---they assume you'll say something if it bothers you",
               ],
             },
             {
@@ -216,7 +216,7 @@ export const friendshipsArticlesB: Article[] = [
               feature: 'Different priority levels',
               values: [
                 false,
-                "You're a high priority for them; they're not for you—fundamental mismatch",
+                "You're a high priority for them; they're not for you---fundamental mismatch",
               ],
             },
             {
@@ -278,7 +278,7 @@ export const friendshipsArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">
-                    "I'd love to stay friends, but I need to see some initiative from you—maybe you suggest plans sometimes, or you text first once in a while. Can you do that?"
+                    "I'd love to stay friends, but I need to see some initiative from you---maybe you suggest plans sometimes, or you text first once in a while. Can you do that?"
                   </p>
                 </div>
               ),
@@ -313,7 +313,7 @@ export const friendshipsArticlesB: Article[] = [
           <li>You've already had the conversation and nothing changed</li>
           <li>They become defensive or dismissive when you bring up the imbalance</li>
           <li>The friendship consistently leaves you feeling worse, not better</li>
-          <li>You're investing heavily out of guilt, nostalgia, or fear of being alone—not genuine connection</li>
+          <li>You're investing heavily out of guilt, nostalgia, or fear of being alone---not genuine connection</li>
           <li>They only reach out when they need something from you</li>
           <li>The effort required to maintain the friendship exceeds what you're getting from it</li>
         </ul>
@@ -354,8 +354,8 @@ export const friendshipsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>It's not about your worthiness</strong>: Someone's inability or unwillingness to invest doesn't reflect your value. Plenty of people struggle with reciprocal friendship for reasons unrelated to you.</li>
-          <li><strong>Being the initiator isn't inherently bad</strong>: Some people are natural connectors. The problem isn't initiating—it's initiating 100% of the time with no reciprocation.</li>
-          <li><strong>You deserve mutuality</strong>: Wanting your friends to care as much as you do isn't needy or excessive—it's the baseline for healthy friendship.</li>
+          <li><strong>Being the initiator isn't inherently bad</strong>: Some people are natural connectors. The problem isn't initiating---it's initiating 100% of the time with no reciprocation.</li>
+          <li><strong>You deserve mutuality</strong>: Wanting your friends to care as much as you do isn't needy or excessive---it's the baseline for healthy friendship.</li>
           <li><strong>Letting go is self-respect</strong>: Releasing one-sided friendships creates space for reciprocal ones. It's not giving up; it's honoring your worth.</li>
         </ul>
 
@@ -373,7 +373,7 @@ export const friendshipsArticlesB: Article[] = [
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Stop over-functioning</strong>: Match their effort level. If they text once a month, you text once a month. This isn't petty—it's boundary-setting.</li>
+          <li><strong>Stop over-functioning</strong>: Match their effort level. If they text once a month, you text once a month. This isn't petty---it's boundary-setting.</li>
           <li><strong>Redirect your energy</strong>: Invest in friends who reciprocate. Attend events, join groups, reach out to other people who've shown interest.</li>
           <li><strong>Grieve the loss</strong>: Letting go of a one-sided friendship still hurts. Allow yourself to feel sad without second-guessing the decision.</li>
           <li><strong>Learn from the pattern</strong>: What red flags did you ignore early on? What made you keep trying despite the imbalance? Understanding this prevents repetition <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2020" tier={1} />.</li>
@@ -483,7 +483,7 @@ export const friendshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You have plenty of acquaintances—people you see at events, chat with casually, enjoy spending time with—but the conversations never go beyond surface level. How do you move from pleasant small talk to genuine closeness? The answer lies in strategic vulnerability, consistent contact, and shared novel experiences.
+            You have plenty of acquaintances---people you see at events, chat with casually, enjoy spending time with---but the conversations never go beyond surface level. How do you move from pleasant small talk to genuine closeness? The answer lies in strategic vulnerability, consistent contact, and shared novel experiences.
           </p>
           <p className="mb-6">
             Research shows that friendship depth is cultivated, not stumbled upon <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />. The famous "36 Questions That Lead to Love" study demonstrated that structured escalation of self-disclosure can create intimacy between strangers in under an hour <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />. While real-world friendship develops more slowly, the principles hold: vulnerability plus responsiveness equals depth.
@@ -515,7 +515,7 @@ export const friendshipsArticlesB: Article[] = [
           The Vulnerability Ladder: Escalating Disclosure
         </h2>
         <p className="mb-6">
-          Friendship deepens through graduated self-disclosure—sharing progressively more personal information as trust builds <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />:
+          Friendship deepens through graduated self-disclosure---sharing progressively more personal information as trust builds <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -542,7 +542,7 @@ export const friendshipsArticlesB: Article[] = [
                     What you think about non-controversial topics, what matters to you professionally or personally. Slightly more revealing.
                   </p>
                   <p>
-                    <strong>Example</strong>: "I've been thinking a lot about work-life balance lately—I realized I'm not prioritizing the things that actually matter."
+                    <strong>Example</strong>: "I've been thinking a lot about work-life balance lately---I realized I'm not prioritizing the things that actually matter."
                   </p>
                 </div>
               ),
@@ -552,7 +552,7 @@ export const friendshipsArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">
-                    What you're navigating right now—stressors, dilemmas, uncertainties. This signals trust <Citation id="6" index={6} source="Journal of Social Psychology" year="2021" tier={1} />.
+                    What you're navigating right now---stressors, dilemmas, uncertainties. This signals trust <Citation id="6" index={6} source="Journal of Social Psychology" year="2021" tier={1} />.
                   </p>
                   <p>
                     <strong>Example</strong>: "I'm trying to figure out whether to take this promotion. I want the growth, but I'm worried about the toll on my mental health."
@@ -688,7 +688,7 @@ export const friendshipsArticlesB: Article[] = [
           5. Increase Frequency of Contact
         </h3>
         <p className="mb-6">
-          Depth requires repetition. Move from monthly hangouts to biweekly or weekly. Consistency builds trust—they know you'll be there, and you know they will too <Citation id="8" index={8} source="Communication Research" year="2019" tier={1} />.
+          Depth requires repetition. Move from monthly hangouts to biweekly or weekly. Consistency builds trust---they know you'll be there, and you know they will too <Citation id="8" index={8} source="Communication Research" year="2019" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -708,7 +708,7 @@ export const friendshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p className="mb-4">
-            The "Fast Friends Procedure"—36 questions of escalating intimacy—has been shown to create closeness even between strangers. While you don't need to follow a script, the principle works: asking progressively more personal questions builds connection <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />.
+            The "Fast Friends Procedure"---36 questions of escalating intimacy---has been shown to create closeness even between strangers. While you don't need to follow a script, the principle works: asking progressively more personal questions builds connection <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -777,9 +777,9 @@ export const friendshipsArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Oversharing too soon</strong>: Jumping to Level 5 vulnerability on the second hangout scares people off. Match their pace.</li>
           <li><strong>Only talking about yourself</strong>: Depth requires reciprocity. Ask questions, listen actively, show genuine interest in their life.</li>
-          <li><strong>Waiting for them to initiate</strong>: If you want deeper connection, you need to make the first move—suggest plans, share something personal, ask better questions.</li>
+          <li><strong>Waiting for them to initiate</strong>: If you want deeper connection, you need to make the first move---suggest plans, share something personal, ask better questions.</li>
           <li><strong>Giving up after one awkward moment</strong>: Vulnerability feels awkward initially. Don't retreat after one slightly uncomfortable conversation.</li>
-          <li><strong>Assuming they're not interested</strong>: People are often more open to depth than you think—they're just waiting for permission to go there.</li>
+          <li><strong>Assuming they're not interested</strong>: People are often more open to depth than you think---they're just waiting for permission to go there.</li>
         </ul>
 
         <h2 id="when-help-needed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -893,10 +893,10 @@ export const friendshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your friendships aren't just nice to have—they're a critical component of your mental health infrastructure. Research consistently shows that the quality and quantity of your social connections predict your risk for depression, anxiety, cognitive decline, and even mortality more reliably than many physical health markers.
+            Your friendships aren't just nice to have---they're a critical component of your mental health infrastructure. Research consistently shows that the quality and quantity of your social connections predict your risk for depression, anxiety, cognitive decline, and even mortality more reliably than many physical health markers.
           </p>
           <p className="mb-6">
-            A landmark meta-analysis of 148 studies found that people with stronger social relationships had a 50% increased likelihood of survival compared to those with weaker social ties—a protective effect comparable to quitting smoking <Citation id="7" index={7} source="PLOS Medicine" year="2010" tier={1} />. The mechanism? Friendships buffer stress, provide emotional regulation support, and create a sense of belonging that's essential for psychological wellbeing.
+            A landmark meta-analysis of 148 studies found that people with stronger social relationships had a 50% increased likelihood of survival compared to those with weaker social ties---a protective effect comparable to quitting smoking <Citation id="7" index={7} source="PLOS Medicine" year="2010" tier={1} />. The mechanism? Friendships buffer stress, provide emotional regulation support, and create a sense of belonging that's essential for psychological wellbeing.
           </p>
         </div>
 
@@ -974,7 +974,7 @@ export const friendshipsArticlesB: Article[] = [
           The Stress-Buffering Effect
         </h2>
         <p className="mb-6">
-          One of the most robust findings in social psychology: friendships don't just make good times better—they make hard times bearable. This is called the stress-buffering hypothesis <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2019" tier={1} />.
+          One of the most robust findings in social psychology: friendships don't just make good times better---they make hard times bearable. This is called the stress-buffering hypothesis <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2019" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1034,14 +1034,14 @@ export const friendshipsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>If your close friends are depressed, your risk of depression increases—not because mental illness is "catching," but because behaviors (withdrawal, negative thinking, passivity) spread through modeling</li>
+          <li>If your close friends are depressed, your risk of depression increases---not because mental illness is "catching," but because behaviors (withdrawal, negative thinking, passivity) spread through modeling</li>
           <li>Conversely, friends with strong coping skills and positive mental health habits (exercise, therapy engagement, healthy boundaries) influence you toward those behaviors</li>
-          <li>Attitudes toward mental health treatment are socially contagious—if your friends normalize therapy, you're more likely to seek help</li>
+          <li>Attitudes toward mental health treatment are socially contagious---if your friends normalize therapy, you're more likely to seek help</li>
           <li>Emotional states like anxiety, optimism, and loneliness show "spillover effects" in close friendships</li>
         </ul>
 
         <p className="mb-6">
-          This doesn't mean avoiding friends who struggle—it means being intentional about who's in your inner circle and recognizing that you're influenced by the people you're closest to.
+          This doesn't mean avoiding friends who struggle---it means being intentional about who's in your inner circle and recognizing that you're influenced by the people you're closest to.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1054,7 +1054,7 @@ export const friendshipsArticlesB: Article[] = [
           Friendships and Cognitive Health
         </h2>
         <p className="mb-6">
-          Social connection doesn't just protect emotional wellbeing—it preserves cognitive function, especially as we age <Citation id="2" index={2} source="The American Journal of Geriatric Psychiatry" year="2020" tier={1} />:
+          Social connection doesn't just protect emotional wellbeing---it preserves cognitive function, especially as we age <Citation id="2" index={2} source="The American Journal of Geriatric Psychiatry" year="2020" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1098,7 +1098,7 @@ export const friendshipsArticlesB: Article[] = [
               title: 'Toxic Friendships',
               description: (
                 <p>
-                  Friendships marked by criticism, competition, or unreliability actively harm mental health—worse than having no friends at all <Citation id="9" index={9} source="Clinical Psychology Review" year="2016" tier={1} />.
+                  Friendships marked by criticism, competition, or unreliability actively harm mental health---worse than having no friends at all <Citation id="9" index={9} source="Clinical Psychology Review" year="2016" tier={1} />.
                 </p>
               ),
             },
@@ -1247,10 +1247,10 @@ export const friendshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You thought cliques ended in high school. Then you joined a friend group as an adult and discovered the same dynamics: inside jokes you're not part of, plans made without you, subtle hierarchies that determine who gets attention. Group friendships are complex, and feeling on the outside—even slightly—can sting just as much as it did at fourteen.
+            You thought cliques ended in high school. Then you joined a friend group as an adult and discovered the same dynamics: inside jokes you're not part of, plans made without you, subtle hierarchies that determine who gets attention. Group friendships are complex, and feeling on the outside---even slightly---can sting just as much as it did at fourteen.
           </p>
           <p className="mb-6">
-            Research shows that social exclusion activates the same neural pain pathways as physical injury <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2015" tier={1} />. Your brain doesn't distinguish between being left out of a group chat and being physically hurt—both signal threat to your survival, because for most of human history, exclusion from the group meant death. Understanding this can help you recognize that your feelings aren't "oversensitive"—they're hardwired.
+            Research shows that social exclusion activates the same neural pain pathways as physical injury <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2015" tier={1} />. Your brain doesn't distinguish between being left out of a group chat and being physically hurt---both signal threat to your survival, because for most of human history, exclusion from the group meant death. Understanding this can help you recognize that your feelings aren't "oversensitive"---they're hardwired.
           </p>
         </div>
 
@@ -1264,7 +1264,7 @@ export const friendshipsArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Identity formation</strong>: Groups help people define who they are ("we're the creative friends,", "we're the outdoorsy crew")</li>
           <li><strong>Efficiency</strong>: Planning with the same 5-8 people is easier than constantly negotiating who's invited</li>
-          <li><strong>Shared history</strong>: Inside jokes, references, and rituals create cohesion—but also make newcomers feel like outsiders</li>
+          <li><strong>Shared history</strong>: Inside jokes, references, and rituals create cohesion---but also make newcomers feel like outsiders</li>
           <li><strong>Unconscious bias</strong>: People favor those already in the group (in-group bias) and are suspicious of new members without realizing it</li>
           <li><strong>Scarcity mindset</strong>: Some groups fear that adding people will dilute closeness or change the dynamic</li>
         </ul>
@@ -1294,21 +1294,21 @@ export const friendshipsArticlesB: Article[] = [
               feature: 'Unintentional',
               values: [
                 'People forget to add you to the group chat, assume someone else invited you, plan spontaneously',
-                'Not personal—organizational oversight, not rejection',
+                'Not personal---organizational oversight, not rejection',
               ],
             },
             {
               feature: 'Boundary-based',
               values: [
                 'Smaller hangouts for closer members, intimate dinners vs. large parties',
-                'Reflects intimacy levels—not everyone is invited to everything',
+                'Reflects intimacy levels---not everyone is invited to everything',
               ],
             },
             {
               feature: 'Passive-aggressive',
               values: [
                 'Plans discussed in front of you without invitation, silence when you ask to join',
-                'Likely conflict avoidance—they don\'t want you there but won\'t say it directly',
+                'Likely conflict avoidance---they don\'t want you there but won\'t say it directly',
               ],
             },
             {
@@ -1322,7 +1322,7 @@ export const friendshipsArticlesB: Article[] = [
               feature: 'Toxic',
               values: [
                 'Deliberate exclusion, talking about you behind your back, triangulation',
-                'Red flag for unhealthy group dynamics—consider whether this group is worth pursuing',
+                'Red flag for unhealthy group dynamics---consider whether this group is worth pursuing',
               ],
             },
           ]}
@@ -1346,7 +1346,7 @@ export const friendshipsArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p className="mb-4">
-            <strong>Neurological reality</strong>: fMRI studies show that social exclusion activates the dorsal anterior cingulate cortex (dACC) and anterior insula—the same regions activated by physical pain. Over-the-counter pain relievers have even been shown to reduce the emotional pain of social rejection <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2015" tier={1} />.
+            <strong>Neurological reality</strong>: fMRI studies show that social exclusion activates the dorsal anterior cingulate cortex (dACC) and anterior insula---the same regions activated by physical pain. Over-the-counter pain relievers have even been shown to reduce the emotional pain of social rejection <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2015" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1404,7 +1404,7 @@ export const friendshipsArticlesB: Article[] = [
               title: '6. Address Exclusion Directly (If Appropriate)',
               description: (
                 <p>
-                  For unintentional exclusion, a light touch works: "Hey, I'd love to be added to the group chat—I keep hearing about plans after the fact!" For intentional exclusion, decide if confrontation is worth it or if finding a different group is healthier.
+                  For unintentional exclusion, a light touch works: "Hey, I'd love to be added to the group chat---I keep hearing about plans after the fact!" For intentional exclusion, decide if confrontation is worth it or if finding a different group is healthier.
                 </p>
               ),
             },
@@ -1419,7 +1419,7 @@ export const friendshipsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Rigid hierarchy</strong>: Clear "leaders" who dominate, others who are sidelined—if you're not in the inner circle, you never will be</li>
+          <li><strong>Rigid hierarchy</strong>: Clear "leaders" who dominate, others who are sidelined---if you're not in the inner circle, you never will be</li>
           <li><strong>Gossip culture</strong>: If they talk about people behind their backs, they'll talk about you too</li>
           <li><strong>Conditional acceptance</strong>: You're only included when you're useful or when they need something</li>
           <li><strong>Values misalignment</strong>: The group's priorities, humor, or behavior conflict with yours</li>
@@ -1463,7 +1463,7 @@ export const friendshipsArticlesB: Article[] = [
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Name the feeling</strong>: "I feel excluded and that hurts." Acknowledging it reduces rumination.</li>
-          <li><strong>Challenge catastrophic thinking</strong>: "This doesn't mean I'm unlikable—it means this specific group isn't my fit right now."</li>
+          <li><strong>Challenge catastrophic thinking</strong>: "This doesn't mean I'm unlikable---it means this specific group isn't my fit right now."</li>
           <li><strong>Seek connection elsewhere</strong>: Reach out to other friends, attend a different social event, join a new group. Belonging in one place reduces the sting of exclusion from another.</li>
           <li><strong>Limit social media exposure</strong>: Seeing photos of the group without you amplifies pain. Mute or unfollow temporarily.</li>
           <li><strong>Focus on what you can control</strong>: You can't force inclusion, but you can invest in relationships that reciprocate.</li>
@@ -1485,14 +1485,14 @@ export const friendshipsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Start with 2-3 people</strong>: You don't need a massive group. Small groups often have more depth.</li>
-          <li><strong>Create rituals</strong>: Monthly dinners, game nights, hiking trips—predictable rhythms build cohesion.</li>
+          <li><strong>Create rituals</strong>: Monthly dinners, game nights, hiking trips---predictable rhythms build cohesion.</li>
           <li><strong>Be the connector</strong>: Introduce people to each other, plan events, maintain the group chat. Organizers become central.</li>
           <li><strong>Set inclusive norms early</strong>: Explicitly welcome new members, rotate who chooses activities, avoid cliquey behavior.</li>
           <li><strong>Tolerate messiness</strong>: New groups take time to gel. Don't expect instant cohesion.</li>
         </ul>
 
         <p className="mb-6">
-          You get to design the group culture from the ground up—make it one that reflects the values you wish you'd seen in groups that excluded you.
+          You get to design the group culture from the ground up---make it one that reflects the values you wish you'd seen in groups that excluded you.
         </p>
 
         <h2 id="when-help-needed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1511,7 +1511,7 @@ export const friendshipsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Group therapy can be particularly helpful—it provides a structured, safe environment to practice navigating group dynamics with professional guidance.
+          Group therapy can be particularly helpful---it provides a structured, safe environment to practice navigating group dynamics with professional guidance.
         </p>
       </>
     ),
@@ -1606,10 +1606,10 @@ export const friendshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've never met them in person, yet they know your struggles, celebrate your wins, and check in when you're quiet too long. Are these online friendships 'real'? The answer, according to research, is nuanced: digital connections can be deeply meaningful, but they're not identical to in-person bonds—and both have unique strengths.
+            You've never met them in person, yet they know your struggles, celebrate your wins, and check in when you're quiet too long. Are these online friendships 'real'? The answer, according to research, is nuanced: digital connections can be deeply meaningful, but they're not identical to in-person bonds---and both have unique strengths.
           </p>
           <p className="mb-6">
-            Studies show that online friendships can provide emotional support, reduce loneliness, and foster belonging with effectiveness comparable to offline friendships <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2021" tier={1} />. However, they also lack certain elements that in-person interaction provides—particularly nonverbal communication and physical presence—which can limit depth in some contexts <Citation id="3" index={3} source="Psychological Science" year="2018" tier={3} />.
+            Studies show that online friendships can provide emotional support, reduce loneliness, and foster belonging with effectiveness comparable to offline friendships <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2021" tier={1} />. However, they also lack certain elements that in-person interaction provides---particularly nonverbal communication and physical presence---which can limit depth in some contexts <Citation id="3" index={3} source="Psychological Science" year="2018" tier={3} />.
           </p>
         </div>
 
@@ -1628,7 +1628,7 @@ export const friendshipsArticlesB: Article[] = [
               title: 'Early Research (Pre-2010): Digital Skepticism',
               content: (
                 <p>
-                  Initial studies suggested online relationships were shallow, less satisfying, and potentially harmful—displacing 'real' friendships. This was the era of "internet addiction" panic and concerns about screen time replacing face-to-face interaction.
+                  Initial studies suggested online relationships were shallow, less satisfying, and potentially harmful---displacing 'real' friendships. This was the era of "internet addiction" panic and concerns about screen time replacing face-to-face interaction.
                 </p>
               ),
             },
@@ -1692,7 +1692,7 @@ export const friendshipsArticlesB: Article[] = [
             {
               feature: 'Asynchronous support',
               values: [
-                'Text when you need to, respond when you can—no scheduling needed',
+                'Text when you need to, respond when you can---no scheduling needed',
                 'Real-time connection with immediate responsiveness',
               ],
             },
@@ -1731,13 +1731,13 @@ export const friendshipsArticlesB: Article[] = [
           What Happens in the Brain During Digital Connection?
         </h2>
         <p className="mb-6">
-          Neuroscience research shows that online social interaction activates many of the same brain regions as in-person connection—but not all of them <Citation id="6" index={6} source="Nature Human Behaviour" year="2021" tier={1} />:
+          Neuroscience research shows that online social interaction activates many of the same brain regions as in-person connection---but not all of them <Citation id="6" index={6} source="Nature Human Behaviour" year="2021" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Reward centers activate</strong>: Receiving a supportive message triggers dopamine release in the ventral striatum, similar to in-person affirmation</li>
           <li><strong>Empathy networks engage</strong>: Reading about a friend's struggles activates the same neural empathy circuits as hearing them speak</li>
-          <li><strong>Social pain response</strong>: Being ignored online (left on read, excluded from a group chat) activates the dorsal anterior cingulate cortex—the "social pain" region</li>
+          <li><strong>Social pain response</strong>: Being ignored online (left on read, excluded from a group chat) activates the dorsal anterior cingulate cortex---the "social pain" region</li>
           <li><strong>Oxytocin (bonding hormone) still releases</strong>: Positive online interaction can increase oxytocin, though not as robustly as physical touch or eye contact</li>
           <li><strong>Mirror neurons are less active</strong>: Without seeing body language and facial expressions, the brain's mirroring system (which builds emotional attunement) engages less fully</li>
         </ul>
@@ -1754,7 +1754,7 @@ export const friendshipsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Niche identity support</strong>: LGBTQ+ youth in conservative areas, people with rare illnesses, fans of obscure hobbies—online communities provide belonging that geography can't</li>
+          <li><strong>Niche identity support</strong>: LGBTQ+ youth in conservative areas, people with rare illnesses, fans of obscure hobbies---online communities provide belonging that geography can't</li>
           <li><strong>Geographic barriers</strong>: Long-distance friendships, international connections, or mobility limitations that make in-person contact rare</li>
           <li><strong>Social anxiety</strong>: Text-based communication can feel less overwhelming than face-to-face interaction for some people</li>
           <li><strong>Intellectual connection</strong>: Conversations about ideas, shared creative projects, or learning together don't require physical presence</li>
@@ -1769,16 +1769,16 @@ export const friendshipsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Physical comfort</strong>: Hugs, holding hands, sitting together in silence—these can't be replicated online</li>
+          <li><strong>Physical comfort</strong>: Hugs, holding hands, sitting together in silence---these can't be replicated online</li>
           <li><strong>Nonverbal attunement</strong>: Reading micro-expressions, sensing energy shifts, noticing what's not being said</li>
-          <li><strong>Shared embodied experiences</strong>: Dancing, eating together, hiking—activities that engage the body create unique bonding</li>
+          <li><strong>Shared embodied experiences</strong>: Dancing, eating together, hiking---activities that engage the body create unique bonding</li>
           <li><strong>Crisis support</strong>: While text support helps, being physically present during emergencies (hospital visits, breakups, grief) provides irreplaceable comfort</li>
           <li><strong>Conflict resolution</strong>: Complex disagreements are easier to navigate face-to-face where tone and intention are clearer</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
           <p className="mb-4">
-            <strong>The 70/30 rule</strong>: Research suggests that for most people, wellbeing is optimized when approximately 70% of social connection happens in-person and 30% online. However, this varies by individual—introverts and those with social anxiety may prefer a different balance <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
+            <strong>The 70/30 rule</strong>: Research suggests that for most people, wellbeing is optimized when approximately 70% of social connection happens in-person and 30% online. However, this varies by individual---introverts and those with social anxiety may prefer a different balance <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2021" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1792,10 +1792,10 @@ export const friendshipsArticlesB: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Move beyond public platforms</strong>: Transition from comments/replies to DMs, group chats, or video calls for more intimacy</li>
           <li><strong>Video calls when possible</strong>: Seeing faces activates more neural bonding circuits than text alone <Citation id="3" index={3} source="Psychological Science" year="2018" tier={3} /></li>
-          <li><strong>Share vulnerability</strong>: Don't just post highlights—talk about struggles, ask for support, show the messy parts</li>
+          <li><strong>Share vulnerability</strong>: Don't just post highlights---talk about struggles, ask for support, show the messy parts</li>
           <li><strong>Be consistent</strong>: Regular check-ins (even brief) build trust over time</li>
-          <li><strong>Create shared activities</strong>: Watch shows "together," play games, work on projects—doing things together strengthens bonds</li>
-          <li><strong>Acknowledge the relationship</strong>: Say "I consider you a real friend" or "This connection matters to me"—explicit affirmation solidifies the bond</li>
+          <li><strong>Create shared activities</strong>: Watch shows "together," play games, work on projects---doing things together strengthens bonds</li>
+          <li><strong>Acknowledge the relationship</strong>: Say "I consider you a real friend" or "This connection matters to me"---explicit affirmation solidifies the bond</li>
           <li><strong>Meet in person if possible</strong>: Even one IRL hangout can deepen an online friendship significantly</li>
         </ol>
 
@@ -1803,7 +1803,7 @@ export const friendshipsArticlesB: Article[] = [
           The Parasocial Trap: When Connection Is One-Sided
         </h2>
         <p className="mb-6">
-          Online spaces can create the illusion of friendship when it's actually a parasocial relationship—you feel connected to someone who doesn't know you exist <Citation id="8" index={8} source="Media Psychology" year="2020" tier={1} />:
+          Online spaces can create the illusion of friendship when it's actually a parasocial relationship---you feel connected to someone who doesn't know you exist <Citation id="8" index={8} source="Media Psychology" year="2020" tier={1} />:
         </p>
 
         <BeforeAfter
@@ -1845,7 +1845,7 @@ export const friendshipsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Love-bombing</strong>: Excessive intimacy too quickly, then pulling away—common in online contexts where boundaries are unclear</li>
+          <li><strong>Love-bombing</strong>: Excessive intimacy too quickly, then pulling away---common in online contexts where boundaries are unclear</li>
           <li><strong>Catfishing or deception</strong>: Lying about identity, appearance, or life circumstances</li>
           <li><strong>One-sided effort</strong>: You always initiate; they only respond when convenient</li>
           <li><strong>Drama-seeking</strong>: Every interaction involves gossip, conflict, or manufactured crises</li>
@@ -1881,7 +1881,7 @@ export const friendshipsArticlesB: Article[] = [
           The Future of Friendship
         </h2>
         <p className="mb-6">
-          As VR, AI, and digital spaces evolve, the line between "online" and "offline" friendship will continue to blur. What matters isn't the medium—it's the mutual care, trust, vulnerability, and consistency that define all meaningful relationships, regardless of where they take place.
+          As VR, AI, and digital spaces evolve, the line between "online" and "offline" friendship will continue to blur. What matters isn't the medium---it's the mutual care, trust, vulnerability, and consistency that define all meaningful relationships, regardless of where they take place.
         </p>
 
         <h2 id="when-help-needed" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

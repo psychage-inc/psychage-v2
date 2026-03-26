@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars, no-useless-escape */
 // ============================================================================
-// Category 18 — Women's Mental Health | Subcategory 03b
+// Category 18 --- Women's Mental Health | Subcategory 03b
 // Menopause and Perimenopause (Articles 26-30)
 // ============================================================================
 
@@ -46,7 +46,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The empowerment of recognizing that decisions about hormone therapy are yours to make—based on your symptoms, your risk tolerance, your values—not dictated by fear or societal judgment about whether women "should" take hormones.`,
+    sparkMoment: `The empowerment of recognizing that decisions about hormone therapy are yours to make---based on your symptoms, your risk tolerance, your values---not dictated by fear or societal judgment about whether women "should" take hormones.`,
 
     practicalExercise: {
       title: `HT Decision-Making Framework`,
@@ -104,18 +104,18 @@ export const articles: Article[] = [
         <p>
           When Rita's doctor suggested hormone therapy for her debilitating hot flashes and mood
           swings, Rita hesitated. Twenty years ago, headlines had screamed about HT causing cancer
-          and heart attacks. <Citation index={1} /> But her quality of life was miserable—she
+          and heart attacks. <Citation index={1} /> But her quality of life was miserable---she
           couldn't sleep, couldn't work effectively, felt irritable and depressed. Her doctor
           explained: the 2002 study that scared everyone had limitations, newer evidence was more
           nuanced, and for someone Rita's age (52) starting HT now, benefits likely outweighed
-          risks. Rita needed to make an informed decision for herself—not based on fear or
+          risks. Rita needed to make an informed decision for herself---not based on fear or
           headlines, but on her specific situation.
         </p>
 
         <StatCard
           value="Antidepressant effects"
           label="of estrogen therapy in perimenopausal depression"
-          description="For some women, hormone therapy effectively treats mood symptoms during perimenopause—not just by reducing physical symptoms but through direct brain effects."
+          description="For some women, hormone therapy effectively treats mood symptoms during perimenopause---not just by reducing physical symptoms but through direct brain effects."
         />
 
         <h2>How Hormone Therapy Affects Mental Health</h2>
@@ -133,13 +133,13 @@ export const articles: Article[] = [
           depression, particularly when started during the transition (not years later). Some women
           report dramatic mood improvement on HT; others notice physical symptom relief but minimal
           mood change; still others experience no benefit or even mood worsening. Response is
-          individual and unpredictable—trial and error is often necessary.
+          individual and unpredictable---trial and error is often necessary.
         </p>
 
         <ArticleCallout
           type="info"
           title="Types of Hormone Therapy"
-          content="Systemic HT (treats whole-body symptoms): estrogen-only (for those without a uterus), combined estrogen-progesterone (for those with a uterus—progesterone protects uterine lining from estrogen's effects). Formulations include pills, patches, gels, sprays. Local/vaginal HT (treats vaginal symptoms only): creams, tablets, rings with minimal systemic absorption. Can be used even by some who can't use systemic HT."
+          content="Systemic HT (treats whole-body symptoms): estrogen-only (for those without a uterus), combined estrogen-progesterone (for those with a uterus---progesterone protects uterine lining from estrogen's effects). Formulations include pills, patches, gels, sprays. Local/vaginal HT (treats vaginal symptoms only): creams, tablets, rings with minimal systemic absorption. Can be used even by some who can't use systemic HT."
         />
 
         <h2>Risks of Hormone Therapy</h2>
@@ -150,7 +150,7 @@ export const articles: Article[] = [
           baseline within years of stopping. Cardiovascular risks include increased risk of blood
           clots (particularly with oral HT), increased stroke risk (small absolute risk), and
           effects on heart disease risk depend on timing (lower risk if started early in
-          menopause, possible increased risk if started 10+ years post-menopause or after age 60—
+          menopause, possible increased risk if started 10+ years post-menopause or after age 60---
           the "timing hypothesis").
         </p>
         <p>
@@ -171,7 +171,7 @@ export const articles: Article[] = [
 
         <h2>Making Informed Decisions</h2>
         <p>
-          HT decision-making is personalized—there's no universal right answer. Considerations
+          HT decision-making is personalized---there's no universal right answer. Considerations
           include symptom severity (debilitating symptoms may justify risks that minor symptoms
           don't), age and time since menopause (earlier initiation is generally safer), personal
           and family health history (affects risk calculation), and values and risk tolerance
@@ -232,7 +232,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The clarity that comes from understanding panic attacks during menopause are not "just stress" or "going crazy"—they're often triggered by hot flashes or hormonal shifts affecting your nervous system, and they're treatable.`,
+    sparkMoment: `The clarity that comes from understanding panic attacks during menopause are not "just stress" or "going crazy"---they're often triggered by hot flashes or hormonal shifts affecting your nervous system, and they're treatable.`,
 
     practicalExercise: {
       title: `Anxiety Pattern Recognition`,
@@ -292,7 +292,7 @@ export const articles: Article[] = [
           catch her breath, the room tilted. She abandoned her cart and fled to her car,
           convinced she was having a heart attack. <Citation index={1} /> At the ER, tests were
           normal. "Anxiety attack," the doctor said. But Yuki had never had anxiety like this. At
-          49, she'd been experiencing irregular periods and hot flashes—could those be connected?
+          49, she'd been experiencing irregular periods and hot flashes---could those be connected?
           When she mentioned this to her psychiatrist, the answer was immediate: "Absolutely.
           Panic attacks during perimenopause are common. Your hormones are affecting your nervous
           system."
@@ -301,7 +301,7 @@ export const articles: Article[] = [
         <StatCard
           value="30-50%"
           label="experience increased anxiety during menopausal transition"
-          description="Anxiety symptoms—worry, panic, physical tension—increase significantly during perimenopause even in those without prior anxiety disorders."
+          description="Anxiety symptoms---worry, panic, physical tension---increase significantly during perimenopause even in those without prior anxiety disorders."
         />
 
         <h2>Forms of Menopausal Anxiety</h2>
@@ -315,7 +315,7 @@ export const articles: Article[] = [
           dying), and fear of future panic attacks leading to avoidance of triggering situations.
         </p>
         <p>
-          Health anxiety becomes more common during menopause—excessive worry about physical
+          Health anxiety becomes more common during menopause---excessive worry about physical
           symptoms (Is this hot flash a heart problem? Is memory loss dementia?), frequent doctor
           visits or medical tests, and inability to be reassured by normal results. Social anxiety
           may worsen if body image changes increase self-consciousness. Pre-existing anxiety
@@ -325,15 +325,15 @@ export const articles: Article[] = [
         <ArticleCallout
           type="warning"
           title="Hot Flashes vs. Panic Attacks"
-          content="Hot flashes and panic attacks share symptoms: sudden onset, heart racing, sweating, heat sensation, feeling out of control. This creates confusion. Key differences: hot flashes include visible flushing and resolve as you cool down; panic includes intense fear and psychological symptoms. However, hot flashes can trigger panic attacks, and panic can worsen hot flashes—they interact. Treating both is often necessary."
+          content="Hot flashes and panic attacks share symptoms: sudden onset, heart racing, sweating, heat sensation, feeling out of control. This creates confusion. Key differences: hot flashes include visible flushing and resolve as you cool down; panic includes intense fear and psychological symptoms. However, hot flashes can trigger panic attacks, and panic can worsen hot flashes---they interact. Treating both is often necessary."
         />
 
         <h2>Why Menopause Triggers Anxiety</h2>
         <p>
           <Citation index={3} /> Hormonal changes directly affect anxiety neurobiology. Estrogen
           modulates serotonin (low estrogen can increase anxiety) and affects the amygdala (the
-          brain's fear center—estrogen fluctuations increase amygdala reactivity to threats).
-          Progesterone metabolites enhance GABA function (the brain's main calming system)—
+          brain's fear center---estrogen fluctuations increase amygdala reactivity to threats).
+          Progesterone metabolites enhance GABA function (the brain's main calming system)---
           declining progesterone reduces this calming effect, increasing baseline anxiety and
           reactivity.
         </p>
@@ -367,16 +367,16 @@ export const articles: Article[] = [
           disorder; also reduce hot flashes as a bonus), buspirone (for generalized anxiety; no
           sedation or dependence risk), gabapentin (reduces both hot flashes and anxiety; useful
           when both are present), and benzodiazepines (rapid relief for acute panic but carry
-          dependency risks—generally reserved for short-term use or breakthrough symptoms).
+          dependency risks---generally reserved for short-term use or breakthrough symptoms).
           Hormone therapy may help anxiety for some, particularly if anxiety worsened with
-          hormonal changes. Lifestyle interventions—regular exercise, stress management, adequate
-          sleep, limiting caffeine and alcohol—support anxiety management.
+          hormonal changes. Lifestyle interventions---regular exercise, stress management, adequate
+          sleep, limiting caffeine and alcohol---support anxiety management.
         </p>
 
         <ArticleCallout
           type="tip"
           title="Managing Panic in the Moment"
-          content="When panic strikes: 1) Remind yourself this is uncomfortable but not dangerous (panic can't hurt you), 2) Focus on slow, deep breathing (breath in for 4, hold for 4, out for 6—repeat), 3) Ground yourself with 5-4-3-2-1 sensory technique, 4) Don't fight the panic—let it peak and pass (resistance makes it worse), 5) Return to what you were doing once symptoms subside (avoidance maintains panic). Practice these skills before panic occurs so they're accessible during episodes."
+          content="When panic strikes: 1) Remind yourself this is uncomfortable but not dangerous (panic can't hurt you), 2) Focus on slow, deep breathing (breath in for 4, hold for 4, out for 6---repeat), 3) Ground yourself with 5-4-3-2-1 sensory technique, 4) Don't fight the panic---let it peak and pass (resistance makes it worse), 5) Return to what you were doing once symptoms subside (avoidance maintains panic). Practice these skills before panic occurs so they're accessible during episodes."
         />
       </>
     ),
@@ -398,11 +398,11 @@ export const articles: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Ageism', 'Cultural Narratives', 'Identity', 'Menopause'],
 
-    summary: `Cultural narratives frame menopause as decline, loss, and invisibility—narratives that significantly harm mental health. Western cultures particularly pathologize menopause as disease or deficiency requiring medical intervention, while simultaneously dismissing women's suffering as inevitable aging. Ageism compounds biological vulnerability with psychological distress from devaluation, invisibility, and loss of social power. Internalized ageist beliefs worsen mood, body image, and sense of purpose. However, cross-cultural research shows menopause experiences vary dramatically based on cultural attitudes—suggesting distress is not biologically inevitable but shaped by social context. Challenging ageism and reframing menopause as transition rather than decline supports mental health.`,
+    summary: `Cultural narratives frame menopause as decline, loss, and invisibility---narratives that significantly harm mental health. Western cultures particularly pathologize menopause as disease or deficiency requiring medical intervention, while simultaneously dismissing women's suffering as inevitable aging. Ageism compounds biological vulnerability with psychological distress from devaluation, invisibility, and loss of social power. Internalized ageist beliefs worsen mood, body image, and sense of purpose. However, cross-cultural research shows menopause experiences vary dramatically based on cultural attitudes---suggesting distress is not biologically inevitable but shaped by social context. Challenging ageism and reframing menopause as transition rather than decline supports mental health.`,
 
     keyFacts: [
       {
-        text: `Cultural attitudes toward menopause predict symptom severity—cultures that value older women report fewer negative symptoms.`,
+        text: `Cultural attitudes toward menopause predict symptom severity---cultures that value older women report fewer negative symptoms.`,
         citationIndex: 1,
       },
       {
@@ -417,7 +417,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The radical recognition that much of menopausal suffering is not biological inevitability but cultural construction—and that you can reject narratives of decline and choose instead to see menopause as transition into a powerful new life stage.`,
+    sparkMoment: `The radical recognition that much of menopausal suffering is not biological inevitability but cultural construction---and that you can reject narratives of decline and choose instead to see menopause as transition into a powerful new life stage.`,
 
     practicalExercise: {
       title: `Challenging Internalized Ageism`,
@@ -436,7 +436,7 @@ export const articles: Article[] = [
         },
         {
           title: `Reframe menopause`,
-          description: `Practice: "Menopause is a transition into a new life stage with different opportunities"—not an ending but a beginning.`,
+          description: `Practice: "Menopause is a transition into a new life stage with different opportunities"---not an ending but a beginning.`,
         },
       ],
       toolLink: '/tools/mood-journal',
@@ -475,10 +475,10 @@ export const articles: Article[] = [
         <p>
           At her 50th birthday party, colleagues joked about Julia being "over the hill." Later,
           a younger coworker referred to her as "one of the older employees" in a meeting.{' '}
-          <Citation index={1} /> Julia felt invisible—her ideas dismissed, her appearance no
+          <Citation index={1} /> Julia felt invisible---her ideas dismissed, her appearance no
           longer drawing attention, her value seemingly tied to youth she'd lost. Menopause
           compounded this: she felt her body was betraying her at the same time society was
-          discarding her. The depression that followed wasn't just hormonal—it was existential.
+          discarding her. The depression that followed wasn't just hormonal---it was existential.
           What was her worth now? Who was she if not young, attractive, reproductive?
         </p>
 
@@ -501,7 +501,7 @@ export const articles: Article[] = [
           These narratives create a double bind: women's menopausal symptoms are simultaneously
           pathologized (requiring medical treatment) and dismissed (told to "deal with it" or that
           suffering is normal). The message is contradictory: you're sick but also complaining too
-          much. Media representations compound this—older women are largely absent, or when
+          much. Media representations compound this---older women are largely absent, or when
           present, depicted as sexless, frumpy, or comic relief. Beauty and fashion industries
           promote anti-aging products, framing visible aging as failure.
         </p>
@@ -509,12 +509,12 @@ export const articles: Article[] = [
         <ArticleCallout
           type="info"
           title="Cross-Cultural Perspectives"
-          content="Not all cultures view menopause negatively. Japanese culture traditionally framed menopause as 'konenki'—life renewal. Some cultures see postmenopausal women as gaining wisdom, status, and freedom from reproductive expectations. Mayan women report experiencing menopause as liberation with minimal symptoms. These variations suggest distress is not biologically inevitable but culturally shaped."
+          content="Not all cultures view menopause negatively. Japanese culture traditionally framed menopause as 'konenki'---life renewal. Some cultures see postmenopausal women as gaining wisdom, status, and freedom from reproductive expectations. Mayan women report experiencing menopause as liberation with minimal symptoms. These variations suggest distress is not biologically inevitable but culturally shaped."
         />
 
         <h2>Impact of Ageism on Mental Health</h2>
         <p>
-          <Citation index={3} /> Ageism—discrimination based on age—significantly affects
+          <Citation index={3} /> Ageism---discrimination based on age---significantly affects
           menopausal mental health. Internalized ageism (absorbing negative cultural beliefs about
           aging) predicts depression, anxiety, body dissatisfaction, and lower sense of purpose
           during menopause. When you believe your value decreases with age, aging becomes a
@@ -526,8 +526,8 @@ export const articles: Article[] = [
           Interpersonal ageism manifests in being treated as invisible or irrelevant, receiving
           unsolicited advice to "age gracefully" (code for hide aging), sexual invisibility
           (assumption that older women are or should be asexual), and being patronized or talked
-          down to. The loss of social power that often accompanies aging in Western cultures—
-          particularly for women whose value has been tied to youth and appearance—creates
+          down to. The loss of social power that often accompanies aging in Western cultures---
+          particularly for women whose value has been tied to youth and appearance---creates
           vulnerability to depression. Identity crisis emerges: if not young and reproductive, who
           am I? What is my purpose?
         </p>
@@ -544,8 +544,8 @@ export const articles: Article[] = [
           Alternative narratives frame menopause as transition (to a new life stage with different
           opportunities), liberation (from menstruation, pregnancy concern, reproductive
           expectations, people-pleasing), and wisdom phase (accumulation of life experience,
-          confidence, and clarity about what matters). Postmenopausal zest—a concept describing
-          renewed energy and purpose some experience after menopause—challenges decline narratives.
+          confidence, and clarity about what matters). Postmenopausal zest---a concept describing
+          renewed energy and purpose some experience after menopause---challenges decline narratives.
         </p>
         <p>
           Challenging ageism involves individual and collective action. Individual strategies
@@ -560,7 +560,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Finding Meaning Beyond Reproduction"
-          content="For many, identity has been tied to reproduction, caregiving, or youth. Menopause offers opportunity to ask: Who am I beyond these roles? What do I want for this next phase? Many find menopause liberating—freedom to focus on long-deferred goals, career advancement, creative pursuits, or advocacy. The 'empty nest' can be reframed as reclaimed time and space for self."
+          content="For many, identity has been tied to reproduction, caregiving, or youth. Menopause offers opportunity to ask: Who am I beyond these roles? What do I want for this next phase? Many find menopause liberating---freedom to focus on long-deferred goals, career advancement, creative pursuits, or advocacy. The 'empty nest' can be reframed as reclaimed time and space for self."
         />
       </>
     ),
@@ -601,7 +601,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The validation that worsening mental health during menopause when you have pre-existing conditions is not personal failure or inadequate treatment—it's a predictable biological response requiring proactive adjustment, not shame.`,
+    sparkMoment: `The validation that worsening mental health during menopause when you have pre-existing conditions is not personal failure or inadequate treatment---it's a predictable biological response requiring proactive adjustment, not shame.`,
 
     practicalExercise: {
       title: `Treatment Adjustment Planning`,
@@ -658,7 +658,7 @@ export const articles: Article[] = [
       <>
         <p>
           For 15 years, medication had kept Brenda's depression stable. Then, at 47, everything
-          fell apart. Despite her antidepressant, she plunged into severe depression—couldn't get
+          fell apart. Despite her antidepressant, she plunged into severe depression---couldn't get
           out of bed, couldn't work, felt hopeless. <Citation index={1} /> Her psychiatrist
           increased her medication, but nothing helped. Finally, a new psychiatrist asked about
           menstrual cycles. "They're all over the place," Brenda said. "I thought that was just
@@ -688,7 +688,7 @@ export const articles: Article[] = [
           antidepressant or augmentation strategy, adding hormone therapy (estrogen can have
           antidepressant effects and may enhance antidepressant response), and ensuring adequate
           sleep (treating night sweats and insomnia). Don't assume worsening depression is just
-          life stress—consider hormonal contributions and discuss with providers.
+          life stress---consider hormonal contributions and discuss with providers.
         </p>
 
         <ArticleCallout
@@ -710,8 +710,8 @@ export const articles: Article[] = [
           Management requires close monitoring and proactive adjustment. Work with psychiatrist to
           optimize mood stabilizers before perimenopause symptoms intensify. Some may need
           additional mood stabilizers or antipsychotics. Hormone therapy for bipolar disorder is
-          controversial—for some it helps stabilize mood, for others it triggers mania or cycling.
-          Decisions must be individualized and closely monitored. Prioritize sleep protection—
+          controversial---for some it helps stabilize mood, for others it triggers mania or cycling.
+          Decisions must be individualized and closely monitored. Prioritize sleep protection---
           sleep deprivation is a major trigger for mood episodes. Treat insomnia and night sweats
           aggressively.
         </p>
@@ -724,7 +724,7 @@ export const articles: Article[] = [
 
         <h2>Anxiety, OCD, and Eating Disorders</h2>
         <p>
-          Anxiety disorders commonly worsen during menopause—generalized anxiety, panic disorder,
+          Anxiety disorders commonly worsen during menopause---generalized anxiety, panic disorder,
           OCD, and health anxiety all tend to exacerbate. Hot flashes can trigger panic attacks,
           creating diagnostic confusion. Hormonal effects on GABA systems reduce natural anxiety
           buffering. Treatment may require increasing SSRI/SNRI doses, adding CBT for
@@ -745,7 +745,7 @@ export const articles: Article[] = [
         <ArticleCallout
           type="tip"
           title="Coordinating Care"
-          content="If you have pre-existing mental health conditions: 1) Ensure psychiatrist knows about menopausal symptoms and gynecologist knows about mental health history, 2) Share all medications with all providers (psychiatric, hormonal, supplements), 3) Request coordination of care if possible, 4) Advocate for yourself: 'My mental health is worsening during perimenopause. Can we discuss whether this is related and how to adjust treatment?', 5) Don't suffer silently—deterioration is not inevitable."
+          content="If you have pre-existing mental health conditions: 1) Ensure psychiatrist knows about menopausal symptoms and gynecologist knows about mental health history, 2) Share all medications with all providers (psychiatric, hormonal, supplements), 3) Request coordination of care if possible, 4) Advocate for yourself: 'My mental health is worsening during perimenopause. Can we discuss whether this is related and how to adjust treatment?', 5) Don't suffer silently---deterioration is not inevitable."
         />
       </>
     ),
@@ -786,7 +786,7 @@ export const articles: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The recognition that grief after surgical menopause—for lost organs, lost fertility, or changed body—is valid even when surgery was necessary or life-saving, and that you can simultaneously feel relief and loss.`,
+    sparkMoment: `The recognition that grief after surgical menopause---for lost organs, lost fertility, or changed body---is valid even when surgery was necessary or life-saving, and that you can simultaneously feel relief and loss.`,
 
     practicalExercise: {
       title: `Post-Surgical Support Planning`,
@@ -801,7 +801,7 @@ export const articles: Article[] = [
         },
         {
           title: `Process emotional impact`,
-          description: `Allow yourself to grieve—loss of organs, fertility, or life plans. Relief that surgery solved medical problem and grief for what's lost can coexist.`,
+          description: `Allow yourself to grieve---loss of organs, fertility, or life plans. Relief that surgery solved medical problem and grief for what's lost can coexist.`,
         },
         {
           title: `Seek specialized support`,
@@ -845,8 +845,8 @@ export const articles: Article[] = [
           Three days after her hysterectomy and bilateral oophorectomy for endometriosis, Maya
           felt like she'd been hit by a truck. Severe hot flashes every hour. Crushing fatigue.
           Crying for no reason. <Citation index={1} /> Her surgeon had warned about menopause, but
-          this felt catastrophic—not gradual adjustment but falling off a cliff. At 38, she'd
-          chosen surgery to end years of pain. She didn't regret it. But she also grieved—for the
+          this felt catastrophic---not gradual adjustment but falling off a cliff. At 38, she'd
+          chosen surgery to end years of pain. She didn't regret it. But she also grieved---for the
           fertility she'd never use, for organs removed, for abruptly entering menopause two
           decades early. When her doctor started hormone therapy, symptoms improved. But the grief
           remained.
@@ -863,7 +863,7 @@ export const articles: Article[] = [
           Surgical menopause occurs when both ovaries are removed (bilateral oophorectomy),
           instantly eliminating estrogen and testosterone production. <Citation index={2} /> This
           differs fundamentally from natural menopause where hormone decline is gradual over years.
-          Hysterectomy alone (uterus removal with ovaries preserved) does NOT cause menopause—
+          Hysterectomy alone (uterus removal with ovaries preserved) does NOT cause menopause---
           ovaries continue producing hormones. However, hysterectomy may trigger earlier natural
           menopause due to disrupted blood flow.
         </p>
@@ -871,7 +871,7 @@ export const articles: Article[] = [
           Common reasons for oophorectomy include ovarian cancer or high genetic risk (BRCA
           mutations), severe endometriosis unresponsive to other treatment, ovarian cysts or
           torsion, and preventive removal during hysterectomy for other reasons (increasingly
-          controversial—not recommended unless clear indication). When performed before natural
+          controversial---not recommended unless clear indication). When performed before natural
           menopause age (average 51), surgical menopause creates premature menopause with unique
           health risks.
         </p>
@@ -912,7 +912,7 @@ export const articles: Article[] = [
           by cancer history or other factors). Estrogen therapy (alone if uterus removed, with
           progesterone if uterus remains) should typically be started immediately after surgery to
           prevent severe symptoms. For those under natural menopause age, continuing HT until
-          around age 51 is generally recommended—this replaces what ovaries would have produced.
+          around age 51 is generally recommended---this replaces what ovaries would have produced.
           Benefits include reduced hot flashes and mood symptoms, protection against bone loss and
           cardiovascular disease, possible cognitive protection, and improved quality of life.
         </p>

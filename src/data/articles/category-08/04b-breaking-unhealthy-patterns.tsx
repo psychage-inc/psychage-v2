@@ -95,10 +95,10 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your fingers find your scalp automatically when you're stressed, pulling strand after strand without conscious thought. You pick at your skin while reading, leaving scabs and scars you're embarrassed to explain. You bite your nails down to the quick during meetings, hiding your hands afterward. These aren't just 'bad habits"—they're body-focused repetitive behaviors (BFRBs), and they affect millions of people.
+            Your fingers find your scalp automatically when you're stressed, pulling strand after strand without conscious thought. You pick at your skin while reading, leaving scabs and scars you're embarrassed to explain. You bite your nails down to the quick during meetings, hiding your hands afterward. These aren't just 'bad habits"---they're body-focused repetitive behaviors (BFRBs), and they affect millions of people.
           </p>
           <p className="mb-6">
-            BFRBs are compulsive behaviors that involve repetitively touching, pulling, picking, or biting one's own hair, skin, or nails, resulting in damage. The most common include trichotillomania (hair pulling), excoriation disorder (skin picking), and onychophagia (nail biting) <Citation id="1" index={1} source="Journal of Psychiatric Practice" year="2020" tier={1} />. These behaviors often serve as emotional regulation strategies—but they come with significant physical and psychological costs.
+            BFRBs are compulsive behaviors that involve repetitively touching, pulling, picking, or biting one's own hair, skin, or nails, resulting in damage. The most common include trichotillomania (hair pulling), excoriation disorder (skin picking), and onychophagia (nail biting) <Citation id="1" index={1} source="Journal of Psychiatric Practice" year="2020" tier={1} />. These behaviors often serve as emotional regulation strategies---but they come with significant physical and psychological costs.
           </p>
         </div>
 
@@ -189,7 +189,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Emotion Regulation',
               description: (
                 <p>
-                  The behavior provides temporary relief from negative emotions—anxiety, boredom, frustration, or overwhelm. The repetitive action can be soothing, creating a trance-like state that temporarily blocks out stressors.
+                  The behavior provides temporary relief from negative emotions---anxiety, boredom, frustration, or overwhelm. The repetitive action can be soothing, creating a trance-like state that temporarily blocks out stressors.
                 </p>
               ),
             },
@@ -197,7 +197,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Sensory Satisfaction',
               description: (
                 <p>
-                  Many people with BFRBs describe seeking specific sensations—the feeling of pulling a particularly 'right' hair, the texture of skin, or the relief of removing an imperfection. The behavior is reinforced by sensory reward.
+                  Many people with BFRBs describe seeking specific sensations---the feeling of pulling a particularly 'right' hair, the texture of skin, or the relief of removing an imperfection. The behavior is reinforced by sensory reward.
                 </p>
               ),
             },
@@ -233,7 +233,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li><strong>Focused:</strong> High awareness, often preceded by tension or urge. You know you're doing it, may even resist before giving in.</li>
               </ul>
               <p className="mt-3">
-                Most people experience both types. Different interventions work better for each mode—awareness strategies for automatic, urge management for focused.
+                Most people experience both types. Different interventions work better for each mode---awareness strategies for automatic, urge management for focused.
               </p>
             </div>
           }
@@ -263,7 +263,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                     <li>Noticing emotional states that precede the behavior</li>
                   </ul>
                   <p className="mt-3">
-                    <strong>Goal:</strong> You can't change what you're not aware of. Many BFRB episodes happen automatically—awareness interrupts automaticity.
+                    <strong>Goal:</strong> You can't change what you're not aware of. Many BFRB episodes happen automatically---awareness interrupts automaticity.
                   </p>
                 </div>
               ),
@@ -337,7 +337,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
             },
             {
               left: 'All BFRBs',
-              right: 'Identify high-risk situations (watching TV, on phone, driving) and add barriers—wear mittens, use fidget toys, change seating position',
+              right: 'Identify high-risk situations (watching TV, on phone, driving) and add barriers---wear mittens, use fidget toys, change seating position',
             },
           ]}
         />
@@ -384,7 +384,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'For Boredom',
               content: (
                 <p>
-                  Engage in actively absorbing activities—puzzles, drawing, listening to engaging podcasts, calling a friend, going for a walk. The key is active engagement that occupies attention.
+                  Engage in actively absorbing activities---puzzles, drawing, listening to engaging podcasts, calling a friend, going for a walk. The key is active engagement that occupies attention.
                 </p>
               ),
             },
@@ -392,7 +392,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'For Frustration',
               content: (
                 <p>
-                  Physical release—exercise, punching a pillow, ripping paper, screaming into a pillow. Express the emotion outward rather than inward through picking/pulling.
+                  Physical release---exercise, punching a pillow, ripping paper, screaming into a pillow. Express the emotion outward rather than inward through picking/pulling.
                 </p>
               ),
             },
@@ -521,7 +521,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="BFRBs are not about willpower or self-control. They're complex behaviors that serve a function. Understanding that function—and finding healthier alternatives—is the path forward."
+          quote="BFRBs are not about willpower or self-control. They're complex behaviors that serve a function. Understanding that function---and finding healthier alternatives---is the path forward."
           author="Dr. Charles Mansueto"
           role="Psychologist & BFRB Specialist, Behavior Therapy Center of Greater Washington"
         />
@@ -610,10 +610,10 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            It's 11 PM. You know you should go to bed—you have to wake up at 6:30 AM. But you've been working, running errands, and handling responsibilities all day. This is the first moment that feels like 'your time." So you scroll social media, watch YouTube videos, or binge another episode, stealing back hours that belong to sleep. This is revenge bedtime procrastination—and it's more common than you think.
+            It's 11 PM. You know you should go to bed---you have to wake up at 6:30 AM. But you've been working, running errands, and handling responsibilities all day. This is the first moment that feels like 'your time." So you scroll social media, watch YouTube videos, or binge another episode, stealing back hours that belong to sleep. This is revenge bedtime procrastination---and it's more common than you think.
           </p>
           <p className="mb-6">
-            Revenge bedtime procrastination is the decision to sacrifice sleep for leisure time, often in response to feeling like you lack control or free time during the day <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2021" tier={1} />. Research shows it's associated with later bedtimes, shorter sleep duration, poorer sleep quality, and increased daytime fatigue—yet people continue the pattern despite knowing the consequences <Citation id="1" index={1} source="Frontiers in Psychology" year="2020" tier={1} />.
+            Revenge bedtime procrastination is the decision to sacrifice sleep for leisure time, often in response to feeling like you lack control or free time during the day <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2021" tier={1} />. Research shows it's associated with later bedtimes, shorter sleep duration, poorer sleep quality, and increased daytime fatigue---yet people continue the pattern despite knowing the consequences <Citation id="1" index={1} source="Frontiers in Psychology" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -639,7 +639,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: '2. No External Reason',
               description: (
                 <p>
-                  There's no valid external reason for the delay—you're not working late due to a deadline, caring for a sick child, or dealing with an emergency. The delay is self-imposed.
+                  There's no valid external reason for the delay---you're not working late due to a deadline, caring for a sick child, or dealing with an emergency. The delay is self-imposed.
                 </p>
               ),
             },
@@ -660,7 +660,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           content={
             <div>
               <p className="mb-3">
-                The "revenge" aspect refers to reclaiming autonomy. When your day is controlled by work obligations, family needs, or external demands, staying up becomes an act of resistance—taking back time that feels stolen. It's not revenge against another person; it's revenge against a schedule that leaves no room for yourself.
+                The "revenge" aspect refers to reclaiming autonomy. When your day is controlled by work obligations, family needs, or external demands, staying up becomes an act of resistance---taking back time that feels stolen. It's not revenge against another person; it's revenge against a schedule that leaves no room for yourself.
               </p>
               <p>
                 This framing helps explain why logical arguments ('you need sleep!") don't work. The behavior serves a psychological need for agency and leisure that isn't being met during waking hours.
@@ -673,7 +673,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           Why Do You Stay Up When You Know You Shouldn't?
         </h2>
         <p className="mb-6">
-          Revenge bedtime procrastination isn't about not valuing sleep—it's about competing psychological needs:
+          Revenge bedtime procrastination isn't about not valuing sleep---it's about competing psychological needs:
         </p>
 
         <ComparisonTable
@@ -785,7 +785,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           Strategy 1: Create Daytime "Me Time"
         </h3>
         <p className="mb-6">
-          If evening is your only leisure time, of course you'll protect it—even at the expense of sleep. The solution isn't eliminating evening leisure; it's ensuring you have meaningful personal time during the day so evening isn't your only option.
+          If evening is your only leisure time, of course you'll protect it---even at the expense of sleep. The solution isn't eliminating evening leisure; it's ensuring you have meaningful personal time during the day so evening isn't your only option.
         </p>
 
         <ProgressSteps
@@ -822,7 +822,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           Strategy 2: Set a "Leisure Curfew" (Not a Bedtime)
         </h3>
         <p className="mb-6">
-          Instead of setting a bedtime (which triggers resistance), set a leisure curfew: a time after which you'll engage in only relaxing, wind-down activities—not stimulating entertainment. This allows continued personal time while transitioning toward sleep.
+          Instead of setting a bedtime (which triggers resistance), set a leisure curfew: a time after which you'll engage in only relaxing, wind-down activities---not stimulating entertainment. This allows continued personal time while transitioning toward sleep.
         </p>
 
         <ArticleCallout
@@ -834,10 +834,10 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <strong>9:30 PM = Leisure Curfew</strong>
               </p>
               <p className="mb-3">
-                Before 9:30: You can watch shows, scroll social media, play games—active entertainment is allowed.
+                Before 9:30: You can watch shows, scroll social media, play games---active entertainment is allowed.
               </p>
               <p className="mb-3">
-                After 9:30: Switch to wind-down activities only—reading (physical book), gentle stretching, listening to calming music, journaling, skincare routine, preparing tomorrow's outfit.
+                After 9:30: Switch to wind-down activities only---reading (physical book), gentle stretching, listening to calming music, journaling, skincare routine, preparing tomorrow's outfit.
               </p>
               <p>
                 This still gives you 2-3 hours of evening leisure (assuming you finish work/dinner by 7 PM) but creates a natural transition toward sleep without feeling like you've 'given up' your personal time.
@@ -909,7 +909,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           Addressing the Root Cause: Life Balance
         </h2>
         <p className="mb-6">
-          Ultimately, revenge bedtime procrastination is a symptom of a life structure problem. If you need to sacrifice sleep to feel like you had a life, the solution isn't better bedtime discipline—it's addressing why your waking hours feel so devoid of personal time.
+          Ultimately, revenge bedtime procrastination is a symptom of a life structure problem. If you need to sacrifice sleep to feel like you had a life, the solution isn't better bedtime discipline---it's addressing why your waking hours feel so devoid of personal time.
         </p>
 
         <ArticleAccordion
@@ -934,7 +934,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Redefine Productivity',
               content: (
                 <p>
-                  If you feel guilty for 'not doing anything, ' challenge the belief that rest and leisure are wasted time. They're essential for wellbeing, creativity, and sustained productivity. Rest isn't earned by exhaustion—it's a basic human need.
+                  If you feel guilty for 'not doing anything, ' challenge the belief that rest and leisure are wasted time. They're essential for wellbeing, creativity, and sustained productivity. Rest isn't earned by exhaustion---it's a basic human need.
                 </p>
               ),
             },
@@ -942,7 +942,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Consider Bigger Changes',
               content: (
                 <p>
-                  If your life genuinely allows no personal time—your job demands 70-hour weeks, you're solo-parenting without support, caregiving responsibilities are all-consuming—bedtime procrastination might be signaling that something needs to change structurally (job, living situation, asking for help).
+                  If your life genuinely allows no personal time---your job demands 70-hour weeks, you're solo-parenting without support, caregiving responsibilities are all-consuming---bedtime procrastination might be signaling that something needs to change structurally (job, living situation, asking for help).
                 </p>
               ),
             },
@@ -1065,7 +1065,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're not an alcoholic. You don't drink every day. You're not missing work or destroying relationships. But you've noticed your drinking has crept up—two glasses of wine with dinner has become three or four. Weekend social events leave you hungover more often than you'd like. You're thinking more about alcohol than feels comfortable. You want to cut back—but you don't want to quit entirely.
+            You're not an alcoholic. You don't drink every day. You're not missing work or destroying relationships. But you've noticed your drinking has crept up---two glasses of wine with dinner has become three or four. Weekend social events leave you hungover more often than you'd like. You're thinking more about alcohol than feels comfortable. You want to cut back---but you don't want to quit entirely.
           </p>
           <p className="mb-6">
             This is a valid and achievable goal. Despite cultural messages that the only option for problematic drinking is complete abstinence, research shows that moderation-focused interventions can be effective for many people, particularly those with mild to moderate alcohol use concerns <Citation id="2" index={2} source="Addiction" year="2020" tier={1} />. The key is understanding when moderation is appropriate, what strategies actually work, and how to implement them honestly.
@@ -1095,7 +1095,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li><strong>Using alcohol to cope with trauma/mental health:</strong> If alcohol is your primary coping mechanism for PTSD, depression, or anxiety, addressing the underlying condition is essential.</li>
               </ul>
               <p className="mt-4 text-sm">
-                <strong>If you're unsure, consult a healthcare provider or addiction specialist.</strong> There's no shame in needing abstinence—it's often the healthier choice.
+                <strong>If you're unsure, consult a healthcare provider or addiction specialist.</strong> There's no shame in needing abstinence---it's often the healthier choice.
               </p>
             </div>
           }
@@ -1171,7 +1171,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           1. Self-Monitoring: Track Every Drink
         </h3>
         <p className="mb-6">
-          The single most effective moderation strategy is tracking. Research shows that simply monitoring alcohol consumption leads to significant reductions—often without any other intervention <Citation id="8" index={8} source="Health Psychology" year="2020" tier={1} />.
+          The single most effective moderation strategy is tracking. Research shows that simply monitoring alcohol consumption leads to significant reductions---often without any other intervention <Citation id="8" index={8} source="Health Psychology" year="2020" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -1335,7 +1335,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           5. Practice Mindful Drinking
         </h3>
         <p className="mb-6">
-          Mindful drinking involves bringing full awareness to the experience—savoring taste, noticing effects on your body, questioning motivations <Citation id="4" index={4} source="Addictive Behaviors" year="2021" tier={1} />.
+          Mindful drinking involves bringing full awareness to the experience---savoring taste, noticing effects on your body, questioning motivations <Citation id="4" index={4} source="Addictive Behaviors" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout
@@ -1351,7 +1351,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li><strong>How do I feel right now?</strong> Already relaxed? Slightly buzzed? Still wanting more?</li>
               </ul>
               <p className="mt-4">
-                This pause interrupts autopilot drinking. Often, awareness alone reduces consumption because you realize you don't actually want the next drink—you're just used to having it.
+                This pause interrupts autopilot drinking. Often, awareness alone reduces consumption because you realize you don't actually want the next drink---you're just used to having it.
               </p>
             </div>
           }
@@ -1371,7 +1371,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'NA Beers',
               description: (
                 <p>
-                  Athletic Brewing, Heineken 0.0, Lagunitas IPNA—many are indistinguishable from regular beer in taste. Allows you to hold a beer at social events without alcohol consumption.
+                  Athletic Brewing, Heineken 0.0, Lagunitas IPNA---many are indistinguishable from regular beer in taste. Allows you to hold a beer at social events without alcohol consumption.
                 </p>
               ),
             },
@@ -1379,7 +1379,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'NA Spirits',
               description: (
                 <p>
-                  Seedlip, Ritual, Lyre's—designed for mixing mocktails that feel sophisticated. You can still make your 'evening cocktail ritual' without the alcohol.
+                  Seedlip, Ritual, Lyre's---designed for mixing mocktails that feel sophisticated. You can still make your 'evening cocktail ritual' without the alcohol.
                 </p>
               ),
             },
@@ -1387,7 +1387,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Functional Beverages',
               description: (
                 <p>
-                  Drinks with adaptogens, nootropics, or CBD that provide relaxation/stress relief without intoxication. Recess, Kin Euphorics, Moment—replace the 'taking the edge off' function of alcohol.
+                  Drinks with adaptogens, nootropics, or CBD that provide relaxation/stress relief without intoxication. Recess, Kin Euphorics, Moment---replace the 'taking the edge off' function of alcohol.
                 </p>
               ),
             },
@@ -1412,7 +1412,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                     <li>"I'm good for now, thanks."</li>
                     <li>"I'm cutting back for health reasons."</li>
                     <li>"I've hit my limit for tonight."</li>
-                    <li>"I'm driving." (even if you're not—it ends the conversation)</li>
+                    <li>"I'm driving." (even if you're not---it ends the conversation)</li>
                   </ul>
                   <p className="mt-3 text-sm">Most people accept a simple "no thanks." If they push, that's their issue, not yours.</p>
                 </div>
@@ -1449,7 +1449,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           When Moderation Isn't Working
         </h2>
         <p className="mb-6">
-          Give moderation an honest try—typically 3-6 months with consistent effort. If you find yourself repeatedly exceeding limits, hiding your drinking, or feeling unable to stop after one drink, it may be time to reconsider abstinence.
+          Give moderation an honest try---typically 3-6 months with consistent effort. If you find yourself repeatedly exceeding limits, hiding your drinking, or feeling unable to stop after one drink, it may be time to reconsider abstinence.
         </p>
 
         <ArticleCallout
@@ -1466,7 +1466,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li>Your health, relationships, or work are still negatively affected</li>
               </ul>
               <p className="mt-4">
-                There's no shame in needing abstinence. For some people, "just one" is neurologically and psychologically harder than "none." That doesn't make you weak—it makes you honest about what works for your brain.
+                There's no shame in needing abstinence. For some people, "just one" is neurologically and psychologically harder than "none." That doesn't make you weak---it makes you honest about what works for your brain.
               </p>
             </div>
           }
@@ -1487,7 +1487,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li><strong>Moderation Management (MM):</strong> Peer-support program for people pursuing moderation, not abstinence.</li>
                 <li><strong>SMART Recovery:</strong> Science-based program supporting both moderation and abstinence goals.</li>
                 <li><strong>Therapy:</strong> Motivational interviewing, CBT, and harm reduction therapy help clarify goals and develop strategies <Citation id="9" index={9} source="Journal of Substance Abuse Treatment" year="2020" tier={1} />.</li>
-                <li><strong>Apps:</strong> Reframe, Sunnyside, Less—provide tracking, education, and community support.</li>
+                <li><strong>Apps:</strong> Reframe, Sunnyside, Less---provide tracking, education, and community support.</li>
               </ul>
             </div>
           }
@@ -1577,10 +1577,10 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're stressed about work, so you browse Amazon. Within an hour, you've bought three things you don't need. A package arrives, and you feel a brief rush of excitement—then guilt when you see your credit card statement. Your closet is full of clothes with tags still on. You've hidden purchases from your partner. Shopping makes you feel better temporarily, but the relief never lasts. This might be compulsive buying disorder.
+            You're stressed about work, so you browse Amazon. Within an hour, you've bought three things you don't need. A package arrives, and you feel a brief rush of excitement---then guilt when you see your credit card statement. Your closet is full of clothes with tags still on. You've hidden purchases from your partner. Shopping makes you feel better temporarily, but the relief never lasts. This might be compulsive buying disorder.
           </p>
           <p className="mb-6">
-            Compulsive buying disorder (CBD), sometimes called shopping addiction, affects approximately 5-8% of the general population, with higher rates among young adults and women <Citation id="2" index={2} source="Journal of Behavioral Addictions" year="2019" tier={1} />. It's characterized by excessive preoccupation with shopping, loss of control over buying behavior, and continued shopping despite negative consequences—financial, relational, and emotional <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />.
+            Compulsive buying disorder (CBD), sometimes called shopping addiction, affects approximately 5-8% of the general population, with higher rates among young adults and women <Citation id="2" index={2} source="Journal of Behavioral Addictions" year="2019" tier={1} />. It's characterized by excessive preoccupation with shopping, loss of control over buying behavior, and continued shopping despite negative consequences---financial, relational, and emotional <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -1613,7 +1613,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Emotional Motivation',
               content: (
                 <p>
-                  Shopping is triggered by negative emotions—stress, loneliness, anxiety, boredom, low self-esteem. The act of buying temporarily relieves these feelings, reinforcing the behavior.
+                  Shopping is triggered by negative emotions---stress, loneliness, anxiety, boredom, low self-esteem. The act of buying temporarily relieves these feelings, reinforcing the behavior.
                 </p>
               ),
             },
@@ -1664,7 +1664,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Dopamine and the Anticipation High',
               description: (
                 <p>
-                  Research shows dopamine spikes not when you receive the item, but when you anticipate getting it—browsing, adding to cart, clicking 'buy." This is why the excitement fades once the package arrives. The addiction is to the hunt and the purchase, not the possession.
+                  Research shows dopamine spikes not when you receive the item, but when you anticipate getting it---browsing, adding to cart, clicking 'buy." This is why the excitement fades once the package arrives. The addiction is to the hunt and the purchase, not the possession.
                 </p>
               ),
             },
@@ -1809,7 +1809,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Delete Shopping Apps',
               description: (
                 <p>
-                  Remove Amazon, Target, clothing store apps from your phone. If you must shop, use a desktop browser—it's less convenient, which is the point.
+                  Remove Amazon, Target, clothing store apps from your phone. If you must shop, use a desktop browser---it's less convenient, which is the point.
                 </p>
               ),
             },
@@ -1861,7 +1861,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           4. Mindfulness and Urge Surfing
         </h3>
         <p className="mb-6">
-          When you feel the urge to shop, practice urge surfing: observe the urge without acting on it. Notice it as a wave that rises, peaks, and falls—usually within 10-15 minutes <Citation id="8" index={8} source="Mindfulness" year="2020" tier={1} />.
+          When you feel the urge to shop, practice urge surfing: observe the urge without acting on it. Notice it as a wave that rises, peaks, and falls---usually within 10-15 minutes <Citation id="8" index={8} source="Mindfulness" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout
@@ -1905,7 +1905,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Freeze Your Credit Cards (Literally)',
               content: (
                 <p>
-                  Put credit cards in a container of water and freeze them. To use them, you'd have to thaw the block—creating a delay that interrupts impulse buying.
+                  Put credit cards in a container of water and freeze them. To use them, you'd have to thaw the block---creating a delay that interrupts impulse buying.
                 </p>
               ),
             },
@@ -1964,7 +1964,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'Behavioral Activation',
               description: (
                 <p>
-                  Increase engagement in non-shopping activities that provide genuine fulfillment—hobbies, social connection, physical activity, creative pursuits. Fill the void that shopping currently occupies.
+                  Increase engagement in non-shopping activities that provide genuine fulfillment---hobbies, social connection, physical activity, creative pursuits. Fill the void that shopping currently occupies.
                 </p>
               ),
             },
@@ -2002,7 +2002,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="Compulsive buying isn't about stuff. It's about feelings you don't know how to feel. Once you learn to sit with discomfort—without shopping it away—the compulsion loses its power."
+          quote="Compulsive buying isn't about stuff. It's about feelings you don't know how to feel. Once you learn to sit with discomfort---without shopping it away---the compulsion loses its power."
           author="Dr. April Benson"
           role={`Psychologist & Author, "To Buy or Not to Buy"`}
         />
@@ -2025,7 +2025,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li>Healthier relationships (less secrecy, more honest communication)</li>
               </ul>
               <p className="mt-4">
-                The goal isn't perfection—it's regaining control over your buying behavior so it serves your life rather than undermining it.
+                The goal isn't perfection---it's regaining control over your buying behavior so it serves your life rather than undermining it.
               </p>
             </div>
           }
@@ -2115,10 +2115,10 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You decide to quit biting your nails. You commit to "just stop." For a few hours—maybe even a day—you succeed through sheer willpower. But then your hand moves to your mouth automatically while you're reading, and before you realize it, you're biting again. The habit hasn't gone anywhere. It's been waiting, and the moment your attention lapses, it returns. This is why elimination rarely works.
+            You decide to quit biting your nails. You commit to "just stop." For a few hours---maybe even a day---you succeed through sheer willpower. But then your hand moves to your mouth automatically while you're reading, and before you realize it, you're biting again. The habit hasn't gone anywhere. It's been waiting, and the moment your attention lapses, it returns. This is why elimination rarely works.
           </p>
           <p className="mb-6">
-            Research consistently shows that trying to eliminate a behavior without replacing it leaves a vacuum—a cue-response pattern with no new response <Citation id="1" index={1} source="Psychological Review" year="2020" tier={1} />. Your brain doesn't unlearn the connection between the trigger and the old behavior simply because you've decided not to do it anymore. Successful habit change requires substitution: actively replacing the unwanted behavior with a new, healthier alternative that serves the same function.
+            Research consistently shows that trying to eliminate a behavior without replacing it leaves a vacuum---a cue-response pattern with no new response <Citation id="1" index={1} source="Psychological Review" year="2020" tier={1} />. Your brain doesn't unlearn the connection between the trigger and the old behavior simply because you've decided not to do it anymore. Successful habit change requires substitution: actively replacing the unwanted behavior with a new, healthier alternative that serves the same function.
           </p>
         </div>
 
@@ -2136,7 +2136,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'The Neural Pathway Still Exists',
               description: (
                 <p>
-                  Habits create strong neural connections between cues and responses. Not performing the behavior doesn't erase these pathways—they remain dormant, waiting to be reactivated. This is why relapse is so common after periods of abstinence <Citation id="5" index={5} source="Current Opinion of Behavioral Sciences" year="2020" tier={1} />.
+                  Habits create strong neural connections between cues and responses. Not performing the behavior doesn't erase these pathways---they remain dormant, waiting to be reactivated. This is why relapse is so common after periods of abstinence <Citation id="5" index={5} source="Current Opinion of Behavioral Sciences" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -2144,7 +2144,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'The Function Remains Unmet',
               description: (
                 <p>
-                  Habits serve purposes—stress relief, boredom management, emotional regulation, social bonding. If you eliminate the behavior without addressing the underlying need, you either: (a) return to the old habit when the need becomes urgent, or (b) develop a different problematic behavior to fill the same function.
+                  Habits serve purposes---stress relief, boredom management, emotional regulation, social bonding. If you eliminate the behavior without addressing the underlying need, you either: (a) return to the old habit when the need becomes urgent, or (b) develop a different problematic behavior to fill the same function.
                 </p>
               ),
             },
@@ -2160,7 +2160,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: 'The Cue Remains in Your Environment',
               description: (
                 <p>
-                  Unless you completely change contexts, the triggers for your old habit persist. Every time you encounter the cue (sitting on the couch, feeling stressed, walking past a convenience store), it activates the old response pattern—even if you successfully suppress it <Citation id="3" index={3} source="Journal of Consumer Psychology" year="2020" tier={1} />.
+                  Unless you completely change contexts, the triggers for your old habit persist. Every time you encounter the cue (sitting on the couch, feeling stressed, walking past a convenience store), it activates the old response pattern---even if you successfully suppress it <Citation id="3" index={3} source="Journal of Consumer Psychology" year="2020" tier={1} />.
                 </p>
               ),
             },
@@ -2232,7 +2232,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                     The replacement should make it impossible or very difficult to perform the old habit simultaneously. This is the principle behind competing response training <Citation id="4" index={4} source="Behavior Modification" year="2019" tier={1} />.
                   </p>
                   <p className="text-sm italic">
-                    <strong>Example:</strong> If you bite your nails, holding a stress ball or sitting on your hands is physically incompatible—you can't do both at once.
+                    <strong>Example:</strong> If you bite your nails, holding a stress ball or sitting on your hands is physically incompatible---you can't do both at once.
                   </p>
                 </div>
               ),
@@ -2281,7 +2281,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
               title: '5. Provides Some Immediate Satisfaction',
               content: (
                 <p>
-                  The replacement should offer some immediate reward—even if smaller than the old habit—to reinforce the new pattern. Pure delayed gratification (e.g., "it's healthy") is often insufficient in the moment.
+                  The replacement should offer some immediate reward---even if smaller than the old habit---to reinforce the new pattern. Pure delayed gratification (e.g., "it's healthy") is often insufficient in the moment.
                 </p>
               ),
             },
@@ -2348,7 +2348,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           The Implementation Process: How to Make It Stick
         </h2>
         <p className="mb-6">
-          Having a replacement behavior isn't enough—you need a plan for implementing it consistently <Citation id="7" index={7} source="European Review of Social Psychology" year="2020" tier={1} />:
+          Having a replacement behavior isn't enough---you need a plan for implementing it consistently <Citation id="7" index={7} source="European Review of Social Psychology" year="2020" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -2461,22 +2461,22 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           title="Function-Matched vs. Function-Mismatched Replacements"
           items={[
             {
-              left: "OLD: Smoking for social bonding → NEW: Joining a gym (mismatched—exercise doesn\'t provide social bonding)",
-              right: 'OLD: Smoking for social bonding → NEW: Joining a recreational sports league (matched—provides social connection)',
+              left: "OLD: Smoking for social bonding → NEW: Joining a gym (mismatched---exercise doesn\'t provide social bonding)",
+              right: 'OLD: Smoking for social bonding → NEW: Joining a recreational sports league (matched---provides social connection)',
             },
             {
-              left: `OLD: Stress-eating for emotional soothing → NEW: Meal planning (mismatched—doesn\'t soothe)`,
-              right: 'OLD: Stress-eating for emotional soothing → NEW: Hot bath with calming music (matched—provides soothing)',
+              left: `OLD: Stress-eating for emotional soothing → NEW: Meal planning (mismatched---doesn\'t soothe)`,
+              right: 'OLD: Stress-eating for emotional soothing → NEW: Hot bath with calming music (matched---provides soothing)',
             },
             {
-              left: 'OLD: Procrastination for anxiety avoidance → NEW: Setting more deadlines (mismatched—increases anxiety)',
-              right: 'OLD: Procrastination for anxiety avoidance → NEW: 5-minute exposure + immediate reward (matched—reduces anxiety)',
+              left: 'OLD: Procrastination for anxiety avoidance → NEW: Setting more deadlines (mismatched---increases anxiety)',
+              right: 'OLD: Procrastination for anxiety avoidance → NEW: 5-minute exposure + immediate reward (matched---reduces anxiety)',
             },
           ]}
         />
 
         <p className="mt-6 mb-6">
-          If your replacement doesn't meet the same need, you'll return to the old habit when that need becomes urgent. Function is the foundation—form is secondary.
+          If your replacement doesn't meet the same need, you'll return to the old habit when that need becomes urgent. Function is the foundation---form is secondary.
         </p>
 
         <QuoteBlock
@@ -2501,7 +2501,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li>Compulsive behaviors causing significant life impairment</li>
               </ul>
               <p className="mt-4">
-                In these cases, therapy (CBT, DBT, ACT, or habit reversal training with a specialist) provides structured support, accountability, and deeper work on underlying emotional regulation. Substitution is still central to treatment—but guided by a professional.
+                In these cases, therapy (CBT, DBT, ACT, or habit reversal training with a specialist) provides structured support, accountability, and deeper work on underlying emotional regulation. Substitution is still central to treatment---but guided by a professional.
               </p>
             </div>
           }
@@ -2511,7 +2511,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
           Timeline: How Long Does Replacement Take?
         </h2>
         <p className="mb-6">
-          The often-cited "21 days to form a habit" is a myth. Research shows an average of 66 days for a new behavior to become automatic—with significant variation (18-254 days) depending on complexity and consistency.
+          The often-cited "21 days to form a habit" is a myth. Research shows an average of 66 days for a new behavior to become automatic---with significant variation (18-254 days) depending on complexity and consistency.
         </p>
 
         <ArticleChart
@@ -2530,7 +2530,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          Expect the first 2-3 weeks to require significant conscious effort. By 6-8 weeks, the replacement should feel more automatic. By 3-6 months, it can become your new default response—though the old habit's neural pathway never fully disappears. Maintenance remains important.
+          Expect the first 2-3 weeks to require significant conscious effort. By 6-8 weeks, the replacement should feel more automatic. By 3-6 months, it can become your new default response---though the old habit's neural pathway never fully disappears. Maintenance remains important.
         </p>
 
         <ArticleCallout
@@ -2549,7 +2549,7 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
                 <li>Better maintenance over time</li>
               </ul>
               <p className="mt-4">
-                The reason? Substitution works with your brain's natural processes rather than against them. You're not fighting—you're redirecting. And that makes all the difference.
+                The reason? Substitution works with your brain's natural processes rather than against them. You're not fighting---you're redirecting. And that makes all the difference.
               </p>
             </div>
           }

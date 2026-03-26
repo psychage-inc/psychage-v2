@@ -100,7 +100,7 @@ export const understandingDepressionArticlesA: Article[] = [
             If you've ever told someone you're depressed and heard 'just cheer up' or "everyone feels sad sometimes, ' you know how misunderstood this condition is. Depression isn't a choice, a character flaw, or simply feeling down after a bad day.
           </p>
           <p className="mb-6">
-            Depression is a complex medical condition that affects over 280 million people worldwide <Citation id="1" index={1} source="The Lancet" year="2021" tier={1} />. It changes how you think, feel, and function in daily life. Understanding what depression actually is—beyond the oversimplified versions we see in media—is the first step toward recognizing it in yourself or others and getting help that works <Citation id="3" index={3} source="World Health Organization" year="2017" tier={2} />.
+            Depression is a complex medical condition that affects over 280 million people worldwide <Citation id="1" index={1} source="The Lancet" year="2021" tier={1} />. It changes how you think, feel, and function in daily life. Understanding what depression actually is---beyond the oversimplified versions we see in media---is the first step toward recognizing it in yourself or others and getting help that works <Citation id="3" index={3} source="World Health Organization" year="2017" tier={2} />.
           </p>
         </div>
 
@@ -255,7 +255,7 @@ export const understandingDepressionArticlesA: Article[] = [
           The Biological Reality
         </h2>
         <p className="mb-6">
-          Depression is not "all in your head" in the dismissive sense—it's a real medical condition with observable changes in brain structure and function <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2019" tier={1} />. Brain imaging studies show:
+          Depression is not "all in your head" in the dismissive sense---it's a real medical condition with observable changes in brain structure and function <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2019" tier={1} />. Brain imaging studies show:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -337,7 +337,7 @@ export const understandingDepressionArticlesA: Article[] = [
           Understanding Is the First Step
         </h2>
         <p className="mb-6">
-          Recognizing depression for what it is—a treatable medical condition, not a personal failing—opens the door to getting help. Depression distorts your thinking, making you believe recovery is impossible. That belief is a symptom, not reality.
+          Recognizing depression for what it is---a treatable medical condition, not a personal failing---opens the door to getting help. Depression distorts your thinking, making you believe recovery is impossible. That belief is a symptom, not reality.
         </p>
 
         <p className="mb-6">
@@ -360,7 +360,7 @@ export const understandingDepressionArticlesA: Article[] = [
     id: catId(2),
     slug: 'neuroscience-of-depression-brain-changes',
     title: "The Neuroscience of Depression: What's Actually Happening in Your Brain",
-    description: "Explore the brain changes underlying depression—from neurotransmitter systems to structural alterations, inflammation, and reward circuitry dysfunction.",
+    description: "Explore the brain changes underlying depression---from neurotransmitter systems to structural alterations, inflammation, and reward circuitry dysfunction.",
     image: "/images/articles/cat07/cover-002.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 9,
@@ -449,7 +449,7 @@ export const understandingDepressionArticlesA: Article[] = [
             When someone says depression is "just a chemical imbalance, ' they're oversimplifying one of the most complex conditions in neuroscience. While brain chemistry is involved, the neurobiology of depression involves intricate changes across multiple brain systems, structures, and molecular pathways.
           </p>
           <p className="mb-6">
-            Understanding what's actually happening in the brain during depression helps explain why the condition affects so much more than mood—it impacts memory, motivation, physical sensations, and even how you perceive reality <Citation id="1" index={1} source="Asian Journal of Psychiatry" year="2020" tier={1} />. This knowledge also illuminates why different treatments work for different people.
+            Understanding what's actually happening in the brain during depression helps explain why the condition affects so much more than mood---it impacts memory, motivation, physical sensations, and even how you perceive reality <Citation id="1" index={1} source="Asian Journal of Psychiatry" year="2020" tier={1} />. This knowledge also illuminates why different treatments work for different people.
           </p>
         </div>
 
@@ -457,7 +457,7 @@ export const understandingDepressionArticlesA: Article[] = [
           Neurotransmitter Systems: The Chemical Messengers
         </h2>
         <p className="mb-6">
-          Depression involves dysregulation in several neurotransmitter systems—the chemical messengers that allow brain cells to communicate <Citation id="2" index={2} source="Dialogues in Clinical Neuroscience" year="2019" tier={1} />. The most studied include:
+          Depression involves dysregulation in several neurotransmitter systems---the chemical messengers that allow brain cells to communicate <Citation id="2" index={2} source="Dialogues in Clinical Neuroscience" year="2019" tier={1} />. The most studied include:
         </p>
 
         <ArticleTabs
@@ -527,14 +527,14 @@ export const understandingDepressionArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>No single neurotransmitter "causes" depression. These systems interact in complex networks, and depression involves dysregulation across multiple pathways simultaneously. This is why different medications work for different people—they target different aspects of this complex system.</p>
+          <p>No single neurotransmitter "causes" depression. These systems interact in complex networks, and depression involves dysregulation across multiple pathways simultaneously. This is why different medications work for different people---they target different aspects of this complex system.</p>
         </ArticleCallout>
 
         <h2 id="structural-changes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Brain Structure Changes
         </h2>
         <p className="mb-6">
-          Brain imaging studies reveal that depression isn't just about chemical imbalances—it involves actual changes in brain structure and volume <Citation id="3" index={3} source="Molecular Psychiatry" year="2018" tier={1} />.
+          Brain imaging studies reveal that depression isn't just about chemical imbalances---it involves actual changes in brain structure and volume <Citation id="3" index={3} source="Molecular Psychiatry" year="2018" tier={1} />.
         </p>
 
         <ArticleChart
@@ -559,7 +559,7 @@ export const understandingDepressionArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="clinical-note">
-          <p>These structural changes don't mean depression causes permanent brain damage. Research shows that effective treatment—whether therapy, medication, or both—can reverse many of these changes. The brain retains plasticity, the ability to reorganize and heal.</p>
+          <p>These structural changes don't mean depression causes permanent brain damage. Research shows that effective treatment---whether therapy, medication, or both---can reverse many of these changes. The brain retains plasticity, the ability to reorganize and heal.</p>
         </ArticleCallout>
 
         <h2 id="stress-response" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -637,7 +637,7 @@ export const understandingDepressionArticlesA: Article[] = [
           Reward Circuitry and Anhedonia
         </h2>
         <p className="mb-6">
-          One of the most debilitating symptoms of depression is anhedonia—the inability to experience pleasure. This stems from dysfunction in the brain's reward system <Citation id="6" index={6} source="Current Behavioral Neuroscience Reports" year="2019" tier={1} />.
+          One of the most debilitating symptoms of depression is anhedonia---the inability to experience pleasure. This stems from dysfunction in the brain's reward system <Citation id="6" index={6} source="Current Behavioral Neuroscience Reports" year="2019" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -673,7 +673,7 @@ export const understandingDepressionArticlesA: Article[] = [
           Neuroplasticity and BDNF
         </h2>
         <p className="mb-6">
-          Brain-derived neurotrophic factor (BDNF) is a protein that promotes the growth, survival, and differentiation of neurons. It's essential for neuroplasticity—the brain's ability to form new connections and adapt <Citation id="7" index={7} source="Frontiers in Psychiatry" year="2020" tier={1} />.
+          Brain-derived neurotrophic factor (BDNF) is a protein that promotes the growth, survival, and differentiation of neurons. It's essential for neuroplasticity---the brain's ability to form new connections and adapt <Citation id="7" index={7} source="Frontiers in Psychiatry" year="2020" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -747,7 +747,7 @@ export const understandingDepressionArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Depression is a real medical condition with observable changes in brain structure, chemistry, and function. This doesn't mean it's purely 'biological' or that psychological and social factors don't matter—they absolutely do, and they interact with biology in complex ways. Understanding the neuroscience helps validate the experience of depression while illuminating pathways to recovery.</p>
+          <p>Depression is a real medical condition with observable changes in brain structure, chemistry, and function. This doesn't mean it's purely 'biological' or that psychological and social factors don't matter---they absolutely do, and they interact with biology in complex ways. Understanding the neuroscience helps validate the experience of depression while illuminating pathways to recovery.</p>
         </ArticleCallout>
 
         <p className="mb-6">
@@ -839,7 +839,7 @@ export const understandingDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Everyone experiences sadness. It's a normal human emotion that serves an important function—alerting us that something matters, something is wrong, or something needs to change. But when does sadness cross the line into depression?
+            Everyone experiences sadness. It's a normal human emotion that serves an important function---alerting us that something matters, something is wrong, or something needs to change. But when does sadness cross the line into depression?
           </p>
           <p className="mb-6">
             This question matters because the answer determines what kind of support you need. Treating normal sadness as a medical problem can be unnecessary, while dismissing depression as "just sadness" can delay life-saving treatment <Citation id="1" index={1} source="Clinical Psychology & Psychotherapy" year="2019" tier={1} />. Understanding the difference empowers you to respond appropriately to what you or someone you love is experiencing.
@@ -923,7 +923,7 @@ export const understandingDepressionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="tip" title="The Two-Week Guideline">
-          <p>If you've felt consistently down, empty, or unable to enjoy things for more than two weeks straight, it's worth talking to a healthcare professional—even if you're 'functioning' on the surface.</p>
+          <p>If you've felt consistently down, empty, or unable to enjoy things for more than two weeks straight, it's worth talking to a healthcare professional---even if you're 'functioning' on the surface.</p>
         </ArticleCallout>
 
         <h2 id="intensity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -938,7 +938,7 @@ export const understandingDepressionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note">
-          <p>Depression can also follow genuinely difficult life events, but the intensity and duration exceed what's typical. The question isn't whether you have a 'good reason' to feel bad—it's whether your current state is interfering with your ability to function and doesn't naturally improve over time.</p>
+          <p>Depression can also follow genuinely difficult life events, but the intensity and duration exceed what's typical. The question isn't whether you have a 'good reason' to feel bad---it's whether your current state is interfering with your ability to function and doesn't naturally improve over time.</p>
         </ArticleCallout>
 
         <h2 id="functioning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -976,7 +976,7 @@ export const understandingDepressionArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          There's a concept called "functional depression" where people maintain external productivity while suffering internally. If you're going through the motions but feel completely disconnected from life, unable to experience pleasure, and constantly exhausted, that's still depression—even if others can't tell.
+          There's a concept called "functional depression" where people maintain external productivity while suffering internally. If you're going through the motions but feel completely disconnected from life, unable to experience pleasure, and constantly exhausted, that's still depression---even if others can't tell.
         </p>
 
         <h2 id="emotional-range" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -987,7 +987,7 @@ export const understandingDepressionArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>With depression:</strong> Everything feels flat. This is called anhedonia—the inability to experience pleasure. Activities that used to bring joy now feel pointless. Music sounds hollow, jokes aren't funny, and even meaningful connections feel unreachable. It's not that you're just sad—it's that you can't feel much of anything positive.
+          <strong>With depression:</strong> Everything feels flat. This is called anhedonia---the inability to experience pleasure. Activities that used to bring joy now feel pointless. Music sounds hollow, jokes aren't funny, and even meaningful connections feel unreachable. It's not that you're just sad---it's that you can't feel much of anything positive.
         </p>
 
         <ArticleChart
@@ -1039,7 +1039,7 @@ export const understandingDepressionArticlesA: Article[] = [
                     <li>"I don't deserve to be happy"</li>
                     <li>"The world would be better off without me"</li>
                   </ul>
-                  <p className="mt-4">These aren't just negative thoughts—they feel like absolute truths. Depression distorts your perception of yourself, often with excessive guilt or self-blame that doesn't match reality.</p>
+                  <p className="mt-4">These aren't just negative thoughts---they feel like absolute truths. Depression distorts your perception of yourself, often with excessive guilt or self-blame that doesn't match reality.</p>
                 </div>
               ),
             },
@@ -1273,7 +1273,7 @@ export const understandingDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Is depression genetic or environmental?", "Is it caused by trauma or brain chemistry?" These either-or questions reflect a common misunderstanding: depression doesn't have a single cause. It emerges from the complex interaction of biological, psychological, and social factors—a framework called the biopsychosocial model.
+            "Is depression genetic or environmental?", "Is it caused by trauma or brain chemistry?" These either-or questions reflect a common misunderstanding: depression doesn't have a single cause. It emerges from the complex interaction of biological, psychological, and social factors---a framework called the biopsychosocial model.
           </p>
           <p className="mb-6">
             Understanding this model fundamentally changes how we think about depression. It explains why some people develop depression after severe stress while others don't, why identical twins don't always share the condition, and why effective treatment usually requires addressing multiple levels simultaneously <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />.
@@ -1299,7 +1299,7 @@ export const understandingDepressionArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          No single domain "causes" depression on its own. Instead, vulnerabilities and protective factors across all three domains interact to increase or decrease risk. This interaction is dynamic—factors in one domain influence the others in ongoing feedback loops.
+          No single domain "causes" depression on its own. Instead, vulnerabilities and protective factors across all three domains interact to increase or decrease risk. This interaction is dynamic---factors in one domain influence the others in ongoing feedback loops.
         </p>
 
         <h2 id="biological-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1317,7 +1317,7 @@ export const understandingDepressionArticlesA: Article[] = [
               title: 'Genetics and Heritability',
               content: (
                 <div>
-                  <p className="mb-4">Depression is moderately heritable. If one identical twin has depression, the other has about a 40% chance—higher than the general population but far from guaranteed <Citation id="2" index={2} source="Journal of Affective Disorders" year="2021" tier={1} />.</p>
+                  <p className="mb-4">Depression is moderately heritable. If one identical twin has depression, the other has about a 40% chance---higher than the general population but far from guaranteed <Citation id="2" index={2} source="Journal of Affective Disorders" year="2021" tier={1} />.</p>
                   <p className="mb-4"><strong>What this means:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Genetics influence vulnerability, not destiny</li>
@@ -1338,7 +1338,7 @@ export const understandingDepressionArticlesA: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Neurotransmitter dysregulation is part of depression, not the sole cause</li>
                     <li>Psychological stress and social isolation can alter brain chemistry</li>
-                    <li>Brain chemistry changes don't occur in isolation—they result from interactions with experiences</li>
+                    <li>Brain chemistry changes don't occur in isolation---they result from interactions with experiences</li>
                   </ul>
                 </div>
               ),
@@ -1364,7 +1364,7 @@ export const understandingDepressionArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">Chronic inflammation appears in a subset of people with depression, particularly those who don't respond well to traditional antidepressants.</p>
-                  <p>Interestingly, inflammation can be triggered by psychological stress and social isolation—showing how biological factors don't exist in isolation.</p>
+                  <p>Interestingly, inflammation can be triggered by psychological stress and social isolation---showing how biological factors don't exist in isolation.</p>
                 </div>
               ),
             },
@@ -1385,7 +1385,7 @@ export const understandingDepressionArticlesA: Article[] = [
           Psychological Factors: How You Process Experience
         </h2>
         <p className="mb-6">
-          Psychological factors involve your thoughts, beliefs, coping strategies, and personality traits—the mental frameworks through which you interpret and respond to life events.
+          Psychological factors involve your thoughts, beliefs, coping strategies, and personality traits---the mental frameworks through which you interpret and respond to life events.
         </p>
 
         <ArticleTabs
@@ -1419,7 +1419,7 @@ export const understandingDepressionArticlesA: Article[] = [
                     <li><strong>High dependency:</strong> Excessive need for approval and reassurance from others</li>
                     <li><strong>Self-criticism:</strong> Harsh internal standards and punitive self-evaluation</li>
                   </ul>
-                  <p>These traits aren't "flaws"—they're dimensions of temperament, partly genetic and partly shaped by early experiences.</p>
+                  <p>These traits aren't "flaws"---they're dimensions of temperament, partly genetic and partly shaped by early experiences.</p>
                 </div>
               ),
             },
@@ -1451,7 +1451,7 @@ export const understandingDepressionArticlesA: Article[] = [
               label: 'Early Life Experiences',
               content: (
                 <div>
-                  <p className="mb-4">Childhood adversity—abuse, neglect, household dysfunction, bullying—significantly increases lifetime depression risk <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />.</p>
+                  <p className="mb-4">Childhood adversity---abuse, neglect, household dysfunction, bullying---significantly increases lifetime depression risk <Citation id="3" index={3} source="JAMA Psychiatry" year="2019" tier={1} />.</p>
                   <p className="mb-4"><strong>Mechanisms include:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Sensitizing the stress response system</li>
@@ -1538,7 +1538,7 @@ export const understandingDepressionArticlesA: Article[] = [
           How the Domains Interact: The Diathesis-Stress Model
         </h2>
         <p className="mb-6">
-          One way to understand how biopsychosocial factors combine is through the diathesis-stress model: people have varying levels of vulnerability (diathesis) in biological, psychological, and social domains. When stress exceeds a person's threshold—determined by their vulnerabilities minus their protective factors—depression emerges.
+          One way to understand how biopsychosocial factors combine is through the diathesis-stress model: people have varying levels of vulnerability (diathesis) in biological, psychological, and social domains. When stress exceeds a person's threshold---determined by their vulnerabilities minus their protective factors---depression emerges.
         </p>
 
         <ArticleChart
@@ -1557,7 +1557,7 @@ export const understandingDepressionArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Gene × Environment:</strong> A genetic variant affecting serotonin transport only increases depression risk in people who experienced childhood maltreatment <Citation id="2" index={2} source="Journal of Affective Disorders" year="2021" tier={1} /></li>
           <li><strong>Biology × Psychology:</strong> Inflammatory processes may trigger depression primarily in people with negative cognitive styles who interpret physical discomfort as evidence of personal failure</li>
-          <li><strong>Psychology × Social:</strong> People with ruminative thinking patterns may generate more interpersonal stress (through excessive reassurance-seeking), which then worsens their depression—a concept called stress generation <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} /></li>
+          <li><strong>Psychology × Social:</strong> People with ruminative thinking patterns may generate more interpersonal stress (through excessive reassurance-seeking), which then worsens their depression---a concept called stress generation <Citation id="5" index={5} source="Clinical Psychology Review" year="2019" tier={1} /></li>
           <li><strong>Social × Biology:</strong> Chronic experiences of discrimination activate stress response systems, increasing inflammation and altering brain structure over time</li>
         </ul>
 
@@ -1579,7 +1579,7 @@ export const understandingDepressionArticlesA: Article[] = [
                   <p className="mb-4"><strong>Biological:</strong> Hormonal changes after birth, sleep deprivation, genetic vulnerability</p>
                   <p className="mb-4"><strong>Psychological:</strong> Perfectionist expectations of motherhood, history of anxiety, difficulty adjusting to identity change</p>
                   <p className="mb-4"><strong>Social:</strong> Lack of partner support, financial stress, social isolation, cultural pressure to "enjoy every moment"</p>
-                  <p>No single factor causes postpartum depression—it's the convergence that creates risk.</p>
+                  <p>No single factor causes postpartum depression---it's the convergence that creates risk.</p>
                 </div>
               ),
             },
@@ -1591,7 +1591,7 @@ export const understandingDepressionArticlesA: Article[] = [
                   <p className="mb-4"><strong>Biological:</strong> Family history of depression, irregular sleep schedule, poor nutrition</p>
                   <p className="mb-4"><strong>Psychological:</strong> High self-criticism, imposter syndrome, maladaptive coping (avoidance, substance use)</p>
                   <p className="mb-4"><strong>Social:</strong> Academic pressure, social comparison, lack of belonging, distance from family support</p>
-                  <p>Each domain amplifies the others—sleep deprivation worsens mood, which increases social withdrawal, which intensifies negative thinking.</p>
+                  <p>Each domain amplifies the others---sleep deprivation worsens mood, which increases social withdrawal, which intensifies negative thinking.</p>
                 </div>
               ),
             },
@@ -1603,7 +1603,7 @@ export const understandingDepressionArticlesA: Article[] = [
                   <p className="mb-4"><strong>Biological:</strong> Moderate genetic risk, chronic pain condition</p>
                   <p className="mb-4"><strong>Psychological:</strong> Strong identity tied to work role, negative attributional style ("I'm a failure")</p>
                   <p className="mb-4"><strong>Social:</strong> Financial strain, loss of workplace relationships, stigma about unemployment in their community</p>
-                  <p>The job loss is a trigger, not the cause—the interaction of pre-existing vulnerabilities with this stressor leads to depression.</p>
+                  <p>The job loss is a trigger, not the cause---the interaction of pre-existing vulnerabilities with this stressor leads to depression.</p>
                 </div>
               ),
             },
@@ -1676,7 +1676,7 @@ export const understandingDepressionArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Depression has no single cause because humans are complex systems where biology, psychology, and social context continuously interact. This complexity is not a barrier to understanding—it's a roadmap showing us multiple pathways toward healing.
+          Depression has no single cause because humans are complex systems where biology, psychology, and social context continuously interact. This complexity is not a barrier to understanding---it's a roadmap showing us multiple pathways toward healing.
         </p>
       </>
     ),
@@ -1686,7 +1686,7 @@ export const understandingDepressionArticlesA: Article[] = [
     id: catId(5),
     slug: 'risk-factors-depression-vulnerability',
     title: 'Risk Factors for Depression: What Makes Some People More Vulnerable',
-    description: 'Identify the biological, psychological, and social factors that increase depression risk—from genetics and childhood adversity to current stressors and protective factors.',
+    description: 'Identify the biological, psychological, and social factors that increase depression risk---from genetics and childhood adversity to current stressors and protective factors.',
     image: "/images/articles/cat07/cover-005.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 7,
@@ -1764,15 +1764,15 @@ export const understandingDepressionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Why do some people develop depression after major stress while others remain resilient? Why do certain life events trigger depression in some individuals but not others? The answer lies in risk factors—the biological, psychological, and social characteristics that make someone more vulnerable to depression.
+            Why do some people develop depression after major stress while others remain resilient? Why do certain life events trigger depression in some individuals but not others? The answer lies in risk factors---the biological, psychological, and social characteristics that make someone more vulnerable to depression.
           </p>
           <p className="mb-6">
-            Understanding risk factors serves three purposes: recognizing your own vulnerability, identifying opportunities for prevention, and reducing self-blame. Depression isn't a choice or a personal failing—it emerges when risk factors accumulate beyond a person's capacity to cope <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />.
+            Understanding risk factors serves three purposes: recognizing your own vulnerability, identifying opportunities for prevention, and reducing self-blame. Depression isn't a choice or a personal failing---it emerges when risk factors accumulate beyond a person's capacity to cope <Citation id="1" index={1} source="Psychological Medicine" year="2021" tier={1} />.
           </p>
         </div>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Risk factors increase probability, not certainty. Having multiple risk factors doesn't guarantee depression, just as having few doesn't make you immune. Think of risk factors as weights on a scale—enough weight tips you toward depression, but protective factors can balance the scale.</p>
+          <p>Risk factors increase probability, not certainty. Having multiple risk factors doesn't guarantee depression, just as having few doesn't make you immune. Think of risk factors as weights on a scale---enough weight tips you toward depression, but protective factors can balance the scale.</p>
         </ArticleCallout>
 
         <h2 id="biological-risk" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1799,7 +1799,7 @@ export const understandingDepressionArticlesA: Article[] = [
                   <p className="mb-4">Having a first-degree relative (parent, sibling) with depression doubles to quadruples your risk. This reflects both genetic inheritance and shared environmental factors like parenting styles and household stress.</p>
                   <p className="mb-4"><strong>Important notes:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
-                    <li>No single "depression gene" exists—hundreds of genetic variants each contribute small effects</li>
+                    <li>No single "depression gene" exists---hundreds of genetic variants each contribute small effects</li>
                     <li>Genes create vulnerability that only manifests under certain environmental conditions</li>
                     <li>Family history is a risk factor, not a life sentence</li>
                   </ul>
@@ -1931,7 +1931,7 @@ export const understandingDepressionArticlesA: Article[] = [
                     <li>After two episodes: 70% chance</li>
                     <li>After three or more: 90% chance</li>
                   </ul>
-                  <p className="mt-4">This doesn't mean relapse is inevitable—maintenance therapy, lifestyle changes, and relapse prevention strategies significantly reduce risk. But past depression indicates ongoing vulnerability that warrants continued attention.</p>
+                  <p className="mt-4">This doesn't mean relapse is inevitable---maintenance therapy, lifestyle changes, and relapse prevention strategies significantly reduce risk. But past depression indicates ongoing vulnerability that warrants continued attention.</p>
                 </div>
               ),
             },
@@ -2012,10 +2012,10 @@ export const understandingDepressionArticlesA: Article[] = [
         <p className="mb-6"><strong>Important distinctions:</strong></p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Loss events:</strong> Death, divorce, job loss—highest risk for depression</li>
-          <li><strong>Humiliation/entrapment events:</strong> Situations involving shame, powerlessness, or being trapped—particularly linked to hopelessness</li>
+          <li><strong>Loss events:</strong> Death, divorce, job loss---highest risk for depression</li>
+          <li><strong>Humiliation/entrapment events:</strong> Situations involving shame, powerlessness, or being trapped---particularly linked to hopelessness</li>
           <li><strong>Chronic difficulties:</strong> Ongoing stress (poverty, caregiving, abusive relationship) sometimes creates higher risk than single acute events</li>
-          <li><strong>Cumulative stress:</strong> Multiple stressors compound—the "last straw" phenomenon</li>
+          <li><strong>Cumulative stress:</strong> Multiple stressors compound---the "last straw" phenomenon</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -2123,16 +2123,16 @@ export const understandingDepressionArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="Three Ways to Use Risk Factor Knowledge">
           <p className="mb-4"><strong>1. Self-awareness without self-blame:</strong> Recognizing your risk factors helps you understand why you might be vulnerable to depression. This is explanatory, not an indictment. You didn't choose your genes, childhood, or many circumstances that affect risk.</p>
-          <p className="mb-4"><strong>2. Targeted prevention:</strong> If you know you're at elevated risk, you can proactively strengthen protective factors—building social support, learning coping skills, maintaining physical health, and seeking therapy before a crisis.</p>
+          <p className="mb-4"><strong>2. Targeted prevention:</strong> If you know you're at elevated risk, you can proactively strengthen protective factors---building social support, learning coping skills, maintaining physical health, and seeking therapy before a crisis.</p>
           <p className="mb-4"><strong>3. Earlier intervention:</strong> Understanding risk helps you recognize early warning signs and seek help sooner rather than dismissing symptoms as "just stress" or "something everyone deals with."</p>
         </ArticleCallout>
 
         <p className="mb-6">
-          Risk factors create vulnerability, not destiny. Even with multiple risk factors, protective factors and early intervention can prevent or mitigate depression. Conversely, even people with few risk factors can develop depression—which validates that it's a real medical condition, not a personal failing.
+          Risk factors create vulnerability, not destiny. Even with multiple risk factors, protective factors and early intervention can prevent or mitigate depression. Conversely, even people with few risk factors can develop depression---which validates that it's a real medical condition, not a personal failing.
         </p>
 
         <p className="mb-6">
-          The most empowering truth is that while you can't change some risk factors (genetics, childhood history), you can modify many others—and strengthening even a few protective factors significantly reduces your overall risk.
+          The most empowering truth is that while you can't change some risk factors (genetics, childhood history), you can modify many others---and strengthening even a few protective factors significantly reduces your overall risk.
         </p>
       </>
     ),

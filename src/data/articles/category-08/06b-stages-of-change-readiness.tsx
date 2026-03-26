@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Category 8, Subtopic 6: Stages of Change & Readiness — Articles 56-60
+// Category 8, Subtopic 6: Stages of Change & Readiness --- Articles 56-60
 // ============================================================================
 
 export const stagesOfChangeReadinessArticlesB: Article[] = [
@@ -101,17 +101,17 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Six months in. The initial excitement has faded. The behavior no longer feels new. Your
-            friends have stopped commenting. You're in maintenance — the stage where sustainable
+            friends have stopped commenting. You're in maintenance --- the stage where sustainable
             change either solidifies or quietly unravels.
           </p>
           <p className="mb-6">
-            Maintenance is the stage that lasts from six months onward — potentially for years or
+            Maintenance is the stage that lasts from six months onward --- potentially for years or
             even a lifetime <Citation id="1" index={1} source="Health Psychology" year="2000" tier={1} />. It's
             characterized by sustained behavior change that has become more automatic but still
             requires ongoing attention to prevent relapse.
           </p>
           <p className="mb-6">
-            Most behavior change content focuses on starting — the action stage gets all the
+            Most behavior change content focuses on starting --- the action stage gets all the
             attention. But research shows that maintenance is where the real work happens. It's not
             as dramatic, but it's more important <Citation id="3" index={2} source="European Journal of Social Psychology" year="2010" tier={1} />.
           </p>
@@ -145,7 +145,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <ul className="list-disc pl-6 space-y-2 text-gray-700 dark:text-gray-300">
             <li>The behavior no longer requires intense daily focus</li>
             <li>You do it even when motivation is low, without much internal debate</li>
-            <li>Skipping it feels uncomfortable — like something's missing</li>
+            <li>Skipping it feels uncomfortable --- like something's missing</li>
             <li>You've successfully maintained it through at least one major life disruption</li>
             <li>You no longer track it obsessively (though you may still check in periodically)</li>
             <li>Your identity has shifted: you see yourself as 'someone who does this"</li>
@@ -181,7 +181,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Job loss, relationship endings, moving, illness, grief — major stressors
+                    Job loss, relationship endings, moving, illness, grief --- major stressors
                     deplete the cognitive and emotional resources needed to maintain new behaviors.
                     Under stress, the brain defaults to the most established patterns.
                   </p>
@@ -225,7 +225,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">
                     In the action stage, people rally around you. By maintenance, that support
-                    often fades — they assume you don't need it anymore. But research shows social
+                    often fades --- they assume you don't need it anymore. But research shows social
                     support remains critical for long-term maintenance <Citation id="8" index={5} source="Annals of Behavioral Medicine" year="2011" tier={1} />.
                   </p>
                   <p className="mb-4">
@@ -295,7 +295,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Maintenance requires different strategies than action. You're no longer building the
-          habit from scratch — you're protecting and strengthening what you've built <Citation id="6" index={6} source="Journal of Consulting and Clinical Psychology" year="2008" tier={1} />.
+          habit from scratch --- you're protecting and strengthening what you've built <Citation id="6" index={6} source="Journal of Consulting and Clinical Psychology" year="2008" tier={1} />.
         </p>
 
         <div className="space-y-6 mb-8">
@@ -394,7 +394,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Even in maintenance, motivation naturally ebbs and flows. The difference is that you're
-          not starting from scratch — you're rekindling a fire that's already burning.
+          not starting from scratch --- you're rekindling a fire that's already burning.
         </p>
 
         <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
@@ -453,7 +453,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             </h3>
             <p className="text-gray-700 dark:text-gray-300">
               Long-term maintenance solidifies identity shifts. You're not someone "trying to
-              exercise" — you're "someone who exercises." This becomes part of who you are.
+              exercise" --- you're "someone who exercises." This becomes part of who you are.
             </p>
           </div>
 
@@ -463,7 +463,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             </h3>
             <p className="text-gray-700 dark:text-gray-300">
               Automated behaviors free up mental energy. You no longer waste cognitive resources
-              debating whether to do it — you just do it.
+              debating whether to do it --- you just do it.
             </p>
           </div>
 
@@ -596,14 +596,14 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You missed a day. Then another. Before you knew it, a week had passed. The habit you
             worked so hard to build feels like it's slipping away. Does this mean you've failed? Is
-            all your progress lost? The answer is no — but what you do next will determine whether
+            all your progress lost? The answer is no --- but what you do next will determine whether
             this becomes a temporary lapse or a full relapse.
           </p>
           <p className="mb-6">
             Relapse is not a stage in the original Stages of Change model, but it's a reality that
             researchers added to reflect what actually happens: most people cycle through the stages
             multiple times before achieving lasting change <Citation id="4" index={1} source="Addictive Behaviors" year="2008" tier={1} />. Understanding
-            relapse isn't about expecting failure — it's about preparing for reality.
+            relapse isn't about expecting failure --- it's about preparing for reality.
           </p>
           <p className="mb-6">
             The critical insight: <strong>relapse is a process, not an event</strong>. It unfolds
@@ -671,7 +671,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             Research shows that most people who achieve long-term behavior change experience
             multiple lapses along the way <Citation id="8" index={3} source="Psychological Science" year="2014" tier={1} />. The
             difference between those who succeed and those who don't isn't the absence of lapses
-            — it's how quickly and compassionately they respond.
+            --- it's how quickly and compassionately they respond.
           </p>
         </ArticleCallout>
 
@@ -683,7 +683,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           One of the most well-researched phenomena in behavior change is the "abstinence violation
-          effect" (AVE) — the cognitive and emotional response that turns a lapse into a relapse <Citation id="2" index={4} source="Journal of Consulting and Clinical Psychology" year="1985" tier={1} />.
+          effect" (AVE) --- the cognitive and emotional response that turns a lapse into a relapse <Citation id="2" index={4} source="Journal of Consulting and Clinical Psychology" year="1985" tier={1} />.
         </p>
 
         <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 p-6 rounded-lg mb-6">
@@ -717,7 +717,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         <p className="mb-6">
           The trap is all-or-nothing thinking. If you believe that one slip erases all your
           progress, then psychologically, there's no reason to stop at one slip. Research shows
-          that self-compassion — the ability to treat yourself kindly after a mistake — is one of
+          that self-compassion --- the ability to treat yourself kindly after a mistake --- is one of
           the strongest predictors of recovery from lapses <Citation id="3" index={5} source="Clinical Psychology Review" year="2016" tier={1} />.
         </p>
 
@@ -824,7 +824,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               description: (
                 <p>
                   Name what happened without catastrophizing. 'I slipped' is factual. "I'm a
-                  failure" is interpretation. Stick to the facts. This isn't minimizing — it's
+                  failure" is interpretation. Stick to the facts. This isn't minimizing --- it's
                   preventing the shame spiral that leads to AVE.
                 </p>
               ),
@@ -835,7 +835,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                 <p>
                   What led to the lapse? Was it a specific situation, emotion, person, or time of
                   day? Understanding the trigger allows you to plan differently next time. Lapses
-                  aren't random — they're information.
+                  aren't random --- they're information.
                 </p>
               ),
             },
@@ -854,7 +854,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               description: (
                 <p>
                   Contact your accountability partner, therapist, or support group within 24 hours.
-                  Don't wait until you've 'gotten back on track' — reach out while you're still
+                  Don't wait until you've 'gotten back on track' --- reach out while you're still
                   vulnerable. Social support is one of the strongest relapse-recovery factors <Citation id="7" index={8} source="Health Psychology" year="2010" tier={1} />.
                 </p>
               ),
@@ -864,7 +864,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               description: (
                 <p>
                   Don't wait for Monday, or next month, or 'when things calm down." Resume the
-                  behavior as soon as possible — even if it's a scaled-down version. Momentum is
+                  behavior as soon as possible --- even if it's a scaled-down version. Momentum is
                   easier to rebuild within 48 hours than after a week.
                 </p>
               ),
@@ -875,7 +875,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                 <p>
                   Based on what you learned, modify your strategy. Create a new if-then plan for
                   the trigger that caused this lapse. Strengthen weak points in your system. Don't
-                  just restart — restart smarter.
+                  just restart --- restart smarter.
                 </p>
               ),
             },
@@ -932,14 +932,14 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         <ArticleCallout variant="clinical-note" title="The Relapse Replication Effect">
           <p>
             Research shows that each time you attempt behavior change, you're more likely to
-            succeed than the previous time — <em>if</em> you learn from each attempt <Citation id="8" index={9} source="Psychological Science" year="2014" tier={1} />. Relapse
+            succeed than the previous time --- <em>if</em> you learn from each attempt <Citation id="8" index={9} source="Psychological Science" year="2014" tier={1} />. Relapse
             isn't failure; it's part of the iterative process of figuring out what works for you.
           </p>
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
           When returning to change after relapse, you'll likely re-enter at the contemplation or
-          preparation stage rather than starting in pre-contemplation. This is progress — awareness
+          preparation stage rather than starting in pre-contemplation. This is progress --- awareness
           and commitment are still present. The task is to rebuild the infrastructure that supports
           action.
         </p>
@@ -952,7 +952,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           The best time to build a relapse prevention plan is during the preparation or early
-          action stage — before relapse happens. But it's never too late to create one.
+          action stage --- before relapse happens. But it's never too late to create one.
         </p>
 
         <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-6 rounded-lg mb-6">
@@ -1012,7 +1012,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         <p className="mb-6">
           Therapists trained in relapse prevention can help you identify blind spots, build
           stronger coping strategies, and address underlying issues that keep triggering relapse.
-          Remember: asking for help isn't admitting defeat — it's choosing to succeed with support
+          Remember: asking for help isn't admitting defeat --- it's choosing to succeed with support
           rather than struggle alone.
         </p>
       </>
@@ -1108,14 +1108,14 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           </p>
           <p className="mb-6">
             The answer lies in readiness. When someone is in pre-contemplation or early
-            contemplation, the strategies that would work in later stages — advice, encouragement,
-            action plans — backfire spectacularly <Citation id="1" index={1} source="Guilford Press" year="2012" tier={5} />. You're
+            contemplation, the strategies that would work in later stages --- advice, encouragement,
+            action plans --- backfire spectacularly <Citation id="1" index={1} source="Guilford Press" year="2012" tier={5} />. You're
             not doing something wrong; you're doing the right thing at the wrong time.
           </p>
           <p className="mb-6">
             This article explores how to support someone through their change process without
             creating resistance, damaging the relationship, or losing yourself in the process. The
-            core insight: your role isn't to change them — it's to create conditions where change
+            core insight: your role isn't to change them --- it's to create conditions where change
             becomes possible.
           </p>
         </div>
@@ -1127,7 +1127,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           The Righting Reflex: Why Your Help Backfires
         </h2>
         <p className="mb-6">
-          Researchers call it the "righting reflex" — the natural human impulse to fix what we
+          Researchers call it the "righting reflex" --- the natural human impulse to fix what we
           perceive as wrong, especially in people we care about <Citation id="2" index={2} source="Behavioural and Cognitive Psychotherapy" year="2009" tier={1} />. When
           you see someone harming themselves, every instinct screams: "Point out the problem! Offer
           solutions! Convince them to change!"
@@ -1137,7 +1137,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <p>
             The more you try to control someone else's behavior, the less influence you actually
             have <Citation id="6" index={3} source="Family Process" year="2008" tier={1} />. Pressure creates
-            resistance. People don't change because you want them to — they change when
+            resistance. People don't change because you want them to --- they change when
             <em>they</em> want to. Your job is to influence their wanting, not force their doing.
           </p>
         </ArticleCallout>
@@ -1152,7 +1152,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           </li>
           <li>
             <strong>It undermines autonomy:</strong> Humans have a fundamental need for autonomy.
-            Being told what to do activates psychological reactance — the urge to do the opposite
+            Being told what to do activates psychological reactance --- the urge to do the opposite
           </li>
           <li>
             <strong>It reinforces the status quo:</strong> When you argue for change, they
@@ -1235,7 +1235,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                     <li>Support self-efficacy: "What makes you think you could do this?"</li>
                     <li>Share stories (not advice) from people who've made similar changes</li>
                     <li>
-                      Don't rescue them from their discomfort — dissonance is what moves people
+                      Don't rescue them from their discomfort --- dissonance is what moves people
                       forward
                     </li>
                   </ul>
@@ -1296,7 +1296,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li>Acknowledge the difficulty: "I see how hard you're working"</li>
                     <li>Celebrate small wins, not just outcomes</li>
-                    <li>Be patient with setbacks — respond with compassion, not disappointment</li>
+                    <li>Be patient with setbacks --- respond with compassion, not disappointment</li>
                     <li>Provide consistent encouragement</li>
                     <li>Adapt your own behavior if it's a barrier (e.g., not drinking around them)</li>
                     <li>Check in regularly but don't hover</li>
@@ -1328,7 +1328,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                     <li>Continue to acknowledge their effort even when it looks easy</li>
                     <li>Watch for warning signs and gently point them out if asked</li>
                     <li>Support them through high-risk situations (stress, holidays, transitions)</li>
-                    <li>Normalize lapses if they happen — respond without panic or judgment</li>
+                    <li>Normalize lapses if they happen --- respond without panic or judgment</li>
                     <li>Celebrate milestones: 6 months, 1 year, 5 years</li>
                   </ul>
                   <p>
@@ -1348,7 +1348,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           Scripts for Difficult Conversations
         </h2>
         <p className="mb-6">
-          Knowing what to say — and what not to say — can make the difference between opening a
+          Knowing what to say --- and what not to say --- can make the difference between opening a
           door and slamming it shut. Here are evidence-based conversation scripts <Citation id="8" index={5} source="Journal of Personality and Social Psychology" year="2006" tier={1} />:
         </p>
 
@@ -1493,7 +1493,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           This is the hardest truth: you cannot change another person. You can create conditions,
-          offer support, set boundaries, and express love — but ultimately, the decision to change
+          offer support, set boundaries, and express love --- but ultimately, the decision to change
           belongs to them alone.
         </p>
 
@@ -1630,7 +1630,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             Behavior change in couples is inherently complex because you're navigating two separate
             readiness levels, two sets of motivations, and one shared life <Citation id="2" index={1} source="Social and Personality Psychology Compass" year="2015" tier={1} />. Your
             daily environment, routines, and social patterns are intertwined. When one person
-            changes, it inevitably affects the other — whether they're ready or not.
+            changes, it inevitably affects the other --- whether they're ready or not.
           </p>
           <p className="mb-6">
             This article explores the unique dynamics of behavior change in partnerships, including
@@ -1833,8 +1833,8 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               4. Practice Autonomy Support
             </h3>
             <p className="mb-4 text-gray-700 dark:text-gray-300">
-              Research shows that autonomy support — respecting your partner's right to make their
-              own choices — strengthens relationships and paradoxically increases their willingness
+              Research shows that autonomy support --- respecting your partner's right to make their
+              own choices --- strengthens relationships and paradoxically increases their willingness
               to change <Citation id="5" index={4} source="Journal of Personality and Social Psychology" year="2006" tier={1} />.
             </p>
             <p className="text-gray-700 dark:text-gray-300">
@@ -1942,7 +1942,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Interdependence Theory">
           <p>
-            Couples are interdependent systems — changes in one partner inevitably affect the other
+            Couples are interdependent systems --- changes in one partner inevitably affect the other
             <Citation id="7" index={7} source="British Journal of Health Psychology" year="2016" tier={1} />. Even when
             pursuing change separately, acknowledge that impact. "I know my new gym schedule
             affects our mornings. Let's figure out how to make this work for both of us."
@@ -2045,7 +2045,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           A skilled couples therapist can help you understand each other's stages, communicate
           without triggering defensiveness, and build systems that honor both partners' autonomy
           while supporting the relationship. Remember: seeking help isn't a sign your relationship
-          is failing — it's a sign you're both committed to making it work.
+          is failing --- it's a sign you're both committed to making it work.
         </p>
       </>
     ),
@@ -2136,13 +2136,13 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             "I'm too old to change.", "I've been this way my whole life.", "It's too late to start
             now." These beliefs are pervasive, culturally reinforced, and scientifically false. The
             idea that behavior change becomes impossible with age is one of the most damaging myths
-            in psychology — and the evidence against it is overwhelming.
+            in psychology --- and the evidence against it is overwhelming.
           </p>
           <p className="mb-6">
             While it's true that change comes with age-specific challenges, research shows that the
             brain retains remarkable plasticity throughout life <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2014" tier={1} />. People in
             their 60s, 70s, 80s, and beyond successfully build new habits, break old patterns, and
-            transform their lives. Age doesn't determine whether change is possible — it simply
+            transform their lives. Age doesn't determine whether change is possible --- it simply
             influences how you approach it.
           </p>
           <p className="mb-6">
@@ -2160,8 +2160,8 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           For decades, neuroscientists believed the brain was fixed after early adulthood. We now
-          know that's wrong. Neuroplasticity — the brain's ability to reorganize itself by forming
-          new neural connections — continues throughout life, though it does change in nature <Citation id="1" index={2} source="Nature Reviews Neuroscience" year="2014" tier={1} />.
+          know that's wrong. Neuroplasticity --- the brain's ability to reorganize itself by forming
+          new neural connections --- continues throughout life, though it does change in nature <Citation id="1" index={2} source="Nature Reviews Neuroscience" year="2014" tier={1} />.
         </p>
 
         <StatCard
@@ -2195,8 +2195,8 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know" title="The Cognitive Reserve Benefit">
           <p>
-            Research shows that older adults who learn new skills — whether languages, instruments,
-            or physical activities — build cognitive reserve that protects against age-related
+            Research shows that older adults who learn new skills --- whether languages, instruments,
+            or physical activities --- build cognitive reserve that protects against age-related
             decline <Citation id="8" index={3} source="Frontiers in Aging Neuroscience" year="2021" tier={1} />. Behavior
             change isn't just possible in later life; it's protective.
           </p>
@@ -2271,7 +2271,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
             </div>
             <p className="text-gray-700 dark:text-gray-300">
               <strong>Strategy:</strong> Research shows midlife is a pivotal period for positive
-              change — many people report it as their most transformative decade <Citation id="3" index={4} source="Developmental Psychology" year="2016" tier={1} />. Use your
+              change --- many people report it as their most transformative decade <Citation id="3" index={4} source="Developmental Psychology" year="2016" tier={1} />. Use your
               self-knowledge to choose changes that truly matter. Don't waste energy on "shoulds."
             </p>
           </div>
@@ -2329,7 +2329,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    In your 20s and 30s, your identity is still forming. This is an advantage — you
+                    In your 20s and 30s, your identity is still forming. This is an advantage --- you
                     can build behaviors into your sense of self before conflicting identities
                     solidify.
                   </p>
@@ -2341,8 +2341,8 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                       Focus on becoming "the type of person who..." rather than achieving outcomes
                     </li>
                     <li>Join communities that reinforce desired identities</li>
-                    <li>Use social accountability heavily — your peer group matters enormously</li>
-                    <li>Start small but start now — compound effects are your superpower</li>
+                    <li>Use social accountability heavily --- your peer group matters enormously</li>
+                    <li>Start small but start now --- compound effects are your superpower</li>
                   </ul>
                 </div>
               ),
@@ -2366,7 +2366,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                     </li>
                     <li>Invest resources strategically (hire trainers, therapists, coaches)</li>
                     <li>
-                      Embrace "mortality salience" — awareness of finite time can be motivating,
+                      Embrace "mortality salience" --- awareness of finite time can be motivating,
                       not depressing <Citation id="6" index={7} source="Health Psychology Review" year="2017" tier={1} />
                     </li>
                   </ul>
@@ -2397,11 +2397,11 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
                       instead of power yoga)
                     </li>
                     <li>
-                      Join age-appropriate groups — social connection is especially protective in
+                      Join age-appropriate groups --- social connection is especially protective in
                       later life <Citation id="7" index={9} source="The Gerontologist" year="2019" tier={1} />
                     </li>
                     <li>
-                      Focus on maintenance and consistency over intensity — sustainable beats optimal
+                      Focus on maintenance and consistency over intensity --- sustainable beats optimal
                     </li>
                   </ul>
                 </div>
@@ -2418,7 +2418,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           History and research are full of people who made transformative changes well into later
-          life. These aren't exceptions — they're proof of principle:
+          life. These aren't exceptions --- they're proof of principle:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -2477,7 +2477,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           Challenging Ageist Beliefs (Internal and External)
         </h2>
         <p className="mb-6">
-          One of the biggest barriers to change in later life isn't biological — it's
+          One of the biggest barriers to change in later life isn't biological --- it's
           psychological. Internalized ageism ("I'm too old for this") and external ageism ("Why
           bother at your age?") create self-fulfilling prophecies.
         </p>
@@ -2530,7 +2530,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           <p>
             Every age has its challenges and its gifts. Youth has energy; age has wisdom. Youth has
             time; age has urgency. Youth has plasticity; age has intentionality. There is no "best"
-            time to change — there is only your time, and it's always the right time to begin.
+            time to change --- there is only your time, and it's always the right time to begin.
           </p>
         </ArticleCallout>
 
@@ -2543,7 +2543,7 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
 
         <p className="mb-6">
           It's never too late. Not because change is easy at any age, but because the capacity for
-          transformation is woven into the fabric of being human — and that capacity doesn't expire.
+          transformation is woven into the fabric of being human --- and that capacity doesn't expire.
         </p>
       </>
     ),

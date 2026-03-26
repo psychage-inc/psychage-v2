@@ -110,10 +110,10 @@ export const seasonalPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every year, as the days shorten and winter sets in, millions of people experience a predictable shift: energy drains away, sleep becomes heavy and excessive, cravings for carbs intensify, and a low-grade depression settles in like fog. When spring arrives, the symptoms lift—almost as if someone flipped a switch.
+            Every year, as the days shorten and winter sets in, millions of people experience a predictable shift: energy drains away, sleep becomes heavy and excessive, cravings for carbs intensify, and a low-grade depression settles in like fog. When spring arrives, the symptoms lift---almost as if someone flipped a switch.
           </p>
           <p className="mb-6">
-            This is Seasonal Affective Disorder (SAD), a subtype of depression characterized by episodes that recur at the same time each year, typically starting in fall or winter and remitting in spring or summer <Citation id="1" index={1} source="American Family Physician" year="2020" tier={2} />. This article provides a comprehensive overview of SAD—what it is, how it develops, and what treatments actually work.
+            This is Seasonal Affective Disorder (SAD), a subtype of depression characterized by episodes that recur at the same time each year, typically starting in fall or winter and remitting in spring or summer <Citation id="1" index={1} source="American Family Physician" year="2020" tier={2} />. This article provides a comprehensive overview of SAD---what it is, how it develops, and what treatments actually work.
           </p>
         </div>
 
@@ -184,7 +184,7 @@ export const seasonalPatternsArticlesA: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Geographic location:</strong> Living far from the equator where daylight hours dramatically shorten in winter</li>
-          <li><strong>Age:</strong> Most commonly develops in young adulthood (20s–30s)</li>
+          <li><strong>Age:</strong> Most commonly develops in young adulthood (20s--30s)</li>
           <li><strong>Sex:</strong> Women are 4 times more likely to be diagnosed</li>
           <li><strong>Family history:</strong> Having a close relative with SAD or other depression increases risk <Citation id="9" index={9} source="Translational Psychiatry" year="2018" tier={1} /></li>
           <li><strong>Personal history:</strong> Having major depression or bipolar disorder increases vulnerability</li>
@@ -208,7 +208,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           2. Serotonin Dysregulation
         </h3>
         <p className="mb-6">
-          Reduced sunlight lowers serotonin production—a neurotransmitter that regulates mood, appetite, and sleep. People with SAD have lower serotonin activity in winter months.
+          Reduced sunlight lowers serotonin production---a neurotransmitter that regulates mood, appetite, and sleep. People with SAD have lower serotonin activity in winter months.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -260,7 +260,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           1. Light Therapy (First-Line Treatment)
         </h3>
         <p className="mb-6">
-          Bright light therapy involves sitting in front of a specialized light box (10,000 lux) for 20–30 minutes each morning. Meta-analyses show it reduces SAD symptoms in 50–80% of people <Citation id="3" index={3} source="American Journal of Psychiatry" year="2005" tier={1} />.
+          Bright light therapy involves sitting in front of a specialized light box (10,000 lux) for 20--30 minutes each morning. Meta-analyses show it reduces SAD symptoms in 50--80% of people <Citation id="3" index={3} source="American Journal of Psychiatry" year="2005" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>How it works:</strong> Bright light resets circadian rhythms, suppresses melatonin, and boosts serotonin production.
@@ -268,7 +268,7 @@ export const seasonalPatternsArticlesA: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            <strong>Light therapy tips:</strong> Use the light box within 30 minutes of waking, sit 16–24 inches away, keep your eyes open (but don't stare directly at the light), and continue daily throughout fall/winter. Most people notice improvement within 1–2 weeks.
+            <strong>Light therapy tips:</strong> Use the light box within 30 minutes of waking, sit 16--24 inches away, keep your eyes open (but don't stare directly at the light), and continue daily throughout fall/winter. Most people notice improvement within 1--2 weeks.
           </p>
         </ArticleCallout>
 
@@ -306,7 +306,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you notice a pattern of depressive symptoms that begins and ends around the same time each year, talk to a healthcare provider. Early intervention—ideally in early fall before symptoms fully develop—can prevent a severe episode.
+          If you notice a pattern of depressive symptoms that begins and ends around the same time each year, talk to a healthcare provider. Early intervention---ideally in early fall before symptoms fully develop---can prevent a severe episode.
         </p>
         <p className="mb-6">
           If you experience suicidal thoughts at any time, seek immediate help: call or text 988 (Suicide & Crisis Lifeline) or go to your nearest emergency room.
@@ -405,7 +405,7 @@ export const seasonalPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Bright light therapy is the first-line treatment for seasonal affective disorder (SAD), backed by decades of research showing it works as well as antidepressant medication—without the side effects. But not all light boxes are created equal, and timing matters more than you might think.
+            Bright light therapy is the first-line treatment for seasonal affective disorder (SAD), backed by decades of research showing it works as well as antidepressant medication---without the side effects. But not all light boxes are created equal, and timing matters more than you might think.
           </p>
           <p className="mb-6">
             This article explains how light therapy works at a biological level, what the evidence shows, and how to use it effectively <Citation id="1" index={1} source="American Journal of Psychiatry" year="2005" tier={1} />.
@@ -416,7 +416,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           How Light Therapy Works
         </h2>
         <p className="mb-6">
-          Light therapy, also called phototherapy or bright light treatment, involves exposure to artificial light that mimics natural outdoor light—typically 10,000 lux, which is much brighter than standard indoor lighting (300–500 lux) but dimmer than direct sunlight (50,000–100,000 lux).
+          Light therapy, also called phototherapy or bright light treatment, involves exposure to artificial light that mimics natural outdoor light---typically 10,000 lux, which is much brighter than standard indoor lighting (300--500 lux) but dimmer than direct sunlight (50,000--100,000 lux).
           </p>
         <p className="mb-6">
           When light enters your eyes, it triggers several biological processes <Citation id="3" index={3} source="Journal of Biological Rhythms" year="2020" tier={1} />:
@@ -440,12 +440,12 @@ export const seasonalPatternsArticlesA: Article[] = [
           3. Serotonin Enhancement
         </h3>
         <p className="mb-6">
-          Bright light increases serotonin activity in the brain—similar to how antidepressants work. This improves mood, energy, and appetite regulation.
+          Bright light increases serotonin activity in the brain---similar to how antidepressants work. This improves mood, energy, and appetite regulation.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Light therapy doesn't just "trick" your brain into thinking it's summer. It produces measurable changes in brain chemistry, hormone levels, and circadian timing—changes that directly counteract the biological mechanisms of SAD.
+            Light therapy doesn't just "trick" your brain into thinking it's summer. It produces measurable changes in brain chemistry, hormone levels, and circadian timing---changes that directly counteract the biological mechanisms of SAD.
           </p>
         </ArticleCallout>
 
@@ -453,13 +453,13 @@ export const seasonalPatternsArticlesA: Article[] = [
           How Effective Is Light Therapy?
         </h2>
         <p className="mb-6">
-          Meta-analyses of randomized controlled trials consistently show that light therapy reduces SAD symptoms in 50–80% of people <Citation id="1" index={1} source="American Journal of Psychiatry" year="2005" tier={1} />. Effect sizes are comparable to antidepressant medications.
+          Meta-analyses of randomized controlled trials consistently show that light therapy reduces SAD symptoms in 50--80% of people <Citation id="1" index={1} source="American Journal of Psychiatry" year="2005" tier={1} />. Effect sizes are comparable to antidepressant medications.
         </p>
 
         <StatCard
           stats={[
             { value: 67, suffix: '%', label: 'Response rate (significant symptom reduction)' },
-            { value: 1, suffix: '–2', label: 'Weeks to see improvement' },
+            { value: 1, suffix: '--2', label: 'Weeks to see improvement' },
             { value: 0.84, suffix: '', label: 'Effect size (large) vs. placebo' },
           ]}
           source="American Journal of Psychiatry, 2005"
@@ -489,7 +489,7 @@ export const seasonalPatternsArticlesA: Article[] = [
               title: 'Choose the right light box',
               description: (
                 <div>
-                  <p className="mb-2">Look for a device that provides <strong>10,000 lux</strong> at a comfortable sitting distance (typically 16–24 inches).</p>
+                  <p className="mb-2">Look for a device that provides <strong>10,000 lux</strong> at a comfortable sitting distance (typically 16--24 inches).</p>
                   <p className="mb-2">The light should be <strong>UV-filtered</strong> to protect your eyes and skin.</p>
                   <p>White light is standard; some devices use blue-enriched light, which may be effective at lower intensities <Citation id="9" index={9} source="Journal of Affective Disorders" year="2020" tier={1} />.</p>
                 </div>
@@ -501,7 +501,7 @@ export const seasonalPatternsArticlesA: Article[] = [
                 <div>
                   <p className="mb-2"><strong>Use light therapy within 30 minutes of waking up.</strong> Morning exposure is most effective for resetting circadian rhythms <Citation id="5" index={5} source="Chronobiology International" year="2018" tier={1} />.</p>
                   <p className="mb-2">Avoid use in the evening, as it can delay your sleep schedule and worsen insomnia.</p>
-                  <p>Consistency is key—use it every day throughout fall and winter.</p>
+                  <p>Consistency is key---use it every day throughout fall and winter.</p>
                 </div>
               ),
             },
@@ -509,16 +509,16 @@ export const seasonalPatternsArticlesA: Article[] = [
               title: 'Position yourself correctly',
               description: (
                 <div>
-                  <p className="mb-2">Sit with the light box off to the side, not directly in front of your eyes. You don't stare at the light—you just need it in your peripheral vision.</p>
+                  <p className="mb-2">Sit with the light box off to the side, not directly in front of your eyes. You don't stare at the light---you just need it in your peripheral vision.</p>
                   <p>Keep your eyes open during the session (you can read, eat, work on a laptop).</p>
                 </div>
               ),
             },
             {
-              title: 'Start with 20–30 minutes daily',
+              title: 'Start with 20--30 minutes daily',
               description: (
                 <div>
-                  <p className="mb-2">Most people benefit from 20–30 minutes at 10,000 lux. If using a lower-intensity light (e.g., 2,500 lux), you'll need longer exposure (up to 2 hours).</p>
+                  <p className="mb-2">Most people benefit from 20--30 minutes at 10,000 lux. If using a lower-intensity light (e.g., 2,500 lux), you'll need longer exposure (up to 2 hours).</p>
                   <p>You can split sessions (e.g., 15 minutes twice a day), but morning is most important.</p>
                 </div>
               ),
@@ -546,7 +546,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           title="Light Box Features to Consider"
           columns={['Feature', 'What to Look For']}
           items={[
-            { feature: 'Light intensity', values: ['10,000 lux at recommended distance (usually 16–24 inches)'] },
+            { feature: 'Light intensity', values: ['10,000 lux at recommended distance (usually 16--24 inches)'] },
             { feature: 'Size', values: ['Large enough to provide full-field illumination (at least 12x17 inches)'] },
             { feature: 'UV filtration', values: ['Must block UV rays to protect eyes and skin'] },
             { feature: 'Light color', values: ['White light (full spectrum) is standard; blue-enriched is emerging'] },
@@ -606,7 +606,7 @@ export const seasonalPatternsArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Symptoms don't improve after 2–3 weeks of consistent use</li>
+          <li>Symptoms don't improve after 2--3 weeks of consistent use</li>
           <li>You experience side effects that don't resolve</li>
           <li>You have bipolar disorder or other conditions that require monitoring</li>
           <li>You're unsure whether your symptoms are due to SAD or another condition</li>
@@ -681,7 +681,7 @@ export const seasonalPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When people hear "seasonal affective disorder," they think of winter: short days, cold weather, and the urge to hibernate. But for a smaller subset of people, the pattern is reversed. Their depression arrives with longer days, heat, and humidity—and disappears when fall returns.
+            When people hear "seasonal affective disorder," they think of winter: short days, cold weather, and the urge to hibernate. But for a smaller subset of people, the pattern is reversed. Their depression arrives with longer days, heat, and humidity---and disappears when fall returns.
           </p>
           <p className="mb-6">
             This is summer-pattern SAD (sometimes called reverse SAD), a less-recognized but equally debilitating form of seasonal depression <Citation id="1" index={1} source="Journal of Affective Disorders" year="2016" tier={1} />. This article explores what summer SAD is, why it happens, and how it's treated.
@@ -775,7 +775,7 @@ export const seasonalPatternsArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            Summer SAD may be more common in regions with extreme summer heat and humidity (e.g., the southern United States). Geography matters for summer SAD just as it does for winter SAD—but in the opposite direction.
+            Summer SAD may be more common in regions with extreme summer heat and humidity (e.g., the southern United States). Geography matters for summer SAD just as it does for winter SAD---but in the opposite direction.
           </p>
         </ArticleCallout>
 
@@ -913,7 +913,7 @@ export const seasonalPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You don't need to have seasonal affective disorder to notice that your mood, energy, and motivation shift with the seasons. Most people—even those without clinical depression—experience some degree of seasonal mood variation. It's a normal human response to changing light, temperature, and environmental cues.
+            You don't need to have seasonal affective disorder to notice that your mood, energy, and motivation shift with the seasons. Most people---even those without clinical depression---experience some degree of seasonal mood variation. It's a normal human response to changing light, temperature, and environmental cues.
           </p>
           <p className="mb-6">
             This article explores why seasonal mood changes happen in the general population and how to work with (not against) your body's natural rhythms <Citation id="1" index={1} source="Psychiatry Research" year="2016" tier={1} />.
@@ -924,7 +924,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           Seasonal Variation in Mood Is Normal
         </h2>
         <p className="mb-6">
-          Studies show that up to 90% of people report some seasonal mood variation—feeling more energetic in spring and summer, more withdrawn or sluggish in fall and winter <Citation id="2" index={2} source="Current Opinion in Psychiatry" year="2018" tier={2} />. For most people, these shifts are mild and don't interfere with daily functioning.
+          Studies show that up to 90% of people report some seasonal mood variation---feeling more energetic in spring and summer, more withdrawn or sluggish in fall and winter <Citation id="2" index={2} source="Current Opinion in Psychiatry" year="2018" tier={2} />. For most people, these shifts are mild and don't interfere with daily functioning.
         </p>
         <p className="mb-6">
           <strong>Common seasonal patterns include:</strong>
@@ -954,7 +954,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           1. Light Exposure
         </h3>
         <p className="mb-6">
-          Daylight hours dramatically shift throughout the year. Light regulates circadian rhythms, serotonin production, and melatonin release—all of which influence mood, energy, and sleep.
+          Daylight hours dramatically shift throughout the year. Light regulates circadian rhythms, serotonin production, and melatonin release---all of which influence mood, energy, and sleep.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -982,7 +982,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           5. Temperature
         </h3>
         <p className="mb-6">
-          Extreme cold or heat can affect comfort, sleep quality, and physical health—all of which influence mood.
+          Extreme cold or heat can affect comfort, sleep quality, and physical health---all of which influence mood.
         </p>
 
         <h2 id="when-to-be-concerned" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1019,8 +1019,8 @@ export const seasonalPatternsArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Maximize morning light:</strong> Open curtains, sit by windows, take walks during daylight hours</li>
           <li><strong>Maintain movement:</strong> Even indoor exercise helps counteract winter sluggishness</li>
-          <li><strong>Keep social plans:</strong> Don't cancel everything—maintain some connection even if you feel like hibernating</li>
-          <li><strong>Create cozy rituals:</strong> Embrace hygge (Danish concept of cozy contentment)—candlelight, warm drinks, comfortable spaces</li>
+          <li><strong>Keep social plans:</strong> Don't cancel everything---maintain some connection even if you feel like hibernating</li>
+          <li><strong>Create cozy rituals:</strong> Embrace hygge (Danish concept of cozy contentment)---candlelight, warm drinks, comfortable spaces</li>
         </ul>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1028,7 +1028,7 @@ export const seasonalPatternsArticlesA: Article[] = [
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Balance activity with rest:</strong> Summer's energy can lead to overcommitment and burnout</li>
-          <li><strong>Stay cool:</strong> Heat affects mood—use AC, stay hydrated, avoid peak sun hours if sensitive</li>
+          <li><strong>Stay cool:</strong> Heat affects mood---use AC, stay hydrated, avoid peak sun hours if sensitive</li>
           <li><strong>Set boundaries:</strong> You don't have to say yes to every summer invitation</li>
         </ul>
 
@@ -1042,7 +1042,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If seasonal mood changes are interfering with your life—making it hard to work, maintain relationships, or take care of yourself—talk to a healthcare provider. You may have seasonal affective disorder, which is treatable.
+          If seasonal mood changes are interfering with your life---making it hard to work, maintain relationships, or take care of yourself---talk to a healthcare provider. You may have seasonal affective disorder, which is treatable.
         </p>
         <p className="mb-6">
           Don't assume "everyone feels this way" or that you just need to tough it out. Effective treatments exist, and you don't have to struggle through every winter.
@@ -1055,7 +1055,7 @@ export const seasonalPatternsArticlesA: Article[] = [
     id: catId(45),
     slug: 'circadian-rhythms-mood-internal-clock-matters',
     title: 'Circadian Rhythms and Mood: Why Your Internal Clock Matters',
-    description: "Your 24-hour biological clock doesn't just regulate sleep—it profoundly influences mood, energy, and mental health. Here's how it works and why it matters.",
+    description: "Your 24-hour biological clock doesn't just regulate sleep---it profoundly influences mood, energy, and mental health. Here's how it works and why it matters.",
     image: '/images/articles/cat07/cover-045.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 9,
@@ -1133,7 +1133,7 @@ export const seasonalPatternsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your body runs on a 24-hour internal clock that orchestrates everything from when you feel hungry to when your immune system peaks. This clock—your circadian rhythm—doesn't just regulate sleep. It profoundly influences mood, energy, cognitive function, and vulnerability to mental illness.
+            Your body runs on a 24-hour internal clock that orchestrates everything from when you feel hungry to when your immune system peaks. This clock---your circadian rhythm---doesn't just regulate sleep. It profoundly influences mood, energy, cognitive function, and vulnerability to mental illness.
           </p>
           <p className="mb-6">
             When this internal clock falls out of sync with the external world (due to irregular sleep, shift work, travel, or lack of light exposure), mental health suffers <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2019" tier={1} />. This article explains how circadian rhythms work and why protecting them is essential for emotional well-being.
@@ -1161,7 +1161,7 @@ export const seasonalPatternsArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Your circadian rhythm is not just about sleep. It's a master regulator that affects nearly every system in your body—including the systems that control mood and emotional regulation.
+            Your circadian rhythm is not just about sleep. It's a master regulator that affects nearly every system in your body---including the systems that control mood and emotional regulation.
           </p>
         </ArticleCallout>
 
@@ -1176,7 +1176,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           1. Neurotransmitter Regulation
         </h3>
         <p className="mb-6">
-          Your circadian clock influences the production and release of mood-regulating neurotransmitters like serotonin, dopamine, and norepinephrine. When the clock is disrupted, neurotransmitter timing goes awry—contributing to depressive symptoms.
+          Your circadian clock influences the production and release of mood-regulating neurotransmitters like serotonin, dopamine, and norepinephrine. When the clock is disrupted, neurotransmitter timing goes awry---contributing to depressive symptoms.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1202,7 +1202,7 @@ export const seasonalPatternsArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            People with depression often show a delayed circadian phase—meaning their internal clock is set later than the external day-night cycle. This is why morning depression symptoms are often worst, and why waking at the same time every day (even weekends) can help.
+            People with depression often show a delayed circadian phase---meaning their internal clock is set later than the external day-night cycle. This is why morning depression symptoms are often worst, and why waking at the same time every day (even weekends) can help.
           </p>
         </ArticleCallout>
 
@@ -1242,7 +1242,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           1. Consistent Sleep-Wake Times
         </h3>
         <p className="mb-6">
-          Go to bed and wake up at the same time every day—including weekends. This is the single most powerful circadian anchor.
+          Go to bed and wake up at the same time every day---including weekends. This is the single most powerful circadian anchor.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1256,7 +1256,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           3. Limit Evening Light
         </h3>
         <p className="mb-6">
-          Dim lights 2–3 hours before bed. Use blue-light-blocking glasses or apps if you must use screens. Darkness signals melatonin production.
+          Dim lights 2--3 hours before bed. Use blue-light-blocking glasses or apps if you must use screens. Darkness signals melatonin production.
         </p>
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1300,7 +1300,7 @@ export const seasonalPatternsArticlesA: Article[] = [
           If you have persistent circadian rhythm disruption (due to shift work, travel, or chronic sleep problems) and are experiencing mood symptoms, talk to a healthcare provider. Circadian rhythm sleep disorders are treatable, and addressing them can improve depression outcomes.
         </p>
         <p className="mb-6">
-          Your internal clock is powerful—and protecting it is one of the most evidence-based things you can do for your mental health.
+          Your internal clock is powerful---and protecting it is one of the most evidence-based things you can do for your mental health.
         </p>
       </>
     ),

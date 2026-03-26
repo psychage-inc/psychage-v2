@@ -97,10 +97,10 @@ export const communityBelongingPurposeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You have individual friendships, but you don't feel part of anything larger. No team, no community, no group where you're a recognized member. You're floating, untethered, watching others have their 'people' while you navigate alone. The loneliness isn't just about lacking individual connections — it's about not belonging anywhere.
+            You have individual friendships, but you don't feel part of anything larger. No team, no community, no group where you're a recognized member. You're floating, untethered, watching others have their 'people' while you navigate alone. The loneliness isn't just about lacking individual connections --- it's about not belonging anywhere.
           </p>
           <p className="mb-6">
-            Belonging — the feeling of being accepted and valued as part of something larger than yourself — is a fundamental human need <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2019" tier={1} />. When this need goes unmet, mental health suffers profoundly.
+            Belonging --- the feeling of being accepted and valued as part of something larger than yourself --- is a fundamental human need <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2019" tier={1} />. When this need goes unmet, mental health suffers profoundly.
           </p>
         </div>
 
@@ -210,7 +210,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
             { feature: 'Requires changing yourself to match the group', values: ['Being accepted as you are'] },
             { feature: `Conditional acceptance ("if you conform, we accept you")`, values: [`Unconditional acceptance ("you're one of us")`] },
             { feature: 'Exhausting, requires constant performance', values: ['Energizing, allows authenticity'] },
-            { feature: 'Fragile — can be lost if you stop conforming', values: ['Stable — survives disagreement or change'] },
+            { feature: 'Fragile --- can be lost if you stop conforming', values: ['Stable --- survives disagreement or change'] },
             { feature: 'Feels hollow despite being included', values: ['Feels nourishing and genuine'] },
           ]}
           highlightColumn={1}
@@ -224,7 +224,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
           Belonging Uncertainty: The Psychological Toll
         </h2>
         <p className="mb-6">
-          "Belonging uncertainty" — not knowing whether you're truly accepted — is particularly harmful <Citation id="5" index={5} source="Personality and Social Psychology Review" year="2018" tier={1} />:
+          "Belonging uncertainty" --- not knowing whether you're truly accepted --- is particularly harmful <Citation id="5" index={5} source="Personality and Social Psychology Review" year="2018" tier={1} />:
         </p>
 
         <BeforeAfter
@@ -262,7 +262,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
           Different Types of Belonging
         </h2>
         <p className="mb-6">
-          You don't need to belong everywhere — but you need to belong somewhere <Citation id="7" index={7} source="Social Psychology Quarterly" year="2020" tier={1} />:
+          You don't need to belong everywhere --- but you need to belong somewhere <Citation id="7" index={7} source="Social Psychology Quarterly" year="2020" tier={1} />:
         </p>
 
         <ArticleChart
@@ -412,7 +412,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Belonging — being accepted, valued, and connected to something larger than yourself — is a fundamental human need. When this need goes unmet, mental health suffers. Finding even one community where you truly belong can transform your well-being.</p>
+          <p>Belonging --- being accepted, valued, and connected to something larger than yourself --- is a fundamental human need. When this need goes unmet, mental health suffers. Finding even one community where you truly belong can transform your well-being.</p>
         </ArticleCallout>
       </>
     ),
@@ -503,7 +503,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
             You've heard that helping others is good for you, but it sounds like feel-good platitudes. The reality is far more concrete: volunteering and community involvement trigger measurable changes in brain chemistry, reduce depression and anxiety, and create social connections that buffer against loneliness.
           </p>
           <p className="mb-6">
-            This isn't just correlation — it's causation. Research using brain imaging and controlled studies reveals exactly how helping others changes your brain and improves mental health <Citation id="1" index={1} source="BMC Public Health" year="2020" tier={1} />.
+            This isn't just correlation --- it's causation. Research using brain imaging and controlled studies reveals exactly how helping others changes your brain and improves mental health <Citation id="1" index={1} source="BMC Public Health" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -522,7 +522,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
               title: 'Reward System Activation',
               content: (
                 <div>
-                  <p className="mb-3">Helping others activates the brain's reward circuitry — the same regions involved in pleasure and motivation.</p>
+                  <p className="mb-3">Helping others activates the brain's reward circuitry --- the same regions involved in pleasure and motivation.</p>
                   <p className="mb-2"><strong>What happens:</strong></p>
                   <ul className="list-disc pl-5 space-y-1 mb-3">
                     <li>Ventral striatum and nucleus accumbens light up</li>
@@ -538,7 +538,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
               title: 'Oxytocin Release',
               content: (
                 <div>
-                  <p className="mb-3">Social connection through volunteering triggers oxytocin release — the "bonding hormone" <Citation id="4" index={4} source="Frontiers in Psychology" year="2020" tier={1} />.</p>
+                  <p className="mb-3">Social connection through volunteering triggers oxytocin release --- the "bonding hormone" <Citation id="4" index={4} source="Frontiers in Psychology" year="2020" tier={1} />.</p>
                   <p className="mb-2"><strong>Effects of oxytocin:</strong></p>
                   <ul className="list-disc pl-5 space-y-1 mb-3">
                     <li>Reduces stress and anxiety</li>
@@ -554,7 +554,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
               title: `Endorphin Surge ("Helper's High")`,
               content: (
                 <div>
-                  <p className="mb-3">Many volunteers report a "helper's high" — euphoria similar to runner's high.</p>
+                  <p className="mb-3">Many volunteers report a "helper's high" --- euphoria similar to runner's high.</p>
                   <p className="mb-2"><strong>Neurochemical mechanism:</strong></p>
                   <ul className="list-disc pl-5 space-y-1 mb-3">
                     <li>Endorphin release creates natural mood elevation</li>
@@ -651,18 +651,18 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>Why volunteering is especially effective for loneliness:</strong> It provides structured social contact, shared purpose, and a role where you're needed — all elements that combat isolation.
+          <strong>Why volunteering is especially effective for loneliness:</strong> It provides structured social contact, shared purpose, and a role where you're needed --- all elements that combat isolation.
         </p>
 
         <h2 id="purpose-meaning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Purpose and Meaning: The Psychological Mechanism
         </h2>
         <p className="mb-6">
-          Volunteering doesn't just provide social contact — it creates sense of purpose <Citation id="5" index={5} source="Journal of Positive Psychology" year="2019" tier={1} />:
+          Volunteering doesn't just provide social contact --- it creates sense of purpose <Citation id="5" index={5} source="Journal of Positive Psychology" year="2019" tier={1} />:
         </p>
 
         <QuoteBlock
-          quote="People with a strong sense of purpose in life have lower rates of depression, better cognitive function, and even longer lifespans. Volunteering provides a clear pathway to purpose — you see tangible impact from your efforts."
+          quote="People with a strong sense of purpose in life have lower rates of depression, better cognitive function, and even longer lifespans. Volunteering provides a clear pathway to purpose --- you see tangible impact from your efforts."
           attribution="Dr. Patricia Boyle"
           role="Neuropsychologist"
           source="Rush University Medical Center"
@@ -674,7 +674,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Visible impact:</strong> You see how your actions help others</li>
-          <li><strong>Role identity:</strong> You become "someone who helps" — part of your identity</li>
+          <li><strong>Role identity:</strong> You become "someone who helps" --- part of your identity</li>
           <li><strong>Contribution:</strong> You're making a difference, however small</li>
           <li><strong>Connection to something larger:</strong> Part of a cause or community bigger than yourself</li>
         </ul>
@@ -834,7 +834,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         </ArticleCallout>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Volunteering creates measurable changes in brain chemistry — activating reward circuits, releasing oxytocin and endorphins, and creating sense of purpose. Research shows 2-4 hours per week of consistent volunteering significantly reduces depression, anxiety, and loneliness while increasing well-being.</p>
+          <p>Volunteering creates measurable changes in brain chemistry --- activating reward circuits, releasing oxytocin and endorphins, and creating sense of purpose. Research shows 2-4 hours per week of consistent volunteering significantly reduces depression, anxiety, and loneliness while increasing well-being.</p>
         </ArticleCallout>
       </>
     ),
@@ -914,10 +914,10 @@ export const communityBelongingPurposeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've tried joining groups, but they don't feel like your people. The conversations stay surface-level, the activities don't excite you, and you leave feeling more alone than before. You're not antisocial — you just haven't found your tribe yet.
+            You've tried joining groups, but they don't feel like your people. The conversations stay surface-level, the activities don't excite you, and you leave feeling more alone than before. You're not antisocial --- you just haven't found your tribe yet.
           </p>
           <p className="mb-6">
-            Research shows that the strongest connections form around shared interests and values <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2019" tier={1} />. Finding your tribe isn't about forcing yourself into any available community — it's about identifying where you genuinely belong.
+            Research shows that the strongest connections form around shared interests and values <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2019" tier={1} />. Finding your tribe isn't about forcing yourself into any available community --- it's about identifying where you genuinely belong.
           </p>
         </div>
 
@@ -1121,7 +1121,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="tip">
-          <p>Don't settle for a generic group if your interests are specific. The internet has made it possible to find even the most niche communities. Your exact tribe exists — you just need to find them.</p>
+          <p>Don't settle for a generic group if your interests are specific. The internet has made it possible to find even the most niche communities. Your exact tribe exists --- you just need to find them.</p>
         </ArticleCallout>
 
         <h2 id="integrating" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1146,7 +1146,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Show up consistently:</strong> Regularity matters more than frequency</li>
           <li><strong>Contribute without dominating:</strong> Add value, don't take over</li>
-          <li><strong>Learn the culture:</strong> Every group has norms and inside jokes — pay attention</li>
+          <li><strong>Learn the culture:</strong> Every group has norms and inside jokes --- pay attention</li>
           <li><strong>Make individual connections:</strong> Don't just interact in group settings</li>
           <li><strong>Be patient:</strong> Becoming an insider takes time</li>
         </ul>
@@ -1165,7 +1165,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Your tribe is out there — people who share your interests, values, and communication style. Finding them requires clarity about what you're looking for, willingness to seek niche communities, and patience with the integration process. When you find your people, you'll know.</p>
+          <p>Your tribe is out there --- people who share your interests, values, and communication style. Finding them requires clarity about what you're looking for, willingness to seek niche communities, and patience with the integration process. When you find your people, you'll know.</p>
         </ArticleCallout>
       </>
     ),
@@ -1256,7 +1256,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
             You don't have to believe in God to recognize that religious communities provide something powerful: built-in social support, shared values, regular gathering times, and a framework for meaning and purpose. For those who find spiritual resonance there, these communities offer unique mental health benefits.
           </p>
           <p className="mb-6">
-            Research consistently shows that active participation in religious communities correlates with better mental health outcomes <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. This article explores the social mechanisms — separate from theological belief — that make these communities beneficial.
+            Research consistently shows that active participation in religious communities correlates with better mental health outcomes <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. This article explores the social mechanisms --- separate from theological belief --- that make these communities beneficial.
           </p>
         </div>
 
@@ -1277,7 +1277,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="clinical-note">
-          <p><strong>Important caveat:</strong> These are correlations, not causations. Religious communities attract and retain people who may already have better mental health or more social support. Additionally, these benefits apply across diverse faith traditions — not exclusive to any one religion <Citation id="7" index={7} source="International Journal for the Psychology of Religion" year="2020" tier={1} />.</p>
+          <p><strong>Important caveat:</strong> These are correlations, not causations. Religious communities attract and retain people who may already have better mental health or more social support. Additionally, these benefits apply across diverse faith traditions --- not exclusive to any one religion <Citation id="7" index={7} source="International Journal for the Psychology of Religion" year="2020" tier={1} />.</p>
         </ArticleCallout>
 
         <h2 id="social-mechanisms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1299,7 +1299,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
                   <p className="mb-2"><strong>Why this matters:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
                     <li>You see the same people regularly (proximity effect)</li>
-                    <li>No need to schedule — it's built into the week</li>
+                    <li>No need to schedule --- it's built into the week</li>
                     <li>Provides structure and routine</li>
                     <li>Low barrier to participation (just show up)</li>
                   </ul>
@@ -1619,7 +1619,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
             You can explain your struggle to friends and family, but they don't truly understand. They try to help, but their advice misses the mark because they haven't lived it. Then you walk into a support group and hear someone describe exactly what you're experiencing. For the first time, you don't feel alone.
           </p>
           <p className="mb-6">
-            Support groups — communities of people facing similar challenges — provide a unique form of healing that professional therapy and social support can't fully replicate <Citation id="1" index={1} source="Psychiatric Services" year="2020" tier={1} />. Here's what makes them powerful.
+            Support groups --- communities of people facing similar challenges --- provide a unique form of healing that professional therapy and social support can't fully replicate <Citation id="1" index={1} source="Psychiatric Services" year="2020" tier={1} />. Here's what makes them powerful.
           </p>
         </div>
 
@@ -1671,7 +1671,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
                 <div>
                   <p className="mb-3">Seeing others further along in recovery provides tangible evidence that things can improve.</p>
                   <p className="mb-2"><strong>Example:</strong></p>
-                  <p>New members see someone six months sober and think "if they can do it, maybe I can too" — more powerful than abstract reassurance.</p>
+                  <p>New members see someone six months sober and think "if they can do it, maybe I can too" --- more powerful than abstract reassurance.</p>
                 </div>
               ),
             },

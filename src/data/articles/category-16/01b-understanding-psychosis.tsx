@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 1 — Understanding Psychosis | Articles 6–10
+// Subcategory 1 --- Understanding Psychosis | Articles 6--10
 // ============================================================================
 
 export const understandingPsychosisArticlesB: Article[] = [
@@ -25,7 +25,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     id: catId(6),
     slug: 'drug-induced-psychosis-when-substances-trigger-breaks-from-reality',
     title: 'Drug-Induced Psychosis: When Substances Trigger Breaks From Reality',
-    description: 'An evidence-based guide to substance-induced psychosis — which drugs carry the highest risk, how it differs from primary psychotic disorders, and what recovery looks like.',
+    description: 'An evidence-based guide to substance-induced psychosis --- which drugs carry the highest risk, how it differs from primary psychotic disorders, and what recovery looks like.',
     image: '/images/articles/cat16/cover-006.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -34,25 +34,25 @@ export const understandingPsychosisArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Psychosis', 'Substance Use', 'Cannabis', 'Methamphetamine'],
 
-    summary: 'Substance-induced psychosis occurs when a drug — whether recreational, prescribed, or withdrawn abruptly — triggers hallucinations, delusions, or severely disorganized behavior. Cannabis, methamphetamine, cocaine, hallucinogens, and alcohol withdrawal are among the most common causes. For many people, substance-induced psychosis resolves once the drug clears the system. But for a significant minority — estimated at 25–35% — it marks the beginning of a primary psychotic disorder like schizophrenia. Distinguishing between substance-induced and primary psychosis is one of the most challenging tasks in clinical psychiatry, and getting it right determines whether someone receives the treatment they actually need.',
+    summary: 'Substance-induced psychosis occurs when a drug --- whether recreational, prescribed, or withdrawn abruptly --- triggers hallucinations, delusions, or severely disorganized behavior. Cannabis, methamphetamine, cocaine, hallucinogens, and alcohol withdrawal are among the most common causes. For many people, substance-induced psychosis resolves once the drug clears the system. But for a significant minority --- estimated at 25--35% --- it marks the beginning of a primary psychotic disorder like schizophrenia. Distinguishing between substance-induced and primary psychosis is one of the most challenging tasks in clinical psychiatry, and getting it right determines whether someone receives the treatment they actually need.',
 
     keyFacts: [
       { text: 'Cannabis use during adolescence is associated with a 2- to 4-fold increased risk of developing psychosis, with higher potency products carrying greater risk', citationIndex: 1 },
-      { text: 'Approximately 25–35% of people hospitalized for substance-induced psychosis later receive a diagnosis of a primary psychotic disorder', citationIndex: 2 },
+      { text: 'Approximately 25--35% of people hospitalized for substance-induced psychosis later receive a diagnosis of a primary psychotic disorder', citationIndex: 2 },
       { text: 'Methamphetamine-induced psychosis can persist for weeks or months after last use, even with treatment', citationIndex: 3 },
-      { text: 'Alcohol withdrawal psychosis (delirium tremens) carries a mortality rate of 1–5% without medical treatment', citationIndex: 4 },
-      { text: 'The average time to diagnostic clarification — substance-induced vs. primary psychosis — is 3–5 years in clinical settings', citationIndex: 5 },
+      { text: 'Alcohol withdrawal psychosis (delirium tremens) carries a mortality rate of 1--5% without medical treatment', citationIndex: 4 },
+      { text: 'The average time to diagnostic clarification --- substance-induced vs. primary psychosis --- is 3--5 years in clinical settings', citationIndex: 5 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The line between substance-induced psychosis and primary psychosis isn\'t always a line. For some people, the substance doesn\'t cause psychosis — it accelerates an underlying vulnerability that would have surfaced eventually. The drug pulls the trigger, but the gun was already loaded.',
+    sparkMoment: 'The line between substance-induced psychosis and primary psychosis isn\'t always a line. For some people, the substance doesn\'t cause psychosis --- it accelerates an underlying vulnerability that would have surfaced eventually. The drug pulls the trigger, but the gun was already loaded.',
 
     practicalExercise: {
       title: 'Assessing Substance-Related Risk',
       steps: [
         { title: 'Know the high-risk substances', description: 'Cannabis (especially high-THC products), methamphetamine, cocaine, synthetic cannabinoids, and hallucinogens carry the highest psychosis risk. Alcohol withdrawal can also trigger psychosis.' },
-        { title: 'Watch for warning signs after use', description: 'If someone experiences paranoia, hears voices, or holds beliefs that don\'t match reality during or after substance use — and these persist beyond the expected duration of intoxication — seek medical evaluation.' },
+        { title: 'Watch for warning signs after use', description: 'If someone experiences paranoia, hears voices, or holds beliefs that don\'t match reality during or after substance use --- and these persist beyond the expected duration of intoxication --- seek medical evaluation.' },
         { title: 'Don\'t self-diagnose', description: 'Only a clinician can distinguish substance-induced from primary psychosis. If symptoms persist more than a few days after last use, a psychiatric evaluation is essential.' },
         { title: 'Consider harm reduction', description: 'If someone uses substances and has a family history of psychosis or schizophrenia, discuss risk reduction with a healthcare provider. Abstinence is the safest approach, but any reduction in use or potency reduces risk.' },
       ],
@@ -86,11 +86,11 @@ export const understandingPsychosisArticlesB: Article[] = [
         </div>
 
         <h2 id="which-substances" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Which Substances Trigger Psychosis — and How
+          Which Substances Trigger Psychosis --- and How
         </h2>
         <p className="mb-6">
-          Not all substances carry equal psychosis risk. The pharmacological profile of a drug — which
-          neurotransmitter systems it activates — determines both the likelihood and character of
+          Not all substances carry equal psychosis risk. The pharmacological profile of a drug --- which
+          neurotransmitter systems it activates --- determines both the likelihood and character of
           substance-induced psychotic symptoms.
         </p>
         <p className="mb-6">
@@ -101,8 +101,8 @@ export const understandingPsychosisArticlesB: Article[] = [
           The EU-GEI study estimated that if high-potency cannabis were not available, roughly 12% of
           first-episode psychosis cases across Europe could have been
           prevented <Citation id="7" index={7} source="The Lancet Psychiatry" year="2019" tier={1} />.
-          THC increases dopamine release in the mesolimbic pathway — the same system implicated in
-          primary psychosis — while CBD, the other major cannabinoid, may have antipsychotic properties.
+          THC increases dopamine release in the mesolimbic pathway --- the same system implicated in
+          primary psychosis --- while CBD, the other major cannabinoid, may have antipsychotic properties.
           The shift toward high-THC, low-CBD products in many markets has likely increased population-level
           psychosis risk.
         </p>
@@ -125,17 +125,17 @@ export const understandingPsychosisArticlesB: Article[] = [
           <strong>Methamphetamine</strong> poses the highest risk of any commonly used substance. A
           systematic review found that up to 40% of heavy methamphetamine users experience psychotic
           symptoms during active use, and approximately 25% continue to experience symptoms weeks to
-          months after cessation — a uniquely persistent pattern attributed to methamphetamine's
+          months after cessation --- a uniquely persistent pattern attributed to methamphetamine's
           neurotoxic effects on dopamine
           neurons <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Cocaine</strong> can trigger paranoid psychosis during heavy use or binge episodes.
           <strong>Hallucinogens</strong> (LSD, psilocybin) produce perceptual distortions by definition,
-          but true psychosis — with persistent delusions and loss of insight — is relatively rare and
+          but true psychosis --- with persistent delusions and loss of insight --- is relatively rare and
           typically occurs in people with pre-existing vulnerability. <strong>Alcohol withdrawal</strong>,
           particularly delirium tremens, represents a medical emergency that can include vivid
-          hallucinations, severe confusion, and autonomic instability, with a mortality rate of 1–5%
+          hallucinations, severe confusion, and autonomic instability, with a mortality rate of 1--5%
           without treatment <Citation id="4" index={4} source="American Family Physician" year="2023" tier={3} />.
         </p>
 
@@ -147,7 +147,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           during or shortly after substance intoxication or withdrawal, and that are not better explained
           by a primary psychotic
           disorder <Citation id="6" index={6} source="American Psychiatric Association" year="2022" tier={4} />.
-          In practice, making this distinction is anything but straightforward — particularly in acute
+          In practice, making this distinction is anything but straightforward --- particularly in acute
           settings where a detailed substance use history may be unavailable and the patient is too
           distressed to provide one.
         </p>
@@ -155,7 +155,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           Several features help clinicians differentiate. Substance-induced psychosis tends to resolve
           within days to weeks after the substance is cleared. The hallucinations are more often visual
           (rather than the auditory hallucinations typical of schizophrenia). The person's level of
-          insight — their awareness that something is wrong — may fluctuate. And there's typically a
+          insight --- their awareness that something is wrong --- may fluctuate. And there's typically a
           clear temporal relationship between substance use and symptom
           onset <Citation id="8" index={8} source="NICE" year="2024" tier={3} />.
         </p>
@@ -175,13 +175,13 @@ export const understandingPsychosisArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          But here's the complication: a systematic review found that 25–35% of people initially
+          But here's the complication: a systematic review found that 25--35% of people initially
           diagnosed with substance-induced psychosis are later rediagnosed with a primary psychotic
-          disorder — most commonly schizophrenia — within
-          3–5 years <Citation id="2" index={2} source="Schizophrenia Bulletin" year="2019" tier={1} />.
+          disorder --- most commonly schizophrenia --- within
+          3--5 years <Citation id="2" index={2} source="Schizophrenia Bulletin" year="2019" tier={1} />.
           Cannabis-induced psychosis has the highest conversion rate (approximately 47% in some
           studies), followed by amphetamine-induced psychosis. This suggests that for a significant
-          minority, the substance doesn't cause psychosis de novo — it unmasks or accelerates an
+          minority, the substance doesn't cause psychosis de novo --- it unmasks or accelerates an
           underlying vulnerability.
         </p>
 
@@ -199,7 +199,7 @@ export const understandingPsychosisArticlesB: Article[] = [
         <p className="mb-6">
           The longer-term challenge is substance use itself. If the psychosis was genuinely
           substance-induced, continued use virtually guarantees recurrence. Treatment must therefore
-          address both the psychosis and the substance use — a dual approach that's often called
+          address both the psychosis and the substance use --- a dual approach that's often called
           "integrated treatment." NICE guidelines recommend that people with co-occurring substance use
           and psychosis receive care from services equipped to manage both simultaneously, rather than
           being bounced between separate addiction and mental health
@@ -217,8 +217,8 @@ export const understandingPsychosisArticlesB: Article[] = [
         <ArticleCallout variant="warning" title="High-Potency Cannabis and Adolescent Risk">
           <p>
             The adolescent brain is particularly vulnerable to cannabis-related psychosis risk because
-            the endocannabinoid system is still developing. High-potency products — concentrates, dabs,
-            and edibles with THC above 20% — carry substantially higher risk than lower-potency flower.
+            the endocannabinoid system is still developing. High-potency products --- concentrates, dabs,
+            and edibles with THC above 20% --- carry substantially higher risk than lower-potency flower.
             Family history of psychosis amplifies this risk
             further <Citation id="9" index={9} source="World Health Organization" year="2023" tier={2} />.
           </p>
@@ -234,7 +234,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     id: catId(7),
     slug: 'psychosis-vs-dissociation-understanding-two-different-experiences',
     title: 'Psychosis vs. Dissociation: Understanding Two Different Experiences',
-    description: 'How to distinguish psychotic experiences from dissociative ones — two fundamentally different conditions that are frequently confused, misdiagnosed, and mistreated.',
+    description: 'How to distinguish psychotic experiences from dissociative ones --- two fundamentally different conditions that are frequently confused, misdiagnosed, and mistreated.',
     image: '/images/articles/cat16/cover-007.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 11,
@@ -243,7 +243,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Psychosis', 'Dissociation', 'Differential Diagnosis', 'Trauma'],
 
-    summary: 'Psychosis and dissociation are two of the most commonly confused experiences in mental health — both involve altered states of reality, but through entirely different mechanisms. Psychosis involves the brain generating false perceptions (hallucinations) and fixed false beliefs (delusions) that the person experiences as real. Dissociation involves a disconnection from one\'s own thoughts, feelings, body, or surroundings — a sense of unreality, detachment, or fragmented identity. The distinction matters enormously for treatment: antipsychotic medication helps psychosis but doesn\'t treat dissociation, while trauma-focused therapy helps dissociation but doesn\'t address psychosis. Misdiagnosis in either direction can lead to years of ineffective or harmful treatment.',
+    summary: 'Psychosis and dissociation are two of the most commonly confused experiences in mental health --- both involve altered states of reality, but through entirely different mechanisms. Psychosis involves the brain generating false perceptions (hallucinations) and fixed false beliefs (delusions) that the person experiences as real. Dissociation involves a disconnection from one\'s own thoughts, feelings, body, or surroundings --- a sense of unreality, detachment, or fragmented identity. The distinction matters enormously for treatment: antipsychotic medication helps psychosis but doesn\'t treat dissociation, while trauma-focused therapy helps dissociation but doesn\'t address psychosis. Misdiagnosis in either direction can lead to years of ineffective or harmful treatment.',
 
     keyFacts: [
       { text: 'Up to 50% of people with dissociative identity disorder (DID) have been previously misdiagnosed with a psychotic disorder', citationIndex: 1 },
@@ -254,14 +254,14 @@ export const understandingPsychosisArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'In psychosis, the brain adds things that aren\'t there — voices, beliefs, patterns. In dissociation, the brain subtracts things that are — your sense of self, your connection to your body, your continuity of memory. One is a distortion of reality. The other is a disconnection from it.',
+    sparkMoment: 'In psychosis, the brain adds things that aren\'t there --- voices, beliefs, patterns. In dissociation, the brain subtracts things that are --- your sense of self, your connection to your body, your continuity of memory. One is a distortion of reality. The other is a disconnection from it.',
 
     practicalExercise: {
       title: 'Recognizing the Difference',
       steps: [
         { title: 'Ask about the quality of voices', description: 'If someone hears voices, ask whether they feel like they\'re coming from outside (more typical of psychosis) or from inside their head (more typical of dissociation). This single question can shift the entire diagnostic direction.' },
         { title: 'Look for trauma history', description: 'Dissociative experiences almost always have roots in childhood trauma, particularly repeated trauma. A thorough trauma history is essential for accurate assessment.' },
-        { title: 'Assess reality testing', description: 'People with dissociation often retain insight — they know something feels "off." People with psychosis often lack insight into their symptoms. This isn\'t absolute, but it\'s a useful clinical guideline.' },
+        { title: 'Assess reality testing', description: 'People with dissociation often retain insight --- they know something feels "off." People with psychosis often lack insight into their symptoms. This isn\'t absolute, but it\'s a useful clinical guideline.' },
         { title: 'Advocate for proper assessment', description: 'If you or a loved one has been diagnosed with psychosis but the symptoms don\'t respond to antipsychotics, ask the treatment team to consider a dissociative disorders evaluation.' },
       ],
       toolLink: '/tools/symptom-navigator',
@@ -285,10 +285,10 @@ export const understandingPsychosisArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             A woman sits in an emergency department describing voices she hears throughout the day. The
             psychiatric resident reaches for an antipsychotic prescription pad. But a more detailed
-            conversation reveals that the voices aren't external — they're inside her head, they have
+            conversation reveals that the voices aren't external --- they're inside her head, they have
             distinct personalities, and they seem to represent different parts of herself. She doesn't
             have psychosis. She has a dissociative disorder rooted in severe childhood trauma. The
-            treatment she needs is fundamentally different — and the antipsychotic won't help.
+            treatment she needs is fundamentally different --- and the antipsychotic won't help.
           </p>
         </div>
 
@@ -297,9 +297,9 @@ export const understandingPsychosisArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Psychosis and dissociation both involve altered experiences of reality, but through opposite
-          mechanisms. In psychosis, the brain <em>adds</em> — it generates perceptions (voices, visions)
+          mechanisms. In psychosis, the brain <em>adds</em> --- it generates perceptions (voices, visions)
           and beliefs (delusions) that don't correspond to external reality. The person experiencing
-          them typically believes they're real. In dissociation, the brain <em>subtracts</em> — it
+          them typically believes they're real. In dissociation, the brain <em>subtracts</em> --- it
           disconnects the person from their own thoughts, emotions, body, memories, or sense of
           identity. The person often retains some awareness that something is
           wrong <Citation id="6" index={6} source="British Journal of Psychiatry" year="2020" tier={1} />.
@@ -310,7 +310,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           approaches <Citation id="5" index={5} source="American Psychiatric Association" year="2022" tier={4} />.
           Yet in clinical practice, they're frequently confused. Up to 50% of people with dissociative
           identity disorder have been previously misdiagnosed with a psychotic
-          disorder <Citation id="1" index={1} source="The Lancet Psychiatry" year="2022" tier={1} /> — a
+          disorder <Citation id="1" index={1} source="The Lancet Psychiatry" year="2022" tier={1} /> --- a
           misdiagnosis that leads to ineffective medication, delayed trauma treatment, and sometimes
           years of unnecessary suffering.
         </p>
@@ -341,14 +341,14 @@ export const understandingPsychosisArticlesB: Article[] = [
           distinguish <Citation id="2" index={2} source="Schizophrenia Research" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          In psychosis, voices are typically perceived as <strong>external</strong> — coming from outside
+          In psychosis, voices are typically perceived as <strong>external</strong> --- coming from outside
           the person's head, often from a specific location in space. They may comment on the person's
           behavior (a "running commentary"), issue commands, or discuss the person in the third person.
           The person often lacks insight into the non-reality of the voices and may develop elaborate
           explanations for their origin (surveillance equipment, telepathy, spiritual entities).
         </p>
         <p className="mb-6">
-          In dissociation, voices are more often perceived as <strong>internal</strong> — experienced
+          In dissociation, voices are more often perceived as <strong>internal</strong> --- experienced
           inside the person's head, as though different parts of themselves are speaking. In dissociative
           identity disorder, these voices may represent distinct identity states (alters) with their own
           names, ages, and perspectives. The person often retains some awareness that these are "not
@@ -359,8 +359,8 @@ export const understandingPsychosisArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="The Schneider Problem">
           <p>
-            For decades, certain types of hallucinations — hearing voices arguing, hearing a running
-            commentary — were considered "first-rank symptoms" of schizophrenia (Schneider's criteria).
+            For decades, certain types of hallucinations --- hearing voices arguing, hearing a running
+            commentary --- were considered "first-rank symptoms" of schizophrenia (Schneider's criteria).
             Research has since shown that these experiences also occur frequently in dissociative
             disorders, undermining their diagnostic specificity. Clinicians who rely on Schneider's
             criteria alone risk systematic misdiagnosis.
@@ -371,7 +371,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           The Trauma Factor
         </h2>
         <p className="mb-6">
-          Dissociative disorders are overwhelmingly rooted in early childhood trauma — particularly
+          Dissociative disorders are overwhelmingly rooted in early childhood trauma --- particularly
           repeated interpersonal trauma such as physical abuse, sexual abuse, emotional neglect, or
           organized exploitation. Dissociation is understood as a survival mechanism: when a child
           cannot physically escape overwhelming experiences, the mind creates psychological escape
@@ -380,8 +380,8 @@ export const understandingPsychosisArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Psychosis has a more complex etiology. While trauma is increasingly recognized as a risk
-          factor for psychosis — with a dose-response relationship between childhood adversity and
-          psychosis risk — it's one of many contributing factors alongside genetics, neurodevelopmental
+          factor for psychosis --- with a dose-response relationship between childhood adversity and
+          psychosis risk --- it's one of many contributing factors alongside genetics, neurodevelopmental
           disruption, substance use, and social
           determinants <Citation id="3" index={3} source="Psychological Medicine" year="2020" tier={1} />.
           When a person with psychosis has a significant trauma history, clinicians face the most
@@ -393,8 +393,8 @@ export const understandingPsychosisArticlesB: Article[] = [
           Why Getting the Diagnosis Right Changes Everything
         </h2>
         <p className="mb-6">
-          The treatment implications of this distinction are profound. Antipsychotic medications — the
-          first-line treatment for psychosis — have been shown to be largely ineffective for
+          The treatment implications of this distinction are profound. Antipsychotic medications --- the
+          first-line treatment for psychosis --- have been shown to be largely ineffective for
           dissociative
           symptoms <Citation id="4" index={4} source="Journal of Trauma & Dissociation" year="2021" tier={1} />.
           Prescribing them to someone with a dissociative disorder means exposing them to significant
@@ -402,8 +402,8 @@ export const understandingPsychosisArticlesB: Article[] = [
           therapeutic benefit.
         </p>
         <p className="mb-6">
-          Conversely, the gold-standard treatment for dissociative disorders — phased trauma-focused
-          therapy as outlined by the International Society for the Study of Trauma and Dissociation —
+          Conversely, the gold-standard treatment for dissociative disorders --- phased trauma-focused
+          therapy as outlined by the International Society for the Study of Trauma and Dissociation ---
           requires establishing safety, developing grounding skills, and eventually processing traumatic
           memories in a carefully paced
           manner <Citation id="8" index={8} source="ISSTD" year="2011" tier={3} />.
@@ -415,8 +415,8 @@ export const understandingPsychosisArticlesB: Article[] = [
           that time, people may cycle through multiple antipsychotic medications, experience unnecessary
           hospitalizations, and carry a stigmatizing label that doesn't match their actual
           condition <Citation id="7" index={7} source="National Institute of Mental Health" year="2024" tier={2} />.
-          Improving clinician education about the differences between psychosis and dissociation — and
-          the importance of comprehensive trauma assessment — is one of the most impactful steps the
+          Improving clinician education about the differences between psychosis and dissociation --- and
+          the importance of comprehensive trauma assessment --- is one of the most impactful steps the
           mental health system can take.
         </p>
 
@@ -440,7 +440,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     id: catId(8),
     slug: 'brief-psychotic-disorder-when-psychosis-comes-and-goes-quickly',
     title: 'Brief Psychotic Disorder: When Psychosis Comes and Goes Quickly',
-    description: 'Understanding brief psychotic disorder — a sudden, short-lived episode of psychosis that resolves within a month, often triggered by extreme stress, and carries a generally favorable prognosis.',
+    description: 'Understanding brief psychotic disorder --- a sudden, short-lived episode of psychosis that resolves within a month, often triggered by extreme stress, and carries a generally favorable prognosis.',
     image: '/images/articles/cat16/cover-008.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 10,
@@ -449,18 +449,18 @@ export const understandingPsychosisArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Psychosis', 'Brief Psychotic Disorder', 'Acute Stress', 'Condition Deep Dive'],
 
-    summary: 'Brief psychotic disorder is one of the most misunderstood conditions on the psychosis spectrum. It involves the sudden onset of psychotic symptoms — hallucinations, delusions, disorganized speech or behavior — that resolve completely within one month. Unlike schizophrenia, it often has an identifiable trigger: extreme stress, bereavement, trauma, or major life upheaval. Many people who experience it never have another episode. The challenge lies in the acute phase, where symptoms can be just as severe as any other psychotic episode, and in the diagnostic uncertainty that follows — because the condition can only be confirmed after the fact, once symptoms have fully resolved.',
+    summary: 'Brief psychotic disorder is one of the most misunderstood conditions on the psychosis spectrum. It involves the sudden onset of psychotic symptoms --- hallucinations, delusions, disorganized speech or behavior --- that resolve completely within one month. Unlike schizophrenia, it often has an identifiable trigger: extreme stress, bereavement, trauma, or major life upheaval. Many people who experience it never have another episode. The challenge lies in the acute phase, where symptoms can be just as severe as any other psychotic episode, and in the diagnostic uncertainty that follows --- because the condition can only be confirmed after the fact, once symptoms have fully resolved.',
 
     keyFacts: [
       { text: 'Brief psychotic disorder accounts for approximately 9% of all first-episode psychosis presentations', citationIndex: 1 },
       { text: 'Symptoms must last at least one day but no more than one month for the diagnosis to apply', citationIndex: 2 },
       { text: 'Women are diagnosed with brief psychotic disorder at approximately twice the rate of men', citationIndex: 3 },
-      { text: 'Between 50–75% of people who experience brief psychotic disorder do not have a recurrence', citationIndex: 4 },
+      { text: 'Between 50--75% of people who experience brief psychotic disorder do not have a recurrence', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'Brief psychotic disorder shows us something profound about the brain: under extreme stress, even a brain with no structural abnormalities and no genetic loading for schizophrenia can temporarily lose its grip on reality. It\'s a reminder that psychosis isn\'t always a disease — sometimes it\'s a response.',
+    sparkMoment: 'Brief psychotic disorder shows us something profound about the brain: under extreme stress, even a brain with no structural abnormalities and no genetic loading for schizophrenia can temporarily lose its grip on reality. It\'s a reminder that psychosis isn\'t always a disease --- sometimes it\'s a response.',
 
     practicalExercise: {
       title: 'Supporting Someone Through Brief Psychosis',
@@ -492,8 +492,8 @@ export const understandingPsychosisArticlesB: Article[] = [
             She'd never had a psychiatric symptom in her life. Then her mother died unexpectedly, and
             within 48 hours she was hearing her mother's voice, convinced that the hospital had made a
             mistake and her mother was still alive somewhere. She stopped eating, stopped sleeping, and
-            began speaking in disconnected fragments that alarmed her partner. Ten days later — after a
-            brief hospitalization and low-dose medication — she was lucid, bewildered, and asking,
+            began speaking in disconnected fragments that alarmed her partner. Ten days later --- after a
+            brief hospitalization and low-dose medication --- she was lucid, bewildered, and asking,
             "What happened to me?" What happened was brief psychotic disorder.
           </p>
         </div>
@@ -507,22 +507,22 @@ export const understandingPsychosisArticlesB: Article[] = [
           disorganized or catatonic behavior), a duration of at least one day but no more than one month,
           and an eventual full return to premorbid
           functioning <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={4} />.
-          This last criterion is crucial — the person doesn't just improve; they return to baseline. The
+          This last criterion is crucial --- the person doesn't just improve; they return to baseline. The
           episode is, by definition, self-limiting.
         </p>
         <p className="mb-6">
           The disorder can be specified as occurring "with marked stressor" (when a clear triggering event
           is identified), "without marked stressor," or "with postpartum onset" (discussed separately in
-          the postpartum psychosis article). The "with marked stressor" subtype — sometimes called
-          "reactive psychosis" in older literature — is the most recognized presentation and has the best
+          the postpartum psychosis article). The "with marked stressor" subtype --- sometimes called
+          "reactive psychosis" in older literature --- is the most recognized presentation and has the best
           prognosis <Citation id="1" index={1} source="Schizophrenia Research" year="2019" tier={1} />.
         </p>
 
         <StatCard
           stats={[
             { value: 9, suffix: '%', label: 'Of first-episode psychosis cases' },
-            { value: 1, suffix: '–30', label: 'Days of symptom duration' },
-            { value: 50, suffix: '–75%', label: 'Have no recurrence' },
+            { value: 1, suffix: '--30', label: 'Days of symptom duration' },
+            { value: 50, suffix: '--75%', label: 'Have no recurrence' },
           ]}
           source="Schizophrenia Research, 2019; British Journal of Psychiatry, 2018"
         />
@@ -534,15 +534,15 @@ export const understandingPsychosisArticlesB: Article[] = [
           The triggers for brief psychotic disorder are typically events that overwhelm the brain's
           capacity to process and regulate. Bereavement, natural disasters, combat exposure, sexual
           assault, unexpected job loss, immigration, and incarceration have all been documented as
-          precipitants. The common thread is not the type of event but its subjective intensity — the
+          precipitants. The common thread is not the type of event but its subjective intensity --- the
           degree to which it exceeds the person's psychological resources at that
           moment <Citation id="6" index={6} source="Schizophrenia Bulletin" year="2017" tier={1} />.
         </p>
         <p className="mb-6">
           Neurobiologically, extreme stress triggers a cascade that converges on the dopaminergic system.
           The hypothalamic-pituitary-adrenal (HPA) axis floods the body with cortisol. Sustained cortisol
-          elevation increases dopamine transmission in the mesolimbic pathway — the same pathway implicated
-          in schizophrenia — which can tip the brain into the aberrant salience processing that produces
+          elevation increases dopamine transmission in the mesolimbic pathway --- the same pathway implicated
+          in schizophrenia --- which can tip the brain into the aberrant salience processing that produces
           psychotic
           symptoms <Citation id="6" index={6} source="Schizophrenia Bulletin" year="2017" tier={1} />.
           In brief psychotic disorder, this process is transient: once the acute stress response
@@ -561,7 +561,7 @@ export const understandingPsychosisArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           Acute treatment for brief psychotic disorder mirrors the approach for any acute psychotic
-          episode: ensuring safety, reducing stimulation, and — if symptoms are severe — short-term
+          episode: ensuring safety, reducing stimulation, and --- if symptoms are severe --- short-term
           antipsychotic medication. The NICE guidelines recommend that antipsychotics be used at the
           lowest effective dose and for the shortest duration possible, with a plan for gradual
           discontinuation once symptoms
@@ -585,7 +585,7 @@ export const understandingPsychosisArticlesB: Article[] = [
               title: 'During the acute episode',
               content: (
                 <p>
-                  Low-dose antipsychotic medication (typically for 1–4 weeks), a calm environment with
+                  Low-dose antipsychotic medication (typically for 1--4 weeks), a calm environment with
                   minimal stimulation, and monitoring for safety. Most people show significant improvement
                   within days. Hospitalization is sometimes necessary but can often be avoided with intensive
                   outpatient monitoring.
@@ -594,7 +594,7 @@ export const understandingPsychosisArticlesB: Article[] = [
             },
             {
               id: 'recovery-phase',
-              title: 'During recovery (weeks 1–4)',
+              title: 'During recovery (weeks 1--4)',
               content: (
                 <p>
                   Gradual medication taper under clinical supervision. Psychoeducation about what happened.
@@ -623,13 +623,13 @@ export const understandingPsychosisArticlesB: Article[] = [
         <p className="mb-6">
           Brief psychotic disorder has the most favorable prognosis of any psychotic condition. A
           prospective follow-up study in the <em>British Journal of Psychiatry</em> found that between
-          50–75% of people who experience brief psychotic disorder never have another psychotic
+          50--75% of people who experience brief psychotic disorder never have another psychotic
           episode <Citation id="4" index={4} source="British Journal of Psychiatry" year="2018" tier={1} />.
           Among those who do have recurrences, most experience additional brief episodes rather than
           progression to schizophrenia.
         </p>
         <p className="mb-6">
-          However, the disorder can only be diagnosed retrospectively — once symptoms have fully
+          However, the disorder can only be diagnosed retrospectively --- once symptoms have fully
           resolved within the one-month
           window <Citation id="5" index={5} source="The Lancet Psychiatry" year="2016" tier={1} />.
           During the acute episode, clinicians can't yet distinguish brief psychotic disorder from the
@@ -642,7 +642,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           The message families and patients need to hear is this: while the acute episode can be
           frightening, the odds are in favor of full recovery. Most people return to their baseline
           functioning and never look back. The key is appropriate acute treatment, patient follow-up,
-          and — perhaps most importantly — not over-diagnosing a self-limiting condition as a chronic one.
+          and --- perhaps most importantly --- not over-diagnosing a self-limiting condition as a chronic one.
         </p>
 
         <QuoteBlock
@@ -661,7 +661,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     id: catId(9),
     slug: 'postpartum-psychosis-psychiatric-emergency-every-parent-should-know',
     title: 'Postpartum Psychosis: A Psychiatric Emergency Every Parent Should Know About',
-    description: 'A critical guide to postpartum psychosis — the rarest but most dangerous perinatal mental health condition, how to recognize it, and why immediate treatment saves lives.',
+    description: 'A critical guide to postpartum psychosis --- the rarest but most dangerous perinatal mental health condition, how to recognize it, and why immediate treatment saves lives.',
     image: '/images/articles/cat16/cover-009.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -670,11 +670,11 @@ export const understandingPsychosisArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Postpartum Psychosis', 'Perinatal Mental Health', 'Psychiatric Emergency', 'Crisis'],
 
-    summary: 'Postpartum psychosis is the most severe and dangerous form of perinatal mental health crisis. It affects approximately 1–2 in every 1,000 deliveries and typically emerges within the first two weeks after birth. Symptoms can escalate rapidly — from confusion and insomnia to full-blown hallucinations, delusions (often involving the infant), and severely disorganized behavior. Without immediate treatment, postpartum psychosis carries significant risks of harm to both the parent and baby, including a 5% suicide rate and a 4% infanticide rate. With rapid intervention — typically inpatient care with mood stabilizers, antipsychotics, and intensive monitoring — outcomes are generally good. This is a treatable emergency, but only if recognized in time.',
+    summary: 'Postpartum psychosis is the most severe and dangerous form of perinatal mental health crisis. It affects approximately 1--2 in every 1,000 deliveries and typically emerges within the first two weeks after birth. Symptoms can escalate rapidly --- from confusion and insomnia to full-blown hallucinations, delusions (often involving the infant), and severely disorganized behavior. Without immediate treatment, postpartum psychosis carries significant risks of harm to both the parent and baby, including a 5% suicide rate and a 4% infanticide rate. With rapid intervention --- typically inpatient care with mood stabilizers, antipsychotics, and intensive monitoring --- outcomes are generally good. This is a treatable emergency, but only if recognized in time.',
 
     keyFacts: [
-      { text: 'Postpartum psychosis occurs in 1–2 per 1,000 deliveries, most often within the first 2 weeks after birth', citationIndex: 1 },
-      { text: 'Women with bipolar disorder have a 25–50% risk of developing postpartum psychosis', citationIndex: 2 },
+      { text: 'Postpartum psychosis occurs in 1--2 per 1,000 deliveries, most often within the first 2 weeks after birth', citationIndex: 1 },
+      { text: 'Women with bipolar disorder have a 25--50% risk of developing postpartum psychosis', citationIndex: 2 },
       { text: 'Without treatment, postpartum psychosis carries a 5% suicide rate and a 4% infanticide rate', citationIndex: 3 },
       { text: 'With appropriate treatment, the majority of women recover fully and many go on to have subsequent pregnancies without recurrence', citationIndex: 4 },
       { text: 'Sleep deprivation in the postpartum period is a significant triggering factor', citationIndex: 5 },
@@ -682,7 +682,7 @@ export const understandingPsychosisArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'Postpartum psychosis isn\'t caused by bad parenting, ambivalence about the baby, or personal weakness. It\'s triggered by the most dramatic hormonal shift in human biology — the postpartum hormone crash — colliding with extreme sleep deprivation in a brain that was already vulnerable. It\'s biology, not character.',
+    sparkMoment: 'Postpartum psychosis isn\'t caused by bad parenting, ambivalence about the baby, or personal weakness. It\'s triggered by the most dramatic hormonal shift in human biology --- the postpartum hormone crash --- colliding with extreme sleep deprivation in a brain that was already vulnerable. It\'s biology, not character.',
 
     practicalExercise: {
       title: 'The Postpartum Psychosis Recognition Plan',
@@ -713,32 +713,32 @@ export const understandingPsychosisArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Three days after giving birth to a healthy boy, a 31-year-old woman stops sleeping entirely.
-            Not just disrupted sleep — total cessation. By day five, she's pacing the house at 3 a.m.,
+            Not just disrupted sleep --- total cessation. By day five, she's pacing the house at 3 a.m.,
             convinced that the hospital swapped her baby with someone else's. By day seven, she's hearing
             a voice telling her the baby is "contaminated" and must be "purified." Her partner, exhausted
             and terrified, doesn't know if this is severe baby blues, postpartum depression, or something
-            else entirely. It's something else. It's postpartum psychosis — a psychiatric emergency that
+            else entirely. It's something else. It's postpartum psychosis --- a psychiatric emergency that
             requires immediate intervention.
           </p>
         </div>
 
         <h2 id="what-it-is" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          What Postpartum Psychosis Is — and Why It's an Emergency
+          What Postpartum Psychosis Is --- and Why It's an Emergency
         </h2>
         <p className="mb-6">
           Postpartum psychosis is the most severe form of perinatal mental illness. It occurs in
-          approximately 1–2 per 1,000 deliveries and typically emerges within the first two weeks
+          approximately 1--2 per 1,000 deliveries and typically emerges within the first two weeks
           after birth, though onset can occur up to 12 weeks
           postpartum <Citation id="1" index={1} source="The Lancet Psychiatry" year="2021" tier={1} />.
           The speed of onset is striking: a person can go from apparently well to floridly psychotic
-          within 24–48 hours. This rapid escalation is what makes it dangerous.
+          within 24--48 hours. This rapid escalation is what makes it dangerous.
         </p>
         <p className="mb-6">
           Symptoms include severe insomnia (often total sleeplessness), rapid mood fluctuations between
           elation and despair, confusion and disorientation, paranoid delusions (often involving the
           baby), hallucinations (visual and auditory), and grossly disorganized or bizarre behavior.
-          Crucially, delusions in postpartum psychosis frequently involve the infant — beliefs that the
-          baby is dead, possessed, defective, or in danger from a supernatural force — which is why
+          Crucially, delusions in postpartum psychosis frequently involve the infant --- beliefs that the
+          baby is dead, possessed, defective, or in danger from a supernatural force --- which is why
           the condition carries a 4% infanticide
           rate <Citation id="3" index={3} source="Journal of Clinical Psychiatry" year="2016" tier={1} />
           and a 5% suicide rate when untreated.
@@ -746,8 +746,8 @@ export const understandingPsychosisArticlesB: Article[] = [
 
         <ArticleCallout variant="warning" title="This Is a Medical Emergency">
           <p>
-            If a new parent is showing signs of psychosis — hallucinations, delusions, severely
-            disorganized behavior, total insomnia — in the days or weeks after delivery, this is a
+            If a new parent is showing signs of psychosis --- hallucinations, delusions, severely
+            disorganized behavior, total insomnia --- in the days or weeks after delivery, this is a
             psychiatric emergency. Do not wait for the symptoms to resolve on their own. Call emergency
             services, take the person to the emergency department, and do not leave them alone with the
             infant until they have received a professional evaluation.
@@ -760,7 +760,7 @@ export const understandingPsychosisArticlesB: Article[] = [
         <p className="mb-6">
           The strongest risk factor for postpartum psychosis is a history of <strong>bipolar
           disorder</strong>. A meta-analysis in the <em>British Journal of Psychiatry</em> found
-          that women with bipolar disorder have a 25–50% chance of developing postpartum
+          that women with bipolar disorder have a 25--50% chance of developing postpartum
           psychosis <Citation id="2" index={2} source="British Journal of Psychiatry" year="2019" tier={1} />.
           This is one of the highest recurrence risks in all of psychiatry, and it demands proactive
           planning: women with bipolar disorder should have a postpartum monitoring plan established
@@ -768,7 +768,7 @@ export const understandingPsychosisArticlesB: Article[] = [
         </p>
         <p className="mb-6">
           Other risk factors include a previous episode of postpartum psychosis (recurrence rate of
-          approximately 30–50%), a family history of postpartum psychosis or bipolar disorder, and
+          approximately 30--50%), a family history of postpartum psychosis or bipolar disorder, and
           primiparous status (first-time mothers are at somewhat higher risk). Severe sleep deprivation
           in the immediate postpartum period is increasingly recognized as a proximal triggering
           factor <Citation id="5" index={5} source="Bipolar Disorders" year="2018" tier={1} />,
@@ -792,22 +792,22 @@ export const understandingPsychosisArticlesB: Article[] = [
           The Biology: Hormones, Sleep, and a Vulnerable Brain
         </h2>
         <p className="mb-6">
-          After delivery, estrogen and progesterone levels — which have been 100 to 1,000 times higher
-          than normal during pregnancy — plummet within hours. This is the most dramatic hormonal shift
+          After delivery, estrogen and progesterone levels --- which have been 100 to 1,000 times higher
+          than normal during pregnancy --- plummet within hours. This is the most dramatic hormonal shift
           in human biology. In most women, this shift produces temporary mood lability (the "baby blues").
-          In women with underlying vulnerability — particularly bipolar-spectrum biology — it can trigger
+          In women with underlying vulnerability --- particularly bipolar-spectrum biology --- it can trigger
           a full psychotic
           episode <Citation id="9" index={9} source="Molecular Psychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           The hormonal crash interacts with extreme sleep deprivation to create a perfect neurobiological
           storm. Research has shown that sleep loss alone can increase dopamine transmission in the
-          mesolimbic pathway — the same pathway implicated in psychosis. When sleep deprivation is layered
+          mesolimbic pathway --- the same pathway implicated in psychosis. When sleep deprivation is layered
           on top of hormonal upheaval in a brain predisposed to mood instability, the threshold for
           psychosis drops
           dramatically <Citation id="5" index={5} source="Bipolar Disorders" year="2018" tier={1} />.
-          This is why protecting sleep in the immediate postpartum period — through partner involvement,
-          shared feeding schedules, or postpartum doula support — is not a luxury but a clinical
+          This is why protecting sleep in the immediate postpartum period --- through partner involvement,
+          shared feeding schedules, or postpartum doula support --- is not a luxury but a clinical
           intervention.
         </p>
 
@@ -827,7 +827,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           antipsychotic medication for acute psychotic symptoms, and benzodiazepines for severe
           agitation or
           insomnia <Citation id="4" index={4} source="Archives of Women's Mental Health" year="2020" tier={1} />.
-          The question of breastfeeding must be addressed individually — lithium passes into breast
+          The question of breastfeeding must be addressed individually --- lithium passes into breast
           milk and is generally contraindicated during nursing, but some antipsychotics are compatible
           with breastfeeding under close monitoring.
         </p>
@@ -856,7 +856,7 @@ export const understandingPsychosisArticlesB: Article[] = [
             title: 'With early recognition',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Warning signs identified within 24–48 hours</li>
+                <li>Warning signs identified within 24--48 hours</li>
                 <li>Rapid psychiatric evaluation and treatment</li>
                 <li>Inpatient stabilization with mother-baby bonding preserved</li>
                 <li>Full recovery in weeks with appropriate support</li>
@@ -869,7 +869,7 @@ export const understandingPsychosisArticlesB: Article[] = [
           Every obstetric team, midwife, and postpartum care provider should be trained to recognize
           the early warning signs of postpartum psychosis. Every woman with bipolar disorder should
           have a postpartum safety plan before delivery. And every partner and family member should know
-          that if a new mother becomes acutely psychotic, this is a medical emergency — not a parenting
+          that if a new mother becomes acutely psychotic, this is a medical emergency --- not a parenting
           failure <Citation id="8" index={8} source="National Institute of Mental Health" year="2024" tier={2} />.
         </p>
       </>
@@ -883,7 +883,7 @@ export const understandingPsychosisArticlesB: Article[] = [
     id: catId(10),
     slug: 'psychosis-in-adolescents-early-identification-and-support',
     title: 'Psychosis in Adolescents: Early Identification and Support',
-    description: 'A comprehensive guide to recognizing and responding to psychosis in teenagers — including how it differs from typical adolescent behavior, when to seek help, and what effective treatment looks like.',
+    description: 'A comprehensive guide to recognizing and responding to psychosis in teenagers --- including how it differs from typical adolescent behavior, when to seek help, and what effective treatment looks like.',
     image: '/images/articles/cat16/cover-010.svg',
     category: CATEGORY_PSYCHOSIS,
     readTime: 12,
@@ -892,11 +892,11 @@ export const understandingPsychosisArticlesB: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Psychosis', 'Adolescents', 'Youth Mental Health', 'Early Intervention'],
 
-    summary: 'Adolescence is the peak window for the onset of psychotic conditions. The vast majority of people who develop schizophrenia experience their first symptoms between ages 15 and 25, during a period of intense brain development that creates both creative potential and neurological vulnerability. Recognizing psychosis in teenagers is challenging because many early signs — social withdrawal, mood instability, academic decline, unusual beliefs — overlap with typical adolescent behavior. But certain patterns and combinations of symptoms warrant professional evaluation. Early identification matters more during adolescence than at any other age because the developing brain is both more vulnerable to the harmful effects of untreated psychosis and more responsive to treatment.',
+    summary: 'Adolescence is the peak window for the onset of psychotic conditions. The vast majority of people who develop schizophrenia experience their first symptoms between ages 15 and 25, during a period of intense brain development that creates both creative potential and neurological vulnerability. Recognizing psychosis in teenagers is challenging because many early signs --- social withdrawal, mood instability, academic decline, unusual beliefs --- overlap with typical adolescent behavior. But certain patterns and combinations of symptoms warrant professional evaluation. Early identification matters more during adolescence than at any other age because the developing brain is both more vulnerable to the harmful effects of untreated psychosis and more responsive to treatment.',
 
     keyFacts: [
-      { text: 'The peak age of onset for first psychotic episodes is 15–25 years, with earlier onset typically associated with more severe long-term course', citationIndex: 1 },
-      { text: 'Approximately 75% of people with schizophrenia show prodromal symptoms during adolescence, averaging 1–5 years before the first full episode', citationIndex: 2 },
+      { text: 'The peak age of onset for first psychotic episodes is 15--25 years, with earlier onset typically associated with more severe long-term course', citationIndex: 1 },
+      { text: 'Approximately 75% of people with schizophrenia show prodromal symptoms during adolescence, averaging 1--5 years before the first full episode', citationIndex: 2 },
       { text: 'Early intervention programs for adolescents with psychosis can reduce transition to full psychotic disorder by up to 50%', citationIndex: 3 },
       { text: 'Cannabis use during adolescence roughly doubles the risk of psychosis, with earlier onset of use and higher potency carrying greater risk', citationIndex: 4 },
       { text: 'Youth-specific early psychosis programs show better engagement, lower dropout rates, and improved outcomes compared to adult services', citationIndex: 5 },
@@ -904,7 +904,7 @@ export const understandingPsychosisArticlesB: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: 'The adolescent brain isn\'t broken when psychosis emerges — it\'s under construction. The same neurodevelopmental remodeling that enables abstract thought, identity formation, and creative exploration can, in a vulnerable brain, produce the perceptual distortions and belief systems of psychosis. The window of risk is also the window of greatest opportunity for intervention.',
+    sparkMoment: 'The adolescent brain isn\'t broken when psychosis emerges --- it\'s under construction. The same neurodevelopmental remodeling that enables abstract thought, identity formation, and creative exploration can, in a vulnerable brain, produce the perceptual distortions and belief systems of psychosis. The window of risk is also the window of greatest opportunity for intervention.',
 
     practicalExercise: {
       title: 'Recognizing Psychosis Risk in Adolescents',
@@ -936,11 +936,11 @@ export const understandingPsychosisArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             A 16-year-old who used to captain the debate team has stopped attending practice. Her grades
             have dropped from A's to C's. She's spending more time alone in her room, and when her parents
-            ask what's wrong, she says nothing — or deflects with irritation. They assume it's normal
+            ask what's wrong, she says nothing --- or deflects with irritation. They assume it's normal
             teenage behavior. It might be. But if it's been escalating for months, and if she's also
             mentioned that people at school are "watching her" or that she sometimes hears whispering when
             no one is around, it might be something else entirely. Telling the difference between adolescent
-            development and emerging psychosis is one of the most important — and most difficult —
+            development and emerging psychosis is one of the most important --- and most difficult ---
             distinctions in youth mental health.
           </p>
         </div>
@@ -949,10 +949,10 @@ export const understandingPsychosisArticlesB: Article[] = [
           Why Psychosis Emerges During Adolescence
         </h2>
         <p className="mb-6">
-          Adolescence isn't just a social transition — it's a neurobiological revolution. Between ages 12
+          Adolescence isn't just a social transition --- it's a neurobiological revolution. Between ages 12
           and 25, the brain undergoes massive remodeling. Synaptic pruning eliminates unnecessary neural
-          connections while myelination strengthens the ones that remain. The prefrontal cortex — the
-          brain's center for reasoning, planning, and reality testing — is the last region to mature,
+          connections while myelination strengthens the ones that remain. The prefrontal cortex --- the
+          brain's center for reasoning, planning, and reality testing --- is the last region to mature,
           not completing development until the mid-twenties. This creates a developmental window where
           the emotional brain (limbic system) is fully online but the cognitive brain (prefrontal cortex)
           is still under
@@ -963,15 +963,15 @@ export const understandingPsychosisArticlesB: Article[] = [
           The vast majority of people who develop schizophrenia experience their first symptoms between
           ages 15 and
           25 <Citation id="1" index={1} source="European Psychiatry" year="2017" tier={1} />.
-          The neurodevelopmental changes of this period — particularly in dopamine and glutamate systems —
+          The neurodevelopmental changes of this period --- particularly in dopamine and glutamate systems ---
           can, in a genetically vulnerable brain, tip the balance toward psychosis. Environmental factors
-          during this window — substance use (particularly cannabis), social stress, bullying, and
-          academic pressure — act as accelerants.
+          during this window --- substance use (particularly cannabis), social stress, bullying, and
+          academic pressure --- act as accelerants.
         </p>
 
         <StatCard
           stats={[
-            { value: 15, suffix: '–25', label: 'Peak age of onset (years)' },
+            { value: 15, suffix: '--25', label: 'Peak age of onset (years)' },
             { value: 75, suffix: '%', label: 'Show prodromal symptoms in adolescence' },
             { value: 50, suffix: '%', label: 'Reduction in transition with early intervention' },
           ]}
@@ -1005,8 +1005,8 @@ export const understandingPsychosisArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          A single sign from the right column doesn't indicate psychosis. A cluster of signs — social
-          withdrawal plus academic decline plus emerging suspiciousness plus sleep disruption — persisting
+          A single sign from the right column doesn't indicate psychosis. A cluster of signs --- social
+          withdrawal plus academic decline plus emerging suspiciousness plus sleep disruption --- persisting
           for more than two weeks, with a trajectory of worsening, warrants a professional
           evaluation <Citation id="2" index={2} source="Schizophrenia Bulletin" year="2006" tier={1} />.
           Parents and teachers are often the first to notice these patterns, which is why psychoeducation
@@ -1024,8 +1024,8 @@ export const understandingPsychosisArticlesB: Article[] = [
           risk <Citation id="4" index={4} source="The Lancet Psychiatry" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
-          The adolescent brain is uniquely vulnerable because the endocannabinoid system — which THC
-          hijacks — plays a critical role in neurodevelopmental processes during this period. THC disrupts
+          The adolescent brain is uniquely vulnerable because the endocannabinoid system --- which THC
+          hijacks --- plays a critical role in neurodevelopmental processes during this period. THC disrupts
           the normal pruning and maturation of prefrontal circuits, potentially creating the exact type
           of connectivity disruption that predisposes to psychosis. For adolescents who already carry
           genetic risk (a family history of schizophrenia or bipolar disorder), cannabis use during this
@@ -1057,7 +1057,7 @@ export const understandingPsychosisArticlesB: Article[] = [
         <p className="mb-6">
           Youth-specific programs typically include individual therapy adapted for adolescent development,
           family-based interventions that address parental distress and communication patterns,
-          educational support to prevent school dropout, and — when necessary — cautious, low-dose
+          educational support to prevent school dropout, and --- when necessary --- cautious, low-dose
           medication with close metabolic
           monitoring <Citation id="8" index={8} source="NICE" year="2024" tier={3} />.
           The NICE guidelines for psychosis in children and young people emphasize that medication should
@@ -1070,20 +1070,20 @@ export const understandingPsychosisArticlesB: Article[] = [
           The UK's early intervention in psychosis (EIP) services accept referrals from age 14 and aim
           to see young people within two weeks of
           referral <Citation id="9" index={9} source="SAMHSA" year="2023" tier={2} />.
-          Getting young people into these specialized services — rather than waiting for a crisis that
-          leads to emergency department presentation — is the single most impactful thing families,
+          Getting young people into these specialized services --- rather than waiting for a crisis that
+          leads to emergency department presentation --- is the single most impactful thing families,
           schools, and primary care providers can do.
         </p>
         <p className="mb-6">
           The developing brain is more vulnerable to untreated psychosis, but it's also more neuroplastic
-          — more capable of recovery and adaptation when the right support arrives in
+          --- more capable of recovery and adaptation when the right support arrives in
           time <Citation id="7" index={7} source="National Institute of Mental Health" year="2024" tier={2} />.
           That's the paradox and the promise of adolescent psychosis: the risk is highest, but so is the
           opportunity.
         </p>
 
         <QuoteBlock
-          quote="The adolescent brain is a work in progress. Psychosis during this period is serious — but the same plasticity that makes the brain vulnerable also makes it remarkably responsive to early, comprehensive treatment."
+          quote="The adolescent brain is a work in progress. Psychosis during this period is serious --- but the same plasticity that makes the brain vulnerable also makes it remarkably responsive to early, comprehensive treatment."
           attribution="Early Psychosis Prevention and Intervention Centre (EPPIC)"
           variant="large"
         />

@@ -94,7 +94,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
             You love your children. You'd do anything for them. And yet, you're so tired that the sound of 'Mom!" or "Dad!" makes you want to hide. You snap at them over small things. You feel nothing when they share their accomplishments. You fantasize about running away. Then you feel crushing guilt for feeling this way.
           </p>
           <p className="mb-6">
-            This is parental burnout — a state of physical, emotional, and mental exhaustion specific to the parenting role <Citation id="1" index={1} source="Clinical Psychological Science" year="2019" tier={1} />. It's not just being tired. It's not postpartum depression (though they can coexist). It's a distinct syndrome affecting millions of parents who are doing their best in a culture that demands perfection while providing minimal support.
+            This is parental burnout --- a state of physical, emotional, and mental exhaustion specific to the parenting role <Citation id="1" index={1} source="Clinical Psychological Science" year="2019" tier={1} />. It's not just being tired. It's not postpartum depression (though they can coexist). It's a distinct syndrome affecting millions of parents who are doing their best in a culture that demands perfection while providing minimal support.
           </p>
         </div>
 
@@ -129,7 +129,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
               title: '2. Contrast with Previous Parental Self',
               description: (
                 <p>
-                  You're not the parent you used to be — or the parent you wanted to be. You used to be patient; now you yell. You used to enjoy playing; now it feels like a chore. You don't recognize yourself.
+                  You're not the parent you used to be --- or the parent you wanted to be. You used to be patient; now you yell. You used to enjoy playing; now it feels like a chore. You don't recognize yourself.
                 </p>
               ),
             },
@@ -215,7 +215,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
                   <p className="mb-2">
                     Remembering doctor appointments, school schedules, food preferences, who needs what signed, when permission slips are due, when to buy new shoes because they've outgrown the old ones.
                   </p>
-                  <p>This constant mental tracking is exhausting — and it never stops.</p>
+                  <p>This constant mental tracking is exhausting --- and it never stops.</p>
                 </div>
               ),
             },
@@ -224,7 +224,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
               title: 'Emotional Labor',
               content: (
                 <p>
-                  Managing your children's emotions, your own emotional responses, anticipating needs, mediating conflicts, soothing meltdowns, celebrating successes — all while regulating your stress so they don't absorb it.
+                  Managing your children's emotions, your own emotional responses, anticipating needs, mediating conflicts, soothing meltdowns, celebrating successes --- all while regulating your stress so they don't absorb it.
                 </p>
               ),
             },
@@ -242,7 +242,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
               title: 'Invisible Work',
               content: (
                 <p>
-                  Much of parenting labor is invisible. Planning meals, buying clothes before they're outgrown, scheduling playdates, managing screen time, teaching manners — it's constant, it's essential, and it's rarely acknowledged.
+                  Much of parenting labor is invisible. Planning meals, buying clothes before they're outgrown, scheduling playdates, managing screen time, teaching manners --- it's constant, it's essential, and it's rarely acknowledged.
                 </p>
               ),
             },
@@ -253,7 +253,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
           How Parental Burnout Affects Children
         </h2>
         <p className="mb-6">
-          Parental burnout doesn't just harm parents — it impacts children <Citation id="4" index={4} source="Journal of Child and Family Studies" year="2020" tier={1} />:
+          Parental burnout doesn't just harm parents --- it impacts children <Citation id="4" index={4} source="Journal of Child and Family Studies" year="2020" tier={1} />:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -265,7 +265,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The healthiest thing you can do for your children is take care of your own wellbeing. You can't give what you don't have. Self-care isn't selfish when you're a parent — it's protective.
+            The healthiest thing you can do for your children is take care of your own wellbeing. You can't give what you don't have. Self-care isn't selfish when you're a parent --- it's protective.
           </p>
         </ArticleCallout>
 
@@ -320,7 +320,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
           5. Reconnect with Identity Beyond "Parent"
         </h3>
         <p className="mb-6">
-          You are more than someone's mom or dad. Maintain at least one hobby, friendship, or interest separate from your children. This isn't abandoning them — it's modeling a healthy, whole person.
+          You are more than someone's mom or dad. Maintain at least one hobby, friendship, or interest separate from your children. This isn't abandoning them --- it's modeling a healthy, whole person.
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
@@ -353,7 +353,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Parental burnout won't be fully solved until we address these systemic issues. But in the meantime, you deserve support, rest, and compassion — from others and from yourself.
+          Parental burnout won't be fully solved until we address these systemic issues. But in the meantime, you deserve support, rest, and compassion --- from others and from yourself.
         </p>
       </>
     ),
@@ -496,7 +496,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
                     <li>Beginning therapy or counseling</li>
                     <li>Medication assessment if co-occurring depression/anxiety</li>
                   </ul>
-                  <p className="mt-2 italic text-sm">You won't feel "better" yet — the goal is simply to stop getting worse.</p>
+                  <p className="mt-2 italic text-sm">You won't feel "better" yet --- the goal is simply to stop getting worse.</p>
                 </div>
               ),
             },
@@ -796,7 +796,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
             You used to believe your work mattered. Now you think it's all pointless. You used to care about the people you serve. Now you see them as interruptions or problems. You used to feel hopeful. Now everything feels like a performance, and you're just going through the motions.
           </p>
           <p className="mb-6">
-            This transformation from engagement to cynicism is one of burnout's most insidious symptoms. It's not just tiredness — it's a fundamental shift in how you see the world and your place in it.
+            This transformation from engagement to cynicism is one of burnout's most insidious symptoms. It's not just tiredness --- it's a fundamental shift in how you see the world and your place in it.
           </p>
         </div>
 
@@ -808,7 +808,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Cynicism isn't who you are — it's a protective mechanism your psyche developed when hope became too painful. Understanding it is the first step toward reconnecting with meaning.
+          Cynicism isn't who you are --- it's a protective mechanism your psyche developed when hope became too painful. Understanding it is the first step toward reconnecting with meaning.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -818,7 +818,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Recovery involves slowly dismantling that armor — not by forcing positivity, but by rebuilding capacity for authentic engagement. It takes time, support, and often fundamental changes to what burned you out in the first place.
+          Recovery involves slowly dismantling that armor --- not by forcing positivity, but by rebuilding capacity for authentic engagement. It takes time, support, and often fundamental changes to what burned you out in the first place.
         </p>
       </>
     ),
@@ -834,7 +834,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     description: 'Learn why burnout prevention requires both systemic changes and personal strategies, and what organizations and individuals can each do.',
     image: "/images/articles/cat02/cover-049.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -872,32 +872,219 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
             Your workplace offers yoga classes and meditation apps. They talk about resilience and self-care. Meanwhile, you're working 60-hour weeks with impossible deadlines and no control over your schedule. The message is clear: burnout is your problem to fix, not theirs.
           </p>
           <p className="mb-6">
-            This is the fundamental tension in burnout prevention. Research shows that burnout is primarily a systemic problem requiring organizational solutions — yet most interventions focus on individual coping.
+            This is the fundamental tension in burnout prevention. Research shows that burnout is primarily a systemic problem requiring organizational solutions <Citation id="1" index={1} /> --- yet most interventions focus on individual coping.
+          </p>
+          <p className="mb-6">
+            Consider Sarah, a hospital nurse working double shifts during staffing shortages. Her employer offers a meditation app subscription and resilience training workshops. But no amount of deep breathing fixes the fact that she's responsible for 12 patients when evidence shows safe ratios require half that number. The app isn't the problem --- and it's not the solution either.
+          </p>
+        </div>
+
+        <h2 id="the-imbalance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Imbalance: Why We Focus on Individuals
+        </h2>
+
+        <p className="mb-6">
+          Organizations invest heavily in individual-focused interventions because they're easier, cheaper, and avoid uncomfortable conversations about systemic problems. A 2020 meta-analysis found that 85% of workplace burnout interventions target individual employees rather than organizational structures <Citation id="1" index={1} />.
+        </p>
+
+        <p className="mb-6">
+          The appeal is obvious: Teaching employees stress management costs less than restructuring workloads or hiring additional staff. It places responsibility on workers rather than leadership. And when burnout persists, the organization can point to all the resources they provided --- implying the employee simply didn't use them properly.
+        </p>
+
+        <ArticleCallout variant="warning">
+          <p>
+            Individual interventions without organizational change send a damaging message: "The problem is your inability to cope, not our unreasonable demands." This individualizes a structural problem and can increase shame and isolation among burned-out employees.
+          </p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Research consistently shows that job demands --- workload, time pressure, emotional labor --- are stronger predictors of burnout than personal resilience factors <Citation id="2" index={2} />. Yet most interventions continue to focus on building individual resilience to withstand those demands rather than reducing the demands themselves.
+        </p>
+
+        <h2 id="organizational-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Organizational Strategies That Actually Work
+        </h2>
+
+        <p className="mb-6">
+          Effective organizational burnout prevention addresses the six key areas identified by research: workload, control, reward, community, fairness, and values alignment <Citation id="3" index={3} />.
+        </p>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            1. Workload Management
+          </h3>
+          <p className="mb-4">
+            Realistic workloads with adequate staffing and resources. Example: A marketing agency implemented a "one-in, one-out" policy --- new projects can't be assigned without removing or completing an existing one. Employee burnout scores dropped 40% within six months.
+          </p>
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li>Set maximum project loads per person</li>
+            <li>Regular workload audits and rebalancing</li>
+            <li>Protected time for non-billable work (admin, professional development)</li>
+            <li>Adequate staffing levels based on actual demand, not idealized productivity</li>
+          </ul>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            2. Autonomy and Control
+          </h3>
+          <p className="mb-4">
+            Giving employees meaningful input into how, when, and where they work. A tech company implemented "core hours" (10am-3pm in office) with flexibility outside those times. Burnout decreased 35%, and productivity increased 12%.
+          </p>
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li>Flexible scheduling where possible</li>
+            <li>Employee input in project assignments and priorities</li>
+            <li>Decision-making authority appropriate to role</li>
+            <li>Trust-based remote work policies</li>
+          </ul>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            3. Fair Compensation and Recognition
+          </h3>
+          <p className="mb-4">
+            Reward systems that match effort and contribution. This includes salary, but also recognition, advancement opportunities, and equitable treatment. Example: A nonprofit implemented transparent salary bands and promotion criteria, reducing pay inequities and improving retention by 60%.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            4. Supportive Community
+          </h3>
+          <p className="mb-4">
+            Positive relationships, psychological safety, and team cohesion. A hospital system trained all managers in trauma-informed leadership and created structured peer support groups. Staff burnout dropped from 68% to 42% over 18 months.
           </p>
         </div>
 
         <ComparisonTable
           title="Individual vs. Organizational Burnout Prevention"
-          columns={['Approach', 'Individual Strategies', 'Organizational Strategies']}
+          columns={['Feature', 'Individual Strategies', 'Organizational Strategies']}
           items={[
             { feature: 'Target', values: ['Personal coping and resilience', 'Workload, structure, culture'] },
             { feature: 'Responsibility', values: ['Employee', 'Leadership and systems'] },
             { feature: 'Impact', values: ['Moderate (if sustained)', 'High (if implemented well)'] },
             { feature: 'Sustainability', values: ['Requires constant effort', 'Built into structure'] },
             { feature: 'Cost to implement', values: ['Low', 'High (but worth it)'] },
+            { feature: 'Addresses root causes', values: ['No', 'Yes'] },
           ]}
           highlightColumn={2}
         />
 
+        <h2 id="individual-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Individual Strategies: Still Important
+        </h2>
+
+        <p className="mb-6">
+          Individual strategies matter --- not as a replacement for organizational change, but as a complement to it. Even in healthy workplaces, stress exists. Personal coping skills help you manage the unavoidable pressures of work and life.
+        </p>
+
+        <p className="mb-6">
+          Effective individual strategies include:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Boundary-setting:</strong> Saying no to additional work when at capacity, protecting off-hours from work intrusion</li>
+          <li><strong>Recovery activities:</strong> Physical exercise, adequate sleep, hobbies and interests unrelated to work</li>
+          <li><strong>Social connection:</strong> Meaningful relationships both inside and outside work</li>
+          <li><strong>Values clarification:</strong> Understanding what matters to you and making career decisions accordingly</li>
+          <li><strong>Skill development:</strong> Learning time management, delegation, and stress management techniques</li>
+        </ul>
+
+        <p className="mb-6">
+          Example: Marcus, a high school teacher, implemented strict boundaries --- no grading after 8pm, no work emails on weekends. He started a weekly basketball game with friends and took a pottery class. These individual strategies helped him cope with the systemic issues in his underfunded school district. They didn't fix the 38-student class sizes or eliminate mandatory unpaid overtime --- but they made the situation more sustainable while he worked on longer-term solutions (like organizing for better working conditions).
+        </p>
+
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>The truth:</strong> You need both. Individual strategies help manage unavoidable stress. Organizational changes address root causes. Without systemic change, individual coping is like bailing water from a sinking ship — exhausting and ultimately futile.
+            <strong>The truth:</strong> You need both. Individual strategies help manage unavoidable stress. Organizational changes address root causes. Without systemic change, individual coping is like bailing water from a sinking ship --- exhausting and ultimately futile.
           </p>
         </ArticleCallout>
 
+        <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Exercises
+        </h2>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 1: Burnout Source Audit
+          </h3>
+          <p className="mb-4">
+            Map where your burnout is actually coming from --- individual factors vs. organizational/systemic factors.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>List your top 5 stressors at work</strong> (what drains you most?)</li>
+            <li><strong>For each stressor, ask:</strong> "Could I personally change this with better coping skills?" or "Would this require organizational/structural changes?"</li>
+            <li><strong>Categorize each as:</strong> Individual (you can change it), Organizational (requires system change), or Mixed (both needed)</li>
+            <li><strong>Calculate the percentage:</strong> What proportion of your stressors are truly individual vs. organizational?</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Insight:</strong> Most people find that 60-80% of their burnout drivers are organizational. This clarifies where effort should focus and releases shame about "not coping well enough."
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 2: Control vs. Influence Mapping
+          </h3>
+          <p className="mb-4">
+            Identify what you can directly control, what you can influence, and what's outside your control entirely.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Create three columns:</strong> Direct Control | Can Influence | Outside My Control</li>
+            <li><strong>Sort each stressor from Exercise 1</strong> into the appropriate column</li>
+            <li><strong>For "Direct Control" items:</strong> Make an action plan (individual strategies)</li>
+            <li><strong>For "Can Influence" items:</strong> Identify who has decision-making power and how you might advocate for change</li>
+            <li><strong>For "Outside My Control" items:</strong> Consider if this job/organization is sustainable long-term</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Action step:</strong> Focus 80% of energy on what you control or influence; accept or exit what you can't change.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 3: One-Week Tracking
+          </h3>
+          <p className="mb-4">
+            Track when burnout symptoms spike and what's happening in your environment.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Each day for one week:</strong> Rate your exhaustion/cynicism/inefficacy on a 1-10 scale</li>
+            <li><strong>Note the context:</strong> What was happening? (specific task, interaction, time of day, workload)</li>
+            <li><strong>Look for patterns:</strong> Are spikes tied to certain people, tasks, times, or conditions?</li>
+            <li><strong>Ask:</strong> "Is this about my capacity (individual) or the demand (organizational)?"</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Result:</strong> Clarity on whether you need better coping skills or structural changes to your role/workload.
+          </p>
+        </div>
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+
         <p className="mb-6">
-          The most effective prevention combines personal resilience with workplace structures that make burnout less likely. Neither is sufficient alone.
+          Burnout prevention is important, but sometimes you've crossed from prevention into recovery territory. Consider professional help if:
         </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You've implemented individual strategies consistently for 3+ months with no improvement</li>
+          <li>Burnout symptoms interfere with sleep, health, or relationships outside work</li>
+          <li>You experience depression, anxiety, or physical symptoms (headaches, GI issues, chronic pain)</li>
+          <li>You're using substances to cope or experiencing suicidal thoughts</li>
+          <li>You need support advocating for organizational changes or navigating workplace conflict</li>
+        </ul>
+
+        <p className="mb-6">
+          A therapist can help you develop coping strategies, process work-related trauma, set boundaries, and decide whether to stay in your current role. Some workplaces offer Employee Assistance Programs (EAPs) that provide free, confidential counseling.
+        </p>
+
+        <ArticleCallout variant="info">
+          <p>
+            The most effective prevention combines personal resilience with workplace structures that make burnout less likely. Neither is sufficient alone. Start by understanding which factors you can control and which require organizational change --- then direct your energy accordingly.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -912,7 +1099,7 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
     description: "Discover why vacations and time off provide only temporary relief from burnout, and what else is needed for lasting recovery.",
     image: "/images/articles/cat02/cover-050.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -947,12 +1134,19 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You took a week off. By day three, you finally felt like yourself again. You slept in. You read books. You didn't check email. You came back feeling refreshed — and within 72 hours, you were right back where you started. Exhausted. Depleted. Wondering if the vacation was just a temporary illusion.
+            You took a week off. By day three, you finally felt like yourself again. You slept in. You read books. You didn't check email. You came back feeling refreshed --- and within 72 hours, you were right back where you started. Exhausted. Depleted. Wondering if the vacation was just a temporary illusion.
           </p>
           <p className="mb-6">
-            Research confirms what you experienced: vacations provide short-term relief, but the benefits fade quickly unless other changes happen. Rest is necessary for burnout recovery — but it's not sufficient.
+            Research confirms what you experienced: vacations provide short-term relief, but the benefits fade quickly unless other changes happen <Citation id="1" index={1} />. Rest is necessary for burnout recovery --- but it's not sufficient.
+          </p>
+          <p className="mb-6">
+            This is one of the most frustrating realizations about burnout: time off helps, but it's not a cure. You're not failing at rest. The problem is that rest only addresses one dimension of burnout (exhaustion) while leaving the other two (cynicism and inefficacy) largely untouched. And even the exhaustion relief is temporary if you return to the conditions that caused it.
           </p>
         </div>
+
+        <h2 id="the-fade-out-effect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Science of the Fade-Out Effect
+        </h2>
 
         <ArticleChart
           type="line"
@@ -968,8 +1162,109 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Studies show that vacation benefits typically fade within 2-4 weeks of returning to work — sometimes faster if you return to the same conditions that caused burnout.
+          Studies show that vacation benefits typically fade within 2-4 weeks of returning to work <Citation id="1" index={1} /> --- sometimes faster if you return to the same conditions that caused burnout. Within a month, most people are back to pre-vacation stress levels.
         </p>
+
+        <p className="mb-6">
+          Why? Because rest addresses the symptom (exhaustion) but not the cause. If the workload, toxic dynamics, values misalignment, or lack of control that created burnout are still there when you return, they'll recreate the same exhaustion.
+        </p>
+
+        <p className="mb-6">
+          Think of it like this: if you have a nail in your foot, taking the weight off feels good. But the relief only lasts until you start walking again. The nail is still there. Rest gave you temporary relief from the pain --- but removing the nail is what actually solves the problem.
+        </p>
+
+        <h2 id="what-rest-does" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Rest Actually Does (and Doesn't Do)
+        </h2>
+
+        <p className="mb-6">
+          Rest is valuable --- just not in the way most people expect. Here's what quality rest provides:
+        </p>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            What Rest DOES Provide:
+          </h3>
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li><strong>Physical recovery:</strong> Sleep, muscle relaxation, nervous system regulation</li>
+            <li><strong>Perspective:</strong> Distance from the day-to-day grind helps you see patterns more clearly</li>
+            <li><strong>Energy to make changes:</strong> You can't plan your next move when you're completely depleted</li>
+            <li><strong>Proof of concept:</strong> Feeling better during time off proves it's not "just you" --- it's the environment</li>
+            <li><strong>Temporary symptom relief:</strong> A break from chronic stress</li>
+          </ul>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            What Rest DOESN'T Fix:
+          </h3>
+          <ul className="list-disc pl-6 mb-6 space-y-2">
+            <li><strong>Unsustainable workloads:</strong> The deadlines and demands will be waiting when you return</li>
+            <li><strong>Toxic workplace culture:</strong> The dysfunctional team dynamics remain unchanged</li>
+            <li><strong>Values misalignment:</strong> The disconnect between your values and your work persists</li>
+            <li><strong>Lack of autonomy or control:</strong> You still have no say in how things get done</li>
+            <li><strong>Skill gaps:</strong> You haven't learned new coping strategies or boundary-setting skills</li>
+          </ul>
+        </div>
+
+        <ArticleCallout variant="warning">
+          <p>
+            If your burnout returns within days of coming back to work, that's not personal failure. It's diagnostic information: the problem is structural, not individual. Your body is telling you that the job itself --- not your coping skills --- is the issue.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="missing-pieces" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Missing Pieces: What Else Recovery Requires
+        </h2>
+
+        <p className="mb-6">
+          Lasting recovery from burnout requires rest PLUS changes in one or more of these areas:
+        </p>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            1. Workload or Role Changes
+          </h3>
+          <p className="mb-4">
+            Example: Priya, a software engineer, negotiated to drop one major project and delegate another after burnout. Her workload became sustainable. Rest alone wouldn't have achieved this --- the change required difficult conversations and boundary-setting <Citation id="2" index={2} />.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            2. Relationship Repair or Distance
+          </h3>
+          <p className="mb-4">
+            Example: David's burnout was tied to a micromanaging boss. After vacation, he requested a transfer to a different team. The rest gave him clarity; the team change gave him relief.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            3. Skill Development
+          </h3>
+          <p className="mb-4">
+            Learning to say no, delegate, set boundaries, manage time differently, or communicate assertively. Example: After medical leave for burnout, Janelle worked with a therapist to develop assertiveness skills and practiced saying no to non-essential requests. Rest gave her breathing room; skills made it sustainable.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            4. Values Realignment
+          </h3>
+          <p className="mb-4">
+            Sometimes burnout signals a deeper mismatch between your work and what matters to you. Example: After a sabbatical, Carlos realized his corporate law job would never align with his values. Rest helped him see it; career change solved it.
+          </p>
+        </div>
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            5. Active Recovery Practices
+          </h3>
+          <p className="mb-4">
+            Research shows that active recovery (exercise, hobbies, socializing) is more effective than passive rest (TV, scrolling) for sustained wellbeing <Citation id="3" index={3} />. Example: Maya started rock climbing twice a week and joined a book club. These activities provided ongoing recovery, not just temporary relief.
+          </p>
+        </div>
 
         <ArticleCallout variant="key-takeaway">
           <p>
@@ -977,9 +1272,90 @@ export const burnoutEmotionalExhaustionArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="practical-exercises" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Exercises
+        </h2>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 1: Root Cause Analysis
+          </h3>
+          <p className="mb-4">
+            Identify what's actually driving your burnout (beyond just "being tired").
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Ask yourself:</strong> When I'm on vacation or days off, which symptoms get better? Which don't?</li>
+            <li><strong>What gets better with rest:</strong> Likely exhaustion, physical symptoms, irritability</li>
+            <li><strong>What doesn't improve with rest:</strong> Likely cynicism about work, feelings of ineffectiveness, dread about returning</li>
+            <li><strong>For symptoms that don't improve:</strong> Ask "What would have to change at work for this to get better?" (not "What do I need to do differently?")</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Insight:</strong> This reveals whether your burnout is primarily about exhaustion (rest helps) or systemic issues (structural changes needed).
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 2: Return-to-Work Boundary Experiment
+          </h3>
+          <p className="mb-4">
+            Test one sustainable boundary when you return from time off to prevent immediate burnout recurrence.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>Before your next time off:</strong> Identify one boundary to protect when you return (e.g., no email after 7pm, no meetings before 10am, delegation of one recurring task)</li>
+            <li><strong>Communicate the boundary clearly:</strong> "I'm implementing this schedule/workflow change to maintain sustainable productivity"</li>
+            <li><strong>Track your exhaustion levels:</strong> Rate 1-10 daily for two weeks after return</li>
+            <li><strong>Compare:</strong> Does the boundary slow the fade-out effect?</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Result:</strong> Even one protected boundary can extend post-rest benefits significantly.
+          </p>
+        </div>
+
+        <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border-l-4 border-l-blue-500">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Exercise 3: Three-Month Check-In
+          </h3>
+          <p className="mb-4">
+            Assess whether rest plus changes are creating lasting improvement.
+          </p>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li><strong>After a period of rest (vacation, leave, lighter schedule):</strong> Identify one concrete change to implement (workload reduction, boundary, role change, skill development)</li>
+            <li><strong>Commit to the change for 3 months:</strong> Long enough to see if it sticks</li>
+            <li><strong>At 3 months, ask:</strong> Am I still burned out? Better? Worse? Same?</li>
+            <li><strong>If better:</strong> Rest + change worked. Maintain it.</li>
+            <li><strong>If same/worse:</strong> The change wasn't sufficient or you need a bigger change (possibly leaving the role)</li>
+          </ol>
+          <p className="mt-4 text-sm italic">
+            <strong>Key question:</strong> "Is this situation fixable with changes I can control, or do I need to leave?"
+          </p>
+        </div>
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Rest Isn't Enough: Seeking Support
+        </h2>
+
         <p className="mb-6">
-          Lasting recovery requires rest as foundation — combined with skill-building, boundary-setting, environmental changes, and often fundamental shifts in how you work and live. Rest opens the door. But you have to walk through it and build something different on the other side.
+          If rest provides no relief at all --- if you feel just as exhausted, cynical, and ineffective even during time off --- that may indicate clinical depression or anxiety alongside burnout. Consider professional help if:
         </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Time off provides zero improvement in mood, energy, or outlook</li>
+          <li>You have thoughts of self-harm or hopelessness</li>
+          <li>Physical symptoms (insomnia, headaches, GI issues) persist even when not working</li>
+          <li>You're using substances to cope or emotionally numb</li>
+          <li>You've made multiple changes (workload, boundaries, role) with no improvement</li>
+        </ul>
+
+        <p className="mb-6">
+          A therapist can help differentiate burnout from depression, process work-related stress, and develop recovery strategies. Some situations may require medical leave, medication, or ultimately leaving the job.
+        </p>
+
+        <ArticleCallout variant="info">
+          <p>
+            Lasting recovery requires rest as foundation --- combined with skill-building, boundary-setting, environmental changes, and often fundamental shifts in how you work and live. Rest opens the door. But you have to walk through it and build something different on the other side.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },

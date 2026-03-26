@@ -106,7 +106,7 @@ export const imposterSyndromeArticlesB: Article[] = [
             When a white man feels like an imposter despite clear competence, it's a psychological pattern. When a woman of color feels like an imposter in the same context, it's a psychological pattern operating within a system that may actually be sending her signals that she doesn't belong. This distinction is critical but often overlooked.
           </p>
           <p className="mb-6">
-            While imposter syndrome was first identified in high-achieving women in 1978 <Citation id="1" index={1} source="Psychotherapy: Theory, Research & Practice" year="1978" tier={1} />, subsequent research has revealed that it disproportionately affects people from marginalized groups—women, racial and ethnic minorities, LGBTQ+ individuals, people with disabilities, and first-generation students <Citation id="2" index={2} source="Journal of Counseling Psychology" year="2020" tier={1} />. For these groups, imposter syndrome doesn't just happen <em>in</em> a system—it happens <em>because of</em> systemic barriers that create genuine belonging uncertainty.
+            While imposter syndrome was first identified in high-achieving women in 1978 <Citation id="1" index={1} source="Psychotherapy: Theory, Research & Practice" year="1978" tier={1} />, subsequent research has revealed that it disproportionately affects people from marginalized groups---women, racial and ethnic minorities, LGBTQ+ individuals, people with disabilities, and first-generation students <Citation id="2" index={2} source="Journal of Counseling Psychology" year="2020" tier={1} />. For these groups, imposter syndrome doesn't just happen <em>in</em> a system---it happens <em>because of</em> systemic barriers that create genuine belonging uncertainty.
           </p>
         </div>
 
@@ -152,7 +152,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           Stereotype Threat and Imposter Syndrome
         </h2>
         <p className="mb-6">
-          Stereotype threat—the risk of confirming negative stereotypes about one's group—intensifies imposter syndrome for marginalized individuals <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="1995" tier={1} />. When a woman in STEM makes a mistake, she may worry it confirms the stereotype that "women aren't good at math." When a Black professional encounters a challenge, there's added pressure not to confirm stereotypes about Black competence.
+          Stereotype threat---the risk of confirming negative stereotypes about one's group---intensifies imposter syndrome for marginalized individuals <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="1995" tier={1} />. When a woman in STEM makes a mistake, she may worry it confirms the stereotype that "women aren't good at math." When a Black professional encounters a challenge, there's added pressure not to confirm stereotypes about Black competence.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -196,7 +196,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           Microaggressions as Fraud "Evidence"
         </h2>
         <p className="mb-6">
-          Microaggressions—subtle, often unintentional expressions of bias—directly fuel imposter syndrome by providing external "confirmation" of not belonging <Citation id="8" index={8} source="Journal of Vocational Behavior" year="2022" tier={1} />:
+          Microaggressions---subtle, often unintentional expressions of bias---directly fuel imposter syndrome by providing external "confirmation" of not belonging <Citation id="8" index={8} source="Journal of Vocational Behavior" year="2022" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -258,7 +258,7 @@ export const imposterSyndromeArticlesB: Article[] = [
                     <li>Being included in photos/materials primarily to show diversity</li>
                     <li>"You don't act like other [demographic group] people"</li>
                   </ul>
-                  <p><strong>Impact:</strong> Reinforces the narrative that your value is symbolic, not substantive—exactly what imposter syndrome tells you.</p>
+                  <p><strong>Impact:</strong> Reinforces the narrative that your value is symbolic, not substantive---exactly what imposter syndrome tells you.</p>
                 </div>
               ),
             },
@@ -284,7 +284,7 @@ export const imposterSyndromeArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          This uncertainty isn't irrational—it's a reasonable response to environmental cues. When belonging is genuinely uncertain, feeling like an imposter is adaptive, not distorted thinking.
+          This uncertainty isn't irrational---it's a reasonable response to environmental cues. When belonging is genuinely uncertain, feeling like an imposter is adaptive, not distorted thinking.
         </p>
 
         <h2 id="not-just-psychology" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -328,7 +328,7 @@ export const imposterSyndromeArticlesB: Article[] = [
                     <li>Document achievements to counter external invalidation</li>
                     <li>Find community and mentorship with people who share your identity</li>
                     <li>Set boundaries on emotional labor (e.g., educating others about bias)</li>
-                    <li>Practice self-compassion—your feelings are a rational response to an irrational system</li>
+                    <li>Practice self-compassion---your feelings are a rational response to an irrational system</li>
                   </ul>
                 </div>
               ),
@@ -384,7 +384,7 @@ export const imposterSyndromeArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            For marginalized groups, imposter syndrome operates at the intersection of internal psychological patterns and external systemic barriers. While cognitive strategies can help manage the internal experience, true resolution requires addressing the environmental conditions that create belonging uncertainty—underrepresentation, microaggressions, and biased systems. The goal is not just to change how you think about yourself, but to change the systems that send you messages that you don't belong.
+            For marginalized groups, imposter syndrome operates at the intersection of internal psychological patterns and external systemic barriers. While cognitive strategies can help manage the internal experience, true resolution requires addressing the environmental conditions that create belonging uncertainty---underrepresentation, microaggressions, and biased systems. The goal is not just to change how you think about yourself, but to change the systems that send you messages that you don't belong.
           </p>
         </ArticleCallout>
       </>
@@ -475,7 +475,7 @@ export const imposterSyndromeArticlesB: Article[] = [
             Should you take the job offer? End the relationship? Choose the graduate program? For most people, these are challenging decisions. For people with chronic self-doubt, they're paralyzing. The internal dialogue loops endlessly: "What if I'm wrong? What if I regret this? I can't trust my judgment." Decision-making becomes a minefield of potential mistakes, each one "proof" that you shouldn't trust yourself.
           </p>
           <p className="mb-6">
-            Chronic self-doubt—the persistent inability to trust your own judgment and decision-making—is both a symptom and a driver of imposter syndrome <Citation id="1" index={1} source="Personality and Individual Differences" year="2020" tier={1} />. When you fundamentally distrust your ability to assess situations accurately, every choice feels like a gamble. Neuroscience research shows that chronic self-doubt actually alters decision-making brain circuits, creating a feedback loop where doubt leads to worse decisions, which reinforces doubt <Citation id="2" index={2} source="Cognitive, Affective, & Behavioral Neuroscience" year="2021" tier={1} />.
+            Chronic self-doubt---the persistent inability to trust your own judgment and decision-making---is both a symptom and a driver of imposter syndrome <Citation id="1" index={1} source="Personality and Individual Differences" year="2020" tier={1} />. When you fundamentally distrust your ability to assess situations accurately, every choice feels like a gamble. Neuroscience research shows that chronic self-doubt actually alters decision-making brain circuits, creating a feedback loop where doubt leads to worse decisions, which reinforces doubt <Citation id="2" index={2} source="Cognitive, Affective, & Behavioral Neuroscience" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -494,7 +494,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               title: 'Analysis Paralysis',
               content: (
                 <p>
-                  Gathering endless information, weighing options obsessively, but never feeling ready to decide. You convince yourself that you need 'just one more piece of data, ' but the goalpost keeps moving. This is distinct from careful deliberation—it's avoidance driven by fear of making the wrong choice.
+                  Gathering endless information, weighing options obsessively, but never feeling ready to decide. You convince yourself that you need 'just one more piece of data, ' but the goalpost keeps moving. This is distinct from careful deliberation---it's avoidance driven by fear of making the wrong choice.
                 </p>
               ),
             },
@@ -593,7 +593,7 @@ export const imposterSyndromeArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Paradoxically, chronic self-doubt doesn't lead to better decisions—just slower, more agonizing ones <Citation id="5" index={5} source="Judgment and Decision Making" year="2019" tier={1} />. The costs include:
+          Paradoxically, chronic self-doubt doesn't lead to better decisions---just slower, more agonizing ones <Citation id="5" index={5} source="Judgment and Decision Making" year="2019" tier={1} />. The costs include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Missed opportunities:</strong> By the time you decide, the window has closed</li>
@@ -630,7 +630,7 @@ export const imposterSyndromeArticlesB: Article[] = [
                     Remove some decision burden by using frameworks. Example: Pro/con lists, weighted criteria matrices, or the 10-10-10 rule (How will I feel about this in 10 minutes? 10 months? 10 years?). Structure externalizes the process, reducing reliance on "gut feel" you don't trust.
                   </p>
                   <p className="italic text-sm">
-                    Note: Avoid perfectionism here—these tools provide clarity, not certainty. Use them to inform, not to guarantee the "right" answer.
+                    Note: Avoid perfectionism here---these tools provide clarity, not certainty. Use them to inform, not to guarantee the "right" answer.
                   </p>
                 </div>
               ),
@@ -655,7 +655,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               title: '5. Limit Information Gathering',
               description: (
                 <p>
-                  Set a cap on research: 'I will read three reviews, not thirty." More information beyond a certain point doesn't improve decisions—it just feeds analysis paralysis. Recognize when you have enough to decide and stop gathering.
+                  Set a cap on research: 'I will read three reviews, not thirty." More information beyond a certain point doesn't improve decisions---it just feeds analysis paralysis. Recognize when you have enough to decide and stop gathering.
                 </p>
               ),
             },
@@ -663,7 +663,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               title: `6. Reframe 'Wrong' Decisions`,
               description: (
                 <p>
-                  Most decisions aren't binary right/wrong—they're trade-offs. Even 'mistakes' provide valuable information. Ask: "What's the worst realistic outcome, and can I handle it?" Often, the answer is yes. This reduces the perceived stakes and makes deciding less terrifying.
+                  Most decisions aren't binary right/wrong---they're trade-offs. Even 'mistakes' provide valuable information. Ask: "What's the worst realistic outcome, and can I handle it?" Often, the answer is yes. This reduces the perceived stakes and makes deciding less terrifying.
                 </p>
               ),
             },
@@ -819,10 +819,10 @@ export const imposterSyndromeArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Imposter syndrome feels permanent—an unchangeable narrative about your inadequacy. But research shows it's not. While 70% of people experience imposter feelings at some point, these feelings are responsive to targeted interventions. You can reduce imposter syndrome, rebuild confidence, and develop a more accurate self-assessment.
+            Imposter syndrome feels permanent---an unchangeable narrative about your inadequacy. But research shows it's not. While 70% of people experience imposter feelings at some point, these feelings are responsive to targeted interventions. You can reduce imposter syndrome, rebuild confidence, and develop a more accurate self-assessment.
           </p>
           <p className="mb-6">
-            This article presents evidence-based strategies from psychological research—interventions that have been tested and shown to reduce imposter feelings <Citation id="1" index={1} source="Journal of General Internal Medicine" year="2020" tier={1} />. These aren't platitudes about "believing in yourself." They're specific, actionable techniques backed by empirical evidence.
+            This article presents evidence-based strategies from psychological research---interventions that have been tested and shown to reduce imposter feelings <Citation id="1" index={1} source="Journal of General Internal Medicine" year="2020" tier={1} />. These aren't platitudes about "believing in yourself." They're specific, actionable techniques backed by empirical evidence.
           </p>
         </div>
 
@@ -964,7 +964,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           Keep an Evidence Log
         </h2>
         <p className="mb-6">
-          Imposter syndrome creates selective memory—you remember mistakes and forget successes. An evidence log counteracts this bias <Citation id="9" index={9} source="Personality and Individual Differences" year="2021" tier={1} />:
+          Imposter syndrome creates selective memory---you remember mistakes and forget successes. An evidence log counteracts this bias <Citation id="9" index={9} source="Personality and Individual Differences" year="2021" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -1004,7 +1004,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           Talk About It: The Power of Normalization
         </h2>
         <p className="mb-6">
-          Research consistently shows that sharing imposter experiences reduces their intensity <Citation id="5" index={5} source="Group Dynamics: Theory, Research, and Practice" year="2020" tier={1} />. When you discover that others—including highly competent people—feel the same way, it challenges the narrative that you're uniquely fraudulent.
+          Research consistently shows that sharing imposter experiences reduces their intensity <Citation id="5" index={5} source="Group Dynamics: Theory, Research, and Practice" year="2020" tier={1} />. When you discover that others---including highly competent people---feel the same way, it challenges the narrative that you're uniquely fraudulent.
         </p>
 
         <StatCard
@@ -1125,7 +1125,7 @@ export const imposterSyndromeArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Imposter syndrome is not permanent. Evidence-based strategies—cognitive restructuring, attribution retraining, self-compassion, evidence logs, normalization through sharing, mentorship, and growth mindset—can significantly reduce imposter feelings. The goal isn't perfect confidence, but rather an accurate self-assessment that acknowledges both competence and areas for growth. Change is incremental: small, consistent practices accumulate into meaningful shifts in how you see yourself.
+            Imposter syndrome is not permanent. Evidence-based strategies---cognitive restructuring, attribution retraining, self-compassion, evidence logs, normalization through sharing, mentorship, and growth mindset---can significantly reduce imposter feelings. The goal isn't perfect confidence, but rather an accurate self-assessment that acknowledges both competence and areas for growth. Change is incremental: small, consistent practices accumulate into meaningful shifts in how you see yourself.
           </p>
         </ArticleCallout>
       </>
@@ -1213,7 +1213,7 @@ export const imposterSyndromeArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Here's a paradox: the person giving the confident but uninformed opinion at the meeting may genuinely believe they're an expert, while the actual expert sits quietly, doubting their own knowledge. This pattern—novices overestimating their ability while experts underestimate theirs—reflects two mirror-image distortions of self-assessment: the Dunning-Kruger effect and imposter syndrome.
+            Here's a paradox: the person giving the confident but uninformed opinion at the meeting may genuinely believe they're an expert, while the actual expert sits quietly, doubting their own knowledge. This pattern---novices overestimating their ability while experts underestimate theirs---reflects two mirror-image distortions of self-assessment: the Dunning-Kruger effect and imposter syndrome.
           </p>
           <p className="mb-6">
             Both represent failures of metacognition (thinking about thinking), but in opposite directions. The Dunning-Kruger effect describes how people with low competence overestimate their ability <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="1999" tier={1} />, while imposter syndrome describes how people with demonstrated competence underestimate theirs <Citation id="2" index={2} source="Journal of Personality Assessment" year="2021" tier={1} />. Understanding both reveals important truths about accurate self-knowledge.
@@ -1224,7 +1224,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           The Dunning-Kruger Effect Explained
         </h2>
         <p className="mb-6">
-          In their landmark 1999 study, psychologists David Dunning and Justin Kruger found that people who performed poorly on tests of logic, grammar, and humor were also the worst at estimating their own performance. Those in the bottom quartile estimated themselves to be in the 60th percentile—massively overestimating their ability <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="1999" tier={1} />.
+          In their landmark 1999 study, psychologists David Dunning and Justin Kruger found that people who performed poorly on tests of logic, grammar, and humor were also the worst at estimating their own performance. Those in the bottom quartile estimated themselves to be in the 60th percentile---massively overestimating their ability <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="1999" tier={1} />.
         </p>
 
         <ArticleCallout variant="did-you-know">
@@ -1241,7 +1241,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           Imposter Syndrome: The Mirror Image
         </h2>
         <p className="mb-6">
-          While the Dunning-Kruger effect describes overconfidence despite low competence, imposter syndrome describes doubt despite high competence. People experiencing imposter syndrome have objective evidence of success—degrees, publications, promotions—but discount this evidence and attribute success to luck or deception <Citation id="2" index={2} source="Journal of Personality Assessment" year="2021" tier={1} />.
+          While the Dunning-Kruger effect describes overconfidence despite low competence, imposter syndrome describes doubt despite high competence. People experiencing imposter syndrome have objective evidence of success---degrees, publications, promotions---but discount this evidence and attribute success to luck or deception <Citation id="2" index={2} source="Journal of Personality Assessment" year="2021" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -1269,16 +1269,16 @@ export const imposterSyndromeArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          <strong>Stage 1 — Novice (Dunning-Kruger Peak):</strong> Beginners learn some basics and feel highly confident. They don't yet understand the depth of the field, so their limited knowledge feels comprehensive.
+          <strong>Stage 1 --- Novice (Dunning-Kruger Peak):</strong> Beginners learn some basics and feel highly confident. They don't yet understand the depth of the field, so their limited knowledge feels comprehensive.
         </p>
         <p className="mb-6">
-          <strong>Stage 2 — Advanced Beginner (Valley of Despair):</strong> As learning deepens, awareness of complexity grows faster than skill. Confidence plummets. This is where imposter syndrome often emerges.
+          <strong>Stage 2 --- Advanced Beginner (Valley of Despair):</strong> As learning deepens, awareness of complexity grows faster than skill. Confidence plummets. This is where imposter syndrome often emerges.
         </p>
         <p className="mb-6">
-          <strong>Stage 3 — Competent:</strong> Skills develop, confidence begins to recover, calibrated more accurately to actual ability.
+          <strong>Stage 3 --- Competent:</strong> Skills develop, confidence begins to recover, calibrated more accurately to actual ability.
         </p>
         <p className="mb-6">
-          <strong>Stage 4 — Proficient/Expert:</strong> High competence with realistic confidence. True experts are often cautious because they understand complexity and limitations.
+          <strong>Stage 4 --- Proficient/Expert:</strong> High competence with realistic confidence. True experts are often cautious because they understand complexity and limitations.
         </p>
 
         <h2 id="key-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1304,7 +1304,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           The Role of Metacognition
         </h2>
         <p className="mb-6">
-          Both patterns reflect distortions in metacognition—the ability to accurately assess your own knowledge and performance <Citation id="8" index={8} source="Consciousness and Cognition" year="2020" tier={1} />:
+          Both patterns reflect distortions in metacognition---the ability to accurately assess your own knowledge and performance <Citation id="8" index={8} source="Consciousness and Cognition" year="2020" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -1315,7 +1315,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               title: 'Dunning-Kruger: Lack of Metacognitive Awareness',
               content: (
                 <p>
-                  Novices lack the knowledge to evaluate their own performance. They don't know the criteria experts use, so they can't judge whether they meet them. This is why incompetent people are often supremely confident—they genuinely don't realize what competence looks like.
+                  Novices lack the knowledge to evaluate their own performance. They don't know the criteria experts use, so they can't judge whether they meet them. This is why incompetent people are often supremely confident---they genuinely don't realize what competence looks like.
                 </p>
               ),
             },
@@ -1324,7 +1324,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               title: 'Imposter Syndrome: Distorted Metacognitive Monitoring',
               content: (
                 <p>
-                  People with imposter syndrome have metacognitive awareness—they know what expert performance looks like—but they systematically underestimate their own performance relative to that standard. They're monitoring accurately but evaluating inaccurately, focusing on gaps rather than achievements.
+                  People with imposter syndrome have metacognitive awareness---they know what expert performance looks like---but they systematically underestimate their own performance relative to that standard. They're monitoring accurately but evaluating inaccurately, focusing on gaps rather than achievements.
                 </p>
               ),
             },
@@ -1356,7 +1356,7 @@ export const imposterSyndromeArticlesB: Article[] = [
           Who Experiences Which Pattern?
         </h2>
         <p className="mb-6">
-          Dunning-Kruger and imposter syndrome aren't personality types—they're stages in learning. The same person can experience both at different points:
+          Dunning-Kruger and imposter syndrome aren't personality types---they're stages in learning. The same person can experience both at different points:
         </p>
 
         <ArticleCallout variant="info">
@@ -1415,7 +1415,7 @@ export const imposterSyndromeArticlesB: Article[] = [
               title: `Embrace 'Appropriate Uncertainty'`,
               description: (
                 <p>
-                  Recognize that uncertainty isn't always imposter syndrome—sometimes it's accurate assessment of a genuinely complex situation. Ask: 'Is this uncertainty justified by real ambiguity, or is it my pattern of self-doubt?'
+                  Recognize that uncertainty isn't always imposter syndrome---sometimes it's accurate assessment of a genuinely complex situation. Ask: 'Is this uncertainty justified by real ambiguity, or is it my pattern of self-doubt?'
                 </p>
               ),
             },
@@ -1432,7 +1432,7 @@ export const imposterSyndromeArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The Dunning-Kruger effect and imposter syndrome represent opposite failures of self-assessment: overconfidence with low competence versus doubt with high competence. Both reflect distortions in metacognition—the ability to accurately evaluate your own knowledge. Recognizing these patterns helps calibrate self-perception: novices need humility about how much they don't know, while experts need recognition of what they do know. The goal is not perfect confidence, but confidence proportional to actual competence.
+            The Dunning-Kruger effect and imposter syndrome represent opposite failures of self-assessment: overconfidence with low competence versus doubt with high competence. Both reflect distortions in metacognition---the ability to accurately evaluate your own knowledge. Recognizing these patterns helps calibrate self-perception: novices need humility about how much they don't know, while experts need recognition of what they do know. The goal is not perfect confidence, but confidence proportional to actual competence.
           </p>
         </ArticleCallout>
       </>
@@ -1520,7 +1520,7 @@ export const imposterSyndromeArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "I'm a fraud who's fooled everyone." This is not just a thought—it's a narrative, a story you've written about yourself. And like any story, it can be revised. Imposter syndrome isn't a fact about who you are; it's a particular way of interpreting your life. Changing it requires rewriting the narrative from fraud to competent—not through wishful thinking, but through deliberate reconstruction of how you make sense of your experience.
+            "I'm a fraud who's fooled everyone." This is not just a thought---it's a narrative, a story you've written about yourself. And like any story, it can be revised. Imposter syndrome isn't a fact about who you are; it's a particular way of interpreting your life. Changing it requires rewriting the narrative from fraud to competent---not through wishful thinking, but through deliberate reconstruction of how you make sense of your experience.
           </p>
           <p className="mb-6">
             Research on narrative identity shows that the stories we tell about ourselves shape our sense of self, and that these stories are malleable <Citation id="1" index={1} source="Identity: An International Journal of Theory and Research" year="2020" tier={1} />. You're not stuck with the "fraud" narrative. Through specific psychological techniques, you can author a more accurate, compassionate story about your abilities and achievements <Citation id="3" index={3} source="Journal of Constructivist Psychology" year="2020" tier={1} />.
@@ -1540,20 +1540,20 @@ export const imposterSyndromeArticlesB: Article[] = [
             <li><strong>Selective memory:</strong> Remembering mistakes vividly while forgetting successes</li>
             <li><strong>External attribution:</strong> Success is luck, timing, or others" help; failure is personal inadequacy</li>
             <li><strong>Discount mechanism:</strong> Achievements "don't count' because of arbitrary criteria</li>
-            <li><strong>Future prediction:</strong> "Eventually I'll be exposed' — anticipating inevitable discovery</li>
+            <li><strong>Future prediction:</strong> "Eventually I'll be exposed' --- anticipating inevitable discovery</li>
             <li><strong>Identity claim:</strong> "I am a fraud" (not "I sometimes feel like one")</li>
           </ul>
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          This narrative is coherent and self-reinforcing. New experiences are interpreted to fit the story: success confirms you're a good deceiver; struggle confirms you lack ability. Before you can rewrite it, you need to see it clearly—as a story, not as reality.
+          This narrative is coherent and self-reinforcing. New experiences are interpreted to fit the story: success confirms you're a good deceiver; struggle confirms you lack ability. Before you can rewrite it, you need to see it clearly---as a story, not as reality.
         </p>
 
         <h2 id="deconstructing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Deconstructing the Fraud Narrative
         </h2>
         <p className="mb-6">
-          The first step in narrative change is externalizing the story—separating it from your identity <Citation id="2" index={2} source="Cognitive Behaviour Therapy" year="2021" tier={1} />:
+          The first step in narrative change is externalizing the story---separating it from your identity <Citation id="2" index={2} source="Cognitive Behaviour Therapy" year="2021" tier={1} />:
         </p>
 
         <ProgressSteps
@@ -1667,13 +1667,13 @@ export const imposterSyndromeArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    A believable competence narrative includes challenges—but interprets them differently:
+                    A believable competence narrative includes challenges---but interprets them differently:
                   </p>
                   <p className="mb-2 font-semibold">Fraud narrative:</p>
                   <p className="mb-3 italic">"I struggled with that project, which proves I'm not competent."</p>
                   <p className="mb-2 font-semibold">Competence narrative:</p>
                   <p className="italic">
-                    "I struggled with that project because it was at the edge of my current skills—which is where learning happens. I navigated the challenge, sought help appropriately, and ultimately delivered. That's what competence looks like."
+                    "I struggled with that project because it was at the edge of my current skills---which is where learning happens. I navigated the challenge, sought help appropriately, and ultimately delivered. That's what competence looks like."
                   </p>
                 </div>
               ),
@@ -1744,7 +1744,7 @@ export const imposterSyndromeArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The compassionate competence narrative is not self-deception—it's accurate and kind. It acknowledges reality (strengths, weaknesses, ongoing development) without harsh judgment.
+          The compassionate competence narrative is not self-deception---it's accurate and kind. It acknowledges reality (strengths, weaknesses, ongoing development) without harsh judgment.
         </p>
 
         <h2 id="embodying-new-narrative" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1786,12 +1786,12 @@ export const imposterSyndromeArticlesB: Article[] = [
         </ol>
 
         <p className="mb-6">
-          Over time, the competence narrative becomes stronger and the fraud narrative loses its grip. But it may never disappear entirely—and that's okay. What matters is which story you choose to live from.
+          Over time, the competence narrative becomes stronger and the fraud narrative loses its grip. But it may never disappear entirely---and that's okay. What matters is which story you choose to live from.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Imposter syndrome is a narrative—a story you've written about yourself as a fraud. Changing it requires deliberate narrative reconstruction: deconstructing the fraud story, gathering evidence for competence, reinterpreting successes, writing growth stories, and integrating self-compassion. This isn't self-deception; it's creating a more accurate, balanced narrative that reflects both your capabilities and your ongoing development. The fraud narrative may never fully disappear, but you can choose which story to live from.
+            Imposter syndrome is a narrative---a story you've written about yourself as a fraud. Changing it requires deliberate narrative reconstruction: deconstructing the fraud story, gathering evidence for competence, reinterpreting successes, writing growth stories, and integrating self-compassion. This isn't self-deception; it's creating a more accurate, balanced narrative that reflects both your capabilities and your ongoing development. The fraud narrative may never fully disappear, but you can choose which story to live from.
           </p>
         </ArticleCallout>
       </>

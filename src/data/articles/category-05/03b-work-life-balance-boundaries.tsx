@@ -34,7 +34,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Most people eat lunch at their desk while working. It saves time, right? But research shows this "efficiency" backfires—working through lunch reduces afternoon performance and increases burnout{', '}
+            Most people eat lunch at their desk while working. It saves time, right? But research shows this "efficiency" backfires---working through lunch reduces afternoon performance and increases burnout{', '}
             <Citation id="8" index={8} source="Journal of Occupational and Environmental Medicine" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
@@ -75,7 +75,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     id: catId(27),
     slug: 'part-time-work-mental-health',
     title: 'Part-Time Work and Mental Health: The Flexibility Paradox',
-    description: 'Understand why part-time work can both improve and harm mental health—depending on your circumstances.',
+    description: 'Understand why part-time work can both improve and harm mental health---depending on your circumstances.',
     image: "/images/articles/cat05/cover-027.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -136,7 +136,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
     id: catId(28),
     slug: 'four-burners-theory-trade-offs',
     title: 'The Four Burners Theory: Making Peace with Trade-Offs',
-    description: "Accept that you cannot excel in all life domains simultaneously—and why that's okay.",
+    description: "Accept that you cannot excel in all life domains simultaneously---and why that's okay.",
     image: '/images/articles/cat05/cover-028.svg',
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 6,
@@ -170,13 +170,13 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
           Why Understanding Trade-Offs Matters
         </h2>
         <p className="mb-6">
-          Many people exhaust themselves trying to excel everywhere—perfect career, thriving relationships, optimal health, active social life. Research shows this is unrealistic and creates chronic dissatisfaction{', '}
+          Many people exhaust themselves trying to excel everywhere---perfect career, thriving relationships, optimal health, active social life. Research shows this is unrealistic and creates chronic dissatisfaction{', '}
           <Citation id="1" index={1} source="Journal of Happiness Studies" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip">
           <p>
-            Accepting trade-offs isn't about giving up. It's about being intentional—choosing where to invest your finite time and energy.
+            Accepting trade-offs isn't about giving up. It's about being intentional---choosing where to invest your finite time and energy.
           </p>
         </ArticleCallout>
 
@@ -220,7 +220,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
           </p>
           <p className="mb-6">
             Research shows dual-earner couples face unique work-life challenges{', '}
-            <Citation id="1" index={1} source="Journal of Family Psychology" year="2021" tier={1} />—particularly around equity, career prioritization, and mental load.
+            <Citation id="1" index={1} source="Journal of Family Psychology" year="2021" tier={1} />---particularly around equity, career prioritization, and mental load.
           </p>
         </div>
 
@@ -228,7 +228,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
           The Mental Load Problem
         </h2>
         <p className="mb-6">
-          Even when couples split tasks equally, one partner (usually women) carries the "mental load"—remembering, planning, organizing{', '}
+          Even when couples split tasks equally, one partner (usually women) carries the "mental load"---remembering, planning, organizing{', '}
           <Citation id="2" index={2} source="Sex Roles" year="2020" tier={1} />. This invisible labor is exhausting and often unrecognized.
         </p>
 
@@ -269,7 +269,7 @@ export const workLifeBalanceBoundariesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your partner comes home exhausted, irritable, defeated by their job. You listen, comfort, absorb the stress. Eventually, you're stressed too—even though it's not your workplace.
+            Your partner comes home exhausted, irritable, defeated by their job. You listen, comfort, absorb the stress. Eventually, you're stressed too---even though it's not your workplace.
           </p>
           <p className="mb-6">
             This is <strong>stress crossover</strong>: when one partner's work stress transfers to the other{', '}

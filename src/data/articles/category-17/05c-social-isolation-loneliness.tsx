@@ -16,7 +16,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     id: catId(41),
     slug: 'moving-senior-living-communities-social-connection',
     title: 'Moving to Senior Living Communities: Social Connection Benefits',
-    description: `Senior living communities offer built-in social connection, activities, and support—but require accepting loss of independence and home. Weigh carefully.`,
+    description: `Senior living communities offer built-in social connection, activities, and support---but require accepting loss of independence and home. Weigh carefully.`,
     image: '/images/articles/cat17/cover-041.svg',
     category: CATEGORY_AGING,
     readTime: 10,
@@ -37,21 +37,21 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         citationIndex: 2,
       },
       {
-        text: `Costs range from $2,000/month (independent living) to $7,000+/month (assisted living)—often requiring sale of home or depletion of retirement savings.`,
+        text: `Costs range from $2,000/month (independent living) to $7,000+/month (assisted living)---often requiring sale of home or depletion of retirement savings.`,
         citationIndex: 3,
       },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Moving to senior living is not giving up on independence—it is choosing community over isolation. The question is not whether you can manage alone, but whether you want to.`,
+    sparkMoment: `Moving to senior living is not giving up on independence---it is choosing community over isolation. The question is not whether you can manage alone, but whether you want to.`,
 
     practicalExercise: {
       title: 'Evaluate Senior Living Options',
       steps: [
         {
           title: 'Tour Multiple Communities',
-          description: `Visit at least 3 facilities. Attend a meal, activity, resident council meeting. Talk to residents—ask "Are you happy here? Would you recommend it?"`,
+          description: `Visit at least 3 facilities. Attend a meal, activity, resident council meeting. Talk to residents---ask "Are you happy here? Would you recommend it?"`,
         },
         {
           title: 'Assess Social Fit',
@@ -96,7 +96,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <p>
-          Mrs. Williams lived in her house for 40 years. She raised her children there. After her husband died, she stayed—the house was full of memories. But she was alone. Days passed without speaking to anyone. Her daughter suggested assisted living. Mrs. Williams resisted: "I am not giving up my home." After a fall, she moved—reluctantly. Six months later, she admits: "I wish I had moved sooner. I have friends here. I am not lonely anymore."
+          Mrs. Williams lived in her house for 40 years. She raised her children there. After her husband died, she stayed---the house was full of memories. But she was alone. Days passed without speaking to anyone. Her daughter suggested assisted living. Mrs. Williams resisted: "I am not giving up my home." After a fall, she moved---reluctantly. Six months later, she admits: "I wish I had moved sooner. I have friends here. I am not lonely anymore."
           <Citation index={1} />
         </p>
 
@@ -114,12 +114,12 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
         <h2>The Trade-Off: Connection vs. Independence</h2>
         <p>
-          Moving to senior living means accepting loss: loss of home (decades of memories), loss of privacy (shared dining, smaller living space), loss of control (meal times, activities, rules), loss of identity (you are "a resident," not "homeowner"). For many, this trade-off feels like giving up. But isolation also means loss—loss of connection, purpose, safety. The question: which loss is more tolerable?
+          Moving to senior living means accepting loss: loss of home (decades of memories), loss of privacy (shared dining, smaller living space), loss of control (meal times, activities, rules), loss of identity (you are "a resident," not "homeowner"). For many, this trade-off feels like giving up. But isolation also means loss---loss of connection, purpose, safety. The question: which loss is more tolerable?
           <Citation index={3} />
         </p>
 
         <QuoteBlock
-          quote="Aging in place sounds like independence. But if you are aging in place alone, isolated, without community—is that independence or imprisonment? Sometimes moving is freedom."
+          quote="Aging in place sounds like independence. But if you are aging in place alone, isolated, without community---is that independence or imprisonment? Sometimes moving is freedom."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -129,7 +129,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     id: catId(42),
     slug: 'faith-communities-spiritual-connection-mental-health',
     title: 'Faith Communities and Spiritual Connection for Mental Health',
-    description: `Faith communities provide social support, purpose, ritual, and meaning—reducing loneliness, depression, and mortality in older adults who participate regularly.`,
+    description: `Faith communities provide social support, purpose, ritual, and meaning---reducing loneliness, depression, and mortality in older adults who participate regularly.`,
     image: '/images/articles/cat17/cover-042.svg',
     category: CATEGORY_AGING,
     readTime: 10,
@@ -146,7 +146,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Faith communities provide both spiritual and practical support: prayer, counseling, meals for sick/bereaved, transportation to appointments, and caregiver respite—especially important for isolated seniors.`,
+        text: `Faith communities provide both spiritual and practical support: prayer, counseling, meals for sick/bereaved, transportation to appointments, and caregiver respite---especially important for isolated seniors.`,
         citationIndex: 2,
       },
       {
@@ -157,7 +157,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Faith communities are not just about belief—they are about belonging. For older adults who have lost work identity, spouse, friends, the church is where someone still knows your name.`,
+    sparkMoment: `Faith communities are not just about belief---they are about belonging. For older adults who have lost work identity, spouse, friends, the church is where someone still knows your name.`,
 
     practicalExercise: {
       title: 'Explore Faith Community Connection',
@@ -168,7 +168,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         },
         {
           title: 'Start with Low-Commitment Activities',
-          description: `Attend service once. Try a social event (coffee hour, potluck). Join a study group or volunteer opportunity. Do not commit immediately—try multiple communities.`,
+          description: `Attend service once. Try a social event (coffee hour, potluck). Join a study group or volunteer opportunity. Do not commit immediately---try multiple communities.`,
         },
         {
           title: 'Engage Beyond Attendance',
@@ -209,7 +209,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <p>
-          Mr. Patel has attended temple every Saturday for 50 years. After his wife died, he almost stopped going—too painful to sit alone. But his temple community reached out. They invited him to volunteer. They checked on him. They brought meals. Now he goes not just for worship, but for community. The temple is where people know his name, his story, his grief. It is where he belongs.
+          Mr. Patel has attended temple every Saturday for 50 years. After his wife died, he almost stopped going---too painful to sit alone. But his temple community reached out. They invited him to volunteer. They checked on him. They brought meals. Now he goes not just for worship, but for community. The temple is where people know his name, his story, his grief. It is where he belongs.
           <Citation index={1} />
         </p>
 
@@ -232,7 +232,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Faith communities are not perfect. But for older adults who have lost spouse, work, friends—the church, temple, or mosque is where someone still says your name, remembers your story, and holds your grief."
+          quote="Faith communities are not perfect. But for older adults who have lost spouse, work, friends---the church, temple, or mosque is where someone still says your name, remembers your story, and holds your grief."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -242,7 +242,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     id: catId(43),
     slug: 'ageism-social-exclusion-mental-health-impact',
     title: 'Ageism and Social Exclusion: Mental Health Impact on Older Adults',
-    description: `Ageism—stereotyping, discrimination, exclusion based on age—increases loneliness, depression, and mortality in older adults. Internalized ageism is self-fulfilling prophecy.`,
+    description: `Ageism---stereotyping, discrimination, exclusion based on age---increases loneliness, depression, and mortality in older adults. Internalized ageism is self-fulfilling prophecy.`,
     image: '/images/articles/cat17/cover-043.svg',
     category: CATEGORY_AGING,
     readTime: 11,
@@ -251,7 +251,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Ageism', 'Discrimination', 'Social Exclusion', 'Stereotypes'],
 
-    summary: `Ageism—stereotyping, prejudice, and discrimination based on age—is pervasive and harmful. Older adults experience ageism in healthcare (dismissed as "just old age"), employment (forced retirement, hiring bias), media (invisible or stereotyped as feeble/grumpy), and social settings (excluded from conversations, patronized). Ageism increases loneliness, depression, and mortality. Internalized ageism (believing negative stereotypes about aging) becomes self-fulfilling: people who internalize ageism die 7.5 years earlier than those with positive age beliefs.`,
+    summary: `Ageism---stereotyping, prejudice, and discrimination based on age---is pervasive and harmful. Older adults experience ageism in healthcare (dismissed as "just old age"), employment (forced retirement, hiring bias), media (invisible or stereotyped as feeble/grumpy), and social settings (excluded from conversations, patronized). Ageism increases loneliness, depression, and mortality. Internalized ageism (believing negative stereotypes about aging) becomes self-fulfilling: people who internalize ageism die 7.5 years earlier than those with positive age beliefs.`,
 
     keyFacts: [
       {
@@ -259,7 +259,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         citationIndex: 1,
       },
       {
-        text: `Internalized ageism—believing negative stereotypes about aging—predicts 7.5 years shorter lifespan, even after controlling for health, socioeconomic status, and other factors.`,
+        text: `Internalized ageism---believing negative stereotypes about aging---predicts 7.5 years shorter lifespan, even after controlling for health, socioeconomic status, and other factors.`,
         citationIndex: 2,
       },
       {
@@ -270,7 +270,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Ageism is the only prejudice people aspire to join. We will all be old—if we are lucky. Yet we treat aging as failure rather than privilege.`,
+    sparkMoment: `Ageism is the only prejudice people aspire to join. We will all be old---if we are lucky. Yet we treat aging as failure rather than privilege.`,
 
     practicalExercise: {
       title: 'Combat Internalized Ageism',
@@ -322,13 +322,13 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <p>
-          You are 70 years old. You go to the doctor for knee pain. Without examining you, he says, "You are 70—what do you expect?" Your pain is dismissed. You go to a job interview. The interviewer asks, "Are you familiar with computers?" (You have used computers for 30 years.) You are assumed incompetent. You attend a family gathering. Younger relatives talk over you, make decisions without consulting you. You are invisible. This is ageism.
+          You are 70 years old. You go to the doctor for knee pain. Without examining you, he says, "You are 70---what do you expect?" Your pain is dismissed. You go to a job interview. The interviewer asks, "Are you familiar with computers?" (You have used computers for 30 years.) You are assumed incompetent. You attend a family gathering. Younger relatives talk over you, make decisions without consulting you. You are invisible. This is ageism.
           <Citation index={1} />
         </p>
 
         <h2>What Is Ageism?</h2>
         <p>
-          Ageism is stereotyping (all old people are the same: slow, forgetful, technologically inept), prejudice (negative attitudes toward older adults), and discrimination (treating older adults unfairly: forced retirement, denied medical treatment, social exclusion). Ageism is pervasive in healthcare, employment, media, and daily interactions—yet less recognized than racism or sexism.
+          Ageism is stereotyping (all old people are the same: slow, forgetful, technologically inept), prejudice (negative attitudes toward older adults), and discrimination (treating older adults unfairly: forced retirement, denied medical treatment, social exclusion). Ageism is pervasive in healthcare, employment, media, and daily interactions---yet less recognized than racism or sexism.
           <Citation index={2} />
         </p>
 
@@ -345,7 +345,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Ageism kills—not through violence, but through exclusion, dismissal, and internalized belief that old age is worthless. The antidote is not pretending age does not matter, but insisting that age does not determine value."
+          quote="Ageism kills---not through violence, but through exclusion, dismissal, and internalized belief that old age is worthless. The antidote is not pretending age does not matter, but insisting that age does not determine value."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -364,7 +364,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['COVID-19', 'Pandemic', 'Isolation', 'Mental Health'],
 
-    summary: `COVID-19 lockdowns isolated older adults—shutting down senior centers, canceling social activities, restricting nursing home visits. Loneliness increased by 40%, depression and anxiety surged, and cognitive decline accelerated. Many seniors have not returned to pre-pandemic social participation: they lost confidence, developed anxiety about leaving home, or their social groups dissolved. The pandemic created a cohort of "COVID-isolated" seniors whose mental health declined sharply and has not recovered.`,
+    summary: `COVID-19 lockdowns isolated older adults---shutting down senior centers, canceling social activities, restricting nursing home visits. Loneliness increased by 40%, depression and anxiety surged, and cognitive decline accelerated. Many seniors have not returned to pre-pandemic social participation: they lost confidence, developed anxiety about leaving home, or their social groups dissolved. The pandemic created a cohort of "COVID-isolated" seniors whose mental health declined sharply and has not recovered.`,
 
     keyFacts: [
       {
@@ -376,14 +376,14 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         citationIndex: 2,
       },
       {
-        text: `Nursing home residents who lost family visits during lockdowns experienced higher rates of depression, anxiety, behavioral symptoms, and mortality—some dying without seeing family for months.`,
+        text: `Nursing home residents who lost family visits during lockdowns experienced higher rates of depression, anxiety, behavioral symptoms, and mortality---some dying without seeing family for months.`,
         citationIndex: 3,
       },
     ],
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `COVID-19 taught us that isolation kills—not through virus, but through loneliness. The question is whether we will rebuild connection or accept isolation as the new normal.`,
+    sparkMoment: `COVID-19 taught us that isolation kills---not through virus, but through loneliness. The question is whether we will rebuild connection or accept isolation as the new normal.`,
 
     practicalExercise: {
       title: 'Rebuild Post-Pandemic Connection',
@@ -394,11 +394,11 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         },
         {
           title: 'Address Barriers to Returning',
-          description: `Fear of infection? Get vaccinated, mask if needed. Lost confidence? Start small—one activity, short duration. Group dissolved? Find new group or start one.`,
+          description: `Fear of infection? Get vaccinated, mask if needed. Lost confidence? Start small---one activity, short duration. Group dissolved? Find new group or start one.`,
         },
         {
           title: 'Take One Step This Week',
-          description: `Call senior center, church, or community group. Attend one event. Do not wait for confidence—action creates confidence. Start now.`,
+          description: `Call senior center, church, or community group. Attend one event. Do not wait for confidence---action creates confidence. Start now.`,
         },
       ],
       toolLink: '/learn',
@@ -435,13 +435,13 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <p>
-          March 2020: Senior centers close. Churches cancel services. Families stop visiting nursing homes. You are told to stay home—for your safety. Weeks turn into months. You lose your routines: no tai chi class, no coffee with friends, no Sunday dinners with family. You see no one. By 2021, vaccines arrive. Restrictions lift. But you do not return. You lost confidence. Your book club never reformed. You got used to isolation. Now, in 2026, you are still home. Alone.
+          March 2020: Senior centers close. Churches cancel services. Families stop visiting nursing homes. You are told to stay home---for your safety. Weeks turn into months. You lose your routines: no tai chi class, no coffee with friends, no Sunday dinners with family. You see no one. By 2021, vaccines arrive. Restrictions lift. But you do not return. You lost confidence. Your book club never reformed. You got used to isolation. Now, in 2026, you are still home. Alone.
           <Citation index={1} />
         </p>
 
         <h2>How COVID-19 Isolated Seniors</h2>
         <p>
-          COVID-19 lockdowns isolated older adults: senior centers closed, group activities canceled, nursing home visits banned, families avoided contact (fear of transmitting virus). Result: loneliness increased 40%, depression and anxiety doubled, cognitive decline accelerated. Isolation was protective against virus—but deadly for mental health.
+          COVID-19 lockdowns isolated older adults: senior centers closed, group activities canceled, nursing home visits banned, families avoided contact (fear of transmitting virus). Result: loneliness increased 40%, depression and anxiety doubled, cognitive decline accelerated. Isolation was protective against virus---but deadly for mental health.
           <Citation index={2} />
         </p>
 
@@ -458,7 +458,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="COVID-19 is over, but isolation is not. Many seniors are still home, still alone, still waiting for permission to reconnect. The permission is yours to give—to yourself."
+          quote="COVID-19 is over, but isolation is not. Many seniors are still home, still alone, still waiting for permission to reconnect. The permission is yours to give---to yourself."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>
@@ -477,15 +477,15 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Networks', 'Connection', 'Community', 'Strategies'],
 
-    summary: `Social networks shrink with age: retirement ends work connections, friends die or move, mobility limitations reduce participation. Yet networks can be rebuilt through intentional strategies: join structured groups (classes, clubs, volunteer work), use technology for distance connection (video calls, online communities), deepen existing relationships (vulnerability, shared activities), and build intergenerational connections (mentoring, family, younger friends). The key is intentionality—connection does not happen passively after 65.`,
+    summary: `Social networks shrink with age: retirement ends work connections, friends die or move, mobility limitations reduce participation. Yet networks can be rebuilt through intentional strategies: join structured groups (classes, clubs, volunteer work), use technology for distance connection (video calls, online communities), deepen existing relationships (vulnerability, shared activities), and build intergenerational connections (mentoring, family, younger friends). The key is intentionality---connection does not happen passively after 65.`,
 
     keyFacts: [
       {
-        text: `Social networks shrink by 30-40% after retirement due to loss of work connections, death of peers, and reduced mobility—but can be rebuilt through intentional strategies.`,
+        text: `Social networks shrink by 30-40% after retirement due to loss of work connections, death of peers, and reduced mobility---but can be rebuilt through intentional strategies.`,
         citationIndex: 1,
       },
       {
-        text: `Strong social networks (4+ close relationships, weekly contact) reduce mortality risk by 50%, protect cognitive function, and buffer against depression—comparable to quitting smoking.`,
+        text: `Strong social networks (4+ close relationships, weekly contact) reduce mortality risk by 50%, protect cognitive function, and buffer against depression---comparable to quitting smoking.`,
         citationIndex: 2,
       },
       {
@@ -496,7 +496,7 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Social connection after 65 does not happen by accident. You must choose it, pursue it, and build it—like fitness or any other health practice. The work is worth it: connection is survival.`,
+    sparkMoment: `Social connection after 65 does not happen by accident. You must choose it, pursue it, and build it---like fitness or any other health practice. The work is worth it: connection is survival.`,
 
     practicalExercise: {
       title: 'Build Your Social Network',
@@ -548,30 +548,30 @@ export const socialIsolationLonelinessArticlesC: Article[] = [
     content: (
       <>
         <p>
-          You are 72. Your social network has shrunk: retirement ended work friendships, your spouse died, your best friend moved to assisted living across the country, mobility issues prevent you from attending evening events. You realize you have no one to call on a bad day. You are lonely. But you are not helpless. Networks can be rebuilt—with intention, effort, and courage.
+          You are 72. Your social network has shrunk: retirement ended work friendships, your spouse died, your best friend moved to assisted living across the country, mobility issues prevent you from attending evening events. You realize you have no one to call on a bad day. You are lonely. But you are not helpless. Networks can be rebuilt---with intention, effort, and courage.
           <Citation index={1} />
         </p>
 
         <h2>Why Networks Shrink and How to Rebuild</h2>
         <p>
-          Networks shrink with age: retirement, death, relocation, mobility limitations, sensory impairments. But networks can be rebuilt through: structured participation (classes, clubs, volunteer work—provides proximity and shared context), technology (video calls, online communities—maintains distance connections), deepening existing relationships (invite acquaintance to coffee, join activity together), building intergenerational connections (mentor, family, younger friends—provides continuity when age peers die).
+          Networks shrink with age: retirement, death, relocation, mobility limitations, sensory impairments. But networks can be rebuilt through: structured participation (classes, clubs, volunteer work---provides proximity and shared context), technology (video calls, online communities---maintains distance connections), deepening existing relationships (invite acquaintance to coffee, join activity together), building intergenerational connections (mentor, family, younger friends---provides continuity when age peers die).
           <Citation index={2} />
         </p>
 
         <StatCard
           value="50%"
           label="reduction in mortality risk from strong social networks"
-          description="Having 4+ close relationships with weekly contact reduces mortality by 50%—comparable to quitting smoking."
+          description="Having 4+ close relationships with weekly contact reduces mortality by 50%---comparable to quitting smoking."
         />
 
         <h2>The Formula: Consistency + Initiative + Vulnerability</h2>
         <p>
-          Building networks after 65 requires: Consistency (show up weekly—friendship takes 50+ hours of interaction to develop). Initiative (invite people—do not wait for others to approach you). Vulnerability (share something personal, ask for help—emotional openness deepens bonds). This formula works—but it requires effort. Connection is not passive after 65.
+          Building networks after 65 requires: Consistency (show up weekly---friendship takes 50+ hours of interaction to develop). Initiative (invite people---do not wait for others to approach you). Vulnerability (share something personal, ask for help---emotional openness deepens bonds). This formula works---but it requires effort. Connection is not passive after 65.
           <Citation index={3} />
         </p>
 
         <QuoteBlock
-          quote="You cannot wait for connection to come to you. You must build it—one conversation, one invitation, one weekly commitment at a time. The work is worth it. Connection is life."
+          quote="You cannot wait for connection to come to you. You must build it---one conversation, one invitation, one weekly commitment at a time. The work is worth it. Connection is life."
           author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
         />
       </>

@@ -94,10 +94,10 @@ export const traumaInformedCareArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Nearly half of all children in the United States have experienced at least one adverse childhood experience—trauma that can profoundly affect their ability to learn, form relationships, and regulate emotions in the classroom.
+            Nearly half of all children in the United States have experienced at least one adverse childhood experience---trauma that can profoundly affect their ability to learn, form relationships, and regulate emotions in the classroom.
           </p>
           <p className="mb-6">
-            Traditional school discipline approaches often punish trauma-driven behaviors without addressing underlying causes, creating cycles of exclusion for students who need support most <Citation id="1" index={1} source="Massachusetts Advocates for Children" year="2005" tier={3} />. Trauma-informed education represents a fundamental shift—from asking "What's wrong with you?" to "What happened to you?"
+            Traditional school discipline approaches often punish trauma-driven behaviors without addressing underlying causes, creating cycles of exclusion for students who need support most <Citation id="1" index={1} source="Massachusetts Advocates for Children" year="2005" tier={3} />. Trauma-informed education represents a fundamental shift---from asking "What's wrong with you?" to "What happened to you?"
           </p>
           <p className="mb-6">
             Research demonstrates that trauma-informed schools see measurable improvements in academic performance, attendance, discipline referrals, and school climate <Citation id="5" index={5} source="School Psychology Review" year="2021" tier={1} />. This approach benefits all students while providing essential support for those who have experienced adversity.
@@ -149,7 +149,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Students living with trauma may also experience sleep disruption, chronic health issues, and difficulty forming trusting relationships with adults—all factors that compound academic challenges <Citation id="4" index={4} source="American Psychological Association" year="2019" tier={3} />.
+          Students living with trauma may also experience sleep disruption, chronic health issues, and difficulty forming trusting relationships with adults---all factors that compound academic challenges <Citation id="4" index={4} source="American Psychological Association" year="2019" tier={3} />.
         </p>
 
         <h2 id="core-principles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -217,7 +217,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Practical Classroom Strategies
         </h2>
         <p className="mb-6">
-          Implementing trauma-informed practices doesn't require complete overhaul—small, consistent changes in how educators respond to students can have profound effects.
+          Implementing trauma-informed practices doesn't require complete overhaul---small, consistent changes in how educators respond to students can have profound effects.
         </p>
 
         <BeforeAfter
@@ -342,7 +342,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Cultural Responsiveness in Trauma-Informed Practice
         </h2>
         <p className="mb-6">
-          Trauma cannot be separated from cultural context <Citation id="6" index={6} source="Child and Adolescent Psychiatric Clinics of North America" year="2022" tier={1} />. Students from marginalized communities often experience systemic trauma—racism, discrimination, poverty, community violence—alongside individual adverse experiences.
+          Trauma cannot be separated from cultural context <Citation id="6" index={6} source="Child and Adolescent Psychiatric Clinics of North America" year="2022" tier={1} />. Students from marginalized communities often experience systemic trauma---racism, discrimination, poverty, community violence---alongside individual adverse experiences.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Historical and Collective Trauma">
@@ -350,7 +350,7 @@ export const traumaInformedCareArticlesB: Article[] = [
             Indigenous students, descendants of enslaved people, refugees, and immigrant children carry not only personal experiences but also intergenerational and collective trauma. Effective trauma-informed education acknowledges these realities and actively works to create culturally affirming spaces.
           </p>
           <p>
-            This includes examining how school policies may perpetuate harm—such as disproportionate discipline of Black and Latino students, zero-tolerance approaches that mirror incarceration, and curricula that erase or distort students" histories.
+            This includes examining how school policies may perpetuate harm---such as disproportionate discipline of Black and Latino students, zero-tolerance approaches that mirror incarceration, and curricula that erase or distort students" histories.
           </p>
         </ArticleCallout>
 
@@ -371,7 +371,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Evidence of Effectiveness">
           <p>
-            Schools with comprehensive trauma-informed systems show 35% reductions in disciplinary incidents, improved attendance rates, and higher academic achievement—particularly for students with multiple ACEs. Teachers also report greater job satisfaction and reduced burnout.
+            Schools with comprehensive trauma-informed systems show 35% reductions in disciplinary incidents, improved attendance rates, and higher academic achievement---particularly for students with multiple ACEs. Teachers also report greater job satisfaction and reduced burnout.
           </p>
         </ArticleCallout>
 
@@ -392,7 +392,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Creating trauma-informed schools is not about lowering expectations or excusing harmful behavior. It's about recognizing that students can't learn when their nervous systems are in survival mode—and building the safety, connection, and support that allow all children to thrive.
+          Creating trauma-informed schools is not about lowering expectations or excusing harmful behavior. It's about recognizing that students can't learn when their nervous systems are in survival mode---and building the safety, connection, and support that allow all children to thrive.
         </p>
       </>
     ),
@@ -401,7 +401,7 @@ export const traumaInformedCareArticlesB: Article[] = [
     id: catId(47),
     slug: 'workplace-trauma-harassment-accidents-psychological-safety',
     title: 'Workplace Trauma: Harassment, Accidents, and Psychological Safety',
-    description: 'Understand how workplace trauma—from harassment to accidents—affects employees, and learn evidence-based strategies for creating psychologically safe work environments.',
+    description: 'Understand how workplace trauma---from harassment to accidents---affects employees, and learn evidence-based strategies for creating psychologically safe work environments.',
     image: "/images/articles/cat11/cover-047.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 8,
@@ -479,13 +479,13 @@ export const traumaInformedCareArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A construction worker who witnessed a colleague's fatal fall. An employee subjected to years of sexual harassment by a supervisor. A nurse who holds the hand of dying patients through every shift. These experiences—varied as they are—share a common thread: workplace trauma.
+            A construction worker who witnessed a colleague's fatal fall. An employee subjected to years of sexual harassment by a supervisor. A nurse who holds the hand of dying patients through every shift. These experiences---varied as they are---share a common thread: workplace trauma.
           </p>
           <p className="mb-6">
             Workplace trauma encompasses any distressing event that occurs in professional settings and overwhelms an individual's ability to cope <Citation id="1" index={1} source="Occupational Health Psychology" year="2020" tier={1} />. This includes harassment, violence, accidents, organizational restructuring, discriminatory practices, and repeated exposure to others" trauma.
           </p>
           <p className="mb-6">
-            Unlike physical injuries that receive immediate attention and workers" compensation, psychological injuries from workplace trauma often go unrecognized, untreated, and unreported <Citation id="4" index={4} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2018" tier={1} />. The cost is staggering—to individuals who carry invisible wounds, organizations that lose productivity and talent, and society as a whole.
+            Unlike physical injuries that receive immediate attention and workers" compensation, psychological injuries from workplace trauma often go unrecognized, untreated, and unreported <Citation id="4" index={4} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2018" tier={1} />. The cost is staggering---to individuals who carry invisible wounds, organizations that lose productivity and talent, and society as a whole.
           </p>
         </div>
 
@@ -586,7 +586,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                     <li>Systemic inequity in pay, promotion, or opportunity</li>
                   </ul>
                   <p>
-                    These conditions create what researchers call "organizational betrayal"—when institutions that should protect employees instead cause or ignore harm <Citation id="7" index={7} source="Journal of Applied Psychology" year="2022" tier={1} />.
+                    These conditions create what researchers call "organizational betrayal"---when institutions that should protect employees instead cause or ignore harm <Citation id="7" index={7} source="Journal of Applied Psychology" year="2022" tier={1} />.
                   </p>
                 </>
               ),
@@ -639,7 +639,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           The Foundation: Psychological Safety
         </h2>
         <p className="mb-6">
-          Psychological safety—the belief that one can speak up, take risks, and make mistakes without fear of punishment or humiliation—is the antidote to traumatizing work environments <Citation id="6" index={6} source="Administrative Science Quarterly" year="1999" tier={1} />.
+          Psychological safety---the belief that one can speak up, take risks, and make mistakes without fear of punishment or humiliation---is the antidote to traumatizing work environments <Citation id="6" index={6} source="Administrative Science Quarterly" year="1999" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -740,7 +740,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Special Considerations for High-Risk Professions
         </h2>
         <p className="mb-6">
-          Certain professions carry inherently higher trauma exposure—first responders, healthcare workers, military personnel, journalists, social workers, and educators in high-violence schools <Citation id="5" index={5} source="Occupational Safety and Health Administration (OSHA)" year="2020" tier={2} />. These fields require additional protections:
+          Certain professions carry inherently higher trauma exposure---first responders, healthcare workers, military personnel, journalists, social workers, and educators in high-violence schools <Citation id="5" index={5} source="Occupational Safety and Health Administration (OSHA)" year="2020" tier={2} />. These fields require additional protections:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -783,7 +783,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Organizations that respond to workplace trauma with care, accountability, and systemic change demonstrate that they value employees as whole human beings—not just productive units. This investment pays dividends in loyalty, performance, and the prevention of future harm.
+          Organizations that respond to workplace trauma with care, accountability, and systemic change demonstrate that they value employees as whole human beings---not just productive units. This investment pays dividends in loyalty, performance, and the prevention of future harm.
         </p>
       </>
     ),
@@ -873,7 +873,7 @@ export const traumaInformedCareArticlesB: Article[] = [
             You're in a medical exam room. The doctor performs a routine examination without warning or explanation. Their touch feels invasive, clinical, detached. For many people, this is merely uncomfortable. But for survivors of sexual assault, this can trigger a cascade of traumatic memories, freezing responses, and dissociation.
           </p>
           <p className="mb-6">
-            Trauma-informed healthcare recognizes a fundamental truth: the body keeps the score <Citation id="1" index={1} source="Family & Community Health" year="2018" tier={1} />. Past experiences—particularly adverse childhood experiences (ACEs) and trauma—profoundly shape how patients experience medical care, whether they seek it at all, and how effectively treatments work.
+            Trauma-informed healthcare recognizes a fundamental truth: the body keeps the score <Citation id="1" index={1} source="Family & Community Health" year="2018" tier={1} />. Past experiences---particularly adverse childhood experiences (ACEs) and trauma---profoundly shape how patients experience medical care, whether they seek it at all, and how effectively treatments work.
           </p>
           <p className="mb-6">
             When healthcare providers understand trauma's widespread impact and adapt their practices accordingly, they not only prevent re-traumatization but also create the safety necessary for healing to occur <Citation id="4" index={4} source="Substance Abuse and Mental Health Services Administration (SAMHSA)" year="2021" tier={2} />.
@@ -905,7 +905,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know" title="The Biology of Trauma">
           <p>
-            Childhood trauma doesn't just leave psychological scars—it changes brain architecture, hormonal regulation, immune function, and even gene expression. These biological adaptations, designed to help children survive threatening environments, become risk factors for physical illness in adulthood.
+            Childhood trauma doesn't just leave psychological scars---it changes brain architecture, hormonal regulation, immune function, and even gene expression. These biological adaptations, designed to help children survive threatening environments, become risk factors for physical illness in adulthood.
           </p>
         </ArticleCallout>
 
@@ -949,7 +949,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Research shows that 25-30% of patients report symptoms of post-traumatic stress following intensive care unit stays, major surgeries, or cancer diagnoses <Citation id="5" index={5} source="Health Psychology" year="2019" tier={1} />. These individuals may avoid follow-up care, experience heightened anxiety during medical appointments, and have difficulty trusting providers—compromising their long-term health.
+          Research shows that 25-30% of patients report symptoms of post-traumatic stress following intensive care unit stays, major surgeries, or cancer diagnoses <Citation id="5" index={5} source="Health Psychology" year="2019" tier={1} />. These individuals may avoid follow-up care, experience heightened anxiety during medical appointments, and have difficulty trusting providers---compromising their long-term health.
         </p>
 
         <h2 id="principles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1051,7 +1051,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Universal Precautions Approach">
           <p>
-            Because trauma history isn't always visible and disclosure requires safety, best practice is to use trauma-informed approaches with all patients—not just those who've disclosed traumatic experiences. This 'universal precautions' model ensures no one falls through the cracks.
+            Because trauma history isn't always visible and disclosure requires safety, best practice is to use trauma-informed approaches with all patients---not just those who've disclosed traumatic experiences. This 'universal precautions' model ensures no one falls through the cracks.
           </p>
         </ArticleCallout>
 
@@ -1072,7 +1072,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           <li><strong>Offering control</strong>: "You can stop me at any time. Would you like to insert the speculum yourself, or would you like me to do it?"</li>
           <li><strong>Watching for dissociation</strong>: If a patient "goes away" mentally, pause and reconnect</li>
           <li><strong>Support person presence</strong>: Allowing trusted individuals in the exam room</li>
-          <li><strong>Alternative positions</strong>: Lithotomy position isn't required—some patients prefer side-lying</li>
+          <li><strong>Alternative positions</strong>: Lithotomy position isn't required---some patients prefer side-lying</li>
           <li><strong>Recognizing when exams aren't emergent</strong>: If a patient can't tolerate it today, reschedule when they've had time to prepare</li>
         </ul>
 
@@ -1080,7 +1080,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Trauma-Informed Care and Health Equity
         </h2>
         <p className="mb-6">
-          People from marginalized communities experience both higher rates of trauma and worse healthcare outcomes—a connection that's not coincidental <Citation id="7" index={7} source="American Journal of Public Health" year="2022" tier={1} />.
+          People from marginalized communities experience both higher rates of trauma and worse healthcare outcomes---a connection that's not coincidental <Citation id="7" index={7} source="American Journal of Public Health" year="2022" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Systemic Trauma in Healthcare">
@@ -1167,7 +1167,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Healthcare should be healing, not harmful. When your doctor asks about your past, understands that your body holds memories, and adapts their care accordingly, they're recognizing your full humanity—and creating the conditions for true health to emerge.
+          Healthcare should be healing, not harmful. When your doctor asks about your past, understands that your body holds memories, and adapts their care accordingly, they're recognizing your full humanity---and creating the conditions for true health to emerge.
         </p>
       </>
     ),
@@ -1260,7 +1260,7 @@ export const traumaInformedCareArticlesB: Article[] = [
             This is the work of trauma therapists: bearing witness to humanity's worst suffering, holding space for unspeakable pain, and helping clients piece together shattered lives. It's profoundly meaningful work. It's also work that comes at a cost.
           </p>
           <p className="mb-6">
-            Vicarious trauma—also called secondary traumatic stress—describes the cumulative psychological impact of empathic engagement with traumatized clients <Citation id="1" index={1} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2018" tier={1} />. Unlike burnout, which stems from workplace stress and exhaustion, vicarious trauma specifically results from absorbing others" traumatic experiences and can fundamentally alter a therapist's worldview, sense of safety, and trust in humanity.
+            Vicarious trauma---also called secondary traumatic stress---describes the cumulative psychological impact of empathic engagement with traumatized clients <Citation id="1" index={1} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2018" tier={1} />. Unlike burnout, which stems from workplace stress and exhaustion, vicarious trauma specifically results from absorbing others" traumatic experiences and can fundamentally alter a therapist's worldview, sense of safety, and trust in humanity.
           </p>
         </div>
 
@@ -1324,7 +1324,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           How Vicarious Trauma Develops
         </h2>
         <p className="mb-6">
-          Vicarious traumatization is not a sign of weakness or incompetence—it's the natural consequence of empathic engagement with traumatized individuals <Citation id="5" index={5} source="Journal of Humanistic Psychology" year="2020" tier={1} />. The very qualities that make someone an effective trauma therapist (empathy, openness, willingness to sit with pain) increase vulnerability to vicarious trauma.
+          Vicarious traumatization is not a sign of weakness or incompetence---it's the natural consequence of empathic engagement with traumatized individuals <Citation id="5" index={5} source="Journal of Humanistic Psychology" year="2020" tier={1} />. The very qualities that make someone an effective trauma therapist (empathy, openness, willingness to sit with pain) increase vulnerability to vicarious trauma.
         </p>
 
         <ArticleCallout variant="did-you-know" title="The Neuroscience of Empathy">
@@ -1365,7 +1365,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                   <li>Intrusive thoughts and images from client trauma narratives</li>
                   <li>Difficulty concentrating or making decisions</li>
                   <li>Preoccupation with clients" traumatic experiences outside of work</li>
-                  <li>Changes in worldview—seeing the world as more dangerous, people as untrustworthy</li>
+                  <li>Changes in worldview---seeing the world as more dangerous, people as untrustworthy</li>
                   <li>Loss of hope or meaning</li>
                   <li>Questioning one's competence or effectiveness</li>
                 </ul>
@@ -1421,7 +1421,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                   <li>Chronic fatigue despite adequate sleep</li>
                   <li>Headaches, muscle tension, or pain</li>
                   <li>Gastrointestinal issues</li>
-                  <li>Weakened immune function—frequent illnesses</li>
+                  <li>Weakened immune function---frequent illnesses</li>
                   <li>Cardiovascular symptoms</li>
                 </ul>
               ),
@@ -1489,7 +1489,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Physical Self-Care',
               description: (
                 <p>
-                  Regular exercise (particularly activities that discharge stress like running, boxing, dancing), adequate sleep, nutritious eating, limiting alcohol, and addressing health issues promptly. Trauma work is embodied—caring for the body is essential.
+                  Regular exercise (particularly activities that discharge stress like running, boxing, dancing), adequate sleep, nutritious eating, limiting alcohol, and addressing health issues promptly. Trauma work is embodied---caring for the body is essential.
                 </p>
               ),
             },
@@ -1566,7 +1566,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           The Other Side: Compassion Satisfaction
         </h2>
         <p className="mb-6">
-          While vicarious trauma is real and significant, it's not the whole story. Research on professional quality of life reveals that many trauma therapists also experience high compassion satisfaction—the deep fulfillment derived from helping others heal <Citation id="4" index={4} source="American Journal of Orthopsychiatry" year="2021" tier={1} />.
+          While vicarious trauma is real and significant, it's not the whole story. Research on professional quality of life reveals that many trauma therapists also experience high compassion satisfaction---the deep fulfillment derived from helping others heal <Citation id="4" index={4} source="American Journal of Orthopsychiatry" year="2021" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Sustaining Factors">
@@ -1583,7 +1583,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          The goal isn't to eliminate all negative effects of trauma work—some level of being affected is inherent to empathic engagement. The goal is to maintain balance: experiencing the profound rewards of the work while protecting yourself from being consumed by the darkness.
+          The goal isn't to eliminate all negative effects of trauma work---some level of being affected is inherent to empathic engagement. The goal is to maintain balance: experiencing the profound rewards of the work while protecting yourself from being consumed by the darkness.
         </p>
 
         <p className="mb-6">
@@ -1706,7 +1706,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Choice and Control',
               description: (
                 <p>
-                  Provide options wherever possible—seating arrangements, lighting levels, temperature control, private vs. communal spaces. Choice restores agency that trauma took away.
+                  Provide options wherever possible---seating arrangements, lighting levels, temperature control, private vs. communal spaces. Choice restores agency that trauma took away.
                 </p>
               ),
             },
@@ -1714,7 +1714,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Collaboration and Transparency',
               description: (
                 <p>
-                  Involve users in design decisions. Make purposes clear—if there's a camera, explain why. Avoid hidden observation windows or other features that replicate surveillance trauma.
+                  Involve users in design decisions. Make purposes clear---if there's a camera, explain why. Avoid hidden observation windows or other features that replicate surveillance trauma.
                 </p>
               ),
             },
@@ -1791,7 +1791,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                     <li>Use soft, calming colors (sage green, light blue, warm neutrals) for main spaces</li>
                     <li>Avoid institutional white or stark color schemes</li>
                     <li>Incorporate nature-inspired palettes</li>
-                    <li>Use accent colors intentionally—vibrant hues for energizing spaces, muted tones for calming areas</li>
+                    <li>Use accent colors intentionally---vibrant hues for energizing spaces, muted tones for calming areas</li>
                     <li>Consider cultural color associations (white signifies mourning in some cultures, red means celebration in others)</li>
                   </ul>
                 </>
@@ -1812,7 +1812,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                     <li>Soundproof rooms for private conversations</li>
                     <li>Use soft materials (carpets, curtains, acoustic panels) to absorb sound</li>
                     <li>Provide white noise machines to mask conversations</li>
-                    <li>Eliminate or reduce alarm sounds—use gentle chimes instead of blaring buzzers</li>
+                    <li>Eliminate or reduce alarm sounds---use gentle chimes instead of blaring buzzers</li>
                     <li>Create quiet zones free from background music or television</li>
                     <li>Offer noise-canceling headphones in sensory rooms</li>
                   </ul>
@@ -1836,7 +1836,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                     <li>Place seating with backs to walls, not doors</li>
                     <li>Create clear sightlines to exits</li>
                     <li>Avoid isolated areas that feel unsafe (bathrooms at end of long halls)</li>
-                    <li>Design waiting areas with varied seating options—not everyone wants to face others</li>
+                    <li>Design waiting areas with varied seating options---not everyone wants to face others</li>
                   </ul>
                 </>
               ),
@@ -1855,7 +1855,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Maximize window views of greenery, water, or sky</li>
                     <li>Incorporate indoor plants throughout (low-maintenance varieties)</li>
-                    <li>Use natural materials—wood, stone, bamboo—over plastic and metal</li>
+                    <li>Use natural materials---wood, stone, bamboo---over plastic and metal</li>
                     <li>Create outdoor access (gardens, patios, courtyards)</li>
                     <li>Include nature imagery in artwork</li>
                     <li>Provide aquariums or water features (sound and movement are soothing)</li>
@@ -1924,7 +1924,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Rethinking Waiting Areas
         </h2>
         <p className="mb-6">
-          Waiting rooms are often the first impression of a space—and frequently the most institutional and uncomfortable <Citation id="7" index={7} source="Violence Against Women" year="2021" tier={1} />. Trauma-informed redesign:
+          Waiting rooms are often the first impression of a space---and frequently the most institutional and uncomfortable <Citation id="7" index={7} source="Violence Against Women" year="2021" tier={1} />. Trauma-informed redesign:
         </p>
 
         <BeforeAfter
@@ -1936,7 +1936,7 @@ export const traumaInformedCareArticlesB: Article[] = [
                 <li>Loud television playing news/commercials</li>
                 <li>Bright fluorescent lighting</li>
                 <li>Walls covered with rules and prohibitions</li>
-                <li>No privacy—everyone can hear check-in conversations</li>
+                <li>No privacy---everyone can hear check-in conversations</li>
                 <li>Nothing to do but stare or watch TV</li>
               </ul>
             ),
@@ -1946,7 +1946,7 @@ export const traumaInformedCareArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>Varied seating: chairs, sofas, single seats with side tables</li>
-                <li>Quiet atmosphere—no TV, optional soft music</li>
+                <li>Quiet atmosphere---no TV, optional soft music</li>
                 <li>Soft, adjustable lighting</li>
                 <li>Positive artwork, affirmations, and welcoming messages</li>
                 <li>Private check-in area or clipboards for self-registration</li>
@@ -1966,7 +1966,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           <li>Refreshments (water, coffee, tea) to communicate hospitality</li>
           <li>Clear signage for bathrooms, exits, and resources</li>
           <li>Comfortable temperature control</li>
-          <li>Minimal wait times—long waits increase anxiety and dysregulation</li>
+          <li>Minimal wait times---long waits increase anxiety and dysregulation</li>
         </ul>
 
         <h2 id="privacy-dignity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1979,7 +1979,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Private consultation spaces</strong>: Soundproof offices for sensitive conversations, not cubicles or curtained areas where others can overhear</li>
           <li><strong>Dignified bathrooms</strong>: Clean, well-maintained, single-occupancy when possible, with hooks for belongings and adequate supplies</li>
-          <li><strong>Secure storage</strong>: Lockable spaces for personal belongings—lack of security triggers hypervigilance</li>
+          <li><strong>Secure storage</strong>: Lockable spaces for personal belongings---lack of security triggers hypervigilance</li>
           <li><strong>Dressing privacy</strong>: Full-size doors (not curtains) for changing areas in medical settings, robes that actually close in back</li>
           <li><strong>Confidential intake</strong>: Registration processes that don't require shouting personal information across a room</li>
           <li><strong>Control over visibility</strong>: Curtains or blinds that users can adjust, not just staff</li>
@@ -2003,7 +2003,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           <li><strong>Multilingual materials</strong>: Signage, forms, and resources in multiple languages</li>
           <li><strong>Prayer or meditation space</strong>: Private room for spiritual practices of all kinds</li>
           <li><strong>Gender-neutral facilities</strong>: All-gender bathrooms alongside gendered ones</li>
-          <li><strong>Accessibility</strong>: Full ADA compliance and universal design principles—ramps not just stairs, automatic doors, adjustable-height counters, visual and auditory accommodations</li>
+          <li><strong>Accessibility</strong>: Full ADA compliance and universal design principles---ramps not just stairs, automatic doors, adjustable-height counters, visual and auditory accommodations</li>
           <li><strong>Cultural consultation</strong>: Involve community members from diverse backgrounds in design decisions</li>
         </ul>
 

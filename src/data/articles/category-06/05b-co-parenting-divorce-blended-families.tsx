@@ -197,7 +197,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            If your ex sends a long, hostile message with 10 accusations and 1 question about pickup time — respond ONLY to the pickup question. Don't address anything else. This removes the reward for hostile behavior.
+            If your ex sends a long, hostile message with 10 accusations and 1 question about pickup time --- respond ONLY to the pickup question. Don't address anything else. This removes the reward for hostile behavior.
           </p>
         </ArticleCallout>
 
@@ -216,7 +216,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Effective co-parenting communication isn't about being friendly — it's about being functional. With structure, boundaries, and the right tools, you can communicate about children without unnecessary conflict.
+            Effective co-parenting communication isn't about being friendly --- it's about being functional. With structure, boundaries, and the right tools, you can communicate about children without unnecessary conflict.
           </p>
         </ArticleCallout>
       </>
@@ -248,10 +248,10 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Your dad doesn't really care about you.", "Your mom is a liar.", "If it weren't for your father, we'd have money." When parents speak negatively about each other, children don't just hear criticism — they internalize pain.
+            "Your dad doesn't really care about you.", "Your mom is a liar.", "If it weren't for your father, we'd have money." When parents speak negatively about each other, children don't just hear criticism --- they internalize pain.
           </p>
           <p className="mb-6">
-            Bad-mouthing the other parent is one of the most damaging things divorcing or separated parents can do <Citation id="1" index={1} source="Clinical Child and Family Psychology Review" year="2020" tier={1} />. Children see themselves as half of each parent — criticism of one parent feels like criticism of part of themselves.
+            Bad-mouthing the other parent is one of the most damaging things divorcing or separated parents can do <Citation id="1" index={1} source="Clinical Child and Family Psychology Review" year="2020" tier={1} />. Children see themselves as half of each parent --- criticism of one parent feels like criticism of part of themselves.
           </p>
         </div>
 
@@ -272,7 +272,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Severe, chronic bad-mouthing can escalate into parental alienation — where a child rejects one parent entirely, believing the negative narrative <Citation id="2" index={2} source="Family Court Review" year="2021" tier={2} />. This is traumatic for everyone involved.
+            Severe, chronic bad-mouthing can escalate into parental alienation --- where a child rejects one parent entirely, believing the negative narrative <Citation id="2" index={2} source="Family Court Review" year="2021" tier={2} />. This is traumatic for everyone involved.
           </p>
         </ArticleCallout>
 
@@ -291,7 +291,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
             {
               id: 'subtle-digs',
               title: 'Subtle Digs',
-              content: <p>'Well, you know how your dad is..." Eye rolls, sighs, or sarcastic tone convey negativity without explicit words — but children pick up on it.</p>,
+              content: <p>'Well, you know how your dad is..." Eye rolls, sighs, or sarcastic tone convey negativity without explicit words --- but children pick up on it.</p>,
             },
             {
               id: 'victim-narrative',
@@ -401,7 +401,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Bad-mouthing hurts children more than it hurts you. By refusing to reciprocate, you protect your children's wellbeing and preserve your relationship with them. Take the high road — always.
+            Bad-mouthing hurts children more than it hurts you. By refusing to reciprocate, you protect your children's wellbeing and preserve your relationship with them. Take the high road --- always.
           </p>
         </ArticleCallout>
       </>
@@ -576,7 +576,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           When Parental Conflict Undermines Attachment
         </h2>
         <p className="mb-6">
-          The biggest threat to children's attachment security isn't shared custody — it's parental conflict <Citation id="8" index={8} source="Clinical Child and Family Psychology Review" year="2021" tier={1} />. Children exposed to ongoing hostility, transitions filled with tension, or loyalty conflicts suffer more than those in any particular custody arrangement.
+          The biggest threat to children's attachment security isn't shared custody --- it's parental conflict <Citation id="8" index={8} source="Clinical Child and Family Psychology Review" year="2021" tier={1} />. Children exposed to ongoing hostility, transitions filled with tension, or loyalty conflicts suffer more than those in any particular custody arrangement.
         </p>
         <p className="mb-6">
           Reducing conflict, supporting the child's relationship with both parents, and maintaining routine consistency matter more than the exact number of overnights.
@@ -584,7 +584,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Shared custody can work for young children when schedules match developmental needs, routines are consistent, and parental conflict is low. The goal isn't equal time at all costs — it's secure attachment to both parents.
+            Shared custody can work for young children when schedules match developmental needs, routines are consistent, and parental conflict is low. The goal isn't equal time at all costs --- it's secure attachment to both parents.
           </p>
         </ArticleCallout>
       </>
@@ -616,7 +616,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Dating as a single parent is complicated. You're healing from heartbreak, figuring out your identity, protecting your children, and trying to stay open to connection — all at once. And every step affects not just you, but your kids.
+            Dating as a single parent is complicated. You're healing from heartbreak, figuring out your identity, protecting your children, and trying to stay open to connection --- all at once. And every step affects not just you, but your kids.
           </p>
           <p className="mb-6">
             Navigating new relationships after divorce requires balancing your needs for companionship with your children's need for stability <Citation id="1" index={1} source="Family Relations" year="2020" tier={1} />.
@@ -706,7 +706,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
             },
             {
               title: "You\'re Confident",
-              description: <p>You genuinely see long-term potential. Don't introduce someone you're unsure about — children form attachments.</p>,
+              description: <p>You genuinely see long-term potential. Don't introduce someone you're unsure about --- children form attachments.</p>,
             },
             {
               title: 'Timing Is Right',
@@ -733,8 +733,8 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           Managing Your Own Emotions
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Loneliness:</strong> It's okay to want adult companionship. But don't rush into relationships to avoid being alone — heal first.</li>
-          <li><strong>Guilt:</strong> You deserve love and happiness. Dating doesn't make you a bad parent — neglecting your kids for dating does.</li>
+          <li><strong>Loneliness:</strong> It's okay to want adult companionship. But don't rush into relationships to avoid being alone --- heal first.</li>
+          <li><strong>Guilt:</strong> You deserve love and happiness. Dating doesn't make you a bad parent --- neglecting your kids for dating does.</li>
           <li><strong>Fear of rejection:</strong> Dating after divorce means being vulnerable again. Go slow, therapy helps.</li>
           <li><strong>Comparing to ex:</strong> Notice when you're dating 'rebound versions' of your ex or opposite extremes. Seek healthy partners, not reactions to past pain.</li>
         </ul>
@@ -762,7 +762,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Don't flaunt new relationships to punish your ex</li>
-          <li>Keep details private — co-parenting messages should focus on children only</li>
+          <li>Keep details private --- co-parenting messages should focus on children only</li>
           <li>Prepare for potential custody or visitation conflicts</li>
           <li>If ex uses children to get information, don't use children to send messages back</li>
         </ul>
@@ -801,7 +801,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Does divorce ruin children's lives? The answer is more nuanced than headlines suggest. Long-term research shows that most children of divorce grow into well-adjusted adults — but the path depends heavily on how parents handle the divorce.
+            Does divorce ruin children's lives? The answer is more nuanced than headlines suggest. Long-term research shows that most children of divorce grow into well-adjusted adults --- but the path depends heavily on how parents handle the divorce.
           </p>
           <p className="mb-6">
             Large longitudinal studies tracking children from divorce through adulthood reveal both risks and resilience <Citation id="1" index={1} source="Child Development" year="2019" tier={1} />.
@@ -891,10 +891,10 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           Outcomes vary dramatically based on circumstances <Citation id="5" index={5} source="Family Process" year="2019" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>High-conflict divorce:</strong> Ongoing hostility, litigation, loyalty conflicts — highest risk for poor outcomes</li>
-          <li><strong>Low-conflict divorce:</strong> Civil co-parenting, minimal child exposure to conflict — outcomes similar to intact families</li>
+          <li><strong>High-conflict divorce:</strong> Ongoing hostility, litigation, loyalty conflicts --- highest risk for poor outcomes</li>
+          <li><strong>Low-conflict divorce:</strong> Civil co-parenting, minimal child exposure to conflict --- outcomes similar to intact families</li>
           <li><strong>Divorce from abuse:</strong> Often improves children's wellbeing by removing exposure to violence</li>
-          <li><strong>Amicable divorce:</strong> Parents who genuinely cooperate and maintain child focus — children often thrive</li>
+          <li><strong>Amicable divorce:</strong> Parents who genuinely cooperate and maintain child focus --- children often thrive</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="The Decisive Factor">
@@ -955,7 +955,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Divorce is a risk factor, not a life sentence. How parents handle divorce — the conflict level, the co-parenting quality, the stability they provide — determines outcomes far more than the divorce itself."
+          quote="Divorce is a risk factor, not a life sentence. How parents handle divorce --- the conflict level, the co-parenting quality, the stability they provide --- determines outcomes far more than the divorce itself."
           attribution="Dr. E. Mavis Hetherington"
           role="Developmental Psychologist"
           source="For Better or For Worse: Divorce Reconsidered"
@@ -974,7 +974,7 @@ export const coParentingDivorceBlendedFamiliesArticlesB: Article[] = [
           <li>Foster secure, warm relationships with both parents</li>
           <li>Seek therapy for children showing adjustment difficulties</li>
           <li>Ensure financial stability when possible</li>
-          <li>Let children be children — don't parentify or use as confidants</li>
+          <li>Let children be children --- don't parentify or use as confidants</li>
         </ul>
 
         <ArticleCallout variant="tip">

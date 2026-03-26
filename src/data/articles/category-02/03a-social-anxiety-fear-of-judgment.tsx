@@ -26,7 +26,7 @@ export const socialAnxietyArticlesA: Article[] = [
     id: catId(21),
     slug: 'social-anxiety-disorder-more-than-just-shyness',
     title: 'Social Anxiety Disorder: More Than Just Shyness',
-    description: 'Understand social anxiety disorder — its diagnosis, neurobiological underpinnings, impact on life, and evidence-based treatments including CBT and exposure therapy.',
+    description: 'Understand social anxiety disorder --- its diagnosis, neurobiological underpinnings, impact on life, and evidence-based treatments including CBT and exposure therapy.',
     image: "/images/articles/cat02/cover-021.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 14,
@@ -121,7 +121,7 @@ export const socialAnxietyArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Walking into a room full of people feels like walking onto a stage where everyone is a critic. Every
-            word you speak, every gesture you make is being judged — harshly. The pounding heart, the flushed face,
+            word you speak, every gesture you make is being judged --- harshly. The pounding heart, the flushed face,
             the mind going blank. This isn't just shyness or introversion. This is social anxiety disorder, and it
             can be profoundly isolating.
           </p>
@@ -129,7 +129,7 @@ export const socialAnxietyArticlesA: Article[] = [
             Social anxiety disorder (SAD), also called social phobia, is the intense fear of social situations where
             you might be judged, embarrassed, or humiliated{', '}
             <Citation id="1" index={1} source="The Lancet Psychiatry" year="2021" tier={1} />. It's one of the most
-            common anxiety disorders, affecting millions — yet it remains widely misunderstood, often dismissed as
+            common anxiety disorders, affecting millions --- yet it remains widely misunderstood, often dismissed as
             mere "shyness" when it's actually a treatable clinical condition.
           </p>
         </div>
@@ -313,7 +313,7 @@ export const socialAnxietyArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>Pattern:</strong> Assuming you know what others are thinking — and it's always negative.
+                    <strong>Pattern:</strong> Assuming you know what others are thinking --- and it's always negative.
                   </p>
                   <p className="mb-4">
                     <strong>Examples:</strong> "They think I'm boring,", "She's judging my outfit,", "He thinks I'm
@@ -341,7 +341,7 @@ export const socialAnxietyArticlesA: Article[] = [
                   </p>
                   <p className="mb-4">
                     <strong>Consequence:</strong> You miss social cues, appear disengaged, and have difficulty
-                    tracking conversations — which ironically creates the awkwardness you're trying to avoid.
+                    tracking conversations --- which ironically creates the awkwardness you're trying to avoid.
                   </p>
                   <p>
                     Self-focused attention also amplifies awareness of internal anxiety symptoms (racing heart,
@@ -392,7 +392,7 @@ export const socialAnxietyArticlesA: Article[] = [
         />
 
         <QuoteBlock
-          quote="In social anxiety, you become your own worst critic — and you assume everyone else is critiquing you just as harshly. The truth is, most people are too busy worrying about themselves to scrutinize you as intensely as you fear."
+          quote="In social anxiety, you become your own worst critic --- and you assume everyone else is critiquing you just as harshly. The truth is, most people are too busy worrying about themselves to scrutinize you as intensely as you fear."
           attribution="Core clinical insight"
           role="Cognitive Model of Social Anxiety"
           variant="large"
@@ -667,13 +667,13 @@ export const socialAnxietyArticlesA: Article[] = [
             crippling social fear to comfortable engagement with others.
           </p>
           <p className="mb-4">
-            Treatment requires courage — facing the very situations that terrify you. But it works. With CBT,
+            Treatment requires courage --- facing the very situations that terrify you. But it works. With CBT,
             medication if needed, and persistent effort, most people with social anxiety see significant improvement{', '}
             <Citation id="2" index={10} source="British Journal of Psychiatry" year="2020" tier={1} />.
           </p>
           <p>
             You're not fundamentally broken or inadequate. You're experiencing a common, understandable, treatable
-            condition. Connection is possible. The world doesn't have to be a stage where everyone is a critic —
+            condition. Connection is possible. The world doesn't have to be a stage where everyone is a critic ---
             treatment can help you see it differently.
           </p>
         </ArticleCallout>
@@ -768,13 +768,13 @@ export const socialAnxietyArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You walk into a party, and immediately the voice starts: <em>"You look awkward. People are noticing.
             You're going to say something stupid. They don't want you here. Why did you even come?'</em> This isn't
-            how others see you — it's your inner critic, and in social anxiety, it's relentless.
+            how others see you --- it's your inner critic, and in social anxiety, it's relentless.
           </p>
           <p className="mb-6">
             The inner critic is the harsh, judgmental voice that narrates your social experiences with worst-case
             assumptions{', '}
             <Citation id="1" index={1} source="Personality and Individual Differences" year="2021" tier={1} />. It's
-            the lens through which you interpret every interaction — and in social anxiety, that lens is
+            the lens through which you interpret every interaction --- and in social anxiety, that lens is
             mercilessly negative.
           </p>
         </div>
@@ -786,8 +786,8 @@ export const socialAnxietyArticlesA: Article[] = [
           What Is the Inner Critic?
         </h2>
         <p className="mb-6">
-          The inner critic is the internalized voice of self-judgment. It's formed from past experiences —
-          criticism from parents, bullying, social rejection, perfectionist standards — and becomes your automatic
+          The inner critic is the internalized voice of self-judgment. It's formed from past experiences ---
+          criticism from parents, bullying, social rejection, perfectionist standards --- and becomes your automatic
           filter for interpreting social situations.
         </p>
         <p className="mb-6">In social anxiety, the inner critic tells you:</p>
@@ -805,7 +805,7 @@ export const socialAnxietyArticlesA: Article[] = [
             Research shows that people with social anxiety are significantly more self-critical than those without
             the disorder{', '}
             <Citation id="6" index={2} source="Clinical Psychology Review" year="2021" tier={1} />. They also assume
-            their internal self-judgment matches how others perceive them — when in reality, others usually see them
+            their internal self-judgment matches how others perceive them --- when in reality, others usually see them
             far more favorably than they see themselves.
           </p>
         </ArticleCallout>
@@ -843,7 +843,7 @@ export const socialAnxietyArticlesA: Article[] = [
                     If I set impossibly high standards, maybe I'll avoid failure."
                   </p>
                   <p>
-                    But this backfires. Constant self-criticism doesn't prevent judgment — it amplifies anxiety and
+                    But this backfires. Constant self-criticism doesn't prevent judgment --- it amplifies anxiety and
                     creates the very awkwardness you're trying to avoid.
                   </p>
                 </div>
@@ -936,7 +936,7 @@ export const socialAnxietyArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           <strong>Practice:</strong> When you notice the critic, mentally label it: "There's the critic again,
-          telling me I'm boring.' This creates separation — <em>you</em> are not the critic; it's a pattern of
+          telling me I'm boring.' This creates separation --- <em>you</em> are not the critic; it's a pattern of
           thinking, not truth.
         </p>
 
@@ -999,7 +999,7 @@ export const socialAnxietyArticlesA: Article[] = [
           4. Imagery Rescripting
         </h3>
         <p className="mb-6">
-          Many people with social anxiety have vivid negative self-images — mental pictures of themselves as
+          Many people with social anxiety have vivid negative self-images --- mental pictures of themselves as
           incompetent, awkward, or pathetic in social situations{', '}
           <Citation id="3" index={6} source="Journal of Behavior Therapy and Experimental Psychiatry" year="2020" tier={1} />.
         </p>
@@ -1023,10 +1023,10 @@ export const socialAnxietyArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            <strong>Critic:</strong> "They looked away — they're bored with me."
+            <strong>Critic:</strong> "They looked away --- they're bored with me."
           </li>
           <li>
-            <strong>Alternative:</strong> "They looked away — maybe they're thinking, or they're people-watching, or
+            <strong>Alternative:</strong> "They looked away --- maybe they're thinking, or they're people-watching, or
             they're just looking around.'
           </li>
         </ul>
@@ -1043,7 +1043,7 @@ export const socialAnxietyArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>The inner critic isn't protecting you — it's imprisoning you.</strong> Its harsh judgments don't
+            <strong>The inner critic isn't protecting you --- it's imprisoning you.</strong> Its harsh judgments don't
             prevent social disasters; they create the anxiety and self-consciousness that make interactions harder.
           </p>
           <p className="mb-4">
@@ -1153,7 +1153,7 @@ export const socialAnxietyArticlesA: Article[] = [
             Performance anxiety is the fear and physiological arousal that occurs when you're being evaluated or
             observed in a specific situation{', '}
             <Citation id="1" index={1} source="Journal of Applied Psychology" year="2020" tier={1} />. Unlike
-            generalized social anxiety (which affects most social situations), performance anxiety is situational —
+            generalized social anxiety (which affects most social situations), performance anxiety is situational ---
             triggered by moments where your competence is on display.
           </p>
         </div>
@@ -1275,7 +1275,7 @@ export const socialAnxietyArticlesA: Article[] = [
         <p className="mb-6">
           Public speaking anxiety is the most common form of performance anxiety{', '}
           <Citation id="2" index={3} source="Journal of Anxiety Disorders" year="2021" tier={1} />. The fear isn't
-          just about speaking — it's about being judged while speaking.
+          just about speaking --- it's about being judged while speaking.
         </p>
         <p className="mb-6">
           <strong>Core fears:</strong> "I'll forget what to say,", "I'll sound stupid,", "Everyone will see how nervous
@@ -1293,7 +1293,7 @@ export const socialAnxietyArticlesA: Article[] = [
         <p className="mb-6">
           Test anxiety is excessive worry before and during exams that interferes with performance{', '}
           <Citation id="3" index={4} source="Educational Psychology Review" year="2020" tier={1} />. It's not just
-          nervousness — it's anxiety severe enough to impair memory, concentration, and problem-solving.
+          nervousness --- it's anxiety severe enough to impair memory, concentration, and problem-solving.
         </p>
         <p className="mb-6">
           <strong>Cognitive interference:</strong> During the test, anxious thoughts ("I'm going to fail,", "I should
@@ -1403,7 +1403,7 @@ export const socialAnxietyArticlesA: Article[] = [
           1. Reappraise Arousal: Anxiety vs. Excitement
         </h3>
         <p className="mb-6">
-          Anxiety and excitement are physiologically almost identical — both involve increased heart rate, arousal, and
+          Anxiety and excitement are physiologically almost identical --- both involve increased heart rate, arousal, and
           alertness. The difference is how you interpret these sensations{', '}
           <Citation id="8" index={5} source="Journal of Experimental Psychology: General" year="2020" tier={1} />.
         </p>
@@ -1481,7 +1481,7 @@ export const socialAnxietyArticlesA: Article[] = [
               title: 'Step 4: High stakes',
               description: (
                 <p>
-                  Take on the performance situations that matter most to you — job interviews, conference presentations,
+                  Take on the performance situations that matter most to you --- job interviews, conference presentations,
                   competitive auditions.
                 </p>
               ),
@@ -1501,7 +1501,7 @@ export const socialAnxietyArticlesA: Article[] = [
             not on yourself
           </li>
           <li>
-            <strong>Music:</strong> Focus on the music itself — the sound, the expression, the connection with the piece
+            <strong>Music:</strong> Focus on the music itself --- the sound, the expression, the connection with the piece
           </li>
           <li>
             <strong>Tests:</strong> Focus on the question in front of you, not on your anxiety or time pressure
@@ -1512,7 +1512,7 @@ export const socialAnxietyArticlesA: Article[] = [
           4. Preparation (But Not Over-Preparation)
         </h3>
         <p className="mb-6">
-          Thorough preparation reduces uncertainty, which reduces anxiety. However, over-preparation can backfire —
+          Thorough preparation reduces uncertainty, which reduces anxiety. However, over-preparation can backfire ---
           perfectionism and excessive rehearsal can increase pressure and rigidity.
         </p>
         <p className="mb-6">
@@ -1535,7 +1535,7 @@ export const socialAnxietyArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           <strong>Limitations:</strong> Beta-blockers treat symptoms, not the underlying anxiety. They don't help with
-          the cognitive aspect (negative thoughts, catastrophic predictions). Long-term use can create dependency — you
+          the cognitive aspect (negative thoughts, catastrophic predictions). Long-term use can create dependency --- you
           may believe you can only perform well with medication.
         </p>
 
@@ -1560,7 +1560,7 @@ export const socialAnxietyArticlesA: Article[] = [
             accomplished public speakers, performers, and leaders experience performance anxiety.
           </p>
           <p className="mb-4">
-            The difference isn't the absence of anxiety — it's how you respond to it. With practice, you can learn to
+            The difference isn't the absence of anxiety --- it's how you respond to it. With practice, you can learn to
             reappraise arousal as excitement, shift focus outward, and build confidence through gradual exposure.
           </p>
           <p>
@@ -1659,11 +1659,11 @@ export const socialAnxietyArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Meetings where you're expected to speak. Presentations in front of colleagues. Networking events. Small
             talk in the break room. Lunch with coworkers. For people with social anxiety, the workplace can feel like
-            a minefield of judgment and evaluation — every day.
+            a minefield of judgment and evaluation --- every day.
           </p>
           <p className="mb-6">
             Social anxiety doesn't disappear when you clock in. In fact, the professional environment can amplify it
-            — your performance is literally being evaluated, your competence is on display, and avoidance isn't always
+            --- your performance is literally being evaluated, your competence is on display, and avoidance isn't always
             an option{', '}
             <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2020" tier={1} />.
           </p>
@@ -1834,7 +1834,7 @@ export const socialAnxietyArticlesA: Article[] = [
               title: 'Week 3-4: Increase visibility',
               description: (
                 <p>
-                  Speak up once in a meeting — even just to agree with someone or ask a clarifying question. Respond to
+                  Speak up once in a meeting --- even just to agree with someone or ask a clarifying question. Respond to
                   a group email. Join one optional work event.
                 </p>
               ),
@@ -1975,7 +1975,7 @@ export const socialAnxietyArticlesA: Article[] = [
           <p className="mb-4">
             With gradual exposure, cognitive reframing, and strategic accommodations, you can build a fulfilling career
             without letting social anxiety dictate your professional path. You don't have to become extroverted or love
-            networking — you just need to develop enough tolerance to show up.
+            networking --- you just need to develop enough tolerance to show up.
           </p>
           <p>
             Seek treatment if workplace social anxiety is significantly limiting your career. CBT and medication can
@@ -2071,7 +2071,7 @@ export const socialAnxietyArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You scroll through Instagram. Everyone's life looks better than yours — more friends, more adventures,
+            You scroll through Instagram. Everyone's life looks better than yours --- more friends, more adventures,
             more success. You post something, then obsessively check for likes and comments, heart sinking when the
             response isn't what you hoped. You see others getting together without you. The anxiety builds: 'I'm
             boring. I'm alone. I'm missing out.'
@@ -2097,10 +2097,10 @@ export const socialAnxietyArticlesA: Article[] = [
             title: 'Why It Feels Safer',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>No face-to-face interaction — time to compose thoughts</li>
-                <li>Control over self-presentation — edit, delete, curate</li>
-                <li>Asynchronous communication — no pressure for immediate response</li>
-                <li>Lower stakes — easier to initiate contact online than in person</li>
+                <li>No face-to-face interaction --- time to compose thoughts</li>
+                <li>Control over self-presentation --- edit, delete, curate</li>
+                <li>Asynchronous communication --- no pressure for immediate response</li>
+                <li>Lower stakes --- easier to initiate contact online than in person</li>
                 <li>Avoid real-world social situations while staying "connected"</li>
               </ul>
             ),
@@ -2109,11 +2109,11 @@ export const socialAnxietyArticlesA: Article[] = [
             title: 'Why It Makes Anxiety Worse',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Constant social comparison — everyone looks happier, more successful</li>
-                <li>Fear of negative evaluation — worrying about likes, comments, reactions</li>
-                <li>FOMO (fear of missing out) — seeing social events you weren't invited to</li>
-                <li>Rumination on posts — "Did I say the wrong thing? Why didn't they like it?"</li>
-                <li>Replaces real-world social skill building — avoidance in a new form</li>
+                <li>Constant social comparison --- everyone looks happier, more successful</li>
+                <li>Fear of negative evaluation --- worrying about likes, comments, reactions</li>
+                <li>FOMO (fear of missing out) --- seeing social events you weren't invited to</li>
+                <li>Rumination on posts --- "Did I say the wrong thing? Why didn't they like it?"</li>
+                <li>Replaces real-world social skill building --- avoidance in a new form</li>
               </ul>
             ),
           }}
@@ -2162,7 +2162,7 @@ export const socialAnxietyArticlesA: Article[] = [
           3. Seeking Validation Through Metrics
         </h3>
         <p className="mb-6">
-          Likes, comments, shares — these become proxies for social approval. When a post gets engagement, it feels
+          Likes, comments, shares --- these become proxies for social approval. When a post gets engagement, it feels
           like acceptance. When it doesn't, it feels like rejection{', '}
           <Citation id="6" index={4} source="Anxiety, Stress, and Coping" year="2020" tier={1} />.
         </p>
@@ -2196,7 +2196,7 @@ export const socialAnxietyArticlesA: Article[] = [
           </li>
         </ul>
         <p className="mb-6">
-          For people with social anxiety, passive use is often the default — it feels safer than putting yourself out
+          For people with social anxiety, passive use is often the default --- it feels safer than putting yourself out
           there, but it's also more harmful.
         </p>
 
@@ -2320,7 +2320,7 @@ export const socialAnxietyArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>Reality check:</strong> Engagement is influenced by algorithms, timing, and random factors —
+                    <strong>Reality check:</strong> Engagement is influenced by algorithms, timing, and random factors ---
                     not your worth.
                   </p>
                   <p>
@@ -2387,7 +2387,7 @@ export const socialAnxietyArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>Social media is a tool, not a replacement for real connection.</strong> For people with social
-            anxiety, it can feel like a safer alternative to face-to-face interaction — but passive use often makes
+            anxiety, it can feel like a safer alternative to face-to-face interaction --- but passive use often makes
             anxiety worse, not better.
           </p>
           <p className="mb-4">

@@ -86,10 +86,10 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've done the hard work of recovering from depression—symptoms have lifted, energy has returned, and life feels manageable again. But recovery doesn't end when you feel better. Without relapse prevention strategies, depression returns in 50-85% of people within two years.
+            You've done the hard work of recovering from depression---symptoms have lifted, energy has returned, and life feels manageable again. But recovery doesn't end when you feel better. Without relapse prevention strategies, depression returns in 50-85% of people within two years.
           </p>
           <p className="mb-6">
-            Relapse prevention isn't about living in fear that depression will return. It's about building resilience, recognizing early warning signs, and having a plan so you can intervene before a full relapse occurs <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />. People who complete CBT or other structured therapies have significantly lower relapse rates than those treated with medication alone—because therapy teaches lasting skills <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
+            Relapse prevention isn't about living in fear that depression will return. It's about building resilience, recognizing early warning signs, and having a plan so you can intervene before a full relapse occurs <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />. People who complete CBT or other structured therapies have significantly lower relapse rates than those treated with medication alone---because therapy teaches lasting skills <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
             This article explains how to recognize early warning signs, maintain wellness practices, and create a personalized relapse prevention plan.
@@ -109,7 +109,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Understanding Relapse vs. Recurrence
         </h2>
         <p className="mb-6">
-          It's helpful to distinguish between relapse and recurrence—they have different implications and prevention strategies.
+          It's helpful to distinguish between relapse and recurrence---they have different implications and prevention strategies.
         </p>
 
         <ComparisonTable
@@ -131,7 +131,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Recognizing Early Warning Signs
         </h2>
         <p className="mb-6">
-          Early warning signs—subtle changes that precede full relapse—give you a window to intervene before depression fully returns <Citation id="3" index={3} source="British Journal of Clinical Psychology" year="2018" tier={1} />.
+          Early warning signs---subtle changes that precede full relapse---give you a window to intervene before depression fully returns <Citation id="3" index={3} source="British Journal of Clinical Psychology" year="2018" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -165,7 +165,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                   <li>Return of negative automatic thoughts ("I'm worthless,", "Nothing matters")</li>
                   <li>All-or-nothing thinking reappearing</li>
                   <li>Difficulty concentrating or making decisions</li>
-                  <li>Rumination—repetitively thinking about problems without problem-solving</li>
+                  <li>Rumination---repetitively thinking about problems without problem-solving</li>
                   <li>Feeling hopeless about the future</li>
                 </ul>
               ),
@@ -221,7 +221,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Physical Activity',
               description: (
                 <p>
-                  Regular exercise (even moderate walking) has antidepressant effects and protects against relapse. Aim for 30 minutes most days—consistency matters more than intensity.
+                  Regular exercise (even moderate walking) has antidepressant effects and protects against relapse. Aim for 30 minutes most days---consistency matters more than intensity.
                 </p>
               ),
             },
@@ -237,7 +237,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Meaningful Activity',
               description: (
                 <p>
-                  Continue engaging in activities that provide purpose, accomplishment, and pleasure—even in small doses. Don't wait until you 'feel like it."
+                  Continue engaging in activities that provide purpose, accomplishment, and pleasure---even in small doses. Don't wait until you 'feel like it."
                 </p>
               ),
             },
@@ -245,7 +245,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Stress Management',
               description: (
                 <p>
-                  Use coping skills learned in therapy (thought challenging, problem-solving, mindfulness). Don't abandon these tools when you feel better—that's when you need them most.
+                  Use coping skills learned in therapy (thought challenging, problem-solving, mindfulness). Don't abandon these tools when you feel better---that's when you need them most.
                 </p>
               ),
             },
@@ -264,7 +264,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Continuing or Discontinuing Medication
         </h2>
         <p className="mb-6">
-          One of the biggest relapse risks is stopping antidepressants prematurely—usually within weeks of feeling better.
+          One of the biggest relapse risks is stopping antidepressants prematurely---usually within weeks of feeling better.
         </p>
 
         <BeforeAfter
@@ -273,7 +273,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>Stop medication 2-3 months after feeling better</li>
-                <li>"I don't need it anymore—I feel fine!"</li>
+                <li>"I don't need it anymore---I feel fine!"</li>
                 <li>Relapse within weeks to months in 50-60% of cases</li>
                 <li>Repeated cycle of starting and stopping medication</li>
               </ul>
@@ -309,7 +309,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Using Therapy Skills Long-Term
         </h2>
         <p className="mb-6">
-          If you completed CBT or another structured therapy, the skills you learned are your most powerful relapse prevention tools—but only if you continue using them <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={2} />.
+          If you completed CBT or another structured therapy, the skills you learned are your most powerful relapse prevention tools---but only if you continue using them <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={2} />.
         </p>
 
         <ArticleCallout variant="tip" title="Maintaining CBT Skills">
@@ -326,7 +326,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Creating Your Relapse Prevention Plan
         </h2>
         <p className="mb-6">
-          A written relapse prevention plan—created when you're well—helps you respond quickly if warning signs appear.
+          A written relapse prevention plan---created when you're well---helps you respond quickly if warning signs appear.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Essential Elements of a Relapse Prevention Plan">
@@ -384,7 +384,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Relapse is not failure—it's a common part of depression's course. But with awareness, maintenance of wellness practices, and early intervention when warning signs appear, you can significantly reduce relapse risk and intervene quickly if symptoms return. Recovery is an ongoing process, not a single destination. Resources for relapse prevention planning available through NAMI <Citation id="7" index={7} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Relapse is not failure---it's a common part of depression's course. But with awareness, maintenance of wellness practices, and early intervention when warning signs appear, you can significantly reduce relapse risk and intervene quickly if symptoms return. Recovery is an ongoing process, not a single destination. Resources for relapse prevention planning available through NAMI <Citation id="7" index={7} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -393,7 +393,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     id: catId(67),
     slug: 'supporting-someone-with-depression-guide',
     title: 'Supporting Someone with Depression: A Guide for Partners, Family, and Friends',
-    description: 'Knowing how to help a loved one with depression—what to say, what to do, and what to avoid—can make a significant difference in their recovery while protecting your own wellbeing.',
+    description: 'Knowing how to help a loved one with depression---what to say, what to do, and what to avoid---can make a significant difference in their recovery while protecting your own wellbeing.',
     image: "/images/articles/cat07/cover-067.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 9,
@@ -458,7 +458,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             Watching someone you love struggle with depression is painful. You want to help, but you're not sure what to do. Your attempts to cheer them up fall flat. They push you away or become irritable. You feel helpless, frustrated, or worried you're making things worse.
           </p>
           <p className="mb-6">
-            Social support is one of the strongest predictors of depression recovery <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />—but unhelpful support can actually worsen outcomes. The difference lies in understanding what depression is, what helps, and what doesn't.
+            Social support is one of the strongest predictors of depression recovery <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />---but unhelpful support can actually worsen outcomes. The difference lies in understanding what depression is, what helps, and what doesn't.
           </p>
           <p className="mb-6">
             This guide explains how to effectively support someone with depression, what to say (and what not to say), when to step in versus step back, and how to protect your own wellbeing in the process.
@@ -514,7 +514,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Depression is a medical condition</strong> involving neurotransmitter imbalances, altered brain function, and disrupted circuits for mood regulation—not a character flaw or something someone can simply "snap out of."
+            <strong>Depression is a medical condition</strong> involving neurotransmitter imbalances, altered brain function, and disrupted circuits for mood regulation---not a character flaw or something someone can simply "snap out of."
           </p>
         </ArticleCallout>
 
@@ -549,7 +549,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     <strong>What it looks like:</strong> Sitting with them in silence, listening without offering solutions, staying nearby without forcing conversation.
                   </p>
                   <p>
-                    <strong>Why it helps:</strong> Depression creates profound loneliness. Your presence—not your advice—combats isolation.
+                    <strong>Why it helps:</strong> Depression creates profound loneliness. Your presence---not your advice---combats isolation.
                   </p>
                 </div>
               ),
@@ -572,10 +572,10 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    <strong>What it sounds like:</strong> "Would you like to take a short walk with me?", "I'm making dinner—would you like to sit with me while I cook?", "No pressure, but I'm here if you want company."
+                    <strong>What it sounds like:</strong> "Would you like to take a short walk with me?", "I'm making dinner---would you like to sit with me while I cook?", "No pressure, but I'm here if you want company."
                   </p>
                   <p>
-                    <strong>Why it helps:</strong> Behavioral activation (gentle engagement in activities) helps depression—but pressure to "cheer up" backfires. Offer invitations, not demands.
+                    <strong>Why it helps:</strong> Behavioral activation (gentle engagement in activities) helps depression---but pressure to "cheer up" backfires. Offer invitations, not demands.
                   </p>
                 </div>
               ),
@@ -668,10 +668,10 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     <strong>When to step in:</strong> If they're not eating, not maintaining basic hygiene for days, or completely isolating themselves from all human contact.
                   </p>
                   <p className="mb-4">
-                    <strong>How to approach:</strong> Offer gentle invitations and practical help. "I'm making a sandwich—can I make you one?", "Would you like to sit on the porch with me for 5 minutes?"
+                    <strong>How to approach:</strong> Offer gentle invitations and practical help. "I'm making a sandwich---can I make you one?", "Would you like to sit on the porch with me for 5 minutes?"
                   </p>
                   <p>
-                    <strong>When to step back:</strong> If they want alone time, aren't interested in activities, or choose to rest instead of socializing. Depression requires rest—don't force constant engagement.
+                    <strong>When to step back:</strong> If they want alone time, aren't interested in activities, or choose to rest instead of socializing. Depression requires rest---don't force constant engagement.
                   </p>
                 </div>
               ),
@@ -761,7 +761,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Supporting someone with depression is one of the most challenging and meaningful things you can do. Your presence, validation, and practical help make a real difference—even when it doesn't feel like it. Remember that recovery takes time, professional treatment is essential, and taking care of yourself enables you to be there for them in the long run. Resources for supporters available through NAMI <Citation id="6" index={6} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Supporting someone with depression is one of the most challenging and meaningful things you can do. Your presence, validation, and practical help make a real difference---even when it doesn't feel like it. Remember that recovery takes time, professional treatment is essential, and taking care of yourself enables you to be there for them in the long run. Resources for supporters available through NAMI <Citation id="6" index={6} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -824,10 +824,10 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You pour everything into supporting your loved one with depression—taking on more household responsibilities, offering endless reassurance, sacrificing your own needs—and yet nothing seems to help. You're exhausted, resentful, and starting to feel depressed yourself. This is caregiver burnout, and it's both common and preventable.
+            You pour everything into supporting your loved one with depression---taking on more household responsibilities, offering endless reassurance, sacrificing your own needs---and yet nothing seems to help. You're exhausted, resentful, and starting to feel depressed yourself. This is caregiver burnout, and it's both common and preventable.
           </p>
           <p className="mb-6">
-            Partners and family members of people with depression experience significantly elevated rates of anxiety, depression, and stress-related health problems <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />. Compassion fatigue—emotional and physical exhaustion from caring for someone in distress—affects up to 60% of caregivers for people with mental illness <Citation id="2" index={2} source="Family Process" year="2020" tier={2} />.
+            Partners and family members of people with depression experience significantly elevated rates of anxiety, depression, and stress-related health problems <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />. Compassion fatigue---emotional and physical exhaustion from caring for someone in distress---affects up to 60% of caregivers for people with mental illness <Citation id="2" index={2} source="Family Process" year="2020" tier={2} />.
           </p>
           <p className="mb-6">
             This article focuses on protecting your own wellbeing while supporting someone you love, recognizing the signs of caregiver burnout, and creating sustainable support that doesn't consume you.
@@ -847,7 +847,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Recognizing Caregiver Burnout
         </h2>
         <p className="mb-6">
-          Burnout doesn't happen overnight—it builds gradually as you prioritize their needs over your own for weeks or months.
+          Burnout doesn't happen overnight---it builds gradually as you prioritize their needs over your own for weeks or months.
         </p>
 
         <ArticleAccordion
@@ -898,7 +898,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>If you're experiencing multiple signs of burnout:</strong> You need support too. This isn't selfish—it's essential. You cannot sustainably care for someone else while neglecting yourself.
+            <strong>If you're experiencing multiple signs of burnout:</strong> You need support too. This isn't selfish---it's essential. You cannot sustainably care for someone else while neglecting yourself.
           </p>
         </ArticleCallout>
 
@@ -906,7 +906,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Setting Healthy Boundaries
         </h2>
         <p className="mb-6">
-          Boundaries protect both you and your relationship. They're not about being selfish or uncaring—they're about sustainability <Citation id="3" index={3} source="Clinical Psychology Review" year="2019" tier={1} />.
+          Boundaries protect both you and your relationship. They're not about being selfish or uncaring---they're about sustainability <Citation id="3" index={3} source="Clinical Psychology Review" year="2019" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -941,7 +941,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             <li><strong>Use "I" statements:</strong> "I need some time to myself this evening" (not "You're too needy")</li>
             <li><strong>Be specific:</strong> "I can talk for 30 minutes after dinner, but then I need to decompress"</li>
             <li><strong>Explain, don't apologize:</strong> "I'm setting this boundary so I can continue supporting you long-term"</li>
-            <li><strong>Follow through:</strong> Boundaries without enforcement aren't boundaries—they're suggestions</li>
+            <li><strong>Follow through:</strong> Boundaries without enforcement aren't boundaries---they're suggestions</li>
             <li><strong>Expect pushback:</strong> They may initially resist, feel abandoned, or become angry. This doesn't mean you're wrong to set limits</li>
           </ul>
         </ArticleCallout>
@@ -950,7 +950,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           What You Can and Can't Control
         </h2>
         <p className="mb-6">
-          Burnout often stems from trying to control the uncontrollable—their recovery, their motivation, their choices.
+          Burnout often stems from trying to control the uncontrollable---their recovery, their motivation, their choices.
         </p>
 
         <ComparisonTable
@@ -967,14 +967,14 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Accepting what you cannot control doesn't mean giving up—it means redirecting energy toward what you <strong>can</strong> influence: your own wellbeing, your boundaries, and the support you choose to offer.
+          Accepting what you cannot control doesn't mean giving up---it means redirecting energy toward what you <strong>can</strong> influence: your own wellbeing, your boundaries, and the support you choose to offer.
         </p>
 
         <h2 id="self-care-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Essential Self-Care for Caregivers
         </h2>
         <p className="mb-6">
-          Self-care isn't selfish—it's what allows you to continue being there for your loved one without destroying yourself in the process.
+          Self-care isn't selfish---it's what allows you to continue being there for your loved one without destroying yourself in the process.
         </p>
 
         <ProgressSteps
@@ -992,7 +992,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Continue Your Own Activities',
               description: (
                 <p>
-                  Keep hobbies, exercise, work, and interests that give you identity and joy beyond being a caregiver. Depression doesn't pause your life—don't voluntarily do it yourself.
+                  Keep hobbies, exercise, work, and interests that give you identity and joy beyond being a caregiver. Depression doesn't pause your life---don't voluntarily do it yourself.
                 </p>
               ),
             },
@@ -1008,7 +1008,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Consider Your Own Therapy',
               description: (
                 <p>
-                  Individual therapy helps you process frustration, grief, resentment, and fear. It's not 'taking resources away' from your loved one—it's ensuring you have the emotional capacity to support them sustainably.
+                  Individual therapy helps you process frustration, grief, resentment, and fear. It's not 'taking resources away' from your loved one---it's ensuring you have the emotional capacity to support them sustainably.
                 </p>
               ),
             },
@@ -1016,7 +1016,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Take Regular Breaks',
               description: (
                 <p>
-                  Schedule time away—even brief breaks. A walk alone, an evening out with friends, or a weekend visit to family. Breaks aren't abandonment; they prevent burnout.
+                  Schedule time away---even brief breaks. A walk alone, an evening out with friends, or a weekend visit to family. Breaks aren't abandonment; they prevent burnout.
                 </p>
               ),
             },
@@ -1027,7 +1027,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           When to Consider Couples or Family Therapy
         </h2>
         <p className="mb-6">
-          Depression doesn't just affect the individual—it affects relationships. Couples therapy can help when depression strains your partnership <Citation id="4" index={4} source="Journal of Marital and Family Therapy" year="2020" tier={1} />.
+          Depression doesn't just affect the individual---it affects relationships. Couples therapy can help when depression strains your partnership <Citation id="4" index={4} source="Journal of Marital and Family Therapy" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1045,7 +1045,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          Couples-focused interventions for depression show strong effectiveness—not just for the relationship, but for the depressed partner's recovery. Addressing relationship dynamics can improve depression outcomes.
+          Couples-focused interventions for depression show strong effectiveness---not just for the relationship, but for the depressed partner's recovery. Addressing relationship dynamics can improve depression outcomes.
         </p>
 
         <h2 id="when-you-need-to-leave" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1075,7 +1075,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Finding the Balance
         </h2>
         <p className="mb-6">
-          Supporting someone with depression while protecting yourself requires continuous recalibration. There's no perfect formula—just ongoing assessment of what's sustainable.
+          Supporting someone with depression while protecting yourself requires continuous recalibration. There's no perfect formula---just ongoing assessment of what's sustainable.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1086,7 +1086,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6 mt-8">
-          Loving someone with depression is hard. Taking care of yourself while doing so isn't selfish—it's essential for both of you. You can be compassionate and set boundaries. You can offer support and maintain your own life. And if you need to step back or leave to protect yourself, that's valid. Resources for caregivers available through NAMI Family Support <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Loving someone with depression is hard. Taking care of yourself while doing so isn't selfish---it's essential for both of you. You can be compassionate and set boundaries. You can offer support and maintain your own life. And if you need to step back or leave to protect yourself, that's valid. Resources for caregivers available through NAMI Family Support <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -1095,7 +1095,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     id: catId(69),
     slug: 'recovery-is-not-linear-understanding-setbacks',
     title: 'Recovery Is Not Linear: Understanding Setbacks on the Path Forward',
-    description: `Setbacks don't mean failure. Understanding that depression recovery involves ups and downs—and learning how to navigate rough patches—is essential for long-term wellbeing.`,
+    description: `Setbacks don't mean failure. Understanding that depression recovery involves ups and downs---and learning how to navigate rough patches---is essential for long-term wellbeing.`,
     image: '/images/articles/cat07/cover-069.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 8,
@@ -1149,10 +1149,10 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've been doing well for weeks—maybe months. Therapy is working, medication has kicked in, and you're finally feeling like yourself again. Then one day you wake up and the heaviness is back. Negative thoughts flood in. You cancel plans. The panic sets in: "I'm right back where I started."
+            You've been doing well for weeks---maybe months. Therapy is working, medication has kicked in, and you're finally feeling like yourself again. Then one day you wake up and the heaviness is back. Negative thoughts flood in. You cancel plans. The panic sets in: "I'm right back where I started."
           </p>
           <p className="mb-6">
-            But you're not. A rough day, week, or even month doesn't erase the progress you've made. Recovery from depression is not a straight line from sick to well—it's a winding path with ups and downs, setbacks and breakthroughs <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />.
+            But you're not. A rough day, week, or even month doesn't erase the progress you've made. Recovery from depression is not a straight line from sick to well---it's a winding path with ups and downs, setbacks and breakthroughs <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Understanding that setbacks are normal, learning to distinguish a temporary dip from true relapse, and developing resilience to navigate rough patches are essential skills for sustained recovery.
@@ -1162,7 +1162,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         <StatCard
           stats={[
             { value: 80, suffix: '%', label: 'People recovering from depression experience at least one setback' },
-            { value: 3, suffix: '–5', label: 'Days typical setback lasts (vs. weeks for relapse)' },
+            { value: 3, suffix: '--5', label: 'Days typical setback lasts (vs. weeks for relapse)' },
             { value: 60, suffix: '%', label: 'Report setbacks decreased over time with learned skills' },
           ]}
           source="Journal of Affective Disorders, 2021; Clinical Psychology Review, 2020"
@@ -1190,7 +1190,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>Setbacks are temporary dips within overall upward trajectory.</strong> Relapses are sustained return to depression requiring professional intervention. Most rough patches are setbacks, not relapses—and they're a normal part of recovery <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
+            <strong>Setbacks are temporary dips within overall upward trajectory.</strong> Relapses are sustained return to depression requiring professional intervention. Most rough patches are setbacks, not relapses---and they're a normal part of recovery <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1198,7 +1198,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Why Setbacks Happen
         </h2>
         <p className="mb-6">
-          Setbacks aren't random—they usually have triggers, even if they're not immediately obvious.
+          Setbacks aren't random---they usually have triggers, even if they're not immediately obvious.
         </p>
 
         <ArticleAccordion
@@ -1213,7 +1213,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     Even positive changes (new job, moving, relationship milestones) create stress that can temporarily worsen mood. Negative stressors (conflict, loss, disappointment) have even stronger impact.
                   </p>
                   <p>
-                    Your brain is still relearning emotional regulation—it takes time to handle stress without reverting to old patterns.
+                    Your brain is still relearning emotional regulation---it takes time to handle stress without reverting to old patterns.
                   </p>
                 </div>
               ),
@@ -1240,7 +1240,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     When you feel better, it's tempting to stop therapy homework, skip exercise, cancel therapy appointments, or neglect self-care. Then symptoms creep back.
                   </p>
                   <p>
-                    This is like stopping blood pressure medication because your blood pressure is normal—the intervention is what's keeping you well.
+                    This is like stopping blood pressure medication because your blood pressure is normal---the intervention is what's keeping you well.
                   </p>
                 </div>
               ),
@@ -1254,7 +1254,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     Believing you should never have another bad day after treatment sets you up for disappointment. Recovery means <strong>managing</strong> depression, not <strong>never experiencing</strong> low moods again.
                   </p>
                   <p>
-                    Everyone—even people without depression—has difficult days. The difference is you're building skills to navigate them without spiraling.
+                    Everyone---even people without depression---has difficult days. The difference is you're building skills to navigate them without spiraling.
                   </p>
                 </div>
               ),
@@ -1344,7 +1344,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Developing a Growth Mindset About Recovery
         </h2>
         <p className="mb-6">
-          How you think about setbacks influences how you navigate them. A growth mindset—believing setbacks are opportunities to learn rather than evidence of failure—improves recovery outcomes <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2019" tier={1} />.
+          How you think about setbacks influences how you navigate them. A growth mindset---believing setbacks are opportunities to learn rather than evidence of failure---improves recovery outcomes <Citation id="3" index={3} source="Journal of Clinical Psychology" year="2019" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -1416,7 +1416,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Setbacks are not failure—they're part of the recovery process. Learning to navigate them without catastrophizing, using your coping skills even when you don't feel like it, and maintaining perspective that rough patches are temporary builds the resilience that prevents future relapses. Recovery isn't about never having another bad day—it's about knowing you can get through them. Resources for managing setbacks available through NAMI <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Setbacks are not failure---they're part of the recovery process. Learning to navigate them without catastrophizing, using your coping skills even when you don't feel like it, and maintaining perspective that rough patches are temporary builds the resilience that prevents future relapses. Recovery isn't about never having another bad day---it's about knowing you can get through them. Resources for managing setbacks available through NAMI <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -1425,7 +1425,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     id: catId(70),
     slug: 'life-after-depression-rebuilding-meaning-purpose-connection',
     title: 'Life After Depression: Rebuilding Meaning, Purpose, and Connection',
-    description: `Recovery from depression isn't just about symptom relief—it's about rebuilding a life worth living. Learn how to rediscover meaning, purpose, and authentic connection after depression.`,
+    description: `Recovery from depression isn't just about symptom relief---it's about rebuilding a life worth living. Learn how to rediscover meaning, purpose, and authentic connection after depression.`,
     image: '/images/articles/cat07/cover-070.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 9,
@@ -1490,7 +1490,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             The depression has lifted. You're sleeping better, eating normally, and functioning again. But something still feels empty. You've recovered from depression, but you're not sure what you're recovering <em>to</em>. Where do you go from here?
           </p>
           <p className="mb-6">
-            Recovery from depression isn't just about symptom reduction—it's about rebuilding a life that feels meaningful, purposeful, and connected <Citation id="1" index={1} source="Journal of Clinical Psychology" year="2020" tier={1} />. Depression often strips away the things that made life worth living: relationships, interests, goals, sense of purpose. Getting better creates space to rebuild—but you have to actively construct what comes next.
+            Recovery from depression isn't just about symptom reduction---it's about rebuilding a life that feels meaningful, purposeful, and connected <Citation id="1" index={1} source="Journal of Clinical Psychology" year="2020" tier={1} />. Depression often strips away the things that made life worth living: relationships, interests, goals, sense of purpose. Getting better creates space to rebuild---but you have to actively construct what comes next.
           </p>
           <p className="mb-6">
             This article explores life after depression: how to rediscover meaning and purpose, reconnect with others authentically, rebuild identity beyond illness, and create a life worth protecting from future episodes.
@@ -1510,7 +1510,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Recovery vs. Remission: The Difference Matters
         </h2>
         <p className="mb-6">
-          Clinical remission—the absence of symptoms—is only the first step. True recovery involves rebuilding wellbeing, not just eliminating suffering.
+          Clinical remission---the absence of symptoms---is only the first step. True recovery involves rebuilding wellbeing, not just eliminating suffering.
         </p>
 
         <ComparisonTable
@@ -1529,7 +1529,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            You can be in remission—symptom-free—and still feel empty if you haven't rebuilt meaning, purpose, and connection. Full recovery requires actively constructing a life you want to live, not just escaping the life depression created <Citation id="2" index={2} source="Journal of Affective Disorders" year="2021" tier={1} />.
+            You can be in remission---symptom-free---and still feel empty if you haven't rebuilt meaning, purpose, and connection. Full recovery requires actively constructing a life you want to live, not just escaping the life depression created <Citation id="2" index={2} source="Journal of Affective Disorders" year="2021" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -1537,7 +1537,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Rediscovering Meaning and Purpose
         </h2>
         <p className="mb-6">
-          Depression makes everything feel meaningless. Recovery creates the opportunity to reconnect with what matters—but that requires intentional exploration.
+          Depression makes everything feel meaningless. Recovery creates the opportunity to reconnect with what matters---but that requires intentional exploration.
         </p>
 
         <ProgressSteps
@@ -1548,13 +1548,13 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Values are what you care about—not goals, but the qualities you want your life to embody. Examples: connection, creativity, learning, contribution, authenticity, adventure, compassion.
+                    Values are what you care about---not goals, but the qualities you want your life to embody. Examples: connection, creativity, learning, contribution, authenticity, adventure, compassion.
                   </p>
                   <p className="mb-3">
                     <strong>Exercise:</strong> Ask yourself: "When I'm 80, looking back, what do I want to have stood for? What do I want to have prioritized?" The answers point toward your values <Citation id="5" index={5} source="Journal of Contextual Behavioral Science" year="2019" tier={1} />.
                   </p>
                   <p>
-                    Depression often causes values drift—you lose touch with what matters. Reconnecting requires deliberate reflection.
+                    Depression often causes values drift---you lose touch with what matters. Reconnecting requires deliberate reflection.
                   </p>
                 </div>
               ),
@@ -1564,7 +1564,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Values alone don't create meaning—you have to <strong>act</strong> on them. If you value connection but spend all your time alone, there's misalignment.
+                    Values alone don't create meaning---you have to <strong>act</strong> on them. If you value connection but spend all your time alone, there's misalignment.
                   </p>
                   <p>
                     <strong>Start small:</strong> One values-aligned action per week. Value creativity? Sign up for a class. Value contribution? Volunteer for 2 hours. Value learning? Start reading about a topic that fascinates you.
@@ -1577,10 +1577,10 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Goals are the concrete manifestations of your values. But not all goals create meaning—only those aligned with what you care about.
+                    Goals are the concrete manifestations of your values. But not all goals create meaning---only those aligned with what you care about.
                   </p>
                   <p>
-                    <strong>Meaningful goals:</strong> Derive from your values, challenge you to grow, contribute to something beyond yourself, reflect who you want to become—not who you think you "should" be.
+                    <strong>Meaningful goals:</strong> Derive from your values, challenge you to grow, contribute to something beyond yourself, reflect who you want to become---not who you think you "should" be.
                   </p>
                 </div>
               ),
@@ -1590,7 +1590,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Meaning isn't just found in big achievements. Savoring a meal, noticing beauty, helping someone, having a genuine conversation—these create meaning daily.
+                    Meaning isn't just found in big achievements. Savoring a meal, noticing beauty, helping someone, having a genuine conversation---these create meaning daily.
                   </p>
                   <p>
                     Depression trains you to dismiss small positives. Recovery involves retraining your attention to notice what matters.
@@ -1605,7 +1605,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Reconnecting Authentically with Others
         </h2>
         <p className="mb-6">
-          Depression isolates. Recovery requires rebuilding social connections—but not superficial ones. Authentic connection protects against future episodes <Citation id="3" index={3} source="American Journal of Psychiatry" year="2019" tier={1} />.
+          Depression isolates. Recovery requires rebuilding social connections---but not superficial ones. Authentic connection protects against future episodes <Citation id="3" index={3} source="American Journal of Psychiatry" year="2019" tier={1} />.
         </p>
 
         <ArticleAccordion
@@ -1617,13 +1617,13 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Depression strains relationships—you withdrew, became irritable, or pushed people away. Reconnecting requires acknowledging the impact and working to repair.
+                    Depression strains relationships---you withdrew, became irritable, or pushed people away. Reconnecting requires acknowledging the impact and working to repair.
                   </p>
                   <p className="mb-4">
                     <strong>How to repair:</strong> "I know I was distant/difficult during my depression. I'm sorry for how that affected you. I'd like to reconnect if you're open to it."
                   </p>
                   <p>
-                    Some relationships won't survive—and that's okay. Focus on the ones worth rebuilding.
+                    Some relationships won't survive---and that's okay. Focus on the ones worth rebuilding.
                   </p>
                 </div>
               ),
@@ -1634,7 +1634,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Authentic connection requires vulnerability—sharing your actual thoughts, feelings, and experiences rather than performing who you think you should be.
+                    Authentic connection requires vulnerability---sharing your actual thoughts, feelings, and experiences rather than performing who you think you should be.
                   </p>
                   <p className="mb-4">
                     Depression often taught you to hide. Recovery involves selectively opening up to people who've earned trust.
@@ -1654,7 +1654,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
                     Recovery is a chance to build relationships aligned with who you are <strong>now</strong>, not who you were before depression.
                   </p>
                   <p>
-                    <strong>Where to start:</strong> Join groups related to your interests or values. Take a class. Volunteer. Show up repeatedly—connection takes time.
+                    <strong>Where to start:</strong> Join groups related to your interests or values. Take a class. Volunteer. Show up repeatedly---connection takes time.
                   </p>
                 </div>
               ),
@@ -1716,9 +1716,9 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             <li><strong>Greater appreciation</strong> for life's ordinary moments</li>
             <li><strong>Deeper self-knowledge</strong> and emotional awareness</li>
             <li><strong>Stronger relationships</strong> with people who stayed through the hard times</li>
-            <li><strong>Clarified priorities</strong>—knowing what truly matters</li>
+            <li><strong>Clarified priorities</strong>---knowing what truly matters</li>
             <li><strong>Resilience and confidence</strong> in ability to handle future challenges</li>
-            <li><strong>Reduced fear of judgment</strong>—caring less what others think</li>
+            <li><strong>Reduced fear of judgment</strong>---caring less what others think</li>
           </ul>
         </ArticleCallout>
 
@@ -1730,7 +1730,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Building a Life Worth Protecting
         </h2>
         <p className="mb-6">
-          The best relapse prevention isn't just maintaining wellness practices—it's creating a life so meaningful you're motivated to protect it.
+          The best relapse prevention isn't just maintaining wellness practices---it's creating a life so meaningful you're motivated to protect it.
         </p>
 
         <ProgressSteps
@@ -1740,7 +1740,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
               title: 'Cultivate Multiple Sources of Meaning',
               description: (
                 <p>
-                  Don't put all your meaning eggs in one basket (work, one relationship, one goal). Diversified meaning creates resilience—if one area struggles, others sustain you.
+                  Don't put all your meaning eggs in one basket (work, one relationship, one goal). Diversified meaning creates resilience---if one area struggles, others sustain you.
                 </p>
               ),
             },
@@ -1772,7 +1772,7 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-8">
-          Recovery from depression isn't a return to who you were before—it's becoming someone new. Someone who knows suffering and chose to rebuild. Someone who found meaning not despite depression but through the process of recovering from it. Life after depression can be richer, more authentic, and more intentional than life before—if you actively construct it that way. Resources for recovery and growth available through NAMI <Citation id="6" index={6} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Recovery from depression isn't a return to who you were before---it's becoming someone new. Someone who knows suffering and chose to rebuild. Someone who found meaning not despite depression but through the process of recovering from it. Life after depression can be richer, more authentic, and more intentional than life before---if you actively construct it that way. Resources for recovery and growth available through NAMI <Citation id="6" index={6} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),

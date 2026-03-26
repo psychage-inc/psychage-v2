@@ -97,7 +97,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You have individual friendships, but no real friend group. You're always the one bridging different social circles, never feeling like you fully belong to any of them. You watch other people with their tight-knit crews and wonder how they found their people — and how you can find yours.
+            You have individual friendships, but no real friend group. You're always the one bridging different social circles, never feeling like you fully belong to any of them. You watch other people with their tight-knit crews and wonder how they found their people --- and how you can find yours.
           </p>
           <p className="mb-6">
             Having a friend group that feels like home provides unique benefits beyond individual friendships <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. Here's how to find or build yours.
@@ -256,7 +256,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
                     <li>Invite a few people you want to know better</li>
                     <li>Encourage them to bring friends</li>
                     <li>Make it recurring so group identity forms</li>
-                    <li>Be consistent — show up every time</li>
+                    <li>Be consistent --- show up every time</li>
                   </ul>
                   <p className="mt-3"><strong>Reality:</strong> This requires significant upfront effort and patience. Groups take months to gel.</p>
                 </div>
@@ -307,7 +307,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
                 <li>Be genuinely interested in getting to know people</li>
                 <li>Contribute without trying to take over</li>
                 <li>Respect group dynamics and history</li>
-                <li>Give it time — integration takes months</li>
+                <li>Give it time --- integration takes months</li>
               </ul>
             ),
           }}
@@ -344,7 +344,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Regular gatherings:</strong> Weekly, biweekly, or monthly — consistency matters more than frequency</li>
+          <li><strong>Regular gatherings:</strong> Weekly, biweekly, or monthly --- consistency matters more than frequency</li>
           <li><strong>Shared rituals:</strong> Inside jokes, traditions, recurring activities create group identity</li>
           <li><strong>Group chat or communication:</strong> Staying in touch between hangouts keeps connection warm</li>
           <li><strong>Navigate conflict:</strong> Address group tensions directly rather than letting resentment build</li>
@@ -377,7 +377,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Finding your people requires putting yourself in group settings repeatedly, being patient with the process, and accepting that not every group will be your group. When you find them, you'll know — it feels like coming home.</p>
+          <p>Finding your people requires putting yourself in group settings repeatedly, being patient with the process, and accepting that not every group will be your group. When you find them, you'll know --- it feels like coming home.</p>
         </ArticleCallout>
       </>
     ),
@@ -460,7 +460,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             You want to text that friend you haven't talked to in months, but what if they think it's weird? You'd love to suggest coffee with that acquaintance, but what if they say no? You think about reaching out constantly but never do, waiting for the other person to make the first move. Meanwhile, they're probably doing the same thing.
           </p>
           <p className="mb-6">
-            The fear of reaching out first keeps countless potential friendships from forming <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2020" tier={1} />. Here's why making the first move is easier — and more appreciated — than you think.
+            The fear of reaching out first keeps countless potential friendships from forming <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2020" tier={1} />. Here's why making the first move is easier --- and more appreciated --- than you think.
           </p>
         </div>
 
@@ -649,7 +649,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             {
               title: 'Make It a Habit',
               description: (
-                <p>Practice reaching out regularly — to different people, in different ways. Like any skill, it gets easier with repetition. The first time is hardest.</p>
+                <p>Practice reaching out regularly --- to different people, in different ways. Like any skill, it gets easier with repetition. The first time is hardest.</p>
               ),
             },
             {
@@ -694,7 +694,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>You gather evidence</strong> that most people respond positively (or at least neutrally)</li>
-          <li><strong>You realize rejection isn't catastrophic</strong> — if someone doesn't respond, you survive</li>
+          <li><strong>You realize rejection isn't catastrophic</strong> --- if someone doesn't respond, you survive</li>
           <li><strong>You build confidence</strong> through repeated exposure to the thing you fear</li>
           <li><strong>You develop a repertoire</strong> of ways to reach out that feel natural to you</li>
           <li><strong>You strengthen existing relationships</strong> by being the person who maintains connection</li>
@@ -805,7 +805,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             You have friends, but the conversations stay surface-level. You talk about work, weekend plans, and the weather. You never share what you're really struggling with, what you're afraid of, or who you really are beneath the pleasant exterior. The friendships feel hollow, and you wonder why you don't feel closer to anyone.
           </p>
           <p className="mb-6">
-            The missing ingredient is vulnerability — the willingness to let people see your real, imperfect, struggling self <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />. Here's why opening up builds intimacy and how to do it without oversharing.
+            The missing ingredient is vulnerability --- the willingness to let people see your real, imperfect, struggling self <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />. Here's why opening up builds intimacy and how to do it without oversharing.
           </p>
         </div>
 
@@ -887,7 +887,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
                   <p className="mb-2"><strong>What you share:</strong> Formative experiences, family dynamics, what you value and why.</p>
                   <p className="mb-2"><strong>Examples:</strong></p>
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>"I'm not close with my family — we just never really connected"</li>
+                    <li>"I'm not close with my family --- we just never really connected"</li>
                     <li>"I moved here after a bad breakup and wanted a fresh start"</li>
                     <li>"I left my corporate job because I couldn't shake the feeling that it was meaningless"</li>
                   </ul>
@@ -1076,7 +1076,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li><strong>Respond with empathy and share something similar:</strong> Green light to go deeper</li>
                     <li><strong>Change the subject or minimize your feelings:</strong> This person may not be ready for deeper friendship</li>
-                    <li><strong>Gossip about it later:</strong> Red flag — don't share more</li>
+                    <li><strong>Gossip about it later:</strong> Red flag --- don't share more</li>
                   </ul>
                 </div>
               ),
@@ -1111,7 +1111,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Vulnerability — the gradual, reciprocal sharing of your real self — is what transforms acquaintances into close friends. It requires courage, but it's the only path to genuine intimacy. Start small, match the other person's level, and trust that most people will respond with empathy, not judgment.</p>
+          <p>Vulnerability --- the gradual, reciprocal sharing of your real self --- is what transforms acquaintances into close friends. It requires courage, but it's the only path to genuine intimacy. Start small, match the other person's level, and trust that most people will respond with empathy, not judgment.</p>
         </ArticleCallout>
       </>
     ),
@@ -1385,7 +1385,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             {
               title: 'Pick a Standing Time',
               description: (
-                <p>'First Sunday of every month at 7pm" or "Every other Saturday morning" — whatever works for both schedules.</p>
+                <p>'First Sunday of every month at 7pm" or "Every other Saturday morning" --- whatever works for both schedules.</p>
               ),
             },
             {
@@ -1444,7 +1444,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
                     <li>Meals together (natural conversation time)</li>
                     <li>Walking/hiking (conversation-friendly activities)</li>
                   </ul>
-                  <p className="mt-4"><strong>Avoid:</strong> Packing every minute with tourist activities — you need time to actually talk.</p>
+                  <p className="mt-4"><strong>Avoid:</strong> Packing every minute with tourist activities --- you need time to actually talk.</p>
                 </div>
               ),
             },
@@ -1615,7 +1615,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             You've been friends for years, but it doesn't feel right anymore. Your values have diverged. Your lives went in different directions. Every interaction feels forced, like you're both trying to hold onto something that's already gone. But letting go feels like failure, like giving up on someone you once cared deeply about.
           </p>
           <p className="mb-6">
-            Here's the truth: not all friendships are meant to last forever <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />. Some friendships are perfect for a specific time in your life but don't survive major transitions. Recognizing when a friendship has run its course — and letting go with grace — is a skill.
+            Here's the truth: not all friendships are meant to last forever <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />. Some friendships are perfect for a specific time in your life but don't survive major transitions. Recognizing when a friendship has run its course --- and letting go with grace --- is a skill.
           </p>
         </div>
 
@@ -1677,7 +1677,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
               title: 'It Feels Like Obligation, Not Choice',
               content: (
                 <div>
-                  <p className="mb-3">You maintain the friendship out of guilt, history, or social expectation — not because you genuinely want to be in each other's lives.</p>
+                  <p className="mb-3">You maintain the friendship out of guilt, history, or social expectation --- not because you genuinely want to be in each other's lives.</p>
                   <p><strong>What this signals:</strong> The friendship is no longer nourishing either of you. You're both going through the motions.</p>
                 </div>
               ),
@@ -1813,7 +1813,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Guilt:</strong> You don't want to cause pain by ending it.</p>
-                  <p><strong>Reality:</strong> Staying in a friendship you don't want is also hurtful — you're both settling for something hollow. Honesty (gentle honesty) is kinder.</p>
+                  <p><strong>Reality:</strong> Staying in a friendship you don't want is also hurtful --- you're both settling for something hollow. Honesty (gentle honesty) is kinder.</p>
                 </div>
               ),
             },
@@ -1823,7 +1823,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4"><strong>Guilt:</strong> Maybe if you tried harder, it could work.</p>
-                  <p><strong>Reality:</strong> If you've genuinely tried and it still feels forced, you're not giving up — you're accepting reality. Not all friendships can be saved.</p>
+                  <p><strong>Reality:</strong> If you've genuinely tried and it still feels forced, you're not giving up --- you're accepting reality. Not all friendships can be saved.</p>
                 </div>
               ),
             },
@@ -1918,7 +1918,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Not all friendships are meant to last forever. Some friendships are perfect for a specific season of life but don't survive major transitions. Recognizing when a friendship has run its course — and letting go with grace and without guilt — is a sign of maturity, not failure.</p>
+          <p>Not all friendships are meant to last forever. Some friendships are perfect for a specific season of life but don't survive major transitions. Recognizing when a friendship has run its course --- and letting go with grace and without guilt --- is a sign of maturity, not failure.</p>
         </ArticleCallout>
       </>
     ),

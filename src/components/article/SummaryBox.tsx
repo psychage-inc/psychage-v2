@@ -4,12 +4,19 @@ import { motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 interface SummaryBoxProps {
-    summary: string;
+    summary?: string;
+    keyPoints?: string[];
     className?: string;
 }
 
-const SummaryBox: React.FC<SummaryBoxProps> = ({ summary, className = '' }) => {
+const SummaryBox: React.FC<SummaryBoxProps> = ({ summary, keyPoints, className = '' }) => {
     const prefersReducedMotion = useReducedMotion();
+
+    // Support both summary string and keyPoints array
+    const content = summary || keyPoints;
+    if (!content) return null;
+
+    const isArray = Array.isArray(content);
 
     return (
         <motion.div
@@ -23,13 +30,24 @@ const SummaryBox: React.FC<SummaryBoxProps> = ({ summary, className = '' }) => {
                 <div className="shrink-0 mt-0.5">
                     <FileText size={20} className="text-primary" />
                 </div>
-                <div>
+                <div className="flex-1">
                     <h2 className="text-sm font-bold uppercase tracking-wider text-primary mb-2">
                         At a Glance
                     </h2>
-                    <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
-                        {summary}
-                    </p>
+                    {isArray ? (
+                        <ul className="space-y-2">
+                            {(content as string[]).map((point, index) => (
+                                <li key={index} className="text-base leading-relaxed text-gray-700 dark:text-gray-300 flex items-start">
+                                    <span className="text-primary mr-2 mt-1">•</span>
+                                    <span>{point}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    ) : (
+                        <p className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
+                            {content as string}
+                        </p>
+                    )}
                 </div>
             </div>
         </motion.div>

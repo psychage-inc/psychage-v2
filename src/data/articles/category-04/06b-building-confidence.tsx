@@ -99,7 +99,7 @@ export const buildingConfidenceArticlesB: Article[] = [
             Everyone fails. The difference between people who stay confident and those who don't is how they interpret failure.
           </p>
           <p className="mb-6">
-            Failure can be devastating or developmental—the outcome depends entirely on your interpretation <Citation id="1" index={1} source="Random House" year="2006" tier={5} />. Research shows that reframing failure as information, not identity, protects confidence and enables learning <Citation id="3" index={3} source="Journal of Applied Psychology" year="2019" tier={1} />.
+            Failure can be devastating or developmental---the outcome depends entirely on your interpretation <Citation id="1" index={1} source="Random House" year="2006" tier={5} />. Research shows that reframing failure as information, not identity, protects confidence and enables learning <Citation id="3" index={3} source="Journal of Applied Psychology" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -165,7 +165,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           Treating Failure as Data
         </h2>
         <p className="mb-6">
-          Error management training—a workplace learning approach—teaches people to view mistakes as valuable information <Citation id="6" index={6} source="Journal of Organizational Behavior" year="2017" tier={1} />. This approach applies equally to personal development.
+          Error management training---a workplace learning approach---teaches people to view mistakes as valuable information <Citation id="6" index={6} source="Journal of Organizational Behavior" year="2017" tier={1} />. This approach applies equally to personal development.
         </p>
 
         <ProgressSteps
@@ -185,7 +185,7 @@ export const buildingConfidenceArticlesB: Article[] = [
             },
             {
               title: 'Implement the adjustment',
-              description: <p>Apply what you learned. The goal isn't to avoid failure—it's to fail forward.</p>,
+              description: <p>Apply what you learned. The goal isn't to avoid failure---it's to fail forward.</p>,
             },
           ]}
         />
@@ -194,7 +194,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           Avoiding Catastrophic Thinking
         </h2>
         <p className="mb-6">
-          Catastrophizing—imagining the worst possible consequences—amplifies the emotional impact of failure <Citation id="7" index={7} source="Behaviour Research and Therapy" year="2019" tier={1} />. One setback becomes "proof" that everything is falling apart.
+          Catastrophizing---imagining the worst possible consequences---amplifies the emotional impact of failure <Citation id="7" index={7} source="Behaviour Research and Therapy" year="2019" tier={1} />. One setback becomes "proof" that everything is falling apart.
         </p>
 
         <ArticleAccordion
@@ -264,7 +264,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           Research on post-traumatic growth shows that people can emerge from difficult experiences with increased confidence, clearer priorities, and deeper relationships <Citation id="8" index={8} source="Journal of Traumatic Stress" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          Failure can be the same. Many successful people point to major setbacks as turning points—not because failure felt good, but because it forced clarity, adaptation, and ultimately, growth <Citation id="5" index={5} source="American Psychologist" year="2020" tier={1} />.
+          Failure can be the same. Many successful people point to major setbacks as turning points---not because failure felt good, but because it forced clarity, adaptation, and ultimately, growth <Citation id="5" index={5} source="American Psychologist" year="2020" tier={1} />.
         </p>
 
         <h2 id="practical-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -273,7 +273,7 @@ export const buildingConfidenceArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="The 24-Hour Rule">
           <p>
-            Allow 24 hours to feel bad. Don't suppress the disappointment—acknowledge it. Then shift to analysis and planning. Emotions are valid; wallowing isn't helpful.
+            Allow 24 hours to feel bad. Don't suppress the disappointment---acknowledge it. Then shift to analysis and planning. Emotions are valid; wallowing isn't helpful.
           </p>
         </ArticleCallout>
 
@@ -412,7 +412,7 @@ export const buildingConfidenceArticlesB: Article[] = [
               title: 'Social Evaluation Threat',
               content: (
                 <p>
-                  Public speaking puts you under direct social evaluation. Your brain evolved to care deeply about group acceptance—being judged by many people at once triggers ancient threat responses.
+                  Public speaking puts you under direct social evaluation. Your brain evolved to care deeply about group acceptance---being judged by many people at once triggers ancient threat responses.
                 </p>
               ),
             },
@@ -441,7 +441,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           The Role of Preparation
         </h2>
         <p className="mb-6">
-          Preparation doesn't just improve performance—it directly reduces anxiety <Citation id="4" index={4} source="Communication Education" year="2019" tier={1} />. Underprepared speakers experience higher anxiety and poorer outcomes. Overprepared speakers feel more confident and perform better.
+          Preparation doesn't just improve performance---it directly reduces anxiety <Citation id="4" index={4} source="Communication Education" year="2019" tier={1} />. Underprepared speakers experience higher anxiety and poorer outcomes. Overprepared speakers feel more confident and perform better.
         </p>
 
         <ProgressSteps
@@ -470,7 +470,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           Building Confidence Through Graduated Exposure
         </h2>
         <p className="mb-6">
-          You don't start with a TED Talk. Graduated exposure—progressively facing increasingly challenging speaking situations—is the gold standard treatment for public speaking anxiety <Citation id="3" index={3} source="Clinical Psychology Review" year="2018" tier={1} />.
+          You don't start with a TED Talk. Graduated exposure---progressively facing increasingly challenging speaking situations---is the gold standard treatment for public speaking anxiety <Citation id="3" index={3} source="Clinical Psychology Review" year="2018" tier={1} />.
         </p>
 
         <ArticleChart
@@ -497,7 +497,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           Reframing Physiological Arousal
         </h2>
         <p className="mb-6">
-          Your racing heart, sweating, and shaking aren't signs of weakness—they're your body preparing for performance. Research shows that reframing arousal as "I'm excited" rather than "I'm anxious" improves performance <Citation id="7" index={7} source="Journal of Experimental Psychology" year="2014" tier={1} />.
+          Your racing heart, sweating, and shaking aren't signs of weakness---they're your body preparing for performance. Research shows that reframing arousal as "I'm excited" rather than "I'm anxious" improves performance <Citation id="7" index={7} source="Journal of Experimental Psychology" year="2014" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -538,7 +538,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           The Only Real Solution: Repeated Practice
         </h2>
         <p className="mb-6">
-          There's no shortcut. The single strongest predictor of public speaking confidence is the number of times you've done it <Citation id="8" index={8} source="Communication Quarterly" year="2018" tier={1} />. Each experience—even imperfect ones—builds competence and reduces anxiety.
+          There's no shortcut. The single strongest predictor of public speaking confidence is the number of times you've done it <Citation id="8" index={8} source="Communication Quarterly" year="2018" tier={1} />. Each experience---even imperfect ones---builds competence and reduces anxiety.
           </p>
 
         <BeforeAfter
@@ -677,7 +677,7 @@ export const buildingConfidenceArticlesB: Article[] = [
               title: 'Excessive Self-Focus',
               content: (
                 <p>
-                  When socially anxious, you monitor yourself constantly—how you look, sound, what you just said. This internal focus prevents you from actually connecting with others <Citation id="2" index={2} source="Behaviour Research and Therapy" year="2016" tier={1} />.
+                  When socially anxious, you monitor yourself constantly---how you look, sound, what you just said. This internal focus prevents you from actually connecting with others <Citation id="2" index={2} source="Behaviour Research and Therapy" year="2016" tier={1} />.
                 </p>
               ),
             },
@@ -695,7 +695,7 @@ export const buildingConfidenceArticlesB: Article[] = [
               title: 'Rejection Sensitivity',
               content: (
                 <p>
-                  Expecting rejection creates behavior that can inadvertently invite it—being withdrawn, defensive, or overly agreeable <Citation id="6" index={6} source="Personality and Social Psychology Bulletin" year="2019" tier={1} />.
+                  Expecting rejection creates behavior that can inadvertently invite it---being withdrawn, defensive, or overly agreeable <Citation id="6" index={6} source="Personality and Social Psychology Bulletin" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -749,7 +749,7 @@ export const buildingConfidenceArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Social confidence isn't innate—it's built from specific, learnable skills. Active listening, genuine curiosity, and asking good questions create connection more effectively than trying to be interesting.
+            Social confidence isn't innate---it's built from specific, learnable skills. Active listening, genuine curiosity, and asking good questions create connection more effectively than trying to be interesting.
           </p>
         </ArticleCallout>
 
@@ -768,7 +768,7 @@ export const buildingConfidenceArticlesB: Article[] = [
               title: 'Listen to understand, not to respond',
               description: (
                 <p>
-                  Active listening—reflecting, asking follow-ups, showing curiosity—builds stronger connection than clever responses <Citation id="4" index={4} source="Communication Research" year="2017" tier={1} />.
+                  Active listening---reflecting, asking follow-ups, showing curiosity---builds stronger connection than clever responses <Citation id="4" index={4} source="Communication Research" year="2017" tier={1} />.
                 </p>
               ),
             },
@@ -847,7 +847,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If social fears severely limit your life—avoiding work events, declining friendships, extreme distress in normal interactions—you may have social anxiety disorder <Citation id="1" index={1} source="British Journal of Psychiatry" year="2018" tier={1} />. Cognitive-behavioral therapy (CBT) is highly effective for social anxiety and can dramatically improve quality of life.
+          If social fears severely limit your life---avoiding work events, declining friendships, extreme distress in normal interactions---you may have social anxiety disorder <Citation id="1" index={1} source="British Journal of Psychiatry" year="2018" tier={1} />. Cognitive-behavioral therapy (CBT) is highly effective for social anxiety and can dramatically improve quality of life.
         </p>
       </>
     ),
@@ -857,7 +857,7 @@ export const buildingConfidenceArticlesB: Article[] = [
     id: catId(59),
     slug: 'body-language-confidence-psychology',
     title: 'The Body Language of Confidence: How Posture Affects Psychology',
-    description: "Research shows that physical posture doesn't just reflect confidence—it can create it through bidirectional mind-body effects.",
+    description: "Research shows that physical posture doesn't just reflect confidence---it can create it through bidirectional mind-body effects.",
     image: '/images/articles/cat04/cover-059.svg',
     category: CATEGORY_SELF_WORTH,
     readTime: 7,
@@ -943,10 +943,10 @@ export const buildingConfidenceArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your posture doesn't just communicate confidence to others—it communicates it to yourself. The mind-body connection runs both ways.
+            Your posture doesn't just communicate confidence to others---it communicates it to yourself. The mind-body connection runs both ways.
           </p>
           <p className="mb-6">
-            Embodied cognition research shows that physical states influence psychological states <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2017" tier={1} />. Standing tall doesn't just make you look confident—it can make you feel more confident, think differently, and behave more assertively <Citation id="3" index={3} source="Journal of Behavioral Medicine" year="2019" tier={1} />.
+            Embodied cognition research shows that physical states influence psychological states <Citation id="2" index={2} source="Trends in Cognitive Sciences" year="2017" tier={1} />. Standing tall doesn't just make you look confident---it can make you feel more confident, think differently, and behave more assertively <Citation id="3" index={3} source="Journal of Behavioral Medicine" year="2019" tier={1} />.
           </p>
         </div>
 
@@ -957,7 +957,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           In 2010, researchers published a study showing that holding "power poses" (expansive postures like standing with hands on hips or arms raised) for two minutes increased testosterone, decreased cortisol, and made people more willing to take risks <Citation id="1" index={1} source="Psychological Science" year="2010" tier={1} />.
         </p>
         <p className="mb-6">
-          The findings went viral—but subsequent replication attempts found mixed results <Citation id="4" index={4} source="Comprehensive Results in Social Psychology" year="2017" tier={1} />. The hormonal changes didn't consistently replicate, but the psychological effects (feeling more powerful, confident behavior) did. The key finding: expansive posture affects how you feel and act, even if the mechanism is different than originally proposed.
+          The findings went viral---but subsequent replication attempts found mixed results <Citation id="4" index={4} source="Comprehensive Results in Social Psychology" year="2017" tier={1} />. The hormonal changes didn't consistently replicate, but the psychological effects (feeling more powerful, confident behavior) did. The key finding: expansive posture affects how you feel and act, even if the mechanism is different than originally proposed.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1008,12 +1008,12 @@ export const buildingConfidenceArticlesB: Article[] = [
           How Body Language Affects Perception
         </h2>
         <p className="mb-6">
-          People make rapid judgments about confidence based on posture, eye contact, and gesture <Citation id="7" index={7} source="Journal of Nonverbal Behavior" year="2020" tier={1} />. These judgments happen within seconds and significantly influence social outcomes—hiring decisions, leadership perception, and romantic interest all correlate with confident body language.
+          People make rapid judgments about confidence based on posture, eye contact, and gesture <Citation id="7" index={7} source="Journal of Nonverbal Behavior" year="2020" tier={1} />. These judgments happen within seconds and significantly influence social outcomes---hiring decisions, leadership perception, and romantic interest all correlate with confident body language.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Eye contact is one of the strongest signals of confidence. Steady (not staring) eye contact conveys self-assurance and engagement <Citation id="8" index={8} source="Cognition and Emotion" year="2018" tier={1} />. If eye contact feels difficult, start with the "triangle technique"—shift gaze between eyes and mouth.
+            Eye contact is one of the strongest signals of confidence. Steady (not staring) eye contact conveys self-assurance and engagement <Citation id="8" index={8} source="Cognition and Emotion" year="2018" tier={1} />. If eye contact feels difficult, start with the "triangle technique"---shift gaze between eyes and mouth.
           </p>
         </ArticleCallout>
 
@@ -1036,7 +1036,7 @@ export const buildingConfidenceArticlesB: Article[] = [
               title: 'Maintain upright posture throughout the day',
               description: (
                 <p>
-                  Notice when you slouch. Gently realign: shoulders back, chest open, head neutral. This isn't rigid military posture—it's aligned and relaxed. Set hourly reminders if needed.
+                  Notice when you slouch. Gently realign: shoulders back, chest open, head neutral. This isn't rigid military posture---it's aligned and relaxed. Set hourly reminders if needed.
                 </p>
               ),
             },
@@ -1115,7 +1115,7 @@ export const buildingConfidenceArticlesB: Article[] = [
           Body Language Isn't a Magic Fix
         </h2>
         <p className="mb-6">
-          Confident posture helps, but it's not a substitute for skill, preparation, or addressing underlying anxiety. Use body language as one tool among many. If you're deeply anxious, adopting an expansive posture won't cure it—but it can shift your internal state enough to help you engage rather than avoid.
+          Confident posture helps, but it's not a substitute for skill, preparation, or addressing underlying anxiety. Use body language as one tool among many. If you're deeply anxious, adopting an expansive posture won't cure it---but it can shift your internal state enough to help you engage rather than avoid.
         </p>
       </>
     ),
@@ -1203,7 +1203,7 @@ export const buildingConfidenceArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Confidence and arrogance look similar on the surface—both involve self-assurance. But they come from opposite places and lead to opposite outcomes.
+            Confidence and arrogance look similar on the surface---both involve self-assurance. But they come from opposite places and lead to opposite outcomes.
           </p>
           <p className="mb-6">
             Confidence is rooted in genuine self-knowledge and acceptance. Arrogance is rooted in insecurity and the need to feel superior to others <Citation id="1" index={1} source="Journal of Personality" year="2017" tier={1} />. Understanding the distinction helps you build one and avoid the other.
@@ -1293,12 +1293,12 @@ export const buildingConfidenceArticlesB: Article[] = [
           Humility Isn't Weakness
         </h2>
         <p className="mb-6">
-          Humility—recognizing your limitations while valuing your strengths—actually enhances leadership and performance <Citation id="6" index={6} source="Academy of Management Journal" year="2020" tier={1} />. Arrogance pretends to have no weaknesses; confidence acknowledges them honestly.
+          Humility---recognizing your limitations while valuing your strengths---actually enhances leadership and performance <Citation id="6" index={6} source="Academy of Management Journal" year="2020" tier={1} />. Arrogance pretends to have no weaknesses; confidence acknowledges them honestly.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Intellectual humility—being open to being wrong and willing to update your beliefs—is strongly associated with better decision-making, stronger relationships, and continued learning <Citation id="2" index={2} source="Current Directions in Psychological Science" year="2019" tier={1} />.
+            Intellectual humility---being open to being wrong and willing to update your beliefs---is strongly associated with better decision-making, stronger relationships, and continued learning <Citation id="2" index={2} source="Current Directions in Psychological Science" year="2019" tier={1} />.
           </p>
         </ArticleCallout>
 

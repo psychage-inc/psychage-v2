@@ -97,7 +97,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            We are more connected than ever before — smartphones, social media, instant messaging. Yet rates of loneliness have doubled over the past 40 years. How did we become so disconnected in an age of connection?
+            We are more connected than ever before --- smartphones, social media, instant messaging. Yet rates of loneliness have doubled over the past 40 years. How did we become so disconnected in an age of connection?
           </p>
           <p className="mb-6">
             The loneliness epidemic is not a failure of individuals to make friends. It's the result of decades of social, economic, and technological changes that dismantled the structures that once facilitated human connection <Citation id="8" index={8} source="U.S. Department of Health and Human Services" year="2023" tier={2} />.
@@ -149,7 +149,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                     <li>Parent-teacher association (PTA) involvement plummeted</li>
                   </ul>
                   <p>
-                    These institutions provided regular, structured opportunities to see the same people repeatedly — a key ingredient for forming friendships.
+                    These institutions provided regular, structured opportunities to see the same people repeatedly --- a key ingredient for forming friendships.
                   </p>
                 </div>
               ),
@@ -163,10 +163,10 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                     The nature of work has shifted in ways that reduce social connection:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
-                    <li><strong>Gig economy</strong> — Freelance and contract work means no stable workplace community</li>
-                    <li><strong>Remote work</strong> — While offering flexibility, working from home eliminates spontaneous office interactions <Citation id="5" index={5} source="Journal of Applied Psychology" year="2021" tier={1} /></li>
-                    <li><strong>Longer hours</strong> — Americans work more hours per year than in the 1970s, leaving less time for social life</li>
-                    <li><strong>Job mobility</strong> — Frequent job changes disrupt workplace relationships</li>
+                    <li><strong>Gig economy</strong> --- Freelance and contract work means no stable workplace community</li>
+                    <li><strong>Remote work</strong> --- While offering flexibility, working from home eliminates spontaneous office interactions <Citation id="5" index={5} source="Journal of Applied Psychology" year="2021" tier={1} /></li>
+                    <li><strong>Longer hours</strong> --- Americans work more hours per year than in the 1970s, leaving less time for social life</li>
+                    <li><strong>Job mobility</strong> --- Frequent job changes disrupt workplace relationships</li>
                   </ul>
                 </div>
               ),
@@ -183,7 +183,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                   <ul className="list-disc pl-5 space-y-2">
                     <li>You drive from home to work to grocery store without seeing neighbors</li>
                     <li>No public squares, parks, or commons where people naturally gather</li>
-                    <li>Loss of "third places" — spaces that aren't home or work (cafes, libraries, community centers)</li>
+                    <li>Loss of "third places" --- spaces that aren't home or work (cafes, libraries, community centers)</li>
                   </ul>
                 </div>
               ),
@@ -292,7 +292,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           COVID-19: Accelerating an Existing Crisis
         </h2>
         <p className="mb-6">
-          The COVID-19 pandemic didn't create the loneliness epidemic — it revealed and intensified it <Citation id="5" index={5} source="Journal of Applied Psychology" year="2021" tier={1} />:
+          The COVID-19 pandemic didn't create the loneliness epidemic --- it revealed and intensified it <Citation id="5" index={5} source="Journal of Applied Psychology" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Lockdowns and social distancing disrupted already-fragile social networks</li>
@@ -301,7 +301,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           <li>Loss of life severed irreplaceable connections</li>
         </ul>
         <p className="mb-6">
-          For many, the pandemic was the first time they realized how socially isolated they had become — the busyness and distraction of pre-pandemic life had masked an underlying disconnection.
+          For many, the pandemic was the first time they realized how socially isolated they had become --- the busyness and distraction of pre-pandemic life had masked an underlying disconnection.
         </p>
 
         <h2 id="generational-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -336,14 +336,14 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           Understanding the epidemic as a structural problem, not a personal failure, is liberating:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>It's not your fault</strong> — You're navigating a world that systematically undermines connection</li>
-          <li><strong>Individual solutions aren't enough</strong> — We need collective action to rebuild social infrastructure</li>
-          <li><strong>You can still take action</strong> — Small choices (joining groups, building local ties, prioritizing in-person time) matter</li>
-          <li><strong>Advocacy matters</strong> — Support policies that promote walkable neighborhoods, community spaces, and pro-connection workplaces</li>
+          <li><strong>It's not your fault</strong> --- You're navigating a world that systematically undermines connection</li>
+          <li><strong>Individual solutions aren't enough</strong> --- We need collective action to rebuild social infrastructure</li>
+          <li><strong>You can still take action</strong> --- Small choices (joining groups, building local ties, prioritizing in-person time) matter</li>
+          <li><strong>Advocacy matters</strong> --- Support policies that promote walkable neighborhoods, community spaces, and pro-connection workplaces</li>
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>The loneliness epidemic is a public health crisis that requires public health solutions — policy change, investment in community infrastructure, and cultural shifts that re-prioritize connection.</p>
+          <p>The loneliness epidemic is a public health crisis that requires public health solutions --- policy change, investment in community infrastructure, and cultural shifts that re-prioritize connection.</p>
         </ArticleCallout>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -436,7 +436,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're at a party, surrounded by people. Laughter fills the room. You're having conversations. And yet, you feel profoundly alone. This paradox — feeling lonely in a crowd — reveals a critical truth about loneliness.
+            You're at a party, surrounded by people. Laughter fills the room. You're having conversations. And yet, you feel profoundly alone. This paradox --- feeling lonely in a crowd --- reveals a critical truth about loneliness.
           </p>
           <p className="mb-6">
             Loneliness is not the same as being physically isolated. You can be objectively surrounded by people and still feel desperately lonely. And you can be physically alone without feeling lonely at all <Citation id="1" index={1} source="Trends in Cognitive Sciences" year="2009" tier={1} />.
@@ -517,7 +517,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    If you can't be yourself — if you have to mask your true thoughts, feelings, or identity — connection feels hollow. You're surrounded by people, but your real self remains hidden and alone.
+                    If you can't be yourself --- if you have to mask your true thoughts, feelings, or identity --- connection feels hollow. You're surrounded by people, but your real self remains hidden and alone.
                   </p>
                   <p className="mb-2"><strong>Common in:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
@@ -650,8 +650,8 @@ export const scienceOfLonelinessArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Some people experienced true social isolation (living alone, no in-person contact) and felt devastatingly lonely</li>
-          <li>Others experienced the same isolation but thrived — they had high-quality virtual connections and used solitude productively</li>
-          <li>Still others lived with family but felt profoundly lonely — trapped in low-quality or conflictual relationships</li>
+          <li>Others experienced the same isolation but thrived --- they had high-quality virtual connections and used solitude productively</li>
+          <li>Still others lived with family but felt profoundly lonely --- trapped in low-quality or conflictual relationships</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -829,7 +829,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Loneliness doesn't just feel bad — it activates specific biological pathways that weaken your immune system, fragment your sleep, and accelerate aging. The body treats social disconnection as a threat, triggering physiological changes designed to protect you in the short term but harm you over time.
+            Loneliness doesn't just feel bad --- it activates specific biological pathways that weaken your immune system, fragment your sleep, and accelerate aging. The body treats social disconnection as a threat, triggering physiological changes designed to protect you in the short term but harm you over time.
           </p>
           <p className="mb-6">
             Understanding the biological mechanisms linking loneliness to poor health reveals why connection is not a luxury but a medical necessity <Citation id="1" index={1} source="Immunity & Ageing" year="2015" tier={1} />.
@@ -868,7 +868,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Loneliness reduces the activity of natural killer (NK) cells — white blood cells that destroy virus-infected cells and cancer cells <Citation id="1" index={1} source="Immunity & Ageing" year="2015" tier={1} />. This means:
+                    Loneliness reduces the activity of natural killer (NK) cells --- white blood cells that destroy virus-infected cells and cancer cells <Citation id="1" index={1} source="Immunity & Ageing" year="2015" tier={1} />. This means:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
                     <li>Increased susceptibility to viral infections (colds, flu, herpes reactivation)</li>
@@ -901,15 +901,15 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    While loneliness weakens some immune functions, it paradoxically increases others — specifically, chronic low-grade inflammation <Citation id="3" index={3} source="Proceedings of the National Academy of Sciences" year="2013" tier={1} />.
+                    While loneliness weakens some immune functions, it paradoxically increases others --- specifically, chronic low-grade inflammation <Citation id="3" index={3} source="Proceedings of the National Academy of Sciences" year="2013" tier={1} />.
                   </p>
                   <p className="mb-4">
                     Lonely individuals have elevated levels of pro-inflammatory markers like:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
-                    <li><strong>C-reactive protein (CRP)</strong> — a marker of systemic inflammation</li>
-                    <li><strong>Interleukin-6 (IL-6)</strong> — a cytokine linked to cardiovascular disease</li>
-                    <li><strong>Fibrinogen</strong> — a clotting factor that increases stroke risk</li>
+                    <li><strong>C-reactive protein (CRP)</strong> --- a marker of systemic inflammation</li>
+                    <li><strong>Interleukin-6 (IL-6)</strong> --- a cytokine linked to cardiovascular disease</li>
+                    <li><strong>Fibrinogen</strong> --- a clotting factor that increases stroke risk</li>
                   </ul>
                   <p>
                     Chronic inflammation is a major driver of cardiovascular disease, diabetes, Alzheimer's disease, arthritis, and cancer. The inflammatory profile seen in lonely individuals resembles that of people with chronic illnesses.
@@ -947,10 +947,10 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           <strong>Why this matters:</strong> Chronic elevation of stress hormones has cascading effects <Citation id="9" index={9} source="Annals of Behavioral Medicine" year="2007" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Cardiovascular</strong> — High cortisol raises blood pressure and promotes atherosclerosis</li>
-          <li><strong>Metabolic</strong> — Cortisol increases insulin resistance and abdominal fat storage</li>
-          <li><strong>Cognitive</strong> — Prolonged cortisol exposure damages the hippocampus, impairing memory</li>
-          <li><strong>Immune</strong> — Chronic cortisol suppresses immune function and increases inflammation</li>
+          <li><strong>Cardiovascular</strong> --- High cortisol raises blood pressure and promotes atherosclerosis</li>
+          <li><strong>Metabolic</strong> --- Cortisol increases insulin resistance and abdominal fat storage</li>
+          <li><strong>Cognitive</strong> --- Prolonged cortisol exposure damages the hippocampus, impairing memory</li>
+          <li><strong>Immune</strong> --- Chronic cortisol suppresses immune function and increases inflammation</li>
         </ul>
 
         <h2 id="sleep-disruption" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -979,21 +979,21 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           Polysomnography (sleep lab studies) reveal that loneliness alters the structure of sleep <Citation id="7" index={7} source="Sleep" year="2016" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Reduced REM sleep</strong> — Less time in the dream stage critical for emotional processing</li>
-          <li><strong>Increased sleep fragmentation</strong> — More micro-awakenings (brief arousals that fragment sleep even if not consciously remembered)</li>
-          <li><strong>Decreased slow-wave sleep</strong> — Less time in deep, restorative sleep stages</li>
-          <li><strong>Increased sleep latency</strong> — Takes longer to fall asleep initially</li>
+          <li><strong>Reduced REM sleep</strong> --- Less time in the dream stage critical for emotional processing</li>
+          <li><strong>Increased sleep fragmentation</strong> --- More micro-awakenings (brief arousals that fragment sleep even if not consciously remembered)</li>
+          <li><strong>Decreased slow-wave sleep</strong> --- Less time in deep, restorative sleep stages</li>
+          <li><strong>Increased sleep latency</strong> --- Takes longer to fall asleep initially</li>
         </ul>
 
         <ArticleCallout variant="did-you-know">
-          <p>Interestingly, lonely people often sleep the same number of hours as non-lonely people. The problem isn't sleep duration — it's sleep quality. Their sleep is lighter, more fragmented, and less restorative.</p>
+          <p>Interestingly, lonely people often sleep the same number of hours as non-lonely people. The problem isn't sleep duration --- it's sleep quality. Their sleep is lighter, more fragmented, and less restorative.</p>
         </ArticleCallout>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           Why Loneliness Fragments Sleep
         </h3>
         <p className="mb-6">
-          The evolutionary explanation: In our ancestral past, being alone meant vulnerability to predation. The brain evolved to maintain heightened vigilance during sleep when socially isolated — keeping you in lighter sleep stages to detect threats.
+          The evolutionary explanation: In our ancestral past, being alone meant vulnerability to predation. The brain evolved to maintain heightened vigilance during sleep when socially isolated --- keeping you in lighter sleep stages to detect threats.
         </p>
         <p className="mb-6">
           In modern life, this protective mechanism backfires. There's no actual physical danger, but your brain still treats social isolation as a threat, preventing deep, restorative sleep.
@@ -1071,7 +1071,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           <li>Have lower pain tolerance in experimental settings</li>
         </ul>
         <p className="mb-6">
-          This may explain why chronic pain conditions are more common among socially isolated individuals. The brain's pain and social systems are deeply interconnected — social pain and physical pain share neural circuitry.
+          This may explain why chronic pain conditions are more common among socially isolated individuals. The brain's pain and social systems are deeply interconnected --- social pain and physical pain share neural circuitry.
         </p>
 
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1141,7 +1141,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
     id: catId(9),
     slug: 'evolutionary-roots-of-loneliness-why-social-pain-exists',
     title: 'The Evolutionary Roots of Loneliness: Why Social Pain Exists',
-    description: "Loneliness is not a design flaw — it's an evolved signal that kept our ancestors alive. Understand the evolutionary psychology of social pain.",
+    description: "Loneliness is not a design flaw --- it's an evolved signal that kept our ancestors alive. Understand the evolutionary psychology of social pain.",
     image: '/images/articles/cat15/cover-009.svg',
     category: CATEGORY_LONELINESS_CONNECTION,
     readTime: 8,
@@ -1222,7 +1222,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
             Why does loneliness hurt? Why does social rejection activate the same brain regions as physical injury? The answer lies deep in our evolutionary past, when being separated from the group meant almost certain death.
           </p>
           <p className="mb-6">
-            Loneliness is not a flaw or weakness — it's a survival mechanism as fundamental as hunger or thirst <Citation id="1" index={1} source="Cognition and Emotion" year="2018" tier={1} />. Understanding the evolutionary origins of social pain helps explain why it's so powerful and why ignoring it is so dangerous.
+            Loneliness is not a flaw or weakness --- it's a survival mechanism as fundamental as hunger or thirst <Citation id="1" index={1} source="Cognition and Emotion" year="2018" tier={1} />. Understanding the evolutionary origins of social pain helps explain why it's so powerful and why ignoring it is so dangerous.
           </p>
         </div>
 
@@ -1234,14 +1234,14 @@ export const scienceOfLonelinessArticlesB: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Loneliness evolved as an aversive signal — like hunger or pain — that motivates behaviors essential for survival. Just as hunger drives you to seek food, loneliness drives you to seek social connection.</p>
+          <p>Loneliness evolved as an aversive signal --- like hunger or pain --- that motivates behaviors essential for survival. Just as hunger drives you to seek food, loneliness drives you to seek social connection.</p>
         </ArticleCallout>
 
         <h2 id="why-humans-social" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Humans Are Obligate Social Species
         </h2>
         <p className="mb-6">
-          Unlike many mammals that can survive alone, humans are <strong>obligate social species</strong> — we cannot survive and reproduce successfully in isolation <Citation id="3" index={3} source="Philosophical Transactions of the Royal Society B" year="2009" tier={1} />:
+          Unlike many mammals that can survive alone, humans are <strong>obligate social species</strong> --- we cannot survive and reproduce successfully in isolation <Citation id="3" index={3} source="Philosophical Transactions of the Royal Society B" year="2009" tier={1} />:
         </p>
 
         <ArticleAccordion
@@ -1259,9 +1259,9 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                     An isolated human on the African savanna faced near-certain death from predators (lions, leopards, hyenas). Group living provided:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Vigilance — more eyes watching for danger</li>
-                    <li>Deterrence — predators avoid large groups</li>
-                    <li>Coordinated defense — group members could fight back together</li>
+                    <li>Vigilance --- more eyes watching for danger</li>
+                    <li>Deterrence --- predators avoid large groups</li>
+                    <li>Coordinated defense --- group members could fight back together</li>
                   </ul>
                 </div>
               ),
@@ -1275,9 +1275,9 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                     Hunting large game, gathering distributed food sources, and defending territory all required cooperation:
                   </p>
                   <ul className="list-disc pl-5 space-y-2 mb-4">
-                    <li><strong>Cooperative hunting</strong> — Tracking and killing prey larger than any individual could manage</li>
-                    <li><strong>Food sharing</strong> — Distributing resources to buffer individual failure</li>
-                    <li><strong>Division of labor</strong> — Different group members specializing in different tasks</li>
+                    <li><strong>Cooperative hunting</strong> --- Tracking and killing prey larger than any individual could manage</li>
+                    <li><strong>Food sharing</strong> --- Distributing resources to buffer individual failure</li>
+                    <li><strong>Division of labor</strong> --- Different group members specializing in different tasks</li>
                   </ul>
                   <p>
                     A lone human could not reliably feed themselves. Groups could.
@@ -1294,7 +1294,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                     Human infants are born extremely helpless and dependent. Unlike many mammals, human children require years of intensive care before they can survive independently.
                   </p>
                   <p className="mb-4">
-                    This created evolutionary pressure for <strong>cooperative breeding</strong> <Citation id="6" index={6} source="Annual Review of Anthropology" year="2007" tier={1} /> — group members beyond biological parents helping raise children:
+                    This created evolutionary pressure for <strong>cooperative breeding</strong> <Citation id="6" index={6} source="Annual Review of Anthropology" year="2007" tier={1} /> --- group members beyond biological parents helping raise children:
                   </p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Grandparents, aunts, uncles, and other kin providing care</li>
@@ -1310,7 +1310,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Human survival depended on cultural knowledge — how to make tools, which plants are edible, where water sources are located. This knowledge was transmitted socially.
+                    Human survival depended on cultural knowledge --- how to make tools, which plants are edible, where water sources are located. This knowledge was transmitted socially.
                   </p>
                   <p>
                     Without the group, you lost access to cumulative cultural knowledge built over generations.
@@ -1341,7 +1341,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          In one famous study, participants played a virtual ball-tossing game while in an fMRI scanner <Citation id="5" index={5} source="Science" year="2003" tier={1} />. When the other "players" (actually computer programs) excluded the participant, brain regions associated with physical pain lit up — the same regions that activate when you stub your toe or burn your hand.
+          In one famous study, participants played a virtual ball-tossing game while in an fMRI scanner <Citation id="5" index={5} source="Science" year="2003" tier={1} />. When the other "players" (actually computer programs) excluded the participant, brain regions associated with physical pain lit up --- the same regions that activate when you stub your toe or burn your hand.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -1363,7 +1363,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    When you're lonely, you become hypervigilant to social threats — criticism, rejection, signs that you're not valued by the group.
+                    When you're lonely, you become hypervigilant to social threats --- criticism, rejection, signs that you're not valued by the group.
                   </p>
                   <p>
                     <strong>Why adaptive:</strong> If you're at risk of being excluded from the group, detecting subtle social cues (who's angry at you, who's forming alliances) was critical for repairing relationships before permanent exclusion.
@@ -1379,7 +1379,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                     Lonely individuals interpret ambiguous social cues more negatively. A neutral facial expression looks unfriendly. An unclear text feels like rejection.
                   </p>
                   <p>
-                    <strong>Why adaptive:</strong> When socially vulnerable, it's safer to err on the side of caution — treat potential threats as real until proven otherwise.
+                    <strong>Why adaptive:</strong> When socially vulnerable, it's safer to err on the side of caution --- treat potential threats as real until proven otherwise.
                   </p>
                 </div>
               ),
@@ -1402,7 +1402,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Loneliness can lead to withdrawal and reduced activity — a state that conserves energy when you lack group support.
+                    Loneliness can lead to withdrawal and reduced activity --- a state that conserves energy when you lack group support.
                   </p>
                   <p>
                     <strong>Why adaptive:</strong> If you can't rely on group protection, taking fewer risks and conserving resources might improve survival odds until reconnection is possible.
@@ -1448,7 +1448,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The defensive, hypervigilant mindset that loneliness triggers — once adaptive — now creates a vicious cycle:
+          The defensive, hypervigilant mindset that loneliness triggers --- once adaptive --- now creates a vicious cycle:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>You feel lonely</li>
@@ -1459,7 +1459,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
         </ol>
 
         <ArticleCallout variant="warning">
-          <p>Loneliness evolved to be temporary and motivating. But in modern environments where social structures are weaker, it can become chronic and self-perpetuating — an alarm that never turns off.</p>
+          <p>Loneliness evolved to be temporary and motivating. But in modern environments where social structures are weaker, it can become chronic and self-perpetuating --- an alarm that never turns off.</p>
         </ArticleCallout>
 
         <h2 id="study-details" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1510,7 +1510,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Experiments show that lonely individuals display the predicted behaviors: hypervigilance, threat bias, and motivation to reconnect — supporting the adaptive theory.
+                    Experiments show that lonely individuals display the predicted behaviors: hypervigilance, threat bias, and motivation to reconnect --- supporting the adaptive theory.
                   </p>
                 </div>
               ),
@@ -1525,11 +1525,11 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           Understanding loneliness as an evolved signal changes how you relate to it:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>It's not your fault</strong> — Loneliness is a biological response, not a character flaw</li>
-          <li><strong>The pain is real</strong> — Social pain activates the same neural circuits as physical pain. It's not 'just in your head"</li>
-          <li><strong>The defensive responses make sense</strong> — Hypervigilance and threat bias are adaptive responses to isolation (even if they backfire today)</li>
-          <li><strong>Connection is a biological need</strong> — Not a luxury or personality preference, but a fundamental requirement for health</li>
-          <li><strong>Breaking the cycle requires awareness</strong> — Recognizing when your brain is in threat mode can help you override maladaptive responses</li>
+          <li><strong>It's not your fault</strong> --- Loneliness is a biological response, not a character flaw</li>
+          <li><strong>The pain is real</strong> --- Social pain activates the same neural circuits as physical pain. It's not 'just in your head"</li>
+          <li><strong>The defensive responses make sense</strong> --- Hypervigilance and threat bias are adaptive responses to isolation (even if they backfire today)</li>
+          <li><strong>Connection is a biological need</strong> --- Not a luxury or personality preference, but a fundamental requirement for health</li>
+          <li><strong>Breaking the cycle requires awareness</strong> --- Recognizing when your brain is in threat mode can help you override maladaptive responses</li>
         </ul>
 
         <h2 id="limitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1635,7 +1635,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            How do you measure something as subjective as loneliness? For over 40 years, researchers have relied on the UCLA Loneliness Scale — a simple, validated questionnaire that has become the gold standard for assessing perceived social isolation.
+            How do you measure something as subjective as loneliness? For over 40 years, researchers have relied on the UCLA Loneliness Scale --- a simple, validated questionnaire that has become the gold standard for assessing perceived social isolation.
           </p>
           <p className="mb-6">
             Understanding your loneliness score can help you recognize patterns, track changes over time, and decide whether to seek support <Citation id="1" index={1} source="Journal of Personality Assessment" year="1996" tier={1} />.
@@ -1649,7 +1649,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           Developed at the University of California, Los Angeles in 1978 and revised in 1996, the UCLA Loneliness Scale (Version 3) is a 20-item questionnaire designed to measure subjective feelings of loneliness and social isolation <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="1980" tier={1} />.
         </p>
         <p className="mb-6">
-          Unlike objective measures (how many friends you have, how often you see people), the UCLA scale captures your <strong>perceived</strong> adequacy of social relationships — the gap between the connection you want and the connection you have.
+          Unlike objective measures (how many friends you have, how often you see people), the UCLA scale captures your <strong>perceived</strong> adequacy of social relationships --- the gap between the connection you want and the connection you have.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1778,7 +1778,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                   </p>
                   <p className="mb-2"><strong>What to do:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Prioritize building social connections — this is a health issue, not a luxury</li>
+                    <li>Prioritize building social connections --- this is a health issue, not a luxury</li>
                     <li>Consider joining structured groups (classes, clubs, volunteer organizations)</li>
                     <li>Explore therapy to address barriers to connection (social anxiety, trust issues, etc.)</li>
                     <li>Monitor for symptoms of depression, which often co-occurs with loneliness</li>
@@ -1797,7 +1797,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
                   <p className="mb-2"><strong>What to do:</strong></p>
                   <ul className="list-disc pl-5 space-y-2">
                     <li>Seek professional support from a therapist or counselor</li>
-                    <li>Talk to your primary care doctor — loneliness is a health risk factor they should know about</li>
+                    <li>Talk to your primary care doctor --- loneliness is a health risk factor they should know about</li>
                     <li>Consider support groups for people experiencing loneliness</li>
                     <li>Break the cycle with small steps: even brief positive interactions help</li>
                     <li>If experiencing suicidal thoughts, call 988 (Suicide & Crisis Lifeline) immediately</li>
@@ -1815,11 +1815,11 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           The UCLA Loneliness Scale has been validated across hundreds of studies and thousands of participants <Citation id="3" index={3} source="Perspectives on Psychological Science" year="2020" tier={1} />. It demonstrates:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>High internal consistency</strong> — All items measure the same underlying construct (loneliness)</li>
-          <li><strong>Test-retest reliability</strong> — Scores are stable over time in the absence of real change</li>
-          <li><strong>Construct validity</strong> — Scores correlate with related measures (depression, social support, life satisfaction)</li>
-          <li><strong>Predictive validity</strong> — Scores predict future health outcomes (cardiovascular disease, cognitive decline, mortality)</li>
-          <li><strong>Cross-cultural validity</strong> — The scale works across different cultures and languages</li>
+          <li><strong>High internal consistency</strong> --- All items measure the same underlying construct (loneliness)</li>
+          <li><strong>Test-retest reliability</strong> --- Scores are stable over time in the absence of real change</li>
+          <li><strong>Construct validity</strong> --- Scores correlate with related measures (depression, social support, life satisfaction)</li>
+          <li><strong>Predictive validity</strong> --- Scores predict future health outcomes (cardiovascular disease, cognitive decline, mortality)</li>
+          <li><strong>Cross-cultural validity</strong> --- The scale works across different cultures and languages</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -1833,10 +1833,10 @@ export const scienceOfLonelinessArticlesB: Article[] = [
           While highly reliable, the UCLA scale has some limitations:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Self-report bias</strong> — People may underreport loneliness due to stigma</li>
-          <li><strong>Snapshot in time</strong> — One score doesn't capture fluctuations in loneliness over days or weeks</li>
-          <li><strong>Doesn't identify causes</strong> — A high score tells you you're lonely, but not why or how to fix it</li>
-          <li><strong>Cultural differences</strong> — Some cultures may interpret or respond to items differently</li>
+          <li><strong>Self-report bias</strong> --- People may underreport loneliness due to stigma</li>
+          <li><strong>Snapshot in time</strong> --- One score doesn't capture fluctuations in loneliness over days or weeks</li>
+          <li><strong>Doesn't identify causes</strong> --- A high score tells you you're lonely, but not why or how to fix it</li>
+          <li><strong>Cultural differences</strong> --- Some cultures may interpret or respond to items differently</li>
         </ul>
 
         <h2 id="tracking-over-time" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1857,7 +1857,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
               title: 'Implement changes',
               description: (
                 <p>
-                  Make intentional efforts to build connection — join groups, deepen friendships, address barriers like social anxiety.
+                  Make intentional efforts to build connection --- join groups, deepen friendships, address barriers like social anxiety.
                 </p>
               ),
             },
@@ -1893,7 +1893,7 @@ export const scienceOfLonelinessArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Average loneliness scores have increased by 3-5 points since the 1980s</li>
           <li>Young adults (18-25) score highest, with average scores in the high moderate to high range</li>
-          <li>Older adults (65+) have lower average scores than commonly assumed — social isolation (objective) is higher, but loneliness (subjective) is lower</li>
+          <li>Older adults (65+) have lower average scores than commonly assumed --- social isolation (objective) is higher, but loneliness (subjective) is lower</li>
           <li>Scores spiked during the COVID-19 pandemic across all age groups</li>
         </ul>
 

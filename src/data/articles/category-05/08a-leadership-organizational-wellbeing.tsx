@@ -97,7 +97,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
             You're in a tense meeting. A team member challenges your decision. You feel anger rising. What you do in the next ten seconds will shape your team's psychological safety, trust, and performance more than any strategy document or motivational speech.
           </p>
           <p className="mb-6">
-            Research on leadership effectiveness consistently shows that emotional intelligence—particularly leaders" ability to recognize and manage their own emotions—is a stronger predictor of success than IQ, technical expertise, or years of experience <Citation id="1" index={1} source="The Leadership Quarterly" year="2023" tier={1} />. Studies reveal that leader emotional regulation directly impacts team performance, wellbeing, and organizational culture <Citation id="2" index={2} source="Journal of Applied Psychology" year="2023" tier={1} />.
+            Research on leadership effectiveness consistently shows that emotional intelligence---particularly leaders" ability to recognize and manage their own emotions---is a stronger predictor of success than IQ, technical expertise, or years of experience <Citation id="1" index={1} source="The Leadership Quarterly" year="2023" tier={1} />. Studies reveal that leader emotional regulation directly impacts team performance, wellbeing, and organizational culture <Citation id="2" index={2} source="Journal of Applied Psychology" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
             The best leaders don't suppress emotions or pretend not to feel them. Instead, they develop sophisticated awareness and regulation skills that allow them to respond thoughtfully rather than react impulsively. This self-management creates the foundation for managing others effectively.
@@ -108,7 +108,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Why Leader Emotions Matter
         </h2>
         <p className="mb-6">
-          Leaders" emotional states don't stay private—research on emotional contagion shows that teams unconsciously mirror their leaders" emotions <Citation id="4" index={4} source="Organizational Behavior and Human Decision Processes" year="2023" tier={1} />. A chronically stressed leader creates a stressed team. An anxious leader breeds team anxiety. A regulated, calm leader fosters team stability.
+          Leaders" emotional states don't stay private---research on emotional contagion shows that teams unconsciously mirror their leaders" emotions <Citation id="4" index={4} source="Organizational Behavior and Human Decision Processes" year="2023" tier={1} />. A chronically stressed leader creates a stressed team. An anxious leader breeds team anxiety. A regulated, calm leader fosters team stability.
         </p>
 
         <StatCard
@@ -121,7 +121,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Additionally, leader stress impairs decision quality. Studies show that unmanaged emotional distress reduces cognitive flexibility, increases biased thinking, and leads to more impulsive, reactive choices <Citation id="7" index={7} source="Journal of Organizational Behavior" year="2023" tier={1} />. Managing your emotions isn't soft skill—it's prerequisite for good judgment.
+          Additionally, leader stress impairs decision quality. Studies show that unmanaged emotional distress reduces cognitive flexibility, increases biased thinking, and leads to more impulsive, reactive choices <Citation id="7" index={7} source="Journal of Organizational Behavior" year="2023" tier={1} />. Managing your emotions isn't soft skill---it's prerequisite for good judgment.
         </p>
 
         <h2 id="four-components" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -146,7 +146,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Building Self-Awareness as a Leader
         </h2>
         <p className="mb-6">
-          Self-awareness—accurate understanding of your emotional patterns, triggers, strengths, and limitations—is the foundation of leadership development <Citation id="3" index={3} source="Academy of Management Learning & Education" year="2023" tier={1} />. Without it, you're flying blind.
+          Self-awareness---accurate understanding of your emotional patterns, triggers, strengths, and limitations---is the foundation of leadership development <Citation id="3" index={3} source="Academy of Management Learning & Education" year="2023" tier={1} />. Without it, you're flying blind.
         </p>
 
         <ProgressSteps
@@ -199,7 +199,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Important finding: emotional suppression—pretending not to feel anything—is the least effective strategy. It depletes cognitive resources, reduces authenticity, and prevents others from reading your emotional state (creating uncertainty and anxiety in team). Better to acknowledge emotion while choosing thoughtful response.
+          Important finding: emotional suppression---pretending not to feel anything---is the least effective strategy. It depletes cognitive resources, reduces authenticity, and prevents others from reading your emotional state (creating uncertainty and anxiety in team). Better to acknowledge emotion while choosing thoughtful response.
         </p>
 
         <h2 id="mindfulness-for-leaders" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -217,10 +217,10 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Vulnerability as Leadership Strength
         </h2>
         <p className="mb-6">
-          Contrary to traditional "strong leader" myths, research shows that appropriate vulnerability—sharing struggle, admitting uncertainty, acknowledging mistakes—builds team trust and psychological safety <Citation id="6" index={6} source="Harvard Business Review" year="2023" tier={5} />.
+          Contrary to traditional "strong leader" myths, research shows that appropriate vulnerability---sharing struggle, admitting uncertainty, acknowledging mistakes---builds team trust and psychological safety <Citation id="6" index={6} source="Harvard Business Review" year="2023" tier={5} />.
         </p>
         <p className="mb-6">
-          The key is "appropriate"—leaders who overshare or lean on team for emotional support create different problems. Effective vulnerability means: acknowledging human challenges without making team responsible for managing your emotions, modeling that imperfection is okay, and creating permission for others to be authentic.
+          The key is "appropriate"---leaders who overshare or lean on team for emotional support create different problems. Effective vulnerability means: acknowledging human challenges without making team responsible for managing your emotions, modeling that imperfection is okay, and creating permission for others to be authentic.
         </p>
 
         <QuoteBlock
@@ -237,7 +237,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Leaders face tension between authentic emotion and professional demeanor. Research distinguishes surface acting (faking emotions you don't feel) from deep acting (genuinely cultivating appropriate emotional states) <Citation id="8" index={8} source="Personnel Psychology" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
-          Surface acting depletes energy and reduces perceived authenticity. Deep acting—actually working to feel calm, curious, or hopeful rather than just pretending—is sustainable and builds genuine connection. This requires emotion regulation skills, not emotional suppression.
+          Surface acting depletes energy and reduces perceived authenticity. Deep acting---actually working to feel calm, curious, or hopeful rather than just pretending---is sustainable and builds genuine connection. This requires emotion regulation skills, not emotional suppression.
         </p>
 
         <h2 id="common-traps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -255,14 +255,14 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           This Week: Three Leadership EI Actions
         </h2>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Start daily reflection</strong>—5 minutes reviewing your emotional patterns and their impacts</li>
-          <li><strong>Identify one trigger</strong>—what situation reliably produces strong emotional reaction in you?</li>
-          <li><strong>Practice pause</strong>—in next difficult conversation, take three conscious breaths before responding</li>
-          <li><strong>Ask for feedback</strong>—from one trusted person about your emotional patterns as leader</li>
+          <li><strong>Start daily reflection</strong>---5 minutes reviewing your emotional patterns and their impacts</li>
+          <li><strong>Identify one trigger</strong>---what situation reliably produces strong emotional reaction in you?</li>
+          <li><strong>Practice pause</strong>---in next difficult conversation, take three conscious breaths before responding</li>
+          <li><strong>Ask for feedback</strong>---from one trusted person about your emotional patterns as leader</li>
         </ul>
 
         <p className="mb-6">
-          Developing emotional intelligence isn't quick fix—it's ongoing practice. But the investment pays dividends in every leadership interaction, decision, and relationship you navigate.
+          Developing emotional intelligence isn't quick fix---it's ongoing practice. But the investment pays dividends in every leadership interaction, decision, and relationship you navigate.
         </p>
       </>
     ),
@@ -349,13 +349,13 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            One of your team members seems different lately—withdrawn, missing deadlines, emotional in meetings. You want to help but you're not a therapist. What do you say? What's your role? Where's the line between supportive manager and inappropriate involvement?
+            One of your team members seems different lately---withdrawn, missing deadlines, emotional in meetings. You want to help but you're not a therapist. What do you say? What's your role? Where's the line between supportive manager and inappropriate involvement?
           </p>
           <p className="mb-6">
-            Research shows that managers significantly impact employee mental health—for better or worse <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Supportive management reduces mental health problems by 40%, while toxic management increases risk by similar magnitude. Yet most managers receive no training in mental health support, leaving them uncertain how to help.
+            Research shows that managers significantly impact employee mental health---for better or worse <Citation id="1" index={1} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Supportive management reduces mental health problems by 40%, while toxic management increases risk by similar magnitude. Yet most managers receive no training in mental health support, leaving them uncertain how to help.
           </p>
           <p className="mb-6">
-            This article provides evidence-based guidance for leaders who care about team wellbeing but don't want to overstep boundaries. The goal isn't to become therapist—it's to create supportive environment, recognize when someone is struggling, and connect them with appropriate resources.
+            This article provides evidence-based guidance for leaders who care about team wellbeing but don't want to overstep boundaries. The goal isn't to become therapist---it's to create supportive environment, recognize when someone is struggling, and connect them with appropriate resources.
           </p>
         </div>
 
@@ -383,7 +383,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Decline in work quality or missed deadlines (when previously reliable)</li>
-          <li>Withdrawal from team—skipping meetings, less communication</li>
+          <li>Withdrawal from team---skipping meetings, less communication</li>
           <li>Changes in appearance or energy level</li>
           <li>Emotional volatility or unusual emotional reactions</li>
           <li>Increased absences or physical complaints</li>
@@ -481,7 +481,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Boundary Warning Signs">
           <ul className="list-disc pl-6 space-y-2">
-            <li>Employee begins treating you as therapist—lengthy emotional downloads</li>
+            <li>Employee begins treating you as therapist---lengthy emotional downloads</li>
             <li>You feel responsible for "fixing" their mental health</li>
             <li>Their struggles are affecting your mental health</li>
             <li>You're making exceptions you wouldn't for others</li>
@@ -500,11 +500,11 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           If employee takes mental health leave, return-to-work support significantly impacts long-term outcomes <Citation id="6" index={6} source="Journal of Occupational Rehabilitation" year="2023" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Have check-in conversation before return—discuss concerns, accommodations</li>
+          <li>Have check-in conversation before return---discuss concerns, accommodations</li>
           <li>Graduated return when possible (part-time increasing to full-time)</li>
-          <li>Don't make big deal publicly—normal welcome back</li>
+          <li>Don't make big deal publicly---normal welcome back</li>
           <li>Regular check-ins in first weeks without being intrusive</li>
-          <li>Be prepared for non-linear recovery—setbacks are normal</li>
+          <li>Be prepared for non-linear recovery---setbacks are normal</li>
         </ul>
 
         <h2 id="manager-wellbeing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -514,10 +514,10 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Supporting others" mental health can take toll on managers. Research shows manager burnout rates are higher than individual contributors <Citation id="7" index={7} source="Personnel Psychology" year="2023" tier={1} />. Remember:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>You cannot pour from empty cup—prioritize your own wellbeing</li>
+          <li>You cannot pour from empty cup---prioritize your own wellbeing</li>
           <li>Use your own EAP or therapy if carrying team stress</li>
           <li>Debrief with HR or other managers (maintaining confidentiality)</li>
-          <li>Set boundaries—being supportive doesn't mean being always available</li>
+          <li>Set boundaries---being supportive doesn't mean being always available</li>
           <li>Recognize when situation is beyond your capacity and escalate appropriately</li>
         </ul>
 
@@ -525,10 +525,10 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           This Week: Building Mental Health Support Skills
         </h2>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Learn your resources</strong>—find out exactly what EAP, HR, and benefits offer</li>
-          <li><strong>Practice one conversation</strong>—check in with team member who seems off</li>
-          <li><strong>Consider training</strong>—many organizations offer Mental Health First Aid for managers</li>
-          <li><strong>Normalize discussion</strong>—mention mental health resources in team meeting</li>
+          <li><strong>Learn your resources</strong>---find out exactly what EAP, HR, and benefits offer</li>
+          <li><strong>Practice one conversation</strong>---check in with team member who seems off</li>
+          <li><strong>Consider training</strong>---many organizations offer Mental Health First Aid for managers</li>
+          <li><strong>Normalize discussion</strong>---mention mental health resources in team meeting</li>
         </ul>
       </>
     ),
@@ -618,7 +618,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
             Your team delivered excellent results last quarter. You celebrated, then immediately piled on more ambitious goals. Now, three months later, your star performer just resigned citing burnout. Two others are showing warning signs. You wonder: Could I have prevented this?
           </p>
           <p className="mb-6">
-            Research unequivocally shows that managers are the most significant factor in team burnout—more than workload, organizational culture, or individual resilience <Citation id="1" index={1} source="Journal of Applied Psychology" year="2023" tier={1} />. Studies reveal that manager behaviors account for 70% of variance in team burnout rates. This is simultaneously sobering and empowering: you have more influence than you might think.
+            Research unequivocally shows that managers are the most significant factor in team burnout---more than workload, organizational culture, or individual resilience <Citation id="1" index={1} source="Journal of Applied Psychology" year="2023" tier={1} />. Studies reveal that manager behaviors account for 70% of variance in team burnout rates. This is simultaneously sobering and empowering: you have more influence than you might think.
           </p>
           <p className="mb-6">
             Burnout-proof leadership doesn't mean eliminating all stress or challenges. It means creating sustainable conditions where high performance doesn't require sacrificing wellbeing. This article provides evidence-based strategies for protecting your team from burnout while maintaining excellence.
@@ -642,7 +642,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          The key is catching these early. By the time someone says "I'm burned out, " prevention window has closed—you're in crisis management mode.
+          The key is catching these early. By the time someone says "I'm burned out, " prevention window has closed---you're in crisis management mode.
         </p>
 
         <h2 id="workload-management" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -676,7 +676,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
             {
               title: 'Regular workload check-ins',
               description: (
-                <p>Ask weekly: "How's your workload feeling?" Create space for honest answers. People won't volunteer overwhelm information—you must ask.</p>
+                <p>Ask weekly: "How's your workload feeling?" Create space for honest answers. People won't volunteer overwhelm information---you must ask.</p>
               ),
             },
           ]}
@@ -706,12 +706,12 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           title="Meaningful vs. Empty Recognition"
           columns={['Approach', 'Example', 'Impact']}
           items={[
-            { feature: 'Generic praise', values: ['Great work everyone', 'Minimal—feels perfunctory'] },
-            { feature: 'Specific appreciation', values: ['Your analysis on X identified issue we missed', 'High—shows you noticed'] },
-            { feature: 'Public-only recognition', values: ['Monthly awards ceremony', 'Moderate—some people uncomfortable'] },
-            { feature: 'Private + public', values: ['One-on-one thanks + team acknowledgment', 'Very high—feels genuine'] },
-            { feature: 'Results-only focus', values: ['You hit the target', 'Moderate—transactional'] },
-            { feature: 'Effort recognition', values: ['I saw how much work that took', 'High—validates struggle'] },
+            { feature: 'Generic praise', values: ['Great work everyone', 'Minimal---feels perfunctory'] },
+            { feature: 'Specific appreciation', values: ['Your analysis on X identified issue we missed', 'High---shows you noticed'] },
+            { feature: 'Public-only recognition', values: ['Monthly awards ceremony', 'Moderate---some people uncomfortable'] },
+            { feature: 'Private + public', values: ['One-on-one thanks + team acknowledgment', 'Very high---feels genuine'] },
+            { feature: 'Results-only focus', values: ['You hit the target', 'Moderate---transactional'] },
+            { feature: 'Effort recognition', values: ['I saw how much work that took', 'High---validates struggle'] },
           ]}
         />
 
@@ -733,7 +733,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           The Power of Role Modeling
         </h2>
         <p className="mb-6">
-          Manager behavior sets team norms more than explicit policies. Studies show that when managers model healthy boundaries, teams follow—regardless of official policies <Citation id="7" index={7} source="Leadership Quarterly" year="2023" tier={1} />.
+          Manager behavior sets team norms more than explicit policies. Studies show that when managers model healthy boundaries, teams follow---regardless of official policies <Citation id="7" index={7} source="Leadership Quarterly" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           What you model:
@@ -775,21 +775,21 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Even with best practices, burnout sometimes occurs. When it does:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Take it seriously</strong>—burnout is not weakness or poor work ethic</li>
-          <li><strong>Reduce workload immediately</strong>—not after current projects finish</li>
-          <li><strong>Offer time off</strong>—sometimes recovery requires actual break</li>
-          <li><strong>Don't guilt-trip</strong>—"We really need you" makes it worse</li>
-          <li><strong>Address systemic causes</strong>—individual burnout often signals team-level problems</li>
+          <li><strong>Take it seriously</strong>---burnout is not weakness or poor work ethic</li>
+          <li><strong>Reduce workload immediately</strong>---not after current projects finish</li>
+          <li><strong>Offer time off</strong>---sometimes recovery requires actual break</li>
+          <li><strong>Don't guilt-trip</strong>---"We really need you" makes it worse</li>
+          <li><strong>Address systemic causes</strong>---individual burnout often signals team-level problems</li>
         </ul>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           This Month: Building Burnout Protection
         </h2>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Assess current workload</strong>—ask each team member to honestly rate their capacity</li>
-          <li><strong>Identify one thing to deprioritize</strong>—what low-value work can wait or stop?</li>
-          <li><strong>Model one boundary</strong>—demonstrate healthy behavior you want team to adopt</li>
-          <li><strong>Give specific recognition</strong>—to each team member this week</li>
+          <li><strong>Assess current workload</strong>---ask each team member to honestly rate their capacity</li>
+          <li><strong>Identify one thing to deprioritize</strong>---what low-value work can wait or stop?</li>
+          <li><strong>Model one boundary</strong>---demonstrate healthy behavior you want team to adopt</li>
+          <li><strong>Give specific recognition</strong>---to each team member this week</li>
         </ul>
       </>
     ),
@@ -798,7 +798,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     id: catId(74),
     slug: 'psychological-safety-workplace-evidence-based-approach',
     title: 'Creating a Psychologically Safe Workplace: An Evidence-Based Approach',
-    description: 'Psychological safety—the belief that you can take risks without punishment—is foundation of high-performing teams. Learn how leaders create environments where people speak up, innovate, and thrive.',
+    description: 'Psychological safety---the belief that you can take risks without punishment---is foundation of high-performing teams. Learn how leaders create environments where people speak up, innovate, and thrive.',
     image: "/images/articles/cat05/cover-074.svg",
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -879,10 +879,10 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
             In one team meeting, someone proposes a risky idea. Everyone stays silent, knowing the leader punishes "bad" suggestions. In another meeting, someone shares the same risky idea. The leader asks curious questions, others build on it, and innovation emerges. Same idea, different outcomes. The difference? Psychological safety.
           </p>
           <p className="mb-6">
-            Psychological safety—the shared belief that the team is safe for interpersonal risk-taking—is the most significant predictor of team effectiveness according to Google's Project Aristotle research and decades of academic study <Citation id="1" index={1} source="Harvard Business School Press" year="2019" tier={5} />. Teams with high psychological safety outperform their peers on innovation, error detection, learning, and overall performance <Citation id="3" index={3} source="Journal of Applied Psychology" year="2023" tier={1} />.
+            Psychological safety---the shared belief that the team is safe for interpersonal risk-taking---is the most significant predictor of team effectiveness according to Google's Project Aristotle research and decades of academic study <Citation id="1" index={1} source="Harvard Business School Press" year="2019" tier={5} />. Teams with high psychological safety outperform their peers on innovation, error detection, learning, and overall performance <Citation id="3" index={3} source="Journal of Applied Psychology" year="2023" tier={1} />.
           </p>
           <p className="mb-6">
-            This article provides evidence-based guidance for leaders to build psychological safety. It's not about being nice or avoiding conflict—it's about creating conditions where people can be candid, take risks, and learn from mistakes without fear of punishment or humiliation.
+            This article provides evidence-based guidance for leaders to build psychological safety. It's not about being nice or avoiding conflict---it's about creating conditions where people can be candid, take risks, and learn from mistakes without fear of punishment or humiliation.
           </p>
         </div>
 
@@ -923,7 +923,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          In healthcare, psychological safety literally saves lives—higher safety predicts better error reporting and patient outcomes <Citation id="2" index={2} source="BMJ Quality & Safety" year="2023" tier={1} />. The principle extends to all industries: when people feel safe speaking up, problems get caught early, innovations emerge, and performance improves.
+          In healthcare, psychological safety literally saves lives---higher safety predicts better error reporting and patient outcomes <Citation id="2" index={2} source="BMJ Quality & Safety" year="2023" tier={1} />. The principle extends to all industries: when people feel safe speaking up, problems get caught early, innovations emerge, and performance improves.
         </p>
 
         <h2 id="leader-behaviors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -957,7 +957,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
             {
               title: 'Respond productively to bad news',
               description: (
-                <p>When someone shares problem or mistake, thank them first. 'I appreciate you telling me' before problem-solving. People watch how leaders react to bad news—one punishing response kills psychological safety for months.</p>
+                <p>When someone shares problem or mistake, thank them first. 'I appreciate you telling me' before problem-solving. People watch how leaders react to bad news---one punishing response kills psychological safety for months.</p>
               ),
             },
             {
@@ -977,20 +977,20 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Explicit norms:</strong> State rules for respectful disagreement and speaking up</li>
-          <li><strong>Multiple channels:</strong> Some people speak up in meetings, others in chat—provide options</li>
+          <li><strong>Multiple channels:</strong> Some people speak up in meetings, others in chat---provide options</li>
           <li><strong>Round-robin input:</strong> Deliberately ask each person's perspective in meetings</li>
           <li><strong>Private check-ins:</strong> One-on-ones to hear concerns people won't raise publicly</li>
-          <li><strong>Acknowledge silence:</strong> "I notice we haven't heard from everyone—what are we missing?"</li>
+          <li><strong>Acknowledge silence:</strong> "I notice we haven't heard from everyone---what are we missing?"</li>
         </ul>
 
         <h2 id="diversity-considerations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Psychological Safety and Diversity
         </h2>
         <p className="mb-6">
-          Research reveals that psychological safety doesn't feel universal—it's experienced differently based on social identity <Citation id="7" index={7} source="Academy of Management Review" year="2023" tier={1} />. Women and racial minorities often perceive less psychological safety than white men in same environment.
+          Research reveals that psychological safety doesn't feel universal---it's experienced differently based on social identity <Citation id="7" index={7} source="Academy of Management Review" year="2023" tier={1} />. Women and racial minorities often perceive less psychological safety than white men in same environment.
         </p>
         <p className="mb-6">
-          This isn't perception problem—it reflects real differences in consequences for speaking up. Women who assert themselves are often labeled "aggressive"; Black professionals who challenge status quo face more pushback than white peers.
+          This isn't perception problem---it reflects real differences in consequences for speaking up. Women who assert themselves are often labeled "aggressive"; Black professionals who challenge status quo face more pushback than white peers.
         </p>
         <p className="mb-6">
           Building inclusive psychological safety requires: explicit discussion of power dynamics, actively seeking input from minoritized voices, addressing microaggressions immediately, and recognizing that what feels "safe" for some may not feel safe for others.
@@ -1025,14 +1025,14 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Start with low-stakes topics before expecting vulnerability on high-stakes issues</li>
-          <li>Model the behaviors you want consistently—not just when convenient</li>
+          <li>Model the behaviors you want consistently---not just when convenient</li>
           <li>Celebrate early examples of people taking risks (speaking up, admitting mistakes)</li>
-          <li>Repair immediately if you react poorly—acknowledge it, apologize, do better</li>
-          <li>Recognize that psychological safety is fragile—maintain it actively</li>
+          <li>Repair immediately if you react poorly---acknowledge it, apologize, do better</li>
+          <li>Recognize that psychological safety is fragile---maintain it actively</li>
         </ul>
 
         <QuoteBlock
-          quote="Psychological safety is not about being nice. It's about giving candid feedback, openly admitting mistakes, and learning from each other—which requires trust that people won't be penalized or humiliated for those behaviors."
+          quote="Psychological safety is not about being nice. It's about giving candid feedback, openly admitting mistakes, and learning from each other---which requires trust that people won't be penalized or humiliated for those behaviors."
           attribution="Dr. Amy Edmondson"
           role="Harvard Business School Professor"
           source="The Fearless Organization, 2019"
@@ -1042,10 +1042,10 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           This Week: First Steps
         </h2>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Assess current state</strong>—honestly evaluate your team's psychological safety</li>
-          <li><strong>Model one vulnerability</strong>—admit uncertainty or mistake publicly</li>
-          <li><strong>Ask one question</strong>—before giving your opinion in next meeting</li>
-          <li><strong>Thank someone</strong>—for sharing bad news or dissenting opinion</li>
+          <li><strong>Assess current state</strong>---honestly evaluate your team's psychological safety</li>
+          <li><strong>Model one vulnerability</strong>---admit uncertainty or mistake publicly</li>
+          <li><strong>Ask one question</strong>---before giving your opinion in next meeting</li>
+          <li><strong>Thank someone</strong>---for sharing bad news or dissenting opinion</li>
         </ul>
       </>
     ),
@@ -1054,7 +1054,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
     id: catId(75),
     slug: 'organizational-culture-matters-more-than-wellness-programs',
     title: 'Why Organizational Culture Matters More Than Any Wellness Program',
-    description: "Yoga classes and meditation apps don't fix toxic workplaces. Research shows that organizational culture—how work actually operates—determines employee wellbeing far more than wellness perks. Learn what actually matters.",
+    description: "Yoga classes and meditation apps don't fix toxic workplaces. Research shows that organizational culture---how work actually operates---determines employee wellbeing far more than wellness perks. Learn what actually matters.",
     image: '/images/articles/cat05/cover-075.svg',
     category: CATEGORY_WORK_PRODUCTIVITY,
     readTime: 7,
@@ -1135,10 +1135,10 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
             Your company announces a new wellness initiative: free meditation app subscriptions, on-site yoga, and mental health days. Meanwhile, you're working 60-hour weeks, your manager emails at midnight expecting responses, and speaking up about workload gets you labeled as "not a team player." The wellness perks feel like band-aids on a broken system.
           </p>
           <p className="mb-6">
-            Research consistently shows that workplace wellness programs have minimal impact on employee health outcomes <Citation id="1" index={1} source="Annual Review of Public Health" year="2023" tier={1} />. A comprehensive review of 46 randomized trials found that wellness programs reduced medical spending and absenteeism by less than 1%—effects indistinguishable from chance. These programs don't fail because wellness doesn't matter—they fail because they address symptoms while ignoring root causes.
+            Research consistently shows that workplace wellness programs have minimal impact on employee health outcomes <Citation id="1" index={1} source="Annual Review of Public Health" year="2023" tier={1} />. A comprehensive review of 46 randomized trials found that wellness programs reduced medical spending and absenteeism by less than 1%---effects indistinguishable from chance. These programs don't fail because wellness doesn't matter---they fail because they address symptoms while ignoring root causes.
           </p>
           <p className="mb-6">
-            Organizational culture—the actual ways work is structured, how people are managed, what behaviors are rewarded—explains 10 times more variance in employee wellbeing than wellness program participation <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. This article explores what actually matters for workplace mental health and why culture trumps perks every time.
+            Organizational culture---the actual ways work is structured, how people are managed, what behaviors are rewarded---explains 10 times more variance in employee wellbeing than wellness program participation <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. This article explores what actually matters for workplace mental health and why culture trumps perks every time.
           </p>
         </div>
 
@@ -1194,7 +1194,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           Performative Wellness Culture
         </h2>
         <p className="mb-6">
-          Research on organizational authenticity reveals "wellness washing"—companies that talk about employee wellbeing while maintaining practices that harm it <Citation id="4" index={4} source="Organization Studies" year="2023" tier={1} />:
+          Research on organizational authenticity reveals "wellness washing"---companies that talk about employee wellbeing while maintaining practices that harm it <Citation id="4" index={4} source="Organization Studies" year="2023" tier={1} />:
         </p>
 
         <ArticleCallout variant="warning" title="Signs of Performative Wellness">
@@ -1208,7 +1208,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          Performative wellness may be worse than no wellness programs—it signals that leadership doesn't understand the actual problems or doesn't care to fix them. Employees see through the disconnect between rhetoric and reality.
+          Performative wellness may be worse than no wellness programs---it signals that leadership doesn't understand the actual problems or doesn't care to fix them. Employees see through the disconnect between rhetoric and reality.
         </p>
 
         <h2 id="sustainable-work-systems" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1262,7 +1262,7 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="You can't meditate your way out of a system designed to burn you out. Organizational culture that promotes wellbeing doesn't ask employees to adapt to unsustainable conditions—it changes the conditions themselves."
+          quote="You can't meditate your way out of a system designed to burn you out. Organizational culture that promotes wellbeing doesn't ask employees to adapt to unsustainable conditions---it changes the conditions themselves."
           attribution="Dr. Jeffrey Pfeffer"
           role="Stanford Professor, Author of Dying for a Paycheck"
           source="Stanford GSB Research"
@@ -1315,18 +1315,18 @@ export const leadershipOrganizationalWellbeingArticles: Article[] = [
           If you're in position to influence organizational culture:
         </p>
         <ul className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Audit actual conditions</strong>—not just employee sentiment but actual workload data, hours worked, time-off usage</li>
-          <li><strong>Fix systemic stressors</strong>—chronic understaffing, poor managers, unclear expectations</li>
-          <li><strong>Invest in manager development</strong>—people don't quit companies, they quit bad managers</li>
-          <li><strong>Model desired culture</strong>—your behavior sets norms more than any program</li>
-          <li><strong>Make wellbeing measurable</strong>—track it like you track revenue</li>
+          <li><strong>Audit actual conditions</strong>---not just employee sentiment but actual workload data, hours worked, time-off usage</li>
+          <li><strong>Fix systemic stressors</strong>---chronic understaffing, poor managers, unclear expectations</li>
+          <li><strong>Invest in manager development</strong>---people don't quit companies, they quit bad managers</li>
+          <li><strong>Model desired culture</strong>---your behavior sets norms more than any program</li>
+          <li><strong>Make wellbeing measurable</strong>---track it like you track revenue</li>
         </ul>
 
         <h2 id="conclusion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
         <p className="mb-6">
-          Workplace mental health is fundamentally organizational issue, not individual one. Sustainable wellbeing requires sustainable work systems—reasonable workload, autonomy, fairness, good management, and psychological safety. Wellness programs are nice additions but cannot substitute for fixing broken cultures.
+          Workplace mental health is fundamentally organizational issue, not individual one. Sustainable wellbeing requires sustainable work systems---reasonable workload, autonomy, fairness, good management, and psychological safety. Wellness programs are nice additions but cannot substitute for fixing broken cultures.
         </p>
         <p className="mb-6">
           The research is clear: organizations serious about employee wellbeing invest in culture change, not just perks. The rest is window dressing.

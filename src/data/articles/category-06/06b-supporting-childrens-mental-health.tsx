@@ -37,7 +37,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Children don't grieve like adults. They might play happily hours after learning of a death, ask the same questions repeatedly, or seem unaffected. This doesn't mean they're unfeeling — they're processing loss in developmentally appropriate ways.
+            Children don't grieve like adults. They might play happily hours after learning of a death, ask the same questions repeatedly, or seem unaffected. This doesn't mean they're unfeeling --- they're processing loss in developmentally appropriate ways.
           </p>
           <p className="mb-6">
             Understanding how children experience grief at different ages helps parents provide appropriate support and recognize when professional help is needed <Citation id="1" index={1} source="Death Studies" year="2020" tier={1} />.
@@ -48,7 +48,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           How Children Grieve Differently
         </h2>
         <p className="mb-6">
-          Adult grief is often sustained and consuming. Children's grief comes in waves — they may be sad one moment, playing the next <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />. This "puddle jumping" is normal, not callousness.
+          Adult grief is often sustained and consuming. Children's grief comes in waves --- they may be sad one moment, playing the next <Citation id="2" index={2} source="Journal of Child Psychology and Psychiatry" year="2021" tier={1} />. This "puddle jumping" is normal, not callousness.
           </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Magical thinking:</strong> Believing death is reversible or they caused it</li>
@@ -87,7 +87,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
               title: 'Preschool (3-5 years)',
               content: (
                 <div>
-                  <p className="mb-4"><strong>Understanding:</strong> May see death as temporary. Magical thinking — "If I'm good, they'll come back."</p>
+                  <p className="mb-4"><strong>Understanding:</strong> May see death as temporary. Magical thinking --- "If I'm good, they'll come back."</p>
                   <p className="mb-4"><strong>Common responses:</strong> Repetitive questions, regression (thumb-sucking, bedwetting), play acting death, apparent lack of emotion</p>
                   <p className="mb-2"><strong>How to support:</strong></p>
                   <ul className="list-disc pl-6 space-y-1">
@@ -163,7 +163,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
                 <li>"Grandma died. Her body stopped working and she can't come back."</li>
                 <li>"I'm sad too. It's okay to feel sad when someone we love dies."</li>
                 <li>"We'll remember them together."</li>
-                <li>"All your feelings are okay — sad, angry, confused."</li>
+                <li>"All your feelings are okay --- sad, angry, confused."</li>
                 <li>"I'm here whenever you want to talk or just be together."</li>
               </ul>
             ),
@@ -204,7 +204,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
             },
             {
               title: 'Encourage Expression',
-              description: <p>Art, play, journaling, physical activity. Not all children talk — provide multiple outlets.</p>,
+              description: <p>Art, play, journaling, physical activity. Not all children talk --- provide multiple outlets.</p>,
             },
             {
               title: 'Include Them Appropriately',
@@ -276,7 +276,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Discovering your teen is cutting, burning, or otherwise hurting themselves is terrifying. Your mind races to worst-case scenarios. But self-harm, while serious, is usually a coping mechanism — not a suicide attempt.
+            Discovering your teen is cutting, burning, or otherwise hurting themselves is terrifying. Your mind races to worst-case scenarios. But self-harm, while serious, is usually a coping mechanism --- not a suicide attempt.
           </p>
           <p className="mb-6">
             Understanding why teens self-harm and how to respond compassionately increases the chances they'll accept help <Citation id="1" index={1} source="JAMA Pediatrics" year="2020" tier={1} />. This is a crisis, but it's a treatable one.
@@ -423,7 +423,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           <li><strong>Teach alternative coping:</strong> Ice on skin, snapping rubber band, red marker on skin, intense exercise</li>
           <li><strong>Stay connected:</strong> Regular check-ins, low-key time together, open communication</li>
           <li><strong>Monitor without surveillance:</strong> Know their online activity, but respect privacy balance</li>
-          <li><strong>Take care of yourself:</strong> Parent support groups, your own therapy — you can't pour from empty cup</li>
+          <li><strong>Take care of yourself:</strong> Parent support groups, your own therapy --- you can't pour from empty cup</li>
         </ul>
 
         <h2 id="professional-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -465,7 +465,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           There Is Hope
         </h2>
         <p className="mb-6">
-          Most teens who self-harm stop with proper treatment. Self-harm is a coping skill — and skills can be replaced with healthier ones. Your compassionate response, commitment to getting help, and ongoing support make all the difference.
+          Most teens who self-harm stop with proper treatment. Self-harm is a coping skill --- and skills can be replaced with healthier ones. Your compassionate response, commitment to getting help, and ongoing support make all the difference.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -502,7 +502,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Your child comes home in tears. Again. They're being excluded, mocked, or threatened. Bullying isn't 'just kids being kids' — it's a serious threat to mental health with lasting effects.
+            Your child comes home in tears. Again. They're being excluded, mocked, or threatened. Bullying isn't 'just kids being kids' --- it's a serious threat to mental health with lasting effects.
           </p>
           <p className="mb-6">
             Children who are bullied have higher rates of anxiety, depression, and even suicidal thoughts <Citation id="1" index={1} source="JAMA Pediatrics" year="2020" tier={1} />. Understanding how to recognize and respond to bullying helps protect your child's wellbeing.
@@ -647,7 +647,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           <li>Screenshot everything before blocking or reporting</li>
           <li>Block bullies on all platforms</li>
           <li>Report to platform (most have reporting mechanisms)</li>
-          <li>Inform school — cyberbullying often involves classmates</li>
+          <li>Inform school --- cyberbullying often involves classmates</li>
           <li>Consider police if threats, sexual content, or illegal activity</li>
           <li>Limit social media use temporarily if needed for mental health</li>
         </ul>
@@ -709,7 +709,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
             "Should I get my child therapy?" This question keeps many parents up at night. You don't want to overreact, but you don't want to miss something important. How do you know when professional help is needed?
           </p>
           <p className="mb-6">
-            Therapy can help children develop coping skills, process difficult experiences, and improve mental health — often preventing problems from worsening <Citation id="1" index={1} source="Journal of Clinical Child & Adolescent Psychology" year="2020" tier={1} />. Knowing when and how to seek help empowers you to support your child.
+            Therapy can help children develop coping skills, process difficult experiences, and improve mental health --- often preventing problems from worsening <Citation id="1" index={1} source="Journal of Clinical Child & Adolescent Psychology" year="2020" tier={1} />. Knowing when and how to seek help empowers you to support your child.
           </p>
         </div>
 
@@ -936,10 +936,10 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Resilience isn't something children either have or don't have — it's built through experiences, relationships, and skills. You can't prevent all hardship, but you can equip your children to bounce back from it.
+            Resilience isn't something children either have or don't have --- it's built through experiences, relationships, and skills. You can't prevent all hardship, but you can equip your children to bounce back from it.
           </p>
           <p className="mb-6">
-            Research has identified specific, teachable factors that help children develop resilience — the ability to adapt and thrive despite adversity <Citation id="1" index={1} source="Child Development" year="2020" tier={1} />.
+            Research has identified specific, teachable factors that help children develop resilience --- the ability to adapt and thrive despite adversity <Citation id="1" index={1} source="Child Development" year="2020" tier={1} />.
           </p>
         </div>
 
@@ -957,7 +957,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
           <li>Maintain functioning during difficult times</li>
         </ul>
         <p className="mb-6">
-          It's NOT about being tough, never feeling bad, or handling everything alone. Resilient children feel emotions fully — and have skills to manage them.
+          It's NOT about being tough, never feeling bad, or handling everything alone. Resilient children feel emotions fully --- and have skills to manage them.
         </p>
 
         <h2 id="protective-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1099,7 +1099,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
             },
             {
               title: 'Physical Activity',
-              description: <p>Exercise reduces stress, builds confidence, teaches persistence. Sports, dance, hiking — find what they enjoy.</p>,
+              description: <p>Exercise reduces stress, builds confidence, teaches persistence. Sports, dance, hiking --- find what they enjoy.</p>,
             },
             {
               title: 'Creative Expression',
@@ -1141,13 +1141,13 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Resilience is still possible and common</li>
           <li>Professional support (therapy) may be needed alongside resilience-building</li>
-          <li>Recovery takes time — be patient</li>
+          <li>Recovery takes time --- be patient</li>
           <li>Your consistent presence matters more than having all the answers</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Resilience isn't a trait children are born with — it's built through relationships, experiences, and skills you can actively cultivate. By providing secure attachment, appropriate challenges, and teaching coping skills, you help your child develop the strength to face life's inevitable difficulties.
+            Resilience isn't a trait children are born with --- it's built through relationships, experiences, and skills you can actively cultivate. By providing secure attachment, appropriate challenges, and teaching coping skills, you help your child develop the strength to face life's inevitable difficulties.
           </p>
         </ArticleCallout>
       </>

@@ -33,7 +33,7 @@ export const identityValuesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Who am I?" It's a simple question with complex answers. Your identity—your sense of self—develops throughout life, shaped by experiences, relationships, choices, and reflection. It's not fixed or discovered; it's constructed, explored, and revised as you grow.
+            "Who am I?" It's a simple question with complex answers. Your identity---your sense of self---develops throughout life, shaped by experiences, relationships, choices, and reflection. It's not fixed or discovered; it's constructed, explored, and revised as you grow.
           </p>
           <p className="mb-6">
             Identity formation is a core developmental task, particularly intense in adolescence and young adulthood but continuing throughout the lifespan <Citation id="1" index={1} source="Journal of Personality" year="2020" tier={1} />. Understanding how identity develops helps you navigate questions about who you are and who you want to become.
@@ -86,7 +86,7 @@ export const identityValuesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Identity is not something you find—it's something you construct through exploration, reflection, and commitment. It evolves throughout life as you encounter new experiences, relationships, and transitions. "Who am I?" is a lifelong question, not a one-time answer.</p>
+          <p>Identity is not something you find---it's something you construct through exploration, reflection, and commitment. It evolves throughout life as you encounter new experiences, relationships, and transitions. "Who am I?" is a lifelong question, not a one-time answer.</p>
         </ArticleCallout>
       </>
     ),
@@ -112,7 +112,7 @@ export const identityValuesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You wake up one day and the person you thought you were feels unfamiliar. The roles that defined you—professional, parent, partner—no longer fit. Your values seem unclear, your future uncertain. This disorienting experience is an identity crisis, and it's more common than you might think.
+            You wake up one day and the person you thought you were feels unfamiliar. The roles that defined you---professional, parent, partner---no longer fit. Your values seem unclear, your future uncertain. This disorienting experience is an identity crisis, and it's more common than you might think.
           </p>
           <p className="mb-6">
             Identity crises occur when major life changes disrupt your sense of self <Citation id="1" index={1} source="Clinical Psychology Review" year="2021" tier={1} />. While frightening, they're also opportunities for growth and redefinition <Citation id="2" index={2} source="Journal of Adult Development" year="2020" tier={1} />.
@@ -184,7 +184,7 @@ export const identityValuesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Be yourself" sounds simple. But authenticity—aligning your actions with your true values and self-concept—is psychologically complex and socially risky. It requires knowing who you are, having the courage to express it, and accepting the consequences.
+            "Be yourself" sounds simple. But authenticity---aligning your actions with your true values and self-concept---is psychologically complex and socially risky. It requires knowing who you are, having the courage to express it, and accepting the consequences.
           </p>
           <p className="mb-6">
             Research shows authentic living predicts greater life satisfaction, self-esteem, and psychological well-being <Citation id="1" index={1} source="Journal of Counseling Psychology" year="2020" tier={1} />. Yet it often conflicts with social expectations, creating tension between being yourself and being accepted <Citation id="2" index={2} source="Psychological Science" year="2021" tier={1} />.
@@ -230,7 +230,7 @@ export const identityValuesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Authenticity means aligning actions with your true values and self-concept. It's psychologically beneficial but socially risky. Practicing authenticity requires self-awareness, courage to express yourself honestly, and acceptance that not everyone will approve. The cost of inauthenticity—living for others' expectations—is chronic disconnection from yourself.</p>
+          <p>Authenticity means aligning actions with your true values and self-concept. It's psychologically beneficial but socially risky. Practicing authenticity requires self-awareness, courage to express yourself honestly, and acceptance that not everyone will approve. The cost of inauthenticity---living for others' expectations---is chronic disconnection from yourself.</p>
         </ArticleCallout>
       </>
     ),
@@ -256,7 +256,7 @@ export const identityValuesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When decisions feel overwhelming, values provide clarity. When life feels directionless, values point the way. Unlike goals (which you achieve), values are ongoing commitments to what matters—the compass that guides choices throughout life.
+            When decisions feel overwhelming, values provide clarity. When life feels directionless, values point the way. Unlike goals (which you achieve), values are ongoing commitments to what matters---the compass that guides choices throughout life.
           </p>
           <p className="mb-6">
             Research shows living according to your values predicts life satisfaction, resilience, and psychological wellbeing <Citation id="1" index={1} source="Journal of Positive Psychology" year="2020" tier={1} />. Yet many people have never explicitly clarified what they value <Citation id="2" index={2} source="Behavior Therapy" year="2021" tier={1} />.
@@ -267,7 +267,7 @@ export const identityValuesArticlesA: Article[] = [
           What Are Values?
         </h2>
         <p className="mb-6">
-          Values are chosen life directions—what you want your life to stand for. They're:
+          Values are chosen life directions---what you want your life to stand for. They're:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Ongoing:</strong> Never "finished" (unlike goals)</li>
@@ -300,7 +300,7 @@ export const identityValuesArticlesA: Article[] = [
             {
               title: 'Identify Life Domains',
               description: (
-                <p>Consider different areas: relationships, work, health, personal growth, leisure, community, spirituality. Not all domains matter equally—that's okay.</p>
+                <p>Consider different areas: relationships, work, health, personal growth, leisure, community, spirituality. Not all domains matter equally---that's okay.</p>
               ),
             },
             {
@@ -341,7 +341,7 @@ export const identityValuesArticlesA: Article[] = [
         </ArticleCallout>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Values are chosen life directions that guide decisions and create meaning. Unlike goals, they're never finished—they're ongoing commitments. Clarifying your values provides a compass for navigating life's decisions, creating coherence between what matters to you and how you live.</p>
+          <p>Values are chosen life directions that guide decisions and create meaning. Unlike goals, they're never finished---they're ongoing commitments. Clarifying your values provides a compass for navigating life's decisions, creating coherence between what matters to you and how you live.</p>
         </ArticleCallout>
       </>
     ),
@@ -350,7 +350,7 @@ export const identityValuesArticlesA: Article[] = [
     id: catId(45),
     slug: 'masks-we-wear-code-switching-people-pleasing-losing-yourself',
     title: 'The Masks We Wear: Code-Switching, People-Pleasing, and Losing Yourself',
-    description: 'We adapt ourselves to different contexts—but when does flexibility become inauthenticity? Learn when code-switching protects you and when it erodes your sense of self.',
+    description: 'We adapt ourselves to different contexts---but when does flexibility become inauthenticity? Learn when code-switching protects you and when it erodes your sense of self.',
     image: "/images/articles/cat04/cover-045.svg",
     category: CATEGORY_SELF_WORTH,
     readTime: 6,
@@ -367,7 +367,7 @@ export const identityValuesArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You speak differently at work than with friends. You hide certain opinions around family. You adjust your personality to fit the room. This adaptive shape-shifting—called code-switching—can be protective strategy or chronic self-abandonment. The line between healthy flexibility and losing yourself is context, cost, and choice.
+            You speak differently at work than with friends. You hide certain opinions around family. You adjust your personality to fit the room. This adaptive shape-shifting---called code-switching---can be protective strategy or chronic self-abandonment. The line between healthy flexibility and losing yourself is context, cost, and choice.
           </p>
           <p className="mb-6">
             Code-switching describes adjusting language, behavior, or presentation based on social context <Citation id="1" index={1} source="Cultural Diversity and Ethnic Minority Psychology" year="2020" tier={1} />. While sometimes necessary for safety or success, chronic masking erodes sense of self and contributes to burnout, anxiety, and identity confusion <Citation id="3" index={3} source="Journal of Personality" year="2020" tier={1} />.
@@ -449,14 +449,14 @@ export const identityValuesArticlesA: Article[] = [
           steps={[
             { title: 'Identify Your Masks', description: <p>Notice when and how you code-switch. What aspects of yourself do you hide, and in what contexts?</p> },
             { title: 'Ask: Is This Choice or Obligation?', description: <p>Do you choose to adapt, or does it feel compulsory? Choice preserves agency; obligation erodes it.</p> },
-            { title: 'Create Authentic Spaces', description: <p>Find or create at least one context where you can be fully yourself—with certain friends, communities, or activities.</p> },
+            { title: 'Create Authentic Spaces', description: <p>Find or create at least one context where you can be fully yourself---with certain friends, communities, or activities.</p> },
             { title: 'Practice Micro-Authenticity', description: <p>Slowly introduce authentic expressions in safer contexts. Small revelations build confidence.</p> },
             { title: 'Challenge Assumptions', description: <p>What do you assume will happen if you show up more authentically? Test those assumptions carefully.</p> },
           ]}
         />
 
         <ArticleCallout variant="key-takeaway">
-          <p>Adapting to different contexts is normal and sometimes necessary. But chronic masking—hiding core aspects of self across all contexts—erodes identity and mental health. Healthy code-switching involves choice, strategy, and spaces where you can drop the mask. The goal isn't rigid consistency, but ensuring you never lose sight of who you actually are.</p>
+          <p>Adapting to different contexts is normal and sometimes necessary. But chronic masking---hiding core aspects of self across all contexts---erodes identity and mental health. Healthy code-switching involves choice, strategy, and spaces where you can drop the mask. The goal isn't rigid consistency, but ensuring you never lose sight of who you actually are.</p>
         </ArticleCallout>
       </>
     ),

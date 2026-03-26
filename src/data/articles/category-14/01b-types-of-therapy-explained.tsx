@@ -111,7 +111,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Depression rarely happens in a vacuum. Often, it's intertwined with relationship struggles — conflict, loss, isolation, or major life transitions. Interpersonal Therapy (IPT) operates on this premise: by improving your relationships and communication, you can reduce depression and build a more supportive social world <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
+            Depression rarely happens in a vacuum. Often, it's intertwined with relationship struggles --- conflict, loss, isolation, or major life transitions. Interpersonal Therapy (IPT) operates on this premise: by improving your relationships and communication, you can reduce depression and build a more supportive social world <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             IPT is a structured, evidence-based treatment that focuses on the here and now. Rather than exploring childhood or unconscious conflicts, IPT helps you address current relationship issues that contribute to your distress <Citation id="2" index={2} source="Basic Books" year="2018" tier={5} />.
@@ -125,7 +125,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           IPT was developed in the 1970s by psychiatrists Gerald Klerman and Myrna Weissman as a treatment for depression. It's grounded in attachment theory and research showing that the quality of our relationships profoundly affects mental health <Citation id="7" index={7} source="Attachment & Human Development" year="2022" tier={1} />.
         </p>
         <p className="mb-6">
-          The core idea: depression both affects and is affected by interpersonal relationships. When you're depressed, you might withdraw, communicate poorly, or experience conflict — which worsens depression. IPT breaks this cycle by improving relationship functioning.
+          The core idea: depression both affects and is affected by interpersonal relationships. When you're depressed, you might withdraw, communicate poorly, or experience conflict --- which worsens depression. IPT breaks this cycle by improving relationship functioning.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="IPT's Four Problem Areas">
@@ -152,7 +152,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'Phase 1: Assessment and Education (Sessions 1-3)',
               description: (
                 <div>
-                  <p className="mb-4">Your therapist conducts an "interpersonal inventory" — a detailed review of your current relationships, recent changes, and conflicts. Together, you identify which of the four problem areas best fits your situation.</p>
+                  <p className="mb-4">Your therapist conducts an "interpersonal inventory" --- a detailed review of your current relationships, recent changes, and conflicts. Together, you identify which of the four problem areas best fits your situation.</p>
                   <p className="mb-4">You learn about depression as a medical illness (reducing self-blame) and how interpersonal factors maintain it. The therapist explains IPT's focus on current relationships, not past childhood experiences.</p>
                   <p>By the end of Phase 1, you've agreed on a treatment plan targeting one or two problem areas.</p>
                 </div>
@@ -204,7 +204,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
                     <li>"What were you hoping would happen?"</li>
                     <li>"How might you have communicated differently?"</li>
                   </ul>
-                  <p className="mt-4">This detailed analysis reveals patterns — perhaps you avoid direct requests, or interpret neutral comments as criticism.</p>
+                  <p className="mt-4">This detailed analysis reveals patterns --- perhaps you avoid direct requests, or interpret neutral comments as criticism.</p>
                 </div>
               ),
             },
@@ -212,7 +212,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               id: 'decision-analysis',
               title: 'Decision Analysis',
               content: (
-                <p>When facing an interpersonal decision (whether to end a relationship, confront a friend, set a boundary), your therapist helps you explore options, weigh consequences, and clarify your needs. They don't tell you what to do — they help you make informed choices.</p>
+                <p>When facing an interpersonal decision (whether to end a relationship, confront a friend, set a boundary), your therapist helps you explore options, weigh consequences, and clarify your needs. They don't tell you what to do --- they help you make informed choices.</p>
               ),
             },
             {
@@ -226,7 +226,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         />
 
         <QuoteBlock
-          quote="IPT taught me that my depression wasn't just a chemical imbalance — it was connected to how isolated I'd become after my divorce. Working on rebuilding friendships and setting boundaries with my ex changed everything. My relationships got better, and so did my mood."
+          quote="IPT taught me that my depression wasn't just a chemical imbalance --- it was connected to how isolated I'd become after my divorce. Working on rebuilding friendships and setting boundaries with my ex changed everything. My relationships got better, and so did my mood."
           attribution="IPT Client"
           role="Lived Experience"
           variant="large"
@@ -256,11 +256,11 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           IPT has been successfully adapted for many populations:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Perinatal depression</strong> — pregnancy and postpartum depression, with no medication risks <Citation id="3" index={3} source="Archives of Women's Mental Health" year="2022" tier={1} /></li>
-          <li><strong>Adolescent depression</strong> — focuses on peer relationships, family conflict, and identity formation <Citation id="5" index={5} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2020" tier={1} /></li>
-          <li><strong>Older adults</strong> — addresses grief, retirement, health decline, and shrinking social networks <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2021" tier={1} /></li>
-          <li><strong>Eating disorders</strong> — especially bulimia and binge eating disorder <Citation id="6" index={6} source="International Journal of Eating Disorders" year="2021" tier={1} /></li>
-          <li><strong>Group format</strong> — IPT can be delivered in groups with similar effectiveness <Citation id="9" index={9} source="Group Dynamics: Theory, Research, and Practice" year="2021" tier={1} /></li>
+          <li><strong>Perinatal depression</strong> --- pregnancy and postpartum depression, with no medication risks <Citation id="3" index={3} source="Archives of Women's Mental Health" year="2022" tier={1} /></li>
+          <li><strong>Adolescent depression</strong> --- focuses on peer relationships, family conflict, and identity formation <Citation id="5" index={5} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2020" tier={1} /></li>
+          <li><strong>Older adults</strong> --- addresses grief, retirement, health decline, and shrinking social networks <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2021" tier={1} /></li>
+          <li><strong>Eating disorders</strong> --- especially bulimia and binge eating disorder <Citation id="6" index={6} source="International Journal of Eating Disorders" year="2021" tier={1} /></li>
+          <li><strong>Group format</strong> --- IPT can be delivered in groups with similar effectiveness <Citation id="9" index={9} source="Group Dynamics: Theory, Research, and Practice" year="2021" tier={1} /></li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="IPT vs. Medication for Depression">
@@ -434,7 +434,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            What if healing didn't require a therapist to diagnose, interpret, or direct you — but instead to simply see you, accept you fully, and trust your capacity to find your own way forward? This is the radical premise of person-centered therapy, developed by psychologist Carl Rogers in the 1940s and 1950s <Citation id="2" index={2} source="Mariner Books" year="1961" tier={5} />.
+            What if healing didn't require a therapist to diagnose, interpret, or direct you --- but instead to simply see you, accept you fully, and trust your capacity to find your own way forward? This is the radical premise of person-centered therapy, developed by psychologist Carl Rogers in the 1940s and 1950s <Citation id="2" index={2} source="Mariner Books" year="1961" tier={5} />.
           </p>
           <p className="mb-6">
             Unlike therapies focused on techniques or protocols, person-centered therapy is built on a relationship. When you experience genuine acceptance, empathy, and authenticity from your therapist, you create the conditions for growth and self-discovery <Citation id="1" index={1} source="Journal of Counseling Psychology" year="2021" tier={1} />.
@@ -445,7 +445,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           What Is Person-Centered Therapy?
         </h2>
         <p className="mb-6">
-          Person-centered therapy (also called client-centered or Rogerian therapy) is grounded in humanistic psychology — the belief that people have an innate drive toward growth, health, and self-actualization. Given the right conditions, you have the capacity to understand yourself and resolve your own difficulties.
+          Person-centered therapy (also called client-centered or Rogerian therapy) is grounded in humanistic psychology --- the belief that people have an innate drive toward growth, health, and self-actualization. Given the right conditions, you have the capacity to understand yourself and resolve your own difficulties.
         </p>
         <p className="mb-6">
           The therapist doesn't position themselves as the expert on your life. Instead, they create a safe, non-judgmental space where you can explore your feelings, thoughts, and experiences at your own pace. The relationship itself is the mechanism of change <Citation id="3" index={3} source="Psychotherapy Research" year="2022" tier={1} />.
@@ -475,8 +475,8 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'Unconditional Positive Regard: You Are Enough as You Are',
               content: (
                 <div>
-                  <p className="mb-4">Many people have experienced conditional acceptance — love or approval that depends on meeting expectations, performing well, or hiding parts of themselves. This creates a split between the "real self" (who you truly are) and the "ideal self" (who you think you should be) <Citation id="4" index={4} source="Journal of Humanistic Psychology" year="2020" tier={1} />.</p>
-                  <p className="mb-4">In person-centered therapy, your therapist accepts you fully — not because you've earned it or proven yourself, but simply because you exist. This unconditional acceptance allows you to drop defenses and explore parts of yourself you might have disowned or hidden.</p>
+                  <p className="mb-4">Many people have experienced conditional acceptance --- love or approval that depends on meeting expectations, performing well, or hiding parts of themselves. This creates a split between the "real self" (who you truly are) and the "ideal self" (who you think you should be) <Citation id="4" index={4} source="Journal of Humanistic Psychology" year="2020" tier={1} />.</p>
+                  <p className="mb-4">In person-centered therapy, your therapist accepts you fully --- not because you've earned it or proven yourself, but simply because you exist. This unconditional acceptance allows you to drop defenses and explore parts of yourself you might have disowned or hidden.</p>
                   <p>Over time, you internalize this acceptance, learning to offer it to yourself.</p>
                 </div>
               ),
@@ -486,12 +486,12 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'Empathic Understanding: Being Deeply Heard',
               content: (
                 <div>
-                  <p className="mb-4">Your therapist works to understand your experience from your frame of reference — not interpreting or analyzing, but reflecting back what they hear so you feel deeply understood <Citation id="7" index={7} source="American Journal of Psychotherapy" year="2022" tier={1} />.</p>
+                  <p className="mb-4">Your therapist works to understand your experience from your frame of reference --- not interpreting or analyzing, but reflecting back what they hear so you feel deeply understood <Citation id="7" index={7} source="American Journal of Psychotherapy" year="2022" tier={1} />.</p>
                   <p className="mb-4">This looks like:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Reflective listening</strong>: "It sounds like you're feeling torn between wanting to stay and wanting to leave"</li>
                     <li><strong>Checking understanding</strong>: "Am I hearing you right that...?"</li>
-                    <li><strong>Following emotional threads</strong>: "There's something painful in what you just said — tell me more"</li>
+                    <li><strong>Following emotional threads</strong>: "There's something painful in what you just said --- tell me more"</li>
                   </ul>
                   <p className="mt-4">Being heard without judgment creates safety to go deeper.</p>
                 </div>
@@ -509,8 +509,8 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'The Actualizing Tendency: Your Inner Drive Toward Growth',
               content: (
                 <div>
-                  <p className="mb-4">Humanistic psychology holds that people have an "actualizing tendency" — an inherent motivation to develop capacities and become more fully themselves <Citation id="5" index={5} source="The Humanistic Psychologist" year="2021" tier={1} />.</p>
-                  <p>This tendency can be blocked by fear, shame, rigid beliefs, or painful experiences. Person-centered therapy removes obstacles so your natural growth process can resume. The therapist trusts that you know, deep down, what you need — even if that knowing is buried.</p>
+                  <p className="mb-4">Humanistic psychology holds that people have an "actualizing tendency" --- an inherent motivation to develop capacities and become more fully themselves <Citation id="5" index={5} source="The Humanistic Psychologist" year="2021" tier={1} />.</p>
+                  <p>This tendency can be blocked by fear, shame, rigid beliefs, or painful experiences. Person-centered therapy removes obstacles so your natural growth process can resume. The therapist trusts that you know, deep down, what you need --- even if that knowing is buried.</p>
                 </div>
               ),
             },
@@ -536,9 +536,9 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li>Your therapist <strong>doesn't give advice</strong> or tell you what to do</li>
             <li>They <strong>reflect back</strong> what you're saying, helping you hear yourself more clearly</li>
-            <li><strong>Silences are okay</strong> — space to think and feel without rushing</li>
+            <li><strong>Silences are okay</strong> --- space to think and feel without rushing</li>
             <li>You feel <strong>genuinely heard</strong> without being judged or analyzed</li>
-            <li>The pace is <strong>yours to set</strong> — you decide what's important to explore</li>
+            <li>The pace is <strong>yours to set</strong> --- you decide what's important to explore</li>
             <li>Your therapist <strong>trusts your process</strong> even when you feel stuck</li>
           </ul>
         </ArticleCallout>
@@ -564,7 +564,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Importantly, the therapeutic relationship — warmth, empathy, and acceptance — predicts outcomes across all therapy types. Person-centered therapy pioneered this focus on relationship quality, and research now shows these factors matter as much as specific techniques <Citation id="3" index={3} source="Psychotherapy Research" year="2022" tier={1} />.
+          Importantly, the therapeutic relationship --- warmth, empathy, and acceptance --- predicts outcomes across all therapy types. Person-centered therapy pioneered this focus on relationship quality, and research now shows these factors matter as much as specific techniques <Citation id="3" index={3} source="Psychotherapy Research" year="2022" tier={1} />.
         </p>
 
         <ArticleCallout variant="clinical-note" title="Person-Centered Therapy for Trauma">
@@ -582,7 +582,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           <li><strong>Prefer to explore at your own pace</strong> without being directed</li>
           <li><strong>Value authenticity and genuineness</strong> in relationships</li>
           <li><strong>Have been hurt by judgmental or critical relationships</strong> and need unconditional acceptance</li>
-          <li><strong>Feel disconnected from your true self</strong> — like you're living someone else's life</li>
+          <li><strong>Feel disconnected from your true self</strong> --- like you're living someone else's life</li>
           <li><strong>Are seeking personal growth</strong>, not just crisis intervention</li>
           <li><strong>Trust your own inner wisdom</strong> (or want to learn to)</li>
         </ul>
@@ -740,7 +740,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When one person in a family struggles, everyone feels it. A child's anxiety, a parent's depression, a couple's conflict — these aren't isolated problems, but symptoms of patterns within the family system. Family therapy operates from this understanding: families are interconnected emotional units where each person's behavior affects everyone else <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2021" tier={1} />.
+            When one person in a family struggles, everyone feels it. A child's anxiety, a parent's depression, a couple's conflict --- these aren't isolated problems, but symptoms of patterns within the family system. Family therapy operates from this understanding: families are interconnected emotional units where each person's behavior affects everyone else <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Rather than focusing solely on the "identified patient" (the person everyone thinks has the problem), family therapy examines how family dynamics, communication patterns, roles, and unspoken rules contribute to distress. Change one part of the system, and the whole system shifts.
@@ -771,7 +771,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           How Family Therapy Works: Major Approaches
         </h2>
         <p className="mb-6">
-          There isn't one "family therapy" — there are multiple schools of thought with different techniques and philosophies. Here are the most influential:
+          There isn't one "family therapy" --- there are multiple schools of thought with different techniques and philosophies. Here are the most influential:
         </p>
 
         <ArticleAccordion
@@ -782,14 +782,14 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'Structural Family Therapy',
               content: (
                 <div>
-                  <p className="mb-4">Developed by Salvador Minuchin, structural therapy focuses on the family's organizational structure — hierarchies, subsystems, and boundaries <Citation id="3" index={3} source="Family Process" year="2021" tier={1} />.</p>
+                  <p className="mb-4">Developed by Salvador Minuchin, structural therapy focuses on the family's organizational structure --- hierarchies, subsystems, and boundaries <Citation id="3" index={3} source="Family Process" year="2021" tier={1} />.</p>
                   <p className="mb-4"><strong>Key concepts:</strong></p>
                   <ul className="list-disc pl-6 space-y-2 mb-4">
                     <li><strong>Hierarchies</strong>: Parents should lead, children should follow (problems arise when children hold power)</li>
-                    <li><strong>Subsystems</strong>: The parental subsystem, sibling subsystem, etc. — each has appropriate boundaries</li>
+                    <li><strong>Subsystems</strong>: The parental subsystem, sibling subsystem, etc. --- each has appropriate boundaries</li>
                     <li><strong>Enmeshment vs. disengagement</strong>: Families can be too close (enmeshed, no privacy) or too distant (disengaged, no support)</li>
                   </ul>
-                  <p><strong>Techniques:</strong> The therapist actively intervenes during sessions — rearranging seating, assigning tasks, or creating "enactments" where family members interact while the therapist observes and intervenes.</p>
+                  <p><strong>Techniques:</strong> The therapist actively intervenes during sessions --- rearranging seating, assigning tasks, or creating "enactments" where family members interact while the therapist observes and intervenes.</p>
                 </div>
               ),
             },
@@ -813,7 +813,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'Bowen Family Systems Therapy',
               content: (
                 <div>
-                  <p className="mb-4">Murray Bowen's approach emphasizes differentiation — the ability to maintain your sense of self while staying emotionally connected to family <Citation id="8" index={8} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.</p>
+                  <p className="mb-4">Murray Bowen's approach emphasizes differentiation --- the ability to maintain your sense of self while staying emotionally connected to family <Citation id="8" index={8} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.</p>
                   <p className="mb-4"><strong>Key concepts:</strong></p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li><strong>Differentiation of self</strong>: High differentiation = you can think clearly even when emotions run high</li>
@@ -876,7 +876,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
             {
               title: 'Intervention and Change',
               description: (
-                <p>The therapist uses techniques specific to their approach — restructuring boundaries, breaking negative cycles, externalizing problems, or improving communication. Change happens both in sessions and through between-session assignments.</p>
+                <p>The therapist uses techniques specific to their approach --- restructuring boundaries, breaking negative cycles, externalizing problems, or improving communication. Change happens both in sessions and through between-session assignments.</p>
               ),
             },
             {
@@ -919,11 +919,11 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           Specific evidence-based family therapies include:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Family-Based Treatment (FBT) for eating disorders</strong> — gold standard for adolescent anorexia <Citation id="5" index={5} source="International Journal of Eating Disorders" year="2021" tier={1} /></li>
-          <li><strong>Multisystemic Therapy (MST)</strong> — for serious adolescent behavioral problems and delinquency <Citation id="6" index={6} source="Clinical Child and Family Psychology Review" year="2020" tier={1} /></li>
-          <li><strong>Attachment-Based Family Therapy (ABFT)</strong> — for adolescent depression and suicidality <Citation id="7" index={7} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2022" tier={1} /></li>
-          <li><strong>Emotionally Focused Therapy (EFT)</strong> — 70-75% of couples move from distress to recovery</li>
-          <li><strong>Brief Strategic Family Therapy (BSFT)</strong> — for adolescent drug use and behavioral problems</li>
+          <li><strong>Family-Based Treatment (FBT) for eating disorders</strong> --- gold standard for adolescent anorexia <Citation id="5" index={5} source="International Journal of Eating Disorders" year="2021" tier={1} /></li>
+          <li><strong>Multisystemic Therapy (MST)</strong> --- for serious adolescent behavioral problems and delinquency <Citation id="6" index={6} source="Clinical Child and Family Psychology Review" year="2020" tier={1} /></li>
+          <li><strong>Attachment-Based Family Therapy (ABFT)</strong> --- for adolescent depression and suicidality <Citation id="7" index={7} source="Journal of the American Academy of Child & Adolescent Psychiatry" year="2022" tier={1} /></li>
+          <li><strong>Emotionally Focused Therapy (EFT)</strong> --- 70-75% of couples move from distress to recovery</li>
+          <li><strong>Brief Strategic Family Therapy (BSFT)</strong> --- for adolescent drug use and behavioral problems</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="When to Choose Family Therapy Over Individual Therapy">
@@ -944,13 +944,13 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           Family therapy is particularly effective for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Adolescent mental health issues</strong> — eating disorders, substance use, depression, behavioral problems</li>
-          <li><strong>Couple distress</strong> — communication breakdown, infidelity, recurring conflict</li>
-          <li><strong>Parenting challenges</strong> — disagreements about discipline, blended family issues</li>
-          <li><strong>Family transitions</strong> — divorce, remarriage, aging parents, empty nest</li>
-          <li><strong>Chronic illness in the family</strong> — when one member's illness affects everyone</li>
-          <li><strong>Grief and loss</strong> — families struggling to process shared loss</li>
-          <li><strong>Intergenerational patterns</strong> — breaking cycles of dysfunction</li>
+          <li><strong>Adolescent mental health issues</strong> --- eating disorders, substance use, depression, behavioral problems</li>
+          <li><strong>Couple distress</strong> --- communication breakdown, infidelity, recurring conflict</li>
+          <li><strong>Parenting challenges</strong> --- disagreements about discipline, blended family issues</li>
+          <li><strong>Family transitions</strong> --- divorce, remarriage, aging parents, empty nest</li>
+          <li><strong>Chronic illness in the family</strong> --- when one member's illness affects everyone</li>
+          <li><strong>Grief and loss</strong> --- families struggling to process shared loss</li>
+          <li><strong>Intergenerational patterns</strong> --- breaking cycles of dysfunction</li>
         </ul>
 
         <ComparisonTable
@@ -969,11 +969,11 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         <ArticleCallout variant="warning" title="Challenges and Limitations">
           <p className="mb-4">Family therapy can be difficult when:</p>
           <ul className="list-disc pl-6 space-y-2">
-            <li><strong>Not everyone is willing to participate</strong> — though therapy can still help those who attend</li>
-            <li><strong>There's active abuse or violence</strong> — safety must be addressed first, possibly through individual work</li>
-            <li><strong>One member dominates or intimidates</strong> — the therapist must manage power dynamics</li>
-            <li><strong>Secrets exist that some members won't share</strong> — creates ethical dilemmas</li>
-            <li><strong>The family is in active crisis</strong> — stabilization may be needed first</li>
+            <li><strong>Not everyone is willing to participate</strong> --- though therapy can still help those who attend</li>
+            <li><strong>There's active abuse or violence</strong> --- safety must be addressed first, possibly through individual work</li>
+            <li><strong>One member dominates or intimidates</strong> --- the therapist must manage power dynamics</li>
+            <li><strong>Secrets exist that some members won't share</strong> --- creates ethical dilemmas</li>
+            <li><strong>The family is in active crisis</strong> --- stabilization may be needed first</li>
           </ul>
         </ArticleCallout>
 
@@ -1002,7 +1002,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Family therapy can be transformative — not just for the identified patient, but for everyone involved. When patterns shift, the whole system heals.
+          Family therapy can be transformative --- not just for the identified patient, but for everyone involved. When patterns shift, the whole system heals.
         </p>
       </>
     ),
@@ -1108,7 +1108,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
             There's something powerfully healing about realizing you're not alone. Group therapy offers what individual therapy cannot: the experience of being seen, understood, and supported by people who truly get it because they're struggling too. For many people, this shared humanity becomes the most transformative aspect of treatment <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Group therapy brings together 6-12 people facing similar challenges, guided by one or two trained therapists. It's not just individual therapy in a group setting — the group itself becomes a therapeutic force <Citation id="2" index={2} source="Basic Books" year="2020" tier={5} />.
+            Group therapy brings together 6-12 people facing similar challenges, guided by one or two trained therapists. It's not just individual therapy in a group setting --- the group itself becomes a therapeutic force <Citation id="2" index={2} source="Basic Books" year="2020" tier={5} />.
           </p>
         </div>
 
@@ -1187,7 +1187,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
               title: 'Process-Oriented (Interpersonal) Groups',
               content: (
                 <div>
-                  <p className="mb-4">These groups focus less on a specific topic and more on the here-and-now interactions within the group. The group becomes a "social microcosm" — how you relate in the group reflects how you relate in life <Citation id="5" index={5} source="Psychotherapy Research" year="2021" tier={1} />.</p>
+                  <p className="mb-4">These groups focus less on a specific topic and more on the here-and-now interactions within the group. The group becomes a "social microcosm" --- how you relate in the group reflects how you relate in life <Citation id="5" index={5} source="Psychotherapy Research" year="2021" tier={1} />.</p>
                   <p className="mb-4">Members share what they're thinking and feeling about each other in the moment: "When you interrupted me just now, I felt dismissed." The therapist helps the group explore these dynamics.</p>
                   <p>Process groups are often long-term (months to years) and work best for people interested in deep interpersonal learning.</p>
                 </div>
@@ -1261,7 +1261,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         </ArticleCallout>
 
         <QuoteBlock
-          quote="In group therapy, I realized my loneliness wasn't about being physically alone — it was about feeling unseen. When the group saw me, really saw me, and still accepted me, something fundamental shifted. I learned I could be known and still be loved."
+          quote="In group therapy, I realized my loneliness wasn't about being physically alone --- it was about feeling unseen. When the group saw me, really saw me, and still accepted me, something fundamental shifted. I learned I could be known and still be loved."
           attribution="Group Therapy Participant"
           role="Lived Experience"
           variant="large"
@@ -1271,7 +1271,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           Evidence for Effectiveness
         </h2>
         <p className="mb-6">
-          Research consistently shows group therapy is as effective as individual therapy for many conditions — and sometimes more effective, especially for interpersonal issues <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
+          Research consistently shows group therapy is as effective as individual therapy for many conditions --- and sometimes more effective, especially for interpersonal issues <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
         </p>
 
         <StatCard
@@ -1287,11 +1287,11 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           Group therapy has strong evidence for:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Depression</strong> — CBT groups and interpersonal groups show comparable outcomes to individual therapy <Citation id="4" index={4} source="Clinical Psychology Review" year="2021" tier={1} /></li>
-          <li><strong>Social anxiety</strong> — group exposure therapy is particularly effective (you practice social situations in real-time)</li>
-          <li><strong>Substance use disorders</strong> — group therapy is standard of care in most treatment programs</li>
-          <li><strong>Trauma</strong> — trauma-focused groups reduce PTSD symptoms while decreasing isolation <Citation id="8" index={8} source="Trauma, Violence, & Abuse" year="2021" tier={1} /></li>
-          <li><strong>Eating disorders</strong> — group therapy reduces shame and provides peer accountability</li>
+          <li><strong>Depression</strong> --- CBT groups and interpersonal groups show comparable outcomes to individual therapy <Citation id="4" index={4} source="Clinical Psychology Review" year="2021" tier={1} /></li>
+          <li><strong>Social anxiety</strong> --- group exposure therapy is particularly effective (you practice social situations in real-time)</li>
+          <li><strong>Substance use disorders</strong> --- group therapy is standard of care in most treatment programs</li>
+          <li><strong>Trauma</strong> --- trauma-focused groups reduce PTSD symptoms while decreasing isolation <Citation id="8" index={8} source="Trauma, Violence, & Abuse" year="2021" tier={1} /></li>
+          <li><strong>Eating disorders</strong> --- group therapy reduces shame and provides peer accountability</li>
         </ul>
 
         <ArticleCallout variant="clinical-note" title="Online Group Therapy">
@@ -1470,7 +1470,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Human beings are complex. Your depression might involve negative thought patterns, relationship dynamics, unprocessed grief, and biological factors — all at once. So why would one single therapeutic approach be enough? Integrative therapy recognizes that no single theory has all the answers, and draws from multiple evidence-based approaches to create treatment tailored to you <Citation id="1" index={1} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.
+            Human beings are complex. Your depression might involve negative thought patterns, relationship dynamics, unprocessed grief, and biological factors --- all at once. So why would one single therapeutic approach be enough? Integrative therapy recognizes that no single theory has all the answers, and draws from multiple evidence-based approaches to create treatment tailored to you <Citation id="1" index={1} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Rather than forcing you into a pre-set treatment model, integrative therapists adapt their approach to fit your unique needs, preferences, and goals. The question isn't "What's the one right therapy?" but "What combination of approaches will work best for this person, at this time, for this problem?" <Citation id="2" index={2} source="Oxford University Press" year="2019" tier={5} />
@@ -1481,7 +1481,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           What Is Integrative Therapy?
         </h2>
         <p className="mb-6">
-          Integrative therapy (also called pluralistic or eclectic therapy) combines elements from different therapeutic orientations — CBT, psychodynamic, humanistic, family systems, mindfulness, and more — into a cohesive treatment approach tailored to the individual.
+          Integrative therapy (also called pluralistic or eclectic therapy) combines elements from different therapeutic orientations --- CBT, psychodynamic, humanistic, family systems, mindfulness, and more --- into a cohesive treatment approach tailored to the individual.
         </p>
         <p className="mb-6">
           This isn't random mixing. Integrative therapists draw from a deep understanding of multiple theories and research on what works for whom. They make informed decisions about which techniques to use based on your presenting problems, personality, preferences, and what's working in the moment <Citation id="4" index={4} source="American Journal of Psychiatry" year="2021" tier={1} />.
@@ -1658,7 +1658,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
           Finding an Integrative Therapist
         </h2>
         <p className="mb-6">
-          Most therapists today practice some form of integration — surveys show 60-70% identify as "integrative" or "eclectic" <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />. But quality varies.
+          Most therapists today practice some form of integration --- surveys show 60-70% identify as "integrative" or "eclectic" <Citation id="6" index={6} source="Journal of Clinical Psychology" year="2021" tier={1} />. But quality varies.
         </p>
 
         <ArticleCallout variant="tip" title="How to Find Quality Integrative Therapy">
@@ -1686,7 +1686,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Integrative therapy reflects a core truth: people are more important than theories. The best therapy isn't the one with the most research or the trendiest technique — it's the one that works for you.
+          Integrative therapy reflects a core truth: people are more important than theories. The best therapy isn't the one with the most research or the trendiest technique --- it's the one that works for you.
         </p>
       </>
     ),

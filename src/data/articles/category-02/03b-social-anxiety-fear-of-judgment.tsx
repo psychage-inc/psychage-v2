@@ -106,10 +106,10 @@ export const socialAnxietyArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             The idea of a first date can feel paralyzing. What if you run out of things to say? What if they think
             you're boring? What if you can't make eye contact, or your voice shakes, or the silence becomes unbearable?
-            For people with social anxiety, dating isn't just nerve-wracking — it can feel impossible.
+            For people with social anxiety, dating isn't just nerve-wracking --- it can feel impossible.
           </p>
           <p className="mb-6">
-            Dating inherently involves vulnerability, evaluation, and uncertainty — the very things social anxiety
+            Dating inherently involves vulnerability, evaluation, and uncertainty --- the very things social anxiety
             tells you to avoid{', '}
             <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />.
             But connection is still possible. You don't have to overcome your anxiety completely to date successfully.
@@ -133,7 +133,7 @@ export const socialAnxietyArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>The fear:</strong> "They're evaluating me — my appearance, my personality, whether I'm
+                    <strong>The fear:</strong> "They're evaluating me --- my appearance, my personality, whether I'm
                     'good enough.' One wrong move and they'll reject me.'
                   </p>
                   <p>
@@ -151,7 +151,7 @@ export const socialAnxietyArticlesB: Article[] = [
                 <div>
                   <p className="mb-4">
                     <strong>The fear:</strong> "If I show who I really am, they'll see I'm anxious, awkward,
-                    inadequate — and they'll leave.'
+                    inadequate --- and they'll leave.'
                   </p>
                   <p>
                     Building intimacy requires opening up{', '}
@@ -168,12 +168,12 @@ export const socialAnxietyArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    <strong>The fear:</strong> "I have to be charming, interesting, confident — anything less and
+                    <strong>The fear:</strong> "I have to be charming, interesting, confident --- anything less and
                     they'll lose interest."
                   </p>
                   <p>
                     Social anxiety creates impossibly high standards for dating performance. You believe you need to be
-                    "on" constantly — witty, engaging, never awkward. This pressure makes you self-conscious, which
+                    "on" constantly --- witty, engaging, never awkward. This pressure makes you self-conscious, which
                     ironically creates the awkwardness you're trying to avoid.
                   </p>
                 </div>
@@ -289,7 +289,7 @@ export const socialAnxietyArticlesB: Article[] = [
               content: (
                 <ul className="list-disc pl-5 space-y-2">
                   <li>
-                    <strong>Activity dates:</strong> Bowling, mini golf, museum visits — shared focus reduces
+                    <strong>Activity dates:</strong> Bowling, mini golf, museum visits --- shared focus reduces
                     conversational pressure
                   </li>
                   <li>
@@ -344,9 +344,9 @@ export const socialAnxietyArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Listen actively to what they're saying, not to your internal critic</li>
-          <li>Notice details about them — their interests, humor, values</li>
+          <li>Notice details about them --- their interests, humor, values</li>
           <li>Ask follow-up questions based on genuine curiosity</li>
-          <li>Focus on the environment — the food, the activity, the surroundings</li>
+          <li>Focus on the environment --- the food, the activity, the surroundings</li>
         </ul>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -388,7 +388,7 @@ export const socialAnxietyArticlesB: Article[] = [
         <p className="mb-6">
           Online dating can be easier for people with social anxiety{', '}
           <Citation id="4" index={4} source="Cyberpsychology, Behavior, and Social Networking" year="2021" tier={1} />{', '}
-          — you control when and how you engage, have time to think before responding, and can filter for
+          --- you control when and how you engage, have time to think before responding, and can filter for
           compatibility before meeting.
         </p>
         <p className="mb-6">
@@ -464,7 +464,7 @@ export const socialAnxietyArticlesB: Article[] = [
           </li>
           <li>
             <strong>Framing:</strong> "I sometimes get anxious in social situations, so if I seem quiet or nervous,
-            that's why — not because I'm not enjoying this.'
+            that's why --- not because I'm not enjoying this.'
           </li>
           <li>
             <strong>Matter-of-fact tone:</strong> Don't apologize excessively. Present it as information, not a flaw.
@@ -472,7 +472,7 @@ export const socialAnxietyArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="The right person won't be scared off by your anxiety. They'll appreciate your honesty and work with you. If they're not willing to understand, they're not the right fit — and that's okay."
+          quote="The right person won't be scared off by your anxiety. They'll appreciate your honesty and work with you. If they're not willing to understand, they're not the right fit --- and that's okay."
           attribution="Core principle"
           role="Dating with Anxiety"
           variant="large"
@@ -508,10 +508,10 @@ export const socialAnxietyArticlesB: Article[] = [
           </p>
           <p className="mb-4">
             The right person won't require you to perform perfectly. They'll value authenticity over perfection,
-            connection over charisma. Your anxiety doesn't make you unlovable — it's just one part of you.
+            connection over charisma. Your anxiety doesn't make you unlovable --- it's just one part of you.
           </p>
           <p>
-            Keep showing up. Keep learning. And remember: every date that doesn't work out isn't a failure — it's
+            Keep showing up. Keep learning. And remember: every date that doesn't work out isn't a failure --- it's
             practice for when the right one comes along.
           </p>
         </ArticleCallout>
@@ -526,7 +526,7 @@ export const socialAnxietyArticlesB: Article[] = [
     id: catId(27),
     slug: 'why-social-anxiety-makes-you-avoid-eye-contact-phone-calls-and-small-talk',
     title: 'Why Social Anxiety Makes You Avoid Eye Contact, Phone Calls, and Small Talk',
-    description: 'Understand why social anxiety creates avoidance of specific behaviors like eye contact, phone calls, and small talk — and how to gradually build tolerance.',
+    description: 'Understand why social anxiety creates avoidance of specific behaviors like eye contact, phone calls, and small talk --- and how to gradually build tolerance.',
     image: "/images/articles/cat02/cover-027.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 6,
@@ -606,11 +606,11 @@ export const socialAnxietyArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You stare at your phone screen, willing yourself to make the call. But the thought of speaking in real-time,
             with no chance to edit or delete, feels unbearable. So you text instead. You avoid eye contact because
-            looking directly at someone feels too intense, too revealing. Small talk? It's meaningless chatter — why
+            looking directly at someone feels too intense, too revealing. Small talk? It's meaningless chatter --- why
             bother? But beneath these justifications, the real reason is simpler: these things provoke anxiety.
           </p>
           <p className="mb-6">
-            Social anxiety doesn't just create fear of social situations broadly — it targets specific behaviors that
+            Social anxiety doesn't just create fear of social situations broadly --- it targets specific behaviors that
             feel especially vulnerable{', '}
             <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. Eye contact, phone
             calls, and small talk are common avoidance patterns that maintain the disorder.
@@ -660,7 +660,7 @@ export const socialAnxietyArticlesB: Article[] = [
                 <div>
                   <p>
                     Eye contact creates a sense of connection and vulnerability. For people who fear judgment, that
-                    level of closeness feels dangerous — like you're inviting scrutiny.
+                    level of closeness feels dangerous --- like you're inviting scrutiny.
                   </p>
                 </div>
               ),
@@ -671,7 +671,7 @@ export const socialAnxietyArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Avoiding eye contact can make you appear disengaged, uninterested, or untrustworthy — the very
+                    Avoiding eye contact can make you appear disengaged, uninterested, or untrustworthy --- the very
                     negative impression you're trying to avoid. It also prevents you from reading social cues,
                     making interactions harder.
                   </p>
@@ -698,11 +698,11 @@ export const socialAnxietyArticlesB: Article[] = [
             title: 'Why Phone Calls Feel Threatening',
             content: (
               <ul className="list-disc pl-5 space-y-2">
-                <li>Real-time conversation — no chance to edit, revise, or think before responding</li>
+                <li>Real-time conversation --- no chance to edit, revise, or think before responding</li>
                 <li>Can't see facial expressions or body language to gauge reactions</li>
                 <li>Fear of awkward silences becoming painfully obvious</li>
-                <li>Worry about sounding nervous — voice shaking, stumbling over words</li>
-                <li>No escape — once the call starts, you're committed</li>
+                <li>Worry about sounding nervous --- voice shaking, stumbling over words</li>
+                <li>No escape --- once the call starts, you're committed</li>
               </ul>
             ),
           }}
@@ -714,7 +714,7 @@ export const socialAnxietyArticlesB: Article[] = [
                 <li>Ability to delete and rewrite before sending</li>
                 <li>Can pause or delay response without it being obvious</li>
                 <li>No voice to betray nervousness</li>
-                <li>Lower stakes — can disengage anytime</li>
+                <li>Lower stakes --- can disengage anytime</li>
               </ul>
             ),
           }}
@@ -722,7 +722,7 @@ export const socialAnxietyArticlesB: Article[] = [
 
         <p className="mb-6">
           <strong>The trade-off:</strong> Texting reduces anxiety short-term but prevents you from building tolerance
-          for real-time conversation. It also limits depth of connection — many conversations require the nuance that
+          for real-time conversation. It also limits depth of connection --- many conversations require the nuance that
           voice provides.
         </p>
 
@@ -730,7 +730,7 @@ export const socialAnxietyArticlesB: Article[] = [
           Small Talk: "It's Meaningless and Awkward"
         </h3>
         <p className="mb-6">
-          Small talk — brief, surface-level conversation about neutral topics (weather, weekend plans, etc.) — serves
+          Small talk --- brief, surface-level conversation about neutral topics (weather, weekend plans, etc.) --- serves
           an important social function{', '}
           <Citation id="4" index={4} source="Journal of Social and Clinical Psychology" year="2021" tier={1} />: it's a
           low-stakes way to initiate connection, signal friendliness, and ease into deeper conversation.
@@ -767,7 +767,7 @@ export const socialAnxietyArticlesB: Article[] = [
           How Avoidance Maintains Social Anxiety
         </h2>
         <p className="mb-6">
-          Avoidance provides immediate relief — if you don't make eye contact, don't make the call, don't engage in
+          Avoidance provides immediate relief --- if you don't make eye contact, don't make the call, don't engage in
           small talk, you don't feel anxious. But this short-term relief comes at a long-term cost{', '}
           <Citation id="6" index={5} source="Psychological Bulletin" year="2021" tier={1} />:
         </p>
@@ -908,7 +908,7 @@ export const socialAnxietyArticlesB: Article[] = [
               title: 'Step 4: Work-related calls',
               description: (
                 <p>
-                  Make professional calls — following up on emails, scheduling meetings, asking questions. Prepare a
+                  Make professional calls --- following up on emails, scheduling meetings, asking questions. Prepare a
                   brief outline but don't script word-for-word.
                 </p>
               ),
@@ -936,7 +936,7 @@ export const socialAnxietyArticlesB: Article[] = [
               title: 'Step 1: Minimal engagement',
               description: (
                 <p>
-                  Smile and say 'hi' to neighbors, coworkers in passing. No extended conversation — just acknowledgment.
+                  Smile and say 'hi' to neighbors, coworkers in passing. No extended conversation --- just acknowledgment.
                 </p>
               ),
             },
@@ -1024,7 +1024,7 @@ export const socialAnxietyArticlesB: Article[] = [
               label: 'Expect Discomfort',
               content: (
                 <p>
-                  Exposure should be uncomfortable — that's the point. You're teaching your brain that discomfort is
+                  Exposure should be uncomfortable --- that's the point. You're teaching your brain that discomfort is
                   tolerable, not dangerous.
                 </p>
               ),
@@ -1036,7 +1036,7 @@ export const socialAnxietyArticlesB: Article[] = [
           <p className="mb-4">
             <strong>You're not avoiding these behaviors because you lack the skill.</strong> Research shows people with
             social anxiety often have intact social skills{', '}
-            <Citation id="7" index={8} source="Behavior Therapy" year="2020" tier={1} /> — anxiety just inhibits their
+            <Citation id="7" index={8} source="Behavior Therapy" year="2020" tier={1} /> --- anxiety just inhibits their
             use.
           </p>
           <p className="mb-4">
@@ -1045,7 +1045,7 @@ export const socialAnxietyArticlesB: Article[] = [
           </p>
           <p>
             The discomfort won't disappear overnight. But it will lessen. And with practice, these once-avoided
-            behaviors can become manageable, even automatic. You're capable — you just need to prove it to yourself,
+            behaviors can become manageable, even automatic. You're capable --- you just need to prove it to yourself,
             one small step at a time.
           </p>
         </ArticleCallout>
@@ -1060,7 +1060,7 @@ export const socialAnxietyArticlesB: Article[] = [
     id: catId(28),
     slug: 'selective-mutism-in-adults-when-anxiety-steals-your-voice',
     title: 'Selective Mutism in Adults: When Anxiety Steals Your Voice',
-    description: 'Explore selective mutism in adults — a rare form of social anxiety where speech becomes impossible in specific situations, despite the ability to speak in others.',
+    description: 'Explore selective mutism in adults --- a rare form of social anxiety where speech becomes impossible in specific situations, despite the ability to speak in others.',
     image: "/images/articles/cat02/cover-028.svg",
     category: CATEGORY_ANXIETY_STRESS,
     readTime: 9,
@@ -1156,10 +1156,10 @@ export const socialAnxietyArticlesB: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You can speak at home. You can speak with close friends. But at work, in class, or with strangers, the
             words simply won't come. Your throat tightens. Your voice vanishes. It's not that you're choosing silence
-            — you're frozen, unable to produce sound despite desperately wanting to speak.
+            --- you're frozen, unable to produce sound despite desperately wanting to speak.
           </p>
           <p className="mb-6">
-            This is selective mutism in adults — a rare and often misunderstood manifestation of severe social anxiety
+            This is selective mutism in adults --- a rare and often misunderstood manifestation of severe social anxiety
             where speech becomes physically impossible in specific situations{', '}
             <Citation id="1" index={1} source="Journal of Anxiety Disorders" year="2021" tier={1} />. It's not
             shyness, not stubbornness, not a choice. It's an anxiety disorder that hijacks your ability to speak.
@@ -1229,23 +1229,23 @@ export const socialAnxietyArticlesB: Article[] = [
           items={[
             {
               feature: 'At home with immediate family',
-              values: ['Yes — fluent, normal speech', 'No — silence or minimal speech'],
+              values: ['Yes --- fluent, normal speech', 'No --- silence or minimal speech'],
             },
             {
               feature: 'With close friends (1-on-1)',
-              values: ['Yes — comfortable', 'Depends — may be difficult'],
+              values: ['Yes --- comfortable', 'Depends --- may be difficult'],
             },
             {
               feature: 'At work or school',
-              values: ['No — mute or whispered speech', 'Yes — impossible to speak up'],
+              values: ['No --- mute or whispered speech', 'Yes --- impossible to speak up'],
             },
             {
               feature: 'With strangers or authority figures',
-              values: ['No — complete mutism', 'Yes — frozen voice'],
+              values: ['No --- complete mutism', 'Yes --- frozen voice'],
             },
             {
               feature: 'In group settings',
-              values: ['No — cannot participate verbally', 'Yes — overwhelming anxiety'],
+              values: ['No --- cannot participate verbally', 'Yes --- overwhelming anxiety'],
             },
           ]}
         />
@@ -1291,7 +1291,7 @@ export const socialAnxietyArticlesB: Article[] = [
 
         <p className="mb-6">
           <strong>Key difference:</strong> In SAD, anxiety makes speaking <em>difficult and uncomfortable</em>. In SM,
-          anxiety makes speaking <em>impossible</em> — a complete freeze response rather than just heightened
+          anxiety makes speaking <em>impossible</em> --- a complete freeze response rather than just heightened
           nervousness.
         </p>
 
@@ -1457,7 +1457,7 @@ export const socialAnxietyArticlesB: Article[] = [
             {
               title: 'Step 2: Vocalizations (non-words)',
               description: (
-                <p>Humming, laughing, clearing throat — sounds without actual speech. Builds tolerance for voice use.</p>
+                <p>Humming, laughing, clearing throat --- sounds without actual speech. Builds tolerance for voice use.</p>
               ),
             },
             {
@@ -1475,7 +1475,7 @@ export const socialAnxietyArticlesB: Article[] = [
             {
               title: 'Step 6: Spontaneous speech',
               description: (
-                <p>Speaking without preparation or prompting in a variety of situations — the ultimate goal.</p>
+                <p>Speaking without preparation or prompting in a variety of situations --- the ultimate goal.</p>
               ),
             },
           ]}
@@ -1496,7 +1496,7 @@ export const socialAnxietyArticlesB: Article[] = [
             <strong>Mechanism:</strong> Reduce overall anxiety, making exposure therapy more tolerable
           </li>
           <li>
-            <strong>Effectiveness:</strong> Medication alone is rarely sufficient — combined with therapy, outcomes
+            <strong>Effectiveness:</strong> Medication alone is rarely sufficient --- combined with therapy, outcomes
             improve significantly
           </li>
         </ul>
@@ -1517,7 +1517,7 @@ export const socialAnxietyArticlesB: Article[] = [
         </h2>
         <p className="mb-6">
           With treatment, many adults with selective mutism can make significant progress. Recovery is not always
-          complete — some may continue to experience anxiety in speaking situations — but functional improvement is
+          complete --- some may continue to experience anxiety in speaking situations --- but functional improvement is
           possible{', '}
           <Citation id="10" index={10} source="Anxiety, Stress, and Coping" year="2020" tier={1} />.
         </p>
@@ -1534,7 +1534,7 @@ export const socialAnxietyArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="Your voice is not gone — it's trapped by fear. With the right treatment and support, you can reclaim it. It won't happen overnight, but small steps forward are still forward."
+          quote="Your voice is not gone --- it's trapped by fear. With the right treatment and support, you can reclaim it. It won't happen overnight, but small steps forward are still forward."
           attribution="Core message"
           role="Treating Selective Mutism"
           variant="large"
@@ -1547,7 +1547,7 @@ export const socialAnxietyArticlesB: Article[] = [
           </p>
           <p className="mb-4">
             If you or someone you know experiences this, seek a mental health professional with experience in anxiety
-            disorders and selective mutism. Treatment works — gradual exposure, cognitive restructuring, and often
+            disorders and selective mutism. Treatment works --- gradual exposure, cognitive restructuring, and often
             medication can help restore the ability to speak in situations where it once felt impossible.
           </p>
           <p>

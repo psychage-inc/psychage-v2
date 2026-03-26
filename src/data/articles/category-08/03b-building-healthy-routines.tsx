@@ -113,23 +113,23 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <p className="mb-6 lead">
-          You spent weeks building a morning routine. Then your partner got sick, your work schedule shifted, or you moved to a new city. Suddenly, the 6 AM journaling and the 7:15 yoga feel impossible. Research shows this isn't failure—it's the nature of routine disruption. The question isn't how to maintain rigidity during chaos. It's how to adapt without losing the core benefits of structure.
+          You spent weeks building a morning routine. Then your partner got sick, your work schedule shifted, or you moved to a new city. Suddenly, the 6 AM journaling and the 7:15 yoga feel impossible. Research shows this isn't failure---it's the nature of routine disruption. The question isn't how to maintain rigidity during chaos. It's how to adapt without losing the core benefits of structure.
         </p>
 
         <ArticleCallout variant="info" title="Key Insight">
           <p>
-            A 2021 study in <em>Health Psychology Review</em> found that major life transitions (relocation, job change, illness, relationship shift) disrupt 40–60% of established routines. Flexible adaptation—not rigid adherence—predicted long-term habit retention. People who maintained "chaos mode" versions of routines were 3× more likely to return to full routines after transitions stabilized.
+            A 2021 study in <em>Health Psychology Review</em> found that major life transitions (relocation, job change, illness, relationship shift) disrupt 40--60% of established routines. Flexible adaptation---not rigid adherence---predicted long-term habit retention. People who maintained "chaos mode" versions of routines were 3× more likely to return to full routines after transitions stabilized.
           </p>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">Why Chaos Breaks Routines (and Why That's Normal)</h2>
 
         <p className="mb-6">
-          Routines depend on <strong>stable environmental cues</strong>—the same bedroom, the same morning light, the same 30-minute window before work. When life disrupts these anchors, the automaticity collapses. You're not weak. Your cues disappeared.
+          Routines depend on <strong>stable environmental cues</strong>---the same bedroom, the same morning light, the same 30-minute window before work. When life disrupts these anchors, the automaticity collapses. You're not weak. Your cues disappeared.
         </p>
 
         <StatCard
-          stat="40–60%"
+          stat="40--60%"
           description="of established routines disrupted by major life transitions (relocation, job change, illness)"
           source="Health Psychology Review, 2021"
           citation="5"
@@ -167,13 +167,13 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The American Journal of Psychiatry (2020) found that people who blamed themselves for losing routines during transitions showed worse mental health outcomes than those who attributed disruption to external factors. Self-compassion during chaos isn't optional—it's protective.
+          The American Journal of Psychiatry (2020) found that people who blamed themselves for losing routines during transitions showed worse mental health outcomes than those who attributed disruption to external factors. Self-compassion during chaos isn't optional---it's protective.
         </p>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">The "Chaos Mode" Framework: Three Routine Tiers</h2>
 
         <p className="mb-6">
-          Instead of one rigid routine, build three versions—ideal, moderate, and survival. When chaos hits, you shift tiers without abandoning structure entirely.
+          Instead of one rigid routine, build three versions---ideal, moderate, and survival. When chaos hits, you shift tiers without abandoning structure entirely.
         </p>
 
         <ArticleTabs
@@ -183,7 +183,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>When to use:</strong> Normal life—stable schedule, predictable commitments, adequate sleep.
+                    <strong>When to use:</strong> Normal life---stable schedule, predictable commitments, adequate sleep.
                   </p>
                   <p className="mb-4">
                     <strong>Example morning routine:</strong>
@@ -206,7 +206,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>When to use:</strong> Moderate disruption—busier work week, minor illness, temporary schedule change.
+                    <strong>When to use:</strong> Moderate disruption---busier work week, minor illness, temporary schedule change.
                   </p>
                   <p className="mb-4">
                     <strong>Example morning routine:</strong>
@@ -218,7 +218,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Quick breakfast</li>
                   </ul>
                   <p>
-                    <strong>Total time commitment:</strong> 20–30 minutes
+                    <strong>Total time commitment:</strong> 20--30 minutes
                   </p>
                 </>
               ),
@@ -228,7 +228,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>When to use:</strong> Crisis mode—illness, new baby, major life transition, bereavement.
+                    <strong>When to use:</strong> Crisis mode---illness, new baby, major life transition, bereavement.
                   </p>
                   <p className="mb-4">
                     <strong>Example morning routine:</strong>
@@ -240,7 +240,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>1 minute: Set one small intention for the day</li>
                   </ul>
                   <p>
-                    <strong>Total time commitment:</strong> 3–5 minutes
+                    <strong>Total time commitment:</strong> 3--5 minutes
                   </p>
                   <p className="mt-4 text-sm text-gray-600">
                     <em>Note:</em> This isn't "giving up." It's maintaining the <em>identity</em> of "someone who has a routine" even when the routine itself is minimal. That identity matters more than the time investment.
@@ -253,7 +253,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Implementation Strategy">
           <p>
-            Write out all three tiers in advance—not when you're in crisis. Attach each tier to specific triggers: "If I get less than 5 hours sleep → Tier 3. If work adds a major deadline → Tier 2." Decision fatigue disappears when the plan is pre-made.
+            Write out all three tiers in advance---not when you're in crisis. Attach each tier to specific triggers: "If I get less than 5 hours sleep → Tier 3. If work adds a major deadline → Tier 2." Decision fatigue disappears when the plan is pre-made.
           </p>
         </ArticleCallout>
 
@@ -278,14 +278,14 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             items: [
               "I'll protect the 2-3 elements that matter most",
               'Partial completion still delivers real benefits',
-              'Life disrupts routines—adaptation is a skill, not a failure',
+              'Life disrupts routines---adaptation is a skill, not a failure',
               'Flexibility during chaos is resilience, not weakness',
             ],
           }}
         />
 
         <p className="mb-6 mt-6">
-          Research on <strong>psychological flexibility</strong> (Clinical Psychology Review, 2010) consistently links adaptive coping—adjusting behaviors to match circumstances—with better mental health outcomes, lower anxiety, and faster recovery from stressors.
+          Research on <strong>psychological flexibility</strong> (Clinical Psychology Review, 2010) consistently links adaptive coping---adjusting behaviors to match circumstances---with better mental health outcomes, lower anxiety, and faster recovery from stressors.
         </p>
 
         <h3 className="text-xl font-semibold mb-3 mt-6">Identify Your Non-Negotiables</h3>
@@ -320,7 +320,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">The "If-Then" Plan for Disruption</h2>
 
         <p className="mb-6">
-          Implementation intentions—"If X happens, then I will do Y"—are powerful during chaos. They remove decision-making from moments when you have the least capacity.
+          Implementation intentions---"If X happens, then I will do Y"---are powerful during chaos. They remove decision-making from moments when you have the least capacity.
         </p>
 
         <ProgressSteps
@@ -357,7 +357,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Self-Compassion During the Rebuild</h2>
 
         <p className="mb-6">
-          After chaos stabilizes, the return to routines isn't instant. Most people expect to "get back to normal" immediately—then feel shame when it takes weeks. Research shows self-compassion accelerates habit re-formation.
+          After chaos stabilizes, the return to routines isn't instant. Most people expect to "get back to normal" immediately---then feel shame when it takes weeks. Research shows self-compassion accelerates habit re-formation.
         </p>
 
         <ArticleChart
@@ -390,7 +390,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             ],
             [
               'I should be back to normal by now',
-              "Rebuilding takes time—I'm doing it",
+              "Rebuilding takes time---I'm doing it",
               'Normalizes gradual recovery, reduces shame'
             ],
             [
@@ -407,17 +407,17 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The compassionate rebuild isn't coddling—it's strategic. Shame activates threat response (cortisol, amygdala activation), which impairs executive function and habit formation. Self-compassion activates the caregiving system (oxytocin, prefrontal engagement), which supports goal pursuit.
+          The compassionate rebuild isn't coddling---it's strategic. Shame activates threat response (cortisol, amygdala activation), which impairs executive function and habit formation. Self-compassion activates the caregiving system (oxytocin, prefrontal engagement), which supports goal pursuit.
         </p>
 
         <ArticleCallout variant="success" title="The Real Skill">
           <p>
-            The goal isn't to never lose your routine. Life will disrupt it—sometimes catastrophically. The real skill is <strong>adaptive return</strong>: recognizing when chaos has subsided enough to rebuild, starting with the smallest version that feels doable, and trusting that consistency will compound again. Flexibility isn't the opposite of discipline. It's what makes discipline sustainable over decades.
+            The goal isn't to never lose your routine. Life will disrupt it---sometimes catastrophically. The real skill is <strong>adaptive return</strong>: recognizing when chaos has subsided enough to rebuild, starting with the smallest version that feels doable, and trusting that consistency will compound again. Flexibility isn't the opposite of discipline. It's what makes discipline sustainable over decades.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="The people who maintain mental health routines for years aren't the ones who never break them. They're the ones who know how to come back after chaos—without shame, with strategy, and with self-compassion."
+          quote="The people who maintain mental health routines for years aren't the ones who never break them. They're the ones who know how to come back after chaos---without shame, with strategy, and with self-compassion."
           author="Dr. Elena Martinez"
           role="Clinical Psychologist"
         />
@@ -430,7 +430,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     id: catId(27),
     slug: 'midday-reset-routine-prevent-afternoon-crash',
     title: 'Building a Midday Reset Routine to Prevent the Afternoon Crash',
-    description: 'Research-backed strategies to maintain energy, focus, and emotional regulation through the afternoon slump—without relying on caffeine.',
+    description: 'Research-backed strategies to maintain energy, focus, and emotional regulation through the afternoon slump---without relying on caffeine.',
     image: "/images/articles/cat08/cover-027.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 7,
@@ -523,19 +523,19 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <p className="mb-6 lead">
-          By 2 PM, most people feel the crash—focus dissolves, mood drops, decision-making quality plummets. The typical response is another coffee, which works temporarily but worsens the cycle. Research shows the afternoon slump isn't a willpower problem—it's circadian biology. A structured midday reset can counteract it without caffeine dependence.
+          By 2 PM, most people feel the crash---focus dissolves, mood drops, decision-making quality plummets. The typical response is another coffee, which works temporarily but worsens the cycle. Research shows the afternoon slump isn't a willpower problem---it's circadian biology. A structured midday reset can counteract it without caffeine dependence.
         </p>
 
         <StatCard
-          stat="15–30%"
-          description="decline in cognitive performance during post-lunch dip (1–3 PM) compared to morning peak"
+          stat="15--30%"
+          description="decline in cognitive performance during post-lunch dip (1--3 PM) compared to morning peak"
           source="Chronobiology International, 2020"
           citation="1"
         />
 
         <ArticleCallout variant="info" title="Why the Afternoon Crash Happens">
           <p>
-            The post-lunch dip is driven by <strong>circadian rhythm</strong> (natural alertness cycles), <strong>postprandial response</strong> (blood glucose and insulin shifts after eating), and <strong>accumulated cognitive load</strong> from morning work. It's not laziness—it's biology. A midday reset addresses all three drivers.
+            The post-lunch dip is driven by <strong>circadian rhythm</strong> (natural alertness cycles), <strong>postprandial response</strong> (blood glucose and insulin shifts after eating), and <strong>accumulated cognitive load</strong> from morning work. It's not laziness---it's biology. A midday reset addresses all three drivers.
           </p>
         </ArticleCallout>
 
@@ -552,7 +552,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>Why:</strong> A 2020 study in <em>Journal of Occupational Health Psychology</em> found that 5-minute walking breaks improved focus and reduced fatigue more than sitting breaks—even when participants reported feeling "too tired to move."
+                    <strong>Why:</strong> A 2020 study in <em>Journal of Occupational Health Psychology</em> found that 5-minute walking breaks improved focus and reduced fatigue more than sitting breaks---even when participants reported feeling "too tired to move."
                   </p>
                   <p className="mb-4">
                     <strong>Options:</strong>
@@ -564,7 +564,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li>Desk-based yoga sequence</li>
                   </ul>
                   <p className="mt-4 text-sm text-gray-600">
-                    The goal is <em>activation without exhaustion</em>—gentle movement to increase blood flow and shift posture.
+                    The goal is <em>activation without exhaustion</em>---gentle movement to increase blood flow and shift posture.
                   </p>
                 </>
               ),
@@ -574,13 +574,13 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>Why:</strong> Circadian research (Nature Reviews Neuroscience, 2022) shows that midday light exposure—even 5–10 minutes—helps maintain alertness by reinforcing circadian alignment. Indoor lighting is insufficient (300–500 lux vs. 10,000+ lux outdoors).
+                    <strong>Why:</strong> Circadian research (Nature Reviews Neuroscience, 2022) shows that midday light exposure---even 5--10 minutes---helps maintain alertness by reinforcing circadian alignment. Indoor lighting is insufficient (300--500 lux vs. 10,000+ lux outdoors).
                   </p>
                   <p className="mb-4">
                     <strong>How:</strong>
                   </p>
                   <ul className="list-disc list-inside space-y-2">
-                    <li>Step outside for 3–5 minutes (no sunglasses)</li>
+                    <li>Step outside for 3--5 minutes (no sunglasses)</li>
                     <li>Sit near a window with direct sunlight</li>
                     <li>If outdoors isn't possible: use a 10,000-lux light therapy lamp</li>
                   </ul>
@@ -614,16 +614,16 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>Why:</strong> The brain struggles with abrupt task switches. A brief transition ritual helps close the morning chapter and set intention for afternoon priorities—reducing decision fatigue.
+                    <strong>Why:</strong> The brain struggles with abrupt task switches. A brief transition ritual helps close the morning chapter and set intention for afternoon priorities---reducing decision fatigue.
                   </p>
                   <p className="mb-4">
                     <strong>Micro-ritual options:</strong>
                   </p>
                   <ul className="list-disc list-inside space-y-2">
                     <li><strong>Brain dump:</strong> Write 1-minute list of everything on your mind → then put it aside</li>
-                    <li><strong>Energy audit:</strong> Rate energy 1–10, identify one small boost if needed</li>
+                    <li><strong>Energy audit:</strong> Rate energy 1--10, identify one small boost if needed</li>
                     <li><strong>Afternoon intention:</strong> "What's the one thing that matters most this afternoon?"</li>
-                    <li><strong>Gratitude pause:</strong> Name 2–3 things that went well this morning</li>
+                    <li><strong>Gratitude pause:</strong> Name 2--3 things that went well this morning</li>
                   </ul>
                 </>
               ),
@@ -633,14 +633,14 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Schedule It">
           <p>
-            The protocol works best at the same time daily—12:30–1:30 PM for most circadian rhythms. Block 15 minutes on your calendar as "Midday Reset"—not "break" (which feels optional). Treat it as infrastructure, not indulgence.
+            The protocol works best at the same time daily---12:30--1:30 PM for most circadian rhythms. Block 15 minutes on your calendar as "Midday Reset"---not "break" (which feels optional). Treat it as infrastructure, not indulgence.
           </p>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">The Caffeine Question: Strategic Use vs. Dependence</h2>
 
         <p className="mb-6">
-          Caffeine isn't inherently problematic—but timing and tolerance matter. Research in <em>Psychopharmacology</em> (2020) shows afternoon caffeine (after 2 PM) disrupts sleep architecture even when people fall asleep normally. Sleep disruption perpetuates the next day's crash—creating a vicious cycle.
+          Caffeine isn't inherently problematic---but timing and tolerance matter. Research in <em>Psychopharmacology</em> (2020) shows afternoon caffeine (after 2 PM) disrupts sleep architecture even when people fall asleep normally. Sleep disruption perpetuates the next day's crash---creating a vicious cycle.
         </p>
 
         <BeforeAfter
@@ -665,13 +665,13 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          If you need an afternoon boost: prioritize movement, light, and hydration first. If caffeine is still needed, limit to before 2 PM and pair with a 20-minute nap (caffeine takes ~20 minutes to kick in—the "coffee nap").
+          If you need an afternoon boost: prioritize movement, light, and hydration first. If caffeine is still needed, limit to before 2 PM and pair with a 20-minute nap (caffeine takes ~20 minutes to kick in---the "coffee nap").
         </p>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">What to Eat (and When) to Avoid the Crash</h2>
 
         <p className="mb-6">
-          The postprandial (after-meal) energy dip is driven by glucose and insulin spikes. A 2021 study in <em>Nutrients</em> found that meal composition significantly affects afternoon energy—more than total calories.
+          The postprandial (after-meal) energy dip is driven by glucose and insulin spikes. A 2021 study in <em>Nutrients</em> found that meal composition significantly affects afternoon energy---more than total calories.
         </p>
 
         <ComparisonTable
@@ -680,7 +680,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             [
               'High-carb, low-protein (pasta, white bread)',
               'Sharp glucose spike → insulin surge → crash',
-              'Severe slump 1–2 hours post-meal'
+              'Severe slump 1--2 hours post-meal'
             ],
             [
               'High-protein, moderate fat (chicken salad, nuts)',
@@ -702,36 +702,36 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Practical Lunch Strategy">
           <ul className="list-disc list-inside space-y-2">
-            <li><strong>Prioritize protein:</strong> 25–30g per meal (palm-sized portion of chicken, fish, tofu, legumes)</li>
+            <li><strong>Prioritize protein:</strong> 25--30g per meal (palm-sized portion of chicken, fish, tofu, legumes)</li>
             <li><strong>Add fiber:</strong> Vegetables, whole grains, legumes slow glucose absorption</li>
             <li><strong>Limit refined carbs:</strong> White bread, pasta, sugary foods spike and crash blood sugar</li>
-            <li><strong>Hydrate:</strong> Dehydration mimics fatigue—drink 16 oz water with lunch</li>
+            <li><strong>Hydrate:</strong> Dehydration mimics fatigue---drink 16 oz water with lunch</li>
           </ul>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">The Power Nap Option</h2>
 
         <p className="mb-6">
-          If your schedule allows, a 10–20 minute nap is one of the most effective midday interventions. Research in <em>Sleep Medicine Reviews</em> (2021) found that brief naps improve alertness, memory consolidation, and mood—without sleep inertia (grogginess).
+          If your schedule allows, a 10--20 minute nap is one of the most effective midday interventions. Research in <em>Sleep Medicine Reviews</em> (2021) found that brief naps improve alertness, memory consolidation, and mood---without sleep inertia (grogginess).
         </p>
 
         <ArticleAccordion
           items={[
             {
-              title: 'Optimal Duration: 10–20 Minutes',
-              content: `This is 'Stage 2' sleep—restorative without entering deep sleep (which causes grogginess). Set a timer. Anything longer risks sleep inertia unless you complete a full 90-minute cycle.`,
+              title: 'Optimal Duration: 10--20 Minutes',
+              content: `This is 'Stage 2' sleep---restorative without entering deep sleep (which causes grogginess). Set a timer. Anything longer risks sleep inertia unless you complete a full 90-minute cycle.`,
             },
             {
-              title: 'Best Timing: 12:30–2:30 PM',
+              title: 'Best Timing: 12:30--2:30 PM',
               content: 'Aligns with the circadian dip. Napping later (after 3 PM) can interfere with nighttime sleep.',
             },
             {
               title: 'Environment: Dark, Quiet, Cool',
-              content: `Use eye mask, earplugs if needed. Recline in a chair or find a quiet space—you don't need a bed. The goal is rest, not deep sleep.`,
+              content: `Use eye mask, earplugs if needed. Recline in a chair or find a quiet space---you don't need a bed. The goal is rest, not deep sleep.`,
             },
             {
               title: `The 'Coffee Nap' Hack`,
-              content: 'Drink coffee immediately before a 20-minute nap. Caffeine takes ~20 minutes to kick in, so you wake up as it activates—synergistic effect. Research shows this combo outperforms either intervention alone.',
+              content: 'Drink coffee immediately before a 20-minute nap. Caffeine takes ~20 minutes to kick in, so you wake up as it activates---synergistic effect. Research shows this combo outperforms either intervention alone.',
             },
           ]}
         />
@@ -745,7 +745,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Social Connection as a Reset</h2>
 
         <p className="mb-6">
-          A 2022 study in <em>Journal of Applied Psychology</em> found that brief social interactions during work breaks improved mood and afternoon productivity—more than solitary breaks of the same duration. The key is <strong>positive social engagement</strong> (not venting or gossip).
+          A 2022 study in <em>Journal of Applied Psychology</em> found that brief social interactions during work breaks improved mood and afternoon productivity---more than solitary breaks of the same duration. The key is <strong>positive social engagement</strong> (not venting or gossip).
         </p>
 
         <ComparisonTable
@@ -765,7 +765,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Building the Habit: Start Small</h2>
 
         <p className="mb-6">
-          Most people fail at midday routines because they try to implement the full protocol immediately—then abandon it when life gets busy. Start with the smallest version that feels doable.
+          Most people fail at midday routines because they try to implement the full protocol immediately---then abandon it when life gets busy. Start with the smallest version that feels doable.
         </p>
 
         <ProgressSteps
@@ -795,12 +795,12 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="success" title="The Payoff">
           <p>
-            The midday reset isn't about maximizing productivity—it's about maintaining baseline cognitive and emotional function through the hardest part of the day. Research shows people who implement structured midday breaks report 20–30% less afternoon fatigue, better decision-making, and improved mood compared to those who power through. The 15 minutes you spend resetting saves hours of low-quality, effortful work.
+            The midday reset isn't about maximizing productivity---it's about maintaining baseline cognitive and emotional function through the hardest part of the day. Research shows people who implement structured midday breaks report 20--30% less afternoon fatigue, better decision-making, and improved mood compared to those who power through. The 15 minutes you spend resetting saves hours of low-quality, effortful work.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="The afternoon slump isn't optional—but suffering through it is. A midday reset is infrastructure for your brain, not a luxury."
+          quote="The afternoon slump isn't optional---but suffering through it is. A midday reset is infrastructure for your brain, not a luxury."
           author="Dr. Michael Chen"
           role="Sleep and Performance Researcher"
         />
@@ -906,7 +906,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <p className="mb-6 lead">
-          You maintain a strong weekday routine—consistent wake time, exercise, healthy meals. Then Friday night hits, and you abandon it all: sleeping until noon, skipping workouts, eating whatever. By Sunday evening, you feel worse than you did Friday. This pattern is common—but research shows it's not the "freedom" that causes the problem. It's the <em>whiplash</em> from structure to chaos and back.
+          You maintain a strong weekday routine---consistent wake time, exercise, healthy meals. Then Friday night hits, and you abandon it all: sleeping until noon, skipping workouts, eating whatever. By Sunday evening, you feel worse than you did Friday. This pattern is common---but research shows it's not the "freedom" that causes the problem. It's the <em>whiplash</em> from structure to chaos and back.
         </p>
 
         <StatCard
@@ -925,7 +925,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Social Jetlag: Why Weekend Sleep Swings Hurt</h2>
 
         <p className="mb-6">
-          <strong>Social jetlag</strong> is the misalignment between your biological clock (circadian rhythm) and your social schedule (work, school). Most people accumulate sleep debt during the week, then "catch up" on weekends—sleeping 2–4 hours later. Research shows this pattern has real metabolic and mental health consequences.
+          <strong>Social jetlag</strong> is the misalignment between your biological clock (circadian rhythm) and your social schedule (work, school). Most people accumulate sleep debt during the week, then "catch up" on weekends---sleeping 2--4 hours later. Research shows this pattern has real metabolic and mental health consequences.
         </p>
 
         <ComparisonTable
@@ -938,7 +938,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               'Smooth transition'
             ],
             [
-              'Moderate shift (1–2 hours)',
+              'Moderate shift (1--2 hours)',
               'Mild misalignment',
               'Slightly worse mood, minor fatigue',
               'Minor grogginess Monday'
@@ -958,14 +958,14 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="warning" title="The Weekend Catch-Up Myth">
           <p>
-            Research in <em>Sleep Medicine Reviews</em> (2022) debunked the idea that weekend catch-up sleep fully compensates for weekday sleep debt. While it provides <em>some</em> recovery (better than no catch-up), it doesn't reverse metabolic or cognitive impairments—and the circadian whiplash causes its own problems. The better solution: slightly more weekday sleep + modest weekend consistency.
+            Research in <em>Sleep Medicine Reviews</em> (2022) debunked the idea that weekend catch-up sleep fully compensates for weekday sleep debt. While it provides <em>some</em> recovery (better than no catch-up), it doesn't reverse metabolic or cognitive impairments---and the circadian whiplash causes its own problems. The better solution: slightly more weekday sleep + modest weekend consistency.
           </p>
         </ArticleCallout>
 
         <h3 className="text-xl font-semibold mb-3 mt-6">The Sleep Consistency Rule</h3>
 
         <p className="mb-6">
-          Aim for <strong>±1 hour consistency</strong> between weekday and weekend wake times. If you wake at 6:30 AM weekdays, target 7:00–7:30 AM weekends—not 11 AM.
+          Aim for <strong>±1 hour consistency</strong> between weekday and weekend wake times. If you wake at 6:30 AM weekdays, target 7:00--7:30 AM weekends---not 11 AM.
         </p>
 
         <BeforeAfter
@@ -1007,11 +1007,11 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                 <>
                   <h4 className="font-semibold mb-3">Core Routines Worth Keeping</h4>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Wake time</strong> (±1 hour) — circadian stability</li>
-                    <li><strong>Morning light exposure</strong> (even 5 minutes) — mood + sleep quality</li>
-                    <li><strong>Movement</strong> (can be different form: long walk vs. gym) — mental health anchor</li>
-                    <li><strong>One meal with structure</strong> (e.g., sit-down breakfast) — grounds the day</li>
-                    <li><strong>Evening wind-down</strong> (even relaxed version) — sleep preparation</li>
+                    <li><strong>Wake time</strong> (±1 hour) --- circadian stability</li>
+                    <li><strong>Morning light exposure</strong> (even 5 minutes) --- mood + sleep quality</li>
+                    <li><strong>Movement</strong> (can be different form: long walk vs. gym) --- mental health anchor</li>
+                    <li><strong>One meal with structure</strong> (e.g., sit-down breakfast) --- grounds the day</li>
+                    <li><strong>Evening wind-down</strong> (even relaxed version) --- sleep preparation</li>
                   </ul>
                   <p className="mt-4 text-sm text-gray-600">
                     These routines serve <em>physiological needs</em> (circadian health, nervous system regulation), not just productivity. Dropping them entirely feels liberating Friday but causes dysregulation by Sunday.
@@ -1025,11 +1025,11 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                 <>
                   <h4 className="font-semibold mb-3">Routines That Can Flex</h4>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Rigid timing</strong> — Morning routine at 7 AM vs. 9 AM is fine</li>
-                    <li><strong>Productivity rituals</strong> — No need for deep work blocks or inbox zero</li>
-                    <li><strong>Strict meal timing</strong> — Breakfast at 7 vs. 10 doesn't matter</li>
-                    <li><strong>Formal exercise</strong> — Gym can become a hike, bike ride, or play with kids</li>
-                    <li><strong>Task completion pressure</strong> — Weekends should allow open-ended time</li>
+                    <li><strong>Rigid timing</strong> --- Morning routine at 7 AM vs. 9 AM is fine</li>
+                    <li><strong>Productivity rituals</strong> --- No need for deep work blocks or inbox zero</li>
+                    <li><strong>Strict meal timing</strong> --- Breakfast at 7 vs. 10 doesn't matter</li>
+                    <li><strong>Formal exercise</strong> --- Gym can become a hike, bike ride, or play with kids</li>
+                    <li><strong>Task completion pressure</strong> --- Weekends should allow open-ended time</li>
                   </ul>
                   <p className="mt-4 text-sm text-gray-600">
                     These elements serve <em>work performance</em>, not core well-being. Releasing them is recovery, not self-sabotage.
@@ -1082,7 +1082,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">The Psychological Benefits of Structured Downtime</h2>
 
         <p className="mb-6">
-          Counterintuitively, <em>completely unstructured</em> weekends often feel less restorative than loosely structured ones. A 2022 study in <em>Psychological Science</em> found that people reported higher well-being when they had <strong>1–2 planned activities</strong> on weekends (a hike, dinner with friends, a project) compared to fully open schedules or jam-packed itineraries.
+          Counterintuitively, <em>completely unstructured</em> weekends often feel less restorative than loosely structured ones. A 2022 study in <em>Psychological Science</em> found that people reported higher well-being when they had <strong>1--2 planned activities</strong> on weekends (a hike, dinner with friends, a project) compared to fully open schedules or jam-packed itineraries.
         </p>
 
         <ArticleChart
@@ -1104,7 +1104,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The sweet spot: <strong>anchored flexibility</strong>—1–2 structured elements (a Saturday morning hike, Sunday brunch with family) that give the weekend shape, with open time for spontaneity, rest, or nothing.
+          The sweet spot: <strong>anchored flexibility</strong>---1--2 structured elements (a Saturday morning hike, Sunday brunch with family) that give the weekend shape, with open time for spontaneity, rest, or nothing.
         </p>
 
         <h3 className="text-xl font-semibold mb-3 mt-6">Why Complete Structurelessness Backfires</h3>
@@ -1113,15 +1113,15 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
           items={[
             {
               title: `Decision Fatigue Doesn't Rest`,
-              content: `Without any structure, every moment becomes a decision: 'What should I do now?" This creates low-grade anxiety and decision fatigue—the opposite of restoration. One or two pre-decided activities remove this burden.`,
+              content: `Without any structure, every moment becomes a decision: 'What should I do now?" This creates low-grade anxiety and decision fatigue---the opposite of restoration. One or two pre-decided activities remove this burden.`,
             },
             {
               title: 'Time Feels Formless',
-              content: 'Completely open weekends often feel like they vanish—you get to Sunday night and wonder where the time went. Anchored activities create memory markers that make the weekend feel longer and more satisfying.',
+              content: 'Completely open weekends often feel like they vanish---you get to Sunday night and wonder where the time went. Anchored activities create memory markers that make the weekend feel longer and more satisfying.',
             },
             {
               title: 'Passive Consumption Dominates',
-              content: `Without structure, people default to the path of least resistance: scrolling, binge-watching, or shopping online. These aren't inherently restorative—they just fill time. Active rest (walking, creating, socializing) requires minimal planning but delivers more restoration.`,
+              content: `Without structure, people default to the path of least resistance: scrolling, binge-watching, or shopping online. These aren't inherently restorative---they just fill time. Active rest (walking, creating, socializing) requires minimal planning but delivers more restoration.`,
             },
             {
               title: 'Sunday Scaries Intensify',
@@ -1132,7 +1132,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="The One-Anchor Rule">
           <p>
-            Choose <strong>one meaningful activity per weekend day</strong>—something you look forward to that requires minor planning (a hike, cooking a new recipe, calling a friend, working on a hobby). Let everything else be flexible. This creates just enough structure to feel grounded without rigidity.
+            Choose <strong>one meaningful activity per weekend day</strong>---something you look forward to that requires minor planning (a hike, cooking a new recipe, calling a friend, working on a hobby). Let everything else be flexible. This creates just enough structure to feel grounded without rigidity.
           </p>
         </ArticleCallout>
 
@@ -1179,19 +1179,19 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             },
             {
               title: '4. Transition Ritual',
-              description: `End with something that signals "work mode is coming, but I'm ready"—could be journaling, a specific playlist, a walk, or a phone call. The goal is intentional closure of the weekend, not dread.`,
+              description: `End with something that signals "work mode is coming, but I'm ready"---could be journaling, a specific playlist, a walk, or a phone call. The goal is intentional closure of the weekend, not dread.`,
             },
           ]}
         />
 
         <p className="mb-6 mt-6">
-          A 2020 study in <em>Organizational Behavior and Human Decision Processes</em> found that people who implemented Sunday preparation rituals reported 28% lower Monday morning anxiety and completed 40% more priority tasks by Tuesday afternoon—because they entered the week with clarity, not scrambling.
+          A 2020 study in <em>Organizational Behavior and Human Decision Processes</em> found that people who implemented Sunday preparation rituals reported 28% lower Monday morning anxiety and completed 40% more priority tasks by Tuesday afternoon---because they entered the week with clarity, not scrambling.
         </p>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">When to Completely Abandon Routine</h2>
 
         <p className="mb-6">
-          There are times when routine consistency isn't the priority—and that's healthy too. The difference between adaptive flexibility and self-sabotage is <strong>intention</strong> and <strong>duration</strong>.
+          There are times when routine consistency isn't the priority---and that's healthy too. The difference between adaptive flexibility and self-sabotage is <strong>intention</strong> and <strong>duration</strong>.
         </p>
 
         <ComparisonTable
@@ -1199,7 +1199,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
           rows={[
             [
               'Vacation (3+ days)',
-              'Release all routine—sleep when tired, eat when hungry',
+              'Release all routine---sleep when tired, eat when hungry',
               'True rest requires novelty and autonomy'
             ],
             [
@@ -1209,7 +1209,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             ],
             [
               'Social event (wedding, reunion)',
-              'One night of disruption is fine—return next day',
+              'One night of disruption is fine---return next day',
               'Social connection matters; one-off disruptions are low-risk'
             ],
             [
@@ -1226,12 +1226,12 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="success" title="The Real Balance">
           <p>
-            The weekend isn't a binary choice between "keep your weekday routine" and "abandon all structure." It's about maintaining the <strong>minimum consistency for physiological stability</strong> (sleep anchor, movement, light) while releasing <strong>productivity pressure and rigidity</strong>. Structure serves you—you don't serve structure. When routine feels oppressive, you've crossed into rigidity. When weekends leave you dysregulated, you've crossed into chaos. The middle path is anchored flexibility.
+            The weekend isn't a binary choice between "keep your weekday routine" and "abandon all structure." It's about maintaining the <strong>minimum consistency for physiological stability</strong> (sleep anchor, movement, light) while releasing <strong>productivity pressure and rigidity</strong>. Structure serves you---you don't serve structure. When routine feels oppressive, you've crossed into rigidity. When weekends leave you dysregulated, you've crossed into chaos. The middle path is anchored flexibility.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="Weekends aren't meant to be a rebellion against your weekday self. They're meant to be the version of your routine that prioritizes rest, connection, and autonomy—without abandoning the rhythms your body needs."
+          quote="Weekends aren't meant to be a rebellion against your weekday self. They're meant to be the version of your routine that prioritizes rest, connection, and autonomy---without abandoning the rhythms your body needs."
           author="Dr. Rachel Kim"
           role="Behavioral Sleep Medicine Specialist"
         />
@@ -1337,19 +1337,19 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <p className="mb-6 lead">
-          It's 6 AM. Your alarm goes off. Every part of you wants to skip the morning workout. Is this avoidance that requires discipline to push through—or is it your body signaling genuine need for rest? This is the central tension in routine-building: knowing when to stick to the plan and when rigidity becomes harmful. Research shows there's no universal answer—but there are frameworks for deciding in the moment.
+          It's 6 AM. Your alarm goes off. Every part of you wants to skip the morning workout. Is this avoidance that requires discipline to push through---or is it your body signaling genuine need for rest? This is the central tension in routine-building: knowing when to stick to the plan and when rigidity becomes harmful. Research shows there's no universal answer---but there are frameworks for deciding in the moment.
         </p>
 
         <ArticleCallout variant="info" title="The Core Question">
           <p>
-            The difference between healthy discipline and harmful rigidity isn't about the behavior itself—it's about <strong>why you're doing it</strong> and <strong>what it costs</strong>. Persistence rooted in values and self-awareness is adaptive. Persistence rooted in fear, perfectionism, or self-punishment is rigid—and linked to worse mental health outcomes.
+            The difference between healthy discipline and harmful rigidity isn't about the behavior itself---it's about <strong>why you're doing it</strong> and <strong>what it costs</strong>. Persistence rooted in values and self-awareness is adaptive. Persistence rooted in fear, perfectionism, or self-punishment is rigid---and linked to worse mental health outcomes.
           </p>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">The Flexibility-Rigidity Spectrum</h2>
 
         <p className="mb-6">
-          A 2021 meta-analysis in <em>Clinical Psychology Review</em> examined psychological flexibility—the ability to adapt behavior to match context and values—across 200+ studies. Higher flexibility predicted better mental health, lower anxiety, reduced depression, and greater life satisfaction. <strong>But</strong> complete flexibility (no consistency) predicted poor outcomes too. The healthy middle: <strong>committed flexibility</strong>.
+          A 2021 meta-analysis in <em>Clinical Psychology Review</em> examined psychological flexibility---the ability to adapt behavior to match context and values---across 200+ studies. Higher flexibility predicted better mental health, lower anxiety, reduced depression, and greater life satisfaction. <strong>But</strong> complete flexibility (no consistency) predicted poor outcomes too. The healthy middle: <strong>committed flexibility</strong>.
         </p>
 
         <ComparisonTable
@@ -1383,7 +1383,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">The "Stick vs. Adjust" Decision Framework</h2>
 
         <p className="mb-6">
-          When resistance arises—"I don't want to do this routine element right now"—run through this 4-question framework:
+          When resistance arises---"I don't want to do this routine element right now"---run through this 4-question framework:
         </p>
 
         <ProgressSteps
@@ -1413,7 +1413,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     ]}
                   />
                   <p className="mt-4 text-sm text-gray-600">
-                    <em>Note:</em> This distinction requires interoceptive awareness—the ability to sense internal body states. If this is hard for you, that's normal (and can be developed over time).
+                    <em>Note:</em> This distinction requires interoceptive awareness---the ability to sense internal body states. If this is hard for you, that's normal (and can be developed over time).
                   </p>
                 </>
               ),
@@ -1472,7 +1472,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Body Signals vs. Mind Chatter</h2>
 
         <p className="mb-6">
-          One of the hardest skills in routine flexibility is distinguishing <strong>somatic signals</strong> (genuine body needs) from <strong>cognitive avoidance</strong> (mind generating excuses). Neuroscience research on interoceptive awareness (Neuroscience & Biobehavioral Reviews, 2021) shows most people have low baseline interoception—they struggle to sense internal states accurately.
+          One of the hardest skills in routine flexibility is distinguishing <strong>somatic signals</strong> (genuine body needs) from <strong>cognitive avoidance</strong> (mind generating excuses). Neuroscience research on interoceptive awareness (Neuroscience & Biobehavioral Reviews, 2021) shows most people have low baseline interoception---they struggle to sense internal states accurately.
         </p>
 
         <h3 className="text-xl font-semibold mb-3 mt-6">How to Tune Into Body Signals</h3>
@@ -1485,7 +1485,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             },
             {
               title: 'Check for Numbness',
-              content: `If you feel nothing—no clear signal either way—that's often avoidance or disconnection. Try moving your body for 2 minutes (walk, stretch) and reassess. Physical movement often clarifies whether the resistance is body-based or mind-based.`,
+              content: `If you feel nothing---no clear signal either way---that's often avoidance or disconnection. Try moving your body for 2 minutes (walk, stretch) and reassess. Physical movement often clarifies whether the resistance is body-based or mind-based.`,
             },
             {
               title: 'Differentiate Fatigue Types',
@@ -1515,13 +1515,13 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Bessel van der Kolk's work on trauma and the body (<em>The Body Keeps the Score</em>) emphasizes that many people—especially those with trauma histories—have learned to override body signals. If this resonates, consider somatic therapies (somatic experiencing, sensorimotor psychotherapy) to rebuild interoceptive awareness.
+          Bessel van der Kolk's work on trauma and the body (<em>The Body Keeps the Score</em>) emphasizes that many people---especially those with trauma histories---have learned to override body signals. If this resonates, consider somatic therapies (somatic experiencing, sensorimotor psychotherapy) to rebuild interoceptive awareness.
         </p>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">The Role of Self-Compassion in Flexibility</h2>
 
         <p className="mb-6">
-          Research consistently shows that <strong>self-compassion predicts better behavioral change outcomes</strong> than self-criticism (Personality and Social Psychology Review, 2020). Self-compassionate people are <em>more likely</em> to stick to routines long-term—not because they never skip, but because they return after skipping without shame spirals.
+          Research consistently shows that <strong>self-compassion predicts better behavioral change outcomes</strong> than self-criticism (Personality and Social Psychology Review, 2020). Self-compassionate people are <em>more likely</em> to stick to routines long-term---not because they never skip, but because they return after skipping without shame spirals.
         </p>
 
         <BeforeAfter
@@ -1552,7 +1552,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">When Rigidity Is Masking Fear</h2>
 
         <p className="mb-6">
-          Sometimes people cling to routines not because they're beneficial, but because routines provide <strong>control</strong> in an uncertain world. This is particularly common in people with anxiety, perfectionism, or eating disorders. The routine becomes rigid because deviation triggers intense fear—not because the routine itself is crucial.
+          Sometimes people cling to routines not because they're beneficial, but because routines provide <strong>control</strong> in an uncertain world. This is particularly common in people with anxiety, perfectionism, or eating disorders. The routine becomes rigid because deviation triggers intense fear---not because the routine itself is crucial.
         </p>
 
         <ArticleCallout variant="warning" title="Warning Signs of Unhealthy Rigidity">
@@ -1561,17 +1561,17 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             <li>Routines interfere with social connection, spontaneity, or joy</li>
             <li>Rules become increasingly strict over time (e.g., workout must be exactly 45 minutes, no deviation)</li>
             <li>Skipping routine triggers self-punishment (restriction, negative self-talk, compensatory behaviors)</li>
-            <li>Routines feel compulsive—you can't not do them, even when harmful</li>
+            <li>Routines feel compulsive---you can't not do them, even when harmful</li>
           </ul>
           <p className="mt-4">
-            If this resonates, consider working with a therapist trained in exposure-based therapies (CBT, ACT) or OCD treatment. The goal isn't abandoning routines—it's building tolerance for flexibility without fear.
+            If this resonates, consider working with a therapist trained in exposure-based therapies (CBT, ACT) or OCD treatment. The goal isn't abandoning routines---it's building tolerance for flexibility without fear.
           </p>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">Building Flexible Discipline Over Time</h2>
 
         <p className="mb-6">
-          Flexible discipline is a skill—it requires practice. Most people start too rigid (never miss) or too chaotic (miss frequently). The learning process involves calibrating over months and years.
+          Flexible discipline is a skill---it requires practice. Most people start too rigid (never miss) or too chaotic (miss frequently). The learning process involves calibrating over months and years.
         </p>
 
         <ArticleTabs
@@ -1581,18 +1581,18 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>Timeline:</strong> First 3–6 months of a new routine
+                    <strong>Timeline:</strong> First 3--6 months of a new routine
                   </p>
                   <p className="mb-4">
-                    <strong>Approach:</strong> Prioritize consistency over flexibility. The habit isn't stable yet—skipping often will collapse it.
+                    <strong>Approach:</strong> Prioritize consistency over flexibility. The habit isn't stable yet---skipping often will collapse it.
                   </p>
                   <ul className="list-disc list-inside mb-4 space-y-2">
-                    <li>Aim for 80–90% adherence</li>
+                    <li>Aim for 80--90% adherence</li>
                     <li>Use "minimum viable version" when tempted to skip</li>
                     <li>Only skip for genuine illness, crisis, or travel</li>
                   </ul>
                   <p className="text-sm text-gray-600">
-                    This phase feels rigid—that's normal. You're building automaticity. Flexibility comes later.
+                    This phase feels rigid---that's normal. You're building automaticity. Flexibility comes later.
                   </p>
                 </>
               ),
@@ -1602,7 +1602,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    <strong>Timeline:</strong> Months 6–12
+                    <strong>Timeline:</strong> Months 6--12
                   </p>
                   <p className="mb-4">
                     <strong>Approach:</strong> The habit is stable enough to withstand occasional misses. Start testing flexibility.
@@ -1647,7 +1647,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">The Meta-Skill: Self-Awareness</h2>
 
         <p className="mb-6">
-          All of this—distinguishing avoidance from need, assessing costs, aligning with values—requires self-awareness. If you struggle with this, you're not alone. Most people operate on autopilot (rigid adherence) or impulse (chaotic flexibility) because pausing to assess is hard.
+          All of this---distinguishing avoidance from need, assessing costs, aligning with values---requires self-awareness. If you struggle with this, you're not alone. Most people operate on autopilot (rigid adherence) or impulse (chaotic flexibility) because pausing to assess is hard.
         </p>
 
         <ArticleCallout variant="tip" title="Building Self-Awareness for Routine Decisions">
@@ -1661,12 +1661,12 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
 
         <ArticleCallout variant="success" title="The Real Skill">
           <p>
-            Routine flexibility isn't about having the "right answer" every time. It's about <strong>developing the capacity to assess in the moment</strong>—considering body signals, costs, values, and context—and trusting yourself to decide. Sometimes you'll push through and wish you'd rested. Sometimes you'll skip and wish you'd pushed. That's learning, not failure. Over time, the calibration improves. Flexibility becomes instinct.
+            Routine flexibility isn't about having the "right answer" every time. It's about <strong>developing the capacity to assess in the moment</strong>---considering body signals, costs, values, and context---and trusting yourself to decide. Sometimes you'll push through and wish you'd rested. Sometimes you'll skip and wish you'd pushed. That's learning, not failure. Over time, the calibration improves. Flexibility becomes instinct.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="The strongest routines aren't the ones you never break. They're the ones that bend without shattering—and the ones you trust yourself to return to, again and again, without shame."
+          quote="The strongest routines aren't the ones you never break. They're the ones that bend without shattering---and the ones you trust yourself to return to, again and again, without shame."
           author="Dr. Lisa Nguyen"
           role="Clinical Psychologist specializing in Habit Formation"
         />
@@ -1679,7 +1679,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     id: catId(30),
     slug: 'seasonal-routines-adapting-to-change-throughout-year',
     title: 'Seasonal Routines: Adapting to Change Throughout the Year',
-    description: 'How seasonal shifts affect mood, energy, and behavior—and how to adjust routines to match natural cycles rather than fight them.',
+    description: 'How seasonal shifts affect mood, energy, and behavior---and how to adjust routines to match natural cycles rather than fight them.',
     image: "/images/articles/cat08/cover-030.svg",
     category: CATEGORY_HABITS_MOTIVATION,
     readTime: 8,
@@ -1772,32 +1772,32 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
     content: (
       <>
         <p className="mb-6 lead">
-          The routine that works perfectly in summer—early morning runs, outdoor lunches, evening walks—collapses in winter. Mornings are dark, energy plummets, motivation vanishes. Most people blame themselves: "I just need more discipline." But research shows seasonal shifts aren't psychological weakness—they're <strong>biological responses to light, temperature, and circadian changes</strong>. Fighting seasonality rarely works. Adapting to it does.
+          The routine that works perfectly in summer---early morning runs, outdoor lunches, evening walks---collapses in winter. Mornings are dark, energy plummets, motivation vanishes. Most people blame themselves: "I just need more discipline." But research shows seasonal shifts aren't psychological weakness---they're <strong>biological responses to light, temperature, and circadian changes</strong>. Fighting seasonality rarely works. Adapting to it does.
         </p>
 
         <StatCard
-          stat="10–20%"
-          description="of people experience subsyndromal seasonal affective disorder (S-SAD)—mood and energy shifts without full clinical depression"
+          stat="10--20%"
+          description="of people experience subsyndromal seasonal affective disorder (S-SAD)---mood and energy shifts without full clinical depression"
           source="Depression and Anxiety, 2020"
           citation="1"
         />
 
         <ArticleCallout variant="info" title="Why Seasons Affect Mental Health">
           <p>
-            Seasonal changes alter <strong>light exposure</strong> (affecting circadian rhythms and serotonin), <strong>temperature</strong> (affecting energy expenditure and activity levels), and <strong>social patterns</strong> (holidays, school schedules, cultural rhythms). Your brain and body respond to these shifts—regardless of your conscious intentions. Adapting routines to seasonal realities isn't "giving in." It's biological alignment.
+            Seasonal changes alter <strong>light exposure</strong> (affecting circadian rhythms and serotonin), <strong>temperature</strong> (affecting energy expenditure and activity levels), and <strong>social patterns</strong> (holidays, school schedules, cultural rhythms). Your brain and body respond to these shifts---regardless of your conscious intentions. Adapting routines to seasonal realities isn't "giving in." It's biological alignment.
           </p>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">The Four Seasonal Routine Shifts</h2>
 
         <p className="mb-6">
-          Rather than one static routine, consider four seasonal versions—each adapted to light availability, temperature, and energy patterns.
+          Rather than one static routine, consider four seasonal versions---each adapted to light availability, temperature, and energy patterns.
         </p>
 
         <ArticleTabs
           tabs={[
             {
-              label: 'Winter (Dec–Feb)',
+              label: 'Winter (Dec--Feb)',
               content: (
                 <>
                   <h4 className="font-semibold mb-3">Biological Challenges</h4>
@@ -1810,10 +1810,10 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                   </ul>
                   <h4 className="font-semibold mb-3 mt-6">Routine Adaptations</h4>
                   <ul className="list-disc list-inside space-y-2">
-                    <li><strong>Morning light priority:</strong> 10,000-lux light therapy lamp for 20–30 minutes upon waking (replaces lost natural light)</li>
+                    <li><strong>Morning light priority:</strong> 10,000-lux light therapy lamp for 20--30 minutes upon waking (replaces lost natural light)</li>
                     <li><strong>Midday outdoor time:</strong> Walk during lunch (even 10 minutes) to maximize available daylight</li>
                     <li><strong>Indoor movement:</strong> Yoga, home workouts, gym sessions replace outdoor exercise</li>
-                    <li><strong>Earlier bedtime:</strong> Align with natural darkness—trying to stay up late fights biology</li>
+                    <li><strong>Earlier bedtime:</strong> Align with natural darkness---trying to stay up late fights biology</li>
                     <li><strong>Social connection intentionality:</strong> Schedule calls, video chats, or indoor gatherings weekly</li>
                   </ul>
                   <p className="mt-4 text-sm text-gray-600">
@@ -1823,7 +1823,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               ),
             },
             {
-              label: 'Spring (Mar–May)',
+              label: 'Spring (Mar--May)',
               content: (
                 <>
                   <h4 className="font-semibold mb-3">Biological Opportunities</h4>
@@ -1837,7 +1837,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                   <ul className="list-disc list-inside space-y-2">
                     <li><strong>Return to outdoor movement:</strong> Morning walks, runs, or bike rides become feasible again</li>
                     <li><strong>Leverage natural energy:</strong> Spring is ideal for building new habits or intensifying existing ones</li>
-                    <li><strong>Watch for overscheduling:</strong> Energy surge can lead to overcommitment—pace yourself</li>
+                    <li><strong>Watch for overscheduling:</strong> Energy surge can lead to overcommitment---pace yourself</li>
                     <li><strong>Adjust wake time:</strong> Gradual 15-minute shifts earlier if desired (daylight supports this)</li>
                     <li><strong>Increase social engagement:</strong> Plan activities, reconnect with friends</li>
                   </ul>
@@ -1848,7 +1848,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               ),
             },
             {
-              label: 'Summer (Jun–Aug)',
+              label: 'Summer (Jun--Aug)',
               content: (
                 <>
                   <h4 className="font-semibold mb-3">Biological Considerations</h4>
@@ -1863,8 +1863,8 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
                     <li><strong>Early morning routines:</strong> Leverage cool mornings for exercise before heat peaks</li>
                     <li><strong>Evening routines shift later:</strong> Natural light supports later bedtimes without circadian disruption</li>
                     <li><strong>Hydration and cooling:</strong> Add water intake reminders, cold showers post-workout</li>
-                    <li><strong>Flexible structure:</strong> Summer invites spontaneity—maintain core routines (sleep anchor, movement) but release rigidity</li>
-                    <li><strong>Screen time management:</strong> Long daylight can push bedtime later—use blackout curtains or blue-light blocking</li>
+                    <li><strong>Flexible structure:</strong> Summer invites spontaneity---maintain core routines (sleep anchor, movement) but release rigidity</li>
+                    <li><strong>Screen time management:</strong> Long daylight can push bedtime later---use blackout curtains or blue-light blocking</li>
                   </ul>
                   <p className="mt-4 text-sm text-gray-600">
                     <em>Key principle:</em> Maximize outdoor time while managing heat and maintaining sleep consistency.
@@ -1873,14 +1873,14 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
               ),
             },
             {
-              label: 'Fall (Sep–Nov)',
+              label: 'Fall (Sep--Nov)',
               content: (
                 <>
                   <h4 className="font-semibold mb-3">Biological Challenges</h4>
                   <ul className="list-disc list-inside mb-4 space-y-2">
                     <li>Rapidly decreasing daylight</li>
                     <li>Temperature drop (return indoors)</li>
-                    <li>Daylight saving time shift (clocks back in November—sudden darkness)</li>
+                    <li>Daylight saving time shift (clocks back in November---sudden darkness)</li>
                     <li>Increased demands (back-to-school, work ramp-up post-summer)</li>
                   </ul>
                   <h4 className="font-semibold mb-3 mt-6">Routine Adaptations</h4>
@@ -1903,7 +1903,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Light Therapy: The Most Effective Seasonal Intervention</h2>
 
         <p className="mb-6">
-          A 2021 meta-analysis in <em>Journal of Affective Disorders</em> found that light therapy (10,000-lux bright light for 20–30 minutes daily) was as effective as antidepressants for seasonal affective disorder—and worked faster (1–2 weeks vs. 4–6 weeks). Even people without clinical SAD benefit from winter light therapy.
+          A 2021 meta-analysis in <em>Journal of Affective Disorders</em> found that light therapy (10,000-lux bright light for 20--30 minutes daily) was as effective as antidepressants for seasonal affective disorder---and worked faster (1--2 weeks vs. 4--6 weeks). Even people without clinical SAD benefit from winter light therapy.
         </p>
 
         <ComparisonTable
@@ -1912,8 +1912,8 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
             [
               'Morning (within 30 min of waking)',
               'Highest',
-              'Most people—advances circadian rhythm, boosts alertness',
-              'Sit 16–24 inches from 10,000-lux lamp during breakfast or coffee'
+              'Most people---advances circadian rhythm, boosts alertness',
+              'Sit 16--24 inches from 10,000-lux lamp during breakfast or coffee'
             ],
             [
               'Midday',
@@ -1933,9 +1933,9 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <ArticleCallout variant="tip" title="Light Therapy Implementation">
           <ul className="list-disc list-inside space-y-2">
             <li><strong>Start in October:</strong> Before symptoms worsen</li>
-            <li><strong>Use daily:</strong> Consistency matters more than duration—20 minutes daily beats 60 minutes twice a week</li>
+            <li><strong>Use daily:</strong> Consistency matters more than duration---20 minutes daily beats 60 minutes twice a week</li>
             <li><strong>Position correctly:</strong> Light should be off to the side (not staring directly), angled down toward eyes</li>
-            <li><strong>Combine with activity:</strong> Use while eating, reading, or working—doesn't require dedicated time</li>
+            <li><strong>Combine with activity:</strong> Use while eating, reading, or working---doesn't require dedicated time</li>
             <li><strong>Not just for SAD:</strong> Anyone with winter energy drops benefits</li>
           </ul>
         </ArticleCallout>
@@ -1943,7 +1943,7 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Movement and Seasonal Shifts</h2>
 
         <p className="mb-6">
-          Research from Nordic populations (Scandinavian Journal of Medicine & Science in Sports, 2021)—who experience extreme seasonal light variation—shows that <strong>maintaining movement through winter</strong> is one of the strongest protective factors against seasonal depression. But the <em>type</em> of movement needs to shift.
+          Research from Nordic populations (Scandinavian Journal of Medicine & Science in Sports, 2021)---who experience extreme seasonal light variation---shows that <strong>maintaining movement through winter</strong> is one of the strongest protective factors against seasonal depression. But the <em>type</em> of movement needs to shift.
         </p>
 
         <BeforeAfter
@@ -2002,40 +2002,40 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">Nutrition and Seasonal Eating</h2>
 
         <p className="mb-6">
-          A 2020 study in <em>Nutritional Neuroscience</em> found that people with seasonal mood shifts often crave carbohydrates in winter—a biological response to lower serotonin. This isn't moral weakness. But <em>how</em> you respond to cravings matters.
+          A 2020 study in <em>Nutritional Neuroscience</em> found that people with seasonal mood shifts often crave carbohydrates in winter---a biological response to lower serotonin. This isn't moral weakness. But <em>how</em> you respond to cravings matters.
         </p>
 
         <ArticleAccordion
           items={[
             {
               title: 'Winter Carb Cravings: Why They Happen',
-              content: `Lower serotonin (due to reduced sunlight) triggers cravings for simple carbs—your brain's attempt to boost serotonin quickly. This is adaptive in the short term but backfires if it leads to blood sugar swings, weight gain, and worsened mood.`,
+              content: `Lower serotonin (due to reduced sunlight) triggers cravings for simple carbs---your brain's attempt to boost serotonin quickly. This is adaptive in the short term but backfires if it leads to blood sugar swings, weight gain, and worsened mood.`,
             },
             {
               title: 'Strategic Approach: Complex Carbs + Protein',
-              content: 'Satisfy the craving with complex carbs (oats, sweet potatoes, whole grains) paired with protein. This stabilizes blood sugar and provides sustained energy—without the crash that comes from sugary or refined carbs.',
+              content: 'Satisfy the craving with complex carbs (oats, sweet potatoes, whole grains) paired with protein. This stabilizes blood sugar and provides sustained energy---without the crash that comes from sugary or refined carbs.',
             },
             {
               title: 'Vitamin D Supplementation',
-              content: 'A 2021 review found that vitamin D deficiency correlates with seasonal depression. Most people in northern latitudes are deficient in winter. Consider 1,000–2,000 IU daily supplementation (consult a doctor for dosing).',
+              content: 'A 2021 review found that vitamin D deficiency correlates with seasonal depression. Most people in northern latitudes are deficient in winter. Consider 1,000--2,000 IU daily supplementation (consult a doctor for dosing).',
             },
             {
               title: 'Omega-3 Fatty Acids',
-              content: 'Research links omega-3s (from fish, flaxseed, walnuts) to better mood regulation—particularly in winter. Aim for 2–3 servings of fatty fish per week or consider supplementation.',
+              content: 'Research links omega-3s (from fish, flaxseed, walnuts) to better mood regulation---particularly in winter. Aim for 2--3 servings of fatty fish per week or consider supplementation.',
             },
           ]}
         />
 
         <ArticleCallout variant="warning" title="When Seasonal Eating Becomes Problematic">
           <p>
-            If winter eating leads to significant weight gain, guilt spirals, or compensatory restriction in spring, this may signal disordered eating. Seasonal shifts in appetite are normal—but extreme swings or emotional distress around food warrant professional support.
+            If winter eating leads to significant weight gain, guilt spirals, or compensatory restriction in spring, this may signal disordered eating. Seasonal shifts in appetite are normal---but extreme swings or emotional distress around food warrant professional support.
           </p>
         </ArticleCallout>
 
         <h2 className="text-2xl font-bold mb-4 mt-8">Social Rhythms and Seasonal Isolation</h2>
 
         <p className="mb-6">
-          Winter brings not just physical darkness but <strong>social darkness</strong>—fewer spontaneous outdoor interactions, holidays end, weather reduces social opportunities. Research on social rhythms (Bipolar Disorders, 2020) shows that disrupted social patterns worsen mood stability.
+          Winter brings not just physical darkness but <strong>social darkness</strong>---fewer spontaneous outdoor interactions, holidays end, weather reduces social opportunities. Research on social rhythms (Bipolar Disorders, 2020) shows that disrupted social patterns worsen mood stability.
         </p>
 
         <ProgressSteps
@@ -2062,14 +2062,14 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         <h2 className="text-2xl font-bold mb-4 mt-8">The Daylight Saving Time Transition</h2>
 
         <p className="mb-6">
-          In November (fall back) and March (spring forward), daylight saving time shifts disrupt routines for weeks. Research in <em>Epidemiology</em> (2020) found increased rates of depression, accidents, and even heart attacks in the week following DST changes—highlighting how sensitive our biology is to circadian disruption.
+          In November (fall back) and March (spring forward), daylight saving time shifts disrupt routines for weeks. Research in <em>Epidemiology</em> (2020) found increased rates of depression, accidents, and even heart attacks in the week following DST changes---highlighting how sensitive our biology is to circadian disruption.
         </p>
 
         <ArticleCallout variant="tip" title="Managing DST Transitions">
           <ul className="list-disc list-inside space-y-2">
             <li><strong>Shift gradually:</strong> Move sleep/wake time by 15 minutes per day for 4 days before the change</li>
             <li><strong>Use light strategically:</strong> In spring (losing an hour), get morning light immediately. In fall (gaining an hour), delay morning light slightly.</li>
-            <li><strong>Expect adjustment period:</strong> 3–7 days of grogginess is normal—don't overcommit that week</li>
+            <li><strong>Expect adjustment period:</strong> 3--7 days of grogginess is normal---don't overcommit that week</li>
             <li><strong>Maintain consistency:</strong> Even if timing shifts, keep routines in the same order (breakfast → shower → work, etc.)</li>
           </ul>
         </ArticleCallout>
@@ -2107,17 +2107,17 @@ export const buildingHealthyRoutinesArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          If symptoms meet criteria for SAD, evidence-based treatments include: <strong>light therapy</strong>, <strong>cognitive-behavioral therapy for SAD (CBT-SAD)</strong>, <strong>antidepressants</strong> (SSRIs), or <strong>combination approaches</strong>. These work—but require professional guidance.
+          If symptoms meet criteria for SAD, evidence-based treatments include: <strong>light therapy</strong>, <strong>cognitive-behavioral therapy for SAD (CBT-SAD)</strong>, <strong>antidepressants</strong> (SSRIs), or <strong>combination approaches</strong>. These work---but require professional guidance.
         </p>
 
         <ArticleCallout variant="success" title="The Core Principle">
           <p>
-            Seasonal routines aren't about fighting your biology. They're about <strong>aligning with it</strong>. Your body responds to light, temperature, and social rhythms—whether you acknowledge it or not. Winter demands different routines than summer. Fighting this causes suffering. Adapting to it creates sustainability. The strongest routines aren't static—they're seasonally responsive.
+            Seasonal routines aren't about fighting your biology. They're about <strong>aligning with it</strong>. Your body responds to light, temperature, and social rhythms---whether you acknowledge it or not. Winter demands different routines than summer. Fighting this causes suffering. Adapting to it creates sustainability. The strongest routines aren't static---they're seasonally responsive.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="You wouldn't expect a plant to grow the same way in winter as in summer. Why expect that from yourself? Seasonal adaptation isn't weakness—it's wisdom."
+          quote="You wouldn't expect a plant to grow the same way in winter as in summer. Why expect that from yourself? Seasonal adaptation isn't weakness---it's wisdom."
           author="Dr. Anna Johansson"
           role="Circadian Biologist"
         />

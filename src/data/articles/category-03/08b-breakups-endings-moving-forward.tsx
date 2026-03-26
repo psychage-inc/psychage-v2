@@ -98,7 +98,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
             After a long-term relationship ends, one of the most disorienting realizations is this: you don't know who you are anymore. Not as part of a "we," but as a singular "I." The self you built around the relationship has collapsed, leaving questions where certainty used to be.
           </p>
           <p className="mb-6">
-            This identity crisis isn't a sign of weakness — it's a predictable psychological response to losing a relationship that was central to how you defined yourself <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2008" tier={1} />. Rebuilding takes intentional work, but it also offers a rare opportunity: to design a self that's entirely your own.
+            This identity crisis isn't a sign of weakness --- it's a predictable psychological response to losing a relationship that was central to how you defined yourself <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2008" tier={1} />. Rebuilding takes intentional work, but it also offers a rare opportunity: to design a self that's entirely your own.
           </p>
         </div>
 
@@ -106,10 +106,10 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           What Is Self-Concept Disruption?
         </h2>
         <p className="mb-6">
-          During relationships, especially long ones, you experience "self-expansion" — your identity grows to include your partner's interests, friends, routines, and values <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2013" tier={1} />. You become an interdependent unit. "I" becomes "we."
+          During relationships, especially long ones, you experience "self-expansion" --- your identity grows to include your partner's interests, friends, routines, and values <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2013" tier={1} />. You become an interdependent unit. "I" becomes "we."
         </p>
         <p className="mb-6">
-          When the relationship ends, you experience <strong>self-contraction</strong> — losing those borrowed parts of identity. What remains feels smaller, incomplete, unfamiliar. Questions flood in:
+          When the relationship ends, you experience <strong>self-contraction</strong> --- losing those borrowed parts of identity. What remains feels smaller, incomplete, unfamiliar. Questions flood in:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>What do I do on weekends without them?</li>
@@ -183,7 +183,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: 'List What You Abandoned',
               description: (
                 <p>
-                  What hobbies, friendships, habits, or dreams did you let go during the relationship? Write them down. Not all will still fit — but some will call to you.
+                  What hobbies, friendships, habits, or dreams did you let go during the relationship? Write them down. Not all will still fit --- but some will call to you.
                 </p>
               ),
             },
@@ -226,9 +226,9 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Take a class you've always wanted to try (pottery, coding, cooking)</li>
           <li>Join a group aligned with your interests (book club, hiking meetup, volunteer organization)</li>
-          <li>Travel somewhere you've never been — even a solo weekend trip</li>
+          <li>Travel somewhere you've never been --- even a solo weekend trip</li>
           <li>Learn a skill unrelated to your ex's influence</li>
-          <li>Start a creative project with no audience in mind — just for you</li>
+          <li>Start a creative project with no audience in mind --- just for you</li>
         </ul>
         <p className="mb-6">
           Each new experience creates neural pathways not associated with your ex. You're literally building a brain that's your own.
@@ -247,14 +247,14 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Step 3: Clarify Your Values
         </h2>
         <p className="mb-6">
-          Values are the compass that guides identity. After a breakup, your values often shift — what mattered in the relationship may not align with what you want now <Citation id="5" index={5} source="Journal of Positive Psychology" year="2019" tier={1} />.
+          Values are the compass that guides identity. After a breakup, your values often shift --- what mattered in the relationship may not align with what you want now <Citation id="5" index={5} source="Journal of Positive Psychology" year="2019" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Values clarification exercise:</strong>
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>Review this list of values: creativity, family, adventure, stability, independence, community, success, health, spirituality, authenticity, learning, service, freedom, connection</li>
-          <li>Circle your top 5 values — what matters most to YOU now, not what mattered to the relationship</li>
+          <li>Circle your top 5 values --- what matters most to YOU now, not what mattered to the relationship</li>
           <li>For each value, write one action you can take this month to honor it</li>
         </ol>
         <p className="mb-6">
@@ -289,7 +289,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Step 4: Create Solo Rituals
         </h2>
         <p className="mb-6">
-          Rituals anchor identity. In the relationship, you had shared rituals — Sunday morning pancakes, Friday movie nights, evening walks. Now you need rituals that belong to you alone <Citation id="6" index={6} source="Journal of Research in Personality" year="2020" tier={1} />.
+          Rituals anchor identity. In the relationship, you had shared rituals --- Sunday morning pancakes, Friday movie nights, evening walks. Now you need rituals that belong to you alone <Citation id="6" index={6} source="Journal of Research in Personality" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Examples of solo rituals:</strong>
@@ -315,7 +315,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Step 5: Rewrite Your Narrative
         </h2>
         <p className="mb-6">
-          How you tell the story of your relationship and breakup shapes your identity going forward <Citation id="7" index={7} source="Journal of Social and Clinical Psychology" year="2016" tier={1} />. Narrative reconstruction isn't about lying to yourself — it's about finding agency in your story.
+          How you tell the story of your relationship and breakup shapes your identity going forward <Citation id="7" index={7} source="Journal of Social and Clinical Psychology" year="2016" tier={1} />. Narrative reconstruction isn't about lying to yourself --- it's about finding agency in your story.
         </p>
 
         <ComparisonTable
@@ -337,7 +337,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           <li>What did this relationship teach me about myself?</li>
           <li>What red flags will I never ignore again?</li>
           <li>What strengths did I discover during this pain?</li>
-          <li>How am I different now — and is that growth?</li>
+          <li>How am I different now --- and is that growth?</li>
           <li>What do I want from my next relationship that I didn't have in this one?</li>
         </ul>
 
@@ -345,16 +345,16 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Step 6: Learn to Be Alone (Without Being Lonely)
         </h2>
         <p className="mb-6">
-          One of the scariest parts of identity reconstruction is confronting solitude. Being alone no longer means "waiting for someone" — it means learning to be enough for yourself <Citation id="6" index={6} source="Journal of Research in Personality" year="2020" tier={1} />.
+          One of the scariest parts of identity reconstruction is confronting solitude. Being alone no longer means "waiting for someone" --- it means learning to be enough for yourself <Citation id="6" index={6} source="Journal of Research in Personality" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Building solitude tolerance:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Start small</strong> — have one meal alone in public without your phone</li>
-          <li><strong>Take yourself on dates</strong> — movies, concerts, dinners. Be your own companion.</li>
-          <li><strong>Sit with discomfort</strong> — when loneliness hits, resist the urge to immediately fill it with distraction</li>
-          <li><strong>Distinguish loneliness from solitude</strong> — loneliness is painful lack; solitude is chosen peace</li>
+          <li><strong>Start small</strong> --- have one meal alone in public without your phone</li>
+          <li><strong>Take yourself on dates</strong> --- movies, concerts, dinners. Be your own companion.</li>
+          <li><strong>Sit with discomfort</strong> --- when loneliness hits, resist the urge to immediately fill it with distraction</li>
+          <li><strong>Distinguish loneliness from solitude</strong> --- loneliness is painful lack; solitude is chosen peace</li>
         </ul>
         <p className="mb-6">
           Over time, being alone transforms from something you endure to something you protect. That's when you know you've rebuilt a whole self.
@@ -362,7 +362,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>You're not rebuilding the old you — you're building a new, evolved version.</strong> The person you were before the relationship is gone. The person you were in the relationship is gone. Who you're becoming is someone who carries the wisdom of both, with the freedom to choose what stays and what goes.
+            <strong>You're not rebuilding the old you --- you're building a new, evolved version.</strong> The person you were before the relationship is gone. The person you were in the relationship is gone. Who you're becoming is someone who carries the wisdom of both, with the freedom to choose what stays and what goes.
           </p>
         </ArticleCallout>
 
@@ -381,7 +381,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           <li>You feel whole, not incomplete without a partner</li>
         </ul>
         <p className="mb-6">
-          This doesn't mean you won't want another relationship — it means you'll enter it from wholeness, not from need. That's the difference between a desperate grab for completion and a conscious choice to share a full life with someone else <Citation id="8" index={8} source="APA" year="2022" tier={3} />.
+          This doesn't mean you won't want another relationship --- it means you'll enter it from wholeness, not from need. That's the difference between a desperate grab for completion and a conscious choice to share a full life with someone else <Citation id="8" index={8} source="APA" year="2022" tier={3} />.
         </p>
 
         <h2 id="timeline-for-identity-reconstruction" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -394,7 +394,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           This process can't be rushed, but it can be supported. Every intentional act of self-discovery, every boundary you set, every solo adventure you take is a brick in the foundation of your new identity.
         </p>
         <p className="mb-6">
-          And here's the truth no one tells you: the person you become after this might be someone you like more than the person you were before. Loss cracks you open — but what grows in the cracks can be extraordinary.
+          And here's the truth no one tells you: the person you become after this might be someone you like more than the person you were before. Loss cracks you open --- but what grows in the cracks can be extraordinary.
         </p>
       </>
     ),
@@ -484,7 +484,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
             Romantic breakups get songs, movies, and sympathy. Friend breakups get awkward silence. "It's just a friendship, " people say, as if the person you talked to every day for years doesn't deserve to be mourned. But you know the truth: this loss is devastating.
           </p>
           <p className="mb-6">
-            Research confirms what you're feeling: close friendship endings cause grief comparable to romantic breakups <Citation id="1" index={1} source="Personal Relationships" year="2016" tier={1} />. The difference isn't the pain — it's the lack of cultural scripts for processing it. There's no socially acceptable mourning period for a lost friend, no rituals, no collective understanding that you're grieving someone irreplaceable.
+            Research confirms what you're feeling: close friendship endings cause grief comparable to romantic breakups <Citation id="1" index={1} source="Personal Relationships" year="2016" tier={1} />. The difference isn't the pain --- it's the lack of cultural scripts for processing it. There's no socially acceptable mourning period for a lost friend, no rituals, no collective understanding that you're grieving someone irreplaceable.
           </p>
         </div>
 
@@ -495,11 +495,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Close friendships involve attachment bonds similar to romantic relationships <Citation id="2" index={2} source="Social Cognitive and Affective Neuroscience" year="2014" tier={1} />. Your brain forms neural pathways linking this person to safety, validation, joy, and identity. When they're gone, you lose:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Your witness</strong> — the person who knew your full story and reflected your identity back to you</li>
-          <li><strong>Emotional support</strong> — your go-to person for celebrating wins and processing pain</li>
-          <li><strong>Shared history</strong> — inside jokes, memories, rituals that now have no audience</li>
-          <li><strong>Future plans</strong> — trips you'd talked about, milestones you'd imagined together</li>
-          <li><strong>Part of yourself</strong> — the version of you that existed in this friendship</li>
+          <li><strong>Your witness</strong> --- the person who knew your full story and reflected your identity back to you</li>
+          <li><strong>Emotional support</strong> --- your go-to person for celebrating wins and processing pain</li>
+          <li><strong>Shared history</strong> --- inside jokes, memories, rituals that now have no audience</li>
+          <li><strong>Future plans</strong> --- trips you'd talked about, milestones you'd imagined together</li>
+          <li><strong>Part of yourself</strong> --- the version of you that existed in this friendship</li>
         </ul>
 
         <ArticleCallout variant="info" title="Friend Breakups Are Undervalidated Grief">
@@ -525,7 +525,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Research shows the slow fade is often the most painful <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2018" tier={1} />. The ambiguity — are we still friends? Should I reach out? What did I do wrong? — prevents closure and prolongs suffering.
+          Research shows the slow fade is often the most painful <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2018" tier={1} />. The ambiguity --- are we still friends? Should I reach out? What did I do wrong? --- prevents closure and prolongs suffering.
         </p>
         <p className="mb-6">
           Being ghosted by a friend is particularly traumatic <Citation id="5" index={5} source="Communication Research" year="2020" tier={1} />. The lack of explanation triggers intense self-blame and hypervigilance about what you "did wrong." This unilateral ending robs you of agency and understanding.
@@ -543,7 +543,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: '1. No Cultural Rituals for Grief',
               content: (
                 <p>
-                  You can't take 'breakup leave' from work. Friends don't throw you a support party. People expect you to move on quickly because "it's not like you were dating." This disenfranchised grief — loss that society doesn't recognize — adds isolation to your pain.
+                  You can't take 'breakup leave' from work. Friends don't throw you a support party. People expect you to move on quickly because "it's not like you were dating." This disenfranchised grief --- loss that society doesn't recognize --- adds isolation to your pain.
                 </p>
               ),
             },
@@ -584,13 +584,13 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Understanding what happened doesn't erase the pain, but it can provide clarity:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Life stage divergence</strong> — one person gets married/has kids while the other doesn't, creating incompatible schedules and priorities</li>
-          <li><strong>Value misalignment</strong> — you grow in different directions, discovering core values or lifestyles no longer align</li>
-          <li><strong>Unspoken resentment</strong> — small hurts accumulate without being addressed until someone quietly withdraws</li>
-          <li><strong>Betrayal of trust</strong> — sharing secrets, boundary violations, choosing a romantic partner over the friendship</li>
-          <li><strong>One-sidedness</strong> — effort imbalance where one person consistently gives more, leading to burnout</li>
-          <li><strong>Geographic distance</strong> — physical separation coupled with failure to maintain connection</li>
-          <li><strong>Jealousy or competition</strong> — success, relationships, or life achievements create uncomfortable comparison</li>
+          <li><strong>Life stage divergence</strong> --- one person gets married/has kids while the other doesn't, creating incompatible schedules and priorities</li>
+          <li><strong>Value misalignment</strong> --- you grow in different directions, discovering core values or lifestyles no longer align</li>
+          <li><strong>Unspoken resentment</strong> --- small hurts accumulate without being addressed until someone quietly withdraws</li>
+          <li><strong>Betrayal of trust</strong> --- sharing secrets, boundary violations, choosing a romantic partner over the friendship</li>
+          <li><strong>One-sidedness</strong> --- effort imbalance where one person consistently gives more, leading to burnout</li>
+          <li><strong>Geographic distance</strong> --- physical separation coupled with failure to maintain connection</li>
+          <li><strong>Jealousy or competition</strong> --- success, relationships, or life achievements create uncomfortable comparison</li>
         </ul>
 
         <h2 id="processing-the-grief" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -604,7 +604,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: 'Validate Your Pain',
               description: (
                 <p>
-                  Stop minimizing: "It's just a friend." No. It was a person central to your life who's now gone. Grieve as if you lost a romantic partner, because neurologically, your brain doesn't distinguish the type of attachment — only the depth.
+                  Stop minimizing: "It's just a friend." No. It was a person central to your life who's now gone. Grieve as if you lost a romantic partner, because neurologically, your brain doesn't distinguish the type of attachment --- only the depth.
                 </p>
               ),
             },
@@ -669,7 +669,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="The Closure Conversation">
           <p>
-            If you decide to reach out, keep it simple: "I miss our friendship and I'm confused about what happened. Can we talk?" Don't send a novel. Don't demand explanation. Open the door and see if they walk through. If they don't respond or decline, you have your answer — and that's a form of closure.
+            If you decide to reach out, keep it simple: "I miss our friendship and I'm confused about what happened. Can we talk?" Don't send a novel. Don't demand explanation. Open the door and see if they walk through. If they don't respond or decline, you have your answer --- and that's a form of closure.
           </p>
         </ArticleCallout>
 
@@ -680,11 +680,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           The social fallout of friend breakups is one of the hardest parts <Citation id="6" index={6} source="Journal of Social Issues" year="2017" tier={1} />. Here's how to handle it:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Don't force people to choose sides</strong> — it creates resentment and makes you look petty</li>
-          <li><strong>Be honest with close mutual friends</strong> — "X and I aren't close anymore. I'm processing it and would appreciate not hearing updates about them for now."</li>
-          <li><strong>Skip events if you're not ready</strong> — your healing &gt; maintaining appearances</li>
-          <li><strong>If you both show up, keep it civil</strong> — brief acknowledgment, then create space</li>
-          <li><strong>Expand your social circle</strong> — relying solely on the mutual group keeps you tethered to the loss</li>
+          <li><strong>Don't force people to choose sides</strong> --- it creates resentment and makes you look petty</li>
+          <li><strong>Be honest with close mutual friends</strong> --- "X and I aren't close anymore. I'm processing it and would appreciate not hearing updates about them for now."</li>
+          <li><strong>Skip events if you're not ready</strong> --- your healing &gt; maintaining appearances</li>
+          <li><strong>If you both show up, keep it civil</strong> --- brief acknowledgment, then create space</li>
+          <li><strong>Expand your social circle</strong> --- relying solely on the mutual group keeps you tethered to the loss</li>
         </ul>
 
         <h2 id="post-friendship-growth" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -694,16 +694,16 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Research shows 65% of people report learning important lessons from friend breakups <Citation id="7" index={7} source="Journal of Positive Psychology" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Boundary clarity</strong> — recognizing what you will and won't tolerate in friendships</li>
-          <li><strong>Red flags awareness</strong> — signs of one-sidedness, manipulation, or incompatibility</li>
-          <li><strong>Communication skills</strong> — understanding the importance of addressing small conflicts early</li>
-          <li><strong>Self-reliance</strong> — learning you can survive without this specific person</li>
-          <li><strong>Values alignment</strong> — becoming pickier (in a good way) about who gets close to you</li>
+          <li><strong>Boundary clarity</strong> --- recognizing what you will and won't tolerate in friendships</li>
+          <li><strong>Red flags awareness</strong> --- signs of one-sidedness, manipulation, or incompatibility</li>
+          <li><strong>Communication skills</strong> --- understanding the importance of addressing small conflicts early</li>
+          <li><strong>Self-reliance</strong> --- learning you can survive without this specific person</li>
+          <li><strong>Values alignment</strong> --- becoming pickier (in a good way) about who gets close to you</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            <strong>The friendship mattered. And it's okay that it's over.</strong> Both things can be true. You're allowed to grieve someone who's still alive, still in your city, still posting on Instagram. Grief isn't reserved for death — it's for any profound loss. And this was one.
+            <strong>The friendship mattered. And it's okay that it's over.</strong> Both things can be true. You're allowed to grieve someone who's still alive, still in your city, still posting on Instagram. Grief isn't reserved for death --- it's for any profound loss. And this was one.
           </p>
         </ArticleCallout>
 
@@ -716,9 +716,9 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Join groups aligned with your interests (book clubs, sports leagues, volunteer orgs)</li>
           <li>Invest in friendships you've been neglecting</li>
-          <li>Be intentional about effort — initiate plans, follow up, show consistency</li>
+          <li>Be intentional about effort --- initiate plans, follow up, show consistency</li>
           <li>Look for green flags: reciprocity, emotional availability, shared values</li>
-          <li>Be vulnerable earlier — deep friendships require risk</li>
+          <li>Be vulnerable earlier --- deep friendships require risk</li>
         </ul>
         <p className="mb-6">
           The loss taught you what you need. Use that wisdom to build better, healthier friendships moving forward <Citation id="8" index={8} source="MHA" year="2023" tier={3} />.
@@ -731,7 +731,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Friend breakups don't get the acknowledgment they deserve, but that doesn't make them less real. You lost someone who knew you deeply, who shaped who you are, who was supposed to be there. That's worthy of grief.
         </p>
         <p className="mb-6">
-          Give yourself permission to mourn. And when you're ready, give yourself permission to find connection again — because you deserve friendships that honor the person you've become through this loss.
+          Give yourself permission to mourn. And when you're ready, give yourself permission to find connection again --- because you deserve friendships that honor the person you've become through this loss.
         </p>
       </>
     ),
@@ -829,7 +829,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
             You don't have to like your ex. You don't have to forgive them. You don't even have to speak to them if it can be avoided. But if you share children, you do have to put those children's needs above your own pain. This is the hardest, most important work you'll do post-breakup.
           </p>
           <p className="mb-6">
-            Research is clear: it's not the separation itself that harms children — it's the conflict between parents <Citation id="1" index={1} source="Journal of Family Psychology" year="2018" tier={1} />. Low-conflict co-parenting, even after a painful breakup, protects children's mental health and development <Citation id="2" index={2} source="Child Development" year="2019" tier={2} />. Your children can thrive. But it requires you to do something extraordinarily difficult: behave better toward your ex than you feel.
+            Research is clear: it's not the separation itself that harms children --- it's the conflict between parents <Citation id="1" index={1} source="Journal of Family Psychology" year="2018" tier={1} />. Low-conflict co-parenting, even after a painful breakup, protects children's mental health and development <Citation id="2" index={2} source="Child Development" year="2019" tier={2} />. Your children can thrive. But it requires you to do something extraordinarily difficult: behave better toward your ex than you feel.
           </p>
         </div>
 
@@ -849,11 +849,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           The single most protective factor for children post-separation is low parental conflict <Citation id="1" index={1} source="Journal of Family Psychology" year="2018" tier={1} />. This means:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>No fighting in front of the children</strong> — ever. Save disagreements for private communication.</li>
-          <li><strong>No using children as messengers</strong> — "Tell your mom..." creates stress and loyalty conflicts</li>
-          <li><strong>No badmouthing the other parent</strong> — criticizing their parent damages the child's self-concept <Citation id="4" index={4} source="Journal of Child and Family Studies" year="2020" tier={1} /></li>
-          <li><strong>No interrogating children about the other household</strong> — puts them in impossible positions</li>
-          <li><strong>No weaponizing children</strong> — using custody, finances, or access as punishment against your ex</li>
+          <li><strong>No fighting in front of the children</strong> --- ever. Save disagreements for private communication.</li>
+          <li><strong>No using children as messengers</strong> --- "Tell your mom..." creates stress and loyalty conflicts</li>
+          <li><strong>No badmouthing the other parent</strong> --- criticizing their parent damages the child's self-concept <Citation id="4" index={4} source="Journal of Child and Family Studies" year="2020" tier={1} /></li>
+          <li><strong>No interrogating children about the other household</strong> --- puts them in impossible positions</li>
+          <li><strong>No weaponizing children</strong> --- using custody, finances, or access as punishment against your ex</li>
         </ul>
 
         <ArticleCallout variant="warning" title="Children Always Know">
@@ -1008,16 +1008,16 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Children adjust better when core routines remain consistent <Citation id="5" index={5} source="Journal of Divorce & Remarriage" year="2016" tier={1} />. While you can't control the other household, coordinate where possible:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Bedtimes and wake-up times</strong> — similar schedules reduce adjustment stress</li>
-          <li><strong>Homework expectations</strong> — consistent standards for completion and help</li>
-          <li><strong>Screen time rules</strong> — roughly aligned limits prevent "fun parent/strict parent" dynamics</li>
-          <li><strong>Discipline approach</strong> — similar consequences for similar behaviors when feasible</li>
-          <li><strong>Special objects</strong> — allow favorite stuffed animals, blankets to travel between homes</li>
+          <li><strong>Bedtimes and wake-up times</strong> --- similar schedules reduce adjustment stress</li>
+          <li><strong>Homework expectations</strong> --- consistent standards for completion and help</li>
+          <li><strong>Screen time rules</strong> --- roughly aligned limits prevent "fun parent/strict parent" dynamics</li>
+          <li><strong>Discipline approach</strong> --- similar consequences for similar behaviors when feasible</li>
+          <li><strong>Special objects</strong> --- allow favorite stuffed animals, blankets to travel between homes</li>
         </ul>
 
         <ArticleCallout variant="tip" title="Accept What You Can't Control">
           <p>
-            If your ex feeds the kids junk food or lets them stay up late, and the kids are safe and loved, let it go. Perfect alignment isn't possible. Pick your battles — prioritize safety and emotional wellbeing over minor differences in parenting style.
+            If your ex feeds the kids junk food or lets them stay up late, and the kids are safe and loved, let it go. Perfect alignment isn't possible. Pick your battles --- prioritize safety and emotional wellbeing over minor differences in parenting style.
           </p>
         </ArticleCallout>
 
@@ -1028,11 +1028,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Most co-parenting challenges are frustrating but manageable. However, certain situations require legal or therapeutic intervention:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Child abuse or neglect</strong> — physical, emotional, sexual abuse; severe neglect</li>
-          <li><strong>Substance abuse</strong> — active addiction creating unsafe environment</li>
-          <li><strong>Parental alienation</strong> — one parent systematically turning child against the other</li>
-          <li><strong>Refusal to follow custody agreement</strong> — repeatedly withholding visitation, violating court orders</li>
-          <li><strong>Exposing children to domestic violence</strong> — new partner being abusive</li>
+          <li><strong>Child abuse or neglect</strong> --- physical, emotional, sexual abuse; severe neglect</li>
+          <li><strong>Substance abuse</strong> --- active addiction creating unsafe environment</li>
+          <li><strong>Parental alienation</strong> --- one parent systematically turning child against the other</li>
+          <li><strong>Refusal to follow custody agreement</strong> --- repeatedly withholding visitation, violating court orders</li>
+          <li><strong>Exposing children to domestic violence</strong> --- new partner being abusive</li>
         </ul>
         <p className="mb-6">
           If any apply, document everything, consult a family law attorney, and prioritize children's safety over preserving the co-parenting relationship.
@@ -1076,11 +1076,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Wait 6+ months</strong> before introducing children to a new romantic partner</li>
-          <li><strong>Keep it casual initially</strong> — "my friend" at first, not "my girlfriend/boyfriend"</li>
+          <li><strong>Keep it casual initially</strong> --- "my friend" at first, not "my girlfriend/boyfriend"</li>
           <li><strong>Coordinate with your ex</strong> (if possible) so they're not blindsided</li>
-          <li><strong>Let the child set the pace</strong> — don't force bonding or affection</li>
-          <li><strong>New partner stays out of discipline</strong> — at least for the first year</li>
-          <li><strong>Respect children's loyalty to the other parent</strong> — don't compete or replace</li>
+          <li><strong>Let the child set the pace</strong> --- don't force bonding or affection</li>
+          <li><strong>New partner stays out of discipline</strong> --- at least for the first year</li>
+          <li><strong>Respect children's loyalty to the other parent</strong> --- don't compete or replace</li>
         </ul>
 
         <ArticleCallout variant="clinical-note">
@@ -1096,11 +1096,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           You can't pour from an empty cup. Protecting your own mental health makes you a better parent:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Seek individual therapy</strong> — process your grief, anger, and resentment outside your children's earshot</li>
-          <li><strong>Build a support network</strong> — friends, family, or support groups for divorced/separated parents</li>
-          <li><strong>Practice self-compassion</strong> — you're doing hard work under painful circumstances</li>
-          <li><strong>Set boundaries with your ex</strong> — use parallel parenting if cooperative parenting causes too much distress</li>
-          <li><strong>Create joy in your child-free time</strong> — rebuild your identity outside parenthood</li>
+          <li><strong>Seek individual therapy</strong> --- process your grief, anger, and resentment outside your children's earshot</li>
+          <li><strong>Build a support network</strong> --- friends, family, or support groups for divorced/separated parents</li>
+          <li><strong>Practice self-compassion</strong> --- you're doing hard work under painful circumstances</li>
+          <li><strong>Set boundaries with your ex</strong> --- use parallel parenting if cooperative parenting causes too much distress</li>
+          <li><strong>Create joy in your child-free time</strong> --- rebuild your identity outside parenthood</li>
         </ul>
 
         <p className="mb-6">
@@ -1111,7 +1111,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Final Word
         </h2>
         <p className="mb-6">
-          Co-parenting with someone you're heartbroken or angry with is one of the hardest things you'll do. But every time you bite your tongue, respond calmly, or put your child's needs above your rage — you're protecting them from the worst effects of the breakup.
+          Co-parenting with someone you're heartbroken or angry with is one of the hardest things you'll do. But every time you bite your tongue, respond calmly, or put your child's needs above your rage --- you're protecting them from the worst effects of the breakup.
         </p>
         <p className="mb-6">
           Your children will remember not whether their parents stayed together, but whether they felt safe, loved, and shielded from conflict. Give them that gift, even when it costs you everything to do it.
@@ -1201,7 +1201,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "When can I date again?" is one of the most common post-breakup questions — and one of the most important. Rush it, and you risk harming yourself and someone new. Wait too long, and you might miss connection out of fear. So how do you know when you're truly ready?
+            "When can I date again?" is one of the most common post-breakup questions --- and one of the most important. Rush it, and you risk harming yourself and someone new. Wait too long, and you might miss connection out of fear. So how do you know when you're truly ready?
           </p>
           <p className="mb-6">
             Research offers clear guidance: readiness isn't about time elapsed since the breakup, but about emotional detachment from your ex and psychological readiness for something new <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2017" tier={1} />. You're ready when you want a relationship for connection, not as a Band-Aid for loneliness or proof that you're over your ex.
@@ -1212,17 +1212,17 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Why Rushing Into Dating Backfires
         </h2>
         <p className="mb-6">
-          Rebound relationships — those started within 3 months of a breakup before emotional processing is complete — have a 90% failure rate within the first year <Citation id="4" index={4} source="Archives of Sexual Behavior" year="2015" tier={1} />.
+          Rebound relationships --- those started within 3 months of a breakup before emotional processing is complete --- have a 90% failure rate within the first year <Citation id="4" index={4} source="Archives of Sexual Behavior" year="2015" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Why rebounds fail:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>You're seeking distraction, not connection</strong> — using someone to avoid grief</li>
-          <li><strong>You haven't processed what went wrong</strong> — repeating old patterns with new people</li>
-          <li><strong>You're still emotionally attached to your ex</strong> — comparing everyone to them</li>
-          <li><strong>You don't know who you are alone</strong> — jumping from 'we' to "we" without rebuilding "I"</li>
-          <li><strong>You're driven by loneliness, not genuine interest</strong> — settling for "good enough" to fill the void</li>
+          <li><strong>You're seeking distraction, not connection</strong> --- using someone to avoid grief</li>
+          <li><strong>You haven't processed what went wrong</strong> --- repeating old patterns with new people</li>
+          <li><strong>You're still emotionally attached to your ex</strong> --- comparing everyone to them</li>
+          <li><strong>You don't know who you are alone</strong> --- jumping from 'we' to "we" without rebuilding "I"</li>
+          <li><strong>You're driven by loneliness, not genuine interest</strong> --- settling for "good enough" to fill the void</li>
         </ul>
 
         <ArticleCallout variant="warning" title="The Rebound Red Flag">
@@ -1250,7 +1250,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: '2. You Rarely Think About Your Ex',
               description: (
                 <p>
-                  When your ex crosses your mind, it's neutral or mildly nostalgic — not painful, angry, or longing. You don't check their social media. You don't hope for reconciliation. They're a chapter, not the whole book <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2017" tier={1} />.
+                  When your ex crosses your mind, it's neutral or mildly nostalgic --- not painful, angry, or longing. You don't check their social media. You don't hope for reconciliation. They're a chapter, not the whole book <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2017" tier={1} />.
                 </p>
               ),
             },
@@ -1266,7 +1266,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: "4. You\'re Not Looking for a Replacement",
               description: (
                 <p>
-                  You're not comparing every new person to your ex or seeking someone who fills the exact role they played. You're open to someone different — maybe even excited about different.
+                  You're not comparing every new person to your ex or seeking someone who fills the exact role they played. You're open to someone different --- maybe even excited about different.
                 </p>
               ),
             },
@@ -1320,7 +1320,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            If you're using dating apps to avoid sitting with your feelings, swiping compulsively late at night when you're sad, or going on dates with people you're not attracted to just to feel wanted — you're not ready. That's self-medication, not connection.
+            If you're using dating apps to avoid sitting with your feelings, swiping compulsively late at night when you're sad, or going on dates with people you're not attracted to just to feel wanted --- you're not ready. That's self-medication, not connection.
           </p>
         </ArticleCallout>
 
@@ -1331,11 +1331,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           There's no universal "wait X months" rule. Readiness depends on:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Length of the relationship</strong> — 5-year relationship takes longer to process than 6-month one</li>
-          <li><strong>Depth of attachment</strong> — were you deeply enmeshed or more independent?</li>
-          <li><strong>How it ended</strong> — mutual decision vs. being blindsided affects recovery time</li>
-          <li><strong>Your healing work</strong> — therapy, journaling, and active processing accelerate readiness</li>
-          <li><strong>Support system</strong> — strong friendships buffer loneliness, reducing urge to rush dating</li>
+          <li><strong>Length of the relationship</strong> --- 5-year relationship takes longer to process than 6-month one</li>
+          <li><strong>Depth of attachment</strong> --- were you deeply enmeshed or more independent?</li>
+          <li><strong>How it ended</strong> --- mutual decision vs. being blindsided affects recovery time</li>
+          <li><strong>Your healing work</strong> --- therapy, journaling, and active processing accelerate readiness</li>
+          <li><strong>Support system</strong> --- strong friendships buffer loneliness, reducing urge to rush dating</li>
         </ul>
         <p className="mb-6">
           <strong>General guidelines (not rules):</strong>
@@ -1423,7 +1423,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           stats={[
             { value: 73, suffix: '%', label: 'Higher satisfaction when emotionally ready before dating' },
             { value: 90, suffix: '%', label: 'Rebound relationship failure rate within 1 year' },
-            { value: 6, suffix: '–12mo', label: 'Average readiness timeline for serious relationship' },
+            { value: 6, suffix: '--12mo', label: 'Average readiness timeline for serious relationship' },
           ]}
           source="Personal Relationships, 2019; Archives of Sexual Behavior, 2015"
         />
@@ -1432,7 +1432,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           <strong>Green flags you're doing it right:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>You're picky (in a good way) — not settling out of fear of being alone</li>
+          <li>You're picky (in a good way) --- not settling out of fear of being alone</li>
           <li>You communicate openly about your recent breakup without trauma-dumping</li>
           <li>You notice red flags and act on them instead of ignoring them</li>
           <li>You feel excited about getting to know someone, not desperate to lock them down</li>
@@ -1459,11 +1459,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Sometimes life doesn't wait for perfect timing. If you meet someone you genuinely connect with but aren't fully healed:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Be honest</strong> — "I'm recently out of a relationship and still healing. I like you, but I need to take things slow."</li>
-          <li><strong>Set boundaries</strong> — don't rush intimacy or commitment. Give yourself space to process.</li>
-          <li><strong>Continue your healing work</strong> — don't abandon therapy, journaling, or self-care because you met someone</li>
-          <li><strong>Watch for patterns</strong> — are you repeating old dynamics? Ignoring red flags?</li>
-          <li><strong>Check in with yourself</strong> — Am I genuinely interested in them, or just using them to avoid grief?</li>
+          <li><strong>Be honest</strong> --- "I'm recently out of a relationship and still healing. I like you, but I need to take things slow."</li>
+          <li><strong>Set boundaries</strong> --- don't rush intimacy or commitment. Give yourself space to process.</li>
+          <li><strong>Continue your healing work</strong> --- don't abandon therapy, journaling, or self-care because you met someone</li>
+          <li><strong>Watch for patterns</strong> --- are you repeating old dynamics? Ignoring red flags?</li>
+          <li><strong>Check in with yourself</strong> --- Am I genuinely interested in them, or just using them to avoid grief?</li>
         </ul>
         <p className="mb-6">
           If they're worth it, they'll respect your pace. If they pressure you to 'just get over it, " they're not the right person <Citation id="8" index={8} source="APA" year="2022" tier={3} />.
@@ -1479,10 +1479,10 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           "If I never met anyone new, would I still be okay?"
         </p>
         <p className="mb-6">
-          If the answer is yes — if you've built a life you love, feel whole alone, and would choose a relationship as an addition (not a necessity) — you're ready.
+          If the answer is yes --- if you've built a life you love, feel whole alone, and would choose a relationship as an addition (not a necessity) --- you're ready.
         </p>
         <p className="mb-6">
-          If the answer is no — if the thought of staying single terrifies you, if you need someone to feel complete — you're not ready. And that's okay. Keep healing. The right person will be worth the wait <Citation id="7" index={7} source="Clinical Psychology Review" year="2017" tier={1} />.
+          If the answer is no --- if the thought of staying single terrifies you, if you need someone to feel complete --- you're not ready. And that's okay. Keep healing. The right person will be worth the wait <Citation id="7" index={7} source="Clinical Psychology Review" year="2017" tier={1} />.
         </p>
       </>
     ),
@@ -1569,10 +1569,10 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After heartbreak, the idea of opening yourself to someone new can feel impossible. You've been burned. You know how badly love can hurt. Why risk it again? And yet — you also know how beautiful connection can be. Starting over means carrying the wisdom of your pain into new possibilities, building something better because of what you've learned, not despite it.
+            After heartbreak, the idea of opening yourself to someone new can feel impossible. You've been burned. You know how badly love can hurt. Why risk it again? And yet --- you also know how beautiful connection can be. Starting over means carrying the wisdom of your pain into new possibilities, building something better because of what you've learned, not despite it.
           </p>
           <p className="mb-6">
-            This isn't about forgetting your past relationship or pretending the breakup didn't change you. It's about integrating those lessons into a stronger, clearer version of yourself — one who knows what they want, what they won't tolerate, and how to build connection from wholeness instead of need <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2018" tier={1} />.
+            This isn't about forgetting your past relationship or pretending the breakup didn't change you. It's about integrating those lessons into a stronger, clearer version of yourself --- one who knows what they want, what they won't tolerate, and how to build connection from wholeness instead of need <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2018" tier={1} />.
           </p>
         </div>
 
@@ -1591,7 +1591,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: "'What if I get hurt again?",
               content: (
                 <p>
-                  You will. Not necessarily in the same way, and hopefully not as badly — but vulnerability always carries risk. The question isn't whether you'll ever feel pain again, but whether the possibility of love is worth that risk. Only you can answer that. But consider: staying closed guarantees loneliness. Opening up risks pain but offers connection.
+                  You will. Not necessarily in the same way, and hopefully not as badly --- but vulnerability always carries risk. The question isn't whether you'll ever feel pain again, but whether the possibility of love is worth that risk. Only you can answer that. But consider: staying closed guarantees loneliness. Opening up risks pain but offers connection.
                 </p>
               ),
             },
@@ -1600,7 +1600,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: "'What if I choose the wrong person again?",
               content: (
                 <p>
-                  This fear is valid — and also addressable. Research shows people who intentionally reflect on past relationship patterns and apply those lessons reduce repeat mistakes by 67% <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2017" tier={1} />. You're not doomed to repeat the past if you're willing to learn from it.
+                  This fear is valid --- and also addressable. Research shows people who intentionally reflect on past relationship patterns and apply those lessons reduce repeat mistakes by 67% <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2017" tier={1} />. You're not doomed to repeat the past if you're willing to learn from it.
                 </p>
               ),
             },
@@ -1609,7 +1609,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: "'What if no one compares to my ex?",
               content: (
                 <p>
-                  They won't — because they're not supposed to. Your ex was one person with specific qualities. The next person will be different, with their own strengths and flaws. The goal isn't to find a replica or upgrade, but someone who fits the life you're building now, not the one you had then.
+                  They won't --- because they're not supposed to. Your ex was one person with specific qualities. The next person will be different, with their own strengths and flaws. The goal isn't to find a replica or upgrade, but someone who fits the life you're building now, not the one you had then.
                 </p>
               ),
             },
@@ -1618,7 +1618,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: "What if I can't be vulnerable anymore?",
               content: (
                 <p>
-                  Vulnerability is a muscle that atrophies from disuse and trauma. But it can be rebuilt <Citation id="2" index={2} source="Journal of Counseling Psychology" year="2019" tier={1} />. Start small: share something real with a friend. Practice emotional honesty in low-stakes situations. Trust isn't all-or-nothing — it's built gradually.
+                  Vulnerability is a muscle that atrophies from disuse and trauma. But it can be rebuilt <Citation id="2" index={2} source="Journal of Counseling Psychology" year="2019" tier={1} />. Start small: share something real with a friend. Practice emotional honesty in low-stakes situations. Trust isn't all-or-nothing --- it's built gradually.
                 </p>
               ),
             },
@@ -1629,13 +1629,13 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Starting With Friendship
         </h2>
         <p className="mb-6">
-          One of the best ways to rebuild connection capacity is through friendships — new or deepened ones <Citation id="3" index={3} source="Personal Relationships" year="2020" tier={1} />. Friendships offer:
+          One of the best ways to rebuild connection capacity is through friendships --- new or deepened ones <Citation id="3" index={3} source="Personal Relationships" year="2020" tier={1} />. Friendships offer:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Lower-stakes vulnerability practice</strong> — sharing without the intensity of romantic pressure</li>
-          <li><strong>Social support that accelerates healing</strong> — research shows strong friendships buffer post-breakup distress</li>
-          <li><strong>Identity reinforcement</strong> — friends reflect back the version of you that exists independently</li>
-          <li><strong>Reminder that connection exists outside romance</strong> — you're not alone just because you're single</li>
+          <li><strong>Lower-stakes vulnerability practice</strong> --- sharing without the intensity of romantic pressure</li>
+          <li><strong>Social support that accelerates healing</strong> --- research shows strong friendships buffer post-breakup distress</li>
+          <li><strong>Identity reinforcement</strong> --- friends reflect back the version of you that exists independently</li>
+          <li><strong>Reminder that connection exists outside romance</strong> --- you're not alone just because you're single</li>
         </ul>
 
         <ProgressSteps
@@ -1653,7 +1653,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
               title: 'Make New Friends',
               description: (
                 <p>
-                  Join groups aligned with your interests (running clubs, book clubs, volunteer orgs). Initiate plans. Follow up after first meetings. Building adult friendships requires intentional effort — but it's worth it.
+                  Join groups aligned with your interests (running clubs, book clubs, volunteer orgs). Initiate plans. Follow up after first meetings. Building adult friendships requires intentional effort --- but it's worth it.
                 </p>
               ),
             },
@@ -1672,7 +1672,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Lessons to Carry Forward
         </h2>
         <p className="mb-6">
-          Your last relationship taught you something — even if it's painful to admit. Before pursuing new connections, identify what you learned <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2017" tier={1} />:
+          Your last relationship taught you something --- even if it's painful to admit. Before pursuing new connections, identify what you learned <Citation id="4" index={4} source="Journal of Social and Personal Relationships" year="2017" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -1690,7 +1690,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="The Relationship Autopsy">
           <p>
-            Journal a "relationship autopsy" — a honest, non-blaming analysis of what went wrong and your role in it. This isn't about self-flagellation. It's about identifying patterns so you don't repeat them. What you don't examine, you're doomed to re-enact.
+            Journal a "relationship autopsy" --- a honest, non-blaming analysis of what went wrong and your role in it. This isn't about self-flagellation. It's about identifying patterns so you don't repeat them. What you don't examine, you're doomed to re-enact.
           </p>
         </ArticleCallout>
 
@@ -1701,14 +1701,14 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Armed with lessons from the past, you can now identify healthier patterns <Citation id="8" index={8} source="APA" year="2023" tier={3} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Consistent communication</strong> — they follow through, respond in reasonable timeframes, don't disappear</li>
-          <li><strong>Respect for boundaries</strong> — when you say no or ask for space, they honor it</li>
-          <li><strong>Emotional availability</strong> — they can talk about feelings, handle conflict, show vulnerability</li>
-          <li><strong>Mutual effort</strong> — you're not always the one initiating or planning</li>
-          <li><strong>Integration into their life</strong> — they introduce you to friends/family, include you in plans</li>
-          <li><strong>Growth mindset</strong> — they can take feedback, apologize sincerely, work on themselves</li>
-          <li><strong>Shared values</strong> — alignment on big things (kids, location, lifestyle, core beliefs)</li>
-          <li><strong>You feel like yourself around them</strong> — not performing, shrinking, or walking on eggshells</li>
+          <li><strong>Consistent communication</strong> --- they follow through, respond in reasonable timeframes, don't disappear</li>
+          <li><strong>Respect for boundaries</strong> --- when you say no or ask for space, they honor it</li>
+          <li><strong>Emotional availability</strong> --- they can talk about feelings, handle conflict, show vulnerability</li>
+          <li><strong>Mutual effort</strong> --- you're not always the one initiating or planning</li>
+          <li><strong>Integration into their life</strong> --- they introduce you to friends/family, include you in plans</li>
+          <li><strong>Growth mindset</strong> --- they can take feedback, apologize sincerely, work on themselves</li>
+          <li><strong>Shared values</strong> --- alignment on big things (kids, location, lifestyle, core beliefs)</li>
+          <li><strong>You feel like yourself around them</strong> --- not performing, shrinking, or walking on eggshells</li>
         </ul>
 
         <h2 id="red-flags-to-walk-away-from" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1718,14 +1718,14 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           You've learned what doesn't work. Trust that knowledge:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Inconsistency</strong> — hot/cold behavior, unreliable communication</li>
-          <li><strong>Boundary violations</strong> — pushing for intimacy too fast, ignoring your "no"</li>
-          <li><strong>Emotional unavailability</strong> — deflects vulnerability, can't discuss feelings</li>
-          <li><strong>Comparison to ex</strong> — talks constantly about former partner</li>
-          <li><strong>Love-bombing</strong> — intense too fast, overwhelming declarations early</li>
-          <li><strong>Lack of accountability</strong> — blames others, never apologizes, defensive</li>
-          <li><strong>Different core values</strong> — fundamental incompatibility you're hoping will change</li>
-          <li><strong>You feel anxious, small, or 'too much' around them</strong> — your body is telling you something</li>
+          <li><strong>Inconsistency</strong> --- hot/cold behavior, unreliable communication</li>
+          <li><strong>Boundary violations</strong> --- pushing for intimacy too fast, ignoring your "no"</li>
+          <li><strong>Emotional unavailability</strong> --- deflects vulnerability, can't discuss feelings</li>
+          <li><strong>Comparison to ex</strong> --- talks constantly about former partner</li>
+          <li><strong>Love-bombing</strong> --- intense too fast, overwhelming declarations early</li>
+          <li><strong>Lack of accountability</strong> --- blames others, never apologizes, defensive</li>
+          <li><strong>Different core values</strong> --- fundamental incompatibility you're hoping will change</li>
+          <li><strong>You feel anxious, small, or 'too much' around them</strong> --- your body is telling you something</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -1744,11 +1744,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           <strong>Healthy pacing means:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Progressive disclosure</strong> — sharing deeper things gradually as trust builds <Citation id="6" index={6} source="Communication Research" year="2016" tier={1} /></li>
-          <li><strong>Observing behavior over time</strong> — watching how they handle conflict, stress, disappointment</li>
-          <li><strong>Maintaining your own life</strong> — not merging immediately, keeping hobbies and friendships</li>
-          <li><strong>Checking in with yourself</strong> — "Do I actually like this person, or am I just lonely?"</li>
-          <li><strong>Communicating your pace</strong> — "I like you, but I need to take things slow" is honest and fair</li>
+          <li><strong>Progressive disclosure</strong> --- sharing deeper things gradually as trust builds <Citation id="6" index={6} source="Communication Research" year="2016" tier={1} /></li>
+          <li><strong>Observing behavior over time</strong> --- watching how they handle conflict, stress, disappointment</li>
+          <li><strong>Maintaining your own life</strong> --- not merging immediately, keeping hobbies and friendships</li>
+          <li><strong>Checking in with yourself</strong> --- "Do I actually like this person, or am I just lonely?"</li>
+          <li><strong>Communicating your pace</strong> --- "I like you, but I need to take things slow" is honest and fair</li>
         </ul>
 
         <p className="mb-6">
@@ -1773,11 +1773,11 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           It's normal to feel anxious when opening up again. Mindfulness practices can help you stay present instead of catastrophizing <Citation id="7" index={7} source="Mindfulness" year="2021" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Notice catastrophic thoughts</strong> — "They didn't text back = they're losing interest = I'm unlovable = this will end badly"</li>
-          <li><strong>Challenge them</strong> — "Is this definitely true, or am I projecting past pain onto this situation?"</li>
-          <li><strong>Stay in the present</strong> — "Right now, in this moment, what's actually happening?" (Usually: nothing catastrophic)</li>
-          <li><strong>Self-soothe</strong> — breathe, move your body, journal, call a friend</li>
-          <li><strong>Communicate needs</strong> — "I get anxious with long silences. Could we check in once a day?" is reasonable</li>
+          <li><strong>Notice catastrophic thoughts</strong> --- "They didn't text back = they're losing interest = I'm unlovable = this will end badly"</li>
+          <li><strong>Challenge them</strong> --- "Is this definitely true, or am I projecting past pain onto this situation?"</li>
+          <li><strong>Stay in the present</strong> --- "Right now, in this moment, what's actually happening?" (Usually: nothing catastrophic)</li>
+          <li><strong>Self-soothe</strong> --- breathe, move your body, journal, call a friend</li>
+          <li><strong>Communicate needs</strong> --- "I get anxious with long silences. Could we check in once a day?" is reasonable</li>
         </ul>
 
         <StatCard
@@ -1811,7 +1811,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Building Something New (Not Recreating the Old)
         </h2>
         <p className="mb-6">
-          One of the biggest risks in new relationships is unconsciously trying to recreate what you lost — or overcompensate by choosing the exact opposite <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2018" tier={1} />.
+          One of the biggest risks in new relationships is unconsciously trying to recreate what you lost --- or overcompensate by choosing the exact opposite <Citation id="1" index={1} source="Personality and Social Psychology Bulletin" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Healthy approach:</strong>
@@ -1828,14 +1828,14 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Celebrating the Possibility
         </h2>
         <p className="mb-6">
-          Starting over isn't just scary — it's also full of possibility. You get to:
+          Starting over isn't just scary --- it's also full of possibility. You get to:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Apply everything you've learned about yourself and relationships</li>
           <li>Meet someone who fits the person you've become, not the person you were</li>
           <li>Build connection from wholeness, not from need</li>
           <li>Experience the thrill of early connection again, with more wisdom this time</li>
-          <li>Discover that your heart is resilient — it broke, and it healed, and it's willing to risk again</li>
+          <li>Discover that your heart is resilient --- it broke, and it healed, and it's willing to risk again</li>
         </ul>
 
         <p className="mb-6">
@@ -1846,7 +1846,7 @@ export const breakupsEndingsMovingForwardArticlesB: Article[] = [
           Final Thoughts
         </h2>
         <p className="mb-6">
-          Starting over after a breakup isn't about erasing the past or pretending it didn't hurt. It's about carrying your scars as proof that you survived, your lessons as tools for building better, and your hope as evidence that love — real, healthy, mutual love — is still possible.
+          Starting over after a breakup isn't about erasing the past or pretending it didn't hurt. It's about carrying your scars as proof that you survived, your lessons as tools for building better, and your hope as evidence that love --- real, healthy, mutual love --- is still possible.
         </p>
         <p className="mb-6">
           You're not starting from scratch. You're starting from experience. And that makes all the difference <Citation id="2" index={2} source="Journal of Counseling Psychology" year="2019" tier={1} />.

@@ -111,10 +111,10 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Cognitive-behavioral therapy (CBT) is the most extensively researched psychotherapy for depression, with decades of evidence showing it works as well as medication for mild to moderate depression—and its benefits last longer after treatment ends.
+            Cognitive-behavioral therapy (CBT) is the most extensively researched psychotherapy for depression, with decades of evidence showing it works as well as medication for mild to moderate depression---and its benefits last longer after treatment ends.
           </p>
           <p className="mb-6">
-            Developed by psychiatrist Aaron Beck in the 1960s, CBT is based on a simple but powerful idea: the way we think about situations affects how we feel and behave <Citation id="5" index={5} source="International Universities Press" year="1976" tier={5} />. Depression involves distorted thinking patterns—harsh self-criticism, catastrophizing, all-or-nothing thinking—that maintain low mood and hopelessness <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.
+            Developed by psychiatrist Aaron Beck in the 1960s, CBT is based on a simple but powerful idea: the way we think about situations affects how we feel and behave <Citation id="5" index={5} source="International Universities Press" year="1976" tier={5} />. Depression involves distorted thinking patterns---harsh self-criticism, catastrophizing, all-or-nothing thinking---that maintain low mood and hopelessness <Citation id="3" index={3} source="Clinical Psychology Review" year="2020" tier={1} />.
           </p>
           <p className="mb-6">
             CBT teaches you to identify these patterns, test their accuracy, and develop more balanced perspectives. This article explains how CBT works, what to expect in therapy, and why it's effective for depression.
@@ -125,7 +125,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           stats={[
             { value: 60, suffix: '%', label: 'Response rate for CBT in major depression' },
             { value: 45, suffix: '%', label: 'Achieve full remission with CBT alone' },
-            { value: 12, suffix: '–16', label: 'Typical number of sessions (weekly)' },
+            { value: 12, suffix: '--16', label: 'Typical number of sessions (weekly)' },
           ]}
           source="JAMA Psychiatry, 2019"
         />
@@ -174,7 +174,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            The key insight of CBT: You don't have to change your life circumstances to feel better. By changing how you think about situations, you can change how you feel and behave—even when external conditions remain the same <Citation id="7" index={7} source="American Journal of Psychiatry" year="2020" tier={1} />.
+            The key insight of CBT: You don't have to change your life circumstances to feel better. By changing how you think about situations, you can change how you feel and behave---even when external conditions remain the same <Citation id="7" index={7} source="American Journal of Psychiatry" year="2020" tier={1} />.
           </p>
         </ArticleCallout>
 
@@ -321,7 +321,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Focus on behavioral activation—scheduling pleasant activities and re-engaging with life even when you don't feel motivated. You also start identifying automatic negative thoughts and cognitive distortions.
+                    Focus on behavioral activation---scheduling pleasant activities and re-engaging with life even when you don't feel motivated. You also start identifying automatic negative thoughts and cognitive distortions.
                   </p>
                   <p>
                     <strong>Homework:</strong> Activity scheduling, thought records
@@ -334,7 +334,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    Deepening cognitive work—challenging distorted thoughts, testing beliefs through behavioral experiments, and developing more balanced thinking patterns. Problem-solving specific life stressors.
+                    Deepening cognitive work---challenging distorted thoughts, testing beliefs through behavioral experiments, and developing more balanced thinking patterns. Problem-solving specific life stressors.
                   </p>
                   <p>
                     <strong>Homework:</strong> Thought challenging worksheets, behavioral experiments
@@ -368,7 +368,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           Behavioral Activation: Moving to Improve Mood
         </h2>
         <p className="mb-6">
-          One of the most powerful components of CBT is behavioral activation—deliberately engaging in activities even when you don't feel like it <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2018" tier={1} />.
+          One of the most powerful components of CBT is behavioral activation---deliberately engaging in activities even when you don't feel like it <Citation id="4" index={4} source="Behaviour Research and Therapy" year="2018" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -399,7 +399,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The key principle: <strong>action precedes motivation</strong>. You don't wait until you feel motivated to do things—you do them first, and motivation follows.
+          The key principle: <strong>action precedes motivation</strong>. You don't wait until you feel motivated to do things---you do them first, and motivation follows.
         </p>
 
         <h2 id="thought-records" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -422,7 +422,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          Regular practice with thought records trains your brain to automatically catch and challenge distorted thinking—a skill that persists long after therapy ends.
+          Regular practice with thought records trains your brain to automatically catch and challenge distorted thinking---a skill that persists long after therapy ends.
         </p>
 
         <h2 id="effectiveness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -450,7 +450,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
             <strong>CBT's lasting benefits:</strong>
           </p>
           <p className="mb-4">
-            Unlike medication—which stops working when you stop taking it—CBT teaches skills that continue to protect against depression after therapy ends. Studies show that people who complete CBT have lower relapse rates than those treated with medication alone, even years later <Citation id="6" index={6} source="Cognitive Therapy and Research" year="1977" tier={1} />.
+            Unlike medication---which stops working when you stop taking it---CBT teaches skills that continue to protect against depression after therapy ends. Studies show that people who complete CBT have lower relapse rates than those treated with medication alone, even years later <Citation id="6" index={6} source="Cognitive Therapy and Research" year="1977" tier={1} />.
           </p>
           <p>
             This is because CBT changes how you respond to stressful events and negative thoughts, creating lasting resilience.
@@ -491,7 +491,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          CBT empowers you to become your own therapist—learning skills that last a lifetime. While it requires active participation and practice, the evidence is clear: it works, and its benefits endure long after therapy ends. To find a CBT therapist, visit directories at NAMI <Citation id="10" index={10} source="National Alliance on Mental Illness" year="2023" tier={3} /> or the Association for Behavioral and Cognitive Therapies.
+          CBT empowers you to become your own therapist---learning skills that last a lifetime. While it requires active participation and practice, the evidence is clear: it works, and its benefits endure long after therapy ends. To find a CBT therapist, visit directories at NAMI <Citation id="10" index={10} source="National Alliance on Mental Illness" year="2023" tier={3} /> or the Association for Behavioral and Cognitive Therapies.
         </p>
       </>
     ),
@@ -594,7 +594,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Antidepressant medications are among the most commonly prescribed treatments for depression—and also among the most misunderstood. They're not "happy pills, ' they don't change your personality, and they're not addictive. But they do work for many people when used appropriately.
+            Antidepressant medications are among the most commonly prescribed treatments for depression---and also among the most misunderstood. They're not "happy pills, ' they don't change your personality, and they're not addictive. But they do work for many people when used appropriately.
           </p>
           <p className="mb-6">
             Antidepressants correct chemical imbalances in the brain that contribute to depression, particularly involving neurotransmitters like serotonin, norepinephrine, and dopamine <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={3} />. For moderate to severe depression, medication combined with psychotherapy produces better outcomes than either treatment alone <Citation id="8" index={8} source="Journal of Clinical Psychiatry" year="2019" tier={1} />.
@@ -608,7 +608,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           stats={[
             { value: 13, suffix: '%', label: 'Adults in US take antidepressants' },
             { value: 67, suffix: '%', label: 'Response rate with first antidepressant tried' },
-            { value: 4, suffix: '–6', label: 'Weeks to see full effect (on average)' },
+            { value: 4, suffix: '--6', label: 'Weeks to see full effect (on average)' },
           ]}
           source="CDC, 2020; Lancet, 2018"
         />
@@ -632,7 +632,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          Most antidepressants work by increasing the availability of these neurotransmitters in the brain—either by blocking their reabsorption (reuptake) or by preventing their breakdown.
+          Most antidepressants work by increasing the availability of these neurotransmitters in the brain---either by blocking their reabsorption (reuptake) or by preventing their breakdown.
         </p>
 
         <h2 id="types-of-antidepressants" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -850,7 +850,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-6">
-          Many people feel better within weeks and want to stop—but depression often returns if medication is discontinued too soon. Work with your provider to determine the right duration for your situation.
+          Many people feel better within weeks and want to stop---but depression often returns if medication is discontinued too soon. Work with your provider to determine the right duration for your situation.
         </p>
 
         <ArticleCallout variant="warning">
@@ -858,7 +858,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
             <strong>Never stop antidepressants abruptly.</strong> Discontinuation syndrome can cause flu-like symptoms, dizziness, insomnia, vivid dreams, and mood changes <Citation id="5" index={5} source="Annals of Family Medicine" year="2019" tier={1} />.
           </p>
           <p>
-            Always taper gradually under medical supervision—usually reducing dose by 25% every 1-2 weeks.
+            Always taper gradually under medical supervision---usually reducing dose by 25% every 1-2 weeks.
           </p>
         </ArticleCallout>
 
@@ -866,7 +866,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           Finding the Right Medication
         </h2>
         <p className="mb-6">
-          There's no way to predict which antidepressant will work best for an individual—it often involves trial and adjustment.
+          There's no way to predict which antidepressant will work best for an individual---it often involves trial and adjustment.
         </p>
 
         <BeforeAfter
@@ -925,7 +925,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
                     The FDA requires a "black box warning" that antidepressants may increase suicidal thinking in people under age 25 during the first few weeks of treatment <Citation id="3" index={3} source="JAMA" year="2020" tier={1} />.
                   </p>
                   <p className="mb-4">
-                    This doesn't mean antidepressants cause suicide—depression itself is the leading risk factor. The concern is that as energy improves before mood lifts, some people may act on suicidal thoughts they were previously too depressed to carry out.
+                    This doesn't mean antidepressants cause suicide---depression itself is the leading risk factor. The concern is that as energy improves before mood lifts, some people may act on suicidal thoughts they were previously too depressed to carry out.
                   </p>
                   <p>
                     <strong>What this means:</strong> Close monitoring during the first 4-8 weeks is essential. Report any worsening depression, suicidal thoughts, or unusual behavior immediately.
@@ -939,10 +939,10 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Untreated depression during pregnancy carries significant risks—but so do some medications. This requires careful individual risk-benefit assessment with your provider.
+                    Untreated depression during pregnancy carries significant risks---but so do some medications. This requires careful individual risk-benefit assessment with your provider.
                   </p>
                   <p>
-                    <strong>General guidance:</strong> SSRIs like sertraline are considered safer during pregnancy and breastfeeding. Never stop antidepressants abruptly if you become pregnant—discuss options with your provider.
+                    <strong>General guidance:</strong> SSRIs like sertraline are considered safer during pregnancy and breastfeeding. Never stop antidepressants abruptly if you become pregnant---discuss options with your provider.
                   </p>
                 </div>
               ),
@@ -965,7 +965,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-8">
-          Antidepressant medication is a valuable tool—not a cure-all, but for many people, it makes the difference between drowning in depression and having the energy to engage in therapy, reconnect with life, and recover. Work closely with your provider, communicate openly about your experience, and give medications adequate time to work. Resources for medication education are available through NIMH <Citation id="9" index={9} source="National Institute of Mental Health" year="2023" tier={2} /> and NAMI <Citation id="10" index={10} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Antidepressant medication is a valuable tool---not a cure-all, but for many people, it makes the difference between drowning in depression and having the energy to engage in therapy, reconnect with life, and recover. Work closely with your provider, communicate openly about your experience, and give medications adequate time to work. Resources for medication education are available through NIMH <Citation id="9" index={9} source="National Institute of Mental Health" year="2023" tier={2} /> and NAMI <Citation id="10" index={10} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -1060,7 +1060,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When you're diagnosed with depression, one of the first decisions you face is: therapy, medication, or both? It's a question with no universal answer—but decades of research provide clear guidance on what works best for different situations.
+            When you're diagnosed with depression, one of the first decisions you face is: therapy, medication, or both? It's a question with no universal answer---but decades of research provide clear guidance on what works best for different situations.
           </p>
           <p className="mb-6">
             For mild depression, psychotherapy alone is often sufficient. For moderate to severe depression, combining medication and therapy produces better outcomes than either treatment alone <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />. The decision depends on depression severity, your preferences, practical factors like cost and access, and whether you've had previous episodes <Citation id="8" index={8} source="American Psychiatric Association" year="2010" tier={4} />.
@@ -1136,7 +1136,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    <strong>Options:</strong> Psychotherapy alone, medication alone, or combined treatment—all are reasonable first-line choices.
+                    <strong>Options:</strong> Psychotherapy alone, medication alone, or combined treatment---all are reasonable first-line choices.
                   </p>
                   <p className="mb-3">
                     <strong>Decision factors:</strong> Patient preference, previous treatment response, symptom profile (e.g., severe sleep/appetite disruption may favor medication), and access/cost considerations.
@@ -1205,7 +1205,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know">
           <p>
-            The STAR*D study—the largest depression treatment trial ever conducted—found that about 67% of people respond to the first antidepressant tried, and among those who don't, many respond to subsequent medication changes <Citation id="4" index={4} source="American Journal of Psychiatry" year="2006" tier={1} />. Medication is effective for most people when given adequate trials.
+            The STAR*D study---the largest depression treatment trial ever conducted---found that about 67% of people respond to the first antidepressant tried, and among those who don't, many respond to subsequent medication changes <Citation id="4" index={4} source="American Journal of Psychiatry" year="2006" tier={1} />. Medication is effective for most people when given adequate trials.
           </p>
         </ArticleCallout>
 
@@ -1213,7 +1213,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           Why Combined Treatment Often Works Best
         </h2>
         <p className="mb-6">
-          Medication and therapy work through different mechanisms—combining them creates synergy <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />.
+          Medication and therapy work through different mechanisms---combining them creates synergy <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -1259,7 +1259,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Many people prefer to "talk through" problems rather than take medication. This preference is valid and should be honored—especially for mild to moderate depression where therapy alone is effective.
+                    Many people prefer to "talk through" problems rather than take medication. This preference is valid and should be honored---especially for mild to moderate depression where therapy alone is effective.
                   </p>
                   <p>
                     <strong>When to reconsider:</strong> If therapy alone doesn't produce improvement after 8-10 weeks at adequate frequency, adding medication may be necessary.
@@ -1287,7 +1287,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    If you're willing to try combined treatment, research supports this as the most effective approach—especially for moderate to severe depression.
+                    If you're willing to try combined treatment, research supports this as the most effective approach---especially for moderate to severe depression.
                   </p>
                   <p>
                     Start both simultaneously, or begin with medication for rapid symptom relief while arranging therapy (which may have waitlists).
@@ -1336,7 +1336,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          There's no single "right" answer—the best treatment is the one that works for you, fits your life, and that you'll actually follow through with. Many people benefit from starting with one approach and adding the other if needed. What matters most is getting help rather than agonizing over the "perfect" choice. Resources for understanding treatment options are available through NIMH <Citation id="9" index={9} source="National Institute of Mental Health" year="2023" tier={2} />.
+          There's no single "right" answer---the best treatment is the one that works for you, fits your life, and that you'll actually follow through with. Many people benefit from starting with one approach and adding the other if needed. What matters most is getting help rather than agonizing over the "perfect" choice. Resources for understanding treatment options are available through NIMH <Citation id="9" index={9} source="National Institute of Mental Health" year="2023" tier={2} />.
         </p>
       </>
     ),
@@ -1434,7 +1434,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
             For people who haven't responded to traditional antidepressants and therapy, hope is arriving in the form of breakthrough treatments that work faster and differently than anything we've had before.
           </p>
           <p className="mb-6">
-            Ketamine produces antidepressant effects within hours—not weeks <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />. Transcranial magnetic stimulation (TMS) uses magnetic fields to stimulate brain regions involved in mood regulation <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />. Psilocybin-assisted therapy is showing remarkable results in clinical trials, with some participants experiencing lasting relief after just one or two sessions <Citation id="3" index={3} source="New England Journal of Medicine" year="2022" tier={1} />.
+            Ketamine produces antidepressant effects within hours---not weeks <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />. Transcranial magnetic stimulation (TMS) uses magnetic fields to stimulate brain regions involved in mood regulation <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />. Psilocybin-assisted therapy is showing remarkable results in clinical trials, with some participants experiencing lasting relief after just one or two sessions <Citation id="3" index={3} source="New England Journal of Medicine" year="2022" tier={1} />.
           </p>
           <p className="mb-6">
             This article explores the science behind these emerging treatments, who they're appropriate for, their effectiveness, and what accessing them looks like.
@@ -1454,7 +1454,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           Ketamine and Esketamine: Rapid-Acting Relief
         </h2>
         <p className="mb-6">
-          Ketamine—originally developed as an anesthetic—has emerged as one of the most exciting developments in depression treatment in decades <Citation id="7" index={7} source="Molecular Psychiatry" year="2023" tier={1} />.
+          Ketamine---originally developed as an anesthetic---has emerged as one of the most exciting developments in depression treatment in decades <Citation id="7" index={7} source="Molecular Psychiatry" year="2023" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1465,7 +1465,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
             Unlike traditional antidepressants that take 4-6 weeks to work, ketamine produces antidepressant effects within hours. For someone in crisis, this rapid onset can be lifesaving.
           </p>
           <p>
-            Ketamine works through a completely different mechanism than SSRIs—it affects glutamate systems and promotes rapid neuroplasticity (brain rewiring) rather than slowly adjusting serotonin levels.
+            Ketamine works through a completely different mechanism than SSRIs---it affects glutamate systems and promotes rapid neuroplasticity (brain rewiring) rather than slowly adjusting serotonin levels.
           </p>
         </ArticleCallout>
 
@@ -1495,7 +1495,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Studies show 60-70% response rates in treatment-resistant depression—remarkable for people who've failed multiple medications <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />.
+                    Studies show 60-70% response rates in treatment-resistant depression---remarkable for people who've failed multiple medications <Citation id="1" index={1} source="JAMA Psychiatry" year="2020" tier={1} />.
                   </p>
                   <p className="mb-4">
                     <strong>Duration:</strong> Effects from a single dose typically last 3-7 days. Maintenance treatments (weekly to monthly) sustain benefits. Some people achieve lasting improvement after an initial series and can discontinue.
@@ -1518,7 +1518,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
                     <strong>Not appropriate:</strong> Active substance use disorder, uncontrolled hypertension, psychotic disorders, pregnancy
                   </p>
                   <p>
-                    <strong>Important:</strong> Ketamine is not a standalone cure—it's most effective when combined with psychotherapy to consolidate gains.
+                    <strong>Important:</strong> Ketamine is not a standalone cure---it's most effective when combined with psychotherapy to consolidate gains.
                   </p>
                 </div>
               ),
@@ -1530,7 +1530,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           Transcranial Magnetic Stimulation (TMS)
         </h2>
         <p className="mb-6">
-          TMS uses magnetic pulses to stimulate nerve cells in brain regions involved in mood regulation—specifically the left dorsolateral prefrontal cortex, which shows reduced activity in depression <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />.
+          TMS uses magnetic pulses to stimulate nerve cells in brain regions involved in mood regulation---specifically the left dorsolateral prefrontal cortex, which shows reduced activity in depression <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -1575,7 +1575,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               title: 'Preparation Sessions (2-3)',
               description: (
                 <p>
-                  Therapists build rapport, discuss intentions, address fears, and prepare participants for the psychedelic experience. This is not recreational use—it's carefully structured therapy.
+                  Therapists build rapport, discuss intentions, address fears, and prepare participants for the psychedelic experience. This is not recreational use---it's carefully structured therapy.
                 </p>
               ),
             },
@@ -1603,7 +1603,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
             <strong>Remarkable trial results:</strong>
           </p>
           <p className="mb-4">
-            A 2022 study in the New England Journal of Medicine found that psilocybin therapy produced a 67% response rate and 57% remission rate in treatment-resistant depression—with many participants maintaining benefits at 6-month follow-up <Citation id="3" index={3} source="New England Journal of Medicine" year="2022" tier={1} />.
+            A 2022 study in the New England Journal of Medicine found that psilocybin therapy produced a 67% response rate and 57% remission rate in treatment-resistant depression---with many participants maintaining benefits at 6-month follow-up <Citation id="3" index={3} source="New England Journal of Medicine" year="2022" tier={1} />.
           </p>
           <p>
             Participants often describe the experience as one of the most meaningful of their lives, reporting shifts in perspective, reconnection with emotions, and new insights into their depression.
@@ -1627,7 +1627,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           items={[
             {
               id: 'ect-modernized',
-              title: 'ECT (Electroconvulsive Therapy) — Modernized',
+              title: 'ECT (Electroconvulsive Therapy) --- Modernized',
               content: (
                 <div>
                   <p className="mb-4">
@@ -1637,7 +1637,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
                     <strong>How it works:</strong> Brief electrical currents pass through the brain under anesthesia, inducing a controlled seizure that resets brain chemistry.
                   </p>
                   <p className="mb-4">
-                    <strong>Modern improvements:</strong> Precise electrode placement, lower doses, shorter pulse widths—all reduce side effects compared to historical ECT.
+                    <strong>Modern improvements:</strong> Precise electrode placement, lower doses, shorter pulse widths---all reduce side effects compared to historical ECT.
                   </p>
                   <p>
                     <strong>Side effects:</strong> Short-term memory impairment (usually resolves), confusion immediately after treatment, headache. Long-term memory issues rare with modern techniques.
@@ -1654,7 +1654,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
                     Originally studied for PTSD (where it shows 70%+ response rates), MDMA is now being researched for depression, particularly when trauma is a contributing factor <Citation id="5" index={5} source="Nature Medicine" year="2021" tier={1} />.
                   </p>
                   <p className="mb-4">
-                    <strong>How it works:</strong> MDMA increases oxytocin, reduces fear response, and creates a window of increased openness and trust—allowing people to process traumatic material with less overwhelm.
+                    <strong>How it works:</strong> MDMA increases oxytocin, reduces fear response, and creates a window of increased openness and trust---allowing people to process traumatic material with less overwhelm.
                   </p>
                   <p>
                     <strong>Status:</strong> Phase III trials ongoing. FDA approval expected for PTSD treatment by 2024-2025, with depression research following.
@@ -1703,7 +1703,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </p>
 
         <p className="mb-6 mt-8">
-          The landscape of depression treatment is rapidly evolving. While traditional antidepressants and therapy remain first-line treatments, these emerging options offer real hope for people who haven't found relief through conventional approaches. The future of depression treatment is faster-acting, more personalized, and increasingly effective—even for those with the most treatment-resistant forms.
+          The landscape of depression treatment is rapidly evolving. While traditional antidepressants and therapy remain first-line treatments, these emerging options offer real hope for people who haven't found relief through conventional approaches. The future of depression treatment is faster-acting, more personalized, and increasingly effective---even for those with the most treatment-resistant forms.
         </p>
       </>
     ),
@@ -1712,7 +1712,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
     id: catId(65),
     slug: 'how-long-does-depression-treatment-take',
     title: 'How Long Does Depression Treatment Take? Setting Realistic Expectations',
-    description: 'Understanding the timeline for depression treatment—from initial improvement to full recovery and relapse prevention—helps you stay committed and recognize progress along the way.',
+    description: 'Understanding the timeline for depression treatment---from initial improvement to full recovery and relapse prevention---helps you stay committed and recognize progress along the way.',
     image: "/images/articles/cat07/cover-065.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
     readTime: 10,
@@ -1790,21 +1790,21 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            One of the most common questions people ask when starting treatment for depression is: "How long until I feel better?" The answer isn't simple—but understanding the realistic timeline for improvement can help you stay committed during the waiting period.
+            One of the most common questions people ask when starting treatment for depression is: "How long until I feel better?" The answer isn't simple---but understanding the realistic timeline for improvement can help you stay committed during the waiting period.
           </p>
           <p className="mb-6">
             Depression treatment doesn't work like taking aspirin for a headache. Antidepressants typically require 4-8 weeks to reach full effect, and psychotherapy often takes 8-12 weeks before significant changes appear <Citation id="1" index={1} source="Journal of Clinical Psychiatry" year="2020" tier={1} />. After symptoms improve, continued treatment for 6-12 months helps prevent relapse <Citation id="3" index={3} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            This article breaks down the timeline for depression treatment—from initial changes to full recovery—and explains why patience and persistence are essential.
+            This article breaks down the timeline for depression treatment---from initial changes to full recovery---and explains why patience and persistence are essential.
           </p>
         </div>
 
         <StatCard
           stats={[
             { value: 60, suffix: '%', label: 'Show improvement by 6-8 weeks with treatment' },
-            { value: 12, suffix: '–16', label: 'Weeks typical for full CBT course' },
-            { value: 6, suffix: '–9', label: 'Months continuation treatment after remission' },
+            { value: 12, suffix: '--16', label: 'Weeks typical for full CBT course' },
+            { value: 6, suffix: '--9', label: 'Months continuation treatment after remission' },
           ]}
           source="Journal of Clinical Psychiatry, 2020; JAMA Psychiatry, 2021"
         />
@@ -1885,7 +1885,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
               description: (
                 <div>
                   <p className="mb-3">
-                    <strong>What happens:</strong> You continue taking medication at the same dose even after feeling better. This prevents relapse—the return of the current depressive episode.
+                    <strong>What happens:</strong> You continue taking medication at the same dose even after feeling better. This prevents relapse---the return of the current depressive episode.
                   </p>
                   <p>
                     <strong>Duration:</strong> Guidelines recommend continuing for 6-9 months after achieving remission. Stopping too soon leads to relapse in 50-60% of cases <Citation id="3" index={3} source="JAMA Psychiatry" year="2021" tier={1} />.
@@ -1963,7 +1963,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Unlike medication, where benefits disappear when you stop, therapy teaches skills that persist after treatment ends. This is why therapy has lower relapse rates—you've learned tools you can use whenever depression symptoms threaten to return.
+            Unlike medication, where benefits disappear when you stop, therapy teaches skills that persist after treatment ends. This is why therapy has lower relapse rates---you've learned tools you can use whenever depression symptoms threaten to return.
           </p>
         </ArticleCallout>
 
@@ -2003,7 +2003,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           When Treatment Isn't Working: Next Steps
         </h2>
         <p className="mb-6">
-          If you've given treatment adequate time without improvement, you have treatment-resistant depression (TRD)—defined as failure to respond to at least two adequate trials of antidepressants <Citation id="5" index={5} source="Journal of Affective Disorders" year="2020" tier={1} />.
+          If you've given treatment adequate time without improvement, you have treatment-resistant depression (TRD)---defined as failure to respond to at least two adequate trials of antidepressants <Citation id="5" index={5} source="Journal of Affective Disorders" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="tip" title={`What "Adequate Trial' Means`}>
@@ -2029,7 +2029,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
           Understanding Recovery: Beyond Symptom Reduction
         </h2>
         <p className="mb-6">
-          True recovery from depression involves more than just symptom reduction—it's about restored functioning, resilience, and quality of life <Citation id="7" index={7} source="Depression and Anxiety" year="2020" tier={1} />.
+          True recovery from depression involves more than just symptom reduction---it's about restored functioning, resilience, and quality of life <Citation id="7" index={7} source="Depression and Anxiety" year="2020" tier={1} />.
         </p>
 
         <ProgressSteps
@@ -2084,7 +2084,7 @@ export const treatmentRecoveryMovingForwardArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6 mt-8">
-          Recovery from depression takes time—usually months, not weeks. But with appropriate treatment, the vast majority of people improve significantly. Understanding the realistic timeline helps you stay committed during the waiting period, recognize early progress even when you don't feel "cured" yet, and complete the full course of treatment needed for lasting recovery. Resources for treatment planning available through NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Recovery from depression takes time---usually months, not weeks. But with appropriate treatment, the vast majority of people improve significantly. Understanding the realistic timeline helps you stay committed during the waiting period, recognize early progress even when you don't feel "cured" yet, and complete the full course of treatment needed for lasting recovery. Resources for treatment planning available through NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),

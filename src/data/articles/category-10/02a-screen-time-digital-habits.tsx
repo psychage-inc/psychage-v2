@@ -155,7 +155,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="clinical-note">
-          <p><strong>Why Age Matters:</strong> Young brains are actively developing language, attention, and social skills. Screens can displace critical face-to-face interaction and active play. The concern isn't just about what screens do—it's about what they replace.</p>
+          <p><strong>Why Age Matters:</strong> Young brains are actively developing language, attention, and social skills. Screens can displace critical face-to-face interaction and active play. The concern isn't just about what screens do---it's about what they replace.</p>
         </ArticleCallout>
 
         <h2 id="what-research-shows" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -196,7 +196,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
               id: 'attention',
               title: 'Attention and Cognition',
               content: (
-                <p>Heavy screen use in childhood correlates with reduced attention span and executive function. The ABCD study, tracking 12,000 children, found associations between high screen time and thinner cortex in areas related to critical thinking and reasoning <Citation id="3" index={3} source="NeuroImage" year="2020" tier={1} />. Causality is unclear—it could be that kids with attention issues seek out more screen time.</p>
+                <p>Heavy screen use in childhood correlates with reduced attention span and executive function. The ABCD study, tracking 12,000 children, found associations between high screen time and thinner cortex in areas related to critical thinking and reasoning <Citation id="3" index={3} source="NeuroImage" year="2020" tier={1} />. Causality is unclear---it could be that kids with attention issues seek out more screen time.</p>
               ),
             },
             {
@@ -312,7 +312,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Bottom Line">
-          <p>There's no magic number for safe screen time. Research suggests under 2 hours of recreational use is low-risk for most people, with harm increasing above 3-4 hours. But quality matters more than quantity. Focus on what you're doing, when you're doing it, and what it's replacing. Your goal isn't to hit a number—it's to use screens in a way that supports your life instead of consuming it.</p>
+          <p>There's no magic number for safe screen time. Research suggests under 2 hours of recreational use is low-risk for most people, with harm increasing above 3-4 hours. But quality matters more than quantity. Focus on what you're doing, when you're doing it, and what it's replacing. Your goal isn't to hit a number---it's to use screens in a way that supports your life instead of consuming it.</p>
         </ArticleCallout>
       </>
     ),
@@ -525,7 +525,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
         />
 
         <p className="mt-6 mb-6">
-          For most people, phone overuse is a strong habit that can be changed with awareness and intention. For a minority—estimated at 10-15% of heavy users—the behavior crosses into territory that looks clinically like addiction.
+          For most people, phone overuse is a strong habit that can be changed with awareness and intention. For a minority---estimated at 10-15% of heavy users---the behavior crosses into territory that looks clinically like addiction.
         </p>
 
         <h2 id="self-assessment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -717,7 +717,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
             You open Instagram to check one thing. Thirty minutes later, you're still scrolling. This isn't an accident or a personal failing. It's the result of billions of dollars invested in understanding how to capture and hold your attention.
           </p>
           <p className="mb-6">
-            The apps on your phone are designed by teams of engineers, designers, and psychologists whose job is to maximize "engagement"—a polite word for time spent and actions taken. They succeed by exploiting predictable patterns in human psychology <Citation id="2" index={2} source="ACM Transactions on Computer-Human Interaction" year="2020" tier={1} />. Understanding how this works is the first step toward resisting it.
+            The apps on your phone are designed by teams of engineers, designers, and psychologists whose job is to maximize "engagement"---a polite word for time spent and actions taken. They succeed by exploiting predictable patterns in human psychology <Citation id="2" index={2} source="ACM Transactions on Computer-Human Interaction" year="2020" tier={1} />. Understanding how this works is the first step toward resisting it.
           </p>
         </div>
 
@@ -767,8 +767,8 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
           items={[
             { feature: '1. Trigger', values: ['Cue to take action', 'Notification, red badge, boredom'] },
             { feature: '2. Action', values: ['Simplest behavior in anticipation of reward', 'Open app, pull to refresh, scroll'] },
-            { feature: '3. Variable Reward', values: ['Unpredictable satisfaction', 'Likes, new content, messages—maybe'] },
-            { feature: '4. Investment', values: ['User puts something in', 'Post, comment, follow—makes next use more valuable'] },
+            { feature: '3. Variable Reward', values: ['Unpredictable satisfaction', 'Likes, new content, messages---maybe'] },
+            { feature: '4. Investment', values: ['User puts something in', 'Post, comment, follow---makes next use more valuable'] },
           ]}
           highlightColumn={1}
         />
@@ -781,7 +781,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
           Variable Rewards: The Slot Machine Effect
         </h2>
         <p className="mb-6">
-          The most powerful tool in the attention economy is <strong>variable rewards</strong>—rewards that are unpredictable in timing or magnitude. This is the same mechanism that makes slot machines addictive.
+          The most powerful tool in the attention economy is <strong>variable rewards</strong>---rewards that are unpredictable in timing or magnitude. This is the same mechanism that makes slot machines addictive.
         </p>
         <p className="mb-6">
           Neuroscience research shows that unpredictable rewards trigger more dopamine release than predictable rewards <Citation id="3" index={3} source="Nature Neuroscience" year="2019" tier={1} />. Your brain gets more excited not knowing what will happen than when it knows exactly what to expect.
@@ -825,7 +825,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
           Dark Patterns: Manipulative Design
         </h2>
         <p className="mb-6">
-          Beyond variable rewards, apps use "dark patterns"—design choices that trick you into doing things against your interest <Citation id="5" index={5} source="Journal of Business Ethics" year="2022" tier={1} />:
+          Beyond variable rewards, apps use "dark patterns"---design choices that trick you into doing things against your interest <Citation id="5" index={5} source="Journal of Business Ethics" year="2022" tier={1} />:
         </p>
 
         <StatCard
@@ -845,7 +845,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
                 id: 'autoplay',
                 title: 'Autoplay',
                 content: (
-                  <p>The next video starts automatically. You have to take action to stop, not to continue. This exploits inertia—humans tend to accept defaults.</p>
+                  <p>The next video starts automatically. You have to take action to stop, not to continue. This exploits inertia---humans tend to accept defaults.</p>
                 ),
               },
               {
@@ -859,7 +859,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
                 id: 'streaks',
                 title: 'Streaks',
                 content: (
-                  <p>Snapchat's streak feature makes you feel like you'll lose something if you don't check daily. This exploits loss aversion—the pain of losing something is stronger than the pleasure of gaining it.</p>
+                  <p>Snapchat's streak feature makes you feel like you'll lose something if you don't check daily. This exploits loss aversion---the pain of losing something is stronger than the pleasure of gaining it.</p>
                 ),
               },
               {
@@ -887,7 +887,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
           Sean Parker, Facebook's first president, later admitted the platform was designed to exploit "a vulnerability in human psychology." That vulnerability is our need for social validation.
         </p>
         <p className="mb-6">
-          Likes, hearts, retweets—these quantify social approval in a way humans never experienced before social media. Research shows that seeing likes activates the brain's reward center, particularly in adolescents whose brains are hypersensitive to peer feedback <Citation id="6" index={6} source="Psychology of Popular Media" year="2020" tier={1} />.
+          Likes, hearts, retweets---these quantify social approval in a way humans never experienced before social media. Research shows that seeing likes activates the brain's reward center, particularly in adolescents whose brains are hypersensitive to peer feedback <Citation id="6" index={6} source="Psychology of Popular Media" year="2020" tier={1} />.
         </p>
 
         <QuoteBlock
@@ -910,7 +910,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
             <li><strong>Remove social media from your home screen.</strong> Put apps in folders or on later pages. Adding friction reduces automatic opening.</li>
             <li><strong>Use grayscale mode.</strong> Color is stimulating. Grayscale makes phones less appealing. iOS and Android both offer this in accessibility settings.</li>
             <li><strong>Set app time limits.</strong> Use Screen Time (iOS) or Digital Wellbeing (Android) to enforce daily limits. When time is up, the app becomes harder to access.</li>
-            <li><strong>Disable autoplay.</strong> On YouTube, Netflix, TikTok—turn off automatic next video. Force yourself to actively choose to continue.</li>
+            <li><strong>Disable autoplay.</strong> On YouTube, Netflix, TikTok---turn off automatic next video. Force yourself to actively choose to continue.</li>
             <li><strong>Schedule "check times."</strong> Instead of responding to every notification, batch-check social media 2-3 times per day at set times.</li>
           </ol>
         </ArticleCallout>
@@ -1006,7 +1006,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You don't have to move to a cabin in the woods to escape digital overload. Digital minimalism is not about rejecting technology—it's about using it intentionally. It's the difference between letting apps control your time and deciding how technology serves your life.
+            You don't have to move to a cabin in the woods to escape digital overload. Digital minimalism is not about rejecting technology---it's about using it intentionally. It's the difference between letting apps control your time and deciding how technology serves your life.
           </p>
           <p className="mb-6">
             Computer scientist Cal Newport defines digital minimalism as "a philosophy of technology use in which you focus your online time on a small number of carefully selected activities that strongly support things you value, and happily miss out on everything else" <Citation id="1" index={1} source="Cal Newport" year="2019" tier={5} />. Research supports this approach: intentional tech use predicts better mental health outcomes than total avoidance <Citation id="3" index={3} source="Journal of Computer-Mediated Communication" year="2021" tier={1} />.
@@ -1038,7 +1038,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="info">
-          <p><strong>Key Insight:</strong> Digital minimalism is about optimization, not deprivation. You're not giving up technology—you're curating it. Less noise means more signal.</p>
+          <p><strong>Key Insight:</strong> Digital minimalism is about optimization, not deprivation. You're not giving up technology---you're curating it. Less noise means more signal.</p>
         </ArticleCallout>
 
         <h2 id="why-it-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1085,7 +1085,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
             },
             {
               title: 'Week 1: Take a 30-day break',
-              description: <p>Delete or log out of all optional technologies. Keep only what's required for work or essential communication. This is not forever—it's a reset.</p>,
+              description: <p>Delete or log out of all optional technologies. Keep only what's required for work or essential communication. This is not forever---it's a reset.</p>,
             },
             {
               title: 'Weeks 2-4: Explore alternatives',
@@ -1206,7 +1206,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="The key to thriving in our high-tech world is to spend much less time using technology. This is not my opinion—it's an observation based on direct experience with thousands of people who have attempted this lifestyle shift."
+          quote="The key to thriving in our high-tech world is to spend much less time using technology. This is not my opinion---it's an observation based on direct experience with thousands of people who have attempted this lifestyle shift."
           attribution="Cal Newport"
           role="Computer Scientist and Author"
           source="Digital Minimalism, 2019"
@@ -1309,7 +1309,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Screens are everywhere, and kids are growing up with tablets, phones, and TVs as constant companions. But young brains are still developing, and excessive screen time during critical periods can have lasting effects. The question isn't whether kids should use screens—it's how much, when, and what they should be watching.
+            Screens are everywhere, and kids are growing up with tablets, phones, and TVs as constant companions. But young brains are still developing, and excessive screen time during critical periods can have lasting effects. The question isn't whether kids should use screens---it's how much, when, and what they should be watching.
           </p>
           <p className="mb-6">
             The American Academy of Pediatrics (AAP) updated its guidelines in 2023 to reflect the reality that zero screen time is unrealistic for most families <Citation id="1" index={1} source="Pediatrics" year="2023" tier={1} />. Instead, the focus is on quality, context, and balance. Here's what the research says about different age groups.
@@ -1500,7 +1500,7 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="Bottom Line for Parents">
-          <p>Screen time guidelines exist to protect developing brains. Under 18 months: avoid screens except video calls. Ages 2-5: limit to 1 hour of educational content. Ages 6+: ensure screens don't displace sleep, activity, or family time. Quality matters: co-view when possible, choose educational content, and create screen-free zones. You're not being overprotective—you're giving your child's brain the environment it needs to develop fully.</p>
+          <p>Screen time guidelines exist to protect developing brains. Under 18 months: avoid screens except video calls. Ages 2-5: limit to 1 hour of educational content. Ages 6+: ensure screens don't displace sleep, activity, or family time. Quality matters: co-view when possible, choose educational content, and create screen-free zones. You're not being overprotective---you're giving your child's brain the environment it needs to develop fully.</p>
         </ArticleCallout>
       </>
     ),

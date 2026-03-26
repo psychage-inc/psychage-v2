@@ -103,7 +103,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            If you've researched anxiety treatment, you've encountered this term: CBT. Cognitive-Behavioral Therapy. It's recommended by the American Psychological Association, the National Institute of Mental Health, and countless clinical guidelines. It's called the 'gold standard' for anxiety disorders. But what does that actually mean? How does talking to a therapist about your thoughts change your anxiety? And most importantly—does it really work?
+            If you've researched anxiety treatment, you've encountered this term: CBT. Cognitive-Behavioral Therapy. It's recommended by the American Psychological Association, the National Institute of Mental Health, and countless clinical guidelines. It's called the 'gold standard' for anxiety disorders. But what does that actually mean? How does talking to a therapist about your thoughts change your anxiety? And most importantly---does it really work?
           </p>
           <p className="mb-6">
             Cognitive-Behavioral Therapy (CBT) is the most extensively researched psychological treatment for anxiety disorders, with over 500 randomized controlled trials demonstrating its effectiveness <Citation id="1" index={1} source="Journal of Consulting and Clinical Psychology" year="2020" tier={1} />. Studies show that 60-75% of people with anxiety disorders experience significant improvement with CBT, and these gains tend to last long after treatment ends <Citation id="2" index={2} source="Cognitive Therapy and Research" year="2021" tier={1} />.
@@ -206,7 +206,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Not positive affirmations—realistic alternatives.
+                    Not positive affirmations---realistic alternatives.
                   </p>
                   <p>
                     <strong>Balanced thought:</strong> "I might make a small mistake, and if I do, I'll correct it. Most people are focused on the content, not scrutinizing me for errors. One mistake doesn't erase my overall competence."
@@ -219,7 +219,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            Cognitive restructuring isn't about "thinking positive"—it's about thinking <em>accurately</em>. Anxiety creates cognitive distortions (catastrophizing, mind-reading, all-or-nothing thinking). CBT teaches you to recognize these distortions and respond with evidence-based thinking.
+            Cognitive restructuring isn't about "thinking positive"---it's about thinking <em>accurately</em>. Anxiety creates cognitive distortions (catastrophizing, mind-reading, all-or-nothing thinking). CBT teaches you to recognize these distortions and respond with evidence-based thinking.
           </p>
         </ArticleCallout>
 
@@ -227,7 +227,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           3. Exposure Therapy
         </h3>
         <p className="mb-6">
-          This is the "B" in CBT—changing behavior. Exposure is the systematic, gradual confrontation of feared situations, objects, or sensations that you've been avoiding <Citation id="7" index={7} source="Behavior Therapy" year="2020" tier={1} />. It's the most powerful component of CBT for anxiety.
+          This is the "B" in CBT---changing behavior. Exposure is the systematic, gradual confrontation of feared situations, objects, or sensations that you've been avoiding <Citation id="7" index={7} source="Behavior Therapy" year="2020" tier={1} />. It's the most powerful component of CBT for anxiety.
         </p>
 
         <p className="mb-6">
@@ -286,7 +286,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               title: 'Skill Building Phase (Sessions 3-6)',
               description: (
                 <p>
-                  Learn cognitive restructuring, identify your specific anxiety patterns and cognitive distortions, begin creating your exposure hierarchy. Homework is assigned after each session—CBT is not passive. Practice between sessions is essential.
+                  Learn cognitive restructuring, identify your specific anxiety patterns and cognitive distortions, begin creating your exposure hierarchy. Homework is assigned after each session---CBT is not passive. Practice between sessions is essential.
                 </p>
               ),
             },
@@ -326,7 +326,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           Why Homework Is Non-Negotiable
         </h2>
         <p className="mb-6">
-          CBT homework isn't busywork—it's the primary vehicle for change. Research shows that homework completion is one of the strongest predictors of treatment success <Citation id="8" index={8} source="Journal of Clinical Psychology" year="2020" tier={1} />:
+          CBT homework isn't busywork---it's the primary vehicle for change. Research shows that homework completion is one of the strongest predictors of treatment success <Citation id="8" index={8} source="Journal of Clinical Psychology" year="2020" tier={1} />:
         </p>
 
         <ComparisonTable
@@ -361,7 +361,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           <li><strong>Specific training:</strong> Postgraduate certification in CBT or training in manualized protocols</li>
           <li><strong>Credentials:</strong> Licensed psychologist, clinical social worker, or counselor with specialized CBT training</li>
           <li><strong>Experience with your specific anxiety disorder:</strong> GAD, panic disorder, social anxiety, OCD, phobias each have slightly different CBT approaches</li>
-          <li><strong>Structured approach:</strong> Ask if they use exposure therapy, thought records, and homework assignments—these are hallmarks of genuine CBT</li>
+          <li><strong>Structured approach:</strong> Ask if they use exposure therapy, thought records, and homework assignments---these are hallmarks of genuine CBT</li>
           <li><strong>Directories:</strong> Association for Behavioral and Cognitive Therapies (ABCT), Academy of Cognitive and Behavioral Therapies</li>
         </ul>
 
@@ -393,7 +393,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
         </h2>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Commit to homework:</strong> Treat assignments as seriously as showing up to sessions</li>
-          <li><strong>Be honest with your therapist:</strong> If you didn't do homework, if exposure feels too hard, if you're not understanding—say so</li>
+          <li><strong>Be honest with your therapist:</strong> If you didn't do homework, if exposure feels too hard, if you're not understanding---say so</li>
           <li><strong>Expect discomfort:</strong> CBT, especially exposure, will make you anxious. That's the point. Healing requires facing what you've been avoiding.</li>
           <li><strong>Track your progress:</strong> Anxiety improvement isn't always linear. Objective measures (anxiety scales, exposure hierarchy completion) help you see gains you might not feel yet.</li>
           <li><strong>Practice skills even after symptoms improve:</strong> CBT gives you tools for life, not just crisis management</li>
@@ -401,10 +401,10 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-3">
-            <strong>Key Takeaway:</strong> CBT is the gold-standard treatment for anxiety disorders because it works—60-75% of people experience significant, lasting improvement. It's based on a simple but powerful model: changing how you think and act changes how you feel.
+            <strong>Key Takeaway:</strong> CBT is the gold-standard treatment for anxiety disorders because it works---60-75% of people experience significant, lasting improvement. It's based on a simple but powerful model: changing how you think and act changes how you feel.
           </p>
           <p>
-            The core components—cognitive restructuring, exposure therapy, behavioral activation, and skills training—target the mechanisms that maintain anxiety. But CBT isn't passive. Success requires active participation, consistent homework practice, and willingness to face discomfort during exposure. It's structured, evidence-based, and time-limited. Most importantly, the skills you learn become tools you can use for life, making you your own therapist long after treatment ends. If you're considering therapy for anxiety, CBT should be your first-line treatment—it's not just recommended by guidelines, it's validated by decades of research and millions of success stories.
+            The core components---cognitive restructuring, exposure therapy, behavioral activation, and skills training---target the mechanisms that maintain anxiety. But CBT isn't passive. Success requires active participation, consistent homework practice, and willingness to face discomfort during exposure. It's structured, evidence-based, and time-limited. Most importantly, the skills you learn become tools you can use for life, making you your own therapist long after treatment ends. If you're considering therapy for anxiety, CBT should be your first-line treatment---it's not just recommended by guidelines, it's validated by decades of research and millions of success stories.
           </p>
         </ArticleCallout>
       </>
@@ -492,7 +492,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The thought terrifies you. Maybe it's contamination—touching a doorknob feels like exposing yourself to deadly germs. Maybe it's a phobia—seeing a spider triggers panic so intense you can't enter the room. So you do what feels right: you avoid, you wash, you check, you seek reassurance. The relief is immediate. The anxiety drops. But hours later, the fear returns, stronger. The compulsion or avoidance that 'worked' yesterday demands to be repeated today—more intensely, more frequently, consuming more of your life. This is the trap of OCD and phobias. And there's one treatment that breaks it: Exposure and Response Prevention (ERP).
+            The thought terrifies you. Maybe it's contamination---touching a doorknob feels like exposing yourself to deadly germs. Maybe it's a phobia---seeing a spider triggers panic so intense you can't enter the room. So you do what feels right: you avoid, you wash, you check, you seek reassurance. The relief is immediate. The anxiety drops. But hours later, the fear returns, stronger. The compulsion or avoidance that 'worked' yesterday demands to be repeated today---more intensely, more frequently, consuming more of your life. This is the trap of OCD and phobias. And there's one treatment that breaks it: Exposure and Response Prevention (ERP).
           </p>
           <p className="mb-6">
             ERP is the gold-standard treatment for obsessive-compulsive disorder (OCD) and specific phobias, with success rates of 60-80% when delivered by trained therapists <Citation id="1" index={1} source="Clinical Psychology Review" year="2020" tier={1} />. It's recommended as first-line treatment by the American Psychiatric Association <Citation id="3" index={3} source="APA" year="2020" tier={2} />. But it works in a way that feels counterintuitive: You deliberately face what you fear most, and you resist the urge to escape or neutralize the anxiety.
@@ -561,7 +561,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               title: 'Start with moderate-level exposure',
               description: (
                 <p>
-                  Begin with an item that causes discomfort but is tolerable (40-60% anxiety). Engage with the feared stimulus deliberately and fully—no half-measures.
+                  Begin with an item that causes discomfort but is tolerable (40-60% anxiety). Engage with the feared stimulus deliberately and fully---no half-measures.
                 </p>
               ),
             },
@@ -615,13 +615,13 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Week 1-2:</strong> Touch shoes, then refrain from washing hands for 2 hours. Repeat daily.</li>
           <li><strong>Week 3-4:</strong> Touch public doorknobs, avoid washing. Touch face and food without washing afterward.</li>
-          <li><strong>Week 5-6:</strong> Use public restroom, touch toilet handle, wait several hours before washing hands (normal hygiene only—brief wash, not ritual).</li>
+          <li><strong>Week 5-6:</strong> Use public restroom, touch toilet handle, wait several hours before washing hands (normal hygiene only---brief wash, not ritual).</li>
           <li><strong>Week 7-8:</strong> Touch trash can, prepare and eat food without washing between.</li>
         </ol>
 
         <ArticleCallout variant="warning">
           <p>
-            <strong>Important:</strong> ERP is done gradually and collaboratively. You work with your therapist to design exposures that are challenging but tolerable. The goal is not to traumatize yourself—it's to systematically retrain your brain's threat detection system.
+            <strong>Important:</strong> ERP is done gradually and collaboratively. You work with your therapist to design exposures that are challenging but tolerable. The goal is not to traumatize yourself---it's to systematically retrain your brain's threat detection system.
           </p>
         </ArticleCallout>
 
@@ -629,7 +629,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           ERP for Specific Phobias
         </h2>
         <p className="mb-6">
-          Specific phobias (spiders, heights, flying, blood/injections, etc.) involve intense, irrational fear and avoidance of specific objects or situations. ERP for phobias typically follows a faster timeline than OCD—often just 8-12 sessions <Citation id="5" index={5} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
+          Specific phobias (spiders, heights, flying, blood/injections, etc.) involve intense, irrational fear and avoidance of specific objects or situations. ERP for phobias typically follows a faster timeline than OCD---often just 8-12 sessions <Citation id="5" index={5} source="Journal of Consulting and Clinical Psychology" year="2021" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -659,7 +659,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           Imaginal Exposure: When Real-Life Exposure Isn't Possible
         </h2>
         <p className="mb-6">
-          For some OCD themes—particularly "Pure-O" obsessions involving violent, sexual, or blasphemous intrusive thoughts—direct exposure isn't feasible. Imaginal exposure involves deliberately visualizing or writing out the feared scenario in vivid detail while preventing mental rituals or reassurance-seeking <Citation id="8" index={8} source="Cognitive and Behavioral Practice" year="2021" tier={1} />.
+          For some OCD themes---particularly "Pure-O" obsessions involving violent, sexual, or blasphemous intrusive thoughts---direct exposure isn't feasible. Imaginal exposure involves deliberately visualizing or writing out the feared scenario in vivid detail while preventing mental rituals or reassurance-seeking <Citation id="8" index={8} source="Cognitive and Behavioral Practice" year="2021" tier={1} />.
         </p>
 
         <p className="mb-6">
@@ -671,7 +671,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
         </p>
 
         <p className="mb-6">
-          Over time, the distress associated with the thought decreases. The thought becomes just a thought—unpleasant but not dangerous or meaningful.
+          Over time, the distress associated with the thought decreases. The thought becomes just a thought---unpleasant but not dangerous or meaningful.
         </p>
 
         <StatCard
@@ -759,7 +759,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           For moderate to severe OCD, combining ERP with SSRIs (selective serotonin reuptake inhibitors) often produces better outcomes than either alone. Medication can reduce baseline anxiety enough to make ERP more tolerable, while ERP provides lasting skills that continue working after medication is discontinued.
         </p>
         <p className="mb-6">
-          For specific phobias, medication is typically not first-line treatment—ERP alone is highly effective.
+          For specific phobias, medication is typically not first-line treatment---ERP alone is highly effective.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -767,7 +767,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
             <strong>Key Takeaway:</strong> Exposure and Response Prevention (ERP) is the gold-standard treatment for OCD and specific phobias because it directly targets the mechanism that maintains these conditions: the relief-seeking cycle of anxiety → avoidance/compulsion → temporary relief → stronger fear.
           </p>
           <p>
-            ERP breaks this cycle by teaching your brain, through repeated experience, that the feared outcome doesn't occur, anxiety naturally decreases, and you can tolerate distress. It's challenging—deliberately facing your worst fears while resisting the urge to escape or neutralize. But it works. 60-80% of people who complete ERP experience significant, lasting improvement. The phobia or OCD that once controlled your life becomes manageable, sometimes even inconsequential. If you have OCD or a debilitating phobia, ERP should be your first-line treatment. Yes, it's hard. But so is living under the tyranny of irrational fear. The path through anxiety is exactly where you've been avoiding—and on the other side is freedom.
+            ERP breaks this cycle by teaching your brain, through repeated experience, that the feared outcome doesn't occur, anxiety naturally decreases, and you can tolerate distress. It's challenging---deliberately facing your worst fears while resisting the urge to escape or neutralize. But it works. 60-80% of people who complete ERP experience significant, lasting improvement. The phobia or OCD that once controlled your life becomes manageable, sometimes even inconsequential. If you have OCD or a debilitating phobia, ERP should be your first-line treatment. Yes, it's hard. But so is living under the tyranny of irrational fear. The path through anxiety is exactly where you've been avoiding---and on the other side is freedom.
           </p>
         </ArticleCallout>
       </>
@@ -855,10 +855,10 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've tried to stop the anxious thoughts. You've challenged them, rationalized them, distracted from them. Sometimes it works for a few minutes, but they always come back. You've spent years fighting anxiety, trying to control it, desperately seeking the day when you'll finally be anxiety-free. But what if the problem isn't the anxiety itself—it's the struggle against it? What if freedom comes not from winning the battle with anxiety, but from stopping the fight?
+            You've tried to stop the anxious thoughts. You've challenged them, rationalized them, distracted from them. Sometimes it works for a few minutes, but they always come back. You've spent years fighting anxiety, trying to control it, desperately seeking the day when you'll finally be anxiety-free. But what if the problem isn't the anxiety itself---it's the struggle against it? What if freedom comes not from winning the battle with anxiety, but from stopping the fight?
           </p>
           <p className="mb-6">
-            This is the core premise of Acceptance and Commitment Therapy (ACT, pronounced as one word, not initials). Unlike traditional cognitive-behavioral therapy, which focuses on changing or reducing anxious thoughts, ACT teaches you to change your <em>relationship</em> with those thoughts <Citation id="1" index={1} source="Journal of Contextual Behavioral Science" year="2021" tier={1} />. The goal isn't to feel less anxious—it's to live a rich, meaningful life even when anxiety is present.
+            This is the core premise of Acceptance and Commitment Therapy (ACT, pronounced as one word, not initials). Unlike traditional cognitive-behavioral therapy, which focuses on changing or reducing anxious thoughts, ACT teaches you to change your <em>relationship</em> with those thoughts <Citation id="1" index={1} source="Journal of Contextual Behavioral Science" year="2021" tier={1} />. The goal isn't to feel less anxious---it's to live a rich, meaningful life even when anxiety is present.
           </p>
         </div>
 
@@ -879,14 +879,14 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Research shows ACT is as effective as CBT for anxiety disorders, and for some individuals—particularly those who haven't responded well to traditional CBT—ACT may be more effective <Citation id="3" index={3} source="Behaviour Research and Therapy" year="2021" tier={1} />.
+          Research shows ACT is as effective as CBT for anxiety disorders, and for some individuals---particularly those who haven't responded well to traditional CBT---ACT may be more effective <Citation id="3" index={3} source="Behaviour Research and Therapy" year="2021" tier={1} />.
         </p>
 
         <h2 id="six-core-processes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Six Core Processes of ACT
         </h2>
         <p className="mb-6">
-          ACT is built around six interconnected skills that together create <em>psychological flexibility</em>—the ability to be present, open, and engaged in life regardless of uncomfortable thoughts and feelings <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={2} />.
+          ACT is built around six interconnected skills that together create <em>psychological flexibility</em>---the ability to be present, open, and engaged in life regardless of uncomfortable thoughts and feelings <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={2} />.
         </p>
 
         <ArticleChart
@@ -907,7 +907,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           1. Cognitive Defusion
         </h3>
         <p className="mb-6">
-          Defusion means creating distance from your thoughts <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2020" tier={1} />. Instead of being "fused" with thoughts (believing them as literal truth), you observe them as mental events—words and images your brain produces, not facts about reality.
+          Defusion means creating distance from your thoughts <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2020" tier={1} />. Instead of being "fused" with thoughts (believing them as literal truth), you observe them as mental events---words and images your brain produces, not facts about reality.
         </p>
 
         <ArticleCallout variant="tip" title="Defusion Techniques">
@@ -953,18 +953,18 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           4. Self-as-Context (The Observing Self)
         </h3>
         <p className="mb-6">
-          You are not your thoughts, feelings, or anxiety. You are the context in which they occur—the observer, not the content. This "observing self" is always there, always safe, regardless of what thoughts or feelings pass through.
+          You are not your thoughts, feelings, or anxiety. You are the context in which they occur---the observer, not the content. This "observing self" is always there, always safe, regardless of what thoughts or feelings pass through.
         </p>
 
         <p className="mb-6">
-          <strong>Example:</strong> Think about a time when you were five years old. Now think about yesterday. Different thoughts, different feelings, different experiences—but the "you" observing all of it has been constant. That observing self doesn't change with anxiety; it's the stable perspective from which you can watch anxiety arise and pass.
+          <strong>Example:</strong> Think about a time when you were five years old. Now think about yesterday. Different thoughts, different feelings, different experiences---but the "you" observing all of it has been constant. That observing self doesn't change with anxiety; it's the stable perspective from which you can watch anxiety arise and pass.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           5. Values Clarification
         </h3>
         <p className="mb-6">
-          This is arguably the most important component of ACT. Values are chosen life directions—what you want your life to stand for, what matters most to you <Citation id="4" index={4} source="Behavior Therapy" year="2020" tier={1} />. They're different from goals (goals are achievable endpoints; values are ongoing directions).
+          This is arguably the most important component of ACT. Values are chosen life directions---what you want your life to stand for, what matters most to you <Citation id="4" index={4} source="Behavior Therapy" year="2020" tier={1} />. They're different from goals (goals are achievable endpoints; values are ongoing directions).
         </p>
 
         <p className="mb-6">
@@ -992,7 +992,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           6. Committed Action
         </h3>
         <p className="mb-6">
-          Values without action are just thoughts. Committed action means taking concrete steps in valued directions <em>even when anxiety is present</em>. This is similar to exposure therapy in CBT, but the motivation is different: You're not facing fear to reduce anxiety—you're facing fear because living your values matters more than avoiding discomfort.
+          Values without action are just thoughts. Committed action means taking concrete steps in valued directions <em>even when anxiety is present</em>. This is similar to exposure therapy in CBT, but the motivation is different: You're not facing fear to reduce anxiety---you're facing fear because living your values matters more than avoiding discomfort.
         </p>
 
         <p className="mb-6">
@@ -1019,7 +1019,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               title: 'Session 1-3: Creative Hopelessness',
               description: (
                 <p>
-                  Your therapist helps you explore how the struggle to control anxiety has actually made it worse. You examine all the strategies you've tried—avoidance, reassurance-seeking, rumination, suppression—and acknowledge they haven't worked long-term. This creates openness to a different approach.
+                  Your therapist helps you explore how the struggle to control anxiety has actually made it worse. You examine all the strategies you've tried---avoidance, reassurance-seeking, rumination, suppression---and acknowledge they haven't worked long-term. This creates openness to a different approach.
                 </p>
               ),
             },
@@ -1098,7 +1098,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
             <strong>Key Takeaway:</strong> Acceptance and Commitment Therapy (ACT) treats anxiety by fundamentally changing the question from "How do I get rid of anxiety?" to "How do I live a meaningful life even with anxiety?"
           </p>
           <p>
-            Through the six core processes—defusion, acceptance, present moment awareness, self-as-context, values clarification, and committed action—ACT builds psychological flexibility: the ability to be present with whatever thoughts and feelings arise while still moving toward what matters. You stop fighting anxiety and start living. The paradox: When you stop trying so hard to control anxiety, it often loses its grip on you. Not because it disappears, but because it no longer dictates your choices. You carry anxiety while building a life worth living. And that, ACT argues, is true freedom.
+            Through the six core processes---defusion, acceptance, present moment awareness, self-as-context, values clarification, and committed action---ACT builds psychological flexibility: the ability to be present with whatever thoughts and feelings arise while still moving toward what matters. You stop fighting anxiety and start living. The paradox: When you stop trying so hard to control anxiety, it often loses its grip on you. Not because it disappears, but because it no longer dictates your choices. You carry anxiety while building a life worth living. And that, ACT argues, is true freedom.
           </p>
         </ArticleCallout>
       </>
@@ -1194,10 +1194,10 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've tried therapy, lifestyle changes, and coping skills. The anxiety is still there—perhaps not as severe, but persistent enough to interfere with your life. Your doctor suggests medication. Suddenly you're facing a bewildering alphabet soup: SSRIs, SNRIs, benzodiazepines, buspirone. Which one is right for you? What are the risks? Will you be on medication forever? These are the questions everyone asks, and they deserve clear, evidence-based answers.
+            You've tried therapy, lifestyle changes, and coping skills. The anxiety is still there---perhaps not as severe, but persistent enough to interfere with your life. Your doctor suggests medication. Suddenly you're facing a bewildering alphabet soup: SSRIs, SNRIs, benzodiazepines, buspirone. Which one is right for you? What are the risks? Will you be on medication forever? These are the questions everyone asks, and they deserve clear, evidence-based answers.
           </p>
           <p className="mb-6">
-            Medication isn't the only treatment for anxiety, and it's not always necessary—but for many people, it's an essential component of effective management <Citation id="1" index={1} source="The Lancet Psychiatry" year="2020" tier={1} />. Research shows that combining medication with therapy produces better outcomes than either alone for moderate to severe anxiety disorders <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />.
+            Medication isn't the only treatment for anxiety, and it's not always necessary---but for many people, it's an essential component of effective management <Citation id="1" index={1} source="The Lancet Psychiatry" year="2020" tier={1} />. Research shows that combining medication with therapy produces better outcomes than either alone for moderate to severe anxiety disorders <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             This article breaks down the major classes of anxiety medications, how they work, what to expect, and how to make informed decisions with your healthcare provider.
@@ -1248,7 +1248,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note">
           <p>
-            <strong>Important:</strong> SSRIs don't work immediately. They typically require 4-6 weeks to reach full effectiveness, with some improvement noticeable around week 2-3. Many people discontinue too early, thinking the medication "isn't working"—but patience is essential.
+            <strong>Important:</strong> SSRIs don't work immediately. They typically require 4-6 weeks to reach full effectiveness, with some improvement noticeable around week 2-3. Many people discontinue too early, thinking the medication "isn't working"---but patience is essential.
           </p>
         </ArticleCallout>
 
@@ -1258,7 +1258,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Initial (first 1-2 weeks):</strong> Nausea, headache, insomnia or drowsiness, increased anxiety (temporary), jitteriness</li>
           <li><strong>Ongoing:</strong> Sexual side effects (decreased libido, difficulty with orgasm) in 30-40% of users, weight gain (average 5-10 lbs), emotional blunting in some people</li>
-          <li><strong>Rare but serious:</strong> Serotonin syndrome (when combined with other serotonergic drugs), increased suicidal thoughts in young adults (particularly first month—requires monitoring)</li>
+          <li><strong>Rare but serious:</strong> Serotonin syndrome (when combined with other serotonergic drugs), increased suicidal thoughts in young adults (particularly first month---requires monitoring)</li>
         </ul>
 
         <h2 id="snris" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1288,7 +1288,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           Benzodiazepines
         </h2>
         <p className="mb-6">
-          Benzos work immediately—within 30-60 minutes—by enhancing GABA, the brain's primary inhibitory neurotransmitter <Citation id="3" index={3} source="American Journal of Psychiatry" year="2020" tier={3} />. This quickly calms the nervous system.
+          Benzos work immediately---within 30-60 minutes---by enhancing GABA, the brain's primary inhibitory neurotransmitter <Citation id="3" index={3} source="American Journal of Psychiatry" year="2020" tier={3} />. This quickly calms the nervous system.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1395,7 +1395,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           Will I become dependent?
         </h3>
         <p className="mb-6">
-          SSRIs and SNRIs are not addictive. You won't crave them or escalate doses. However, stopping them abruptly can cause discontinuation syndrome (flu-like symptoms, dizziness, mood changes). This is why tapering is necessary—not because you're addicted, but because your brain has adjusted to the medication.
+          SSRIs and SNRIs are not addictive. You won't crave them or escalate doses. However, stopping them abruptly can cause discontinuation syndrome (flu-like symptoms, dizziness, mood changes). This is why tapering is necessary---not because you're addicted, but because your brain has adjusted to the medication.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1445,7 +1445,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
             <strong>Key Takeaway:</strong> Medication can be a powerful tool for managing anxiety, but it's not a one-size-fits-all solution. SSRIs and SNRIs are first-line treatments with strong evidence for safety and effectiveness, requiring 4-6 weeks to work. Benzodiazepines work immediately but carry significant risks of dependence and should be used short-term or as-needed, not as primary long-term treatment.
           </p>
           <p>
-            The decision to start medication should be made collaboratively with your healthcare provider, considering severity of symptoms, functional impairment, previous treatment responses, and personal preferences. Combining medication with therapy produces the best outcomes. And remember: taking medication for anxiety is no different than taking medication for diabetes or high blood pressure—it's medical treatment for a medical condition, not a weakness or failure. The goal is to use whatever tools work to help you live a full, meaningful life.
+            The decision to start medication should be made collaboratively with your healthcare provider, considering severity of symptoms, functional impairment, previous treatment responses, and personal preferences. Combining medication with therapy produces the best outcomes. And remember: taking medication for anxiety is no different than taking medication for diabetes or high blood pressure---it's medical treatment for a medical condition, not a weakness or failure. The goal is to use whatever tools work to help you live a full, meaningful life.
           </p>
         </ArticleCallout>
       </>
@@ -1525,7 +1525,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've been telling yourself it's not that bad. Everyone gets anxious sometimes, right? You can handle it on your own. You've read articles, tried breathing exercises, pushed through. But months pass, maybe years, and the anxiety is still there—perhaps worse. You wonder: At what point does 'normal anxiety' become a problem that needs professional help? When do you stop trying to manage alone and actually seek treatment?
+            You've been telling yourself it's not that bad. Everyone gets anxious sometimes, right? You can handle it on your own. You've read articles, tried breathing exercises, pushed through. But months pass, maybe years, and the anxiety is still there---perhaps worse. You wonder: At what point does 'normal anxiety' become a problem that needs professional help? When do you stop trying to manage alone and actually seek treatment?
           </p>
           <p className="mb-6">
             These questions matter because the average person with an anxiety disorder waits 7-11 years before seeking treatment <Citation id="2" index={2} source="Journal of Anxiety Disorders" year="2021" tier={1} />. That's over a decade of unnecessary suffering. Early intervention dramatically improves outcomes and prevents anxiety from becoming chronic <Citation id="5" index={5} source="Clinical Psychology Review" year="2021" tier={1} />.
@@ -1561,7 +1561,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
                     <li>Relationship problems caused by anxiety-driven behaviors (reassurance-seeking, avoidance, irritability)</li>
                   </ul>
                   <p className="mt-3">
-                    <strong>The standard:</strong> If anxiety prevents you from doing things that matter to you or fulfilling responsibilities, that's significant impairment—not "just anxiety."
+                    <strong>The standard:</strong> If anxiety prevents you from doing things that matter to you or fulfilling responsibilities, that's significant impairment---not "just anxiety."
                   </p>
                 </div>
               ),
@@ -1607,7 +1607,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    You've tried breathing exercises, mindfulness apps, journaling, exercise, reducing caffeine—and while these may provide momentary relief, the anxiety consistently returns at the same intensity. Self-help has limits. Persistent anxiety often requires professional intervention.
+                    You've tried breathing exercises, mindfulness apps, journaling, exercise, reducing caffeine---and while these may provide momentary relief, the anxiety consistently returns at the same intensity. Self-help has limits. Persistent anxiety often requires professional intervention.
                   </p>
                 </div>
               ),
@@ -1618,7 +1618,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Avoidance is insidious. It starts small—skipping one event—but expands. Now you're avoiding multiple situations, places, or activities. Your life radius is getting smaller. This is a red flag that anxiety is controlling your choices.
+                    Avoidance is insidious. It starts small---skipping one event---but expands. Now you're avoiding multiple situations, places, or activities. Your life radius is getting smaller. This is a red flag that anxiety is controlling your choices.
                   </p>
                 </div>
               ),
@@ -1671,7 +1671,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
           1. "I Should Be Able to Handle This on My Own"
         </h3>
         <p className="mb-6">
-          This belief is rooted in stigma and misconceptions about mental health <Citation id="4" index={4} source="Social Psychiatry and Psychiatric Epidemiology" year="2020" tier={1} />. You wouldn't expect yourself to "handle" diabetes or a broken leg without medical help. Anxiety disorders involve real neurobiological changes that often require professional intervention. Seeking help isn't weakness—it's responsible self-care.
+          This belief is rooted in stigma and misconceptions about mental health <Citation id="4" index={4} source="Social Psychiatry and Psychiatric Epidemiology" year="2020" tier={1} />. You wouldn't expect yourself to "handle" diabetes or a broken leg without medical help. Anxiety disorders involve real neurobiological changes that often require professional intervention. Seeking help isn't weakness---it's responsible self-care.
         </p>
 
         <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1832,7 +1832,7 @@ export const crisisSeekingProfessionalHelpArticlesA: Article[] = [
             <strong>Key Takeaway:</strong> You don't need to wait until anxiety is debilitating to seek professional help. If anxiety is interfering with your daily life, has persisted for weeks or months, or self-help strategies aren't working, it's time to reach out.
           </p>
           <p>
-            The average person waits 7-11 years before seeking treatment—don't be that person. Early intervention leads to faster recovery and prevents anxiety from becoming chronic. Common barriers—stigma, cost, not knowing where to start—all have solutions. Start with your primary care doctor, check insurance coverage, use therapist directories, and don't be discouraged if the first provider isn't the right fit. Seeking help is a sign of strength and self-awareness, not weakness. Anxiety is treatable. You deserve support. The hardest step is often just reaching out—and on the other side of that step is real, evidence-based help that works.
+            The average person waits 7-11 years before seeking treatment---don't be that person. Early intervention leads to faster recovery and prevents anxiety from becoming chronic. Common barriers---stigma, cost, not knowing where to start---all have solutions. Start with your primary care doctor, check insurance coverage, use therapist directories, and don't be discouraged if the first provider isn't the right fit. Seeking help is a sign of strength and self-awareness, not weakness. Anxiety is treatable. You deserve support. The hardest step is often just reaching out---and on the other side of that step is real, evidence-based help that works.
           </p>
         </ArticleCallout>
       </>

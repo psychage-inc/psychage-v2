@@ -95,7 +95,7 @@ export const imposterSyndromeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've earned the promotion, published the paper, or completed the project—but instead of pride, you feel like a fraud waiting to be exposed. This paradox, where external success collides with internal doubt, is imposter syndrome, and it affects an estimated 70% of people at some point in their lives.
+            You've earned the promotion, published the paper, or completed the project---but instead of pride, you feel like a fraud waiting to be exposed. This paradox, where external success collides with internal doubt, is imposter syndrome, and it affects an estimated 70% of people at some point in their lives.
           </p>
           <p className="mb-6">
             First identified by psychologists Pauline Clance and Suzanne Imes in 1978, imposter syndrome (also called the impostor phenomenon) describes a persistent pattern of doubting your abilities and attributing success to external factors like luck, timing, or deceiving others <Citation id="1" index={1} source="Psychotherapy: Theory, Research & Practice" year="1978" tier={1} />. Despite clear evidence of competence, people experiencing imposter syndrome believe they don't deserve their achievements <Citation id="2" index={2} source="Journal of General Internal Medicine" year="2020" tier={1} />.
@@ -116,7 +116,7 @@ export const imposterSyndromeArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know" title="Originally Gender-Specific">
           <p>
-            The original 1978 study focused exclusively on high-achieving women, but subsequent research has found imposter syndrome affects all genders equally. The difference lies in how it manifests—women more often attribute success to external factors, while men may internalize it but still doubt their competence in specific domains.
+            The original 1978 study focused exclusively on high-achieving women, but subsequent research has found imposter syndrome affects all genders equally. The difference lies in how it manifests---women more often attribute success to external factors, while men may internalize it but still doubt their competence in specific domains.
           </p>
         </ArticleCallout>
 
@@ -265,7 +265,7 @@ export const imposterSyndromeArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Imposter syndrome is not about lacking ability—it's about how you interpret your ability. The gap isn't between your competence and reality; it's between your perception of your competence and the evidence. Closing that gap requires recognizing the cognitive patterns that maintain the illusion of fraudulence.
+            Imposter syndrome is not about lacking ability---it's about how you interpret your ability. The gap isn't between your competence and reality; it's between your perception of your competence and the evidence. Closing that gap requires recognizing the cognitive patterns that maintain the illusion of fraudulence.
           </p>
         </ArticleCallout>
 
@@ -276,7 +276,7 @@ export const imposterSyndromeArticlesA: Article[] = [
           Understanding imposter syndrome is the first step toward addressing it. If this pattern sounds familiar:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Track your attribution patterns—do you externalize success and internalize failure?</li>
+          <li>Track your attribution patterns---do you externalize success and internalize failure?</li>
           <li>Notice the impostor cycle in your own experience</li>
           <li>Identify contexts where self-doubt intensifies (new roles, visibility, praise)</li>
           <li>Recognize that this is a common psychological pattern, not evidence of actual incompetence</li>
@@ -369,7 +369,7 @@ export const imposterSyndromeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Not all imposter syndrome looks the same. While the core experience—feeling like a fraud despite evidence of competence—is universal, the triggers, thought patterns, and behaviors vary significantly. Understanding which type you experience can help you recognize your specific vulnerabilities and develop targeted strategies.
+            Not all imposter syndrome looks the same. While the core experience---feeling like a fraud despite evidence of competence---is universal, the triggers, thought patterns, and behaviors vary significantly. Understanding which type you experience can help you recognize your specific vulnerabilities and develop targeted strategies.
           </p>
           <p className="mb-6">
             Dr. Valerie Young, an expert on imposter syndrome, identified five distinct competence types that correspond to different patterns of self-doubt <Citation id="1" index={1} source="Crown Business" year="2011" tier={5} />. Most people experience a combination, but one type usually dominates. Recognizing your primary pattern is the first step toward addressing it <Citation id="2" index={2} source="Journal of General Internal Medicine" year="2020" tier={1} />.
@@ -495,7 +495,7 @@ export const imposterSyndromeArticlesA: Article[] = [
           5. The Superhuman
         </h2>
         <p className="mb-6">
-          <strong>Core belief:</strong> "I need to excel in all roles—professional, personal, social—or I'm failing."
+          <strong>Core belief:</strong> "I need to excel in all roles---professional, personal, social---or I'm failing."
         </p>
         <p className="mb-6">
           The Superhuman pushes themselves to work harder than those around them to prove they're not a fraud. They often take on multiple roles and measure their worth by productivity across all domains. This type is at high risk for burnout <Citation id="6" index={6} source="Journal of Secondary Gifted Education" year="2019" tier={1} />.
@@ -567,7 +567,7 @@ export const imposterSyndromeArticlesA: Article[] = [
               title: "If You're Primarily a Soloist...",
               content: (
                 <p>
-                  Practice asking small questions in low-stakes contexts. Observe competent people asking for help—it's a sign of resourcefulness, not weakness. Redefine independence as 'knowing when to leverage resources' rather than "doing everything alone."
+                  Practice asking small questions in low-stakes contexts. Observe competent people asking for help---it's a sign of resourcefulness, not weakness. Redefine independence as 'knowing when to leverage resources' rather than "doing everything alone."
                 </p>
               ),
             },
@@ -585,7 +585,7 @@ export const imposterSyndromeArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Each imposter syndrome type operates on a different definition of competence. Recognizing your specific definition helps you see how you've set an impossible standard—whether it's perfection, omniscience, effortless mastery, total independence, or superhuman productivity. The first step to overcoming imposter syndrome is recognizing which impossible standard you're measuring yourself against.
+            Each imposter syndrome type operates on a different definition of competence. Recognizing your specific definition helps you see how you've set an impossible standard---whether it's perfection, omniscience, effortless mastery, total independence, or superhuman productivity. The first step to overcoming imposter syndrome is recognizing which impossible standard you're measuring yourself against.
           </p>
         </ArticleCallout>
       </>
@@ -673,7 +673,7 @@ export const imposterSyndromeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            The promotion comes through. Your project succeeds. A colleague praises your contribution. And yet, instead of satisfaction, you feel like you've gotten away with something—like you've fooled everyone and it's only a matter of time before they discover you don't belong. At work, where performance is visible and stakes feel high, imposter syndrome can turn every achievement into evidence of deception.
+            The promotion comes through. Your project succeeds. A colleague praises your contribution. And yet, instead of satisfaction, you feel like you've gotten away with something---like you've fooled everyone and it's only a matter of time before they discover you don't belong. At work, where performance is visible and stakes feel high, imposter syndrome can turn every achievement into evidence of deception.
           </p>
           <p className="mb-6">
             Research suggests up to 70% of professionals experience imposter syndrome at some point in their careers, with the workplace being one of the most common contexts for these feelings <Citation id="1" index={1} source="Journal of General Internal Medicine" year="2020" tier={1} />. The professional environment, with its hierarchies, evaluations, and comparisons, creates ideal conditions for self-doubt to flourish <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />.
@@ -713,7 +713,7 @@ export const imposterSyndromeArticlesA: Article[] = [
               title: 'Hierarchical Comparison',
               content: (
                 <p>
-                  Organizational structures create clear comparisons. You constantly see people 'above' you who seem more competent, making it easy to conclude you don't belong at your current level—let alone the next one.
+                  Organizational structures create clear comparisons. You constantly see people 'above' you who seem more competent, making it easy to conclude you don't belong at your current level---let alone the next one.
                 </p>
               ),
             },
@@ -790,7 +790,7 @@ export const imposterSyndromeArticlesA: Article[] = [
           The Professional Cost
         </h2>
         <p className="mb-6">
-          Imposter syndrome doesn't just feel bad—it has measurable career consequences <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />:
+          Imposter syndrome doesn't just feel bad---it has measurable career consequences <Citation id="2" index={2} source="Journal of Vocational Behavior" year="2020" tier={1} />:
         </p>
 
         <StatCard
@@ -886,7 +886,7 @@ export const imposterSyndromeArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Imposter syndrome at work isn't about lacking ability—it's about how you interpret your ability in a context designed to evaluate it. The workplace creates visibility, comparison, and stakes that amplify self-doubt. Recognizing this pattern is the first step toward separating your competence from your perception of your competence.
+            Imposter syndrome at work isn't about lacking ability---it's about how you interpret your ability in a context designed to evaluate it. The workplace creates visibility, comparison, and stakes that amplify self-doubt. Recognizing this pattern is the first step toward separating your competence from your perception of your competence.
           </p>
         </ArticleCallout>
       </>
@@ -982,10 +982,10 @@ export const imposterSyndromeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In the lecture hall, research lab, and dissertation defense, imposter syndrome finds one of its most fertile environments. Among graduate students, doctoral candidates, and early-career researchers, feeling like an intellectual fraud is not an occasional experience—it's epidemic.
+            In the lecture hall, research lab, and dissertation defense, imposter syndrome finds one of its most fertile environments. Among graduate students, doctoral candidates, and early-career researchers, feeling like an intellectual fraud is not an occasional experience---it's epidemic.
           </p>
           <p className="mb-6">
-            Studies find that between 50-70% of graduate students report experiencing imposter syndrome, with rates particularly high in competitive fields like STEM and medicine <Citation id="1" index={1} source="Journal of Behavioral Science" year="2020" tier={1} />. In medical schools, up to 62% of students report imposter feelings <Citation id="2" index={2} source="Academic Psychiatry" year="2020" tier={1} />. Academia's unique structure—its emphasis on individual achievement, peer comparison, and public evaluation of intellectual work—creates a perfect storm for self-doubt.
+            Studies find that between 50-70% of graduate students report experiencing imposter syndrome, with rates particularly high in competitive fields like STEM and medicine <Citation id="1" index={1} source="Journal of Behavioral Science" year="2020" tier={1} />. In medical schools, up to 62% of students report imposter feelings <Citation id="2" index={2} source="Academic Psychiatry" year="2020" tier={1} />. Academia's unique structure---its emphasis on individual achievement, peer comparison, and public evaluation of intellectual work---creates a perfect storm for self-doubt.
           </p>
         </div>
 
@@ -1019,7 +1019,7 @@ export const imposterSyndromeArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Unlike many professions where work is private, academic work is designed to be scrutinized. Presentations, defenses, peer review, and critique are central to the process. Your ideas are not just evaluated—they're publicly examined.
+                    Unlike many professions where work is private, academic work is designed to be scrutinized. Presentations, defenses, peer review, and critique are central to the process. Your ideas are not just evaluated---they're publicly examined.
                   </p>
                   <p>
                     <strong>The fraud trigger:</strong> Every presentation or paper feels like an opportunity to be exposed as intellectually inadequate.
@@ -1061,10 +1061,10 @@ export const imposterSyndromeArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    For many graduate students, academic success is deeply tied to identity. Being "smart" may have been a core self-concept since childhood. When graduate work challenges that identity, it's not just performance at stake—it's sense of self.
+                    For many graduate students, academic success is deeply tied to identity. Being "smart" may have been a core self-concept since childhood. When graduate work challenges that identity, it's not just performance at stake---it's sense of self.
                   </p>
                   <p>
-                    <strong>The fraud trigger:</strong> Difficulty in coursework or research doesn't just mean 'this is hard"—it means "maybe I'm not as smart as I thought."
+                    <strong>The fraud trigger:</strong> Difficulty in coursework or research doesn't just mean 'this is hard"---it means "maybe I'm not as smart as I thought."
                   </p>
                 </div>
               ),
@@ -1214,12 +1214,12 @@ export const imposterSyndromeArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          At the individual level, recognizing that imposter syndrome is a common academic experience—not evidence of actual inadequacy—is the first step toward addressing it. You were admitted because you belong. The struggle is part of the process, not proof of fraudulence.
+          At the individual level, recognizing that imposter syndrome is a common academic experience---not evidence of actual inadequacy---is the first step toward addressing it. You were admitted because you belong. The struggle is part of the process, not proof of fraudulence.
         </p>
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Academia creates conditions where imposter syndrome thrives: ambiguous standards, public evaluation, peer comparison, and intellectual identity at stake. The majority of students in competitive programs experience it. This is not because they lack ability—it's because the academic environment intensifies normal self-doubt. Recognizing the pattern and its prevalence is the first step toward reclaiming your sense of competence.
+            Academia creates conditions where imposter syndrome thrives: ambiguous standards, public evaluation, peer comparison, and intellectual identity at stake. The majority of students in competitive programs experience it. This is not because they lack ability---it's because the academic environment intensifies normal self-doubt. Recognizing the pattern and its prevalence is the first step toward reclaiming your sense of competence.
           </p>
         </ArticleCallout>
       </>
@@ -1307,10 +1307,10 @@ export const imposterSyndromeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You complete a project successfully. Objectively, it meets—even exceeds—the requirements. But instead of satisfaction, you focus on minor flaws, imagined gaps, and ways it could have been better. The conclusion: it wasn't good enough, and neither are you. This is where perfectionism and imposter syndrome converge, creating a feedback loop that no amount of achievement can break.
+            You complete a project successfully. Objectively, it meets---even exceeds---the requirements. But instead of satisfaction, you focus on minor flaws, imagined gaps, and ways it could have been better. The conclusion: it wasn't good enough, and neither are you. This is where perfectionism and imposter syndrome converge, creating a feedback loop that no amount of achievement can break.
           </p>
           <p className="mb-6">
-            Research consistently shows that perfectionism is one of the strongest predictors of imposter syndrome <Citation id="1" index={1} source="Personality and Individual Differences" year="2020" tier={1} />. In studies of medical students, graduate students, and professionals, those with higher perfectionism scores report significantly higher levels of imposter feelings <Citation id="2" index={2} source="BMC Medical Education" year="2021" tier={1} />. But the relationship isn't just correlation—perfectionism actively fuels and maintains the impostor phenomenon.
+            Research consistently shows that perfectionism is one of the strongest predictors of imposter syndrome <Citation id="1" index={1} source="Personality and Individual Differences" year="2020" tier={1} />. In studies of medical students, graduate students, and professionals, those with higher perfectionism scores report significantly higher levels of imposter feelings <Citation id="2" index={2} source="BMC Medical Education" year="2021" tier={1} />. But the relationship isn't just correlation---perfectionism actively fuels and maintains the impostor phenomenon.
           </p>
         </div>
 
@@ -1334,7 +1334,7 @@ export const imposterSyndromeArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The strongest correlation is with "concern over mistakes" and "doubts about actions"—perfectionist dimensions focused on fear of failure and second-guessing <Citation id="3" index={3} source="Journal of Personality Assessment" year="2019" tier={1} />. This makes sense: when your standard is perfection, any imperfection becomes evidence that you don't measure up.
+          The strongest correlation is with "concern over mistakes" and "doubts about actions"---perfectionist dimensions focused on fear of failure and second-guessing <Citation id="3" index={3} source="Journal of Personality Assessment" year="2019" tier={1} />. This makes sense: when your standard is perfection, any imperfection becomes evidence that you don't measure up.
         </p>
 
         <h2 id="how-perfectionism-fuels" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1409,7 +1409,7 @@ export const imposterSyndromeArticlesA: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Perfectionists compare themselves to the highest performers and conclude they fall short. They don't compare to average or realistic benchmarks—they compare to the ideal, ensuring they always feel inadequate.
+                    Perfectionists compare themselves to the highest performers and conclude they fall short. They don't compare to average or realistic benchmarks---they compare to the ideal, ensuring they always feel inadequate.
                   </p>
                   <p className="italic">
                     Example: You write a solid paper, but instead of comparing it to typical work in your field, you compare it to seminal works by leading scholars and feel like a fraud.
@@ -1479,7 +1479,7 @@ export const imposterSyndromeArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Maladaptive perfectionism—particularly the dimensions of "concern over mistakes" and "doubts about actions"—directly feeds imposter syndrome <Citation id="6" index={6} source="Clinical Psychology Review" year="2020" tier={1} />. It's not striving for excellence that's the problem; it's striving for impossible standards and catastrophizing imperfection.
+          Maladaptive perfectionism---particularly the dimensions of "concern over mistakes" and "doubts about actions"---directly feeds imposter syndrome <Citation id="6" index={6} source="Clinical Psychology Review" year="2020" tier={1} />. It's not striving for excellence that's the problem; it's striving for impossible standards and catastrophizing imperfection.
         </p>
 
         <h2 id="breaking-the-link" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1496,7 +1496,7 @@ export const imposterSyndromeArticlesA: Article[] = [
             <li><strong>Challenge all-or-nothing thinking.</strong> When you catch yourself thinking "perfect or failed," insert a middle category: "successful with room for growth."</li>
             <li><strong>Track attribution patterns.</strong> When you succeed, write down: "What skills did I use?" and "What effort did I invest?" to counter external attribution.</li>
             <li><strong>Reframe mistakes as data.</strong> Errors are information about what to adjust, not evidence of fundamental inadequacy.</li>
-            <li><strong>Practice self-compassion.</strong> Treat yourself as you would a friend facing a setback—with understanding, not harsh criticism.</li>
+            <li><strong>Practice self-compassion.</strong> Treat yourself as you would a friend facing a setback---with understanding, not harsh criticism.</li>
             <li><strong>Set process goals, not just outcome goals.</strong> "Prepare for two hours" is more helpful than "give a flawless presentation."</li>
             <li><strong>Expose yourself to imperfection.</strong> Deliberately complete low-stakes tasks at "good enough" and notice that the world doesn't end.</li>
           </ul>
@@ -1526,7 +1526,7 @@ export const imposterSyndromeArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Perfectionism fuels imposter syndrome by creating impossible standards, discounting success, and catastrophizing imperfection. When "perfect" is the only acceptable outcome, every achievement falls short, and the fraud narrative persists. Breaking this link requires recognizing maladaptive perfectionism, challenging all-or-nothing thinking, and practicing realistic standard-setting. The goal isn't to lower your standards—it's to make them achievable so that success can actually update your belief about your competence.
+            Perfectionism fuels imposter syndrome by creating impossible standards, discounting success, and catastrophizing imperfection. When "perfect" is the only acceptable outcome, every achievement falls short, and the fraud narrative persists. Breaking this link requires recognizing maladaptive perfectionism, challenging all-or-nothing thinking, and practicing realistic standard-setting. The goal isn't to lower your standards---it's to make them achievable so that success can actually update your belief about your competence.
           </p>
         </ArticleCallout>
       </>

@@ -67,7 +67,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Stop worrying. Think positive. Just let it go. If only it were that simple. When you try to suppress worries, they come back stronger. The harder you fight them, the more they intrude. But what if, instead of trying to stop worrying, you gave yourself permission to worry — just not all the time?
+            Stop worrying. Think positive. Just let it go. If only it were that simple. When you try to suppress worries, they come back stronger. The harder you fight them, the more they intrude. But what if, instead of trying to stop worrying, you gave yourself permission to worry --- just not all the time?
           </p>
           <p className="mb-6">
             Worry Time is a counterintuitive CBT technique that reduces chronic worrying by scheduling it. Instead of worrying whenever the urge strikes, you postpone worries to a designated 15-30 minute window each day <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2017" tier={1} />. Paradoxically, containing worry makes it shrink.
@@ -129,7 +129,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
               title: '1. It Gives Permission to Worry',
               content: (
                 <p>
-                  Trying to suppress worry creates a rebound effect — worries return stronger. Worry Time says: 'You can worry, just not now." This reduces the urge to worry immediately because you know you'll get to it later <Citation id="3" index={3} source="Journal of Anxiety Disorders" year="2019" tier={1} />.
+                  Trying to suppress worry creates a rebound effect --- worries return stronger. Worry Time says: 'You can worry, just not now." This reduces the urge to worry immediately because you know you'll get to it later <Citation id="3" index={3} source="Journal of Anxiety Disorders" year="2019" tier={1} />.
                 </p>
               ),
             },
@@ -170,7 +170,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
               <ul className="list-disc pl-5 space-y-2">
                 <li>Worries intrude constantly throughout the day</li>
                 <li>You feel powerless, controlled by anxious thoughts</li>
-                <li>Worry blends with work, relationships, leisure — everything feels anxious</li>
+                <li>Worry blends with work, relationships, leisure --- everything feels anxious</li>
               </ul>
             ),
           }}
@@ -179,7 +179,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
             content: (
               <ul className="list-disc pl-5 space-y-2">
                 <li>Worries still arise, but you postpone them</li>
-                <li>You feel in control — worry is scheduled, not spontaneous</li>
+                <li>You feel in control --- worry is scheduled, not spontaneous</li>
                 <li>Most of your day is reclaimed. Worry is contained to 30 minutes.</li>
               </ul>
             ),
@@ -194,7 +194,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           1. Choose Your Worry Window
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>When:</strong> Same time every day. Ideally early evening (not right before bed — worry disrupts sleep).</li>
+          <li><strong>When:</strong> Same time every day. Ideally early evening (not right before bed --- worry disrupts sleep).</li>
           <li><strong>Where:</strong> A specific location. Not your bed, not your workspace. Somewhere neutral.</li>
           <li><strong>Duration:</strong> 15-30 minutes. Set a timer.</li>
         </ul>
@@ -206,7 +206,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           Carry a small notebook or use a notes app. When a worry pops up, write 1-2 sentences. Don't elaborate. Just capture it.
         </p>
         <p className="mb-6">
-          <strong>Examples:</strong> "Did I offend my coworker?", "What if I can't pay rent next month?", "My headache — is it serious?"
+          <strong>Examples:</strong> "Did I offend my coworker?", "What if I can't pay rent next month?", "My headache --- is it serious?"
         </p>
 
         <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-3">
@@ -234,7 +234,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            <strong>Tip:</strong> Don't use Worry Time to ruminate endlessly. Use it to <em>evaluate</em> worries and <em>problem-solve</em> when possible. The goal is not to worry more effectively — it's to realize most worries don't need extended attention.
+            <strong>Tip:</strong> Don't use Worry Time to ruminate endlessly. Use it to <em>evaluate</em> worries and <em>problem-solve</em> when possible. The goal is not to worry more effectively --- it's to realize most worries don't need extended attention.
           </p>
         </ArticleCallout>
 
@@ -367,7 +367,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           steps={[
             {
               title: '1. Something Triggers Anxiety',
-              description: <p>A task, social event, decision — anything that feels threatening.</p>,
+              description: <p>A task, social event, decision --- anything that feels threatening.</p>,
             },
             {
               title: '2. You Avoid It',
@@ -386,7 +386,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Avoidance feels like a solution. It's actually the problem. Every time you avoid, you teach your brain that the thing you avoided was truly dangerous — even when it wasn't. The anxiety grows stronger.
+            Avoidance feels like a solution. It's actually the problem. Every time you avoid, you teach your brain that the thing you avoided was truly dangerous --- even when it wasn't. The anxiety grows stronger.
           </p>
         </ArticleCallout>
 
@@ -394,7 +394,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           What Is Behavioral Activation?
         </h2>
         <p className="mb-6">
-          Behavioral activation (BA) is a therapeutic technique that reverses the avoidance spiral by prioritizing <em>behavior</em> over feelings. Instead of waiting for anxiety to decrease before acting, you act <em>despite</em> anxiety — and the anxiety decreases as a result.
+          Behavioral activation (BA) is a therapeutic technique that reverses the avoidance spiral by prioritizing <em>behavior</em> over feelings. Instead of waiting for anxiety to decrease before acting, you act <em>despite</em> anxiety --- and the anxiety decreases as a result.
         </p>
 
         <p className="mb-6">
@@ -590,7 +590,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           <li><strong>Don't wait for motivation</strong>: Motivation follows action, not the other way around.</li>
           <li><strong>Schedule everything</strong>: Vague intentions ("I'll try to exercise this week") don't work. Specific plans ("Monday 6 AM, 10-minute walk") do.</li>
           <li><strong>Expect discomfort</strong>: You'll feel anxious. Do it anyway. Discomfort is part of the process, not a sign to stop.</li>
-          <li><strong>Celebrate completion, not perfection</strong>: You showed up. That's the win. Quality doesn't matter at first — consistency does.</li>
+          <li><strong>Celebrate completion, not perfection</strong>: You showed up. That's the win. Quality doesn't matter at first --- consistency does.</li>
         </ul>
 
         <QuoteBlock
@@ -668,7 +668,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Mindfulness isn't new — it's been a core practice in Buddhist traditions for thousands of years. But in 1979, molecular biologist Jon Kabat-Zinn did something revolutionary: he stripped mindfulness of its religious context and created a secular, evidence-based program for stress reduction that could be studied scientifically and taught in hospitals, clinics, and schools worldwide.
+            Mindfulness isn't new --- it's been a core practice in Buddhist traditions for thousands of years. But in 1979, molecular biologist Jon Kabat-Zinn did something revolutionary: he stripped mindfulness of its religious context and created a secular, evidence-based program for stress reduction that could be studied scientifically and taught in hospitals, clinics, and schools worldwide.
           </p>
           <p className="mb-6">
             That program is Mindfulness-Based Stress Reduction (MBSR), an 8-week structured course that teaches mindfulness meditation and has since been shown to significantly reduce anxiety, stress, and depression <Citation id="1" index={1} source="JAMA Internal Medicine" year="2014" tier={1} />.
@@ -690,7 +690,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            MBSR teaches you to observe your thoughts, emotions, and physical sensations <em>without judgment</em> or the need to change them. The practice is presence, not peace. You're not trying to relax — you're learning to be with whatever arises.
+            MBSR teaches you to observe your thoughts, emotions, and physical sensations <em>without judgment</em> or the need to change them. The practice is presence, not peace. You're not trying to relax --- you're learning to be with whatever arises.
           </p>
         </ArticleCallout>
 
@@ -882,7 +882,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           <li><strong>"I can't quiet my mind"</strong>: That's not the goal. The goal is to notice when your mind wanders and gently return attention. Mind wandering is expected.</li>
           <li><strong>"I should feel relaxed"</strong>: Mindfulness isn't relaxation. Sometimes you'll feel agitated. You practice observing that too.</li>
           <li><strong>"I don't have 45 minutes a day"</strong>: The time commitment is significant. But research shows daily practice is essential for benefits. Start with 10-15 minutes if needed.</li>
-          <li><strong>"This is too slow for me"</strong>: If you're action-oriented, MBSR can feel frustratingly passive. That's partly the point — learning to 'be' instead of constantly "do."</li>
+          <li><strong>"This is too slow for me"</strong>: If you're action-oriented, MBSR can feel frustratingly passive. That's partly the point --- learning to 'be' instead of constantly "do."</li>
         </ul>
 
         <p className="mb-6">
@@ -890,7 +890,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          But for millions worldwide, MBSR has been life-changing — not by eliminating stress, but by fundamentally changing how they relate to it. You can't control the waves. But you can learn to surf.
+          But for millions worldwide, MBSR has been life-changing --- not by eliminating stress, but by fundamentally changing how they relate to it. You can't control the waves. But you can learn to surf.
         </p>
       </>
     ),
@@ -968,7 +968,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
             Wim Hof has millions of followers. Cold plunge tanks are popping up at wellness centers. Social media is full of influencers swearing that ice baths cured their anxiety. But is there real science behind cold water therapy, or is it just another wellness trend that'll fade when the next one arrives?
           </p>
           <p className="mb-6">
-            The answer: both. There is real physiological science behind cold water exposure — specifically the "dive reflex" — but the claims far exceed the evidence. Let's separate fact from hype.
+            The answer: both. There is real physiological science behind cold water exposure --- specifically the "dive reflex" --- but the claims far exceed the evidence. Let's separate fact from hype.
           </p>
         </div>
 
@@ -1002,7 +1002,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
               title: '3. Bradycardia (Slowed Heart Rate)',
               description: (
                 <p>
-                  Your heart rate immediately drops — often by 10-25% within seconds.
+                  Your heart rate immediately drops --- often by 10-25% within seconds.
                 </p>
               ),
             },
@@ -1060,7 +1060,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           3. Hormetic Stress Theory
         </h3>
         <p className="mb-6">
-          One hypothesis: cold exposure is a form of "hormetic stress" — a short, controlled stressor that strengthens your stress response system over time <Citation id="3" index={3} source="Medical Hypotheses" year="2008" tier={1} />. Like exercise, it challenges the body in a way that builds resilience.
+          One hypothesis: cold exposure is a form of "hormetic stress" --- a short, controlled stressor that strengthens your stress response system over time <Citation id="3" index={3} source="Medical Hypotheses" year="2008" tier={1} />. Like exercise, it challenges the body in a way that builds resilience.
         </p>
         <p className="mb-6">
           <strong>Evidence level:</strong> Theoretical. Needs more rigorous testing.
@@ -1173,7 +1173,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
             },
             {
               feature: 'Helps interrupt panic attacks',
-              values: ['Moderate (anecdotal + small studies)', 'MAYBE — worth trying'],
+              values: ['Moderate (anecdotal + small studies)', 'MAYBE --- worth trying'],
             },
             {
               feature: 'Cures chronic anxiety',
@@ -1260,7 +1260,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You've learned about breathing techniques, grounding, cognitive restructuring, exposure, exercise, and mindfulness. You know what works — in theory. But when anxiety hits at 2 AM, or before a presentation, or in the middle of the grocery store, which tool do you use? And how do you make these strategies stick when life gets chaotic?
+            You've learned about breathing techniques, grounding, cognitive restructuring, exposure, exercise, and mindfulness. You know what works --- in theory. But when anxiety hits at 2 AM, or before a presentation, or in the middle of the grocery store, which tool do you use? And how do you make these strategies stick when life gets chaotic?
           </p>
           <p className="mb-6">
             This is where a personalized anxiety management plan comes in. Not a one-size-fits-all protocol, but a tailored roadmap built around <em>your</em> anxiety patterns, triggers, and resources <Citation id="1" index={1} source="JAMA Psychiatry" year="2019" tier={1} />.
@@ -1271,7 +1271,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
           Why You Need a Written Plan
         </h2>
         <p className="mb-6">
-          When anxiety spikes, your prefrontal cortex (rational brain) goes offline. You can't think clearly. A written plan acts as an external brain — a set of instructions you created when calm, for when you're not.
+          When anxiety spikes, your prefrontal cortex (rational brain) goes offline. You can't think clearly. A written plan acts as an external brain --- a set of instructions you created when calm, for when you're not.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1401,7 +1401,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
               content: (
                 <ul className="list-disc pl-5 space-y-1">
                   <li>30+ minutes of aerobic exercise, 3-5x/week</li>
-                  <li>Walking, running, swimming, dancing — whatever you'll actually do</li>
+                  <li>Walking, running, swimming, dancing --- whatever you'll actually do</li>
                   <li>Consistency matters more than intensity</li>
                 </ul>
               ),
@@ -1423,7 +1423,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
               content: (
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Regular contact with supportive people (not just surface-level)</li>
-                  <li>Quality over quantity — one deep friendship beats ten acquaintances</li>
+                  <li>Quality over quantity --- one deep friendship beats ten acquaintances</li>
                 </ul>
               ),
             },
@@ -1513,7 +1513,7 @@ export const evidenceBasedCopingStrategiesArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Your anxiety management plan is a living document. It will evolve as you learn what works and what doesn't. The goal isn't perfection — it's progress. One tool at a time, one situation at a time, you're building a life where anxiety no longer calls the shots.
+          Your anxiety management plan is a living document. It will evolve as you learn what works and what doesn't. The goal isn't perfection --- it's progress. One tool at a time, one situation at a time, you're building a life where anxiety no longer calls the shots.
         </p>
       </>
     ),

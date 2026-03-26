@@ -97,7 +97,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You dread going to bed. Sleep, which should be restful, has become a battleground. You wake up gasping, heart pounding, sheets soaked with sweat. The nightmare felt so real—you were back there, reliving it. This happens night after night, robbing you of rest and leaving you exhausted. PTSD doesn't respect the boundary between waking and sleeping.
+            You dread going to bed. Sleep, which should be restful, has become a battleground. You wake up gasping, heart pounding, sheets soaked with sweat. The nightmare felt so real---you were back there, reliving it. This happens night after night, robbing you of rest and leaving you exhausted. PTSD doesn't respect the boundary between waking and sleeping.
           </p>
           <p className="mb-6">
             Sleep disturbance, particularly nightmares, is one of the most common and distressing symptoms of PTSD{', '}
@@ -140,7 +140,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
           Why PTSD Causes Nightmares
         </h2>
         <p className="mb-6">
-          PTSD nightmares aren't random bad dreams. They serve a function—your brain is trying to process traumatic memories during sleep{', '}
+          PTSD nightmares aren't random bad dreams. They serve a function---your brain is trying to process traumatic memories during sleep{', '}
           <Citation id="2" index={2} source="Current Biology" year="2020" tier={1} />.
         </p>
 
@@ -171,7 +171,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                   <p className="mb-3">
                     Your brain is attempting to process the trauma during sleep, but the memory is too overwhelming. The nightmare is the brain's failed attempt to make sense of and integrate the traumatic experience.
                   </p>
-                  <p>This is why nightmares often replay the trauma or present symbolic versions of it—your mind is working on the problem but can't resolve it during sleep alone.</p>
+                  <p>This is why nightmares often replay the trauma or present symbolic versions of it---your mind is working on the problem but can't resolve it during sleep alone.</p>
                 </div>
               ),
             },
@@ -263,7 +263,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Chronic sleep deprivation from PTSD nightmares isn't just uncomfortable—it actively prevents healing. Good sleep is essential for trauma recovery. Addressing sleep problems should be a priority in PTSD treatment.
+            Chronic sleep deprivation from PTSD nightmares isn't just uncomfortable---it actively prevents healing. Good sleep is essential for trauma recovery. Addressing sleep problems should be a priority in PTSD treatment.
           </p>
         </ArticleCallout>
 
@@ -363,7 +363,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                   <p className="mb-3">When you wake from a nightmare:</p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>Ground yourself: feet on floor, lights on, orient to current reality</li>
-                    <li>Don't try to force sleep immediately—calm your nervous system first</li>
+                    <li>Don't try to force sleep immediately---calm your nervous system first</li>
                     <li>Gentle activity: sip water, walk around, gentle breathing</li>
                     <li>Return to bed when you feel calmer</li>
                   </ul>
@@ -473,10 +473,10 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            During the trauma, you weren't there. You floated above your body, watching it happen to someone else. Or everything went fuzzy and dreamlike—you were present but not really present. Time moved strangely. You remember fragments but it doesn't feel like a real memory. This is dissociation, and it's one of the most confusing and frightening experiences in trauma.
+            During the trauma, you weren't there. You floated above your body, watching it happen to someone else. Or everything went fuzzy and dreamlike---you were present but not really present. Time moved strangely. You remember fragments but it doesn't feel like a real memory. This is dissociation, and it's one of the most confusing and frightening experiences in trauma.
           </p>
           <p className="mb-6">
-            Dissociation is your mind's emergency brake—a protective mechanism that separates you from an experience that would otherwise overwhelm you completely{', '}
+            Dissociation is your mind's emergency brake---a protective mechanism that separates you from an experience that would otherwise overwhelm you completely{', '}
             <Citation id="1" index={1} source="European Journal of Psychotraumatology" year="2020" tier={1} />.
           </p>
         </div>
@@ -649,7 +649,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
               title: 'Pattern Persists',
               description: (
                 <p>
-                  Unfortunately, once your brain learns this protective strategy, it may continue using it even when you're safe—disconnecting at any sign of stress or distress.
+                  Unfortunately, once your brain learns this protective strategy, it may continue using it even when you're safe---disconnecting at any sign of stress or distress.
                 </p>
               ),
             },
@@ -658,7 +658,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
 
         <ArticleCallout variant="tip">
           <p>
-            Dissociation served a purpose. It protected you when nothing else could. The goal isn't to judge yourself for dissociating—it's to understand it and learn new ways of handling distress now that you're safer.
+            Dissociation served a purpose. It protected you when nothing else could. The goal isn't to judge yourself for dissociating---it's to understand it and learn new ways of handling distress now that you're safer.
           </p>
         </ArticleCallout>
 
@@ -695,7 +695,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Touch</strong>: Hold ice cubes, run hands under cold water, touch textured objects</li>
                   <li><strong>Smell</strong>: Strong scents (peppermint, citrus, coffee) engage you in present</li>
-                  <li><strong>Taste</strong>: Sour candy, mint, gum—something with a distinct flavor</li>
+                  <li><strong>Taste</strong>: Sour candy, mint, gum---something with a distinct flavor</li>
                   <li><strong>Sound</strong>: Listen to music, name 5 things you can hear</li>
                   <li><strong>Sight</strong>: Describe your surroundings in detail, name colors</li>
                 </ul>
@@ -767,7 +767,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Dissociation helped you survive. Now, with support and practice, you can learn to stay present—to inhabit your body and your life fully, even when things are difficult. You don't have to disconnect to protect yourself anymore.
+          Dissociation helped you survive. Now, with support and practice, you can learn to stay present---to inhabit your body and your life fully, even when things are difficult. You don't have to disconnect to protect yourself anymore.
         </p>
       </>
     ),
@@ -855,10 +855,10 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Every shift, they witness humanity's worst moments. They arrive at scenes most people flee from—accidents, violence, death, suffering. They're trained to stay calm, to function, to save lives. But no training prepares you for the cumulative weight of others' worst days becoming your ordinary workday.
+            Every shift, they witness humanity's worst moments. They arrive at scenes most people flee from---accidents, violence, death, suffering. They're trained to stay calm, to function, to save lives. But no training prepares you for the cumulative weight of others' worst days becoming your ordinary workday.
           </p>
           <p className="mb-6">
-            Police officers, firefighters, paramedics, and EMTs experience trauma exposure at rates far exceeding the general population. The cost of serving is high—and often invisible{', '}
+            Police officers, firefighters, paramedics, and EMTs experience trauma exposure at rates far exceeding the general population. The cost of serving is high---and often invisible{', '}
             <Citation id="1" index={1} source="Prehospital and Disaster Medicine" year="2018" tier={1} />.
           </p>
         </div>
@@ -913,7 +913,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                     Unlike single-incident trauma, first responders experience repeated exposure to traumatic events over careers spanning decades{', '}
                     <Citation id="6" index={6} source="Psychological Trauma" year="2021" tier={1} />. Each incident adds to the cumulative burden.
                   </p>
-                  <p>It's like filling a bucket drop by drop—at some point, even a small incident can cause it to overflow.</p>
+                  <p>It's like filling a bucket drop by drop---at some point, even a small incident can cause it to overflow.</p>
                 </div>
               ),
             },
@@ -922,7 +922,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
               title: 'Unpredictable and Uncontrollable',
               content: (
                 <p>
-                  You never know what the next call will bring. The unpredictability and lack of control—especially over outcomes—creates chronic stress. Not every victim survives. Not every situation resolves well.
+                  You never know what the next call will bring. The unpredictability and lack of control---especially over outcomes---creates chronic stress. Not every victim survives. Not every situation resolves well.
                 </p>
               ),
             },
@@ -993,13 +993,13 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          This culture of silence means first responders often wait years before seeking help—if they seek it at all. Many self-medicate with alcohol, withdraw from relationships, or struggle alone{', '}
+          This culture of silence means first responders often wait years before seeking help---if they seek it at all. Many self-medicate with alcohol, withdraw from relationships, or struggle alone{', '}
           <Citation id="7" index={7} source="Work & Stress" year="2020" tier={1} />.
         </p>
 
         <ArticleCallout variant="warning">
           <p>
-            First responders have suicide rates significantly higher than the general population—and often higher than line-of-duty deaths. This is a public health crisis that requires organizational change, not just individual resilience.
+            First responders have suicide rates significantly higher than the general population---and often higher than line-of-duty deaths. This is a public health crisis that requires organizational change, not just individual resilience.
           </p>
         </ArticleCallout>
 
@@ -1016,7 +1016,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
           <li><strong>Difficulty with civilian life</strong>: Frustration with "normal" problems that seem trivial</li>
           <li><strong>Relationship strain</strong>: Partners feel shut out; difficulty relating to non-first-responders</li>
           <li><strong>Substance use</strong>: Alcohol use is common in first responder culture and often used to cope</li>
-          <li><strong>Moral injury</strong>: Distress from actions (or inaction) that violated moral code—like being unable to save someone</li>
+          <li><strong>Moral injury</strong>: Distress from actions (or inaction) that violated moral code---like being unable to save someone</li>
         </ul>
 
         <h2
@@ -1105,14 +1105,14 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li>First responders have 2-5x higher PTSD rates than general population</li>
             <li>Cumulative exposure and cultural barriers create unique challenges</li>
-            <li>Seeking help is professional, not weak—untreated PTSD ends careers</li>
+            <li>Seeking help is professional, not weak---untreated PTSD ends careers</li>
             <li>Evidence-based treatments work when adapted for first responder context</li>
             <li>Organizational support is essential, not optional</li>
           </ul>
         </ArticleCallout>
 
         <p className="mb-6">
-          If you're a first responder struggling with trauma symptoms, know this: what you're experiencing is a normal response to abnormal, repeated exposure. You've spent your career helping others—it's time to let others help you. Your service matters, and so does your well-being.
+          If you're a first responder struggling with trauma symptoms, know this: what you're experiencing is a normal response to abnormal, repeated exposure. You've spent your career helping others---it's time to let others help you. Your service matters, and so does your well-being.
         </p>
       </>
     ),
@@ -1254,7 +1254,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    Many veterans struggle with <strong>moral injury</strong>—distress from actions (or inactions) that violated their moral code{', '}
+                    Many veterans struggle with <strong>moral injury</strong>---distress from actions (or inactions) that violated their moral code{', '}
                     <Citation id="4" index={4} source="Clinical Psychology Review" year="2021" tier={1} />:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
@@ -1265,7 +1265,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                     <li>Betrayal by leadership or military</li>
                   </ul>
                   <p className="mt-3">
-                    Moral injury involves guilt, shame, and loss of meaning/faith—symptoms that standard PTSD treatment doesn't fully address.
+                    Moral injury involves guilt, shame, and loss of meaning/faith---symptoms that standard PTSD treatment doesn't fully address.
                   </p>
                 </div>
               ),
@@ -1304,7 +1304,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-3">
-                    MST—sexual assault or harassment during military service—affects approximately 1 in 4 women and 1 in 100 men in the military{', '}
+                    MST---sexual assault or harassment during military service---affects approximately 1 in 4 women and 1 in 100 men in the military{', '}
                     <Citation id="8" index={8} source="Trauma, Violence, & Abuse" year="2020" tier={1} />.
                   </p>
                   <p>
@@ -1483,7 +1483,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     id: catId(20),
     slug: 'ptsd-vs-acute-stress-disorder-understanding-timeline',
     title: 'PTSD vs. Acute Stress Disorder: Understanding the Timeline',
-    description: 'Not all trauma reactions become PTSD. Learn the difference between Acute Stress Disorder, normal trauma response, and PTSD—and why timing matters for treatment.',
+    description: 'Not all trauma reactions become PTSD. Learn the difference between Acute Stress Disorder, normal trauma response, and PTSD---and why timing matters for treatment.',
     image: "/images/articles/cat11/cover-020.svg",
     category: CATEGORY_TRAUMA_HEALING,
     readTime: 6,
@@ -1561,7 +1561,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You experienced something traumatic a week ago. You're having nightmares, feeling on edge, replaying the event in your mind. Is this PTSD? Or is it a normal response that will resolve on its own? Understanding the distinction between acute stress reactions, Acute Stress Disorder (ASD), and PTSD is crucial—because timing matters for both diagnosis and treatment.
+            You experienced something traumatic a week ago. You're having nightmares, feeling on edge, replaying the event in your mind. Is this PTSD? Or is it a normal response that will resolve on its own? Understanding the distinction between acute stress reactions, Acute Stress Disorder (ASD), and PTSD is crucial---because timing matters for both diagnosis and treatment.
           </p>
           <p className="mb-6">
             Most people who experience trauma will have distressing reactions initially. For many, these symptoms naturally resolve within weeks. For others, they persist and develop into PTSD{', '}
@@ -1593,7 +1593,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
                     <li>Physical symptoms (shaking, rapid heartbeat)</li>
                   </ul>
                   <p className="mt-3">
-                    <em>This is normal. These reactions don't require formal diagnosis or treatment—supportive care and safety are the priorities{', '}
+                    <em>This is normal. These reactions don't require formal diagnosis or treatment---supportive care and safety are the priorities{', '}
                     <Citation id="6" index={6} source="National Center for PTSD" year="2023" tier={2} />.</em>
                   </p>
                 </div>
@@ -1745,7 +1745,7 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          The majority of trauma survivors experience natural recovery—symptoms gradually decrease over weeks to months without formal treatment. This is resilience in action.
+          The majority of trauma survivors experience natural recovery---symptoms gradually decrease over weeks to months without formal treatment. This is resilience in action.
         </p>
 
         <ArticleCallout variant="info">

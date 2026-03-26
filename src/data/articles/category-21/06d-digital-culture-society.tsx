@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 6d — Digital Culture and Society | Articles TEC-060–064
+// Subcategory 6d --- Digital Culture and Society | Articles TEC-060--064
 // ============================================================================
 
 export const digitalCultureSocietyArticlesD: Article[] = [
@@ -26,7 +26,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     slug: 'metaverse-mental-health-virtual-worlds-real-psychological-impact',
     title: 'The Metaverse and Mental Health: Virtual Worlds, Real Psychological Impact',
     description:
-      'A research-based exploration of how immersive virtual environments — from VR social platforms to persistent digital worlds — affect psychological well-being, identity formation, social connection, and the boundary between online and offline life.',
+      'A research-based exploration of how immersive virtual environments --- from VR social platforms to persistent digital worlds --- affect psychological well-being, identity formation, social connection, and the boundary between online and offline life.',
     image: '/images/articles/cat21/cover-060.svg',
     category: CATEGORY_TECHNOLOGY_DIGITAL_LIFE,
     readTime: 16,
@@ -43,7 +43,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     summary:
-      'The metaverse — a collective term for immersive, persistent virtual environments — is rapidly expanding from niche gaming communities into mainstream social, educational, and professional spaces. Early research reveals a complex psychological landscape: virtual embodiment can reduce social anxiety and enhance empathy through perspective-taking, but prolonged immersion also carries risks including dissociative experiences, avatar-identity confusion, and difficulty re-engaging with physical reality. Studies document measurable effects on body image, social behavior, and emotional regulation that persist after users remove their headsets. This article examines what the current evidence reveals about how virtual worlds shape mental health, which populations are most vulnerable, and what boundaries support healthy engagement with immersive technology.',
+      'The metaverse --- a collective term for immersive, persistent virtual environments --- is rapidly expanding from niche gaming communities into mainstream social, educational, and professional spaces. Early research reveals a complex psychological landscape: virtual embodiment can reduce social anxiety and enhance empathy through perspective-taking, but prolonged immersion also carries risks including dissociative experiences, avatar-identity confusion, and difficulty re-engaging with physical reality. Studies document measurable effects on body image, social behavior, and emotional regulation that persist after users remove their headsets. This article examines what the current evidence reveals about how virtual worlds shape mental health, which populations are most vulnerable, and what boundaries support healthy engagement with immersive technology.',
 
     keyFacts: [
       { text: 'Users who spend more than three hours daily in immersive VR environments report significantly higher rates of depersonalization symptoms compared to non-users', citationIndex: 1 },
@@ -52,12 +52,12 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     sparkMoment:
-      'The metaverse does not replace reality — it adds a layer to it. The question is not whether virtual worlds are real or fake, but whether your engagement with them leaves you more capable or less capable of living well in the world where your body actually exists.',
+      'The metaverse does not replace reality --- it adds a layer to it. The question is not whether virtual worlds are real or fake, but whether your engagement with them leaves you more capable or less capable of living well in the world where your body actually exists.',
 
     practicalExercise: {
       title: 'The Virtual-Physical Balance Check',
       steps: [
-        { title: 'Log your immersion time', description: 'For one week, track every session you spend in immersive virtual environments — VR headsets, persistent online worlds, or social VR platforms. Note the start time, end time, and what you did during each session. Include time spent thinking about or planning virtual activities while offline.' },
+        { title: 'Log your immersion time', description: 'For one week, track every session you spend in immersive virtual environments --- VR headsets, persistent online worlds, or social VR platforms. Note the start time, end time, and what you did during each session. Include time spent thinking about or planning virtual activities while offline.' },
         { title: 'Rate your transition experience', description: 'After each VR session, rate on a 1-10 scale how easy or difficult it was to re-engage with physical reality. Note any feelings of disorientation, disappointment with the physical world, or reluctance to remove the headset. Look for patterns across the week.' },
         { title: 'Compare your social energy', description: 'At the end of each day, note whether your social interactions were primarily virtual or in-person. Rate your sense of social connection and loneliness on a 1-10 scale. After a week, compare days with heavy virtual immersion to days with more in-person interaction.' },
         { title: 'Identify your triggers', description: 'Review your log and identify what drives you into virtual environments. Is it boredom, social anxiety, creative expression, escape from stress, or genuine enjoyment? Understanding your motivations helps distinguish healthy engagement from avoidance patterns.' },
@@ -150,6 +150,31 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           rigid self-perceptions<Citation id="9" index={9} />. However, the same mechanism that
           makes embodiment therapeutically useful also creates risks when engagement is unstructured.
         </p>
+        <p className="mb-6">
+          The duration and regularity of embodiment experiences appear to moderate the strength
+          of these effects. Brief, one-time exposures produce measurable but transient shifts in
+          attitude and behavior, while sustained engagement with a consistent avatar over weeks
+          or months leads to deeper integration of the virtual identity into the user&rsquo;s
+          self-concept. Researchers studying long-term VR social platform users have documented
+          cases where participants report feeling more &ldquo;themselves&rdquo; in their avatar
+          than in their physical body &mdash; a phenomenon that raises important questions about
+          the relationship between embodied experience and identity<Citation id="6" index={6} />.
+          For individuals whose physical bodies are sources of distress due to chronic pain,
+          disability, or gender dysphoria, this aspect of virtual embodiment may represent a
+          genuine form of relief. For others, it may signal an unhealthy detachment from physical
+          selfhood that warrants clinical attention.
+        </p>
+        <p className="mb-6">
+          The neuroscience of virtual embodiment reveals why these experiences are so
+          psychologically potent. Multisensory integration research shows that when visual,
+          proprioceptive, and motor signals align &mdash; as they do in well-designed VR systems
+          &mdash; the brain rapidly incorporates the virtual body into its body ownership
+          network. This is not a conscious decision; it is an automatic perceptual process rooted
+          in the same mechanisms that produce the rubber hand illusion in laboratory settings.
+          The brain&rsquo;s plasticity in accepting new body representations is remarkably high,
+          which explains why even brief VR embodiment sessions can produce lasting psychological
+          effects<Citation id="10" index={10} />.
+        </p>
 
         <ArticleCallout type="science">
           <p>
@@ -192,6 +217,33 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           relationships<Citation id="2" index={2} />. This suggests that virtual and physical
           social connection may fulfill different psychological needs, and that one cannot fully
           replace the other.
+        </p>
+        <p className="mb-6">
+          The quality of virtual social connection also varies depending on the context and
+          the characteristics of the participants. Research on older adults using social VR
+          platforms found significant reductions in loneliness and depressive symptoms over a
+          three-month period, particularly among those with mobility limitations that restricted
+          their ability to socialize in person. For this population, social VR appeared to serve
+          as a genuine social lifeline rather than a displacement of existing
+          connections<Citation id="4" index={4} />. Similarly, studies of geographically isolated
+          individuals &mdash; people living in rural areas, expatriates, and those with rare
+          conditions who struggle to find local peers &mdash; suggest that social VR can provide
+          a form of community that would otherwise be unavailable. The critical variable appears
+          to be whether virtual socialization is filling a gap that physical socialization cannot
+          address, or whether it is gradually replacing interactions that could occur in person.
+        </p>
+        <p className="mb-6">
+          One underexplored dimension of virtual social connection is the phenomenon of
+          &ldquo;parasocial escalation&rdquo; &mdash; the tendency for relationships that begin
+          in virtual spaces to feel more intimate more quickly than those formed through
+          conventional means. The combination of avatar-mediated anonymity, shared immersive
+          experiences, and the sense of physical co-presence can accelerate emotional disclosure
+          and attachment formation in ways that may not be grounded in the kind of trust-building
+          that typically accompanies deepening relationships. Some users report forming intense
+          emotional bonds with people they have only met in VR, bonds that can be deeply
+          fulfilling but also particularly painful if they dissolve, because the shared virtual
+          world that contained the relationship may continue to exist as a constant
+          reminder<Citation id="2" index={2} />.
         </p>
 
         <ComparisonTable
@@ -277,6 +329,29 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           a priority research area and recommends that immersive technologies implement
           age-appropriate guardrails that limit session duration and avatar customization options
           for users under sixteen.
+        </p>
+        <p className="mb-6">
+          The avatar-self discrepancy effect also has implications for mental health conditions
+          that involve distorted self-perception. For individuals with body dysmorphic disorder,
+          the ability to inhabit an idealized body in VR can provide temporary relief from
+          appearance-related distress, but this relief may come at the cost of reinforcing the
+          belief that their actual body is unacceptable. Clinicians working with patients who
+          use virtual worlds are beginning to assess how avatar choices relate to underlying
+          self-concept disturbances, using the avatar as a window into the patient&rsquo;s
+          relationship with their physical self<Citation id="8" index={8} />. When approached
+          thoughtfully, this information can support therapeutic work; when ignored, the
+          virtual-physical identity gap may quietly widen.
+        </p>
+        <p className="mb-6">
+          Cultural factors also shape the body image effects of avatar embodiment. In cultures
+          where physical appearance is strongly linked to social status and desirability,
+          the contrast between an idealized avatar and the physical self may produce more acute
+          distress than in cultures with different aesthetic norms. Cross-cultural research on
+          avatar-body satisfaction is limited but emerging, and early findings suggest that the
+          specific features users idealize in their avatars &mdash; height, skin tone, body
+          shape, facial features &mdash; closely mirror the beauty standards of their cultural
+          context, reinforcing rather than transcending existing appearance
+          hierarchies<Citation id="2" index={2} />.
         </p>
 
         <BeforeAfter
@@ -380,6 +455,45 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           ]}
         />
 
+        <h2 id="neurological-adaptation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Neurological Adaptation and the Developing Brain
+        </h2>
+        <p className="mb-6">
+          Emerging neuroscience research suggests that regular immersion in virtual environments
+          may produce measurable changes in brain structure and function, particularly in regions
+          responsible for spatial processing, attention allocation, and sensory
+          integration<Citation id="10" index={10} />. An fMRI study comparing experienced VR users
+          to non-users found differences in gray matter density in the parietal cortex &mdash; a
+          region involved in integrating spatial and body-related information &mdash; as well as
+          altered functional connectivity between visual processing areas and the default mode
+          network. While these differences do not necessarily indicate harm, they suggest that
+          the brain adapts to regular immersive experience in ways that may reshape how it
+          processes physical reality.
+        </p>
+        <p className="mb-6">
+          The implications for adolescents and children are particularly important. The developing
+          brain is characterized by heightened neuroplasticity, which means it adapts more
+          rapidly and more profoundly to environmental input than the adult brain. The World
+          Health Organization has noted that immersive technology use during critical
+          developmental windows &mdash; particularly between ages 10 and 16, when the prefrontal
+          cortex and social cognition networks are undergoing rapid maturation &mdash; may shape
+          neural development in ways that are not yet fully understood<Citation id="7" index={7} />.
+          Current recommendations call for caution and age-appropriate limits on immersive VR
+          use, with most headset manufacturers setting a minimum recommended age of 13, though
+          enforcement remains inconsistent.
+        </p>
+        <p className="mb-6">
+          Animal studies and early human neuroimaging work also raise questions about the long-term
+          effects of immersion on the hippocampal formation. Because the hippocampus plays a central
+          role in both spatial navigation and memory encoding, environments that provide rich spatial
+          experiences &mdash; as immersive virtual worlds do &mdash; may either strengthen
+          hippocampal function through environmental enrichment or distort it through the
+          introduction of spatial experiences that do not obey the physics of the physical world.
+          Research in this area is preliminary but warrants attention as the duration and
+          frequency of immersive VR use continue to increase across all age
+          groups<Citation id="10" index={10} />.
+        </p>
+
         <h2 id="healthy-engagement" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Guidelines for Healthy Metaverse Engagement
         </h2>
@@ -408,9 +522,21 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           Engaging with this technology thoughtfully, with awareness of both its remarkable
           potential and its documented risks, is the most evidence-based approach available.
         </p>
+        <p className="mb-6">
+          For clinicians, the metaverse introduces new considerations for assessment and
+          treatment planning. Patients who spend significant time in immersive environments
+          may present with symptoms &mdash; depersonalization, identity confusion, social
+          withdrawal &mdash; that overlap with existing diagnostic categories but arise from
+          a distinct mechanism<Citation id="9" index={9} />. Asking about virtual world use as
+          part of routine psychosocial assessment is becoming increasingly important, particularly
+          for younger patients. Understanding the role that virtual environments play in a
+          patient&rsquo;s social life, self-concept, and emotional regulation can inform more
+          effective treatment plans and prevent misattribution of metaverse-related experiences
+          to other conditions.
+        </p>
 
         <QuoteBlock
-          quote="Virtual reality is a medium, not a destination. The healthiest relationship with the metaverse is one where you choose when to enter and when to leave — and where leaving never feels like losing something essential."
+          quote="Virtual reality is a medium, not a destination. The healthiest relationship with the metaverse is one where you choose when to enter and when to leave --- and where leaving never feels like losing something essential."
           attribution="Dr. Jeremy Bailenson"
           role="Director, Stanford Virtual Human Interaction Lab"
         />
@@ -426,7 +552,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     slug: 'technology-facilitated-abuse-devices-tools-of-control',
     title: 'Technology-Facilitated Abuse: How Devices Become Tools of Control',
     description:
-      'A critical examination of how abusers exploit smartphones, smart home devices, social media, GPS tracking, and other technologies to monitor, isolate, and control their victims — with safety planning guidance and resources for those affected.',
+      'A critical examination of how abusers exploit smartphones, smart home devices, social media, GPS tracking, and other technologies to monitor, isolate, and control their victims --- with safety planning guidance and resources for those affected.',
     image: '/images/articles/cat21/cover-061.svg',
     category: CATEGORY_TECHNOLOGY_DIGITAL_LIFE,
     readTime: 18,
@@ -447,7 +573,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
 
     keyFacts: [
       { text: 'Between 70% and 97% of domestic violence programs report that abusers use technology to stalk, harass, and control victims', citationIndex: 1 },
-      { text: 'Stalkerware — surveillance software secretly installed on a victim\'s device — was detected on over 50,000 phones globally in 2024 alone', citationIndex: 3 },
+      { text: 'Stalkerware --- surveillance software secretly installed on a victim\'s device --- was detected on over 50,000 phones globally in 2024 alone', citationIndex: 3 },
       { text: 'Survivors of technology-facilitated abuse report higher rates of PTSD, depression, and hypervigilance than survivors of non-technology-mediated abuse', citationIndex: 5 },
     ],
 
@@ -460,7 +586,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
         { title: 'Review account access', description: 'Check which devices are logged into your email, social media, and cloud accounts. Most platforms have a "security" or "active sessions" page showing all logged-in devices. Remove any you do not recognize. Change passwords using a device the other person has never had access to.' },
         { title: 'Check for stalkerware', description: 'Look for unfamiliar apps on your phone, especially those with generic names or no visible icon. On Android, check Settings > Apps for anything you did not install. On iPhone, look for unfamiliar configuration profiles under Settings > General > VPN & Device Management. If you suspect stalkerware, consult a domestic violence advocate before removing it, as removal may alert the abuser.' },
         { title: 'Audit shared accounts and devices', description: 'Identify every account, subscription, or device that is shared with or accessible to the person you are concerned about. This includes cloud storage, streaming services, phone plans, smart home devices, location-sharing apps, and financial accounts. Create a list as the basis for a safety plan.' },
-        { title: 'Assess smart home exposure', description: 'If you live in a home with smart devices — cameras, doorbells, thermostats, locks, speakers — determine who has administrative control. Smart home devices can be used to monitor activity, lock or unlock doors remotely, and eavesdrop on conversations.' },
+        { title: 'Assess smart home exposure', description: 'If you live in a home with smart devices --- cameras, doorbells, thermostats, locks, speakers --- determine who has administrative control. Smart home devices can be used to monitor activity, lock or unlock doors remotely, and eavesdrop on conversations.' },
         { title: 'Connect with a specialist', description: 'Contact the Safety Net project at the National Network to End Domestic Violence (nnedv.org/content/technology-safety) or call the National Domestic Violence Hotline at 1-800-799-7233 for technology-specific safety planning support. These services are confidential and staffed by people trained in digital safety.' },
       ],
     },
@@ -652,6 +778,31 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           settings<Citation id="6" index={6} />. This pervasiveness makes the recovery process
           fundamentally different.
         </p>
+        <p className="mb-6">
+          A particularly damaging aspect of TFA is its cumulative psychological toll. Unlike
+          a single incident of harassment, technology-facilitated abuse typically involves a
+          sustained pattern of monitoring and control that erodes the survivor&rsquo;s sense of
+          safety over weeks, months, or years. The constancy of surveillance creates a state of
+          chronic stress that affects the hypothalamic-pituitary-adrenal axis, contributing to
+          elevated cortisol levels, disrupted sleep architecture, and impaired immune
+          function<Citation id="5" index={5} />. Survivors often describe a pervasive sense that
+          they are never truly alone &mdash; that even routine activities like grocery shopping or
+          visiting a friend are being observed and may later be used against them. This erosion
+          of perceived safety in everyday life distinguishes TFA from many other forms of
+          psychological harm and can make recovery particularly challenging.
+        </p>
+        <p className="mb-6">
+          Research also documents a secondary layer of harm related to institutional
+          responses. When survivors report technology-facilitated abuse to law enforcement,
+          they often encounter officers who lack the technical literacy to understand the
+          complaints. A survey of domestic violence advocates found that in the majority of cases
+          involving TFA, law enforcement responses were rated as inadequate, with common
+          problems including officers dismissing digital surveillance as not constituting real
+          abuse, failing to preserve digital evidence, and advising survivors to simply
+          change their phone number or deactivate social media &mdash; advice that can isolate
+          the survivor from their support network and does not address the underlying
+          monitoring<Citation id="9" index={9} />.
+        </p>
 
         <ArticleCallout type="clinical-note">
           <p>
@@ -693,6 +844,30 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           exercise. These behaviors are normalized by a culture that often conflates surveillance
           with care and control with protection<Citation id="2" index={2} />.
         </p>
+        <p className="mb-6">
+          The digital dimension of coercive control is particularly effective because it is
+          often invisible to outsiders. Friends and family who might recognize physical signs of
+          abuse may not see that a partner is reading every text message, tracking every movement,
+          or listening through a smart speaker. Survivors frequently report that they struggled
+          to name what was happening to them because the tools of their surveillance were the
+          same ordinary consumer products that everyone uses<Citation id="6" index={6} />. This
+          invisibility makes it harder for survivors to seek help and harder for support networks
+          to recognize when someone is being controlled. The normalization of constant digital
+          connectivity in contemporary relationships provides cover for behaviors that, when
+          examined through the lens of coercive control, are clearly abusive.
+        </p>
+        <p className="mb-6">
+          Economic control through technology adds another layer of complexity. Financial
+          apps, shared bank accounts with push notifications, and digital payment platforms
+          give abusers real-time visibility into a partner&rsquo;s spending, location (inferred
+          from transaction locations), and social activity (inferred from restaurant or
+          entertainment purchases). An abuser who monitors every purchase can interrogate a
+          partner about any perceived deviation from expected behavior, making it nearly
+          impossible for the survivor to set aside money for safety planning or
+          independence<Citation id="2" index={2} />. Some survivors describe having to account
+          for every dollar spent, with the digital record serving as both surveillance tool and
+          evidence that the abuser uses to justify controlling behavior.
+        </p>
 
         <ComparisonTable
           headers={['Tactic', 'How It Appears', 'How It Functions']}
@@ -711,6 +886,45 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           of Justice has issued guidance emphasizing that technology-facilitated behaviors should
           be documented in protective orders and that digital evidence preservation is critical
           in TFA cases<Citation id="9" index={9} />.
+        </p>
+
+        <h2 id="technology-company-responsibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Responsibility of Technology Companies
+        </h2>
+        <p className="mb-6">
+          A critical dimension of technology-facilitated abuse that receives insufficient
+          attention is the role of technology companies in enabling or preventing it. Many of the
+          tools that abusers exploit &mdash; location sharing, device tracking, shared accounts,
+          and smart home administration &mdash; are standard features of consumer technology
+          products designed without adequate consideration of how they might be weaponized in
+          abusive relationships<Citation id="2" index={2} />. The design choices that make a
+          family tracking app convenient for coordinating school pickups are the same choices
+          that make it a surveillance tool in the hands of a controlling partner.
+        </p>
+        <p className="mb-6">
+          Advocacy organizations have pushed technology companies to implement specific
+          safeguards. These include making it easier for individual users to identify and revoke
+          shared access to their accounts and devices, providing clear notifications when a
+          device is being monitored or tracked, designing smart home systems so that each
+          household member can have independent administrative control, and training customer
+          support staff to recognize signs of technology-facilitated abuse when survivors call
+          for help<Citation id="7" index={7} />. Some companies have responded with dedicated
+          safety teams and survivor-focused features, but progress has been uneven across the
+          industry. The commercial incentive to make sharing and connectivity as frictionless as
+          possible often conflicts with the safety need to make monitoring transparent and
+          revocable.
+        </p>
+        <p className="mb-6">
+          The stalkerware industry presents a more direct form of corporate complicity.
+          Companies that market surveillance software &mdash; often with thinly veiled language
+          about monitoring an &ldquo;unfaithful spouse&rdquo; or &ldquo;checking on your
+          partner&rdquo; &mdash; are providing tools explicitly designed for non-consensual
+          surveillance. While some jurisdictions have begun prosecuting stalkerware developers
+          and distributors, enforcement remains rare and the software remains widely
+          available<Citation id="3" index={3} />. The Coalition Against Stalkerware, a
+          consortium of cybersecurity firms and advocacy organizations, works to detect and flag
+          these applications, but the technological arms race between stalkerware developers and
+          detection tools continues with no resolution in sight.
         </p>
 
         <h2 id="safety-planning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -737,10 +951,10 @@ export const digitalCultureSocietyArticlesD: Article[] = [
 
         <ProgressSteps
           steps={[
-            { title: 'Document the abuse safely', description: 'If it is safe to do so, take screenshots or photos of abusive messages, threatening communications, and evidence of monitoring. Store this documentation on a device or account the abuser cannot access — such as a trusted friend\'s cloud storage or a secure email account created on a different device.' },
+            { title: 'Document the abuse safely', description: 'If it is safe to do so, take screenshots or photos of abusive messages, threatening communications, and evidence of monitoring. Store this documentation on a device or account the abuser cannot access --- such as a trusted friend\'s cloud storage or a secure email account created on a different device.' },
             { title: 'Assess your device security', description: 'Work with a domestic violence advocate to evaluate whether your devices are compromised. This may include checking for stalkerware, reviewing account access logs, identifying shared accounts, and evaluating smart home device control. Do not remove stalkerware without professional guidance, as doing so may alert the abuser.' },
             { title: 'Create a parallel digital life', description: 'Gradually establish new accounts and communication channels on a secure device that the abuser does not know about. This may include a new email address, a prepaid phone, and accounts for essential services. This parallel infrastructure provides a safe channel for safety planning and support.' },
-            { title: 'Secure your accounts systematically', description: 'When it is safe to do so — typically after physical separation with safety supports in place — change passwords on all accounts, enable two-factor authentication using a device the abuser cannot access, revoke shared access to cloud services, and remove the abuser from smart home device administration.' },
+            { title: 'Secure your accounts systematically', description: 'When it is safe to do so --- typically after physical separation with safety supports in place --- change passwords on all accounts, enable two-factor authentication using a device the abuser cannot access, revoke shared access to cloud services, and remove the abuser from smart home device administration.' },
             { title: 'Address digital traces', description: 'After separation, review location-sharing settings, connected devices, recovery email addresses, and security questions on all accounts. Abusers often maintain access through less obvious pathways such as backup email addresses, forgotten device logins, or security questions with known answers.' },
           ]}
         />
@@ -758,6 +972,17 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           experienced it &mdash; the idea that a thermostat or doorbell could be an instrument
           of abuse seems absurd until you understand the dynamics of coercive control. Validation
           and practical support, rather than skepticism, are what survivors need most.
+        </p>
+        <p className="mb-6">
+          The evolving nature of technology means that the forms of TFA will continue to
+          change. Emerging technologies like augmented reality, AI-generated deepfakes, and
+          increasingly sophisticated smart home ecosystems will introduce new vectors for
+          abuse that current safety planning frameworks may not anticipate. Staying informed
+          about these developments &mdash; through resources like the Safety Net project and
+          the Coalition Against Stalkerware &mdash; is essential for advocates, clinicians, and
+          survivors alike<Citation id="7" index={7} />. The goal of digital safety is not a
+          one-time fix but an ongoing practice of awareness, adaptation, and the assertion of
+          digital autonomy in the face of evolving threats.
         </p>
 
         <QuoteBlock
@@ -777,7 +1002,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     slug: 'digital-wellness-schools-teaching-students-healthy-tech-habits',
     title: 'Digital Wellness in Schools: Teaching Students Healthy Tech Habits',
     description:
-      'An evidence-based guide to school-based digital wellness education — examining effective curriculum approaches, age-appropriate strategies, and practical frameworks for helping students develop a healthy, intentional relationship with technology.',
+      'An evidence-based guide to school-based digital wellness education --- examining effective curriculum approaches, age-appropriate strategies, and practical frameworks for helping students develop a healthy, intentional relationship with technology.',
     image: '/images/articles/cat21/cover-062.svg',
     category: CATEGORY_TECHNOLOGY_DIGITAL_LIFE,
     readTime: 15,
@@ -794,7 +1019,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     summary:
-      'Students today are the first generation to have never known life without smartphones, social media, and constant connectivity. Schools are uniquely positioned to teach the skills that families often struggle to model: critical evaluation of online content, intentional technology use, recognition of manipulative design patterns, and the ability to self-regulate screen time. Research demonstrates that school-based digital wellness programs can measurably improve students\' media literacy, reduce problematic smartphone use, and increase awareness of how technology affects mood and attention. However, effectiveness depends heavily on approach — fear-based messaging backfires, while skills-based, non-judgmental curricula that respect students\' digital lives produce lasting behavioral change. This article reviews the evidence on what works in school-based digital wellness education and provides frameworks that educators can adapt to their specific contexts.',
+      'Students today are the first generation to have never known life without smartphones, social media, and constant connectivity. Schools are uniquely positioned to teach the skills that families often struggle to model: critical evaluation of online content, intentional technology use, recognition of manipulative design patterns, and the ability to self-regulate screen time. Research demonstrates that school-based digital wellness programs can measurably improve students\' media literacy, reduce problematic smartphone use, and increase awareness of how technology affects mood and attention. However, effectiveness depends heavily on approach --- fear-based messaging backfires, while skills-based, non-judgmental curricula that respect students\' digital lives produce lasting behavioral change. This article reviews the evidence on what works in school-based digital wellness education and provides frameworks that educators can adapt to their specific contexts.',
 
     keyFacts: [
       { text: 'Students who complete evidence-based media literacy programs demonstrate 26% greater ability to identify manipulative online content compared to control groups', citationIndex: 1 },
@@ -803,13 +1028,13 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     sparkMoment:
-      'The goal of digital wellness education is not to make students afraid of technology. It is to make them fluent enough to use it deliberately — to know when it is serving them and when they are serving it.',
+      'The goal of digital wellness education is not to make students afraid of technology. It is to make them fluent enough to use it deliberately --- to know when it is serving them and when they are serving it.',
 
     practicalExercise: {
       title: 'The Classroom Digital Wellness Audit',
       steps: [
         { title: 'Conduct an anonymous tech use survey', description: 'Have students anonymously report their daily screen time, most-used apps, how they feel after extended use, and whether they have ever tried to reduce their usage. Use the aggregate data (never individual responses) as a starting point for class discussion about digital habits.' },
-        { title: 'Teach attention tracking', description: 'Guide students through a 24-hour attention audit. Ask them to notice every time they pick up their phone and record the trigger (boredom, notification, habit, specific need). The following day, have students share patterns they observed — most are surprised by how often they check reflexively rather than intentionally.' },
+        { title: 'Teach attention tracking', description: 'Guide students through a 24-hour attention audit. Ask them to notice every time they pick up their phone and record the trigger (boredom, notification, habit, specific need). The following day, have students share patterns they observed --- most are surprised by how often they check reflexively rather than intentionally.' },
         { title: 'Analyze persuasive design', description: 'Select a popular app or platform and guide students through identifying its persuasive design features: infinite scroll, variable reward schedules, notification systems, streak mechanics, and social validation metrics. Help students understand that these features are engineered to capture attention, not serve user well-being.' },
         { title: 'Practice intentional use', description: 'Challenge students to complete one week of intentional phone use: before each pick-up, they state their purpose ("I am picking up my phone to text my friend about homework"). At the end of the week, discuss what they learned about their automatic behaviors versus intentional choices.' },
         { title: 'Design a class digital wellness agreement', description: 'Collaboratively create a class agreement about technology use that students have genuine ownership over. Agreements created by students are more effective than rules imposed by adults. Include both in-school norms and personal commitments students choose for themselves.' },
@@ -928,6 +1153,30 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           in which students used technology more than before the intervention. Skills-based
           programs, by contrast, produced smaller initial effects but maintained or increased
           their impact over a six-month follow-up period<Citation id="5" index={5} />.
+        </p>
+        <p className="mb-6">
+          The failure of fear-based approaches is consistent with broader findings in health
+          education. Decades of research on substance abuse prevention, sexual health education,
+          and tobacco cessation programs have demonstrated that scare tactics produce defensive
+          reactions rather than behavioral change, particularly among adolescents who are
+          developmentally predisposed to view themselves as invulnerable to distant
+          risks<Citation id="3" index={3} />. When adults tell students that screens will damage
+          their brains, destroy their attention spans, or ruin their relationships, students who
+          use technology constantly and feel fine are more likely to dismiss the messenger than
+          change their behavior. Effective programs meet students where they are &mdash;
+          acknowledging that technology is woven into every aspect of their social and academic
+          lives and that the goal is not elimination but intentionality.
+        </p>
+        <p className="mb-6">
+          Another consistent finding is that programs with experiential components outperform
+          purely didactic ones. Having students track their own phone pickups for 24 hours
+          produces more behavioral insight than presenting statistics about average screen
+          time. Asking students to redesign a social media notification system that prioritizes
+          user well-being over engagement deepens their understanding of persuasive design more
+          than a lecture on the topic<Citation id="6" index={6} />. The most effective curricula
+          balance information delivery with structured self-observation exercises, peer
+          discussion, and design-thinking activities that give students agency over their
+          learning.
         </p>
 
         <BeforeAfter
@@ -1085,6 +1334,65 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           this transition are significantly more effective than those that begin in high school,
           when digital habits are already deeply established.
         </p>
+        <p className="mb-6">
+          Elementary-level digital wellness education lays the groundwork for later skill
+          development by establishing basic concepts about the intentional design of digital
+          products. Even young children can begin to understand that apps and games are made
+          by people who want them to keep playing, and that the feelings they experience while
+          using technology &mdash; excitement, frustration, reluctance to stop &mdash; are often
+          responses to deliberate design choices<Citation id="3" index={3} />. At this level,
+          the emphasis is on building vocabulary and conceptual frameworks rather than on
+          self-regulation, which requires cognitive capacities that develop later. Teachers
+          report that children as young as seven can articulate basic observations about how
+          games use rewards to keep them engaged, providing a foundation for more sophisticated
+          analysis in later grades.
+        </p>
+        <p className="mb-6">
+          High school programs face a different challenge: by the time students reach ninth
+          grade, their digital habits are well established and their relationship with technology
+          is deeply personal. Programs that attempt to impose restrictions or suggest that
+          students&rsquo; technology use is problematic typically encounter resistance. The most
+          effective high school curricula frame digital wellness as a dimension of adult
+          competence &mdash; the ability to manage one&rsquo;s own attention, information
+          environment, and digital identity with the same intentionality applied to financial
+          literacy or career planning<Citation id="8" index={8} />. This framing respects
+          adolescents&rsquo; growing sense of autonomy while providing tools they recognize
+          as genuinely useful for their emerging adult lives.
+        </p>
+
+        <h2 id="measuring-effectiveness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Measuring Program Effectiveness
+        </h2>
+        <p className="mb-6">
+          One of the challenges in digital wellness education is defining what success looks
+          like. Simple metrics like screen time reduction are tempting but misleading &mdash; a
+          student who spends six hours creating digital art or coding a project is using
+          technology very differently from one who spends two hours doomscrolling social
+          media. Researchers increasingly argue that program evaluation should focus on
+          qualitative dimensions of technology use rather than raw
+          quantity<Citation id="8" index={8} />.
+        </p>
+        <p className="mb-6">
+          More meaningful outcome measures include students&rsquo; ability to articulate the
+          persuasive design features of the platforms they use, their capacity to recognize when
+          technology is affecting their mood and make adjustments, the degree to which their
+          technology use is intentional versus habitual, and their confidence in managing their
+          digital lives without external rules. These outcomes are harder to measure than screen
+          time but more closely aligned with the actual goal of digital wellness
+          education<Citation id="2" index={2} />. Schools that have adopted these richer
+          assessment approaches report that the data they collect is more useful for curriculum
+          improvement and more meaningful to students, parents, and administrators.
+        </p>
+        <p className="mb-6">
+          Longitudinal tracking is also essential for understanding whether digital wellness
+          interventions produce lasting change. A program that reduces problematic phone use
+          during the intervention period but shows no effect at three-month or six-month
+          follow-up has not achieved meaningful impact. The most rigorous evaluations in the
+          literature include follow-up assessments at six and twelve months, and those that
+          demonstrate sustained effects tend to be programs that include booster sessions,
+          ongoing classroom integration, or student-led peer education components that reinforce
+          the initial learning over time<Citation id="5" index={5} />.
+        </p>
 
         <h2 id="implementation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Implementation: Making It Work in Real Schools
@@ -1102,11 +1410,24 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           disconnected from students&rsquo; reality, and concern about appearing hypocritical
           given their own technology habits<Citation id="7" index={7} />.
         </p>
+        <p className="mb-6">
+          Budget constraints present another significant barrier. Many schools that recognize
+          the importance of digital wellness education cannot find room in already-packed
+          curricula or stretched professional development budgets. The most successful
+          implementations have addressed this by integrating digital wellness into existing
+          subjects rather than creating standalone courses &mdash; analyzing persuasive design
+          in language arts, discussing algorithm bias in mathematics, examining technology
+          ethics in social studies<Citation id="9" index={9} />. This integration approach
+          reduces the need for dedicated curriculum time while ensuring that digital literacy
+          concepts are reinforced across multiple contexts throughout the school day. Districts
+          that have adopted this model report that teachers feel less burdened and that students
+          encounter digital wellness concepts frequently enough for genuine skill development.
+        </p>
 
         <ProgressSteps
           steps={[
             { title: 'Invest in teacher professional development', description: 'Teachers need training not only in curriculum content but in facilitation skills for discussions about technology. The most effective teacher training includes hands-on experience with the apps and platforms students use, practice analyzing persuasive design features, and strategies for facilitating non-judgmental conversations about digital habits.' },
-            { title: 'Integrate across subjects rather than siloing', description: 'Digital wellness is most effective when woven into existing subjects — analyzing persuasive design in English class, studying algorithm bias in math, discussing technology ethics in social studies — rather than delivered as a standalone unit that students forget once it ends.' },
+            { title: 'Integrate across subjects rather than siloing', description: 'Digital wellness is most effective when woven into existing subjects --- analyzing persuasive design in English class, studying algorithm bias in math, discussing technology ethics in social studies --- rather than delivered as a standalone unit that students forget once it ends.' },
             { title: 'Partner with parents and caregivers', description: 'School-based programs are more effective when families receive parallel education. Providing parents with information about what students are learning, along with conversation starters and strategies for home implementation, creates consistency across environments and reduces family conflict about technology use.' },
             { title: 'Center student voice and experience', description: 'The most effective programs involve students in curriculum design, use student-generated examples and scenarios, and create opportunities for peer-to-peer learning. Students are more receptive to insights shared by classmates than to lectures from adults.' },
             { title: 'Measure and iterate', description: 'Implement pre- and post-assessments of media literacy, self-regulation skills, and technology use patterns. Use this data to refine the curriculum over time. Programs that do not measure outcomes cannot improve systematically.' },
@@ -1154,7 +1475,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     slug: 'open-source-mental-health-tools-community-built-resources-wellbeing',
     title: 'Open-Source Mental Health Tools: Community-Built Resources for Wellbeing',
     description:
-      'An evidence-based exploration of open-source mental health technologies — from mood tracking apps and meditation platforms to peer support networks and therapeutic chatbots built by communities for communities, examining both their promise and their limitations.',
+      'An evidence-based exploration of open-source mental health technologies --- from mood tracking apps and meditation platforms to peer support networks and therapeutic chatbots built by communities for communities, examining both their promise and their limitations.',
     image: '/images/articles/cat21/cover-063.svg',
     category: CATEGORY_TECHNOLOGY_DIGITAL_LIFE,
     readTime: 14,
@@ -1171,7 +1492,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     summary:
-      'The open-source movement — in which software code is made freely available for anyone to use, modify, and distribute — has begun to intersect with mental health technology in meaningful ways. Community-built projects now offer free mood tracking applications, meditation platforms, peer support networks, crisis intervention tools, and even therapeutic chatbots. These tools address a critical gap: the majority of commercial mental health apps lack evidence-based foundations, cost money, and collect extensive user data for commercial purposes. Open-source alternatives prioritize transparency, privacy, and community governance. However, they also face real challenges: limited clinical validation, variable quality, sustainability without commercial revenue, and the risk that users may rely on them in place of professional care. This article examines the landscape of open-source mental health tools, evaluates their evidence base, and provides guidance for identifying which community-built resources are trustworthy and useful.',
+      'The open-source movement --- in which software code is made freely available for anyone to use, modify, and distribute --- has begun to intersect with mental health technology in meaningful ways. Community-built projects now offer free mood tracking applications, meditation platforms, peer support networks, crisis intervention tools, and even therapeutic chatbots. These tools address a critical gap: the majority of commercial mental health apps lack evidence-based foundations, cost money, and collect extensive user data for commercial purposes. Open-source alternatives prioritize transparency, privacy, and community governance. However, they also face real challenges: limited clinical validation, variable quality, sustainability without commercial revenue, and the risk that users may rely on them in place of professional care. This article examines the landscape of open-source mental health tools, evaluates their evidence base, and provides guidance for identifying which community-built resources are trustworthy and useful.',
 
     keyFacts: [
       { text: 'Fewer than 4% of mental health apps in commercial app stores have published peer-reviewed evidence supporting their effectiveness', citationIndex: 1 },
@@ -1188,8 +1509,8 @@ export const digitalCultureSocietyArticlesD: Article[] = [
         { title: 'Identify the project governance', description: 'Look for the project\'s governance structure: Who maintains it? Is there a named organization or individual behind it? Are there clinical advisors or mental health professionals involved? Projects with transparent governance and clinical input are more trustworthy than anonymous or single-developer efforts.' },
         { title: 'Review the evidence base', description: 'Check whether the tool references evidence-based frameworks or therapeutic approaches (such as CBT, DBT, or mindfulness-based stress reduction). Look for any published evaluations, user studies, or pilot data. A tool does not need a randomized controlled trial to be useful, but it should be transparent about what evidence supports its approach.' },
         { title: 'Inspect privacy practices', description: 'One of the primary advantages of open-source tools is data transparency. Check the project\'s privacy documentation and, if you are technically inclined, review the source code for data handling practices. Verify that sensitive mental health data is stored locally on your device or encrypted in transit.' },
-        { title: 'Test with low stakes first', description: 'Before relying on any digital mental health tool, use it for a non-critical purpose for at least two weeks. Track whether it actually helps — does it make you more aware of your patterns? Does it provide useful feedback? Does it feel supportive rather than anxiety-inducing?' },
-        { title: 'Report issues and contribute', description: 'If you find a bug, a confusing feature, or a gap in the tool, report it through the project\'s issue tracker. Open-source projects improve through community feedback. If you have skills to contribute — design, writing, translation, testing — your participation strengthens the tool for everyone.' },
+        { title: 'Test with low stakes first', description: 'Before relying on any digital mental health tool, use it for a non-critical purpose for at least two weeks. Track whether it actually helps --- does it make you more aware of your patterns? Does it provide useful feedback? Does it feel supportive rather than anxiety-inducing?' },
+        { title: 'Report issues and contribute', description: 'If you find a bug, a confusing feature, or a gap in the tool, report it through the project\'s issue tracker. Open-source projects improve through community feedback. If you have skills to contribute --- design, writing, translation, testing --- your participation strengthens the tool for everyone.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Try Our Open-Source Mood Tracking Tool',
@@ -1269,6 +1590,29 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           &mdash; their emotional states, suicidal thoughts, substance use patterns, relationship
           problems &mdash; may be transmitted to entities whose primary interest is targeted
           advertising.
+        </p>
+        <p className="mb-6">
+          Beyond data privacy, the commercial app ecosystem also suffers from what researchers
+          call the &ldquo;engagement trap.&rdquo; Apps that rely on subscription revenue or
+          advertising impressions are incentivized to maximize the time users spend within the
+          app, which can conflict directly with therapeutic goals. A well-designed mood tracking
+          tool should help users develop self-awareness that they eventually internalize, reducing
+          their dependence on the tool. But an app optimized for engagement will add features
+          that keep users returning &mdash; gamification, streaks, social comparison metrics,
+          and notification systems that create anxiety when the app is not
+          used<Citation id="1" index={1} />. The result is a category of tools that may
+          inadvertently worsen the very conditions they claim to address.
+        </p>
+        <p className="mb-6">
+          The attrition problem in commercial mental health apps further undermines their
+          value proposition. Research consistently shows that the median time to abandonment
+          for mental health apps is approximately 15 days, with usage declining sharply after
+          the first week<Citation id="2" index={2} />. This pattern reflects a mismatch between
+          what users need &mdash; sustained, personalized support that adapts to their progress
+          &mdash; and what most apps deliver, which is a static set of exercises wrapped in
+          an attractive interface. Open-source projects, while less polished, often benefit
+          from community-driven iteration that responds directly to user feedback rather than
+          to commercial priorities.
         </p>
 
         <ArticleCallout type="key-takeaway">
@@ -1392,13 +1736,13 @@ export const digitalCultureSocietyArticlesD: Article[] = [
         <ComparisonTable
           headers={['Dimension', 'Open-Source Tools', 'Commercial Apps']}
           rows={[
-            ['Data transparency', 'Full — source code is inspectable', 'Partial — relies on privacy policy claims'],
-            ['Clinical validation', 'Variable — often limited by funding', 'Variable — few invest in rigorous evaluation'],
+            ['Data transparency', 'Full --- source code is inspectable', 'Partial --- relies on privacy policy claims'],
+            ['Clinical validation', 'Variable --- often limited by funding', 'Variable --- few invest in rigorous evaluation'],
             ['Cost to users', 'Free', 'Often subscription-based ($8-$20/month)'],
-            ['Sustainability', 'Challenge — depends on donations and grants', 'Stronger if profitable, but may pivot or shut down'],
-            ['Customization', 'High — can be modified for specific communities', 'Low — one-size-fits-all approach'],
-            ['User interface quality', 'Variable — depends on community resources', 'Generally polished'],
-            ['Global accessibility', 'Strong — community translation and localization', 'Limited by commercial market priorities'],
+            ['Sustainability', 'Challenge --- depends on donations and grants', 'Stronger if profitable, but may pivot or shut down'],
+            ['Customization', 'High --- can be modified for specific communities', 'Low --- one-size-fits-all approach'],
+            ['User interface quality', 'Variable --- depends on community resources', 'Generally polished'],
+            ['Global accessibility', 'Strong --- community translation and localization', 'Limited by commercial market priorities'],
           ]}
         />
 
@@ -1409,6 +1753,70 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           to local contexts at minimal cost<Citation id="6" index={6} />. A Lancet Digital Health
           analysis found that open-source health tools have been successfully deployed in over
           45 countries, often reaching populations that commercial products never target.
+        </p>
+        <p className="mb-6">
+          The sustainability challenge deserves particular attention because it affects the
+          user experience directly. An open-source mood tracking app that a person integrates
+          into their daily wellness routine becomes a repository of personal mental health data
+          &mdash; months or years of mood logs, symptom patterns, and correlational insights.
+          When the developer abandons the project, the user loses not just a tool but a personal
+          health record that may have taken significant effort to build. Some open-source
+          projects mitigate this risk by implementing standardized data export formats and by
+          ensuring that the application can run independently even without updates, but many do
+          not<Citation id="9" index={9} />. Users who adopt open-source mental health tools
+          should verify from the outset that their data is exportable and that the tool does not
+          depend on external servers that could go offline.
+        </p>
+        <p className="mb-6">
+          Quality assurance in community-developed projects follows a fundamentally different
+          model than in commercial software. Rather than a dedicated quality assurance team, open-source
+          projects rely on community code review, user-reported issues, and the collective
+          expertise of contributors. For projects with active communities, this model can be
+          highly effective &mdash; bugs are often identified and fixed faster in popular
+          open-source projects than in commercial products because there are more people
+          inspecting the code<Citation id="2" index={2} />. But for smaller projects with fewer
+          contributors, quality can be inconsistent, and critical issues may go unaddressed for
+          extended periods. The key indicator of quality in open-source projects is community
+          activity: the frequency of updates, the responsiveness to issue reports, and the
+          diversity of contributors.
+        </p>
+
+        <h2 id="cultural-adaptation-global-reach" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Cultural Adaptation and Global Reach
+        </h2>
+        <p className="mb-6">
+          One of the most compelling advantages of open-source mental health tools is their
+          capacity for cultural adaptation. Commercial mental health apps are overwhelmingly
+          designed for English-speaking Western populations, reflecting the cultural assumptions,
+          therapeutic frameworks, and communication styles of their developers. For the
+          approximately 80 percent of the world&rsquo;s population that lives outside the
+          English-speaking West, these tools may be linguistically inaccessible, culturally
+          irrelevant, or actively harmful when they impose frameworks that conflict with local
+          understandings of mental health and well-being<Citation id="6" index={6} />.
+        </p>
+        <p className="mb-6">
+          Open-source projects address this gap through community-driven localization. Because
+          the source code and content are freely modifiable, local communities can translate
+          interfaces, adapt therapeutic content to culturally appropriate frameworks, and modify
+          assessment tools to reflect local idioms of distress. A mental health screening tool
+          that asks about &ldquo;feeling blue&rdquo; can be adapted for contexts where depression
+          manifests primarily as somatic complaints or where emotional distress is described
+          through entirely different metaphors. Several open-source mood tracking projects now
+          support over 30 languages, with translations contributed by community volunteers who
+          understand the cultural nuances that automated translation tools
+          miss<Citation id="3" index={3} />.
+        </p>
+        <p className="mb-6">
+          The global reach of open-source tools also addresses a critical infrastructure
+          challenge in low- and middle-income countries. In many regions, the ratio of mental
+          health professionals to population makes individual therapy practically unavailable
+          for the majority of people. Digital tools that provide evidence-based psychoeducation,
+          self-monitoring, and guided self-help can serve as a first line of support where
+          professional services are scarce<Citation id="6" index={6} />. Open-source tools are
+          particularly suited to this role because they can be deployed without licensing fees,
+          modified to work on low-bandwidth connections and older devices, and maintained by
+          local technical communities who understand the infrastructure constraints of their
+          region.
         </p>
 
         <h2 id="evaluating-quality" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1427,8 +1835,8 @@ export const digitalCultureSocietyArticlesD: Article[] = [
             { title: 'Check for clinical grounding', description: 'Does the tool reference specific evidence-based approaches (CBT, DBT, behavioral activation, mindfulness-based stress reduction)? Are there mental health professionals listed as advisors or contributors? Tools grounded in established frameworks are more likely to be helpful than those based on untested ideas.' },
             { title: 'Assess project health', description: 'Look at the project\'s code repository. When was the last update? How many active contributors are there? Are user-reported issues being addressed? A project that has not been updated in over a year may have security vulnerabilities and is unlikely to be responsive to problems.' },
             { title: 'Verify data handling', description: 'Check whether the tool stores data locally, transmits it to servers, or uses encryption. For mental health tools, local-only data storage is the gold standard for privacy. If data is transmitted, it should be encrypted and the destination should be clearly documented.' },
-            { title: 'Look for community governance', description: 'The strongest open-source health projects have transparent governance structures — a clear decision-making process, a code of conduct, and mechanisms for community input. Projects governed by a single developer without community oversight carry more risk of abandonment or quality problems.' },
-            { title: 'Use evaluation frameworks', description: 'The American Psychiatric Association has published an app evaluation framework that can be applied to open-source tools as well as commercial ones. It assesses safety, evidence, ease of use, and interoperability — providing a structured approach to determining whether a tool is worth your time.' },
+            { title: 'Look for community governance', description: 'The strongest open-source health projects have transparent governance structures --- a clear decision-making process, a code of conduct, and mechanisms for community input. Projects governed by a single developer without community oversight carry more risk of abandonment or quality problems.' },
+            { title: 'Use evaluation frameworks', description: 'The American Psychiatric Association has published an app evaluation framework that can be applied to open-source tools as well as commercial ones. It assesses safety, evidence, ease of use, and interoperability --- providing a structured approach to determining whether a tool is worth your time.' },
           ]}
         />
 
@@ -1471,6 +1879,20 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           tools &mdash; would significantly strengthen the open-source mental health ecosystem.
         </p>
         <p className="mb-6">
+          A promising development in the sustainability landscape is the emergence of
+          institutional adoption of open-source mental health tools. Several university
+          counseling centers and community mental health organizations have begun integrating
+          open-source mood tracking and screening tools into their clinical workflows, providing
+          both a user base that generates feedback for improvement and, in some cases, financial
+          or technical support for ongoing development<Citation id="9" index={9} />. These
+          institutional partnerships represent perhaps the most viable path toward
+          sustainability, because they align the interests of developers (who need resources
+          and validation), institutions (who need affordable, transparent tools), and users (who
+          need reliable, trustworthy applications). The challenge is that institutional adoption
+          requires a level of documentation, security auditing, and regulatory compliance that
+          many community-developed projects are not equipped to provide without external support.
+        </p>
+        <p className="mb-6">
           The open-source movement in mental health technology represents something more than
           an alternative to commercial apps. It represents a different relationship between
           people and the tools they use to support their well-being &mdash; one built on
@@ -1479,7 +1901,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="The best mental health technology is the kind you can trust completely — not because a company promises to protect your data, but because you can verify it yourself. Open source makes that possible."
+          quote="The best mental health technology is the kind you can trust completely --- not because a company promises to protect your data, but because you can verify it yourself. Open source makes that possible."
           attribution="Dr. John Torous"
           role="Director, Digital Psychiatry Division, Beth Israel Deaconess Medical Center"
         />
@@ -1495,7 +1917,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     slug: 'future-mental-health-technology-whats-coming-what-to-watch',
     title: "The Future of Mental Health Technology: What's Coming and What to Watch For",
     description:
-      'A research-based look at emerging mental health technologies — from passive sensing and digital phenotyping to psychedelic-assisted therapy platforms, brain-computer interfaces, and algorithmic mental health prediction — examining both their transformative promise and the ethical questions they raise.',
+      'A research-based look at emerging mental health technologies --- from passive sensing and digital phenotyping to psychedelic-assisted therapy platforms, brain-computer interfaces, and algorithmic mental health prediction --- examining both their transformative promise and the ethical questions they raise.',
     image: '/images/articles/cat21/cover-064.svg',
     category: CATEGORY_TECHNOLOGY_DIGITAL_LIFE,
     readTime: 17,
@@ -1512,7 +1934,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     summary:
-      'Mental health technology is advancing along multiple fronts simultaneously, and the next decade is likely to bring tools that would have seemed improbable even five years ago. Digital phenotyping uses smartphone sensor data to detect early signs of mental health episodes before the person is consciously aware of them. Brain-computer interfaces are being developed for treatment-resistant depression. Algorithmic systems are being trained to predict suicide risk from electronic health records. Virtual reality is being integrated into psychedelic-assisted therapy protocols. Each of these technologies carries genuine therapeutic potential alongside serious ethical concerns about privacy, consent, equity, and the medicalization of human experience. This article examines the most significant emerging mental health technologies, evaluates their evidence base, and identifies the ethical questions that will shape how — and whether — they should be deployed.',
+      'Mental health technology is advancing along multiple fronts simultaneously, and the next decade is likely to bring tools that would have seemed improbable even five years ago. Digital phenotyping uses smartphone sensor data to detect early signs of mental health episodes before the person is consciously aware of them. Brain-computer interfaces are being developed for treatment-resistant depression. Algorithmic systems are being trained to predict suicide risk from electronic health records. Virtual reality is being integrated into psychedelic-assisted therapy protocols. Each of these technologies carries genuine therapeutic potential alongside serious ethical concerns about privacy, consent, equity, and the medicalization of human experience. This article examines the most significant emerging mental health technologies, evaluates their evidence base, and identifies the ethical questions that will shape how --- and whether --- they should be deployed.',
 
     keyFacts: [
       { text: 'Digital phenotyping studies demonstrate the ability to detect depressive episodes an average of 7-14 days before the person reports symptom changes, using only passive smartphone sensor data', citationIndex: 1 },
@@ -1521,7 +1943,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
     ],
 
     sparkMoment:
-      'The future of mental health technology is not determined by what becomes technically possible. It is determined by the values we embed in these systems — who they serve, who they exclude, what they optimize for, and whether they expand or diminish human agency.',
+      'The future of mental health technology is not determined by what becomes technically possible. It is determined by the values we embed in these systems --- who they serve, who they exclude, what they optimize for, and whether they expand or diminish human agency.',
 
     practicalExercise: {
       title: 'Technology Values Assessment',
@@ -1612,6 +2034,32 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           innovation is the use of within-person baselines rather than population norms, which
           makes the system sensitive to the unique behavioral signatures of each
           individual<Citation id="2" index={2} />.
+        </p>
+        <p className="mb-6">
+          The practical implementation of digital phenotyping is being explored across several
+          clinical contexts. In bipolar disorder management, where early detection of manic
+          or depressive shifts can prevent hospitalization, pilot programs have integrated
+          digital phenotyping data into clinical dashboards that clinicians review during
+          routine appointments. Early results suggest that this approach improves the timeliness
+          of medication adjustments and reduces the frequency of acute
+          episodes<Citation id="1" index={1} />. In schizophrenia care, passive sensing data
+          has been used to detect social withdrawal and circadian disruption that precede
+          psychotic relapses, providing a window for preventive outreach by care teams. These
+          clinical applications demonstrate that digital phenotyping is no longer purely
+          theoretical &mdash; it is being tested in real-world settings with tangible outcomes.
+        </p>
+        <p className="mb-6">
+          However, the gap between research performance and clinical deployment remains
+          significant. Most digital phenotyping studies are conducted with small, motivated
+          samples who agree to have their smartphone data monitored for research purposes. How
+          these systems perform in diverse, real-world populations &mdash; where smartphone
+          usage patterns vary by age, culture, socioeconomic status, and personal preference
+          &mdash; is not yet well understood<Citation id="2" index={2} />. A person who rarely
+          uses their phone will generate a very different data profile than a heavy user, and
+          the algorithms must be robust enough to establish meaningful baselines across this
+          variation. The field is also grappling with how to handle the inevitable false alarms
+          &mdash; alerts that indicate a behavioral shift that turns out to be caused by a
+          vacation, a new job, or a broken phone rather than an emerging mental health episode.
         </p>
 
         <ArticleCallout type="science">
@@ -1756,6 +2204,33 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           of transparency about how flags are generated and the potential for these systems to
           disproportionately impact marginalized populations<Citation id="9" index={9} />.
         </p>
+        <p className="mb-6">
+          The implementation context of algorithmic prediction systems also shapes their impact.
+          In health systems where mental health resources are abundant, a risk flag can trigger
+          proactive outreach, increased appointment frequency, or referral to specialized care
+          &mdash; genuinely helpful interventions. But in resource-constrained systems, which
+          serve the majority of patients, a risk flag may result in nothing more than a note in
+          the chart, or worse, a coercive intervention driven by institutional liability concerns
+          rather than patient welfare<Citation id="7" index={7} />. The value of a prediction
+          system depends entirely on the quality of the response it triggers, and systems
+          deployed in settings that cannot provide adequate follow-up may do more harm than
+          good by creating a false sense of institutional safety while patients themselves
+          receive no meaningful additional support.
+        </p>
+        <p className="mb-6">
+          The question of algorithmic explainability is central to the clinical adoption of
+          these systems. Current machine learning models for suicide risk prediction typically
+          operate as &ldquo;black boxes&rdquo; &mdash; they identify statistical patterns across
+          thousands of variables but cannot explain in clinically meaningful terms why a
+          particular patient was flagged<Citation id="6" index={6} />. A clinician who receives
+          an alert that a patient is at elevated risk but cannot understand the basis for the
+          alert faces a difficult decision: act on an opaque prediction, potentially overriding
+          their own clinical judgment, or dismiss it and accept the liability if the prediction
+          proves correct. Neither option serves the therapeutic relationship well. Efforts to
+          develop explainable AI models for mental health prediction are underway but have not
+          yet achieved the combination of accuracy and transparency needed for responsible
+          clinical deployment.
+        </p>
 
         <ComparisonTable
           headers={['Factor', 'Potential Benefit', 'Potential Harm']}
@@ -1808,6 +2283,59 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           technologies, signaling that these tools are moving from experimental to clinical
           deployment<Citation id="8" index={8} />.
         </p>
+        <p className="mb-6">
+          The integration of VR into existing therapeutic modalities extends beyond
+          psychedelic-assisted therapy. Clinicians are developing immersive environments
+          specifically designed for dialectical behavior therapy skill practice, where patients
+          can rehearse distress tolerance and interpersonal effectiveness techniques in realistic
+          simulated scenarios before applying them in real life. Similarly, cognitive behavioral
+          therapy for insomnia is being adapted for VR delivery, with immersive relaxation
+          environments replacing traditional audio-guided relaxation exercises and showing
+          promising early results in reducing sleep onset latency<Citation id="5" index={5} />.
+          These applications suggest that VR may serve not as a replacement for established
+          therapies but as a delivery mechanism that enhances engagement and facilitates skill
+          transfer from the therapeutic setting to daily life.
+        </p>
+
+        <h2 id="regulation-governance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Regulation and Governance Challenges
+        </h2>
+        <p className="mb-6">
+          The regulatory landscape for emerging mental health technologies is struggling to
+          keep pace with the speed of development. Traditional frameworks for medical device
+          regulation were designed for physical devices with well-defined mechanisms of action
+          &mdash; not for software systems that learn and adapt, collect behavioral data
+          passively, or modulate brain activity in real time<Citation id="8" index={8} />. The
+          FDA has begun developing new regulatory pathways for digital therapeutics and
+          software-as-a-medical-device, but significant gaps remain, particularly around
+          algorithmic transparency, long-term safety monitoring, and the regulation of
+          consumer-facing tools that make health claims without seeking formal approval.
+        </p>
+        <p className="mb-6">
+          International regulatory divergence adds further complexity. The European Union&rsquo;s
+          approach to AI regulation, which emphasizes risk classification and mandatory impact
+          assessments for high-risk AI systems, differs substantially from the more permissive
+          regulatory stance in the United States, where many mental health technologies can enter
+          the market with minimal oversight if they are marketed as wellness tools rather than
+          medical devices<Citation id="7" index={7} />. This divergence creates incentives for
+          regulatory arbitrage, where companies launch products in jurisdictions with less
+          stringent oversight and then expand to regulated markets once established. For patients,
+          the result is an uneven landscape where the safety and effectiveness of available tools
+          depends in part on where they happen to live.
+        </p>
+        <p className="mb-6">
+          The governance of neural data &mdash; information derived from brain-computer
+          interfaces and neuroimaging &mdash; represents a particularly urgent frontier. Several
+          countries and jurisdictions have begun considering &ldquo;neurorights&rdquo; legislation
+          that would establish protections for mental privacy, cognitive liberty, and the
+          integrity of neural data<Citation id="10" index={10} />. These efforts reflect a
+          growing recognition that neural data requires protection beyond what existing data
+          privacy frameworks provide, because unlike behavioral data, neural data can reveal
+          thoughts, emotions, and intentions that the person may not have consciously expressed
+          or even be aware of. The stakes of getting neural data governance right are
+          exceptionally high, and the window for establishing protective frameworks before
+          commercial deployment is narrow.
+        </p>
 
         <h2 id="ethical-framework" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           An Ethical Framework for Evaluating Emerging Mental Health Technologies
@@ -1823,7 +2351,7 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           steps={[
             { title: 'Meaningful informed consent', description: 'Patients must understand not only what a technology does but how it works, what data it collects, who has access to that data, and what the known risks are. For complex technologies like BCIs and algorithmic prediction, this requires ongoing consent processes rather than one-time forms.' },
             { title: 'Data sovereignty and privacy', description: 'Mental health data is among the most sensitive personal information. Emerging technologies must implement robust data protection, give patients meaningful control over their data, and resist pressure to share mental health data with employers, insurers, or law enforcement without explicit patient consent.' },
-            { title: 'Equity by design', description: 'Technologies must be evaluated for differential impact across racial, ethnic, socioeconomic, and gender groups. Equity cannot be an afterthought — it must be built into the design, training data, validation process, and deployment strategy from the beginning.' },
+            { title: 'Equity by design', description: 'Technologies must be evaluated for differential impact across racial, ethnic, socioeconomic, and gender groups. Equity cannot be an afterthought --- it must be built into the design, training data, validation process, and deployment strategy from the beginning.' },
             { title: 'Human oversight and override', description: 'Algorithmic systems should augment rather than replace clinical judgment. Patients and clinicians must retain the ability to override algorithmic recommendations, and systems should be designed to support rather than undermine the therapeutic relationship.' },
             { title: 'Transparency and accountability', description: 'The organizations developing and deploying these technologies must be transparent about their capabilities, limitations, error rates, and potential harms. When technologies cause harm, clear accountability structures must exist.' },
           ]}
@@ -1838,20 +2366,32 @@ export const digitalCultureSocietyArticlesD: Article[] = [
           and that the benefits are distributed equitably rather than concentrated among those
           who can already afford the best care.
         </p>
+        <p className="mb-6">
+          The history of medical technology provides both cautionary tales and reasons for
+          optimism. Technologies like the stethoscope, the EKG, and neuroimaging were all
+          initially met with skepticism and ethical concern, and all eventually became
+          indispensable clinical tools &mdash; but only after decades of refinement, validation,
+          and the development of regulatory frameworks appropriate to their power and
+          risks<Citation id="10" index={10} />. The emerging mental health technologies discussed
+          in this article are at a much earlier stage in that trajectory. The decisions made now
+          about research priorities, regulatory design, data governance, and equity safeguards
+          will determine whether these tools follow a path toward broad therapeutic benefit or
+          one that deepens existing disparities and introduces new forms of harm.
+        </p>
 
         <ArticleCallout type="reflection">
           <p>
             <strong>A question worth sitting with:</strong> If a technology could detect your next
             depressive episode two weeks before it arrives, would you want to know? What if that
             detection required continuous monitoring of your movement, sleep, and social
-            patterns? What if the same system could alert your clinician — or your employer?
+            patterns? What if the same system could alert your clinician --- or your employer?
             The answers are not obvious, and they reveal the values and boundaries that should
             guide how we build the future of mental health care<Citation id="9" index={9} />.
           </p>
         </ArticleCallout>
 
         <QuoteBlock
-          quote="We are building tools of unprecedented power to understand and influence the human mind. The question is not whether we can — it is whether we will do so with the wisdom, humility, and ethical commitment that the stakes demand."
+          quote="We are building tools of unprecedented power to understand and influence the human mind. The question is not whether we can --- it is whether we will do so with the wisdom, humility, and ethical commitment that the stakes demand."
           attribution="Dr. Thomas Insel"
           role="Former Director, National Institute of Mental Health"
         />

@@ -29,7 +29,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `Understanding that caregiving often resurfaces childhood dynamics—old roles, favoritism, rivalries—and that healing family relationships while caring for parents requires addressing both present logistics and past wounds.`,
+    sparkMoment: `Understanding that caregiving often resurfaces childhood dynamics---old roles, favoritism, rivalries---and that healing family relationships while caring for parents requires addressing both present logistics and past wounds.`,
 
     practicalExercise: {
       title: `Family Meeting Structure`,
@@ -63,7 +63,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
         <h2>Why Sibling Conflict Intensifies During Elder Care</h2>
         <p>
-          <Citation index={2} />. This creates resentment when the primary caregiver feels abandoned and non-caregiving siblings feel judged or excluded. Old childhood dynamics resurface: the favored child, the responsible one, the black sheep, the golden child. Parents may have different relationships with each sibling, creating tension about who "really" knows what they would want. Financial issues complicate matters—who pays for care, who has power of attorney, who might inherit more for providing care or less for living far away.
+          <Citation index={2} />. This creates resentment when the primary caregiver feels abandoned and non-caregiving siblings feel judged or excluded. Old childhood dynamics resurface: the favored child, the responsible one, the black sheep, the golden child. Parents may have different relationships with each sibling, creating tension about who "really" knows what they would want. Financial issues complicate matters---who pays for care, who has power of attorney, who might inherit more for providing care or less for living far away.
         </p>
 
         <ArticleCallout
@@ -108,12 +108,12 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The recognition that financial security and emotional well-being aren't the same thing—limited resources require careful management, but they don't determine your worth or your capacity for meaningful life.`,
+    sparkMoment: `The recognition that financial security and emotional well-being aren't the same thing---limited resources require careful management, but they don't determine your worth or your capacity for meaningful life.`,
 
     practicalExercise: {
       title: `Financial Reality Check`,
       steps: [
-        { title: `Calculate actual numbers`, description: `List monthly income from all sources and essential monthly expenses—know the real gap` },
+        { title: `Calculate actual numbers`, description: `List monthly income from all sources and essential monthly expenses---know the real gap` },
         { title: `Identify available resources`, description: `Research programs you qualify for (SNAP, LIHEAP, Medicare assistance, senior services)` },
         { title: `Separate anxiety from facts`, description: `Write catastrophic fears, then list concrete steps to prevent or address each scenario` },
         { title: `Make one change`, description: `Choose one expense reduction or income increase strategy to implement this month` },
@@ -142,7 +142,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
         <h2>Sources of Late-Life Financial Strain</h2>
         <p>
-          <Citation index={2} />: insufficient retirement savings from low wages, job losses, or lack of employer pensions; unexpected major expenses (medical bills, home repairs, helping adult children); living longer than anticipated and outlasting savings; inflation eroding fixed incomes; healthcare costs not covered by Medicare (dental, vision, hearing, long-term care); and inability to work due to health limitations. For many, Social Security provides the only income, averaging around $1,900 monthly—barely above poverty level in most areas.
+          <Citation index={2} />: insufficient retirement savings from low wages, job losses, or lack of employer pensions; unexpected major expenses (medical bills, home repairs, helping adult children); living longer than anticipated and outlasting savings; inflation eroding fixed incomes; healthcare costs not covered by Medicare (dental, vision, hearing, long-term care); and inability to work due to health limitations. For many, Social Security provides the only income, averaging around $1,900 monthly---barely above poverty level in most areas.
         </p>
 
         <ArticleCallout
@@ -177,7 +177,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Divorce', 'Gray Divorce', 'Relationships', 'Late-Life Transitions'],
 
-    summary: `Gray divorce—separation after age 50, often after decades of marriage—has doubled in recent decades. Unlike divorce in younger adulthood, late-life divorce occurs after identities are deeply intertwined, when financial resources may be limited, and when social networks are shared. Ending a 30-, 40-, or 50-year marriage involves not just legal dissolution but profound identity reconstruction, financial vulnerability (especially for women), social isolation, complex family dynamics with adult children, and grieving both the relationship and the imagined future together. Yet research also shows that many people who divorce in later life report increased happiness, authenticity, and freedom after difficult marriages. Successful navigation requires addressing practical challenges while rebuilding sense of self and purpose.`,
+    summary: `Gray divorce---separation after age 50, often after decades of marriage---has doubled in recent decades. Unlike divorce in younger adulthood, late-life divorce occurs after identities are deeply intertwined, when financial resources may be limited, and when social networks are shared. Ending a 30-, 40-, or 50-year marriage involves not just legal dissolution but profound identity reconstruction, financial vulnerability (especially for women), social isolation, complex family dynamics with adult children, and grieving both the relationship and the imagined future together. Yet research also shows that many people who divorce in later life report increased happiness, authenticity, and freedom after difficult marriages. Successful navigation requires addressing practical challenges while rebuilding sense of self and purpose.`,
 
     keyFacts: [
       { text: `Divorce rates for adults 50+ have doubled since 1990 while rates for younger adults have declined, making gray divorce increasingly common.`, citationIndex: 1 },
@@ -187,12 +187,12 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The realization that choosing to end an unhappy marriage in later life isn't giving up or failing—it's claiming the possibility of living authentically and contentedly in whatever years remain.`,
+    sparkMoment: `The realization that choosing to end an unhappy marriage in later life isn't giving up or failing---it's claiming the possibility of living authentically and contentedly in whatever years remain.`,
 
     practicalExercise: {
       title: `Post-Divorce Identity Work`,
       steps: [
-        { title: `Acknowledge the loss`, description: `Write about what you're grieving—not just the person but the shared history, future plans, couple identity` },
+        { title: `Acknowledge the loss`, description: `Write about what you're grieving---not just the person but the shared history, future plans, couple identity` },
         { title: `Rediscover "I" preferences`, description: `List activities, foods, routines you genuinely prefer without considering a partner's preferences` },
         { title: `Build independent social life`, description: `Join one new group or activity where you know no one and can create fresh identity` },
         { title: `Address practical concerns`, description: `Work with financial planner and attorney to secure your economic future` },
@@ -210,7 +210,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     content: (
       <>
         <p>
-          After 38 years of marriage, Susan filed for divorce at 64. Her friends were shocked—they seemed like a stable couple. But <Citation index={1} />, she explained. <Citation index={1} /> Two years later, living alone in a small apartment, she reported feeling more herself than she had in decades. But the transition had been brutal.
+          After 38 years of marriage, Susan filed for divorce at 64. Her friends were shocked---they seemed like a stable couple. But <Citation index={1} />, she explained. <Citation index={1} /> Two years later, living alone in a small apartment, she reported feeling more herself than she had in decades. But the transition had been brutal.
         </p>
 
         <StatCard
@@ -221,7 +221,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
         <h2>Why Gray Divorce Is Different</h2>
         <p>
-          <Citation index={2} />. Identities are deeply fused—you may not remember who you were before the marriage or how to function independently. Financial resources are often limited with less time to rebuild savings and retirement accounts. Social networks are shared, creating awkward divisions and potential isolation. Adult children may struggle to accept their parents' divorce regardless of age. There's grief not just for the relationship but for the story you told about your life—we made it through everything together—and the future you imagined growing old together.
+          <Citation index={2} />. Identities are deeply fused---you may not remember who you were before the marriage or how to function independently. Financial resources are often limited with less time to rebuild savings and retirement accounts. Social networks are shared, creating awkward divisions and potential isolation. Adult children may struggle to accept their parents' divorce regardless of age. There's grief not just for the relationship but for the story you told about your life---we made it through everything together---and the future you imagined growing old together.
         </p>
 
         <ArticleCallout
@@ -256,7 +256,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Life Review', 'Reminiscence', 'Therapy', 'Meaning'],
 
-    summary: `Life review—the process of systematically reflecting on one's life experiences, relationships, accomplishments, and regrets—becomes particularly salient in later adulthood as people contemplate mortality and seek to make meaning of their lives. Unlike casual reminiscing, structured life review therapy guides older adults through evaluating their life story, resolving unfinished business, integrating difficult experiences, and finding coherence and acceptance. Research shows that life review interventions significantly reduce depression, increase life satisfaction, improve self-esteem, and help older adults achieve what Erik Erikson called "ego integrity"—the sense that one's life has had meaning and value. This therapeutic approach is particularly valuable for those struggling with regrets, unresolved conflicts, or despair about aging.`,
+    summary: `Life review---the process of systematically reflecting on one's life experiences, relationships, accomplishments, and regrets---becomes particularly salient in later adulthood as people contemplate mortality and seek to make meaning of their lives. Unlike casual reminiscing, structured life review therapy guides older adults through evaluating their life story, resolving unfinished business, integrating difficult experiences, and finding coherence and acceptance. Research shows that life review interventions significantly reduce depression, increase life satisfaction, improve self-esteem, and help older adults achieve what Erik Erikson called "ego integrity"---the sense that one's life has had meaning and value. This therapeutic approach is particularly valuable for those struggling with regrets, unresolved conflicts, or despair about aging.`,
 
     keyFacts: [
       { text: `Structured life review therapy reduces depression symptoms by 30-40% in older adults across multiple randomized controlled trials.`, citationIndex: 1 },
@@ -266,13 +266,13 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The understanding that reviewing your life isn't about judging whether you succeeded or failed—it's about finding the thread of meaning that connects your experiences into a coherent story you can accept.`,
+    sparkMoment: `The understanding that reviewing your life isn't about judging whether you succeeded or failed---it's about finding the thread of meaning that connects your experiences into a coherent story you can accept.`,
 
     practicalExercise: {
       title: `Guided Life Review Practice`,
       steps: [
-        { title: `Start with childhood`, description: `Write about early memories, family relationships, formative experiences—what shaped who you became?` },
-        { title: `Move through life stages`, description: `Cover adolescence, young adulthood, career, relationships, parenting—one era at a time over several weeks` },
+        { title: `Start with childhood`, description: `Write about early memories, family relationships, formative experiences---what shaped who you became?` },
+        { title: `Move through life stages`, description: `Cover adolescence, young adulthood, career, relationships, parenting---one era at a time over several weeks` },
         { title: `Identify themes and turning points`, description: `Look for patterns, values, decisions that shaped your path, moments that changed direction` },
         { title: `Address regrets constructively`, description: `For each major regret, explore what you learned, how it shaped you, whether anything can still be done` },
       ],
@@ -311,7 +311,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
         <h2>Therapeutic Benefits</h2>
         <p>
-          <Citation index={3} />: reduced depression and anxiety as unresolved issues are addressed, increased life satisfaction and self-acceptance, enhanced sense of coherence and meaning, improved self-esteem through recognizing accomplishments, resolution of regrets through understanding context and learning, preparation for death with less anxiety, and strengthened relationships when review includes reconciliation. The process helps people achieve what Erikson called "ego integrity"—the sense that one's life has been meaningful and worthwhile despite imperfections.
+          <Citation index={3} />: reduced depression and anxiety as unresolved issues are addressed, increased life satisfaction and self-acceptance, enhanced sense of coherence and meaning, improved self-esteem through recognizing accomplishments, resolution of regrets through understanding context and learning, preparation for death with less anxiety, and strengthened relationships when review includes reconciliation. The process helps people achieve what Erikson called "ego integrity"---the sense that one's life has been meaningful and worthwhile despite imperfections.
         </p>
 
         <h2>Conducting Your Own Life Review</h2>
@@ -335,7 +335,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Death Preparation', 'Mortality', 'End-of-Life', 'Acceptance'],
 
-    summary: `While contemporary Western culture often avoids discussing death, psychological preparation for mortality is an important developmental task of later life. This doesn't mean morbid preoccupation but rather thoughtful consideration of practical, emotional, relational, and spiritual aspects of dying. Research shows that older adults who actively prepare for death—through advance care planning, resolving relationships, addressing regrets, exploring spiritual beliefs, and discussing wishes with loved ones—experience less death anxiety, greater peace, better end-of-life care aligned with values, and easier bereavement for surviving family. Preparing for death paradoxically often enhances quality of remaining life by clarifying priorities, motivating meaningful action, and reducing fear through direct engagement rather than avoidance.`,
+    summary: `While contemporary Western culture often avoids discussing death, psychological preparation for mortality is an important developmental task of later life. This doesn't mean morbid preoccupation but rather thoughtful consideration of practical, emotional, relational, and spiritual aspects of dying. Research shows that older adults who actively prepare for death---through advance care planning, resolving relationships, addressing regrets, exploring spiritual beliefs, and discussing wishes with loved ones---experience less death anxiety, greater peace, better end-of-life care aligned with values, and easier bereavement for surviving family. Preparing for death paradoxically often enhances quality of remaining life by clarifying priorities, motivating meaningful action, and reducing fear through direct engagement rather than avoidance.`,
 
     keyFacts: [
       { text: `Only 27% of U.S. adults have completed advance directives despite 80%+ saying these documents are important.`, citationIndex: 1 },
@@ -345,14 +345,14 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
     videoStatus: 'planned' as const,
 
-    sparkMoment: `The paradox that facing death directly—rather than avoiding it—often brings the greatest peace and most intentional living in whatever time remains.`,
+    sparkMoment: `The paradox that facing death directly---rather than avoiding it---often brings the greatest peace and most intentional living in whatever time remains.`,
 
     practicalExercise: {
       title: `Mortality Preparation Practice`,
       steps: [
-        { title: `Complete practical documents`, description: `Fill out advance directive, will, power of attorney—ensure wishes are documented legally` },
+        { title: `Complete practical documents`, description: `Fill out advance directive, will, power of attorney---ensure wishes are documented legally` },
         { title: `Have the conversation`, description: `Discuss end-of-life wishes with family members and healthcare proxy in specific detail` },
-        { title: `Address unfinished business`, description: `List important relationship work, apologies, or expressions of love still needed—complete what you can` },
+        { title: `Address unfinished business`, description: `List important relationship work, apologies, or expressions of love still needed---complete what you can` },
         { title: `Explore personal beliefs`, description: `Reflect or journal on your beliefs about death, afterlife, legacy, and what gives life meaning` },
       ],
       toolLink: '/crisis',
@@ -390,7 +390,7 @@ export const griefLossTransitionsArticlesC: Article[] = [
 
         <h2>Why We Avoid Death Preparation</h2>
         <p>
-          <Citation index={3} />: fear that thinking about death will hasten it or bring bad luck (magical thinking), discomfort with confronting mortality directly, not wanting to burden family with difficult conversations, procrastination (I'll do it later when I'm older), denial (I'm healthy, death is far away), and lack of knowledge about what preparation involves. These barriers are understandable but ultimately create more problems—families must guess wishes during crises, important relationships remain unresolved, fear of death grows through avoidance rather than shrinking through engagement.
+          <Citation index={3} />: fear that thinking about death will hasten it or bring bad luck (magical thinking), discomfort with confronting mortality directly, not wanting to burden family with difficult conversations, procrastination (I'll do it later when I'm older), denial (I'm healthy, death is far away), and lack of knowledge about what preparation involves. These barriers are understandable but ultimately create more problems---families must guess wishes during crises, important relationships remain unresolved, fear of death grows through avoidance rather than shrinking through engagement.
         </p>
 
         <h2>Benefits of Facing Death Directly</h2>

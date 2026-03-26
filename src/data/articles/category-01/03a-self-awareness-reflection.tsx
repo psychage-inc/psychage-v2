@@ -23,7 +23,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     description: 'Explore what self-awareness really means, why research calls it a foundational life skill, and how to start developing internal and external self-awareness today.',
     image: "/images/articles/cat01/cover-021.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -101,7 +101,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
             Self-awareness sounds simple. Know yourself. But research reveals that while 95% of people believe they are self-aware, only about 10-15% actually meet the criteria. This gap between what we think we know about ourselves and what is actually true shapes every relationship, decision, and emotional experience we have.
           </p>
           <p className="mb-6">
-            Organizational psychologist Tasha Eurich spent nearly five years researching self-awareness. Her work identified two distinct types — internal self-awareness (understanding your own values, emotions, and patterns) and external self-awareness (understanding how others perceive you) <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2017" tier={1} />. Importantly, these two types are independent. Being high in one does not guarantee being high in the other <Citation id="2" index={2} source="Harvard Business Review" year="2018" tier={3} />.
+            Organizational psychologist Tasha Eurich spent nearly five years researching self-awareness. Her work identified two distinct types --- internal self-awareness (understanding your own values, emotions, and patterns) and external self-awareness (understanding how others perceive you) <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2017" tier={1} />. Importantly, these two types are independent. Being high in one does not guarantee being high in the other <Citation id="2" index={2} source="Harvard Business Review" year="2018" tier={3} />.
           </p>
         </div>
 
@@ -109,7 +109,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           Two Types of Self-Awareness
         </h2>
         <p className="mb-6">
-          Most people think of self-awareness as introspection — looking inward. But that is only half the picture. True self-awareness requires both an internal and external lens <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2017" tier={1} />.
+          Most people think of self-awareness as introspection --- looking inward. But that is only half the picture. True self-awareness requires both an internal and external lens <Citation id="1" index={1} source="Organizational Behavior and Human Decision Processes" year="2017" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -140,14 +140,14 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           Research links self-awareness to better decision-making, stronger relationships, higher job satisfaction, more effective leadership, and greater overall well-being <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2004" tier={1} />. People with high self-awareness are better at regulating their emotions because they catch unhelpful patterns earlier.
         </p>
         <p className="mb-6">
-          In leadership, the gap between how leaders see themselves and how their teams see them predicts team performance and engagement <Citation id="4" index={4} source="Journal of Organizational Behavior" year="2019" tier={1} />. The same pattern applies to personal relationships — the more accurately you understand your own behavior and its impact, the healthier your connections become.
+          In leadership, the gap between how leaders see themselves and how their teams see them predicts team performance and engagement <Citation id="4" index={4} source="Journal of Organizational Behavior" year="2019" tier={1} />. The same pattern applies to personal relationships --- the more accurately you understand your own behavior and its impact, the healthier your connections become.
         </p>
 
         <h2 id="building-internal" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Strategies to Build Self-Awareness
         </h2>
         <p className="mb-6">
-          Self-awareness is not a personality trait you are born with — it is a skill that develops with practice <Citation id="7" index={7} source="Academy of Management Annals" year="2020" tier={1} />. Here are strategies supported by research:
+          Self-awareness is not a personality trait you are born with --- it is a skill that develops with practice <Citation id="7" index={7} source="Academy of Management Annals" year="2020" tier={1} />. Here are strategies supported by research:
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li><strong>Ask "what" instead of "why."</strong> Instead of "Why am I anxious?", ask "What situations trigger my anxiety?", "Why" questions often lead to rumination. "What" questions lead to actionable insight.</li>
@@ -175,7 +175,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Self-awareness is not about being perfect or having all the answers. It is about being honest with yourself about who you are, how you show up, and where you want to grow. Most people overestimate their self-awareness — the willingness to question yourself is the first step toward actually having it.</p>
+          <p>Self-awareness is not about being perfect or having all the answers. It is about being honest with yourself about who you are, how you show up, and where you want to grow. Most people overestimate their self-awareness --- the willingness to question yourself is the first step toward actually having it.</p>
         </ArticleCallout>
       </>
     ),
@@ -189,7 +189,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     description: "Learn evidence-based journaling techniques that build genuine self-awareness. Includes 20 prompts designed to reveal emotional patterns, values, and blind spots.",
     image: "/images/articles/cat01/cover-022.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -275,7 +275,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           Why Journaling Works for Self-Awareness
         </h2>
         <p className="mb-6">
-          Writing forces you to translate vague internal experiences into concrete language. This translation process activates the same brain regions involved in affect labeling — the prefrontal cortex engages, and the emotional brain calms <Citation id="1" index={1} source="Perspectives on Psychological Science" year="2018" tier={1} />.
+          Writing forces you to translate vague internal experiences into concrete language. This translation process activates the same brain regions involved in affect labeling --- the prefrontal cortex engages, and the emotional brain calms <Citation id="1" index={1} source="Perspectives on Psychological Science" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
           But there is a deeper benefit. When you read back what you have written over days and weeks, patterns emerge that are invisible in the moment. You might discover that your anxiety spikes every Sunday evening. You might notice that you feel most confident after creative work. You might realize that a particular relationship consistently drains you. This is the difference between experiencing life and understanding it <Citation id="6" index={6} source="Journal of Personality" year="2016" tier={1} />.
@@ -373,10 +373,10 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           Start with 10 minutes, three times a week. Choose a prompt from the list above or simply write about what you are feeling right now. The key is consistency, not perfection <Citation id="4" index={4} source="JMIR Mental Health" year="2018" tier={1} />.
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Choose your medium</strong> — handwriting activates different brain networks than typing; experiment with both.</li>
-          <li><strong>Set a timer</strong> — write continuously for 10-15 minutes without editing or censoring.</li>
-          <li><strong>Review weekly</strong> — read back your entries each Sunday and note recurring themes.</li>
-          <li><strong>No rules on quality</strong> — spelling, grammar, and coherence do not matter. This is for you.</li>
+          <li><strong>Choose your medium</strong> --- handwriting activates different brain networks than typing; experiment with both.</li>
+          <li><strong>Set a timer</strong> --- write continuously for 10-15 minutes without editing or censoring.</li>
+          <li><strong>Review weekly</strong> --- read back your entries each Sunday and note recurring themes.</li>
+          <li><strong>No rules on quality</strong> --- spelling, grammar, and coherence do not matter. This is for you.</li>
         </ol>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -387,7 +387,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Journaling is not about recording events. It is about understanding yourself. The prompts that make you uncomfortable are often the ones that lead to the most growth. Write for insight, not for a record — and watch your self-awareness deepen week by week.</p>
+          <p>Journaling is not about recording events. It is about understanding yourself. The prompts that make you uncomfortable are often the ones that lead to the most growth. Write for insight, not for a record --- and watch your self-awareness deepen week by week.</p>
         </ArticleCallout>
       </>
     ),
@@ -401,7 +401,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     description: "Learn how your body communicates emotions through physical sensations. Understand interoception and practical techniques to read your body's emotional signals.",
     image: '/images/articles/cat01/cover-023.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -476,7 +476,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Before you know you are angry, your jaw clenches. Before you consciously feel anxious, your chest tightens. Before sadness fully registers, your shoulders slump. Your body is talking to you all the time — most of us have just forgotten how to listen.
+            Before you know you are angry, your jaw clenches. Before you consciously feel anxious, your chest tightens. Before sadness fully registers, your shoulders slump. Your body is talking to you all the time --- most of us have just forgotten how to listen.
           </p>
           <p className="mb-6">
             Body awareness, or interoception, is the ability to sense and interpret signals from inside your body <Citation id="1" index={1} source="Handbook of Emotions" year="2016" tier={1} />. A landmark study from Finland mapped where different emotions are felt in the body across 700 participants and five cultures. The results were remarkably consistent: anger lights up the upper body and arms, sadness dims the limbs, anxiety concentrates in the chest, and happiness radiates throughout <Citation id="2" index={2} source="Proceedings of the National Academy of Sciences" year="2014" tier={1} />.
@@ -487,7 +487,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           Understanding Interoception
         </h2>
         <p className="mb-6">
-          Interoception is your internal sensing system. It processes information about your heart rate, breathing, muscle tension, gut feelings, temperature, and other body signals. This system is the foundation of emotional experience — theories of emotion suggest that physical sensations are not just side effects of emotions, they are part of how emotions are constructed <Citation id="1" index={1} source="Handbook of Emotions" year="2016" tier={1} />.
+          Interoception is your internal sensing system. It processes information about your heart rate, breathing, muscle tension, gut feelings, temperature, and other body signals. This system is the foundation of emotional experience --- theories of emotion suggest that physical sensations are not just side effects of emotions, they are part of how emotions are constructed <Citation id="1" index={1} source="Handbook of Emotions" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
           People with higher interoceptive awareness tend to have better emotion regulation, greater empathy, and clearer decision-making <Citation id="8" index={8} source="Biological Psychology" year="2021" tier={1} />. Conversely, people with poor body awareness (a trait related to alexithymia, or difficulty identifying emotions) are at higher risk for anxiety, depression, and psychosomatic complaints <Citation id="7" index={7} source="Comprehensive Psychiatry" year="2013" tier={1} />.
@@ -497,12 +497,12 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           type="radar"
           title="Where Emotions Live in the Body"
           data={[
-            { label: 'Anger — chest, arms, head', value: 85 },
-            { label: 'Anxiety — chest, stomach', value: 78 },
-            { label: 'Sadness — chest, throat', value: 65 },
-            { label: 'Fear — chest, stomach, legs', value: 72 },
-            { label: 'Happiness — whole body', value: 90 },
-            { label: 'Shame — face, chest', value: 60 },
+            { label: 'Anger --- chest, arms, head', value: 85 },
+            { label: 'Anxiety --- chest, stomach', value: 78 },
+            { label: 'Sadness --- chest, throat', value: 65 },
+            { label: 'Fear --- chest, stomach, legs', value: 72 },
+            { label: 'Happiness --- whole body', value: 90 },
+            { label: 'Shame --- face, chest', value: 60 },
           ]}
           source="Nummenmaa et al., 2014, PNAS"
         />
@@ -536,7 +536,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
               title: 'Body Scan Meditation',
               content: (
                 <div>
-                  <p className="mb-4">Lie down or sit comfortably. Starting at the top of your head, slowly move your attention down through each body part. Notice any sensations — tension, warmth, tingling, numbness, pain — without trying to change them. Spend 10-20 minutes. Research shows regular body scans significantly improve interoceptive awareness within weeks.</p>
+                  <p className="mb-4">Lie down or sit comfortably. Starting at the top of your head, slowly move your attention down through each body part. Notice any sensations --- tension, warmth, tingling, numbness, pain --- without trying to change them. Spend 10-20 minutes. Research shows regular body scans significantly improve interoceptive awareness within weeks.</p>
                 </div>
               ),
             },
@@ -554,7 +554,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
               title: 'Mindful Movement',
               content: (
                 <div>
-                  <p className="mb-4">During any physical activity — walking, stretching, cooking — deliberately focus on the sensations in your body. Notice how your weight shifts, how your muscles engage and release, how your breathing changes. This builds the habit of internal listening.</p>
+                  <p className="mb-4">During any physical activity --- walking, stretching, cooking --- deliberately focus on the sensations in your body. Notice how your weight shifts, how your muscles engage and release, how your breathing changes. This builds the habit of internal listening.</p>
                 </div>
               ),
             },
@@ -565,10 +565,10 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Begin with the three-point check-in. Set three alarms on your phone — morning, midday, and evening — and spend 30 seconds scanning your stomach, chest, and shoulders. Write down what you notice <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />. After one week, you will likely notice that you are already more attuned to physical signals without the alarm.
+          Begin with the three-point check-in. Set three alarms on your phone --- morning, midday, and evening --- and spend 30 seconds scanning your stomach, chest, and shoulders. Write down what you notice <Citation id="5" index={5} source="Mindfulness" year="2019" tier={1} />. After one week, you will likely notice that you are already more attuned to physical signals without the alarm.
         </p>
         <p className="mb-6">
-          As psychiatrist Bessel van der Kolk writes, "The body keeps the score" — it stores and expresses what the conscious mind may overlook <Citation id="4" index={4} source="Penguin Books" year="2014" tier={5} />. Learning to read your body is learning to read your emotional truth.
+          As psychiatrist Bessel van der Kolk writes, "The body keeps the score" --- it stores and expresses what the conscious mind may overlook <Citation id="4" index={4} source="Penguin Books" year="2014" tier={5} />. Learning to read your body is learning to read your emotional truth.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -579,7 +579,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Your body is your first emotional alert system. Tension, heat, heaviness, and tightness are not random — they are data. Learning to read these signals gives you earlier access to your emotions, which means more time to respond wisely rather than react impulsively.</p>
+          <p>Your body is your first emotional alert system. Tension, heat, heaviness, and tightness are not random --- they are data. Learning to read these signals gives you earlier access to your emotions, which means more time to respond wisely rather than react impulsively.</p>
         </ArticleCallout>
       </>
     ),
@@ -593,7 +593,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     description: 'Understand the thought-feeling connection at the heart of CBT. Learn to identify automatic thoughts that shape your emotional experience and how to interrupt unhelpful patterns.',
     image: "/images/articles/cat01/cover-024.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -668,10 +668,10 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You get a text from your friend saying "We need to talk." Instantly, your stomach drops. You feel anxious, maybe even panicked. But notice something: the text itself is neutral. It is your interpretation — "Something is wrong. They are upset with me. I must have done something bad" — that creates the emotional response.
+            You get a text from your friend saying "We need to talk." Instantly, your stomach drops. You feel anxious, maybe even panicked. But notice something: the text itself is neutral. It is your interpretation --- "Something is wrong. They are upset with me. I must have done something bad" --- that creates the emotional response.
           </p>
           <p className="mb-6">
-            This insight is the foundation of cognitive behavioral therapy (CBT), the most widely studied and practiced form of psychotherapy. Aaron Beck discovered that between every event and every emotion, there is a thought — often automatic, often outside awareness, and often not entirely accurate <Citation id="1" index={1} source="Guilford Press" year="1979" tier={5} />. Research confirms that these automatic thoughts are powerful predictors of anxiety and depression <Citation id="2" index={2} source="Cognitive Therapy and Research" year="2016" tier={1} />.
+            This insight is the foundation of cognitive behavioral therapy (CBT), the most widely studied and practiced form of psychotherapy. Aaron Beck discovered that between every event and every emotion, there is a thought --- often automatic, often outside awareness, and often not entirely accurate <Citation id="1" index={1} source="Guilford Press" year="1979" tier={5} />. Research confirms that these automatic thoughts are powerful predictors of anxiety and depression <Citation id="2" index={2} source="Cognitive Therapy and Research" year="2016" tier={1} />.
           </p>
         </div>
 
@@ -746,7 +746,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
             },
             {
               title: 'Generate Alternative Interpretations',
-              description: <p>For every negative automatic thought, write two or three other possible explanations. They do not need to be positive — just realistic. This breaks the assumption that your first interpretation is the only one.</p>,
+              description: <p>For every negative automatic thought, write two or three other possible explanations. They do not need to be positive --- just realistic. This breaks the assumption that your first interpretation is the only one.</p>,
             },
           ]}
         />
@@ -758,7 +758,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           Use a simple thought record: when you notice a strong emotion, write down (1) the situation, (2) the automatic thought, (3) the emotion and its intensity (1-10), and (4) an alternative interpretation. Do this once daily for two weeks <Citation id="7" index={7} source="Behavioural and Cognitive Psychotherapy" year="2018" tier={1} />.
         </p>
         <p className="mb-6">
-          You will likely discover that certain thought patterns repeat across situations. This metacognitive awareness — being aware of your own thinking patterns — is one of the strongest predictors of emotional resilience <Citation id="6" index={6} source="Journal of Consulting and Clinical Psychology" year="2010" tier={1} />.
+          You will likely discover that certain thought patterns repeat across situations. This metacognitive awareness --- being aware of your own thinking patterns --- is one of the strongest predictors of emotional resilience <Citation id="6" index={6} source="Journal of Consulting and Clinical Psychology" year="2010" tier={1} />.
         </p>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -769,7 +769,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">
-          <p>Your feelings are real, but the thoughts driving them may not be accurate. Learning to catch automatic thoughts and question them is one of the most powerful skills in psychology. It does not change reality — it changes how clearly you see it.</p>
+          <p>Your feelings are real, but the thoughts driving them may not be accurate. Learning to catch automatic thoughts and question them is one of the most powerful skills in psychology. It does not change reality --- it changes how clearly you see it.</p>
         </ArticleCallout>
       </>
     ),
@@ -783,7 +783,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
     description: 'Explore the concept of the Observer Self from ACT and mindfulness traditions. Learn how to step back from thoughts and feelings to gain perspective and reduce emotional suffering.',
     image: "/images/articles/cat01/cover-025.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -858,7 +858,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            There is a difference between being caught in a storm and watching a storm from a window. The storm is the same — but your experience of it changes completely based on where you stand. The Observer Self is the "you" that watches from the window. It is the part of you that can notice your thoughts and feelings without being swept away by them.
+            There is a difference between being caught in a storm and watching a storm from a window. The storm is the same --- but your experience of it changes completely based on where you stand. The Observer Self is the "you" that watches from the window. It is the part of you that can notice your thoughts and feelings without being swept away by them.
           </p>
           <p className="mb-6">
             In acceptance and commitment therapy (ACT), the Observer Self (also called "self-as-context") is considered one of the six core processes that lead to psychological flexibility <Citation id="1" index={1} source="Behaviour Research and Therapy" year="2006" tier={1} />. Research shows that people who can access this observing perspective experience less emotional distress, greater resilience, and more aligned decision-making <Citation id="2" index={2} source="Journal of Clinical Psychology" year="2019" tier={1} />.
@@ -880,7 +880,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          This concept appears across many traditions. In mindfulness, it is called "decentering" — the ability to observe thoughts as mental events rather than as reality <Citation id="5" index={5} source="Clinical Psychology Review" year="2011" tier={1} />. In metacognitive therapy, it is "detached mindfulness" — watching your thinking from an outside perspective <Citation id="4" index={4} source="Journal of Consulting and Clinical Psychology" year="2018" tier={1} />. In self-distancing research, it is the shift from a first-person to a third-person perspective on your own experience <Citation id="8" index={8} source="Advances in Experimental Social Psychology" year="2017" tier={1} />.
+          This concept appears across many traditions. In mindfulness, it is called "decentering" --- the ability to observe thoughts as mental events rather than as reality <Citation id="5" index={5} source="Clinical Psychology Review" year="2011" tier={1} />. In metacognitive therapy, it is "detached mindfulness" --- watching your thinking from an outside perspective <Citation id="4" index={4} source="Journal of Consulting and Clinical Psychology" year="2018" tier={1} />. In self-distancing research, it is the shift from a first-person to a third-person perspective on your own experience <Citation id="8" index={8} source="Advances in Experimental Social Psychology" year="2017" tier={1} />.
         </p>
 
         <h2 id="fused-vs-observing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -948,7 +948,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           How to Get Started
         </h2>
         <p className="mb-6">
-          Start with the language shift. For one week, every time you notice a strong emotion, preface it with "I am noticing..." or "My mind is telling me..." You do not need to believe the new phrasing — just practice it. Over time, the observer perspective becomes more accessible, and emotions feel less like immovable states and more like passing weather <Citation id="6" index={6} source="Journal of Contextual Behavioral Science" year="2020" tier={1} />.
+          Start with the language shift. For one week, every time you notice a strong emotion, preface it with "I am noticing..." or "My mind is telling me..." You do not need to believe the new phrasing --- just practice it. Over time, the observer perspective becomes more accessible, and emotions feel less like immovable states and more like passing weather <Citation id="6" index={6} source="Journal of Contextual Behavioral Science" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
           Jon Kabat-Zinn, the founder of mindfulness-based stress reduction, describes this practice as learning to be present to your experience without judgment <Citation id="7" index={7} source="Hachette Books" year="2005" tier={5} />. The more you practice, the wider the space becomes between stimulus and response.
@@ -958,7 +958,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          If you find it extremely difficult to step back from your thoughts — if every thought feels absolutely true and impossible to observe from a distance — a therapist trained in ACT or mindfulness-based cognitive therapy (MBCT) can guide you through the process with structured exercises <Citation id="3" index={3} source="Cognitive Therapy and Research" year="2015" tier={1} />.
+          If you find it extremely difficult to step back from your thoughts --- if every thought feels absolutely true and impossible to observe from a distance --- a therapist trained in ACT or mindfulness-based cognitive therapy (MBCT) can guide you through the process with structured exercises <Citation id="3" index={3} source="Cognitive Therapy and Research" year="2015" tier={1} />.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="Key Takeaway">

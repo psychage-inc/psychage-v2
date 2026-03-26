@@ -1,4 +1,4 @@
- 
+
 import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_TECHNOLOGY_DIGITAL_LIFE, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
@@ -14,7 +14,7 @@ import {
 } from '../../../components/article/blocks';
 
 // ============================================================================
-// Subcategory 5a — Healthy Digital Life | Articles TEC-039 to TEC-041
+// Subcategory 5a --- Healthy Digital Life | Articles TEC-039 to TEC-041
 // ============================================================================
 
 export const healthyDigitalLifeArticlesA: Article[] = [
@@ -42,7 +42,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
       'Attention',
     ],
     summary:
-      'The average adult in a high-income country spends between six and eight hours per day interacting with screens outside of work obligations. For most people, this is not a deliberate choice but the accumulated result of thousands of small design decisions made by technology companies optimizing for attention capture. Research increasingly distinguishes between passive, mindless technology use — which correlates with poorer mental health outcomes — and active, intentional use, which can support social connection, learning, and creative expression. This article reviews the evidence on what makes technology use harmful versus helpful and provides a structured framework for auditing your own digital habits, identifying friction points, and redesigning your relationship with devices around your actual values and goals rather than default settings.',
+      'The average adult in a high-income country spends between six and eight hours per day interacting with screens outside of work obligations. For most people, this is not a deliberate choice but the accumulated result of thousands of small design decisions made by technology companies optimizing for attention capture. Research increasingly distinguishes between passive, mindless technology use --- which correlates with poorer mental health outcomes --- and active, intentional use, which can support social connection, learning, and creative expression. This article reviews the evidence on what makes technology use harmful versus helpful and provides a structured framework for auditing your own digital habits, identifying friction points, and redesigning your relationship with devices around your actual values and goals rather than default settings.',
     keyFacts: [
       {
         text: 'Adults in the U.S. spend an average of 7 hours and 4 minutes per day on screens, with roughly 3.5 hours on smartphones alone.',
@@ -70,7 +70,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         {
           title: 'Identify Your Values (Day 3)',
           description:
-            'Write down three things you want more of in your life — for example, deeper conversations, creative output, physical activity, or rest. Then honestly assess: does your current technology use move you toward or away from these values?',
+            'Write down three things you want more of in your life --- for example, deeper conversations, creative output, physical activity, or rest. Then honestly assess: does your current technology use move you toward or away from these values?',
         },
         {
           title: 'Redesign One Friction Point (Day 4-5)',
@@ -182,7 +182,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             You did not decide to check your phone 96 times today. You did not choose to
             spend three and a half hours scrolling. Nobody sat down one morning and
-            consciously selected the digital life most people now lead. It accumulated —
+            consciously selected the digital life most people now lead. It accumulated ---
             one notification at a time, one default setting left unchanged, one "just five
             more minutes" that became an hour.
           </p>
@@ -190,7 +190,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             The average adult in the United States now spends over seven hours per day
             interacting with screens outside of work, with roughly half that time on
             smartphones <Citation id="1" index={1} />. These numbers are not inherently
-            alarming — time spent is a crude measure of something far more complex. What
+            alarming --- time spent is a crude measure of something far more complex. What
             matters is not how many hours you spend with technology but whether those hours
             reflect your intentions or someone else's design choices.
           </p>
@@ -199,8 +199,30 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             shaped their relationship with technology. They inherited defaults, accepted
             notifications, downloaded apps that friends recommended, and gradually drifted
             into patterns that serve the attention economy more than their own well-being.
-            The research reviewed here offers a different approach — not digital abstinence,
+            The research reviewed here offers a different approach --- not digital abstinence,
             but digital intentionality.
+          </p>
+          <p className="mb-6">
+            Consider the analogy of food. A person who eats whatever is placed in front of
+            them, whenever it appears, without considering nutritional content or hunger
+            signals, will almost certainly develop health problems over time. That is not
+            because food is inherently harmful --- it is because the absence of deliberate
+            choice creates vulnerability to whatever the environment offers. Technology
+            works the same way. The device in your pocket is not the problem. The absence of
+            intentionality in how you use it is the problem. When you eat mindfully, food
+            nourishes. When you use technology mindfully, it supports connection, learning,
+            creativity, and genuine leisure.
+          </p>
+          <p className="mb-6">
+            The stakes of this conversation extend beyond individual well-being. Research
+            increasingly links habitual, unintentional technology use to disruptions in sleep
+            architecture, sustained attention, emotional regulation, and the quality of
+            face-to-face relationships <Citation id="3" index={3} />. These are not dramatic
+            overnight collapses but slow erosions --- the kind of gradual shifts that are
+            difficult to notice in the moment but clearly visible when you compare your
+            current habits to those of five or ten years ago. The good news is that the same
+            gradual process that created these patterns can be redirected through conscious
+            effort and environmental redesign.
           </p>
         </div>
 
@@ -249,13 +271,37 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           than the type of engagement, with passive consumption driving the strongest
           negative associations <Citation id="3" index={3} />.
         </p>
+        <p className="mb-6">
+          The passive-active distinction helps explain why broad screen time limits often
+          fail as a well-being strategy. Cutting an hour of screen time that was spent
+          video-calling a close friend produces a very different mental health outcome than
+          cutting an hour of aimless social media scrolling. Lumping all screen time together
+          obscures the critical differences between digital activities that nourish social
+          bonds and those that replace them with parasocial observation. When people learn
+          to categorize their own technology use along this axis, they gain a practical
+          framework for making changes that actually improve how they feel, rather than
+          chasing an arbitrary daily time target that may not address the real issue.
+        </p>
+        <p className="mb-6">
+          The psychological mechanism behind the passive use effect is well-studied. When
+          people scroll through curated highlight reels of other people's lives, they engage
+          in upward social comparison --- measuring their own ordinary moments against
+          carefully selected extraordinary moments from others. This comparison happens
+          largely outside of conscious awareness, which makes it especially corrosive. You
+          do not think "I am now comparing my life to this person's vacation photo." You
+          simply feel, without quite knowing why, a little less satisfied with your own
+          situation. Repeated hundreds of times per day, these micro-comparisons accumulate
+          into a measurable drag on self-esteem and life satisfaction. Active use, by
+          contrast, typically involves genuine reciprocal interaction, which reinforces
+          social bonds rather than eroding self-perception.
+        </p>
 
         <ArticleCallout type="key-takeaway" title="The Core Insight">
           <p>
             The question is not "How much time am I spending on screens?" but "Am I
             choosing what I do on screens, or am I being chosen?" Passive scrolling is
             the default mode that technology is designed to promote. Active, intentional
-            use requires deliberate effort — but it transforms the same device from a
+            use requires deliberate effort --- but it transforms the same device from a
             well-being drain into a genuinely useful tool.
           </p>
         </ArticleCallout>
@@ -274,11 +320,11 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           and hold your attention for as long as possible <Citation id="6" index={6} />.
         </p>
         <p className="mb-6">
-          This is not a conspiracy — it is a straightforward economic structure. But it
+          This is not a conspiracy --- it is a straightforward economic structure. But it
           creates a fundamental misalignment between the interests of technology companies
           (maximize time on platform) and the interests of users (accomplish goals, connect
-          with people, then move on). Every feature you encounter — infinite scroll,
-          autoplay, push notifications, variable-ratio reward schedules in "like" counts —
+          with people, then move on). Every feature you encounter --- infinite scroll,
+          autoplay, push notifications, variable-ratio reward schedules in "like" counts ---
           exists because it was tested and found to increase engagement metrics.
         </p>
 
@@ -295,7 +341,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           Research on smartphone checking behavior reveals that most interactions with
           phones are brief, reflexive, and habitual rather than purposeful <Citation id="4" index={4} />.
           People reach for their devices during any moment of boredom, uncertainty, or
-          discomfort — not because they have something specific to do, but because the
+          discomfort --- not because they have something specific to do, but because the
           habit loop (cue-routine-reward) has become deeply ingrained.
         </p>
         <p className="mb-6">
@@ -306,9 +352,33 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           the course of a day, these attention fragments accumulate into a significant
           cognitive tax.
         </p>
+        <p className="mb-6">
+          The design techniques that drive this pattern are deeply rooted in behavioral
+          psychology. Variable-ratio reinforcement schedules --- the same pattern that makes
+          slot machines compelling --- underlie the pull-to-refresh gesture, notification
+          badges, and the unpredictable delivery of social feedback such as likes and
+          comments. Your brain releases small bursts of dopamine not when the reward arrives
+          but in the anticipation of it, which means the act of checking itself becomes
+          pleasurable regardless of whether anything new is there. Understanding this
+          mechanism is not about demonizing technology companies --- it is about recognizing
+          that your impulse to check is being shaped by design choices that do not have your
+          best interests in mind.
+        </p>
+        <p className="mb-6">
+          The cumulative effect of these interruptions on deep work and creative thinking is
+          particularly concerning for knowledge workers and students. When your attention is
+          fragmented into three-minute intervals separated by phone checks, you lose access
+          to the sustained focus states that are necessary for complex problem-solving,
+          creative insight, and the integration of new learning into long-term memory.
+          Researchers describe this as "attention residue" --- even after you put the phone
+          down, part of your cognitive bandwidth remains allocated to whatever you just saw,
+          reducing the quality of the task you return to. Over weeks and months, this
+          chronic fragmentation can produce a subjective sense of being perpetually busy
+          without actually accomplishing meaningful work.
+        </p>
 
         <QuoteBlock
-          quote="The cost of an interruption is not just the time spent on the interruption — it is the time it takes to get back to the same depth of focus you had before."
+          quote="The cost of an interruption is not just the time spent on the interruption --- it is the time it takes to get back to the same depth of focus you had before."
           attribution="Dr. Gloria Mark"
           role="Chancellor's Professor of Informatics, UC Irvine"
           source="Attention Span, 2023"
@@ -321,12 +391,36 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           Building Intentionality: The Friction-Based Approach
         </h2>
         <p className="mb-6">
-          Willpower-based approaches to changing technology habits — "I will just use my
-          phone less" — fail for the same reason that willpower-based diets fail. The
+          Willpower-based approaches to changing technology habits --- "I will just use my
+          phone less" --- fail for the same reason that willpower-based diets fail. The
           environment is engineered to make the undesired behavior effortless and the
           desired behavior difficult. The most effective interventions work by reversing
           this equation: adding friction to unwanted habits and removing friction from
           desired ones <Citation id="7" index={7} />.
+        </p>
+        <p className="mb-6">
+          The friction-based approach draws on decades of research in behavioral economics
+          and choice architecture. The core insight is that small increases in the effort
+          required to perform an action have disproportionately large effects on whether
+          people actually perform it. Requiring a password entry before opening a social
+          media app does not prevent access --- anyone can type a password. But that five
+          seconds of additional effort is enough to break the automatic habit loop and
+          create a decision point where conscious choice can intervene. The same principle
+          works in reverse: reducing friction for desired behaviors --- placing a book on your
+          nightstand, keeping a journal next to your morning coffee, setting a meditation
+          app as the first thing on your home screen --- makes healthier alternatives the path
+          of least resistance.
+        </p>
+        <p className="mb-6">
+          What makes this approach particularly effective is that it does not rely on
+          sustained motivation. Motivation fluctuates throughout the day and across weeks,
+          but environmental design remains constant. A phone that charges in the kitchen
+          every night continues to be in the kitchen regardless of how tired or stressed
+          you are. A social media app buried in a folder on the third page of your phone
+          remains difficult to reach whether you had a great day or a terrible one. By
+          encoding your intentions into your environment, you create a structure that
+          supports your goals even when your willpower is depleted --- which, according to
+          the research, is most of the time.
         </p>
 
         <ProgressSteps
@@ -365,8 +459,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   Research on habit change shows that environmental cues are stronger than
                   internal motivation. Designate specific contexts where devices are not
                   present: meals, the first 30 minutes after waking, the bedroom, or
-                  face-to-face conversations. Physical separation from your phone — even
-                  placing it in another room — measurably improves cognitive performance
+                  face-to-face conversations. Physical separation from your phone --- even
+                  placing it in another room --- measurably improves cognitive performance
                   and social connection quality.
                 </p>
               ),
@@ -418,7 +512,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   </p>
                   <p>
                     Programs that taught participants to distinguish between active and
-                    passive use — and then gradually shift the ratio — showed moderate
+                    passive use --- and then gradually shift the ratio --- showed moderate
                     effect sizes for both life satisfaction and reduced depressive symptoms
                     over 4-8 week follow-up periods.
                   </p>
@@ -432,7 +526,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     Interventions that focused solely on reducing total screen time without
                     changing the <em>type</em> of use showed minimal effects. Complete
-                    "digital detoxes" — periods of total abstinence from technology —
+                    "digital detoxes" --- periods of total abstinence from technology ---
                     produced short-term mood improvements that disappeared within days of
                     resuming normal use, suggesting that they function more as a temporary
                     break than a lasting change.
@@ -442,7 +536,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                     ineffective and sometimes counterproductive, increasing anxiety about
                     technology use without providing actionable alternatives. Rigid
                     time-limit rules without flexibility also showed poor long-term
-                    adherence — people abandoned them within weeks.
+                    adherence --- people abandoned them within weeks.
                   </p>
                 </div>
               ),
@@ -452,7 +546,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               content: (
                 <div className="space-y-4">
                   <p>
-                    App-based interventions — using technology to manage technology — showed
+                    App-based interventions --- using technology to manage technology --- showed
                     mixed results. Screen time tracking apps increased awareness but did not
                     consistently change behavior unless paired with goal-setting and
                     reflection. Blocking apps worked well for some people but generated
@@ -460,7 +554,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                     adolescents and young adults.
                   </p>
                   <p>
-                    Social media "diet" interventions — reducing use to 30 minutes per day —
+                    Social media "diet" interventions --- reducing use to 30 minutes per day ---
                     produced benefits in some trials but not others. The inconsistency may
                     reflect the passive/active distinction: reducing time spent on active,
                     connection-oriented use may be counterproductive, while reducing passive
@@ -471,6 +565,33 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             },
           ]}
         />
+
+        <p className="mb-6">
+          One of the most encouraging findings from the intervention literature is that
+          changes do not need to be dramatic to be meaningful. Studies that asked participants
+          to make modest, targeted adjustments --- turning off non-essential notifications,
+          moving social media apps off the home screen, or establishing a single phone-free
+          hour per day --- produced well-being improvements comparable to those achieved by
+          much more intensive programs. This suggests that the act of taking deliberate
+          control, however small the initial step, is itself a psychologically meaningful
+          shift. The person who consciously decides to silence three app notifications has
+          begun practicing a fundamentally different relationship with technology than the
+          person who passively accepts every default, even if the behavioral change seems
+          minor from the outside.
+        </p>
+        <p className="mb-6">
+          Longitudinal data also suggests that the benefits of successful digital well-being
+          interventions are self-reinforcing over time. When people experience the concrete
+          improvements that come from intentional technology use --- better sleep, deeper
+          conversations, increased productivity during focused work --- they become
+          intrinsically motivated to maintain and extend their changes. The initial
+          intervention serves as a proof of concept that their digital environment is
+          malleable rather than fixed, and this realization often catalyzes further
+          experimentation. Many participants in long-term studies report that the most
+          significant change was not any single behavioral adjustment but the shift in
+          perspective from feeling controlled by their devices to feeling capable of
+          shaping their digital experience.
+        </p>
 
         <h2
           id="practical-framework"
@@ -496,7 +617,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   days. Use built-in screen time tools to see exactly how much time you
                   spend, on what, and when. Record how you feel before and after using
                   specific apps. The goal is honest data, not self-criticism. Many people
-                  are surprised by the gap between their perceived and actual usage — this
+                  are surprised by the gap between their perceived and actual usage --- this
                   awareness itself is the beginning of change.
                 </p>
               ),
@@ -508,8 +629,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   There is no universal standard for healthy technology use. A graphic
                   designer will spend more time on screens than a carpenter, and that is
                   fine. The question is whether your digital time aligns with your
-                  priorities. Write down three to five things you value most — relationships,
-                  physical health, professional growth, creative expression, rest — and
+                  priorities. Write down three to five things you value most --- relationships,
+                  physical health, professional growth, creative expression, rest --- and
                   evaluate each major digital habit against this list. Keep what serves your
                   values. Reduce what does not.
                 </p>
@@ -534,7 +655,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                 <p>
                   Each week, spend 10 minutes reviewing your screen time data and your
                   mood. Ask: "Did I use technology in ways that moved me toward my values
-                  this week?" This is not about perfection — it is about maintaining
+                  this week?" This is not about perfection --- it is about maintaining
                   awareness. People who regularly self-monitor their digital habits maintain
                   changes at significantly higher rates than those who set rules and then
                   stop paying attention <Citation id="8" index={8} />.
@@ -548,7 +669,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   Your relationship with technology will need to evolve as your life
                   circumstances change. A new job, a move, a relationship change, or a
                   health challenge will all shift what you need from your devices. Build in
-                  periodic full audits — quarterly is a reasonable frequency — where you
+                  periodic full audits --- quarterly is a reasonable frequency --- where you
                   reassess whether your current setup still serves you. What worked six
                   months ago may no longer fit.
                 </p>
@@ -560,14 +681,54 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         <ArticleCallout type="tip" title="The 10-Second Rule">
           <p>
             Before picking up your phone, pause for 10 seconds and ask yourself: "What am
-            I picking this up to do?" If you have a clear answer — send a specific message,
-            check a specific piece of information — proceed. If the answer is "I do not
+            I picking this up to do?" If you have a clear answer --- send a specific message,
+            check a specific piece of information --- proceed. If the answer is "I do not
             know" or "I am bored," put it back down. This brief pause interrupts the
             automatic habit loop and gives your prefrontal cortex a chance to override the
             reflexive reach. Over time, this simple practice can reduce mindless phone
             pickups by 30-40%.
           </p>
         </ArticleCallout>
+
+        <h2
+          id="the-role-of-identity"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          The Role of Identity in Digital Habit Change
+        </h2>
+        <p className="mb-6">
+          Research on behavior change increasingly emphasizes that lasting shifts happen not
+          when people change what they do but when they change how they see themselves. A
+          person who thinks of themselves as "someone who is trying to use their phone less"
+          is in a fundamentally different psychological position than someone who thinks of
+          themselves as "someone who uses technology intentionally." The first identity
+          frames the relationship with technology as a constant struggle against temptation.
+          The second frames it as an expression of personal values. Studies on identity-based
+          habit change show that when people adopt a new self-concept --- even tentatively ---
+          their behavior aligns with that self-concept more automatically, reducing the need
+          for effortful self-control over time <Citation id="7" index={7} />.
+        </p>
+        <p className="mb-6">
+          This identity shift is worth cultivating consciously. Instead of saying "I cannot
+          check my phone at dinner," try "I do not check my phone at dinner." The
+          difference sounds trivial, but the psychological weight is significant. "Cannot"
+          implies external restriction and deprivation. "Do not" implies a choice that
+          reflects who you are. Research on self-talk and behavioral commitment consistently
+          shows that "do not" framing produces higher adherence rates than "cannot" framing
+          across a wide range of behavioral domains, from dietary change to exercise habits
+          to digital self-regulation.
+        </p>
+        <p className="mb-6">
+          Building this identity does not require perfection. It requires noticing the
+          moments when your behavior aligns with the person you want to be and reinforcing
+          them. Each time you put your phone away during a conversation, each time you
+          notice an urge and choose not to act on it, each time you complete a focused work
+          session without interruption --- these are not just behavioral successes. They are
+          evidence for a new story about who you are in relation to technology. Over weeks
+          and months, that evidence accumulates into a genuine shift in self-perception, and
+          the new habits that flow from that self-perception feel less like discipline and
+          more like natural expression.
+        </p>
 
         <h2
           id="when-technology-serves-wellbeing"
@@ -597,16 +758,87 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           The goal of intentional technology use is not minimalism for its own sake. It is
           ensuring that the considerable time you spend with digital tools actually
           contributes to the life you want to live. Some people will find that their ideal
-          digital life includes more technology than they currently use — just used
+          digital life includes more technology than they currently use --- just used
           differently. Others will find that significant reduction is the path forward. The
           framework works in both directions because it is anchored to personal values
           rather than arbitrary rules <Citation id="6" index={6} />.
         </p>
+        <p className="mb-6">
+          It is worth pausing to acknowledge the genuine benefits that technology provides
+          for people managing mental health challenges specifically. Online therapy platforms
+          have dramatically expanded access to care for people in rural areas, those with
+          mobility limitations, and individuals who face stigma in their communities. Mental
+          health tracking apps help people identify patterns in their mood and sleep that
+          they might otherwise miss. Peer support forums provide validation and community
+          for people with conditions that are poorly understood or socially isolating. These
+          are not trivial benefits. A healthy relationship with technology preserves and
+          protects these uses while reducing the patterns that undermine well-being. The
+          distinction is always the same: are you using the tool with purpose, or is the
+          tool using you by default?
+        </p>
+        <p className="mb-6">
+          Protecting beneficial technology use also means being thoughtful about how you
+          structure your digital environment. If you use a meditation app every morning,
+          place it on your home screen where you will see it first. If video calls with
+          family members are important to you, schedule them in your calendar rather than
+          hoping they happen spontaneously. If an online course is helping you develop a
+          skill you care about, set aside dedicated time for it and disable notifications
+          during that period. Intentional technology use is not just about reducing harmful
+          patterns --- it is equally about amplifying the patterns that serve you.
+        </p>
+
+        <h2
+          id="navigating-setbacks"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Navigating Setbacks and Maintaining Progress
+        </h2>
+        <p className="mb-6">
+          Any honest guide to changing technology habits must acknowledge that setbacks are
+          a normal and expected part of the process. You will have days when you fall back
+          into old patterns --- scrolling for an hour without noticing, checking email
+          compulsively during a stressful period, or abandoning a boundary that you had
+          maintained for weeks. These moments do not represent failure. They represent the
+          natural variability of human behavior, especially when the behavior in question
+          is constantly reinforced by an environment designed to promote it.
+        </p>
+        <p className="mb-6">
+          Research on relapse prevention in behavioral change programs identifies several
+          key strategies for recovering from setbacks. The most important is
+          self-compassion --- responding to a lapse with understanding rather than harsh
+          self-criticism. Studies consistently show that people who respond to setbacks
+          with curiosity and kindness are more likely to resume their efforts quickly,
+          while those who respond with shame and self-blame are more likely to abandon
+          their goals entirely <Citation id="8" index={8} />. When you find yourself in
+          a scrolling spiral, the most productive response is not "I have no discipline"
+          but "That is interesting --- what triggered that, and what can I learn from it?"
+        </p>
+        <p className="mb-6">
+          It also helps to expect that your digital habits will fluctuate with life
+          circumstances. Periods of high stress, transitions like job changes or
+          relocations, illness, and emotional upheaval will all tend to increase habitual
+          device use because the brain gravitates toward familiar comfort behaviors during
+          times of uncertainty. Anticipating this pattern allows you to plan for it rather
+          than being blindsided by it. Some people find it helpful to designate "maintenance
+          mode" periods during which the goal is simply to hold steady rather than make
+          further improvements --- preserving the habits that are already established without
+          adding new challenges until the stressful period passes.
+        </p>
+        <p className="mb-6">
+          Finally, remember that progress in digital well-being is not linear and is not
+          easily captured by a single metric. Your screen time may increase during a week
+          when you have long, meaningful video conversations with distant friends. Your
+          phone pickups may stay the same even as the quality of your digital interactions
+          improves dramatically. The numbers matter less than the experience. The ultimate
+          measure of a healthy relationship with technology is not a screen time report ---
+          it is whether you feel that your digital life is serving you rather than
+          distracting you from the life you want to live.
+        </p>
 
         <ArticleCallout type="reflection" title="A Question Worth Sitting With">
           <p>
-            If you could redesign your digital life from scratch — choosing every app,
-            every notification, every default setting based on what you actually value —
+            If you could redesign your digital life from scratch --- choosing every app,
+            every notification, every default setting based on what you actually value ---
             how different would it look from what you have now? The gap between your
             answer and your current reality is the space where intentional change
             lives.
@@ -640,7 +872,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
       'Boundary Setting',
     ],
     summary:
-      'The digital detox movement has popularized the idea that the solution to technology-related stress is to disconnect entirely. While temporary breaks can provide relief, research shows that complete abstinence is neither sustainable nor necessary for most people. What works better — and lasts longer — is the deliberate creation of boundaries: clear rules about when, where, and how technology enters your life. This article reviews the psychology of boundary-setting, explains why digital boundaries are uniquely difficult to maintain, and provides a structured approach to creating limits that protect your attention, sleep, relationships, and mental health without requiring you to abandon the tools that modern life depends on.',
+      'The digital detox movement has popularized the idea that the solution to technology-related stress is to disconnect entirely. While temporary breaks can provide relief, research shows that complete abstinence is neither sustainable nor necessary for most people. What works better --- and lasts longer --- is the deliberate creation of boundaries: clear rules about when, where, and how technology enters your life. This article reviews the psychology of boundary-setting, explains why digital boundaries are uniquely difficult to maintain, and provides a structured approach to creating limits that protect your attention, sleep, relationships, and mental health without requiring you to abandon the tools that modern life depends on.',
     keyFacts: [
       {
         text: 'Workers who check email outside of business hours report 28% higher burnout rates than those who maintain clear digital work-life boundaries.',
@@ -678,7 +910,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         {
           title: 'Track Adherence for Two Weeks',
           description:
-            'Each evening, briefly note whether you maintained each boundary that day with a simple yes or no. After two weeks, review your success rate. If a boundary was maintained less than 70% of the time, it may need to be adjusted — either made more specific, made slightly less strict, or supported with additional environmental changes.',
+            'Each evening, briefly note whether you maintained each boundary that day with a simple yes or no. After two weeks, review your success rate. If a boundary was maintained less than 70% of the time, it may need to be adjusted --- either made more specific, made slightly less strict, or supported with additional environmental changes.',
         },
       ],
       toolLink: '/tools/mood-journal',
@@ -783,7 +1015,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             after work. Just stay off social media before bed. But if it were actually
             simple, you would have done it already. The reason digital limits are so
             difficult to maintain has less to do with personal discipline and more to do
-            with the psychology of boundaries — and the ways that digital technology has
+            with the psychology of boundaries --- and the ways that digital technology has
             uniquely eroded them.
           </p>
           <p className="mb-6">
@@ -796,12 +1028,35 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             into every quiet moment.
           </p>
           <p className="mb-6">
-            This article is about rebuilding those separations — not by rejecting
+            This article is about rebuilding those separations --- not by rejecting
             technology entirely, but by creating deliberate structures that let you control
             when and how digital tools enter different parts of your life. The research
-            reviewed here suggests that this middle path — boundaries rather than
-            abstinence — produces more sustainable results than either unrestricted access
+            reviewed here suggests that this middle path --- boundaries rather than
+            abstinence --- produces more sustainable results than either unrestricted access
             or periodic digital detoxes <Citation id="1" index={1} />.
+          </p>
+          <p className="mb-6">
+            The challenge is real and worth naming explicitly. Prior generations could rely
+            on physical separation to maintain psychological boundaries between work and
+            home, between public and private, between active engagement and rest. A factory
+            worker who left the building at five o'clock left the work behind them. A parent
+            who closed the front door was fully present with their family. These boundaries
+            were not the product of exceptional discipline --- they were built into the
+            physical structure of daily life. Technology has removed this structural support
+            while leaving the psychological need for boundaries fully intact. The result is
+            that maintaining healthy separations now requires conscious effort that previous
+            generations never needed to exert, and most people have not been taught the
+            skills to do so effectively.
+          </p>
+          <p className="mb-6">
+            Understanding this context is important because it reframes the difficulty of
+            digital boundary-setting as a structural problem rather than a personal failing.
+            If you struggle to stop checking work email at night, it is not because you lack
+            willpower. It is because you are attempting to maintain a psychological boundary
+            that has no physical support in your environment, against a technology designed
+            to dissolve it. The strategies in this article work by restoring that structural
+            support --- creating physical, temporal, and social scaffolding that makes
+            boundaries easier to maintain even when motivation is low.
           </p>
         </div>
 
@@ -849,7 +1104,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                     Some research identifies a rebound effect after digital detoxes, where
                     people actually increase their technology use in the days following
                     the detox period. This pattern mirrors what addiction researchers call
-                    "abstinence violation" — the all-or-nothing thinking where a single
+                    "abstinence violation" --- the all-or-nothing thinking where a single
                     return to the old behavior leads to complete abandonment of the goal.
                   </p>
                   <p>
@@ -882,6 +1137,31 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             },
           ]}
         />
+
+        <p className="mb-6">
+          There is an additional nuance that the detox model misses entirely: not all
+          technology use carries the same psychological weight, and removing all of it
+          simultaneously can actually create distress rather than relieve it. For someone
+          who relies on daily text messages with a close friend for emotional support,
+          cutting off that connection for a week may increase loneliness rather than
+          decrease it. For a parent co-parenting across two households, disconnecting from
+          messaging means disconnecting from their child's daily life. The blanket
+          "disconnect from everything" approach treats all digital interactions as equally
+          harmful, which contradicts the research showing that active, connection-oriented
+          use supports well-being. A more sophisticated approach selectively reduces the
+          interactions that drain well-being while preserving those that enhance it.
+        </p>
+        <p className="mb-6">
+          Perhaps most importantly, the detox model frames the relationship with technology
+          as adversarial --- something to escape from rather than something to shape. This
+          framing is counterproductive because it positions technology as an enemy rather
+          than a tool. People who view their devices as threats tend to cycle between
+          periods of anxious avoidance and periods of uncontrolled use, never settling into
+          the stable, moderate middle ground where most well-being benefits are found. The
+          boundary model, by contrast, frames the relationship as one of management and
+          intentionality --- you are not fighting technology, you are deciding how it fits
+          into the life you want to live.
+        </p>
 
         <h2
           id="psychology-of-boundaries"
@@ -916,8 +1196,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     Understanding your own preference is the starting point. If you are a
                     segmenter, you will need firmer, more explicit digital boundaries. If
-                    you are an integrator, softer boundaries — flexible guidelines rather
-                    than rigid rules — may work better.
+                    you are an integrator, softer boundaries --- flexible guidelines rather
+                    than rigid rules --- may work better.
                   </p>
                 </div>
               ),
@@ -928,7 +1208,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                 <p>
                   Research finds that digital boundaries are often asymmetrically
                   permeable: work intrudes into personal life far more easily than personal
-                  life intrudes into work. This is partly due to power dynamics — employees
+                  life intrudes into work. This is partly due to power dynamics --- employees
                   feel pressure to respond to managers quickly but do not feel the same
                   urgency about personal messages during work hours. A meta-analysis of 31
                   studies found that workers who check email outside business hours report
@@ -942,10 +1222,10 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               title: 'Boundary Turbulence',
               content: (
                 <p>
-                  Boundaries are not violated only by your own actions — other people
+                  Boundaries are not violated only by your own actions --- other people
                   cross them too. A colleague who sends a "quick question" at 10 PM, a
                   friend who expects instant replies, a family group chat that generates
-                  50 notifications during a meeting — all of these represent boundary
+                  50 notifications during a meeting --- all of these represent boundary
                   turbulence. Effective digital boundary management requires communicating
                   your limits to others, not just setting them privately.
                 </p>
@@ -953,6 +1233,31 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             },
           ]}
         />
+
+        <p className="mb-6">
+          One additional dimension of boundary psychology that is particularly relevant to
+          digital technology is the concept of "boundary strength" --- the degree to which a
+          boundary can withstand pressure without collapsing. Physical boundaries tend to be
+          inherently strong: a locked office door keeps work interruptions out regardless of
+          how urgent the interruption feels to the person on the other side. Digital
+          boundaries, by contrast, are psychologically maintained and therefore vulnerable
+          to emotional pressure. When a notification appears on your lock screen suggesting
+          that something urgent requires your attention, the psychological pull to respond
+          can override even a well-established boundary. This is why the most effective
+          digital boundaries combine psychological intention with physical separation ---
+          removing the device from the environment removes the temptation to override your
+          own rules.
+        </p>
+        <p className="mb-6">
+          Research also highlights the importance of what psychologists call "boundary
+          clarity" --- the degree to which a boundary is specific and unambiguous. Vague
+          boundaries like "I will try to use my phone less in the evening" are almost
+          certain to fail because they leave too much room for negotiation with yourself
+          in the moment. Clear boundaries like "My phone goes into the drawer at 8 PM and
+          does not come out until 7 AM" succeed because there is no gray area to exploit.
+          Every moment of ambiguity is an opportunity for the habitual brain to override the
+          intentional brain, and clear boundaries eliminate these opportunities.
+        </p>
 
         <StatCard
           stats={[
@@ -993,8 +1298,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                     onset.
                   </p>
                   <p>
-                    <strong>Boundary:</strong> Establish a specific time — ideally 60 to 90
-                    minutes before your target bedtime — after which screens are not used.
+                    <strong>Boundary:</strong> Establish a specific time --- ideally 60 to 90
+                    minutes before your target bedtime --- after which screens are not used.
                     Charge your phone outside the bedroom. Use a physical alarm clock. If
                     this feels extreme, start with 30 minutes and extend gradually.
                   </p>
@@ -1008,8 +1313,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     The boundary between work and personal life has eroded more than any
                     other domain, particularly since remote and hybrid work became common.
-                    Research on the "right to disconnect" — legislation in several European
-                    countries that protects workers from after-hours digital contact —
+                    Research on the "right to disconnect" --- legislation in several European
+                    countries that protects workers from after-hours digital contact ---
                     demonstrates that formal boundaries produce meaningful improvements in
                     well-being and do not reduce productivity{' '}
                     <Citation id="10" index={10} />.
@@ -1030,14 +1335,14 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     Experimental research demonstrates that the mere visible presence of a
                     smartphone on a table during a conversation reduces the depth and quality
-                    of that conversation — even if no one touches the phone{' '}
+                    of that conversation --- even if no one touches the phone{' '}
                     <Citation id="6" index={6} />. The device signals divided attention and
                     reduces the willingness of both parties to discuss personal or meaningful
                     topics.
                   </p>
                   <p>
-                    <strong>Boundary:</strong> During face-to-face interactions that matter —
-                    meals, conversations with your partner, time with children — put your
+                    <strong>Boundary:</strong> During face-to-face interactions that matter ---
+                    meals, conversations with your partner, time with children --- put your
                     phone out of sight. Not face-down on the table. Out of the room, in a
                     bag, or in a drawer. The physical absence changes the social dynamic.
                   </p>
@@ -1059,7 +1364,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     <strong>Boundary:</strong> Audit every app's notification permissions.
                     Disable all notifications except direct messages from people you know.
-                    Batch-check everything else — news, social media, email — at times you
+                    Batch-check everything else --- news, social media, email --- at times you
                     choose. You lose nothing by reading a news alert 30 minutes later than
                     it arrived.
                   </p>
@@ -1073,8 +1378,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     How you spend the first 30 minutes of your day sets the tone for
                     everything that follows. Reaching for your phone immediately upon waking
-                    floods your brain with external demands — unread messages, news
-                    headlines, social media updates — before you have had a chance to
+                    floods your brain with external demands --- unread messages, news
+                    headlines, social media updates --- before you have had a chance to
                     establish your own priorities and intentions for the day.
                   </p>
                   <p>
@@ -1088,6 +1393,28 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             },
           ]}
         />
+
+        <p className="mb-6">
+          These five domains are listed in rough order of impact, based on the available
+          evidence. Sleep protection and work-life separation tend to produce the largest
+          measurable improvements in well-being, partly because their effects cascade into
+          other areas of life. Better sleep improves emotional regulation, concentration,
+          and physical health. Clearer work-life separation reduces chronic stress, which
+          in turn supports better sleep, more present relationships, and greater life
+          satisfaction. Starting with these two domains and then progressively addressing
+          the others is a reasonable approach for most people.
+        </p>
+        <p className="mb-6">
+          It is also worth recognizing that these five domains interact with each other in
+          reinforcing ways. Protecting your morning routine from phone intrusion is much
+          easier when the phone already charges outside the bedroom for sleep protection.
+          Maintaining social presence during meals is simpler when you have already reduced
+          notifications to only essential human messages. Each boundary you establish makes
+          the next one easier to maintain, creating a positive cascade where small initial
+          changes build momentum for larger ones. This interconnection is why the incremental
+          approach --- starting with one or two boundaries and expanding over time --- tends to
+          be more successful than attempting to overhaul all five domains simultaneously.
+        </p>
 
         <h2
           id="making-boundaries-stick"
@@ -1139,10 +1466,34 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           were three times more likely to follow through compared to those who tried to
           make decisions in the moment <Citation id="7" index={7} />.
         </p>
+        <p className="mb-6">
+          The timing of boundary-setting decisions also matters. Research on decision fatigue
+          shows that self-regulatory capacity diminishes throughout the day as you make more
+          choices and exert more cognitive effort. This means that digital boundaries are
+          hardest to maintain in the evening --- precisely when many of the most important
+          boundaries (sleep protection, work disconnection) need to be active. Setting up
+          your boundaries during a moment of calm and clarity --- perhaps on a quiet weekend
+          morning --- and then encoding them into your environment and devices means that the
+          boundaries operate on autopilot during the vulnerable evening hours. A phone that
+          automatically enters Do Not Disturb mode at 9 PM does not require any willpower
+          to maintain at 9 PM because the decision was made at a different time entirely.
+        </p>
+        <p className="mb-6">
+          Another underappreciated strategy for maintaining boundaries is what researchers
+          call "bright lines" --- rules that are binary and completely unambiguous. "I do not
+          bring my phone to the dinner table" is a bright line. "I try to use my phone less
+          during meals" is not. The power of bright lines lies in their simplicity: there
+          is nothing to negotiate, nothing to rationalize, no judgment call to make in the
+          moment. You either followed the rule or you did not. Studies on health behaviors
+          show that people who set bright-line rules are significantly more successful at
+          maintaining them over time than people who set flexible guidelines, because each
+          exception to a flexible guideline weakens it further, while a bright line remains
+          intact as long as it is upheld.
+        </p>
 
         <ArticleCallout type="how-to" title="The If-Then Approach">
           <p>
-            Implementation intentions — "if-then" plans — are one of the most
+            Implementation intentions --- "if-then" plans --- are one of the most
             well-validated behavior change tools in psychology{' '}
             <Citation id="8" index={8} />. Apply them to your digital boundaries:
           </p>
@@ -1184,10 +1535,33 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           approach combines clear communication with consistency{' '}
           <Citation id="2" index={2} />. When you set a boundary, explain the reason
           behind it ("I have found that checking email at night makes it hard for me to
-          sleep"), offer alternatives ("For anything truly urgent, call me — I will always
+          sleep"), offer alternatives ("For anything truly urgent, call me --- I will always
           answer a phone call"), and then maintain the boundary consistently. Most social
           resistance fades within two to three weeks when people see that the boundary is
           firm but not hostile.
+        </p>
+        <p className="mb-6">
+          It helps to anticipate specific resistance scenarios and prepare responses in
+          advance. A manager who expects immediate email responses will require a different
+          conversation than a friend who wants constant availability on messaging platforms.
+          For workplace boundaries, framing the change in terms of productivity can be
+          effective: "I have found that I produce better work when I disconnect in the
+          evening and come back refreshed in the morning." For personal relationships,
+          framing the change in terms of presence is often more resonant: "When we are
+          together, I want to actually be here --- not half here and half on my phone." In
+          both cases, the key is communicating that the boundary is not about the other
+          person --- it is about managing your own well-being in a way that ultimately benefits
+          the relationship.
+        </p>
+        <p className="mb-6">
+          There are also situations where digital boundary-setting reveals deeper relational
+          dynamics that are worth paying attention to. If a partner becomes angry or
+          controlling when you put your phone away, that response may reflect attachment
+          anxiety or controlling tendencies that extend beyond digital communication. If a
+          workplace consistently punishes employees for not being available around the clock,
+          the problem is organizational culture, not individual boundary-setting. Recognizing
+          when resistance to your boundaries signals a larger issue can help you address the
+          root cause rather than continuously adjusting your rules to accommodate dysfunction.
         </p>
 
         <BeforeAfter
@@ -1212,6 +1586,57 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             ],
           }}
         />
+
+        <h2
+          id="boundaries-as-ongoing-practice"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Boundaries as an Ongoing Practice
+        </h2>
+        <p className="mb-6">
+          Digital boundaries are not something you set once and forget about. They are a
+          living practice that evolves with your circumstances, your technology, and the
+          cultural expectations around you. A boundary that works perfectly during a stable
+          period may need adjustment during a job change, a health crisis, a new
+          relationship, or a season of increased caregiving responsibility. The willingness
+          to periodically reassess your boundaries --- rather than clinging rigidly to rules
+          that no longer fit --- is a sign of maturity in your relationship with technology,
+          not weakness.
+        </p>
+        <p className="mb-6">
+          Consider building in a regular review process. Many people find that a monthly
+          check-in, where they review their screen time data alongside their overall sense
+          of well-being, is sufficient to identify when boundaries need adjustment. Some
+          questions worth asking during these reviews include: Which boundaries am I
+          maintaining consistently, and which am I regularly violating? For the boundaries
+          I am violating, is the issue that they are too strict, poorly designed, or
+          unsupported by my environment? Have my circumstances changed in ways that require
+          new boundaries or the relaxation of existing ones? Am I experiencing any new
+          digital pain points that I did not have last month?
+        </p>
+        <p className="mb-6">
+          Technology itself also changes, which means your boundary practice needs to adapt.
+          New apps, new social platforms, new workplace tools, and new devices all introduce
+          new boundary challenges. Wearable devices that track health metrics can create
+          compulsive checking behavior. Smart home devices that respond to voice commands can
+          blur the line between analog and digital moments. Each new technology that enters
+          your life deserves a brief assessment: what boundaries does this tool require?
+          What are its default settings, and do those defaults serve my interests? How will
+          I prevent this tool from eroding boundaries I have already established? Taking
+          five minutes to answer these questions when adopting a new device or app can
+          prevent weeks of gradual boundary erosion.
+        </p>
+        <p className="mb-6">
+          Ultimately, the practice of setting and maintaining digital boundaries is not
+          separate from the larger work of living intentionally. The same skills that help
+          you manage your relationship with technology --- self-awareness, clear communication,
+          environmental design, and regular reflection --- serve you in every other domain of
+          life. Many people find that the discipline of digital boundary-setting becomes a
+          gateway to broader intentionality: once you realize that you can actively shape
+          your technology environment rather than passively accepting it, the same mindset
+          naturally extends to how you manage your time, your relationships, your finances,
+          and your physical health.
+        </p>
 
         <ArticleCallout type="clinical-note" title="When Professional Support Helps">
           <p>
@@ -1247,7 +1672,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
     slug: 'mindful-technology-use-awareness-digital-habits',
     title: 'Mindful Technology Use: Bringing Awareness to Your Digital Habits',
     description:
-      'Mindfulness — the practice of paying deliberate, non-judgmental attention to the present moment — can transform an unconscious relationship with technology into a conscious one. This self-help guide reviews the research on how mindfulness principles apply to digital behavior and offers practical exercises for becoming more aware of your technology habits without guilt or rigid restriction.',
+      'Mindfulness --- the practice of paying deliberate, non-judgmental attention to the present moment --- can transform an unconscious relationship with technology into a conscious one. This self-help guide reviews the research on how mindfulness principles apply to digital behavior and offers practical exercises for becoming more aware of your technology habits without guilt or rigid restriction.',
     image: '/images/articles/cat21/cover-041.svg',
     category: CATEGORY_TECHNOLOGY_DIGITAL_LIFE,
     readTime: 15,
@@ -1263,7 +1688,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
       'Present Moment',
     ],
     summary:
-      'Most people interact with technology on autopilot. The phone comes out during any pause, the thumb scrolls without conscious direction, the email gets checked before the intention to check it has even formed. Mindfulness-based approaches to technology use do not begin with rules or restrictions but with awareness — noticing what you are doing, when you are doing it, and what you are feeling in the moments before, during, and after. Research shows that this awareness-first approach can be more effective than rule-based approaches for many people, because it addresses the automatic quality of digital habits rather than trying to override them with willpower. This article reviews the growing evidence base for mindful technology use, explains the specific mechanisms through which mindfulness changes digital behavior, and provides a structured set of practices anyone can use to bring greater awareness to their relationship with screens.',
+      'Most people interact with technology on autopilot. The phone comes out during any pause, the thumb scrolls without conscious direction, the email gets checked before the intention to check it has even formed. Mindfulness-based approaches to technology use do not begin with rules or restrictions but with awareness --- noticing what you are doing, when you are doing it, and what you are feeling in the moments before, during, and after. Research shows that this awareness-first approach can be more effective than rule-based approaches for many people, because it addresses the automatic quality of digital habits rather than trying to override them with willpower. This article reviews the growing evidence base for mindful technology use, explains the specific mechanisms through which mindfulness changes digital behavior, and provides a structured set of practices anyone can use to bring greater awareness to their relationship with screens.',
     keyFacts: [
       {
         text: 'Mindfulness-based interventions for problematic smartphone use show moderate to large effect sizes in reducing compulsive checking behavior.',
@@ -1279,14 +1704,14 @@ export const healthyDigitalLifeArticlesA: Article[] = [
       },
     ],
     sparkMoment:
-      'You do not need to put your phone down. You need to pick it up on purpose. The difference between mindless and mindful technology use is not the amount of time — it is the quality of attention you bring to the choice.',
+      'You do not need to put your phone down. You need to pick it up on purpose. The difference between mindless and mindful technology use is not the amount of time --- it is the quality of attention you bring to the choice.',
     practicalExercise: {
       title: 'The STOP Practice for Digital Moments',
       steps: [
         {
           title: 'Stop (S)',
           description:
-            'When you notice your hand reaching for your phone — before you pick it up — physically freeze. Do not judge yourself for reaching. Just pause. This momentary stop interrupts the automatic habit loop and creates a space between the urge and the action.',
+            'When you notice your hand reaching for your phone --- before you pick it up --- physically freeze. Do not judge yourself for reaching. Just pause. This momentary stop interrupts the automatic habit loop and creates a space between the urge and the action.',
         },
         {
           title: 'Take a Breath (T)',
@@ -1301,7 +1726,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         {
           title: 'Proceed with Intention (P)',
           description:
-            'Based on your answers, make a conscious choice. If you have a clear purpose — sending a specific message, looking up a specific piece of information — proceed and complete that task without drifting. If you realize you are reaching out of habit rather than intention, set the phone down and address the underlying feeling directly.',
+            'Based on your answers, make a conscious choice. If you have a clear purpose --- sending a specific message, looking up a specific piece of information --- proceed and complete that task without drifting. If you realize you are reaching out of habit rather than intention, set the phone down and address the underlying feeling directly.',
         },
       ],
     },
@@ -1400,7 +1825,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Notice something the next time you pick up your phone. Not what you do on it —
+            Notice something the next time you pick up your phone. Not what you do on it ---
             notice the moment itself. Were you aware of deciding to pick it up, or did you
             find it already in your hand? Was there a specific reason, or did it just
             happen? For most people, the honest answer is that the phone appeared as if by
@@ -1418,9 +1843,33 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             Mindful technology use is the practice of becoming the driver again. Not
             through rules, restrictions, or willpower, but through something more
             fundamental: awareness. By learning to notice your digital habits as they
-            happen — the urges, the automatic reaches, the emotional states that trigger
-            them — you create the possibility of choice where previously there was only
+            happen --- the urges, the automatic reaches, the emotional states that trigger
+            them --- you create the possibility of choice where previously there was only
             reflex.
+          </p>
+          <p className="mb-6">
+            This approach may sound abstract, but its effects are measurable and concrete.
+            Clinical programs built around mindful technology practices have demonstrated
+            significant reductions in compulsive phone checking, improvements in sustained
+            attention, decreases in anxiety related to digital communication, and enhanced
+            overall life satisfaction <Citation id="1" index={1} />. These outcomes emerge
+            not from restricting access to devices but from changing the quality of attention
+            that people bring to their digital interactions. The distinction is important
+            because it means that mindful technology use does not require you to give
+            anything up --- it asks you to show up differently for the technology interactions
+            you already have.
+          </p>
+          <p className="mb-6">
+            The appeal of a mindfulness-based approach is that it works with human
+            psychology rather than against it. Rule-based systems create a dynamic of
+            compliance and violation, where every lapse feels like failure and erodes
+            motivation. Mindfulness-based systems create a dynamic of curiosity and
+            learning, where every moment of awareness --- even one that comes after twenty
+            minutes of mindless scrolling --- is valued as a success. This difference in
+            framing has significant implications for long-term adherence. People who
+            practice mindful technology use tend to sustain their changes over months and
+            years, while people who rely on rigid rules tend to abandon them within weeks
+            as willpower depletes and life circumstances shift.
           </p>
         </div>
 
@@ -1445,7 +1894,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>
-                    Every habitual technology behavior has a trigger — an internal state or
+                    Every habitual technology behavior has a trigger --- an internal state or
                     external cue that initiates the behavior before conscious thought
                     engages. Common internal triggers include boredom, anxiety, loneliness,
                     discomfort with silence, and the general restlessness that researchers
@@ -1468,7 +1917,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               content: (
                 <div className="space-y-3">
                   <p>
-                    Most technology use happens in a state of partial attention — you are
+                    Most technology use happens in a state of partial attention --- you are
                     scrolling but not fully registering what you see, watching a video but
                     also thinking about something else, texting while doing three other
                     things. Mindful technology use means fully engaging with what you are
@@ -1479,7 +1928,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   </p>
                   <p>
                     Paradoxically, when people bring full attention to their technology
-                    use, they often use less of it — because they realize more quickly
+                    use, they often use less of it --- because they realize more quickly
                     that what they are doing is not actually enjoyable or useful.
                   </p>
                 </div>
@@ -1503,6 +1952,32 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           ]}
         />
 
+        <p className="mb-6">
+          These three dimensions of awareness --- before, during, and after --- form a complete
+          feedback loop that gradually reshapes digital behavior without relying on external
+          rules or restrictions. The power of this approach lies in its organic quality.
+          When you consistently notice that thirty minutes of passive scrolling leaves you
+          feeling flat and disconnected, while a ten-minute phone conversation with a friend
+          leaves you energized and warm, your brain begins to incorporate this experiential
+          data into future decisions. Over time, the choice to call instead of scroll
+          becomes less of an effortful override and more of a natural preference --- not
+          because someone told you to change, but because your own experience taught you
+          what actually feels good.
+        </p>
+        <p className="mb-6">
+          Developing awareness of digital triggers also reveals patterns that may have
+          broader significance for your emotional well-being. Many people discover through
+          this practice that their heaviest phone use correlates with specific emotional
+          states --- that they scroll most when they are lonely, check news compulsively when
+          they are anxious, or lose hours to video content when they are avoiding a
+          difficult task or conversation. These patterns are valuable information. They
+          suggest that the phone is functioning as an emotional regulation tool --- a way to
+          avoid or dampen uncomfortable feelings rather than to connect, learn, or create.
+          Recognizing this function is not a cause for self-judgment. It is an opportunity
+          to develop alternative coping strategies that address the underlying emotional
+          need more effectively than a screen ever could.
+        </p>
+
         <ArticleCallout type="science" title="The Neuroscience of Mindful Attention">
           <p>
             Research on mindfulness and brain function reveals why awareness-based
@@ -1512,7 +1987,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             circuits of the basal ganglia <Citation id="4" index={4} />. Essentially,
             mindfulness shifts the brain's balance of power from automatic, habit-driven
             systems toward systems that support conscious choice. This is not metaphorical
-            — it is measurable on neuroimaging scans after as little as eight weeks of
+            --- it is measurable on neuroimaging scans after as little as eight weeks of
             regular practice.
           </p>
         </ArticleCallout>
@@ -1560,14 +2035,41 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          The concept of meta-awareness — being aware that you are aware — deserves
+          The concept of meta-awareness --- being aware that you are aware --- deserves
           special attention. A growing body of research demonstrates that most habitual
           behaviors persist not because people want to engage in them but because people
           do not notice they are engaging in them <Citation id="5" index={5} />. The
-          moment of noticing — "Oh, I am scrolling again" — is itself a powerful
+          moment of noticing --- "Oh, I am scrolling again" --- is itself a powerful
           intervention. In studies tracking real-time phone use, simply prompting
           participants to check in on what they were doing reduced mindless scrolling by
           25-35% with no other instructions.
+        </p>
+        <p className="mb-6">
+          The boredom tolerance mechanism is particularly relevant in contemporary life,
+          where access to digital stimulation has essentially eliminated the experience
+          of unstructured mental downtime. Research suggests that this constant stimulation
+          may be eroding the brain's capacity for the kind of spontaneous, internally
+          generated thought processes that underlie creativity, problem-solving, and
+          self-reflection. When every idle moment is immediately filled with phone content,
+          the mind never enters the "default mode network" state --- a resting brain state
+          associated with creative insight, autobiographical memory processing, and future
+          planning. Mindfulness practice rebuilds tolerance for these unstimulated moments,
+          and people who develop this tolerance consistently report greater creative output,
+          better self-understanding, and a richer internal life.
+        </p>
+        <p className="mb-6">
+          Decentering --- the capacity to observe a thought or urge without identifying with
+          it --- may be the most transformative of these mechanisms for people who struggle
+          with compulsive technology use. When you are fused with an urge, the urge feels
+          like a command: "I need to check my phone." When you are decentered from it, the
+          same urge becomes an observable event: "I am noticing a pull toward my phone."
+          The difference sounds subtle, but the behavioral implications are profound.
+          In the fused state, not acting on the urge feels like deprivation. In the
+          decentered state, not acting on the urge is simply one of several available
+          options, and it carries no sense of loss or struggle. Research on acceptance and
+          commitment therapy consistently shows that decentering is the strongest predictor
+          of successful behavior change across a wide range of habitual behaviors, including
+          problematic technology use <Citation id="7" index={7} />.
         </p>
 
         <QuoteBlock
@@ -1598,10 +2100,10 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     When you feel the urge to check your phone without a specific purpose,
                     do not resist the urge and do not give in to it. Instead, observe it.
-                    Notice where in your body you feel it — many people describe a
+                    Notice where in your body you feel it --- many people describe a
                     restlessness in the hands, a tightness in the chest, or a pulling
                     sensation. Rate the intensity on a 1-10 scale. Then simply watch as
-                    the urge rises, peaks, and naturally subsides — like a wave. Most
+                    the urge rises, peaks, and naturally subsides --- like a wave. Most
                     urges pass within 60 to 90 seconds if you do not act on them.
                   </p>
                   <p>
@@ -1619,8 +2121,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               content: (
                 <div className="space-y-4">
                   <p>
-                    Every time you transition between activities — arriving at work,
-                    sitting down for a meal, entering your home, starting a meeting — take
+                    Every time you transition between activities --- arriving at work,
+                    sitting down for a meal, entering your home, starting a meeting --- take
                     10 seconds to arrive before reaching for a device. Feel your feet on
                     the ground. Notice the physical space around you. Take one breath. Then
                     decide: is there something I need from my phone right now?
@@ -1639,7 +2141,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               content: (
                 <div className="space-y-4">
                   <p>
-                    Research on interoception — awareness of internal bodily sensations —
+                    Research on interoception --- awareness of internal bodily sensations ---
                     shows that people with greater body awareness are less susceptible to
                     compulsive technology use <Citation id="9" index={9} />. Three times
                     per day (set a gentle alarm if needed), pause for 30 seconds and scan
@@ -1650,7 +2152,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   <p>
                     This practice builds the interoceptive awareness that serves as an
                     early warning system. Many people discover that physical tension and
-                    restlessness precede compulsive phone checking — and that noticing
+                    restlessness precede compulsive phone checking --- and that noticing
                     these bodily signals allows them to address the underlying need
                     directly rather than reaching for a screen.
                   </p>
@@ -1671,7 +2173,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                   </p>
                   <p>
                     One variation of this practice is to set a lock screen message that
-                    asks "What are you here for?" — a visual cue that prompts the
+                    asks "What are you here for?" --- a visual cue that prompts the
                     intentionality check every time you reach for the device.
                   </p>
                 </div>
@@ -1679,6 +2181,30 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             },
           ]}
         />
+
+        <p className="mb-6">
+          Each of these exercises targets a different point in the habit loop. Urge surfing
+          addresses the moment of craving, teaching you that urges are temporary and do not
+          require obedience. The arrival practice targets the environmental transitions that
+          most commonly trigger habitual checking. The body check-in develops the
+          interoceptive awareness that provides early warning of digital cravings before
+          they reach the intensity where they feel irresistible. The intentional unlock
+          inserts a moment of conscious choice at the very last point before habitual
+          behavior takes over. Together, they create multiple opportunities throughout the
+          day for awareness to intervene in what was previously an entirely automatic
+          process.
+        </p>
+        <p className="mb-6">
+          It is important to approach these exercises with realistic expectations about the
+          pace of change. You will not remember to use them consistently at first --- this is
+          normal and expected. The goal is not perfection but gradual increase in the
+          percentage of device interactions that involve some degree of conscious awareness.
+          If you currently have near-zero awareness of your phone pickups, catching even
+          five per day represents a meaningful shift. Over weeks and months, the percentage
+          naturally increases as the practices become more automatic themselves --- which is
+          the ultimate goal: making awareness habitual in the same way that mindless
+          checking was previously habitual.
+        </p>
 
         <h2
           id="building-a-sustainable-practice"
@@ -1689,7 +2215,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
         <p className="mb-6">
           Research on mindful technology programs shows that an 8-week intervention
           combining the practices described above reduced participants' daily screen time
-          by an average of 47 minutes — without any explicit rules about how much time
+          by an average of 47 minutes --- without any explicit rules about how much time
           they should spend <Citation id="6" index={6} />. The reduction came entirely
           from increased awareness: as participants became more conscious of their habits,
           they naturally spent less time on activities that did not align with their
@@ -1717,7 +2243,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
                 <p>
                   Begin using the STOP technique (Stop, Take a breath, Observe, Proceed
                   with intention) before each phone pickup. You will not remember every
-                  time — that is expected. Aim for catching 3 to 5 habitual pickups per
+                  time --- that is expected. Aim for catching 3 to 5 habitual pickups per
                   day and running through the STOP sequence. Notice what you learn about
                   your triggers and internal states.
                 </p>
@@ -1739,7 +2265,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
               title: 'Week 7-8: Extend to All Digital Interactions',
               description: (
                 <p>
-                  Broaden your mindful awareness to all screens — laptop, tablet,
+                  Broaden your mindful awareness to all screens --- laptop, tablet,
                   television. Before opening any app, website, or streaming service, state
                   your intention. After closing it, notice how you feel. Begin to notice
                   the patterns: which digital activities leave you feeling better, and
@@ -1751,6 +2277,28 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           ]}
         />
 
+        <p className="mb-6">
+          The eight-week structure is a guideline, not a rigid requirement. Some people move
+          through these phases more quickly; others benefit from spending additional time in
+          the observation phase before adding active practices. The key principle is
+          sequential building --- each phase rests on the foundation established by the
+          previous one. Attempting to practice urge surfing before you have developed basic
+          awareness of your triggers is likely to be frustrating and ineffective. Trust the
+          process and allow each phase the time it needs.
+        </p>
+        <p className="mb-6">
+          After the initial eight weeks, the practices do not end --- they evolve into an
+          ongoing way of relating to technology. Most people find that they no longer need
+          to consciously apply specific techniques for every phone interaction. Instead,
+          a general quality of awareness develops that naturally accompanies their digital
+          behavior. They notice when they drift into mindless scrolling more quickly, they
+          check in with their emotional state before reaching for a device more
+          automatically, and they make more deliberate choices about how they spend their
+          screen time without feeling like they are exerting effort. This is the natural
+          endpoint of any mindfulness practice: what begins as deliberate effort gradually
+          becomes an integrated part of how you move through the world.
+        </p>
+
         <StatCard
           stats={[
             { value: 47, suffix: ' min', label: 'Average daily screen time reduction after 8-week program' },
@@ -1759,6 +2307,58 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           ]}
           source="Multiple peer-reviewed studies, 2023-2024"
         />
+
+        <h2
+          id="mindfulness-and-digital-emotions"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Mindfulness and the Emotional Landscape of Digital Life
+        </h2>
+        <p className="mb-6">
+          One of the most valuable applications of mindfulness in the digital context is
+          its capacity to illuminate the emotional dynamics that drive technology use. Most
+          people are unaware of the complex emotional transactions that occur during their
+          digital interactions --- the small spike of validation from a like on a post, the
+          subtle anxiety of seeing an unread message count, the creeping sense of
+          inadequacy that follows comparison with curated online personas, the relief of
+          escaping an uncomfortable thought through a burst of content consumption. These
+          emotional micro-events accumulate throughout the day and shape mood in ways that
+          are difficult to trace without deliberate attention.
+        </p>
+        <p className="mb-6">
+          Mindfulness practice makes these emotional currents visible. When you bring
+          awareness to your internal state during and after technology use, you begin to
+          map the emotional geography of your digital life. You may discover that certain
+          apps consistently leave you feeling anxious or deflated, while others consistently
+          leave you feeling connected or inspired. You may notice that your heaviest social
+          media use coincides with periods of low mood --- and that the scrolling does not
+          actually improve the mood but extends and deepens it. You may find that the
+          notifications you most dread are also the ones you check most compulsively,
+          driven by a need to resolve the uncertainty they create rather than by any
+          genuine interest in their content.
+        </p>
+        <p className="mb-6">
+          This emotional mapping provides a foundation for change that rules and
+          restrictions cannot match. When you know from your own direct experience that a
+          particular pattern leaves you feeling worse, the motivation to change it arises
+          naturally. You are not following someone else's prescription --- you are responding
+          to your own lived evidence. This is why mindfulness-based approaches to
+          technology tend to produce longer-lasting changes than externally imposed rules:
+          the motivation comes from within, grounded in personal experience rather than
+          abstract advice <Citation id="8" index={8} />.
+        </p>
+        <p className="mb-6">
+          For people who experience heightened emotional sensitivity, the emotional
+          dimension of digital life deserves particular attention. News consumption, social
+          media exposure, and even the persistent availability signaled by messaging
+          platforms can create a chronic state of low-level emotional activation that is
+          exhausting over time. Mindfulness practices that include emotional awareness ---
+          noticing not just what you are doing but what you are feeling while doing it ---
+          can help identify which digital interactions are contributing to emotional
+          fatigue and which are genuinely supportive. This information empowers you to make
+          adjustments that protect your emotional resources without requiring wholesale
+          withdrawal from the digital world.
+        </p>
 
         <h2
           id="acceptance-not-perfection"
@@ -1770,7 +2370,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           A mindfulness-based approach to technology fundamentally differs from a
           rule-based approach in one critical way: it does not treat "failure" as failure.
           When you catch yourself scrolling mindlessly, the mindful response is not
-          self-criticism ("I failed again") but curiosity ("Interesting — what was I
+          self-criticism ("I failed again") but curiosity ("Interesting --- what was I
           feeling just before I picked this up?"). The catching <em>is</em> the practice.
           Each moment of awareness, even if it comes after 20 minutes of mindless
           scrolling, strengthens the neural pathways that support conscious choice{' '}
@@ -1785,6 +2385,33 @@ export const healthyDigitalLifeArticlesA: Article[] = [
           the hell" effect), while people who notice the lapse with gentle curiosity are
           more likely to adjust their behavior going forward.
         </p>
+        <p className="mb-6">
+          This principle of non-judgmental awareness extends beyond individual moments of
+          mindless use to the broader relationship with technology. Many people carry a
+          background sense of guilt about their screen time --- a persistent feeling that
+          they should be doing better, using less, being more disciplined. This guilt
+          itself becomes a psychological burden that, paradoxically, can drive more
+          compulsive use. When checking your phone feels like a moral failure, the shame
+          associated with it becomes an uncomfortable emotion --- and the primary coping
+          strategy for uncomfortable emotions in many people is reaching for the phone.
+          Mindfulness breaks this cycle by removing the judgment. Your technology use is
+          not good or bad. It is a pattern of behavior that you can observe, understand,
+          and gradually redirect. That neutral stance creates the psychological safety
+          necessary for honest self-observation, which is the foundation of all meaningful
+          change.
+        </p>
+        <p className="mb-6">
+          It is also worth recognizing that the relationship between mindfulness and
+          technology use is bidirectional. Just as mindfulness can improve your digital
+          habits, certain forms of intentional technology use can support your mindfulness
+          practice. Meditation apps with guided sessions can help establish and maintain
+          a regular contemplative practice. Timer apps can remind you to pause and check
+          in with your body throughout the day. Journaling apps can provide a space for
+          the reflection that deepens self-awareness. The goal is not to eliminate
+          technology from your mindfulness practice but to use each in service of the
+          other --- letting mindfulness guide your technology use, and letting technology
+          support your mindfulness development, in a mutually reinforcing cycle.
+        </p>
 
         <ArticleCallout type="reflection" title="The Core Practice">
           <p>
@@ -1793,8 +2420,8 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             Not after. Not tomorrow. Right now. Are you reading this article with full
             attention, or is part of your mind already thinking about checking something
             else? Can you bring your awareness fully to this moment, to these words, to
-            your experience right now? That capacity — the ability to be fully present
-            with whatever you are doing — is the foundation of a healthy relationship
+            your experience right now? That capacity --- the ability to be fully present
+            with whatever you are doing --- is the foundation of a healthy relationship
             with every technology you will ever use.
           </p>
         </ArticleCallout>
@@ -1806,7 +2433,7 @@ export const healthyDigitalLifeArticlesA: Article[] = [
             impulse, notice the reach, notice what you were feeling right before. That
             single moment of noticing is the entire practice in miniature. Do it once
             today. Do it twice tomorrow. Let it build naturally, without pressure, without
-            a scorecard, without judgment. Awareness is not something you achieve — it is
+            a scorecard, without judgment. Awareness is not something you achieve --- it is
             something you practice, one moment at a time.
           </p>
         </ArticleCallout>

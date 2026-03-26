@@ -36,15 +36,15 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
     content: (
       <>
         <SummaryBox>
-          Millions of parents manage mental health conditions while raising children. Depression, anxiety, bipolar disorder, PTSD, OCD, and other conditions don't disqualify you from being a loving, effective parent—but they do require honest acknowledgment, consistent treatment, and robust support systems. Research shows that children of parents with mental illness thrive when their parents prioritize their own mental health care, communicate age-appropriately about their condition, maintain warm and responsive relationships, and build networks of support. The guilt many parents feel about their condition affecting their children is understandable but often overestimated: what matters most isn't the presence of mental illness but how it's managed.
+          Millions of parents manage mental health conditions while raising children. Depression, anxiety, bipolar disorder, PTSD, OCD, and other conditions don't disqualify you from being a loving, effective parent---but they do require honest acknowledgment, consistent treatment, and robust support systems. Research shows that children of parents with mental illness thrive when their parents prioritize their own mental health care, communicate age-appropriately about their condition, maintain warm and responsive relationships, and build networks of support. The guilt many parents feel about their condition affecting their children is understandable but often overestimated: what matters most isn't the presence of mental illness but how it's managed.
         </SummaryBox>
 
         <KeyFacts citations={[
           { citationId: '1', fact: 'Children of parents with mental illness show resilience and positive outcomes when parents engage in treatment, maintain emotional warmth, and provide stable caregiving' },
-          { citationId: '2', fact: 'Age-appropriate disclosure about parental mental illness reduces children's confusion and self-blame while increasing family cohesion and trust' },
+          { citationId: '2', fact: "Age-appropriate disclosure about parental mental illness reduces children's confusion and self-blame while increasing family cohesion and trust" },
           { citationId: '3', fact: 'Treatment adherence improves parenting capacity: parents who consistently manage their mental health condition report greater patience, emotional availability, and enjoyment of parenting' },
           { citationId: '4', fact: 'Modeling help-seeking behavior teaches children that mental health struggles are normal, treatable, and nothing to be ashamed of' },
-          { citationId: '8', fact: 'Good enough parenting—meeting children's core needs for safety, love, and consistency—is entirely compatible with managing mental illness' },
+          { citationId: "8", fact: "Good enough parenting---meeting children's core needs for safety, love, and consistency---is entirely compatible with managing mental illness" },
         ]} />
 
         <h2>The Reality of Parenting with Mental Illness</h2>
@@ -54,7 +54,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         </p>
 
         <p>
-          These fears are understandable but often disconnected from reality. Research consistently shows that having a mental health condition doesn't determine parenting quality—what matters is whether you're managing it, getting support, and maintaining emotional connection with your children. Parents who actively treat their conditions, communicate honestly (in age-appropriately ways), and seek help when needed raise children who are empathetic, resilient, and less stigmatizing of mental health struggles.<Citation id="1" /><Citation id="4" />
+          These fears are understandable but often disconnected from reality. Research consistently shows that having a mental health condition doesn't determine parenting quality---what matters is whether you're managing it, getting support, and maintaining emotional connection with your children. Parents who actively treat their conditions, communicate honestly (in age-appropriately ways), and seek help when needed raise children who are empathetic, resilient, and less stigmatizing of mental health struggles.<Citation id="1" /><Citation id="4" />
         </p>
 
         <p>
@@ -68,12 +68,12 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         </p>
 
         <ul>
-          <li><strong>Symptom management during high-demand parenting moments:</strong> Depression makes it hard to get out of bed, but toddlers don't care if you're in a depressive episode—they still need breakfast. Anxiety can make routine decisions feel paralyzing, yet parenting requires constant quick choices. Bipolar mood swings don't pause for school drop-off or bedtime routines.</li>
+          <li><strong>Symptom management during high-demand parenting moments:</strong> Depression makes it hard to get out of bed, but toddlers don't care if you're in a depressive episode---they still need breakfast. Anxiety can make routine decisions feel paralyzing, yet parenting requires constant quick choices. Bipolar mood swings don't pause for school drop-off or bedtime routines.</li>
           <li><strong>Treatment adherence conflicts with parenting logistics:</strong> Therapy appointments require childcare. Medication side effects (fatigue, brain fog, nausea) make early morning school prep harder. Psychiatric hospitalizations or intensive outpatient programs disrupt family routines and require explanations to children.<Citation id="3" /></li>
-          <li><strong>Guilt about impact on children:</strong> Did I snap at them because of my anxiety? Are they noticing my depressive withdrawal? Will they remember me as the parent who was "always tired" or "always worried"? This guilt, while natural, often exceeds the actual impact—children are remarkably resilient when their core needs are met.</li>
+          <li><strong>Guilt about impact on children:</strong> Did I snap at them because of my anxiety? Are they noticing my depressive withdrawal? Will they remember me as the parent who was "always tired" or "always worried"? This guilt, while natural, often exceeds the actual impact---children are remarkably resilient when their core needs are met.</li>
           <li><strong>Disclosure dilemmas:</strong> How much should you tell your children about your mental health? At what ages? How do you explain in ways that inform without frightening, that build understanding without burdening them with adult worries?<Citation id="2" /></li>
           <li><strong>Stigma and judgment from others:</strong> Schools, healthcare providers, family members, and other parents may hold biased assumptions about your parenting capacity because of your mental health condition. This external stigma can internalize, making you doubt yourself even when you're parenting well.<Citation id="7" /></li>
-          <li><strong>Modeling emotional regulation when struggling yourself:</strong> You want to teach your children healthy coping skills, emotional awareness, and resilience—but how do you model those when you're in the middle of a panic attack or can't motivate yourself to leave the house?</li>
+          <li><strong>Modeling emotional regulation when struggling yourself:</strong> You want to teach your children healthy coping skills, emotional awareness, and resilience---but how do you model those when you're in the middle of a panic attack or can't motivate yourself to leave the house?</li>
         </ul>
 
         <p>
@@ -82,18 +82,18 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
 
         <h2>Evidence-Based Strategies That Help</h2>
 
-        <h3>1. Prioritize Your Treatment—It Benefits Your Children</h3>
+        <h3>1. Prioritize Your Treatment---It Benefits Your Children</h3>
 
         <p>
-          The most important thing you can do for your children is take care of your own mental health. This isn't selfishness—it's foundational parenting. When you manage your condition through therapy, medication, lifestyle changes, or other evidence-based treatments, you become more emotionally available, patient, consistent, and present.<Citation id="3" />
+          The most important thing you can do for your children is take care of your own mental health. This isn't selfishness---it's foundational parenting. When you manage your condition through therapy, medication, lifestyle changes, or other evidence-based treatments, you become more emotionally available, patient, consistent, and present.<Citation id="3" />
         </p>
 
         <p>
-          Research demonstrates that treatment adherence in parents with mental illness directly predicts positive child outcomes. Parents who stick with their treatment plans report greater enjoyment of parenting, less irritability, better emotional regulation, and stronger parent-child bonds.<Citation id="3" /> Your children benefit when you feel better—full stop.
+          Research demonstrates that treatment adherence in parents with mental illness directly predicts positive child outcomes. Parents who stick with their treatment plans report greater enjoyment of parenting, less irritability, better emotional regulation, and stronger parent-child bonds.<Citation id="3" /> Your children benefit when you feel better---full stop.
         </p>
 
         <ArticleCallout variant="tip" title="Reframe Treatment as Parenting">
-          Going to therapy isn't time away from your children—it's investing in your capacity to parent them well. Taking medication isn't a sign of weakness—it's ensuring you can show up fully. Treatment <em>is</em> parenting.
+          Going to therapy isn't time away from your children---it's investing in your capacity to parent them well. Taking medication isn't a sign of weakness---it's ensuring you can show up fully. Treatment <em>is</em> parenting.
         </ArticleCallout>
 
         <h3>2. Navigate Disclosure with Age-Appropriate Honesty</h3>
@@ -111,10 +111,10 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
           title="Age-Appropriate Disclosure Framework"
           description="A process showing how to explain parental mental illness at different developmental stages"
           nodes={[
-            { id: '1', label: 'Ages 3-5: Simple, reassuring (Mommy's brain works differently sometimes)' },
-            { id: '2', label: 'Ages 6-9: Basic education (Depression makes me very tired; it's not your fault)' },
-            { id: '3', label: 'Ages 10-13: More detail (I have anxiety—my brain worries too much about things)' },
-            { id: '4', label: 'Ages 14+: Adult-like discussion (I'm managing bipolar disorder with treatment)' },
+            { id: "1", label: "Ages 3-5: Simple, reassuring (Mommy's brain works differently sometimes)" },
+            { id: "2", label: "Ages 6-9: Basic education (Depression makes me very tired; it's not your fault)" },
+            { id: "3", label: "Ages 10-13: More detail (I have anxiety---my brain worries too much about things)" },
+            { id: "4", label: "Ages 14+: Adult-like discussion (I'm managing bipolar disorder with treatment)" },
           ]}
           source="Adapted from Journal of Family Psychology, 2020"
         />
@@ -125,7 +125,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
 
         <ul>
           <li><strong>Reassure them it's not their fault:</strong> Children naturally assume they caused parental distress. Explicitly state: "This has nothing to do with you."</li>
-          <li><strong>Normalize mental health:</strong> Frame it as a medical condition like diabetes or asthma—something that requires treatment and management but doesn't define you.</li>
+          <li><strong>Normalize mental health:</strong> Frame it as a medical condition like diabetes or asthma---something that requires treatment and management but doesn't define you.</li>
           <li><strong>Be honest about what they're already noticing:</strong> If your depression means you sleep more, acknowledge it: "You might notice I've been sleeping a lot. That's a symptom of my depression, and I'm getting help for it."</li>
           <li><strong>Emphasize that you're getting help:</strong> Children need to know adults are handling things. Share that you have doctors, therapists, or other supports.</li>
           <li><strong>Avoid burdening them with details meant for adults:</strong> They don't need to know about medication side effects, therapy session content, or your fears about the future. Keep information age-appropriate and focused on what affects them.</li>
@@ -155,7 +155,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
               label: 'Mental Health Providers',
               description: 'Therapist, psychiatrist, support groups for parents with mental illness',
               pros: ['Professional expertise', 'Judgment-free space', 'Evidence-based strategies'],
-              cons: ['Costs money/needs insurance', 'Logistical challenges with appointments', 'Doesn't replace practical help'],
+              cons: ["Costs money/needs insurance", "Logistical challenges with appointments", "Doesn't replace practical help"],
             },
             {
               label: 'Parenting-Specific Programs',
@@ -173,12 +173,12 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         </p>
 
         <p>
-          Studies show that children of parents who model help-seeking behavior are significantly more likely to seek help themselves if they develop mental health challenges—and they're less likely to internalize stigma.<Citation id="4" /> Your treatment doesn't just help you; it normalizes mental health care for the next generation.
+          Studies show that children of parents who model help-seeking behavior are significantly more likely to seek help themselves if they develop mental health challenges---and they're less likely to internalize stigma.<Citation id="4" /> Your treatment doesn't just help you; it normalizes mental health care for the next generation.
         </p>
 
         <SparkMoment
           title="Good Enough Is Good Enough"
-          content="The concept of 'good enough parenting'—meeting children's core needs for safety, love, and consistency without perfection—is especially liberating for parents with mental illness. You don't need to be perfect. You don't need to hide all your struggles. You need to be present enough, loving enough, and getting help when needed. That's enough."
+          content="The concept of 'good enough parenting'---meeting children's core needs for safety, love, and consistency without perfection---is especially liberating for parents with mental illness. You don't need to be perfect. You don't need to hide all your struggles. You need to be present enough, loving enough, and getting help when needed. That's enough."
         />
 
         <PracticalExercise
@@ -187,15 +187,15 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
           steps={[
             {
               title: '1. Identify Your Core Needs',
-              content: 'List specific support needs: childcare during therapy appointments, backup for school pickup when you're symptomatic, someone to talk to during hard moments, help with meals during depressive episodes. Be specific about what would actually help.',
+              content: "List specific support needs: childcare during therapy appointments, backup for school pickup when you're symptomatic, someone to talk to during hard moments, help with meals during depressive episodes. Be specific about what would actually help.",
             },
             {
               title: '2. Map Your Current and Potential Supports',
-              content: 'Who's already in your network? Partner, family, friends, neighbors, parent groups, mental health providers, school counselors, online communities? Who could you reach out to that you haven't yet?',
+              content: "Who's already in your network? Partner, family, friends, neighbors, parent groups, mental health providers, school counselors, online communities? Who could you reach out to that you haven't yet?",
             },
             {
               title: '3. Make Specific, Small Asks',
-              content: 'People want to help but often don't know how. Instead of "Let me know if you need anything," give specific requests: "Could you pick up my kid from school Tuesdays when I have therapy?" or "Can I text you when I'm having a hard parenting moment?"',
+              content: "People want to help but often don't know how. Instead of \"Let me know if you need anything,\" give specific requests: \"Could you pick up my kid from school Tuesdays when I have therapy?\" or \"Can I text you when I'm having a hard parenting moment?\"",
             },
             {
               title: '4. Create a Crisis Plan',
@@ -203,7 +203,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
             },
             {
               title: '5. Practice Accepting Help Without Guilt',
-              content: 'Many parents with mental illness struggle to accept help due to shame or feeling like a burden. Reframe: accepting help ensures your children are cared for and models interdependence. It's not weakness—it's wisdom.',
+              content: "Many parents with mental illness struggle to accept help due to shame or feeling like a burden. Reframe: accepting help ensures your children are cared for and models interdependence. It's not weakness---it's wisdom.",
             },
           ]}
         />
@@ -227,7 +227,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         <h2>You Are Enough</h2>
 
         <p>
-          The fact that you're reading this article suggests you care deeply about your children and want to parent them well despite—or perhaps informed by—your mental health challenges. That intention matters enormously.
+          The fact that you're reading this article suggests you care deeply about your children and want to parent them well despite---or perhaps informed by---your mental health challenges. That intention matters enormously.
         </p>
 
         <p>
@@ -294,7 +294,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Modern parenting expectations are historically unprecedented — and exhausting.
+            Modern parenting expectations are historically unprecedented --- and exhausting.
           </p>
           <p className="mb-6">
             "Intensive parenting" ideology demands child-centered, expert-guided, emotionally absorbing, labor-intensive, financially expensive parenting <Citation id="1" index={1} source="American Sociological Review" year="2020" tier={1} />.
@@ -335,7 +335,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Good parenting requires connection, consistency, and care — not perfection or constant enrichment <Citation id="4" index={4} source="Parenting" year="2021" tier={1} />.</p>
+          <p>Good parenting requires connection, consistency, and care --- not perfection or constant enrichment <Citation id="4" index={4} source="Parenting" year="2021" tier={1} />.</p>
         </ArticleCallout>
       </>
     ),
@@ -369,7 +369,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
             Most parents lose their temper sometimes. Understanding why helps you change the pattern.
           </p>
           <p className="mb-6">
-            Parental anger is normal — but chronic yelling or rage harms children and creates shame in parents <Citation id="1" index={1} source="Journal of Family Psychology" year="2021" tier={1} />.
+            Parental anger is normal --- but chronic yelling or rage harms children and creates shame in parents <Citation id="1" index={1} source="Journal of Family Psychology" year="2021" tier={1} />.
           </p>
         </div>
 
@@ -482,7 +482,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway">
-          <p>Stay-at-home parenting is valid, valuable work — and you deserve support, recognition, and self-care <Citation id="7" index={7} source="Journal of Family Psychology" year="2021" tier={1} />.</p>
+          <p>Stay-at-home parenting is valid, valuable work --- and you deserve support, recognition, and self-care <Citation id="7" index={7} source="Journal of Family Psychology" year="2021" tier={1} />.</p>
         </ArticleCallout>
       </>
     ),
@@ -544,7 +544,7 @@ export const parentingStressMentalHealthArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="tip">
-          <p>Aim for balance, not perfection. Some screen time is inevitable and okay — focus on overall family wellbeing <Citation id="3" index={3} source="Cyberpsychology" year="2020" tier={1} />.</p>
+          <p>Aim for balance, not perfection. Some screen time is inevitable and okay --- focus on overall family wellbeing <Citation id="3" index={3} source="Cyberpsychology" year="2020" tier={1} />.</p>
         </ArticleCallout>
       </>
     ),

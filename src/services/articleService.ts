@@ -22,8 +22,10 @@ interface DBArticle {
     id: number | string;
     slug: string;
     title: string;
-    description: string;
-    image: string;
+    description?: string;
+    seo_description?: string;
+    image?: string;
+    hero_image_url?: string;
     category?: {
         id: string;
         name: string;
@@ -70,8 +72,8 @@ function mapSupabaseToArticle(data: DBArticle): ArticleWithContent {
         id: data.id,
         slug: data.slug,
         title: data.title,
-        description: data.description,
-        image: data.image,
+        description: data.description || data.seo_description || '',
+        image: data.image || data.hero_image_url || '',
         category: {
             id: data.category?.id || '',
             name: data.category?.name || 'Uncategorized',
@@ -118,30 +120,46 @@ export const articleService = {
      * Priority: Supabase > Mock
      */
     getAll: async (params?: { category?: string; featured?: boolean }): Promise<ArticleWithContent[]> => {
-        // Try Supabase first
+        // Try Supabase first — paginate to handle >1000 articles
         try {
             let selectString = '*, category:article_categories!category_id(*)';
             if (params?.category) {
                 selectString = '*, category:article_categories!category_id!inner(*)';
             }
 
-            let query = supabase.from('articles').select(selectString)
-                .eq('status', 'published');
+            const allRows: DBArticle[] = [];
+            const PAGE_SIZE = 1000;
+            let from = 0;
+            let hasMore = true;
 
-            if (params?.featured) {
-                query = query.eq('featured', true);
+            while (hasMore) {
+                let query = supabase.from('articles').select(selectString)
+                    .eq('status', 'published')
+                    .range(from, from + PAGE_SIZE - 1)
+                    .order('created_at', { ascending: false });
+
+                if (params?.featured) {
+                    query = query.eq('featured', true);
+                }
+                if (params?.category) {
+                    query = query.eq('category.slug', params.category);
+                }
+
+                const { data, error } = await query;
+
+                if (error) throw error;
+
+                if (data && data.length > 0) {
+                    allRows.push(...(data as unknown as DBArticle[]));
+                }
+
+                hasMore = (data?.length || 0) === PAGE_SIZE;
+                from += PAGE_SIZE;
             }
-            if (params?.category) {
-                query = query.eq('category.slug', params.category);
-            }
 
-            const { data, error } = await query;
-
-            if (error) throw error;
-
-            if (data && data.length > 0) {
-                console.log(`[ArticleService] Fetched ${data.length} articles from Supabase`);
-                return (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
+            if (allRows.length > 0) {
+                console.log(`[ArticleService] Fetched ${allRows.length} articles from Supabase`);
+                return allRows.map(mapSupabaseToArticle);
             }
         } catch (error) {
             console.warn('[ArticleService] Supabase fetch failed, using mock data:', error);

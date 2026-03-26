@@ -10,10 +10,13 @@ const ReadingProgress: React.FC = () => {
   });
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 right-0 h-1.5 bg-teal-600 origin-left z-[110] shadow-sm"
-      style={{ scaleX }}
-    />
+    <div className="fixed top-0 left-0 right-0 h-1 z-[110]">
+      <div className="absolute inset-0 bg-gray-200/50 dark:bg-gray-700/30" />
+      <motion.div
+        className="absolute inset-0 bg-teal-600 origin-left"
+        style={{ scaleX }}
+      />
+    </div>
   );
 };
 

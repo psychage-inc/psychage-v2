@@ -60,11 +60,14 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
     // Normalize columns
     let resolvedColumns: string[];
     let columnKeys: string[] | null = null;
+    let headersFirstCol: string | null = null;
     if (props.columns) {
         resolvedColumns = extractColumnLabels(props.columns);
         columnKeys = extractColumnKeys(props.columns);
     } else if (props.headers) {
-        resolvedColumns = props.headers;
+        // First header is the feature column label, rest are value columns
+        headersFirstCol = props.headers[0] ?? 'Feature';
+        resolvedColumns = props.headers.slice(1);
     } else if (props.leftLabel && props.rightLabel) {
         resolvedColumns = [props.leftLabel, props.rightLabel];
     } else {
@@ -131,7 +134,7 @@ const ComparisonTable: React.FC<ComparisonTableProps> = (props) => {
     // Determine the first column header
     const firstColHeader = props.data && props.columns
         ? extractColumnLabels(props.columns)[0] ?? 'Feature'
-        : props.leftLabel || 'Feature';
+        : headersFirstCol || props.leftLabel || 'Feature';
 
     return (
         <motion.div

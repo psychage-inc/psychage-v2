@@ -1,6 +1,8 @@
  
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { List, X } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
 
 interface TOCSection {
     id: string;
@@ -11,21 +13,18 @@ interface TOCSection {
 interface TableOfContentsProps {
     sections?: TOCSection[];
     articleSelector?: string;
+    /** Render as inline list (for sidebar). When false, renders the list without outer wrapper. */
+    variant?: 'sidebar' | 'mobile';
 }
 
-const TableOfContents: React.FC<TableOfContentsProps> = ({
-    sections: propSections,
-    articleSelector = 'article',
-}) => {
+/** Shared hook: scan headings + track active section */
+function useTOCSections(propSections?: TOCSection[], articleSelector = 'article') {
     const [sections, setSections] = useState<TOCSection[]>(propSections || []);
     const [activeId, setActiveId] = useState<string>('');
     const observerRef = useRef<IntersectionObserver | null>(null);
-    const navigate = useNavigate();
 
-    // Scan DOM for headings if no sections prop provided
     useEffect(() => {
         if (propSections && propSections.length > 0) {
-            // eslint-disable-next-line react-hooks/set-state-in-effect
             setSections(propSections);
             return;
         }
@@ -41,40 +40,28 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
                 level: el.tagName === 'H2' ? 2 : 3,
             }));
 
-            // Add Sources & Citations as final entry
             const sourcesEl = document.getElementById('sources-citations');
             if (sourcesEl) {
-                discovered.push({
-                    id: 'sources-citations',
-                    title: 'Sources & Citations',
-                    level: 2,
-                });
+                discovered.push({ id: 'sources-citations', title: 'Sources & Citations', level: 2 });
             }
 
             setSections(discovered);
         };
 
-        // Delay to let article content render
         const timer = setTimeout(scanHeadings, 300);
         return () => clearTimeout(timer);
     }, [propSections, articleSelector]);
 
-    // IntersectionObserver for active section tracking
     useEffect(() => {
         if (sections.length === 0) return;
-
         observerRef.current?.disconnect();
 
         observerRef.current = new IntersectionObserver(
             (entries) => {
-                // Find the topmost visible entry
                 const visible = entries
                     .filter((e) => e.isIntersecting)
                     .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-
-                if (visible.length > 0) {
-                    setActiveId(visible[0].target.id);
-                }
+                if (visible.length > 0) setActiveId(visible[0].target.id);
             },
             { rootMargin: '-10% 0px -70% 0px' }
         );
@@ -87,66 +74,164 @@ const TableOfContents: React.FC<TableOfContentsProps> = ({
         return () => observerRef.current?.disconnect();
     }, [sections]);
 
+    return { sections, activeId };
+}
+
+/** Renders the TOC link list (shared between sidebar + mobile) */
+const TOCList: React.FC<{
+    sections: TOCSection[];
+    activeId: string;
+    onNavigate?: () => void;
+}> = ({ sections, activeId, onNavigate }) => {
     const handleClick = useCallback(
         (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
             e.preventDefault();
             const element = document.getElementById(id);
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                onNavigate?.();
             }
         },
-        []
+        [onNavigate]
     );
 
-    if (sections.length === 0) return null;
-
     return (
-        <div className="hidden lg:block">
-            <div className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">
-                Contents
-            </div>
-            <ul className="space-y-1 border-l border-gray-100 dark:border-gray-800">
-                {sections.map((section) => {
-                    const isActive = activeId === section.id;
-                    return (
-                        <li key={section.id} className="-ml-px">
-                            <a
-                                href={`#${section.id}`}
-                                onClick={(e) => handleClick(e, section.id)}
-                                className={`
-                                    block text-sm py-1.5 transition-all duration-200
-                                    ${section.level === 3 ? 'pl-8 text-xs' : 'pl-4'}
-                                    ${
-                                        isActive
-                                            ? 'text-teal-600 dark:text-teal-400 font-semibold border-l-2 border-teal-500'
-                                            : 'text-gray-500 dark:text-gray-400 font-medium hover:text-teal-600 dark:hover:text-teal-400 hover:border-l-2 hover:border-teal-500/50'
-                                    }
-                                `}
-                            >
-                                {section.title}
-                            </a>
-                        </li>
-                    );
-                })}
-            </ul>
-
-            {/* Find Provider CTA */}
-            <div className="mt-12 p-6 bg-teal-50 dark:bg-teal-900/20 rounded-2xl border border-teal-100 dark:border-teal-800/30">
-                <h4 className="font-bold text-teal-900 dark:text-teal-100 mb-2 text-sm">
-                    Need professional help?
-                </h4>
-                <p className="text-xs text-teal-700/80 dark:text-teal-300/60 mb-4 leading-relaxed">
-                    Find verified therapists specializing in your area of need.
-                </p>
-                <button
-                    onClick={() => navigate('/providers')}
-                    className="w-full py-2 bg-teal-600 text-white rounded-lg text-xs font-bold hover:bg-teal-700 transition-colors"
-                >
-                    Find Provider
-                </button>
-            </div>
-        </div>
+        <ul className="space-y-1 border-l border-gray-100 dark:border-gray-800">
+            {sections.map((section) => {
+                const isActive = activeId === section.id;
+                return (
+                    <li key={section.id} className="-ml-px">
+                        <a
+                            href={`#${section.id}`}
+                            onClick={(e) => handleClick(e, section.id)}
+                            className={`
+                                block text-sm py-1.5 transition-all duration-200
+                                ${section.level === 3 ? 'pl-8 text-xs' : 'pl-4'}
+                                ${
+                                    isActive
+                                        ? 'text-teal-600 dark:text-teal-400 font-semibold border-l-2 border-teal-500'
+                                        : 'text-gray-500 dark:text-gray-400 font-medium hover:text-teal-600 dark:hover:text-teal-400 hover:border-l-2 hover:border-teal-500/50'
+                                }
+                            `}
+                        >
+                            {section.title}
+                        </a>
+                    </li>
+                );
+            })}
+        </ul>
     );
 };
 
+const TableOfContents: React.FC<TableOfContentsProps> = ({
+    sections: propSections,
+    articleSelector = 'article',
+    variant = 'sidebar',
+}) => {
+    const { sections, activeId } = useTOCSections(propSections, articleSelector);
+    const navigate = useNavigate();
+
+    if (sections.length === 0) return null;
+
+    if (variant === 'sidebar') {
+        return (
+            <div className="hidden lg:block">
+                <div className="text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500 mb-6">
+                    Contents
+                </div>
+                <TOCList sections={sections} activeId={activeId} />
+
+                {/* Find Provider CTA */}
+                <div className="mt-12 p-6 bg-teal-50 dark:bg-teal-900/20 rounded-2xl border border-teal-100 dark:border-teal-800/30">
+                    <h4 className="font-bold text-teal-900 dark:text-teal-100 mb-2 text-sm">
+                        Need professional help?
+                    </h4>
+                    <p className="text-xs text-teal-700/80 dark:text-teal-300/60 mb-4 leading-relaxed">
+                        Find verified therapists specializing in your area of need.
+                    </p>
+                    <button
+                        onClick={() => navigate('/providers')}
+                        className="w-full py-2 bg-teal-600 text-white rounded-lg text-xs font-bold hover:bg-teal-700 transition-colors"
+                    >
+                        Find Provider
+                    </button>
+                </div>
+            </div>
+        );
+    }
+
+    // Mobile variant — just the list
+    return <TOCList sections={sections} activeId={activeId} />;
+};
+
+/** Floating mobile TOC button + bottom sheet */
+const MobileTOC: React.FC<{ articleSelector?: string }> = ({ articleSelector = 'article' }) => {
+    const [open, setOpen] = useState(false);
+    const { sections, activeId } = useTOCSections(undefined, articleSelector);
+
+    // Lock body scroll when open
+    useEffect(() => {
+        if (open) document.body.style.overflow = 'hidden';
+        else document.body.style.overflow = '';
+        return () => { document.body.style.overflow = ''; };
+    }, [open]);
+
+    if (sections.length === 0) return null;
+
+    const activeTitle = sections.find((s) => s.id === activeId)?.title;
+
+    return (
+        <>
+            {/* Floating pill — bottom of screen, above MindMate FAB */}
+            <button
+                onClick={() => setOpen(true)}
+                className="lg:hidden fixed bottom-20 left-4 z-[100] flex items-center gap-2 px-4 py-2.5 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-lg shadow-black/10 text-sm font-medium text-text-primary hover:border-primary/40 transition-all"
+                aria-label="Open table of contents"
+            >
+                <List size={16} className="text-primary shrink-0" />
+                <span className="truncate max-w-[180px]">{activeTitle || 'Contents'}</span>
+            </button>
+
+            {/* Bottom sheet overlay */}
+            <AnimatePresence>
+                {open && (
+                    <>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            className="lg:hidden fixed inset-0 bg-black/40 z-[200]"
+                            onClick={() => setOpen(false)}
+                        />
+                        <motion.div
+                            initial={{ y: '100%' }}
+                            animate={{ y: 0 }}
+                            exit={{ y: '100%' }}
+                            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+                            className="lg:hidden fixed bottom-0 left-0 right-0 z-[201] bg-white dark:bg-gray-900 rounded-t-2xl shadow-2xl max-h-[70vh] overflow-y-auto"
+                        >
+                            <div className="sticky top-0 bg-white dark:bg-gray-900 px-5 pt-4 pb-3 border-b border-gray-100 dark:border-gray-800 flex items-center justify-between">
+                                <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
+                                    On this page
+                                </h3>
+                                <button
+                                    onClick={() => setOpen(false)}
+                                    className="w-8 h-8 rounded-full flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                                    aria-label="Close table of contents"
+                                >
+                                    <X size={18} className="text-gray-500" />
+                                </button>
+                            </div>
+                            <div className="px-5 py-4">
+                                <TOCList sections={sections} activeId={activeId} onNavigate={() => setOpen(false)} />
+                            </div>
+                        </motion.div>
+                    </>
+                )}
+            </AnimatePresence>
+        </>
+    );
+};
+
+export { MobileTOC };
 export default TableOfContents;

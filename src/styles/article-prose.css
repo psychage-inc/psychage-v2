@@ -58,13 +58,18 @@
 /* Drop cap — first paragraph only */
 .article-prose > p:first-of-type::first-letter {
   float: left;
-  font-size: 3.5em;
+  font-size: 2.8em;
   line-height: 0.85;
   padding-right: 0.1em;
   margin-top: 0.05em;
   font-weight: 700;
   color: var(--color-primary);
   font-family: Georgia, serif;
+}
+@media (min-width: 768px) {
+  .article-prose > p:first-of-type::first-letter {
+    font-size: 3.5em;
+  }
 }
 
 /* Blockquotes — pull quote style */

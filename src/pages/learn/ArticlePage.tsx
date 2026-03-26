@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { Bookmark, ChevronRight, ChevronDown, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Moon, Wind } from 'lucide-react';
+import { Bookmark, ChevronRight, ChevronDown, ChevronUp, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Moon, Wind } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
 import { getArticleUrl } from '@/lib/articleUrl';
 import ReadingProgress from '@/components/article/ReadingProgress';
-import TableOfContents from '@/components/article/TableOfContents';
+import TableOfContents, { MobileTOC } from '@/components/article/TableOfContents';
 import ArticleCard from '@/components/article/ArticleCard';
 import ReferenceList from '@/components/article/ReferenceList';
 import Disclaimer from '@/components/article/Disclaimer';
@@ -23,7 +23,7 @@ import SEO from '@/components/SEO';
 import Button from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 import InteractiveCard from '@/components/ui/InteractiveCard';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { AnimatePresence, motion, useScroll, useTransform } from 'framer-motion';
 import Badge from '@/components/ui/Badge';
 import { cn } from '@/lib/utils';
 import { useBookmarks } from '@/context/BookmarkContext';
@@ -42,6 +42,25 @@ function extractPlainText(content: React.ReactNode): string {
         return div.textContent || div.innerText || '';
     }
     return '';
+}
+
+/** Estimate read time in minutes from word count (~225 wpm average) */
+function estimateReadTime(content: React.ReactNode): number {
+    const text = extractPlainText(content);
+    const wordCount = text.split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(wordCount / 225));
+}
+
+/** Format a date string into a human-readable form like "Mar 25, 2026" */
+function formatArticleDate(dateStr: string | undefined): string | null {
+    if (!dateStr) return null;
+    try {
+        const date = new Date(dateStr);
+        if (isNaN(date.getTime())) return null;
+        return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    } catch {
+        return null;
+    }
 }
 
 const ArticlePage: React.FC = () => {
@@ -97,13 +116,28 @@ const ArticlePage: React.FC = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, [article]);
+    }, [articleSlug]);
 
     // Extract plain text for TTS
     const articlePlainText = useMemo(() => {
         if (!article?.content) return '';
         return extractPlainText(article.content);
     }, [article?.content]);
+
+    // Show back-to-top after scrolling past hero
+    const [showBackToTop, setShowBackToTop] = useState(false);
+    useEffect(() => {
+        const handleScroll = () => setShowBackToTop(window.scrollY > 600);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    // Read time: use article value or estimate from content
+    const readTime = useMemo(() => {
+        if (article?.readTime) return article.readTime;
+        if (article?.content) return estimateReadTime(article.content);
+        return null;
+    }, [article?.readTime, article?.content]);
 
     // Breadcrumb title (truncated)
     const breadcrumbTitle = useMemo(() => {
@@ -176,7 +210,7 @@ const ArticlePage: React.FC = () => {
             />
 
             {/* Immersive Hero Section */}
-            <div className="relative h-[60vh] min-h-[400px] max-h-[600px] w-full overflow-hidden flex items-end pb-16">
+            <div className="relative h-auto min-h-[320px] w-full overflow-hidden flex items-end pb-12 pt-8">
                 {/* Dynamic Background */}
                 <div className="absolute inset-0 z-0">
                     <MeshGradient className="opacity-60" />
@@ -185,6 +219,7 @@ const ArticlePage: React.FC = () => {
                             <img
                                 src={article.image}
                                 alt=""
+                                loading="eager"
                                 className="w-full h-full object-cover opacity-20 blur-3xl scale-110"
                             />
                         </div>
@@ -221,7 +256,7 @@ const ArticlePage: React.FC = () => {
                             <Badge variant="outline" className="mb-6 backdrop-blur-md bg-white/10 border-white/20 text-text-primary">
                                 {article.category.name}
                             </Badge>
-                            <h1 className="font-display font-bold text-4xl md:text-6xl lg:text-7xl text-text-primary leading-[1.1] mb-4 drop-shadow-sm">
+                            <h1 className="font-display font-bold text-3xl md:text-4xl lg:text-5xl text-text-primary leading-[1.15] mb-4 drop-shadow-sm">
                                 {article.title}
                             </h1>
                             {article.subtitle && (
@@ -253,12 +288,14 @@ const ArticlePage: React.FC = () => {
                             <div className="h-4 w-px bg-border" />
                             <div className="flex items-center gap-2">
                                 <Calendar size={16} className="text-primary" />
-                                <span>{article.updatedAt || 'Recently Updated'}</span>
+                                <span>{formatArticleDate(article.updatedAt) || formatArticleDate(article.publishedAt) || 'Recently Updated'}</span>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <Clock size={16} className="text-primary" />
-                                <span>{article.readTime} min read</span>
-                            </div>
+                            {readTime && (
+                                <div className="flex items-center gap-2">
+                                    <Clock size={16} className="text-primary" />
+                                    <span>{readTime} min read</span>
+                                </div>
+                            )}
                         </motion.div>
                     </div>
                 </motion.div>
@@ -339,6 +376,7 @@ const ArticlePage: React.FC = () => {
                                 <img
                                     src={article.image}
                                     alt={`Illustration for ${article.title}`}
+                                    loading="lazy"
                                     className="w-full object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                                 />
                             </div>
@@ -507,6 +545,25 @@ const ArticlePage: React.FC = () => {
                     </Button>
                 </div>
             </section>
+
+            {/* Mobile TOC — floating pill + bottom sheet */}
+            <MobileTOC />
+
+            {/* Back to top */}
+            <AnimatePresence>
+                {showBackToTop && (
+                    <motion.button
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className="fixed bottom-6 right-20 z-[100] w-10 h-10 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-lg shadow-black/10 flex items-center justify-center text-text-secondary hover:text-primary hover:border-primary/40 transition-colors"
+                        aria-label="Back to top"
+                    >
+                        <ChevronUp size={20} />
+                    </motion.button>
+                )}
+            </AnimatePresence>
 
             <AuthModal isOpen={showAuthModal} onClose={() => setShowAuthModal(false)} />
         </div>

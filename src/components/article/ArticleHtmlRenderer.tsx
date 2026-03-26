@@ -9,7 +9,7 @@ import React, { useRef, useEffect } from 'react';
 function ArticleHtmlRenderer({ html, className }: { html: string; className?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Auto-generate IDs for headings that lack them (for TableOfContents)
+  // Auto-generate IDs for headings + add lazy loading to images
   useEffect(() => {
     if (!containerRef.current) return;
     const headings = containerRef.current.querySelectorAll('h2:not([id]), h3:not([id])');
@@ -17,6 +17,9 @@ function ArticleHtmlRenderer({ html, className }: { html: string; className?: st
       const text = h.textContent?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || '';
       if (text) h.id = text;
     });
+    // Lazy-load inline images
+    const images = containerRef.current.querySelectorAll('img:not([loading])');
+    images.forEach((img) => img.setAttribute('loading', 'lazy'));
   }, [html]);
 
   // Hydrate chart blocks embedded as data attributes

@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 213,
+  "completedSessions": 225,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -1743,7 +1743,7 @@
       "completedAt": "2026-03-27T10:48:30.000Z"
     },
     "37": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "02b-setting-maintaining-boundaries",
       "file": "src/data/articles/category-03/02b-setting-maintaining-boundaries.tsx",
@@ -1755,7 +1755,7 @@
           "slug": "types-of-boundaries-physical-emotional-digital-time",
           "title": "Types of Boundaries: Physical, Emotional, Digital, and Time",
           "currentWords": 805,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1763,7 +1763,7 @@
           "slug": "how-to-say-no-without-guilt-scripts-strategies",
           "title": "How to Say No Without Guilt: Scripts and Strategies",
           "currentWords": 785,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1771,7 +1771,7 @@
           "slug": "boundaries-with-family-navigating-hardest-people-set-limits",
           "title": "Boundaries with Family: Navigating the Hardest People to Set Limits With",
           "currentWords": 689,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1779,7 +1779,7 @@
           "slug": "boundaries-at-work-professional-limits-without-career-consequences",
           "title": "Boundaries at Work: Professional Limits Without Career Consequences",
           "currentWords": 552,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1787,7 +1787,7 @@
           "slug": "when-someone-doesnt-respect-boundaries-what-to-do-next",
           "title": "When Someone Doesn't Respect Your Boundaries: What to Do Next",
           "currentWords": 506,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 5,
@@ -1795,7 +1795,7 @@
           "slug": "boundaries-vs-walls-protect-yourself-without-shutting-people-out",
           "title": "Boundaries vs. Walls: How to Protect Yourself Without Shutting People Out",
           "currentWords": 613,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 6,
@@ -1803,7 +1803,7 @@
           "slug": "digital-boundaries-managing-availability-social-media-screen-time",
           "title": "Digital Boundaries: Managing Availability, Social Media, and Screen Time",
           "currentWords": 710,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 7,
@@ -1811,13 +1811,13 @@
           "slug": "teaching-children-about-boundaries-age-appropriate-conversations",
           "title": "Teaching Children About Boundaries: Age-Appropriate Conversations",
           "currentWords": 1004,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T21:05:00Z"
     },
     "38": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "03a-communication-skills-for-connection",
       "file": "src/data/articles/category-03/03a-communication-skills-for-connection.tsx",
@@ -1829,7 +1829,7 @@
           "slug": "active-listening-make-people-feel-truly-heard",
           "title": "Active Listening: How to Make People Feel Truly Heard",
           "currentWords": 547,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1837,7 +1837,7 @@
           "slug": "nonviolent-communication-expressing-needs-without-blame-judgment",
           "title": "Nonviolent Communication: Expressing Needs Without Blame or Judgment",
           "currentWords": 569,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1845,7 +1845,7 @@
           "slug": "four-horsemen-communication-what-kills-relationships-gottman-research",
           "title": "The Four Horsemen of Communication: What Kills Relationships (Gottman Research)",
           "currentWords": 705,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1853,7 +1853,7 @@
           "slug": "how-to-ask-for-what-you-need-assertive-communication-basics",
           "title": "How to Ask for What You Need: Assertive Communication Basics",
           "currentWords": 540,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1861,13 +1861,13 @@
           "slug": "validation-the-most-underrated-communication-skill",
           "title": "Validation: The Most Underrated Communication Skill",
           "currentWords": 542,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T22:15:00.000Z"
     },
     "39": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "03b-communication-skills-for-connection",
       "file": "src/data/articles/category-03/03b-communication-skills-for-connection.tsx",
@@ -1879,7 +1879,7 @@
           "slug": "why-i-statements-work-taking-ownership-of-your-experience",
           "title": "Why 'I' Statements Work: Taking Ownership of Your Experience",
           "currentWords": 292,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1887,7 +1887,7 @@
           "slug": "communication-styles-passive-aggressive-passive-aggressive-assertive",
           "title": "Communication Styles: Passive, Aggressive, Passive-Aggressive, and Assertive",
           "currentWords": 595,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1895,7 +1895,7 @@
           "slug": "how-to-give-feedback-without-triggering-defensiveness",
           "title": "How to Give Feedback Without Triggering Defensiveness",
           "currentWords": 502,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1903,7 +1903,7 @@
           "slug": "the-art-of-apology-what-makes-im-sorry-actually-work",
           "title": "The Art of Apology: What Makes 'I'm Sorry' Actually Work",
           "currentWords": 454,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1911,10 +1911,10 @@
           "slug": "communicating-across-different-emotional-languages",
           "title": "Communicating Across Different Emotional Languages",
           "currentWords": 511,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T22:20:00.000Z"
     },
     "40": {
       "status": "complete",
@@ -1967,7 +1967,7 @@
       "completedAt": "2026-03-27T12:15:30Z"
     },
     "41": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "04b-navigating-conflict-repair",
       "file": "src/data/articles/category-03/04b-navigating-conflict-repair.tsx",
@@ -1979,7 +1979,7 @@
           "slug": "silent-treatment-harmful-alternatives",
           "title": "The Silent Treatment: Why It's Harmful and What to Do Instead",
           "currentWords": 847,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1987,7 +1987,7 @@
           "slug": "conflict-styles-compete-avoid-accommodate-compromise-collaborate",
           "title": "Conflict Styles: Compete, Avoid, Accommodate, Compromise, and Collaborate",
           "currentWords": 968,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1995,7 +1995,7 @@
           "slug": "after-the-fight-how-to-reconnect",
           "title": "After the Fight: How to Reconnect When Things Were Said in Anger",
           "currentWords": 885,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2003,7 +2003,7 @@
           "slug": "when-conflict-becomes-abuse",
           "title": "When Conflict Becomes Abuse: Recognizing the Line",
           "currentWords": 1029,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2011,13 +2011,13 @@
           "slug": "teaching-kids-conflict-resolution",
           "title": "Teaching Kids Healthy Conflict Resolution Skills",
           "currentWords": 1199,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T22:25:00.000Z"
     },
     "42": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "05a-romantic-relationships-intimacy",
       "file": "src/data/articles/category-03/05a-romantic-relationships-intimacy.tsx",
@@ -2029,7 +2029,7 @@
           "slug": "what-makes-relationship-healthy",
           "title": "What Makes a Relationship Healthy? Evidence-Based Markers",
           "currentWords": 1081,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2037,7 +2037,7 @@
           "slug": "science-of-attraction",
           "title": "The Science of Attraction: What Draws Us to Certain People",
           "currentWords": 816,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2045,7 +2045,7 @@
           "slug": "emotional-intimacy-build-closeness",
           "title": "Emotional Intimacy: How to Build Closeness Beyond Physical Connection",
           "currentWords": 499,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2053,7 +2053,7 @@
           "slug": "relationship-stages-honeymoon-deep-partnership",
           "title": "Relationship Stages: From Honeymoon to Deep Partnership",
           "currentWords": 833,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2061,10 +2061,10 @@
           "slug": "love-languages-research",
           "title": "Love Languages Revisited: What the Research Actually Supports",
           "currentWords": 635,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T23:49:51Z"
     },
     "43": {
       "status": "complete",
@@ -5127,7 +5127,7 @@
       "completedAt": "2026-03-27T06:53:26Z"
     },
     "105": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "06a-depression-specific-populations",
       "file": "src/data/articles/category-07/06a-depression-specific-populations.tsx",
@@ -5139,7 +5139,7 @@
           "slug": "depression-men-underdiagnosed-shows-up-differently",
           "title": "Depression in Men: Why It's Underdiagnosed and How It Shows Up Differently",
           "currentWords": 597,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5147,7 +5147,7 @@
           "slug": "depression-women-hormonal-social-psychological-factors",
           "title": "Depression in Women: Hormonal, Social, and Psychological Factors",
           "currentWords": 706,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5155,7 +5155,7 @@
           "slug": "teen-depression-warning-signs-parents-teachers",
           "title": "Teen Depression: Warning Signs Parents and Teachers Should Know",
           "currentWords": 657,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5163,7 +5163,7 @@
           "slug": "depression-college-students-crisis-campus",
           "title": "Depression in College Students: The Crisis on Campus",
           "currentWords": 655,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5171,10 +5171,10 @@
           "slug": "depression-older-adults-mistaken-for-aging",
           "title": "Depression in Older Adults: Why It Often Gets Mistaken for Aging",
           "currentWords": 597,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T18:15:00Z"
     },
     "106": {
       "status": "complete",
@@ -11067,7 +11067,7 @@
       "completedAt": "2026-03-27T18:45:00.000Z"
     },
     "223": {
-      "status": "pending",
+      "status": "complete",
       "category": 18,
       "subcategoryFile": "03a-menopause-perimenopause",
       "file": "src/data/articles/category-18/03a-menopause-perimenopause.tsx",
@@ -11079,7 +11079,7 @@
           "slug": "perimenopause-and-mental-health-understanding-the-transition",
           "title": "Article 21",
           "currentWords": 475,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -11087,7 +11087,7 @@
           "slug": "menopause-and-depression-hormonal-shifts-and-mood-disorders",
           "title": "Article 22",
           "currentWords": 444,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -11095,7 +11095,7 @@
           "slug": "sleep-menopause-and-mental-health-breaking-the-vicious-cycle",
           "title": "Article 23",
           "currentWords": 474,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -11103,7 +11103,7 @@
           "slug": "brain-fog-and-cognitive-changes-in-menopause-memory-and-focus",
           "title": "Article 24",
           "currentWords": 459,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -11111,10 +11111,10 @@
           "slug": "sexuality-and-body-image-during-menopause-desire-and-self-perception",
           "title": "Article 25",
           "currentWords": 468,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T22:45:00.000Z"
     },
     "224": {
       "status": "complete",
@@ -12274,7 +12274,7 @@
       ]
     },
     "255": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -12286,7 +12286,7 @@
           "slug": "anorexia-nervosa",
           "title": "Anorexia Nervosa: More Than Just Not Eating",
           "currentWords": 194,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 11,
@@ -12294,7 +12294,7 @@
           "slug": "bulimia-nervosa",
           "title": "Bulimia Nervosa: The Hidden Cycle of Bingeing and Purging",
           "currentWords": 206,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 12,
@@ -12302,7 +12302,7 @@
           "slug": "binge-eating-disorder",
           "title": "Binge Eating Disorder: The Most Common Eating Disorder Most People Haven't Heard Of",
           "currentWords": 212,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 13,
@@ -12310,7 +12310,7 @@
           "slug": "arfid",
           "title": "ARFID: When Food Avoidance Goes Beyond Picky Eating",
           "currentWords": 205,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 14,
@@ -12318,9 +12318,10 @@
           "slug": "orthorexia",
           "title": "Orthorexia: When 'Healthy Eating' Becomes Unhealthy",
           "currentWords": 196,
-          "status": "pending"
+          "status": "complete"
         }
-      ]
+      ],
+      "completedAt": "2026-03-27T21:15:30Z"
     },
     "256": {
       "status": "pending",
@@ -12372,7 +12373,7 @@
       ]
     },
     "257": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -12384,7 +12385,7 @@
           "slug": "alcohol-use-disorder",
           "title": "Alcohol Use Disorder: From Social Drinking to Dependence",
           "currentWords": 185,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 21,
@@ -12392,7 +12393,7 @@
           "slug": "substance-use-disorder",
           "title": "Substance Use Disorder: Understanding Addiction Beyond Willpower",
           "currentWords": 194,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 22,
@@ -12400,7 +12401,7 @@
           "slug": "self-medication-hypothesis",
           "title": "The Self-Medication Hypothesis: Why People Use Substances to Cope",
           "currentWords": 188,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 23,
@@ -12408,7 +12409,7 @@
           "slug": "insomnia-disorder",
           "title": "Insomnia Disorder: When Sleep Problems Become Chronic",
           "currentWords": 204,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 24,
@@ -12416,12 +12417,13 @@
           "slug": "sleep-apnea",
           "title": "Sleep Apnea: The Sleep Disorder That Stops Your Breathing",
           "currentWords": 190,
-          "status": "pending"
+          "status": "complete"
         }
-      ]
+      ],
+      "completedAt": "2026-03-27T22:47:30Z"
     },
     "258": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -12433,7 +12435,7 @@
           "slug": "narcolepsy",
           "title": "Narcolepsy: Living with Sudden Sleep Attacks",
           "currentWords": 173,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 26,
@@ -12441,7 +12443,7 @@
           "slug": "somatic-symptom-disorder",
           "title": "Somatic Symptom Disorder: When Physical Symptoms Have No Medical Cause",
           "currentWords": 195,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 27,
@@ -12449,7 +12451,7 @@
           "slug": "illness-anxiety-disorder",
           "title": "Illness Anxiety Disorder: When Health Anxiety Becomes Consuming",
           "currentWords": 193,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 28,
@@ -12457,7 +12459,7 @@
           "slug": "dual-diagnosis",
           "title": "Dual Diagnosis: When Mental Illness and Addiction Co-Occur",
           "currentWords": 191,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 29,
@@ -12465,12 +12467,13 @@
           "slug": "harm-reduction",
           "title": "Harm Reduction: A Pragmatic Approach to Substance Use",
           "currentWords": 216,
-          "status": "pending"
+          "status": "complete"
         }
-      ]
+      ],
+      "completedAt": "2026-03-27T22:58:33Z"
     },
     "259": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -12482,7 +12485,7 @@
           "slug": "schizophrenia",
           "title": "Schizophrenia: Beyond the Stereotypes to Understanding Reality",
           "currentWords": 203,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 31,
@@ -12490,7 +12493,7 @@
           "slug": "schizoaffective-disorder",
           "title": "Schizoaffective Disorder: When Psychosis Meets Mood Episodes",
           "currentWords": 175,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 32,
@@ -12498,7 +12501,7 @@
           "slug": "understanding-psychosis",
           "title": "What Psychosis Actually Is: Symptoms, Causes, and Treatment",
           "currentWords": 183,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 33,
@@ -12506,7 +12509,7 @@
           "slug": "narcissistic-personality-disorder",
           "title": "Narcissistic Personality Disorder: Grandiosity Masking Fragile Self-Esteem",
           "currentWords": 214,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 34,
@@ -12514,12 +12517,13 @@
           "slug": "antisocial-personality-disorder",
           "title": "Antisocial Personality Disorder: Understanding Persistent Pattern of Violating Rights",
           "currentWords": 205,
-          "status": "pending"
+          "status": "complete"
         }
-      ]
+      ],
+      "completedAt": "2026-03-28T00:42:36Z"
     },
     "260": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -12531,7 +12535,7 @@
           "slug": "dependent-personality-disorder",
           "title": "Dependent Personality Disorder: When Fear of Autonomy Becomes Disabling",
           "currentWords": 219,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 36,
@@ -12539,7 +12543,7 @@
           "slug": "schizoid-personality-disorder",
           "title": "Schizoid Personality Disorder: Detachment from Social Relationships",
           "currentWords": 222,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 37,
@@ -12547,7 +12551,7 @@
           "slug": "adjustment-disorder",
           "title": "Adjustment Disorder: When Life Stress Overwhelms Coping",
           "currentWords": 204,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 38,
@@ -12555,7 +12559,7 @@
           "slug": "personality-disorders-overview",
           "title": "Personality Disorders Explained: Enduring Patterns of Inner Experience and Behavior",
           "currentWords": 193,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 39,
@@ -12563,9 +12567,10 @@
           "slug": "living-with-personality-disorder",
           "title": "Living with a Personality Disorder: Recovery, Support, and Hope",
           "currentWords": 209,
-          "status": "pending"
+          "status": "complete"
         }
-      ]
+      ],
+      "completedAt": "2026-03-27T23:17:00Z"
     }
   }
 }

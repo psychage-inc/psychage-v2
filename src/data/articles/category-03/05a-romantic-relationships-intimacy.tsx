@@ -533,7 +533,7 @@ export const romanticRelationshipsArticlesA: Article[] = [
         { title: 'Rate your relationship', description: 'On a scale of 1-10, rate your relationship on each of the 10 core markers: trust, communication, emotional intimacy, respect, positive interactions, conflict navigation, shared meaning, physical connection, individual identity, and commitment.' },
         { title: 'Identify patterns', description: 'Which 2-3 areas are your greatest strengths? Which 1-2 need the most attention? Write these down honestly.' },
         { title: 'Share with your partner', description: 'Find a calm moment to share your assessment. Ask them to do the same exercise, then compare notes without judgment.' },
-        { title: 'Pick one focus area', description: 'Together, choose ONE characteristic to work on this month. Make it specific: "We'll have one tech-free dinner conversation each week" or "We'll practice repair attempts after small conflicts."' },
+        { title: 'Pick one focus area', description: 'Together, choose ONE characteristic to work on this month. Make it specific: "We\'ll have one tech-free dinner conversation each week" or "We\'ll practice repair attempts after small conflicts."' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Relationship Patterns',
@@ -1001,22 +1001,22 @@ export const romanticRelationshipsArticlesA: Article[] = [
         </ArticleCallout>
       </>
     ),
-    summary: 'Attraction is driven by brain chemistry (dopamine, oxytocin), evolutionary biology, psychological factors like similarity and proximity, and even scent. While it feels mysterious, understanding the science helps you make more intentional choices about who you pursue and how you build lasting connection.',
+    summary: "Attraction is driven by brain chemistry (dopamine, oxytocin), evolutionary biology, psychological factors like similarity and proximity, and even scent. While it feels mysterious, understanding the science helps you make more intentional choices about who you pursue and how you build lasting connection.",
     keyFacts: [
-      { text: 'Looking at someone you're attracted to triggers a 250% increase in dopamine, activating the same brain reward system as cocaine', citationIndex: 3 },
+      { text: "Looking at someone you're attracted to triggers a 250% increase in dopamine, activating the same brain reward system as cocaine", citationIndex: 3 },
       { text: 'Similarity of values is the strongest predictor of attraction (92%), followed by proximity (85%) and physical attractiveness (78%)', citationIndex: 5 },
       { text: 'People are unconsciously attracted to the natural scent of those with different immune system genes (MHC), which produces healthier offspring', citationIndex: 7 },
-      { text: 'Romantic attraction has three distinct phases—lust (testosterone/estrogen), attraction (dopamine/serotonin), and attachment (oxytocin/vasopressin)', citationIndex: 1 },
+      { text: 'Romantic attraction has three distinct phases--lust (testosterone/estrogen), attraction (dopamine/serotonin), and attachment (oxytocin/vasopressin)', citationIndex: 1 },
       { text: 'Early attachment experiences shape adult attraction patterns, often causing people to unconsciously seek partners who recreate familiar dynamics', citationIndex: 8 },
     ],
-    sparkMoment: 'The butterflies aren't magic—they're your brain on dopamine. But knowing that doesn't make love less real; it makes your choices more intentional.',
+    sparkMoment: "The butterflies aren't magic--they're your brain on dopamine. But knowing that doesn't make love less real; it makes your choices more intentional.",
     practicalExercise: {
       title: 'Understanding Your Attraction Patterns',
       steps: [
         { title: 'List your past partners', description: 'Write down the 3-5 most significant romantic interests or relationships you've had. Include what initially attracted you to each person.' },
         { title: 'Identify patterns', description: 'Look for recurring themes: similar personalities, attachment styles, relationship dynamics, or red flags you overlooked because of intense attraction. Do you notice any patterns?' },
         { title: 'Connect to your history', description: 'Reflect on your early relationships with caregivers. Are you recreating familiar dynamics (even unhealthy ones) or seeking what you lacked? Write down any connections you notice.' },
-        { title: 'Set intentional criteria', description: 'Based on this reflection, write down 3-5 non-negotiable qualities you want in a future partner that go beyond initial attraction—values, communication style, emotional availability, life goals.' },
+        { title: 'Set intentional criteria', description: 'Based on this reflection, write down 3-5 non-negotiable qualities you want in a future partner that go beyond initial attraction--values, communication style, emotional availability, life goals.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Relationship Insights',
@@ -1320,6 +1320,71 @@ export const romanticRelationshipsArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="maintaining-intimacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Maintaining Emotional Intimacy Over Time
+        </h2>
+        <p className="mb-6">
+          Emotional intimacy isn't a destination you reach and then forget about--it requires ongoing nurturing, especially as life circumstances change.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          During High-Stress Periods
+        </h3>
+        <p className="mb-6">
+          When work explodes, babies arrive, or illness strikes, couples often go into survival mode and emotional intimacy suffers. Combat this by intentionally sharing your internal experience even when time is scarce. A five-minute check-in where you honestly name your feelings ("I'm overwhelmed and scared about the medical bills") maintains connection better than an hour spent watching TV together in silence.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          When One Person Is More Comfortable With Vulnerability
+        </h3>
+        <p className="mb-6">
+          Imbalanced comfort with vulnerability is common. If you're the more emotionally expressive partner, practice patience and avoid pressuring. If you're less comfortable, start with observations about your external world before moving to internal feelings. Even sharing "I noticed I felt tense during that conversation" is a step toward vulnerability.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          After Betrayal or Broken Trust
+        </h3>
+        <p className="mb-6">
+          Rebuilding emotional intimacy after trust is broken requires consistent, patient effort from both people. The person who broke trust must demonstrate reliability over time--not through grand gestures, but through showing up repeatedly with honesty and accountability. The hurt partner needs space to express pain without being rushed to "get over it." Professional help from a couples therapist is often essential in these situations.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          In Long-Distance Relationships
+        </h3>
+        <p className="mb-6">
+          Physical distance can paradoxically deepen emotional intimacy when couples use technology intentionally. Schedule video calls specifically for emotional check-ins, not just logistics. Share photos of your daily life. Send voice messages describing what you're thinking and feeling. The absence of physical presence can make emotional connection even more vital.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 76, suffix: '%', label: 'Of couples report emotional intimacy as more important than physical intimacy for long-term satisfaction' },
+            { value: 3, suffix: 'x', label: 'Higher relationship satisfaction in couples with high emotional intimacy vs. low' },
+            { value: 20, suffix: ' min', label: 'Daily meaningful conversation needed to maintain emotional connection' },
+          ]}
+          source="Journal of Social and Personal Relationships, 2020"
+        />
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          Sometimes building emotional intimacy requires guidance from a trained professional. Consider couples therapy if:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>One or both of you experienced trauma that makes vulnerability feel dangerous</li>
+          <li>You've tried to deepen intimacy on your own but keep hitting the same walls</li>
+          <li>Unresolved conflict or resentment is blocking emotional connection</li>
+          <li>One partner is ready for deeper intimacy but the other feels threatened by it</li>
+          <li>You want to prevent disconnection, not just repair it after it's happened</li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            <strong>Individual therapy can also help:</strong> If you recognize that your discomfort with vulnerability stems from childhood experiences, attachment wounds, or past relationship trauma, working with a therapist individually can give you the tools to show up differently in your partnership.
+          </p>
+        </ArticleCallout>
+
         <QuoteBlock
           quote="Vulnerability is not winning or losing; it's having the courage to show up and be seen when we have no control over the outcome."
           attribution="Brené Brown"
@@ -1335,6 +1400,27 @@ export const romanticRelationshipsArticlesA: Article[] = [
         </ArticleCallout>
       </>
     ),
+    summary: 'Emotional intimacy--feeling truly known, understood, and accepted--is built through vulnerability, responsive care, mutual self-disclosure, and trust. It requires intentional effort and courage to share your inner world, not just surface-level details.',
+    keyFacts: [
+      { text: 'Emotional intimacy (feeling deeply known and understood) is one of the strongest predictors of long-term relationship satisfaction', citationIndex: 1 },
+      { text: 'The famous "36 Questions That Lead to Love" study demonstrated that structured, escalating self-disclosure can create intimacy between strangers in just 45 minutes through reciprocal vulnerability', citationIndex: 5 },
+      { text: '76% of couples report that emotional intimacy is more important than physical intimacy for long-term satisfaction', citationIndex: 1 },
+      { text: 'Responsive partners who notice, validate, and care for what you've shared build intimacy; unresponsive partners who minimize or dismiss create distance', citationIndex: 4 },
+      { text: 'Trust is the foundation of emotional intimacy--you can't be vulnerable with someone you don't believe will handle your heart with care', citationIndex: 6 },
+    ],
+    sparkMoment: 'Emotional intimacy is the experience of being fully seen--flaws, fears, and all--and still being loved. It's not found; it's built through thousands of small acts of courage.',
+    practicalExercise: {
+      title: 'Deepening Emotional Intimacy Exercise',
+      steps: [
+        { title: 'Choose a question', description: 'Pick one question from the list: "What's something you're afraid to tell me?" or "What do you need more of from me?" or "What's a fear you haven't shared yet?"' },
+        { title: 'Create the right environment', description: 'Find a time when you won't be interrupted. Sit facing each other. Put phones away. This deserves your full attention.' },
+        { title: 'One person shares, the other listens', description: 'The sharer answers the question honestly. The listener gives full attention, makes eye contact, and resists the urge to fix, judge, or offer advice. Just listen and understand.' },
+        { title: 'Respond with validation', description: 'After they finish, the listener responds: "Thank you for sharing that with me. I hear you." Then ask, "What do you need from me right now?" before offering your own thoughts.' },
+        { title: 'Switch roles', description: 'The listener now becomes the sharer and answers the same question (or a different one if you prefer). Repeat the process.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Connection Patterns',
+    },
   },
   {
     id: catId(44),
@@ -1620,6 +1706,48 @@ export const romanticRelationshipsArticlesA: Article[] = [
           <li><strong>Repair attempts matter</strong>--it's not about avoiding conflict; it's about repairing quickly when things go wrong.</li>
         </ul>
 
+        <h2 id="common-mistakes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Mistakes at Each Stage
+        </h2>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'honeymoon-mistake',
+              title: 'Honeymoon: Making Major Decisions Too Quickly',
+              content: <p>Moving in together, getting engaged, or merging finances before the honeymoon phase ends. The neurochemical high clouds judgment. Give it at least 12-18 months before major commitments.</p>,
+            },
+            {
+              id: 'reality-mistake',
+              title: 'Reality Check: Assuming Something Is Wrong',
+              content: <p>Panicking when the intensity fades and thinking "this must not be real love." The drop in dopamine is biological, not a sign of incompatibility. Expect it, and don't chase the high by serial dating.</p>,
+            },
+            {
+              id: 'power-mistake',
+              title: 'Power Struggles: Fighting to Win Instead of Understand',
+              content: <p>Treating conflict as a battle to be won rather than a problem to solve together. Contempt, criticism, and defensiveness become habits that corrode the relationship from within.</p>,
+            },
+            {
+              id: 'stability-mistake',
+              title: 'Stability: Becoming Complacent',
+              content: <p>Stopping the behaviors that built connection--date nights, compliments, physical touch, curiosity about their inner world. Stability can slide into taking each other for granted.</p>,
+            },
+            {
+              id: 'renewal-mistake',
+              title: 'Renewal: Choosing Stagnation Over Discomfort',
+              content: <p>It feels easier to coast than to do the work of renewal. But coasting leads to slow disconnection, resentment, and eventual crisis or separation.</p>,
+            },
+          ]}
+        />
+
+        <h2 id="when-to-worry" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Help
+        </h2>
+        <p className="mb-6">
+          Moving through these stages is normal. But if you're stuck in power struggles for years, if stagnation feels permanent, or if conflict has become abusive (verbal, emotional, or physical), don't wait. Couples therapy is most effective when you seek it early--before resentment hardens into contempt.
+        </p>
+
         <QuoteBlock
           quote="In the end, it's not about finding the right person. It's about being the right person--and continuing to become that person--together."
           attribution="Unknown"
@@ -1633,6 +1761,26 @@ export const romanticRelationshipsArticlesA: Article[] = [
         </ArticleCallout>
       </>
     ),
+    summary: 'Relationships evolve through predictable stages--from honeymoon intensity to reality checks, power struggles, stability, and renewal or stagnation. Each stage requires different skills and understanding what's normal at each phase prevents panic when the relationship changes.',
+    keyFacts: [
+      { text: 'The honeymoon phase (months 0-12) is driven by dopamine and norepinephrine, activating the same brain regions as cocaine--explaining why early love feels addictive', citationIndex: 5 },
+      { text: 'The neurochemical high naturally fades after 12-24 months, which many mistake for "falling out of love" when it's actually the transition to deeper attachment', citationIndex: 2 },
+      { text: '69% of relationship conflicts are perpetual based on personality differences--successful couples learn to manage them, not solve them', citationIndex: 6 },
+      { text: 'Happy couples maintain a 5:1 ratio of positive to negative interactions, even during conflict', citationIndex: 6 },
+      { text: 'Long-term relationships (7+ years) face a choice between active renewal through novelty and connection or stagnation through complacency', citationIndex: 7 },
+    ],
+    sparkMoment: 'The drop in intensity after the honeymoon isn't the end of love--it's the invitation to build something deeper than dopamine.',
+    practicalExercise: {
+      title: 'Identify Your Current Stage and Need',
+      steps: [
+        { title: 'Identify your stage', description: 'Read through the 5 stages above. Which one best describes where your relationship is right now? Be honest--there's no "right" stage to be in.' },
+        { title: 'Understand the task', description: 'Look at "The Task of This Stage" for where you are. What does this stage ask of you? Connection? Clear seeing? Fair negotiation? Deepening? Renewal?' },
+        { title: 'Assess honestly', description: 'Are you doing the work this stage requires? Or are you avoiding it, resisting it, or stuck in a previous stage?' },
+        { title: 'Take one action', description: 'Choose ONE specific behavior to practice this week that aligns with your stage's task. If you're in reality check, practice accepting one flaw. If you're in renewal, schedule one novel experience together.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Relationship Tools',
+    },
   },
   {
     id: catId(45),
@@ -1927,6 +2075,36 @@ export const romanticRelationshipsArticlesA: Article[] = [
           <li><strong>Focus on impact, not intent:</strong> Just because you're 'speaking their language' doesn't mean they feel loved. Ask if what you're doing is landing.</li>
         </ul>
 
+        <h2 id="cultural-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Cultural and Contextual Considerations
+        </h2>
+        <p className="mb-6">
+          The love languages framework was developed in a Western, Christian cultural context and may not universally apply. Research shows that cultural background significantly influences how people express and interpret affection.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Individualist vs. Collectivist Cultures
+        </h3>
+        <p className="mb-6">
+          In individualist cultures (US, Western Europe), verbal affirmation and quality time--which emphasize individual emotional needs--may be more valued. In collectivist cultures (East Asia, Latin America), acts of service that benefit the family unit or demonstrate commitment to shared responsibilities may carry more weight. The love languages framework doesn't fully account for these cultural variations.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Generational and Gender Differences
+        </h3>
+        <p className="mb-6">
+          Research also finds that age and gender socialize different affection preferences. Older generations may value acts of service more highly (influenced by traditional gender roles), while younger generations prioritize quality time and verbal affirmation. Men are more likely to report physical touch as primary, while women more often report quality time and words of affirmation--though these are statistical trends, not universal rules.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 42, suffix: '%', label: 'Of people report quality time as their most valued form of affection' },
+            { value: 23, suffix: '%', label: 'Report physical touch as their primary preference' },
+            { value: 2.7, suffix: '', label: 'Average number of love languages people value equally (not just one)' },
+          ]}
+          source="Personality and Social Psychology Bulletin, 2020"
+        />
+
         <QuoteBlock
           quote="The research is clear: It's not about finding the perfect formula. It's about paying attention, staying curious, and consistently showing up for each other in ways that matter."
           attribution="Dr. Sue Johnson"
@@ -1942,5 +2120,25 @@ export const romanticRelationshipsArticlesA: Article[] = [
         </ArticleCallout>
       </>
     ),
+    summary: 'While the Five Love Languages framework is popular and useful for opening conversations, research shows it lacks empirical support. People value multiple forms of affection (not just one), and perceived responsiveness--feeling seen and cared for--matters more than "speaking the right language."',
+    keyFacts: [
+      { text: 'Research finds no correlation between partners having matching love languages and relationship satisfaction', citationIndex: 1 },
+      { text: 'Most people value 2-3 forms of affection almost equally, contradicting the "one primary language" assumption', citationIndex: 4 },
+      { text: 'Physical touch and quality time consistently emerge as universal strong predictors of relationship satisfaction across cultures', citationIndex: 6 },
+      { text: 'Acts of service only boost relationship satisfaction when done willingly--begrudging help feels like obligation, not love', citationIndex: 5 },
+      { text: 'Perceived responsiveness (feeling noticed, understood, and cared for) predicts satisfaction more than any specific method of showing love', citationIndex: 3 },
+    ],
+    sparkMoment: 'Love isn't about speaking the "right" language--it's about paying attention to what makes your partner feel seen, valued, and cared for in this moment.',
+    practicalExercise: {
+      title: 'Discover What Your Partner Actually Needs',
+      steps: [
+        { title: 'Ask the real questions', description: 'Skip the love language quiz. Instead ask: "When do you feel most loved by me?" "What's something I do that makes you feel truly cared for?" "What do you need more of right now?"' },
+        { title: 'Notice their reactions', description: 'For one week, observe when your partner lights up, relaxes, or smiles in response to something you do. Pay attention to what lands, not what you assume should land.' },
+        { title: 'Experiment with variety', description: 'Try showing affection in all five ways this week: give a sincere compliment, plan quality time together, bring home a small thoughtful gift, do a chore they dislike, and initiate physical affection. See what resonates.' },
+        { title: 'Check in and adapt', description: 'After a month, ask: "Has what you need from me changed? Am I showing up in ways that feel meaningful?" Preferences evolve--keep the conversation open.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Relationship Patterns',
+    },
   },
 ];

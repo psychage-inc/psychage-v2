@@ -16,9 +16,9 @@ export const neurodevelopmentalArticles: Article[] = [
       <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">For decades, ADHD was considered a childhood condition that you'd "grow out of." We now know that 60% of children with ADHD continue to experience significant symptoms into adulthood <Citation id="1" index={1} source="JAMA Psychiatry" year="2021" tier={1} />. Adult ADHD affects approximately 4.4% of the adult population, though many remain undiagnosed <Citation id="2" index={2} source="NIMH" year="2023" tier={2} />. Adults with ADHD face unique challenges: missed deadlines, disorganized workspaces, impulsive decisions, relationship conflicts, and chronic feelings of underachievement despite high intelligence.</p>
     </div>
     <h2 id="symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How ADHD Looks Different in Adults</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">While children with ADHD may be hyperactive and disruptive, adults typically present with subtler symptoms. Physical hyperactivity often becomes internal restlessness—a constant need to be doing something, difficulty relaxing, racing thoughts. Inattention manifests as chronic procrastination, difficulty completing projects, losing important items, and forgetting appointments. Executive function deficits cause particular problems: poor time management ("time blindness"), difficulty prioritizing tasks, challenges with working memory, and trouble regulating emotions <Citation id="4" index={3} source="Neuropsychology Review" year="2021" tier={1} />. Many adults develop compensatory strategies that mask symptoms, leading to later diagnosis—often after a child's ADHD diagnosis prompts recognition of similar patterns.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">While children with ADHD may be hyperactive and disruptive, adults typically present with subtler symptoms. Physical hyperactivity often becomes internal restlessness--a constant need to be doing something, difficulty relaxing, racing thoughts. Inattention manifests as chronic procrastination, difficulty completing projects, losing important items, and forgetting appointments. Executive function deficits cause particular problems: poor time management ("time blindness"), difficulty prioritizing tasks, challenges with working memory, and trouble regulating emotions <Citation id="4" index={3} source="Neuropsychology Review" year="2021" tier={1} />. Many adults develop compensatory strategies that mask symptoms, leading to later diagnosis--often after a child's ADHD diagnosis prompts recognition of similar patterns.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment and Management</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Stimulant medications (methylphenidate, amphetamines) remain first-line treatment, showing 70-80% response rates. Non-stimulants like atomoxetine and bupropion offer alternatives for those who can't tolerate stimulants. Medication alone, however, isn't enough. Cognitive-behavioral therapy specifically adapted for adult ADHD teaches organizational skills, time management strategies, and emotional regulation techniques <Citation id="3" index={4} source="American Journal of Psychiatry" year="2020" tier={1} />. Environmental modifications—external structure through calendars, timers, reminders, body-doubling (working alongside others)—compensate for executive function deficits. Many adults find that combining medication, therapy, and lifestyle changes (regular exercise, adequate sleep, reduced caffeine) produces the best outcomes. ADHD coaching has also emerged as a valuable support, helping adults translate strategies into daily practice.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Stimulant medications (methylphenidate, amphetamines) remain first-line treatment, showing 70-80% response rates. Non-stimulants like atomoxetine and bupropion offer alternatives for those who can't tolerate stimulants. Medication alone, however, isn't enough. Cognitive-behavioral therapy specifically adapted for adult ADHD teaches organizational skills, time management strategies, and emotional regulation techniques <Citation id="3" index={4} source="American Journal of Psychiatry" year="2020" tier={1} />. Environmental modifications--external structure through calendars, timers, reminders, body-doubling (working alongside others)--compensate for executive function deficits. Many adults find that combining medication, therapy, and lifestyle changes (regular exercise, adequate sleep, reduced caffeine) produces the best outcomes. ADHD coaching has also emerged as a valuable support, helping adults translate strategies into daily practice.</p>
   </> },
   { id: catId(42), slug: 'adhd-women', title: "ADHD in Women and Girls: Why It's Underdiagnosed and Misunderstood", description: "ADHD presents differently in women, leading to underdiagnosis.", image: "/images/articles/cat13/cover-042.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 12, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["ADHD", 'Women', 'Gender'], citations: [
     { id: '1', text: 'ADHD Gender Differences', source: 'Lancet Psychiatry', year: '2020', link: 'https://doi.org/10.1016/S2215-0366(20)30203-4', tier: 1 },
@@ -26,12 +26,12 @@ export const neurodevelopmentalArticles: Article[] = [
     { id: '3', text: 'ADHD Masking in Females', source: 'Frontiers in Psychiatry', year: '2020', link: 'https://doi.org/10.3389/fpsyt.2020.00816', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">ADHD in women and girls remains dramatically underdiagnosed. While boys are diagnosed at 3:1 rates in childhood, adult diagnosis rates approach 1:1, suggesting massive childhood underdetection in girls <Citation id="1" index={1} source="Lancet Psychiatry" year="2020" tier={1} />. The reason? ADHD presents differently in females. Girls are more likely to have inattentive-type ADHD (daydreaming, "spacey," disorganized) rather than hyperactive-impulsive type, so they're seen as "ditzy" or "unmotivated" rather than disruptive. They internalize struggles, developing anxiety and depression, and engage in intensive "masking"—working twice as hard to appear normal—which conceals underlying ADHD until compensatory strategies fail in adulthood <Citation id="3" index={2} source="Frontiers in Psychiatry" year="2020" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">ADHD in women and girls remains dramatically underdiagnosed. While boys are diagnosed at 3:1 rates in childhood, adult diagnosis rates approach 1:1, suggesting massive childhood underdetection in girls <Citation id="1" index={1} source="Lancet Psychiatry" year="2020" tier={1} />. The reason? ADHD presents differently in females. Girls are more likely to have inattentive-type ADHD (daydreaming, "spacey," disorganized) rather than hyperactive-impulsive type, so they're seen as "ditzy" or "unmotivated" rather than disruptive. They internalize struggles, developing anxiety and depression, and engage in intensive "masking"--working twice as hard to appear normal--which conceals underlying ADHD until compensatory strategies fail in adulthood <Citation id="3" index={2} source="Frontiers in Psychiatry" year="2020" tier={1} />.</p>
     </div>
     <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Unique Presentation in Women</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Women with ADHD often describe feeling "broken" or "lazy" after years of struggling with tasks others find easy. Common patterns: chronic lateness despite frantic efforts, forgotten appointments, lost keys, incomplete household tasks, difficulty maintaining friendships (forgetting to respond to texts), impulsive spending, emotional dysregulation (quick to anger or tears), and overwhelming feelings of shame. Hormonal fluctuations (menstrual cycle, pregnancy, perimenopause) significantly impact symptom severity, with many women noticing worsening symptoms premenstrually or during menopause <Citation id="2" index={3} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. Societal expectations compound the problem—women are "supposed to" be organized, detail-oriented caregivers, making ADHD-related struggles feel like personal failures rather than neurobiological differences.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Women with ADHD often describe feeling "broken" or "lazy" after years of struggling with tasks others find easy. Common patterns: chronic lateness despite frantic efforts, forgotten appointments, lost keys, incomplete household tasks, difficulty maintaining friendships (forgetting to respond to texts), impulsive spending, emotional dysregulation (quick to anger or tears), and overwhelming feelings of shame. Hormonal fluctuations (menstrual cycle, pregnancy, perimenopause) significantly impact symptom severity, with many women noticing worsening symptoms premenstrually or during menopause <Citation id="2" index={3} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. Societal expectations compound the problem--women are "supposed to" be organized, detail-oriented caregivers, making ADHD-related struggles feel like personal failures rather than neurobiological differences.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Considerations</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Treatment follows similar principles as men—stimulant medications, therapy, environmental modifications—but requires attention to female-specific factors. Hormonal changes may necessitate dose adjustments across the menstrual cycle. Comorbid anxiety and depression (present in 70%+ of women with ADHD) need concurrent treatment. Therapy should address shame, perfectionism, and people-pleasing patterns common in late-diagnosed women. Many benefit from women's ADHD support groups where experiences of "constantly disappointing people" and "working three times as hard for half the result" resonate deeply. Recognition and diagnosis alone provide profound relief—reframing a lifetime of struggles not as character flaws but as a manageable neurobiological condition.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Treatment follows similar principles as men--stimulant medications, therapy, environmental modifications--but requires attention to female-specific factors. Hormonal changes may necessitate dose adjustments across the menstrual cycle. Comorbid anxiety and depression (present in 70%+ of women with ADHD) need concurrent treatment. Therapy should address shame, perfectionism, and people-pleasing patterns common in late-diagnosed women. Many benefit from women's ADHD support groups where experiences of "constantly disappointing people" and "working three times as hard for half the result" resonate deeply. Recognition and diagnosis alone provide profound relief--reframing a lifetime of struggles not as character flaws but as a manageable neurobiological condition.</p>
   </> },
   { id: catId(43), slug: 'autism-adults', title: 'Autism Spectrum: Understanding Neurodiversity in Adults', description: 'Autism is lifelong. Learn about adult diagnosis and support.', image: "/images/articles/cat13/cover-043.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 13, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Autism", 'ASD', 'Neurodiversity'], citations: [
     { id: '1', text: 'Autism Spectrum Disorder', source: 'NIMH', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/autism-spectrum-disorders-asd', tier: 2 },
@@ -39,10 +39,10 @@ export const neurodevelopmentalArticles: Article[] = [
     { id: '3', text: 'Neurodiversity Paradigm', source: 'Frontiers in Psychology', year: '2020', link: 'https://doi.org/10.3389/fpsyg.2020.00802', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Autism spectrum disorder (ASD) is a lifelong neurodevelopmental condition characterized by differences in social communication, sensory processing, and patterns of behavior. Prevalence is estimated at 1-2% of the population <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Modern understanding emphasizes the "spectrum" concept—autism presents vastly differently across individuals, from those requiring substantial support to those living independently with minimal accommodations. Many autistic adults describe autism not as a disorder to be cured but as a different neurological operating system with both challenges and strengths <Citation id="3" index={2} source="Frontiers in Psychology" year="2020" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Autism spectrum disorder (ASD) is a lifelong neurodevelopmental condition characterized by differences in social communication, sensory processing, and patterns of behavior. Prevalence is estimated at 1-2% of the population <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Modern understanding emphasizes the "spectrum" concept--autism presents vastly differently across individuals, from those requiring substantial support to those living independently with minimal accommodations. Many autistic adults describe autism not as a disorder to be cured but as a different neurological operating system with both challenges and strengths <Citation id="3" index={2} source="Frontiers in Psychology" year="2020" tier={1} />.</p>
     </div>
     <h2 id="characteristics" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Core Characteristics in Adults</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Social communication differences include difficulty reading social cues, preference for direct communication, challenges with small talk, literal interpretation of language, and atypical eye contact or body language. Many autistic adults describe social interactions as exhausting "performances" requiring conscious analysis of unwritten rules neurotypical people intuitively grasp. Restricted interests manifest as deep, specialized knowledge in specific topics. Repetitive behaviors include stimming (self-stimulatory behaviors like hand-flapping, rocking), need for routine and predictability, and distress with unexpected changes. Sensory sensitivities—hyper- or hypo-reactivity to sounds, lights, textures, smells—cause significant daily challenges <Citation id="2" index={3} source="Lancet Psychiatry" year="2021" tier={1} />. Not all autistic adults have intellectual disabilities; many have average or above-average intelligence.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Social communication differences include difficulty reading social cues, preference for direct communication, challenges with small talk, literal interpretation of language, and atypical eye contact or body language. Many autistic adults describe social interactions as exhausting "performances" requiring conscious analysis of unwritten rules neurotypical people intuitively grasp. Restricted interests manifest as deep, specialized knowledge in specific topics. Repetitive behaviors include stimming (self-stimulatory behaviors like hand-flapping, rocking), need for routine and predictability, and distress with unexpected changes. Sensory sensitivities--hyper- or hypo-reactivity to sounds, lights, textures, smells--cause significant daily challenges <Citation id="2" index={3} source="Lancet Psychiatry" year="2021" tier={1} />. Not all autistic adults have intellectual disabilities; many have average or above-average intelligence.</p>
     <h2 id="support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Support and Accommodation</h2>
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Autism isn't "curable" nor does it need to be. Support focuses on accommodations that allow autistic individuals to thrive: workplace modifications (quiet spaces, clear communication, flexibility with social events), sensory-friendly environments, and acceptance of autistic communication styles. Therapy addresses co-occurring conditions (anxiety, depression) rather than trying to make autistic people "act normal." The neurodiversity movement advocates for acceptance and accommodation rather than normalization, emphasizing that autistic people bring valuable perspectives and should have agency in their own support decisions.</p>
   </> },
@@ -52,12 +52,12 @@ export const neurodevelopmentalArticles: Article[] = [
     { id: '3', text: 'Diagnostic Assessment', source: 'Journal of Autism and Developmental Disorders', year: '2020', link: 'https://doi.org/10.1007/s10803-020-04583-3', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Many adults receive autism diagnoses in their 30s, 40s, or beyond—often after years of feeling "different" without understanding why <Citation id="1" index={1} source="Autism Research" year="2020" tier={1} />. Common triggers for late diagnosis: a child's autism diagnosis prompts parental recognition, burnout from years of masking, or realization that struggles aren't "normal" or character flaws. Late-diagnosed individuals often describe profound relief mixed with grief—relief at finally having an explanation, grief for decades spent believing they were broken or defective. Diagnosis validates lifelong experiences: difficulty making friends wasn't personal failure but neurological difference; sensory overwhelm wasn't "being dramatic" but legitimate distress; rigid routines weren't "controlling" but necessary for functioning <Citation id="2" index={2} source="Autism in Adulthood" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Many adults receive autism diagnoses in their 30s, 40s, or beyond--often after years of feeling "different" without understanding why <Citation id="1" index={1} source="Autism Research" year="2020" tier={1} />. Common triggers for late diagnosis: a child's autism diagnosis prompts parental recognition, burnout from years of masking, or realization that struggles aren't "normal" or character flaws. Late-diagnosed individuals often describe profound relief mixed with grief--relief at finally having an explanation, grief for decades spent believing they were broken or defective. Diagnosis validates lifelong experiences: difficulty making friends wasn't personal failure but neurological difference; sensory overwhelm wasn't "being dramatic" but legitimate distress; rigid routines weren't "controlling" but necessary for functioning <Citation id="2" index={2} source="Autism in Adulthood" year="2021" tier={1} />.</p>
     </div>
     <h2 id="diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Diagnostic Process</h2>
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Adult autism assessment typically involves detailed developmental history (often requiring childhood records or parent interviews), clinical interview, self-report questionnaires, and sometimes standardized assessments like ADOS-2. Challenges arise because many adults have developed sophisticated masking strategies that conceal autistic traits during brief clinical encounters. Women and non-binary individuals face particular diagnostic barriers due to gender biases in assessment tools developed primarily studying autistic boys <Citation id="3" index={3} source="JADD" year="2020" tier={1} />. Diagnosis opens access to support services, workplace accommodations, and community connection.</p>
     <h2 id="after-diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Life After Diagnosis</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Post-diagnosis, many undergo an identity shift—reframing life experiences through an autism lens. Longtime coping strategies can be reassessed: Are they helpful or are you forcing yourself to act neurotypical at great cost? Diagnosis allows permission to unmask, set boundaries, seek accommodations, and connect with autistic community. Some experience temporary identity crisis or anger about missed earlier diagnosis. Others find profound liberation. There's no single "right" way to respond—diagnosis is information, not a prescription for how to live.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Post-diagnosis, many undergo an identity shift--reframing life experiences through an autism lens. Longtime coping strategies can be reassessed: Are they helpful or are you forcing yourself to act neurotypical at great cost? Diagnosis allows permission to unmask, set boundaries, seek accommodations, and connect with autistic community. Some experience temporary identity crisis or anger about missed earlier diagnosis. Others find profound liberation. There's no single "right" way to respond--diagnosis is information, not a prescription for how to live.</p>
   </> },
   { id: catId(45), slug: 'adhd-autism-overlap', title: 'ADHD and Autism Overlap: When Conditions Co-Occur', description: 'ADHD and autism frequently co-occur, creating unique challenges.', image: "/images/articles/cat13/cover-045.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["ADHD", 'Autism', 'Comorbidity'], citations: [
     { id: '1', text: 'ADHD-Autism Comorbidity', source: 'Journal of Child Psychology and Psychiatry', year: '2020', link: 'https://doi.org/10.1111/jcpp.13279', tier: 1 },
@@ -65,34 +65,34 @@ export const neurodevelopmentalArticles: Article[] = [
     { id: '3', text: 'Treatment in Dual Diagnosis', source: 'Journal of Attention Disorders', year: '2020', link: 'https://doi.org/10.1177/1087054720923407', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">ADHD and autism co-occur at striking rates: 30-50% of autistic individuals also meet ADHD criteria, and 20-30% with ADHD show significant autistic traits <Citation id="1" index={1} source="JCPP" year="2020" tier={1} />. Until DSM-5 (2013), these conditions couldn't officially be diagnosed together, leading to missed diagnoses. The overlap isn't coincidental—both involve executive dysfunction, sensory sensitivities, and social challenges—but they manifest differently. ADHD brings impulsivity, distractibility, inconsistent hyperfocus. Autism adds communication differences, need for routine, specialized interests. Together, they create unique challenges: ADHD's impulsivity conflicts with autism's need for predictability; ADHD's distraction interferes with autism's detail focus; social challenges compound <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">ADHD and autism co-occur at striking rates: 30-50% of autistic individuals also meet ADHD criteria, and 20-30% with ADHD show significant autistic traits <Citation id="1" index={1} source="JCPP" year="2020" tier={1} />. Until DSM-5 (2013), these conditions couldn't officially be diagnosed together, leading to missed diagnoses. The overlap isn't coincidental--both involve executive dysfunction, sensory sensitivities, and social challenges--but they manifest differently. ADHD brings impulsivity, distractibility, inconsistent hyperfocus. Autism adds communication differences, need for routine, specialized interests. Together, they create unique challenges: ADHD's impulsivity conflicts with autism's need for predictability; ADHD's distraction interferes with autism's detail focus; social challenges compound <Citation id="2" index={2} source="Neuroscience & Biobehavioral Reviews" year="2021" tier={1} />.</p>
     </div>
     <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Dual Diagnosis Presents</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">People with both conditions describe constant internal conflict: needing routine but unable to maintain it, wanting social connection but finding interaction exhausting, hyperfocusing on special interests but abandoning them mid-project. Executive dysfunction is severe—planning, organization, time management all impaired. Emotional regulation is particularly challenging, with rapid mood shifts and meltdowns. Sensory sensitivities combine with ADHD stimulation-seeking, creating contradictory needs. Diagnosis is complex; symptoms overlap and one condition can mask the other.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">People with both conditions describe constant internal conflict: needing routine but unable to maintain it, wanting social connection but finding interaction exhausting, hyperfocusing on special interests but abandoning them mid-project. Executive dysfunction is severe--planning, organization, time management all impaired. Emotional regulation is particularly challenging, with rapid mood shifts and meltdowns. Sensory sensitivities combine with ADHD stimulation-seeking, creating contradictory needs. Diagnosis is complex; symptoms overlap and one condition can mask the other.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Approaches</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Treatment requires addressing both conditions. ADHD medication can help with focus and impulsivity but won't address autistic communication or sensory needs. Therapy should integrate strategies: environmental structure (autism) + external scaffolding for executive function (ADHD), social skills training adapted for both conditions, sensory accommodations <Citation id="3" index={3} source="Journal of Attention Disorders" year="2020" tier={1} />. Self-compassion is crucial—dual diagnosis isn't "twice the deficit" but different wiring requiring individualized support.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Treatment requires addressing both conditions. ADHD medication can help with focus and impulsivity but won't address autistic communication or sensory needs. Therapy should integrate strategies: environmental structure (autism) + external scaffolding for executive function (ADHD), social skills training adapted for both conditions, sensory accommodations <Citation id="3" index={3} source="Journal of Attention Disorders" year="2020" tier={1} />. Self-compassion is crucial--dual diagnosis isn't "twice the deficit" but different wiring requiring individualized support.</p>
   </> },
   { id: catId(46), slug: 'hyperkinetic-disorder', title: 'Hyperkinetic Disorder: Understanding the ICD Perspective on Attention and Activity', description: 'Hyperkinetic disorder is the ICD equivalent of ADHD.', image: "/images/articles/cat13/cover-046.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Hyperkinetic Disorder", 'ADHD', 'ICD'], citations: [
     { id: '1', text: 'ICD-11 Classification', source: 'WHO', year: '2022', link: 'https://icd.who.int/', tier: 2 },
     { id: '2', text: 'DSM vs ICD ADHD', source: 'European Child & Adolescent Psychiatry', year: '2020', link: 'https://doi.org/10.1007/s00787-020-01516-x', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">While North America uses DSM-5-TR for ADHD diagnosis, much of the world uses the WHO's International Classification of Diseases (ICD), which terms the condition "Hyperkinetic Disorder" <Citation id="1" index={1} source="WHO" year="2022" tier={2} />. ICD-11 (current version) aligns more closely with DSM-5 than previous editions, but differences remain. Hyperkinetic disorder emphasizes pervasive hyperactivity and inattention across multiple settings, requiring both symptoms be present. ICD traditionally used narrower criteria than DSM, meaning hyperkinetic disorder diagnosis captured more severely affected individuals. This difference led to lower prevalence rates in Europe (1-2%) compared to North America (5-7%) using ADHD criteria—not because ADHD is less common but because diagnostic thresholds differed <Citation id="2" index={2} source="ECAP" year="2020" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">While North America uses DSM-5-TR for ADHD diagnosis, much of the world uses the WHO's International Classification of Diseases (ICD), which terms the condition "Hyperkinetic Disorder" <Citation id="1" index={1} source="WHO" year="2022" tier={2} />. ICD-11 (current version) aligns more closely with DSM-5 than previous editions, but differences remain. Hyperkinetic disorder emphasizes pervasive hyperactivity and inattention across multiple settings, requiring both symptoms be present. ICD traditionally used narrower criteria than DSM, meaning hyperkinetic disorder diagnosis captured more severely affected individuals. This difference led to lower prevalence rates in Europe (1-2%) compared to North America (5-7%) using ADHD criteria--not because ADHD is less common but because diagnostic thresholds differed <Citation id="2" index={2} source="ECAP" year="2020" tier={1} />.</p>
     </div>
     <h2 id="differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Key Differences from ADHD</h2>
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">ICD-11 now recognizes predominantly inattentive and predominantly hyperactive-impulsive presentations (like DSM-5), reducing historical differences. However, ICD retains stricter criteria: symptoms must cause "significant impairment" and be present in multiple settings with clear evidence of dysfunction. DSM-5 ADHD requires symptoms be "inconsistent with developmental level" but has slightly lower functional impairment thresholds. For practical purposes, individuals meeting hyperkinetic disorder criteria almost always meet ADHD criteria, though reverse isn't always true.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Clinical Implications</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Regardless of terminology, treatment approaches are identical: stimulant medications, behavioral interventions, environmental modifications, psychoeducation. The diagnostic system used matters more for epidemiological research and insurance coding than clinical care. If you're diagnosed with hyperkinetic disorder, you're describing the same neurodevelopmental condition as someone diagnosed with ADHD—different labels for the same underlying biology.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Regardless of terminology, treatment approaches are identical: stimulant medications, behavioral interventions, environmental modifications, psychoeducation. The diagnostic system used matters more for epidemiological research and insurance coding than clinical care. If you're diagnosed with hyperkinetic disorder, you're describing the same neurodevelopmental condition as someone diagnosed with ADHD--different labels for the same underlying biology.</p>
   </> },
   { id: catId(47), slug: 'adhd-executive-function', title: 'ADHD and Executive Function: Why Simple Tasks Feel Impossible', description: 'Executive dysfunction explains ADHD challenges beyond attention.', image: "/images/articles/cat13/cover-047.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["ADHD", 'Executive Function'], citations: [
     { id: '1', text: 'Executive Function Deficits in ADHD', source: 'Neuropsychology Review', year: '2021', link: 'https://doi.org/10.1007/s11065-020-09465-0', tier: 1 },
     { id: '2', text: 'ADHD and Working Memory', source: 'Biological Psychiatry', year: '2020', link: 'https://doi.org/10.1016/j.biopsych.2020.02.005', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">ADHD is often described as "attention deficit" but executive dysfunction better explains the full picture. Executive functions are brain processes managing goal-directed behavior: working memory (holding information), inhibition (stopping impulses), cognitive flexibility (switching tasks), planning, organization, time management, emotional regulation <Citation id="1" index={1} source="Neuropsychology Review" year="2021" tier={1} />. People with ADHD show significant impairments across these domains. This explains why "just focus" doesn't work—it's like telling someone with broken legs to "just walk." The neurobiology isn't there to support these functions at neurotypical levels. Working memory deficits mean you forget what you were doing mid-task, lose the thread of conversations, can't hold multi-step instructions <Citation id="2" index={2} source="Biological Psychiatry" year="2020" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">ADHD is often described as "attention deficit" but executive dysfunction better explains the full picture. Executive functions are brain processes managing goal-directed behavior: working memory (holding information), inhibition (stopping impulses), cognitive flexibility (switching tasks), planning, organization, time management, emotional regulation <Citation id="1" index={1} source="Neuropsychology Review" year="2021" tier={1} />. People with ADHD show significant impairments across these domains. This explains why "just focus" doesn't work--it's like telling someone with broken legs to "just walk." The neurobiology isn't there to support these functions at neurotypical levels. Working memory deficits mean you forget what you were doing mid-task, lose the thread of conversations, can't hold multi-step instructions <Citation id="2" index={2} source="Biological Psychiatry" year="2020" tier={1} />.</p>
     </div>
     <h2 id="manifestations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Daily Manifestations</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Executive dysfunction appears as: chronic procrastination (inability to initiate tasks despite consequences), "time blindness" (no intuitive sense of time passing), difficulty prioritizing (everything feels equally urgent or equally unimportant), paralysis when facing multiple steps, hyperfocus on interesting tasks while unable to start boring-but-necessary ones, forgetting items you just put down, losing track mid-conversation. Emotional dysregulation causes quick anger, disproportionate reactions to minor frustrations, difficulty calming down once upset. These aren't character flaws or laziness—they're neurological differences in frontal lobe functioning.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Executive dysfunction appears as: chronic procrastination (inability to initiate tasks despite consequences), "time blindness" (no intuitive sense of time passing), difficulty prioritizing (everything feels equally urgent or equally unimportant), paralysis when facing multiple steps, hyperfocus on interesting tasks while unable to start boring-but-necessary ones, forgetting items you just put down, losing track mid-conversation. Emotional dysregulation causes quick anger, disproportionate reactions to minor frustrations, difficulty calming down once upset. These aren't character flaws or laziness--they're neurological differences in frontal lobe functioning.</p>
     <h2 id="strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Compensatory Strategies</h2>
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Since internal executive function is impaired, external scaffolding helps: visual timers, body-doubling (working near others), breaking tasks into tiny steps, using alarms/reminders extensively, building "activation energy" through music or movement, accepting you need more structure than neurotypical people. Medication improves executive function by enhancing frontal lobe dopamine and norepinephrine, making these brain processes more accessible. Combination of medication + external systems provides best outcomes.</p>
   </> },
@@ -102,22 +102,22 @@ export const neurodevelopmentalArticles: Article[] = [
     { id: '3', text: 'Gender and Masking', source: 'Molecular Autism', year: '2020', link: 'https://doi.org/10.1186/s13229-020-00352-z', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Autistic masking—also called camouflaging or compensating—involves suppressing autistic traits to appear neurotypical. It includes forcing eye contact despite discomfort, scripting conversations, copying others' body language, suppressing stimming, hiding special interests, pretending to understand social cues you actually don't <Citation id="1" index={1} source="Autism in Adulthood" year="2020" tier={1} />. Masking is often unconscious, learned through years of being told your natural behavior is "wrong." It's particularly common in women, who face stronger social pressure to conform and show higher masking rates than men <Citation id="3" index={3} source="Molecular Autism" year="2020" tier={1} />. Short-term, masking helps avoid bullying and social rejection. Long-term, it's exhausting and harmful.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Autistic masking--also called camouflaging or compensating--involves suppressing autistic traits to appear neurotypical. It includes forcing eye contact despite discomfort, scripting conversations, copying others' body language, suppressing stimming, hiding special interests, pretending to understand social cues you actually don't <Citation id="1" index={1} source="Autism in Adulthood" year="2020" tier={1} />. Masking is often unconscious, learned through years of being told your natural behavior is "wrong." It's particularly common in women, who face stronger social pressure to conform and show higher masking rates than men <Citation id="3" index={3} source="Molecular Autism" year="2020" tier={1} />. Short-term, masking helps avoid bullying and social rejection. Long-term, it's exhausting and harmful.</p>
     </div>
     <h2 id="consequences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Consequences of Chronic Masking</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Masking requires constant conscious effort—analyzing every interaction, suppressing instinctive responses, performing "normal" behavior. This causes profound exhaustion, autistic burnout (loss of skills, inability to cope with previously manageable tasks), anxiety, depression, and loss of self-identity. Many describe feeling like actors in their own lives, unsure who they really are beneath the mask <Citation id="2" index={2} source="Autism" year="2021" tier={1} />. Masking contributes to late diagnosis—if you successfully hide autistic traits, clinicians don't see them. It also creates a double bind: unmask and face social rejection; continue masking and burn out.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Masking requires constant conscious effort--analyzing every interaction, suppressing instinctive responses, performing "normal" behavior. This causes profound exhaustion, autistic burnout (loss of skills, inability to cope with previously manageable tasks), anxiety, depression, and loss of self-identity. Many describe feeling like actors in their own lives, unsure who they really are beneath the mask <Citation id="2" index={2} source="Autism" year="2021" tier={1} />. Masking contributes to late diagnosis--if you successfully hide autistic traits, clinicians don't see them. It also creates a double bind: unmask and face social rejection; continue masking and burn out.</p>
     <h2 id="unmasking" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Unmasking Process</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Unmasking involves gradually allowing authentic autistic behavior: stimming when needed, avoiding eye contact if it's uncomfortable, openly discussing special interests, setting boundaries around social expectations. It requires safe environments—supportive relationships, workplaces that accommodate neurodiversity. Unmasking often brings relief and reconnection with authentic self, though navigating when masking is necessary (job interviews, medical appointments) versus when it's optional remains complex. The goal isn't never masking but conscious choice and reduced pressure to constantly perform neurotypicality.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Unmasking involves gradually allowing authentic autistic behavior: stimming when needed, avoiding eye contact if it's uncomfortable, openly discussing special interests, setting boundaries around social expectations. It requires safe environments--supportive relationships, workplaces that accommodate neurodiversity. Unmasking often brings relief and reconnection with authentic self, though navigating when masking is necessary (job interviews, medical appointments) versus when it's optional remains complex. The goal isn't never masking but conscious choice and reduced pressure to constantly perform neurotypicality.</p>
   </> },
   { id: catId(49), slug: 'neurodevelopmental-mental-health', title: 'Neurodevelopmental Conditions and Mental Health: The Comorbidity Challenge', description: 'ADHD and autism increase risk for anxiety, depression, and other conditions.', image: "/images/articles/cat13/cover-049.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Neurodevelopmental", 'Comorbidity'], citations: [
     { id: '1', text: 'ADHD Comorbidity', source: 'Lancet Psychiatry', year: '2021', link: 'https://doi.org/10.1016/S2215-0366(21)00091-8', tier: 1 },
     { id: '2', text: 'Autism and Anxiety', source: 'Journal of Autism and Developmental Disorders', year: '2020', link: 'https://doi.org/10.1007/s10803-020-04582-4', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Neurodevelopmental conditions rarely occur in isolation. Approximately 70% of people with ADHD have at least one comorbid psychiatric condition; 50-70% have two or more <Citation id="1" index={1} source="Lancet Psychiatry" year="2021" tier={1} />. Common comorbidities: anxiety disorders (25-50%), depression (18-30%), OCD, substance use disorders, learning disabilities, and autism. Autistic individuals show similarly high rates: 40-50% experience anxiety disorders, 12-70% meet criteria for depression, with rates increasing in adolescence and adulthood <Citation id="2" index={2} source="JADD" year="2020" tier={1} />. The relationship is bidirectional—neurodevelopmental conditions increase vulnerability to mental health challenges, and mental health conditions can worsen neurodevelopmental symptoms.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Neurodevelopmental conditions rarely occur in isolation. Approximately 70% of people with ADHD have at least one comorbid psychiatric condition; 50-70% have two or more <Citation id="1" index={1} source="Lancet Psychiatry" year="2021" tier={1} />. Common comorbidities: anxiety disorders (25-50%), depression (18-30%), OCD, substance use disorders, learning disabilities, and autism. Autistic individuals show similarly high rates: 40-50% experience anxiety disorders, 12-70% meet criteria for depression, with rates increasing in adolescence and adulthood <Citation id="2" index={2} source="JADD" year="2020" tier={1} />. The relationship is bidirectional--neurodevelopmental conditions increase vulnerability to mental health challenges, and mental health conditions can worsen neurodevelopmental symptoms.</p>
     </div>
     <h2 id="why-comorbidity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Such High Comorbidity?</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Multiple factors explain this overlap. Shared neurobiology—many conditions involve similar brain circuits and neurotransmitters. Environmental stress—chronic struggles with tasks others find easy, social rejection, masking exhaustion, repeated failure experiences all increase anxiety and depression risk. Diagnostic complexity—some "comorbidities" may actually be features of the primary condition (e.g., emotional dysregulation in ADHD mimicking mood disorders). Late diagnosis means years without appropriate support, compounding stress.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Multiple factors explain this overlap. Shared neurobiology--many conditions involve similar brain circuits and neurotransmitters. Environmental stress--chronic struggles with tasks others find easy, social rejection, masking exhaustion, repeated failure experiences all increase anxiety and depression risk. Diagnostic complexity--some "comorbidities" may actually be features of the primary condition (e.g., emotional dysregulation in ADHD mimicking mood disorders). Late diagnosis means years without appropriate support, compounding stress.</p>
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Implications</h2>
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Comorbidity complicates treatment but doesn't make it impossible. Comprehensive assessment identifying all conditions is crucial. Often treating the neurodevelopmental condition (ADHD medication, autism accommodations) reduces secondary mental health symptoms. Some conditions require specific treatment: anxiety may need CBT or medication beyond ADHD treatment, depression may need antidepressants. Integrated care addressing all conditions simultaneously produces best outcomes rather than treating each separately.</p>
   </> },
@@ -126,12 +126,12 @@ export const neurodevelopmentalArticles: Article[] = [
     { id: '2', text: 'Autism Employment Outcomes', source: 'Autism Research', year: '2021', link: 'https://doi.org/10.1002/aur.2479', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Neurodivergent individuals don't need to be "fixed"—they need environments that work with their neurology rather than against it. Accommodations are modifications reducing disability by addressing environmental barriers. Examples: flexible work hours for ADHD time blindness, noise-canceling headphones for autistic sensory sensitivity, written instructions for working memory challenges, remote work options reducing commute stress <Citation id="1" index={1} source="JOR" year="2020" tier={1} />. Research shows accommodations dramatically improve outcomes: higher employment retention, better job performance, reduced burnout, improved quality of life. Yet employment rates for neurodivergent adults remain low—only 14-15% of autistic adults work full-time despite many wanting employment <Citation id="2" index={2} source="Autism Research" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Neurodivergent individuals don't need to be "fixed"--they need environments that work with their neurology rather than against it. Accommodations are modifications reducing disability by addressing environmental barriers. Examples: flexible work hours for ADHD time blindness, noise-canceling headphones for autistic sensory sensitivity, written instructions for working memory challenges, remote work options reducing commute stress <Citation id="1" index={1} source="JOR" year="2020" tier={1} />. Research shows accommodations dramatically improve outcomes: higher employment retention, better job performance, reduced burnout, improved quality of life. Yet employment rates for neurodivergent adults remain low--only 14-15% of autistic adults work full-time despite many wanting employment <Citation id="2" index={2} source="Autism Research" year="2021" tier={1} />.</p>
     </div>
     <h2 id="types" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Types of Accommodations</h2>
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Workplace: modified schedules, quiet spaces, clear written communication, reduced social requirements (optional company events), permission to stim/fidget, task prioritization support. Educational: extended test time, note-taking assistance, reduced sensory input (alternative testing locations), breaks during long classes. Daily life: online grocery delivery, meal prep services, hiring help for overwhelming tasks, structuring routines, using technology (apps, reminders, timers). Social: communicating your needs directly ("I prefer texting to phone calls"), selective socializing, bringing fidgets to events, leaving when overwhelmed.</p>
     <h2 id="advocacy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Self-Advocacy</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Accommodations require self-advocacy: understanding your needs, communicating them clearly, knowing your legal rights (ADA in US provides employment and education protections). Not all accommodations require formal diagnosis or legal processes—many are simple modifications anyone can request. The goal is building a life matching your actual neurology rather than forcing yourself into neurotypical molds. Needing accommodations isn't weakness; it's intelligent adaptation.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Accommodations require self-advocacy: understanding your needs, communicating them clearly, knowing your legal rights (ADA in US provides employment and education protections). Not all accommodations require formal diagnosis or legal processes--many are simple modifications anyone can request. The goal is building a life matching your actual neurology rather than forcing yourself into neurotypical molds. Needing accommodations isn't weakness; it's intelligent adaptation.</p>
   </> },
 ];
 
@@ -146,7 +146,7 @@ export const eatingDisordersArticles: Article[] = [
     { text: 'Starvation itself causes psychological changes including food preoccupation, irritability, and social withdrawal', citationIndex: 4 },
     { text: 'Medical complications include bone loss, heart problems, kidney failure, and severe electrolyte imbalances', citationIndex: 5 },
   ],
-  sparkMoment: 'Anorexia nervosa isn\'t a choice or a diet gone too far—it\'s a deadly illness where the brain convinces someone that survival itself is the enemy.',
+  sparkMoment: 'Anorexia nervosa isn\'t a choice or a diet gone too far--it\'s a deadly illness where the brain convinces someone that survival itself is the enemy.',
   practicalExercise: {
     title: 'Building Awareness of Hunger and Fullness Cues',
     steps: [
@@ -170,8 +170,8 @@ export const eatingDisordersArticles: Article[] = [
     { id: '9', text: 'NICE Guidelines for Eating Disorders', source: 'National Institute for Health and Care Excellence', year: '2020', link: 'https://www.nice.org.uk/guidance/ng69', tier: 2 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When Sarah's friends told her she looked "too thin," she felt pride rather than concern. At 5'6" and 92 pounds, her body was shutting down, but her mind was convinced she was still overweight. This is anorexia nervosa—a disorder where the brain becomes an adversary, turning survival instincts upside down.</p>
-      <p className="mb-6">Anorexia nervosa (AN) has the highest mortality rate of any psychiatric disorder. Approximately 5-10% of individuals die within 10 years of diagnosis, primarily from medical complications or suicide <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. It affects an estimated 0.5-1% of women and 0.1-0.3% of men in their lifetimes <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. Despite these sobering statistics, recovery is possible—especially with early intervention and comprehensive treatment.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When Sarah's friends told her she looked "too thin," she felt pride rather than concern. At 5'6" and 92 pounds, her body was shutting down, but her mind was convinced she was still overweight. This is anorexia nervosa--a disorder where the brain becomes an adversary, turning survival instincts upside down.</p>
+      <p className="mb-6">Anorexia nervosa (AN) has the highest mortality rate of any psychiatric disorder. Approximately 5-10% of individuals die within 10 years of diagnosis, primarily from medical complications or suicide <Citation id="1" index={1} source="American Journal of Psychiatry" year="2020" tier={1} />. It affects an estimated 0.5-1% of women and 0.1-0.3% of men in their lifetimes <Citation id="2" index={2} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. Despite these sobering statistics, recovery is possible--especially with early intervention and comprehensive treatment.</p>
     </div>
 
     <StatCard
@@ -215,7 +215,7 @@ export const eatingDisordersArticles: Article[] = [
           content: <div className="space-y-3">
             <p><strong>Obsessive thoughts:</strong> Constant preoccupation with food, calories, weight, and body shape. Many describe intrusive thoughts that feel impossible to ignore.</p>
             <p><strong>Food rituals:</strong> Cutting food into tiny pieces, eating alone, arranging food in specific patterns, taking hours to finish small meals, avoiding meals with others</p>
-            <p><strong>Mood changes:</strong> Irritability, emotional flatness, depression, anxiety, difficulty concentrating—many of these are direct effects of starvation itself <Citation id="4" index={5} source="Biological Psychiatry" year="2019" tier={1} /></p>
+            <p><strong>Mood changes:</strong> Irritability, emotional flatness, depression, anxiety, difficulty concentrating--many of these are direct effects of starvation itself <Citation id="4" index={5} source="Biological Psychiatry" year="2019" tier={1} /></p>
             <p><strong>Social withdrawal:</strong> Avoiding social situations that involve food, isolating from friends and family, giving up previously enjoyed activities</p>
             <p><strong>Perfectionism and control:</strong> Rigid thinking, difficulty with flexibility, need for control that often extends beyond eating</p>
             <p><strong>Body image distortion:</strong> Genuinely perceiving oneself as overweight despite severe emaciation, focusing intensely on specific body parts</p>
@@ -252,7 +252,7 @@ export const eatingDisordersArticles: Article[] = [
     </ul>
 
     <ArticleCallout variant="clinical-note" title="Understanding the Starvation Cycle">
-      <p className="mb-3">One of the cruelest aspects of anorexia is that starvation itself creates many of the psychological symptoms that maintain the disorder. The Minnesota Starvation Experiment (1944-1945) showed that semi-starvation in previously healthy men caused food preoccupation, hoarding, ritualistic eating, emotional changes, and social withdrawal—symptoms identical to anorexia.</p>
+      <p className="mb-3">One of the cruelest aspects of anorexia is that starvation itself creates many of the psychological symptoms that maintain the disorder. The Minnesota Starvation Experiment (1944-1945) showed that semi-starvation in previously healthy men caused food preoccupation, hoarding, ritualistic eating, emotional changes, and social withdrawal--symptoms identical to anorexia.</p>
       <p>This means someone with anorexia faces a vicious cycle: restriction leads to starvation effects that intensify the obsessive thoughts and behaviors, making it neurologically harder to choose to eat. Recovery requires breaking this cycle through nutritional rehabilitation alongside psychological treatment.</p>
     </ArticleCallout>
 
@@ -264,7 +264,7 @@ export const eatingDisordersArticles: Article[] = [
       <li><strong>Psychological evaluation:</strong> Structured interviews about eating behaviors, body image, mood, anxiety, obsessive-compulsive symptoms, trauma history</li>
       <li><strong>Assessment of medical stability:</strong> Determining whether outpatient treatment is safe or if higher levels of care (intensive outpatient, residential, or inpatient medical) are necessary</li>
     </ul>
-    <p className="mb-6">It's important to note that you don't have to be severely underweight to have a serious eating disorder. Atypical anorexia nervosa—meeting all criteria except significant low weight—can be equally dangerous and requires the same level of care <Citation id="9" index={7} source="NICE Guidelines" year="2020" tier={2} />.</p>
+    <p className="mb-6">It's important to note that you don't have to be severely underweight to have a serious eating disorder. Atypical anorexia nervosa--meeting all criteria except significant low weight--can be equally dangerous and requires the same level of care <Citation id="9" index={7} source="NICE Guidelines" year="2020" tier={2} />.</p>
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment and Recovery</h2>
     <p className="mb-6">Effective treatment for anorexia nervosa addresses both the physical effects of starvation and the psychological factors maintaining the disorder. Evidence-based approaches include:</p>
@@ -276,7 +276,7 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6">For adults, CBT-E adapted specifically for eating disorders shows the strongest evidence <Citation id="7" index={9} source="Lancet" year="2021" tier={1} />. CBT-E addresses the core maintaining mechanisms: overvaluation of shape and weight, dietary restraint, and mood intolerance. Treatment typically involves 40 sessions over 40 weeks.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Nutritional Rehabilitation</h3>
-    <p className="mb-6">Weight restoration is essential for recovery. Dietitians specializing in eating disorders create individualized meal plans, working gradually toward normalized eating. This process must be carefully monitored to avoid refeeding syndrome—a potentially fatal complication when nutrition is reintroduced too quickly after severe malnutrition.</p>
+    <p className="mb-6">Weight restoration is essential for recovery. Dietitians specializing in eating disorders create individualized meal plans, working gradually toward normalized eating. This process must be carefully monitored to avoid refeeding syndrome--a potentially fatal complication when nutrition is reintroduced too quickly after severe malnutrition.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medical Monitoring</h3>
     <p className="mb-6">Regular medical follow-up ensures physical safety during recovery. This includes monitoring vital signs, lab work, cardiac function, and bone health. Hospitalization may be necessary for severe malnutrition, medical instability, or suicide risk.</p>
@@ -289,7 +289,7 @@ export const eatingDisordersArticles: Article[] = [
         <li><strong>Recovery is possible.</strong> Many people achieve full recovery, though it often takes years and requires patience and persistence.</li>
         <li><strong>Weight restoration alone isn't recovery.</strong> True recovery involves normalizing eating patterns, resolving body image disturbance, and addressing underlying psychological factors.</li>
         <li><strong>Motivation fluctuates.</strong> Ambivalence about recovery is normal. Treatment can help even when someone isn't fully ready to change.</li>
-        <li><strong>Relapse is part of the process for many.</strong> Setbacks don't mean failure—they're opportunities to learn and strengthen recovery skills.</li>
+        <li><strong>Relapse is part of the process for many.</strong> Setbacks don't mean failure--they're opportunities to learn and strengthen recovery skills.</li>
         <li><strong>Early intervention matters.</strong> The sooner treatment begins, the better the outcomes. Don't wait until things are "bad enough."</li>
       </ul>
     </ArticleCallout>
@@ -344,8 +344,8 @@ export const eatingDisordersArticles: Article[] = [
     { id: '8', text: 'NICE Guidelines for Eating Disorders', source: 'National Institute for Health and Care Excellence', year: '2020', link: 'https://www.nice.org.uk/guidance/ng69', tier: 2 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Jessica ate normally in front of others. Behind closed doors, she consumed thousands of calories in under an hour before forcing herself to vomit. She looked healthy—normal weight, active social life—but she was trapped in a cycle she couldn't break alone.</p>
-      <p className="mb-6">Bulimia nervosa (BN) is characterized by recurrent episodes of binge eating followed by compensatory behaviors to prevent weight gain—typically self-induced vomiting, but also laxative or diuretic misuse, fasting, or excessive exercise <Citation id="2" index={1} source="DSM-5-TR" year="2022" tier={4} />. It affects approximately 1-2% of women, with onset typically in late adolescence or early adulthood <Citation id="1" index={2} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. Unlike anorexia, most people with bulimia maintain normal or even above-normal weight, making the disorder less visible to others—but no less dangerous.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Jessica ate normally in front of others. Behind closed doors, she consumed thousands of calories in under an hour before forcing herself to vomit. She looked healthy--normal weight, active social life--but she was trapped in a cycle she couldn't break alone.</p>
+      <p className="mb-6">Bulimia nervosa (BN) is characterized by recurrent episodes of binge eating followed by compensatory behaviors to prevent weight gain--typically self-induced vomiting, but also laxative or diuretic misuse, fasting, or excessive exercise <Citation id="2" index={1} source="DSM-5-TR" year="2022" tier={4} />. It affects approximately 1-2% of women, with onset typically in late adolescence or early adulthood <Citation id="1" index={2} source="Journal of Clinical Psychiatry" year="2021" tier={1} />. Unlike anorexia, most people with bulimia maintain normal or even above-normal weight, making the disorder less visible to others--but no less dangerous.</p>
     </div>
 
     <h2 id="what-is-bulimia" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Is Bulimia Nervosa?</h2>
@@ -394,13 +394,13 @@ export const eatingDisordersArticles: Article[] = [
       }}
     />
 
-    <p className="mb-6 mt-6">Here's what makes this cycle so hard to break: <strong>restriction actually increases the likelihood of binge eating</strong>. When you severely limit food intake or label foods as "forbidden," you create biological and psychological vulnerability to bingeing. After a binge, the guilt and fear trigger purging, which provides temporary relief from anxiety—negatively reinforcing the behavior. The purge is then followed by renewed restriction ("I'll be good tomorrow"), which sets up the next binge. Each rotation of the cycle strengthens the pattern.</p>
+    <p className="mb-6 mt-6">Here's what makes this cycle so hard to break: <strong>restriction actually increases the likelihood of binge eating</strong>. When you severely limit food intake or label foods as "forbidden," you create biological and psychological vulnerability to bingeing. After a binge, the guilt and fear trigger purging, which provides temporary relief from anxiety--negatively reinforcing the behavior. The purge is then followed by renewed restriction ("I'll be good tomorrow"), which sets up the next binge. Each rotation of the cycle strengthens the pattern.</p>
 
     <h2 id="medical-complications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Medical Complications</h2>
     <p className="mb-6">The medical consequences of bulimia nervosa can be severe and life-threatening, particularly with chronic purging <Citation id="4" index={5} source="Journal of Eating Disorders" year="2021" tier={1} />:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-3">
-      <li><strong>Electrolyte imbalances:</strong> Repeated vomiting depletes potassium, sodium, and chloride. Low potassium (hypokalemia) can cause fatal cardiac arrhythmias—the most common cause of sudden death in bulimia.</li>
+      <li><strong>Electrolyte imbalances:</strong> Repeated vomiting depletes potassium, sodium, and chloride. Low potassium (hypokalemia) can cause fatal cardiac arrhythmias--the most common cause of sudden death in bulimia.</li>
       <li><strong>Gastrointestinal damage:</strong> Esophageal tears (Mallory-Weiss tears), gastric rupture (rare but fatal), chronic acid reflux, Barrett's esophagus (precancerous condition), constipation from laxative dependence, rectal prolapse</li>
       <li><strong>Dental erosion:</strong> Stomach acid erodes tooth enamel, particularly on the back of the front teeth. This damage is permanent and can require extensive dental work.</li>
       <li><strong>Salivary gland swelling:</strong> Parotid glands become enlarged, creating a "chipmunk cheek" appearance</li>
@@ -427,7 +427,7 @@ export const eatingDisordersArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Shame and secrecy:</strong> Most people with bulimia hide their behaviors for years, living a double life that isolates them from genuine connection</li>
       <li><strong>Mood instability:</strong> The cycle of restriction, bingeing, and purging creates dramatic blood sugar fluctuations and emotional dysregulation</li>
-      <li><strong>Cognitive preoccupation:</strong> Constant thoughts about food, weight, the next binge, finding opportunities to purge—leaving little mental space for other parts of life</li>
+      <li><strong>Cognitive preoccupation:</strong> Constant thoughts about food, weight, the next binge, finding opportunities to purge--leaving little mental space for other parts of life</li>
       <li><strong>Comorbid conditions:</strong> High rates of depression (50-70%), anxiety disorders (particularly social anxiety), substance use, and borderline personality disorder</li>
       <li><strong>Impaired functioning:</strong> Difficulty concentrating at work or school, withdrawal from social situations involving food, relationship conflicts</li>
     </ul>
@@ -486,7 +486,7 @@ export const eatingDisordersArticles: Article[] = [
     { text: 'BED affects people of all weights, not just those with obesity', citationIndex: 2 },
     { text: 'Dieting often worsens binge eating disorder rather than helping it', citationIndex: 4 },
   ],
-  sparkMoment: 'Binge eating disorder thrives in the shadows of shame and misconception—but it\'s not about willpower, it\'s about biology, emotion, and healing.',
+  sparkMoment: 'Binge eating disorder thrives in the shadows of shame and misconception--but it\'s not about willpower, it\'s about biology, emotion, and healing.',
   practicalExercise: {
     title: 'The HALT Check-In Before Eating',
     steps: [
@@ -509,8 +509,8 @@ export const eatingDisordersArticles: Article[] = [
     { id: '8', text: 'Weight Stigma and Eating Disorders', source: 'Obesity Reviews', year: '2020', link: 'https://doi.org/10.1111/obr.13128', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Marcus looked like the picture of health—a successful businessman, gym regular, engaged father. But several nights a week, after everyone was asleep, he'd consume an entire pizza, a pint of ice cream, a bag of chips, and whatever else was in the pantry. The next morning, he'd skip breakfast, promise himself "today will be different," and by nightfall, repeat the cycle.</p>
-      <p className="mb-6">Binge eating disorder (BED) is the most common eating disorder in the United States, affecting 2-3% of adults—more prevalent than anorexia and bulimia combined <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Yet it receives far less attention and understanding. Unlike bulimia, BED involves recurrent binge episodes without compensatory behaviors like purging <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />. It affects people across all body sizes, though it's often associated with weight gain and obesity.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Marcus looked like the picture of health--a successful businessman, gym regular, engaged father. But several nights a week, after everyone was asleep, he'd consume an entire pizza, a pint of ice cream, a bag of chips, and whatever else was in the pantry. The next morning, he'd skip breakfast, promise himself "today will be different," and by nightfall, repeat the cycle.</p>
+      <p className="mb-6">Binge eating disorder (BED) is the most common eating disorder in the United States, affecting 2-3% of adults--more prevalent than anorexia and bulimia combined <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Yet it receives far less attention and understanding. Unlike bulimia, BED involves recurrent binge episodes without compensatory behaviors like purging <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />. It affects people across all body sizes, though it's often associated with weight gain and obesity.</p>
     </div>
 
     <ArticleChart
@@ -551,7 +551,7 @@ export const eatingDisordersArticles: Article[] = [
     <div className="space-y-4 my-8">
       <MythVsFactBlock
         myth="Binge eating disorder is just a lack of willpower or self-control"
-        fact="BED is a recognized psychiatric disorder with biological, psychological, and environmental causes—not a character flaw or choice"
+        fact="BED is a recognized psychiatric disorder with biological, psychological, and environmental causes--not a character flaw or choice"
       />
       <MythVsFactBlock
         myth="Only people with obesity have binge eating disorder"
@@ -582,7 +582,7 @@ export const eatingDisordersArticles: Article[] = [
           id: 'psychological',
           label: 'Psychological Factors',
           content: <div className="space-y-3">
-            <p><strong>Emotion regulation difficulties:</strong> Many people with BED use food to cope with difficult emotions—anxiety, depression, stress, loneliness, boredom, anger. Bingeing provides temporary escape or numbing.</p>
+            <p><strong>Emotion regulation difficulties:</strong> Many people with BED use food to cope with difficult emotions--anxiety, depression, stress, loneliness, boredom, anger. Bingeing provides temporary escape or numbing.</p>
             <p><strong>Negative self-image:</strong> Poor body image, low self-esteem, and self-criticism both precede and are reinforced by binge eating.</p>
             <p><strong>Perfectionism and rigidity:</strong> Black-and-white thinking about food ("good" vs. "bad" foods) and eating ("perfect" vs. "failure") sets up binge episodes when strict rules are inevitably broken.</p>
             <p><strong>Trauma history:</strong> Higher rates of childhood trauma, abuse, and adverse experiences among people with BED.</p>
@@ -623,7 +623,7 @@ export const eatingDisordersArticles: Article[] = [
 
     <ArticleCallout variant="clinical-note" title="The Shame Cycle">
       <p className="mb-3">One of the most painful aspects of BED is the shame spiral: A binge episode triggers intense self-criticism and disgust. This negative emotion then becomes a trigger for the next binge (using food to cope with the shame from the previous binge). Many describe feeling trapped in a cycle where the very thing they do to cope becomes the source of their distress.</p>
-      <p>Breaking this cycle requires addressing the shame itself—learning self-compassion, understanding BED as an illness rather than a personal failure, and developing alternative ways to process difficult emotions.</p>
+      <p>Breaking this cycle requires addressing the shame itself--learning self-compassion, understanding BED as an illness rather than a personal failure, and developing alternative ways to process difficult emotions.</p>
     </ArticleCallout>
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Treatment</h2>
@@ -650,7 +650,7 @@ export const eatingDisordersArticles: Article[] = [
     </ul>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Interpersonal Psychotherapy (IPT)</h3>
-    <p className="mb-6">IPT focuses on relationship problems and life transitions that contribute to binge eating. It's as effective as CBT but works more gradually. IPT is particularly useful when binge eating is clearly linked to interpersonal difficulties—loneliness, conflict, grief, role transitions.</p>
+    <p className="mb-6">IPT focuses on relationship problems and life transitions that contribute to binge eating. It's as effective as CBT but works more gradually. IPT is particularly useful when binge eating is clearly linked to interpersonal difficulties--loneliness, conflict, grief, role transitions.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication</h3>
     <p className="mb-6">Lisdexamfetamine (Vyvanse) is the only FDA-approved medication specifically for moderate-to-severe BED <Citation id="7" index={9} source="American Journal of Psychiatry" year="2019" tier={1} />. It reduces binge days by about 50% and is thought to work by affecting impulse control and reward sensitivity. SSRIs (antidepressants) may also help reduce binge frequency and treat comorbid depression or anxiety, though they're not FDA-approved for BED specifically.</p>
@@ -667,7 +667,7 @@ export const eatingDisordersArticles: Article[] = [
     </ArticleCallout>
 
     <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Getting Help</h2>
-    <p className="mb-6">If you recognize yourself in this description, know that you're not alone and help is available. BED is a treatable condition—you don't have to live with this forever.</p>
+    <p className="mb-6">If you recognize yourself in this description, know that you're not alone and help is available. BED is a treatable condition--you don't have to live with this forever.</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Start with your primary care doctor:</strong> They can rule out medical causes of symptoms, assess for complications, and provide referrals to eating disorder specialists</li>
       <li><strong>Find a therapist specializing in eating disorders:</strong> Look through the NEDA (National Eating Disorders Association) provider directory or BEDA (Binge Eating Disorder Association) resources</li>
@@ -685,13 +685,13 @@ export const eatingDisordersArticles: Article[] = [
     { text: 'Unlike anorexia, ARFID involves no body image disturbance or fear of weight gain', citationIndex: 1 },
     { text: 'Food chaining and gradual exposure are cornerstone treatments for sensory-based ARFID', citationIndex: 5 },
   ],
-  sparkMoment: 'ARFID isn\'t about refusing to eat—it\'s about a brain that experiences food as genuinely threatening, disgusting, or simply uninteresting.',
+  sparkMoment: 'ARFID isn\'t about refusing to eat--it\'s about a brain that experiences food as genuinely threatening, disgusting, or simply uninteresting.',
   practicalExercise: {
     title: 'Food Chaining for Expanding Safe Foods',
     steps: [
-      { title: 'Identify a Safe Food', description: 'Start with a food you already eat comfortably—something with minimal anxiety or aversion.' },
+      { title: 'Identify a Safe Food', description: 'Start with a food you already eat comfortably--something with minimal anxiety or aversion.' },
       { title: 'Find a Similar Option', description: 'Choose a new food that\'s similar in one way (same color, texture, or brand) but different in another. Example: if you eat chicken nuggets from Brand A, try Brand B.' },
-      { title: 'Practice Gradual Exposure', description: 'Start by having the new food on your plate. Then touch it. Then smell it. Then lick it. Finally, take a small bite. Move at your own pace—days or weeks per step is normal.' },
+      { title: 'Practice Gradual Exposure', description: 'Start by having the new food on your plate. Then touch it. Then smell it. Then lick it. Finally, take a small bite. Move at your own pace--days or weeks per step is normal.' },
       { title: 'Celebrate Small Wins', description: 'Each step forward is progress, even if it\'s just tolerating the food\'s presence. Recovery from ARFID is gradual.' },
     ],
     toolLink: '/tools/mood-journal',
@@ -708,8 +708,8 @@ export const eatingDisordersArticles: Article[] = [
     { id: '8', text: 'NICE Guidelines for Eating Disorders', source: 'National Institute for Health and Care Excellence', year: '2020', link: 'https://www.nice.org.uk/guidance/ng69', tier: 2 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">At 16, Maya survived on chicken nuggets, french fries, and plain pasta—the only foods that didn't trigger intense disgust or anxiety. She wasn't worried about her weight or appearance. She just couldn't physically bring herself to eat most foods. Textures made her gag. New foods triggered panic. Eating felt like a chore rather than a pleasure.</p>
-      <p className="mb-6">Avoidant/Restrictive Food Intake Disorder (ARFID) involves eating restriction severe enough to cause nutritional deficiency, weight loss, or significant psychosocial impairment—but unlike anorexia nervosa, it's not motivated by concerns about weight or body shape <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Added to the DSM-5 in 2013, ARFID replaced the narrow diagnosis of "feeding disorder of infancy or early childhood" to acknowledge that food avoidance affects people of all ages and arises from multiple causes beyond typical childhood picky eating.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">At 16, Maya survived on chicken nuggets, french fries, and plain pasta--the only foods that didn't trigger intense disgust or anxiety. She wasn't worried about her weight or appearance. She just couldn't physically bring herself to eat most foods. Textures made her gag. New foods triggered panic. Eating felt like a chore rather than a pleasure.</p>
+      <p className="mb-6">Avoidant/Restrictive Food Intake Disorder (ARFID) involves eating restriction severe enough to cause nutritional deficiency, weight loss, or significant psychosocial impairment--but unlike anorexia nervosa, it's not motivated by concerns about weight or body shape <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Added to the DSM-5 in 2013, ARFID replaced the narrow diagnosis of "feeding disorder of infancy or early childhood" to acknowledge that food avoidance affects people of all ages and arises from multiple causes beyond typical childhood picky eating.</p>
     </div>
 
     <ProgressSteps
@@ -717,7 +717,7 @@ export const eatingDisordersArticles: Article[] = [
       steps={[
         {
           title: 'Sensory-Based ARFID',
-          description: <p>Avoidance driven by extreme sensitivity to food properties—textures (mushiness, sliminess, crunchiness), tastes (bitterness, sourness), smells, or appearance. Individuals may eat only 10-15 "safe" foods, often all the same color or texture (e.g., only beige carbohydrates). Common in people with autism spectrum disorder <Citation id="4" index={2} source="Autism Research" year="2020" tier={1} />.</p>
+          description: <p>Avoidance driven by extreme sensitivity to food properties--textures (mushiness, sliminess, crunchiness), tastes (bitterness, sourness), smells, or appearance. Individuals may eat only 10-15 "safe" foods, often all the same color or texture (e.g., only beige carbohydrates). Common in people with autism spectrum disorder <Citation id="4" index={2} source="Autism Research" year="2020" tier={1} />.</p>
         },
         {
           title: 'Fear-Based ARFID',
@@ -794,7 +794,7 @@ export const eatingDisordersArticles: Article[] = [
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Psychosocial Impact</h3>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li><strong>Social isolation:</strong> Avoiding restaurants, parties, dates, family gatherings—any situation involving food</li>
+      <li><strong>Social isolation:</strong> Avoiding restaurants, parties, dates, family gatherings--any situation involving food</li>
       <li><strong>Relationship strain:</strong> Conflicts with family members over eating, difficulty making friends, romantic relationships complicated by food restrictions</li>
       <li><strong>Academic/occupational impairment:</strong> Difficulty concentrating due to hunger, avoiding school lunch or work events, limited career options (can't travel for work if you can only eat specific foods)</li>
       <li><strong>Emotional distress:</strong> Shame, embarrassment, frustration, anxiety about eating situations</li>
@@ -851,7 +851,7 @@ export const eatingDisordersArticles: Article[] = [
     </ul>
 
     <HighlightBox variant="stat">
-      <p className="text-center"><strong>Recovery is possible.</strong> With appropriate treatment, many people with ARFID significantly expand their food repertoire and achieve nutritional adequacy. Progress may be slow—measured in months or years rather than weeks—but each new accepted food represents meaningful improvement.</p>
+      <p className="text-center"><strong>Recovery is possible.</strong> With appropriate treatment, many people with ARFID significantly expand their food repertoire and achieve nutritional adequacy. Progress may be slow--measured in months or years rather than weeks--but each new accepted food represents meaningful improvement.</p>
     </HighlightBox>
 
     <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Help</h2>
@@ -888,7 +888,7 @@ export const eatingDisordersArticles: Article[] = [
     steps: [
       { title: 'Identify a Food Rule', description: 'Write down one rigid food rule you follow (e.g., "I can never eat sugar," "All food must be organic").' },
       { title: 'Examine the Evidence', description: 'What evidence supports this rule? What are the costs of following it (social, mental, time, financial)?' },
-      { title: 'Practice Flexibility', description: 'Choose one small violation of this rule—eating something "impure" in a safe context. Notice the anxiety before, during, and after.' },
+      { title: 'Practice Flexibility', description: 'Choose one small violation of this rule--eating something "impure" in a safe context. Notice the anxiety before, during, and after.' },
       { title: 'Reflect on the Outcome', description: 'Did the feared consequence happen? How did breaking the rule affect your well-being? What did you learn about rigidity vs. flexibility?' },
     ],
     toolLink: '/tools/mood-journal',
@@ -905,8 +905,8 @@ export const eatingDisordersArticles: Article[] = [
     { id: '8', text: 'Treatment Approaches for Orthorexia Nervosa', source: 'Eating Disorders', year: '2021', link: 'https://doi.org/10.1080/10640266.2021.1938945', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Emily spent three hours at the grocery store, scrutinizing every label for artificial ingredients, pesticides, or "toxins." She ate only raw, organic vegetables and sprouted grains—nothing processed, heated above 118°F, or grown with conventional farming. Friends stopped inviting her to dinner. Restaurants were off-limits. Her hair was falling out from malnutrition. But Emily felt virtuous: she was "eating clean."</p>
-      <p className="mb-6">Orthorexia nervosa—an obsessive fixation on eating foods perceived as healthy or pure—isn't formally recognized in the DSM-5-TR, but it's increasingly observed in clinical practice <Citation id="1" index={1} source="Nutrients" year="2019" tier={1} />. The term was coined in 1997 by physician Steven Bratman, who observed patients whose pursuit of dietary perfection had become pathological. Unlike anorexia nervosa, which focuses on the quantity of food and weight control, orthorexia centers on the quality and purity of food <Citation id="2" index={2} source="Eating Behaviors" year="2020" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Emily spent three hours at the grocery store, scrutinizing every label for artificial ingredients, pesticides, or "toxins." She ate only raw, organic vegetables and sprouted grains--nothing processed, heated above 118°F, or grown with conventional farming. Friends stopped inviting her to dinner. Restaurants were off-limits. Her hair was falling out from malnutrition. But Emily felt virtuous: she was "eating clean."</p>
+      <p className="mb-6">Orthorexia nervosa--an obsessive fixation on eating foods perceived as healthy or pure--isn't formally recognized in the DSM-5-TR, but it's increasingly observed in clinical practice <Citation id="1" index={1} source="Nutrients" year="2019" tier={1} />. The term was coined in 1997 by physician Steven Bratman, who observed patients whose pursuit of dietary perfection had become pathological. Unlike anorexia nervosa, which focuses on the quantity of food and weight control, orthorexia centers on the quality and purity of food <Citation id="2" index={2} source="Eating Behaviors" year="2020" tier={1} />.</p>
     </div>
 
     <h2 id="what-is-orthorexia" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Is Orthorexia?</h2>
@@ -951,7 +951,7 @@ export const eatingDisordersArticles: Article[] = [
     <p className="mb-6">These populations are at higher risk due to increased health consciousness, exposure to nutrition information, and community norms that valorize "clean eating."</p>
 
     <h2 id="how-it-develops" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Orthorexia Develops</h2>
-    <p className="mb-6">Orthorexia often begins innocently—with a decision to "eat healthier," manage a medical condition through diet, or align eating with ethical values. The progression typically follows this pattern:</p>
+    <p className="mb-6">Orthorexia often begins innocently--with a decision to "eat healthier," manage a medical condition through diet, or align eating with ethical values. The progression typically follows this pattern:</p>
 
     <ArticleAccordion
       type="single"
@@ -969,12 +969,12 @@ export const eatingDisordersArticles: Article[] = [
         {
           id: 'phase3',
           title: 'Phase 3: Preoccupation and Rigidity',
-          content: <p>Thoughts about food dominate. Hours are spent researching nutrition claims, reading labels, seeking out specialty stores. Anxiety emerges when food sources are uncertain (restaurants, travel, others' homes). Rigid rules replace intuitive eating. Breaking rules—even accidentally—causes severe distress.</p>
+          content: <p>Thoughts about food dominate. Hours are spent researching nutrition claims, reading labels, seeking out specialty stores. Anxiety emerges when food sources are uncertain (restaurants, travel, others' homes). Rigid rules replace intuitive eating. Breaking rules--even accidentally--causes severe distress.</p>
         },
         {
           id: 'phase4',
           title: 'Phase 4: Social Isolation',
-          content: <p>Social situations involving food become unbearable. Restaurants can't be trusted. Friends don't understand. Eating becomes a solitary activity. Relationships suffer. Identity becomes centered on dietary purity—"I'm someone who eats clean."</p>
+          content: <p>Social situations involving food become unbearable. Restaurants can't be trusted. Friends don't understand. Eating becomes a solitary activity. Relationships suffer. Identity becomes centered on dietary purity--"I'm someone who eats clean."</p>
         },
         {
           id: 'phase5',
@@ -1019,14 +1019,14 @@ export const eatingDisordersArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Social isolation:</strong> Inability to eat with family, friends, or colleagues; declining invitations; relationships deteriorating</li>
       <li><strong>Anxiety and depression:</strong> Constant stress about food purity, guilt after eating "impure" foods, depressed mood from isolation</li>
-      <li><strong>Cognitive preoccupation:</strong> Thoughts dominated by food research, meal planning, and nutritional calculations—leaving little mental space for work, hobbies, relationships</li>
+      <li><strong>Cognitive preoccupation:</strong> Thoughts dominated by food research, meal planning, and nutritional calculations--leaving little mental space for work, hobbies, relationships</li>
       <li><strong>Financial burden:</strong> Specialty foods (organic, non-GMO, specific brands) are expensive; food becomes a major budget category</li>
       <li><strong>Time consumption:</strong> Hours daily spent shopping, preparing food, and researching nutrition claims</li>
       <li><strong>Quality of life reduction:</strong> Despite aiming to improve health, overall well-being decreases significantly</li>
     </ul>
 
     <QuoteBlock
-      quote="I thought I was taking care of myself by eating clean. I was so proud of my discipline. It took me years to realize I'd traded one form of health for another—I was physically malnourished and completely cut off from everyone I loved. The orthorexia was killing me slowly while I told myself I was living my healthiest life."
+      quote="I thought I was taking care of myself by eating clean. I was so proud of my discipline. It took me years to realize I'd traded one form of health for another--I was physically malnourished and completely cut off from everyone I loved. The orthorexia was killing me slowly while I told myself I was living my healthiest life."
       attribution="David, 29"
       role="Recovered from orthorexia nervosa"
       variant="large"
@@ -1059,7 +1059,7 @@ export const eatingDisordersArticles: Article[] = [
       <li>Challenge myths and misinformation about food and nutrition</li>
       <li>Reintroduce eliminated food groups to correct deficiencies</li>
       <li>Develop a more flexible, balanced approach to eating</li>
-      <li>Redefine "healthy eating" to include social, mental, and emotional health—not just physical purity</li>
+      <li>Redefine "healthy eating" to include social, mental, and emotional health--not just physical purity</li>
     </ul>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Addressing Underlying Issues</h3>
@@ -1090,68 +1090,494 @@ export const eatingDisordersArticles: Article[] = [
       <li><strong>NEDA (National Eating Disorders Association):</strong> 1-800-931-2237 for screening, information, and referrals</li>
       <li><strong>Support groups:</strong> Connecting with others recovering from orthorexia can reduce shame and isolation</li>
     </ul>
-    <p className="mb-6">Recovery is possible. Many people who once lived by rigid food rules have found freedom in flexible, balanced eating that truly supports all dimensions of health—physical, mental, and social.</p>
+    <p className="mb-6">Recovery is possible. Many people who once lived by rigid food rules have found freedom in flexible, balanced eating that truly supports all dimensions of health--physical, mental, and social.</p>
   </> },
-  { id: catId(56), slug: 'eating-disorders-men', title: 'Eating Disorders in Men: Breaking the Stereotype', description: 'ED affect men but are underdiagnosed due to gender stereotypes.', image: "/images/articles/cat13/cover-056.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Eating Disorders", 'Men'], citations: [
-    { id: '1', text: 'ED in Men', source: 'International Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1002/eat.23306', tier: 1 },
-    { id: '2', text: 'Male Body Image', source: 'Body Image', year: '2021', link: 'https://doi.org/10.1016/j.bodyim.2021.01.003', tier: 1 },
-    { id: '3', text: 'Treatment Barriers', source: 'Psychology of Men & Masculinities', year: '2020', link: 'https://doi.org/10.1037/men0000245', tier: 1 },
+  { id: catId(56), slug: 'eating-disorders-men', title: 'Eating Disorders in Men: Breaking the Stereotype', description: 'ED affect men but are underdiagnosed due to gender stereotypes.', image: "/images/articles/cat13/cover-056.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Eating Disorders", 'Men'], summary: 'Eating disorders affect one in four people with the condition--yet men remain dramatically underdiagnosed due to gender stereotypes, male-focused body ideals emphasizing muscularity over thinness, and treatment systems designed primarily for women. Breaking this stereotype requires recognizing male-specific presentations and removing barriers to care.', keyFacts: [
+    { text: 'Approximately 25% of people with eating disorders are male, yet men are half as likely to receive diagnosis or treatment', citationIndex: 1 },
+    { text: 'Men more commonly pursue muscularity rather than thinness, leading to muscle dysmorphia and excessive exercise patterns often missed by traditional screening', citationIndex: 2 },
+    { text: 'Binge eating disorder is the most common eating disorder in men, affecting roughly equal numbers of men and women', citationIndex: 4 },
+    { text: 'Gay and bisexual men experience eating disorders at rates approaching those of women, with prevalence 7x higher than heterosexual men', citationIndex: 5 },
+    { text: 'Evidence-based treatments work equally well for men and women when men can access gender-sensitive care', citationIndex: 3 },
+  ], sparkMoment: 'Eating disorders don\'t discriminate by gender--but our healthcare system does, leaving millions of men suffering in silence because their struggle doesn\'t match the stereotype.', practicalExercise: {
+    title: 'Body Image Check-In for Men',
+    steps: [
+      { title: 'Notice Your Self-Talk', description: 'For one week, write down negative thoughts about your body or food. Look for patterns around muscularity, exercise, or "clean eating."' },
+      { title: 'Question the Rules', description: 'Identify rigid food or exercise rules you follow. Ask: "Would I want a friend to follow this rule? Is this about health or control?"' },
+      { title: 'Explore the Function', description: 'What emotions precede urges to restrict, binge, or over-exercise? What does the behavior help you avoid or achieve?' },
+      { title: 'Reach Out', description: 'Share one observation with someone you trust. Breaking isolation is the first step toward getting help.' },
+    ],
+    toolLink: '/tools/symptom-navigator',
+    toolLabel: 'Assess Your Symptoms',
+  }, citations: [
+    { id: '1', text: 'Eating Disorders in Men: Underdiagnosis, Undertreatment, and Misunderstanding', source: 'International Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1002/eat.23306', tier: 1 },
+    { id: '2', text: 'Male Body Image and Muscle Dysmorphia', source: 'Body Image', year: '2021', link: 'https://doi.org/10.1016/j.bodyim.2021.01.003', tier: 1 },
+    { id: '3', text: 'Treatment Barriers for Men with Eating Disorders', source: 'Psychology of Men & Masculinities', year: '2020', link: 'https://doi.org/10.1037/men0000245', tier: 1 },
+    { id: '4', text: 'Gender Differences in Eating Disorder Presentation', source: 'Journal of Clinical Psychology', year: '2021', link: 'https://doi.org/10.1002/jclp.23162', tier: 1 },
+    { id: '5', text: 'Eating Disorders in Sexual Minority Men', source: 'American Journal of Men\'s Health', year: '2020', link: 'https://doi.org/10.1177/1557988320937155', tier: 1 },
+    { id: '6', text: 'Screening Tools for Eating Disorders', source: 'International Journal of Eating Disorders', year: '2019', link: 'https://doi.org/10.1002/eat.23116', tier: 1 },
+    { id: '7', text: 'Men and Eating Disorders', source: 'National Eating Disorders Association', year: '2023', link: 'https://www.nationaleatingdisorders.org/men-eating-disorders', tier: 3 },
+    { id: '8', text: 'Masculinity Norms and Help-Seeking', source: 'Psychology of Men & Masculinity', year: '2021', link: 'https://doi.org/10.1037/men0000327', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Eating disorders affect approximately 25% males yet remain dramatically underdiagnosed in men due to perception as "female problems" <Citation id="1" index={1} source="IJED" year="2020" tier={1} />. Men face unique barriers: stigma around seeking help for "women's illness," diagnostic tools developed primarily for female populations missing male-typical presentations, healthcare providers less likely to screen men. Men with eating disorders describe intense shame, feeling isolated as "only guy" in treatment programs. Body image ideals differ—rather than thinness, men often pursue muscularity ("bigorexia" or muscle dysmorphia), creating different pathways to disordered eating <Citation id="2" index={2} source="Body Image" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When Alex started counting macros to "optimize" his workout results, nobody was concerned. When he began skipping social events to avoid "dirty" food, friends praised his discipline. When he started weighing food obsessively and exercising twice daily, his family saw dedication, not danger. It wasn't until he fainted during a training session that anyone considered he might have an eating disorder--after all, eating disorders are "a girl thing," right?</p>
+      <p className="mb-6">Wrong. Eating disorders affect approximately one in four people with the condition are male, yet men remain dramatically underdiagnosed and undertreated <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2020" tier={1} />. The problem isn't prevalence--it's perception. Men face unique barriers: stigma around seeking help for what's perceived as a "women's illness," diagnostic tools developed primarily for female populations that miss male-typical presentations, and healthcare providers who are less likely to screen men for eating disorders. Men with eating disorders describe intense shame, feeling isolated as the "only guy" in treatment programs designed with women in mind.</p>
+      <p className="mb-6">Body image ideals differ by gender. While women often pursue thinness, men more commonly seek muscularity--the "lean and ripped" physique that dominates fitness culture. This creates different pathways to disordered eating: men pursue "clean eating," excessive protein intake, supplement abuse, and compulsive exercise to "cut" or "bulk." The disorder hides behind the socially acceptable language of optimization and dedication <Citation id="2" index={2} source="Body Image" year="2021" tier={1} />. It's time to break the stereotype and recognize that eating disorders are human problems, not gendered ones.</p>
     </div>
-    <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How ED Present in Men</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">While core features (restriction, bingeing, purging, preoccupation with food/weight) are similar, men more commonly report: excessive exercise to "cut" or "bulk," protein restriction or loading, steroid/supplement abuse, focus on muscularity rather than thinness, denial of problem due to being "healthy" or "disciplined." Binge eating disorder is most common ED in men. Male athletes, particularly in weight-class sports (wrestling, rowing) or aesthetic sports (bodybuilding, dance), show elevated risk. Gay and bisexual men have higher ED rates than heterosexual men, approaching female prevalence.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Addressing Barriers to Care</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Men delay seeking treatment due to shame, masculinity norms ("men should be strong"), and belief that ED only affect women <Citation id="3" index={3} source="Psychology of Men & Masculinities" year="2020" tier={1} />. Treatment should be gender-sensitive: addressing male-specific body image ideals, creating male-inclusive treatment spaces, involving partners/family. Evidence-based treatments (CBT, FBT, IPT) work equally well for men when they access care. Increasing awareness that eating disorders affect all genders is crucial for early identification.</p>
+
+    <StatCard
+      stats={[
+        { value: 10, suffix: 'M', label: 'Men in the U.S. will have an eating disorder in their lifetime' },
+        { value: 50, suffix: '%', label: 'Less likely to be diagnosed compared to women with identical symptoms' },
+        { value: 33, suffix: '%', label: 'Of people seeking ED treatment are men (but 25% of those with ED are male)' },
+      ]}
+      source="International Journal of Eating Disorders, 2020"
+    />
+
+    <h2 id="invisible-epidemic" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Invisible Epidemic</h2>
+    <p className="mb-6">The gender gap in eating disorder diagnosis doesn't reflect reality--it reflects bias. When researchers use the same screening questions for men and women, prevalence rates are much closer than previously thought. Binge eating disorder, in particular, affects roughly equal numbers of men and women <Citation id="4" index={4} source="Journal of Clinical Psychology" year="2021" tier={1} />. So why do men go undiagnosed?</p>
+    <p className="mb-6">First, traditional diagnostic criteria were developed primarily from female patients. Questions focus on fear of gaining weight or becoming fat, menstrual disruption, and drive for thinness--missing the male drive for muscularity. Second, screening tools often miss men because they don't ask about excessive exercise, protein restriction or loading, or supplement abuse. Third, men are socialized not to seek help for psychological issues, particularly those perceived as feminine. Admitting to an eating disorder feels like admitting weakness--a violation of masculine norms <Citation id="8" index={8} source="Psychology of Men & Masculinity" year="2021" tier={1} />.</p>
+    <p className="mb-6">The result? Men typically receive diagnosis and treatment 3-5 years later than women, when the disorder is more entrenched and severe. By the time men reach treatment, they often have serious medical complications and lower quality of life.</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'Why are eating disorders considered "female problems"?',
+          content: <p className="mb-4">Historical bias in research (most early ED studies included only women), media portrayal (movies and news stories featuring predominantly female patients), and diagnostic criteria developed from female samples created this perception. The reality: eating disorders have always affected men--we just weren't looking for them.</p>
+        },
+        {
+          title: 'Do men have different types of eating disorders than women?',
+          content: <p className="mb-4">No--men can develop anorexia nervosa, bulimia nervosa, binge eating disorder, and ARFID just like women. However, muscle dysmorphia (obsessive pursuit of muscularity through diet and exercise) is more common in men and often goes unrecognized as an eating disorder.</p>
+        },
+        {
+          title: 'Are eating disorders in men related to sexual orientation?',
+          content: <p className="mb-4">Gay and bisexual men experience eating disorders at significantly higher rates than heterosexual men--approaching the rates seen in women. This likely reflects increased body image pressure in gay male culture and minority stress. However, eating disorders affect heterosexual men too; sexual orientation is one risk factor among many.</p>
+        },
+      ]}
+    />
+
+    <h2 id="male-presentations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Eating Disorders Look Different in Men</h2>
+    <p className="mb-6">While core features--restriction, bingeing, purging, preoccupation with food and body--are similar across genders, men more commonly report patterns that don't fit the female stereotype:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Excessive exercise:</strong> Working out multiple times daily, unable to rest even when injured, exercising to "earn" food or "burn off" calories</li>
+      <li><strong>Protein manipulation:</strong> Extreme high-protein diets, obsessive macro-counting, protein restriction to cut weight</li>
+      <li><strong>Supplement and steroid abuse:</strong> Using fat burners, diet pills, anabolic steroids, or performance-enhancing drugs</li>
+      <li><strong>Focus on muscularity:</strong> Muscle dysmorphia--believing you're too small despite significant muscle mass, constantly comparing yourself to idealized bodies</li>
+      <li><strong>Food rigidity disguised as health:</strong> "Clean eating" rules, orthorexia (obsession with healthy eating), elimination of entire food groups</li>
+      <li><strong>Denial and minimization:</strong> Framing the disorder as "dedication," "discipline," or "optimization" rather than acknowledging distress</li>
+    </ul>
+    <p className="mb-6">Men often have a history of being overweight or teased about weight during childhood, triggering the disorder as a form of control. Male athletes--particularly those in weight-class sports (wrestling, rowing, boxing) or aesthetic sports (bodybuilding, physique competition, dance)--show elevated risk. The line between "serious athlete" and "eating disorder" blurs when restriction and exercise serve both performance goals and psychological needs for control.</p>
+
+    <ArticleCallout variant="clinical-note" title="Muscle Dysmorphia: The Male-Focused ED">
+      <p className="mb-4">Muscle dysmorphia (sometimes called "bigorexia") is a subtype of body dysmorphic disorder characterized by obsessive pursuit of muscularity. Men with muscle dysmorphia:</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Believe they're too small despite significant muscle mass</li>
+        <li>Experience extreme distress about body appearance</li>
+        <li>Engage in compulsive weightlifting and rigid dietary control</li>
+        <li>Avoid social situations where body is visible (beach, swimming)</li>
+        <li>May abuse anabolic steroids or supplements</li>
+      </ul>
+      <p className="mt-4">Unlike typical anorexia focused on thinness, muscle dysmorphia centers on being "not muscular enough"--a distinctly male presentation often missed by providers.</p>
+    </ArticleCallout>
+
+    <h2 id="vulnerable-populations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Who's Most at Risk</h2>
+    <p className="mb-6">While eating disorders can affect any man, certain groups show elevated vulnerability:</p>
+    <p className="mb-6"><strong>Gay and bisexual men</strong> experience eating disorders at rates 7 times higher than heterosexual men, approaching the prevalence seen in women <Citation id="5" index={5} source="American Journal of Men's Health" year="2020" tier={1} />. Gay male culture often emphasizes physical attractiveness and lean, muscular body ideals. Minority stress--the chronic stress of navigating discrimination and stigma--also contributes. However, it's crucial to note that the majority of men with eating disorders are heterosexual; sexual orientation is one risk factor, not the defining characteristic.</p>
+    <p className="mb-6"><strong>Athletes</strong> in weight-sensitive sports face performance pressure that can trigger disordered eating. Wrestlers cutting weight before weigh-ins, rowers trying to meet weight class requirements, distance runners believing lighter is faster, bodybuilders pursuing extreme leanness for competition--all navigate environments where body manipulation is normalized and even encouraged.</p>
+    <p className="mb-6"><strong>Veterans and military personnel</strong> experience higher ED rates due to strict weight and fitness standards, trauma exposure, and rigid eating patterns during service. <strong>Men with ADHD</strong> show increased binge eating disorder risk through impulsivity and emotion regulation difficulties. <strong>Transgender men</strong> may develop disordered eating as a way to suppress feminine body characteristics or cope with gender dysphoria.</p>
+
+    <h2 id="treatment-barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Breaking Down Barriers to Care</h2>
+    <p className="mb-6">Men delay seeking treatment an average of 3-5 years longer than women due to multiple barriers. Shame is pervasive--men describe feeling "weak," "less masculine," or "broken" for having a "girl's problem." Many fear judgment from healthcare providers, family, or friends. Masculinity norms that equate help-seeking with weakness create profound reluctance to admit struggle <Citation id="3" index={3} source="Psychology of Men & Masculinities" year="2020" tier={1} />.</p>
+    <p className="mb-6">Treatment systems compound the problem. Many eating disorder programs are designed for women, with treatment materials, language, and group therapy focused on female experiences. Men describe feeling like "the only guy" in treatment, making them less likely to engage fully or complete treatment. Insurance criteria for admission may require lower body weight thresholds that don't account for male body composition (higher muscle mass), leaving men unable to access care until they're medically compromised.</p>
+    <p className="mb-6">Healthcare providers themselves may miss eating disorders in men due to lack of training or gender bias. Standard screening tools like the Eating Disorder Examination Questionnaire perform less well in men because they don't ask about drive for muscularity <Citation id="6" index={6} source="International Journal of Eating Disorders" year="2019" tier={1} />.</p>
+
+    <ArticleCallout variant="action-plan" title="What Needs to Change">
+      <ul className="list-disc pl-5 space-y-2">
+        <li><strong>Universal screening:</strong> All patients--regardless of gender--should be screened for eating disorders in primary care</li>
+        <li><strong>Gender-sensitive assessment:</strong> Include questions about muscularity pursuit, excessive exercise, and supplement use</li>
+        <li><strong>Male-inclusive treatment:</strong> Programs should actively recruit male patients, offer men's groups, and train staff in male-specific presentations</li>
+        <li><strong>Public awareness:</strong> Campaigns featuring men challenge the stereotype that eating disorders are "women's problems"</li>
+        <li><strong>Provider education:</strong> Medical and mental health training should emphasize that eating disorders affect all genders</li>
+      </ul>
+    </ArticleCallout>
+
+    <h2 id="treatment-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Works--When Men Can Access It</h2>
+    <p className="mb-6">Evidence-based treatments work equally well for men and women when men can access gender-sensitive care. Cognitive-behavioral therapy (CBT), family-based treatment for adolescents (FBT), and interpersonal psychotherapy (IPT) all show strong outcomes in male patients. The problem isn't treatment effectiveness--it's treatment access.</p>
+    <p className="mb-6">Gender-sensitive treatment addresses male-specific body image ideals, explores how masculinity norms affect help-seeking and recovery, creates space for men to discuss shame and vulnerability, and involves partners or family. Men-only treatment groups allow men to connect with others who share their experience, reducing isolation. Programs that frame recovery as reclaiming strength and agency (rather than just "getting better") resonate with many men.</p>
+    <p className="mb-6">Recovery timelines are similar for men and women--typically 5-7 years for anorexia, 3-5 years for bulimia--but early intervention dramatically improves outcomes. The sooner men access treatment, the better their prognosis.</p>
+
+    <h2 id="taking-action" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Taking the First Step</h2>
+    <p className="mb-6">If you're a man struggling with food, body image, or exercise, know this: eating disorders are not gendered--pain is not gendered. Seeking help isn't weakness; it's courage. Here's how to start:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Talk to someone you trust.</strong> Breaking silence reduces shame. Choose a friend, family member, or partner who will listen without judgment.</li>
+      <li><strong>Find a provider who understands male eating disorders.</strong> Ask potential therapists about their experience treating men. Organizations like NEDA (nationaleatingdisorders.org) can help you find specialists.</li>
+      <li><strong>Consider online or telehealth options.</strong> If local resources are limited or you're uncomfortable with in-person care, virtual treatment is effective and may feel more accessible.</li>
+      <li><strong>Connect with other men in recovery.</strong> Support groups (in-person or online) help you realize you're not alone. Hearing other men's stories reduces isolation.</li>
+      <li><strong>Address co-occurring issues.</strong> Many men with eating disorders also struggle with depression, anxiety, trauma, or substance use. Integrated treatment addressing all conditions produces best outcomes.</li>
+    </ul>
+    <p className="mb-6">Recovery is possible. Thousands of men have reclaimed their lives from eating disorders. You don't have to fit a stereotype to deserve help--you just have to be human.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Approximately 25% of people with eating disorders are male, but men are half as likely to receive diagnosis or treatment due to gender stereotypes</li>
+        <li>Men more commonly pursue muscularity rather than thinness, leading to presentations like muscle dysmorphia that traditional screening misses</li>
+        <li>Binge eating disorder affects roughly equal numbers of men and women; gay and bisexual men experience ED at rates approaching those of women</li>
+        <li>Masculinity norms create shame and reluctance to seek help, delaying treatment by 3-5 years compared to women</li>
+        <li>Evidence-based treatments work equally well for men when they can access gender-sensitive, male-inclusive care</li>
+        <li>Breaking the stereotype requires universal screening, provider education, and public awareness that eating disorders are human problems, not gendered ones</li>
+      </ul>
+    </ArticleCallout>
   </> },
-  { id: catId(57), slug: 'eating-disorders-athletes', title: 'Eating Disorders and Athletes: Performance Pressure and Body Control', description: 'Athletes face heightened ED risk in weight-sensitive sports.', image: "/images/articles/cat13/cover-057.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Athletes", 'Eating Disorders'], citations: [
-    { id: '1', text: 'Athlete ED Prevalence', source: 'Sports Medicine', year: '2020', link: 'https://doi.org/10.1007/s40279-020-01323-4', tier: 1 },
-    { id: '2', text: 'RED-S', source: 'British Journal of Sports Medicine', year: '2021', link: 'https://doi.org/10.1136/bjsports-2021-103960', tier: 1 },
+  { id: catId(57), slug: 'eating-disorders-athletes', title: 'Eating Disorders and Athletes: Performance Pressure and Body Control', description: 'Athletes face heightened ED risk in weight-sensitive sports.', image: "/images/articles/cat13/cover-057.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Athletes", 'Eating Disorders'], summary: 'Athletes face significantly elevated eating disorder risk, especially in sports emphasizing leanness, weight requirements, or aesthetic judgment. What begins as performance optimization can escalate into life-threatening illness when insufficient energy intake causes Relative Energy Deficiency in Sport (RED-S), compromising health, performance, and long-term well-being.', keyFacts: [
+    { text: 'Athletes in weight-sensitive sports have 2-3 times higher eating disorder rates than the general population', citationIndex: 1 },
+    { text: 'Relative Energy Deficiency in Sport (RED-S) affects up to 45% of female athletes and 18% of male athletes in high-risk sports', citationIndex: 2 },
+    { text: 'Eating disorders paradoxically impair athletic performance through fatigue, injury, loss of muscle mass, and cognitive deficits', citationIndex: 4 },
+    { text: 'Early sport specialization, high training volume, and coach weight comments significantly increase eating disorder risk', citationIndex: 5 },
+    { text: 'Prevention programs addressing sport culture reduce eating disorder incidence by 30-60%', citationIndex: 7 },
+  ], sparkMoment: 'The same discipline that builds champions can destroy them--when performance optimization crosses into eating disorder, the body you\'re trying to perfect becomes the body that fails you.', practicalExercise: {
+    title: 'Athlete Body Check-In',
+    steps: [
+      { title: 'Energy Assessment', description: 'Ask yourself: Am I eating enough to support my training? Do I feel constantly fatigued? Am I getting injured more often?' },
+      { title: 'Motivation Check', description: 'Why am I restricting food or controlling weight? Is it truly for performance, or am I using it to cope with stress, control, or body dissatisfaction?' },
+      { title: 'Performance Reality', description: 'Track your actual performance metrics. Are you getting faster/stronger, or are you declining despite "optimization"?' },
+      { title: 'Trusted Conversation', description: 'Talk to a sports dietitian or athletic trainer about your relationship with food and training.' },
+    ],
+    toolLink: '/tools/symptom-navigator',
+    toolLabel: 'Assess Your Symptoms',
+  }, citations: [
+    { id: '1', text: 'Eating Disorders in Athletes: Overview and Management', source: 'Sports Medicine', year: '2020', link: 'https://doi.org/10.1007/s40279-020-01323-4', tier: 1 },
+    { id: '2', text: 'RED-S: Relative Energy Deficiency in Sport', source: 'British Journal of Sports Medicine', year: '2021', link: 'https://doi.org/10.1136/bjsports-2021-103960', tier: 1 },
+    { id: '3', text: 'Eating Disorders in Aesthetic Sports', source: 'International Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1002/eat.23280', tier: 1 },
+    { id: '4', text: 'Impact of Eating Disorders on Athletic Performance', source: 'Journal of Sports Sciences', year: '2021', link: 'https://doi.org/10.1080/02640414.2021.1896769', tier: 1 },
+    { id: '5', text: 'Risk Factors for Eating Disorders in Athletes', source: 'Clinical Journal of Sport Medicine', year: '2020', link: 'https://doi.org/10.1097/JSM.0000000000000709', tier: 1 },
+    { id: '6', text: 'Treatment of Athletes with Eating Disorders', source: 'Current Sports Medicine Reports', year: '2021', link: 'https://doi.org/10.1249/JSR.0000000000000817', tier: 1 },
+    { id: '7', text: 'Prevention of Eating Disorders in Athletes', source: 'Sports Health', year: '2020', link: 'https://doi.org/10.1177/1941738120913287', tier: 1 },
+    { id: '8', text: 'Female Athlete Triad and RED-S', source: 'Medicine & Science in Sports & Exercise', year: '2021', link: 'https://doi.org/10.1249/MSS.0000000000002565', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Athletes show elevated eating disorder rates, particularly in sports emphasizing leanness or weight requirements: gymnastics, figure skating, dance, distance running, wrestling, lightweight rowing <Citation id="1" index={1} source="Sports Medicine" year="2020" tier={1} />. Performance pressure, weight limits, body scrutiny (judged on appearance or weighed publicly), coach comments, and team culture contribute. Disordered eating may begin as "performance optimization"—cutting weight for competition, body fat reduction—then escalate into clinical eating disorder. The boundary between "dedicated athlete" and "eating disorder" blurs when restriction, excessive exercise, or purging serve both performance and psychological needs. Relative Energy Deficiency in Sport (RED-S) describes when insufficient calorie intake relative to energy expenditure causes medical complications: menstrual dysfunction, bone loss, impaired performance, immune suppression <Citation id="2" index={2} source="BJSM" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Sarah was the fastest runner on her high school cross-country team. When her coach suggested that "losing a few pounds" might shave seconds off her times, she took it seriously. She cut portions, then entire meals, then food groups. Her times initially improved--until they didn't. Stress fractures sidelined her. Her periods stopped. She was cold all the time, exhausted, injured constantly. But she couldn't stop--because everyone praised her "dedication."</p>
+      <p className="mb-6">Athletes show significantly elevated eating disorder rates, with prevalence 2-3 times higher than the general population <Citation id="1" index={1} source="Sports Medicine" year="2020" tier={1} />. Sports emphasizing leanness (gymnastics, figure skating, dance, distance running) or weight requirements (wrestling, lightweight rowing, boxing, weight-class martial arts) create particularly high risk. Performance pressure, weight limits, body scrutiny--being judged on appearance or weighed publicly--and coach comments all contribute. Team culture can normalize extreme behaviors: athletes bonding over restrictive dieting, competing over who eats least, celebrating weight loss.</p>
+      <p className="mb-6">What begins as "performance optimization"--cutting weight for competition, body fat reduction to improve times--can escalate into clinical eating disorder. The boundary between "dedicated athlete" and "eating disorder" blurs when restriction, excessive exercise, or purging serve both performance goals and psychological needs for control. When insufficient calorie intake relative to energy expenditure becomes chronic, athletes develop Relative Energy Deficiency in Sport (RED-S)--a syndrome causing menstrual dysfunction, bone loss, impaired performance, immune suppression, cardiovascular problems, and increased injury risk <Citation id="2" index={2} source="British Journal of Sports Medicine" year="2021" tier={1} />. Ironically, the behaviors meant to enhance performance ultimately destroy it.</p>
     </div>
-    <h2 id="risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Sport-Specific Risks</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Aesthetic sports (gymnastics, figure skating, dance): judged partially on appearance, creating pressure for lean physiques. Endurance sports (distance running, cycling): low body weight perceived as performance advantage. Weight-class sports (wrestling, rowing): rapid weight cycling for competition. Athletes describe coaches making weight comments, teammates bonding over dieting, sport culture normalizing extreme behaviors. Early sport specialization, high training volume, perfectionism, and injury all increase ED risk.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Intervention and Prevention</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Athletes may resist treatment due to fear of weight gain harming performance or mandatory athletic suspension. However, untreated ED ultimately impair performance through fatigue, injury, loss of muscle mass, cognitive impairment. Treatment requires multidisciplinary team: physician, dietitian, mental health provider, athletic trainer, coach involvement. Prevention includes educating coaches on harm of weight comments, eliminating public weigh-ins, promoting health over appearance, screening athletes regularly.</p>
+
+    <ComparisonTable
+      title="Sport Types and Eating Disorder Risk"
+      columns={['Sport Category', 'Prevalence', 'Primary Risk Factors']}
+      items={[
+        { feature: 'Aesthetic Sports', values: ['13-42%', 'Judged on appearance; lean physique = higher scores; revealing uniforms'] },
+        { feature: 'Weight-Class Sports', values: ['15-35%', 'Rapid weight cutting for weigh-ins; weight cycling; pressure to compete at lower weight class'] },
+        { feature: 'Endurance Sports', values: ['14-25%', 'Belief that lighter = faster; high training volume; performance plateau triggering restriction'] },
+        { feature: 'Ball Sports', values: ['5-12%', 'Lower risk but still elevated; pressure for specific body types; team culture'] },
+      ]}
+      highlightColumn={1}
+    />
+
+    <h2 id="why-athletes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Athletes Are Vulnerable</h2>
+    <p className="mb-6">Multiple factors converge to elevate athlete eating disorder risk. Sport-specific demands create environments where body manipulation is not just accepted but encouraged. Gymnasts and figure skaters are judged partly on aesthetics--leaner bodies score higher. Distance runners believe lighter bodies run faster (true to a point, catastrophic beyond it). Wrestlers cut 10-15 pounds in days to make weight class, then rapidly rehydrate--a cycle that can become compulsive.</p>
+    <p className="mb-6">Personality traits that make excellent athletes also increase ED risk: perfectionism, high achievement orientation, discipline, competitiveness, difficulty with emotions. Early sport specialization--focusing on one sport year-round from young age--increases risk by limiting identity development outside athletics and creating intense pressure <Citation id="5" index={5} source="Clinical Journal of Sport Medicine" year="2020" tier={1} />. Coach influence is profound: weight comments from coaches, even well-intentioned ones about "optimal performance weight," predict eating disorder development. Public weigh-ins, body fat measurements, or comparing athletes' bodies create shame and body surveillance.</p>
+    <p className="mb-6">Team culture matters. When teammates bond over dieting, share "tips" for cutting weight, or compete over who's most disciplined with food, disordered eating becomes normalized. Injury can trigger eating disorders--athletes unable to train may restrict food to prevent weight gain or feel loss of control over their bodies. Transition periods--moving from high school to college sports, retirement from athletics--are high-risk times when identity tied to athletic body must shift.</p>
+
+    <QuoteBlock
+      quote="I thought I was optimizing my performance. I was actually destroying my body. By the time I realized what was happening, I had three stress fractures, no period for a year, and I couldn't run more than two miles without collapsing. I had to choose: keep running into the ground, or step away and heal. I chose healing. It saved my life."
+      attribution="Former Division I runner"
+      role="Recovered from RED-S"
+      variant="large"
+    />
+
+    <h2 id="red-s" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">RED-S: When Energy Deficiency Compromises Health</h2>
+    <p className="mb-6">Relative Energy Deficiency in Sport (RED-S) describes the cascade of physiological impairments that occur when athletes don't consume enough energy to support their training. It's not just about eating disorders--it can happen through unintentional undereating, high training loads, or both. However, eating disorders are a common cause. RED-S affects up to 45% of female athletes and 18% of male athletes in high-risk sports <Citation id="2" index={2} source="BJSM" year="2021" tier={1} />.</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Reproductive dysfunction:</strong> Menstrual irregularity or absence in women; low testosterone in men</li>
+      <li><strong>Bone health:</strong> Decreased bone density, stress fractures, early-onset osteoporosis</li>
+      <li><strong>Metabolic effects:</strong> Slowed metabolism, difficulty maintaining body temperature</li>
+      <li><strong>Cardiovascular problems:</strong> Slowed heart rate, low blood pressure</li>
+      <li><strong>Performance impairment:</strong> Decreased endurance, reduced strength, increased injury</li>
+      <li><strong>Psychological effects:</strong> Depression, anxiety, irritability, difficulty concentrating</li>
+    </ul>
+
+    <BeforeAfter
+      before={{
+        title: 'Short-Term (Weeks 1-3)',
+        points: [
+          'Slight weight loss, possible initial performance improvement',
+          'Increased focus and control feeling',
+          'Praise from coaches/teammates for "discipline"',
+        ]
+      }}
+      after={{
+        title: 'Long-Term (Months 3+)',
+        points: [
+          'Significant performance decline, slower times, reduced power',
+          'Chronic fatigue, inability to complete workouts',
+          'Recurrent injuries (stress fractures, muscle strains)',
+          'Medical complications: amenorrhea, bone loss, heart problems',
+        ]
+      }}
+    />
+
+    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment and Return to Sport</h2>
+    <p className="mb-6">Treating athletes with eating disorders requires specialized, multidisciplinary teams understanding both eating disorder treatment and sports medicine. The team typically includes: physician (medical monitoring, clearance decisions), sports dietitian (nutrition education, meal planning), mental health provider (therapy addressing eating disorder and athletic identity), athletic trainer (injury monitoring, training modifications), and coach involvement (understanding the disorder, removing weight-focused pressure) <Citation id="6" index={6} source="Current Sports Medicine Reports" year="2021" tier={1} />.</p>
+    <p className="mb-6">Return-to-play protocols ensure athletes don't resume full training until medically stable. This is frustrating for athletes desperate to compete, but essential--premature return increases injury risk and relapse. Some athletes transition away from elite sport as part of recovery, recognizing that the environment is incompatible with health. Others successfully return after treatment, often with newfound appreciation for fueling their bodies rather than punishing them.</p>
+
+    <h2 id="prevention" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Prevention: Changing Sport Culture</h2>
+    <p className="mb-6">Individual treatment is necessary, but prevention requires systemic change to sport culture. Evidence-based prevention programs reduce eating disorder incidence by 30-60% when implemented at team or organizational level <Citation id="7" index={7} source="Sports Health" year="2020" tier={1} />. Effective prevention includes:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Coach education on recognizing eating disorder warning signs and harm of weight comments</li>
+      <li>Eliminating public weigh-ins, body fat measurements, or comparing athletes' bodies</li>
+      <li>Promoting health-first messaging: emphasizing performance through adequate fueling</li>
+      <li>Regular screening and medical evaluation for athletes in high-risk sports</li>
+      <li>Encouraging athletes to develop identity and interests beyond sport</li>
+    </ul>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Athletes in weight-sensitive sports have 2-3 times higher eating disorder risk, driven by performance pressure and sport culture</li>
+        <li>RED-S affects up to 45% of female athletes in high-risk sports, causing menstrual dysfunction, bone loss, and performance decline</li>
+        <li>What begins as "performance optimization" can escalate into life-threatening disorder</li>
+        <li>Treatment requires multidisciplinary teams with return-to-play protocols ensuring medical stability</li>
+        <li>Prevention through coach education and culture change reduces eating disorder incidence by 30-60%</li>
+      </ul>
+    </ArticleCallout>
   </> },
-  { id: catId(58), slug: 'eating-disorders-comorbidity', title: 'The Relationship Between Eating Disorders and Other Mental Health Conditions', description: 'ED commonly co-occur with anxiety, depression, OCD.', image: "/images/articles/cat13/cover-058.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Eating Disorders", 'Comorbidity'], citations: [
-    { id: '1', text: 'ED Psychiatric Comorbidity', source: 'Psychological Medicine', year: '2020', link: 'https://doi.org/10.1017/S0033291720000835', tier: 1 },
-    { id: '2', text: 'ED and Trauma', source: 'European Eating Disorders Review', year: '2021', link: 'https://doi.org/10.1002/erv.2839', tier: 1 },
+  { id: catId(58), slug: 'eating-disorders-comorbidity', title: 'The Relationship Between Eating Disorders and Other Mental Health Conditions', description: 'ED commonly co-occur with anxiety, depression, OCD.', image: "/images/articles/cat13/cover-058.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Eating Disorders", 'Comorbidity'], summary: 'Eating disorders rarely occur in isolation—50-75% of individuals with eating disorders have comorbid anxiety or depression, with high rates of OCD, PTSD, personality disorders, and substance use disorders. Understanding and treating these co-occurring conditions is essential for lasting recovery.', keyFacts: [
+    { text: '50-75% of people with eating disorders have comorbid anxiety or depression, making mental health comorbidity the norm rather than exception', citationIndex: 1 },
+    { text: '25-60% of individuals with eating disorders also meet criteria for obsessive-compulsive disorder', citationIndex: 1 },
+    { text: '20-50% of people with eating disorders have PTSD or trauma history, especially common in bulimia and binge eating disorder', citationIndex: 2 },
+    { text: 'Treating eating disorders alone while ignoring comorbid conditions typically results in poor outcomes and high relapse rates', citationIndex: 4 },
+    { text: 'Integrated treatment addressing all conditions simultaneously produces the best long-term recovery outcomes', citationIndex: 5 },
+  ], sparkMoment: 'An eating disorder is rarely just about food—it\'s often the visible manifestation of invisible pain: anxiety, depression, trauma, or control needs that find expression through the body.', practicalExercise: {
+    title: 'Mapping Your Mental Health',
+    steps: [
+      { title: 'Identify Patterns', description: 'Notice when eating disorder urges intensify. What emotions precede them? Anxiety before a social event? Sadness after rejection?' },
+      { title: 'Track Co-Occurring Symptoms', description: 'Beyond eating/body concerns, what else troubles you? Panic attacks? Intrusive thoughts? Low mood?' },
+      { title: 'Explore Functions', description: 'What does the eating disorder do for you? Does restriction soothe anxiety? Does bingeing numb painful emotions?' },
+      { title: 'Seek Comprehensive Care', description: 'Share your full symptom picture with providers. Treatment addressing all conditions produces lasting recovery.' },
+    ],
+    toolLink: '/tools/symptom-navigator',
+    toolLabel: 'Assess All Your Symptoms',
+  }, citations: [
+    { id: '1', text: 'Psychiatric Comorbidity in Eating Disorders', source: 'Psychological Medicine', year: '2020', link: 'https://doi.org/10.1017/S0033291720000835', tier: 1 },
+    { id: '2', text: 'Eating Disorders and Trauma', source: 'European Eating Disorders Review', year: '2021', link: 'https://doi.org/10.1002/erv.2839', tier: 1 },
+    { id: '3', text: 'Personality Disorders and Eating Disorders', source: 'Current Psychiatry Reports', year: '2020', link: 'https://doi.org/10.1007/s11920-020-01173-w', tier: 1 },
+    { id: '4', text: 'Treatment Outcomes with Comorbidity', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23503', tier: 1 },
+    { id: '5', text: 'Integrated Treatment Approaches', source: 'Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1186/s40337-020-00329-9', tier: 1 },
+    { id: '6', text: 'Substance Use and Eating Disorders', source: 'Addictive Behaviors', year: '2020', link: 'https://doi.org/10.1016/j.addbeh.2020.106512', tier: 1 },
+    { id: '7', text: 'ADHD and Binge Eating Disorder', source: 'European Eating Disorders Review', year: '2021', link: 'https://doi.org/10.1002/erv.2809', tier: 1 },
+    { id: '8', text: 'Depression in Eating Disorders', source: 'Depression and Anxiety', year: '2020', link: 'https://doi.org/10.1002/da.23045', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Eating disorders rarely occur alone. Approximately 50-75% with ED have comorbid anxiety or depression; 25-60% have OCD; 20-50% experience PTSD or trauma history; 20-30% have personality disorders; substance use disorders occur in 15-35% <Citation id="1" index={1} source="Psychological Medicine" year="2020" tier={1} />. High comorbidity reflects shared risk factors (perfectionism, emotion regulation difficulties, trauma exposure), neurobiological overlap, and that eating disorder behaviors often serve to manage other psychological distress. Understanding comorbidity is essential—treating ED alone while ignoring depression or trauma typically results in poor outcomes and high relapse rates.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When Maya finally sought treatment for bulimia, her therapist asked about more than just food and purging. Did she experience panic attacks? Yes—almost daily. Intrusive thoughts? Constantly. Low mood? For years. Trauma history? Childhood sexual abuse she'd never disclosed. Maya thought she was seeking help for an eating disorder. She discovered she was living with bulimia, panic disorder, OCD, depression, and PTSD—all intertwined, each feeding the others in a cycle of distress.</p>
+      <p className="mb-6">Eating disorders rarely occur alone. Approximately 50-75% of people with eating disorders have comorbid anxiety or depression; 25-60% have OCD; 20-50% experience PTSD or trauma history; 20-30% have personality disorders; substance use disorders occur in 15-35% <Citation id="1" index={1} source="Psychological Medicine" year="2020" tier={1} />. Comorbidity is the norm, not the exception. High comorbidity reflects shared risk factors like perfectionism and emotion regulation difficulties, neurobiological overlap in brain circuits governing reward and control, and the function eating disorder behaviors serve: managing other psychological distress that feels overwhelming.</p>
+      <p className="mb-6">Understanding comorbidity is essential. Treating the eating disorder alone while ignoring depression, trauma, or anxiety typically results in poor outcomes and high relapse rates <Citation id="4" index={4} source="International Journal of Eating Disorders" year="2021" tier={1} />. When underlying conditions drive eating disorder behaviors, fixing food and weight concerns without addressing root causes leaves the person vulnerable. The eating disorder was serving a purpose—coping with unbearable emotions, creating control in chaos, numbing pain. Remove the eating disorder without treating what it was managing, and either relapse occurs or symptoms shift to other maladaptive behaviors.</p>
     </div>
-    <h2 id="common-comorbidities" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Most Common Co-Occurring Conditions</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Anxiety disorders (social anxiety, generalized anxiety, OCD) share perfectionism, rigidity, and avoidance with ED. Depression often develops secondary to ED—malnutrition itself causes depressive symptoms. PTSD/trauma history is particularly high in bulimia and binge eating disorder <Citation id="2" index={2} source="EEDR" year="2021" tier={1} />. Borderline personality disorder co-occurs with bulimia and shows emotion dysregulation, impulsivity, self-harm. Substance use may represent alternative maladaptive coping. ADHD increases binge eating disorder risk through impulsivity and emotion regulation difficulties.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Integrated Treatment Approach</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Comprehensive assessment identifying all conditions informs treatment planning. Sequencing matters: severe depression or PTSD may need stabilization before intensive eating disorder work. Some treatments address multiple conditions: DBT for ED + borderline personality disorder, trauma-focused therapy for PTSD + ED. Medications may target comorbid conditions: SSRIs for depression/anxiety/OCD, mood stabilizers for bipolar disorder. Integrated care addressing the whole person—not just eating symptoms—produces best outcomes.</p>
+
+    <ArticleChart
+      type="bar"
+      title="Comorbidity Rates in Eating Disorders"
+      data={[
+        { label: 'Anxiety Disorders', value: 65 },
+        { label: 'Depression', value: 60 },
+        { label: 'OCD', value: 40 },
+        { label: 'PTSD/Trauma', value: 35 },
+        { label: 'Personality Disorders', value: 25 },
+        { label: 'Substance Use', value: 25 },
+        { label: 'ADHD', value: 20 },
+      ]}
+      source="Psychological Medicine, 2020"
+      description="Percentage of individuals with eating disorders who also meet criteria for each comorbid condition"
+    />
+
+    <h2 id="anxiety-depression" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Anxiety and Depression: The Most Common Companions</h2>
+    <p className="mb-6">Anxiety disorders—including social anxiety, generalized anxiety disorder, panic disorder, and OCD—share striking overlap with eating disorders. Both involve perfectionism, rigidity, avoidance of feared situations, and difficulty tolerating uncertainty. For many people, the eating disorder develops as an attempt to manage overwhelming anxiety. Restriction creates a sense of control when life feels chaotic. Food rules provide certainty. Weight loss offers achievement when other areas of life feel like failure.</p>
+    <p className="mb-6">Depression commonly co-occurs, though the relationship is complex. Sometimes depression develops secondary to the eating disorder—malnutrition itself causes depressive symptoms: low mood, fatigue, difficulty concentrating, social withdrawal, loss of interest in activities. Starvation literally changes brain chemistry, mimicking major depression <Citation id="8" index={8} source="Depression and Anxiety" year="2020" tier={1} />. Other times, depression predates the eating disorder, with disordered eating emerging as an attempt to cope with unbearable sadness or numbness.</p>
+
+    <div className="space-y-4 my-8">
+      <MythVsFactBlock
+        myth="If I just fix my eating, my anxiety/depression will go away"
+        fact="While weight restoration and normalized eating improve mood in malnutrition-driven depression, underlying anxiety and mood disorders typically require specific treatment—therapy, sometimes medication—beyond eating disorder recovery alone"
+      />
+      <MythVsFactBlock
+        myth="I should treat my eating disorder first, then address other issues later"
+        fact="Integrated treatment addressing all conditions simultaneously produces better outcomes than sequential treatment. Ignoring comorbid conditions while treating the eating disorder typically leads to poorer results and higher relapse"
+      />
+    </div>
+
+    <h2 id="trauma-ptsd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Trauma and PTSD</h2>
+    <p className="mb-6">Trauma history is particularly common in bulimia nervosa and binge eating disorder, with prevalence rates of 20-50% <Citation id="2" index={2} source="European Eating Disorders Review" year="2021" tier={1} />. Trauma creates profound effects on sense of safety, body ownership, emotion regulation, and self-worth. Eating disorder behaviors often develop as ways of coping with trauma-related distress. People with trauma histories describe restriction as reclaiming bodily control after violation. Binge eating numbs overwhelming emotions related to trauma memories. Purging releases physical tension from hyperarousal.</p>
+
+    <ArticleTabs
+      tabs={[
+        {
+          label: 'Anxiety & ED',
+          content: <div>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Social anxiety triggers restriction before social events or eating in public</li>
+              <li>Panic disorder: fear of losing control leads to rigid food rules</li>
+              <li>OCD: intrusive thoughts manifest as food rituals</li>
+              <li>Generalized anxiety finds outlet in controllable domain (food/exercise)</li>
+            </ul>
+            <p className="mt-4"><strong>Treatment:</strong> Exposure therapy alongside nutritional rehabilitation, CBT targeting both thought patterns</p>
+          </div>
+        },
+        {
+          label: 'Depression & ED',
+          content: <div>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Malnutrition-caused depression: fatigue, hopelessness emerge from starvation state</li>
+              <li>Binge eating temporarily numbs sadness, followed by guilt/shame deepening depression</li>
+              <li>Primary depression requires specific treatment beyond weight restoration</li>
+            </ul>
+            <p className="mt-4"><strong>Treatment:</strong> SSRIs, behavioral activation, weight restoration, differentiate starvation vs. primary depression</p>
+          </div>
+        },
+        {
+          label: 'Trauma & ED',
+          content: <div>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>Body control: restriction reclaims agency over body after violation</li>
+              <li>Numbing: binge eating dampens overwhelming trauma-related emotions</li>
+              <li>Disappearing: weight loss makes self less visible, less vulnerable</li>
+            </ul>
+            <p className="mt-4"><strong>Treatment:</strong> Trauma-focused therapy (PE, CPT, EMDR) alongside eating disorder treatment</p>
+          </div>
+        },
+      ]}
+    />
+
+    <h2 id="personality-substance" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Personality Disorders and Substance Use</h2>
+    <p className="mb-6">Borderline personality disorder (BPD) co-occurs most frequently with bulimia nervosa, sharing features like emotion dysregulation, impulsivity, self-harm, and unstable relationships <Citation id="3" index={3} source="Current Psychiatry Reports" year="2020" tier={1} />. For people with both conditions, binge-purge cycles serve similar functions to other BPD behaviors: releasing emotional tension, self-punishment, managing abandonment fears. Dialectical Behavior Therapy (DBT) treats both conditions effectively.</p>
+    <p className="mb-6">Substance use disorders occur in 15-35% of people with eating disorders, particularly bulimia and binge eating disorder <Citation id="6" index={6} source="Addictive Behaviors" year="2020" tier={1} />. Both represent maladaptive coping with emotional distress. ADHD increases binge eating disorder risk through impulsivity and emotion dysregulation <Citation id="7" index={7} source="European Eating Disorders Review" year="2021" tier={1} />.</p>
+
+    <h2 id="integrated-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Integrated Treatment</h2>
+    <p className="mb-6">Comprehensive assessment identifying all mental health conditions informs treatment planning. Understanding the full clinical picture allows providers to design integrated treatment addressing all conditions rather than treating the eating disorder in isolation <Citation id="5" index={5} source="Journal of Eating Disorders" year="2020" tier={1} />. Some evidence-based therapies address multiple conditions simultaneously: DBT for emotion dysregulation underlying both eating disorders and BPD, trauma-focused therapy for PTSD alongside eating disorder treatment, CBT adapted versions addressing eating disorder, anxiety, and depression thought patterns.</p>
+    <p className="mb-6">Medication may target comorbid conditions: SSRIs for depression, anxiety, and OCD; mood stabilizers for bipolar disorder; ADHD medications reducing binge eating through impulse control. Recovery means more than normalized eating—it means addressing the pain the eating disorder was managing.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>50-75% of people with eating disorders have comorbid anxiety or depression—comorbidity is the norm</li>
+        <li>Eating disorder behaviors often serve to manage other psychological distress: restriction controls anxiety, binge eating numbs trauma pain</li>
+        <li>Malnutrition itself causes depressive symptoms, making it crucial to differentiate starvation-driven depression from primary mood disorders</li>
+        <li>Treating the eating disorder alone while ignoring comorbid conditions typically results in poor outcomes and high relapse rates</li>
+        <li>Integrated treatment addressing all conditions simultaneously produces the best long-term recovery outcomes</li>
+      </ul>
+    </ArticleCallout>
   </> },
-  { id: catId(59), slug: 'eating-disorder-recovery', title: 'Recovery from Eating Disorders: What the Journey Actually Looks Like', description: 'ED recovery is possible but requires specialized treatment and time.', image: "/images/articles/cat13/cover-059.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Recovery", 'Eating Disorders'], citations: [
-    { id: '1', text: 'ED Recovery Outcomes', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23487', tier: 1 },
-    { id: '2', text: 'Recovery Predictors', source: 'European Eating Disorders Review', year: '2020', link: 'https://doi.org/10.1002/erv.2726', tier: 1 },
+  { id: catId(59), slug: 'eating-disorder-recovery', title: 'Recovery from Eating Disorders: What the Journey Actually Looks Like', description: 'ED recovery is possible but requires specialized treatment and time.', image: "/images/articles/cat13/cover-059.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Recovery", 'Eating Disorders'], summary: 'Full recovery from eating disorders is possible—50-70% of individuals achieve complete recovery, though the journey typically takes 3-7 years and is rarely linear. Recovery means more than normalized eating; it requires psychological healing, developing healthier coping strategies, and building a life beyond the eating disorder.', keyFacts: [
+    { text: '50-70% of people with eating disorders achieve full recovery with appropriate treatment', citationIndex: 1 },
+    { text: 'Recovery typically takes 5-7 years for anorexia and 3-5 years for bulimia—patience and persistence are essential', citationIndex: 1 },
+    { text: 'Early intervention dramatically improves recovery outcomes and reduces chronic illness risk', citationIndex: 2 },
+    { text: 'Full recovery includes both behavioral changes (normalized eating) and psychological recovery (no longer defining self-worth through weight)', citationIndex: 1 },
+    { text: 'Setbacks are normal and expected—recovery is rarely linear, requiring self-compassion and continued support', citationIndex: 2 },
+  ], sparkMoment: 'Recovery isn\'t returning to who you were before the eating disorder—it\'s discovering who you can become without it defining you.', practicalExercise: {
+    title: 'Recovery Progress Check-In',
+    steps: [
+      { title: 'Acknowledge Behavioral Progress', description: 'List concrete behavioral changes you\'ve made: regular eating, reduced compensatory behaviors, challenging fear foods. Progress counts even when it feels small.' },
+      { title: 'Notice Psychological Shifts', description: 'Are you challenging distorted thoughts more often? Feeling less consumed by food/body preoccupation? Recognizing these mental changes marks true recovery.' },
+      { title: 'Identify Non-ED Coping', description: 'What healthy coping strategies are you developing? Journaling, reaching out to support, engaging in valued activities? Building these alternatives is essential.' },
+      { title: 'Celebrate Growth', description: 'Recovery includes honoring progress. What would you tell your past self? What are you proud of? Self-compassion fuels continued healing.' },
+    ],
+    toolLink: '/tools',
+    toolLabel: 'Explore Recovery Tools',
+  }, citations: [
+    { id: '1', text: 'Long-Term Outcomes of Eating Disorder Recovery', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23487', tier: 1 },
+    { id: '2', text: 'Predictors of Recovery in Eating Disorders', source: 'European Eating Disorders Review', year: '2020', link: 'https://doi.org/10.1002/erv.2726', tier: 1 },
+    { id: '3', text: 'Defining Recovery from Eating Disorders', source: 'International Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1002/eat.23291', tier: 1 },
+    { id: '4', text: 'Relapse Prevention in Eating Disorder Recovery', source: 'Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1186/s40337-021-00442-4', tier: 1 },
+    { id: '5', text: 'Family-Based Treatment Outcomes', source: 'JAMA Psychiatry', year: '2020', link: 'https://doi.org/10.1001/jamapsychiatry.2020.0315', tier: 1 },
+    { id: '6', text: 'Peer Support in Eating Disorder Recovery', source: 'Eating Disorders', year: '2021', link: 'https://doi.org/10.1080/10640266.2021.1902926', tier: 1 },
+    { id: '7', text: 'Self-Compassion and Recovery', source: 'Body Image', year: '2020', link: 'https://doi.org/10.1016/j.bodyim.2020.06.001', tier: 1 },
+    { id: '8', text: 'Nutritional Rehabilitation', source: 'Nutrients', year: '2021', link: 'https://doi.org/10.3390/nu13020504', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Full recovery from eating disorders is possible. Long-term studies show 50-70% achieve full recovery, 20-30% show partial recovery, and 10-20% develop chronic illness <Citation id="1" index={1} source="IJED" year="2021" tier={1} />. Recovery typically takes years, not months—averaging 5-7 years for anorexia, 3-5 years for bulimia. Early intervention significantly improves outcomes. Recovery isn't linear; setbacks are normal. Full recovery means normalized eating, absence of compensatory behaviors, weight restoration (if applicable), and—crucially—psychological recovery: no longer defining self-worth through weight/shape, ability to cope with distress without eating disorder behaviors, improved quality of life.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">After seven years living with anorexia, Emma couldn't imagine life without the eating disorder. It had become her identity, her safety, her control. Recovery seemed impossible—until it wasn't. Five years into treatment, she realized she'd gone an entire week without thinking obsessively about food. She'd eaten breakfast with friends without calculating calories. She'd felt sad without immediately restricting. Recovery wasn't a destination she'd arrived at; it was gradual accumulation of moments when the eating disorder no longer ran her life.</p>
+      <p className="mb-6">Full recovery from eating disorders is possible. Long-term studies show 50-70% of individuals achieve full recovery, 20-30% show partial recovery, and 10-20% develop chronic illness <Citation id="1" index={1} source="International Journal of Eating Disorders" year="2021" tier={1} />. Recovery typically takes years, not months—averaging 5-7 years for anorexia, 3-5 years for bulimia. Early intervention significantly improves outcomes, reducing both duration and chronic illness risk. Recovery isn't linear; setbacks are normal and expected. The path forward includes steps backward—what matters is the overall trajectory, not perfection.</p>
+      <p className="mb-6">Full recovery means more than normalized eating patterns. It includes behavioral recovery: regular eating, absence of compensatory behaviors (purging, excessive exercise), weight restoration if applicable. But crucially, it requires psychological recovery: no longer defining self-worth through weight or shape, ability to cope with distress without eating disorder behaviors, decreased preoccupation with food and body, improved quality of life and functioning <Citation id="3" index={3} source="International Journal of Eating Disorders" year="2020" tier={1} />. You can be eating normally but still battling intense distorted thoughts—that's partial recovery, an important milestone but not the finish line.</p>
     </div>
-    <h2 id="stages" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Stages of Recovery</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Early stage: behavioral changes (regular eating, stopping purging) while still experiencing intense urges and distorted thoughts. Middle stage: urges decrease, cognitive shifts begin (questioning eating disorder beliefs), developing alternative coping skills. Late stage: sustained behavior changes, decreased preoccupation with food/weight, identity beyond eating disorder. Psychological recovery often lags behind behavioral recovery—you may be eating normally but still battling distorted thoughts. Patience required. Predictors of better recovery: shorter illness duration, earlier treatment access, strong social support, treating comorbid conditions, motivation for change <Citation id="2" index={2} source="EEDR" year="2020" tier={1} />.</p>
+
+    <StatCard
+      stats={[
+        { value: 60, suffix: '%', label: 'Achieve full recovery with treatment' },
+        { value: 5, label: 'Years average recovery time for anorexia' },
+        { value: 70, suffix: '%', label: 'Reduction in relapse with continued support' },
+      ]}
+      source="International Journal of Eating Disorders, 2021"
+    />
+
+    <h2 id="stages" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Three Stages of Recovery</h2>
+    <p className="mb-6">Recovery unfolds in stages, though progression isn't perfectly linear. Understanding these phases helps normalize the experience and recognize progress even when recovery feels painfully slow.</p>
+
+    <ProgressSteps
+      variant="vertical"
+      steps={[
+        {
+          title: 'Early Stage: Behavioral Change',
+          description: <div>
+            <p className="mb-4">Focus: Stopping harmful behaviors and establishing regular eating. You're making behavioral changes—eating three meals plus snacks, stopping purging, reducing excessive exercise—while still experiencing intense urges and distorted thoughts. The eating disorder voice remains loud. Meals trigger overwhelming anxiety. You're going through the motions of recovery while your mind still belongs to the disorder. This stage is exhausting—you're fighting urges constantly, white-knuckling through fear foods, feeling like you're losing control (which paradoxically means you're gaining real control back).</p>
+            <p className="mb-4"><strong>What helps:</strong> External structure (meal plans, accountability), medical monitoring, distress tolerance skills, reminding yourself that urges will pass even when they feel permanent.</p>
+          </div>
+        },
+        {
+          title: 'Middle Stage: Cognitive Shifts',
+          description: <div>
+            <p className="mb-4">Focus: Questioning eating disorder beliefs and developing alternative coping. Urges begin decreasing in frequency and intensity. You start having moments—then hours, then days—where food isn't your primary focus. Cognitive shifts emerge: you catch yourself questioning eating disorder rules ("Do I really believe being thinner will make me happier?"). You experiment with new coping strategies: calling a friend instead of bingeing, journaling through difficult emotions, using distress tolerance skills during urges. The eating disorder voice quiets from a scream to background noise you can sometimes ignore.</p>
+            <p className="mb-4"><strong>What helps:</strong> Therapy exploring underlying issues, developing non-ED identity, building life worth living that doesn't center on food/weight/body.</p>
+          </div>
+        },
+        {
+          title: 'Late Stage: Sustained Recovery',
+          description: <div>
+            <p className="mb-4">Focus: Maintaining gains and building life beyond the eating disorder. Behavioral changes become automatic rather than effortful. Preoccupation with food and body decreases significantly. You've developed robust alternative coping strategies and identity beyond the eating disorder. Urges still occasionally surface—especially during stress, transitions, or triggering situations—but you navigate them with tools rather than giving in. Recovery isn't absence of struggle; it's having resources to handle struggles differently.</p>
+            <p className="mb-4"><strong>What helps:</strong> Continued support, relapse prevention planning, ongoing development of meaningful life goals, self-compassion practice <Citation id="4" index={4} source="Journal of Eating Disorders" year="2021" tier={1} />.</p>
+          </div>
+        },
+      ]}
+    />
+
     <h2 id="what-helps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Supports Recovery</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Evidence-based treatment (CBT, FBT, DBT), medical monitoring, nutritional rehabilitation, addressing trauma/comorbid conditions. Peer support and recovery communities provide hope and practical strategies. Family/loved ones learning how to support without enabling. Self-compassion during setbacks. Building life beyond eating disorder: meaningful activities, relationships, values-based goals. Recovery means regaining life eating disorder stole—worth the difficult journey.</p>
+    <p className="mb-6">Recovery requires multi-faceted support addressing medical, nutritional, psychological, and social dimensions. No single intervention alone produces lasting recovery—comprehensive care addressing all aspects yields best outcomes.</p>
+    <p className="mb-6"><strong>Evidence-based treatment:</strong> Cognitive-Behavioral Therapy (CBT-E) addresses eating disorder thoughts and behaviors. Family-Based Treatment (FBT) for adolescents shows 70-80% remission rates <Citation id="5" index={5} source="JAMA Psychiatry" year="2020" tier={1} />. Dialectical Behavior Therapy (DBT) targets emotion regulation underlying binge/purge cycles. Interpersonal Psychotherapy (IPT) addresses relationship patterns contributing to disorder.</p>
+    <p className="mb-6"><strong>Medical monitoring:</strong> Regular assessment of vital signs, electrolytes, bone density, cardiac function prevents medical crises and catches deterioration early. Nutritional rehabilitation with registered dietitians specializing in eating disorders restores healthy metabolism and repairs malnutrition damage <Citation id="8" index={8} source="Nutrients" year="2021" tier={1} />.</p>
+    <p className="mb-6"><strong>Addressing comorbid conditions:</strong> Treating underlying anxiety, depression, trauma, or OCD is essential. The eating disorder often serves as maladaptive coping for these conditions—removing the eating disorder without addressing what it was managing leaves vulnerability for relapse.</p>
+
+    <HighlightBox variant="emphasis">
+      <p className="mb-4">Psychological recovery often lags behind behavioral recovery by months or years. You may be eating normally, maintaining healthy weight, no longer engaging in compensatory behaviors—but still battling intense body dissatisfaction, fear of weight gain, or preoccupation with food. This gap is normal. Be patient. Behavioral recovery creates the foundation; psychological healing builds on it gradually <Citation id="2" index={2} source="European Eating Disorders Review" year="2020" tier={1} />.</p>
+    </HighlightBox>
+
+    <h2 id="relapse" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Understanding and Preventing Relapse</h2>
+    <p className="mb-6">Relapse is common—estimates range from 30-50% of individuals experiencing symptom return during recovery. Relapse isn't failure; it's information about what you still need to address or strengthen. Triggers include major life transitions, stress, trauma, relationship difficulties, return to triggering environments, stopping treatment prematurely, and untreated comorbid conditions.</p>
+    <p className="mb-6">Relapse prevention involves recognizing early warning signs: increased body checking, food restriction creeping back in, weighing more frequently, avoiding social eating situations, exercise ramping up, distorted thoughts intensifying. Catching relapse early—at the level of thoughts rather than waiting until full behavioral relapse—allows intervention before you're deep in crisis. Having a relapse prevention plan outlining warning signs, coping strategies, and who to contact provides roadmap when struggling.</p>
+    <p className="mb-6">Continued support after initial recovery reduces relapse risk by up to 70% <Citation id="4" index={4} source="Journal of Eating Disorders" year="2021" tier={1} />. This might mean ongoing therapy, peer support groups, regular check-ins with dietitian, accountability partners. Recovery isn't a one-time achievement—it's ongoing practice of choosing health over disorder, especially when disorder feels tempting.</p>
+
+    <h2 id="peer-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Power of Peer Support and Community</h2>
+    <p className="mb-6">Connecting with others in recovery provides hope, practical strategies, and reduction of isolation that eating disorders thrive on. Peer support—whether in-person support groups, online communities, or recovery mentorship—offers unique benefits that professional treatment alone cannot <Citation id="6" index={6} source="Eating Disorders" year="2021" tier={1} />. Seeing others farther along in recovery demonstrates possibility when your own recovery feels impossible. Hearing how others navigated challenges provides practical strategies. Sharing struggles reduces shame.</p>
+    <p className="mb-6">Family and loved ones learning how to support effectively—rather than enable or hinder recovery—significantly impacts outcomes. Family therapy, caregiver support groups, and education about eating disorders help loved ones understand that "just eat" isn't helpful, that recovery takes time, that they can set boundaries while still offering support.</p>
+
+    <h2 id="self-compassion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Self-Compassion: The Foundation of Lasting Recovery</h2>
+    <p className="mb-6">Self-compassion—treating yourself with kindness rather than harsh judgment during struggle—predicts better recovery outcomes and lower relapse rates <Citation id="7" index={7} source="Body Image" year="2020" tier={1} />. Eating disorders thrive on perfectionism and self-criticism. Recovery requires practicing opposite: acknowledging that recovery is difficult, that setbacks don't mean failure, that you deserve compassion especially when struggling. This doesn't mean lowering standards or giving up—it means replacing the internal harsh critic with supportive coach who wants you to succeed.</p>
+    <p className="mb-6">Building life beyond the eating disorder is ultimate recovery goal. The eating disorder likely served functions: coping with difficult emotions, providing identity, creating sense of control, numbing pain. Recovery means developing alternative ways to meet those needs—healthier coping strategies, identity rooted in values rather than appearance, genuine control through agency rather than restriction, processing pain rather than avoiding it. What activities bring you joy? What relationships matter? What values guide you? Recovery opens space to answer these questions.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>50-70% of people achieve full recovery, though the journey typically takes 3-7 years—patience and persistence are essential</li>
+        <li>Recovery unfolds in stages: behavioral changes first (stopping harmful behaviors), cognitive shifts middle (questioning disorder beliefs), sustained recovery late (maintaining gains while building meaningful life)</li>
+        <li>Full recovery requires both behavioral recovery (normalized eating) and psychological recovery (no longer defining self-worth through weight/shape)</li>
+        <li>Relapse is common (30-50%) but not failure—it's information about what still needs addressing. Early intervention during relapse prevents full crisis</li>
+        <li>Comprehensive treatment addressing medical, nutritional, psychological, and social dimensions produces best outcomes—no single intervention alone suffices</li>
+        <li>Self-compassion, peer support, addressing comorbid conditions, and building life beyond the eating disorder support lasting recovery</li>
+      </ul>
+    </ArticleCallout>
   </> },
   { id: catId(60), slug: 'supporting-eating-disorder', title: 'Supporting Someone with an Eating Disorder: A Guide for Family and Friends', description: 'Learn how to support loved ones with ED without enabling behaviors.', image: "/images/articles/cat13/cover-060.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Support", 'Eating Disorders', 'Family'], citations: [
     { id: '1', text: 'Family Involvement in ED Treatment', source: 'Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1186/s40337-020-00316-0', tier: 1 },
     { id: '2', text: 'Caregiver Burden', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23512', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Supporting someone with an eating disorder is challenging and emotionally draining. Family involvement improves treatment outcomes significantly <Citation id="1" index={1} source="JED" year="2020" tier={1} />. However, loved ones often feel helpless, frustrated by the person's refusal to "just eat," frightened by medical decline, angry at the disorder's impact on family life. Caregivers experience high rates of anxiety, depression, and burden <Citation id="2" index={2} source="IJED" year="2021" tier={1} />. Understanding that eating disorders are serious mental illnesses—not choices or phases—is first step. You can't "fix" their eating disorder, but you can provide support that facilitates recovery while taking care of yourself.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Supporting someone with an eating disorder is challenging and emotionally draining. Family involvement improves treatment outcomes significantly <Citation id="1" index={1} source="JED" year="2020" tier={1} />. However, loved ones often feel helpless, frustrated by the person's refusal to "just eat," frightened by medical decline, angry at the disorder's impact on family life. Caregivers experience high rates of anxiety, depression, and burden <Citation id="2" index={2} source="IJED" year="2021" tier={1} />. Understanding that eating disorders are serious mental illnesses--not choices or phases--is first step. You can't "fix" their eating disorder, but you can provide support that facilitates recovery while taking care of yourself.</p>
     </div>
     <h2 id="how-to-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Helpful Actions</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Express concern without focusing on weight/appearance: "I've noticed you seem stressed around meals and I'm worried about you" rather than "You're too thin." Encourage professional help; offer to help find providers or attend appointments. Educate yourself about eating disorders. Don't police eating or comment on food choices—this increases shame and resistance. Avoid triggering topics: weight, appearance, food amounts, exercise. Support treatment plan if they're in care. Practice compassion—eating disorder behaviors serve a purpose (coping with distress, control when life feels chaotic); attacking behaviors without addressing underlying pain doesn't help. Maintain normal family routines and relationships as much as possible.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Express concern without focusing on weight/appearance: "I've noticed you seem stressed around meals and I'm worried about you" rather than "You're too thin." Encourage professional help; offer to help find providers or attend appointments. Educate yourself about eating disorders. Don't police eating or comment on food choices--this increases shame and resistance. Avoid triggering topics: weight, appearance, food amounts, exercise. Support treatment plan if they're in care. Practice compassion--eating disorder behaviors serve a purpose (coping with distress, control when life feels chaotic); attacking behaviors without addressing underlying pain doesn't help. Maintain normal family routines and relationships as much as possible.</p>
     <h2 id="boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Setting Boundaries and Self-Care</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">You can support someone while maintaining boundaries. You cannot force recovery—they must be willing participant. It's okay to say "I love you and I'll support your recovery, but I can't enable your eating disorder." Don't participate in disorder behaviors (buying laxatives, lying to treatment team). Take care of yourself: therapy, support groups for caregivers, respite, maintaining your own health. You can't pour from empty cup. If the person is adult and refuses help, you may need to accept you cannot control their choices while maintaining your own limits about what you'll tolerate.</p>
+    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">You can support someone while maintaining boundaries. You cannot force recovery--they must be willing participant. It's okay to say "I love you and I'll support your recovery, but I can't enable your eating disorder." Don't participate in disorder behaviors (buying laxatives, lying to treatment team). Take care of yourself: therapy, support groups for caregivers, respite, maintaining your own health. You can't pour from empty cup. If the person is adult and refuses help, you may need to accept you cannot control their choices while maintaining your own limits about what you'll tolerate.</p>
   </> },
 ];
 
@@ -1163,10 +1589,10 @@ export const substanceSleepSomaticArticles: Article[] = [
     { text: 'Medications like naltrexone and acamprosate reduce cravings and support abstinence, with 70-80% effectiveness when combined with therapy', citationIndex: 5 },
     { text: 'Only 7.6% of people with AUD receive any treatment, despite proven effective interventions being widely available', citationIndex: 7 },
     { text: 'Long-term recovery rates exceed 50% for those who complete treatment, showing AUD is highly treatable when properly addressed', citationIndex: 8 },
-  ], sparkMoment: 'Alcohol Use Disorder isn\'t about willpower or moral failure—it\'s a medical condition where the brain\'s reward system has been hijacked, requiring the same compassion and evidence-based care we\'d give any other chronic disease.', practicalExercise: {
+  ], sparkMoment: 'Alcohol Use Disorder isn\'t about willpower or moral failure--it\'s a medical condition where the brain\'s reward system has been hijacked, requiring the same compassion and evidence-based care we\'d give any other chronic disease.', practicalExercise: {
     title: 'Assess Your Relationship with Alcohol',
     steps: [
-      { title: 'Track Your Drinking', description: 'For one week, honestly record every drink—when, how much, and what prompted it. Notice patterns around stress, social situations, or emotions.' },
+      { title: 'Track Your Drinking', description: 'For one week, honestly record every drink--when, how much, and what prompted it. Notice patterns around stress, social situations, or emotions.' },
       { title: 'Evaluate the Impact', description: 'Ask yourself: Has drinking caused problems in relationships, work, or health? Have you tried to cut back unsuccessfully? Do you feel guilty or defensive about your drinking?' },
       { title: 'Set a Concrete Goal', description: 'Choose a specific, measurable change: "I will have no more than 2 drinks on weekend nights" or "I will not drink alone" or "I will take 30 alcohol-free days."' },
       { title: 'Identify Your Support', description: 'Who can you tell about your goal? What will you do when cravings hit? Consider therapy, AA meetings, or talking to your doctor about medications that reduce cravings.' },
@@ -1186,19 +1612,19 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '10', text: 'Co-Occurring Mental Health and Substance Use Disorders', source: 'JAMA Psychiatry', year: '2020', link: 'https://doi.org/10.1001/jamapsychiatry.2020.0247', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Sarah started having wine with dinner to unwind after stressful workdays. One glass became two, then three. Five years later, she couldn't imagine a day without alcohol—despite a DUI, arguments with her partner, and mornings she couldn't remember. She thought she just needed more willpower. The truth? She had developed Alcohol Use Disorder (AUD), a chronic relapsing brain disease that affects approximately 14 million adults in the United States <Citation id="1" index={1} source="NIAAA" year="2023" tier={2} />.</p>
-      <p className="mb-6">AUD is characterized by impaired control over alcohol use, preoccupation with drinking, continued use despite serious consequences, and the development of tolerance and withdrawal symptoms <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={1} />. The condition exists on a spectrum—from mild (2-3 criteria met) to moderate (4-5 criteria) to severe (6 or more criteria)—and can develop gradually over years or rapidly in months.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Sarah started having wine with dinner to unwind after stressful workdays. One glass became two, then three. Five years later, she couldn't imagine a day without alcohol--despite a DUI, arguments with her partner, and mornings she couldn't remember. She thought she just needed more willpower. The truth? She had developed Alcohol Use Disorder (AUD), a chronic relapsing brain disease that affects approximately 14 million adults in the United States <Citation id="1" index={1} source="NIAAA" year="2023" tier={2} />.</p>
+      <p className="mb-6">AUD is characterized by impaired control over alcohol use, preoccupation with drinking, continued use despite serious consequences, and the development of tolerance and withdrawal symptoms <Citation id="2" index={2} source="American Psychiatric Association" year="2022" tier={1} />. The condition exists on a spectrum--from mild (2-3 criteria met) to moderate (4-5 criteria) to severe (6 or more criteria)--and can develop gradually over years or rapidly in months.</p>
     </div>
 
     <ArticleAccordion type="multiple" items={[
-      { id: 'myth1', title: 'Myth: You have to drink daily to have AUD', content: <p>Many people with AUD don't drink every day. Binge drinking on weekends, inability to stop once you start, and drinking to cope with stress all indicate problematic use—even without daily consumption.</p> },
+      { id: 'myth1', title: 'Myth: You have to drink daily to have AUD', content: <p>Many people with AUD don't drink every day. Binge drinking on weekends, inability to stop once you start, and drinking to cope with stress all indicate problematic use--even without daily consumption.</p> },
       { id: 'myth2', title: 'Myth: AUD only affects people who are "down and out"', content: <p>AUD affects people across all socioeconomic levels, professions, and ages. High-functioning individuals with AUD may maintain jobs and relationships while privately struggling with their drinking.</p> },
       { id: 'myth3', title: 'Myth: You have to hit "rock bottom" before getting help', content: <p>The earlier someone receives treatment, the better the outcomes. Waiting for catastrophic consequences means more damage to health, relationships, and brain function. Treatment works at any stage.</p> },
     ]} />
 
     <h2 id="understanding" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Understanding the Disease</h2>
-    <p className="mb-6">AUD isn't a moral failing or lack of willpower—it's a medical condition that fundamentally alters brain chemistry. Chronic alcohol exposure rewires the brain's reward circuits, particularly affecting dopamine systems that govern motivation, pleasure, and decision-making <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. These neurobiological changes explain why people continue drinking despite devastating consequences: their brain has learned to prioritize alcohol above everything else.</p>
-    <p className="mb-6">The prefrontal cortex—responsible for impulse control, planning, and judgment—becomes impaired, while the amygdala (emotion/stress center) becomes hyperactive. This creates a perfect storm: diminished ability to resist urges combined with heightened stress response that alcohol temporarily relieves. The cycle reinforces itself with each drink.</p>
+    <p className="mb-6">AUD isn't a moral failing or lack of willpower--it's a medical condition that fundamentally alters brain chemistry. Chronic alcohol exposure rewires the brain's reward circuits, particularly affecting dopamine systems that govern motivation, pleasure, and decision-making <Citation id="3" index={3} source="Nature Reviews Neuroscience" year="2021" tier={1} />. These neurobiological changes explain why people continue drinking despite devastating consequences: their brain has learned to prioritize alcohol above everything else.</p>
+    <p className="mb-6">The prefrontal cortex--responsible for impulse control, planning, and judgment--becomes impaired, while the amygdala (emotion/stress center) becomes hyperactive. This creates a perfect storm: diminished ability to resist urges combined with heightened stress response that alcohol temporarily relieves. The cycle reinforces itself with each drink.</p>
 
     <h2 id="signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Signs and Symptoms</h2>
     <p className="mb-6">The DSM-5-TR outlines 11 criteria for AUD. Meeting 2-3 indicates mild disorder, 4-5 moderate, and 6 or more severe. These criteria fall into four categories:</p>
@@ -1214,8 +1640,8 @@ export const substanceSleepSomaticArticles: Article[] = [
       ]}
     />
 
-    <p className="mb-6 mt-6"><strong>Physical consequences</strong> accumulate over time. Liver damage progresses from fatty liver to hepatitis to cirrhosis—irreversible scarring that can be fatal <Citation id="9" index={4} source="Hepatology" year="2021" tier={1} />. Cardiovascular problems include high blood pressure, irregular heartbeat, cardiomyopathy, and increased stroke risk. Brain damage manifests as memory problems, difficulty concentrating, and permanent cognitive impairment, particularly when drinking begins in adolescence when the brain is still developing <Citation id="4" index={5} source="Alcohol Research" year="2020" tier={1} />.</p>
-    <p className="mb-6"><strong>Psychological symptoms</strong> create a vicious cycle. Depression and anxiety—which may have preceded the drinking or resulted from it—worsen with alcohol use. Sleep architecture becomes disrupted despite alcohol's sedating effects, leading to poor-quality rest. Many people drink to manage these symptoms, not realizing alcohol is the primary cause.</p>
+    <p className="mb-6 mt-6"><strong>Physical consequences</strong> accumulate over time. Liver damage progresses from fatty liver to hepatitis to cirrhosis--irreversible scarring that can be fatal <Citation id="9" index={4} source="Hepatology" year="2021" tier={1} />. Cardiovascular problems include high blood pressure, irregular heartbeat, cardiomyopathy, and increased stroke risk. Brain damage manifests as memory problems, difficulty concentrating, and permanent cognitive impairment, particularly when drinking begins in adolescence when the brain is still developing <Citation id="4" index={5} source="Alcohol Research" year="2020" tier={1} />.</p>
+    <p className="mb-6"><strong>Psychological symptoms</strong> create a vicious cycle. Depression and anxiety--which may have preceded the drinking or resulted from it--worsen with alcohol use. Sleep architecture becomes disrupted despite alcohol's sedating effects, leading to poor-quality rest. Many people drink to manage these symptoms, not realizing alcohol is the primary cause.</p>
 
     <QuoteBlock
       quote="The hardest part was realizing I couldn't trust my own judgment anymore. I'd wake up promising myself 'just one drink tonight,' and by midnight I'd finished the bottle. My brain was lying to me."
@@ -1226,9 +1652,9 @@ export const substanceSleepSomaticArticles: Article[] = [
 
     <h2 id="causes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Risk Factors and Causes</h2>
     <p className="mb-6">AUD results from complex interactions between genetic vulnerability, environmental factors, and individual psychology. No single cause explains why one person develops AUD while another drinks similarly without problems.</p>
-    <p className="mb-6"><strong>Genetic factors</strong> account for approximately 50% of AUD risk. Having a parent with AUD increases your risk 3-4 times. Specific genes affecting alcohol metabolism and neurotransmitter function influence both how pleasurable drinking feels and how severe withdrawal becomes. However, genetics aren't destiny—environmental factors matter enormously.</p>
+    <p className="mb-6"><strong>Genetic factors</strong> account for approximately 50% of AUD risk. Having a parent with AUD increases your risk 3-4 times. Specific genes affecting alcohol metabolism and neurotransmitter function influence both how pleasurable drinking feels and how severe withdrawal becomes. However, genetics aren't destiny--environmental factors matter enormously.</p>
     <p className="mb-6"><strong>Environmental influences</strong> include early exposure to alcohol, family attitudes toward drinking, peer pressure, trauma history, and chronic stress. People who begin drinking before age 15 are four times more likely to develop AUD than those who wait until 21, as adolescent brains are particularly vulnerable to addiction pathways.</p>
-    <p className="mb-6"><strong>Co-occurring mental health conditions</strong> dramatically increase AUD risk. Approximately 50% of people with AUD have a co-occurring mental health disorder—most commonly depression, anxiety, PTSD, or bipolar disorder <Citation id="10" index={6} source="JAMA Psychiatry" year="2020" tier={1} />. Many begin drinking to self-medicate psychiatric symptoms, creating a dangerous cycle where alcohol temporarily relieves symptoms but ultimately worsens the underlying condition.</p>
+    <p className="mb-6"><strong>Co-occurring mental health conditions</strong> dramatically increase AUD risk. Approximately 50% of people with AUD have a co-occurring mental health disorder--most commonly depression, anxiety, PTSD, or bipolar disorder <Citation id="10" index={6} source="JAMA Psychiatry" year="2020" tier={1} />. Many begin drinking to self-medicate psychiatric symptoms, creating a dangerous cycle where alcohol temporarily relieves symptoms but ultimately worsens the underlying condition.</p>
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Treatment</h2>
     <p className="mb-6">AUD is highly treatable. Long-term recovery rates exceed 50% for people who complete treatment programs <Citation id="8" index={7} source="Addiction" year="2022" tier={1} />. Yet only 7.6% of people with AUD receive any treatment <Citation id="7" index={8} source="SAMHSA" year="2023" tier={2} />. This treatment gap reflects stigma, lack of awareness, and misconceptions about what treatment involves.</p>
@@ -1240,7 +1666,7 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Acamprosate</strong> helps restore normal brain chemistry disrupted by chronic alcohol use, reducing protracted withdrawal symptoms and cravings. Particularly effective for maintaining abstinence after detoxification.</li>
       <li><strong>Disulfiram</strong> causes unpleasant reaction (nausea, flushing, rapid heartbeat) if alcohol is consumed, creating a deterrent. Less commonly used due to adherence challenges and safety concerns.</li>
     </ul>
-    <p className="mb-6">Medications work best combined with behavioral therapy—the combination produces better outcomes than either alone.</p>
+    <p className="mb-6">Medications work best combined with behavioral therapy--the combination produces better outcomes than either alone.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Behavioral Therapies</h3>
     <p className="mb-6">Several evidence-based psychotherapies help people change drinking behavior, develop coping skills, and address underlying issues:</p>
@@ -1252,7 +1678,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     </ul>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Levels of Care</h3>
-    <p className="mb-6">Treatment intensity should match severity. Mild AUD might be addressed with outpatient counseling and medication. Severe AUD—particularly with physical dependence—requires more intensive intervention:</p>
+    <p className="mb-6">Treatment intensity should match severity. Mild AUD might be addressed with outpatient counseling and medication. Severe AUD--particularly with physical dependence--requires more intensive intervention:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Detoxification</strong> for those with physical dependence to safely manage withdrawal, which can be life-threatening (seizures, delirium tremens). Typically 3-7 days in medical setting with medications to ease symptoms.</li>
       <li><strong>Residential/Inpatient Treatment</strong> (30-90 days) provides intensive, structured environment removing access to alcohol while teaching recovery skills. Useful for severe AUD or when outpatient treatment has failed.</li>
@@ -1261,7 +1687,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     </ul>
 
     <h2 id="living-with" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Living in Recovery</h2>
-    <p className="mb-6">Recovery is an ongoing process, not a one-time event. Most people experience multiple attempts before achieving sustained abstinence or controlled drinking (for those with mild AUD). "Relapse" doesn't mean failure—it signals the need to adjust the treatment approach.</p>
+    <p className="mb-6">Recovery is an ongoing process, not a one-time event. Most people experience multiple attempts before achieving sustained abstinence or controlled drinking (for those with mild AUD). "Relapse" doesn't mean failure--it signals the need to adjust the treatment approach.</p>
     <p className="mb-6"><strong>Lifestyle changes</strong> support long-term recovery: avoiding high-risk situations (bars, social events centered on drinking), building a sober social network, finding alternative activities that provide pleasure and meaning (exercise, hobbies, volunteering), addressing mental health conditions with proper treatment, and developing healthy stress management techniques.</p>
     <p className="mb-6"><strong>Peer support</strong> remains one of the most powerful recovery tools. Whether through AA, SMART Recovery, secular recovery groups, or online communities, connecting with others who understand the struggle provides both practical strategies and emotional support that professional treatment alone can't replicate.</p>
     <p className="mb-6"><strong>Family involvement</strong> improves outcomes. Family therapy helps repair damaged relationships, teaches loved ones how to support recovery without enabling, and addresses codependency patterns. Al-Anon provides support specifically for family members of people with AUD.</p>
@@ -1270,26 +1696,26 @@ export const substanceSleepSomaticArticles: Article[] = [
       <ul className="list-disc pl-5 space-y-2">
         <li><strong>AUD is a medical condition</strong>, not a character flaw. It requires compassion and evidence-based treatment, not judgment.</li>
         <li><strong>Effective treatments exist</strong>: medications that reduce cravings, therapies that change behavior, and support groups that provide community.</li>
-        <li><strong>Recovery takes time</strong>. Most people need multiple treatment episodes, and setbacks are part of the process—not signs of failure.</li>
+        <li><strong>Recovery takes time</strong>. Most people need multiple treatment episodes, and setbacks are part of the process--not signs of failure.</li>
         <li><strong>Get help early</strong>. The earlier treatment begins, the better the outcomes and the less damage to health, relationships, and life circumstances.</li>
         <li><strong>You don't have to do this alone</strong>. Millions of people have walked this path before you, and support is available.</li>
       </ul>
     </ArticleCallout>
   </> },
 
-  { id: catId(62), slug: 'substance-use-disorder', title: 'Substance Use Disorder: Understanding Addiction Beyond Willpower', description: 'SUD is a chronic brain disease, not a moral failing. Learn about causes and treatment.', image: "/images/articles/cat13/cover-062.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Addiction', 'Substance Use'], summary: 'Substance Use Disorder (SUD) is a chronic brain disease involving compulsive substance seeking despite devastating consequences. Affecting millions across all demographics, SUD fundamentally rewires brain reward circuits—making recovery require professional treatment, not willpower alone. Evidence-based medications and behavioral therapies produce sustained recovery for the majority who access them.', keyFacts: [
+  { id: catId(62), slug: 'substance-use-disorder', title: 'Substance Use Disorder: Understanding Addiction Beyond Willpower', description: 'SUD is a chronic brain disease, not a moral failing. Learn about causes and treatment.', image: "/images/articles/cat13/cover-062.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Addiction', 'Substance Use'], summary: 'Substance Use Disorder (SUD) is a chronic brain disease involving compulsive substance seeking despite devastating consequences. Affecting millions across all demographics, SUD fundamentally rewires brain reward circuits--making recovery require professional treatment, not willpower alone. Evidence-based medications and behavioral therapies produce sustained recovery for the majority who access them.', keyFacts: [
     { text: 'SUD is classified as a chronic brain disease by major medical organizations, not a character flaw or moral failing', citationIndex: 1 },
     { text: 'Genetics account for 40-60% of addiction vulnerability, explaining why some people develop SUD while others with similar use patterns do not', citationIndex: 4 },
-    { text: 'The prefrontal cortex—responsible for decision-making and impulse control—becomes impaired by chronic substance use, while craving circuits strengthen', citationIndex: 2 },
+    { text: 'The prefrontal cortex--responsible for decision-making and impulse control--becomes impaired by chronic substance use, while craving circuits strengthen', citationIndex: 2 },
     { text: 'Medication-assisted treatment (MAT) combined with behavioral therapy reduces overdose death by 50% and dramatically improves recovery rates', citationIndex: 6 },
     { text: 'Most people with SUD have co-occurring mental health conditions like depression, anxiety, or PTSD that require integrated treatment', citationIndex: 8 },
-  ], sparkMoment: 'Addiction isn\'t about having enough willpower to "just say no"—it\'s about a brain that has learned, at a neurological level, that substances are more important than food, relationships, or survival itself.', practicalExercise: {
+  ], sparkMoment: 'Addiction isn\'t about having enough willpower to "just say no"--it\'s about a brain that has learned, at a neurological level, that substances are more important than food, relationships, or survival itself.', practicalExercise: {
     title: 'Recognizing Patterns and Getting Help',
     steps: [
-      { title: 'Honest Self-Assessment', description: 'Write down: How often do you use? What consequences have you experienced (health, relationships, work, legal)? Have you tried to cut back unsuccessfully? Be brutally honest—no one needs to see this list.' },
+      { title: 'Honest Self-Assessment', description: 'Write down: How often do you use? What consequences have you experienced (health, relationships, work, legal)? Have you tried to cut back unsuccessfully? Be brutally honest--no one needs to see this list.' },
       { title: 'Identify Your "Why"', description: 'What need does substance use fill? Stress relief? Social confidence? Emotional numbing? Boredom? Pain management? Understanding your motivations helps find healthier alternatives.' },
       { title: 'Calculate the True Cost', description: 'Add up the financial cost, time spent obtaining/using/recovering, lost opportunities, damaged relationships, and health consequences. Make the invisible costs visible.' },
-      { title: 'Reach Out for Help', description: 'Talk to your doctor, call SAMHSA\'s National Helpline (1-800-662-4357), attend a mutual support meeting (AA, NA, SMART Recovery), or text a crisis line. You don\'t have to have all the answers—just take the first step.' },
+      { title: 'Reach Out for Help', description: 'Talk to your doctor, call SAMHSA\'s National Helpline (1-800-662-4357), attend a mutual support meeting (AA, NA, SMART Recovery), or text a crisis line. You don\'t have to have all the answers--just take the first step.' },
     ],
     toolLink: '/tools/symptom-navigator',
     toolLabel: 'Assess Your Symptoms',
@@ -1306,8 +1732,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '10', text: 'Long-Term Outcomes of Addiction Treatment', source: 'Addiction', year: '2021', link: 'https://doi.org/10.1111/add.15399', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">James started taking oxycodone after back surgery. When the prescription ran out, the pain had mostly healed—but the cravings hadn't. Within six months, he was buying pills on the street. Within a year, he'd lost his job, his savings, and nearly his life to an overdose. "I thought I was stronger than this," he said. "I kept thinking I could stop whenever I wanted. But my brain had other plans."</p>
-      <p className="mb-6">Substance Use Disorder (SUD) is a chronic brain disease characterized by compulsive drug seeking and use despite devastating consequences <Citation id="1" index={1} source="NIDA" year="2023" tier={2} />. The key word here is <em>disease</em>—not moral failing, not weakness, not lack of willpower. SUD fundamentally rewires brain circuits involved in reward, motivation, memory, and self-control <Citation id="2" index={2} source="Nature" year="2020" tier={1} />. This neurobiological hijacking explains the defining paradox of addiction: why people continue using substances even when they desperately want to stop.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">James started taking oxycodone after back surgery. When the prescription ran out, the pain had mostly healed--but the cravings hadn't. Within six months, he was buying pills on the street. Within a year, he'd lost his job, his savings, and nearly his life to an overdose. "I thought I was stronger than this," he said. "I kept thinking I could stop whenever I wanted. But my brain had other plans."</p>
+      <p className="mb-6">Substance Use Disorder (SUD) is a chronic brain disease characterized by compulsive drug seeking and use despite devastating consequences <Citation id="1" index={1} source="NIDA" year="2023" tier={2} />. The key word here is <em>disease</em>--not moral failing, not weakness, not lack of willpower. SUD fundamentally rewires brain circuits involved in reward, motivation, memory, and self-control <Citation id="2" index={2} source="Nature" year="2020" tier={1} />. This neurobiological hijacking explains the defining paradox of addiction: why people continue using substances even when they desperately want to stop.</p>
       <p className="mb-6">SUD can involve any substance that activates the brain's reward system: opioids (prescription painkillers, heroin, fentanyl), stimulants (cocaine, methamphetamine), alcohol, cannabis, benzodiazepines, hallucinogens, inhalants, and others. The specific substance matters less than the underlying pattern: loss of control, continued use despite harm, and intense cravings.</p>
     </div>
 
@@ -1325,11 +1751,11 @@ export const substanceSleepSomaticArticles: Article[] = [
     />
 
     <h2 id="understanding" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Disease Model of Addiction</h2>
-    <p className="mb-6">For decades, addiction was viewed as a moral failing—evidence of weak character or poor choices. We now understand it as a chronic medical condition comparable to diabetes, asthma, or hypertension. Like these conditions, SUD involves biological dysfunction (altered brain chemistry), has genetic components (40-60% of vulnerability is heritable), follows a chronic relapsing course, and requires ongoing medical management <Citation id="3" index={3} source="AAAP" year="2021" tier={3} />.</p>
-    <p className="mb-6">This shift from moral model to medical model isn't about removing personal responsibility—it's about accurately understanding what we're dealing with. Someone with diabetes is still responsible for managing blood sugar, taking insulin, and following treatment. Similarly, people with SUD are responsible for engaging in recovery. But telling someone to "just stop using" makes as much sense as telling a diabetic to "just make more insulin." The biological capacity for unassisted cessation has been compromised.</p>
+    <p className="mb-6">For decades, addiction was viewed as a moral failing--evidence of weak character or poor choices. We now understand it as a chronic medical condition comparable to diabetes, asthma, or hypertension. Like these conditions, SUD involves biological dysfunction (altered brain chemistry), has genetic components (40-60% of vulnerability is heritable), follows a chronic relapsing course, and requires ongoing medical management <Citation id="3" index={3} source="AAAP" year="2021" tier={3} />.</p>
+    <p className="mb-6">This shift from moral model to medical model isn't about removing personal responsibility--it's about accurately understanding what we're dealing with. Someone with diabetes is still responsible for managing blood sugar, taking insulin, and following treatment. Similarly, people with SUD are responsible for engaging in recovery. But telling someone to "just stop using" makes as much sense as telling a diabetic to "just make more insulin." The biological capacity for unassisted cessation has been compromised.</p>
 
     <h2 id="criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Diagnostic Criteria</h2>
-    <p className="mb-6">The DSM-5-TR defines SUD using 11 criteria grouped into four categories <Citation id="5" index={4} source="American Psychiatric Association" year="2022" tier={1} />. Meeting 2-3 criteria indicates mild SUD, 4-5 moderate, and 6 or more severe. Importantly, you don't need to meet all criteria to have SUD—the disorder exists on a spectrum:</p>
+    <p className="mb-6">The DSM-5-TR defines SUD using 11 criteria grouped into four categories <Citation id="5" index={4} source="American Psychiatric Association" year="2022" tier={1} />. Meeting 2-3 criteria indicates mild SUD, 4-5 moderate, and 6 or more severe. Importantly, you don't need to meet all criteria to have SUD--the disorder exists on a spectrum:</p>
 
     <ArticleTabs tabs={[
       { id: 'control', label: 'Impaired Control', content: <div className="space-y-3">
@@ -1354,7 +1780,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     ]} />
 
     <h2 id="brain-changes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Substances Rewire the Brain</h2>
-    <p className="mb-6">All addictive substances share one property: they flood the brain's reward circuit with dopamine—a neurotransmitter associated with pleasure, motivation, and learning. Normal pleasurable activities (food, sex, social connection) produce moderate dopamine increases. Addictive substances produce dopamine surges 2-10 times higher than natural rewards <Citation id="2" index={5} source="Nature" year="2020" tier={1} />.</p>
+    <p className="mb-6">All addictive substances share one property: they flood the brain's reward circuit with dopamine--a neurotransmitter associated with pleasure, motivation, and learning. Normal pleasurable activities (food, sex, social connection) produce moderate dopamine increases. Addictive substances produce dopamine surges 2-10 times higher than natural rewards <Citation id="2" index={5} source="Nature" year="2020" tier={1} />.</p>
     <p className="mb-6">The brain interprets this massive dopamine signal as: "This is more important than anything else. Remember everything about this experience. Do it again." With repeated exposure, three critical changes occur:</p>
 
     <BeforeAfter
@@ -1371,24 +1797,24 @@ export const substanceSleepSomaticArticles: Article[] = [
         title: 'Brain with SUD',
         points: [
           'Blunted response to natural rewards; only substances feel pleasurable',
-          'Impaired prefrontal cortex—reduced ability to resist urges or foresee consequences',
+          'Impaired prefrontal cortex--reduced ability to resist urges or foresee consequences',
           'Hyperactive stress systems create persistent anxiety that substance temporarily relieves',
           'Memory systems hyperfocus on substance-related cues, triggering intense cravings',
         ]
       }}
     />
 
-    <p className="mb-6 mt-6">These changes persist long after substance use stops—which is why addiction is a <em>chronic</em> condition. The brain can heal with sustained abstinence, but recovery takes months to years, and vulnerability to relapse remains elevated.</p>
+    <p className="mb-6 mt-6">These changes persist long after substance use stops--which is why addiction is a <em>chronic</em> condition. The brain can heal with sustained abstinence, but recovery takes months to years, and vulnerability to relapse remains elevated.</p>
 
     <h2 id="risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Who Develops SUD and Why</h2>
-    <p className="mb-6">Not everyone who uses substances develops SUD. Approximately 10-30% of people who use addictive substances will develop the disorder (varying by substance—nicotine and opioids have higher addiction rates than cannabis or psychedelics). Several factors influence this vulnerability:</p>
-    <p className="mb-6"><strong>Genetics</strong> account for 40-60% of addiction risk <Citation id="4" index={6} source="JAMA Psychiatry" year="2019" tier={1} />. Dozens of genes influence how the brain responds to substances, processes neurotransmitters, and regulates stress. Having a parent with SUD increases your risk 4-8 times—though many people with family history never develop SUD, and many without family history do.</p>
+    <p className="mb-6">Not everyone who uses substances develops SUD. Approximately 10-30% of people who use addictive substances will develop the disorder (varying by substance--nicotine and opioids have higher addiction rates than cannabis or psychedelics). Several factors influence this vulnerability:</p>
+    <p className="mb-6"><strong>Genetics</strong> account for 40-60% of addiction risk <Citation id="4" index={6} source="JAMA Psychiatry" year="2019" tier={1} />. Dozens of genes influence how the brain responds to substances, processes neurotransmitters, and regulates stress. Having a parent with SUD increases your risk 4-8 times--though many people with family history never develop SUD, and many without family history do.</p>
     <p className="mb-6"><strong>Age of first use</strong> dramatically affects risk. Adolescent brains are still developing, particularly the prefrontal cortex responsible for impulse control and judgment. Substance use during this critical period disrupts normal development and establishes addiction pathways more readily. People who begin using before age 15 are 6-7 times more likely to develop SUD than those who wait until 21 or later.</p>
-    <p className="mb-6"><strong>Trauma and adverse childhood experiences</strong> (abuse, neglect, household dysfunction) increase SUD risk 2-4 fold. Trauma alters stress response systems and emotional regulation—substance use becomes a way to manage overwhelming feelings or numb psychological pain. The co-occurrence of PTSD and SUD is extremely high.</p>
+    <p className="mb-6"><strong>Trauma and adverse childhood experiences</strong> (abuse, neglect, household dysfunction) increase SUD risk 2-4 fold. Trauma alters stress response systems and emotional regulation--substance use becomes a way to manage overwhelming feelings or numb psychological pain. The co-occurrence of PTSD and SUD is extremely high.</p>
     <p className="mb-6"><strong>Co-occurring mental health conditions</strong> are present in 50-75% of people with SUD <Citation id="8" index={7} source="Psychiatric Services" year="2021" tier={1} />. Depression, anxiety disorders, ADHD, bipolar disorder, and personality disorders all increase substance use risk. The relationship is bidirectional: mental health conditions increase vulnerability to SUD, and substance use worsens mental health symptoms.</p>
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Treatment</h2>
-    <p className="mb-6">SUD is highly treatable. Long-term recovery rates (sustained abstinence or controlled use for 5+ years) approach 60% for people who complete treatment <Citation id="10" index={8} source="Addiction" year="2021" tier={1} />. The most effective approach combines medication with behavioral therapy and peer support—addressing both the neurobiological and psychological dimensions of addiction.</p>
+    <p className="mb-6">SUD is highly treatable. Long-term recovery rates (sustained abstinence or controlled use for 5+ years) approach 60% for people who complete treatment <Citation id="10" index={8} source="Addiction" year="2021" tier={1} />. The most effective approach combines medication with behavioral therapy and peer support--addressing both the neurobiological and psychological dimensions of addiction.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication-Assisted Treatment (MAT)</h3>
     <p className="mb-6">For opioid use disorder, three FDA-approved medications reduce overdose death by 50% or more and dramatically improve treatment retention <Citation id="6" index={9} source="Lancet" year="2021" tier={1} />:</p>
@@ -1397,7 +1823,7 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Buprenorphine:</strong> Partial opioid agonist (ceiling effect limits overdose risk) available as daily tablet/film or monthly injection. Can be prescribed in regular doctor's offices.</li>
       <li><strong>Naltrexone:</strong> Opioid antagonist that blocks opioid effects entirely. Requires complete detoxification first. Available as daily pill or monthly injection.</li>
     </ul>
-    <p className="mb-6">These medications aren't "replacing one drug with another"—they're medical management of a chronic condition, allowing brain chemistry to stabilize while people rebuild their lives. For alcohol use disorder, naltrexone and acamprosate reduce cravings and support abstinence.</p>
+    <p className="mb-6">These medications aren't "replacing one drug with another"--they're medical management of a chronic condition, allowing brain chemistry to stabilize while people rebuild their lives. For alcohol use disorder, naltrexone and acamprosate reduce cravings and support abstinence.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Behavioral Therapies</h3>
     <p className="mb-6">Several psychotherapies have strong evidence for SUD treatment:</p>
@@ -1416,31 +1842,31 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li>Syringe service programs to prevent infectious disease transmission</li>
       <li>Safe consumption sites where people can use under medical supervision</li>
     </ul>
-    <p className="mb-6">Harm reduction doesn't enable addiction—it keeps people alive until they're ready for treatment. You can't recover if you're dead.</p>
+    <p className="mb-6">Harm reduction doesn't enable addiction--it keeps people alive until they're ready for treatment. You can't recover if you're dead.</p>
 
     <h2 id="recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Path to Recovery</h2>
-    <p className="mb-6">Recovery is a journey, not a destination. Most people cycle through multiple treatment episodes before achieving sustained recovery—this doesn't represent failure, but rather the chronic relapsing nature of the disease. Each treatment episode, even those ending in relapse, provides learning and strengthens eventual success.</p>
-    <p className="mb-6">Recovery involves far more than stopping substance use. It requires rebuilding relationships, developing life skills, addressing co-occurring conditions, finding purpose and meaning, and constructing a life where substances no longer serve a function. This takes time, support, and patience—both from professionals and from the person in recovery.</p>
-    <p className="mb-6">The neuroscience of recovery is hopeful: the brain can heal. Prefrontal cortex function improves, dopamine systems rebalance, and stress response normalizes—though the timeline varies from months to years depending on substance, duration of use, and individual factors. This neurobiological healing supports psychological recovery, making it progressively easier to resist cravings and maintain change.</p>
+    <p className="mb-6">Recovery is a journey, not a destination. Most people cycle through multiple treatment episodes before achieving sustained recovery--this doesn't represent failure, but rather the chronic relapsing nature of the disease. Each treatment episode, even those ending in relapse, provides learning and strengthens eventual success.</p>
+    <p className="mb-6">Recovery involves far more than stopping substance use. It requires rebuilding relationships, developing life skills, addressing co-occurring conditions, finding purpose and meaning, and constructing a life where substances no longer serve a function. This takes time, support, and patience--both from professionals and from the person in recovery.</p>
+    <p className="mb-6">The neuroscience of recovery is hopeful: the brain can heal. Prefrontal cortex function improves, dopamine systems rebalance, and stress response normalizes--though the timeline varies from months to years depending on substance, duration of use, and individual factors. This neurobiological healing supports psychological recovery, making it progressively easier to resist cravings and maintain change.</p>
 
     <ArticleCallout variant="key-takeaway" title="Moving Forward">
       <ul className="list-disc pl-5 space-y-2">
-        <li><strong>SUD is a chronic brain disease</strong> with biological, genetic, and environmental causes—not a moral failing.</li>
+        <li><strong>SUD is a chronic brain disease</strong> with biological, genetic, and environmental causes--not a moral failing.</li>
         <li><strong>Effective treatments exist</strong>: medications that stabilize brain chemistry, therapies that change behavior, and peer support that provides connection.</li>
         <li><strong>Most people eventually recover</strong> when they access evidence-based treatment, though the path typically involves setbacks.</li>
-        <li><strong>Harm reduction saves lives</strong> and creates opportunities for eventual recovery—meeting people where they are.</li>
+        <li><strong>Harm reduction saves lives</strong> and creates opportunities for eventual recovery--meeting people where they are.</li>
         <li><strong>Treatment works best</strong> when it addresses the whole person: substance use, mental health, trauma, social circumstances, and life goals.</li>
       </ul>
     </ArticleCallout>
   </> },
 
-  { id: catId(63), slug: 'self-medication-hypothesis', title: 'The Self-Medication Hypothesis: Why People Use Substances to Cope', description: 'Many with mental illness use substances to manage symptoms. Understand this dangerous pattern.', image: "/images/articles/cat13/cover-063.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Substance Use', 'Comorbidity', 'Self-Medication'], summary: 'The self-medication hypothesis explains why many people with mental health conditions turn to substances—they temporarily relieve unbearable symptoms. While this provides short-term relief, it creates a vicious cycle where substances worsen the underlying condition and create dependence. Integrated treatment addressing both conditions simultaneously offers the path forward.', keyFacts: [
+  { id: catId(63), slug: 'self-medication-hypothesis', title: 'The Self-Medication Hypothesis: Why People Use Substances to Cope', description: 'Many with mental illness use substances to manage symptoms. Understand this dangerous pattern.', image: "/images/articles/cat13/cover-063.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Substance Use', 'Comorbidity', 'Self-Medication'], summary: 'The self-medication hypothesis explains why many people with mental health conditions turn to substances--they temporarily relieve unbearable symptoms. While this provides short-term relief, it creates a vicious cycle where substances worsen the underlying condition and create dependence. Integrated treatment addressing both conditions simultaneously offers the path forward.', keyFacts: [
     { text: '50-75% of people with substance use disorder have co-occurring mental health conditions like depression, anxiety, or PTSD', citationIndex: 2 },
     { text: 'People with untreated depression or anxiety are 2-3 times more likely to develop substance use disorder than those without mental illness', citationIndex: 3 },
     { text: 'Substance choice often relates to specific symptoms: anxious people use depressants, depressed people use stimulants, trauma survivors use dissociatives', citationIndex: 1 },
-    { text: 'Self-medication creates a vicious cycle where tolerance increases, withdrawal worsens original symptoms, and addiction develops—despite initial relief', citationIndex: 5 },
+    { text: 'Self-medication creates a vicious cycle where tolerance increases, withdrawal worsens original symptoms, and addiction develops--despite initial relief', citationIndex: 5 },
     { text: 'Integrated treatment addressing both conditions simultaneously produces significantly better outcomes than treating either condition alone', citationIndex: 7 },
-  ], sparkMoment: 'Self-medication isn\'t about weakness or poor choices—it\'s a desperate attempt to survive unbearable psychological pain using the only tools available, even when those tools ultimately make everything worse.', practicalExercise: {
+  ], sparkMoment: 'Self-medication isn\'t about weakness or poor choices--it\'s a desperate attempt to survive unbearable psychological pain using the only tools available, even when those tools ultimately make everything worse.', practicalExercise: {
     title: 'Identifying Your Pattern',
     steps: [
       { title: 'Connect the Dots', description: 'Track for one week: When do you use? What emotional state precedes it? What changes after use? Look for patterns between symptoms (anxiety, low mood, flashbacks, insomnia) and substance use.' },
@@ -1462,21 +1888,21 @@ export const substanceSleepSomaticArticles: Article[] = [
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
       <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Maria's panic attacks were destroying her life. Medication hadn't helped, therapy felt too slow, and she couldn't afford to miss more work. Then someone offered her a Xanax at a party. For the first time in months, she could breathe. Within a year, she was buying benzodiazepines illegally, her panic disorder was worse than ever, and she'd developed a substance use disorder on top of her anxiety. "I wasn't trying to get high," she explained. "I was just trying to function."</p>
-      <p className="mb-6">The self-medication hypothesis proposes that many people use substances not for pleasure or recreation, but to alleviate unbearable psychiatric symptoms or emotional distress <Citation id="1" index={1} source="American Journal on Addictions" year="2020" tier={1} />. It's a pattern seen across mental health conditions: alcohol for social anxiety, stimulants for undiagnosed ADHD, opioids for emotional pain from trauma, cannabis for PTSD flashbacks. The substance provides temporary relief—which is why the pattern persists despite escalating consequences.</p>
-      <p className="mb-6">Between 50-75% of people with substance use disorder have co-occurring mental health conditions <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />. While not everyone with mental illness self-medicates with substances, and not everyone who self-medicates develops addiction, the overlap is striking—and points to an important truth: many people turn to substances because they're desperately trying to survive psychological suffering they don't know how else to manage.</p>
+      <p className="mb-6">The self-medication hypothesis proposes that many people use substances not for pleasure or recreation, but to alleviate unbearable psychiatric symptoms or emotional distress <Citation id="1" index={1} source="American Journal on Addictions" year="2020" tier={1} />. It's a pattern seen across mental health conditions: alcohol for social anxiety, stimulants for undiagnosed ADHD, opioids for emotional pain from trauma, cannabis for PTSD flashbacks. The substance provides temporary relief--which is why the pattern persists despite escalating consequences.</p>
+      <p className="mb-6">Between 50-75% of people with substance use disorder have co-occurring mental health conditions <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />. While not everyone with mental illness self-medicates with substances, and not everyone who self-medicates develops addiction, the overlap is striking--and points to an important truth: many people turn to substances because they're desperately trying to survive psychological suffering they don't know how else to manage.</p>
     </div>
 
     <div className="space-y-4 my-8">
       <MythVsFactBlock
         myth="People who self-medicate are just looking for an excuse to use drugs"
-        fact="Self-medication is a survival strategy—often the only tool available to someone experiencing unbearable symptoms. It's a rational attempt to solve a problem, even if the solution creates new problems."
+        fact="Self-medication is a survival strategy--often the only tool available to someone experiencing unbearable symptoms. It's a rational attempt to solve a problem, even if the solution creates new problems."
       />
       <MythVsFactBlock
         myth="If someone needs substances to function, they're just weak"
         fact="Untreated mental health conditions can be genuinely disabling. Using substances to manage symptoms reflects desperation and limited resources, not character weakness."
       />
       <MythVsFactBlock
-        myth="Self-medication works—why discourage it?"
+        myth="Self-medication works--why discourage it?"
         fact="While substances may provide short-term relief, they worsen underlying conditions long-term, create dependence, prevent healing, and add substance use disorder on top of existing problems."
       />
     </div>
@@ -1485,11 +1911,11 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">Research has identified specific relationships between mental health conditions and substance choices <Citation id="1" index={3} source="American Journal on Addictions" year="2020" tier={1} />. While there's individual variation, clear patterns emerge:</p>
 
     <ProgressSteps variant="vertical" steps={[
-      { title: 'Depression → Stimulants', description: <div><p className="mb-2">People with untreated depression often use cocaine, methamphetamine, or prescription stimulants for energy, motivation, and temporary mood elevation. The crash afterward deepens depression, requiring more stimulants to compensate—creating a brutal cycle.</p><p><strong>Why it works initially:</strong> Stimulants flood the brain with dopamine, temporarily countering depression's dopamine deficit.</p><p><strong>Why it fails long-term:</strong> Chronic stimulant use depletes dopamine reserves, worsening depression and creating dependence.</p></div> },
-      { title: 'Anxiety → Alcohol or Benzodiazepines', description: <div><p className="mb-2">Alcohol and benzodiazepines enhance GABA, the brain's primary inhibitory neurotransmitter, producing immediate anxiety relief. Social anxiety sufferers use alcohol as "liquid courage." Panic disorder patients use benzos to prevent attacks.</p><p><strong>Why it works initially:</strong> Both substances calm the overactive anxiety circuits that create persistent fear and physical symptoms.</p><p><strong>Why it fails long-term:</strong> Tolerance develops quickly. Withdrawal dramatically worsens anxiety—often worse than baseline, driving increased use <Citation id="3" index={4} source="Addiction" year="2020" tier={1} />.</p></div> },
+      { title: 'Depression → Stimulants', description: <div><p className="mb-2">People with untreated depression often use cocaine, methamphetamine, or prescription stimulants for energy, motivation, and temporary mood elevation. The crash afterward deepens depression, requiring more stimulants to compensate--creating a brutal cycle.</p><p><strong>Why it works initially:</strong> Stimulants flood the brain with dopamine, temporarily countering depression's dopamine deficit.</p><p><strong>Why it fails long-term:</strong> Chronic stimulant use depletes dopamine reserves, worsening depression and creating dependence.</p></div> },
+      { title: 'Anxiety → Alcohol or Benzodiazepines', description: <div><p className="mb-2">Alcohol and benzodiazepines enhance GABA, the brain's primary inhibitory neurotransmitter, producing immediate anxiety relief. Social anxiety sufferers use alcohol as "liquid courage." Panic disorder patients use benzos to prevent attacks.</p><p><strong>Why it works initially:</strong> Both substances calm the overactive anxiety circuits that create persistent fear and physical symptoms.</p><p><strong>Why it fails long-term:</strong> Tolerance develops quickly. Withdrawal dramatically worsens anxiety--often worse than baseline, driving increased use <Citation id="3" index={4} source="Addiction" year="2020" tier={1} />.</p></div> },
       { title: 'PTSD → Alcohol, Cannabis, or Dissociatives', description: <div><p className="mb-2">Trauma survivors often use substances to manage hypervigilance, intrusive memories, flashbacks, and emotional numbness. Alcohol dampens hyperarousal. Cannabis reduces nightmares. Ketamine and dissociatives provide relief from unbearable emotional pain.</p><p><strong>Why it works initially:</strong> Substances temporarily interrupt the trauma response, allowing brief escape from constant threat perception.</p><p><strong>Why it fails long-term:</strong> Substances prevent trauma processing, maintain PTSD symptoms, and add substance use disorder to existing trauma burden <Citation id="4" index={5} source="Clinical Psychology Review" year="2021" tier={1} />.</p></div> },
-      { title: 'ADHD → Nicotine or Stimulants', description: <div><p className="mb-2">Undiagnosed ADHD leads many to self-medicate with nicotine (cigarettes, vaping), caffeine, or illicit stimulants. These temporarily improve focus, reduce impulsivity, and calm internal restlessness—effects similar to ADHD medications.</p><p><strong>Why it works initially:</strong> Stimulants increase dopamine and norepinephrine, which are dysregulated in ADHD brains.</p><p><strong>Why it fails long-term:</strong> Street stimulants provide irregular, excessive dosing that worsens mood instability, disrupts sleep, and creates addiction risk <Citation id="6" index={6} source="Journal of Attention Disorders" year="2020" tier={1} />.</p></div> },
-      { title: 'Insomnia → Alcohol or Cannabis', description: <div><p className="mb-2">Chronic insomnia sufferers often use alcohol or cannabis as sleep aids. Both have sedating effects and help with falling asleep—initially.</p><p><strong>Why it works initially:</strong> Both substances reduce sleep latency (time to fall asleep) and create drowsiness.</p><p><strong>Why it fails long-term:</strong> Both disrupt sleep architecture, preventing deep restorative sleep stages. Alcohol causes middle-of-night awakening. Tolerance develops, requiring escalating doses. Underlying insomnia worsens.</p></div> },
+      { title: 'ADHD → Nicotine or Stimulants', description: <div><p className="mb-2">Undiagnosed ADHD leads many to self-medicate with nicotine (cigarettes, vaping), caffeine, or illicit stimulants. These temporarily improve focus, reduce impulsivity, and calm internal restlessness--effects similar to ADHD medications.</p><p><strong>Why it works initially:</strong> Stimulants increase dopamine and norepinephrine, which are dysregulated in ADHD brains.</p><p><strong>Why it fails long-term:</strong> Street stimulants provide irregular, excessive dosing that worsens mood instability, disrupts sleep, and creates addiction risk <Citation id="6" index={6} source="Journal of Attention Disorders" year="2020" tier={1} />.</p></div> },
+      { title: 'Insomnia → Alcohol or Cannabis', description: <div><p className="mb-2">Chronic insomnia sufferers often use alcohol or cannabis as sleep aids. Both have sedating effects and help with falling asleep--initially.</p><p><strong>Why it works initially:</strong> Both substances reduce sleep latency (time to fall asleep) and create drowsiness.</p><p><strong>Why it fails long-term:</strong> Both disrupt sleep architecture, preventing deep restorative sleep stages. Alcohol causes middle-of-night awakening. Tolerance develops, requiring escalating doses. Underlying insomnia worsens.</p></div> },
     ]} />
 
     <h2 id="vicious-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Vicious Cycle</h2>
@@ -1501,17 +1927,17 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6"><strong>Stage 5: Dual diagnosis.</strong> Now the person has two chronic conditions: the original mental health disorder (worse than ever) and substance use disorder. Each condition worsens the other. Treatment becomes more complex. Shame and stigma accumulate.</p>
 
     <ArticleCallout variant="clinical-note" title="The Treatment Gap">
-      <p className="mb-3">People with untreated depression or anxiety are 2-3 times more likely to develop substance use disorder than those without mental illness <Citation id="3" index={4} source="Addiction" year="2020" tier={1} />. Yet massive treatment gaps exist: less than 40% of people with mental health conditions receive treatment. This gap drives self-medication—when effective care is unavailable, expensive, or stigmatized, people find their own solutions.</p>
+      <p className="mb-3">People with untreated depression or anxiety are 2-3 times more likely to develop substance use disorder than those without mental illness <Citation id="3" index={4} source="Addiction" year="2020" tier={1} />. Yet massive treatment gaps exist: less than 40% of people with mental health conditions receive treatment. This gap drives self-medication--when effective care is unavailable, expensive, or stigmatized, people find their own solutions.</p>
       <p>Improving mental health care access and reducing treatment barriers would prevent many cases of substance use disorder from developing in the first place.</p>
     </ArticleCallout>
 
     <h2 id="understanding-logic" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Logic Makes Sense</h2>
-    <p className="mb-6">It's important to understand: self-medication is a rational response to an impossible situation. When you're experiencing unbearable anxiety, crushing depression, intrusive trauma memories, or disabling ADHD symptoms—and you don't have access to effective treatment (or the treatment you tried didn't work)—substances provide relief. Of course people use them.</p>
+    <p className="mb-6">It's important to understand: self-medication is a rational response to an impossible situation. When you're experiencing unbearable anxiety, crushing depression, intrusive trauma memories, or disabling ADHD symptoms--and you don't have access to effective treatment (or the treatment you tried didn't work)--substances provide relief. Of course people use them.</p>
     <p className="mb-6">The problem isn't that self-medication doesn't work. The problem is that it works <em>too well initially</em>, creating powerful reinforcement, and then backfires catastrophically long-term. The brain adapts. Tolerance develops. The underlying condition worsens. Dependence forms. What started as a survival strategy becomes a trap.</p>
-    <p className="mb-6">Understanding this pattern reduces shame. People who self-medicate aren't "weak" or "looking for an excuse to use drugs." They're often remarkably resourceful—doing whatever it takes to survive psychological suffering. The solution isn't judgment; it's providing effective treatment for both conditions.</p>
+    <p className="mb-6">Understanding this pattern reduces shame. People who self-medicate aren't "weak" or "looking for an excuse to use drugs." They're often remarkably resourceful--doing whatever it takes to survive psychological suffering. The solution isn't judgment; it's providing effective treatment for both conditions.</p>
 
     <h2 id="breaking-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Breaking the Cycle: Integrated Treatment</h2>
-    <p className="mb-6">Co-occurring disorders require integrated treatment that addresses both conditions simultaneously <Citation id="7" index={9} source="Psychiatric Services" year="2022" tier={1} />. Treating only substance use without addressing underlying mental health conditions leads to relapse—the original symptoms return, and substance use resumes. Treating only mental health without addressing substance use also fails—the substances interfere with psychiatric medication, therapy, and recovery.</p>
+    <p className="mb-6">Co-occurring disorders require integrated treatment that addresses both conditions simultaneously <Citation id="7" index={9} source="Psychiatric Services" year="2022" tier={1} />. Treating only substance use without addressing underlying mental health conditions leads to relapse--the original symptoms return, and substance use resumes. Treating only mental health without addressing substance use also fails--the substances interfere with psychiatric medication, therapy, and recovery.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication That Actually Helps</h3>
     <p className="mb-6">Unlike self-medication with addictive substances, psychiatric medications treat underlying conditions without creating dependence:</p>
@@ -1529,7 +1955,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Cognitive-Behavioral Therapy (CBT)</strong> changes thought patterns that maintain both mental health symptoms and substance use.</li>
       <li><strong>Trauma-focused therapy (PE, CPT, EMDR)</strong> processes traumatic memories so substances are no longer needed to manage them.</li>
-      <li><strong>Dialectical Behavior Therapy (DBT)</strong> teaches emotion regulation skills—healthier ways to manage distress.</li>
+      <li><strong>Dialectical Behavior Therapy (DBT)</strong> teaches emotion regulation skills--healthier ways to manage distress.</li>
       <li><strong>Motivational Interviewing</strong> explores ambivalence and builds intrinsic motivation for change.</li>
     </ul>
 
@@ -1557,7 +1983,7 @@ export const substanceSleepSomaticArticles: Article[] = [
 
     <ArticleCallout variant="key-takeaway" title="Moving Forward">
       <ul className="list-disc pl-5 space-y-2">
-        <li><strong>Self-medication is understandable</strong>—a rational attempt to survive unbearable symptoms when other options seem unavailable.</li>
+        <li><strong>Self-medication is understandable</strong>--a rational attempt to survive unbearable symptoms when other options seem unavailable.</li>
         <li><strong>The pattern creates a vicious cycle</strong> where tolerance increases, symptoms worsen, and substance use disorder develops on top of existing conditions.</li>
         <li><strong>Shame is misplaced</strong>. Using substances to manage symptoms reflects desperation and limited resources, not moral failing.</li>
         <li><strong>Integrated treatment works</strong>. Addressing both mental health and substance use simultaneously produces significantly better outcomes than treating either alone.</li>
@@ -1566,17 +1992,17 @@ export const substanceSleepSomaticArticles: Article[] = [
     </ArticleCallout>
   </> },
 
-  { id: catId(64), slug: 'insomnia-disorder', title: 'Insomnia Disorder: When Sleep Problems Become Chronic', description: 'Chronic insomnia affects 10-15% of adults. Learn evidence-based treatments beyond medication.', image: "/images/articles/cat13/cover-064.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Insomnia', 'Sleep Disorders'], summary: 'Insomnia disorder—chronic difficulty falling or staying asleep—affects 10-15% of adults and creates a vicious cycle of anxiety, exhaustion, and impaired functioning. While medications provide temporary relief, Cognitive-Behavioral Therapy for Insomnia (CBT-I) produces lasting improvement in 70-80% of cases by addressing the thoughts and behaviors that perpetuate sleeplessness.', keyFacts: [
+  { id: catId(64), slug: 'insomnia-disorder', title: 'Insomnia Disorder: When Sleep Problems Become Chronic', description: 'Chronic insomnia affects 10-15% of adults. Learn evidence-based treatments beyond medication.', image: "/images/articles/cat13/cover-064.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Insomnia', 'Sleep Disorders'], summary: 'Insomnia disorder--chronic difficulty falling or staying asleep--affects 10-15% of adults and creates a vicious cycle of anxiety, exhaustion, and impaired functioning. While medications provide temporary relief, Cognitive-Behavioral Therapy for Insomnia (CBT-I) produces lasting improvement in 70-80% of cases by addressing the thoughts and behaviors that perpetuate sleeplessness.', keyFacts: [
     { text: 'Chronic insomnia affects 10-15% of adults and requires sleep difficulty at least 3 nights weekly for 3+ months causing significant distress', citationIndex: 1 },
-    { text: 'Insomnia and mental health have a bidirectional relationship—each condition worsens the other, creating intertwined cycles', citationIndex: 3 },
+    { text: 'Insomnia and mental health have a bidirectional relationship--each condition worsens the other, creating intertwined cycles', citationIndex: 3 },
     { text: 'CBT-I produces lasting improvement in 70-80% of cases and is more effective long-term than sleep medications', citationIndex: 2 },
     { text: 'Chronic insomnia increases risk of depression by 2-4 times, anxiety disorders, cardiovascular disease, and impaired immune function', citationIndex: 5 },
-    { text: 'Performance anxiety about sleep itself—worrying you won\'t sleep—creates the hyperarousal that prevents sleep, perpetuating the problem', citationIndex: 6 },
-  ], sparkMoment: 'The harder you try to force sleep, the more elusive it becomes—because sleep is something that happens to you when you stop trying to control it.', practicalExercise: {
+    { text: 'Performance anxiety about sleep itself--worrying you won\'t sleep--creates the hyperarousal that prevents sleep, perpetuating the problem', citationIndex: 6 },
+  ], sparkMoment: 'The harder you try to force sleep, the more elusive it becomes--because sleep is something that happens to you when you stop trying to control it.', practicalExercise: {
     title: 'Building Better Sleep Patterns',
     steps: [
       { title: 'Track Your Sleep', description: 'For one week, record: bedtime, wake time, time to fall asleep, nighttime awakenings, total sleep time, and daytime functioning. This baseline reveals patterns and measures progress.' },
-      { title: 'Set a Consistent Wake Time', description: 'Wake at the same time every day (yes, weekends too), regardless of how poorly you slept. This anchors your circadian rhythm. Don\'t worry about bedtime yet—focus on wake time first.' },
+      { title: 'Set a Consistent Wake Time', description: 'Wake at the same time every day (yes, weekends too), regardless of how poorly you slept. This anchors your circadian rhythm. Don\'t worry about bedtime yet--focus on wake time first.' },
       { title: 'Restrict Time in Bed', description: 'If you\'re averaging 5 hours of sleep but spending 9 hours in bed, reduce time in bed to match actual sleep (5-6 hours). This builds sleep drive. Once you\'re sleeping most of that time, gradually extend it.' },
       { title: 'Get Out of Bed When Awake', description: 'If you can\'t fall asleep within 20 minutes (or wake and can\'t return to sleep), leave the bedroom. Do something boring in dim light. Return only when sleepy. This breaks the bed-wakefulness association.' },
     ],
@@ -1593,8 +2019,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Insomnia and Cardiovascular Disease', source: 'European Heart Journal', year: '2020', link: 'https://doi.org/10.1093/eurheartj/ehaa243', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Rachel spent 10 hours in bed each night—and slept maybe 4. She'd lie awake for hours, mind racing, checking the clock every 20 minutes, calculating how exhausted she'd be tomorrow. The harder she tried to sleep, the more elusive it became. "I'm terrified of going to bed," she said. "My bedroom has become a torture chamber."</p>
-      <p className="mb-6">Insomnia disorder involves persistent difficulty falling asleep, staying asleep, or early morning awakening with inability to return to sleep—despite adequate opportunity for sleep <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. The key distinction from occasional sleepless nights: chronic insomnia occurs at least 3 nights per week for 3 or more months and causes significant distress or daytime impairment.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Rachel spent 10 hours in bed each night--and slept maybe 4. She'd lie awake for hours, mind racing, checking the clock every 20 minutes, calculating how exhausted she'd be tomorrow. The harder she tried to sleep, the more elusive it became. "I'm terrified of going to bed," she said. "My bedroom has become a torture chamber."</p>
+      <p className="mb-6">Insomnia disorder involves persistent difficulty falling asleep, staying asleep, or early morning awakening with inability to return to sleep--despite adequate opportunity for sleep <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. The key distinction from occasional sleepless nights: chronic insomnia occurs at least 3 nights per week for 3 or more months and causes significant distress or daytime impairment.</p>
       <p className="mb-6">Between 10-15% of adults have chronic insomnia, making it one of the most common health complaints. The consequences extend far beyond tiredness: daytime fatigue, irritability, difficulty concentrating, impaired work performance, increased accident risk, cardiovascular problems, weakened immune function, and dramatically elevated risk of depression and anxiety <Citation id="5" index={2} source="Journal of Clinical Sleep Medicine" year="2021" tier={1} />.</p>
     </div>
 
@@ -1613,20 +2039,20 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Frequency:</strong> Sleep difficulty occurs at least 3 nights per week</li>
       <li><strong>Duration:</strong> The problem persists for 3+ months (chronic) vs. short-term (acute) insomnia lasting days or weeks</li>
       <li><strong>Opportunity:</strong> You have adequate time and appropriate environment for sleep</li>
-      <li><strong>Consequences:</strong> Poor sleep causes significant distress or impairs daytime functioning—fatigue, mood problems, concentration difficulties</li>
+      <li><strong>Consequences:</strong> Poor sleep causes significant distress or impairs daytime functioning--fatigue, mood problems, concentration difficulties</li>
     </ul>
     <p className="mb-6">Insomnia can manifest as difficulty falling asleep (sleep onset insomnia), trouble staying asleep with frequent awakenings (sleep maintenance insomnia), or early morning awakening with inability to return to sleep (late insomnia). Many people experience multiple types simultaneously.</p>
 
     <QuoteBlock
-      quote="The cruel irony of insomnia is that the more desperately you need sleep, the harder it becomes to achieve. Your bed—which should be a place of rest—becomes associated with frustration and anxiety."
+      quote="The cruel irony of insomnia is that the more desperately you need sleep, the harder it becomes to achieve. Your bed--which should be a place of rest--becomes associated with frustration and anxiety."
       attribution="Dr. Michael Perlis"
       role="Insomnia researcher, University of Pennsylvania"
       variant="large"
     />
 
     <h2 id="bidirectional" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Insomnia-Mental Health Connection</h2>
-    <p className="mb-6">Insomnia and mental health conditions have a bidirectional relationship—each worsens the other <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2021" tier={1} />. Chronic insomnia increases risk of developing depression by 2-4 times and doubles anxiety disorder risk. Conversely, depression and anxiety commonly cause insomnia. This creates intertwined cycles where treating one condition without addressing the other leads to incomplete recovery.</p>
-    <p className="mb-6">For decades, clinicians viewed insomnia as merely a symptom of other conditions (depression, anxiety, chronic pain). We now understand insomnia as an independent disorder that requires specific treatment. Treating depression doesn't automatically fix insomnia—and untreated insomnia undermines depression treatment, increasing relapse risk.</p>
+    <p className="mb-6">Insomnia and mental health conditions have a bidirectional relationship--each worsens the other <Citation id="3" index={3} source="Sleep Medicine Reviews" year="2021" tier={1} />. Chronic insomnia increases risk of developing depression by 2-4 times and doubles anxiety disorder risk. Conversely, depression and anxiety commonly cause insomnia. This creates intertwined cycles where treating one condition without addressing the other leads to incomplete recovery.</p>
+    <p className="mb-6">For decades, clinicians viewed insomnia as merely a symptom of other conditions (depression, anxiety, chronic pain). We now understand insomnia as an independent disorder that requires specific treatment. Treating depression doesn't automatically fix insomnia--and untreated insomnia undermines depression treatment, increasing relapse risk.</p>
 
     <h2 id="perpetuating" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Perpetuates Insomnia</h2>
     <p className="mb-6">Insomnia often begins with an identifiable trigger: stressful life event, illness, schedule change, new medication. But the initial trigger rarely explains why insomnia persists long after the precipitating event resolves. <em>Perpetuating factors</em> maintain chronic insomnia:</p>
@@ -1636,15 +2062,15 @@ export const substanceSleepSomaticArticles: Article[] = [
       <ul className="list-disc pl-5 space-y-2">
         <li><strong>Predisposing factors:</strong> Biological vulnerability (hyperactive stress response, genetic factors, tendency toward rumination)</li>
         <li><strong>Precipitating factors:</strong> Triggering events (job loss, divorce, illness, trauma) that cause initial sleep disruption</li>
-        <li><strong>Perpetuating factors:</strong> Behaviors and cognitions that maintain insomnia after triggers resolve—these are the treatment targets</li>
+        <li><strong>Perpetuating factors:</strong> Behaviors and cognitions that maintain insomnia after triggers resolve--these are the treatment targets</li>
       </ul>
     </HighlightBox>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Maladaptive Beliefs About Sleep</h3>
-    <p className="mb-6">"I must get 8 hours or I'll be useless." "My insomnia is ruining my life." "I can't function without sleeping well." These catastrophic thoughts create anxiety about sleep—which produces the hyperarousal that prevents sleep. Research shows people with insomnia dramatically overestimate how poorly they sleep and the daytime consequences <Citation id="6" index={4} source="Current Sleep Medicine Reports" year="2020" tier={1} />.</p>
+    <p className="mb-6">"I must get 8 hours or I'll be useless." "My insomnia is ruining my life." "I can't function without sleeping well." These catastrophic thoughts create anxiety about sleep--which produces the hyperarousal that prevents sleep. Research shows people with insomnia dramatically overestimate how poorly they sleep and the daytime consequences <Citation id="6" index={4} source="Current Sleep Medicine Reports" year="2020" tier={1} />.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Performance Anxiety</h3>
-    <p className="mb-6">Worrying about whether you'll sleep tonight creates the exact physiological state (hyperarousal) incompatible with sleep. As bedtime approaches, anxiety increases, heart rate elevates, cortisol rises—all activating the "fight or flight" response when your body needs the opposite.</p>
+    <p className="mb-6">Worrying about whether you'll sleep tonight creates the exact physiological state (hyperarousal) incompatible with sleep. As bedtime approaches, anxiety increases, heart rate elevates, cortisol rises--all activating the "fight or flight" response when your body needs the opposite.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Behavioral Perpetuating Factors</h3>
     <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1658,22 +2084,22 @@ export const substanceSleepSomaticArticles: Article[] = [
     </ul>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Conditioned Arousal</h3>
-    <p className="mb-6">Through classical conditioning, your bed and bedroom become associated with frustration, anxiety, and wakefulness rather than sleep. Simply seeing your bed triggers the stress response. This is why many people with insomnia sleep better in hotels, on vacations, or on the couch—different environments haven't been paired with insomnia distress.</p>
+    <p className="mb-6">Through classical conditioning, your bed and bedroom become associated with frustration, anxiety, and wakefulness rather than sleep. Simply seeing your bed triggers the stress response. This is why many people with insomnia sleep better in hotels, on vacations, or on the couch--different environments haven't been paired with insomnia distress.</p>
 
     <h2 id="cbt-i" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Cognitive-Behavioral Therapy for Insomnia (CBT-I)</h2>
-    <p className="mb-6">CBT-I is the first-line treatment recommended by medical guidelines—more effective than medications long-term, with 70-80% of people showing significant improvement <Citation id="2" index={5} source="Annals of Internal Medicine" year="2020" tier={1} />. Unlike sleeping pills, CBT-I produces lasting changes that persist after treatment ends. It typically involves 4-8 weekly sessions with a trained therapist, though digital CBT-I programs also show efficacy.</p>
+    <p className="mb-6">CBT-I is the first-line treatment recommended by medical guidelines--more effective than medications long-term, with 70-80% of people showing significant improvement <Citation id="2" index={5} source="Annals of Internal Medicine" year="2020" tier={1} />. Unlike sleeping pills, CBT-I produces lasting changes that persist after treatment ends. It typically involves 4-8 weekly sessions with a trained therapist, though digital CBT-I programs also show efficacy.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Core Components</h3>
 
     <p className="mb-4"><strong>1. Sleep Restriction</strong></p>
     <p className="mb-6">Paradoxically, spending <em>less</em> time in bed improves sleep quality. If you're averaging 5 hours of actual sleep but spending 9 hours in bed, sleep restriction limits time in bed to 5-6 hours initially. This consolidates fragmented sleep and rebuilds sleep drive <Citation id="4" index={6} source="Sleep" year="2020" tier={1} />. Once you're sleeping 85-90% of time in bed, you gradually extend it by 15-30 minutes weekly until reaching optimal sleep duration.</p>
-    <p className="mb-6">Yes, this causes temporary sleep deprivation—but it breaks the insomnia cycle. People often see improvement within 1-2 weeks.</p>
+    <p className="mb-6">Yes, this causes temporary sleep deprivation--but it breaks the insomnia cycle. People often see improvement within 1-2 weeks.</p>
 
     <p className="mb-4"><strong>2. Stimulus Control</strong></p>
     <p className="mb-6">Re-associate bed with sleep:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li>Use bed only for sleep and sex—no TV, phone, reading, working</li>
-      <li>Go to bed only when sleepy (not just tired—genuinely struggling to keep eyes open)</li>
+      <li>Use bed only for sleep and sex--no TV, phone, reading, working</li>
+      <li>Go to bed only when sleepy (not just tired--genuinely struggling to keep eyes open)</li>
       <li>If you can't fall asleep within 20 minutes, leave the bedroom. Do something boring in dim light. Return only when sleepy.</li>
       <li>Wake at the same time every day regardless of sleep quality</li>
       <li>No napping</li>
@@ -1695,7 +2121,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">Environmental and lifestyle factors: consistent schedule, cool/dark/quiet bedroom, limiting caffeine (none after 2pm), avoiding alcohol (disrupts sleep architecture), regular exercise (but not within 3 hours of bed), exposure to morning sunlight (regulates circadian rhythm).</p>
 
     <h2 id="medications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Medications: Short-Term Relief vs. Long-Term Solutions</h2>
-    <p className="mb-6">Sleep medications provide rapid symptom relief—which is why they're commonly prescribed despite guidelines recommending CBT-I first <Citation id="7" index={7} source="American Family Physician" year="2021" tier={2} />. However, they don't address perpetuating factors, lose effectiveness with continued use (tolerance), cause rebound insomnia when stopped, and carry risks of dependence, daytime sedation, cognitive impairment, and falls (especially in older adults).</p>
+    <p className="mb-6">Sleep medications provide rapid symptom relief--which is why they're commonly prescribed despite guidelines recommending CBT-I first <Citation id="7" index={7} source="American Family Physician" year="2021" tier={2} />. However, they don't address perpetuating factors, lose effectiveness with continued use (tolerance), cause rebound insomnia when stopped, and carry risks of dependence, daytime sedation, cognitive impairment, and falls (especially in older adults).</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Common Sleep Medications</h3>
     <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1708,7 +2134,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">If medication is used, it should be short-term (2-4 weeks) while implementing CBT-I strategies for lasting improvement.</p>
 
     <h2 id="health-consequences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Health Consequences of Chronic Insomnia</h2>
-    <p className="mb-6">Untreated chronic insomnia isn't just frustrating—it increases risk of serious health problems <Citation id="8" index={8} source="European Heart Journal" year="2020" tier={1} />:</p>
+    <p className="mb-6">Untreated chronic insomnia isn't just frustrating--it increases risk of serious health problems <Citation id="8" index={8} source="European Heart Journal" year="2020" tier={1} />:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Mental health:</strong> 2-4x increased depression risk, doubled anxiety risk, increased suicidal ideation</li>
       <li><strong>Cardiovascular:</strong> Hypertension, heart attack, stroke, atrial fibrillation</li>
@@ -1718,32 +2144,32 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Accidents:</strong> Motor vehicle crashes (drowsy driving), workplace injuries, falls</li>
       <li><strong>Quality of life:</strong> Impaired work performance, relationship conflicts, reduced enjoyment of activities</li>
     </ul>
-    <p className="mb-6">These consequences underscore why insomnia warrants treatment—it's not just about feeling tired, but about protecting overall health and functioning.</p>
+    <p className="mb-6">These consequences underscore why insomnia warrants treatment--it's not just about feeling tired, but about protecting overall health and functioning.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
-        <li><strong>Chronic insomnia affects 10-15% of adults</strong> and significantly impairs health, mood, and functioning—it's not "just" a sleep problem.</li>
-        <li><strong>Perpetuating factors</strong>—maladaptive beliefs, performance anxiety, excessive time in bed, irregular schedules—maintain insomnia after initial triggers resolve.</li>
+        <li><strong>Chronic insomnia affects 10-15% of adults</strong> and significantly impairs health, mood, and functioning--it's not "just" a sleep problem.</li>
+        <li><strong>Perpetuating factors</strong>--maladaptive beliefs, performance anxiety, excessive time in bed, irregular schedules--maintain insomnia after initial triggers resolve.</li>
         <li><strong>CBT-I produces lasting improvement in 70-80% of cases</strong> and is more effective long-term than medication, though it requires active participation.</li>
         <li><strong>Medications provide short-term relief</strong> but don't address underlying patterns, lose effectiveness with continued use, and carry dependence risks.</li>
-        <li><strong>Insomnia and mental health are intertwined</strong>—treating one without the other often leads to incomplete recovery.</li>
+        <li><strong>Insomnia and mental health are intertwined</strong>--treating one without the other often leads to incomplete recovery.</li>
       </ul>
     </ArticleCallout>
   </> },
 
-  { id: catId(65), slug: 'sleep-apnea', title: 'Sleep Apnea: The Sleep Disorder That Stops Your Breathing', description: 'Obstructive sleep apnea affects 10-30% of adults. Often undiagnosed, it causes serious health risks.', image: "/images/articles/cat13/cover-065.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Sleep Apnea', 'Sleep Disorders'], summary: 'Obstructive sleep apnea (OSA) causes breathing to stop repeatedly during sleep—sometimes hundreds of times nightly—disrupting rest and starving the body of oxygen. Affecting 10-30% of adults yet often undiagnosed, OSA dramatically increases risk of heart attack, stroke, and diabetes. CPAP therapy reduces apneas by over 90%, preventing serious health complications.', keyFacts: [
+  { id: catId(65), slug: 'sleep-apnea', title: 'Sleep Apnea: The Sleep Disorder That Stops Your Breathing', description: 'Obstructive sleep apnea affects 10-30% of adults. Often undiagnosed, it causes serious health risks.', image: "/images/articles/cat13/cover-065.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Sleep Apnea', 'Sleep Disorders'], summary: 'Obstructive sleep apnea (OSA) causes breathing to stop repeatedly during sleep--sometimes hundreds of times nightly--disrupting rest and starving the body of oxygen. Affecting 10-30% of adults yet often undiagnosed, OSA dramatically increases risk of heart attack, stroke, and diabetes. CPAP therapy reduces apneas by over 90%, preventing serious health complications.', keyFacts: [
     { text: 'OSA affects 10-30% of adults, with millions remaining undiagnosed despite serious health consequences', citationIndex: 1 },
-    { text: 'During apnea episodes, breathing stops for 10+ seconds—severe cases experience hundreds of interruptions nightly', citationIndex: 1 },
+    { text: 'During apnea episodes, breathing stops for 10+ seconds--severe cases experience hundreds of interruptions nightly', citationIndex: 1 },
     { text: 'Untreated OSA increases risk of hypertension by 2-3x, heart attack, stroke, atrial fibrillation, type 2 diabetes, and depression', citationIndex: 2 },
     { text: 'CPAP therapy reduces apneas by over 90% and significantly lowers cardiovascular disease risk when used consistently', citationIndex: 3 },
-    { text: 'Many people with OSA don\'t know they have it—partners notice loud snoring, gasping, and choking sounds during sleep', citationIndex: 4 },
-  ], sparkMoment: 'Imagine drowning for 20 seconds, gasping awake, then drowning again—repeating this cycle 300 times every night. That\'s what severe sleep apnea feels like, even though you don\'t consciously remember it.', practicalExercise: {
+    { text: 'Many people with OSA don\'t know they have it--partners notice loud snoring, gasping, and choking sounds during sleep', citationIndex: 4 },
+  ], sparkMoment: 'Imagine drowning for 20 seconds, gasping awake, then drowning again--repeating this cycle 300 times every night. That\'s what severe sleep apnea feels like, even though you don\'t consciously remember it.', practicalExercise: {
     title: 'Recognizing Sleep Apnea Signs',
     steps: [
       { title: 'Ask Your Partner', description: 'If you sleep with someone, ask: Do I snore loudly? Stop breathing during sleep? Gasp or choke? Make restless movements? Partners often notice apnea before the person with it does.' },
-      { title: 'Track Daytime Symptoms', description: 'For one week, note: morning headaches, excessive daytime sleepiness (falling asleep during meetings, while watching TV, or—dangerously—while driving), difficulty concentrating, irritability despite "getting enough sleep."' },
+      { title: 'Track Daytime Symptoms', description: 'For one week, note: morning headaches, excessive daytime sleepiness (falling asleep during meetings, while watching TV, or--dangerously--while driving), difficulty concentrating, irritability despite "getting enough sleep."' },
       { title: 'Check Risk Factors', description: 'Do you have: obesity (BMI > 30), large neck circumference (>17" men, >16" women), male sex (though women underdiagnosed), age 40+, family history of OSA, hypertension?' },
-      { title: 'Get Evaluated', description: 'If you have multiple signs, talk to your doctor about a sleep study. Don\'t wait—untreated OSA causes serious, preventable health problems. Home sleep tests are now available and may be covered by insurance.' },
+      { title: 'Get Evaluated', description: 'If you have multiple signs, talk to your doctor about a sleep study. Don\'t wait--untreated OSA causes serious, preventable health problems. Home sleep tests are now available and may be covered by insurance.' },
     ],
     toolLink: '/tools/sleep-architect',
     toolLabel: 'Track Your Sleep',
@@ -1758,9 +2184,9 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Sleep Apnea and Mental Health', source: 'Journal of Clinical Psychiatry', year: '2021', link: 'https://doi.org/10.4088/JCP.20r13448', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Mark slept 8-9 hours nightly but woke exhausted. He fell asleep during afternoon meetings, nodded off while reading to his kids, and once nearly crashed his car when drowsiness overwhelmed him on the highway. His wife mentioned he snored loudly and sometimes seemed to stop breathing—frightening pauses followed by gasping. His doctor ordered a sleep study. The results: Mark stopped breathing 287 times that night, with oxygen levels dropping dangerously low. He had severe obstructive sleep apnea—and didn't know it.</p>
-      <p className="mb-6">Obstructive sleep apnea (OSA) occurs when the airway repeatedly collapses during sleep, blocking airflow despite efforts to breathe <Citation id="1" index={1} source="AASM" year="2022" tier={3} />. Each apnea (cessation of breathing) lasts at least 10 seconds—sometimes 30-60 seconds or longer. Severe cases experience hundreds of apneas nightly. The brain detects oxygen deprivation and briefly wakes you just enough to reopen the airway and resume breathing. You don't consciously remember these micro-awakenings, but they prevent deep restorative sleep.</p>
-      <p className="mb-6">OSA affects 10-30% of adults, with prevalence increasing with age and obesity rates. Yet most cases remain undiagnosed. People don't realize that chronic exhaustion, morning headaches, and difficulty concentrating stem from a treatable sleep disorder—not "normal aging" or stress.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Mark slept 8-9 hours nightly but woke exhausted. He fell asleep during afternoon meetings, nodded off while reading to his kids, and once nearly crashed his car when drowsiness overwhelmed him on the highway. His wife mentioned he snored loudly and sometimes seemed to stop breathing--frightening pauses followed by gasping. His doctor ordered a sleep study. The results: Mark stopped breathing 287 times that night, with oxygen levels dropping dangerously low. He had severe obstructive sleep apnea--and didn't know it.</p>
+      <p className="mb-6">Obstructive sleep apnea (OSA) occurs when the airway repeatedly collapses during sleep, blocking airflow despite efforts to breathe <Citation id="1" index={1} source="AASM" year="2022" tier={3} />. Each apnea (cessation of breathing) lasts at least 10 seconds--sometimes 30-60 seconds or longer. Severe cases experience hundreds of apneas nightly. The brain detects oxygen deprivation and briefly wakes you just enough to reopen the airway and resume breathing. You don't consciously remember these micro-awakenings, but they prevent deep restorative sleep.</p>
+      <p className="mb-6">OSA affects 10-30% of adults, with prevalence increasing with age and obesity rates. Yet most cases remain undiagnosed. People don't realize that chronic exhaustion, morning headaches, and difficulty concentrating stem from a treatable sleep disorder--not "normal aging" or stress.</p>
     </div>
 
     <StatCard
@@ -1773,51 +2199,51 @@ export const substanceSleepSomaticArticles: Article[] = [
     />
 
     <h2 id="what-happens" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Happens During an Apnea</h2>
-    <p className="mb-6">During sleep, muscles throughout your body relax—including throat muscles that normally keep your airway open. In people with OSA, this relaxation causes the airway to narrow or collapse completely. Factors contributing to airway obstruction include:</p>
+    <p className="mb-6">During sleep, muscles throughout your body relax--including throat muscles that normally keep your airway open. In people with OSA, this relaxation causes the airway to narrow or collapse completely. Factors contributing to airway obstruction include:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Anatomical features:</strong> Large tonsils/adenoids, thick neck, recessed chin, large tongue</li>
       <li><strong>Excess tissue:</strong> Fat deposits around the airway from obesity (strongest risk factor)</li>
       <li><strong>Muscle tone:</strong> Reduced muscle tone with age, alcohol, or sedatives</li>
       <li><strong>Structural abnormalities:</strong> Deviated septum, enlarged turbinates, nasal polyps</li>
     </ul>
-    <p className="mb-6">When the airway closes, you continue trying to breathe—chest and abdomen moving, diaphragm working—but no air reaches your lungs. Oxygen levels drop (hypoxemia). Carbon dioxide accumulates. The brain detects the emergency and triggers a partial arousal—just enough to restore muscle tone, reopen the airway, and resume breathing. You gasp, sometimes snort or choke, then drift back to sleep. The cycle repeats.</p>
-    <p className="mb-6">This happens so frequently that you never reach deep sleep stages (slow-wave sleep) or REM sleep—the restorative phases essential for physical recovery, memory consolidation, and emotional regulation. Despite spending 8 hours in bed, you're effectively sleep-deprived.</p>
+    <p className="mb-6">When the airway closes, you continue trying to breathe--chest and abdomen moving, diaphragm working--but no air reaches your lungs. Oxygen levels drop (hypoxemia). Carbon dioxide accumulates. The brain detects the emergency and triggers a partial arousal--just enough to restore muscle tone, reopen the airway, and resume breathing. You gasp, sometimes snort or choke, then drift back to sleep. The cycle repeats.</p>
+    <p className="mb-6">This happens so frequently that you never reach deep sleep stages (slow-wave sleep) or REM sleep--the restorative phases essential for physical recovery, memory consolidation, and emotional regulation. Despite spending 8 hours in bed, you're effectively sleep-deprived.</p>
 
     <h2 id="signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Signs and Symptoms</h2>
-    <p className="mb-6">Many people with OSA don't know they have it. The disorder occurs during sleep—a time when you're unconscious and can't observe your own symptoms. Partners or roommates often notice signs first <Citation id="4" index={2} source="Sleep Medicine Reviews" year="2021" tier={1} />.</p>
+    <p className="mb-6">Many people with OSA don't know they have it. The disorder occurs during sleep--a time when you're unconscious and can't observe your own symptoms. Partners or roommates often notice signs first <Citation id="4" index={2} source="Sleep Medicine Reviews" year="2021" tier={1} />.</p>
 
     <ArticleAccordion type="multiple" items={[
       { id: 'nighttime', title: 'Nighttime Signs (observed by others)', content: <ul className="list-disc pl-5 space-y-2">
-        <li><strong>Loud, chronic snoring</strong>—not occasional light snoring but disruptive, room-filling noise</li>
-        <li><strong>Observed apneas</strong>—partner sees you stop breathing, chest still moving but no airflow, then gasping</li>
+        <li><strong>Loud, chronic snoring</strong>--not occasional light snoring but disruptive, room-filling noise</li>
+        <li><strong>Observed apneas</strong>--partner sees you stop breathing, chest still moving but no airflow, then gasping</li>
         <li><strong>Choking or gasping sounds</strong> during sleep</li>
-        <li><strong>Restless sleep</strong>—frequent position changes, limb movements, tossing</li>
+        <li><strong>Restless sleep</strong>--frequent position changes, limb movements, tossing</li>
         <li><strong>Night sweats</strong> (from effort to breathe)</li>
-        <li><strong>Frequent urination</strong> at night (nocturia—hormonal response to breathing interruptions)</li>
+        <li><strong>Frequent urination</strong> at night (nocturia--hormonal response to breathing interruptions)</li>
       </ul> },
       { id: 'daytime', title: 'Daytime Symptoms (experienced by you)', content: <ul className="list-disc pl-5 space-y-2">
-        <li><strong>Excessive daytime sleepiness</strong>—falling asleep during meetings, conversations, TV, or while driving (dangerous)</li>
+        <li><strong>Excessive daytime sleepiness</strong>--falling asleep during meetings, conversations, TV, or while driving (dangerous)</li>
         <li><strong>Morning headaches</strong> (from oxygen deprivation and CO2 buildup overnight)</li>
         <li><strong>Difficulty concentrating</strong>, memory problems, "brain fog"</li>
-        <li><strong>Mood changes</strong>—irritability, depression, anxiety</li>
+        <li><strong>Mood changes</strong>--irritability, depression, anxiety</li>
         <li><strong>Dry mouth or sore throat</strong> upon waking (from mouth breathing all night)</li>
         <li><strong>Decreased libido</strong>, sexual dysfunction</li>
         <li><strong>Chronic fatigue</strong> despite "enough" time in bed</li>
       </ul> },
       { id: 'risk', title: 'Key Risk Factors', content: <ul className="list-disc pl-5 space-y-2">
-        <li><strong>Obesity</strong> (BMI &gt; 30)—strongest modifiable risk factor; 70% of OSA patients are obese</li>
+        <li><strong>Obesity</strong> (BMI &gt; 30)--strongest modifiable risk factor; 70% of OSA patients are obese</li>
         <li><strong>Large neck circumference</strong> (&gt;17 inches men, &gt;16 inches women)</li>
-        <li><strong>Male sex</strong>—men 2-3x more likely, though gap narrows post-menopause</li>
-        <li><strong>Age 40+</strong>—prevalence increases with aging</li>
-        <li><strong>Family history</strong>—genetic component to airway anatomy</li>
-        <li><strong>Smoking</strong>—inflammation increases airway obstruction 3x</li>
-        <li><strong>Alcohol/sedatives</strong>—relax throat muscles, worsening obstruction</li>
-        <li><strong>Nasal congestion</strong>—allergies, structural problems force mouth breathing</li>
+        <li><strong>Male sex</strong>--men 2-3x more likely, though gap narrows post-menopause</li>
+        <li><strong>Age 40+</strong>--prevalence increases with aging</li>
+        <li><strong>Family history</strong>--genetic component to airway anatomy</li>
+        <li><strong>Smoking</strong>--inflammation increases airway obstruction 3x</li>
+        <li><strong>Alcohol/sedatives</strong>--relax throat muscles, worsening obstruction</li>
+        <li><strong>Nasal congestion</strong>--allergies, structural problems force mouth breathing</li>
       </ul> },
     ]} />
 
     <h2 id="consequences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Serious Health Consequences</h2>
-    <p className="mb-6">Untreated OSA isn't just about feeling tired—it significantly increases risk of life-threatening conditions <Citation id="2" index={3} source="Chest" year="2020" tier={1} />:</p>
+    <p className="mb-6">Untreated OSA isn't just about feeling tired--it significantly increases risk of life-threatening conditions <Citation id="2" index={3} source="Chest" year="2020" tier={1} />:</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cardiovascular Disease</h3>
     <p className="mb-6">Repeated oxygen deprivation and arousal responses stress the cardiovascular system nightly:</p>
@@ -1833,7 +2259,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">OSA disrupts metabolic function independent of obesity <Citation id="5" index={4} source="Diabetes Care" year="2020" tier={1} />:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Type 2 diabetes:</strong> 40-50% of OSA patients have diabetes; 60-80% of diabetics have OSA. Sleep fragmentation impairs glucose metabolism and insulin sensitivity.</li>
-      <li><strong>Metabolic syndrome:</strong> Cluster of hypertension, insulin resistance, dyslipidemia, abdominal obesity—significantly more common with OSA.</li>
+      <li><strong>Metabolic syndrome:</strong> Cluster of hypertension, insulin resistance, dyslipidemia, abdominal obesity--significantly more common with OSA.</li>
       <li><strong>Weight gain:</strong> OSA worsens weight gain through hormonal disruption (leptin, ghrelin), fatigue reducing activity, and metabolic dysfunction. Creates vicious cycle.</li>
     </ul>
 
@@ -1842,7 +2268,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Cognitive impairment:</strong> Memory problems, difficulty concentrating, reduced executive function, slowed processing speed</li>
       <li><strong>Dementia risk:</strong> Emerging evidence links OSA to increased Alzheimer's disease and vascular dementia risk in older adults</li>
-      <li><strong>Depression:</strong> Present in 20-30% of OSA patients. Bidirectional relationship—OSA worsens depression, depression worsens OSA.</li>
+      <li><strong>Depression:</strong> Present in 20-30% of OSA patients. Bidirectional relationship--OSA worsens depression, depression worsens OSA.</li>
       <li><strong>Anxiety:</strong> Chronic stress response from nightly oxygen deprivation activates anxiety systems</li>
     </ul>
 
@@ -1851,7 +2277,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Motor vehicle crashes:</strong> People with untreated OSA are 2-3x more likely to have accidents. Drowsy driving impairs reaction time and judgment like alcohol.</li>
       <li><strong>Workplace injuries:</strong> Operating machinery, making critical decisions while sleep-deprived increases error rates.</li>
-      <li><strong>Falls:</strong> Particularly in older adults—fatigue, cognitive impairment, and nighttime bathroom trips create fall risk.</li>
+      <li><strong>Falls:</strong> Particularly in older adults--fatigue, cognitive impairment, and nighttime bathroom trips create fall risk.</li>
     </ul>
 
     <h2 id="diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Diagnosis</h2>
@@ -1886,10 +2312,10 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">Custom-fitted devices reposition the jaw and tongue forward, opening the airway <Citation id="6" index={8} source="Journal of Clinical Sleep Medicine" year="2021" tier={1} />. Best for mild-moderate OSA or CPAP-intolerant patients. Effectiveness: 50-70% reduction in AHI (less than CPAP but better than nothing). Advantages: portable, quiet, no electricity needed. Disadvantages: jaw discomfort, tooth movement over time, less effective for severe OSA.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Weight Loss</h3>
-    <p className="mb-6">For overweight/obese patients, weight loss significantly improves OSA <Citation id="7" index={9} source="American Journal of Respiratory and Critical Care Medicine" year="2020" tier={1} />. Losing 10-15% of body weight can reduce AHI by 30-50%. Some people achieve complete resolution with substantial weight loss. However, weight loss alone often insufficient for moderate-severe OSA—should be combined with CPAP or other treatment while working toward weight goals.</p>
+    <p className="mb-6">For overweight/obese patients, weight loss significantly improves OSA <Citation id="7" index={9} source="American Journal of Respiratory and Critical Care Medicine" year="2020" tier={1} />. Losing 10-15% of body weight can reduce AHI by 30-50%. Some people achieve complete resolution with substantial weight loss. However, weight loss alone often insufficient for moderate-severe OSA--should be combined with CPAP or other treatment while working toward weight goals.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Positional Therapy</h3>
-    <p className="mb-6">Some people have position-dependent OSA—apneas occur primarily when sleeping on back. Special pillows, positional alarms, or wearable devices discourage supine sleeping. Effective only for mild OSA worsened by position.</p>
+    <p className="mb-6">Some people have position-dependent OSA--apneas occur primarily when sleeping on back. Special pillows, positional alarms, or wearable devices discourage supine sleeping. Effective only for mild OSA worsened by position.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Surgery</h3>
     <p className="mb-6">Reserved for specific anatomical problems or when other treatments fail:</p>
@@ -1912,7 +2338,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
         <li><strong>OSA affects millions</strong> but remains dramatically underdiagnosed. Loud snoring, witnessed apneas, and excessive daytime sleepiness warrant evaluation.</li>
-        <li><strong>Health consequences are serious</strong>: hypertension, heart attack, stroke, diabetes, cognitive impairment, and accidents. OSA isn't just about being tired—it's a life-threatening condition.</li>
+        <li><strong>Health consequences are serious</strong>: hypertension, heart attack, stroke, diabetes, cognitive impairment, and accidents. OSA isn't just about being tired--it's a life-threatening condition.</li>
         <li><strong>CPAP therapy works</strong>: 90%+ reduction in apneas when used consistently. Initial challenges are common but usually solvable with adjustments and persistence.</li>
         <li><strong>Alternative treatments exist</strong> for those who can't tolerate CPAP: oral appliances, weight loss, positional therapy, and surgery.</li>
         <li><strong>Treatment is life-changing</strong>: People consistently report dramatic improvement in energy, mood, concentration, and overall health once OSA is effectively treated.</li>
@@ -1925,17 +2351,17 @@ export const substanceSleepSomaticArticles: Article[] = [
   keyFacts: [
     { text: 'Narcolepsy affects approximately 1 in 2,000 people worldwide, with onset typically in teens to early 20s', citationIndex: 1 },
     { text: 'Type 1 narcolepsy is caused by loss of hypocretin-producing neurons in the hypothalamus, leading to inability to regulate wakefulness', citationIndex: 2 },
-    { text: 'Cataplexy—sudden muscle weakness triggered by emotions—occurs in 70% of Type 1 cases and can last seconds to minutes', citationIndex: 3 },
+    { text: 'Cataplexy--sudden muscle weakness triggered by emotions--occurs in 70% of Type 1 cases and can last seconds to minutes', citationIndex: 3 },
     { text: 'Narcolepsy patients are 2-4 times more likely to experience depression compared to the general population', citationIndex: 5 },
     { text: 'Strategic daytime naps of 10-20 minutes can significantly reduce sleep attack frequency when scheduled consistently', citationIndex: 7 },
   ],
-  sparkMoment: 'Living with narcolepsy means learning that your brain\'s "on/off" switch works differently—but with the right tools, you can turn that difference into a manageable rhythm rather than a daily crisis.',
+  sparkMoment: 'Living with narcolepsy means learning that your brain\'s "on/off" switch works differently--but with the right tools, you can turn that difference into a manageable rhythm rather than a daily crisis.',
   practicalExercise: {
     title: 'Create Your Narcolepsy Management Plan',
     steps: [
       { title: 'Map Your Sleep Attacks', description: 'Track when sleep attacks occur over two weeks. Note time of day, activity, triggers, and how long they last. Patterns emerge that help you plan.' },
       { title: 'Design Nap Zones', description: 'Schedule 2-3 brief naps (10-20 minutes) during high-risk times. Treat them as non-negotiable appointments. Even a short nap can prevent hours of uncontrollable sleepiness.' },
-      { title: 'Prepare Your Environment', description: 'Identify safe spaces at work/school where you can rest briefly. Communicate your needs to supervisors or teachers—most are accommodating once they understand.' },
+      { title: 'Prepare Your Environment', description: 'Identify safe spaces at work/school where you can rest briefly. Communicate your needs to supervisors or teachers--most are accommodating once they understand.' },
       { title: 'Build Your Support Network', description: 'Connect with narcolepsy support groups online or locally. Sharing strategies with others who truly understand reduces isolation and provides practical tips.' },
     ],
     toolLink: '/tools/sleep-architect',
@@ -1952,8 +2378,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Workplace accommodations for narcolepsy', source: 'Americans with Disabilities Act Resource Guide', year: '2023', link: 'https://www.ada.gov/narcolepsy-guidance', tier: 2 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine being in the middle of a conversation, laughing with friends, when suddenly your knees buckle and you collapse to the floor—fully conscious but unable to move. Or sitting in an important meeting, fighting an overwhelming wave of sleepiness so intense that no amount of willpower can keep your eyes open. This is the daily reality for people living with narcolepsy, a chronic neurological disorder that disrupts the brain's fundamental ability to control when we sleep and when we wake.</p>
-      <p className="mb-6">Narcolepsy affects approximately 1 in 2,000 people worldwide, making it a relatively rare condition, yet those who live with it face profound challenges that are often misunderstood <Citation id="1" index={1} source="NINDS" year="2023" tier={2} />. The hallmark symptom—excessive daytime sleepiness with irresistible "sleep attacks"—can strike without warning during any activity: driving, eating, working, even mid-sentence. People with narcolepsy don't just feel tired; they experience an overwhelming, uncontrollable urge to sleep that can't be resisted through caffeine or sheer determination.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine being in the middle of a conversation, laughing with friends, when suddenly your knees buckle and you collapse to the floor--fully conscious but unable to move. Or sitting in an important meeting, fighting an overwhelming wave of sleepiness so intense that no amount of willpower can keep your eyes open. This is the daily reality for people living with narcolepsy, a chronic neurological disorder that disrupts the brain's fundamental ability to control when we sleep and when we wake.</p>
+      <p className="mb-6">Narcolepsy affects approximately 1 in 2,000 people worldwide, making it a relatively rare condition, yet those who live with it face profound challenges that are often misunderstood <Citation id="1" index={1} source="NINDS" year="2023" tier={2} />. The hallmark symptom--excessive daytime sleepiness with irresistible "sleep attacks"--can strike without warning during any activity: driving, eating, working, even mid-sentence. People with narcolepsy don't just feel tired; they experience an overwhelming, uncontrollable urge to sleep that can't be resisted through caffeine or sheer determination.</p>
     </div>
 
     <StatCard
@@ -1966,9 +2392,9 @@ export const substanceSleepSomaticArticles: Article[] = [
     />
 
     <h2 id="types-and-causes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Two Types with Different Causes</h2>
-    <p className="mb-6"><strong>Type 1 narcolepsy</strong> (previously called narcolepsy with cataplexy) includes both excessive daytime sleepiness and cataplexy—sudden episodes of muscle weakness triggered by strong emotions like laughter, surprise, anger, or excitement <Citation id="3" index={3} source="JCSM" year="2021" tier={1} />. During a cataplexy attack, which can last from seconds to several minutes, the person remains fully conscious but may experience anything from slight facial drooping to complete body collapse. These episodes occur because narcolepsy Type 1 involves the loss of hypocretin (also called orexin) neurons in the hypothalamus, a brain region that produces chemicals crucial for maintaining wakefulness <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />.</p>
+    <p className="mb-6"><strong>Type 1 narcolepsy</strong> (previously called narcolepsy with cataplexy) includes both excessive daytime sleepiness and cataplexy--sudden episodes of muscle weakness triggered by strong emotions like laughter, surprise, anger, or excitement <Citation id="3" index={3} source="JCSM" year="2021" tier={1} />. During a cataplexy attack, which can last from seconds to several minutes, the person remains fully conscious but may experience anything from slight facial drooping to complete body collapse. These episodes occur because narcolepsy Type 1 involves the loss of hypocretin (also called orexin) neurons in the hypothalamus, a brain region that produces chemicals crucial for maintaining wakefulness <Citation id="2" index={2} source="Sleep Medicine Reviews" year="2020" tier={1} />.</p>
     <p className="mb-6"><strong>Type 2 narcolepsy</strong> involves excessive daytime sleepiness without cataplexy. The underlying cause is less clear, as most Type 2 patients have normal hypocretin levels. Some researchers believe Type 2 may represent a milder form or a different mechanism of sleep-wake dysregulation. Both types typically begin in adolescence or young adulthood, though symptoms may start in childhood or as late as the 40s.</p>
-    <p className="mb-6">The exact trigger for hypocretin neuron loss in Type 1 remains unknown, though current evidence points to an autoimmune process where the body's immune system mistakenly attacks these specific brain cells. Genetic factors play a role—certain genes increase susceptibility—but environmental triggers (possibly viral infections) may be necessary to activate the condition.</p>
+    <p className="mb-6">The exact trigger for hypocretin neuron loss in Type 1 remains unknown, though current evidence points to an autoimmune process where the body's immune system mistakenly attacks these specific brain cells. Genetic factors play a role--certain genes increase susceptibility--but environmental triggers (possibly viral infections) may be necessary to activate the condition.</p>
 
     <h2 id="beyond-sleepiness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Beyond Sleepiness: The Full Spectrum</h2>
     <p className="mb-6">While excessive daytime sleepiness and cataplexy are the most recognized symptoms, narcolepsy involves a constellation of sleep-related phenomena that can be deeply unsettling:</p>
@@ -1987,21 +2413,21 @@ export const substanceSleepSomaticArticles: Article[] = [
           id: 'hallucinations',
           title: 'Hypnagogic and Hypnopompic Hallucinations',
           content: <div>
-            <p className="mb-4">Vivid, often frightening sensory experiences at sleep onset (hypnagogic) or upon waking (hypnopompic). These are fragments of dream content intruding into wakefulness—visual images, sounds, physical sensations, or the sense of a presence in the room. When combined with sleep paralysis, the experience can feel like a waking nightmare.</p>
+            <p className="mb-4">Vivid, often frightening sensory experiences at sleep onset (hypnagogic) or upon waking (hypnopompic). These are fragments of dream content intruding into wakefulness--visual images, sounds, physical sensations, or the sense of a presence in the room. When combined with sleep paralysis, the experience can feel like a waking nightmare.</p>
           </div>
         },
         {
           id: 'disrupted-sleep',
           title: 'Disrupted Nighttime Sleep',
           content: <div>
-            <p className="mb-4">Paradoxically, people with narcolepsy often sleep poorly at night despite overwhelming daytime sleepiness. They experience frequent awakenings, difficulty maintaining sleep, and less restorative rest. The total amount of sleep in 24 hours is typically normal—it's the timing and quality that are disrupted.</p>
+            <p className="mb-4">Paradoxically, people with narcolepsy often sleep poorly at night despite overwhelming daytime sleepiness. They experience frequent awakenings, difficulty maintaining sleep, and less restorative rest. The total amount of sleep in 24 hours is typically normal--it's the timing and quality that are disrupted.</p>
           </div>
         },
         {
           id: 'automatic-behaviors',
           title: 'Automatic Behaviors',
           content: <div>
-            <p className="mb-4">During microsleeps (brief sleep episodes lasting seconds), a person may continue performing activities on "autopilot" with no conscious awareness or memory afterward. They might write nonsense, drive off course, or continue a conversation with garbled speech—all while technically asleep.</p>
+            <p className="mb-4">During microsleeps (brief sleep episodes lasting seconds), a person may continue performing activities on "autopilot" with no conscious awareness or memory afterward. They might write nonsense, drive off course, or continue a conversation with garbled speech--all while technically asleep.</p>
           </div>
         },
       ]}
@@ -2011,7 +2437,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">Beyond the physical symptoms, narcolepsy carries a significant psychological burden. People with narcolepsy are 2-4 times more likely to experience depression compared to the general population <Citation id="5" index={5} source="Brain Sciences" year="2022" tier={1} />. The reasons are multifaceted:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Social stigma:</strong> Falling asleep in class, meetings, or social situations often gets labeled as "lazy," "unmotivated," or "rude." Before diagnosis, many are accused of not trying hard enough or partying too much.</li>
-      <li><strong>Fear of cataplexy:</strong> For those with Type 1, the unpredictability of cataplexy can lead to avoiding situations that trigger strong emotions—including positive ones like laughter or excitement—which severely restricts social engagement.</li>
+      <li><strong>Fear of cataplexy:</strong> For those with Type 1, the unpredictability of cataplexy can lead to avoiding situations that trigger strong emotions--including positive ones like laughter or excitement--which severely restricts social engagement.</li>
       <li><strong>Relationship strain:</strong> Partners may struggle to understand the condition, leading to conflicts over social plans, household responsibilities, or intimacy.</li>
       <li><strong>Employment challenges:</strong> Holding down a traditional 9-to-5 job becomes difficult when you need scheduled nap breaks and may fall asleep unpredictably. Some experience discrimination despite legal protections.</li>
       <li><strong>Safety concerns:</strong> Driving becomes a source of constant anxiety. Many avoid driving altogether, which limits independence and employment options.</li>
@@ -2036,7 +2462,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Lifestyle Strategies</h3>
     <p className="mb-6">Behavioral interventions are essential complements to medication <Citation id="7" index={7} source="JSR" year="2020" tier={1} />:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li><strong>Scheduled naps:</strong> Taking 10-20 minute naps at consistent times (typically 2-3 times daily) can dramatically reduce sleep attack frequency. These aren't optional—they're as important as taking medication.</li>
+      <li><strong>Scheduled naps:</strong> Taking 10-20 minute naps at consistent times (typically 2-3 times daily) can dramatically reduce sleep attack frequency. These aren't optional--they're as important as taking medication.</li>
       <li><strong>Consistent sleep schedule:</strong> Going to bed and waking at the same time daily helps regulate the disrupted sleep-wake system.</li>
       <li><strong>Avoiding triggers:</strong> Limiting alcohol, heavy meals, and warm environments that can worsen sleepiness.</li>
       <li><strong>Exercise:</strong> Regular physical activity improves nighttime sleep quality and daytime alertness.</li>
@@ -2053,21 +2479,21 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li>Permission to record meetings/lectures (since microsleeps may cause missed information)</li>
       <li>Extended time for tests or assignments in educational settings</li>
     </ul>
-    <p className="mb-6">Educating employers, teachers, and colleagues about narcolepsy is crucial. When people understand that this is a neurological condition—not laziness or lack of motivation—they're typically more supportive and accommodating.</p>
+    <p className="mb-6">Educating employers, teachers, and colleagues about narcolepsy is crucial. When people understand that this is a neurological condition--not laziness or lack of motivation--they're typically more supportive and accommodating.</p>
 
     <ArticleCallout variant="key-takeaway" title="Living Well with Narcolepsy">
       <ul className="list-disc pl-5 space-y-2">
         <li>Narcolepsy is a lifelong condition, but most people achieve good symptom control with proper treatment</li>
         <li>Combining medication, scheduled naps, and lifestyle modifications provides the best outcomes</li>
         <li>Connecting with support groups reduces isolation and provides practical strategies from others who truly understand</li>
-        <li>Advocating for accommodations at work and school is not "special treatment"—it's accessing the tools you need to function at your best</li>
-        <li>With management, many people with narcolepsy lead full, productive lives—careers, relationships, and all</li>
+        <li>Advocating for accommodations at work and school is not "special treatment"--it's accessing the tools you need to function at your best</li>
+        <li>With management, many people with narcolepsy lead full, productive lives--careers, relationships, and all</li>
       </ul>
     </ArticleCallout>
   </> },
 
   { id: catId(67), slug: 'somatic-symptom-disorder', title: 'Somatic Symptom Disorder: When Physical Symptoms Have No Medical Cause', description: 'SSD involves distressing physical symptoms with excessive health-related thoughts and behaviors.', image: "/images/articles/cat13/cover-067.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 11, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Somatic', 'Somatization'],
-  summary: 'Somatic symptom disorder involves genuine physical symptoms—pain, fatigue, digestive issues—accompanied by excessive worry and health-focused behaviors that cause significant distress. The condition is not about "faking" illness but about the mind-body connection creating real suffering that medical tests don\'t fully explain. Treatment focuses on managing distress and improving function rather than eliminating symptoms.',
+  summary: 'Somatic symptom disorder involves genuine physical symptoms--pain, fatigue, digestive issues--accompanied by excessive worry and health-focused behaviors that cause significant distress. The condition is not about "faking" illness but about the mind-body connection creating real suffering that medical tests don\'t fully explain. Treatment focuses on managing distress and improving function rather than eliminating symptoms.',
   keyFacts: [
     { text: 'Somatic symptom disorder affects 5-7% of the general population and accounts for up to 30% of primary care visits', citationIndex: 3 },
     { text: 'The disorder is diagnosed based on excessive health anxiety and maladaptive behaviors, not the absence of medical explanation for symptoms', citationIndex: 1 },
@@ -2075,14 +2501,14 @@ export const substanceSleepSomaticArticles: Article[] = [
     { text: 'Cognitive-behavioral therapy reduces symptom severity by 30-50% and improves quality of life even when physical symptoms persist', citationIndex: 2 },
     { text: 'People with SSD average 7-9 doctor visits per year, compared to 2-3 for the general population', citationIndex: 5 },
   ],
-  sparkMoment: 'Your pain is real—but the path to relief may not be through another scan or specialist. Sometimes healing the relationship with your symptoms matters more than proving their source.',
+  sparkMoment: 'Your pain is real--but the path to relief may not be through another scan or specialist. Sometimes healing the relationship with your symptoms matters more than proving their source.',
   practicalExercise: {
     title: 'Reframe Your Relationship with Symptoms',
     steps: [
       { title: 'Track Symptom Patterns', description: 'For one week, note when symptoms worsen or improve. Include stress level, activity, emotions, and sleep quality. Patterns often reveal psychological triggers you can address.' },
       { title: 'Practice Response Prevention', description: 'When symptoms flare, delay body checking or reassurance-seeking for 15 minutes. Use this time for deep breathing or distraction. Notice that anxiety peaks but then decreases without checking.' },
       { title: 'Challenge Catastrophic Thoughts', description: 'Write down your worst-case interpretation of symptoms. Then list three alternative, less alarming explanations. Most sensations have benign causes.' },
-      { title: 'Engage Despite Symptoms', description: 'Choose one activity you\'ve been avoiding due to symptom fears. Start small—10 minutes of gentle movement or social connection. Gradual re-engagement builds confidence that symptoms won\'t destroy you.' },
+      { title: 'Engage Despite Symptoms', description: 'Choose one activity you\'ve been avoiding due to symptom fears. Start small--10 minutes of gentle movement or social connection. Gradual re-engagement builds confidence that symptoms won\'t destroy you.' },
     ],
     toolLink: '/tools/symptom-navigator',
     toolLabel: 'Try the Symptom Navigator',
@@ -2098,8 +2524,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Integrated care models for somatic symptom disorder', source: 'American Journal of Psychiatry', year: '2022', link: 'https://doi.org/10.1176/appi.ajp.2021.21050543', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">"I've had this pain for two years. I've seen eight doctors, had four MRIs, and countless blood tests. They all say nothing's wrong, but I know something is seriously wrong with my body. The pain is real—I'm not making it up." If this sounds familiar, you may be experiencing somatic symptom disorder, a condition where genuine physical suffering meets overwhelming health anxiety in a way that medical testing can't fully resolve.</p>
-      <p className="mb-6">Somatic symptom disorder (SSD) affects 5-7% of the general population and accounts for up to 30% of visits to primary care doctors <Citation id="3" index={3} source="JPR" year="2021" tier={1} />. The condition involves one or more distressing physical symptoms—chronic pain, fatigue, digestive problems, neurological complaints—accompanied by excessive thoughts, feelings, and behaviors focused on those symptoms <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. What makes SSD distinct from ordinary medical complaints is not the absence of a medical explanation, but the disproportionate level of distress, time, and energy devoted to health worries that persist despite reassurance and normal test results.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">"I've had this pain for two years. I've seen eight doctors, had four MRIs, and countless blood tests. They all say nothing's wrong, but I know something is seriously wrong with my body. The pain is real--I'm not making it up." If this sounds familiar, you may be experiencing somatic symptom disorder, a condition where genuine physical suffering meets overwhelming health anxiety in a way that medical testing can't fully resolve.</p>
+      <p className="mb-6">Somatic symptom disorder (SSD) affects 5-7% of the general population and accounts for up to 30% of visits to primary care doctors <Citation id="3" index={3} source="JPR" year="2021" tier={1} />. The condition involves one or more distressing physical symptoms--chronic pain, fatigue, digestive problems, neurological complaints--accompanied by excessive thoughts, feelings, and behaviors focused on those symptoms <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. What makes SSD distinct from ordinary medical complaints is not the absence of a medical explanation, but the disproportionate level of distress, time, and energy devoted to health worries that persist despite reassurance and normal test results.</p>
     </div>
 
     <ComparisonTable
@@ -2110,13 +2536,13 @@ export const substanceSleepSomaticArticles: Article[] = [
         { feature: 'Medical tests explain severity', values: [true, false] },
         { feature: 'Excessive health preoccupation', values: [false, true] },
         { feature: 'Repeated medical reassurance helps', values: [true, 'Provides only brief relief'] },
-        { feature: 'Symptoms dominate daily life', values: ['Variable', 'Yes—significant impairment'] },
+        { feature: 'Symptoms dominate daily life', values: ['Variable', 'Yes--significant impairment'] },
         { feature: 'Treatment focus', values: ['Treating underlying disease', 'Managing distress and improving function'] },
       ]}
     />
 
     <h2 id="not-all-in-your-head" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why "It's All in Your Head" Misses the Point</h2>
-    <p className="mb-6">Perhaps the most harmful misconception about SSD is the idea that symptoms are "imaginary" or "psychosomatic" in the sense of being "made up." This is categorically false. The symptoms are real. The pain is genuine. The fatigue is debilitating. What's happening is that psychological factors—chronic stress, anxiety, depression, trauma—are manifesting through physical pathways in ways that are measurable and scientifically understood <Citation id="4" index={4} source="Psychosomatic Medicine" year="2020" tier={1} />.</p>
+    <p className="mb-6">Perhaps the most harmful misconception about SSD is the idea that symptoms are "imaginary" or "psychosomatic" in the sense of being "made up." This is categorically false. The symptoms are real. The pain is genuine. The fatigue is debilitating. What's happening is that psychological factors--chronic stress, anxiety, depression, trauma--are manifesting through physical pathways in ways that are measurable and scientifically understood <Citation id="4" index={4} source="Psychosomatic Medicine" year="2020" tier={1} />.</p>
     <p className="mb-6">The mind and body are not separate entities. They communicate constantly through the nervous system, hormones, immune function, and pain pathways. When the brain is in a prolonged state of threat (anxiety, stress), it:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Amplifies pain signals:</strong> The brain's pain processing centers become hypersensitive, so normal sensations are experienced as painful</li>
@@ -2124,10 +2550,10 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Creates muscle tension:</strong> Chronic anxiety leads to persistent muscle contraction, causing headaches, back pain, and fatigue</li>
       <li><strong>Disrupts sleep:</strong> Which in turn worsens pain, immune function, and emotional regulation</li>
     </ul>
-    <p className="mb-6">So when a doctor says "the tests are normal," what they mean is that there's no structural disease like cancer, infection, or organ damage—not that you're faking your experience. The suffering is absolutely real; it's just arising from functional changes in how your nervous system processes signals, not from tissue damage that scans can detect.</p>
+    <p className="mb-6">So when a doctor says "the tests are normal," what they mean is that there's no structural disease like cancer, infection, or organ damage--not that you're faking your experience. The suffering is absolutely real; it's just arising from functional changes in how your nervous system processes signals, not from tissue damage that scans can detect.</p>
 
     <QuoteBlock
-      quote="The pain was real, but the answer wasn't in another scan or specialist. It was in learning that my body had become stuck in a danger response—and that I could teach it to feel safe again."
+      quote="The pain was real, but the answer wasn't in another scan or specialist. It was in learning that my body had become stuck in a danger response--and that I could teach it to feel safe again."
       attribution="Sarah M."
       role="Person living with SSD"
       variant="default"
@@ -2136,10 +2562,10 @@ export const substanceSleepSomaticArticles: Article[] = [
     <h2 id="the-vicious-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Vicious Cycle of Symptom Focus</h2>
     <p className="mb-6">SSD typically follows a self-reinforcing pattern that makes symptoms worse over time:</p>
     <ol className="list-decimal pl-6 mb-6 space-y-3">
-      <li><strong>Physical sensation occurs:</strong> Could be muscle tension, digestive discomfort, headache, fatigue—sensations everyone experiences occasionally.</li>
+      <li><strong>Physical sensation occurs:</strong> Could be muscle tension, digestive discomfort, headache, fatigue--sensations everyone experiences occasionally.</li>
       <li><strong>Catastrophic interpretation:</strong> Instead of dismissing it as normal, the person interprets it as evidence of serious illness. "This chest tightness must be a heart attack." "This headache could be a brain tumor."</li>
       <li><strong>Anxiety spikes:</strong> The catastrophic thought triggers intense fear and stress hormones (adrenaline, cortisol).</li>
-      <li><strong>Physical symptoms worsen:</strong> Anxiety itself causes physical symptoms—racing heart, muscle tension, digestive upset, dizziness—which are then misinterpreted as further evidence of disease.</li>
+      <li><strong>Physical symptoms worsen:</strong> Anxiety itself causes physical symptoms--racing heart, muscle tension, digestive upset, dizziness--which are then misinterpreted as further evidence of disease.</li>
       <li><strong>Hypervigilance to body sensations:</strong> The person begins scanning their body for problems, noticing every twinge, flutter, or sensation that they would normally ignore.</li>
       <li><strong>Repeated reassurance-seeking:</strong> Doctor visits, emergency room trips, online symptom searching, asking family for reassurance.</li>
       <li><strong>Temporary relief followed by return of doubt:</strong> "The doctor said I'm fine, but what if they missed something? I should get a second opinion..."</li>
@@ -2153,7 +2579,7 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Employment:</strong> Frequent medical appointments, unpredictable symptom flares, and fatigue make maintaining employment difficult. Some people are unable to work despite lacking a clear diagnosis that qualifies for disability benefits.</li>
       <li><strong>Identity:</strong> Over time, "sick person" becomes a core identity. Social engagements are declined due to symptoms. Hobbies and interests are abandoned. Life shrinks around illness.</li>
       <li><strong>Financial burden:</strong> Medical bills accumulate. Some people pursue costly alternative treatments or out-of-network specialists seeking answers.</li>
-      <li><strong>Iatrogenic harm:</strong> Repeated testing carries risks—radiation exposure from scans, complications from invasive procedures, side effects from medications prescribed "just in case."</li>
+      <li><strong>Iatrogenic harm:</strong> Repeated testing carries risks--radiation exposure from scans, complications from invasive procedures, side effects from medications prescribed "just in case."</li>
     </ul>
 
     <BeforeAfter
@@ -2170,7 +2596,7 @@ export const substanceSleepSomaticArticles: Article[] = [
       after={{
         title: 'Life After CBT for SSD',
         points: [
-          'Reduced symptom focus—symptoms less distressing',
+          'Reduced symptom focus--symptoms less distressing',
           'Scheduled follow-ups with one trusted provider',
           'Gradual re-engagement in valued activities',
           'Conversations include topics beyond health',
@@ -2189,13 +2615,13 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Response prevention:</strong> Gradually reducing checking behaviors, reassurance-seeking, and doctor shopping.</li>
       <li><strong>Behavioral activation:</strong> Re-engaging in valued activities despite symptoms, which breaks the cycle of avoidance and demonstrates that symptoms don't have to control your life.</li>
       <li><strong>Stress management:</strong> Learning relaxation techniques that calm the nervous system and reduce physiological arousal.</li>
-      <li><strong>Accepting uncertainty:</strong> Developing tolerance for the reality that you can never be 100% certain you're healthy—and that's okay.</li>
+      <li><strong>Accepting uncertainty:</strong> Developing tolerance for the reality that you can never be 100% certain you're healthy--and that's okay.</li>
     </ul>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medical Management</h3>
     <p className="mb-6">Establishing care with a single, trusted primary care provider who understands SSD is crucial. This physician can:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li>Conduct appropriate medical evaluations to rule out serious conditions—once</li>
+      <li>Conduct appropriate medical evaluations to rule out serious conditions--once</li>
       <li>Provide scheduled follow-ups (e.g., every 4-6 weeks) rather than only seeing you when symptoms flare, which reduces crisis-driven visits</li>
       <li>Validate that symptoms are real while explaining the mind-body connection</li>
       <li>Coordinate with your mental health provider</li>
@@ -2213,16 +2639,16 @@ export const substanceSleepSomaticArticles: Article[] = [
     </ul>
 
     <h2 id="path-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">A Different Kind of Healing</h2>
-    <p className="mb-6">Recovery from SSD doesn't always mean symptoms completely disappear. For many, the goal is not elimination of all physical discomfort—that's an unrealistic standard even for people without SSD—but rather changing the relationship with symptoms so they no longer dominate your life <Citation id="8" index={8} source="AJP" year="2022" tier={1} />.</p>
+    <p className="mb-6">Recovery from SSD doesn't always mean symptoms completely disappear. For many, the goal is not elimination of all physical discomfort--that's an unrealistic standard even for people without SSD--but rather changing the relationship with symptoms so they no longer dominate your life <Citation id="8" index={8} source="AJP" year="2022" tier={1} />.</p>
     <p className="mb-6">Healing looks like:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li>Experiencing symptoms but not catastrophizing about them</li>
-      <li>Having a life beyond illness—interests, relationships, goals</li>
+      <li>Having a life beyond illness--interests, relationships, goals</li>
       <li>Trusting your body more and fearing it less</li>
       <li>Spending less time seeking medical reassurance</li>
       <li>Improved function even if some symptoms persist</li>
     </ul>
-    <p className="mb-6">This requires a paradigm shift from "fixing what's broken" to "learning to live fully despite physical discomfort." It's not resignation—it's empowerment. You're no longer waiting for symptoms to vanish before you can live your life. You're living your life, symptoms and all.</p>
+    <p className="mb-6">This requires a paradigm shift from "fixing what's broken" to "learning to live fully despite physical discomfort." It's not resignation--it's empowerment. You're no longer waiting for symptoms to vanish before you can live your life. You're living your life, symptoms and all.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
@@ -2245,12 +2671,12 @@ export const substanceSleepSomaticArticles: Article[] = [
     { text: 'Reassurance-seeking provides only temporary relief and actually strengthens the anxiety pattern over time', citationIndex: 4 },
     { text: 'CBT for health anxiety achieves 70% improvement rates with long-term maintenance', citationIndex: 2 },
   ],
-  sparkMoment: 'Health anxiety thrives on the illusion that perfect certainty about your health is possible—but the moment you embrace "I\'ll never be 100% sure, and that\'s okay," the anxiety loses its power.',
+  sparkMoment: 'Health anxiety thrives on the illusion that perfect certainty about your health is possible--but the moment you embrace "I\'ll never be 100% sure, and that\'s okay," the anxiety loses its power.',
   practicalExercise: {
     title: 'Break the Reassurance Cycle',
     steps: [
       { title: 'Identify Checking Rituals', description: 'List all your reassurance behaviors: body checks, symptom Googling, asking "Does this look normal?", requesting medical tests. Awareness breaks automaticity.' },
-      { title: 'Delay Reassurance', description: 'When the urge strikes, set a 30-minute timer. Distract yourself—walk, call someone, do a puzzle. Notice anxiety peaks around 10 minutes but decreases naturally without checking.' },
+      { title: 'Delay Reassurance', description: 'When the urge strikes, set a 30-minute timer. Distract yourself--walk, call someone, do a puzzle. Notice anxiety peaks around 10 minutes but decreases naturally without checking.' },
       { title: 'Practice Uncertainty Statements', description: 'Replace "I need to be sure I\'m healthy" with "I can tolerate not being 100% certain." Repeat daily until it feels less frightening.' },
       { title: 'Schedule Worry Time', description: 'Allow 15 minutes daily for health worries. Outside that window, postpone concerns: "I\'ll think about this during worry time." This contains anxiety rather than letting it dominate.' },
     ],
@@ -2268,8 +2694,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Family accommodation in illness anxiety disorder', source: 'Journal of Psychosomatic Research', year: '2022', link: 'https://doi.org/10.1016/j.jpsychores.2022.110892', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">You wake with a slight chest twinge. Within seconds: "Is this a heart attack? Should I go to the ER?" You Google "chest pain left side" and spend the next hour convinced you have a life-threatening condition, despite being 28 with no risk factors. Your doctor says it's muscle strain. You feel relief—for about a day. Then a new symptom appears, and the cycle begins again.</p>
-      <p className="mb-6">This is illness anxiety disorder (IAD), previously called hypochondriasis—a condition where fear of having serious illness becomes so consuming it significantly impairs your life <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Affecting 4-6% of medical patients and 1-2% of the general population, IAD is more than just "worrying about health." It's a debilitating anxiety disorder where normal body sensations become evidence of catastrophic illness, and no amount of medical reassurance provides lasting peace <Citation id="3" index={3} source="CPR" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">You wake with a slight chest twinge. Within seconds: "Is this a heart attack? Should I go to the ER?" You Google "chest pain left side" and spend the next hour convinced you have a life-threatening condition, despite being 28 with no risk factors. Your doctor says it's muscle strain. You feel relief--for about a day. Then a new symptom appears, and the cycle begins again.</p>
+      <p className="mb-6">This is illness anxiety disorder (IAD), previously called hypochondriasis--a condition where fear of having serious illness becomes so consuming it significantly impairs your life <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Affecting 4-6% of medical patients and 1-2% of the general population, IAD is more than just "worrying about health." It's a debilitating anxiety disorder where normal body sensations become evidence of catastrophic illness, and no amount of medical reassurance provides lasting peace <Citation id="3" index={3} source="CPR" year="2021" tier={1} />.</p>
     </div>
 
     <ArticleChart
@@ -2288,10 +2714,10 @@ export const substanceSleepSomaticArticles: Article[] = [
     />
 
     <h2 id="iad-vs-ssd" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">IAD vs. Somatic Symptom Disorder</h2>
-    <p className="mb-6">While both involve health preoccupation, there's a crucial distinction. In somatic symptom disorder, distressing physical symptoms are present—real pain, fatigue, bodily complaints that tests don't fully explain. The disorder centers on the symptoms themselves. In illness anxiety disorder, there are minimal or no physical symptoms. What exists is overwhelming fear about the *possibility* of illness. A person with IAD might feel completely fine but spend hours convinced they have cancer, ALS, or another serious disease based on misinterpreting normal sensations. Noticing your heart beat after climbing stairs is normal. Someone with IAD interprets this as "my heart is failing." A dehydration headache becomes "I must have a brain tumor." The fear is out of proportion to actual risk.</p>
+    <p className="mb-6">While both involve health preoccupation, there's a crucial distinction. In somatic symptom disorder, distressing physical symptoms are present--real pain, fatigue, bodily complaints that tests don't fully explain. The disorder centers on the symptoms themselves. In illness anxiety disorder, there are minimal or no physical symptoms. What exists is overwhelming fear about the *possibility* of illness. A person with IAD might feel completely fine but spend hours convinced they have cancer, ALS, or another serious disease based on misinterpreting normal sensations. Noticing your heart beat after climbing stairs is normal. Someone with IAD interprets this as "my heart is failing." A dehydration headache becomes "I must have a brain tumor." The fear is out of proportion to actual risk.</p>
 
     <h2 id="two-subtypes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Two Faces of the Same Fear</h2>
-    <p className="mb-6">IAD manifests in two distinct patterns. <strong>Care-seeking subtype</strong> (more common): Frequent medical appointments, repeated testing, ER visits for reassurance. These individuals become well-known to healthcare providers, constantly seeking confirmation they're healthy. They may switch doctors if one refuses further testing or suggests psychological factors. Internet symptom searches become compulsive, often worsening anxiety as they encounter rare conditions. <strong>Care-avoidant subtype</strong>: Paradoxically avoids medical care due to extreme fear of diagnosis. May skip routine check-ups, refuse screenings, delay seeking care for legitimate symptoms—cannot tolerate the possibility of bad news. Fear of knowing becomes more powerful than fear of illness itself. Some people alternate between both patterns—frantically seeking reassurance for weeks, then avoiding doctors entirely when anxiety becomes unbearable.</p>
+    <p className="mb-6">IAD manifests in two distinct patterns. <strong>Care-seeking subtype</strong> (more common): Frequent medical appointments, repeated testing, ER visits for reassurance. These individuals become well-known to healthcare providers, constantly seeking confirmation they're healthy. They may switch doctors if one refuses further testing or suggests psychological factors. Internet symptom searches become compulsive, often worsening anxiety as they encounter rare conditions. <strong>Care-avoidant subtype</strong>: Paradoxically avoids medical care due to extreme fear of diagnosis. May skip routine check-ups, refuse screenings, delay seeking care for legitimate symptoms--cannot tolerate the possibility of bad news. Fear of knowing becomes more powerful than fear of illness itself. Some people alternate between both patterns--frantically seeking reassurance for weeks, then avoiding doctors entirely when anxiety becomes unbearable.</p>
 
     <div className="space-y-4 my-8">
       <MythVsFactBlock
@@ -2309,10 +2735,10 @@ export const substanceSleepSomaticArticles: Article[] = [
     </div>
 
     <h2 id="the-anxiety-spiral" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Understanding the Anxiety Spiral</h2>
-    <p className="mb-6">IAD follows a predictable, self-reinforcing pattern: (1) Notice normal body sensation—heartbeat, muscle twitch, skin mark, digestive gurgle. (2) Catastrophic interpretation: "This could be heart attack / ALS / cancer." The possibility, however remote, feels certain. (3) Anxiety surge triggers physical symptoms—racing heart, sweating, tense muscles—which are misinterpreted as further evidence. (4) Body scanning for problems inevitably finds more "concerning" sensations. (5) Reassurance-seeking: asking loved ones "Does this look normal?", Googling symptoms, scheduling appointments. (6) Temporary relief: "The doctor said I'm fine." (7) Doubt returns within hours: "But what if they missed something?" Each cycle strengthens the pattern. Reassurance becomes an addiction—providing brief relief but ultimately making anxiety worse <Citation id="4" index={4} source="JAD" year="2019" tier={1} />.</p>
+    <p className="mb-6">IAD follows a predictable, self-reinforcing pattern: (1) Notice normal body sensation--heartbeat, muscle twitch, skin mark, digestive gurgle. (2) Catastrophic interpretation: "This could be heart attack / ALS / cancer." The possibility, however remote, feels certain. (3) Anxiety surge triggers physical symptoms--racing heart, sweating, tense muscles--which are misinterpreted as further evidence. (4) Body scanning for problems inevitably finds more "concerning" sensations. (5) Reassurance-seeking: asking loved ones "Does this look normal?", Googling symptoms, scheduling appointments. (6) Temporary relief: "The doctor said I'm fine." (7) Doubt returns within hours: "But what if they missed something?" Each cycle strengthens the pattern. Reassurance becomes an addiction--providing brief relief but ultimately making anxiety worse <Citation id="4" index={4} source="JAD" year="2019" tier={1} />.</p>
 
     <h2 id="cyberchondria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Internet's Role: "Cyberchondria"</h2>
-    <p className="mb-6">Online health information seeking can escalate illness anxiety dramatically <Citation id="5" index={5} source="Cyberpsychology" year="2020" tier={1} />. Searching "headache left side" yields results for brain tumors, aneurysms, rare neurological conditions—not common causes like tension or dehydration. Search algorithms prioritize alarming content because it generates clicks. The problem isn't that serious illnesses exist online—it's that anxiety biases interpretation. Someone with IAD focuses exclusively on worst-case scenarios, ignores probability, finds every symptom match. Many report spending 3-5 hours daily on health-related internet searches, creating a compulsion that interferes with work, relationships, sleep.</p>
+    <p className="mb-6">Online health information seeking can escalate illness anxiety dramatically <Citation id="5" index={5} source="Cyberpsychology" year="2020" tier={1} />. Searching "headache left side" yields results for brain tumors, aneurysms, rare neurological conditions--not common causes like tension or dehydration. Search algorithms prioritize alarming content because it generates clicks. The problem isn't that serious illnesses exist online--it's that anxiety biases interpretation. Someone with IAD focuses exclusively on worst-case scenarios, ignores probability, finds every symptom match. Many report spending 3-5 hours daily on health-related internet searches, creating a compulsion that interferes with work, relationships, sleep.</p>
 
     <ArticleTabs
       tabs={[
@@ -2322,7 +2748,7 @@ export const substanceSleepSomaticArticles: Article[] = [
           content: (
             <div>
               <ul className="list-disc pl-6 space-y-2">
-                <li>Frequent doctor appointments—sometimes multiple specialists for the same concern</li>
+                <li>Frequent doctor appointments--sometimes multiple specialists for the same concern</li>
                 <li>Requesting specific tests (MRIs, blood work) despite negative previous results</li>
                 <li>Bringing symptom lists, printed internet research to appointments</li>
                 <li>Feeling dismissed when doctors suggest anxiety as a factor</li>
@@ -2373,9 +2799,9 @@ export const substanceSleepSomaticArticles: Article[] = [
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Core CBT Components</h3>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Cognitive restructuring:</strong> Identifying catastrophic misinterpretations and calculating actual probability. "I have a 0.001% chance of brain tumor at my age, not 90%."</li>
-      <li><strong>Exposure to health anxiety triggers:</strong> Gradually facing feared situations—reading cancer statistics, visiting hospitals, attending funerals—without safety behaviors.</li>
+      <li><strong>Exposure to health anxiety triggers:</strong> Gradually facing feared situations--reading cancer statistics, visiting hospitals, attending funerals--without safety behaviors.</li>
       <li><strong>Response prevention:</strong> Eliminating checking and reassurance-seeking. Limiting internet searches, resisting body examination urges, not asking loved ones for reassurance.</li>
-      <li><strong>Acceptance of uncertainty:</strong> Learning to tolerate "I'll never be 100% certain I'm healthy"—true for everyone. Perfect certainty is impossible and not required for a good life.</li>
+      <li><strong>Acceptance of uncertainty:</strong> Learning to tolerate "I'll never be 100% certain I'm healthy"--true for everyone. Perfect certainty is impossible and not required for a good life.</li>
       <li><strong>Attention training:</strong> Shifting focus away from body sensations toward external engagement and valued activities.</li>
     </ul>
 
@@ -2383,14 +2809,14 @@ export const substanceSleepSomaticArticles: Article[] = [
     <p className="mb-6">Exposure involves deliberately confronting health-related fears without performing checking rituals <Citation id="7" index={7} source="CBT" year="2020" tier={1} />: reading about feared diseases without Googling symptoms, noticing body sensations without checking, watching medical shows, visiting hospitals, scheduling and attending routine appointments (for care-avoidant subtype).</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication and Medical Management</h3>
-    <p className="mb-6">SSRIs and SNRIs can reduce health anxiety when severe or therapy-resistant <Citation id="6" index={6} source="ICP" year="2021" tier={1} />. They reduce intensity and intrusiveness of anxious thoughts, making CBT strategies easier to engage. Establishing care with a single primary care provider who understands IAD is crucial—they can perform appropriate evaluations without over-testing, provide scheduled check-ins (e.g., quarterly) to reduce crisis-driven visits, resist reassurance requests, and coordinate with mental health providers.</p>
+    <p className="mb-6">SSRIs and SNRIs can reduce health anxiety when severe or therapy-resistant <Citation id="6" index={6} source="ICP" year="2021" tier={1} />. They reduce intensity and intrusiveness of anxious thoughts, making CBT strategies easier to engage. Establishing care with a single primary care provider who understands IAD is crucial--they can perform appropriate evaluations without over-testing, provide scheduled check-ins (e.g., quarterly) to reduce crisis-driven visits, resist reassurance requests, and coordinate with mental health providers.</p>
 
     <h2 id="family-role" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Supporting Loved Ones Without Enabling</h2>
-    <p className="mb-6">Family members often inadvertently worsen IAD through "accommodation"—modifying behavior to reduce the person's anxiety <Citation id="8" index={8} source="JPR" year="2022" tier={1} />. Common accommodations: providing repeated reassurance, checking body parts/symptoms on their behalf, researching medical conditions for them, avoiding health-related topics, accompanying them to unnecessary appointments. While well-intentioned, accommodation strengthens the disorder. Helpful responses: "I care about you, but answering that question again won't help your anxiety long-term." "Let's talk about something other than health worries." "Your therapist advised resisting reassurance-seeking. I'm supporting that by not answering." Praise efforts to resist checking or reassurance-seeking.</p>
+    <p className="mb-6">Family members often inadvertently worsen IAD through "accommodation"--modifying behavior to reduce the person's anxiety <Citation id="8" index={8} source="JPR" year="2022" tier={1} />. Common accommodations: providing repeated reassurance, checking body parts/symptoms on their behalf, researching medical conditions for them, avoiding health-related topics, accompanying them to unnecessary appointments. While well-intentioned, accommodation strengthens the disorder. Helpful responses: "I care about you, but answering that question again won't help your anxiety long-term." "Let's talk about something other than health worries." "Your therapist advised resisting reassurance-seeking. I'm supporting that by not answering." Praise efforts to resist checking or reassurance-seeking.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
-        <li>Illness anxiety disorder is fear of having serious illness despite minimal/no symptoms—distinct from somatic symptom disorder</li>
+        <li>Illness anxiety disorder is fear of having serious illness despite minimal/no symptoms--distinct from somatic symptom disorder</li>
         <li>Reassurance-seeking provides only brief relief and strengthens the anxiety cycle over time</li>
         <li>Two subtypes: care-seeking (frequent medical visits) and care-avoidant (avoiding healthcare)</li>
         <li>CBT for health anxiety achieves 70% response rates and teaches uncertainty tolerance rather than seeking impossible certainty</li>
@@ -2401,7 +2827,7 @@ export const substanceSleepSomaticArticles: Article[] = [
   </> },
 
   { id: catId(69), slug: 'dual-diagnosis', title: 'Dual Diagnosis: When Mental Illness and Addiction Co-Occur', description: 'Approximately 50% with severe mental illness also have substance use disorder. Both need treatment.', image: "/images/articles/cat13/cover-069.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 11, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Dual Diagnosis', 'Comorbidity', 'Addiction'],
-  summary: 'Dual diagnosis (co-occurring disorders) means having both mental illness and substance use disorder simultaneously, affecting approximately 50% of people with severe mental illness or addiction. The relationship is bidirectional—mental illness increases substance use risk, while substance use worsens psychiatric symptoms. Integrated treatment addressing both conditions simultaneously produces significantly better outcomes than treating each separately.',
+  summary: 'Dual diagnosis (co-occurring disorders) means having both mental illness and substance use disorder simultaneously, affecting approximately 50% of people with severe mental illness or addiction. The relationship is bidirectional--mental illness increases substance use risk, while substance use worsens psychiatric symptoms. Integrated treatment addressing both conditions simultaneously produces significantly better outcomes than treating each separately.',
   keyFacts: [
     { text: 'Approximately 50% of people with severe mental illness also have substance use disorder, and vice versa', citationIndex: 1 },
     { text: 'Common pairings include depression + alcohol, bipolar disorder + stimulants, PTSD + opioids, and schizophrenia + cannabis', citationIndex: 3 },
@@ -2409,14 +2835,14 @@ export const substanceSleepSomaticArticles: Article[] = [
     { text: 'Integrated treatment addressing both conditions simultaneously reduces relapse rates by 40-50% compared to sequential treatment', citationIndex: 2 },
     { text: 'Medication-assisted treatment combined with mental health medications improves outcomes for both conditions', citationIndex: 5 },
   ],
-  sparkMoment: 'You can\'t treat the addiction without addressing the mental illness, and you can\'t treat the mental illness while ignoring the addiction—healing requires facing both demons at once.',
+  sparkMoment: 'You can\'t treat the addiction without addressing the mental illness, and you can\'t treat the mental illness while ignoring the addiction--healing requires facing both demons at once.',
   practicalExercise: {
     title: 'Identify Your Triggers and Coping Alternatives',
     steps: [
       { title: 'Map the Connection', description: 'For one week, track when you use substances and what emotions or situations preceded it. Notice patterns: "I drink when I\'m anxious," "I use when I\'m depressed."' },
       { title: 'Identify High-Risk Situations', description: 'List the top 3 situations where mental health symptoms trigger substance use. Be specific: "Friday evenings when I\'m alone and feeling hopeless."' },
       { title: 'Build Alternative Coping Skills', description: 'For each high-risk situation, identify 2-3 healthier coping strategies. Practice them when you\'re not in crisis so they\'re available when you need them.' },
-      { title: 'Create Your Support Network', description: 'Identify 3 people you can call when you\'re struggling with either condition. Include at least one person who understands dual diagnosis—sponsor, therapist, peer support member.' },
+      { title: 'Create Your Support Network', description: 'Identify 3 people you can call when you\'re struggling with either condition. Include at least one person who understands dual diagnosis--sponsor, therapist, peer support member.' },
     ],
     toolLink: '/tools/mood-journal',
     toolLabel: 'Track Mood and Substance Use Patterns',
@@ -2432,8 +2858,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Peer support services in dual diagnosis recovery', source: 'Psychiatric Services', year: '2022', link: 'https://doi.org/10.1176/appi.ps.202100547', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">"I drink because I'm depressed. But the drinking makes me more depressed. I can't stop drinking because I'm too depressed. I can't treat my depression because I keep drinking." This is the vicious cycle of dual diagnosis—when mental illness and addiction feed off each other in a downward spiral that traditional treatment approaches struggle to break.</p>
-      <p className="mb-6">Dual diagnosis, also called co-occurring disorders, refers to having both a mental health condition and a substance use disorder simultaneously. The numbers are staggering: approximately 50% of people with severe mental illness also have a substance use disorder, and 50% of those with substance use disorders have a co-occurring mental health condition <Citation id="1" index={1} source="SAMHSA" year="2023" tier={2} />. This isn't coincidence—it's a deeply intertwined relationship where each condition influences, worsens, and perpetuates the other.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">"I drink because I'm depressed. But the drinking makes me more depressed. I can't stop drinking because I'm too depressed. I can't treat my depression because I keep drinking." This is the vicious cycle of dual diagnosis--when mental illness and addiction feed off each other in a downward spiral that traditional treatment approaches struggle to break.</p>
+      <p className="mb-6">Dual diagnosis, also called co-occurring disorders, refers to having both a mental health condition and a substance use disorder simultaneously. The numbers are staggering: approximately 50% of people with severe mental illness also have a substance use disorder, and 50% of those with substance use disorders have a co-occurring mental health condition <Citation id="1" index={1} source="SAMHSA" year="2023" tier={2} />. This isn't coincidence--it's a deeply intertwined relationship where each condition influences, worsens, and perpetuates the other.</p>
     </div>
 
     <StatCard
@@ -2454,14 +2880,14 @@ export const substanceSleepSomaticArticles: Article[] = [
       <li><strong>Schizophrenia + Cannabis:</strong> Some use cannabis to cope with symptoms or medication side effects, but it can trigger psychotic episodes and worsen long-term outcomes.</li>
       <li><strong>Anxiety Disorders + Benzodiazepines/Alcohol:</strong> Both provide immediate anxiety relief but lead to tolerance, dependence, and rebound anxiety that's worse than the original condition.</li>
     </ul>
-    <p className="mb-6">The relationship is bidirectional. Mental illness increases substance use risk through self-medication—using drugs or alcohol to cope with unbearable symptoms. Conversely, substance use causes or worsens mental health symptoms through neurotoxicity, disrupted sleep, social consequences, and the biochemical effects of intoxication and withdrawal.</p>
+    <p className="mb-6">The relationship is bidirectional. Mental illness increases substance use risk through self-medication--using drugs or alcohol to cope with unbearable symptoms. Conversely, substance use causes or worsens mental health symptoms through neurotoxicity, disrupted sleep, social consequences, and the biochemical effects of intoxication and withdrawal.</p>
 
     <HighlightBox variant="emphasis">
-      <p className="mb-4"><strong>The Self-Medication Trap:</strong> Many people with dual diagnosis started using substances to manage psychiatric symptoms that felt unbearable—insomnia, panic attacks, flashbacks, voices, crushing depression. The substance worked initially, providing temporary relief. But over time, tolerance develops, requiring more of the substance for the same effect. Meanwhile, the substance itself damages the brain systems that regulate mood, stress, and impulse control, making the underlying mental illness worse. What began as self-medication becomes a second disease requiring its own treatment.</p>
+      <p className="mb-4"><strong>The Self-Medication Trap:</strong> Many people with dual diagnosis started using substances to manage psychiatric symptoms that felt unbearable--insomnia, panic attacks, flashbacks, voices, crushing depression. The substance worked initially, providing temporary relief. But over time, tolerance develops, requiring more of the substance for the same effect. Meanwhile, the substance itself damages the brain systems that regulate mood, stress, and impulse control, making the underlying mental illness worse. What began as self-medication becomes a second disease requiring its own treatment.</p>
     </HighlightBox>
 
     <h2 id="why-separate-treatment-fails" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Treating Them Separately Fails</h2>
-    <p className="mb-6">Historically, addiction treatment programs and mental health services operated in separate silos. Common approaches included: "Get clean first, then we'll address your mental health" (addiction-first model) or "Stabilize your psychiatric symptoms before we tackle the addiction" (mental health-first model). Both approaches fail for the same reason—each condition sabotages treatment of the other.</p>
+    <p className="mb-6">Historically, addiction treatment programs and mental health services operated in separate silos. Common approaches included: "Get clean first, then we'll address your mental health" (addiction-first model) or "Stabilize your psychiatric symptoms before we tackle the addiction" (mental health-first model). Both approaches fail for the same reason--each condition sabotages treatment of the other.</p>
     <p className="mb-6">When only addiction is treated: Untreated depression, anxiety, or PTSD drives relapse. The person gets clean, experiences the full force of psychiatric symptoms without chemical numbing, finds it unbearable, and uses again to cope. Relapse rates in untreated dual diagnosis exceed 80% within the first year.</p>
     <p className="mb-6">When only mental illness is treated: Active substance use undermines psychiatric treatment. Medications don't work properly. Therapy can't address core issues when the person is intoxicated or in withdrawal. Brain chemistry remains disrupted. The mental health condition doesn't improve, leading to continued substance use and treatment failure.</p>
     <p className="mb-6">Additional complications: Diagnostic confusion is common because substance intoxication and withdrawal can perfectly mimic psychiatric symptoms <Citation id="4" index={4} source="AJAD" year="2020" tier={1} />. Is the paranoia from meth use or schizophrenia? Is the depression withdrawal or major depressive disorder? Accurate diagnosis often requires weeks of abstinence, yet getting someone to abstain is impossible without treating the underlying mental illness driving the use. Stigma compounds: people face both "addict" and "mentally ill" labels, each carrying societal judgment. Homelessness, legal involvement, and medical complications are significantly more common in dual diagnosis populations.</p>
@@ -2486,7 +2912,7 @@ export const substanceSleepSomaticArticles: Article[] = [
         },
         {
           title: 'Wraparound Services',
-          description: <p>Case management, housing support, vocational rehabilitation, peer support, family therapy. Addressing social determinants of health—homelessness, unemployment, legal issues—that perpetuate both conditions.</p>
+          description: <p>Case management, housing support, vocational rehabilitation, peer support, family therapy. Addressing social determinants of health--homelessness, unemployment, legal issues--that perpetuate both conditions.</p>
         },
       ]}
     />
@@ -2494,22 +2920,22 @@ export const substanceSleepSomaticArticles: Article[] = [
     <h2 id="evidence-based-therapies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Therapies for Dual Diagnosis</h2>
     <ul className="list-disc pl-6 mb-6 space-y-3">
       <li><strong>Cognitive-Behavioral Therapy for Co-Occurring Disorders (COD-CBT):</strong> Adapted to address both conditions simultaneously. Targets cognitive distortions, develops coping skills for both psychiatric symptoms and cravings, prevents relapse in both domains <Citation id="6" index={6} source="JSAT" year="2020" tier={1} />.</li>
-      <li><strong>Dialectical Behavior Therapy (DBT):</strong> Originally for borderline personality disorder + suicidality, now adapted for any dual diagnosis. Teaches mindfulness, distress tolerance, emotion regulation, interpersonal effectiveness—skills that reduce both self-destructive behaviors and substance use.</li>
+      <li><strong>Dialectical Behavior Therapy (DBT):</strong> Originally for borderline personality disorder + suicidality, now adapted for any dual diagnosis. Teaches mindfulness, distress tolerance, emotion regulation, interpersonal effectiveness--skills that reduce both self-destructive behaviors and substance use.</li>
       <li><strong>Motivational Interviewing:</strong> Non-confrontational approach that explores ambivalence about change. Particularly effective in dual diagnosis where shame and resistance are high.</li>
       <li><strong>Assertive Community Treatment (ACT):</strong> Intensive, team-based outreach for severe dual diagnosis. Providers meet clients in the community, provide services wherever needed, stay involved long-term.</li>
     </ul>
 
     <h2 id="peer-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Critical Role of Peer Support</h2>
-    <p className="mb-6">Peer support from others in recovery from dual diagnosis is uniquely valuable <Citation id="8" index={8} source="PS" year="2022" tier={1} />. Traditional 12-step programs (AA, NA) may struggle to accommodate dual diagnosis—some groups discourage psychiatric medications, viewing them as "not being clean." Dual diagnosis-specific support groups (Double Trouble in Recovery, Dual Recovery Anonymous) provide community among people who understand both conditions. Peer support specialists with lived dual diagnosis experience can provide hope, reduce isolation, model recovery, and offer practical strategies that clinical providers may not know.</p>
+    <p className="mb-6">Peer support from others in recovery from dual diagnosis is uniquely valuable <Citation id="8" index={8} source="PS" year="2022" tier={1} />. Traditional 12-step programs (AA, NA) may struggle to accommodate dual diagnosis--some groups discourage psychiatric medications, viewing them as "not being clean." Dual diagnosis-specific support groups (Double Trouble in Recovery, Dual Recovery Anonymous) provide community among people who understand both conditions. Peer support specialists with lived dual diagnosis experience can provide hope, reduce isolation, model recovery, and offer practical strategies that clinical providers may not know.</p>
 
     <h2 id="long-term-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Long-Term Recovery Realities</h2>
-    <p className="mb-6">Recovery from dual diagnosis is possible but typically takes longer and requires more intensive support than treatment for either condition alone. Realistic expectations include: Treatment measured in months to years, not weeks. Progress isn't linear—setbacks in one condition often trigger setbacks in the other. Relapse in either condition is common but doesn't mean failure—it's information about what needs adjustment. Many people require ongoing medication management and therapy even after achieving stability. Recovery looks different for everyone—for some it's complete abstinence and symptom remission; for others it's harm reduction and improved functioning despite occasional symptoms.</p>
-    <p className="mb-6">The key insight: You are not treating two separate diseases. You are treating one person with two intertwined conditions that must be addressed as a unified whole. Integration is not just a treatment philosophy—it's the only approach that works.</p>
+    <p className="mb-6">Recovery from dual diagnosis is possible but typically takes longer and requires more intensive support than treatment for either condition alone. Realistic expectations include: Treatment measured in months to years, not weeks. Progress isn't linear--setbacks in one condition often trigger setbacks in the other. Relapse in either condition is common but doesn't mean failure--it's information about what needs adjustment. Many people require ongoing medication management and therapy even after achieving stability. Recovery looks different for everyone--for some it's complete abstinence and symptom remission; for others it's harm reduction and improved functioning despite occasional symptoms.</p>
+    <p className="mb-6">The key insight: You are not treating two separate diseases. You are treating one person with two intertwined conditions that must be addressed as a unified whole. Integration is not just a treatment philosophy--it's the only approach that works.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
         <li>Dual diagnosis affects approximately 50% of people with severe mental illness or substance use disorders</li>
-        <li>Mental illness and addiction have a bidirectional relationship—each worsens the other</li>
+        <li>Mental illness and addiction have a bidirectional relationship--each worsens the other</li>
         <li>Treating conditions separately leads to high relapse rates; integrated treatment is essential</li>
         <li>Medication-assisted treatment combined with psychiatric medications improves outcomes for both conditions</li>
         <li>Specialized therapies like COD-CBT and DBT address both conditions simultaneously</li>
@@ -2525,7 +2951,7 @@ export const substanceSleepSomaticArticles: Article[] = [
     { text: 'Syringe services programs reduce HIV and hepatitis C transmission by more than 50% among people who inject drugs', citationIndex: 2 },
     { text: 'Naloxone distribution programs reduce opioid overdose deaths by 40-60% in communities where they are implemented', citationIndex: 3 },
     { text: 'Supervised consumption sites have zero overdose deaths on-site across millions of visits worldwide', citationIndex: 4 },
-    { text: 'Harm reduction does not increase drug use rates—it simply makes existing use safer and connects people to services', citationIndex: 5 },
+    { text: 'Harm reduction does not increase drug use rates--it simply makes existing use safer and connects people to services', citationIndex: 5 },
     { text: 'Many people who initially access harm reduction services eventually transition to treatment and recovery', citationIndex: 6 },
   ],
   sparkMoment: 'Harm reduction asks a radical question: What if we valued keeping people alive more than making them stop using drugs? Because you can\'t recover if you\'re dead.',
@@ -2551,8 +2977,8 @@ export const substanceSleepSomaticArticles: Article[] = [
     { id: '8', text: 'Medication-assisted treatment as harm reduction', source: 'American Journal of Public Health', year: '2022', link: 'https://doi.org/10.2105/AJPH.2021.306575', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">"Just stop using." If addiction recovery were that simple, we wouldn't have an overdose crisis killing over 100,000 Americans annually. Harm reduction offers a different approach: What if, instead of demanding people stop using drugs before we help them, we focused on keeping them alive and reducing suffering—regardless of whether they're ready to quit?</p>
-      <p className="mb-6">Harm reduction is a public health philosophy that accepts drug use as a reality and aims to minimize associated harms rather than requiring abstinence as a prerequisite for support <Citation id="1" index={1} source="HRI" year="2022" tier={3} />. It meets people "where they're at" without judgment or coercion, prioritizing immediate safety: preventing overdose deaths, reducing HIV and hepatitis transmission, connecting marginalized individuals to healthcare. Strategies include needle exchange programs, naloxone distribution, supervised consumption sites, drug checking services, and safer use education. While controversial, harm reduction is evidence-based—decades of research demonstrate it saves lives without increasing drug use rates.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">"Just stop using." If addiction recovery were that simple, we wouldn't have an overdose crisis killing over 100,000 Americans annually. Harm reduction offers a different approach: What if, instead of demanding people stop using drugs before we help them, we focused on keeping them alive and reducing suffering--regardless of whether they're ready to quit?</p>
+      <p className="mb-6">Harm reduction is a public health philosophy that accepts drug use as a reality and aims to minimize associated harms rather than requiring abstinence as a prerequisite for support <Citation id="1" index={1} source="HRI" year="2022" tier={3} />. It meets people "where they're at" without judgment or coercion, prioritizing immediate safety: preventing overdose deaths, reducing HIV and hepatitis transmission, connecting marginalized individuals to healthcare. Strategies include needle exchange programs, naloxone distribution, supervised consumption sites, drug checking services, and safer use education. While controversial, harm reduction is evidence-based--decades of research demonstrate it saves lives without increasing drug use rates.</p>
     </div>
 
     <ComparisonTable
@@ -2560,17 +2986,17 @@ export const substanceSleepSomaticArticles: Article[] = [
       columns={['Feature', 'Harm Reduction', 'Abstinence-Only']}
       items={[
         { feature: 'Primary goal', values: ['Reduce harms and save lives', 'Eliminate all drug use'] },
-        { feature: 'Entry requirement', values: ['None—meet people where they are', 'Commitment to abstinence'] },
+        { feature: 'Entry requirement', values: ['None--meet people where they are', 'Commitment to abstinence'] },
         { feature: 'Judgment', values: ['Non-judgmental, compassionate', 'Often moralistic'] },
         { feature: 'Medication-assisted treatment', values: [true, 'Often rejected as "not clean"'] },
         { feature: 'Overdose prevention', values: ['Primary focus', 'Secondary to abstinence'] },
         { feature: 'Who it serves', values: ['Anyone who uses drugs', 'Only those ready to quit'] },
-        { feature: 'Evidence base', values: ['Strong—reduces deaths, disease', 'Limited—high dropout rates'] },
+        { feature: 'Evidence base', values: ['Strong--reduces deaths, disease', 'Limited--high dropout rates'] },
       ]}
     />
 
     <h2 id="core-principles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Core Principles of Harm Reduction</h2>
-    <p className="mb-6">Harm reduction is built on several foundational principles: (1) Accepts drug use as a complex, multi-faceted phenomenon rather than a moral failing. (2) Recognizes that abstinence may not be realistic or desirable for everyone at all times. (3) Establishes quality of life and wellbeing—not drug use itself—as the criteria for successful interventions. (4) Ensures that drug users themselves have a real voice in creating programs and policies designed to serve them. (5) Affirms drug users as the primary agents of reducing harms of their drug use, and seeks to empower them. (6) Recognizes that social inequalities affect vulnerability to and capacity for dealing with drug-related harms. (7) Does not attempt to minimize or ignore the real harms associated with drug use.</p>
+    <p className="mb-6">Harm reduction is built on several foundational principles: (1) Accepts drug use as a complex, multi-faceted phenomenon rather than a moral failing. (2) Recognizes that abstinence may not be realistic or desirable for everyone at all times. (3) Establishes quality of life and wellbeing--not drug use itself--as the criteria for successful interventions. (4) Ensures that drug users themselves have a real voice in creating programs and policies designed to serve them. (5) Affirms drug users as the primary agents of reducing harms of their drug use, and seeks to empower them. (6) Recognizes that social inequalities affect vulnerability to and capacity for dealing with drug-related harms. (7) Does not attempt to minimize or ignore the real harms associated with drug use.</p>
 
     <h2 id="key-interventions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Evidence-Based Harm Reduction Interventions</h2>
 
@@ -2588,7 +3014,7 @@ export const substanceSleepSomaticArticles: Article[] = [
           id: 'naloxone',
           title: 'Naloxone Distribution',
           content: <div>
-            <p className="mb-4">Naloxone (Narcan) is an opioid overdose antidote available to drug users, their family, friends, and community members. Administered as nasal spray or injection, it reverses opioid overdose within minutes. Community naloxone distribution programs reduce overdose deaths by 40-60% <Citation id="3" index={3} source="JAMA" year="2021" tier={1} />. Most overdose deaths occur when people use alone—having bystanders equipped with naloxone is the difference between life and death. Training takes minutes, and naloxone has no potential for abuse or harm if given to someone not overdosing. Yet stigma and restrictive pharmacy policies still limit access in many areas.</p>
+            <p className="mb-4">Naloxone (Narcan) is an opioid overdose antidote available to drug users, their family, friends, and community members. Administered as nasal spray or injection, it reverses opioid overdose within minutes. Community naloxone distribution programs reduce overdose deaths by 40-60% <Citation id="3" index={3} source="JAMA" year="2021" tier={1} />. Most overdose deaths occur when people use alone--having bystanders equipped with naloxone is the difference between life and death. Training takes minutes, and naloxone has no potential for abuse or harm if given to someone not overdosing. Yet stigma and restrictive pharmacy policies still limit access in many areas.</p>
           </div>
         },
         {
@@ -2602,14 +3028,14 @@ export const substanceSleepSomaticArticles: Article[] = [
           id: 'drug-checking',
           title: 'Drug Checking Services',
           content: <div>
-            <p className="mb-4">Testing substances for fentanyl, adulterants, and unexpected contaminants before use. Fentanyl test strips detect presence of fentanyl in opioids, stimulants, or other drugs—empowering users to make informed decisions about whether and how much to use <Citation id="7" index={7} source="DALD" year="2021" tier={1} />. More sophisticated drug checking (spectroscopy, mass spectrometry) can identify exact substances and concentrations. Knowledge is power: when people know what they're using, they can adjust dose, have naloxone ready, or choose not to use. Reduces deaths from unintentional fentanyl exposure.</p>
+            <p className="mb-4">Testing substances for fentanyl, adulterants, and unexpected contaminants before use. Fentanyl test strips detect presence of fentanyl in opioids, stimulants, or other drugs--empowering users to make informed decisions about whether and how much to use <Citation id="7" index={7} source="DALD" year="2021" tier={1} />. More sophisticated drug checking (spectroscopy, mass spectrometry) can identify exact substances and concentrations. Knowledge is power: when people know what they're using, they can adjust dose, have naloxone ready, or choose not to use. Reduces deaths from unintentional fentanyl exposure.</p>
           </div>
         },
         {
           id: 'mat',
           title: 'Medication-Assisted Treatment (MAT)',
           content: <div>
-            <p className="mb-4">Methadone, buprenorphine (Suboxone), and naltrexone (Vivitrol) for opioid use disorder. These medications are themselves harm reduction—they dramatically reduce illicit opioid use, overdose risk, HIV transmission, and criminal activity while improving quality of life <Citation id="8" index={8} source="AJPH" year="2022" tier={1} />. Yet many abstinence-only programs and 12-step groups reject MAT as "not being clean," perpetuating stigma. Harm reduction recognizes MAT as legitimate, evidence-based treatment, not a moral failure.</p>
+            <p className="mb-4">Methadone, buprenorphine (Suboxone), and naltrexone (Vivitrol) for opioid use disorder. These medications are themselves harm reduction--they dramatically reduce illicit opioid use, overdose risk, HIV transmission, and criminal activity while improving quality of life <Citation id="8" index={8} source="AJPH" year="2022" tier={1} />. Yet many abstinence-only programs and 12-step groups reject MAT as "not being clean," perpetuating stigma. Harm reduction recognizes MAT as legitimate, evidence-based treatment, not a moral failure.</p>
           </div>
         },
       ]}
@@ -2617,11 +3043,11 @@ export const substanceSleepSomaticArticles: Article[] = [
 
     <h2 id="common-misconceptions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Addressing Common Misconceptions</h2>
     <p className="mb-6"><strong>Myth: Harm reduction enables drug use and prevents people from seeking treatment.</strong> Reality: Research consistently shows harm reduction does NOT increase drug use rates <Citation id="5" index={5} source="Addiction" year="2021" tier={1} />. In fact, many people first access treatment and recovery services through harm reduction programs that built trust when they weren't yet ready to quit. Harm reduction creates a pathway to treatment rather than a barrier.</p>
-    <p className="mb-6"><strong>Myth: Providing clean needles or naloxone sends the message that drug use is acceptable.</strong> Reality: People don't start using drugs because clean needles are available—they use drugs because of complex factors like trauma, mental illness, economic despair, and addiction. Harm reduction simply recognizes this reality and focuses on preventing preventable deaths and disease. We provide seatbelts in cars not because we want people to crash, but because we accept that crashes happen and want to minimize harm when they do.</p>
-    <p className="mb-6"><strong>Myth: People have to "hit rock bottom" before they'll change.</strong> Reality: This dangerous myth has killed countless people. There is no evidence that allowing suffering motivates recovery—often it just leads to death. Harm reduction keeps people alive so they have the opportunity to seek recovery when they're ready, rather than letting them die waiting for some mythical moment of readiness that may never come.</p>
+    <p className="mb-6"><strong>Myth: Providing clean needles or naloxone sends the message that drug use is acceptable.</strong> Reality: People don't start using drugs because clean needles are available--they use drugs because of complex factors like trauma, mental illness, economic despair, and addiction. Harm reduction simply recognizes this reality and focuses on preventing preventable deaths and disease. We provide seatbelts in cars not because we want people to crash, but because we accept that crashes happen and want to minimize harm when they do.</p>
+    <p className="mb-6"><strong>Myth: People have to "hit rock bottom" before they'll change.</strong> Reality: This dangerous myth has killed countless people. There is no evidence that allowing suffering motivates recovery--often it just leads to death. Harm reduction keeps people alive so they have the opportunity to seek recovery when they're ready, rather than letting them die waiting for some mythical moment of readiness that may never come.</p>
 
     <QuoteBlock
-      quote="For years, I avoided treatment programs because they required immediate abstinence and I wasn't ready. The needle exchange didn't judge me—they just kept me safe. Eventually, they helped me get into treatment. If they hadn't met me where I was, I'd be dead."
+      quote="For years, I avoided treatment programs because they required immediate abstinence and I wasn't ready. The needle exchange didn't judge me--they just kept me safe. Eventually, they helped me get into treatment. If they hadn't met me where I was, I'd be dead."
       attribution="Marcus T."
       role="Person in recovery"
       variant="default"
@@ -2629,8 +3055,8 @@ export const substanceSleepSomaticArticles: Article[] = [
 
     <h2 id="why-it-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Harm Reduction Works</h2>
     <p className="mb-6">Harm reduction is effective because it meets fundamental human needs for dignity, respect, and autonomy. It builds trust with marginalized populations who have been shamed, criminalized, and turned away from abstinence-only services. It connects people to healthcare and social services they otherwise wouldn't access. It prevents deaths and disease, buying precious time for recovery when the person is ready.</p>
-    <p className="mb-6">Critically, harm reduction recognizes addiction as a complex condition shaped by trauma, mental illness, social inequality, and brain changes—not a moral failing correctable through willpower or punishment. Shaming and coercion don't work; compassion and support do. Harm reduction isn't "giving up" on people—it's meeting them with humanity while they navigate their own path.</p>
-    <p className="mb-6">The evidence is overwhelming: communities that implement comprehensive harm reduction see dramatic reductions in overdose deaths, HIV/hepatitis transmission, emergency room visits, and public disorder—without increases in drug use <Citation id="6" index={6} source="SATPP" year="2020" tier={1} />. Many people who initially access harm reduction services eventually transition to treatment and recovery. But even for those who don't, reducing suffering and preventing death are inherently worthy goals.</p>
+    <p className="mb-6">Critically, harm reduction recognizes addiction as a complex condition shaped by trauma, mental illness, social inequality, and brain changes--not a moral failing correctable through willpower or punishment. Shaming and coercion don't work; compassion and support do. Harm reduction isn't "giving up" on people--it's meeting them with humanity while they navigate their own path.</p>
+    <p className="mb-6">The evidence is overwhelming: communities that implement comprehensive harm reduction see dramatic reductions in overdose deaths, HIV/hepatitis transmission, emergency room visits, and public disorder--without increases in drug use <Citation id="6" index={6} source="SATPP" year="2020" tier={1} />. Many people who initially access harm reduction services eventually transition to treatment and recovery. But even for those who don't, reducing suffering and preventing death are inherently worthy goals.</p>
 
     <h2 id="beyond-substance-use" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Harm Reduction Beyond Substance Use</h2>
     <p className="mb-6">While most commonly associated with drug use, harm reduction principles apply to many behaviors: Eating disorders: focus on reducing medical complications and improving quality of life, not just eliminating all symptoms. Self-harm: teaching safer alternatives and addressing underlying emotional pain. Sex work: ensuring safety, health care access, and decriminalization. The common thread: meeting people where they are, prioritizing immediate safety and dignity, recognizing that change happens on individual timelines, and that reducing harm is valuable even if the behavior continues.</p>
@@ -2639,10 +3065,10 @@ export const substanceSleepSomaticArticles: Article[] = [
       <ul className="list-disc pl-5 space-y-2">
         <li>Harm reduction accepts drug use as a reality and focuses on reducing associated harms rather than requiring abstinence</li>
         <li>Evidence-based interventions include syringe services, naloxone distribution, supervised consumption sites, drug checking, and medication-assisted treatment</li>
-        <li>Harm reduction does NOT increase drug use—it makes existing use safer and connects people to services</li>
+        <li>Harm reduction does NOT increase drug use--it makes existing use safer and connects people to services</li>
         <li>Meeting people with dignity and without judgment builds trust and creates pathways to recovery</li>
         <li>Preventing overdose deaths and disease transmission are valid goals even if the person continues using drugs</li>
-        <li>Many people who access harm reduction services eventually transition to treatment—keeping them alive creates opportunity for recovery</li>
+        <li>Many people who access harm reduction services eventually transition to treatment--keeping them alive creates opportunity for recovery</li>
         <li>Harm reduction is supported by decades of research demonstrating effectiveness in reducing deaths, disease, and community harms</li>
       </ul>
     </ArticleCallout>
@@ -2660,7 +3086,7 @@ export const psychoticPersonalityArticles: Article[] = [
       { text: 'People with schizophrenia are more likely to be victims of violence than perpetrators, contrary to media portrayals', citationIndex: 7 },
       { text: '20-30% of people with schizophrenia achieve full recovery with comprehensive treatment', citationIndex: 4 },
     ],
-    sparkMoment: 'Schizophrenia is not a "split personality"—it\'s a disruption in how the brain processes reality, and recovery is not only possible but increasingly common with the right support.',
+    sparkMoment: 'Schizophrenia is not a "split personality"--it\'s a disruption in how the brain processes reality, and recovery is not only possible but increasingly common with the right support.',
     practicalExercise: {
       title: 'Mental Health Crisis Preparedness Plan',
       steps: [
@@ -2686,12 +3112,12 @@ export const psychoticPersonalityArticles: Article[] = [
     ],
     content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When most people hear "schizophrenia," they picture a violent, unpredictable person with multiple personalities—a portrait painted by horror films and sensationalized news coverage. The reality is far different and far more hopeful. Schizophrenia is a chronic brain disorder affecting approximately 24 million people worldwide—about 1 in 300 people—that disrupts how a person thinks, feels, and perceives reality <Citation id="1" index={1} source="WHO" year="2024" tier={2} />. While it can be severe and disabling, modern treatment has transformed outcomes: with proper care, many people with schizophrenia lead productive, meaningful lives.</p>
-      <p className="mb-6">The condition typically emerges in late adolescence or early adulthood, with onset between ages 16 and 30 being most common <Citation id="2" index={2} source="NIMH" year="2023" tier={2} />. Men tend to develop symptoms slightly earlier than women. The hallmark feature is psychosis—a disconnection from reality manifesting through hallucinations (perceiving things that aren't there) and delusions (firmly held false beliefs resistant to contradictory evidence). But schizophrenia is more than psychosis. It profoundly affects cognition, emotion, and motivation, creating challenges that persist even when hallucinations and delusions are controlled.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">When most people hear "schizophrenia," they picture a violent, unpredictable person with multiple personalities--a portrait painted by horror films and sensationalized news coverage. The reality is far different and far more hopeful. Schizophrenia is a chronic brain disorder affecting approximately 24 million people worldwide--about 1 in 300 people--that disrupts how a person thinks, feels, and perceives reality <Citation id="1" index={1} source="WHO" year="2024" tier={2} />. While it can be severe and disabling, modern treatment has transformed outcomes: with proper care, many people with schizophrenia lead productive, meaningful lives.</p>
+      <p className="mb-6">The condition typically emerges in late adolescence or early adulthood, with onset between ages 16 and 30 being most common <Citation id="2" index={2} source="NIMH" year="2023" tier={2} />. Men tend to develop symptoms slightly earlier than women. The hallmark feature is psychosis--a disconnection from reality manifesting through hallucinations (perceiving things that aren't there) and delusions (firmly held false beliefs resistant to contradictory evidence). But schizophrenia is more than psychosis. It profoundly affects cognition, emotion, and motivation, creating challenges that persist even when hallucinations and delusions are controlled.</p>
     </div>
 
     <h2 id="what-it-is" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Understanding What Schizophrenia Actually Is</h2>
-    <p className="mb-6">Schizophrenia is not "split personality" or multiple personalities—that's dissociative identity disorder, a completely different condition. The "split" in schizophrenia refers to a fragmentation between different mental functions: thinking becomes disorganized, emotions may not match situations, perception becomes unreliable, and motivation diminishes.</p>
+    <p className="mb-6">Schizophrenia is not "split personality" or multiple personalities--that's dissociative identity disorder, a completely different condition. The "split" in schizophrenia refers to a fragmentation between different mental functions: thinking becomes disorganized, emotions may not match situations, perception becomes unreliable, and motivation diminishes.</p>
     <p className="mb-6">Neurobiologically, schizophrenia involves dysregulation of dopamine pathways in the brain, particularly in regions responsible for processing rewards, emotions, and executive functions <Citation id="6" index={3} source="Nature Reviews Neuroscience" year="2020" tier={1} />. Brain imaging studies show subtle structural differences: slightly enlarged ventricles, reduced gray matter volume in certain areas, and altered connectivity between brain regions. These changes aren't visible on a casual brain scan but emerge through sophisticated research imaging.</p>
 
     <ArticleTabs
@@ -2701,7 +3127,7 @@ export const psychoticPersonalityArticles: Article[] = [
           content: <div className="p-4">
             <p className="mb-4 text-gray-700 dark:text-gray-300"><strong>Positive symptoms</strong> are experiences added to normal functioning:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700 dark:text-gray-300">
-              <li><strong>Hallucinations:</strong> Perceiving things that aren't there. Auditory hallucinations (hearing voices) are most common—voices may comment on behavior, argue with each other, or command actions. Visual, tactile, olfactory hallucinations also occur but less frequently.</li>
+              <li><strong>Hallucinations:</strong> Perceiving things that aren't there. Auditory hallucinations (hearing voices) are most common--voices may comment on behavior, argue with each other, or command actions. Visual, tactile, olfactory hallucinations also occur but less frequently.</li>
               <li><strong>Delusions:</strong> Fixed false beliefs maintained despite clear contradictory evidence. Common types include persecutory delusions (belief that others are plotting against you), grandiose delusions (inflated sense of importance or abilities), referential delusions (believing random events have special personal meaning), and control delusions (feeling thoughts or actions are controlled by external forces).</li>
               <li><strong>Disorganized speech:</strong> Jumping between topics (derailment), making up words (neologisms), or speaking in ways that are difficult to follow.</li>
               <li><strong>Disorganized or catatonic behavior:</strong> Unpredictable agitation, childlike silliness, bizarre postures, or complete immobility.</li>
@@ -2713,9 +3139,9 @@ export const psychoticPersonalityArticles: Article[] = [
           content: <div className="p-4">
             <p className="mb-4 text-gray-700 dark:text-gray-300"><strong>Negative symptoms</strong> represent reductions in normal functioning:</p>
             <ul className="list-disc pl-6 mb-4 space-y-2 text-gray-700 dark:text-gray-300">
-              <li><strong>Flat affect:</strong> Reduced emotional expression—monotone voice, unchanging facial expression, diminished eye contact.</li>
+              <li><strong>Flat affect:</strong> Reduced emotional expression--monotone voice, unchanging facial expression, diminished eye contact.</li>
               <li><strong>Avolition:</strong> Decreased motivation to initiate and persist in goal-directed activities. Daily tasks like showering, cooking, or going to work become overwhelmingly difficult.</li>
-              <li><strong>Alogia:</strong> Poverty of speech—brief, empty replies with little spontaneous conversation.</li>
+              <li><strong>Alogia:</strong> Poverty of speech--brief, empty replies with little spontaneous conversation.</li>
               <li><strong>Anhedonia:</strong> Reduced ability to experience pleasure from activities once enjoyed.</li>
               <li><strong>Social withdrawal:</strong> Decreased interest in social interaction and relationships.</li>
             </ul>
@@ -2739,7 +3165,7 @@ export const psychoticPersonalityArticles: Article[] = [
     />
 
     <h2 id="causes-risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Causes and Risk Factors</h2>
-    <p className="mb-6">Schizophrenia doesn't have a single cause—it emerges from complex interactions between genetics, brain chemistry, and environmental factors. No one factor alone causes schizophrenia, but several increase risk:</p>
+    <p className="mb-6">Schizophrenia doesn't have a single cause--it emerges from complex interactions between genetics, brain chemistry, and environmental factors. No one factor alone causes schizophrenia, but several increase risk:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Genetics:</strong> Having a first-degree relative with schizophrenia increases risk about 10-fold compared to the general population. If both parents have schizophrenia, risk approaches 40-50%. However, most people with schizophrenia have no family history, and most people with a family history never develop the condition.</li>
       <li><strong>Prenatal/birth complications:</strong> Maternal infection during pregnancy, malnutrition, birth complications, and low birth weight increase risk.</li>
@@ -2777,7 +3203,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li>Significant impairment in work, relationships, or self-care</li>
       <li>Ruling out other causes (substance use, medical conditions like brain tumors or autoimmune disorders, other mental health conditions)</li>
     </ul>
-    <p className="mb-6">Early diagnosis and treatment dramatically improve outcomes. First-episode psychosis programs—specialized services for people experiencing their first psychotic episode—have been shown to reduce symptom duration by up to 50% and significantly improve long-term functioning <Citation id="5" index={5} source="JAMA Psychiatry" year="2022" tier={1} />.</p>
+    <p className="mb-6">Early diagnosis and treatment dramatically improve outcomes. First-episode psychosis programs--specialized services for people experiencing their first psychotic episode--have been shown to reduce symptom duration by up to 50% and significantly improve long-term functioning <Citation id="5" index={5} source="JAMA Psychiatry" year="2022" tier={1} />.</p>
 
     <ArticleChart
       type="bar"
@@ -2793,7 +3219,7 @@ export const psychoticPersonalityArticles: Article[] = [
     />
 
     <h2 id="treatment-options" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Options That Work</h2>
-    <p className="mb-6">Effective treatment for schizophrenia combines medication with psychosocial interventions. The goal isn't just symptom reduction—it's helping people live the lives they want.</p>
+    <p className="mb-6">Effective treatment for schizophrenia combines medication with psychosocial interventions. The goal isn't just symptom reduction--it's helping people live the lives they want.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Antipsychotic Medication</h3>
     <p className="mb-6">Antipsychotic medications are the cornerstone of treatment, reducing positive symptoms (hallucinations and delusions) in 70-80% of people <Citation id="3" index={6} source="Lancet" year="2020" tier={1} />. Second-generation antipsychotics (also called atypical antipsychotics) are typically preferred because they have fewer movement-related side effects than older medications. Common options include risperidone, olanzapine, quetiapine, aripiprazole, and clozapine.</p>
@@ -2804,7 +3230,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Medication alone isn't enough. Evidence-based psychosocial interventions are crucial for recovery <Citation id="9" index={7} source="Cochrane Reviews" year="2020" tier={1} />:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Cognitive Behavioral Therapy for Psychosis (CBTp):</strong> Helps people develop coping strategies for persistent symptoms, challenge delusional beliefs, and reduce distress from hallucinations.</li>
-      <li><strong>Family Psychoeducation:</strong> Educates families about schizophrenia, improves communication, and reduces critical expressed emotion—a factor associated with higher relapse rates.</li>
+      <li><strong>Family Psychoeducation:</strong> Educates families about schizophrenia, improves communication, and reduces critical expressed emotion--a factor associated with higher relapse rates.</li>
       <li><strong>Supported Employment:</strong> Individual Placement and Support (IPS) helps people find and maintain competitive employment, significantly improving both employment outcomes and quality of life <Citation id="10" index={8} source="Psychiatric Services" year="2020" tier={1} />.</li>
       <li><strong>Social Skills Training:</strong> Teaches conversation skills, assertiveness, problem-solving, and emotion recognition.</li>
       <li><strong>Cognitive Remediation:</strong> Computer-based exercises targeting attention, memory, and executive function deficits.</li>
@@ -2812,7 +3238,7 @@ export const psychoticPersonalityArticles: Article[] = [
     </ul>
 
     <h2 id="living-with-schizophrenia" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Living Well with Schizophrenia</h2>
-    <p className="mb-6">Recovery from schizophrenia doesn't necessarily mean symptom-free—it means living a meaningful, satisfying life despite symptoms. Many people with schizophrenia work, maintain relationships, pursue education, and contribute to their communities.</p>
+    <p className="mb-6">Recovery from schizophrenia doesn't necessarily mean symptom-free--it means living a meaningful, satisfying life despite symptoms. Many people with schizophrenia work, maintain relationships, pursue education, and contribute to their communities.</p>
     <p className="mb-6">Key strategies that support recovery:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Medication adherence:</strong> Staying on medication even when feeling better prevents relapse. Roughly 80% of people who stop medication relapse within one year.</li>
@@ -2856,7 +3282,7 @@ export const psychoticPersonalityArticles: Article[] = [
       { text: 'Treatment response rates are generally better than schizophrenia, with 60-70% showing significant improvement', citationIndex: 5 },
       { text: 'Suicide risk is elevated, particularly during depressive episodes with psychotic features, requiring careful monitoring', citationIndex: 7 },
     ],
-    sparkMoment: 'Schizoaffective disorder sits at the intersection of psychosis and mood—not a "in-between" diagnosis, but a distinct condition requiring its own integrated treatment approach.',
+    sparkMoment: 'Schizoaffective disorder sits at the intersection of psychosis and mood--not a "in-between" diagnosis, but a distinct condition requiring its own integrated treatment approach.',
     practicalExercise: {
       title: 'Mood and Symptom Tracking Log',
       steps: [
@@ -2882,7 +3308,7 @@ export const psychoticPersonalityArticles: Article[] = [
     ],
     content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine experiencing hallucinations and delusions like schizophrenia, but also cycling through severe depression or mania like bipolar disorder—sometimes separately, sometimes simultaneously. This is the reality of schizoaffective disorder, a condition that sits at the intersection of psychotic and mood disorders. Affecting approximately 0.3% of the population, schizoaffective disorder is less common than either schizophrenia or bipolar disorder alone <Citation id="1" index={1} source="AJP" year="2021" tier={1} />, yet it's frequently misdiagnosed as one of those conditions due to overlapping symptoms.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine experiencing hallucinations and delusions like schizophrenia, but also cycling through severe depression or mania like bipolar disorder--sometimes separately, sometimes simultaneously. This is the reality of schizoaffective disorder, a condition that sits at the intersection of psychotic and mood disorders. Affecting approximately 0.3% of the population, schizoaffective disorder is less common than either schizophrenia or bipolar disorder alone <Citation id="1" index={1} source="AJP" year="2021" tier={1} />, yet it's frequently misdiagnosed as one of those conditions due to overlapping symptoms.</p>
       <p className="mb-6">The name itself reveals the condition's dual nature: "schizo" refers to the psychotic symptoms (hallucinations, delusions, disorganized thinking), while "affective" refers to mood disturbance (depression or mania). What makes schizoaffective disorder distinct is not just having both types of symptoms at some point, but experiencing them in a specific pattern: major mood episodes alongside psychotic symptoms, plus periods where psychosis continues even when mood is stable <Citation id="3" index={2} source="NIMH" year="2023" tier={2} />. This unique presentation requires a treatment approach that addresses both psychosis and mood, making it more complex than treating either condition alone.</p>
     </div>
 
@@ -2890,15 +3316,15 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Schizoaffective disorder comes in two distinct subtypes, determined by the type of mood episodes experienced <Citation id="2" index={3} source="DSM-5-TR" year="2022" tier={4} />:</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Bipolar Type</h3>
-    <p className="mb-6">Includes at least one manic episode (possibly also depressive episodes). During mania, people experience elevated mood, inflated self-esteem or grandiosity, decreased need for sleep, racing thoughts, increased goal-directed activity, and often risky behavior—all while also experiencing psychotic symptoms like paranoid delusions or command hallucinations. The combination can be particularly dangerous: imagine believing you have special powers (grandiose delusion) while in a manic state with no impulse control.</p>
+    <p className="mb-6">Includes at least one manic episode (possibly also depressive episodes). During mania, people experience elevated mood, inflated self-esteem or grandiosity, decreased need for sleep, racing thoughts, increased goal-directed activity, and often risky behavior--all while also experiencing psychotic symptoms like paranoid delusions or command hallucinations. The combination can be particularly dangerous: imagine believing you have special powers (grandiose delusion) while in a manic state with no impulse control.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Depressive Type</h3>
-    <p className="mb-6">Includes only major depressive episodes (no manic or hypomanic episodes). During depression, people experience persistent sadness, loss of interest in activities, significant weight changes, sleep disturbance, fatigue, feelings of worthlessness, difficulty concentrating, and sometimes suicidal thoughts—compounded by psychotic symptoms like auditory hallucinations telling them they're worthless or delusions that they've committed unforgivable acts. The combination of depression and psychosis carries particularly high suicide risk <Citation id="7" index={4} source="JAMA Psychiatry" year="2019" tier={1} />.</p>
+    <p className="mb-6">Includes only major depressive episodes (no manic or hypomanic episodes). During depression, people experience persistent sadness, loss of interest in activities, significant weight changes, sleep disturbance, fatigue, feelings of worthlessness, difficulty concentrating, and sometimes suicidal thoughts--compounded by psychotic symptoms like auditory hallucinations telling them they're worthless or delusions that they've committed unforgivable acts. The combination of depression and psychosis carries particularly high suicide risk <Citation id="7" index={4} source="JAMA Psychiatry" year="2019" tier={1} />.</p>
 
     <div className="space-y-4 my-8">
       <MythVsFactBlock
         myth="Schizoaffective disorder is just having both schizophrenia and bipolar disorder at the same time"
-        fact="It's a distinct diagnosis with its own diagnostic criteria—psychotic symptoms must occur for at least 2 weeks without mood symptoms, which distinguishes it from mood disorders with psychotic features"
+        fact="It's a distinct diagnosis with its own diagnostic criteria--psychotic symptoms must occur for at least 2 weeks without mood symptoms, which distinguishes it from mood disorders with psychotic features"
       />
       <MythVsFactBlock
         myth="Schizoaffective disorder is a 'wastebasket' diagnosis for cases doctors can't figure out"
@@ -2915,7 +3341,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">This temporal requirement distinguishes schizoaffective disorder from:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Bipolar disorder with psychotic features:</strong> In bipolar disorder, psychosis only occurs during mood episodes. In schizoaffective disorder, psychosis persists between mood episodes.</li>
-      <li><strong>Major depression with psychotic features:</strong> Similar to bipolar—psychosis only during depressive episodes, not between them.</li>
+      <li><strong>Major depression with psychotic features:</strong> Similar to bipolar--psychosis only during depressive episodes, not between them.</li>
       <li><strong>Schizophrenia:</strong> In schizophrenia, any mood episodes are brief relative to the overall illness duration. In schizoaffective disorder, mood episodes are prominent and meet full criteria for major depression or mania.</li>
     </ul>
     <p className="mb-6">Diagnosis typically requires tracking symptoms over months or years to observe patterns. Initial diagnosis is often provisional and may be revised as the longitudinal course becomes clearer.</p>
@@ -2946,10 +3372,10 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">The lived experience of schizoaffective disorder varies dramatically depending on which symptoms are active at any given time:</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">During Mood Episodes</h3>
-    <p className="mb-6">Symptoms intensify. Someone experiencing a manic episode might have racing, paranoid thoughts—believing the government is monitoring them while simultaneously feeling invincible and staying awake for days. During depressive episodes, hallucinations often become more negative and critical, reinforcing feelings of worthlessness. The combination of depression and psychosis carries particularly high suicide risk, as cognitive distortions from both conditions compound each other.</p>
+    <p className="mb-6">Symptoms intensify. Someone experiencing a manic episode might have racing, paranoid thoughts--believing the government is monitoring them while simultaneously feeling invincible and staying awake for days. During depressive episodes, hallucinations often become more negative and critical, reinforcing feelings of worthlessness. The combination of depression and psychosis carries particularly high suicide risk, as cognitive distortions from both conditions compound each other.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Between Mood Episodes</h3>
-    <p className="mb-6">Even when mood stabilizes, psychotic symptoms often persist. Someone might hear voices commenting on their actions, experience paranoid beliefs about coworkers, or struggle with disorganized thinking—despite having neutral mood. This persistent psychosis between mood episodes distinguishes schizoaffective disorder from bipolar disorder with psychotic features.</p>
+    <p className="mb-6">Even when mood stabilizes, psychotic symptoms often persist. Someone might hear voices commenting on their actions, experience paranoid beliefs about coworkers, or struggle with disorganized thinking--despite having neutral mood. This persistent psychosis between mood episodes distinguishes schizoaffective disorder from bipolar disorder with psychotic features.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cognitive and Functional Impact</h3>
     <p className="mb-6">Cognitive deficits in schizoaffective disorder resemble those in schizophrenia: impaired working memory, executive function problems, slowed processing speed, and attention difficulties <Citation id="6" index={6} source="Schizophrenia Research" year="2021" tier={1} />. These cognitive symptoms often cause more functional impairment than the more dramatic psychotic or mood symptoms. Work performance suffers due to difficulty concentrating, organizing tasks, and maintaining focus. Social relationships deteriorate from negative symptoms (reduced emotional expression, social withdrawal, diminished motivation) and the unpredictability of symptom fluctuations.</p>
@@ -2963,7 +3389,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication Strategies</h3>
     <p className="mb-6"><strong>For bipolar type:</strong> Antipsychotic medication (risperidone, olanzapine, aripiprazole, quetiapine) combined with mood stabilizer (lithium, valproate) to prevent manic episodes. Some second-generation antipsychotics like quetiapine have inherent mood-stabilizing properties, potentially serving dual purposes.</p>
     <p className="mb-6"><strong>For depressive type:</strong> Antipsychotic medication combined with antidepressant (usually SSRI or SNRI). However, antidepressants must be used cautiously as they can sometimes worsen psychotic symptoms or trigger mania in bipolar type. Close monitoring is essential.</p>
-    <p className="mb-6">Finding the right medication combination often requires trial and adjustment. What works varies significantly between individuals. Common challenges include weight gain, metabolic changes, sedation, and sexual side effects—all of which must be balanced against symptom control <Citation id="8" index={9} source="Lancet Psychiatry" year="2021" tier={1} />.</p>
+    <p className="mb-6">Finding the right medication combination often requires trial and adjustment. What works varies significantly between individuals. Common challenges include weight gain, metabolic changes, sedation, and sexual side effects--all of which must be balanced against symptom control <Citation id="8" index={9} source="Lancet Psychiatry" year="2021" tier={1} />.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Psychosocial Interventions</h3>
     <p className="mb-6">Medication alone isn't sufficient. Evidence-based psychosocial interventions include <Citation id="10" index={10} source="Psychiatric Services" year="2020" tier={1} />:</p>
@@ -2999,7 +3425,7 @@ export const psychoticPersonalityArticles: Article[] = [
   </> },
 
   { id: catId(73), slug: 'understanding-psychosis', title: 'What Psychosis Actually Is: Symptoms, Causes, and Treatment', description: 'Psychosis is loss of contact with reality. It occurs in multiple conditions and is treatable.', image: "/images/articles/cat13/cover-073.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Psychosis', 'Hallucinations', 'Delusions'],
-    summary: 'Psychosis is not a diagnosis but a symptom—a loss of contact with reality through hallucinations, delusions, and disorganized thinking. It occurs in numerous conditions ranging from schizophrenia to medical illnesses. Approximately 3% of people experience psychosis at some point in their lives. Early intervention dramatically improves outcomes, and with proper treatment, many people recover fully.',
+    summary: 'Psychosis is not a diagnosis but a symptom--a loss of contact with reality through hallucinations, delusions, and disorganized thinking. It occurs in numerous conditions ranging from schizophrenia to medical illnesses. Approximately 3% of people experience psychosis at some point in their lives. Early intervention dramatically improves outcomes, and with proper treatment, many people recover fully.',
     keyFacts: [
       { text: 'Approximately 3 in 100 people will experience psychosis at some point in their lives', citationIndex: 1 },
       { text: 'Psychosis has many possible causes, including schizophrenia, bipolar disorder, depression, substance use, and medical conditions', citationIndex: 2 },
@@ -3007,7 +3433,7 @@ export const psychoticPersonalityArticles: Article[] = [
       { text: 'Shorter duration of untreated psychosis strongly predicts better long-term outcomes', citationIndex: 4 },
       { text: 'Cannabis use, especially high-potency strains, significantly increases risk of psychosis in vulnerable individuals', citationIndex: 6 },
     ],
-    sparkMoment: 'Psychosis is not permanent insanity—it\'s a treatable symptom with identifiable causes, and early intervention can prevent long-term disability.',
+    sparkMoment: 'Psychosis is not permanent insanity--it\'s a treatable symptom with identifiable causes, and early intervention can prevent long-term disability.',
     practicalExercise: {
       title: 'Reality Testing and Grounding Techniques',
       steps: [
@@ -3031,8 +3457,8 @@ export const psychoticPersonalityArticles: Article[] = [
     ],
     content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Psychosis is one of the most misunderstood experiences in mental health. The word conjures images of violent, unpredictable behavior—far from reality for most people experiencing it. Psychosis simply means a loss of contact with reality. It's a symptom, not a diagnosis—like fever is a symptom that can result from many different illnesses <Citation id="2" index={1} source="NIMH" year="2023" tier={2} />. Approximately 3 in 100 people will experience psychosis at some point in their lives <Citation id="1" index={2} source="JAMA Psychiatry" year="2019" tier={1} />. Understanding what psychosis actually is, what causes it, and how it's treated can reduce fear and stigma—and encourage earlier help-seeking, which dramatically improves outcomes.</p>
-      <p className="mb-6">Psychosis manifests through three core features: hallucinations (perceiving things that aren't there), delusions (firmly held false beliefs resistant to contrary evidence), and sometimes disorganized thinking or speech. These experiences feel completely real to the person experiencing them. Hearing a voice isn't like imagining a sound—it's indistinguishable from an actual voice. A delusion isn't a hunch or suspicion—it's absolute certainty about something false. This is why psychosis is so distressing and why simple reassurance doesn't help.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Psychosis is one of the most misunderstood experiences in mental health. The word conjures images of violent, unpredictable behavior--far from reality for most people experiencing it. Psychosis simply means a loss of contact with reality. It's a symptom, not a diagnosis--like fever is a symptom that can result from many different illnesses <Citation id="2" index={1} source="NIMH" year="2023" tier={2} />. Approximately 3 in 100 people will experience psychosis at some point in their lives <Citation id="1" index={2} source="JAMA Psychiatry" year="2019" tier={1} />. Understanding what psychosis actually is, what causes it, and how it's treated can reduce fear and stigma--and encourage earlier help-seeking, which dramatically improves outcomes.</p>
+      <p className="mb-6">Psychosis manifests through three core features: hallucinations (perceiving things that aren't there), delusions (firmly held false beliefs resistant to contrary evidence), and sometimes disorganized thinking or speech. These experiences feel completely real to the person experiencing them. Hearing a voice isn't like imagining a sound--it's indistinguishable from an actual voice. A delusion isn't a hunch or suspicion--it's absolute certainty about something false. This is why psychosis is so distressing and why simple reassurance doesn't help.</p>
     </div>
 
     <StatCard
@@ -3067,7 +3493,7 @@ export const psychoticPersonalityArticles: Article[] = [
     </HighlightBox>
 
     <h2 id="what-causes-psychosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Many Causes of Psychosis</h2>
-    <p className="mb-6">Psychosis isn't a single condition—it's a symptom with numerous possible causes <Citation id="5" index={3} source="American Family Physician" year="2019" tier={4} />:</p>
+    <p className="mb-6">Psychosis isn't a single condition--it's a symptom with numerous possible causes <Citation id="5" index={3} source="American Family Physician" year="2019" tier={4} />:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Primary psychotic disorders:</strong> Schizophrenia, schizoaffective disorder, delusional disorder, brief psychotic disorder</li>
@@ -3081,7 +3507,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">This is why comprehensive medical evaluation is essential when someone experiences psychosis for the first time. Treating the underlying cause (stopping a medication, treating an infection, addressing a thyroid problem) may resolve psychosis completely.</p>
 
     <h2 id="early-warning-signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Recognizing Early Warning Signs</h2>
-    <p className="mb-6">Psychosis rarely appears suddenly. Most people experience a prodromal phase—weeks to months (sometimes years) of subtle changes before full psychosis emerges:</p>
+    <p className="mb-6">Psychosis rarely appears suddenly. Most people experience a prodromal phase--weeks to months (sometimes years) of subtle changes before full psychosis emerges:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li>Social withdrawal and isolation</li>
       <li>Deteriorating performance at work or school</li>
@@ -3092,7 +3518,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li>Loss of interest in activities once enjoyed</li>
       <li>Declining self-care and personal hygiene</li>
     </ul>
-    <p className="mb-6">Recognizing these signs and seeking evaluation early—before full psychosis develops—can sometimes prevent progression. Even after first-episode psychosis, early intervention dramatically improves outcomes <Citation id="3" index={5} source="Schizophrenia Bulletin" year="2020" tier={1} />.</p>
+    <p className="mb-6">Recognizing these signs and seeking evaluation early--before full psychosis develops--can sometimes prevent progression. Even after first-episode psychosis, early intervention dramatically improves outcomes <Citation id="3" index={5} source="Schizophrenia Bulletin" year="2020" tier={1} />.</p>
 
     <QuoteBlock
       quote="The most important predictor of recovery from first-episode psychosis is how quickly treatment begins. Every week of delay worsens long-term outcomes."
@@ -3125,14 +3551,14 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Research shows CSC programs significantly improve outcomes compared to standard care: better symptom control, higher employment rates, improved quality of life, and greater engagement in treatment <Citation id="8" index={8} source="Psychiatric Services" year="2020" tier={1} />.</p>
 
     <h2 id="prognosis-and-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Can People Recover from Psychosis?</h2>
-    <p className="mb-6">Yes—and outcomes have improved dramatically with modern treatment approaches. Recovery depends on the underlying cause:</p>
+    <p className="mb-6">Yes--and outcomes have improved dramatically with modern treatment approaches. Recovery depends on the underlying cause:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Substance-induced psychosis:</strong> Often resolves completely with abstinence</li>
       <li><strong>Medical causes:</strong> Resolves when underlying condition is treated</li>
       <li><strong>Brief psychotic disorder:</strong> By definition resolves within one month</li>
       <li><strong>First-episode psychosis (later diagnosed as schizophrenia):</strong> 20-30% achieve full recovery with early, comprehensive treatment</li>
     </ul>
-    <p className="mb-6">The single most important predictor of outcome is <strong>duration of untreated psychosis</strong> (DUP)—the time between onset of psychotic symptoms and start of treatment <Citation id="4" index={9} source="British Journal of Psychiatry" year="2020" tier={1} />. Shorter DUP correlates with better symptom control, improved functioning, and higher quality of life. This is why early recognition and rapid intervention are crucial.</p>
+    <p className="mb-6">The single most important predictor of outcome is <strong>duration of untreated psychosis</strong> (DUP)--the time between onset of psychotic symptoms and start of treatment <Citation id="4" index={9} source="British Journal of Psychiatry" year="2020" tier={1} />. Shorter DUP correlates with better symptom control, improved functioning, and higher quality of life. This is why early recognition and rapid intervention are crucial.</p>
 
     <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Help</h2>
     <p className="mb-6">Seek psychiatric evaluation immediately if you or someone you know experiences:</p>
@@ -3155,14 +3581,14 @@ export const psychoticPersonalityArticles: Article[] = [
       { text: 'NPD frequently co-occurs with other mental health conditions including depression, anxiety, substance use, and other personality disorders', citationIndex: 6 },
       { text: 'Long-term psychodynamic or schema-focused therapy shows promise, though treatment dropout rates are high', citationIndex: 7 },
     ],
-    sparkMoment: 'Narcissistic personality disorder is not simply selfishness or arrogance—it\'s a deeply ingrained defensive structure protecting against feelings of inadequacy that the person cannot consciously acknowledge.',
+    sparkMoment: 'Narcissistic personality disorder is not simply selfishness or arrogance--it\'s a deeply ingrained defensive structure protecting against feelings of inadequacy that the person cannot consciously acknowledge.',
     practicalExercise: {
       title: 'Building Genuine Self-Worth (For People with NPD)',
       steps: [
         { title: 'Notice Defensive Reactions', description: 'When criticized or ignored, pause and identify your automatic defensive response (dismissing the person, making excuses, counter-attacking). Simply noticing this pattern is the first step.' },
         { title: 'Practice Vulnerability in Small Doses', description: 'Share one genuine limitation or mistake with a trusted person. Notice the urge to minimize it or deflect, then resist that urge.' },
         { title: 'Recognize Others\' Perspectives', description: 'When someone expresses hurt or frustration with you, try to reflect their experience back to them before defending yourself: "It sounds like you felt dismissed when I..."' },
-        { title: 'Journal About Authentic Feelings', description: 'Write privately about moments when you feel inadequate, envious, or ashamed—the feelings underneath the grandiosity. You don\'t have to share these, just acknowledge them to yourself.' },
+        { title: 'Journal About Authentic Feelings', description: 'Write privately about moments when you feel inadequate, envious, or ashamed--the feelings underneath the grandiosity. You don\'t have to share these, just acknowledge them to yourself.' },
       ],
       toolLink: '/tools/mood-journal',
       toolLabel: 'Track Your Patterns',
@@ -3181,8 +3607,8 @@ export const psychoticPersonalityArticles: Article[] = [
     ],
     content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Everyone has encountered someone who seems self-absorbed, craves attention, and lacks empathy—but narcissistic personality disorder goes far beyond occasional selfishness. NPD is a pervasive, longstanding pattern of grandiosity, need for admiration, and lack of empathy that begins by early adulthood and causes significant impairment in relationships, work, and overall functioning <Citation id="2" index={1} source="DSM-5-TR" year="2022" tier={4} />. Affecting 0.5-5% of the general population and diagnosed more frequently in males, NPD is one of the most challenging personality disorders to treat—partly because people with NPD rarely recognize they have a problem <Citation id="1" index={2} source="AJP" year="2021" tier={1} />.</p>
-      <p className="mb-6">The term "narcissistic" comes from the Greek myth of Narcissus, who fell in love with his own reflection. But clinical narcissism is more complex than simple vanity or self-love. Beneath the grandiose exterior—the boasting, arrogance, and sense of superiority—often lies profound vulnerability: hypersensitivity to criticism, fear of inadequacy, and dependence on external validation for self-worth <Citation id="4" index={3} source="Journal of Personality Disorders" year="2019" tier={1} />. The grandiosity is a defensive structure protecting against feelings of worthlessness that the person cannot consciously acknowledge.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Everyone has encountered someone who seems self-absorbed, craves attention, and lacks empathy--but narcissistic personality disorder goes far beyond occasional selfishness. NPD is a pervasive, longstanding pattern of grandiosity, need for admiration, and lack of empathy that begins by early adulthood and causes significant impairment in relationships, work, and overall functioning <Citation id="2" index={1} source="DSM-5-TR" year="2022" tier={4} />. Affecting 0.5-5% of the general population and diagnosed more frequently in males, NPD is one of the most challenging personality disorders to treat--partly because people with NPD rarely recognize they have a problem <Citation id="1" index={2} source="AJP" year="2021" tier={1} />.</p>
+      <p className="mb-6">The term "narcissistic" comes from the Greek myth of Narcissus, who fell in love with his own reflection. But clinical narcissism is more complex than simple vanity or self-love. Beneath the grandiose exterior--the boasting, arrogance, and sense of superiority--often lies profound vulnerability: hypersensitivity to criticism, fear of inadequacy, and dependence on external validation for self-worth <Citation id="4" index={3} source="Journal of Personality Disorders" year="2019" tier={1} />. The grandiosity is a defensive structure protecting against feelings of worthlessness that the person cannot consciously acknowledge.</p>
     </div>
 
     <StatCard
@@ -3222,7 +3648,7 @@ export const psychoticPersonalityArticles: Article[] = [
         },
         {
           title: 'Interpersonally Exploitative',
-          content: <p>Takes advantage of others to achieve their own ends without guilt or remorse. Uses people as tools for ego gratification, career advancement, or material gain. Relationships are transactional—people are valued for what they can provide.</p>
+          content: <p>Takes advantage of others to achieve their own ends without guilt or remorse. Uses people as tools for ego gratification, career advancement, or material gain. Relationships are transactional--people are valued for what they can provide.</p>
         },
         {
           title: 'Lacks Empathy',
@@ -3243,10 +3669,10 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Research has identified two somewhat distinct presentations of narcissism, though they often coexist <Citation id="4" index={5} source="Journal of Personality Disorders" year="2019" tier={1} />:</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Grandiose Narcissism</h3>
-    <p className="mb-6">Overt, confident, attention-seeking. High on extraversion and assertiveness. Openly boastful, domineering in social situations, comfortable being the center of attention. More often seen in professional settings where confidence and self-promotion are rewarded. This is the stereotypical image of narcissism—the person who dominates conversations with stories of their accomplishments.</p>
+    <p className="mb-6">Overt, confident, attention-seeking. High on extraversion and assertiveness. Openly boastful, domineering in social situations, comfortable being the center of attention. More often seen in professional settings where confidence and self-promotion are rewarded. This is the stereotypical image of narcissism--the person who dominates conversations with stories of their accomplishments.</p>
 
     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Vulnerable (Covert) Narcissism</h3>
-    <p className="mb-6">Defensive, hypersensitive, insecure. High on neuroticism and shame-proneness. May appear shy or modest but harbors same grandiose fantasies and sense of entitlement. Reacts to perceived slights with withdrawal, passive-aggression, or victimhood. Presents as wounded or misunderstood rather than openly arrogant. The grandiosity is hidden but still drives behavior—they believe they deserve special treatment but feel perpetually wronged by a world that doesn't recognize their specialness.</p>
+    <p className="mb-6">Defensive, hypersensitive, insecure. High on neuroticism and shame-proneness. May appear shy or modest but harbors same grandiose fantasies and sense of entitlement. Reacts to perceived slights with withdrawal, passive-aggression, or victimhood. Presents as wounded or misunderstood rather than openly arrogant. The grandiosity is hidden but still drives behavior--they believe they deserve special treatment but feel perpetually wronged by a world that doesn't recognize their specialness.</p>
 
     <h2 id="relationship-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Devastating Impact on Relationships</h2>
     <p className="mb-6">NPD causes profound relationship dysfunction <Citation id="5" index={6} source="Journal of Abnormal Psychology" year="2020" tier={1} />. Partners, family members, and friends describe feeling:</p>
@@ -3266,12 +3692,12 @@ export const psychoticPersonalityArticles: Article[] = [
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Genetics:</strong> Heritable component for narcissistic traits, though no specific "narcissism gene" identified. Temperament factors like reward sensitivity and aggression may contribute.</li>
       <li><strong>Parenting extremes:</strong> Both excessive praise/indulgence ("you're special, the rules don't apply to you") and severe criticism/neglect can contribute. Overvaluation teaches children they're inherently superior; emotional neglect creates desperate need for external validation.</li>
-      <li><strong>Childhood trauma or adversity:</strong> Some develop narcissistic defenses to cope with early abuse, neglect, or invalidation—grandiosity protects against feelings of worthlessness.</li>
+      <li><strong>Childhood trauma or adversity:</strong> Some develop narcissistic defenses to cope with early abuse, neglect, or invalidation--grandiosity protects against feelings of worthlessness.</li>
       <li><strong>Cultural factors:</strong> Societies emphasizing individual achievement, competition, and status may provide fertile ground for narcissistic traits.</li>
       <li><strong>Social media amplification:</strong> Platforms rewarding self-promotion and providing quantified validation (likes, followers) may reinforce narcissistic patterns, though they don't cause NPD alone.</li>
     </ul>
 
-    <p className="mb-6">NPD typically becomes evident in late adolescence or early adulthood when identity consolidates and relationship patterns solidify. It's diagnosed when traits are rigid, pervasive across contexts, and cause significant functional impairment or distress (though people with NPD usually don't experience subjective distress about their narcissism—they blame others for relationship problems).</p>
+    <p className="mb-6">NPD typically becomes evident in late adolescence or early adulthood when identity consolidates and relationship patterns solidify. It's diagnosed when traits are rigid, pervasive across contexts, and cause significant functional impairment or distress (though people with NPD usually don't experience subjective distress about their narcissism--they blame others for relationship problems).</p>
 
     <h2 id="treatment-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Treatment Is So Difficult</h2>
     <p className="mb-6">NPD is notoriously challenging to treat for several reasons:</p>
@@ -3280,7 +3706,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>Limited insight:</strong> People with NPD rarely see their behavior as problematic. They blame others for relationship failures and resist acknowledging their role in conflicts.</li>
       <li><strong>Defensive structure:</strong> Grandiosity protects against underlying shame and inadequacy. Therapy threatens this defense, triggering intense resistance.</li>
       <li><strong>Difficulty forming therapeutic alliance:</strong> Empathy deficits and tendency to devalue others extend to therapists. May idealize therapist initially (if therapist feeds their ego) then devalue when therapy becomes challenging.</li>
-      <li><strong>External motivation:</strong> Most enter therapy due to depression, anxiety, substance use, or consequences like divorce or job loss—not because they want to change their personality <Citation id="3" index={8} source="Personality Disorders: Theory, Research, and Treatment" year="2020" tier={1} />.</li>
+      <li><strong>External motivation:</strong> Most enter therapy due to depression, anxiety, substance use, or consequences like divorce or job loss--not because they want to change their personality <Citation id="3" index={8} source="Personality Disorders: Theory, Research, and Treatment" year="2020" tier={1} />.</li>
       <li><strong>High dropout rates:</strong> When therapy doesn't provide immediate validation or challenges their self-view, many quit.</li>
     </ul>
 
@@ -3311,7 +3737,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <ul className="list-disc pl-5 space-y-2">
         <li>Individual therapy for yourself can help you set boundaries and make decisions about the relationship</li>
         <li>Couples therapy is rarely effective unless the person with NPD acknowledges problems and commits to change</li>
-        <li>You cannot "fix" or change them—change must come from internal motivation</li>
+        <li>You cannot "fix" or change them--change must come from internal motivation</li>
         <li>Setting firm boundaries is essential for your well-being, even if it triggers narcissistic rage</li>
         <li>Recognize that the problem is the personality disorder, not something you're doing wrong</li>
       </ul>
@@ -3339,7 +3765,7 @@ export const psychoticPersonalityArticles: Article[] = [
       { text: 'ASPD symptoms often decrease with age, particularly impulsivity and aggression, in a phenomenon called "burnout" typically occurring in the 40s-50s', citationIndex: 7 },
       { text: 'Childhood conduct disorder (antisocial behavior before age 15) is a diagnostic prerequisite for ASPD', citationIndex: 1 },
     ],
-    sparkMoment: 'ASPD is not simply "being a bad person"—it\'s a pervasive developmental disorder rooted in neurobiological differences, childhood experiences, and impaired moral reasoning that profoundly limits the capacity for empathy and prosocial behavior.',
+    sparkMoment: 'ASPD is not simply "being a bad person"--it\'s a pervasive developmental disorder rooted in neurobiological differences, childhood experiences, and impaired moral reasoning that profoundly limits the capacity for empathy and prosocial behavior.',
     practicalExercise: {
       title: 'Risk Management for Family Members',
       steps: [
@@ -3365,8 +3791,8 @@ export const psychoticPersonalityArticles: Article[] = [
     ],
     content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Antisocial personality disorder is perhaps the most stigmatized diagnosis in psychiatry. The term conjures images of violent criminals and manipulative predators—and while ASPD is indeed overrepresented in prison populations (40-70% of incarcerated individuals meet diagnostic criteria <Citation id="3" index={1} source="Criminal Behaviour and Mental Health" year="2020" tier={1} />), most people with ASPD never commit violent crimes. What unites them is a pervasive, lifelong pattern of disregard for and violation of others' rights, beginning in childhood or adolescence and persisting into adulthood <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />.</p>
-      <p className="mb-6">ASPD affects approximately 1-4% of the general population, with rates three times higher in males than females <Citation id="1" index={3} source="AJP" year="2021" tier={1} />. The core features—deceitfulness, impulsivity, aggression, irresponsibility, and lack of remorse—create profound disruption in relationships, employment, and social functioning. Unlike most mental health conditions where people suffer from their symptoms, those with ASPD typically cause suffering to others while experiencing little subjective distress about their behavior. This fundamental difference makes ASPD one of the most challenging conditions to treat in all of psychiatry.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Antisocial personality disorder is perhaps the most stigmatized diagnosis in psychiatry. The term conjures images of violent criminals and manipulative predators--and while ASPD is indeed overrepresented in prison populations (40-70% of incarcerated individuals meet diagnostic criteria <Citation id="3" index={1} source="Criminal Behaviour and Mental Health" year="2020" tier={1} />), most people with ASPD never commit violent crimes. What unites them is a pervasive, lifelong pattern of disregard for and violation of others' rights, beginning in childhood or adolescence and persisting into adulthood <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />.</p>
+      <p className="mb-6">ASPD affects approximately 1-4% of the general population, with rates three times higher in males than females <Citation id="1" index={3} source="AJP" year="2021" tier={1} />. The core features--deceitfulness, impulsivity, aggression, irresponsibility, and lack of remorse--create profound disruption in relationships, employment, and social functioning. Unlike most mental health conditions where people suffer from their symptoms, those with ASPD typically cause suffering to others while experiencing little subjective distress about their behavior. This fundamental difference makes ASPD one of the most challenging conditions to treat in all of psychiatry.</p>
     </div>
 
     <h2 id="diagnostic-criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Defines Antisocial Personality Disorder</h2>
@@ -3382,7 +3808,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>Lack of remorse:</strong> Indifferent to or rationalizing having hurt, mistreated, or stolen from others. May blame victims or minimize harm caused.</li>
     </ul>
 
-    <p className="mb-6">Critically, ASPD diagnosis requires evidence of <strong>conduct disorder before age 15</strong>—a pattern of violating rules and others' rights during childhood or adolescence (truancy, running away, cruelty to animals, fire-setting, theft, bullying). ASPD doesn't emerge suddenly in adulthood; it's a developmental trajectory beginning early in life.</p>
+    <p className="mb-6">Critically, ASPD diagnosis requires evidence of <strong>conduct disorder before age 15</strong>--a pattern of violating rules and others' rights during childhood or adolescence (truancy, running away, cruelty to animals, fire-setting, theft, bullying). ASPD doesn't emerge suddenly in adulthood; it's a developmental trajectory beginning early in life.</p>
 
     <ComparisonTable
       title="ASPD vs. Psychopathy: Understanding the Distinction"
@@ -3399,7 +3825,7 @@ export const psychoticPersonalityArticles: Article[] = [
       highlightColumn={0}
     />
 
-    <p className="mt-6 mb-6">Not all people with ASPD are psychopaths, and not all psychopaths meet full ASPD criteria <Citation id="4" index={5} source="Personality Disorders: Theory, Research, and Treatment" year="2020" tier={1} />. Psychopathy represents a more severe variant characterized by profound emotional deficits—superficial charm, grandiosity, pathological lying, absence of empathy or remorse, shallow emotions, and callous manipulation. Psychopaths tend to have worse outcomes, higher recidivism rates, and virtually no response to conventional treatment.</p>
+    <p className="mt-6 mb-6">Not all people with ASPD are psychopaths, and not all psychopaths meet full ASPD criteria <Citation id="4" index={5} source="Personality Disorders: Theory, Research, and Treatment" year="2020" tier={1} />. Psychopathy represents a more severe variant characterized by profound emotional deficits--superficial charm, grandiosity, pathological lying, absence of empathy or remorse, shallow emotions, and callous manipulation. Psychopaths tend to have worse outcomes, higher recidivism rates, and virtually no response to conventional treatment.</p>
 
     <h2 id="developmental-origins" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How ASPD Develops</h2>
     <p className="mb-6">ASPD emerges from complex interactions between biological vulnerabilities and environmental factors <Citation id="6" index={6} source="Biological Psychiatry" year="2020" tier={1} />:</p>
@@ -3501,7 +3927,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <h2 id="for-families" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Guidance for Families</h2>
     <p className="mb-6">If you have a family member with ASPD:</p>
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li>Accept that you cannot change them—change must come from within, and many never develop motivation for change</li>
+      <li>Accept that you cannot change them--change must come from within, and many never develop motivation for change</li>
       <li>Set and enforce firm boundaries. People with ASPD will test limits relentlessly; inconsistent enforcement teaches them to keep pushing</li>
       <li>Protect yourself financially. Never co-sign loans, provide access to accounts, or give money without accounting</li>
       <li>Recognize manipulation. If something feels off, trust your instincts. They are skilled at making you question your own judgment</li>
@@ -3532,7 +3958,7 @@ export const psychoticPersonalityArticles: Article[] = [
     { text: 'Up to 60% of individuals with DPD also experience depression, particularly when relationships are threatened', citationIndex: 6 },
     { text: 'Cognitive-behavioral therapy focusing on autonomy-building shows significant improvement in most cases', citationIndex: 2 },
   ],
-  sparkMoment: 'True strength isn\'t complete self-sufficiency—it\'s knowing you can stand on your own while choosing meaningful connection.',
+  sparkMoment: 'True strength isn\'t complete self-sufficiency--it\'s knowing you can stand on your own while choosing meaningful connection.',
   practicalExercise: {
     title: 'Daily Decision-Making Practice',
     steps: [
@@ -3555,7 +3981,7 @@ export const psychoticPersonalityArticles: Article[] = [
     { id: '8', text: 'Assertiveness Training Outcomes for Personality Disorders', source: 'Behavior Therapy', year: '2021', link: 'https://doi.org/10.1016/j.beth.2020.08.004', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine feeling terror at the thought of making a simple decision without someone else's approval. Imagine staying in a relationship where you're mistreated because the alternative—being alone—feels like certain death. For people living with dependent personality disorder, these aren't hypothetical scenarios. They're daily realities.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine feeling terror at the thought of making a simple decision without someone else's approval. Imagine staying in a relationship where you're mistreated because the alternative--being alone--feels like certain death. For people living with dependent personality disorder, these aren't hypothetical scenarios. They're daily realities.</p>
       <p className="mb-6">Dependent personality disorder (DPD) is characterized by a pervasive and excessive need to be taken care of, leading to submissive and clinging behavior and intense fears of separation <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. This pattern typically begins by early adulthood and appears across various contexts. People with DPD experience difficulty making everyday decisions without excessive amounts of reassurance from others, need others to assume responsibility for most major areas of their life, and have difficulty expressing disagreement with others due to fear of loss of support <Citation id="2" index={2} source="JPD" year="2020" tier={1} />.</p>
     </div>
 
@@ -3582,7 +4008,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>Unrealistically preoccupied</strong> with fears of being left to take care of themselves</li>
     </ul>
 
-    <p className="mb-6">The key distinction between normal dependence (which all humans experience to some degree) and DPD is the <strong>intensity</strong> and <strong>pervasiveness</strong> of the pattern. Someone with DPD isn't just anxious about major life decisions—they struggle to choose what to order at a restaurant without consulting their partner multiple times <Citation id="4" index={4} source="JCP" year="2020" tier={1} />.</p>
+    <p className="mb-6">The key distinction between normal dependence (which all humans experience to some degree) and DPD is the <strong>intensity</strong> and <strong>pervasiveness</strong> of the pattern. Someone with DPD isn't just anxious about major life decisions--they struggle to choose what to order at a restaurant without consulting their partner multiple times <Citation id="4" index={4} source="JCP" year="2020" tier={1} />.</p>
 
     <h2 id="developmental-roots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How DPD Develops</h2>
     <p className="mb-6">Like other personality disorders, DPD typically has roots in childhood and adolescent experiences, though no single cause explains all cases. Common developmental pathways include:</p>
@@ -3613,7 +4039,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">The impact of dependent personality disorder extends into virtually every domain of life:</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Relationships</h3>
-    <p className="mb-6">People with DPD often stay in unhealthy, unsatisfying, or even abusive relationships due to overwhelming fear of being alone. Their tolerance for mistreatment is extremely high because they believe they cannot function without the other person. They may rapidly enter new relationships when one ends, with insufficient consideration of compatibility—the primary criterion is "Will this person take care of me?" This urgency makes them vulnerable to exploitation by individuals who recognize and take advantage of their neediness <Citation id="4" index={4} source="JCP" year="2020" tier={1} />.</p>
+    <p className="mb-6">People with DPD often stay in unhealthy, unsatisfying, or even abusive relationships due to overwhelming fear of being alone. Their tolerance for mistreatment is extremely high because they believe they cannot function without the other person. They may rapidly enter new relationships when one ends, with insufficient consideration of compatibility--the primary criterion is "Will this person take care of me?" This urgency makes them vulnerable to exploitation by individuals who recognize and take advantage of their neediness <Citation id="4" index={4} source="JCP" year="2020" tier={1} />.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Career and Achievement</h3>
     <p className="mb-6">Despite often having normal or above-average intelligence, many people with DPD underachieve professionally. They avoid promotions that would require independent decision-making, defer to others' judgment even when they know more, and struggle to advocate for themselves. They may choose jobs specifically because they involve clear direction from a supervisor rather than autonomous work.</p>
@@ -3642,7 +4068,7 @@ export const psychoticPersonalityArticles: Article[] = [
     />
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Daily Decision-Making</h3>
-    <p className="mb-6">What appears to others as minor decisions cause genuine distress for people with DPD. "What should I wear?" becomes a source of anxiety. "What should we have for dinner?" requires multiple reassurance-seeking phone calls. This isn't attention-seeking behavior—it's genuine inability to trust their own judgment. The underlying belief is "My choices will probably be wrong, and something bad will happen if I decide incorrectly."</p>
+    <p className="mb-6">What appears to others as minor decisions cause genuine distress for people with DPD. "What should I wear?" becomes a source of anxiety. "What should we have for dinner?" requires multiple reassurance-seeking phone calls. This isn't attention-seeking behavior--it's genuine inability to trust their own judgment. The underlying belief is "My choices will probably be wrong, and something bad will happen if I decide incorrectly."</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Comorbid Conditions</h3>
     <p className="mb-6">DPD rarely occurs in isolation. Approximately 60% of individuals with DPD also meet criteria for major depressive disorder, particularly when relationships are threatened or end <Citation id="6" index={6} source="Psychiatry Research" year="2021" tier={1} />. Anxiety disorders are also common, especially separation anxiety and generalized anxiety disorder. Many people initially seek treatment for depression following relationship loss rather than recognizing the underlying personality pattern.</p>
@@ -3688,7 +4114,7 @@ export const psychoticPersonalityArticles: Article[] = [
     </ul>
 
     <h2 id="realistic-goals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Recovery Looks Like</h2>
-    <p className="mb-6">It's important to understand that the goal of treatment isn't to turn someone with DPD into a completely self-sufficient island who never seeks input or values relationships. Humans are fundamentally social creatures. We <em>should</em> care about others' opinions and seek advice on important decisions. The goal is <strong>healthy interdependence</strong>—the ability to:</p>
+    <p className="mb-6">It's important to understand that the goal of treatment isn't to turn someone with DPD into a completely self-sufficient island who never seeks input or values relationships. Humans are fundamentally social creatures. We <em>should</em> care about others' opinions and seek advice on important decisions. The goal is <strong>healthy interdependence</strong>--the ability to:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li>Function independently when necessary (make decisions, handle responsibilities, tolerate time alone)</li>
@@ -3699,7 +4125,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li>Tolerate disagreement without catastrophic fear of rejection</li>
     </ul>
 
-    <p className="mb-6">Recovery is gradual. It involves slowly building confidence through repeated experiences of independent decision-making that don't result in catastrophe. It requires developing distress tolerance skills to manage the anxiety that naturally arises when acting autonomously. And it involves grieving the fantasy that someone else can take complete responsibility for one's life—a fantasy that feels comforting but ultimately keeps people trapped in dependent patterns.</p>
+    <p className="mb-6">Recovery is gradual. It involves slowly building confidence through repeated experiences of independent decision-making that don't result in catastrophe. It requires developing distress tolerance skills to manage the anxiety that naturally arises when acting autonomously. And it involves grieving the fantasy that someone else can take complete responsibility for one's life--a fantasy that feels comforting but ultimately keeps people trapped in dependent patterns.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
@@ -3707,7 +4133,7 @@ export const psychoticPersonalityArticles: Article[] = [
         <li>The disorder typically has roots in childhood experiences that prevented development of autonomy</li>
         <li>People with DPD often stay in unhealthy relationships and underachieve professionally due to fear-driven patterns</li>
         <li>Cognitive-behavioral therapy focusing on autonomy-building and assertiveness shows strong outcomes</li>
-        <li>The goal is healthy interdependence, not complete self-sufficiency—humans need connection</li>
+        <li>The goal is healthy interdependence, not complete self-sufficiency--humans need connection</li>
         <li>Recovery involves gradually building confidence through practice with independent decision-making</li>
       </ul>
     </ArticleCallout>
@@ -3722,14 +4148,14 @@ export const psychoticPersonalityArticles: Article[] = [
     { text: 'SZPD differs from autism in lacking restricted interests, sensory sensitivities, and communication difficulties', citationIndex: 6 },
     { text: 'Many individuals with SZPD live contentedly, functioning well in solitary careers like research, programming, or night security', citationIndex: 2 },
   ],
-  sparkMoment: 'Not everyone needs a crowd—some minds find their richest experiences in solitude.',
+  sparkMoment: 'Not everyone needs a crowd--some minds find their richest experiences in solitude.',
   practicalExercise: {
     title: 'Identifying When Solitude Needs Balance',
     steps: [
       { title: 'Assess Functional Impact', description: 'Notice if your preference for solitude interferes with work, necessary tasks, or life goals you value.' },
       { title: 'Check for Distress', description: 'Evaluate whether others\' expectations cause you distress versus whether your solitary life feels genuinely satisfying.' },
       { title: 'Identify Necessary Social Contexts', description: 'List situations where some social interaction is unavoidable (work meetings, medical appointments, family obligations).' },
-      { title: 'Develop Minimal Social Scripts', description: 'Practice brief, functional social exchanges for necessary contexts—not to become social, but to reduce friction in required interactions.' },
+      { title: 'Develop Minimal Social Scripts', description: 'Practice brief, functional social exchanges for necessary contexts--not to become social, but to reduce friction in required interactions.' },
     ],
     toolLink: '/tools',
     toolLabel: 'Explore Well-being Tools',
@@ -3746,7 +4172,7 @@ export const psychoticPersonalityArticles: Article[] = [
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
       <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Most people assume that anyone who spends extensive time alone must be lonely, anxious, or socially impaired. For people with schizoid personality disorder, this assumption misses the mark entirely. They're not avoiding social connection because it's frightening or difficult. They simply don't want it.</p>
-      <p className="mb-6">Schizoid personality disorder (SZPD) is characterized by pervasive detachment from social relationships and a restricted range of emotional expression in interpersonal settings <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Individuals with SZPD neither desire nor enjoy close relationships (including family), almost always choose solitary activities, take pleasure in few activities, lack close friends or confidants, appear indifferent to praise or criticism, and show emotional coldness, detachment, or flattened affect. The prevalence is difficult to estimate because people with SZPD rarely seek treatment—from their perspective, there's no problem to solve <Citation id="3" index={3} source="PMH" year="2020" tier={1} />.</p>
+      <p className="mb-6">Schizoid personality disorder (SZPD) is characterized by pervasive detachment from social relationships and a restricted range of emotional expression in interpersonal settings <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Individuals with SZPD neither desire nor enjoy close relationships (including family), almost always choose solitary activities, take pleasure in few activities, lack close friends or confidants, appear indifferent to praise or criticism, and show emotional coldness, detachment, or flattened affect. The prevalence is difficult to estimate because people with SZPD rarely seek treatment--from their perspective, there's no problem to solve <Citation id="3" index={3} source="PMH" year="2020" tier={1} />.</p>
     </div>
 
     <ComparisonTable
@@ -3776,7 +4202,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>Shows emotional coldness</strong>, detachment, or flattened affectivity</li>
     </ul>
 
-    <p className="mb-6">The crucial distinction between SZPD and other conditions involving social isolation is the <strong>absence of desire</strong> for connection. Someone with avoidant personality disorder desperately wants relationships but fears rejection. Someone on the autism spectrum may want connection but lack the skills to navigate it smoothly. A person with SZPD simply <em>doesn't want</em> close relationships—and feels no distress about this <Citation id="4" index={4} source="JPD" year="2021" tier={1} />.</p>
+    <p className="mb-6">The crucial distinction between SZPD and other conditions involving social isolation is the <strong>absence of desire</strong> for connection. Someone with avoidant personality disorder desperately wants relationships but fears rejection. Someone on the autism spectrum may want connection but lack the skills to navigate it smoothly. A person with SZPD simply <em>doesn't want</em> close relationships--and feels no distress about this <Citation id="4" index={4} source="JPD" year="2021" tier={1} />.</p>
 
     <QuoteBlock
       quote="I don't feel lonely when I'm alone. I feel most comfortable that way. Other people seem to need constant social contact, and I've never understood why. My thoughts and my books are more interesting than small talk."
@@ -3786,7 +4212,7 @@ export const psychoticPersonalityArticles: Article[] = [
     />
 
     <h2 id="presentation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How SZPD Presents in Daily Life</h2>
-    <p className="mb-6">People with SZPD often come to clinical attention not because they seek help, but because someone else is concerned about them—a family member who worries they're "too isolated," an employer troubled by their lack of engagement with coworkers, or through mandatory evaluation in other contexts.</p>
+    <p className="mb-6">People with SZPD often come to clinical attention not because they seek help, but because someone else is concerned about them--a family member who worries they're "too isolated," an employer troubled by their lack of engagement with coworkers, or through mandatory evaluation in other contexts.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Work and Career</h3>
     <p className="mb-6">Many individuals with SZPD function well in careers that require minimal human contact and allow for solitary, focused work <Citation id="7" index={7} source="Work" year="2021" tier={1} />. Common career paths include:</p>
@@ -3800,10 +4226,10 @@ export const psychoticPersonalityArticles: Article[] = [
       <li>Forestry workers or park rangers</li>
     </ul>
 
-    <p className="mb-6">Problems arise when social demands exceed their tolerance—required team meetings, office social events, customer-facing roles. They may be labeled "difficult," "aloof," or "unsociable," though from their perspective, they're simply doing the work and skipping unnecessary social rituals.</p>
+    <p className="mb-6">Problems arise when social demands exceed their tolerance--required team meetings, office social events, customer-facing roles. They may be labeled "difficult," "aloof," or "unsociable," though from their perspective, they're simply doing the work and skipping unnecessary social rituals.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Inner Life and Fantasy</h3>
-    <p className="mb-6">One commonly misunderstood aspect of SZPD is that emotional flatness doesn't mean absence of inner life. Many people with SZPD have rich internal fantasy worlds—they simply don't share them with others <Citation id="5" index={5} source="Psychoanalytic Psychology" year="2019" tier={1} />. They may engage in elaborate daydreams, construct imaginary worlds, or maintain deep intellectual interests. This inner richness is private, not performed for an audience.</p>
+    <p className="mb-6">One commonly misunderstood aspect of SZPD is that emotional flatness doesn't mean absence of inner life. Many people with SZPD have rich internal fantasy worlds--they simply don't share them with others <Citation id="5" index={5} source="Psychoanalytic Psychology" year="2019" tier={1} />. They may engage in elaborate daydreams, construct imaginary worlds, or maintain deep intellectual interests. This inner richness is private, not performed for an audience.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Social Perception</h3>
     <p className="mb-6">Observers frequently describe people with SZPD using terms like:</p>
@@ -3850,7 +4276,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">While SZPD itself doesn't cause distress, individuals can develop depression or anxiety for other reasons. The solitary lifestyle may intensify depressive withdrawal or reduce access to social support that might buffer stress.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">External Pressure</h3>
-    <p className="mb-6">Family members may insist they "need to be more social" or express worry about their isolation. Employers may require participation in team-building activities. These external pressures—not internal distress—bring them to treatment.</p>
+    <p className="mb-6">Family members may insist they "need to be more social" or express worry about their isolation. Employers may require participation in team-building activities. These external pressures--not internal distress--bring them to treatment.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Functional Impairment</h3>
     <p className="mb-6">Occasionally, life circumstances require social interaction the person cannot avoid (caregiving responsibilities, unavoidable work requirements). Treatment focuses on developing minimal social skills for these necessary contexts rather than fundamentally changing their personality.</p>
@@ -3868,16 +4294,16 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Building rapport with someone who doesn't particularly want relationships requires patience. The therapist maintains low emotional demands, focuses on concrete problem-solving, and doesn't take the client's emotional flatness personally. For many clients with SZPD, the therapy relationship itself is the most intensive social contact they maintain.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Skills for Necessary Social Contexts</h3>
-    <p className="mb-6">When the client needs to function in social settings (work meetings, medical appointments), therapy can provide minimal social scripts—not to make them social, but to reduce friction in unavoidable interactions. Think of it as learning enough of a foreign language to navigate an airport, not becoming fluent.</p>
+    <p className="mb-6">When the client needs to function in social settings (work meetings, medical appointments), therapy can provide minimal social scripts--not to make them social, but to reduce friction in unavoidable interactions. Think of it as learning enough of a foreign language to navigate an airport, not becoming fluent.</p>
 
     <ArticleCallout variant="clinical-note" title="Group Therapy Contraindication">
       <p>Group therapy is typically NOT recommended for SZPD. The format's emphasis on interpersonal connection and sharing is directly counter to the schizoid preference for privacy and solitude. Forcing group participation often increases distress without therapeutic benefit. Individual therapy with minimal relational demands is more appropriate.</p>
     </ArticleCallout>
 
     <h2 id="contentment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Can You Live Well with SZPD?</h2>
-    <p className="mb-6">Absolutely. Many people with schizoid personality disorder live satisfying lives aligned with their temperament <Citation id="2" index={2} source="CPR" year="2020" tier={1} />. They find careers that suit solitary work, develop routines that minimize unwanted social demands, and pursue private interests that bring them fulfillment. The issue is not the schizoid pattern itself—it's when external expectations collide with their natural preferences or when comorbid conditions create distress.</p>
+    <p className="mb-6">Absolutely. Many people with schizoid personality disorder live satisfying lives aligned with their temperament <Citation id="2" index={2} source="CPR" year="2020" tier={1} />. They find careers that suit solitary work, develop routines that minimize unwanted social demands, and pursue private interests that bring them fulfillment. The issue is not the schizoid pattern itself--it's when external expectations collide with their natural preferences or when comorbid conditions create distress.</p>
 
-    <p className="mb-6">Society tends to pathologize solitude and equate social connectedness with mental health. For someone with SZPD, this creates pressure to conform to an extroverted ideal that genuinely doesn't suit them. The most helpful perspective recognizes SZPD as a variant of human temperament—one that functions well in contexts that respect solitary work and minimal social demands—rather than a disorder requiring normalization.</p>
+    <p className="mb-6">Society tends to pathologize solitude and equate social connectedness with mental health. For someone with SZPD, this creates pressure to conform to an extroverted ideal that genuinely doesn't suit them. The most helpful perspective recognizes SZPD as a variant of human temperament--one that functions well in contexts that respect solitary work and minimal social demands--rather than a disorder requiring normalization.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
@@ -3895,19 +4321,19 @@ export const psychoticPersonalityArticles: Article[] = [
   summary: 'Adjustment disorder occurs when emotional or behavioral symptoms develop in response to an identifiable life stressor, causing distress or impairment beyond what would be expected. While often resolving within six months once the stressor ends, this diagnosis indicates vulnerability to stress and benefits from brief supportive therapy and stress management skill-building.',
   keyFacts: [
     { text: 'Adjustment disorder symptoms must occur within 3 months of an identifiable stressor like job loss, divorce, moving, or illness', citationIndex: 1 },
-    { text: 'The diagnosis is one of exclusion—used only when symptoms don\'t meet criteria for more specific disorders like PTSD or major depression', citationIndex: 3 },
+    { text: 'The diagnosis is one of exclusion--used only when symptoms don\'t meet criteria for more specific disorders like PTSD or major depression', citationIndex: 3 },
     { text: 'Symptoms typically resolve within 6 months after the stressor ends, though they can persist if the stressor is ongoing', citationIndex: 4 },
     { text: 'Up to 70% of individuals with adjustment disorder respond well to brief supportive psychotherapy', citationIndex: 2 },
     { text: 'Having adjustment disorder indicates vulnerability to future stress reactions, suggesting benefit from resilience-building strategies', citationIndex: 5 },
   ],
-  sparkMoment: 'Sometimes what looks like weakness is actually your system recognizing it needs support—and that\'s information, not failure.',
+  sparkMoment: 'Sometimes what looks like weakness is actually your system recognizing it needs support--and that\'s information, not failure.',
   practicalExercise: {
     title: 'Stress Response Assessment',
     steps: [
       { title: 'Identify the Stressor', description: 'Name the specific life event or change that triggered your symptoms. Be as concrete as possible.' },
       { title: 'Notice Your Reactions', description: 'Track your emotional and behavioral responses. Are you withdrawn? Anxious? Acting out? How is daily functioning affected?' },
       { title: 'Assess Proportionality', description: 'Consider whether your reaction feels proportional to the stressor. Is the distress or impairment greater than you\'d expect?' },
-      { title: 'Develop One Coping Strategy', description: 'Choose one concrete coping skill to practice this week—exercise, talking to a friend, journaling, or seeking professional support.' },
+      { title: 'Develop One Coping Strategy', description: 'Choose one concrete coping skill to practice this week--exercise, talking to a friend, journaling, or seeking professional support.' },
     ],
     toolLink: '/tools/mood-journal',
     toolLabel: 'Track Your Stress Patterns',
@@ -3923,7 +4349,7 @@ export const psychoticPersonalityArticles: Article[] = [
     { id: '8', text: 'Workplace Adjustment Disorders and Occupational Stress', source: 'Occupational Medicine', year: '2021', link: 'https://doi.org/10.1093/occmed/kqaa234', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Life throws curveballs. Most people weather them with typical stress responses—temporary distress that resolves as they adapt. But sometimes a stressor overwhelms coping capacity, producing symptoms that significantly impair functioning. When this happens without meeting criteria for a more specific disorder, the diagnosis may be adjustment disorder.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Life throws curveballs. Most people weather them with typical stress responses--temporary distress that resolves as they adapt. But sometimes a stressor overwhelms coping capacity, producing symptoms that significantly impair functioning. When this happens without meeting criteria for a more specific disorder, the diagnosis may be adjustment disorder.</p>
       <p className="mb-6">Adjustment disorder involves the development of emotional or behavioral symptoms in response to an identifiable stressor, occurring within 3 months of the stressor's onset <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Common stressors include job loss, divorce, relocation, serious illness, financial crisis, relationship breakup, or major life transitions. The symptoms cause significant distress out of proportion to the stressor's severity or cause significant impairment in social, occupational, or other important areas of functioning.</p>
     </div>
 
@@ -3954,10 +4380,10 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>With mixed disturbance of emotions and conduct</strong>: Both emotional symptoms and conduct problems</li>
     </ul>
 
-    <p className="mb-6">The key distinction between adjustment disorder and normal stress reactions is the <strong>degree of distress</strong> and <strong>functional impairment</strong>. Feeling upset after losing a job is normal. Being unable to get out of bed, missing bill payments, withdrawing from all social contact, and experiencing panic attacks for months—that's adjustment disorder.</p>
+    <p className="mb-6">The key distinction between adjustment disorder and normal stress reactions is the <strong>degree of distress</strong> and <strong>functional impairment</strong>. Feeling upset after losing a job is normal. Being unable to get out of bed, missing bill payments, withdrawing from all social contact, and experiencing panic attacks for months--that's adjustment disorder.</p>
 
     <h2 id="diagnosis-of-exclusion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">A Diagnosis of Exclusion</h2>
-    <p className="mb-6">Adjustment disorder is only diagnosed when symptoms <strong>don't meet criteria</strong> for another mental disorder <Citation id="3" index={3} source="CPR" year="2021" tier={1} />. If the full criteria for major depressive disorder, generalized anxiety disorder, or PTSD are met, those diagnoses take precedence. This makes adjustment disorder somewhat controversial—critics argue it's a "catch-all" for distress that doesn't fit elsewhere. Proponents counter that it validates real suffering that deserves clinical attention even when it doesn't meet the threshold for more severe disorders.</p>
+    <p className="mb-6">Adjustment disorder is only diagnosed when symptoms <strong>don't meet criteria</strong> for another mental disorder <Citation id="3" index={3} source="CPR" year="2021" tier={1} />. If the full criteria for major depressive disorder, generalized anxiety disorder, or PTSD are met, those diagnoses take precedence. This makes adjustment disorder somewhat controversial--critics argue it's a "catch-all" for distress that doesn't fit elsewhere. Proponents counter that it validates real suffering that deserves clinical attention even when it doesn't meet the threshold for more severe disorders.</p>
 
     <div className="space-y-4 my-8">
       <MythVsFactBlock
@@ -3977,7 +4403,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <h2 id="distinguishing-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Distinguishing from Similar Conditions</h2>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Adjustment Disorder vs PTSD</h3>
-    <p className="mb-6">The stressor in PTSD must be <strong>traumatic</strong>—involving actual or threatened death, serious injury, or sexual violence. Adjustment disorder stressors don't need to be traumatic; they can be any life stressor. PTSD includes specific symptom clusters (intrusive memories, avoidance, negative mood/cognition changes, hyperarousal) that adjustment disorder lacks.</p>
+    <p className="mb-6">The stressor in PTSD must be <strong>traumatic</strong>--involving actual or threatened death, serious injury, or sexual violence. Adjustment disorder stressors don't need to be traumatic; they can be any life stressor. PTSD includes specific symptom clusters (intrusive memories, avoidance, negative mood/cognition changes, hyperarousal) that adjustment disorder lacks.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Adjustment Disorder vs Major Depressive Disorder</h3>
     <p className="mb-6">Major depression requires five or more specific symptoms present most of the day, nearly every day for at least two weeks, including either depressed mood or loss of interest. Adjustment disorder with depressed mood involves fewer symptoms and has a clear temporal relationship to a stressor. If full MDD criteria are met, that's the diagnosis even if a stressor triggered it.</p>
@@ -3993,7 +4419,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>Persistent (chronic)</strong>: Symptoms persist 6 months or longer</li>
     </ul>
 
-    <p className="mb-6">Persistent adjustment disorder occurs when the stressor is chronic (ongoing financial hardship, living with chronic illness, caring for a family member with dementia) or when the consequences of the stressor continue (long-term unemployment after job loss, ongoing custody battles after divorce). Once the stressor and its consequences truly end, symptoms should resolve within 6 months. If they don't, the diagnosis may need to be reevaluated—perhaps it was actually major depression or anxiety that the stressor triggered rather than adjustment disorder.</p>
+    <p className="mb-6">Persistent adjustment disorder occurs when the stressor is chronic (ongoing financial hardship, living with chronic illness, caring for a family member with dementia) or when the consequences of the stressor continue (long-term unemployment after job loss, ongoing custody battles after divorce). Once the stressor and its consequences truly end, symptoms should resolve within 6 months. If they don't, the diagnosis may need to be reevaluated--perhaps it was actually major depression or anxiety that the stressor triggered rather than adjustment disorder.</p>
 
     <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Approaches</h2>
     <p className="mb-6">The good news is that adjustment disorder responds well to brief, focused treatment <Citation id="2" index={2} source="JAD" year="2020" tier={1} />.</p>
@@ -4009,7 +4435,7 @@ export const psychoticPersonalityArticles: Article[] = [
       <li><strong>Perspective</strong> on the temporary nature of the situation</li>
     </ul>
 
-    <p className="mb-6">Treatment is typically short-term—weeks to a few months rather than years—because adjustment disorder is by nature time-limited.</p>
+    <p className="mb-6">Treatment is typically short-term--weeks to a few months rather than years--because adjustment disorder is by nature time-limited.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cognitive-Behavioral Techniques</h3>
     <p className="mb-6">CBT strategies address unhelpful thoughts and behaviors that may be intensifying distress <Citation id="7" index={7} source="Behavior Therapy" year="2021" tier={1} />:</p>
@@ -4023,11 +4449,11 @@ export const psychoticPersonalityArticles: Article[] = [
     </ul>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medication</h3>
-    <p className="mb-6">Most people with adjustment disorder <strong>don't need medication</strong>—symptoms improve as they adapt or the stressor resolves. However, short-term medication may be helpful for severe symptoms <Citation id="6" index={6} source="JCP" year="2020" tier={1} />:</p>
+    <p className="mb-6">Most people with adjustment disorder <strong>don't need medication</strong>--symptoms improve as they adapt or the stressor resolves. However, short-term medication may be helpful for severe symptoms <Citation id="6" index={6} source="JCP" year="2020" tier={1} />:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li><strong>Sleep aids</strong> for severe insomnia</li>
-      <li><strong>Anti-anxiety medications</strong> (benzodiazepines) for acute, overwhelming anxiety—used briefly, not long-term</li>
+      <li><strong>Anti-anxiety medications</strong> (benzodiazepines) for acute, overwhelming anxiety--used briefly, not long-term</li>
       <li><strong>Antidepressants</strong> if depressive symptoms are severe or if the condition appears to be evolving into major depression</li>
     </ul>
 
@@ -4038,7 +4464,7 @@ export const psychoticPersonalityArticles: Article[] = [
       items={[
         {
           title: 'When should I seek professional help?',
-          content: <p>Seek help if stress is significantly interfering with work, relationships, or daily functioning; if you're having thoughts of self-harm; if symptoms persist beyond a few weeks; or if you're engaging in harmful coping behaviors (excessive drinking, reckless behavior). Don't wait for it to become unbearable—early intervention works best.</p>
+          content: <p>Seek help if stress is significantly interfering with work, relationships, or daily functioning; if you're having thoughts of self-harm; if symptoms persist beyond a few weeks; or if you're engaging in harmful coping behaviors (excessive drinking, reckless behavior). Don't wait for it to become unbearable--early intervention works best.</p>
         },
         {
           title: 'How do I know if it\'s adjustment disorder vs something more serious?',
@@ -4046,20 +4472,20 @@ export const psychoticPersonalityArticles: Article[] = [
         },
         {
           title: 'Can adjustment disorder come back?',
-          content: <p>Yes. Having adjustment disorder indicates vulnerability to stress. Future stressors may again overwhelm coping. However, this is valuable information—it signals benefit from building resilience skills and having a mental health provider you can reach out to when new stressors arise.</p>
+          content: <p>Yes. Having adjustment disorder indicates vulnerability to stress. Future stressors may again overwhelm coping. However, this is valuable information--it signals benefit from building resilience skills and having a mental health provider you can reach out to when new stressors arise.</p>
         },
       ]}
     />
 
     <h2 id="building-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Building Resilience for Future Stressors</h2>
-    <p className="mb-6">Experiencing adjustment disorder reveals something important: your stress tolerance has a threshold, and you've hit it. This isn't a character flaw—it's information <Citation id="5" index={5} source="AJP" year="2021" tier={1} />. Moving forward, building stress resilience can reduce vulnerability to future adjustment difficulties:</p>
+    <p className="mb-6">Experiencing adjustment disorder reveals something important: your stress tolerance has a threshold, and you've hit it. This isn't a character flaw--it's information <Citation id="5" index={5} source="AJP" year="2021" tier={1} />. Moving forward, building stress resilience can reduce vulnerability to future adjustment difficulties:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li><strong>Maintain social connections</strong> even when you don't feel like it—social support buffers stress</li>
-      <li><strong>Develop multiple coping strategies</strong>—exercise, creative outlets, talk therapy, mindfulness—so you have options</li>
-      <li><strong>Address physical health</strong>—sleep, nutrition, exercise all affect stress resilience</li>
+      <li><strong>Maintain social connections</strong> even when you don't feel like it--social support buffers stress</li>
+      <li><strong>Develop multiple coping strategies</strong>--exercise, creative outlets, talk therapy, mindfulness--so you have options</li>
+      <li><strong>Address physical health</strong>--sleep, nutrition, exercise all affect stress resilience</li>
       <li><strong>Learn to ask for help</strong> early rather than waiting until you're overwhelmed</li>
-      <li><strong>Identify your stress signals</strong>—what are the first signs you're getting overwhelmed? Catch it early</li>
+      <li><strong>Identify your stress signals</strong>--what are the first signs you're getting overwhelmed? Catch it early</li>
       <li><strong>Consider ongoing therapy</strong> for stress management and resilience-building even after acute symptoms resolve</li>
     </ul>
 
@@ -4068,7 +4494,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
         <li>Adjustment disorder involves clinically significant distress or impairment in response to an identifiable stressor</li>
-        <li>It's a diagnosis of exclusion—used only when symptoms don't meet criteria for more specific disorders</li>
+        <li>It's a diagnosis of exclusion--used only when symptoms don't meet criteria for more specific disorders</li>
         <li>Five subtypes exist based on whether symptoms are primarily depressive, anxious, behavioral, or mixed</li>
         <li>Symptoms typically resolve within 6 months after the stressor ends, though can persist with ongoing stress</li>
         <li>Brief supportive psychotherapy is the primary treatment, with excellent response rates (70%+)</li>
@@ -4086,7 +4512,7 @@ export const psychoticPersonalityArticles: Article[] = [
     { text: 'Symptoms often improve with age through a natural "maturation" process, even without treatment', citationIndex: 4 },
     { text: 'The pattern must be stable over time, have onset in adolescence/early adulthood, and manifest across multiple contexts to qualify as a PD', citationIndex: 1 },
   ],
-  sparkMoment: 'Personality patterns aren\'t destiny—they\'re learned responses that can be gradually unlearned through sustained therapeutic work.',
+  sparkMoment: 'Personality patterns aren\'t destiny--they\'re learned responses that can be gradually unlearned through sustained therapeutic work.',
   practicalExercise: {
     title: 'Identifying Pattern Recognition',
     steps: [
@@ -4109,7 +4535,7 @@ export const psychoticPersonalityArticles: Article[] = [
     { id: '8', text: 'Therapeutic Alliance in Personality Disorder Treatment', source: 'Psychotherapy', year: '2020', link: 'https://doi.org/10.1037/pst0000289', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Everyone has a personality—a characteristic way of thinking, feeling, and behaving. But what happens when these patterns become so rigid and maladaptive that they cause significant distress or interfere with every area of life? That's when we enter personality disorder territory.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Everyone has a personality--a characteristic way of thinking, feeling, and behaving. But what happens when these patterns become so rigid and maladaptive that they cause significant distress or interfere with every area of life? That's when we enter personality disorder territory.</p>
       <p className="mb-6">Personality disorders (PDs) are enduring patterns of inner experience and behavior that deviate markedly from cultural expectations, are pervasive and inflexible, have onset in adolescence or early adulthood, are stable over time, and lead to distress or impairment <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. The pattern must manifest in two or more of these areas: cognition (ways of perceiving and interpreting self, others, and events), affectivity (range, intensity, lability, and appropriateness of emotional response), interpersonal functioning, and impulse control.</p>
     </div>
 
@@ -4161,17 +4587,17 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Everyone has personality traits. What distinguishes a personality <em>disorder</em> from personality <em>traits</em> or style?</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li><strong>Inflexibility</strong>: The pattern is rigid, not adaptive to different contexts. Someone with dependent PD can't toggle between dependence and independence based on what the situation requires—they're dependent across all contexts.</li>
+      <li><strong>Inflexibility</strong>: The pattern is rigid, not adaptive to different contexts. Someone with dependent PD can't toggle between dependence and independence based on what the situation requires--they're dependent across all contexts.</li>
       <li><strong>Pervasiveness</strong>: The pattern appears across multiple domains (work, relationships, leisure), not just in specific situations.</li>
       <li><strong>Stability</strong>: The pattern has been present since adolescence or early adulthood and remains relatively stable over time.</li>
       <li><strong>Distress or Impairment</strong>: The pattern causes significant distress to the person or significant impairment in social, occupational, or other important functioning.</li>
       <li><strong>Deviation from cultural norms</strong>: The pattern deviates markedly from what's expected in the person's culture.</li>
     </ul>
 
-    <p className="mb-6">A person who prefers solitude isn't automatically schizoid. But someone who has no desire for any relationships, shows flat affect across all contexts, has felt this way since adolescence, and struggles occupationally because they can't manage even minimal necessary social interaction—that meets criteria.</p>
+    <p className="mb-6">A person who prefers solitude isn't automatically schizoid. But someone who has no desire for any relationships, shows flat affect across all contexts, has felt this way since adolescence, and struggles occupationally because they can't manage even minimal necessary social interaction--that meets criteria.</p>
 
     <h2 id="prevalence-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Common Are Personality Disorders?</h2>
-    <p className="mb-6">Approximately 10-15% of the general population has at least one personality disorder <Citation id="2" index={2} source="Lancet" year="2020" tier={1} />. The rates are dramatically higher in clinical settings—40-60% of psychiatric inpatients meet criteria for at least one PD. This makes sense: personality disorders create significant life problems that bring people into treatment, often presenting with comorbid depression, anxiety, or substance use disorders.</p>
+    <p className="mb-6">Approximately 10-15% of the general population has at least one personality disorder <Citation id="2" index={2} source="Lancet" year="2020" tier={1} />. The rates are dramatically higher in clinical settings--40-60% of psychiatric inpatients meet criteria for at least one PD. This makes sense: personality disorders create significant life problems that bring people into treatment, often presenting with comorbid depression, anxiety, or substance use disorders.</p>
 
     <p className="mb-6">PDs are associated with increased risk for:</p>
 
@@ -4185,7 +4611,7 @@ export const psychoticPersonalityArticles: Article[] = [
     </ul>
 
     <h2 id="stigma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Stigma Problem</h2>
-    <p className="mb-6">Of all psychiatric diagnoses, personality disorders carry perhaps the heaviest stigma <Citation id="5" index={5} source="BJP" year="2021" tier={1} />. Individuals with PDs are often labeled "difficult," "manipulative," "attention-seeking," "hopeless," or "untreatable"—sometimes by the very clinicians meant to help them. This stigma has devastating consequences:</p>
+    <p className="mb-6">Of all psychiatric diagnoses, personality disorders carry perhaps the heaviest stigma <Citation id="5" index={5} source="BJP" year="2021" tier={1} />. Individuals with PDs are often labeled "difficult," "manipulative," "attention-seeking," "hopeless," or "untreatable"--sometimes by the very clinicians meant to help them. This stigma has devastating consequences:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
       <li>Delayed diagnosis and treatment</li>
@@ -4213,7 +4639,7 @@ export const psychoticPersonalityArticles: Article[] = [
         },
         {
           title: 'Schema-Focused Therapy',
-          description: <p>Identifies and modifies early maladaptive schemas—deeply held patterns originating in childhood. Uses cognitive, experiential, and behavioral techniques to change entrenched patterns.</p>
+          description: <p>Identifies and modifies early maladaptive schemas--deeply held patterns originating in childhood. Uses cognitive, experiential, and behavioral techniques to change entrenched patterns.</p>
         },
         {
           title: 'Transference-Focused Psychotherapy (TFP)',
@@ -4238,7 +4664,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Treating personality disorders requires specialized training because these conditions present unique challenges <Citation id="8" index={8} source="Psychotherapy" year="2020" tier={1} />:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li><strong>Therapy-interfering behaviors</strong>: The same patterns causing life problems show up in therapy—missed appointments, intense emotional reactions to the therapist, testing boundaries</li>
+      <li><strong>Therapy-interfering behaviors</strong>: The same patterns causing life problems show up in therapy--missed appointments, intense emotional reactions to the therapist, testing boundaries</li>
       <li><strong>Difficulty forming therapeutic alliance</strong>: Trust and collaboration are hard for people whose core difficulties involve relationships</li>
       <li><strong>High dropout rates</strong>: Change is slow and painful; many quit before benefiting</li>
       <li><strong>Countertransference</strong>: Therapists may experience strong negative reactions, needing supervision to manage</li>
@@ -4254,11 +4680,11 @@ export const psychoticPersonalityArticles: Article[] = [
 
     <p className="mb-6"><strong>Effective treatment accelerates improvement:</strong> While natural maturation helps, structured psychotherapy produces faster, more substantial change. Meta-analyses show significant improvement in symptoms, interpersonal functioning, and quality of life with evidence-based treatment.</p>
 
-    <p className="mb-6">Recovery doesn't mean personality transformation—it means reducing symptom severity, improving relationships, developing healthier coping, and building a life worth living despite enduring vulnerabilities.</p>
+    <p className="mb-6">Recovery doesn't mean personality transformation--it means reducing symptom severity, improving relationships, developing healthier coping, and building a life worth living despite enduring vulnerabilities.</p>
 
     <ArticleCallout variant="key-takeaway" title="Key Takeaways">
       <ul className="list-disc pl-5 space-y-2">
-        <li>Personality disorders are enduring, pervasive patterns causing distress or impairment—not just personality traits</li>
+        <li>Personality disorders are enduring, pervasive patterns causing distress or impairment--not just personality traits</li>
         <li>10 specific PDs are organized into three clusters: Cluster A (odd/eccentric), Cluster B (dramatic/emotional), Cluster C (anxious/fearful)</li>
         <li>PDs affect 10-15% of the general population and 40-60% of psychiatric inpatients</li>
         <li>Despite intense stigma, personality disorders are treatable with specialized long-term psychotherapy</li>
@@ -4269,15 +4695,15 @@ export const psychoticPersonalityArticles: Article[] = [
   </> },
 
   { id: catId(80), slug: 'living-with-personality-disorder', title: 'Living with a Personality Disorder: Recovery, Support, and Hope', description: 'Personality disorders are treatable. Learn about recovery journeys and available support.', image: "/images/articles/cat13/cover-080.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Personality Disorders', 'Recovery'],
-  summary: 'Despite pervasive stigma, personality disorders are treatable conditions with excellent recovery outcomes. Research shows 85-90% of people with borderline PD achieve remission within 10-15 years, and recovery—defined as reducing symptoms, improving relationships, and building a meaningful life—is possible through evidence-based therapy, peer support, and sustained commitment.',
+  summary: 'Despite pervasive stigma, personality disorders are treatable conditions with excellent recovery outcomes. Research shows 85-90% of people with borderline PD achieve remission within 10-15 years, and recovery--defined as reducing symptoms, improving relationships, and building a meaningful life--is possible through evidence-based therapy, peer support, and sustained commitment.',
   keyFacts: [
     { text: 'Long-term studies show 85-90% of people with borderline PD achieve remission within 10-15 years', citationIndex: 1 },
     { text: 'Recovery doesn\'t mean personality transformation, but reducing symptom severity and building a life worth living', citationIndex: 2 },
     { text: 'Evidence-based treatments like DBT, MBT, and schema therapy produce significant improvement in most cases', citationIndex: 3 },
     { text: 'Peer support from others with lived experience of PDs is uniquely valuable and reduces isolation', citationIndex: 4 },
-    { text: 'Recovery is nonlinear—setbacks are normal and don\'t indicate failure, but information for adjusting treatment', citationIndex: 2 },
+    { text: 'Recovery is nonlinear--setbacks are normal and don\'t indicate failure, but information for adjusting treatment', citationIndex: 2 },
   ],
-  sparkMoment: 'You are not your diagnosis. Personality patterns were learned in response to circumstances—they can be unlearned.',
+  sparkMoment: 'You are not your diagnosis. Personality patterns were learned in response to circumstances--they can be unlearned.',
   practicalExercise: {
     title: 'Building Your Recovery Support Network',
     steps: [
@@ -4300,12 +4726,12 @@ export const psychoticPersonalityArticles: Article[] = [
     { id: '8', text: 'Hope and Motivation in Personality Disorder Treatment', source: 'Psychotherapy Research', year: '2020', link: 'https://doi.org/10.1080/10503307.2020.1732943', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">If you've been diagnosed with a personality disorder, you've likely heard that it's untreatable, that you're manipulative, that you have a "character flaw" rather than a mental health condition. You may have been told you'll never get better. These messages are not just wrong—they're harmful lies that prevent people from seeking the help that works.</p>
-      <p className="mb-6">Here's the truth: Research consistently shows that personality disorders are treatable, symptoms improve significantly with therapy, and many people achieve remission <Citation id="1" index={1} source="JPD" year="2021" tier={1} />. Long-term studies of borderline personality disorder—often considered the most severe—show 85-90% achieve remission within 10-15 years. Similar improvement occurs across other personality disorders, especially with evidence-based treatment. Recovery is real, and you deserve to know that.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">If you've been diagnosed with a personality disorder, you've likely heard that it's untreatable, that you're manipulative, that you have a "character flaw" rather than a mental health condition. You may have been told you'll never get better. These messages are not just wrong--they're harmful lies that prevent people from seeking the help that works.</p>
+      <p className="mb-6">Here's the truth: Research consistently shows that personality disorders are treatable, symptoms improve significantly with therapy, and many people achieve remission <Citation id="1" index={1} source="JPD" year="2021" tier={1} />. Long-term studies of borderline personality disorder--often considered the most severe--show 85-90% achieve remission within 10-15 years. Similar improvement occurs across other personality disorders, especially with evidence-based treatment. Recovery is real, and you deserve to know that.</p>
     </div>
 
     <QuoteBlock
-      quote="Five years ago, I couldn't hold a job, had burned through every relationship, and believed I was fundamentally broken. Today, I'm not 'cured'—I still have vulnerabilities. But I understand my patterns, I can catch myself before spiraling, and I've built a life I actually want to live. Recovery isn't about becoming someone else. It's about becoming yourself without the disorder running the show."
+      quote="Five years ago, I couldn't hold a job, had burned through every relationship, and believed I was fundamentally broken. Today, I'm not 'cured'--I still have vulnerabilities. But I understand my patterns, I can catch myself before spiraling, and I've built a life I actually want to live. Recovery isn't about becoming someone else. It's about becoming yourself without the disorder running the show."
       attribution="Person in recovery from BPD"
       role="10 years post-diagnosis"
       variant="large"
@@ -4328,7 +4754,7 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">Recovery from personality disorders is gradual and nonlinear <Citation id="2" index={2} source="QHR" year="2020" tier={1} />. It unfolds in phases, though not always cleanly or in order:</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Early Phase: Crisis Management and Stabilization</h3>
-    <p className="mb-6">Initial focus is on safety, crisis management, and building the therapeutic relationship. For many, this means learning to tolerate distress without self-destructive behaviors, developing basic emotion regulation skills, and establishing trust with a therapist. This phase can be chaotic—lots of crises, frequent setbacks, testing boundaries. It's also when many people drop out, feeling hopeless that anything will change.</p>
+    <p className="mb-6">Initial focus is on safety, crisis management, and building the therapeutic relationship. For many, this means learning to tolerate distress without self-destructive behaviors, developing basic emotion regulation skills, and establishing trust with a therapist. This phase can be chaotic--lots of crises, frequent setbacks, testing boundaries. It's also when many people drop out, feeling hopeless that anything will change.</p>
 
     <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Middle Phase: Addressing Core Patterns</h3>
     <p className="mb-6">Once crises are less frequent, therapy turns to core patterns: rigid beliefs about self and others, emotion dysregulation, interpersonal difficulties, identity confusion. This is deep, painful work. You examine where patterns originated, how they've protected you, and what maintaining them costs. You practice new ways of being that feel awkward and frightening at first.</p>
@@ -4385,7 +4811,7 @@ export const psychoticPersonalityArticles: Article[] = [
       items={[
         {
           title: 'How long does treatment take?',
-          content: <p>Months to years, not weeks. Most evidence-based PD treatments are designed for 1-2 years of regular therapy, though some people need longer. Improvement often begins within 6-12 months, but sustained change requires extended work. This isn't a character flaw—it reflects that personality patterns are deeply ingrained and take time to modify.</p>
+          content: <p>Months to years, not weeks. Most evidence-based PD treatments are designed for 1-2 years of regular therapy, though some people need longer. Improvement often begins within 6-12 months, but sustained change requires extended work. This isn't a character flaw--it reflects that personality patterns are deeply ingrained and take time to modify.</p>
         },
         {
           title: 'What if I can\'t afford specialized therapy?',
@@ -4393,7 +4819,7 @@ export const psychoticPersonalityArticles: Article[] = [
         },
         {
           title: 'My last therapist gave up on me. How do I trust again?',
-          content: <p>That experience—painfully common for people with PDs—reflects the therapist's limitations, not your untreatability. Seek therapists specifically trained in personality disorders who understand that therapy-interfering behaviors are symptoms to work with, not reasons to give up. In initial consultations, ask directly: "Are you comfortable treating personality disorders? Have you had clients with PDs before?" Their answer will tell you a lot.</p>
+          content: <p>That experience--painfully common for people with PDs--reflects the therapist's limitations, not your untreatability. Seek therapists specifically trained in personality disorders who understand that therapy-interfering behaviors are symptoms to work with, not reasons to give up. In initial consultations, ask directly: "Are you comfortable treating personality disorders? Have you had clients with PDs before?" Their answer will tell you a lot.</p>
         },
         {
           title: 'Will I ever be "normal"?',
@@ -4403,12 +4829,12 @@ export const psychoticPersonalityArticles: Article[] = [
     />
 
     <h2 id="self-compassion" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Role of Self-Compassion</h2>
-    <p className="mb-6">Self-compassion—treating yourself with the kindness you'd offer a struggling friend—is both a skill to develop and a predictor of recovery <Citation id="5" index={5} source="CPR" year="2021" tier={1} />. People with personality disorders often experience intense self-blame and self-hatred. "I'm broken," "I'm a burden," "I ruin everything," "I should just disappear." This harsh self-judgment <em>intensifies</em> symptoms. It doesn't motivate change—it fuels hopelessness.</p>
+    <p className="mb-6">Self-compassion--treating yourself with the kindness you'd offer a struggling friend--is both a skill to develop and a predictor of recovery <Citation id="5" index={5} source="CPR" year="2021" tier={1} />. People with personality disorders often experience intense self-blame and self-hatred. "I'm broken," "I'm a burden," "I ruin everything," "I should just disappear." This harsh self-judgment <em>intensifies</em> symptoms. It doesn't motivate change--it fuels hopelessness.</p>
 
     <p className="mb-6">Self-compassion doesn't mean excusing harmful behaviors or avoiding accountability. It means recognizing:</p>
 
     <ul className="list-disc pl-6 mb-6 space-y-2">
-      <li>You developed these patterns for reasons—they were adaptive responses to difficult circumstances</li>
+      <li>You developed these patterns for reasons--they were adaptive responses to difficult circumstances</li>
       <li>You're not fundamentally flawed; you're struggling with a treatable condition</li>
       <li>Setbacks are part of recovery, not evidence of failure</li>
       <li>You deserve the same kindness you'd extend to anyone else with a mental health condition</li>
@@ -4435,13 +4861,13 @@ export const psychoticPersonalityArticles: Article[] = [
     <h2 id="hope" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Message Is Hope</h2>
     <p className="mb-6">If you take away one thing from this article, let it be this: <strong>Recovery is possible.</strong> Not easy. Not quick. But possible <Citation id="8" index={8} source="PR" year="2020" tier={1} />.</p>
 
-    <p className="mb-6">85-90% of people with borderline personality disorder—the PD with perhaps the worst stigma and prognosis—achieve remission. Many go on to live rich, fulfilling lives. They maintain relationships. They pursue careers. They raise children. They find meaning and purpose. They still have vulnerabilities, but the disorder no longer runs their lives.</p>
+    <p className="mb-6">85-90% of people with borderline personality disorder--the PD with perhaps the worst stigma and prognosis--achieve remission. Many go on to live rich, fulfilling lives. They maintain relationships. They pursue careers. They raise children. They find meaning and purpose. They still have vulnerabilities, but the disorder no longer runs their lives.</p>
 
     <p className="mb-6">Similar outcomes occur across other personality disorders. With treatment, support, and time, people improve. Symptoms reduce. Functioning increases. Life gets better.</p>
 
-    <p className="mb-6">You are not your diagnosis. Personality disorders are <em>patterns</em>—patterns learned in response to difficult circumstances. Patterns can be unlearned. They can be replaced with healthier ways of being in the world.</p>
+    <p className="mb-6">You are not your diagnosis. Personality disorders are <em>patterns</em>--patterns learned in response to difficult circumstances. Patterns can be unlearned. They can be replaced with healthier ways of being in the world.</p>
 
-    <p className="mb-6">Recovery requires courage—the courage to examine painful patterns, to trust therapists when trust has been betrayed, to keep trying when setbacks happen, to believe change is possible when everything in your history suggests it isn't. That courage is already in you. You've survived everything up until now. You can do this next part.</p>
+    <p className="mb-6">Recovery requires courage--the courage to examine painful patterns, to trust therapists when trust has been betrayed, to keep trying when setbacks happen, to believe change is possible when everything in your history suggests it isn't. That courage is already in you. You've survived everything up until now. You can do this next part.</p>
 
     <p className="mb-6">You deserve support, not stigma. You deserve treatment, not abandonment. You deserve hope, not despair. Recovery is waiting on the other side of asking for help.</p>
 
@@ -4452,7 +4878,7 @@ export const psychoticPersonalityArticles: Article[] = [
         <li>Evidence-based treatments (DBT, MBT, schema therapy, TFP) produce significant improvement in most cases</li>
         <li>Peer support from others with lived PD experience is uniquely valuable for hope and practical strategies</li>
         <li>Self-compassion predicts better recovery outcomes; self-blame intensifies symptoms</li>
-        <li>Recovery is gradual and nonlinear—setbacks are normal and provide information, not evidence of failure</li>
+        <li>Recovery is gradual and nonlinear--setbacks are normal and provide information, not evidence of failure</li>
         <li>You are not your diagnosis. Personality patterns were learned and can be unlearned through sustained therapeutic work</li>
       </ul>
     </ArticleCallout>

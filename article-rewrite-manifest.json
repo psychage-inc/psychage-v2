@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 26,
+  "completedSessions": 30,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -1241,7 +1241,7 @@
       "completedAt": null
     },
     "26": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "06a-phobias-specific-fears",
       "file": "src/data/articles/category-02/06a-phobias-specific-fears.tsx",
@@ -1253,7 +1253,7 @@
           "slug": "what-are-phobias-understanding-irrational-but-powerful-fears",
           "title": "What Are Phobias? Understanding Irrational but Powerful Fears",
           "currentWords": 1210,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1261,7 +1261,7 @@
           "slug": "common-phobias-explained-from-heights-to-needles-to-flying",
           "title": "Common Phobias Explained: From Heights to Needles to Flying",
           "currentWords": 1033,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1269,7 +1269,7 @@
           "slug": "how-phobias-develop-classical-conditioning-and-fear-learning",
           "title": "How Phobias Develop: Classical Conditioning and Fear Learning",
           "currentWords": 1092,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1277,7 +1277,7 @@
           "slug": "exposure-therapy-for-phobias-how-facing-fear-rewires-the-brain",
           "title": "Exposure Therapy for Phobias: How Facing Fear Rewires the Brain",
           "currentWords": 593,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1285,10 +1285,10 @@
           "slug": "needle-phobia-when-fear-of-medical-procedures-becomes-dangerous",
           "title": "Needle Phobia: When Fear of Medical Procedures Becomes Dangerous",
           "currentWords": 540,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:54:00.000Z"
     },
     "27": {
       "status": "pending",
@@ -2585,7 +2585,7 @@
       "completedAt": null
     },
     "54": {
-      "status": "pending",
+      "status": "complete",
       "category": 4,
       "subcategoryFile": "02c-self-compassion-completion",
       "file": "src/data/articles/category-04/02c-self-compassion-completion.tsx",
@@ -2597,7 +2597,7 @@
           "slug": "writing-self-compassion-letter-guided-exercise",
           "title": "Writing a Self-Compassion Letter: A Guided Exercise",
           "currentWords": 287,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2605,7 +2605,7 @@
           "slug": "self-compassion-vs-self-pity-critical-difference",
           "title": "Self-Compassion vs. Self-Pity: Understanding the Critical Difference",
           "currentWords": 403,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2613,7 +2613,7 @@
           "slug": "self-compassion-mental-health-research",
           "title": "How Self-Compassion Improves Mental Health: What the Research Shows",
           "currentWords": 563,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2621,10 +2621,10 @@
           "slug": "building-daily-self-compassion-practice",
           "title": "Building a Daily Self-Compassion Practice: Starting Small",
           "currentWords": 344,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:45:00.000Z"
     },
     "55": {
       "status": "pending",
@@ -2927,7 +2927,7 @@
       "completedAt": null
     },
     "61": {
-      "status": "pending",
+      "status": "complete",
       "category": 4,
       "subcategoryFile": "06a-building-confidence",
       "file": "src/data/articles/category-04/06a-building-confidence.tsx",
@@ -2939,7 +2939,7 @@
           "slug": "confidence-gap-act-confident",
           "title": "The Confidence Gap: Why You Don't Need to Feel Confident to Act Confident",
           "currentWords": 303,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2947,7 +2947,7 @@
           "slug": "self-efficacy-believing-makes-possible",
           "title": "Self-Efficacy: How Believing You Can Do Something Makes It Possible",
           "currentWords": 287,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2955,7 +2955,7 @@
           "slug": "small-wins-build-major-confidence",
           "title": "Small Wins: How Minor Accomplishments Build Major Confidence",
           "currentWords": 375,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2963,7 +2963,7 @@
           "slug": "comfort-zone-productive-discomfort",
           "title": "Stepping Outside Your Comfort Zone: The Science of Productive Discomfort",
           "currentWords": 382,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2971,13 +2971,13 @@
           "slug": "stop-comparing-yourself-to-others",
           "title": "How to Stop Comparing Yourself to Others: Practical Strategies",
           "currentWords": 288,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:15:00.000Z"
     },
     "62": {
-      "status": "pending",
+      "status": "complete",
       "category": 4,
       "subcategoryFile": "06b-building-confidence",
       "file": "src/data/articles/category-04/06b-building-confidence.tsx",
@@ -2989,7 +2989,7 @@
           "slug": "confidence-after-failure-reframing-setbacks",
           "title": "Building Confidence After Failure: Reframing Setbacks as Data",
           "currentWords": 381,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2997,7 +2997,7 @@
           "slug": "public-speaking-confidence",
           "title": "Public Speaking Confidence: From Terrified to Competent",
           "currentWords": 363,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -3005,7 +3005,7 @@
           "slug": "social-confidence",
           "title": "Social Confidence: How to Feel More at Ease Around Others",
           "currentWords": 322,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -3013,7 +3013,7 @@
           "slug": "body-language-confidence-psychology",
           "title": "The Body Language of Confidence: How Posture Affects Psychology",
           "currentWords": 427,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -3021,10 +3021,10 @@
           "slug": "confidence-vs-arrogance",
           "title": "Confidence vs. Arrogance: The Fine Line and How to Walk It",
           "currentWords": 383,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:45:00.000Z"
     },
     "63": {
       "status": "pending",

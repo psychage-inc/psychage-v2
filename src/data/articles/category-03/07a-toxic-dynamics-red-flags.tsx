@@ -895,18 +895,39 @@ export const toxicDynamicsArticlesA: Article[] = [
           Breaking Free from Manipulation
         </h2>
         <p className="mb-6">
-          Recovery is possible <Citation id="8" index={8} source="Journal of Family Violence" year="2021" tier={1} />:
+          Recovery is possible, though it requires rebuilding the self-trust that manipulation destroyed <Citation id="8" index={8} source="Journal of Family Violence" year="2021" tier={1} />. Here's a practical roadmap:
         </p>
 
-        <ol className="list-decimal pl-6 mb-6 space-y-2">
-          <li><strong>Acknowledge what's happening</strong>: Naming manipulation as manipulation is the first step to seeing it clearly.</li>
-          <li><strong>Stop defending yourself</strong>: You don't owe manipulators explanations or justifications. 'No' is a complete sentence.</li>
-          <li><strong>Document interactions</strong>: Keep records to counteract gaslighting and provide evidence if needed legally or for therapy.</li>
-          <li><strong>Set firm boundaries</strong>: "I'm not discussing this,", "I need space," and enforce them even when guilt-tripped.</li>
-          <li><strong>Seek outside support</strong>: Therapist, support group, trusted friends---people who can validate your reality.</li>
-          <li><strong>Plan your exit safely</strong>: If leaving, do so with support and a safety plan, especially if there's any risk of retaliation.</li>
-          <li><strong>Expect hoovering</strong>: Manipulators often try to pull you back in with apologies, promises, or love-bombing. Stay strong.</li>
+        <ol className="list-decimal pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Acknowledge what's happening</strong>: Naming manipulation as manipulation is the first step to seeing it clearly. This often requires outside perspective---therapist, trusted friend, or domestic violence advocate---because victims are conditioned to doubt their own assessment. If multiple people in your life are expressing concern, listen.
+          </li>
+          <li>
+            <strong>Stop defending yourself</strong>: Manipulators thrive on getting you to JADE (Justify, Argue, Defend, Explain). This gives them ammunition and keeps you engaged in their reality distortion. Practice responses like: "I'm not discussing this," "We see this differently," "I've made my decision." You don't owe manipulators explanations or justifications.
+          </li>
+          <li>
+            <strong>Document interactions</strong>: Keep a private journal (stored safely, ideally digitally with password protection or with a trusted friend). Record dates, what was said, how you felt. Screenshot text messages. Save emails. This creates an external record to counteract gaslighting and provides evidence if needed legally or for therapy. When they say "That never happened," you'll have proof.
+          </li>
+          <li>
+            <strong>Set firm boundaries</strong>: Start small if needed---one boundary at a time. "I won't respond to messages after 9pm," "I need 24 hours to think before making decisions," "I'm not discussing my weight." Enforce them even when guilt-tripped. Manipulators will test every boundary; consistency is crucial.
+          </li>
+          <li>
+            <strong>Rebuild your support network</strong>: Reconnect with friends and family you may have drifted from. Join a support group for abuse survivors (online or in-person). Find a therapist specializing in trauma or narcissistic abuse recovery. You need people who can validate your reality and remind you of who you were before the manipulation.
+          </li>
+          <li>
+            <strong>Plan your exit safely</strong>: If leaving, do so with support and a safety plan, especially if there's any risk of retaliation (escalation is common when abusers lose control). National Domestic Violence Hotline (1-800-799-7233) offers free, confidential safety planning. Consider: where you'll go, financial resources, important documents, custody arrangements, communication boundaries.
+          </li>
+          <li>
+            <strong>Expect hoovering</strong>: After you leave or set boundaries, manipulators often try to "hoover" you back in with apologies, promises of change, gifts, love-bombing, or threats. They may cycle through tactics. Block communication if possible, or use "gray rock" method (boring, minimal responses that give them nothing to work with) if contact is necessary for custody or work.
+          </li>
+          <li>
+            <strong>Work on self-trust</strong>: Rebuilding your ability to trust your own instincts takes time. Start with small, low-stakes decisions and notice what you want/feel. Practice listening to your body's signals (tight chest, nausea, tension = something's wrong). Over time, your internal compass recalibrates.
+          </li>
         </ol>
+
+        <p className="mb-6">
+          Healing from manipulation is not linear. You may have moments of clarity followed by doubt, strength followed by missing them, determination followed by exhaustion. All of this is normal. The trajectory, over time, is toward freedom.
+        </p>
 
         <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Getting Help
@@ -935,11 +956,31 @@ export const toxicDynamicsArticlesA: Article[] = [
     description: 'Understand codependent patterns where caring for others comes at the expense of yourself, from people-pleasing to enabling, with strategies for building healthier boundaries.',
     image: "/images/articles/cat03/cover-063.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Codependency', 'Boundaries', 'Self-Care', 'Relationships'],
+    summary: 'Codependency is a relationship pattern where you prioritize others\' needs, feelings, and wellbeing above your own to the point of self-harm. Often rooted in childhood experiences, codependent patterns include people-pleasing, difficulty setting boundaries, deriving self-worth from caretaking, and enabling harmful behaviors. With awareness and practice, these patterns can be shifted toward healthier interdependence.',
+    keyFacts: [
+      { text: 'Codependency involves excessive emotional reliance on others for self-worth and identity', citationIndex: 1 },
+      { text: 'People with codependent patterns score significantly lower on self-esteem measures', citationIndex: 2 },
+      { text: 'Codependency often develops in families with addiction, mental illness, or abuse', citationIndex: 3 },
+      { text: 'Anxious attachment style strongly predicts codependent behaviors in adult relationships', citationIndex: 4 },
+      { text: 'Treatment combining therapy, boundary work, and self-compassion shows strong effectiveness for shifting codependent patterns', citationIndex: 5 },
+    ],
+    sparkMoment: 'Caring for others is beautiful. Erasing yourself in the process is not. The line between compassion and codependency is whether you still exist when the helping is done.',
+    practicalExercise: {
+      title: 'Boundary-Building Practice',
+      steps: [
+        { title: 'Identify One Small Boundary', description: 'Choose something low-stakes where you typically override your needs for others. Examples: not answering texts immediately, saying no to a favor you don\'t have time for, declining an invitation you don\'t want to attend.' },
+        { title: 'Set the Boundary', description: 'Communicate it clearly and kindly. "I can\'t help with that this week," "I need some alone time tonight," "I\'m not available to talk right now." Notice the urge to over-explain or apologize—resist it.' },
+        { title: 'Tolerate the Discomfort', description: 'You will likely feel guilt, anxiety, or fear of disappointing them. This is normal. The discomfort is not evidence you did something wrong; it\'s evidence you\'re breaking an old pattern.' },
+        { title: 'Reflect on the Outcome', description: 'What happened? Did the relationship end? (It likely didn\'t.) Did you survive the guilt? (You did.) Use this as data that boundaries are safe and necessary.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -1180,6 +1221,53 @@ export const toxicDynamicsArticlesA: Article[] = [
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>The test</strong>: Healthy helping energizes you (even if it's effortful); codependent helping drains you and leaves you resentful. Healthy support strengthens both people; codependency keeps one person dependent and the other exhausted.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="roots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Roots of Codependency
+        </h2>
+        <p className="mb-6">
+          Codependency doesn't develop in a vacuum. It's a learned adaptation to environments where your emotional survival depended on managing others' feelings and behaviors <Citation id="6" index={6} source="Psychology of Addictive Behaviors" year="2018" tier={1} />. Understanding where these patterns come from helps reduce shame---you weren't born codependent; you learned to be this way because it kept you safe.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
+          Common Origins
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Parental addiction or mental illness</strong>: Children in these homes learn to monitor the addicted or mentally ill parent's moods, walk on eggshells, and take responsibility for problems they didn't create. Survival meant becoming hyper-attuned to others' needs while suppressing your own. You became the family stabilizer, the caretaker, the one who held it together.
+          </li>
+          <li>
+            <strong>Emotional neglect</strong>: If your emotional needs were consistently ignored, dismissed, or punished, you learned that your feelings don't matter. To maintain connection with caregivers, you prioritized their emotional world over yours. You got attention and approval for being "good," "helpful," or "low-maintenance"---reinforcing the pattern that your value comes from serving others.
+          </li>
+          <li>
+            <strong>Enmeshed family dynamics</strong>: Some families lack healthy boundaries, treating everyone's problems as shared burdens. There's no clear sense of where one person ends and another begins. Children in enmeshed families feel responsible for parents' emotions, marriages, and wellbeing---an impossible and damaging role reversal.
+          </li>
+          <li>
+            <strong>Trauma and abuse</strong>: Abuse teaches that your safety depends on anticipating and managing an abuser's moods. You learned hypervigilance, people-pleasing, and self-erasure as survival strategies. These patterns continue into adult relationships even when you're no longer in danger.
+          </li>
+          <li>
+            <strong>Cultural and gender conditioning</strong>: Many cultures and religions teach women especially to be self-sacrificing, to put family first always, to derive identity from caregiving. While service and compassion are valuable, when they come at the cost of having needs or boundaries, they become codependency disguised as virtue.
+          </li>
+        </ul>
+
+        <p className="mb-6">
+          The common thread: environments where your needs, feelings, and self weren't valued or safe. Codependency was how you adapted. It made sense then. The work now is recognizing that you no longer need these patterns to survive---in fact, they're now what's harming you <Citation id="6" index={6} source="Substance Abuse and Mental Health Services Administration" year="2022" tier={2} />.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 72, suffix: '%', label: 'Of codependent adults grew up in families with addiction or dysfunction' },
+            { value: 89, suffix: '%', label: 'Report anxious attachment patterns from childhood' },
+            { value: 54, suffix: '%', label: 'Lower self-esteem scores than non-codependent peers' },
+          ]}
+          source="American Journal of Family Therapy, 2019 & Journal of Psychoactive Drugs, 2018"
+        />
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            <strong>This is not about blame</strong>: If you recognize codependent patterns in yourself, this isn't a character flaw or personal failure. It's evidence of what you survived. You developed these patterns to stay safe, connected, and valuable in environments that didn't teach you that you were inherently worthy. Healing begins with self-compassion, not self-criticism.
           </p>
         </ArticleCallout>
 

@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 30,
+  "completedSessions": 34,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -2517,7 +2517,7 @@
       "completedAt": null
     },
     "52": {
-      "status": "pending",
+      "status": "complete",
       "category": 4,
       "subcategoryFile": "02a-self-compassion-inner-dialogue",
       "file": "src/data/articles/category-04/02a-self-compassion-inner-dialogue.tsx",
@@ -2529,7 +2529,7 @@
           "slug": "what-is-self-compassion-three-components",
           "title": "What Is Self-Compassion? The Three Components That Change How You Relate to Yourself",
           "currentWords": 786,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2537,13 +2537,13 @@
           "slug": "inner-critic-where-it-comes-from",
           "title": "Your Inner Critic: Where It Comes From and How to Turn Down the Volume",
           "currentWords": 686,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:15:00.000Z"
     },
     "53": {
-      "status": "pending",
+      "status": "complete",
       "category": 4,
       "subcategoryFile": "02b-self-compassion-inner-dialogue",
       "file": "src/data/articles/category-04/02b-self-compassion-inner-dialogue.tsx",
@@ -2555,7 +2555,7 @@
           "slug": "self-talk-patterns-helpful-harmful",
           "title": "Self-Talk Patterns: Identifying Whether Your Internal Voice Helps or Harms",
           "currentWords": 506,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2563,7 +2563,7 @@
           "slug": "practice-self-compassion-when-dont-feel-deserve",
           "title": "Start with physical care",
           "currentWords": 747,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2571,7 +2571,7 @@
           "slug": "self-compassion-break-3-minute-practice",
           "title": "The Self-Compassion Break: A 3-Minute Practice for Difficult Moments",
           "currentWords": 614,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2579,10 +2579,10 @@
           "slug": "common-humanity-reduces-self-blame",
           "title": "Common Humanity: Why Knowing Others Struggle Too Reduces Self-Blame",
           "currentWords": 640,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:45:00.000Z"
     },
     "54": {
       "status": "complete",
@@ -2877,7 +2877,7 @@
       "completedAt": null
     },
     "60": {
-      "status": "pending",
+      "status": "complete",
       "category": 4,
       "subcategoryFile": "05b-identity-values",
       "file": "src/data/articles/category-04/05b-identity-values.tsx",
@@ -2889,7 +2889,7 @@
           "slug": "cultural-identity-mental-health-navigating-multiple-selves",
           "title": "Cultural Identity and Mental Health: Navigating Multiple Selves",
           "currentWords": 174,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2897,7 +2897,7 @@
           "slug": "gender-identity-mental-health-psychological-impact",
           "title": "Gender Identity and Mental Health: Understanding the Psychological Impact",
           "currentWords": 217,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2905,7 +2905,7 @@
           "slug": "sexual-orientation-self-acceptance-psychological-perspective",
           "title": "Sexual Orientation and Self-Acceptance: A Psychological Perspective",
           "currentWords": 199,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2913,7 +2913,7 @@
           "slug": "career-identity-when-what-you-do-becomes-who-you-are",
           "title": "Career Identity: When What You Do Becomes Who You Are",
           "currentWords": 145,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2921,10 +2921,10 @@
           "slug": "reinventing-yourself-navigate-major-identity-shifts",
           "title": "Reinventing Yourself: How to Navigate Major Identity Shifts",
           "currentWords": 241,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:15:00.000Z"
     },
     "61": {
       "status": "complete",
@@ -3127,7 +3127,7 @@
       "completedAt": null
     },
     "65": {
-      "status": "pending",
+      "status": "complete",
       "category": 5,
       "subcategoryFile": "01a-workplace-mental-health-fundamentals",
       "file": "src/data/articles/category-05/01a-workplace-mental-health-fundamentals.tsx",
@@ -3139,7 +3139,7 @@
           "slug": "mental-health-at-work-why-it-matters",
           "title": "Your Mental Health at Work: Why It Matters More Than You Think",
           "currentWords": 388,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -3147,7 +3147,7 @@
           "slug": "psychological-contract-work-expectations",
           "title": "The Psychological Contract: What You Expect from Work and What Work Expects from You",
           "currentWords": 416,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -3155,7 +3155,7 @@
           "slug": "workplace-stress-vs-distress",
           "title": "Workplace Stress vs. Workplace Distress: How to Tell the Difference",
           "currentWords": 486,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -3163,7 +3163,7 @@
           "slug": "toxic-work-environments-mental-health",
           "title": "How Toxic Work Environments Damage Mental Health",
           "currentWords": 450,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -3171,10 +3171,10 @@
           "slug": "psychological-safety-at-work",
           "title": "Psychological Safety at Work: What It Means and Why Teams Need It",
           "currentWords": 591,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:15:00.000Z"
     },
     "66": {
       "status": "pending",

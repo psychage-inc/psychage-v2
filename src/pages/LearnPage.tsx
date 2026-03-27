@@ -14,14 +14,15 @@ import { getArticleUrl, getCategoryUrl } from '../lib/articleUrl';
 
 // ─── Priority ordering: categories with cover images first ──────────
 const PRIORITY_CATEGORY_SLUGS = [
-    // Categories 1-5
+    // Categories 1-5 (slugs match DB article_categories table)
     'emotional-regulation',
     'anxiety-stress',
-    'relationships-communication',
-    'self-worth-identity',
-    'work-productivity',
-    // Category 19
+    'relationships-social',
+    'self-esteem-identity',
+    'workplace-academic',
+    // Categories 19-20
     'mens-mental-health',
+    'chronic-illness-pain',
 ];
 
 // ─── Compact Horizontal Article Card ─────────────────────────────────

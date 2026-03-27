@@ -165,7 +165,7 @@ export const articleService = {
             let query = supabase.from('articles').select(selectString)
                 .eq('status', 'published')
                 .order('created_at', { ascending: false })
-                .limit(200);
+                .limit(1500);
 
             if (params?.featured) {
                 query = query.eq('featured', true);

@@ -63,6 +63,12 @@ const CATEGORIES: CategoryConfig[] = [
     catId: 'CAT19',
     imageDir: '/Users/raiyanabdullah/Downloads/Psychage poster category 19',
   },
+  {
+    categoryNumber: 20,
+    prefix: 'SPI',
+    catId: 'CAT20',
+    imageDir: '/Users/raiyanabdullah/Downloads/Psychage poster category 20',
+  },
 ];
 
 // ---------------------------------------------------------------------------

@@ -1117,6 +1117,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
   {
     id: catId(59),
     slug: 'default-mode-network-brain-lost-in-thought',
+    status: 'draft',
     title: "The Default Mode Network: What Your Brain Does When You're Lost in Thought",
     description:
       'The DMN activates during rest and mind-wandering. Overactivity is linked to rumination, depression, and self-focused negative thinking.',
@@ -1272,6 +1273,7 @@ export const neuroscienceOfEmotionsArticlesB: Article[] = [
   {
     id: catId(60),
     slug: 'polyvagal-theory-nervous-system-three-states',
+    status: 'draft',
     title: "Polyvagal Theory in Plain Language: Your Nervous System's Three States",
     description:
       'Polyvagal theory explains three nervous system states: safe/social, fight/flight, and shutdown. Learn to recognize and shift between them.',

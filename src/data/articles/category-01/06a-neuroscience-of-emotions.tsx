@@ -23,6 +23,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
   {
     id: catId(51),
     slug: 'your-brain-on-emotions-neural-networks-that-create-feelings',
+    status: 'draft',
     title: 'Your Brain on Emotions: A Tour of the Neural Networks That Create Feelings',
     description: 'Explore the brain regions and networks responsible for generating, processing, and regulating emotions--from the amygdala to the prefrontal cortex.',
     image: "/images/articles/cat01/cover-051.svg",
@@ -230,6 +231,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
   {
     id: catId(52),
     slug: 'amygdala-role-how-brain-detects-threat-too-quickly',
+    status: 'draft',
     title: "The Amygdala's Role: How Your Brain Detects Threat (Sometimes Too Quickly)",
     description: "The amygdala is your brain's alarm system--fast, powerful, and sometimes overly sensitive. Learn how it works and why it matters for anxiety and fear.",
     image: "/images/articles/cat01/cover-052.svg",
@@ -425,6 +427,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
   {
     id: catId(53),
     slug: 'neuroplasticity-emotional-change-rewire-feeling-patterns',
+    status: 'draft',
     title: 'Neuroplasticity and Emotional Change: Can You Rewire Your Feeling Patterns?',
     description: 'Your brain can change throughout life. Neuroplasticity explains how therapy, practice, and experience reshape emotional patterns at a biological level.',
     image: "/images/articles/cat01/cover-053.svg",

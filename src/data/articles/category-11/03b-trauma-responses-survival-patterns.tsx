@@ -1289,6 +1289,7 @@ export const traumaResponsesArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'hyperarousal-living-in-constant-alert',
+    status: 'draft',
     title: 'Hyperarousal: Living in a State of Constant Alert',
     description: `Understand the hyperarousal symptom cluster of PTSD---why your body won't turn off the alarm, and how to calm a chronically activated nervous system.`,
     image: '/images/articles/cat11/cover-030.svg',

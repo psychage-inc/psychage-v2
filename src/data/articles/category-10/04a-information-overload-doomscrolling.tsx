@@ -829,6 +829,7 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'news-anxiety-24-7-news-cycle-mental-health',
+    status: 'draft',
     title: 'News Anxiety: How the 24/7 News Cycle Damages Mental Health',
     description: 'Explore how constant news exposure creates chronic anxiety, why the news is designed to alarm you, and how to stay informed without becoming overwhelmed.',
     image: "/images/articles/cat10/cover-033.svg",

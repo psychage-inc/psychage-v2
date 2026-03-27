@@ -284,6 +284,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
   {
     id: catId(42),
     slug: 'parallel-parenting-when-co-parenting-isnt-possible',
+    status: 'draft',
     title: "Parallel Parenting: When Co-Parenting with a Difficult Ex Isn't Possible",
     description: "Learn how parallel parenting works when high-conflict dynamics make traditional co-parenting impossible, protecting both you and your children.",
     image: "/images/articles/cat06/cover-042.svg",
@@ -711,6 +712,7 @@ export const coParentingDivorceBlendedFamiliesArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'blended-families-psychological-challenges-stepparenting',
+    status: 'draft',
     title: 'Blended Families: The Psychological Challenges of Stepparenting',
     description: 'Navigate the unique challenges of stepfamily dynamics with evidence-based strategies for building healthy blended families.',
     image: "/images/articles/cat06/cover-044.svg",

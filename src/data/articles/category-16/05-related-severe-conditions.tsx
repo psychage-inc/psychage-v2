@@ -25,6 +25,7 @@ export const relatedSevereConditionsArticles: Article[] = [
   {
     id: catId(41),
     slug: 'bipolar-disorder-psychotic-features-when-mood-and-reality-diverge',
+    status: 'draft',
     title: 'Bipolar Disorder With Psychotic Features: When Mood and Reality Diverge',
     description: 'How psychosis manifests during bipolar episodes --- the difference between schizoaffective disorder and bipolar with psychotic features, mood-congruent vs. mood-incongruent psychosis, and treatment implications.',
     image: '/images/articles/cat16/cover-041.svg',
@@ -209,6 +210,7 @@ export const relatedSevereConditionsArticles: Article[] = [
   {
     id: catId(42),
     slug: 'major-depression-psychotic-features-when-despair-distorts-reality',
+    status: 'draft',
     title: 'Major Depression With Psychotic Features: When Despair Distorts Reality',
     description: 'Understanding psychotic depression --- how severe major depressive episodes can include delusions and hallucinations, why it\'s often missed, and why treatment differs from non-psychotic depression.',
     image: '/images/articles/cat16/cover-042.svg',
@@ -391,6 +393,7 @@ export const relatedSevereConditionsArticles: Article[] = [
   {
     id: catId(43),
     slug: 'substance-induced-psychotic-disorder-when-drugs-trigger-psychosis',
+    status: 'draft',
     title: 'Substance-Induced Psychotic Disorder: When Drugs Trigger Psychosis',
     description: 'How substances --- particularly cannabis, stimulants, and hallucinogens --- can trigger psychotic episodes, the relationship between substance use and schizophrenia, and when psychosis persists after the substance clears.',
     image: '/images/articles/cat16/cover-043.svg',
@@ -554,6 +557,7 @@ export const relatedSevereConditionsArticles: Article[] = [
   {
     id: catId(44),
     slug: 'catatonia-when-psychosis-affects-movement-and-speech',
+    status: 'draft',
     title: 'Catatonia: When Psychosis Affects Movement and Speech',
     description: 'Understanding catatonia --- a syndrome of motor and behavioral abnormalities that can occur in psychotic conditions, mood disorders, or medical illness --- and why rapid recognition and treatment is essential.',
     image: '/images/articles/cat16/cover-044.svg',
@@ -714,6 +718,7 @@ export const relatedSevereConditionsArticles: Article[] = [
   {
     id: catId(45),
     slug: 'childhood-onset-schizophrenia-rare-severe-early-psychosis',
+    status: 'draft',
     title: 'Childhood-Onset Schizophrenia: Rare, Severe, and Early Psychosis',
     description: 'Understanding childhood-onset schizophrenia --- a rare and severe form of psychosis that begins before age 13, how it differs from adult-onset schizophrenia, and the unique challenges it presents.',
     image: '/images/articles/cat16/cover-045.svg',

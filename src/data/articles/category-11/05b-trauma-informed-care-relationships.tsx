@@ -15,6 +15,7 @@ export const traumaInformedCareArticlesB: Article[] = [
   {
     id: catId(46),
     slug: 'trauma-informed-education-schools-support-affected-students',
+    status: 'draft',
     title: 'Trauma-Informed Education: How Schools Can Support Affected Students',
     description: 'Discover evidence-based strategies for creating trauma-sensitive schools that support affected students, enhance learning, and build resilience.',
     image: "/images/articles/cat11/cover-046.svg",

@@ -25,6 +25,7 @@ export const supportingSomeoneArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'stigma-and-psychosis-how-prejudice-harms-and-what-you-can-do',
+    status: 'draft',
     title: 'Stigma and Psychosis: How Prejudice Harms and What You Can Do',
     description: 'How stigma against psychotic conditions operates at personal, social, and structural levels --- its measurable effects on outcomes, and evidence-based strategies for reducing it.',
     image: '/images/articles/cat16/cover-036.svg',
@@ -215,6 +216,7 @@ export const supportingSomeoneArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'children-of-parents-with-psychosis-resilience-support-understanding',
+    status: 'draft',
     title: 'Children of Parents With Psychosis: Resilience, Support, and Understanding',
     description: 'What children need when a parent has a psychotic condition --- age-appropriate explanation, emotional support, genetic risk in perspective, and building resilience through adversity.',
     image: '/images/articles/cat16/cover-037.svg',
@@ -403,6 +405,7 @@ export const supportingSomeoneArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'psychosis-and-relationships-maintaining-connection-through-illness',
+    status: 'draft',
     title: 'Psychosis and Relationships: Maintaining Connection Through Illness',
     description: 'How psychotic conditions affect romantic relationships, friendships, and social connections --- and evidence-based strategies for maintaining meaningful relationships during and after episodes.',
     image: '/images/articles/cat16/cover-038.svg',
@@ -581,6 +584,7 @@ export const supportingSomeoneArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'financial-management-psychosis-benefits-budgeting-protection',
+    status: 'draft',
     title: 'Financial Management and Psychosis: Benefits, Budgeting, and Financial Protection',
     description: 'A practical guide to managing money with a psychotic condition --- navigating disability benefits, building budgeting systems that work with cognitive symptoms, and protecting against financial exploitation.',
     image: '/images/articles/cat16/cover-039.svg',
@@ -742,6 +746,7 @@ export const supportingSomeoneArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'emergency-planning-psychotic-crises-family-preparedness',
+    status: 'draft',
     title: 'Emergency Planning for Psychotic Crises: A Family Preparedness Guide',
     description: 'How to create a comprehensive crisis plan for psychotic episodes --- early warning signs, escalation steps, emergency contacts, and post-crisis recovery strategies for families and individuals.',
     image: '/images/articles/cat16/cover-040.svg',

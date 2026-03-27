@@ -418,6 +418,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
   {
     id: catId(62),
     slug: 'the-5-4-3-2-1-grounding-technique-how-sensory-focus-calms-anxiety',
+    status: 'draft',
     title: 'The 5-4-3-2-1 Grounding Technique: How Sensory Focus Calms Anxiety',
     description: 'Master the 5-4-3-2-1 grounding exercise, a simple sensory technique that interrupts panic attacks and anxiety spirals by anchoring you to the present moment.',
     image: "/images/articles/cat02/cover-062.svg",
@@ -792,6 +793,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
   {
     id: catId(63),
     slug: 'progressive-muscle-relaxation-a-step-by-step-guide',
+    status: 'draft',
     title: 'Progressive Muscle Relaxation: A Step-by-Step Guide',
     description: 'Learn progressive muscle relaxation (PMR), a proven technique for reducing physical tension and anxiety by systematically relaxing muscle groups throughout your body.',
     image: "/images/articles/cat02/cover-063.svg",
@@ -1152,6 +1154,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
   {
     id: catId(64),
     slug: 'box-breathing-and-other-breathwork-techniques-for-anxiety-relief',
+    status: 'draft',
     title: 'Box Breathing and Other Breathwork Techniques for Anxiety Relief',
     description: "Master evidence-based breathing exercises including box breathing, 4-7-8 breathing, and diaphragmatic breathing to calm anxiety and activate your body's relaxation response.",
     image: '/images/articles/cat02/cover-064.svg',
@@ -1512,6 +1515,7 @@ export const evidenceBasedCopingStrategiesArticlesA: Article[] = [
   {
     id: catId(65),
     slug: 'cognitive-restructuring-how-to-challenge-anxious-thoughts',
+    status: 'draft',
     title: 'Cognitive Restructuring: How to Challenge Anxious Thoughts',
     description: 'Learn cognitive restructuring, a core CBT technique for identifying and challenging distorted anxious thoughts to reduce anxiety and regain perspective.',
     image: "/images/articles/cat02/cover-065.svg",

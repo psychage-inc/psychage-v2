@@ -18,6 +18,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
   {
     id: catId(11),
     slug: 'ssris-explained-most-common-medications-depression-anxiety',
+    status: 'draft',
     title: 'SSRIs Explained: The Most Common Medications for Depression and Anxiety',
     description: 'Learn how SSRIs work, what conditions they treat, common side effects, and what to expect when starting this widely prescribed class of antidepressants.',
     image: "/images/articles/cat14/cover-011.svg",
@@ -369,6 +370,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'snris-tcas-maois-beyond-ssris-other-antidepressant-options',
+    status: 'draft',
     title: 'SNRIs, TCAs, and MAOIs: Beyond SSRIs --- Other Antidepressant Options',
     description: "Explore alternative antidepressant classes when SSRIs aren't enough, including SNRIs, tricyclics, MAOIs, and atypical antidepressants.",
     image: '/images/articles/cat14/cover-012.svg',
@@ -745,6 +747,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
   {
     id: catId(13),
     slug: 'anti-anxiety-medications-benzodiazepines-buspirone-what-you-need-to-know',
+    status: 'draft',
     title: 'Anti-Anxiety Medications: Benzodiazepines, Buspirone, and What You Need to Know',
     description: 'Understanding anti-anxiety medications, from benzodiazepines to buspirone, including benefits, risks, and when they are appropriate treatment options.',
     image: "/images/articles/cat14/cover-013.svg",
@@ -1084,6 +1087,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'mood-stabilizers-medications-bipolar-disorder-mood-regulation',
+    status: 'draft',
     title: 'Mood Stabilizers: Medications for Bipolar Disorder and Mood Regulation',
     description: 'Understanding mood stabilizers including lithium, anticonvulsants, and how these medications help manage bipolar disorder and mood swings.',
     image: "/images/articles/cat14/cover-014.svg",
@@ -1482,6 +1486,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
   {
     id: catId(15),
     slug: 'antipsychotic-medications-what-they-treat-how-they-work',
+    status: 'draft',
     title: 'Antipsychotic Medications: What They Treat and How They Work',
     description: 'Understanding antipsychotic medications, from schizophrenia treatment to mood stabilization, including typical vs. atypical antipsychotics.',
     image: "/images/articles/cat14/cover-015.svg",

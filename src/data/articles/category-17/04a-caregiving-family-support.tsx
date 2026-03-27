@@ -390,6 +390,7 @@ export const caregivingFamilySupportArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'long-distance-caregiving-strategies-for-supporting-aging-parents-remotely',
+    status: 'draft',
     title: 'Long-Distance Caregiving: Strategies for Supporting Aging Parents Remotely',
     description:
       'Practical strategies for managing care from afar, including technology, local networks, care coordination, and when remote support is no longer enough.',

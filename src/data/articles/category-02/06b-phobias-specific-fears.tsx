@@ -20,6 +20,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
   {
     id: catId(56),
     slug: 'claustrophobia-understanding-the-fear-of-enclosed-spaces',
+    status: 'draft',
     title: 'Claustrophobia: Understanding the Fear of Enclosed Spaces',
     description: 'Explore claustrophobia, the intense fear of confined spaces, its triggers, why it develops, and evidence-based strategies for managing and overcoming it.',
     image: "/images/articles/cat02/cover-056.svg",
@@ -783,6 +784,7 @@ export const phobiasSpecificFearsArticlesB: Article[] = [
   {
     id: catId(58),
     slug: 'emetophobia-the-little-known-fear-that-controls-daily-life',
+    status: 'draft',
     title: 'Emetophobia: The Little-Known Fear That Controls Daily Life',
     description: 'Understand emetophobia, the intense fear of vomiting or seeing others vomit, its hidden prevalence, and why it creates such severe avoidance and anxiety.',
     image: "/images/articles/cat02/cover-058.svg",

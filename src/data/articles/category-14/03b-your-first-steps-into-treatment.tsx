@@ -15,6 +15,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'therapy-for-people-who-never-done-therapy-answering-unasked-questions',
+    status: 'draft',
     title: `Therapy for People Who've Never Done Therapy: Answering Your Unasked Questions`,
     description: `Honest answers to the questions you're too nervous to ask about starting therapy for the first time.`,
     image: "/images/articles/cat14/cover-026.svg",
@@ -300,6 +301,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'how-to-talk-to-your-doctor-about-mental-health',
+    status: 'draft',
     title: 'How to Talk to Your Doctor About Mental Health',
     description: 'Scripts and strategies for bringing up depression, anxiety, or other mental health concerns with your primary care physician.',
     image: "/images/articles/cat14/cover-027.svg",
@@ -601,6 +603,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'what-if-therapy-not-working-how-to-assess-and-adjust',
+    status: 'draft',
     title: `What If Therapy Isn't Working? How to Assess and Adjust`,
     description: "Determine whether therapy is genuinely not helping, or if you need to adjust your approach, switch therapists, or give it more time.",
     image: "/images/articles/cat14/cover-028.svg",
@@ -886,6 +889,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'how-many-therapy-sessions-understanding-treatment-duration',
+    status: 'draft',
     title: 'How Many Therapy Sessions Do You Need? Understanding Treatment Duration',
     description: 'Evidence-based guidance on how long therapy typically lasts for different conditions and goals.',
     image: "/images/articles/cat14/cover-029.svg",
@@ -1179,6 +1183,7 @@ export const yourFirstStepsIntoTreatmentArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'therapeutic-relationship-why-bond-with-therapist-matters-most',
+    status: 'draft',
     title: 'The Therapeutic Relationship: Why the Bond with Your Therapist Matters Most',
     description: 'Research shows the therapeutic alliance is the strongest predictor of therapy success --- stronger than technique or credentials.',
     image: "/images/articles/cat14/cover-030.svg",

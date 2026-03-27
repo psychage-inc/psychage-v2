@@ -18,6 +18,7 @@ export const moodDisordersArticlesA: Article[] = [
   {
     id: catId(11),
     slug: 'major-depressive-episode-diagnosis-symptoms-path-to-treatment',
+    status: 'draft',
     title: 'Major Depressive Episode: Diagnosis, Symptoms, and the Path to Treatment',
     description: 'A major depressive episode is more than sadness. Learn the diagnostic criteria, symptoms, and evidence-based treatments that offer hope and recovery.',
     image: "/images/articles/cat13/cover-011.svg",
@@ -442,6 +443,7 @@ export const moodDisordersArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'persistent-depressive-disorder-when-depression-becomes-your-baseline',
+    status: 'draft',
     title: 'Persistent Depressive Disorder: When Depression Becomes Your Baseline',
     description: 'Persistent depressive disorder (dysthymia) is chronic, low-grade depression lasting years. Learn how it differs from major depression and how to find effective treatment.',
     image: "/images/articles/cat13/cover-012.svg",

@@ -14,6 +14,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
   {
     id: catId(41),
     slug: 'support-partner-therapy-without-overstepping',
+    status: 'draft',
     title: 'How to Support a Partner in Therapy Without Overstepping',
     description: `Learn how to be supportive of your partner's mental health journey while respecting boundaries and maintaining a healthy relationship.`,
     image: '/images/articles/cat14/cover-041.svg',
@@ -231,6 +232,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
   {
     id: catId(42),
     slug: 'supporting-child-through-therapy-parents-role',
+    status: 'draft',
     title: `Supporting Your Child Through Therapy: A Parent's Role`,
     description: "How to help your child get the most from therapy while navigating your own feelings about their mental health treatment.",
     image: "/images/articles/cat14/cover-042.svg",
@@ -496,6 +498,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
   {
     id: catId(43),
     slug: 'when-friend-tells-you-theyre-struggling-respond-with-care',
+    status: 'draft',
     title: `When a Friend Tells You They're Struggling: How to Respond with Care`,
     description: "What to say (and what not to say) when a friend opens up about their mental health struggles. A practical guide to supportive friendship.",
     image: "/images/articles/cat14/cover-043.svg",
@@ -727,6 +730,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'staging-intervention-evidence-based-approaches',
+    status: 'draft',
     title: 'Staging an Intervention: When, Why, and How --- Evidence-Based Approaches',
     description: 'Learn when interventions are appropriate, how to plan one effectively, and evidence-based alternatives to confrontational approaches.',
     image: "/images/articles/cat14/cover-044.svg",
@@ -1013,6 +1017,7 @@ export const supportingSomeoneInTreatmentArticlesA: Article[] = [
   {
     id: catId(45),
     slug: 'caregiver-fatigue-taking-care-of-yourself',
+    status: 'draft',
     title: 'Caregiver Fatigue: Taking Care of Yourself While Supporting Someone Else',
     description: 'Recognize the signs of caregiver burnout and learn practical strategies for sustaining your own well-being while supporting a loved one.',
     image: "/images/articles/cat14/cover-045.svg",

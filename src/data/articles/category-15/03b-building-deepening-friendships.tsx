@@ -19,6 +19,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'finding-your-people-build-friend-group-feels-like-home',
+    status: 'draft',
     title: 'Finding Your People: How to Build a Friend Group That Feels Like Home',
     description: 'Moving beyond individual friendships to find or create a group where you truly belong. Strategies for building your chosen family.',
     image: "/images/articles/cat15/cover-026.svg",
@@ -387,6 +388,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'art-of-reaching-out-making-first-move',
+    status: 'draft',
     title: 'The Art of Reaching Out: Why Making the First Move Gets Easier with Practice',
     description: 'Overcome the fear of initiating contact and learn why most people appreciate when you reach out first.',
     image: "/images/articles/cat15/cover-027.svg",
@@ -792,6 +794,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'friendship-vulnerability-opening-up-builds-closer-bonds',
+    status: 'draft',
     title: 'Friendship and Vulnerability: Why Opening Up Builds Closer Bonds',
     description: 'Learn why sharing your inner world creates intimacy and how to practice healthy vulnerability in friendships.',
     image: "/images/articles/cat15/cover-028.svg",
@@ -1227,6 +1230,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'maintaining-long-distance-friendships-strategies-that-work',
+    status: 'draft',
     title: 'Maintaining Long-Distance Friendships: Strategies That Actually Work',
     description: 'Research-backed strategies for keeping friendships strong across distance, from communication patterns to visit planning.',
     image: "/images/articles/cat15/cover-029.svg",
@@ -1669,6 +1673,7 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'when-to-let-friendship-go-recognizing-connection-run-course',
+    status: 'draft',
     title: 'When to Let a Friendship Go: Recognizing When Connection Has Run Its Course',
     description: `Not all friendships are meant to last forever. Learn to recognize when it's time to let go with grace and without guilt.`,
     image: '/images/articles/cat15/cover-030.svg',

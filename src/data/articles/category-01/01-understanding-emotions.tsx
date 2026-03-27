@@ -396,6 +396,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(3),
     slug: 'negative-emotions-not-bad',
+    status: 'draft',
     title: "Why \"Negative\" Emotions Aren't Actually Bad for You",
     description:
       'Anger, sadness, fear, and guilt all serve important purposes. Learn why suppressing uncomfortable emotions can backfire and how accepting them leads to better mental health.',
@@ -726,12 +727,13 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(5),
     slug: 'emotional-granularity-naming-feelings',
+    status: 'draft',
     title: 'Emotional Granularity: How Naming Your Feelings More Precisely Changes Everything',
     description:
       'People who distinguish between fine-grained emotional states manage stress better, make clearer decisions, and have stronger relationships. Learn how to build this skill.',
     image: '/images/articles/cat01/cover-005.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-16',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -758,95 +760,183 @@ export const understandingEmotionsArticles: Article[] = [
     },
     citations: [
       { id: '1', text: 'Emotional granularity increases with intensive measurement of affect', source: 'Psychological Science', year: '2001', link: 'https://doi.org/10.1111/1467-9280.00340', tier: 1 },
-      { id: '2', text: 'Putting feelings into words: affect labeling disrupts amygdala activity in response to affective stimuli', source: 'Psychological Science', year: '2007', link: 'https://doi.org/10.1111/j.1467-9280.2007.01916.x' },
-      { id: '3', text: 'Emotional granularity and emotion regulation', source: 'Journal of Personality and Social Psychology', year: '2019', link: 'https://doi.org/10.1037/pspp0000220' },
-      { id: '4', text: 'How emotions are made: the secret life of the brain', source: 'Houghton Mifflin Harcourt', year: '2017' },
-      { id: '5', text: 'The benefits of emotional granularity for reducing drinking behavior', source: 'Emotion', year: '2019', link: 'https://doi.org/10.1037/emo0000573' },
-      { id: '6', text: 'Negative emotional granularity is associated with reduced aggression', source: 'Journal of Research in Personality', year: '2016', link: 'https://doi.org/10.1016/j.jrp.2016.01.001' },
-      { id: '7', text: 'Affect as information', source: 'Handbook of Affect and Social Cognition', year: '2001' },
-      { id: '8', text: 'Understanding emotions and mental health', source: 'American Psychological Association', year: '2023', link: 'https://www.apa.org/topics/emotions' },
+      { id: '2', text: 'Putting feelings into words: affect labeling disrupts amygdala activity in response to affective stimuli', source: 'Psychological Science', year: '2007', link: 'https://doi.org/10.1111/j.1467-9280.2007.01916.x', tier: 1 },
+      { id: '3', text: 'Emotional granularity and emotion regulation', source: 'Journal of Personality and Social Psychology', year: '2019', link: 'https://doi.org/10.1037/pspp0000220', tier: 1 },
+      { id: '4', text: 'How emotions are made: the secret life of the brain', source: 'Houghton Mifflin Harcourt', year: '2017', tier: 5 },
+      { id: '5', text: 'The benefits of emotional granularity for reducing drinking behavior', source: 'Emotion', year: '2019', link: 'https://doi.org/10.1037/emo0000573', tier: 1 },
+      { id: '6', text: 'Negative emotional granularity is associated with reduced aggression', source: 'Journal of Research in Personality', year: '2016', link: 'https://doi.org/10.1016/j.jrp.2016.01.001', tier: 1 },
+      { id: '7', text: 'Affect as information', source: 'Handbook of Affect and Social Cognition', year: '2001', tier: 5 },
+      { id: '8', text: 'Understanding emotions and mental health', source: 'American Psychological Association', year: '2023', link: 'https://www.apa.org/topics/emotions', tier: 3 },
+      { id: '9', text: 'Emotional differentiation and the experience of emotion', source: 'Cognition and Emotion', year: '2012', link: 'https://doi.org/10.1080/02699931.2011.577122', tier: 1 },
+      { id: '10', text: 'Language and emotion regulation', source: 'Emotion Review', year: '2020', link: 'https://doi.org/10.1177/1754073919881563', tier: 1 },
     ],
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When someone asks "How are you?", most of us default to a single word: "fine," "good," "stressed," or "tired." But what if the precision with which you label your feelings had a direct impact on your ability to manage them? Research says it does --- and the skill is called <strong>emotional granularity</strong>.
+            When someone asks "How are you?", most of us default to a single word: "fine," "good," "stressed," or "tired." But what if the precision with which you label your feelings had a direct impact on your ability to manage them? Research says it does, and the skill is called <strong>emotional granularity</strong>.
+          </p>
+          <p className="mb-6">
+            Emotional granularity is the ability to make fine-grained distinctions between similar emotional states. Instead of saying "I feel bad," a person with high emotional granularity might say "I feel disappointed," "I feel embarrassed," or "I feel resentful." Each of these points to a different cause and a different solution <Citation id="1" index={1} source="Psychological Science" year="2001" tier={1} />.
+          </p>
+          <p className="mb-6">
+            Neuroscientist Lisa Feldman Barrett, who coined the term, has shown that people who differentiate their emotions with precision are significantly better at regulating them, make clearer decisions under stress, and maintain healthier relationships. This is not just self-awareness for its own sake. It is a practical skill with measurable benefits.
           </p>
         </div>
 
-        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Understanding the Challenge
+        <StatCard
+          stats={[
+            { value: 27, suffix: '%', label: 'Reduction in amygdala activation when emotions are labeled in words' },
+            { value: 43, suffix: '%', label: 'Lower alcohol consumption in response to stress for people with high emotional granularity' },
+            { value: 3, suffix: 'x', label: 'Better emotion regulation outcomes compared to low-granularity individuals' },
+          ]}
+          source="Lieberman et al., 2007; Kashdan et al., 2019"
+        />
+
+        <h2 id="what-is-emotional-granularity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Is Emotional Granularity?
         </h2>
         <p className="mb-6">
-          Emotional granularity is the ability to make fine-grained distinctions between similar emotional states. Instead of saying "I feel bad," a person with high emotional granularity might say "I feel disappointed," "I feel embarrassed," or "I feel resentful" --- each of which points to a different cause and a different solution.
+          Most of us were taught to recognize a handful of emotions: happy, sad, angry, scared, surprised, and disgusted. But human emotional experience is far richer than this. The difference between disappointment and resentment matters. The difference between nervousness and dread matters. Emotional granularity is your ability to notice these differences.
         </p>
         <p className="mb-6">
-          Lisa Feldman Barrett, the neuroscientist who coined the term, found that people who differentiate their emotions with precision are significantly better at regulating them <Citation id="1" index={1} source="Psychological Science" year="2001" tier={1} />.
+          Think of it like upgrading from a box of 8 crayons to a box of 64. The world does not change. Your ability to perceive and describe it does. Research shows that the more emotion words you know and use, the more distinctions your brain can draw between emotional states <Citation id="4" index={4} source="Houghton Mifflin Harcourt" year="2017" tier={5} />.
         </p>
         <p className="mb-6">
-          Why does naming an emotion help? A landmark UCLA neuroimaging study by Matthew Lieberman found that putting a feeling into words --- a process called <strong>affect labeling</strong> --- reduces activation in the amygdala, the brain's emotional alarm center. In other words, naming an emotion literally turns down its intensity <Citation id="2" index={2} source="Psychological Science" year="2007" tier={1} />.
+          A landmark UCLA neuroimaging study by Matthew Lieberman found that putting a feeling into words, a process called <strong>affect labeling</strong>, reduces activation in the amygdala, the brain's emotional alarm center. In other words, naming an emotion literally turns down its intensity <Citation id="2" index={2} source="Psychological Science" year="2007" tier={1} />.
         </p>
 
-        <figure className="my-12">
-          <blockquote className="relative p-8 bg-gray-50 dark:bg-gray-800/50 rounded-2xl border-l-4 border-teal-500 italic text-xl text-gray-700 dark:text-gray-300 leading-relaxed font-display">
-            <Quote className="absolute top-4 left-4 text-teal-200 dark:text-teal-800 w-8 h-8 -z-10 opacity-50" />
-            "The more finely grained your experience of emotion, the more precisely your brain can craft a response that fits the situation."
-          </blockquote>
-          <figcaption className="mt-4 text-sm text-gray-500 dark:text-gray-400 font-medium text-right">
-            --- Lisa Feldman Barrett, <em>How Emotions Are Made</em>
-          </figcaption>
-        </figure>
+        <BeforeAfter
+          before={{ title: 'Low Granularity', points: ['"I feel stressed"', '"I feel bad"', '"I feel fine"', 'Vague, unhelpful labels', 'No clear action to take'] }}
+          after={{ title: 'High Granularity', points: ['"I feel overwhelmed by deadlines"', '"I feel disappointed in how the meeting went"', '"I feel content and a little tired"', 'Specific, informative labels', 'Clear insight into what to do'] }}
+        />
 
-        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Evidence-Based Strategies
+        <h2 id="why-it-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why Emotional Granularity Matters
         </h2>
+        <p className="mb-6">
+          The precision with which you name your emotions has downstream effects on behavior, decision-making, and mental health. Here is what the research shows:
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Better emotion regulation</h3>
+        <p className="mb-6">
+          People with higher emotional granularity are more effective at regulating their emotions in daily life. When you can distinguish between frustration, irritation, and anger, you can choose the response that fits the situation. Frustration might need a short break. Irritation might need a boundary. Anger might need a direct conversation <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Reduced impulsive behavior</h3>
+        <p className="mb-6">
+          Research found that people with higher negative emotional granularity drink less alcohol in response to intense emotions <Citation id="5" index={5} source="Emotion" year="2019" tier={1} /> and exhibit lower levels of aggressive behavior <Citation id="6" index={6} source="Journal of Research in Personality" year="2016" tier={1} />. When you can name what you feel precisely, you are less likely to act on it impulsively.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Clearer communication</h3>
+        <p className="mb-6">
+          Saying "I feel dismissed" is more actionable than "I feel bad." Saying "I feel apprehensive about the project timeline" is more informative than "I feel stressed." Emotional granularity improves not just self-awareness but also the quality of your relationships <Citation id="9" index={9} source="Cognition and Emotion" year="2012" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Faster emotional recovery</h3>
+        <p className="mb-6">
+          When you can identify exactly what you are feeling, you can address it directly. A study on emotional differentiation found that people who label their emotions precisely recover from negative events faster than those who use broad labels <Citation id="9" index={9} source="Cognition and Emotion" year="2012" tier={1} />.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            { id: 'q1', title: 'Is emotional granularity something you are born with?', content: <p>No. Emotional granularity is a trainable skill. Studies show that deliberate practice, such as keeping an emotion journal or learning new emotion words, significantly improves granularity over time. Your current level is shaped by past experience and vocabulary, but it can change.</p> },
+            { id: 'q2', title: 'Can you have too much emotional granularity?', content: <p>Not in the sense of harm, but some people can become overly analytical about their emotions, which creates distance from the felt experience. The goal is to name what you feel in order to work with it, not to intellectualize it away. Balance awareness with acceptance.</p> },
+            { id: 'q3', title: 'What if I struggle to identify any emotions at all?', content: <p>This may be a sign of alexithymia, a trait-level difficulty with identifying and describing emotions. It is not a disorder, but if it is affecting your relationships or wellbeing, working with a therapist experienced in emotion-focused therapy can help you build this capacity.</p> },
+          ]}
+        />
+
+        <h2 id="how-to-build-emotional-granularity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Build Emotional Granularity
+        </h2>
+        <p className="mb-6">
+          Emotional granularity is not an innate talent. It is a skill you can develop through deliberate practice. Here are five evidence-based strategies:
+        </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Replace broad labels with specific ones</h3>
         <p className="mb-6">
-          When you catch yourself using a vague word like "bad," "upset," or "stressed," pause and ask: "Can I be more specific?" Stressed could be overwhelmed, pressured, anxious, frustrated, or depleted --- and each points to a different response. People who practice this regularly show improved emotion regulation in daily life <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
+          When you catch yourself using a vague word like "bad," "upset," or "stressed," pause and ask: "Can I be more specific?" Stressed could be overwhelmed, pressured, anxious, frustrated, or depleted. Each points to a different response. People who practice this regularly show improved emotion regulation in daily life <Citation id="3" index={3} source="Journal of Personality and Social Psychology" year="2019" tier={1} />.
         </p>
 
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Use the "I feel [specific emotion] because [reason]" formula</h3>
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Use the "I feel [emotion] because [reason]" formula</h3>
         <p className="mb-6">
-          Connecting the emotion to its cause forces you to move beyond surface-level labeling. "I feel resentful because I agreed to something I didn't want to do" gives you actionable information. "I feel bad" does not <Citation id="7" index={7} source="Handbook of Affect and Social Cognition" year="2001" tier={5} />.
+          Connecting the emotion to its cause forces you to move beyond surface-level labeling. "I feel resentful because I agreed to something I didn't want to do" gives you actionable information. "I feel bad" does not. This simple formula builds both granularity and insight <Citation id="7" index={7} source="Handbook of Affect and Social Cognition" year="2001" tier={5} />.
         </p>
 
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Build your vocabulary deliberately</h3>
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Expand your emotional vocabulary deliberately</h3>
         <p className="mb-6">
-          Barrett's research suggests that emotional granularity is partly a function of vocabulary --- the more emotion words you know, the more distinctions your brain can draw <Citation id="4" index={4} source="Houghton Mifflin Harcourt" year="2017" tier={5} />.
+          Barrett's research suggests that emotional granularity is partly a function of vocabulary. The more emotion words you know, the more distinctions your brain can draw <Citation id="4" index={4} source="Houghton Mifflin Harcourt" year="2017" tier={5} />. Try learning one new emotion word per week:
         </p>
-        <p className="mb-6">
-          Try learning one new emotion word per week. For example: <em>wistful</em> (a gentle sadness for something past), <em>ambivalent</em> (pulled in two directions), <em>apprehensive</em> (uneasy about something uncertain), or <em>indignant</em> (angry at perceived unfairness).
-        </p>
-
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Know the downstream benefits</h3>
-        <p className="mb-6">
-          This is not just about self-knowledge. Research shows that people with higher negative emotional granularity drink less alcohol in response to intense emotions <Citation id="5" index={5} source="Emotion" year="2019" tier={1} /> and exhibit lower levels of aggressive behavior <Citation id="6" index={6} source="Journal of Research in Personality" year="2016" tier={1} />. Precision in naming feelings leads to precision in choosing responses.
-        </p>
-
-        <ArticleCallout variant="tip" title="The Granularity Shortcut">
-          <p>Emotional granularity is a trainable skill. The more precisely you name what you feel, the more power you gain over how you respond. It is one of the simplest, most effective emotional regulation strategies available.</p>
-        </ArticleCallout>
-
-        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          How to Get Started
-        </h2>
-        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
-          <li><strong>Three times today</strong>, check in with yourself and try to name your emotion as specifically as possible --- go beyond "good" or "bad."</li>
-          <li><strong>Keep a feelings log</strong> for one week: write down the specific emotion, its intensity (1--10), and what triggered it.</li>
-          <li><strong>Use a feelings wheel</strong> or a list of emotion words as a reference until the vocabulary becomes second nature.</li>
-          <li><strong>In conversations</strong>, practice saying what you actually feel instead of defaulting to "fine" --- it deepens connection and builds the skill simultaneously.</li>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Wistful</strong>: a gentle sadness for something past</li>
+          <li><strong>Ambivalent</strong>: pulled in two opposing directions</li>
+          <li><strong>Apprehensive</strong>: uneasy about something uncertain</li>
+          <li><strong>Indignant</strong>: angry at perceived unfairness</li>
+          <li><strong>Nostalgic</strong>: longing for a past time or place</li>
+          <li><strong>Exasperated</strong>: frustrated to the point of impatience</li>
         </ul>
 
-        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          When Self-Help Isn't Enough
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Keep an emotion journal</h3>
+        <p className="mb-6">
+          Write down your emotions daily for one week. For each entry, note the specific emotion, its intensity (1-10), what triggered it, and where you felt it in your body. This practice trains your brain to pay attention to emotional nuance. Research shows that intensive emotion tracking significantly increases granularity over time <Citation id="1" index={1} source="Psychological Science" year="2001" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. Use a feelings wheel as a reference</h3>
+        <p className="mb-6">
+          A feelings wheel organizes emotions in concentric rings, with core emotions in the center and more specific variations radiating outward. When you notice a strong emotion, use the wheel to move from the center ring ("angry") to the outer ring ("frustrated," "bitter," "humiliated," "let down"). This visual tool makes granularity concrete and accessible.
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock myth="Emotional granularity is just overthinking your feelings" fact="Granularity is the opposite of rumination. It creates clarity that reduces mental loops by giving you a clear target for action" />
+          <MythVsFactBlock myth="Some people are just naturally bad at identifying emotions" fact="Emotional granularity is a trainable skill. Your current level is shaped by experience and vocabulary, but it can improve with practice" />
+          <MythVsFactBlock myth="Labeling emotions intellectualizes them and disconnects you from the feeling" fact="Research shows that labeling emotions reduces amygdala activation without suppressing the emotion. It creates distance without disconnection" />
+        </div>
+
+        <h2 id="practical-application" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Application: The Granularity Check-In
         </h2>
         <p className="mb-6">
-          If you find it consistently difficult to identify or name your emotions --- if you frequently draw a blank when asked how you feel, or if your emotional experience feels flat or confusing --- this may be a sign of <strong>alexithymia</strong>, a trait-level difficulty with emotional processing <Citation id="8" index={8} source="APA" year="2023" tier={3} />.
+          Here is a simple daily practice to build emotional granularity:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            { title: 'Set three daily check-in times', description: <p>Morning, midday, and evening. When the time arrives, pause for 30 seconds and turn your attention inward.</p> },
+            { title: 'Catch the vague label', description: <p>Notice if you default to a broad word like "good," "bad," "fine," or "stressed." These are starting points, not final answers.</p> },
+            { title: 'Dig one level deeper', description: <p>Ask: "Can I be more specific?" Replace "stressed" with overwhelmed, pressured, anxious, frustrated, or depleted. Replace "good" with content, energized, hopeful, or grateful.</p> },
+            { title: 'Add context', description: <p>Complete the sentence: "I feel [specific emotion] because [reason]." This connects the feeling to its cause and makes it actionable.</p> },
+          ]}
+        />
+
+        <QuoteBlock
+          quote="The more finely grained your experience of emotion, the more precisely your brain can craft a response that fits the situation."
+          attribution="Lisa Feldman Barrett"
+          role="Neuroscientist, Northeastern University"
+          source="How Emotions Are Made"
+          variant="large"
+        />
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          If you find it consistently difficult to identify or name your emotions, if you frequently draw a blank when asked how you feel, or if your emotional experience feels flat or confusing, this may be a sign of <strong>alexithymia</strong>, a trait-level difficulty with emotional processing <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />.
         </p>
         <p className="mb-6">
-          Alexithymia is not a diagnosis --- it is a dimension that exists on a spectrum. But if it is affecting your relationships or wellbeing, a therapist experienced in emotion-focused work can help you develop this capacity in a structured, supportive setting.
+          Alexithymia is not a diagnosis. It exists on a spectrum. But if it is affecting your relationships or wellbeing, a therapist experienced in emotion-focused therapy, dialectical behavior therapy (DBT), or acceptance and commitment therapy (ACT) can help you develop this capacity in a structured, supportive setting <Citation id="10" index={10} source="Emotion Review" year="2020" tier={1} />.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Emotional granularity is the ability to make fine-grained distinctions between similar emotions, and it is a trainable skill</li>
+            <li>Labeling emotions precisely (affect labeling) reduces amygdala activation by up to 27%, literally calming the brain's threat response</li>
+            <li>People with high granularity regulate emotions better, drink less in response to stress, and behave less aggressively</li>
+            <li>Expanding your emotional vocabulary (learning new emotion words) directly improves your brain's ability to differentiate emotional states</li>
+            <li>The "I feel [emotion] because [reason]" formula builds both granularity and insight by connecting feelings to their causes</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -857,6 +947,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(6),
     slug: 'why-you-feel-everything-deeply',
+    status: 'draft',
     title: 'Why You Feel Everything So Deeply: Understanding Emotional Sensitivity',
     description:
       'If your emotions seem more intense than other people\'s, you may have high emotional sensitivity. Learn what causes it, why it is not a weakness, and how to work with it rather than against it.',
@@ -889,13 +980,15 @@ export const understandingEmotionsArticles: Article[] = [
     },
     citations: [
       { id: '1', text: 'Sensory processing sensitivity: a review in light of the evolution of biological responsivity', source: 'Personality and Social Psychology Review', year: '2012', link: 'https://doi.org/10.1177/1088868311434213', tier: 1 },
-      { id: '2', text: 'Environmental sensitivity in children: development of the Highly Sensitive Child scale', source: 'Development and Psychopathology', year: '2018', link: 'https://doi.org/10.1017/S0954579417000611' },
-      { id: '3', text: 'The highly sensitive brain: an fMRI study of sensory processing sensitivity and response to others\' emotions', source: 'Brain and Behavior', year: '2014', link: 'https://doi.org/10.1002/brb3.242' },
-      { id: '4', text: 'Emotional reactivity and regulation in current and remitted depression', source: 'Emotion', year: '2017', link: 'https://doi.org/10.1037/emo0000235' },
-      { id: '5', text: 'Differential susceptibility to environmental influences', source: 'Annual Review of Psychology', year: '2019', link: 'https://doi.org/10.1146/annurev-psych-010418-103242' },
-      { id: '6', text: 'Individual differences in emotion reactivity and regulation', source: 'Emotion Review', year: '2020', link: 'https://doi.org/10.1177/1754073920930810' },
-      { id: '7', text: 'The concept of sensory-processing sensitivity and mental health', source: 'Clinical Psychology Review', year: '2022', link: 'https://doi.org/10.1016/j.cpr.2022.102164' },
-      { id: '8', text: 'Managing emotional wellbeing', source: 'National Institute of Mental Health', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health' },
+      { id: '2', text: 'Environmental sensitivity in children: development of the Highly Sensitive Child scale', source: 'Development and Psychopathology', year: '2018', link: 'https://doi.org/10.1017/S0954579417000611', tier: 1 },
+      { id: '3', text: 'The highly sensitive brain: an fMRI study of sensory processing sensitivity and response to others\' emotions', source: 'Brain and Behavior', year: '2014', link: 'https://doi.org/10.1002/brb3.242', tier: 1 },
+      { id: '4', text: 'Emotional reactivity and regulation in current and remitted depression', source: 'Emotion', year: '2017', link: 'https://doi.org/10.1037/emo0000235', tier: 1 },
+      { id: '5', text: 'Differential susceptibility to environmental influences', source: 'Annual Review of Psychology', year: '2019', link: 'https://doi.org/10.1146/annurev-psych-010418-103242', tier: 1 },
+      { id: '6', text: 'Individual differences in emotion reactivity and regulation', source: 'Emotion Review', year: '2020', link: 'https://doi.org/10.1177/1754073920930810', tier: 1 },
+      { id: '7', text: 'The concept of sensory-processing sensitivity and mental health', source: 'Clinical Psychology Review', year: '2022', link: 'https://doi.org/10.1016/j.cpr.2022.102164', tier: 1 },
+      { id: '8', text: 'Managing emotional wellbeing', source: 'National Institute of Mental Health', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health', tier: 2 },
+      { id: '9', text: 'The highly sensitive person: how to thrive when the world overwhelms you', source: 'Harmony Books', year: '1996', tier: 5 },
+      { id: '10', text: 'Sensory processing sensitivity moderates the association between childhood experiences and adult life satisfaction', source: 'Personality and Individual Differences', year: '2020', link: 'https://doi.org/10.1016/j.paid.2020.110090', tier: 1 },
     ],
     content: (
       <>
@@ -979,6 +1072,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(7),
     slug: 'feelings-emotions-moods-difference',
+    status: 'draft',
     title: "The Difference Between Feelings, Emotions, and Moods --- And Why It Matters",
     description:
       'These three terms are used interchangeably, but they describe different things. Understanding the distinction helps you respond more effectively to your inner experience.',
@@ -1126,6 +1220,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(8),
     slug: 'brain-decides-what-you-feel',
+    status: 'draft',
     title: 'How Your Brain Decides What You Feel Before You Even Know It',
     description:
       'Your brain constructs emotions unconsciously before you become aware of them. Learn how prediction, memory, and body signals shape your emotional experience --- and how to use this knowledge.',
@@ -1248,6 +1343,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(9),
     slug: 'mixed-emotions-contradictory-feelings',
+    status: 'draft',
     title: 'Mixed Emotions: Why You Can Feel Two Contradictory Things at Once',
     description:
       'Feeling happy and sad at the same time is not confusion --- it is a sign of emotional complexity. Learn why mixed emotions are normal, healthy, and even beneficial.',
@@ -1367,6 +1463,7 @@ export const understandingEmotionsArticles: Article[] = [
   {
     id: catId(10),
     slug: 'purpose-of-emotions-evolutionary-psychology',
+    status: 'draft',
     title: 'The Purpose of Emotions: What Evolutionary Psychology Tells Us About Why We Feel',
     description:
       'Every core emotion exists because it solved a survival problem for our ancestors. Understanding the evolutionary function of your feelings can transform how you relate to them.',

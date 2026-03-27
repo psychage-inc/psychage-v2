@@ -610,6 +610,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
   {
     id: catId(58),
     slug: 'bullying-mental-health-supporting-child-social-cruelty',
+    status: 'draft',
     title: 'Bullying and Mental Health: How to Support Your Child Through Social Cruelty',
     description: 'Learn how bullying affects mental health, how to recognize signs your child is being bullied, and effective intervention strategies.',
     image: "/images/articles/cat06/cover-058.svg",
@@ -876,6 +877,7 @@ export const supportingChildrensMentalHealthArticlesB: Article[] = [
   {
     id: catId(59),
     slug: 'should-child-see-therapist-when-seek-professional-help',
+    status: 'draft',
     title: 'Should My Child See a Therapist? When and How to Seek Professional Help',
     description: 'Learn when therapy is appropriate for children, how to find the right therapist, and what to expect from child therapy.',
     image: "/images/articles/cat06/cover-059.svg",

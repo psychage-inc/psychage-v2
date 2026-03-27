@@ -23,6 +23,7 @@ export const schizophreniaArticlesA: Article[] = [
   {
     id: catId(11),
     slug: 'schizophrenia-explained-what-science-actually-knows',
+    status: 'draft',
     title: 'Schizophrenia Explained: What Science Actually Knows',
     description: 'A comprehensive, evidence-based overview of schizophrenia --- what decades of research have revealed about its causes, how it manifests, and what effective treatment looks like today.',
     image: '/images/articles/cat16/cover-011.svg',
@@ -292,6 +293,7 @@ export const schizophreniaArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'positive-negative-cognitive-symptoms-of-schizophrenia',
+    status: 'draft',
     title: 'Positive, Negative, and Cognitive Symptoms of Schizophrenia',
     description: 'A detailed guide to the three symptom domains of schizophrenia --- what each involves, how they affect daily life, and why understanding all three is essential for effective treatment.',
     image: '/images/articles/cat16/cover-012.svg',
@@ -518,6 +520,7 @@ export const schizophreniaArticlesA: Article[] = [
   {
     id: catId(13),
     slug: 'schizoaffective-disorder-when-psychosis-and-mood-disorders-overlap',
+    status: 'draft',
     title: 'Schizoaffective Disorder: When Psychosis and Mood Disorders Overlap',
     description: 'Understanding schizoaffective disorder --- a condition at the intersection of schizophrenia and mood disorders, and one of the most debated diagnoses in psychiatry.',
     image: '/images/articles/cat16/cover-013.svg',
@@ -710,6 +713,7 @@ export const schizophreniaArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'schizophreniform-disorder-short-duration-psychotic-conditions',
+    status: 'draft',
     title: 'Schizophreniform Disorder: Short-Duration Psychotic Conditions',
     description: 'Understanding schizophreniform disorder --- a psychotic condition that looks like schizophrenia but resolves within six months, and what this transitional diagnosis means for people and their families.',
     image: '/images/articles/cat16/cover-014.svg',
@@ -895,6 +899,7 @@ export const schizophreniaArticlesA: Article[] = [
   {
     id: catId(15),
     slug: 'genetics-of-schizophrenia-what-family-history-means-and-doesnt',
+    status: 'draft',
     title: 'The Genetics of Schizophrenia: What Family History Means and Doesn\'t Mean',
     description: 'What science has learned about the genetics of schizophrenia --- from family risk patterns and twin studies to genome-wide discoveries --- and why having a relative with schizophrenia doesn\'t determine your destiny.',
     image: '/images/articles/cat16/cover-015.svg',

@@ -520,6 +520,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'heart-attack-vs-panic-attack-difference',
+    status: 'draft',
     title: "Am I Having a Heart Attack?' --- How to Tell the Difference from a Panic Attack",
     description: "Learn the critical differences between heart attack and panic attack symptoms, and when you should seek emergency medical care.",
     image: "/images/articles/cat02/cover-012.svg",
@@ -991,6 +992,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
   {
     id: catId(13),
     slug: 'hyperventilation-and-anxiety-why-breathing-goes-wrong-and-how-to-fix-it',
+    status: 'draft',
     title: 'Hyperventilation and Anxiety: Why Breathing Goes Wrong and How to Fix It',
     description: 'Learn why anxiety causes hyperventilation, how rapid breathing creates physical symptoms, and evidence-based techniques to restore normal breathing patterns during panic.',
     image: "/images/articles/cat02/cover-013.svg",
@@ -1358,6 +1360,7 @@ export const panicPhysicalAnxietyArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'chest-tightness-tingling-and-dizziness-understanding-anxietys-physical-symptoms',
+    status: 'draft',
     title: "Chest Tightness, Tingling, and Dizziness: Understanding Anxiety's Physical Symptoms",
     description: "Discover why anxiety creates physical symptoms like chest tightness, tingling extremities, and dizziness --- and learn which sensations are anxiety versus when to seek medical care.",
     image: "/images/articles/cat02/cover-014.svg",

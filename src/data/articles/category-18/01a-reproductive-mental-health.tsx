@@ -664,6 +664,7 @@ export const articles: Article[] = [
   {
     id: catId(4),
     slug: 'hormonal-contraception-and-mental-health-birth-control-mood-effects',
+    status: 'draft',
     title: `Hormonal Contraception and Mental Health: Birth Control's Mood Effects`,
     description: `Understand the complex relationship between hormonal birth control and mental health, including depression risk and individual variability in response.`,
     image: '/images/articles/cat18/cover-004.svg',

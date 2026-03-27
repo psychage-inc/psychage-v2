@@ -18,6 +18,7 @@ export const anxietyDisordersArticlesB: Article[] = [
   {
     id: catId(6),
     slug: 'separation-anxiety-in-adults-when-distance-from-loved-ones-triggers-fear',
+    status: 'draft',
     title: 'Separation Anxiety in Adults: When Distance from Loved Ones Triggers Fear',
     description: 'Separation anxiety is not just for children. Learn how this condition manifests in adults, why it develops, and how to build secure independence.',
     image: "/images/articles/cat13/cover-006.svg",
@@ -413,6 +414,7 @@ export const anxietyDisordersArticlesB: Article[] = [
   {
     id: catId(7),
     slug: 'selective-mutism-when-anxiety-silences-speech',
+    status: 'draft',
     title: 'Selective Mutism: When Anxiety Silences Speech',
     description: 'Selective mutism is a childhood anxiety disorder where children cannot speak in certain situations despite speaking freely at home. Learn about diagnosis and treatment.',
     image: "/images/articles/cat13/cover-007.svg",
@@ -814,6 +816,7 @@ export const anxietyDisordersArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'how-anxiety-disorders-overlap-comorbidity-and-shared-mechanisms',
+    status: 'draft',
     title: 'How Anxiety Disorders Overlap: Comorbidity and Shared Mechanisms',
     description: 'Anxiety disorders rarely occur in isolation. Explore how they overlap, share underlying mechanisms, and what this means for treatment approaches.',
     image: "/images/articles/cat13/cover-008.svg",
@@ -1154,6 +1157,7 @@ export const anxietyDisordersArticlesB: Article[] = [
   {
     id: catId(9),
     slug: 'anxiety-disorders-in-children-early-signs-and-early-intervention',
+    status: 'draft',
     title: 'Anxiety Disorders in Children: Early Signs and Early Intervention',
     description: 'Childhood anxiety is more than typical worries. Learn to recognize the signs, understand the causes, and access effective early intervention strategies.',
     image: "/images/articles/cat13/cover-009.svg",
@@ -1541,6 +1545,7 @@ export const anxietyDisordersArticlesB: Article[] = [
   {
     id: catId(10),
     slug: 'the-neurobiology-of-anxiety-disorders-what-happens-in-the-brain',
+    status: 'draft',
     title: 'The Neurobiology of Anxiety Disorders: What Happens in the Brain',
     description: 'Explore the brain circuits, neurotransmitters, and genetic factors underlying anxiety disorders. Understand the science behind why anxiety feels the way it does.',
     image: "/images/articles/cat13/cover-010.svg",

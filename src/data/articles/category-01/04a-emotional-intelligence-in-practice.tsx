@@ -418,6 +418,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'reading-other-peoples-emotions-empathy-attunement-social-cues',
+    status: 'draft',
     title: "Reading Other People's Emotions: Empathy, Attunement, and Social Cues",
     description: "How to accurately perceive emotions in others through facial expressions, body language, and context---without mind-reading or projection.",
     image: "/images/articles/cat01/cover-032.svg",
@@ -698,6 +699,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'emotional-intelligence-in-conversations-listening-beyond-words',
+    status: 'draft',
     title: 'Emotional Intelligence in Conversations: Listening Beyond Words',
     description: "How to bring emotional intelligence to everyday conversations---hearing what's unsaid, validating feelings, and building deeper connection.",
     image: '/images/articles/cat01/cover-033.svg',
@@ -988,6 +990,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'how-to-respond-not-react-in-emotionally-charged-situations',
+    status: 'draft',
     title: 'How to Respond (Not React) in Emotionally Charged Situations',
     description: 'Learn the difference between reactive impulse and thoughtful response---and how to create space between feeling and action.',
     image: "/images/articles/cat01/cover-034.svg",
@@ -1279,6 +1282,7 @@ export const emotionalIntelligenceInPracticeArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'emotional-intelligence-at-work-managing-feelings-in-professional-settings',
+    status: 'draft',
     title: 'Emotional Intelligence at Work: Managing Feelings in Professional Settings',
     description: 'How to navigate workplace emotions, handle difficult colleagues, set boundaries, and maintain professionalism without suppressing your humanity.',
     image: "/images/articles/cat01/cover-035.svg",

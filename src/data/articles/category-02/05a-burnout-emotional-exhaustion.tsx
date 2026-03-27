@@ -19,6 +19,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
   {
     id: catId(41),
     slug: 'what-is-burnout-the-three-dimensions-of-emotional-exhaustion',
+    status: 'draft',
     title: 'What Is Burnout? The Three Dimensions of Emotional Exhaustion',
     description: `Understand the clinical definition of burnout, its three core components, and why it's more than just being tired or stressed.`,
     image: '/images/articles/cat02/cover-041.svg',
@@ -1132,6 +1133,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'burnout-in-healthcare-workers-a-crisis-within-a-crisis',
+    status: 'draft',
     title: 'Burnout in Healthcare Workers: A Crisis Within a Crisis',
     description: 'Understand the unique factors driving healthcare burnout, its impact on patient care, and evidence-based strategies for recovery and prevention.',
     image: "/images/articles/cat02/cover-044.svg",
@@ -1428,6 +1430,7 @@ export const burnoutEmotionalExhaustionArticlesA: Article[] = [
   {
     id: catId(45),
     slug: 'academic-burnout-when-the-pressure-to-perform-breaks-students-down',
+    status: 'draft',
     title: 'Academic Burnout: When the Pressure to Perform Breaks Students Down',
     description: 'Explore the rising epidemic of student burnout, from high school to graduate school, and learn how to recognize and address it before it derails education.',
     image: "/images/articles/cat02/cover-045.svg",

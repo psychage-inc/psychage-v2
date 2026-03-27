@@ -20,6 +20,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'loneliness-in-older-adults-health-crisis-aging-alone',
+    status: 'draft',
     title: 'Loneliness in Older Adults: The Health Crisis of Aging Alone',
     description: 'Loneliness in older age is a serious public health issue linked to mortality, dementia, and functional decline. Understand the risk factors and protective measures.',
     image: "/images/articles/cat15/cover-016.svg",
@@ -444,6 +445,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'loneliness-after-retirement-losing-work-identity-social-circle',
+    status: 'draft',
     title: 'Loneliness After Retirement: Losing Your Work Identity and Social Circle',
     description: 'Retirement removes daily structure, social contact, and purpose. Learn how to navigate this transition and build a fulfilling post-work life.',
     image: "/images/articles/cat15/cover-017.svg",
@@ -801,6 +803,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'loneliness-after-loss-when-grief-removes-your-person',
+    status: 'draft',
     title: 'Loneliness After Loss: When Grief Removes Your Person',
     description: 'Losing a loved one creates a unique loneliness that persists long after grief fades. Understand bereavement loneliness and how to find connection again.',
     image: "/images/articles/cat15/cover-018.svg",
@@ -1213,6 +1216,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'loneliness-in-caregivers-isolated-by-demands-looking-after-someone',
+    status: 'draft',
     title: 'Loneliness in Caregivers: Isolated by the Demands of Looking After Someone',
     description: 'Caregiving for a loved one often creates profound isolation. Understand caregiver loneliness and how to find support while providing care.',
     image: "/images/articles/cat15/cover-019.svg",
@@ -1619,6 +1623,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'lgbtq-loneliness-minority-stress-search-for-belonging',
+    status: 'draft',
     title: 'LGBTQ+ Loneliness: Minority Stress and the Search for Belonging',
     description: 'LGBTQ+ individuals face unique loneliness driven by discrimination, family rejection, and lack of community. Understand the challenges and pathways to connection.',
     image: "/images/articles/cat15/cover-020.svg",

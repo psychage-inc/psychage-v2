@@ -21,6 +21,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
   {
     id: catId(41),
     slug: 'paradox-connection-most-connected-generation-loneliest',
+    status: 'draft',
     title: 'The Paradox of Connection: Why the Most Connected Generation Feels the Loneliest',
     description: 'We have more ways to connect than ever before, yet loneliness is at an all-time high. Explore the paradox of digital connection and what it means for mental health.',
     image: "/images/articles/cat15/cover-041.svg",
@@ -317,6 +318,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
   {
     id: catId(42),
     slug: 'social-media-friendships-online-connections-count',
+    status: 'draft',
     title: 'Social Media Friendships: Do Online Connections Count?',
     description: 'Can friendships that exist primarily online provide real connection? What research says about the quality of digital relationships.',
     image: "/images/articles/cat15/cover-042.svg",
@@ -593,6 +595,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
   {
     id: catId(43),
     slug: 'remote-work-social-isolation-working-from-home',
+    status: 'draft',
     title: 'Remote Work and Social Isolation: How Working from Home Changed Our Social Lives',
     description: 'Remote work offers freedom but can increase loneliness. Learn how to maintain connection while working from home.',
     image: "/images/articles/cat15/cover-043.svg",
@@ -693,6 +696,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'loneliness-chronic-illness-health-barriers-social-connection',
+    status: 'draft',
     title: 'The Loneliness of Chronic Illness: When Health Barriers Block Social Connection',
     description: 'Chronic illness can create profound isolation. Understand why health challenges increase loneliness and how to stay connected.',
     image: "/images/articles/cat15/cover-044.svg",
@@ -793,6 +797,7 @@ export const digitalConnectionModernIsolationArticlesA: Article[] = [
   {
     id: catId(45),
     slug: 'pandemic-loneliness-covid-need-for-each-other',
+    status: 'draft',
     title: 'Pandemic Loneliness: What COVID Taught Us About Our Need for Each Other',
     description: 'The COVID-19 pandemic revealed the depth of our need for human connection. Learn what we learned about loneliness and belonging.',
     image: "/images/articles/cat15/cover-045.svg",

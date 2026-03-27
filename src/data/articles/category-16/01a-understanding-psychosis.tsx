@@ -22,6 +22,7 @@ export const understandingPsychosisArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'what-psychosis-really-is-separating-medical-reality-from-media-myths',
+    status: 'draft',
     title: 'What Psychosis Really Is: Separating Medical Reality From Media Myths',
     description: 'A comprehensive, evidence-based guide to understanding psychosis --- what it actually involves, how it differs from media portrayals, and why accurate knowledge matters for everyone.',
     image: '/images/articles/cat16/cover-001.svg',
@@ -273,6 +274,7 @@ export const understandingPsychosisArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'psychosis-spectrum-from-brief-episodes-to-chronic-conditions',
+    status: 'draft',
     title: 'The Psychosis Spectrum: From Brief Episodes to Chronic Conditions',
     description: 'Understand the full range of psychotic experiences --- from isolated episodes to schizophrenia --- and why thinking in terms of a spectrum changes how we approach diagnosis and treatment.',
     image: '/images/articles/cat16/cover-002.svg',
@@ -481,6 +483,7 @@ export const understandingPsychosisArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'early-warning-signs-of-psychosis-what-families-should-watch-for',
+    status: 'draft',
     title: 'Early Warning Signs of Psychosis: What Families Should Watch For',
     description: 'A practical guide for families on recognizing the prodromal signs of psychosis --- the subtle changes in thinking, perception, and behavior that can precede a first episode.',
     image: '/images/articles/cat16/cover-003.svg',
@@ -691,6 +694,7 @@ export const understandingPsychosisArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'first-episode-psychosis-what-happens-and-what-helps',
+    status: 'draft',
     title: 'First Episode Psychosis: What Happens and What Helps',
     description: 'What to expect during a first psychotic episode --- from initial symptoms through diagnosis and treatment --- plus the evidence-based approaches that give people the best chance of recovery.',
     image: '/images/articles/cat16/cover-004.svg',
@@ -890,6 +894,7 @@ export const understandingPsychosisArticlesA: Article[] = [
   {
     id: catId(5),
     slug: 'neuroscience-of-psychosis-dopamine-glutamate-brain-connectivity',
+    status: 'draft',
     title: 'The Neuroscience of Psychosis: Dopamine, Glutamate, and Brain Connectivity',
     description: 'A clear, evidence-based exploration of the brain mechanisms behind psychosis --- from the dopamine hypothesis to glutamate signaling, neuroinflammation, and structural brain changes.',
     image: '/images/articles/cat16/cover-005.svg',

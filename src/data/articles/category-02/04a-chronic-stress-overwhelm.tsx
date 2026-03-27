@@ -19,6 +19,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'what-is-chronic-stress-how-ongoing-pressure-changes-your-brain-and-body',
+    status: 'draft',
     title: 'What Is Chronic Stress? How Ongoing Pressure Changes Your Brain and Body',
     description: 'Discover how chronic stress differs from acute stress, its impact on your nervous system, and why it matters for your long-term health and wellbeing.',
     image: "/images/articles/cat02/cover-031.svg",
@@ -340,6 +341,7 @@ export const chronicStressOverwhelmArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'the-stress-response-system-understanding-cortisol-adrenaline-and-your-nervous-system',
+    status: 'draft',
     title: 'The Stress Response System: Understanding Cortisol, Adrenaline, and Your Nervous System',
     description: `Learn how your body's stress response works, from the hormones involved to the nervous system pathways that activate when you perceive threat.`,
     image: '/images/articles/cat02/cover-032.svg',

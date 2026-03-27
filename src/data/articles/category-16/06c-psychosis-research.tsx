@@ -16,6 +16,7 @@ export const psychosisResearchArticlesC: Article[] = [
   {
     id: catId(56),
     slug: 'exercise-and-physical-health-in-schizophrenia-moving-beyond-the-mind',
+    status: 'draft',
     title: 'Exercise and Physical Health in Schizophrenia: Moving Beyond the Mind',
     description:
       'Discover how physical activity improves not just cardiovascular health but also psychotic symptoms, cognition, and quality of life--addressing the severe health disparities in schizophrenia.',
@@ -406,6 +407,7 @@ export const psychosisResearchArticlesC: Article[] = [
   {
     id: catId(57),
     slug: 'trauma-adversity-and-psychosis-healing-the-wounds-that-fuel-symptoms',
+    status: 'draft',
     title: 'Trauma, Adversity, and Psychosis: Healing the Wounds That Fuel Symptoms',
     description:
       'Understand how childhood trauma, abuse, neglect, and ongoing adversity increase psychosis risk and shape symptom content--and how trauma-informed care offers pathways to healing.',
@@ -797,6 +799,7 @@ export const psychosisResearchArticlesC: Article[] = [
   {
     id: catId(58),
     slug: 'cultural-perspectives-on-psychosis-beyond-western-psychiatry',
+    status: 'draft',
     title: 'Cultural Perspectives on Psychosis: Beyond Western Psychiatry',
     description:
       'Explore how different cultures understand and respond to psychotic experiences--from spiritual emergence to ancestral communication--and what Western psychiatry can learn.',
@@ -1165,6 +1168,7 @@ export const psychosisResearchArticlesC: Article[] = [
   {
     id: catId(59),
     slug: 'cannabis-and-psychosis-understanding-the-complex-relationship',
+    status: 'draft',
     title: 'Cannabis and Psychosis: Understanding the Complex Relationship',
     description:
       'Examine the evidence linking cannabis use--especially high-potency products--to increased psychosis risk, and what this means for prevention and harm reduction.',
@@ -1525,6 +1529,7 @@ export const psychosisResearchArticlesC: Article[] = [
   {
     id: catId(60),
     slug: 'the-future-of-psychosis-research-from-precision-medicine-to-prevention',
+    status: 'draft',
     title: 'The Future of Psychosis Research: From Precision Medicine to Prevention',
     description:
       'Explore cutting-edge research directions--biomarkers, neuroimaging, AI, genomics, and early intervention--that promise to transform psychosis from chronic disability to preventable condition.',

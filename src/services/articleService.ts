@@ -14,6 +14,9 @@ import { getCategoryTheme } from '../config/categoryThemes';
 // Fallback to mock data if Supabase fails
 import { allArticles as mockArticles } from '../data/articles/all-articles';
 
+// Only serve published (or status-less) articles to the frontend
+const publishedMockArticles = mockArticles.filter(a => !a.status || a.status === 'published');
+
 // ============================================================================
 // Types
 // ============================================================================
@@ -157,7 +160,7 @@ export const articleService = {
 
         // Final fallback to mock data
         console.log('[ArticleService] Using mock data');
-        let result = mockArticles.map(a => ({ ...a, _source: 'mock' as const }));
+        let result = publishedMockArticles.map(a => ({ ...a, _source: 'mock' as const }));
         if (params?.category) {
             result = result.filter(a => a.category.slug === params.category);
         }
@@ -187,7 +190,7 @@ export const articleService = {
             return mapSupabaseToArticle(data);
         } catch (error) {
             console.warn('[ArticleService] Supabase getById failed, using mock data:', error);
-            const mockArticle = mockArticles.find(a => a.id.toString() === id.toString());
+            const mockArticle = publishedMockArticles.find(a => a.id.toString() === id.toString());
             return mockArticle ? { ...mockArticle, _source: 'mock' } : undefined;
         }
     },
@@ -198,7 +201,7 @@ export const articleService = {
      */
     getBySlug: async (slug: string): Promise<ArticleWithContent | undefined> => {
         // Check if mock data has rich JSX content for this slug
-        const mockArticle = mockArticles.find(a => a.slug === slug);
+        const mockArticle = publishedMockArticles.find(a => a.slug === slug);
         const hasRichMockContent = mockArticle && mockArticle.content && typeof mockArticle.content !== 'string';
 
         // If mock data has JSX content (charts, tables, accordions etc.), prefer it
@@ -384,7 +387,7 @@ export const articleService = {
         }
 
         // Fallback to mock data
-        const allMock = mockArticles.map(a => ({ ...a, _source: 'mock' as const }));
+        const allMock = publishedMockArticles.map(a => ({ ...a, _source: 'mock' as const }));
         const sameCat = allMock.filter(a => a.category.slug === categorySlug && a.id.toString() !== currentIdStr);
         if (sameCat.length >= limit) return sameCat.slice(0, limit);
 

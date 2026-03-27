@@ -19,6 +19,7 @@ export const communicationSkillsArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'active-listening-make-people-feel-truly-heard',
+    status: 'draft',
     title: 'Active Listening: How to Make People Feel Truly Heard',
     description: 'Master the art of active listening to deepen connections, resolve conflicts, and make others feel valued and understood.',
     image: "/images/articles/cat03/cover-021.svg",
@@ -345,6 +346,7 @@ export const communicationSkillsArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'nonviolent-communication-expressing-needs-without-blame-judgment',
+    status: 'draft',
     title: 'Nonviolent Communication: Expressing Needs Without Blame or Judgment',
     description: "Learn Marshall Rosenberg's NVC framework to express needs clearly, empathetically, and without triggering defensiveness in others.",
     image: '/images/articles/cat03/cover-022.svg',
@@ -630,6 +632,7 @@ export const communicationSkillsArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'four-horsemen-communication-what-kills-relationships-gottman-research',
+    status: 'draft',
     title: 'The Four Horsemen of Communication: What Kills Relationships (Gottman Research)',
     description: 'Research-backed breakdown of the four communication patterns that predict relationship failure---and their antidotes.',
     image: "/images/articles/cat03/cover-023.svg",
@@ -912,6 +915,7 @@ export const communicationSkillsArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'how-to-ask-for-what-you-need-assertive-communication-basics',
+    status: 'draft',
     title: 'How to Ask for What You Need: Assertive Communication Basics',
     description: 'Master the art of asking for what you need clearly, directly, and without apology---while still being respectful and kind.',
     image: "/images/articles/cat03/cover-024.svg",
@@ -1113,6 +1117,7 @@ export const communicationSkillsArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'validation-the-most-underrated-communication-skill',
+    status: 'draft',
     title: 'Validation: The Most Underrated Communication Skill',
     description: 'Learn why validation is the fastest way to de-escalate conflict, build trust, and make others feel heard---even when you disagree.',
     image: "/images/articles/cat03/cover-025.svg",

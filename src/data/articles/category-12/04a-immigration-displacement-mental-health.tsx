@@ -19,6 +19,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'mental-health-impact-immigration-newcomer-guide',
+    status: 'draft',
     title: 'The Mental Health Impact of Immigration: What Every Newcomer Needs to Know',
     description: 'Understand the psychological challenges of immigration, from pre-migration trauma to acculturation stress, and how to find support in your new home.',
     image: "/images/articles/cat12/cover-031.svg",
@@ -402,6 +403,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'refugee-mental-health-trauma-displacement-rebuilding',
+    status: 'draft',
     title: 'Refugee Mental Health: Trauma, Displacement, and Rebuilding',
     description: 'Understand the unique psychological impact of forced displacement, from pre-flight trauma to the challenges of resettlement and finding hope.',
     image: "/images/articles/cat12/cover-032.svg",
@@ -743,6 +745,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'asylum-seekers-psychological-distress-mental-health-crisis-borders',
+    status: 'draft',
     title: 'Asylum Seekers and Psychological Distress: The Mental Health Crisis at Borders',
     description: 'Understand the severe mental health toll of seeking asylum, from detention to prolonged uncertainty, and how policy creates psychological harm.',
     image: "/images/articles/cat12/cover-033.svg",
@@ -1055,6 +1058,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'acculturation-stress-adapting-new-culture-overwhelms',
+    status: 'draft',
     title: 'Acculturation Stress: When Adapting to a New Culture Overwhelms You',
     description: 'Learn how the process of cultural adaptation creates psychological strain, and strategies to navigate two cultures without losing yourself.',
     image: "/images/articles/cat12/cover-034.svg",
@@ -1329,6 +1333,7 @@ export const immigrationDisplacementMentalHealthArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'language-barriers-mental-health-cant-express-pain',
+    status: 'draft',
     title: `Language Barriers and Mental Health: When You Can\'t Express Your Pain`,
     description: "Understand how language barriers prevent access to mental health care and deepen psychological distress for immigrants and refugees.",
     image: "/images/articles/cat12/cover-035.svg",

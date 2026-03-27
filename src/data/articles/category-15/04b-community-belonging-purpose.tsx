@@ -21,6 +21,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'third-place-spaces-not-home-work',
+    status: 'draft',
     title: "The Third Place: Why We Need Spaces That Aren\'t Home or Work",
     description: 'Third places --- coffee shops, libraries, parks --- are disappearing. Learn why these informal gathering spaces are essential for mental health and community.',
     image: "/images/articles/cat15/cover-036.svg",
@@ -339,6 +340,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
     {
       id: catId(37),
       slug: 'purpose-meaning-protect-loneliness',
+      status: 'draft',
       title: 'How Purpose and Meaning Protect Against Loneliness',
       description: 'Purpose is one of the strongest buffers against loneliness. Learn how a sense of meaning changes the experience of being alone.',
       image: "/images/articles/cat15/cover-037.svg",
@@ -646,6 +648,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
     {
       id: catId(38),
       slug: 'community-gardens-book-clubs-running-groups-low-barrier-social',
+      status: 'draft',
       title: 'Community Gardens, Book Clubs, and Running Groups: Low-Barrier Social Entry Points',
       description: 'Joining a group can feel intimidating. These low-barrier communities make connection accessible for people who struggle with traditional socializing.',
       image: "/images/articles/cat15/cover-038.svg",
@@ -979,6 +982,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
       {
         id: catId(39),
         slug: 'online-communities-mental-health-virtual-belonging',
+        status: 'draft',
         title: 'Online Communities and Mental Health: When Virtual Belonging Fills a Real Need',
         description: 'For millions of people, online communities provide connection that is not available offline. Learn when digital belonging is enough.',
         image: "/images/articles/cat15/cover-039.svg",
@@ -1327,6 +1331,7 @@ export const communityBelongingPurposeArticlesB: Article[] = [
       {
         id: catId(40),
         slug: 'social-prescribing-connection-instead-medication',
+        status: 'draft',
         title: 'Social Prescribing: How Doctors Are Prescribing Connection Instead of Medication',
         description: 'Social prescribing --- referring patients to community activities instead of pills --- is transforming healthcare. Learn how connection is being treated as medicine.',
         image: "/images/articles/cat15/cover-040.svg",

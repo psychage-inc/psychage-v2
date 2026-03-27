@@ -18,6 +18,7 @@ export const communicationSkillsArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'why-i-statements-work-taking-ownership-of-your-experience',
+    status: 'draft',
     title: "Why 'I' Statements Work: Taking Ownership of Your Experience",
     description: `Learn why "I feel..." is more effective than "You always..." and how to use I-statements to reduce defensiveness in tough conversations.`,
     image: "/images/articles/cat03/cover-026.svg",
@@ -179,6 +180,7 @@ export const communicationSkillsArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'communication-styles-passive-aggressive-passive-aggressive-assertive',
+    status: 'draft',
     title: 'Communication Styles: Passive, Aggressive, Passive-Aggressive, and Assertive',
     description: 'Identify your default communication style and learn why assertive communication builds healthier relationships than the other three.',
     image: "/images/articles/cat03/cover-027.svg",
@@ -410,6 +412,7 @@ export const communicationSkillsArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'how-to-give-feedback-without-triggering-defensiveness',
+    status: 'draft',
     title: 'How to Give Feedback Without Triggering Defensiveness',
     description: 'Master the art of delivering constructive feedback that people can actually hear and act on---without making them defensive or angry.',
     image: "/images/articles/cat03/cover-028.svg",
@@ -618,6 +621,7 @@ export const communicationSkillsArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'the-art-of-apology-what-makes-im-sorry-actually-work',
+    status: 'draft',
     title: "The Art of Apology: What Makes 'I'm Sorry' Actually Work",
     description: "Learn the components of a genuine apology and why most apologies fail---plus scripts for making amends that actually repair relationships.",
     image: "/images/articles/cat03/cover-029.svg",
@@ -784,6 +788,7 @@ export const communicationSkillsArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'communicating-across-different-emotional-languages',
+    status: 'draft',
     title: 'Communicating Across Different Emotional Languages',
     description: "Understand why some people process emotions differently and how to bridge communication gaps when your emotional styles don't match.",
     image: '/images/articles/cat03/cover-030.svg',

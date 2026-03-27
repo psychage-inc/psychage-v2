@@ -904,6 +904,7 @@ export const articles: Article[] = [
   {
     id: catId(28),
     slug: 'social-and-cultural-aspects-of-menopause-ageism-and-identity',
+    status: 'draft',
     title: `Social and Cultural Aspects of Menopause: Ageism and Identity`,
     description: `Explore how cultural narratives about menopause and aging affect mental health, challenge ageist beliefs, and reclaim positive menopausal identity.`,
     image: '/images/articles/cat18/cover-028.svg',
@@ -1177,6 +1178,7 @@ export const articles: Article[] = [
   {
     id: catId(29),
     slug: 'managing-menopause-with-pre-existing-mental-health-conditions',
+    status: 'draft',
     title: `Managing Menopause with Pre-Existing Mental Health Conditions`,
     description: `Understand how menopause affects existing depression, anxiety, bipolar disorder, and other mental health conditions, and how to adjust treatment.`,
     image: '/images/articles/cat18/cover-029.svg',
@@ -1362,6 +1364,7 @@ export const articles: Article[] = [
   {
     id: catId(30),
     slug: 'surgical-menopause-and-mental-health-after-hysterectomy-and-oophorectomy',
+    status: 'draft',
     title: `Surgical Menopause and Mental Health: After Hysterectomy and Oophorectomy`,
     description: `Understand the unique mental health challenges of surgical menopause (hysterectomy with removal of ovaries), including abrupt hormone loss and psychological impacts.`,
     image: '/images/articles/cat18/cover-030.svg',

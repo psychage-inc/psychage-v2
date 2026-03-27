@@ -16,6 +16,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'how-social-media-affects-your-mental-health-research',
+    status: 'draft',
     title: 'How Social Media Affects Your Mental Health: What Five Years of Research Shows',
     description: 'Five years of research reveals how social media impacts mental health, from comparison and FOMO to connection and community support.',
     image: "/images/articles/cat10/cover-001.svg",
@@ -314,6 +315,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'comparison-trap-scrolling-mental-health',
+    status: 'draft',
     title: 'The Comparison Trap: Why Scrolling Makes You Feel Worse About Your Life',
     description: 'Understand why social media triggers constant comparison and what you can do to break free from the cycle of feeling inadequate.',
     image: "/images/articles/cat10/cover-002.svg",
@@ -606,6 +608,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'social-media-teens-parent-guide',
+    status: 'draft',
     title: 'Social Media and Teens: What Parents Need to Know About the Risks',
     description: 'A practical guide for parents on how social media affects teen mental health and what you can do to help your child navigate digital life safely.',
     image: "/images/articles/cat10/cover-003.svg",
@@ -893,6 +896,7 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'fomo-fear-of-missing-out-anxiety',
+    status: 'draft',
     title: 'FOMO: The Fear of Missing Out and How It Drives Anxious Scrolling',
     description: 'Understand what FOMO is, why it feels so powerful, and how to break the cycle of anxious checking and scrolling.',
     image: "/images/articles/cat10/cover-004.svg",

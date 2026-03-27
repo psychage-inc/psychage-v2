@@ -18,6 +18,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
   {
     id: catId(11),
     slug: 'loneliness-in-children-adolescents-young-people-disconnected',
+    status: 'draft',
     title: 'Loneliness in Children and Adolescents: Why Young People Feel Disconnected',
     description: 'Loneliness affects children and teens differently than adults. Understand developmental factors, social media impacts, and how to support young people.',
     image: "/images/articles/cat15/cover-011.svg",
@@ -436,6 +437,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
   {
     id: catId(12),
     slug: 'college-loneliness-best-years-of-life-feel-isolating',
+    status: 'draft',
     title: `College Loneliness: Why the 'Best Years of Your Life' Can Feel So Isolating`,
     description: "College students report higher loneliness than any other age group. Understand the unique pressures and how to find connection on campus.",
     image: "/images/articles/cat15/cover-012.svg",
@@ -783,6 +785,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
   {
     id: catId(13),
     slug: 'loneliness-in-20s-30s-when-adult-friendships-get-hard',
+    status: 'draft',
     title: 'Loneliness in Your 20s and 30s: When Adult Friendships Get Hard',
     description: 'Young adulthood is when social networks naturally shrink. Understand why friendships become harder and how to maintain connection through life transitions.',
     image: "/images/articles/cat15/cover-013.svg",
@@ -1162,6 +1165,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'loneliness-after-having-baby-isolation-new-parents-dont-talk-about',
+    status: 'draft',
     title: `Loneliness After Having a Baby: The Isolation New Parents Don't Talk About`,
     description: "New parenthood is often profoundly isolating. Understand why becoming a parent can trigger intense loneliness and how to find support.",
     image: "/images/articles/cat15/cover-014.svg",
@@ -1506,6 +1510,7 @@ export const lonelinessAcrossLifespanArticlesA: Article[] = [
   {
     id: catId(15),
     slug: 'midlife-loneliness-when-social-circle-shrinks-without-noticing',
+    status: 'draft',
     title: 'Midlife Loneliness: When Your Social Circle Shrinks Without You Noticing',
     description: 'Your 40s and 50s bring career demands, family obligations, and gradual social network erosion. Understand midlife loneliness and how to reverse it.',
     image: "/images/articles/cat15/cover-015.svg",

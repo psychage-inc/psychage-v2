@@ -1191,6 +1191,7 @@ export const chronicStressOverwhelmArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'how-stress-accumulates-understanding-allostatic-load',
+    status: 'draft',
     title: 'How Stress Accumulates: Understanding Allostatic Load',
     description: 'Explore the concept of allostatic load --- the cumulative biological burden of chronic stress --- and what science reveals about its measurement and health impacts.',
     image: "/images/articles/cat02/cover-039.svg",

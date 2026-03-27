@@ -17,6 +17,7 @@ export const anxietyDisordersArticlesA: Article[] = [
   {
     id: catId(1),
     slug: 'generalized-anxiety-disorder-living-with-chronic-worry',
+    status: 'draft',
     title: 'Generalized Anxiety Disorder: Living with Chronic Worry',
     description: 'Understanding GAD --- the persistent, excessive worry that affects millions. Learn about symptoms, causes, diagnosis, and evidence-based treatments for this common anxiety disorder.',
     image: "/images/articles/cat13/cover-001.svg",
@@ -432,6 +433,7 @@ export const anxietyDisordersArticlesA: Article[] = [
   {
     id: catId(2),
     slug: 'social-anxiety-disorder-when-fear-of-judgment-becomes-disabling',
+    status: 'draft',
     title: 'Social Anxiety Disorder: When Fear of Judgment Becomes Disabling',
     description: 'Social anxiety disorder goes beyond shyness. Understand the symptoms, causes, and evidence-based treatments that help people reclaim their social lives.',
     image: "/images/articles/cat13/cover-002.svg",
@@ -750,6 +752,7 @@ export const anxietyDisordersArticlesA: Article[] = [
   {
     id: catId(3),
     slug: 'panic-disorder-understanding-recurrent-panic-attacks',
+    status: 'draft',
     title: 'Panic Disorder: Understanding Recurrent Panic Attacks',
     description: 'Panic attacks are terrifying. Learn what panic disorder is, why it happens, and how evidence-based treatments can help you regain control.',
     image: "/images/articles/cat13/cover-003.svg",
@@ -1123,6 +1126,7 @@ export const anxietyDisordersArticlesA: Article[] = [
   {
     id: catId(4),
     slug: 'specific-phobias-when-fear-becomes-disproportionate',
+    status: 'draft',
     title: 'Specific Phobias: When Fear Becomes Disproportionate',
     description: 'Specific phobias are intense, irrational fears of particular objects or situations. Learn about the types, causes, and highly effective exposure-based treatments.',
     image: "/images/articles/cat13/cover-004.svg",
@@ -1471,6 +1475,7 @@ export const anxietyDisordersArticlesA: Article[] = [
   {
     id: catId(5),
     slug: 'agoraphobia-when-avoiding-panic-shrinks-your-world',
+    status: 'draft',
     title: 'Agoraphobia: When Avoiding Panic Shrinks Your World',
     description: 'Agoraphobia is more than fear of open spaces. Learn how this complex anxiety disorder develops and how to regain freedom through evidence-based treatment.',
     image: "/images/articles/cat13/cover-005.svg",

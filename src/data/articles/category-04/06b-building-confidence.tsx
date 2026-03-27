@@ -17,6 +17,7 @@ export const buildingConfidenceArticlesB: Article[] = [
   {
     id: catId(56),
     slug: 'confidence-after-failure-reframing-setbacks',
+    status: 'draft',
     title: 'Building Confidence After Failure: Reframing Setbacks as Data',
     description: 'Failure destroys confidence only if you interpret it as evidence of inability. Learn to treat setbacks as information, not identity.',
     image: "/images/articles/cat04/cover-056.svg",
@@ -305,6 +306,7 @@ export const buildingConfidenceArticlesB: Article[] = [
   {
     id: catId(57),
     slug: 'public-speaking-confidence',
+    status: 'draft',
     title: 'Public Speaking Confidence: From Terrified to Competent',
     description: 'Fear of public speaking is common and conquerable. Learn the evidence-based strategies that build competence and reduce anxiety.',
     image: "/images/articles/cat04/cover-057.svg",
@@ -579,6 +581,7 @@ export const buildingConfidenceArticlesB: Article[] = [
   {
     id: catId(58),
     slug: 'social-confidence',
+    status: 'draft',
     title: 'Social Confidence: How to Feel More at Ease Around Others',
     description: "Social confidence isn't about being extroverted or charismatic. It's about reducing self-consciousness and building genuine connection skills.",
     image: '/images/articles/cat04/cover-058.svg',

@@ -19,6 +19,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'what-is-self-awareness-skill-that-changes-everything',
+    status: 'draft',
     title: 'What Is Self-Awareness? The Skill That Changes Everything',
     description: 'Explore what self-awareness really means, why research calls it a foundational life skill, and how to start developing internal and external self-awareness today.',
     image: "/images/articles/cat01/cover-021.svg",
@@ -205,6 +206,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'journaling-for-self-awareness-prompts',
+    status: 'draft',
     title: "Journaling for Self-Awareness: Prompts That Go Beyond 'How Was Your Day'",
     description: "Learn evidence-based journaling techniques that build genuine self-awareness. Includes 20 prompts designed to reveal emotional patterns, values, and blind spots.",
     image: "/images/articles/cat01/cover-022.svg",
@@ -437,6 +439,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'body-awareness-physical-signals-of-emotions',
+    status: 'draft',
     title: 'Body Awareness: Learning to Read the Physical Signals of Your Emotions',
     description: "Learn how your body communicates emotions through physical sensations. Understand interoception and practical techniques to read your body's emotional signals.",
     image: '/images/articles/cat01/cover-023.svg',
@@ -649,6 +652,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'how-thoughts-shape-feelings-notice-the-pattern',
+    status: 'draft',
     title: 'How Your Thoughts Shape Your Feelings (And How to Notice the Pattern)',
     description: 'Understand the thought-feeling connection at the heart of CBT. Learn to identify automatic thoughts that shape your emotional experience and how to interrupt unhelpful patterns.',
     image: "/images/articles/cat01/cover-024.svg",
@@ -859,6 +863,7 @@ export const selfAwarenessReflectionArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'observer-self-watch-emotions-without-being-consumed',
+    status: 'draft',
     title: 'The Observer Self: Learning to Watch Your Emotions Without Being Consumed',
     description: 'Explore the concept of the Observer Self from ACT and mindfulness traditions. Learn how to step back from thoughts and feelings to gain perspective and reduce emotional suffering.',
     image: "/images/articles/cat01/cover-025.svg",

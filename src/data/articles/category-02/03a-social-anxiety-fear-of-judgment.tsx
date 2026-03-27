@@ -687,6 +687,7 @@ export const socialAnxietyArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'the-inner-critic-in-social-anxiety-why-you-assume-the-worst',
+    status: 'draft',
     title: 'The Inner Critic in Social Anxiety: Why You Assume the Worst',
     description: 'Learn about the harsh inner critic that drives social anxiety, why negative self-talk worsens fear of judgment, and cognitive techniques to develop a more compassionate internal voice.',
     image: "/images/articles/cat02/cover-022.svg",
@@ -1578,6 +1579,7 @@ export const socialAnxietyArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'social-anxiety-at-work-managing-fear-in-professional-settings',
+    status: 'draft',
     title: 'Social Anxiety at Work: Managing Fear in Professional Settings',
     description: 'Navigate workplace challenges when social anxiety affects meetings, presentations, and professional relationships.',
     image: "/images/articles/cat02/cover-024.svg",
@@ -1992,6 +1994,7 @@ export const socialAnxietyArticlesA: Article[] = [
   {
     id: catId(25),
     slug: 'social-media-and-social-anxiety-how-digital-comparison-fuels-fear',
+    status: 'draft',
     title: 'Social Media and Social Anxiety: How Digital Comparison Fuels Fear',
     description: 'Explore the complex relationship between social media use and social anxiety, including comparison, FOMO, and digital wellness strategies.',
     image: "/images/articles/cat02/cover-025.svg",

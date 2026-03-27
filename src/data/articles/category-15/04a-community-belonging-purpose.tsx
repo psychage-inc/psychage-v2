@@ -18,6 +18,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
   {
     id: catId(31),
     slug: 'psychology-of-belonging-feeling-part-something-bigger',
+    status: 'draft',
     title: 'The Psychology of Belonging: Why Feeling Part of Something Bigger Matters',
     description: 'Understand the deep human need for belonging and how connection to something larger than yourself protects mental health.',
     image: "/images/articles/cat15/cover-031.svg",
@@ -421,6 +422,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
   {
     id: catId(32),
     slug: 'community-involvement-mental-health-volunteering-changes-brain',
+    status: 'draft',
     title: 'Community Involvement and Mental Health: How Volunteering Changes Your Brain',
     description: 'Research reveals the neurological and psychological benefits of helping others and being part of community service.',
     image: "/images/articles/cat15/cover-032.svg",
@@ -843,6 +845,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
   {
     id: catId(33),
     slug: 'finding-your-tribe-shared-interests-values-search-connection',
+    status: 'draft',
     title: 'Finding Your Tribe: Shared Interests, Values, and the Search for Connection',
     description: 'Discover how to identify and connect with people who truly get you based on shared passions and principles.',
     image: "/images/articles/cat15/cover-033.svg",
@@ -1296,6 +1299,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'places-of-worship-mental-health-social-benefits-religious-community',
+    status: 'draft',
     title: 'Places of Worship and Mental Health: The Social Benefits of Religious Community',
     description: 'Explore how religious and spiritual communities provide unique mental health benefits through connection, purpose, and support.',
     image: "/images/articles/cat15/cover-034.svg",
@@ -1743,6 +1747,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
   {
     id: catId(35),
     slug: 'support-groups-shared-experience-creates-powerful-healing',
+    status: 'draft',
     title: 'Support Groups: Why Shared Experience Creates Powerful Healing',
     description: 'Understand the unique therapeutic benefits of connecting with others who truly understand your struggles.',
     image: "/images/articles/cat15/cover-035.svg",

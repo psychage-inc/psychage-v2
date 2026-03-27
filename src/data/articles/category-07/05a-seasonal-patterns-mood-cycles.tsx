@@ -393,6 +393,7 @@ export const seasonalPatternsArticlesA: Article[] = [
   {
     id: catId(42),
     slug: 'light-therapy-sad-how-it-works-evidence',
+    status: 'draft',
     title: 'Light Therapy for SAD: How It Works and What the Evidence Shows',
     description: 'A comprehensive guide to using bright light therapy for seasonal affective disorder, including how it works, effectiveness, and practical implementation.',
     image: "/images/articles/cat07/cover-042.svg",

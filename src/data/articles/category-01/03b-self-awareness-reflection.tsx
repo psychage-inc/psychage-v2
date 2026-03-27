@@ -19,6 +19,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
   {
     id: catId(26),
     slug: 'mindfulness-for-emotional-awareness-practical-guide',
+    status: 'draft',
     title: 'Mindfulness for Emotional Awareness: A Practical Starting Guide',
     description: 'A beginner-friendly guide to mindfulness for emotional awareness. Learn what mindfulness actually is, what the research says, and how to start a simple daily practice.',
     image: "/images/articles/cat01/cover-026.svg",
@@ -235,6 +236,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
   {
     id: catId(27),
     slug: 'common-emotional-blind-spots',
+    status: 'draft',
     title: "Common Blind Spots: Emotions You Might Not Realize You're Feeling",
     description: "Uncover the hidden emotions that influence your behavior without your awareness. Learn about emotional blind spots, why they form, and how to bring them into consciousness.",
     image: "/images/articles/cat01/cover-027.svg",
@@ -447,6 +449,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
   {
     id: catId(28),
     slug: 'asking-honest-feedback-about-emotional-patterns',
+    status: 'draft',
     title: 'How to Ask for Honest Feedback About Your Emotional Patterns',
     description: 'Learn how to ask for and receive honest feedback about your emotional patterns from trusted people. A practical guide to building external self-awareness.',
     image: "/images/articles/cat01/cover-028.svg",
@@ -663,6 +666,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
   {
     id: catId(29),
     slug: 'role-of-values-in-emotional-self-awareness',
+    status: 'draft',
     title: 'The Role of Values in Emotional Self-Awareness',
     description: 'Understand how your core values shape your emotional responses. Learn to identify your values and use them as a compass for emotional regulation and decision-making.',
     image: "/images/articles/cat01/cover-029.svg",
@@ -860,6 +864,7 @@ export const selfAwarenessReflectionArticlesB: Article[] = [
   {
     id: catId(30),
     slug: 'self-awareness-without-self-judgment',
+    status: 'draft',
     title: 'Self-Awareness Without Self-Judgment: A Compassionate Approach',
     description: 'Learn how to observe yourself honestly without falling into self-criticism. Discover the research on self-compassion and how it makes self-awareness sustainable and healing.',
     image: "/images/articles/cat01/cover-030.svg",

@@ -14,6 +14,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(36),
     slug: 'psychiatrist-psychologist-counselor-social-worker-differences',
+    status: 'draft',
     title: 'The Difference Between Psychiatrists, Psychologists, Counselors, and Social Workers',
     description: 'Confused about mental health provider types? Learn the key differences in training, scope, and when to see each professional.',
     image: "/images/articles/cat14/cover-036.svg",
@@ -178,6 +179,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'evidence-based-mental-health-apps',
+    status: 'draft',
     title: 'Mental Health Apps: Which Ones Are Evidence-Based and Actually Help',
     description: 'Not all mental health apps are created equal. Learn which apps have real research behind them and how to spot effective digital tools.',
     image: "/images/articles/cat14/cover-037.svg",
@@ -187,6 +189,26 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Digital Health', 'Apps', 'Self-Help', 'Evidence-Based'],
+    summary: 'Most mental health apps lack clinical evidence, but a select few have rigorous research backing their effectiveness. Learn which apps are truly evidence-based, how to evaluate digital mental health tools, and when apps can supplement—but not replace—professional care.',
+    keyFacts: [
+      { text: 'Fewer than 5% of mental health apps have published clinical evidence supporting their effectiveness', citationIndex: 3 },
+      { text: '80% of mental health apps share user data with third parties, often without clear consent', citationIndex: 5 },
+      { text: 'App-based CBT interventions show significant effectiveness for mild-to-moderate depression and anxiety in randomized controlled trials', citationIndex: 1 },
+      { text: 'Digital therapeutics are FDA-regulated and clinically validated, unlike wellness apps which are largely unregulated', citationIndex: 7 },
+      { text: 'Headspace showed significant reductions in stress and improvements in well-being after just 30 days of use in clinical trials', citationIndex: 8 },
+    ],
+    sparkMoment: 'The app with the prettiest interface and most downloads might have zero clinical evidence, while the one that looks basic could be backed by years of peer-reviewed research—in mental health apps, popularity and effectiveness rarely overlap.',
+    practicalExercise: {
+      title: 'Evaluate a Mental Health App Before Downloading',
+      steps: [
+        { title: 'Search for Evidence', description: 'Look up the app name + "clinical trial" or "peer-reviewed study" to see if research exists beyond testimonials.' },
+        { title: 'Read the Privacy Policy', description: 'Check if the app is HIPAA-compliant, what data it collects, and whether it shares information with third parties.' },
+        { title: 'Verify the Approach', description: 'Confirm the app uses evidence-based techniques like CBT, DBT, or mindfulness rather than vague "mood improvement" claims.' },
+        { title: 'Check the APA Database', description: 'Visit the American Psychiatric Association\'s app evaluation database to see if the app has been independently reviewed.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try Our Evidence-Based Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -394,6 +416,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'navigating-mental-health-diagnosis',
+    status: 'draft',
     title: 'Navigating a Mental Health Diagnosis: What It Means and What to Do Next',
     description: 'Just received a mental health diagnosis? Learn what it actually means, how diagnoses work, and the practical next steps for moving forward.',
     image: "/images/articles/cat14/cover-038.svg",
@@ -403,6 +426,26 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Diagnosis', 'Mental Health', 'Treatment Planning', 'Self-Advocacy'],
+    summary: 'Receiving a mental health diagnosis can feel validating, overwhelming, or both. Understand what psychiatric diagnoses actually mean, their benefits and limitations, and the concrete steps to take after being diagnosed—from asking the right questions to developing a treatment plan that works for you.',
+    keyFacts: [
+      { text: 'Mental health diagnoses are based on symptom patterns from the DSM-5-TR or ICD-11, not biological tests or brain scans', citationIndex: 1 },
+      { text: 'Diagnosis has both benefits (validation, treatment access, insurance coverage) and limitations (stigma, oversimplification, diagnostic overshadowing)', citationIndex: 3 },
+      { text: 'Patients have the legal right to refuse treatment, request alternatives, change providers, and seek second opinions', citationIndex: 5 },
+      { text: 'It\'s common for diagnoses to change over time as providers learn more about symptom patterns—this doesn\'t mean the original diagnosis was "wrong"', citationIndex: 4 },
+      { text: 'Insurance companies often require a psychiatric diagnosis to cover therapy and medication, creating both access and privacy trade-offs', citationIndex: 8 },
+    ],
+    sparkMoment: 'A diagnosis is a map, not a destination—it shows you where you are and suggests possible routes forward, but it doesn\'t determine where you\'ll end up.',
+    practicalExercise: {
+      title: 'Process Your Diagnosis with Clarity',
+      steps: [
+        { title: 'Write Down Your Questions', description: 'Before your next appointment, list everything you want to understand about your diagnosis—the criteria used, what it means for treatment, and how it might change.' },
+        { title: 'Research from Medical Sources', description: 'Read about your condition from NIMH, Mayo Clinic, or APA websites rather than forums. Focus on symptom ranges, not worst-case scenarios.' },
+        { title: 'Track Your Response', description: 'Note how you feel about the diagnosis over the first few weeks. Does it feel accurate? Validating? Limiting? This reflection informs conversations with your provider.' },
+        { title: 'Decide Who to Tell', description: 'Make a conscious choice about disclosure. You\'re not obligated to share your diagnosis with anyone except where legally required for accommodations.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore the Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -602,6 +645,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'mental-health-records-privacy-patient-rights',
+    status: 'draft',
     title: 'Mental Health Records, Privacy, and Your Rights as a Patient',
     description: "What's in your mental health records, who can see them, and how to protect your privacy while getting the care you need.",
     image: '/images/articles/cat14/cover-039.svg',
@@ -611,6 +655,26 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Privacy', 'HIPAA', 'Patient Rights', 'Medical Records'],
+    summary: 'Your mental health records contain far more than session notes—diagnoses, medications, assessments, and clinical observations all go into your file. Learn what\'s documented, who can access it, your HIPAA rights, and practical strategies for protecting your privacy while receiving care.',
+    keyFacts: [
+      { text: 'Psychotherapy notes (therapist\'s private process notes) are kept separate from medical records and have stronger privacy protections than clinical summaries', citationIndex: 4 },
+      { text: 'Under HIPAA, you have the right to access, amend, and request accounting of who has viewed your mental health records', citationIndex: 1 },
+      { text: 'Substance use disorder treatment has even stronger confidentiality protections under 42 CFR Part 2, requiring explicit written consent for most disclosures', citationIndex: 2 },
+      { text: 'Electronic health records and telehealth platforms introduce new privacy risks, with some sharing data with third parties without clear consent', citationIndex: 6 },
+      { text: 'Your records cannot be shared with employers or family without your written authorization, except in mandated reporting situations or court orders', citationIndex: 3 },
+    ],
+    sparkMoment: 'The notes your therapist writes during sessions aren\'t the same as what goes in your permanent medical record—understanding this distinction is your first step toward protecting your mental health privacy.',
+    practicalExercise: {
+      title: 'Audit Your Mental Health Privacy',
+      steps: [
+        { title: 'Request Your Records', description: 'Submit a written request to your provider\'s medical records department to see exactly what\'s documented about your treatment.' },
+        { title: 'Review Privacy Policies', description: 'If you use telehealth or mental health apps, read their privacy policies to understand how your data is stored and shared.' },
+        { title: 'Ask About Confidentiality Limits', description: 'In your next appointment, ask your provider to explain when they would be required to break confidentiality (mandated reporting, court orders, safety risks).' },
+        { title: 'Decide on Insurance Involvement', description: 'Weigh the trade-offs: insurance coverage means sharing diagnostic information, while paying out-of-pocket offers more privacy but less affordability.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Privacy-Conscious Providers',
+    },
     citations: [
       {
         id: '1',
@@ -787,6 +851,7 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
   {
     id: catId(40),
     slug: 'advocating-for-yourself-mental-health-system',
+    status: 'draft',
     title: "Advocating for Yourself in the Mental Health System: A Patient's Guide",
     description: "Learn how to speak up for your needs, navigate power dynamics, and get better care by becoming your own best advocate.",
     image: "/images/articles/cat14/cover-040.svg",
@@ -796,6 +861,26 @@ export const navigatingMentalHealthSystemArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Advocacy', 'Patient Rights', 'Healthcare Navigation', 'Communication'],
+    summary: 'The mental health system has inherent power imbalances, but effective treatment requires collaboration, not compliance. Learn the foundational skills of self-advocacy—knowing your rights, preparing for appointments, communicating effectively—and how to navigate common challenges like treatment failures, insurance denials, and systemic discrimination.',
+    keyFacts: [
+      { text: 'Patients who actively participate in treatment decisions experience better outcomes and greater satisfaction with care', citationIndex: 4 },
+      { text: 'Mental health treatment requires collaboration between provider expertise and patient experience—both perspectives are essential for effectiveness', citationIndex: 3 },
+      { text: 'The Mental Health Parity Act requires insurance companies to cover mental health treatment with the same standards as physical health conditions', citationIndex: 7 },
+      { text: 'Cultural background, race, and gender identity can significantly affect quality of mental health care received', citationIndex: 6 },
+      { text: 'You have the legal right to refuse treatment, request alternatives, change providers, and file complaints about inadequate care', citationIndex: 8 },
+    ],
+    sparkMoment: 'Self-advocacy isn\'t being difficult—it\'s being informed, prepared, and willing to speak up for your needs in a system that often rewards silence.',
+    practicalExercise: {
+      title: 'Prepare for Your Next Mental Health Appointment',
+      steps: [
+        { title: 'Document Changes', description: 'Write down what symptoms have improved, worsened, or stayed the same since your last appointment. Be specific with examples.' },
+        { title: 'List Your Questions', description: 'Write out 3-5 questions you want answered—about your diagnosis, treatment options, side effects, or anything unclear from past sessions.' },
+        { title: 'Note What\'s Working (and What Isn\'t)', description: 'Identify which parts of your treatment plan are helping and which aren\'t. This guides productive conversations about adjustments.' },
+        { title: 'Bring Your Notes', description: 'Don\'t rely on memory in the moment. Bring your written notes to the appointment and reference them during the session.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Symptoms with Mood Journal',
+    },
     citations: [
       {
         id: '1',

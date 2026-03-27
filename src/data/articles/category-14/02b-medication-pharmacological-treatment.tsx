@@ -18,6 +18,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
   {
     id: catId(16),
     slug: 'adhd-medications-stimulants-non-stimulants-finding-right-fit',
+    status: 'draft',
     title: 'ADHD Medications: Stimulants, Non-Stimulants, and Finding the Right Fit',
     description: 'Understand how ADHD medications work, the differences between stimulants and non-stimulants, and how to find the right medication for focus and attention.',
     image: "/images/articles/cat14/cover-016.svg",
@@ -460,6 +461,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'how-psychiatric-medication-works-neurotransmitters-plain-language',
+    status: 'draft',
     title: 'How Psychiatric Medication Works: Neurotransmitters in Plain Language',
     description: 'Understand how psychiatric medications affect brain chemistry, what neurotransmitters do, and why these medications take time to work.',
     image: "/images/articles/cat14/cover-017.svg",
@@ -779,6 +781,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
   {
     id: catId(18),
     slug: 'side-effects-psychiatric-medication-what-to-expect-when-to-speak-up',
+    status: 'draft',
     title: 'Side Effects of Psychiatric Medication: What to Expect and When to Speak Up',
     description: 'Learn which side effects are normal, which fade over time, and which warrant a call to your doctor.',
     image: "/images/articles/cat14/cover-018.svg",
@@ -1187,6 +1190,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
   {
     id: catId(19),
     slug: 'starting-stopping-medication-why-never-go-cold-turkey',
+    status: 'draft',
     title: 'Starting and Stopping Medication: Why You Should Never Go Cold Turkey',
     description: 'Learn the right way to start psychiatric medication, when and how to stop safely, and why tapering matters.',
     image: "/images/articles/cat14/cover-019.svg",
@@ -1560,6 +1564,7 @@ export const medicationPharmacologicalTreatmentArticlesB: Article[] = [
   {
     id: catId(20),
     slug: 'medication-vs-therapy-debate-combined-treatment-research',
+    status: 'draft',
     title: 'The Medication vs. Therapy Debate: What Combined Treatment Research Shows',
     description: 'Evidence-based analysis of medication-only, therapy-only, and combined treatment for depression, anxiety, and other mental health conditions.',
     image: "/images/articles/cat14/cover-020.svg",

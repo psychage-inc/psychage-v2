@@ -19,6 +19,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
   {
     id: catId(21),
     slug: 'racial-trauma-psychological-impact-racism-mental-health',
+    status: 'draft',
     title: 'Racial Trauma: The Psychological Impact of Racism on Mental Health',
     description: 'Understand how experiences of racism cause real psychological harm, from hypervigilance to PTSD symptoms, and how to begin the healing process.',
     image: "/images/articles/cat12/cover-021.svg",
@@ -323,6 +324,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'mental-health-disparities-people-of-color-care-access',
+    status: 'draft',
     title: 'Mental Health Disparities: Why People of Color Receive Less and Worse Care',
     description: 'Explore the systemic barriers that prevent people of color from accessing quality mental health care, from insurance gaps to provider bias.',
     image: "/images/articles/cat12/cover-022.svg",
@@ -599,6 +601,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
   {
     id: catId(23),
     slug: 'microaggressions-mental-health-cumulative-toll-everyday-racism',
+    status: 'draft',
     title: 'Microaggressions and Mental Health: The Cumulative Toll of Everyday Racism',
     description: 'Understand how "small" daily indignities add up to serious psychological harm, and how to cope when racism shows up in subtle forms.',
     image: "/images/articles/cat12/cover-023.svg",
@@ -915,6 +918,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'cultural-competence-therapy-what-to-look-for-provider',
+    status: 'draft',
     title: 'Cultural Competence in Therapy: What to Look for in a Provider',
     description: `Find a therapist who truly understands your cultural background and won\'t dismiss racism, traditions, or community values as irrelevant to your mental health.`,
     image: '/images/articles/cat12/cover-024.svg',

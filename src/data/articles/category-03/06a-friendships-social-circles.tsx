@@ -16,6 +16,7 @@ export const friendshipsArticlesA: Article[] = [
   {
     id: catId(51),
     slug: 'psychology-friendship-close-connections',
+    status: 'draft',
     title: 'The Psychology of Friendship: Why We Need Close Connections',
     description: 'Explore the psychological foundations of friendship and why close social bonds are essential for mental health, physical wellbeing, and overall life satisfaction.',
     image: "/images/articles/cat03/cover-051.svg",
@@ -321,6 +322,7 @@ export const friendshipsArticlesA: Article[] = [
   {
     id: catId(52),
     slug: 'making-friends-adult-difficult',
+    status: 'draft',
     title: `Making Friends as an Adult: Why It's Hard and How to Do It`,
     description: "Understand why adult friendship formation is uniquely challenging and learn evidence-based strategies for building meaningful connections later in life.",
     image: "/images/articles/cat03/cover-052.svg",
@@ -678,6 +680,7 @@ export const friendshipsArticlesA: Article[] = [
   {
     id: catId(53),
     slug: 'friendship-breakups-hurt-romantic',
+    status: 'draft',
     title: 'Friendship Breakups: Why They Hurt as Much as Romantic Ones',
     description: 'Understand why the end of a friendship can feel devastating and learn how to process the grief, confusion, and loss that accompanies broken bonds.',
     image: "/images/articles/cat03/cover-053.svg",
@@ -985,6 +988,7 @@ export const friendshipsArticlesA: Article[] = [
   {
     id: catId(54),
     slug: 'maintaining-friendships-life-busy',
+    status: 'draft',
     title: 'Maintaining Friendships When Life Gets Busy',
     description: 'Learn practical strategies for keeping friendships alive through career demands, family obligations, and life transitions that threaten to pull you apart.',
     image: "/images/articles/cat03/cover-054.svg",

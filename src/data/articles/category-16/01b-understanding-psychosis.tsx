@@ -24,6 +24,7 @@ export const understandingPsychosisArticlesB: Article[] = [
   {
     id: catId(6),
     slug: 'drug-induced-psychosis-when-substances-trigger-breaks-from-reality',
+    status: 'draft',
     title: 'Drug-Induced Psychosis: When Substances Trigger Breaks From Reality',
     description: 'An evidence-based guide to substance-induced psychosis --- which drugs carry the highest risk, how it differs from primary psychotic disorders, and what recovery looks like.',
     image: '/images/articles/cat16/cover-006.svg',
@@ -233,6 +234,7 @@ export const understandingPsychosisArticlesB: Article[] = [
   {
     id: catId(7),
     slug: 'psychosis-vs-dissociation-understanding-two-different-experiences',
+    status: 'draft',
     title: 'Psychosis vs. Dissociation: Understanding Two Different Experiences',
     description: 'How to distinguish psychotic experiences from dissociative ones --- two fundamentally different conditions that are frequently confused, misdiagnosed, and mistreated.',
     image: '/images/articles/cat16/cover-007.svg',
@@ -439,6 +441,7 @@ export const understandingPsychosisArticlesB: Article[] = [
   {
     id: catId(8),
     slug: 'brief-psychotic-disorder-when-psychosis-comes-and-goes-quickly',
+    status: 'draft',
     title: 'Brief Psychotic Disorder: When Psychosis Comes and Goes Quickly',
     description: 'Understanding brief psychotic disorder --- a sudden, short-lived episode of psychosis that resolves within a month, often triggered by extreme stress, and carries a generally favorable prognosis.',
     image: '/images/articles/cat16/cover-008.svg',
@@ -660,6 +663,7 @@ export const understandingPsychosisArticlesB: Article[] = [
   {
     id: catId(9),
     slug: 'postpartum-psychosis-psychiatric-emergency-every-parent-should-know',
+    status: 'draft',
     title: 'Postpartum Psychosis: A Psychiatric Emergency Every Parent Should Know About',
     description: 'A critical guide to postpartum psychosis --- the rarest but most dangerous perinatal mental health condition, how to recognize it, and why immediate treatment saves lives.',
     image: '/images/articles/cat16/cover-009.svg',
@@ -882,6 +886,7 @@ export const understandingPsychosisArticlesB: Article[] = [
   {
     id: catId(10),
     slug: 'psychosis-in-adolescents-early-identification-and-support',
+    status: 'draft',
     title: 'Psychosis in Adolescents: Early Identification and Support',
     description: 'A comprehensive guide to recognizing and responding to psychosis in teenagers --- including how it differs from typical adolescent behavior, when to seek help, and what effective treatment looks like.',
     image: '/images/articles/cat16/cover-010.svg',

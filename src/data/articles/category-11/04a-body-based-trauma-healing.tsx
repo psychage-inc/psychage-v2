@@ -988,6 +988,7 @@ export const bodyBasedHealingArticlesA: Article[] = [
   {
     id: catId(34),
     slug: 'vagus-nerve-trauma-recovery-activating-calm-system',
+    status: 'draft',
     title: "The Vagus Nerve and Trauma Recovery: Activating Your Body's Calm System",
     description: "Learn how the vagus nerve regulates your nervous system, and discover simple techniques to activate it for trauma healing and emotional regulation.",
     image: "/images/articles/cat11/cover-034.svg",

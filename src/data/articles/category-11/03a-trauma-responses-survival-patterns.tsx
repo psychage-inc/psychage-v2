@@ -843,6 +843,7 @@ export const traumaResponsesArticlesA: Article[] = [
   {
     id: catId(24),
     slug: 'why-you-didnt-fight-back-immobility-trauma',
+    status: 'draft',
     title: "Why You Didn't Fight Back: Understanding Immobility During Trauma",
     description: "Learn why tonic immobility during assault is an involuntary survival response, not consent---and how to process the self-blame that often follows.",
     image: "/images/articles/cat11/cover-024.svg",

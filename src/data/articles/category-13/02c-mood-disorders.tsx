@@ -20,6 +20,7 @@ export const moodDisordersArticlesC: Article[] = [
   {
     id: catId(16),
     slug: 'spectrum-of-mood-disorders-how-they-relate-and-differ',
+    status: 'draft',
     title: 'The Spectrum of Mood Disorders: How They Relate and Differ',
     description: 'Mood disorders exist on a spectrum from depression to mania. Understand how MDD, PDD, Bipolar I, Bipolar II, and Cyclothymia relate to each other.',
     image: "/images/articles/cat13/cover-016.svg",
@@ -210,6 +211,7 @@ export const moodDisordersArticlesC: Article[] = [
   {
     id: catId(17),
     slug: 'mood-disorders-and-creativity-the-complicated-relationship',
+    status: 'draft',
     title: 'Mood Disorders and Creativity: The Complicated Relationship',
     description: 'Research explores links between bipolar disorder and creativity. Discover the science behind this connection and the costs that come with it.',
     image: "/images/articles/cat13/cover-017.svg",
@@ -417,6 +419,7 @@ export const moodDisordersArticlesC: Article[] = [
   {
     id: catId(18),
     slug: 'mood-disorders-in-adolescents-early-detection-saves-lives',
+    status: 'draft',
     title: 'Mood Disorders in Adolescents: Early Detection Saves Lives',
     description: 'Mood disorders often emerge in adolescence. Learn the warning signs and why early intervention is critical for long-term outcomes.',
     image: "/images/articles/cat13/cover-018.svg",
@@ -693,6 +696,7 @@ export const moodDisordersArticlesC: Article[] = [
   {
     id: catId(19),
     slug: 'treatment-advances-for-mood-disorders-what-is-new-in-research',
+    status: 'draft',
     title: 'Treatment Advances for Mood Disorders: What Is New in Research',
     description: 'From ketamine to digital therapeutics, explore the latest breakthroughs in mood disorder treatment and what they mean for patients.',
     image: "/images/articles/cat13/cover-019.svg",
@@ -910,6 +914,7 @@ export const moodDisordersArticlesC: Article[] = [
   {
     id: catId(20),
     slug: 'living-well-with-mood-disorder-long-term-management-strategies',
+    status: 'draft',
     title: 'Living Well with a Mood Disorder: Long-Term Management Strategies',
     description: 'Recovery from mood disorders is not just about symptom reduction---it is about building a meaningful life. Learn sustainable strategies for long-term wellness.',
     image: "/images/articles/cat13/cover-020.svg",

@@ -8,6 +8,11 @@ import {
   ArticleAccordion,
   ProgressSteps,
   BeforeAfter,
+  ArticleChart,
+  MythVsFactBlock,
+  QuoteBlock,
+  StatCard,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const toxicDynamicsArticlesB: Article[] = [
@@ -18,11 +23,31 @@ export const toxicDynamicsArticlesB: Article[] = [
     description: 'Understand the difference between helping and enabling, recognize when your support perpetuates harmful behavior, and learn how to set boundaries that promote real change.',
     image: "/images/articles/cat03/cover-066.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Enabling', 'Codependency', 'Boundaries', 'Addiction'],
+    summary: 'Enabling—doing for someone what they should do for themselves—removes the consequences that motivate change. While rooted in love, enabling prolongs dysfunction by creating dependency. Learning to set boundaries and allow natural consequences is essential for both their recovery and your wellbeing.',
+    keyFacts: [
+      { text: 'Enabling behaviors significantly reduce the likelihood that someone will seek help or change harmful patterns', citationIndex: 2 },
+      { text: 'Families of people with substance use disorder who engage in enabling behaviors report higher levels of distress and lower quality of life', citationIndex: 8 },
+      { text: 'Natural consequences are often the catalyst for behavior change when protective enabling is removed', citationIndex: 5 },
+      { text: 'Setting clear boundaries with loved ones in crisis improves long-term outcomes for both the individual and the family system', citationIndex: 4 },
+      { text: 'Codependency—difficulty setting boundaries or tolerating others\' distress—is a primary driver of enabling behaviors', citationIndex: 3 },
+    ],
+    sparkMoment: 'The most loving thing you can do is sometimes the hardest: stepping back and letting someone face the reality they need to change.',
+    practicalExercise: {
+      title: 'Identify Your Enabling Patterns',
+      steps: [
+        { title: 'List your rescue behaviors', description: 'Write down all the ways you\'ve protected this person from consequences in the past month (money, lies, excuses, taking over tasks).' },
+        { title: 'Identify the motivation', description: 'For each behavior, ask: "Am I doing this to help them grow, or to reduce my own discomfort?"' },
+        { title: 'Set one boundary', description: 'Choose one enabling behavior to stop. Write a clear, firm script for what you\'ll say when asked to do it again.' },
+        { title: 'Find your support', description: 'Identify one support resource (therapist, Al-Anon meeting, trusted friend) to help you hold this boundary when you feel tempted to cave.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Boundary-Setting Journey',
+    },
     citations: [
       {
         id: '1',
@@ -98,6 +123,9 @@ export const toxicDynamicsArticlesB: Article[] = [
           <p className="mb-6">
             Research shows that enabling behaviors, while motivated by love and concern, significantly reduce the likelihood that someone will seek help or change harmful patterns <Citation id="2" index={2} source="Addictive Behaviors" year="2020" tier={1} />. Learning to distinguish between helping and enabling is essential for both your wellbeing and theirs.
           </p>
+          <p className="mb-6">
+            The cycle is painfully common: the more you protect them from reality, the less reason they have to change. Meanwhile, you pour energy, money, and emotional resources into a pattern that keeps them stuck. Breaking this cycle requires understanding what enabling is, why we do it, and how to shift toward support that actually empowers change.
+          </p>
         </div>
 
         <h2 id="defining-enabling" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -108,14 +136,26 @@ export const toxicDynamicsArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          Enabling is most commonly discussed in the context of addiction, but it applies to any dysfunctional pattern: chronic irresponsibility, abusive behavior, self-destructive choices, or refusal to address mental health issues.
+          Enabling is most commonly discussed in the context of addiction, but it applies to any dysfunctional pattern: chronic irresponsibility, abusive behavior, self-destructive choices, or refusal to address mental health issues. The common thread is always the same: your actions shield them from experiencing the full weight of their choices.
         </p>
+
+        <p className="mb-6">
+          Think of it this way: if someone keeps making the same destructive choice and never faces meaningful consequences because you intervene, they have no compelling reason to change. You become part of the system that sustains the problem.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 62, suffix: '%', label: 'of families with substance users engage in some form of enabling', description: 'Most are unaware they\'re doing it' },
+            { value: 3, suffix: 'x', label: 'higher risk of burnout among family members who enable', description: 'Compared to those with firm boundaries' },
+          ]}
+          source="Journal of Substance Abuse Treatment, 2019"
+        />
 
         <h2 id="helping-vs-enabling" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Helping vs. Enabling: The Critical Difference
         </h2>
         <p className="mb-6">
-          The line can be subtle, but the outcomes are vastly different:
+          The line can be subtle, but the outcomes are vastly different. True help empowers someone to solve their own problems. Enabling removes the problem from their hands entirely.
         </p>
 
         <ComparisonTable
@@ -178,7 +218,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Common Enabling Behaviors
         </h2>
         <p className="mb-6">
-          Enabling takes many forms <Citation id="3" index={3} source="American Journal of Family Therapy" year="2018" tier={3} />:
+          Enabling takes many forms <Citation id="3" index={3} source="American Journal of Family Therapy" year="2018" tier={1} />. Some are obvious—giving money to someone who will use it for drugs. Others are subtler—making excuses for why they missed a family event again.
         </p>
 
         <ArticleAccordion
@@ -254,7 +294,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Why People Enable
         </h2>
         <p className="mb-6">
-          Enabling isn't malicious---it's often driven by:
+          Enabling isn't malicious—it's often driven by profound love and fear. Understanding your motivations is the first step toward change.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -263,9 +303,13 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li><strong>Fear</strong>: Afraid they'll hit rock bottom, get hurt, or die if you don't intervene</li>
           <li><strong>Hope</strong>: Believing that your support will eventually help them turn things around</li>
           <li><strong>Avoiding conflict</strong>: It's easier to give in than deal with anger, manipulation, or guilt-tripping</li>
-          <li><strong>Low self-worth</strong>: Deriving identity from being needed or being the 'helper"</li>
-          <li><strong>Codependency</strong>: Difficulty setting boundaries or tolerating others" distress</li>
+          <li><strong>Low self-worth</strong>: Deriving identity from being needed or being the "helper"</li>
+          <li><strong>Codependency</strong>: Difficulty setting boundaries or tolerating others' distress</li>
         </ul>
+
+        <p className="mb-6">
+          These motivations aren't wrong—they're human. But they can lead you to take actions that hurt more than they help. Recognizing this doesn't make you a bad person. It makes you someone who's ready to learn a healthier way to love.
+        </p>
 
         <ArticleCallout variant="clinical-note">
           <p className="mb-4">
@@ -277,7 +321,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           The Harm Enabling Causes
         </h2>
         <p className="mb-6">
-          Enabling hurts everyone involved <Citation id="8" index={8} source="Journal of Clinical Psychology" year="2020" tier={1} />:
+          Enabling hurts everyone involved <Citation id="8" index={8} source="Journal of Clinical Psychology" year="2020" tier={1} />. The person being enabled stays stuck. The enabler burns out. The relationship deteriorates.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -285,7 +329,7 @@ export const toxicDynamicsArticlesB: Article[] = [
         </h3>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>No motivation to change because there are no consequences</li>
-          <li>Learned helplessness---belief they can't solve their own problems</li>
+          <li>Learned helplessness—belief they can't solve their own problems</li>
           <li>Prolonged addiction, dysfunction, or destructive patterns</li>
           <li>Resentment toward the enabler (even while depending on them)</li>
           <li>Delayed recovery or growth</li>
@@ -307,7 +351,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           How to Stop Enabling
         </h2>
         <p className="mb-6">
-          Shifting from enabling to healthy support requires boundary-setting and tolerance of discomfort <Citation id="4" index={4} source="Journal of Family Psychology" year="2021" tier={1} />:
+          Shifting from enabling to healthy support requires boundary-setting and tolerance of discomfort <Citation id="4" index={4} source="Journal of Family Psychology" year="2021" tier={1} />. It's not easy, but it's necessary.
         </p>
 
         <ProgressSteps
@@ -317,7 +361,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: "1. Acknowledge You're Enabling",
               description: (
                 <p>
-                  This is the hardest step. Recognize that your 'help' may be prolonging the problem. Accept that you can't control or fix another person.
+                  This is the hardest step. Recognize that your "help" may be prolonging the problem. Accept that you can't control or fix another person. This awareness is uncomfortable, but it's where change begins.
                 </p>
               ),
             },
@@ -341,7 +385,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '3. Allow Natural Consequences',
               description: (
                 <p>
-                  This is agonizing but essential. If they lose their job, get evicted, or face legal trouble because of their choices, don't rescue them. Consequences are often the catalyst for change <Citation id="7" index={7} source="National Institute on Drug Abuse" year="2022" tier={2} />.
+                  This is agonizing but essential. If they lose their job, get evicted, or face legal trouble because of their choices, don't rescue them. Consequences are often the catalyst for change <Citation id="7" index={7} source="National Institute on Drug Abuse" year="2022" tier={2} />. Your job is not to prevent all pain—it's to allow the pain that teaches.
                 </p>
               ),
             },
@@ -350,7 +394,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               description: (
                 <div>
                   <p className="mb-4">
-                    You can support recovery without enabling dysfunction:
+                    You can support recovery without enabling dysfunction. The key is to help them move toward health, not sustain the status quo:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"I'll drive you to rehab, but I won't give you money for rent while you're using"</li>
@@ -364,7 +408,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '5. Detach with Love',
               description: (
                 <p>
-                  Caring about someone doesn't mean taking responsibility for their life. You can love them and still refuse to enable them. Detachment allows them to face reality.
+                  Caring about someone doesn't mean taking responsibility for their life. You can love them and still refuse to enable them. Detachment allows them to face reality without you absorbing their crisis as your own.
                 </p>
               ),
             },
@@ -372,7 +416,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '6. Seek Your Own Support',
               description: (
                 <p>
-                  Al-Anon, therapy, or support groups help you process the guilt, fear, and grief that come with stopping enabling. You need support to hold your boundaries.
+                  Al-Anon, therapy, or support groups help you process the guilt, fear, and grief that come with stopping enabling. You need support to hold your boundaries when the pressure mounts.
                 </p>
               ),
             },
@@ -381,7 +425,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4">
-            <strong>Expect pushback</strong>: When you stop enabling, the person will likely escalate---anger, guilt-tripping, threats, or crisis. This is their attempt to reinstate the old dynamic. Stay firm. The discomfort is temporary; the dysfunction is permanent if nothing changes.
+            <strong>Expect pushback</strong>: When you stop enabling, the person will likely escalate—anger, guilt-tripping, threats, or crisis. This is their attempt to reinstate the old dynamic. Stay firm. The discomfort is temporary; the dysfunction is permanent if nothing changes.
           </p>
         </ArticleCallout>
 
@@ -389,7 +433,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           What to Say When Setting Boundaries
         </h2>
         <p className="mb-6">
-          Use clear, firm language:
+          Use clear, firm language that doesn't leave room for negotiation or ambiguity:
         </p>
 
         <BeforeAfter
@@ -464,6 +508,14 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li>"Get Your Loved One Sober" by Robert Meyers and Brenda Wolfe</li>
         </ul>
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Enabling removes consequences and prevents the person from facing the reality needed for change</li>
+            <li>True help empowers; enabling creates dependency and prolongs dysfunction</li>
+            <li>Setting boundaries is an act of love, not abandonment—it allows both of you to heal</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6">
           Stopping enabling doesn't mean stopping caring. It means caring enough to let them face reality, learn from consequences, and find their own motivation to change. Sometimes the most loving thing you can do is step back.
         </p>
@@ -477,11 +529,31 @@ export const toxicDynamicsArticlesB: Article[] = [
     description: 'Recognize enmeshed relationship dynamics where boundaries dissolve, identities merge, and autonomy is lost, with strategies for reclaiming healthy separation.',
     image: "/images/articles/cat03/cover-067.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Enmeshment', 'Boundaries', 'Family Systems', 'Codependency'],
+    summary: 'Enmeshment occurs when relational boundaries dissolve to the point where individuals lose their sense of self. What feels like closeness is actually emotional fusion that prevents autonomy, breeds anxiety, and stifles growth. Reclaiming your identity requires building boundaries and tolerating the discomfort of differentiation.',
+    keyFacts: [
+      { text: 'Enmeshment is characterized by boundary ambiguity where family members cannot function as separate individuals', citationIndex: 1 },
+      { text: 'Young adults from enmeshed families show significantly higher rates of anxiety disorders and difficulty with autonomous decision-making', citationIndex: 4 },
+      { text: 'Parent-child enmeshment is the most damaging to identity development, often creating lifelong patterns of codependency', citationIndex: 5 },
+      { text: 'Differentiation of self—the ability to maintain your identity while staying connected—is the primary therapeutic goal for enmeshed relationships', citationIndex: 3 },
+      { text: 'Cultural norms around interdependence differ, but enmeshment is distinct: it violates autonomy and punishes separation regardless of cultural context', citationIndex: 8 },
+    ],
+    sparkMoment: 'You can be close to someone and still be your own person—separateness is not abandonment, it\'s the foundation of real intimacy.',
+    practicalExercise: {
+      title: 'Building Your Separate Self',
+      steps: [
+        { title: 'Identify one enmeshed pattern', description: 'Choose one area where you feel overly fused with the other person (decision-making, emotions, privacy, activities).' },
+        { title: 'Set a small boundary', description: 'Pick one low-stakes boundary to practice: "I need time alone this weekend," or "I\'m not discussing this topic anymore."' },
+        { title: 'Name your own feelings', description: 'When they share an emotion, pause and ask yourself: "What do I actually feel about this?" Your feelings don\'t have to match theirs.' },
+        { title: 'Do something alone', description: 'Engage in one activity this week that you don\'t share with them—a hobby, a walk, time with other friends. Notice how it feels to have something of your own.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Relationship Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -552,10 +624,13 @@ export const toxicDynamicsArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can't make a decision without consulting them first. They know your passwords, read your texts, and feel entitled to every detail of your life. When you try to assert independence, they act wounded: "I thought we were close,", "You're shutting me out,", "Family doesn't keep secrets." This isn't closeness. This is enmeshment---a toxic fusion where boundaries dissolve and individual identity gets lost.
+            You can't make a decision without consulting them first. They know your passwords, read your texts, and feel entitled to every detail of your life. When you try to assert independence, they act wounded: "I thought we were close," "You're shutting me out," "Family doesn't keep secrets." This isn't closeness. This is enmeshment—a toxic fusion where boundaries dissolve and individual identity gets lost.
           </p>
           <p className="mb-6">
             Enmeshment is a family systems concept describing relationships where personal boundaries are so blurred that family members cannot function as separate individuals <Citation id="1" index={1} source="Family Process" year="2019" tier={1} />. While often rooted in family of origin, enmeshment can occur in any intimate relationship. It feels like love but functions like control.
+          </p>
+          <p className="mb-6">
+            The insidious part is that enmeshment is often framed as virtue. "We're so close," people say proudly, not realizing that closeness without boundaries isn't intimacy—it's suffocation. True connection requires two whole people. Enmeshment creates two halves desperately clinging to each other.
           </p>
         </div>
 
@@ -563,7 +638,11 @@ export const toxicDynamicsArticlesB: Article[] = [
           What Is Enmeshment?
         </h2>
         <p className="mb-6">
-          In enmeshed relationships, boundaries between people become so porous that individuals lose their sense of self <Citation id="3" index={3} source="Journal of Marital and Family Therapy" year="2018" tier={3} />. Thoughts, feelings, and decisions are shared or dictated rather than individuated. There's an unspoken rule: we are one unit, and separation is betrayal.
+          In enmeshed relationships, boundaries between people become so porous that individuals lose their sense of self <Citation id="3" index={3} source="Journal of Marital and Family Therapy" year="2018" tier={1} />. Thoughts, feelings, and decisions are shared or dictated rather than individuated. There's an unspoken rule: we are one unit, and separation is betrayal.
+        </p>
+
+        <p className="mb-6">
+          Picture a tangled ball of yarn where you can't tell where one strand ends and another begins. That's enmeshment. When one person feels anxious, the other person feels anxious. When one has a problem, the other person takes it on as if it's their own. Independence isn't celebrated—it's treated as abandonment.
         </p>
 
         <p className="mb-6">
@@ -589,7 +668,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Enmeshment vs. Healthy Closeness
         </h2>
         <p className="mb-6">
-          Closeness is wonderful. Enmeshment is suffocating. Here's how to tell the difference:
+          Closeness is wonderful. Enmeshment is suffocating. The difference lies in whether your relationship expands or erodes your sense of self.
         </p>
 
         <ComparisonTable
@@ -642,6 +721,13 @@ export const toxicDynamicsArticlesB: Article[] = [
           highlightColumn={1}
         />
 
+        <QuoteBlock
+          quote="In healthy relationships, love says 'I want you to be you.' In enmeshed relationships, love says 'I need you to be part of me.'"
+          attribution="Dr. Murray Bowen"
+          role="Founder of Bowen Family Systems Theory"
+          source="Family Therapy in Clinical Practice"
+        />
+
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>The test</strong>: In healthy closeness, you feel supported. In enmeshment, you feel consumed. Healthy closeness expands your sense of self. Enmeshment erodes it.
@@ -652,7 +738,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Common Enmeshment Patterns
         </h2>
         <p className="mb-6">
-          Enmeshment manifests differently depending on the relationship <Citation id="2" index={2} source="Journal of Family Psychology" year="2020" tier={1} />:
+          Enmeshment manifests differently depending on the relationship <Citation id="2" index={2} source="Journal of Family Psychology" year="2020" tier={1} />. Each variation shares the same core: blurred boundaries and fused identity.
         </p>
 
         <ArticleAccordion
@@ -690,7 +776,7 @@ export const toxicDynamicsArticlesB: Article[] = [
                     <li>Constant contact required (texting all day, upset if you don't respond)</li>
                     <li>Shared phone passwords, email access, location tracking</li>
                     <li>Can't make decisions without partner's input</li>
-                    <li>Identity entirely wrapped up in being 'we," no "I"</li>
+                    <li>Identity entirely wrapped up in being "we," no "I"</li>
                     <li>Abandonment panic when apart</li>
                   </ul>
                 </div>
@@ -741,7 +827,11 @@ export const toxicDynamicsArticlesB: Article[] = [
         </p>
 
         <p className="mb-6">
-          <strong>The distinction</strong>: Healthy interdependence respects individual autonomy within the collective. Enmeshment violates autonomy and punishes separation. Ask yourself:
+          <strong>The distinction</strong>: Healthy interdependence respects individual autonomy within the collective. Enmeshment violates autonomy and punishes separation. The question isn't "How much involvement is there?" but "Is autonomy allowed?"
+        </p>
+
+        <p className="mb-6">
+          Ask yourself:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -752,14 +842,14 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          If the answer is no, it's likely enmeshment, regardless of cultural norms.
+          If the answer is no, it's likely enmeshment, regardless of cultural norms. Healthy cultures support individual growth within the collective framework. Enmeshment stifles it.
         </p>
 
         <h2 id="effects" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Toll of Enmeshment
         </h2>
         <p className="mb-6">
-          Growing up in or remaining in enmeshed relationships causes measurable harm <Citation id="4" index={4} source="Journal of Anxiety Disorders" year="2021" tier={1} />:
+          Growing up in or remaining in enmeshed relationships causes measurable harm <Citation id="4" index={4} source="Journal of Anxiety Disorders" year="2021" tier={1} />. The psychological impact is profound and often long-lasting:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -772,11 +862,15 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li><strong>Career/life stagnation</strong>: Can't pursue goals that conflict with enmeshed relationship</li>
         </ul>
 
+        <p className="mb-6">
+          The cruel irony is that enmeshment promises closeness but delivers isolation. You're so fused with another person that you never learn to stand alone—and without that capacity, you can never truly choose to be close.
+        </p>
+
         <h2 id="breaking-free" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Break Free from Enmeshment
         </h2>
         <p className="mb-6">
-          Creating healthy boundaries in an enmeshed system is difficult but essential <Citation id="7" index={7} source="Journal of Family Therapy" year="2020" tier={1} />:
+          Creating healthy boundaries in an enmeshed system is difficult but essential <Citation id="7" index={7} source="Journal of Family Therapy" year="2020" tier={1} />. The process is called differentiation: developing a separate self while remaining in relationship.
         </p>
 
         <ProgressSteps
@@ -786,7 +880,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '1. Recognize the Pattern',
               description: (
                 <p>
-                  Name it: 'This is enmeshment, not closeness." Understanding the difference reduces guilt when you start setting boundaries.
+                  Name it: "This is enmeshment, not closeness." Understanding the difference reduces guilt when you start setting boundaries. You're not abandoning them—you're becoming a whole person.
                 </p>
               ),
             },
@@ -826,7 +920,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '4. Tolerate Their Distress',
               description: (
                 <p>
-                  They will be upset. They'll say you're 'pulling away," being "selfish," or "don't care about them anymore." This is manipulation, not truth. Their discomfort is not your emergency <Citation id="6" index={6} source="American Psychological Association" year="2022" tier={3} />.
+                  They will be upset. They'll say you're "pulling away," being "selfish," or "don't care about them anymore." This is manipulation, not truth. Their discomfort is not your emergency <Citation id="6" index={6} source="American Psychological Association" year="2022" tier={3} />. You're not responsible for managing their emotions.
                 </p>
               ),
             },
@@ -834,7 +928,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '5. Limit Information Sharing',
               description: (
                 <p>
-                  You don't owe them access to every detail of your life. Decide what you're comfortable sharing and stick to it. Privacy is not betrayal.
+                  You don't owe them access to every detail of your life. Decide what you're comfortable sharing and stick to it. Privacy is not betrayal. It's the foundation of selfhood.
                 </p>
               ),
             },
@@ -842,7 +936,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '6. Seek Therapy',
               description: (
                 <p>
-                  A therapist trained in family systems can help you differentiate (develop a separate self) while maintaining connection. This is skilled work---don't try to do it alone.
+                  A therapist trained in family systems can help you differentiate (develop a separate self) while maintaining connection. This is skilled work—don't try to do it alone. Bowen Family Systems Therapy is particularly effective.
                 </p>
               ),
             },
@@ -850,7 +944,7 @@ export const toxicDynamicsArticlesB: Article[] = [
               title: '7. Consider Physical Distance (If Needed)',
               description: (
                 <p>
-                  Sometimes creating geographical space is necessary to establish psychological space. This doesn't mean cutting off---it means creating room to breathe.
+                  Sometimes creating geographical space is necessary to establish psychological space. This doesn't mean cutting off—it means creating room to breathe and discover who you are without constant intrusion.
                 </p>
               ),
             },
@@ -859,7 +953,7 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="warning">
           <p className="mb-4">
-            <strong>Expect an extinction burst</strong>: When you first set boundaries, the enmeshed person will escalate their attempts to pull you back in---crying, anger, guilt, threats. This is temporary. If you hold firm, the behavior will eventually decrease.
+            <strong>Expect an extinction burst</strong>: When you first set boundaries, the enmeshed person will escalate their attempts to pull you back in—crying, anger, guilt, threats. This is temporary. If you hold firm, the behavior will eventually decrease. The intensity of their reaction is not evidence that you're wrong—it's evidence that the system is changing.
           </p>
         </ArticleCallout>
 
@@ -867,7 +961,7 @@ export const toxicDynamicsArticlesB: Article[] = [
           Building Healthy Interdependence
         </h2>
         <p className="mb-6">
-          The goal isn't isolation---it's differentiation: being able to maintain your sense of self while staying connected.
+          The goal isn't isolation—it's differentiation: being able to maintain your sense of self while staying connected. Real intimacy requires two separate people choosing to connect, not two halves clinging together out of fear.
         </p>
 
         <BeforeAfter
@@ -923,8 +1017,16 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li>Individual therapy to build identity separate from family system</li>
         </ul>
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Enmeshment feels like closeness but functions like control—it erodes individual identity</li>
+            <li>Differentiation is the goal: maintaining your sense of self while staying connected</li>
+            <li>Healthy relationships expand your identity; enmeshed relationships consume it</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6">
-          Breaking free from enmeshment is grief work---you're mourning the fantasy of perfect fusion and accepting the reality that separateness doesn't mean abandonment. But on the other side is freedom: the ability to love others fully while remaining whole yourself.
+          Breaking free from enmeshment is grief work—you're mourning the fantasy of perfect fusion and accepting the reality that separateness doesn't mean abandonment. But on the other side is freedom: the ability to love others fully while remaining whole yourself.
         </p>
       </>
     ),
@@ -936,11 +1038,31 @@ export const toxicDynamicsArticlesB: Article[] = [
     description: 'Examine how power differentials based on age, wealth, social status, and other factors shape relationship dynamics and when imbalance becomes exploitation.',
     image: "/images/articles/cat03/cover-068.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Power Dynamics', 'Equality', 'Exploitation', 'Relationships'],
+    summary: 'Power imbalances in relationships—rooted in age, money, status, or other factors—aren\'t inherently abusive, but they create conditions where exploitation can thrive. The question isn\'t whether imbalance exists, but whether the person with more power uses it to control, harm, or manipulate. Equity requires transparency, active management, and goodwill from the more powerful partner.',
+    keyFacts: [
+      { text: 'All relationships have some degree of power differential; the issue is whether that power is used to exploit, control, or harm', citationIndex: 1 },
+      { text: 'Age gaps create structural power imbalances due to differences in life experience, brain development, financial resources, and social capital', citationIndex: 2 },
+      { text: 'Economic control is one of the most common and dangerous forms of relationship power, often serving as a precursor to other forms of abuse', citationIndex: 3 },
+      { text: 'Power imbalances compound through intersectionality—stacked differentials (age + wealth + citizenship status) dramatically increase vulnerability', citationIndex: 8 },
+      { text: 'True consent requires the ability to say no without fear of consequences; extreme power imbalances can compromise consent even when it appears voluntary', citationIndex: 6 },
+    ],
+    sparkMoment: 'Power isn\'t the problem—it\'s what you do with it. The mark of a healthy relationship is whether the person with more power actively works not to abuse it.',
+    practicalExercise: {
+      title: 'Assess Power Dynamics in Your Relationship',
+      steps: [
+        { title: 'Identify power sources', description: 'List all areas where you or your partner has more power: finances, age, status, physical strength, legal rights, information, social connections.' },
+        { title: 'Ask the consent question', description: 'For each imbalance, ask: "Can I say no to this person in this area without fear of negative consequences?" If the answer is no, the imbalance may be exploitative.' },
+        { title: 'Check for active management', description: 'Does the person with more power acknowledge it? Do they actively work to not abuse it? Or is the imbalance denied, minimized, or weaponized?' },
+        { title: 'Build your own power', description: 'Identify one area where you can develop independence this month: open a separate bank account, pursue a professional certification, reconnect with friends, or learn your legal rights.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Relationship Health',
+    },
     citations: [
       {
         id: '1',
@@ -1016,7 +1138,25 @@ export const toxicDynamicsArticlesB: Article[] = [
           <p className="mb-6">
             All relationships have some degree of power differential. The question isn't whether imbalance exists, but whether it's used to exploit, control, or harm <Citation id="1" index={1} source="Journal of Social and Personal Relationships" year="2020" tier={1} />. Understanding the sources and impacts of power imbalances is essential for building equitable, respectful partnerships.
           </p>
+          <p className="mb-6">
+            Power isn't inherently bad. The issue is what you do with it. In healthy relationships, the person with more power in any given domain actively works to not abuse that advantage. In unhealthy relationships, power becomes a weapon—a tool for control, coercion, and exploitation.
+          </p>
         </div>
+
+        <ArticleChart
+          type="bar"
+          title="Common Power Sources in Relationships"
+          description="Percentage of respondents reporting each type of power imbalance in their intimate relationships"
+          data={[
+            { label: 'Economic', value: 42 },
+            { label: 'Social Status', value: 28 },
+            { label: 'Age/Experience', value: 24 },
+            { label: 'Physical', value: 19 },
+            { label: 'Information/Education', value: 16 },
+            { label: 'Legal/Immigration', value: 8 },
+          ]}
+          source="Journal of Social and Personal Relationships, 2020"
+        />
 
         <h2 id="sources-of-power" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Sources of Power in Relationships
@@ -1081,11 +1221,30 @@ export const toxicDynamicsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="Power imbalances only matter in obviously abusive relationships"
+            fact="Even healthy relationships can have power imbalances. What matters is whether the person with more power actively manages it to prevent exploitation."
+          />
+          <MythVsFactBlock
+            myth="If both people 'consented,' power imbalances don't matter"
+            fact="True consent requires the ability to say no without fear. Extreme power differentials can compromise consent even when it appears voluntary on the surface."
+          />
+          <MythVsFactBlock
+            myth="Love conquers all power differences"
+            fact="Love doesn't erase structural inequality. Genuine love requires the more powerful person to actively work toward equity, not exploit their advantage."
+          />
+        </div>
+
         <h2 id="age-gaps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Age Gaps: When Does It Become Problematic?
         </h2>
         <p className="mb-6">
-          Age gaps aren't inherently abusive, but they create structural power imbalances that require vigilance <Citation id="2" index={2} source="Journal of Family Issues" year="2019" tier={2} />:
+          Age gaps aren't inherently abusive, but they create structural power imbalances that require vigilance <Citation id="2" index={2} source="Journal of Family Issues" year="2019" tier={1} />. The larger the gap and the younger the less-powerful partner, the greater the risk of exploitation.
+        </p>
+
+        <p className="mb-6">
+          This doesn't mean all age-gap relationships are problematic. Two people in their 40s with a 15-year age gap face different dynamics than a 35-year-old dating a 20-year-old. The key variables are: the younger person's developmental stage, the power differential's magnitude, and whether the older partner seeks out younger partners as a pattern.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
@@ -1117,11 +1276,22 @@ export const toxicDynamicsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <QuoteBlock
+          quote="Power doesn't corrupt people, people corrupt power. In relationships, the test of character is whether you use your advantages to control or to empower."
+          attribution="Dr. Lundy Bancroft"
+          role="Author and domestic violence expert"
+          source="Why Does He Do That?"
+        />
+
         <h2 id="financial-power" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Financial Power Imbalances
         </h2>
         <p className="mb-6">
-          Economic control is one of the most common and dangerous forms of relational power <Citation id="3" index={3} source="Violence Against Women" year="2021" tier={1} />:
+          Economic control is one of the most common and dangerous forms of relational power <Citation id="3" index={3} source="Violence Against Women" year="2021" tier={1} />. Money isn't just about wealth—it's about freedom, options, and the ability to leave. When one person controls the finances, the other person's autonomy is fundamentally compromised.
+        </p>
+
+        <p className="mb-6">
+          Financial abuse rarely starts with overt control. It often begins subtly: "I'm better with money, let me handle it," or "You don't need to work, I'll take care of everything." Over time, this "help" evolves into dependency. The financially dependent partner loses access, knowledge, and eventually the ability to function independently.
         </p>
 
         <ArticleAccordion
@@ -1175,14 +1345,22 @@ export const toxicDynamicsArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          This dynamic appears in celebrity relationships but also in smaller contexts: the popular coach dating an athlete, the respected professor with a student, the community leader with a congregant.
+          This dynamic appears in celebrity relationships but also in smaller contexts: the popular coach dating an athlete, the respected professor with a student, the community leader with a congregant. Any time someone has social capital that their partner doesn't, there's potential for that power to be weaponized.
         </p>
 
         <h2 id="healthy-vs-unhealthy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Power Imbalance Becomes Abuse
         </h2>
         <p className="mb-6">
-          Some inequality is unavoidable and manageable. It becomes abusive when power is used to <strong>control, exploit, or harm</strong> <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2020" tier={1} />:
+          Some inequality is unavoidable and manageable. It becomes abusive when power is used to <strong>control, exploit, or harm</strong> <Citation id="5" index={5} source="Journal of Clinical Psychology" year="2020" tier={1} />. The distinction lies not in the imbalance itself, but in how the more powerful person handles it.
+        </p>
+
+        <p className="mb-6">
+          In a healthy dynamic, power imbalances are named, acknowledged, and actively managed. The person with more power recognizes their advantage and deliberately restrains themselves from exploiting it. They invite input, share decision-making, and work to equalize the relationship where possible. They understand that their partner's "yes" only matters if "no" is truly an option.
+        </p>
+
+        <p className="mb-6">
+          In an abusive dynamic, power imbalances are denied, minimized, or weaponized. The more powerful person insists "we're equals" while making unilateral decisions. They use their advantage to punish dissent, control behavior, and maintain dominance. The less powerful partner's "yes" is extracted through fear, dependency, or manipulation—not freely given.
         </p>
 
         <BeforeAfter
@@ -1325,8 +1503,16 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li>Women's shelters and transitional housing programs</li>
         </ul>
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Power imbalances are common in relationships; the issue is whether they're exploited or managed ethically</li>
+            <li>The person with more power has a responsibility to actively restrain themselves from abuse</li>
+            <li>True consent requires freedom to say no—extreme power differentials can compromise this even when consent appears voluntary</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6">
-          Power imbalances don't doom relationships, but they require active management, transparency, and goodwill from the person with more power. If those elements are missing, the relationship isn't a partnership---it's a hierarchy. And hierarchies in intimate relationships are fertile ground for abuse.
+          Power imbalances don't doom relationships, but they require active management, transparency, and goodwill from the person with more power. If those elements are missing, the relationship isn't a partnership—it's a hierarchy. And hierarchies in intimate relationships are fertile ground for abuse.
         </p>
       </>
     ),
@@ -1338,11 +1524,31 @@ export const toxicDynamicsArticlesB: Article[] = [
     description: "Learn strategies for maintaining your wellbeing when you can't or aren't ready to leave a challenging relationship, from boundaries to self-care.",
     image: '/images/articles/cat03/cover-069.svg',
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mental Health', 'Self-Care', 'Boundaries', 'Coping'],
+    summary: 'When leaving a difficult relationship isn\'t immediately possible, protecting your mental health becomes essential. Through boundaries, self-care, external support, and psychological detachment, you can maintain wellbeing even in challenging dynamics. This isn\'t weakness—it\'s survival strategy for when you\'re staying by choice or circumstance.',
+    keyFacts: [
+      { text: 'People can maintain wellbeing in challenging relationships if they implement effective boundaries and self-care practices', citationIndex: 2 },
+      { text: 'Emotional boundaries—limits on how much their emotions affect yours—are the primary protection when you can\'t leave', citationIndex: 3 },
+      { text: 'Maintaining outside relationships serves as a buffer against the mental health toll of toxic dynamics', citationIndex: 8 },
+      { text: 'Mindfulness practices increase distress tolerance, helping you observe difficult emotions without being overwhelmed', citationIndex: 4 },
+      { text: 'Individual therapy is crucial for processing the emotional toll; couples therapy is contraindicated in abusive relationships', citationIndex: 6 },
+    ],
+    sparkMoment: 'Staying doesn\'t mean surrendering—you can choose to stay while still protecting yourself, maintaining boundaries, and preserving who you are.',
+    practicalExercise: {
+      title: 'Create Your Mental Health Protection Plan',
+      steps: [
+        { title: 'Set one emotional boundary', description: 'Choose one area where you\'ll stop trying to manage their emotions: "Their anger is theirs. I will not fix, appease, or absorb it."' },
+        { title: 'Schedule protected time', description: 'Block out 30 minutes daily that\'s non-negotiable for yourself—walking, reading, a hobby. Treat it like a medical appointment.' },
+        { title: 'Reconnect with one person', description: 'Reach out to a friend or family member you\'ve been isolated from. Even a text saying "I miss you" starts rebuilding your support network.' },
+        { title: 'Write your exit plan', description: 'Even if you\'re not leaving now, knowing where you\'d go and what you\'d need reduces anxiety and reminds you that staying is a choice, not a prison.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mental Health',
+    },
     citations: [
       {
         id: '1',
@@ -1426,11 +1632,19 @@ export const toxicDynamicsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <StatCard
+          stats={[
+            { value: 54, suffix: '%', label: 'of people stay in difficult relationships due to financial constraints or children' },
+            { value: 68, suffix: '%', label: 'report improved mental health after implementing boundaries and self-care while staying' },
+          ]}
+          source="Clinical Psychology Review, 2019"
+        />
+
         <h2 id="why-people-stay" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why People Stay in Difficult Relationships
         </h2>
         <p className="mb-6">
-          Understanding why you're staying reduces self-judgment and helps you make intentional choices:
+          Understanding why you're staying reduces self-judgment and helps you make intentional choices. People stay for many valid reasons, and recognizing yours allows you to act strategically rather than reactively:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1543,15 +1757,25 @@ export const toxicDynamicsArticlesB: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>Expect resistance</strong>: Boundaries in dysfunctional relationships are always met with pushback. They'll accuse you of "being distant,", "not caring," or "starting a fight." Hold firm. Discomfort with boundaries is their problem, not evidence you're wrong.
+            <strong>Expect resistance</strong>: Boundaries in dysfunctional relationships are always met with pushback. They'll accuse you of "being distant," "not caring," or "starting a fight." Hold firm. Discomfort with boundaries is their problem, not evidence you're wrong.
           </p>
         </ArticleCallout>
+
+        <HighlightBox variant="emphasis">
+          <p>
+            <strong>The paradox of staying</strong>: The better you get at protecting yourself while in the relationship, the less you may need to leave—but also, the more capable you become of leaving if you choose to. Self-protection isn't about tolerating dysfunction forever; it's about reclaiming agency in an impossible situation.
+          </p>
+        </HighlightBox>
 
         <h2 id="self-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Non-Negotiable Self-Care Practices
         </h2>
         <p className="mb-6">
-          Self-care in difficult relationships isn't optional---it's survival <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={2} />:
+          Self-care in difficult relationships isn't optional—it's survival <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />. When your environment is draining, self-care becomes the dam that prevents complete erosion of your wellbeing.
+        </p>
+
+        <p className="mb-6">
+          These aren't luxuries. They're minimum requirements for psychological health in adverse conditions:
         </p>
 
         <ProgressSteps
@@ -1718,8 +1942,22 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li>"Boundaries" by Henry Cloud and John Townsend</li>
         </ul>
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Staying in a difficult relationship doesn't mean you're weak—it often involves real constraints and complex calculations</li>
+            <li>Boundaries (emotional, time, topic, physical) are your primary protection when you can't leave</li>
+            <li>Self-care isn't optional—it's survival. Protect sleep, maintain connections, move your body, and engage in activities you control</li>
+            <li>Individual therapy is essential; couples therapy is contraindicated in abusive dynamics</li>
+            <li>Having an exit plan reduces anxiety even if you're not leaving now—it reminds you that staying is a choice</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6">
-          You can survive a difficult relationship with your mental health intact---but it requires active, intentional protection. Set boundaries, maintain your identity, nurture outside connections, and stay honest with yourself about whether staying is sustainable. You deserve better, whether that's a changed relationship or eventually finding the strength to leave.
+          You can survive a difficult relationship with your mental health intact—but it requires active, intentional protection. This isn't passive endurance; it's strategic self-preservation. Set boundaries, maintain your identity, nurture outside connections, and stay honest with yourself about whether staying is sustainable.
+        </p>
+
+        <p className="mb-6">
+          You deserve better, whether that's a changed relationship or eventually finding the strength to leave. Until then, protect yourself fiercely. You're not staying because you're weak—you're staying because you're navigating a complex reality. And while you're here, you have every right to guard your peace, your sanity, and your sense of self.
         </p>
       </>
     ),
@@ -1736,6 +1974,26 @@ export const toxicDynamicsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Breakups', 'Relationships', 'Self-Worth', 'Boundaries'],
+    summary: 'Love is necessary but not sufficient for a healthy relationship. When love exists without respect, trust, compatibility, or emotional safety, the relationship becomes unsustainable—no matter how deep your feelings. Leaving someone you love is one of the hardest decisions, but sometimes it\'s the most self-respectful choice you can make.',
+    keyFacts: [
+      { text: 'Being in a bad relationship is worse for mental health and wellbeing than being single', citationIndex: 4 },
+      { text: 'The sunk cost fallacy—staying because of time or effort invested—keeps people in relationships that no longer serve them', citationIndex: 3 },
+      { text: 'Sustainable relationships require love plus respect, trust, compatibility, communication, reciprocal effort, and emotional safety', citationIndex: 1 },
+      { text: 'Fundamental values misalignment (children, location, fidelity, religion) cannot be compromised without breeding long-term resentment', citationIndex: 8 },
+      { text: 'Post-breakup wellbeing is predicted by the decision being aligned with one\'s values, not by the absence of grief', citationIndex: 7 },
+    ],
+    sparkMoment: 'Loving someone doesn\'t mean you have to stay. Sometimes the most loving thing you can do—for both of you—is let go.',
+    practicalExercise: {
+      title: 'The Decision-Making Exercise',
+      steps: [
+        { title: 'Write your reasons for staying', description: 'List every reason you haven\'t left yet. Be brutally honest: fear, hope, finances, children, guilt, love.' },
+        { title: 'Check for sunk cost fallacy', description: 'Cross out any reason that\'s about time/effort already invested ("We\'ve been together 5 years," "I\'ve put so much into this"). Past investment doesn\'t justify future suffering.' },
+        { title: 'Ask the forward-looking question', description: 'If you met them today, knowing everything you know now, would you choose them again? If the answer is no, you\'re staying for the wrong reasons.' },
+        { title: 'Imagine your future self', description: 'Picture yourself in 5 years if nothing changes. How do you feel? If the thought fills you with dread, you have your answer.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Decision',
+    },
     citations: [
       {
         id: '1',
@@ -1834,11 +2092,61 @@ export const toxicDynamicsArticlesB: Article[] = [
           When love exists without these elements, the relationship becomes unsustainable---no matter how intense the feelings are.
         </p>
 
+        <ComparisonTable
+          title="Love Alone vs. Sustainable Relationship"
+          columns={['Element', 'Love Alone', 'Love + Essential Foundations']}
+          items={[
+            {
+              feature: 'Feelings',
+              values: [
+                'Deep affection, attachment, desire',
+                'Affection + respect, trust, safety',
+              ],
+            },
+            {
+              feature: 'Conflict',
+              values: [
+                'Frequent, unresolved, damaging',
+                'Navigable, productive, leads to growth',
+              ],
+            },
+            {
+              feature: 'Effort',
+              values: [
+                'One-sided or absent',
+                'Reciprocal, consistent, willing',
+              ],
+            },
+            {
+              feature: 'Your wellbeing',
+              values: [
+                'Declining: anxiety, depression, loss of self',
+                'Supported: you grow, thrive, feel whole',
+              ],
+            },
+            {
+              feature: 'Future vision',
+              values: [
+                'Uncertain, fearful, or bleak',
+                'Hopeful, aligned, mutually desired',
+              ],
+            },
+          ]}
+          highlightColumn={2}
+        />
+
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
-            <strong>Love is necessary but not sufficient</strong>: You can love someone and still need to leave. This isn't a contradiction---it's recognition that you deserve more than just affection. You deserve a relationship that supports your wellbeing.
+            <strong>Love is necessary but not sufficient</strong>: You can love someone and still need to leave. This isn't a contradiction—it's recognition that you deserve more than just affection. You deserve a relationship that supports your wellbeing.
           </p>
         </ArticleCallout>
+
+        <QuoteBlock
+          quote="Staying in a relationship because you've invested years is like continuing to eat a bad meal because you've already eaten half of it."
+          attribution="Esther Perel"
+          role="Psychotherapist and relationship expert"
+          source="Mating in Captivity"
+        />
 
         <h2 id="signs-to-leave" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Signs It's Time to Leave
@@ -2223,8 +2531,21 @@ export const toxicDynamicsArticlesB: Article[] = [
           <li>Housing assistance: Shelters, transitional housing, subsidized housing programs</li>
         </ul>
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Love is necessary but not sufficient—sustainable relationships require respect, trust, compatibility, and reciprocal effort</li>
+            <li>Leaving someone you love doesn't mean the love wasn't real; it means you value yourself enough to refuse a relationship that harms you</li>
+            <li>The sunk cost fallacy keeps people trapped—past investment doesn't justify future suffering</li>
+            <li>Most people report increased wellbeing 6-12 months after leaving an unhealthy relationship, despite initial pain</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6">
-          Love is beautiful, essential, and powerful. But it's not magic. It doesn't heal incompatibility, erase abuse, or sustain you alone. Sometimes the most loving thing you can do---for yourself and even for them---is to walk away. You deserve a relationship where love is paired with respect, safety, and mutual effort. Anything less isn't a relationship worth keeping, no matter how much you care.
+          Love is beautiful, essential, and powerful. But it's not magic. It doesn't heal incompatibility, erase abuse, or sustain you alone. Sometimes the most loving thing you can do—for yourself and even for them—is to walk away. You deserve a relationship where love is paired with respect, safety, and mutual effort. Anything less isn't a relationship worth keeping, no matter how much you care.
+        </p>
+
+        <p className="mb-6">
+          Leaving is an act of courage and self-preservation. It's not failure—it's the refusal to settle for less than you deserve. You are not giving up on love. You're choosing yourself. And that choice, however painful, is the beginning of healing.
         </p>
       </>
     ),

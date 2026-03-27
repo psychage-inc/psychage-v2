@@ -371,6 +371,7 @@ export const screenTimeDigitalHabitsArticlesB: Article[] = [
   {
     id: catId(17),
     slug: 'dopamine-detox-science-or-snake-oil',
+    status: 'draft',
     title: 'The Dopamine Detox Trend: Science or Snake Oil?',
     description: 'Examining the viral dopamine detox trend, what neuroscience actually says about dopamine, and whether fasting from pleasure makes sense.',
     image: "/images/articles/cat10/cover-017.svg",

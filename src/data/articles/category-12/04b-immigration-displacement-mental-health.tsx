@@ -364,6 +364,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
   {
     id: catId(37),
     slug: 'children-of-immigrants-growing-up-between-two-worlds',
+    status: 'draft',
     title: 'Children of Immigrants: Growing Up Between Two Worlds',
     description: 'Navigate the unique mental health challenges of growing up with one foot in your heritage culture and one in your adopted country.',
     image: "/images/articles/cat12/cover-037.svg",
@@ -642,6 +643,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
   {
     id: catId(38),
     slug: 'reverse-culture-shock-mental-health-challenges-returning-home',
+    status: 'draft',
     title: 'Reverse Culture Shock: The Mental Health Challenges of Returning Home',
     description: `Discover why going "home" can feel alienating, and how to cope when you've outgrown the place you came from.`,
     image: '/images/articles/cat12/cover-038.svg',
@@ -893,6 +895,7 @@ export const immigrationDisplacementMentalHealthArticlesB: Article[] = [
   {
     id: catId(39),
     slug: 'international-students-mental-health-isolation-pressure-distance-home',
+    status: 'draft',
     title: 'International Students and Mental Health: Isolation, Pressure, and Distance from Home',
     description: 'Navigate the unique mental health challenges of studying abroad, from homesickness to visa stress and cultural adjustment.',
     image: "/images/articles/cat12/cover-039.svg",

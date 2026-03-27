@@ -257,6 +257,7 @@ export const exerciseMovementMentalWellnessArticlesA: Article[] = [
   {
     id: catId(22),
     slug: 'exercise-changes-brain-neuroplasticity-bdnf-mood',
+    status: 'draft',
     title: 'How Exercise Changes Your Brain: Neuroplasticity, BDNF, and Mood',
     description: 'Exercise triggers cascades of neurochemical changes---boosting BDNF, growing new neurons, and rewiring circuits involved in mood and stress.',
     image: "/images/articles/cat09/cover-022.svg",

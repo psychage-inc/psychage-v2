@@ -638,6 +638,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
   {
     id: catId(43),
     slug: 'somatic-symptoms-mental-health-emotions-become-physical',
+    status: 'draft',
     title: 'Somatic Symptoms and Mental Health: When Emotions Become Physical',
     description: 'Learn how psychological stress manifests as physical symptoms, why this happens, and how to address somatization without dismissing real physical experiences.',
     image: "/images/articles/cat09/cover-043.svg",
@@ -955,6 +956,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
   {
     id: catId(44),
     slug: 'breathwork-mental-health-nervous-system',
+    status: 'draft',
     title: 'Breathwork for Mental Health: How Breathing Affects Your Nervous System',
     description: 'Discover how controlled breathing techniques directly influence your nervous system, reduce anxiety, improve mood, and enhance emotional regulation through simple practices.',
     image: "/images/articles/cat09/cover-044.svg",

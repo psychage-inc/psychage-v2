@@ -18,6 +18,7 @@ export const digitalWellnessArticlesA: Article[] = [
   {
     id: catId(41),
     slug: 'what-is-digital-wellness-framework-healthy-tech-relationship',
+    status: 'draft',
     title: 'What Is Digital Wellness? A Framework for a Healthy Tech Relationship',
     description: 'Understand the principles of digital wellness and learn to build a balanced, intentional relationship with technology that supports your well-being.',
     image: "/images/articles/cat10/cover-041.svg",
@@ -1331,6 +1332,7 @@ export const digitalWellnessArticlesA: Article[] = [
   {
     id: catId(45),
     slug: 'nature-technology-getting-outside-counteracts-screen-exposure',
+    status: 'draft',
     title: 'Nature and Technology: Why Getting Outside Counteracts Screen Exposure',
     description: 'Discover the science of how time in nature restores attention, reduces stress, and counterbalances the mental health effects of digital life.',
     image: "/images/articles/cat10/cover-045.svg",

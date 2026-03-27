@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 186,
+  "completedSessions": 203,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -8337,7 +8337,7 @@
       "completedAt": "2026-03-27T08:43:36.350Z"
     },
     "170": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "03-trauma-dissociative",
       "file": "src/data/articles/category-13/03-trauma-dissociative.tsx",
@@ -8349,7 +8349,7 @@
           "slug": "ptsd-deep-dive",
           "title": "PTSD: A Deep Dive into Post-Traumatic Stress Disorder",
           "currentWords": 565,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -8357,7 +8357,7 @@
           "slug": "complex-ptsd",
           "title": "Complex PTSD: When Trauma Is Repeated and Relational",
           "currentWords": 534,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -8365,7 +8365,7 @@
           "slug": "acute-stress-disorder",
           "title": "Acute Stress Disorder: The Immediate Aftermath of Trauma",
           "currentWords": 383,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -8373,7 +8373,7 @@
           "slug": "dissociative-identity-disorder",
           "title": "Dissociative Identity Disorder: Understanding What Was Once Called \"Multiple Personality\"",
           "currentWords": 362,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -8381,7 +8381,7 @@
           "slug": "osdd",
           "title": "Other Specified Dissociative Disorder: The In-Between Diagnosis",
           "currentWords": 103,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 5,
@@ -8389,7 +8389,7 @@
           "slug": "depersonalization-derealization",
           "title": "Depersonalization and Derealization: When Reality Feels Unreal",
           "currentWords": 139,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 6,
@@ -8397,7 +8397,7 @@
           "slug": "dissociation-double-edged",
           "title": "How Dissociation Protects and Hinders: The Double-Edged Coping Mechanism",
           "currentWords": 166,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 7,
@@ -8405,7 +8405,7 @@
           "slug": "trauma-military-veterans",
           "title": "Trauma-Related Disorders in Military Veterans: Specialized Considerations",
           "currentWords": 140,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 8,
@@ -8413,7 +8413,7 @@
           "slug": "trauma-substance-use",
           "title": "The Relationship Between Trauma Disorders and Substance Use",
           "currentWords": 174,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 9,
@@ -8421,13 +8421,13 @@
           "slug": "advances-trauma-treatment",
           "title": "Advances in Trauma and Dissociative Disorder Treatment",
           "currentWords": 149,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:42Z"
     },
     "171": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "04-ocd-impulse",
       "file": "src/data/articles/category-13/04-ocd-impulse.tsx",
@@ -8439,7 +8439,7 @@
           "slug": "ocd-explained",
           "title": "OCD Explained: Beyond Handwashing and Checking --- The Full Picture",
           "currentWords": 102,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -8447,7 +8447,7 @@
           "slug": "ocd-subtypes",
           "title": "Common OCD Subtypes: Contamination, Harm, Symmetry, and Pure O",
           "currentWords": 48,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -8455,7 +8455,7 @@
           "slug": "body-dysmorphic-disorder",
           "title": "Body Dysmorphic Disorder: When You Can't Stop Seeing Flaws",
           "currentWords": 86,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -8463,7 +8463,7 @@
           "slug": "trichotillomania",
           "title": "Trichotillomania: Understanding Hair-Pulling Disorder",
           "currentWords": 72,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -8471,7 +8471,7 @@
           "slug": "excoriation-disorder",
           "title": "Excoriation Disorder: When Skin-Picking Becomes Compulsive",
           "currentWords": 57,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 5,
@@ -8479,7 +8479,7 @@
           "slug": "intermittent-explosive-disorder",
           "title": "Intermittent Explosive Disorder: Understanding Disproportionate Anger Outbursts",
           "currentWords": 56,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 6,
@@ -8487,7 +8487,7 @@
           "slug": "hoarding-disorder",
           "title": "Hoarding Disorder: More Than Just Collecting --- A Mental Health Condition",
           "currentWords": 76,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 7,
@@ -8495,7 +8495,7 @@
           "slug": "ocd-spectrum",
           "title": "The OCD Spectrum: How Related Conditions Share Common Ground",
           "currentWords": 36,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 8,
@@ -8503,7 +8503,7 @@
           "slug": "ocd-children",
           "title": "OCD in Children and Adolescents: Early Recognition and Treatment",
           "currentWords": 58,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 9,
@@ -8511,13 +8511,13 @@
           "slug": "erp-treatment",
           "title": "ERP and Other Treatments for OCD Spectrum Conditions",
           "currentWords": 105,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T21:07:28Z"
     },
     "172": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -8529,7 +8529,7 @@
           "slug": "adhd-adults",
           "title": "ADHD in Adults: The Condition That Wasn't Supposed to Exist Past Childhood",
           "currentWords": 241,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -8537,7 +8537,7 @@
           "slug": "adhd-women",
           "title": "ADHD in Women and Girls: Why It's Underdiagnosed and Misunderstood",
           "currentWords": 250,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -8545,7 +8545,7 @@
           "slug": "autism-adults",
           "title": "Autism Spectrum: Understanding Neurodiversity in Adults",
           "currentWords": 230,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -8553,7 +8553,7 @@
           "slug": "late-diagnosed-autism",
           "title": "Late-Diagnosed Autism: What Happens When You Find Out as an Adult",
           "currentWords": 229,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -8561,10 +8561,10 @@
           "slug": "adhd-autism-overlap",
           "title": "ADHD and Autism Overlap: When Conditions Co-Occur",
           "currentWords": 211,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T19:45:00Z"
     },
     "173": {
       "status": "complete",
@@ -9967,7 +9967,7 @@
       "completedAt": "2026-03-27T08:43:36.350Z"
     },
     "201": {
-      "status": "pending",
+      "status": "complete",
       "category": 16,
       "subcategoryFile": "05-related-severe-conditions",
       "file": "src/data/articles/category-16/05-related-severe-conditions.tsx",
@@ -9979,7 +9979,7 @@
           "slug": "bipolar-disorder-psychotic-features-when-mood-and-reality-diverge",
           "title": "Bipolar Disorder With Psychotic Features: When Mood and Reality Diverge",
           "currentWords": 441,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -9987,7 +9987,7 @@
           "slug": "major-depression-psychotic-features-when-despair-distorts-reality",
           "title": "Major Depression With Psychotic Features: When Despair Distorts Reality",
           "currentWords": 382,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -9995,7 +9995,7 @@
           "slug": "substance-induced-psychotic-disorder-when-drugs-trigger-psychosis",
           "title": "Substance-Induced Psychotic Disorder: When Drugs Trigger Psychosis",
           "currentWords": 372,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10003,7 +10003,7 @@
           "slug": "catatonia-when-psychosis-affects-movement-and-speech",
           "title": "Catatonia: When Psychosis Affects Movement and Speech",
           "currentWords": 272,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10011,13 +10011,13 @@
           "slug": "childhood-onset-schizophrenia-rare-severe-early-psychosis",
           "title": "Childhood-Onset Schizophrenia: Rare, Severe, and Early Psychosis",
           "currentWords": 418,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T19:55:30Z"
     },
     "202": {
-      "status": "pending",
+      "status": "complete",
       "category": 16,
       "subcategoryFile": "06a-psychosis-research",
       "file": "src/data/articles/category-16/06a-psychosis-research.tsx",
@@ -10029,7 +10029,7 @@
           "slug": "neurobiology-psychosis-what-happens-in-the-brain",
           "title": "The Neurobiology of Psychosis: What Happens in the Brain",
           "currentWords": 671,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10037,7 +10037,7 @@
           "slug": "genetics-psychosis-what-research-tells-us-about-heredity-and-risk",
           "title": "Genetics and Psychosis: What Research Tells Us About Heredity and Risk",
           "currentWords": 618,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10045,7 +10045,7 @@
           "slug": "brain-imaging-psychosis-what-scans-reveal-about-the-mind",
           "title": "Brain Imaging and Psychosis: What Scans Reveal About the Mind",
           "currentWords": 571,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10053,7 +10053,7 @@
           "slug": "early-detection-psychosis-predicting-and-preventing-first-episodes",
           "title": "Early Detection of Psychosis: Predicting and Preventing First Episodes",
           "currentWords": 615,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10061,10 +10061,10 @@
           "slug": "novel-antipsychotic-treatments-beyond-dopamine-blockers",
           "title": "Novel Antipsychotic Treatments: Beyond Dopamine Blockers",
           "currentWords": 552,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:15:00Z"
     },
     "203": {
       "status": "complete",
@@ -10167,7 +10167,7 @@
       "completedAt": "2026-03-27T06:08:10.814531Z"
     },
     "205": {
-      "status": "pending",
+      "status": "complete",
       "category": 16,
       "subcategoryFile": "06d-psychosis-research",
       "file": "src/data/articles/category-16/06d-psychosis-research.tsx",
@@ -10179,7 +10179,7 @@
           "slug": "inflammation-and-immune-dysfunction-in-psychosis-a-paradigm-shift",
           "title": "Inflammation and Immune Dysfunction in Psychosis: A Paradigm Shift",
           "currentWords": 645,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10187,7 +10187,7 @@
           "slug": "sleep-disturbances-and-circadian-rhythm-in-schizophrenia-beyond-insomnia",
           "title": "Sleep Disturbances and Circadian Rhythm in Schizophrenia: Beyond Insomnia",
           "currentWords": 676,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10195,7 +10195,7 @@
           "slug": "oxytocin-and-social-cognition-in-schizophrenia-the-bonding-hormone",
           "title": "Oxytocin and Social Cognition in Schizophrenia: The Bonding Hormone",
           "currentWords": 661,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10203,7 +10203,7 @@
           "slug": "technology-assisted-monitoring-and-intervention-in-psychosis-digital-mental-health",
           "title": "Technology-Assisted Monitoring and Intervention in Psychosis: Digital Mental Health",
           "currentWords": 696,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10211,10 +10211,10 @@
           "slug": "building-research-participation-and-community-engagement-in-psychosis-science",
           "title": "Building Research Participation and Community Engagement in Psychosis Science",
           "currentWords": 553,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:00Z"
     },
     "206": {
       "status": "complete",
@@ -10317,7 +10317,7 @@
       "completedAt": "2026-03-27T06:08:10.814531Z"
     },
     "208": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "02a-dementia-alzheimers",
       "file": "src/data/articles/category-17/02a-dementia-alzheimers.tsx",
@@ -10329,7 +10329,7 @@
           "slug": "what-is-dementia-types-causes-and-progression",
           "title": "What Is Dementia? Types, Causes, and Progression",
           "currentWords": 218,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10337,7 +10337,7 @@
           "slug": "alzheimer-disease-brain-changes-symptoms-and-stages",
           "title": "Alzheimer Disease: Brain Changes, Symptoms, and Stages",
           "currentWords": 148,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10345,7 +10345,7 @@
           "slug": "treatment-and-management-of-alzheimer-disease",
           "title": "Treatment and Management of Alzheimer Disease",
           "currentWords": 206,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10353,7 +10353,7 @@
           "slug": "vascular-dementia-lewy-body-and-other-types",
           "title": "Vascular Dementia, Lewy Body, and Other Types",
           "currentWords": 461,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10361,10 +10361,10 @@
           "slug": "risk-factors-and-prevention-of-dementia",
           "title": "Risk Factors and Prevention of Dementia",
           "currentWords": 266,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:10:00Z"
     },
     "209": {
       "status": "complete",
@@ -10467,7 +10467,7 @@
       "completedAt": "2026-03-27T06:08:10.814531Z"
     },
     "211": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "04b-caregiving-family-support",
       "file": "src/data/articles/category-17/04b-caregiving-family-support.tsx",
@@ -10479,7 +10479,7 @@
           "slug": "paying-for-elder-care-medicare-medicaid-and-long-term-care-insurance",
           "title": "Paying for Elder Care: Medicare, Medicaid, and Long-Term Care Insurance",
           "currentWords": 235,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10487,7 +10487,7 @@
           "slug": "cultural-considerations-in-elder-care-family-expectations",
           "title": "Cultural Considerations in Elder Care: Family Expectations and Tradition",
           "currentWords": 163,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10495,7 +10495,7 @@
           "slug": "sandwich-generation-caregiving-for-parents-and-children",
           "title": "Sandwich Generation: Caregiving for Parents and Children Simultaneously",
           "currentWords": 154,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10503,7 +10503,7 @@
           "slug": "transitioning-from-caregiver-to-bereavement-grief-after-caregiving",
           "title": "Transitioning from Caregiver to Bereavement: Grief After Long-Term Caregiving",
           "currentWords": 197,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10511,13 +10511,13 @@
           "slug": "recognizing-elder-abuse-and-neglect-warning-signs-reporting",
           "title": "Recognizing Elder Abuse and Neglect: Warning Signs and Reporting",
           "currentWords": 158,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00Z"
     },
     "212": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "05a-social-isolation-loneliness",
       "file": "src/data/articles/category-17/05a-social-isolation-loneliness.tsx",
@@ -10529,7 +10529,7 @@
           "slug": "loneliness-health-consequences-older-adults",
           "title": "The Health Consequences of Loneliness in Older Adults",
           "currentWords": 151,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10537,7 +10537,7 @@
           "slug": "social-isolation-vs-loneliness-understanding-difference",
           "title": "Social Isolation vs. Loneliness: Understanding the Difference",
           "currentWords": 138,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10545,7 +10545,7 @@
           "slug": "technology-video-calls-social-media-seniors",
           "title": "Technology and Connection: Video Calls and Social Media for Seniors",
           "currentWords": 171,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10553,7 +10553,7 @@
           "slug": "senior-centers-community-programs-social-connection",
           "title": "Senior Centers and Community Programs for Social Connection",
           "currentWords": 181,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10561,13 +10561,13 @@
           "slug": "volunteering-purpose-retirement-mental-health",
           "title": "Volunteering and Purpose in Retirement: Mental Health Benefits",
           "currentWords": 166,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:22Z"
     },
     "213": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "05b-social-isolation-loneliness",
       "file": "src/data/articles/category-17/05b-social-isolation-loneliness.tsx",
@@ -10579,7 +10579,7 @@
           "slug": "pet-ownership-companionship-mental-health-older-adults",
           "title": "Pet Ownership and Companionship for Mental Health in Older Adults",
           "currentWords": 172,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10587,7 +10587,7 @@
           "slug": "intergenerational-programs-relationships-mental-health",
           "title": "Intergenerational Programs and Relationships for Mental Health",
           "currentWords": 144,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10595,7 +10595,7 @@
           "slug": "overcoming-barriers-socialization-mobility-hearing-transportation",
           "title": "Overcoming Barriers to Socialization: Mobility, Hearing Loss, Transportation",
           "currentWords": 170,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10603,7 +10603,7 @@
           "slug": "making-friends-after-65-social-connection-strategies",
           "title": "Making Friends After 65: Strategies for Social Connection in Late Life",
           "currentWords": 181,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10611,13 +10611,13 @@
           "slug": "coping-outliving-friends-spouse-grief-isolation",
           "title": "Coping with Outliving Friends and Spouse: Grief and Isolation",
           "currentWords": 162,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:45:00Z"
     },
     "214": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "05c-social-isolation-loneliness",
       "file": "src/data/articles/category-17/05c-social-isolation-loneliness.tsx",
@@ -10629,7 +10629,7 @@
           "slug": "moving-senior-living-communities-social-connection",
           "title": "Moving to Senior Living Communities: Social Connection Benefits",
           "currentWords": 169,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10637,7 +10637,7 @@
           "slug": "faith-communities-spiritual-connection-mental-health",
           "title": "Faith Communities and Spiritual Connection for Mental Health",
           "currentWords": 148,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10645,7 +10645,7 @@
           "slug": "ageism-social-exclusion-mental-health-impact",
           "title": "Ageism and Social Exclusion: Mental Health Impact on Older Adults",
           "currentWords": 168,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10653,7 +10653,7 @@
           "slug": "covid-19-lasting-impact-senior-isolation",
           "title": "COVID-19's Lasting Impact on Senior Isolation and Mental Health",
           "currentWords": 170,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10661,13 +10661,13 @@
           "slug": "building-social-support-network-late-life",
           "title": "Building a Social Support Network in Late Life: Practical Strategies",
           "currentWords": 159,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00Z"
     },
     "215": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "06a-grief-loss-transitions",
       "file": "src/data/articles/category-17/06a-grief-loss-transitions.tsx",
@@ -10679,7 +10679,7 @@
           "slug": "grief-and-bereavement-in-older-adults-when-loss-is-cumulative",
           "title": "Article 46",
           "currentWords": 315,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10687,7 +10687,7 @@
           "slug": "losing-a-spouse-in-later-life-widowhood-and-rebuilding-identity",
           "title": "Article 47",
           "currentWords": 206,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10695,7 +10695,7 @@
           "slug": "retirement-transition-mental-health-identity-and-purpose-after-work",
           "title": "Article 48",
           "currentWords": 210,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10703,7 +10703,7 @@
           "slug": "moving-in-later-life-downsizing-relocation-and-psychological-impact",
           "title": "Article 49",
           "currentWords": 277,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10711,13 +10711,13 @@
           "slug": "end-of-life-anxiety-and-mortality-awareness-in-older-adults",
           "title": "Article 50",
           "currentWords": 261,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T18:42:15Z"
     },
     "216": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "06b-grief-loss-transitions",
       "file": "src/data/articles/category-17/06b-grief-loss-transitions.tsx",
@@ -10729,7 +10729,7 @@
           "slug": "legacy-and-generativity-leaving-something-behind-in-later-life",
           "title": "Article 51",
           "currentWords": 276,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10737,7 +10737,7 @@
           "slug": "outliving-your-children-grief-when-the-natural-order-is-reversed",
           "title": "Article 52",
           "currentWords": 208,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10745,7 +10745,7 @@
           "slug": "anticipatory-grief-preparing-emotionally-for-expected-loss",
           "title": "Article 53",
           "currentWords": 211,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10753,7 +10753,7 @@
           "slug": "finding-new-purpose-after-major-life-transitions-in-later-life",
           "title": "Article 54",
           "currentWords": 239,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10761,13 +10761,13 @@
           "slug": "saying-goodbye-to-independence-navigating-increasing-dependence",
           "title": "Article 55",
           "currentWords": 244,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:47:15Z"
     },
     "217": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "06c-grief-loss-transitions",
       "file": "src/data/articles/category-17/06c-grief-loss-transitions.tsx",
@@ -10779,7 +10779,7 @@
           "slug": "adult-sibling-relationships-in-later-life-caregiving-and-conflict",
           "title": "Article 56",
           "currentWords": 265,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10787,7 +10787,7 @@
           "slug": "financial-anxiety-in-later-life-when-retirement-savings-fall-short",
           "title": "Article 57",
           "currentWords": 257,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10795,7 +10795,7 @@
           "slug": "later-life-divorce-gray-divorce-and-rebuilding-after-long-marriages",
           "title": "Article 58",
           "currentWords": 285,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10803,7 +10803,7 @@
           "slug": "life-review-and-reminiscence-therapy-for-older-adults",
           "title": "Article 59",
           "currentWords": 234,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10811,13 +10811,13 @@
           "slug": "preparing-for-death-psychological-approaches-to-mortality",
           "title": "Article 60",
           "currentWords": 294,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:15:00Z"
     },
     "218": {
-      "status": "pending",
+      "status": "complete",
       "category": 17,
       "subcategoryFile": "06d-grief-loss-transitions",
       "file": "src/data/articles/category-17/06d-grief-loss-transitions.tsx",
@@ -10829,7 +10829,7 @@
           "slug": "grandparent-estrangement-losing-access-to-grandchildren",
           "title": "Article 61",
           "currentWords": 278,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10837,7 +10837,7 @@
           "slug": "positive-aging-resilience-and-post-traumatic-growth-in-later-life",
           "title": "Article 62",
           "currentWords": 295,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10845,7 +10845,7 @@
           "slug": "spirituality-and-religion-in-later-life-faith-and-aging",
           "title": "Article 63",
           "currentWords": 283,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10853,7 +10853,7 @@
           "slug": "aging-parents-and-adult-children-navigating-role-reversal",
           "title": "Article 64",
           "currentWords": 293,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10861,13 +10861,13 @@
           "slug": "celebrating-life-milestones-in-later-adulthood-meaning-and-joy",
           "title": "Article 65",
           "currentWords": 226,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00Z"
     },
     "219": {
-      "status": "pending",
+      "status": "complete",
       "category": 18,
       "subcategoryFile": "01a-reproductive-mental-health",
       "file": "src/data/articles/category-18/01a-reproductive-mental-health.tsx",
@@ -10879,7 +10879,7 @@
           "slug": "fertility-struggles-and-mental-health-coping-with-infertility",
           "title": "Article 1",
           "currentWords": 257,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10887,7 +10887,7 @@
           "slug": "pregnancy-loss-mental-health-impact-of-miscarriage-and-stillbirth",
           "title": "Article 2",
           "currentWords": 264,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10895,7 +10895,7 @@
           "slug": "premenstrual-dysphoric-disorder-pmdd-severe-mood-changes",
           "title": "Article 3",
           "currentWords": 274,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10903,7 +10903,7 @@
           "slug": "hormonal-contraception-and-mental-health-birth-control-mood-effects",
           "title": "Article 4",
           "currentWords": 250,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10911,13 +10911,13 @@
           "slug": "ivf-and-fertility-treatment-psychological-impact-and-coping",
           "title": "Article 5",
           "currentWords": 271,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:15:30Z"
     },
     "220": {
-      "status": "pending",
+      "status": "complete",
       "category": 18,
       "subcategoryFile": "01b-reproductive-mental-health",
       "file": "src/data/articles/category-18/01b-reproductive-mental-health.tsx",
@@ -10929,7 +10929,7 @@
           "slug": "abortion-and-mental-health-emotional-responses-and-recovery",
           "title": "Article 6",
           "currentWords": 408,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -10937,7 +10937,7 @@
           "slug": "pcos-and-mental-health-beyond-physical-symptoms",
           "title": "Article 7",
           "currentWords": 401,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -10945,7 +10945,7 @@
           "slug": "endometriosis-and-mental-health-chronic-pain-and-psychological-impact",
           "title": "Article 8",
           "currentWords": 407,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -10953,7 +10953,7 @@
           "slug": "reproductive-coercion-recognizing-and-recovering-from-control",
           "title": "Article 9",
           "currentWords": 422,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -10961,10 +10961,10 @@
           "slug": "body-image-and-reproductive-health-pregnancy-weight-and-self-worth",
           "title": "Article 10",
           "currentWords": 474,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:15:42Z"
     },
     "221": {
       "status": "pending",

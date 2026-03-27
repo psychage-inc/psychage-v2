@@ -49,6 +49,10 @@ export const dementiaAlzheimersArticlesA: Article[] = [
         text: 'Up to 40% of dementia cases may be preventable through modifiable lifestyle factors.',
         citationIndex: 4,
       },
+      {
+        text: 'Dementia is a clinical syndrome (symptom cluster), not a single disease--the underlying cause must be identified for proper treatment.',
+        citationIndex: 5,
+      },
     ],
 
     videoStatus: 'planned' as const,
@@ -333,6 +337,10 @@ export const dementiaAlzheimersArticlesA: Article[] = [
       {
         text: 'Average survival after symptom onset is 4-8 years, though some live 20+ years.',
         citationIndex: 4,
+      },
+      {
+        text: 'Tau tangles correlate more closely with symptom severity than amyloid plaques--as tau spreads, function declines.',
+        citationIndex: 2,
       },
     ],
 
@@ -629,6 +637,10 @@ export const dementiaAlzheimersArticlesA: Article[] = [
       },
       {
         text: 'Behavioral symptoms (agitation, aggression) respond better to environmental changes than medications.',
+        citationIndex: 4,
+      },
+      {
+        text: 'Comprehensive care planning--legal, financial, end-of-life--should begin while the person can still participate in decisions.',
         citationIndex: 4,
       },
     ],
@@ -946,6 +958,10 @@ export const dementiaAlzheimersArticlesA: Article[] = [
       {
         text: 'Mixed dementia (Alzheimer + vascular + Lewy body) is found in 30-50% of autopsied brains.',
         citationIndex: 4,
+      },
+      {
+        text: 'Antipsychotic medications can cause severe, life-threatening reactions in Lewy body dementia--extreme caution required.',
+        citationIndex: 2,
       },
     ],
 
@@ -1289,6 +1305,10 @@ export const dementiaAlzheimersArticlesA: Article[] = [
       {
         text: 'Cognitive reserve (built through education, complex work, lifelong learning) delays symptom onset by 4-5 years.',
         citationIndex: 3,
+      },
+      {
+        text: 'Even people with APOE-e4 gene (highest genetic risk) can reduce dementia risk through lifestyle--genes load the gun, lifestyle pulls the trigger.',
+        citationIndex: 1,
       },
     ],
 

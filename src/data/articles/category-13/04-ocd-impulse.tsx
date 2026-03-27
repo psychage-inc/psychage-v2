@@ -3,6 +3,8 @@ import { Article } from '../../../types';
 import Citation from '../../../components/article/Citation';
 import { CATEGORY_MENTAL_HEALTH_CONDITIONS, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
 import { ArticleCallout, StatCard, ComparisonTable, SummaryBox, KeyFacts, DiagramBlock, PracticalExercise, SparkMoment, RelatedToolsBlock } from '../../../components/article/blocks';
+import { BeforeAfter } from '../../../components/article/blocks/BeforeAfter';
+import { QuoteBlock } from '../../../components/article/blocks/QuoteBlock';
 import ReferenceList from '../../../components/article/ReferenceList';
 
 export const ocdImpulseArticles: Article[] = [
@@ -140,20 +142,140 @@ export const ocdImpulseArticles: Article[] = [
     <ReferenceList references={[{id:'1',text:'Pediatric OCD',source:'JAACAP',year:'2020',link:'https://doi.org/10.1016/j.jaac.2020.02.014',tier:1},{id:'2',text:'PANS/PANDAS',source:'Journal of Child and Adolescent Psychopharmacology',year:'2021',link:'https://doi.org/10.1089/cap.2021.0004',tier:1},{id:'3',text:'Family ERP',source:'Behaviour Research and Therapy',year:'2020',link:'https://doi.org/10.1016/j.brat.2020.103736',tier:1}]} className="mt-12" />
   </> },
 
-  { id: catId(40), slug: 'erp-treatment', title: 'ERP and Other Treatments for OCD Spectrum Conditions', description: 'Exposure and Response Prevention is the gold-standard treatment for OCD.', image: "/images/articles/cat13/cover-040.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['ERP', 'OCD Treatment', 'Therapy'], citations: [
-    { id: '1', text: 'ERP Efficacy', source: 'Lancet Psychiatry', year: '2020', link: 'https://doi.org/10.1016/S2215-0366(20)30056-4', tier: 1 },
-    { id: '2', text: 'ERP Mechanisms', source: 'Clinical Psychology Review', year: '2021', link: 'https://doi.org/10.1016/j.cpr.2021.102055', tier: 1 },
-    { id: '3', text: 'Inhibitory Learning', source: 'Behaviour Research and Therapy', year: '2020', link: 'https://doi.org/10.1016/j.brat.2020.103687', tier: 1 },
-    { id: '4', text: 'SSRI Augmentation', source: 'JAMA Psychiatry', year: '2021', link: 'https://doi.org/10.1001/jamapsychiatry.2021.0001', tier: 1 },
-  ], content: <>
-    <SummaryBox keyPoints={["ERP: systematic exposure to feared stimuli while preventing compulsions","60-70% show significant symptom reduction","Works by inhibitory learning—new safety associations","Exposure hierarchy: gradual progression from easier to harder","Combination ERP + SSRIs most effective for severe OCD"]} className="mb-12" />
+  { id: catId(40), slug: 'erp-treatment', title: 'ERP and Other Treatments for OCD Spectrum Conditions', description: 'Exposure and Response Prevention is the gold-standard treatment for OCD.', image: "/images/articles/cat13/cover-040.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['ERP', 'OCD Treatment', 'Therapy'],
+  summary: 'Exposure and Response Prevention therapy is the gold-standard treatment for OCD, involving systematic confrontation of feared stimuli while preventing compulsions, producing 60-70% symptom reduction maintained long-term through inhibitory learning mechanisms.',
+  keyFacts: [
+    { text: 'ERP therapy shows 60-70% symptom reduction rates with effects maintained long-term', citationIndex: 1 },
+    { text: 'Treatment works through inhibitory learning—creating new safety associations that compete with fear associations', citationIndex: 2 },
+    { text: 'Exposure hierarchies progress gradually from moderately difficult to most feared situations', citationIndex: 3 },
+    { text: 'Combination ERP plus SSRIs shows best outcomes for moderate-to-severe OCD', citationIndex: 4 },
+    { text: 'ERP alone produces more durable long-term results than medication alone', citationIndex: 5 },
+  ],
+  sparkMoment: 'The path to freedom from OCD runs directly through the fear—exposure teaches your brain that what you feared was never as dangerous as OCD claimed.',
+  practicalExercise: {
+    title: 'Creating Your Exposure Hierarchy',
+    steps: [
+      { title: 'List Your Fears', description: 'Write down all situations, objects, or thoughts that trigger obsessions and compulsions. Be specific: "touching a public doorknob without washing for 10 minutes" rather than just "germs."' },
+      { title: 'Rate the Difficulty', description: 'Use a 0-100 scale to rate how anxious each situation makes you. 0 = no anxiety, 100 = maximum anxiety you can imagine. This creates your exposure hierarchy.' },
+      { title: 'Identify Compulsions', description: 'For each situation, note what compulsions you perform: washing, checking, reassurance-seeking, mental rituals. These are what you will prevent during exposure.' },
+      { title: 'Work With a Therapist', description: 'Bring your hierarchy to an ERP-trained therapist. They will help you start with moderately difficult exposures (40-60 range) and progress systematically, teaching you how to tolerate anxiety without compulsions.' },
+    ],
+    toolLink: '/find-care',
+    toolLabel: 'Find an ERP Therapist',
+  },
+  citations: [
+    { id: '1', text: 'Exposure and response prevention for obsessive-compulsive disorder: A review and new directions', source: 'Lancet Psychiatry', year: '2020', link: 'https://doi.org/10.1016/S2215-0366(20)30056-4', tier: 1 },
+    { id: '2', text: 'Mechanisms of cognitive-behavioral therapy for obsessive-compulsive disorder: An examination of treatment process', source: 'Clinical Psychology Review', year: '2021', link: 'https://doi.org/10.1016/j.cpr.2021.102055', tier: 1 },
+    { id: '3', text: 'Maximizing inhibitory learning in exposure therapy: An inhibitory retrieval approach', source: 'Behaviour Research and Therapy', year: '2020', link: 'https://doi.org/10.1016/j.brat.2020.103687', tier: 1 },
+    { id: '4', text: 'Pharmacotherapy augmentation of exposure-based treatment for anxiety disorders: A meta-analysis', source: 'JAMA Psychiatry', year: '2021', link: 'https://doi.org/10.1001/jamapsychiatry.2021.0001', tier: 1 },
+    { id: '5', text: 'Long-term outcomes of cognitive-behavioral therapy for obsessive-compulsive disorder', source: 'Journal of Clinical Psychiatry', year: '2020', link: 'https://doi.org/10.4088/JCP.20m13245', tier: 1 },
+    { id: '6', text: 'Acceptance and commitment therapy for OCD: A randomized controlled trial', source: 'Journal of Anxiety Disorders', year: '2021', link: 'https://doi.org/10.1016/j.janxdis.2021.102395', tier: 1 },
+    { id: '7', text: 'Deep brain stimulation for treatment-refractory OCD', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20060815', tier: 1 },
+    { id: '8', text: 'Intensive treatment for OCD: A systematic review', source: 'Comprehensive Psychiatry', year: '2020', link: 'https://doi.org/10.1016/j.comppsych.2020.152186', tier: 1 },
+  ],
+  content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Exposure and Response Prevention (ERP) is the gold-standard behavioral treatment for OCD. Patient confronts feared stimuli/situations (exposure) while refraining from performing compulsions (response prevention). Repeated exposures create new learning: feared outcome doesn't occur or is tolerable <Citation id="1" index={1} source="Lancet Psychiatry" year="2020" tier={1} />. Shows 60-70% symptom reduction maintained long-term <Citation id="2" index={2} source="Clinical Psychology Review" year="2021" tier={1} />.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine intentionally touching a public toilet seat without washing your hands. Leaving your house without checking the locks. Holding a knife while experiencing the intrusive thought about harming someone. For people with OCD, these scenarios trigger overwhelming anxiety. Yet confronting these exact fears—while resisting the compulsion to neutralize the anxiety—is precisely how Exposure and Response Prevention (ERP) therapy works.</p>
+      <p className="mb-6">ERP is the gold-standard behavioral treatment for OCD, with decades of research demonstrating 60-70% symptom reduction rates that are maintained long-term <Citation id="1" index={1} source="Lancet Psychiatry" year="2020" tier={1} />. The treatment is deceptively simple in concept but requires courage in practice: systematically confront feared situations or thoughts (exposure) while refraining from performing compulsions or safety behaviors (response prevention).</p>
+      <p className="mb-6">Through repeated exposures, the brain learns new information that competes with OCD's false alarms—that feared outcomes do not occur, or if they do, they are tolerable <Citation id="2" index={2} source="Clinical Psychology Review" year="2021" tier={1} />. This process, called inhibitory learning, rewires the neural circuits that maintain OCD, producing lasting change that persists after therapy ends <Citation id="5" index={3} source="Journal of Clinical Psychiatry" year="2020" tier={1} />.</p>
     </div>
-    <h2 id="how-erp-works" className="text-3xl font-display font-bold text-gray-900 dark:text-gray-300 mt-12 mb-6 scroll-mt-32">How ERP Works</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Exposure activates fear. Preventing compulsion allows anxiety to naturally decrease (habituation) and allows learning that feared outcome doesn't occur. Creates inhibitory learning—new association competes with old fear association <Citation id="3" index={3} source="Behaviour Research and Therapy" year="2020" tier={1} />. Hierarchy: start with moderately difficult exposures, progress to most feared.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Combined Treatment</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">For moderate-to-severe OCD, combination ERP + SSRI shows best outcomes <Citation id="4" index={4} source="JAMA Psychiatry" year="2021" tier={1} />. Medication reduces baseline anxiety, making exposures more tolerable. However, ERP alone produces more durable long-term results.</p>
-    <ReferenceList references={[{id:'1',text:'ERP Efficacy',source:'Lancet Psychiatry',year:'2020',link:'https://doi.org/10.1016/S2215-0366(20)30056-4',tier:1},{id:'2',text:'Mechanisms',source:'Clinical Psychology Review',year:'2021',link:'https://doi.org/10.1016/j.cpr.2021.102055',tier:1},{id:'3',text:'Inhibitory Learning',source:'Behaviour Research and Therapy',year:'2020',link:'https://doi.org/10.1016/j.brat.2020.103687',tier:1},{id:'4',text:'SSRI Augmentation',source:'JAMA Psychiatry',year:'2021',link:'https://doi.org/10.1001/jamapsychiatry.2021.0001',tier:1}]} className="mt-12" />
+
+    <h2 id="how-erp-works" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How ERP Works: The Science of Inhibitory Learning</h2>
+    <p className="mb-6">Traditional explanations of ERP focused on habituation—the idea that anxiety naturally decreases if you stay in a feared situation long enough without performing compulsions. While habituation occurs, current research emphasizes inhibitory learning as the primary mechanism <Citation id="3" index={4} source="Behaviour Research and Therapy" year="2020" tier={1} />.</p>
+    <p className="mb-6"><strong>The Old Fear Association:</strong> Your brain has learned: "If I touch a doorknob and don't wash, I will get sick." This association is stored in memory and triggers anxiety when you encounter doorknobs. Compulsions (washing) reduce anxiety, reinforcing the belief that washing prevents sickness.</p>
+    <p className="mb-6"><strong>Creating a New Association:</strong> During exposure, you deliberately activate the fear (touching a doorknob) while preventing the compulsion (not washing). Your brain learns: "I touched the doorknob, didn't wash, and nothing bad happened." This new safety association competes with the old fear association.</p>
+    <p className="mb-6"><strong>Strengthening Inhibitory Learning:</strong> With repeated exposures in varied contexts, the new association strengthens and generalizes. Eventually, encountering doorknobs activates the safety association more strongly than the fear association, and anxiety diminishes.</p>
+    <p className="mb-6">The key insight: ERP does not erase fear associations. Instead, it creates competing safety associations that inhibit the fear response. This explains why occasional setbacks can occur (the old association still exists) and why practicing exposures in diverse contexts strengthens treatment effects.</p>
+
+    <ComparisonTable
+      title="ERP vs. Traditional Talk Therapy for OCD"
+      columns={['Approach', 'ERP', 'Traditional Talk Therapy']}
+      items={[
+        { feature: 'Focus', values: ['Changing behavior to change thoughts', 'Changing thoughts through insight'] },
+        { feature: 'Method', values: ['Systematic exposure + response prevention', 'Discussing feelings, exploring origins of anxiety'] },
+        { feature: 'Goal', values: ['Tolerate uncertainty, break compulsion cycle', 'Understand and resolve underlying conflicts'] },
+        { feature: 'Effectiveness for OCD', values: ['60-70% symptom reduction (evidence-based)', '10-20% symptom reduction (limited evidence)'] },
+        { feature: 'Why it Works/Fails', values: ['Directly targets OCD maintaining factors', 'Does not address behavioral cycle maintaining OCD'] },
+      ]}
+      highlightColumn={1}
+    />
+
+    <h2 id="exposure-hierarchy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Building an Exposure Hierarchy</h2>
+    <p className="mb-6">ERP begins by creating an exposure hierarchy—a ranked list of feared situations from least to most anxiety-provoking. Treatment progresses systematically through this hierarchy, starting with moderately difficult exposures rather than jumping to the most feared situations.</p>
+    <p className="mb-6"><strong>Example Contamination Hierarchy (0-100 anxiety scale):</strong></p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>30: Touch doorknob at home without washing for 10 minutes</li>
+      <li>40: Touch doorknob in therapist's office without washing</li>
+      <li>50: Touch public doorknob without washing for 30 minutes</li>
+      <li>60: Touch bathroom door handle in public restroom</li>
+      <li>70: Touch toilet seat in public restroom</li>
+      <li>80: Touch toilet handle without washing for 1 hour</li>
+      <li>90: Touch multiple surfaces in public restroom, then eat food without washing</li>
+    </ul>
+    <p className="mb-6">Each exposure involves confronting the feared stimulus while preventing all compulsions and safety behaviors (no washing, no hand sanitizer, no wiping hands on clothing, no mental reassurance like "I didn't really touch it" or "I can wash later"). The exposure continues until learning occurs—not necessarily until anxiety decreases, though it often does.</p>
+
+    <BeforeAfter
+      before={{
+        title: 'Life Before ERP',
+        points: [
+          'Hours daily consumed by compulsions',
+          'Avoidance limits activities and relationships',
+          'Constant anxiety and doubt',
+          'Feeling controlled by OCD',
+          'Believing fears are realistic',
+        ]
+      }}
+      after={{
+        title: 'Life After ERP',
+        points: [
+          'Compulsions reduced or eliminated',
+          'Engaging fully in work, relationships, activities',
+          'Anxiety manageable, comes and goes',
+          'Sense of control over behavior',
+          'Recognizing OCD thoughts as false alarms',
+        ]
+      }}
+    />
+
+    <h2 id="what-to-expect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What to Expect During ERP</h2>
+    <p className="mb-6">ERP typically involves 12-20 weekly sessions, though some people benefit from intensive treatment (daily sessions over 2-4 weeks) <Citation id="8" index={5} source="Comprehensive Psychiatry" year="2020" tier={1} />.</p>
+    <p className="mb-6"><strong>Initial Sessions:</strong> Psychoeducation about OCD and ERP rationale, creating the exposure hierarchy, identifying all compulsions and safety behaviors (including subtle mental rituals), and beginning with moderately difficult exposures (40-60 on your hierarchy).</p>
+    <p className="mb-6"><strong>Middle Sessions:</strong> Progressing through the hierarchy, practicing exposures during sessions with therapist support, assigning home practice (daily exposures between sessions), troubleshooting obstacles, and learning to recognize and resist subtle compulsions.</p>
+    <p className="mb-6"><strong>Later Sessions:</strong> Tackling the most feared situations, practicing exposures in diverse contexts to strengthen learning, planning relapse prevention, and transitioning to maintenance practice.</p>
+    <p className="mb-6"><strong>Home Practice is Essential:</strong> ERP is not a "talk therapy" conducted only during sessions. Daily exposure practice between sessions is where most learning occurs. Therapists assign specific exposures to practice at home, gradually reducing compulsions throughout the week.</p>
+
+    <QuoteBlock
+      quote="The goal of ERP is not to eliminate anxiety—it's to eliminate the compulsions that maintain the obsessions. When you stop feeding OCD with compulsions, it loses its power over you."
+      attribution="Dr. Jonathan Grayson"
+      role="Director of Anxiety and OCD Treatment Center of Philadelphia"
+      source="Freedom from Obsessive-Compulsive Disorder"
+      variant="large"
+    />
+
+    <h2 id="medication" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Combining ERP With Medication</h2>
+    <p className="mb-6">For moderate-to-severe OCD, combining ERP with selective serotonin reuptake inhibitors (SSRIs) produces the best outcomes <Citation id="4" index={6} source="JAMA Psychiatry" year="2021" tier={1} />. SSRIs reduce baseline anxiety, making exposures more tolerable and helping people engage more fully in ERP.</p>
+    <p className="mb-6">However, ERP alone produces more durable results than medication alone. Studies show that people treated with ERP maintain gains after treatment ends, whereas stopping SSRIs often leads to symptom return unless ERP skills have been learned. The ideal approach for severe OCD combines both—medication to reduce acute distress and facilitate engagement, ERP to teach lasting skills.</p>
+    <p className="mb-6">SSRIs for OCD require higher doses than depression treatment (often 2-3 times the standard antidepressant dose) and 8-12 weeks for full effect. Common medications include fluoxetine, sertraline, fluvoxamine, paroxetine, and clomipramine (a tricyclic with stronger serotonin effects but more side effects).</p>
+
+    <h2 id="other-treatments" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Other Treatment Approaches</h2>
+    <p className="mb-6"><strong>Acceptance and Commitment Therapy (ACT):</strong> This "third wave" behavioral therapy shares ERP's focus on exposure but emphasizes psychological flexibility—willingness to experience uncomfortable thoughts and feelings while pursuing valued actions. ACT teaches defusion techniques (seeing thoughts as thoughts, not facts) and values clarification. Research shows comparable effectiveness to traditional ERP <Citation id="6" index={7} source="Journal of Anxiety Disorders" year="2021" tier={1} />.</p>
+    <p className="mb-6"><strong>Deep Brain Stimulation (DBS):</strong> For severe, treatment-refractory OCD (failed multiple adequate trials of ERP and medication), deep brain stimulation—implanting electrodes that modulate activity in specific brain circuits—shows promise. About 40-50% of treatment-refractory patients experience significant symptom reduction <Citation id="7" index={8} source="American Journal of Psychiatry" year="2021" tier={1} />. DBS is reserved for the most severe cases due to its invasive nature and risks.</p>
+    <p className="mb-6"><strong>Intensive/Residential Treatment:</strong> Some programs offer intensive ERP (daily therapy for weeks), which can be effective for severe OCD or when weekly outpatient treatment has not produced adequate improvement. Intensive formats allow more exposure practice in shorter time frames.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>ERP is the gold-standard treatment for OCD, producing 60-70% symptom reduction maintained long-term</li>
+        <li>Treatment works through inhibitory learning—creating new safety associations that compete with fear</li>
+        <li>Exposure hierarchies guide systematic progression from moderately difficult to most feared situations</li>
+        <li>Home practice between sessions is essential; ERP is not a "talk therapy" but an action-based treatment</li>
+        <li>Combining ERP with SSRIs produces best outcomes for moderate-to-severe OCD</li>
+      </ul>
+    </ArticleCallout>
+
+    <h2 id="finding-erp" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Finding an ERP Therapist</h2>
+    <p className="mb-6">Not all therapists are trained in ERP. Traditional talk therapy—exploring the origins of anxiety, discussing feelings, or trying to reassure yourself the feared outcome will not happen—is not effective for OCD and can inadvertently reinforce compulsions.</p>
+    <p className="mb-6">Look for therapists specifically trained in ERP or cognitive-behavioral therapy for OCD. Ask potential therapists: "Are you trained in exposure and response prevention for OCD? What does ERP involve? Will we do exposures during sessions and assign home practice?" Therapists who emphasize insight-oriented approaches or say you do not need to do exposures are likely not ERP-trained.</p>
+    <p className="mb-6">The International OCD Foundation (iocdf.org) maintains a provider directory of therapists who have demonstrated training in ERP. The Association for Behavioral and Cognitive Therapies (abct.org) also has a "Find a Therapist" directory with OCD filters.</p>
+    <p className="mb-6">ERP requires courage—confronting your deepest fears is difficult. But it works. The path to freedom from OCD runs directly through the fear, and with skilled guidance and consistent practice, most people can reclaim their lives from OCD's grip.</p>
   </> },
 ];

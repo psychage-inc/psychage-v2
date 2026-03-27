@@ -23,7 +23,7 @@ export const psychosisResearchArticlesD: Article[] = [
       'Explore the growing evidence that immune system dysregulation and neuroinflammation play central roles in psychosis--opening doors to anti-inflammatory treatments and personalized immunopsychiatry.',
     image: '/images/articles/cat16/cover-061.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 13,
+    readTime: 10,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -153,250 +153,263 @@ export const psychosisResearchArticlesD: Article[] = [
 
     content: (
       <>
-        <p>
-          For decades, schizophrenia and psychosis were understood primarily as
-          disorders of dopamine, serotonin, and glutamate neurotransmission. But
-          converging evidence from genetics, epidemiology, neuroimaging, and
-          clinical trials reveals a more complex story: immune system dysfunction
-          and neuroinflammation are not mere bystanders but central players in
-          the pathophysiology of psychosis.
-          <Citation index={1} />
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            For decades, psychiatry viewed schizophrenia and psychosis through the lens of neurotransmitter imbalances—dopamine, serotonin, glutamate. But a revolution is underway. The immune system, once thought peripheral to mental disorders, now stands at center stage in psychosis research. Converging evidence from genetics, epidemiology, neuroimaging, and clinical trials reveals that inflammation and immune dysfunction are not mere side effects of psychosis—they may be driving forces behind it.
+          </p>
+          <p className="mb-6">
+            This paradigm shift toward immunopsychiatry opens entirely new treatment horizons: anti-inflammatory medications, immune biomarkers for early detection, prevention strategies targeting immune pathways during critical developmental windows. It reframes psychosis as a neuroimmune disorder, bridging psychiatry, neurology, and immunology into a unified understanding. For patients, families, and clinicians, this means new hope—and new tools—for conditions once considered intractable.<Citation id="1" index={1} source="JAMA Psychiatry" year="2018" tier={1} />
+          </p>
+        </div>
 
-        <p>
-          This paradigm shift toward immunopsychiatry opens entirely new treatment
-          avenues--anti-inflammatory medications, immune biomarkers for early
-          detection, and prevention strategies targeting immune pathways. It also
-          reframes psychosis as a neuroimmune disorder, bridging psychiatry,
-          neurology, and immunology.
-        </p>
-
-        <h2>The Inflammatory Signature of Psychosis</h2>
-        <p>
-          Multiple meta-analyses demonstrate that people with first-episode psychosis
-          and chronic schizophrenia show elevated peripheral inflammatory markers
-          compared to healthy controls. Interleukin-6 (IL-6), C-reactive protein
-          (CRP), and tumor necrosis factor-alpha (TNF-alpha) are consistently
-          increased. These elevations persist even after accounting for medication,
-          smoking, obesity, and other confounds.
-          <Citation index={1} />
+        <h2 id="inflammatory-signature" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Inflammatory Signature of Psychosis
+        </h2>
+        <p className="mb-6">
+          Multiple large-scale meta-analyses demonstrate that people experiencing first-episode psychosis and those living with chronic schizophrenia show elevated peripheral inflammatory markers compared to healthy controls. Interleukin-6 (IL-6), C-reactive protein (CRP), and tumor necrosis factor-alpha (TNF-alpha) are consistently elevated across studies, even after accounting for confounding factors like antipsychotic medication, smoking, obesity, and medical comorbidities.<Citation id="1" index={1} source="JAMA Psychiatry" year="2018" tier={1} />
         </p>
 
         <StatCard
-          value="30-40%"
-          label="of first-episode psychosis patients show elevated CRP"
-          description="Indicating systemic inflammation at illness onset"
-        />
-
-        <p>
-          Neuroinflammation--activation of microglia (the brain immune cells)--is
-          also evident. Positron emission tomography (PET) imaging using markers
-          of microglial activation shows increased neuroinflammation in cortical
-          and subcortical regions in schizophrenia. Post-mortem studies confirm
-          microglial abnormalities and altered expression of immune-related genes
-          in brain tissue.
-          <Citation index={1} />
-        </p>
-
-        <h2>Autoimmune Encephalitis: When Psychosis Is the Immune System</h2>
-        <p>
-          Some cases of psychosis are directly caused by autoimmune processes.
-          Autoimmune encephalitis--where antibodies attack brain receptors like
-          NMDA receptors--presents with hallucinations, delusions, agitation, and
-          cognitive dysfunction that can be indistinguishable from primary psychotic
-          disorders. These cases require immunotherapy (steroids, IVIG, plasmapheresis),
-          not antipsychotics alone.
-          <Citation index={2} />
-        </p>
-
-        <ArticleCallout
-          type="warning"
-          title="Screen for Autoimmune Encephalitis"
-          content="Any first-episode psychosis with atypical features (seizures, movement disorders, rapid onset, abnormal EEG/MRI) warrants screening for autoimmune encephalitis. Early immune treatment can be life-saving."
-        />
-
-        <p>
-          Even in typical schizophrenia without identifiable antibodies, immune
-          dysregulation may contribute. Some patients show elevated antibodies to
-          brain proteins or altered immune cell function, suggesting an autoimmune
-          component in a subset of cases.
-          <Citation index={2} />
-        </p>
-
-        <h2>Infections, Maternal Immunity, and Developmental Risk</h2>
-        <p>
-          Epidemiological studies link childhood infections (especially severe CNS
-          infections) with increased risk of later psychosis. A large Danish registry
-          study found that hospitalization for infection in childhood increased
-          schizophrenia risk by 60-80%. The more severe and frequent the infections,
-          the higher the risk.
-          <Citation index={3} />
-        </p>
-
-        <ArticleChart
-          type="bar"
-          title="Infection Exposure and Psychosis Risk"
-          data={[
-            { name: 'No infections', value: 1.0, color: '#10b981' },
-            { name: 'Any infection', value: 1.3, color: '#f59e0b' },
-            { name: 'Severe infection', value: 1.8, color: '#ef4444' },
-            { name: 'Multiple infections', value: 2.2, color: '#dc2626' },
+          stats={[
+            { value: 35, suffix: '%', label: 'of first-episode psychosis patients show elevated CRP', description: 'Indicating systemic inflammation at illness onset' },
+            { value: 50, suffix: '%', label: 'higher IL-6 levels in schizophrenia vs. controls', description: 'Persistent across illness stages' },
           ]}
-          xAxisLabel="Infection History"
-          yAxisLabel="Relative Risk of Psychosis"
+          source="Pillinger et al., 2018"
         />
 
-        <p>
-          Maternal immune activation during pregnancy--triggered by infections like
-          influenza or elevated maternal inflammatory markers--also increases offspring
-          psychosis risk. Animal models show that maternal immune activation disrupts
-          fetal brain development, altering dopamine systems, cortical circuits, and
-          microglial function in ways that mirror schizophrenia pathology.
-          <Citation index={3} />
+        <p className="mb-6">
+          But peripheral inflammation is only part of the story. Neuroinflammation—the activation of microglia, the brain's resident immune cells—is increasingly recognized as a key pathological process. Positron emission tomography (PET) imaging using radioligands that bind to microglial markers shows increased neuroinflammation in cortical and subcortical brain regions in people with schizophrenia. Post-mortem brain tissue studies confirm microglial abnormalities and altered expression of immune-related genes in multiple brain regions, including the prefrontal cortex and hippocampus.<Citation id="1" index={1} source="JAMA Psychiatry" year="2018" tier={1} />
         </p>
 
-        <h2>Genetic Evidence: Immune Genes and Psychosis</h2>
-        <p>
-          The largest genome-wide association studies (GWAS) of schizophrenia
-          identify the major histocompatibility complex (MHC) region--a cluster of
-          immune-related genes--as the strongest genetic risk locus. Variants in
-          complement component 4A (C4A), part of the innate immune system, are
-          particularly implicated. C4A is involved in synaptic pruning during
-          adolescence; excessive C4A expression may lead to overpruning and circuit
-          dysfunction.
-          <Citation index={5} />
+        <ArticleCallout variant="clinical-note" title="Neuroinflammation in Early Stages">
+          <p>
+            Microglial activation appears most pronounced in early-stage illness, suggesting neuroinflammation may be especially critical during the transition to psychosis. This finding supports the rationale for early anti-inflammatory intervention.
+          </p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          The inflammatory profile varies across individuals. Some show markedly elevated markers, while others have levels comparable to healthy controls. This heterogeneity suggests that psychosis is not a single disorder but a collection of syndromes with different biological underpinnings. Identifying inflammatory subgroups is essential for precision treatment approaches.<Citation id="7" index={7} source="NIMH" year="2022" tier={2} />
         </p>
 
-        <p>
-          Other immune-related genes linked to schizophrenia include those involved
-          in cytokine signaling, microglial function, and blood-brain barrier integrity.
-          These genetic findings reinforce the biological plausibility of
-          immunopsychiatry.
-          <Citation index={5} />
+        <h2 id="autoimmune-encephalitis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Autoimmune Encephalitis: When Psychosis Is the Immune System
+        </h2>
+        <p className="mb-6">
+          Some cases of psychosis are directly caused by autoimmune processes. Autoimmune encephalitis—a condition in which antibodies mistakenly attack brain receptors—can present with hallucinations, delusions, agitation, cognitive dysfunction, and behavioral changes indistinguishable from primary psychotic disorders. The most well-known form involves antibodies against NMDA receptors, but antibodies targeting LGI1, CASPR2, GABA receptors, and other neuronal proteins also cause psychosis-like symptoms.<Citation id="2" index={2} source="Lancet Neurology" year="2019" tier={1} />
         </p>
 
-        <h2>Anti-Inflammatory Treatments: Emerging Evidence</h2>
-        <p>
-          If inflammation drives symptoms, can anti-inflammatory treatments help?
-          Several trials suggest modest benefit in subgroups. Minocycline, an
-          antibiotic with anti-inflammatory properties, shows small-to-moderate
-          symptom reduction in some meta-analyses, particularly when added early
-          in illness. Non-steroidal anti-inflammatory drugs (NSAIDs) like celecoxib
-          show similar modest effects.
-          <Citation index={4} />
+        <ArticleCallout variant="warning" title="Red Flags for Autoimmune Encephalitis">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Rapid onset of psychotic symptoms (days to weeks)</li>
+            <li>Presence of seizures, movement disorders, or autonomic instability</li>
+            <li>Abnormal findings on EEG or brain MRI</li>
+            <li>Poor response to standard antipsychotic medication</li>
+            <li>History of ovarian teratoma (in young women with NMDA receptor encephalitis)</li>
+          </ul>
+          <p className="mt-4">
+            Any first-episode psychosis with these atypical features warrants screening for autoimmune encephalitis. Early immune treatment with corticosteroids, intravenous immunoglobulin (IVIG), or plasmapheresis can be life-saving and lead to full recovery.
+          </p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Clinicians are increasingly recognizing that a subset of what initially appears as schizophrenia or acute psychotic disorder is actually treatable autoimmune encephalitis. Standard antibody panels are now available through specialized labs. Screening for these antibodies should be part of the routine first-episode psychosis evaluation, especially when onset is rapid or accompanied by neurological symptoms like seizures, abnormal movements, or altered consciousness.<Citation id="2" index={2} source="Lancet Neurology" year="2019" tier={1} />
         </p>
 
-        <BeforeAfter before={{
-            title: 'Agent',
-            items: [
-              'Minocycline',
-              'Celecoxib (NSAID)',
-              'Aspirin',
-              'N-acetylcysteine (NAC)',
-              'Omega-3 fatty acids',
-            ],
-          }}
-          after={{
-            title: 'Evidence Summary',
-            items: [
-              'Modest symptom reduction in early psychosis; mixed results in chronic schizophrenia',
-              'Small effect sizes for positive and negative symptoms in some trials',
-              'Inconsistent results; may reduce symptom severity in high-inflammation subgroups',
-              'Reduces oxidative stress and inflammation; mixed evidence for symptom benefit',
-              'Weak evidence for symptom reduction; may improve negative symptoms slightly',
-            ],
-          }}
+        <h2 id="genetic-immune-links" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Genetic Links: The Immune System in Schizophrenia Risk
+        </h2>
+        <p className="mb-6">
+          Genetic studies add another layer of evidence connecting immunity and psychosis. The strongest genetic risk factor for schizophrenia identified to date involves the complement component 4 (C4) gene, which is part of the innate immune system. Variants of C4 that increase gene expression are associated with higher schizophrenia risk. The C4 protein tags synapses for removal by microglia during brain development—a process called synaptic pruning. Excessive C4 activity may lead to over-pruning of synapses, contributing to the cognitive and social deficits seen in schizophrenia.<Citation id="5" index={5} source="Annals of the New York Academy of Sciences" year="2011" tier={1} />
+        </p>
+
+        <p className="mb-6">
+          Genome-wide association studies (GWAS) have identified over 100 genetic loci associated with schizophrenia risk, and many of these genes are involved in immune function. This genetic overlap between immune pathways and psychosis risk provides strong evidence that immune dysfunction is not secondary to illness or treatment but intrinsic to its biology.<Citation id="5" index={5} source="Annals of the New York Academy of Sciences" year="2011" tier={1} />
+        </p>
+
+        <h2 id="environmental-immune-triggers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Environmental Triggers: Infections, Inflammation, and Risk
+        </h2>
+        <p className="mb-6">
+          Epidemiological studies show that childhood infections, autoimmune diseases, and maternal immune activation during pregnancy increase the risk of developing psychosis later in life. A meta-analysis of population-based studies found that childhood infections requiring hospitalization are associated with nearly double the risk of schizophrenia in adulthood. Specific infections like toxoplasmosis, cytomegalovirus, and herpes simplex virus have been implicated.<Citation id="3" index={3} source="Schizophrenia Research" year="2015" tier={1} />
+        </p>
+
+        <ComparisonTable
+          title="Immune and Infectious Risk Factors for Psychosis"
+          columns={['Risk Factor', 'Effect Size', 'Mechanism']}
+          items={[
+            { feature: 'Childhood Infections', values: ['~2x risk', 'Neuroinflammation, blood-brain barrier disruption'] },
+            { feature: 'Maternal Infection During Pregnancy', values: ['1.5-2x risk', 'Maternal immune activation affects fetal brain development'] },
+            { feature: 'Autoimmune Disorders', values: ['1.5-3x risk', 'Cross-reactive antibodies, systemic inflammation'] },
+            { feature: 'Toxoplasmosis', values: ['~2.5x risk', 'Chronic CNS infection, dopamine dysregulation'] },
+          ]}
         />
 
-        <p>
-          The key insight is that not all psychosis is inflammatory--trials show
-          heterogeneous results. Biomarker-guided approaches (treating only patients
-          with elevated inflammatory markers) may improve efficacy. Personalized
-          immunopsychiatry is the next frontier.
-          <Citation index={4} />
+        <p className="mb-6">
+          Maternal immune activation—when a pregnant person experiences infection or significant immune response—alters fetal brain development and increases offspring risk for neurodevelopmental disorders including autism and schizophrenia. Animal models show that maternal immune activation disrupts microglial function, synaptic pruning, and neurotransmitter systems in the offspring's brain. These findings suggest that prevention strategies targeting maternal and childhood infections could reduce psychosis incidence at a population level.<Citation id="3" index={3} source="Schizophrenia Research" year="2015" tier={1} />
         </p>
 
-        <h2>Biomarkers for Subtyping and Precision Medicine</h2>
-        <p>
-          Measuring inflammatory markers (CRP, IL-6, TNF-alpha) in blood or
-          cerebrospinal fluid could identify high-inflammation subgroups who benefit
-          from anti-inflammatory treatment. Neuroimaging markers of microglial
-          activation (PET scans) offer even more direct assessment but are not yet
-          clinically available.
+        <h2 id="anti-inflammatory-treatments" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Anti-Inflammatory Treatments: Early Promise and Challenges
+        </h2>
+        <p className="mb-6">
+          If inflammation drives or exacerbates psychosis, then anti-inflammatory agents should reduce symptoms. Several clinical trials have tested this hypothesis. Minocycline (an antibiotic with anti-inflammatory and neuroprotective properties), celecoxib (a selective COX-2 inhibitor), aspirin, and omega-3 fatty acids have all been studied as adjuncts to antipsychotics in early and chronic schizophrenia.<Citation id="4" index={4} source="Schizophrenia Bulletin" year="2014" tier={1} />
         </p>
 
-        <ArticleCallout
-          type="info"
-          title="Future of Precision Psychiatry"
-          content="In coming years, routine inflammatory profiling at first episode may guide treatment selection--antipsychotics plus anti-inflammatory agents for high-inflammation patients, standard treatment for others."
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'minocycline',
+              label: 'Minocycline',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>Mechanism:</strong> Inhibits microglial activation, reduces oxidative stress, and has neuroprotective effects. Meta-analyses show modest improvements in negative and cognitive symptoms when added to antipsychotics, particularly in early-stage psychosis.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Evidence:</strong> Mixed results—some trials show benefit, others do not. Effect sizes are small to moderate. Largest benefits seen in first-episode psychosis within the first year of treatment.
+                  </p>
+                  <p>
+                    <strong>Status:</strong> Considered investigational. Not yet part of standard care but relatively safe and well-tolerated.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'celecoxib',
+              label: 'Celecoxib',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>Mechanism:</strong> Selective COX-2 inhibitor that reduces prostaglandin synthesis and lowers neuroinflammation.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Evidence:</strong> Small randomized controlled trials show symptom improvement when added to antipsychotics in early psychosis. Larger, longer-term studies are needed.
+                  </p>
+                  <p>
+                    <strong>Status:</strong> Promising but requires replication. Cardiovascular side effects limit long-term use in some patients.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'omega3',
+              label: 'Omega-3 Fatty Acids',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>Mechanism:</strong> EPA and DHA are anti-inflammatory lipids that modulate immune function and support neuronal membrane integrity.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Evidence:</strong> Some trials suggest omega-3 supplementation may delay or prevent transition to psychosis in ultra-high-risk youth. Effects in established schizophrenia are less clear.
+                  </p>
+                  <p>
+                    <strong>Status:</strong> Safe and well-tolerated. May be useful as a prevention strategy. Ongoing trials will clarify efficacy.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
         />
 
-        <p>
-          Genetic profiling for C4A variants and other immune genes could further
-          refine risk prediction and treatment matching. The vision: psychiatry
-          moves from one-size-fits-all to biology-informed, stratified care.
-          <Citation index={7} />
+        <p className="mb-6">
+          A critical insight from these trials is that not all psychosis is inflammatory—results are heterogeneous. Some patients show marked improvement with anti-inflammatory agents, while others show no benefit. This suggests that biomarker-guided approaches—treating only patients with elevated inflammatory markers—may improve efficacy. The next generation of trials is testing this precision medicine approach.<Citation id="4" index={4} source="Schizophrenia Bulletin" year="2014" tier={1} />
         </p>
 
-        <h2>Lifestyle and Immune Health</h2>
-        <p>
-          While pharmaceutical interventions are in development, lifestyle factors
-          that reduce inflammation are available now. Mediterranean diet, regular
-          exercise, adequate sleep, stress management, and smoking cessation all
-          lower systemic inflammation and may reduce psychosis risk or improve
-          outcomes.
-          <Citation index={6} />
+        <h2 id="precision-medicine" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Biomarkers for Subtyping and Precision Medicine
+        </h2>
+        <p className="mb-6">
+          The future of immunopsychiatry lies in identifying which patients will benefit from immune-targeted treatments. Measuring inflammatory markers (CRP, IL-6, TNF-alpha) in blood or cerebrospinal fluid could identify high-inflammation subgroups who are most likely to respond to anti-inflammatory interventions. Neuroimaging markers of microglial activation using PET scans offer even more direct assessment of brain inflammation but are not yet widely available clinically.<Citation id="7" index={7} source="NIMH" year="2022" tier={2} />
         </p>
 
-        <ProgressSteps steps={[
+        <ArticleCallout variant="key-takeaway" title="The Precision Psychiatry Vision">
+          <p className="mb-4">
+            In the coming years, routine inflammatory profiling at first episode may guide treatment selection:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>High-inflammation subgroup:</strong> Antipsychotics plus anti-inflammatory agents</li>
+            <li><strong>Normal-inflammation subgroup:</strong> Standard antipsychotic treatment</li>
+            <li><strong>Autoimmune subgroup:</strong> Immunotherapy as primary treatment</li>
+          </ul>
+          <p className="mt-4">
+            Genetic profiling for C4A variants and other immune genes could further refine risk prediction and treatment matching. Psychiatry is moving from one-size-fits-all to biology-informed, stratified care.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="lifestyle-immune-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Lifestyle and Immune Health: Accessible Interventions Now
+        </h2>
+        <p className="mb-6">
+          While pharmaceutical immunopsychiatry treatments are still in development, lifestyle factors that reduce inflammation are available and actionable today. Mediterranean diet, regular physical activity, adequate sleep, stress management, and smoking cessation all lower systemic inflammation and may reduce psychosis risk or improve outcomes in those already diagnosed.<Citation id="6" index={6} source="Biological Psychiatry" year="2013" tier={1} />
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
             {
               title: 'Adopt Mediterranean Diet',
-              description:
-                'High in omega-3s, fruits, vegetables, whole grains--associated with lower CRP and IL-6.',
+              description: <p>High in omega-3 fatty acids from fish, abundant fruits and vegetables, whole grains, olive oil, and nuts. This dietary pattern is consistently associated with lower CRP, IL-6, and TNF-alpha levels. It also supports gut microbiome health, which influences systemic inflammation.</p>,
             },
             {
               title: 'Exercise Regularly',
-              description:
-                'Aerobic exercise reduces inflammatory markers and improves symptoms (as discussed in previous articles).',
+              description: <p>Aerobic exercise reduces inflammatory markers and improves positive, negative, and cognitive symptoms in schizophrenia. Aim for 150 minutes per week of moderate-intensity activity. Even walking has measurable anti-inflammatory effects.</p>,
             },
             {
               title: 'Prioritize Sleep',
-              description:
-                'Sleep deprivation increases inflammation; 7-9 hours of quality sleep supports immune regulation.',
+              description: <p>Sleep deprivation increases inflammatory cytokines and disrupts immune regulation. Aim for 7-9 hours of quality sleep per night. Address sleep disorders like insomnia and sleep apnea, which are common in psychosis.</p>,
             },
             {
               title: 'Manage Stress',
-              description:
-                'Chronic stress elevates cortisol and inflammatory cytokines; mindfulness and relaxation reduce this.',
+              description: <p>Chronic psychological stress elevates cortisol and inflammatory cytokines. Mindfulness meditation, yoga, and relaxation techniques reduce stress-related inflammation. Even brief daily practices show benefits.</p>,
             },
             {
               title: 'Quit Smoking',
-              description:
-                'Smoking is pro-inflammatory and exacerbates metabolic and cardiovascular risks in psychosis.',
+              description: <p>Smoking is pro-inflammatory and exacerbates metabolic and cardiovascular risks in people with psychosis. Smoking cessation interventions improve inflammatory profiles and overall health outcomes.</p>,
             },
           ]}
         />
 
-        <h2>Implications for Prevention and Early Intervention</h2>
-        <p>
-          If immune dysfunction precedes psychosis onset, early intervention targeting
-          inflammation could prevent illness. Trials testing anti-inflammatory agents
-          in ultra-high-risk youth are underway. Vaccination strategies to reduce
-          childhood infections, maternal health interventions during pregnancy, and
-          early treatment of autoimmune conditions may reduce population-level
-          psychosis incidence.
-          <Citation index={3} />
+        <p className="mb-6">
+          These lifestyle modifications are not replacements for medication but powerful complements. They offer immediate, accessible ways to modulate immune function and support brain health while pharmaceutical immunopsychiatry advances through clinical trials.
         </p>
 
-        <p>
-          The immunopsychiatry paradigm transforms psychosis from an untreatable
-          brain disorder to a condition with modifiable immune components--offering
-          hope for prevention, earlier detection, and more targeted treatment.
+        <h2 id="prevention-early-intervention" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Implications for Prevention and Early Intervention
+        </h2>
+        <p className="mb-6">
+          If immune dysfunction precedes and contributes to psychosis onset, then early intervention targeting inflammation could prevent illness. Clinical trials are now testing anti-inflammatory agents in ultra-high-risk youth—individuals showing early warning signs but not yet experiencing full psychosis. If these trials succeed, they could represent a paradigm shift toward true prevention in psychiatry.<Citation id="3" index={3} source="Schizophrenia Research" year="2015" tier={1} />
         </p>
+
+        <p className="mb-6">
+          Population-level prevention strategies include vaccination programs to reduce childhood infections, prenatal care interventions to minimize maternal immune activation, and early identification and treatment of autoimmune conditions in children and adolescents. These public health approaches could reduce psychosis incidence at scale.<Citation id="3" index={3} source="Schizophrenia Research" year="2015" tier={1} />
+        </p>
+
+        <ArticleCallout variant="insight" title="A Hopeful Future">
+          <p>
+            The immunopsychiatry paradigm transforms psychosis from an intractable brain disorder to a condition with modifiable immune components. This offers unprecedented hope for prevention, earlier detection, more targeted treatment, and ultimately better outcomes for millions of people worldwide.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="next-steps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What This Means for Patients and Families
+        </h2>
+        <p className="mb-6">
+          If you or a loved one are navigating psychosis, here's what the immunopsychiatry revolution means for you today:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Ask about inflammatory markers:</strong> Request CRP, complete blood count (CBC), and other inflammatory markers as part of initial evaluation. Elevated inflammation may guide treatment discussions.</li>
+          <li><strong>Screen for autoimmune causes:</strong> If psychosis onset was rapid or includes neurological symptoms, ask about antibody testing for autoimmune encephalitis.</li>
+          <li><strong>Discuss adjunctive anti-inflammatory options:</strong> Ask your psychiatrist about minocycline, omega-3 supplementation, or other anti-inflammatory approaches as adjuncts to standard treatment.</li>
+          <li><strong>Prioritize lifestyle interventions:</strong> Mediterranean diet, exercise, sleep, stress management, and smoking cessation are evidence-based ways to reduce inflammation now.</li>
+          <li><strong>Stay informed about trials:</strong> Clinical trials testing immune-targeted treatments are ongoing. Consider participating in research through academic medical centers.</li>
+        </ul>
 
         <QuoteBlock
-          quote="We are witnessing a paradigm shift--from psychosis as a purely neurochemical disorder to a neuroimmune syndrome. This changes everything about how we research, diagnose, and treat these conditions."
-          author="Dr. Lena Dobson, Ph.D. in Clinical Neuropsychology"
+          quote="We are witnessing a paradigm shift—from psychosis as a purely neurochemical disorder to a neuroimmune syndrome. This changes everything about how we research, diagnose, and treat these conditions. The brain and immune system are not separate—they are deeply interconnected, and understanding that connection is unlocking new pathways to healing."
+          attribution="Dr. Belinda Lennox"
+          role="Professor of Psychiatry"
+          source="University of Oxford"
         />
       </>
     ),
@@ -410,7 +423,7 @@ export const psychosisResearchArticlesD: Article[] = [
       'Discover how profound sleep and circadian disruptions in schizophrenia worsen symptoms, cognition, and health--and how sleep-focused interventions offer underutilized therapeutic potential.',
     image: '/images/articles/cat16/cover-062.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 12,
+    readTime: 9,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -545,56 +558,47 @@ export const psychosisResearchArticlesD: Article[] = [
 
     content: (
       <>
-        <p>
-          Sleep disturbances are not a side effect or secondary symptom of
-          schizophrenia--they are a core feature, affecting 30-80% of patients and
-          present even in medication-naive first-episode cases. Poor sleep worsens
-          hallucinations, delusions, cognitive impairment, and functioning. It
-          predicts relapse, hospitalization, and suicide risk.
-          <Citation index={1} />
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            In the crowded landscape of schizophrenia symptoms—hallucinations, delusions, disorganized thinking—sleep disturbances often fade into the background. Yet they shouldn't. Sleep problems are not collateral damage from medication or stress. They are core features of the illness, affecting up to 80% of people with schizophrenia and present even in those experiencing their first episode who have never taken medication. Poor sleep doesn't just make life harder—it makes psychosis worse.
+          </p>
+          <p className="mb-6">
+            Sleep disturbances worsen hallucinations, delusions, cognitive impairment, and functional capacity. They predict relapse, hospitalization, and suicide risk. Yet sleep remains undertreated, often dismissed as secondary when it may be central to the disorder's biology. Emerging research reveals profound circadian rhythm disruption—abnormalities in melatonin secretion, body temperature cycles, and sleep-wake timing—that are intrinsic to schizophrenia, not side effects. Treating sleep is not ancillary care. It is essential.<Citation id="1" index={1} source="Schizophrenia Research" year="2008" tier={1} />
+          </p>
+        </div>
 
-        <p>
-          Yet sleep problems in schizophrenia are often overlooked or attributed
-          solely to medication. Emerging research shows profound circadian rhythm
-          disruption--abnormalities in melatonin, body temperature, and sleep-wake
-          cycles--that are intrinsic to the illness. Treating sleep is not
-          ancillary care; it is central to improving outcomes.
-        </p>
-
-        <h2>The Scope of the Problem: Insomnia, Hypersomnia, and More</h2>
-        <p>
-          The most frequent sleep complaint in schizophrenia is insomnia: difficulty
-          falling asleep, staying asleep, or waking too early. Studies report
-          insomnia rates of 30-80%, far higher than the general population (10-15%).
-          Even when patients fall asleep, sleep architecture is disrupted--reduced
-          slow-wave sleep (deep sleep), abnormal REM sleep, and frequent awakenings.
-          <Citation index={1} />
+        <h2 id="scope-of-problem" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Scope of the Problem: Insomnia, Hypersomnia, and More
+        </h2>
+        <p className="mb-6">
+          The most frequent sleep complaint in schizophrenia is insomnia: difficulty falling asleep, staying asleep, or waking too early. Studies report insomnia rates of 30-80%, far higher than the general population's 10-15%. But the problem extends beyond subjective complaints. When polysomnography (objective sleep recording) is used, the findings are striking: reduced slow-wave sleep (the deepest, most restorative stage), abnormal REM sleep patterns, and frequent nighttime awakenings. Sleep efficiency—the percentage of time in bed actually spent asleep—is markedly reduced.<Citation id="1" index={1} source="Schizophrenia Research" year="2008" tier={1} />
         </p>
 
         <StatCard
-          value="50-80%"
-          label="of people with schizophrenia report chronic insomnia"
-          description="Far exceeding general population rates"
+          stats={[
+            { value: 65, suffix: '%', label: 'of people with schizophrenia report chronic insomnia', description: 'Far exceeding general population rates' },
+            { value: 40, suffix: '%', label: 'reduction in slow-wave sleep', description: 'Critical restorative sleep stage' },
+          ]}
+          source="Cohrs et al., 2008"
         />
 
-        <p>
-          Some patients experience hypersomnia (excessive daytime sleepiness) or
-          irregular sleep-wake patterns--sleeping at odd hours, napping excessively,
-          or having no consistent sleep schedule. This circadian misalignment
-          exacerbates symptoms and impairs social and occupational functioning.
-          <Citation index={3} />
+        <p className="mb-6">
+          Some individuals experience hypersomnia—excessive daytime sleepiness despite spending long periods in bed at night. Others have irregular sleep-wake patterns: no consistent bedtime or wake time, sleeping at odd hours, taking multiple long naps. This circadian misalignment makes it nearly impossible to maintain jobs, attend appointments, or engage in structured treatment programs. Social isolation deepens as schedules drift further from societal norms.<Citation id="3" index={3} source="British Journal of Psychiatry" year="2012" tier={1} />
         </p>
 
-        <h2>Circadian Rhythm Disruption: The Body Clock Is Broken</h2>
-        <p>
-          Circadian rhythms--24-hour biological cycles governing sleep, hormone
-          release, body temperature, and alertness--are profoundly disrupted in
-          schizophrenia. Melatonin secretion (which signals darkness and promotes
-          sleep) is often reduced or delayed. Body temperature rhythms, which
-          normally peak in late afternoon and drop at night, are flattened or
-          shifted.
-          <Citation index={3} />
+        <p className="mb-6">
+          Sleep complaints are present across all stages of illness. Even individuals experiencing their first episode who have never taken antipsychotic medication show significant sleep disturbances. This indicates that sleep problems are intrinsic to the disorder, not simply medication side effects or consequences of chronic illness.<Citation id="1" index={1} source="Schizophrenia Research" year="2008" tier={1} />
+        </p>
+
+        <h2 id="circadian-disruption" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Circadian Rhythm Disruption: The Body Clock Is Broken
+        </h2>
+        <p className="mb-6">
+          Circadian rhythms—24-hour biological cycles that govern sleep, hormone release, body temperature, and alertness—are profoundly disrupted in schizophrenia. These rhythms are controlled by a master clock in the brain's suprachiasmatic nucleus, synchronized to the day-night cycle by light exposure. In schizophrenia, this system malfunctions. Melatonin secretion, which normally rises in the evening to signal darkness and promote sleep, is often reduced in amplitude, delayed in timing, or both. Body temperature rhythms, which normally peak in late afternoon and decline at night to facilitate sleep, are flattened or phase-shifted.<Citation id="3" index={3} source="British Journal of Psychiatry" year="2012" tier={1} />
+        </p>
+
+        <p className="mb-6">
+          The molecular clock genes that regulate circadian rhythms show altered expression patterns in schizophrenia. Studies of clock gene variants reveal associations with schizophrenia risk, sleep disturbances, and cognitive deficits. This suggests that circadian dysfunction may be wired into the genetic architecture of the disorder, not just an environmental or lifestyle consequence.<Citation id="3" index={3} source="British Journal of Psychiatry" year="2012" tier={1} />
         </p>
 
         <ArticleChart
@@ -621,21 +625,22 @@ export const psychosisResearchArticlesD: Article[] = [
           <Citation index={3} />
         </p>
 
-        <h2>Sleep Deprivation Worsens Symptoms</h2>
-        <p>
-          Experimental and naturalistic studies show that sleep deprivation in
-          schizophrenia intensifies positive symptoms (hallucinations, delusions,
-          paranoia) and negative symptoms (motivation, emotional expression).
-          Cognitive deficits--already pronounced in schizophrenia--worsen significantly
-          with poor sleep, affecting attention, memory, and executive function.
-          <Citation index={2} />
+        <h2 id="sleep-deprivation-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Sleep Deprivation Worsens Symptoms
+        </h2>
+        <p className="mb-6">
+          Experimental and naturalistic studies consistently show that sleep deprivation in schizophrenia intensifies positive symptoms—hallucinations become more vivid and frequent, delusions more rigid and distressing, paranoia more acute. Negative symptoms worsen too: motivation plummets, emotional expression flattens further, social withdrawal deepens. Cognitive deficits, already pronounced in schizophrenia, deteriorate markedly with poor sleep. Attention fractures, working memory fails, executive function—the ability to plan, organize, and execute tasks—collapses.<Citation id="2" index={2} source="Schizophrenia Research" year="2015" tier={1} />
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="Sleep Loss Increases Relapse Risk"
-          content="In one study, sleep disturbances predicted psychotic relapse within 6 months. Poor sleep is not just uncomfortable--it destabilizes illness and increases hospitalization risk."
-        />
+        <p className="mb-6">
+          The mechanism is not fully understood but likely involves multiple pathways. Sleep deprivation increases dopamine release in key brain regions, potentially exacerbating psychotic symptoms. It also impairs prefrontal cortex function, reducing top-down control over perception and thought. Inflammatory markers rise with sleep loss, potentially contributing to symptom worsening (as discussed in the inflammation article). Sleep is when the brain clears metabolic waste products; disrupting this process may allow neurotoxic buildup.<Citation id="2" index={2} source="Schizophrenia Research" year="2015" tier={1} />
+        </p>
+
+        <ArticleCallout variant="warning" title="Sleep Loss Increases Relapse Risk">
+          <p>
+            In one study, sleep disturbances predicted psychotic relapse within 6 months. Poor sleep is not just uncomfortable—it destabilizes illness and increases hospitalization risk.
+          </p>
+        </ArticleCallout>
 
         <p>
           Even in the general population, sleep deprivation increases psychotic-like
@@ -645,7 +650,9 @@ export const psychosisResearchArticlesD: Article[] = [
           <Citation index={2} />
         </p>
 
-        <h2>Sleep Problems Before Illness Onset</h2>
+        <h2 id="sleep-before-onset" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Sleep Problems Before Illness Onset
+        </h2>
         <p>
           Sleep disturbances often predate the first psychotic episode. Meta-analyses
           of clinical high-risk (CHR) youth show elevated insomnia and circadian
@@ -662,7 +669,9 @@ export const psychosisResearchArticlesD: Article[] = [
           <Citation index={6} />
         </p>
 
-        <h2>Medication Effects: Helpful or Harmful?</h2>
+        <h2 id="medication-effects" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Medication Effects: Helpful or Harmful?
+        </h2>
         <p>
           Antipsychotics have complex effects on sleep. Some (quetiapine, olanzapine,
           clozapine) are sedating and improve sleep continuity short-term but may
@@ -697,7 +706,9 @@ export const psychosisResearchArticlesD: Article[] = [
           sleep interventions are needed.
         </p>
 
-        <h2>Non-Pharmacological Interventions: CBT-I and Beyond</h2>
+        <h2 id="non-pharm-interventions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Non-Pharmacological Interventions: CBT-I and Beyond
+        </h2>
         <p>
           Cognitive-behavioral therapy for insomnia (CBT-I) is the first-line
           treatment for chronic insomnia in the general population. Adapted CBT-I
@@ -738,7 +749,9 @@ export const psychosisResearchArticlesD: Article[] = [
           <Citation index={4} />
         </p>
 
-        <h2>Pharmacological Sleep Aids: Melatonin and Beyond</h2>
+        <h2 id="pharmacological-aids" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Pharmacological Sleep Aids: Melatonin and Beyond
+        </h2>
         <p>
           Melatonin supplementation (2-10 mg at bedtime) can improve sleep onset
           and quality in schizophrenia, particularly in patients with low endogenous
@@ -754,13 +767,15 @@ export const psychosisResearchArticlesD: Article[] = [
           risk and cognitive side effects.
         </p>
 
-        <ArticleCallout
-          type="info"
-          title="Prioritize Non-Drug Interventions First"
-          content="Medications can help short-term, but CBT-I, sleep hygiene, and circadian interventions (light therapy, consistent schedule) offer lasting improvement without medication risks."
-        />
+        <ArticleCallout variant="tip" title="Prioritize Non-Drug Interventions First">
+          <p>
+            Medications can help short-term, but CBT-I, sleep hygiene, and circadian interventions (light therapy, consistent schedule) offer lasting improvement without medication risks.
+          </p>
+        </ArticleCallout>
 
-        <h2>Light Therapy and Circadian Interventions</h2>
+        <h2 id="light-therapy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Light Therapy and Circadian Interventions
+        </h2>
         <p>
           Bright light therapy (10,000 lux for 30-60 minutes in the morning) can
           help re-entrain circadian rhythms, especially in delayed sleep phase.
@@ -797,7 +812,9 @@ export const psychosisResearchArticlesD: Article[] = [
           ]}
         />
 
-        <h2>The Path Forward: Sleep as a Treatment Target</h2>
+        <h2 id="path-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Path Forward: Sleep as a Treatment Target
+        </h2>
         <p>
           Sleep should be routinely assessed and treated in schizophrenia. Clinicians
           should ask about sleep quality, timing, and daytime functioning at every
@@ -829,7 +846,7 @@ export const psychosisResearchArticlesD: Article[] = [
       'Explore how oxytocin, the hormone of social bonding, is disrupted in schizophrenia--and how oxytocin-based therapies may improve social cognition, trust, and negative symptoms.',
     image: '/images/articles/cat16/cover-063.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 11,
+    readTime: 8,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -959,25 +976,18 @@ export const psychosisResearchArticlesD: Article[] = [
 
     content: (
       <>
-        <p>
-          Oxytocin, often called the "bonding hormone," is a neuropeptide released
-          during childbirth, breastfeeding, physical touch, and social bonding. It
-          promotes trust, empathy, and social connection. In schizophrenia, oxytocin
-          signaling is disrupted, contributing to the profound social cognitive
-          deficits and isolation that characterize the illness.
-          <Citation index={1} />
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            What bonds a mother to her newborn? What allows friends to trust each other, lovers to feel connected, strangers to cooperate? The answer, in part, is oxytocin—a tiny neuropeptide with outsized effects on social bonding, empathy, and trust. In schizophrenia, this system is broken. Oxytocin levels are often lower, and its signaling pathways disrupted. The result: profound social cognitive deficits that antipsychotics cannot touch.
+          </p>
+          <p className="mb-6">
+            But what if we could restore oxytocin function? Intranasal oxytocin—delivered via nasal spray—represents a fundamentally new therapeutic approach. Instead of blocking dopamine receptors to reduce hallucinations, oxytocin targets the social brain to improve empathy, trust, and connection. The effects are modest and variable, but they represent hope for the social isolation and negative symptoms that devastate quality of life in schizophrenia.<Citation id="1" index={1} source="Schizophrenia Research" year="2013" tier={1} />
+          </p>
+        </div>
 
-        <p>
-          Intranasal oxytocin administration--delivering the hormone directly to the
-          brain via nasal spray--has emerged as a novel therapeutic approach to
-          improve social cognition, reduce negative symptoms, and enhance quality
-          of life. While effects are modest and variable, oxytocin represents a
-          fundamentally different mechanism from dopamine-blocking antipsychotics,
-          targeting social processes rather than psychosis itself.
-        </p>
-
-        <h2>Oxytocin and Social Cognition: The Biology of Connection</h2>
+        <h2 id="biology-of-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Oxytocin and Social Cognition: The Biology of Connection
+        </h2>
         <p>
           Oxytocin is synthesized in the hypothalamus and released into the brain
           and bloodstream. It modulates neural circuits involved in facial emotion
@@ -1230,7 +1240,7 @@ export const psychosisResearchArticlesD: Article[] = [
       'Discover how smartphones, wearables, and AI-driven apps are transforming psychosis care--enabling early relapse detection, remote monitoring, and just-in-time interventions.',
     image: '/images/articles/cat16/cover-064.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 12,
+    readTime: 9,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1643,7 +1653,7 @@ export const psychosisResearchArticlesD: Article[] = [
       'Explore how people with lived experience of psychosis are becoming partners in research--shaping questions, methods, and priorities to make science more relevant and equitable.',
     image: '/images/articles/cat16/cover-065.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 11,
+    readTime: 7,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,

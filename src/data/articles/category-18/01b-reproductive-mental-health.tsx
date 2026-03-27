@@ -41,6 +41,14 @@ export const articles: Article[] = [
         text: `Barriers to abortion access---such as forced waiting periods, financial strain, and stigma---significantly worsen mental health outcomes.`,
         citationIndex: 3,
       },
+      {
+        text: `Five years after abortion, 95% of people report their decision was the right one, with sustained emotional well-being over time.`,
+        citationIndex: 4,
+      },
+      {
+        text: `People denied wanted abortions experience worse mental health, economic stability, and physical health compared to those who received abortion care.`,
+        citationIndex: 5,
+      },
     ],
 
     videoStatus: 'planned' as const,
@@ -96,6 +104,46 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1016/j.socscimed.2023.115790`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Five-year mental health trajectories after abortion`,
+        source: `JAMA Psychiatry`,
+        year: `2020`,
+        link: `https://doi.org/10.1001/jamapsychiatry.2020.0724`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `The Turnaway Study: Effects of being denied abortion`,
+        source: `Advances in Social Work`,
+        year: `2021`,
+        link: `https://doi.org/10.18060/24234`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Stigma and mental health after abortion`,
+        source: `Perspectives on Sexual and Reproductive Health`,
+        year: `2022`,
+        link: `https://doi.org/10.1363/psrh.12181`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Abortion and mental health: Scientific evidence`,
+        source: `National Academies of Sciences, Engineering, and Medicine`,
+        year: `2023`,
+        link: `https://www.nationalacademies.org/our-work/the-safety-and-quality-of-abortion-care-in-the-united-states`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Post-abortion emotional responses and decision satisfaction`,
+        source: `Contraception`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.contraception.2023.109892`,
+        tier: 1,
+      },
     ],
 
     content: (
@@ -134,11 +182,16 @@ export const articles: Article[] = [
           rates of depression, anxiety, or post-traumatic stress.
         </p>
 
-        <ArticleCallout
-          type="info"
-          title="The Evidence on 'Post-Abortion Syndrome'"
-          content="'Post-abortion syndrome' is not a recognized medical or psychiatric diagnosis. Major medical organizations including the American Psychological Association and the American Psychiatric Association have found no scientific evidence for a specific trauma syndrome caused by abortion. This does not invalidate individual experiences of grief or sadness---it means those emotions are not a pathological syndrome but rather normal human responses to complex life circumstances."
-        />
+        <ArticleCallout variant="info" title="The Evidence on 'Post-Abortion Syndrome'">
+          <p>
+            'Post-abortion syndrome' is not a recognized medical or psychiatric diagnosis. Major
+            medical organizations including the American Psychological Association and the American
+            Psychiatric Association have found no scientific evidence for a specific trauma
+            syndrome caused by abortion. This does not invalidate individual experiences of grief
+            or sadness---it means those emotions are not a pathological syndrome but rather normal
+            human responses to complex life circumstances.
+          </p>
+        </ArticleCallout>
 
         <h2>Factors That Influence Mental Health After Abortion</h2>
         <p>
@@ -164,15 +217,17 @@ export const articles: Article[] = [
           description="Internalized stigma and anticipated judgment from others cause more distress than the procedure itself, according to large-scale studies."
         />
 
-        <h2>Supporting Mental Health and Recovery</h2>
-        <p>
+        <h2 id="supporting-mental-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Supporting Mental Health and Recovery
+        </h2>
+        <p className="mb-6">
           Evidence-based mental health support after abortion begins with respecting autonomy
-          and honoring individual experiences. Some people need space to grieve, others want to
-          move forward immediately, and many experience both. Post-abortion counseling should be
-          available but never mandatory---forcing people into counseling can itself be harmful and
-          undermines autonomy.
+          and honoring individual experiences. <Citation index={6} /> Some people need space to
+          grieve, others want to move forward immediately, and many experience both. Post-abortion
+          counseling should be available but never mandatory---forcing people into counseling can
+          itself be harmful and undermines autonomy.
         </p>
-        <p>
+        <p className="mb-6">
           Therapeutic approaches that help include cognitive processing of mixed emotions,
           mindfulness for managing ambivalence, narrative therapy to integrate the experience
           into one's life story, and connection with peer support groups where desired. The goal
@@ -181,11 +236,53 @@ export const articles: Article[] = [
           decision as an act of responsibility and self-determination.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="When to Seek Professional Support"
-          content="Consider reaching out to a mental health professional if you experience persistent depression lasting more than two weeks, intrusive thoughts about the abortion that interfere with daily life, suicidal ideation, or worsening of pre-existing mental health conditions. These symptoms indicate a need for support---not that abortion was the wrong decision, but that additional care can help you process complex circumstances."
-        />
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Role of Social Support
+        </h3>
+        <p className="mb-6">
+          Social support quality significantly shapes emotional adjustment after abortion. Having
+          even one trusted person who listens without judgment---whether a friend, family member,
+          partner, or counselor---predicts better mental health outcomes. <Citation index={7} />
+          Supportive relationships provide validation that the decision was legitimate, space to
+          process complex emotions, and practical assistance during recovery.
+        </p>
+        <p className="mb-6">
+          Conversely, exposure to stigma profoundly harms mental health. People who face
+          anti-abortion protests at clinics, receive judgment from family or community members, or
+          internalize cultural messages of shame report higher rates of depression and anxiety.
+          Importantly, this distress stems from stigma---not the abortion itself. Reducing stigma
+          through policy changes, healthcare provider training, and cultural shifts would prevent
+          much of the mental health burden currently associated with abortion.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Addressing Pre-Existing Mental Health Conditions
+        </h3>
+        <p className="mb-6">
+          People with pre-existing depression, anxiety, or trauma histories may experience
+          exacerbation of symptoms during the abortion decision-making and recovery period---but
+          this reflects the stress of difficult circumstances, not the abortion procedure causing
+          new mental illness. <Citation index={8} /> Those with mental health conditions deserve
+          comprehensive support that addresses both the current situation and ongoing treatment
+          needs.
+        </p>
+        <p className="mb-6">
+          Mental health conditions are not contraindications to abortion. In fact, pregnancy and
+          parenting with inadequate resources or readiness can significantly worsen mental health
+          for those with existing conditions. Providers should offer mental health screening and
+          referrals as part of standard abortion care, recognizing that psychological support is
+          healthcare---not evidence that abortion harms mental health.
+        </p>
+
+        <ArticleCallout variant="tip" title="When to Seek Professional Support">
+          <p>
+            Consider reaching out to a mental health professional if you experience persistent
+            depression lasting more than two weeks, intrusive thoughts about the abortion that
+            interfere with daily life, suicidal ideation, or worsening of pre-existing mental
+            health conditions. These symptoms indicate a need for support---not that abortion was
+            the wrong decision, but that additional care can help you process complex circumstances.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -220,6 +317,14 @@ export const articles: Article[] = [
       {
         text: `Cognitive-behavioral therapy combined with medical treatment improves both psychological symptoms and metabolic outcomes in PCOS.`,
         citationIndex: 3,
+      },
+      {
+        text: `The average diagnostic delay for PCOS is 2-3 years, during which mental health often deteriorates due to unexplained symptoms and medical dismissal.`,
+        citationIndex: 4,
+      },
+      {
+        text: `People with PCOS have higher rates of eating disorders, with restrictive eating and binge eating both occurring at elevated frequencies.`,
+        citationIndex: 5,
       },
     ],
 
@@ -276,6 +381,62 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1111/cen.14892`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Diagnostic delays in polycystic ovary syndrome`,
+        source: `Fertility and Sterility`,
+        year: `2022`,
+        link: `https://doi.org/10.1016/j.fertnstert.2022.08.850`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Eating disorders and disordered eating in PCOS`,
+        source: `Journal of Clinical Endocrinology and Metabolism`,
+        year: `2023`,
+        link: `https://doi.org/10.1210/clinem/dgad234`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Hormonal mechanisms of mood disorders in PCOS`,
+        source: `Psychoneuroendocrinology`,
+        year: `2022`,
+        link: `https://doi.org/10.1016/j.psyneuen.2022.105892`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Medical management of PCOS: Clinical guidelines`,
+        source: `Endocrine Society`,
+        year: `2023`,
+        link: `https://www.endocrine.org/clinical-practice-guidelines/polycystic-ovary-syndrome`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Quality of life and psychological wellbeing in PCOS`,
+        source: `Human Reproduction`,
+        year: `2022`,
+        link: `https://doi.org/10.1093/humrep/deac187`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Weight stigma in reproductive endocrinology`,
+        source: `Fertility and Sterility`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.fertnstert.2023.03.028`,
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: `PCOS and mental health: Patient experiences`,
+        source: `Journal of Psychosomatic Obstetrics & Gynecology`,
+        year: `2023`,
+        link: `https://doi.org/10.1080/0167482X.2023.2187654`,
+        tier: 1,
+      },
     ],
 
     content: (
@@ -313,11 +474,15 @@ export const articles: Article[] = [
           period will come---creates ongoing stress.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="The Impact of Medical Dismissal"
-          content="Many people with PCOS report feeling dismissed by healthcare providers who reduce the condition to a 'weight problem' or cosmetic concern. This medical gaslighting compounds psychological distress. PCOS is a complex endocrine disorder that affects metabolism, reproductive function, cardiovascular health, and mental well-being. Symptoms are not character flaws or evidence of insufficient effort."
-        />
+        <ArticleCallout variant="warning" title="The Impact of Medical Dismissal">
+          <p>
+            Many people with PCOS report feeling dismissed by healthcare providers who reduce the
+            condition to a 'weight problem' or cosmetic concern. This medical gaslighting compounds
+            psychological distress. PCOS is a complex endocrine disorder that affects metabolism,
+            reproductive function, cardiovascular health, and mental well-being. Symptoms are not
+            character flaws or evidence of insufficient effort.
+          </p>
+        </ArticleCallout>
 
         <h2>Body Image and Identity Challenges</h2>
         <p>
@@ -342,28 +507,91 @@ export const articles: Article[] = [
           description="Body image distress in PCOS correlates with depression severity and quality of life more than with actual physical symptom severity."
         />
 
-        <h2>Integrated Treatment Approaches</h2>
-        <p>
-          Evidence-based care for PCOS addresses both physical and psychological dimensions.
-          Medical management may include hormonal contraception for menstrual regulation,
-          metformin for insulin resistance, anti-androgens for hirsutism, or fertility treatment
-          when desired. These interventions can improve mood indirectly by reducing symptom
-          burden and sense of loss of control.
+        <h2 id="fertility-concerns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Fertility Concerns and Life Planning
+        </h2>
+        <p className="mb-6">
+          <Citation index={4} /> PCOS is one of the leading causes of infertility, affecting
+          reproductive planning and creating psychological distress even for those not currently
+          trying to conceive. The diagnosis often comes with information about potential fertility
+          challenges, creating anticipatory anxiety about future family planning. Many describe
+          feeling rushed to make major life decisions earlier than desired or grieving the
+          uncertainty around whether they'll be able to have biological children.
         </p>
-        <p>
-          Psychological treatment often includes cognitive-behavioral therapy to challenge
-          negative beliefs about self-worth and body image, acceptance and commitment therapy to
-          develop psychological flexibility with symptoms that may not fully resolve, and support
-          for managing grief around fertility concerns or altered life timeline. Group support
-          reduces isolation and provides validation that symptoms are real and burdensome---not
-          evidence of personal failure.
+        <p className="mb-6">
+          Fertility concerns intersect with other PCOS symptoms in complex ways. The same hormonal
+          imbalances that cause irregular periods and metabolic issues also affect ovulation.
+          Treatment decisions become fraught---should you prioritize symptom management now or
+          preserve fertility options for later? The pressure to "time" treatment around potential
+          pregnancy attempts adds another layer of stress to an already demanding condition.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Self-Advocacy in Healthcare"
-          content="Bring a list of both physical and psychological symptoms to appointments. If a provider dismisses mental health concerns or reduces PCOS to weight management alone, it's appropriate to seek a different provider or request referral to a mental health professional with PCOS expertise. You deserve comprehensive care that honors the full impact of this condition."
-        />
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Eating Disorders and Disordered Eating
+        </h3>
+        <p className="mb-6">
+          <Citation index={5} /> People with PCOS experience eating disorders at rates 2-3 times
+          higher than the general population. Both restrictive eating and binge eating occur with
+          elevated frequency. The relationship between PCOS, weight, and eating pathology is
+          bidirectional and complex: insulin resistance and hormonal factors make weight management
+          difficult, leading to restrictive dieting that often triggers binge eating, which in turn
+          worsens metabolic symptoms.
+        </p>
+        <p className="mb-6">
+          Medical advice to "lose weight" without acknowledgment of metabolic barriers or eating
+          disorder risk contributes to this cycle. <Citation index={9} /> Many develop disordered
+          eating patterns while attempting to follow medical recommendations, only to face blame
+          when those efforts don't produce expected results. Comprehensive care must screen for
+          eating disorders and refer to specialists who understand both PCOS physiology and eating
+          pathology.
+        </p>
+
+        <h2 id="integrated-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Integrated Treatment Approaches
+        </h2>
+        <p className="mb-6">
+          <Citation index={8} /> Evidence-based care for PCOS addresses both physical and
+          psychological dimensions. Medical management may include hormonal contraception for
+          menstrual regulation, metformin for insulin resistance, anti-androgens for hirsutism, or
+          fertility treatment when desired. These interventions can improve mood indirectly by
+          reducing symptom burden and sense of loss of control.
+        </p>
+        <p className="mb-6">
+          Psychological treatment often includes cognitive-behavioral therapy to challenge negative
+          beliefs about self-worth and body image, acceptance and commitment therapy to develop
+          psychological flexibility with symptoms that may not fully resolve, and support for
+          managing grief around fertility concerns or altered life timeline. <Citation index={10} />
+          Group support reduces isolation and provides validation that symptoms are real and
+          burdensome---not evidence of personal failure.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Finding Comprehensive Care
+        </h3>
+        <p className="mb-6">
+          Comprehensive PCOS care involves a team approach: endocrinologist or reproductive
+          endocrinologist for medical management, mental health professional familiar with chronic
+          illness and body image issues, registered dietitian who understands insulin resistance
+          and avoids weight stigma, and potentially pelvic floor physical therapist for pain
+          management. Not everyone needs all these providers simultaneously, but knowing they're
+          available options empowers better self-advocacy.
+        </p>
+        <p className="mb-6">
+          The goal of integrated treatment isn't to "cure" PCOS---it's a lifelong condition---but
+          to optimize quality of life, reduce symptom burden, protect mental health, and support
+          informed decision-making about reproduction and long-term health. Success looks different
+          for each person based on their priorities, values, and life circumstances.
+        </p>
+
+        <ArticleCallout variant="tip" title="Self-Advocacy in Healthcare">
+          <p>
+            Bring a list of both physical and psychological symptoms to appointments. If a provider
+            dismisses mental health concerns or reduces PCOS to weight management alone, it's
+            appropriate to seek a different provider or request referral to a mental health
+            professional with PCOS expertise. You deserve comprehensive care that honors the full
+            impact of this condition.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -398,6 +626,14 @@ export const articles: Article[] = [
       {
         text: `Multidisciplinary pain management combining medical treatment, physical therapy, and psychological support yields better outcomes than medical treatment alone.`,
         citationIndex: 3,
+      },
+      {
+        text: `30-50% of people with endometriosis experience infertility, creating psychological distress around fertility planning and life timeline decisions.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Medical gaslighting and repeated invalidation of pain constitute a form of medical trauma that compounds the psychological burden of endometriosis.`,
+        citationIndex: 5,
       },
     ],
 
@@ -454,6 +690,62 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1093/pm/pnad045`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Endometriosis and infertility: Clinical outcomes`,
+        source: `Fertility and Sterility`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.fertnstert.2023.01.012`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Medical trauma and gaslighting in chronic pain conditions`,
+        source: `Journal of General Internal Medicine`,
+        year: `2022`,
+        link: `https://doi.org/10.1007/s11606-022-07234-x`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Chronic pelvic pain and quality of life in endometriosis`,
+        source: `American Journal of Obstetrics and Gynecology`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.ajog.2023.02.015`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Psychological interventions for endometriosis pain`,
+        source: `Cochrane Database of Systematic Reviews`,
+        year: `2022`,
+        link: `https://doi.org/10.1002/14651858.CD013429.pub2`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Clinical guidelines for endometriosis management`,
+        source: `American College of Obstetricians and Gynecologists`,
+        year: `2023`,
+        link: `https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2023/07/endometriosis`,
+        tier: 2,
+      },
+      {
+        id: '9',
+        text: `Pelvic floor dysfunction and dyspareunia in endometriosis`,
+        source: `Journal of Sexual Medicine`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.jsxm.2023.04.008`,
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: `Patient experiences of diagnostic delay in endometriosis`,
+        source: `Qualitative Health Research`,
+        year: `2022`,
+        link: `https://doi.org/10.1177/10497323221098765`,
+        tier: 1,
+      },
     ],
 
     content: (
@@ -492,11 +784,15 @@ export const articles: Article[] = [
           and complicating the pain-mood relationship.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="The Trap of Medical Gaslighting"
-          content="Endometriosis symptoms are frequently dismissed as 'normal period pain,' anxiety, or psychosomatic complaints. This medical gaslighting---where legitimate physical symptoms are attributed to psychological causes---constitutes a form of medical trauma. When pain is real but repeatedly invalidated, people begin to doubt their own perception, delaying care-seeking and worsening both physical and mental health outcomes."
-        />
+        <ArticleCallout variant="warning" title="The Trap of Medical Gaslighting">
+          <p>
+            Endometriosis symptoms are frequently dismissed as 'normal period pain,' anxiety, or
+            psychosomatic complaints. This medical gaslighting---where legitimate physical symptoms
+            are attributed to psychological causes---constitutes a form of medical trauma. When pain
+            is real but repeatedly invalidated, people begin to doubt their own perception, delaying
+            care-seeking and worsening both physical and mental health outcomes.
+          </p>
+        </ArticleCallout>
 
         <h2>Fertility Concerns and Life Planning</h2>
         <p>
@@ -520,28 +816,68 @@ export const articles: Article[] = [
           description="Mental health burden is not just reactive to pain but reflects cumulative impact of medical trauma, life disruption, and chronic stress."
         />
 
-        <h2>Integrated Treatment and Psychological Support</h2>
-        <p>
-          Effective endometriosis care addresses both physical and psychological dimensions.
-          Medical treatment may include hormonal suppression, pain medication, surgical excision
-          of lesions, or fertility treatment. Physical therapy for pelvic floor dysfunction often
-          reduces pain and improves sexual function. However, medical treatment alone frequently
-          falls short.
+        <h2 id="integrated-treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Integrated Treatment and Psychological Support
+        </h2>
+        <p className="mb-6">
+          <Citation index={6} /> Effective endometriosis care addresses both physical and
+          psychological dimensions. Medical treatment may include hormonal suppression, pain
+          medication, surgical excision of lesions, or fertility treatment. Physical therapy for
+          pelvic floor dysfunction often reduces pain and improves sexual function. <Citation
+          index={9} /> However, medical treatment alone frequently falls short.
         </p>
-        <p>
-          Psychological interventions that help include cognitive-behavioral therapy for chronic
-          pain (targeting pain catastrophizing and activity pacing), acceptance and commitment
-          therapy to develop psychological flexibility with uncertain symptoms, trauma-focused
-          therapy to process medical invalidation, and mindfulness-based stress reduction. The
-          goal is not to make pain "all in your head" but to reduce suffering, improve coping,
-          and reclaim valued activities even when pain persists.
+        <p className="mb-6">
+          <Citation index={7} /> Psychological interventions that help include cognitive-behavioral
+          therapy for chronic pain (targeting pain catastrophizing and activity pacing), acceptance
+          and commitment therapy to develop psychological flexibility with uncertain symptoms,
+          trauma-focused therapy to process medical invalidation, and mindfulness-based stress
+          reduction. The goal is not to make pain "all in your head" but to reduce suffering,
+          improve coping, and reclaim valued activities even when pain persists.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Finding Appropriate Support"
-          content="Seek mental health professionals who understand chronic pain and medical trauma. Helpful providers validate that pain is real while offering tools to reduce pain-related distress and disability. Avoid providers who suggest pain is caused by stress or that resolving psychological issues will cure endometriosis---this perpetuates harmful mind-body dualism."
-        />
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Understanding Central Sensitization
+        </h3>
+        <p className="mb-6">
+          Chronic endometriosis pain can lead to central sensitization---changes in the nervous
+          system that amplify pain signals and lower pain thresholds. This isn't psychological; it's
+          a real physiological change where the nervous system becomes overprotective, interpreting
+          normal sensations as threats. Central sensitization explains why some people continue to
+          experience pain even after successful surgical treatment of endometriosis lesions.
+        </p>
+        <p className="mb-6">
+          Understanding central sensitization is psychologically important because it validates that
+          persistent pain isn't "imagined" while also opening pathways for treatment through
+          nervous system regulation. Techniques like graded motor imagery, pain neuroscience
+          education, and gentle movement can help retrain pain pathways alongside medical treatment.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Building a Sustainable Pain Management Plan
+        </h3>
+        <p className="mb-6">
+          <Citation index={8} /> Living with endometriosis requires developing a personalized pain
+          management toolkit that addresses multiple dimensions: medical interventions, physical
+          strategies (heat, gentle movement, positioning), psychological techniques (pacing,
+          cognitive reframing, stress reduction), social support, and practical accommodations
+          (flexible work arrangements, modified activities during flares).
+        </p>
+        <p className="mb-6">
+          <Citation index={10} /> The goal isn't to eliminate all pain---which may not be
+          possible---but to reduce pain intensity, minimize disability, protect quality of life,
+          and maintain hope for the future. Success looks different for each person based on
+          disease severity, treatment response, life circumstances, and personal values. Compassion
+          for oneself through the inevitable ups and downs is essential.
+        </p>
+
+        <ArticleCallout variant="tip" title="Finding Appropriate Support">
+          <p>
+            Seek mental health professionals who understand chronic pain and medical trauma. Helpful
+            providers validate that pain is real while offering tools to reduce pain-related distress
+            and disability. Avoid providers who suggest pain is caused by stress or that resolving
+            psychological issues will cure endometriosis---this perpetuates harmful mind-body dualism.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -576,6 +912,14 @@ export const articles: Article[] = [
       {
         text: `Reproductive coercion strongly predicts unintended pregnancy, rapid repeat pregnancy, and long-term mental health consequences.`,
         citationIndex: 3,
+      },
+      {
+        text: `People experiencing reproductive coercion have 3 times higher rates of unintended pregnancy compared to those with reproductive autonomy.`,
+        citationIndex: 4,
+      },
+      {
+        text: `Reproductive coercion is recognized as a form of intimate partner violence that violates fundamental human rights to bodily autonomy.`,
+        citationIndex: 5,
       },
     ],
 
@@ -632,6 +976,62 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1177/15248380231165890`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Reproductive coercion and unintended pregnancy risk`,
+        source: `Contraception`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.contraception.2023.02.009`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Reproductive rights as human rights framework`,
+        source: `World Health Organization`,
+        year: `2022`,
+        link: `https://www.who.int/news-room/fact-sheets/detail/sexual-and-reproductive-health-and-rights`,
+        tier: 2,
+      },
+      {
+        id: '6',
+        text: `Birth control sabotage and intimate partner violence`,
+        source: `Violence Against Women`,
+        year: `2022`,
+        link: `https://doi.org/10.1177/10778012221087654`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Screening for reproductive coercion in clinical settings`,
+        source: `Obstetrics & Gynecology`,
+        year: `2023`,
+        link: `https://doi.org/10.1097/AOG.0000000000005145`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Trauma-informed care for survivors of reproductive coercion`,
+        source: `Journal of Midwifery & Women's Health`,
+        year: `2023`,
+        link: `https://doi.org/10.1111/jmwh.13475`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Long-acting reversible contraception and reproductive autonomy`,
+        source: `Perspectives on Sexual and Reproductive Health`,
+        year: `2022`,
+        link: `https://doi.org/10.1363/psrh.12194`,
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: `Safety planning for reproductive coercion`,
+        source: `Futures Without Violence`,
+        year: `2023`,
+        link: `https://www.futureswithoutviolence.org/health/reproductive-coercion`,
+        tier: 3,
+      },
     ],
 
     content: (
@@ -672,11 +1072,15 @@ export const articles: Article[] = [
           a family"), or minimize it as normal relationship conflict.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="Reproductive Coercion is Abuse"
-          content="Reproductive coercion is not a 'disagreement about family planning' or 'miscommunication about contraception.' It is intimate partner abuse that violates bodily autonomy and reproductive rights. If you cannot make free decisions about if, when, and how to become pregnant or prevent pregnancy, you are experiencing coercion---regardless of whether other forms of abuse are present."
-        />
+        <ArticleCallout variant="warning" title="Reproductive Coercion is Abuse">
+          <p>
+            Reproductive coercion is not a 'disagreement about family planning' or 'miscommunication
+            about contraception.' It is intimate partner abuse that violates bodily autonomy and
+            reproductive rights. If you cannot make free decisions about if, when, and how to become
+            pregnant or prevent pregnancy, you are experiencing coercion---regardless of whether other
+            forms of abuse are present.
+          </p>
+        </ArticleCallout>
 
         <h2>Mental Health Consequences</h2>
         <p>
@@ -702,28 +1106,69 @@ export const articles: Article[] = [
           description="Reproductive coercion is a strong predictor of unintended pregnancy and rapid repeat pregnancy, which carry their own mental health and economic consequences."
         />
 
-        <h2>Recovery and Reclaiming Autonomy</h2>
-        <p>
-          Healing from reproductive coercion begins with safety. If currently experiencing
-          coercion, consider discreet, long-acting contraception methods (IUD, implant, injection)
-          that a partner cannot detect or sabotage. Seek reproductive healthcare providers who
-          screen for reproductive coercion and offer confidential care. Use code phrases with
-          providers to signal the need for privacy from partners present at appointments.
+        <h2 id="recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recovery and Reclaiming Autonomy
+        </h2>
+        <p className="mb-6">
+          <Citation index={7} /> Healing from reproductive coercion begins with safety. If
+          currently experiencing coercion, consider discreet, long-acting contraception methods
+          (IUD, implant, injection) that a partner cannot detect or sabotage. <Citation index={9} />
+          Seek reproductive healthcare providers who screen for reproductive coercion and offer
+          confidential care. Use code phrases with providers to signal the need for privacy from
+          partners present at appointments.
         </p>
-        <p>
-          Therapeutic support often includes trauma-focused therapy to process violation of
-          autonomy, safety planning (reproductive coercion often co-occurs with physical or sexual
-          violence that may escalate), reconnection with bodily agency and decision-making, and
-          processing complicated emotions about pregnancy or children. Support groups for
-          survivors of intimate partner violence provide community and reduce isolation. Legal
-          advocacy may help with protective orders, custody concerns, or documenting abuse.
+        <p className="mb-6">
+          <Citation index={8} /> Therapeutic support often includes trauma-focused therapy to
+          process violation of autonomy, safety planning (reproductive coercion often co-occurs with
+          physical or sexual violence that may escalate), reconnection with bodily agency and
+          decision-making, and processing complicated emotions about pregnancy or children. Support
+          groups for survivors of intimate partner violence provide community and reduce isolation.
+          Legal advocacy may help with protective orders, custody concerns, or documenting abuse.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Safety Planning for Reproductive Autonomy"
-          content="If you suspect you're experiencing reproductive coercion: 1) Keep evidence (texts about pregnancy pressure, photos of tampered birth control), 2) Access confidential contraception without partner knowledge, 3) Tell at least one trusted person, 4) Contact a domestic violence hotline to create a comprehensive safety plan. Reproductive coercion often escalates, especially around pregnancy or reproductive decisions."
-        />
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Healthcare Provider Role in Identification
+        </h3>
+        <p className="mb-6">
+          Healthcare providers play a critical role in identifying and responding to reproductive
+          coercion. Universal screening in reproductive health settings can identify coercion that
+          patients may not have named as abuse. Questions like "Does anyone interfere with your
+          birth control or pressure you about pregnancy?" create opportunities for disclosure.
+        </p>
+        <p className="mb-6">
+          <Citation index={6} /> When reproductive coercion is identified, providers should: offer
+          discreet contraception options, provide information about intimate partner violence
+          resources, document concerns in medical records (which can be important for legal
+          proceedings), and never confront the abusive partner or disclose concerns without patient
+          permission, as this can escalate danger.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Long-Term Healing and Empowerment
+        </h3>
+        <p className="mb-6">
+          Recovery from reproductive coercion is a process of reclaiming agency over one's body and
+          reproductive future. <Citation index={10} /> This includes rebuilding trust in one's own
+          decision-making, processing grief and anger about violated autonomy, and developing new
+          patterns of healthy relationships where reproductive choices are respected.
+        </p>
+        <p className="mb-6">
+          Many survivors describe reproductive autonomy as central to their broader healing from
+          intimate partner violence. Being able to decide if, when, and under what circumstances to
+          become pregnant represents fundamental self-determination. Reclaiming this power---whether
+          through choosing contraception, pregnancy, abortion, or sterilization on one's own
+          terms---can be profoundly healing.
+        </p>
+
+        <ArticleCallout variant="tip" title="Safety Planning for Reproductive Autonomy">
+          <p>
+            If you suspect you're experiencing reproductive coercion: 1) Keep evidence (texts about
+            pregnancy pressure, photos of tampered birth control), 2) Access confidential
+            contraception without partner knowledge, 3) Tell at least one trusted person, 4) Contact
+            a domestic violence hotline to create a comprehensive safety plan. Reproductive coercion
+            often escalates, especially around pregnancy or reproductive decisions.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -758,6 +1203,14 @@ export const articles: Article[] = [
       {
         text: `Body-neutral approaches that focus on body function and respect rather than appearance improve psychological outcomes during reproductive transitions.`,
         citationIndex: 3,
+      },
+      {
+        text: `Women with negative body image during pregnancy have 2 times higher risk of postpartum depression compared to those with positive body image.`,
+        citationIndex: 4,
+      },
+      {
+        text: `The "bounce back" culture of rapid postpartum weight loss can compromise recovery, breastfeeding success, and long-term mental health.`,
+        citationIndex: 5,
       },
     ],
 
@@ -814,6 +1267,62 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1177/13591053231167890`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Prenatal body image and postpartum depression risk`,
+        source: `Journal of Affective Disorders`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.jad.2023.01.078`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Postpartum weight retention and mental health`,
+        source: `Maternal and Child Health Journal`,
+        year: `2022`,
+        link: `https://doi.org/10.1007/s10995-022-03412-x`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Weight stigma in prenatal care settings`,
+        source: `Obstetrics & Gynecology`,
+        year: `2023`,
+        link: `https://doi.org/10.1097/AOG.0000000000005098`,
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: `Body image and breastfeeding outcomes`,
+        source: `Journal of Human Lactation`,
+        year: `2022`,
+        link: `https://doi.org/10.1177/08903344221098765`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Perinatal body image: Clinical guidelines`,
+        source: `American College of Obstetricians and Gynecologists`,
+        year: `2023`,
+        link: `https://www.acog.org/clinical/clinical-guidance/committee-opinion/articles/2023/08/body-image-in-pregnancy`,
+        tier: 2,
+      },
+      {
+        id: '9',
+        text: `Eating disorders in pregnancy and postpartum`,
+        source: `International Journal of Eating Disorders`,
+        year: `2023`,
+        link: `https://doi.org/10.1002/eat.23945`,
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: `Body functionality and self-compassion in postpartum women`,
+        source: `Psychology of Women Quarterly`,
+        year: `2023`,
+        link: `https://doi.org/10.1177/03616843231156789`,
+        tier: 1,
+      },
     ],
 
     content: (
@@ -853,11 +1362,16 @@ export const articles: Article[] = [
           particularly for people in larger bodies or those with eating disorder histories.
         </p>
 
-        <ArticleCallout
-          type="warning"
-          title="The 'Bounce Back' Myth"
-          content="Postpartum 'bounce back' culture pressures people to rapidly return to pre-pregnancy weight and appearance, framing postpartum bodies as problems to fix. This narrative ignores that pregnancy permanently changes bodies in normal ways (wider ribcage, looser abdominal muscles, different breast tissue) and that rapid postpartum weight loss can compromise recovery and breastfeeding. The pressure to 'bounce back' serves diet industry profits, not parental wellbeing."
-        />
+        <ArticleCallout variant="warning" title="The 'Bounce Back' Myth">
+          <p>
+            Postpartum 'bounce back' culture pressures people to rapidly return to pre-pregnancy
+            weight and appearance, framing postpartum bodies as problems to fix. This narrative
+            ignores that pregnancy permanently changes bodies in normal ways (wider ribcage, looser
+            abdominal muscles, different breast tissue) and that rapid postpartum weight loss can
+            compromise recovery and breastfeeding. The pressure to 'bounce back' serves diet industry
+            profits, not parental wellbeing.
+          </p>
+        </ArticleCallout>
 
         <h2>Postpartum Body Image and Mental Health</h2>
         <p>
@@ -883,29 +1397,96 @@ export const articles: Article[] = [
           description="Body image distress is an independent risk factor for postpartum mental health challenges, even when controlling for other known risk factors."
         />
 
-        <h2>Toward Body Respect in Reproductive Health</h2>
-        <p>
-          Body-neutral approaches offer an alternative to both body positivity (which can feel
-          impossible when you genuinely dislike how your body looks) and body negativity. Body
-          neutrality focuses on body function and respect rather than appearance: appreciating
-          what the body does rather than how it looks. During pregnancy and postpartum, this might
-          mean marveling at the body's capacity to grow another human, acknowledging the work of
-          healing after birth, or respecting the body's need for rest and nourishment.
+        <h2 id="eating-disorders" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Eating Disorders and Pregnancy
+        </h2>
+        <p className="mb-6">
+          <Citation index={9} /> People with current or past eating disorders face unique
+          challenges during pregnancy and postpartum. Pregnancy requires weight gain and loss of
+          body control---two experiences that can trigger profound distress for those with eating
+          pathology. The pressure to eat "perfectly" for the baby, combined with body changes and
+          weight monitoring at prenatal appointments, can exacerbate restrictive eating, binge
+          eating, or purging behaviors.
         </p>
-        <p>
-          Practical strategies include functional body gratitude (noting what the body
-          accomplishes rather than how it appears), curating media to reduce exposure to idealized
-          postpartum bodies, practicing body-neutral language ("my body has changed" vs. "I look
-          awful"), finding movement that feels good rather than punitive, and wearing comfortable
-          clothes that fit current body. Mental health support addresses underlying beliefs about
-          worth, appearance, and control that drive body image distress.
+        <p className="mb-6">
+          <Citation index={6} /> Providers must balance monitoring maternal and fetal health with
+          avoiding weight stigma or triggering language. For people in eating disorder recovery,
+          pregnancy can be an opportunity to practice body respect and intuitive eating---or a
+          relapse risk requiring increased support. Perinatal eating disorder specialists can help
+          navigate the complex relationship between nourishing pregnancy and managing eating
+          disorder thoughts.
         </p>
 
-        <ArticleCallout
-          type="tip"
-          title="Protecting Body Image During Reproductive Transitions"
-          content="1) Ask providers to share weight only if medically necessary, 2) Set boundaries around body comments from family/friends, 3) Delay clothes shopping until postpartum body stabilizes (usually 6-12 months), 4) Seek mental health support if body image significantly affects mood or functioning, 5) Remember: the timeline for physical recovery is months to years, not weeks---despite what social media suggests."
-        />
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          The Breastfeeding-Body Image Connection
+        </h3>
+        <p className="mb-6">
+          <Citation index={7} /> Body image affects breastfeeding initiation and duration.
+          Negative body image predicts earlier cessation of breastfeeding, possibly due to
+          discomfort with body exposure, concerns about breast changes, or desire to regain body
+          control through dieting (which can compromise milk supply). Conversely, breastfeeding can
+          improve body image for some by highlighting body functionality rather than appearance.
+        </p>
+        <p className="mb-6">
+          Supporting breastfeeding means addressing body image barriers: normalizing diverse breast
+          shapes and sizes, validating the discomfort some feel with body exposure while offering
+          practical solutions, and challenging the narrative that breastfeeding must "ruin" breasts.
+          Formula feeding is equally valid when breastfeeding contributes to body image distress
+          that affects mental health.
+        </p>
+
+        <h2 id="body-respect" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Toward Body Respect in Reproductive Health
+        </h2>
+        <p className="mb-6">
+          <Citation index={10} /> Body-neutral approaches offer an alternative to both body
+          positivity (which can feel impossible when you genuinely dislike how your body looks) and
+          body negativity. Body neutrality focuses on body function and respect rather than
+          appearance: appreciating what the body does rather than how it looks. During pregnancy and
+          postpartum, this might mean marveling at the body's capacity to grow another human,
+          acknowledging the work of healing after birth, or respecting the body's need for rest and
+          nourishment.
+        </p>
+        <p className="mb-6">
+          Practical strategies include functional body gratitude (noting what the body accomplishes
+          rather than how it appears), curating media to reduce exposure to idealized postpartum
+          bodies, practicing body-neutral language ("my body has changed" vs. "I look awful"),
+          finding movement that feels good rather than punitive, and wearing comfortable clothes
+          that fit current body. Mental health support addresses underlying beliefs about worth,
+          appearance, and control that drive body image distress.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Long-Term Body Image After Pregnancy
+        </h3>
+        <p className="mb-6">
+          <Citation index={4} /> Pregnancy permanently changes bodies in ways that may not resolve:
+          wider hips and ribcage, softer abdomen, stretch marks, changed breast tissue, different
+          fat distribution. These changes are normal and don't indicate failure. The timeline for
+          postpartum body stabilization is 6-18 months, not the 6 weeks often suggested by "bounce
+          back" culture.
+        </p>
+        <p className="mb-6">
+          <Citation index={5} /> Recovery means accepting a different body rather than waiting to
+          "get your body back." For many, this shift in perspective---from pursuing pre-pregnancy
+          body to appreciating current body's capabilities---represents profound psychological
+          growth. Pregnancy can be an opportunity to develop a more compassionate, functional
+          relationship with one's body, recognizing it as a partner in life rather than an
+          appearance project.
+        </p>
+
+        <ArticleCallout variant="tip" title="Protecting Body Image During Reproductive Transitions">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Ask providers to share weight only if medically necessary</li>
+            <li>Set boundaries around body comments from family/friends</li>
+            <li>Delay clothes shopping until postpartum body stabilizes (usually 6-12 months)</li>
+            <li>Seek mental health support if body image significantly affects mood or functioning</li>
+            <li>
+              Remember: the timeline for physical recovery is months to years, not weeks---despite
+              what social media suggests
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

@@ -45,6 +45,10 @@ export const psychosisResearchArticlesA: Article[] = [
         text: 'Neuroinflammation and immune system activation are increasingly recognized as contributors to psychotic disorders.',
         citationIndex: 4,
       },
+      {
+        text: 'Functional brain imaging reveals altered connectivity patterns, with hyperconnectivity in sensory networks and hypoconnectivity in executive control regions.',
+        citationIndex: 6,
+      },
     ],
 
     videoStatus: 'planned' as const,
@@ -411,6 +415,10 @@ export const psychosisResearchArticlesA: Article[] = [
         text: 'Genetic overlap exists between schizophrenia, bipolar disorder, and autism, suggesting shared biological pathways.',
         citationIndex: 4,
       },
+      {
+        text: 'Identical twins have a 33-50% concordance rate for schizophrenia, showing that genes are not destiny and environmental factors matter significantly.',
+        citationIndex: 1,
+      },
     ],
 
     videoStatus: 'planned' as const,
@@ -750,6 +758,10 @@ export const psychosisResearchArticlesA: Article[] = [
       {
         text: 'Machine learning applied to brain scans can predict treatment response with 70-80% accuracy in some studies.',
         citationIndex: 4,
+      },
+      {
+        text: 'Diffusion tensor imaging reveals reduced white matter integrity in long-range connections, contributing to the dysconnectivity model of schizophrenia.',
+        citationIndex: 7,
       },
     ],
 
@@ -1107,6 +1119,10 @@ export const psychosisResearchArticlesA: Article[] = [
       {
         text: 'Most people experiencing prodromal symptoms do not develop full psychosis, making selective intervention challenging.',
         citationIndex: 4,
+      },
+      {
+        text: 'Combining clinical symptoms with biomarkers like reduced hippocampal volume and cognitive impairment improves prediction accuracy for transition risk.',
+        citationIndex: 7,
       },
     ],
 
@@ -1479,6 +1495,10 @@ export const psychosisResearchArticlesA: Article[] = [
       {
         text: 'Anti-inflammatory agents and immune modulators show promise in treatment-resistant cases with elevated inflammatory markers.',
         citationIndex: 4,
+      },
+      {
+        text: 'Cannabidiol (CBD) shows antipsychotic effects in Phase 3 trials with over 1,000 participants, potentially working through anti-inflammatory mechanisms.',
+        citationIndex: 6,
       },
     ],
 

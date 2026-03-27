@@ -2998,43 +2998,529 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6">If someone is experiencing suicidal thoughts or is in immediate danger, call 988 (Suicide and Crisis Lifeline) or go to the nearest emergency room. The combination of depression and psychosis significantly elevates suicide risk and requires immediate intervention.</p>
   </> },
 
-  { id: catId(73), slug: 'understanding-psychosis', title: 'What Psychosis Actually Is: Symptoms, Causes, and Treatment', description: 'Psychosis is loss of contact with reality. It occurs in multiple conditions and is treatable.', image: "/images/articles/cat13/cover-073.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Psychosis', 'Hallucinations', 'Delusions'], citations: [
-    { id: '1', text: 'Understanding Psychosis', source: 'NIMH', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/schizophrenia/raise/understanding-psychosis', tier: 2 },
-    { id: '2', text: 'First-Episode Psychosis', source: 'Schizophrenia Bulletin', year: '2020', link: 'https://doi.org/10.1093/schbul/sbaa056', tier: 1 },
-  ], content: <>
+  { id: catId(73), slug: 'understanding-psychosis', title: 'What Psychosis Actually Is: Symptoms, Causes, and Treatment', description: 'Psychosis is loss of contact with reality. It occurs in multiple conditions and is treatable.', image: "/images/articles/cat13/cover-073.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['Psychosis', 'Hallucinations', 'Delusions'],
+    summary: 'Psychosis is not a diagnosis but a symptom—a loss of contact with reality through hallucinations, delusions, and disorganized thinking. It occurs in numerous conditions ranging from schizophrenia to medical illnesses. Approximately 3% of people experience psychosis at some point in their lives. Early intervention dramatically improves outcomes, and with proper treatment, many people recover fully.',
+    keyFacts: [
+      { text: 'Approximately 3 in 100 people will experience psychosis at some point in their lives', citationIndex: 1 },
+      { text: 'Psychosis has many possible causes, including schizophrenia, bipolar disorder, depression, substance use, and medical conditions', citationIndex: 2 },
+      { text: 'Early intervention within the first episode of psychosis reduces symptom duration by up to 50%', citationIndex: 3 },
+      { text: 'Shorter duration of untreated psychosis strongly predicts better long-term outcomes', citationIndex: 4 },
+      { text: 'Cannabis use, especially high-potency strains, significantly increases risk of psychosis in vulnerable individuals', citationIndex: 6 },
+    ],
+    sparkMoment: 'Psychosis is not permanent insanity—it\'s a treatable symptom with identifiable causes, and early intervention can prevent long-term disability.',
+    practicalExercise: {
+      title: 'Reality Testing and Grounding Techniques',
+      steps: [
+        { title: 'Identify Safe Support Person', description: 'Choose a trusted person who can help you reality-test when you\'re uncertain whether an experience is real. Discuss in advance how they can help.' },
+        { title: 'Practice Grounding During Calm', description: 'Learn grounding techniques when not distressed: name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. This anchors you in present reality.' },
+        { title: 'Create Coping Card', description: 'Write down: "If I\'m experiencing unusual thoughts/perceptions: 1) Contact [support person], 2) Use grounding technique, 3) If distressing, call crisis line 988."' },
+        { title: 'Track Patterns and Triggers', description: 'Note when unusual experiences occur, what preceded them (stress, substance use, sleep loss), and what helped. Share patterns with your treatment team.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
+    citations: [
+      { id: '1', text: 'Lifetime Prevalence of Psychotic Experiences', source: 'JAMA Psychiatry', year: '2019', link: 'https://doi.org/10.1001/jamapsychiatry.2019.1506', tier: 1 },
+      { id: '2', text: 'Understanding Psychosis and Schizophrenia', source: 'NIMH', year: '2023', link: 'https://www.nimh.nih.gov/health/topics/schizophrenia/raise/understanding-psychosis', tier: 2 },
+      { id: '3', text: 'First-Episode Psychosis Treatment Outcomes', source: 'Schizophrenia Bulletin', year: '2020', link: 'https://doi.org/10.1093/schbul/sbaa056', tier: 1 },
+      { id: '4', text: 'Duration of Untreated Psychosis and Outcomes', source: 'British Journal of Psychiatry', year: '2020', link: 'https://doi.org/10.1192/bjp.2020.91', tier: 1 },
+      { id: '5', text: 'Medical Causes of Psychosis', source: 'American Family Physician', year: '2019', link: 'https://www.aafp.org/pubs/afp/issues/2019/0201/p159.html', tier: 4 },
+      { id: '6', text: 'Cannabis and Psychosis Risk', source: 'Lancet Psychiatry', year: '2019', link: 'https://doi.org/10.1016/S2215-0366(19)30048-3', tier: 1 },
+      { id: '7', text: 'Antipsychotic Medication for First-Episode Psychosis', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20081243', tier: 1 },
+      { id: '8', text: 'Coordinated Specialty Care for First-Episode Psychosis', source: 'Psychiatric Services', year: '2020', link: 'https://doi.org/10.1176/appi.ps.201900324', tier: 1 },
+    ],
+    content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Psychosis is a symptom, not a diagnosis—it means loss of contact with reality <Citation id="1" index={1} source="NIMH" year="2023" tier={2} />. Core features: hallucinations (sensing things that aren't there—most commonly auditory/voices, but can be visual, tactile, olfactory), delusions (firmly held false beliefs resistant to contrary evidence), and sometimes disorganized thinking/speech. Psychosis occurs in multiple conditions: schizophrenia, schizoaffective disorder, bipolar disorder with psychotic features, major depression with psychotic features, brief psychotic disorder, substance-induced psychosis, medical conditions (brain tumors, autoimmune encephalitis, severe infections). Approximately 3% experience psychosis at some point in their lives.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Psychosis is one of the most misunderstood experiences in mental health. The word conjures images of violent, unpredictable behavior—far from reality for most people experiencing it. Psychosis simply means a loss of contact with reality. It's a symptom, not a diagnosis—like fever is a symptom that can result from many different illnesses <Citation id="2" index={1} source="NIMH" year="2023" tier={2} />. Approximately 3 in 100 people will experience psychosis at some point in their lives <Citation id="1" index={2} source="JAMA Psychiatry" year="2019" tier={1} />. Understanding what psychosis actually is, what causes it, and how it's treated can reduce fear and stigma—and encourage earlier help-seeking, which dramatically improves outcomes.</p>
+      <p className="mb-6">Psychosis manifests through three core features: hallucinations (perceiving things that aren't there), delusions (firmly held false beliefs resistant to contrary evidence), and sometimes disorganized thinking or speech. These experiences feel completely real to the person experiencing them. Hearing a voice isn't like imagining a sound—it's indistinguishable from an actual voice. A delusion isn't a hunch or suspicion—it's absolute certainty about something false. This is why psychosis is so distressing and why simple reassurance doesn't help.</p>
     </div>
-    <h2 id="early-warning" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Early Warning Signs</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Prodromal phase (before full psychosis): social withdrawal, deteriorating functioning at work/school, unusual thoughts/perceptions, increased suspiciousness, sleep disturbances, difficulty concentrating, mood changes. First-episode psychosis often follows prodromal period lasting months to years. Early intervention during first episode dramatically improves outcomes <Citation id="2" index={2} source="Schizophrenia Bulletin" year="2020" tier={1} />. Duration of untreated psychosis predicts prognosis—shorter better.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Varies by Cause</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Medical workup essential to rule out treatable causes (thyroid problems, infections, tumors, substance use). Antipsychotic medications effective for psychosis regardless of cause. Addressing underlying condition (mood stabilizers for bipolar, treating medical condition). Specialized first-episode psychosis programs provide comprehensive care: medication, therapy, family support, education/employment assistance. Many recover fully, especially with early treatment. Substance-induced psychosis often resolves with abstinence. Psychosis is frightening but treatable.</p>
+
+    <StatCard
+      stats={[
+        { value: 3, suffix: '%', label: 'Lifetime risk of experiencing psychosis' },
+        { value: 50, suffix: '%', label: 'Reduction in symptom duration with early intervention' },
+        { value: 70, prefix: '>', suffix: '%', label: 'Response rate to antipsychotic medication' },
+      ]}
+      source="JAMA Psychiatry, 2019; Schizophrenia Bulletin, 2020"
+    />
+
+    <h2 id="what-psychosis-looks-like" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Psychosis Actually Looks Like</h2>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Hallucinations</h3>
+    <p className="mb-6">Perceiving things through any of the five senses that aren't actually present. <strong>Auditory hallucinations</strong> (hearing voices or sounds) are most common. Voices may comment on the person's actions, argue with each other, or give commands. They can be threatening, comforting, neutral, or conversational. <strong>Visual hallucinations</strong> (seeing things) occur less frequently but include seeing people, objects, or distortions of reality. <strong>Tactile hallucinations</strong> involve feeling sensations like bugs crawling on skin. <strong>Olfactory and gustatory hallucinations</strong> (smell and taste) are less common but occur in some conditions.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Delusions</h3>
+    <p className="mb-6">Fixed false beliefs maintained despite clear contradictory evidence. Common types include:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Persecutory delusions:</strong> Belief that others are plotting against you, monitoring you, or trying to harm you. Most common type.</li>
+      <li><strong>Grandiose delusions:</strong> Exaggerated belief in one's power, knowledge, or importance (believing you're a famous person, have special powers, or have made major discoveries).</li>
+      <li><strong>Referential delusions:</strong> Believing that random events, objects, or other people's actions have special personal meaning directed at you (TV shows are sending you secret messages, strangers' conversations are about you).</li>
+      <li><strong>Control delusions:</strong> Feeling that thoughts or actions are controlled by external forces (mind control, alien implants, government devices).</li>
+      <li><strong>Somatic delusions:</strong> False beliefs about the body (internal organs not functioning, infested with parasites, body changing in impossible ways).</li>
+    </ul>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Disorganized Thinking</h3>
+    <p className="mb-6">Difficulty organizing thoughts or making logical connections. Speech may jump between unrelated topics, create new nonsense words, or become incomprehensible. Conversations become hard to follow. This is less dramatic than hallucinations or delusions but significantly impairs communication and functioning.</p>
+
+    <HighlightBox variant="emphasis">
+      <p><strong>Important distinction:</strong> Psychosis exists on a spectrum. Brief, isolated psychotic experiences (like hearing your name called when alone) are relatively common and don't necessarily indicate serious mental illness. Clinical psychosis involves persistent or recurring experiences that cause distress and impair functioning.</p>
+    </HighlightBox>
+
+    <h2 id="what-causes-psychosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Many Causes of Psychosis</h2>
+    <p className="mb-6">Psychosis isn't a single condition—it's a symptom with numerous possible causes <Citation id="5" index={3} source="American Family Physician" year="2019" tier={4} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Primary psychotic disorders:</strong> Schizophrenia, schizoaffective disorder, delusional disorder, brief psychotic disorder</li>
+      <li><strong>Mood disorders with psychotic features:</strong> Bipolar disorder (during manic or depressive episodes), major depression with psychotic features</li>
+      <li><strong>Substance-induced psychosis:</strong> Stimulants (methamphetamine, cocaine), hallucinogens (LSD, psilocybin), cannabis (especially high-potency strains), alcohol withdrawal, synthetic cannabinoids (K2/Spice). Cannabis use increases psychosis risk 2-5 fold, with higher risk from high-THC products <Citation id="6" index={4} source="Lancet Psychiatry" year="2019" tier={1} /></li>
+      <li><strong>Medical conditions:</strong> Brain tumors, autoimmune encephalitis, temporal lobe epilepsy, Parkinson's disease, Alzheimer's disease, HIV/AIDS, neurosyphilis, severe infections, thyroid disorders, vitamin deficiencies (B12, thiamine)</li>
+      <li><strong>Medication side effects:</strong> Corticosteroids, certain antibiotics, stimulant medications, anti-Parkinson's drugs</li>
+      <li><strong>Sleep deprivation:</strong> Severe prolonged sleep loss can trigger psychotic symptoms</li>
+    </ul>
+
+    <p className="mb-6">This is why comprehensive medical evaluation is essential when someone experiences psychosis for the first time. Treating the underlying cause (stopping a medication, treating an infection, addressing a thyroid problem) may resolve psychosis completely.</p>
+
+    <h2 id="early-warning-signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Recognizing Early Warning Signs</h2>
+    <p className="mb-6">Psychosis rarely appears suddenly. Most people experience a prodromal phase—weeks to months (sometimes years) of subtle changes before full psychosis emerges:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Social withdrawal and isolation</li>
+      <li>Deteriorating performance at work or school</li>
+      <li>Unusual thoughts, perceptions, or suspiciousness</li>
+      <li>Difficulty concentrating or communicating</li>
+      <li>Significant changes in sleep patterns</li>
+      <li>Flattened or inappropriate emotions</li>
+      <li>Loss of interest in activities once enjoyed</li>
+      <li>Declining self-care and personal hygiene</li>
+    </ul>
+    <p className="mb-6">Recognizing these signs and seeking evaluation early—before full psychosis develops—can sometimes prevent progression. Even after first-episode psychosis, early intervention dramatically improves outcomes <Citation id="3" index={5} source="Schizophrenia Bulletin" year="2020" tier={1} />.</p>
+
+    <QuoteBlock
+      quote="The most important predictor of recovery from first-episode psychosis is how quickly treatment begins. Every week of delay worsens long-term outcomes."
+      attribution="Dr. Lisa Dixon"
+      role="Professor of Psychiatry, Columbia University"
+      source="Schizophrenia Bulletin, 2020"
+      variant="default"
+    />
+
+    <h2 id="treatment-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Psychosis Is Treated</h2>
+    <p className="mb-6">Treatment depends on the underlying cause but generally includes medication and psychosocial support.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Medical Workup</h3>
+    <p className="mb-6">First-time psychosis requires thorough evaluation to rule out medical causes: complete blood count, metabolic panel, thyroid function, vitamin levels, toxicology screen, sometimes brain imaging (MRI or CT) or EEG. Treating medical causes can resolve psychosis without psychiatric medication.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Antipsychotic Medication</h3>
+    <p className="mb-6">Antipsychotics reduce psychotic symptoms regardless of underlying cause, typically reducing hallucinations and delusions in 70-80% of people <Citation id="7" index={6} source="AJP" year="2021" tier={1} />. Second-generation antipsychotics (risperidone, olanzapine, quetiapine, aripiprazole) are usually preferred due to fewer movement side effects than older medications. Medication is often started at low doses and increased gradually to find the lowest effective dose.</p>
+    <p className="mb-6">Common side effects include sedation, weight gain, metabolic changes, and sometimes movement problems. Finding the right medication with tolerable side effects often requires trial and adjustment. For substance-induced psychosis, psychosis often resolves with abstinence, though short-term antipsychotic medication may be used during acute episodes.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Coordinated Specialty Care</h3>
+    <p className="mb-6">For first-episode psychosis, specialized programs called Coordinated Specialty Care (CSC) provide comprehensive treatment <Citation id="8" index={7} source="Psychiatric Services" year="2020" tier={1} />:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Medication management:</strong> Careful titration and monitoring by psychiatrist</li>
+      <li><strong>Individual therapy:</strong> CBT for psychosis, supportive counseling</li>
+      <li><strong>Family education and support:</strong> Helping families understand and cope</li>
+      <li><strong>Supported employment/education:</strong> Help returning to work or school</li>
+      <li><strong>Case management:</strong> Coordinating care and connecting to resources</li>
+      <li><strong>Peer support:</strong> Connection with others who've experienced psychosis</li>
+    </ul>
+    <p className="mb-6">Research shows CSC programs significantly improve outcomes compared to standard care: better symptom control, higher employment rates, improved quality of life, and greater engagement in treatment <Citation id="8" index={8} source="Psychiatric Services" year="2020" tier={1} />.</p>
+
+    <h2 id="prognosis-and-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Can People Recover from Psychosis?</h2>
+    <p className="mb-6">Yes—and outcomes have improved dramatically with modern treatment approaches. Recovery depends on the underlying cause:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Substance-induced psychosis:</strong> Often resolves completely with abstinence</li>
+      <li><strong>Medical causes:</strong> Resolves when underlying condition is treated</li>
+      <li><strong>Brief psychotic disorder:</strong> By definition resolves within one month</li>
+      <li><strong>First-episode psychosis (later diagnosed as schizophrenia):</strong> 20-30% achieve full recovery with early, comprehensive treatment</li>
+    </ul>
+    <p className="mb-6">The single most important predictor of outcome is <strong>duration of untreated psychosis</strong> (DUP)—the time between onset of psychotic symptoms and start of treatment <Citation id="4" index={9} source="British Journal of Psychiatry" year="2020" tier={1} />. Shorter DUP correlates with better symptom control, improved functioning, and higher quality of life. This is why early recognition and rapid intervention are crucial.</p>
+
+    <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Help</h2>
+    <p className="mb-6">Seek psychiatric evaluation immediately if you or someone you know experiences:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Hearing voices or seeing things others don't</li>
+      <li>Strongly held beliefs that others find bizarre or implausible</li>
+      <li>Significant confusion or disorganized thinking</li>
+      <li>Believing you're being monitored, controlled, or persecuted</li>
+      <li>Major decline in functioning (work, school, self-care)</li>
+    </ul>
+    <p className="mb-6">If someone is in immediate danger due to psychotic symptoms (suicidal thoughts, dangerous delusions, severe disorganization), call 988 (Suicide and Crisis Lifeline) or go to the nearest emergency room. Early intervention saves lives and prevents long-term disability.</p>
   </> },
 
-  { id: catId(74), slug: 'narcissistic-personality-disorder', title: 'Narcissistic Personality Disorder: Grandiosity Masking Fragile Self-Esteem', description: 'NPD involves grandiosity, need for admiration, and lack of empathy.', image: "/images/articles/cat13/cover-074.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 11, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['NPD', 'Personality Disorders'], citations: [
-    { id: '1', text: 'Narcissistic Personality Disorder', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'NPD Treatment', source: 'Journal of Personality Disorders', year: '2020', link: 'https://doi.org/10.1521/pedi_2020_34_462', tier: 1 },
-  ], content: <>
+  { id: catId(74), slug: 'narcissistic-personality-disorder', title: 'Narcissistic Personality Disorder: Grandiosity Masking Fragile Self-Esteem', description: 'NPD involves grandiosity, need for admiration, and lack of empathy.', image: "/images/articles/cat13/cover-074.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['NPD', 'Personality Disorders'],
+    summary: 'Narcissistic Personality Disorder (NPD) is characterized by a pervasive pattern of grandiosity, need for admiration, and lack of empathy. Affecting 0.5-5% of the population, NPD causes significant relationship difficulties and functional impairment. Beneath the grandiose exterior often lies profound vulnerability and fragile self-esteem. While treatment is challenging due to limited insight, specialized psychotherapy can help people develop more adaptive functioning.',
+    keyFacts: [
+      { text: 'NPD affects 0.5-5% of the general population and is more common in males', citationIndex: 1 },
+      { text: 'People with NPD rarely seek treatment voluntarily; they typically enter therapy due to depression, anxiety, or relationship/career consequences', citationIndex: 3 },
+      { text: 'The grandiose exterior of NPD often masks profound vulnerability and hypersensitivity to criticism', citationIndex: 4 },
+      { text: 'NPD frequently co-occurs with other mental health conditions including depression, anxiety, substance use, and other personality disorders', citationIndex: 6 },
+      { text: 'Long-term psychodynamic or schema-focused therapy shows promise, though treatment dropout rates are high', citationIndex: 7 },
+    ],
+    sparkMoment: 'Narcissistic personality disorder is not simply selfishness or arrogance—it\'s a deeply ingrained defensive structure protecting against feelings of inadequacy that the person cannot consciously acknowledge.',
+    practicalExercise: {
+      title: 'Building Genuine Self-Worth (For People with NPD)',
+      steps: [
+        { title: 'Notice Defensive Reactions', description: 'When criticized or ignored, pause and identify your automatic defensive response (dismissing the person, making excuses, counter-attacking). Simply noticing this pattern is the first step.' },
+        { title: 'Practice Vulnerability in Small Doses', description: 'Share one genuine limitation or mistake with a trusted person. Notice the urge to minimize it or deflect, then resist that urge.' },
+        { title: 'Recognize Others\' Perspectives', description: 'When someone expresses hurt or frustration with you, try to reflect their experience back to them before defending yourself: "It sounds like you felt dismissed when I..."' },
+        { title: 'Journal About Authentic Feelings', description: 'Write privately about moments when you feel inadequate, envious, or ashamed—the feelings underneath the grandiosity. You don\'t have to share these, just acknowledge them to yourself.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Patterns',
+    },
+    citations: [
+      { id: '1', text: 'Prevalence of Narcissistic Personality Disorder', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20030339', tier: 1 },
+      { id: '2', text: 'Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision', source: 'American Psychiatric Association', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+      { id: '3', text: 'Treatment-Seeking in Narcissistic Personality Disorder', source: 'Personality Disorders: Theory, Research, and Treatment', year: '2020', link: 'https://doi.org/10.1037/per0000412', tier: 1 },
+      { id: '4', text: 'Narcissistic Vulnerability and Grandiosity', source: 'Journal of Personality Disorders', year: '2019', link: 'https://doi.org/10.1521/pedi_2019_33_405', tier: 1 },
+      { id: '5', text: 'Interpersonal Functioning in NPD', source: 'Journal of Abnormal Psychology', year: '2020', link: 'https://doi.org/10.1037/abn0000576', tier: 1 },
+      { id: '6', text: 'Comorbidity Patterns in Narcissistic Personality Disorder', source: 'Comprehensive Psychiatry', year: '2021', link: 'https://doi.org/10.1016/j.comppsych.2021.152254', tier: 1 },
+      { id: '7', text: 'Psychotherapy for Narcissistic Personality Disorder', source: 'Journal of Personality Disorders', year: '2020', link: 'https://doi.org/10.1521/pedi_2020_34_462', tier: 1 },
+      { id: '8', text: 'Schema Therapy for Personality Disorders', source: 'Behaviour Research and Therapy', year: '2020', link: 'https://doi.org/10.1016/j.brat.2019.103486', tier: 1 },
+      { id: '9', text: 'Mentalization-Based Treatment for Personality Disorders', source: 'American Journal of Psychotherapy', year: '2019', link: 'https://doi.org/10.1176/appi.psychotherapy.20190040', tier: 1 },
+      { id: '10', text: 'Neurobiological Correlates of NPD', source: 'Biological Psychiatry: Cognitive Neuroscience and Neuroimaging', year: '2020', link: 'https://doi.org/10.1016/j.bpsc.2019.12.008', tier: 1 },
+    ],
+    content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Narcissistic personality disorder (NPD) is characterized by pervasive grandiosity, need for admiration, and lack of empathy beginning by early adulthood <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Prevalence: 0.5-5% of general population; more common in males. Person has inflated sense of self-importance, preoccupation with fantasies of unlimited success/power/beauty, belief they're "special" and should only associate with high-status people. Requires excessive admiration, sense of entitlement, interpersonally exploitative, lacks empathy, often envious or believes others are envious of them, arrogant behaviors. Behind grandiose facade often lies fragile self-esteem vulnerable to criticism.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Everyone has encountered someone who seems self-absorbed, craves attention, and lacks empathy—but narcissistic personality disorder goes far beyond occasional selfishness. NPD is a pervasive, longstanding pattern of grandiosity, need for admiration, and lack of empathy that begins by early adulthood and causes significant impairment in relationships, work, and overall functioning <Citation id="2" index={1} source="DSM-5-TR" year="2022" tier={4} />. Affecting 0.5-5% of the general population and diagnosed more frequently in males, NPD is one of the most challenging personality disorders to treat—partly because people with NPD rarely recognize they have a problem <Citation id="1" index={2} source="AJP" year="2021" tier={1} />.</p>
+      <p className="mb-6">The term "narcissistic" comes from the Greek myth of Narcissus, who fell in love with his own reflection. But clinical narcissism is more complex than simple vanity or self-love. Beneath the grandiose exterior—the boasting, arrogance, and sense of superiority—often lies profound vulnerability: hypersensitivity to criticism, fear of inadequacy, and dependence on external validation for self-worth <Citation id="4" index={3} source="Journal of Personality Disorders" year="2019" tier={1} />. The grandiosity is a defensive structure protecting against feelings of worthlessness that the person cannot consciously acknowledge.</p>
     </div>
-    <h2 id="impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Relationship Patterns</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">NPD severely impacts relationships. Partners/family describe feeling devalued, manipulated, criticized. Person with NPD may idealize others initially (when they provide admiration) then devalue when they fail to meet unrealistic expectations. Difficulty maintaining long-term relationships once honeymoon phase ends. Workplace conflicts common—can't tolerate criticism, takes credit for others' work, lacks teamwork. Rarely seeks treatment; more often partners/family members seek therapy to cope with the relationship. When NPD individuals enter treatment, usually due to depression, anxiety, or consequences of their behavior (divorce, job loss).</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Therapeutic Approaches</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Treatment challenging due to lack of insight and resistance to change. Psychotherapy (long-term psychodynamic or schema-focused therapy) helps explore underlying vulnerabilities driving grandiosity <Citation id="2" index={2} source="JPD" year="2020" tier={1} />. Goals: developing genuine self-esteem (not dependent on external validation), increasing empathy, managing reactions to criticism, improving relationship functioning. No medications specifically for NPD, though antidepressants/mood stabilizers may help comorbid conditions. Therapy requires skilled clinician who can balance validation with gentle confrontation. Change is possible but requires sustained effort.</p>
+
+    <StatCard
+      stats={[
+        { value: 1, suffix: '-5%', label: 'Prevalence in general population' },
+        { value: 75, suffix: '%', label: 'Male gender distribution' },
+        { value: 50, prefix: '>', suffix: '%', label: 'Have co-occurring depression or anxiety' },
+      ]}
+      source="American Journal of Psychiatry, 2021; Comprehensive Psychiatry, 2021"
+    />
+
+    <h2 id="core-features" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Core Features of NPD</h2>
+    <p className="mb-6">NPD involves a pervasive pattern including at least five of the following characteristics <Citation id="2" index={4} source="DSM-5-TR" year="2022" tier={4} />:</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'Grandiose Sense of Self-Importance',
+          content: <p>Exaggerates achievements and talents, expects to be recognized as superior without commensurate accomplishments. May claim expertise they don't have, inflate their role in successes, or minimize others' contributions. Believes ordinary rules don't apply to them.</p>
+        },
+        {
+          title: 'Preoccupation with Fantasies of Unlimited Success, Power, Beauty, or Ideal Love',
+          content: <p>Spends significant mental energy imagining scenarios of exceptional achievement, perfect romance, or universal admiration. These fantasies serve to maintain grandiose self-image but interfere with engaging realistically with actual opportunities and relationships.</p>
+        },
+        {
+          title: 'Belief in Being "Special" and Unique',
+          content: <p>Feels they should only associate with other high-status people, institutions, or organizations. Devalues "ordinary" people as beneath them. May seek exclusive affiliations not for genuine connection but to bolster their image. Name-drops constantly to establish status.</p>
+        },
+        {
+          title: 'Requires Excessive Admiration',
+          content: <p>Needs constant praise and validation to maintain self-esteem. Conversations often steer back to their accomplishments. Becomes deflated, angry, or withdrawn when admiration isn't forthcoming. Fishing for compliments is common.</p>
+        },
+        {
+          title: 'Sense of Entitlement',
+          content: <p>Unreasonable expectations of especially favorable treatment or automatic compliance with their wishes. Expects to skip lines, receive special accommodations, or have rules bent for them. Outraged when treated like everyone else.</p>
+        },
+        {
+          title: 'Interpersonally Exploitative',
+          content: <p>Takes advantage of others to achieve their own ends without guilt or remorse. Uses people as tools for ego gratification, career advancement, or material gain. Relationships are transactional—people are valued for what they can provide.</p>
+        },
+        {
+          title: 'Lacks Empathy',
+          content: <p>Unable or unwilling to recognize and identify with others' feelings and needs. May intellectually understand that others have feelings but remains emotionally disconnected. Dismisses others' pain as weakness or attention-seeking. Rarely offers genuine emotional support.</p>
+        },
+        {
+          title: 'Often Envious or Believes Others Envy Them',
+          content: <p>Resentful of others' success, which threatens their sense of superiority. Alternatively, assumes others envy them and may misinterpret neutral or negative reactions as jealousy. Can't genuinely celebrate others' accomplishments.</p>
+        },
+        {
+          title: 'Arrogant, Haughty Behaviors or Attitudes',
+          content: <p>Condescending tone, dismissive body language, contemptuous facial expressions. Makes others feel small or stupid. Openly derides those they see as inferior. Maintains an air of superiority even when objectively wrong.</p>
+        },
+      ]}
+    />
+
+    <h2 id="two-presentations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Grandiose vs. Vulnerable Narcissism</h2>
+    <p className="mb-6">Research has identified two somewhat distinct presentations of narcissism, though they often coexist <Citation id="4" index={5} source="Journal of Personality Disorders" year="2019" tier={1} />:</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Grandiose Narcissism</h3>
+    <p className="mb-6">Overt, confident, attention-seeking. High on extraversion and assertiveness. Openly boastful, domineering in social situations, comfortable being the center of attention. More often seen in professional settings where confidence and self-promotion are rewarded. This is the stereotypical image of narcissism—the person who dominates conversations with stories of their accomplishments.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Vulnerable (Covert) Narcissism</h3>
+    <p className="mb-6">Defensive, hypersensitive, insecure. High on neuroticism and shame-proneness. May appear shy or modest but harbors same grandiose fantasies and sense of entitlement. Reacts to perceived slights with withdrawal, passive-aggression, or victimhood. Presents as wounded or misunderstood rather than openly arrogant. The grandiosity is hidden but still drives behavior—they believe they deserve special treatment but feel perpetually wronged by a world that doesn't recognize their specialness.</p>
+
+    <h2 id="relationship-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Devastating Impact on Relationships</h2>
+    <p className="mb-6">NPD causes profound relationship dysfunction <Citation id="5" index={6} source="Journal of Abnormal Psychology" year="2020" tier={1} />. Partners, family members, and friends describe feeling:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Devalued and dismissed:</strong> Their feelings, needs, and accomplishments are minimized or ignored. They exist to serve the narcissistic person's ego needs.</li>
+      <li><strong>Manipulated and exploited:</strong> Used for status, resources, or emotional regulation without reciprocal care or consideration.</li>
+      <li><strong>Constantly criticized:</strong> Nitpicked and blamed for everything while the narcissistic person accepts no responsibility for problems.</li>
+      <li><strong>Walking on eggshells:</strong> Must carefully manage their words and behaviors to avoid narcissistic rage triggered by criticism or perceived disrespect.</li>
+      <li><strong>Confused by idealization-devaluation cycles:</strong> Initially placed on a pedestal (when providing maximum admiration), then abruptly discarded when they fail to meet unrealistic expectations or question the narcissistic person's behavior.</li>
+    </ul>
+
+    <p className="mb-6">In the workplace, people with NPD create toxic environments: taking credit for others' work, sabotaging colleagues perceived as threats, unable to collaborate as team members, and reacting vindictively to feedback. Their inability to maintain long-term relationships stems from fundamental deficits: they cannot provide the empathy, reciprocity, and emotional attunement that healthy relationships require.</p>
+
+    <h2 id="causes-and-development" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How NPD Develops</h2>
+    <p className="mb-6">The causes of NPD are complex and multifactorial <Citation id="10" index={7} source="Biological Psychiatry: Cognitive Neuroscience and Neuroimaging" year="2020" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Genetics:</strong> Heritable component for narcissistic traits, though no specific "narcissism gene" identified. Temperament factors like reward sensitivity and aggression may contribute.</li>
+      <li><strong>Parenting extremes:</strong> Both excessive praise/indulgence ("you're special, the rules don't apply to you") and severe criticism/neglect can contribute. Overvaluation teaches children they're inherently superior; emotional neglect creates desperate need for external validation.</li>
+      <li><strong>Childhood trauma or adversity:</strong> Some develop narcissistic defenses to cope with early abuse, neglect, or invalidation—grandiosity protects against feelings of worthlessness.</li>
+      <li><strong>Cultural factors:</strong> Societies emphasizing individual achievement, competition, and status may provide fertile ground for narcissistic traits.</li>
+      <li><strong>Social media amplification:</strong> Platforms rewarding self-promotion and providing quantified validation (likes, followers) may reinforce narcissistic patterns, though they don't cause NPD alone.</li>
+    </ul>
+
+    <p className="mb-6">NPD typically becomes evident in late adolescence or early adulthood when identity consolidates and relationship patterns solidify. It's diagnosed when traits are rigid, pervasive across contexts, and cause significant functional impairment or distress (though people with NPD usually don't experience subjective distress about their narcissism—they blame others for relationship problems).</p>
+
+    <h2 id="treatment-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Treatment Is So Difficult</h2>
+    <p className="mb-6">NPD is notoriously challenging to treat for several reasons:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Limited insight:</strong> People with NPD rarely see their behavior as problematic. They blame others for relationship failures and resist acknowledging their role in conflicts.</li>
+      <li><strong>Defensive structure:</strong> Grandiosity protects against underlying shame and inadequacy. Therapy threatens this defense, triggering intense resistance.</li>
+      <li><strong>Difficulty forming therapeutic alliance:</strong> Empathy deficits and tendency to devalue others extend to therapists. May idealize therapist initially (if therapist feeds their ego) then devalue when therapy becomes challenging.</li>
+      <li><strong>External motivation:</strong> Most enter therapy due to depression, anxiety, substance use, or consequences like divorce or job loss—not because they want to change their personality <Citation id="3" index={8} source="Personality Disorders: Theory, Research, and Treatment" year="2020" tier={1} />.</li>
+      <li><strong>High dropout rates:</strong> When therapy doesn't provide immediate validation or challenges their self-view, many quit.</li>
+    </ul>
+
+    <h2 id="therapeutic-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Treatment Can Offer</h2>
+    <p className="mb-6">Despite challenges, specialized psychotherapy can help, though change is slow and requires sustained commitment <Citation id="7" index={9} source="Journal of Personality Disorders" year="2020" tier={1} />:</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Psychodynamic Therapy</h3>
+    <p className="mb-6">Long-term exploration of how early relationships and experiences shaped defensive patterns. Gradually helps person access vulnerable feelings beneath grandiosity. Therapist provides empathic attunement while gently confronting distortions and defenses.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Schema-Focused Therapy</h3>
+    <p className="mb-6">Identifies maladaptive schemas (deeply held beliefs like "I'm special and deserve preferential treatment" or "My worth depends on being superior"). Uses experiential techniques to challenge schemas and develop healthier patterns <Citation id="8" index={10} source="Behaviour Research and Therapy" year="2020" tier={1} />.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Mentalization-Based Treatment</h3>
+    <p className="mb-6">Teaches capacity to understand mental states (thoughts, feelings, intentions) in self and others. Addresses empathy deficits and helps person see others as separate individuals with their own valid perspectives <Citation id="9" index={11} source="American Journal of Psychotherapy" year="2019" tier={1} />.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Treatment Goals</h3>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Developing genuine self-esteem not dependent on external validation</li>
+      <li>Increasing capacity for empathy and recognizing others' perspectives</li>
+      <li>Managing reactions to criticism without defensive rage or withdrawal</li>
+      <li>Building authentic relationships based on reciprocity</li>
+      <li>Reducing interpersonal exploitation and entitlement</li>
+      <li>Addressing comorbid conditions (depression, anxiety, substance use)</li>
+    </ul>
+
+    <ArticleCallout variant="clinical-note" title="For Partners and Family Members">
+      <p className="mb-3">If you're in a relationship with someone who has NPD:</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Individual therapy for yourself can help you set boundaries and make decisions about the relationship</li>
+        <li>Couples therapy is rarely effective unless the person with NPD acknowledges problems and commits to change</li>
+        <li>You cannot "fix" or change them—change must come from internal motivation</li>
+        <li>Setting firm boundaries is essential for your well-being, even if it triggers narcissistic rage</li>
+        <li>Recognize that the problem is the personality disorder, not something you're doing wrong</li>
+      </ul>
+    </ArticleCallout>
+
+    <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Professional Help</h2>
+    <p className="mb-6">Consider seeking evaluation if:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Relationship patterns consistently involve idealization followed by devaluation</li>
+      <li>Criticism triggers intense rage, withdrawal, or vindictive behavior</li>
+      <li>Genuine empathy for others feels difficult or unimportant</li>
+      <li>Self-worth depends entirely on external validation and superiority over others</li>
+      <li>Depression or anxiety develops when grandiose self-image is threatened</li>
+      <li>Relationships, career, or legal problems result from exploitative or entitled behavior</li>
+    </ul>
+    <p className="mb-6">For partners or family members dealing with someone with suspected NPD, individual therapy can provide support, validation, and help with boundary-setting and decision-making about the relationship.</p>
   </> },
 
-  { id: catId(75), slug: 'antisocial-personality-disorder', title: 'Antisocial Personality Disorder: Understanding Persistent Pattern of Violating Rights', description: 'ASPD involves disregard for others\' rights, deceitfulness, and lack of remorse.', image: "/images/articles/cat13/cover-075.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 11, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['ASPD', 'Personality Disorders'], citations: [
-    { id: '1', text: 'Antisocial Personality Disorder', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'ASPD Treatment Challenges', source: 'Lancet Psychiatry', year: '2020', link: 'https://doi.org/10.1016/S2215-0366(20)30091-6', tier: 1 },
-  ], content: <>
+  { id: catId(75), slug: 'antisocial-personality-disorder', title: 'Antisocial Personality Disorder: Understanding Persistent Pattern of Violating Rights', description: 'ASPD involves disregard for others\' rights, deceitfulness, and lack of remorse.', image: "/images/articles/cat13/cover-075.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 10, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['ASPD', 'Personality Disorders'],
+    summary: 'Antisocial Personality Disorder (ASPD) is characterized by a pervasive pattern of disregard for and violation of others\' rights, beginning in childhood or adolescence and continuing into adulthood. Affecting 1-4% of the general population, ASPD involves deceitfulness, impulsivity, aggression, irresponsibility, and lack of remorse. It is one of the most challenging mental health conditions to treat due to limited insight and poor treatment motivation.',
+    keyFacts: [
+      { text: 'ASPD affects 1-4% of the general population, with rates 3 times higher in males than females', citationIndex: 1 },
+      { text: 'In forensic settings, 40-70% of incarcerated individuals meet criteria for ASPD', citationIndex: 2 },
+      { text: 'Approximately 80% of people with ASPD have co-occurring substance use disorders', citationIndex: 5 },
+      { text: 'ASPD symptoms often decrease with age, particularly impulsivity and aggression, in a phenomenon called "burnout" typically occurring in the 40s-50s', citationIndex: 7 },
+      { text: 'Childhood conduct disorder (antisocial behavior before age 15) is a diagnostic prerequisite for ASPD', citationIndex: 1 },
+    ],
+    sparkMoment: 'ASPD is not simply "being a bad person"—it\'s a pervasive developmental disorder rooted in neurobiological differences, childhood experiences, and impaired moral reasoning that profoundly limits the capacity for empathy and prosocial behavior.',
+    practicalExercise: {
+      title: 'Risk Management for Family Members',
+      steps: [
+        { title: 'Recognize the Pattern', description: 'Document specific behaviors: lies told, rules broken, exploitation, lack of remorse. Recognizing the pattern helps counter manipulation and self-doubt.' },
+        { title: 'Set Firm Boundaries', description: 'Identify non-negotiable limits (no stealing, no violence, no drug use in your home) and enforce consequences consistently. People with ASPD test boundaries relentlessly.' },
+        { title: 'Protect Yourself Financially', description: 'Never co-sign loans, provide access to credit cards, or give cash without accounting. Financial exploitation is common. Keep important documents secured.' },
+        { title: 'Seek Support', description: 'Join a support group for families of people with personality disorders. Individual therapy helps you process manipulation, set boundaries, and make difficult decisions about the relationship.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Tools',
+    },
+    citations: [
+      { id: '1', text: 'Prevalence and Diagnostic Criteria for ASPD', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20030338', tier: 1 },
+      { id: '2', text: 'Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision', source: 'American Psychiatric Association', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+      { id: '3', text: 'ASPD in Forensic Settings', source: 'Criminal Behaviour and Mental Health', year: '2020', link: 'https://doi.org/10.1002/cbm.2158', tier: 1 },
+      { id: '4', text: 'Psychopathy and Antisocial Personality Disorder', source: 'Personality Disorders: Theory, Research, and Treatment', year: '2020', link: 'https://doi.org/10.1037/per0000409', tier: 1 },
+      { id: '5', text: 'Comorbidity in Antisocial Personality Disorder', source: 'Journal of Personality Disorders', year: '2019', link: 'https://doi.org/10.1521/pedi_2019_33_422', tier: 1 },
+      { id: '6', text: 'Neurobiology of ASPD', source: 'Biological Psychiatry', year: '2020', link: 'https://doi.org/10.1016/j.biopsych.2019.09.025', tier: 1 },
+      { id: '7', text: 'Age-Related Changes in Antisocial Behavior', source: 'Journal of Abnormal Psychology', year: '2020', link: 'https://doi.org/10.1037/abn0000531', tier: 1 },
+      { id: '8', text: 'Treatment of Antisocial Personality Disorder', source: 'Lancet Psychiatry', year: '2020', link: 'https://doi.org/10.1016/S2215-0366(20)30091-6', tier: 1 },
+      { id: '9', text: 'Cognitive-Behavioral Therapy for ASPD', source: 'Clinical Psychology Review', year: '2021', link: 'https://doi.org/10.1016/j.cpr.2020.101940', tier: 1 },
+      { id: '10', text: 'Therapeutic Communities for Personality Disorders', source: 'Psychiatric Services', year: '2020', link: 'https://doi.org/10.1176/appi.ps.201900335', tier: 1 },
+    ],
+    content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Antisocial personality disorder (ASPD) involves pervasive pattern of disregard for and violation of others' rights, beginning in childhood/adolescence (conduct disorder) and continuing into adulthood <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Prevalence: 1-4% of general population; much higher (40-70%) in prison populations. Features: failure to conform to social norms/laws (repeated arrests), deceitfulness (lying, conning), impulsivity, irritability/aggressiveness, reckless disregard for safety, consistent irresponsibility, lack of remorse. Not all with ASPD are violent criminals—many function in society while engaging in less obvious rule violations (financial exploitation, serial lying, manipulating relationships).</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Antisocial personality disorder is perhaps the most stigmatized diagnosis in psychiatry. The term conjures images of violent criminals and manipulative predators—and while ASPD is indeed overrepresented in prison populations (40-70% of incarcerated individuals meet diagnostic criteria <Citation id="3" index={1} source="Criminal Behaviour and Mental Health" year="2020" tier={1} />), most people with ASPD never commit violent crimes. What unites them is a pervasive, lifelong pattern of disregard for and violation of others' rights, beginning in childhood or adolescence and persisting into adulthood <Citation id="2" index={2} source="DSM-5-TR" year="2022" tier={4} />.</p>
+      <p className="mb-6">ASPD affects approximately 1-4% of the general population, with rates three times higher in males than females <Citation id="1" index={3} source="AJP" year="2021" tier={1} />. The core features—deceitfulness, impulsivity, aggression, irresponsibility, and lack of remorse—create profound disruption in relationships, employment, and social functioning. Unlike most mental health conditions where people suffer from their symptoms, those with ASPD typically cause suffering to others while experiencing little subjective distress about their behavior. This fundamental difference makes ASPD one of the most challenging conditions to treat in all of psychiatry.</p>
     </div>
-    <h2 id="vs-psychopathy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">ASPD vs Psychopathy</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">ASPD (DSM diagnosis) emphasizes observable antisocial behaviors. Psychopathy (research construct measured by PCL-R) emphasizes personality traits: superficial charm, grandiosity, pathological lying, lack of empathy/remorse, shallow emotions, callousness. Not all with ASPD are psychopaths; not all psychopaths meet full ASPD criteria. Psychopathy associated with more severe outcomes, higher recidivism, poor treatment response. ASPD often has comorbid substance use (80%), depression, anxiety. Childhood trauma/abuse common in history but not universal.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment Limitations</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">ASPD among hardest to treat due to lack of motivation for change, manipulation of therapists, poor treatment adherence <Citation id="2" index={2} source="Lancet Psychiatry" year="2020" tier={1} />. Cognitive-behavioral interventions, therapeutic communities, and mentalization-based therapy show modest benefits. Treating comorbid substance use/mental health conditions improves outcomes. Legal mandates (court-ordered treatment) sometimes necessary but coerced treatment has limited efficacy. Some improvement occurs naturally with age ("burnout" in 40s-50s)—impulsivity decreases, though interpersonal deficits persist. Focus often on harm reduction and managing risk rather than cure.</p>
+
+    <h2 id="diagnostic-criteria" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Defines Antisocial Personality Disorder</h2>
+    <p className="mb-6">ASPD is diagnosed when a person age 18 or older has a pervasive pattern of disregard for others' rights since age 15, evidenced by at least three of the following <Citation id="2" index={4} source="DSM-5-TR" year="2022" tier={4} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Failure to conform to social norms and laws:</strong> Repeated acts that are grounds for arrest (whether arrested or not). This might include theft, destruction of property, assault, or fraud.</li>
+      <li><strong>Deceitfulness:</strong> Repeated lying, using aliases, or conning others for personal profit or pleasure. Deception is pervasive, not isolated incidents.</li>
+      <li><strong>Impulsivity or failure to plan ahead:</strong> Acting on the spur of the moment without considering consequences. Frequent job changes, relocations, or relationship instability due to inability to stick with commitments.</li>
+      <li><strong>Irritability and aggressiveness:</strong> Repeated physical fights or assaults. Quick to anger with minimal provocation.</li>
+      <li><strong>Reckless disregard for safety:</strong> Behaviors that endanger self or others without concern for consequences. May involve dangerous driving, substance use while responsible for others, or exposing children to unsafe situations.</li>
+      <li><strong>Consistent irresponsibility:</strong> Repeated failure to sustain work or honor financial obligations. Pattern of job losses, unpaid debts, child support violations.</li>
+      <li><strong>Lack of remorse:</strong> Indifferent to or rationalizing having hurt, mistreated, or stolen from others. May blame victims or minimize harm caused.</li>
+    </ul>
+
+    <p className="mb-6">Critically, ASPD diagnosis requires evidence of <strong>conduct disorder before age 15</strong>—a pattern of violating rules and others' rights during childhood or adolescence (truancy, running away, cruelty to animals, fire-setting, theft, bullying). ASPD doesn't emerge suddenly in adulthood; it's a developmental trajectory beginning early in life.</p>
+
+    <ComparisonTable
+      title="ASPD vs. Psychopathy: Understanding the Distinction"
+      columns={['Feature', 'ASPD (DSM Diagnosis)', 'Psychopathy (Research Construct)']}
+      items={[
+        { feature: 'Focus', values: ['Observable antisocial behaviors', 'Personality traits and emotional deficits'] },
+        { feature: 'Diagnostic Tool', values: ['DSM-5-TR criteria', 'Psychopathy Checklist-Revised (PCL-R)'] },
+        { feature: 'Prevalence', values: ['1-4% general population', '1% general population, 15-25% prisoners'] },
+        { feature: 'Core Features', values: ['Rule-breaking, aggression, irresponsibility', 'Charm, grandiosity, callousness, shallow affect'] },
+        { feature: 'Empathy Deficits', values: ['Often present but variable', 'Severe, persistent emotional detachment'] },
+        { feature: 'Treatment Response', values: ['Modest improvement possible', 'Generally poor; interventions often ineffective'] },
+        { feature: 'Recidivism Risk', values: ['Elevated', 'Very high, especially for violent crimes'] },
+      ]}
+      highlightColumn={0}
+    />
+
+    <p className="mt-6 mb-6">Not all people with ASPD are psychopaths, and not all psychopaths meet full ASPD criteria <Citation id="4" index={5} source="Personality Disorders: Theory, Research, and Treatment" year="2020" tier={1} />. Psychopathy represents a more severe variant characterized by profound emotional deficits—superficial charm, grandiosity, pathological lying, absence of empathy or remorse, shallow emotions, and callous manipulation. Psychopaths tend to have worse outcomes, higher recidivism rates, and virtually no response to conventional treatment.</p>
+
+    <h2 id="developmental-origins" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How ASPD Develops</h2>
+    <p className="mb-6">ASPD emerges from complex interactions between biological vulnerabilities and environmental factors <Citation id="6" index={6} source="Biological Psychiatry" year="2020" tier={1} />:</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Biological Factors</h3>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Genetics:</strong> Heritability estimated at 40-50%. Family studies show higher rates in biological relatives of those with ASPD.</li>
+      <li><strong>Neurobiological differences:</strong> Reduced volume and function in prefrontal cortex (responsible for impulse control, moral reasoning, empathy) and amygdala (fear response, emotional processing). These deficits impair ability to learn from punishment and experience normal moral emotions like guilt.</li>
+      <li><strong>Neurotransmitter dysregulation:</strong> Abnormalities in serotonin (linked to impulsivity and aggression) and dopamine (reward processing) systems.</li>
+      <li><strong>Temperament:</strong> Early childhood traits like fearlessness, low anxiety, and reduced response to punishment predict later ASPD.</li>
+    </ul>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Environmental Factors</h3>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Childhood maltreatment:</strong> Physical abuse, sexual abuse, and neglect are common (though not universal) in ASPD histories. Trauma can impair empathy development and normalize violence.</li>
+      <li><strong>Inconsistent or harsh parenting:</strong> Lack of supervision, erratic discipline, or overly punitive parenting fails to teach prosocial behavior.</li>
+      <li><strong>Peer influences:</strong> Association with delinquent peers during adolescence reinforces antisocial patterns.</li>
+      <li><strong>Socioeconomic disadvantage:</strong> Poverty, neighborhood violence, and lack of opportunities contribute to risk, though ASPD occurs across all socioeconomic levels.</li>
+    </ul>
+
+    <BeforeAfter
+      before={{
+        title: 'Misconceptions',
+        points: [
+          'All people with ASPD are violent criminals',
+          'They\'re "evil" or "bad people" who choose to act antisocially',
+          'ASPD is untreatable and unchangeable',
+          'Everyone in prison has antisocial personality disorder',
+        ]
+      }}
+      after={{
+        title: 'Reality',
+        points: [
+          'Many with ASPD are not violent; antisocial behavior can involve manipulation, lying, financial exploitation, or rule-breaking without physical aggression',
+          'ASPD is a neurodevelopmental disorder with biological and environmental roots, not a moral failing',
+          'While challenging, some interventions show modest benefits, and symptoms often decrease with age',
+          'While ASPD is overrepresented in prisons (40-70%), many incarcerated people do not have ASPD and many with ASPD are not imprisoned',
+        ]
+      }}
+    />
+
+    <h2 id="comorbidities" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Co-Occurring Conditions</h2>
+    <p className="mb-6">ASPD rarely occurs in isolation <Citation id="5" index={7} source="Journal of Personality Disorders" year="2019" tier={1} />:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Substance use disorders:</strong> Approximately 80% have comorbid alcohol or drug use disorders. Substances may be used to self-medicate dysphoria or pursue intense experiences.</li>
+      <li><strong>Depression:</strong> Despite shallow affect, many experience depressive episodes, particularly when facing consequences of their behavior (incarceration, relationship loss).</li>
+      <li><strong>Anxiety disorders:</strong> Generalized anxiety and panic disorder occur at higher rates than in general population, contradicting stereotype of fearlessness.</li>
+      <li><strong>ADHD:</strong> Attention deficits and impulsivity often co-occur, complicating diagnosis and treatment.</li>
+      <li><strong>Other personality disorders:</strong> Frequently co-occurs with narcissistic, borderline, or paranoid personality disorders.</li>
+    </ul>
+
+    <h2 id="impact-on-others" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Ripple Effect on Families and Partners</h2>
+    <p className="mb-6">Living with someone who has ASPD creates profound distress for family members:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Chronic lying and deception erode trust completely</li>
+      <li>Financial exploitation leaves families in debt or bankruptcy</li>
+      <li>Emotional manipulation and blame-shifting cause self-doubt and confusion</li>
+      <li>Aggression and intimidation create fear and hypervigilance</li>
+      <li>Irresponsibility burdens others with responsibilities (childcare, bills, legal problems)</li>
+      <li>Lack of remorse prevents genuine repair after harm</li>
+    </ul>
+
+    <p className="mb-6">Children of parents with ASPD face particularly high risk: exposure to inconsistent parenting, domestic violence, substance use, criminal activity, and absence due to incarceration. These experiences perpetuate intergenerational transmission of antisocial behavior.</p>
+
+    <QuoteBlock
+      quote="Treatment of antisocial personality disorder requires accepting that change is incremental, outcomes are modest, and the goal is often harm reduction rather than transformation. We work to minimize damage to others while recognizing the person's profound developmental deficits."
+      attribution="Dr. Joel Paris"
+      role="Professor of Psychiatry, McGill University"
+      source="Lancet Psychiatry, 2020"
+      variant="default"
+    />
+
+    <h2 id="treatment-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Treatment Is So Difficult</h2>
+    <p className="mb-6">ASPD is among the most challenging conditions to treat in psychiatry <Citation id="8" index={8} source="Lancet Psychiatry" year="2020" tier={1} />:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Lack of motivation:</strong> People with ASPD rarely see their behavior as problematic. They enter treatment due to external pressure (court mandate, family ultimatum) not internal distress.</li>
+      <li><strong>Manipulation:</strong> Therapeutic relationship itself becomes target for manipulation. May feign insight or progress to gain rewards while having no genuine intent to change.</li>
+      <li><strong>Poor treatment adherence:</strong> High dropout rates. When treatment becomes uncomfortable or no longer serves immediate needs, they stop attending.</li>
+      <li><strong>Inability to form genuine therapeutic alliance:</strong> Profound empathy deficits limit capacity for the trusting, collaborative relationship therapy requires.</li>
+      <li><strong>Reinforcement history:</strong> Antisocial behavior has been rewarded for decades (getting what they want through manipulation, avoiding consequences through lying). Changing deeply ingrained patterns is monumentally difficult.</li>
+    </ul>
+
+    <h2 id="treatment-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Treatment Can Offer</h2>
+    <p className="mb-6">Despite challenges, certain interventions show modest benefits:</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Cognitive-Behavioral Interventions</h3>
+    <p className="mb-6">Focus on identifying thinking patterns that justify antisocial behavior, developing problem-solving skills, and learning to consider consequences before acting. Anger management and impulse control training can reduce aggression <Citation id="9" index={9} source="Clinical Psychology Review" year="2021" tier={1} />. Success requires structure, clear expectations, and consistent consequences.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Therapeutic Communities</h3>
+    <p className="mb-6">Structured residential programs where peer confrontation and community accountability challenge antisocial patterns. More effective than individual therapy for some <Citation id="10" index={10} source="Psychiatric Services" year="2020" tier={1} />. The group format limits manipulation and provides immediate feedback from peers.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Treating Comorbid Conditions</h3>
+    <p className="mb-6">Addressing substance use disorders, ADHD, depression, or anxiety can reduce overall dysfunction even if core ASPD traits persist. Medications may help specific symptoms (mood stabilizers for impulsivity and aggression, stimulants for ADHD) but don't treat ASPD itself.</p>
+
+    <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">Age-Related Improvement</h3>
+    <p className="mb-6">ASPD symptoms, particularly impulsivity and aggression, often decrease naturally with age in a phenomenon called "burnout," typically occurring in the 40s-50s <Citation id="7" index={11} source="Journal of Abnormal Psychology" year="2020" tier={1} />. However, interpersonal deficits and lack of empathy tend to persist. This natural improvement is more about reduced energy for antisocial behavior than genuine personality change.</p>
+
+    <h2 id="for-families" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Guidance for Families</h2>
+    <p className="mb-6">If you have a family member with ASPD:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Accept that you cannot change them—change must come from within, and many never develop motivation for change</li>
+      <li>Set and enforce firm boundaries. People with ASPD will test limits relentlessly; inconsistent enforcement teaches them to keep pushing</li>
+      <li>Protect yourself financially. Never co-sign loans, provide access to accounts, or give money without accounting</li>
+      <li>Recognize manipulation. If something feels off, trust your instincts. They are skilled at making you question your own judgment</li>
+      <li>Prioritize your safety. If there's any risk of violence, create an exit plan</li>
+      <li>Seek support for yourself. Individual therapy and support groups for families affected by personality disorders can be invaluable</li>
+      <li>Make decisions based on behavior, not promises. Promises mean nothing without consistent follow-through</li>
+    </ul>
+
+    <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When to Seek Professional Help</h2>
+    <p className="mb-6">Consider evaluation if:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Pattern of violating rules and others' rights since adolescence</li>
+      <li>Repeated legal problems despite consequences</li>
+      <li>Pervasive deceitfulness and manipulation in relationships</li>
+      <li>Impulsive, aggressive behavior with disregard for safety</li>
+      <li>Consistent irresponsibility in work or financial obligations</li>
+      <li>Absence of guilt or remorse after harming others</li>
+    </ul>
+    <p className="mb-6">More commonly, family members seek help coping with a loved one's ASPD. Individual therapy can provide support, validation, help with boundary-setting, and assistance making difficult decisions about the relationship. Remember: you didn't cause their disorder, you can't control it, and you can't cure it. Your responsibility is to yourself and your own wellbeing.</p>
   </> },
 
   { id: catId(76), slug: 'dependent-personality-disorder', title: 'Dependent Personality Disorder: When Fear of Autonomy Becomes Disabling', description: 'DPD involves excessive need to be taken care of and fear of separation.', image: "/images/articles/cat13/cover-076.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['DPD', 'Personality Disorders'],

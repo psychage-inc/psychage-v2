@@ -12,6 +12,8 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const scienceOfLonelinessArticlesA: Article[] = [
@@ -22,12 +24,32 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     description: 'Loneliness is not the same as being physically alone. Understand the psychological experience of loneliness and why it affects so many people.',
     image: "/images/articles/cat15/cover-001.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Loneliness', 'Social Connection', 'Mental Health', 'Psychology'],
-    citations: [
+    summary: 'Loneliness is not about being physically alone—it\'s the painful gap between the social connection you have and the connection you need. This article explores what loneliness really is, how it differs from solitude, why it physically hurts, and when chronic loneliness becomes a serious health concern requiring professional support.',
+    keyFacts: [
+      { text: 'Loneliness can be as harmful to health as smoking 15 cigarettes a day, increasing risk for early mortality, cardiovascular disease, and cognitive decline', citationIndex: 1 },
+      { text: 'You can feel lonely in a crowded room—loneliness is subjective and about perceived disconnection, not physical isolation', citationIndex: 2 },
+      { text: 'Brain imaging shows that social rejection and loneliness activate the same neural pathways as physical pain', citationIndex: 7 },
+      { text: 'There are three types of loneliness: intimate (missing close bonds), relational (lacking friendships), and collective (absence of community belonging)', citationIndex: 6 },
+      { text: 'Loneliness evolved as a survival signal—like hunger or thirst—to motivate humans to reconnect with their social groups', citationIndex: 2 },
+    ],
+    sparkMoment: 'Loneliness is your brain\'s alarm system reminding you that connection is not a luxury—it\'s a biological necessity as fundamental as food or water.',
+    practicalExercise: {
+      title: 'Map Your Social Needs',
+      steps: [
+        { title: 'Identify your loneliness type', description: 'Reflect on which type of loneliness resonates most: intimate (missing a close confidant), relational (lacking friendships), or collective (feeling disconnected from community). Write down specific examples.' },
+        { title: 'Rate your current connections', description: 'On a scale of 1-10, rate how fulfilled you feel in each area: intimate relationships, friendships, and community belonging. Notice where the gaps are largest.' },
+        { title: 'Choose one small action', description: 'Pick ONE area where you feel most disconnected and commit to a single, concrete action this week—text a friend, join a group activity, or reach out to someone you trust.' },
+        { title: 'Track your feelings', description: 'After taking action, journal about how you felt before, during, and after. Notice any shifts in your sense of connection, even small ones.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Connection',
+    },
+        citations: [
       {
         id: '1',
         text: 'Loneliness and social isolation as risk factors for mortality: A meta-analytic review',
@@ -246,12 +268,32 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     description: 'Discover how social connection shapes brain structure, chemistry, and function --- and why isolation triggers the same threat response as physical danger.',
     image: "/images/articles/cat15/cover-002.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Neuroscience', 'Social Connection', 'Brain Science', 'Research'],
-    citations: [
+    summary: 'Your brain evolved to be fundamentally social. This article explores the neuroscience of social connection, revealing how dedicated brain regions process social information, how neurotransmitters drive bonding, why mirror neurons enable empathy, and how chronic isolation physically changes brain structure and function.',
+    keyFacts: [
+      { text: 'Approximately 20% of brain volume is devoted to processing social information, reflecting how central connection is to human cognition', citationIndex: 2 },
+      { text: 'The "Dunbar number" suggests humans can maintain about 150 stable relationships—a cognitive limit shaped by brain size', citationIndex: 2 },
+      { text: 'Chronic social isolation increases cortisol by 40% and triggers measurable decreases in gray matter volume in social brain regions', citationIndex: 5 },
+      { text: 'Mirror neurons fire both when you perform an action and when you observe someone else doing it, forming the neural basis of empathy', citationIndex: 9 },
+      { text: 'Social connection activates dopamine, oxytocin, and serotonin pathways—the same systems that regulate mood, trust, and motivation', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your brain doesn\'t just benefit from social connection—it was literally built by and for it. Isolation isn\'t just loneliness; it\'s your brain operating in emergency mode.',
+    practicalExercise: {
+      title: 'Activate Your Social Brain',
+      steps: [
+        { title: 'Practice perspective-taking', description: 'During a conversation today, pause and actively try to imagine what the other person is thinking or feeling. This engages your medial prefrontal cortex and temporoparietal junction—key social brain regions.' },
+        { title: 'Seek face-to-face connection', description: 'Schedule one in-person interaction this week (coffee, walk, video call with camera on). Face-to-face contact activates more neural circuits than text-based communication.' },
+        { title: 'Notice your mirror neurons', description: 'Watch someone smile genuinely and observe how your face reflexively mimics the expression. This is your mirror neuron system in action—the foundation of emotional resonance.' },
+        { title: 'Create an oxytocin moment', description: 'Engage in physical affection (hug, hand-holding), eye contact with someone you trust, or caring for a pet. These activities trigger oxytocin release, strengthening bonds.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Social Interactions',
+    },
+        citations: [
       {
         id: '1',
         text: 'The social brain: Neural basis of social knowledge',
@@ -598,12 +640,32 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     description: "Loneliness is not just an emotional experience --- it's a major public health crisis that increases mortality risk, weakens immunity, and accelerates aging.",
     image: '/images/articles/cat15/cover-003.svg',
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 9,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Loneliness', 'Public Health', 'Physical Health', 'Research'],
-    citations: [
+    summary: 'Loneliness is a major public health crisis with devastating physical consequences. This article examines how loneliness increases mortality risk by 26-32%, damages cardiovascular health, weakens immunity, accelerates cognitive decline, and disrupts sleep—making it as dangerous to health as smoking 15 cigarettes a day.',
+    keyFacts: [
+      { text: 'Loneliness increases risk of early death by 26-32%—comparable to smoking 15 cigarettes daily and more dangerous than obesity', citationIndex: 1 },
+      { text: 'Chronic loneliness raises coronary heart disease risk by 29% and stroke risk by 32%', citationIndex: 2 },
+      { text: 'Social isolation increases dementia risk by 50% and accelerates brain aging in older adults', citationIndex: 7 },
+      { text: 'Lonely individuals have elevated inflammatory markers (C-reactive protein, interleukin-6) that drive chronic disease', citationIndex: 4 },
+      { text: 'Loneliness disrupts sleep quality even when total sleep time remains unchanged, creating a cycle of fatigue and isolation', citationIndex: 6 },
+    ],
+    sparkMoment: 'The health impact of loneliness isn\'t subtle or abstract—it\'s as measurable and deadly as any other major risk factor medicine tracks.',
+    practicalExercise: {
+      title: 'Assess Your Loneliness Health Risk',
+      steps: [
+        { title: 'Take the UCLA Loneliness Scale', description: 'Complete the validated 20-question UCLA Loneliness Scale online (freely available). Score yourself honestly to establish a baseline measure of your loneliness level.' },
+        { title: 'Check your physical health markers', description: 'If you experience chronic loneliness, discuss with your doctor: blood pressure readings, inflammatory markers (CRP), and cardiovascular risk assessment. Loneliness should be treated as a health risk factor.' },
+        { title: 'Monitor sleep quality', description: 'Track your sleep for one week using our Sleep Architect tool. Note if you wake frequently, feel unrested, or have racing thoughts about social connection at night.' },
+        { title: 'Schedule a wellness check', description: 'If loneliness has persisted for months, book a physical exam and mental health screening. Early intervention can prevent long-term health consequences.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track Sleep Quality',
+    },
+        citations: [
       {
         id: '1',
         text: 'Loneliness and social isolation as risk factors for mortality: A meta-analytic review',
@@ -959,12 +1021,32 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     description: "In 2023, the U.S. Surgeon General declared loneliness a public health epidemic. Here's what the advisory says and what it means for policy and practice.",
     image: "/images/articles/cat15/cover-004.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Public Health', 'Policy', 'Surgeon General', 'Loneliness Epidemic'],
-    citations: [
+    summary: 'In 2023, the U.S. Surgeon General issued a landmark advisory declaring loneliness a public health epidemic. This article breaks down what the advisory reveals about loneliness rates, health consequences, structural causes, and the six-pillar framework proposed to rebuild social connection in America.',
+    keyFacts: [
+      { text: 'The 2023 Surgeon General advisory found that 50% of U.S. adults experience loneliness, with 61% of young adults reporting serious loneliness', citationIndex: 1 },
+      { text: 'The advisory identifies loneliness as comparable in health impact to smoking, obesity, and substance abuse—making it a top-tier public health threat', citationIndex: 1 },
+      { text: 'Structural factors driving the epidemic include technology displacing in-person interaction, declining civic participation, remote work, and car-dependent urban design', citationIndex: 1 },
+      { text: 'The six-pillar framework includes strengthening social infrastructure, enacting pro-connection policies, mobilizing healthcare, reforming digital environments, deepening research, and cultivating connection culture', citationIndex: 1 },
+      { text: 'COVID-19 pandemic doubled loneliness rates among older adults and sharply increased isolation among young adults, accelerating an already worsening crisis', citationIndex: 3 },
+    ],
+    sparkMoment: 'When the nation\'s top doctor issues a rare public health advisory on loneliness, it\'s not alarmism—it\'s a recognition that disconnection has become a national emergency.',
+    practicalExercise: {
+      title: 'Implement the Six-Pillar Framework Personally',
+      steps: [
+        { title: 'Strengthen your social infrastructure', description: 'Identify one physical place you can regularly visit for connection: a coffee shop, library, park, gym, or community center. Commit to going weekly.' },
+        { title: 'Set pro-connection boundaries', description: 'Implement one policy in your life that prioritizes connection: no phones during meals, weekly friend calls, or protecting weekends for in-person socializing.' },
+        { title: 'Reform your digital environment', description: 'Audit your social media use. Delete or mute accounts that don\'t provide genuine connection. Replace 30 minutes of scrolling with a phone or video call.' },
+        { title: 'Cultivate connection as a value', description: 'This week, perform one intentional act of connection: check in on a neighbor, invite someone to coffee, or volunteer in your community. Make connection a priority, not an afterthought.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Wellness Tools',
+    },
+        citations: [
       {
         id: '1',
         text: "Our Epidemic of Loneliness and Isolation: The U.S. Surgeon General's Advisory on the Healing Effects of Social Connection and Community",
@@ -1351,12 +1433,32 @@ export const scienceOfLonelinessArticlesA: Article[] = [
     description: 'Being alone is not the same as loneliness. Understand when solitude supports well-being and when isolation becomes harmful.',
     image: "/images/articles/cat15/cover-005.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Solitude', 'Loneliness', 'Self-Care', 'Mental Health'],
-    citations: [
+    summary: 'Solitude and loneliness are fundamentally different experiences. This article clarifies the distinction between chosen, restorative alone time and unwanted, painful isolation—and provides guidance on how to cultivate healthy solitude while avoiding harmful isolation that damages mental and physical health.',
+    keyFacts: [
+      { text: 'Solitude is voluntary and restorative; loneliness is involuntary and distressing—the difference lies in choice and emotional quality, not physical isolation', citationIndex: 2 },
+      { text: 'Intentional solitude enhances creativity, deepens self-awareness, improves emotional regulation, and restores mental energy, especially for introverts', citationIndex: 1 },
+      { text: 'Solitude becomes harmful when it shifts from chosen restoration to avoidant withdrawal driven by fear, anxiety, or social avoidance', citationIndex: 7 },
+      { text: 'Healthy alone time involves being present without distraction, engaging in meaningful activities, and reflecting rather than ruminating', citationIndex: 8 },
+      { text: 'The optimal balance between solitude and connection varies by personality type—introverts need more alone time, but everyone requires consistent social contact', citationIndex: 4 },
+    ],
+    sparkMoment: 'The question isn\'t whether you\'re alone—it\'s whether being alone is serving you or isolating you. One path leads to renewal, the other to depletion.',
+    practicalExercise: {
+      title: 'Find Your Solitude-Connection Balance',
+      steps: [
+        { title: 'Assess your current state', description: 'For one week, track every hour spent alone and with others. Note: Was this alone time chosen or avoided? Did I feel energized or depleted after? Am I craving more connection or more space?' },
+        { title: 'Experiment with intentional solitude', description: 'Schedule 30 minutes of purposeful alone time this week: a solo walk without headphones, journaling, or a creative project. No screens, no distractions. Notice how you feel during and after.' },
+        { title: 'Check your motivation', description: 'Before declining a social invitation, ask: Am I choosing solitude because I need rest, or am I avoiding connection because it feels threatening? One is healthy, the other requires attention.' },
+        { title: 'Build in regular connection', description: 'Even if you\'re highly introverted, schedule at least two social interactions per week: a call with a friend, coffee with a colleague, or attendance at a group activity. Consistent connection is non-negotiable.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Balance',
+    },
+        citations: [
       {
         id: '1',
         text: 'The quiet ego: Quieting the self in the service of well-being',

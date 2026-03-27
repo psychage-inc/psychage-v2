@@ -24,6 +24,26 @@ export const traumaInformedCareArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma-Informed Education', 'School Mental Health', 'Child Development', 'Educational Equity'],
+    summary: 'Nearly half of all U.S. children have experienced trauma that affects their ability to learn. Trauma-informed education shifts from punitive discipline to understanding-based support, creating safe environments where all students can thrive. Schools implementing these practices see 35% reductions in discipline incidents and improved academic outcomes.',
+    keyFacts: [
+      { text: '46% of U.S. children have experienced at least one adverse childhood experience that can impact learning', citationIndex: 3 },
+      { text: 'Trauma changes brain development in regions responsible for memory, attention, and emotional regulation', citationIndex: 3 },
+      { text: 'Trauma-informed schools show 35% reductions in disciplinary incidents and improved attendance rates', citationIndex: 5 },
+      { text: 'Students with 4 or more ACEs have twice the dropout risk compared to those without trauma exposure', citationIndex: 3 },
+      { text: 'Cultural responsiveness is essential as marginalized students experience both individual and systemic trauma', citationIndex: 6 },
+    ],
+    sparkMoment: 'The question shifts from "What\'s wrong with you?" to "What happened to you?"---and that simple reframing transforms everything.',
+    practicalExercise: {
+      title: 'The Two-Minute Connection Practice',
+      steps: [
+        { title: 'Identify Students', description: 'Choose 2-3 students who may have experienced trauma or show signs of stress. Focus on students who seem withdrawn, act out frequently, or struggle with engagement.' },
+        { title: 'Daily Check-In', description: 'Spend two minutes daily with each student in non-academic conversation. Ask about interests, acknowledge effort, or simply say "I\'m glad you\'re here today."' },
+        { title: 'Consistent Presence', description: 'Maintain this practice for at least two weeks. Consistency builds the relational safety students need to feel secure enough to learn.' },
+        { title: 'Observe Changes', description: 'Notice shifts in student behavior, engagement, or willingness to take academic risks. These small connections create the foundation for healing and growth.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Mental Health',
+    },
     citations: [
       {
         id: '1',
@@ -75,7 +95,7 @@ export const traumaInformedCareArticlesB: Article[] = [
       },
       {
         id: '7',
-        text: "Trauma-Sensitive Schools: Learning Communities Transforming Children's Lives",
+        text: "Trauma-Sensitive Schools: Learning Communities Transforming Children\'s Lives",
         source: 'Teachers College Press',
         year: '2018',
         link: 'https://www.tcpress.com/trauma-sensitive-schools-9780807758878',
@@ -121,7 +141,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         </p>
 
         <ComparisonTable
-          title="Trauma's Impact on Academic Skills"
+          title="Trauma\'s Impact on Academic Skills"
           columns={['Brain Function', 'Effect of Trauma', 'Classroom Manifestation']}
           items={[
             {
@@ -142,7 +162,7 @@ export const traumaInformedCareArticlesB: Article[] = [
             },
             {
               feature: 'Language Processing',
-              values: ["Broca's area deactivation during stress", 'Goes nonverbal when upset, difficulty expressing needs'],
+              values: ["Broca\'s area deactivation during stress", 'Goes nonverbal when upset, difficulty expressing needs'],
             },
           ]}
           highlightColumn={1}
@@ -190,7 +210,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Collaboration and Mutuality',
               description: (
                 <p>
-                  Students have voice in decisions that affect them. Power differences are leveled, and everyone's input is valued.
+                  Students have voice in decisions that affect them. Power differences are leveled, and everyone\'s input is valued.
                 </p>
               ),
             },
@@ -217,7 +237,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Practical Classroom Strategies
         </h2>
         <p className="mb-6">
-          Implementing trauma-informed practices doesn't require complete overhaul---small, consistent changes in how educators respond to students can have profound effects.
+          Implementing trauma-informed practices doesn\'t require complete overhaul---small, consistent changes in how educators respond to students can have profound effects.
         </p>
 
         <BeforeAfter
@@ -379,7 +399,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Getting Started: First Steps
         </h2>
         <p className="mb-6">
-          Whether you're a teacher, administrator, or parent advocate, you can contribute to creating trauma-informed schools:
+          Whether you\'re a teacher, administrator, or parent advocate, you can contribute to creating trauma-informed schools:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -392,7 +412,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Creating trauma-informed schools is not about lowering expectations or excusing harmful behavior. It's about recognizing that students can't learn when their nervous systems are in survival mode---and building the safety, connection, and support that allow all children to thrive.
+          Creating trauma-informed schools is not about lowering expectations or excusing harmful behavior. It\'s about recognizing that students can\'t learn when their nervous systems are in survival mode---and building the safety, connection, and support that allow all children to thrive.
         </p>
       </>
     ),
@@ -409,6 +429,26 @@ export const traumaInformedCareArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Workplace Trauma', 'Psychological Safety', 'Occupational Health', 'Workplace Culture'],
+    summary: 'Workplace trauma---from harassment and accidents to vicarious trauma and toxic cultures---causes profound psychological injury that often goes unrecognized. Unlike physical injuries, these wounds remain invisible yet devastate mental health, productivity, and lives. Creating psychologically safe work environments requires intentional policies, trauma-informed leadership, and cultural change that values employees as whole human beings.',
+    keyFacts: [
+      { text: '20% of workers experience some form of workplace violence annually, including harassment and assault', citationIndex: 5 },
+      { text: '58% of employees leave jobs due to toxic workplace cultures that create ongoing trauma', citationIndex: 7 },
+      { text: 'Workplace stress costs the U.S. economy $300 billion annually in lost productivity and healthcare expenses', citationIndex: 5 },
+      { text: 'Sexual harassment affects 25-85% of women in the workplace, leading to depression, anxiety, and PTSD', citationIndex: 3 },
+      { text: 'Psychologically safe teams show higher performance, more innovation, and greater employee well-being', citationIndex: 6 },
+    ],
+    sparkMoment: 'Psychological safety isn\'t about comfort---it\'s about creating conditions where people can take risks, speak truth, and make mistakes without fear of punishment or humiliation.',
+    practicalExercise: {
+      title: 'Building Psychological Safety in Your Team',
+      steps: [
+        { title: 'Model Vulnerability', description: 'Share a mistake you made and what you learned. Leaders who acknowledge imperfection give others permission to do the same, reducing fear of judgment.' },
+        { title: 'Ask Genuine Questions', description: 'When someone raises a concern, respond with curiosity instead of defensiveness. Ask "What am I missing?" or "Help me understand your perspective."' },
+        { title: 'Thank Messengers', description: 'Explicitly thank people who bring bad news or identify problems. This reinforces that speaking up is valued, even when the message is uncomfortable.' },
+        { title: 'Normalize Struggle', description: 'In team meetings, discuss challenges openly. Frame setbacks as learning opportunities rather than failures requiring blame assignment.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Workplace Stress',
+    },
     citations: [
       {
         id: '1',
@@ -479,7 +519,7 @@ export const traumaInformedCareArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A construction worker who witnessed a colleague's fatal fall. An employee subjected to years of sexual harassment by a supervisor. A nurse who holds the hand of dying patients through every shift. These experiences---varied as they are---share a common thread: workplace trauma.
+            A construction worker who witnessed a colleague\'s fatal fall. An employee subjected to years of sexual harassment by a supervisor. A nurse who holds the hand of dying patients through every shift. These experiences---varied as they are---share a common thread: workplace trauma.
           </p>
           <p className="mb-6">
             Workplace trauma encompasses any distressing event that occurs in professional settings and overwhelms an individual's ability to cope <Citation id="1" index={1} source="Occupational Health Psychology" year="2020" tier={1} />. This includes harassment, violence, accidents, organizational restructuring, discriminatory practices, and repeated exposure to others" trauma.
@@ -705,7 +745,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Employee Assistance Programs (EAPs)',
               description: (
                 <p>
-                  Provide confidential access to mental health services, including trauma-specialized therapists. Ensure employees know these services exist, how to access them, and that using them won't affect job security.
+                  Provide confidential access to mental health services, including trauma-specialized therapists. Ensure employees know these services exist, how to access them, and that using them won\'t affect job security.
                 </p>
               ),
             },
@@ -754,7 +794,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="For Individual Employees">
           <p className="mb-4">
-            If your workplace doesn't prioritize psychological safety:
+            If your workplace doesn\'t prioritize psychological safety:
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li>Document incidents thoroughly (dates, witnesses, what was said/done)</li>
@@ -800,6 +840,26 @@ export const traumaInformedCareArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma-Informed Care', 'Medical Trauma', 'Patient-Centered Care', 'Healthcare Equity'],
+    summary: 'Past trauma profoundly shapes how patients experience medical care, yet traditional healthcare often re-traumatizes through touch without warning, dismissive communication, and power imbalances. Trauma-informed healthcare recognizes that the body keeps the score, creating safety through patient choice, transparent communication, and understanding that past experiences influence present health outcomes and treatment effectiveness.',
+    keyFacts: [
+      { text: 'Adverse childhood experiences are linked to increased risk of chronic diseases including heart disease, diabetes, and autoimmune conditions', citationIndex: 2 },
+      { text: 'Medical procedures can trigger traumatic memories, particularly for survivors of sexual assault or physical abuse', citationIndex: 3 },
+      { text: 'Patients with trauma histories often avoid or delay healthcare due to fear of re-traumatization', citationIndex: 5 },
+      { text: 'Trauma-informed care improves patient satisfaction, treatment adherence, and health outcomes across all patient populations', citationIndex: 1 },
+      { text: 'Systemic racism creates additional medical trauma for Black, Indigenous, and other patients of color who face discrimination in healthcare', citationIndex: 7 },
+    ],
+    sparkMoment: 'The body keeps the score---and every medical encounter either confirms that the world is safe or reinforces that it is not.',
+    practicalExercise: {
+      title: 'Preparing for Trauma-Sensitive Medical Appointments',
+      steps: [
+        { title: 'Identify Your Needs', description: 'Before your appointment, write down what helps you feel safe (having a support person present, receiving step-by-step explanations, having control over pace and positioning).' },
+        { title: 'Communicate Boundaries', description: 'At the start of the appointment, tell your provider: "I have a trauma history. I need you to explain what you\'re doing before you touch me and check in if I seem uncomfortable."' },
+        { title: 'Request Accommodations', description: 'Ask for what you need: keeping the door partially open, having a nurse present, taking breaks, rescheduling if you\'re not ready for certain procedures.' },
+        { title: 'Debrief Afterward', description: 'Process the experience with a trusted person or therapist. Note what worked and what didn\'t to refine your approach for future appointments.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Trauma Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -870,7 +930,7 @@ export const traumaInformedCareArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're in a medical exam room. The doctor performs a routine examination without warning or explanation. Their touch feels invasive, clinical, detached. For many people, this is merely uncomfortable. But for survivors of sexual assault, this can trigger a cascade of traumatic memories, freezing responses, and dissociation.
+            You\'re in a medical exam room. The doctor performs a routine examination without warning or explanation. Their touch feels invasive, clinical, detached. For many people, this is merely uncomfortable. But for survivors of sexual assault, this can trigger a cascade of traumatic memories, freezing responses, and dissociation.
           </p>
           <p className="mb-6">
             Trauma-informed healthcare recognizes a fundamental truth: the body keeps the score <Citation id="1" index={1} source="Family & Community Health" year="2018" tier={1} />. Past experiences---particularly adverse childhood experiences (ACEs) and trauma---profoundly shape how patients experience medical care, whether they seek it at all, and how effectively treatments work.
@@ -905,7 +965,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="did-you-know" title="The Biology of Trauma">
           <p>
-            Childhood trauma doesn't just leave psychological scars---it changes brain architecture, hormonal regulation, immune function, and even gene expression. These biological adaptations, designed to help children survive threatening environments, become risk factors for physical illness in adulthood.
+            Childhood trauma doesn\'t just leave psychological scars---it changes brain architecture, hormonal regulation, immune function, and even gene expression. These biological adaptations, designed to help children survive threatening environments, become risk factors for physical illness in adulthood.
           </p>
         </ArticleCallout>
 
@@ -982,7 +1042,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Peer Support',
               description: (
                 <p>
-                  Recognizing the value of lived experience. This might include peer recovery specialists in substance use treatment or patient navigators who've faced similar health challenges.
+                  Recognizing the value of lived experience. This might include peer recovery specialists in substance use treatment or patient navigators who\'ve faced similar health challenges.
                 </p>
               ),
             },
@@ -1051,7 +1111,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Universal Precautions Approach">
           <p>
-            Because trauma history isn't always visible and disclosure requires safety, best practice is to use trauma-informed approaches with all patients---not just those who've disclosed traumatic experiences. This 'universal precautions' model ensures no one falls through the cracks.
+            Because trauma history isn\'t always visible and disclosure requires safety, best practice is to use trauma-informed approaches with all patients---not just those who\'ve disclosed traumatic experiences. This 'universal precautions' model ensures no one falls through the cracks.
           </p>
         </ArticleCallout>
 
@@ -1108,7 +1168,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    You don't need to disclose details of past trauma, but you can say:
+                    You don\'t need to disclose details of past trauma, but you can say:
                   </p>
                   <ul className="list-disc pl-6 space-y-2">
                     <li>"I have a history that makes medical exams difficult. I may need to take breaks."</li>
@@ -1167,7 +1227,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         />
 
         <p className="mb-6">
-          Healthcare should be healing, not harmful. When your doctor asks about your past, understands that your body holds memories, and adapts their care accordingly, they're recognizing your full humanity---and creating the conditions for true health to emerge.
+          Healthcare should be healing, not harmful. When your doctor asks about your past, understands that your body holds memories, and adapts their care accordingly, they\'re recognizing your full humanity---and creating the conditions for true health to emerge.
         </p>
       </>
     ),
@@ -1184,6 +1244,26 @@ export const traumaInformedCareArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Vicarious Trauma', 'Therapist Self-Care', 'Compassion Fatigue', 'Professional Burnout'],
+    summary: 'Therapists who bear witness to clients\' trauma absorb the emotional weight of suffering through empathic engagement. Vicarious trauma---distinct from burnout---transforms worldviews, disrupts safety assumptions, and can lead to PTSD symptoms. Unlike compassion fatigue which depletes capacity to care, vicarious trauma fundamentally changes how helpers see themselves and the world, requiring intentional boundaries, supervision, and sustainable self-care practices.',
+    keyFacts: [
+      { text: 'Vicarious trauma affects 50-85% of trauma therapists at some point in their careers, altering core beliefs about safety and trust', citationIndex: 1 },
+      { text: 'Unlike burnout (work-related exhaustion), vicarious trauma changes cognitive schemas and can occur even with adequate rest', citationIndex: 2 },
+      { text: 'Trauma therapists with personal trauma histories face higher risk but also bring valuable lived experience to the work', citationIndex: 5 },
+      { text: 'Organizations that provide regular supervision, reasonable caseloads, and trauma-informed support reduce vicarious trauma rates by 40%', citationIndex: 6 },
+      { text: 'Early career therapists are particularly vulnerable, often lacking training in recognizing and managing vicarious traumatization', citationIndex: 3 },
+    ],
+    sparkMoment: 'To witness trauma is to carry it---not as your own, but as something that changes what you know about what humans can survive and what they cannot.',
+    practicalExercise: {
+      title: 'Vicarious Trauma Self-Assessment and Boundary Practice',
+      steps: [
+        { title: 'Identify Warning Signs', description: 'Over the next week, notice if you\'re experiencing intrusive thoughts about clients\' trauma outside sessions, avoiding certain topics, feeling cynical about humanity, or struggling with hypervigilance. Write down specific examples.' },
+        { title: 'Establish Transition Rituals', description: 'Create a 5-10 minute ritual between sessions: stretch, go outside, listen to music, or do breathing exercises. This helps metabolize emotional residue before the next client.' },
+        { title: 'Set Digital Boundaries', description: 'Turn off work notifications after hours. Don\'t check client messages before bed. Protect sleep and personal time as sacred boundaries.' },
+        { title: 'Seek Consultation', description: 'Share your most difficult case with a trusted supervisor or peer consultation group. Bearing witness together distributes the weight and provides perspective.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1257,7 +1337,7 @@ export const traumaInformedCareArticlesB: Article[] = [
             A therapist listens as a client describes childhood sexual abuse in excruciating detail. Another hears a veteran recount watching his best friend die in combat. A third sits with a domestic violence survivor who fears for her life. Session after session, day after day, year after year.
           </p>
           <p className="mb-6">
-            This is the work of trauma therapists: bearing witness to humanity's worst suffering, holding space for unspeakable pain, and helping clients piece together shattered lives. It's profoundly meaningful work. It's also work that comes at a cost.
+            This is the work of trauma therapists: bearing witness to humanity\'s worst suffering, holding space for unspeakable pain, and helping clients piece together shattered lives. It\'s profoundly meaningful work. It\'s also work that comes at a cost.
           </p>
           <p className="mb-6">
             Vicarious trauma---also called secondary traumatic stress---describes the cumulative psychological impact of empathic engagement with traumatized clients <Citation id="1" index={1} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2018" tier={1} />. Unlike burnout, which stems from workplace stress and exhaustion, vicarious trauma specifically results from absorbing others" traumatic experiences and can fundamentally alter a therapist's worldview, sense of safety, and trust in humanity.
@@ -1583,7 +1663,7 @@ export const traumaInformedCareArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          The goal isn't to eliminate all negative effects of trauma work---some level of being affected is inherent to empathic engagement. The goal is to maintain balance: experiencing the profound rewards of the work while protecting yourself from being consumed by the darkness.
+          The goal isn\'t to eliminate all negative effects of trauma work---some level of being affected is inherent to empathic engagement. The goal is to maintain balance: experiencing the profound rewards of the work while protecting yourself from being consumed by the darkness.
         </p>
 
         <p className="mb-6">
@@ -1604,6 +1684,26 @@ export const traumaInformedCareArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma-Sensitive Design', 'Environmental Psychology', 'Healing Spaces', 'Accessibility'],
+    summary: 'Physical environments profoundly affect trauma survivors\' nervous systems. Trauma-sensitive spaces intentionally address sensory input, control, choice, and safety through thoughtful design of lighting, sound, layout, and accessibility. Creating healing environments requires understanding how architecture and design either support regulation or trigger dysregulation, with applications from therapy offices to schools, workplaces, and homes.',
+    keyFacts: [
+      { text: 'Environmental factors like lighting, noise, and spatial layout directly impact nervous system regulation in trauma survivors', citationIndex: 1 },
+      { text: 'Lack of control over physical environments can trigger traumatic stress responses, while choice promotes safety and empowerment', citationIndex: 3 },
+      { text: 'Sensory-friendly design elements reduce arousal and support self-regulation in clinical and community settings', citationIndex: 4 },
+      { text: 'Universal design principles that increase accessibility for people with disabilities also benefit trauma survivors', citationIndex: 5 },
+      { text: 'Research shows that trauma-sensitive physical environments accelerate healing and reduce crisis incidents in residential treatment by 30-40%', citationIndex: 3 },
+    ],
+    sparkMoment: 'A space becomes trauma-sensitive not through perfection but through intentionality---designing every element to ask "Does this support safety, choice, and regulation?"',
+    practicalExercise: {
+      title: 'Trauma-Sensitive Space Audit',
+      steps: [
+        { title: 'Assess Sensory Input', description: 'Walk through your space (therapy office, classroom, home) noting lighting (harsh fluorescents vs. soft lamps), sounds (constant hum, sudden noises), and visual clutter. Identify 2-3 sensory overwhelm sources to address first.' },
+        { title: 'Evaluate Control and Choice', description: 'Ask: Can people adjust temperature, lighting, or seating? Are there multiple seating options? Can someone leave without permission? Add at least one element of choice (adjustable lighting, seating variety, accessible exits).' },
+        { title: 'Create Regulation Resources', description: 'Establish a designated calm space with sensory tools: weighted items, fidgets, soft textures, noise-canceling headphones, grounding objects. Make these visible and freely available.' },
+        { title: 'Solicit Feedback', description: 'Ask trauma survivors who use your space: "What helps you feel safe here? What triggers discomfort?" Implement at least one suggestion within the next month, demonstrating that their input matters.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Trauma Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1714,7 +1814,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Collaboration and Transparency',
               description: (
                 <p>
-                  Involve users in design decisions. Make purposes clear---if there's a camera, explain why. Avoid hidden observation windows or other features that replicate surveillance trauma.
+                  Involve users in design decisions. Make purposes clear---if there\'s a camera, explain why. Avoid hidden observation windows or other features that replicate surveillance trauma.
                 </p>
               ),
             },
@@ -1730,7 +1830,7 @@ export const traumaInformedCareArticlesB: Article[] = [
               title: 'Empowerment',
               description: (
                 <p>
-                  Spaces should enhance dignity and self-efficacy. This means private areas for personal care, lockable storage, spaces that don't infantilize or institutionalize.
+                  Spaces should enhance dignity and self-efficacy. This means private areas for personal care, lockable storage, spaces that don\'t infantilize or institutionalize.
                 </p>
               ),
             },
@@ -1916,7 +2016,7 @@ export const traumaInformedCareArticlesB: Article[] = [
 
         <ArticleCallout variant="tip" title="Budget-Friendly Sensory Options">
           <p>
-            Sensory rooms don't require expensive equipment. Simple alternatives: soft pillows instead of therapy swings, phone apps for nature sounds, donated blankets, DIY weighted lap pads (rice or beans in sewn fabric), string lights from discount stores, and printed grounding exercises.
+            Sensory rooms don\'t require expensive equipment. Simple alternatives: soft pillows instead of therapy swings, phone apps for nature sounds, donated blankets, DIY weighted lap pads (rice or beans in sewn fabric), string lights from discount stores, and printed grounding exercises.
           </p>
         </ArticleCallout>
 
@@ -2011,7 +2111,7 @@ export const traumaInformedCareArticlesB: Article[] = [
           Implementing Changes: Where to Start
         </h2>
         <p className="mb-6">
-          Transforming spaces doesn't require complete renovation. Start with high-impact, low-cost changes:
+          Transforming spaces doesn\'t require complete renovation. Start with high-impact, low-cost changes:
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">

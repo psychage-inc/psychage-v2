@@ -12,6 +12,8 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 // ============================================================================
@@ -220,7 +222,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     description: 'How creative arts therapies complement traditional treatment for psychosis --- the evidence for art therapy, music therapy, and drama therapy in improving engagement, expression, and recovery.',
     image: '/images/articles/cat16/cover-027.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 11,
+    readTime: 9,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -233,6 +235,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
       { text: 'Music therapy produces moderate improvements in global state, negative symptoms, and social functioning in people with schizophrenia', citationIndex: 2 },
       { text: 'Art therapy reduces negative symptoms with an effect size comparable to some psychosocial interventions', citationIndex: 3 },
       { text: 'Creative therapies may be particularly effective for people who find verbal therapy difficult or threatening --- offering engagement through non-verbal channels', citationIndex: 4 },
+      { text: 'Creative arts therapies are delivered by credentialed professionals using structured therapeutic protocols, not recreational activities', citationIndex: 1 },
     ],
 
     videoStatus: 'planned' as const,
@@ -388,6 +391,72 @@ export const treatmentPsychoticArticlesB: Article[] = [
           quote="In art therapy I could put what was in my head onto paper. And once it was on paper, it was separate from me. I could look at it, talk about it, even change it. Inside my head it was overwhelming. On paper, it was just a picture."
           author="Service user perspective, Qualitative Health Research, 2020"
         />
+
+        <h2 id="accessing-creative-therapies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Accessing Creative Arts Therapies: Navigating the System
+        </h2>
+        <p className="mb-6">
+          Despite guideline recommendations, creative arts therapies remain underutilized in
+          psychosis treatment. Many community mental health teams don't employ arts therapists,
+          and those that do often have long wait lists. Funding restrictions mean that some
+          services are rationed to those deemed "most in need" --- though creative therapies
+          may be most valuable precisely for people who are less engaged with traditional
+          treatment modalities.
+        </p>
+        <p className="mb-6">
+          If you're seeking creative arts therapies, start by asking your treatment team directly:
+          "Do you have a music therapist, art therapist, or drama therapist on staff?" If not,
+          ask for referrals to external providers. In some health systems, arts therapies are
+          covered under mental health benefits; in others, they're classified as "complementary"
+          and not reimbursed. Community mental health centers, day programs, and peer-run
+          organizations often offer group-based arts activities even when individual therapy
+          isn't available. University clinics and training programs may provide low-cost
+          services delivered by supervised trainees.
+        </p>
+
+        <HighlightBox variant="emphasis">
+          <p>
+            <strong>Credentials matter:</strong> Creative arts therapies are regulated professions
+            with specific training requirements. In the United States, look for board certification
+            (MT-BC for music therapy, ATR-BC for art therapy, RDT for drama therapy). These
+            credentials ensure the practitioner has completed accredited graduate training and
+            supervised clinical hours. Recreation programs and hobby groups can be valuable, but
+            they're not the same as clinical therapy delivered by a trained professional.
+          </p>
+        </HighlightBox>
+
+        <h2 id="integration-with-standard-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Integration With Standard Care: Complementing, Not Replacing
+        </h2>
+        <p className="mb-6">
+          Creative arts therapies work best when integrated with --- not substituted for ---
+          medication and evidence-based psychological therapy. They are not alternative medicine;
+          they're complementary interventions that address dimensions of experience that
+          medication and talk therapy don't fully
+          reach <Citation id="4" index={4} source="Frontiers in Psychology" year="2020" tier={1} />.
+          The most effective treatment programs offer creative therapies alongside psychiatry,
+          CBTp, family support, and vocational services --- recognizing that recovery requires
+          addressing the whole person, not just suppressing symptoms.
+        </p>
+        <p className="mb-6">
+          Research on combined interventions is still emerging, but early evidence suggests
+          synergistic effects: people receiving both CBTp and music therapy show greater
+          improvements than either intervention alone. Creative therapies may improve engagement
+          with medication by providing a positive, non-stigmatizing treatment experience that
+          keeps people connected to services. And for people whose negative symptoms make verbal
+          therapy difficult, arts therapies can provide a bridge --- building therapeutic
+          relationships through non-verbal channels that later transfer to talking therapies.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Creative arts therapies provide alternative channels for expression and processing when words are inadequate or inaccessible</li>
+            <li>Music therapy has the strongest evidence base, with Cochrane reviews showing significant improvements in symptoms and functioning</li>
+            <li>Art, drama, and dance/movement therapies each offer unique mechanisms targeting different dimensions of psychotic experience</li>
+            <li>These are structured clinical interventions delivered by credentialed professionals, not recreational activities</li>
+            <li>Creative therapies work best when integrated with comprehensive care --- medication, therapy, family support, and vocational services</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -402,7 +471,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     description: 'How the Individual Placement and Support model is transforming employment outcomes for people with psychosis --- and why work itself is a form of treatment.',
     image: '/images/articles/cat16/cover-028.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 12,
+    readTime: 10,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -415,6 +484,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
       { text: 'People with psychosis who work show improvements in self-esteem, symptom severity, and quality of life independent of other treatment effects', citationIndex: 2 },
       { text: 'Only 10--20% of people with schizophrenia in high-income countries are competitively employed, despite most expressing desire to work', citationIndex: 3 },
       { text: 'The "train then place" model has been decisively outperformed by "place then train" across 27+ randomized controlled trials', citationIndex: 1 },
+      { text: 'IPS has no exclusion criteria based on symptoms, substance use, or work history --- anyone who wants to work is eligible', citationIndex: 4 },
     ],
 
     videoStatus: 'planned' as const,
@@ -574,6 +644,50 @@ export const treatmentPsychoticArticlesB: Article[] = [
           person need to work?" That reframing --- from gatekeeping to enabling --- is the
           essence of recovery-oriented care.
         </p>
+
+        <h2 id="employer-perspective" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          From the Employer's Perspective: Why Hiring Makes Business Sense
+        </h2>
+        <p className="mb-6">
+          Employer reluctance is often cited as a barrier to employment for people with psychosis,
+          but this reluctance is rooted more in stigma and misperception than in actual experience.
+          Studies following employers who have hired people with psychosis through IPS programs
+          reveal high levels of satisfaction. Workers with psychosis show comparable or better
+          job performance, lower turnover rates, and fewer workplace accidents than employees
+          hired through conventional channels.
+        </p>
+        <p className="mb-6">
+          The business case for supported employment is straightforward: employment specialists
+          do the heavy lifting of recruitment, training support, and ongoing consultation at no
+          cost to the employer. When issues arise, the employment specialist intervenes quickly,
+          often resolving problems that would otherwise lead to termination. In effect, the
+          employer gains a dedicated HR consultant focused on one employee's success. This
+          support infrastructure makes hiring someone with psychosis through IPS a lower-risk
+          proposition than hiring someone without any support system in place.
+        </p>
+
+        <MythVsFactBlock
+          myth="People with schizophrenia can't handle the stress of competitive employment"
+          fact="IPS achieves 55-65% employment rates in competitive jobs, and working itself reduces symptoms and improves quality of life for most participants"
+        />
+        <MythVsFactBlock
+          myth="You have to be symptom-free before you can work"
+          fact="IPS has zero exclusion criteria — people work successfully while managing ongoing symptoms, with employment itself often reducing symptom severity"
+        />
+        <MythVsFactBlock
+          myth="Pre-vocational training prepares people better than direct job placement"
+          fact="27+ randomized trials show 'place then train' (IPS) consistently doubles employment rates compared to 'train then place' approaches"
+        />
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>The IPS model's "place then train" approach consistently doubles employment rates compared to traditional vocational rehabilitation</li>
+            <li>Employment provides clinical benefits independent of other treatments --- improving self-esteem, reducing symptoms, and enhancing quality of life</li>
+            <li>IPS has no exclusion criteria --- symptom severity, substance use, and work history do not disqualify anyone from services</li>
+            <li>Most people with psychosis want to work, but fewer than 20% are employed --- the gap reflects lack of support, not lack of capability</li>
+            <li>Supported employment should be a standard component of psychosis treatment, not an add-on for the 'high-functioning'</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -588,7 +702,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     description: 'The evidence for exercise as a treatment for psychosis symptoms --- how physical activity improves cognition, mood, and physical health in people with schizophrenia and related conditions.',
     image: '/images/articles/cat16/cover-029.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 12,
+    readTime: 10,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -601,6 +715,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
       { text: 'Aerobic exercise produces moderate improvements in cognitive function comparable to cognitive remediation therapy', citationIndex: 2 },
       { text: 'Exercise interventions reduce positive and negative symptoms with effect sizes of 0.3--0.5, comparable to adding a second antipsychotic', citationIndex: 3 },
       { text: 'Physical activity levels in people with schizophrenia are approximately 50% lower than age-matched controls', citationIndex: 4 },
+      { text: 'Exercise increases brain-derived neurotrophic factor (BDNF) and promotes hippocampal neurogenesis, potentially counteracting brain changes in schizophrenia', citationIndex: 7 },
     ],
 
     videoStatus: 'planned' as const,
@@ -759,6 +874,65 @@ export const treatmentPsychoticArticlesB: Article[] = [
           pathological pathways simultaneously --- making it one of the most biologically
           comprehensive interventions available.
         </p>
+
+        <h2 id="practical-prescription" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Type of Exercise? Practical Prescriptions
+        </h2>
+        <p className="mb-6">
+          The evidence base for exercise in psychosis primarily comes from supervised aerobic
+          exercise programs --- walking, cycling, jogging, or group fitness classes at moderate
+          intensity for 30-60 minutes, 2-3 times per week. This is the "dosage" that has
+          produced measurable clinical benefits in research
+          trials <Citation id="3" index={3} source="Cochrane Database of Systematic Reviews" year="2020" tier={1} />.
+          However, resistance training, yoga, and team sports have also shown benefits, suggesting
+          that the best exercise is the one that gets done consistently.
+        </p>
+        <p className="mb-6">
+          For people with low baseline activity levels --- which describes most people with
+          schizophrenia --- starting with even 10-15 minutes of walking three times per week
+          represents a meaningful increase. The goal is progressive: start where you are, add
+          small increments over weeks, and prioritize consistency over intensity. Supervised
+          or group-based programs show better adherence than "just exercise on your own"
+          recommendations, suggesting that social support and structure are key enablers.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 30, suffix: ' min', label: 'Minimum duration per session in research trials' },
+            { value: 3, suffix: '× per week', label: 'Minimum frequency for clinical benefits' },
+            { value: 50, suffix: '%', label: 'Improvement in adherence with supervised vs. independent exercise' },
+          ]}
+          source="Cochrane Database of Systematic Reviews, 2020"
+        />
+
+        <ArticleCallout variant="action" title="For Healthcare Providers">
+          <p className="mb-4">
+            Exercise should be prescribed as deliberately as medication: specify type, duration,
+            frequency, and intensity. Better yet, integrate exercise into treatment settings.
+            On-site walking groups, partnerships with community gyms offering reduced rates,
+            and referrals to exercise physiologists trained in mental health can bridge the
+            gap between recommendation and
+            reality <Citation id="8" index={8} source="National Institute for Health and Care Excellence" year="2024" tier={3} />.
+          </p>
+          <p>
+            Monitor physical health metrics routinely: weight, blood pressure, glucose, lipids.
+            When antipsychotics cause weight gain, prescribing exercise isn't optional --- it's
+            harm reduction. And when someone's negative symptoms make initiating activity nearly
+            impossible, consider prescribing facilitated exercise as you would any other
+            therapeutic
+            intervention <Citation id="9" index={9} source="World Federation of Societies of Biological Psychiatry" year="2020" tier={3} />.
+          </p>
+        </ArticleCallout>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>The 15-20 year life expectancy gap for people with schizophrenia is driven primarily by preventable cardiovascular disease, not by the psychiatric condition itself</li>
+            <li>Exercise produces benefits across psychiatric, cognitive, and physical health domains — it's one of the most comprehensive interventions available</li>
+            <li>The effective "dose" is 30-60 minutes of moderate aerobic activity, 2-3 times per week — but starting with less is far better than not starting at all</li>
+            <li>Supervised and group-based programs dramatically improve adherence compared to independent exercise recommendations</li>
+            <li>Exercise should be prescribed, facilitated, and monitored as deliberately as medication — not mentioned briefly at the end of appointments</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -773,7 +947,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
     description: 'A practical guide to navigating psychiatric services, understanding your rights, communicating with treatment teams, and advocating for comprehensive care when living with psychosis.',
     image: '/images/articles/cat16/cover-030.svg',
     category: CATEGORY_PSYCHOSIS,
-    readTime: 11,
+    readTime: 10,
     publishedAt: '2026-03-25',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -786,6 +960,7 @@ export const treatmentPsychoticArticlesB: Article[] = [
       { text: 'Advance directives for mental health allow people to specify treatment preferences while well --- providing guidance for situations when they may not be able to communicate preferences', citationIndex: 2 },
       { text: 'Shared decision-making in psychosis care is associated with improved treatment adherence, satisfaction, and therapeutic alliance', citationIndex: 3 },
       { text: 'Peer navigators --- people with lived experience of psychosis who guide others through the system --- improve engagement and reduce hospitalization', citationIndex: 4 },
+      { text: 'Comprehensive psychosis care should include medication, psychological therapy, family support, and vocational assistance --- medication alone is substandard care', citationIndex: 7 },
     ],
 
     videoStatus: 'planned' as const,
@@ -938,6 +1113,69 @@ export const treatmentPsychoticArticlesB: Article[] = [
           looks like, and having people in your corner who can help you get what you
           need <Citation id="8" index={8} source="National Institute of Mental Health" year="2024" tier={2} />.
         </p>
+
+        <h2 id="communication-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Communication Strategies: Making Yourself Heard
+        </h2>
+        <p className="mb-6">
+          Communicating effectively with treatment teams is challenging when psychosis impairs
+          concentration, organization of thought, or verbal expression. Simple strategies can
+          make appointments more productive: writing concerns down before the appointment,
+          bringing a support person who can fill in gaps, and asking the clinician to summarize
+          what was discussed at the end. If you don't understand something, say so --- complex
+          clinical terminology is jargon, not a test of your intelligence.
+        </p>
+        <p className="mb-6">
+          When you disagree with a recommendation, frame it as a question rather than refusal:
+          "Can you help me understand why you're recommending this medication instead of the
+          one I'm currently taking?" This signals engagement rather than resistance and often
+          surfaces information that changes your perspective --- or the clinician's. If the
+          answer doesn't satisfy you, it's appropriate to say: "I'd like time to think about
+          this" or "I'd like to get a second opinion before deciding."
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            { title: 'Before the Appointment', description: 'Write down your top 3 concerns, any medication side effects, and one question you want answered. Bring this list and refer to it during the appointment. Consider bringing a support person who can help you remember and communicate.' },
+            { title: 'During the Appointment', description: 'If you don\'t understand something, ask for clarification immediately. Take notes or ask if you can record the conversation (most clinicians will agree). If decisions are being made, ensure you understand: what the decision is, why it\'s being recommended, what alternatives exist, and what happens if you decline.' },
+            { title: 'End of Appointment', description: 'Ask the clinician to summarize: what was discussed, what the plan is, and what you should do before the next appointment. Confirm the date and time of your next visit and get contact information for urgent questions.' },
+            { title: 'After the Appointment', description: 'Review your notes. If something is unclear or you forgot to mention something important, contact the clinic within 24-48 hours — don\'t wait until the next appointment. Write down what worked and what didn\'t to improve the next visit.' },
+          ]}
+        />
+
+        <h2 id="red-flags" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Red Flags: When Your Care Falls Short of Standards
+        </h2>
+        <p className="mb-6">
+          Not all mental health care meets accepted standards. Warning signs that your treatment
+          may be substandard
+          include <Citation id="7" index={7} source="National Institute for Health and Care Excellence" year="2024" tier={3} />:
+          medication prescribed without discussing alternatives, side effects, or your
+          preferences; appointments focused exclusively on medication adjustment with no inquiry
+          about symptoms, functioning, or quality of life; no offer of psychological therapy
+          despite guidelines recommending it; treatment decisions made without your input or
+          against your expressed wishes (outside of involuntary treatment contexts); and refusal
+          to provide information about your diagnosis, prognosis, or treatment options.
+        </p>
+        <p className="mb-6">
+          When care falls short, your options include: requesting a case review with your
+          clinician's supervisor, filing a formal complaint with the facility's patient relations
+          department, contacting an external patient advocacy organization, or switching providers
+          if feasible. These steps aren't confrontational --- they're how healthcare systems
+          receive feedback and improve. You're advocating not just for yourself but for everyone
+          who comes after you.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Feeling heard and respected by your treatment team is one of the strongest predictors of engagement and satisfaction with care</li>
+            <li>Comprehensive care for psychosis should include medication, psychological therapy, family support, and vocational assistance — medication alone is inadequate</li>
+            <li>You have legal rights to informed consent, access to your records, and participation in treatment decisions — understanding these rights is the foundation of self-advocacy</li>
+            <li>Peer navigators with lived experience of psychosis can provide unique support in understanding and navigating the system</li>
+            <li>Preparation (written concerns, support people, clarifying questions) dramatically improves the productivity of clinical appointments</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

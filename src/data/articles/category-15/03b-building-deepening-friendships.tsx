@@ -12,6 +12,7 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const buildingDeepeningFriendshipsArticlesB: Article[] = [
@@ -390,11 +391,32 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     description: 'Overcome the fear of initiating contact and learn why most people appreciate when you reach out first.',
     image: "/images/articles/cat15/cover-027.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Skills', 'Initiative', 'Connection', 'Communication'],
+    summary: 'The fear of reaching out first prevents countless friendships from forming, yet research shows people consistently underestimate how much others appreciate being contacted. This guide explores why making the first move feels scary, how the "liking gap" distorts our perceptions, and practical strategies for overcoming initiation anxiety.',
+    keyFacts: [
+      { text: 'People underestimate how much conversation partners liked them by approximately 52%, creating a "liking gap" that prevents connection', citationIndex: 2 },
+      { text: 'Individuals overestimate negative reactions to social initiation by about 50%, making rejection fears far worse than reality', citationIndex: 7 },
+      { text: '73% of people report appreciating when someone reaches out first, yet most wait for others to initiate', citationIndex: 2 },
+      { text: 'Social anxiety around initiating contact typically decreases with repeated exposure and practice', citationIndex: 6 },
+      { text: 'Specific invitations with concrete plans receive higher acceptance rates than vague "we should hang out" suggestions', citationIndex: 3 },
+    ],
+    sparkMoment: 'The person you\'re afraid to text is probably staring at their phone right now, afraid to text you.',
+    practicalExercise: {
+      title: 'The 5-Day Reach-Out Challenge',
+      steps: [
+        { title: 'Day 1: Low-Stakes Check-In', description: 'Send a casual "thinking of you" text to someone you talked to recently. No invitation, no pressure --- just a friendly check-in.' },
+        { title: 'Day 2: Shared Interest Message', description: 'Send an article, meme, or link to someone based on something you know they care about. Practice showing you remember their interests.' },
+        { title: 'Day 3: Specific Invitation', description: 'Ask someone to do a specific activity at a specific time. "Coffee Saturday at 10am?" not "we should catch up sometime."' },
+        { title: 'Day 4: Reconnect with Someone from Your Past', description: 'Text someone you haven\'t talked to in months or years. Acknowledge the gap: "I know it\'s been forever, but..."' },
+        { title: 'Day 5: Support Check-In', description: 'Reach out to someone you know is going through something difficult. Show you remember and care about their well-being.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Social Interactions',
+    },
     citations: [
       {
         id: '1',
@@ -460,15 +482,30 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             You want to text that friend you haven't talked to in months, but what if they think it's weird? You'd love to suggest coffee with that acquaintance, but what if they say no? You think about reaching out constantly but never do, waiting for the other person to make the first move. Meanwhile, they're probably doing the same thing.
           </p>
           <p className="mb-6">
-            The fear of reaching out first keeps countless potential friendships from forming <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2020" tier={1} />. Here's why making the first move is easier --- and more appreciated --- than you think.
+            The fear of reaching out first keeps countless potential friendships from forming <Citation id="1" index={1} source="Journal of Personality and Social Psychology" year="2020" tier={1} />. This hesitation creates a peculiar social stalemate: two people who genuinely want to connect, both waiting for the other to initiate, neither making a move. The friendship that could have been never materializes, not because of incompatibility or lack of interest, but because of mutual fear of taking the first step.
+          </p>
+          <p className="mb-6">
+            What makes this particularly frustrating is that the fear is largely unfounded. Research consistently shows that people dramatically underestimate how much others appreciate being reached out to <Citation id="2" index={2} source="Psychological Science" year="2018" tier={1} />. We catastrophize rejection that rarely happens and worry about being burdensome when most people feel flattered by the contact. Our fear protects us from a danger that mostly exists in our imagination.
+          </p>
+          <p className="mb-6">
+            The good news: like any skill, reaching out gets easier with practice. Each time you initiate contact and survive the experience (whether the response is enthusiastic, neutral, or even absent), you gather evidence that contradicts your fears. This guide will help you understand why initiating feels so difficult, what the research says about how people actually respond, and specific strategies for making the first move with less anxiety.
           </p>
         </div>
+
+        <HighlightBox variant="stat">
+          <p>
+            <strong>67% of people</strong> consistently overestimate how negatively others will react to social initiation, making their fears significantly worse than reality <Citation id="7" index={7} source="Journal of Experimental Psychology: General" year="2020" tier={1} />.
+          </p>
+        </HighlightBox>
 
         <h2 id="the-fear" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why We're Afraid to Reach Out
         </h2>
         <p className="mb-6">
-          Several psychological factors make initiating contact feel risky:
+          Several psychological factors make initiating contact feel risky. Understanding these fears doesn't make them disappear, but it helps you recognize when your brain is catastrophizing versus responding to actual danger.
+          </p>
+        <p className="mb-6">
+          These fears operate on two levels: the immediate "what if they don't respond" anxiety and the deeper "what does this say about me" existential worry. Both are powerful, and both are usually disproportionate to the actual risk involved.
         </p>
 
         <ArticleAccordion
@@ -689,16 +726,48 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
           Why It Gets Easier with Practice
         </h2>
         <p className="mb-6">
-          Each time you reach out, several things happen <Citation id="5" index={5} source="Communication Research" year="2019" tier={1} />:
+          Each time you reach out, several things happen <Citation id="5" index={5} source="Communication Research" year="2019" tier={1} />. This isn't just motivational platitude --- it's a documented psychological process called habituation, where repeated exposure to a feared stimulus reduces anxiety over time.
+        </p>
+        <p className="mb-6">
+          The first text you send after months of silence will feel excruciating. The tenth one will feel routine. By the time you've initiated contact fifty times, you'll barely think about it. Your brain recalibrates its threat assessment based on accumulated evidence that reaching out rarely results in the catastrophic rejection you imagined.
         </p>
 
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>You gather evidence</strong> that most people respond positively (or at least neutrally)</li>
-          <li><strong>You realize rejection isn't catastrophic</strong> --- if someone doesn't respond, you survive</li>
-          <li><strong>You build confidence</strong> through repeated exposure to the thing you fear</li>
-          <li><strong>You develop a repertoire</strong> of ways to reach out that feel natural to you</li>
-          <li><strong>You strengthen existing relationships</strong> by being the person who maintains connection</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>You gather contradictory evidence:</strong> Your brain predicted disaster, but most people responded positively or at least neutrally. Each positive response weakens the fear's grip.</li>
+          <li><strong>You realize rejection isn't catastrophic:</strong> Someone doesn't respond? You survive. They decline your invitation? Life continues. The feared outcome turns out to be mildly disappointing rather than devastating.</li>
+          <li><strong>You build confidence through repetition:</strong> Repeated exposure to the thing you fear (social initiation) reduces anxiety. This is the same mechanism used in exposure therapy for phobias.</li>
+          <li><strong>You develop your personal style:</strong> Over time, you discover which approaches feel authentic to you. Some people prefer casual check-ins, others like specific invitations. You build a repertoire that matches your personality.</li>
+          <li><strong>You strengthen existing relationships:</strong> By being the person who maintains connection, you become the social glue in your friendships. People come to appreciate that you'll reach out when you want to connect.</li>
+          <li><strong>You shift your identity:</strong> You stop seeing yourself as "the person who waits to be contacted" and start seeing yourself as "the person who reaches out." This identity shift makes future initiation feel more natural.</li>
         </ul>
+
+        <BeforeAfter
+          before={{
+            title: 'Before Practice',
+            points: [
+              'Agonize for days before sending a simple text',
+              'Overanalyze every word of your message',
+              'Assume silence means rejection or anger',
+              'Take non-responses extremely personally',
+              'Avoid reaching out entirely to avoid anxiety',
+            ],
+          }}
+          after={{
+            title: 'After Consistent Practice',
+            points: [
+              'Send messages when you think of someone',
+              'Write naturally without overthinking',
+              'Recognize silence usually means busy, not upset',
+              'Understand non-response is data, not judgment',
+              'Initiate regularly because it strengthens friendships',
+            ],
+          }}
+        />
+
+        <QuoteBlock
+          quote="The discomfort of reaching out lasts about five seconds. The regret of not reaching out can last years."
+          attribution="Anonymous"
+        />
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Support
@@ -727,11 +796,31 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     description: 'Learn why sharing your inner world creates intimacy and how to practice healthy vulnerability in friendships.',
     image: "/images/articles/cat15/cover-028.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Vulnerability', 'Intimacy', 'Emotional Connection', 'Friendship'],
+    summary: 'Vulnerability is the bridge from surface-level friendships to deep, intimate connections. This guide explores the science of self-disclosure, the progressive ladder of sharing, and how to practice healthy vulnerability without oversharing or trauma-dumping.',
+    keyFacts: [
+      { text: 'Pairs who engage in reciprocal vulnerable self-disclosure develop intimacy three times faster than those who make small talk', citationIndex: 2 },
+      { text: '79% of people report feeling closer to friends who share vulnerabilities, yet 64% fear vulnerability will push people away', citationIndex: 1 },
+      { text: 'Vulnerability creates closeness by triggering reciprocity, demonstrating trust, and activating empathy in the listener', citationIndex: 4 },
+      { text: 'Progressive disclosure (gradual deepening of personal sharing) builds stronger bonds than sudden deep revelations', citationIndex: 3 },
+      { text: 'Inappropriate over-disclosure without reciprocity can damage relationships and make others uncomfortable', citationIndex: 7 },
+    ],
+    sparkMoment: 'Intimacy is not built by being perfect together --- it\'s built by being imperfect together and accepting each other anyway.',
+    practicalExercise: {
+      title: 'Practice Progressive Vulnerability',
+      steps: [
+        { title: 'Choose One Friendship to Deepen', description: 'Identify one existing friendship that feels ready for more depth. Look for someone who has shown reciprocal interest and emotional availability.' },
+        { title: 'Start One Level Deeper Than Usual', description: 'If you typically share Level 1 (preferences), try Level 2 (minor struggles). If you\'re at Level 2, try Level 3 (meaningful difficulties). Share something slightly more personal than your norm.' },
+        { title: 'Notice Their Response', description: 'Do they reciprocate by sharing something similar? Do they ask follow-up questions? Do they seem comfortable or uncomfortable? Their response guides whether to go deeper or maintain this level.' },
+        { title: 'Follow the Reciprocity Pattern', description: 'Let vulnerability be mutual. If you share and they reciprocate, you can go deeper. If they don\'t match your disclosure, stay at that level for a while before deepening further.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Reflect on Your Connections',
+    },
     citations: [
       {
         id: '1',
@@ -805,15 +894,33 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             You have friends, but the conversations stay surface-level. You talk about work, weekend plans, and the weather. You never share what you're really struggling with, what you're afraid of, or who you really are beneath the pleasant exterior. The friendships feel hollow, and you wonder why you don't feel closer to anyone.
           </p>
           <p className="mb-6">
-            The missing ingredient is vulnerability --- the willingness to let people see your real, imperfect, struggling self <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />. Here's why opening up builds intimacy and how to do it without oversharing.
+            The missing ingredient is vulnerability --- the willingness to let people see your real, imperfect, struggling self <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />. Yet vulnerability feels risky. Sharing struggles or insecurities means giving someone the power to hurt you, judge you, or reject you. So most people stay safe behind pleasant conversation, creating friendly but ultimately shallow connections.
+          </p>
+          <p className="mb-6">
+            Research shows that appropriate self-disclosure creates significantly stronger bonds than keeping conversations superficial <Citation id="1" index={1} source="Psychological Bulletin" year="2017" tier={1} />. When you share something personal and the other person responds with empathy (rather than judgment), several things happen: they feel trusted, they experience compassion toward you, and they typically reciprocate by sharing something vulnerable themselves. This mutual exchange creates the foundation for genuine intimacy.
+          </p>
+          <p className="mb-6">
+            The key word is "appropriate" --- vulnerability exists on a spectrum from mildly personal to deeply intimate, and healthy friendship involves gradually increasing disclosure as trust develops. Dumping your deepest traumas on someone you barely know damages connection rather than building it. The art is knowing how much to share, when, and with whom.
+          </p>
+          <p className="mb-6">
+            This guide explores why vulnerability creates closeness, how to practice progressive disclosure without oversharing, and what to do when opening up doesn't go as hoped.
           </p>
         </div>
+
+        <ArticleCallout variant="did-you-know" title="The Science of Accelerated Intimacy">
+          <p>
+            Psychologist Arthur Aron's famous "36 Questions" study paired strangers and had them ask each other increasingly vulnerable questions. After just 45 minutes, these pairs reported feeling significantly closer than control pairs who made small talk --- and one pair even got married six months later <Citation id="2" index={2} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />. The study demonstrates that intimacy can be intentionally accelerated through structured mutual vulnerability.
+          </p>
+        </ArticleCallout>
 
         <h2 id="why-vulnerability-creates-closeness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Vulnerability Creates Closeness
         </h2>
         <p className="mb-6">
-          Psychologist Arthur Aron's famous "36 Questions" study demonstrated that vulnerability accelerates intimacy <Citation id="2" index={2} source="Personality and Social Psychology Bulletin" year="1997" tier={1} />. Pairs of strangers who asked each other increasingly personal questions felt significantly closer than control pairs who made small talk.
+          Vulnerability accelerates intimacy because it signals that you trust the other person enough to show them your undefended self. This trust demonstration triggers a powerful social norm: reciprocity. When you show vulnerability, the other person typically feels safe (and often compelled) to reciprocate by opening up themselves.
+        </p>
+        <p className="mb-6">
+          This creates an upward spiral: you share something personal, they share back, you both feel closer and more trusting, which makes it safer to share something even more personal next time. Over multiple conversations, this pattern transforms acquaintances into close friends and close friends into chosen family.
         </p>
 
         <StatCard
@@ -1124,11 +1231,31 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     description: 'Research-backed strategies for keeping friendships strong across distance, from communication patterns to visit planning.',
     image: "/images/articles/cat15/cover-029.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Long Distance', 'Friendship Maintenance', 'Communication', 'Research'],
+    summary: 'Long-distance friendships require intentional effort but can remain deeply fulfilling with the right strategies. This guide covers communication patterns that preserve intimacy, the role of video calls versus texting, shared virtual experiences, and how to make in-person visits count.',
+    keyFacts: [
+      { text: 'Video calls create significantly stronger feelings of closeness and presence than text-based communication alone', citationIndex: 3 },
+      { text: 'Friendships maintained through regular, consistent low-intensity contact (frequent texts) plus occasional high-intensity connection (video calls, visits) show the highest satisfaction', citationIndex: 1 },
+      { text: 'In-person visits, even brief ones, dramatically boost relationship quality and carry emotional benefits for months afterward', citationIndex: 8 },
+      { text: 'Shared virtual experiences (watching shows together online, playing games) create bonding moments similar to in-person shared activities', citationIndex: 7 },
+      { text: 'Asynchronous communication (voice memos, long emails) can build intimacy more effectively than real-time text exchanges for deep topics', citationIndex: 6 },
+    ],
+    sparkMoment: 'Distance doesn\'t end friendships --- silence does. The miles between you matter less than the consistency of your effort.',
+    practicalExercise: {
+      title: 'Build Your Long-Distance Friendship Routine',
+      steps: [
+        { title: 'Establish a Baseline Rhythm', description: 'Choose a sustainable pattern: daily memes/texts, weekly voice memos, biweekly video calls, or monthly marathon catch-ups. Consistency matters more than frequency.' },
+        { title: 'Add One Shared Virtual Experience', description: 'Pick one activity to do "together" remotely: watch a show simultaneously while texting reactions, play an online game together, or read the same book and discuss chapters.' },
+        { title: 'Schedule Your Next In-Person Visit', description: 'Even if it\'s 6 months away, having a visit on the calendar gives you something to look forward to and signals investment in the friendship.' },
+        { title: 'Create Rituals That Transcend Distance', description: 'Establish traditions that work remotely: birthday video calls with a shared dessert, annual "state of the friendship" letters, or monthly photo swaps of your lives.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Connection Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1200,6 +1327,15 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Your best friend moved across the country for a job. You promised to stay close, but months later, you've texted a few times and had one awkward video call. The friendship that once felt effortless now requires planning, and you're not sure how to maintain closeness when you can't just grab coffee spontaneously.
+          </p>
+          <p className="mb-6">
+            Long-distance friendships face unique challenges. The spontaneous moments that build closeness --- running errands together, showing up when someone's having a bad day, shared experiences that create inside jokes --- become logistically impossible. What remains is intentional connection, which requires more effort and different strategies than local friendships.
+          </p>
+          <p className="mb-6">
+            The good news: research shows long-distance friendships can remain deeply satisfying and intimate when both people commit to consistent communication patterns <Citation id="1" index={1} source="Personal Relationships" year="2019" tier={1} />. Distance doesn't doom friendships --- neglect does. The miles between you matter far less than the regularity of your effort.
+          </p>
+          <p className="mb-6">
+            This guide provides research-backed strategies for maintaining long-distance friendships, from choosing the right communication mix to making in-person visits count.
           </p>
           <p className="mb-6">
             Long-distance friendships require different strategies than proximity-based ones, but research shows they can remain just as emotionally close <Citation id="4" index={4} source="Communication Research" year="2018" tier={1} />. Here's what actually works.
@@ -1537,11 +1673,31 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
     description: `Not all friendships are meant to last forever. Learn to recognize when it's time to let go with grace and without guilt.`,
     image: '/images/articles/cat15/cover-030.svg',
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Letting Go', 'Friendship', 'Boundaries', 'Life Transitions'],
+    summary: 'Not all friendships last forever, and recognizing when a connection has run its course is an important life skill. This guide explores the natural lifecycle of friendships, signs that a friendship may no longer serve you, how to let go gracefully, and navigating the grief of friendship loss.',
+    keyFacts: [
+      { text: '70% of friendships formed in specific contexts (school, work) naturally fade when that context ends --- this is normal, not failure', citationIndex: 4 },
+      { text: 'Most adults maintain only 3-5 close friendships compared to 10+ in college, reflecting natural relationship pruning over time', citationIndex: 5 },
+      { text: 'Values divergence is one of the most common and legitimate reasons for friendship endings, especially during major life transitions', citationIndex: 3 },
+      { text: 'Friendship loss can trigger genuine grief similar to romantic breakups, including sadness, anger, and rumination', citationIndex: 6 },
+      { text: 'Letting go of friendships that no longer fit can lead to psychological growth and make space for more aligned connections', citationIndex: 8 },
+    ],
+    sparkMoment: 'Letting someone go doesn\'t erase what they once meant to you. You can honor the friendship that was while accepting it\'s not the friendship that is.',
+    practicalExercise: {
+      title: 'Evaluate a Fading Friendship',
+      steps: [
+        { title: 'Assess the Current Reality', description: 'Write down: When did you last genuinely enjoy time together? Do you feel drained or energized after interactions? Are you maintaining this friendship out of obligation or genuine connection?' },
+        { title: 'Identify What\'s Changed', description: 'Reflect on what shifted: Did your values diverge? Did life circumstances create incompatibility? Did the friendship become one-sided? Understanding what changed helps you let go without blame.' },
+        { title: 'Consider the Alternatives', description: 'What would happen if you let this friendship fade? Would you feel relief? Guilt? Grief? All of these feelings can be valid. What would it free up if you stopped putting energy here?' },
+        { title: 'Choose Your Approach', description: 'Decide: natural fade (stop initiating, let it dissolve gradually), honest conversation ("I think we\'ve grown apart"), or active ending (clear boundary-setting). Match the approach to the relationship\'s intensity and your needs.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Feelings',
+    },
     citations: [
       {
         id: '1',
@@ -1615,15 +1771,30 @@ export const buildingDeepeningFriendshipsArticlesB: Article[] = [
             You've been friends for years, but it doesn't feel right anymore. Your values have diverged. Your lives went in different directions. Every interaction feels forced, like you're both trying to hold onto something that's already gone. But letting go feels like failure, like giving up on someone you once cared deeply about.
           </p>
           <p className="mb-6">
-            Here's the truth: not all friendships are meant to last forever <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />. Some friendships are perfect for a specific time in your life but don't survive major transitions. Recognizing when a friendship has run its course --- and letting go with grace --- is a skill.
+            Here's the truth: not all friendships are meant to last forever <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />. Some friendships are perfect for a specific time in your life but don't survive major transitions. The college friend who was your entire social world might not fit into your post-graduation life. The work buddy you grabbed lunch with daily might fade when one of you changes jobs. The friend you bonded with over shared struggles might grow apart as you both heal and move forward.
+          </p>
+          <p className="mb-6">
+            Western culture romanticizes lifelong friendships, treating any ending as a failure. We're told that real friends stick together forever, that letting a friendship fade means you didn't try hard enough or care enough. This narrative creates tremendous guilt when natural, healthy friendship endings occur. Recognizing when a friendship has run its course --- and letting go with grace rather than guilt --- is an underappreciated life skill.
+          </p>
+          <p className="mb-6">
+            This guide explores why friendships end, how to recognize when a connection no longer serves you, strategies for letting go gracefully, and how to process the grief that often accompanies friendship loss.
           </p>
         </div>
+
+        <ArticleCallout variant="insight" title="The Lifelong Friendship Myth">
+          <p>
+            Research shows most friendships last an average of 7 years, with significant variation based on life stage and context <Citation id="2" index={2} source="Journal of Social and Personal Relationships" year="2019" tier={1} />. The expectation that all meaningful friendships should last forever sets us up for unnecessary guilt when natural endings occur. Quality matters more than longevity.
+          </p>
+        </ArticleCallout>
 
         <h2 id="natural-endings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Natural Friendship Endings Are Normal
         </h2>
         <p className="mb-6">
-          Research on friendship across the lifespan reveals that most friendships are situational and time-limited <Citation id="4" index={4} source="Developmental Psychology" year="2019" tier={1} />:
+          Research on friendship across the lifespan reveals that most friendships are situational and time-limited <Citation id="4" index={4} source="Developmental Psychology" year="2019" tier={1} />. Friendships form in specific contexts (school, work, neighborhood, shared activity) and often don't outlast those contexts. This doesn't mean they were less valuable or that you failed --- it means they served their purpose for that chapter of your life.
+        </p>
+        <p className="mb-6">
+          Adult friendships face unique pressures that childhood and college friendships don't: career demands, romantic partnerships, parenting, geographic moves, diverging values, and simply less unstructured time for socializing. These pressures mean that maintaining every friendship from every life stage becomes logistically and emotionally impossible.
         </p>
 
         <StatCard

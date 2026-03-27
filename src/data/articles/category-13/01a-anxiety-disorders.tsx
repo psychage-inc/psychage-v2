@@ -26,6 +26,26 @@ export const anxietyDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Generalized Anxiety Disorder', 'GAD', 'Chronic Worry', 'Anxiety Treatment'],
+    summary: 'Generalized Anxiety Disorder (GAD) affects 6.8 million U.S. adults with persistent, uncontrollable worry about everyday situations. This comprehensive guide explores the symptoms, neurobiological causes, and evidence-based treatments that help people break free from chronic anxiety.',
+    keyFacts: [
+      { text: '6.8 million adults in the U.S. experience GAD annually, with women affected twice as often as men', citationIndex: 1 },
+      { text: 'Intolerance of uncertainty is a core feature of GAD, where people prefer knowing something bad will happen over uncertainty', citationIndex: 4 },
+      { text: 'The amygdala and prefrontal cortex function differently in people with GAD, creating heightened sensitivity to potential threats', citationIndex: 5 },
+      { text: 'Cognitive Behavioral Therapy is the gold standard treatment, with 60-80% of patients showing significant improvement', citationIndex: 8 },
+      { text: 'Mindfulness-based interventions have shown effectiveness comparable to medication in reducing anxiety symptoms', citationIndex: 9 },
+    ],
+    sparkMoment: 'Worry is not a character flaw or personal weakness—it\'s your brain\'s overactive alarm system trying to protect you from dangers that rarely materialize.',
+    practicalExercise: {
+      title: 'The Worry Decision Tree',
+      steps: [
+        { title: 'Identify the Worry', description: 'Write down exactly what you\'re worried about in one clear sentence.' },
+        { title: 'Ask: Can I Do Something About This?', description: 'If yes, make a concrete action plan. If no, move to step 3.' },
+        { title: 'Practice Acceptance', description: 'Say aloud: "I cannot control this, and that\'s okay. I can tolerate this uncertainty."' },
+        { title: 'Redirect Your Attention', description: 'Choose one engaging activity (call a friend, take a walk, work on a project) and commit to it for 15 minutes.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Anxiety Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -421,6 +441,26 @@ export const anxietyDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Anxiety', 'Social Phobia', 'Performance Anxiety', 'CBT'],
+    summary: 'Social Anxiety Disorder affects 7% of U.S. adults with overwhelming fear of judgment in social situations. This guide examines the neurobiological roots, developmental pathways, and proven treatments including CBT with exposure and virtual reality therapy.',
+    keyFacts: [
+      { text: '7% of U.S. adults experience social anxiety disorder, with typical onset around age 13', citationIndex: 2 },
+      { text: 'The amygdala shows hyperactivity in people with SAD, creating exaggerated fear responses in social situations', citationIndex: 5 },
+      { text: 'Behaviorally inhibited children—those who are shy and fearful—have significantly higher risk of developing SAD later', citationIndex: 6 },
+      { text: 'CBT with exposure therapy is the gold standard treatment, with 70-80% showing significant improvement', citationIndex: 8 },
+      { text: '50% of people with social anxiety disorder also experience major depression due to social isolation', citationIndex: 12 },
+    ],
+    sparkMoment: 'Social anxiety isn\'t about being weak or antisocial—it\'s your nervous system seeing social situations as survival threats, activating the same alarm system our ancestors used to avoid predators.',
+    practicalExercise: {
+      title: 'The Attention Shift Technique',
+      steps: [
+        { title: 'Before a Social Situation', description: 'Identify one specific fear (e.g., "They\'ll think I\'m boring"). Write it down.' },
+        { title: 'Enter the Situation', description: 'Deliberately focus your attention outward: notice colors, sounds, what others are saying, the temperature of the room.' },
+        { title: 'Engage Authentically', description: 'Ask someone a genuine question about themselves. Listen to their answer without rehearsing your response.' },
+        { title: 'Reflect Afterward', description: 'Write down one thing you noticed about the other person and one thing that went better than you expected.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -719,6 +759,26 @@ export const anxietyDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Panic Disorder', 'Panic Attacks', 'Agoraphobia', 'Anxiety'],
+    summary: 'Panic disorder involves recurrent, unexpected panic attacks that create a cycle of fear and avoidance. This comprehensive guide covers the fear network dysfunction, catastrophic misinterpretation, and highly effective treatments including interoceptive exposure therapy.',
+    keyFacts: [
+      { text: '2.7% of U.S. adults experience panic disorder annually, with women affected twice as often as men', citationIndex: 1 },
+      { text: 'The fear network in the brain—amygdala, hippocampus, and prefrontal cortex—functions differently in panic disorder, creating false alarms', citationIndex: 5 },
+      { text: 'Catastrophic misinterpretation of bodily sensations (e.g., racing heart = heart attack) triggers the panic response', citationIndex: 6 },
+      { text: 'CBT with interoceptive exposure has 60-80% improvement rates by teaching the body that panic sensations are not dangerous', citationIndex: 9 },
+      { text: 'Panic disorder significantly impacts quality of life, often leading to agoraphobia and social isolation', citationIndex: 12 },
+    ],
+    sparkMoment: 'A panic attack is your body\'s emergency alarm going off when there is no emergency—terrifying but not dangerous, like a smoke detector triggered by burnt toast.',
+    practicalExercise: {
+      title: 'The Panic Sensation Diary',
+      steps: [
+        { title: 'Track Panic Triggers', description: 'For one week, note when panic sensations occur: What were you doing? What physical sensation appeared first?' },
+        { title: 'Identify Your Catastrophic Thought', description: 'Write the automatic thought that follows the sensation (e.g., "Racing heart = I\'m dying").' },
+        { title: 'Challenge the Interpretation', description: 'List 3 alternative, non-catastrophic explanations (e.g., "I had caffeine," "I climbed stairs," "I\'m anxious but safe").' },
+        { title: 'Create a Coping Card', description: 'Write: "This is uncomfortable, not dangerous. Panic peaks in 10 minutes and always passes. I am safe." Read it when panic rises.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Panic Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1072,6 +1132,26 @@ export const anxietyDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Phobias', 'Specific Phobia', 'Exposure Therapy', 'Fear'],
+    summary: 'Specific phobias affect 12.5% of adults with intense, irrational fears of objects or situations. This guide explores evolutionary preparedness, the five phobia categories, and why exposure therapy achieves 80-90% success rates—including one-session treatment protocols.',
+    keyFacts: [
+      { text: '12.5% of adults experience specific phobias at some point, making them among the most common anxiety disorders', citationIndex: 1 },
+      { text: 'Humans may be evolutionarily prepared to fear snakes, spiders, heights, and predators—explaining why these phobias are more common than fears of modern dangers', citationIndex: 4 },
+      { text: 'Blood-injection-injury phobia is unique: it causes blood pressure drops and fainting, not increases like other phobias', citationIndex: 3 },
+      { text: 'Exposure therapy has 80-90% success rates, with one-session treatment (2-3 hours) showing remarkable effectiveness', citationIndex: 6 },
+      { text: 'Virtual reality exposure therapy offers controlled, repeatable exposure that can be adjusted to patient comfort levels', citationIndex: 8 },
+    ],
+    sparkMoment: 'Your phobia isn\'t a personal failing—it\'s an ancient survival mechanism firing at the wrong target, protecting you from dangers that no longer exist.',
+    practicalExercise: {
+      title: 'The Exposure Ladder',
+      steps: [
+        { title: 'Identify Your Feared Object', description: 'Name the specific phobia (e.g., spiders, heights, flying). Rate your current fear from 0-10.' },
+        { title: 'Build Your Ladder', description: 'List 8-10 steps from easiest to hardest. E.g., for spider phobia: see cartoon spider → photo → video → toy spider → real spider in jar → real spider nearby.' },
+        { title: 'Start at Step 1', description: 'Expose yourself to the easiest step until anxiety decreases by half (habituation). This may take 20-60 minutes.' },
+        { title: 'Climb Gradually', description: 'Move to the next step only after the previous one no longer causes significant anxiety. Practice 3-5 times per week.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Anxiety Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1400,6 +1480,26 @@ export const anxietyDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Agoraphobia', 'Panic Disorder', 'Avoidance', 'Exposure Therapy'],
+    summary: 'Agoraphobia affects 1.3% of U.S. adults with intense fear of situations where escape might be difficult. This guide explores the fear-of-fear cycle, safety behavior traps, and CBT with in vivo exposure that helps people reclaim their freedom.',
+    keyFacts: [
+      { text: '1.3% of U.S. adults experience agoraphobia annually, with women affected twice as often as men', citationIndex: 1 },
+      { text: 'One-third of people with agoraphobia do not have panic disorder—the conditions can occur independently', citationIndex: 4 },
+      { text: 'Agoraphobia develops from fear of fear—anxiety about experiencing panic symptoms, not the situations themselves', citationIndex: 6 },
+      { text: 'Safety behaviors (carrying medication, staying near exits, bringing companions) provide short-term relief but maintain the disorder long-term', citationIndex: 7 },
+      { text: 'CBT with in vivo exposure is highly effective, with most patients experiencing substantial reductions in avoidance and improved functioning', citationIndex: 9 },
+    ],
+    sparkMoment: 'Agoraphobia isn\'t about the places you avoid—it\'s about believing you can\'t handle the sensations of anxiety, when in reality, you\'ve survived every panic attack you\'ve ever had.',
+    practicalExercise: {
+      title: 'The Graduated Exposure Challenge',
+      steps: [
+        { title: 'Map Your Avoidance', description: 'List 10 situations you avoid, from mildly uncomfortable to impossible. Rate each 1-10 for difficulty.' },
+        { title: 'Choose Your Starting Point', description: 'Pick a situation rated 3-4/10. Plan when and how you\'ll face it this week.' },
+        { title: 'Face It Without Safety Behaviors', description: 'Enter the situation without companions, escape routes, or reassurance. Stay until anxiety decreases by half (habituation).' },
+        { title: 'Track Your Success', description: 'After each exposure, write: What happened? Did my fear come true? How did I cope? Celebrate every small victory.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',

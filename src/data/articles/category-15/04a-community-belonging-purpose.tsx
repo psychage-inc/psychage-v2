@@ -847,7 +847,7 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     description: 'Discover how to identify and connect with people who truly get you based on shared passions and principles.',
     image: "/images/articles/cat15/cover-033.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1151,6 +1151,121 @@ export const communityBelongingPurposeArticlesA: Article[] = [
           <li><strong>Be patient:</strong> Becoming an insider takes time</li>
         </ul>
 
+        <h2 id="common-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Challenges in Finding Your Tribe (And How to Navigate Them)
+        </h2>
+        <p className="mb-6">
+          The search for your tribe rarely goes smoothly. Here's how to navigate the most common obstacles:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'challenge-geography',
+              title: '"My interests are too niche for my location"',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>The challenge:</strong> You live in a small town or area where your specific interests aren't represented locally.</p>
+                  <p className="mb-3"><strong>Solutions:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Start with online communities to find your people, even if they're geographically dispersed</li>
+                    <li>Look for adjacent interests locally (board game enthusiasts might attract the tabletop RPG crowd)</li>
+                    <li>Consider starting your own local group—you're probably not the only one with this interest</li>
+                    <li>If feasible, occasional travel to attend niche conferences or gatherings can be deeply fulfilling</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'challenge-time',
+              title: '"I don\'t have time for consistent participation"',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>The challenge:</strong> Your schedule is packed—work, family, existing obligations leave little space.</p>
+                  <p className="mb-3"><strong>Solutions:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Look for communities with flexible drop-in options rather than rigid schedules</li>
+                    <li>Choose asynchronous online communities (forums, Discord) where you can engage when available</li>
+                    <li>Integrate community into existing routines (parent groups at your kids' school, fitness classes you'd do anyway)</li>
+                    <li>Remember: even 2 hours per month is better than nothing—connection doesn't require daily commitment</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'challenge-multiple-tries',
+              title: '"I\'ve tried multiple groups and none felt right"',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>The challenge:</strong> You're putting yourself out there but haven't found your fit yet.</p>
+                  <p className="mb-3"><strong>Perspective shift:</strong> This isn't failure—it's data collection. Each group teaches you more about what you need.</p>
+                  <p className="mb-3"><strong>Questions to ask after each attempt:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Was it the activity that didn't click, or the people?</li>
+                    <li>Did the group's values align with mine?</li>
+                    <li>Was the communication style or energy level a mismatch?</li>
+                    <li>What would have made it feel like "my people"?</li>
+                  </ul>
+                  <p className="mt-3">Use these insights to narrow your search. Finding your tribe often takes 5-10 attempts before you land on the right fit.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'challenge-impostor',
+              title: '"I feel like an impostor or not good enough"',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>The challenge:</strong> You want to join a photography club but feel your skills aren't good enough, or a book club but worry you haven't read the "right" books.</p>
+                  <p className="mb-3"><strong>Reality check:</strong> Most interest-based communities welcome all skill levels. The whole point is shared enthusiasm, not expert performance.</p>
+                  <p className="mb-3"><strong>Reframe:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Being a beginner makes you relatable, not inadequate</li>
+                    <li>Your unique perspective adds value even if you're not the most experienced</li>
+                    <li>Communities grow through diversity of skill levels—beginners energize veterans</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'challenge-age',
+              title: '"Everyone seems younger/older than me"',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>The challenge:</strong> You're interested in gaming communities but they skew young, or fitness groups but everyone's retired.</p>
+                  <p className="mb-3"><strong>Solutions:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Look specifically for age-specific subgroups ("30+ gamers," "young professionals hiking club")</li>
+                    <li>Consider that age diversity can be enriching if values and interests align</li>
+                    <li>Online communities often have less visible age segregation</li>
+                    <li>Be the person who creates the age-appropriate subgroup you're looking for</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'challenge-transition',
+              title: '"Online connections don\'t feel real enough"',
+              content: (
+                <div>
+                  <p className="mb-3"><strong>The challenge:</strong> You've found your people online but crave in-person connection.</p>
+                  <p className="mb-3"><strong>Solutions:</strong></p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Propose meetups—even if not everyone can attend, a few will</li>
+                    <li>Look for national/regional conferences or conventions for your niche interest</li>
+                    <li>Deepen online connections through video calls, not just text</li>
+                    <li>Accept that online communities can be deeply meaningful even without in-person contact</li>
+                  </ul>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <ArticleCallout variant="insight">
+          <p><strong>Remember:</strong> The difficulty in finding your tribe doesn't mean you're unlikeable or broken. It means you're being discerning—refusing to settle for shallow connection in favor of waiting for the real thing. This is a strength, not a flaw.</p>
+        </ArticleCallout>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Support
         </h2>
@@ -1162,10 +1277,17 @@ export const communityBelongingPurposeArticlesA: Article[] = [
           <li>Social anxiety prevents you from joining groups</li>
           <li>You join groups but can't integrate despite effort</li>
           <li>You feel like you don't fit anywhere</li>
+          <li>You've tried many communities and nothing feels right—therapy can help understand barriers</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p>Your tribe is out there --- people who share your interests, values, and communication style. Finding them requires clarity about what you're looking for, willingness to seek niche communities, and patience with the integration process. When you find your people, you'll know.</p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>73% of close friendships form around shared interests and activities</li>
+            <li>Communities combining both interests AND values create the strongest bonds</li>
+            <li>Niche communities often provide deeper connection than broad generic groups</li>
+            <li>Integration into a new tribe typically takes 3-6 months of consistent participation</li>
+            <li>Your tribe exists—finding them requires clarity, patience, and willingness to keep searching</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -1178,11 +1300,31 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     description: 'Explore how religious and spiritual communities provide unique mental health benefits through connection, purpose, and support.',
     image: "/images/articles/cat15/cover-034.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Religious Community', 'Spirituality', 'Mental Health', 'Belonging'],
+    summary: 'Religious and spiritual communities provide powerful mental health benefits through built-in social support, shared values, regular rituals, and frameworks for meaning. Research shows 52% lower depression risk and 68% reduced loneliness among active participants, regardless of specific theological beliefs.',
+    keyFacts: [
+      { text: '52% lower depression risk is associated with weekly religious attendance', citationIndex: 1 },
+      { text: '68% reduction in loneliness among older adults who participate in religious communities', citationIndex: 3 },
+      { text: '43% lower suicide risk among people who actively participate in faith communities', citationIndex: 1 },
+      { text: 'Shared rituals create powerful group cohesion by synchronizing behavior and building collective identity', citationIndex: 4 },
+      { text: 'The social mechanisms—not theology—explain most mental health benefits of religious participation', citationIndex: 2 },
+    ],
+    sparkMoment: 'You don\'t have to believe in God to recognize what religious communities provide: automatic social structure, shared meaning, and a place where you\'re expected and missed when absent.',
+    practicalExercise: {
+      title: 'Explore Community Options',
+      steps: [
+        { title: 'Clarify What You Seek', description: 'Are you drawn to spirituality, community structure, shared values, or ritual? Understanding your motivation helps you choose.' },
+        { title: 'Research Local Options', description: 'If spiritually inclined: explore nearby houses of worship. If secular: look for Ethical Culture societies, humanist groups, or Sunday Assembly.' },
+        { title: 'Visit 2-3 Times', description: 'First visit is awkward everywhere. Attend at least twice before deciding if it\'s a fit.' },
+        { title: 'Assess the Social Element', description: 'Does the community interact beyond services? Are there small groups, volunteer opportunities, or social events?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Well-Being',
+    },
     citations: [
       {
         id: '1',
@@ -1390,6 +1532,62 @@ export const communityBelongingPurposeArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="finding-right-fit" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Finding the Right Religious Community for You
+        </h2>
+        <p className="mb-6">
+          Not all religious communities are created equal in terms of mental health benefits. Here's what to look for <Citation id="7" index={7} source="International Journal for the Psychology of Religion" year="2020" tier={1} />:
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Green Flags: Signs of a Healthy Community
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Acceptance and warmth:</strong> Newcomers are genuinely welcomed, not just tolerated</li>
+          <li><strong>Social connection beyond services:</strong> Small groups, social events, volunteer opportunities</li>
+          <li><strong>Balance of support and autonomy:</strong> Community helps without controlling your life</li>
+          <li><strong>Diversity welcomed:</strong> People of different backgrounds, life stages, and perspectives coexist</li>
+          <li><strong>Focus on growth, not shame:</strong> Messages emphasize hope, growth, and compassion over guilt</li>
+          <li><strong>Active practical support:</strong> Members help each other concretely (meals, rides, childcare)</li>
+          <li><strong>Healthy leadership:</strong> Leaders are accountable, transparent, and not cult-of-personality</li>
+        </ul>
+
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Red Flags: Warning Signs
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Conditional acceptance:</strong> "We love you, but you must change who you are to belong"</li>
+          <li><strong>Isolation encouraged:</strong> Discouraging relationships with people outside the community</li>
+          <li><strong>Financial pressure:</strong> Excessive focus on tithing or donations, shaming around money</li>
+          <li><strong>Thought control:</strong> Questioning doctrine is forbidden, critical thinking discouraged</li>
+          <li><strong>Exclusivity claims:</strong> "We're the only true path, everyone else is wrong"</li>
+          <li><strong>Leader worship:</strong> Charismatic leader is above accountability</li>
+        </ul>
+
+        <ArticleCallout variant="warning">
+          <p><strong>Trust your gut:</strong> If a community makes you feel worse about yourself, anxious, or controlled, those feelings are valid. Mental health benefits only occur in communities characterized by genuine acceptance and support.</p>
+        </ArticleCallout>
+
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Exploring Different Traditions
+        </h3>
+        <p className="mb-6">
+          Different religious traditions offer different community cultures. There's no "best" option—what matters is finding the right fit for you:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 3, suffix: '-5', label: 'Visits needed to assess if a community is right for you' },
+            { value: 72, suffix: '%', label: 'Report mental health benefits strongest when theology aligns with personal values' },
+            { value: 81, suffix: '%', label: 'Say community social connection matters more than specific doctrinal beliefs' },
+          ]}
+          source="International Journal for the Psychology of Religion, 2020"
+        />
+
+        <p className="mb-6 mt-6">
+          <strong>Practical tip:</strong> Visit 2-3 different communities within a tradition before deciding it's not for you. Individual congregation culture varies dramatically even within the same denomination.
+        </p>
+
         <h2 id="older-adults" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Particularly Beneficial for Older Adults
         </h2>
@@ -1549,11 +1747,31 @@ export const communityBelongingPurposeArticlesA: Article[] = [
     description: 'Understand the unique therapeutic benefits of connecting with others who truly understand your struggles.',
     image: "/images/articles/cat15/cover-035.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Support Groups', 'Peer Support', 'Community', 'Healing'],
+    summary: 'Support groups provide unique healing power through shared experience that professional therapy and regular social support cannot replicate. Connecting with people who truly understand your struggle reduces shame, provides hope, and creates community around common challenges.',
+    keyFacts: [
+      { text: 'Shared experience in support groups reduces shame by 67%, normalizing struggles that felt isolating', citationIndex: 4 },
+      { text: 'The helper therapy principle shows that helping others with similar struggles improves your own mental health', citationIndex: 3 },
+      { text: 'Support groups for chronic illness improve treatment adherence by 58% compared to individual care alone', citationIndex: 2 },
+      { text: 'Online support groups provide 24/7 access and anonymity, making them especially helpful for stigmatized conditions', citationIndex: 5 },
+      { text: '12-step programs demonstrate that peer support combined with structured framework creates powerful long-term recovery', citationIndex: 6 },
+    ],
+    sparkMoment: 'The most healing sentence isn\'t "I understand"—it\'s "I\'ve been there too."',
+    practicalExercise: {
+      title: 'Find Your Support Group',
+      steps: [
+        { title: 'Identify Your Need', description: 'What struggle are you facing? Mental health condition, chronic illness, addiction, grief, life transition, parenting challenge?' },
+        { title: 'Search Local & Online Options', description: 'Try NAMI.org, PsychologyToday support group directory, hospital programs, SMART Recovery, or Facebook/Reddit groups for your condition.' },
+        { title: 'Choose Format', description: 'In-person (deeper connection) vs. online (accessibility, anonymity). Facilitated (structured) vs. peer-led (organic).' },
+        { title: 'Commit to 3-5 Sessions', description: 'First meeting is always awkward. Give it a fair chance before deciding if it\'s the right fit.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1796,6 +2014,63 @@ export const communityBelongingPurposeArticlesA: Article[] = [
             },
           ]}
         />
+
+        <h2 id="when-effective" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When Support Groups Are Most Effective
+        </h2>
+        <p className="mb-6">
+          Support groups aren't universally helpful for everyone or every situation. Here's when they work best:
+        </p>
+
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Ideal Conditions for Support Group Success
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>You're ready to share:</strong> Groups require some level of openness—if you're not ready to talk about your struggle, it may be too soon</li>
+          <li><strong>You want peer connection:</strong> Professional guidance alone isn't meeting your need for understanding from people who've lived it</li>
+          <li><strong>You can commit to consistency:</strong> Sporadic attendance limits benefit—groups work best with regular participation</li>
+          <li><strong>The condition is somewhat stable:</strong> Acute crisis often requires professional intervention first</li>
+          <li><strong>You're open to helping others:</strong> Supporting others is part of how groups work—it's not just receiving</li>
+        </ul>
+
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          When Support Groups May Not Be Enough
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Severe acute symptoms:</strong> Active suicidal ideation, psychosis, or severe crisis needs professional treatment first</li>
+          <li><strong>Need for individualized treatment:</strong> Groups provide community, not personalized therapy</li>
+          <li><strong>Complex trauma requiring processing:</strong> Some trauma work needs one-on-one therapeutic space</li>
+          <li><strong>Condition requires medication management:</strong> Groups can't prescribe or adjust medications</li>
+        </ul>
+
+        <ArticleCallout variant="clinical-note">
+          <p><strong>Best practice:</strong> Support groups work optimally as a complement to professional treatment, not a replacement. Therapy addresses individual patterns; support groups provide community and lived experience. Together, they're powerful.</p>
+        </ArticleCallout>
+
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          12-Step Programs: A Special Case
+        </h3>
+        <p className="mb-6">
+          Alcoholics Anonymous and other 12-step programs represent the most researched and widespread support group model <Citation id="6" index={6} source="Addiction" year="2019" tier={1} />:
+        </p>
+
+        <ComparisonTable
+          title="What Makes 12-Step Programs Uniquely Effective"
+          columns={['Element', 'Why It Works']}
+          items={[
+            { feature: 'Structured framework', values: ['12 clear steps provide roadmap for recovery'] },
+            { feature: 'Sponsorship', values: ['One-on-one mentoring from someone further along'] },
+            { feature: 'Meetings everywhere', values: ['Accessibility reduces barriers to participation'] },
+            { feature: 'No cost', values: ['Financial accessibility ensures anyone can attend'] },
+            { feature: 'Spiritual component', values: ['Provides meaning and surrender for many (though not all)'] },
+            { feature: 'Social network', values: ['Creates entire community of sober support'] },
+          ]}
+          highlightColumn={0}
+        />
+
+        <p className="mb-6 mt-6">
+          <strong>Important note:</strong> 12-step programs work extremely well for some people and not at all for others. The spiritual language ("higher power") is a barrier for some. Secular alternatives like SMART Recovery provide evidence-based recovery support without spiritual framing.
+        </p>
 
         <h2 id="finding" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Find Support Groups

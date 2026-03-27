@@ -19,11 +19,31 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     description: 'How historical trauma, systemic racism, and cultural strengths shape mental health experiences in Black communities worldwide.',
     image: "/images/articles/cat12/cover-006.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Black Mental Health', 'Racism', 'Resilience', 'Health Disparities'],
+    summary: 'Black communities face unique mental health challenges shaped by systemic racism, historical trauma, and barriers to culturally responsive care. Yet alongside these struggles exists profound resilience rooted in faith, family, and collective identity. Understanding both the wounds and the strengths is essential for effective mental health support.',
+    keyFacts: [
+      { text: 'Black Americans are 20% more likely to experience serious mental health conditions than the general population, yet only 1 in 3 receives treatment', citationIndex: 1 },
+      { text: 'Chronic exposure to racism causes measurable biological aging (weathering) and increases rates of depression, anxiety, and cardiovascular disease', citationIndex: 5 },
+      { text: 'Black individuals are twice as likely to be diagnosed with schizophrenia, reflecting diagnostic bias rather than true prevalence differences', citationIndex: 7 },
+      { text: 'Faith and spirituality serve as powerful protective factors, with the Black church historically providing community healing and social support networks', citationIndex: 6 },
+      { text: 'The "Strong Black Woman" schema motivates resilience but also discourages help-seeking, contributing to untreated depression and chronic stress', citationIndex: 4 },
+    ],
+    sparkMoment: 'Seeking mental health support is not weakness—it is an act of resistance against systems that have never prioritized Black wellbeing.',
+    practicalExercise: {
+      title: 'Redefining Strength: A Self-Compassion Practice',
+      steps: [
+        { title: 'Acknowledge Your Reality', description: 'Write down three ways racism or discrimination has affected your mental health this month. Name the feelings without judgment.' },
+        { title: 'Challenge the "Strong" Narrative', description: 'Complete this sentence: "I have been taught that asking for help means ______, but actually it means ______."' },
+        { title: 'Identify Your Support Network', description: 'List three people or communities (faith groups, friends, cultural organizations) who affirm your worth and understand your experience.' },
+        { title: 'Practice Radical Self-Care', description: 'Choose one boundary to set this week that honors your needs, even if it disappoints others. Self-care is not selfish—it is necessary for survival.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Health',
+    },
     citations: [
       {
         id: '1',
@@ -152,7 +172,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
               content: (
                 <div>
                   <p className="mb-4">
-                    Accepting negative stereotypes about one's own racial group. Believing one must work twice as hard to be seen as half as good, questioning one's own worth, or distancing from Black identity.
+                    Accepting negative stereotypes about one\'s own racial group. Believing one must work twice as hard to be seen as half as good, questioning one\'s own worth, or distancing from Black identity.
                   </p>
                   <p className="mb-4">
                     <strong>Mental health effects:</strong> Low self-esteem, identity confusion, imposter syndrome, self-sabotage, difficulty trusting other Black people.
@@ -355,6 +375,16 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         <p className="mb-6">
           You deserve support, care, and healing. Seeking help is an act of self-preservation and resistance against systems that do not prioritize Black wellbeing. Your mental health matters.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Racism is a chronic stressor with measurable mental and physical health effects; addressing mental health in Black communities requires acknowledging systemic oppression, not just individual symptoms</li>
+            <li>Cultural mistrust of mental health systems is rational and protective given histories of medical racism and ongoing discrimination</li>
+            <li>Black communities possess profound protective factors—faith, family, collective identity, and resilience—that mainstream mental health must recognize and build upon</li>
+            <li>The "Strong Black Woman" archetype provides pride but also discourages vulnerability; true strength includes seeking support and setting boundaries</li>
+            <li>Culturally responsive care addresses racism directly, integrates spirituality, centers strengths, and connects clients with Black providers and community-based healing</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -365,11 +395,31 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     description: 'How traditional Middle Eastern values around honor, family reputation, and religious faith shape mental health experiences and help-seeking.',
     image: "/images/articles/cat12/cover-007.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Middle Eastern Culture', 'Honor Culture', 'Mental Health Stigma', 'Islam'],
+    summary: 'Middle Eastern mental health is shaped by honor culture, where family reputation takes precedence, and Islamic faith, which provides both protective spiritual resources and potential barriers to treatment. War, displacement, and severe stigma create enormous unmet needs, while culturally adapted care integrates faith, family, and language to provide effective support.',
+    keyFacts: [
+      { text: '85% of mental health needs in Middle Eastern communities go unmet, with only 0.5 psychiatrists per 100,000 people compared to 10+ in Europe', citationIndex: 7 },
+      { text: 'In honor cultures, mental illness is seen as bringing shame to the entire extended family, creating powerful barriers to help-seeking', citationIndex: 2 },
+      { text: 'Psychological distress is often expressed through physical symptoms (somatization)—headaches, chest pain, fatigue—because physical illness carries less stigma', citationIndex: 6 },
+      { text: 'Islamic faith provides protective coping mechanisms (prayer, spiritual meaning) but mental illness may be misinterpreted as spiritual failing or punishment', citationIndex: 3 },
+      { text: 'Syrian, Iraqi, and other refugee populations have extremely high rates of PTSD and depression from war trauma, yet face language barriers and cultural mismatch in Western mental health systems', citationIndex: 4 },
+    ],
+    sparkMoment: 'Seeking mental health care is not a betrayal of faith or family—it is fulfilling your duty to care for the mind and body Allah has entrusted to you.',
+    practicalExercise: {
+      title: 'Honoring Self and Family: A Values Reflection',
+      steps: [
+        { title: 'Identify Your Values', description: 'Write down 3 values that are most important to you (e.g., family loyalty, faith, honor, responsibility). Reflect on how these values shape your life.' },
+        { title: 'Assess Your Wellbeing', description: 'On a scale of 1-10, how well are you currently able to fulfill these values? If physical or emotional distress is interfering, acknowledge that honestly.' },
+        { title: 'Reframe Help-Seeking', description: 'Complete: "Taking care of my mental health would help me better fulfill my duty to _______ (family, faith, community)."' },
+        { title: 'Take One Step', description: 'Choose one small action this week: talk to a trusted friend, research culturally matched providers, or speak with an imam about mental health and Islam.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Symptoms Privately',
+    },
     citations: [
       {
         id: '1',
@@ -703,6 +753,16 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         <p className="mb-6">
           Seeking professional help is consistent with Islamic teachings to seek treatment for illness. Taking care of your mental health allows you to better fulfill your duties to family, community, and Allah.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Honor culture and family reputation create powerful barriers to mental health help-seeking, as mental illness is seen as bringing shame to the entire extended family</li>
+            <li>Islamic faith provides protective spiritual resources (prayer, community, meaning-making) but mental illness may be misunderstood as spiritual failing rather than medical condition</li>
+            <li>Somatization—expressing psychological distress through physical symptoms—is common because physical illness is more socially acceptable than emotional problems</li>
+            <li>War, displacement, and refugee experiences create enormous mental health needs, yet stigma, language barriers, and service shortages leave 85% of needs unmet</li>
+            <li>Culturally responsive care integrates faith, involves family appropriately, addresses trauma, provides same-gender providers, and frames treatment as enabling fulfillment of religious and family duties</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -713,11 +773,31 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     description: 'How South Asian cultural values around family duty, honor, and emotional restraint create unique mental health challenges and barriers to care.',
     image: "/images/articles/cat12/cover-008.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['South Asian Culture', 'Mental Health Stigma', 'Family Dynamics', 'Cultural Values'],
+    summary: 'South Asian communities navigate mental health within a cultural framework of family duty, honor, and emotional restraint, where "what will people say?" powerfully shapes help-seeking. The model minority myth masks profound needs, while young South Asian women face three times higher suicide rates than their white peers. Culturally responsive care integrates family, addresses intergenerational conflict, and reframes treatment as enabling fulfillment of responsibilities.',
+    keyFacts: [
+      { text: '78% of South Asians believe mental illness brings shame to the family, and only 18% of those with mental illness seek professional help', citationIndex: 9 },
+      { text: 'Young South Asian women have three times higher suicide rates than white women, driven by cultural pressure, shame, and intergenerational conflict', citationIndex: 3 },
+      { text: 'The model minority myth portrays South Asians as problem-free and high-achieving, causing mental health needs to be overlooked and increasing shame when struggling', citationIndex: 5 },
+      { text: 'Intergenerational conflict emerges when second-generation individuals navigate collectivist family values at home and individualist values in school/work', citationIndex: 4 },
+      { text: 'Mental health problems are often kept secret until crisis level (hospitalization, suicide attempt) due to fear of damaging marriage prospects and family reputation', citationIndex: 1 },
+    ],
+    sparkMoment: 'Seeking help is not betraying your family—it is an act of strength that allows you to better fulfill your responsibilities and live the life you deserve.',
+    practicalExercise: {
+      title: 'Navigating Duty and Self: A Value Mapping Exercise',
+      steps: [
+        { title: 'Map Family Expectations', description: 'Write down 3 major expectations your family has for you (career, marriage, behavior). Rate how aligned each is with your own desires (1-10).' },
+        { title: 'Identify Internal Conflict', description: 'Where is the gap largest? What emotions arise when you think about disappointing family expectations? Name them without judgment.' },
+        { title: 'Reframe Self-Care', description: 'Complete: "If I took care of my mental health, I would be better able to _______ (contribute to family, succeed in work, be present for loved ones)."' },
+        { title: 'Find Culturally Safe Support', description: 'Identify one person or resource (South Asian therapist directory, trusted friend, culturally informed counselor) you could reach out to this week.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Start Tracking Your Wellbeing',
+    },
     citations: [
       {
         id: '1',
@@ -1050,6 +1130,16 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         <p className="mb-6">
           Your mental health matters. Taking care of yourself allows you to better care for your family and fulfill your responsibilities. Seeking help is not betrayal---it is self-preservation.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Family honor (izzat), duty, and emotional restraint create a culture of silence where mental health problems are hidden to protect reputation and marriage prospects</li>
+            <li>Young South Asian women face three times higher suicide rates than white women due to cultural pressure, intergenerational conflict, and limited autonomy</li>
+            <li>The model minority myth masks profound mental health needs, creating shame when struggling and causing systems to overlook South Asian communities</li>
+            <li>Second-generation individuals navigate competing value systems (collectivist family vs. individualist society), leading to identity conflict and guilt</li>
+            <li>Culturally responsive care provides language-concordant services, addresses intergenerational conflict, integrates spirituality, and reframes self-care as enabling family responsibilities rather than selfishness</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1060,11 +1150,31 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
     description: 'How Indigenous communities worldwide are integrating traditional healing practices with mental health care to address historical trauma and support wellness.',
     image: "/images/articles/cat12/cover-009.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Indigenous Health', 'Traditional Healing', 'Historical Trauma', 'Cultural Identity'],
+    summary: 'Indigenous communities face mental health crises rooted in colonization, forced assimilation, and ongoing marginalization—yet hold ancient healing traditions that Western psychiatry is only beginning to recognize. Historical trauma transmits across generations, while suicide rates among Indigenous youth are 2.5 times higher than the general population. Decolonizing mental health care means centering Indigenous self-determination, integrating traditional healing, and recognizing that cultural connection is not just appropriate—it is therapeutically effective.',
+    keyFacts: [
+      { text: 'Indigenous peoples experience suicide rates 2.5 times higher, PTSD rates 3 times higher, and significantly elevated depression, with limited access to culturally appropriate care', citationIndex: 8 },
+      { text: 'Historical trauma from colonization, boarding schools, and cultural suppression transmits across generations through disrupted attachment, lost cultural knowledge, and epigenetic changes', citationIndex: 7 },
+      { text: 'Strong cultural identity protects mental health—traditional language fluency, participation in ceremonies, and connection to land reduce suicide risk and improve outcomes', citationIndex: 5 },
+      { text: 'Traditional healing practices (ceremonies, land-based programs, elder guidance) show measurable mental health benefits in Western research, validating Indigenous knowledge systems', citationIndex: 6 },
+      { text: 'Decolonizing mental health care means Indigenous communities control their own programs, traditional healers are integrated with equal respect, and culture is recognized as intervention', citationIndex: 9 },
+    ],
+    sparkMoment: 'Your wellness is not just personal—it is cultural survival, resistance, and the continuation of thousands of years of knowledge and resilience.',
+    practicalExercise: {
+      title: 'Reconnecting to Cultural Roots',
+      steps: [
+        { title: 'Identify Your Connection', description: 'Reflect: What aspects of your Indigenous culture do you feel connected to? What has been lost or interrupted? Write down 2-3 specific cultural practices or knowledge you want to reclaim.' },
+        { title: 'Reach Out to Elders', description: 'Identify one elder, cultural keeper, or community member who can share traditional knowledge. Ask if you can learn from them—even one conversation is a step toward healing.' },
+        { title: 'Engage in Cultural Practice', description: 'Choose one traditional practice this week: attend a ceremony, learn words in your language, spend time on ancestral land, or practice traditional crafts. Notice how it affects your emotional state.' },
+        { title: 'Share Knowledge', description: 'Teach something you learned to a younger community member. Passing on cultural knowledge heals both individual and collective trauma.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Cultural Connection',
+    },
     citations: [
       {
         id: '1',
@@ -1320,7 +1430,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="We don't need to prove our healing works to fit into Western systems. Western systems need to learn from us and make space for approaches that have sustained our peoples for thousands of years."
+          quote="We don\'t need to prove our healing works to fit into Western systems. Western systems need to learn from us and make space for approaches that have sustained our peoples for thousands of years."
           attribution="Dr. Joseph Gone"
           role="Clinical Psychologist (Aaniiih-Gros Ventre)"
           source="Harvard University"
@@ -1425,21 +1535,51 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         <p className="mb-6">
           Seeking help---whether from traditional healers, clinical providers, or both---is an act of cultural survival and resistance. Your wellness supports the wellness of your community and the continuation of your people.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Historical trauma from colonization, boarding schools, and forced assimilation transmits across generations, creating 2.5x higher suicide rates and 3x higher PTSD among Indigenous peoples</li>
+            <li>Traditional healing practices—ceremonies, land-based programs, elder guidance, and community healing—show measurable mental health benefits and are therapeutically effective, not just culturally appropriate</li>
+            <li>Strong cultural identity is the most powerful protective factor: traditional language fluency, participation in cultural practices, and connection to ancestral lands significantly reduce suicide risk</li>
+            <li>Indigenous youth suicide is a public health emergency driven by loss of cultural identity, poverty, isolation, and lack of culturally matched mental health services</li>
+            <li>Decolonizing mental health care means Indigenous communities control their own programs, traditional healers are integrated with equal respect, and mental health is understood as collective wellness rather than individual pathology</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
   {
     id: catId(10),
     slug: 'western-psychology-blind-spots',
-    title: "Western Psychology's Blind Spots: What Cross-Cultural Research Reveals",
+    title: "Western Psychology\'s Blind Spots: What Cross-Cultural Research Reveals",
     description: "Cross-cultural research exposes the limitations of Western psychiatric models and reveals how culture profoundly shapes the nature of mental illness itself.",
     image: "/images/articles/cat12/cover-010.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Research', 'Cultural Psychiatry', 'Cross-Cultural Psychology', 'Western Bias'],
+    summary: 'Psychology claims universality but 96% of research comes from WEIRD (Western, Educated, Industrialized, Rich, Democratic) populations—just 12% of humanity. Cross-cultural research exposes profound assumptions embedded in Western models: individualism is not universal, talking cures do not work equally across cultures, and mental illness is not culturally neutral. Decolonizing mental health means respecting multiple knowledge systems and adapting care to cultural contexts rather than exporting Western psychiatry as universal truth.',
+    keyFacts: [
+      { text: '96% of psychological research uses WEIRD populations (Western, Educated, Industrialized, Rich, Democratic societies), who represent only 12% of the global population', citationIndex: 1 },
+      { text: 'Cultural neuroscience shows culture shapes brain structure and function—the interdependent vs. independent self activates different neural pathways during self-reflection', citationIndex: 2 },
+      { text: 'Depression presents differently across cultures: Western patients emphasize sadness and guilt, while non-Western populations often express distress through physical symptoms (fatigue, pain)', citationIndex: 5 },
+      { text: 'Western psychology assumes individualism, verbal emotional disclosure, and mind-body separation—but 70% of the world operates from collectivist frameworks where these assumptions do not apply', citationIndex: 10 },
+      { text: 'Exporting Western psychiatric models without cultural adaptation has been criticized as neo-colonial, marginalizing traditional healing and medicalizing normal cultural responses to adversity', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your culture is not a barrier to treatment—it is the context that makes treatment meaningful and effective.',
+    practicalExercise: {
+      title: 'Cultural Self-Reflection for Providers and Clients',
+      steps: [
+        { title: 'Identify Your Cultural Framework', description: 'Reflect: Do you come from an individualist or collectivist background? How does your culture view emotional expression? Write down 3 cultural values that shape your understanding of mental health.' },
+        { title: 'Challenge Universalist Assumptions', description: 'List 3 things Western psychology treats as universal (e.g., talk therapy, autonomy, individual happiness). For each, ask: "Is this true in my culture? What alternatives exist?"' },
+        { title: 'Honor Cultural Pluralism', description: 'If seeking care: Identify what culturally meaningful healing looks like for you (family involvement, spirituality, traditional practices). If providing care: Ask clients about their cultural understanding of distress.' },
+        { title: 'Advocate for Cultural Adaptation', description: 'Research one culturally adapted intervention relevant to your background. Share it with your provider or clinical team. Cultural validity is as important as statistical significance.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Culturally Matched Providers',
+    },
     citations: [
       {
         id: '1',
@@ -1612,7 +1752,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </p>
 
         <h2 id="blind-spots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Western Psychology's Specific Blind Spots
+          Western Psychology\'s Specific Blind Spots
         </h2>
         <p className="mb-6">
           Cross-cultural research has exposed several assumptions embedded in Western psychiatric models:
@@ -1733,7 +1873,7 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         </ul>
 
         <h2 id="whats-next" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          What's Next in This Research
+          What\'s Next in This Research
         </h2>
         <p className="mb-6">
           The future of culturally informed mental health research includes <Citation id="9" index={9} source="The Lancet Psychiatry" year="2023" tier={1} />:
@@ -1770,6 +1910,16 @@ export const mentalHealthAcrossCulturesArticlesB: Article[] = [
         <p className="mb-6">
           Mental health is too important to be dominated by a single cultural perspective. The future of the field depends on embracing true diversity in theory, research, and practice.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Psychology's "universal truths" are based on WEIRD populations (Western, Educated, Industrialized, Rich, Democratic)—just 12% of humanity—making Western psychology culturally specific, not universal</li>
+            <li>Culture shapes brain structure, emotional experience, and mental illness expression; cultural neuroscience proves nature and nurture are inseparable</li>
+            <li>Western psychology assumes individualism, verbal disclosure, and mind-body separation—assumptions that do not hold in collectivist cultures representing 70% of the world</li>
+            <li>Exporting Western psychiatric models without adaptation marginalizes traditional healing, medicalizes normal cultural responses, and constitutes a form of cultural imperialism</li>
+            <li>True global mental health respects multiple knowledge systems equally, lets communities define their own needs, addresses social determinants, and adapts interventions to cultural contexts</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

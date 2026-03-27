@@ -22,11 +22,31 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     description: 'A comprehensive guide to PTSD covering symptoms, causes, diagnosis, treatment options, and recovery. Learn what PTSD is and how to get help.',
     image: "/images/articles/cat11/cover-011.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 14,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['PTSD', 'Diagnosis', 'Treatment', 'Recovery', 'Mental Health'],
+    summary: 'Post-Traumatic Stress Disorder (PTSD) is a mental health condition that develops after experiencing or witnessing trauma. While affecting about 6% of U.S. adults in their lifetime, PTSD is highly treatable with evidence-based therapies like CPT, PE, and EMDR, with 50-60% of people experiencing significant improvement with proper treatment.',
+    keyFacts: [
+      { text: 'About 8 million American adults have PTSD in any given year, with women twice as likely to develop it than men', citationIndex: 3 },
+      { text: 'PTSD requires symptoms to persist for more than one month and significantly impair functioning, distinguishing it from normal stress reactions', citationIndex: 1 },
+      { text: 'Approximately 10-20% of people exposed to traumatic events develop PTSD, with interpersonal trauma carrying higher risk than accidents', citationIndex: 4 },
+      { text: 'Evidence-based psychotherapies (CPT, PE, EMDR) have extensive research support and are first-line treatments recommended by WHO and APA', citationIndex: 5 },
+      { text: 'About 70% of people with PTSD also experience sleep disorders, and 48% have co-occurring major depression', citationIndex: 7 },
+    ],
+    sparkMoment: 'PTSD is not a sign of weakness—it\'s a normal response of a nervous system that experienced something abnormal, and with evidence-based treatment, healing is not just possible, it\'s expected.',
+    practicalExercise: {
+      title: 'Grounding Technique for Trauma Triggers',
+      steps: [
+        { title: 'Notice the Trigger', description: 'When you feel a trauma response starting (racing heart, flashback, panic), pause and acknowledge: "I\'m having a trauma response right now."' },
+        { title: '5-4-3-2-1 Grounding', description: 'Name 5 things you can see, 4 you can touch, 3 you can hear, 2 you can smell, and 1 you can taste. This brings you back to the present moment.' },
+        { title: 'Orient to Safety', description: 'Look around and remind yourself: "I am here, now, in [location]. The trauma happened then. I am safe in this moment."' },
+        { title: 'Compassionate Self-Talk', description: 'Tell yourself: "My nervous system is doing its job to protect me. I can work with it, not against it." Take slow, deep breaths.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -114,12 +134,12 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Post-Traumatic Stress Disorder (PTSD) is a mental health condition that develops after experiencing or
-            witnessing a traumatic event. While it's normal to have distressing reactions after trauma, PTSD occurs
+            witnessing a traumatic event. While it\'s normal to have distressing reactions after trauma, PTSD occurs
             when those reactions persist, intensify, or interfere with daily life for an extended period. Understanding
             PTSD is the first step toward recognizing it and getting effective treatment.
           </p>
           <p className="mb-6">
-            This comprehensive guide covers everything you need to know about PTSD: what it is, how it's diagnosed, who
+            This comprehensive guide covers everything you need to know about PTSD: what it is, how it\'s diagnosed, who
             gets it, treatment options, and the path to recovery{', '}
             <Citation id="2" index={2} source="Nature Reviews Disease Primers" year="2015" tier={1} />.
           </p>
@@ -139,7 +159,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           The key word is "disorder"---PTSD is not just the immediate shock or distress following trauma (which is
-          normal). It's a pattern of symptoms that persist for more than a month and significantly impair functioning.
+          normal). It\'s a pattern of symptoms that persist for more than a month and significantly impair functioning.
         </p>
 
         <StatCard
@@ -277,10 +297,47 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Note">
           <p>
-            You don't need to have every symptom listed to be diagnosed with PTSD. The criteria require a combination
+            You don\'t need to have every symptom listed to be diagnosed with PTSD. The criteria require a combination
             from each category. Also, symptoms can vary in intensity over time.
           </p>
         </ArticleCallout>
+
+        <h2
+          id="neurobiology"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          The Neurobiology of PTSD
+        </h2>
+        <p className="mb-6">
+          Understanding what happens in the brain during and after trauma helps explain why PTSD symptoms occur and why certain treatments work. When you experience trauma, your brain\'s threat detection system goes into overdrive.
+        </p>
+
+        <QuoteBlock
+          quote="PTSD is fundamentally a disorder of memory processing. The traumatic memory gets stuck in a state of hyperaccessibility, replaying as if it\'s happening now rather than being filed away as a past event."
+          attribution="Bessel van der Kolk"
+          role="Psychiatrist and Trauma Researcher"
+          source="The Body Keeps the Score"
+        />
+
+        <p className="mb-6">
+          Three key brain regions are involved in PTSD <Citation id="2" index={2} source="Nature Reviews Disease Primers" year="2015" tier={1} />:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Amygdala (threat detector)</strong>: Becomes hyperactive in PTSD, constantly scanning for danger even when you're safe. This explains hypervigilance, exaggerated startle responses, and feeling on edge.
+          </li>
+          <li>
+            <strong>Hippocampus (memory organizer)</strong>: Often shows reduced volume in PTSD. The hippocampus normally time-stamps memories and files them as "past events." When it's impaired, traumatic memories lack proper context and feel present-tense.
+          </li>
+          <li>
+            <strong>Prefrontal cortex (rational brain)</strong>: Shows reduced activity in PTSD. This brain region normally regulates emotional responses and distinguishes past from present. When it's underactive, you can't "talk yourself down" from trauma reactions.
+          </li>
+        </ul>
+
+        <p className="mb-6">
+          This neurobiological understanding explains why PTSD isn\'t about "just getting over it" or "thinking positive." The brain\'s alarm system is genuinely misfiring. Effective treatments work by helping the brain reprocess traumatic memories and recalibrate threat detection.
+        </p>
 
         <h2
           id="who-gets-ptsd"
@@ -431,7 +488,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                 <div>
                   <p className="mb-4">
                     <strong>PE</strong> involves gradually approaching trauma-related memories, feelings, and situations
-                    you've been avoiding. Through repeated, safe exposure, you learn that these reminders are not
+                    you\'ve been avoiding. Through repeated, safe exposure, you learn that these reminders are not
                     actually dangerous.
                   </p>
                   <p className="mb-4">
@@ -493,19 +550,28 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>
-            <strong>SSRIs</strong> (sertraline/Zoloft, paroxetine/Paxil): Only FDA-approved medications for PTSD
+            <strong>SSRIs</strong> (sertraline/Zoloft, paroxetine/Paxil): Only FDA-approved medications for PTSD. They reduce intrusive thoughts, hyperarousal, and avoidance by increasing serotonin in the brain.
           </li>
           <li>
-            <strong>SNRIs</strong> (venlafaxine/Effexor): Often prescribed off-label
+            <strong>SNRIs</strong> (venlafaxine/Effexor): Often prescribed off-label. Work on both serotonin and norepinephrine systems.
           </li>
           <li>
-            <strong>Prazosin</strong>: May help with nightmares
+            <strong>Prazosin</strong>: May help with nightmares by blocking adrenaline receptors that contribute to trauma-related dreams.
+          </li>
+          <li>
+            <strong>Atypical antipsychotics</strong> (quetiapine, risperidone): Sometimes used for severe hyperarousal or when other medications haven't worked.
           </li>
         </ul>
         <p className="mb-6">
           Medication works best when combined with psychotherapy. It can reduce symptoms enough to make therapy more
-          tolerable, but doesn't replace the need for trauma processing.
+          tolerable, but doesn\'t replace the need for trauma processing. Think of medication as creating a window of opportunity for therapy to work.
         </p>
+
+        <ArticleCallout variant="warning" title="Important Note on Benzodiazepines">
+          <p>
+            Benzodiazepines (Xanax, Ativan, Klonopin) are <strong>not recommended</strong> for PTSD despite being commonly prescribed. Research shows they may actually interfere with trauma memory processing and can lead to dependence. Clinical guidelines advise against their use for PTSD treatment.
+          </p>
+        </ArticleCallout>
 
         <h2
           id="comorbidity"
@@ -552,6 +618,89 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           <li>Early intervention improves outcomes</li>
         </ul>
 
+        <h2
+          id="living-with-ptsd"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Living With PTSD: Practical Strategies
+        </h2>
+        <p className="mb-6">
+          While professional treatment is essential, daily self-management strategies can significantly improve quality of life and complement therapy. These aren\'t cures, but they can help you manage symptoms and regain a sense of control.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Build a Safety Toolkit',
+              description: (
+                <p>
+                  Identify 3-5 grounding techniques that work for you (5-4-3-2-1 sensory grounding, holding ice, deep breathing, progressive muscle relaxation). Practice them when you\'re calm so they\'re available when you\'re triggered.
+                </p>
+              ),
+            },
+            {
+              title: 'Establish Routine and Structure',
+              description: (
+                <p>
+                  PTSD thrives on chaos. Regular sleep schedules, consistent mealtimes, and daily routines help your nervous system feel safer. Even small rituals (morning coffee, evening walk) create predictability.
+                </p>
+              ),
+            },
+            {
+              title: 'Connect With Supportive People',
+              description: (
+                <p>
+                  Isolation worsens PTSD. Identify 2-3 people you can reach out to when struggling. You don\'t have to talk about the trauma—just being around safe people helps regulate your nervous system.
+                </p>
+              ),
+            },
+            {
+              title: 'Move Your Body',
+              description: (
+                <p>
+                  Exercise helps discharge the physical arousal that PTSD creates. Yoga, walking, swimming, or any movement you enjoy can reduce hyperarousal and improve sleep. Start small—even 10 minutes counts.
+                </p>
+              ),
+            },
+            {
+              title: 'Limit Avoidance (Gradually)',
+              description: (
+                <p>
+                  Avoidance provides short-term relief but strengthens PTSD long-term. With support, gradually approach situations you\'ve been avoiding. This is best done with a therapist\'s guidance, especially for major avoidance.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <BeforeAfter
+          before={{
+            title: 'Common PTSD Thought Patterns',
+            points: [
+              '"I\'m broken forever"',
+              '"I should be over this by now"',
+              '"No one understands what I went through"',
+              '"The world is completely dangerous"',
+              '"I can\'t trust anyone"',
+            ],
+          }}
+          after={{
+            title: 'More Balanced Perspectives',
+            points: [
+              '"I\'m healing at my own pace"',
+              '"Recovery isn\'t linear—setbacks are part of the process"',
+              '"Others may not fully understand, but I can still find support"',
+              '"Some situations are safe, even if my body doesn\'t always feel that way"',
+              '"Trust can be rebuilt gradually with safe people"',
+            ],
+          }}
+        />
+
+        <p className="mb-6 mt-8">
+          Recovery from PTSD doesn\'t mean the trauma never happened or that you\'ll forget it. It means the memory no longer controls your life. You can remember without reliving. You can have bad days without losing your progress. And you can build a meaningful life alongside your healing journey.
+        </p>
+
         <ArticleCallout variant="key-takeaway">
           <p className="mb-4">
             <strong>Key Takeaways:</strong>
@@ -559,9 +708,9 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           <ul className="list-disc pl-6 space-y-2">
             <li>PTSD is a specific disorder with defined diagnostic criteria, not just general distress after trauma</li>
             <li>About 6-8% of people will have PTSD in their lifetime</li>
-            <li>Symptoms include intrusive memories, avoidance, negative thoughts/mood, and hyperarousal</li>
-            <li>Evidence-based treatments (CPT, PE, EMDR) are highly effective</li>
-            <li>Recovery is possible---most people improve significantly with proper treatment</li>
+            <li>The brain's threat system becomes dysregulated, explaining symptoms like hypervigilance and flashbacks</li>
+            <li>Evidence-based treatments (CPT, PE, EMDR) are highly effective, with 50-60% seeing significant improvement</li>
+            <li>Recovery is possible—most people improve significantly with proper treatment and self-management strategies</li>
           </ul>
         </ArticleCallout>
 
@@ -572,14 +721,14 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           When to Seek Help
         </h2>
         <p className="mb-6">
-          If you've experienced a traumatic event and symptoms have persisted for more than a month, interfere with your
-          daily life, or cause significant distress, it's time to seek professional help{', '}
+          If you\'ve experienced a traumatic event and symptoms have persisted for more than a month, interfere with your
+          daily life, or cause significant distress, it\'s time to seek professional help{', '}
           <Citation id="10" index={10} source="World Health Organization" year="2022" tier={2} />.
         </p>
         <p className="mb-6">Look for a mental health professional who specializes in trauma and uses evidence-based treatments like CPT, PE, or EMDR. Don't be discouraged if the first therapist or treatment approach isn't the right fit---finding the right match is part of the process.</p>
         <p className="mb-6">
-          PTSD is not a sign of weakness. It's a normal response of a nervous system that experienced something
-          abnormal. With the right support, healing is not just possible---it's expected.
+          PTSD is not a sign of weakness. It\'s a normal response of a nervous system that experienced something
+          abnormal. With the right support, healing is not just possible---it\'s expected.
         </p>
       </>
     ),
@@ -592,11 +741,31 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     description: 'Complex PTSD is distinct from PTSD but not yet recognized in the DSM-5. Learn about C-PTSD, its unique symptoms, and why the diagnosis matters.',
     image: "/images/articles/cat11/cover-012.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 13,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['C-PTSD', 'Complex Trauma', 'Diagnosis', 'ICD-11', 'Treatment'],
+    summary: 'Complex PTSD extends beyond classic PTSD to include emotion dysregulation, negative self-concept, and relationship disturbances—typically resulting from prolonged, repeated interpersonal trauma. While recognized in the ICD-11 since 2018, it remains absent from the DSM-5, yet proper diagnosis and phase-based treatment can transform outcomes for survivors.',
+    keyFacts: [
+      { text: 'Complex PTSD was officially recognized in the WHO\'s ICD-11 in 2018 but is still not included in the DSM-5 used in the United States', citationIndex: 1 },
+      { text: 'Approximately 35% of PTSD patients may actually have C-PTSD instead, requiring a different treatment approach', citationIndex: 6 },
+      { text: 'C-PTSD includes all PTSD symptoms plus three additional clusters: emotion dysregulation, negative self-concept, and relationship disturbances', citationIndex: 1 },
+      { text: 'About 70% of C-PTSD patients report childhood trauma as the primary cause, often from prolonged abuse or neglect', citationIndex: 6 },
+      { text: 'Phase-based treatment starting with stabilization (not immediate trauma processing) is essential and can take months to years in the first phase alone', citationIndex: 7 },
+    ],
+    sparkMoment: 'You adapted brilliantly to impossible circumstances. Now, you can learn new ways of being that serve you better.',
+    practicalExercise: {
+      title: 'Emotion Regulation: The TIPP Skill',
+      steps: [
+        { title: 'Temperature (Cold Water)', description: 'Splash cold water on your face or hold ice cubes. Cold temperature rapidly calms intense emotions by activating the dive reflex, slowing your heart rate.' },
+        { title: 'Intense Exercise', description: 'Do 60 seconds of jumping jacks, running in place, or wall push-ups. Intense movement discharges emotional energy and regulates your nervous system.' },
+        { title: 'Paced Breathing', description: 'Breathe in for 4 counts, hold for 4, exhale for 6. Make your exhale longer than your inhale to activate your parasympathetic nervous system.' },
+        { title: 'Paired Muscle Relaxation', description: 'Tense your whole body for 5 seconds, then release completely. Notice the difference between tension and relaxation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Triggers',
+    },
     citations: [
       {
         id: '1',
@@ -684,8 +853,8 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             Imagine being diagnosed with depression, then anxiety, then borderline personality disorder---cycling through
-            treatments that help a little but never quite address what you're experiencing. This is the story of many
-            people with Complex PTSD (C-PTSD), a condition that wasn't officially recognized until 2018, and even then,
+            treatments that help a little but never quite address what you\'re experiencing. This is the story of many
+            people with Complex PTSD (C-PTSD), a condition that wasn\'t officially recognized until 2018, and even then,
             only in the international classification system---not in the DSM-5 used in the United States.
           </p>
           <p className="mb-6">
@@ -719,16 +888,16 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           <li>Dissociative disorders</li>
         </ul>
         <p className="mb-6">
-          In 2018, the World Health Organization's ICD-11 (International Classification of Diseases, 11th edition)
+          In 2018, the World Health Organization\'s ICD-11 (International Classification of Diseases, 11th edition)
           officially recognized Complex PTSD as a distinct diagnosis{', '}
           <Citation id="1" index={1} source="British Journal of Psychiatry" year="2020" tier={1} />. However, the
-          American Psychiatric Association's DSM-5 (and DSM-5-TR) still does not include C-PTSD as a separate disorder.
+          American Psychiatric Association\'s DSM-5 (and DSM-5-TR) still does not include C-PTSD as a separate disorder.
         </p>
 
         <ArticleCallout variant="did-you-know">
           <p>
             The DSM-5 introduced "PTSD with dissociative symptoms" as a specifier, which captures some aspects of C-PTSD
-            but doesn't fully address the emotion regulation and self-concept features that make C-PTSD distinct.
+            but doesn\'t fully address the emotion regulation and self-concept features that make C-PTSD distinct.
           </p>
         </ArticleCallout>
 
@@ -823,7 +992,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                   <p className="mt-4">
                     <em>
                       Why this happens: Children learn emotion regulation through co-regulation with caregivers. When
-                      caregivers are abusive, neglectful, or dysregulated themselves, this crucial skill doesn't develop.
+                      caregivers are abusive, neglectful, or dysregulated themselves, this crucial skill doesn\'t develop.
                     </em>
                   </p>
                 </div>
@@ -911,7 +1080,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           What Kind of Trauma Causes C-PTSD?
         </h2>
         <p className="mb-6">
-          C-PTSD typically results from prolonged, repeated trauma, especially when it's{', '}
+          C-PTSD typically results from prolonged, repeated trauma, especially when it\'s{', '}
           <Citation id="8" index={8} source="National Child Traumatic Stress Network" year="2022" tier={2} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -1035,7 +1204,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               label: 'Can You Have Both?',
               content: (
                 <p>
-                  Yes, it's possible to have both C-PTSD and BPD. Some researchers argue BPD may be a form of complex
+                  Yes, it\'s possible to have both C-PTSD and BPD. Some researchers argue BPD may be a form of complex
                   trauma response rather than a separate personality disorder. The debate continues, but what matters most
                   is accurate assessment and appropriate treatment.
                 </p>
@@ -1165,7 +1334,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           Why the C-PTSD Diagnosis Matters
         </h2>
         <p className="mb-6">
-          Even though C-PTSD isn't in the DSM-5, recognizing it is crucial{', '}
+          Even though C-PTSD isn\'t in the DSM-5, recognizing it is crucial{', '}
           <Citation id="5" index={5} source="Journal of Affective Disorders" year="2020" tier={1} />:
         </p>
 
@@ -1208,11 +1377,88 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Understanding that your struggles with emotions, relationships, and self-worth are symptoms of a trauma
-                  response---not evidence that you're fundamentally broken---fosters self-compassion.
+                  response---not evidence that you\'re fundamentally broken---fosters self-compassion.
                 </p>
               ),
             },
           ]}
+        />
+
+        <h2
+          id="living-with-cptsd"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Living With C-PTSD: Daily Strategies
+        </h2>
+        <p className="mb-6">
+          While professional treatment is essential, day-to-day self-management skills can significantly improve quality of life. These strategies address the three core C-PTSD challenges:
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-4">For Emotion Dysregulation</h3>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Build a sensory regulation kit</strong>: Keep items that engage your senses (ice pack, essential oils, fidget toys, sour candy, soft fabric). When emotions feel overwhelming, engage one sense at a time to ground yourself.
+          </li>
+          <li>
+            <strong>Use the TIPP skill</strong> (Temperature, Intense exercise, Paced breathing, Paired muscle relaxation) from DBT when emotions reach crisis levels. These quickly calm your nervous system.
+          </li>
+          <li>
+            <strong>Track emotional patterns</strong>: Note what triggers intense emotions and what helps. Over time, you'll identify patterns and develop personalized strategies.
+          </li>
+          <li>
+            <strong>Practice opposite action</strong>: When shame says "isolate," reach out to someone. When anger says "lash out," step away and cool down. Acting opposite to destructive emotion urges weakens them over time.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-bold mt-8 mb-4">For Negative Self-Concept</h3>
+        <BeforeAfter
+          before={{
+            title: 'Trauma-Formed Beliefs',
+            points: [
+              '"I am fundamentally damaged"',
+              '"I don\'t deserve good things"',
+              '"I am toxic to everyone around me"',
+              '"If people knew the real me, they\'d leave"',
+              '"I\'m too broken to be helped"',
+            ],
+          }}
+          after={{
+            title: 'Recovery-Oriented Perspectives',
+            points: [
+              '"I was damaged by what happened to me, not damaged as a person"',
+              '"I deserve care and kindness like anyone else"',
+              '"My trauma responses are protective adaptations, not proof of toxicity"',
+              '"Being authentic includes sharing my struggles with safe people"',
+              '"I\'m complex, not broken—healing is learning, not fixing"',
+            ],
+          }}
+        />
+
+        <p className="mb-6 mt-8">
+          Practice self-compassion as a <em>skill</em>, not a feeling. When you notice harsh self-criticism, ask: "Would I say this to a friend who survived what I survived?" Then speak to yourself as you would to that friend.
+        </p>
+
+        <h3 className="text-2xl font-bold mt-8 mb-4">For Relationship Difficulties</h3>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Start with relationships that feel safer</strong>: You don't have to tackle intimate relationships first. Build trust gradually through lower-stakes connections (support groups, classes, casual friendships).
+          </li>
+          <li>
+            <strong>Practice small acts of vulnerability</strong>: Share something minor about yourself and notice what happens. When people respond with care, it slowly rewires your expectations of relationships.
+          </li>
+          <li>
+            <strong>Communicate your needs</strong>: "I need space right now" or "I'm triggered and need grounding" are valid requests. Safe people will respect them.
+          </li>
+          <li>
+            <strong>Expect rupture and repair</strong>: All relationships have conflict. What matters is whether repair happens—apologies, accountability, reconnection. This is how you learn relationships can be safe.
+          </li>
+        </ul>
+
+        <QuoteBlock
+          quote="The opposite of trauma is not the absence of pain—it\'s the presence of safety, connection, and the capacity to tolerate difficult emotions without falling apart."
+          attribution="Dr. Janina Fisher"
+          role="Trauma Psychologist"
+          source="Healing the Fragmented Selves of Trauma Survivors"
         />
 
         <ArticleCallout variant="key-takeaway">
@@ -1224,6 +1470,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
             <li>It includes PTSD symptoms plus emotion dysregulation, negative self-concept, and relationship difficulties</li>
             <li>C-PTSD typically results from prolonged, repeated interpersonal trauma, often in childhood</li>
             <li>Treatment requires a phase-based approach, not immediate trauma processing</li>
+            <li>Daily self-management skills for emotions, self-concept, and relationships complement professional treatment</li>
             <li>Recognition and proper diagnosis can transform treatment outcomes and quality of life</li>
           </ul>
         </ArticleCallout>
@@ -1236,11 +1483,11 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           If you recognize yourself in this description, seek out a trauma-informed therapist familiar with C-PTSD,
-          even if they can't formally diagnose it in the U.S. The label matters less than receiving appropriate,
+          even if they can\'t formally diagnose it in the U.S. The label matters less than receiving appropriate,
           phase-based treatment that addresses all your symptoms.
         </p>
         <p className="mb-6">
-          Recovery from C-PTSD takes time---often years---but it is absolutely possible. You're not broken or defective.
+          Recovery from C-PTSD takes time---often years---but it is absolutely possible. You\'re not broken or defective.
           You adapted brilliantly to impossible circumstances. Now, you can learn new ways of being that serve you
           better.
         </p>
@@ -1255,11 +1502,31 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
     description: 'Flashbacks feel like reliving trauma. Learn what happens in your brain during a flashback, why they occur, and evidence-based techniques to manage them.',
     image: "/images/articles/cat11/cover-013.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Flashbacks', 'PTSD', 'Neuroscience', 'Coping Skills'],
+    summary: 'Flashbacks occur when trauma memories, stored without time stamps or context due to hippocampal shutdown during trauma, intrude into consciousness as if happening in the present. Understanding the neuroscience behind flashbacks and practicing grounding techniques can help manage these distressing symptoms while trauma-focused therapy addresses the root cause.',
+    keyFacts: [
+      { text: 'During trauma, the hippocampus goes offline due to stress hormones, preventing memories from being organized with time and context markers', citationIndex: 2 },
+      { text: 'Flashbacks exist on a spectrum from brief sensory re-experiencing to complete dissociative episodes where you lose awareness of current reality', citationIndex: 6 },
+      { text: 'The 54321 grounding technique (5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste) helps orient your brain to the present moment during flashbacks', citationIndex: 4 },
+      { text: 'Triggers can be external (sights, sounds, smells) or internal (physical sensations, emotions) and may operate below conscious awareness', citationIndex: 7 },
+      { text: 'Trauma-focused therapies like EMDR, CPT, and PE help the hippocampus finally organize trauma memories with proper time stamps, reducing flashback frequency', citationIndex: 8 },
+    ],
+    sparkMoment: 'Flashbacks are not a sign of weakness or going crazy—they\'re proof that your brain is trying to process an experience it couldn\'t fully understand when it happened.',
+    practicalExercise: {
+      title: 'Building a Flashback Safety Plan',
+      steps: [
+        { title: 'Identify Your Triggers', description: 'Keep a log of when flashbacks occur and what preceded them. Over time, patterns emerge—certain smells, sounds, situations, or times of day that activate trauma memories.' },
+        { title: 'Choose 3 Grounding Techniques', description: 'From the techniques in this article, pick 3 that feel most accessible to you. Practice them daily when calm so they become automatic during flashbacks.' },
+        { title: 'Create a Sensory Kit', description: 'Gather items that strongly engage your senses: ice pack, essential oil, sour candy, smooth stone, soft fabric. Keep these accessible for flashback moments.' },
+        { title: 'Write Orientation Cards', description: 'Create a card with grounding statements: "My name is ___, I am ___ years old, today is [date], I am in [location], the trauma is not happening now." Read this aloud during flashbacks.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1330,12 +1597,12 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're going about your day when suddenly you're not here anymore. A smell, a sound, or nothing you can
-            identify triggers it---and you're back there. Your heart races. You can see it, feel it, smell it as if it's
-            happening right now. This is a flashback, and it's one of the most distressing symptoms of PTSD.
+            You\'re going about your day when suddenly you\'re not here anymore. A smell, a sound, or nothing you can
+            identify triggers it---and you\'re back there. Your heart races. You can see it, feel it, smell it as if it\'s
+            happening right now. This is a flashback, and it\'s one of the most distressing symptoms of PTSD.
           </p>
           <p className="mb-6">
-            Understanding what happens in your brain during a flashback---and why your mind can't tell the difference
+            Understanding what happens in your brain during a flashback---and why your mind can\'t tell the difference
             between past and present---is the first step toward managing them{', '}
             <Citation id="1" index={1} source="Biological Psychiatry" year="2020" tier={1} />.
           </p>
@@ -1348,7 +1615,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           What Is a Flashback?
         </h2>
         <p className="mb-6">
-          A flashback is a dissociative experience where you re-experience a traumatic event as if it's happening in
+          A flashback is a dissociative experience where you re-experience a traumatic event as if it\'s happening in
           the present moment{', '}
           <Citation id="3" index={3} source="National Center for PTSD" year="2023" tier={2} />. It's more than just
           remembering---you feel transported back to the original event.
@@ -1459,7 +1726,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                   </p>
                   <p className="mb-3">
                     <strong>Example:</strong> A veteran hears a car backfire and suddenly feels heart-pounding terror,
-                    but doesn't necessarily "see" combat scenes---just experiences the body's fear response
+                    but doesn\'t necessarily "see" combat scenes---just experiences the body\'s fear response
                   </p>
                 </div>
               ),
@@ -1493,7 +1760,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                 <div>
                   <p className="mb-3">
                     <strong>What it is:</strong> Completely losing awareness of present reality and experiencing the
-                    trauma as if it's currently happening
+                    trauma as if it\'s currently happening
                   </p>
                   <p className="mb-3">
                     <strong>Example:</strong> During a flashback, you might speak or act as if you're in the traumatic
@@ -1542,7 +1809,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Sometimes flashbacks seem to come "out of nowhere"---but there's usually a trigger, even if it's operating below
+          Sometimes flashbacks seem to come "out of nowhere"---but there\'s usually a trigger, even if it\'s operating below
           conscious awareness.
         </p>
 
@@ -1553,7 +1820,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           Managing Flashbacks: Grounding Techniques
         </h2>
         <p className="mb-6">
-          The goal during a flashback is to help your brain recognize that you're in the present, not the past.
+          The goal during a flashback is to help your brain recognize that you\'re in the present, not the past.
           Grounding techniques work by engaging your senses in the here-and-now{', '}
           <Citation id="4" index={4} source="Journal of Traumatic Stress" year="2018" tier={1} />.
         </p>
@@ -1612,7 +1879,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               description: (
                 <p>
                   Stand up, walk, stretch, or do jumping jacks. Physical movement helps discharge the fight/flight
-                  activation and reminds your body it's in the present, where it can move freely.
+                  activation and reminds your body it\'s in the present, where it can move freely.
                 </p>
               ),
             },
@@ -1622,10 +1889,108 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <ArticleCallout variant="tip">
           <p>
             Practice grounding techniques when you're <strong>not</strong> in a flashback. This makes them more
-            accessible when you need them. It's like a fire drill---you want to know the exits before there's an actual
+            accessible when you need them. It\'s like a fire drill---you want to know the exits before there\'s an actual
             emergency.
           </p>
         </ArticleCallout>
+
+        <h2
+          id="what-not-to-do"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          What NOT to Do During a Flashback
+        </h2>
+        <p className="mb-6">
+          Certain responses can intensify flashbacks or make them last longer. Avoid these common mistakes:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Don't fight the flashback or try to suppress it</strong>: Resistance intensifies distress. Instead, acknowledge what's happening: "I'm having a flashback. This is a memory, not reality."
+          </li>
+          <li>
+            <strong>Don't judge yourself</strong>: Thoughts like "I should be over this" or "I'm being ridiculous" add shame on top of fear, making the flashback worse. Flashbacks are a symptom, not a character flaw.
+          </li>
+          <li>
+            <strong>Don't close your eyes</strong>: This cuts off visual input from your current environment, making it easier to get lost in the flashback imagery. Keep your eyes open and look around at where you actually are.
+          </li>
+          <li>
+            <strong>Don't dissociate further</strong>: Numbing out or "checking out" mentally might feel protective, but it prevents you from learning that flashbacks end and that you can survive them. Stay present if possible.
+          </li>
+          <li>
+            <strong>Don't make major decisions</strong>: Your threat-detection system is misfiring. This isn't the time to quit a job, end a relationship, or make significant life choices. Wait until you're grounded.
+          </li>
+        </ul>
+
+        <h2
+          id="helping-someone"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          How to Help Someone Having a Flashback
+        </h2>
+        <p className="mb-6">
+          If someone you care about is experiencing a flashback:
+        </p>
+
+        <ol className="list-decimal pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Stay calm</strong>: Your calmness helps their nervous system regulate. Speak in a gentle, reassuring tone.
+          </li>
+          <li>
+            <strong>Don't touch them without permission</strong>: During a flashback, unexpected touch can be interpreted as threat. Ask first: "Is it okay if I hold your hand?"
+          </li>
+          <li>
+            <strong>Help them orient to the present</strong>: "You're having a flashback. You're safe. You're with me, [your name], in [location]. Today is [date]."
+          </li>
+          <li>
+            <strong>Guide them through grounding</strong>: "Can you tell me 5 things you see in this room?" Or "Feel your feet on the floor. Notice the chair supporting you."
+          </li>
+          <li>
+            <strong>Give them space if needed</strong>: Some people need quiet and distance during flashbacks. Ask what they need.
+          </li>
+          <li>
+            <strong>Stay with them until it passes</strong>: Flashbacks are temporary. Your presence—even silent presence—can be grounding.
+          </li>
+          <li>
+            <strong>After it's over, offer comfort</strong>: "That must have been really scary. I'm here. You're safe now."
+          </li>
+        </ol>
+
+        <h2
+          id="reducing-frequency"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Reducing Flashback Frequency
+        </h2>
+        <p className="mb-6">
+          Between therapy sessions, these daily practices can help reduce how often flashbacks occur:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Maintain nervous system regulation</strong>: Regular sleep schedules, consistent meals, and exercise help keep your baseline arousal lower, making you less vulnerable to triggering.
+          </li>
+          <li>
+            <strong>Build stress tolerance gradually</strong>: Chronic stress makes flashbacks more frequent. Practices like yoga, meditation, or breathwork can help regulate your nervous system over time <Citation id="4" index={4} source="Journal of Traumatic Stress" year="2018" tier={1} />.
+          </li>
+          <li>
+            <strong>Limit avoidance (carefully)</strong>: Complete avoidance of all triggers keeps flashback potential high. With support, gradually approaching avoided situations in a controlled way can reduce their power.
+          </li>
+          <li>
+            <strong>Process trauma memories in therapy</strong>: This is the most effective long-term strategy. You can't "think positive" your way out of flashbacks—the memory needs to be properly processed.
+          </li>
+          <li>
+            <strong>Track patterns</strong>: Keep a flashback log noting time of day, what you were doing, potential triggers, and what helped. Patterns often emerge that help you anticipate and prepare.
+          </li>
+        </ul>
+
+        <StatCard
+          stats={[
+            { value: 70, suffix: '%', label: 'Reduction in flashback frequency with EMDR treatment' },
+            { value: 12, suffix: '-16', label: 'Typical number of EMDR or PE sessions needed' },
+          ]}
+          source="Clinical Psychology Review, 2021"
+        />
 
         <h2
           id="long-term"
@@ -1641,8 +2006,12 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         <p className="mb-6">
           Treatments like EMDR, CPT, and Prolonged Exposure work by helping your hippocampus finally organize the
           trauma memory, give it a time stamp, and integrate it into your life narrative. When this happens, the memory
-          becomes just that---a memory. It stops intruding because your brain now knows it's in the past{', '}
+          becomes just that---a memory. It stops intruding because your brain now knows it\'s in the past{', '}
           <Citation id="8" index={8} source="Nature Reviews Neuroscience" year="2019" tier={1} />.
+        </p>
+
+        <p className="mb-6">
+          Recovery doesn\'t mean the memory disappears or stops being painful. It means you can remember without reliving. You can have the memory without the memory having you. And that makes all the difference.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -1664,15 +2033,35 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
   {
     id: catId(14),
     slug: 'hypervigilance-brain-wont-stop-scanning-danger',
-    title: "Hypervigilance: When Your Brain Won't Stop Scanning for Danger",
+    title: "Hypervigilance: When Your Brain Won\'t Stop Scanning for Danger",
     description: "Constantly on alert, unable to relax, always scanning for threats. Learn about hypervigilance in PTSD and strategies to calm an overactive threat-detection system.",
     image: "/images/articles/cat11/cover-014.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Hypervigilance', 'PTSD', 'Nervous System', 'Recovery'],
+    summary: 'Hypervigilance is an overactive threat-detection system where your brain remains stuck in high alert, constantly scanning for danger even in safe environments. This adaptive survival response during trauma becomes an exhausting burden afterward, but can be reduced through nervous system retraining strategies like grounding, breathwork, and trauma-focused therapy.',
+    keyFacts: [
+      { text: 'The amygdala becomes hypersensitive after trauma while the prefrontal cortex becomes underactive, creating a "broken brake system" for threat detection', citationIndex: 2 },
+      { text: 'Hypervigilance is different from anxiety—it\'s about alertness and scanning rather than worry and fear', citationIndex: 3 },
+      { text: 'Chronic hypervigilance leads to sleep problems, physical exhaustion, concentration difficulties, and inability to enjoy life', citationIndex: 8 },
+      { text: '4-7-8 breathing (inhale 4, hold 7, exhale 8) physiologically signals safety by activating the parasympathetic nervous system', citationIndex: 5 },
+      { text: 'Mindfulness practice helps you observe hypervigilant thoughts without getting caught in them: "I notice I\'m scanning. That\'s my trauma response. I don\'t have to follow it"', citationIndex: 4 },
+    ],
+    sparkMoment: 'Hypervigilance kept you alive during danger, but you don\'t need that level of vigilance anymore—with time and practice, you can teach your nervous system that safety can be a felt experience in your body.',
+    practicalExercise: {
+      title: 'Nervous System Reset Routine',
+      steps: [
+        { title: 'Morning Grounding', description: 'Start each day with 2 minutes of orientation: "I am [name], today is [date], I am in [location], I am safe." Press your feet into the floor and notice the support beneath you.' },
+        { title: 'Breathing Breaks', description: 'Set 3 alarms throughout the day for 1-minute breathwork: 4-7-8 breathing (inhale 4 counts, hold 7, exhale 8). This trains your parasympathetic nervous system.' },
+        { title: 'Progressive Muscle Relaxation', description: 'Before bed, tense each muscle group for 5 seconds then release completely, starting with toes and moving to head. Notice the difference between tension and relaxation.' },
+        { title: 'Safe Space Practice', description: 'Designate a corner of your home as your "safety zone." Spend 5-10 minutes there daily consciously practicing letting your guard down. Gradually increase duration.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Improve Your Sleep',
+    },
     citations: [
       {
         id: '1',
@@ -1743,10 +2132,10 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You can't relax. Your eyes constantly scan every room you enter, noting exits, checking faces, assessing
+            You can\'t relax. Your eyes constantly scan every room you enter, noting exits, checking faces, assessing
             threats. You startle at sudden sounds. You notice everything---every movement in your peripheral vision, every
-            shift in someone's tone. Your nervous system is stuck in high alert, convinced danger is imminent even when
-            you're objectively safe. This is hypervigilance, and it's exhausting.
+            shift in someone\'s tone. Your nervous system is stuck in high alert, convinced danger is imminent even when
+            you\'re objectively safe. This is hypervigilance, and it\'s exhausting.
           </p>
           <p className="mb-6">
             Hypervigilance is a common symptom of PTSD---an overactive threat-detection system that once kept you safe but
@@ -1807,7 +2196,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Overactive Amygdala',
               content: (
                 <p>
-                  Your amygdala (the brain's smoke detector) becomes hypersensitive after trauma. It's like a smoke
+                  Your amygdala (the brain\'s smoke detector) becomes hypersensitive after trauma. It\'s like a smoke
                   detector that goes off when you make toast---the sensitivity is too high. Your amygdala now interprets
                   neutral or mildly threatening cues as dangerous.
                 </p>
@@ -1819,8 +2208,8 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   The prefrontal cortex normally calms down the amygdala when it overreacts. After trauma, this brake
-                  system doesn't work as well. The amygdala sounds alarms, and there's insufficient rational input to say
-                  "actually, this isn't dangerous."
+                  system doesn\'t work as well. The amygdala sounds alarms, and there\'s insufficient rational input to say
+                  "actually, this isn\'t dangerous."
                 </p>
               ),
             },
@@ -1829,7 +2218,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Chronic Sympathetic Activation',
               content: (
                 <p>
-                  Your sympathetic nervous system (fight/flight) stays partially activated. You're in a state of
+                  Your sympathetic nervous system (fight/flight) stays partially activated. You\'re in a state of
                   sustained arousal---not full panic, but always 'on"---ready to spring into action at any moment.
                 </p>
               ),
@@ -1840,7 +2229,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               content: (
                 <p>
                   Your attention automatically orients toward threat-related stimuli. In a crowded room, you notice the
-                  person who seems angry, the exit routes, potential weapons---not because you're choosing to, but because
+                  person who seems angry, the exit routes, potential weapons---not because you\'re choosing to, but because
                   your brain automatically prioritizes threat-relevant information.
                 </p>
               ),
@@ -1936,8 +2325,8 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Create Actual Safety',
               description: (
                 <p>
-                  First, ensure you're actually safe. If you're still in danger, hypervigilance is appropriate. You can't
-                  convince your nervous system to relax in an objectively unsafe environment. Once you're safe, you can
+                  First, ensure you\'re actually safe. If you\'re still in danger, hypervigilance is appropriate. You can\'t
+                  convince your nervous system to relax in an objectively unsafe environment. Once you\'re safe, you can
                   work on convincing your nervous system of that fact.
                 </p>
               ),
@@ -1967,7 +2356,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
                 <p>
                   Mindfulness helps you observe your hypervigilant thoughts without getting caught in them{', '}
                   <Citation id="4" index={4} source="Journal of Traumatic Stress" year="2020" tier={1} />. "I notice I'm
-                  scanning for threats. That's my trauma response. I don't have to follow it.'
+                  scanning for threats. That\'s my trauma response. I don\'t have to follow it.'
                 </p>
               ),
             },
@@ -1990,6 +2379,115 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               ),
             },
           ]}
+        />
+
+        <h2
+          id="daily-life"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Hypervigilance in Daily Life
+        </h2>
+        <p className="mb-6">
+          Hypervigilance affects every aspect of life. Here are common scenarios and what\'s happening:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'public-spaces',
+              label: 'Public Spaces',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>What you experience:</strong> Entering a restaurant or store, you immediately scope out exits, assess who's present, choose a seat with a view of the door, and remain alert to everyone's movements.
+                  </p>
+                  <p className="mb-3">
+                    <strong>What's happening:</strong> Your threat-detection system is doing what it learned to do—gather intelligence about your environment. It can't distinguish between a potentially dangerous situation and a coffee shop.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Acknowledge the scanning ("I notice I'm checking exits—that's my trauma response"). Then deliberately shift attention to something neutral (the menu, your coffee temperature).
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'relationships',
+              label: 'Relationships',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>What you experience:</strong> You analyze your partner's tone, facial expressions, and body language for signs of anger, rejection, or danger. You can't relax around people even if you love them.
+                  </p>
+                  <p className="mb-3">
+                    <strong>What's happening:</strong> If your trauma involved interpersonal threat, your brain scans relationships for danger cues. This can make intimacy feel unsafe.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Communicate what you're experiencing. "I'm feeling hypervigilant right now. It's not about you—I just need some grounding." Safe partners can help co-regulate your nervous system.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'sleep',
+              label: 'Sleep',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>What you experience:</strong> Difficulty falling asleep because your brain won't "turn off." Every sound jolts you awake. You feel like you're on night watch.
+                  </p>
+                  <p className="mb-3">
+                    <strong>What's happening:</strong> Sleep requires feeling safe enough to be unconscious. If your nervous system is stuck in threat mode, it resists sleep <Citation id="8" index={8} source="Sleep Medicine Reviews" year="2021" tier={1} />.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Create actual safety cues (locked doors, nightlight, white noise). Practice 4-7-8 breathing to activate your parasympathetic system before bed.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'work',
+              label: 'Work',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>What you experience:</strong> Open office layouts feel overwhelming. You need to know who's behind you. You're exhausted by the constant vigilance required to feel safe at work.
+                  </p>
+                  <p className="mb-3">
+                    <strong>What's happening:</strong> Work environments often involve unpredictability, multiple people, and lack of control—all triggering for hypervigilant nervous systems.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Request accommodations if possible (back-to-wall seating, quieter space). Take micro-breaks to ground yourself. Use headphones to create a buffer.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2
+          id="when-seek-help"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          When to Seek Professional Help
+        </h2>
+        <p className="mb-6">
+          While some degree of vigilance is normal, seek help if hypervigilance:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Prevents you from leaving home or engaging in activities you once enjoyed</li>
+          <li>Causes chronic insomnia or significant sleep disruption</li>
+          <li>Damages your relationships or prevents intimate connections</li>
+          <li>Leads to physical symptoms (chronic pain, tension headaches, exhaustion)</li>
+          <li>Doesn't improve with self-help strategies over several weeks</li>
+          <li>Co-occurs with other PTSD symptoms (flashbacks, avoidance, negative thoughts)</li>
+        </ul>
+
+        <QuoteBlock
+          quote="The body remembers what the mind forgets. Hypervigilance is your body\'s memory of danger, faithfully protecting you from a threat that no longer exists."
+          attribution="Dr. Bessel van der Kolk"
+          role="Psychiatrist"
+          source="The Body Keeps the Score"
         />
 
         <h2
@@ -2032,8 +2530,8 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Hypervigilance served a purpose---it kept you alive during danger. But you don't need that level of vigilance
-          anymore. With time and practice, you can teach your nervous system that it's okay to relax, to let your guard
+          Hypervigilance served a purpose---it kept you alive during danger. But you don\'t need that level of vigilance
+          anymore. With time and practice, you can teach your nervous system that it\'s okay to relax, to let your guard
           down, to rest. Safety can become more than just a concept---it can become a felt experience in your body.
         </p>
       </>
@@ -2043,15 +2541,35 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
   {
     id: catId(15),
     slug: 'emotional-numbness-after-trauma-cant-feel-anything',
-    title: "Emotional Numbness After Trauma: Why You Can't Feel Anything",
+    title: "Emotional Numbness After Trauma: Why You Can\'t Feel Anything",
     description: "Feeling emotionally numb, disconnected, unable to experience joy or connection after trauma. Learn why numbness happens and how to reconnect with your emotions.",
     image: "/images/articles/cat11/cover-015.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Emotional Numbing', 'Dissociation', 'PTSD', 'Recovery'],
+    summary: 'Emotional numbness is a protective shutdown response where your nervous system suppresses all emotions to avoid overwhelming feelings from trauma. While it prevents unbearable pain, it also blocks joy, love, and connection—creating a gray existence where you function but don\'t truly live. Recovery involves gradually teaching your nervous system that it\'s safe to feel again.',
+    keyFacts: [
+      { text: 'You cannot selectively numb emotions—when you shut down painful feelings, you simultaneously shut down joy, love, pleasure, and connection', citationIndex: 3 },
+      { text: 'The dorsal vagal system creates a chronic "freeze" or shutdown response, producing low energy, disconnection, and emotional flatness—your body playing dead to survive', citationIndex: 8 },
+      { text: 'Brain reward systems (nucleus accumbens, ventral striatum) show reduced activity in emotional numbness, explaining why nothing feels good anymore', citationIndex: 2 },
+      { text: 'Numbness differs from depression: depression involves negative emotions (sadness, guilt) while numbness is the absence of all emotion', citationIndex: 1 },
+      { text: 'Body-based approaches (Somatic Experiencing, yoga, breathwork) are often most effective because emotions live in the body, not just the mind', citationIndex: 5 },
+    ],
+    sparkMoment: 'Numbness got you through something unbearable, but you don\'t need it anymore—slowly, carefully, with support, you can thaw and discover that being truly alive, feeling all of it, is worth the risk.',
+    practicalExercise: {
+      title: 'Gradual Emotion Reconnection Practice',
+      steps: [
+        { title: 'Body Sensation Check-In', description: 'Twice daily, pause and notice physical sensations without judgment: "My shoulders feel tense. My stomach feels warm. My breath is shallow." Sensations are the gateway to emotions.' },
+        { title: 'Preference Awareness', description: 'Throughout the day, notice small preferences: "I like this song more than that one. I prefer tea over coffee right now." Preferences are mild emotions—practice noticing them.' },
+        { title: '10-Second Emotion Stays', description: 'When you notice even a faint emotion, pause and stay with it for 10 seconds: "I feel slightly irritated. Where is that in my body? Can I just be with it?" Then move on. Build tolerance gradually.' },
+        { title: 'Safe Feeling Contexts', description: 'Create situations where emotions are more likely: watch a moving film, listen to music, be in nature, spend time with a trusted person. Practice feeling in low-stakes environments.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -2163,7 +2681,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           Why Emotional Numbness Happens
         </h2>
         <p className="mb-6">
-          Numbness is your nervous system's attempt to protect you from overwhelming emotions. Here's the mechanism:
+          Numbness is your nervous system\'s attempt to protect you from overwhelming emotions. Here\'s the mechanism:
         </p>
 
         <ProgressSteps
@@ -2190,7 +2708,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'The Shutdown Persists',
               description: (
                 <p>
-                  After the trauma ends, the numbing doesn't automatically turn off. Your brain learned that emotions = danger, so it keeps them suppressed to keep you 'safe."
+                  After the trauma ends, the numbing doesn\'t automatically turn off. Your brain learned that emotions = danger, so it keeps them suppressed to keep you 'safe."
                 </p>
               ),
             },
@@ -2198,7 +2716,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Unable to Discriminate',
               description: (
                 <p>
-                  Unfortunately, you can't selectively numb emotions. When you shut down the painful feelings, you also shut down joy, love, pleasure, and connection. It's all or nothing.
+                  Unfortunately, you can\'t selectively numb emotions. When you shut down the painful feelings, you also shut down joy, love, pleasure, and connection. It\'s all or nothing.
                 </p>
               ),
             },
@@ -2224,7 +2742,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Prefrontal Cortex Suppression',
               content: (
                 <p>
-                  Your prefrontal cortex (rational brain) suppresses the amygdala (emotion center) to prevent emotional flooding. It's like constantly pressing the brake on your feelings. This takes enormous mental energy and prevents you from experiencing any emotions fully.
+                  Your prefrontal cortex (rational brain) suppresses the amygdala (emotion center) to prevent emotional flooding. It\'s like constantly pressing the brake on your feelings. This takes enormous mental energy and prevents you from experiencing any emotions fully.
                 </p>
               ),
             },
@@ -2233,7 +2751,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Reward System Dysfunction',
               content: (
                 <p>
-                  Brain regions involved in pleasure and reward (nucleus accumbens, ventral striatum) show reduced activity. This is why nothing feels good anymore---your brain's reward circuitry is dampened.
+                  Brain regions involved in pleasure and reward (nucleus accumbens, ventral striatum) show reduced activity. This is why nothing feels good anymore---your brain\'s reward circuitry is dampened.
                 </p>
               ),
             },
@@ -2242,7 +2760,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
               title: 'Dorsal Vagal Shutdown',
               content: (
                 <p>
-                  The dorsal vagal system is your nervous system's 'freeze' or "shutdown" response{', '}
+                  The dorsal vagal system is your nervous system\'s 'freeze' or "shutdown" response{', '}
                   <Citation id="8" index={8} source="Frontiers in Psychology" year="2018" tier={1} />. When activated chronically, it creates a state of low energy, disconnection, and emotional flatness. It's your body playing dead to survive.
                 </p>
               ),
@@ -2257,7 +2775,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           The Cruel Paradox
         </h2>
         <p className="mb-6">
-          Here's the painful irony: emotional numbness develops to protect you from unbearable feelings, but it also prevents you from experiencing life's goodness. You can't feel the terror anymore, but you also can't feel:
+          Here\'s the painful irony: emotional numbness develops to protect you from unbearable feelings, but it also prevents you from experiencing life\'s goodness. You can\'t feel the terror anymore, but you also can\'t feel:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Love and connection with others</li>
@@ -2272,7 +2790,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="warning">
           <p>
-            Some people describe numbness as a relief after the intensity of hyperarousal. But long-term, it's deeply damaging. You're not healing---you're just avoiding. Recovery requires feeling your feelings, not eliminating them.
+            Some people describe numbness as a relief after the intensity of hyperarousal. But long-term, it\'s deeply damaging. You\'re not healing---you\'re just avoiding. Recovery requires feeling your feelings, not eliminating them.
           </p>
         </ArticleCallout>
 
@@ -2283,7 +2801,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           Reconnecting with Emotions
         </h2>
         <p className="mb-6">
-          Recovery from emotional numbness is gradual. You're essentially teaching your nervous system that it's safe to feel again{', '}
+          Recovery from emotional numbness is gradual. You\'re essentially teaching your nervous system that it\'s safe to feel again{', '}
           <Citation id="5" index={5} source="Clinical Psychology Review" year="2021" tier={1} />:
         </p>
 
@@ -2352,6 +2870,73 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         />
 
         <h2
+          id="numbness-in-daily-life"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          What Numbness Looks Like in Daily Life
+        </h2>
+        <p className="mb-6">
+          Emotional numbness affects every area of life. Here are common scenarios:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Before Trauma',
+            points: [
+              'Crying at sad movies, laughing at jokes',
+              'Feeling excited about plans, proud of accomplishments',
+              'Experiencing warmth and connection with loved ones',
+              'Feeling alive and engaged with life',
+              'Emotions as guides (anger shows boundaries, sadness shows loss)',
+            ],
+          }}
+          after={{
+            title: 'With Emotional Numbness',
+            points: [
+              'Watching emotional scenes without feeling anything',
+              'Indifference to achievements, no anticipation for events',
+              'Going through motions with family/friends, faking responses',
+              'Watching life happen without participating',
+              'No emotional signals—making decisions feels impossible',
+            ],
+          }}
+        />
+
+        <h3 className="text-2xl font-bold mt-8 mb-4">The Hidden Costs</h3>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Relationship damage</strong>: Partners feel your emotional unavailability. Children don't feel seen. Friends drift away because you seem uninterested.
+          </li>
+          <li>
+            <strong>Poor decision-making</strong>: Emotions provide important information. Without them, you can't tell what you want, what matters to you, or what feels right.
+          </li>
+          <li>
+            <strong>Self-neglect</strong>: You don't feel hunger, fatigue, or pain signals clearly, leading to poor self-care.
+          </li>
+          <li>
+            <strong>Existential emptiness</strong>: Life loses meaning when you can't feel what makes it meaningful. This can lead to suicidal ideation—not from pain, but from profound emptiness.
+          </li>
+          <li>
+            <strong>Substance use risk</strong>: Some people use substances to try to feel <em>something</em> or to enhance the numbness further.
+          </li>
+        </ul>
+
+        <ArticleCallout variant="danger" title="When to Seek Immediate Help">
+          <p className="mb-3">
+            If emotional numbness co-occurs with any of these, seek help immediately:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Thoughts of suicide or not wanting to exist (even without active pain)</li>
+            <li>Complete inability to care for yourself (not eating, not sleeping, not functioning)</li>
+            <li>Feeling completely detached from reality (severe dissociation)</li>
+            <li>Using substances or self-harm to try to feel something</li>
+          </ul>
+          <p className="mt-3">
+            Call 988 (Suicide & Crisis Lifeline) or text HOME to 741741 (Crisis Text Line).
+          </p>
+        </ArticleCallout>
+
+        <h2
           id="therapy"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -2386,10 +2971,10 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
           What to Expect as Numbness Lifts
         </h2>
         <p className="mb-6">
-          As you reconnect with emotions, it won't be all sunshine and rainbows. You'll feel the difficult emotions too---grief, anger, sadness. This can be scary, but it's actually a sign of healing. You're no longer avoiding; you're processing.
+          As you reconnect with emotions, it won\'t be all sunshine and rainbows. You\'ll feel the difficult emotions too---grief, anger, sadness. This can be scary, but it\'s actually a sign of healing. You\'re no longer avoiding; you\'re processing.
         </p>
         <p className="mb-6">
-          The goal isn't to feel good all the time. The goal is to feel---to experience the full range of human emotions, both pleasant and unpleasant. That's what it means to be alive.
+          The goal isn\'t to feel good all the time. The goal is to feel---to experience the full range of human emotions, both pleasant and unpleasant. That\'s what it means to be alive.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -2406,7 +2991,7 @@ export const ptsdComplexTraumaArticlesA: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Numbness served a purpose. It got you through something unbearable. But you don't need it anymore. Slowly, carefully, with support, you can thaw. And when you do, you'll discover that being alive---really alive, feeling all of it---is worth the risk.
+          Numbness served a purpose. It got you through something unbearable. But you don\'t need it anymore. Slowly, carefully, with support, you can thaw. And when you do, you\'ll discover that being alive---really alive, feeling all of it---is worth the risk.
         </p>
       </>
     ),

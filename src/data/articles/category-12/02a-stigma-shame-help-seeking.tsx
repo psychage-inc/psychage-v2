@@ -9,6 +9,11 @@ import {
   ArticleAccordion,
   ProgressSteps,
   QuoteBlock,
+  ComparisonTable,
+  BeforeAfter,
+  ArticleTabs,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const stigmaShameHelpSeekingArticlesA: Article[] = [
@@ -19,11 +24,31 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     description: 'Mental health stigma prevents millions from seeking help. Learn what drives stigma, how it causes harm, and evidence-based ways to fight it.',
     image: "/images/articles/cat12/cover-011.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mental Health Stigma', 'Discrimination', 'Public Health', 'Social Change'],
+    summary: 'Mental health stigma prevents millions from seeking treatment through public prejudice, internalized shame, and systemic discrimination. Understanding the sources of stigma and evidence-based reduction strategies can help create a society where mental health is treated like any other health condition.',
+    keyFacts: [
+      { text: '75% of people with mental illness report experiencing discrimination', citationIndex: 7 },
+      { text: '60% of people don\'t seek help due to stigma and shame', citationIndex: 7 },
+      { text: 'People with mental illness wait an average of 10 years between symptom onset and seeking help, largely due to stigma', citationIndex: 3 },
+      { text: 'People with serious mental illness are 10 times more likely to be victims of violent crime than perpetrators', citationIndex: 5 },
+      { text: 'Direct contact with people living well with mental illness is the most effective stigma reduction strategy', citationIndex: 6 },
+    ],
+    sparkMoment: 'Stigma kills more people with mental illness than symptoms do—not through biology, but by preventing help-seeking, destroying relationships, and creating isolation.',
+    practicalExercise: {
+      title: 'Challenge Stigmatizing Language in Your Life',
+      steps: [
+        { title: 'Notice Your Own Language', description: 'For one week, pay attention when you or others use words like "crazy," "psycho," or "insane." Write them down without judgment.' },
+        { title: 'Learn Alternatives', description: 'Replace stigmatizing language with person-first language. Instead of "he\'s bipolar," say "he lives with bipolar disorder."' },
+        { title: 'Speak Up Gently', description: 'When you hear stigmatizing language, offer an alternative: "I\'ve learned it\'s more respectful to say..."' },
+        { title: 'Share a Story', description: 'If comfortable, share your own mental health experience or mention therapy in casual conversation to normalize it.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Mental Health',
+    },
     citations: [
       {
         id: '1',
@@ -113,7 +138,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           items={[
             {
               id: 'public',
-              title: "Public Stigma: Society's Prejudice",
+              title: "Public Stigma: Society\'s Prejudice",
               content: (
                 <div>
                   <p className="mb-3">
@@ -181,7 +206,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <StatCard
           stats={[
             { value: 75, suffix: '%', label: 'People with mental illness report experiencing discrimination' },
-            { value: 60, suffix: '%', label: "Don't seek help due to stigma and shame" },
+            { value: 60, suffix: '%', label: "Don\'t seek help due to stigma and shame" },
             { value: 90, suffix: '%', label: 'Say stigma prevents them from living full lives' },
           ]}
           source="NAMI, Mental Health Stigma Survey, 2023"
@@ -236,6 +261,55 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li><strong>Economic costs:</strong> Lost productivity, unemployment, and healthcare expenses total billions annually <Citation id="8" index={8} source="Health Economics" year="2021" tier={1} /></li>
         </ul>
 
+        <h2 id="cost-of-silence" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Personal Cost of Silence
+        </h2>
+        <p className="mb-6">
+          The decision to hide mental illness comes at an enormous personal cost. When people conceal their struggles, they miss opportunities for connection, support, and treatment. The energy spent maintaining a facade of normalcy could instead go toward recovery.
+        </p>
+        <p className="mb-6">
+          <strong>Workplace concealment:</strong> Many employees hide mental health conditions from employers, fearing job loss or being passed over for promotion. This means forgoing needed accommodations (flexible scheduling, reduced workload during episodes, work-from-home options) that could make success possible. The stress of concealment often worsens symptoms, creating a vicious cycle.
+        </p>
+        <p className="mb-6">
+          <strong>Relationship isolation:</strong> Hiding mental illness from friends and romantic partners prevents authentic intimacy. People report feeling like impostors in their own lives, constantly performing wellness while suffering internally. When relationships are built on concealment, they lack the depth and support needed during difficult times.
+        </p>
+        <p className="mb-6">
+          <strong>Family silence:</strong> In some families, mental illness is treated as a shameful secret. Children learn that certain feelings cannot be discussed, certain struggles must be hidden. This generational silence perpetuates stigma and prevents early intervention when problems emerge.
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Barriers to Seeking Mental Health Treatment"
+          data={[
+            { label: 'Stigma/Shame', value: 60 },
+            { label: 'Cost', value: 45 },
+            { label: 'Lack of Access', value: 38 },
+            { label: 'Don\'t Know Where to Go', value: 32 },
+            { label: 'Think It Won\'t Help', value: 28 },
+          ]}
+          source="NAMI Mental Health Treatment Survey, 2023"
+          description="Percentage of people who delayed or avoided treatment due to each barrier. Stigma remains the leading barrier."
+        />
+
+        <h2 id="stigma-across-communities" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Stigma Varies Across Communities
+        </h2>
+        <p className="mb-6">
+          Stigma does not affect everyone equally. Cultural background, gender, race, and socioeconomic status shape how stigma is experienced and expressed:
+        </p>
+        <p className="mb-6">
+          <strong>Men and masculinity:</strong> Traditional masculine norms equate mental health struggles with weakness. Men are taught to be self-reliant, stoic, and in control. Seeking help for emotional problems violates these norms, leading to higher rates of untreated depression and suicide among men. Male suicide rates are 3-4 times higher than female rates, partly due to stigma-driven treatment avoidance.
+        </p>
+        <p className="mb-6">
+          <strong>Communities of color:</strong> Historical mistreatment by medical and mental health systems creates warranted mistrust. Black Americans have experienced forced institutionalization, unethical research, and discriminatory treatment. This history, combined with cultural stigma, results in lower treatment utilization despite equal or higher rates of trauma and stress-related conditions.
+        </p>
+        <p className="mb-6">
+          <strong>LGBTQ+ communities:</strong> LGBTQ+ individuals face compounded stigma---both for sexual orientation/gender identity and for mental health conditions. Conversion therapy, pathologization of identity, and family rejection create unique barriers. At the same time, LGBTQ+ communities have strong peer support networks that can reduce stigma when accessed.
+        </p>
+        <p className="mb-6">
+          <strong>Religious communities:</strong> In some faith traditions, mental illness is misunderstood as spiritual weakness, lack of faith, or demonic influence. This theological stigma prevents people from seeking professional help, instead relying solely on prayer or religious counsel. Faith leaders who educate themselves about mental health can bridge this gap, integrating spiritual support with clinical care.
+        </p>
+
         <h2 id="fighting-stigma" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Ways to Fight Stigma
         </h2>
@@ -286,6 +360,35 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           source="Mental Health Advocate"
         />
 
+        <h2 id="progress-and-hope" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Progress and Reasons for Hope
+        </h2>
+        <p className="mb-6">
+          Despite persistent stigma, attitudes toward mental health have improved dramatically over the past two decades. Public campaigns, celebrity disclosure, and increased media coverage have shifted cultural conversations.
+        </p>
+        <p className="mb-6">
+          <strong>Changing attitudes:</strong> Surveys show that younger generations hold significantly less stigmatizing views than older cohorts. Gen Z and Millennials are more likely to view therapy positively, disclose mental health conditions, and support workplace accommodations. This generational shift suggests stigma will continue to decline.
+        </p>
+        <p className="mb-6">
+          <strong>Workplace progress:</strong> Major corporations now offer mental health days, employee assistance programs, and resilience training. Mental health parity laws require insurance coverage for mental health conditions equivalent to physical health coverage. While gaps remain, structural changes are making treatment more accessible.
+        </p>
+        <p className="mb-6">
+          <strong>Celebrity advocacy:</strong> Public figures sharing their mental health journeys---Dwayne "The Rock" Johnson on depression, Simone Biles on therapy, Prince Harry on trauma---normalize treatment and reduce shame. When people see successful individuals openly discussing mental health care, it challenges stereotypes about weakness and incompetence.
+        </p>
+        <p className="mb-6">
+          <strong>Language evolution:</strong> Terms like "mental health condition" are replacing "mental illness." "Person with schizophrenia" is becoming standard over "schizophrenic." These linguistic shifts reflect and reinforce changing attitudes. Language matters---it shapes how we think about ourselves and others.
+        </p>
+
+        <ArticleCallout variant="success" title="Signs of Progress">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>40% of adults now say they've been in therapy, compared to 25% a decade ago</li>
+            <li>Mental health apps have over 100 million users globally</li>
+            <li>988 Suicide & Crisis Lifeline launched in 2022, making crisis support more accessible</li>
+            <li>More than 200 mental health parity lawsuits filed, enforcing equal insurance coverage</li>
+            <li>Mental health education now required in many school curricula</li>
+          </ul>
+        </ArticleCallout>
+
         <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Fight Stigma in Your Own Life
         </h2>
@@ -327,21 +430,51 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <p className="mb-6">
           Seeking help is a sign of strength, not weakness. Mental health conditions are treatable, and recovery is possible. You deserve support, and stigma should not stand in your way.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Mental health stigma has three forms: public stigma (society's prejudice), self-stigma (internalized shame), and structural stigma (systemic discrimination)</li>
+            <li>Stigma prevents 60% of people from seeking help, leading to delayed treatment, social isolation, and worse health outcomes</li>
+            <li>Direct contact with people living well with mental illness is the most effective stigma reduction strategy</li>
+            <li>Stigma varies across communities---men, people of color, LGBTQ+ individuals, and religious communities face unique barriers</li>
+            <li>Attitudes are improving, especially among younger generations, and structural changes are making mental health care more accessible</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
   {
     id: catId(12),
     slug: 'self-stigma-internalized-judgment',
-    title: "Self-Stigma: When You Apply Society's Judgment to Yourself",
+    title: "Self-Stigma: When You Apply Society\'s Judgment to Yourself",
     description: "Self-stigma---internalizing negative beliefs about mental illness---can be more damaging than the condition itself. Learn how it develops and how to overcome it.",
     image: "/images/articles/cat12/cover-012.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Stigma', 'Shame', 'Self-Esteem', 'Mental Health'],
+    summary: 'Self-stigma occurs when people with mental illness internalize negative societal attitudes, believing they are weak, broken, or unworthy. This internalized shame can be more damaging than the condition itself, undermining treatment-seeking, self-esteem, and life goals—but it can be overcome through peer support, cognitive reframing, and self-compassion.',
+    keyFacts: [
+      { text: '41% of people with mental illness report moderate to high self-stigma', citationIndex: 1 },
+      { text: 'Self-stigma increases the risk of not adhering to treatment by 3 times', citationIndex: 5 },
+      { text: '65% report self-stigma reduces quality of life more than symptoms themselves', citationIndex: 5 },
+      { text: 'Self-stigma is often highest when first diagnosed, before exposure to recovery narratives', citationIndex: 3 },
+      { text: 'Peer support and contact with people living well with mental illness is one of the most powerful antidotes to self-stigma', citationIndex: 7 },
+    ],
+    sparkMoment: 'Self-stigma convinced many they were too damaged to deserve happiness—but recovery teaches that you were never broken, just struggling. There is a profound difference.',
+    practicalExercise: {
+      title: 'Recognize and Challenge Self-Stigmatizing Thoughts',
+      steps: [
+        { title: 'Track Your Inner Dialogue', description: 'For three days, write down moments when you judge yourself harshly about your mental health. Notice patterns in your self-criticism.' },
+        { title: 'Identify the Stigma Source', description: 'Ask: "Is this my authentic belief, or did I absorb this from society, family, or media?"' },
+        { title: 'Challenge Each Thought', description: 'For each self-stigmatizing thought, write an evidence-based counter-statement. Example: "I\'m weak" becomes "Seeking help requires courage."' },
+        { title: 'Practice Self-Compassion', description: 'Write a letter to yourself from the perspective of a compassionate friend. What would they say about your struggles?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -539,7 +672,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <strong>2. Cognitive reframing.</strong>
         </p>
         <p className="mb-6">
-          Challenging self-stigmatizing thoughts using cognitive-behavioral techniques helps. When you notice thoughts like "I'm broken," you can ask: Is this thought based on facts or on internalized stigma? Would I judge someone else this harshly? What evidence contradicts this belief?
+          Challenging self-stigmatizing thoughts using cognitive-behavioral techniques helps. When you notice thoughts like "I\'m broken," you can ask: Is this thought based on facts or on internalized stigma? Would I judge someone else this harshly? What evidence contradicts this belief?
         </p>
 
         <p className="mb-6">
@@ -570,11 +703,82 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           Channeling shame into action can transform self-stigma into empowerment. Joining advocacy organizations, sharing your story publicly (when safe), or fighting for mental health policy changes shifts the narrative from "I am defective" to "The system is unjust and I am fighting back."
         </p>
 
+        <ComparisonTable
+          title="Comparing Self-Stigma Reduction Approaches"
+          columns={['Approach', 'How It Works', 'Best For', 'Accessibility']}
+          items={[
+            {
+              feature: 'Peer Support Groups',
+              values: ['Learn from others in recovery, share experiences, build belonging', 'Those who feel isolated or "different"', 'Free/Low-cost, widely available']
+            },
+            {
+              feature: 'Individual Therapy (CBT/Narrative)',
+              values: ['Challenge beliefs 1-on-1, rewrite your story', 'Those with deep-rooted self-stigma', 'Moderate cost, requires therapist access']
+            },
+            {
+              feature: 'Self-Compassion Practice',
+              values: ['Treat yourself with kindness through meditation, writing', 'Self-motivated learners', 'Free, can be self-directed']
+            },
+            {
+              feature: 'Psychoeducation Programs',
+              values: ['Learn facts about mental illness to counter myths', 'Those new to diagnosis or treatment', 'Free/Low-cost, online/in-person']
+            },
+            {
+              feature: 'Advocacy/Activism',
+              values: ['Channel shame into social action', 'Those energized by fighting injustice', 'Free, requires public engagement comfort']
+            },
+          ]}
+          highlightColumn={1}
+        />
+
         <QuoteBlock
-          quote="Self-stigma convinced me I was too damaged to deserve happiness. Recovery taught me that I was never broken---I was always whole, just struggling. There's a difference."
+          quote="Self-stigma convinced me I was too damaged to deserve happiness. Recovery taught me that I was never broken---I was always whole, just struggling. There\'s a difference."
           attribution="Anonymous"
           role="Peer Support Specialist"
           source="NAMI Recovery Story"
+        />
+
+        <h2 id="recovery-journey" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Recovery Journey: From Shame to Self-Acceptance
+        </h2>
+        <p className="mb-6">
+          Overcoming self-stigma is not a linear process. Most people experience setbacks, but each step forward builds resilience. Here is a common progression:
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            {
+              title: 'Stage 1: Awareness Without Judgment',
+              description: (
+                <p>You recognize self-stigmatizing thoughts when they arise. Instead of automatically accepting them, you notice them: "I'm having the thought that I'm weak." This creates distance between you and the belief.</p>
+              ),
+            },
+            {
+              title: 'Stage 2: Questioning the Belief',
+              description: (
+                <p>You begin challenging the thoughts. "Is this true? Would I say this to a friend? Where did I learn this belief?" You realize many thoughts are internalized from others, not your authentic perspective.</p>
+              ),
+            },
+            {
+              title: 'Stage 3: Connecting with Others',
+              description: (
+                <p>You join peer support or share your experience with trusted people. Hearing others' stories normalizes your struggles. You feel less alone and start to see your condition as part of human diversity, not defectiveness.</p>
+              ),
+            },
+            {
+              title: 'Stage 4: Rewriting Your Narrative',
+              description: (
+                <p>Your story shifts from "I am broken" to "I am managing a health condition." Mental illness becomes one chapter in your life, not your entire identity. You reclaim agency as the author of your story.</p>
+              ),
+            },
+            {
+              title: 'Stage 5: Self-Compassion and Acceptance',
+              description: (
+                <p>You treat yourself with kindness during struggles. Self-stigma no longer dictates your choices. You pursue goals without preemptive self-sabotage. Recovery becomes possible because you believe you deserve it.</p>
+              ),
+            },
+          ]}
         />
 
         <h2 id="challenging-specific-beliefs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -623,6 +827,29 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           <li>Engage in activism or advocacy if it feels empowering (not obligatory)</li>
         </ul>
 
+        <BeforeAfter
+          before={{
+            title: 'Living with Self-Stigma',
+            points: [
+              'Believing you are fundamentally flawed or broken',
+              'Avoiding treatment to avoid the "mentally ill" label',
+              'Hiding your condition from everyone, living in fear of discovery',
+              'Giving up on goals because you believe people like you don\'t deserve success',
+              'Constant shame and self-criticism dominating your inner dialogue',
+            ],
+          }}
+          after={{
+            title: 'Overcoming Self-Stigma',
+            points: [
+              'Seeing yourself as a whole person managing a health condition',
+              'Seeking treatment without shame, recognizing it as self-care',
+              'Selectively disclosing to supportive people, reducing isolation',
+              'Pursuing goals with confidence that recovery and success are possible',
+              'Practicing self-compassion and challenging stigmatizing thoughts when they arise',
+            ],
+          }}
+        />
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -638,21 +865,51 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <p className="mb-6">
           You deserve to see yourself as whole, worthy, and capable of recovery. Self-stigma is learned---and it can be unlearned. Your mental health condition is part of your story, but it is not the whole story, and it is not a reason for shame.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Self-stigma is the internalization of negative societal beliefs about mental illness, leading to shame, reduced self-worth, and sabotaged recovery</li>
+            <li>41% of people with mental illness experience moderate to high self-stigma, which can be more damaging than symptoms themselves</li>
+            <li>Self-stigma follows a three-step process: awareness of stereotypes, agreement with them, and application to oneself</li>
+            <li>Effective interventions include peer support, cognitive reframing, narrative therapy, self-compassion practice, psychoeducation, and advocacy</li>
+            <li>Recovery involves progressing from automatic self-judgment to self-compassion and acceptance, recognizing you are whole—not broken</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
   {
     id: catId(13),
     slug: 'why-men-dont-seek-help-masculinity-stigma',
-    title: "Why Men Don't Seek Help: Masculinity, Stigma, and the Therapy Gap",
+    title: "Why Men Don\'t Seek Help: Masculinity, Stigma, and the Therapy Gap",
     description: "Men are less likely to seek mental health help despite facing significant mental health challenges. Explore how masculinity norms create barriers and how to overcome them.",
     image: "/images/articles/cat12/cover-013.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Men\'s Mental Health', 'Masculinity', 'Help-Seeking', 'Gender'],
+    summary: 'Men die by suicide at nearly four times the rate of women, yet are half as likely to seek mental health treatment. Traditional masculine norms—emphasizing self-reliance, emotional stoicism, and strength—create deadly barriers to help-seeking. Male-friendly approaches and redefining strength can save lives.',
+    keyFacts: [
+      { text: '75% of suicides are men, often without prior contact with mental health services', citationIndex: 3 },
+      { text: 'Men use mental health services at 50% the rate of women despite similar or greater distress', citationIndex: 6 },
+      { text: 'Men wait an average of 10 years before seeking help for depression', citationIndex: 6 },
+      { text: 'Depression in men often manifests as anger, irritability, substance use, and risk-taking rather than sadness', citationIndex: 2 },
+      { text: 'Reframing therapy as strength-building and using action-oriented approaches significantly increases men\'s engagement', citationIndex: 4 },
+    ],
+    sparkMoment: 'Seeking help is not weakness—it is the strongest thing you can do. The culture that tells men to suffer in silence is wrong, and it is killing them.',
+    practicalExercise: {
+      title: 'Redefine Strength for Yourself',
+      steps: [
+        { title: 'Identify Your Masculinity Beliefs', description: 'Write down what you were taught "real men" should be. Where did these messages come from (family, media, peers)?' },
+        { title: 'Examine the Cost', description: 'How have these beliefs affected your mental health, relationships, and quality of life? What have you sacrificed to maintain them?' },
+        { title: 'Rewrite the Rules', description: 'Define strength in your own terms. Can strength include asking for help? Being vulnerable? Showing emotion?' },
+        { title: 'Take One Action', description: 'Do one thing that breaks the old rules: talk to a friend about something real, schedule a therapy consultation, or join a men\'s support group.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Mental Health',
+    },
     citations: [
       {
         id: '1',
@@ -822,7 +1079,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
             { label: 'Withdrawal (both)', value: 70 },
             { label: 'Physical complaints (both)', value: 55 },
           ]}
-          source="American Journal of Men's Health, 2022 (% experiencing symptom in depressed men)"
+          source="American Journal of Men\'s Health, 2022 (% experiencing symptom in depressed men)"
         />
 
         <p className="mb-6">
@@ -840,6 +1097,21 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <p className="mb-6">
           Providers trained to recognize only "typical" depression may miss these presentations, and men themselves may not recognize their experiences as depression.
         </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="Men who seek therapy are weak or unmanly"
+            fact="Acknowledging struggle and taking action to address it requires courage. Athletes, military veterans, and successful men increasingly credit therapy with their achievements."
+          />
+          <MythVsFactBlock
+            myth="Men don\'t experience depression as often as women"
+            fact="Men may experience depression at similar rates but express it differently (anger, substance use, risk-taking). Underdiagnosis stems from help-seeking barriers, not lower prevalence."
+          />
+          <MythVsFactBlock
+            myth="Talking about feelings won\'t help—men need to take action"
+            fact="Action-oriented therapy works well for men, but emotional awareness is the foundation. You cannot solve a problem you cannot name or understand."
+          />
+        </div>
 
         <h2 id="specific-barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Specific Barriers Men Face
@@ -920,11 +1192,114 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="I thought therapy meant I failed. Turns out, it's the opposite. It takes more strength to face your pain than to numb it with alcohol or pretend it's not there."
+          quote="I thought therapy meant I failed. Turns out, it\'s the opposite. It takes more strength to face your pain than to numb it with alcohol or pretend it\'s not there."
           attribution="Michael Phelps"
           role="Olympic Swimmer"
           source="Mental Health Advocate"
         />
+
+        <h2 id="unique-considerations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Unique Considerations for Different Men
+        </h2>
+        <p className="mb-6">
+          Mental health barriers vary across different male populations:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'young-men',
+              label: 'Young Men',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Gen Z and Millennial men</strong> report higher openness to therapy than older generations but still face peer pressure and online masculinity culture.
+                  </p>
+                  <p className="mb-3">
+                    <strong>Challenges:</strong> Social media amplifies toxic masculinity messages. Gaming communities and online forums can normalize isolation or mock help-seeking.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Online therapy, apps, peer support groups, and influencers who normalize mental health (athletes, streamers, musicians who speak openly).
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'fathers',
+              label: 'Fathers',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>New fathers</strong> experience postpartum depression at rates of 10-15% but rarely seek help due to expectations to be strong providers.
+                  </p>
+                  <p className="mb-3">
+                    <strong>Challenges:</strong> Fatherhood intensifies pressure to be self-reliant. Admitting struggle feels like failing the family.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Father-specific support groups, parenting-focused therapy, and normalizing that good fathers take care of their mental health to be present for their children.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'veterans',
+              label: 'Veterans',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Military culture</strong> emphasizes toughness, self-reliance, and mission completion—values that conflict with vulnerability and help-seeking.
+                  </p>
+                  <p className="mb-3">
+                    <strong>Challenges:</strong> PTSD stigma, fear of career impact, and belief that seeking help betrays military identity.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Veteran-specific providers, peer support from other veterans, and reframing therapy as tactical training for managing combat stress.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'men-of-color',
+              label: 'Men of Color',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Black, Latino, Asian, and Indigenous men</strong> face compounded stigma from both masculinity norms and cultural/racial stigma around mental health.
+                  </p>
+                  <p className="mb-3">
+                    <strong>Challenges:</strong> Mistrust of mental health systems due to historical mistreatment, cultural beliefs that therapy is for white people, and racial trauma.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Culturally responsive therapy, providers who understand racial trauma, community-based programs, and representation (seeing men of color in recovery).
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="cultural-shifts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Cultural Shifts: Progress and Hope
+        </h2>
+        <p className="mb-6">
+          Attitudes toward men\'s mental health are slowly changing:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Celebrity advocacy:</strong> High-profile men (Dwayne Johnson, Ryan Reynolds, Prince Harry) speaking openly about depression and therapy normalize help-seeking</li>
+          <li><strong>Generational change:</strong> Younger men report less adherence to traditional masculinity norms and more willingness to seek help</li>
+          <li><strong>Men's mental health movements:</strong> Organizations like Movember, HeadsUpGuys, and The Man Therapy campaign target men specifically</li>
+          <li><strong>Workplace programs:</strong> Companies increasingly offer men's mental health resources and normalize therapy</li>
+          <li><strong>Sports culture:</strong> Athletes discussing mental health (Kevin Love, DeMar DeRozan, Naomi Osaka's partner) challenge the "tough it out" mentality</li>
+        </ul>
+        <p className="mb-6">
+          <strong>The bottom line:</strong> The culture is shifting, but too slowly. Men are still dying. If you are struggling, do not wait for the culture to catch up---seek help now. Your life is worth more than outdated ideas about manhood.
+        </p>
+
+        <HighlightBox variant="stat">
+          <p className="text-lg">
+            <strong>40% of men</strong> say they would only seek help for mental health if symptoms became unbearable or affected their ability to work—by which point the condition is often severe and harder to treat.
+          </p>
+        </HighlightBox>
 
         <h2 id="how-to-overcome-barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How Men Can Overcome Barriers to Seeking Help
@@ -976,6 +1351,16 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <p className="mb-6">
           Seeking help is not weakness---it is the strongest thing you can do. Men deserve mental health support just as much as anyone else. The culture that tells you to suffer in silence is wrong.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Men die by suicide at nearly 4x the rate of women (75% of suicides) yet use mental health services at half the rate, largely due to masculinity stigma</li>
+            <li>Traditional masculine norms—self-reliance, emotional stoicism, and equating help-seeking with weakness—create deadly barriers to treatment</li>
+            <li>Depression in men often manifests as anger, irritability, substance use, and risk-taking rather than sadness, leading to underdiagnosis</li>
+            <li>Male-friendly approaches work: reframing therapy as strength-building, using action-oriented methods, activity-based interventions, and male peer support</li>
+            <li>Cultural attitudes are shifting—celebrity advocacy, generational change, and men's mental health movements are normalizing help-seeking, but progress is too slow. If you're struggling, seek help now</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -986,11 +1371,31 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     description: 'How workplace stigma prevents employees from seeking help, and what organizations can do to create mentally healthy, stigma-free work environments.',
     image: "/images/articles/cat12/cover-014.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Workplace Mental Health', 'Stigma', 'HR Policy', 'Employee Wellness'],
+    summary: 'Mental health stigma in the workplace prevents 60% of employees from disclosing conditions, forcing them to choose between hiding struggles or risking career damage. This costs the economy $193 billion annually and causes unnecessary suffering. Creating stigma-free workplaces through leadership modeling, manager training, and comprehensive benefits can transform cultures.',
+    keyFacts: [
+      { text: '76% of employees say workplace stress affects their mental health, yet 60% have not disclosed issues to employers', citationIndex: 3 },
+      { text: '51% of employees fear workplace discrimination if they disclose mental health conditions', citationIndex: 3 },
+      { text: 'Workplace mental health stigma costs the U.S. economy $193 billion annually in lost productivity and turnover', citationIndex: 7 },
+      { text: 'The ADA requires reasonable accommodations for mental health conditions, but fear of stigma prevents many from requesting them', citationIndex: 8 },
+      { text: 'Leadership modeling and communication—when leaders share mental health experiences—is the most effective stigma reduction strategy', citationIndex: 6 },
+    ],
+    sparkMoment: 'Creating a mentally healthy workplace is not about eliminating stress—it is about eliminating the shame of struggling with stress.',
+    practicalExercise: {
+      title: 'Assess Your Workplace Mental Health Culture',
+      steps: [
+        { title: 'Observe Leadership', description: 'Do leaders talk about mental health? Do they model healthy boundaries (taking vacation, leaving on time)? Do they use mental health benefits themselves?' },
+        { title: 'Review Policies', description: 'Does your company have explicit anti-discrimination policies for mental health? Are mental health benefits clearly communicated? Are accommodations available?' },
+        { title: 'Listen to Conversations', description: 'How do colleagues talk about stress, burnout, and mental health? Is stigmatizing language common? Do people shame each other for taking time off?' },
+        { title: 'Decide Your Approach', description: 'Based on your assessment, decide: Is it safe to disclose? Should you seek external support? If you\'re a leader, what can you change?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Workplace Stress',
+    },
     citations: [
       {
         id: '1',
@@ -1246,10 +1651,85 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Creating a mentally healthy workplace is not about eliminating stress---it's about eliminating the shame of struggling with stress."
+          quote="Creating a mentally healthy workplace is not about eliminating stress---it\'s about eliminating the shame of struggling with stress."
           attribution="Dr. Michael Freeman"
           role="Psychiatrist and Workplace Mental Health Researcher"
           source="UCSF"
+        />
+
+        <BeforeAfter
+          before={{
+            title: 'Stigmatizing Workplace Culture',
+            points: [
+              'Leaders never mention mental health; overwork and "always on" culture glorified',
+              'Mental health days don\'t exist or are treated as suspicious',
+              'Employees hide struggles, fearing judgment and career damage',
+              'Colleagues make jokes using mental health language ("that\'s so OCD")',
+              'Returning from mental health leave feels shameful and isolating',
+            ],
+          }}
+          after={{
+            title: 'Supportive Workplace Culture',
+            points: [
+              'Leaders model healthy boundaries, share experiences, and prioritize wellbeing',
+              'Paid mental health days are standard policy, used without stigma',
+              'Employees feel safe disclosing and requesting accommodations',
+              'Person-first language is the norm; stigmatizing comments are challenged',
+              'Return-to-work is supported with flexible arrangements and check-ins',
+            ],
+          }}
+        />
+
+        <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Examples of Change
+        </h2>
+        <p className="mb-6">
+          Some organizations are leading the way in creating stigma-free workplaces:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Unilever</strong> trained all managers in mental health awareness, created peer support networks, and saw a 34% increase in employees seeking help and a 21% reduction in mental health-related absences.
+          </li>
+          <li>
+            <strong>Microsoft</strong> offers unlimited mental health sick days (separate from PTO), subsidized therapy, and requires managers to complete mental health training annually.
+          </li>
+          <li>
+            <strong>Starbucks</strong> provides comprehensive mental health coverage (including therapy, medication, inpatient care) to part-time employees working as few as 20 hours per week.
+          </li>
+          <li>
+            <strong>Deloitte</strong> launched a "This Is Me" campaign where employees share mental health stories publicly, normalized disclosure, and created safe spaces for conversation.
+          </li>
+        </ul>
+        <p className="mb-6">
+          <strong>Common features of success:</strong> Leadership buy-in, comprehensive benefits, manager training, peer support, and measurement of progress.
+        </p>
+
+        <ComparisonTable
+          title="Stigmatizing vs. Supportive Workplace Practices"
+          columns={['Practice Area', 'Stigmatizing Approach', 'Supportive Approach']}
+          items={[
+            {
+              feature: 'Mental Health Benefits',
+              values: ['Limited EAP with few sessions; hard to access', 'Comprehensive coverage equal to physical health; easy to use']
+            },
+            {
+              feature: 'Disclosure',
+              values: ['Discouraged; seen as career-limiting', 'Normalized; protected by clear anti-discrimination policies']
+            },
+            {
+              feature: 'Accommodations',
+              values: ['Granted grudgingly; require extensive "proof"', 'Facilitated proactively; trust-based process']
+            },
+            {
+              feature: 'Leadership',
+              values: ['Never discuss mental health; model overwork', 'Share experiences; model boundaries and self-care']
+            },
+            {
+              feature: 'Culture',
+              values: ['Stigmatizing language common; performance over wellbeing', 'Person-first language; wellbeing integrated with performance']
+            },
+          ]}
+          highlightColumn={2}
         />
 
         <h2 id="how-to-navigate" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1306,6 +1786,16 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <p className="mb-6">
           Your mental health matters more than your job. If your workplace is harming your wellbeing and change is not possible, leaving may be the healthiest choice. You deserve to work in an environment that supports your whole self.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>60% of employees have not disclosed mental health conditions to employers due to fear of judgment, career damage, and discrimination, costing $193 billion annually</li>
+            <li>Workplace stigma manifests as disclosure anxiety, performative productivity culture, leadership silence, inequitable treatment, and stigmatizing language</li>
+            <li>The ADA requires reasonable accommodations for mental health conditions, but fear prevents most employees from requesting them</li>
+            <li>Effective stigma reduction requires leadership modeling, manager training, comprehensive benefits, anti-discrimination policies, and cultural change initiatives</li>
+            <li>Organizations like Unilever, Microsoft, Starbucks, and Deloitte demonstrate that stigma-free workplaces increase help-seeking, reduce absences, and improve employee wellbeing</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1316,11 +1806,31 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
     description: 'Religion can be a powerful source of healing and community---or a source of stigma and delayed treatment. Understand the complex relationship between faith and mental health.',
     image: "/images/articles/cat12/cover-015.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Religion', 'Spirituality', 'Faith', 'Mental Health Stigma'],
+    summary: 'Religion\'s relationship with mental health is complex—faith can provide meaning, community, and coping mechanisms that support wellbeing, or it can create stigma that frames mental illness as spiritual failing and delays treatment. Integrating faith and evidence-based care produces the best outcomes for religious individuals.',
+    keyFacts: [
+      { text: '80% of Americans say religion is important to them, and 53% say faith has helped them cope with mental health challenges', citationIndex: 1 },
+      { text: '48% of people turn to clergy before mental health professionals, making clergy critical gatekeepers', citationIndex: 3 },
+      { text: 'Positive religious coping (seeking spiritual support, benevolent reframing) improves outcomes, while negative coping (viewing suffering as punishment) worsens them', citationIndex: 2 },
+      { text: 'Some religious communities frame mental illness as spiritual failing, creating shame and delaying help-seeking', citationIndex: 4 },
+      { text: 'Integrating spirituality into mental health treatment improves outcomes for religious individuals when done respectfully', citationIndex: 5 },
+    ],
+    sparkMoment: 'Faith and mental health treatment are not competing forces—they are complementary. God gave us both prayer and medicine.',
+    practicalExercise: {
+      title: 'Examine Your Faith\'s Role in Your Mental Health',
+      steps: [
+        { title: 'Assess Your Religious Coping', description: 'Is your faith a source of comfort and hope, or does it create guilt and shame about your struggles? Do you see mental health treatment as compatible with your faith, or in conflict?' },
+        { title: 'Identify Beliefs About Mental Illness', description: 'What does your faith tradition teach about mental health? Are those teachings helpful or harmful? Can you separate cultural stigma from core religious values?' },
+        { title: 'Evaluate Your Religious Community', description: 'Does your congregation support mental health or stigmatize it? Would you feel safe disclosing mental health challenges to your faith community?' },
+        { title: 'Find Integrated Support', description: 'Seek providers who respect your faith or clergy who support professional mental health treatment. Look for faith-based mental health organizations if secular services feel incompatible with your beliefs.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Mental Health',
+    },
     citations: [
       {
         id: '1',
@@ -1391,7 +1901,7 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A woman with depression is told by her pastor that she needs more faith, not therapy. A man experiencing psychosis is subjected to exorcism rituals instead of psychiatric care. A teenager with anxiety is taught that mental illness is a punishment for sin. These harmful responses occur in some religious communities---but so do profound examples of compassion, healing, and support. Religion's relationship with mental health is complex.
+            A woman with depression is told by her pastor that she needs more faith, not therapy. A man experiencing psychosis is subjected to exorcism rituals instead of psychiatric care. A teenager with anxiety is taught that mental illness is a punishment for sin. These harmful responses occur in some religious communities---but so do profound examples of compassion, healing, and support. Religion\'s relationship with mental health is complex.
           </p>
           <p className="mb-6">
             For billions of people worldwide, religion and spirituality are central to identity, meaning, and wellbeing <Citation id="1" index={1} source="World Psychiatry" year="2021" tier={1} />. Faith can be a powerful protective factor for mental health---or a barrier to care. Understanding this complexity is essential for both people of faith and mental health providers.
@@ -1552,6 +2062,61 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
           ]}
         />
 
+        <ComparisonTable
+          title="Helpful vs. Harmful Religious Responses to Mental Health Struggles"
+          columns={['Situation', 'Harmful Response', 'Helpful Response']}
+          items={[
+            {
+              feature: 'Person with depression seeks help from clergy',
+              values: ['"You just need to pray more and have stronger faith"', '"Let\'s pray together, and I can also refer you to a licensed therapist who respects our faith"']
+            },
+            {
+              feature: 'Congregation member discloses anxiety diagnosis',
+              values: ['Gossip, judgment, or exclusion from leadership roles', 'Compassionate support, offers of practical help, and affirmation that mental health treatment is wise']
+            },
+            {
+              feature: 'Person questions if medication is compatible with faith',
+              values: ['"Taking pills means you don\'t trust God to heal you"', '"God works through medicine and doctors. Using prescribed medication honors the gift of medical science"']
+            },
+            {
+              feature: 'Family member experiences psychosis',
+              values: ['Exorcism rituals or spiritual interventions only', 'Immediate medical evaluation, psychiatric treatment, and spiritual support as a complement']
+            },
+            {
+              feature: 'Teaching about mental health in religious setting',
+              values: ['Mental illness is punishment for sin or lack of righteousness', 'Mental illness is a health condition like diabetes—not a spiritual failing—and deserves compassionate care']
+            },
+          ]}
+          highlightColumn={2}
+        />
+
+        <h2 id="different-traditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Mental Health Across Faith Traditions
+        </h2>
+        <p className="mb-6">
+          Different religious traditions have distinct approaches to mental health, though stigma and support exist across all:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Christianity:</strong> Varies widely. Some denominations embrace mental health treatment; others frame mental illness as spiritual warfare. Progressive churches increasingly offer mental health ministries, while some conservative communities maintain stigma.
+          </li>
+          <li>
+            <strong>Islam:</strong> Mental health is sometimes stigmatized as weakness or lack of faith, but Islamic teachings emphasize compassion and healing. Growing movement toward culturally responsive Muslim mental health services integrating faith and evidence-based care.
+          </li>
+          <li>
+            <strong>Judaism:</strong> Generally supportive of mental health treatment, with strong cultural emphasis on healing (tikkun olam). Jewish mental health organizations integrate faith and therapy. However, stigma persists in some Orthodox communities.
+          </li>
+          <li>
+            <strong>Hinduism:</strong> Mental health stigma is significant in many Hindu communities, with mental illness sometimes attributed to karma or past-life sins. Meditation and yoga are embraced as mental health practices. Growing awareness of need for clinical treatment.
+          </li>
+          <li>
+            <strong>Buddhism:</strong> Mindfulness and meditation are core mental health practices now widely used in secular therapy. Buddhism teaches compassion for suffering but stigma exists around clinical mental illness in some Buddhist communities.
+          </li>
+        </ul>
+        <p className="mb-6">
+          <strong>Common thread:</strong> Every faith tradition has both stigmatizing and supportive elements. Reform within each tradition is expanding access to mental health care while honoring spiritual values.
+        </p>
+
         <h2 id="scrupulosity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Religious Devotion Becomes OCD: Scrupulosity
         </h2>
@@ -1689,6 +2254,16 @@ export const stigmaShameHelpSeekingArticlesA: Article[] = [
         <p className="mb-6">
           Faith and mental health treatment can work together. You can honor your spirituality while also accessing evidence-based care. Your faith tradition likely teaches that caring for your health---including mental health---is a sacred responsibility.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Religion can support mental health through meaning, community, and coping mechanisms—or create barriers by framing mental illness as spiritual failing and delaying treatment</li>
+            <li>Positive religious coping (seeking spiritual support, benevolent reframing) improves outcomes, while negative coping (viewing suffering as punishment, feeling abandoned by God) worsens them</li>
+            <li>48% of people consult clergy before mental health professionals, making clergy critical gatekeepers who need mental health training</li>
+            <li>Scrupulosity—a form of OCD centered on religious perfection—is a mental health condition requiring evidence-based treatment, not a sign of deep faith</li>
+            <li>Integrating spirituality into mental health treatment improves outcomes for religious individuals when done respectfully. Faith and evidence-based care are complementary, not competing</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

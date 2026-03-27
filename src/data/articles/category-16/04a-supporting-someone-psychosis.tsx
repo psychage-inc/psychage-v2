@@ -12,6 +12,7 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 // ============================================================================
@@ -314,6 +315,24 @@ export const supportingSomeoneArticlesA: Article[] = [
           ]}
         />
 
+        <p className="mt-6 mb-6">
+          These symptoms mirror those of clinical depression and anxiety disorders --- and
+          for good reason. Chronic caregiving stress activates the same biological stress
+          systems that underlie mood and anxiety disorders. The difference is that while
+          people with depression often struggle to identify the source of their distress,
+          burned-out caregivers know exactly what's wrong. They're exhausted from an
+          objectively exhausting situation that shows no clear end.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 50, suffix: '%', label: 'Caregivers with depression/anxiety' },
+            { value: 15, suffix: 'hrs', label: 'Average weekly caregiving time' },
+            { value: 3, suffix: '×', label: 'Higher risk of caregiver depression' },
+          ]}
+          source="Schizophrenia Research, 2020"
+        />
+
         <h2 id="the-grief-factor" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Grief Nobody Talks About
         </h2>
@@ -335,15 +354,57 @@ export const supportingSomeoneArticlesA: Article[] = [
           you love. It's an essential part of processing an extraordinarily difficult
           experience.
         </p>
+        <p className="mb-6">
+          Ambiguous loss is particularly painful because it doesn't resolve. The person
+          is here but not here. They may have moments of complete clarity followed by
+          episodes of complete unreachability. You can't grieve and move on because the
+          loss isn't final --- yet you can't not grieve because the change is real. This
+          ambiguity prevents closure and prolongs the psychological stress of unresolved
+          grief <Citation id="5" index={5} source="Qualitative Health Research" year="2019" tier={1} />.
+        </p>
 
-        <ArticleCallout type="insight" title="A Bidirectional Relationship">
+        <QuoteBlock
+          quote="I grieve my son every day, even though he's sitting right there. The boy who played soccer and had dreams of being an engineer — he's gone. And I'm supposed to just be grateful the person who replaced him is still alive."
+          attribution="Mother of a young man with schizophrenia"
+          role="Family caregiver"
+          source="Qualitative Health Research, 2019"
+          variant="large"
+        />
+
+        <h2 id="burden-bidirectional" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why Caregiver Wellbeing Affects the Whole Family
+        </h2>
+        <p className="mb-6">
           Research shows that caregiver burnout doesn't just harm the caregiver --- it
           directly affects outcomes for the person with
           psychosis <Citation id="2" index={2} source="Psychological Medicine" year="2019" tier={1} />.
-          Burned-out caregivers have higher expressed emotion (criticism, hostility,
-          over-involvement), which increases relapse risk. They're less able to provide
-          the stable, warm environment that supports recovery. Taking care of yourself
-          isn't a diversion from caring for your loved one --- it's a prerequisite for it.
+          This is not about blame. It's about understanding a bidirectional relationship
+          that has profound implications for how we approach caregiver support.
+        </p>
+        <p className="mb-6">
+          Burned-out caregivers show higher levels of expressed emotion --- criticism,
+          hostility, and emotional over-involvement. This isn't because they're bad
+          caregivers. It's because chronic stress depletes the emotional regulation
+          capacity needed to remain warm and boundaried under constant pressure. And high
+          expressed emotion is one of the strongest predictors of relapse in psychotic
+          conditions. When caregivers burn out, relapse rates go up. When relapse rates
+          go up, caregiver burden increases. The cycle perpetuates itself.
+        </p>
+
+        <ArticleCallout variant="insight" title="The Evidence Is Clear">
+          <p className="mb-4">
+            Studies tracking families over time show that when caregivers receive support ---
+            psychoeducation, peer groups, respite care --- not only do the caregivers improve,
+            but the person with psychosis also shows better outcomes: fewer hospitalizations,
+            better medication adherence, and improved social
+            functioning <Citation id="3" index={3} source="World Psychiatry" year="2021" tier={1} />.
+          </p>
+          <p>
+            Taking care of yourself isn't a diversion from caring for your loved one. It's
+            a prerequisite for it. A caregiver who collapses from exhaustion can't help
+            anyone. A caregiver who maintains their own wellbeing creates the stable,
+            supportive environment that recovery requires.
+          </p>
         </ArticleCallout>
 
         <h2 id="evidence-based-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -376,6 +437,47 @@ export const supportingSomeoneArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="practical-boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Setting Boundaries Without Guilt
+        </h2>
+        <p className="mb-6">
+          One of the hardest parts of preventing caregiver burnout is setting boundaries ---
+          limits on what you can and cannot do, and what you will and will not tolerate.
+          Many caregivers feel that setting any boundary is abandonment. It's not. Boundaries
+          protect the relationship and make long-term caregiving sustainable.
+        </p>
+        <p className="mb-6">
+          Examples of healthy caregiver boundaries include: "I will help you manage your
+          medication, but I won't call your doctor for you if you refuse to take it." "I'm
+          happy to talk about your treatment, but I won't discuss it after 9 PM because I
+          need to sleep." "I can visit twice a week, but I can't come every day." These
+          boundaries aren't punitive. They're protective --- of your health, your other
+          relationships, and the caregiving relationship itself.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Boundary-less Caregiving',
+            items: [
+              'Available 24/7 for crisis calls',
+              'Canceling work and personal plans unpredictably',
+              'Doing everything the person could do themselves',
+              'Never saying no out of guilt',
+              'Sacrificing all personal time and interests',
+            ],
+          }}
+          after={{
+            title: 'Boundaried Caregiving',
+            items: [
+              'Designated crisis contact hours with backup plan',
+              'Planned caregiving time with protected personal time',
+              'Supporting independence for tasks they can do',
+              'Clear, kind limits: "I want to help, and I can\'t do that"',
+              'Regular self-care time treated as non-negotiable',
+            ],
+          }}
+        />
+
         <h2 id="systemic-failures" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Systems Need to Change
         </h2>
@@ -397,6 +499,25 @@ export const supportingSomeoneArticlesA: Article[] = [
           support you
           deserve <Citation id="7" index={7} source="Psychiatric Services" year="2018" tier={1} />.
         </p>
+        <p className="mb-6">
+          Advocacy at the system level matters too. When caregivers collectively demand
+          better --- access to respite care, inclusion in treatment planning, training in
+          communication and crisis management, their own mental health support --- services
+          respond. Individual self-care is essential. But so is collective action to change
+          systems that treat caregivers as infinite resources rather than human beings who
+          need care themselves.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>40-60% of caregivers of people with psychosis experience clinically significant depression or anxiety --- burnout is common, not a personal failing</li>
+            <li>Caregiver burnout directly affects outcomes for the person with psychosis --- supporting caregivers improves outcomes for everyone</li>
+            <li>Evidence-based interventions (psychoeducation, peer support, mindfulness, respite care) significantly reduce caregiver burden</li>
+            <li>Setting boundaries isn't abandonment --- it protects the relationship and makes sustainable caregiving possible</li>
+            <li>Caregivers have the right to their own support, assessment, and care from mental health services --- advocacy may be needed to access it</li>
+            <li>Ambiguous loss (grieving someone still alive but changed) is real and valid --- acknowledging it is healthy, not disloyal</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -488,14 +609,38 @@ export const supportingSomeoneArticlesA: Article[] = [
           In other words, the very brain circuitry needed to recognize "something is wrong
           with my thinking" is impaired by the condition that is wrong with their thinking.
         </p>
+        <p className="mb-6">
+          This isn't a metaphor. When researchers scan the brains of people with anosognosia,
+          they see reduced activity in regions involved in error monitoring and self-appraisal.
+          The person's brain literally cannot generate the signal that says "this belief I hold
+          doesn't match reality." For families, this distinction between "won't" and "can't"
+          is crucial. When you understand that the person genuinely cannot perceive their
+          illness --- not that they're being stubborn or oppositional --- your emotional response
+          shifts from frustration to compassion, and your strategies shift from confrontation
+          to creative problem-solving.
+        </p>
 
-        <ArticleCallout type="insight" title="Why This Distinction Matters">
-          When you understand anosognosia as a neurological symptom rather than a choice,
-          your approach changes fundamentally. You stop arguing (because arguments target
-          a brain function that isn't working). You stop feeling angry (because the person
-          isn't choosing to resist). And you start looking for strategies that work around
-          the impaired self-awareness rather than trying to force it
-          back <Citation id="5" index={5} source="LEAP Institute" year="2020" tier={3} />.
+        <HighlightBox variant="stat">
+          <p className="mb-4 font-semibold text-lg">50% of people with schizophrenia have anosognosia</p>
+          <p className="mb-4">This means that in half of cases, the person genuinely cannot perceive that they have an illness --- making traditional treatment persuasion ineffective.</p>
+          <p className="text-sm">Source: Schizophrenia Bulletin, 2020</p>
+        </HighlightBox>
+
+        <ArticleCallout variant="insight" title="Why This Distinction Matters">
+          <p className="mb-4">
+            When you understand anosognosia as a neurological symptom rather than a choice,
+            your approach changes fundamentally. You stop arguing (because arguments target
+            a brain function that isn't working). You stop feeling angry (because the person
+            isn't choosing to resist). And you start looking for strategies that work around
+            the impaired self-awareness rather than trying to force it
+            back <Citation id="5" index={5} source="LEAP Institute" year="2020" tier={3} />.
+          </p>
+          <p>
+            This doesn't mean giving up on treatment. It means recognizing that the path to
+            engagement requires meeting the person where they are, building trust, and finding
+            entry points that don't require them to accept a diagnosis they neurologically
+            cannot perceive.
+          </p>
         </ArticleCallout>
 
         <h2 id="engagement-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -523,6 +668,37 @@ export const supportingSomeoneArticlesA: Article[] = [
           problems, stress, difficulty at work, relationship conflict --- and use that
           acknowledged concern as the entry point for
           treatment <Citation id="6" index={6} source="Schizophrenia Research" year="2019" tier={1} />.
+        </p>
+
+        <h2 id="practical-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          LEAP in Action: Real Conversations
+        </h2>
+        <p className="mb-6">
+          The LEAP approach (Listen, Empathize, Agree, Partner) can feel abstract until you
+          see it in action. Here are examples of how these principles transform difficult
+          conversations about treatment:
+        </p>
+
+        <div className="space-y-4 mb-8">
+          <div className="bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500 p-4">
+            <p className="font-semibold text-red-900 dark:text-red-100 mb-2">Ineffective: Diagnosis-Focused</p>
+            <p className="text-red-800 dark:text-red-200 mb-2">"You have schizophrenia. You need to take your medication or you'll get worse."</p>
+            <p className="text-sm text-red-700 dark:text-red-300">This requires the person to accept a diagnosis they cannot perceive. Triggers defensiveness and disengagement.</p>
+          </div>
+
+          <div className="bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500 p-4">
+            <p className="font-semibold text-green-900 dark:text-green-100 mb-2">Effective: LEAP Approach</p>
+            <p className="text-green-800 dark:text-green-200 mb-2">"I've noticed you haven't been sleeping well lately. (Listen) That must be exhausting. (Empathize) We both want you to feel better. (Agree) Would you be willing to talk to someone who might help with the sleep issue? (Partner)"</p>
+            <p className="text-sm text-green-700 dark:text-green-300">Builds on the person's acknowledged concern (poor sleep), doesn't require illness acceptance, preserves autonomy.</p>
+          </div>
+        </div>
+
+        <p className="mb-6">
+          The key is patience and flexibility. If the person rejects medication language,
+          try wellness language. If they won't see a "psychiatrist," would they see a
+          "sleep specialist" or "stress counselor"? The goal isn't semantic trickery ---
+          it's finding frames that the person can engage with given their current level
+          of insight <Citation id="3" index={3} source="Psychiatric Services" year="2020" tier={1} />.
         </p>
 
         <h2 id="when-safety-is-at-risk" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -573,6 +749,26 @@ export const supportingSomeoneArticlesA: Article[] = [
           it. The question isn't "How do I make them accept treatment today?" but "How do I
           maintain the connection that makes treatment possible whenever they're ready?"
         </p>
+        <p className="mb-6">
+          Some people with anosognosia eventually develop partial insight --- often after
+          years of stability on treatment they initially refused. Some never do. But in
+          both cases, the families who navigate this with the least damage to the relationship
+          are those who learned early to work with anosognosia rather than against it, to
+          prioritize connection over correction, and to see treatment refusal not as
+          stubbornness but as a symptom requiring compassion and creativity.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Anosognosia affects 50% of people with schizophrenia --- it's a neurological symptom, not denial or stubbornness</li>
+            <li>Arguing with someone who has anosognosia strengthens resistance rather than building insight</li>
+            <li>LEAP (Listen, Empathize, Agree, Partner) and motivational interviewing bypass the need for illness acceptance</li>
+            <li>Problem-focused framing ("sleep issues") opens doors that diagnosis-focused language closes</li>
+            <li>Involuntary evaluation criteria require imminent danger or grave disability --- jurisdiction varies</li>
+            <li>Maintaining the relationship over time matters more than winning any single treatment argument</li>
+            <li>Treatment engagement is a process, often unfolding over months or years, not a one-time event</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -716,14 +912,90 @@ export const supportingSomeoneArticlesA: Article[] = [
           accessible <Citation id="7" index={7} source="National Institute of Mental Health" year="2024" tier={2} />.
         </p>
 
-        <ArticleCallout type="tip" title="Maintaining Your Housing">
-          The most common reasons people with psychosis lose housing are: rent arrears (often
-          related to financial management difficulties), neighbor complaints (often related
-          to symptoms), and lease violations (often related to crisis behaviors). Proactive
-          communication with your landlord --- ideally through a support worker who can mediate ---
-          and having a crisis plan that doesn't involve property damage or noise disturbance
-          can prevent many of these
-          situations <Citation id="8" index={8} source="National Institute for Health and Care Excellence" year="2024" tier={3} />.
+        <ArticleCallout variant="tip" title="Maintaining Your Housing">
+          <p className="mb-4">
+            The most common reasons people with psychosis lose housing are: rent arrears (often
+            related to financial management difficulties), neighbor complaints (often related
+            to symptoms), and lease violations (often related to crisis behaviors). Proactive
+            communication with your landlord --- ideally through a support worker who can mediate ---
+            and having a crisis plan that doesn't involve property damage or noise disturbance
+            can prevent many of these
+            situations <Citation id="8" index={8} source="National Institute for Health and Care Excellence" year="2024" tier={3} />.
+          </p>
+          <p>
+            If you're at risk of losing your housing, contact your local housing authority or
+            a mental health advocacy organization immediately. Emergency housing assistance,
+            eviction prevention programs, and legal aid may be available. Don't wait until
+            you've received an eviction notice --- early intervention is far more effective.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="navigating-system" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating the Housing System
+        </h2>
+        <p className="mb-6">
+          Accessing stable, affordable housing when you have a psychotic condition requires
+          navigating a complex web of programs, waiting lists, eligibility criteria, and
+          bureaucratic barriers. The process can be overwhelming, especially when cognitive
+          symptoms make paperwork and phone calls difficult. Here's what you need to know:
+        </p>
+
+        <ComparisonTable
+          headers={['Program', 'What It Provides', 'How to Access']}
+          rows={[
+            ['Section 8 / Housing Choice Voucher (US)', 'Rental assistance --- you pay 30% of income, voucher covers rest', 'Apply through local Public Housing Authority; long waiting lists common'],
+            ['Social Housing (UK)', 'Council or housing association properties at below-market rent', 'Apply through local council housing department; priority given to those in greatest need'],
+            ['Supportive Housing Programs', 'Permanent housing + wraparound support services', 'Contact local mental health center or 211 helpline for referrals'],
+            ['Transitional Housing', 'Time-limited housing (6-24 months) with intensive support', 'Mental health agencies, homeless services, or hospitals can refer'],
+          ]}
+        />
+
+        <p className="mt-6 mb-6">
+          Many people find the housing system inaccessible without help. If possible, work
+          with a case manager, social worker, or peer specialist who can navigate the system
+          with you. These professionals know which programs have capacity, how to frame
+          applications for best chances of approval, and how to appeal denials. You don't
+          have to do this alone.
+        </p>
+
+        <h2 id="rights-protections" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Your Rights and Legal Protections
+        </h2>
+        <p className="mb-6">
+          Fair housing laws in most jurisdictions prohibit discrimination based on mental
+          health disability. This means landlords cannot legally refuse to rent to you,
+          evict you, or impose different terms solely because you have
+          psychosis <Citation id="4" index={4} source="U.S. Department of Housing and Urban Development" year="2024" tier={2} />.
+          You also have the right to reasonable accommodations --- modifications to rules
+          or procedures that enable you to use and enjoy your housing.
+        </p>
+        <p className="mb-6">
+          Examples of reasonable accommodations include: allowing an emotional support
+          animal even in no-pet housing; requesting a specific unit (ground floor, away
+          from noise) if your symptoms are triggered by certain environments; requesting
+          flexible payment schedules if cognitive symptoms make it hard to remember due
+          dates; and asking for communication in writing rather than phone calls if
+          auditory processing is impaired.
+        </p>
+        <p className="mb-6">
+          If you believe you've experienced housing discrimination, contact a disability
+          rights organization or fair housing center. In the US, you can file complaints
+          with HUD (Department of Housing and Urban Development). In the UK, the Equality
+          and Human Rights Commission handles discrimination claims. Don't assume refusals
+          or evictions are legal just because someone in authority says they are ---
+          get informed advice.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>People with psychosis are 10 times more likely to experience homelessness --- stable housing is a clinical intervention, not just a social issue</li>
+            <li>Housing First programs provide housing without preconditions and achieve 80-90% retention rates</li>
+            <li>The housing continuum ranges from 24-hour staffed facilities to fully independent living --- match support level to current needs</li>
+            <li>Independent living skills programs teach compensatory strategies that bypass cognitive deficits</li>
+            <li>Fair housing laws prohibit discrimination based on mental health disability --- landlords cannot refuse to rent based on diagnosis</li>
+            <li>Reasonable accommodations (modified rules, specific units, flexible payments) are legal rights, not favors</li>
+            <li>Navigating the housing system is complex --- work with a case manager or advocate when possible</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -878,6 +1150,49 @@ export const supportingSomeoneArticlesA: Article[] = [
           crisis calls without law enforcement involvement. These models show promising
           results in reducing arrests, injuries, and emergency department visits.
         </p>
+        <p className="mb-6">
+          However, CIT training availability varies widely. Not all jurisdictions offer
+          it, and even where it exists, not all officers receive it. When calling for
+          help during a mental health crisis, ask the dispatcher to send CIT-trained
+          officers if available. If you have time before the crisis, research your local
+          police department's mental health response capabilities so you know what to
+          expect and request.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 14, suffix: '×', label: 'More likely to be victims than perpetrators' },
+            { value: 10, suffix: '×', label: 'More likely in jail than hospital' },
+            { value: 20, suffix: '%', label: 'Reduced recidivism with mental health courts' },
+          ]}
+          source="Schizophrenia Bulletin, 2019; Treatment Advocacy Center, 2022; Criminal Justice and Behavior, 2020"
+        />
+
+        <h2 id="mental-health-courts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Mental Health Courts and Diversion Programs
+        </h2>
+        <p className="mb-6">
+          Mental health courts are specialized court dockets that offer treatment-based
+          alternatives to incarceration for people with mental illness charged with certain
+          offenses. Instead of jail or prison, participants receive intensive case
+          management, treatment services, and regular court monitoring. Successful
+          completion typically results in reduced or dismissed
+          charges <Citation id="3" index={3} source="Criminal Justice and Behavior" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Research shows mental health courts reduce recidivism by approximately 20%
+          compared to standard criminal processing. They also improve treatment engagement,
+          housing stability, and quality of life for participants. However, eligibility
+          is often limited to non-violent offenses, and capacity constraints mean many
+          jurisdictions have waiting lists or strict admission criteria.
+        </p>
+        <p className="mb-6">
+          Pre-booking diversion programs --- which divert people to treatment before
+          charges are filed --- may be even more effective because they prevent a criminal
+          record entirely. If your family member is arrested, immediately ask about all
+          diversion options available in your jurisdiction. A mental health advocate or
+          defense attorney can help navigate the system.
+        </p>
 
         <h2 id="what-families-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Families Can Do
@@ -901,6 +1216,40 @@ export const supportingSomeoneArticlesA: Article[] = [
           uninformed. The goal isn't to excuse illegal behavior --- it's to ensure that
           behavior driven by illness is met with treatment rather than punishment.
         </p>
+
+        <h2 id="advocacy-reform" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Need for System Reform
+        </h2>
+        <p className="mb-6">
+          The criminalization of mental illness isn't inevitable. It's the result of
+          specific policy choices: the closure of psychiatric hospitals without adequate
+          community alternatives, the underfunding of mental health services, the
+          militarization of police responses to public health crises, and the use of
+          jails as default holding facilities when no other options exist. These choices
+          can be reversed.
+        </p>
+        <p className="mb-6">
+          Effective reforms include: expanding mobile crisis teams and non-police crisis
+          response; funding mental health courts and diversion programs adequately to meet
+          demand; requiring CIT training for all officers; creating more crisis stabilization
+          beds and psychiatric hospital capacity; and strengthening community mental health
+          services so crises are prevented rather than managed after the fact. Individual
+          families navigating the system need immediate help. But the system itself needs
+          fundamental change.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>People with serious mental illness are 10× more likely to be in jail than in a psychiatric hospital --- a system failure, not a crime problem</li>
+            <li>The violence risk from psychosis alone is 3-5% --- people with psychosis are 14× more likely to be victims than perpetrators</li>
+            <li>Mental health courts reduce recidivism by 20% by offering treatment instead of incarceration</li>
+            <li>Crisis Intervention Team training teaches police to de-escalate and divert rather than arrest</li>
+            <li>The Sequential Intercept Model identifies five diversion points from arrest to reentry --- each is an opportunity for treatment</li>
+            <li>Families should immediately inform jail staff of diagnosis/medications, request jail mental health services, and ask about diversion programs</li>
+            <li>Prevention strategies include crisis plans with alternatives to police, voluntary crisis registries, and connecting to mobile crisis teams</li>
+            <li>System reform --- not just individual advocacy --- is needed to address the criminalization of mental illness</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

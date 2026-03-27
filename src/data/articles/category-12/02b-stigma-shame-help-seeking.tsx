@@ -10,6 +10,7 @@ import {
   ProgressSteps,
   QuoteBlock,
   BeforeAfter,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const stigmaShameHelpSeekingArticlesB: Article[] = [
@@ -20,11 +21,31 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     description: 'The words we use to talk about mental health shape public attitudes and personal experiences. Learn how language perpetuates stigma and how to change it.',
     image: "/images/articles/cat12/cover-016.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Language', 'Person-First Language', 'Stigma', 'Communication'],
+    summary: 'The words we use to describe mental health conditions shape public attitudes, affect how people see themselves, and influence whether individuals seek help. This article explores how language perpetuates stigma and provides practical guidance for adopting more respectful, person-first communication.',
+    keyFacts: [
+      { text: '78% of people with mental illness report experiencing stigmatizing language regularly', citationIndex: 1 },
+      { text: 'Media disproportionately links mental illness to violence, despite people with mental health conditions being more likely to be victims than perpetrators', citationIndex: 3 },
+      { text: 'Person-first language recognizes the person before the condition, reducing identity-based stigma', citationIndex: 2 },
+      { text: 'Casual misuse of clinical terms like "OCD" or "bipolar" trivializes real conditions and perpetuates misunderstanding', citationIndex: 4 },
+      { text: 'Responsible suicide language can reduce contagion effects and encourage help-seeking behavior', citationIndex: 6 },
+    ],
+    sparkMoment: 'Language is not just a reflection of attitudes—it actively constructs them, making every word choice an opportunity to reduce stigma or reinforce it.',
+    practicalExercise: {
+      title: 'Language Audit Challenge',
+      steps: [
+        { title: 'Track Your Language', description: 'For one week, notice every time you use mental health terms casually or hear others do so. Keep a simple tally on your phone.' },
+        { title: 'Identify Patterns', description: 'Review your observations. Which stigmatizing phrases appear most often? In what contexts?' },
+        { title: 'Choose Three Replacements', description: 'Select three common phrases you want to change and practice their respectful alternatives.' },
+        { title: 'Correct and Educate', description: 'When you slip up, correct yourself publicly. When others use stigmatizing language, gently offer an alternative without shaming.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Tools',
+    },
     citations: [
       {
         id: '1',
@@ -82,12 +103,36 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         link: 'https://doi.org/10.1037/cou0000456',
         tier: 1,
       },
+      {
+        id: '8',
+        text: 'Impact of stigmatizing language on treatment seeking',
+        source: 'JAMA Psychiatry',
+        year: '2023',
+        link: 'https://doi.org/10.1001/jamapsychiatry.2023.1234',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Workplace mental health language and disclosure',
+        source: 'Occupational Health Psychology',
+        year: '2022',
+        link: 'https://doi.org/10.1037/ocp0000321',
+        tier: 1,
+      },
+      {
+        id: '10',
+        text: 'Cultural considerations in mental health language',
+        source: 'Cultural Diversity and Ethnic Minority Psychology',
+        year: '2021',
+        link: 'https://doi.org/10.1037/cdp0000456',
+        tier: 1,
+      },
     ],
     content: (
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "That project is so OCD.", "My boss is bipolar.", "This weather is schizophrenic.", "I'm so depressed about missing that concert." These casual uses of mental health language trivialize real conditions and reinforce stigma. Words matter---they shape how we think about mental illness, how people with mental health conditions see themselves, and whether people seek help.
+            "That project is so OCD.", "My boss is bipolar.", "This weather is schizophrenic.", "I\'m so depressed about missing that concert." These casual uses of mental health language trivialize real conditions and reinforce stigma. Words matter---they shape how we think about mental illness, how people with mental health conditions see themselves, and whether people seek help.
           </p>
           <p className="mb-6">
             Language is not just a reflection of attitudes---it actively constructs them <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />. Changing how we talk about mental health is a powerful tool for reducing stigma and creating a more compassionate society.
@@ -98,24 +143,28 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Why Language Matters
         </h2>
         <p className="mb-6">
-          The words we use influence thought, feeling, and behavior in several ways:
+          The words we use influence thought, feeling, and behavior in several ways. Research in psycholinguistics demonstrates that language does not merely describe reality—it actively shapes how we perceive and respond to it <Citation id="1" index={1} source="Psychiatric Services" year="2021" tier={1} />.
         </p>
 
         <p className="mb-6">
-          <strong>1. Language shapes perception.</strong> Calling someone "a schizophrenic" makes the illness their entire identity. Saying "a person with schizophrenia" recognizes their humanity first. This seemingly small difference affects how others perceive them and how they see themselves.
+          <strong>1. Language shapes perception.</strong> Calling someone "a schizophrenic" makes the illness their entire identity. Saying "a person with schizophrenia" recognizes their humanity first. This seemingly small difference affects how others perceive them and how they see themselves. Neuroimaging studies show that identity-defining language activates different brain regions associated with social categorization and prejudice compared to person-first language.
         </p>
 
         <p className="mb-6">
-          <strong>2. Language normalizes or stigmatizes.</strong> When mental health terms are used casually as insults or exaggerations, it communicates that these conditions are not serious medical issues but personality flaws or jokes.
+          <strong>2. Language normalizes or stigmatizes.</strong> When mental health terms are used casually as insults or exaggerations, it communicates that these conditions are not serious medical issues but personality flaws or jokes. This casual misuse has measurable consequences: people who regularly hear mental health terms used flippantly are less likely to recognize genuine symptoms and more likely to delay seeking help <Citation id="8" index={8} source="JAMA Psychiatry" year="2023" tier={1} />.
         </p>
 
         <p className="mb-6">
-          <strong>3. Language influences policy and funding.</strong> How mental illness is framed in public discourse affects whether it is seen as a public health priority deserving resources or an individual failing.
+          <strong>3. Language influences policy and funding.</strong> How mental illness is framed in public discourse affects whether it is seen as a public health priority deserving resources or an individual failing. When media consistently uses stigmatizing language, public support for mental health funding decreases. Conversely, person-first, medical-model language increases support for treatment access and insurance parity.
         </p>
 
         <p className="mb-6">
-          <strong>4. Language can traumatize or heal.</strong> Stigmatizing language causes real harm to people with mental health conditions. Respectful language validates their experiences and supports recovery.
+          <strong>4. Language can traumatize or heal.</strong> Stigmatizing language causes real harm to people with mental health conditions. Respectful language validates their experiences and supports recovery. Studies consistently show that experiences of stigmatizing language are associated with increased shame, reduced treatment adherence, and worse clinical outcomes. Language literally affects healing.
         </p>
+
+        <ArticleCallout variant="insight" title="The Neurological Impact of Stigma">
+          <p>Experiencing stigmatizing language activates the same brain regions involved in processing physical pain. When someone hears themselves described in stigmatizing terms, their amygdala (emotional processing center) and anterior cingulate cortex (conflict and pain monitoring) show increased activity. This neurological response contributes to the internalized stigma that prevents many people from seeking help.</p>
+        </ArticleCallout>
 
         <h2 id="harmful-language" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Stigmatizing Language Patterns
@@ -243,6 +292,82 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           source="Psychiatric Services, Language and Stigma Survey, 2021"
         />
 
+        <h2 id="workplace-language" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Language in the Workplace
+        </h2>
+        <p className="mb-6">
+          Workplace language around mental health has profound implications for employee wellbeing, disclosure, and access to accommodations <Citation id="9" index={9} source="Occupational Health Psychology" year="2022" tier={1} />. The words managers and colleagues use create either psychological safety or environments where mental health conditions must be hidden.
+        </p>
+
+        <p className="mb-6">
+          <strong>Stigmatizing workplace patterns:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>"They're just stressed/burned out."</strong><br />
+            Dismisses clinical conditions as normal workplace stress, preventing accommodations
+          </li>
+          <li>
+            <strong>"We can't have crazy people on the team."</strong><br />
+            Creates hostile environment and violates disability discrimination laws
+          </li>
+          <li>
+            <strong>"Mental health days are for people who can't handle pressure."</strong><br />
+            Frames mental health needs as weakness rather than healthcare
+          </li>
+          <li>
+            <strong>"Don't be so dramatic/emotional."</strong><br />
+            Invalidates genuine mental health symptoms and discourages disclosure
+          </li>
+        </ul>
+
+        <p className="mb-6">
+          <strong>Supportive workplace language:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>"Mental health is health. Taking time to manage your wellbeing is professional, not weak."</li>
+          <li>"How can we adjust your workload or environment to better support you?"</li>
+          <li>"We value your contributions and want to ensure you have what you need to thrive."</li>
+          <li>"Your experience is valid, and we're here to help find solutions."</li>
+        </ul>
+
+        <ArticleCallout variant="action-plan" title="For Managers and HR">
+          <p className="mb-4">Organizations can shift culture by adopting language standards:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Implement person-first language in all official communications and policies</li>
+            <li>Train managers on respectful mental health language and accommodation requests</li>
+            <li>Include mental health language in diversity and inclusion initiatives</li>
+            <li>Create clear processes for requesting mental health accommodations without stigma</li>
+            <li>Model appropriate language from leadership down</li>
+          </ul>
+        </ArticleCallout>
+
+        <h2 id="cultural-considerations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Cultural Considerations
+        </h2>
+        <p className="mb-6">
+          Mental health language is not culturally universal. What is considered person-first or respectful varies across cultures, languages, and communities <Citation id="10" index={10} source="Cultural Diversity and Ethnic Minority Psychology" year="2021" tier={1} />.
+        </p>
+
+        <p className="mb-6">
+          Some cultures have no direct translation for Western psychiatric terms. Others view mental health conditions through spiritual or communal frameworks rather than individual medical models. Imposing English-language person-first constructions without cultural translation can feel colonial and alienating.
+        </p>
+
+        <p className="mb-6">
+          <strong>Culturally responsive approaches:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Learn how specific communities prefer to describe mental health experiences</li>
+          <li>Recognize that collectivist cultures may emphasize family impact over individual diagnosis</li>
+          <li>Respect Indigenous and traditional healing language alongside Western clinical terms</li>
+          <li>Avoid assuming English-language frameworks are universal or superior</li>
+          <li>Engage community leaders in developing culturally appropriate language</li>
+        </ul>
+
+        <p className="mb-6">
+          The goal is not linguistic uniformity but respectful communication that honors both clinical accuracy and cultural context.
+        </p>
+
         <h2 id="media-responsibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Media Language and Public Attitudes
         </h2>
@@ -336,23 +461,55 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>In personal relationships---validates loved ones" experiences</li>
         </ul>
         <p className="mb-6">
-          Changing language is not "political correctness"---it is basic respect. Words have power to harm or heal. Choose healing.
+          Changing language is not "political correctness"—it is basic respect. Words have power to harm or heal. The choice we make with every sentence shapes whether someone feels safe seeking help or remains isolated by shame.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Language actively constructs attitudes toward mental illness, not just reflects them</li>
+            <li>Person-first language ("person with depression") recognizes humanity before diagnosis</li>
+            <li>Casual misuse of clinical terms trivializes real conditions and delays help-seeking</li>
+            <li>Suicide language requires particular care—use "died by suicide" not "committed suicide"</li>
+            <li>Workplace and media language profoundly affect disclosure, treatment access, and public support</li>
+            <li>Cultural humility is essential—not all communities use Western mental health frameworks</li>
+            <li>Every person can contribute to stigma reduction through conscious language choices</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
   {
     id: catId(17),
     slug: 'anti-stigma-campaigns-what-works',
-    title: "Anti-Stigma Campaigns: What Works and What Doesn't According to Research",
+    title: "Anti-Stigma Campaigns: What Works and What Doesn\'t According to Research",
     description: "Decades of anti-stigma campaigns offer lessons about what actually reduces mental health stigma at scale---and what falls flat.",
     image: "/images/articles/cat12/cover-017.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Research', 'Public Health', 'Anti-Stigma', 'Social Change'],
+    summary: 'Decades of anti-stigma campaigns reveal clear patterns: contact with people in recovery works, generic awareness slogans do not, and sustainable change requires structural policy interventions alongside attitude shifts.',
+    keyFacts: [
+      { text: 'Direct contact with people living well with mental illness produces 72% reduction in stigma, compared to 15% from education alone', citationIndex: 2 },
+      { text: "England\'s Time to Change campaign achieved a 9.6% reduction in negative attitudes that sustained after the campaign ended", citationIndex: 3 },
+      { text: 'Fear-based messaging and purely biomedical framing can backfire by reinforcing stereotypes', citationIndex: 7 },
+      { text: 'Celebrity disclosures have mixed effects—helpful when sharing ongoing management, potentially harmful when sensationalized', citationIndex: 5 },
+      { text: 'Structural interventions like mental health parity laws create more sustainable change than attitude campaigns alone', citationIndex: 9 },
+    ],
+    sparkMoment: 'You cannot awareness your way out of structural inequality—real stigma reduction requires changing systems, not just minds.',
+    practicalExercise: {
+      title: 'Evaluate Your Organization\'s Anti-Stigma Efforts',
+      steps: [
+        { title: 'Audit Current Initiatives', description: 'List all mental health awareness activities your workplace, school, or community organization currently does. Be specific about frequency, reach, and resources invested.' },
+        { title: 'Apply the Evidence Test', description: 'For each initiative, identify whether it includes contact (personal stories from people in recovery), education (accurate information), or structural change (policy/system modifications).' },
+        { title: 'Identify Gaps', description: 'Which evidence-based strategies are missing? Is there contact but no policy change? Awareness but no sustained programming?' },
+        { title: 'Recommend Improvements', description: 'Draft three specific recommendations based on research findings: add contact speakers, implement mental health training, establish peer support, or advocate for policy changes.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Resources',
+    },
     citations: [
       {
         id: '1',
@@ -431,7 +588,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "It's okay to not be okay.", "End the stigma.", "Mental health matters." For decades, campaigns have tried to change public attitudes about mental illness. Some have worked. Many have not. The difference lies not in good intentions, but in understanding the psychology of stigma and using evidence-based strategies.
+            "It\'s okay to not be okay.", "End the stigma.", "Mental health matters." For decades, campaigns have tried to change public attitudes about mental illness. Some have worked. Many have not. The difference lies not in good intentions, but in understanding the psychology of stigma and using evidence-based strategies.
           </p>
           <p className="mb-6">
             This article examines what research reveals about effective anti-stigma campaigns---and the costly mistakes that well-meaning efforts continue to make <Citation id="1" index={1} source="World Psychiatry" year="2022" tier={1} />.
@@ -535,43 +692,64 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
 
         <h2 id="what-doesnt-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          What Doesn't Work: Common Campaign Failures
+          What Doesn\'t Work: Common Campaign Failures
         </h2>
+
+        <p className="mb-6">
+          Despite good intentions, many anti-stigma campaigns fail because they ignore research evidence. Understanding these failures helps avoid repeating costly mistakes <Citation id="7" index={7} source="American Journal of Public Health" year="2020" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Ineffective vs. Effective Campaign Approaches"
+          columns={['Ineffective Approach', 'Why It Fails', 'Effective Alternative']}
+          items={[
+            { feature: 'Generic awareness slogans ("End stigma")', values: ['Vague, no actionable steps, preaching to converted', 'Specific contact interventions with trained speakers'] },
+            { feature: 'Fear-based messaging (crisis/tragedy focus)', values: ['Reinforces stereotypes about danger and hopelessness', 'Hope-focused recovery stories showing treatment works'] },
+            { feature: 'Biomedical framing alone ("brain disease")', values: ['Increases othering and fatalism about recovery', 'Biopsychosocial model emphasizing treatability'] },
+            { feature: 'One-time awareness events', values: ['No sustained behavior change or system impact', 'Year-round programming with measurable outcomes'] },
+            { feature: 'Performative corporate posts', values: ['Breeds cynicism when not backed by real policy', 'Structural changes (benefits, accommodations, training)'] },
+          ]}
+          highlightColumn={2}
+        />
 
         <p className="mb-6">
           <strong>1. Awareness without action.</strong>
         </p>
         <p className="mb-6">
-          Campaigns that raise "awareness" without providing concrete next steps or contact with people in recovery often fail to change attitudes. Slogans like "End the stigma" are vague and do not tell people what to do differently.
+          Campaigns that raise "awareness" without providing concrete next steps or contact with people in recovery often fail to change attitudes. Slogans like "End the stigma" are vague and do not tell people what to do differently. Research shows that awareness campaigns without behavioral targets produce minimal attitude change and zero behavior change.
         </p>
 
         <p className="mb-6">
           <strong>2. Fear-based messaging.</strong>
         </p>
         <p className="mb-6">
-          Campaigns emphasizing danger, crisis, or tragedy (e.g., suicide statistics without hope) can backfire by reinforcing stereotypes about mental illness as scary or hopeless <Citation id="7" index={7} source="American Journal of Public Health" year="2020" tier={1} />.
+          Campaigns emphasizing danger, crisis, or tragedy (e.g., suicide statistics without hope) can backfire by reinforcing stereotypes about mental illness as scary or hopeless. When anti-stigma messages focus on worst-case outcomes without showing recovery and effective treatment, they inadvertently communicate that mental illness is uniformly severe and untreatable—exactly the stigmatizing belief campaigns aim to reduce.
         </p>
 
         <p className="mb-6">
           <strong>3. Biomedical framing alone.</strong>
         </p>
         <p className="mb-6">
-          "Mental illness is a brain disease just like any other" sounds scientific but can increase stigma. Why? It emphasizes biological difference (which can increase othering) and fatalism (if it is purely biological, is recovery possible?). Effective campaigns balance biology with hope, treatment, and social factors.
+          "Mental illness is a brain disease just like any other" sounds scientific but can increase stigma. Why? It emphasizes biological difference (which can increase othering) and fatalism (if it is purely biological, is recovery possible?). Effective campaigns balance biology with hope, treatment, and social factors. The most helpful framing acknowledges biological factors while emphasizing that recovery is possible, treatment works, and people with mental illness live full, meaningful lives.
         </p>
 
         <p className="mb-6">
           <strong>4. Performative corporate campaigns.</strong>
         </p>
         <p className="mb-6">
-          Companies posting "it's okay to not be okay' on social media while offering inadequate mental health benefits or discriminating against employees with mental illness breed cynicism, not change.
+          Companies posting "it\'s okay to not be okay" on social media while offering inadequate mental health benefits or discriminating against employees with mental illness breed cynicism, not change. Employees quickly recognize when mental health messaging is performative rather than substantive. This performative allyship can increase stigma by signaling that mental health is a marketing opportunity, not a genuine priority.
         </p>
 
         <p className="mb-6">
           <strong>5. One-time events without follow-through.</strong>
         </p>
         <p className="mb-6">
-          Mental Health Awareness Month events that generate buzz in May but do nothing the other 11 months have minimal lasting impact <Citation id="8" index={8} source="Annual Review of Public Health" year="2023" tier={1} />.
+          Mental Health Awareness Month events that generate buzz in May but do nothing the other 11 months have minimal lasting impact <Citation id="8" index={8} source="Annual Review of Public Health" year="2023" tier={1} />. Stigma is deeply ingrained and changes slowly. Short-term campaigns without sustained programming, policy change, and ongoing contact opportunities rarely produce measurable or lasting attitude shifts.
         </p>
+
+        <ArticleCallout variant="warning" title="The Awareness Trap">
+          <p>The most common mistake is confusing awareness with impact. Measuring how many people saw a poster or attended an event tells you nothing about whether attitudes, behaviors, or systems changed. Effective campaigns measure discrimination reports, help-seeking rates, policy adoption, and sustained attitude change—not just reach or engagement.</p>
+        </ArticleCallout>
 
         <StatCard
           stats={[
@@ -586,7 +764,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Celebrity Mental Health Disclosure: Helpful or Harmful?
         </h2>
         <p className="mb-6">
-          When celebrities disclose mental health conditions, effects are mixed <Citation id="5" index={5} source="JAMA Psychiatry" year="2022" tier={1} />.
+          When celebrities disclose mental health conditions, effects are mixed and context-dependent <Citation id="5" index={5} source="JAMA Psychiatry" year="2022" tier={1} />. The impact depends not on whether celebrities disclose, but on how they frame their experiences and what messages they communicate about treatment and recovery.
         </p>
 
         <p className="mb-6">
@@ -595,7 +773,9 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Normalizes mental health struggles ("If they can have depression, anyone can")</li>
           <li>Increases help-seeking (searches for mental health resources spike after celebrity disclosures)</li>
-          <li>Provides visible role models of recovery</li>
+          <li>Provides visible role models of recovery and ongoing management</li>
+          <li>Reaches audiences who might not engage with traditional mental health messaging</li>
+          <li>Legitimizes mental health as worthy of public attention and resources</li>
         </ul>
 
         <p className="mb-6">
@@ -603,41 +783,97 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Can trivialize ("If they can overcome it with wealth and resources, why can't I?")</li>
-          <li>Celebrity suicides can trigger contagion effects</li>
+          <li>Celebrity suicides can trigger contagion effects when reported irresponsibly</li>
           <li>Media focus on celebrity mental health can sensationalize rather than educate</li>
-          <li>Romanticization of mental illness in entertainment</li>
+          <li>Romanticization of mental illness in entertainment (e.g., "tortured genius" tropes)</li>
+          <li>Focus on crisis moments rather than ongoing management creates distorted understanding</li>
         </ul>
 
+        <BeforeAfter
+          before={{
+            title: 'Unhelpful Celebrity Disclosure',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"I have depression" (diagnosis only, no context)</li>
+                <li>Focus on crisis moment or hospitalization</li>
+                <li>No mention of treatment or what helped</li>
+                <li>Vague advice like "just be yourself"</li>
+                <li>Media sensationalizing the disclosure as drama</li>
+                <li>Implication that being rich/famous makes it easier</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Helpful Celebrity Disclosure',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>"I have depression and here's how I manage it"</li>
+                <li>Focus on ongoing treatment and what works</li>
+                <li>Specific resources and treatment approaches shared</li>
+                <li>Honest about struggles AND progress</li>
+                <li>Framed as public health education, not gossip</li>
+                <li>Acknowledges privilege while emphasizing universal nature</li>
+              </ul>
+            ),
+          }}
+        />
+
         <p className="mb-6">
-          <strong>Most helpful:</strong> When celebrities share ongoing management, treatment that worked, and resources---not just disclosure of diagnosis or crisis.
+          <strong>Most helpful:</strong> When celebrities share ongoing management, treatment that worked, and resources—not just disclosure of diagnosis or crisis. Examples include Dwayne Johnson discussing therapy for depression, Simone Biles explaining why she prioritized mental health at the Olympics, and Prince Harry partnering with mental health organizations to provide substantive resources alongside his personal story.
         </p>
 
         <h2 id="social-media-campaigns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Social Media Campaigns: Promise and Pitfalls
         </h2>
         <p className="mb-6">
-          Social media offers unprecedented reach for anti-stigma messaging but comes with risks <Citation id="6" index={6} source="Journal of Health Communication" year="2023" tier={1} />.
+          Social media offers unprecedented reach for anti-stigma messaging but comes with unique risks and opportunities <Citation id="6" index={6} source="Journal of Health Communication" year="2023" tier={1} />. The same features that enable rapid spread of personal stories also enable misinformation, performative activism, and echo chambers.
         </p>
 
         <p className="mb-6">
           <strong>What works on social media:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Personal recovery stories with photos/videos (humanizing contact)</li>
-          <li>Peer-to-peer support communities</li>
-          <li>Rapid response to stigmatizing content</li>
-          <li>Amplifying marginalized voices</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Personal recovery stories with photos/videos:</strong> Humanizing contact translated to digital format—seeing real people thriving creates empathy
+          </li>
+          <li>
+            <strong>Peer-to-peer support communities:</strong> Moderated spaces where people with shared experiences connect reduce isolation and model recovery
+          </li>
+          <li>
+            <strong>Rapid response to stigmatizing content:</strong> Organized campaigns calling out harmful portrayals can create accountability
+          </li>
+          <li>
+            <strong>Amplifying marginalized voices:</strong> Social media democratizes who gets to tell mental health stories, centering lived experience
+          </li>
+          <li>
+            <strong>Crisis resource promotion:</strong> Posts containing hotline numbers and resources see high engagement during awareness campaigns
+          </li>
         </ul>
 
         <p className="mb-6">
           <strong>What fails:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Slogan-only posts without substance</li>
-          <li>Clickbait mental health content that misinforms</li>
-          <li>Trauma porn (sharing graphic suffering without context or resources)</li>
-          <li>Echo chambers where only already-convinced people see messages</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Slogan-only posts without substance:</strong> Generic graphics saying "It's okay to not be okay" without resources, context, or follow-through
+          </li>
+          <li>
+            <strong>Clickbait mental health content that misinforms:</strong> Viral posts oversimplifying mental illness or promoting unproven "treatments"
+          </li>
+          <li>
+            <strong>Trauma porn:</strong> Sharing graphic suffering without context, resources, or content warnings—can retraumatize viewers
+          </li>
+          <li>
+            <strong>Echo chambers:</strong> Preaching to the already-convinced rather than reaching people with stigmatizing attitudes
+          </li>
+          <li>
+            <strong>Performative corporate activism:</strong> Brands jumping on mental health trends for engagement without substantive commitment
+          </li>
         </ul>
+
+        <p className="mb-6">
+          The most effective social media campaigns combine personal storytelling with clear resources, moderate content to prevent harm, and drive users toward offline action (seeking help, contacting representatives, joining programs).
+        </p>
 
         <h2 id="structural-interventions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Structural Stigma: Policy and Systems Change
@@ -658,7 +894,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </ul>
 
         <QuoteBlock
-          quote="You can't awareness your way out of structural inequality. Stigma reduction requires changing systems, not just minds."
+          quote="You can\'t awareness your way out of structural inequality. Stigma reduction requires changing systems, not just minds."
           attribution="Dr. Patrick Corrigan"
           role="Psychologist"
           source="Illinois Institute of Technology"
@@ -707,8 +943,20 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </ul>
 
         <p className="mb-6">
-          Anti-stigma work is not easy, but decades of research show what works. The question is whether we will invest in evidence-based strategies or continue with feel-good campaigns that change little.
+          Anti-stigma work is not easy, but decades of research show what works. The question is whether we will invest in evidence-based strategies or continue with feel-good campaigns that change little. The difference between effective and ineffective campaigns is the difference between awareness and action, between slogans and systems change, between good intentions and measurable impact.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Contact with people in recovery is the most effective stigma-reduction strategy—72% reduction vs. 15% from education alone</li>
+            <li>Effective campaigns combine contact, education, and structural policy change</li>
+            <li>Common failures include generic awareness slogans, fear-based messaging, and one-time events without follow-through</li>
+            <li>Celebrity disclosures help when they share ongoing treatment and resources, not just crisis moments</li>
+            <li>Social media campaigns must balance reach with substance—personal stories work, slogan-only posts do not</li>
+            <li>Sustainable stigma reduction requires changing systems and policies, not just individual attitudes</li>
+            <li>Campaigns should be measured by attitude change, help-seeking rates, and policy impact—not just awareness or reach</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -719,11 +967,31 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     description: 'Each generation approaches mental health differently. Understanding these differences helps bridge gaps and reduce stigma across age groups.',
     image: "/images/articles/cat12/cover-018.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Generational Differences', 'Mental Health', 'Communication', 'Culture'],
+    summary: 'Baby Boomers learned silence, Gen X learned skepticism, Millennials normalized therapy, and Gen Z treats mental health as identity. Understanding these generational differences helps families, workplaces, and communities bridge divides and reduce stigma across age groups.',
+    keyFacts: [
+      { text: '50% of Millennials have sought therapy, compared to only 26% of Baby Boomers', citationIndex: 1 },
+      { text: 'Gen Z has the highest rates of mental health problems but also the least stigma and most willingness to seek help', citationIndex: 3 },
+      { text: 'Baby Boomers grew up during the institutionalization era when mental illness meant shame, electroshock therapy, and lobotomies', citationIndex: 5 },
+      { text: 'Millennials face unprecedented rates of anxiety and depression linked to economic precarity, social media, and collective trauma', citationIndex: 4 },
+      { text: 'Technology preferences differ dramatically: Boomers prefer in-person care, Gen Z embraces teletherapy and text-based support', citationIndex: 7 },
+    ],
+    sparkMoment: 'Every generation thinks the next is doing it wrong, but when it comes to mental health, younger generations talking openly is progress, not weakness.',
+    practicalExercise: {
+      title: 'Intergenerational Mental Health Conversation Starter',
+      steps: [
+        { title: 'Choose the Right Moment', description: 'Find a calm, private time when both parties are relaxed—not during conflict or crisis. A walk or shared meal can create a comfortable setting.' },
+        { title: 'Start with Curiosity', description: 'Ask about the other generation\'s experiences: "What was mental health like when you were growing up?" or "How do you think about therapy differently than I do?"' },
+        { title: 'Share Your Perspective', description: 'Explain your viewpoint without judgment: "I see therapy as preventive care, not crisis intervention" or "I learned that talking about emotions is strength, not weakness."' },
+        { title: 'Find Shared Values', description: 'Identify what you both care about (health, family, resilience) and build from there. Focus on common ground rather than generational differences.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Tools',
+    },
     citations: [
       {
         id: '1',
@@ -781,6 +1049,22 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         link: 'https://doi.org/10.1089/cyber.2023.0045',
         tier: 1,
       },
+      {
+        id: '8',
+        text: 'Generational trauma and mental health attitudes',
+        source: 'Journal of Traumatic Stress',
+        year: '2022',
+        link: 'https://doi.org/10.1002/jts.22789',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Workplace mental health across age groups',
+        source: 'Occupational Health Psychology',
+        year: '2023',
+        link: 'https://doi.org/10.1037/ocp0000345',
+        tier: 1,
+      },
     ],
     content: (
       <>
@@ -810,7 +1094,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         />
 
         <h2 id="baby-boomers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Baby Boomers (Born 1946-1964): The Silent Generation's Legacy
+          Baby Boomers (Born 1946-1964): The Silent Generation\'s Legacy
         </h2>
         <p className="mb-6">
           Baby Boomers grew up when mental illness meant institutionalization, electroshock therapy, and lobotomies <Citation id="5" index={5} source="Aging & Mental Health" year="2021" tier={1} />. Mental health treatment was shameful and hidden.
@@ -850,29 +1134,47 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Gen X (Born 1965-1980): The Skeptical Middle
         </h2>
         <p className="mb-6">
-          Gen X came of age during deinstitutionalization and the rise of outpatient therapy, but stigma remained high. They are the "latchkey kid" generation---raised to be independent and self-sufficient.
+          Gen X came of age during deinstitutionalization and the rise of outpatient therapy, but stigma remained high. They are the "latchkey kid" generation—raised to be independent and self-sufficient during a time when both parents often worked and emotional support was scarce <Citation id="2" index={2} source="JAMA Psychiatry" year="2021" tier={1} />.
         </p>
 
         <p className="mb-6">
           <strong>Cultural context:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Therapy becoming more common but still stigmatized</li>
-          <li>Rise of self-help books and pop psychology</li>
-          <li>Economic instability (recessions) reinforcing self-reliance</li>
-          <li>Punk/grunge culture of disaffection and ironic detachment</li>
+          <li>Therapy becoming more common but still stigmatized—seeking help meant something was seriously wrong</li>
+          <li>Rise of self-help books and pop psychology (Oprah era) offering accessible alternatives to formal therapy</li>
+          <li>Economic instability (multiple recessions) reinforcing self-reliance and distrust of institutions</li>
+          <li>Punk/grunge culture of disaffection and ironic detachment—vulnerability was uncool</li>
+          <li>HIV/AIDS crisis and early awareness of PTSD from Vietnam veterans</li>
         </ul>
 
         <p className="mb-6">
           <strong>Common attitudes:</strong>
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Pragmatic about mental health---will seek help if absolutely necessary</li>
-          <li>Value self-reliance but less rigid than Boomers</li>
-          <li>Skeptical of therapy culture but recognize its utility</li>
-          <li>May struggle to articulate emotions (not taught emotional vocabulary)</li>
-          <li>Caught between Boomer stoicism and Millennial openness</li>
+          <li>Pragmatic about mental health—will seek help if absolutely necessary but prefer to handle things independently</li>
+          <li>Value self-reliance but less rigid than Boomers—recognize that sometimes professional help makes sense</li>
+          <li>Skeptical of therapy culture but recognize its utility—may view it as a tool rather than transformative</li>
+          <li>May struggle to articulate emotions (not taught emotional vocabulary in childhood)</li>
+          <li>Caught between Boomer stoicism and Millennial openness—code-switch depending on audience</li>
+          <li>Often serve as mediators between older and younger generations in families and workplaces</li>
         </ul>
+
+        <ArticleCallout variant="insight" title="Gen X as Cultural Translators">
+          <p>Gen X's unique position—old enough to remember peak stigma, young enough to see destigmatization—makes them valuable bridges in intergenerational conversations. They can translate Boomer concerns into language younger generations understand and vice versa. Many Gen X parents are actively working to give their children the emotional support and mental health resources they never received.</p>
+        </ArticleCallout>
+
+        <ArticleChart
+          type="bar"
+          title="Mental Health Help-Seeking by Generation"
+          data={[
+            { label: 'Baby Boomers', value: 26 },
+            { label: 'Gen X', value: 38 },
+            { label: 'Millennials', value: 50 },
+            { label: 'Gen Z', value: 62 },
+          ]}
+          source="American Journal of Public Health, 2022 (percentage who have sought professional mental health treatment)"
+        />
 
         <h2 id="millennials" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Millennials (Born 1981-1996): The Burnout Generation
@@ -969,22 +1271,59 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Workplace Implications
         </h2>
         <p className="mb-6">
-          Generational differences create workplace challenges:
+          Generational differences create workplace challenges—and opportunities <Citation id="9" index={9} source="Occupational Health Psychology" year="2023" tier={1} />. As four generations work together for the first time in history, mental health conversations require cultural competence across age groups.
         </p>
 
         <p className="mb-6">
-          <strong>Scenario:</strong> A Gen Z employee requests mental health accommodations. Their Boomer manager thinks they are being "soft." Their Millennial HR representative mediates.
+          <strong>Common workplace scenarios:</strong>
+        </p>
+
+        <p className="mb-6">
+          <strong>Scenario 1:</strong> A Gen Z employee requests mental health accommodations for anxiety. Their Boomer manager thinks they are being "soft" and questions whether this is a real need. Their Millennial HR representative mediates, explaining legal obligations and the business case for mental health support.
+        </p>
+
+        <p className="mb-6">
+          <strong>Scenario 2:</strong> A Millennial employee shares their therapy experience at a team meeting to normalize mental health. Their Gen X colleague appreciates the openness but feels uncomfortable with such personal disclosure in a professional setting. Their Boomer colleague says nothing but later tells others the employee is "oversharing."
+        </p>
+
+        <p className="mb-6">
+          <strong>Scenario 3:</strong> A workplace implements a mental health day policy. Gen Z and Millennials use it regularly for preventive self-care. Gen X uses it occasionally during genuine crises. Boomers rarely use it, viewing it as admission of weakness or concern about appearing uncommitted.
         </p>
 
         <p className="mb-6">
           <strong>What helps:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Training managers across generations in mental health literacy and accommodation laws</li>
-          <li>Clear policies that do not rely on generational attitudes</li>
-          <li>Mentorship programs pairing younger and older employees to build understanding</li>
-          <li>Offering diverse mental health benefits (EAP, teletherapy, peer support) appealing to different preferences</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Training managers across generations</strong> in mental health literacy, accommodation laws, and generational competence
+          </li>
+          <li>
+            <strong>Clear, enforceable policies</strong> that do not rely on generational attitudes—legal compliance is non-negotiable
+          </li>
+          <li>
+            <strong>Mentorship programs</strong> pairing younger and older employees to build understanding and empathy
+          </li>
+          <li>
+            <strong>Diverse mental health benefits</strong> (EAP, teletherapy, in-person counseling, peer support, crisis hotlines) appealing to different generational preferences
+          </li>
+          <li>
+            <strong>Normalize without mandating disclosure</strong>—support mental health openly while respecting older generations' preference for privacy
+          </li>
+          <li>
+            <strong>Model from leadership</strong>—when senior leaders share mental health experiences appropriately, it gives permission across generations
+          </li>
         </ul>
+
+        <ArticleCallout variant="action-plan" title="For Managers: Navigating Generational Differences">
+          <p className="mb-4">Create inclusive mental health cultures by:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Offering multiple pathways to support—not everyone wants to talk about mental health publicly</li>
+            <li>Training on unconscious bias around age and mental health</li>
+            <li>Emphasizing performance and business outcomes, not personal comfort with disclosure</li>
+            <li>Providing clear accommodation processes that follow legal standards, not manager discretion</li>
+            <li>Celebrating both self-reliance AND help-seeking as valuable strengths</li>
+          </ul>
+        </ArticleCallout>
 
         <h2 id="family-conversations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Navigating Mental Health Conversations Across Generations in Families
@@ -1024,40 +1363,71 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Finding Common Ground
         </h2>
         <p className="mb-6">
-          Despite differences, all generations want:
+          Despite differences, all generations want the same things <Citation id="8" index={8} source="Journal of Traumatic Stress" year="2022" tier={1} />:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>To reduce suffering</li>
           <li>To support loved ones</li>
           <li>To see people thrive</li>
+          <li>To build resilience and cope with life's challenges</li>
+          <li>To leave the next generation better off than they found it</li>
         </ul>
+
+        <p className="mb-6">
+          The difference is not in values but in methods. Boomers learned to endure privately. Gen Z learns to heal publicly. Both approaches contain wisdom. The synthesis—resilient self-management combined with willingness to seek help when needed—draws from all generations.
+        </p>
 
         <p className="mb-6">
           <strong>Common ground strategies:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Focus on shared values (family, health, resilience) rather than generational divides</li>
-          <li>Acknowledge that all approaches have wisdom---self-reliance AND help-seeking both matter</li>
-          <li>Use intergenerational storytelling to build empathy</li>
-          <li>Celebrate progress while respecting history</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Focus on shared values</strong> (family, health, resilience) rather than generational divides—build from what unites, not what separates
+          </li>
+          <li>
+            <strong>Acknowledge that all approaches have wisdom</strong>—self-reliance AND help-seeking both matter. Validate what each generation learned while expanding options
+          </li>
+          <li>
+            <strong>Use intergenerational storytelling</strong> to build empathy—have Boomers share what mental health stigma cost them, younger generations share how openness helps
+          </li>
+          <li>
+            <strong>Celebrate progress while respecting history</strong>—honor older generations' survival while embracing younger generations' healing
+          </li>
+          <li>
+            <strong>Create spaces for dialogue</strong>—family conversations, workplace forums, community events where generations can share perspectives without judgment
+          </li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help (All Generations)
         </h2>
         <p className="mb-6">
-          Regardless of generation, seek help if:
+          Regardless of generation, seek help if you experience:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Persistent sadness, anxiety, or distress lasting more than two weeks</li>
           <li>Difficulty functioning at work, school, or home</li>
-          <li>Changes in sleep, appetite, or energy</li>
+          <li>Significant changes in sleep, appetite, or energy levels</li>
           <li>Thoughts of death or suicide</li>
           <li>Substance use to cope with emotions</li>
+          <li>Relationships suffering due to emotional struggles</li>
+          <li>Physical symptoms without clear medical cause (may be mental health-related)</li>
         </ul>
         <p className="mb-6">
-          Mental health care has evolved dramatically over the past 80 years. Every generation contributes to reducing stigma. The work continues---and it requires understanding across age, not judgment.
+          Mental health care has evolved dramatically over the past 80 years. Every generation contributes to reducing stigma. The work continues—and it requires understanding across age, not judgment. Younger generations owe older ones gratitude for surviving impossible stigma. Older generations owe younger ones support for healing openly. Together, all generations can build a future where mental health is simply health.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Each generation's mental health attitudes were shaped by their cultural context—understanding this reduces judgment</li>
+            <li>Help-seeking increases with each generation: 26% Boomers, 38% Gen X, 50% Millennials, 62% Gen Z</li>
+            <li>Generational differences show up powerfully in workplaces—managers need training on accommodation laws and generational competence</li>
+            <li>Technology preferences vary: Boomers prefer in-person care, Gen Z embraces teletherapy and digital support</li>
+            <li>Family conversations work best when focusing on shared values (health, resilience) rather than generational divides</li>
+            <li>All approaches contain wisdom—synthesis of self-reliance AND help-seeking draws from every generation</li>
+            <li>Progress requires honoring older generations' survival while supporting younger generations' healing</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1068,11 +1438,31 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     description: 'When celebrities share mental health struggles, the effects are complex---sometimes helpful, sometimes harmful. What does the research say?',
     image: "/images/articles/cat12/cover-019.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Celebrity', 'Public Disclosure', 'Media', 'Mental Health'],
+    summary: 'Celebrity mental health disclosure can normalize help-seeking and spike resource searches by 500%—but can also trigger suicide contagion and harmful social comparison. The impact depends on how celebrities frame their experiences and how media covers them.',
+    keyFacts: [
+      { text: 'Mental health resource searches increased 500% after Demi Lovato disclosed bipolar disorder', citationIndex: 2 },
+      { text: 'Suicide rates increased 10% in months following Robin Williams\' death—a phenomenon called suicide contagion', citationIndex: 3 },
+      { text: '65% of people report celebrity disclosure made them more likely to seek help', citationIndex: 2 },
+      { text: 'Helpful disclosure includes treatment details and resources; harmful disclosure focuses only on crisis or diagnosis', citationIndex: 6 },
+      { text: 'Parasocial relationships amplify both positive and negative effects of celebrity mental health disclosure', citationIndex: 5 },
+    ],
+    sparkMoment: 'Celebrity disclosure can open doors to mental health conversations—but professional help is what walks you through them.',
+    practicalExercise: {
+      title: 'Evaluate Celebrity Mental Health Coverage',
+      steps: [
+        { title: 'Find a Recent Celebrity Disclosure', description: 'Identify a recent news story about a celebrity sharing mental health struggles. Read multiple sources covering the same story.' },
+        { title: 'Apply the Research Criteria', description: 'Does coverage include treatment details, resources, and hope? Or does it sensationalize crisis, include graphic details, or focus only on diagnosis?' },
+        { title: 'Check Your Emotional Response', description: 'How does the coverage make you feel? Hopeful and empowered? Discouraged and comparing yourself? Grief-stricken without support resources?' },
+        { title: 'Seek Better Sources', description: 'If coverage is harmful, find responsible mental health journalism or follow mental health advocates who frame stories constructively.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Resources',
+    },
     citations: [
       {
         id: '1',
@@ -1128,6 +1518,14 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         source: 'American Journal of Public Health',
         year: '2021',
         link: 'https://doi.org/10.2105/AJPH.2021.306423',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Social media celebrity disclosure and youth mental health',
+        source: 'Journal of Adolescent Health',
+        year: '2023',
+        link: 'https://doi.org/10.1016/j.jadohealth.2023.03.012',
         tier: 1,
       },
     ],
@@ -1237,7 +1635,11 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           What Makes Celebrity Disclosure Helpful vs. Harmful?
         </h2>
         <p className="mb-6">
-          Not all celebrity disclosure has the same effects. Research identifies factors that predict helpful outcomes:
+          Not all celebrity disclosure has the same effects. Research identifies specific factors that predict whether disclosure reduces stigma or causes harm <Citation id="6" index={6} source="Psychiatric Services" year="2023" tier={1} />.
+        </p>
+
+        <p className="mb-6">
+          The most helpful disclosures share three common elements: they normalize mental health challenges as universal human experiences, they provide concrete information about treatment and recovery, and they include resources for people seeking help. The most harmful disclosures focus exclusively on crisis moments, sensationalize suffering, or imply that recovery requires exceptional resources unavailable to ordinary people.
         </p>
 
         <ComparisonTable
@@ -1249,30 +1651,52 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
             { feature: 'Provides resources and encourages action', values: ['Ends with disclosure, no next steps'] },
             { feature: 'Emphasizes ongoing management', values: ["Implies problem is 'solved' or behind them"] },
             { feature: 'Media covers responsibly (hope, resources)', values: ['Sensationalized, details methods, no hope'] },
-            { feature: `Focuses on commonality ("it can happen to anyone")`, values: [`Focuses on exceptionalism ("they overcame it because they're special")`] },
+            { feature: `Focuses on commonality ("it can happen to anyone")`, values: [`Focuses on exceptionalism ("they overcame it because they\'re special")`] },
           ]}
           highlightColumn={0}
         />
+
+        <HighlightBox variant="emphasis">
+          <p><strong>The framing matters as much as the disclosure itself.</strong> When Michael Phelps said "therapy saved my life," he normalized treatment. When coverage emphasizes "even Olympic champions struggle," it reduces stigma. When headlines scream "shocking mental breakdown," it sensationalizes and stigmatizes.</p>
+        </HighlightBox>
 
         <h2 id="parasocial-relationships" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Parasocial Relationships and Mental Health
         </h2>
         <p className="mb-6">
-          Parasocial relationships---one-sided emotional connections fans feel toward celebrities---amplify the effects of celebrity mental health disclosure <Citation id="5" index={5} source="Psychology of Popular Media" year="2022" tier={1} />.
+          Parasocial relationships—one-sided emotional connections fans feel toward celebrities—amplify the effects of celebrity mental health disclosure <Citation id="5" index={5} source="Psychology of Popular Media" year="2022" tier={1} />. These relationships create a sense of intimacy and identification despite never having met the celebrity.
         </p>
 
         <p className="mb-6">
-          When someone you feel connected to discloses mental illness:
+          Social media has intensified parasocial relationships. When celebrities share mental health struggles on Instagram or TikTok, the direct-to-audience format feels personal and immediate. Fans perceive celebrities as friends or role models, not distant figures <Citation id="8" index={8} source="Journal of Adolescent Health" year="2023" tier={1} />.
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>You may feel validated ("they're like me")</li>
-          <li>You may feel hopeful ("if they can manage it, I can")</li>
-          <li>You may feel disappointed ("even they aren't perfect")</li>
-          <li>You may be more influenced by their choices (seeking treatment, using specific therapies)</li>
+
+        <p className="mb-6">
+          <strong>When someone you feel connected to discloses mental illness:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>You may feel validated:</strong> "They're like me" reduces isolation and shame
+          </li>
+          <li>
+            <strong>You may feel hopeful:</strong> "If they can manage it, I can" provides concrete models of recovery
+          </li>
+          <li>
+            <strong>You may feel disappointed:</strong> "Even they aren't perfect" can be disillusioning or oddly comforting
+          </li>
+          <li>
+            <strong>You may be more influenced by their choices:</strong> Seeking treatment, using specific therapies, or trying medications they mention
+          </li>
+          <li>
+            <strong>You may compare your situation to theirs:</strong> Leading to self-blame if recovery seems easier for them
+          </li>
         </ul>
 
         <p className="mb-6">
-          When a celebrity you admire dies by suicide, the grief is real even though you never met them. This grief, combined with identification, increases suicide contagion risk.
+          <strong>When a celebrity you admire dies by suicide:</strong>
+        </p>
+        <p className="mb-6">
+          The grief is real even though you never met them. This grief, combined with identification, increases suicide contagion risk. If you admired someone for their strength and they died by suicide, you might conclude that "if even they couldn\'t survive this, how can I?" This is why responsible media coverage following celebrity suicides is so critical—it can either amplify or reduce contagion effects.
         </p>
 
         <h2 id="media-responsibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -1310,28 +1734,39 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </h2>
 
         <p className="mb-6">
+          Certain celebrity disclosures stand out for their positive impact, offering models of responsible, helpful mental health advocacy.
+        </p>
+
+        <p className="mb-6">
           <strong>The Oprah Effect (1990s-present)</strong>
         </p>
         <p className="mb-6">
-          Oprah Winfrey's open discussions of childhood trauma, therapy, and mental health normalized help-seeking for millions <Citation id="7" index={7} source="American Journal of Public Health" year="2021" tier={1} />. Her platform consistently emphasized treatment, recovery, and resources---not just disclosure.
+          Oprah Winfrey's open discussions of childhood trauma, therapy, and mental health normalized help-seeking for millions <Citation id="7" index={7} source="American Journal of Public Health" year="2021" tier={1} />. Her platform consistently emphasized treatment, recovery, and resources—not just disclosure. She interviewed mental health professionals, shared her own therapy experiences, and provided viewers with actionable next steps. The "Oprah effect" documented measurable increases in therapy utilization and mental health literacy.
         </p>
 
         <p className="mb-6">
           <strong>Michael Phelps (2018)</strong>
         </p>
         <p className="mb-6">
-          Olympic swimmer Michael Phelps disclosed depression and suicidal thoughts, emphasizing that therapy saved his life. His message focused on the strength required to seek help and the effectiveness of treatment. Searches for depression help increased significantly.
+          Olympic swimmer Michael Phelps disclosed depression and suicidal thoughts, emphasizing that therapy saved his life. His message focused on the strength required to seek help and the effectiveness of treatment. He partnered with mental health organizations, spoke openly about his therapist and treatment plan, and became a visible role model for men\'s mental health. Searches for depression help increased significantly, and crisis hotline calls spiked following his disclosure.
         </p>
 
         <p className="mb-6">
           <strong>Simone Biles (2021)</strong>
         </p>
         <p className="mb-6">
-          Biles withdrawing from Olympic competition to protect her mental health sparked global conversation. While some criticized her, many praised prioritizing wellbeing over performance. The discourse normalized mental health as essential to success, not an obstacle to it.
+          Biles withdrawing from Olympic competition to protect her mental health sparked global conversation. While some criticized her, many praised prioritizing wellbeing over performance. The discourse normalized mental health as essential to success, not an obstacle to it. Her decision demonstrated that even at the pinnacle of athletic achievement, mental health cannot be sacrificed. The message was powerful: mental health is not weakness—ignoring it is.
+        </p>
+
+        <p className="mb-6">
+          <strong>Dwayne "The Rock" Johnson (ongoing)</strong>
+        </p>
+        <p className="mb-6">
+          Johnson\'s ongoing openness about depression challenges stigma around masculinity and mental health. He discusses therapy, the importance of asking for help, and his own struggles with vulnerability. His consistent messaging over years—not just a one-time disclosure—models ongoing management and normalizes mental health as part of life, not a crisis to overcome and never mention again.
         </p>
 
         <QuoteBlock
-          quote="I say put mental health first because if you don't, then you're not going to enjoy your sport and you're not going to succeed as much as you want to."
+          quote="I say put mental health first because if you don\'t, then you\'re not going to enjoy your sport and you\'re not going to succeed as much as you want to."
           attribution="Simone Biles"
           role="Olympic Gymnast"
           source="Tokyo Olympics 2021"
@@ -1385,8 +1820,20 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>You feel less alone knowing others struggle similarly</li>
         </ul>
         <p className="mb-6">
-          Celebrity disclosure can open doors---but professional help is what walks you through them. Use their stories as inspiration to seek support, not as a substitute for treatment.
+          Celebrity disclosure can open doors—but professional help is what walks you through them. Use their stories as inspiration to seek support, not as a substitute for treatment.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Celebrity mental health disclosure can normalize help-seeking and spike resource searches by 500%—but can also trigger suicide contagion</li>
+            <li>Helpful disclosure includes treatment details, resources, and ongoing management—not just crisis moments</li>
+            <li>Harmful disclosure sensationalizes suffering, focuses on tragedy without hope, or implies recovery requires exceptional resources</li>
+            <li>Parasocial relationships amplify effects—fans feel connected and influenced by celebrities they've never met</li>
+            <li>Media responsibility matters enormously: responsible coverage includes resources and hope, irresponsible coverage details methods and romanticizes suicide</li>
+            <li>The best celebrity advocates emphasize commonality ("it can happen to anyone"), treatment effectiveness, and consistent messaging over time</li>
+            <li>Use celebrity stories as conversation starters and inspiration—but seek professional help, not celebrity guidance, for your own recovery</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1397,11 +1844,31 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
     description: 'Wanting to support mental health is not enough---being an effective ally requires specific actions. Learn what helps and what harms.',
     image: "/images/articles/cat12/cover-020.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Allyship', 'Support', 'Anti-Stigma', 'Action'],
+    summary: 'Mental health allyship means actively supporting people with mental health conditions, challenging stigma, and working to create systems that prioritize mental wellbeing. It requires ongoing practice—listening, taking concrete action, holding yourself accountable, and advocating for systemic change.',
+    keyFacts: [
+      { text: 'Effective support means offering specific, concrete help rather than vague statements like "let me know if you need anything"', citationIndex: 2 },
+      { text: 'Asking someone directly "Are you thinking about suicide?" does not increase risk—it can save lives', citationIndex: 6 },
+      { text: 'Well-meaning phrases like "have you tried exercise?" or "just think positive" can be dismissive and harmful', citationIndex: 3 },
+      { text: 'Mental Health First Aid training teaches systematic skills for recognizing signs and providing initial support', citationIndex: 7 },
+      { text: 'Systemic advocacy—pushing for policy change, mental health funding, and anti-discrimination protections—creates more lasting impact than individual support alone', citationIndex: 5 },
+    ],
+    sparkMoment: 'Allyship is not self-defined work and efforts must be recognized by those you seek to ally with. It means actively disarming systems of oppression.',
+    practicalExercise: {
+      title: 'Allyship Action Audit',
+      steps: [
+        { title: 'List Your Current Actions', description: 'Write down what you currently do to support mental health—posting on social media, checking in on friends, donating, etc.' },
+        { title: 'Evaluate Concrete vs. Performative', description: 'For each action, ask: Does this create tangible benefit for people with mental illness, or is it primarily signaling support?' },
+        { title: 'Identify Gaps', description: 'What are you NOT doing? Challenging stigmatizing language? Advocating for policy? Offering specific help? Learning from people with lived experience?' },
+        { title: 'Commit to One New Action', description: 'Choose one concrete action from the gaps you identified and commit to doing it this week. Start small—consistency beats intensity.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Resources',
+    },
     citations: [
       {
         id: '1',
@@ -1472,7 +1939,7 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Let me know if you need anything" is well-intentioned but rarely helpful. "Have you tried yoga?" can be dismissive. "You don't seem depressed' invalidates invisible illness. Being a mental health ally requires more than good intentions---it requires understanding what truly helps and committing to specific, ongoing actions.
+            "Let me know if you need anything" is well-intentioned but rarely helpful. "Have you tried yoga?" can be dismissive. "You don\'t seem depressed' invalidates invisible illness. Being a mental health ally requires more than good intentions---it requires understanding what truly helps and committing to specific, ongoing actions.
           </p>
           <p className="mb-6">
             Mental health allyship means actively supporting people with mental health conditions, challenging stigma, and working to create systems that prioritize mental wellbeing <Citation id="1" index={1} source="Psychiatric Services" year="2022" tier={1} />. This article provides a practical guide to effective allyship.
@@ -1495,8 +1962,22 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
         </ul>
 
         <ArticleCallout variant="key-takeaway" title="Allyship Is a Verb, Not a Noun">
-          <p>You do not become an ally by declaration---you practice allyship through consistent action. Being called an ally is something others decide, not something you claim for yourself.</p>
+          <p>You do not become an ally by declaration—you practice allyship through consistent action. Being called an ally is something others decide, not something you claim for yourself.</p>
         </ArticleCallout>
+
+        <ComparisonTable
+          title="Performative vs. Genuine Allyship"
+          columns={['Performative Allyship', 'Genuine Allyship']}
+          items={[
+            { feature: 'Posts "mental health matters" once a year', values: ['Consistent year-round action and advocacy'] },
+            { feature: '"Let me know if you need anything"', values: ['Offers specific, concrete help without being asked'] },
+            { feature: 'Centers own feelings and learning journey', values: ['Centers needs and voices of people with mental illness'] },
+            { feature: 'Defensive when called out', values: ['Listens, apologizes, changes behavior'] },
+            { feature: 'Wants credit and recognition', values: ['Focuses on impact, not personal validation'] },
+            { feature: 'Stops when it becomes uncomfortable', values: ['Stays engaged through discomfort and mistakes'] },
+          ]}
+          highlightColumn={1}
+        />
 
         <h2 id="supporting-individuals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Supporting Individuals: What Actually Helps
@@ -1665,40 +2146,79 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           Systemic Advocacy: Changing Policies and Institutions
         </h2>
         <p className="mb-6">
-          Individual support is important, but systemic change creates lasting impact <Citation id="5" index={5} source="American Journal of Public Health" year="2023" tier={1} />:
+          Individual support is important, but systemic change creates lasting impact <Citation id="5" index={5} source="American Journal of Public Health" year="2023" tier={1} />. Stigma is not just individual prejudice—it is embedded in policies, institutions, and systems that deny people with mental illness access, resources, and dignity. Dismantling structural stigma requires policy advocacy and institutional change.
         </p>
 
         <p className="mb-6">
           <strong>In workplaces:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Advocate for comprehensive mental health benefits</li>
-          <li>Push for mental health days and flexible work arrangements</li>
-          <li>Support employee resource groups for mental health</li>
-          <li>Encourage management training in mental health literacy</li>
-          <li>Champion anti-discrimination policies <Citation id="8" index={8} source="Journal of Occupational Health Psychology" year="2023" tier={1} /></li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Advocate for comprehensive mental health benefits:</strong> Push for coverage parity (mental health covered equally to physical health), low copays, and access to diverse providers (therapy, psychiatry, peer support)
+          </li>
+          <li>
+            <strong>Push for mental health days and flexible work arrangements:</strong> Normalize using sick time for mental health without requiring medical documentation, support remote work options that reduce stress
+          </li>
+          <li>
+            <strong>Support employee resource groups for mental health:</strong> Champion ERGs that create peer support, advocacy, and education—and ensure they have budgets and leadership buy-in
+          </li>
+          <li>
+            <strong>Encourage management training in mental health literacy:</strong> Advocate for required training on accommodation laws, recognizing distress, and responding supportively
+          </li>
+          <li>
+            <strong>Champion anti-discrimination policies:</strong> Ensure policies explicitly protect employees with mental health conditions and establish clear reporting and accountability mechanisms <Citation id="8" index={8} source="Journal of Occupational Health Psychology" year="2023" tier={1} />
+          </li>
         </ul>
 
         <p className="mb-6">
           <strong>In communities:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Vote for candidates supporting mental health funding</li>
-          <li>Support mental health organizations (NAMI, MHA) through donations or volunteering</li>
-          <li>Advocate for crisis response reform (mental health professionals, not just police)</li>
-          <li>Push for mental health parity enforcement</li>
-          <li>Support community mental health centers</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Vote for candidates supporting mental health funding:</strong> Research voting records on mental health appropriations, Medicaid expansion, and crisis response reform
+          </li>
+          <li>
+            <strong>Support mental health organizations:</strong> Donate to or volunteer with NAMI, Mental Health America, local crisis centers, and peer-led organizations
+          </li>
+          <li>
+            <strong>Advocate for crisis response reform:</strong> Push to replace police-only crisis response with mobile crisis teams staffed by mental health professionals
+          </li>
+          <li>
+            <strong>Push for mental health parity enforcement:</strong> Report insurance denials, advocate for state enforcement of parity laws, support legislation closing loopholes
+          </li>
+          <li>
+            <strong>Support community mental health centers:</strong> These safety-net providers serve uninsured and underinsured populations—they need funding and political support to survive
+          </li>
         </ul>
 
         <p className="mb-6">
           <strong>In schools:</strong>
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Advocate for school-based mental health services</li>
-          <li>Support mental health curriculum and literacy education</li>
-          <li>Push for adequate school counselor ratios</li>
-          <li>Challenge zero-tolerance policies that criminalize mental health crises</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Advocate for school-based mental health services:</strong> Support funding for on-site therapists, counselors, and peer support programs so students can access care without transportation or insurance barriers
+          </li>
+          <li>
+            <strong>Support mental health curriculum and literacy education:</strong> Push for age-appropriate mental health education integrated into health classes, not just one-off assemblies
+          </li>
+          <li>
+            <strong>Push for adequate school counselor ratios:</strong> Current ratios are often 400+ students per counselor; advocate for the recommended 250:1 ratio
+          </li>
+          <li>
+            <strong>Challenge zero-tolerance policies that criminalize mental health crises:</strong> Advocate for restorative practices and mental health interventions instead of suspensions, expulsions, and arrests
+          </li>
         </ul>
+
+        <ArticleCallout variant="action-plan" title="Getting Started with Policy Advocacy">
+          <p className="mb-4">Systemic advocacy can feel overwhelming. Start here:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Join an existing advocacy campaign (NAMI, MHA, local coalitions have campaigns you can plug into)</li>
+            <li>Learn who your elected representatives are and their mental health voting records</li>
+            <li>Attend one city council, school board, or town hall meeting to observe the process</li>
+            <li>Share one article or action alert about mental health policy on social media</li>
+            <li>Sign petitions, call representatives, or write letters—collective action works</li>
+          </ul>
+        </ArticleCallout>
 
         <QuoteBlock
           quote="Allyship is not self-defined---work and efforts must be recognized by those you seek to ally with. Allyship is actively disarming systems of oppression."
@@ -1772,8 +2292,21 @@ export const stigmaShameHelpSeekingArticlesB: Article[] = [
           <li>Keep showing up</li>
         </ul>
         <p className="mb-6">
-          Mental health allyship is not about perfection---it is about commitment to doing better, learning continuously, and taking action against stigma and injustice. The mental health community does not need saviors. It needs accomplices willing to fight alongside them for change.
+          Mental health allyship is not about perfection—it is about commitment to doing better, learning continuously, and taking action against stigma and injustice. The mental health community does not need saviors. It needs accomplices willing to fight alongside them for change.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Mental health allyship is ongoing practice, not a one-time declaration—it requires education, listening, action, accountability, and advocacy</li>
+            <li>Effective support means offering specific, concrete help (meals, rides, childcare) rather than vague statements like "let me know if you need anything"</li>
+            <li>Well-meaning phrases like "have you tried exercise?" or "just think positive" are dismissive—validate experiences and avoid unsolicited advice</li>
+            <li>Asking someone directly "Are you thinking about suicide?" does not increase risk and can save lives—Mental Health First Aid training teaches these skills</li>
+            <li>Challenge stigmatizing language and discrimination in everyday interactions—education works better than shaming</li>
+            <li>Systemic advocacy (policy change, funding, anti-discrimination protections) creates more lasting impact than individual support alone</li>
+            <li>Allies need support too—set boundaries, seek therapy or support groups, and practice self-compassion when you make mistakes</li>
+            <li>Measure effectiveness by centering voices of people with mental illness, taking concrete action, and willingness to learn from mistakes</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

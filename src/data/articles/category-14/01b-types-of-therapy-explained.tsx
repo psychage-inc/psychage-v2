@@ -343,7 +343,7 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     description: 'Learn how person-centered therapy creates a safe, non-judgmental space where you can explore your authentic self and find your own path to healing.',
     image: "/images/articles/cat14/cover-007.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -639,6 +639,16 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         <p className="mb-6">
           The therapeutic relationship matters enormously in person-centered work. Trust your gut about whether you feel genuinely accepted and understood by the therapist. That feeling of safety and connection is the foundation of healing in this approach.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Person-centered therapy is founded on three core conditions: unconditional positive regard, empathic understanding, and therapist congruence (genuineness)</li>
+            <li>The approach trusts your innate capacity for growth and self-actualization—change comes from the relationship itself, not from techniques or expert direction</li>
+            <li>Research shows 78% client satisfaction and effect sizes comparable to CBT for depression, with particularly strong outcomes for self-understanding and personal growth</li>
+            <li>Sessions are non-directive and exploratory—you choose what to discuss, set the pace, and lead the direction of therapy without homework or structured agendas</li>
+            <li>This approach works best when you're seeking to understand yourself more deeply, feel disconnected from your true self, or need unconditional acceptance to heal from judgmental relationships</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -649,11 +659,31 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     description: 'Explore family therapy approaches that treat the family as an interconnected system, addressing patterns, roles, and dynamics that affect everyone.',
     image: "/images/articles/cat14/cover-008.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 11,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Family Therapy', 'Systems Therapy', 'Family Dynamics', 'Couple Therapy'],
+    summary: 'Family systems therapy treats the family as an interconnected system where one person\'s struggles affect everyone. Rather than focusing solely on the "identified patient," this approach examines patterns, roles, communication styles, and unspoken rules that maintain problems—and helps the entire family create healthier dynamics.',
+    keyFacts: [
+      { text: 'Family therapy shows significant effectiveness for adolescent depression, eating disorders, substance use, and behavioral problems in meta-analyses', citationIndex: 1 },
+      { text: 'Common approaches include structural therapy (changing family organization), Bowen theory (differentiation and triangulation), and emotion-focused therapy for couples', citationIndex: 3 },
+      { text: 'Family-based treatment for adolescent anorexia achieves remission rates of 40-50%, making it the first-line treatment for this age group', citationIndex: 5 },
+      { text: 'Systems theory views symptoms as serving a function in maintaining family homeostasis—addressing the symptom requires changing the system', citationIndex: 8 },
+      { text: 'Multisystemic therapy, which works with family, school, and community systems, reduces youth criminal behavior by 25-40%', citationIndex: 6 },
+    ],
+    sparkMoment: 'The problem isn\'t just in one person—it\'s in the space between people, in the patterns that connect them.',
+    practicalExercise: {
+      title: 'Map Your Family System',
+      steps: [
+        { title: 'Identify Patterns', description: 'Notice recurring conflicts or dynamics. Does the same argument happen weekly? Do certain people always take the same sides? Who keeps the peace?' },
+        { title: 'Spot Triangles', description: 'When two people are in conflict, who gets pulled in as the third? (E.g., when parents fight, does a child become the focus?) Triangulation reduces tension temporarily but maintains dysfunction.' },
+        { title: 'Notice Rules', description: 'What are your family\'s unspoken rules? ("We don\'t talk about feelings." "Mom\'s needs come first." "Achievement equals love.") These rules shape behavior invisibly.' },
+        { title: 'Consider Function', description: 'If your symptom (anxiety, withdrawal, acting out) disappeared tomorrow, what would change in the family system? Sometimes symptoms serve a protective function.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Family Interactions',
+    },
     citations: [
       {
         id: '1',
@@ -740,10 +770,16 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            When one person in a family struggles, everyone feels it. A child's anxiety, a parent's depression, a couple's conflict --- these aren't isolated problems, but symptoms of patterns within the family system. Family therapy operates from this understanding: families are interconnected emotional units where each person's behavior affects everyone else <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2021" tier={1} />.
+            When one person in a family struggles, everyone feels it. A child's anxiety, a parent's depression, a couple's conflict—these aren't isolated problems, but symptoms of patterns within the family system. Family therapy operates from this understanding: families are interconnected emotional units where each person's behavior affects everyone else <Citation id="1" index={1} source="Journal of Marital and Family Therapy" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Rather than focusing solely on the "identified patient" (the person everyone thinks has the problem), family therapy examines how family dynamics, communication patterns, roles, and unspoken rules contribute to distress. Change one part of the system, and the whole system shifts.
+          </p>
+          <p className="mb-6">
+            Consider the Chen family: their 14-year-old daughter Maya stopped eating and was diagnosed with anorexia. Initially, everyone assumed Maya was the problem. But in family-based treatment, the therapist noticed patterns: Dad worked 80-hour weeks and was emotionally absent. Mom poured all her energy into Maya, hovering over every meal. Maya's older brother acted out to get attention. Maya's eating disorder, while dangerous, served a function—it brought the family together, gave Mom a purpose, and expressed Maya's only form of control.
+          </p>
+          <p className="mb-6">
+            Family therapy didn't just focus on Maya's eating. It helped Dad reengage, supported Mom in developing her own identity, addressed the brother's needs, and empowered Maya to express herself directly. As the family system changed, Maya's symptoms improved—not because she was "fixed," but because the system that maintained the problem transformed.
           </p>
         </div>
 
@@ -1002,8 +1038,18 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Family therapy can be transformative --- not just for the identified patient, but for everyone involved. When patterns shift, the whole system heals.
+          Family therapy can be transformative—not just for the identified patient, but for everyone involved. When patterns shift, the whole system heals.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Family systems therapy treats the family as an interconnected unit where one person's behavior affects everyone—problems are maintained by patterns, not caused by individuals</li>
+            <li>Major approaches include structural therapy (reorganizing family hierarchy and boundaries), Bowen theory (differentiation and triangulation), and emotion-focused therapy for couples</li>
+            <li>Family-based treatment achieves 40-50% remission for adolescent anorexia, and multisystemic therapy reduces youth criminal behavior by 25-40%</li>
+            <li>Core concepts: circular causality, homeostasis (resistance to change), triangulation (pulling in a third person to reduce tension), and differentiation (being yourself while staying connected)</li>
+            <li>Not everyone needs to attend every session—sometimes working with part of the system (parents only, or even one member) can create change throughout the family</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1014,11 +1060,31 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     description: 'Learn how group therapy harnesses the power of shared experience, peer support, and interpersonal learning to create lasting change.',
     image: "/images/articles/cat14/cover-009.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Group Therapy', 'Support Groups', 'Interpersonal Learning', 'Peer Support'],
+    summary: 'Group therapy brings people with similar struggles together to heal in community. Through sharing experiences, giving and receiving feedback, and witnessing others\' growth, group members discover they\'re not alone—and learn interpersonal skills that individual therapy can\'t replicate.',
+    keyFacts: [
+      { text: 'Meta-analyses show group therapy produces effect sizes comparable to individual therapy for depression, anxiety, and trauma, at significantly lower cost', citationIndex: 1 },
+      { text: 'Irvin Yalom identified 11 therapeutic factors in groups: universality (you\'re not alone), hope, altruism, catharsis, and interpersonal learning among others', citationIndex: 2 },
+      { text: 'Group therapy is particularly effective for social anxiety, allowing real-time practice of social skills in a safe environment', citationIndex: 4 },
+      { text: 'Process groups focus on here-and-now interactions between members; psychoeducational groups teach specific skills like DBT or CBT', citationIndex: 3 },
+      { text: 'Research shows that cohesion (feeling connected to the group) is the strongest predictor of positive outcomes in group therapy', citationIndex: 3 },
+    ],
+    sparkMoment: 'Healing happens not just between you and a therapist, but in the space between human beings who truly see each other.',
+    practicalExercise: {
+      title: 'Assess Your Readiness for Group Therapy',
+      steps: [
+        { title: 'Identify Your Goals', description: 'What do you hope to gain? Feeling less alone? Learning social skills? Getting feedback on how you come across? Specific groups serve different purposes.' },
+        { title: 'Consider Your Comfort Level', description: 'Are you willing to share personal experiences with strangers? Can you listen to others\' pain without fixing or avoiding? Group requires emotional presence.' },
+        { title: 'Evaluate Timing', description: 'Are you in active crisis? Severe crises often need individual stabilization first. But if you\'re stable enough to support others while working on yourself, group can be powerful.' },
+        { title: 'Research Group Types', description: 'Process groups, CBT skills groups, DBT groups, support groups, trauma-focused groups—each has a different structure and purpose. Find the right fit for your needs.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Group Therapy',
+    },
     citations: [
       {
         id: '1',
@@ -1108,7 +1174,10 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
             There's something powerfully healing about realizing you're not alone. Group therapy offers what individual therapy cannot: the experience of being seen, understood, and supported by people who truly get it because they're struggling too. For many people, this shared humanity becomes the most transformative aspect of treatment <Citation id="1" index={1} source="American Journal of Psychiatry" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Group therapy brings together 6-12 people facing similar challenges, guided by one or two trained therapists. It's not just individual therapy in a group setting --- the group itself becomes a therapeutic force <Citation id="2" index={2} source="Basic Books" year="2020" tier={5} />.
+            Group therapy brings together 6-12 people facing similar challenges, guided by one or two trained therapists. It's not just individual therapy in a group setting—the group itself becomes a therapeutic force <Citation id="2" index={2} source="Basic Books" year="2020" tier={5} />.
+          </p>
+          <p className="mb-6">
+            Take James, who joined a men's depression group after months of isolating himself. In his first session, he sat silently, certain no one could understand his shame and hopelessness. Then another member, Marcus, shared a story nearly identical to James's own experience. For the first time in months, James felt a crack in his isolation. Over weeks, he watched others make progress, which gave him hope. He received honest feedback about how his pessimism pushed people away. He helped a newer member, which reminded him of his own strength. The group became a laboratory for interpersonal learning that individual therapy couldn't replicate.
           </p>
         </div>
 
@@ -1369,6 +1438,16 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         <p className="mb-6">
           Many people find group therapy surprisingly powerful. The combination of universality ("I'm not alone"), hope ("If they can get better, maybe I can too"), and genuine connection creates healing that individual therapy alone can't replicate.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Group therapy produces outcomes comparable to individual therapy for depression, anxiety, and trauma, often at significantly lower cost per person</li>
+            <li>Irvin Yalom's 11 therapeutic factors include universality (you're not alone), hope, altruism, interpersonal learning, and catharsis—benefits unique to group settings</li>
+            <li>Process groups focus on here-and-now interactions and interpersonal patterns; psychoeducational groups teach specific skills like CBT or DBT in a group format</li>
+            <li>Group cohesion (feeling connected and valued by the group) is the strongest predictor of positive outcomes, more important than the therapist's specific techniques</li>
+            <li>Groups typically meet weekly for 60-90 minutes with 6-12 members—closed groups maintain consistent membership while open groups allow new members to join</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1379,11 +1458,31 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
     description: 'Discover how integrative therapy draws from multiple evidence-based approaches to create personalized treatment tailored to your unique situation.',
     image: "/images/articles/cat14/cover-010.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 10,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Integrative Therapy', 'Eclectic Therapy', 'Personalized Treatment', 'Holistic Therapy'],
+    summary: 'Integrative therapy doesn\'t follow a single method—it draws from multiple evidence-based approaches to create personalized treatment. Your therapist might use CBT techniques for anxiety, attachment theory for relationships, and mindfulness for emotion regulation, adapting flexibly to what you need most.',
+    keyFacts: [
+      { text: 'Most therapists practice integratively—surveys show 60-80% identify as eclectic or integrative rather than adhering to a single theoretical model', citationIndex: 1 },
+      { text: 'Common integration strategies: theoretical integration (blending theories), technical eclecticism (using techniques from different models), and assimilative integration (one primary approach enhanced by others)', citationIndex: 2 },
+      { text: 'Research shows integrative approaches produce outcomes at least as good as single-method therapies, with the advantage of flexibility for complex presentations', citationIndex: 1 },
+      { text: 'Integrative therapists often combine CBT (for thoughts/behaviors), psychodynamic (for patterns/relationships), humanistic (for acceptance/growth), and mindfulness (for present awareness)', citationIndex: 3 },
+      { text: 'The therapeutic relationship is central to integration—most integrative therapists prioritize relationship quality regardless of which techniques they use', citationIndex: 4 },
+    ],
+    sparkMoment: 'The best therapy isn\'t about following a manual—it\'s about meeting you exactly where you are with whatever approach helps most.',
+    practicalExercise: {
+      title: 'Identify What You Need From Therapy',
+      steps: [
+        { title: 'Name Your Struggles', description: 'List 3-5 specific issues bringing you to therapy. Are they thought patterns, behaviors, relationship dynamics, trauma, identity questions, or a mix?' },
+        { title: 'Consider Past Help', description: 'What\'s helped you before (even slightly)? Structured exercises? Talking it out? Understanding patterns? Body-based work? This reveals which approaches might fit.' },
+        { title: 'Assess Complexity', description: 'Do you have multiple overlapping issues (e.g., trauma + anxiety + relationship problems)? Complex presentations often benefit from integrative approaches that address different layers.' },
+        { title: 'Clarify Preferences', description: 'Do you prefer structured homework or exploratory conversation? Insight-focused or action-focused? A flexible therapist can adapt to your learning style.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Integrative Therapists',
+    },
     citations: [
       {
         id: '1',
@@ -1470,10 +1569,13 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Human beings are complex. Your depression might involve negative thought patterns, relationship dynamics, unprocessed grief, and biological factors --- all at once. So why would one single therapeutic approach be enough? Integrative therapy recognizes that no single theory has all the answers, and draws from multiple evidence-based approaches to create treatment tailored to you <Citation id="1" index={1} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.
+            Human beings are complex. Your depression might involve negative thought patterns, relationship dynamics, unprocessed grief, and biological factors—all at once. So why would one single therapeutic approach be enough? Integrative therapy recognizes that no single theory has all the answers, and draws from multiple evidence-based approaches to create treatment tailored to you <Citation id="1" index={1} source="Journal of Psychotherapy Integration" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
             Rather than forcing you into a pre-set treatment model, integrative therapists adapt their approach to fit your unique needs, preferences, and goals. The question isn't "What's the one right therapy?" but "What combination of approaches will work best for this person, at this time, for this problem?" <Citation id="2" index={2} source="Oxford University Press" year="2019" tier={5} />
+          </p>
+          <p className="mb-6">
+            Consider Elena, who came to therapy for panic attacks. Her integrative therapist used CBT to help her identify and challenge catastrophic thoughts fueling panic. But they also explored attachment patterns (psychodynamic) when Elena realized her panic worsened after conflict with her partner. They added mindfulness practices to help her tolerate physical sensations without spiraling. And they used EMDR for a car accident that left her hypervigilant. No single approach would have addressed all these layers—but together, they created comprehensive healing.
           </p>
         </div>
 
@@ -1686,8 +1788,18 @@ export const typesOfTherapyExplainedArticlesB: Article[] = [
         </ArticleCallout>
 
         <p className="mb-6">
-          Integrative therapy reflects a core truth: people are more important than theories. The best therapy isn't the one with the most research or the trendiest technique --- it's the one that works for you.
+          Integrative therapy reflects a core truth: people are more important than theories. The best therapy isn't the one with the most research or the trendiest technique—it's the one that works for you.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>60-80% of therapists practice integratively, drawing from multiple evidence-based approaches rather than adhering strictly to one theoretical model</li>
+            <li>Common integration strategies include theoretical integration (blending theories), technical eclecticism (borrowing techniques), and assimilative integration (one primary approach enhanced by others)</li>
+            <li>Integrative therapy often combines CBT (thoughts/behaviors), psychodynamic (patterns/relationships), humanistic (acceptance/growth), and mindfulness (present awareness) approaches</li>
+            <li>Research shows integrative approaches produce outcomes comparable to single-method therapies, with added flexibility for complex, multi-layered presentations</li>
+            <li>The therapeutic relationship remains central—most integrative therapists prioritize warmth, empathy, and collaboration regardless of which techniques they employ</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

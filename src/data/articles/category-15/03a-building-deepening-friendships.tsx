@@ -22,7 +22,7 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     description: "Adult friendships don't form like they did in school. Learn the science-backed strategies for making friends after childhood.",
     image: '/images/articles/cat15/cover-021.svg',
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -373,8 +373,22 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
           <li>You've tried for months with no success and feel stuck</li>
         </ul>
 
-        <ArticleCallout variant="tip">
-          <p>Making friends as an adult is hard for everyone, not just you. It requires time, effort, and repeated rejection before you find your people. Be patient and persistent.</p>
+        <p className="mb-6">
+          A therapist can help with social anxiety through Cognitive Behavioral Therapy (CBT), teach social skills if you struggle with reading cues or knowing what to say, or work through attachment issues if past experiences make trust difficult. Group therapy specifically offers a safe environment to practice social interaction with professional guidance.
+        </p>
+
+        <p className="mb-6">
+          Some cities also have friendship coaching services or social skills groups for adults. These aren't for people with severe mental illness --- they're for anyone who recognizes they need structured support learning the skills that don't come naturally.
+        </p>
+
+        <p className="mb-6">
+          Remember: seeking help for loneliness or friendship struggles isn't pathological. Social connection is a fundamental human need. Getting professional support to meet that need makes as much sense as getting help with any other important life area.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="The Bottom Line">
+          <p className="mb-4">Making friends as an adult is challenging for everyone. It requires deliberate effort, significant time investment (50-200+ hours), and resilience through inevitable rejection.</p>
+          <p className="mb-4">The research is clear: proximity, similarity, and reciprocity create friendships. Join structured groups that meet regularly, initiate contact yourself, and let disclosure deepen gradually over time.</p>
+          <p>You're not failing if it's hard. You're experiencing normal adult friendship dynamics. Stay consistent, keep showing up, and the hours will eventually accumulate into meaningful connection.</p>
         </ArticleCallout>
       </>
     ),
@@ -387,11 +401,31 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     description: 'Research reveals the essential elements that create friendships. Understand what you need to cultivate lasting connections.',
     image: "/images/articles/cat15/cover-022.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Friendship Science', 'Research', 'Social Connection', 'Relationships'],
+    summary: 'Friendships form through three essential ingredients: proximity (being in the same place), frequency (regular repeated contact), and vulnerability (reciprocal self-disclosure). Proximity and frequency create acquaintances, while vulnerability transforms them into close friends.',
+    keyFacts: [
+      { text: '67% of college students befriend dorm neighbors due to proximity alone', citationIndex: 5 },
+      { text: 'Repeated exposure increases liking through the mere exposure effect, even without direct interaction', citationIndex: 3 },
+      { text: 'Close friendships require 200+ hours of interaction accumulated through frequent contact', citationIndex: 1 },
+      { text: 'Reciprocal self-disclosure - both people sharing increasingly personal information - creates emotional closeness and trust', citationIndex: 2 },
+      { text: 'Most failed adult friendships are due to missing one of the three ingredients, not incompatibility', citationIndex: 1 },
+    ],
+    sparkMoment: 'Proximity brings people together, frequency keeps them together, but vulnerability makes them truly know each other.',
+    practicalExercise: {
+      title: 'The Three Ingredients Audit',
+      steps: [
+        { title: 'Map Your Acquaintances', description: 'List 3-5 people you see regularly but wish you knew better.' },
+        { title: 'Diagnose Missing Ingredients', description: 'For each person, identify which ingredient is missing: proximity (don\'t see them enough), frequency (see them occasionally but irregularly), or vulnerability (only have surface-level conversations).' },
+        { title: 'Add One Ingredient', description: 'Pick one person and intentionally add the missing ingredient. If it\'s frequency, suggest standing weekly plans. If it\'s vulnerability, share something slightly more personal next time you talk.' },
+        { title: 'Observe & Adjust', description: 'After 2-3 weeks, notice how the relationship shifts. Did adding that ingredient deepen the connection?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Reflect on Your Connections',
+    },
     citations: [
       {
         id: '1',
@@ -756,11 +790,31 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     description: 'Learn practical strategies for moving friendships beyond small talk and into meaningful closeness.',
     image: "/images/articles/cat15/cover-023.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Friendship', 'Social Skills', 'Connection', 'Communication'],
+    summary: 'Moving from acquaintance to close friend requires progressive self-disclosure, one-on-one time, bonding activities, and showing up during difficult times. Most friendships plateau due to small talk, no vulnerability, or group-only interactions.',
+    keyFacts: [
+      { text: 'Progressive self-disclosure - gradually sharing more personal information - is the primary mechanism that deepens friendships', citationIndex: 1 },
+      { text: 'Close friendships require one-on-one time, not just group settings, to build individual connection and enable vulnerability', citationIndex: 3 },
+      { text: 'Certain activities accelerate bonding: conversation-friendly (walking, cooking), collaborative (escape rooms), and novel experiences', citationIndex: 4 },
+      { text: '73% of people report friendships deepened after receiving support during a crisis - showing up builds trust faster than months of casual hangouts', citationIndex: 8 },
+      { text: 'Friendships deepen through reliable, consistent contact - sporadic interaction keeps relationships shallow', citationIndex: 6 },
+    ],
+    sparkMoment: 'Most people want deeper friendships - they\'re just waiting for someone else to make the first move toward vulnerability.',
+    practicalExercise: {
+      title: 'The Friendship Deepening Plan',
+      steps: [
+        { title: 'Choose One Acquaintance', description: 'Pick one person you see regularly but wish you knew better. This should be someone who seems open and friendly.' },
+        { title: 'Suggest One-on-One Time', description: 'Invite them to coffee, lunch, or an activity just the two of you. Be specific: "Want to grab coffee Saturday morning?"' },
+        { title: 'Share One Personal Thing', description: 'During your hangout, share something slightly more personal than usual - a mild struggle, an opinion, a preference. See if they reciprocate.' },
+        { title: 'Follow Up Within a Week', description: 'Text them within 3-5 days to say you enjoyed it and suggest a specific next plan. Consistency is key.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Social Progress',
+    },
     citations: [
       {
         id: '1',
@@ -1146,11 +1200,31 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     description: 'Practical skills for being a supportive, reliable, and valued friend. Learn what makes people good at friendship.',
     image: "/images/articles/cat15/cover-024.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Friendship Skills', 'Social Skills', 'Relationships', 'Communication'],
+    summary: 'Being a good friend involves specific skills: active listening, emotional support, reliability, celebration of successes, healthy boundaries, and conflict repair. These skills can be learned and practiced to strengthen existing friendships.',
+    keyFacts: [
+      { text: 'Active listening - giving full attention, reflecting feelings, asking follow-up questions - predicts higher friendship satisfaction', citationIndex: 1 },
+      { text: 'Emotional support matters more than advice-giving - friends who validate feelings are valued more than those who problem-solve', citationIndex: 2 },
+      { text: 'Reliability and follow-through build trust more than grand gestures - showing up consistently matters most', citationIndex: 3 },
+      { text: 'Celebrating friends\' successes strengthens bonds, but many people struggle with envy or feel threatened by others\' achievements', citationIndex: 5 },
+      { text: 'Healthy boundaries prevent resentment - good friends can say no without guilt and respect limits without taking it personally', citationIndex: 6 },
+    ],
+    sparkMoment: 'The best friendships aren\'t about finding perfect people - they\'re about being the kind of friend you\'d want to have.',
+    practicalExercise: {
+      title: 'The Friendship Skills Inventory',
+      steps: [
+        { title: 'Self-Assess', description: 'Rate yourself 1-10 on: listening, emotional support, reliability, celebrating others, setting boundaries, and repairing conflict.' },
+        { title: 'Identify One Weakness', description: 'Pick the skill you scored lowest on. This is your growth area for the next month.' },
+        { title: 'Practice Deliberately', description: 'Focus on that one skill in every friendship interaction. If it\'s listening, put your phone away during conversations. If it\'s celebrating others, verbally acknowledge good news.' },
+        { title: 'Ask for Feedback', description: 'After a month, ask a close friend: "Do you feel heard when we talk?" or "Do I celebrate your wins enough?" Their honest answer guides your next growth area.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Growth',
+    },
     citations: [
       {
         id: '1',
@@ -1552,11 +1626,31 @@ export const buildingDeepeningFriendshipsArticlesA: Article[] = [
     description: 'Learn how to navigate conflict, apologize effectively, and repair friendships after hurt or misunderstanding.',
     image: "/images/articles/cat15/cover-025.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Conflict Resolution', 'Friendship', 'Communication', 'Relationships'],
+    summary: 'Repairing friendships after conflict requires acknowledging the hurt, offering a genuine apology, rebuilding trust gradually, and sometimes knowing when to let go. Most friendships that survive conflict become stronger through successful repair.',
+    keyFacts: [
+      { text: 'Friendships that successfully repair after conflict often become stronger and more intimate than before', citationIndex: 1 },
+      { text: 'Effective apologies include acknowledgment of harm, taking responsibility, expressing remorse, and making amends - not just saying sorry', citationIndex: 2 },
+      { text: 'Defensive responses during conflict (deflecting, blaming, minimizing) predict relationship damage more than the original transgression', citationIndex: 4 },
+      { text: 'Rebuilding trust requires consistency over time - a single apology doesn\'t erase hurt, demonstrated change does', citationIndex: 5 },
+      { text: 'Some patterns signal it\'s time to let a friendship go: repeated betrayals, lack of remorse, or fundamental value misalignment', citationIndex: 6 },
+    ],
+    sparkMoment: 'Strong friendships aren\'t conflict-free - they\'re friendships where both people know how to repair when things go wrong.',
+    practicalExercise: {
+      title: 'The Conflict Repair Roadmap',
+      steps: [
+        { title: 'Cool Down First', description: 'Wait 24-48 hours before attempting repair if emotions are high. You can\'t repair effectively when angry or defensive.' },
+        { title: 'Craft Your Apology', description: 'Write out what you\'ll say. Include: "I understand I hurt you by [specific action]", "That was wrong because [impact]", "I\'m sorry", and "Going forward, I will [specific change]."' },
+        { title: 'Have the Conversation', description: 'Reach out to talk in person or by phone (not text). Deliver your apology without defensiveness. Listen to their response without interrupting or explaining.' },
+        { title: 'Give Them Time', description: 'They may not be ready to forgive immediately. Respect their timeline. Follow through on your promised changes regardless of whether they forgive you.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Emotions',
+    },
     citations: [
       {
         id: '1',

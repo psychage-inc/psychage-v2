@@ -25,6 +25,26 @@ export const collectiveTraumaArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Collective Trauma', 'Community Healing', 'Social Psychology', 'Disaster Recovery'],
+    summary: 'Collective trauma occurs when shared traumatic experiences—from pandemics to mass violence—damage the social fabric of entire communities. Understanding how trauma ripples through groups and what pathways exist for collective healing is essential for supporting community recovery and resilience.',
+    keyFacts: [
+      { text: '85% of Americans experienced collective trauma from the COVID-19 pandemic', citationIndex: 2 },
+      { text: 'Mass shootings increase community anxiety by 40% even among those not directly affected', citationIndex: 4 },
+      { text: 'Historical trauma from systemic oppression can persist across 3+ generations', citationIndex: 1 },
+      { text: 'Social cohesion before disaster is the strongest predictor of collective recovery', citationIndex: 5 },
+      { text: 'Community-led healing processes show better outcomes than top-down interventions', citationIndex: 7 },
+    ],
+    sparkMoment: 'Collective trauma reminds us that we are fundamentally interconnected—our suffering is shared, and so too must be our healing.',
+    practicalExercise: {
+      title: 'Processing Collective Trauma Mindfully',
+      steps: [
+        { title: 'Limit media exposure', description: 'Set boundaries on news consumption. Stay informed without immersing yourself in graphic content or 24/7 coverage.' },
+        { title: 'Connect with community', description: 'Reach out to neighbors, join local groups, or participate in collective rituals like vigils or community gatherings.' },
+        { title: 'Take meaningful action', description: 'Channel feelings of helplessness into concrete action—volunteering, mutual aid, advocacy, or supporting affected communities.' },
+        { title: 'Honor your grief', description: 'Allow yourself to mourn collective losses even if you weren\'t directly affected. Grief is a natural response to shared trauma.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Response',
+    },
     citations: [
       {
         id: '1',
@@ -95,7 +115,7 @@ export const collectiveTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            September 11th, 2001. Hurricane Katrina. The COVID-19 pandemic. The Pulse nightclub shooting. George Floyd's murder. Mass school shootings. These events didn't just traumatize individuals who directly experienced them---they wounded entire communities, nations, and in some cases, the global collective.
+            September 11th, 2001. Hurricane Katrina. The COVID-19 pandemic. The Pulse nightclub shooting. George Floyd\'s murder. Mass school shootings. These events didn\'t just traumatize individuals who directly experienced them---they wounded entire communities, nations, and in some cases, the global collective.
           </p>
           <p className="mb-6">
             Collective trauma occurs when a shared traumatic experience affects a group of people, disrupting their sense of safety, shattering communal narratives, and fundamentally altering the social fabric <Citation id="1" index={1} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2021" tier={1} />. Unlike individual trauma, which centers on personal experience, collective trauma is inherently social---experienced together, processed together, and requiring communal healing.
@@ -251,7 +271,7 @@ export const collectiveTraumaArticlesA: Article[] = [
           How Collective Trauma Spreads
         </h2>
         <p className="mb-6">
-            You don't have to directly experience a traumatic event to be affected by collective trauma. Several mechanisms allow trauma to ripple through communities:
+            You don\'t have to directly experience a traumatic event to be affected by collective trauma. Several mechanisms allow trauma to ripple through communities:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -384,6 +404,26 @@ export const collectiveTraumaArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Post-Traumatic Growth', 'Resilience', 'Meaning-Making', 'Positive Psychology'],
+    summary: 'Post-traumatic growth describes positive psychological transformation that can emerge from struggling with highly challenging life circumstances. While trauma is never desirable, research shows 70% of survivors report meaningful growth in relationships, personal strength, life appreciation, new possibilities, or spiritual development.',
+    keyFacts: [
+      { text: '70% of trauma survivors report experiencing at least some post-traumatic growth', citationIndex: 2 },
+      { text: 'Growth occurs in 5 distinct domains: relationships, strength, appreciation, possibilities, and spirituality', citationIndex: 1 },
+      { text: 'Social support doubles the likelihood of post-traumatic growth compared to isolation', citationIndex: 9 },
+      { text: 'Deliberate reflection and meaning-making are more predictive of growth than trauma severity', citationIndex: 5 },
+      { text: 'Post-traumatic growth can coexist with PTSD symptoms—one does not negate the other', citationIndex: 4 },
+    ],
+    sparkMoment: 'Trauma is not what happens to you—it\'s what happens inside you as a result. Post-traumatic growth is what can happen inside you as a result of how you work with what happened.',
+    practicalExercise: {
+      title: 'Reflective Journaling for Growth',
+      steps: [
+        { title: 'Write without judgment', description: 'Set aside 15-20 minutes. Write continuously about your deepest thoughts and feelings regarding the trauma without worrying about grammar or coherence.' },
+        { title: 'Explore changes in perspective', description: 'Reflect on how the experience changed your beliefs, priorities, or understanding of yourself and the world.' },
+        { title: 'Identify strengths discovered', description: 'What inner resources did you discover? What surprised you about your own resilience?' },
+        { title: 'Connect to values and purpose', description: 'How has this experience clarified what matters most to you? What new possibilities have emerged?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Start Your Reflection Journal',
+    },
     citations: [
       {
         id: '1',
@@ -646,7 +686,7 @@ export const collectiveTraumaArticlesA: Article[] = [
               title: 'Schema Reconstruction',
               description: (
                 <p>
-                  Core beliefs are rebuilt to accommodate the trauma. For example, 'The world is entirely safe' becomes "The world has danger, but I have strength and support." This isn't returning to pre-trauma beliefs---it's developing wiser, more flexible ones.
+                  Core beliefs are rebuilt to accommodate the trauma. For example, 'The world is entirely safe' becomes "The world has danger, but I have strength and support." This isn\'t returning to pre-trauma beliefs---it\'s developing wiser, more flexible ones.
                 </p>
               ),
             },
@@ -654,7 +694,7 @@ export const collectiveTraumaArticlesA: Article[] = [
               title: 'Narrative Integration',
               description: (
                 <p>
-                  The trauma is incorporated into one's life story in a way that includes both suffering and growth, pain and transformation. The narrative becomes: "This terrible thing happened, AND here's how I've changed."
+                  The trauma is incorporated into one\'s life story in a way that includes both suffering and growth, pain and transformation. The narrative becomes: "This terrible thing happened, AND here\'s how I\'ve changed."
                 </p>
               ),
             },
@@ -716,7 +756,7 @@ export const collectiveTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="Avoiding Cultural Imposition">
           <p>
-            Western psychology's emphasis on PTG should not pressure trauma survivors to "find the silver lining" or feel they've failed if they don't experience growth. Some cultures value acceptance and endurance over transformation. Respect diverse paths through trauma.
+            Western psychology\'s emphasis on PTG should not pressure trauma survivors to "find the silver lining" or feel they\'ve failed if they don\'t experience growth. Some cultures value acceptance and endurance over transformation. Respect diverse paths through trauma.
           </p>
         </ArticleCallout>
 
@@ -803,7 +843,7 @@ export const collectiveTraumaArticlesA: Article[] = [
           Realistic Expectations
         </h2>
         <p className="mb-6">
-          If you're hoping for post-traumatic growth:
+          If you\'re hoping for post-traumatic growth:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -816,7 +856,7 @@ export const collectiveTraumaArticlesA: Article[] = [
         </ul>
 
         <p className="mb-6">
-          The paradox of post-traumatic growth is that we don't choose trauma, but we can choose how we engage with its aftermath. In that engagement---the deliberate wrestling with shattered assumptions, the painful reconstruction of meaning, the courage to remain open despite betrayal---transformation becomes possible. Not certain. Not required. But possible. And for many, that possibility becomes the seed of profound change.
+          The paradox of post-traumatic growth is that we don\'t choose trauma, but we can choose how we engage with its aftermath. In that engagement---the deliberate wrestling with shattered assumptions, the painful reconstruction of meaning, the courage to remain open despite betrayal---transformation becomes possible. Not certain. Not required. But possible. And for many, that possibility becomes the seed of profound change.
         </p>
       </>
     ),
@@ -833,6 +873,26 @@ export const collectiveTraumaArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Resilience', 'Protective Factors', 'Trauma Recovery', 'Prevention'],
+    summary: 'Resilience after trauma is not a fixed trait but a dynamic process shaped by biological, relational, and systemic protective factors. Understanding these factors—from cognitive flexibility to social support to cultural continuity—empowers individuals and communities to build resilience proactively and cultivate it intentionally during recovery.',
+    keyFacts: [
+      { text: '60% of trauma survivors show resilience without clinical intervention', citationIndex: 1 },
+      { text: 'Social support is the single most consistently identified protective factor across all trauma types', citationIndex: 3 },
+      { text: 'Protective factors operate at three levels: individual, relational, and systemic', citationIndex: 1 },
+      { text: 'Moderate early life stress can build resilience through stress inoculation', citationIndex: 2 },
+      { text: 'Meaning-making ability is a universal protective factor across all cultures', citationIndex: 7 },
+    ],
+    sparkMoment: 'Resilience is not a solitary achievement—it\'s cultivated within webs of relationships, communities, and systems that either support or undermine recovery.',
+    practicalExercise: {
+      title: 'Building Your Resilience Foundation',
+      steps: [
+        { title: 'Map your support network', description: 'List people you can turn to for emotional support, practical help, or just companionship. Identify gaps and consider how to expand your network.' },
+        { title: 'Identify past resilience', description: 'Reflect on a previous challenge you overcame. What strengths did you use? What resources helped? How can you draw on these again?' },
+        { title: 'Clarify your values', description: 'What matters most to you? How can you take one small action this week that aligns with those values?' },
+        { title: 'Practice one self-care behavior daily', description: 'Choose something sustainable: 10 minutes of movement, a brief mindfulness practice, or connecting with one supportive person.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Resilience Journey',
+    },
     citations: [
       {
         id: '1',
@@ -917,7 +977,7 @@ export const collectiveTraumaArticlesA: Article[] = [
             Resilience---the capacity to adapt successfully despite adversity---is not a fixed trait you either have or don't have <Citation id="1" index={1} source="Annual Review of Clinical Psychology" year="2020" tier={1} />. It's a dynamic process shaped by individual characteristics, relationships, and environmental factors that can be strengthened over time.
           </p>
           <p className="mb-6">
-            Understanding protective factors---the elements that buffer against trauma's harmful effects---empowers individuals, families, communities, and systems to build resilience proactively, before crisis strikes, and cultivate it intentionally during recovery.
+            Understanding protective factors---the elements that buffer against trauma\'s harmful effects---empowers individuals, families, communities, and systems to build resilience proactively, before crisis strikes, and cultivate it intentionally during recovery.
           </p>
         </div>
 
@@ -950,7 +1010,7 @@ export const collectiveTraumaArticlesA: Article[] = [
         />
 
         <p className="mb-6">
-          Importantly, resilience doesn't mean absence of distress. Resilient individuals still experience pain, fear, sadness, and disruption following trauma. What distinguishes them is:
+          Importantly, resilience doesn\'t mean absence of distress. Resilient individuals still experience pain, fear, sadness, and disruption following trauma. What distinguishes them is:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -997,7 +1057,7 @@ export const collectiveTraumaArticlesA: Article[] = [
             },
             {
               feature: 'Prior Successful Coping',
-              values: [`History of overcoming challenges builds confidence: "I've survived hard things before"`, 'Yes (reflection on past resilience)'],
+              values: [`History of overcoming challenges builds confidence: "I\'ve survived hard things before"`, 'Yes (reflection on past resilience)'],
             },
           ]}
           highlightColumn={1}
@@ -1158,10 +1218,10 @@ export const collectiveTraumaArticlesA: Article[] = [
         </p>
 
         <QuoteBlock
-          quote="Everything can be taken from a man but one thing: the last of the human freedoms---to choose one's attitude in any given set of circumstances, to choose one's own way."
+          quote="Everything can be taken from a man but one thing: the last of the human freedoms---to choose one\'s attitude in any given set of circumstances, to choose one\'s own way."
           attribution="Viktor Frankl"
           role="Holocaust survivor and psychiatrist"
-          source="Man's Search for Meaning"
+          source="Man\'s Search for Meaning"
           variant="large"
         />
 
@@ -1253,7 +1313,7 @@ export const collectiveTraumaArticlesA: Article[] = [
         />
 
         <h2 id="who-doesnt-bounce-back" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Why Some People Don't "Bounce Back"
+          Why Some People Don\'t "Bounce Back"
         </h2>
         <p className="mb-6">
           It's crucial to recognize that lack of resilience is not a personal failing <Citation id="4" index={4} source="JAMA Psychiatry" year="2019" tier={1} />. Factors that predict worse outcomes are often beyond individual control:
@@ -1270,7 +1330,7 @@ export const collectiveTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="warning" title="Blaming Victims for Lack of Resilience">
           <p>
-            The "resilience narrative" can become victim-blaming when it implies people who struggle just didn't try hard enough. Some traumas are so severe, some contexts so unsupportive, that developing PTSD or chronic struggles is the expected outcome---not a personal failure. Compassion, not judgment, is the appropriate response.
+            The "resilience narrative" can become victim-blaming when it implies people who struggle just didn\'t try hard enough. Some traumas are so severe, some contexts so unsupportive, that developing PTSD or chronic struggles is the expected outcome---not a personal failure. Compassion, not judgment, is the appropriate response.
           </p>
         </ArticleCallout>
 
@@ -1295,7 +1355,7 @@ export const collectiveTraumaArticlesA: Article[] = [
         </ol>
 
         <p className="mb-6">
-          Resilience is not a solitary achievement---it's cultivated within webs of relationships, communities, and systems that either support or undermine recovery. While individual effort matters, collective responsibility matters more. Building resilient individuals requires building resilient societies: ones that provide safety, equity, connection, and care for all members---especially those who have suffered most.
+          Resilience is not a solitary achievement---it\'s cultivated within webs of relationships, communities, and systems that either support or undermine recovery. While individual effort matters, collective responsibility matters more. Building resilient individuals requires building resilient societies: ones that provide safety, equity, connection, and care for all members---especially those who have suffered most.
         </p>
       </>
     ),
@@ -1312,6 +1372,26 @@ export const collectiveTraumaArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Historical Trauma', 'Indigenous Health', 'Intergenerational Trauma', 'Cultural Healing'],
+    summary: 'Historical trauma from colonization, genocide, and forced assimilation continues to affect Indigenous communities today through intergenerational transmission. Understanding these ongoing impacts and supporting Indigenous-led healing approaches—including cultural revitalization and truth-telling processes—is essential for genuine reconciliation.',
+    keyFacts: [
+      { text: 'An estimated 150,000 Native children were forcibly removed to U.S. boarding schools designed to erase cultural identity', citationIndex: 4 },
+      { text: 'Native Americans experience PTSD at twice the rate of the general U.S. population', citationIndex: 7 },
+      { text: 'Suicide rates among Native youth aged 15-24 are 3.5 times the national average', citationIndex: 7 },
+      { text: 'Cultural continuity is the single strongest protective factor against suicide in Indigenous youth', citationIndex: 8 },
+      { text: 'Trauma can alter gene expression patterns that are inherited across generations', citationIndex: 2 },
+    ],
+    sparkMoment: 'We are not the first to suffer, but we can be the first who break the cycle. Our healing is an act of resistance against everything that tried to destroy us.',
+    practicalExercise: {
+      title: 'Supporting Indigenous Healing (For Allies)',
+      steps: [
+        { title: 'Learn accurate history', description: 'Educate yourself about Indigenous history beyond sanitized versions. Read Indigenous authors, follow Indigenous activists, and understand whose land you occupy.' },
+        { title: 'Support Indigenous sovereignty', description: 'Advocate for treaty rights, land back movements, self-determination in governance, and adequate funding for Indian Health Service.' },
+        { title: 'Amplify Indigenous voices', description: 'Center Indigenous people in conversations about their own experiences. Share their content, support their organizations, and don\'t speak over them.' },
+        { title: 'Take concrete action', description: 'Donate to Native-led mental health initiatives, support missing Indigenous people efforts, or oppose projects threatening sacred sites.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Culturally Responsive Care',
+    },
     citations: [
       {
         id: '1',
@@ -1382,7 +1462,7 @@ export const collectiveTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In 2021, ground-penetrating radar revealed the remains of 215 children at the site of a former residential school in Kamloops, British Columbia. Then 751 unmarked graves in Saskatchewan. Then 182 in British Columbia. The discoveries---horrifying yet unsurprising to Indigenous communities---brought international attention to what many had been saying for generations: the trauma didn't end when the schools closed.
+            In 2021, ground-penetrating radar revealed the remains of 215 children at the site of a former residential school in Kamloops, British Columbia. Then 751 unmarked graves in Saskatchewan. Then 182 in British Columbia. The discoveries---horrifying yet unsurprising to Indigenous communities---brought international attention to what many had been saying for generations: the trauma didn\'t end when the schools closed.
           </p>
           <p className="mb-6">
             Historical trauma describes the cumulative emotional and psychological wounding across generations resulting from massive group trauma <Citation id="1" index={1} source="Journal of Psychoactive Drugs" year="2019" tier={1} />. For Indigenous peoples of the Americas, Australia, New Zealand, and elsewhere, this includes centuries of genocide, forced removal from ancestral lands, cultural erasure, forced assimilation through residential/boarding schools, and ongoing systemic oppression.
@@ -1420,7 +1500,7 @@ export const collectiveTraumaArticlesA: Article[] = [
                     An estimated 90-95% of Indigenous populations in the Americas died following European contact---from disease (often deliberately spread), warfare, enslavement, and starvation. Entire nations were wiped out. Survivors watched their communities, cultures, and ways of life disappear.
                   </p>
                   <p>
-                    This wasn't ancient history---the California genocide of Native peoples continued into the 1870s. Massacres like Wounded Knee (1890) are within living memory through grandparents' stories.
+                    This wasn\'t ancient history---the California genocide of Native peoples continued into the 1870s. Massacres like Wounded Knee (1890) are within living memory through grandparents' stories.
                   </p>
                 </>
               ),
@@ -1431,7 +1511,7 @@ export const collectiveTraumaArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    The Trail of Tears, reservation systems, relocations---Indigenous peoples were violently separated from lands that held spiritual, cultural, and economic significance. Connection to land is not merely sentimental in Indigenous worldviews; it's foundational to identity and wellness.
+                    The Trail of Tears, reservation systems, relocations---Indigenous peoples were violently separated from lands that held spiritual, cultural, and economic significance. Connection to land is not merely sentimental in Indigenous worldviews; it\'s foundational to identity and wellness.
                   </p>
                   <p>
                     Today, many Indigenous communities remain on reservations characterized by poverty, inadequate infrastructure, and environmental degradation---ongoing consequences of dispossession.
@@ -1637,7 +1717,7 @@ export const collectiveTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway" title="Land Acknowledgments: More Than Words">
           <p>
-            Acknowledging whose land you occupy is a starting point---but it's hollow without action. Land acknowledgments should lead to: learning the history of that land's people, supporting contemporary Indigenous communities connected to that territory, and examining your own relationship to settler colonialism.
+            Acknowledging whose land you occupy is a starting point---but it\'s hollow without action. Land acknowledgments should lead to: learning the history of that land\'s people, supporting contemporary Indigenous communities connected to that territory, and examining your own relationship to settler colonialism.
           </p>
         </ArticleCallout>
 
@@ -1675,6 +1755,26 @@ export const collectiveTraumaArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Meaning-Making', 'Narrative Therapy', 'Purpose', 'Existential Therapy'],
+    summary: 'Finding meaning after trauma involves reconstructing coherent narratives that integrate suffering into one\'s life story and connecting pain to larger purposes. Research shows that meaning-making predicts better mental health outcomes, lower PTSD symptoms, and greater well-being years after trauma.',
+    keyFacts: [
+      { text: 'People who construct coherent trauma narratives experience fewer PTSD symptoms and better adjustment', citationIndex: 7 },
+      { text: 'Expressive writing about trauma for 15-20 minutes over 3-4 days reduces depression and PTSD symptoms', citationIndex: 4 },
+      { text: 'Trauma survivors with high sense of purpose show 50% lower rates of depression and anxiety', citationIndex: 8 },
+      { text: '72% of cancer survivors report finding benefit or meaning from their illness', citationIndex: 5 },
+      { text: 'Meaning-making encompasses three dimensions: comprehensibility, significance, and integration', citationIndex: 1 },
+    ],
+    sparkMoment: 'Finding meaning after trauma is not about making suffering "worth it"—it\'s about refusing to let trauma write the final chapter of your story.',
+    practicalExercise: {
+      title: 'Expressive Writing for Meaning-Making',
+      steps: [
+        { title: 'Set a timer for 15-20 minutes', description: 'Find a quiet space where you won\'t be interrupted. This writing is for you alone—no one else will read it.' },
+        { title: 'Write about your deepest thoughts and feelings', description: 'Explore how the trauma affected you, what it means to you, how it changed you. Don\'t worry about grammar or coherence—just write continuously.' },
+        { title: 'Repeat for 3-4 consecutive days', description: 'Each day, continue exploring. Notice how your understanding shifts and deepens across sessions.' },
+        { title: 'Reflect on themes that emerge', description: 'After completing the writing, look for patterns. What meanings are beginning to take shape? What story are you telling yourself about this experience?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Start Your Meaning-Making Journal',
+    },
     citations: [
       {
         id: '1',
@@ -1745,7 +1845,7 @@ export const collectiveTraumaArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            "Before the accident, I knew who I was. I was a dancer. After I lost my leg, I didn't know anymore. It took years to build a new story about my life---one where losing my leg wasn't the end of my identity but the beginning of something different. Now I teach adaptive dance to children with disabilities. The trauma didn't disappear, but it found a place in my story that makes sense."
+            "Before the accident, I knew who I was. I was a dancer. After I lost my leg, I didn\'t know anymore. It took years to build a new story about my life---one where losing my leg wasn\'t the end of my identity but the beginning of something different. Now I teach adaptive dance to children with disabilities. The trauma didn\'t disappear, but it found a place in my story that makes sense."
           </p>
           <p className="mb-6">
             This is the work of meaning-making: taking experiences that shatter our understanding of ourselves and the world, and reconstructing narratives that integrate trauma while preserving hope, identity, and purpose <Citation id="1" index={1} source="Psychological Trauma: Theory, Research, Practice, and Policy" year="2020" tier={1} />.
@@ -1770,21 +1870,21 @@ export const collectiveTraumaArticlesA: Article[] = [
               feature: 'Comprehensibility',
               values: [
                 'Making sense of why the trauma occurred',
-                "I was assaulted because I happened to be in the wrong place. It wasn't my fault. Random violence exists.",
+                "I was assaulted because I happened to be in the wrong place. It wasn\'t my fault. Random violence exists.",
               ],
             },
             {
               feature: 'Significance',
               values: [
                 'Finding purpose, lessons, or growth within the experience',
-                "This trauma taught me that I'm stronger than I knew. It made me more compassionate toward others who suffer.",
+                "This trauma taught me that I\'m stronger than I knew. It made me more compassionate toward others who suffer.",
               ],
             },
             {
               feature: 'Integration',
               values: [
                 'Incorporating trauma into coherent life narrative',
-                "I am someone who has survived cancer. That's part of my story, but it doesn't define all of who I am.",
+                "I am someone who has survived cancer. That\'s part of my story, but it doesn\'t define all of who I am.",
               ],
             },
           ]}
@@ -1793,7 +1893,7 @@ export const collectiveTraumaArticlesA: Article[] = [
 
         <ArticleCallout variant="clinical-note" title="Meaning Is Personal and Plural">
           <p>
-            There's no "correct" meaning to find in trauma. Different people derive different meanings from similar experiences. Some find spiritual significance, others identify practical lessons, still others simply arrive at acceptance without needing lessons. All are valid paths.
+            There\'s no "correct" meaning to find in trauma. Different people derive different meanings from similar experiences. Some find spiritual significance, others identify practical lessons, still others simply arrive at acceptance without needing lessons. All are valid paths.
           </p>
         </ArticleCallout>
 
@@ -1920,12 +2020,12 @@ export const collectiveTraumaArticlesA: Article[] = [
           quote={`Those who have a "why" to live, can bear with almost any "how."`}
           attribution="Viktor Frankl"
           role="Psychiatrist and Holocaust Survivor"
-          source="Man's Search for Meaning"
+          source="Man\'s Search for Meaning"
           variant="large"
         />
 
         <p className="mb-6">
-          Research supports Frankl's observation: trauma survivors who report high sense of purpose show:
+          Research supports Frankl\'s observation: trauma survivors who report high sense of purpose show:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
@@ -2008,7 +2108,7 @@ export const collectiveTraumaArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Trauma often clarifies what truly matters---leading people to invest more deeply in family, friendships, and community. "I almost died, and it made me realize I'd been taking my loved ones for granted."
+                    Trauma often clarifies what truly matters---leading people to invest more deeply in family, friendships, and community. "I almost died, and it made me realize I\'d been taking my loved ones for granted."
                   </p>
                   <p>
                     <strong>Why it helps:</strong> Connection is healing. Relationships provide ongoing sources of meaning and joy that transcend trauma.
@@ -2022,7 +2122,7 @@ export const collectiveTraumaArticlesA: Article[] = [
               content: (
                 <>
                   <p className="mb-4">
-                    Using trauma as catalyst to pursue deferred dreams, change careers, leave toxic situations, or prioritize what matters most. "Life's too short' becomes not a cliché but lived truth.
+                    Using trauma as catalyst to pursue deferred dreams, change careers, leave toxic situations, or prioritize what matters most. "Life\'s too short' becomes not a cliché but lived truth.
                   </p>
                   <p>
                     <strong>Why it helps:</strong> Creates forward momentum. Shifts focus from what was lost to what can still be created.
@@ -2090,7 +2190,7 @@ export const collectiveTraumaArticlesA: Article[] = [
           Practical Meaning-Making Practices
         </h2>
         <p className="mb-6">
-          If you're working to find meaning after trauma:
+          If you\'re working to find meaning after trauma:
         </p>
 
         <ol className="list-decimal pl-6 mb-6 space-y-2">
@@ -2105,7 +2205,7 @@ export const collectiveTraumaArticlesA: Article[] = [
         </ol>
 
         <p className="mb-6">
-          Finding meaning after trauma is not about making suffering "worth it" or pretending it didn't hurt. It's about refusing to let trauma write the final chapter of your story. It's reclaiming authorship---acknowledging that terrible things happened AND you get to decide what they mean, how they shape you, and what you create from the wreckage. In that authorship lies profound freedom, and in that freedom, healing becomes possible.
+          Finding meaning after trauma is not about making suffering "worth it" or pretending it didn\'t hurt. It\'s about refusing to let trauma write the final chapter of your story. It\'s reclaiming authorship---acknowledging that terrible things happened AND you get to decide what they mean, how they shape you, and what you create from the wreckage. In that authorship lies profound freedom, and in that freedom, healing becomes possible.
         </p>
       </>
     ),

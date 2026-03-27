@@ -15,6 +15,8 @@ import {
   QuoteBlock,
   DiagramBlock,
   RelatedToolsBlock,
+  BeforeAfter,
+  ArticleAccordion,
 } from '../../../components/article/blocks';
 
 export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
@@ -25,7 +27,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     description: 'Explore the research on integrating traditional healing with Western psychotherapy, and what it means for culturally responsive mental health care.',
     image: "/images/articles/cat12/cover-041.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 15,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -43,7 +45,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     content: (
       <>
         <SummaryBox>
-          For centuries, communities worldwide have turned to traditional healers, spiritual practices, and indigenous wisdom for mental wellness---long before Western psychiatry existed. Today, as global mental health expands, a crucial question emerges: can evidence-based psychotherapy and traditional healing coexist, or must one replace the other? Research increasingly shows that integration, not replacement, offers the most culturally responsive and effective path forward. This article explores the science behind blending traditional and modern approaches, what works, what doesn't, and how to honor diverse healing traditions while maintaining clinical rigor and safety.
+          For centuries, communities worldwide have turned to traditional healers, spiritual practices, and indigenous wisdom for mental wellness---long before Western psychiatry existed. Today, as global mental health expands, a crucial question emerges: can evidence-based psychotherapy and traditional healing coexist, or must one replace the other? Research increasingly shows that integration, not replacement, offers the most culturally responsive and effective path forward. This article explores the science behind blending traditional and modern approaches, what works, what doesn\'t, and how to honor diverse healing traditions while maintaining clinical rigor and safety.
         </SummaryBox>
 
         <KeyFacts>
@@ -72,7 +74,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           The numbers tell the story. In countries like Ghana, Nigeria, and Tanzania, between 70-80% of people experiencing mental health crises seek help from traditional healers before---or instead of---visiting a clinic.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesA[0]" /> In rural India, traditional Ayurvedic practitioners vastly outnumber psychiatrists. Among Indigenous communities in North America, Australia, and New Zealand, ceremonial healing and Elder guidance remain central to wellness despite centuries of colonial suppression.
         </p>
         <p>
-          This isn't simply a matter of limited access to Western care. Even when psychiatric services are available, many people actively prefer traditional approaches that align with their worldview, explain suffering through familiar frameworks, and involve family and community in healing. The question isn't whether traditional healing will continue---it will. The question is whether modern mental health systems will partner respectfully with these existing systems or continue to dismiss them as "backward" and "unscientific."
+          This isn\'t simply a matter of limited access to Western care. Even when psychiatric services are available, many people actively prefer traditional approaches that align with their worldview, explain suffering through familiar frameworks, and involve family and community in healing. The question isn\'t whether traditional healing will continue---it will. The question is whether modern mental health systems will partner respectfully with these existing systems or continue to dismiss them as "backward" and "unscientific."
         </p>
 
         <h2>What Science Says About Cultural Adaptation</h2>
@@ -165,13 +167,35 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
 
         <h2>Faith-Based Healing: A Special Case</h2>
         <p>
-          Religious and spiritual interventions occupy a unique space in this integration landscape. Prayer, scripture study, pastoral counseling, and faith community support are widely used for mental health concerns, particularly in Christian, Muslim, Hindu, and Buddhist contexts.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[0]" />
+          Religious and spiritual interventions occupy a unique space in this integration landscape. Prayer, scripture study, pastoral counseling, and faith community support are widely used for mental health concerns, particularly in Christian, Muslim, Hindu, and Buddhist contexts.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[0]" /> For many people, faith isn't separate from mental health---it's the primary lens through which they understand suffering, resilience, and recovery.
         </p>
         <p>
           Research on faith-based interventions shows mixed results. Meta-analyses find that religious coping can improve mental health outcomes for believers, but only when it takes forms like seeking spiritual support, reframing struggles as meaningful, or finding purpose through faith. Negative religious coping---like believing suffering is divine punishment or feeling abandoned by God---predicts worse mental health.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[0]" />
         </p>
         <p>
-          The key for clinicians is not to impose or dismiss spirituality, but to assess its role in each patient's life and support adaptive spiritual coping while addressing harmful beliefs. Some clients benefit from referrals to pastoral counselors who integrate psychological and theological support; others may need help differentiating mental health symptoms from spiritual crises.
+          The key for clinicians is not to impose or dismiss spirituality, but to assess its role in each patient\'s life and support adaptive spiritual coping while addressing harmful beliefs. Some clients benefit from referrals to pastoral counselors who integrate psychological and theological support; others may need help differentiating mental health symptoms from spiritual crises. This requires clinical humility: recognizing that spiritual distress is real, that faith communities offer powerful social support, and that for many patients, healing without addressing their spiritual life feels incomplete.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 83, suffix: '%', label: 'People in sub-Saharan Africa who consult traditional healers first' },
+            { value: 40, suffix: '%', label: 'Stronger effect sizes with culturally adapted therapy' },
+            { value: 60, suffix: '%', label: 'Improved adherence in collaborative care models' },
+          ]}
+          source="WHO & Transcultural Psychiatry, 2020-2021"
+        />
+
+        <h2 id="barriers-to-integration" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Barriers to Integration: What Gets in the Way
+        </h2>
+        <p className="mb-6">
+          Despite growing evidence and policy support, integrating traditional healing with evidence-based care faces significant obstacles. Structural barriers include lack of funding for integration research, absence of formal training programs for collaborative practice, and insurance systems that only reimburse biomedical interventions. Traditional healers often work outside formal healthcare structures, making coordination difficult even when both parties are willing.
+        </p>
+        <p className="mb-6">
+          Epistemic barriers run deeper. Many Western-trained clinicians view traditional healing as superstition or placebo at best, dangerous at worst. This dismissive attitude---rooted in colonial history and medical gatekeeping---prevents genuine partnership. Conversely, some traditional healers mistrust Western medicine due to histories of cultural suppression, forced assimilation, and exploitation of indigenous knowledge without compensation or credit.<Citation id="8" article="traditionalHealingGlobalApproachesArticlesA[0]" />
+        </p>
+        <p className="mb-6">
+          Power dynamics complicate integration efforts. When partnerships form, Western providers typically control resources, make final decisions, and set the terms of collaboration. True integration requires redistributing power: compensating healers equitably, credentialing traditional expertise alongside clinical degrees, and allowing communities to define what "evidence" means rather than imposing narrow biomedical standards. Without addressing these power imbalances, integration risks becoming another form of colonization---appropriating traditional practices while continuing to marginalize traditional practitioners.
         </p>
 
         <h2>The WHO's Vision: Integrative Care for Global Mental Health</h2>
@@ -182,15 +206,15 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           Why the change? Pragmatism and justice. In low- and middle-income countries where the psychiatrist-to-population ratio may be 1:500,000 or worse, traditional healers often outnumber clinical providers by factors of hundreds or thousands. Dismissing these healers as irrelevant means abandoning the vast majority of people in mental health crises. Moreover, decolonizing global health means recognizing that Western psychiatry doesn't hold a monopoly on healing wisdom---other knowledge systems have value that shouldn't be erased in the name of "modernization."<Citation id="8" article="traditionalHealingGlobalApproachesArticlesA[0]" />
         </p>
         <p>
-          WHO's integrative framework emphasizes safety, respect, and evidence. It calls for training traditional healers to recognize conditions requiring immediate medical intervention (like severe depression, psychosis, or suicidality), establishing referral pathways between traditional and clinical systems, conducting rigorous research on traditional practices, and compensating healers fairly when they participate in integrated care networks.
+          WHO\'s integrative framework emphasizes safety, respect, and evidence. It calls for training traditional healers to recognize conditions requiring immediate medical intervention (like severe depression, psychosis, or suicidality), establishing referral pathways between traditional and clinical systems, conducting rigorous research on traditional practices, and compensating healers fairly when they participate in integrated care networks.
         </p>
 
         <h2>What This Means for the Future</h2>
         <p>
-          Integration doesn't mean abandoning evidence-based practice---it means expanding our definition of what counts as evidence and who gets to define healing. It means recognizing that a randomized controlled trial published in a Western journal isn't the only form of valid knowledge, that centuries of traditional practice represent a different kind of evidence, and that communities have the right to choose healing systems that align with their values.
+          Integration doesn\'t mean abandoning evidence-based practice---it means expanding our definition of what counts as evidence and who gets to define healing. It means recognizing that a randomized controlled trial published in a Western journal isn\'t the only form of valid knowledge, that centuries of traditional practice represent a different kind of evidence, and that communities have the right to choose healing systems that align with their values.
         </p>
         <p>
-          For clinicians in Western settings, this work involves cultural humility: approaching traditional practices with genuine curiosity rather than skepticism, understanding that your training doesn't make you an expert on all forms of healing, and creating space for patients to use both systems without fear of judgment. It means asking, "Are you working with any traditional healers or spiritual advisors?" and collaborating rather than competing with those providers.
+          For clinicians in Western settings, this work involves cultural humility: approaching traditional practices with genuine curiosity rather than skepticism, understanding that your training doesn\'t make you an expert on all forms of healing, and creating space for patients to use both systems without fear of judgment. It means asking, "Are you working with any traditional healers or spiritual advisors?" and collaborating rather than competing with those providers.
         </p>
         <p>
           For policymakers, it means funding integration research, creating licensure pathways for traditional healers in integrated settings, ensuring insurance coverage for culturally responsive care, and building healthcare facilities designed for both clinical and ceremonial uses.
@@ -229,7 +253,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
         </ArticleCallout>
 
         <SparkMoment>
-          True integration isn't about Western psychiatry "allowing" traditional healing a seat at the table---it's about building a new table together where all knowledge systems are honored, where healing wisdom flows in multiple directions, and where people can access the care that makes sense for their lives, their cultures, and their spirits. The future of global mental health isn't Western or traditional---it's both, woven together with respect, evidence, and justice.
+          True integration isn\'t about Western psychiatry "allowing" traditional healing a seat at the table---it\'s about building a new table together where all knowledge systems are honored, where healing wisdom flows in multiple directions, and where people can access the care that makes sense for their lives, their cultures, and their spirits. The future of global mental health isn\'t Western or traditional---it\'s both, woven together with respect, evidence, and justice.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -258,7 +282,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     description: 'Understand the roots of mindfulness in Buddhist practice and how its clinical adoption both helps and sometimes distorts the original teachings.',
     image: "/images/articles/cat12/cover-042.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 14,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -274,7 +298,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     content: (
       <>
         <SummaryBox>
-          Mindfulness has become a billion-dollar wellness industry, prescribed for everything from workplace stress to chronic pain to depression. Apps promise peace in ten minutes. Corporate seminars teach "mindful leadership." But stripped from its 2,500-year-old Buddhist roots, modern mindfulness often becomes what critics call "McMindfulness"---a commodified self-help tool divorced from the ethical, communal, and liberatory framework that gave it meaning. This article traces mindfulness from its origins in Buddhist practice to its clinical adoption in programs like MBSR, examines what's gained and lost in translation, and explores what respectful integration might look like.
+          Mindfulness has become a billion-dollar wellness industry, prescribed for everything from workplace stress to chronic pain to depression. Apps promise peace in ten minutes. Corporate seminars teach "mindful leadership." But stripped from its 2,500-year-old Buddhist roots, modern mindfulness often becomes what critics call "McMindfulness"---a commodified self-help tool divorced from the ethical, communal, and liberatory framework that gave it meaning. This article traces mindfulness from its origins in Buddhist practice to its clinical adoption in programs like MBSR, examines what\'s gained and lost in translation, and explores what respectful integration might look like.
         </SummaryBox>
 
         <KeyFacts>
@@ -303,7 +327,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           The purpose wasn't stress reduction or productivity---it was liberation from suffering (dukkha) through understanding impermanence, non-self, and interdependence. Meditation practice aimed to weaken attachment, aversion, and ignorance; to develop compassion for all sentient beings; and ultimately to achieve enlightenment.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesA[1]" /> Mindfulness without ethics could become mere self-absorption. Mindfulness without wisdom could reinforce delusion. The practice was embedded in community (sangha), guided by teachers, and oriented toward collective liberation.
         </p>
         <p>
-          Buddhist mindfulness also came with warnings. Meditation could surface difficult emotions, memories, and existential questions. It required ethical grounding to avoid spiritual bypassing---using practice to avoid rather than address harm. And it demanded humility: recognizing that awareness alone doesn't solve structural oppression, poverty, or injustice.
+          Buddhist mindfulness also came with warnings. Meditation could surface difficult emotions, memories, and existential questions. It required ethical grounding to avoid spiritual bypassing---using practice to avoid rather than address harm. And it demanded humility: recognizing that awareness alone doesn\'t solve structural oppression, poverty, or injustice.
         </p>
 
         <h2>The Birth of Clinical Mindfulness: MBSR and Secularization</h2>
@@ -314,7 +338,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           This secularization was strategic and, in many ways, successful. MBSR made meditation accessible to people who would never set foot in a Buddhist temple, gained acceptance in medical settings skeptical of "Eastern mysticism," and sparked decades of rigorous research. Studies showed that MBSR reduced anxiety, depression, and pain; lowered stress hormones; and improved quality of life for diverse patient populations.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[1]" />
         </p>
         <p>
-          Kabat-Zinn explicitly acknowledged Buddhism as the source and maintained that MBSR's essence aligned with dharma teachings even without religious framing. The program included body scans, sitting meditation, mindful movement (adapted from yoga), and cultivating present-moment awareness---all recognizable to Buddhist practitioners. But it also stripped away the communal sangha, the teacher-student lineage transmission, the ethical precepts, and the ultimate aim of liberation. What remained was a technique: attention training for symptom management.
+          Kabat-Zinn explicitly acknowledged Buddhism as the source and maintained that MBSR\'s essence aligned with dharma teachings even without religious framing. The program included body scans, sitting meditation, mindful movement (adapted from yoga), and cultivating present-moment awareness---all recognizable to Buddhist practitioners. But it also stripped away the communal sangha, the teacher-student lineage transmission, the ethical precepts, and the ultimate aim of liberation. What remained was a technique: attention training for symptom management.
         </p>
 
         <DiagramBlock
@@ -344,7 +368,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           However, research also reveals limitations. Mindfulness interventions work best for people with mild-to-moderate symptoms, show smaller effects for severe mental illness, and have high dropout rates (often 20-30%) suggesting the practice doesn't suit everyone. Adverse effects---increased anxiety, dissociation, traumatic memories surfacing---occur in roughly 10-20% of practitioners, particularly those with trauma histories who practice without adequate support.<Citation id="4" article="traditionalHealingGlobalApproachesArticlesA[1]" />
         </p>
         <p>
-          Most critically, much mindfulness research suffers from poor methodology: inadequate control groups, unblinded participants who know they're receiving the intervention, and publication bias favoring positive results. The real effects are likely smaller and more variable than the hype suggests.
+          Most critically, much mindfulness research suffers from poor methodology: inadequate control groups, unblinded participants who know they\'re receiving the intervention, and publication bias favoring positive results. The real effects are likely smaller and more variable than the hype suggests.
         </p>
 
         <h2>The "McMindfulness" Critique: When Mindfulness Becomes Capitalist Spirituality</h2>
@@ -405,16 +429,29 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           caption="Comparing Buddhist, clinical, and corporate approaches to mindfulness practice"
         />
 
-        <h2>Cultural Appropriation or Skillful Adaptation?</h2>
-        <p>
+        <h2 id="cultural-appropriation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Cultural Appropriation or Skillful Adaptation?
+        </h2>
+        <p className="mb-6">
           When does borrowing from Buddhism become cultural appropriation? Buddhist scholars and practitioners offer varying perspectives. Some appreciate that secularized mindfulness brings meditation to millions who benefit from it and may, through practice, develop interest in deeper Buddhist teachings. Others argue that removing mindfulness from its cultural and ethical context constitutes theft---extracting value from a colonized tradition while erasing its origins.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[1]" />
         </p>
-        <p>
+        <p className="mb-6">
           Key concerns include: lack of acknowledgment (mindfulness materials often omit Buddhist origins); lack of compensation (Buddhist communities receive no benefit from the billion-dollar mindfulness industry); distortion of meaning (presenting mindfulness as a productivity tool contradicts its liberatory intent); and power imbalances (Western researchers and corporations profit while predominantly Asian Buddhist communities are marginalized).<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[1]" />
         </p>
-        <p>
+        <p className="mb-6">
+          The issue becomes particularly stark when predominantly White Western teachers charge premium rates for teachings they learned from Asian monastics who offered them freely. This dynamic mirrors historical patterns where Western institutions extract resources---whether material goods or intellectual property---from colonized cultures, then repackage and sell them back at profit without sharing the wealth with the source communities.
+        </p>
+        <p className="mb-6">
           Respectful integration might involve: explicitly crediting Buddhist sources in all mindfulness materials; ensuring Buddhist teachers and communities benefit from commercial mindfulness ventures; teaching the ethical and philosophical context even in secular settings; and centering Asian and Asian-American Buddhist voices rather than primarily White Western "mindfulness experts" who package practices they learned from others.
         </p>
+
+        <QuoteBlock
+          quote="The Buddha did not teach mindfulness so that we could be more efficient workers or better consumers. He taught it as part of a radical path toward liberation from the causes of suffering—greed, hatred, and delusion—not just for ourselves, but for all beings."
+          attribution="Ron Purser"
+          role="Buddhist Teacher and Scholar"
+          source="McMindfulness: How Mindfulness Became the New Capitalist Spirituality"
+          variant="large"
+        />
 
         <h2>What Mindfulness Could Be: Paths Forward</h2>
         <p>
@@ -424,7 +461,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           Some practitioners advocate for "engaged mindfulness" that combines meditation with social justice action, following the model of Buddhist teachers like Thich Nhat Hanh who integrated contemplative practice with anti-war activism. Others call for greater accessibility---free community classes, mindfulness programs in prisons and marginalized communities, and resistance to the commodification that makes practice a luxury good.
         </p>
         <p>
-          For clinicians, this means assessing whether mindfulness suits each patient's needs and trauma history, providing adequate preparation and support, and being transparent about both benefits and risks. It means understanding that mindfulness isn't culturally neutral---its effectiveness and meaning vary across cultures, and assuming universal applicability replicates colonial dynamics.
+          For clinicians, this means assessing whether mindfulness suits each patient\'s needs and trauma history, providing adequate preparation and support, and being transparent about both benefits and risks. It means understanding that mindfulness isn\'t culturally neutral---its effectiveness and meaning vary across cultures, and assuming universal applicability replicates colonial dynamics.
         </p>
 
         <PracticalExercise
@@ -456,11 +493,11 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="warning" title="When Mindfulness Isn't Appropriate">
-          Mindfulness isn't universally beneficial. It can worsen symptoms for people with active psychosis, severe dissociation, or unprocessed trauma. Concentration practices may trigger panic in those with anxiety disorders. For some with depression, focusing on present-moment awareness highlights unbearable emotional pain without providing relief. Always consult a mental health professional before beginning meditation if you have significant mental health concerns, and seek trauma-informed mindfulness instruction if you have a trauma history.
+          Mindfulness isn\'t universally beneficial. It can worsen symptoms for people with active psychosis, severe dissociation, or unprocessed trauma. Concentration practices may trigger panic in those with anxiety disorders. For some with depression, focusing on present-moment awareness highlights unbearable emotional pain without providing relief. Always consult a mental health professional before beginning meditation if you have significant mental health concerns, and seek trauma-informed mindfulness instruction if you have a trauma history.
         </ArticleCallout>
 
         <SparkMoment>
-          The real power of mindfulness isn't in making you a more productive worker or a calmer consumer---it's in cultivating the awareness to see clearly how systems of suffering operate, the compassion to care about collective liberation, and the courage to act skillfully in service of justice. That was always the Buddhist vision: not escaping the world, but seeing it truly and responding with wisdom. When we reclaim that ethical core, mindfulness becomes not just self-help, but a practice of radical connection and transformation.
+          The real power of mindfulness isn\'t in making you a more productive worker or a calmer consumer---it\'s in cultivating the awareness to see clearly how systems of suffering operate, the compassion to care about collective liberation, and the courage to act skillfully in service of justice. That was always the Buddhist vision: not escaping the world, but seeing it truly and responding with wisdom. When we reclaim that ethical core, mindfulness becomes not just self-help, but a practice of radical connection and transformation.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -489,7 +526,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     description: 'Learn how Ayurvedic principles address mind-body wellness, and whether ancient Indian medicine has a place in contemporary mental health care.',
     image: "/images/articles/cat12/cover-043.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 13,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -504,7 +541,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     content: (
       <>
         <SummaryBox>
-          Ayurveda---Sanskrit for "science of life"---is one of the world's oldest holistic healing systems, originating in India over 3,000 years ago. Unlike Western psychiatry's focus on diagnosing discrete mental disorders, Ayurveda views mental wellness through interconnected lenses of body constitution (doshas), digestive fire (agni), life force (prana), and mind qualities (gunas). As interest in integrative medicine grows, more people are exploring Ayurvedic approaches for anxiety, depression, and stress. But how does this ancient system hold up against modern evidence? And what does culturally respectful integration look like for a practice rooted in Hindu philosophy and Indian cultural context?
+          Ayurveda---Sanskrit for "science of life"---is one of the world\'s oldest holistic healing systems, originating in India over 3,000 years ago. Unlike Western psychiatry\'s focus on diagnosing discrete mental disorders, Ayurveda views mental wellness through interconnected lenses of body constitution (doshas), digestive fire (agni), life force (prana), and mind qualities (gunas). As interest in integrative medicine grows, more people are exploring Ayurvedic approaches for anxiety, depression, and stress. But how does this ancient system hold up against modern evidence? And what does culturally respectful integration look like for a practice rooted in Hindu philosophy and Indian cultural context?
         </SummaryBox>
 
         <KeyFacts>
@@ -627,10 +664,10 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           Ayurveda emerged from Vedic philosophy and Hindu cosmology, viewing health as alignment with natural rhythms and spiritual principles. Extracting techniques like yoga or specific herbs while ignoring this philosophical foundation can distort the practice's meaning and effectiveness.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[2]" />
         </p>
         <p>
-          For example, Ayurvedic diagnosis relies on pulse reading (nadi pariksha), tongue examination, and detailed questioning about digestion, sleep, and lifestyle---not symptom checklists. Treatments are prescribed based on individual constitution, not standardized diagnoses. The concept of "mental health" itself doesn't quite translate; Ayurveda speaks of manasika vikriti (mental disturbances) as inseparable from physical and spiritual imbalance.
+          For example, Ayurvedic diagnosis relies on pulse reading (nadi pariksha), tongue examination, and detailed questioning about digestion, sleep, and lifestyle---not symptom checklists. Treatments are prescribed based on individual constitution, not standardized diagnoses. The concept of "mental health" itself doesn\'t quite translate; Ayurveda speaks of manasika vikriti (mental disturbances) as inseparable from physical and spiritual imbalance.
         </p>
         <p>
-          Respectful integration means learning from qualified Ayurvedic practitioners trained in the traditional gurukula system, acknowledging the Hindu and Indian cultural origins, and resisting the urge to repackage Ayurveda as generic "wellness" stripped of its roots. It also means recognizing when Western medical care is essential---Ayurveda has much to offer for prevention and chronic conditions but isn't equipped to handle acute psychiatric crises.
+          Respectful integration means learning from qualified Ayurvedic practitioners trained in the traditional gurukula system, acknowledging the Hindu and Indian cultural origins, and resisting the urge to repackage Ayurveda as generic "wellness" stripped of its roots. It also means recognizing when Western medical care is essential---Ayurveda has much to offer for prevention and chronic conditions but isn\'t equipped to handle acute psychiatric crises.
         </p>
 
         <h2>Integrative Models: Ayurveda and Psychiatry Working Together</h2>
@@ -644,16 +681,31 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           In Western contexts, integration more often means psychiatrists referring patients to yoga teachers, recommending meditation apps based on Ayurvedic principles, or suggesting specific supplements like ashwagandha as adjuncts to conventional care. This lighter-touch integration avoids some safety risks but also loses the personalized, holistic assessment that defines authentic Ayurvedic practice.
         </p>
 
-        <h2>Ayurveda for Prevention and Wellness</h2>
-        <p>
+        <h2 id="prevention-wellness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Ayurveda for Prevention and Wellness
+        </h2>
+        <p className="mb-6">
           Where Ayurveda truly shines is prevention---dinacharya (daily routine) and ritucharya (seasonal routine) practices that maintain balance before illness develops. Morning routines might include tongue scraping, oil pulling, self-massage with sesame oil, and meditation. Dietary recommendations emphasize eating with the seasons, favoring warm cooked foods, and adjusting spice use based on doshic needs.
         </p>
-        <p>
+        <p className="mb-6">
           These practices align with what we know about mental health resilience: regular sleep-wake cycles support circadian rhythms; mindful eating improves gut health and the gut-brain axis; daily movement and breathwork regulate stress responses. Ayurveda provides a culturally rich framework for these evidence-supported behaviors, packaged in a holistic system rather than atomized "wellness hacks."
         </p>
-        <p>
-          For people of South Asian heritage, Ayurvedic approaches may feel more culturally congruent than Western psychiatric frameworks, providing language and practices that connect to family traditions and spiritual beliefs. This cultural resonance can enhance engagement and reduce the stigma that often surrounds mental health treatment in South Asian communities.
+        <p className="mb-6">
+          The Ayurvedic clock divides the day into six four-hour periods, each governed by a different dosha. Waking during the vata period (2-6am) is said to support clarity and meditation; eating the largest meal during the pitta period (10am-2pm) optimizes digestion; and winding down during the kapha evening period (6-10pm) prepares for restorative sleep. While these specific timings may not suit everyone\'s modern schedule, the underlying principle---aligning daily rhythms with natural cycles---is supported by circadian biology research.
         </p>
+        <p className="mb-6">
+          For people of South Asian heritage, Ayurvedic approaches may feel more culturally congruent than Western psychiatric frameworks, providing language and practices that connect to family traditions and spiritual beliefs. This cultural resonance can enhance engagement and reduce the stigma that often surrounds mental health treatment in South Asian communities. Family elders may feel more comfortable recommending Ayurvedic consultation than therapy, creating a bridge to holistic care that includes mental health support.
+        </p>
+
+        <ProgressSteps
+          variant="vertical"
+          steps={[
+            { title: 'Start with Movement', description: <p className="mb-0">Begin with yoga or pranayama practice---the most evidence-supported Ayurvedic interventions for mental health. Look for trauma-informed instructors who emphasize breathwork and mindfulness, not just physical flexibility.</p> },
+            { title: 'Add Daily Routine', description: <p className="mb-0">Implement one or two dinacharya practices: consistent wake/sleep times, morning tongue scraping, or brief meditation. These low-risk interventions can improve baseline well-being while you explore deeper Ayurvedic principles.</p> },
+            { title: 'Consult a Qualified Practitioner', description: <p className="mb-0">If interested in personalized Ayurvedic care, seek a credentialed vaidya (Ayurvedic physician) trained in traditional programs. Discuss your current psychiatric treatments to ensure coordination and avoid harmful interactions.</p> },
+            { title: 'Integrate, Don\'t Replace', description: <p className="mb-0">Use Ayurveda as a complement to evidence-based mental health care, not a replacement. Continue therapy and medications as prescribed while adding Ayurvedic lifestyle practices. Monitor symptoms closely and report any changes to all your providers.</p> },
+          ]}
+        />
 
         <PracticalExercise
           title="Exploring Ayurvedic Principles for Mental Wellness"
@@ -688,7 +740,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
         </ArticleCallout>
 
         <SparkMoment>
-          Ayurveda reminds us that healing isn't just about eliminating symptoms---it's about aligning with natural rhythms, honoring the body's wisdom, and seeing mental health as inseparable from how we eat, sleep, breathe, and connect to the world around us. When integrated respectfully with modern psychiatric care, this ancient system offers not a replacement for evidence-based treatment, but a richer, more holistic framework for living well---one that has sustained communities for millennia and still has profound relevance today.
+          Ayurveda reminds us that healing isn\'t just about eliminating symptoms---it\'s about aligning with natural rhythms, honoring the body\'s wisdom, and seeing mental health as inseparable from how we eat, sleep, breathe, and connect to the world around us. When integrated respectfully with modern psychiatric care, this ancient system offers not a replacement for evidence-based treatment, but a richer, more holistic framework for living well---one that has sustained communities for millennia and still has profound relevance today.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -717,7 +769,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     description: 'Discover how TCM views mental health through concepts like Qi, Yin-Yang balance, and five elements, and its integration with modern psychiatry.',
     image: "/images/articles/cat12/cover-044.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 13,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -732,7 +784,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     content: (
       <>
         <SummaryBox>
-          Traditional Chinese Medicine (TCM) has treated mental and emotional disturbances for over 2,000 years through a framework radically different from Western psychiatry. Where biomedicine sees neurotransmitter imbalances and discrete diagnostic categories, TCM perceives disturbances in Qi (vital energy), disharmony between Yin and Yang forces, and imbalances in the five elements affecting organ systems that govern emotions. Treatments include acupuncture, herbal formulations, dietary therapy, Qigong movement, and lifestyle adjustments. As TCM gains acceptance in Western integrative medicine, questions emerge: what does the evidence say? How does TCM integrate with psychiatric care? And how do we honor this system's deep cultural roots while making it accessible across cultures?
+          Traditional Chinese Medicine (TCM) has treated mental and emotional disturbances for over 2,000 years through a framework radically different from Western psychiatry. Where biomedicine sees neurotransmitter imbalances and discrete diagnostic categories, TCM perceives disturbances in Qi (vital energy), disharmony between Yin and Yang forces, and imbalances in the five elements affecting organ systems that govern emotions. Treatments include acupuncture, herbal formulations, dietary therapy, Qigong movement, and lifestyle adjustments. As TCM gains acceptance in Western integrative medicine, questions emerge: what does the evidence say? How does TCM integrate with psychiatric care? And how do we honor this system\'s deep cultural roots while making it accessible across cultures?
         </SummaryBox>
 
         <KeyFacts>
@@ -792,7 +844,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           The effects appear to persist at follow-up, suggesting acupuncture isn't just placebo. Neuroimaging studies show acupuncture modulates brain regions involved in mood regulation, including the limbic system, prefrontal cortex, and default mode network. It also reduces inflammatory markers, increases endorphins and serotonin, and improves heart rate variability---all mechanisms relevant to depression.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesA[3]" />
         </p>
         <p>
-          For anxiety and insomnia, the evidence is more mixed but still promising, with many studies showing benefits particularly when acupuncture is combined with herbal medicine or used as an adjunct to psychotherapy. Adverse effects are rare and mild (bruising, temporary soreness), making acupuncture a low-risk option worth considering for people who don't respond to or can't tolerate first-line treatments.
+          For anxiety and insomnia, the evidence is more mixed but still promising, with many studies showing benefits particularly when acupuncture is combined with herbal medicine or used as an adjunct to psychotherapy. Adverse effects are rare and mild (bruising, temporary soreness), making acupuncture a low-risk option worth considering for people who don\'t respond to or can\'t tolerate first-line treatments.
         </p>
 
         <h2>Chinese Herbal Medicine: Formulations, Not Single Compounds</h2>
@@ -803,7 +855,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           Research on these formulations shows promise but faces methodological challenges. It's hard to standardize "depression" when TCM recognizes 10+ different patterns that Western diagnosis lumps together. Studies of specific formulas like Xiao Yao San, Suan Zao Ren Tang (for insomnia), and Gan Mai Da Zao Tang (for emotional instability) show moderate benefits, but quality control varies wildly depending on manufacturer.<Citation id="1" article="traditionalHealingGlobalApproachesArticlesA[3]" />
         </p>
         <p>
-          Safety concerns include herb-drug interactions (especially with psychiatric medications metabolized by liver enzymes), contamination with heavy metals or pharmaceuticals in some imported products, and rare but serious adverse effects from specific herbs. Using TCM herbalism safely requires consultation with qualified practitioners and communication with your psychiatrist about all supplements you're taking.
+          Safety concerns include herb-drug interactions (especially with psychiatric medications metabolized by liver enzymes), contamination with heavy metals or pharmaceuticals in some imported products, and rare but serious adverse effects from specific herbs. Using TCM herbalism safely requires consultation with qualified practitioners and communication with your psychiatrist about all supplements you\'re taking.
         </p>
 
         <h2>Integration in China: A Model of Collaborative Care</h2>
@@ -814,7 +866,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           Research from these integrated facilities suggests that combined treatment may produce better outcomes than either approach alone, with particular benefits for treatment-resistant depression, medication side effects, and relapse prevention.<Citation id="3" article="traditionalHealingGlobalApproachesArticlesA[3]" /> However, methodological limitations and publication bias (studies in Chinese journals may preferentially report positive results) mean these findings should be interpreted cautiously.
         </p>
         <p>
-          The Chinese model also reveals challenges: power imbalances between biomedical and TCM practitioners, pressure to demonstrate TCM efficacy using biomedical research methods that may not fit its paradigm, and ongoing debates about whether integration dilutes TCM's unique theoretical foundations or strengthens it through scientific validation.
+          The Chinese model also reveals challenges: power imbalances between biomedical and TCM practitioners, pressure to demonstrate TCM efficacy using biomedical research methods that may not fit its paradigm, and ongoing debates about whether integration dilutes TCM\'s unique theoretical foundations or strengthens it through scientific validation.
         </p>
 
         <ComparisonTable
@@ -856,16 +908,44 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           caption="Major TCM interventions for mental health: indications, evidence, and practical factors"
         />
 
-        <h2>Cultural Context and Respectful Integration</h2>
-        <p>
-          TCM emerged from Taoist philosophy, Confucian ethics, and thousands of years of Chinese medical practice. Its concepts---Qi, Yin-Yang, meridians---aren't easily translated into Western biomedical language, and attempts to "prove" TCM using reductionist research methods may miss what makes the system work: its holistic, pattern-based, individualized approach.
+        <h2 id="cultural-context" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Cultural Context and Respectful Integration
+        </h2>
+        <p className="mb-6">
+          TCM emerged from Taoist philosophy, Confucian ethics, and thousands of years of Chinese medical practice. Its concepts---Qi, Yin-Yang, meridians---aren\'t easily translated into Western biomedical language, and attempts to "prove" TCM using reductionist research methods may miss what makes the system work: its holistic, pattern-based, individualized approach.
         </p>
-        <p>
+        <p className="mb-6">
           Respectful integration means learning TCM on its own terms, not just extracting techniques. It means training with qualified practitioners who understand both classical texts and modern applications, acknowledging the Chinese cultural origins, and resisting the urge to rebrand TCM as generic "alternative medicine" divorced from its philosophical roots.
         </p>
-        <p>
-          For Western practitioners interested in referring patients to acupuncture or Chinese herbalism, this means seeking providers with credentials from accredited TCM colleges (typically 3-4 year master's programs), communicating openly about all treatments the patient is receiving, and maintaining realistic expectations about what TCM can and can't treat. TCM works best for chronic conditions, prevention, and improving quality of life---not as a sole treatment for severe, acute psychiatric crises.
+        <p className="mb-6">
+          The concept of "translation" itself is fraught---when we translate Qi as "energy," we risk reducing a nuanced concept (simultaneously material and immaterial, neither Western "energy" nor "spirit") to something familiar but inaccurate. When we translate Shen as "mind," we lose its embodiment in the Heart and its connection to consciousness beyond cognition. These translation challenges aren\'t just semantic---they reflect fundamentally different ways of understanding human existence.
         </p>
+        <p className="mb-6">
+          For Western practitioners interested in referring patients to acupuncture or Chinese herbalism, this means seeking providers with credentials from accredited TCM colleges (typically 3-4 year master\'s programs), communicating openly about all treatments the patient is receiving, and maintaining realistic expectations about what TCM can and can\'t treat. TCM works best for chronic conditions, prevention, and improving quality of life---not as a sole treatment for severe, acute psychiatric crises.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Extractive Approach',
+            points: [
+              'Use acupuncture as a "complementary therapy" without understanding meridian theory',
+              'Prescribe standardized herbal formulas based on Western diagnoses alone',
+              'Rebrand TCM practices as "mindfulness" or "wellness" without cultural attribution',
+              'Prioritize proving TCM works using only biomedical research methods',
+              'View TCM as inferior until validated by Western science'
+            ]
+          }}
+          after={{
+            title: 'Respectful Integration',
+            points: [
+              'Learn TCM diagnostic methods (pulse, tongue, pattern differentiation) to understand treatment rationale',
+              'Collaborate with TCM practitioners who individualize formulas based on TCM assessment',
+              'Credit Chinese medicine origins and honor philosophical foundations',
+              'Value TCM\'s clinical wisdom accumulated over millennia as its own form of evidence',
+              'Recognize TCM and Western medicine as complementary systems with different strengths'
+            ]
+          }}
+        />
 
         <h2>TCM for Everyday Wellness: Qigong, Food Therapy, and Prevention</h2>
         <p>
@@ -907,11 +987,11 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="info" title="Finding Qualified TCM Practitioners">
-          Look for practitioners with L.Ac. (Licensed Acupuncturist) or MSTCM/DACM (Master's/Doctorate in TCM) credentials from accredited schools. In the U.S., most states require national board certification (NCCAOM). Avoid practitioners promising cures for serious mental illness or suggesting you discontinue psychiatric medications. Quality herbal products should have third-party testing for purity and contamination.
+          Look for practitioners with L.Ac. (Licensed Acupuncturist) or MSTCM/DACM (Master\'s/Doctorate in TCM) credentials from accredited schools. In the U.S., most states require national board certification (NCCAOM). Avoid practitioners promising cures for serious mental illness or suggesting you discontinue psychiatric medications. Quality herbal products should have third-party testing for purity and contamination.
         </ArticleCallout>
 
         <SparkMoment>
-          TCM teaches that mental health isn't confined to the brain---it flows through meridians, arises from organ systems, responds to seasons and emotions, and reflects the dance of Yin and Yang forces throughout the body. This isn't mysticism---it's a sophisticated system recognizing what modern psychosomatic medicine is only beginning to understand: that mind and body are inseparable, that emotions live in our organs as much as our neurons, and that true healing addresses the whole person in their full context. When TCM and Western psychiatry work together, they offer complementary strengths: one targeting acute symptoms and crisis stabilization, the other restoring deeper patterns and preventing relapse.
+          TCM teaches that mental health isn\'t confined to the brain---it flows through meridians, arises from organ systems, responds to seasons and emotions, and reflects the dance of Yin and Yang forces throughout the body. This isn\'t mysticism---it\'s a sophisticated system recognizing what modern psychosomatic medicine is only beginning to understand: that mind and body are inseparable, that emotions live in our organs as much as our neurons, and that true healing addresses the whole person in their full context. When TCM and Western psychiatry work together, they offer complementary strengths: one targeting acute symptoms and crisis stabilization, the other restoring deeper patterns and preventing relapse.
         </SparkMoment>
 
         <RelatedToolsBlock
@@ -940,7 +1020,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
     description: 'Honor the healing wisdom of Indigenous peoples, from sweat lodges to talking circles, and how these practices address collective trauma.',
     image: "/images/articles/cat12/cover-045.svg",
     category: CATEGORY_CULTURAL_GLOBAL,
-    readTime: 14,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1013,7 +1093,7 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           What makes circles effective? They create space for storytelling and witnessing, which research shows activates healing through shared meaning-making and reducing isolation. They emphasize collective responsibility rather than individual pathology---framing distress as community concern, not personal failure. They incorporate cultural protocols (opening prayers, sacred objects, Elder guidance) that ground healing in spiritual and ancestral connection.<Citation id="2" article="traditionalHealingGlobalApproachesArticlesA[4]" />
         </p>
         <p>
-          Unlike Western therapy's hierarchical expert-patient dynamic, circles are egalitarian. Everyone sits in a circle---no one at the head. A talking piece ensures each person speaks without interruption. Facilitators guide rather than direct. This structure reflects Indigenous values of consensus, respect for all voices, and shared power---values that colonization systematically attacked.
+          Unlike Western therapy\'s hierarchical expert-patient dynamic, circles are egalitarian. Everyone sits in a circle---no one at the head. A talking piece ensures each person speaks without interruption. Facilitators guide rather than direct. This structure reflects Indigenous values of consensus, respect for all voices, and shared power---values that colonization systematically attacked.
         </p>
 
         <h2>Historical Trauma: Why Indigenous Mental Health Crisis Demands Decolonized Care</h2>
@@ -1087,22 +1167,49 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
           As interest in Indigenous healing grows, so does cultural appropriation---non-Indigenous people extracting sacred practices (smudging, vision quests, sweat lodges, medicine wheel teachings) while ignoring the political, spiritual, and cultural context that gives them meaning. This extraction harms Indigenous communities by commodifying sacred knowledge, erasing its origins, and profiting from traditions that colonization tried to destroy.
         </p>
         <p>
-          Respectful appreciation means: supporting Indigenous-led healing programs rather than recreating practices yourself; acknowledging that some ceremonies are not meant for non-Indigenous participation; compensating Indigenous knowledge keepers and Elders; advocating for Indigenous sovereignty and treaty rights; and understanding that learning about Indigenous healing doesn't entitle you to practice or teach it.
+          Respectful appreciation means: supporting Indigenous-led healing programs rather than recreating practices yourself; acknowledging that some ceremonies are not meant for non-Indigenous participation; compensating Indigenous knowledge keepers and Elders; advocating for Indigenous sovereignty and treaty rights; and understanding that learning about Indigenous healing doesn\'t entitle you to practice or teach it.
         </p>
         <p>
-          If you're a mental health provider working with Indigenous clients, your role is to facilitate access to Indigenous healers and Elders, create culturally safe clinical environments, address social determinants and systemic barriers, and collaborate humbly---not to appropriate Indigenous practices or claim expertise in traditions that aren't yours.
+          If you\'re a mental health provider working with Indigenous clients, your role is to facilitate access to Indigenous healers and Elders, create culturally safe clinical environments, address social determinants and systemic barriers, and collaborate humbly---not to appropriate Indigenous practices or claim expertise in traditions that aren\'t yours.
         </p>
 
-        <h2>Indigenous-Led Innovation: The Future of Culturally Grounded Care</h2>
-        <p>
-          The most promising models for Indigenous mental health are those designed, led, and governed by Indigenous communities themselves. Programs like the Aboriginal Healing Foundation in Canada, Maori mental health services in New Zealand, and tribal behavioral health programs in the U.S. demonstrate what's possible when communities control their own healing systems.
+        <h2 id="indigenous-led-innovation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Indigenous-Led Innovation: The Future of Culturally Grounded Care
+        </h2>
+        <p className="mb-6">
+          The most promising models for Indigenous mental health are those designed, led, and governed by Indigenous communities themselves. Programs like the Aboriginal Healing Foundation in Canada, Maori mental health services in New Zealand, and tribal behavioral health programs in the U.S. demonstrate what\'s possible when communities control their own healing systems.
         </p>
-        <p>
+        <p className="mb-6">
           These programs blend traditional healing with evidence-based clinical care on Indigenous terms: Elders and clinicians work as equals, ceremony is offered alongside therapy, services are delivered on tribal lands in culturally appropriate ways, and community wellness---not just individual symptoms---guides priorities. Research shows these Indigenous-led programs achieve better outcomes, higher satisfaction, and stronger community engagement than externally imposed services.
         </p>
-        <p>
+        <p className="mb-6">
+          What makes Indigenous-led services effective goes beyond just "cultural adaptation" of Western models. These programs fundamentally restructure power dynamics, placing Indigenous knowledge and governance at the center rather than the margins. They recognize that healing from colonial trauma requires not just therapeutic techniques, but also cultural reclamation, language revitalization, connection to land, and restoration of Indigenous sovereignty. Mental health becomes inseparable from political and cultural self-determination.
+        </p>
+        <p className="mb-6">
           Globally, WHO now recognizes Indigenous healing knowledge as legitimate and essential for achieving mental health equity, calling for Indigenous governance of services, protection of traditional knowledge, and integration of Indigenous practices into national mental health systems.<Citation id="5" article="traditionalHealingGlobalApproachesArticlesA[4]" /> This represents a historic shift from colonial erasure to respect and partnership---though implementation remains slow and underfunded.
         </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              title: 'Can non-Indigenous people participate in Indigenous healing practices?',
+              content: <p className="mb-0">It depends on the specific practice and community protocols. Some practices are closed (sacred ceremonies reserved for Indigenous people), while others may be open with proper invitation and respect. Never assume access---always ask, respect "no" as an answer, and understand that some knowledge is not meant to be shared outside Indigenous communities. If invited, participate with humility, follow all protocols, compensate knowledge keepers appropriately, and don't appropriate what you learn by teaching or commodifying it.</p>
+            },
+            {
+              title: 'How do I find Indigenous-led mental health services?',
+              content: <p className="mb-0">Contact tribal health departments, urban Indian health centers, or national organizations like the National Indian Health Board (U.S.), Assembly of First Nations (Canada), or similar Indigenous health authorities in other countries. Many regions now have Indigenous mental health programs that blend traditional healing with clinical services. If no Indigenous-specific services are available, seek providers who have completed cultural safety training and demonstrate commitment to decolonizing their practice.</p>
+            },
+            {
+              title: 'What if I\'m Indigenous but disconnected from my cultural traditions?',
+              content: <p className="mb-0">Many Indigenous people face this situation due to adoption, urban relocation, family disconnection, or intergenerational trauma. Cultural reclamation is a valid healing path. Start by learning about your specific nation or community, connecting with cultural centers or Elder programs, attending powwows or community events, and exploring language learning resources. Healing doesn't require perfect cultural knowledge---the journey of reconnection itself can be therapeutic. Many Indigenous mental health programs specifically support people rebuilding cultural connections.</p>
+            },
+            {
+              title: 'Is there scientific evidence that Indigenous healing works?',
+              content: <p className="mb-0">Yes. Research shows healing circles, land-based healing, Elder guidance, and ceremony demonstrate significant mental health benefits. However, this question itself reflects colonial thinking---demanding that Indigenous knowledge "prove" itself using Western research standards. Indigenous healing has its own evidence base: thousands of years of practice, community validation, and lived experience. Respectful research asks how to study Indigenous healing using methods that honor its paradigms, not whether it needs Western approval to be valid.</p>
+            }
+          ]}
+        />
 
         <PracticalExercise
           title="Supporting Indigenous Mental Health and Healing (For Non-Indigenous Readers)"
@@ -1133,11 +1240,11 @@ export const traditionalHealingGlobalApproachesArticlesA: Article[] = [
         />
 
         <ArticleCallout variant="info" title="For Indigenous Readers">
-          If you're Indigenous and seeking mental health support, you have the right to culturally safe care that honors your traditions and identity. Seek Indigenous-led services when possible. If working with non-Indigenous providers, you can request: acknowledgment of historical trauma, collaboration with Elders or traditional healers, flexible session formats, and freedom to integrate cultural practices. Your healing path is yours to define---no one should pressure you to choose between traditional and Western approaches.
+          If you\'re Indigenous and seeking mental health support, you have the right to culturally safe care that honors your traditions and identity. Seek Indigenous-led services when possible. If working with non-Indigenous providers, you can request: acknowledgment of historical trauma, collaboration with Elders or traditional healers, flexible session formats, and freedom to integrate cultural practices. Your healing path is yours to define---no one should pressure you to choose between traditional and Western approaches.
         </ArticleCallout>
 
         <SparkMoment>
-          Indigenous healing reminds us that mental wellness was never meant to be an individual achievement in a therapist's office---it's a communal practice woven into ceremony, story, land, and the sacred relationships that connect all beings. Colonization tried to sever these connections, but Indigenous peoples have never stopped fighting to reclaim their healing traditions. As these practices reemerge and research validates their power, we're witnessing not just cultural preservation, but the resurgence of Indigenous knowledge systems that hold truths Western psychiatry is only beginning to understand: that healing happens in relationship, that trauma is collective as well as individual, and that the health of people and the health of land are inseparable.
+          Indigenous healing reminds us that mental wellness was never meant to be an individual achievement in a therapist\'s office---it\'s a communal practice woven into ceremony, story, land, and the sacred relationships that connect all beings. Colonization tried to sever these connections, but Indigenous peoples have never stopped fighting to reclaim their healing traditions. As these practices reemerge and research validates their power, we\'re witnessing not just cultural preservation, but the resurgence of Indigenous knowledge systems that hold truths Western psychiatry is only beginning to understand: that healing happens in relationship, that trauma is collective as well as individual, and that the health of people and the health of land are inseparable.
         </SparkMoment>
 
         <RelatedToolsBlock

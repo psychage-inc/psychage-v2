@@ -27,6 +27,26 @@ export const moodDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Major Depression', 'MDE', 'Depression Treatment', 'Mental Health'],
+    summary: 'A major depressive episode is a period of at least two weeks marked by profound sadness or loss of interest, along with physical and cognitive symptoms that significantly impair daily functioning. Understanding the diagnostic criteria, biological underpinnings, and evidence-based treatments is essential for recognizing when to seek help and what recovery looks like.',
+    keyFacts: [
+      { text: 'Approximately 21% of adults will experience at least one major depressive episode in their lifetime', citationIndex: 2 },
+      { text: '21 million U.S. adults had depression in 2021, with women experiencing it 1.7 times more often than men', citationIndex: 1 },
+      { text: 'Depression involves dysfunction in brain circuits responsible for mood regulation, particularly in the prefrontal cortex, hippocampus, and amygdala', citationIndex: 6 },
+      { text: 'Combined treatment (therapy plus medication) is often more effective than either alone, particularly for severe depression', citationIndex: 8 },
+      { text: 'Depression significantly increases the risk of suicidal thoughts and behaviors, making immediate crisis support essential', citationIndex: 10 },
+    ],
+    sparkMoment: 'Depression is not a character flaw or weakness — it is a medical condition with biological roots that requires treatment, and with the right support, recovery is not just possible but probable.',
+    practicalExercise: {
+      title: 'Daily Mood and Activity Tracking',
+      steps: [
+        { title: 'Track Your Mood', description: 'Each morning and evening, rate your mood on a scale of 1-10 and note any significant events or stressors.' },
+        { title: 'Identify Patterns', description: 'After one week, review your entries to spot patterns — when does your mood dip? What activities or situations correlate with better or worse mood?' },
+        { title: 'Schedule One Pleasant Activity Daily', description: 'Even if you don\'t feel like it, engage in one activity that previously brought you pleasure or a sense of accomplishment, such as a walk, listening to music, or calling a friend.' },
+        { title: 'Reflect on Progress', description: 'At the end of two weeks, review your mood log. Notice any small shifts or moments of relief. Share findings with a therapist or trusted person.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -431,6 +451,26 @@ export const moodDisordersArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Dysthymia', 'Persistent Depressive Disorder', 'Chronic Depression', 'PDD'],
+    summary: 'Persistent depressive disorder is a chronic, low-grade depression lasting at least two years that becomes so integrated into daily life many people believe it is their personality. Understanding the distinction between chronic dysthymia and episodic major depression, recognizing treatment options, and learning to build quality of life despite ongoing symptoms are key to managing this long-term condition.',
+    keyFacts: [
+      { text: 'Persistent depressive disorder affects approximately 1.5% of adults in the United States, with symptoms lasting at least two years', citationIndex: 2 },
+      { text: '50% of people with PDD have early onset (before age 21), often associated with childhood adversity or trauma', citationIndex: 6 },
+      { text: '75% of people with PDD also experience major depressive episodes on top of their baseline depression, a phenomenon called "double depression"', citationIndex: 5 },
+      { text: 'Cognitive Behavioral Analysis System of Psychotherapy (CBASP) is a therapy specifically designed for chronic depression', citationIndex: 8 },
+      { text: 'Many people with PDD go undiagnosed for years because they think chronic low mood is just "who they are" rather than a treatable condition', citationIndex: 7 },
+    ],
+    sparkMoment: 'Chronic depression is not a life sentence — it is a treatable condition, and recovery means not just symptom reduction but rediscovering what it feels like to live without the constant weight of depression.',
+    practicalExercise: {
+      title: 'Building a Routine for Chronic Depression',
+      steps: [
+        { title: 'Create a Morning Anchor', description: 'Establish one non-negotiable morning activity (e.g., 5-minute stretch, glass of water, opening curtains) to provide structure when motivation is low.' },
+        { title: 'Schedule One Social Connection Weekly', description: 'Isolation worsens chronic depression. Commit to one weekly social activity, even if brief — a coffee with a friend, a phone call, or attending a support group.' },
+        { title: 'Track Small Wins', description: 'Each evening, write down one thing you accomplished, no matter how small. Over time, this builds evidence that you are capable despite the depression.' },
+        { title: 'Engage in Behavioral Activation', description: 'Choose one activity that previously brought pleasure or accomplishment. Do it for 15 minutes, even if you don\'t feel like it. Notice any shifts in mood afterward.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try the Mood Journal',
+    },
     citations: [
       {
         id: '1',

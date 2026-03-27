@@ -10,6 +10,8 @@ import {
   ArticleAccordion,
   QuoteBlock,
   ProgressSteps,
+  BeforeAfter,
+  MythVsFactBlock,
 } from '../../../components/article/blocks';
 
 export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
@@ -747,7 +749,7 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     description: 'Understanding anti-anxiety medications, from benzodiazepines to buspirone, including benefits, risks, and when they are appropriate treatment options.',
     image: "/images/articles/cat14/cover-013.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 12,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1086,11 +1088,31 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     description: 'Understanding mood stabilizers including lithium, anticonvulsants, and how these medications help manage bipolar disorder and mood swings.',
     image: "/images/articles/cat14/cover-014.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 11,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mood Stabilizers', 'Lithium', 'Bipolar Disorder', 'Medication'],
+    summary: 'Mood stabilizers are the cornerstone of bipolar disorder treatment, preventing both manic and depressive episodes. Lithium remains the gold standard with proven suicide risk reduction, though it requires careful blood level monitoring. Alternative options include anticonvulsants like valproate (effective for mania but contraindicated in pregnancy) and lamotrigine (particularly good for preventing depressive episodes with fewer side effects).',
+    keyFacts: [
+      { text: 'Lithium prevents manic episodes in 65% of cases and is the only medication proven to reduce suicide risk in bipolar disorder by 50%', citationIndex: 5 },
+      { text: 'Long-term lithium use requires regular blood tests every 3-6 months to monitor kidney and thyroid function', citationIndex: 6 },
+      { text: 'Lamotrigine is unique in being particularly effective for bipolar depression rather than mania, with no weight gain', citationIndex: 4 },
+      { text: 'Valproate causes severe birth defects and should never be used in pregnancy or people who could become pregnant', citationIndex: 10 },
+      { text: '80% of people with bipolar disorder who stop mood stabilizers relapse within 5 years', citationIndex: 2 },
+    ],
+    sparkMoment: 'Mood stabilizers don\'t just treat symptoms — they protect your brain from the structural damage that repeated mood episodes can cause.',
+    practicalExercise: {
+      title: 'Build Your Mood Stability Monitoring System',
+      steps: [
+        { title: 'Track Mood Daily', description: 'Use a simple 1-10 scale to rate mood, energy, and sleep each day. Patterns over weeks reveal early warning signs of mood episodes before they fully develop.' },
+        { title: 'Schedule Lab Monitoring', description: 'Set recurring calendar reminders for required blood tests (every 3 months for lithium levels, kidney function, and thyroid). Missing tests risks serious side effects.' },
+        { title: 'Identify Episode Triggers', description: 'Note life events, sleep changes, or medication changes around mood shifts. Common triggers: sleep disruption, seasonal changes, stopping medication, high stress.' },
+        { title: 'Create a Relapse Prevention Plan', description: 'With your provider, write down: 1) early warning signs of mania/depression, 2) who to call when symptoms appear, 3) medication adjustments if needed, 4) emergency contacts.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1415,6 +1437,45 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           ]}
           source="Bipolar Disorders, 2022"
         />
+
+        <h2 id="choosing-right-stabilizer" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Choosing the Right Mood Stabilizer
+        </h2>
+        <p className="mb-6">
+          The choice of mood stabilizer depends on several factors: whether you experience more mania or depression, your tolerance for side effects, any medical conditions you have, and whether you could become pregnant.
+        </p>
+
+        <MythVsFactBlock
+          myth="Mood stabilizers numb all emotions and make you feel flat"
+          fact="Well-managed mood stabilizers reduce extreme highs and lows while preserving normal emotional range. If you feel emotionally blunted, your dose may need adjustment or a different medication may work better."
+        />
+
+        <MythVsFactBlock
+          myth="You can stop mood stabilizers once you feel stable for a few months"
+          fact="Bipolar disorder requires long-term treatment. Stopping medication — even after years of stability — dramatically increases relapse risk. Work with your doctor before making any changes."
+        />
+
+        <p className="mb-6 mt-6">
+          <strong>Decision framework:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>For classic mania/hypomania</strong>: Lithium or valproate (first-line choices)</li>
+          <li><strong>For bipolar depression</strong>: Lamotrigine or quetiapine</li>
+          <li><strong>For rapid cycling</strong>: Valproate or combination therapy</li>
+          <li><strong>If pregnant/planning pregnancy</strong>: Avoid valproate; consider lamotrigine or low-dose atypical antipsychotics</li>
+          <li><strong>If weight gain is a concern</strong>: Lamotrigine (no weight gain) over valproate or olanzapine</li>
+        </ul>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Mood stabilizers prevent both manic and depressive episodes in bipolar disorder, maintaining a stable mood baseline</li>
+            <li>Lithium is the gold standard, reducing suicide risk by 50% and preventing 65% of manic episodes, but requires regular blood monitoring</li>
+            <li>Valproate works quickly for acute mania but causes severe birth defects and should never be used in pregnancy</li>
+            <li>Lamotrigine is particularly effective for bipolar depression with minimal side effects, including no weight gain</li>
+            <li>Many people need combination therapy when a single mood stabilizer doesn't fully control episodes</li>
+            <li>Stopping mood stabilizers carries an 80% risk of relapse within 5 years — lifelong treatment is typically necessary</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1425,11 +1486,31 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
     description: 'Understanding antipsychotic medications, from schizophrenia treatment to mood stabilization, including typical vs. atypical antipsychotics.',
     image: "/images/articles/cat14/cover-015.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 12,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Antipsychotics', 'Schizophrenia', 'Psychosis', 'Medication'],
+    summary: 'Antipsychotic medications treat schizophrenia, bipolar disorder, severe depression, and other conditions by blocking dopamine receptors in the brain. Atypical (newer) antipsychotics cause fewer movement side effects than typical (older) ones but carry higher risks of weight gain and metabolic problems. Clozapine is the most effective for treatment-resistant schizophrenia but requires intensive blood monitoring for serious side effects.',
+    keyFacts: [
+      { text: '70% of people with schizophrenia show significant improvement with antipsychotic treatment', citationIndex: 1 },
+      { text: 'Atypical antipsychotics cause less movement disorders but significantly increase risk of metabolic syndrome, diabetes, and weight gain', citationIndex: 3 },
+      { text: 'Clozapine is the most effective antipsychotic for treatment-resistant schizophrenia but requires weekly blood tests for dangerous white blood cell drops', citationIndex: 4 },
+      { text: 'Long-acting injectable antipsychotics given every 2-4 weeks dramatically reduce relapse rates by ensuring medication adherence', citationIndex: 6 },
+      { text: 'About 30% of people with schizophrenia have treatment-resistant illness that may benefit from clozapine', citationIndex: 4 },
+    ],
+    sparkMoment: 'Antipsychotics don\'t cure psychosis — but they can restore your ability to distinguish reality from delusion, giving you your life back.',
+    practicalExercise: {
+      title: 'Manage Antipsychotic Side Effects Proactively',
+      steps: [
+        { title: 'Establish Baseline Metrics', description: 'Before starting medication, record your weight, waist circumference, blood pressure, and get fasting glucose and lipid tests. This creates a comparison point for monitoring metabolic effects.' },
+        { title: 'Track Weight Weekly', description: 'Weigh yourself same day/time each week. If you gain more than 5% of body weight in the first month, discuss with your prescriber immediately — early intervention prevents severe weight gain.' },
+        { title: 'Schedule Metabolic Monitoring', description: 'Set calendar reminders for required tests: fasting glucose and lipids at 3 months, then annually. Don\'t skip these — early detection of diabetes or cholesterol problems is critical.' },
+        { title: 'Build Movement Habits', description: 'Start a daily walk routine immediately when beginning antipsychotics. Even 20 minutes daily significantly reduces metabolic side effects and counteracts sedation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Symptoms and Side Effects',
+    },
     citations: [
       {
         id: '1',
@@ -1769,6 +1850,56 @@ export const medicationPharmacologicalTreatmentArticlesA: Article[] = [
           ]}
           source="The Lancet, 2020"
         />
+
+        <h2 id="making-the-decision" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Making the Decision About Antipsychotics
+        </h2>
+        <p className="mb-6">
+          Antipsychotics carry significant side effects, but for conditions like schizophrenia and severe bipolar mania, they're often life-saving. The decision comes down to weighing the severity of symptoms against side effect risks.
+        </p>
+
+        <BeforeAfter
+          before={{ title: 'When Antipsychotics Are Essential', points: [
+            'Active psychosis (hallucinations, delusions) impairing function',
+            'Severe manic episodes with dangerous behavior',
+            'Treatment-resistant depression after multiple medication failures',
+            'Schizophrenia or schizoaffective disorder',
+            'Bipolar disorder not controlled by mood stabilizers alone',
+          ]}}
+          after={{ title: 'When to Question Antipsychotic Use', points: [
+            'Prescribed solely for insomnia (safer alternatives exist)',
+            'Low-dose off-label use for anxiety without trying SSRIs first',
+            'Elderly dementia patients (black box warning for increased death risk)',
+            'Children for behavioral issues without thorough evaluation',
+            'No clear diagnosis or treatment plan',
+          ]}}
+        />
+
+        <p className="mb-6 mt-6">
+          If you're prescribed an antipsychotic, ask: "What specific symptoms is this targeting?" and "What alternatives have we tried?" Understanding the rationale helps you weigh benefits against risks.
+        </p>
+
+        <ArticleCallout variant="action-plan" title="Questions to Ask Your Prescriber">
+          <ul className="list-disc pl-6 space-y-2">
+            <li>"Which antipsychotic are you recommending and why this one specifically?"</li>
+            <li>"What side effects should I watch for in the first few weeks?"</li>
+            <li>"How will we monitor for metabolic side effects?"</li>
+            <li>"What's the plan if this medication doesn't work or side effects are intolerable?"</li>
+            <li>"Are there non-medication options we should combine with this (therapy, support groups)?"</li>
+            <li>"How long will I need to take this medication?"</li>
+          </ul>
+        </ArticleCallout>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Antipsychotics treat schizophrenia, bipolar disorder, and severe depression by blocking dopamine receptors in the brain</li>
+            <li>Atypical antipsychotics cause fewer movement disorders than older typical antipsychotics but increase risk of weight gain and metabolic problems</li>
+            <li>About 70% of people with schizophrenia show significant improvement with antipsychotic treatment</li>
+            <li>Clozapine is the most effective for treatment-resistant schizophrenia but requires weekly blood monitoring for dangerous side effects</li>
+            <li>Long-acting injectable antipsychotics eliminate daily pills and reduce relapse risk by ensuring consistent medication levels</li>
+            <li>Metabolic monitoring (weight, glucose, lipids) is critical when taking atypical antipsychotics to prevent diabetes and cardiovascular disease</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

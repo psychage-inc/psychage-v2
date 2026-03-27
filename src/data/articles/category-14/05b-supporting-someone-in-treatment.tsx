@@ -860,11 +860,32 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     description: "How families can support recovery without enabling, lose themselves in caregiving, or burning out. A balanced approach.",
     image: "/images/articles/cat14/cover-049.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 11,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Family Support', 'Boundaries', 'Recovery', 'Caregiving'],
+    summary: 'Family dynamics significantly impact mental health recovery outcomes. This guide explores expressed emotion research, low-EE communication techniques, four types of boundaries (physical, emotional, financial, time), effective support behaviors, when to seek family therapy, and essential self-care for family caregivers to avoid burnout while supporting recovery.',
+    keyFacts: [
+      { text: 'Families with low expressed emotion (calm, non-critical communication) see 50% lower relapse rates compared to high-EE environments', citationIndex: 2 },
+      { text: 'Family caregivers of people with mental illness have 40-70% rates of depression and anxiety themselves', citationIndex: 4 },
+      { text: 'NAMI Family-to-Family education programs reduce family distress by 40% through structured psychoeducation', citationIndex: 6 },
+      { text: 'High expressed emotion—characterized by criticism, hostility, or emotional over-involvement—predicts higher relapse in schizophrenia, bipolar, and depression', citationIndex: 7 },
+      { text: 'Healthy boundaries in caregiving are about sustainable love, not building walls or abandoning someone', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your family\'s role in recovery is important—but it\'s not to sacrifice yourself on the altar of their healing.',
+    practicalExercise: {
+      title: 'Design Your Boundary System',
+      steps: [
+        { title: 'Identify One Unsustainable Pattern', description: 'What are you currently doing that you cannot maintain long-term? Examples: being available 24/7, giving money you can\'t afford, canceling your own plans repeatedly.' },
+        { title: 'Define the New Boundary', description: 'What specific limit will you set? Be concrete: "I\'m available 9 AM-9 PM except for emergencies" or "I can contribute $200/month max toward treatment costs."' },
+        { title: 'Communicate Clearly', description: 'Tell your loved one: "I love you and want to support you. Going forward, [boundary]. This helps me sustain my support long-term."' },
+        { title: 'Prepare for Pushback', description: 'They may test the boundary, guilt-trip you, or react with anger. Write down your response in advance: "I understand you\'re upset. This boundary stands."' },
+        { title: 'Get Accountability', description: 'Tell one trusted person about your boundary. Check in with them weekly: "How am I doing at maintaining this?" Boundaries slip without accountability.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Family Therapy',
+    },
     citations: [
       {
         id: '1',
@@ -1154,19 +1175,31 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           Non-Negotiable Self-Care for Family Members
         </h2>
         <p className="mb-6">
-          Family caregivers have 40-70% rates of depression and anxiety <Citation id="4" index={4} source="Psychological Medicine" year="2023" tier={1} />. Self-care isn't optional---it's essential:
+          Family caregivers have 40-70% rates of depression and anxiety <Citation id="4" index={4} source="Psychological Medicine" year="2023" tier={1} />. Self-care isn't optional—it's essential. If you burn out, you help no one:
         </p>
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Get your own therapy or join a support group</strong>: You need a space to process your own emotions, grief, and stress <Citation id="9" index={9} source="JAMA Psychiatry" year="2023" tier={1} /></li>
-          <li><strong>Maintain your own life</strong>: Friendships, hobbies, work, interests---don't let caregiving consume your entire identity</li>
-          <li><strong>Share caregiving responsibilities</strong>: Don't be the sole support person. Build a team of family, friends, and professionals.</li>
-          <li><strong>Take regular breaks</strong>: Respite care, even short breaks, significantly reduces burnout</li>
-          <li><strong>Set and enforce boundaries</strong>: Even when it feels selfish, even when they're in crisis</li>
-          <li><strong>Let go of guilt</strong>: You didn't cause their illness, you can't cure it, and you can't control it. You can only do your best.</li>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Get your own therapy or join a support group</strong>: You need a space to process your own emotions, grief, resentment, and stress. Research shows self-care interventions for family caregivers significantly reduce depression and anxiety <Citation id="9" index={9} source="JAMA Psychiatry" year="2023" tier={1} />. NAMI Family Support Groups connect you with others who understand this specific experience.
+          </li>
+          <li>
+            <strong>Maintain your own life</strong>: Friendships, hobbies, work, interests—don't let caregiving consume your entire identity. You were a person before this crisis, and you need to remain one during and after it.
+          </li>
+          <li>
+            <strong>Share caregiving responsibilities</strong>: Don't be the sole support person. Build a team of family, friends, and professionals. Distribute tasks: "Can you drive them to therapy on Tuesdays?" "Can you check in via text on weekends?"
+          </li>
+          <li>
+            <strong>Take regular breaks</strong>: Respite care—whether a weekend away or just a few hours to yourself—significantly reduces burnout. Schedule it in advance. Don't wait until you're desperate.
+          </li>
+          <li>
+            <strong>Set and enforce boundaries</strong>: Even when it feels selfish. Even when they're in crisis. A boundary that protects your sustainability is not selfish—it's wise.
+          </li>
+          <li>
+            <strong>Let go of guilt</strong>: You didn't cause their illness, you can't cure it, and you can't control it. You can only do your best. "Good enough" caregiving that's sustainable beats "perfect" caregiving that leads to burnout.
+          </li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p>Your family's role in recovery is important---but it's not to sacrifice yourself on the altar of their healing. The most sustainable support comes from families who are educated, boundaried, compassionate, and taking care of their own well-being. You can love someone without losing yourself in the process.</p>
+        <ArticleCallout variant="key-takeaway" title="The Bottom Line">
+          <p>Your family's role in recovery is important—but it's not to sacrifice yourself on the altar of their healing. The most sustainable support comes from families who are educated, boundaried, compassionate, and taking care of their own well-being. You can love someone deeply without losing yourself in the process. In fact, maintaining your own health makes you a better support person long-term.</p>
         </ArticleCallout>
       </>
     ),
@@ -1178,11 +1211,32 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
     description: 'How to build, maintain, and benefit from a diverse support network for mental health---because community is part of healing.',
     image: "/images/articles/cat14/cover-050.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 10,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Support Network', 'Community', 'Social Support', 'Recovery'],
+    summary: 'Social support is one of the strongest predictors of mental health recovery—not optional, but essential. This comprehensive guide explores why support networks matter, five types of support (professional, peer, family, friendship, online), how to build connections when already depleted, maintaining reciprocity, and where to find your people through groups, communities, and structured programs.',
+    keyFacts: [
+      { text: 'People with strong social support experience 50% faster recovery from depression and 40% lower relapse rates in bipolar and schizophrenia', citationIndex: 5 },
+      { text: 'Peer support—connection with others who have lived experience—uniquely offers "someone who truly gets it" without clinical framing', citationIndex: 3 },
+      { text: 'Online support communities provide 24/7 availability and can be lifesaving for isolated individuals when used as complement to in-person connections', citationIndex: 4 },
+      { text: 'Diverse support networks (peers, professionals, friends, family) prevent burnout and over-reliance better than single-source support', citationIndex: 9 },
+      { text: 'Loneliness isn\'t about quantity of connections but quality and authenticity—you can have a full contact list and still feel profoundly isolated', citationIndex: 7 },
+    ],
+    sparkMoment: 'You don\'t need dozens of people—you need a few solid connections who show up, believe you, and remind you that you\'re not navigating this alone.',
+    practicalExercise: {
+      title: 'Build Your Connection Plan',
+      steps: [
+        { title: 'Join One Structured Group', description: 'Find one support group (NAMI Connection, DBSA, online community) and commit to attending 3 times. Structured settings reduce social pressure while providing connection.' },
+        { title: 'Reach Out to One Known Person', description: 'Text one person you already know: "I\'ve been going through a tough time and realized I need more connection. Want to grab coffee?" Vulnerability invites intimacy.' },
+        { title: 'Show Up to One Recurring Activity', description: 'Pick a class, volunteer opportunity, or hobby group. Attend weekly for a month. Repeated exposure builds familiarity and eventual connection.' },
+        { title: 'Practice Micro-Disclosure', description: 'Next time someone asks "How are you?" try: "I\'ve been dealing with some health stuff" instead of "Fine." Small honesty filters for empathetic people.' },
+        { title: 'Map Your Current Network', description: 'List everyone in your life. Mark: who knows you\'re struggling? Who could you reach out to? Who drains vs. energizes you? Identify gaps and opportunities.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Support Groups',
+    },
     citations: [
       {
         id: '1',
@@ -1441,21 +1495,46 @@ export const supportingSomeoneInTreatmentArticlesB: Article[] = [
           The solution: deepen one connection. Pick the safest person and increase vulnerability incrementally. Loneliness isn't about quantity---it's about quality and authenticity <Citation id="7" index={7} source="JAMA Psychiatry" year="2023" tier={1} />.
         </p>
 
+        <h2 id="overcoming-barriers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Overcoming Common Barriers to Connection
+        </h2>
+        <p className="mb-6">
+          When you're struggling, building connections feels impossible. Here's how to navigate common obstacles:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>"I don't have energy to socialize"</strong>: Start smaller. A 10-minute phone call. A text exchange. One group meeting where you don't talk much. Connection doesn't require performing happiness—it requires showing up.
+          </li>
+          <li>
+            <strong>"I'm too much of a burden"</strong>: This is depression lying to you. Research shows people generally want to help and feel closer to those who are vulnerable with them. The right people won't see you as a burden.
+          </li>
+          <li>
+            <strong>"I've isolated for so long, it's awkward now"</strong>: Acknowledge it: "I've been dealing with some stuff and kind of disappeared. I'm working on reconnecting." Most people respect honesty and will meet you where you are.
+          </li>
+          <li>
+            <strong>"People don't understand what I'm going through"</strong>: That's why peer support matters. Find people with lived experience of your specific condition—they get it in ways others can't.
+          </li>
+          <li>
+            <strong>"I'm afraid of being judged"</strong>: Start with low-stakes connections. Support groups where everyone is there for similar reasons. Online communities with anonymity. Test the waters before diving deep.
+          </li>
+        </ul>
+
         <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Where to Find Your People
         </h2>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>NAMI Connection</strong>: Free peer-led recovery support groups nationwide (namius.org)</li>
+          <li><strong>NAMI Connection</strong>: Free peer-led recovery support groups nationwide (nami.org/support)</li>
           <li><strong>DBSA (Depression and Bipolar Support Alliance)</strong>: In-person and online support groups (dbsalliance.org)</li>
-          <li><strong>Al-Anon / SMART Recovery</strong>: For families of people with addiction or for people in recovery</li>
-          <li><strong>7 Cups / TalkLife</strong>: Online peer support platforms with trained listeners</li>
-          <li><strong>Meetup.com</strong>: Find local groups around hobbies, not just mental health</li>
-          <li><strong>Reddit communities</strong>: r/depression, r/bipolar, r/anxiety, r/CPTSD (moderated spaces)</li>
-          <li><strong>Local community mental health centers</strong>: Often run free support groups</li>
+          <li><strong>Al-Anon / SMART Recovery</strong>: For families of people with addiction or for people in recovery themselves</li>
+          <li><strong>7 Cups / TalkLife</strong>: Online peer support platforms with trained volunteer listeners</li>
+          <li><strong>Meetup.com</strong>: Find local groups around hobbies and interests, not just mental health</li>
+          <li><strong>Reddit communities</strong>: r/depression, r/bipolar, r/anxiety, r/CPTSD (moderated spaces with peer support)</li>
+          <li><strong>Local community mental health centers</strong>: Often run free support groups for specific conditions</li>
+          <li><strong>Warmline services</strong>: Non-crisis phone lines staffed by people with lived experience (search "[your state] mental health warmline")</li>
         </ul>
 
-        <ArticleCallout variant="key-takeaway">
-          <p>You don't need dozens of people---you need a few solid connections who show up, believe you, and remind you that you're not navigating this alone. Building that network takes courage when you feel most isolated, but it's one of the most powerful things you can do for your recovery. Start with one person. One group. One conversation. You deserve community.</p>
+        <ArticleCallout variant="key-takeaway" title="Start Small, Build Gradually">
+          <p>You don't need dozens of people—you need a few solid connections who show up, believe you, and remind you that you're not navigating this alone. Building that network takes courage when you feel most isolated, but it's one of the most powerful things you can do for your recovery. Start with one person. One group. One conversation. You deserve community, and community accelerates healing.</p>
         </ArticleCallout>
       </>
     ),

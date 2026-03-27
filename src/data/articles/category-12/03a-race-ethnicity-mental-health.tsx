@@ -28,6 +28,26 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Racial Trauma', 'Racism', 'PTSD', 'Mental Health Disparities', 'Healing'],
+    summary: 'Racial trauma is the psychological harm caused by experiences of racism, from microaggressions to violent attacks. It produces PTSD-like symptoms including hypervigilance, intrusive thoughts, and emotional numbness. This article explores how racism impacts mental health, why it often goes unrecognized, and pathways to healing through culturally responsive care and community support.',
+    keyFacts: [
+      { text: 'Black Americans exposed to racial discrimination have 2.3 times higher risk of PTSD symptoms', citationIndex: 3 },
+      { text: 'Daily racial microaggressions increase psychological distress by 50% for people of color', citationIndex: 1 },
+      { text: 'Chronic racism exposure causes "weathering"—premature physiological aging through elevated cortisol and inflammatory markers', citationIndex: 6 },
+      { text: '60% of people of color report vicarious trauma from witnessing racist violence', citationIndex: 1 },
+      { text: 'Culturally responsive therapy produces significantly better outcomes than generic treatment for racial trauma', citationIndex: 8 },
+    ],
+    sparkMoment: 'Racism isn\'t just unfair—it causes measurable, serious harm to mental health that deserves validation, recognition, and culturally informed treatment.',
+    practicalExercise: {
+      title: 'Processing Racial Trauma Through Journaling',
+      steps: [
+        { title: 'Name the Experience', description: 'Write about a recent racist incident without minimizing it. Describe what happened, how it felt, and what it made you believe about yourself or the world.' },
+        { title: 'Validate the Harm', description: 'Write "What happened was real, wrong, and harmful" at the top of the page. Repeat this affirmation to counter gaslighting and self-doubt.' },
+        { title: 'Externalize the Cause', description: 'Write "This harm is not about my worth—it\'s about racism" to separate the trauma from your identity and place responsibility where it belongs.' },
+        { title: 'Identify Support', description: 'List three people or communities who understand your experience and can offer validation. Reach out to one of them within 24 hours.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Use the Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -254,7 +274,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Engage in Collective Action',
               description: (
                 <p>
-                  Many survivors find that participating in racial justice work---organizing, protesting, educating---helps transform pain into purpose. This doesn't mean you must become an activist, but engaging in meaningful action can restore a sense of agency.
+                  Many survivors find that participating in racial justice work---organizing, protesting, educating---helps transform pain into purpose. This doesn\'t mean you must become an activist, but engaging in meaningful action can restore a sense of agency.
                 </p>
               ),
             },
@@ -262,7 +282,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Practice Restorative Self-Care',
               description: (
                 <p>
-                  Prioritize rest, joy, and activities that reconnect you to cultural heritage and identity. Engage in practices that honor your body's need to recover from hypervigilance---somatic therapies, yoga, breathwork, and time in nature can all support nervous system regulation.
+                  Prioritize rest, joy, and activities that reconnect you to cultural heritage and identity. Engage in practices that honor your body\'s need to recover from hypervigilance---somatic therapies, yoga, breathwork, and time in nature can all support nervous system regulation.
                 </p>
               ),
             },
@@ -312,6 +332,26 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Health Disparities', 'Systemic Racism', 'Access to Care', 'Provider Bias', 'Mental Health Equity'],
+    summary: 'People of color face profound mental health care disparities: they are less likely to receive treatment, more likely to receive lower-quality care, and often encounter provider bias in clinical settings. These gaps stem from structural barriers including insurance inequities, provider shortages, language barriers, cultural incompetence, and justified mistrust of healthcare systems rooted in historical medical racism.',
+    keyFacts: [
+      { text: 'Black adults are 50% less likely to receive mental health treatment than white adults with the same condition', citationIndex: 1 },
+      { text: 'Only 4% of psychologists and 2% of psychiatrists are Black, despite Black Americans comprising 13% of the population', citationIndex: 5 },
+      { text: 'Hispanic/Latino adults are nearly 3 times more likely to be uninsured than white adults, creating financial barriers to care', citationIndex: 8 },
+      { text: 'Black patients are more likely to be misdiagnosed with schizophrenia and receive coercive interventions like involuntary hospitalization', citationIndex: 3 },
+      { text: 'Nearly 20 million Americans have limited English proficiency, yet mental health services in non-English languages are scarce', citationIndex: 7 },
+    ],
+    sparkMoment: 'Mental health disparities are not about individual choices—they are the result of structural barriers embedded in healthcare systems that can and must be dismantled.',
+    practicalExercise: {
+      title: 'Advocating for Your Mental Health Needs',
+      steps: [
+        { title: 'Know Your Rights', description: 'You have the right to culturally competent care, to be treated with respect, and to request a different provider if you feel dismissed or discriminated against.' },
+        { title: 'Prepare Questions', description: 'Before meeting a new provider, write down questions about their experience with your community, their approach to racism, and their cultural competence training.' },
+        { title: 'Document Your Experience', description: 'Keep notes on appointments, including how you felt heard, any dismissive comments, and quality of care. This helps you assess whether to continue or seek a new provider.' },
+        { title: 'Build Your Support Network', description: 'Connect with community organizations, cultural centers, or faith groups that can provide referrals to culturally responsive providers in your area.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find a Provider',
+    },
     citations: [
       {
         id: '1',
@@ -390,7 +430,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
         </div>
 
         <h2 id="the-treatment-gap" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          The Treatment Gap: Who Gets Care and Who Doesn't
+          The Treatment Gap: Who Gets Care and Who Doesn\'t
         </h2>
         <p className="mb-6">
           Despite similar or higher rates of mental health conditions, people of color are significantly less likely to receive mental health services than white Americans <Citation id="1" index={1} source="SAMHSA" year="2021" tier={2} />:
@@ -546,7 +586,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="info" title="Finding Culturally Responsive Care">
           <p>
-            While the system has deep flaws, you deserve care that honors your full identity. Seek providers who share your background, ask about their training in cultural humility, and trust your instincts---if a provider dismisses your experiences of racism or cultural context, it's okay to find someone else.
+            While the system has deep flaws, you deserve care that honors your full identity. Seek providers who share your background, ask about their training in cultural humility, and trust your instincts---if a provider dismisses your experiences of racism or cultural context, it\'s okay to find someone else.
           </p>
         </ArticleCallout>
       </>
@@ -568,6 +608,26 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Microaggressions', 'Racism', 'Mental Health Impact', 'Workplace Bias', 'Coping Strategies'],
+    summary: 'Racial microaggressions—brief, everyday slights that communicate hostile messages based on race—may seem small individually, but their cumulative effect produces chronic stress, depression, anxiety, and even PTSD symptoms. This article explores what microaggressions are, why they cause serious psychological harm despite being "subtle," and evidence-based strategies for coping and responding.',
+    keyFacts: [
+      { text: 'Frequent microaggressions increase depression symptoms by 45% and double the risk of anxiety disorders', citationIndex: 2 },
+      { text: 'Cumulative exposure to racial microaggressions can produce PTSD symptoms similar to major traumatic events', citationIndex: 3 },
+      { text: '63% of people of color report that microaggressions cause significant psychological distress in their daily lives', citationIndex: 4 },
+      { text: 'Women of color experience compounded microaggressions at the intersection of race and gender', citationIndex: 6 },
+      { text: 'The ambiguity of microaggressions creates a "catch-22": staying silent causes emotional burden, but speaking up risks being labeled "too sensitive"', citationIndex: 1 },
+    ],
+    sparkMoment: 'Microaggressions are not "micro" in their impact—they are death by a thousand cuts, and the harm is real, measurable, and deserving of validation.',
+    practicalExercise: {
+      title: 'Microaggression Processing and Boundary-Setting',
+      steps: [
+        { title: 'Validate Your Experience', description: 'Write down what happened and how it made you feel. Trust yourself—if it felt racist, it likely was. You don\'t need external validation to know harm occurred.' },
+        { title: 'Name the Pattern', description: 'Reflect on whether this is an isolated incident or part of a recurring pattern from this person or environment. Recognizing patterns helps you see it\'s not "just you."' },
+        { title: 'Decide Your Response', description: 'Ask yourself: Do I have the energy to respond? Will it be safe? Is this person open to feedback? Remember, you are not obligated to educate every person who harms you.' },
+        { title: 'Process With Community', description: 'Share your experience with a trusted friend, therapist, or affinity group who understands. Carrying these experiences alone increases the harm—validation from others who "get it" is healing.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Journal Your Experience',
+    },
     citations: [
       {
         id: '1',
@@ -630,7 +690,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A coworker touches your hair without asking. Someone asks "where are you really from?" You're followed around a store. A professor assumes you're in the class on an athletic scholarship. Your name is mispronounced---again---and you're told "Can I just call you something easier?"
+            A coworker touches your hair without asking. Someone asks "where are you really from?" You\'re followed around a store. A professor assumes you\'re in the class on an athletic scholarship. Your name is mispronounced---again---and you\'re told "Can I just call you something easier?"
           </p>
           <p className="mb-6">
             These incidents may seem small. The person who said it might claim they "didn't mean anything by it." But these everyday slights---called racial microaggressions---are not harmless <Citation id="1" index={1} source="American Psychologist" year="2007" tier={1} />. When they happen repeatedly, they accumulate into chronic stress that damages mental health in measurable ways.
@@ -661,15 +721,15 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
             {
               feature: 'Microinsults',
               values: [
-                "Subtle snubs that demean a person's racial heritage or identity",
-                `You're so articulate" (implying surprise); "I don't see color"; clutching purse when a Black person enters elevator`,
+                "Subtle snubs that demean a person\'s racial heritage or identity",
+                `You\'re so articulate" (implying surprise); "I don\'t see color"; clutching purse when a Black person enters elevator`,
               ],
             },
             {
               feature: 'Microinvalidations',
               values: [
                 'Communications that negate or nullify the experiences of people of color',
-                `Racism doesn't exist anymore"; "You're being too sensitive"; "I have Black friends, so I can't be racist`,
+                `Racism doesn\'t exist anymore"; "You\'re being too sensitive"; "I have Black friends, so I can\'t be racist`,
               ],
             },
           ]}
@@ -791,7 +851,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Validate Your Experience',
               description: (
                 <p>
-                  Trust yourself. If something felt racist, it likely was---even if the other person didn't intend harm. You don't need external validation to know that what happened was hurtful.
+                  Trust yourself. If something felt racist, it likely was---even if the other person didn\'t intend harm. You don\'t need external validation to know that what happened was hurtful.
                 </p>
               ),
             },
@@ -835,7 +895,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="tip" title="For Allies and Bystanders">
           <p>
-            If you witness a microaggression, intervene if it's safe to do so. Interrupt the comment, redirect the conversation, or check in privately with the target afterward. Don't ask the target to explain or prove the harm---believe them. And do your own learning rather than expecting people of color to educate you.
+            If you witness a microaggression, intervene if it\'s safe to do so. Interrupt the comment, redirect the conversation, or check in privately with the target afterward. Don\'t ask the target to explain or prove the harm---believe them. And do your own learning rather than expecting people of color to educate you.
           </p>
         </ArticleCallout>
 
@@ -856,7 +916,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     id: catId(24),
     slug: 'cultural-competence-therapy-what-to-look-for-provider',
     title: 'Cultural Competence in Therapy: What to Look for in a Provider',
-    description: `Find a therapist who truly understands your cultural background and won't dismiss racism, traditions, or community values as irrelevant to your mental health.`,
+    description: `Find a therapist who truly understands your cultural background and won\'t dismiss racism, traditions, or community values as irrelevant to your mental health.`,
     image: '/images/articles/cat12/cover-024.svg',
     category: CATEGORY_CULTURAL_GLOBAL,
     readTime: 7,
@@ -864,6 +924,26 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cultural Competence', 'Finding a Therapist', 'Culturally Responsive Care', 'Therapy', 'Provider Selection'],
+    summary: 'Cultural competence is the ability of a therapist to recognize, understand, and respectfully respond to the cultural factors that shape your identity and experiences. This article explains what culturally competent care looks like, how to identify red flags of cultural incompetence, and practical steps to find a provider who will validate your experiences of racism and honor your cultural values.',
+    keyFacts: [
+      { text: 'Culturally adapted therapy produces significantly better outcomes than generic, one-size-fits-all treatment approaches', citationIndex: 5 },
+      { text: 'People of color drop out of therapy at higher rates when cultural mismatch occurs with their provider', citationIndex: 6 },
+      { text: 'Racial and ethnic match between therapist and patient predicts better retention and treatment outcomes', citationIndex: 6 },
+      { text: 'Cultural humility—approaching each client as the expert on their own culture—is as important as cultural knowledge', citationIndex: 3 },
+      { text: 'A strong therapeutic alliance rooted in cultural competence directly predicts positive mental health outcomes', citationIndex: 4 },
+    ],
+    sparkMoment: 'You deserve a therapist who doesn\'t erase your identity—who understands that your race, culture, and experiences of racism are integral to your mental health, not separate from it.',
+    practicalExercise: {
+      title: 'Vetting a Potential Therapist for Cultural Competence',
+      steps: [
+        { title: 'Prepare Your Questions', description: 'Before your first session, write down 3-5 questions about their experience with your community, their training in cultural competence, and how they approach discussions of racism.' },
+        { title: 'Assess Their Response', description: 'During the consultation, notice: Do they seem comfortable or defensive? Do they give specific examples or vague generalities? Do they acknowledge systemic racism or minimize it?' },
+        { title: 'Trust Your Gut', description: 'If the therapist dismisses your concerns, says "I don\'t see color," or seems uncomfortable discussing race, trust your instincts—this is not the right provider for you.' },
+        { title: 'Follow Up', description: 'If they pass the initial assessment, give it 2-3 sessions. If you continue to feel misunderstood or invalidated, it\'s okay to move on. You deserve culturally affirming care.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Search for Providers',
+    },
     citations: [
       {
         id: '1',
@@ -926,7 +1006,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You're sitting across from a therapist, trying to explain what it's like to navigate the world in your skin. You mention racism, family expectations rooted in your culture, or spiritual beliefs that shape how you see mental health. The therapist looks uncomfortable, changes the subject, or says, "Let's not focus on race---let's talk about you as an individual."
+            You\'re sitting across from a therapist, trying to explain what it\'s like to navigate the world in your skin. You mention racism, family expectations rooted in your culture, or spiritual beliefs that shape how you see mental health. The therapist looks uncomfortable, changes the subject, or says, "Let\'s not focus on race---let\'s talk about you as an individual."
           </p>
           <p className="mb-6">
             This is a failure of cultural competence <Citation id="1" index={1} source="APA" year="2017" tier={3} />. A culturally competent therapist doesn't erase your identity---they center it. They understand that your race, ethnicity, immigration status, language, and cultural values are not separate from your mental health; they are integral to it.
@@ -1012,19 +1092,19 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ComparisonTable
           title="Cultural Competence Interview Questions"
-          columns={['Question', "What You're Assessing", 'Green Flag Response']}
+          columns={['Question', "What You\'re Assessing", 'Green Flag Response']}
           items={[
             {
               feature: 'Have you worked with clients from my cultural background?',
               values: [
                 'Experience with your specific community',
-                `Honest answer ('yes' with examples, or "no, but I'm committed to learning"); avoids generalizations`,
+                `Honest answer ('yes' with examples, or "no, but I\'m committed to learning"); avoids generalizations`,
               ],
             },
             {
               feature: 'What training have you had in cultural competence?',
               values: [
-                "Whether they've invested in ongoing education",
+                "Whether they\'ve invested in ongoing education",
                 "Names specific courses, workshops, or certifications (not just 'I took a class once in grad school')",
               ],
             },
@@ -1103,7 +1183,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Trust Your Gut',
               description: (
                 <p>
-                  If a therapist feels dismissive, uncomfortable, or defensive when you bring up race and culture, it's okay to move on. You deserve a provider who makes you feel seen, respected, and understood.
+                  If a therapist feels dismissive, uncomfortable, or defensive when you bring up race and culture, it\'s okay to move on. You deserve a provider who makes you feel seen, respected, and understood.
                 </p>
               ),
             },
@@ -1153,6 +1233,26 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Black Mental Health', 'African American Mental Health', 'Racial Trauma', 'Therapy', 'Community Healing'],
+    summary: 'Black Americans experience mental health conditions at rates similar to or higher than the general population, yet they are far less likely to receive treatment due to systemic barriers, provider shortages, cultural mistrust rooted in medical racism, and stigma within communities. This article explores the unique stressors Black Americans face, the historical trauma that shapes justified mistrust, and pathways to culturally affirming mental health support.',
+    keyFacts: [
+      { text: 'Black adults are 50% less likely to receive mental health treatment than white adults, despite similar or higher rates of mental illness', citationIndex: 1 },
+      { text: 'Only 4% of psychologists in the U.S. are Black, creating severe shortages of culturally matched providers', citationIndex: 2 },
+      { text: 'Exposure to police killings of unarmed Black people increases poor mental health days for Black Americans in surrounding areas', citationIndex: 6 },
+      { text: 'The "Strong Black Woman" schema—cultural pressure to be perpetually resilient—is linked to higher rates of depression when emotional pain is suppressed', citationIndex: 5 },
+      { text: 'Black Americans\' mistrust of healthcare is not paranoia—it\'s a rational response to historical abuses like the Tuskegee Syphilis Study', citationIndex: 4 },
+    ],
+    sparkMoment: 'Seeking help is not weakness—it\'s courage, it\'s refusing to carry trauma alone, and it\'s choosing to heal so the next generation doesn\'t have to carry what you did.',
+    practicalExercise: {
+      title: 'Breaking the Silence: Starting Mental Health Conversations',
+      steps: [
+        { title: 'Identify a Trusted Person', description: 'Think of one person in your life—a friend, family member, pastor, or mentor—who you feel safe opening up to about mental health struggles.' },
+        { title: 'Start Small', description: 'You don\'t have to share everything at once. Start with "I\'ve been going through a hard time" or "I\'ve been thinking about talking to someone professionally."' },
+        { title: 'Challenge the Scripts', description: 'When you hear "we don\'t do therapy" or "just pray about it," gently reframe: "Faith and therapy aren\'t opposites. Taking care of my mental health honors the body and mind God gave me."' },
+        { title: 'Seek Community Resources', description: 'Reach out to Black-centered organizations like Therapy for Black Girls, The Loveland Foundation, or your local Black church for referrals and support.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Black Therapists',
+    },
     citations: [
       {
         id: '1',
@@ -1223,7 +1323,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            In many Black families and communities, there's a shared script: "We don't do therapy.", "Prayer is enough.", "You just have to be strong." These messages come from love, from survival, from generations who endured unimaginable trauma without the luxury of professional help. But they also come at a cost.
+            In many Black families and communities, there\'s a shared script: "We don\'t do therapy.", "Prayer is enough.", "You just have to be strong." These messages come from love, from survival, from generations who endured unimaginable trauma without the luxury of professional help. But they also come at a cost.
           </p>
           <p className="mb-6">
             Black Americans experience mental health conditions at rates similar to---or higher than---the general population, yet they are far less likely to receive treatment <Citation id="1" index={1} source="NAMI" year="2022" tier={3} />. This gap isn't about lack of need. It's about a mental health system that has historically failed, harmed, and excluded Black people---and a culture of silence that has made asking for help feel like weakness.
@@ -1307,7 +1407,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
 
         <ArticleCallout variant="key-takeaway">
           <p>
-            Faith and therapy are not opposites. Many Black therapists integrate spirituality into their practice, honoring the role of faith while also providing evidence-based tools. Seeking therapy doesn't mean you lack faith---it means you're taking care of the mind and body that your faith teaches are sacred.
+            Faith and therapy are not opposites. Many Black therapists integrate spirituality into their practice, honoring the role of faith while also providing evidence-based tools. Seeking therapy doesn\'t mean you lack faith---it means you\'re taking care of the mind and body that your faith teaches are sacred.
           </p>
         </ArticleCallout>
 
@@ -1335,7 +1435,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
               title: 'Seek Black Therapists or Culturally Competent Providers',
               description: (
                 <p>
-                  Use directories like Therapy for Black Girls (therapyforblackgirls.com), Therapy for Black Men (therapyforblackmen.org), or Inclusive Therapists (inclusivetherapists.com). If a Black provider isn't available, look for someone trained in racial trauma and cultural humility.
+                  Use directories like Therapy for Black Girls (therapyforblackgirls.com), Therapy for Black Men (therapyforblackmen.org), or Inclusive Therapists (inclusivetherapists.com). If a Black provider isn\'t available, look for someone trained in racial trauma and cultural humility.
                 </p>
               ),
             },
@@ -1378,7 +1478,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          Consider reaching out to a mental health professional if you're experiencing:
+          Consider reaching out to a mental health professional if you\'re experiencing:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Persistent sadness, hopelessness, or numbness</li>
@@ -1399,7 +1499,7 @@ export const raceEthnicityMentalHealthArticlesA: Article[] = [
           You Deserve Healing
         </h2>
         <p className="mb-6">
-          Seeking help is not weakness. It's courage. It's refusing to carry trauma alone. It's choosing to heal so that the next generation doesn't have to carry what you did. Mental health care is not a luxury reserved for others---it's a right that belongs to you, too.
+          Seeking help is not weakness. It\'s courage. It\'s refusing to carry trauma alone. It\'s choosing to heal so that the next generation doesn\'t have to carry what you did. Mental health care is not a luxury reserved for others---it\'s a right that belongs to you, too.
         </p>
       </>
     ),

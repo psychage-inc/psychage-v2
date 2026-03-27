@@ -12,6 +12,8 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  HighlightBox,
+  MythVsFactBlock,
 } from '../../../components/article/blocks';
 
 export const lonelinessAcrossLifespanArticlesB: Article[] = [
@@ -803,7 +805,7 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     description: 'Losing a loved one creates a unique loneliness that persists long after grief fades. Understand bereavement loneliness and how to find connection again.',
     image: "/images/articles/cat15/cover-018.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -855,6 +857,22 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
         source: 'Omega: Journal of Death and Dying',
         year: '2020',
         link: 'https://doi.org/10.1177/0030222818814297',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Disenfranchised grief and loneliness',
+        source: 'Death Studies',
+        year: '2021',
+        link: 'https://doi.org/10.1080/07481187.2019.1699203',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Ambiguous loss in dementia caregiving and widowhood',
+        source: 'The Gerontologist',
+        year: '2018',
+        link: 'https://doi.org/10.1093/geront/gnx112',
         tier: 1,
       },
     ],
@@ -1094,6 +1112,77 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="ambiguous-loss" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Ambiguous Loss: When Someone is Gone But Still Here
+        </h2>
+        <p className="mb-6">
+          Some losses create a unique loneliness called ambiguous loss: the person is physically present but psychologically absent (as in dementia), or psychologically present but physically absent (as in missing persons or estrangement) <Citation id="8" index={8} source="The Gerontologist" year="2018" tier={1} />.
+        </p>
+
+        <HighlightBox variant="quote">
+          <p>
+            <strong>Example:</strong> A spouse with advanced Alzheimer's may no longer recognize you, remember your history, or engage in conversation. You're caring for their body, but the person you knew is gone. This creates profound loneliness—you can't grieve (they're still alive) but you've lost them nonetheless.
+          </p>
+        </HighlightBox>
+
+        <p className="mb-6 mt-6">
+          Ambiguous loss prevents closure and creates chronic uncertainty. You can't fully grieve what's lost because it's not definitively gone. This suspended state intensifies loneliness and complicates healing.
+        </p>
+
+        <h2 id="myths" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Myths About Grief and Loneliness
+        </h2>
+        <p className="mb-6">
+          Misconceptions about grieving create additional pain:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="You should 'let go' and 'move on' from the person who died"
+            fact="Modern grief research shows that maintaining continuing bonds—keeping the deceased person in your life through memories, rituals, and internal connection—supports healthy adjustment rather than preventing it."
+          />
+          <MythVsFactBlock
+            myth="If you're still lonely a year after loss, something is wrong with your grieving"
+            fact="Bereavement loneliness often persists for years, especially after spousal loss. There is no timeline for when loneliness 'should' resolve. Healing happens at your own pace."
+          />
+          <MythVsFactBlock
+            myth="New relationships will 'replace' who you lost and fix the loneliness"
+            fact="No one can replace the specific person you lost. New relationships can provide connection and reduce isolation, but they don't erase the absence. That's okay—both can coexist."
+          />
+        </div>
+
+        <h2 id="what-helps" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Actually Helps Bereavement Loneliness
+        </h2>
+        <p className="mb-6">
+          Evidence-based approaches that reduce isolation after loss:
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Effectiveness of Interventions for Bereavement Loneliness"
+          data={[
+            { label: 'Grief support groups', value: 62 },
+            { label: 'Continuing bonds rituals', value: 48 },
+            { label: 'Reconnecting with old friends', value: 41 },
+            { label: 'Volunteering or helping others', value: 37 },
+            { label: 'Individual grief therapy', value: 34 },
+          ]}
+          source="The Cochrane Database of Systematic Reviews, 2019"
+          description="% reduction in loneliness at 6-month follow-up"
+        />
+
+        <p className="mb-6 mt-6">
+          <strong>Why support groups are most effective:</strong> Being with others who've experienced similar loss validates your experience and provides connection with people who truly understand. You don't have to explain why you're still struggling—they already know.
+        </p>
+
+        <QuoteBlock
+          quote="Grief is not something you complete and move past. It's something you integrate into your life while learning to live alongside the absence. Connection with others who understand makes that integration possible."
+          attribution="Dr. Pauline Boss"
+          role="Professor Emerita, University of Minnesota, Pioneer of Ambiguous Loss Theory"
+          variant="default"
+        />
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -1108,8 +1197,14 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           <li>Substance use has increased as a way to cope</li>
         </ul>
 
-        <ArticleCallout variant="tip">
-          <p>The loneliness after loss doesn't mean you're failing to grieve 'correctly." It's a normal, painful part of continuing to live after someone irreplaceable is gone. Be patient and compassionate with yourself.</p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Bereavement loneliness stems from losing a specific, irreplaceable person—it cannot be solved by "getting out more"</li>
+            <li>Social networks often shrink by 40-50% after spousal loss as couple-based friendships dissolve</li>
+            <li>Maintaining continuing bonds with the deceased supports healthy adjustment rather than preventing healing</li>
+            <li>Grief support groups reduce loneliness more effectively than individual therapy because shared experience validates the pain</li>
+            <li>Ambiguous loss (dementia, estrangement) creates unique loneliness by preventing closure and complicating grief</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -1122,11 +1217,31 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     description: 'Caregiving for a loved one often creates profound isolation. Understand caregiver loneliness and how to find support while providing care.',
     image: "/images/articles/cat15/cover-019.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregivers', 'Caregiver Burden', 'Isolation', 'Family Caregiving'],
+    summary: 'Caregiving creates profound loneliness through time constraints, physical confinement, loss of reciprocal relationships, and social misunderstanding. Despite being constantly surrounded by people, 62% of family caregivers report significant isolation. This guide explores the unique dimensions of caregiver loneliness and evidence-based strategies for maintaining wellbeing while providing care.',
+    keyFacts: [
+      { text: '53 million Americans are family caregivers, with 62% reporting significant loneliness and 2.5x higher risk of depression', citationIndex: 1 },
+      { text: 'Caregiving removes five sources of connection: time/energy, physical freedom, reciprocal relationship, social understanding, and non-caregiver identity', citationIndex: 2 },
+      { text: 'Respite care—temporary relief from caregiving duties—significantly reduces loneliness, depression, and burnout in family caregivers', citationIndex: 6 },
+      { text: 'The COVID-19 pandemic doubled caregiver isolation by eliminating respite care, adult day programs, and healthcare support', citationIndex: 4 },
+      { text: 'Caregiver support groups reduce loneliness more effectively than individual interventions by providing shared understanding and practical strategies', citationIndex: 5 },
+    ],
+    sparkMoment: 'Caring for someone doesn\'t mean you have to do it alone—seeking support isn\'t selfish, it\'s essential for both you and the person you\'re caring for.',
+    practicalExercise: {
+      title: 'Building Your Caregiver Support System',
+      steps: [
+        { title: 'Identify Your Support Gaps', description: 'List what you need most: physical help, emotional support, time off, or someone to talk to who understands. Be specific about unmet needs.' },
+        { title: 'Ask for Specific Help', description: 'Don\'t wait for offers. Ask directly: "Can you sit with Dad on Thursday afternoons so I can get out?" Specific requests are easier to say yes to.' },
+        { title: 'Find a Caregiver Support Group', description: 'Search for disease-specific groups (Alzheimer\'s Association, Parkinson\'s Foundation) or general caregiver support through local hospitals or online communities.' },
+        { title: 'Schedule One Non-Caregiving Activity Weekly', description: 'Protect one weekly commitment that\'s just for you—a class, social time, or hobby. This maintains your identity beyond caregiving.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Caregiver Wellbeing',
+    },
     citations: [
       {
         id: '1',
@@ -1174,6 +1289,22 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
         source: 'The Cochrane Database of Systematic Reviews',
         year: '2020',
         link: 'https://doi.org/10.1002/14651858.CD004396.pub4',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Technology-based interventions for caregiver loneliness',
+        source: 'Journal of Medical Internet Research',
+        year: '2019',
+        link: 'https://doi.org/10.2196/13795',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Caregiver identity and role strain',
+        source: 'The Gerontologist',
+        year: '2018',
+        link: 'https://doi.org/10.1093/geront/gnx032',
         tier: 1,
       },
     ],
@@ -1436,6 +1567,28 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="myths" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Breaking Caregiver Myths
+        </h2>
+        <p className="mb-6">
+          Harmful beliefs about caregiving increase isolation:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="Good caregivers never need a break—asking for help means you're failing"
+            fact="Respite care is essential, not optional. Studies show caregivers who take regular breaks provide better care and experience significantly less burnout and loneliness."
+          />
+          <MythVsFactBlock
+            myth="Only family can provide good care—using outside help is abandoning your loved one"
+            fact="Professional and community support enhances care quality while protecting caregiver wellbeing. Your loved one benefits when you're not exhausted and isolated."
+          />
+        </div>
+
+        <HighlightBox variant="emphasis">
+          <p><strong>Permission statement:</strong> You are not required to sacrifice your entire life, health, and relationships to be a good caregiver. Setting boundaries and seeking support makes you a better caregiver, not a worse one.</p>
+        </HighlightBox>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Support
         </h2>
@@ -1450,8 +1603,14 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           <li>You feel completely burnt out with no relief</li>
         </ul>
 
-        <ArticleCallout variant="tip">
-          <p>Caregiver loneliness is not selfish, ungrateful, or a sign of weakness. It's a natural response to a profoundly demanding role. You deserve support, connection, and relief.</p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>62% of family caregivers report significant loneliness despite being constantly surrounded by people</li>
+            <li>Caregiving removes time, freedom, reciprocal relationships, social understanding, and non-caregiver identity</li>
+            <li>Respite care—temporary relief from caregiving—significantly reduces loneliness, depression, and burnout</li>
+            <li>Caregiver support groups provide shared understanding that general therapy cannot replicate</li>
+            <li>Seeking help is not selfish—it protects both your wellbeing and your ability to provide quality care</li>
+          </ul>
         </ArticleCallout>
       </>
     ),
@@ -1464,11 +1623,31 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
     description: 'LGBTQ+ individuals face unique loneliness driven by discrimination, family rejection, and lack of community. Understand the challenges and pathways to connection.',
     image: "/images/articles/cat15/cover-020.svg",
     category: CATEGORY_LONELINESS_CONNECTION,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['LGBTQ+', 'Minority Stress', 'Social Isolation', 'Belonging'],
+    summary: 'LGBTQ+ individuals experience significantly higher loneliness rates driven by minority stress, discrimination, family rejection, and the ongoing search for belonging in a predominantly heteronormative society. This guide explores the unique dimensions of LGBTQ+ loneliness—including family rejection, internalized stigma, and intersectional marginalization—and provides pathways to affirming community and connection.',
+    keyFacts: [
+      { text: '45% of LGBTQ+ adults and 62% of LGBTQ+ youth report significant loneliness, with 3x higher risk of depression', citationIndex: 1 },
+      { text: 'Family rejection increases loneliness from 28% to 67% among LGBTQ+ individuals and raises suicide attempt rates from 8% to 43%', citationIndex: 3 },
+      { text: 'Minority stress theory explains elevated LGBTQ+ loneliness through external discrimination, concealment, internalized stigma, and expected rejection', citationIndex: 2 },
+      { text: 'Transgender individuals face unique loneliness from gender dysphoria, misgendering, healthcare barriers, and safety concerns', citationIndex: 4 },
+      { text: 'LGBTQ+ community connection significantly reduces loneliness, depression, and suicidality by providing authentic belonging', citationIndex: 5 },
+    ],
+    sparkMoment: 'You are not "too much" or "not enough"—the loneliness you feel is not about you being wrong, it\'s about a world that hasn\'t caught up to seeing you fully yet.',
+    practicalExercise: {
+      title: 'Finding Your LGBTQ+ Community',
+      steps: [
+        { title: 'Locate LGBTQ+ Spaces', description: 'Search for local LGBTQ+ community centers, social groups, sports leagues, or book clubs. If in-person options are limited, explore online communities and virtual support groups.' },
+        { title: 'Start With One Connection', description: 'Attend one LGBTQ+ event or join one online group. Even passive participation (lurking) can reduce isolation initially. Connection builds gradually.' },
+        { title: 'Seek Affirming Environments', description: 'Prioritize spaces where you can be fully yourself—LGBTQ+-affirming workplaces, therapists, healthcare providers, and faith communities (if religious). Authenticity reduces loneliness.' },
+        { title: 'Build Chosen Family', description: 'If biological family is rejecting, intentionally build chosen family—close friends who function as family. These bonds can provide the belonging and support you need.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Journey',
+    },
     citations: [
       {
         id: '1',
@@ -1524,6 +1703,14 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
         source: 'Cultural Diversity and Ethnic Minority Psychology',
         year: '2021',
         link: 'https://doi.org/10.1037/cdp0000424',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Chosen family and social support among LGBTQ+ adults',
+        source: 'Journal of Family Psychology',
+        year: '2020',
+        link: 'https://doi.org/10.1037/fam0000647',
         tier: 1,
       },
     ],
@@ -1836,8 +2023,14 @@ export const lonelinessAcrossLifespanArticlesB: Article[] = [
           <li><strong>SAGE</strong> --- Services and support for LGBTQ+ elders</li>
         </ul>
 
-        <ArticleCallout variant="tip">
-          <p>LGBTQ+ loneliness is not inevitable. With affirming community, chosen family, and spaces where you can be fully yourself, connection and belonging are possible.</p>
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>LGBTQ+ individuals experience 45-62% loneliness rates due to minority stress, discrimination, and marginalization</li>
+            <li>Family rejection dramatically increases loneliness (28% to 67%) and suicide risk (8% to 43%)</li>
+            <li>Minority stress includes external discrimination, identity concealment, internalized stigma, and expected rejection</li>
+            <li>Transgender individuals face unique loneliness from dysphoria, misgendering, healthcare barriers, and safety concerns</li>
+            <li>LGBTQ+ community connection and chosen family significantly reduce loneliness and create authentic belonging</li>
+          </ul>
         </ArticleCallout>
       </>
     ),

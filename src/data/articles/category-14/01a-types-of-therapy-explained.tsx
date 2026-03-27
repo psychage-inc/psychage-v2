@@ -1231,6 +1231,61 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="key-concepts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Key Psychodynamic Concepts
+        </h2>
+        <p className="mb-6">
+          Psychodynamic therapy draws on several core ideas that distinguish it from other therapeutic approaches. Understanding these concepts can help you know what to expect if you pursue this type of treatment.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'concept-transference',
+              title: 'Transference: Patterns from Past Relationships',
+              content: (
+                <div>
+                  <p className="mb-4"><strong>Transference</strong> occurs when you unconsciously project feelings and expectations from past relationships onto your therapist. If your father was critical, you might expect your therapist to judge you harshly---even when they haven't.</p>
+                  <p className="mb-4">Rather than avoiding this, psychodynamic therapists use transference as a window into your relational patterns. By noticing how you react to the therapist, you gain insight into how you relate to others.</p>
+                  <p>The therapeutic relationship becomes a safe laboratory for exploring and changing these patterns.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'concept-defense',
+              title: 'Defense Mechanisms: How We Protect Ourselves',
+              content: (
+                <div>
+                  <p className="mb-4">Defense mechanisms are unconscious strategies your mind uses to protect you from painful feelings. Common defenses include repression (pushing uncomfortable thoughts away), projection (attributing your own feelings to others), and rationalization (creating logical explanations for irrational behavior).</p>
+                  <p>Therapy helps you recognize when you're using defenses and understand what you're defending against, allowing for more authentic emotional experiencing.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'concept-attachment',
+              title: 'Attachment Patterns: Early Templates for Relationships',
+              content: (
+                <div>
+                  <p className="mb-4">How you learned to relate to caregivers in early life creates "internal working models" of relationships. These attachment patterns---secure, anxious, avoidant, or disorganized---shape how you navigate intimacy, trust, and conflict as an adult.</p>
+                  <p>Psychodynamic therapy can help you recognize your attachment style and develop more secure ways of relating, often through the corrective experience of a stable therapeutic relationship.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'concept-unconscious',
+              title: 'The Unconscious: Hidden Drivers of Behavior',
+              content: (
+                <p>Unlike CBT's focus on conscious thoughts, psychodynamic theory proposes that much of what drives behavior happens outside awareness. Slips of the tongue, dreams, recurring patterns---these are clues to unconscious conflicts and wishes. Therapy creates a space where unconscious material can gradually surface and be examined.</p>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Modern psychodynamic therapy looks different from the stereotype of lying on a couch and talking about your mother for decades. Contemporary approaches are more interactive, time-conscious, and evidence-informed while maintaining the depth-oriented focus that defines the tradition. Most people engage in weekly face-to-face sessions for several months to a few years, rather than the intensive psychoanalysis of multiple sessions per week for many years.
+        </p>
+
         <h2 id="evidence-for-effectiveness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence for Effectiveness
         </h2>
@@ -1333,11 +1388,31 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
     description: 'Learn how ACT helps you accept difficult thoughts and feelings while committing to actions aligned with your values, creating a rich and meaningful life.',
     image: "/images/articles/cat14/cover-005.svg",
     category: CATEGORY_THERAPY_NAVIGATION,
-    readTime: 11,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['ACT', 'Acceptance', 'Values-Based Living', 'Mindfulness'],
+    summary: 'Acceptance and Commitment Therapy (ACT) teaches psychological flexibility—the ability to be present with difficult experiences while taking action toward what matters most. Instead of trying to eliminate negative thoughts and feelings, ACT helps you change your relationship with them, so they no longer control your choices and behaviors.',
+    keyFacts: [
+      { text: 'ACT shows effectiveness rates of 65-75% for anxiety and depression, with particular strength in preventing relapse by building lifelong flexibility skills.', citationIndex: 1 },
+      { text: 'Unlike traditional CBT which challenges negative thoughts, ACT teaches you to observe thoughts without fighting them, reducing the struggle that amplifies distress.', citationIndex: 8 },
+      { text: 'Values clarification exercises help people identify what truly matters to them, separate from what they think they "should" want.', citationIndex: 2 },
+      { text: 'ACT is effective across diverse populations and problems, from chronic pain to workplace stress to substance use disorders.', citationIndex: 3 },
+      { text: 'Research shows ACT produces both symptom reduction and increased life satisfaction, addressing not just what\'s wrong but what makes life worth living.', citationIndex: 6 },
+    ],
+    sparkMoment: 'You can\'t control what thoughts show up in your mind, but you can always choose what you do next—and that\'s where your power lies.',
+    practicalExercise: {
+      title: 'Values Compass Exercise',
+      steps: [
+        { title: 'Name Your Life Domains', description: 'List key areas of your life: relationships, work, health, personal growth, community, creativity, spirituality. Pick 3 that feel most important right now.' },
+        { title: 'Identify Your Values', description: 'For each domain, ask: What kind of person do I want to be here? What qualities matter to me? (e.g., "a caring partner," "a lifelong learner," "someone who contributes")' },
+        { title: 'Rate Your Alignment', description: 'On a scale of 1-10, how consistent are your recent actions with each value? Notice gaps without judgment—this is information, not failure.' },
+        { title: 'Choose One Small Action', description: 'Pick one value where there\'s a gap. What\'s one small thing you could do tomorrow that moves you 5% closer to living that value? Commit to it.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mindfulness Tools',
+    },
     citations: [
       {
         id: '1',
@@ -1568,6 +1643,92 @@ export const typesOfTherapyExplainedArticlesA: Article[] = [
             },
           ]}
         />
+
+        <h2 id="act-metaphors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          ACT Metaphors: Learning Through Stories
+        </h2>
+        <p className="mb-6">
+          ACT therapists often use metaphors and experiential exercises rather than logical arguments to illustrate key concepts. These stories bypass intellectual resistance and create "felt sense" understanding.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'metaphor-passengers',
+              title: 'Passengers on the Bus',
+              content: (
+                <div>
+                  <p className="mb-4">Imagine you're driving a bus toward your valued destination. The passengers are your thoughts and feelings --- some supportive, others critical, anxious, or angry.</p>
+                  <p className="mb-4">You can't kick the passengers off the bus. If you stop to argue with them or try to appease them, you're no longer driving toward your values. ACT teaches you to let the passengers be there, acknowledge them, and keep driving.</p>
+                  <p>The question isn't "How do I get rid of these passengers?" but "What direction am I heading, and am I willing to drive with all these passengers on board?"</p>
+                </div>
+              ),
+            },
+            {
+              id: 'metaphor-quicksand',
+              title: 'Struggling in Quicksand',
+              content: (
+                <div>
+                  <p className="mb-4">When you're stuck in quicksand, the natural response is to struggle --- thrash, fight, try desperately to escape. But struggling makes you sink faster. The counterintuitive solution is to spread out, lie back, and float.</p>
+                  <p>Similarly, struggling with difficult thoughts and feelings (trying to eliminate anxiety, suppress sadness, avoid fear) often makes them worse. Acceptance --- like floating in quicksand --- feels wrong but actually helps you move forward.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'metaphor-tug-of-war',
+              title: 'Tug of War with a Monster',
+              content: (
+                <div>
+                  <p className="mb-4">Imagine you're in a tug-of-war with a monster (your anxiety, depression, trauma). Between you and the monster is a pit. You pull hard, the monster pulls back. You're exhausted, but you can't let go or you'll fall into the pit.</p>
+                  <p>ACT's solution: Drop the rope. The monster is still there, but you're no longer in a life-or-death struggle. You're free to walk around the pit and do what matters to you, even with the monster nearby.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'metaphor-thoughts-as-leaves',
+              title: 'Leaves on a Stream',
+              content: (
+                <p>Picture yourself sitting by a stream. Each thought that arises is a leaf floating past on the water. You can observe each leaf without grabbing it or trying to push it away. Some leaves are pleasant, others disturbing---but all float by eventually. You remain on the bank, watching the stream flow.</p>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="act-vs-traditional-cbt" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How ACT Differs from Traditional CBT
+        </h2>
+        <p className="mb-6">
+          While ACT is part of the CBT family, it takes a fundamentally different approach to negative thoughts. Understanding this distinction helps clarify which approach might fit you better.
+        </p>
+
+        <ComparisonTable
+          title="Cognitive Strategies: Traditional CBT vs. ACT"
+          columns={['Approach', 'Traditional CBT', 'ACT']}
+          items={[
+            { feature: 'View of negative thoughts', values: ['Often distorted or irrational', 'Normal part of human experience'] },
+            { feature: 'Primary strategy', values: ['Challenge and change thoughts', 'Change relationship with thoughts'] },
+            { feature: 'When you think "I\'m a failure"', values: ['Examine evidence, develop balanced thought', 'Notice "I\'m having the thought that I\'m a failure"'] },
+            { feature: 'Goal with emotions', values: ['Reduce negative emotions', 'Accept emotions, act on values'] },
+            { feature: 'Emphasis', values: ['Symptom reduction', 'Living meaningfully with symptoms'] },
+          ]}
+          highlightColumn={2}
+        />
+
+        <p className="mb-6 mt-6">
+          This doesn't mean ACT ignores symptom relief --- people often feel better as psychological flexibility increases. But the primary goal is a rich, meaningful life, not the absence of negative experiences. Sometimes pursuing your values means feeling anxious, sad, or uncomfortable --- and ACT teaches you that's okay.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="When to Consider ACT">
+          <p className="mb-4">ACT may be particularly helpful if:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>You've tried challenging negative thoughts but it feels like a losing battle</li>
+            <li>You struggle with experiential avoidance (staying away from situations, emotions, or sensations)</li>
+            <li>You feel stuck or disconnected from what matters to you</li>
+            <li>You have chronic conditions (pain, illness) where "fixing" the problem isn't possible</li>
+            <li>You're drawn to mindfulness and values-based living</li>
+          </ul>
+        </ArticleCallout>
 
         <h2 id="evidence-for-effectiveness" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence for Effectiveness

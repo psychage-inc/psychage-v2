@@ -27,6 +27,26 @@ export const anxietyDisordersArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Separation Anxiety', 'Adult Separation Anxiety', 'Attachment', 'Anxiety'],
+    summary: 'Separation anxiety disorder in adults manifests as excessive fear of being apart from loved ones, interfering with work, relationships, and daily functioning. While often thought of as a childhood condition, research shows 6.6% of adults experience it, with many cases beginning in adulthood. Understanding attachment patterns and pursuing evidence-based treatment can help build healthy independence.',
+    keyFacts: [
+      { text: 'Approximately 6.6% of adults experience separation anxiety disorder at some point in their lives', citationIndex: 3 },
+      { text: '43% of adults with separation anxiety disorder report onset in adulthood, not childhood', citationIndex: 3 },
+      { text: '70% of people with adult separation anxiety also have another anxiety disorder', citationIndex: 3 },
+      { text: 'Cognitive behavioral therapy adapted for separation anxiety is the first-line treatment', citationIndex: 5 },
+      { text: 'The condition is closely linked to attachment theory and insecure attachment patterns formed in early relationships', citationIndex: 4 },
+    ],
+    sparkMoment: 'Secure attachment does not mean constant proximity—it means trusting that the bond will endure even when you are apart.',
+    practicalExercise: {
+      title: 'Building Tolerance for Separation',
+      steps: [
+        { title: 'Identify Your Pattern', description: 'Write down three recent times you felt anxious about separation. What were you afraid would happen?' },
+        { title: 'Challenge the Catastrophe', description: 'For each fear, write the evidence for and against it actually happening. What has happened in the past when you were separated?' },
+        { title: 'Practice Brief Separations', description: 'Start with 30-minute separations from your attachment figure. Gradually increase the duration as your anxiety decreases.' },
+        { title: 'Build Independent Activities', description: 'Choose one activity you enjoy doing alone. Schedule it weekly to develop comfort with solo time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -402,6 +422,26 @@ export const anxietyDisordersArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Selective Mutism', 'Childhood Anxiety', 'Social Anxiety', 'Speech'],
+    summary: 'Selective mutism is a childhood anxiety disorder where children become physiologically unable to speak in specific social situations despite speaking normally at home. Affecting approximately 1 in 140 children, it is strongly linked to social anxiety and requires early behavioral intervention. With proper treatment—especially gradual exposure and parent coaching—most children can overcome selective mutism and develop normal communication skills.',
+    keyFacts: [
+      { text: 'Selective mutism affects approximately 0.7% of children, or 1 in 140', citationIndex: 1 },
+      { text: '90% of children with selective mutism also have social anxiety disorder', citationIndex: 1 },
+      { text: 'The typical age of onset is between 3 and 6 years old', citationIndex: 1 },
+      { text: 'Behavioral therapy, particularly Parent-Child Interaction Therapy for Selective Mutism (PCIT-SM), shows strong effectiveness', citationIndex: 8 },
+      { text: 'Without treatment, selective mutism often persists into adolescence and evolves into social anxiety disorder', citationIndex: 7 },
+    ],
+    sparkMoment: 'Selective mutism is not defiance or choice—it is anxiety so overwhelming that it paralyzes speech. Children desperately want to speak but cannot overcome the fear.',
+    practicalExercise: {
+      title: 'Supporting a Child with Selective Mutism',
+      steps: [
+        { title: 'Create Low-Pressure Opportunities', description: 'Set up situations where your child can communicate without direct pressure to speak. Accept gestures, writing, or whispers initially.' },
+        { title: 'Praise Brave Behaviors', description: 'Notice and praise small acts of courage like making eye contact, nodding, or any verbal sound. Build on these gradually.' },
+        { title: 'Avoid Speaking For Them', description: 'Resist the urge to answer for your child or allow others to do so. Give them time to respond in their own way.' },
+        { title: 'Work with Professionals', description: 'Connect with a therapist trained in selective mutism. School collaboration is essential for progress.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find a Specialist',
+    },
     citations: [
       {
         id: '1',
@@ -628,7 +668,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           How Selective Mutism Is Diagnosed
         </h2>
         <p className="mb-6">
-          Diagnosis involves a comprehensive evaluation by a mental health professional, often in collaboration with the child's school.
+          Diagnosis involves a comprehensive evaluation by a mental health professional, often in collaboration with the child\'s school.
         </p>
         <p className="mb-6">
           The evaluation typically includes:
@@ -783,6 +823,26 @@ export const anxietyDisordersArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anxiety Disorders', 'Comorbidity', 'Neuroscience', 'Research'],
+    summary: 'Anxiety disorders rarely exist in isolation—60 to 80 percent of people with one anxiety disorder meet criteria for another at some point. This overlap occurs because anxiety disorders share common biological mechanisms, including brain circuit dysfunction, neurotransmitter imbalances, and genetic vulnerabilities. Understanding these shared roots has led to transdiagnostic treatments that target common mechanisms across multiple anxiety disorders simultaneously.',
+    keyFacts: [
+      { text: '60 to 80 percent of people with one anxiety disorder also meet criteria for another anxiety disorder', citationIndex: 1 },
+      { text: 'Neuroimaging studies show different anxiety disorders share common patterns: amygdala hyperactivity, prefrontal cortex dysfunction, and altered brain connectivity', citationIndex: 2 },
+      { text: 'Twin studies reveal substantial genetic overlap between anxiety disorders, with 30-50% of risk being heritable', citationIndex: 7 },
+      { text: 'Intolerance of uncertainty and anxiety sensitivity are transdiagnostic factors present across all anxiety disorders', citationIndex: 5 },
+      { text: 'Transdiagnostic treatments like the Unified Protocol target common mechanisms, reducing the need for multiple disorder-specific treatments', citationIndex: 4 },
+    ],
+    sparkMoment: 'Anxiety disorders are not neat categories but overlapping dimensions of human distress, driven by shared vulnerabilities rather than separate conditions.',
+    practicalExercise: {
+      title: 'Recognizing Your Transdiagnostic Patterns',
+      steps: [
+        { title: 'Map Your Anxiety Patterns', description: 'List all the anxiety symptoms you experience, regardless of which disorder they belong to. Look for themes.' },
+        { title: 'Identify Common Triggers', description: 'What situations trigger anxiety across different contexts? Uncertainty? Social evaluation? Physical sensations?' },
+        { title: 'Notice Your Avoidance Patterns', description: 'What do you avoid across different areas of your life? Avoidance is a common mechanism in all anxiety disorders.' },
+        { title: 'Practice Core Skills Across Contexts', description: 'Skills like tolerating uncertainty, facing fears gradually, and challenging catastrophic thoughts work for all anxiety types.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1014,6 +1074,49 @@ export const anxietyDisordersArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Examples of Comorbidity
+        </h2>
+        <p className="mb-6">
+          Understanding how anxiety disorders overlap becomes clearer when you see how they manifest in real life. Here are common patterns:
+        </p>
+
+        <div className="space-y-6 mb-8">
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <h3 className="font-semibold text-lg mb-3">Sarah's Story: GAD + Social Anxiety</h3>
+            <p className="mb-3">
+              Sarah worries constantly about everything --- her job performance, her health, her relationships. But her anxiety intensifies dramatically in social situations. She fears being judged at work meetings and avoids social events. Her GAD provides the constant background worry, while social anxiety adds situational spikes. Both share the core feature: catastrophic thinking about evaluation and outcomes.
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Common mechanism:</strong> Intolerance of uncertainty and fear of negative evaluation
+            </p>
+          </div>
+
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <h3 className="font-semibold text-lg mb-3">Michael's Story: Panic Disorder + Agoraphobia</h3>
+            <p className="mb-3">
+              Michael experienced his first panic attack on a crowded subway. The physical sensations --- racing heart, shortness of breath, dizziness --- were terrifying. He began avoiding subways, then buses, then any situation where escape might be difficult. His panic disorder triggered agoraphobia, but both stem from the same fear: the fear of panic itself (anxiety sensitivity).
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Common mechanism:</strong> Anxiety sensitivity and catastrophic misinterpretation of bodily sensations
+            </p>
+          </div>
+
+          <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-lg">
+            <h3 className="font-semibold text-lg mb-3">Elena's Story: Social Anxiety + Depression</h3>
+            <p className="mb-3">
+              Elena\'s social anxiety led her to isolate herself, turning down invitations and avoiding workplace social events. Over time, the isolation and perceived rejection contributed to depression. She felt hopeless about ever having meaningful connections. Research shows this pattern is extremely common --- chronic anxiety often leads to depression when avoidance limits positive experiences and social support.
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              <strong>Common mechanism:</strong> Behavioral avoidance leading to loss of positive reinforcement and social connection
+            </p>
+          </div>
+        </div>
+
+        <p className="mb-6">
+          These examples illustrate that comorbidity is not coincidence. The same cognitive distortions, behavioral patterns, and neurobiological vulnerabilities drive multiple anxiety presentations simultaneously.
+        </p>
+
         <h2 id="treatment-implications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What This Means for Treatment
         </h2>
@@ -1055,11 +1158,31 @@ export const anxietyDisordersArticlesB: Article[] = [
     description: 'Childhood anxiety is more than typical worries. Learn to recognize the signs, understand the causes, and access effective early intervention strategies.',
     image: "/images/articles/cat13/cover-009.svg",
     category: CATEGORY_MENTAL_HEALTH_CONDITIONS,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Childhood Anxiety', 'Early Intervention', 'Parenting', 'Child Development'],
+    summary: 'Childhood anxiety disorders affect 7 to 10 percent of children, manifesting as excessive worry, avoidance, and physical symptoms that interfere with school and social development. Distinguishing anxiety disorders from normal developmental fears requires assessing duration, intensity, and impairment. Early intervention through cognitive behavioral therapy, especially programs like Coping Cat, can prevent chronic anxiety and long-term consequences including academic underachievement and social isolation.',
+    keyFacts: [
+      { text: 'Approximately 7 to 10 percent of children and adolescents have an anxiety disorder', citationIndex: 1 },
+      { text: '50% of all mental health conditions start by age 14, highlighting the importance of early intervention', citationIndex: 1 },
+      { text: '70% of children with anxiety disorders do not receive treatment', citationIndex: 1 },
+      { text: 'Cognitive Behavioral Therapy (CBT) is the gold-standard treatment for childhood anxiety disorders', citationIndex: 4 },
+      { text: 'Without treatment, childhood anxiety often persists into adolescence and adulthood, increasing risk of depression and substance use', citationIndex: 7 },
+    ],
+    sparkMoment: 'Early intervention not only reduces current distress but rewrites a child\'s developmental trajectory, preventing anxiety from becoming a lifelong burden.',
+    practicalExercise: {
+      title: 'Fostering Brave Behavior in Your Child',
+      steps: [
+        { title: 'Validate Without Enabling', description: 'Say "I see you\'re worried about the test" rather than "There\'s nothing to worry about." Acknowledge feelings while encouraging facing fears.' },
+        { title: 'Create a Fear Ladder', description: 'With your child, list situations that cause anxiety from least to most scary. Start with the easiest and gradually work up.' },
+        { title: 'Praise Effort, Not Just Outcomes', description: 'Focus on brave behavior: "I\'m proud you tried even though you were nervous" rather than only celebrating success.' },
+        { title: 'Model Healthy Coping', description: 'Talk through your own anxiety management: "I\'m nervous about my presentation, but I\'ve practiced and I\'ll do my best."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Progress Together',
+    },
     citations: [
       {
         id: '1',
@@ -1240,7 +1363,7 @@ export const anxietyDisordersArticlesB: Article[] = [
           variant="vertical"
           steps={[
             {
-              title: `Validate, Don't Dismiss`,
+              title: `Validate, Don\'t Dismiss`,
               description: (
                 <p>Acknowledge your child's feelings. Say "I see you're worried' rather than "There's nothing to worry about." Dismissing anxiety teaches children their feelings are invalid.</p>
               ),
@@ -1292,6 +1415,93 @@ export const anxietyDisordersArticlesB: Article[] = [
           <p>Programs like the Coping Cat (for children) and Cool Kids (for children and adolescents) are evidence-based CBT programs specifically designed for childhood anxiety. Ask your therapist if they are trained in these protocols.</p>
         </ArticleCallout>
 
+        <h2 id="parent-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Strategies for Parents
+        </h2>
+        <p className="mb-6">
+          Parents play a crucial role in helping children manage anxiety. Here are evidence-based strategies you can implement at home:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Accommodating Anxiety',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Allowing child to skip school when anxious</li>
+                <li>Speaking for child in social situations</li>
+                <li>Providing excessive reassurance</li>
+                <li>Modifying family routines to avoid triggers</li>
+                <li>Doing tasks the child can do themselves</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Supporting Brave Behavior',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Creating gradual exposure plans for school attendance</li>
+                <li>Encouraging child to answer for themselves</li>
+                <li>Validating feelings while limiting reassurance</li>
+                <li>Maintaining normal routines despite anxiety</li>
+                <li>Encouraging age-appropriate independence</li>
+              </ul>
+            ),
+          }}
+        />
+
+        <p className="mb-6">
+          Research on parental accommodation shows that while well-intentioned, protecting children from anxiety-provoking situations reinforces the anxiety cycle <Citation id="5" index={9} source="Clinical Psychology Review" year="2019" tier={1} />. The goal is not to eliminate anxiety entirely, but to help children develop tolerance and coping skills.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'normalize',
+              title: 'Normalize Anxiety',
+              content: (
+                <p>Help your child understand that anxiety is a normal emotion everyone experiences. Use age-appropriate language: "Your brain is trying to protect you, but sometimes the alarm goes off when there's no real danger."</p>
+              ),
+            },
+            {
+              id: 'breathing',
+              title: 'Teach Calming Strategies',
+              content: (
+                <div>
+                  <p className="mb-3">Simple techniques children can use:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Deep breathing (belly breathing, square breathing)</li>
+                    <li>Progressive muscle relaxation</li>
+                    <li>Grounding techniques (5-4-3-2-1 senses)</li>
+                    <li>Visualization (imagining a safe, calm place)</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'language',
+              title: 'Use Empowering Language',
+              content: (
+                <div>
+                  <p className="mb-3">How you talk about anxiety matters:</p>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li>Instead of "Don't be scared," say "I know you feel scared, and you can handle this."</li>
+                    <li>Instead of "You're fine," say "Your body is having a strong reaction, but you're safe."</li>
+                    <li>Instead of "Just do it," say "Let's take this one step at a time."</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'rewards',
+              title: 'Reward Brave Behavior',
+              content: (
+                <p>Create a reward system for facing fears. Rewards can be small (stickers, extra playtime) or cumulative (earning points toward a larger reward). Celebrate effort, not just success. Trying is what matters, even if the outcome isn't perfect.</p>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="why-early-intervention-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Early Intervention Matters
         </h2>
@@ -1340,6 +1550,26 @@ export const anxietyDisordersArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Neuroscience', 'Anxiety', 'Brain', 'Research'],
+    summary: 'Anxiety disorders involve specific neurobiological mechanisms including hyperactive amygdala (the brain\'s alarm system), underactive prefrontal cortex (emotion regulation), and imbalances in neurotransmitters like GABA and serotonin. With 30-50% heritability and dysregulated stress hormone systems, anxiety has clear biological roots. The good news: neuroplasticity means treatment—both therapy and medication—physically changes brain structure and function, quieting overactive fear circuits.',
+    keyFacts: [
+      { text: 'In anxiety disorders, the amygdala is hyperactive while the prefrontal cortex is underactive, creating an imbalance between fear activation and emotional regulation', citationIndex: 2 },
+      { text: 'Anxiety disorders are moderately heritable, with twin studies showing 30 to 50 percent of risk is genetic', citationIndex: 5 },
+      { text: 'GABA (the brain\'s primary inhibitory neurotransmitter) and serotonin dysregulation are key neurochemical imbalances in anxiety', citationIndex: 4 },
+      { text: 'The HPA axis stress response system is dysregulated in anxiety, leading to chronic cortisol elevation and heightened stress reactivity', citationIndex: 6 },
+      { text: 'After successful treatment, brain scans show decreased amygdala activity and increased prefrontal cortex activity—evidence that treatment rewires fear circuits', citationIndex: 7 },
+    ],
+    sparkMoment: 'Anxiety is not weakness—it is ancient brain circuits misfiring. Treatment is not just symptom management—it is brain remodeling through neuroplasticity.',
+    practicalExercise: {
+      title: 'Understanding Your Brain\'s Fear Response',
+      steps: [
+        { title: 'Notice the Physical Sensations', description: 'When anxiety strikes, pause and identify what your body is doing: racing heart, tight chest, rapid breathing. This is your amygdala activating your fight-or-flight system.' },
+        { title: 'Name It to Tame It', description: 'Say to yourself: "This is my amygdala sounding a false alarm. I am safe." Labeling emotions activates the prefrontal cortex, which helps regulate the amygdala.' },
+        { title: 'Practice Prefrontal Control', description: 'Use rational thinking to challenge the fear. Ask: "What evidence is there for this threat? What would I tell a friend in this situation?"' },
+        { title: 'Build New Neural Pathways', description: 'Repeatedly face feared situations (exposure therapy) to teach your amygdala that the threat is not real. Each exposure rewires your brain a little more.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Understand Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1571,6 +1801,50 @@ export const anxietyDisordersArticlesB: Article[] = [
           source="Anxious: Using the Brain to Understand and Treat Fear and Anxiety"
           variant="large"
         />
+
+        <h2 id="how-systems-interact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How These Systems Interact
+        </h2>
+        <p className="mb-6">
+          The neurobiology of anxiety is not about isolated brain regions or single neurotransmitters. It is about <strong>systems interacting</strong> in a complex feedback loop.
+        </p>
+
+        <div className="p-6 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-800 dark:to-gray-900 rounded-lg mb-8">
+          <h3 className="font-semibold text-lg mb-4">The Anxiety Cascade</h3>
+          <ol className="list-decimal pl-6 space-y-3">
+            <li>
+              <strong>Perceived threat</strong> — Your brain detects a potential danger (real or imagined). This can be a social situation, a physical sensation, or a worrying thought.
+            </li>
+            <li>
+              <strong>Amygdala activation</strong> — The amygdala sounds the alarm, triggering the fight-or-flight response before you even consciously register the threat.
+            </li>
+            <li>
+              <strong>HPA axis engagement</strong> — The hypothalamus signals the pituitary, which signals the adrenal glands to release cortisol and adrenaline. Your heart races, breathing quickens, muscles tense.
+            </li>
+            <li>
+              <strong>Prefrontal cortex attempts regulation</strong> — The prefrontal cortex tries to assess whether the threat is real and calm the amygdala. In anxiety disorders, this top-down regulation is weak.
+            </li>
+            <li>
+              <strong>Neurotransmitter imbalances</strong> — Low GABA means the brain cannot "put the brakes on" the anxiety response. Low serotonin contributes to sustained negative mood and worry.
+            </li>
+            <li>
+              <strong>Behavioral response</strong> — You avoid the situation (avoidance), seek reassurance (safety behavior), or experience panic (acute anxiety response). These behaviors reinforce the fear circuit.
+            </li>
+            <li>
+              <strong>Circuit strengthening</strong> — Each time the cycle repeats, the neural pathways become stronger (Hebbian learning: "neurons that fire together wire together"). The anxiety becomes more automatic.
+            </li>
+          </ol>
+        </div>
+
+        <p className="mb-6">
+          This cascade explains why anxiety can feel so overwhelming and automatic. By the time you consciously register fear, your body is already in full alarm mode. The key to treatment is interrupting this cascade at multiple points.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p>
+            Different treatments target different points in the cascade. Medication (SSRIs, benzodiazepines) modifies neurotransmitter levels. Cognitive therapy strengthens prefrontal cortex regulation. Exposure therapy retrains the amygdala. Comprehensive treatment addresses the system as a whole.
+          </p>
+        </ArticleCallout>
 
         <h2 id="clinical-implications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What This Means for You

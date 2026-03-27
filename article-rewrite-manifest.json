@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 116,
+  "completedSessions": 123,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -147,7 +147,7 @@
       "completedAt": "2026-03-27T12:45:00.000Z"
     },
     "3": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "02b-everyday-emotional-regulation",
       "file": "src/data/articles/category-01/02b-everyday-emotional-regulation.tsx",
@@ -159,7 +159,7 @@
           "slug": "power-of-naming-emotions-affect-labeling",
           "title": "The Power of Naming Your Emotions: Why Labeling Feelings Calms the Brain",
           "currentWords": 590,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -167,7 +167,7 @@
           "slug": "emotional-first-aid-first-five-minutes",
           "title": "Emotional First Aid: What to Do in the First 5 Minutes of a Strong Emotion",
           "currentWords": 417,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -175,7 +175,7 @@
           "slug": "sit-with-uncomfortable-emotions-without-numbing",
           "title": "How to Sit with Uncomfortable Emotions Without Numbing or Avoiding",
           "currentWords": 391,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -183,7 +183,7 @@
           "slug": "using-movement-to-regulate-nervous-system",
           "title": "Using Movement to Regulate Your Nervous System",
           "currentWords": 425,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -191,13 +191,13 @@
           "slug": "building-emotional-regulation-toolkit",
           "title": "Building an Emotional Regulation Toolkit: Your Personalized Plan",
           "currentWords": 456,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T06:15:00Z"
     },
     "4": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "03a-self-awareness-reflection",
       "file": "src/data/articles/category-01/03a-self-awareness-reflection.tsx",
@@ -209,7 +209,7 @@
           "slug": "what-is-self-awareness-skill-that-changes-everything",
           "title": "What Is Self-Awareness? The Skill That Changes Everything",
           "currentWords": 460,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -217,7 +217,7 @@
           "slug": "journaling-for-self-awareness-prompts",
           "title": "Journaling for Self-Awareness: Prompts That Go Beyond 'How Was Your Day'",
           "currentWords": 419,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -225,7 +225,7 @@
           "slug": "body-awareness-physical-signals-of-emotions",
           "title": "Body Awareness: Learning to Read the Physical Signals of Your Emotions",
           "currentWords": 399,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -233,7 +233,7 @@
           "slug": "how-thoughts-shape-feelings-notice-the-pattern",
           "title": "How Your Thoughts Shape Your Feelings (And How to Notice the Pattern)",
           "currentWords": 410,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -241,13 +241,13 @@
           "slug": "observer-self-watch-emotions-without-being-consumed",
           "title": "The Observer Self: Learning to Watch Your Emotions Without Being Consumed",
           "currentWords": 393,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T08:45:00Z"
     },
     "5": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "03b-self-awareness-reflection",
       "file": "src/data/articles/category-01/03b-self-awareness-reflection.tsx",
@@ -259,7 +259,7 @@
           "slug": "mindfulness-for-emotional-awareness-practical-guide",
           "title": "Mindfulness for Emotional Awareness: A Practical Starting Guide",
           "currentWords": 403,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -267,7 +267,7 @@
           "slug": "common-emotional-blind-spots",
           "title": "Common Blind Spots: Emotions You Might Not Realize You're Feeling",
           "currentWords": 475,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -275,7 +275,7 @@
           "slug": "asking-honest-feedback-about-emotional-patterns",
           "title": "How to Ask for Honest Feedback About Your Emotional Patterns",
           "currentWords": 423,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -283,7 +283,7 @@
           "slug": "role-of-values-in-emotional-self-awareness",
           "title": "The Role of Values in Emotional Self-Awareness",
           "currentWords": 433,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -291,13 +291,13 @@
           "slug": "self-awareness-without-self-judgment",
           "title": "Self-Awareness Without Self-Judgment: A Compassionate Approach",
           "currentWords": 470,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T13:05:00Z"
     },
     "6": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "04a-emotional-intelligence-in-practice",
       "file": "src/data/articles/category-01/04a-emotional-intelligence-in-practice.tsx",
@@ -317,7 +317,7 @@
           "slug": "reading-other-peoples-emotions-empathy-attunement-social-cues",
           "title": "Reading Other People's Emotions: Empathy, Attunement, and Social Cues",
           "currentWords": 542,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -325,7 +325,7 @@
           "slug": "emotional-intelligence-in-conversations-listening-beyond-words",
           "title": "Emotional Intelligence in Conversations: Listening Beyond Words",
           "currentWords": 645,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -333,7 +333,7 @@
           "slug": "how-to-respond-not-react-in-emotionally-charged-situations",
           "title": "How to Respond (Not React) in Emotionally Charged Situations",
           "currentWords": 559,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -341,10 +341,10 @@
           "slug": "emotional-intelligence-at-work-managing-feelings-in-professional-settings",
           "title": "Emotional Intelligence at Work: Managing Feelings in Professional Settings",
           "currentWords": 626,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T12:35:00Z"
     },
     "7": {
       "status": "complete",
@@ -497,7 +497,7 @@
       "completedAt": "2026-03-27T09:15:45.000Z"
     },
     "10": {
-      "status": "pending",
+      "status": "complete",
       "category": 1,
       "subcategoryFile": "06a-neuroscience-of-emotions",
       "file": "src/data/articles/category-01/06a-neuroscience-of-emotions.tsx",
@@ -509,7 +509,7 @@
           "slug": "your-brain-on-emotions-neural-networks-that-create-feelings",
           "title": "Your Brain on Emotions: A Tour of the Neural Networks That Create Feelings",
           "currentWords": 205,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -517,7 +517,7 @@
           "slug": "amygdala-role-how-brain-detects-threat-too-quickly",
           "title": "The Amygdala's Role: How Your Brain Detects Threat (Sometimes Too Quickly)",
           "currentWords": 224,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -525,7 +525,7 @@
           "slug": "neuroplasticity-emotional-change-rewire-feeling-patterns",
           "title": "Neuroplasticity and Emotional Change: Can You Rewire Your Feeling Patterns?",
           "currentWords": 191,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -544,7 +544,7 @@
           "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T13:45:00Z"
     },
     "11": {
       "status": "pending",
@@ -2267,7 +2267,7 @@
       "completedAt": "2026-03-27T12:31:10.000Z"
     },
     "47": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "07b-toxic-dynamics-red-flags",
       "file": "src/data/articles/category-03/07b-toxic-dynamics-red-flags.tsx",
@@ -2279,7 +2279,7 @@
           "slug": "enabling-good-intentions-unhealthy-patterns",
           "title": "Enabling: How Good Intentions Keep Unhealthy Patterns Alive",
           "currentWords": 653,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2287,7 +2287,7 @@
           "slug": "enmeshment-closeness-crosses-line-control",
           "title": "Enmeshment: When Closeness Crosses the Line Into Control",
           "currentWords": 674,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2295,7 +2295,7 @@
           "slug": "power-imbalances-relationships-age-money-status",
           "title": "Power Imbalances in Relationships: Age, Money, Status, and Influence",
           "currentWords": 732,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2303,7 +2303,7 @@
           "slug": "protect-mental-health-difficult-relationship",
           "title": "How to Protect Your Mental Health in a Difficult Relationship",
           "currentWords": 787,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2311,10 +2311,10 @@
           "slug": "when-love-isnt-enough-time-to-leave",
           "title": "When Love Isn't Enough: Recognizing When It's Time to Leave",
           "currentWords": 664,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T01:30:00.000Z"
     },
     "48": {
       "status": "pending",
@@ -8917,7 +8917,7 @@
       "completedAt": null
     },
     "180": {
-      "status": "pending",
+      "status": "complete",
       "category": 14,
       "subcategoryFile": "04b-navigating-mental-health-system",
       "file": "src/data/articles/category-14/04b-navigating-mental-health-system.tsx",
@@ -8929,7 +8929,7 @@
           "slug": "psychiatrist-psychologist-counselor-social-worker-differences",
           "title": "The Difference Between Psychiatrists, Psychologists, Counselors, and Social Workers",
           "currentWords": 445,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -8937,7 +8937,7 @@
           "slug": "evidence-based-mental-health-apps",
           "title": "Mental Health Apps: Which Ones Are Evidence-Based and Actually Help",
           "currentWords": 382,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -8945,7 +8945,7 @@
           "slug": "navigating-mental-health-diagnosis",
           "title": "Navigating a Mental Health Diagnosis: What It Means and What to Do Next",
           "currentWords": 437,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -8953,7 +8953,7 @@
           "slug": "mental-health-records-privacy-patient-rights",
           "title": "Mental Health Records, Privacy, and Your Rights as a Patient",
           "currentWords": 659,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -8961,10 +8961,10 @@
           "slug": "advocating-for-yourself-mental-health-system",
           "title": "Advocating for Yourself in the Mental Health System: A Patient's Guide",
           "currentWords": 597,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-28T06:12:15Z"
     },
     "181": {
       "status": "pending",

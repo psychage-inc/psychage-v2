@@ -28,7 +28,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     description: 'Explore the brain regions and networks responsible for generating, processing, and regulating emotions--from the amygdala to the prefrontal cortex.',
     image: "/images/articles/cat01/cover-051.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -72,11 +72,17 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           <p className="mb-6">
             Contrary to outdated models that localized emotions to single "emotion centers," modern neuroscience shows that emotions emerge from distributed networks across the brain <Citation id="1" index={1} source="Behavioral and Brain Sciences" year="2020" tier={1} />. Let's take a tour of the key players.
           </p>
+          <p className="mb-6">
+            You may have heard of the "limbic system" as the brain's emotion center. While this framework remains a useful shorthand, researchers now recognize that emotions involve far more than the limbic structures alone <Citation id="7" index={7} source="Neuroscience & Biobehavioral Reviews" year="2019" tier={1} />. Cortical regions like the prefrontal cortex and insula play equally important roles in generating, interpreting, and regulating emotional experiences. Even sensory areas and the cerebellum contribute to the full picture of how feelings form.
+          </p>
         </div>
 
         <h2 id="key-regions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Key Brain Regions in Emotion
         </h2>
+        <p className="mb-6">
+          Several brain regions play starring roles in emotional processing. Each contributes a different piece of the puzzle, and understanding their individual functions helps explain why emotions are so complex and sometimes contradictory.
+        </p>
 
         <ArticleAccordion
           type="multiple"
@@ -85,28 +91,50 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
               id: 'amygdala',
               title: 'Amygdala: The Threat Detector',
               content: (
-                <p>Rapid threat detection and fear processing. Activates the fight-flight-freeze response before conscious awareness. Hyperactive in anxiety disorders, PTSD <Citation id="4" index={4} source="Annual Review of Neuroscience" year="2019" tier={1} />.</p>
+                <div>
+                  <p className="mb-3">The amygdala is a small, almond-shaped structure located deep in the temporal lobes. It specializes in rapid threat detection and fear processing, activating your fight-flight-freeze response in roughly 200 milliseconds--before your conscious mind even registers what happened <Citation id="4" index={4} source="Annual Review of Neuroscience" year="2019" tier={1} />.</p>
+                  <p>In people with anxiety disorders or PTSD, the amygdala tends to be hyperactive, responding to neutral stimuli as though they were dangerous. This biological sensitivity is not a personal weakness--it reflects how the amygdala has been calibrated by genetics and experience.</p>
+                </div>
               ),
             },
             {
               id: 'prefrontal',
               title: 'Prefrontal Cortex: The Regulator',
               content: (
-                <p>Executive control, impulse inhibition, emotion regulation. Modulates amygdala activity. Underactive in impulsive disorders, immature in adolescence <Citation id="3" index={3} source="Trends in Cognitive Sciences" year="2020" tier={1} />.</p>
+                <div>
+                  <p className="mb-3">The prefrontal cortex, particularly its ventromedial and dorsolateral subdivisions, serves as the brain's executive control center. It handles impulse inhibition, planning, and crucially, emotion regulation by sending inhibitory signals to the amygdala <Citation id="3" index={3} source="Trends in Cognitive Sciences" year="2020" tier={1} />.</p>
+                  <p>This region is one of the last to fully mature--not reaching full development until the mid-20s. This explains why adolescents often struggle with emotional control and impulsive decisions. It also becomes less effective when you are tired, hungry, intoxicated, or under extreme stress.</p>
+                </div>
               ),
             },
             {
               id: 'insula',
               title: 'Insula: The Body Sensor',
               content: (
-                <p>Interoception--awareness of internal body states (heart rate, breathing, gut sensations). Critical for emotional awareness and empathy <Citation id="5" index={5} source="Current Opinion in Psychology" year="2021" tier={1} />.</p>
+                <div>
+                  <p className="mb-3">The insula is your brain's bridge between body and mind. It processes interoception--your awareness of internal body states like heart rate, breathing, temperature, and gut sensations. This body awareness is a foundational component of emotional experience <Citation id="5" index={5} source="Current Opinion in Psychology" year="2021" tier={1} />.</p>
+                  <p>People with greater insular activity tend to have higher emotional awareness and empathy. Conversely, reduced insular function is associated with difficulty identifying and describing emotions, a condition known as alexithymia.</p>
+                </div>
               ),
             },
             {
               id: 'acc',
               title: 'Anterior Cingulate Cortex: The Conflict Monitor',
               content: (
-                <p>Detects emotional conflict, monitors pain (physical and social). Involved in empathy and emotion regulation decisions.</p>
+                <div>
+                  <p className="mb-3">The anterior cingulate cortex (ACC) sits at the crossroads between the emotional and cognitive brain. It detects conflicts between competing responses, monitors both physical and social pain, and helps decide when to engage regulatory strategies.</p>
+                  <p>Research shows the ACC activates strongly during empathy tasks and when you experience social rejection. It plays a key role in deciding whether an emotional situation requires effortful control or can be handled automatically.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'hippocampus',
+              title: 'Hippocampus: The Context Provider',
+              content: (
+                <div>
+                  <p className="mb-3">The hippocampus is essential for forming new memories and providing contextual information to emotional responses. It helps your brain determine whether a current situation is similar to a past experience and whether the emotional response should be the same or different.</p>
+                  <p>When the hippocampus is functioning well, you can distinguish between genuine danger and situations that merely remind you of past threats. In conditions like PTSD, hippocampal function is impaired, which is partly why trauma survivors may re-experience fear in safe situations that trigger trauma-related memories.</p>
+                </div>
               ),
             },
           ]}
@@ -135,10 +163,16 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           How Emotional Networks Communicate
         </h2>
         <p className="mb-6">
-          Emotions don't arise from isolated brain regions working alone. Instead, they emerge from coordinated activity across multiple networks that communicate through electrical signals and neurotransmitters <Citation id="8" index={8} source="Neuron" year="2021" tier={1} />.
+          Emotions don't arise from isolated brain regions working alone. Instead, they emerge from coordinated activity across multiple networks that communicate through electrical signals and neurotransmitters <Citation id="8" index={8} source="Neuron" year="2021" tier={1} />. Neuroscientists have identified several large-scale networks that cooperate to produce your emotional experience.
+        </p>
+        <p className="mb-6">
+          The <strong>salience network</strong>, centered on the anterior insula and anterior cingulate cortex, acts as a gatekeeper. It determines which incoming stimuli are emotionally relevant and deserve your attention. The <strong>default mode network</strong>, involving medial prefrontal regions and the posterior cingulate, handles self-referential processing--how you relate emotional events to your sense of self, your past, and your anticipated future. The <strong>central executive network</strong>, anchored in the dorsolateral prefrontal cortex, manages top-down control and working memory during effortful regulation <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2021" tier={1} />.
         </p>
         <p className="mb-6">
           Think of it like a symphony orchestra. The amygdala might start playing (detecting threat), but the full emotional experience requires the insula (body awareness), the prefrontal cortex (interpretation and regulation), the anterior cingulate (emotional salience), and memory systems in the hippocampus (context from past experiences). When these networks are in sync, you experience coherent emotions. When they're out of sync, you might feel confused, overwhelmed, or emotionally numb.
+        </p>
+        <p className="mb-6">
+          The speed of these network interactions matters enormously. Information reaches the amygdala through a fast subcortical route in about 200 milliseconds, triggering an initial emotional reaction before the slower cortical pathways have time to process nuance and context. This is why your first emotional response to a startling noise or an alarming text message often feels disproportionate--your conscious, contextualizing brain literally hasn't caught up yet. Over the next several hundred milliseconds, cortical regions refine the initial reaction, adding nuance and judgment.
         </p>
 
         <ArticleCallout variant="did-you-know" title="The Two-Way Street of Emotions">
@@ -154,14 +188,17 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           Why Some People Are More Emotionally Reactive
         </h2>
         <p className="mb-6">
-          Not all brains process emotions the same way. Individual differences in brain structure and function help explain why some people seem naturally calm while others are quick to react emotionally.
+          Not all brains process emotions the same way. Individual differences in brain structure and function help explain why some people seem naturally calm while others are quick to react emotionally. These differences are shaped by a combination of genetics, early childhood experiences, and ongoing life circumstances.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3">
-          <li><strong>Amygdala size and reactivity:</strong> Some people have a naturally more reactive amygdala that responds strongly to even mild stressors. This is partly genetic, partly shaped by early life experiences.</li>
-          <li><strong>Prefrontal cortex thickness:</strong> Thicker prefrontal cortex is associated with better emotional control. This can be strengthened through practice (neuroplasticity).</li>
-          <li><strong>White matter connectivity:</strong> The strength of connections between emotion-generating and emotion-regulating regions varies between individuals. Stronger connections predict better regulation.</li>
-          <li><strong>Neurotransmitter systems:</strong> Variations in serotonin, dopamine, and GABA systems affect emotional baseline and reactivity. This is why medication can help some people achieve emotional stability.</li>
+          <li><strong>Amygdala size and reactivity:</strong> Some people have a naturally more reactive amygdala that responds strongly to even mild stressors. This is partly genetic, partly shaped by early life experiences. People who experienced chronic stress or trauma in childhood often develop amygdalae that are more sensitive to perceived threats, even when no actual danger is present.</li>
+          <li><strong>Prefrontal cortex thickness:</strong> Thicker prefrontal cortex is associated with better emotional control. This can be strengthened through practice (neuroplasticity). Brain imaging studies show that people who meditate regularly develop measurably thicker prefrontal regions over time.</li>
+          <li><strong>White matter connectivity:</strong> The strength of connections between emotion-generating and emotion-regulating regions varies between individuals. Stronger connections predict better regulation. These pathways are like highways between brain regions--wider, better-maintained highways allow faster and more effective communication.</li>
+          <li><strong>Neurotransmitter systems:</strong> Variations in serotonin, dopamine, and GABA systems affect emotional baseline and reactivity. This is why medication can help some people achieve emotional stability. Genetic polymorphisms in serotonin transporter genes, for example, influence how quickly your brain clears serotonin from synapses, affecting mood and anxiety levels.</li>
         </ul>
+        <p className="mb-6">
+          Understanding these differences is liberating rather than limiting. Knowing that your emotional reactivity has biological roots means you can stop blaming yourself for reacting "too much" and instead focus on evidence-based strategies to strengthen your regulatory circuits. Your starting point may differ from someone else's, but the capacity for change remains throughout life.
+        </p>
 
         <h2 id="regulation-brain-level" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Emotion Regulation Looks Like in the Brain
@@ -177,30 +214,36 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           <li><strong>Reduced amygdala activity:</strong> The emotional intensity decreases as prefrontal control strengthens</li>
         </ol>
         <p className="mb-6">
-          Research shows that reappraisal (changing how you think about the situation) is more effective long-term than suppression (just holding the emotion in). Reappraisal engages prefrontal regions more deeply and doesn't carry the physiological costs of suppression <Citation id="3" index={3} source="Trends in Cognitive Sciences" year="2020" tier={1} />.
+          Research shows that reappraisal (changing how you think about the situation) is more effective long-term than suppression (just holding the emotion in). Reappraisal engages prefrontal regions more deeply and doesn't carry the physiological costs of suppression <Citation id="3" index={3} source="Trends in Cognitive Sciences" year="2020" tier={1} />. Suppression, by contrast, often backfires--while the outward expression may be reduced, the internal emotional experience and physiological arousal frequently remain elevated or even intensify. This is sometimes called the "ironic rebound" effect: the harder you try to push an emotion away, the stronger it can come back.
+        </p>
+        <p className="mb-6">
+          Another effective strategy is <strong>affect labeling</strong>--simply naming the emotion you are experiencing. Brain imaging studies show that verbalizing an emotion ("I'm feeling anxious") reduces amygdala activation and increases prefrontal engagement. This simple act of labeling bridges the gap between the automatic emotional response and conscious awareness, giving your regulatory systems something to work with.
         </p>
 
         <h2 id="hemispheric-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Left Brain vs. Right Brain Emotion Story
         </h2>
         <p className="mb-6">
-          While the "left brain logical, right brain emotional" stereotype is oversimplified, there are real hemispheric differences in emotional processing:
+          While the "left brain logical, right brain emotional" stereotype is oversimplified, there are real hemispheric differences in emotional processing <Citation id="6" index={6} source="Brain and Cognition" year="2020" tier={1} />. The asymmetry model of emotion, supported by decades of electroencephalography (EEG) research, reveals a more nuanced picture.
         </p>
         <p className="mb-6">
-          <strong>Left hemisphere:</strong> Associated with approach-related emotions (joy, interest, anger) and positive affect. More active in optimistic, approach-oriented individuals.
+          <strong>Left hemisphere:</strong> Associated with approach-related emotions (joy, interest, and even anger, which motivates confrontation rather than withdrawal) and positive affect. More active in optimistic, approach-oriented individuals. People with greater left frontal activity at baseline tend to report higher well-being and are less likely to develop depression.
         </p>
         <p className="mb-6">
-          <strong>Right hemisphere:</strong> Associated with withdrawal-related emotions (fear, disgust, sadness) and negative affect. More active in anxious, avoidant individuals <Citation id="6" index={6} source="Brain and Cognition" year="2020" tier={1} />.
+          <strong>Right hemisphere:</strong> Associated with withdrawal-related emotions (fear, disgust, sadness) and negative affect. More active in anxious, avoidant individuals. Greater right frontal activity at baseline is a risk factor for anxiety and depressive disorders.
         </p>
         <p className="mb-6">
-          This doesn't mean emotions live in one hemisphere--both sides work together. But the balance of left vs. right frontal activity can predict your emotional temperament and risk for mood disorders.
+          This doesn't mean emotions live in one hemisphere--both sides work together constantly. But the balance of left vs. right frontal activity can predict your emotional temperament and risk for mood disorders. Encouragingly, this balance is not fixed. Mindfulness training, for example, has been shown to shift frontal activity toward the left hemisphere, which may explain some of its mood-enhancing effects.
         </p>
 
         <h2 id="what-this-means" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What This Means for You
         </h2>
         <p className="mb-6">
-          Understanding the neuroscience of emotion helps you:
+          Understanding the neuroscience of emotion is more than academic interest--it has direct practical value for how you relate to your own emotional life. When you know what's happening in your brain during an emotional reaction, you gain perspective and agency. You move from being swept along by feelings to understanding the biological machinery producing them.
+        </p>
+        <p className="mb-6">
+          This knowledge helps you in several concrete ways:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li>Recognize that emotional reactivity has biological roots--it's not a character flaw</li>
@@ -209,6 +252,9 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           <li>Know that neural pathways can be rewired through practice (neuroplasticity)</li>
           <li>See that individual differences in emotional reactivity reflect brain structure and chemistry, not personal weakness</li>
         </ul>
+        <p className="mb-6">
+          Perhaps most importantly, neuroscience validates the effort of working on your emotional health. Every time you practice a regulation technique, you are physically strengthening the neural pathways that support emotional balance. Therapy, meditation, exercise, and even simple habits like naming your emotions produce measurable changes in brain structure and function over time. The science confirms what many people intuitively sense: emotional growth is real, and it takes genuine biological form in your brain.
+        </p>
 
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">
           <p className="mb-4">
@@ -236,7 +282,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     description: "The amygdala is your brain's alarm system--fast, powerful, and sometimes overly sensitive. Learn how it works and why it matters for anxiety and fear.",
     image: "/images/articles/cat01/cover-052.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -277,16 +323,23 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           <p className="mb-6">
             The amygdala is a small, almond-shaped structure deep in the brain that acts as your threat detection system <Citation id="1" index={1} source="Neuropsychopharmacology" year="2020" tier={1} />. It's fast, automatic, and evolutionarily ancient--designed to keep you alive by triggering fear before your conscious mind catches up.
           </p>
+          <p className="mb-6">
+            There are actually two amygdalae, one in each hemisphere, and they receive input through two distinct pathways. The "low road" sends sensory information directly from the thalamus to the amygdala, bypassing the cortex entirely. This is the fast track--crude but rapid, allowing you to flinch from a snake-shaped stick before you consciously recognize it as harmless. The "high road" routes information through the visual cortex and other processing areas first, providing a more accurate but slower assessment. Most of the time, these two roads work together seamlessly, but when they conflict, anxiety often results.
+          </p>
         </div>
 
         <h2 id="what-it-does" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What the Amygdala Does
         </h2>
+        <p className="mb-6">
+          The amygdala is involved in far more than just fear. It processes the emotional significance of all kinds of stimuli--positive and negative--and plays a role in social behavior, reward learning, and attention. However, its threat detection function is the most studied and clinically relevant, particularly for understanding anxiety, phobias, and trauma responses.
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
           <li><strong>Rapid threat detection:</strong> Processes potential dangers in ~200 milliseconds--before cortical awareness</li>
           <li><strong>Fear learning:</strong> Associates neutral stimuli with danger through classical conditioning</li>
           <li><strong>Activates stress response:</strong> Triggers fight-flight-freeze via hypothalamus and autonomic nervous system</li>
           <li><strong>Encodes emotional memories:</strong> Ensures threatening experiences are remembered vividly</li>
+          <li><strong>Social evaluation:</strong> Assesses facial expressions, tone of voice, and body language for potential social threats</li>
         </ul>
 
         <ArticleCallout variant="key-takeaway">
@@ -311,6 +364,9 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           During an amygdala hijack, the amygdala sends distress signals to the hypothalamus, which activates the fight-flight-freeze response. Heart rate increases, breathing quickens, muscles tense, and stress hormones flood your system. All of this happens in milliseconds--faster than conscious thought <Citation id="4" index={4} source="Emotion" year="2019" tier={1} />.
+        </p>
+        <p className="mb-6">
+          The hijack typically lasts anywhere from a few seconds to several minutes, depending on the intensity of the trigger and your baseline stress level. During this window, your prefrontal cortex is essentially offline--which is why people say things they regret, make impulsive decisions, or feel unable to think clearly in the heat of the moment. Understanding that this is a temporary neurological state, not a permanent character trait, is the first step toward managing it.
         </p>
 
         <BeforeAfter
@@ -344,6 +400,9 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           Even worse, the amygdala in anxious individuals often responds to <strong>neutral</strong> or <strong>ambiguous</strong> stimuli as if they were threats. A neutral facial expression gets interpreted as anger. An unexpected sound triggers full alarm. This is the neurological basis of catastrophic thinking and hypervigilance.
+        </p>
+        <p className="mb-6">
+          Recovery time is another crucial difference. In a person without an anxiety disorder, amygdala activation spikes briefly and then returns to baseline within seconds. In someone with chronic anxiety, the activation can persist for minutes or even hours, keeping the body in a sustained state of physiological arousal. This prolonged activation drains energy, disrupts sleep, impairs concentration, and creates a self-reinforcing cycle where the person becomes anxious about their own anxiety.
         </p>
 
         <ComparisonTable
@@ -382,6 +441,12 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
         <p className="mb-6">
           Extinction doesn't erase the original fear memory--it creates a new, competing memory that says "this is safe." That's why fears can sometimes return (called spontaneous recovery) if you avoid the situation for a long time. Consistent, repeated exposure strengthens the extinction circuit.
         </p>
+        <p className="mb-6">
+          This distinction between erasure and inhibition has important clinical implications. It means that even after successful therapy, old fears can resurface under stress, in new environments, or after long periods without exposure. This is not a sign of failure--it reflects how the brain stores emotional memories. The extinction memory simply needs reinforcement. Understanding this helps people who experience fear relapse to view it as a normal part of the process rather than a setback.
+        </p>
+        <p className="mb-6">
+          Context also matters for extinction learning. Research shows that extinction tends to be context-specific--you may feel calm about public speaking at your therapist's office but anxious again in a new setting. To build more robust extinction, therapists often recommend practicing in multiple contexts, which helps the new "safe" memory generalize across different environments and situations.
+        </p>
 
         <QuoteBlock
           quote="The amygdala is a guard dog that barks at everything. It's not your enemy--it's trying to protect you. The key is training it to recognize real threats from false alarms."
@@ -395,7 +460,10 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           How to Regulate an Overactive Amygdala
         </h2>
         <p className="mb-6">
-          The prefrontal cortex can modulate amygdala activity through top-down control. Brain imaging studies show that when people successfully use emotion regulation strategies, prefrontal cortex activity increases while amygdala activity decreases <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />.
+          The prefrontal cortex can modulate amygdala activity through top-down control. Brain imaging studies show that when people successfully use emotion regulation strategies, prefrontal cortex activity increases while amygdala activity decreases <Citation id="3" index={3} source="Neuroscience & Biobehavioral Reviews" year="2020" tier={1} />. This relationship is bidirectional and trainable--the more you practice engaging your prefrontal cortex during emotional moments, the stronger the regulatory pathway becomes.
+        </p>
+        <p className="mb-6">
+          The key insight is that regulation doesn't mean eliminating fear or anxiety. It means building a stronger connection between your "alarm system" (amygdala) and your "assessment center" (prefrontal cortex) so that when the alarm goes off, your rational brain can quickly evaluate whether the threat is real and respond proportionally. Here are the most evidence-backed strategies for achieving this:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3">
           <li><strong>Cognitive reappraisal:</strong> Reinterpret the situation in a less threatening way. "This presentation is an opportunity to share my work," not "Everyone will judge me." This directly engages prefrontal regions.</li>
@@ -415,10 +483,13 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           What This Means for You
         </h2>
         <p className="mb-6">
-          When you feel sudden fear or panic, your amygdala has likely activated before your rational brain. The key is engaging your prefrontal cortex to assess whether the threat is real. Techniques like slow breathing, grounding, and cognitive reappraisal help quiet amygdala reactivity by strengthening top-down control.
+          When you feel sudden fear or panic, your amygdala has likely activated before your rational brain. The key is engaging your prefrontal cortex to assess whether the threat is real. Techniques like slow breathing, grounding, and cognitive reappraisal help quiet amygdala reactivity by strengthening top-down control. Each time you successfully use one of these techniques, you physically reinforce the neural pathway between your prefrontal cortex and amygdala.
         </p>
         <p className="mb-6">
-          Remember: your amygdala is not your enemy. It's an ancient survival mechanism doing its job--sometimes a bit too enthusiastically. With practice, you can train your prefrontal cortex to be a better supervisor, distinguishing real threats from false alarms and responding with flexibility rather than automatic fear.
+          Remember: your amygdala is not your enemy. It's an ancient survival mechanism doing its job--sometimes a bit too enthusiastically. The amygdala kept your ancestors alive by erring on the side of caution in a world full of genuine physical threats. In modern life, where most "threats" are social, financial, or psychological rather than physical, this hair-trigger sensitivity can feel like a curse rather than a gift.
+        </p>
+        <p className="mb-6">
+          With practice, you can train your prefrontal cortex to be a better supervisor, distinguishing real threats from false alarms and responding with flexibility rather than automatic fear. This training takes time and patience, but every moment of conscious regulation is building a stronger, more resilient brain. If anxiety feels overwhelming despite your best efforts, professional help through therapy can accelerate this process dramatically--you don't have to rewire your amygdala alone.
         </p>
       </>
     ),
@@ -432,7 +503,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     description: 'Your brain can change throughout life. Neuroplasticity explains how therapy, practice, and experience reshape emotional patterns at a biological level.',
     image: "/images/articles/cat01/cover-053.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -471,7 +542,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
             "You can't teach an old dog new tricks." For decades, neuroscience believed the adult brain was fixed and unchangeable. Then came the discovery of neuroplasticity--the brain's lifelong ability to reorganize itself by forming new neural connections.
           </p>
           <p className="mb-6">
-            This revolutionary finding means that emotional patterns, though deeply ingrained, are not permanent. Your brain can rewire itself in response to experience, practice, and therapy <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2020" tier={1} />.
+            This revolutionary finding means that emotional patterns, though deeply ingrained, are not permanent. Your brain can rewire itself in response to experience, practice, and therapy <Citation id="1" index={1} source="Nature Reviews Neuroscience" year="2020" tier={1} />. For anyone who has ever felt stuck in cycles of anxiety, depression, or reactive behavior, this is profoundly hopeful news: the biology of your brain supports your capacity to change.
           </p>
         </div>
 
@@ -479,23 +550,33 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           What Is Neuroplasticity?
         </h2>
         <p className="mb-6">
-          Neuroplasticity is the brain's ability to change its structure and function in response to experience. This happens through:
+          Neuroplasticity is the brain's ability to change its structure and function in response to experience. Every thought you think, every skill you practice, and every emotional response you rehearse shapes your neural architecture. The famous neuroscience principle "neurons that fire together wire together" (known as Hebb's rule) captures the essence: repeated patterns of neural activation strengthen the connections involved, making those patterns easier to trigger in the future.
+        </p>
+        <p className="mb-6">
+          This process works through several mechanisms:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Synaptic plasticity:</strong> Strengthening or weakening connections between neurons</li>
-          <li><strong>Neurogenesis:</strong> Growing new neurons (limited areas like hippocampus)</li>
-          <li><strong>Cortical reorganization:</strong> Reassigning brain regions to new functions</li>
-          <li><strong>Myelin changes:</strong> Improving signal transmission speed in frequently-used pathways</li>
+          <li><strong>Synaptic plasticity:</strong> Strengthening or weakening connections between neurons based on how frequently and strongly they are co-activated</li>
+          <li><strong>Neurogenesis:</strong> Growing new neurons, primarily in the hippocampus, which plays a central role in learning and memory</li>
+          <li><strong>Cortical reorganization:</strong> Reassigning brain regions to new functions when demands change, such as when a person who loses their sight develops enhanced auditory processing</li>
+          <li><strong>Myelin changes:</strong> Improving signal transmission speed in frequently-used pathways by adding layers of insulating myelin around nerve fibers</li>
         </ul>
+        <p className="mb-6">
+          The key takeaway is that neuroplasticity is not a passive process that happens to you--it is driven by your behavior. What you repeatedly do, think, and feel shapes the physical architecture of your brain. This gives you genuine agency over your emotional life, even when old patterns feel deeply entrenched.
+        </p>
 
         <h2 id="key-findings" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Key Research Findings
         </h2>
+        <p className="mb-6">
+          The evidence for emotional neuroplasticity has grown rapidly over the past two decades. Brain imaging technology now allows researchers to watch the brain change in real time, confirming what clinicians have long observed: therapy works, and the changes are biological, not just psychological.
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Cognitive Behavioral Therapy (CBT) produces measurable changes in prefrontal and limbic brain activity <Citation id="2" index={2} source="Biological Psychiatry" year="2021" tier={1} /></li>
-          <li>8 weeks of mindfulness meditation increases gray matter density in regions involved in emotion regulation <Citation id="3" index={3} source="Psychiatry Research: Neuroimaging" year="2020" tier={1} /></li>
-          <li>Repeated practice of new emotional responses strengthens alternative neural pathways, eventually making them automatic</li>
-          <li>Neuroplasticity continues throughout life, though the rate slows with age <Citation id="4" index={4} source="Trends in Neurosciences" year="2021" tier={1} /></li>
+          <li>Cognitive Behavioral Therapy (CBT) produces measurable changes in prefrontal and limbic brain activity after as few as 12 sessions <Citation id="2" index={2} source="Biological Psychiatry" year="2021" tier={1} /></li>
+          <li>Eight weeks of mindfulness meditation increases gray matter density in the hippocampus, prefrontal cortex, and other regions involved in emotion regulation <Citation id="3" index={3} source="Psychiatry Research: Neuroimaging" year="2020" tier={1} /></li>
+          <li>Repeated practice of new emotional responses strengthens alternative neural pathways, eventually making them automatic--a process that mirrors how physical skills become second nature</li>
+          <li>Neuroplasticity continues throughout life, though the rate slows with age. Adults in their 70s and 80s still show measurable brain changes in response to learning and practice <Citation id="4" index={4} source="Trends in Neurosciences" year="2021" tier={1} /></li>
+          <li>Recovery from depression and anxiety involves measurable normalization of brain activity patterns, suggesting that remission is a neurobiological event, not just a subjective one <Citation id="5" index={5} source="Current Opinion in Psychiatry" year="2020" tier={1} /></li>
         </ul>
 
         <h2 id="therapy-brain-change" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -503,6 +584,9 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           Therapy isn't just "talk"--it's structured neuroplastic training. When you work with a therapist, you're actively reshaping neural pathways through repeated cognitive and behavioral exercises. Brain imaging studies show measurable changes in brain structure and function after evidence-based therapy.
+        </p>
+        <p className="mb-6">
+          This is one of the most important messages from modern neuroscience: therapy produces real, physical changes in the brain. For people who wonder whether therapy is "just talking" or whether it produces genuine biological effects, the answer is clear. Functional MRI studies comparing brain activity before and after therapy consistently show normalization of previously dysfunctional activation patterns. The changes are as real as those produced by medication--and in many cases, they are more durable because the brain has learned new patterns rather than simply having its chemistry temporarily adjusted.
         </p>
 
         <ArticleTabs
@@ -588,6 +672,13 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           source="Meta-analysis of neuroplasticity research, 2020-2021"
         />
 
+        <p className="mb-6 mt-8">
+          These timelines may seem long, but consider the context: you spent years or decades building your current emotional patterns. Rewiring them in weeks to months is remarkably fast by comparison. The critical factor is consistency, not intensity. Thirty minutes of daily mindfulness practice for eight weeks produces more neuroplastic change than an occasional weekend meditation retreat. Small, regular efforts compound over time, just as compound interest builds wealth.
+        </p>
+        <p className="mb-6">
+          It's also worth noting that neuroplastic change is not always comfortable. During the transition period, when old patterns are weakening but new ones haven't yet solidified, you may feel increased emotional turbulence. This is normal and expected--it reflects the neural competition between the old circuit and the new one. Persisting through this discomfort is what ultimately tips the balance toward the new pattern.
+        </p>
+
         <h2 id="myths-facts" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Myths About Brain Change
         </h2>
@@ -610,16 +701,19 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           How to Maximize Neuroplastic Potential
         </h2>
         <p className="mb-6">
-          Certain conditions promote faster and more robust brain change:
+          Not all experiences produce equal neuroplastic change. Research has identified several conditions that accelerate and strengthen brain rewiring. Understanding these factors allows you to make your practice more effective, whether you are working with a therapist or pursuing self-directed change.
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-3">
-          <li><strong>Attention and focus:</strong> Neuroplasticity requires focused attention. Passive exposure doesn't change the brain--active, effortful practice does.</li>
-          <li><strong>Repetition:</strong> Single experiences rarely produce lasting change. Consistent repetition strengthens synaptic connections.</li>
-          <li><strong>Emotional salience:</strong> Experiences tied to emotion (positive or negative) drive stronger plasticity. This is why therapy that engages emotion is more effective than purely intellectual discussion.</li>
-          <li><strong>Sleep:</strong> Memory consolidation and synaptic pruning happen during sleep. Poor sleep undermines neuroplastic gains.</li>
-          <li><strong>Physical exercise:</strong> Aerobic exercise increases BDNF (brain-derived neurotrophic factor), a protein that promotes neurogenesis and synaptic growth.</li>
-          <li><strong>Novelty and challenge:</strong> Learning new skills and facing challenges triggers more plasticity than familiar, easy tasks.</li>
+          <li><strong>Attention and focus:</strong> Neuroplasticity requires focused attention. Passive exposure doesn't change the brain--active, effortful practice does. Multitasking and distraction dilute the neuroplastic signal.</li>
+          <li><strong>Repetition:</strong> Single experiences rarely produce lasting change. Consistent repetition strengthens synaptic connections. Think of it like carving a new path through a forest--each pass makes the trail clearer and easier to follow.</li>
+          <li><strong>Emotional salience:</strong> Experiences tied to emotion (positive or negative) drive stronger plasticity. This is why therapy that engages emotion is more effective than purely intellectual discussion. Your brain prioritizes rewiring for experiences that matter emotionally.</li>
+          <li><strong>Sleep:</strong> Memory consolidation and synaptic pruning happen during sleep. Poor sleep undermines neuroplastic gains. During deep sleep, your brain replays the day's learning, strengthening new connections and pruning unused ones.</li>
+          <li><strong>Physical exercise:</strong> Aerobic exercise increases BDNF (brain-derived neurotrophic factor), a protein that promotes neurogenesis and synaptic growth. Even moderate exercise like brisk walking boosts BDNF levels.</li>
+          <li><strong>Novelty and challenge:</strong> Learning new skills and facing challenges triggers more plasticity than familiar, easy tasks. The brain responds most strongly to experiences that push slightly beyond current capacity.</li>
         </ul>
+        <p className="mb-6">
+          Perhaps most importantly, self-compassion supports neuroplasticity. Chronic self-criticism and shame activate threat-response circuits that actually impede learning and change. Approaching your emotional growth with patience and kindness creates the neurochemical environment (lower cortisol, higher oxytocin) that facilitates rewiring.
+        </p>
 
         <QuoteBlock
           quote="The brain is not a static organ. It is dynamic, constantly rewiring itself based on what we do, think, and experience."
@@ -636,7 +730,13 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           Emotional patterns can change--but it requires consistent practice over time. Just as physical exercise builds muscle, mental practice (therapy, mindfulness, deliberate emotional regulation) builds new neural pathways. Recovery from anxiety, depression, and trauma is not just psychological--it's biological <Citation id="5" index={5} source="Current Opinion in Psychiatry" year="2020" tier={1} />.
         </p>
         <p className="mb-6">
-          The key insight: you are not stuck with the brain you have. Through deliberate effort, you can reshape neural circuits, strengthen regulatory pathways, and literally change how you feel and respond to the world. This isn't wishful thinking--it's established neuroscience.
+          The key insight: you are not stuck with the brain you have. Through deliberate effort, you can reshape neural circuits, strengthen regulatory pathways, and literally change how you feel and respond to the world. This isn't wishful thinking--it's established neuroscience supported by thousands of brain imaging studies.
+        </p>
+        <p className="mb-6">
+          Neuroplasticity also means you should be thoughtful about what you are reinforcing. Just as positive practices build healthy neural pathways, negative habits--rumination, avoidance, catastrophizing--also strengthen through repetition. Every time you rehearse a worry scenario in your mind, you are making that neural pathway a little stronger. Awareness of this bidirectional nature of plasticity can motivate you to invest your mental energy in patterns that serve your well-being rather than undermine it.
+        </p>
+        <p className="mb-6">
+          If you are beginning this journey, start small. Choose one emotional pattern you want to shift, practice an alternative response daily, and give yourself time. Your brain is already wired for change--you simply need to point it in the direction you want to go.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Path Forward">
@@ -644,7 +744,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
             If you struggle with anxiety, depression, or emotional reactivity, know that your brain is capable of change. The patterns that feel automatic and unchangeable are actually neural habits--and habits can be rewired.
           </p>
           <p>
-            The process takes time, effort, and often professional guidance. But it works. Every time you practice a new emotional response, you're strengthening new circuits. Every therapy session, every mindfulness practice, every moment of conscious regulation is literally reshaping your brain.
+            The process takes time, effort, and often professional guidance. But it works. Every time you practice a new emotional response, you're strengthening new circuits. Every therapy session, every mindfulness practice, every moment of conscious regulation is literally reshaping your brain. The science is clear: recovery is not just possible--it is biologically supported.
           </p>
         </ArticleCallout>
       </>
@@ -658,7 +758,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     description: "The vagus nerve connects your brain to your body's organs and plays a central role in the relaxation response. Learn how to activate it.",
     image: "/images/articles/cat01/cover-054.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -704,19 +804,28 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
         <h2 id="what-it-does" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What the Vagus Nerve Does
         </h2>
+        <p className="mb-6">
+          The vagus nerve (from the Latin "vagus," meaning wandering) lives up to its name. It meanders from the brainstem through the neck, chest, and abdomen, branching out to connect with nearly every major organ: the heart, lungs, stomach, intestines, liver, and spleen. This extensive reach makes it a master regulator of bodily functions and a critical bridge between your mental state and physical health.
+        </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Slows heart rate and lowers blood pressure</li>
-          <li>Promotes digestion and nutrient absorption</li>
-          <li>Reduces inflammation</li>
-          <li>Facilitates social connection and emotional regulation</li>
-          <li>Communicates body state to the brain (80% of vagal fibers are afferent--sending info up)</li>
+          <li><strong>Slows heart rate and lowers blood pressure</strong> -- counteracting the sympathetic "fight or flight" activation</li>
+          <li><strong>Promotes digestion and nutrient absorption</strong> -- signaling the gut to resume normal function after a stress response</li>
+          <li><strong>Reduces inflammation</strong> -- through the "cholinergic anti-inflammatory pathway," the vagus nerve helps regulate immune function</li>
+          <li><strong>Facilitates social connection and emotional regulation</strong> -- controlling facial muscles, vocal tone, and the ability to feel safe around others</li>
+          <li><strong>Communicates body state to the brain</strong> -- roughly 80% of vagal fibers are afferent (sending information upward), meaning your body informs your brain about its state far more than the reverse</li>
         </ul>
 
         <h2 id="vagal-tone" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Vagal Tone: The Key Metric
         </h2>
         <p className="mb-6">
-          Vagal tone refers to the activity level of the vagus nerve. Higher vagal tone = better emotional regulation, stress resilience, and physical health <Citation id="2" index={2} source="Biological Psychology" year="2021" tier={1} />. Low vagal tone is associated with anxiety, depression, and inflammation.
+          Vagal tone refers to the baseline activity level of the vagus nerve, and it has become one of the most important biomarkers in stress and emotion research. Higher vagal tone corresponds with better emotional regulation, greater stress resilience, stronger immune function, and improved cardiovascular health <Citation id="2" index={2} source="Biological Psychology" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Low vagal tone, by contrast, is consistently associated with anxiety, depression, chronic inflammation, and difficulty recovering from stressful events. People with low vagal tone tend to stay "activated" longer after a stressor, meaning their heart rate stays elevated, their muscles stay tense, and their stress hormones remain high well after the situation has passed. This prolonged activation takes a cumulative toll on both mental and physical health.
+        </p>
+        <p className="mb-6">
+          Vagal tone is most commonly measured through heart rate variability (HRV)--the subtle variation in time between heartbeats. A healthy heart doesn't beat like a metronome; it shows natural variation that reflects vagal influence. Higher HRV indicates stronger vagal tone and greater physiological flexibility. Many wearable devices now track HRV, making it possible to monitor your vagal health over time.
         </p>
 
         <ArticleCallout variant="tip" title="How to Activate Your Vagus Nerve">
@@ -891,10 +1000,13 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           What This Means for You
         </h2>
         <p className="mb-6">
-          The vagus nerve is trainable. Regular practices like deep breathing, meditation, and cold exposure can increase vagal tone over time, making you more resilient to stress and better able to regulate emotions.
+          The vagus nerve is trainable--and this is one of the most actionable findings in modern neuroscience. Regular practices like deep breathing, meditation, and cold exposure can increase vagal tone over time, making you more resilient to stress and better able to regulate emotions. Studies show measurable improvements in vagal tone after as little as six weeks of consistent daily practice.
         </p>
         <p className="mb-6">
-          You don't need expensive equipment or specialized training--just consistent, simple practices that activate this built-in calm-down system. Think of it as physical therapy for your nervous system. The more you practice, the stronger your vagal tone becomes, and the easier it is to shift from stress to calm.
+          You don't need expensive equipment or specialized training--just consistent, simple practices that activate this built-in calm-down system. Think of it as physical therapy for your nervous system. The more you practice, the stronger your vagal tone becomes, and the easier it is to shift from stress to calm. Unlike many interventions that require clinical settings or prescriptions, vagal toning is something you can do anywhere, at any time, for free.
+        </p>
+        <p className="mb-6">
+          Start with the practice that feels most accessible to you. For many people, that's simply extending their exhale during breathing exercises. If you currently breathe in for 4 seconds, try breathing out for 6 or 8 seconds. This single adjustment directly stimulates vagal pathways and produces an immediate calming effect. Over weeks and months of practice, your resting vagal tone increases, meaning your baseline state shifts toward greater calm, and you recover from stress more quickly even without deliberate intervention.
         </p>
       </>
     ),
@@ -907,7 +1019,7 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
     description: 'Cortisol and adrenaline are essential for survival--but chronic activation impairs your ability to think clearly and regulate emotions.',
     image: "/images/articles/cat01/cover-055.svg",
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -954,18 +1066,21 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           The Stress Response System
         </h2>
         <p className="mb-6">
-          When you perceive a threat, the hypothalamus activates the HPA axis (hypothalamic-pituitary-adrenal), releasing:
+          When you perceive a threat--whether it's a car swerving toward you or a critical email from your manager--the hypothalamus activates the HPA axis (hypothalamic-pituitary-adrenal axis). This cascade involves three structures working in sequence to release stress hormones into your bloodstream:
         </p>
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Adrenaline (epinephrine):</strong> Immediate response--increases heart rate, blood pressure, energy</li>
-          <li><strong>Cortisol:</strong> Sustained response--mobilizes glucose, suppresses non-essential functions</li>
+          <li><strong>Adrenaline (epinephrine):</strong> The immediate response hormone--surges within seconds to increase heart rate, blood pressure, and energy availability. This is what creates the "rush" of panic or excitement.</li>
+          <li><strong>Cortisol:</strong> The sustained response hormone--takes minutes to peak and can remain elevated for hours. It mobilizes glucose for energy, suppresses non-essential functions like digestion and immune response, and prepares the body for prolonged action.</li>
         </ul>
+        <p className="mb-6">
+          In a healthy system, the HPA axis operates like a thermostat. Cortisol levels rise during a stressor, then trigger a negative feedback loop that shuts the system down once the threat passes. Your heart rate returns to normal, your muscles relax, digestion resumes, and cortisol drops back to baseline. Problems begin when this shutdown mechanism fails--when the stressor never truly passes, or when the brain interprets everyday situations as ongoing threats.
+        </p>
 
         <h2 id="acute-vs-chronic" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Acute vs. Chronic Stress Effects
         </h2>
         <p className="mb-6">
-          Not all stress is bad. In fact, acute stress--the kind that lasts minutes to hours--can actually enhance performance. The problem arises when stress becomes chronic, lasting days, weeks, or months without adequate recovery.
+          Not all stress is bad. In fact, acute stress--the kind that lasts minutes to hours--can actually enhance performance. Moderate cortisol levels improve memory consolidation, sharpen attention, and increase motivation. Athletes, performers, and students often perform better under moderate stress than in completely relaxed states. The problem arises when stress becomes chronic, lasting days, weeks, or months without adequate recovery.
         </p>
 
         <ComparisonTable
@@ -1140,13 +1255,16 @@ export const neuroscienceOfEmotionsArticlesA: Article[] = [
           What This Means for You
         </h2>
         <p className="mb-6">
-          When you're chronically stressed, emotional regulation becomes harder--not because you're weak, but because your biology is compromised. Cortisol is literally impairing the brain regions responsible for emotional control, memory, and rational decision-making.
+          When you're chronically stressed, emotional regulation becomes harder--not because you're weak, but because your biology is compromised. Cortisol is literally impairing the brain regions responsible for emotional control, memory, and rational decision-making. Understanding this removes the shame and self-blame that so often accompany difficulty managing emotions under stress.
         </p>
         <p className="mb-6">
-          Reducing cortisol through stress management isn't optional self-care--it's essential for restoring your brain's capacity to regulate emotions. The good news: the changes caused by chronic stress are often reversible. When cortisol levels normalize, the prefrontal cortex can recover, the hippocampus can regrow, and amygdala reactivity can decrease.
+          Reducing cortisol through stress management isn't optional self-care--it's essential for restoring your brain's capacity to regulate emotions. The good news: the changes caused by chronic stress are often reversible. When cortisol levels normalize, the prefrontal cortex can recover its volume and function, the hippocampus can regrow (it is one of the few brain regions that supports neurogenesis throughout life), and amygdala reactivity can decrease to normal levels.
         </p>
         <p className="mb-6">
-          If you're struggling with emotional regulation, consider whether chronic stress might be the underlying culprit. Address the stress--through sleep, exercise, social support, therapy, or reducing stressors where possible--and you'll likely find emotional regulation becomes easier as your biology recovers.
+          Recovery doesn't happen overnight, but it does happen. Brain imaging studies of people who successfully reduce chronic stress--through therapy, lifestyle changes, or removal of the stressor--show measurable improvements in brain structure within months. The brain's capacity to heal from stress damage is remarkable when given the right conditions.
+        </p>
+        <p className="mb-6">
+          If you're struggling with emotional regulation, consider whether chronic stress might be the underlying culprit. Before trying to white-knuckle your way through emotional difficulties, address the biological foundation: prioritize sleep, incorporate regular physical activity, maintain social connections, and consider professional support through therapy. When the stress response is brought under control, emotional regulation often improves naturally as your brain's regulatory machinery comes back online.
         </p>
 
         <ArticleCallout variant="key-takeaway" title="The Bottom Line">

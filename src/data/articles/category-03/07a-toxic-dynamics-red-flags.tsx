@@ -1453,11 +1453,31 @@ export const toxicDynamicsArticlesA: Article[] = [
     description: 'Understand what it feels like to be in a relationship with someone with narcissistic traits, from idealization to devaluation, and how to recognize and heal from narcissistic abuse.',
     image: "/images/articles/cat03/cover-064.svg",
     category: CATEGORY_RELATIONSHIPS,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Narcissistic Abuse', 'Toxic Relationships', 'Recovery', 'Gaslighting'],
+    summary: 'Relationships with narcissistic partners follow a predictable cycle of idealization, devaluation, and discard that creates profound psychological harm. From the initial love-bombing to the eventual erosion of your reality and self-worth, narcissistic abuse is a specific pattern of manipulation that survivors describe as feeling like psychological warfare. Understanding the cycle, recognizing your experience in it, and accessing trauma-informed support are essential for healing.',
+    keyFacts: [
+      { text: 'Narcissistic abuse follows a three-phase cycle: idealize (love-bombing), devalue (criticism and control), discard (abandonment or replacement)', citationIndex: 2 },
+      { text: 'Survivors of narcissistic abuse show elevated rates of PTSD, complex trauma, and dissociative symptoms', citationIndex: 3 },
+      { text: 'Narcissistic partners use specific tactics: gaslighting, triangulation, projection, blame-shifting, and intermittent reinforcement', citationIndex: 1 },
+      { text: 'Both grandiose and vulnerable (covert) narcissism cause relationship harm through different behavioral patterns', citationIndex: 4 },
+      { text: 'Recovery requires trauma-focused therapy, no-contact or gray-rock strategies, and rebuilding self-trust', citationIndex: 5 },
+    ],
+    sparkMoment: 'You didn\'t cause their behavior by being "too sensitive" or "not enough." Narcissistic abuse is about their inability to see you as a whole person, not about your inadequacy. Your reality was valid all along.',
+    practicalExercise: {
+      title: 'Reality Reclaiming Journal',
+      steps: [
+        { title: 'Document Specific Incidents', description: 'Write down things that happened, what was said, and how you felt—without minimizing or excusing. Use "I" statements: "I felt hurt when..." This counters the gaslighting that makes you doubt your experience.' },
+        { title: 'Identify the Pattern', description: 'Look for recurring cycles: Was there a phase where they were amazing (idealization), then critical (devaluation), then distant or threatening to leave (discard)? Seeing the pattern helps you stop blaming yourself for their behavior.' },
+        { title: 'Validate Your Feelings', description: 'After each entry, write: "My feelings about this are valid." Narcissistic abuse trains you to dismiss your emotional reality. Actively counteract that.' },
+        { title: 'Share With Someone Safe', description: 'Read selected entries to a trusted friend, therapist, or support group. Hearing someone say "That\'s not okay" or "You didn\'t deserve that" helps rebuild your sense of reality.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Healing Progress',
+    },
     citations: [
       {
         id: '1',

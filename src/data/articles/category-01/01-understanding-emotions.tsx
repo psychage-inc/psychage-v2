@@ -953,7 +953,7 @@ export const understandingEmotionsArticles: Article[] = [
       'If your emotions seem more intense than other people\'s, you may have high emotional sensitivity. Learn what causes it, why it is not a weakness, and how to work with it rather than against it.',
     image: '/images/articles/cat01/cover-006.svg',
     category: CATEGORY_EMOTIONAL_REGULATION,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-16',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -994,74 +994,149 @@ export const understandingEmotionsArticles: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            You cry at movies that others shrug off. A harsh comment stays with you for days. Crowded rooms drain you faster than they drain your friends. If this sounds familiar, you are not broken, dramatic, or "too much." You may have what researchers call <strong>high emotional sensitivity</strong> --- and it is more common, and more scientifically understood, than most people realize.
+            You cry at movies that others shrug off. A harsh comment stays with you for days. Crowded rooms drain you faster than they drain your friends. If this sounds familiar, you are not broken, dramatic, or "too much." You may have what researchers call <strong>high emotional sensitivity</strong>, and it is more common and more scientifically understood than most people realize.
+          </p>
+          <p className="mb-6">
+            About 15 to 20 percent of the population has this temperament trait, which psychologist Elaine Aron termed <strong>sensory processing sensitivity (SPS)</strong>. People high in SPS process sensory and emotional information more deeply. They notice subtleties others miss, react more strongly to stimuli, and need more recovery time after intense experiences <Citation id="1" index={1} source="Personality and Social Psychology Review" year="2012" tier={1} />.
+          </p>
+          <p className="mb-6">
+            The challenge is not the sensitivity itself. It is living in a culture that treats deep feeling as a liability rather than an asset. But research shows that emotional sensitivity, when understood and managed, becomes a source of depth, empathy, and connection that enriches your life and the lives of people around you.
           </p>
         </div>
 
-        <h2 id="understanding-the-challenge" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Understanding the Challenge
+        <ComparisonTable
+          title="High Sensitivity vs. Common Misconceptions"
+          columns={['Aspect', 'Misconception', 'Reality']}
+          items={[
+            { feature: 'Nature', values: ['Weakness or flaw', 'Temperament trait with neurological basis'] },
+            { feature: 'Prevalence', values: ['Rare or abnormal', '15-20% of the population'] },
+            { feature: 'Changeability', values: ['Can be eliminated with effort', 'Innate trait; management strategies improve outcomes'] },
+            { feature: 'Impact', values: ['Only negative (overwhelm, anxiety)', 'Both challenges and strengths (depth, empathy, creativity)'] },
+            { feature: 'Environment', values: ['Does not matter much', 'Environment is everything: supportive contexts unlock strengths'] },
+          ]}
+          highlightColumn={2}
+        />
+
+        <h2 id="what-is-emotional-sensitivity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Is Emotional Sensitivity?
         </h2>
         <p className="mb-6">
-          Psychologist Elaine Aron identified a temperament trait she called <strong>sensory processing sensitivity (SPS)</strong>, present in an estimated 15--20% of the population. People high in SPS process sensory and emotional information more deeply --- they notice subtleties others miss, react more strongly to stimuli, and need more recovery time after intense experiences <Citation id="1" index={1} source="Personality and Social Psychology Review" year="2012" tier={1} />.
+          Emotional sensitivity is not a clinical disorder. It is a temperament trait with a neurological basis. fMRI studies show that highly sensitive people display greater activation in brain regions involved in awareness, empathy, and emotional processing, including the insula and mirror neuron system <Citation id="3" index={3} source="Brain and Behavior" year="2014" tier={1} />.
         </p>
         <p className="mb-6">
-          This is not a clinical disorder. It is a temperament trait with a neurological basis. fMRI studies show that highly sensitive people display greater activation in brain regions involved in awareness, empathy, and emotional processing --- including the insula and mirror neuron system <Citation id="3" index={3} source="Brain and Behavior" year="2014" tier={1} />.
+          Elaine Aron's research identified four hallmarks of high sensitivity, captured in the acronym <strong>DOES</strong>:
         </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Depth of processing</strong>: You reflect more before acting, notice layers of meaning others miss, and think about implications</li>
+          <li><strong>Overstimulation</strong>: You become overwhelmed more quickly in loud, crowded, or chaotic environments</li>
+          <li><strong>Emotional reactivity and empathy</strong>: You feel your own emotions and others' emotions more intensely</li>
+          <li><strong>Sensitivity to subtleties</strong>: You notice small changes in environment, mood, tone, or body language that others overlook</li>
+        </ul>
         <p className="mb-6">
-          The challenge is not the sensitivity itself --- it is living in a culture that treats deep feeling as a liability rather than an asset. Sensitive people often internalize the message that they need to "toughen up," which leads to self-criticism and emotional suppression rather than skillful management <Citation id="7" index={7} source="Clinical Psychology Review" year="2022" tier={1} />.
+          These are not separate traits. They are four expressions of the same underlying characteristic: a nervous system that processes information more thoroughly <Citation id="9" index={9} source="Harmony Books" year="1996" tier={5} />.
         </p>
 
-        <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          Evidence-Based Strategies
+        <StatCard
+          stats={[
+            { value: 15, suffix: '%', label: 'Minimum percentage of the population with high sensory processing sensitivity' },
+            { value: 300, suffix: '%', label: 'Greater activation in empathy-related brain regions for highly sensitive people' },
+            { value: 2, suffix: 'x', label: 'More responsive to positive environments compared to less sensitive individuals' },
+          ]}
+          source="Aron, 2012; Acevedo et al., 2014"
+        />
+
+        <h2 id="the-double-edged-sword" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Double-Edged Nature of Sensitivity
         </h2>
+        <p className="mb-6">
+          The same trait that makes you more affected by negativity also makes you more responsive to positive experiences, supportive environments, and therapeutic interventions. Developmental psychologists call this <strong>differential susceptibility</strong>. Sensitive people are not just more vulnerable to negative environments. They are also more responsive to supportive ones <Citation id="5" index={5} source="Annual Review of Psychology" year="2019" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Research on highly sensitive children found that in harsh or unsupportive environments, these children struggled significantly more than their less-sensitive peers. But in nurturing, supportive environments, sensitive children thrived and actually outperformed their peers on measures of wellbeing, behavior, and academic achievement <Citation id="2" index={2} source="Development and Psychopathology" year="2018" tier={1} />.
+        </p>
+        <p className="mb-6">
+          This pattern continues into adulthood. A 2020 study found that sensory processing sensitivity moderates the relationship between childhood experiences and adult life satisfaction. People with high sensitivity who experienced supportive childhoods reported the <em>highest</em> adult life satisfaction, while those who experienced difficult childhoods reported the <em>lowest</em> <Citation id="10" index={10} source="Personality and Individual Differences" year="2020" tier={1} />.
+        </p>
+
+        <HighlightBox variant="quote">
+          <p className="italic text-lg">
+            "Sensitivity is not about being weak. It is about processing more deeply. The very trait that makes you vulnerable to overwhelm also makes you responsive to beauty, connection, and growth in ways others cannot access as easily."
+          </p>
+        </HighlightBox>
+
+        <h2 id="how-to-work-with-sensitivity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Work With Your Sensitivity
+        </h2>
+        <p className="mb-6">
+          Sensitivity is not something to eliminate. It is something to understand and manage. Here are five evidence-based strategies:
+        </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">1. Reframe sensitivity as depth of processing</h3>
         <p className="mb-6">
-          Sensitivity is not about being weak --- it is about processing more deeply. The same trait that makes you more affected by negativity also makes you more responsive to positive experiences, supportive environments, and therapeutic interventions. Researchers call this <strong>differential susceptibility</strong> --- for better and for worse <Citation id="5" index={5} source="Annual Review of Psychology" year="2019" tier={1} />.
+          The cultural narrative is that sensitivity is a flaw. But the neuroscience shows it is a different processing style. Highly sensitive people notice more, reflect more, and feel more. This has costs (overstimulation) and benefits (creativity, empathy, insight). The trait itself is neutral. What matters is how you work with it <Citation id="7" index={7} source="Clinical Psychology Review" year="2022" tier={1} />.
         </p>
 
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Build in recovery time</h3>
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">2. Build in recovery time after stimulation</h3>
         <p className="mb-6">
-          Highly sensitive people deplete their emotional energy faster in stimulating environments. This is not a flaw --- it is a neurological reality. Schedule downtime after intense social interactions, stressful meetings, or emotionally charged events. Even 15 minutes of quiet can prevent the buildup that leads to overwhelm <Citation id="6" index={6} source="Emotion Review" year="2020" tier={1} />.
+          Highly sensitive people deplete their emotional energy faster in stimulating environments. This is not a flaw. It is a neurological reality. Schedule downtime after intense social interactions, stressful meetings, or emotionally charged events. Even 15 minutes of quiet can prevent the buildup that leads to overwhelm <Citation id="6" index={6} source="Emotion Review" year="2020" tier={1} />.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">3. Manage your environment proactively</h3>
         <p className="mb-6">
-          Research on sensory processing sensitivity in children shows that environment matters enormously --- sensitive children thrive in supportive environments and struggle more than average in harsh ones <Citation id="2" index={2} source="Development and Psychopathology" year="2018" tier={1} />. As an adult, you have more control over your environment. Reduce unnecessary stimulation: noise-canceling headphones, limited news consumption, intentional social scheduling.
+          Since environment has an outsized effect on sensitive people, you benefit more from optimizing it. Reduce unnecessary stimulation: noise-canceling headphones, softer lighting, limited news consumption, intentional social scheduling. These are not luxuries. They are adaptations that allow your temperament to function optimally.
         </p>
 
         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">4. Develop emotion regulation skills</h3>
         <p className="mb-6">
-          Sensitivity means you feel emotions more intensely, but it does not determine how you respond to them. Building a toolkit of regulation strategies --- deep breathing, cognitive reappraisal, grounding techniques --- gives you a bridge between feeling deeply and responding skillfully <Citation id="4" index={4} source="Emotion" year="2017" tier={1} />.
+          Sensitivity means you feel emotions more intensely, but it does not determine how you respond to them. Building a toolkit of regulation strategies gives you a bridge between feeling deeply and responding skillfully. Techniques like deep breathing, cognitive reappraisal, and grounding are especially effective for sensitive people <Citation id="4" index={4} source="Emotion" year="2017" tier={1} />.
         </p>
 
-        <div className="my-10 p-6 bg-amber-50 dark:bg-amber-900/20 rounded-xl border-l-4 border-amber-400 flex gap-4">
-          <div className="shrink-0 text-amber-500 mt-1">
-            <Lightbulb size={24} />
-          </div>
-          <div>
-            <h4 className="font-bold text-amber-900 dark:text-amber-100 mb-1">Key Takeaway</h4>
-            <p className="text-amber-800 dark:text-amber-200/80 text-sm leading-relaxed">
-              Emotional sensitivity is not a disorder or a weakness. It is a temperament trait that, when understood and managed, becomes a source of depth, empathy, and connection that enriches your life and the lives of people around you.
-            </p>
-          </div>
-        </div>
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">5. Identify and leverage your sensitivity strengths</h3>
+        <p className="mb-6">
+          Sensitivity is not just a collection of vulnerabilities. It comes with tangible strengths: noticing what others miss, deep empathy, aesthetic appreciation, conscientiousness, creativity, and responsiveness to feedback. In the right environments, these strengths are assets. Identify the contexts where your sensitivity is an advantage and seek more of those contexts.
+        </p>
 
-        <h2 id="how-to-get-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          How to Get Started
+        <ArticleTabs
+          tabs={[
+            { id: 'personal', label: 'Personal Life', content: <div><p className="mb-4"><strong>Buffer time:</strong> Schedule 15-30 minutes of quiet after draining activities.</p><p className="mb-4"><strong>Environment design:</strong> Reduce unnecessary noise, clutter, and visual stimulation in your living space.</p><p><strong>Energy audit:</strong> Track which activities drain you and which recharge you. Do more of the latter.</p></div> },
+            { id: 'work', label: 'Work', content: <div><p className="mb-4"><strong>Meeting recovery:</strong> Block 10 minutes after back-to-back meetings for mental reset.</p><p className="mb-4"><strong>Workspace control:</strong> Use noise-canceling headphones, adjust lighting, minimize interruptions.</p><p><strong>Leverage strengths:</strong> Volunteer for tasks requiring attention to detail, empathy, or creative problem-solving.</p></div> },
+            { id: 'social', label: 'Social Settings', content: <div><p className="mb-4"><strong>Quality over quantity:</strong> Smaller gatherings with close friends often work better than large parties.</p><p className="mb-4"><strong>Exit strategy:</strong> Give yourself permission to leave events early when you feel depleted.</p><p><strong>Recovery rituals:</strong> Build in solo time after social events to process and recharge.</p></div> },
+          ]}
+        />
+
+        <h2 id="common-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Challenges and Solutions
         </h2>
-        <ul className="list-disc list-inside space-y-3 mb-8 text-gray-700 dark:text-gray-300 ml-4">
-          <li><strong>Take stock of your energy drains</strong>: this week, notice which situations leave you feeling depleted and which ones energize you. Write them down.</li>
-          <li><strong>Build one buffer</strong> into your daily schedule --- a 15-minute block of quiet between activities.</li>
-          <li><strong>Replace self-criticism with self-recognition</strong>: the next time you think "I'm too sensitive," try "I process things deeply, and that's why I need to take care of my energy."</li>
-        </ul>
 
-        <h2 id="when-self-help-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
-          When Self-Help Isn't Enough
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            { id: 'challenge1', title: 'I feel guilty for needing more downtime than others', content: <p>This is a misalignment between your temperament and cultural expectations, not a personal failing. Your nervous system processes information more thoroughly, which requires more recovery time. That is a neurological reality, not a weakness. Frame it as you would any other biological need: you would not feel guilty for needing sleep.</p> },
+            { id: 'challenge2', title: 'People call me "too sensitive" or tell me to toughen up', content: <p>This reflects their lack of understanding about temperament diversity, not a deficit in you. You can educate them ("Research shows about 20% of people process information more deeply — it is a normal variation") or decide the relationship is not worth the energy. Not everyone needs to understand you.</p> },
+            { id: 'challenge3', title: 'I absorb other people\'s emotions and it drains me', content: <p>This is high empathy combined with permeable boundaries. Practice distinguishing between your emotions and theirs. Ask: "Is this feeling mine, or am I picking it up from someone else?" Build in transition rituals (washing hands, changing clothes, brief meditation) after emotionally intense interactions.</p> },
+            { id: 'challenge4', title: 'I avoid situations because I know they will overwhelm me', content: <p>Avoidance protects you short-term but shrinks your life long-term. The goal is not to eliminate overstimulation but to manage it. Exposure with recovery time (attending the event but leaving after an hour, bringing noise-canceling headphones) builds tolerance without forcing yourself into prolonged overwhelm.</p> },
+          ]}
+        />
+
+        <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          When to Seek Professional Help
         </h2>
         <p className="mb-6">
-          Emotional sensitivity is a trait, not a condition. But when sensitivity combines with chronic stress, unsupportive environments, or past trauma, it can contribute to anxiety, depression, or burnout <Citation id="8" index={8} source="NIMH" year="2023" tier={2} />. If your sensitivity is causing persistent distress or interfering with your ability to work, maintain relationships, or enjoy daily life, a therapist can help you build strategies tailored to your temperament.
+          Emotional sensitivity is a trait, not a condition. But when sensitivity combines with chronic stress, unsupportive environments, or past trauma, it can contribute to anxiety, depression, or burnout <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />. If your sensitivity is causing persistent distress or interfering with your ability to work, maintain relationships, or enjoy daily life, a therapist can help you build strategies tailored to your temperament.
         </p>
+        <p className="mb-6">
+          Therapies like dialectical behavior therapy (DBT), acceptance and commitment therapy (ACT), and somatic experiencing are particularly effective for highly sensitive people because they teach skills for managing intense emotions and bodily sensations without judgment or suppression.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Emotional sensitivity (sensory processing sensitivity) is present in 15-20% of the population and has a neurological basis</li>
+            <li>Highly sensitive people process information more deeply, which creates both vulnerabilities (overstimulation) and strengths (empathy, creativity, insight)</li>
+            <li>Differential susceptibility means sensitive people are more affected by negative environments but also benefit more from supportive ones</li>
+            <li>The goal is not to eliminate sensitivity but to manage it: build recovery time, optimize your environment, and develop emotion regulation skills</li>
+            <li>In the right environments, sensitivity becomes an asset that enriches your life and relationships</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

@@ -4,7 +4,6 @@ import { CATEGORY_AGING, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_sha
 import Citation from '@/components/article/Citation';
 import { ArticleCallout } from '@/components/article/blocks/ArticleCallout';
 import { StatCard } from '@/components/article/blocks/StatCard';
-
 export const griefLossTransitionsArticlesB: Article[] = [
   {
     id: catId(51),

@@ -4,7 +4,6 @@ import { CATEGORY_WOMENS_HEALTH, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from
 import Citation from '@/components/article/Citation';
 import { ArticleCallout } from '@/components/article/blocks/ArticleCallout';
 import { StatCard } from '@/components/article/blocks/StatCard';
-
 export const articles: Article[] = [
   {
     id: catId(1),

@@ -9,7 +9,6 @@ import Citation from '@/components/article/Citation';
 import { ArticleCallout } from '@/components/article/blocks/ArticleCallout';
 import { StatCard } from '@/components/article/blocks/StatCard';
 import { ComparisonTable } from '@/components/article/blocks/ComparisonTable';
-
 export const articles: Article[] = [
   // ============================================================================
   // Article 41: Anorexia Nervosa in Women: Beyond the Stereotypes

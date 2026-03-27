@@ -1751,6 +1751,39 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="pain-vs-fear" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          It's Not Really About the Pain
+        </h2>
+
+        <p className="mb-6">
+          Many people with needle phobia say "I can handle pain, that's not the issue." And they're right. Research shows needle phobia isn't primarily about pain sensitivity <Citation id="7" index={7} source="CMAJ" year="2018" tier={2} />. It's about:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Loss of control</strong>: Someone else is penetrating your body with an object. You have to hold still and trust them.</li>
+          <li><strong>Fear of fainting</strong>: If you've fainted before, anticipatory anxiety about fainting again becomes the primary fear.</li>
+          <li><strong>Invasion anxiety</strong>: The visceral response to something breaking your skin and entering your body.</li>
+          <li><strong>Unpredictability</strong>: You don't know exactly when the needle will go in, how deep, how long it will last.</li>
+          <li><strong>Past trauma</strong>: If you were held down for injections as a child, the needle becomes associated with powerlessness.</li>
+        </ul>
+
+        <p className="mb-6">
+          Understanding that it's not about pain tolerance helps explain why "just don't look" or "it's only a pinch" advice doesn't help. The fear is deeper and more complex than physical pain. This also means reducing the actual pain (numbing cream, smaller needles, distraction) helps but doesn't fully address the phobia.
+        </p>
+
+        <ComparisonTable
+          title="Strategies That Help vs. Don't Help"
+          columns={['Strategy', 'Why It Works', "Why It Doesn't Work"]}
+          items={[
+            { feature: 'Applied tension', values: ['Prevents fainting physiologically', '---'] },
+            { feature: 'Numbing cream', values: ['Reduces physical pain sensation', "Doesn't address fear of penetration/control"] },
+            { feature: '"Just don\'t look"', values: ['---', "Fear isn't visual -- it's about invasion and loss of control"] },
+            { feature: 'Gradual exposure therapy', values: ['Retrains fear response through experience', '---'] },
+            { feature: '"It\'s just a pinch"', values: ['---', "Minimizes valid fear, doesn't build coping skills"] },
+            { feature: 'Lying down', values: ['Makes fainting less dangerous, reduces anticipatory fear', '---'] },
+          ]}
+        />
+
         <h2 id="applied-tension" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Applied Tension: The Technique to Prevent Fainting
         </h2>
@@ -1855,6 +1888,38 @@ export const phobiasSpecificFearsArticlesA: Article[] = [
           role="Psychologist, Developer of One-Session Treatment"
           variant="default"
         />
+
+        <h2 id="success-outcomes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real Treatment Outcomes: What Success Looks Like
+        </h2>
+
+        <p className="mb-6">
+          Treatment for needle phobia is remarkably effective. Here's what research shows about outcomes <Citation id="5" index={5} source="Clinical Psychology Review" year="2017" tier={1} />:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 80, suffix: '%', label: 'Successfully complete one-session treatment for needle phobia' },
+            { value: 90, suffix: '%', label: 'Can tolerate injections without fainting after applied tension training' },
+            { value: 75, suffix: '%', label: 'Maintain improvements 4+ years after treatment' },
+          ]}
+          source="Meta-analysis of BII phobia treatment studies"
+        />
+
+        <p className="mb-6">
+          Success doesn't mean you'll love needles. It means you can get necessary medical care without overwhelming fear or fainting. Many people report that after treatment, needle procedures shift from "impossible nightmare" to "unpleasant but manageable task." That's a life-changing difference when it means you can get vaccines, blood tests, dental care, and treatment for chronic conditions.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Needle phobia affects 25% of adults, with 16% avoiding necessary medical care — making it one of the most medically dangerous phobias</li>
+            <li>Unlike other phobias, needle phobia causes fainting through vasovagal syncope (sudden blood pressure drop) rather than sustained panic</li>
+            <li>Applied tension technique prevents fainting by tensing large muscle groups to raise blood pressure before and during procedures — highly effective when practiced</li>
+            <li>The phobia isn't about pain tolerance — it's about loss of control, invasion anxiety, fear of fainting, and past trauma</li>
+            <li>One-session treatment achieves 80% success rates in just 2-3 hours using gradual exposure + applied tension</li>
+            <li>Treatment allows access to life-saving healthcare: vaccinations, blood tests, dental care, and management of chronic conditions requiring injections</li>
+          </ul>
+        </ArticleCallout>
 
         <p className="mb-6">
           If needle phobia is limiting your healthcare access, know that treatment works and it works quickly. You don't have to live with this fear forever --- or let it endanger your health.

@@ -11,7 +11,6 @@ import {
   CLINICAL_REVIEWER,
   catId,
 } from './_shared';
-
 export const socialIsolationLonelinessArticlesA: Article[] = [
   {
     id: catId(31),

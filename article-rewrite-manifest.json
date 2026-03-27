@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 205,
+  "completedSessions": 210,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -1391,7 +1391,7 @@
       "completedAt": "2026-03-27T20:02:20Z"
     },
     "29": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "07b-evidence-based-coping-strategies",
       "file": "src/data/articles/category-02/07b-evidence-based-coping-strategies.tsx",
@@ -1403,7 +1403,7 @@
           "slug": "worry-time-the-counterintuitive-strategy-that-reduces-anxious-thinking",
           "title": "Worry Time: The Counterintuitive Strategy That Reduces Anxious Thinking",
           "currentWords": 517,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1411,7 +1411,7 @@
           "slug": "behavioral-activation-why-doing-something-anything-helps-when-anxiety-paralyzes",
           "title": "Behavioral Activation: Why Doing Something (Anything) Helps When Anxiety Paralyzes",
           "currentWords": 559,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1419,7 +1419,7 @@
           "slug": "mindfulness-based-stress-reduction-what-the-evidence-shows",
           "title": "Mindfulness-Based Stress Reduction: What the Evidence Shows",
           "currentWords": 480,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1427,7 +1427,7 @@
           "slug": "cold-water-therapy-and-the-dive-reflex-does-it-really-help-anxiety",
           "title": "Cold Water Therapy and the Dive Reflex: Does It Really Help Anxiety?",
           "currentWords": 496,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -1435,13 +1435,13 @@
           "slug": "building-your-anxiety-management-plan-a-personalized-approach",
           "title": "Building Your Anxiety Management Plan: A Personalized Approach",
           "currentWords": 569,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:22:45Z"
     },
     "30": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "08a-anxiety-in-relationships-work-daily-life",
       "file": "src/data/articles/category-02/08a-anxiety-in-relationships-work-daily-life.tsx",
@@ -1453,7 +1453,7 @@
           "slug": "how-anxiety-affects-your-relationships-and-what-to-do-about-it",
           "title": "How Anxiety Affects Your Relationships (And What to Do About It)",
           "currentWords": 637,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1461,7 +1461,7 @@
           "slug": "anxious-attachment-when-fear-of-abandonment-drives-your-behavior",
           "title": "Anxious Attachment: When Fear of Abandonment Drives Your Behavior",
           "currentWords": 931,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1469,7 +1469,7 @@
           "slug": "workplace-anxiety-managing-fear-in-meetings-emails-and-deadlines",
           "title": "Workplace Anxiety: Managing Fear in Meetings, Emails, and Deadlines",
           "currentWords": 820,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -1477,13 +1477,13 @@
           "slug": "anxiety-and-intimacy-how-fear-shows-up-in-your-closest-relationships",
           "title": "Anxiety and Intimacy: How Fear Shows Up in Your Closest Relationships",
           "currentWords": 1364,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T06:35:00Z"
     },
     "31": {
-      "status": "pending",
+      "status": "complete",
       "category": 2,
       "subcategoryFile": "08b-anxiety-in-relationships-work-daily-life",
       "file": "src/data/articles/category-02/08b-anxiety-in-relationships-work-daily-life.tsx",
@@ -1495,7 +1495,7 @@
           "slug": "anxiety-and-procrastination-the-connection-most-people-miss",
           "title": "Anxiety and Procrastination: The Connection Most People Miss",
           "currentWords": 1493,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -1503,7 +1503,7 @@
           "slug": "how-to-support-a-partner-with-anxiety-without-becoming-their-therapist",
           "title": "How to Support a Partner with Anxiety Without Becoming Their Therapist",
           "currentWords": 1208,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -1511,10 +1511,10 @@
           "slug": "living-well-with-anxiety-what-long-term-management-really-looks-like",
           "title": "Living Well with Anxiety: What Long-Term Management Really Looks Like",
           "currentWords": 1106,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:00Z"
     },
     "32": {
       "status": "pending",
@@ -11017,7 +11017,7 @@
       "completedAt": null
     },
     "222": {
-      "status": "pending",
+      "status": "complete",
       "category": 18,
       "subcategoryFile": "02b-perinatal-postpartum",
       "file": "src/data/articles/category-18/02b-perinatal-postpartum.tsx",
@@ -11029,7 +11029,7 @@
           "slug": "pregnancy-after-loss-navigating-fear-hope-and-complicated-emotions",
           "title": "Article 16",
           "currentWords": 486,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -11037,7 +11037,7 @@
           "slug": "perinatal-ocd-intrusive-thoughts-and-compulsive-safety-behaviors",
           "title": "Article 17",
           "currentWords": 483,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -11045,7 +11045,7 @@
           "slug": "tokophobia-understanding-and-treating-fear-of-childbirth",
           "title": "Article 18",
           "currentWords": 443,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -11053,7 +11053,7 @@
           "slug": "postpartum-rage-understanding-anger-and-irritability-after-birth",
           "title": "Article 19",
           "currentWords": 466,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -11061,10 +11061,10 @@
           "slug": "partner-perinatal-mental-health-supporting-non-birthing-parents",
           "title": "Article 20",
           "currentWords": 478,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T18:45:00.000Z"
     },
     "223": {
       "status": "pending",
@@ -11117,7 +11117,7 @@
       "completedAt": null
     },
     "224": {
-      "status": "pending",
+      "status": "complete",
       "category": 18,
       "subcategoryFile": "03b-menopause-perimenopause",
       "file": "src/data/articles/category-18/03b-menopause-perimenopause.tsx",
@@ -11129,7 +11129,7 @@
           "slug": "hormone-therapy-and-mental-health-benefits-risks-and-decisions",
           "title": "Article 26",
           "currentWords": 494,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -11137,7 +11137,7 @@
           "slug": "menopause-and-anxiety-managing-increased-worry-and-panic",
           "title": "Article 27",
           "currentWords": 468,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -11145,7 +11145,7 @@
           "slug": "social-and-cultural-aspects-of-menopause-ageism-and-identity",
           "title": "Article 28",
           "currentWords": 457,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -11153,7 +11153,7 @@
           "slug": "managing-menopause-with-pre-existing-mental-health-conditions",
           "title": "Article 29",
           "currentWords": 450,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -11161,10 +11161,10 @@
           "slug": "surgical-menopause-and-mental-health-after-hysterectomy-and-oophorectomy",
           "title": "Article 30",
           "currentWords": 447,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:30:00.000Z"
     },
     "225": {
       "status": "complete",

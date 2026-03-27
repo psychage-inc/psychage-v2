@@ -8,6 +8,7 @@ import {
   ComparisonTable,
   StatCard,
   ArticleAccordion,
+  ArticleTabs,
   ProgressSteps,
   BeforeAfter,
 } from '../../../components/article/blocks';
@@ -20,11 +21,31 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
     description: 'Discover how anxiety impacts communication, trust, and connection in relationships, plus evidence-based strategies to break free from worry patterns.',
     image: "/images/articles/cat02/cover-071.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Relationships', 'Communication', 'Attachment', 'Coping Skills'],
+    summary: 'Anxiety shapes how we connect with others through patterns like constant reassurance-seeking, communication avoidance, and overthinking. This article explores the specific ways anxiety infiltrates relationships and provides evidence-based strategies to break these cycles while building stronger, more authentic connections.',
+    keyFacts: [
+      { text: '47% of people with anxiety disorders report significant relationship difficulties', citationIndex: 1 },
+      { text: 'Individuals with anxiety are 3 times more likely to experience relationship dissatisfaction compared to those without anxiety', citationIndex: 2 },
+      { text: 'Reassurance-seeking creates a negative feedback loop where the more you seek reassurance, the less effective it becomes', citationIndex: 8 },
+      { text: 'Couples who use cognitive-behavioral conjoint therapy show 62% improvement in relationship quality', citationIndex: 5 },
+      { text: 'Communication skills training for anxiety-affected couples leads to significant reductions in both anxiety symptoms and relationship conflict', citationIndex: 7 },
+    ],
+    sparkMoment: 'Connection isn\'t about being anxiety-free—it\'s about being honest, aware, and willing to respond differently than your fear demands.',
+    practicalExercise: {
+      title: 'The 5-Minute Anxiety Check-In',
+      steps: [
+        { title: 'Notice the anxiety signal', description: 'When you feel the urge to seek reassurance or avoid a conversation, pause and name it: "I\'m feeling anxious right now."' },
+        { title: 'Ask what anxiety wants', description: 'Identify the anxious urge: "My anxiety wants me to text again / avoid this topic / ask for reassurance / control the situation."' },
+        { title: 'Reality check', description: 'Ask: "What do I actually need? Is there real danger here, or is this anxiety talking?" Often, the answer is self-soothing, not external validation.' },
+        { title: 'Choose a different response', description: 'Instead of the anxiety-driven action, try one alternative: wait 30 minutes, use grounding, or communicate anxiety-aware ("I notice I\'m feeling anxious about X").' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Relationship Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -171,6 +192,32 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
           source="Journal of Anxiety Disorders, 2020; Behavior Therapy, 2021"
         />
 
+        <h2 id="anxiety-relationship-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Anxiety-Relationship Cycle
+        </h2>
+        <p className="mb-6">
+          Anxiety in relationships operates through a self-perpetuating cycle that feels impossible to break. Here's how it typically unfolds: You feel anxious about your relationship (triggered by perceived distance, conflict, or uncertainty). This anxiety drives specific behaviors—seeking reassurance, withdrawing, overanalyzing, or attempting to control. These behaviors, intended to reduce anxiety, actually create relationship strain <Citation id="3" index={3} source="Behavior Therapy" year="2021" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Your partner may respond with frustration, confusion, or their own withdrawal. This response confirms your anxious predictions ("See, something IS wrong!"), which intensifies the anxiety and drives more of the same behaviors. The cycle feeds itself.
+        </p>
+        <p className="mb-6">
+          Breaking this cycle requires intervening at any point—and the most effective intervention point is between feeling anxiety and acting on it. This is where the strategies below become essential.
+        </p>
+
+        <ComparisonTable
+          title="How Anxiety Changes Relationship Dynamics"
+          columns={['Aspect', 'Without Anxiety', 'With Unmanaged Anxiety']}
+          items={[
+            { feature: 'Communication', values: ['Direct and clear', 'Indirect or excessive'] },
+            { feature: 'Trust baseline', values: ['Presumed unless proven otherwise', 'Must be constantly re-established'] },
+            { feature: 'Conflict approach', values: ['Address issues as they arise', 'Avoid or catastrophize'] },
+            { feature: 'Independence balance', values: ['Comfortable with alone time', 'Alone time triggers worry'] },
+            { feature: 'Uncertainty tolerance', values: ['Can handle "I don\'t know"', 'Needs certainty and predictability'] },
+          ]}
+          highlightColumn={2}
+        />
+
         <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Strategies for Anxious Relationships
         </h2>
@@ -274,6 +321,24 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          5. Build Tolerance for Relationship Uncertainty
+        </h3>
+        <p className="mb-6">
+          One of anxiety's core demands in relationships is certainty: certainty about how someone feels, certainty about the future, certainty that nothing bad will happen. But relationships, by their nature, involve uncertainty. No one can promise they'll never change, never hurt you, or never leave.
+        </p>
+        <p className="mb-6">
+          Building uncertainty tolerance doesn't mean resigning yourself to worst-case scenarios. It means accepting that relationships involve risk, and that this risk is part of what makes connection meaningful. Research shows that individuals who can tolerate relationship uncertainty experience significantly less anxiety and higher relationship satisfaction <Citation id="2" index={2} source="Clinical Psychology Review" year="2019" tier={1} />.
+        </p>
+        <ArticleCallout variant="reflection" title="Practice This">
+          <p className="mb-3">
+            When uncertainty arises ("What if they stop loving me?" "What if this doesn't work out?"), rather than seeking reassurance or spiraling into worry, practice saying: "I can't know for certain, and that's uncomfortable—but I can handle this uncertainty. Right now, in this moment, we're okay."
+          </p>
+          <p>
+            Repeat this daily. Uncertainty tolerance builds gradually, like a muscle strengthened through consistent, small repetitions.
+          </p>
+        </ArticleCallout>
+
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started Today
         </h2>
@@ -334,11 +399,31 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
     description: 'Learn how anxious attachment develops, why it fuels relationship anxiety, and evidence-based strategies to build secure connection patterns.',
     image: "/images/articles/cat02/cover-072.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Attachment Theory', 'Relationships', 'Self-Worth', 'Childhood Patterns'],
+    summary: 'Anxious attachment—rooted in inconsistent early caregiving—creates patterns of fear, hypervigilance, and constant reassurance-seeking in adult relationships. This article explains how attachment styles form, how they manifest in relationships, and evidence-based strategies for moving toward earned security.',
+    keyFacts: [
+      { text: 'Approximately 20% of adults have an anxious attachment style that significantly impacts relationship outcomes', citationIndex: 2 },
+      { text: 'Brain imaging shows anxiously attached individuals have heightened amygdala activation and reduced prefrontal regulation when facing relationship threats', citationIndex: 4 },
+      { text: 'Anxious attachment develops from inconsistent caregiving—not lack of love, but unpredictable responsiveness', citationIndex: 1 },
+      { text: '67% of anxiously attached individuals who complete attachment-focused therapy show movement toward secure attachment', citationIndex: 3 },
+      { text: 'Earned security typically develops over 18 months of consistent practice and therapeutic work', citationIndex: 3 },
+    ],
+    sparkMoment: 'Attachment is not destiny—you can learn to trust that you\'re worthy of love even when you\'re not in constant contact, even when relationships have natural ups and downs, even when you\'re not perfect.',
+    practicalExercise: {
+      title: 'The 20-Minute Self-Soothing Challenge',
+      steps: [
+        { title: 'Notice the reassurance urge', description: 'When anxiety spikes and you want to text your partner, call repeatedly, or seek validation, pause. Don\'t act on the urge immediately.' },
+        { title: 'Name the attachment pattern', description: 'Say: "This is my attachment system being activated. I\'m feeling fear of abandonment. This is a pattern, not necessarily current reality."' },
+        { title: 'Use a grounding technique', description: 'Try 4-7-8 breathing, place your hand on your heart and offer compassion: "This is hard. I\'m learning new patterns. I can handle this feeling."' },
+        { title: 'Wait 20 minutes', description: 'Set a timer. If you still feel you need reassurance after 20 minutes of self-soothing, reach out—but from a calmer place. Often, the urgency passes.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Attachment Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -500,6 +585,86 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="attachment-across-stages" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Anxious Attachment Shows Up Across Relationship Stages
+        </h2>
+        <p className="mb-6">
+          Anxious attachment doesn't look the same at every stage of a relationship. Understanding how it manifests from dating through long-term partnership helps you recognize the pattern and intervene early <Citation id="6" index={6} source="Current Opinion in Psychology" year="2019" tier={1} />.
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'early-dating',
+              label: 'Early Dating',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Common patterns:</strong> Moving very fast emotionally ("love bombing" yourself), constant worry about their interest level, overanalyzing every text and interaction, feeling intense euphoria when they respond positively and crushing anxiety when they don't.
+                  </p>
+                  <p className="mb-3">
+                    <strong>The fear:</strong> "They'll lose interest before we really connect. I need to secure their commitment quickly."
+                  </p>
+                  <p>
+                    <strong>Secure alternative:</strong> Pace yourself. Recognize that early intensity isn't the same as genuine connection. A relationship that develops steadily is more likely to last than one built on anxiety-driven urgency.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'new-relationship',
+              label: 'New Relationship (0-6 months)',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Common patterns:</strong> Need for constant communication, jealousy or insecurity about their past relationships or friendships, testing behaviors ("If they really cared, they'd..."), difficulty when apart.
+                  </p>
+                  <p className="mb-3">
+                    <strong>The fear:</strong> "Once they really know me, they'll leave. I'm not enough to keep their interest."
+                  </p>
+                  <p>
+                    <strong>Secure alternative:</strong> Use the newness of the relationship to establish healthy patterns: independent activities, direct communication about needs, tolerance for not knowing everything immediately. These early patterns set the foundation.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'established',
+              label: 'Established Relationship',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Common patterns:</strong> Hypervigilance for signs of waning interest, creating conflict to get reassurance (negative attention feels safer than no attention), difficulty with partner's independence or separate interests.
+                  </p>
+                  <p className="mb-3">
+                    <strong>The fear:</strong> "They're getting comfortable, which means they'll start taking me for granted and eventually leave."
+                  </p>
+                  <p>
+                    <strong>Secure alternative:</strong> Recognize that comfort and security in a relationship don't equal loss of interest. Appreciate stability rather than mistaking it for boredom. Partner's independence strengthens the relationship, not threatens it.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'long-term',
+              label: 'Long-Term/Committed',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    <strong>Common patterns:</strong> Continued reassurance-seeking despite years together, difficulty during natural relationship phases with less intensity, creating drama to maintain connection, fear of partner outgrowing the relationship.
+                  </p>
+                  <p className="mb-3">
+                    <strong>The fear:</strong> "Even after all this time, they could still leave. I can never fully relax."
+                  </p>
+                  <p>
+                    <strong>Secure alternative:</strong> Use the relationship's history as evidence of its stability. Years together demonstrate commitment more than daily reassurance. Invest in individual growth alongside the relationship—your partner chose to grow with you, not despite you.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="changing-attachment-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Strategies to Move Toward Secure Attachment
         </h2>
@@ -627,6 +792,72 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
           source="Development and Psychopathology, 2021; Journal of Consulting and Clinical Psychology, 2021"
         />
 
+        <h2 id="common-questions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Questions About Anxious Attachment
+        </h2>
+
+        <ArticleAccordion
+          type="single"
+          items={[
+            {
+              id: 'partners-fault',
+              title: 'Is my anxious attachment my partner\'s fault?',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    No. While a dismissive or avoidant partner can trigger your attachment anxiety, the pattern itself developed long before this relationship. Your partner's behavior may activate your attachment system, but they didn't create it.
+                  </p>
+                  <p>
+                    That said, relationships where both partners work on their attachment patterns together tend to be more successful than those where one person bears all responsibility for change.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'too-needy',
+              title: 'Does having anxious attachment mean I\'m "too needy"?',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    Anxious attachment means you express and seek connection in ways shaped by early experiences of inconsistency. "Needy" is a judgment; anxious attachment is a pattern that can be understood and changed.
+                  </p>
+                  <p>
+                    The goal isn't to need less—humans are wired for connection. The goal is to develop internal security alongside your need for external connection, so your worth isn't contingent on constant reassurance.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'secure-partner',
+              title: 'Will being with a securely attached partner fix my anxious attachment?',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    A secure partner can help, but they can't fix your attachment pattern for you. Secure partners provide consistency and safety, which creates conditions for change—but you still need to do the work of developing self-soothing, challenging catastrophic thoughts, and tolerating uncertainty.
+                  </p>
+                  <p>
+                    Without your active participation, even a secure partner's consistency may not be enough to override deeply ingrained patterns <Citation id="3" index={3} source="Development and Psychopathology" year="2021" tier={1} />.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'change-time',
+              title: 'How long does it take to change attachment patterns?',
+              content: (
+                <div>
+                  <p className="mb-3">
+                    Research suggests that with consistent effort and often therapeutic support, most people show significant movement toward secure attachment within 18 months <Citation id="3" index={3} source="Development and Psychopathology" year="2021" tier={1} />. However, this isn't a linear process.
+                  </p>
+                  <p>
+                    You'll likely notice small improvements within weeks (reduced anxiety intensity, increased ability to self-soothe), but fundamental shifts in how you experience relationships typically take longer. The work is worth it—earned security is as robust as natural secure attachment.
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started Today
         </h2>
@@ -687,11 +918,31 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
     description: 'Evidence-based strategies for managing anxiety in professional settings, from high-stakes presentations to daily email stress.',
     image: "/images/articles/cat02/cover-073.svg",
     category: CATEGORY_ANXIETY_STRESS,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-18',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Work Performance', 'Career', 'Stress Management', 'Communication'],
+    summary: 'Workplace anxiety affects 40% of working adults, manifesting in meetings, emails, deadlines, and social interactions. This article provides evidence-based strategies to manage professional anxiety—from reframing performance arousal to setting email boundaries to distinguishing productive excellence from anxiety-driven perfectionism.',
+    keyFacts: [
+      { text: '40% of workers experience significant workplace anxiety at some point in their careers', citationIndex: 1 },
+      { text: '72% of workers with anxiety report that it impacts their job performance', citationIndex: 1 },
+      { text: 'Reframing anxiety as excitement improves performance more effectively than trying to calm down', citationIndex: 6 },
+      { text: 'Email anxiety has surged in remote work environments, with compulsive checking and excessive drafting time', citationIndex: 5 },
+      { text: 'Perfectionism is one of the strongest predictors of workplace anxiety', citationIndex: 8 },
+    ],
+    sparkMoment: 'Success isn\'t about being anxiety-free at work—it\'s about working effectively even when anxiety is present.',
+    practicalExercise: {
+      title: 'The 90-Second Pre-Meeting Reset',
+      steps: [
+        { title: '30 seconds: breath focus', description: 'Take slow, deep breaths using a 4-count inhale and 6-count exhale. This activates your parasympathetic nervous system.' },
+        { title: '30 seconds: body scan', description: 'Notice where you\'re holding tension (shoulders, jaw, hands). Consciously relax each area.' },
+        { title: '30 seconds: intention-setting', description: 'Set one realistic goal: "My goal is to contribute one useful idea" or "My goal is to stay present and listen." That\'s enough.' },
+        { title: 'Enter with presence', description: 'This brief practice shifts you from threat mode to engagement mode, improving both your experience and your performance.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Work Anxiety Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -849,6 +1100,33 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
           source="NIOSH, 2022; Journal of Occupational Health Psychology, 2021"
         />
 
+        <h2 id="performance-anxiety-paradox" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Performance-Anxiety Paradox
+        </h2>
+        <p className="mb-6">
+          Here's what makes workplace anxiety particularly insidious: The strategies your anxiety tells you to use to protect your performance—checking your work repeatedly, avoiding visibility, over-preparing to the point of exhaustion, seeking constant reassurance—are often the very behaviors that impair your performance <Citation id="3" index={3} source="Journal of Vocational Behavior" year="2019" tier={1} />.
+        </p>
+        <p className="mb-6">
+          Research shows that moderate anxiety can actually enhance performance (it provides motivation and focus), but high anxiety crosses a threshold where it becomes counterproductive. The tipping point is usually when anxiety shifts from "I want to do well" to "I must be perfect or I'll fail catastrophically."
+        </p>
+        <p className="mb-6">
+          Understanding this paradox is crucial: Your goal isn't to eliminate all workplace anxiety. It's to keep anxiety at a level where it motivates rather than paralyzes, and to develop skills that help you perform effectively even when anxiety spikes.
+        </p>
+
+        <ArticleChart
+          type="area"
+          title="The Anxiety-Performance Curve"
+          data={[
+            { label: 'Very Low', value: 45 },
+            { label: 'Low', value: 65 },
+            { label: 'Moderate', value: 85 },
+            { label: 'High', value: 60 },
+            { label: 'Very High', value: 35 },
+          ]}
+          description="Performance peaks at moderate anxiety levels, declining at both low and high extremes"
+          source="Journal of Occupational Health Psychology, 2021"
+        />
+
         <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Strategies for Workplace Anxiety
         </h2>
@@ -998,6 +1276,25 @@ export const anxietyInRelationshipsWorkDailyLifeArticlesA: Article[] = [
             ),
           }}
         />
+
+        <h2 id="long-term-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building Long-Term Anxiety Resilience at Work
+        </h2>
+        <p className="mb-6">
+          The strategies above work in the moment—but building lasting resilience requires consistent practice and structural changes to how you approach work. Here are foundational practices that reduce baseline anxiety over time:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Weekly "worry time" sessions:</strong> Set aside 15 minutes weekly to write down all work worries, then categorize them: (1) things I can control and will act on, (2) things I can influence but not control, (3) things outside my control. Let go of category 3, make a plan for category 1, and practice acceptance for category 2 <Citation id="2" index={2} source="Work & Stress" year="2020" tier={1} />.</li>
+          <li><strong>Regular "done" lists instead of only "to-do" lists:</strong> Anxiety fixates on what's undone. At the end of each day, write what you accomplished. This rewires your brain to recognize progress rather than only seeing what remains.</li>
+          <li><strong>Establish clear work-life boundaries:</strong> Anxiety thrives when work bleeds into all hours. Set firm times when work ends—no email checking, no "just one more thing." Protect non-work time as vigorously as you protect work time.</li>
+          <li><strong>Build a "competence portfolio":</strong> Keep a document of positive feedback, successful projects, and problems you've solved. When anxiety tells you you're incompetent, review this evidence. Your brain needs facts to counter anxious fiction.</li>
+          <li><strong>Practice self-compassion, especially after mistakes:</strong> Research shows that self-compassion (treating yourself kindly after errors) leads to better performance than self-criticism, which amplifies anxiety <Citation id="8" index={8} source="Journal of Counseling Psychology" year="2020" tier={1} />.</li>
+        </ul>
+        <ArticleCallout variant="did-you-know">
+          <p>
+            Studies show that workers who practice structured anxiety management techniques (like those outlined above) not only reduce their anxiety but often see performance improvements within 6-8 weeks. The strategies don't just help you cope—they help you excel.
+          </p>
+        </ArticleCallout>
 
         <h2 id="workplace-accommodations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Consider Workplace Accommodations

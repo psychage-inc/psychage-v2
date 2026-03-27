@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 225,
+  "completedSessions": 226,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -12324,7 +12324,7 @@
       "completedAt": "2026-03-27T21:15:30Z"
     },
     "256": {
-      "status": "pending",
+      "status": "complete",
       "category": 13,
       "subcategoryFile": "05-06-07-08-neurodevelopmental-eating-substance-psychotic",
       "file": "src/data/articles/category-13/05-06-07-08-neurodevelopmental-eating-substance-psychotic.tsx",
@@ -12336,7 +12336,7 @@
           "slug": "eating-disorders-men",
           "title": "Eating Disorders in Men: Breaking the Stereotype",
           "currentWords": 204,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 16,
@@ -12344,7 +12344,7 @@
           "slug": "eating-disorders-athletes",
           "title": "Eating Disorders and Athletes: Performance Pressure and Body Control",
           "currentWords": 221,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 17,
@@ -12352,7 +12352,7 @@
           "slug": "eating-disorders-comorbidity",
           "title": "The Relationship Between Eating Disorders and Other Mental Health Conditions",
           "currentWords": 196,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 18,
@@ -12360,7 +12360,7 @@
           "slug": "eating-disorder-recovery",
           "title": "Recovery from Eating Disorders: What the Journey Actually Looks Like",
           "currentWords": 209,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 19,
@@ -12368,9 +12368,10 @@
           "slug": "supporting-eating-disorder",
           "title": "Supporting Someone with an Eating Disorder: A Guide for Family and Friends",
           "currentWords": 256,
-          "status": "pending"
+          "status": "complete"
         }
-      ]
+      ],
+      "completedAt": "2026-03-28T02:05:40Z"
     },
     "257": {
       "status": "complete",

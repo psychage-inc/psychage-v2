@@ -25,6 +25,26 @@ export const understandingMotivationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Motivation', 'Intrinsic Motivation', 'Self-Determination', 'Behavior Change'],
+    summary: 'Not all motivation is created equal. Intrinsic motivation—driven by internal interest and enjoyment—leads to more sustained engagement and wellbeing than extrinsic motivation powered by external rewards. Understanding this distinction helps you cultivate the kind of motivation that lasts.',
+    keyFacts: [
+      { text: 'Intrinsic motivation (doing something because it\'s inherently interesting) is more sustainable and satisfying than extrinsic motivation (doing something for external rewards)', citationIndex: 1 },
+      { text: 'Adding external rewards to intrinsically motivated activities can undermine the original motivation—a phenomenon called the "undermining effect"', citationIndex: 4 },
+      { text: 'Motivation exists on a spectrum from purely external control to fully internalized self-regulation, not just a binary choice between intrinsic and extrinsic', citationIndex: 5 },
+      { text: 'Expected tangible rewards significantly undermine intrinsic motivation, especially when directly tied to task completion rather than quality of performance', citationIndex: 7 },
+      { text: 'Autonomy-supportive environments where people have choice and control consistently increase intrinsic motivation across diverse contexts', citationIndex: 6 },
+    ],
+    sparkMoment: 'The source of your motivation matters more than the strength of it—what feels like powerful drive today might disappear tomorrow if it\'s powered by rewards rather than genuine interest.',
+    practicalExercise: {
+      title: 'Map Your Motivation Sources',
+      steps: [
+        { title: 'Identify a Current Goal', description: 'Choose a behavior you\'re trying to maintain (exercise, learning a skill, work project, etc.).' },
+        { title: 'Ask: Why Am I Doing This?', description: 'Write down all your reasons—be honest about both internal interests and external pressures.' },
+        { title: 'Classify Each Reason', description: 'Mark each reason as external (rewards, avoiding punishment), introjected (guilt, should), identified (personal values), or intrinsic (genuine enjoyment).' },
+        { title: 'Shift Toward Internalization', description: 'For external/introjected reasons, ask: "How can I connect this behavior to what I genuinely value or find interesting?" Focus on process enjoyment, not just outcomes.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Motivation Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -349,6 +369,26 @@ export const understandingMotivationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Determination Theory', 'Motivation', 'Psychological Needs', 'Wellbeing'],
+    summary: 'Self-Determination Theory reveals why motivation thrives in some contexts and withers in others: three universal psychological needs—autonomy, competence, and relatedness—must be satisfied for humans to experience optimal motivation and wellbeing. When these needs are met, you flourish; when they\'re frustrated, motivation suffers regardless of external incentives.',
+    keyFacts: [
+      { text: 'All humans share three innate psychological needs: autonomy (experiencing behavior as freely chosen), competence (feeling effective), and relatedness (connection to others)', citationIndex: 1 },
+      { text: 'When these needs are satisfied, people experience eudaimonic wellbeing—a sense of meaning, growth, and vitality that goes beyond temporary happiness', citationIndex: 6 },
+      { text: 'Autonomy doesn\'t mean independence—it means experiencing your actions as self-endorsed rather than pressured, even in structured environments', citationIndex: 2 },
+      { text: 'Need frustration (actively thwarting needs) is distinct from mere absence of satisfaction, leading to controlled motivation, burnout, and vulnerability to pathology', citationIndex: 8 },
+      { text: 'These three needs are universal across cultures, though how they\'re expressed and satisfied varies based on cultural context', citationIndex: 5 },
+    ],
+    sparkMoment: 'You don\'t lack motivation—you lack environments and behaviors that satisfy your fundamental psychological needs for autonomy, competence, and connection.',
+    practicalExercise: {
+      title: 'Assess Your Psychological Needs',
+      steps: [
+        { title: 'Choose a Context', description: 'Select one area of your life where motivation feels low (work, relationship, hobby, health behavior).' },
+        { title: 'Rate Each Need (1-10)', description: 'Autonomy: How much choice and control do you have? Competence: How capable and effective do you feel? Relatedness: How connected and valued do you feel?' },
+        { title: 'Identify the Biggest Gap', description: 'Which need is most frustrated? What specific aspects of the environment or situation thwart this need?' },
+        { title: 'Design One Improvement', description: 'Choose one concrete change to better support your lowest-rated need (e.g., if autonomy is low, introduce one meaningful choice; if competence is low, set an optimal challenge).' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Your Wellbeing',
+    },
     citations: [
       {
         id: '1',
@@ -719,6 +759,26 @@ export const understandingMotivationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Motivation', 'Goal Setting', 'Psychology', 'Behavior Change'],
+    summary: 'Motivation naturally fades through predictable psychological mechanisms—hedonic adaptation, the middle problem, motivational depletion, value drift, and post-achievement voids. Understanding why motivation disappears helps you distinguish between temporary slumps requiring strategy and genuine value shifts requiring new direction.',
+    keyFacts: [
+      { text: 'Hedonic adaptation causes your brain to reduce dopamine response to repeated stimuli, making once-exciting activities feel neutral—motivation based on novelty is inherently temporary', citationIndex: 1 },
+      { text: 'The "middle problem" means motivation is lowest when you\'ve lost novelty but can\'t yet see the finish line—most goals are abandoned in this middle phase', citationIndex: 3 },
+      { text: 'Motivational depletion from fatigue, stress, or decision fatigue is temporary and recoverable with rest, not a sign of genuine disinterest', citationIndex: 5 },
+      { text: 'Letting go of goals that no longer align with your values is associated with better wellbeing than persisting with irrelevant goals', citationIndex: 6 },
+      { text: 'Persistent, pervasive loss of motivation across all domains—especially with emotional flatness—may signal depression requiring professional support', citationIndex: 8 },
+    ],
+    sparkMoment: 'Motivation isn\'t something you have or don\'t have—it\'s a dynamic state that responds to novelty, progress, rest, and meaning. When it fades, ask whether you need strategy or whether your values have evolved.',
+    practicalExercise: {
+      title: 'Diagnose Your Motivation Fade',
+      steps: [
+        { title: 'Name the Faded Goal', description: 'What specific goal or activity has lost its appeal? Be concrete about what you were doing and when motivation started dropping.' },
+        { title: 'Identify the Pattern', description: 'Does this match hedonic adaptation (novelty wore off), middle problem (stuck between start and finish), depletion (you\'re exhausted), or value drift (it never felt quite right)?' },
+        { title: 'Test for Temporary vs. Permanent', description: 'After a week of good rest, does motivation return? Does imagining goal completion still excite you? Does the goal align with who you are now?' },
+        { title: 'Choose Your Response', description: 'If temporary: apply strategies (add variety, create milestones, rest). If value shift: give yourself permission to let go and redirect energy toward what matters now.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Motivation Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1063,6 +1123,26 @@ export const understandingMotivationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Motivational Interviewing', 'Self-Help', 'Behavior Change', 'Therapy Techniques'],
+    summary: 'Motivational Interviewing (MI) is an evidence-based therapeutic approach for resolving ambivalence about change—the internal conflict between wanting to change and wanting to stay the same. By adapting MI techniques like OARS (Open questions, Affirmations, Reflections, Summaries) for self-use, you can explore your own motivations without self-judgment and increase the kind of "change talk" that predicts actual behavior change.',
+    keyFacts: [
+      { text: 'Motivational Interviewing shows moderate to strong effectiveness across diverse behaviors including substance use, health behaviors, and mental health treatment adherence', citationIndex: 2 },
+      { text: 'The real barrier to change is usually ambivalence (simultaneously wanting to change and wanting to stay the same), not lack of willpower or motivation', citationIndex: 5 },
+      { text: 'The more change talk you express (desire, ability, reasons, need, commitment), the more likely you are to follow through; conversely, sustain talk predicts less change', citationIndex: 4 },
+      { text: 'Pushing yourself with "shoulds" often activates internal resistance—MI teaches that exploring ambivalence without judgment works better than fighting it', citationIndex: 1 },
+      { text: 'Only move to action planning after genuinely resolving ambivalence; forcing action while still conflicted often backfires and reinforces the belief that you "can\'t" change', citationIndex: 6 },
+    ],
+    sparkMoment: 'You\'re not unmotivated—you\'re ambivalent. Both sides of your internal conflict are valid, and the way forward isn\'t to silence one voice but to understand what each is protecting.',
+    practicalExercise: {
+      title: 'Self-Directed Motivational Interviewing',
+      steps: [
+        { title: 'Choose a Stuck Goal', description: 'Pick one behavior you\'ve been wanting to change but keep abandoning (exercise, drinking, work habits, relationship patterns).' },
+        { title: 'Explore Both Sides', description: 'Write for 10 minutes without censoring: What part of me wants to change? What part resists? What is each side protecting or seeking?' },
+        { title: 'Ask OARS Questions', description: 'Open: "What would be different if I changed?" Affirm: "What strengths have I shown in past changes?" Reflect: "So part of me wants X, and part fears Y..." Summarize: Write 3 sentences capturing both sides.' },
+        { title: 'Evoke Change Talk', description: 'Answer: What do I want? How could I do this? Why does this matter? What happens if I don\'t change? Only plan action if change talk feels stronger than sustain talk.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Journal Your Ambivalence',
+    },
     citations: [
       {
         id: '1',
@@ -1494,6 +1574,26 @@ export const understandingMotivationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Motivation', 'Action', 'Behavior Change', 'Discipline'],
+    summary: 'The common belief that motivation must come before action is backwards—action often creates motivation, not the other way around. Through self-perception theory, embodied cognition, and clinical evidence from behavioral activation therapy, research shows that starting with small actions (even when unmotivated) generates the motivation you thought you needed to begin.',
+    keyFacts: [
+      { text: 'Self-perception theory shows that your brain infers your motivations from your behaviors—if you exercise regularly, you conclude "I must be someone who values fitness"', citationIndex: 1 },
+      { text: 'Embodied cognition research demonstrates that physical actions influence mental states: sitting upright increases confidence, forced smiling improves mood, starting movement increases energy', citationIndex: 3 },
+      { text: 'Behavioral activation therapy for depression operates on action-before-motivation and is as effective as cognitive therapy—engaging in valued activities without waiting for motivation breaks the depression-inactivity cycle', citationIndex: 5 },
+      { text: 'The "small wins" effect creates momentum: minor accomplishments build competence, shift identity, and reduce resistance, making the next action easier', citationIndex: 6 },
+      { text: 'Implementation intentions (if-then plans) bypass the need for in-the-moment motivation by creating automatic cue-behavior associations', citationIndex: 7 },
+    ],
+    sparkMoment: 'You don\'t need to wait for motivation to act—you can act first and let motivation catch up. Starting is often the hardest part, and once you begin, continuing becomes easier.',
+    practicalExercise: {
+      title: 'The Two-Minute Action Experiment',
+      steps: [
+        { title: 'Choose Your Unmotivating Task', description: 'Pick one behavior you\'ve been avoiding because you don\'t feel motivated (exercise, work project, creative pursuit, household task).' },
+        { title: 'Set a Two-Minute Timer', description: 'Commit to doing the absolute smallest version of the task for just 2 minutes. Make it so easy you\'d be embarrassed to call it a goal (e.g., put on workout clothes, write one sentence, wash one dish).' },
+        { title: 'Notice What Happens', description: 'After 2 minutes, pause and observe: Did starting feel as hard as you thought? Did motivation appear once you began? Did you want to continue beyond 2 minutes?' },
+        { title: 'Repeat for 7 Days', description: 'Do this 2-minute version daily for one week. Track whether (1) motivation appears after starting, (2) you often continue beyond 2 minutes, (3) the behavior starts feeling more "like you" over time.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Action-Motivation Pattern',
+    },
     citations: [
       {
         id: '1',

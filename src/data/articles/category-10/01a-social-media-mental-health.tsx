@@ -25,6 +25,26 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Media', 'Research', 'Depression', 'Anxiety'],
+    summary: 'Five years of research reveals that social media\'s impact on mental health depends critically on how you use it. Passive scrolling drives comparison and increases depression risk by 13% per hour, while active engagement can support connection. Adolescents face heightened vulnerability due to developing brain circuits, and image-heavy platforms amplify body dissatisfaction. The evidence supports intentional, bounded use rather than outright avoidance.',
+    keyFacts: [
+      { text: 'Passive social media use predicts a 13% increase in depression scores for every additional hour of daily scrolling', citationIndex: 2 },
+      { text: '60% of social media users report feeling worse about their lives after viewing others\' curated posts', citationIndex: 3 },
+      { text: 'Limiting social media to 30 minutes per day reduces loneliness and depression significantly within three weeks', citationIndex: 4 },
+      { text: 'Adolescent girls using social media 3+ hours daily have 35% higher depression risk within one year', citationIndex: 8 },
+      { text: 'Active engagement through posting and commenting shows no association with depression, unlike passive consumption', citationIndex: 2 },
+    ],
+    sparkMoment: 'Social media platforms are engineered to capture your attention through comparison and variable rewards—but awareness of the mechanism is the first step toward reclaiming control over how you engage.',
+    practicalExercise: {
+      title: 'Social Media Audit: Shift from Passive to Active Use',
+      steps: [
+        { title: 'Track Your Baseline', description: 'Use your phone\'s screen time tool to measure exactly how much time you spend on social media daily for one week. Note which platforms dominate and when you use them most.' },
+        { title: 'Identify Passive vs. Active Patterns', description: 'For three days, notice when you\'re scrolling without interacting (passive) versus when you\'re commenting, messaging, or posting (active). Write down which mode leaves you feeling worse.' },
+        { title: 'Set a 30-Minute Daily Limit', description: 'Use app timers to cap total social media use at 30 minutes per day. Research shows this threshold reduces depression and loneliness without requiring full abstinence.' },
+        { title: 'Curate Your Feed for Active Use', description: 'Unfollow any accounts that trigger comparison or passive scrolling. Follow accounts of close friends and communities you genuinely interact with. Your feed should invite engagement, not spectation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -303,6 +323,26 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Comparison', 'Self-Esteem', 'Social Media', 'Mental Health'],
+    summary: 'Social media creates a comparison trap by exposing you to curated highlight reels from hundreds of people, triggering upward social comparisons that your brain hasn\'t evolved to handle. Research shows 88% of users compare themselves to others on social platforms, leading to lower self-esteem and higher depression rates. The solution isn\'t winning at comparison—it\'s recognizing the game is rigged and shifting toward intentional engagement.',
+    keyFacts: [
+      { text: '88% of social media users engage in appearance or lifestyle comparisons with others on their feeds', citationIndex: 2 },
+      { text: 'People post positive content 70% of the time, but positive experiences make up only 40% of daily reality', citationIndex: 5 },
+      { text: 'Passive scrolling drives upward comparison and depression, while active engagement with close friends shows protective effects', citationIndex: 4 },
+      { text: 'High social comparison orientation doubles the risk of depression from social media use', citationIndex: 1 },
+      { text: 'Even one week away from social media significantly reduces comparison tendencies and improves mood', citationIndex: 2 },
+    ],
+    sparkMoment: 'You\'re comparing your unfiltered behind-the-scenes reality to everyone else\'s carefully edited performance—and that comparison is designed to keep you scrolling, not thriving.',
+    practicalExercise: {
+      title: 'Break the Comparison Cycle: Feed Detox',
+      steps: [
+        { title: 'Identify Your Triggers', description: 'For three days, notice when you feel inadequate while scrolling. Write down which accounts or types of content trigger comparison (e.g., travel influencers, fitness accounts, former classmates).' },
+        { title: 'Ruthless Curation', description: 'Unfollow every account that makes you feel worse about your life. This includes influencers, brands, and even friends whose posts consistently trigger envy. Your mental health outweighs social politeness.' },
+        { title: 'Name the Comparison', description: 'When you catch yourself comparing, pause and say out loud: "I\'m comparing my real life to their highlight reel." This creates cognitive distance and weakens the automatic emotional response.' },
+        { title: 'Redirect to Your Own Progress', description: 'Instead of comparing yourself to strangers, ask: "Am I better off than I was last month?" Keep a brief weekly log of personal wins to shift your reference point inward.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Mood After Social Media',
+    },
     citations: [
       {
         id: '1',
@@ -575,6 +615,26 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Adolescents', 'Parenting', 'Social Media', 'Teen Mental Health'],
+    summary: 'The 2023 Surgeon General\'s Advisory declared that we don\'t yet know if social media is safe for children and teens. Adolescent brains are especially vulnerable during ages 10-19 when reward systems mature faster than impulse control regions, making social validation feel like survival. Research documents clear risks including doubled depression rates with 3+ hours daily use, sleep displacement, cyberbullying exposure, and eating disorder triggers—but parental involvement significantly reduces harm.',
+    keyFacts: [
+      { text: '95% of teens ages 13-17 use social media, with over one-third using it almost constantly', citationIndex: 1 },
+      { text: 'Teens using social media 3+ hours daily have double the depression risk compared to non-users', citationIndex: 2 },
+      { text: '59% of U.S. teens have experienced some form of cyberbullying, which follows them home 24/7 unlike traditional bullying', citationIndex: 4 },
+      { text: 'Social media displaces 30-60 minutes of sleep per night in teens who use devices before bed', citationIndex: 5 },
+      { text: 'Open parent-child communication about social media is more effective at reducing harm than strict rules alone', citationIndex: 9 },
+    ],
+    sparkMoment: 'During adolescence, peer acceptance activates survival circuits in the brain—and social media turns that biological need into a quantifiable metric, creating constant pressure that developing brains aren\'t equipped to handle.',
+    practicalExercise: {
+      title: 'Parent-Teen Social Media Conversation Starter',
+      steps: [
+        { title: 'Ask Without Judgment', description: 'Start with curiosity: "What do you like about [platform]?" or "How do you feel after using Instagram?" Listen to understand their perspective, not to lecture. Teens share more when they feel heard.' },
+        { title: 'Share Your Own Experience', description: 'Tell your teen about times you\'ve felt comparison or FOMO from social media. Vulnerability builds trust and normalizes the struggle. Avoid the "back in my day" trap—validate that their experience is real.' },
+        { title: 'Collaborate on Boundaries', description: 'Instead of imposing rules, ask: "What time limits do you think would be healthy?" Work together to set daily caps (1-2 hours is evidence-based) and tech-free zones (meals, bedrooms).' },
+        { title: 'Model Healthy Use', description: 'Audit your own phone habits. Are you present at family meals? Do you scroll before bed? Teens learn more from what you do than what you say. Make changes yourself first.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find a Teen Mental Health Specialist',
+    },
     citations: [
       {
         id: '1',
@@ -842,6 +902,26 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['FOMO', 'Anxiety', 'Social Media', 'Behavior Change'],
+    summary: 'FOMO—Fear of Missing Out—is a pervasive anxiety that others are having rewarding experiences you\'re absent from, driven by unmet needs for belonging and social connection. Social media turns ancient exclusion anxiety into a 24/7 feedback loop, with 70% of young adults experiencing FOMO regularly. Research shows limiting social media to 30 minutes daily reduces FOMO, loneliness, and depression within three weeks. The path forward isn\'t eliminating missing out—it\'s cultivating presence and accepting that you can\'t be everywhere.',
+    keyFacts: [
+      { text: '70% of young adults experience FOMO regularly, linked directly to problematic social media use and depression', citationIndex: 3 },
+      { text: 'People with high FOMO check their phones 35 times per day, compared to 15 times for those with low FOMO', citationIndex: 4 },
+      { text: 'Limiting social media to 30 minutes daily for three weeks significantly reduces FOMO, loneliness, and depression', citationIndex: 2 },
+      { text: 'FOMO is rooted in unmet psychological needs for connection, competence, and autonomy', citationIndex: 5 },
+      { text: 'Chronic FOMO increases depression risk by 2.5 times and correlates with poor sleep and attention fragmentation', citationIndex: 3 },
+    ],
+    sparkMoment: 'FOMO creates a paradox: the more you check to see what you\'re missing, the more you miss what\'s actually happening right in front of you.',
+    practicalExercise: {
+      title: 'From FOMO to JOMO: Cultivate Presence',
+      steps: [
+        { title: 'Notice the FOMO Trigger', description: 'For one week, notice what specific content triggers your Fear of Missing Out. Is it party photos? Travel posts? Career updates? Write down the patterns. Awareness of the trigger is the first step to disrupting the response.' },
+        { title: 'Practice Naming It', description: 'When FOMO strikes, pause and say: "I\'m feeling FOMO right now." Name the feeling out loud or in writing. This creates cognitive distance between the emotion and your reaction, weakening the urge to keep scrolling.' },
+        { title: 'Set a 30-Minute Daily Limit', description: 'Use your phone\'s screen time tool to cap social media at 30 minutes per day. Research shows this threshold significantly reduces FOMO. Stick with it for three weeks to experience the full effect.' },
+        { title: 'Build a Gratitude Practice', description: 'FOMO focuses on absence; gratitude shifts focus to presence. Each evening, write down three specific things you\'re grateful for from your day. Studies show this practice reduces FOMO and increases life satisfaction.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1119,6 +1199,26 @@ export const socialMediaMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Body Image', 'Eating Disorders', 'Social Media', 'Self-Esteem'],
+    summary: 'Instagram and TikTok create a visual comparison trap where you measure your unfiltered body against hundreds of edited, filtered images that platforms reward with engagement. Just 30 minutes of Instagram use can significantly worsen body dissatisfaction in young women. Research shows 88% compare their bodies on these platforms, with image-heavy apps uniquely predicting eating disorder symptoms, drive for thinness, and body dysmorphia—effects that text-based platforms don\'t produce.',
+    keyFacts: [
+      { text: 'Just 30 minutes of Instagram use significantly worsens body dissatisfaction in young women through appearance comparison', citationIndex: 4 },
+      { text: '88% of young women compare their bodies on Instagram, with 52% reporting worse feelings after 30 minutes of scrolling', citationIndex: 2 },
+      { text: '90% of influencer photos are edited or filtered, creating fundamentally unfair comparisons to real bodies', citationIndex: 7 },
+      { text: 'Using Instagram 2+ hours daily increases eating disorder risk 3.2 times compared to under 30 minutes daily', citationIndex: 1 },
+      { text: 'Teaching media literacy to recognize editing and filters reduces body dissatisfaction by 40% in controlled trials', citationIndex: 9 },
+    ],
+    sparkMoment: 'You\'re comparing your real, unedited body to images that have been digitally altered for hours—the comparison isn\'t just unfair, it\'s impossible.',
+    practicalExercise: {
+      title: 'Detox Your Visual Feed: Body-Positive Curation',
+      steps: [
+        { title: 'Audit Your Feed', description: 'Scroll through your Instagram and TikTok follows. For each account, ask: "Does this make me feel good or bad about my body?" Be honest. Screenshot accounts that trigger comparison.' },
+        { title: 'Ruthless Unfollowing', description: 'Unfollow every account that makes you feel inadequate about your appearance. This includes influencers, fitness accounts, and even friends whose posts consistently trigger body shame. Your mental health outweighs social niceties.' },
+        { title: 'Follow Body Diversity', description: 'Actively seek accounts showing diverse body types, body-positive content, and non-appearance-focused topics. Expose your brain to varied representations of normal, not just filtered ideals.' },
+        { title: 'Stop Editing Your Own Photos', description: 'Commit to posting only unedited photos for one month. Research shows selfie editing increases body dissatisfaction and eating disorder risk. Practice accepting your real appearance as you document your life.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find an Eating Disorder Specialist',
+    },
     citations: [
       {
         id: '1',

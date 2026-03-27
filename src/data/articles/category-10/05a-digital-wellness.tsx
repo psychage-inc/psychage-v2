@@ -27,6 +27,26 @@ export const digitalWellnessArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Digital Wellness', 'Technology Use', 'Balance', 'Intentionality', 'Mental Health'],
+    summary: 'Digital wellness is about using technology intentionally to support rather than undermine your well-being. This framework helps you build a balanced relationship with technology through five key dimensions: intentionality, balance, boundaries, awareness, and agency.',
+    keyFacts: [
+      { text: 'Intentional technology use is associated with better mental health, stronger relationships, higher productivity, and greater life satisfaction', citationIndex: 1 },
+      { text: 'Research shows that how intentionally you use technology matters more for mental health than how much you use it', citationIndex: 4 },
+      { text: 'Digital wellness includes setting clear boundaries: time boundaries, space boundaries, and social boundaries to protect attention and presence', citationIndex: 5 },
+      { text: 'Platforms are designed to maximize user engagement, making it essential to reclaim control through notifications management, feed curation, and app timers', citationIndex: 6 },
+      { text: 'Regular digital audits every few months help maintain healthy technology habits as both technology and life circumstances evolve', citationIndex: 1 },
+    ],
+    sparkMoment: 'Technology should serve your values, not define them—when your phone use aligns with what you truly care about, the quality of both your digital and analog life transforms.',
+    practicalExercise: {
+      title: 'Values-Technology Alignment Audit',
+      steps: [
+        { title: 'Identify Your Core Values', description: 'List 3-5 things you value most (e.g., family connection, creativity, health, learning, meaningful work).' },
+        { title: 'Review Your Screen Time', description: 'Check your screen time data for the past week. Note which apps and activities consumed the most time.' },
+        { title: 'Assess Alignment', description: 'For each major technology activity, ask: Does this support my values, contradict them, or neither? Be honest.' },
+        { title: 'Make One Change', description: 'Choose one technology habit that contradicts your values and create a specific boundary or alternative behavior.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Digital Wellness',
+    },
     citations: [
       {
         id: '1',
@@ -350,6 +370,26 @@ export const digitalWellnessArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Digital Detox', 'Retreats', 'Screen Time', 'Wellness', 'Research'],
+    summary: `Digital detox retreats provide real short-term benefits like reduced stress and improved sleep, but research shows 78% of participants return to pre-detox tech habits within 6 months. For most people, they're an expensive luxury; DIY alternatives like weekend detoxes, nature camping, or therapy may be more cost-effective for lasting change.`,
+    keyFacts: [
+      { text: '67% of digital detox retreat participants report improved well-being immediately post-detox, but benefits average only 3 months duration', citationIndex: 4 },
+      { text: `78% of participants return to pre-detox technology habits within 6 months, as retreats remove you from your environment but don't teach sustainable management skills`, citationIndex: 4 },
+      { text: 'Much of the benefit from digital detox retreats may come from nature exposure rather than technology abstinence, as nature has well-documented restorative effects', citationIndex: 5 },
+      { text: 'Digital detox retreats range from $1,500 to $10,000+, while equally effective alternatives like therapy or DIY weekend detoxes cost $0-$2,400', citationIndex: 6 },
+      { text: 'The first 24-72 hours often involve withdrawal symptoms (anxiety, irritability, compulsive urges), revealing the level of technology dependence', citationIndex: 1 },
+    ],
+    sparkMoment: `The retreat isn't the solution—it's a dramatic wake-up call; the real work of building sustainable digital wellness happens in the ordinary moments of your everyday life.`,
+    practicalExercise: {
+      title: 'Design Your Own Mini-Detox Weekend',
+      steps: [
+        { title: 'Choose Your Weekend', description: `Block Friday evening through Sunday evening on your calendar. Inform people you'll be offline except for emergencies.` },
+        { title: 'Plan Analog Activities', description: `List 5-10 activities you'll do without screens: hiking, cooking, board games, reading physical books, crafting, face-to-face visits.` },
+        { title: 'Set Clear Boundaries', description: 'Decide what "offline" means (full detox vs. emergency phone access only). Turn off devices or give them to a friend for safekeeping.' },
+        { title: 'Reflect and Integrate', description: `Sunday evening, journal about what you noticed: What did you miss? What didn't you miss? What new habit could you keep?` },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Digital Wellness Tools',
+    },
     citations: [
       {
         id: '1',
@@ -633,6 +673,26 @@ export const digitalWellnessArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Right to Disconnect', 'Work-Life Balance', 'Boundaries', 'Burnout', 'Digital Wellness'],
+    summary: 'The right to disconnect means employees can disengage from work communications outside working hours without penalty. Countries like France, Spain, and Italy have enshrined this in law. Research shows constant work connectivity creates 2.3x higher burnout risk and prevents the psychological recovery essential for mental health.',
+    keyFacts: [
+      { text: '71% of workers check work messages outside work hours, and 68% say inability to disconnect causes significant stress', citationIndex: 2 },
+      { text: 'After-hours work communication is associated with 2.3 times higher burnout risk compared to workers who can fully disconnect', citationIndex: 2 },
+      { text: 'Your brain needs psychological recovery from work stress, which only happens when you stop monitoring work communications and fully detach', citationIndex: 6 },
+      { text: 'Constant work connectivity erodes work-life boundaries and creates anticipatory anxiety—even when not receiving messages, the possibility keeps stress response activated', citationIndex: 3 },
+      { text: 'France passed the first "right to disconnect" law in 2017, followed by Spain, Italy, Belgium, Ireland, Portugal, and Argentina', citationIndex: 1 },
+    ],
+    sparkMoment: `Rest and recovery aren't luxuries or signs of weakness—they're biological necessities; the right to disconnect is fundamentally about being human, not being lazy.`,
+    practicalExercise: {
+      title: 'Establish Your Disconnection Boundary',
+      steps: [
+        { title: 'Define Your Working Hours', description: 'Choose specific start and end times. Add them to your email signature, Slack profile, and calendar. Example: "Working hours: Mon-Fri, 9 AM - 6 PM EST."' },
+        { title: 'Set Up Technology Boundaries', description: 'Turn off work app notifications after hours. Use iOS Focus modes or Android Do Not Disturb. If possible, physically separate work and personal devices.' },
+        { title: 'Communicate Your Boundary', description: `Tell your manager and team: "I'll be offline after 6 PM except for documented emergencies. Let's define what qualifies as an emergency."` },
+        { title: 'Practice Consistent Non-Response', description: `If you receive after-hours messages, don't respond unless it's a genuine emergency. Wait until your next working day. Consistency trains expectations.` },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Work Stress',
+    },
     citations: [
       {
         id: '1',
@@ -695,7 +755,7 @@ export const digitalWellnessArticlesA: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            It's 9 PM on a Saturday. You're with your family when your work Slack pings. Your manager needs 'just a quick answer." You respond. Ten minutes later, you're in a full work conversation. Your weekend has been interrupted. This is now normal --- but should it be?
+            It`s 9 PM on a Saturday. You're with your family when your work Slack pings. Your manager needs `just a quick answer." You respond. Ten minutes later, you're in a full work conversation. Your weekend has been interrupted. This is now normal --- but should it be?
           </p>
           <p className="mb-6">
             The "right to disconnect" is a growing global movement asserting that workers have a fundamental right to be offline and unavailable outside of working hours <Citation id="1" index={1} source="International Journal of Comparative Labour Law" year="2023" tier={1} />. Several countries have enshrined this right in law. Research overwhelmingly shows that constant connectivity to work harms mental health, relationships, and even productivity <Citation id="2" index={2} source="Journal of Occupational Health Psychology" year="2023" tier={1} />. Here's why boundaries aren't optional --- they're essential.
@@ -936,6 +996,26 @@ export const digitalWellnessArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Attention', 'Focus', 'Concentration', 'Productivity', 'Mindfulness'],
+    summary: 'Attention is trainable—not a fixed trait. In the digital age, our capacity for sustained focus has dramatically declined, but through environmental design, monotasking practice, time-blocking, and mindfulness training, you can rebuild deep work capacity from 30-45 minutes to 90+ minutes over 8 weeks.',
+    keyFacts: [
+      { text: 'People\'s minds wander 47% of the time, and it takes an average of 23 minutes to regain focus after an interruption', citationIndex: 1 },
+      { text: 'Average attention on a screen is just 2.5 seconds, and deep work capacity has dropped from 2-3 hours to 30-45 minutes for many people', citationIndex: 1 },
+      { text: `Humans are terrible at multitasking—we're actually rapid task-switching, which fragments attention and reduces performance on all tasks`, citationIndex: 4 },
+      { text: 'Mindfulness meditation is essentially attention training, and research shows even 8 weeks of regular practice improves attention metrics', citationIndex: 3 },
+      { text: 'Monotasking (one task at a time with no exceptions) allows your brain to re-learn that deep focus is possible and sustainable', citationIndex: 5 },
+    ],
+    sparkMoment: 'In a world designed to fracture your focus, reclaiming your attention is both an act of resistance and the ultimate form of self-care.',
+    practicalExercise: {
+      title: '8-Week Attention Training Program',
+      steps: [
+        { title: 'Week 1-2: Baseline & Environment', description: 'Measure your current focus capacity with 25-minute Pomodoro timers. Eliminate environmental distractions: phone in another room, all non-essential notifications off, single-screen work.' },
+        { title: 'Week 3-4: Extend Focus Sessions', description: 'Increase to 45-minute focus blocks. Practice monotasking—one task, no exceptions. When bored or tempted to switch, notice the urge and stay with your task.' },
+        { title: 'Week 5-6: Build Mindfulness', description: 'Add 5-10 minutes daily of focused attention meditation. Notice when your mind wanders, gently return to your breath. This is the same skill as sustained focus.' },
+        { title: 'Week 7-8: Achieve Deep Work', description: `Work toward 90-minute deep work blocks. Schedule specific times for distractions (email, social media). Celebrate your progress—you've rebuilt your attention capacity.` },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Focus Progress',
+    },
     citations: [
       {
         id: '1',
@@ -1260,6 +1340,26 @@ export const digitalWellnessArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Nature', 'Ecotherapy', 'Screen Time', 'Attention Restoration', 'Mental Health'],
+    summary: 'Time in nature provides a powerful antidote to digital overload through Attention Restoration Theory—nature engages effortless "soft fascination" that allows depleted attention systems to recover. Just 20 minutes in green spaces lowers cortisol, and 120 minutes per week reduces depression by 30%.',
+    keyFacts: [
+      { text: '120 minutes per week in nature reduces depression by 30%, and just 20 minutes in green space measurably lowers cortisol levels', citationIndex: 1 },
+      { text: '71% of people report better mood after nature exposure, with benefits including reduced stress, improved sleep, enhanced mood, and better focus', citationIndex: 1 },
+      { text: 'Nature engages involuntary "soft fascination" attention (effortless), allowing directed attention (screen work) systems to rest and restore', citationIndex: 2 },
+      { text: 'Forest bathing (Shinrin-yoku) research shows 2-hour forest walks significantly reduce stress hormones, anxiety, and depression while boosting immune function', citationIndex: 5 },
+      { text: 'For every hour of recreational screen time, aim for 15-20 minutes of nature exposure; heavy screen days (6+ hours) require 60-90 minutes to counterbalance', citationIndex: 3 },
+    ],
+    sparkMoment: `Nature isn't a luxury or a "nice-to-have"—it's a biological necessity for mental health, especially in a screen-saturated world; prioritize it like sleep, nutrition, and exercise.`,
+    practicalExercise: {
+      title: 'Build Your Daily Nature Rhythm',
+      steps: [
+        { title: 'Morning Nature Anchor', description: 'Commit to 10-15 minutes outside before looking at screens. Walk around the block, sit in your yard, have coffee on a porch. Morning light regulates circadian rhythm and improves sleep.' },
+        { title: 'Screen Break = Nature Break', description: 'Every 90 minutes of screen time, take a 10-minute nature break. Step outside, look at trees, listen to birds. This prevents attention fatigue accumulation.' },
+        { title: 'Lunchtime Green Space', description: 'Eat lunch outside or in a park instead of at your desk. This provides both mental break and nature exposure—reallocate screen time to nature time.' },
+        { title: 'Track Your Progress', description: 'Log your daily nature minutes for one week. Aim for 20 minutes minimum daily, 120 minutes weekly. Notice how mood and focus change with consistent nature exposure.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Nature & Mood Patterns',
+    },
     citations: [
       {
         id: '1',

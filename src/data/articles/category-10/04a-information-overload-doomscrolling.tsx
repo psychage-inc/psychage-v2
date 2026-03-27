@@ -12,6 +12,8 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const informationOverloadDoomscrollingArticlesA: Article[] = [
@@ -22,11 +24,31 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     description: 'Understand why we compulsively scroll through negative news, the psychological mechanisms behind doomscrolling, and how to break the cycle.',
     image: "/images/articles/cat10/cover-031.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Doomscrolling', 'Anxiety', 'News Consumption', 'Digital Habits', 'Mental Health'],
+    summary: 'Doomscrolling—the compulsive consumption of negative news online—is driven by powerful psychological mechanisms including negativity bias, uncertainty intolerance, and intermittent reinforcement. This behavior significantly increases anxiety and depression, but can be managed through boundary-setting, curated information sources, and channeling concern into meaningful action.',
+    keyFacts: [
+      { text: '73% of adults report doomscrolling regularly, with many spending over 16 hours per week consuming news', citationIndex: 2 },
+      { text: 'Heavy news consumers show twice the anxiety levels of moderate news consumers', citationIndex: 2 },
+      { text: 'Negativity bias makes our brains pay more attention to threats than positive information, a survival mechanism exploited by modern media', citationIndex: 3 },
+      { text: 'Doomscrolling creates learned helplessness and compassion fatigue by exposing us to problems beyond our control', citationIndex: 6 },
+      { text: 'Setting specific news times and using timers reduces compulsive consumption without complete information avoidance', citationIndex: 5 },
+    ],
+    sparkMoment: 'The scrolling creates a kind of dissociative state—you\'re distracted, numbed, and not fully present—offering temporary escape that paradoxically reinforces the very anxiety you\'re trying to avoid.',
+    practicalExercise: {
+      title: 'The 20-Minute News Window',
+      steps: [
+        { title: 'Choose Your Time', description: 'Pick 1-2 specific times per day for news consumption (e.g., 8 AM, 6 PM)—never first thing in morning or before bed.' },
+        { title: 'Set a 20-Minute Timer', description: 'Use your phone timer or a physical timer. When it goes off, close all news apps and tabs immediately.' },
+        { title: 'Curate Your Sources', description: 'Before the timer starts, choose 1-2 reputable sources. Read intentionally rather than scrolling algorithmically.' },
+        { title: 'Journal Your Reaction', description: 'After the timer, spend 3 minutes writing: What did I learn? How do I feel? What (if anything) can I do about this?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your News Consumption Mood',
+    },
     citations: [
       {
         id: '1',
@@ -197,6 +219,26 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="brain-chemistry" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Neuroscience of the Scroll: Your Brain on Bad News
+        </h2>
+        <p className="mb-6">
+          Understanding what happens in your brain during doomscrolling helps explain why it's so hard to stop. Every scroll triggers a cascade of neurochemical responses:
+        </p>
+        <p className="mb-6">
+          <strong>Dopamine loops:</strong> Each swipe down might reveal something important or engaging. This unpredictability triggers dopamine release — not from what you find, but from the <em>anticipation</em> of finding something. Your brain learns: "keep scrolling, the reward might be next." This is identical to the mechanism that makes slot machines addictive.
+        </p>
+        <p className="mb-6">
+          <strong>Cortisol spikes:</strong> Alarming headlines activate your amygdala (threat detection center) and trigger cortisol release. Your body prepares for action — but there's nothing physical to do. This trapped stress energy has nowhere to go, creating that characteristic anxious, jittery feeling.
+        </p>
+        <p className="mb-6">
+          <strong>Attention narrowing:</strong> When anxious, your attention narrows to focus on threats. This makes you more likely to notice and click on negative content, creating a self-reinforcing cycle. The more anxious you become, the more your brain filters for danger, and the more doomscrolling feels necessary.
+        </p>
+
+        <ArticleCallout variant="clinical-note">
+          <p>Chronic doomscrolling can alter your baseline anxiety levels. When your nervous system is repeatedly activated without resolution, it begins to stay in a heightened state even when you're not scrolling — a condition called "hypervigilance."</p>
+        </ArticleCallout>
+
         <h2 id="mental-health-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How Doomscrolling Affects Mental Health
         </h2>
@@ -316,6 +358,41 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="recognizing-problem" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing When It's Become a Problem
+        </h2>
+        <p className="mb-6">
+          Not all news consumption is doomscrolling. The difference lies in how it affects you and whether you can control it:
+        </p>
+
+        <ComparisonTable
+          title="Healthy News Engagement vs. Problematic Doomscrolling"
+          columns={['Healthy Engagement', 'Problematic Pattern']}
+          items={[
+            { feature: 'Time spent', values: ['Intentional, time-boxed (15-30 min/day)', 'Hours disappear without noticing'] },
+            { feature: 'Emotional state', values: ['Informed but stable mood', 'Increasingly anxious, hopeless, or numb'] },
+            { feature: 'Control', values: ['Can stop when desired', 'Compulsive, difficult to stop even when wanting to'] },
+            { feature: 'Purpose', values: ['Staying informed to take action', 'Seeking distraction or numbing uncomfortable feelings'] },
+            { feature: 'Sleep impact', values: ['Minimal disruption', 'Late-night scrolling, poor sleep quality'] },
+            { feature: 'Functionality', values: ['Work, relationships unaffected', 'Neglecting responsibilities, withdrawing from others'] },
+          ]}
+          highlightColumn={1}
+        />
+
+        <p className="mb-6 mt-6">
+          If you're experiencing the patterns in the right column, it's time to implement boundaries. The strategies above aren't just helpful — they're necessary interventions to protect your mental health.
+        </p>
+
+        <ArticleCallout variant="action-plan" title="Your First 48 Hours">
+          <p className="mb-3">Start small with these immediate changes:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Tonight:</strong> Turn off all news app notifications. All of them.</li>
+            <li><strong>Tomorrow morning:</strong> Don't check news for the first hour after waking. Do literally anything else.</li>
+            <li><strong>Tomorrow evening:</strong> Set a 20-minute timer for your news check. Stop when it rings.</li>
+            <li><strong>Next 48 hours:</strong> Before opening any news app, ask yourself: "Am I choosing this, or is this a compulsion?"</li>
+          </ul>
+        </ArticleCallout>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -342,11 +419,31 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     description: 'Understand the cognitive science of information overload, why the digital age creates mental overwhelm, and how to restore your focus.',
     image: "/images/articles/cat10/cover-032.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Information Overload', 'Cognitive Load', 'Attention', 'Focus', 'Digital Wellness'],
+    summary: 'Information overload occurs when input volume exceeds cognitive capacity, creating decision paralysis, attention fragmentation, memory impairment, and chronic stress. The average person processes 34GB of data daily—far beyond our working memory limits. Strategic information triage, batch processing, and attention restoration are essential tools for managing the modern information deluge.',
+    keyFacts: [
+      { text: 'The average person encounters more information in a day than someone in the 15th century encountered in a lifetime', citationIndex: 2 },
+      { text: 'It takes an average of 23 minutes to fully refocus after a distraction, making constant interruptions cognitively devastating', citationIndex: 4 },
+      { text: 'Working memory has limited capacity—like computer RAM, when overloaded, cognitive performance crashes', citationIndex: 7 },
+      { text: 'Creative insights and problem-solving require mental downtime; constant information consumption eliminates the space needed for breakthrough thinking', citationIndex: 4 },
+      { text: 'Time in nature or non-directed activities restores cognitive capacity—attention restoration is maintenance, not luxury', citationIndex: 5 },
+    ],
+    sparkMoment: 'You\'re not falling behind by ignoring some information—you\'re protecting the cognitive capacity needed to deeply process what actually matters.',
+    practicalExercise: {
+      title: 'The Information Audit',
+      steps: [
+        { title: 'List Your Inputs', description: 'Write down every information source you encounter in a day: email accounts, messaging apps, social media, news sources, newsletters, podcasts, etc.' },
+        { title: 'Mark the Essential', description: 'Which sources are truly necessary for your work or well-being? Be ruthless. Most aren\'t as critical as they feel.' },
+        { title: 'Eliminate or Batch', description: 'Delete/unsubscribe from non-essential sources. For the rest, turn off notifications and set 2-3 specific check-in times per day.' },
+        { title: 'Create White Space', description: 'Schedule at least one hour daily where no information processing happens—no phone, no reading, no podcasts. Just thinking, walking, or being.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Focus and Clarity',
+    },
     citations: [
       {
         id: '1',
@@ -593,6 +690,58 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           <p>The problem isn't just the volume of information --- it's the expectation of <em>immediacy</em>. We're expected to process and respond to all these inputs in real-time, which is cognitively impossible.</p>
         </ArticleCallout>
 
+        <h2 id="workplace-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Workplace Overload Crisis
+        </h2>
+        <p className="mb-6">
+          Information overload hits hardest in professional environments. The expectation of constant availability and responsiveness creates a toxic loop where everyone generates more information (emails, messages, documents) in an attempt to stay productive, which overwhelms everyone further.
+        </p>
+
+        <QuoteBlock
+          quote="The average knowledge worker switches contexts every three minutes and five seconds. We've created work environments where deep thinking is nearly impossible."
+          attribution="Dr. Gloria Mark"
+          role="Professor of Informatics, UC Irvine"
+          source="PNAS, 2022"
+        />
+
+        <p className="mb-6 mt-6">
+          Research on workplace information overload reveals alarming patterns <Citation id="6" index={6} source="Computers in Human Behavior" year="2022" tier={1} />:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Email bankruptcy:</strong> When inboxes become so overwhelming people give up entirely, missing important messages</li>
+          <li><strong>Meeting fatigue:</strong> Back-to-back video calls with no processing time lead to decision fatigue and burnout</li>
+          <li><strong>Documentation overload:</strong> So much information stored that finding what you need becomes impossible</li>
+          <li><strong>Always-on culture:</strong> Expectation to respond immediately blurs work-life boundaries, preventing recovery</li>
+        </ul>
+
+        <BeforeAfter
+          before={{
+            title: 'Before Information Overload',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Able to focus on one task for extended periods</li>
+                <li>Make confident decisions with available information</li>
+                <li>Remember what you read and learned</li>
+                <li>Feel energized by learning new things</li>
+                <li>Work feels purposeful and productive</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'During Chronic Overload',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Constantly distracted, can't maintain focus</li>
+                <li>Paralyzed by decisions or make them impulsively</li>
+                <li>Information doesn't stick—everything feels forgettable</li>
+                <li>Learning feels exhausting, not energizing</li>
+                <li>Busy all day but feel unproductive</li>
+                <li>Mental fog, exhaustion, irritability</li>
+              </ul>
+            ),
+          }}
+        />
+
         <h2 id="strategies-to-reduce" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Strategies to Reduce Overload
         </h2>
@@ -684,11 +833,31 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     description: 'Explore how constant news exposure creates chronic anxiety, why the news is designed to alarm you, and how to stay informed without becoming overwhelmed.',
     image: "/images/articles/cat10/cover-033.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['News Anxiety', 'Media Consumption', 'Anxiety', 'Mental Health', 'Information Diet'],
+    summary: 'The 24/7 news cycle creates chronic anxiety through negativity bias, availability heuristics, and mean world syndrome—distorting our perception of reality to see the world as more dangerous than it is. While 56% of adults report news-induced stress, strategic news consumption boundaries, curated sources, and solution-focused media can restore mental well-being without complete information avoidance.',
+    keyFacts: [
+      { text: '56% of adults say news causes them stress, and 72% report experiencing news fatigue', citationIndex: 8 },
+      { text: 'Negative headlines get 63% more clicks than positive ones—news outlets exploit our negativity bias for engagement', citationIndex: 3 },
+      { text: 'Heavy news consumers develop "mean world syndrome," believing the world is more dangerous than it actually is despite declining crime rates', citationIndex: 6 },
+      { text: '"BREAKING NEWS" labels trigger physiological stress responses, keeping the nervous system in perpetual alarm when overused', citationIndex: 4 },
+      { text: 'Limiting news to 15-30 minutes once or twice daily reduces anxiety without compromising civic awareness', citationIndex: 5 },
+    ],
+    sparkMoment: 'You don\'t have to choose between staying informed and protecting your peace—the key is consuming news intentionally rather than letting it consume you.',
+    practicalExercise: {
+      title: 'The Balanced News Diet',
+      steps: [
+        { title: 'Delete All News Notifications', description: 'Turn off push notifications from every news app. Breaking news will find you through other channels if it\'s truly critical.' },
+        { title: 'Choose 2 Trusted Sources', description: 'Pick one or two reputable, less sensational outlets. Avoid those using alarmist language or constant "BREAKING" labels.' },
+        { title: 'Set News Windows', description: 'Limit news to 15-30 minutes, twice daily max. Never first thing in morning or within 2 hours of bedtime.' },
+        { title: 'Add Solution-Focused Balance', description: 'For every alarming story you read, seek out one piece of constructive or solutions journalism to restore perspective.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your News Consumption Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -910,6 +1079,32 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           <p>If news coverage is triggering panic attacks, intrusive thoughts, or significantly disrupting your daily functioning, talk to a mental health professional. This may indicate an anxiety disorder that needs treatment <Citation id="7" index={7} source="National Institute of Mental Health" year="2023" tier={2} />.</p>
         </ArticleCallout>
 
+        <h2 id="news-myths" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Myths About News Consumption
+        </h2>
+        <p className="mb-6">
+          Many beliefs about news consumption actually worsen anxiety. Let's separate myth from fact:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="I need to stay constantly informed to be a responsible citizen."
+            fact="Responsible citizenship requires understanding issues deeply enough to take meaningful action—not consuming every update in real-time. Checking news 1-2 times daily is sufficient for civic engagement."
+          />
+          <MythVsFactBlock
+            myth="If I don't check news constantly, I'll miss something critical."
+            fact="True emergencies (natural disasters, public safety threats) reach people through multiple channels—emergency alerts, concerned friends, local announcements. You won't miss genuinely critical information by limiting news consumption."
+          />
+          <MythVsFactBlock
+            myth="The world is getting worse—the news proves it."
+            fact="News covers problems because they're newsworthy; routine peace and progress aren't. By many measures (poverty, violence, disease, education), the world has improved dramatically over decades—news just doesn't report 'school functioned normally today.'"
+          />
+          <MythVsFactBlock
+            myth="Staying informed about bad news shows I care about important issues."
+            fact="Caring is demonstrated through action, not anxiety. Consuming endless bad news without acting creates learned helplessness, not meaningful change. Channel concern into targeted action instead."
+          />
+        </div>
+
         <h2 id="building-healthy-relationship" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Building a Healthier Relationship with News
         </h2>
@@ -1001,11 +1196,31 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     description: 'Navigate the mental health impacts of climate change information online, distinguish productive concern from paralyzing anxiety, and find hope in action.',
     image: "/images/articles/cat10/cover-034.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Climate Anxiety', 'Eco-Anxiety', 'Environmental Concerns', 'Mental Health', 'Online Information'],
+    summary: 'Climate anxiety—chronic fear and distress about environmental destruction—affects 68% of young adults, amplified by algorithmic echo chambers, viral catastrophes, and performative doomerism online. While a rational response to a real threat, productive climate concern differs from paralyzing anxiety through its focus on collective action, active hope, and channeling emotion into meaningful change rather than passive despair.',
+    keyFacts: [
+      { text: '75% of people aged 16-25 find the future frightening due to climate change, with 45% saying it affects their daily functioning', citationIndex: 1 },
+      { text: 'Social media algorithms create feedback loops—clicking on alarming climate content triggers more extreme content, deepening the sense that collapse is inevitable', citationIndex: 3 },
+      { text: 'Climate grief (solastalgia, anticipatory grief, ecological grief) is a healthy emotional response to real loss, not a pathology', citationIndex: 5 },
+      { text: 'Being part of collective climate action reduces anxiety and increases both hope and efficacy—action is anxiety\'s antidote', citationIndex: 4 },
+      { text: '"Active hope" reframes hope as something you do through meaningful action, not passive optimism waiting for guaranteed outcomes', citationIndex: 4 },
+    ],
+    sparkMoment: 'You\'re not overreacting—climate change is a genuine threat, and feeling scared is a sign you\'re paying attention, not a sign of weakness.',
+    practicalExercise: {
+      title: 'From Eco-Anxiety to Eco-Action',
+      steps: [
+        { title: 'Acknowledge Your Feelings', description: 'Journal about your climate emotions without judgment. Grief, fear, and anger are all valid responses to environmental loss.' },
+        { title: 'Limit Doom-Scrolling', description: 'Unfollow apocalyptic-only accounts. Follow sources that cover problems AND solutions (e.g., Project Drawdown, Climate Solutions 101).' },
+        { title: 'Take One Concrete Action This Week', description: 'Choose something meaningful to you: contact a representative, donate to a climate org, join a local environmental group, reduce your carbon footprint in one area.' },
+        { title: 'Find Your Climate Community', description: 'Join collective climate efforts—online or local. Collective action reduces anxiety and transforms helplessness into agency.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Climate Emotions',
+    },
     citations: [
       {
         id: '1',
@@ -1196,6 +1411,10 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
           <p>Climate grief is not pathological --- it's a healthy emotional response to real loss. Allowing yourself to grieve, rather than suppressing it, is an important part of processing climate emotions.</p>
         </ArticleCallout>
 
+        <HighlightBox variant="emphasis">
+          <p>The difference between productive climate concern and destructive climate anxiety isn't whether you care—it's whether your caring energizes action or creates paralysis. Concern says "What can I do?" Anxiety says "Nothing I do matters." The shift from one to the other often comes through connection with others working toward the same goals.</p>
+        </HighlightBox>
+
         <h2 id="from-anxiety-to-action" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           From Anxiety to Action: Channeling Climate Emotions Productively
         </h2>
@@ -1304,11 +1523,31 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
     description: 'Understand how misinformation affects psychological well-being, why we believe false information, and how to protect your mental health in the misinformation age.',
     image: "/images/articles/cat10/cover-035.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Misinformation', 'Disinformation', 'Cognitive Bias', 'Trust', 'Media Literacy'],
+    summary: 'Misinformation creates psychological harm through epistemic uncertainty, eroded trust, relationship conflicts, and conspiracy worldviews—not just confusion. Falling for false information isn\'t about intelligence but cognitive vulnerabilities: confirmation bias, illusory truth effects, and emotional reasoning. Media literacy skills like lateral reading, source verification, and the SIFT method are now essential mental health tools.',
+    keyFacts: [
+      { text: '64% of adults say fabricated news causes confusion, while 38% believe misinformation weekly', citationIndex: 1 },
+      { text: 'False news spreads 6 times faster than true news because misinformation is often more novel, emotionally charged, and surprising', citationIndex: 1 },
+      { text: 'Misinformation erodes trust in institutions designed to protect us—media, science, government, medicine—leaving people feeling isolated and vulnerable', citationIndex: 4 },
+      { text: 'Conspiracy theory belief correlates with higher anxiety, distrust, alienation, and powerlessness—a hostile worldview is mentally exhausting', citationIndex: 6 },
+      { text: 'The SIFT method (Stop, Investigate source, Find better coverage, Trace to original) is a simple framework for evaluating information online', citationIndex: 5 },
+    ],
+    sparkMoment: 'Protecting yourself from misinformation isn\'t about becoming cynical—it\'s about developing discernment, the skill of knowing what deserves your trust.',
+    practicalExercise: {
+      title: 'The 48-Hour Fact-Check Challenge',
+      steps: [
+        { title: 'Pause Before Sharing', description: 'For the next 48 hours, do not share ANY information online without verifying it first. No exceptions.' },
+        { title: 'Practice Lateral Reading', description: 'When you encounter a claim, open new tabs. Search for the source, the author, and what credible outlets say about them.' },
+        { title: 'Check Your Emotional Response', description: 'If content makes you feel intense anger, fear, or outrage, that\'s a red flag. Pause and fact-check before reacting.' },
+        { title: 'Use One Fact-Checking Site', description: 'Bookmark Snopes, FactCheck.org, or AP Fact Check. Before sharing anything alarming, search it there first.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Information Clarity',
+    },
     citations: [
       {
         id: '1',
@@ -1510,6 +1749,13 @@ export const informationOverloadDoomscrollingArticlesA: Article[] = [
         <ArticleCallout variant="did-you-know">
           <p>Research shows that false news spreads 6 times faster than true news on social media. This is because misinformation is often more novel, emotionally charged, and surprising than accurate information --- all qualities that drive sharing.</p>
         </ArticleCallout>
+
+        <QuoteBlock
+          quote="The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge. Misinformation creates a world where people are confidently wrong—and that confidence makes them resistant to correction."
+          attribution="Dr. Sander van der Linden"
+          role="Professor of Social Psychology, University of Cambridge"
+          source="Trends in Cognitive Sciences, 2022"
+        />
 
         <h2 id="types-misinformation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Types of Misinformation

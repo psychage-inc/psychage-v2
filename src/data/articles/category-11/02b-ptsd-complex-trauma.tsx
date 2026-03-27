@@ -27,6 +27,26 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['PTSD', 'Nightmares', 'Sleep', 'Treatment'],
+    summary: 'PTSD nightmares are not random bad dreams—they represent your brain\'s failed attempt to process traumatic memories during sleep. Up to 90% of people with PTSD experience sleep disturbances, creating a vicious cycle where poor sleep worsens PTSD symptoms. Evidence-based treatments like Imagery Rehearsal Therapy can break this cycle and restore restful sleep.',
+    keyFacts: [
+      { text: 'Up to 90% of people with PTSD experience sleep disturbances, with 70% reporting recurrent nightmares', citationIndex: 1 },
+      { text: 'PTSD disrupts REM sleep, preventing normal emotional memory processing and causing the brain to re-experience trauma instead of integrating it', citationIndex: 2 },
+      { text: 'Imagery Rehearsal Therapy reduces nightmare frequency and intensity in 60-70% of people within just 3-6 sessions', citationIndex: 4 },
+      { text: 'Chronic sleep deprivation from PTSD nightmares increases emotional reactivity and actively prevents trauma healing', citationIndex: 8 },
+      { text: 'CBT for Insomnia (CBT-I) addresses broader sleep problems in PTSD through sleep restriction, stimulus control, and cognitive restructuring', citationIndex: 7 },
+    ],
+    sparkMoment: 'Your nightmares aren\'t punishing you—they\'re your brain\'s desperate attempt to heal a wound it can\'t process alone.',
+    practicalExercise: {
+      title: 'After-Nightmare Grounding Protocol',
+      steps: [
+        { title: 'Reorient to Safety', description: 'Turn on lights, place feet firmly on the floor, and state out loud: "I am [name], it is [date], I am in [location], and I am safe now."' },
+        { title: 'Engage Your Senses', description: 'Hold something cold (ice pack or cold water), notice five things you can see, and focus on the texture of your bedding or clothing to anchor yourself in the present.' },
+        { title: 'Calm Your Nervous System', description: 'Practice slow breathing (4-count inhale, 6-count exhale) for 2-3 minutes. Walk around your home if it helps you feel more grounded.' },
+        { title: 'Return When Ready', description: 'Only go back to bed when you feel calmer. If sleep doesn\'t come within 20 minutes, engage in a quiet, calming activity until drowsiness returns.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Try Sleep Architect',
+    },
     citations: [
       {
         id: '1',
@@ -403,6 +423,27 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Dissociation', 'PTSD', 'Trauma Response', 'Grounding'],
+    summary: 'Dissociation is your mind\'s emergency brake—a protective mechanism that creates distance between your consciousness and overwhelming trauma. While it helps you survive unbearable experiences, the pattern can persist long after you\'re safe, leaving you feeling detached from yourself and the world. Understanding dissociation and learning grounding techniques can help you reconnect to the present.',
+    keyFacts: [
+      { text: 'The DSM-5 recognizes a "PTSD with dissociative symptoms" subtype affecting 15-30% of people with PTSD who experience significant depersonalization or derealization', citationIndex: 2 },
+      { text: 'Dissociation is a disconnection between thoughts, memories, feelings, actions, or sense of identity—ranging from mild highway hypnosis to severe identity fragmentation', citationIndex: 3 },
+      { text: 'Peritraumatic dissociation (dissociating during trauma) is one of the strongest predictors of developing PTSD later', citationIndex: 1 },
+      { text: 'Brain imaging shows that dissociation involves the prefrontal cortex suppressing the amygdala and reduced connectivity between brain regions that normally communicate', citationIndex: 6 },
+      { text: 'Grounding techniques using sensory, physical, and mental strategies can effectively reconnect you to the present moment when dissociating', citationIndex: 4 },
+    ],
+    sparkMoment: 'Dissociation isn\'t weakness—it\'s your mind\'s brilliant, desperate act of protection when nothing else could shield you from the unbearable.',
+    practicalExercise: {
+      title: '5-4-3-2-1 Sensory Grounding',
+      steps: [
+        { title: 'Name 5 Things You See', description: 'Look around and identify five objects you can see. Say them out loud: "I see a blue mug, a wooden table, a green plant, a red book, a white wall."' },
+        { title: 'Name 4 Things You Can Touch', description: 'Focus on physical sensations. Touch four different textures and describe them: "I feel the smooth desk, the rough carpet, the cool metal pen, the soft fabric of my shirt."' },
+        { title: 'Name 3 Things You Hear', description: 'Close your eyes and listen. Identify three distinct sounds: "I hear the air conditioner humming, a car passing outside, my own breathing."' },
+        { title: 'Name 2 Things You Smell', description: 'Notice two scents in your environment, or imagine comforting smells if needed: "I smell coffee and fresh air coming through the window."' },
+        { title: 'Name 1 Thing You Taste', description: 'Notice any taste in your mouth, or take a sip of water and describe it: "I taste mint from my toothpaste" or "I taste cool, clean water."' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -785,6 +826,26 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['First Responders', 'Occupational Trauma', 'PTSD', 'Public Safety'],
+    summary: 'Police, firefighters, paramedics, and EMTs develop PTSD at 2-5 times the rate of the general population due to repeated exposure to traumatic events. The cumulative burden of witnessing humanity\'s worst moments, combined with a culture that discourages seeking help, creates a silent mental health crisis. Understanding occupational trauma and accessing peer support can save lives and careers.',
+    keyFacts: [
+      { text: 'First responders have PTSD prevalence rates of 15-30%, compared to 6-8% in the general population, with paramedics/EMTs at the highest risk (20-30%)', citationIndex: 2 },
+      { text: 'First responders face suicide rates significantly higher than the general population—often exceeding line-of-duty deaths', citationIndex: 5 },
+      { text: 'Cumulative trauma exposure over decades of service creates unique challenges, as each incident adds to the burden like water filling a bucket drop by drop', citationIndex: 6 },
+      { text: 'Cultural barriers including "suck it up" mentality and fear of career consequences prevent many first responders from seeking help, despite evidence that untreated PTSD is more likely to end careers', citationIndex: 7 },
+      { text: 'Peer support programs staffed by other first responders reduce stigma and provide practical coping strategies from people who understand the job', citationIndex: 5 },
+    ],
+    sparkMoment: 'Seeking help isn\'t abandoning the brotherhood—it\'s honoring the reality that you can\'t save others if you\'re drowning yourself.',
+    practicalExercise: {
+      title: 'Post-Shift Decompression Ritual',
+      steps: [
+        { title: 'Physical Transition', description: 'Before leaving the station or arriving home, take 5 minutes in your vehicle. Remove your uniform shirt or jacket, take 10 deep breaths, and consciously "leave work at work."' },
+        { title: 'Sensory Reset', description: 'Shower immediately when you get home, visualizing the water washing away the shift. Change into comfortable civilian clothes to create a physical boundary between work and home life.' },
+        { title: 'Check-In With Support', description: 'Text or call a trusted colleague or family member for a brief check-in. Share one challenge from your shift and one positive moment, even if small.' },
+        { title: 'Grounding Activity', description: 'Engage in a 15-minute activity that reconnects you to civilian life: play with your kids, walk your dog, exercise, or engage in a hobby. Avoid alcohol or screens immediately after shift.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mental Health',
+    },
     citations: [
       {
         id: '1',
@@ -1130,6 +1191,26 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Military PTSD', 'Combat Trauma', 'Veterans', 'VA Services'],
+    summary: 'Combat PTSD affects 11-20% of Iraq and Afghanistan veterans, with rates varying by conflict and exposure level. Unlike civilian trauma, combat involves prolonged exposure, moral injury from actions that violated personal values, and the challenge of reintegrating into civilian life after experiencing intense purpose and camaraderie. The VA offers free, evidence-based treatments, but cultural barriers often prevent veterans from accessing care.',
+    keyFacts: [
+      { text: '11-20% of Iraq/Afghanistan veterans, 15% of Vietnam veterans, and 12% of Gulf War veterans currently have PTSD, with combat exposure being the strongest predictor', citationIndex: 2 },
+      { text: 'Moral injury—distress from killing, witnessing atrocities, or being unable to save comrades—involves guilt, shame, and loss of meaning that standard PTSD treatment doesn\'t fully address', citationIndex: 4 },
+      { text: '45% of veterans with PTSD also have traumatic brain injury (TBI), creating overlapping symptoms that complicate diagnosis and treatment', citationIndex: 6 },
+      { text: 'Military sexual trauma (MST) affects approximately 1 in 4 women and 1 in 100 men in the military, creating unique trauma involving betrayal by those you serve with', citationIndex: 8 },
+      { text: 'The VA offers free evidence-based treatments including CPT, PE, and EMDR through VA facilities and community-based Vet Centers that require no VA enrollment', citationIndex: 7 },
+    ],
+    sparkMoment: 'You served your country with courage—now let others serve you with compassion. Asking for help isn\'t weakness; it\'s the next mission.',
+    practicalExercise: {
+      title: 'Civilian Reintegration Check-In',
+      steps: [
+        { title: 'Identify One Safe Person', description: 'Choose one person (veteran peer, family member, or therapist) you can be honest with about your struggles. Write down their name and contact information.' },
+        { title: 'Name Your Biggest Challenge', description: 'Identify the single most difficult aspect of being home: hypervigilance, anger, nightmares, feeling disconnected, or loss of purpose. Write it down specifically.' },
+        { title: 'Take One Small Action', description: 'Choose one small step toward help: call the Veterans Crisis Line (988 then press 1), visit va.gov/find-locations to locate your nearest VA facility, or text your safe person to tell them you\'re struggling.' },
+        { title: 'Set a 72-Hour Goal', description: 'Commit to one action within 72 hours: schedule a VA appointment, attend one peer support meeting, or have one honest conversation. Write it down and tell your safe person.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1491,6 +1572,26 @@ export const ptsdComplexTraumaArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['ASD', 'PTSD', 'Diagnosis', 'Early Intervention'],
+    summary: 'Not everyone who experiences trauma develops chronic PTSD. Acute Stress Disorder (ASD) describes PTSD-like symptoms occurring 3 days to 1 month after trauma, while PTSD is diagnosed after symptoms persist beyond one month. About 60% of trauma survivors recover naturally, 25% develop PTSD, and early intervention for ASD can reduce PTSD development by approximately 50%.',
+    keyFacts: [
+      { text: 'The timeline matters: days 1-3 are normal acute stress reactions, days 3-30 may qualify as Acute Stress Disorder, and symptoms persisting beyond 1 month become PTSD', citationIndex: 1 },
+      { text: 'About 50% of people with ASD go on to develop chronic PTSD, while the other 50% recover naturally with time and support', citationIndex: 2 },
+      { text: 'Most trauma survivors (approximately 60%) experience natural recovery with symptoms gradually decreasing over weeks to months without formal treatment', citationIndex: 5 },
+      { text: 'Brief trauma-focused CBT (5-7 sessions) for Acute Stress Disorder can reduce PTSD development by about 50%', citationIndex: 4 },
+      { text: 'Critical Incident Stress Debriefing (single-session) and benzodiazepines are not helpful and may actually harm recovery by interfering with natural processing', citationIndex: 8 },
+    ],
+    sparkMoment: 'Your immediate reactions to trauma aren\'t a sign you\'re broken—they\'re evidence your mind is working exactly as designed to protect you.',
+    practicalExercise: {
+      title: 'Early Recovery Self-Check',
+      steps: [
+        { title: 'Track Your Trajectory', description: 'Each evening, rate your overall distress from 0-10 for the past 24 hours. Are numbers trending down over days/weeks? Gradual improvement (even with setbacks) indicates natural recovery is happening.' },
+        { title: 'Monitor Sleep Patterns', description: 'Note sleep quality each morning: hours slept, nightmares, ease of falling asleep. Slowly improving sleep—even if still imperfect—is a positive sign.' },
+        { title: 'Assess Functioning', description: 'Can you complete basic daily tasks (work, self-care, relationships)? If functioning is returning, even partially, you\'re on the path to recovery. If it\'s declining or severely impaired, seek help now.' },
+        { title: 'Set a Two-Week Check-In', description: 'If symptoms aren\'t improving or are worsening after 2 weeks post-trauma, schedule a mental health evaluation. Early intervention prevents chronic PTSD—don\'t wait the full month.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',

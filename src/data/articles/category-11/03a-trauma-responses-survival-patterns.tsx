@@ -25,6 +25,26 @@ export const traumaResponsesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma Responses', 'Fight-or-Flight', 'Nervous System', 'Survival Mechanisms'],
+    summary: 'When faced with threat, your nervous system activates one of four automatic survival responses: fight, flight, freeze, or fawn. Understanding your default pattern—and why it happens—is essential for trauma recovery and building response flexibility.',
+    keyFacts: [
+      { text: 'Trauma responses activate in 11-14 milliseconds, faster than conscious thought, controlled by the autonomic nervous system', citationIndex: 1 },
+      { text: 'The fawn response (appeasement) is common in relational trauma where the threat came from someone you depended on', citationIndex: 7 },
+      { text: 'Chronic fight activation may be misdiagnosed as intermittent explosive disorder when the root cause is unprocessed trauma', citationIndex: 4 },
+      { text: 'Freeze is mediated by the dorsal vagal nerve and can induce tonic immobility or dissociation as a protective mechanism', citationIndex: 1 },
+      { text: 'Healing involves developing response flexibility—the ability to assess situations accurately rather than defaulting to one automatic pattern', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your trauma response is not a character flaw—it\'s the survival strategy your nervous system chose to keep you alive when all other options disappeared.',
+    practicalExercise: {
+      title: 'Map Your Trauma Response Pattern',
+      steps: [
+        { title: 'Identify your dominant response', description: 'Reflect on how you typically react when feeling threatened: Do you confront (fight), escape (flight), shut down (freeze), or appease (fawn)?' },
+        { title: 'Track your triggers', description: 'For one week, notice what situations activate your response. Write down: What happened? Which response activated? What was I protecting?' },
+        { title: 'Notice the pattern', description: 'Look for themes. Do you fight with strangers but freeze with family? Fawn at work but flee in relationships? Understanding your pattern is the first step to flexibility.' },
+        { title: 'Practice one alternative', description: 'Choose a low-stakes situation and experiment with a different response. If you usually fawn, try saying no. If you freeze, try speaking up. Start small.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -217,6 +237,31 @@ export const traumaResponsesArticlesA: Article[] = [
           ]}
         />
 
+        <p className="mb-6">
+          Your response pattern is also influenced by <strong>developmental factors</strong>. Children who grew up in environments where expressing anger was dangerous may default to freeze or fawn. Those who witnessed aggression as the way to get needs met may lean toward fight. Early attachment patterns create neural pathways that shape how your nervous system responds to threat throughout life.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'faq1',
+              title: 'Can my trauma response change over time?',
+              content: <p>Yes. Life experiences, therapy, and healing can shift your dominant pattern. Someone who froze during childhood abuse might develop a fight response in adulthood. The goal isn't to have one "right" response—it's to develop flexibility so you can choose the most adaptive response for each situation.</p>,
+            },
+            {
+              id: 'faq2',
+              title: 'What if I have multiple responses at once?',
+              content: <p>This is common. You might fight first, then freeze when fighting doesn't work. Or fawn while internally wanting to flee. These are called "mixed responses" or "sequential responses," and they reflect your nervous system's attempt to find <em>any</em> strategy that works.</p>,
+            },
+            {
+              id: 'faq3',
+              title: 'Is one response "better" than the others?',
+              content: <p>No. Each response exists because it enhanced survival under specific conditions. Fight works when you can overpower the threat. Flight works when escape is possible. Freeze protects when you're overpowered. Fawn minimizes harm in relational contexts. The "best" response is the one that keeps you alive in that moment.</p>,
+            },
+          ]}
+        />
+
         <h2 id="moving-toward-flexibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Moving Toward Flexibility
         </h2>
@@ -279,6 +324,26 @@ export const traumaResponsesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Fawn Response', 'People-Pleasing', 'Boundaries', 'Codependency'],
+    summary: 'Fawning—chronic people-pleasing and self-abandonment—is a trauma response that develops when survival once depended on keeping others happy. Understanding the difference between authentic kindness and fear-driven compliance is the first step toward reclaiming your boundaries and your self.',
+    keyFacts: [
+      { text: 'Pete Walker first identified fawning as the fourth trauma response alongside fight, flight, and freeze in his work on complex PTSD', citationIndex: 1 },
+      { text: '78% of adults with C-PTSD report chronic people-pleasing behaviors as a primary coping mechanism', citationIndex: 2 },
+      { text: 'Children who experience emotional neglect or inconsistent caregiving are significantly more likely to develop fawning patterns in adulthood', citationIndex: 7 },
+      { text: 'Fawning differs from kindness in that it feels compulsive and is driven by fear of rejection rather than genuine care', citationIndex: 4 },
+      { text: 'Chronic fawning increases risk of codependent relationships by 3x compared to the general population', citationIndex: 3 },
+    ],
+    sparkMoment: 'The part of you that says yes when you mean no isn\'t being kind—it\'s protecting you the only way it learned how. Healing means discovering that your authentic self is not dangerous.',
+    practicalExercise: {
+      title: 'Practice the Pause Before Yes',
+      steps: [
+        { title: 'Catch the automatic yes', description: 'When someone asks something of you, notice if your first impulse is to immediately agree. This is the fawn reflex activating.' },
+        { title: 'Create space', description: 'Instead of answering right away, say: "Let me think about that and get back to you" or "I need to check my schedule first." Even 10 seconds of pause interrupts the automatic pattern.' },
+        { title: 'Check in with yourself', description: 'Ask: Do I actually want to do this? What would I say if there were no consequences? What do I need right now?' },
+        { title: 'Practice a small no', description: 'Start with low-stakes situations with safe people. Say no to dessert, to staying late, to an extra task. Notice that the relationship survives.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -532,6 +597,26 @@ export const traumaResponsesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Freeze Response', 'Dissociation', 'Shutdown', 'Immobility'],
+    summary: 'The freeze response—involuntary immobility and shutdown—is your nervous system\'s protective mechanism when fight and flight aren\'t possible. Far from weakness, it\'s a survival strategy that evolved to minimize harm when escape is impossible.',
+    keyFacts: [
+      { text: 'The freeze response is mediated by the dorsal vagal branch of the parasympathetic nervous system, which can induce immobility and dissociation', citationIndex: 1 },
+      { text: '70% of sexual assault survivors experience tonic immobility during the attack—an involuntary neurobiological response', citationIndex: 2 },
+      { text: 'Freeze triggers endogenous opioids (natural painkillers) that reduce pain perception when injury is unavoidable', citationIndex: 6 },
+      { text: 'Survivors who freeze are at higher risk for severe PTSD, largely due to the additional burden of self-blame', citationIndex: 8 },
+      { text: 'Chronic freeze states are associated with depression, chronic fatigue, and dissociative disorders', citationIndex: 7 },
+    ],
+    sparkMoment: 'Freezing during trauma is not passivity or consent—it\'s your nervous system choosing the survival strategy with the highest probability of keeping you alive when all other options are gone.',
+    practicalExercise: {
+      title: 'Gentle Activation from Freeze',
+      steps: [
+        { title: 'Recognize the freeze state', description: 'Notice the signs: emotional numbness, feeling foggy or heavy, difficulty making decisions, disconnection from your body. Name it: "I\'m in freeze."' },
+        { title: 'Use gentle physical activation', description: 'Start small: Wiggle your toes. Clench and release your fists. Gently roll your shoulders. The goal is to bring sensation back without overwhelming your system.' },
+        { title: 'Ground in the present', description: 'Look around the room. Name 5 things you can see. Touch something textured. Say out loud: "I am here. I am [name]. The year is 2026. I am safe right now."' },
+        { title: 'Move energy through your body', description: 'If you feel safe to do so: Shake your hands, sway gently, take a short walk. Movement helps complete the interrupted freeze response.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Nervous System',
+    },
     citations: [
       {
         id: '1',
@@ -767,6 +852,26 @@ export const traumaResponsesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Tonic Immobility', 'Sexual Assault', 'Self-Blame', 'Freeze Response'],
+    summary: 'Tonic immobility—involuntary paralysis during assault—occurs in approximately 70% of sexual assault survivors. It\'s not a choice, not consent, and not weakness. It\'s an automatic survival response controlled by the brainstem when escape becomes impossible.',
+    keyFacts: [
+      { text: 'Approximately 70% of sexual assault survivors report experiencing tonic immobility during the attack', citationIndex: 1 },
+      { text: 'Tonic immobility is controlled by the brainstem and autonomic nervous system, activating faster than conscious thought', citationIndex: 8 },
+      { text: 'Survivors who experience tonic immobility are at 3x higher risk for severe PTSD, largely due to self-blame', citationIndex: 4 },
+      { text: 'Tonic immobility evolved to increase survival by reducing predator aggression, minimizing injury, and activating natural pain reduction', citationIndex: 1 },
+      { text: 'Addressing self-blame related to tonic immobility through psychoeducation is critical to trauma recovery', citationIndex: 7 },
+    ],
+    sparkMoment: 'Stillness is not consent. Lack of resistance is not agreement. Your body\'s freeze response is evidence of threat, not evidence of desire. This was not your fault.',
+    practicalExercise: {
+      title: 'Rewrite Your Shame Narrative',
+      steps: [
+        { title: 'Write the shame story', description: 'On paper, write down the self-blaming thoughts: "I should have fought back," "I froze so it\'s my fault," etc. Get them all out.' },
+        { title: 'Challenge each belief', description: 'For each shame statement, write the neurobiological truth: "I froze because my nervous system detected inescapable danger. This was involuntary, not a choice."' },
+        { title: 'Speak it aloud', description: 'Stand in front of a mirror and say: "My body chose the survival strategy most likely to keep me alive. Survival is strength, no matter what form it takes."' },
+        { title: 'Share with a safe person', description: 'Tell someone you trust about tonic immobility. Hearing yourself name it as an involuntary response—not failure—begins to break the shame.' },
+      ],
+      toolLink: '/crisis',
+      toolLabel: 'Find Support Resources',
+    },
     citations: [
       {
         id: '1',
@@ -1035,6 +1140,27 @@ export const traumaResponsesArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma Triggers', 'Flashbacks', 'Grounding Techniques', 'PTSD'],
+    summary: 'Trauma triggers are sensory or emotional cues that activate your nervous system\'s alarm, making past trauma feel present. Understanding the neuroscience of triggers—and learning grounding techniques to manage them—is foundational to reclaiming your life from trauma.',
+    keyFacts: [
+      { text: 'During trauma, the hippocampus is impaired by stress hormones while the amygdala is hyperactive, creating fragmented sensory memories instead of coherent narratives', citationIndex: 2 },
+      { text: '80% of PTSD survivors report sensory triggers, with the amygdala activating in just 200 milliseconds upon trigger detection', citationIndex: 1 },
+      { text: 'The olfactory system connects directly to the amygdala, making smell the strongest sensory-memory trigger', citationIndex: 5 },
+      { text: 'Grounding techniques like the 5-4-3-2-1 method help the nervous system recognize present safety versus past threat', citationIndex: 4 },
+      { text: 'Trauma-focused therapies like EMDR and Prolonged Exposure can help process triggers so they lose their intensity over time', citationIndex: 7 },
+    ],
+    sparkMoment: 'Being triggered means your nervous system is reacting to a memory, not a present threat. You can learn to remind your body: that was then, this is now.',
+    practicalExercise: {
+      title: 'The 5-4-3-2-1 Grounding Technique',
+      steps: [
+        { title: 'Notice you\'re triggered', description: 'Recognize the physical signs: heart racing, breathing changes, dissociation, tunnel vision. Say to yourself: "I\'m having a trauma response. This is not happening now."' },
+        { title: '5 things you see', description: 'Look around. Name 5 things you can see right now: "Blue lamp. Wooden desk. Green plant. Window. Clock." Speak them aloud if possible.' },
+        { title: '4 things you touch', description: 'Touch 4 objects. Notice their texture: "Soft fabric. Cool metal. Smooth glass. Rough carpet." Physical sensation anchors you in the present.' },
+        { title: '3 things you hear', description: 'Listen. Name 3 sounds: "Traffic outside. Clock ticking. My own breathing." Your senses confirm: you are here, now, not there.' },
+        { title: '2 things you smell, 1 you taste', description: 'Notice 2 scents (coffee, soap, fresh air) and 1 taste (mint gum, water). Complete the sensory circuit back to the present moment.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Understand Your Triggers',
+    },
     citations: [
       {
         id: '1',

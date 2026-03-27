@@ -1546,11 +1546,31 @@ export const sleepScienceMentalHealthArticlesB: Article[] = [
     description: 'Can you "bank" sleep on weekends to compensate for weekday deprivation? The research reveals why catch-up sleep is more complicated than it seems.',
     image: "/images/articles/cat09/cover-010.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep Debt', 'Weekend Sleep', 'Recovery Sleep', 'Circadian Rhythm'],
+    summary: 'Weekend catch-up sleep partially reverses some effects of weekday sleep deprivation but creates social jet lag—a 2-3 hour circadian shift equivalent to flying across time zones every week. While better than no recovery, sleeping in on weekends perpetuates a cycle of inconsistency that undermines long-term sleep quality and metabolic health.',
+    keyFacts: [
+      { text: 'Sleeping in 2+ hours on weekends creates social jet lag affecting 70% of adults, linked to increased obesity, diabetes, and cardiovascular disease risk', citationIndex: 3 },
+      { text: 'A single week of sleep restriction (6 hours/night) requires 2-3 nights of extended sleep (9-10 hours) to fully restore cognitive performance', citationIndex: 4 },
+      { text: 'Weekend recovery sleep reduces mortality risk from weekday sleep deprivation by 50%—it helps, but consistent sleep is superior', citationIndex: 1 },
+      { text: 'The circadian disruption from inconsistent sleep timing is often more harmful than the sleep deprivation itself, particularly for metabolic health', citationIndex: 6 },
+      { text: 'Chronic sleep debt accumulates faster than it resolves—losing 1 hour takes roughly 4 days of normal sleep to fully recover from', citationIndex: 2 },
+    ],
+    sparkMoment: 'Sleep isn\'t a bank account where you can borrow all week and deposit on weekends—it\'s a rhythm that breaks when you force it to bend.',
+    practicalExercise: {
+      title: 'Calculate Your Real Sleep Need',
+      steps: [
+        { title: 'Vacation Sleep Test', description: 'During a week off (vacation, staycation), go to bed when naturally tired and wake without an alarm. Track total sleep time for 7 days. Average the last 3 days (after catching up on debt) to find your baseline need.' },
+        { title: 'Audit Your Weekday Reality', description: 'For 1 typical work week, track actual sleep duration. Calculate the gap between your baseline need and your weekday average—this is your nightly sleep debt.' },
+        { title: 'Find the Minimum Viable Consistency', description: 'Instead of sleeping in on weekends, go to bed 30-60 minutes earlier on weeknights. Aim for same wake time ±30 minutes every day, even weekends.' },
+        { title: 'Measure the Impact', description: 'After 2 weeks of consistency, assess: Do you still feel the need to sleep in? Is daytime fatigue reduced? Consistent sleep often reveals we need less "catch-up" than we think when our rhythm stabilizes.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track Sleep Consistency',
+    },
     citations: [
       {
         id: '1',

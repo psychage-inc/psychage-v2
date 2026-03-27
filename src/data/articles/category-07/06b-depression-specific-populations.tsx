@@ -24,6 +24,26 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['LGBTQ+ Mental Health', 'Minority Stress', 'Identity', 'Discrimination', 'Depression'],
+    summary: 'LGBTQ+ individuals experience depression at rates two to three times higher than their peers—not due to their identity, but because of minority stress from discrimination, family rejection, and lack of affirming care. Understanding these unique challenges and protective factors is essential for effective treatment.',
+    keyFacts: [
+      { text: '45% of LGBTQ+ youth seriously considered suicide in the past year, highlighting the severity of mental health disparities', citationIndex: 3 },
+      { text: 'LGBTQ+ individuals experience depression at rates 2.5 times higher than heterosexual and cisgender peers due to minority stress', citationIndex: 1 },
+      { text: 'Family rejection increases suicide attempt risk 8-fold and depression risk 6-fold among LGBTQ+ youth', citationIndex: 7 },
+      { text: 'Access to gender-affirming care leads to significant reductions in depression and suicidality among transgender individuals', citationIndex: 6 },
+      { text: 'LGBTQ+ youth with highly accepting families have depression rates similar to heterosexual, cisgender peers', citationIndex: 3 },
+    ],
+    sparkMoment: 'Depression in LGBTQ+ individuals isn\'t caused by who they are—it\'s caused by how society treats them. In affirming environments with acceptance and support, mental health outcomes transform dramatically.',
+    practicalExercise: {
+      title: 'Building Your Affirming Support Network',
+      steps: [
+        { title: 'Identify One Safe Person', description: 'Think of at least one person (friend, family member, coworker, or online community member) who affirms your identity. Reach out to them this week.' },
+        { title: 'Find LGBTQ+ Community Spaces', description: 'Research local or online LGBTQ+ support groups, community centers, or affirming religious organizations. Attend one meeting or event.' },
+        { title: 'Practice Self-Affirmation', description: 'Write down three things you appreciate about your identity. Read them aloud daily for one week.' },
+        { title: 'Assess Healthcare Providers', description: 'Review your current mental health or medical providers for LGBTQ+-affirming language. If needed, research affirming providers in your area.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood',
+    },
     citations: [
       {
         id: '1',
@@ -117,7 +137,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Understanding Minority Stress
         </h2>
         <p className="mb-6">
-          Minority stress refers to the excess stress LGBTQ+ individuals experience as a result of their marginalized social status <Citation id="2" index={2} source="Journal of Health and Social Behavior" year="2003" tier={1} />. This stress operates at multiple levels.
+          Minority stress refers to the excess stress LGBTQ+ individuals experience as a result of their marginalized social status <Citation id="2" index={2} source="Journal of Health and Social Behavior" year="2003" tier={1} />. This stress operates at multiple levels, from overt discrimination to internalized stigma, and accumulates over time to create vulnerability to depression and other mental health conditions.
+        </p>
+        <p className="mb-6">
+          Unlike general life stress that anyone might face, minority stress is chronic, socially based, and often beyond an individual's control to eliminate. It begins early---many LGBTQ+ people first experience rejection or stigma in childhood or adolescence, during critical periods of identity development. This early exposure shapes mental health trajectories across the lifespan.
         </p>
 
         <ComparisonTable
@@ -158,7 +181,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Unique Risk Factors for Depression
         </h2>
         <p className="mb-6">
-          Several factors significantly increase depression risk in LGBTQ+ populations <Citation id="3" index={3} source="The Trevor Project" year="2023" tier={3} />.
+          Several factors significantly increase depression risk in LGBTQ+ populations <Citation id="3" index={3} source="The Trevor Project" year="2023" tier={3} />. These risk factors operate cumulatively---the more an individual experiences, the higher their depression risk. Understanding these factors helps identify who may need additional support and what interventions can reduce risk.
+        </p>
+        <p className="mb-6">
+          Importantly, these risk factors are not inevitable consequences of being LGBTQ+. They stem from societal stigma and discrimination, meaning they are modifiable through changes in family attitudes, institutional policies, and cultural norms. Where acceptance exists, risk decreases dramatically.
         </p>
 
         <ArticleAccordion
@@ -263,6 +289,75 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="intersectionality" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Intersectionality and Compounded Marginalization
+        </h2>
+        <p className="mb-6">
+          LGBTQ+ individuals who hold multiple marginalized identities---such as LGBTQ+ people of color, disabled LGBTQ+ individuals, or those from low-income backgrounds---face compounded minority stress. They navigate not only homophobia and transphobia, but also racism, ableism, classism, and other forms of discrimination <Citation id="1" index={1} source="American Journal of Public Health" year="2020" tier={1} />.
+        </p>
+        <p className="mb-6">
+          LGBTQ+ people of color, for example, may experience racism within predominantly white LGBTQ+ spaces and homophobia or transphobia within their racial or ethnic communities. This double bind creates unique isolation and stress. Similarly, immigrant LGBTQ+ individuals may face cultural stigma, language barriers, and fear of deportation that complicate access to mental health care.
+        </p>
+        <p className="mb-6">
+          Depression risk increases with the number of marginalized identities a person holds. Effective treatment must acknowledge and address these intersecting oppressions rather than treating LGBTQ+ identity in isolation from other aspects of identity and experience.
+        </p>
+
+        <h2 id="treatment-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Evidence-Based Treatment Approaches
+        </h2>
+        <p className="mb-6">
+          While standard depression treatments (therapy and medication) can be effective for LGBTQ+ individuals, they work best when adapted to address minority stress and identity-specific concerns <Citation id="2" index={2} source="Journal of Health and Social Behavior" year="2003" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Treatment Approaches for LGBTQ+ Depression"
+          columns={['Approach', 'Key Features', 'Best For']}
+          items={[
+            {
+              feature: 'Affirmative Cognitive-Behavioral Therapy (CBT)',
+              values: [
+                'Addresses internalized stigma, builds coping skills for minority stress, challenges negative thought patterns related to identity',
+                'Individuals struggling with internalized homophobia/transphobia, rejection sensitivity',
+              ],
+            },
+            {
+              feature: 'LGBTQ+-Affirmative Psychodynamic Therapy',
+              values: [
+                'Explores how early experiences of stigma shape sense of self, processes trauma from discrimination',
+                'Those with complex trauma, family rejection, or deep-seated shame',
+              ],
+            },
+            {
+              feature: 'Group Therapy with LGBTQ+ Peers',
+              values: [
+                'Provides validation, reduces isolation, builds community connection, shared coping strategies',
+                'Individuals feeling isolated, seeking community, or new to LGBTQ+ identity',
+              ],
+            },
+            {
+              feature: 'Medication Management',
+              values: [
+                'Antidepressants for moderate to severe depression, hormone therapy considerations for trans individuals',
+                'Moderate to severe depression, combination treatment for best outcomes',
+              ],
+            },
+          ]}
+        />
+
+        <ArticleCallout variant="action-plan" title="Creating Your Treatment Plan">
+          <p className="mb-4">
+            Effective treatment often combines multiple approaches. Work with your provider to create a plan that might include:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Individual therapy with an LGBTQ+-affirming provider who understands minority stress</li>
+            <li>Group therapy or peer support groups for community connection</li>
+            <li>Medication evaluation if symptoms are moderate to severe</li>
+            <li>Connection to LGBTQ+ community resources and organizations</li>
+            <li>Family therapy if family relationships are a source of stress or healing</li>
+            <li>Advocacy involvement as a form of empowerment and meaning-making</li>
+          </ul>
+        </ArticleCallout>
+
         <h2 id="protective-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Protective Factors and Resilience
         </h2>
@@ -359,8 +454,32 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="moving-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Moving Forward: Hope and Healing
+        </h2>
+        <p className="mb-6">
+          Depression in LGBTQ+ communities is not inevitable---it is a response to minority stress and discrimination that can be addressed through affirming care, supportive relationships, and structural changes that promote equality and acceptance. Research demonstrates that when LGBTQ+ individuals live in affirming environments with family acceptance, community support, and legal protections, their mental health outcomes improve dramatically <Citation id="3" index={3} source="The Trevor Project" year="2023" tier={3} />.
+        </p>
+        <p className="mb-6">
+          Healing from depression as an LGBTQ+ person often involves not just treating symptoms, but also building pride in your identity, connecting with community, and creating a life where you can live authentically. This process takes time, and setbacks are normal. What matters is that you deserve support, acceptance, and the opportunity to thrive as your full self.
+        </p>
+        <p className="mb-6">
+          The path forward includes both individual healing and collective action. Supporting LGBTQ+ youth, advocating for anti-discrimination protections, promoting affirming healthcare access, and challenging stigma in all its forms creates the conditions where LGBTQ+ people can flourish. You are not alone, and recovery is possible.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Minority stress, not identity, causes elevated depression rates</strong> in LGBTQ+ populations. In affirming environments, mental health outcomes normalize.</li>
+            <li><strong>Family acceptance is one of the most powerful protective factors</strong>. Even one accepting adult can dramatically reduce depression and suicide risk.</li>
+            <li><strong>Transgender individuals benefit significantly from gender-affirming care</strong>, which reduces depression and improves overall mental health.</li>
+            <li><strong>Intersectionality matters</strong>. LGBTQ+ people with multiple marginalized identities face compounded stress and need care that addresses all aspects of their experience.</li>
+            <li><strong>LGBTQ+-affirming therapy is essential</strong>. Providers must understand minority stress, validate identity, and create safe, supportive therapeutic relationships.</li>
+            <li><strong>Community connection is healing</strong>. LGBTQ+ support groups, community centers, and peer relationships reduce isolation and build resilience.</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
-          Depression in LGBTQ+ communities is not inevitable---it is a response to minority stress and discrimination that can be addressed through affirming care, supportive relationships, and structural changes that promote equality and acceptance. You deserve support that honors your full identity.
+          You deserve support that honors your full identity. Whether you're struggling with depression, supporting a loved one, or working to create more affirming spaces, know that change is possible and help is available.
         </p>
       </>
     ),
@@ -377,6 +496,26 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Postpartum Depression', 'Perinatal Mental Health', 'Parenting', 'Family', 'New Parents'],
+    summary: 'Postpartum depression affects both birthing parents (1 in 7) and non-birthing partners (1 in 10), yet stigma and lack of screening mean half of cases go undiagnosed. This treatable condition requires recognition across all family structures—including fathers, adoptive parents, and LGBTQ+ families.',
+    keyFacts: [
+      { text: '14% of birthing parents and 10% of non-birthing partners experience postpartum depression, affecting families across all configurations', citationIndex: 1 },
+      { text: 'When one parent has postpartum depression, the other parent\'s risk increases by 50%, and 5% of families experience depression in both parents simultaneously', citationIndex: 4 },
+      { text: 'Postpartum depression is highly treatable, with most people seeing significant improvement within weeks to months with appropriate care', citationIndex: 7 },
+      { text: 'History of depression or anxiety, especially depression during pregnancy, is the strongest predictor of postpartum depression', citationIndex: 3 },
+      { text: 'Non-birthing partners often go unscreened despite facing unique challenges including lack of recognition, gender norms, and financial pressure', citationIndex: 2 },
+    ],
+    sparkMoment: 'Postpartum depression doesn\'t discriminate—it can affect any new parent, regardless of gender or how the child arrived. Recognizing this reality dismantles the myth that only birthing mothers struggle, opening the door to healing for entire families.',
+    practicalExercise: {
+      title: 'New Parent Mental Health Check-In',
+      steps: [
+        { title: 'Honest Symptom Assessment', description: 'Complete the Edinburgh Postnatal Depression Scale (available free online). Share results with your healthcare provider, even if you feel you "should" be happy.' },
+        { title: 'Talk to Your Partner', description: 'Set aside 15 minutes to ask each other: "How are you really doing?" Listen without judgment or problem-solving—just presence and validation.' },
+        { title: 'Build Your Support Network', description: 'Identify three specific people who can help (with meals, childcare, or just listening). Reach out to one this week with a concrete request.' },
+        { title: 'Schedule a Provider Visit', description: 'Book an appointment with your doctor or a therapist specializing in perinatal mental health. Early intervention makes recovery faster and more complete.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood',
+    },
     citations: [
       {
         id: '1',
@@ -652,11 +791,39 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="screening-diagnosis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Screening and Diagnosis
+        </h2>
+        <p className="mb-6">
+          Routine screening for postpartum depression is recommended for all new parents at well-child visits and postpartum checkups <Citation id="5" index={5} source="Agency for Healthcare Research and Quality" year="2019" tier={2} />. The Edinburgh Postnatal Depression Scale (EPDS) is a validated 10-question screening tool that can be completed in minutes.
+        </p>
+        <p className="mb-6">
+          Unfortunately, many healthcare providers only screen birthing parents, missing depression in non-birthing partners entirely. If you're a non-birthing parent experiencing symptoms, advocate for yourself: request screening, clearly describe your symptoms, and emphasize that you need support regardless of your role in the pregnancy.
+        </p>
+
+        <ArticleCallout variant="action" title="How to Talk to Your Doctor">
+          <p className="mb-4">
+            If you suspect postpartum depression, be direct and specific:
+          </p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>"I think I might have postpartum depression. Can we do a screening?"</li>
+            <li>"I'm struggling to bond with the baby and feel hopeless most days."</li>
+            <li>"I'm having thoughts of harming myself. I need help immediately."</li>
+            <li>"My partner has PPD, and I'm noticing similar symptoms in myself."</li>
+          </ul>
+          <p className="mt-4">
+            Bring a written list of symptoms and their duration. This helps when exhaustion makes it hard to articulate everything clearly during the appointment.
+          </p>
+        </ArticleCallout>
+
         <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Treatment Works: Options for Recovery
         </h2>
         <p className="mb-6">
-          Postpartum depression is highly treatable. Most people see significant improvement within weeks to months with appropriate care <Citation id="7" index={7} source="JAMA Psychiatry" year="2021" tier={1} />.
+          Postpartum depression is highly treatable. Most people see significant improvement within weeks to months with appropriate care <Citation id="7" index={7} source="JAMA Psychiatry" year="2021" tier={1} />. Early intervention leads to faster recovery and prevents PPD from becoming chronic or affecting child development.
+        </p>
+        <p className="mb-6">
+          Treatment should be individualized based on severity, infant feeding method, personal preferences, and access to care. Many parents benefit from combining multiple approaches for comprehensive support.
         </p>
 
         <BeforeAfter
@@ -686,17 +853,114 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           }}
         />
 
-        <p className="mb-6 mt-6">
-          <strong>Treatment options include:</strong>
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'therapy',
+              title: 'Psychotherapy',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Cognitive-behavioral therapy (CBT) and interpersonal therapy (IPT) are first-line treatments with strong evidence for effectiveness. Therapy helps identify negative thought patterns, develop coping skills, and address relationship challenges.
+                  </p>
+                  <p>
+                    Parent-infant psychotherapy can improve bonding and attachment when connection with the baby feels difficult or absent.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'medication',
+              title: 'Medication',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Antidepressants (SSRIs like sertraline and escitalopram) are safe during breastfeeding and effective for moderate to severe PPD. Most pass into breast milk in very small amounts that don't affect infant development.
+                  </p>
+                  <p className="mb-4">
+                    Brexanolone is a newer IV medication given over 60 hours in a medical facility for severe PPD, offering rapid relief within days.
+                  </p>
+                  <p>
+                    Work with your provider to weigh benefits and risks based on your situation. Untreated depression poses greater risks to both parent and child than medication side effects.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'support',
+              title: 'Support Groups and Peer Connection',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Postpartum Support International offers online and in-person support groups where parents share experiences, reduce isolation, and learn practical coping strategies from others who truly understand.
+                  </p>
+                  <p>
+                    Specialized groups exist for non-birthing partners, LGBTQ+ parents, adoptive families, and loss/NICU experiences.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'practical',
+              title: 'Practical and Lifestyle Support',
+              content: (
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Sleep: Coordinate with partner to ensure each person gets at least one 4-hour uninterrupted sleep block</li>
+                  <li>Nutrition: Simple, nourishing meals (meal trains from friends, prepared foods, grocery delivery)</li>
+                  <li>Movement: Gentle exercise like walking with the stroller reduces depressive symptoms</li>
+                  <li>Light exposure: Time outdoors, especially morning sunlight, regulates mood and sleep</li>
+                  <li>Childcare breaks: Regular relief from caregiving demands, even for short periods</li>
+                </ul>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="supporting-partner" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Supporting Your Partner Through PPD
+        </h2>
+        <p className="mb-6">
+          If your partner is experiencing postpartum depression, your support matters enormously. Here's how to help effectively:
         </p>
 
-        <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Psychotherapy:</strong> Cognitive-behavioral therapy (CBT), interpersonal therapy (IPT), and parent-infant psychotherapy show strong effectiveness</li>
-          <li><strong>Medication:</strong> Antidepressants are safe during breastfeeding for most parents; new rapid-acting treatments like brexanolone available for severe cases</li>
-          <li><strong>Support groups:</strong> Peer support from others experiencing PPD reduces isolation and provides practical coping strategies</li>
-          <li><strong>Practical support:</strong> Help with childcare, household tasks, and sleep to reduce overwhelming demands</li>
-          <li><strong>Couples therapy:</strong> Address relationship strain and improve co-parenting communication</li>
-        </ul>
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Validate Their Experience',
+              description: (
+                <p>
+                  Avoid minimizing ("Everyone feels this way," "You just need more sleep"). Instead: "This sounds really hard. I believe you, and we'll get through this together."
+                </p>
+              ),
+            },
+            {
+              title: 'Encourage Professional Help',
+              description: (
+                <p>
+                  Offer to find providers, schedule appointments, arrange childcare, or attend sessions together. Reduce barriers to accessing care.
+                </p>
+              ),
+            },
+            {
+              title: 'Take on Concrete Tasks',
+              description: (
+                <p>
+                  Actions speak louder than words: handle night feedings, take baby for walks, cook meals, do laundry. Don't ask "What can I do?"—just do specific helpful things.
+                </p>
+              ),
+            },
+            {
+              title: 'Monitor Your Own Mental Health',
+              description: (
+                <p>
+                  Supporting a partner with PPD while caring for a newborn is stressful. Watch for depression symptoms in yourself and seek help if needed.
+                </p>
+              ),
+            },
+          ]}
+        />
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Help
@@ -724,8 +988,30 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="path-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Path to Recovery
+        </h2>
+        <p className="mb-6">
+          Postpartum depression is not your fault, and it doesn't mean you're a bad parent. It's a treatable medical condition with excellent prognosis when addressed early <Citation id="7" index={7} source="JAMA Psychiatry" year="2021" tier={1} />. Most parents experience significant symptom relief within 4-8 weeks of starting treatment, and full recovery is common.
+        </p>
+        <p className="mb-6">
+          Recovery isn't linear---there will be good days and hard days. What matters is the overall trend toward feeling better, bonding more easily with your baby, and reclaiming a sense of yourself. With support, you can recover fully and enjoy the connection with your child that depression has made difficult to feel.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Postpartum depression affects all types of parents</strong>—birthing and non-birthing, across all family structures. Recognition beyond stereotypes is essential.</li>
+            <li><strong>It's different from baby blues</strong> in severity, duration, and impact on functioning. Symptoms lasting more than two weeks require professional evaluation.</li>
+            <li><strong>Non-birthing partners are at significant risk</strong> (1 in 10), yet often go unscreened due to cultural assumptions and lack of provider awareness.</li>
+            <li><strong>When one parent has PPD, the other's risk increases 50%</strong>, making family-centered screening and support critical.</li>
+            <li><strong>Treatment is highly effective</strong> with options including therapy, medication (safe during breastfeeding), support groups, and practical assistance.</li>
+            <li><strong>Early intervention prevents chronicity</strong> and protects child development. Don't wait until you "can't take it anymore"—seek help when symptoms persist.</li>
+            <li><strong>Resources exist for all family types</strong>: Postpartum Support International offers specialized support for LGBTQ+ parents, adoptive families, non-birthing partners, and more.</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
-          Postpartum depression is not your fault, and it doesn't mean you're a bad parent. It's a treatable medical condition. With support, you can recover fully and enjoy the connection with your child that depression has made difficult to feel. Resources are available at Postpartum Support International <Citation id="8" index={8} source="Postpartum Support International" year="2023" tier={3} />.
+          You deserve support, and your family deserves a healthy, present parent. Reaching out for help is not weakness---it's the strongest thing you can do for yourself and your child. Resources are available at Postpartum Support International <Citation id="8" index={8} source="Postpartum Support International" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -742,6 +1028,26 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Chronic Illness', 'Chronic Pain', 'Comorbidity', 'Health Psychology', 'Depression'],
+    summary: 'People living with chronic illness are 2-3 times more likely to experience depression than the general population. This bidirectional relationship means depression worsens physical health outcomes while chronic illness increases depression risk—making integrated care essential for both conditions.',
+    keyFacts: [
+      { text: '33% of people with chronic illness experience clinical depression, yet 65% of cases go untreated', citationIndex: 2 },
+      { text: 'The relationship is bidirectional: chronic illness increases depression risk, and depression worsens physical health outcomes and treatment adherence', citationIndex: 3 },
+      { text: 'Approximately 50% of people with chronic pain also have depression due to shared brain pathways and neurotransmitter systems', citationIndex: 4 },
+      { text: 'Treating depression in chronic illness improves both mental and physical health outcomes, including better disease management', citationIndex: 6 },
+      { text: 'Many symptoms overlap between depression and chronic illness (fatigue, sleep changes), but persistent sadness and loss of interest indicate depression requiring treatment', citationIndex: 1 },
+    ],
+    sparkMoment: 'Treating depression isn\'t just about mental health—it often leads to measurable improvements in physical symptoms, disease management, and quality of life. Your mind and body heal together.',
+    practicalExercise: {
+      title: 'Building a Holistic Health Plan',
+      steps: [
+        { title: 'Track Both Physical and Emotional Symptoms', description: 'Use a symptom journal to note pain levels, energy, mood, and activities. Look for patterns connecting physical and emotional states.' },
+        { title: 'Communicate with Your Care Team', description: 'Tell your doctors about mood changes. Bring your symptom journal to appointments to show the full picture of your health.' },
+        { title: 'Identify One Adaptive Strategy', description: 'Choose one area where you can pace, prioritize, or adapt activities to conserve energy. Practice it for one week.' },
+        { title: 'Connect with Peer Support', description: 'Find one chronic illness support group (online or local) where people understand both the physical and emotional challenges. Attend one meeting.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -818,7 +1124,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
             People living with chronic illness are two to three times more likely to experience depression than the general population <Citation id="2" index={2} source="Psychosomatic Medicine" year="2019" tier={1} />. This isn't weakness or "giving in"---it's a natural response to living with persistent symptoms, functional limitations, medical uncertainty, and the emotional weight of managing an illness that won't go away <Citation id="1" index={1} source="NICE" year="2022" tier={4} />.
           </p>
           <p className="mb-6">
-            Understanding the complex relationship between physical and mental health is the first step toward comprehensive care that addresses both.
+            Yet despite how common depression is among people with chronic conditions, it often goes unrecognized and untreated. Healthcare providers may focus exclusively on physical symptoms, patients may assume mood changes are "normal" given their circumstances, and the overlap between physical and psychological symptoms can make diagnosis challenging. This treatment gap means that while one-third of people with chronic illness experience depression, nearly two-thirds of those cases receive no mental health support.
+          </p>
+          <p className="mb-6">
+            Understanding the complex relationship between physical and mental health is the first step toward comprehensive care that addresses both. This article explores why chronic illness increases depression risk, how to recognize depression when symptoms overlap with physical illness, and what evidence-based treatments can improve both your mental and physical health.
           </p>
         </div>
 
@@ -835,7 +1144,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           The Bidirectional Relationship
         </h2>
         <p className="mb-6">
-          Depression and chronic illness influence each other in both directions---chronic illness increases depression risk, and depression worsens physical health outcomes <Citation id="3" index={3} source="Journal of Psychosomatic Research" year="2021" tier={1} />.
+          Depression and chronic illness influence each other in both directions---chronic illness increases depression risk, and depression worsens physical health outcomes <Citation id="3" index={3} source="Journal of Psychosomatic Research" year="2021" tier={1} />. This creates a challenging cycle where each condition makes the other worse, but also means that treating either condition can create positive spillover effects for the other.
+        </p>
+        <p className="mb-6">
+          Understanding this bidirectional relationship helps explain why people with chronic illness and depression often feel stuck---the depression saps motivation needed for disease self-management, while poorly controlled physical symptoms worsen mood. Breaking this cycle requires addressing both conditions simultaneously rather than waiting for one to resolve before treating the other.
         </p>
 
         <ComparisonTable
@@ -1080,6 +1392,48 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="specific-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Depression Risk Across Specific Chronic Conditions
+        </h2>
+        <p className="mb-6">
+          While all chronic illnesses increase depression risk, certain conditions have particularly high rates or unique challenges <Citation id="2" index={2} source="Psychosomatic Medicine" year="2019" tier={1} />:
+        </p>
+
+        <ComparisonTable
+          title="Depression Rates in Common Chronic Conditions"
+          columns={['Condition', 'Depression Rate', 'Unique Factors']}
+          items={[
+            {
+              feature: 'Diabetes',
+              values: ['25-30%', 'Blood sugar management complexity, lifestyle restrictions, fear of complications'],
+            },
+            {
+              feature: 'Chronic Pain Syndromes',
+              values: ['40-50%', 'Shared neurobiological pathways, functional limitations, invalidation'],
+            },
+            {
+              feature: 'Cardiovascular Disease',
+              values: ['20-30%', 'Depression worsens cardiac outcomes, creating bidirectional cycle'],
+            },
+            {
+              feature: 'Autoimmune Diseases',
+              values: ['30-40%', 'Inflammatory processes affecting mood, unpredictable flares, invisibility'],
+            },
+            {
+              feature: 'Cancer',
+              values: ['25-35%', 'Treatment side effects, mortality fears, identity disruption'],
+            },
+            {
+              feature: 'Neurological Conditions',
+              values: ['30-50%', 'Direct brain involvement, progressive decline, communication challenges'],
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          If you have one of these conditions, routine depression screening is especially important. Many providers focus solely on physical symptoms, missing depression that could be successfully treated.
+        </p>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -1107,8 +1461,30 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="living-well" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Living Well with Chronic Illness and Managing Depression
+        </h2>
+        <p className="mb-6">
+          Living with chronic illness is hard. Developing depression doesn't mean you're weak---it means you're human, facing challenges that would strain anyone's mental health <Citation id="1" index={1} source="NICE" year="2022" tier={4} />. The combination of chronic illness and depression is not a personal failing; it's a medical reality that deserves professional support and self-compassion.
+        </p>
+        <p className="mb-6">
+          Treatment for depression can help you reclaim quality of life, improve your physical health management, and find meaning even within the constraints of chronic illness. Recovery isn't about returning to your pre-illness self---it's about building a satisfying life that honors both your capabilities and your limitations. This process takes time, support, and often trial and error to find what works for you.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>The relationship is bidirectional:</strong> Chronic illness increases depression risk, and depression worsens physical health outcomes. Treating both conditions together produces the best results.</li>
+            <li><strong>Depression is common but not inevitable:</strong> 33% of people with chronic illness develop depression, but this means 67% do not. Protective factors and early intervention make a difference.</li>
+            <li><strong>Symptoms overlap, but depression is distinct:</strong> Fatigue and sleep changes occur in both conditions, but persistent sadness, hopelessness, and loss of interest indicate depression requiring treatment.</li>
+            <li><strong>Integrated care is essential:</strong> Best outcomes occur when physical and mental health providers communicate and coordinate treatment approaches.</li>
+            <li><strong>Adapted strategies work:</strong> CBT, ACT, antidepressants, and self-management programs all show effectiveness for depression in chronic illness when tailored to your situation.</li>
+            <li><strong>Energy management is key:</strong> Pacing, prioritizing, and adapting activities helps manage both physical symptoms and depression while conserving limited energy.</li>
+            <li><strong>You're not alone:</strong> Peer support from others managing chronic illness reduces isolation and provides practical wisdom from lived experience.</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
-          Living with chronic illness is hard. Developing depression doesn't mean you're weak---it means you're human. Treatment for depression can help you reclaim quality of life, improve your physical health management, and find meaning even within the constraints of chronic illness. Resources and support are available through organizations like NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          Your mental health matters as much as your physical health. Addressing depression improves not only how you feel emotionally, but also your ability to manage your chronic condition, maintain relationships, and live the fullest life possible within your circumstances. Resources and support are available through organizations like NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -1125,6 +1501,26 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Healthcare Workers', 'Burnout', 'Moral Injury', 'Occupational Health', 'Depression'],
+    summary: 'Healthcare workers experience depression at rates significantly higher than the general population—27% of medical students, 44% of physicians with burnout symptoms. Chronic overwork, emotional labor, moral injury, and cultural barriers to seeking help create a perfect storm for mental health crises in those who care for others.',
+    keyFacts: [
+      { text: 'Medical students show depression rates of 27%, nearly triple that of age-matched peers, with rates increasing through training', citationIndex: 1 },
+      { text: 'Over 50% of physicians and nurses in some specialties experience burnout symptoms closely linked to depression', citationIndex: 3 },
+      { text: 'During the COVID-19 pandemic, 15% of nurses seriously considered suicide in the past year, highlighting the severity of the crisis', citationIndex: 6 },
+      { text: 'Moral injury—psychological distress from violating core values due to systemic constraints—is a major driver of healthcare worker depression', citationIndex: 4 },
+      { text: 'Fear of career consequences and stigma prevent many healthcare workers from seeking mental health treatment despite high need', citationIndex: 7 },
+    ],
+    sparkMoment: 'Healthcare workers dedicate their lives to healing others, yet the system often demands they sacrifice their own mental health in the process. You cannot pour from an empty cup—seeking help isn\'t weakness, it\'s a professional responsibility.',
+    practicalExercise: {
+      title: 'Establishing Boundaries and Self-Care',
+      steps: [
+        { title: 'Identify One Non-Negotiable Boundary', description: 'Choose one area where you will protect your wellbeing: no charts at home, one day off per week completely work-free, or scheduled breaks during shifts. Commit to it for two weeks.' },
+        { title: 'Build a Confidential Support Network', description: 'Connect with at least one trusted colleague who understands healthcare culture. Share openly about struggles without fear of judgment or reporting.' },
+        { title: 'Schedule Regular Mental Health Check-Ins', description: 'Set a monthly reminder to honestly assess your mental state using the PHQ-9 or similar screening tool. Track trends over time.' },
+        { title: 'Research Confidential Resources', description: 'Identify one confidential mental health resource (EAP, physician health program, or external therapist) you could contact if needed. Save the contact information.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Wellbeing',
+    },
     citations: [
       {
         id: '1',
@@ -1201,7 +1597,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
             Medical students show depression rates of 27%, nearly triple that of age-matched peers <Citation id="1" index={1} source="JAMA" year="2016" tier={1} />. Nurses and physicians experience burnout---closely linked to depression---at rates exceeding 50% in some specialties <Citation id="3" index={3} source="Annals of Internal Medicine" year="2018" tier={1} />. The COVID-19 pandemic worsened this crisis, with healthcare workers reporting unprecedented levels of anxiety, depression, and post-traumatic stress <Citation id="2" index={2} source="BJPsych Open" year="2021" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding the unique factors that contribute to depression in healthcare workers---and dismantling barriers to seeking help---is essential for supporting those who care for all of us.
+            This isn't a new problem. For decades, healthcare training and practice have been built on a model that normalizes sleep deprivation, emotional suppression, and self-neglect as signs of dedication. The culture teaches that admitting struggles is unprofessional, that mental health needs are weakness, and that asking for help jeopardizes careers. These beliefs keep depression hidden until crisis points---substance use, medical errors, or suicidal ideation---force recognition.
+          </p>
+          <p className="mb-6">
+            Understanding the unique factors that contribute to depression in healthcare workers---and dismantling barriers to seeking help---is essential for supporting those who care for all of us. This article explores why healthcare professionals face elevated depression risk, how the pandemic intensified pre-existing problems, and what resources exist for those who need support now.
           </p>
         </div>
 
@@ -1218,7 +1617,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           Why Healthcare Workers Are at Higher Risk
         </h2>
         <p className="mb-6">
-          The demands of healthcare work create a perfect storm for depression, combining chronic stress, emotional labor, moral injury, and systemic barriers to self-care.
+          The demands of healthcare work create a perfect storm for depression, combining chronic stress, emotional labor, moral injury, and systemic barriers to self-care. Unlike many occupations where stress comes from external deadlines or performance metrics, healthcare workers face the unique burden of knowing that their exhaustion, mistakes, or emotional depletion can directly harm vulnerable patients.
+        </p>
+        <p className="mb-6">
+          This profound responsibility---combined with inadequate systemic support---creates conditions where depression becomes not a personal failing, but a predictable outcome of an unsustainable system <Citation id="7" index={7} source="NIOSH" year="2023" tier={2} />.
         </p>
 
         <ArticleAccordion
@@ -1447,8 +1849,30 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="path-forward" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          A Path Forward: Healing the Healers
+        </h2>
+        <p className="mb-6">
+          Healthcare work is meaningful, but it shouldn't cost you your mental health. Depression among healthcare workers is not a sign of individual weakness or unsuitability for the profession---it's a systemic problem requiring systemic solutions <Citation id="5" index={5} source="Lancet" year="2019" tier={1} />. Individual treatment is essential, but lasting change requires transforming the conditions that make depression nearly inevitable in healthcare roles.
+        </p>
+        <p className="mb-6">
+          You entered this profession to heal others, but healing yourself must come first. You cannot provide compassionate, safe care when you're drowning in depression and burnout. Seeking help isn't weakness---it's a professional responsibility to yourself, your patients, and your colleagues. The culture of stoicism that demands you suffer silently is wrong. You deserve the same evidence-based, compassionate treatment you would provide to any patient presenting with depression.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Depression rates are alarmingly high:</strong> 27% of medical students, over 44% of physicians with burnout symptoms, and pandemic-era rates even higher among frontline workers.</li>
+            <li><strong>Moral injury is a major driver:</strong> Being forced to violate professional values due to system constraints creates psychological distress strongly linked to depression.</li>
+            <li><strong>Burnout and depression overlap but differ:</strong> Burnout is work-specific and may improve with time off; depression affects all life domains and requires clinical treatment.</li>
+            <li><strong>Cultural stigma creates barriers to care:</strong> Fear of license board reports, fitness-for-duty evaluations, and professional consequences prevents many from seeking needed help.</li>
+            <li><strong>COVID-19 worsened a pre-existing crisis:</strong> The pandemic exposed and intensified mental health challenges that existed long before 2020.</li>
+            <li><strong>Confidential resources exist:</strong> EAPs, physician health programs, external therapists, and crisis lines provide support without mandatory reporting.</li>
+            <li><strong>Systemic change is essential:</strong> Individual treatment alone is insufficient when workplace conditions continuously recreate the problem. Organizations must reduce administrative burden, ensure adequate staffing, and normalize seeking help.</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
-          Healthcare work is meaningful, but it shouldn't cost you your mental health. Depression is not a sign that you're unsuited for this work---it's a sign that the system needs to change and that you deserve support. Seeking help is not weakness; it's a professional responsibility to yourself and your patients. You cannot pour from an empty cup.
+          To those who dedicate their lives to caring for others: you matter. Your mental health matters. Your wellbeing is not selfish---it's foundational to the work you do. The system that demands you sacrifice yourself is broken, not you. Reach out, seek help, and know that healing is possible. You cannot pour from an empty cup, and refilling yours is not abandoning your patients---it's ensuring you can continue to serve them well. Resources are available through the AMA and other professional organizations <Citation id="8" index={8} source="American Medical Association" year="2023" tier={3} />.
         </p>
       </>
     ),
@@ -1465,6 +1889,26 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Immigration', 'Refugees', 'Cultural Adaptation', 'Displacement', 'Depression'],
+    summary: 'Immigrants and refugees face depression at rates 3-4 times higher than the general population, driven by pre-migration trauma, dangerous journeys, family separation, and post-migration stressors including discrimination, legal uncertainty, and economic hardship. Culturally responsive care that addresses both trauma and current challenges is essential.',
+    keyFacts: [
+      { text: 'Refugees and asylum seekers show depression rates of 30-40%, three to four times higher than the general population', citationIndex: 1 },
+      { text: 'Post-migration stressors (legal uncertainty, discrimination, economic hardship) often have stronger impact on mental health than pre-migration trauma', citationIndex: 4 },
+      { text: '70% of immigrant mental health needs go unmet due to barriers including language, cost, cultural mistrust, and fear of deportation', citationIndex: 4 },
+      { text: 'Integration (maintaining heritage culture while adopting new culture) is associated with the best mental health outcomes', citationIndex: 2 },
+      { text: 'Cultural adaptations of evidence-based treatments improve engagement and outcomes for immigrant populations', citationIndex: 5 },
+    ],
+    sparkMoment: 'Leaving your homeland—whether by choice or force—involves losses that Western mental health systems often fail to recognize. Your grief for what you left behind and your struggle to navigate what lies ahead are both valid and deserving of compassionate support.',
+    practicalExercise: {
+      title: 'Cultural Identity and Support Network Building',
+      steps: [
+        { title: 'Connect with Cultural Community', description: 'Find at least one ethnic community organization, religious group, or cultural center in your area. Attend one event or gathering to connect with others who share your background.' },
+        { title: 'Practice Bicultural Integration', description: 'Identify one way to maintain your heritage culture (language practice, traditional food, cultural celebration) and one way to engage with your new culture this week.' },
+        { title: 'Build a Support Network Map', description: 'Write down people who can help with specific needs: someone who speaks your language, legal aid, job assistance, childcare, and emotional support. Identify gaps to fill.' },
+        { title: 'Research Culturally Responsive Resources', description: 'Find one mental health provider or organization that offers services in your language or specializes in immigrant/refugee mental health. Save their contact information.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Wellbeing',
+    },
     citations: [
       {
         id: '1',
@@ -1541,7 +1985,10 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
             Refugees and asylum seekers show depression rates of 30-40%, three to four times higher than the general population <Citation id="1" index={1} source="Journal of Nervous and Mental Disease" year="2020" tier={1} />. Even voluntary immigrants face elevated mental health challenges, particularly during the first years after arrival when they navigate language barriers, economic instability, discrimination, and separation from family <Citation id="2" index={2} source="Annual Review of Clinical Psychology" year="2019" tier={1} />.
           </p>
           <p className="mb-6">
-            Understanding the unique stressors that immigrants and refugees face---and the protective factors that support resilience---is essential for providing culturally responsive mental health care.
+            Yet despite these elevated rates, immigrant and refugee mental health needs often go unmet. Seventy percent of immigrants with depression receive no mental health care due to barriers including language, cost, cultural stigma around mental illness, fear that seeking help could affect immigration status, and lack of culturally responsive services <Citation id="4" index={4} source="World Health Organization" year="2018" tier={2} />. This treatment gap means that people who have survived extraordinary hardships continue to suffer silently in their new homes.
+          </p>
+          <p className="mb-6">
+            Understanding the unique stressors that immigrants and refugees face---from pre-migration trauma through the challenges of starting over---and the protective factors that support resilience is essential for providing culturally responsive mental health care that actually reaches and helps these communities.
           </p>
         </div>
 
@@ -1743,11 +2190,60 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="barriers-to-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Barriers to Mental Health Care
+        </h2>
+        <p className="mb-6">
+          Multiple interconnected barriers prevent immigrants and refugees from accessing needed mental health support <Citation id="4" index={4} source="World Health Organization" year="2018" tier={2} />:
+        </p>
+
+        <ComparisonTable
+          title="Common Barriers and Solutions"
+          columns={['Barrier', 'Impact', 'Potential Solutions']}
+          items={[
+            {
+              feature: 'Language',
+              values: [
+                'Cannot explain symptoms or understand treatment',
+                'Professional interpreters, multilingual providers, translated materials',
+              ],
+            },
+            {
+              feature: 'Cultural Stigma',
+              values: [
+                'Mental illness seen as shameful or weakness',
+                'Community education, peer support from same cultural group, normalizing help-seeking',
+              ],
+            },
+            {
+              feature: 'Immigration Fear',
+              values: [
+                'Worry that seeking help could affect status or lead to deportation',
+                'Confidentiality assurances, community clinics that don\'t require documentation',
+              ],
+            },
+            {
+              feature: 'Cost',
+              values: [
+                'Uninsured or underinsured, cannot afford care',
+                'Sliding scale clinics, refugee resettlement services, community health centers',
+              ],
+            },
+            {
+              feature: 'Lack of Culturally Responsive Providers',
+              values: [
+                'Providers don\'t understand cultural context or migration experience',
+                'Cultural competency training, hiring diverse providers, community partnerships',
+              ],
+            },
+          ]}
+        />
+
         <h2 id="culturally-responsive-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Culturally Responsive Mental Health Care
         </h2>
         <p className="mb-6">
-          Effective mental health treatment for immigrants and refugees requires cultural adaptation beyond simple language translation <Citation id="5" index={5} source="Clinical Psychology: Science and Practice" year="2020" tier={1} />.
+          Effective mental health treatment for immigrants and refugees requires cultural adaptation beyond simple language translation <Citation id="5" index={5} source="Clinical Psychology: Science and Practice" year="2020" tier={1} />. Providers must understand that Western concepts of mental health, individual therapy, and emotional disclosure may not align with cultural values around family privacy, collectivism, or spiritual explanations for distress.
         </p>
 
         <ArticleCallout variant="tip" title="Elements of Culturally Responsive Care">
@@ -1797,8 +2293,33 @@ export const depressionSpecificPopulationsArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="building-new-home" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building a New Home: Hope and Healing
+        </h2>
+        <p className="mb-6">
+          Immigration and displacement involve profound losses---of home, community, identity, and sometimes loved ones. Depression in this context is not weakness; it's a human response to extraordinary circumstances <Citation id="1" index={1} source="Journal of Nervous and Mental Disease" year="2020" tier={1} />. The grief you feel for what you left behind is real and valid. So is the exhaustion of navigating a new language, culture, and systems while carrying the weight of past experiences.
+        </p>
+        <p className="mb-6">
+          Yet alongside these challenges exists resilience. Many immigrants and refugees build meaningful lives in their new countries, maintaining connection to heritage culture while also participating in new communities. This bicultural integration---honoring where you came from while embracing where you are---predicts the best mental health outcomes <Citation id="6" index={6} source="Journal of Cross-Cultural Psychology" year="2019" tier={1} />. You do not have to choose between your cultures; you can carry both.
+        </p>
+        <p className="mb-6">
+          Healing from depression as an immigrant or refugee requires more than individual therapy---it requires addressing the systemic barriers that create and maintain distress. Legal stability, economic opportunity, family reunification, and welcoming, anti-discriminatory communities are not just "nice to have"---they are essential components of mental health <Citation id="3" index={3} source="Social Science & Medicine" year="2021" tier={1} />.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li><strong>Depression rates are 3-4 times higher</strong> among refugees and asylum seekers compared to the general population, reflecting the cumulative impact of trauma and stressors.</li>
+            <li><strong>Post-migration stressors often matter more than pre-migration trauma:</strong> Legal uncertainty, discrimination, economic hardship, and lack of support in the new country predict worse mental health.</li>
+            <li><strong>70% of immigrant mental health needs go unmet</strong> due to barriers including language, cost, immigration fears, cultural stigma, and lack of culturally responsive providers.</li>
+            <li><strong>Bicultural integration predicts best outcomes:</strong> Maintaining heritage culture while adopting aspects of the new culture is healthier than assimilation or separation.</li>
+            <li><strong>Cultural responsiveness requires more than translation:</strong> Effective care addresses migration context, uses interpreters properly, adapts treatments to cultural values, and partners with ethnic communities.</li>
+            <li><strong>Protective factors exist:</strong> Connection to ethnic community, legal stability, meaningful employment, family reunification, and sense of purpose buffer against depression.</li>
+            <li><strong>Crisis services don't report immigration status:</strong> You have the right to emergency mental health care regardless of documentation. 988 offers multilingual crisis support.</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
-          Immigration and displacement involve profound losses---of home, community, identity, and sometimes loved ones. Depression in this context is not weakness; it's a human response to extraordinary circumstances. Culturally responsive support can help you heal from past trauma, navigate the challenges of your new life, and build a future that honors both where you came from and where you are now. Resources are available through SAMHSA <Citation id="7" index={7} source="SAMHSA" year="2023" tier={2} /> and NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
+          To immigrants and refugees struggling with depression: your pain is real, your experiences matter, and you deserve compassionate support that honors your full identity. Culturally responsive care can help you heal from past trauma, navigate the challenges of your new life, and build a future that holds space for both where you came from and where you are now. Resources are available through SAMHSA <Citation id="7" index={7} source="SAMHSA" year="2023" tier={2} /> and NAMI <Citation id="8" index={8} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
       </>
     ),

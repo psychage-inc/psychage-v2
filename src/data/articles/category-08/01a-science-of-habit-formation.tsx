@@ -20,11 +20,31 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     description: 'Understand the three-part neurological pattern that drives every habit and learn how to use this loop to build better behaviors.',
     image: "/images/articles/cat08/cover-001.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Habit Formation', 'Behavior Change', 'Neuroscience', 'Self-Help'],
+    summary: 'Every habit follows a three-part neurological loop of cue, routine, and reward. Understanding this pattern allows you to intentionally design behaviors that support your mental health by keeping the cue and reward the same while changing the routine.',
+    keyFacts: [
+      { text: 'Habits account for 40-45% of daily behaviors, running automatically without conscious thought', citationIndex: 1 },
+      { text: 'The basal ganglia creates habits through chunking, converting complex sequences into single automated routines', citationIndex: 5 },
+      { text: 'Every habit loop consists of three components: a cue (trigger), routine (behavior), and reward (benefit)', citationIndex: 1 },
+      { text: 'Habit formation timelines vary from 18 to 254 days depending on behavior complexity and individual differences', citationIndex: 1 },
+      { text: 'The most effective way to change a habit is to keep the cue and reward the same while swapping in a new routine', citationIndex: 8 },
+    ],
+    sparkMoment: 'You can\'t extinguish a bad habit, you can only change it---and the key is understanding what reward you\'re really seeking.',
+    practicalExercise: {
+      title: 'Map Your Habit Loop',
+      steps: [
+        { title: 'Choose One Habit', description: 'Select a habit you want to understand better---either one you want to build or one you want to change.' },
+        { title: 'Track the Cue', description: 'For 3-5 days, write down what triggers the habit: time, location, emotion, people present, or preceding action.' },
+        { title: 'Identify the Reward', description: 'Ask yourself what you gain from this behavior. Experiment with different routines to discover what reward you\'re truly seeking.' },
+        { title: 'Design Your Replacement', description: 'Create an implementation intention: "When [CUE], I will [NEW ROUTINE] to get [REWARD]." Practice this new loop consistently.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Habits',
+    },
     citations: [
       {
         id: '1',
@@ -100,6 +120,19 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           <p className="mb-6">
             Research shows that habits account for about 40-45% of daily behaviors <Citation id="1" index={1} source="Annual Review of Psychology" year="2016" tier={1} />. Understanding how habits form isn't just academic curiosity---it's the key to intentionally building behaviors that support your mental health and wellbeing. At the core of every habit is a simple three-part loop: cue, routine, and reward.
           </p>
+
+          <StatCard
+            stats={[
+              { value: 40, suffix: '%', label: 'of daily behaviors are habitual' },
+              { value: 18, suffix: '-254 days', label: 'to form a new habit' },
+              { value: 3, label: 'components in every habit loop' },
+            ]}
+            source="Annual Review of Psychology, 2016"
+          />
+
+          <p className="mb-6 mt-8">
+            Whether you're trying to build healthy routines like regular exercise and meditation, or break unhelpful patterns like stress eating or doomscrolling, understanding the neuroscience behind habit formation gives you a roadmap. This isn't about willpower or motivation---it's about working with your brain's natural wiring to create lasting change.
+          </p>
         </div>
 
         <h2 id="habit-loop" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -165,6 +198,14 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <p className="mb-6 mt-6">
+          The efficiency of habits comes with a tradeoff. Once a behavior becomes automated in the basal ganglia, it becomes harder to consciously override <Citation id="2" index={2} source="Nature Reviews Neuroscience" year="2018" tier={1} />. This is why bad habits feel so difficult to break---your brain has optimized them for speed and efficiency, making them run with minimal conscious input. The good news is that this same mechanism makes positive habits equally sticky once they're established.
+        </p>
+
+        <p className="mb-6">
+          Think about the last time you tried to take a different route home from work. It likely required deliberate attention to override your habitual path. Your brain kept wanting to default to the familiar route because that's what the basal ganglia has encoded. This resistance isn't stubbornness---it's your brain doing exactly what it evolved to do: conserve energy by automating repeated behaviors.
+        </p>
+
         <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Habit Loop in Action
         </h2>
@@ -192,7 +233,11 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           How to Identify Your Own Habit Loops
         </h2>
         <p className="mb-6">
-          The first step in changing a habit is becoming aware of its loop. Most habits run so automatically that we don't consciously recognize the cue or the reward we're seeking.
+          The first step in changing a habit is becoming aware of its loop. Most habits run so automatically that we don't consciously recognize the cue or the reward we're seeking. This invisibility is by design---the whole point of a habit is to free up conscious attention for other tasks.
+        </p>
+
+        <p className="mb-6">
+          To bring a habit into conscious awareness, you need to interrupt the automatic sequence and observe what's happening. The most effective method is the habit audit, which helps you systematically identify the three components of any habit loop <Citation id="3" index={3} source="Random House" year="2012" tier={5} />.
         </p>
 
         <ArticleCallout variant="tip" title="The 5-Question Habit Audit">
@@ -275,6 +320,25 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           ]}
         />
 
+        <h2 id="common-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Cue Patterns You Might Recognize
+        </h2>
+        <p className="mb-6">
+          When people audit their habits, certain cue patterns emerge repeatedly. Recognizing these common triggers can help you spot your own habit loops more quickly:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>The 3pm slump:</strong> Time-based cue for seeking energy through coffee, sugar, or scrolling social media. The real reward is often a mental break, not the caffeine or content.</li>
+          <li><strong>The kitchen walk-through:</strong> Location-based cue that triggers snacking even when you're not hungry. The reward might be a brief pause in whatever task you were doing.</li>
+          <li><strong>The anxiety spiral:</strong> Emotional cue where feeling overwhelmed triggers checking your phone, email, or news. The reward is temporary distraction from discomfort.</li>
+          <li><strong>The commute routine:</strong> Sequential cue where getting in your car triggers reaching for coffee or turning on the same podcast. The reward is comfort and familiarity.</li>
+          <li><strong>The evening unwind:</strong> Time plus location cue (arriving home after work) that triggers pouring a drink or collapsing on the couch. The reward is signaling to your brain that the workday is over.</li>
+        </ul>
+
+        <p className="mb-6">
+          Notice how many of these unhelpful habits are actually serving a legitimate need---stress relief, mental breaks, transition rituals. This is why simply trying to stop the behavior through willpower fails. You need to identify that underlying reward and find a healthier routine that delivers it <Citation id="7" index={7} source="Current Opinion in Behavioral Sciences" year="2019" tier={1} />.
+        </p>
+
         <h2 id="practice-patience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Timeline: When Does It Become Automatic?
         </h2>
@@ -282,7 +346,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           Popular wisdom says it takes 21 days to form a habit. The actual research is more nuanced---and we'll explore this in depth in another article. For now, know that habit formation is highly variable, ranging from 18 to 254 days depending on the complexity of the behavior and individual differences <Citation id="1" index={1} source="Annual Review of Psychology" year="2016" tier={1} />.
         </p>
         <p className="mb-6">
-          What matters more than the timeline is consistency with the cue-routine-reward loop. The more reliably you pair the same cue with the same routine and reward, the faster your basal ganglia will encode the pattern as automatic.
+          What matters more than the timeline is consistency with the cue-routine-reward loop. The more reliably you pair the same cue with the same routine and reward, the faster your basal ganglia will encode the pattern as automatic. Missing a single day won't derail the process, but inconsistency in the cue-routine pairing will significantly slow habit formation.
+        </p>
+        <p className="mb-6">
+          Start small. A habit you can perform consistently is infinitely more valuable than an ambitious habit you do sporadically. Once the small version is automatic, you can gradually expand it---but the initial encoding in the basal ganglia requires repetition without significant variation.
         </p>
 
         <ArticleCallout variant="clinical-note">
@@ -335,6 +402,26 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Neuroscience', 'Brain Science', 'Habit Formation', 'Basal Ganglia'],
+    summary: 'Your brain manages behavior through two competing systems: the energy-intensive prefrontal cortex for conscious decisions, and the efficient basal ganglia for automatic habits. Understanding how dopamine, synaptic plasticity, and neural chunking create autopilot behaviors reveals why habits are so powerful and difficult to change.',
+    keyFacts: [
+      { text: 'The brain consumes 20% of total body energy at rest, making energy efficiency through habits a survival necessity', citationIndex: 9 },
+      { text: 'The basal ganglia chunks habit loops into single units, firing only at the cue and reward while staying quiet during the routine', citationIndex: 2 },
+      { text: 'Dopamine shifts from firing at the reward to firing at the cue as habits form, creating anticipatory craving', citationIndex: 3 },
+      { text: 'Synaptic plasticity strengthens neural pathways with each repetition, making well-worn habit trails increasingly automatic', citationIndex: 7 },
+      { text: 'The default mode network automates mental habits like rumination through the same mechanisms as physical habits', citationIndex: 5 },
+    ],
+    sparkMoment: 'Once the basal ganglia initiates a habit, it runs to completion even if circumstances have changed---this is why you might drive to your old workplace or reach for a snack you decided to stop eating.',
+    practicalExercise: {
+      title: 'Interrupt Your Autopilot',
+      steps: [
+        { title: 'Choose One Automatic Routine', description: 'Select a daily habit you perform without thinking (morning coffee, evening scrolling, driving route).' },
+        { title: 'Add a Pause Point', description: 'Before the routine starts, add a 5-second pause where you consciously notice the cue and decide whether to proceed.' },
+        { title: 'Engage Your Prefrontal Cortex', description: 'During the pause, ask: "Is this what I actually want right now?" This activates goal-directed thinking.' },
+        { title: 'Track Your Awareness', description: 'For one week, note how often you catch the cue vs. how often autopilot runs unchecked. Awareness improves with practice.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -533,6 +620,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           Think of it like carving a path through a forest. The first time, you have to push through dense brush. The tenth time, there's a faint trail. The hundredth time, it's a well-worn path that requires no thought to follow. Your brain works the same way---repetition literally changes the structure and strength of neural connections.
         </p>
 
+        <p className="mb-6">
+          This process of physical brain change is why breaking an established habit is so much harder than never starting it in the first place. You're not just fighting motivation or willpower---you're working against structural changes in your brain that have made the old pathway the default route. The good news is that plasticity works both ways: with consistent practice, you can build new neural highways that eventually become stronger than the old ones.
+        </p>
+
         <StatCard
           stats={[
             { value: 66, suffix: '', label: 'Average days to automaticity (highly variable)' },
@@ -541,6 +632,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           ]}
           source="European Journal of Social Psychology, 2010; Brain Research Reviews, 2006"
         />
+
+        <p className="mb-6 mt-8">
+          The variability in that 66-day average is enormous---ranging from 18 to 254 days in the landmark study <Citation id="6" index={6} source="European Journal of Social Psychology" year="2010" tier={1} />. Factors that influence timeline include the complexity of the behavior, how rewarding it feels, your current stress levels, and whether you have conditions that affect executive function or reward processing (like ADHD or depression).
+        </p>
 
         <h2 id="why-autopilot" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Why Your Brain Prefers Autopilot: The Cognitive Load Problem
@@ -572,6 +667,17 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           This takes practice. The basal ganglia is fast---it initiates the habit within milliseconds of detecting the cue. Training yourself to notice cues in real-time requires repetition and often benefits from external reminders (alarms, visual cues, accountability partners) that help you catch the moment before autopilot takes over.
+        </p>
+
+        <QuoteBlock
+          quote="The prefrontal cortex is like a CEO that can override automatic processes---but only if the CEO is paying attention at the critical moment."
+          attribution="Neuroscience Research"
+          source="Current Opinion in Neurobiology, 2019"
+          variant="sidebar"
+        />
+
+        <p className="mb-6 mt-6">
+          Strategies that strengthen prefrontal oversight include implementation intentions ("When X happens, I will Y"), environmental design (removing cues or adding friction to unwanted habits), and mindfulness training (noticing internal states before they trigger autopilot). All of these work by giving your goal-directed system a fighting chance to intervene before the habitual system takes control.
         </p>
 
         <h2 id="default-mode" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -627,11 +733,31 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     description: "The truth about habit formation timelines, what the research actually shows, and why individual differences matter more than averages.",
     image: "/images/articles/cat08/cover-003.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Habit Formation', 'Research', 'Timeline', 'Behavior Change'],
+    summary: 'The 21-day habit myth is not only false but harmful. Research shows habit formation takes 18 to 254 days depending on complexity, with an average of 66 days. Understanding that habit formation follows an asymptotic curve with normal plateaus helps you persist through the difficult middle phase.',
+    keyFacts: [
+      { text: 'The 21-day rule originated from a 1960 book about post-surgery adaptation, not scientific habit research', citationIndex: 2 },
+      { text: 'Actual habit formation timelines range from 18 to 254 days with an average of 66 days', citationIndex: 1 },
+      { text: 'Simple habits like drinking water automate in weeks while complex habits like gym routines take months', citationIndex: 1 },
+      { text: 'Missing a single day has no measurable impact on the overall habit formation timeline', citationIndex: 1 },
+      { text: 'Habit formation follows an asymptotic curve: rapid early gains followed by a normal plateau phase', citationIndex: 1 },
+    ],
+    sparkMoment: 'If you\'re told a habit should feel automatic in three weeks and you\'re on day 30 still struggling, you might conclude you\'re failing---when in reality, you might just be building a complex habit that naturally takes longer.',
+    practicalExercise: {
+      title: 'Set Realistic Habit Timelines',
+      steps: [
+        { title: 'Assess Complexity', description: 'Rate your target habit: simple (one step, <5 min), moderate (2-3 steps, 10-20 min), or complex (multiple steps, 30+ min).' },
+        { title: 'Estimate Your Timeline', description: 'Simple: 3-6 weeks. Moderate: 6-12 weeks. Complex: 12-30 weeks. Add time if you have ADHD, depression, or high stress.' },
+        { title: 'Plan Check-ins', description: 'Mark quarter-points on your timeline to assess progress without premature judgment (e.g., week 4 of 16 for a complex habit).' },
+        { title: 'Trust the Plateau', description: 'When progress slows after the first few weeks, remind yourself this is normal neurological encoding, not failure.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -737,6 +863,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
             <strong>The 21-day myth is not just wrong---it's harmful.</strong> If you're told a habit should feel automatic in three weeks, and you're on day 30 still struggling, you might conclude you're failing or that you lack discipline. In reality, you might just be building a complex habit that naturally takes longer.
           </p>
         </ArticleCallout>
+
+        <p className="mb-6 mt-6">
+          Understanding the real timelines matters because it changes how you approach habit formation. If you expect a new exercise routine to feel automatic in 21 days and it doesn't, you might give up. But if you know that complex physical habits typically take 3-6 months to fully automate, you can plan accordingly and measure progress realistically.
+        </p>
 
         <h2 id="what-determines-timeline" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Determines How Long a Habit Takes?
@@ -890,6 +1020,24 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <p className="mb-6 mt-6">
+          This shift from timeline-focused to process-focused thinking is liberating. You're no longer racing against an arbitrary deadline that may not apply to your specific habit or circumstances. Instead, you're building the conditions for automaticity: consistent cue, reliable routine, satisfying reward. The basal ganglia will encode the loop when it's ready, not when a self-help book says it should.
+        </p>
+
+        <h2 id="strategies-acceleration" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Strategies That Actually Accelerate Habit Formation
+        </h2>
+        <p className="mb-6">
+          While you can't force a habit to form faster than your brain allows, research suggests several evidence-based strategies that optimize the encoding process <Citation id="4" index={4} source="British Journal of General Practice" year="2012" tier={1} />:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li><strong>Same time, same place:</strong> Consistency of context strengthens the cue-routine association. Your brain learns "When I sit in this chair at 7 AM, I meditate" faster than "When I feel like it, I meditate somewhere."</li>
+          <li><strong>Immediate rewards:</strong> Add a tangible payoff that happens right after the behavior, even if the main benefit is long-term. Listen to a favorite podcast only during workouts, for example.</li>
+          <li><strong>Start smaller than feels necessary:</strong> A habit that's too easy to skip is better than one that's too hard to maintain. Build the automaticity first, then scale up the intensity.</li>
+          <li><strong>Optimize your biology:</strong> Good sleep, regular exercise, and stress management all support the neuroplasticity processes that encode habits <Citation id="7" index={7} source="Sleep Medicine Reviews" year="2020" tier={1} /> <Citation id="8" index={8} source="British Journal of Sports Medicine" year="2020" tier={1} />. If you're chronically sleep-deprived, habit formation will take longer regardless of your strategy.</li>
+        </ul>
+
         <h2 id="when-struggling" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Adjust Your Approach
         </h2>
@@ -940,11 +1088,31 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     description: 'Learn how tiny, consistent improvements compound over time and why focusing on systems instead of goals leads to lasting change.',
     image: "/images/articles/cat08/cover-004.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Atomic Habits', 'Behavior Change', 'Self-Improvement', 'Systems Thinking'],
+    summary: 'Atomic habits leverage the mathematics of compounding: 1% daily improvement creates 38x growth over a year. The Four Laws framework---make it obvious, attractive, easy, and satisfying---combined with identity-based thinking and systems over goals produces sustainable behavior change that accumulates below the surface before breaking through as visible results.',
+    keyFacts: [
+      { text: 'Getting 1% better each day for a year results in being 37.8 times better than when you started', citationIndex: 1 },
+      { text: 'The Valley of Disappointment phase where visible results lag behind effort is where most people quit right before breakthrough', citationIndex: 1 },
+      { text: 'Identity-based habits focused on who you want to become are more sustainable than outcome-based habits focused on what you want to achieve', citationIndex: 4 },
+      { text: 'Systems thinking (daily processes) produces better long-term results than goal fixation (specific outcomes)', citationIndex: 7 },
+      { text: 'The two-minute rule makes habits so easy to start that resistance disappears, building automaticity before scaling up', citationIndex: 1 },
+    ],
+    sparkMoment: 'Every action is a vote for the type of person you want to become---you don\'t need perfection, you just need to accumulate more votes for your desired identity than against it.',
+    practicalExercise: {
+      title: 'Design Your Atomic Habit',
+      steps: [
+        { title: 'Choose Identity Over Outcome', description: 'Instead of "I want to run a marathon," decide "I want to become a runner." Define the identity first.' },
+        { title: 'Scale Down to Two Minutes', description: 'Reduce the habit to a version that takes two minutes or less: "Read one page," "Do one push-up," "Write one sentence."' },
+        { title: 'Apply the Four Laws', description: 'Make it obvious (specific time/place), attractive (bundle with something you enjoy), easy (remove friction), satisfying (track it visually).' },
+        { title: 'Focus on the System', description: 'Measure inputs (did you show up?) not outcomes (did you see results?). Trust that compounding happens below the surface.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Atomic Habits',
+    },
     citations: [
       {
         id: '1',
@@ -1167,6 +1335,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           One of the most powerful ideas in atomic habits is the shift from outcome-based to identity-based behavior change. Instead of focusing on what you want to achieve (outcome), focus on who you want to become (identity) <Citation id="4" index={4} source="Health Psychology Review" year="2021" tier={1} />.
         </p>
 
+        <p className="mb-6">
+          This isn't just semantic reframing---it's a fundamentally different approach that research shows produces more durable behavior change. When your habits are tied to your sense of self, they become intrinsically motivated rather than dependent on external rewards or willpower.
+        </p>
+
         <ComparisonTable
           title="Outcome-Based vs. Identity-Based Habits"
           columns={['Approach', 'Outcome-Based', 'Identity-Based']}
@@ -1196,6 +1368,17 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
             You don't need to be perfect. You don't need to hit the goal 100% of the time. You just need to accumulate more votes for your desired identity than against it.
           </p>
         </ArticleCallout>
+
+        <p className="mb-6 mt-6">
+          This voting metaphor is powerful because it removes the all-or-nothing thinking that sabotages most habit attempts. You don't need a unanimous vote---you just need a majority. If you eat healthy meals 6 out of 10 times, you're still accumulating more evidence for "I'm a healthy person" than against it. The brain integrates this evidence over time, gradually shifting your self-concept to align with the behaviors you practice most frequently.
+        </p>
+
+        <QuoteBlock
+          quote="Every action you take is a vote for the type of person you wish to become. No single instance will transform your beliefs, but as the votes build up, so does the evidence of your new identity."
+          attribution="James Clear"
+          source="Atomic Habits, 2018"
+          variant="default"
+        />
 
         <h2 id="systems-over-goals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Systems Over Goals
@@ -1248,6 +1431,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
             },
           ]}
         />
+
+        <p className="mb-6 mt-6">
+          The shift from goals to systems is particularly important for mental health. If your goal is "don't be anxious anymore," you're setting yourself up for frustration---anxiety reduction isn't something you achieve once and keep forever. But if your system is "practice grounding techniques when I notice anxiety rising," you have a sustainable process that works regardless of whether anxiety fully disappears.
+        </p>
 
         <h2 id="practical-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Atomic Habits in Real Life
@@ -1320,11 +1507,31 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
     description: 'Discover how certain foundational habits create ripple effects that transform multiple areas of your life simultaneously.',
     image: "/images/articles/cat08/cover-005.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Keystone Habits', 'Behavior Change', 'Life Transformation', 'Psychology'],
+    summary: 'Keystone habits are foundational behaviors that create cascading improvements across multiple life domains without additional willpower. Like an architectural keystone that holds an arch together, these habits trigger ripple effects through identity reinforcement, willpower conservation, and environmental restructuring, making one strategic change more powerful than ten surface-level changes.',
+    keyFacts: [
+      { text: 'Keystone habits create ripple effects by shifting identity, which makes related behaviors feel more aligned with who you are', citationIndex: 5 },
+      { text: 'Exercise is the most documented keystone habit, triggering unintentional improvements in nutrition, sleep, stress, and confidence', citationIndex: 2 },
+      { text: 'Sleep quality affects emotional regulation, food choices, focus, and impulsivity by optimizing prefrontal cortex function', citationIndex: 3 },
+      { text: 'Family meals create ripple effects in nutrition, communication, substance use prevention, and academic performance', citationIndex: 4 },
+      { text: 'Mindfulness practice trains the prefrontal cortex, making all behavior change easier by strengthening cognitive control', citationIndex: 7 },
+    ],
+    sparkMoment: 'Instead of trying to change 10 behaviors simultaneously through willpower, you change one foundational behavior and watch the other nine shift as a natural consequence.',
+    practicalExercise: {
+      title: 'Discover and Install Your Keystone',
+      steps: [
+        { title: 'Observe Your Patterns', description: 'For one week, notice which single behavior, when you do it, makes other behaviors easier. When you skip it, what cascade of poor choices follows?' },
+        { title: 'Identify Candidates', description: 'Based on your pain points, list 2-3 keystone candidates: mental health (sleep/exercise/meditation), relationships (family meals/phone-free time), productivity (morning routine).' },
+        { title: 'Choose One and Start Small', description: 'Pick the highest-leverage option and scale it down to absurdly small: "put on workout clothes," "be in bed by 10:30 PM," "5-minute morning reflection."' },
+        { title: 'Make It Non-Negotiable', description: 'Treat this habit as your foundation. Design your environment to make it frictionless. Track it daily. Never miss twice in a row.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Keystone Habit',
+    },
     citations: [
       {
         id: '1',
@@ -1425,6 +1632,14 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
             <strong>Keystone habits are force multipliers.</strong> Instead of trying to change 10 behaviors simultaneously through willpower, you change one foundational behavior and watch the other nine shift as a natural consequence. This is why identifying your keystone habit is more valuable than creating a comprehensive behavior change plan.
           </p>
         </ArticleCallout>
+
+        <p className="mb-6 mt-6">
+          The power of keystone habits lies in their strategic efficiency. Most people approach behavior change with a maximalist mindset: exercise more, eat better, sleep earlier, meditate daily, read more, drink less, organize the house, improve relationships---all at once. This overwhelms willpower and executive function, leading to burnout and abandonment.
+        </p>
+
+        <p className="mb-6">
+          Keystone habits flip the script. You focus your limited self-control on one behavior that has outsized influence on everything else. The rest of the changes happen not through effort, but through alignment. This is behavior change architecture, not brute force.
+        </p>
 
         <h2 id="examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Keystone Habits and Their Ripple Effects
@@ -1592,6 +1807,10 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
           Your keystone habit is personal---it depends on your current lifestyle, values, and pain points. To identify yours, ask:
         </p>
 
+        <p className="mb-6">
+          The most effective way to discover your keystone is through observation, not speculation. Pay attention to your own behavioral ecology: What single change, when you make it, creates a domino effect of other positive changes? What habit, when you let it slip, causes everything else to unravel?
+        </p>
+
         <ArticleCallout variant="tip" title="Keystone Habit Discovery Questions">
           <ol className="list-decimal pl-6 space-y-3">
             <li><strong>What's one behavior that, when I do it, makes other behaviors easier?</strong> (e.g., when I exercise, I eat better)</li>
@@ -1639,6 +1858,19 @@ export const scienceOfHabitFormationArticlesA: Article[] = [
             The keystone must be so easy you can't fail. Once it's automatic, you can scale up. But first, lock in the ritual.
           </p>
         </ArticleCallout>
+
+        <p className="mb-6 mt-6">
+          The mistake most people make is treating their keystone habit like any other goal. They try to install it through willpower and motivation, which fails when energy runs out. Instead, engineer your environment and routine to make the keystone habit inevitable. Remove all friction. Add accountability. Make it visible. Treat it as the foundation on which everything else rests---because it is.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 1, label: 'Keystone habit needed to transform multiple domains' },
+            { value: 3, label: 'Core characteristics: ripple effects, identity shift, small wins' },
+            { value: 10, suffix: 'x', label: 'More powerful than 10 surface-level changes combined' },
+          ]}
+          source="Habit formation research synthesis"
+        />
 
         <h2 id="key-takeaways" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Key Takeaways

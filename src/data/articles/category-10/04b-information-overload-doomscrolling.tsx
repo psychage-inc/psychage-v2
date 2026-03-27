@@ -12,6 +12,8 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const informationOverloadDoomscrollingArticlesB: Article[] = [
@@ -22,11 +24,31 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     description: `Discover the psychology behind infinite scroll design, why it's so addictive, and how to reclaim control over your attention.`,
     image: '/images/articles/cat10/cover-036.svg',
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Infinite Scroll', 'Attention', 'Design Psychology', 'Addiction', 'Digital Wellness'],
+    summary: 'Infinite scroll is a deliberately engineered design pattern that exploits psychological vulnerabilities to maximize engagement time. By removing natural stopping points and using variable reward schedules, it hijacks your attention and makes it nearly impossible to stop scrolling. Understanding the psychology behind it and implementing specific countermeasures can help you reclaim control over your digital life.',
+    keyFacts: [
+      { text: '58% of users lose track of time when using infinite scroll interfaces, with sessions lasting 2.5 times longer than paginated feeds', citationIndex: 1 },
+      { text: 'Infinite scroll uses variable reward schedules—the same psychological principle that makes slot machines addictive—triggering dopamine release more effectively than consistent rewards', citationIndex: 3 },
+      { text: 'The design deliberately removes stopping cues and friction points, eliminating moments where users might consciously choose to stop consuming content', citationIndex: 2 },
+      { text: 'Chronic infinite scroll use creates measurable psychological harm including attention fatigue, distorted time perception, and reduced ability to focus on single tasks', citationIndex: 4 },
+      { text: 'Evidence-based interventions like browser extensions that disable infinite scroll, intentional time limits, and purpose-driven app use can significantly reduce compulsive scrolling behavior', citationIndex: 5 },
+    ],
+    sparkMoment: 'Every swipe might be the one that delivers something amazing—and that "might" is what keeps you scrolling long after you meant to stop.',
+    practicalExercise: {
+      title: 'The Scroll Audit Challenge',
+      steps: [
+        { title: 'Track Your Reality', description: 'For 3 days, note every time you open a scrolling app. Write down: what triggered it (bored, anxious, habit), how long you stayed, and how you felt after.' },
+        { title: 'Identify Your Triggers', description: 'Review your notes. What patterns emerge? Do you scroll when waiting, stressed, or avoiding something? Understanding your triggers is the first step to interrupting the habit.' },
+        { title: 'Choose One Intervention', description: 'Pick one strategy from this article (time limits, app deletion, browser extension, etc.) and commit to it for one week. Start small—don\'t try to change everything at once.' },
+        { title: 'Reflect and Adjust', description: 'At the end of the week, assess: Did it work? Do you feel more in control? Less anxious? Adjust your approach based on what you learned, then try another strategy.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Digital Habits',
+    },
     citations: [
       {
         id: '1',
@@ -322,6 +344,87 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           Support platforms that offer chronological feeds, finite content, and user control. Vote with your attention --- when possible, use platforms that respect it.
         </p>
 
+        <QuoteBlock
+          quote="The attention economy is built on a fundamental conflict of interest: platforms profit when you lose track of time, but you lose when you lose track of time."
+          attribution="Tristan Harris"
+          role="Former Google Design Ethicist"
+          source="Center for Humane Technology"
+        />
+
+        <h2 id="recognizing-scroll-addiction" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing When Scrolling Becomes Compulsive
+        </h2>
+        <p className="mb-6">
+          Not all scrolling is problematic. Sometimes you genuinely want to browse content for entertainment or connection. But when scrolling crosses into compulsive territory, it shares characteristics with other behavioral addictions.
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="I can stop scrolling whenever I want to"
+            fact="If you regularly tell yourself 'just five more minutes' and end up scrolling for an hour, that's loss of control—a hallmark of addiction. The design is working against your intentions."
+          />
+          <MythVsFactBlock
+            myth="Scrolling is just a harmless way to relax"
+            fact="While occasional scrolling can be enjoyable, chronic use creates a stress response: elevated cortisol, disrupted sleep, and increased anxiety. It's not relaxing—it's numbing."
+          />
+          <MythVsFactBlock
+            myth="Everyone scrolls this much, so it must be normal"
+            fact="Prevalence doesn't equal health. Just because most people struggle with infinite scroll doesn't mean it's not a problem worth addressing. Normal and healthy aren't the same thing."
+          />
+        </div>
+
+        <h2 id="real-world-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Real-World Consequences
+        </h2>
+        <p className="mb-6">
+          Infinite scroll doesn't just waste time --- it has tangible impacts on your life:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Opportunity cost:</strong> Every hour scrolling is an hour you're not spending on relationships, hobbies, rest, or meaningful work. Add it up over a year, and you've lost hundreds of hours to content you barely remember.</li>
+          <li><strong>Reduced attention span:</strong> Constant exposure to short-form content trains your brain for novelty-seeking rather than sustained focus. Tasks requiring deep concentration become harder.</li>
+          <li><strong>Sleep disruption:</strong> Scrolling before bed (especially with blue light exposure) delays sleep onset, reduces sleep quality, and creates a cycle of fatigue that makes you more vulnerable to mindless scrolling the next day.</li>
+          <li><strong>Emotional dysregulation:</strong> Passive content consumption provides temporary distraction but prevents you from processing difficult emotions, leading to emotional build-up and reactive behavior.</li>
+          <li><strong>Comparative thinking:</strong> Seeing curated highlights of others' lives fuels comparison, inadequacy, and envy --- even when you know intellectually that feeds aren't reality.</li>
+        </ul>
+
+        <ArticleCallout variant="insight">
+          <p><strong>The Irony of Time Collapse:</strong> People often say they scroll because they "don't have time" for more meaningful activities. But tracking reveals they're spending 2-4 hours daily on feeds. Infinite scroll doesn't fill spare time --- it creates the illusion of having no time by consuming it invisibly.</p>
+        </ArticleCallout>
+
+        <h2 id="success-stories" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Life Looks Like After Breaking Free
+        </h2>
+        <p className="mb-6">
+          People who successfully reduce or eliminate infinite scroll from their lives consistently report:
+        </p>
+
+        <HighlightBox variant="emphasis">
+          <p className="mb-4"><strong>Within the first week:</strong></p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Awareness of how often they reach for their phone out of habit</li>
+            <li>Initial boredom or restlessness (this is your brain adjusting)</li>
+            <li>More conscious awareness of the present moment</li>
+          </ul>
+          <p className="mt-6 mb-4"><strong>After 2-4 weeks:</strong></p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Improved ability to focus on single tasks for longer periods</li>
+            <li>Better sleep quality and easier time falling asleep</li>
+            <li>Reduced anxiety and sense of overwhelm</li>
+            <li>More time for activities they'd been "too busy" for</li>
+          </ul>
+          <p className="mt-6 mb-4"><strong>Long-term (2+ months):</strong></p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Restored sense of time (hours feel like hours again)</li>
+            <li>Rediscovery of hobbies and interests that passive consumption had replaced</li>
+            <li>Stronger relationships from being more present with people</li>
+            <li>A sense of agency: "I control my attention; it doesn't control me"</li>
+          </ul>
+        </HighlightBox>
+
+        <p className="mb-6 mt-6">
+          Breaking free from infinite scroll doesn't mean becoming a digital hermit. It means using technology intentionally, on your terms, for purposes you've chosen. Many people find they enjoy social media <em>more</em> when they use it deliberately rather than compulsively.
+        </p>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -348,11 +451,31 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     description: 'Learn to balance awareness of world events with mental health protection through intentional, bounded information consumption strategies.',
     image: "/images/articles/cat10/cover-037.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Information Diet', 'News Consumption', 'Mental Health', 'Boundaries', 'Media Literacy'],
+    summary: 'Staying informed doesn\'t require constant news consumption or sacrificing your mental health. By shifting from reactive, algorithm-driven news consumption to intentional, bounded engagement, you can maintain awareness while protecting your well-being. This involves curating quality sources, setting time boundaries, seeking solutions-focused journalism, and transforming passive consumption into purposeful learning.',
+    keyFacts: [
+      { text: 'Research demonstrates that intentional, bounded news consumption leads to better mental health outcomes than constant, reactive news checking while maintaining equal or better awareness of important events', citationIndex: 1 },
+      { text: 'Solutions journalism—reporting that covers both problems and responses—reduces news-related anxiety while maintaining civic engagement and awareness', citationIndex: 2 },
+      { text: 'Media literacy interventions, including teaching critical evaluation of sources and emotional regulation strategies, significantly reduce anxiety caused by news consumption', citationIndex: 3 },
+      { text: 'The "slow news" movement emphasizes depth over speed: waiting 24-48 hours for full context rather than consuming breaking news leads to better comprehension and lower anxiety', citationIndex: 4 },
+      { text: 'Selective news avoidance during personal crisis or overwhelming periods is psychologically protective and doesn\'t reduce long-term civic engagement when boundaries are temporary', citationIndex: 5 },
+    ],
+    sparkMoment: 'You don\'t have to choose between being informed and being at peace—the middle path of intentional engagement offers both.',
+    practicalExercise: {
+      title: 'The News Diet Redesign',
+      steps: [
+        { title: 'Track Your Baseline', description: 'For 3 days, log every news check: what source, how long, what prompted it (habit, alert, boredom), and how you felt afterward (informed, anxious, neutral).' },
+        { title: 'Identify Your Goals', description: 'Write down: What do I actually need to know about? What topics genuinely matter to my life? What consumption serves no real purpose but creates anxiety?' },
+        { title: 'Curate 2-3 Quality Sources', description: 'Choose reputable outlets known for depth. Unfollow sensationalist sources. Subscribe to one weekly digest. Turn off ALL breaking news notifications.' },
+        { title: 'Set Boundaries', description: 'Pick 1-2 designated times for news (e.g., 20 min at 8am, 20 min at 6pm). No news first hour after waking or last hour before bed. Stick to it for one week and notice the difference.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your News Habits',
+    },
     citations: [
       {
         id: '1',
@@ -612,6 +735,97 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <p>You don't have to choose between "obsessively consuming all news" and "complete ignorance." The middle path --- intentional, bounded, thoughtful engagement --- allows you to be informed without being consumed.</p>
         </ArticleCallout>
 
+        <h2 id="psychological-why" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why News Feels So Overwhelming: The Psychology
+        </h2>
+        <p className="mb-6">
+          Understanding <em>why</em> news consumption creates anxiety can help you respond more effectively:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 73, suffix: '%', label: 'Experience news-induced stress' },
+            { value: 56, suffix: '%', label: 'Avoid news due to emotional toll' },
+            { value: 61, suffix: '%', label: 'Say news impacts their mood negatively' },
+          ]}
+          source="Health Communication, 2023"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-3">
+          <li>
+            <strong>Negativity bias:</strong> Your brain is wired to prioritize negative information as a survival mechanism. News outlets know this and lead with dramatic, frightening stories. This creates a distorted perception where the world seems more dangerous than it statistically is.
+          </li>
+          <li>
+            <strong>Availability heuristic:</strong> Events you see frequently feel more common than they are. If you see plane crashes in the news weekly, your brain overestimates the risk of flying, even though statistically it's extremely safe. Constant exposure to rare but dramatic events skews your risk perception.
+          </li>
+          <li>
+            <strong>Lack of control:</strong> Many news stories describe large-scale problems (climate change, political instability, pandemics) where individual action feels insignificant. This creates learned helplessness --- anxiety without agency.
+          </li>
+          <li>
+            <strong>Empathy overload:</strong> Humans are wired for empathy, but we evolved to care for small, local communities. Constant exposure to global suffering overwhelms our emotional capacity. You end up in a state of chronic compassion fatigue.
+          </li>
+        </ul>
+
+        <ArticleCallout variant="did-you-know">
+          <p><strong>The "mean world syndrome":</strong> Coined by communications researcher George Gerbner, this describes how heavy news consumption makes people believe the world is more violent, dangerous, and hostile than it actually is. Crime rates may be falling, but if you watch crime news daily, you'll feel less safe.</p>
+        </ArticleCallout>
+
+        <h2 id="practical-scenarios" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Scenarios: Applying These Strategies
+        </h2>
+        <p className="mb-6">
+          How does this look in practice? Here are common situations and intentional responses:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'morning-routine',
+              label: 'Morning Routine',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Old pattern:</strong> Wake up → immediately check phone → scroll news/social media for 45 minutes → start day feeling anxious and behind.</p>
+                  <p><strong>Intentional approach:</strong> Wake up → morning routine (shower, breakfast, coffee) → <em>then</em> check news at 8:30 AM for 15 minutes from one trusted source → close app and start day feeling informed but calm.</p>
+                  <p className="mt-3"><strong>Why it works:</strong> Protecting the first hour creates mental space and sets an intentional tone rather than a reactive one.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'breaking-news',
+              label: 'Breaking News Event',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Old pattern:</strong> See breaking news alert → check multiple sources → fall into hours of scrolling, reading every update → feel overwhelmed and helpless.</p>
+                  <p><strong>Intentional approach:</strong> See alert → read one reputable summary to understand basics → close app → wait 24-48 hours for full context rather than consuming incomplete, speculative information → revisit when the story has developed.</p>
+                  <p className="mt-3"><strong>Why it works:</strong> Breaking news is often incomplete and sensationalized. Waiting gives you better information with less anxiety.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'election-season',
+              label: 'Election Season',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Old pattern:</strong> Check polls obsessively → read every opinion piece → engage in stressful debates online → feel constant tension for months.</p>
+                  <p><strong>Intentional approach:</strong> Check news once daily (or weekly) → focus on policy analysis over horse-race coverage → set boundaries on political discussions → take "election news breaks" on weekends → vote and let go of what you can't control.</p>
+                  <p className="mt-3"><strong>Why it works:</strong> Minute-by-minute tracking doesn't change outcomes but does increase stress. Strategic engagement preserves your mental health while staying informed.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'global-crisis',
+              label: 'Global Crisis',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Old pattern:</strong> Consume every update → watch graphic videos → doomscroll for hours → feel paralyzed by despair.</p>
+                  <p><strong>Intentional approach:</strong> Get basic information → identify one concrete action you can take (donate, volunteer, advocate) → <em>do that action</em> → then step back from constant consumption → allow yourself to focus on what you can control in your own life.</p>
+                  <p className="mt-3"><strong>Why it works:</strong> Action transforms helplessness into agency. You acknowledge the crisis but don't drown in it.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="teaching-children" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Teaching Children Healthy News Habits
         </h2>
@@ -652,11 +866,31 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     description: 'Understand how algorithmic echo chambers amplify anxiety and polarization, and learn to diversify your information sources for mental well-being.',
     image: "/images/articles/cat10/cover-038.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Echo Chambers', 'Filter Bubbles', 'Polarization', 'Anxiety', 'Algorithms'],
+    summary: 'Echo chambers—environments where you\'re primarily exposed to information confirming existing beliefs—are amplified by algorithmic curation and social dynamics. They create psychological harm by distorting reality perception, amplifying anxiety, fostering tribal thinking, and damaging relationships. Breaking out requires deliberate effort: diversifying sources, practicing intellectual humility, following experts over pundits, and engaging thoughtfully across ideological lines.',
+    keyFacts: [
+      { text: '64% of social media users exist in ideological echo chambers, with participants experiencing 2.6 times higher anxiety levels than those with diverse information exposure', citationIndex: 1 },
+      { text: 'Algorithmic curation and confirmation bias work together: platforms show you content you engage with, which tends to confirm existing beliefs, creating a self-reinforcing cycle of ideological homogeneity', citationIndex: 3 },
+      { text: 'Echo chambers don\'t just reinforce beliefs—they actively vilify dissent, making 81% of participants believe "the other side" is fundamentally unreasonable or malicious', citationIndex: 5 },
+      { text: 'Breaking out of echo chambers requires specific interventions: diversifying sources, practicing "steelmanning" (constructing the strongest version of opposing arguments), and following topic experts rather than ideological pundits', citationIndex: 4 },
+      { text: 'Echo chambers differ from filter bubbles in important ways: filter bubbles are algorithmically created and often invisible, while echo chambers are socially reinforced environments where dissent is actively excluded', citationIndex: 6 },
+    ],
+    sparkMoment: 'If everyone you follow agrees with you all the time, you\'re not seeing reality—you\'re seeing a mirror.',
+    practicalExercise: {
+      title: 'The Echo Chamber Audit',
+      steps: [
+        { title: 'List Your Sources', description: 'Write down all your regular information sources: who you follow on social media, news outlets you read, podcasts you listen to. Be honest about your actual consumption, not your ideal.' },
+        { title: 'Assess Ideological Diversity', description: 'For each source, note: Does this source challenge my views or confirm them? Can I predict their position on controversial topics? If you can always predict, you\'re in an echo chamber.' },
+        { title: 'Find One Quality Opposite', description: 'Identify one credible source with a different perspective from your dominant viewpoint. Not an extremist or troll—someone thoughtful who sees things differently. Follow them for one month.' },
+        { title: 'Practice Steelmanning', description: 'When you encounter a view you disagree with, write out the strongest possible argument for that position before critiquing it. This builds intellectual humility and empathy.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Information Sources',
+    },
     citations: [
       {
         id: '1',
@@ -942,6 +1176,76 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="recognizing-youre-in-one" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Signs You're in an Echo Chamber
+        </h2>
+        <p className="mb-6">
+          It can be hard to recognize when you're in an echo chamber because, by definition, it feels normal. Here are diagnostic questions:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="I'm well-informed because I read a lot of news"
+            fact="Quantity doesn't equal quality. If all your sources share the same perspective, you're informed about one viewpoint—not the full picture. Echo chambers often consume MORE news, not less."
+          />
+          <MythVsFactBlock
+            myth="People who disagree with me just haven't seen the evidence I've seen"
+            fact="If you genuinely believe the 'other side' is simply ignorant or hasn't encountered your information, you're likely in an echo chamber. Intelligent people with access to the same facts often reach different conclusions based on different values and priorities."
+          />
+          <MythVsFactBlock
+            myth="Engaging with opposing views is just exhausting and pointless"
+            fact="Genuine dialogue with thoughtful people who disagree can be enriching, not exhausting. If it always feels pointless, you might be engaging with straw-man versions or bad-faith actors rather than steel-manning reasonable opposition."
+          />
+        </div>
+
+        <ArticleCallout variant="self-assessment">
+          <p className="font-semibold mb-3">Echo Chamber Self-Check:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Can you articulate the strongest version of an opposing viewpoint on an issue you care about?</li>
+            <li>When was the last time someone in your feed challenged your beliefs?</li>
+            <li>Do you ever feel surprised by election results or public opinion polls?</li>
+            <li>Have you unfollowed or blocked people primarily for disagreeing with you (not for harassment)?</li>
+            <li>Do you find yourself using dismissive labels for people who think differently ('sheeple,' 'libtards,' 'fascists')?</li>
+          </ul>
+          <p className="mt-4">If you answered yes to 3+ or couldn't articulate opposing views, you're likely in an echo chamber.</p>
+        </ArticleCallout>
+
+        <h2 id="cost-of-echo-chambers" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Personal Cost of Echo Chambers
+        </h2>
+        <p className="mb-6">
+          Beyond political polarization, echo chambers extract real personal costs:
+        </p>
+
+        <QuoteBlock
+          quote="Echo chambers don't just distort your view of the world—they distort your view of the people closest to you."
+          attribution="Eli Pariser"
+          role="Author, The Filter Bubble"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-3 mt-6">
+          <li>
+            <strong>Lost relationships:</strong> Friendships that survived past disagreements now fracture because echo chambers train you to see disagreement as betrayal rather than diversity. Many people report losing close friends or becoming estranged from family members due to political polarization amplified by echo chambers.
+          </li>
+          <li>
+            <strong>Chronic stress and hypervigilance:</strong> Living in an echo chamber where everyone shares your fears amplifies those fears. You're constantly on high alert for threats that your bubble has convinced you are imminent and catastrophic.
+          </li>
+          <li>
+            <strong>Intellectual atrophy:</strong> Your thinking becomes lazy when it's never challenged. Echo chambers reward rhetorical performance (preaching to the choir) over intellectual rigor (engaging with difficult questions).
+          </li>
+          <li>
+            <strong>Reduced empathy:</strong> When you never encounter humanized versions of people who think differently, you lose the ability to understand their experiences, motivations, and humanity. They become caricatures.
+          </li>
+          <li>
+            <strong>Disconnection from reality:</strong> When your bubble's predictions are repeatedly wrong (elections, social trends, public opinion), cognitive dissonance sets in. You either dismiss reality or double down on the bubble.
+          </li>
+        </ul>
+
+        <HighlightBox variant="stat">
+          <p className="text-lg font-semibold mb-2">Research Finding:</p>
+          <p>Participants in strong echo chambers experience cognitive dissonance when exposed to contradictory evidence. Rather than updating beliefs, 68% doubled down on existing views and 47% reported increased hostility toward opposing perspectives. The echo chamber doesn't just maintain beliefs—it actively hardens them against change.</p>
+        </HighlightBox>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -969,11 +1273,31 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     description: 'Understand how prolonged crisis news exposure during COVID-19 and other pandemics affects mental health, and apply lessons to future crises.',
     image: "/images/articles/cat10/cover-039.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Pandemic News', 'COVID-19', 'Crisis Coverage', 'Anxiety', 'Trauma'],
+    summary: 'The COVID-19 pandemic created an unprecedented "infodemic"—constant, real-time coverage of a prolonged global crisis that significantly worsened mental health. Unlike acute crises, the pandemic\'s years-long duration, universal personal relevance, and information chaos created chronic stress, anxiety, and trauma symptoms. Lessons learned include limiting news frequency, distinguishing information from emotion, curating sources, and balancing consumption with agency-building activities.',
+    keyFacts: [
+      { text: '53% of people reported worse mental health from pandemic news consumption, with 71% experiencing news-related anxiety and 2.4 times higher depression rates among heavy news consumers', citationIndex: 1 },
+      { text: 'The pandemic created an "infodemic"—an epidemic of information as harmful as the virus itself, characterized by misinformation, conflicting guidance, and epistemic uncertainty that made safe decision-making feel impossible', citationIndex: 3 },
+      { text: 'Unlike acute crises with clear endpoints, the pandemic\'s prolonged uncertainty (years of "When will it end?") created chronic stress that humans tolerate far worse than short-term acute stress', citationIndex: 2 },
+      { text: 'Pandemic news had universal personal relevance—every story felt threatening to yourself and loved ones, unlike typical distant news events, amplifying anxiety through constant perceived personal threat', citationIndex: 4 },
+      { text: 'Healthcare workers, people with pre-existing anxiety, parents, older adults, and heavy social media users experienced disproportionate mental health impacts from pandemic news exposure', citationIndex: 1 },
+    ],
+    sparkMoment: 'During the pandemic, constant news checking didn\'t make you safer—it just made you more anxious about all the ways you weren\'t safe.',
+    practicalExercise: {
+      title: 'Crisis News Resilience Plan',
+      steps: [
+        { title: 'Define Your Information Needs', description: 'During a crisis, distinguish between: (1) Actionable information you need to stay safe, (2) Context to understand the situation, (3) Emotional content that doesn\'t add safety or understanding. Consume 1 and 2, skip 3.' },
+        { title: 'Set Crisis Boundaries', description: 'Choose 1-2 trusted sources (CDC, WHO, one reputable news outlet). Check once or twice daily at set times. Turn off all breaking news alerts. No news first/last hour of the day.' },
+        { title: 'Build Your Action List', description: 'Write down concrete actions you can take during the crisis (follow guidelines, donate, help neighbors, maintain routines). When anxiety spikes, do something from this list instead of consuming more news.' },
+        { title: 'Schedule News Sabbaths', description: 'During prolonged crises, take one full day per week completely news-free. Your nervous system needs recovery time. Truly urgent information will still reach you.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Crisis-Related Anxiety',
+    },
     citations: [
       {
         id: '1',
@@ -1231,6 +1555,79 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
           <p>During acute crisis phases, implement the 24-hour rule: if a piece of news isn't actionable within the next 24 hours, you don't need to know about it right now. This filters out speculative, anxiety-inducing content that doesn't help you make immediate decisions.</p>
         </ArticleCallout>
 
+        <h2 id="psychological-toll" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Psychological Toll
+        </h2>
+        <p className="mb-6">
+          Why did pandemic news consumption create such severe mental health impacts? Several psychological mechanisms were at play:
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Mental Health Symptoms During Peak Pandemic News (2020-2021)"
+          data={[
+            { label: 'Anxiety', value: 71 },
+            { label: 'Sleep Problems', value: 64 },
+            { label: 'Depression', value: 53 },
+            { label: 'Health Anxiety', value: 48 },
+            { label: 'Intrusive Thoughts', value: 42 },
+            { label: 'Hypervigilance', value: 39 },
+          ]}
+          description="Percentage of heavy news consumers reporting each symptom"
+          source="JAMA Network Open, 2022"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-3 mt-6">
+          <li>
+            <strong>Chronic activation of threat response:</strong> Your brain's amygdala (threat detection center) was in constant overdrive. Every news alert, every rising case count, every headline about overwhelmed ICUs triggered your fight-or-flight response. Chronic activation leads to exhaustion, anxiety disorders, and burnout.
+          </li>
+          <li>
+            <strong>Loss of control:</strong> Unlike localized disasters where you can evacuate or take specific protective actions, the pandemic offered limited control. You could mask and distance, but the threat remained omnipresent. This learned helplessness—high threat, low control—is psychologically devastating.
+          </li>
+          <li>
+            <strong>Anticipatory grief:</strong> Constant exposure to death tolls and ICU stories created anticipatory grief—mourning losses that might happen to you or loved ones. This is cognitively and emotionally draining even when losses don't occur.
+          </li>
+          <li>
+            <strong>Vicarious trauma:</strong> Reading healthcare workers' accounts, seeing photos of refrigerator trucks used as morgues, watching videos of people dying alone—these created vicarious trauma. You experienced psychological injury from witnessing others' suffering, even mediated through screens.
+          </li>
+          <li>
+            <strong>Shattered assumptions:</strong> The pandemic challenged core assumptions about safety, predictability, and institutional competence. When fundamental beliefs about how the world works crumble, anxiety and disorientation follow.
+          </li>
+        </ul>
+
+        <QuoteBlock
+          quote="During the pandemic, many people developed what we call 'information trauma'—psychological injury not from the virus itself, but from the overwhelming, unrelenting stream of crisis information they couldn't process or control."
+          attribution="Dr. Lisa Feldman Barrett"
+          role="Neuroscientist"
+          source="How Emotions Are Made"
+        />
+
+        <h2 id="recovery-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Post-Pandemic Recovery: What We're Learning
+        </h2>
+        <p className="mb-6">
+          As we move further from peak pandemic, research is revealing patterns of recovery <Citation id="5" index={5} source="American Psychologist" year="2023" tier={1} />:
+        </p>
+
+        <HighlightBox variant="emphasis">
+          <p className="font-semibold mb-4">Recovery Timeline (Average):</p>
+          <p className="mb-3"><strong>0-3 months post-crisis:</strong> Many people initially feel relief but also experience "post-crisis crash"—delayed anxiety, depression, or exhaustion as the nervous system finally relaxes after prolonged hypervigilance.</p>
+          <p className="mb-3"><strong>3-6 months:</strong> Gradual stabilization. News consumption habits may remain elevated. Renewed interest in normal activities. Some persistent anxiety about future crises.</p>
+          <p className="mb-3"><strong>6-12 months:</strong> Most people return to baseline mental health, though 20-30% continue experiencing elevated anxiety, especially regarding health topics. Trust in institutions and news media often remains lower than pre-crisis levels.</p>
+          <p><strong>12+ months:</strong> Long-term impacts include heightened sensitivity to crisis news, changed media consumption habits (many report permanently reduced news consumption), and increased awareness of the relationship between information diet and mental health.</p>
+        </HighlightBox>
+
+        <p className="mb-6 mt-6">
+          <strong>Protective factors that predict better recovery:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Having implemented news boundaries during the crisis (limited checking, curated sources)</li>
+          <li>Strong social support networks outside of digital spaces</li>
+          <li>Engagement in agency-building activities (volunteering, mutual aid, activism)</li>
+          <li>Regular breaks from news consumption during the crisis</li>
+          <li>Professional mental health support sought early rather than after severe symptoms</li>
+        </ul>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -1258,11 +1655,31 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
     description: 'Learn to curate your information consumption intentionally, balancing awareness with well-being through evidence-based strategies.',
     image: "/images/articles/cat10/cover-040.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Information Diet', 'Digital Wellness', 'Intentional Consumption', 'Mental Health', 'Media Literacy'],
+    summary: 'Just as your body needs nutritious food, your mind needs a healthy information diet. Intentionally curating what you consume—choosing quality over quantity, depth over breadth, signal over noise—significantly improves mental health, focus, and well-being. Building a healthy information diet involves auditing current consumption, setting boundaries, curating quality sources, practicing "slow media," and developing critical media literacy skills.',
+    keyFacts: [
+      { text: 'Research demonstrates that intentional information curation—quality over quantity, bounded consumption over constant access—significantly improves mental health, focus, and cognitive well-being', citationIndex: 1 },
+      { text: 'The "slow media" movement emphasizes depth over speed: reading one long-form article deeply instead of skimming ten headlines creates better comprehension and lower anxiety', citationIndex: 3 },
+      { text: 'Digital minimalism applied to information environments—unsubscribing from unused newsletters, unfollowing low-value accounts—creates measurable mental health benefits by reducing decision fatigue and information overwhelm', citationIndex: 4 },
+      { text: 'Attention requires recovery time just like physical muscles: spending time in nature, engaging in activities without directed attention, and taking regular "screen sabbaths" restore cognitive capacity', citationIndex: 6 },
+      { text: 'Media literacy skills—critically evaluating sources, recognizing confirmation bias, checking for emotional manipulation, seeking context beyond headlines—are essential for a healthy information diet', citationIndex: 5 },
+    ],
+    sparkMoment: 'Every source you follow, every notification you enable, every minute you spend scrolling—these are choices, and you have more control than you think.',
+    practicalExercise: {
+      title: 'The 7-Day Information Diet Challenge',
+      steps: [
+        { title: 'Day 1-2: Audit & Measure', description: 'Track everything you consume for 2 days. Use screen time tools. Note: what, when, how long, and how you feel after. Be brutally honest—no judgment, just data.' },
+        { title: 'Day 3: Define Goals', description: 'Based on your audit, write down: (1) What consumption added value? (2) What served no purpose? (3) What made you feel worse? (4) What would an ideal information diet look like?' },
+        { title: 'Day 4-5: Ruthless Curation', description: 'Unsubscribe from 10+ sources. Unfollow 20+ accounts. Delete apps you use compulsively. Turn off all non-essential notifications. Choose your 2-3 quality sources.' },
+        { title: 'Day 6-7: Test New Boundaries', description: 'Implement: (1) No-consumption zones (first/last hour of day), (2) Designated info times (20 min morning, 20 min evening), (3) One activity that replaces scrolling. Notice the difference.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Information Diet',
+    },
     citations: [
       {
         id: '1',
@@ -1543,6 +1960,90 @@ export const informationOverloadDoomscrollingArticlesB: Article[] = [
             <strong>Challenge:</strong> 'I keep falling back into old habits."<br />
             <strong>Solution:</strong> Habit change takes time. Use environmental design: delete apps, use website blockers, put your phone in another room. Make the unhealthy option harder, the healthy option easier.
           </li>
+        </ul>
+
+        <h2 id="science-information-overload" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Science of Information Overload
+        </h2>
+        <p className="mb-6">
+          Understanding the cognitive science behind information overload can motivate better habits:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 34, suffix: 'GB', label: 'Information processed daily (average person)' },
+            { value: 74, suffix: '%', label: 'Report decision fatigue from info overload' },
+            { value: 23, suffix: '%', label: 'Reduction in cognitive capacity with constant checking' },
+          ]}
+          source="Computers in Human Behavior, 2023"
+        />
+
+        <ul className="list-disc pl-6 mb-6 space-y-3 mt-6">
+          <li>
+            <strong>Working memory limits:</strong> Your working memory can hold about 4-7 pieces of information at once. When you consume information continuously without processing, you hit cognitive overload. Nothing sticks; everything feels overwhelming. The brain needs white space to consolidate and make sense of information.
+          </li>
+          <li>
+            <strong>Decision fatigue:</strong> Every piece of content you encounter requires micro-decisions: read this? skip that? click here? After hundreds of these decisions, your cognitive resources deplete. This is why you feel mentally exhausted after scrolling even though you "didn't do anything."
+          </li>
+          <li>
+            <strong>Context switching costs:</strong> Jumping between topics (news → social media → work email → back to news) creates "attention residue." Part of your attention remains stuck on the previous task, reducing focus and increasing the mental effort required for each new task.
+          </li>
+          <li>
+            <strong>The mere exposure effect:</strong> The more you see information (even if you're not consciously processing it), the more familiar it feels—and familiarity is often confused with truth. Constant exposure to misinformation or biased content slowly shifts your perception of reality.
+          </li>
+          <li>
+            <strong>Cognitive closure need:</strong> Humans have a psychological need for closure and answers. Constant breaking news and incomplete stories create a state of perpetual cognitive dissonance—you can never "complete" the information task, which creates low-grade anxiety.
+          </li>
+        </ul>
+
+        <QuoteBlock
+          quote="Information overload isn't about having too much information—it's about trying to consume it all at once without giving your brain the time and space it needs to process anything deeply."
+          attribution="Cal Newport"
+          role="Computer Science Professor, Georgetown University"
+          source="Deep Work"
+        />
+
+        <h2 id="success-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          What Works: Patterns from Successful Information Dieters
+        </h2>
+        <p className="mb-6">
+          Research on people who've successfully built healthy information diets reveals consistent patterns <Citation id="2" index={2} source="Media Psychology" year="2023" tier={1} />:
+        </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="I need to go cold turkey and delete all social media"
+            fact="Extreme restriction often leads to rebound. Successful dieters use moderation and intentionality, not total elimination. They keep accounts but remove apps from phones, use desktop access only, and set specific purposes before opening platforms."
+          />
+          <MythVsFactBlock
+            myth="Checking news once a week is enough to stay informed"
+            fact="There's no universal 'right' frequency—it depends on your goals, profession, and personality. Successful dieters find their personal sweet spot (daily, weekly, etc.) based on what maintains awareness without creating anxiety."
+          />
+          <MythVsFactBlock
+            myth="A healthy information diet means never feeling curious or wanting to know more"
+            fact="Healthy information consumption is still enjoyable! The difference is intention: you choose when, what, and how much based on your values rather than algorithms or compulsion driving your consumption."
+          />
+        </div>
+
+        <HighlightBox variant="emphasis">
+          <p className="font-semibold mb-4">The 3 Pillars of Long-Term Success:</p>
+          <ol className="list-decimal pl-5 space-y-3">
+            <li><strong>Environmental design:</strong> Make the default easy. Delete apps, use blockers, create physical barriers (phone in another room). Don't rely on willpower alone.</li>
+            <li><strong>Replacement behaviors:</strong> Don't just remove—replace. Have a book ready, a hobby accessible, a person to call. Fill the void intentionally.</li>
+            <li><strong>Regular audits:</strong> Monthly check-ins: What's working? What's not? Is this still serving me? Information needs change over time; your diet should too.</li>
+          </ol>
+        </HighlightBox>
+
+        <p className="mb-6 mt-6">
+          People who maintain healthy information diets long-term report:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Better focus and ability to engage in deep work</li>
+          <li>Improved sleep quality (especially from eliminating bedtime scrolling)</li>
+          <li>Reduced anxiety and feeling of overwhelm</li>
+          <li>More time for relationships, hobbies, and rest</li>
+          <li>Greater sense of control and intentionality in life</li>
+          <li>Ironically, feeling <em>better</em> informed because they retain more from quality sources</li>
         </ul>
 
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

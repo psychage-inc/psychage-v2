@@ -25,6 +25,26 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['BFRBs', 'Trichotillomania', 'Skin Picking', 'Habit Reversal'],
+    summary: 'Body-focused repetitive behaviors like hair pulling, skin picking, and nail biting affect millions and serve complex emotional regulation functions. Evidence-based treatments like Habit Reversal Training combine awareness, competing responses, and environmental modifications to reduce these behaviors.',
+    keyFacts: [
+      { text: '2-5% of the population experiences clinically significant body-focused repetitive behaviors', citationIndex: 1 },
+      { text: 'Habit Reversal Training shows significant reductions in BFRB frequency and severity', citationIndex: 2 },
+      { text: 'BFRBs have two modes: automatic (low awareness) and focused (high awareness), requiring different intervention approaches', citationIndex: 1 },
+      { text: 'N-acetylcysteine (NAC) at 1200-2400mg/day has the strongest research support for reducing BFRB symptoms', citationIndex: 5 },
+      { text: 'Online CBT programs and support groups can be as effective as in-person treatment for BFRBs', citationIndex: 8 },
+    ],
+    sparkMoment: 'Your fingers moving to your scalp or face isn\'t a failure of willpower---it\'s a learned behavior serving a purpose, and behaviors that are learned can be unlearned through systematic practice.',
+    practicalExercise: {
+      title: 'Build Your BFRB Awareness Toolkit',
+      steps: [
+        { title: 'Track One Week', description: 'Use your phone or a small notepad to log every time you notice the behavior. Note: time, location, activity, and emotion. Don\'t try to stop yet---just observe.' },
+        { title: 'Identify Your Pattern', description: 'Review your log. What are your top 3 trigger situations? When are you most likely to pull, pick, or bite? Circle these patterns.' },
+        { title: 'Choose One Competing Response', description: 'Pick ONE high-risk situation and ONE competing response (fist clenching, holding a fidget toy, applying lotion). Practice it 5 times deliberately before using it during an urge.' },
+        { title: 'Test and Adjust', description: 'Use your competing response for one week in that single situation. Track success rate. If it works less than 30% of the time, try a different competing response. If it works more than 50%, add a second situation.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -540,6 +560,26 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep', 'Bedtime Procrastination', 'Evening Routine', 'Self-Regulation'],
+    summary: 'Revenge bedtime procrastination---sacrificing sleep for leisure time---stems from feeling deprived of personal control during the day. Breaking the cycle requires both immediate behavioral strategies and addressing the underlying time scarcity and autonomy issues.',
+    keyFacts: [
+      { text: 'Revenge bedtime procrastination is associated with later bedtimes, shorter sleep duration, and increased daytime fatigue', citationIndex: 1 },
+      { text: 'The behavior requires three elements: delayed sleep without external cause, awareness of negative consequences, and doing it anyway', citationIndex: 2 },
+      { text: 'The pattern often stems from lack of autonomy and free time during waking hours, not sleep problems', citationIndex: 3 },
+      { text: 'Self-control is a limited resource that depletes throughout the day, making evening the hardest time for willpower', citationIndex: 4 },
+      { text: 'Implementation intentions (if-then plans) effectively reduce bedtime procrastination behavior', citationIndex: 8 },
+    ],
+    sparkMoment: 'When you fix how you spend your waking hours and reclaim genuine leisure time during the day, bedtime stops feeling like giving up your freedom.',
+    practicalExercise: {
+      title: 'Design Your Ideal Evening Wind-Down',
+      steps: [
+        { title: 'Identify Your Sleep Need', description: 'Calculate when you need to be asleep (not just in bed) to get 7-8 hours before your alarm. Subtract 30 minutes for wind-down time. This is your target "start getting ready for bed" time.' },
+        { title: 'Claim Daytime Leisure', description: 'Schedule 30-60 minutes of genuine free time earlier in the day---not productive self-care, but actual leisure you enjoy. This reduces the desperation to reclaim time at night.' },
+        { title: 'Create an If-Then Plan', description: 'Write: "If it is [your target time], then I will [specific first step]." Example: "If it is 10 PM, then I will close my laptop and start my bedtime routine." Make the trigger time-based, not feeling-based.' },
+        { title: 'Build a Wind-Down Ritual', description: 'Design a 20-30 minute routine you actually enjoy: dim lights, enjoyable book, stretching, tea, skincare. Make going to bed feel like a pleasant activity, not a punishment.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track Your Sleep Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -987,6 +1027,26 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Alcohol', 'Harm Reduction', 'Moderation', 'Substance Use'],
+    summary: 'Moderation-focused approaches to alcohol can be effective for people with mild to moderate concerns who don\'t require complete abstinence. Success requires honest self-assessment, concrete consumption limits, protective strategies, and addressing the underlying needs alcohol is meeting.',
+    keyFacts: [
+      { text: 'Moderation-focused interventions can be effective for people with mild to moderate alcohol use concerns', citationIndex: 2 },
+      { text: 'Moderate drinking candidates have no history of severe alcohol-related consequences, withdrawal symptoms, or failed moderation attempts', citationIndex: 3 },
+      { text: 'Self-monitoring of alcohol consumption significantly reduces overall intake', citationIndex: 8 },
+      { text: 'Protective behavioral strategies like alternating alcoholic and non-alcoholic drinks reduce harmful drinking outcomes', citationIndex: 6 },
+      { text: 'Mindfulness-based approaches to drinking increase awareness and reduce automatic consumption patterns', citationIndex: 4 },
+    ],
+    sparkMoment: 'Cutting back isn\'t about proving you don\'t have a problem---it\'s about making a choice that aligns with your health, values, and the life you want to live.',
+    practicalExercise: {
+      title: 'Design Your Personal Moderation Plan',
+      steps: [
+        { title: 'Set Clear Limits', description: 'Define your specific moderation goals: maximum drinks per occasion (e.g., 2), maximum occasions per week (e.g., 3), and alcohol-free days (e.g., 4). Write them down and post somewhere visible.' },
+        { title: 'Track Every Drink for Two Weeks', description: 'Use your phone notes or a tracking app to log every alcoholic drink. Include: what, how much, when, where, who you were with, and how you felt. Be brutally honest---no one sees this but you.' },
+        { title: 'Identify Your High-Risk Patterns', description: 'Review your log. When do you exceed your limits? What triggers more drinking? (Stress? Social pressure? Boredom? Certain people or places?) Circle the top 3 patterns.' },
+        { title: 'Create If-Then Plans', description: 'For each high-risk situation, write an if-then plan. Example: "If I\'m at a party and someone offers me a third drink, then I will say \'I\'m good, but I\'ll take a water.\'" Practice saying it out loud.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1507,6 +1567,26 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Shopping Addiction', 'Compulsive Buying', 'Financial Health', 'Emotional Spending'],
+    summary: 'Compulsive buying disorder affects 5-8% of the population and involves using shopping as emotional regulation rather than genuine need. Breaking the cycle requires understanding triggers, implementing purchase friction, developing alternative coping strategies, and addressing underlying emotional needs.',
+    keyFacts: [
+      { text: 'Approximately 5-8% of the general population experiences compulsive buying disorder, with higher rates among young adults and women', citationIndex: 2 },
+      { text: 'Online shopping convenience and one-click purchasing significantly increase impulse buying behavior', citationIndex: 7 },
+      { text: 'Compulsive buying is characterized by preoccupation, loss of control, emotional motivation, and continued behavior despite negative consequences', citationIndex: 1 },
+      { text: 'Cognitive-behavioral therapy shows significant effectiveness in treating compulsive buying disorder', citationIndex: 4 },
+      { text: 'Mindfulness-based interventions help reduce automatic buying patterns and increase awareness of emotional triggers', citationIndex: 8 },
+    ],
+    sparkMoment: 'The brief rush you feel clicking "Add to Cart" isn\'t happiness---it\'s your brain desperately seeking a hit of dopamine to escape discomfort you haven\'t learned to sit with.',
+    practicalExercise: {
+      title: 'Create Your 24-Hour Pause System',
+      steps: [
+        { title: 'Install Purchase Friction', description: 'Remove all saved payment info from shopping sites. Delete shopping apps from your phone. Unsubscribe from promotional emails. Make buying inconvenient again.' },
+        { title: 'Implement the 24-Hour Rule', description: 'Before ANY non-essential purchase over $20, you must wait 24 hours. Take a screenshot or write it down. If you still want it tomorrow, you can buy it. Track how many items you stop wanting after 24 hours.' },
+        { title: 'Name the Feeling First', description: 'When you feel the urge to shop, pause and ask: "What am I feeling right now?" Name the emotion (stressed, lonely, bored, anxious). Write it down. Then ask: "What does this feeling actually need?" (Usually not a purchase.)' },
+        { title: 'Build One Alternative Coping Strategy', description: 'Choose ONE healthier response for your most common trigger emotion. Stressed? 10-minute walk. Lonely? Text a friend. Bored? Puzzle or book. Practice it 5 times this week instead of shopping.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Triggers',
+    },
     citations: [
       {
         id: '1',
@@ -2045,6 +2125,26 @@ export const breakingUnhealthyPatternsArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Habit Change', 'Behavior Substitution', 'Self-Regulation', 'Neuroscience'],
+    summary: 'Trying to eliminate a habit without replacing it fails because the neural pathway and underlying need remain unmet. Substitution works by providing a new response to the same trigger that serves the same function, working with your brain\'s natural processes rather than fighting them.',
+    keyFacts: [
+      { text: 'Habit elimination without replacement leaves cue-response patterns with no new response, leading to frequent relapse', citationIndex: 1 },
+      { text: 'Habits serve specific functions like stress relief and emotional regulation; eliminating behavior without addressing the need leads to substitution with another problematic behavior', citationIndex: 6 },
+      { text: 'Competing response training shows 60% initial success rates compared to 15% for elimination-only approaches at 3 months', citationIndex: 4 },
+      { text: 'Effective substitutes must match three criteria: physically incompatible with the old habit, serves the same underlying function, and is practical to perform in the same context', citationIndex: 2 },
+      { text: 'Implementation intentions ("if-then" plans) significantly increase success of habit substitution by creating automatic new responses', citationIndex: 7 },
+    ],
+    sparkMoment: 'Your brain doesn\'t unlearn the connection between trigger and old behavior just because you\'ve decided to stop---it needs a new pathway to travel instead.',
+    practicalExercise: {
+      title: 'Build Your Habit Substitution Blueprint',
+      steps: [
+        { title: 'Identify the Full Habit Loop', description: 'For the habit you want to change, map: (1) What triggers it? (2) What\'s the behavior? (3) What reward does it provide? (4) What underlying need does it meet? Be specific---"stress relief" is too vague; "releases physical tension in my jaw" is better.' },
+        { title: 'Brainstorm Functional Substitutes', description: 'List 5-10 alternative behaviors that could meet the SAME underlying need. For nail biting (releases tension): squeeze stress ball, chew gum, clench fists for 10 seconds, press fingertips together. Don\'t judge yet---just brainstorm.' },
+        { title: 'Test for Three Criteria', description: 'For each substitute, check: (1) Is it physically incompatible with the old habit? (2) Does it serve the same function? (3) Can I realistically do it in the same situations? Cross out any that fail these tests.' },
+        { title: 'Create Your If-Then Plan', description: 'Pick ONE substitute and write: "If [trigger occurs], then I will [new behavior] instead of [old behavior]." Example: "If I feel tension building during a meeting, then I will press my fingertips together for 10 seconds instead of biting my nails." Practice this 5 times deliberately before using it in real situations.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Triggers',
+    },
     citations: [
       {
         id: '1',

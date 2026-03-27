@@ -18,11 +18,31 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     description: 'Explore how psychological factors influence chronic pain experience, why pain persists beyond tissue damage, and the neuroscience of the pain-brain connection.',
     image: "/images/articles/cat09/cover-051.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Chronic Pain', 'Pain Psychology', 'Mind-Body', 'Neuroscience'],
+    summary: 'Chronic pain is not just about tissue damage—it\'s a complex experience created by the brain, influenced by psychological, biological, and social factors. Understanding the mind-body connection in pain opens doors to effective treatments beyond medications, including therapy that retrains the nervous system.',
+    keyFacts: [
+      { text: 'Pain is created by the brain as an interpretation of threat, not a direct readout of tissue damage—which is why phantom limb pain exists and why severe injuries in battle often go unfelt until safety is reached.', citationIndex: 2 },
+      { text: 'In chronic pain, the nervous system undergoes central sensitization, becoming hypersensitive like a faulty fire alarm that triggers from burnt toast instead of actual fires.', citationIndex: 3 },
+      { text: '50% of people with chronic pain also have depression, and treating depression can reduce pain intensity by 35% even without directly targeting pain mechanisms.', citationIndex: 7 },
+      { text: 'Chronic pain causes measurable brain changes including increased gray matter in pain-processing regions and decreased gray matter in the prefrontal cortex, but these changes can reverse with effective treatment.', citationIndex: 6 },
+      { text: '60% of pain variance is explained by psychological factors like attention, emotional state, beliefs, and stress—not tissue damage alone.', citationIndex: 5 },
+    ],
+    sparkMoment: 'Pain is not a message from your body to your brain—it\'s your brain\'s best guess about how much protection you need, based on all the information available.',
+    practicalExercise: {
+      title: 'Map Your Pain Contributors',
+      steps: [
+        { title: 'Identify Biological Factors', description: 'List any physical contributors: initial injury or illness, sleep quality, inflammation levels, and medications you take.' },
+        { title: 'Notice Psychological Patterns', description: 'Track for 3 days: What thoughts arise when pain increases? What emotions accompany pain? When does your attention fixate on pain?' },
+        { title: 'Recognize Social Influences', description: 'Note social factors: current stress levels, support availability, work demands, financial pressures affecting your pain.' },
+        { title: 'Find Your Leverage Points', description: 'Circle the factors above that you CAN influence. These become your intervention targets—often psychological and social factors are more modifiable than biological ones.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Pain Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -327,6 +347,57 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <p className="mt-4">It means pain is real, complex, and influenced by brain processing---which opens doors to effective treatment.</p>
         </ArticleCallout>
 
+        <h2 id="changing-your-brain" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Ways to Leverage the Mind-Body Connection
+        </h2>
+        <p className="mb-6">
+          Understanding the psychology of pain isn't just theoretical---it opens practical intervention points:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Reframe Pain Beliefs
+        </h3>
+        <p className="mb-6">
+          If you believe pain always means tissue damage, you'll respond with fear and avoidance. Learning that pain is a protective signal (not damage itself) can reduce threat perception. When you understand that movement might hurt but won't harm you, the brain can dial down protection.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Practice Graded Exposure
+        </h3>
+        <p className="mb-6">
+          Gradually resuming feared activities teaches your brain that movement is safe. Start small---if bending triggers fear, practice gentle bends in a safe environment. As your nervous system learns these movements don't cause damage, it reduces the pain signal.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Cultivate Safety
+        </h3>
+        <p className="mb-6">
+          Your brain creates more pain when it perceives danger. Building a sense of safety---through supportive relationships, predictable routines, stress management, and compassionate self-talk---can reduce pain intensity. Simple practices like slow breathing signal to your nervous system that you're safe.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Address Sleep and Stress
+        </h3>
+        <p className="mb-6">
+          Poor sleep and chronic stress keep your nervous system on high alert, lowering pain threshold. Prioritizing sleep hygiene and stress reduction (even 10 minutes of daily relaxation practice) can meaningfully impact pain levels.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Work with a Pain Psychologist
+        </h3>
+        <p className="mb-6">
+          Psychologists specializing in pain use evidence-based approaches like cognitive-behavioral therapy, acceptance and commitment therapy, and pain reprocessing therapy. These directly target the psychological factors maintaining pain. Many people experience significant pain reduction through these therapies alone.
+        </p>
+
+        <ArticleCallout variant="action-plan" title="Your Next Steps">
+          <ol className="list-decimal pl-5 space-y-3">
+            <li>Reflect on how psychological factors (stress, sleep, emotions, beliefs) currently influence your pain</li>
+            <li>Identify one psychological factor you could address (e.g., improve sleep, challenge catastrophic thoughts, reduce daily stress)</li>
+            <li>Consider seeking a referral to a pain psychologist or pain rehabilitation program that addresses mind-body factors</li>
+            <li>Educate yourself further on pain neuroscience—understanding changes pain perception</li>
+          </ol>
+        </ArticleCallout>
+
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
@@ -337,7 +408,7 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           The brain creates pain to protect you. When chronic, the protection system becomes overactive. Understanding this empowers you to work with your nervous system to reduce sensitization and retrain pain pathways.
         </p>
         <p className="mb-6">
-          Pain is real, complex, and---importantly---modifiable through comprehensive approaches addressing body and mind together.
+          Pain is real, complex, and---importantly---modifiable through comprehensive approaches addressing body and mind together. You don't have to just "live with it"---effective treatments exist that address the psychological dimensions of pain.
         </p>
       </>
     ),
@@ -350,11 +421,31 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     description: 'Learn what pain catastrophizing is, how worst-case thinking intensifies pain, and evidence-based strategies to break the catastrophizing cycle for better pain management.',
     image: "/images/articles/cat09/cover-052.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Pain Catastrophizing', 'Chronic Pain', 'Cognitive Patterns', 'Pain Management'],
+    summary: 'Pain catastrophizing—a pattern of magnifying pain\'s threat, ruminating on it, and feeling helpless—amplifies pain intensity by 31% and increases disability 2.5 times. The good news: this cognitive pattern is changeable through specific techniques that reduce suffering and improve function.',
+    keyFacts: [
+      { text: 'Catastrophizing has three components: magnification (exaggerating pain\'s threat), rumination (obsessive focus on pain), and helplessness (believing you can\'t cope).', citationIndex: 2 },
+      { text: 'People with high catastrophizing experience 31% more pain intensity and 2.5 times greater disability than those with low catastrophizing, even with the same underlying condition.', citationIndex: 2 },
+      { text: 'Catastrophizing explains 42% of the variation in pain experiences—making it one of the most powerful psychological factors influencing chronic pain.', citationIndex: 5 },
+      { text: 'Attention amplifies pain perception: when you catastrophize and focus intensely on pain, you become hypervigilant to every twinge, making pain feel stronger.', citationIndex: 5 },
+      { text: 'Cognitive-behavioral therapy targeting catastrophizing produces significant reductions in pain-related disability and improves quality of life, with effects maintained at 6-12 month follow-ups.', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your thoughts about pain literally change how much pain you feel—catastrophizing isn\'t weakness, but recognizing and challenging it is a learnable skill that can transform your experience.',
+    practicalExercise: {
+      title: 'Catch and Challenge Catastrophic Thoughts',
+      steps: [
+        { title: 'Notice the Thought', description: 'When pain spikes, pause and write down exactly what you\'re thinking. Look for absolutes ("never," "always," "can\'t") and predictions about the future.' },
+        { title: 'Identify the Catastrophizing Type', description: 'Is this magnification ("worst pain ever"), rumination ("can\'t stop thinking about it"), or helplessness ("nothing I can do")? Name it.' },
+        { title: 'Challenge with Evidence', description: 'Write: "Evidence FOR this thought" and "Evidence AGAINST this thought." Be honest about both. What would you tell a friend thinking this?' },
+        { title: 'Generate a Balanced Alternative', description: 'Create a more realistic thought that acknowledges pain without catastrophizing: "This hurts, but I\'ve handled pain flares before and they pass."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Thoughts',
+    },
     citations: [
       {
         id: '1',
@@ -601,6 +692,53 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="real-world-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Examples: Before and After
+        </h2>
+        <p className="mb-6">
+          Seeing how catastrophizing transforms into balanced thinking can help you recognize and shift your own patterns:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Example 1: Magnification
+        </h3>
+        <p className="mb-2"><strong className="text-red-600 dark:text-red-400">Catastrophizing:</strong> "This is the worst pain I've ever felt. I can't bear it. It's unbearable."</p>
+        <p className="mb-6"><strong className="text-green-600 dark:text-green-400">Balanced thought:</strong> "This is intense pain, maybe a 7/10. It's very uncomfortable, but I've gotten through pain flares before. I can handle this, even if it's hard."</p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Example 2: Rumination
+        </h3>
+        <p className="mb-2"><strong className="text-red-600 dark:text-red-400">Catastrophizing:</strong> "I can't stop thinking about this pain. It's consuming every moment. I can't focus on anything else."</p>
+        <p className="mb-6"><strong className="text-green-600 dark:text-green-400">Balanced thought:</strong> "Pain is present and demands attention, but I can also notice other things. For the next 10 minutes, I'll focus on this podcast/book/conversation and let pain be in the background."</p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Example 3: Helplessness
+        </h3>
+        <p className="mb-2"><strong className="text-red-600 dark:text-red-400">Catastrophizing:</strong> "There's nothing I can do. I'm completely helpless. Nothing works."</p>
+        <p className="mb-6"><strong className="text-green-600 dark:text-green-400">Balanced thought:</strong> "I can't control the pain completely, but I can use my pacing strategies, try gentle movement, use ice/heat, practice breathing techniques, or reach out for support. I have some tools, even if they don't eliminate pain."</p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Example 4: Predicting the Future
+        </h3>
+        <p className="mb-2"><strong className="text-red-600 dark:text-red-400">Catastrophizing:</strong> "This pain will never end. It's only going to get worse. I'll never have a good day again."</p>
+        <p className="mb-6"><strong className="text-green-600 dark:text-green-400">Balanced thought:</strong> "I can't predict the future. Pain has fluctuated before—sometimes better, sometimes worse. Right now it's high, but that doesn't mean it will stay this way permanently. I'll focus on what I can do today."</p>
+
+        <h2 id="tracking-progress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Tracking Your Progress
+        </h2>
+        <p className="mb-6">
+          Reducing catastrophizing takes practice. Track your progress:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Weekly self-assessment</strong>: Rate how often you caught yourself catastrophizing (0-10 scale)</li>
+          <li><strong>Success log</strong>: Note times you successfully challenged a catastrophic thought</li>
+          <li><strong>Functional improvements</strong>: Are you doing activities you'd avoided? This shows reduced fear-avoidance</li>
+          <li><strong>Pain diary</strong>: Track pain intensity alongside catastrophizing. You may notice pain decreases as catastrophizing reduces</li>
+        </ul>
+        <p className="mb-6">
+          Progress isn't linear. Some days you'll catch every catastrophic thought; other days they'll slip by unnoticed. That's normal. The goal isn't perfection---it's building awareness and practicing alternative responses.
+        </p>
+
         <h2 id="professional-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -640,11 +778,31 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     description: 'Explore how chronic physical illness affects mental health and vice versa, understanding the complex interplay between chronic conditions and psychological wellbeing.',
     image: "/images/articles/cat09/cover-053.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Chronic Illness', 'Mental Health', 'Comorbidity', 'Integrated Care'],
+    summary: 'Chronic illness and mental health influence each other bidirectionally—depression can worsen diabetes control, heart disease triggers depression, and autoimmune conditions create anxiety. Yet 70% of people with both conditions go untreated for mental health, despite evidence that addressing both together produces 50% better physical health outcomes.',
+    keyFacts: [
+      { text: 'People with chronic illness have 2.3 times higher rates of depression and anxiety than the general population, with rates reaching 50% in chronic pain and 40% in multiple sclerosis.', citationIndex: 1 },
+      { text: 'Depression doubles the risk of developing diabetes through stress hormones, inflammation, and health behaviors—and diabetes increases depression risk 2-3 times, creating a bidirectional loop.', citationIndex: 5 },
+      { text: 'Chronic inflammation is a key biological link: many chronic illnesses involve inflammation, which triggers depression, and depression itself causes inflammation, creating feedback loops.', citationIndex: 3 },
+      { text: 'Depression after a heart attack doubles mortality risk, yet treating depression improves both mood and cardiac outcomes—demonstrating the power of integrated care.', citationIndex: 6 },
+      { text: 'Integrated care addressing physical and mental health together produces 50% improvement in physical health outcomes compared to treating conditions separately.', citationIndex: 4 },
+    ],
+    sparkMoment: 'Chronic illness and depression aren\'t separate problems happening to coexist—they\'re dynamically interconnected, which means treating one genuinely helps the other.',
+    practicalExercise: {
+      title: 'Complete a Mind-Body Health Inventory',
+      steps: [
+        { title: 'List Your Physical Symptoms', description: 'Write down your chronic illness symptoms: pain levels, energy, sleep quality, physical limitations.' },
+        { title: 'Assess Mental Health Honestly', description: 'Rate (0-10): mood, anxiety, motivation, enjoyment of activities, social connection. Be honest—feeling depressed while ill is common, not weakness.' },
+        { title: 'Map the Connections', description: 'Notice patterns: Does poor sleep worsen mood? Does depression reduce treatment adherence? Does anxiety increase pain? Draw arrows showing how they influence each other.' },
+        { title: 'Identify Intervention Points', description: 'Circle factors you can address: sleep hygiene, therapy referral, support group, stress management. Targeting one point can create positive ripple effects.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -913,6 +1071,69 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li><strong>Lifestyle interventions</strong>: Exercise, sleep, nutrition adapted to illness limitations</li>
         </ul>
 
+        <h2 id="living-with-both" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Living with Both: Practical Self-Care
+        </h2>
+        <p className="mb-6">
+          Managing chronic illness and mental health together requires strategic self-care:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Pace Yourself
+        </h3>
+        <p className="mb-6">
+          Depression saps motivation. Chronic illness limits energy. Together, they demand careful pacing. Break tasks into smaller steps. Rest isn't laziness---it's essential management of limited resources.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Maintain Social Connection
+        </h3>
+        <p className="mb-6">
+          Illness and depression both isolate. Combat this actively: schedule regular contact (even brief texts or video calls), join online support groups for your specific condition, accept help when offered. Social connection is medicine.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Find Meaning and Purpose
+        </h3>
+        <p className="mb-6">
+          Chronic illness disrupts life plans and identity. Depression strips meaning from activities. Rebuilding purpose—even in small ways—is crucial. This might be: advocating for others with your condition, creative expression, mentoring, spiritual practice, or simply being present for loved ones. Purpose doesn't require grand gestures.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Practice Self-Compassion
+        </h3>
+        <p className="mb-6">
+          You're dealing with two difficult realities. Self-criticism ("I should be handling this better") only adds suffering. Treat yourself as you would a friend facing the same challenges: with kindness, understanding, and acknowledgment of how hard this is.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Monitor for Warning Signs
+        </h3>
+        <p className="mb-6">
+          Know the red flags that indicate worsening mental health:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Persistent thoughts of death or suicide</li>
+          <li>Inability to function in daily tasks</li>
+          <li>Complete withdrawal from all social contact</li>
+          <li>Severe anxiety or panic attacks</li>
+          <li>Neglecting medical treatment for physical illness</li>
+        </ul>
+        <p className="mb-6">
+          If you experience these, seek immediate help. Call 988 (Suicide & Crisis Lifeline), contact your doctor, or go to an emergency room. These are medical emergencies, not signs of weakness.
+        </p>
+
+        <ArticleCallout variant="crisis" title="If You're in Crisis">
+          <p className="mb-4">Having both chronic illness and mental health struggles can feel overwhelming. If you're having thoughts of suicide or self-harm:</p>
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Call 988 (Suicide & Crisis Lifeline) - available 24/7</li>
+            <li>Text "HELLO" to 741741 (Crisis Text Line)</li>
+            <li>Call your doctor or therapist immediately</li>
+            <li>Go to your nearest emergency room</li>
+          </ul>
+          <p className="mt-4">You deserve support. Crisis is temporary, even when it doesn't feel that way.</p>
+        </ArticleCallout>
+
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
@@ -937,11 +1158,31 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     description: 'Learn how Acceptance and Commitment Therapy helps people with chronic pain shift from fighting pain to living meaningful lives despite discomfort.',
     image: "/images/articles/cat09/cover-054.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 10,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['ACT', 'Chronic Pain', 'Acceptance', 'Treatment Guide'],
+    summary: 'Acceptance and Commitment Therapy (ACT) offers a radical shift: instead of fighting to eliminate pain, you learn psychological flexibility—the ability to live meaningfully despite pain. Research shows ACT reduces disability by 48% and improves quality of life by 42%, often without changing pain intensity at all.',
+    keyFacts: [
+      { text: 'Psychological flexibility—adapting to situations and taking valued action despite pain—predicts better outcomes (lower disability, less depression, better quality of life) independent of pain intensity.', citationIndex: 2 },
+      { text: 'ACT has six core processes: acceptance (willingness to feel pain), cognitive defusion (seeing thoughts as thoughts), present moment awareness, self-as-context (you are more than your pain), values clarification, and committed action.', citationIndex: 1 },
+      { text: 'Research shows ACT for chronic pain reduces disability by 48%, improves quality of life by 42%, and decreases catastrophizing—with effects maintained at 6-12 month follow-ups.', citationIndex: 1 },
+      { text: 'ACT differs from CBT: while CBT aims to reduce pain and change unhelpful thoughts, ACT focuses on increasing valued living despite pain and noticing thoughts without needing to change them.', citationIndex: 3 },
+      { text: 'Acceptance in ACT isn\'t giving up or resignation—it\'s an active choice to have the experience of pain so you can do what matters, not passive surrender.', citationIndex: 4 },
+    ],
+    sparkMoment: 'You can build a rich, meaningful life with pain present—suffering comes not from pain itself, but from the struggle against it and the life you\'ve given up because of it.',
+    practicalExercise: {
+      title: 'Identify One Values-Based Action',
+      steps: [
+        { title: 'Name a Lost Domain', description: 'What life area has pain taken from you? (Relationships, work, hobbies, personal growth, health, spirituality)' },
+        { title: 'Clarify Your Value', description: 'In that domain, who do you want to be? (Example: "a present parent," not "pain-free parent")' },
+        { title: 'Generate a Small Action', description: 'What\'s ONE tiny thing you could do today aligned with that value, even with pain present? Make it specific and doable in 5-15 minutes.' },
+        { title: 'Practice Willingness', description: 'Before doing the action, acknowledge: "I\'m willing to feel pain if that\'s what shows up, so I can do what matters." Then do it.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Valued Actions',
+    },
     citations: [
       {
         id: '1',
@@ -1246,6 +1487,63 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           source="Meta-analysis, Journal of Pain 2020"
         />
 
+        <h2 id="common-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Challenges in ACT
+        </h2>
+        <p className="mb-6">
+          ACT isn't always easy. Common struggles and how to work with them:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          "I Try to Accept Pain, But I Still Want It Gone"
+        </h3>
+        <p className="mb-6">
+          This is normal. Acceptance doesn't mean you like pain or stop wanting relief. It means you stop making pain relief a prerequisite for living. You can simultaneously accept pain's presence AND hope it improves AND seek appropriate treatment. These aren't contradictory.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          "When I Stop Fighting Pain, It Gets Worse"
+        </h3>
+        <p className="mb-6">
+          Initially, when you stop distracting from pain, you may notice it more. This is temporary. Over time, acceptance reduces the suffering around pain (the frustration, fear, resistance) even if pain sensations persist. The goal isn't to make pain disappear through acceptance---it's to carry it more lightly.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          "I Don't Know What I Value Anymore"
+        </h3>
+        <p className="mb-6">
+          Chronic pain can disconnect you from values. Start small: What did you value before pain? What matters to you about how you treat others? What would you want said about you? Values aren't achievements---they're directions. You don't "accomplish" being a caring friend; you practice it moment to moment.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          "Taking Valued Action Just Causes Pain Flares"
+        </h3>
+        <p className="mb-6">
+          Pacing is essential. ACT doesn't mean ignoring your body's limits. Start with tiny actions---5 minutes, not 50. Gradually build. The willingness to feel some pain doesn't mean causing unnecessary flares. You're looking for sustainable valued living, not heroic one-time efforts that leave you bedbound for days.
+        </p>
+
+        <h2 id="act-in-practice" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          ACT in Practice: A Real-World Example
+        </h2>
+        <p className="mb-6">
+          Meet Sarah (composite example):
+        </p>
+        <p className="mb-6">
+          Sarah has chronic back pain. She stopped working, stopped exercising, and stopped socializing---all to avoid pain flares. Her life shrank to managing pain. She felt helpless and depressed.
+        </p>
+        <p className="mb-6">
+          In ACT therapy, Sarah identified her core value: connection. She'd given up connection to avoid pain. Her therapist asked: "If you're willing to feel pain, what small step toward connection could you take?"
+        </p>
+        <p className="mb-6">
+          Sarah started with one 15-minute coffee date weekly with a friend. Yes, it hurt to sit. Yes, she had increased pain afterward. But she felt alive again---connected, engaged, like herself. That mattered more than avoiding the pain.
+        </p>
+        <p className="mb-6">
+          Over months, Sarah gradually re-engaged with life. She didn't eliminate pain. But her disability decreased dramatically. She returned to part-time work, resumed gentle yoga, rebuilt her social life. Pain was still present, but it no longer controlled every decision.
+        </p>
+        <p className="mb-6">
+          Sarah described the shift: "I used to spend all my energy fighting pain and trying to make it go away. Now I spend that energy on living. Pain is there, but it's not the main character of my life anymore."
+        </p>
+
         <h2 id="is-act-right-for-you" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Is ACT Right for You?
         </h2>
@@ -1309,11 +1607,31 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
     description: 'Learn about Spoon Theory, a powerful metaphor for understanding and communicating the energy limitations of chronic illness and how to manage finite resources.',
     image: "/images/articles/cat09/cover-055.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Spoon Theory', 'Chronic Illness', 'Energy Management', 'Pacing'],
+    summary: 'Spoon Theory, created by Christine Miserandino, uses spoons as metaphorical units of energy to explain the invisible limitations of chronic illness. While healthy people have unlimited spoons, those with chronic conditions start each day with a finite number—making every activity a strategic choice about limited resources.',
+    keyFacts: [
+      { text: 'Spoon Theory was created in 2003 by Christine Miserandino to explain to a friend what living with lupus feels like by using actual spoons as units of daily energy.', citationIndex: 1 },
+      { text: 'Core concept: Every activity costs spoons (energy units), from showering (2 spoons) to doctor appointments (4 spoons). Once you run out, you\'re done—no matter what still needs doing.', citationIndex: 1 },
+      { text: 'Healthy people have seemingly unlimited spoons that replenish overnight, while people with chronic illness might start with only 12 spoons, with each task costing more energy than it would for healthy people.', citationIndex: 2 },
+      { text: 'Evidence-based strategies that align with Spoon Theory include activity pacing (breaking tasks into chunks with rest), energy conservation (using assistive devices, simplifying routines), and prioritizing (deciding what matters most).', citationIndex: 3 },
+      { text: 'Spoon debt occurs when you "borrow" tomorrow\'s spoons to get through today—sometimes necessary, but you\'ll start tomorrow already depleted, creating a cycle of energy depletion.', citationIndex: 4 },
+    ],
+    sparkMoment: 'The power of Spoon Theory isn\'t just tracking energy—it\'s making the invisible visible, transforming "Why are you tired from showering?" into visceral understanding.',
+    practicalExercise: {
+      title: 'Track Your Daily Spoons',
+      steps: [
+        { title: 'Estimate Your Starting Spoons', description: 'On a typical day, how many units of energy do you have? (Most people with chronic illness estimate 8-15 spoons; adjust based on your experience)' },
+        { title: 'Log One Full Day', description: 'Tomorrow, write down every activity and assign a spoon cost (1-5 spoons based on effort required). Be honest about what drains you.' },
+        { title: 'Identify Patterns', description: 'Which activities cost more than expected? Where are you overspending spoons? What non-essential tasks are consuming limited energy?' },
+        { title: 'Make One Strategic Change', description: 'Choose one modification: simplify a routine, use an assistive device, delegate a task, or swap a high-spoon activity for a lower-spoon alternative.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track Energy Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1548,6 +1866,58 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li><strong>Self-monitoring</strong>: Tracking energy levels to identify patterns</li>
         </ul>
 
+        <h2 id="spoonie-community" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Spoonie Community
+        </h2>
+        <p className="mb-6">
+          Spoon Theory has spawned a global community of "spoonies"---people living with chronic illness who use spoons as shorthand for their experience. This community provides:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Shared language</strong>: "Out of spoons" conveys exhaustion in a way "tired" doesn't capture</li>
+          <li><strong>Validation</strong>: Others who understand the daily energy calculations</li>
+          <li><strong>Practical tips</strong>: Spoon-conservation strategies shared across conditions</li>
+          <li><strong>Visibility</strong>: Making invisible illnesses more understandable to the public</li>
+          <li><strong>Connection</strong>: Online communities using #spoonie, spoon emojis, and spoon-related merchandise</li>
+        </ul>
+        <p className="mb-6">
+          The spoonie identity helps people with diverse chronic conditions (lupus, fibromyalgia, ME/CFS, EDS, POTS, MS, and many others) find common ground around shared experiences of energy limitation.
+        </p>
+
+        <h2 id="daily-application" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Applying Spoon Theory Daily
+        </h2>
+        <p className="mb-6">
+          Practical ways to use Spoon Theory in your life:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Morning Planning
+        </h3>
+        <p className="mb-6">
+          Before getting out of bed, assess your starting spoons for the day. On a 12-spoon day, you can attempt more. On a 6-spoon day, ruthlessly prioritize. This honest assessment prevents overcommitment and the crash that follows.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Weekly Strategizing
+        </h3>
+        <p className="mb-6">
+          Look at your week: What high-spoon events are coming? A medical appointment Wednesday, family gathering Saturday? Plan lighter days before and after. If you have a doctor's appointment that will cost 5 spoons, don't also schedule grocery shopping, house cleaning, and social plans that day.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Saying No Without Guilt
+        </h3>
+        <p className="mb-6">
+          "I'm out of spoons" is a complete sentence. It removes guilt from necessary boundaries. You're not being flaky or antisocial---you're managing a real limitation. The metaphor helps you internalize this truth and communicate it clearly.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Celebrating Small Wins
+        </h3>
+        <p className="mb-6">
+          On a 6-spoon day, getting through basic self-care IS an accomplishment. Spoon Theory helps you recognize that what looks like "doing nothing" to others was actually strategic management of severe limitations. Celebrate managing your spoons wisely, not just completing tasks.
+        </p>
+
         <h2 id="beyond-spoons" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Beyond Spoons: Other Energy Metaphors
         </h2>
@@ -1558,9 +1928,10 @@ export const painChronicIllnessImpactArticlesA: Article[] = [
           <li><strong>Battery percentage</strong>: "I'm at 20% battery right now"</li>
           <li><strong>Fuel tank</strong>: "My tank is empty"</li>
           <li><strong>Bandwidth</strong>: "I don't have bandwidth for that"</li>
+          <li><strong>Hit points (HP)</strong>: Gaming metaphor some younger people prefer</li>
         </ul>
         <p className="mb-6">
-          Use whatever metaphor resonates and communicates effectively for you.
+          Use whatever metaphor resonates and communicates effectively for you. The specific image matters less than having a shared language that makes invisible limits visible.
         </p>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

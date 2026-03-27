@@ -25,11 +25,31 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     description: 'Navigate the long-term stage where behavior becomes routine, understand relapse prevention, and learn strategies to sustain change for years, not months.',
     image: "/images/articles/cat08/cover-056.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Habit Maintenance', 'Long-Term Change', 'Relapse Prevention', 'Consistency'],
+    summary: 'The maintenance stage begins six months after initial behavior change and can last years or a lifetime. While the behavior becomes more automatic, it still requires ongoing vigilance and strategic effort to prevent relapse during high-risk periods like major life stress or environmental changes.',
+    keyFacts: [
+      { text: 'Maintenance begins at 6 months post-change and requires different strategies than the action stage', citationIndex: 1 },
+      { text: '40% of people relapse within the first year of reaching maintenance', citationIndex: 1 },
+      { text: 'Complex behaviors can take 2+ years to reach true automaticity even after entering maintenance', citationIndex: 1 },
+      { text: 'High-risk situations include major life stress, overconfidence, loss of social support, boredom, and environmental changes', citationIndex: 5 },
+      { text: 'Long-term maintenance builds self-efficacy, solidifies identity transformation, and creates compounding benefits over time', citationIndex: 7 },
+    ],
+    sparkMoment: 'Maintenance is not about perfection—the 80% rule (80% consistency with 20% flexibility) is more sustainable than rigid adherence and better protects against relapse.',
+    practicalExercise: {
+      title: 'Quarterly Maintenance Check-In',
+      steps: [
+        { title: 'Assess Current State', description: 'Set aside 30 minutes to reflect on your behavior over the past 3 months. Is it still happening consistently? Does it feel automatic or are you forcing it?' },
+        { title: 'Identify Vulnerabilities', description: 'What high-risk situations are on your horizon? Major life changes, stress, or environmental shifts that could threaten your progress?' },
+        { title: 'Refresh Your Why', description: 'Write 3-5 sentences about why this change still matters to you. How has it improved your life in ways you might have started taking for granted?' },
+        { title: 'Update Your Strategy', description: 'What one adjustment could make maintenance easier in the next quarter? A new support system, environmental cue, or challenge within the behavior?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -508,6 +528,17 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           motivation, and navigate challenges without losing the progress you've worked so hard to
           achieve. Remember: seeking support during maintenance is a sign of wisdom, not weakness.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Maintenance begins at 6 months and requires ongoing vigilance, not passive autopilot</li>
+            <li>Common relapse triggers include major stress, overconfidence, loss of support, boredom, and environmental changes</li>
+            <li>Shift from tracking behavior to reinforcing identity: "I am someone who does this"</li>
+            <li>Build redundancy into your system so the habit isn't dependent on a single trigger or context</li>
+            <li>The 80% rule: flexible adherence is more sustainable than rigid perfection</li>
+            <li>Long-term maintenance creates profound psychological rewards beyond the behavior itself</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -519,11 +550,31 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     description: 'Understand the difference between a lapse and relapse, explore why setbacks happen, and learn evidence-based strategies to recover without shame or giving up.',
     image: "/images/articles/cat08/cover-057.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Relapse Prevention', 'Recovery', 'Self-Compassion', 'Resilience'],
+    summary: 'Relapse is a common part of behavior change, not a sign of failure. Understanding the difference between a temporary lapse and a full relapse is critical—how you respond to a setback determines whether you recover quickly or spiral back to old patterns. Self-compassion and evidence-based recovery strategies can help you get back on track.',
+    keyFacts: [
+      { text: 'Most people cycle through the stages of change multiple times before achieving lasting change', citationIndex: 4 },
+      { text: 'A lapse is a temporary slip (one instance or a few days), while relapse is a sustained return to old patterns', citationIndex: 1 },
+      { text: 'The abstinence violation effect causes people to catastrophize small lapses, leading to full relapse', citationIndex: 2 },
+      { text: 'Self-compassion after setbacks predicts faster recovery and lower likelihood of future relapse', citationIndex: 3 },
+      { text: 'Relapse is a process with predictable warning signs—early intervention can prevent complete return to old behaviors', citationIndex: 1 },
+    ],
+    sparkMoment: 'One slip does not erase your progress—your brain has already changed, and recovery is always closer than starting over from scratch.',
+    practicalExercise: {
+      title: 'The 24-Hour Recovery Protocol',
+      steps: [
+        { title: 'Pause the Shame Spiral', description: 'Within 24 hours of a lapse, write one sentence acknowledging what happened without judgment: "I [behavior] on [date]. This is information, not identity."' },
+        { title: 'Analyze the Trigger', description: 'What specific situation, emotion, or thought preceded the lapse? Be a detective, not a judge. What can you learn from this data?' },
+        { title: 'Recommit with Adjustment', description: 'State your commitment to resume the behavior, but identify ONE small adjustment to your system based on what you learned. What environmental or strategic tweak would help?' },
+        { title: 'Reach Out for Support', description: 'Tell one trusted person what happened and your plan to get back on track. Secrecy fuels relapse; accountability supports recovery.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Recovery',
+    },
     citations: [
       {
         id: '1',
@@ -1015,6 +1066,17 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           Remember: asking for help isn't admitting defeat --- it's choosing to succeed with support
           rather than struggle alone.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Relapse is common and expected in behavior change—it's not a sign of personal failure</li>
+            <li>Distinguish between a lapse (temporary slip) and relapse (sustained return to old patterns)</li>
+            <li>The abstinence violation effect turns small lapses into full relapse through catastrophic thinking</li>
+            <li>Self-compassion is one of the strongest predictors of successful recovery after setbacks</li>
+            <li>Create a concrete relapse prevention plan before you need it, with if-then strategies for high-risk situations</li>
+            <li>Seek professional support if you experience repeated relapses, severe behaviors, or overwhelming shame</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1026,11 +1088,31 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     description: "Learn stage-appropriate ways to help someone you care about, avoid common mistakes that create resistance, and understand the limits of your influence.",
     image: "/images/articles/cat08/cover-058.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 6,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Supporting Others', 'Relationships', 'Boundaries', 'Motivation'],
+    summary: 'Supporting someone who is not ready to change requires understanding their stage and respecting their autonomy. Pushing, lecturing, or fixing backfires by triggering resistance. The most effective approach involves asking questions, listening without judgment, and maintaining your own boundaries while allowing them to find their own motivation.',
+    keyFacts: [
+      { text: 'The "righting reflex"—the urge to fix someone—often creates resistance and pushes people further away from change', citationIndex: 2 },
+      { text: 'People in pre-contemplation need curiosity and open-ended questions, not advice or pressure', citationIndex: 1 },
+      { text: 'Social support effectiveness depends on matching the support type to the person\'s current stage of change', citationIndex: 3 },
+      { text: 'Setting boundaries is essential for caregivers to avoid compassion fatigue and codependency', citationIndex: 7 },
+      { text: 'Autonomy-supportive approaches (respecting their choice) are more effective than controlling ones', citationIndex: 8 },
+    ],
+    sparkMoment: 'You cannot want change more than they do—but you can create a safe space where their own motivation can emerge.',
+    practicalExercise: {
+      title: 'The Curiosity Conversation',
+      steps: [
+        { title: 'Ask Permission', description: 'Instead of launching into advice, ask: "Would it be okay if we talked about [topic]?" Respect a "no" or "not now."' },
+        { title: 'Use Open-Ended Questions', description: 'Replace "You should..." with "What do you think about...?" or "How do you feel when...?" Let them do most of the talking.' },
+        { title: 'Reflect Back What You Hear', description: 'Summarize without judgment: "It sounds like you\'re saying..." This shows you\'re listening, not waiting to fix.' },
+        { title: 'End with Their Autonomy', description: 'Close by affirming their choice: "Whatever you decide, I support you." This reduces defensiveness and preserves the relationship.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Support Tools',
+    },
     citations: [
       {
         id: '1',
@@ -1534,6 +1616,17 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           and figure out when to step back. Al-Anon and similar support groups exist specifically
           for people supporting loved ones through change. You don't have to do this alone.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>The "righting reflex" to fix someone creates resistance—curiosity and questions are more effective</li>
+            <li>Match your support to their stage: pre-contemplation needs exploration, not pressure</li>
+            <li>Use open-ended questions, reflective listening, and affirm their autonomy</li>
+            <li>Set clear boundaries to protect yourself from burnout and codependency</li>
+            <li>You cannot want their change more than they do—release the burden of responsibility</li>
+            <li>Seek professional support for yourself if you experience compassion fatigue or the relationship becomes toxic</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1545,11 +1638,31 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     description: 'Navigate the unique challenges when couples pursue change at different paces, learn communication strategies that prevent conflict, and build mutual support.',
     image: "/images/articles/cat08/cover-059.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Relationships', 'Couples', 'Communication', 'Mutual Support'],
+    summary: 'When partners are at different stages of change, mismatched support can create conflict instead of connection. One partner in action may feel unsupported by someone in pre-contemplation, while the less-ready partner may feel pressured or judged. Understanding each other\'s stage and adapting support accordingly prevents resentment and strengthens the relationship.',
+    keyFacts: [
+      { text: 'Partner support significantly influences behavior change success, but only when it matches the recipient\'s stage', citationIndex: 1 },
+      { text: 'Stage-mismatched support (e.g., giving action-stage advice to someone in contemplation) backfires and creates relationship tension', citationIndex: 3 },
+      { text: 'Autonomy-supportive behaviors in relationships predict both behavior change success and relationship satisfaction', citationIndex: 5 },
+      { text: 'Collaborative change (partners working together) is more sustainable than parallel change (each doing their own thing)', citationIndex: 8 },
+      { text: 'Communication patterns matter: criticism and demands erode support, while curiosity and validation strengthen it', citationIndex: 4 },
+    ],
+    sparkMoment: 'You cannot drag your partner across the stage gap—but you can meet them where they are and walk alongside them at their pace.',
+    practicalExercise: {
+      title: 'The Stage-Awareness Check-In',
+      steps: [
+        { title: 'Name Your Stages', description: 'Each partner identifies their current stage for the specific behavior. Be honest: pre-contemplation, contemplation, preparation, action, or maintenance?' },
+        { title: 'Share Your Needs', description: 'Based on your stage, what support would actually help? What feels like pressure or judgment? Use "I" statements to express needs without blame.' },
+        { title: 'Identify the Gap', description: 'Where is the stage mismatch creating friction? Is one partner pushing for action while the other is still contemplating? Name the specific tension points.' },
+        { title: 'Adjust Expectations', description: 'Agree on one concrete way each partner can adjust their approach. The ready partner pulls back; the less-ready partner acknowledges their partner\'s effort.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Relationship Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -2047,6 +2160,17 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           while supporting the relationship. Remember: seeking help isn't a sign your relationship
           is failing --- it's a sign you're both committed to making it work.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Stage-mismatched support creates conflict—what helps in action stage may backfire in contemplation</li>
+            <li>Identify each partner's current stage for the specific behavior to understand the support gap</li>
+            <li>Autonomy-supportive behaviors (respecting choice) strengthen both behavior change and relationship satisfaction</li>
+            <li>Collaborative change is more sustainable than parallel change—find shared goals when possible</li>
+            <li>Avoid criticism and demands; use curiosity, validation, and "I" statements instead</li>
+            <li>Seek couples therapy if behavior change conflicts threaten the relationship</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -2058,11 +2182,31 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
     description: "Explore how behavior change evolves across the lifespan, understand age-specific challenges and advantages, and find hope in the neuroplasticity that persists throughout life.",
     image: "/images/articles/cat08/cover-060.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Aging', 'Neuroplasticity', 'Lifespan Development', 'Hope'],
+    summary: 'The brain retains neuroplasticity throughout the lifespan, meaning meaningful behavior change is possible at any age. While younger adults may have metabolic advantages and older adults may face slower habit formation, each life stage brings unique strengths—perspective, wisdom, and motivation shift with age in ways that can actually facilitate change.',
+    keyFacts: [
+      { text: 'Neuroplasticity persists throughout life—the adult brain continues forming new neural connections well into old age', citationIndex: 1 },
+      { text: 'Older adults (65+) show successful behavior change in studies, though habit formation may take longer than in younger populations', citationIndex: 2 },
+      { text: 'Midlife (40-60) is a pivotal period where accumulated wisdom combines with sufficient energy to make lasting changes', citationIndex: 3 },
+      { text: 'Executive function declines slightly with age, but increased perspective and reduced impulsivity can offset this in behavior change', citationIndex: 4 },
+      { text: 'Learning new skills in late life builds cognitive reserve and protects against age-related decline', citationIndex: 8 },
+    ],
+    sparkMoment: 'Age gives you something youth cannot: the lived experience to know what truly matters and the urgency to stop waiting for "someday."',
+    practicalExercise: {
+      title: 'The "Why Now?" Reflection',
+      steps: [
+        { title: 'Name Your Season', description: 'What life stage are you in right now? Emerging adulthood, established adulthood, midlife, or older adulthood? What does this season give you that others don\'t?' },
+        { title: 'Identify Age-Related Strengths', description: 'What advantages does your current age bring to behavior change? More resources? More clarity? Less concern about others\' opinions? Write 2-3 specific strengths.' },
+        { title: 'Address Age-Related Challenges', description: 'What age-related obstacles do you face? Less energy? Ingrained patterns? Competing responsibilities? Name them without judgment—just data.' },
+        { title: 'Leverage Your Stage', description: 'Choose ONE behavior change that aligns with your current life stage\'s unique strengths. What change feels more possible now than it would have at another age?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Reflect on Your Journey',
+    },
     citations: [
       {
         id: '1',
@@ -2545,6 +2689,17 @@ export const stagesOfChangeReadinessArticlesB: Article[] = [
           It's never too late. Not because change is easy at any age, but because the capacity for
           transformation is woven into the fabric of being human --- and that capacity doesn't expire.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Neuroplasticity persists throughout life—the brain can form new connections at any age</li>
+            <li>Each life stage offers unique advantages: youth has energy, midlife has wisdom and resources, older adulthood has perspective and clarity</li>
+            <li>Habit formation may take longer in older adults, but success rates remain high with appropriate support</li>
+            <li>Internalized ageism ("I'm too old") is a bigger barrier than biology—challenge these beliefs actively</li>
+            <li>Learning new skills in late life builds cognitive reserve and protects against decline</li>
+            <li>The stages of change work the same at every age—change remains possible regardless of how long you've been stuck</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

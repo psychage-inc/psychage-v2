@@ -12,6 +12,8 @@ import {
   QuoteBlock,
   ProgressSteps,
   BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 export const understandingTraumaArticlesA: Article[] = [
@@ -23,11 +25,31 @@ export const understandingTraumaArticlesA: Article[] = [
       "Trauma isn't just a buzzword. Learn what psychological trauma really means, how it affects the mind and body, and why understanding it matters for healing.",
     image: '/images/articles/cat11/cover-001.svg',
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma Basics', 'Mental Health', 'Psychology', 'Recovery'],
+    summary: `Psychological trauma is more than just a difficult experience—it's a response that overwhelms your coping abilities and leaves lasting effects on your mental and physical health. Understanding what trauma actually means, how it differs from stress, and why your reactions are normal responses to abnormal events is the crucial first step toward healing.`,
+    keyFacts: [
+      { text: '60% of men and 50% of women experience at least one traumatic event in their lifetime', citationIndex: 8 },
+      { text: 'Trauma is defined by your response to an event, not the event itself', citationIndex: 3 },
+      { text: 'Trauma affects the nervous system, leaving lasting impacts on body, mind, and behavior', citationIndex: 6 },
+      { text: 'There are four main types of trauma: acute, chronic, complex, and vicarious', citationIndex: 5 },
+      { text: 'Evidence-based treatments like CPT, PE, and EMDR have strong research support for trauma recovery', citationIndex: 7 },
+    ],
+    sparkMoment: `Trauma is not about what happened to you—it's about what happens inside you when your capacity to cope is overwhelmed.`,
+    practicalExercise: {
+      title: 'Grounding Exercise for Trauma Responses',
+      steps: [
+        { title: 'Notice Your Body', description: 'Place your feet flat on the floor. Notice the sensation of your feet touching the ground. Feel the support beneath you.' },
+        { title: 'Use Your Senses', description: 'Name 5 things you can see, 4 things you can touch, 3 things you can hear, 2 things you can smell, and 1 thing you can taste.' },
+        { title: 'Breathe Slowly', description: 'Take a slow breath in for 4 counts, hold for 4, exhale for 6. Repeat 3 times. Longer exhales activate your calming response.' },
+        { title: 'Orient to Safety', description: 'Look around the room. Remind yourself: "I am here now. I am safe in this moment. The danger has passed."' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -110,6 +132,15 @@ export const understandingTraumaArticlesA: Article[] = [
             <Citation id="2" index={2} source="Nature Reviews Disease Primers" year="2015" tier={1} />.
           </p>
         </div>
+
+        <StatCard
+          stats={[
+            { value: 60, suffix: '%', label: 'Of men experience at least one traumatic event' },
+            { value: 50, suffix: '%', label: 'Of women experience at least one traumatic event' },
+            { value: 6, suffix: '%', label: 'Of U.S. adults will develop PTSD in their lifetime' },
+          ]}
+          source="National Institute of Mental Health, 2023"
+        />
 
         <h2
           id="defining-trauma"
@@ -323,21 +354,63 @@ export const understandingTraumaArticlesA: Article[] = [
         </ArticleCallout>
 
         <h2
+          id="the-bodys-response"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          The Body's Response to Trauma
+        </h2>
+        <p className="mb-6">
+          When you experience trauma, your nervous system gets stuck in a state of high alert. The amygdala (your brain's alarm system) becomes hyperactive, while the prefrontal cortex (responsible for rational thinking) goes offline{', '}
+          <Citation id="6" index={6} source="Journal of Clinical Psychiatry" year="2019" tier={1} />. This is why you might feel like you're reacting without thinking, or why it's hard to "just get over it."
+        </p>
+        <p className="mb-6">
+          Your body stores trauma in multiple ways. The sympathetic nervous system may remain activated, keeping you in a constant state of fight-or-flight. The parasympathetic nervous system might trigger freeze responses, leaving you feeling numb or disconnected. These aren't conscious choices—they're automatic survival mechanisms that served a purpose during the traumatic event but continue long after you're safe.
+        </p>
+        <p className="mb-6">
+          Physical manifestations of stored trauma can include chronic muscle tension (particularly in the neck, shoulders, and jaw), digestive problems, sleep disturbances, and a heightened startle response. Some people experience what trauma expert Bessel van der Kolk calls "body memories"—physical sensations that recreate aspects of the traumatic experience without conscious recall{', '}
+          <Citation id="1" index={1} source="Viking Press" year="2014" tier={5} />.
+        </p>
+        <p className="mb-6">
+          Understanding this physiological component is crucial because it explains why talk therapy alone isn't always enough. Effective trauma treatment often includes body-based approaches like yoga, EMDR (Eye Movement Desensitization and Reprocessing), somatic experiencing, or neurofeedback that help your nervous system reset and release stored trauma responses.
+        </p>
+
+        <h2
+          id="trauma-and-relationships"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          How Trauma Affects Relationships
+        </h2>
+        <p className="mb-6">
+          Trauma fundamentally changes how we relate to others. If your trauma involved betrayal, abuse, or neglect by people who were supposed to protect you, trust becomes exponentially harder. Your nervous system has learned that closeness equals danger, even when your rational mind knows a person is safe.
+        </p>
+        <p className="mb-6">
+          This can show up as pushing people away when they get close, testing relationships to see if someone will stay, difficulty with vulnerability, or swinging between intense connection and complete withdrawal. These patterns aren't character flaws—they're protective adaptations that once kept you safe but now create the very abandonment or conflict you fear.
+        </p>
+        <p className="mb-6">
+          Trauma can also affect attachment style, leading to anxious, avoidant, or disorganized patterns of relating. Children who experience trauma often develop these patterns early, and they tend to persist into adult relationships unless addressed through therapy. The good news is that attachment styles can shift with awareness and consistent work, particularly through trauma-informed therapy or secure relationships that provide corrective emotional experiences.
+        </p>
+
+        <h2
           id="why-understanding-matters"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
           Why Understanding Trauma Matters
         </h2>
         <p className="mb-6">
-          Recognizing trauma for what it is---rather than dismissing it as weakness or overreaction---is the first step
-          toward healing. When you understand that your reactions make sense given what you've been through, you can
-          begin to address them with compassion rather than judgment.
+          Recognizing trauma for what it is—rather than dismissing it as weakness or overreaction—is the first step toward healing. When you understand that your reactions make sense given what you've been through, you can begin to address them with compassion rather than judgment.
         </p>
         <p className="mb-6">
-          Trauma is common. According to research, about 60% of men and 50% of women experience at least one traumatic
-          event in their lifetime{', '}
-          <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />. You're not
-          alone, and you're not broken. Your responses are your nervous system doing its job---sometimes too well.
+          Trauma is common. According to research, about 60% of men and 50% of women experience at least one traumatic event in their lifetime{', '}
+          <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />. You're not alone, and you're not broken. Your responses are your nervous system doing its job—sometimes too well.
+        </p>
+        <p className="mb-6">
+          Understanding the nature of trauma helps you distinguish between situations that require vigilance and those that are safe. It allows you to recognize when you're being triggered by reminders of past trauma rather than responding to present danger. This awareness creates space for choice—you can learn to notice your body's alarm signals, acknowledge them, and respond in ways that serve you now rather than being controlled by past experiences.
+        </p>
+        <p className="mb-6">
+          Knowledge about trauma also reduces shame. Many people blame themselves for their traumatic experiences or feel defective because they "can't just move on." Understanding that trauma creates measurable changes in brain structure and nervous system function—changes that require specific interventions to heal—transforms self-blame into self-compassion. Your struggle isn't a personal failing; it's a predictable consequence of overwhelming experiences that your system hasn't yet fully processed.
+        </p>
+        <p className="mb-6">
+          Finally, understanding trauma empowers you to seek appropriate help. Not all therapy is trauma-informed, and not all therapists are trained in evidence-based trauma treatments. Knowing what trauma is and how it works helps you advocate for yourself, ask informed questions about treatment approaches, and recognize when a therapeutic relationship or method isn't addressing your core needs.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -382,11 +455,31 @@ export const understandingTraumaArticlesA: Article[] = [
     description: 'Not all trauma is the same. Learn about the spectrum from "Big T" to "little t" trauma, why both matter, and how cumulative stress can have serious impacts.',
     image: "/images/articles/cat11/cover-002.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma Types', 'Mental Health', 'Psychology', 'Healing'],
+    summary: `Trauma isn't just catastrophic events—it exists on a spectrum from "Big T" life-threatening experiences to "little t" distressing events. Both types matter, cumulative small traumas can equal the impact of major ones, and understanding this spectrum validates all experiences that overwhelm your ability to cope.`,
+    keyFacts: [
+      { text: '89% of adults report experiencing at least one "little t" trauma in their lifetime', citationIndex: 1 },
+      { text: 'Cumulative stress exposure has measurable effects on physical health, including accelerated cellular aging', citationIndex: 2 },
+      { text: 'Multiple little t traumas can create the same impact as a single Big T trauma', citationIndex: 3 },
+      { text: 'Repeated microaggressions can lead to traumatic stress responses similar to major traumatic events', citationIndex: 5 },
+      { text: 'Your nervous system response to an event matters more than its objective severity', citationIndex: 1 },
+    ],
+    sparkMoment: `The size of the event doesn't determine the size of the wound—cumulative paper cuts can bleed just as much as a single deep slash.`,
+    practicalExercise: {
+      title: 'Acknowledging Your Trauma Spectrum',
+      steps: [
+        { title: 'List Your Experiences', description: 'Write down difficult experiences, both "big" and "small." Include events you might have dismissed as "not bad enough to matter."' },
+        { title: 'Notice Patterns', description: 'Look for repeated themes or types of experiences. Did certain kinds of events happen multiple times? Did they cluster during particular periods?' },
+        { title: 'Acknowledge Impact', description: 'For each experience, write one sentence about how it affected you—without judging whether it "should" have affected you that way.' },
+        { title: 'Practice Self-Validation', description: `Say aloud: "My experience was real. My pain was real. I don't need to compare my wounds to anyone else's to deserve compassion and healing."` },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Healing Journey',
+    },
     citations: [
       {
         id: '1',
@@ -540,6 +633,27 @@ export const understandingTraumaArticlesA: Article[] = [
           <li>Public humiliation or embarrassment</li>
         </ul>
 
+        <ComparisonTable
+          title="Big T vs. Little t Trauma: Key Differences"
+          columns={['Aspect', 'Big T Trauma', 'Little t Trauma']}
+          items={[
+            { feature: 'Threat level', values: ['Life-threatening or serious injury', 'Distressing but not life-threatening'] },
+            { feature: 'PTSD diagnosis', values: ['Can qualify for PTSD diagnosis', 'May not meet PTSD criteria alone'] },
+            { feature: 'Recognition', values: ['Widely recognized as traumatic', 'Often dismissed or minimized'] },
+            { feature: 'Treatment urgency', values: ['Often immediate crisis response', 'May go unaddressed for years'] },
+            { feature: 'Cumulative effect', values: ['Single event can be sufficient', 'Multiple events can equal Big T impact'] },
+            { feature: 'Examples', values: ['Assault, natural disaster, combat', 'Divorce, job loss, chronic stress'] },
+          ]}
+          highlightColumn={0}
+        />
+
+        <QuoteBlock
+          quote="We often think of trauma as a single, catastrophic event. But for many people, trauma is the accumulation of a thousand small wounds—each one alone bearable, but together creating a burden that becomes impossible to carry."
+          attribution="Dr. Gabor Maté"
+          role="Physician and Trauma Expert"
+          variant="large"
+        />
+
         <h2
           id="cumulative-impact"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -667,17 +781,36 @@ export const understandingTraumaArticlesA: Article[] = [
         />
 
         <h2
+          id="recognizing-your-spectrum"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Recognizing Your Own Trauma Spectrum
+        </h2>
+        <p className="mb-6">
+          One of the challenges of little t trauma is that it often goes unrecognized, even by the person experiencing it. You might dismiss your struggles, thinking "other people have it worse" or "I should be able to handle this." These thoughts themselves can become another source of distress—secondary trauma from invalidating your own experience.
+        </p>
+        <p className="mb-6">
+          Signs that you may be carrying unprocessed little t trauma include: persistent anxiety or irritability, difficulty trusting others, hypervigilance in situations that remind you of past difficulties, avoidance of certain topics or situations, negative beliefs about yourself or the world, and feeling emotionally numb or disconnected. These symptoms don't require a dramatic origin story to be real and worthy of attention.
+        </p>
+        <p className="mb-6">
+          Consider also the context in which events occurred. A "small" event that happened when you were already dealing with multiple stressors, had no support system, or were particularly vulnerable (such as childhood or adolescence) can have a disproportionate impact. The same event experienced at a different time in your life might have been manageable—context matters as much as content.
+        </p>
+
+        <h2
           id="both-deserve-care"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
           Both Deserve Care and Attention
         </h2>
         <p className="mb-6">
-          Whether you've experienced Big T trauma, little t trauma, or a combination of both, your distress is valid
-          and deserves care{', '}
-          <Citation id="8" index={8} source="SAMHSA" year="2022" tier={2} />. The distinction isn't about minimizing
-          certain experiences---it's about understanding the full range of events that can overwhelm our capacity to
-          cope.
+          Whether you've experienced Big T trauma, little t trauma, or a combination of both, your distress is valid and deserves care{', '}
+          <Citation id="8" index={8} source="SAMHSA" year="2022" tier={2} />. The distinction isn't about minimizing certain experiences—it's about understanding the full range of events that can overwhelm our capacity to cope.
+        </p>
+        <p className="mb-6">
+          Treatment approaches can be adapted to the type and severity of trauma. While intensive trauma-focused therapies like EMDR or Prolonged Exposure may be most appropriate for Big T trauma, other approaches like cognitive-behavioral therapy, mindfulness-based stress reduction, or interpersonal therapy can be highly effective for little t trauma. The key is finding a therapist who validates your experience and doesn't minimize your symptoms just because they don't fit the traditional PTSD mold.
+        </p>
+        <p className="mb-6">
+          Remember that healing isn't a competition, and your pain doesn't need to be "severe enough" to deserve attention. If your daily functioning, relationships, or quality of life are affected, that's reason enough to seek support. Early intervention for little t trauma can prevent it from accumulating into more serious problems—you don't have to wait for a crisis to reach out for help.
         </p>
 
         <ArticleCallout variant="key-takeaway">
@@ -703,11 +836,31 @@ export const understandingTraumaArticlesA: Article[] = [
     description: 'Discover what happens in your brain during and after trauma. Learn about the amygdala, hippocampus, and prefrontal cortex in simple terms and why healing is possible.',
     image: "/images/articles/cat11/cover-003.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Neuroscience', 'Brain', 'PTSD', 'Healing', 'Research'],
+    summary: 'Trauma creates measurable changes in three key brain regions: the amygdala becomes hyperactive, the hippocampus shrinks and fails to organize memories properly, and the prefrontal cortex underperforms. These neurobiological changes explain common trauma symptoms—and thanks to neuroplasticity, effective treatment can reverse them.',
+    keyFacts: [
+      { text: 'The amygdala becomes hyperactive after trauma, triggering constant threat detection like an oversensitive smoke detector', citationIndex: 2 },
+      { text: 'Hippocampal volume can actually shrink in people with PTSD, disrupting memory organization', citationIndex: 3 },
+      { text: 'The prefrontal cortex becomes underactive, making it harder to regulate emotions and think clearly under stress', citationIndex: 4 },
+      { text: 'During trauma, stress hormones shift blood flow away from rational thinking centers to survival centers', citationIndex: 8 },
+      { text: 'Neuroplasticity means the brain can recover: effective trauma therapy can increase hippocampal volume and rebalance brain function', citationIndex: 5 },
+    ],
+    sparkMoment: `Trauma symptoms aren't psychological weakness—they're the brain doing exactly what traumatized brains do, and with the right help, brains can rewire themselves.`,
+    practicalExercise: {
+      title: 'Engage Your Prefrontal Cortex',
+      steps: [
+        { title: 'Name the Pattern', description: 'When you notice yourself getting triggered, say out loud: "My amygdala is activated. This is a memory, not a current threat."' },
+        { title: 'Ground in Facts', description: 'List 5 factual observations about your current environment: "The walls are white. I hear traffic. It\'s 3pm. I\'m in my living room. I am safe now."' },
+        { title: 'Activate Rational Thinking', description: 'Count backward from 100 by 7s, or list U.S. states alphabetically. These tasks require prefrontal cortex activity, helping rebalance your brain.' },
+        { title: 'Check In', description: 'Ask yourself: "On a scale of 1-10, how activated was I? How activated am I now?" Notice any shift as your PFC comes back online.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Navigate Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1062,6 +1215,28 @@ export const understandingTraumaArticlesA: Article[] = [
         </p>
 
         <h2
+          id="common-myths"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Common Myths About the Traumatized Brain
+        </h2>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="You should be able to 'just think positive' or 'get over it' through willpower."
+            fact="Trauma primarily affects subcortical brain regions below conscious thought. Willpower alone can't override an overactive amygdala or repair a shrinking hippocampus—targeted interventions are needed."
+          />
+          <MythVsFactBlock
+            myth="If the brain is physically changed by trauma, the damage must be permanent."
+            fact="Neuroplasticity means the brain continues to form new connections throughout life. Research shows effective trauma therapy can actually reverse structural brain changes, increasing hippocampal volume and normalizing amygdala activity."
+          />
+          <MythVsFactBlock
+            myth="Trauma symptoms mean your brain is 'broken' or defective."
+            fact="Your brain is functioning exactly as evolved—the amygdala's hypervigilance and the hippocampus's memory disruption are protective adaptations. The problem isn't that your brain is broken; it's that it's still responding to a threat that's no longer present."
+          />
+        </div>
+
+        <h2
           id="practical-implications"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -1106,11 +1281,31 @@ export const understandingTraumaArticlesA: Article[] = [
     description: 'Learn about the landmark ACE Study that revealed how childhood trauma affects health decades later. Discover the 10 types of ACEs and why early experiences matter.',
     image: "/images/articles/cat11/cover-004.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['ACE Study', 'Childhood Trauma', 'Research', 'Health Outcomes'],
+    summary: 'The landmark ACE Study revealed that 64% of adults have at least one adverse childhood experience, and these early adversities create a dose-response relationship with adult health—each additional ACE increases the risk for mental illness, chronic disease, substance abuse, and even early death, sometimes by decades.',
+    keyFacts: [
+      { text: '64% of adults had at least one ACE in the original study of 17,000 participants', citationIndex: 2 },
+      { text: 'People with 4+ ACEs were 7 times more likely to identify as alcoholic and 4 times more likely to have depression', citationIndex: 3 },
+      { text: 'Having 6 or more ACEs shortened lifespan by nearly 20 years on average', citationIndex: 6 },
+      { text: 'ACEs create a dose-response relationship: each additional adversity increases health risk', citationIndex: 4 },
+      { text: 'Despite high ACE scores, many people lead healthy lives—protective factors like stable relationships build resilience', citationIndex: 8 },
+    ],
+    sparkMoment: `Your childhood doesn't have to be your destiny—ACEs measure risk, not fate, and healing is possible with the right support.`,
+    practicalExercise: {
+      title: 'Understanding Your ACE Score',
+      steps: [
+        { title: 'Learn Your Score', description: 'Take the ACE questionnaire online (CDC provides a validated version). Count how many of the 10 categories apply to your childhood before age 18.' },
+        { title: 'Contextualize It', description: 'Remember: the score measures exposure to adversity, not your worth or potential. A high score means you faced difficult circumstances, not that something is wrong with you.' },
+        { title: 'Identify Protective Factors', description: 'List adults who supported you, strengths you developed, communities that held you, or practices that helped you cope. These buffered the impact of ACEs.' },
+        { title: 'Consider Support', description: 'If your ACE score is 4+, consider trauma-informed therapy. ACEs are treatable—early intervention can prevent long-term health consequences.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Healing',
+    },
     citations: [
       {
         id: '1',
@@ -1341,6 +1536,15 @@ export const understandingTraumaArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <HighlightBox variant="emphasis">
+          <p className="mb-3">
+            <strong>What the dose-response means:</strong> Having one ACE increases your risk slightly. Two ACEs increases it more. Four or more ACEs dramatically increases risk across nearly every health measure studied—mental health, physical health, substance use, and lifespan.
+          </p>
+          <p>
+            This isn't about blame—it's about understanding that childhood experiences literally get "under the skin," affecting biological systems and stress responses for decades.
+          </p>
+        </HighlightBox>
+
         <h2
           id="health-impacts"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -1548,8 +1752,13 @@ export const understandingTraumaArticlesA: Article[] = [
           </li>
         </ul>
         <p className="mb-6">
-          Understanding ACEs helps us see that many health problems we treat in adults have their roots in childhood
-          experiences---and that prevention should start early.
+          Understanding ACEs helps us see that many health problems we treat in adults have their roots in childhood experiences—and that prevention should start early. Rather than asking "What's wrong with you?" the ACE framework encourages us to ask "What happened to you?"
+        </p>
+        <p className="mb-6">
+          This shift in perspective has profound implications for how we design healthcare systems, schools, social services, and communities. It suggests that investing in children—through quality early education, parental support programs, mental health services, and safe neighborhoods—isn't just compassionate policy. It's evidence-based prevention of chronic disease, mental illness, and premature death.
+        </p>
+        <p className="mb-6">
+          For individuals, knowing your ACE score can be both validating and empowering. It validates that your struggles aren't personal failures—they're predictable consequences of overwhelming childhood experiences. And it empowers you to seek trauma-informed support that addresses root causes rather than just managing symptoms.
         </p>
       </>
     ),
@@ -1562,11 +1771,31 @@ export const understandingTraumaArticlesA: Article[] = [
     description: 'Not everyone responds to trauma the same way. Learn about the factors that influence trauma responses and why resilience varies from person to person.',
     image: "/images/articles/cat11/cover-005.svg",
     category: CATEGORY_TRAUMA_HEALING,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Resilience', 'Individual Differences', 'Risk Factors', 'Protective Factors'],
+    summary: 'Two people can experience the same traumatic event and respond completely differently—not because one is "stronger," but because trauma response depends on a complex web of factors including genetics, trauma history, age, social support, interpretation of the event, and neurobiological resilience that can be built over time.',
+    keyFacts: [
+      { text: 'Only 10-20% of people who experience a traumatic event go on to develop PTSD—80% show resilience', citationIndex: 2 },
+      { text: '30-40% of PTSD risk variance is heritable, influenced by genes affecting stress hormone regulation', citationIndex: 3 },
+      { text: 'Strong social support can reduce PTSD risk by 50% after traumatic events', citationIndex: 4 },
+      { text: 'Previous childhood trauma is one of the strongest predictors of PTSD after adult trauma experiences', citationIndex: 5 },
+      { text: 'Interpersonal trauma involving betrayal by a trusted person tends to have more profound effects than accidents or natural disasters', citationIndex: 1 },
+    ],
+    sparkMoment: `Your trauma response isn't a measure of your strength—it's the outcome of a thousand invisible factors, many beyond your control but some you can influence.`,
+    practicalExercise: {
+      title: 'Map Your Resilience Factors',
+      steps: [
+        { title: 'Identify Risk Factors', description: 'List factors that may have increased your vulnerability: trauma history, timing, lack of support during the event, baseline stress. This isn\'t about blame—it\'s about understanding.' },
+        { title: 'Recognize Protective Factors', description: 'List existing strengths: supportive relationships, coping skills that work, positive beliefs, physical health practices, cultural/spiritual resources you can draw on.' },
+        { title: 'Identify Growth Areas', description: 'Which resilience factors could you strengthen? Social connection? Emotion regulation skills? Physical health? Self-efficacy? Pick one to focus on.' },
+        { title: 'Take One Action', description: 'Based on your growth area, take one small step this week: reach out to someone, try a grounding technique, move your body, practice self-compassion.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Understand Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -1804,10 +2033,15 @@ export const understandingTraumaArticlesA: Article[] = [
         />
 
         <p className="mb-6 mt-6">
-          Interpersonal trauma---especially involving betrayal by someone trusted---tends to have particularly profound
-          effects. This is why childhood abuse by a caregiver or sexual assault by an intimate partner can be so
-          damaging.
+          Interpersonal trauma—especially involving betrayal by someone trusted—tends to have particularly profound effects. This is why childhood abuse by a caregiver or sexual assault by an intimate partner can be so damaging. It's not just the event itself but the violation of trust and the shattering of assumptions about safety with people you should have been able to depend on.
         </p>
+
+        <QuoteBlock
+          quote="The question is not `What's wrong with you?` The question is 'What happened to you?' And more importantly: 'What supports do you have, what meaning can you make, and what capacity for healing can we build together?'"
+          attribution="Dr. Bruce Perry"
+          role="Psychiatrist and Trauma Expert"
+          variant="large"
+        />
 
         <h2
           id="psychological-factors"
@@ -1962,17 +2196,20 @@ export const understandingTraumaArticlesA: Article[] = [
         </p>
         <ol className="list-decimal pl-6 mb-6 space-y-2">
           <li>
-            <strong>It's not your fault</strong>. Your response makes sense given your unique combination of risk and
-            protective factors. You're not weak, broken, or defective.
+            <strong>It's not your fault</strong>. Your response makes sense given your unique combination of risk and protective factors. You're not weak, broken, or defective. Your nervous system is doing exactly what nervous systems do when they've been overwhelmed—and that's information, not indictment.
           </li>
           <li>
-            <strong>Many factors are modifiable</strong>. While you can't change your genetics or past experiences, you
-            can build social support, develop coping skills, work on cognitive patterns, and access effective treatment.
+            <strong>Many factors are modifiable</strong>. While you can't change your genetics or past experiences, you can build social support, develop coping skills, work on cognitive patterns, and access effective treatment. Even factors that seem fixed—like neurobiological stress reactivity—can shift with consistent intervention.
           </li>
         </ol>
         <p className="mb-6">
-          Recovery is possible for most people, especially with evidence-based treatment and support. Your brain's
-          plasticity means that even if trauma has changed you, healing can change you again.
+          Recovery is possible for most people, especially with evidence-based treatment and support. Your brain's plasticity means that even if trauma has changed you, healing can change you again. The same mechanisms that allowed trauma to shape your nervous system can be harnessed for healing—new neural pathways, new meanings, new responses.
+        </p>
+        <p className="mb-6">
+          If someone else's recovery looks different from yours, that doesn't mean you're doing it wrong. They have a different constellation of factors—different biology, different history, different supports, different meanings they're making. Your job isn't to heal like someone else. It's to find what works for your unique system, with your particular vulnerabilities and strengths.
+        </p>
+        <p className="mb-6">
+          And if you're supporting someone else through trauma, understanding these individual differences helps you meet them where they are. What helped you might not help them. What they need might look different from what you'd expect. The most healing thing you can offer isn't advice about what worked for you—it's presence, validation, patience, and belief in their capacity to heal in their own way and time.
         </p>
       </>
     ),

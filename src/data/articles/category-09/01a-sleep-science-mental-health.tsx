@@ -27,6 +27,26 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep Science', 'Mental Health', 'Neuroscience', 'Research'],
+    summary: 'Sleep is not passive rest—it\'s active brain maintenance essential for mental health. Research shows sleep regulates emotions, consolidates memories, clears metabolic waste, and recalibrates neural circuits. The bidirectional relationship means poor sleep increases mental illness risk, while mental health conditions disrupt sleep.',
+    keyFacts: [
+      { text: '35% of U.S. adults get less than 7 hours of sleep per night', citationIndex: 7 },
+      { text: 'Chronic sleep loss increases depression risk by 3 times', citationIndex: 4 },
+      { text: '75% of people with depression report sleep problems', citationIndex: 8 },
+      { text: 'After one night of sleep deprivation, amygdala reactivity increases 60%', citationIndex: 10 },
+      { text: 'REM sleep processes emotional memories without stress hormones, providing overnight therapy', citationIndex: 5 },
+    ],
+    sparkMoment: 'If mental health were a house, sleep would be the foundation—not the furniture you add later, but the structural base everything else depends on.',
+    practicalExercise: {
+      title: 'Track Your Sleep-Mood Connection',
+      steps: [
+        { title: 'Baseline Week', description: 'For 7 days, note your bedtime, wake time, and rate sleep quality (1-10).' },
+        { title: 'Morning Mood Check', description: 'Each morning, rate your mood, energy, and focus (1-10).' },
+        { title: 'Look for Patterns', description: 'Compare your sleep quality scores to next-day mood scores. Notice correlations?' },
+        { title: 'Identify Sleep Thieves', description: 'Note what interfered with good sleep (stress, screen time, caffeine, late meals) and experiment with removing one.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Try Sleep Architect',
+    },
     citations: [
       {
         id: '1',
@@ -373,6 +393,26 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep Deprivation', 'Mood', 'Cognition', 'Relationships'],
+    summary: 'Sleep deprivation systematically impairs emotional regulation, cognitive performance, and social connection. Even one night of poor sleep increases irritability and anxiety, while chronic sleep loss creates persistent mood dysregulation and damages relationships through reduced empathy and increased conflict.',
+    keyFacts: [
+      { text: 'Sleep-deprived brains show heightened amygdala reactivity and reduced prefrontal cortex regulation', citationIndex: 1 },
+      { text: 'Working memory declines 38% and attention span drops 45% after sleep deprivation', citationIndex: 3 },
+      { text: 'Sleep loss impairs recognition of facial expressions, making you misread social cues', citationIndex: 5 },
+      { text: 'Couples who both sleep poorly report more conflict and less intimacy', citationIndex: 7 },
+      { text: 'Chronic 6-hour sleep shows cognitive impairment equal to two nights of total sleep loss', citationIndex: 6 },
+    ],
+    sparkMoment: 'After a night of poor sleep, everything is harder—not because you\'re weak, but because your brain\'s emotional and cognitive systems are genuinely impaired.',
+    practicalExercise: {
+      title: 'Sleep Deprivation Self-Check',
+      steps: [
+        { title: 'Morning Assessment', description: 'Rate yourself (1-10) on: mood stability, focus, patience with others, physical energy.' },
+        { title: 'Note Your Sleep', description: 'How many hours did you actually sleep? (Not time in bed—actual sleep.)' },
+        { title: 'Track for a Week', description: 'Compare your ratings to sleep duration. Do low-sleep nights predict poor next-day scores?' },
+        { title: 'Experiment', description: 'Try one week of 7.5+ hours sleep and see if your daily ratings improve. Treat it as data collection.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track with Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -707,6 +747,26 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep Stages', 'REM Sleep', 'Sleep Cycle', 'Neuroscience'],
+    summary: 'Sleep is not one uniform state—it\'s a dynamic cycle through four distinct stages (N1, N2, N3, and REM), each serving unique biological functions. Deep sleep handles physical restoration and memory consolidation, while REM sleep processes emotions and supports creativity. Understanding these stages explains why sleep quality matters as much as quantity.',
+    keyFacts: [
+      { text: 'A full sleep cycle lasts about 90 minutes, repeating 4-6 times per night', citationIndex: 1 },
+      { text: 'Deep sleep (N3) makes up most of the first half of the night, handling physical restoration', citationIndex: 3 },
+      { text: 'REM sleep increases in the second half of the night, processing emotions without stress hormones', citationIndex: 2 },
+      { text: 'The glymphatic system clears brain waste 10x more actively during deep sleep', citationIndex: 6 },
+      { text: 'Cutting even one hour of sleep disproportionately reduces REM, affecting emotional regulation', citationIndex: 8 },
+    ],
+    sparkMoment: 'REM sleep is like overnight therapy—your brain replays emotional events in a neurochemical environment devoid of stress hormones, processing emotions without re-traumatizing you.',
+    practicalExercise: {
+      title: 'Optimize Your Sleep Cycles',
+      steps: [
+        { title: 'Calculate Cycle-Aligned Bedtime', description: 'Work backward from wake time in 90-minute intervals. For a 7am wake: 11:30pm = 5 cycles (7.5 hrs), 10pm = 6 cycles (9 hrs).' },
+        { title: 'Protect the First 4 Hours', description: 'The first half of the night is deep-sleep dominant. Avoid alcohol and late meals that fragment this critical window.' },
+        { title: 'Don\'t Cut Sleep Short', description: 'The last 2 hours of sleep are REM-rich. Waking "just one hour early" costs you 50%+ of REM sleep.' },
+        { title: 'Track What Disrupts Cycles', description: 'Note nights you wake frequently or feel unrefreshed. Common culprits: alcohol, stress, sleep apnea, room temperature.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Use Sleep Architect',
+    },
     citations: [
       {
         id: '1',
@@ -1100,6 +1160,26 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep Duration', 'Sleep Needs', 'Lifespan', 'Health'],
+    summary: 'Sleep needs vary by age and individual biology, but evidence-based guidelines exist for every life stage. Most adults need 7-9 hours, teenagers need 8-10 hours (yet are the most sleep-deprived), and older adults still need 7-8 hours despite sleep quality changes. True short sleepers are extremely rare—less than 1% of people.',
+    keyFacts: [
+      { text: 'Most adults (18-64) need 7-9 hours for optimal health and cognitive performance', citationIndex: 1 },
+      { text: '35% of U.S. adults regularly get less than 7 hours, increasing chronic disease risk', citationIndex: 7 },
+      { text: 'Teenagers need 8-10 hours due to brain reorganization during puberty', citationIndex: 6 },
+      { text: 'Older adults (65+) still need 7-8 hours, though sleep architecture changes with age', citationIndex: 5 },
+      { text: 'True genetic short sleepers who thrive on <6 hours make up less than 1% of the population', citationIndex: 8 },
+    ],
+    sparkMoment: 'Most people who claim to need only 5-6 hours are chronically sleep-deprived and have adapted to feeling suboptimal, mistaking it for normal.',
+    practicalExercise: {
+      title: 'Find Your Optimal Sleep Duration',
+      steps: [
+        { title: 'Clear Sleep Debt (1-2 Weeks)', description: 'Aim for 8-9 hours per night to pay off accumulated debt. This establishes a clean baseline.' },
+        { title: 'Track Natural Wake Time (1 Week)', description: 'Go to bed at a consistent time, no alarm. Note how many hours you sleep when unrestricted.' },
+        { title: 'Assess Daytime Function', description: 'Do you feel alert? Handle stress well? Good mood? Clear focus? If yes, you\'ve found your duration.' },
+        { title: 'Fine-Tune', description: 'Still tired? Add 15-30 minutes. Waking before alarm feeling great? You may need slightly less.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Track with Sleep Architect',
+    },
     citations: [
       {
         id: '1',
@@ -1405,6 +1485,26 @@ export const sleepScienceMentalHealthArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Mental Health', 'Sleep Disorders', 'Bidirectional', 'Treatment'],
+    summary: 'Sleep and mental health exist in a continuous feedback loop—poor sleep increases the risk of mental illness, while mental health conditions disrupt sleep. This bidirectional relationship operates through neurochemical, hormonal, and behavioral pathways. Breaking the cycle requires addressing both sleep and mental health simultaneously, often with therapies like CBT-I.',
+    keyFacts: [
+      { text: 'People with insomnia are 10x more likely to develop depression and 17x more likely to develop anxiety', citationIndex: 2 },
+      { text: '75% of people with depression and 70-90% with PTSD experience significant sleep problems', citationIndex: 1 },
+      { text: 'Treating insomnia with CBT-I significantly reduces depressive symptoms, even without depression treatment', citationIndex: 8 },
+      { text: 'In bipolar disorder, sleep loss can trigger manic episodes, making sleep stability critical', citationIndex: 7 },
+      { text: 'REM sleep processes emotional memories in a low-noradrenaline environment, reducing emotional charge', citationIndex: 1 },
+    ],
+    sparkMoment: 'Insomnia is not just a symptom of depression—it\'s a risk factor that can prevent the onset of depression and improve outcomes when treated directly.',
+    practicalExercise: {
+      title: 'Break the Sleep-Mental Health Cycle',
+      steps: [
+        { title: 'Track the Loop', description: 'For 2 weeks, note: sleep quality (1-10), next-day mood (1-10), and anxiety level (1-10). Look for patterns.' },
+        { title: 'Identify Your Triggers', description: 'What worsens sleep? (Rumination, nightmares, stress?) What worsens mental health? (Poor sleep, isolation, substance use?)' },
+        { title: 'Target One Entry Point', description: 'Choose either sleep (CBT-I techniques, consistent schedule) or mental health (therapy, medication) as your first intervention point.' },
+        { title: 'Monitor Improvements', description: 'Improving one often improves the other. Track whether better sleep reduces anxiety, or therapy reduces insomnia.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track with Mood Journal',
+    },
     citations: [
       {
         id: '1',

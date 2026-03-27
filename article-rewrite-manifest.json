@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 95,
+  "completedSessions": 143,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -4527,7 +4527,7 @@
       "completedAt": "2026-03-27T19:45:12Z"
     },
     "93": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "07b-eldercare-caregiving-aging-parents",
       "file": "src/data/articles/category-06/07b-eldercare-caregiving-aging-parents.tsx",
@@ -4539,7 +4539,7 @@
           "slug": "sibling-conflicts-over-eldercare",
           "title": "Sibling Conflicts Over Eldercare: Why Caring for Parents Divides Families",
           "currentWords": 722,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4547,7 +4547,7 @@
           "slug": "guilt-of-choosing-care-facility",
           "title": "Name and validate the guilt without letting it control decisions",
           "currentWords": 709,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4555,7 +4555,7 @@
           "slug": "financial-stress-of-eldercare",
           "title": "Financial Stress of Eldercare: How Costs Affect Family Mental Health",
           "currentWords": 966,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4563,7 +4563,7 @@
           "slug": "cultural-expectations-around-eldercare",
           "title": "Cultural Expectations Around Eldercare: Filial Piety, Duty, and Personal Limits",
           "currentWords": 850,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4571,13 +4571,13 @@
           "slug": "self-care-for-caregivers",
           "title": "Self-Care for Caregivers: Evidence-Based Strategies for Sustainable Caring",
           "currentWords": 945,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:00Z"
     },
     "94": {
-      "status": "pending",
+      "status": "complete",
       "category": 6,
       "subcategoryFile": "08a-sibling-relationships-family-roles",
       "file": "src/data/articles/category-06/08a-sibling-relationships-family-roles.tsx",
@@ -4589,7 +4589,7 @@
           "slug": "sibling-rivalry",
           "title": "Sibling Rivalry: Why Brothers and Sisters Compete and How It Affects Adult Life",
           "currentWords": 902,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4597,7 +4597,7 @@
           "slug": "impact-of-losing-sibling",
           "title": "The Impact of Losing a Sibling: A Grief That's Often Overlooked",
           "currentWords": 954,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4605,7 +4605,7 @@
           "slug": "estranged-siblings",
           "title": "Estranged Siblings: When Family Distance Is the Healthiest Choice",
           "currentWords": 899,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4613,7 +4613,7 @@
           "slug": "adult-sibling-relationships",
           "title": "Adult Sibling Relationships: Navigating Old Dynamics as Grown-Ups",
           "currentWords": 877,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4621,10 +4621,10 @@
           "slug": "only-children-psychology",
           "title": "Only Children: The Psychology of Growing Up Without Siblings",
           "currentWords": 969,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:42:00.000Z"
     },
     "95": {
       "status": "complete",
@@ -4827,7 +4827,7 @@
       "completedAt": "2026-03-27T08:47:00.000Z"
     },
     "99": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "03a-grief-loss-bereavement",
       "file": "src/data/articles/category-07/03a-grief-loss-bereavement.tsx",
@@ -4839,7 +4839,7 @@
           "slug": "what-is-grief-universal-experience",
           "title": "What Is Grief? Understanding the Universal Experience of Loss",
           "currentWords": 505,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4847,7 +4847,7 @@
           "slug": "five-stages-model-outdated",
           "title": "The Five Stages Model Is Outdated: How Grief Actually Works",
           "currentWords": 535,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4855,7 +4855,7 @@
           "slug": "dual-process-model-grief",
           "title": "The Dual Process Model: How People Move Between Loss and Restoration",
           "currentWords": 625,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4863,7 +4863,7 @@
           "slug": "complicated-grief-prolonged-grief-disorder",
           "title": "Circumstances of death",
           "currentWords": 694,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4871,13 +4871,13 @@
           "slug": "anticipatory-grief",
           "title": "Ambiguous loss",
           "currentWords": 486,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "100": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "03b-grief-loss-bereavement",
       "file": "src/data/articles/category-07/03b-grief-loss-bereavement.tsx",
@@ -4889,7 +4889,7 @@
           "slug": "disenfranchised-grief",
           "title": "Disenfranchised Grief: When Your Loss Isn't Acknowledged by Others",
           "currentWords": 527,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4897,7 +4897,7 @@
           "slug": "grief-after-suicide",
           "title": "Grief After Suicide: The Unique Pain of Surviving Someone's Death by Suicide",
           "currentWords": 532,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4905,7 +4905,7 @@
           "slug": "pet-loss-grief",
           "title": "Pet Loss: Why the Death of an Animal Companion Hurts So Deeply",
           "currentWords": 627,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4913,7 +4913,7 @@
           "slug": "grief-and-the-body",
           "title": "Grief and the Body: How Loss Manifests Physically",
           "currentWords": 394,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4921,13 +4921,13 @@
           "slug": "how-long-does-grief-last",
           "title": "How Long Does Grief Last? What the Research Says About Timelines",
           "currentWords": 415,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:15:43Z"
     },
     "101": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "04a-coping-with-depression",
       "file": "src/data/articles/category-07/04a-coping-with-depression.tsx",
@@ -4939,7 +4939,7 @@
           "slug": "behavioral-activation-evidence-based-self-help-strategy-depression",
           "title": "Behavioral Activation: The Most Evidence-Based Self-Help Strategy for Depression",
           "currentWords": 523,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -4947,7 +4947,7 @@
           "slug": "how-to-get-out-of-bed-when-depression-weighs-you-down",
           "title": "How to Get Out of Bed When Depression Weighs You Down",
           "currentWords": 491,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -4955,7 +4955,7 @@
           "slug": "depression-toolkit-daily-practices-research-supports",
           "title": "The Depression Toolkit: Daily Practices That Research Supports",
           "currentWords": 775,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -4963,7 +4963,7 @@
           "slug": "journaling-for-depression-prompts-process-difficult-emotions",
           "title": "Journaling for Depression: Prompts That Help Process Difficult Emotions",
           "currentWords": 768,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -4971,10 +4971,10 @@
           "slug": "exercise-depression-movement-changes-brain-chemistry",
           "title": "Exercise and Depression: How Movement Changes Brain Chemistry",
           "currentWords": 635,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:10:00Z"
     },
     "102": {
       "status": "complete",
@@ -5027,7 +5027,7 @@
       "completedAt": "2026-03-27T00:20:00.000Z"
     },
     "103": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "05a-seasonal-patterns-mood-cycles",
       "file": "src/data/articles/category-07/05a-seasonal-patterns-mood-cycles.tsx",
@@ -5039,7 +5039,7 @@
           "slug": "seasonal-affective-disorder-complete-guide-winter-depression",
           "title": "Seasonal Affective Disorder: A Complete Guide to Winter Depression",
           "currentWords": 737,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5047,7 +5047,7 @@
           "slug": "light-therapy-sad-how-it-works-evidence",
           "title": "Light Therapy for SAD: How It Works and What the Evidence Shows",
           "currentWords": 581,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5055,7 +5055,7 @@
           "slug": "summer-sad-overlooked-pattern-warm-weather-depression",
           "title": "Summer SAD: The Overlooked Pattern of Warm-Weather Depression",
           "currentWords": 592,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5063,7 +5063,7 @@
           "slug": "how-seasons-affect-everyones-mood-without-sad",
           "title": "How the Seasons Affect Everyone's Mood (Even Without SAD)",
           "currentWords": 493,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5071,10 +5071,10 @@
           "slug": "circadian-rhythms-mood-internal-clock-matters",
           "title": "Circadian Rhythms and Mood: Why Your Internal Clock Matters",
           "currentWords": 651,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T18:45:30Z"
     },
     "104": {
       "status": "complete",
@@ -5177,7 +5177,7 @@
       "completedAt": null
     },
     "106": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "06b-depression-specific-populations",
       "file": "src/data/articles/category-07/06b-depression-specific-populations.tsx",
@@ -5189,7 +5189,7 @@
           "slug": "depression-lgbtq-community-minority-stress",
           "title": "Depression in the LGBTQ+ Community: Minority Stress and Mental Health",
           "currentWords": 531,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5197,7 +5197,7 @@
           "slug": "depression-new-parents-postpartum-partners",
           "title": "Depression in New Parents: Beyond Postpartum --- Partners Are Affected Too",
           "currentWords": 655,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5205,7 +5205,7 @@
           "slug": "depression-chronic-illness-managing-mood",
           "title": "Depression and Chronic Illness: Managing Mood When Your Body Won't Cooperate",
           "currentWords": 588,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5213,7 +5213,7 @@
           "slug": "depression-healthcare-workers-cost-of-caring",
           "title": "Depression Among Healthcare Workers: The Cost of Caring",
           "currentWords": 543,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5221,13 +5221,13 @@
           "slug": "depression-immigrants-refugees-displacement",
           "title": "Depression in Immigrants and Refugees: Displacement, Loss, and Starting Over",
           "currentWords": 636,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:30:00.000Z"
     },
     "107": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "07a-treatment-recovery-moving-forward",
       "file": "src/data/articles/category-07/07a-treatment-recovery-moving-forward.tsx",
@@ -5239,7 +5239,7 @@
           "slug": "cbt-for-depression-how-it-works",
           "title": "CBT for Depression: How the Most-Studied Treatment Works",
           "currentWords": 715,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5247,7 +5247,7 @@
           "slug": "medication-for-depression-ssris-snris",
           "title": "Medication for Depression: SSRIs, SNRIs, and What You Need to Know",
           "currentWords": 647,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5255,7 +5255,7 @@
           "slug": "psychotherapy-vs-medication-combining-both",
           "title": "Psychotherapy vs. Medication: What the Research Says About Combining Both",
           "currentWords": 719,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5263,7 +5263,7 @@
           "slug": "emerging-treatments-ketamine-tms-psilocybin",
           "title": "Emerging Treatments: Ketamine, TMS, and Psilocybin Research",
           "currentWords": 631,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5271,13 +5271,13 @@
           "slug": "how-long-does-depression-treatment-take",
           "title": "How Long Does Depression Treatment Take? Setting Realistic Expectations",
           "currentWords": 563,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:15:00.000Z"
     },
     "108": {
-      "status": "pending",
+      "status": "complete",
       "category": 7,
       "subcategoryFile": "07b-treatment-recovery-moving-forward",
       "file": "src/data/articles/category-07/07b-treatment-recovery-moving-forward.tsx",
@@ -5289,7 +5289,7 @@
           "slug": "relapse-prevention-staying-well-after-recovery",
           "title": "Relapse Prevention: How to Stay Well After Recovery",
           "currentWords": 671,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5297,7 +5297,7 @@
           "slug": "supporting-someone-with-depression-guide",
           "title": "Supporting Someone with Depression: A Guide for Partners, Family, and Friends",
           "currentWords": 575,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5305,7 +5305,7 @@
           "slug": "when-someone-you-love-is-depressed-helping-without-burnout",
           "title": "When Someone You Love Is Depressed: How to Help Without Burning Out",
           "currentWords": 681,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5313,7 +5313,7 @@
           "slug": "recovery-is-not-linear-understanding-setbacks",
           "title": "Recovery Is Not Linear: Understanding Setbacks on the Path Forward",
           "currentWords": 587,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5321,13 +5321,13 @@
           "slug": "life-after-depression-rebuilding-meaning-purpose-connection",
           "title": "Life After Depression: Rebuilding Meaning, Purpose, and Connection",
           "currentWords": 577,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "109": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "01a-science-of-habit-formation",
       "file": "src/data/articles/category-08/01a-science-of-habit-formation.tsx",
@@ -5339,7 +5339,7 @@
           "slug": "how-habits-form-cue-routine-reward",
           "title": "How Habits Form: The Habit Loop of Cue, Routine, and Reward",
           "currentWords": 796,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5347,7 +5347,7 @@
           "slug": "neuroscience-of-habits-brain-autopilot",
           "title": "The Neuroscience of Habits: Why Your Brain Loves Autopilot",
           "currentWords": 1089,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5355,7 +5355,7 @@
           "slug": "how-long-to-build-a-habit",
           "title": "1. Habit Complexity",
           "currentWords": 780,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5363,7 +5363,7 @@
           "slug": "atomic-habits-small-changes-big-results",
           "title": "Atomic Habits in Practice: Small Changes That Create Big Results",
           "currentWords": 902,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5371,13 +5371,13 @@
           "slug": "keystone-habits-chain-reaction",
           "title": "Keystone Habits: The One Change That Triggers a Chain Reaction",
           "currentWords": 731,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:00:00.000Z"
     },
     "110": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "01b-science-of-habit-formation",
       "file": "src/data/articles/category-08/01b-science-of-habit-formation.tsx",
@@ -5389,7 +5389,7 @@
           "slug": "habit-stacking-attach-new-behaviors",
           "title": "Habit Stacking: How to Attach New Behaviors to Existing Routines",
           "currentWords": 1025,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5397,7 +5397,7 @@
           "slug": "environment-design-habit-formation",
           "title": "The Role of Environment in Habit Formation: Design Your Space for Success",
           "currentWords": 774,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5405,7 +5405,7 @@
           "slug": "willpower-isnt-answer-reduce-friction",
           "title": "Why Willpower Isn't the Answer: Reducing Friction Instead",
           "currentWords": 793,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5413,7 +5413,7 @@
           "slug": "digital-habits-phone-shapes-behavior",
           "title": "Digital Habits: How Your Phone Shapes Your Daily Behavior",
           "currentWords": 944,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5421,13 +5421,13 @@
           "slug": "habit-tracking-apps-journals",
           "title": "Tracking Your Habits: Do Apps and Journals Actually Help?",
           "currentWords": 777,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:00.000Z"
     },
     "111": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "02a-understanding-motivation",
       "file": "src/data/articles/category-08/02a-understanding-motivation.tsx",
@@ -5439,7 +5439,7 @@
           "slug": "intrinsic-vs-extrinsic-motivation-why-source-matters",
           "title": "Intrinsic vs. Extrinsic Motivation: Why the Source of Your Drive Matters",
           "currentWords": 520,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5447,7 +5447,7 @@
           "slug": "self-determination-theory-three-needs",
           "title": "Self-Determination Theory: The Three Things Every Person Needs to Feel Motivated",
           "currentWords": 953,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5455,7 +5455,7 @@
           "slug": "why-motivation-fades-psychology-losing-interest",
           "title": "Why Motivation Fades: The Psychology of Losing Interest",
           "currentWords": 889,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5463,7 +5463,7 @@
           "slug": "motivational-interviewing-techniques-self",
           "title": "Motivational Interviewing Techniques You Can Use on Yourself",
           "currentWords": 783,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5471,13 +5471,13 @@
           "slug": "motivation-myth-waiting-inspired-keeps-stuck",
           "title": "The Motivation Myth: Why Waiting to Feel Inspired Keeps You Stuck",
           "currentWords": 834,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:51:22Z"
     },
     "112": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "02b-understanding-motivation",
       "file": "src/data/articles/category-08/02b-understanding-motivation.tsx",
@@ -5489,7 +5489,7 @@
           "slug": "how-purpose-values-drive-sustained-motivation",
           "title": "How Purpose and Values Drive Sustained Motivation",
           "currentWords": 988,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5497,7 +5497,7 @@
           "slug": "reward-systems-incentives-without-undermining-motivation",
           "title": "Reward Systems: How to Use Incentives Without Undermining Intrinsic Motivation",
           "currentWords": 883,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5505,7 +5505,7 @@
           "slug": "role-autonomy-motivation-why-choice-matters",
           "title": "The Role of Autonomy in Motivation: Why Choice Matters",
           "currentWords": 826,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5513,7 +5513,7 @@
           "slug": "how-social-connection-fuels-motivation-accountability",
           "title": "How Social Connection Fuels Motivation: The Power of Accountability",
           "currentWords": 724,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5521,13 +5521,13 @@
           "slug": "when-nothing-motivates-you-anhedonia-low-drive",
           "title": "When Nothing Motivates You: Understanding Anhedonia and Low Drive",
           "currentWords": 661,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00.000Z"
     },
     "113": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "03a-building-healthy-routines",
       "file": "src/data/articles/category-08/03a-building-healthy-routines.tsx",
@@ -5539,7 +5539,7 @@
           "slug": "morning-routines-mental-health-what-works",
           "title": "Morning Routines That Support Mental Health: What Actually Works",
           "currentWords": 802,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5547,7 +5547,7 @@
           "slug": "evening-wind-down-routines-sleep-anxiety",
           "title": "Evening Wind-Down Routines for Better Sleep and Less Anxiety",
           "currentWords": 709,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5555,7 +5555,7 @@
           "slug": "build-exercise-routine-hate-working-out",
           "title": "How to Build an Exercise Routine When You Hate Working Out",
           "currentWords": 757,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5563,7 +5563,7 @@
           "slug": "sustainable-self-care-routine-not-face-mask",
           "title": "1. Physical Self-Care",
           "currentWords": 803,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5571,13 +5571,13 @@
           "slug": "minimum-effective-dose-smallest-routine",
           "title": "The Minimum Effective Dose: The Smallest Routine That Still Moves the Needle",
           "currentWords": 819,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00.000Z"
     },
     "114": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "03b-building-healthy-routines",
       "file": "src/data/articles/category-08/03b-building-healthy-routines.tsx",
@@ -5589,7 +5589,7 @@
           "slug": "adapting-routine-when-life-gets-chaotic",
           "title": "Adapting Your Routine When Life Gets Chaotic",
           "currentWords": 544,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5597,7 +5597,7 @@
           "slug": "midday-reset-routine-prevent-afternoon-crash",
           "title": "Building a Midday Reset Routine to Prevent the Afternoon Crash",
           "currentWords": 531,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5605,7 +5605,7 @@
           "slug": "weekend-vs-weekday-routines-finding-balance",
           "title": "Weekend vs. Weekday Routines: Finding the Right Balance",
           "currentWords": 732,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5613,7 +5613,7 @@
           "slug": "routine-flexibility-when-to-stick-when-to-adjust",
           "title": "Routine Flexibility: When to Stick to the Plan vs. When to Adjust",
           "currentWords": 774,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5621,13 +5621,13 @@
           "slug": "seasonal-routines-adapting-to-change-throughout-year",
           "title": "Seasonal Routines: Adapting to Change Throughout the Year",
           "currentWords": 686,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
     },
     "115": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "04a-breaking-unhealthy-patterns",
       "file": "src/data/articles/category-08/04a-breaking-unhealthy-patterns.tsx",
@@ -5639,7 +5639,7 @@
           "slug": "why-bad-habits-hard-to-break-neuroscience",
           "title": "Why Bad Habits Are So Hard to Break: The Neuroscience of Compulsive Behavior",
           "currentWords": 894,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5647,7 +5647,7 @@
           "slug": "break-social-media-addiction-step-by-step",
           "title": "How to Break a Social Media Addiction: A Step-by-Step Guide",
           "currentWords": 865,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5655,7 +5655,7 @@
           "slug": "emotional-eating-why-you-eat-when-not-hungry",
           "title": "Immediate Dopamine Release",
           "currentWords": 693,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5663,7 +5663,7 @@
           "slug": "break-procrastination-habit-root-cause",
           "title": "Breaking the Procrastination Habit: Strategies That Address the Root Cause",
           "currentWords": 755,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5671,13 +5671,13 @@
           "slug": "stop-negative-self-talk-rewire-internal-monologue",
           "title": "How to Stop Negative Self-Talk: Rewiring Your Internal Monologue",
           "currentWords": 885,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "116": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "04b-breaking-unhealthy-patterns",
       "file": "src/data/articles/category-08/04b-breaking-unhealthy-patterns.tsx",
@@ -5689,7 +5689,7 @@
           "slug": "nail-biting-skin-picking-body-focused-repetitive-behaviors",
           "title": "Nail Biting, Skin Picking, and Other Body-Focused Repetitive Behaviors",
           "currentWords": 649,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5697,7 +5697,7 @@
           "slug": "breaking-revenge-bedtime-procrastination",
           "title": "Breaking the Cycle of Staying Up Too Late: Revenge Bedtime Procrastination",
           "currentWords": 795,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5705,7 +5705,7 @@
           "slug": "reduce-alcohol-use-without-complete-abstinence",
           "title": "How to Reduce Alcohol Use Without Complete Abstinence",
           "currentWords": 899,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5713,7 +5713,7 @@
           "slug": "shopping-addiction-buying-as-coping-mechanism",
           "title": "Shopping Addiction: When Buying Things Becomes a Coping Mechanism",
           "currentWords": 762,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5721,10 +5721,10 @@
           "slug": "replacing-bad-habit-substitution-vs-elimination",
           "title": "Replacing a Bad Habit: Why Substitution Works Better Than Elimination",
           "currentWords": 700,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T09:15:33.000Z"
     },
     "117": {
       "status": "pending",
@@ -5777,7 +5777,7 @@
       "completedAt": null
     },
     "118": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "05b-discipline-willpower-self-control",
       "file": "src/data/articles/category-08/05b-discipline-willpower-self-control.tsx",
@@ -5789,7 +5789,7 @@
           "slug": "how-sleep-affects-willpower-self-control",
           "title": "How Sleep Affects Willpower and Self-Control",
           "currentWords": 654,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5797,7 +5797,7 @@
           "slug": "temptation-bundling-pair-things-you-need-with-things-you-want",
           "title": "Temptation Bundling: Pairing Things You Need to Do with Things You Want to Do",
           "currentWords": 652,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5805,7 +5805,7 @@
           "slug": "implementation-intentions-if-then-strategy-sticking-to-plans",
           "title": "Make the Cue Specific and Detectable",
           "currentWords": 602,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5813,7 +5813,7 @@
           "slug": "how-stress-destroys-self-control-what-to-do-about-it",
           "title": "How Stress Destroys Self-Control (And What to Do About It)",
           "currentWords": 618,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5821,13 +5821,13 @@
           "slug": "building-self-discipline-without-self-punishment",
           "title": "Building Self-Discipline Without Self-Punishment",
           "currentWords": 552,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:45:00Z"
     },
     "119": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "06a-stages-of-change-readiness",
       "file": "src/data/articles/category-08/06a-stages-of-change-readiness.tsx",
@@ -5839,7 +5839,7 @@
           "slug": "stages-of-change-model-where-are-you-in-your-journey",
           "title": "The Stages of Change Model: Where Are You in Your Journey?",
           "currentWords": 627,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5847,7 +5847,7 @@
           "slug": "pre-contemplation-when-you-dont-yet-see-need-to-change",
           "title": "Pre-Contemplation: When You Don't Yet See the Need to Change",
           "currentWords": 739,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5855,7 +5855,7 @@
           "slug": "contemplation-psychology-of-i-know-i-should-but",
           "title": "Contemplation: The Psychology of 'I Know I Should, But...'",
           "currentWords": 883,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5863,7 +5863,7 @@
           "slug": "preparation-setting-yourself-up-for-successful-change",
           "title": "Preparation: Setting Yourself Up for Successful Change",
           "currentWords": 947,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5871,13 +5871,13 @@
           "slug": "action-first-90-days-of-building-new-behavior",
           "title": "Action: The First 90 Days of Building New Behavior",
           "currentWords": 1045,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:30:00.000Z"
     },
     "120": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "06b-stages-of-change-readiness",
       "file": "src/data/articles/category-08/06b-stages-of-change-readiness.tsx",
@@ -5889,7 +5889,7 @@
           "slug": "maintenance-how-to-keep-going-when-novelty-wears-off",
           "title": "Maintenance: How to Keep Going When the Novelty Wears Off",
           "currentWords": 932,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5897,7 +5897,7 @@
           "slug": "relapse-why-setbacks-are-normal-and-how-to-get-back-on-track",
           "title": "Relapse: Why Setbacks Are Normal and How to Get Back on Track",
           "currentWords": 910,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5905,7 +5905,7 @@
           "slug": "how-to-support-someone-who-isnt-ready-to-change",
           "title": "Supporting Someone in Pre-Contemplation",
           "currentWords": 838,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5913,7 +5913,7 @@
           "slug": "behavior-change-in-couples-when-partners-are-at-different-stages",
           "title": "Behavior Change in Couples: When Partners Are at Different Stages",
           "currentWords": 955,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5921,13 +5921,13 @@
           "slug": "change-at-every-age-why-its-never-too-late-to-build-new-patterns",
           "title": "For Younger Adults: Build Identity-Based Habits Early",
           "currentWords": 953,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:15:00Z"
     },
     "121": {
-      "status": "pending",
+      "status": "complete",
       "category": 8,
       "subcategoryFile": "07-systems-environment-identity",
       "file": "src/data/articles/category-08/07-systems-environment-identity.tsx",
@@ -5939,7 +5939,7 @@
           "slug": "identity-based-habits-becoming-the-type-of-person-who",
           "title": "Identity-Based Habits: Becoming the Type of Person Who...",
           "currentWords": 596,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5947,7 +5947,7 @@
           "slug": "systems-vs-goals-why-process-matters-more-than-outcomes",
           "title": "Systems vs. Goals: Why Process Matters More Than Outcomes",
           "currentWords": 488,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -5955,7 +5955,7 @@
           "slug": "how-to-design-your-environment-for-behavior-change",
           "title": "How to Design Your Environment for Behavior Change",
           "currentWords": 701,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -5963,7 +5963,7 @@
           "slug": "social-systems-and-behavior-change-people-shape-habits",
           "title": "Social Systems and Behavior Change: The People Around You Shape Your Habits",
           "currentWords": 631,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -5971,13 +5971,13 @@
           "slug": "the-compound-effect-small-daily-actions-create-extraordinary-results",
           "title": "The Compound Effect: How Small Daily Actions Create Extraordinary Results",
           "currentWords": 768,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T02:00:00.000Z"
     },
     "122": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "01a-sleep-science-mental-health",
       "file": "src/data/articles/category-09/01a-sleep-science-mental-health.tsx",
@@ -5989,7 +5989,7 @@
           "slug": "why-sleep-foundation-mental-health-research",
           "title": "Why Sleep Is the Foundation of Mental Health: What the Research Shows",
           "currentWords": 749,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -5997,7 +5997,7 @@
           "slug": "sleep-deprivation-mood-thinking-relationships",
           "title": "How Sleep Deprivation Affects Your Mood, Thinking, and Relationships",
           "currentWords": 667,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6005,7 +6005,7 @@
           "slug": "sleep-cycle-rem-deep-sleep-stages",
           "title": "The Sleep Cycle Explained: REM, Deep Sleep, and Why Each Stage Matters",
           "currentWords": 912,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6013,7 +6013,7 @@
           "slug": "how-much-sleep-do-you-need-age-recommendations",
           "title": "How Much Sleep Do You Actually Need? Age-by-Age Recommendations",
           "currentWords": 752,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6021,13 +6021,13 @@
           "slug": "bidirectional-relationship-mental-health-sleep",
           "title": "The Bidirectional Relationship: How Mental Health Affects Sleep and Sleep Affects Mental Health",
           "currentWords": 770,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T07:03:26.493871Z"
     },
     "123": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "01b-sleep-science-mental-health",
       "file": "src/data/articles/category-09/01b-sleep-science-mental-health.tsx",
@@ -6039,7 +6039,7 @@
           "slug": "sleep-hygiene-evidence-based-habits-better-sleep",
           "title": "Sleep Hygiene 101: Evidence-Based Habits for Better Sleep",
           "currentWords": 845,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6047,7 +6047,7 @@
           "slug": "circadian-rhythm-internal-clock-controls-everything",
           "title": "Your Circadian Rhythm: How Your Internal Clock Controls Everything",
           "currentWords": 758,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6055,7 +6055,7 @@
           "slug": "blue-light-screens-sleep-science-evidence",
           "title": "Blue Light, Screens, and Sleep: What the Science Actually Says",
           "currentWords": 795,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6063,7 +6063,7 @@
           "slug": "caffeine-alcohol-sleep-substances-sabotage-rest",
           "title": "Caffeine, Alcohol, and Sleep: How Common Substances Sabotage Your Rest",
           "currentWords": 693,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6071,13 +6071,13 @@
           "slug": "weekend-sleep-catch-up-myth-sleeping-in-help",
           "title": "The Weekend Sleep Catch-Up Myth: Does Sleeping In Actually Help?",
           "currentWords": 668,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T07:07:49Z"
     },
     "124": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "02a-sleep-disorders-common-problems",
       "file": "src/data/articles/category-09/02a-sleep-disorders-common-problems.tsx",
@@ -6089,7 +6089,7 @@
           "slug": "insomnia-complete-guide-brain-wont-let-you-sleep",
           "title": "Insomnia: A Complete Guide to When Your Brain Won't Let You Sleep",
           "currentWords": 712,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6097,7 +6097,7 @@
           "slug": "cbt-i-gold-standard-insomnia-treatment",
           "title": "CBT-I: The Gold-Standard Treatment for Insomnia That Most People Haven't Heard Of",
           "currentWords": 796,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6105,7 +6105,7 @@
           "slug": "sleep-apnea-breathing-disorder-mental-health",
           "title": "Sleep Apnea: The Breathing Disorder That Affects Your Mental Health",
           "currentWords": 277,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6113,7 +6113,7 @@
           "slug": "restless-leg-syndrome-body-wont-let-you-rest",
           "title": "Restless Leg Syndrome: When Your Body Won't Let You Rest",
           "currentWords": 218,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6121,13 +6121,13 @@
           "slug": "narcolepsy-understanding-condition-beyond-stereotypes",
           "title": "Narcolepsy: Understanding the Condition Beyond the Stereotypes",
           "currentWords": 236,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T07:07:17Z"
     },
     "125": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "02b-sleep-disorders-common-problems",
       "file": "src/data/articles/category-09/02b-sleep-disorders-common-problems.tsx",
@@ -6139,7 +6139,7 @@
           "slug": "night-terrors-nightmares-when-to-seek-help",
           "title": "Night Terrors and Nightmares: What They Mean and When to Seek Help",
           "currentWords": 290,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6147,7 +6147,7 @@
           "slug": "sleepwalking-sleep-talking-parasomnias-explained",
           "title": "Sleepwalking, Sleep Talking, and Other Parasomnias Explained",
           "currentWords": 260,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6155,7 +6155,7 @@
           "slug": "shift-work-sleep-disorder-irregular-schedule-mental-health",
           "title": "Shift Work Sleep Disorder: Managing Mental Health on an Irregular Schedule",
           "currentWords": 302,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6163,7 +6163,7 @@
           "slug": "sleep-anxiety-fear-not-sleeping-keeps-you-awake",
           "title": "Sleep Anxiety: When the Fear of Not Sleeping Keeps You Awake",
           "currentWords": 320,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6171,13 +6171,13 @@
           "slug": "when-to-see-sleep-specialist-signs-more-than-bad-night",
           "title": "When to See a Sleep Specialist: Signs It's More Than Just a Bad Night",
           "currentWords": 243,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:01:00.000Z"
     },
     "126": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "03a-exercise-movement-mental-wellness",
       "file": "src/data/articles/category-09/03a-exercise-movement-mental-wellness.tsx",
@@ -6189,7 +6189,7 @@
           "slug": "exercise-mental-health-effective-as-medications",
           "title": "Exercise and Mental Health: Why Movement Is as Effective as Some Medications",
           "currentWords": 170,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6197,7 +6197,7 @@
           "slug": "exercise-changes-brain-neuroplasticity-bdnf-mood",
           "title": "How Exercise Changes Your Brain: Neuroplasticity, BDNF, and Mood",
           "currentWords": 115,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6205,7 +6205,7 @@
           "slug": "best-exercise-types-anxiety-research-recommends",
           "title": "The Best Types of Exercise for Anxiety: What the Research Recommends",
           "currentWords": 109,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6213,7 +6213,7 @@
           "slug": "best-exercise-types-depression-movement-lifts-mood",
           "title": "The Best Types of Exercise for Depression: How Movement Lifts Mood",
           "currentWords": 66,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6221,13 +6221,13 @@
           "slug": "walking-mental-health-simplest-exercise-strongest-evidence",
           "title": "Walking for Mental Health: The Simplest Exercise with the Strongest Evidence",
           "currentWords": 103,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:05:20.000Z"
     },
     "127": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "03b-exercise-movement-mental-wellness",
       "file": "src/data/articles/category-09/03b-exercise-movement-mental-wellness.tsx",
@@ -6239,7 +6239,7 @@
           "slug": "yoga-mental-health-science-supports-what-doesnt",
           "title": "Yoga and Mental Health: What the Science Supports (And What It Doesn't)",
           "currentWords": 147,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6247,7 +6247,7 @@
           "slug": "exercise-ptsd-physical-activity-helps-process-trauma",
           "title": "Exercise and PTSD: How Physical Activity Helps Process Trauma",
           "currentWords": 152,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6255,7 +6255,7 @@
           "slug": "exercise-sleep-connection-movement-improves-rest",
           "title": "The Exercise-Sleep Connection: How Movement Improves Your Rest",
           "currentWords": 100,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6263,7 +6263,7 @@
           "slug": "over-exercising-mental-health-when-movement-becomes-harmful",
           "title": "Over-Exercising and Mental Health: When Movement Becomes Harmful",
           "currentWords": 134,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6271,13 +6271,13 @@
           "slug": "how-to-start-moving-when-depression-makes-everything-heavy",
           "title": "How to Start Moving When Depression Makes Everything Feel Heavy",
           "currentWords": 143,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T13:15:42Z"
     },
     "128": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "04a-nutrition-gut-health-brain",
       "file": "src/data/articles/category-09/04a-nutrition-gut-health-brain.tsx",
@@ -6289,7 +6289,7 @@
           "slug": "gut-brain-axis-digestive-system-affects-mood",
           "title": "The Gut-Brain Axis: How Your Digestive System Affects Your Mood",
           "currentWords": 636,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6297,7 +6297,7 @@
           "slug": "nutrition-mental-health-foods-support-brain",
           "title": "Nutrition and Mental Health: The Foods That Support Your Brain",
           "currentWords": 674,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6305,7 +6305,7 @@
           "slug": "microbiome-mental-health-science",
           "title": "The Microbiome and Mental Health: What the Science Shows",
           "currentWords": 831,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6313,7 +6313,7 @@
           "slug": "omega-3s-brain-health",
           "title": "Omega-3s and Brain Health: What You Need to Know",
           "currentWords": 760,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6321,13 +6321,13 @@
           "slug": "blood-sugar-inflammation-mood-connections",
           "title": "Blood Sugar, Inflammation, and Mood: The Hidden Connections",
           "currentWords": 906,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:30:00.000Z"
     },
     "129": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "04b-nutrition-gut-health-brain",
       "file": "src/data/articles/category-09/04b-nutrition-gut-health-brain.tsx",
@@ -6339,7 +6339,7 @@
           "slug": "eating-disorders-brain-gut-connection",
           "title": "Eating Disorders and the Brain-Gut Connection",
           "currentWords": 1082,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6347,7 +6347,7 @@
           "slug": "nutritional-psychiatry-diet-treat-mental-health",
           "title": "Nutritional Psychiatry: Can Diet Treat Mental Health Conditions?",
           "currentWords": 971,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6355,7 +6355,7 @@
           "slug": "how-to-eat-for-mental-health-practical-guidance",
           "title": "How to Eat for Mental Health: Practical Nutrition Guidance",
           "currentWords": 1050,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6363,7 +6363,7 @@
           "slug": "supplements-mental-health-what-works",
           "title": "Supplements for Mental Health: What Works (And What Doesn't)",
           "currentWords": 1048,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6371,13 +6371,13 @@
           "slug": "disordered-eating-restrictive-diets-mental-health",
           "title": "Disordered Eating, Restrictive Diets, and Mental Health Risks",
           "currentWords": 1010,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "130": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "05a-somatic-awareness-body-based-healing",
       "file": "src/data/articles/category-09/05a-somatic-awareness-body-based-healing.tsx",
@@ -6389,7 +6389,7 @@
           "slug": "somatic-experiencing-body-based-trauma-therapy",
           "title": "What Is Somatic Experiencing? Understanding Body-Based Trauma Therapy",
           "currentWords": 912,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6397,7 +6397,7 @@
           "slug": "body-keeps-score-trauma-lives-in-body",
           "title": "The Body Keeps the Score: How Trauma Lives in Your Body",
           "currentWords": 899,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6405,7 +6405,7 @@
           "slug": "somatic-symptoms-mental-health-emotions-become-physical",
           "title": "Somatic Symptoms and Mental Health: When Emotions Become Physical",
           "currentWords": 850,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6413,7 +6413,7 @@
           "slug": "breathwork-mental-health-nervous-system",
           "title": "Breathwork for Mental Health: How Breathing Affects Your Nervous System",
           "currentWords": 794,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6421,13 +6421,13 @@
           "slug": "progressive-muscle-relaxation-stress-relief",
           "title": "Progressive Muscle Relaxation: A Science-Backed Stress Relief Tool",
           "currentWords": 796,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T05:45:12.000Z"
     },
     "131": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "05b-somatic-awareness-body-based-healing",
       "file": "src/data/articles/category-09/05b-somatic-awareness-body-based-healing.tsx",
@@ -6439,7 +6439,7 @@
           "slug": "body-scan-meditation-awareness-calm",
           "title": "Body Scan Meditation: Cultivating Awareness and Calm",
           "currentWords": 788,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6447,7 +6447,7 @@
           "slug": "dance-movement-therapy-healing-through-body",
           "title": "Dance and Movement Therapy: Healing Through the Body",
           "currentWords": 880,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6455,7 +6455,7 @@
           "slug": "grounding-techniques-body-manage-anxiety-overwhelm",
           "title": "Grounding Techniques: Using Your Body to Manage Anxiety and Overwhelm",
           "currentWords": 907,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6463,7 +6463,7 @@
           "slug": "vagus-nerve-mental-health-calm-down-system",
           "title": "The Vagus Nerve and Mental Health: Your Body's Calm-Down System",
           "currentWords": 836,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6471,13 +6471,13 @@
           "slug": "interoception-reading-body-internal-signals",
           "title": "Interoception: Learning to Read Your Body's Internal Signals",
           "currentWords": 855,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T07:16:37Z"
     },
     "132": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "06a-pain-chronic-illness-psychological-impact",
       "file": "src/data/articles/category-09/06a-pain-chronic-illness-psychological-impact.tsx",
@@ -6489,7 +6489,7 @@
           "slug": "psychology-chronic-pain-mind-body-connections",
           "title": "The Psychology of Chronic Pain: Mind-Body Connections",
           "currentWords": 783,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6497,7 +6497,7 @@
           "slug": "pain-catastrophizing-thoughts-amplify-physical-pain",
           "title": "Pain Catastrophizing: How Thoughts Amplify Physical Pain",
           "currentWords": 620,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6505,7 +6505,7 @@
           "slug": "chronic-illness-mental-health-bidirectional-relationship",
           "title": "Chronic Illness and Mental Health: The Bidirectional Relationship",
           "currentWords": 773,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6513,7 +6513,7 @@
           "slug": "acceptance-commitment-therapy-chronic-pain",
           "title": "Acceptance and Commitment Therapy (ACT) for Chronic Pain",
           "currentWords": 811,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6521,13 +6521,13 @@
           "slug": "spoon-theory-energy-limits-chronic-illness",
           "title": "The Spoon Theory: Understanding Energy Limits in Chronic Illness",
           "currentWords": 923,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T07:52:00.000Z"
     },
     "133": {
-      "status": "pending",
+      "status": "complete",
       "category": 9,
       "subcategoryFile": "06b-pain-chronic-illness-psychological-impact",
       "file": "src/data/articles/category-09/06b-pain-chronic-illness-psychological-impact.tsx",
@@ -6539,7 +6539,7 @@
           "slug": "cancer-mental-health-emotional-journey",
           "title": "Cancer and Mental Health: The Emotional Journey of Diagnosis and Treatment",
           "currentWords": 621,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6547,7 +6547,7 @@
           "slug": "health-anxiety-after-real-diagnosis",
           "title": "Health Anxiety After a Real Diagnosis: When Worry Becomes Appropriate",
           "currentWords": 548,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6555,7 +6555,7 @@
           "slug": "invisible-illness-mental-health-burden",
           "title": "Invisible Illness and Mental Health: The Burden of Looking 'Fine'",
           "currentWords": 540,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6563,7 +6563,7 @@
           "slug": "surgery-recovery-mental-health",
           "title": "Surgery, Recovery, and Mental Health: The Psychological Side of Medical Procedures",
           "currentWords": 624,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6571,13 +6571,13 @@
           "slug": "advocate-for-yourself-medical-system",
           "title": "How to Advocate for Yourself in the Medical System: A Patient's Guide",
           "currentWords": 744,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:45:00Z"
     },
     "134": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "01a-social-media-mental-health",
       "file": "src/data/articles/category-10/01a-social-media-mental-health.tsx",
@@ -6589,7 +6589,7 @@
           "slug": "how-social-media-affects-your-mental-health-research",
           "title": "How Social Media Affects Your Mental Health: What Five Years of Research Shows",
           "currentWords": 690,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6597,7 +6597,7 @@
           "slug": "comparison-trap-scrolling-mental-health",
           "title": "The Comparison Trap: Why Scrolling Makes You Feel Worse About Your Life",
           "currentWords": 490,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6605,7 +6605,7 @@
           "slug": "social-media-teens-parent-guide",
           "title": "Social Media and Teens: What Parents Need to Know About the Risks",
           "currentWords": 478,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6613,7 +6613,7 @@
           "slug": "fomo-fear-of-missing-out-anxiety",
           "title": "FOMO: The Fear of Missing Out and How It Drives Anxious Scrolling",
           "currentWords": 509,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6621,13 +6621,13 @@
           "slug": "instagram-tiktok-body-image-mental-health",
           "title": "Instagram, TikTok, and Body Image: The Visual Platform Problem",
           "currentWords": 751,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T04:12:00.000Z"
     },
     "135": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "01b-social-media-mental-health",
       "file": "src/data/articles/category-10/01b-social-media-mental-health.tsx",
@@ -6639,7 +6639,7 @@
           "slug": "social-media-loneliness-connection",
           "title": "Social Media and Loneliness: Does Online Connection Replace Real Connection?",
           "currentWords": 674,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6647,7 +6647,7 @@
           "slug": "dopamine-social-media-reward-system",
           "title": "Likes, Comments, and Dopamine: How Social Media Hijacks Your Reward System",
           "currentWords": 807,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6655,7 +6655,7 @@
           "slug": "highlight-reel-effect-social-media",
           "title": "The Highlight Reel Effect: Why Everyone Else's Life Looks Perfect Online",
           "currentWords": 673,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6663,7 +6663,7 @@
           "slug": "social-media-breaks-research",
           "title": "Social Media Breaks: What the Research Says About Taking Time Off",
           "currentWords": 681,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6671,13 +6671,13 @@
           "slug": "mindful-social-media-use-strategies",
           "title": "How to Use Social Media Mindfully: Strategies for a Healthier Feed",
           "currentWords": 692,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:15:00.000Z"
     },
     "136": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "02a-screen-time-digital-habits",
       "file": "src/data/articles/category-10/02a-screen-time-digital-habits.tsx",
@@ -6689,7 +6689,7 @@
           "slug": "how-much-screen-time-is-too-much-evidence",
           "title": "How Much Screen Time Is Too Much? What the Evidence Actually Says",
           "currentWords": 581,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6697,7 +6697,7 @@
           "slug": "smartphone-addiction-real-or-bad-habit",
           "title": "Smartphone Addiction: Is It Real or Just a Bad Habit?",
           "currentWords": 601,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6705,7 +6705,7 @@
           "slug": "attention-economy-apps-designed-to-hook",
           "title": "The Attention Economy: How Apps Are Designed to Keep You Hooked",
           "currentWords": 615,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6713,7 +6713,7 @@
           "slug": "digital-minimalism-reduce-tech-footprint",
           "title": "Digital Minimalism: Reducing Your Tech Footprint Without Going Off-Grid",
           "currentWords": 476,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6721,13 +6721,13 @@
           "slug": "screen-time-children-age-appropriate-guidelines",
           "title": "Screen Time and Children: Age-Appropriate Guidelines and Why They Matter",
           "currentWords": 593,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T18:52:30Z"
     },
     "137": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "02b-screen-time-digital-habits",
       "file": "src/data/articles/category-10/02b-screen-time-digital-habits.tsx",
@@ -6739,7 +6739,7 @@
           "slug": "night-time-screen-use-disrupts-sleep",
           "title": "How Night-Time Screen Use Disrupts Sleep and What to Do About It",
           "currentWords": 781,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6747,7 +6747,7 @@
           "slug": "dopamine-detox-science-or-snake-oil",
           "title": "The Dopamine Detox Trend: Science or Snake Oil?",
           "currentWords": 571,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6755,7 +6755,7 @@
           "slug": "set-up-phone-for-mental-health-guide",
           "title": "How to Set Up Your Phone for Mental Health: A Practical Guide",
           "currentWords": 793,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6763,7 +6763,7 @@
           "slug": "productivity-paradox-technology-less-efficient",
           "title": "The Productivity Paradox: When Technology Makes You Less Efficient",
           "currentWords": 610,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6771,13 +6771,13 @@
           "slug": "digital-boundaries-families-tech-agreement",
           "title": "Digital Boundaries for Families: Creating a Tech Agreement That Works",
           "currentWords": 700,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T19:16:00.000Z"
     },
     "138": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "03a-online-comparison-cyberbullying",
       "file": "src/data/articles/category-10/03a-online-comparison-cyberbullying.tsx",
@@ -6789,7 +6789,7 @@
           "slug": "cyberbullying-mental-health-impact-online-harassment",
           "title": "Cyberbullying: The Mental Health Impact of Online Harassment",
           "currentWords": 820,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6797,7 +6797,7 @@
           "slug": "cancel-culture-mental-health-public-shaming",
           "title": "Cancel Culture and Mental Health: The Psychology of Public Shaming",
           "currentWords": 834,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6805,7 +6805,7 @@
           "slug": "online-trolling-why-people-cruel-internet",
           "title": "Online Trolling: Understanding Why People Are Cruel on the Internet",
           "currentWords": 785,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6813,7 +6813,7 @@
           "slug": "revenge-porn-digital-exploitation-psychological-damage",
           "title": "Revenge Porn and Digital Exploitation: The Psychological Damage",
           "currentWords": 767,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6821,13 +6821,13 @@
           "slug": "online-radicalization-mental-health-extreme-content",
           "title": "Online Radicalization and Mental Health: How Extreme Content Pulls People In",
           "currentWords": 952,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T11:15:00Z"
     },
     "139": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "03b-online-comparison-cyberbullying",
       "file": "src/data/articles/category-10/03b-online-comparison-cyberbullying.tsx",
@@ -6839,7 +6839,7 @@
           "slug": "online-reviews-ratings-social-anxiety",
           "title": "How Online Reviews and Ratings Create Social Anxiety",
           "currentWords": 466,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6847,7 +6847,7 @@
           "slug": "online-dating-mental-health-rejection-ghosting",
           "title": "The Mental Health Impact of Online Dating: Rejection, Ghosting, and Comparison",
           "currentWords": 528,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6855,7 +6855,7 @@
           "slug": "parasocial-relationships-one-sided-connection",
           "title": "Parasocial Relationships: When You Feel Connected to Someone Who Doesn't Know You Exist",
           "currentWords": 553,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6863,7 +6863,7 @@
           "slug": "online-impersonation-catfishing-digital-deception",
           "title": "Online Impersonation, Catfishing, and Trust: Digital Deception and Its Effects",
           "currentWords": 517,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6871,13 +6871,13 @@
           "slug": "helping-teens-navigate-online-cruelty-parents-guide",
           "title": "Helping Teens Navigate Online Cruelty: A Parent's Action Guide",
           "currentWords": 698,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:15:00.000Z"
     },
     "140": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "04a-information-overload-doomscrolling",
       "file": "src/data/articles/category-10/04a-information-overload-doomscrolling.tsx",
@@ -6889,7 +6889,7 @@
           "slug": "what-is-doomscrolling-psychology-compulsive-news",
           "title": "What Is Doomscrolling? The Psychology of Consuming Bad News Compulsively",
           "currentWords": 508,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6897,7 +6897,7 @@
           "slug": "information-overload-how-too-much-input-overwhelms-brain",
           "title": "Information Overload: How Too Much Input Overwhelms Your Brain",
           "currentWords": 415,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6905,7 +6905,7 @@
           "slug": "news-anxiety-24-7-news-cycle-mental-health",
           "title": "News Anxiety: How the 24/7 News Cycle Damages Mental Health",
           "currentWords": 401,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6913,7 +6913,7 @@
           "slug": "climate-anxiety-internet-awareness-overwhelm",
           "title": "Climate Anxiety and the Internet: When Awareness Becomes Overwhelm",
           "currentWords": 531,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6921,13 +6921,13 @@
           "slug": "misinformation-mental-health-false-claims-real-harm",
           "title": "Misinformation and Mental Health: How False Claims Cause Real Harm",
           "currentWords": 488,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T10:48:23Z"
     },
     "141": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "04b-information-overload-doomscrolling",
       "file": "src/data/articles/category-10/04b-information-overload-doomscrolling.tsx",
@@ -6939,7 +6939,7 @@
           "slug": "infinite-scroll-endless-content-feeds-exploit-attention",
           "title": "The Infinite Scroll: How Endless Content Feeds Exploit Your Attention",
           "currentWords": 588,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6947,7 +6947,7 @@
           "slug": "stay-informed-without-becoming-anxious",
           "title": "How to Stay Informed Without Becoming Anxious or Despairing",
           "currentWords": 465,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -6955,7 +6955,7 @@
           "slug": "echo-chambers-mental-health-feed-reinforces-fears",
           "title": "Echo Chambers and Mental Health: When Your Feed Reinforces Your Fears",
           "currentWords": 432,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -6963,7 +6963,7 @@
           "slug": "mental-health-impact-constant-pandemic-news",
           "title": "The Mental Health Impact of Constant Pandemic News Coverage",
           "currentWords": 467,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -6971,13 +6971,13 @@
           "slug": "building-healthy-information-diet-practical-strategies",
           "title": "Building a Healthy Information Diet: Practical Strategies",
           "currentWords": 436,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:30:00.000Z"
     },
     "142": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "05a-digital-wellness",
       "file": "src/data/articles/category-10/05a-digital-wellness.tsx",
@@ -6989,7 +6989,7 @@
           "slug": "what-is-digital-wellness-framework-healthy-tech-relationship",
           "title": "What Is Digital Wellness? A Framework for a Healthy Tech Relationship",
           "currentWords": 362,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -6997,7 +6997,7 @@
           "slug": "digital-detox-retreats-effective-recovery-expensive-gimmick",
           "title": "Digital Detox Retreats: Effective Recovery or Expensive Gimmick?",
           "currentWords": 536,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7005,7 +7005,7 @@
           "slug": "right-to-disconnect-boundaries-technology-human-need",
           "title": "The Right to Disconnect: Why Boundaries with Technology Are a Human Need",
           "currentWords": 584,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7013,7 +7013,7 @@
           "slug": "reclaim-attention-training-focus-distracted-world",
           "title": "How to Reclaim Your Attention: Training Focus in a Distracted World",
           "currentWords": 368,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7021,13 +7021,13 @@
           "slug": "nature-technology-getting-outside-counteracts-screen-exposure",
           "title": "Nature and Technology: Why Getting Outside Counteracts Screen Exposure",
           "currentWords": 558,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:05:00.000Z"
     },
     "143": {
-      "status": "pending",
+      "status": "complete",
       "category": 10,
       "subcategoryFile": "05b-digital-wellness",
       "file": "src/data/articles/category-10/05b-digital-wellness.tsx",
@@ -7039,7 +7039,7 @@
           "slug": "analog-activities-mental-health-rediscovering-offline-joy",
           "title": "Analog Activities for Mental Health: Rediscovering Offline Joy",
           "currentWords": 440,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -7047,7 +7047,7 @@
           "slug": "future-technology-mental-health-ai-vr-whats-coming",
           "title": "Therapeutic Chatbots",
           "currentWords": 550,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7055,7 +7055,7 @@
           "slug": "teaching-children-digital-literacy-raising-healthy-digital-citizens",
           "title": "Teaching Children Digital Literacy: Raising Healthy Digital Citizens",
           "currentWords": 490,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7063,7 +7063,7 @@
           "slug": "technology-mental-health-tool-when-apps-ai-actually-help",
           "title": "Technology as a Mental Health Tool: When Apps and AI Actually Help",
           "currentWords": 378,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7071,13 +7071,13 @@
           "slug": "personal-digital-wellness-plan-step-by-step-guide",
           "title": "Your Personal Digital Wellness Plan: A Step-by-Step Guide",
           "currentWords": 744,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "144": {
-      "status": "pending",
+      "status": "complete",
       "category": 11,
       "subcategoryFile": "01a-understanding-trauma-and-its-impact",
       "file": "src/data/articles/category-11/01a-understanding-trauma-and-its-impact.tsx",
@@ -7089,7 +7089,7 @@
           "slug": "what-is-psychological-trauma-clear-guide",
           "title": "What Is Psychological Trauma? A Clear Guide to What 'Trauma' Actually Means",
           "currentWords": 541,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -7097,7 +7097,7 @@
           "slug": "big-t-little-t-spectrum-traumatic-experiences",
           "title": "Big T and Little t: The Spectrum of Traumatic Experiences",
           "currentWords": 584,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7105,7 +7105,7 @@
           "slug": "how-trauma-changes-brain-neuroscience",
           "title": "How Trauma Changes the Brain: Neuroscience in Plain Language",
           "currentWords": 574,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7113,7 +7113,7 @@
           "slug": "ace-study-childhood-adversity-adult-health",
           "title": "The ACE Study: How Childhood Adversity Predicts Adult Health",
           "currentWords": 590,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7121,10 +7121,10 @@
           "slug": "why-two-people-same-event-affected-differently",
           "title": "Why Two People Can Experience the Same Event and Be Affected Differently",
           "currentWords": 761,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T01:00:00.000Z"
     },
     "145": {
       "status": "pending",
@@ -7227,7 +7227,7 @@
       "completedAt": null
     },
     "147": {
-      "status": "pending",
+      "status": "complete",
       "category": 11,
       "subcategoryFile": "02b-ptsd-complex-trauma",
       "file": "src/data/articles/category-11/02b-ptsd-complex-trauma.tsx",
@@ -7239,7 +7239,7 @@
           "slug": "ptsd-nightmares-why-trauma-disrupts-sleep",
           "title": "PTSD and Nightmares: Why Trauma Disrupts Your Sleep",
           "currentWords": 517,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -7247,7 +7247,7 @@
           "slug": "trauma-dissociation-mind-disconnects-survive",
           "title": "Trauma and Dissociation: When Your Mind Disconnects to Survive",
           "currentWords": 588,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7255,7 +7255,7 @@
           "slug": "ptsd-first-responders-cost-witnessing-crisis",
           "title": "PTSD in First Responders: The Cost of Witnessing Crisis",
           "currentWords": 467,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7263,7 +7263,7 @@
           "slug": "military-ptsd-combat-trauma-challenges-coming-home",
           "title": "Military PTSD: Combat Trauma and the Challenges of Coming Home",
           "currentWords": 482,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7271,13 +7271,13 @@
           "slug": "ptsd-vs-acute-stress-disorder-understanding-timeline",
           "title": "PTSD vs. Acute Stress Disorder: Understanding the Timeline",
           "currentWords": 426,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T07:28:21.000Z"
     },
     "148": {
-      "status": "pending",
+      "status": "complete",
       "category": 11,
       "subcategoryFile": "03a-trauma-responses-survival-patterns",
       "file": "src/data/articles/category-11/03a-trauma-responses-survival-patterns.tsx",
@@ -7289,7 +7289,7 @@
           "slug": "fight-flight-freeze-fawn-trauma-responses",
           "title": "Fight, Flight, Freeze, and Fawn: The Four Trauma Responses Explained",
           "currentWords": 849,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -7297,7 +7297,7 @@
           "slug": "fawn-response-people-pleasing-survival-strategy",
           "title": "The Fawn Response: How People-Pleasing Becomes a Survival Strategy",
           "currentWords": 762,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7305,7 +7305,7 @@
           "slug": "freeze-response-trauma-shutdown",
           "title": "The Freeze Response: When Trauma Makes You Shut Down",
           "currentWords": 757,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7313,7 +7313,7 @@
           "slug": "why-you-didnt-fight-back-immobility-trauma",
           "title": "Why You Didn't Fight Back: Understanding Immobility During Trauma",
           "currentWords": 679,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7321,13 +7321,13 @@
           "slug": "trauma-triggers-what-they-are-how-to-manage",
           "title": "Trauma Triggers: What They Are, Why They Happen, and How to Manage Them",
           "currentWords": 699,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T17:35:00.000Z"
     },
     "149": {
-      "status": "pending",
+      "status": "complete",
       "category": 11,
       "subcategoryFile": "03b-trauma-responses-survival-patterns",
       "file": "src/data/articles/category-11/03b-trauma-responses-survival-patterns.tsx",
@@ -7339,7 +7339,7 @@
           "slug": "avoidance-after-trauma-staying-safe-keeps-you-stuck",
           "title": "Avoidance After Trauma: How Staying Safe Keeps You Stuck",
           "currentWords": 820,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -7347,7 +7347,7 @@
           "slug": "trauma-bonding-why-people-stay-abusive-situations",
           "title": "Trauma Bonding: Why People Stay in Abusive Situations",
           "currentWords": 680,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7355,7 +7355,7 @@
           "slug": "self-blame-after-trauma-why-survivors-blame-themselves",
           "title": "1. Illusion of control",
           "currentWords": 614,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7363,7 +7363,7 @@
           "slug": "anger-after-trauma-emotion-survivors-told-not-to-feel",
           "title": "Anger After Trauma: The Emotion Survivors Are Told Not to Feel",
           "currentWords": 681,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7371,13 +7371,13 @@
           "slug": "hyperarousal-living-in-constant-alert",
           "title": "Hyperarousal: Living in a State of Constant Alert",
           "currentWords": 703,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T20:45:18.000Z"
     },
     "150": {
-      "status": "pending",
+      "status": "complete",
       "category": 11,
       "subcategoryFile": "04a-body-based-trauma-healing",
       "file": "src/data/articles/category-11/04a-body-based-trauma-healing.tsx",
@@ -7389,7 +7389,7 @@
           "slug": "somatic-experiencing-body-based-therapy-processes-trauma",
           "title": "Somatic Experiencing: How Body-Based Therapy Processes Trauma",
           "currentWords": 679,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -7397,7 +7397,7 @@
           "slug": "emdr-explained-eye-movements-process-traumatic-memories",
           "title": "EMDR Explained: How Eye Movements Help Process Traumatic Memories",
           "currentWords": 801,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -7405,7 +7405,7 @@
           "slug": "yoga-trauma-therapy-research-movement-healing",
           "title": "Yoga as Trauma Therapy: What the Research Says About Movement and Healing",
           "currentWords": 624,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -7413,7 +7413,7 @@
           "slug": "vagus-nerve-trauma-recovery-activating-calm-system",
           "title": "The Vagus Nerve and Trauma Recovery: Activating Your Body's Calm System",
           "currentWords": 608,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -7421,10 +7421,10 @@
           "slug": "breathwork-trauma-regulate-dysregulated-nervous-system",
           "title": "Breathwork for Trauma: Techniques That Help Regulate a Dysregulated Nervous System",
           "currentWords": 610,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T00:10:00.000Z"
     },
     "151": {
       "status": "pending",

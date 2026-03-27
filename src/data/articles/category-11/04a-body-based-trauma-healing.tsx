@@ -25,6 +25,26 @@ export const bodyBasedHealingArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Somatic Experiencing', 'Body-Based Therapy', 'Trauma Treatment', 'Nervous System'],
+    summary: 'Somatic Experiencing (SE) is a body-oriented trauma therapy that helps release physiological patterns trapped in the nervous system. Unlike talk therapy, SE works with sensations, movements, and autonomic states to complete interrupted survival responses, helping your nervous system learn that the danger has passed.',
+    keyFacts: [
+      { text: '63% reduction in PTSD symptoms after Somatic Experiencing treatment', citationIndex: 2 },
+      { text: 'Animals naturally discharge trauma energy through shaking and trembling; humans often suppress these healing responses', citationIndex: 3 },
+      { text: '74% of SE clients maintain improvements at 6-month follow-up', citationIndex: 2 },
+      { text: 'SE uses titration (small doses) and pendulation (moving between activation and regulation) to build nervous system resilience', citationIndex: 9 },
+      { text: 'Trauma is stored as incomplete survival responses in the nervous system, not just as memories', citationIndex: 1 },
+    ],
+    sparkMoment: 'PTSD symptoms aren\'t the problem—they\'re your body\'s attempt to complete an interrupted survival response that was left unfinished during the trauma.',
+    practicalExercise: {
+      title: 'Body Scan for Trauma Awareness',
+      steps: [
+        { title: 'Find a safe posture', description: 'Sit or lie down in a position that feels stable. Notice your feet on the ground or your body supported by the surface beneath you.' },
+        { title: 'Track neutral sensations first', description: 'Start with a body part that feels calm or neutral—maybe your hand or foot. Notice temperature, weight, or texture without trying to change anything.' },
+        { title: 'Touch the edge of activation', description: 'Gently bring awareness to an area that holds tension or discomfort. Notice the sensation for 10 seconds, then return attention to your neutral area.' },
+        { title: 'Follow any discharge impulses', description: 'If your body wants to move, shake, take a deep breath, or adjust position, allow it to happen slowly. This is your nervous system completing its response.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -343,6 +363,26 @@ export const bodyBasedHealingArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['EMDR', 'Trauma Treatment', 'PTSD Therapy', 'Evidence-Based'],
+    summary: 'Eye Movement Desensitization and Reprocessing (EMDR) is an evidence-based psychotherapy that uses bilateral stimulation to help the brain reprocess traumatic memories. Unlike traditional talk therapy, EMDR allows trauma processing without detailed narration, often achieving results faster through the brain\'s natural healing mechanisms.',
+    keyFacts: [
+      { text: '77% of single-trauma PTSD cases resolved in just 3 EMDR sessions', citationIndex: 2 },
+      { text: 'EMDR is recognized by WHO, APA, and VA as a first-line treatment for PTSD', citationIndex: 8 },
+      { text: 'Brain imaging shows EMDR reduces amygdala reactivity while increasing prefrontal cortex activity', citationIndex: 4 },
+      { text: '90% of EMDR clients maintain treatment gains at 12-month follow-up', citationIndex: 2 },
+      { text: 'Bilateral stimulation taxes working memory, reducing the vividness and emotional intensity of traumatic memories during processing', citationIndex: 3 },
+    ],
+    sparkMoment: 'Traumatic memories are "stuck" in raw, unprocessed form—EMDR unlocks them, allowing your brain to complete the processing it couldn\'t do during the trauma.',
+    practicalExercise: {
+      title: 'Butterfly Hug Self-EMDR Technique',
+      steps: [
+        { title: 'Cross your arms', description: 'Place your hands on opposite shoulders, like giving yourself a hug. Your arms form an X across your chest.' },
+        { title: 'Choose a mildly distressing memory', description: 'Not your worst trauma—start with something rated 3-5 out of 10 in distress. Hold a brief image of it in mind.' },
+        { title: 'Alternate tapping', description: 'Gently tap your shoulders, alternating left-right, at a comfortable pace (about 1 tap per second). Continue for 20-30 taps.' },
+        { title: 'Notice what shifts', description: 'After each set, take a breath and notice: Did the image change? Did emotions shift? Did insights arise? Repeat 3-5 sets until distress decreases.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -616,6 +656,26 @@ export const bodyBasedHealingArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma-Sensitive Yoga', 'Body-Based Healing', 'Yoga Therapy', 'PTSD'],
+    summary: 'Trauma-sensitive yoga is an evidence-based approach that helps survivors reconnect with their bodies through mindful movement, breath, and interoception. Unlike traditional yoga, it prioritizes safety, choice, and internal awareness over achievement, helping regulate the nervous system and reclaim body ownership after trauma.',
+    keyFacts: [
+      { text: '52% reduction in PTSD symptoms after a 10-week trauma-sensitive yoga program', citationIndex: 2 },
+      { text: '67% of participants no longer met PTSD diagnostic criteria after completing trauma-informed yoga', citationIndex: 2 },
+      { text: 'Trauma disrupts interoception—the ability to sense hunger, pain, fullness, and other internal states', citationIndex: 6 },
+      { text: 'Yoga increases heart rate variability (HRV), a key marker of nervous system resilience and flexibility', citationIndex: 4 },
+      { text: 'Trauma-sensitive yoga uses invitational language ("Notice what you feel") rather than directive commands', citationIndex: 9 },
+    ],
+    sparkMoment: 'Your body is not a threat—trauma-sensitive yoga teaches you that it\'s safe to be here, to feel, and to come home to the body that carried you through.',
+    practicalExercise: {
+      title: 'Grounding Through Body Awareness',
+      steps: [
+        { title: 'Find a comfortable position', description: 'Sit or stand in a way that feels stable. Notice three points of contact—feet on floor, seat on chair, hands on lap.' },
+        { title: 'Notice without judging', description: 'Scan your body from feet to head. Where do you feel warmth? Coolness? Tension? Neutrality? Just notice, don\'t try to change anything.' },
+        { title: 'Choose one gentle movement', description: 'If it feels right, try a slow shoulder roll, neck tilt, or spinal twist. Move at your own pace. You can stop anytime.' },
+        { title: 'Return to stillness', description: 'After 30 seconds of movement, pause. Notice: Did anything shift? Do you feel more present? This is interoception—rebuilding the mind-body connection.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Well-Being',
+    },
     citations: [
       {
         id: '1',
@@ -937,6 +997,26 @@ export const bodyBasedHealingArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Vagus Nerve', 'Polyvagal Theory', 'Nervous System Regulation', 'Trauma Healing'],
+    summary: 'The vagus nerve is your body\'s primary "brake pedal," activating the parasympathetic nervous system to shift from fight-or-flight to rest-and-digest. Understanding polyvagal theory and learning simple vagal activation techniques gives trauma survivors powerful tools for self-regulation and healing.',
+    keyFacts: [
+      { text: '80% of vagus nerve fibers send information FROM the body TO the brain—your body speaks first', citationIndex: 3 },
+      { text: '62% of PTSD patients show low vagal tone measured by heart rate variability (HRV)', citationIndex: 4 },
+      { text: 'Polyvagal theory identifies three nervous system states: ventral vagal (safe/social), sympathetic (fight/flight), and dorsal vagal (freeze/shutdown)', citationIndex: 2 },
+      { text: 'Simple practices like cold water on the face, humming, and deep breathing can immediately activate the vagus nerve', citationIndex: 5 },
+      { text: 'Vagal tone can be strengthened through consistent practice—your nervous system can be trained to access calm more easily', citationIndex: 5 },
+    ],
+    sparkMoment: 'The vagus nerve is your body\'s built-in reset button—learning to press it is one of the most powerful tools for reclaiming your nervous system\'s capacity for peace.',
+    practicalExercise: {
+      title: 'Cold Water Vagal Reset',
+      steps: [
+        { title: 'Prepare cold water', description: 'Fill a bowl with cold water and ice, or prepare a cold, damp washcloth. Have it ready nearby.' },
+        { title: 'Notice your baseline', description: 'Before starting, rate your stress or activation on a 1-10 scale. Notice your heart rate, breathing, muscle tension.' },
+        { title: 'Apply cold to face', description: 'Splash cold water on your face or hold the cold cloth to your cheeks and forehead for 30 seconds. This activates the "dive reflex," engaging the vagus nerve.' },
+        { title: 'Observe the shift', description: 'After 30 seconds, remove the cold and breathe normally. Notice: Did your heart rate slow? Does your breathing feel deeper? Rate your stress again. Most people feel an immediate 2-3 point drop.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Nervous System',
+    },
     citations: [
       {
         id: '1',
@@ -1186,6 +1266,26 @@ export const bodyBasedHealingArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Breathwork', 'Nervous System Regulation', 'Trauma Healing', 'Self-Regulation'],
+    summary: 'Breathwork is the only part of the autonomic nervous system you can consciously control, making it a powerful tool for trauma recovery. Evidence-based techniques like 4-7-8 breathing, box breathing, and resonance breathing can calm hyperarousal, energize shutdown states, and rebuild nervous system resilience.',
+    keyFacts: [
+      { text: '45% reduction in PTSD symptoms with an 8-week breathwork program', citationIndex: 3 },
+      { text: '73% improvement in heart rate variability (HRV) through consistent breathwork practice', citationIndex: 2 },
+      { text: 'Slow breathing directly activates the vagus nerve, shifting the body from fight-or-flight to rest-and-digest', citationIndex: 1 },
+      { text: 'Resonance frequency breathing (5-6 breaths per minute) maximizes heart rate variability and nervous system resilience', citationIndex: 2 },
+      { text: 'Breathwork can access and release trauma stored in the body when practiced safely with guidance', citationIndex: 7 },
+    ],
+    sparkMoment: 'Your breath is the bridge between body and mind, between past and present—learning to breathe differently is learning to be differently.',
+    practicalExercise: {
+      title: '4-7-8 Calming Breath',
+      steps: [
+        { title: 'Find a comfortable position', description: 'Sit upright with your back supported, or lie down. Place one hand on your chest, one on your belly.' },
+        { title: 'Exhale completely', description: 'Through your mouth, exhale all the air from your lungs with a whooshing sound. This empties your system.' },
+        { title: 'Inhale for 4', description: 'Close your mouth and inhale quietly through your nose for 4 counts. Feel your belly (not chest) rise.' },
+        { title: 'Hold for 7, exhale for 8', description: 'Hold your breath for 7 counts. Then exhale slowly through your mouth for 8 counts. The long exhale activates the vagus nerve. Repeat 4 rounds. Notice: Do you feel calmer? Is your heart rate slower?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Breathing Practice',
+    },
     citations: [
       {
         id: '1',

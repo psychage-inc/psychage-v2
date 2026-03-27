@@ -19,11 +19,31 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     description: `Recovery from depression doesn't end when symptoms improve. Learning to recognize early warning signs and maintain wellness practices prevents relapse and builds lasting resilience.`,
     image: '/images/articles/cat07/cover-066.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 9,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Relapse Prevention', 'Recovery', 'Wellness', 'Self-Management', 'Depression'],
+    summary: 'Depression returns in 50-85% of people within two years without relapse prevention strategies. This guide explains how to recognize your personal early warning signs, maintain protective wellness practices, and create an actionable relapse prevention plan that helps you intervene before depression fully returns.',
+    keyFacts: [
+      { text: 'People who complete CBT have 40% lower relapse rates than those treated with medication alone because therapy teaches lasting skills', citationIndex: 2 },
+      { text: 'Stopping antidepressants prematurely is one of the biggest relapse risks, with 50-60% relapsing within weeks to months', citationIndex: 1 },
+      { text: 'Early warning signs give you a window to intervene before full relapse occurs, and these signs are unique to each individual', citationIndex: 3 },
+      { text: 'Regular exercise has antidepressant effects and protects against relapse even with just moderate walking 30 minutes most days', citationIndex: 4 },
+      { text: 'Mindfulness-based cognitive therapy significantly reduces rumination and prevents depression relapse', citationIndex: 5 },
+    ],
+    sparkMoment: 'Relapse prevention isn\'t about living in fear that depression will return—it\'s about building a life where wellness practices are so integrated that they protect you without constant vigilance.',
+    practicalExercise: {
+      title: 'Create Your Personal Early Warning System',
+      steps: [
+        { title: 'Identify Your Top 5 Warning Signs', description: 'Think back to times when depression was returning. What did you notice first? Write down 5 specific behaviors, thoughts, or feelings that signal trouble for YOU personally.' },
+        { title: 'Rate Your Current State', description: 'On a scale of 1-10, rate how much each warning sign is present right now. This becomes your baseline to track changes over time.' },
+        { title: 'Define Your Action Triggers', description: 'Write down what you\'ll do if 1-2 signs appear (boost self-care), 3-4 signs (contact provider within 48 hours), or 5+ signs (same-day contact).' },
+        { title: 'Schedule Weekly Check-Ins', description: 'Set a recurring calendar reminder to review your warning signs list. Catching changes early is what makes relapse prevention work.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Warning Signs with Mood Journal',
+    },
     citations: [
       {
         id: '1',
@@ -383,6 +403,144 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="understanding-risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding Your Personal Risk Factors
+        </h2>
+        <p className="mb-6">
+          Not everyone faces the same relapse risk. Understanding your specific vulnerability factors helps you create a more targeted prevention plan <Citation id="1" index={1} source="Journal of Affective Disorders" year="2020" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Risk Factors Across Different Situations"
+          columns={['Risk Category', 'Specific Factors', 'Prevention Focus']}
+          items={[
+            { feature: 'Episode History', values: ['Multiple previous episodes (3+)', 'Extended maintenance treatment, longer medication continuation'] },
+            { feature: 'Recovery Quality', values: ['Residual symptoms remaining, incomplete recovery', 'Address all symptoms fully before tapering treatment'] },
+            { feature: 'Life Stressors', values: ['Ongoing chronic stress, major life transitions', 'Proactive stress management, maintain therapy during transitions'] },
+            { feature: 'Social Support', values: ['Limited social network, isolation', 'Deliberately build connections, join support groups'] },
+            { feature: 'Substance Use', values: ['History of alcohol or drug use', 'Monitor use closely, consider addiction treatment if needed'] },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          People with three or more previous episodes face a 90% lifetime recurrence risk. For these individuals, long-term or indefinite maintenance treatment is often recommended rather than attempting to discontinue medication.
+        </p>
+
+        <h2 id="seasonal-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing Seasonal and Anniversary Patterns
+        </h2>
+        <p className="mb-6">
+          Many people experience depression relapse during specific seasons or around anniversaries of difficult life events. Recognizing these patterns lets you increase protective strategies in advance.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'seasonal-pattern',
+              title: 'Seasonal Patterns',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    If your depression has returned during the same season multiple times (often fall/winter), you may have a seasonal vulnerability. Some people develop full seasonal affective disorder, while others simply notice depression is more likely during certain months.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Proactive strategies for seasonal vulnerability:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Start light therapy in late summer/early fall before symptoms appear</li>
+                    <li>Increase therapy session frequency during vulnerable months</li>
+                    <li>Schedule more social activities and outdoor time</li>
+                    <li>Consider temporary medication dose increase (with provider guidance)</li>
+                    <li>Don't dismiss early symptoms as "just the winter blues"</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'anniversary-reactions',
+              title: 'Anniversary Reactions',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Depression can return around the anniversary of traumatic events, losses, or previous depressive episodes. This is called an anniversary reaction, and it's more common than most people realize.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Managing anniversary reactions:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Mark significant dates on your calendar so they don't catch you off guard</li>
+                    <li>Plan support and self-care activities around these dates</li>
+                    <li>Give yourself permission to feel difficult emotions without judgment</li>
+                    <li>Reach out to your support network in advance</li>
+                    <li>Consider a therapy booster session before the anniversary date</li>
+                  </ul>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="building-long-term-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building Long-Term Resilience
+        </h2>
+        <p className="mb-6">
+          Beyond preventing relapse, you can build psychological resilience that makes you less vulnerable to depression over time. This isn't about never feeling sad or stressed---it's about developing the flexibility to cope with life's challenges without tipping into clinical depression.
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Develop Emotional Flexibility',
+              description: (
+                <p>
+                  Learn to experience difficult emotions without avoiding them or getting stuck in them. Mindfulness practice is particularly helpful for this skill.
+                </p>
+              ),
+            },
+            {
+              title: 'Build Multiple Sources of Meaning',
+              description: (
+                <p>
+                  Don't rely on a single area of life (work, relationship, etc.) for all your sense of purpose. Diverse sources of meaning provide stability when one area struggles.
+                </p>
+              ),
+            },
+            {
+              title: 'Maintain Skills During Good Times',
+              description: (
+                <p>
+                  Practice therapy skills, maintain routines, and engage in self-care when you feel well---not just when symptoms appear. This creates habits that protect you.
+                </p>
+              ),
+            },
+            {
+              title: 'Address Problems Early',
+              description: (
+                <p>
+                  Don't let small problems accumulate. Address relationship issues, work stress, and life challenges proactively before they become overwhelming.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Resilience isn't a fixed trait you either have or don't have---it's a set of skills and habits you can deliberately cultivate. Each time you successfully navigate a difficult period without relapsing, you strengthen these skills and increase confidence in your ability to stay well.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Recovery from depression requires active maintenance---symptoms improving doesn't mean treatment should end</li>
+            <li>Identify your personal early warning signs and check in with yourself regularly to catch changes early</li>
+            <li>Continue medication for at least 6-9 months after full remission (longer for recurrent depression)</li>
+            <li>Maintain therapy skills and wellness practices even when you feel well---that's when you need them most</li>
+            <li>Create a written relapse prevention plan that includes warning signs, action steps, and support contacts</li>
+            <li>Seek help early when warning signs appear---early intervention prevents full relapse</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
           Relapse is not failure---it's a common part of depression's course. But with awareness, maintenance of wellness practices, and early intervention when warning signs appear, you can significantly reduce relapse risk and intervene quickly if symptoms return. Recovery is an ongoing process, not a single destination. Resources for relapse prevention planning available through NAMI <Citation id="7" index={7} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
@@ -396,11 +554,31 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     description: 'Knowing how to help a loved one with depression---what to say, what to do, and what to avoid---can make a significant difference in their recovery while protecting your own wellbeing.',
     image: "/images/articles/cat07/cover-067.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 9,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregiving', 'Support', 'Family', 'Relationships', 'Depression'],
+    summary: 'Social support is one of the strongest predictors of depression recovery, but unhelpful support can worsen outcomes. This guide explains effective support strategies, what to say and avoid, when to intervene versus step back, and how to protect your own wellbeing while helping someone you love through depression.',
+    keyFacts: [
+      { text: 'People with strong social support show 70% improvement in depression outcomes, demonstrating that connection matters for recovery', citationIndex: 1 },
+      { text: 'Family involvement doubles treatment adherence rates, making practical support crucial for helping someone stay engaged in therapy', citationIndex: 4 },
+      { text: 'Well-intentioned comments like "just think positive" or "others have it worse" can increase shame and hopelessness rather than helping', citationIndex: 3 },
+      { text: '60% of family members supporting someone with depression report high caregiver burden, highlighting the need for self-care', citationIndex: 5 },
+      { text: 'Validation and presence matter more than advice—your supportive presence combats the profound loneliness of depression', citationIndex: 1 },
+    ],
+    sparkMoment: 'The most powerful thing you can offer someone with depression isn\'t solutions—it\'s the unwavering message that they\'re not alone in this darkness.',
+    practicalExercise: {
+      title: 'Build Your Support Toolkit',
+      steps: [
+        { title: 'Learn Their Warning Signs', description: 'Ask your loved one to share 3-5 early warning signs that depression is worsening. Write these down so you can recognize when they need extra support.' },
+        { title: 'Identify Specific Helpful Actions', description: 'Instead of asking "what can I do?" offer specific options: "Would grocery shopping help?", "Can I watch the kids Saturday?", "Want me to research therapists?" Note what they say yes to.' },
+        { title: 'Create Your Own Support Network', description: 'Identify 2-3 people YOU can talk to when supporting your loved one gets overwhelming. Supporting someone with depression requires support for yourself.' },
+        { title: 'Schedule Regular Check-Ins', description: 'Set recurring calendar reminders to reach out, even with simple messages. Consistency matters more than grand gestures during depression.' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Professional Support Resources',
+    },
     citations: [
       {
         id: '1',
@@ -760,6 +938,181 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="communication-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Effective Communication Patterns
+        </h2>
+        <p className="mb-6">
+          How you communicate about depression significantly impacts both their wellbeing and your relationship <Citation id="2" index={2} source="Journal of Family Psychology" year="2019" tier={1} />. These conversation strategies help maintain connection during difficult times.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'asking-about-depression',
+              title: 'Asking About Their Depression',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Many people worry they'll make things worse by bringing up depression. In reality, asking directly---with compassion and without judgment---shows you care and opens the door for them to share.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Effective ways to ask:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>"How are you doing---really doing?" (signals you want honest answer, not "fine")</li>
+                    <li>"I've noticed you seem [specific observation]. What's going on for you?"</li>
+                    <li>"Are you having a hard time right now? I'm here to listen if you want to talk."</li>
+                    <li>"What does depression feel like for you today?" (invites them to describe experience)</li>
+                  </ul>
+                  <p>
+                    <strong>After they share:</strong> Thank them for opening up. Don't immediately jump to problem-solving. Ask "Do you want me to just listen, or would advice be helpful?"
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'talking-about-treatment',
+              title: 'Discussing Treatment Without Nagging',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    You want them to get help, but pushing too hard can create resistance. Frame treatment discussions around concern, not criticism.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Helpful approach:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>"I care about you and I'm worried. I think talking to someone could really help. Can we look at options together?"</li>
+                    <li>"What's preventing you from seeking help? Maybe I can help with that barrier."</li>
+                    <li>"You've mentioned feeling this way for a while. What would it take for you to try therapy/medication?"</li>
+                    <li>For someone already in treatment: "How's therapy going? Is there anything I can do to help you make it to appointments?"</li>
+                  </ul>
+                  <p>
+                    <strong>What to avoid:</strong> "Why haven't you called a therapist yet?" (blame), "If you really wanted to get better, you'd try harder" (shame), "You need to fix this" (demand).
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'expressing-your-feelings',
+              title: 'Expressing Your Own Feelings',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    It's okay to acknowledge that supporting them is hard for you---as long as you do it without guilt-tripping or making it about you.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Balanced honesty:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2 mb-4">
+                    <li>"I love you and I want to support you. Sometimes I feel unsure what helps most. Can we talk about what you need?"</li>
+                    <li>"I miss doing [activity] together. When you feel up to it, I'd love to [specific plan]."</li>
+                    <li>"I'm feeling overwhelmed too. Can we figure out together how to get through this?"</li>
+                  </ul>
+                  <p>
+                    <strong>What to avoid:</strong> "Your depression is ruining my life" (blame), "I can't handle this anymore" (abandonment), "You're making me depressed too" (guilt).
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="recognizing-progress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing Signs of Progress
+        </h2>
+        <p className="mb-6">
+          Depression recovery is gradual and non-linear. Recognizing small improvements helps you both maintain hope during the slow process of getting better.
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Increased Engagement',
+              description: (
+                <p>
+                  They initiate plans occasionally, respond to texts more quickly, or show interest in activities they've been avoiding. Energy is returning in small doses.
+                </p>
+              ),
+            },
+            {
+              title: 'Emotional Range Returning',
+              description: (
+                <p>
+                  You see glimpses of humor, enthusiasm, or affection. Emotions aren't just flat or negative---there's variation again, even if subtle.
+                </p>
+              ),
+            },
+            {
+              title: 'Better Self-Care',
+              description: (
+                <p>
+                  They're showering regularly, eating more consistently, or maintaining routines. Basic functioning improves before mood fully lifts.
+                </p>
+              ),
+            },
+            {
+              title: 'More Balanced Thinking',
+              description: (
+                <p>
+                  Extreme negative thoughts ("I'm worthless," "Nothing will ever get better") become less frequent. They can see alternative perspectives occasionally.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Progress isn't linear---there will be setbacks. A bad day doesn't erase progress made. Celebrate small wins without pressure: "I noticed you went for a walk today---that's great" is more helpful than "See! You're getting better!" which can feel invalidating if they don't feel better yet.
+        </p>
+
+        <h2 id="long-term-support" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Sustaining Support Over Time
+        </h2>
+        <p className="mb-6">
+          Depression recovery often takes months or years. Long-term support requires pacing yourself and adjusting strategies as their needs change.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Unsustainable Support Patterns',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Dropping everything whenever they're struggling</li>
+                <li>Sacrificing all your own needs and activities</li>
+                <li>Constantly checking in out of anxiety</li>
+                <li>Taking responsibility for their emotions and recovery</li>
+                <li>Isolating yourself from friends to be available 24/7</li>
+              </ul>
+            ),
+          }}
+          after={{
+            title: 'Sustainable Support Patterns',
+            content: (
+              <ul className="list-disc pl-5 space-y-2">
+                <li>Offering consistent, boundaried support (regular check-ins, specific help)</li>
+                <li>Maintaining your own wellbeing practices and relationships</li>
+                <li>Checking in on a schedule that works for both of you</li>
+                <li>Supporting their autonomy while offering help</li>
+                <li>Connecting with others who understand what you're going through</li>
+              </ul>
+            ),
+          }}
+        />
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Depression is a medical condition, not a character flaw---understanding this reduces frustration and blame</li>
+            <li>Validation and presence matter more than solutions or advice</li>
+            <li>Practical support (meals, childcare, appointment logistics) removes barriers when executive function is impaired</li>
+            <li>Avoid minimizing statements, comparisons, or demands to "think positive"</li>
+            <li>Facilitate professional treatment---your support matters, but you can't cure depression alone</li>
+            <li>Take care of yourself---caregiver burnout helps no one and sustainable support requires boundaries</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
           Supporting someone with depression is one of the most challenging and meaningful things you can do. Your presence, validation, and practical help make a real difference---even when it doesn't feel like it. Remember that recovery takes time, professional treatment is essential, and taking care of yourself enables you to be there for them in the long run. Resources for supporters available through NAMI <Citation id="6" index={6} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
@@ -773,11 +1126,31 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     description: 'Loving someone with depression while protecting your own mental health requires boundaries, self-care, and understanding when to seek additional support for both of you.',
     image: "/images/articles/cat07/cover-068.svg",
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Caregiver Burnout', 'Boundaries', 'Support', 'Self-Care', 'Depression'],
+    summary: 'Caregiver burnout affects up to 60% of family members supporting someone with depression, and 55% of partners develop depression themselves. This guide explains how to recognize burnout signs, set healthy boundaries, distinguish what you can and cannot control, and protect your own wellbeing while offering sustainable support.',
+    keyFacts: [
+      { text: '55% of partners of people with depression develop depression themselves, showing how caregiving affects mental health', citationIndex: 1 },
+      { text: 'Compassion fatigue affects 60% of caregivers for people with mental illness due to emotional and physical exhaustion', citationIndex: 2 },
+      { text: 'Setting boundaries is not selfish—it protects both you and the relationship by ensuring support is sustainable long-term', citationIndex: 3 },
+      { text: 'Couples-focused therapy interventions show strong effectiveness for both relationship quality and the depressed partner\'s recovery', citationIndex: 4 },
+      { text: 'Mental illness is not an excuse for abuse—it\'s okay to leave relationships that become toxic or harmful', citationIndex: 1 },
+    ],
+    sparkMoment: 'You cannot pour from an empty cup—taking care of yourself isn\'t selfish, it\'s what makes long-term support possible.',
+    practicalExercise: {
+      title: 'Create Your Burnout Prevention Plan',
+      steps: [
+        { title: 'Identify Your Warning Signs', description: 'List 5 signs that indicate you\'re approaching burnout: resentment, physical exhaustion, withdrawing from friends, neglecting self-care, or feeling hopeless yourself.' },
+        { title: 'Define 3 Non-Negotiable Boundaries', description: 'Write down 3 boundaries that protect your wellbeing: designated personal time, maintaining friendships, continuing hobbies, or weekly therapy for yourself.' },
+        { title: 'List Your Self-Care Supports', description: 'Who can you talk to? What activities recharge you? What professional support might you need? Create a concrete list of resources.' },
+        { title: 'Schedule Weekly Self-Check-Ins', description: 'Set a recurring reminder to ask: Am I experiencing burnout signs? Do I need to adjust boundaries? Have I maintained my own support network this week?' },
+      ],
+      toolLink: '/find-care',
+      toolLabel: 'Find Support for Yourself',
+    },
     citations: [
       {
         id: '1',
@@ -946,6 +1319,136 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           </ul>
         </ArticleCallout>
 
+        <h2 id="common-mistakes" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Caregiver Mistakes (and How to Avoid Them)
+        </h2>
+        <p className="mb-6">
+          Well-intentioned caregivers often fall into patterns that worsen burnout and don't actually help their loved one recover. Recognizing these pitfalls helps you adjust your approach.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'mistake-fixing',
+              title: 'Trying to "Fix" Them',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>The mistake:</strong> Believing your love, support, or advice can cure their depression. Becoming frustrated when they don't "get better" despite your efforts.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Why it backfires:</strong> Depression requires professional treatment. Pressure to recover faster creates guilt and shame. Your frustration becomes another burden they carry.
+                  </p>
+                  <p>
+                    <strong>Better approach:</strong> Accept that you can't cure depression---you can only offer support while they engage in treatment. Your role is companion, not healer.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'mistake-identity',
+              title: 'Making Their Depression Your Identity',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>The mistake:</strong> Your entire life revolves around their condition. You stop seeing friends, abandon hobbies, and define yourself solely as their caregiver.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Why it backfires:</strong> Loss of your own identity leads to resentment and makes you emotionally dependent on their recovery. If their depression doesn't improve, you feel your life has no meaning.
+                  </p>
+                  <p>
+                    <strong>Better approach:</strong> Maintain your identity, interests, and relationships outside of caregiving. You're a person first, caregiver second.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'mistake-enabling',
+              title: 'Enabling vs. Supporting',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>The mistake:</strong> Doing everything for them, accepting complete withdrawal from responsibilities, or protecting them from all consequences.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Why it backfires:</strong> Enabling prevents them from building coping skills and engaging with treatment. Complete lack of responsibility can worsen depression by removing all sense of agency and accomplishment.
+                  </p>
+                  <p>
+                    <strong>Better approach:</strong> Offer support while maintaining appropriate expectations. Help with barriers to treatment, but don't remove all life responsibilities. Balance accommodation with gentle encouragement.
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'mistake-crisis-mode',
+              title: 'Living in Perpetual Crisis Mode',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    <strong>The mistake:</strong> Treating every bad day as an emergency. Constant hypervigilance and anxiety about their mental state.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Why it backfires:</strong> Chronic stress exhausts you and makes calm, consistent support impossible. Treating fluctuations as crises can amplify their distress.
+                  </p>
+                  <p>
+                    <strong>Better approach:</strong> Learn to distinguish between normal depression fluctuations and true emergencies requiring immediate intervention. Save crisis-level responses for actual crises (suicidal ideation, severe dysfunction).
+                  </p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="daily-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Daily Self-Care Strategies
+        </h2>
+        <p className="mb-6">
+          Grand self-care plans often fail because they're not realistic. These small, daily practices are more effective than occasional big gestures.
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Micro-Breaks Throughout the Day',
+              description: (
+                <p>
+                  5-10 minute breaks to step outside, do breathing exercises, or listen to music. These prevent emotional flooding and maintain your capacity to be present.
+                </p>
+              ),
+            },
+            {
+              title: 'One Non-Negotiable Daily Activity',
+              description: (
+                <p>
+                  One thing you do for yourself every day: morning coffee alone, evening walk, reading before bed. Protect this time even when they're struggling.
+                </p>
+              ),
+            },
+            {
+              title: 'Weekly Connection Outside the Home',
+              description: (
+                <p>
+                  At least one weekly social interaction that has nothing to do with their depression: lunch with a friend, hobby group, exercise class. Maintain connections to your life beyond caregiving.
+                </p>
+              ),
+            },
+            {
+              title: 'Regular Emotional Release',
+              description: (
+                <p>
+                  Journal, talk to your therapist, vent to a trusted friend, or attend a caregiver support group. You need spaces to express frustration, fear, and resentment without guilt.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          These practices might feel selfish when your loved one is suffering. They're not. They're what allows you to show up day after day without burning out or becoming resentful.
+        </p>
+
         <h2 id="what-you-can-control" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What You Can and Can't Control
         </h2>
@@ -1085,6 +1588,18 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           <li><strong>Remember your humanity:</strong> Feeling frustrated, tired, or resentful doesn't make you a bad partner/family member. It makes you human.</li>
         </ul>
 
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Caregiver burnout is common and preventable---recognize warning signs before you're completely depleted</li>
+            <li>Setting boundaries is essential, not selfish---sustainable support requires protecting your own wellbeing</li>
+            <li>You cannot fix their depression through love and support alone---professional treatment is necessary</li>
+            <li>Maintain your own identity, relationships, and activities outside of the caregiver role</li>
+            <li>Small daily self-care practices (micro-breaks, one non-negotiable activity) are more effective than grand plans</li>
+            <li>Couples or family therapy can address relationship strain and improve outcomes for both of you</li>
+            <li>It's okay to leave if the relationship becomes abusive or unsustainably harmful to your health</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
           Loving someone with depression is hard. Taking care of yourself while doing so isn't selfish---it's essential for both of you. You can be compassionate and set boundaries. You can offer support and maintain your own life. And if you need to step back or leave to protect yourself, that's valid. Resources for caregivers available through NAMI Family Support <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
@@ -1098,11 +1613,31 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     description: `Setbacks don't mean failure. Understanding that depression recovery involves ups and downs---and learning how to navigate rough patches---is essential for long-term wellbeing.`,
     image: '/images/articles/cat07/cover-069.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Recovery', 'Setbacks', 'Progress', 'Resilience', 'Depression'],
+    summary: 'Depression recovery follows an irregular upward trajectory with inevitable setbacks—and that\'s completely normal. Research shows that how you respond to setbacks (with self-compassion versus self-criticism) predicts long-term outcomes. This guide explains the difference between setbacks and relapses, common triggers, and strategies for navigating rough patches without losing hope.',
+    keyFacts: [
+      { text: 'Most people experience multiple setbacks during depression recovery—these temporary dips don\'t erase progress made', citationIndex: 1 },
+      { text: 'How you respond to setbacks matters more than whether they occur—self-compassion predicts better long-term recovery than self-criticism', citationIndex: 4 },
+      { text: 'Setbacks usually have identifiable triggers: life stress, sleep disruption, abandoning wellness practices, or biological factors', citationIndex: 2 },
+      { text: 'A growth mindset that views setbacks as learning opportunities rather than failures improves resilience and recovery trajectories', citationIndex: 3 },
+      { text: 'Setbacks are temporary dips that improve with self-care, while relapses are sustained returns requiring professional intervention', citationIndex: 2 },
+    ],
+    sparkMoment: 'Recovery isn\'t a straight line from dark to light—it\'s a messy, winding path where some days you take three steps forward and two steps back, and that\'s exactly what healing looks like.',
+    practicalExercise: {
+      title: 'Build Your Setback Response Kit',
+      steps: [
+        { title: 'List Your Common Triggers', description: 'Review past setbacks. What preceded them? Write down 3-5 patterns: sleep disruption, certain stressors, abandoning routines, seasonal changes, etc.' },
+        { title: 'Create Your "Bad Day" Protocol', description: 'Write specific actions for rough days: call supportive friend, use 3 CBT skills, 15-minute walk, review progress journal, reach out to therapist if persists 3+ days.' },
+        { title: 'Document Your Progress', description: 'Keep a recovery timeline showing overall trajectory with setbacks marked. Visual proof that you\'re moving forward despite dips combats hopelessness during rough patches.' },
+        { title: 'Write Self-Compassion Reminders', description: 'Draft 3-5 statements to read during setbacks: "This is temporary", "Setbacks don\'t erase progress", "I\'ve gotten through this before", "I deserve compassion, not criticism".' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Recovery Journey',
+    },
     citations: [
       {
         id: '1',
@@ -1415,6 +1950,89 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           </p>
         </ArticleCallout>
 
+        <h2 id="common-setback-patterns" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Recognizing Common Setback Patterns
+        </h2>
+        <p className="mb-6">
+          Understanding typical setback patterns helps you anticipate and respond to them more effectively <Citation id="1" index={1} source="Journal of Affective Disorders" year="2021" tier={1} />.
+        </p>
+
+        <ComparisonTable
+          title="Common Recovery Patterns"
+          columns={['Pattern Type', 'What It Looks Like', 'What Helps']}
+          items={[
+            { feature: 'The Honeymoon Crash', values: ['Feel great initially, then crash when reality sets in', 'Expect this, don\'t panic, maintain wellness practices during good periods'] },
+            { feature: 'Seasonal Dips', values: ['Regular worsening during specific seasons (often fall/winter)', 'Anticipate vulnerable periods, start interventions early (light therapy, increased support)'] },
+            { feature: 'The Stress Cascade', values: ['One stressor triggers others, mood tanks rapidly', 'Address problems early before they accumulate, use problem-solving skills proactively'] },
+            { feature: 'Medication Adjustment Valleys', values: ['Symptoms worsen temporarily when changing medications', 'Increase support during transitions, don\'t stop medication without medical guidance'] },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Identifying your personal pattern allows you to develop targeted strategies. If you know you struggle every November, you can plan increased support in October rather than being caught off guard.
+        </p>
+
+        <h2 id="building-resilience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building Long-Term Resilience to Setbacks
+        </h2>
+        <p className="mb-6">
+          With each setback you navigate successfully, you build confidence and skills that make future setbacks less disruptive and shorter-lasting.
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Create a Setback Toolbox',
+              description: (
+                <p>
+                  Compile specific strategies that have worked during past rough patches: particular coping skills, supportive people to contact, activities that help, grounding techniques. Having this ready prevents decision paralysis when mood drops.
+                </p>
+              ),
+            },
+            {
+              title: 'Practice Skills During Good Times',
+              description: (
+                <p>
+                  Don't wait until crisis to use therapy skills. Practicing thought challenging, behavioral activation, and mindfulness when you feel okay makes them accessible when you don't.
+                </p>
+              ),
+            },
+            {
+              title: 'Develop Multiple Sources of Wellbeing',
+              description: (
+                <p>
+                  Don't rely on a single area of life for all your sense of purpose. Diverse sources (relationships, hobbies, work, community, spirituality) provide stability when one area struggles.
+                </p>
+              ),
+            },
+            {
+              title: 'Debrief After Setbacks',
+              description: (
+                <p>
+                  When you emerge from a rough patch, reflect: What triggered it? What helped? What made it worse? This learning prevents repeating patterns and builds confidence.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Resilience isn't about never having setbacks---it's about recovering from them faster, with less disruption, and with more self-compassion each time.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Setbacks are normal during depression recovery—they don't erase your progress or mean treatment failed</li>
+            <li>How you respond to setbacks (self-compassion vs. self-criticism) matters more than whether they occur</li>
+            <li>Most setbacks have identifiable triggers: stress, sleep disruption, abandoning wellness practices, or biological factors</li>
+            <li>Distinguish between setbacks (temporary dips responding to self-care) and relapses (sustained worsening requiring professional help)</li>
+            <li>Maintain wellness practices during good times—they're what's keeping you well</li>
+            <li>Track overall trajectory rather than day-to-day fluctuations to see progress</li>
+            <li>With each successfully navigated setback, you build skills and confidence for future challenges</li>
+          </ul>
+        </ArticleCallout>
+
         <p className="mb-6 mt-8">
           Setbacks are not failure---they're part of the recovery process. Learning to navigate them without catastrophizing, using your coping skills even when you don't feel like it, and maintaining perspective that rough patches are temporary builds the resilience that prevents future relapses. Recovery isn't about never having another bad day---it's about knowing you can get through them. Resources for managing setbacks available through NAMI <Citation id="5" index={5} source="National Alliance on Mental Illness" year="2023" tier={3} />.
         </p>
@@ -1428,11 +2046,31 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
     description: `Recovery from depression isn't just about symptom relief---it's about rebuilding a life worth living. Learn how to rediscover meaning, purpose, and authentic connection after depression.`,
     image: '/images/articles/cat07/cover-070.svg',
     category: CATEGORY_DEPRESSION_GRIEF,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Recovery', 'Meaning', 'Purpose', 'Post-Depression Life', 'Resilience'],
+    summary: 'Recovery from depression goes beyond symptom relief—it requires actively rebuilding meaning, purpose, and connection. Having a strong sense of purpose protects against relapse in 73% of people, and 65% experience post-traumatic growth that makes them stronger than before. This guide shows how to rediscover what matters, reconnect authentically, rebuild identity, and create a life worth protecting.',
+    keyFacts: [
+      { text: '73% of people report that a stronger sense of purpose protects against depression relapse, showing meaning matters for prevention', citationIndex: 2 },
+      { text: '65% of people experience post-traumatic growth after depression—emerging stronger, more resilient, and with clearer values', citationIndex: 4 },
+      { text: '80% say reconnecting with others authentically was essential to their recovery journey', citationIndex: 3 },
+      { text: 'Values-based living (aligning actions with what matters most) significantly improves wellbeing and life satisfaction', citationIndex: 5 },
+      { text: 'Rediscovering purpose often involves exploration and experimentation rather than returning to pre-depression life unchanged', citationIndex: 1 },
+    ],
+    sparkMoment: 'Depression strips away the life you had—recovery is your chance to build the life you actually want, not just reconstruct what was there before.',
+    practicalExercise: {
+      title: 'Map Your Values and Build Meaning',
+      steps: [
+        { title: 'Identify Your Core Values', description: 'List 5-7 things that matter most to you: relationships, growth, creativity, helping others, health, authenticity, etc. These are your compass for rebuilding.' },
+        { title: 'Rate Current Alignment', description: 'For each value, rate 1-10: How much is my current life aligned with this value? Where are the biggest gaps between what matters and how you live?' },
+        { title: 'Choose One Small Action Per Value', description: 'Don\'t overhaul everything at once. Pick ONE small action for each important value: "Call one friend weekly" (connection), "Take one art class" (creativity), "Volunteer 2 hours monthly" (contribution).' },
+        { title: 'Schedule Weekly Values Check-In', description: 'Set recurring reminder: Am I living according to my values this week? What one thing can I do in the next 7 days to move closer to meaningful life?' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Wellness Tools',
+    },
     citations: [
       {
         id: '1',
@@ -1726,6 +2364,124 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
           Growth doesn't justify suffering, and you don't have to be grateful for depression. But you can acknowledge: "I didn't choose this, but I learned from it."
         </p>
 
+        <h2 id="navigating-transition" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating the Transition from "Sick" to "Well"
+        </h2>
+        <p className="mb-6">
+          The shift from being depressed to being recovered can be surprisingly disorienting. Your identity, routines, and relationships were organized around illness. Now what?
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'identity-shift',
+              title: 'The Identity Transition',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    You may have spent months or years as "the depressed one." Family made accommodations, work adjusted expectations, friends learned to check in. As you recover, these dynamics shift---and that can feel strange.
+                  </p>
+                  <p className="mb-4">
+                    <strong>How to navigate:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Give yourself and others time to adjust to the "new normal"</li>
+                    <li>Communicate: "I'm doing better, and I appreciate the support. I'm figuring out what I need now."</li>
+                    <li>Don't rush to prove you're "all better"---recovery is gradual</li>
+                    <li>It's okay if you miss the simplicity of sick role expectations sometimes (while still preferring wellness)</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'fear-happiness',
+              title: 'Fear of Happiness',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Many people recovering from depression feel anxious when they start feeling good. "What if it doesn't last?" "What if I jinx it?" "I don't trust this feeling."
+                  </p>
+                  <p className="mb-4">
+                    <strong>This is normal.</strong> Depression taught you that good feelings are temporary and collapse is inevitable. Relearning to trust positive emotions takes time.
+                  </p>
+                  <p>
+                    <strong>What helps:</strong> Allow yourself to feel good while acknowledging uncertainty. "I feel happy right now. I don't know what tomorrow brings, but I can experience today."
+                  </p>
+                </div>
+              ),
+            },
+            {
+              id: 'expectations-pressure',
+              title: 'Managing Others\' Expectations',
+              content: (
+                <div>
+                  <p className="mb-4">
+                    Family and friends may expect you to immediately return to pre-depression functioning. "You're better now, right? Back to normal?" This pressure can be overwhelming.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Set realistic expectations:</strong>
+                  </p>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>"I'm improving, but I still need to pace myself and maintain boundaries."</li>
+                    <li>"Recovery isn't instant. I'm building capacity gradually."</li>
+                    <li>"I appreciate your excitement that I'm better, and I need space to figure out what wellness looks like for me."</li>
+                  </ul>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="practical-reconnection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Strategies for Reconnecting
+        </h2>
+        <p className="mb-6">
+          Depression often damages relationships through withdrawal, irritability, and inability to reciprocate. Reconnecting requires intention and sometimes repair work <Citation id="3" index={3} source="American Journal of Psychiatry" year="2019" tier={1} />.
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Start with Safe People',
+              description: (
+                <p>
+                  Reconnect first with people who showed up during depression---they've already proven they're trustworthy. Low-stakes interactions: coffee, a walk, a phone call.
+                </p>
+              ),
+            },
+            {
+              title: 'Be Honest About the Gap',
+              description: (
+                <p>
+                  You don't have to explain everything, but acknowledge: "I went through a really hard time and withdrew. I'm sorry I disappeared. I value our friendship and want to reconnect."
+                </p>
+              ),
+            },
+            {
+              title: 'Rebuild Slowly',
+              description: (
+                <p>
+                  Don't try to immediately resume pre-depression levels of social activity. Start with one or two connections and build gradually as energy allows.
+                </p>
+              ),
+            },
+            {
+              title: 'Seek New Connections Too',
+              description: (
+                <p>
+                  Join groups based on current interests, not just reviving old friendships. New connections don't carry the weight of your depression history.
+                </p>
+              ),
+            },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Some relationships won't survive depression---and that's okay. Focus on cultivating connections with people who see you as a whole person, not just your diagnosis.
+        </p>
+
         <h2 id="building-life-worth-protecting" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Building a Life Worth Protecting
         </h2>
@@ -1770,6 +2526,18 @@ export const treatmentRecoveryMovingForwardArticlesB: Article[] = [
             },
           ]}
         />
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Recovery goes beyond symptom relief—actively rebuild meaning, purpose, and connection to create a life worth living</li>
+            <li>73% of people with strong sense of purpose are protected against relapse—meaning matters for prevention</li>
+            <li>Reconnecting authentically (not superficially) requires vulnerability, honesty, and sometimes repair work</li>
+            <li>Identity shifts from "the depressed one" to someone who includes but transcends their illness experience</li>
+            <li>65% experience post-traumatic growth—emerging stronger with clearer values, greater empathy, and deeper self-knowledge</li>
+            <li>Values-based living (aligning actions with what matters most) generates sustainable wellbeing and purpose</li>
+            <li>The transition from sick to well can be disorienting—give yourself and others time to adjust to the new normal</li>
+          </ul>
+        </ArticleCallout>
 
         <p className="mb-6 mt-8">
           Recovery from depression isn't a return to who you were before---it's becoming someone new. Someone who knows suffering and chose to rebuild. Someone who found meaning not despite depression but through the process of recovering from it. Life after depression can be richer, more authentic, and more intentional than life before---if you actively construct it that way. Resources for recovery and growth available through NAMI <Citation id="6" index={6} source="National Alliance on Mental Illness" year="2023" tier={3} />.

@@ -25,6 +25,26 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Screen Time', 'Research', 'Mental Health', 'Digital Health'],
+    summary: 'Research shows the relationship between screen time and health is complex. Not all screen time is equal—passive consumption harms more than active creation. Evidence suggests under 2 hours daily is low-risk for most people, with harm accelerating above 3-4 hours, especially for recreational use before bed.',
+    keyFacts: [
+      { text: 'The average American adult spends over 7 hours per day looking at screens, with children and teens spending even more', citationIndex: 1 },
+      { text: 'A dose-response relationship exists: each additional hour of daily screen time predicts a 9% increase in depression symptoms among adolescents', citationIndex: 9 },
+      { text: 'Screen use within 2 hours of bedtime consistently predicts poor sleep quality, with every hour of evening screen time reducing total sleep by an average of 12 minutes', citationIndex: 2 },
+      { text: 'Teens with 5+ hours of daily recreational screen time have double the obesity risk compared to those with less than 2 hours', citationIndex: 8 },
+      { text: 'The ABCD study found associations between high screen time in childhood and thinner cortex in brain areas related to critical thinking and reasoning', citationIndex: 3 },
+    ],
+    sparkMoment: 'The question isn\'t whether screens are bad—it\'s what they replace in your life. When screens displace sleep, movement, or real connection, that\'s when the harm begins.',
+    practicalExercise: {
+      title: 'Your Personal Screen Time Audit',
+      steps: [
+        { title: 'Track for One Week', description: 'Use built-in screen time tools (Screen Time on iOS, Digital Wellbeing on Android) to track your daily usage without judgment.' },
+        { title: 'Categorize Your Use', description: 'Break down your screen time by type: work, social media, entertainment, education, and communication. Note when you use screens most.' },
+        { title: 'Identify What\'s Displaced', description: 'Ask yourself: What am I missing because of screen time? Sleep? Exercise? In-person conversations? Creative pursuits?' },
+        { title: 'Set One Reduction Goal', description: 'Choose 1-2 categories or time periods to reduce by 30 minutes per day. Start with the easiest change, not the biggest.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Changes',
+    },
     citations: [
       {
         id: '1',
@@ -330,6 +350,26 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Addiction', 'Smartphone Use', 'Research', 'Behavior'],
+    summary: 'While "smartphone addiction" isn\'t officially recognized in the DSM-5, research reveals that 10-15% of heavy users exhibit genuine addiction-like symptoms including loss of control, tolerance, and withdrawal. Brain imaging shows patterns similar to substance addiction, though most phone overuse is a strong habit rather than clinical addiction.',
+    keyFacts: [
+      { text: '23% of adults and 35% of adolescents show signs of problematic smartphone use or dependency', citationIndex: 1 },
+      { text: 'People with problematic smartphone use have double the risk of major depression and 2.5 times higher anxiety disorder rates', citationIndex: 5 },
+      { text: 'Brain scans reveal that notifications and likes trigger dopamine release in the same regions activated by drugs and alcohol', citationIndex: 6 },
+      { text: 'Heavy phone users forced to abstain for 24 hours experienced anxiety, irritability, and phantom vibration sensations similar to substance withdrawal', citationIndex: 7 },
+      { text: 'Problematic users average 96+ daily phone pickups compared to 58 for normal users, with total screen time of 6+ hours versus 3.5 hours', citationIndex: 1 },
+    ],
+    sparkMoment: 'The question isn\'t whether it\'s "really" addiction—it\'s whether your phone controls you or you control your phone.',
+    practicalExercise: {
+      title: '24-Hour Phone Reset',
+      steps: [
+        { title: 'Choose a Low-Stakes Day', description: 'Pick a weekend day or time off when you won\'t need your phone for work. Tell close contacts you\'ll be unreachable.' },
+        { title: 'Put It Away', description: 'Turn off your phone and put it somewhere you can\'t see it. Not silent mode—completely off. Use a watch or alarm clock for time.' },
+        { title: 'Notice Your Urges', description: 'Pay attention to when you want to reach for your phone. What triggers the urge? Boredom? Anxiety? Habit? Write down what you notice.' },
+        { title: 'Fill the Void', description: 'Have a plan for what you\'ll do instead: read, walk, cook, create something. Notice how it feels to be fully present without the pull to check your phone.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Experience',
+    },
     citations: [
       {
         id: '1',
@@ -644,6 +684,26 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Design Psychology', 'Addiction', 'Technology', 'Awareness'],
+    summary: 'Apps are deliberately engineered to capture attention through psychological manipulation. Using variable rewards, infinite scroll, and dark patterns, platforms profit by keeping users engaged regardless of wellbeing. Understanding these design tactics—from the Hook Model to social validation loops—is the first step toward resisting them.',
+    keyFacts: [
+      { text: '89% of top apps use at least one dark pattern—design choices that trick users into actions against their interest', citationIndex: 5 },
+      { text: 'Unpredictable rewards trigger more dopamine release than predictable rewards, making features like pull-to-refresh and notifications as addictive as slot machines', citationIndex: 3 },
+      { text: 'Infinite scroll leads to 3x longer session times by eliminating natural stopping points', citationIndex: 5 },
+      { text: 'Turning off notifications reduces app use by 47%, demonstrating how much engagement is driven by external triggers rather than genuine desire', citationIndex: 7 },
+      { text: 'Social media platforms quantify approval through likes and hearts, activating the brain\'s reward center—particularly in adolescents hypersensitive to peer feedback', citationIndex: 6 },
+    ],
+    sparkMoment: 'If you\'re not paying for the product, you are the product. Your attention is the commodity being sold.',
+    practicalExercise: {
+      title: 'Disable the Hooks',
+      steps: [
+        { title: 'Turn Off All Non-Essential Notifications', description: 'Keep only calls and texts from specific contacts. Everything else can wait. This removes external triggers that hijack your attention.' },
+        { title: 'Remove Social Media from Your Home Screen', description: 'Put apps in folders or later pages. Adding even minimal friction reduces automatic opening by up to 40%.' },
+        { title: 'Enable Grayscale Mode', description: 'Color is stimulating. Grayscale makes your phone visually dull. Find it in accessibility settings on both iOS and Android.' },
+        { title: 'Disable Autoplay Everywhere', description: 'YouTube, Netflix, TikTok—turn off automatic next video. Force yourself to actively choose to continue rather than passively consuming.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Attention',
+    },
     citations: [
       {
         id: '1',
@@ -944,6 +1004,26 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Digital Minimalism', 'Lifestyle', 'Intentional Living', 'Technology'],
+    summary: 'Digital minimalism is a philosophy of technology use focused on a small number of carefully selected activities that strongly support your core values. Unlike total tech avoidance, it emphasizes intentional use—keeping tools that serve you, eliminating those that distract or drain attention.',
+    keyFacts: [
+      { text: 'A 30-day digital declutter trial resulted in 32% reduction in anxiety, 27% improvement in sleep quality, and 41% increase in life satisfaction', citationIndex: 2 },
+      { text: 'Participants who completed a 30-day digital declutter maintained 60% of their reductions six months later, showing lasting behavior change', citationIndex: 7 },
+      { text: 'Intentional technology use predicts better mental health outcomes than total avoidance, supporting a curated approach over complete rejection', citationIndex: 3 },
+      { text: 'Digital minimalists report greater life satisfaction partly because they invest reclaimed time in more rewarding activities like creative pursuits and skill-building', citationIndex: 4 },
+      { text: 'The benefits stem from reduced decision fatigue, reclaimed time, decreased social comparison, improved focus, and increased sense of agency over one\'s own attention', citationIndex: 2 },
+    ],
+    sparkMoment: 'Technology should serve your life, not define it. The question is not "Can I live without this?" but "Does this support what matters most?"',
+    practicalExercise: {
+      title: '30-Day Digital Declutter',
+      steps: [
+        { title: 'Define Your Core Values', description: 'Write down 3-5 things that matter most to you—connection, creativity, learning, health, family. These will guide all tech decisions.' },
+        { title: 'Take a 30-Day Break', description: 'Delete or log out of all optional technologies. Keep only what\'s required for work or essential communication. This isn\'t permanent—it\'s a reset.' },
+        { title: 'Explore High-Quality Alternatives', description: 'Fill reclaimed time with activities aligned with your values: read, create, move, connect in person. Notice what you genuinely miss and what you don\'t.' },
+        { title: 'Reintroduce Selectively', description: 'After 30 days, reintroduce only tools that strongly support your core values. For each, define: Why am I using this? How will I use it? When will I use it?' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Wellness Tools',
+    },
     citations: [
       {
         id: '1',
@@ -1231,6 +1311,26 @@ export const screenTimeDigitalHabitsArticlesA: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Parenting', 'Child Development', 'Screen Time', 'Guidelines'],
+    summary: 'Young brains develop rapidly and screen time affects different ages differently. Evidence-based guidelines recommend no screens before 18 months, 1 hour maximum for ages 2-5, and balanced limits for older children that prioritize sleep, activity, and face-to-face interaction. Quality and context matter as much as quantity.',
+    keyFacts: [
+      { text: '90% of brain development occurs by age 5, with over 1,000 neural connections formed per second in the first years—making early screen exposure particularly impactful', citationIndex: 8 },
+      { text: 'Every additional hour of daily screen time before age 2 predicts a 49% increase in expressive language delays by age 3', citationIndex: 3 },
+      { text: 'Parent-child talk decreases by 50% when screens are present, displacing critical face-to-face interaction that builds language and social skills', citationIndex: 2 },
+      { text: 'Preschoolers with more than 2 hours of daily screen time scored lower on attention and executive function tests in a dose-dependent relationship', citationIndex: 4 },
+      { text: 'Teens with 3+ hours of daily social media use have double the risk of depression, with sleep suffering most when screens are used late at night', citationIndex: 2 },
+    ],
+    sparkMoment: 'Screen time guidelines protect developing brains. It\'s not overprotective—it\'s giving your child\'s brain the environment it needs to develop fully.',
+    practicalExercise: {
+      title: 'Create Your Family Media Plan',
+      steps: [
+        { title: 'Define Screen-Free Zones', description: 'No devices at meals, in bedrooms overnight, or during family activities. Physical boundaries support behavioral boundaries.' },
+        { title: 'Set Screen-Free Times', description: 'No screens 1 hour before bed, during homework (unless required), or during playdates. Protect sleep and social development.' },
+        { title: 'Choose Quality Content Together', description: 'Age-appropriate, educational when possible, co-viewed when feasible. Watch with your child and talk about what you see.' },
+        { title: 'Model Healthy Use', description: 'Kids learn from watching you. Put your phone away during family time. Your behavior sets the standard.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Family Patterns',
+    },
     citations: [
       {
         id: '1',

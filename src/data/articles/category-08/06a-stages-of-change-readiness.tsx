@@ -10,6 +10,9 @@ import {
   ArticleAccordion,
   ProgressSteps,
   BeforeAfter,
+  QuoteBlock,
+  MythVsFactBlock,
+  HighlightBox,
 } from '../../../components/article/blocks';
 
 // ============================================================================
@@ -24,11 +27,31 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     description: "Discover the research-backed framework for understanding behavior change, identify which stage you're in, and learn what helps you move forward.",
     image: '/images/articles/cat08/cover-051.svg',
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Behavior Change', 'Self-Awareness', 'Personal Growth', 'Decision Making'],
+    summary: 'The Stages of Change Model reveals that lasting behavior change unfolds through five predictable stages—from not yet seeing a problem to maintaining new habits long-term. Understanding which stage you\'re in allows you to choose strategies that match your readiness, dramatically increasing your chances of success and replacing frustration with compassion.',
+    keyFacts: [
+      { text: 'The Transtheoretical Model was developed by studying people who successfully quit smoking without formal treatment, revealing that change is a process, not a single event.', citationIndex: 1 },
+      { text: 'Most people cycle through the stages multiple times before achieving lasting change—relapse to earlier stages is normal and can actually deepen learning.', citationIndex: 2 },
+      { text: 'Interventions matched to a person\'s current stage are significantly more effective than generic one-size-fits-all approaches.', citationIndex: 3 },
+      { text: 'People often overestimate their readiness, believing they\'re in preparation when still in contemplation, which leads to premature action and failure.', citationIndex: 6 },
+      { text: 'The action stage, though most visible, typically lasts only 1-6 months—maintenance is where the real work of sustaining change happens.', citationIndex: 7 },
+    ],
+    sparkMoment: 'Progress doesn\'t require jumping directly to action—moving from not seeing a problem to thinking about it is progress, and each stage builds the foundation for lasting change.',
+    practicalExercise: {
+      title: 'Identify Your Stage and Next Step',
+      steps: [
+        { title: 'Choose a Behavior', description: 'Pick one specific behavior you\'ve been thinking about changing (or that others have mentioned to you).' },
+        { title: 'Answer Stage Questions', description: 'Honestly assess which stage description matches your current thoughts and feelings about this behavior.' },
+        { title: 'Review Matched Strategies', description: 'Read the strategies designed for your current stage—not the stage you wish you were in.' },
+        { title: 'Take One Stage-Appropriate Action', description: 'Choose just one strategy from your stage and commit to it this week. If you\'re in pre-contemplation, that might be journaling. If you\'re in preparation, it might be setting a start date.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -118,6 +141,15 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </p>
         </div>
 
+        <StatCard
+          stats={[
+            { value: 40, suffix: '%', label: 'In pre-contemplation or contemplation stages', description: 'Not yet taking action on intended changes' },
+            { value: 20, suffix: '%', label: 'In preparation stage', description: 'Planning to change within 30 days' },
+            { value: 40, suffix: '%', label: 'In action or maintenance', description: 'Actively changing or sustaining new behaviors' },
+          ]}
+          source="American Psychologist, 1992"
+        />
+
         <h2
           id="the-five-stages"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -126,8 +158,13 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </h2>
         <p className="mb-6">
           The model identifies five distinct stages, each with different thoughts, emotions, and
-          readiness levels. Most people don't progress linearly --- movement back and forth between
-          stages is normal <Citation id="3" index={4} source="Journal of Substance Abuse" year="1992" tier={1} />.
+          readiness levels. Most people don't progress linearly—movement back and forth between
+          stages is normal <Citation id="3" index={4} source="Journal of Substance Abuse" year="1992" tier={1} />. Understanding these stages helps you meet yourself where you are, rather than where you think you "should" be.
+        </p>
+        <p className="mb-6">
+          Each stage represents not just different behaviors, but fundamentally different
+          psychological states. What works brilliantly in one stage can backfire completely in
+          another. That's why knowing your stage is more important than knowing your goal.
         </p>
 
         <ProgressSteps
@@ -387,6 +424,81 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </ArticleCallout>
 
         <h2
+          id="real-world-examples"
+          className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
+        >
+          Recognizing the Stages in Real Life
+        </h2>
+        <p className="mb-6">
+          Understanding the stages conceptually is one thing—recognizing them in your own life is
+          another. Here are examples of how the same goal looks different across stages:
+        </p>
+
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Example: Starting Regular Exercise
+          </h3>
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+            <li>
+              <strong>Pre-Contemplation:</strong> "I'm fine the way I am. My doctor keeps bringing
+              it up, but I don't see why I need to exercise more."
+            </li>
+            <li>
+              <strong>Contemplation:</strong> "I know I should exercise. I can list all the
+              benefits. But I'm so busy, and I'm not sure I'd stick with it anyway."
+            </li>
+            <li>
+              <strong>Preparation:</strong> "I bought running shoes last week and asked my friend
+              about the gym she goes to. I'm planning to start next Monday."
+            </li>
+            <li>
+              <strong>Action:</strong> "I've been going to the gym three times a week for the past
+              two months. Some days I really don't want to go, but I do it anyway."
+            </li>
+            <li>
+              <strong>Maintenance:</strong> "Exercise is just part of my routine now. I've been
+              doing it for over a year and it feels weird when I miss a workout."
+            </li>
+          </ul>
+        </div>
+
+        <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg mb-6">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Example: Addressing Excessive Drinking
+          </h3>
+          <ul className="list-disc pl-6 space-y-3 text-gray-700 dark:text-gray-300">
+            <li>
+              <strong>Pre-Contemplation:</strong> "Everyone drinks. I don't have a problem—I just
+              like to unwind. People are making a bigger deal out of this than it is."
+            </li>
+            <li>
+              <strong>Contemplation:</strong> "Maybe I am drinking more than I should. It's
+              affecting my sleep and my partner is worried. But social situations are hard without
+              it."
+            </li>
+            <li>
+              <strong>Preparation:</strong> "I've decided to cut back to no more than two drinks
+              per occasion. I've told my close friends, and I'm keeping a tracking app on my phone."
+            </li>
+            <li>
+              <strong>Action:</strong> "I've been sticking to my limit for six weeks. I've had to
+              turn down drinks, which feels awkward, but I'm noticing I sleep better."
+            </li>
+            <li>
+              <strong>Maintenance:</strong> "I've kept my new pattern for eight months now. I
+              rarely feel tempted to overdo it, and I've found other ways to relax."
+            </li>
+          </ul>
+        </div>
+
+        <p className="mb-6">
+          Notice how the same external behavior (not exercising, drinking) can come from completely
+          different internal states. The intervention that works depends on addressing the stage,
+          not just the behavior. Telling someone in pre-contemplation to "just sign up for a gym"
+          will likely fail—they need awareness first, not action strategies.
+        </p>
+
+        <h2
           id="moving-forward"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
         >
@@ -471,9 +583,47 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </ul>
         <p className="mb-6">
           Therapists trained in motivational interviewing can help you explore ambivalence, build
-          intrinsic motivation, and navigate the stages with compassion and skill. Remember: asking
-          for help is itself a sign of readiness for change.
+          intrinsic motivation, and navigate the stages with compassion and skill. Motivational
+          interviewing is specifically designed to meet people at their current stage and gently
+          guide them forward—without pressure, judgment, or prescriptive advice.
         </p>
+        <p className="mb-6">
+          Professional support is particularly valuable for behaviors that have clinical
+          implications or deep psychological roots. A therapist can help you understand what's
+          keeping you stuck, work through the emotional barriers to change, and develop
+          stage-appropriate strategies that match both your readiness and your unique circumstances.
+        </p>
+        <p className="mb-6">
+          Remember: asking for help is itself a sign of readiness for change. If you're even
+          considering whether you might benefit from support, you've already moved past
+          pre-contemplation into contemplation—and that's progress worth acknowledging.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Change unfolds through five predictable stages—knowing your stage is more important
+              than knowing your goal.
+            </li>
+            <li>
+              Matching strategies to your current stage dramatically increases success. What works
+              in contemplation backfires in pre-contemplation.
+            </li>
+            <li>
+              Most people cycle through the stages multiple times. Each cycle builds learning and
+              increases the chances of lasting change.
+            </li>
+            <li>
+              Progress doesn't require jumping to action. Moving from not seeing a problem to
+              thinking about it is real, meaningful progress.
+            </li>
+            <li>
+              If you've been stuck in the same stage for months or years, professional support from
+              a therapist trained in motivational interviewing can help you move forward with
+              compassion and skill.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -485,11 +635,31 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     description: "Understand the first stage of change where awareness is limited, explore why resistance emerges, and learn gentle approaches that can shift perspective.",
     image: "/images/articles/cat08/cover-052.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Awareness', 'Behavior Change', 'Denial', 'Motivation'],
+    summary: 'Pre-contemplation is the stage where change hasn\'t yet entered awareness—not because of stubbornness, but because the person genuinely doesn\'t see a problem, actively denies it, feels demoralized from past failures, or rationalizes the behavior. Understanding this stage reveals why pressure backfires and what gentle approaches actually help awareness emerge.',
+    keyFacts: [
+      { text: 'Pre-contemplation is defined by lack of awareness that a behavior needs to change—taking forms including genuine unawareness, active denial, demoralization, or rationalization.', citationIndex: 1 },
+      { text: '40% of people in treatment programs are in pre-contemplation, and 70% drop out when pushed to action too quickly.', citationIndex: 4 },
+      { text: 'Confrontation and pressure at this stage typically backfire, strengthening resistance rather than building awareness.', citationIndex: 7 },
+      { text: 'Stage-matched interventions show 3x higher success rates than generic one-size-fits-all approaches for people in pre-contemplation.', citationIndex: 3 },
+      { text: 'Moving from pre-contemplation to contemplation is progress—ambivalence and questioning are healthy signs of emerging awareness.', citationIndex: 6 },
+    ],
+    sparkMoment: 'The goal in pre-contemplation isn\'t to force awareness—it\'s to create conditions where curiosity can emerge naturally, without shame or pressure.',
+    practicalExercise: {
+      title: 'The Five-Minute Curiosity Practice',
+      steps: [
+        { title: 'Choose a Behavior Others Mention', description: 'Pick something others have brought up that you\'ve dismissed or defended. Don\'t commit to changing it—just hold it in mind.' },
+        { title: 'Ask Without Judging', description: 'Complete this sentence honestly: "If this behavior were a problem, the reason would be..." Write whatever comes up, even if you disagree with it.' },
+        { title: 'Imagine Someone You Respect', description: 'If someone you deeply admire were exhibiting this same behavior, what would you notice? What would you be curious about?' },
+        { title: 'Notice Your Reaction', description: 'Did answering these questions create defensiveness, curiosity, or something else? There\'s no right answer—just data about where you are.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Explore Your Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -741,9 +911,16 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <p>
             In clinical settings, pre-contemplation is sometimes misinterpreted as resistance or
             lack of cooperation. Research shows that this stage reflects a mismatch between the
-            intervention and the person's readiness --- not a character flaw <Citation id="4" index={6} source="Guilford Press" year="2012" tier={5} />.
+            intervention and the person's readiness—not a character flaw <Citation id="4" index={6} source="Guilford Press" year="2012" tier={5} />.
           </p>
         </ArticleCallout>
+
+        <QuoteBlock
+          quote="The pre-contemplator's resistance is not a character flaw or a lack of knowledge, but rather a natural defensive response to being told they have a problem they don't yet see. The clinical art is creating safety for awareness to emerge."
+          attribution="William Miller"
+          role="Co-founder of Motivational Interviewing"
+          source="Motivational Interviewing: Preparing People for Change"
+        />
 
         <h2
           id="how-to-support-someone-in-pre-contemplation"
@@ -789,8 +966,51 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6 mt-6">
           The core principle: <strong>raise awareness, don't force awareness</strong>. Questions
           like "Have you noticed...?" or "How do you feel about...?" invite reflection without
-          triggering defenses. The goal isn't to win an argument --- it's to plant seeds that can
+          triggering defenses. The goal isn't to win an argument—it's to plant seeds that can
           grow over time.
+        </p>
+
+        <ComparisonTable
+          title="Conversation Examples: Ineffective vs. Effective"
+          columns={['Scenario', 'Ineffective (Creates Resistance)', 'Effective (Invites Reflection)']}
+          items={[
+            {
+              feature: 'Excessive Work Hours',
+              values: [
+                '"You need to cut back. You\'re burning out."',
+                '"I\'ve noticed you seem tired lately. How are you feeling about your workload?"',
+              ],
+            },
+            {
+              feature: 'Drinking Pattern',
+              values: [
+                '"You have a drinking problem and you need help."',
+                '"I care about you and I\'ve been worried. Can we talk about what I\'ve been noticing?"',
+              ],
+            },
+            {
+              feature: 'Relationship Issues',
+              values: [
+                '"If you don\'t change, I\'m leaving."',
+                '"I miss feeling connected to you. What do you think is happening between us?"',
+              ],
+            },
+            {
+              feature: 'Health Behaviors',
+              values: [
+                '"Your doctor said you need to lose weight."',
+                '"How do you feel after your doctor appointment? Anything on your mind?"',
+              ],
+            },
+          ]}
+          highlightColumn={2}
+        />
+
+        <p className="mb-6 mt-6">
+          Notice how the effective approaches share observations, express feelings, and ask
+          questions—rather than making diagnoses, issuing ultimatums, or prescribing solutions.
+          This communicates respect for the person's autonomy while still expressing genuine
+          concern.
         </p>
 
         <h2
@@ -887,9 +1107,35 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         </ul>
         <p className="mb-6">
           Therapists trained in motivational interviewing are skilled at working with
-          pre-contemplation without creating resistance. The goal isn't to convince --- it's to
+          pre-contemplation without creating resistance. The goal isn't to convince—it's to
           create a space where awareness can safely emerge.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Pre-contemplation means lack of awareness, not stubbornness—it takes forms including
+              genuine unawareness, denial, demoralization, and rationalization.
+            </li>
+            <li>
+              Confrontation and pressure at this stage backfire, strengthening defenses rather than
+              building awareness.
+            </li>
+            <li>
+              Effective support involves asking open-ended questions, listening more than talking,
+              and expressing concern without blame or judgment.
+            </li>
+            <li>
+              Progress means awareness beginning to emerge—feeling ambivalent, noticing patterns,
+              or wondering "what if they're right?" are all healthy signs of movement.
+            </li>
+            <li>
+              If the behavior is causing significant harm or communication consistently creates
+              conflict, professional support from a therapist trained in motivational interviewing
+              can help.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -901,11 +1147,31 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     description: "Explore the stage where awareness meets ambivalence, understand why people get stuck weighing pros and cons, and learn strategies to move toward commitment.",
     image: "/images/articles/cat08/cover-053.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Ambivalence', 'Decision Making', 'Behavior Change', 'Self-Awareness'],
+    summary: 'Contemplation is the stage where awareness meets ambivalence—you clearly see both why you should change and why you shouldn\'t, leaving you stuck in "I know I should, but..." Many people spend years in this stage, perpetually thinking about change without committing. Understanding the decisional balance and what keeps you stuck is key to moving forward.',
+    keyFacts: [
+      { text: 'Contemplation is characterized by awareness of a problem and simultaneous ambivalence—both reasons to change and reasons to stay feel equally valid.', citationIndex: 1 },
+      { text: 'The average person spends 2 years in the contemplation stage, with 60% of New Year\'s resolutions failing by February due to premature action without resolved ambivalence.', citationIndex: 2 },
+      { text: 'The decisional balance has four quadrants: benefits of staying the same, costs of staying the same, benefits of changing, costs of changing—movement happens when this balance tips.', citationIndex: 4 },
+      { text: 'Chronic contemplation often stems from fear of failure, loss aversion, lack of self-efficacy, unclear values, or real social and environmental barriers.', citationIndex: 5 },
+      { text: 'Replacing "but" with "and" in self-talk acknowledges both sides of ambivalence without letting one negate the other, making the paralysis less intense.', citationIndex: 3 },
+    ],
+    sparkMoment: 'Contemplation isn\'t a character flaw or lack of willpower—it\'s a predictable stage that requires specific strategies to resolve ambivalence, not forced action.',
+    practicalExercise: {
+      title: 'The Four-Quadrant Decisional Balance',
+      steps: [
+        { title: 'List Benefits of Staying the Same', description: 'Be honest about what you\'d lose if you changed. What does this behavior provide? Comfort? Identity? Social connection?' },
+        { title: 'List Costs of Staying the Same', description: 'What are the real consequences if nothing changes? How does it conflict with your values or who you want to become?' },
+        { title: 'List Benefits of Changing', description: 'Paint a specific picture. How would your life be different? What would you gain that matters to you?' },
+        { title: 'List Costs of Changing', description: 'What would change require? Loss of familiarity? Effort? Vulnerability? Acknowledge the genuine barriers.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Reflect on Your Journey',
+    },
     citations: [
       {
         id: '1',
@@ -1051,9 +1317,24 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
         <p className="mb-6 mt-6">
           Movement out of contemplation happens when the balance tips: the costs of staying the
           same begin to outweigh the benefits, and the benefits of change start to outweigh the
-          costs. But tipping that balance is rarely a logical process --- it's emotional and
+          costs. But tipping that balance is rarely a logical process—it's emotional and
           value-driven.
         </p>
+
+        <div className="space-y-4 my-8">
+          <MythVsFactBlock
+            myth="If I just had more willpower, I'd stop being stuck and take action."
+            fact="Contemplation isn't a willpower problem—it's an ambivalence problem. Forcing action before resolving internal conflict leads to failure and return to contemplation."
+          />
+          <MythVsFactBlock
+            myth="Thinking about change is the same as procrastinating."
+            fact="Contemplation is a necessary stage where you're weighing real costs and benefits. Rushing past it into premature action is why most New Year's resolutions fail by February."
+          />
+          <MythVsFactBlock
+            myth="I should just pick a side and commit already."
+            fact="Both sides of your ambivalence are valid. The goal isn't to suppress one side—it's to understand what each side is protecting and let the balance tip naturally."
+          />
+        </div>
 
         <h2
           id="why-people-get-stuck"
@@ -1312,11 +1593,38 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           <li>You need help identifying barriers or clarifying values</li>
         </ul>
         <p className="mb-6">
-          Therapists skilled in this stage don't push you toward action --- they help you explore
+          Therapists skilled in this stage don't push you toward action—they help you explore
           your ambivalence with curiosity and compassion, creating the conditions for your own
           commitment to emerge naturally. The decision to change has to come from within, but that
           doesn't mean you have to figure it out alone.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Contemplation means simultaneously wanting and not wanting change—both sides feel
+              genuine, creating a decisional balance that keeps you stuck.
+            </li>
+            <li>
+              People spend an average of 2 years in this stage. Chronic contemplation isn't laziness
+              or weakness—it serves a psychological function and requires specific strategies to
+              resolve.
+            </li>
+            <li>
+              The goal isn't forced action, but tipping the decisional balance by connecting change
+              to your values, confronting the costs of staying the same, and building self-efficacy.
+            </li>
+            <li>
+              Replacing "but" with "and" in your self-talk validates both sides of ambivalence
+              without letting one negate the other.
+            </li>
+            <li>
+              If you've been in contemplation for over a year or it's causing distress, working with
+              a therapist trained in motivational interviewing can help you move forward with
+              compassion.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1328,11 +1636,31 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     description: 'Learn how to transition from thinking about change to planning for it, build a strong foundation for action, and avoid common pitfalls that derail progress.',
     image: "/images/articles/cat08/cover-054.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Planning', 'Goal Setting', 'Behavior Change', 'Preparation'],
+    summary: 'The preparation stage bridges the gap between deciding to change and actually doing it—typically lasting less than 30 days with a specific start date set. Research shows that thorough preparation dramatically increases success rates, yet many people skip this stage entirely, jumping from contemplation straight into action and wondering why motivation fades so quickly.',
+    keyFacts: [
+      { text: 'People who thoroughly prepare before taking action are significantly more likely to succeed—comprehensive preparation yields 78% success rates versus just 12% with no preparation.', citationIndex: 2 },
+      { text: 'Specific implementation intentions (when, where, how) are far more effective than vague goals like "I\'ll start exercising."', citationIndex: 4 },
+      { text: 'Mental contrasting—vividly imagining both success and obstacles—is more effective than positive visualization alone for building realistic plans.', citationIndex: 5 },
+      { text: 'Environmental restructuring (changing your surroundings to make desired behavior easier and undesired behavior harder) is one of the most powerful preparation strategies.', citationIndex: 7 },
+      { text: 'Taking small preliminary steps during preparation builds self-efficacy and psychological commitment, making full action more likely.', citationIndex: 8 },
+    ],
+    sparkMoment: 'Preparation is like pouring the foundation for a house—the action stage is where visible work happens, but preparation is what determines whether that work will last.',
+    practicalExercise: {
+      title: 'Build Your Action Plan',
+      steps: [
+        { title: 'Set Your Start Date', description: 'Choose a specific date within the next 30 days. Write it down. Tell at least two people.' },
+        { title: 'Write Implementation Intentions', description: 'Complete: "I will [behavior] on [days] at [time] in [location]." Be as specific as possible.' },
+        { title: 'Create If-Then Plans', description: 'List 3 likely obstacles. For each, write: "If [obstacle], then I will [response]." Make your responses concrete and realistic.' },
+        { title: 'Restructure One Thing', description: 'Change one element of your environment today to support your goal. Remove a barrier or add a supportive cue.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Planning Tools',
+    },
     citations: [
       {
         id: '1',
@@ -1430,6 +1758,15 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           </p>
         </ArticleCallout>
 
+        <StatCard
+          stats={[
+            { value: 78, suffix: '%', label: 'Success rate with comprehensive preparation' },
+            { value: 12, suffix: '%', label: 'Success rate with no preparation' },
+            { value: 30, suffix: ' days', label: 'Typical preparation stage duration' },
+          ]}
+          source="Psychological Bulletin, 2006"
+        />
+
         <h2
           id="signs-youre-in-preparation"
           className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32"
@@ -1452,6 +1789,15 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           If you're still asking "Should I?" you're probably in contemplation. If you're asking
           'How will I make this work?" you're in preparation.
         </p>
+
+        <HighlightBox variant="emphasis">
+          <p>
+            <strong>The key shift from contemplation to preparation:</strong> You stop debating
+            whether to change and start planning how to change. The question moves from "Should I?"
+            to "How will I make this work?" This internal shift signals genuine readiness for
+            action.
+          </p>
+        </HighlightBox>
 
         <h2
           id="the-four-pillars-of-preparation"
@@ -1738,6 +2084,32 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           tailored to your specific circumstances, strengths, and barriers. Remember: asking for
           help during preparation is strategic, not a sign of weakness.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              Preparation typically lasts less than 30 days and involves a specific start date—if
+              you're still asking "Should I?" you're in contemplation, not preparation.
+            </li>
+            <li>
+              Comprehensive preparation yields 78% success rates versus just 12% with no
+              preparation—the time invested here pays massive dividends.
+            </li>
+            <li>
+              The four pillars of effective preparation: detailed action plan (specific
+              implementation intentions), obstacle planning (if-then plans), building support
+              systems, and environmental restructuring.
+            </li>
+            <li>
+              Taking small preliminary steps during preparation builds self-efficacy and
+              psychological commitment before the official start date.
+            </li>
+            <li>
+              Beware of analysis paralysis—if you've been "preparing" for more than a month or
+              repeatedly postponing your start date, you may have slipped back into contemplation.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1749,11 +2121,31 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
     description: 'Navigate the most visible and challenging stage of change, understand why motivation fades, and learn strategies to sustain new behaviors through early obstacles.',
     image: "/images/articles/cat08/cover-055.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 8,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Action Stage', 'Habit Formation', 'Motivation', 'Perseverance'],
+    summary: 'The action stage is where change becomes visible—actively modifying behavior and investing significant time and energy for typically 3-6 months. The first 90 days are the most critical, unfolding in predictable phases from honeymoon excitement to motivation dips to habit consolidation, with relapse risk highest in the early weeks.',
+    keyFacts: [
+      { text: 'The action stage typically lasts from the moment you begin until about six months, when the behavior starts feeling more automatic and you transition into maintenance.', citationIndex: 1 },
+      { text: 'The average time to form a new habit is 66 days, with significant variation depending on complexity—simple behaviors automate faster than complex ones.', citationIndex: 2 },
+      { text: 'Self-monitoring—consistently tracking your behavior—doubles success rates according to a meta-analysis of 138 studies.', citationIndex: 5 },
+      { text: 'A single lapse doesn\'t erase progress, but two consecutive misses can begin a relapse pattern—the "never miss twice" rule protects against spiraling.', citationIndex: 7 },
+      { text: 'Maintaining the frequency of a behavior in reduced form during difficult periods is more important than maintaining intensity—you can always ramp back up.', citationIndex: 9 },
+    ],
+    sparkMoment: 'Motivation is unreliable in the action stage—what bridges the motivation-volition gap isn\'t feeling like it, but systems, habits, and choosing to do it anyway.',
+    practicalExercise: {
+      title: 'Build Your Action-Stage Toolkit',
+      steps: [
+        { title: 'Set Up Daily Tracking', description: 'Choose a method (app, journal, or calendar) and commit to tracking every day for the first 90 days. Track not just whether you did it, but context: time, mood, obstacles.' },
+        { title: 'Create 3 If-Then Plans', description: 'Identify the 3 most likely obstacles you\'ll face. For each, write: "If [obstacle], then I will [response]." Make responses specific and realistic.' },
+        { title: 'Schedule Weekly Check-Ins', description: 'Set a recurring calendar reminder to review your week, celebrate wins, and adjust your plan based on what you\'re learning.' },
+        { title: 'Never Miss Twice', description: 'If you miss a day, get back on track immediately the next day—even if it\'s a scaled-down version. Write this rule somewhere visible.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Journey',
+    },
     citations: [
       {
         id: '1',
@@ -1975,13 +2367,20 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
 
         <ArticleCallout variant="did-you-know" title="The Motivation-Volition Gap">
           <p>
-            Researchers identify a "motivation-volition gap" --- the space between wanting to do
+            Researchers identify a "motivation-volition gap"—the space between wanting to do
             something and actually doing it <Citation id="3" index={4} source="Journal of Sport and Exercise Psychology" year="2002" tier={1} />. In the
             preparation stage, motivation is high. But in action, motivation is unreliable. What
-            bridges the gap? Systems, habits, and volitional control --- choosing to do it even when
+            bridges the gap? Systems, habits, and volitional control—choosing to do it even when
             you don't feel like it.
           </p>
         </ArticleCallout>
+
+        <QuoteBlock
+          quote="You do not rise to the level of your goals. You fall to the level of your systems. If you want better results, focus on the systems that will create those results."
+          attribution="James Clear"
+          role="Author of Atomic Habits"
+          source="Atomic Habits"
+        />
 
         <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
           Strategies to Sustain Action When Motivation Drops
@@ -2210,8 +2609,34 @@ export const stagesOfChangeReadinessArticlesA: Article[] = [
           Therapists, coaches, and support groups can provide the accountability, skill-building,
           and emotional support that make the difference between relapse and lasting change.
           Remember: the action stage is the hardest phase. Asking for help doesn't mean you've
-          failed --- it means you're serious about succeeding.
+          failed—it means you're serious about succeeding.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>
+              The action stage lasts 3-6 months and unfolds in four phases: honeymoon (days 1-21),
+              friction (days 22-45), critical window (days 46-66), and consolidation (days 67-90).
+            </li>
+            <li>
+              Motivation fades predictably around week three—this is normal, not failure. What
+              sustains you is systems (tracking, if-then plans, environment) and volitional control,
+              not feeling like it.
+            </li>
+            <li>
+              Self-monitoring doubles success rates. Track not just whether you did the behavior,
+              but context (time, mood, obstacles) to identify patterns.
+            </li>
+            <li>
+              A single lapse is normal; two consecutive misses can begin relapse. The "never miss
+              twice" rule and self-compassionate thinking protect against shame spirals.
+            </li>
+            <li>
+              When life makes the full behavior impossible, scale back to a minimal viable version
+              to maintain frequency and identity—you can always ramp back up later.
+            </li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },

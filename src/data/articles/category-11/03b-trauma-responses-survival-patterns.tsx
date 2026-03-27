@@ -25,6 +25,26 @@ export const traumaResponsesArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Avoidance', 'PTSD', 'Exposure Therapy', 'Safety Behaviors'],
+    summary: 'Trauma-related avoidance provides short-term relief but prevents long-term healing by reinforcing fear and shrinking your world. While staying away from triggers feels protective, it teaches your brain that danger still exists—blocking emotional processing and keeping PTSD alive. Breaking the avoidance cycle through gradual exposure helps you reclaim your life.',
+    keyFacts: [
+      { text: '95% of PTSD sufferers report significant avoidance behaviors as a coping mechanism', citationIndex: 4 },
+      { text: 'High avoidance at 3 months predicts 72% symptom severity vs. 45% with low avoidance', citationIndex: 1 },
+      { text: 'People with chronic avoidance are 2x more likely to develop chronic PTSD', citationIndex: 4 },
+      { text: 'Exposure therapy helps by teaching the nervous system that triggers are safe, reducing fear through habituation', citationIndex: 7 },
+      { text: 'Avoidance generalizes over time—starting with one place and spreading to entire categories of situations', citationIndex: 5 },
+    ],
+    sparkMoment: 'Every time you avoid, you teach your brain that the danger is still there—but every time you approach what you fear and survive, you teach it that healing is possible.',
+    practicalExercise: {
+      title: 'Build Your Exposure Hierarchy',
+      steps: [
+        { title: 'List avoided situations', description: 'Write down everything you avoid: places, people, activities, thoughts, feelings. Be specific and honest.' },
+        { title: 'Rate distress levels', description: 'For each item, rate from 0 (not distressing) to 10 (extremely distressing). This helps you see your starting points.' },
+        { title: 'Start with easiest', description: 'Choose something rated 3-4. Success builds on success—start where you can win.' },
+        { title: 'Approach gradually', description: 'Break the feared situation into smaller steps. If avoiding driving, start by sitting in the car. Then drive around the block. Build slowly.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Assess Your Symptoms',
+    },
     citations: [
       {
         id: '1',
@@ -368,6 +388,26 @@ export const traumaResponsesArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trauma Bonding', 'Abuse', 'Codependency', 'Intermittent Reinforcement'],
+    summary: `Trauma bonding is an intense emotional attachment to an abuser, created through cycles of harm and intermittent kindness. This biochemical addiction makes leaving feel impossible, not because you're weak, but because unpredictable rewards hijack the brain's attachment systems. Breaking the bond requires naming it, creating distance, and rewiring trauma-formed neural pathways.`,
+    keyFacts: [
+      { text: 'It takes an average of 7 attempts to leave an abusive relationship before successfully exiting', citationIndex: 6 },
+      { text: '85% of domestic violence victims report experiencing trauma bonding with their abuser', citationIndex: 6 },
+      { text: 'Intermittent reinforcement—unpredictable cycles of punishment and reward—creates addiction-like attachment stronger than consistent behavior', citationIndex: 3 },
+      { text: '50% of people who leave abusive relationships return within 6 months due to biochemical withdrawal symptoms', citationIndex: 6 },
+      { text: 'The honeymoon phase after abuse triggers dopamine and oxytocin release, creating neurochemical bonds similar to romantic love and substance addiction', citationIndex: 3 },
+    ],
+    sparkMoment: `You're not bonded to the person—you're bonded to the hope of who they could be, and that hope is more addictive than any drug.`,
+    practicalExercise: {
+      title: 'Reality Check: Breaking the Fantasy',
+      steps: [
+        { title: 'Make two lists', description: `List 1: Who they actually are (their consistent behaviors). List 2: Who you hope they'll become. Notice the gap between reality and fantasy.` },
+        { title: 'Track the cycle', description: 'For two weeks, note when tension builds, when abuse happens, when reconciliation occurs, and when calm returns. Seeing the pattern breaks denial.' },
+        { title: 'Reconnect with one person', description: `Reach out to someone you've isolated from—a friend, family member, or therapist. Abusers thrive in isolation; connection weakens the bond.` },
+        { title: 'Name it daily', description: 'Each morning, say out loud: "This is a trauma bond, not love." Naming creates psychological distance and interrupts the attachment narrative.' },
+      ],
+      toolLink: '/crisis',
+      toolLabel: 'Get Crisis Support',
+    },
     citations: [
       {
         id: '1',
@@ -681,6 +721,26 @@ export const traumaResponsesArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Blame', 'Shame', 'Cognitive Distortions', 'Survivor Guilt'],
+    summary: 'Self-blame after trauma is a cognitive distortion that provides an illusion of control but prevents healing. Survivors replay events cataloging every choice that might have prevented trauma, but this narrative is built on hindsight bias and just-world beliefs—not truth. Challenging these distortions through evidence-based techniques and self-compassion is essential for recovery.',
+    keyFacts: [
+      { text: '60-90% of trauma survivors experience significant self-blame as they process traumatic events', citationIndex: 1 },
+      { text: 'Self-blame is one of the strongest predictors of PTSD severity and chronicity—the more you blame yourself, the harder healing becomes', citationIndex: 2 },
+      { text: '75% of sexual assault survivors report self-blame, often saying "I should have done something different"', citationIndex: 2 },
+      { text: 'Chronic self-blame increases PTSD severity by 2x compared to those who can reframe responsibility accurately', citationIndex: 2 },
+      { text: `Characterological self-blame ("I'm broken") is more harmful than behavioral self-blame ("I made a mistake") and strongly linked to depression`, citationIndex: 5 },
+    ],
+    sparkMoment: `Self-blame isn't truth—it's your mind trying to restore order to chaos by trading accuracy for the illusion that you had control.`,
+    practicalExercise: {
+      title: 'Challenge Self-Blame Cognitions',
+      steps: [
+        { title: 'Write the thought', description: `Get specific: "It's my fault because I didn't scream" or "I should have known better." Write it exactly as it sounds in your head.` },
+        { title: 'Name the distortion', description: 'Identify the cognitive pattern: Is this hindsight bias? Just-world belief? All-or-nothing thinking? Naming it creates distance.' },
+        { title: 'Gather evidence', description: 'Ask: What evidence supports this thought? What contradicts it? Would I blame a friend in the same situation? Be honest and balanced.' },
+        { title: 'Rewrite it', description: `Create an evidence-based alternative: "I froze because my nervous system detected inescapable danger. That's biology, not failure."` },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Thoughts',
+    },
     citations: [
       {
         id: '1',
@@ -973,6 +1033,26 @@ export const traumaResponsesArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Anger', 'Trauma Recovery', 'Emotional Processing', 'Suppressed Emotions'],
+    summary: 'Anger after trauma is a natural, protective emotion that signals injustice and restores agency—but society teaches survivors to suppress it. While healthy anger mobilizes healing and creates boundaries, suppressed anger turns inward as depression, manifests as physical illness, or leaks out as chronic irritability. Expressing anger safely through somatic practices and therapy is essential for trauma recovery.',
+    keyFacts: [
+      { text: '68% of trauma survivors report suppressing anger due to social pressure to be forgiving rather than confrontational', citationIndex: 1 },
+      { text: 'Chronic anger suppression is linked to 3x higher PTSD severity compared to appropriate anger expression', citationIndex: 1 },
+      { text: `82% of women report being told "don't be angry" after assault, reflecting gender conditioning around anger expression`, citationIndex: 6 },
+      { text: 'Survivors who can access and express anger appropriately recover faster from PTSD than those who suppress it', citationIndex: 3 },
+      { text: 'Suppressed anger often manifests as depression, chronic pain, autoimmune flare-ups, and addiction as the body tries to process the unexpressed emotion', citationIndex: 1 },
+    ],
+    sparkMoment: `Anger is the emotion that knows you were wronged—it's not the enemy, it's the part of you that knows you deserved better.`,
+    practicalExercise: {
+      title: 'Safe Anger Release Practice',
+      steps: [
+        { title: 'Name it out loud', description: 'Say: "I am angry." Not frustrated or annoyed—angry. Naming it gives the emotion permission to exist and be processed.' },
+        { title: 'Write an unsent letter', description: 'Pour out everything you want to say to the person who hurt you. Hold nothing back. Then burn it, rip it up, or keep it—whatever feels cathartic.' },
+        { title: 'Move the energy', description: 'Hit a pillow, tear paper, stomp, dance aggressively, or do high-intensity exercise. Anger is physical—let the energy discharge through your body.' },
+        { title: 'Channel it into action', description: 'Anger wants change. Volunteer for a cause, set a boundary, create art, or advocate. Let anger fuel something meaningful beyond yourself.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotions',
+    },
     citations: [
       {
         id: '1',
@@ -1043,7 +1123,7 @@ export const traumaResponsesArticlesB: Article[] = [
       <>
         <div id="introduction" className="scroll-mt-32">
           <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            After trauma, you're allowed to be sad. You're allowed to be scared. But anger? That's dangerous. Unproductive. A sign you haven't 'moved on." So you push it down. You perform forgiveness you don't feel. You smile through rage because angry victims aren't sympathetic. But here's what no one tells you: <strong>anger is the emotion that knows you were wronged</strong>. And suppressing it doesn't make you heal faster---it keeps you stuck.
+            After trauma, you`re allowed to be sad. You're allowed to be scared. But anger? That's dangerous. Unproductive. A sign you haven't `moved on." So you push it down. You perform forgiveness you don't feel. You smile through rage because angry victims aren't sympathetic. But here's what no one tells you: <strong>anger is the emotion that knows you were wronged</strong>. And suppressing it doesn't make you heal faster---it keeps you stuck.
           </p>
           <p className="mb-6">
             Research shows that anger is one of the most common---and most suppressed---emotions in trauma survivors <Citation id="1" index={1} source="Journal of Traumatic Stress" year="2021" tier={1} />. And while society treats anger as a problem to solve, psychologists increasingly recognize it as a <strong>protective, adaptive response</strong> that signals you're ready to reclaim your power <Citation id="2" index={2} source="Clinical Psychology Review" year="2020" tier={1} />.
@@ -1218,6 +1298,26 @@ export const traumaResponsesArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Hyperarousal', 'Hypervigilance', 'PTSD', 'Nervous System Regulation'],
+    summary: 'Hyperarousal is a state where your nervous system remains stuck in fight-or-flight mode long after trauma ends, unable to distinguish between past threat and present safety. This dysregulation causes constant scanning for danger, exaggerated startle responses, sleep disturbances, and chronic tension. Healing requires body-based interventions that calm the sympathetic nervous system and restore nervous system flexibility.',
+    keyFacts: [
+      { text: '92% of PTSD sufferers report hyperarousal symptoms including hypervigilance and exaggerated startle responses', citationIndex: 2 },
+      { text: '70% of people with PTSD experience chronic sleep disturbances as hyperarousal prevents the nervous system from downregulating at night', citationIndex: 2 },
+      { text: 'Chronic hyperarousal results in cortisol levels 4x higher than baseline, creating long-term health consequences', citationIndex: 2 },
+      { text: 'After trauma, the amygdala becomes hypersensitive while the prefrontal cortex becomes underactive—creating constant false alarms the brain cannot override', citationIndex: 4 },
+      { text: 'Mindfulness-based interventions reduce hyperarousal by training the brain to observe sensations without reacting, breaking the threat-detection cycle', citationIndex: 5 },
+    ],
+    sparkMoment: `Your body isn't broken—it's doing what it was trained to do: protect you. With the right support, you can teach it a new truth: the danger has passed.`,
+    practicalExercise: {
+      title: 'Vagus Nerve Activation for Calm',
+      steps: [
+        { title: 'Practice 4-7-8 breathing', description: `Inhale for 4 counts, hold for 7, exhale for 8. This activates the vagus nerve—your nervous system's "brake pedal"—slowing your heart rate.` },
+        { title: 'Cold water on face', description: 'Splash cold water on your face or hold an ice pack to your cheeks. This triggers the dive reflex, instantly calming the sympathetic nervous system.' },
+        { title: 'Hum or sing', description: 'Humming, singing, or chanting stimulates the vagus nerve through vibration in your throat. Do this for 2-3 minutes when you feel wired.' },
+        { title: 'Progressive muscle relaxation', description: 'Tense each muscle group for 5 seconds, then release. Start with your feet and work up to your face. This teaches your body what relaxation feels like.' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Improve Your Sleep',
+    },
     citations: [
       {
         id: '1',

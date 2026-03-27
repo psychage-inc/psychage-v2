@@ -1296,7 +1296,7 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
     description: 'Learn how to practice Progressive Muscle Relaxation, a proven technique for reducing physical tension, anxiety, and stress by systematically tensing and releasing muscle groups.',
     image: "/images/articles/cat09/cover-045.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1565,6 +1565,116 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
           <li><strong>Differential relaxation</strong>: Throughout the day, scan for tension and release it while continuing activities</li>
         </ul>
 
+        <h2 id="history-and-development" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The History and Development of PMR
+        </h2>
+        <p className="mb-6">
+          Progressive Muscle Relaxation was developed by American physician Edmund Jacobson in the 1920s. Jacobson noticed that muscle tension accompanied anxious thoughts, and hypothesized that reducing muscle tension would reduce anxiety.
+        </p>
+        <p className="mb-6">
+          His original protocol was intensive—involving up to 50 sessions and focusing on extremely subtle muscle tensions. Over decades, the technique was simplified for practical use while retaining effectiveness. The modern version takes 10-20 minutes and can be learned in a single session, making it accessible for widespread use.
+        </p>
+        <p className="mb-6">
+          Jacobson's core insight—that we cannot be physically relaxed and psychologically anxious simultaneously—has been validated repeatedly. PMR breaks the anxiety-tension cycle by addressing the physical component directly.
+        </p>
+
+        <h2 id="why-pmr-works-better" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why PMR Works Better Than Just "Trying to Relax"
+        </h2>
+        <p className="mb-6">
+          Most people, when told to "just relax," struggle because they don't know what relaxation actually feels like. PMR solves this through:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Creating contrast</strong>: By tensing first, you create a clear reference point. The release feels dramatically different from tension</li>
+          <li><strong>Building body literacy</strong>: You learn which muscles you habitually tense and can target them specifically</li>
+          <li><strong>Giving concrete instructions</strong>: "Tense your fists for 5 seconds" is actionable in a way "relax" is not</li>
+          <li><strong>Creating agency</strong>: You actively produce relaxation rather than passively waiting for it</li>
+        </ul>
+        <p className="mb-6">
+          This is why PMR works for people who find meditation frustrating. PMR gives you something specific to do, making it easier to focus and see results.
+        </p>
+
+        <h2 id="real-world-applications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Applications
+        </h2>
+        <p className="mb-6">
+          PMR is used across diverse settings <Citation id="6" index={6} source="Journal of Psychosomatic Research" year="2018" tier={1} />:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Clinical Settings
+        </h3>
+        <p className="mb-6">
+          Therapists integrate PMR into treatment for anxiety disorders, panic disorder, PTSD, and insomnia. It's often taught early in therapy as a foundational coping skill.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Medical Environments
+        </h3>
+        <p className="mb-6">
+          Hospitals teach PMR to patients undergoing chemotherapy, preparing for surgery, or managing chronic pain. It reduces procedure-related anxiety and improves pain tolerance.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Performance Settings
+        </h3>
+        <p className="mb-6">
+          Athletes, musicians, and public speakers use PMR to manage pre-performance nerves. The technique helps convert nervous energy into focused calm.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Workplace Wellness
+        </h3>
+        <p className="mb-6">
+          Many corporate wellness programs teach abbreviated PMR for stress management. A quick 5-minute version can be done at a desk between meetings.
+        </p>
+
+        <h2 id="building-consistent-practice" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building a Consistent Practice
+        </h2>
+        <p className="mb-6">
+          Like any skill, PMR improves with regular practice. Here's how to build the habit:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Start with Guided Practice
+        </h3>
+        <p className="mb-6">
+          Use audio recordings or apps for the first 1-2 weeks. Guided practice helps you learn the sequence without having to remember what comes next. Many free PMR recordings are available on YouTube, Insight Timer, or Spotify.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Pick a Consistent Time
+        </h3>
+        <p className="mb-6">
+          Morning practice sets a regulated baseline for the day. Evening practice aids sleep. Pick whichever you'll actually do consistently. Anchor it to an existing routine—after your morning coffee, before your evening shower.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Track Your Practice
+        </h3>
+        <p className="mb-6">
+          Note your anxiety or tension level before and after on a 0-10 scale. Seeing the numbers drop reinforces the practice. Most people notice 2-4 point reductions even in early sessions.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Progress to Independence
+        </h3>
+        <p className="mb-6">
+          After 2-4 weeks of guided practice, try practicing without audio. Then experiment with shortened versions for quick stress relief throughout the day.
+        </p>
+
+        <ArticleCallout variant="action-plan">
+          <p className="mb-4"><strong>30-Day PMR Challenge:</strong></p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li><strong>Week 1</strong>: Full 20-minute guided PMR daily, practice same time each day</li>
+            <li><strong>Week 2</strong>: Full PMR daily, start alternating guided and unguided</li>
+            <li><strong>Week 3</strong>: Full PMR 4x/week, 4-muscle-group version 3x/week</li>
+            <li><strong>Week 4</strong>: Maintenance practice 3-4x/week, use abbreviated versions as needed for acute stress</li>
+          </ul>
+          <p className="mt-4">By day 30, PMR should feel natural and require minimal effort to induce relaxation.</p>
+        </ArticleCallout>
+
         <h2 id="combining-with-other-techniques" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Combining PMR with Other Techniques
         </h2>
@@ -1611,6 +1721,70 @@ export const somaticAwarenessBodyHealingArticlesA: Article[] = [
             <li>Some people with trauma find PMR triggering (body focus can activate trauma responses)---work with a trauma-informed therapist</li>
             <li>If you have serious medical conditions, check with your doctor before starting</li>
           </ul>
+        </ArticleCallout>
+
+        <h2 id="real-world-applications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Applications
+        </h2>
+        <p className="mb-6">
+          PMR is used successfully in many settings beyond individual practice:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Clinical Settings
+        </h3>
+        <p className="mb-6">
+          Therapists commonly teach PMR as part of cognitive behavioral therapy for anxiety disorders. It's often homework between sessions, giving clients an active tool to practice. Many people report PMR as their most useful therapy skill because it provides immediate, tangible relief.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Medical Contexts
+        </h3>
+        <p className="mb-6">
+          Patients use PMR before surgery, during chemotherapy, and in pain management programs. The technique helps manage procedure-related anxiety and can reduce perception of pain without medication.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Performance Settings
+        </h3>
+        <p className="mb-6">
+          Athletes, musicians, and public speakers use PMR before performances. The technique reduces pre-event jitters without sedation, allowing for peak performance with managed nerves.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Workplace Stress
+        </h3>
+        <p className="mb-6">
+          Brief PMR sessions during work breaks help manage accumulating tension. Five minutes of neck, shoulder, and face relaxation can reset stress levels mid-day, improving focus and mood.
+        </p>
+
+        <h2 id="tracking-progress" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Tracking Your Progress
+        </h2>
+        <p className="mb-6">
+          PMR skills develop over time. Track your practice to stay motivated and notice improvements:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Week 1-2</strong>: Learning the sequence. May feel awkward or mechanical. Anxiety might not improve yet—you're building the foundation</li>
+          <li><strong>Week 3-4</strong>: Sequence becomes automatic. You start noticing tension in daily life before it becomes chronic. Anxiety begins reducing</li>
+          <li><strong>Week 5-8</strong>: The technique becomes a reliable tool. You can access relaxation quickly using abbreviated versions. Baseline tension decreases</li>
+          <li><strong>Beyond 8 weeks</strong>: PMR becomes integrated. You notice and release tension automatically throughout the day. The skill is now part of your stress management toolkit</li>
+        </ul>
+
+        <p className="mb-6 mt-6">
+          <strong>Signs of progress:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>You notice tension earlier, before it becomes overwhelming</li>
+          <li>You can achieve relaxation faster (from 20 minutes initially to 5 minutes after practice)</li>
+          <li>Physical symptoms improve: fewer headaches, better sleep, less muscle pain</li>
+          <li>You spontaneously release tension during the day without formal practice</li>
+          <li>Anxiety feels more manageable because you have a concrete tool</li>
+        </ul>
+
+        <ArticleCallout variant="success">
+          <p className="mb-4"><strong>PMR as a lifetime skill:</strong></p>
+          <p>Once learned, PMR is yours forever. Even if you stop practicing regularly, the skill remains. When stress increases, you can return to PMR and quickly regain proficiency. It's an investment that pays dividends for life.</p>
         </ArticleCallout>
 
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">

@@ -20,11 +20,31 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     description: 'Understanding what cyberbullying is, how it differs from traditional bullying, its psychological effects, and how to respond.',
     image: "/images/articles/cat10/cover-021.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cyberbullying', 'Harassment', 'Mental Health', 'Youth'],
+    summary: 'Cyberbullying is systematic digital harassment that follows victims everywhere, causing severe mental health impacts including doubled risk of depression and anxiety. Unlike traditional bullying, it never stops, often involves anonymous perpetrators, and reaches unlimited audiences through permanent digital records.',
+    keyFacts: [
+      { text: '59% of U.S. teens have experienced some form of cyberbullying', citationIndex: 1 },
+      { text: 'Victims have 2x higher risk of depression and anxiety compared to non-victims', citationIndex: 1 },
+      { text: 'Cyberbullying victims are 3.1 times more likely to experience suicidal ideation', citationIndex: 3 },
+      { text: '23% of cyberbullying victims develop clinically significant PTSD symptoms', citationIndex: 9 },
+      { text: 'School-based intervention programs can reduce cyberbullying by 18-24%', citationIndex: 7 },
+    ],
+    sparkMoment: 'The majority of cyberbullying happens with an audience—when bystanders speak up with even a single supportive comment, they change the entire dynamic.',
+    practicalExercise: {
+      title: 'Digital Safety Audit',
+      steps: [
+        { title: 'Review Privacy Settings', description: 'Check all your social media accounts and set profiles to private, limit who can message you, and restrict comments to people you follow.' },
+        { title: 'Document Your Digital Footprint', description: 'Search your name online and see what others can find. Take screenshots of anything concerning and consider removing or adjusting public content.' },
+        { title: 'Create a Support Network', description: 'Identify three trusted adults you could contact if you experience online harassment—a parent, teacher, counselor, or other mentor.' },
+        { title: 'Practice Bystander Intervention', description: 'If you see someone being harassed online, send them a private supportive message or report the bullying content to the platform.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Digital Wellness',
+    },
     citations: [
       {
         id: '1',
@@ -114,20 +134,24 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           What Is Cyberbullying?
         </h2>
         <p className="mb-6">
-          Cyberbullying is the use of digital technology to deliberately and repeatedly harm, threaten, embarrass, or harass someone. It includes:
+          Cyberbullying is the use of digital technology to deliberately and repeatedly harm, threaten, embarrass, or harass someone. It takes many forms across various platforms—from social media and messaging apps to gaming environments and comment sections. What makes it particularly insidious is that it weaponizes the tools young people use to connect with friends, turning spaces that should feel safe into sources of constant anxiety.
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Direct harassment:</strong> Mean messages, threats, insults sent via text, DM, or comments</li>
-          <li><strong>Public humiliation:</strong> Posting embarrassing photos, videos, or information about someone</li>
-          <li><strong>Exclusion:</strong> Intentionally excluding someone from online groups or activities</li>
-          <li><strong>Impersonation:</strong> Creating fake accounts to pose as someone and damage their reputation</li>
-          <li><strong>Doxing:</strong> Publishing private information (address, phone number, personal details)</li>
-          <li><strong>Sextortion:</strong> Threatening to share intimate images unless demands are met</li>
+          <li><strong>Direct harassment:</strong> Mean messages, threats, insults sent via text, DM, or comments. This can range from name-calling to graphic threats of violence, often escalating over time.</li>
+          <li><strong>Public humiliation:</strong> Posting embarrassing photos, videos, or information about someone without consent. This includes sharing screenshots of private conversations or creating memes that mock the victim.</li>
+          <li><strong>Exclusion:</strong> Intentionally excluding someone from online groups, group chats, or multiplayer games while making sure they know they're being left out.</li>
+          <li><strong>Impersonation:</strong> Creating fake accounts to pose as someone and damage their reputation by posting offensive content, sending inappropriate messages to others, or spreading false information.</li>
+          <li><strong>Doxing:</strong> Publishing private information like home address, phone number, school location, or family details with the intent to invite harassment or threaten safety.</li>
+          <li><strong>Sextortion:</strong> Threatening to share intimate images unless demands are met—whether for more images, money, or other favors. This often starts with manipulation or relationship deception.</li>
         </ul>
 
+        <p className="mb-6">
+          The digital nature of these attacks means they can happen at scale. A rumor spread in a school hallway might reach 50 people; the same rumor on social media can reach thousands within hours, with screenshots ensuring it never truly disappears.
+        </p>
+
         <ArticleCallout variant="clinical-note">
-          <p><strong>Key Distinction:</strong> A single mean comment isn't cyberbullying. Cyberbullying involves repeated behavior, power imbalance (one person has more social power, technical skills, or allies), and intent to harm. However, even one-time severe harassment can cause significant psychological damage.</p>
+          <p><strong>Key Distinction:</strong> A single mean comment isn't cyberbullying. Cyberbullying involves repeated behavior, power imbalance (one person has more social power, technical skills, or allies), and intent to harm. However, even one-time severe harassment—such as doxing or sharing intimate images—can cause significant psychological damage and may constitute criminal behavior rather than "just" bullying.</p>
         </ArticleCallout>
 
         <h2 id="how-differs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -216,33 +240,46 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           Who Is Most Vulnerable?
         </h2>
         <p className="mb-6">
-          While anyone can be targeted, certain groups face higher risk:
+          While anyone can be targeted, certain groups face higher risk due to societal prejudices, existing marginalization, or patterns of harassment that exploit specific vulnerabilities:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li><strong>Girls and young women:</strong> More likely to experience relational and sexual cyberbullying, including image-based harassment <Citation id="4" index={4} source="Psychology of Violence" year="2021" tier={1} /></li>
-          <li><strong>LGBTQ+ youth:</strong> Experience cyberbullying at higher rates and report more severe psychological impact</li>
-          <li><strong>Students with disabilities:</strong> Often targeted for appearance, behavior, or perceived weakness</li>
-          <li><strong>Racial and ethnic minorities:</strong> Face identity-based harassment and hate speech</li>
-          <li><strong>Youth with existing mental health issues:</strong> More vulnerable to severe impact and have fewer coping resources</li>
+          <li><strong>Girls and young women:</strong> More likely to experience relational and sexual cyberbullying, including image-based harassment, body shaming, and slut-shaming. Research shows gender differences in both the type and psychological impact of cyberbullying <Citation id="4" index={4} source="Psychology of Violence" year="2021" tier={1} />.</li>
+          <li><strong>LGBTQ+ youth:</strong> Experience cyberbullying at higher rates and report more severe psychological impact, particularly when harassment targets their identity. This often combines with offline discrimination, compounding the harm.</li>
+          <li><strong>Students with disabilities:</strong> Often targeted for appearance, behavior, communication differences, or perceived weakness. Bullies may mock disabilities, create cruel memes, or post videos without consent.</li>
+          <li><strong>Racial and ethnic minorities:</strong> Face identity-based harassment, racial slurs, hate speech, and coordinated attacks from hate groups who use social media to organize harassment campaigns.</li>
+          <li><strong>Youth with existing mental health issues:</strong> More vulnerable to severe impact because cyberbullying exacerbates symptoms and they may have fewer coping resources. The stress can trigger relapses or worsen conditions like depression and anxiety.</li>
         </ul>
+
+        <p className="mb-6">
+          It's important to recognize that vulnerability isn't a character flaw—it's often the result of systemic inequities that bullies exploit. The goal should never be to make targets "less vulnerable," but to stop the harassment and hold perpetrators accountable.
+        </p>
 
         <h2 id="anonymity-problem" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Anonymity Problem
         </h2>
         <p className="mb-6">
-          One of the most damaging aspects of cyberbullying is that perpetrators can hide behind anonymous accounts. Research shows that anonymous harassment is particularly distressing because victims:
+          One of the most damaging aspects of cyberbullying is that perpetrators can hide behind anonymous accounts or fake profiles. While many platforms require real names, creating throwaway accounts with burner emails takes minutes. This anonymity removes social consequences and emboldens behavior people would never display face-to-face.
+        </p>
+
+        <p className="mb-6">
+          Research shows that anonymous harassment is particularly distressing because victims:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Don't know who to avoid or confront</li>
-          <li>Can't predict when or where the next attack will come</li>
-          <li>Experience paranoia about who might be behind the account</li>
-          <li>Feel powerless because they can't identify the bully to adults or authorities</li>
+          <li>Don't know who to avoid or confront, creating constant anxiety in all social situations</li>
+          <li>Can't predict when or where the next attack will come, leading to hypervigilance</li>
+          <li>Experience paranoia about who might be behind the account—could be a stranger, a former friend, or even someone they trust</li>
+          <li>Feel powerless because they can't identify the bully to adults, school authorities, or platforms</li>
+          <li>May suspect multiple people, damaging relationships and increasing isolation</li>
         </ul>
 
         <p className="mb-6">
-          A 2020 study found that anonymous cyberbullying predicted higher anxiety and hypervigilance than identified bullying <Citation id="6" index={6} source="Computers in Human Behavior" year="2020" tier={1} />.
+          A 2020 study found that anonymous cyberbullying predicted significantly higher anxiety and hypervigilance than identified bullying, even when the content was similar <Citation id="6" index={6} source="Computers in Human Behavior" year="2020" tier={1} />. The uncertainty itself becomes a form of psychological torture.
+        </p>
+
+        <p className="mb-6">
+          Interestingly, perpetrators often believe anonymity makes them untraceable. In reality, digital footprints exist. IP addresses, metadata, linked accounts, and behavioral patterns can identify anonymous bullies when authorities investigate serious cases. But by the time identification happens, significant damage has usually occurred.
         </p>
 
         <h2 id="what-victims-can-do" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -334,20 +371,48 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
           Prevention: What Works
         </h2>
         <p className="mb-6">
-          A 2021 meta-analysis of school-based interventions found that programs teaching empathy, digital citizenship, and bystander intervention reduced cyberbullying by 18-24% <Citation id="7" index={7} source="Aggression and Violent Behavior" year="2021" tier={1} />.
+          A 2021 meta-analysis of school-based interventions found that programs teaching empathy, digital citizenship, and bystander intervention reduced cyberbullying by 18-24% <Citation id="7" index={7} source="Aggression and Violent Behavior" year="2021" tier={1} />. The most effective programs start early—before problems develop—and involve the entire school community rather than just targeting "at-risk" students.
         </p>
+
         <p className="mb-6">
-          Effective prevention includes:
+          Effective prevention strategies include:
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Teaching kids about online behavior and consequences before giving them devices</li>
-          <li>Creating school cultures where reporting bullying is supported, not stigmatized</li>
-          <li>Involving students in creating anti-bullying policies</li>
-          <li>Training teachers and staff to recognize and respond to cyberbullying</li>
-          <li>Having clear consequences for bullies that are consistently enforced</li>
-          <li>Providing mental health support for both victims and perpetrators</li>
+          <li>Teaching kids about online behavior, digital permanence, and consequences before giving them devices—not as a one-time lecture but as ongoing conversations</li>
+          <li>Creating school cultures where reporting bullying is supported and protected, not stigmatized as "snitching" or ignored by adults</li>
+          <li>Involving students in creating anti-bullying policies so they have buy-in and understand the reasoning</li>
+          <li>Training teachers and staff to recognize signs of cyberbullying (social withdrawal, anxiety about checking phones, reluctance to go online) and respond appropriately</li>
+          <li>Having clear, consistent consequences for bullies that are actually enforced, not just written in handbooks</li>
+          <li>Providing mental health support for both victims and perpetrators, recognizing that bullies often have their own trauma or struggles</li>
+          <li>Teaching critical digital literacy skills so students can recognize manipulation, understand privacy, and make safer choices online <Citation id="8" index={8} source="Journal of Adolescent Health" year="2022" tier={1} /></li>
         </ul>
+
+        <p className="mb-6">
+          Prevention also requires platform accountability. Social media companies must enforce their own community guidelines, respond quickly to reports, and design features that discourage harassment rather than amplify it through algorithms that reward engagement regardless of harm.
+        </p>
+
+        <h2 id="long-term-recovery" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Long-Term Recovery and Healing
+        </h2>
+        <p className="mb-6">
+          The effects of cyberbullying can persist long after the harassment stops, but recovery is possible. Many victims report that the experience, while traumatic, ultimately taught them resilience, empathy, and the importance of standing up for others.
+        </p>
+
+        <p className="mb-6">
+          Healing strategies include:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Therapy:</strong> Cognitive-behavioral therapy (CBT) and trauma-focused approaches help process the experience, challenge negative self-beliefs developed during bullying, and build healthier coping mechanisms.</li>
+          <li><strong>Rebuilding trust:</strong> Cyberbullying often damages the ability to trust others, especially in online spaces. Gradually re-engaging with supportive online communities can help rebuild confidence.</li>
+          <li><strong>Reframing the narrative:</strong> Moving from "I was targeted because something is wrong with me" to "I was targeted by someone who made a choice to harm others" is crucial for self-esteem recovery.</li>
+          <li><strong>Finding meaning:</strong> Some survivors channel their experience into advocacy, peer support, or creative expression, transforming pain into purpose.</li>
+        </ul>
+
+        <p className="mb-6">
+          Recovery isn't linear. Triggers may emerge years later—seeing the bully's name, encountering similar harassment patterns, or hearing news stories about cyberbullying. This doesn't mean you're "not over it." It means your brain is protecting you from a threat it once faced. Professional support can help manage these moments.
+        </p>
 
         <h2 id="when-crisis" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Cyberbullying Becomes a Crisis
@@ -357,19 +422,20 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         </p>
 
         <ul className="list-disc pl-6 mb-6 space-y-2">
-          <li>Mentions suicide or self-harm</li>
-          <li>Shows drastic personality or behavior changes</li>
-          <li>Refuses to attend school for multiple days</li>
-          <li>Experiences panic attacks or severe anxiety</li>
-          <li>Engages in self-destructive behavior</li>
+          <li>Mentions suicide or self-harm, even casually or "as a joke"</li>
+          <li>Shows drastic personality or behavior changes—withdrawing from family, losing interest in hobbies, sudden mood swings</li>
+          <li>Refuses to attend school for multiple days or shows extreme distress about going</li>
+          <li>Experiences panic attacks, severe anxiety, or frequent crying</li>
+          <li>Engages in self-destructive behavior like cutting, substance use, or reckless actions</li>
+          <li>Gives away possessions or talks about "not being around" anymore</li>
         </ul>
 
         <ArticleCallout variant="warning">
-          <p><strong>Crisis Resources:</strong> If someone is in immediate danger, call 911. For suicide-related crisis, contact the 988 Suicide & Crisis Lifeline (call or text 988) or the Crisis Text Line (text HOME to 741741). The Cyberbullying Research Center also offers resources at cyberbullying.org.</p>
+          <p><strong>Crisis Resources:</strong> If someone is in immediate danger, call 911. For suicide-related crisis, contact the 988 Suicide & Crisis Lifeline (call or text 988) or the Crisis Text Line (text HOME to 741741). The Cyberbullying Research Center also offers resources at cyberbullying.org. These services are free, confidential, and available 24/7.</p>
         </ArticleCallout>
 
         <ArticleCallout variant="key-takeaway" title="You Are Not Alone">
-          <p>Cyberbullying is pervasive, harmful, and not your fault if you're experiencing it. The psychological impact is real and well-documented. Document everything, don't engage with bullies, report on platforms, tell trusted adults, and seek mental health support if needed. For parents: believe your child, don't punish them by taking away devices, and take action through schools and platforms. For bystanders: speaking up makes a difference. Online cruelty thrives in silence. Break the silence.</p>
+          <p>Cyberbullying is pervasive, harmful, and not your fault if you're experiencing it. The psychological impact is real and well-documented—but so is recovery. Document everything, don't engage with bullies, report on platforms, tell trusted adults, and seek mental health support if needed. For parents: believe your child, don't punish them by taking away devices, and take action through schools and platforms. For bystanders: speaking up makes a difference. Online cruelty thrives in silence. Break the silence.</p>
         </ArticleCallout>
       </>
     ),
@@ -382,11 +448,31 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     description: 'Examining the mental health impact of public callouts, mob pile-ons, and cancel culture from both victim and participant perspectives.',
     image: "/images/articles/cat10/cover-022.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cancel Culture', 'Social Media', 'Mental Health', 'Public Shaming'],
+    summary: 'Cancel culture—mass public shaming at internet scale—causes severe mental health impacts on both targets and participants. 73% of people who experience public online shaming develop anxiety symptoms, while those participating in pile-ons experience outrage addiction and declining empathy.',
+    keyFacts: [
+      { text: '73% of people who experienced mass public shaming online developed anxiety disorder symptoms', citationIndex: 5 },
+      { text: '34% of cancel culture targets meet criteria for PTSD following the experience', citationIndex: 5 },
+      { text: '42% of targets experience suicidal ideation during or after being canceled', citationIndex: 5 },
+      { text: 'Participating in public shaming increases aggression and lowers empathy over time', citationIndex: 2 },
+      { text: 'Restorative justice approaches work better than punitive shaming in online communities', citationIndex: 7 },
+    ],
+    sparkMoment: 'The problem with outrage addiction is that your brain builds tolerance—you need bigger and bigger outrages to get the same hit, until you spend hours a day looking for things to be mad about online.',
+    practicalExercise: {
+      title: 'Outrage Audit',
+      steps: [
+        { title: 'Review Your Engagement', description: 'Look at your last 20 social media posts or comments. How many express anger, criticism, or outrage? What percentage is positive or constructive?' },
+        { title: 'Check Your Motivations', description: 'Before joining a pile-on, ask: Am I punching up at power or punching down at someone vulnerable? Is this genuine accountability or performative outrage?' },
+        { title: 'Practice Proportionality', description: 'Consider whether the punishment matches the offense. Does a single mistake warrant lifelong consequences?' },
+        { title: 'Choose Restorative Responses', description: 'Next time you see harmful behavior online, try educating privately instead of publicly shaming. Measure the difference in outcome.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Digital Mood',
+    },
     citations: [
       {
         id: '1',
@@ -442,6 +528,14 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         source: 'International Journal of Communication',
         year: '2022',
         link: 'https://ijoc.org/index.php/ijoc/article/view/18234',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Digital public shaming and career consequences',
+        source: 'Journal of Business Ethics',
+        year: '2023',
+        link: 'https://doi.org/10.1007/s10551-023-05387-2',
         tier: 1,
       },
     ],
@@ -719,11 +813,31 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     description: 'Examining the psychology behind online trolling, what drives people to harass strangers, and how to respond effectively.',
     image: "/images/articles/cat10/cover-023.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Trolling', 'Online Behavior', 'Psychology', 'Harassment'],
+    summary: 'Online trolling—deliberately provoking others for emotional reactions—is driven by sadism, the online disinhibition effect, and desire for attention. Trolls score high on the Dark Tetrad personality traits, and research shows engaging with them only encourages more aggressive behavior.',
+    keyFacts: [
+      { text: '28% of internet users admit to trolling at some point, with 5% being frequent trolls', citationIndex: 1 },
+      { text: 'Self-identified trolls score 41% higher on sadism than non-trolls', citationIndex: 1 },
+      { text: 'Engaging with trolls increases their frequency and aggression of posts', citationIndex: 5 },
+      { text: 'Women receive more sexually explicit harassment and threats compared to men', citationIndex: 4 },
+      { text: 'Ignoring and blocking are more effective responses than arguing or insulting back', citationIndex: 6 },
+    ],
+    sparkMoment: 'Trolls need attention like fire needs oxygen—deny them attention and they move on to easier targets.',
+    practicalExercise: {
+      title: 'Digital Boundary Setting',
+      steps: [
+        { title: 'Identify Your Triggers', description: 'Notice what types of comments or trolling behaviors affect you most. Awareness helps you recognize when to disengage.' },
+        { title: 'Create a Block Policy', description: 'Decide in advance what behavior warrants an immediate block. First insult? First troll comment? Stick to your rule.' },
+        { title: 'Adjust Platform Settings', description: 'Review privacy settings on all platforms. Limit who can comment, message, or tag you. Consider making accounts private.' },
+        { title: 'Practice Non-Engagement', description: 'When you encounter a troll, resist the urge to respond. Block, report if severe, and move on without reading further comments.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Online Interactions',
+    },
     citations: [
       {
         id: '1',
@@ -779,6 +893,14 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
         source: 'Social Media + Society',
         year: '2021',
         link: 'https://doi.org/10.1177/20563051211024963',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Psychological well-being of online harassment victims',
+        source: 'Journal of Interpersonal Violence',
+        year: '2022',
+        link: 'https://doi.org/10.1177/08862605211072179',
         tier: 1,
       },
     ],
@@ -1071,11 +1193,31 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     description: 'Understanding non-consensual intimate image sharing, its severe mental health effects, legal recourse, and resources for victims.',
     image: "/images/articles/cat10/cover-024.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Image-Based Abuse', 'Trauma', 'Legal', 'Support'],
+    summary: 'Non-consensual intimate image sharing (revenge porn) is a form of digital violence with devastating psychological consequences. 93% of victims meet diagnostic criteria for PTSD, over half experience suicidal thoughts, and many suffer lasting career and social devastation.',
+    keyFacts: [
+      { text: '93% of image-based sexual abuse victims meet diagnostic criteria for PTSD', citationIndex: 1 },
+      { text: '51% of victims experience suicidal thoughts following non-consensual image sharing', citationIndex: 2 },
+      { text: '90% of victims are women, highlighting gendered nature of this abuse', citationIndex: 4 },
+      { text: '48 U.S. states plus D.C. have criminalized non-consensual pornography', citationIndex: 3 },
+      { text: '1 in 8 U.S. adults have been victims of actual non-consensual image sharing', citationIndex: 8 },
+    ],
+    sparkMoment: 'Even if you originally consented to creating an intimate image, sharing it without your consent is illegal in most jurisdictions—you consented to creation, not distribution.',
+    practicalExercise: {
+      title: 'Digital Safety for Intimate Content',
+      steps: [
+        { title: 'Assess Your Digital Footprint', description: 'Search your name and variations to see what intimate content might exist. Document anything concerning for potential removal.' },
+        { title: 'Learn Your Legal Rights', description: 'Research your state\'s laws on non-consensual pornography. Know what legal recourse exists if you become a victim.' },
+        { title: 'Create a Safety Plan', description: 'If you\'re in a relationship with power imbalances or have shared intimate images, plan ahead: document threats, save evidence, know who to contact.' },
+        { title: 'Access Support Resources', description: 'Save the Cyber Civil Rights Initiative helpline (844-878-2274) and review removal services before you need them.' },
+      ],
+      toolLink: '/crisis',
+      toolLabel: 'Access Crisis Resources',
+    },
     citations: [
       {
         id: '1',
@@ -1423,11 +1565,31 @@ export const onlineComparisonCyberbullyingArticlesA: Article[] = [
     description: 'Understanding the psychology of radicalization, who is vulnerable, how algorithms facilitate extremism, and pathways out.',
     image: "/images/articles/cat10/cover-025.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Radicalization', 'Extremism', 'Algorithms', 'Mental Health'],
+    summary: 'Online radicalization is a gradual process where algorithms and extremist communities pull vulnerable people toward extreme ideologies. 73% of radicalized individuals report prior mental health struggles, and recommendation algorithms designed to maximize engagement inadvertently create pathways from moderate to extreme content.',
+    keyFacts: [
+      { text: '73% of radicalized individuals report prior mental health struggles before radicalization', citationIndex: 3 },
+      { text: '82% of radicalized individuals experienced social isolation before joining extremist groups', citationIndex: 1 },
+      { text: 'YouTube algorithms recommended increasingly extreme content to 70% of users within weeks', citationIndex: 8 },
+      { text: 'People with trauma history have 3x higher risk of radicalization susceptibility', citationIndex: 1 },
+      { text: 'Echo chambers increase polarization and reduce willingness to consider opposing views', citationIndex: 4 },
+    ],
+    sparkMoment: 'Radicalization isn\'t about stupidity or evil—it\'s about psychological vulnerability meeting sophisticated manipulation through algorithms designed to maximize engagement.',
+    practicalExercise: {
+      title: 'Check Your Information Diet',
+      steps: [
+        { title: 'Audit Your Content Sources', description: 'Review your YouTube watch history, social media follows, and news sources. Are you seeing diverse perspectives or only one viewpoint?' },
+        { title: 'Identify Echo Chambers', description: 'Notice when everyone in a community agrees on everything. Real communities have debate and disagreement—echo chambers punish doubt.' },
+        { title: 'Practice Cognitive Flexibility', description: 'When you encounter a strong opinion (yours or others), deliberately consider the opposite view. Can you steelman the other side?' },
+        { title: 'Diversify Your Feeds', description: 'Intentionally follow people with different perspectives. Use fact-checking sites. Read news from multiple political orientations.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Check Mental Health Symptoms',
+    },
     citations: [
       {
         id: '1',

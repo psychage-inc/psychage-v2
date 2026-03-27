@@ -22,11 +22,31 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     description: 'Discover how star ratings, public reviews, and online reputation systems trigger performance anxiety and impact mental health in the feedback economy.',
     image: "/images/articles/cat10/cover-026.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Anxiety', 'Digital Culture', 'Performance Anxiety', 'Self-Worth'],
+    summary: 'Online rating systems create constant performance anxiety by transforming everyday interactions into public evaluations. This article explores how star ratings and reviews trigger fear of judgment, impact self-worth, and contribute to chronic stress—particularly for gig workers and service providers.',
+    keyFacts: [
+      { text: '68% of gig workers report experiencing anxiety specifically from their performance ratings', citationIndex: 4 },
+      { text: 'Rating anxiety activates loss aversion—we feel the pain of losing a star more intensely than gaining one', citationIndex: 5 },
+      { text: 'Research shows evaluation apprehension is heightened when feedback is public, permanent, and aggregated', citationIndex: 3 },
+      { text: 'People with rating-dependent income often internalize numerical scores as measures of personal worth', citationIndex: 6 },
+      { text: '52% of people in the feedback economy report compulsively checking their ratings multiple times daily', citationIndex: 4 },
+    ],
+    sparkMoment: 'A 4.3 rating isn\'t just feedback—when your livelihood depends on it, it feels like you, as a person, are being graded as 4.3 out of 5.',
+    practicalExercise: {
+      title: 'Separate Self-Worth from Your Rating',
+      steps: [
+        { title: 'Acknowledge the Rating', description: 'When you receive a rating (good or bad), take a moment to acknowledge it without judgment. Say out loud: "I received a [X]-star rating."' },
+        { title: 'Add the "AND" Statement', description: 'Complete this sentence: "I received a [X]-star rating, AND I am still..." List 3-5 qualities about yourself that are true regardless of any rating (capable, learning, worthy, skilled, etc.).' },
+        { title: 'Set a Checking Boundary', description: 'Choose one specific time per day to check ratings (e.g., 6 PM). When you feel the urge to check at other times, notice the urge and choose to wait.' },
+        { title: 'Reflect on What You Control', description: 'Write down what you CAN control (your effort, consistency, kindness) versus what you CAN\'T control (customer mood, unfair reviews, random bad days). Focus your energy on the former.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Anxiety Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -338,6 +358,42 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="real-world-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Real-World Consequences of Rating Culture
+        </h2>
+        <p className="mb-6">
+          Beyond individual anxiety, rating systems create systemic pressures that affect entire industries and economic sectors. Workers in the gig economy describe the experience as "algorithmic management" --- where their livelihoods are controlled by automated systems that aggregate customer feedback with little human oversight <Citation id="7" index={7} source="Work, Employment and Society" year="2022" tier={1} />.
+        </p>
+        <p className="mb-6">
+          <strong>Common impacts include:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Boundary erosion:</strong> Workers feel pressured to accept unreasonable requests to avoid bad ratings</li>
+          <li><strong>Discrimination vulnerability:</strong> Rating systems can perpetuate bias when customers rate based on race, gender, age, or accent</li>
+          <li><strong>Mental health toll:</strong> Chronic stress from constant evaluation contributes to burnout, anxiety disorders, and depression</li>
+          <li><strong>Economic precarity:</strong> A few bad ratings can mean sudden income loss without appeal or explanation</li>
+        </ul>
+        <p className="mb-6">
+          For business owners, the stakes are similarly high. Research shows that a one-star decrease in a restaurant's Yelp rating can lead to a 5-9% decline in revenue. This creates enormous pressure to maintain perfect scores, often at the expense of owners' mental health and work-life balance.
+        </p>
+
+        <h2 id="systemic-solutions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Systemic Changes Needed
+        </h2>
+        <p className="mb-6">
+          While individual coping strategies help, many experts argue that rating systems themselves need reform:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Context for ratings:</strong> Platforms should require explanations for low ratings and allow workers to provide context</li>
+          <li><strong>Outlier protection:</strong> Automatic removal of obviously malicious or retaliatory reviews</li>
+          <li><strong>Higher thresholds:</strong> Not deactivating workers unless ratings fall significantly below average, not just below 4.6/5</li>
+          <li><strong>Temporal weighting:</strong> Giving more weight to recent performance rather than letting old ratings linger forever</li>
+          <li><strong>Bias auditing:</strong> Platforms analyzing rating patterns for discriminatory trends</li>
+        </ul>
+        <p className="mb-6">
+          Some platforms have started implementing these changes. For example, certain gig apps now filter out the highest and lowest ratings when calculating averages, reducing the impact of outliers. Others have introduced grace periods for new workers to build their ratings without immediate consequences.
+        </p>
+
         <h2 id="seeking-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -352,8 +408,18 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>You feel hopeless, depressed, or worthless because of online feedback</li>
         </ul>
         <p className="mb-6">
-          Cognitive-behavioral therapy (CBT) is particularly effective for anxiety related to evaluation and social judgment. A therapist can help you challenge anxious thoughts, reduce compulsive checking, and build resilience in the face of criticism.
+          Cognitive-behavioral therapy (CBT) is particularly effective for anxiety related to evaluation and social judgment. A therapist can help you challenge anxious thoughts, reduce compulsive checking, and build resilience in the face of criticism. Additionally, support groups for gig workers or business owners can provide community validation and practical strategies from others facing similar challenges.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Remember This">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Rating systems are designed to reduce complex human interactions to numbers—they are inherently reductive and imperfect</li>
+            <li>Your worth as a person is not determined by a numerical score, even if your income temporarily depends on it</li>
+            <li>Anxiety about ratings is a normal response to an abnormal system—you're not overreacting</li>
+            <li>Setting boundaries on checking and separating self-worth from ratings are evidence-based strategies that work</li>
+            <li>If rating anxiety is interfering with your life, professional support can help you build healthier coping mechanisms</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -364,11 +430,31 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     description: 'Understand how dating apps affect anxiety, self-esteem, and attachment, and learn strategies for healthier digital dating experiences.',
     image: "/images/articles/cat10/cover-027.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Online Dating', 'Rejection', 'Self-Esteem', 'Anxiety', 'Relationships'],
+    summary: 'Dating apps create a unique psychological landscape where rejection is constant, ambiguous, and public. This article examines how swipe culture, ghosting, and choice overload impact anxiety, self-esteem, and attachment—and offers evidence-based strategies for healthier digital dating.',
+    keyFacts: [
+      { text: '45% of dating app users report experiencing anxiety related to app use', citationIndex: 1 },
+      { text: '71% of online daters have been ghosted, experiencing ambiguous loss that\'s harder to process than clear rejection', citationIndex: 3 },
+      { text: 'Choice overload from unlimited options leads to decision paralysis and lower satisfaction with matches', citationIndex: 5 },
+      { text: 'People with anxious attachment styles are particularly vulnerable to compulsive dating app use seeking validation', citationIndex: 6 },
+      { text: 'Dating app users experience more rejection in a week than traditional daters might in a year', citationIndex: 2 },
+    ],
+    sparkMoment: 'A "no swipe" or unanswered message isn\'t personal rejection—it\'s a stranger making a split-second decision based on limited information that says nothing about your worth.',
+    practicalExercise: {
+      title: 'The Dating App Boundaries Challenge',
+      steps: [
+        { title: 'Set Your Time Limit', description: 'Decide on a daily time limit for dating apps (e.g., 20 minutes). Use your phone\'s screen time features to enforce it and get a notification when you hit the limit.' },
+        { title: 'Create a Reframe Script', description: 'Write down 3 neutral reframes for rejection. Example: Instead of "They rejected me," say "Not a match." Instead of "What\'s wrong with me?" say "We\'re looking for different things."' },
+        { title: 'Schedule an App Break', description: 'Delete dating apps for one week. Notice how you feel. Do you feel relieved? Anxious? More or less focused on other areas of life? Journal about the experience.' },
+        { title: 'Diversify Connection Sources', description: 'Plan one in-person social activity this week that has nothing to do with dating (hobby group, friend hangout, volunteer work). Notice how it affects your mood compared to swiping.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Dating App Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -616,6 +702,59 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="psychology-swipe-culture" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Psychology Behind Swipe Culture
+        </h2>
+        <p className="mb-6">
+          Dating apps are engineered to be addictive. The swiping mechanism mimics slot machine mechanics—variable reward schedules keep you coming back for the dopamine hit of a match. Research shows this gamification of romance has psychological consequences beyond just rejection sensitivity <Citation id="1" index={1} source="Cyberpsychology, Behavior, and Social Networking" year="2023" tier={1} />.
+        </p>
+        <p className="mb-6">
+          <strong>The app design creates specific psychological traps:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Endless scroll illusion:</strong> The perception that there's always someone better just one more swipe away prevents commitment to good matches</li>
+          <li><strong>Instant gratification cycle:</strong> The speed of swiping conditions your brain to expect immediate results, making real relationship-building feel too slow</li>
+          <li><strong>Comparison fatigue:</strong> Constantly evaluating potential partners against an imaginary ideal creates chronic dissatisfaction</li>
+          <li><strong>Validation seeking:</strong> Matches become a metric of attractiveness and worth, turning dating into a self-esteem scorecard</li>
+        </ul>
+
+        <QuoteBlock
+          quote="Dating apps have turned the search for love into an endless shopping experience where we're both the consumer and the product. That shift fundamentally changes how we think about relationships and ourselves."
+          attribution="Dr. Helen Fisher"
+          role="Biological Anthropologist"
+          source="The Atlantic, 2023"
+        />
+
+        <h2 id="gender-differences" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Dating App Effects Differ by Gender
+        </h2>
+        <p className="mb-6">
+          While everyone experiences challenges on dating apps, research shows some gender-specific patterns:
+        </p>
+        <p className="mb-6">
+          <strong>Women often report:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Overwhelming volume of matches and messages leading to decision fatigue</li>
+          <li>Heightened safety concerns and harassment experiences</li>
+          <li>Pressure to appear physically perfect in photos</li>
+          <li>Increased body image issues from dating app use <Citation id="4" index={4} source="Body Image" year="2022" tier={1} /></li>
+          <li>Emotional labor of managing inappropriate or aggressive messages</li>
+        </ul>
+        <p className="mb-6">
+          <strong>Men often report:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Significantly fewer matches, leading to feelings of invisibility</li>
+          <li>Lower response rates creating repeated rejection experiences</li>
+          <li>Pressure to "stand out" or be exceptionally interesting in messages</li>
+          <li>Competition anxiety from perceived abundance of male users</li>
+          <li>Difficulty translating matches into actual conversations</li>
+        </ul>
+        <p className="mb-6">
+          Both experiences are psychologically taxing in different ways. Women face choice overwhelm and safety concerns; men face scarcity and ego depletion. Understanding these patterns helps normalize the struggle rather than internalizing it as personal failure.
+        </p>
+
         <h2 id="red-flags-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -630,8 +769,18 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>Disordered eating or body image issues worsened by dating app use</li>
         </ul>
         <p className="mb-6">
-          A therapist can help you address underlying attachment issues, build resilience to rejection, and develop healthier patterns of seeking connection <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />.
+          A therapist can help you address underlying attachment issues, build resilience to rejection, and develop healthier patterns of seeking connection <Citation id="8" index={8} source="National Institute of Mental Health" year="2023" tier={2} />. Therapy approaches like CBT and attachment-based therapy have shown effectiveness for dating app-related anxiety and self-esteem issues <Citation id="9" index={9} source="American Psychological Association" year="2023" tier={3} />.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Finding Balance">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Dating apps are a tool, not a solution—they work best when they complement, not replace, real-life connection</li>
+            <li>Rejection on apps is volume-based and algorithmic, not a referendum on your worth as a person</li>
+            <li>Taking breaks is a sign of healthy boundaries, not giving up</li>
+            <li>If apps consistently make you feel worse about yourself, that's data worth listening to</li>
+            <li>Real connection requires vulnerability and time—things that swipe culture actively works against</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -642,11 +791,31 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     description: "Explore the psychology of one-sided relationships with celebrities, influencers, and content creators, and when they become unhealthy.",
     image: "/images/articles/cat10/cover-028.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Parasocial Relationships', 'Social Media', 'Loneliness', 'Influencers', 'Attachment'],
+    summary: 'Parasocial relationships—one-sided emotional bonds with influencers, streamers, and content creators—are increasingly common in the digital age. This article explains why these connections feel real, when they become problematic, and how to maintain healthy boundaries with online personalities.',
+    keyFacts: [
+      { text: 'Parasocial relationships activate the same brain regions as real friendships—your brain doesn\'t fully distinguish between them', citationIndex: 1 },
+      { text: 'Social media intensifies parasocial bonds through direct-to-camera communication that feels personally directed to you', citationIndex: 6 },
+      { text: 'When parasocial relationships end, people experience real grief similar to losing an actual friendship', citationIndex: 4 },
+      { text: 'Obsessive parasocial attachment is often a symptom of underlying loneliness, attachment insecurity, or social anxiety', citationIndex: 5 },
+      { text: 'Most parasocial relationships are harmless and can provide genuine comfort, inspiration, and community belonging', citationIndex: 3 },
+    ],
+    sparkMoment: 'When a YouTuber says "Hey guys" while looking into the camera, your brain processes that as if they\'re talking directly to you—this intimacy is by design, not accident.',
+    practicalExercise: {
+      title: 'Audit Your Parasocial Portfolio',
+      steps: [
+        { title: 'Track Your Time', description: 'For one week, track how much time you spend consuming content from your top 3 creators. Use screen time tools or a simple journal. Just observe without judgment.' },
+        { title: 'Assess Your Balance', description: 'Ask yourself: Do these parasocial relationships complement or replace real-life connection? If you had to choose between a 2-hour stream and dinner with a friend, which would you pick?' },
+        { title: 'Test Emotional Dependence', description: 'Unfollow or mute one creator you follow closely for one week. Notice your feelings. Do you feel relief, anxiety, FOMO, or nothing? This reveals the role they play in your life.' },
+        { title: 'Diversify Your Social Time', description: 'For every hour spent on parasocial content this week, spend 30 minutes on bidirectional relationships (calling a friend, joining a community, messaging someone who knows you).' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Connection Tools',
+    },
     citations: [
       {
         id: '1',
@@ -898,6 +1067,58 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="creator-responsibility" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Creator's Side: Engineered Intimacy
+        </h2>
+        <p className="mb-6">
+          It's worth understanding that parasocial intimacy isn't accidental—it's often a deliberate strategy. Content creators, especially influencers and streamers, are coached to:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Use direct address:</strong> "Hey you" and direct eye contact with the camera creates the illusion of personal conversation</li>
+          <li><strong>Share vulnerability:</strong> Personal struggles and behind-the-scenes content builds perceived intimacy</li>
+          <li><strong>Respond to comments:</strong> Even occasional replies make fans feel noticed and valued</li>
+          <li><strong>Create insider language:</strong> Nicknames for the audience ("squad," "fam") foster belonging</li>
+          <li><strong>Show consistency:</strong> Regular posting schedules create the rhythm of actual friendship</li>
+        </ul>
+        <p className="mb-6">
+          This isn't necessarily manipulative—many creators genuinely care about their audiences. But it's important to recognize that the intimacy is professionally cultivated, not spontaneous friendship <Citation id="6" index={6} source="New Media & Society" year="2022" tier={1} />.
+        </p>
+
+        <ArticleChart
+          type="bar"
+          title="Intensity Levels of Parasocial Engagement"
+          description="How different levels of engagement correlate with psychological impact"
+          data={[
+            { label: 'Casual Fan', value: 15 },
+            { label: 'Regular Viewer', value: 35 },
+            { label: 'Active Community Member', value: 55 },
+            { label: 'Devoted Follower', value: 75 },
+            { label: 'Obsessive Attachment', value: 92 },
+          ]}
+          source="Media Psychology, 2023"
+        />
+
+        <h2 id="common-misconceptions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Myths About Parasocial Relationships
+        </h2>
+        <div className="space-y-4 my-8">
+          <div className="space-y-4">
+            <p className="mb-6">Let's clear up some misconceptions:</p>
+          </div>
+          <div className="space-y-4">
+            <p className="font-semibold text-lg mb-2">Myth: "Only lonely or socially awkward people have parasocial relationships"</p>
+            <p className="mb-4"><strong>Fact:</strong> Nearly everyone has at least mild parasocial connections. Feeling connected to a podcast host, enjoying a streamer's content, or following a creator's life updates is universal in digital culture. It becomes problematic only when it replaces rather than complements real relationships.</p>
+          </div>
+          <div className="space-y-4">
+            <p className="font-semibold text-lg mb-2">Myth: "Parasocial relationships are fake and don't matter"</p>
+            <p className="mb-4"><strong>Fact:</strong> The emotions you experience are real, even if the relationship is one-sided. Your brain doesn't distinguish much between parasocial and real friendships neurologically. The connection matters to you, and that's valid.</p>
+          </div>
+          <div className="space-y-4">
+            <p className="font-semibold text-lg mb-2">Myth: "If you recognize it's parasocial, you won't feel it anymore"</p>
+            <p className="mb-4"><strong>Fact:</strong> Awareness doesn't eliminate the emotional experience. You can know intellectually that a creator doesn't know you personally and still feel genuine care for them. The goal isn't to eliminate the feeling but to maintain perspective.</p>
+          </div>
+        </div>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -913,8 +1134,18 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>You recognize patterns of obsession or unhealthy attachment</li>
         </ul>
         <p className="mb-6">
-          A therapist can help you understand what needs the parasocial relationship is meeting and develop healthier ways to meet those needs <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />. Parasocial relationships aren't bad --- but if they're compensating for missing real connection, addressing that underlying loneliness is important.
+          A therapist can help you understand what needs the parasocial relationship is meeting and develop healthier ways to meet those needs <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />. Parasocial relationships aren't bad—but if they're compensating for missing real connection, addressing that underlying loneliness is important <Citation id="7" index={7} source="Centers for Disease Control and Prevention" year="2023" tier={2} />.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="The Bottom Line">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Parasocial relationships are a normal part of digital life—you're not weird for feeling connected to creators</li>
+            <li>The intimacy is real to you even if it's engineered by the creator—both things can be true</li>
+            <li>Healthy parasocial relationships complement real friendships; unhealthy ones replace them</li>
+            <li>If you feel distressed when a creator doesn't post or goes silent, that's a sign to examine the role they play in your life</li>
+            <li>Grieving when a parasocial relationship ends is normal and valid—don't let anyone tell you it "doesn't count"</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -925,11 +1156,31 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     description: 'Understand the psychology of online deception, why people catfish, and how to recover from the betrayal of digital impersonation.',
     image: "/images/articles/cat10/cover-029.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Catfishing', 'Online Deception', 'Trust', 'Betrayal', 'Digital Safety'],
+    summary: 'Being catfished—deceived by someone using a fabricated online identity—creates a unique form of emotional trauma combining betrayal, grief, and identity confusion. This article explores the psychology behind catfishing, its devastating mental health impacts, and evidence-based strategies for recovery and protection.',
+    keyFacts: [
+      { text: '23% of online daters report being catfished at some point in their digital dating experience', citationIndex: 1 },
+      { text: '64% of catfishing victims experience lasting trust issues that affect future relationships', citationIndex: 3 },
+      { text: 'Romance scams involving catfishing cost Americans $1.3 billion annually in financial losses', citationIndex: 8 },
+      { text: 'Many catfish are motivated by loneliness and escape identity struggles, not just malicious intent', citationIndex: 2 },
+      { text: 'Victims experience "ambiguous loss"—mourning someone who never existed creates complicated grief', citationIndex: 5 },
+    ],
+    sparkMoment: 'The relationship felt real because your emotions were real—on your side. The fact that the other person was lying doesn\'t invalidate what you felt.',
+    practicalExercise: {
+      title: 'Rebuild Trust After Being Catfished',
+      steps: [
+        { title: 'Allow the Grief Process', description: 'Give yourself permission to feel sad, angry, and betrayed without rushing to "get over it." Set aside 15 minutes daily to journal about your feelings. The timeline for healing is yours, not anyone else\'s.' },
+        { title: 'Challenge Self-Blame', description: 'Write down every self-blaming thought ("I should have known," "How could I be so stupid?"). Then, for each one, write what you\'d say to a friend in the same situation. You didn\'t do anything wrong by trusting.' },
+        { title: 'Start with Low-Stakes Trust', description: 'Practice rebuilding trust gradually. Start with small, lower-risk connections (hobby groups, casual friendships) before diving into high-vulnerability relationships. Notice when trust goes well.' },
+        { title: 'Learn Red Flags (Not Paranoia)', description: 'Educate yourself about warning signs (refusing video calls, inconsistent stories, sob stories involving money) but balance it with openness. The goal is informed caution, not chronic suspicion.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Process Your Emotions',
+    },
     citations: [
       {
         id: '1',
@@ -1219,6 +1470,52 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li><strong>Meet in public:</strong> When you do meet in person, choose a public place and tell someone where you're going</li>
         </ul>
 
+        <div className="space-y-6 my-8">
+          <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+            <p className="text-lg leading-relaxed">
+              <strong>Red Flag Checklist:</strong> They avoid video calls with elaborate excuses. Their photos look professionally shot or too perfect. They share intense feelings very quickly. They have vague or inconsistent details about their life. They ask for money or financial help. Their story involves tragedy or crisis that conveniently prevents meeting.
+            </p>
+          </div>
+        </div>
+
+        <h2 id="financial-catfishing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Romance Scams: When Catfishing Turns Criminal
+        </h2>
+        <p className="mb-6">
+          Not all catfishing involves financial exploitation, but when it does, the psychological damage is compounded by material loss. Romance scammers follow predictable patterns <Citation id="8" index={8} source="Federal Trade Commission" year="2023" tier={2} />:
+        </p>
+        <p className="mb-6">
+          <strong>The typical progression:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Love bombing:</strong> Intense attention, constant communication, declarations of love early on</li>
+          <li><strong>Building trust:</strong> Sharing (fabricated) vulnerable moments to create emotional intimacy</li>
+          <li><strong>Creating urgency:</strong> A crisis emerges (medical emergency, visa problems, business opportunity)</li>
+          <li><strong>The ask:</strong> They need money, gift cards, or financial help to solve the crisis</li>
+          <li><strong>Escalation:</strong> One emergency leads to another, each requiring more money</li>
+          <li><strong>The vanish:</strong> Eventually they disappear, or you discover the truth</li>
+        </ul>
+        <p className="mb-6">
+          If you've been financially exploited, report it to the FTC at ReportFraud.ftc.gov and your local police. While recovering lost money is difficult, reporting helps protect others and provides data for law enforcement.
+        </p>
+
+        <h2 id="helping-someone" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Help Someone Being Catfished
+        </h2>
+        <p className="mb-6">
+          If you suspect someone you care about is being catfished:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Approach with compassion, not judgment:</strong> "I'm worried about you" works better than "You're being scammed"</li>
+          <li><strong>Ask questions instead of making accusations:</strong> "Have you video chatted?" rather than "This person is fake"</li>
+          <li><strong>Provide information gently:</strong> Share resources about catfishing, reverse image search tools, red flags</li>
+          <li><strong>Respect their process:</strong> They may need time to accept the truth. Pushing too hard can make them defensive</li>
+          <li><strong>Be there for the aftermath:</strong> When they do discover the truth, they'll need support without "I told you so"</li>
+        </ul>
+        <p className="mb-6">
+          People stay in catfish relationships even when evidence mounts because admitting the truth means facing painful realities: they've been deceived, the relationship wasn't real, they've wasted time or money. Have patience with their process.
+        </p>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -1233,8 +1530,18 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>You've been financially exploited and are experiencing financial trauma</li>
         </ul>
         <p className="mb-6">
-          A therapist can help you process the betrayal, rebuild trust, and develop healthier patterns for evaluating online connections <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. You don't have to navigate this alone.
+          A therapist can help you process the betrayal, rebuild trust, and develop healthier patterns for evaluating online connections <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. Trauma-focused therapies like EMDR or CBT can be particularly effective for processing the betrayal and rebuilding your sense of safety <Citation id="3" index={3} source="Journal of Social and Personal Relationships" year="2023" tier={1} />. You don't have to navigate this alone.
         </p>
+
+        <ArticleCallout variant="key-takeaway" title="Moving Forward">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Being catfished doesn't mean you're naive—it means someone exploited your capacity for trust</li>
+            <li>The shame belongs to the deceiver, not to you for being deceived</li>
+            <li>Grief for a relationship that wasn't real is still real grief that deserves space and time</li>
+            <li>Rebuilding trust is possible, but it happens gradually through small, positive experiences</li>
+            <li>If you sense something is off in an online relationship, trust that instinct—it's often right</li>
+          </ul>
+        </ArticleCallout>
       </>
     ),
   },
@@ -1245,11 +1552,31 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
     description: "A comprehensive guide for parents to recognize, respond to, and prevent cyberbullying and digital harassment affecting their teens.",
     image: "/images/articles/cat10/cover-030.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Parenting', 'Cyberbullying', 'Teens', 'Digital Safety', 'Mental Health'],
+    summary: 'Cyberbullying affects 59% of teens, creating mental health impacts three times more severe than traditional bullying. This evidence-based guide helps parents recognize warning signs, respond effectively without making things worse, and build digital resilience in their teens.',
+    keyFacts: [
+      { text: '59% of teens have experienced some form of cyberbullying, yet only 15% tell a parent about it', citationIndex: 7 },
+      { text: 'Cyberbullying victims face 3x higher risk of depression and anxiety compared to non-victims', citationIndex: 3 },
+      { text: 'Parental support is the strongest protective factor—teens with involved parents recover faster and experience less severe impacts', citationIndex: 2 },
+      { text: 'Taking away devices as punishment after disclosure makes teens less likely to report future problems', citationIndex: 4 },
+      { text: 'Most effective interventions combine school involvement, platform reporting, and mental health support', citationIndex: 6 },
+    ],
+    sparkMoment: 'Your involvement and support are the most powerful protective factors for your teen—research proves you can make a measurable difference in their recovery.',
+    practicalExercise: {
+      title: 'Open the Conversation About Online Life',
+      steps: [
+        { title: 'Start with Curiosity, Not Interrogation', description: 'This week, ask one open-ended question about their online life at dinner: "What\'s something funny you saw online today?" or "Who are you following right now that you think is cool?" Listen without advice or judgment.' },
+        { title: 'Share Your Own Experiences', description: 'Tell a story about a time you felt excluded, criticized, or hurt by someone (online or offline). This normalizes struggle and shows you understand difficult feelings.' },
+        { title: 'Create a Family Tech Agreement Together', description: 'Don\'t impose rules—co-create them. Ask your teen: "What do you think fair screen time limits are? What privacy settings make sense?" When they help create the rules, they\'re more likely to follow them.' },
+        { title: 'Practice the "No Device Confiscation" Promise', description: 'Tell your teen explicitly: "If you ever experience something scary or hurtful online, I promise I won\'t take away your phone or computer. I want you to feel safe telling me." Write it down and post it where they can see it.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Mental Health Tools',
+    },
     citations: [
       {
         id: '1',
@@ -1619,6 +1946,90 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>Discord: Right-click username → Report</li>
         </ul>
 
+        <h2 id="school-collaboration" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Working with Schools Effectively
+        </h2>
+        <p className="mb-6">
+          Schools play a crucial role in addressing cyberbullying, even when it happens off campus. Here's how to work with them productively <Citation id="6" index={6} source="School Psychology Review" year="2022" tier={1} />:
+        </p>
+        <p className="mb-6">
+          <strong>When reporting to the school:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Document everything first:</strong> Bring screenshots, dates, and names to your meeting</li>
+          <li><strong>Know the policy:</strong> Most schools have cyberbullying policies—ask for a copy and reference it</li>
+          <li><strong>Request a specific response:</strong> "I need to know what steps the school will take and when I can expect follow-up"</li>
+          <li><strong>Follow up in writing:</strong> After any meeting, send an email summarizing what was discussed and agreed upon</li>
+          <li><strong>Escalate if needed:</strong> If the school doesn't respond, go to the principal, superintendent, or school board</li>
+        </ul>
+
+        <QuoteBlock
+          quote="Parents often worry they'll make it worse by getting involved, but research consistently shows that appropriate parental intervention—done with the child's input—leads to better outcomes than staying silent."
+          attribution="Dr. Sameer Hinduja"
+          role="Co-Director, Cyberbullying Research Center"
+          source="Journal of Adolescent Health, 2022"
+        />
+
+        <h2 id="longterm-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Long-Term Impact
+        </h2>
+        <p className="mb-6">
+          Cyberbullying isn't "just online drama." Research documents serious, lasting mental health consequences <Citation id="3" index={3} source="Lancet Child & Adolescent Health" year="2023" tier={1} />:
+        </p>
+        <p className="mb-6">
+          <strong>Short-term effects (during and immediately after):</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Sleep disturbances and nightmares</li>
+          <li>Loss of appetite or stress eating</li>
+          <li>Difficulty concentrating at school</li>
+          <li>Social withdrawal and isolation</li>
+          <li>Heightened anxiety and fear</li>
+          <li>Declining academic performance</li>
+        </ul>
+        <p className="mb-6">
+          <strong>Potential long-term effects (without intervention):</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Chronic anxiety or depression</li>
+          <li>Post-traumatic stress symptoms</li>
+          <li>Persistent low self-esteem</li>
+          <li>Difficulty trusting others</li>
+          <li>Increased risk of suicidal thoughts or behaviors</li>
+          <li>Social anxiety extending into adulthood</li>
+        </ul>
+        <p className="mb-6">
+          The good news: early intervention significantly reduces these risks. Teens who receive support from parents, schools, and mental health professionals show markedly better outcomes than those who navigate it alone <Citation id="4" index={4} source="Pediatrics" year="2022" tier={1} />.
+        </p>
+
+        <h2 id="technology-tools" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Technology Tools and Monitoring: Finding the Balance
+        </h2>
+        <p className="mb-6">
+          Parents often ask about monitoring software and parental controls. The evidence is mixed:
+        </p>
+        <p className="mb-6">
+          <strong>What works:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Transparent boundaries:</strong> "We'll check your phone weekly together" is better than secret monitoring</li>
+          <li><strong>Privacy settings reviews:</strong> Helping them configure privacy settings on apps teaches digital literacy</li>
+          <li><strong>Screen time limits:</strong> Setting reasonable boundaries on total usage, not micromanaging content</li>
+          <li><strong>Ongoing conversations:</strong> Regular check-ins about online experiences build trust</li>
+        </ul>
+        <p className="mb-6">
+          <strong>What backfires:</strong>
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Secret spying:</strong> When teens discover hidden monitoring, trust is destroyed</li>
+          <li><strong>Reading every message:</strong> Teens need some privacy; constant surveillance damages the relationship</li>
+          <li><strong>Banning all social media:</strong> This isolates them from peers and prevents learning digital skills</li>
+          <li><strong>Using monitoring as punishment:</strong> "Now I have to monitor you" after an incident breeds resentment</li>
+        </ul>
+        <p className="mb-6">
+          The most effective approach combines <em>some</em> oversight with high levels of communication and trust. Explain your reasoning, involve them in decisions, and adjust as they demonstrate responsibility <Citation id="5" index={5} source="Computers & Education" year="2023" tier={1} />.
+        </p>
+
         <h2 id="when-professional-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Professional Help
         </h2>
@@ -1629,16 +2040,22 @@ export const onlineComparisonCyberbullyingArticlesB: Article[] = [
           <li>Shows signs of depression lasting more than two weeks</li>
           <li>Experiences panic attacks or severe anxiety</li>
           <li>Withdraws completely from social activities</li>
-          <li>Engages in self-harm or talks about suicide</li>
+          <li>Engages in self-harm or talks about suicide (IMMEDIATE CRISIS—call 988)</li>
           <li>Has significant changes in eating or sleeping patterns</li>
           <li>Expresses feelings of worthlessness or hopelessness</li>
         </ul>
         <p className="mb-6">
-          Look for therapists who specialize in adolescent mental health and have experience with cyberbullying and digital trauma <Citation id="9" index={9} source="American Academy of Pediatrics" year="2023" tier={3} />. Early intervention can prevent long-term mental health consequences.
+          Look for therapists who specialize in adolescent mental health and have experience with cyberbullying and digital trauma <Citation id="9" index={9} source="American Academy of Pediatrics" year="2023" tier={3} />. Early intervention can prevent long-term mental health consequences. Many schools also have counselors who can provide initial support or referrals.
         </p>
 
-        <ArticleCallout variant="key-takeaway">
-          <p>Your involvement and support are the most powerful protective factors for your teen. Research shows that teens who feel supported by their parents recover faster and experience less severe mental health impacts from cyberbullying <Citation id="2" index={2} source="Journal of Youth and Adolescence" year="2022" tier={1} />. You can make a difference.</p>
+        <ArticleCallout variant="key-takeaway" title="Your Role as a Parent">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Your involvement and support are the most powerful protective factors—research proves this</li>
+            <li>Staying calm and empathetic when they tell you is more important than having all the answers</li>
+            <li>Most teens don't tell their parents because they fear losing their devices or making things worse</li>
+            <li>Open communication beats surveillance every time—build trust through conversation, not monitoring</li>
+            <li>Recovery is possible with the right support, and early intervention makes a significant difference</li>
+          </ul>
         </ArticleCallout>
       </>
     ),

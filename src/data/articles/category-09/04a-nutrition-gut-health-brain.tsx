@@ -18,11 +18,31 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     description: 'Discover the bidirectional communication pathway between your gut and brain, and how your digestive health directly influences mood, anxiety, and cognitive function.',
     image: "/images/articles/cat09/cover-031.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Gut-Brain Axis', 'Microbiome', 'Neuroscience', 'Digestive Health'],
+    summary: 'The gut-brain axis is a bidirectional communication system linking your digestive tract and brain through neural, hormonal, and immune pathways. Your gut microbiome produces neurotransmitters, influences inflammation, and directly affects mood, anxiety, and cognitive function through the vagus nerve and other mechanisms.',
+    keyFacts: [
+      { text: 'About 80-90% of vagus nerve fibers carry signals from gut to brain, not the other way around', citationIndex: 7 },
+      { text: 'The gut produces approximately 90% of the body\'s serotonin, a key mood-regulating neurotransmitter', citationIndex: 5 },
+      { text: 'The enteric nervous system contains about 100 million neurons, sometimes called the "second brain"', citationIndex: 1 },
+      { text: 'People with inflammatory bowel diseases experience depression at rates 2-3 times higher than the general population due to gut-brain inflammation pathways', citationIndex: 6 },
+      { text: 'Transferring gut bacteria from depressed individuals to healthy mice causes the mice to develop depression-like behaviors', citationIndex: 8 },
+    ],
+    sparkMoment: 'Your gut is constantly sending status reports to your brain---and those messages shape not just digestion, but your emotions, anxiety levels, and mental clarity.',
+    practicalExercise: {
+      title: 'Track Your Gut-Mood Connection',
+      steps: [
+        { title: 'Keep a 7-Day Log', description: 'Record what you eat, when you eat, and how your mood and energy feel 2-3 hours after each meal.' },
+        { title: 'Notice Patterns', description: 'Look for connections between certain foods and mood changes, digestive symptoms and mental fog, or meal timing and energy levels.' },
+        { title: 'Test One Change', description: 'Based on your patterns, try one gut-supportive change (more fiber, a fermented food daily, regular meal timing) for two weeks.' },
+        { title: 'Reassess and Refine', description: 'Track whether the change affects your mood and digestion. Keep what works, adjust what doesn\'t.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -218,6 +238,9 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           Understanding the gut-brain axis opens new possibilities for supporting mental health through digestive wellness. While gut health isn't a cure-all for mental health conditions, it's an important piece of the puzzle that deserves attention.
         </p>
         <p className="mb-6">
+          The bidirectional nature of this system means that improving gut health can positively affect your brain, and managing stress can benefit your gut. This interconnection explains why holistic approaches that address both physical and mental health often produce better outcomes than treating symptoms in isolation.
+        </p>
+        <p className="mb-6">
           Simple changes like eating more fiber, consuming fermented foods, reducing processed foods, managing stress, and getting adequate sleep can all support a healthy gut microbiome---and potentially improve your mood and mental clarity <Citation id="5" index={5} source="Nature Reviews Neuroscience" year="2011" tier={1} />.
         </p>
 
@@ -228,8 +251,52 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
             <li>Bloating or discomfort after certain foods coincides with brain fog</li>
             <li>Anxiety or low mood worsens with digestive stress</li>
             <li>Improved digestive function leads to better mental clarity</li>
+            <li>Food sensitivities correlate with anxiety spikes or low energy</li>
+            <li>Antibiotic use is followed by mood changes</li>
           </ul>
         </ArticleCallout>
+
+        <h2 id="supporting-gut-brain-health" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Ways to Support Your Gut-Brain Axis
+        </h2>
+        <p className="mb-6">
+          You don't need to overhaul your entire lifestyle overnight. Small, consistent changes to support gut health can have meaningful impacts on mental wellness:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Dietary Approaches
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Increase fiber intake gradually</strong>: Aim for 25-35 grams daily from vegetables, fruits, whole grains, and legumes</li>
+          <li><strong>Add fermented foods</strong>: Yogurt, kefir, sauerkraut, kimchi, kombucha, and miso contain beneficial bacteria</li>
+          <li><strong>Eat prebiotic foods</strong>: Garlic, onions, leeks, asparagus, bananas, and oats feed beneficial gut bacteria</li>
+          <li><strong>Diversify your diet</strong>: Eating 30+ different plant foods weekly supports microbiome diversity</li>
+          <li><strong>Stay hydrated</strong>: Water supports the mucosal lining of the intestines and bacterial balance</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Lifestyle Factors
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Manage stress</strong>: Chronic stress alters gut bacteria composition; practices like meditation, yoga, and deep breathing support both gut and brain</li>
+          <li><strong>Prioritize sleep</strong>: Your gut microbiome follows circadian rhythms; disrupted sleep harms bacterial balance</li>
+          <li><strong>Exercise regularly</strong>: Moderate physical activity increases beneficial gut bacteria and reduces inflammation</li>
+          <li><strong>Limit unnecessary antibiotics</strong>: When antibiotics are necessary, consider probiotic supplementation during and after treatment</li>
+          <li><strong>Reduce alcohol intake</strong>: Excessive alcohol damages the gut lining and disrupts the microbiome</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          When to Consider Professional Support
+        </h3>
+        <p className="mb-6">
+          If you're experiencing persistent digestive symptoms alongside mental health concerns, consider consulting:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>A gastroenterologist for digestive symptom evaluation</li>
+          <li>A registered dietitian specializing in gut health and mental wellness</li>
+          <li>An integrative or functional medicine practitioner who can assess gut-brain connections</li>
+          <li>Your mental health provider to discuss how digestive health might be affecting treatment outcomes</li>
+        </ul>
 
         <h2 id="future-research" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What's Next in Gut-Brain Research
@@ -251,11 +318,31 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     description: 'Learn which foods and nutrients have the strongest evidence for supporting brain health, mood regulation, and cognitive function based on nutritional psychiatry research.',
     image: "/images/articles/cat09/cover-032.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Nutrition', 'Brain Health', 'Diet', 'Mental Wellness'],
+    summary: 'Nutritional psychiatry research reveals that dietary patterns---particularly Mediterranean-style eating---profoundly influence mental health. Key brain-supporting nutrients include omega-3 fatty acids, B vitamins, magnesium, zinc, and fiber, while ultra-processed foods and refined carbohydrates correlate with increased depression risk.',
+    keyFacts: [
+      { text: 'People eating Mediterranean-style diets have 25-40% lower rates of depression compared to those eating Western diets high in processed foods', citationIndex: 3 },
+      { text: 'Eating a diet high in ultra-processed foods increases depression risk by 33%, even after controlling for other lifestyle factors', citationIndex: 6 },
+      { text: 'Most Americans consume only 15 grams of fiber daily, half the recommended amount needed for optimal gut-brain health', citationIndex: 8 },
+      { text: 'Researchers have identified 12 key nutrients most strongly associated with preventing and treating depression, with oysters, leafy greens, and organ meats scoring highest', citationIndex: 1 },
+      { text: 'Dietary fiber feeds beneficial gut bacteria that produce short-chain fatty acids, which reduce brain inflammation and support mood regulation', citationIndex: 8 },
+    ],
+    sparkMoment: 'You don\'t need a perfect diet---even modest improvements in food quality are associated with measurable mental health benefits.',
+    practicalExercise: {
+      title: 'Build Your Brain-Supporting Meal',
+      steps: [
+        { title: 'Choose a Colorful Base', description: 'Start with leafy greens or cruciferous vegetables (spinach, kale, broccoli, Brussels sprouts).' },
+        { title: 'Add Quality Protein', description: 'Include fatty fish (salmon, sardines), eggs, legumes, or lean meat for brain-supporting amino acids.' },
+        { title: 'Include Healthy Fats', description: 'Add olive oil, avocado, nuts, or seeds for anti-inflammatory omega-3s and vitamin E.' },
+        { title: 'Finish with Whole Grains or Legumes', description: 'Choose fiber-rich complex carbs like quinoa, brown rice, or lentils to stabilize blood sugar and feed gut bacteria.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Food-Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -485,6 +572,36 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           source="Food & Mood Centre, Deakin University"
         />
 
+        <h2 id="meal-composition" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Structure Brain-Supporting Meals
+        </h2>
+        <p className="mb-6">
+          Beyond specific foods, how you structure meals affects nutrient absorption, blood sugar stability, and sustained energy. Brain-supporting meals combine multiple food groups to provide steady fuel and comprehensive nutrients:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Pair carbohydrates with protein or fat</strong>: This slows digestion and prevents blood sugar spikes that can affect mood</li>
+          <li><strong>Include produce at every meal</strong>: Aim for at least one vegetable or fruit serving to ensure vitamins, minerals, and fiber</li>
+          <li><strong>Don't skip meals</strong>: Regular eating patterns support stable neurotransmitter production</li>
+          <li><strong>Balance plate proportions</strong>: Fill half your plate with vegetables, one-quarter with protein, one-quarter with whole grains or starchy vegetables</li>
+        </ul>
+
+        <h2 id="supplements-vs-food" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Should You Take Supplements?
+        </h2>
+        <p className="mb-6">
+          Whole foods provide nutrients in combinations that work synergistically---something supplements can't fully replicate. However, supplementation may be appropriate in certain situations:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Vitamin D</strong>: Many people have insufficient levels, especially in winter months or with limited sun exposure</li>
+          <li><strong>Vitamin B12</strong>: Essential for vegetarians and vegans, as B12 is primarily found in animal products</li>
+          <li><strong>Omega-3s</strong>: If you don't eat fatty fish 2-3 times weekly, fish oil or algae-based supplements may help</li>
+          <li><strong>Magnesium</strong>: Some people benefit from supplementation, particularly those with dietary deficiencies or high stress</li>
+          <li><strong>Folate</strong>: Important for those with MTHFR genetic variations affecting folate metabolism</li>
+        </ul>
+        <p className="mb-6">
+          Before starting any supplement regimen, consult with your healthcare provider or a registered dietitian. They can assess your individual needs through blood work and dietary analysis.
+        </p>
+
         <h2 id="when-diet-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Nutrition Isn't Enough
         </h2>
@@ -505,11 +622,31 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     description: 'Explore the cutting-edge research on how the trillions of microorganisms in your gut influence brain function, mood disorders, and mental wellness.',
     image: "/images/articles/cat09/cover-033.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Microbiome', 'Gut Health', 'Mental Health Research', 'Probiotics'],
+    summary: 'The gut microbiome---39 trillion bacteria and other microorganisms living in your digestive tract---profoundly influences brain function through neurotransmitter production, immune regulation, and direct neural communication. Research shows that transferring gut bacteria from depressed individuals to healthy mice causes depression-like behaviors, revealing a causal link between microbiome composition and mental health.',
+    keyFacts: [
+      { text: 'Your gut microbiome weighs 1-2 kilograms, roughly the same as your brain, and contains 100 times more genes than your human genome', citationIndex: 1 },
+      { text: 'Transferring gut bacteria from depressed humans into germ-free mice causes the mice to develop depression-like behaviors, suggesting causation rather than just correlation', citationIndex: 4 },
+      { text: 'People with depression have distinctly different gut bacteria compositions, often with reduced levels of butyrate-producing bacteria like Faecalibacterium and Coprococcus', citationIndex: 5 },
+      { text: 'Greater microbiome diversity is consistently associated with better sleep efficiency, total sleep time, and mental health outcomes', citationIndex: 7 },
+      { text: 'Specific probiotic strains called "psychobiotics" show promise for reducing anxiety and depression symptoms when used alongside standard treatment, though effects are highly strain-specific', citationIndex: 2 },
+    ],
+    sparkMoment: 'You\'re not just human---you\'re a walking ecosystem, and the trillions of microbes in your gut are actively shaping your mood, stress response, and mental clarity.',
+    practicalExercise: {
+      title: 'Build Your Microbiome Diversity',
+      steps: [
+        { title: 'Track Your Plant Diversity', description: 'For one week, count how many different plant foods you eat (vegetables, fruits, grains, legumes, nuts, seeds). Aim for 30+ weekly.' },
+        { title: 'Add One Fermented Food Daily', description: 'Choose yogurt, kefir, sauerkraut, kimchi, kombucha, or miso. Start with small amounts and increase gradually.' },
+        { title: 'Increase Fiber Gradually', description: 'Add one high-fiber food daily (beans, whole grains, vegetables). Sudden increases can cause digestive discomfort.' },
+        { title: 'Reassess After 4 Weeks', description: 'Notice changes in digestion, mood, energy, and sleep quality. The microbiome takes time to shift.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Gut-Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -747,6 +884,60 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           source="APC Microbiome Ireland, University College Cork"
         />
 
+        <h2 id="testing-your-microbiome" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Should You Test Your Microbiome?
+        </h2>
+        <p className="mb-6">
+          Direct-to-consumer microbiome testing kits have become popular, promising insights into gut health and personalized dietary recommendations. While the science is fascinating, clinical utility remains limited.
+        </p>
+        <p className="mb-6">
+          Current limitations include:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Lack of standardization</strong>: Different companies use different testing methods and reference databases, producing inconsistent results</li>
+          <li><strong>Unclear optimal composition</strong>: We don't yet know what an "ideal" microbiome looks like---it varies by individual</li>
+          <li><strong>Limited actionability</strong>: Test results rarely lead to specific, evidence-based interventions beyond general healthy eating advice</li>
+          <li><strong>Snapshot in time</strong>: Your microbiome composition changes daily based on diet, stress, and other factors</li>
+        </ul>
+        <p className="mb-6">
+          For most people, focusing on evidence-based dietary and lifestyle practices that support microbiome diversity is more practical than testing. However, if you're working with a functional medicine practitioner or participating in research, testing may provide useful information in those specific contexts.
+        </p>
+
+        <h2 id="microbiome-mental-health-conditions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Microbiome Links to Specific Mental Health Conditions
+        </h2>
+        <p className="mb-6">
+          Research is uncovering connections between microbiome composition and various mental health conditions:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Depression
+        </h3>
+        <p className="mb-6">
+          People with major depression consistently show reduced microbial diversity and altered ratios of specific bacterial families. Some species produce inflammatory compounds while others produce beneficial short-chain fatty acids that protect against depression.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Anxiety Disorders
+        </h3>
+        <p className="mb-6">
+          Anxiety is associated with reduced levels of GABA-producing bacteria. Animal studies show that specific probiotic strains can reduce anxiety-like behaviors through vagus nerve signaling.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Autism Spectrum Disorder
+        </h3>
+        <p className="mb-6">
+          Many people with autism experience gastrointestinal issues, and research shows distinct microbiome differences. While we can't establish causation yet, the gut-brain connection may influence some autism symptoms <Citation id="9" index={9} source="Trends in Molecular Medicine" year="2014" tier={1} />.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Stress Resilience
+        </h3>
+        <p className="mb-6">
+          Your microbiome composition may influence how you respond to stress. Some bacterial profiles appear to buffer stress responses, while others may amplify them through inflammatory pathways.
+        </p>
+
         <h2 id="future-directions" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Future of Microbiome-Based Mental Health Care
         </h2>
@@ -767,11 +958,31 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     description: 'Examine the scientific evidence for omega-3 fatty acids in supporting brain function, mood regulation, and cognitive performance across the lifespan.',
     image: "/images/articles/cat09/cover-034.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 7,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Omega-3', 'Nutrition', 'Brain Health', 'Supplements'],
+    summary: 'Omega-3 fatty acids---particularly EPA and DHA found in fatty fish---are essential structural components of brain cell membranes and powerful anti-inflammatory agents. Multiple meta-analyses show that EPA-dominant omega-3 supplementation (1-2 grams daily) produces small to moderate reductions in depression and anxiety symptoms, with effects comparable to some pharmaceutical treatments in certain populations.',
+    keyFacts: [
+      { text: 'About 40% of the fatty acids in brain cell membranes are DHA, making omega-3s literally built into the structure of neurons', citationIndex: 3 },
+      { text: 'The average American Omega-3 Index is 4.9%, well below the target of 8% associated with optimal brain health', citationIndex: 5 },
+      { text: 'EPA-dominant omega-3 supplementation at 1-2 grams daily shows small to moderate antidepressant effects, with some studies finding benefits comparable to pharmaceutical antidepressants', citationIndex: 6 },
+      { text: 'Your actual blood omega-3 levels predict mental health outcomes and antidepressant response better than dietary intake alone', citationIndex: 5 },
+      { text: 'Plant-based ALA converts to EPA/DHA at rates typically below 10%, making direct EPA/DHA sources essential for brain health', citationIndex: 3 },
+    ],
+    sparkMoment: 'Your brain is 60% fat by dry weight---and the quality of those fats directly affects how your neurons communicate and how you feel.',
+    practicalExercise: {
+      title: 'Boost Your Omega-3 Intake',
+      steps: [
+        { title: 'Calculate Your Current Intake', description: 'Track fatty fish consumption for one week. Each 3-ounce serving of salmon provides ~2,000mg EPA+DHA.' },
+        { title: 'Set a Realistic Goal', description: 'Aim for 2-3 servings of fatty fish weekly (salmon, sardines, mackerel, anchovies, herring).' },
+        { title: 'Consider Supplementation', description: 'If you can\'t meet fish intake goals, choose a quality supplement with 1,000-2,000mg combined EPA+DHA, preferably EPA-dominant for mood support.' },
+        { title: 'Track Mood Changes', description: 'After 4-6 weeks of consistent intake, assess whether you notice improvements in mood, focus, or energy. Omega-3s take time to build up in cell membranes.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Mood Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1019,6 +1230,57 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           <li>If taking medications or have health conditions, consult your healthcare provider before supplementing</li>
         </ul>
 
+        <h2 id="omega-3-deficiency-signs" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Signs You May Be Deficient in Omega-3s
+        </h2>
+        <p className="mb-6">
+          While blood testing is the only way to know your omega-3 status definitively, certain symptoms may suggest inadequate levels:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Dry, flaky, or rough skin</li>
+          <li>Brittle hair and nails</li>
+          <li>Difficulty concentrating or brain fog</li>
+          <li>Mood swings or increased irritability</li>
+          <li>Joint pain or stiffness</li>
+          <li>Dry eyes</li>
+          <li>Fatigue despite adequate sleep</li>
+          <li>Poor sleep quality or difficulty falling asleep</li>
+        </ul>
+        <p className="mb-6">
+          These symptoms aren't specific to omega-3 deficiency---many conditions cause similar issues. But if you rarely eat fatty fish and experience several of these symptoms, inadequate omega-3 intake may be a contributing factor.
+        </p>
+
+        <h2 id="cognitive-aging" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Omega-3s and Cognitive Aging
+        </h2>
+        <p className="mb-6">
+          Beyond mood and mental health, omega-3s play important roles in cognitive aging and dementia prevention. While results are mixed, several large studies suggest that higher omega-3 intake or blood levels are associated with:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>Slower cognitive decline in older adults</li>
+          <li>Better memory performance</li>
+          <li>Reduced risk of Alzheimer's disease in some populations</li>
+          <li>Larger brain volumes in regions involved in memory</li>
+          <li>Better executive function and processing speed</li>
+        </ul>
+        <p className="mb-6">
+          The protective effects appear strongest when omega-3 intake is maintained throughout life rather than started late. This suggests that building and maintaining adequate omega-3 levels is an investment in long-term brain health.
+        </p>
+
+        <h2 id="combining-approaches" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Combining Omega-3s with Other Interventions
+        </h2>
+        <p className="mb-6">
+          Omega-3s work synergistically with other mental health supports. Research suggests that omega-3 supplementation may be most effective when combined with:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Psychotherapy</strong>: Omega-3s may enhance the neuroplasticity that supports therapeutic change</li>
+          <li><strong>Antidepressant medications</strong>: Some studies show improved response rates when omega-3s are added to SSRIs</li>
+          <li><strong>Exercise</strong>: Both omega-3s and exercise support BDNF production and neurogenesis</li>
+          <li><strong>Anti-inflammatory diet</strong>: Combining omega-3s with an overall anti-inflammatory eating pattern amplifies benefits</li>
+          <li><strong>Stress management</strong>: Omega-3s may buffer some of the negative brain effects of chronic stress</li>
+        </ul>
+
         <h2 id="bottom-line" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           The Bottom Line
         </h2>
@@ -1027,6 +1289,9 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
         </p>
         <p className="mb-6">
           The best approach is to eat fatty fish 2-3 times weekly. If that's not realistic, a quality omega-3 supplement providing 1,000-2,000 mg EPA+DHA daily is a reasonable evidence-based intervention to support brain health.
+        </p>
+        <p className="mb-6">
+          Remember that omega-3s take time---they're incorporated into cell membranes gradually over weeks to months. Consistency matters more than perfection, and the benefits accumulate over time to support both immediate mental wellness and long-term cognitive health.
         </p>
       </>
     ),
@@ -1039,11 +1304,31 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
     description: 'Understand how blood sugar fluctuations and chronic inflammation affect your brain chemistry, mood stability, and mental health through metabolic pathways.',
     image: "/images/articles/cat09/cover-035.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Blood Sugar', 'Inflammation', 'Metabolism', 'Mood Regulation'],
+    summary: 'Blood sugar fluctuations and chronic inflammation form interconnected pathways that profoundly affect brain function and mood. Your brain consumes 20% of the body\'s glucose, making it extremely sensitive to glycemic variability. Meanwhile, 30-40% of people with depression show elevated inflammatory markers, and inflammation directly reduces neurotransmitter production while impairing neuroplasticity.',
+    keyFacts: [
+      { text: 'People with diabetes experience depression at rates 2-3 times higher than the general population, even after controlling for disease management stress', citationIndex: 1 },
+      { text: 'About 30-40% of people with depression have elevated inflammatory markers in their blood, and 50% of antidepressant non-responders show signs of inflammation', citationIndex: 3 },
+      { text: 'Inflammatory cytokines can cross the blood-brain barrier and directly reduce serotonin production while increasing the enzyme that breaks it down', citationIndex: 2 },
+      { text: 'Blood sugar dysregulation and inflammation form a bidirectional feedback loop---insulin resistance drives inflammation, which worsens insulin resistance', citationIndex: 6 },
+      { text: 'Rising depression rates over the past century correlate with dramatic increases in refined sugar consumption and decreases in anti-inflammatory whole foods', citationIndex: 8 },
+    ],
+    sparkMoment: 'The irritability you feel when hungry and the mood crash after sugary foods aren\'t character flaws---they\'re your brain responding to unstable fuel delivery.',
+    practicalExercise: {
+      title: 'Stabilize Your Blood Sugar',
+      steps: [
+        { title: 'Track Energy Patterns', description: 'For 3 days, note energy and mood levels 1-2 hours after each meal. Identify which meals lead to crashes.' },
+        { title: 'Restructure Problem Meals', description: 'For meals that caused crashes, add protein or healthy fat. Never eat carbs alone.' },
+        { title: 'Test Regular Timing', description: 'Eat at consistent times for one week. Notice if regular fuel delivery improves mood stability.' },
+        { title: 'Add Anti-Inflammatory Foods', description: 'Include one anti-inflammatory food daily (fatty fish, leafy greens, berries, olive oil, turmeric).' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Food-Mood Connections',
+    },
     citations: [
       {
         id: '1',
@@ -1306,6 +1591,57 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           <li><strong>Limit alcohol</strong>: Excessive alcohol increases inflammation</li>
         </ul>
 
+        <h2 id="meal-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Blood Sugar-Stabilizing Meal Examples
+        </h2>
+        <p className="mb-6">
+          Practical examples of meals that support stable blood sugar and reduce inflammation:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Breakfast
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Instead of</strong>: Cereal with skim milk or a plain bagel → <strong>Choose</strong>: Greek yogurt with berries, walnuts, and chia seeds</li>
+          <li><strong>Instead of</strong>: Orange juice and toast → <strong>Choose</strong>: Veggie omelet with avocado and whole grain toast</li>
+          <li><strong>Instead of</strong>: Pastry or muffin → <strong>Choose</strong>: Overnight oats with almond butter and sliced apple</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Lunch
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Instead of</strong>: Sandwich on white bread → <strong>Choose</strong>: Salmon salad with mixed greens, chickpeas, olive oil dressing</li>
+          <li><strong>Instead of</strong>: Pasta with marinara → <strong>Choose</strong>: Whole grain pasta with chicken, vegetables, and olive oil</li>
+          <li><strong>Instead of</strong>: Fast food burger and fries → <strong>Choose</strong>: Burrito bowl with brown rice, beans, vegetables, guacamole</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Snacks
+        </h3>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Instead of</strong>: Cookies or candy → <strong>Choose</strong>: Apple slices with almond butter</li>
+          <li><strong>Instead of</strong>: Chips → <strong>Choose</strong>: Hummus with vegetable sticks</li>
+          <li><strong>Instead of</strong>: Granola bar → <strong>Choose</strong>: Handful of mixed nuts and a piece of fruit</li>
+        </ul>
+
+        <h2 id="inflammation-testing" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding Inflammatory Markers
+        </h2>
+        <p className="mb-6">
+          If you and your healthcare provider suspect inflammation may be affecting your mental health, several blood tests can provide information:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>C-Reactive Protein (CRP)</strong>: General inflammation marker. High-sensitivity CRP (hs-CRP) is most useful. Target: &lt;1 mg/L for low cardiovascular risk</li>
+          <li><strong>Fasting Glucose</strong>: Measures blood sugar after overnight fast. Normal: 70-99 mg/dL</li>
+          <li><strong>HbA1c</strong>: Average blood sugar over 3 months. Normal: below 5.7%, prediabetes: 5.7-6.4%, diabetes: 6.5%+</li>
+          <li><strong>Fasting Insulin</strong>: Measures insulin resistance. Optimal: &lt;5 µIU/mL, concerning: &gt;10 µIU/mL</li>
+          <li><strong>Omega-3 Index</strong>: EPA+DHA in red blood cells. Target: ≥8% for optimal brain health</li>
+        </ul>
+        <p className="mb-6">
+          These tests provide objective data to guide dietary and lifestyle interventions. Work with a healthcare provider to interpret results in context of your overall health picture.
+        </p>
+
         <h2 id="when-to-seek-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Medical Evaluation
         </h2>
@@ -1319,7 +1655,7 @@ export const nutritionGutHealthBrainArticlesA: Article[] = [
           <li>Thyroid function (can affect both blood sugar and mood)</li>
         </ul>
         <p className="mb-6">
-          Identifying and addressing metabolic dysfunction early can prevent both physical health complications and worsening mental health symptoms.
+          Identifying and addressing metabolic dysfunction early can prevent both physical health complications and worsening mental health symptoms. The good news: blood sugar regulation and inflammation are highly responsive to dietary and lifestyle interventions, giving you significant control over these factors.
         </p>
       </>
     ),

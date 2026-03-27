@@ -19,11 +19,31 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     description: 'Navigate the psychological impact of cancer diagnosis and treatment with evidence-based strategies for emotional resilience, relationship support, and meaning-making.',
     image: "/images/articles/cat09/cover-056.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Cancer', 'Medical Trauma', 'Emotional Resilience', 'Chronic Illness', 'Meaning-Making'],
+    summary: 'A cancer diagnosis brings profound psychological challenges alongside medical treatment. This guide explores the emotional landscape from diagnosis through survivorship, evidence-based coping strategies including mindfulness and meaning-making, and when to seek professional psycho-oncology support for optimal quality of life.',
+    keyFacts: [
+      { text: '30-40% of cancer patients experience clinically significant psychological distress, including depression and anxiety', citationIndex: 1 },
+      { text: 'Fewer than half of cancer patients experiencing distress receive mental health support', citationIndex: 2 },
+      { text: 'Mindfulness-based interventions show strong evidence for reducing anxiety, depression, and fear of recurrence in cancer patients', citationIndex: 6 },
+      { text: '78% of cancer survivors report increased appreciation of life as a form of post-traumatic growth', citationIndex: 3 },
+      { text: 'Cognitive-behavioral therapy adapted for cancer patients significantly reduces psychological distress and improves treatment adherence', citationIndex: 4 },
+    ],
+    sparkMoment: 'Cancer changes not just your body, but your relationship with time, mortality, and meaning—and tending to this psychological transformation is as essential as treating the physical disease.',
+    practicalExercise: {
+      title: 'Daily Grounding Practice for Cancer-Related Anxiety',
+      steps: [
+        { title: 'Morning intention', description: 'Before checking your phone, spend 2 minutes breathing deeply and setting one realistic intention for the day (rest, connection, small task).' },
+        { title: 'Anxiety moment response', description: 'When fear arises, use 3-3-3 grounding: name 3 things you see, 3 sounds you hear, 3 body sensations you feel. This interrupts panic spirals.' },
+        { title: 'Evening reflection', description: 'Write 2-3 sentences about one thing you\'re grateful for and one challenge you faced. Both deserve acknowledgment.' },
+        { title: 'Weekly meaning check', description: 'Once a week, journal: "What matters most to me now?" Notice if cancer has clarified your values or priorities.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Emotional Journey',
+    },
     citations: [
       {
         id: '1',
@@ -164,11 +184,38 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="relationship-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Ripple Effect: Cancer's Impact on Relationships
+        </h2>
+        <p className="mb-6">
+          Cancer doesn't happen in isolation---it affects every relationship in your life. Partners, family members, friends, and colleagues all navigate their own emotional responses while trying to support you. Understanding these dynamics can help you communicate needs more effectively and maintain connection during treatment.
+        </p>
+
+        <ArticleCallout variant="insight" title="The Caregiver Burden">
+          <p className="mb-3">While you focus on treatment, your primary caregiver often experiences their own form of trauma. Studies show that partners and family caregivers of cancer patients report rates of depression and anxiety equal to or higher than patients themselves. Acknowledging their struggle---without feeling guilty about it---can strengthen rather than strain relationships.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Common relationship patterns that emerge during cancer treatment include:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Communication mismatch</strong>: You may need to talk about your fears, while loved ones want to stay positive and avoid difficult conversations. Or the reverse---they want details while you need distraction.</li>
+          <li><strong>Role reversals</strong>: If you've been the caregiver in your family, accepting help can feel deeply uncomfortable. Children may take on adult responsibilities, creating complex emotions.</li>
+          <li><strong>Social withdrawal</strong>: Friends may disappear, not from lack of care but from not knowing what to say or fear of intruding. This can feel like abandonment when you need support most.</li>
+          <li><strong>Intimacy changes</strong>: Physical changes, fatigue, and emotional distress affect sexual intimacy and emotional closeness in partnerships.</li>
+          <li><strong>Financial strain</strong>: Medical costs and lost income create stress that compounds emotional burden for the entire family.</li>
+        </ul>
+
+        <p className="mb-6">
+          One practical strategy: create a "support team" structure with clear roles. Designate one person as the communication hub who updates others, assign specific tasks (meal prep, rides, childcare), and identify who you can talk to about difficult emotions versus who provides welcome distraction. This prevents both isolation and overwhelming attention.
+        </p>
+
         <h2 id="psychological-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Common Psychological Challenges
         </h2>
         <p className="mb-6">
-          Beyond the general emotional landscape, specific mental health conditions are more common in cancer patients than the general population.
+          Beyond the general emotional landscape, specific mental health conditions are more common in cancer patients than the general population. Recognizing these patterns can help you identify when normal distress has crossed into territory that needs professional intervention.
         </p>
 
         <ComparisonTable
@@ -183,6 +230,14 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           highlightColumn={1}
         />
 
+        <p className="mb-6">
+          It's important to understand the difference between <strong>adjustment disorder</strong> and <strong>major depression</strong> in the cancer context. Adjustment disorder involves emotional distress that's clearly linked to the cancer diagnosis but doesn't meet the full criteria for depression. It's the most common psychological diagnosis in cancer patients. Major depression, by contrast, includes persistent symptoms like loss of interest in all activities, significant weight changes, sleep disruption, feelings of worthlessness, and difficulty concentrating---lasting most of the day, nearly every day, for at least two weeks.
+        </p>
+
+        <p className="mb-6">
+          Anxiety in cancer patients often manifests differently than generalized anxiety. It tends to be focused on specific triggers: upcoming scans (scanxiety), treatment appointments, physical symptoms that might indicate progression, or medical results. This anxiety can be severe enough to cause avoidance behaviors that interfere with necessary medical care.
+        </p>
+
         <ArticleCallout variant="clinical-note" title="When Distress Requires Professional Support">
           <p className="mb-3">Not all emotional distress during cancer requires formal mental health treatment---some is a normal response to an abnormal situation. However, seek professional psychological support if you experience:</p>
           <ul className="list-disc pl-6 space-y-2">
@@ -192,8 +247,32 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
             <li>Substance use to cope with emotions</li>
             <li>Complete social withdrawal or isolation</li>
             <li>Panic attacks or overwhelming fear that doesn't subside</li>
+            <li>Intrusive trauma memories or nightmares about diagnosis or treatment</li>
+            <li>Inability to plan for the future or make any decisions</li>
           </ul>
         </ArticleCallout>
+
+        <h2 id="body-mind-connection" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Physical-Emotional Connection
+        </h2>
+        <p className="mb-6">
+          Cancer treatment affects your body in ways that directly impact emotional well-being. Chemotherapy-induced cognitive changes ("chemo brain"), hormone therapy effects, surgical changes to appearance, fatigue, pain, and sleep disruption all have psychological consequences beyond their physical impact.
+        </p>
+
+        <ComparisonTable
+          title="Physical Side Effects and Their Emotional Impact"
+          columns={['Side Effect', 'Physical Impact', 'Common Emotional Response']}
+          items={[
+            { feature: 'Fatigue', values: ['Extreme exhaustion limiting daily activities', 'Frustration, loss of independence, guilt'] },
+            { feature: 'Appearance Changes', values: ['Hair loss, weight changes, surgical scars', 'Body image distress, social anxiety, identity confusion'] },
+            { feature: 'Cognitive Changes', values: ['Memory problems, difficulty concentrating', 'Fear of permanent damage, work-related anxiety, self-doubt'] },
+            { feature: 'Pain', values: ['Acute or chronic pain from disease or treatment', 'Depression, sleep disruption, social isolation'] },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          Addressing the physical components can significantly improve emotional well-being. This might include working with a palliative care team (which focuses on quality of life alongside treatment, not just end-of-life care), occupational therapy for cognitive strategies, physical therapy for pain management, or consultation with a nutritionist for energy optimization. The mind-body connection works both ways: improving physical symptoms helps emotional health, and addressing psychological distress can improve physical symptom tolerance.
+        </p>
 
         <h2 id="coping-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Coping Strategies
@@ -268,11 +347,75 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="practical-daily-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Practical Daily Strategies for Emotional Well-Being
+        </h2>
+        <p className="mb-6">
+          Beyond formal therapy or support groups, small daily practices can significantly impact how you experience the cancer journey. These aren't about "staying positive" or denying difficult emotions---they're tools for processing reality while maintaining some sense of control and self.
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'routine',
+              title: 'Maintain Meaningful Routines',
+              content: (
+                <div className="space-y-3">
+                  <p>Cancer disrupts normal life, but small routines provide anchors of normalcy and predictability. This might be morning coffee in your favorite mug, reading before bed, Sunday phone calls with a friend, or watching a specific show. These rituals say "I am still myself" when so much feels unrecognizable.</p>
+                  <p className="mt-3">Adjust routines to your energy level---if morning walks were important but now you're too fatigued, perhaps sitting outside for 10 minutes provides similar emotional benefit. The goal is connection to your pre-cancer self, not rigid adherence to old activities.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'boundaries',
+              title: 'Set Clear Boundaries Around Cancer Talk',
+              content: (
+                <div className="space-y-3">
+                  <p>You're not obligated to be an inspiring cancer story, provide constant updates, or field questions from everyone who asks "how are you doing?" It's okay to designate "cancer-free" time or spaces, to ask someone to stop sending articles about alternative treatments, or to say "I'd rather not talk about it today."</p>
+                  <p className="mt-3">One helpful script: "I appreciate you caring enough to ask. Right now I need a break from cancer talk---can we just [watch this show / talk about your life / be together quietly]?"</p>
+                </div>
+              ),
+            },
+            {
+              id: 'expression',
+              title: 'Find Safe Outlets for Difficult Emotions',
+              content: (
+                <div className="space-y-3">
+                  <p>Anger, bitterness, resentment, terror, rage at unfairness---these emotions are valid but can be hard to express to loved ones who are trying to help or stay positive. Finding outlets prevents emotional buildup and relationship damage.</p>
+                  <p className="mt-3"><strong>Safe outlets might include:</strong></p>
+                  <ul className="list-disc pl-6 space-y-1">
+                    <li>Anonymous online cancer forums where brutal honesty is normalized</li>
+                    <li>Private journaling with no filter</li>
+                    <li>Working with a therapist who can handle the full range of your experience</li>
+                    <li>Creative expression: art, music, writing poetry or fiction</li>
+                    <li>Physical release: yelling in the car, hitting pillows, intense crying when safe to do so</li>
+                  </ul>
+                </div>
+              ),
+            },
+            {
+              id: 'information',
+              title: 'Control Information Flow',
+              content: (
+                <div className="space-y-3">
+                  <p>Some people cope by learning everything possible about their cancer; others cope by knowing only what's necessary for immediate decisions. Neither is wrong. What matters is respecting your own information needs and protecting yourself from unwanted information.</p>
+                  <p className="mt-3">This might mean asking your oncologist to provide only essential information without statistics, unsubscribing from cancer newsletters that increase anxiety, or conversely, seeking detailed research to feel more in control. Give yourself permission to avoid Dr. Google when searches spiral into catastrophizing.</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
         <h2 id="post-traumatic-growth" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Post-Traumatic Growth: Finding Strength Through Adversity
         </h2>
         <p className="mb-6">
           While cancer is undeniably traumatic, research on post-traumatic growth shows that many survivors report positive psychological changes alongside their suffering <Citation id="3" index={3} source="Psycho-Oncology" year="2020" tier={1} />. This isn't about "silver linings" or minimizing pain---it's about recognizing that growth and suffering can coexist.
+        </p>
+
+        <p className="mb-6">
+          Post-traumatic growth is not automatic, universal, or required. It doesn't mean the trauma was "worth it" or that you should be grateful for cancer. It simply describes the phenomenon where some people report meaningful psychological changes that they attribute to struggling with highly challenging circumstances. These changes often include increased appreciation for life, deeper relationships, recognition of personal strength, new life directions, or spiritual development.
         </p>
 
         <ArticleChart
@@ -291,6 +434,44 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
         <p className="mb-6 mt-6">
           Growth doesn't happen automatically---it requires active engagement with your experience, social support, and often professional guidance. It's also completely okay if you don't experience post-traumatic growth; there is no 'right way' to respond to cancer.
         </p>
+
+        <h2 id="survivorship-transition" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Navigating the Survivorship Transition
+        </h2>
+        <p className="mb-6">
+          When active treatment ends, many survivors experience an unexpected emotional letdown. Friends and family celebrate that treatment is "over," but you may feel more anxious than relieved. This is often called the "survivorship paradox"---the moment you're supposed to feel most grateful can be when you feel most vulnerable.
+        </p>
+
+        <ArticleCallout variant="did-you-know" title="The End-of-Treatment Anxiety Spike">
+          <p>Many cancer survivors report that their highest anxiety occurs not during treatment but in the months immediately after. During treatment, there's a clear plan and frequent medical monitoring. Post-treatment, you transition to less frequent follow-up while fear of recurrence peaks. This is a normal, well-documented pattern---not a sign that something is wrong with you.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Key survivorship challenges include:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Fear of recurrence</strong>: Every ache, pain, or symptom triggers anxiety. Scan schedules become emotional milestones you dread and fixate on.</li>
+          <li><strong>Loss of medical support</strong>: Going from weekly appointments to 3-6 month check-ups can feel like losing a safety net.</li>
+          <li><strong>Identity shifts</strong>: You're no longer actively fighting cancer, but you don't feel "normal." Who are you in this in-between space?</li>
+          <li><strong>Lingering side effects</strong>: Fatigue, cognitive changes, neuropathy, or other effects persist while others expect you to "be back to normal."</li>
+          <li><strong>Existential questions</strong>: "Why am I alive when others died?" "What am I supposed to do with this second chance?" "How do I live with this uncertainty?"</li>
+        </ul>
+
+        <p className="mb-6">
+          Survivorship care plans---detailed documents outlining your treatment history, follow-up schedule, and late-effect risks---can provide some structure and control. Ask your oncology team for one. Many survivors also benefit from joining survivorship-specific support groups where these unique challenges are understood and normalized.
+        </p>
+
+        <ArticleCallout variant="key-takeaway" title="The Essential Truth About Cancer and Mental Health">
+          <p className="mb-3">Your emotional response to cancer is not separate from your medical experience---it is part of your medical experience. The psychological journey matters as much as the physical one because:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Mental health impacts treatment adherence, side effect management, and quality of life</li>
+            <li>Addressing psychological needs improves outcomes and survivorship experience</li>
+            <li>There is no "right way" to feel---all emotions are valid responses to life-threatening illness</li>
+            <li>Seeking mental health support is not weakness; it's comprehensive medical care</li>
+            <li>You can experience suffering and growth, fear and hope, grief and gratitude---all at once</li>
+          </ul>
+        </ArticleCallout>
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           How to Get Started
@@ -367,11 +548,31 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     description: 'Navigate the complex territory between realistic vigilance and excessive health anxiety after a medical diagnosis, with strategies to monitor your health without spiraling into fear.',
     image: "/images/articles/cat09/cover-057.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 7,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Health Anxiety', 'Medical Trauma', 'Chronic Illness', 'Vigilance', 'Coping Skills'],
+    summary: 'After a real medical diagnosis, distinguishing between appropriate health monitoring and debilitating anxiety becomes complex. This guide helps identify when vigilance crosses into health anxiety, provides evidence-based strategies for managing fear of recurrence and symptom catastrophizing, and offers practical tools for tolerating medical uncertainty while maintaining quality of life.',
+    keyFacts: [
+      { text: '50-70% of cancer survivors experience significant fear of recurrence, making it one of the most common psychological sequelae', citationIndex: 2 },
+      { text: 'The difference between appropriate vigilance and health anxiety lies in its impact on functioning, not the presence of worry itself', citationIndex: 4 },
+      { text: 'Cognitive-behavioral therapy adapted for medically ill populations effectively reduces health anxiety without compromising medical vigilance', citationIndex: 3 },
+      { text: 'Intolerance of uncertainty is a core maintaining factor in health anxiety after diagnosis', citationIndex: 5 },
+      { text: 'Metacognitive therapy shows promise by changing relationship with health thoughts rather than challenging content', citationIndex: 6 },
+    ],
+    sparkMoment: 'Having a real diagnosis means your health concerns are legitimate—but anxiety becomes the problem when fear of illness causes more suffering than the illness itself.',
+    practicalExercise: {
+      title: 'The 24-Hour Symptom Rule',
+      steps: [
+        { title: 'Notice the symptom', description: 'When you notice a symptom that triggers anxiety, acknowledge it without immediately acting. Write it down with the time and context.' },
+        { title: 'Consult your criteria', description: 'Review your written "red flag vs. yellow flag" symptoms list. If it\'s not a red flag requiring immediate attention, commit to waiting 24 hours.' },
+        { title: 'Use distraction skills', description: 'For the next 24 hours, practice engaging fully in valued activities. When the urge to Google or seek reassurance arises, note it and redirect attention.' },
+        { title: 'Reassess after 24 hours', description: 'If the symptom persists or worsens, contact your medical team using scheduled channels. Often, symptoms resolve or become less alarming with time.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Use Symptom Navigator',
+    },
     citations: [
       {
         id: '1',
@@ -531,6 +732,44 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="anxiety-symptom-cycle" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Anxiety-Symptom Feedback Loop
+        </h2>
+        <p className="mb-6">
+          One of the most challenging aspects of health anxiety after a real diagnosis is that anxiety itself can create or worsen physical symptoms. This creates a vicious cycle: you notice a symptom, anxiety spikes, the anxiety creates more symptoms (rapid heartbeat, chest tightness, dizziness, nausea), and you interpret these anxiety-generated symptoms as evidence of disease progression.
+        </p>
+
+        <ArticleChart
+          type="area"
+          title="How Anxiety Amplifies Symptom Perception"
+          data={[
+            { label: 'Baseline', value: 30 },
+            { label: 'Symptom noticed', value: 45 },
+            { label: 'Anxiety activated', value: 70 },
+            { label: 'Body scanning', value: 85 },
+            { label: 'Peak distress', value: 95 },
+            { label: 'With coping skills', value: 50 },
+            { label: 'Return to baseline', value: 30 },
+          ]}
+          description="The trajectory of symptom distress with and without intervention"
+        />
+
+        <p className="mb-6 mt-6">
+          Breaking this cycle requires recognizing that some symptoms are manifestations of anxiety itself, not disease progression. Common anxiety-generated physical symptoms that can be misinterpreted as illness include:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Cardiovascular</strong>: Racing heart, chest tightness, palpitations, blood pressure spikes</li>
+          <li><strong>Respiratory</strong>: Shortness of breath, feeling like you can't get enough air, hyperventilation</li>
+          <li><strong>Gastrointestinal</strong>: Nausea, stomach pain, diarrhea, loss of appetite</li>
+          <li><strong>Neurological</strong>: Dizziness, lightheadedness, numbness/tingling, brain fog</li>
+          <li><strong>Musculoskeletal</strong>: Muscle tension, headaches, trembling, fatigue</li>
+        </ul>
+
+        <p className="mb-6">
+          This doesn't mean you should dismiss all symptoms as "just anxiety"---that's the other extreme and equally problematic. Instead, work with your medical team to understand which symptoms are anxiety-related versus illness-related, and practice calming your nervous system before making decisions about symptom meaning.
+        </p>
+
         <ArticleCallout variant="clinical-note" title="When Health Anxiety Requires Professional Support">
           <p className="mb-3">Health anxiety after a real diagnosis warrants professional psychological support when:</p>
           <ul className="list-disc pl-6 space-y-2">
@@ -542,6 +781,28 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
             <li>You cannot tolerate any medical uncertainty without severe distress</li>
           </ul>
         </ArticleCallout>
+
+        <h2 id="medical-relationship" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Building a Healthy Relationship with Medical Care
+        </h2>
+        <p className="mb-6">
+          When you have a chronic condition requiring ongoing medical monitoring, your relationship with healthcare becomes a central part of life. Health anxiety can distort this relationship into either excessive dependence (constant contact, multiple providers for same concerns) or avoidance (missing appointments due to fear of bad news).
+        </p>
+
+        <ComparisonTable
+          title="Healthy vs. Anxious Medical Engagement"
+          columns={['Aspect', 'Healthy Engagement', 'Anxiety-Driven Patterns']}
+          items={[
+            { feature: 'Communication', values: ['Prepares questions, shares concerns at appointments', 'Calls/emails between appointments seeking reassurance'] },
+            { feature: 'Provider relationship', values: ['Trusts primary team, asks clarifying questions', 'Seeks multiple opinions for same issue, unable to accept reassurance'] },
+            { feature: 'Test results', values: ['Manages anxiety while waiting, plans coping for all outcomes', 'Checks portal obsessively, catastrophizes before receiving results'] },
+            { feature: 'Follow-up schedule', values: ['Adheres to recommended monitoring intervals', 'Requests more frequent testing than medically indicated'] },
+          ]}
+        />
+
+        <p className="mb-6 mt-6">
+          A practical approach: establish a "communication contract" with your medical team. This might include agreements like: you'll keep a symptom log to discuss at scheduled appointments rather than calling for each symptom; your doctor will specify which symptoms require immediate contact; you'll limit portal-checking to once daily at a designated time; and your provider will respond to non-urgent messages within a specific timeframe so you know when to expect responses.
+        </p>
 
         <h2 id="evidence-based-strategies" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Evidence-Based Strategies to Manage Health Anxiety
@@ -692,11 +953,31 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     description: "Navigate the unique psychological challenges of living with chronic illnesses that others cannot see, from invalidation and isolation to self-advocacy and community.",
     image: "/images/articles/cat09/cover-058.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Invisible Illness', 'Chronic Illness', 'Validation', 'Self-Advocacy', 'Isolation'],
+    summary: 'Living with chronic conditions that others cannot see creates unique psychological burdens: constant invalidation, battles for legitimacy, disclosure dilemmas, and profound isolation. This guide explores these challenges and provides evidence-based strategies for self-validation, strategic disclosure, building advocacy skills, and finding supportive community when you look fine but feel far from it.',
+    keyFacts: [
+      { text: '42% of people with invisible chronic illnesses report significant social isolation due to others not understanding their limitations', citationIndex: 3 },
+      { text: 'Chronic invalidation from others—including healthcare providers—is psychologically corrosive and can lead to self-doubt about one\'s own experience', citationIndex: 5 },
+      { text: 'People with invisible illnesses face unique disclosure dilemmas, constantly weighing risks of judgment versus benefits of understanding', citationIndex: 4 },
+      { text: 'Medical gaslighting—when providers dismiss symptoms without proper investigation—is especially common for women, people of color, and those with poorly understood conditions', citationIndex: 2 },
+      { text: 'Self-validation and strategic disclosure skills significantly improve psychological outcomes and quality of life in invisible illness', citationIndex: 6 },
+    ],
+    sparkMoment: 'Your illness doesn\'t need to be visible to be valid—the legitimacy of your experience exists independent of others\' ability to see it.',
+    practicalExercise: {
+      title: 'Strategic Disclosure Decision Tree',
+      steps: [
+        { title: 'Identify the need', description: 'Before deciding whether to disclose, clarify: What do I need from this interaction? (Accommodation, understanding, connection, or nothing)' },
+        { title: 'Assess the relationship', description: 'Evaluate: How safe is this person/setting? What\'s my past experience with them? Do I have energy to educate if needed?' },
+        { title: 'Choose your level', description: 'Level 1 (minimal): "I have a health condition." Level 2 (moderate): Name condition + key impact. Level 3 (full): Medical details reserved for close relationships or necessary accommodations.' },
+        { title: 'Prepare your boundary', description: 'Have a ready response for follow-up questions or invalidation: "I\'d rather not go into details" or "I work with my doctors on managing it." You don\'t owe explanations.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Experience',
+    },
     citations: [
       {
         id: '1',
@@ -839,6 +1120,34 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
             },
           ]}
         />
+
+        <h2 id="fluctuating-symptoms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The "Good Days, Bad Days" Dilemma
+        </h2>
+        <p className="mb-6">
+          One of the most challenging aspects of many invisible illnesses is symptom fluctuation. You might look and feel relatively normal on Monday, then be completely debilitated on Tuesday with no visible change. This variability creates its own set of psychological challenges.
+        </p>
+
+        <ArticleCallout variant="did-you-know" title="Why Fluctuation Is So Confusing">
+          <p>Chronic illnesses with fluctuating symptoms are particularly prone to skepticism because they violate what most people expect from "real" illness: consistency. We're socialized to believe that sick people are always visibly ill, and improving means getting better. Conditions that wax and wane don't fit this narrative, leading to doubt about their legitimacy.</p>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          The psychological impacts of symptom fluctuation include:
+        </p>
+
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Credibility concerns</strong>: Good days make you worry people will think you were faking bad days</li>
+          <li><strong>Planning paralysis</strong>: Difficulty committing to future plans because you can't predict how you'll feel</li>
+          <li><strong>Guilt and frustration</strong>: Feeling like you're letting people down with last-minute cancellations</li>
+          <li><strong>Identity confusion</strong>: "Am I really sick if I can do X on good days?"</li>
+          <li><strong>Overextension on good days</strong>: Pushing too hard when feeling better, leading to crashes (called "boom-bust cycle")</li>
+          <li><strong>Grief on bad days</strong>: Each bad day reminds you of what you've lost</li>
+        </ul>
+
+        <p className="mb-6">
+          Managing fluctuation requires accepting that both good and bad days are part of your reality. Good days don't mean you're cured or were exaggerating before; bad days don't negate progress. Your condition exists on a spectrum that shifts---and that's valid.
+        </p>
 
         <h2 id="psychological-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Mental Health Consequences
@@ -1045,11 +1354,31 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     description: 'Understand and navigate the often-overlooked emotional and psychological challenges of preparing for surgery, recovering from procedures, and adjusting to post-surgical life.',
     image: "/images/articles/cat09/cover-059.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Surgery', 'Medical Procedures', 'Recovery', 'Anxiety', 'Post-Surgical Depression'],
+    summary: 'Surgery is both a physical and psychological event. This comprehensive guide addresses the often-overlooked mental health aspects of medical procedures—from pre-surgical anxiety and fear of anesthesia to post-operative depression, cognitive changes, and body image adjustment. Learn evidence-based strategies for psychological preparation, recovery support, and when professional mental health intervention is needed.',
+    keyFacts: [
+      { text: '60-80% of surgical patients experience anticipatory anxiety, which is associated with worse pain outcomes and slower healing', citationIndex: 2 },
+      { text: 'Post-surgical depression affects 10-30% of patients depending on procedure type, driven by pain, loss of independence, and unmet recovery expectations', citationIndex: 3 },
+      { text: 'Psychological preparation for surgery—including procedural information and relaxation techniques—improves outcomes and reduces distress', citationIndex: 4 },
+      { text: 'Post-operative cognitive dysfunction (POCD) can cause memory problems and confusion, especially in older adults, usually resolving within weeks to months', citationIndex: 7 },
+      { text: 'Body image changes after disfiguring or altering surgery require significant psychological adjustment, often taking longer than physical healing', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your mind heals alongside your body—preparing psychologically for surgery isn\'t optional self-care, it\'s an evidence-based component of comprehensive surgical treatment.',
+    practicalExercise: {
+      title: 'Pre-Surgery Anxiety Management Protocol',
+      steps: [
+        { title: 'Two weeks before: Information gathering', description: 'Schedule a pre-op appointment specifically to ask procedural and sensory questions. Write down what will happen, what you\'ll experience, realistic timeline. Knowledge reduces fear of the unknown.' },
+        { title: 'One week before: Practice relaxation', description: 'Begin daily 4-7-8 breathing (inhale 4 counts, hold 7, exhale 8) and progressive muscle relaxation. Practice until these become automatic, so you can use them when anxiety spikes.' },
+        { title: 'Three days before: Finalize support', description: 'Confirm who will drive you home, stay with you first night, bring meals, handle specific tasks. Knowing practical needs are covered frees mental energy for healing.' },
+        { title: 'Night before: Grounding ritual', description: 'Pack hospital bag mindfully. Include comfort items (photos, playlist, chapstick). Write one sentence about why you\'re doing this surgery. Remind yourself: "I\'ve prepared. My team is skilled. Tomorrow I focus only on breathing and healing."' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Recovery',
+    },
     citations: [
       {
         id: '1',
@@ -1409,11 +1738,31 @@ export const painChronicIllnessImpactArticlesB: Article[] = [
     description: "Learn practical strategies to communicate effectively with healthcare providers, navigate complex medical systems, and ensure your health concerns are heard and addressed.",
     image: "/images/articles/cat09/cover-060.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 9,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Advocacy', 'Healthcare Navigation', 'Patient Rights', 'Medical Communication', 'Chronic Illness'],
+    summary: 'Effective self-advocacy in healthcare means actively participating in your care through preparation, clear communication, and understanding your rights. This practical guide provides strategies for preparing for appointments, communicating assertively with providers, responding to medical dismissal, documenting your health journey, and engaging in shared decision-making to ensure your concerns are heard and addressed.',
+    keyFacts: [
+      { text: 'Strong self-advocacy skills are associated with better health outcomes, higher care satisfaction, and reduced medical errors', citationIndex: 1 },
+      { text: 'Providers often interrupt patients within 11 seconds of them beginning to speak, making a strong opening statement crucial', citationIndex: 2 },
+      { text: 'Women, people of color, and marginalized groups face higher rates of medical dismissal and gaslighting, making advocacy skills especially critical', citationIndex: 5 },
+      { text: 'Shared decision-making—where patients and providers collaborate as partners—leads to better treatment adherence and outcomes', citationIndex: 6 },
+      { text: 'Requesting documentation of concerns in your medical chart often prompts providers to take symptoms more seriously', citationIndex: 4 },
+    ],
+    sparkMoment: 'You are the expert on your own body and life—healthcare providers bring medical expertise, but only you know what it\'s like to live in your body, and that knowledge is essential to effective care.',
+    practicalExercise: {
+      title: 'Pre-Appointment Advocacy Checklist',
+      steps: [
+        { title: 'Document symptoms', description: 'Create a timeline: when symptoms started, frequency, severity (0-10), duration, triggers, what helps/doesn\'t help, functional impact. Bring this written document.' },
+        { title: 'Write your agenda', description: 'List your top 2-3 priorities for the visit. Be specific: "Discuss worsening headaches and explore treatment options" not "check on headaches." Plan to state this agenda at the start.' },
+        { title: 'Prepare questions', description: 'Write 3-5 questions covering diagnosis, treatment options, prognosis, self-management, and follow-up. Don\'t rely on memory—anxiety erases questions.' },
+        { title: 'Plan your opening', description: 'Rehearse your first sentence: "Before we start, I have three concerns to address today: [list]. Which should we prioritize?" This prevents interruption and sets expectations.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Health Patterns',
+    },
     citations: [
       {
         id: '1',

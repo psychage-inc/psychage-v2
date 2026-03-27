@@ -25,6 +25,26 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Sleep', 'Willpower', 'Self-Control', 'Neuroscience'],
+    summary: 'Sleep deprivation systematically impairs the prefrontal cortex—the brain region responsible for impulse control and decision-making. When the PFC underperforms, the limbic system operates unchecked, leading to increased cravings, poor food choices, emotional reactivity, and reduced self-control capacity. Chronic sleep restriction compounds these effects, creating cumulative deficits that persist even when subjective sleepiness normalizes.',
+    keyFacts: [
+      { text: 'Sleep deprivation reduces prefrontal cortex activity by 10-30%, the exact region that inhibits impulses and maintains goals.', citationIndex: 1 },
+      { text: 'After one week of 6-hour nights, self-control capacity decreases by 12%, resembling acute total sleep deprivation.', citationIndex: 5 },
+      { text: 'Sleep-deprived individuals consume 300-500 more calories per day, preferring high-fat, high-sugar foods due to reward system hyperactivation.', citationIndex: 4 },
+      { text: 'Poor sleep quality predicts self-control failures the following day, independent of sleep duration.', citationIndex: 6 },
+      { text: 'Sleep extension studies show improved impulse control, better food choices, and enhanced decision-making within days of increasing sleep to 8+ hours.', citationIndex: 8 },
+    ],
+    sparkMoment: 'Sleep isn\'t a luxury for self-control—it\'s the biological foundation. You can\'t willpower your way through chronic sleep deprivation because the hardware itself is impaired.',
+    practicalExercise: {
+      title: 'Your 7-Day Sleep-for-Self-Control Challenge',
+      steps: [
+        { title: 'Calculate Your True Sleep Window', description: 'For the next week, aim for 8 hours in bed (not just sleep). Set a non-negotiable bedtime and wake time.' },
+        { title: 'Create a Wind-Down Ritual', description: '60 minutes before bed, reduce stimulation: dim lights, no screens, engage in calming activities like reading or stretching.' },
+        { title: 'Track Self-Control Observations', description: 'Each day, note one instance where you resisted or gave in to a craving or impulse. Do you notice patterns on better-rested days?' },
+        { title: 'Reflect on the Connection', description: 'After 7 days, compare your self-control experiences on well-rested vs. poorly-rested days. How did sleep affect your decision-making, food choices, or emotional reactions?' },
+      ],
+      toolLink: '/tools/sleep-architect',
+      toolLabel: 'Try the Sleep Architect',
+    },
     citations: [
       {
         id: '1',
@@ -277,6 +297,26 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Temptation Bundling', 'Motivation', 'Behavior Design', 'Habits'],
+    summary: 'Temptation bundling pairs activities you should do (exercise, chores, studying) with activities you want to do (Netflix, podcasts, treats), making unpleasant but important behaviors more appealing. By restricting immediate pleasures to occur only during effortful tasks, you exploit present bias—our preference for immediate rewards—to make the "should" task feel like an opportunity rather than a sacrifice.',
+    keyFacts: [
+      { text: 'Participants who could only listen to audiobooks at the gym visited 51% more frequently over 9 weeks compared to controls.', citationIndex: 1 },
+      { text: 'Temptation bundling works by creating a dual reward system: immediate pleasure paired with delayed benefits, reducing the need for willpower to initiate tasks.', citationIndex: 3 },
+      { text: 'The restriction is critical—if you allow the pleasure outside the task, the motivation collapses and gym attendance declines.', citationIndex: 2 },
+      { text: 'Behavior adherence spikes during active bundling but partially declines post-intervention, though it remains above baseline if maintained for 8+ weeks.', citationIndex: 6 },
+      { text: 'Effective bundles require cognitive compatibility—the temptation shouldn\'t interfere with task performance (e.g., podcasts while running, not while studying math).', citationIndex: 2 },
+    ],
+    sparkMoment: 'Make your vices work for your virtues. The gym becomes the gateway to something you crave, and suddenly you want to go.',
+    practicalExercise: {
+      title: 'Design Your Personal Temptation Bundle',
+      steps: [
+        { title: 'Identify Your "Should" Behavior', description: 'Pick one task you consistently avoid but know you should do (exercise, chores, studying, etc.).' },
+        { title: 'Choose a Genuinely Tempting Reward', description: 'Select something you crave—your favorite show, an addictive podcast, a special treat. It must be something you genuinely look forward to.' },
+        { title: 'Create the Restriction Rule', description: 'Write down: "I ONLY allow myself [temptation] while doing [should task]." Commit to enforcing this strictly for 2 weeks.' },
+        { title: 'Test and Refine', description: 'After 2 weeks, evaluate: Did the bundle increase adherence? Do you need a more tempting reward or a different pairing? Adjust and continue.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Behavior Change Tools',
+    },
     citations: [
       {
         id: '1',
@@ -529,6 +569,26 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Implementation Intentions', 'Planning', 'Goal Achievement', 'Behavior Change'],
+    summary: 'Implementation intentions use the simple "if-then" format to pre-plan specific responses to anticipated situations, doubling goal achievement rates by automating behavior and removing the need for in-the-moment decision-making. By specifying when, where, and how you\'ll act, you delegate behavior to environmental cues rather than relying on conscious deliberation or willpower.',
+    keyFacts: [
+      { text: 'Meta-analysis of 94 studies found implementation intentions increase goal achievement by 91%, nearly doubling success rates compared to goal intentions alone.', citationIndex: 2 },
+      { text: 'Implementation intentions work by creating a mental link between a situational cue and a behavioral response that activates automatically, bypassing deliberative control processes.', citationIndex: 5 },
+      { text: 'Participants who formed if-then exercise plans exercised 2.3 times per week vs. 0.8 times for goal-only controls—a 188% increase.', citationIndex: 6 },
+      { text: 'Patients who planned "if I eat breakfast, then I\'ll take my medication" had 86% adherence vs. 53% in control groups.', citationIndex: 3 },
+      { text: 'Effective if-then plans require concrete, detectable cues (time, location, specific events) rather than vague triggers like "when I have time."', citationIndex: 4 },
+    ],
+    sparkMoment: 'You decide once, in advance, when motivation is high—then the plan executes automatically when the cue arrives. This is how you bridge the gap between goals and action.',
+    practicalExercise: {
+      title: 'Craft Your If-Then Plan',
+      steps: [
+        { title: 'Identify One Struggling Goal', description: 'Choose a goal you\'ve struggled to achieve consistently (exercise, healthy eating, studying, etc.).' },
+        { title: 'Formulate Your Initiation Plan', description: 'Write: "If [specific time/place/event], then I will [specific action]." Example: "If it\'s Monday/Wednesday/Friday at 7am, then I\'ll go to the gym and do 30 minutes of cardio."' },
+        { title: 'Add Obstacle Contingencies', description: 'Identify 2-3 likely obstacles and create if-then plans for each. Example: "If it\'s raining, then I\'ll do a home workout." "If I\'m too tired for 30 minutes, then I\'ll do just 10 minutes."' },
+        { title: 'Rehearse Mentally', description: 'Close your eyes and visualize the cue occurring, then see yourself executing the planned response. Repeat this mental rehearsal 3-5 times to strengthen the association.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -802,6 +862,26 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Stress', 'Self-Control', 'Cortisol', 'Neuroscience'],
+    summary: 'Stress hormones systematically impair the prefrontal cortex while amplifying limbic system reactivity, causing the "think" brain to go offline while the "react" brain takes over. Under chronic stress, goal-directed behavior shifts to automatic habits—usually unhealthy ones. This isn\'t moral failure; it\'s neurobiology, and understanding this mechanism is the first step to protecting self-control when life gets hard.',
+    keyFacts: [
+      { text: 'Elevated cortisol reduces prefrontal cortex activity while increasing amygdala (threat detection) and striatum (habit execution) activity, intentionally suppressing impulse control during stress.', citationIndex: 1 },
+      { text: 'Chronically stressed individuals consume approximately 500 more daily calories (a 48% increase), primarily from high-sugar, high-fat foods due to reward system hyperactivation.', citationIndex: 5 },
+      { text: 'Under stress, the brain shifts from goal-directed behavior (controlled by PFC) to habitual behavior (controlled by basal ganglia), causing people to default to well-worn patterns.', citationIndex: 4 },
+      { text: 'Regular aerobic exercise reduces basal cortisol levels and increases PFC resilience to stress, with exercisers showing smaller self-control impairments under stress than sedentary individuals.', citationIndex: 8 },
+      { text: 'Mindfulness training improves self-control under stress by enhancing PFC function and reducing amygdala reactivity, with benefits appearing within 8 weeks of daily 10-minute practice.', citationIndex: 7 },
+    ],
+    sparkMoment: 'Stress doesn\'t reveal your true character—it reveals your brain\'s adaptive prioritization under threat. You\'re not weak; you\'re human operating under impaired conditions.',
+    practicalExercise: {
+      title: 'Build Your Stress-Resilience Plan',
+      steps: [
+        { title: 'Identify Your Stress-Triggered Patterns', description: 'Reflect on the last time you were highly stressed. What self-control failures occurred? (Overeating, procrastination, emotional reactivity, substance use, sleep disruption?) Write them down.' },
+        { title: 'Choose One Protective Strategy', description: 'Pick one buffer from the article: exercise, mindfulness, sleep protection, pre-commitment, or lowering standards during crisis. Which feels most achievable for you right now?' },
+        { title: 'Create a Micro-Implementation Plan', description: 'Make the strategy concrete. If exercise: "I will walk 15 minutes every morning." If mindfulness: "I will use a 10-minute guided meditation before bed." Be specific.' },
+        { title: 'Pre-Commit for Your Next Stressful Period', description: 'Identify one system you can set up NOW (while calm) to support yourself during stress. Meal prep? Auto-transfer savings? Pre-schedule workouts? Do it before stress hits.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Stress Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1061,6 +1141,26 @@ export const disciplineWillpowerSelfControlArticlesB: Article[] = [
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Self-Discipline', 'Self-Compassion', 'Motivation', 'Sustainable Change'],
+    summary: 'Research shows that self-punishment undermines motivation, increases procrastination, and predicts goal abandonment, while self-compassion—treating yourself with the same kindness you\'d offer a struggling friend—predicts better long-term goal achievement, greater resilience, and sustained behavior change. Discipline doesn\'t require suffering; it thrives on support, creating the psychological safety needed to meet high standards.',
+    keyFacts: [
+      { text: 'Meta-analysis of 79 studies found that self-compassion consistently predicts better self-regulation, goal persistence, and health behavior adherence compared to self-criticism.', citationIndex: 1 },
+      { text: 'Self-compassion interventions increase long-term goal adherence by 63% compared to control groups, without lowering standards.', citationIndex: 4 },
+      { text: 'Self-criticism activates the brain\'s threat system (amygdala), triggering cortisol release that impairs prefrontal function and increases stress eating and avoidance.', citationIndex: 2 },
+      { text: 'Self-compassionate people don\'t give themselves permission to quit—they give themselves permission to keep trying after failure, viewing setbacks as information rather than identity.', citationIndex: 3 },
+      { text: 'Interventions as brief as 3 weeks of daily 10-minute self-compassion exercises show measurable improvements in self-regulation and reduced self-criticism.', citationIndex: 7 },
+    ],
+    sparkMoment: 'You can\'t hate yourself into a version of yourself you love. Self-compassion creates the conditions for sustained effort, which is the foundation of discipline.',
+    practicalExercise: {
+      title: 'Your Self-Compassion Experiment',
+      steps: [
+        { title: 'Catch a Self-Critical Thought', description: 'Over the next week, notice when harsh self-talk arises after a setback or failure. Write down the exact words you say to yourself.' },
+        { title: 'Apply the Friend Test', description: 'Ask: "Would I say this to a friend in the same situation?" If not, what would you say instead? Write that down.' },
+        { title: 'Practice the Compassionate Alternative', description: 'When self-criticism arises, deliberately replace it with the friend-version. Example: Instead of "I\'m so lazy," try "Exercise is hard when I\'m tired. What made it difficult today?"' },
+        { title: 'Track the Impact', description: 'After one week, reflect: Did self-compassion make you lazier or more motivated? Did you give up or keep trying? Notice the actual outcomes, not your fears.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Journal Your Reflections',
+    },
     citations: [
       {
         id: '1',

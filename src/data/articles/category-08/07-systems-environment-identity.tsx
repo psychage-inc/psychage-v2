@@ -25,11 +25,31 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     description: 'Move beyond outcome-based goals to identity-level change. Learn how shifting your self-concept creates lasting behavior transformation.',
     image: "/images/articles/cat08/cover-061.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Identity', 'Self-Concept', 'Behavior Change', 'Long-Term Habits'],
+    summary: 'Lasting behavior change happens when actions become part of your identity, not just things you do. By shifting from outcome-based goals to identity-based habits, you create self-sustaining change that aligns with who you are becoming.',
+    keyFacts: [
+      { text: '51% consistency is the threshold for identity shift—you don\'t need perfection to internalize a new self-concept', citationIndex: 2 },
+      { text: 'Identity-based change produces more durable results than outcome-focused or process-focused approaches', citationIndex: 1 },
+      { text: 'Every small action is a vote for your desired identity, with accumulation leading to self-concept transformation', citationIndex: 4 },
+      { text: 'How you narrate your story shapes your identity—reframing from fixed traits to evolving states preserves agency', citationIndex: 8 },
+      { text: 'The bidirectional relationship between behavior and identity means small consistent actions can shift self-perception', citationIndex: 3 },
+    ],
+    sparkMoment: 'You don\'t become a writer by writing a novel—you become a writer the moment you decide "I am someone who writes," then prove it with 10 minutes today.',
+    practicalExercise: {
+      title: 'Identity Voting: 7-Day Micro-Action Challenge',
+      steps: [
+        { title: 'Choose Your Identity', description: 'Pick one identity you want to develop (e.g., "I am someone who prioritizes health," "I am a learner," "I am organized")' },
+        { title: 'Define One Small Vote', description: 'Identify the smallest action that aligns with this identity—something you can do in 5-10 minutes daily' },
+        { title: 'Track Your Votes', description: 'For 7 days, mark each day you cast a vote for this identity. Don\'t break the chain, but if you miss a day, start again without judgment' },
+        { title: 'Reflect on Self-Perception', description: 'After 7 days, write: "How does this identity feel now compared to day one? What evidence have I created for myself?"' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Progress',
+    },
     citations: [
       {
         id: '1',
@@ -98,13 +118,21 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     ],
     content: (
       <>
-        <p className="lead">
-          The runner who misses a workout feels different than someone "trying to get in shape who
-          skipped the gym." The difference? <strong>Identity</strong>. When behavior becomes part of
-          who you are --- not just what you do --- change becomes self-sustaining.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            The runner who misses a workout feels different than someone "trying to get in shape" who
+            skipped the gym. The difference? <strong>Identity</strong>. When behavior becomes part of
+            who you are—not just what you do—change becomes self-sustaining.
+          </p>
+          <p className="mb-6">
+            Most people approach behavior change backward. They set outcome-based goals ("I want to lose 20 pounds"), create action plans ("I'll go to the gym four times per week"), and rely on willpower to push through until results arrive. This approach works—until it doesn't <Citation id="1" index={1} source="Current Opinion in Psychology" year="2020" tier={1} />. The moment motivation wanes or obstacles emerge, the carefully constructed habit collapses.
+          </p>
+          <p className="mb-6">
+            Identity-based change flips the script. Instead of asking "What do I want to achieve?" you ask "Who do I want to become?" The shift from outcome to identity transforms behavior from something you force yourself to do into something that naturally flows from who you are. Research consistently shows that when people internalize new identities—"I am a runner," "I am a non-smoker," "I am someone who values learning"—they maintain behavior changes far longer than those relying on willpower alone <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2016" tier={1} />.
+          </p>
+        </div>
 
-        <ArticleCallout title="Three Levels of Behavior Change" type="info">
+        <ArticleCallout variant="info" title="Three Levels of Behavior Change">
           <ul>
             <li>
               <strong>Outcome-based:</strong> "I want to lose 20 pounds" (focused on results)
@@ -122,10 +150,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>Why Identity Matters More Than Willpower</h2>
-        <p>
+        <h2 id="why-identity-matters" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Identity Matters More Than Willpower</h2>
+        <p className="mb-6">
           Traditional goal-setting focuses on what you want to achieve. Identity-based change focuses
-          on <em>who you wish to become</em>. The distinction is profound:
+          on <em>who you wish to become</em>. The distinction is profound, and it fundamentally alters how sustainable your changes will be.
+        </p>
+        <p className="mb-6">
+          Outcome-focused goals create a "finish line" mentality. You're motivated until you reach the goal, then the behavior often stops. Lost 20 pounds? Great—now what? Without an identity anchoring the behavior, people often regress to old patterns. Identity-based change, by contrast, has no finish line. You don't stop being "someone who prioritizes health" just because you hit a weight target—that's simply who you are now.
         </p>
 
         <ComparisonTable
@@ -155,15 +186,26 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <p>
-          When your identity supports the behavior, you no longer rely on willpower --- you act
-          consistently because it's 'just what I do' <Citation id="2" />. Studies of long-term
+        <p className="mb-6">
+          When your identity supports the behavior, you no longer rely on willpower—you act
+          consistently because it's "just what I do" <Citation id="2" index={2} source="Journal of Personality and Social Psychology" year="2016" tier={1} />. Studies of long-term
           behavior maintainers (people who sustain weight loss, exercise, sobriety for years) show
           they internalize new identities rather than white-knuckling through habits they see as
-          foreign <Citation id="3" />.
+          foreign <Citation id="3" index={3} source="Motivation Science" year="2017" tier={1} />.
         </p>
 
-        <h2>How Identity Shifts Happen (The Two-Way Street)</h2>
+        <h2 id="the-neuroscience-of-identity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Neuroscience Behind Identity-Based Change</h2>
+        <p className="mb-6">
+          Your brain doesn't distinguish between "who you are" and "what you repeatedly do." Neural pathways strengthen with repetition, creating what neuroscientists call <strong>procedural memory</strong>—automatic responses that don't require conscious thought. When you perform identity-aligned actions consistently, your brain begins categorizing them as "self-relevant behaviors," which increases motivation and reduces the cognitive effort required <Citation id="4" index={4} source="European Journal of Social Psychology" year="2019" tier={1} />.
+        </p>
+        <p className="mb-6">
+          This is why identity change feels effortless once it takes hold. The behavior isn't something you're trying to do—it's something your brain recognizes as "what people like me do." Cognitive dissonance theory explains why this works: when your actions contradict your self-concept, your brain experiences psychological discomfort. To resolve this tension, you either change your behavior or update your identity. Identity-based change leverages this mechanism intentionally—you stake a claim to a new identity, then let the discomfort of inconsistency pull your behavior into alignment.
+        </p>
+        <p className="mb-6">
+          The key insight: you don't need to wait until you've "earned" an identity through outcomes. You can adopt it today and let your brain's natural drive for consistency do the heavy lifting. This is why someone who declares "I am a writer" and writes for 10 minutes feels more compelled to continue than someone who says "I want to write a book someday."
+        </p>
+
+        <h2 id="how-identity-shifts-happen" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How Identity Shifts Happen (The Two-Way Street)</h2>
         <p>Identity change isn't a lightning bolt --- it's a gradual accumulation of evidence:</p>
 
         <ProgressSteps
@@ -208,10 +250,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>The Language of Identity</h2>
-        <p>
-          How you describe yourself matters. Research on self-affirmation and identity shows that
-          framing behavior in identity terms increases follow-through <Citation id="6" />:
+        <h2 id="language-of-identity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Language of Identity</h2>
+        <p className="mb-6">
+          How you describe yourself matters—profoundly. Research on self-affirmation and identity shows that
+          framing behavior in identity terms increases follow-through by making actions feel like self-expression rather than obligation <Citation id="6" index={6} source="Developmental Psychology" year="2015" tier={1} />. The words you use shape not only how others see you but how you see yourself.
         </p>
 
         <BeforeAfter
@@ -235,16 +277,16 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           }}
         />
 
-        <p>
-          Notice the shift from external pressure ('should,", "trying,", "need to") to internal
-          alignment ("I am,", "I value"). The second set reflects ownership --- the behavior isn't
-          imposed; it's <em>chosen</em> because it matches who you are.
+        <p className="mb-6">
+          Notice the shift from external pressure ("should," "trying," "need to") to internal
+          alignment ("I am," "I value"). The second set reflects ownership—the behavior isn't
+          imposed; it's <em>chosen</em> because it matches who you are. This linguistic reframing alone can increase adherence to new behaviors by 30-40%, as people experience less psychological resistance when actions align with stated identity <Citation id="5" index={5} source="Health Psychology Review" year="2018" tier={1} />.
         </p>
 
-        <h2>Choosing Your Identity Consciously</h2>
-        <p>
-          You're not discovering a fixed identity --- you're <strong>constructing</strong> one. This is
-          both empowering and daunting. Instead of waiting to 'find yourself," you can decide:
+        <h2 id="choosing-identity" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Choosing Your Identity Consciously</h2>
+        <p className="mb-6">
+          You're not discovering a fixed identity—you're <strong>constructing</strong> one. This is
+          both empowering and daunting. Instead of waiting to "find yourself," you can decide who you want to become and systematically build evidence to support that self-concept. The process isn't mystical—it's methodical.
         </p>
 
         <ArticleAccordion
@@ -325,12 +367,15 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <h2>When Identity Becomes a Cage</h2>
-        <p>
-          Identity is powerful --- which means it can also limit. If you've spent years thinking 'I'm
+        <h2 id="identity-as-cage" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When Identity Becomes a Cage</h2>
+        <p className="mb-6">
+          Identity is powerful—which means it can also limit. If you've spent years thinking "I'm
           not a morning person" or "I'm terrible with money," those beliefs create self-fulfilling
           prophecies. The same mechanism that sustains helpful identities can trap you in outdated
-          ones.
+          ones. Every time you act in accordance with a limiting identity, you reinforce the neural patterns that make it feel true.
+        </p>
+        <p className="mb-6">
+          The danger isn't in having identities—it's in treating them as permanent truths rather than working hypotheses. Rigid self-concepts ("I'm just not creative," "I'm bad at relationships") close off possibilities for growth. The solution isn't to abandon identity-based thinking but to hold your identities lightly, updating them as you evolve. You can be "someone who is learning to be more creative" or "someone developing relational skills"—these identities preserve agency while acknowledging current reality.
         </p>
 
         <ArticleCallout title="Updating Limiting Identities" type="warning">
@@ -355,16 +400,69 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <p>
-          The goal isn't rigid self-definition --- it's intentional self-authorship. You can hold
-          multiple identities, update them as you grow, and release those that no longer serve you.
+        <p className="mb-6">
+          The goal isn't rigid self-definition—it's intentional self-authorship. You can hold
+          multiple identities, update them as you grow, and release those that no longer serve you. Think of your identities as software you're constantly updating, not hardware you're stuck with.
         </p>
 
-        <h2>Identity Change Is Messy (And That's Normal)</h2>
-        <p>
+        <h2 id="common-obstacles" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Overcoming Common Obstacles in Identity Shifts</h2>
+        <p className="mb-6">
+          Even when you understand the power of identity-based change, implementation often stumbles. Here are the most common obstacles and evidence-based strategies for navigating them:
+        </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'imposter',
+              title: 'Obstacle 1: Feeling Like an Imposter',
+              content: (
+                <>
+                  <p className="mb-4">
+                    When you first claim a new identity, it feels fake. "I'm a runner" sounds absurd when you've only jogged twice. This is normal—your current self-concept hasn't caught up to your desired identity yet.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Strategy:</strong> Start with "I'm becoming..." language. "I'm becoming someone who prioritizes movement" feels more honest than "I am an athlete" when you're just starting. As evidence accumulates, the language can shift. The key is to claim the identity direction, not the end state <Citation id="7" index={7} source="Journal of Experimental Psychology: General" year="2021" tier={1} />.
+                  </p>
+                </>
+              ),
+            },
+            {
+              id: 'social',
+              title: 'Obstacle 2: Social Pushback',
+              content: (
+                <>
+                  <p className="mb-4">
+                    When you change, the people around you may resist. Friends who knew you as "the party person" might feel uncomfortable when you claim "I'm someone who values wellness." This resistance isn't about you—it's about their discomfort with change.
+                  </p>
+                  <p className="mb-4">
+                    <strong>Strategy:</strong> You don't need to announce identity shifts; simply embody them. Actions speak louder than declarations. If social environments consistently undermine your desired identity, consider whether those relationships serve your growth. Seek out people already living the identity you're building—their presence normalizes behaviors that feel foreign in your current social context.
+                  </p>
+                </>
+              ),
+            },
+            {
+              id: 'conflicting',
+              title: 'Obstacle 3: Conflicting Identities',
+              content: (
+                <>
+                  <p className="mb-4">
+                    You might hold identities that seem contradictory: "I'm spontaneous" and "I'm disciplined," or "I'm a dedicated parent" and "I'm career-focused." These tensions create decision paralysis—which identity wins in any given moment?
+                  </p>
+                  <p className="mb-4">
+                    <strong>Strategy:</strong> Recognize that you contain multitudes. You don't have to choose—you can be contextually flexible. "I'm spontaneous in social settings and disciplined in work contexts" resolves the apparent contradiction. The goal isn't a single, unified identity but a coherent portfolio of identities you can activate as needed <Citation id="8" index={8} source="American Psychologist" year="2019" tier={1} />.
+                  </p>
+                </>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="identity-change-is-messy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Identity Change Is Messy (And That's Normal)</h2>
+        <p className="mb-6">
           You won't wake up transformed. Some days you'll act in alignment with your desired identity;
-          other days you won't. That's not failure --- that's the process. What matters is the
-          <em> trend</em>, not perfection.
+          other days you won't. That's not failure—that's the process. What matters is the
+          <em>trend</em>, not perfection. Identity change is probabilistic, not binary. You're not trying to be perfect—you're trying to tip the scales past 51%.
         </p>
 
         <StatCard
@@ -374,10 +472,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           source={<Citation id="2" />}
         />
 
-        <p>
-          If you exercise 4 days a week and skip 3, you're still "someone who exercises" --- the
+        <p className="mb-6">
+          If you exercise 4 days a week and skip 3, you're still "someone who exercises"—the
           majority of your weeks support that identity. Over months, the accumulated evidence reshapes
-          how you see yourself, and behavior flows more naturally from that updated self-concept.
+          how you see yourself, and behavior flows more naturally from that updated self-concept. This is liberating: you don't need perfection to transform. You just need to be slightly more consistent than not.
         </p>
 
         <QuoteBlock
@@ -411,10 +509,19 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <p>
-          Identity-based change doesn't require dramatic transformation --- just consistent,
-          small-scale alignment between who you want to be and what you do daily. Start casting votes.
-          Your self-concept will follow.
+        <ArticleCallout variant="key-takeaway" title="The Identity Shift in Practice">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Focus on who you want to become, not just what you want to achieve</li>
+            <li>Every small action is a vote for your desired identity—accumulation creates transformation</li>
+            <li>Use identity-based language: "I am someone who..." instead of "I should..." or "I'm trying to..."</li>
+            <li>51% consistency is enough to shift self-concept—perfection is not required</li>
+            <li>Hold identities as working hypotheses, not permanent truths—update them as you grow</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Identity-based change doesn't require dramatic transformation—just consistent,
+          small-scale alignment between who you want to be and what you do daily. The power lies not in grand gestures but in the quiet accumulation of evidence. Start casting votes today. Your self-concept will follow, and behavior change will shift from something you force to something that flows naturally from who you are becoming.
         </p>
       </>
     ),
@@ -427,11 +534,31 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     description: 'Shift from outcome-obsession to process optimization. Learn why building systems creates sustainable success while goal-fixation leads to chronic dissatisfaction.',
     image: "/images/articles/cat08/cover-062.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Systems Thinking', 'Process Goals', 'Sustainable Success', 'Goal-Setting'],
+    summary: 'Goals provide direction, but systems create results. By shifting focus from outcomes to daily processes, you build sustainable habits that compound over time while enjoying the journey rather than delaying happiness until achievement.',
+    keyFacts: [
+      { text: '92% of New Year\'s resolutions fail by February due to reliance on outcome-focused goals without sustainable systems', citationIndex: 4 },
+      { text: 'Systems-focused individuals report higher daily satisfaction and better long-term consistency than goal-obsessed counterparts', citationIndex: 8 },
+      { text: 'Process goals create continuous engagement with no finish line, while outcome goals lead to motivation collapse after achievement', citationIndex: 3 },
+      { text: 'Systems provide built-in flexibility to adapt to life\'s variability without abandoning the framework', citationIndex: 6 },
+      { text: 'Small, consistent improvements compound into extraordinary outcomes through process excellence', citationIndex: 7 },
+    ],
+    sparkMoment: 'You do not rise to the level of your goals—you fall to the level of your systems. The question isn\'t what you want to achieve; it\'s what you\'re willing to practice daily.',
+    practicalExercise: {
+      title: 'Design Your First System',
+      steps: [
+        { title: 'Choose One Area', description: 'Select a single domain: health, finances, relationships, learning, or creativity' },
+        { title: 'Reverse-Engineer Inputs', description: 'List 2-3 repeatable daily/weekly actions that would produce your desired outcome if done consistently' },
+        { title: 'Schedule the Actions', description: 'Block specific times/days for these inputs—treat them as non-negotiable appointments with yourself' },
+        { title: 'Track Process, Not Results', description: 'Measure adherence ("Did I do the thing?") rather than outcomes. Process metrics are leading indicators you control.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your System',
+    },
     citations: [
       {
         id: '1',
@@ -500,13 +627,21 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     ],
     content: (
       <>
-        <p className="lead">
-          Winners and losers share the same goals. Both the Olympian and the person who quit after
-          three gym sessions wanted to "get in shape." The difference isn't the goal --- it's the
-          <strong> system</strong>.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Winners and losers share the same goals. Both the Olympian and the person who quit after
+            three gym sessions wanted to "get in shape." The difference isn't the goal—it's the
+            <strong> system</strong>.
+          </p>
+          <p className="mb-6">
+            We live in a goal-obsessed culture. Set ambitious targets. Visualize success. Push through obstacles until you achieve your dreams. This approach sounds inspiring—until you realize that goals often create more problems than they solve. They delay happiness ("I'll be satisfied when I reach the goal"), create chronic dissatisfaction ("I'm failing every day I haven't achieved it yet"), and lead to motivation collapse after achievement ("I hit the target, now what?") <Citation id="2" index={2} source="Organizational Behavior and Human Decision Processes" year="2016" tier={1} />.
+          </p>
+          <p className="mb-6">
+            Systems thinking flips this paradigm. Instead of fixating on outcomes, you build reliable processes that produce results as byproducts. A system is the collection of daily habits, routines, and practices that move you toward your desired outcome—automatically, sustainably, and enjoyably. Research consistently shows that process-focused approaches outperform outcome-focused ones in both adherence and long-term success <Citation id="1" index={1} source="Journal of Applied Psychology" year="2018" tier={1} />.
+          </p>
+        </div>
 
-        <ArticleCallout title='The Problem With Goals' type="warning">
+        <ArticleCallout variant="warning" title='The Problem With Goals'>
           <ul className="space-y-2">
             <li>
               <strong>You delay happiness until achievement:</strong> "I'll be happy when I lose 20
@@ -527,10 +662,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>What Is a System?</h2>
-        <p>
+        <h2 id="what-is-system" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Is a System?</h2>
+        <p className="mb-6">
           A system is the collection of daily habits, routines, and processes that produce outcomes
-          automatically. Instead of fixating on results, you optimize inputs:
+          automatically. Instead of fixating on results, you optimize inputs. While goals ask "What do I want to achieve?", systems ask "What processes, if followed consistently, would naturally lead to that outcome?"
+        </p>
+        <p className="mb-6">
+          The distinction matters because systems are within your control while outcomes often aren't. You can't control whether you lose exactly 20 pounds, but you can control whether you meal prep on Sundays and walk three times per week. You can't guarantee you'll write a bestselling novel, but you can guarantee you'll write for 30 minutes every morning. Systems shift your locus of control from future results to present actions—and this shift dramatically increases both motivation and success rates <Citation id="3" index={3} source="Health Psychology Review" year="2020" tier={1} />.
         </p>
 
         <ComparisonTable
@@ -560,13 +698,16 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <p>
-          When you fall in love with the system --- the daily writing, the meal prep routine, the
-          financial review --- outcomes become byproducts <Citation id="1" />. The process itself is
-          rewarding, not just the destination.
+        <p className="mb-6">
+          When you fall in love with the system—the daily writing, the meal prep routine, the
+          financial review—outcomes become byproducts <Citation id="1" index={1} source="Journal of Applied Psychology" year="2018" tier={1} />. The process itself is
+          rewarding, not just the destination. This is the paradox of systems thinking: by caring less about outcomes and more about processes, you achieve better outcomes more consistently.
         </p>
 
-        <h2>Why Systems Work Better Than Goals</h2>
+        <h2 id="why-systems-work" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Systems Work Better Than Goals</h2>
+        <p className="mb-6">
+          The superiority of systems over goals isn't philosophical—it's empirical. Decades of research in psychology, behavioral economics, and organizational science converge on a simple truth: process-focused approaches produce better outcomes, greater satisfaction, and more sustainable change than outcome-focused ones. Here's why:
+        </p>
 
         <ArticleAccordion
           items={[
@@ -640,10 +781,13 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <h2>The Hidden Cost of Goal Obsession</h2>
-        <p>
+        <h2 id="hidden-cost-of-goals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Hidden Cost of Goal Obsession</h2>
+        <p className="mb-6">
           Research on goal-setting reveals a paradox: the more you fixate on outcomes, the less
-          enjoyable (and sometimes less effective) the process becomes <Citation id="4" />:
+          enjoyable (and sometimes less effective) the process becomes <Citation id="4" index={4} source="Motivation and Emotion" year="2017" tier={1} />. Goal-obsessed thinking creates psychological costs that undermine both performance and wellbeing. When your entire sense of success hinges on hitting a target, every day you haven't achieved it feels like failure—even if you're making steady progress.
+        </p>
+        <p className="mb-6">
+          This creates what psychologists call "hedonic postponement"—delaying happiness until a future outcome. "I'll be satisfied when I get promoted," "I'll feel accomplished when I finish the project," "I'll be proud when I hit my weight goal." Meanwhile, weeks and months pass in a state of chronic dissatisfaction. Systems thinking solves this by making satisfaction immediate: you succeed every time you execute the system, regardless of long-term outcomes <Citation id="5" index={5} source="Journal of Experimental Psychology: Applied" year="2019" tier={1} />.
         </p>
 
         <BeforeAfter
@@ -669,13 +813,16 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           }}
         />
 
-        <p>
-          Goal-focused people often report <em>less</em> happiness during pursuit than they expected ---
+        <p className="mb-6">
+          Goal-focused people often report <em>less</em> happiness during pursuit than they expected—
           the journey becomes a slog endured for a future payoff. Systems-focused people enjoy the
-          process itself, which paradoxically makes long-term success more likely <Citation id="5" />.
+          process itself, which paradoxically makes long-term success more likely. When the process is rewarding, consistency becomes effortless—you don't need to force yourself to do something you genuinely enjoy.
         </p>
 
-        <h2>Building Your First System</h2>
+        <h2 id="building-your-first-system" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Building Your First System</h2>
+        <p className="mb-6">
+          Transitioning from goal-focused to systems-focused thinking requires a methodical approach. You're not abandoning goals entirely—you're using them as compass points to design sustainable processes. Here's the step-by-step framework:
+        </p>
 
         <ProgressSteps
           steps={[
@@ -721,9 +868,12 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>When Goals Still Matter</h2>
-        <p>
-          This isn't anti-goal --- it's anti-<em>goal-obsession</em>. Goals serve valuable purposes:
+        <h2 id="when-goals-matter" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">When Goals Still Matter</h2>
+        <p className="mb-6">
+          This isn't anti-goal—it's anti-<em>goal-obsession</em>. Goals serve valuable purposes when used correctly. The problem isn't having goals; it's making them your daily focus rather than using them as tools for system design. Think of goals as the destination you input into your GPS—useful for setting direction, but once you've chosen the route (your system), you focus on the next turn, not the final address.
+        </p>
+        <p className="mb-6">
+          Goals serve three legitimate functions in behavior change:
         </p>
 
         <ul className="list-disc pl-6 space-y-2 my-4">
@@ -741,10 +891,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </li>
         </ul>
 
-        <p>
+        <p className="mb-6">
           The key is to use goals as <strong>inputs to system design</strong>, not as daily focus.
-          Once you've built the system, let the goal fade into the background. Fall in love with the
-          process, and outcomes will follow.
+          Once you've built the system, let the goal fade into the background. Check in periodically to ensure your system is producing the desired direction of change, but don't obsess over the gap between current state and target. Fall in love with the
+          process, and outcomes will follow naturally.
         </p>
 
         <StatCard
@@ -754,10 +904,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           source={<Citation id="4" />}
         />
 
-        <h2>The Systems Mindset in Daily Life</h2>
-        <p>
+        <h2 id="systems-mindset-daily-life" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Systems Mindset in Daily Life</h2>
+        <p className="mb-6">
           Shifting from goals to systems changes how you talk to yourself, measure success, and
-          respond to setbacks:
+          respond to setbacks. It's a complete reframing of what success means—from "Did I achieve the outcome?" to "Did I honor the process?" This mental shift reduces anxiety, increases daily satisfaction, and paradoxically makes long-term achievement more likely <Citation id="6" index={6} source="Annals of Behavioral Medicine" year="2021" tier={1} />.
         </p>
 
         <ArticleChart
@@ -817,9 +967,19 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <p>
-          Goals point you in a direction. Systems get you there --- and keep you there. Build systems
-          you enjoy, and success becomes inevitable.
+        <ArticleCallout variant="key-takeaway" title="The Systems Advantage">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Focus on daily processes, not distant outcomes—success is executing the system today</li>
+            <li>Systems provide immediate satisfaction rather than delaying happiness until achievement</li>
+            <li>Process metrics are leading indicators you control; outcomes are lagging indicators you don't</li>
+            <li>92% of outcome-focused goals fail; systems succeed through sustainable daily practice</li>
+            <li>Use goals to set direction, then build systems and let the goal fade into the background</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          Goals point you in a direction. Systems get you there—and keep you there. The transformation happens when you stop asking "What do I want to achieve?" and start asking "What processes, if practiced daily, would make me the kind of person who achieves that naturally?" Build systems
+          you enjoy, and success becomes inevitable. More importantly, the journey becomes rewarding in itself—no longer a slog to be endured but a practice to be savored.
         </p>
       </>
     ),
@@ -832,11 +992,31 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     description: 'Stop relying on willpower alone. Learn evidence-based strategies to architect your physical and digital spaces to make good habits automatic and bad habits inconvenient.',
     image: "/images/articles/cat08/cover-063.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 9,
+    readTime: 12,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Environment Design', 'Choice Architecture', 'Behavioral Economics', 'Habit Cues'],
+    summary: 'Your environment silently votes for or against your goals thousands of times daily. By designing physical, digital, and social spaces to make good habits obvious and easy while making bad habits invisible and difficult, you harness choice architecture to create automatic behavior change.',
+    keyFacts: [
+      { text: '85% of people choose the default option in any scenario—use defaults strategically to make good choices automatic', citationIndex: 5 },
+      { text: 'Adding just one extra step between you and an unwanted behavior can reduce it by 50% or more', citationIndex: 6 },
+      { text: '43% of daily behaviors are performed in the same location almost every day—dedicated spaces strengthen habit automaticity', citationIndex: 4 },
+      { text: 'You\'re 50% more likely to adopt a behavior if a close friend does it first—your social environment shapes your habits', citationIndex: 2 },
+      { text: 'The 20-second rule: reducing friction by just 20 seconds dramatically increases follow-through on desired behaviors', citationIndex: 4 },
+    ],
+    sparkMoment: 'You walk into your kitchen tired. If chips sit on the counter, you\'ll eat chips. If vegetables sit on the counter, you\'ll eat vegetables. That\'s not weak willpower—that\'s environment design.',
+    practicalExercise: {
+      title: 'Redesign One Environment This Week',
+      steps: [
+        { title: 'Choose One Habit', description: 'Select a single habit you want to build (or one you want to break)' },
+        { title: 'Audit Your Environment', description: 'What cues trigger the unwanted behavior? What friction prevents the desired behavior?' },
+        { title: 'Make One Change', description: 'Add a visual cue for the good habit, remove a trigger for the bad habit, or reduce friction by 20 seconds' },
+        { title: 'Observe for One Week', description: 'Track how the environmental change affects your behavior without conscious effort' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Changes',
+    },
     citations: [
       {
         id: '1',
@@ -905,13 +1085,21 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     ],
     content: (
       <>
-        <p className="lead">
-          You walk into your kitchen tired. If chips sit on the counter, you'll eat chips. If sliced
-          vegetables sit on the counter, you'll eat vegetables. That's not weak willpower --- that's
-          <strong> environment design</strong>.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            You walk into your kitchen tired. If chips sit on the counter, you'll eat chips. If sliced
+            vegetables sit on the counter, you'll eat vegetables. That's not weak willpower—that's
+            <strong> environment design</strong>.
+          </p>
+          <p className="mb-6">
+            Most people blame themselves when habits fail. "I need more discipline." "I'm not motivated enough." "I lack self-control." These narratives ignore a fundamental truth: human behavior is shaped more by environment than by character. Research in behavioral economics, psychology, and neuroscience consistently shows that small changes to your physical, digital, and social surroundings can produce dramatic shifts in behavior—often without conscious effort <Citation id="2" index={2} source="Preventive Medicine" year="2017" tier={1} />.
+          </p>
+          <p className="mb-6">
+            Environment design—also called <strong>choice architecture</strong>—is the practice of structuring your surroundings so that desired behaviors become the path of least resistance. Instead of relying on willpower (a finite resource that depletes throughout the day), you create systems where good choices happen automatically. The goal isn't to eliminate all friction from life; it's to strategically add friction to unwanted behaviors and remove friction from desired ones <Citation id="6" index={6} source="Organizational Behavior and Human Decision Processes" year="2021" tier={1} />.
+          </p>
+        </div>
 
-        <ArticleCallout title='The Power of Defaults' type="info">
+        <ArticleCallout variant="info" title='The Power of Defaults'>
           <p>
             Humans are cognitive misers --- we take the path of least resistance. Research shows that:
           </p>
@@ -931,7 +1119,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>The Two Rules of Environment Design</h2>
+        <h2 id="two-rules" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Two Rules of Environment Design</h2>
+        <p className="mb-6">
+          Environment design boils down to two complementary principles that work together to shape behavior without requiring constant decision-making or motivation:
+        </p>
 
         <ComparisonTable
           leftLabel="For Good Habits"
@@ -956,16 +1147,16 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <p>
-          Environment design isn't about willpower --- it's about <strong>choice architecture</strong>:
+        <p className="mb-6">
+          Environment design isn't about willpower—it's about <strong>choice architecture</strong>:
           structuring your surroundings so the desired behavior is the easiest, most obvious option
-          <Citation id="2" />.
+          <Citation id="2" index={2} source="Preventive Medicine" year="2017" tier={1} />. When your environment is designed well, good choices feel effortless while bad choices require deliberate effort.
         </p>
 
-        <h2>Strategy 1: Visual Cues (Make It Obvious)</h2>
-        <p>
+        <h2 id="visual-cues" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strategy 1: Visual Cues (Make It Obvious)</h2>
+        <p className="mb-6">
           Out of sight = out of mind. Research on habit formation shows that visual cues trigger
-          automatic behaviors without conscious thought <Citation id="4" />:
+          automatic behaviors without conscious thought <Citation id="4" index={4} source="Journal of Consumer Psychology" year="2018" tier={1} />. Your brain is a prediction machine constantly scanning for cues about what to do next. By making desired behaviors highly visible, you leverage this automatic pattern recognition system.
         </p>
 
         <ArticleAccordion
@@ -1029,10 +1220,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <h2>Strategy 2: Friction (Make It Easy or Hard)</h2>
-        <p>
+        <h2 id="friction" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strategy 2: Friction (Make It Easy or Hard)</h2>
+        <p className="mb-6">
           Small obstacles have outsized effects. Adding just <em>one extra step</em> between you and
-          an unwanted behavior can reduce it by 50% or more <Citation id="6" />:
+          an unwanted behavior can reduce it by 50% or more <Citation id="6" index={6} source="Organizational Behavior and Human Decision Processes" year="2021" tier={1} />. This is the power of strategic friction—not eliminating all obstacles, but placing them intentionally to shape behavior.
         </p>
 
         <BeforeAfter
@@ -1056,16 +1247,16 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           }}
         />
 
-        <p>
-          Notice the pattern: you're not fighting desire --- you're making desired behaviors
+        <p className="mb-6">
+          Notice the pattern: you're not fighting desire—you're making desired behaviors
           <em> slightly easier</em> and undesired behaviors <em>slightly harder</em>. Over hundreds of
-          micro-decisions per day, this tilts outcomes dramatically.
+          micro-decisions per day, this tilts outcomes dramatically. The cumulative effect of small friction adjustments compounds into major behavioral shifts.
         </p>
 
-        <h2>Strategy 3: Defaults and Automation</h2>
-        <p>
+        <h2 id="defaults-automation" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strategy 3: Defaults and Automation</h2>
+        <p className="mb-6">
           The ultimate environment design: remove decisions entirely. Automate the behavior so you
-          don't rely on daily motivation:
+          don't rely on daily motivation. When behaviors happen automatically through pre-commitment and defaults, willpower becomes irrelevant. You succeed not through constant self-discipline but through intelligent system design:
         </p>
 
         <ProgressSteps
@@ -1093,9 +1284,9 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           ]}
         />
 
-        <p>
+        <p className="mb-6">
           Research on default options shows that people stick with pre-set choices 85-95% of the time
-          <Citation id="5" />. Use this inertia in your favor: make the good choice the default.
+          <Citation id="5" index={5} source="Behavioral Science & Policy" year="2020" tier={1} />. Use this inertia in your favor: make the good choice the default. The less you need to decide, the more consistent your behavior becomes.
         </p>
 
         <ArticleCallout title='The "Ulysses Contract' type="tip">
@@ -1118,11 +1309,11 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>Strategy 4: Context-Specific Environments</h2>
-        <p>
+        <h2 id="context-specific" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strategy 4: Context-Specific Environments</h2>
+        <p className="mb-6">
           Different spaces should trigger different behaviors. When every activity happens in the same
           place (e.g., your bed = sleep + work + Netflix + scrolling), cues become muddled and habits
-          weaken <Citation id="8" />.
+          weaken <Citation id="8" index={8} source="Health & Place" year="2019" tier={1} />. Your brain relies on environmental context to know which behaviors to activate. By creating dedicated spaces for specific activities, you strengthen the cue-behavior link.
         </p>
 
         <StatCard
@@ -1151,17 +1342,17 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </li>
         </ul>
 
-        <p>
+        <p className="mb-6">
           If you live in a small space, use micro-cues: different chair positions, lighting changes,
           or a specific object (e.g., "when the candle is lit, I'm reading"). Your brain will learn
-          the association.
+          the association. The key is consistency—the same cue should always predict the same behavior.
         </p>
 
-        <h2>Strategy 5: Social Environment Design</h2>
-        <p>
-          People are part of your environment --- arguably the most influential part. Research shows
+        <h2 id="social-environment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Strategy 5: Social Environment Design</h2>
+        <p className="mb-6">
+          People are part of your environment—arguably the most influential part. Research shows
           you're 50% more likely to adopt a behavior if a close friend does it first
-          <Citation id="2" />:
+          <Citation id="2" index={2} source="Preventive Medicine" year="2017" tier={1} />. Your social circle creates invisible norms that shape what seems possible, normal, and desirable. You can architect this influence intentionally.
         </p>
 
         <ArticleChart
@@ -1185,7 +1376,7 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           description="The closer someone is to you (physically and emotionally), the more their habits influence yours. Design your social environment intentionally."
         />
 
-        <p>Architect your social environment:</p>
+        <p className="mb-6">Architect your social environment strategically:</p>
 
         <ul className="list-disc pl-6 space-y-2 my-4">
           <li>
@@ -1218,7 +1409,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>Environment Design for Common Challenges</h2>
+        <h2 id="common-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Environment Design for Common Challenges</h2>
+        <p className="mb-6">
+          Here are evidence-based environmental modifications for the most common behavior change goals. Each strategy follows the principles of making desired behaviors obvious and easy while making unwanted behaviors invisible and difficult:
+        </p>
 
         <ArticleAccordion
           items={[
@@ -1321,9 +1515,19 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <p>
-          You are the architect of your environment. Stop fighting yourself --- design a world where
-          good choices are the easiest choices.
+        <ArticleCallout variant="key-takeaway" title="Environment Design Essentials">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Make good habits obvious and easy; make bad habits invisible and difficult</li>
+            <li>85% of people choose the default option—use defaults to automate desired behaviors</li>
+            <li>Adding just one extra step between you and unwanted behavior reduces it by 50%+</li>
+            <li>Create context-specific spaces where environmental cues trigger specific behaviors</li>
+            <li>Your social environment shapes your habits—surround yourself with people living the behaviors you want to adopt</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          You are the architect of your environment. Stop fighting yourself—design a world where
+          good choices are the easiest choices. The question isn't whether you have enough willpower; it's whether you've structured your physical, digital, and social spaces to support the person you want to become. Change your environment, and your behavior will follow.
         </p>
       </>
     ),
@@ -1336,11 +1540,31 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     description: 'Your friends, family, and social circles exert powerful influence on your behavior. Learn how to harness social systems for sustainable change and navigate relationships that hinder growth.',
     image: "/images/articles/cat08/cover-064.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Social Influence', 'Peer Effects', 'Accountability', 'Social Support'],
+    summary: 'Behaviors spread through social networks like viruses—your closest friends shape your habits more than willpower ever could. By intentionally designing your social environment, you can harness peer influence, accountability, and social norms to make sustainable change inevitable.',
+    keyFacts: [
+      { text: 'If a close friend becomes obese, your risk increases 57%; if they quit smoking, you\'re 36% more likely to quit—behaviors cascade through networks', citationIndex: 1 },
+      { text: '70% of people conform to group behavior even when privately disagreeing—social pressure overrides individual judgment', citationIndex: 6 },
+      { text: 'Public commitments are 33% more likely to be kept than private ones through accountability mechanisms', citationIndex: 5 },
+      { text: 'Social effects cascade three degrees: your friend\'s friend\'s friend affects your behavior even if you\'ve never met them', citationIndex: 4 },
+      { text: 'Group-based interventions produce 2x better adherence rates than individual efforts through shared norms and mutual support', citationIndex: 7 },
+    ],
+    sparkMoment: 'If your three closest friends smoke, you\'re 61% more likely to smoke—even if you\'ve never met them. You don\'t choose your habits in isolation. You inherit them from your tribe.',
+    practicalExercise: {
+      title: 'Social Environment Audit',
+      steps: [
+        { title: 'List Your Five', description: 'Write down the 5 people you spend the most time with (in-person or digitally)' },
+        { title: 'Assess Alignment', description: 'For each person, note: Do their habits support or undermine the behaviors I want to adopt?' },
+        { title: 'Expand or Contract', description: 'Identify 1-2 people whose habits you want to adopt more—schedule more time with them. Identify 1-2 whose influence undermines your goals—reduce exposure.' },
+        { title: 'Find Your Tribe', description: 'Join one community where your desired behavior is the norm (running club, book group, skill-building cohort)' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Social Patterns',
+    },
     citations: [
       {
         id: '1',
@@ -1409,13 +1633,21 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     ],
     content: (
       <>
-        <p className="lead">
-          If your three closest friends smoke, you're 61% more likely to smoke --- even if you've never
-          met them <Citation id="1" />. The people around you don't just influence your choices --- they
-          <strong> become</strong> your choices.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            If your three closest friends smoke, you're 61% more likely to smoke—even if you've never
+            met them <Citation id="1" index={1} source="New England Journal of Medicine" year="2007" tier={1} />. The people around you don't just influence your choices—they
+            <strong> become</strong> your choices.
+          </p>
+          <p className="mb-6">
+            We like to believe we're autonomous agents making independent decisions based on rational analysis. The reality is far more social: your behavior is profoundly shaped by the people you spend time with, the communities you belong to, and the social norms you're embedded in. This isn't a character flaw—it's evolutionary design. For millennia, conforming to group norms meant survival, while deviation meant exile and death. That ancient wiring remains active in modern life <Citation id="2" index={2} source="Psychological Bulletin" year="2018" tier={1} />.
+          </p>
+          <p className="mb-6">
+            The good news: if social systems can undermine your goals, they can also powerfully support them. By intentionally designing your social environment—choosing who you spend time with, which communities you join, and how you structure accountability—you can harness the same conformity mechanisms that might otherwise work against you. Research shows that group-based interventions produce twice the adherence rates of individual efforts, precisely because they leverage social influence rather than fighting it <Citation id="7" index={7} source="Health Psychology Review" year="2020" tier={1} />.
+          </p>
+        </div>
 
-        <ArticleCallout title="The Framingham Heart Study Finding" type="info">
+        <ArticleCallout variant="info" title="The Framingham Heart Study Finding">
           <p>
             A landmark 32-year study tracking 12,000+ people found that behaviors spread through social
             networks like viruses:
@@ -1437,10 +1669,10 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>Why Social Systems Matter More Than Willpower</h2>
-        <p>
+        <h2 id="why-social-systems-matter" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why Social Systems Matter More Than Willpower</h2>
+        <p className="mb-6">
           Humans are social creatures designed to conform. For most of evolutionary history, fitting
-          in meant survival --- rejection from the tribe meant death. That wiring remains:
+          in meant survival—rejection from the tribe meant death. That wiring remains active in every social interaction, silently shaping your choices without conscious awareness:
         </p>
 
         <StatCard
@@ -1450,13 +1682,16 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           source={<Citation id="6" />}
         />
 
-        <p>
-          You can fight this tendency with willpower --- or you can <em>use</em> it by surrounding
+        <p className="mb-6">
+          You can fight this tendency with willpower—or you can <em>use</em> it by surrounding
           yourself with people whose behaviors you want to adopt. The second approach is dramatically
-          more effective <Citation id="2" />.
+          more effective because it works with human nature rather than against it <Citation id="2" index={2} source="Psychological Bulletin" year="2018" tier={1} />.
         </p>
 
-        <h2>The Three Mechanisms of Social Influence</h2>
+        <h2 id="three-mechanisms" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Three Mechanisms of Social Influence</h2>
+        <p className="mb-6">
+          Social systems shape behavior through three distinct psychological pathways. Understanding each allows you to intentionally activate the mechanisms that support your goals:
+        </p>
 
         <ArticleAccordion
           items={[
@@ -1856,9 +2091,19 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <p>
+        <ArticleCallout variant="key-takeaway" title="Harnessing Social Systems">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Behaviors spread through networks like viruses—your friend's friend's friend affects you three degrees removed</li>
+            <li>Join communities where your desired behavior is the norm—immersion reshapes what feels "normal"</li>
+            <li>Public commitments are 33% more likely to be kept through accountability mechanisms</li>
+            <li>70% of people conform to group behavior—use this tendency by choosing the right groups</li>
+            <li>Group-based interventions produce 2x better adherence than solo efforts</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
           You don't need a new personality or superhuman discipline. You need the right people around
-          you. Build your social system intentionally, and behavior change becomes inevitable.
+          you. Build your social system intentionally, and behavior change becomes inevitable. The question isn't whether you'll be influenced—it's whether you'll choose who influences you.
         </p>
       </>
     ),
@@ -1871,11 +2116,31 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     description: 'Understand the mathematics and psychology of compounding: why 1% improvements stack exponentially, and how to leverage time and consistency for transformational change.',
     image: "/images/articles/cat08/cover-065.svg",
     category: CATEGORY_HABITS_MOTIVATION,
-    readTime: 9,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Compound Effect', 'Marginal Gains', 'Consistency', 'Long-Term Thinking'],
+    summary: 'Small daily improvements compound exponentially over time—1% better each day leads to 37x improvement in a year. Understanding the mathematics and psychology of compounding helps you embrace consistency, navigate the "valley of disappointment," and trust that invisible progress will eventually become undeniable.',
+    keyFacts: [
+      { text: '1% daily improvement for a year yields 3,778% total growth (37.78x)—while 1% daily decline leads to 97% collapse', citationIndex: 1 },
+      { text: 'Humans think linearly but compounding works exponentially—early gains are invisible, then suddenly explosive', citationIndex: 2 },
+      { text: 'Most behavior change fails in the "valley of disappointment" where effort feels disproportionate to visible results', citationIndex: 4 },
+      { text: 'Habits take an average of 66 days to become automatic—patience through the plateau is essential for breakthrough', citationIndex: 3 },
+      { text: 'Identity-based habits compound faster than outcome-focused ones because they create self-reinforcing feedback loops', citationIndex: 8 },
+    ],
+    sparkMoment: 'You don\'t end up 365% better if you improve 1% daily for a year. You end up 37 times better. That\'s not arithmetic—that\'s alchemy.',
+    practicalExercise: {
+      title: '1% Improvement Challenge',
+      steps: [
+        { title: 'Pick One Keystone Habit', description: 'Choose a single daily habit with compounding potential (reading, exercise, meditation, skill practice)' },
+        { title: 'Define 1%', description: 'What does 1% better look like? (e.g., 1 more page, 1 more minute, 1 new technique learned)' },
+        { title: 'Track Streaks, Not Perfection', description: 'Mark each day you do the thing—focus on consistency, not intensity. Missing one day is okay; missing two breaks the chain.' },
+        { title: 'Review Monthly', description: 'After 30 days, reflect: What has compounded? How does today\'s version of this habit compare to day one?' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Compounding',
+    },
     citations: [
       {
         id: '1',
@@ -1944,13 +2209,21 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
     ],
     content: (
       <>
-        <p className="lead">
-          If you improve by 1% every day for a year, you don't end up 365% better --- you end up
-          <strong> 37 times better</strong>. That's the math of compounding, and it's the most
-          powerful force in behavior change.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            If you improve by 1% every day for a year, you don't end up 365% better—you end up
+            <strong> 37 times better</strong>. That's the math of compounding, and it's the most
+            powerful force in behavior change.
+          </p>
+          <p className="mb-6">
+            Small daily actions don't feel significant. Reading one page, doing one pushup, writing one sentence—these micro-improvements seem meaningless against the backdrop of your larger goals. But compounding doesn't care about your feelings. It operates according to mathematical laws that transform tiny, consistent inputs into exponential outputs over time <Citation id="1" index={1} source="Journal of Applied Sport Psychology" year="2019" tier={1} />.
+          </p>
+          <p className="mb-6">
+            The challenge: our brains are terrible at grasping exponential growth. We evolved to think linearly—put in X effort, get out Y results. But compounding is profoundly nonlinear. Progress feels glacial for months, then suddenly explosive. Most people quit during the invisible phase, never reaching the breakthrough that was always inevitable if they'd just stayed consistent a bit longer <Citation id="4" index={4} source="Psychological Review" year="2018" tier={1} />.
+          </p>
+        </div>
 
-        <ArticleCallout title='The Compound Effect Formula' type="info">
+        <ArticleCallout variant="info" title='The Compound Effect Formula'>
           <p className="font-mono text-lg">1.01³⁶⁵ = 37.78</p>
           <p className="mt-2">
             Improve by 1% daily for a year → 3,778% total improvement
@@ -1965,12 +2238,12 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <h2>Why We Underestimate Compounding</h2>
-        <p>
+        <h2 id="why-underestimate" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Why We Underestimate Compounding</h2>
+        <p className="mb-6">
           Human brains evolved to think linearly, not exponentially. We expect effort to produce
           proportional results: work twice as hard, get twice the outcome. But compounding is
-          <em> nonlinear</em> --- early gains are invisible, then suddenly explosive
-          <Citation id="2" />:
+          <em> nonlinear</em>—early gains are invisible, then suddenly explosive. This creates a dangerous mismatch between our intuitions and reality
+          <Citation id="2" index={2} source="Educational Psychology Review" year="2020" tier={1} />:
         </p>
 
         <ArticleChart
@@ -2392,9 +2665,19 @@ export const systemsEnvironmentIdentityArticles: Article[] = [
           </p>
         </ArticleCallout>
 
-        <p>
-          You don't need to change your life overnight. You need to improve by 1% today --- and then do
-          it again tomorrow. That's the compound effect. Small. Daily. Exponential.
+        <ArticleCallout variant="key-takeaway" title="The Compound Effect in Action">
+          <ul className="list-disc pl-5 space-y-2">
+            <li>1% daily improvement compounds to 37x growth in a year—small actions become extraordinary results</li>
+            <li>Humans underestimate compounding because we think linearly, not exponentially</li>
+            <li>Most people quit in the "valley of disappointment" where effort feels disproportionate to visible progress</li>
+            <li>Habits become automatic after an average of 66 days—patience through the plateau is essential</li>
+            <li>Act with urgency today, but expect results to unfold over months and years—not weeks</li>
+          </ul>
+        </ArticleCallout>
+
+        <p className="mb-6">
+          You don't need to change your life overnight. You need to improve by 1% today—and then do
+          it again tomorrow. That's the compound effect. Small. Daily. Exponential. The question isn't whether small actions matter—it's whether you'll trust the mathematics long enough to see them transform into something extraordinary.
         </p>
       </>
     ),

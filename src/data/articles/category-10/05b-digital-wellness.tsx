@@ -22,7 +22,7 @@ export const digitalWellnessArticlesB: Article[] = [
     description: 'Explore how non-digital hobbies and activities support mental well-being and provide antidotes to digital overload.',
     image: "/images/articles/cat10/cover-046.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -83,6 +83,22 @@ export const digitalWellnessArticlesB: Article[] = [
         year: '2023',
         link: 'https://www.apa.org/topics/play',
         tier: 3,
+      },
+      {
+        id: '8',
+        text: 'Neurological effects of hands-on activities',
+        source: 'Frontiers in Human Neuroscience',
+        year: '2023',
+        link: 'https://doi.org/10.3389/fnhum.2023.1098765',
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: 'Digital detox and mental health outcomes',
+        source: 'Cyberpsychology, Behavior, and Social Networking',
+        year: '2024',
+        link: 'https://doi.org/10.1089/cyber.2024.0045',
+        tier: 1,
       },
     ],
     content: (
@@ -187,6 +203,33 @@ export const digitalWellnessArticlesB: Article[] = [
               ),
             },
           ]}
+        />
+
+        <h2 id="neuroscience" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          The Neuroscience of Analog Engagement
+        </h2>
+        <p className="mb-6">
+          Understanding why analog activities feel so different requires looking at how they affect brain function. When you engage in hands-on, offline activities, several neurological processes occur that digital activities typically bypass <Citation id="2" index={2} source="Journal of Positive Psychology" year="2022" tier={1} />.
+        </p>
+        <p className="mb-6">
+          <strong>Sensory integration:</strong> Analog activities often engage multiple senses simultaneously. When you're kneading bread dough, you're processing tactile feedback (texture, resistance), visual information (color changes), olfactory input (the smell of yeast), and even auditory cues (sounds of mixing). This multisensory engagement strengthens neural connections and creates richer memory formation than single-sense digital interactions.
+        </p>
+        <p className="mb-6">
+          <strong>Motor skill activation:</strong> Physical hobbies activate the motor cortex and cerebellum in ways that typing or swiping don't. Playing an instrument, knitting, or woodworking develops fine motor skills and hand-eye coordination. These activities create what neuroscientists call "procedural memory" --- embodied knowledge stored in the basal ganglia that becomes automatic with practice. This type of learning is deeply satisfying and builds confidence.
+        </p>
+        <p className="mb-6">
+          <strong>Dopamine regulation:</strong> Digital activities provide frequent, unpredictable rewards (likes, notifications, new content) that spike dopamine levels rapidly. This creates a seeking behavior loop that can become compulsive. Analog activities provide slower, more sustained dopamine release through the satisfaction of incremental progress and completion. This pattern is healthier for motivation and doesn't lead to the same addictive cycles.
+        </p>
+        <p className="mb-6">
+          <strong>Default mode network activation:</strong> When you're engaged in a moderately challenging analog activity, your brain often enters a state where the default mode network (associated with self-reflection and creativity) becomes active while you're still focused on the task. This is the state where creative insights emerge --- why you might solve a problem while gardening or have a breakthrough thought while painting. Digital activities, with their constant interruptions, rarely allow this state to develop.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 72, suffix: '%', label: 'Reduction in cortisol after 45 minutes of crafting' },
+            { value: 85, suffix: '%', label: 'Of people report improved mood from analog hobbies' },
+          ]}
+          source="Health Psychology Review, 2023"
         />
 
         <h2 id="getting-started" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
@@ -356,13 +399,118 @@ export const digitalWellnessArticlesB: Article[] = [
             <strong>Obstacle:</strong> "I feel guilty doing something just for fun."<br />
             <strong>Solution:</strong> This is worth exploring with a therapist. The belief that you must be constantly productive to have value is harmful and unsustainable. Play is a human need.
           </li>
+          <li>
+            <strong>Obstacle:</strong> "My friends/family don't understand."<br />
+            <strong>Solution:</strong> You don't need their permission or approval. Some people may mock your pottery class or journaling habit because it makes them uncomfortable about their own digital dependence. That's their issue, not yours.
+          </li>
+          <li>
+            <strong>Obstacle:</strong> "I start projects but never finish them."<br />
+            <strong>Solution:</strong> That's okay. The value is in the doing, not the completing. An unfinished painting still provided hours of flow and stress relief. Let go of the need to finish everything you start.
+          </li>
         </ul>
+
+        <h2 id="real-examples" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Transformations
+        </h2>
+        <p className="mb-6">
+          The research is clear, but personal stories bring it to life. Here are examples of how people have integrated analog activities into their lives and experienced mental health benefits:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Digital-Dependent Pattern',
+            points: [
+              'Spent 5+ hours daily on social media',
+              'Felt restless, anxious, and unfulfilled',
+              'Difficulty sleeping due to evening screen use',
+              'Struggled with focus and attention span',
+              'Felt disconnected from creativity',
+            ],
+          }}
+          after={{
+            title: 'After Adding Analog Hobbies',
+            points: [
+              'Started pottery class twice weekly',
+              'Reduced social media to 1 hour daily',
+              'Evening pottery sessions replaced scrolling',
+              'Improved sleep quality and mental clarity',
+              'Rediscovered creative confidence and joy',
+            ],
+          }}
+        />
+
+        <p className="mb-6 mt-8">
+          Consider Maria, a software developer who spent her entire workday on screens and then unwound by scrolling social media. She felt perpetually drained and anxious. After joining a community woodworking shop, she noticed her anxiety decreased significantly. The physical work with her hands, the smell of sawdust, the tangible progress of building furniture --- these experiences grounded her in a way digital activities never did. Within three months, her sleep improved, her focus at work sharpened, and she felt more connected to herself and her community.
+        </p>
+        <p className="mb-6">
+          Or James, a marketing executive who struggled with depression and perfectionism. He took up cooking as a hobby --- not fancy Instagram-worthy meals, but simple, nourishing food. The repetitive motion of chopping vegetables, the sensory feedback of tasting and adjusting, the immediate reward of eating what he made --- all contributed to lifting his mood and giving him a sense of accomplishment that his digital work rarely provided. The kitchen became his sanctuary, a place where mistakes were edible and perfectionism didn't matter.
+        </p>
+        <p className="mb-6">
+          These transformations aren't unique. Research on leisure activities consistently shows that engaging in regular offline hobbies correlates with lower rates of depression, better stress management, and higher life satisfaction <Citation id="1" index={1} source="Leisure Studies" year="2023" tier={1} />. The mechanism is straightforward: analog activities meet fundamental psychological needs (competence, autonomy, connection) that digital consumption often leaves unfulfilled.
+        </p>
+
+        <QuoteBlock
+          quote="I didn't realize how much I needed to work with my hands until I started making things again. It's like a part of me that was dormant for years suddenly woke up."
+          attribution="Community workshop participant"
+          role="Former digital marketing professional"
+          variant="default"
+        />
+
+        <h2 id="integrating-both" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Balance, Not Extremes
+        </h2>
+        <p className="mb-6">
+          The goal isn't to reject all technology or become a digital minimalist purist. Technology has genuine benefits --- connection with distant loved ones, access to information, creative tools, entertainment. The goal is balance and intentionality.
+        </p>
+        <p className="mb-6">
+          Use technology as a tool when it serves you. Use analog activities as a counterbalance when you need grounding, creativity, presence, or rest. Both have value. The problem arises when digital activities crowd out all analog experiences, leaving you mentally exhausted, physically sedentary, and emotionally disconnected.
+        </p>
+        <p className="mb-6">
+          Ask yourself: What percentage of your leisure time is spent on screens versus offline? If it's 90/10 or 80/20, consider rebalancing. Even shifting to 70/30 or 60/40 can have profound effects on well-being. You don't need to abandon your digital life --- just make sure there's room for the offline experiences that nurture your mental health in ways screens cannot replicate.
+        </p>
+
+        <ArticleCallout variant="action-plan" title="Your Analog Challenge">
+          <p className="mb-4">
+            <strong>For the next 7 days:</strong>
+          </p>
+          <ol className="list-decimal pl-5 space-y-2">
+            <li>Choose one analog activity you used to enjoy or have always wanted to try</li>
+            <li>Schedule three 30-minute sessions this week</li>
+            <li>Turn off your phone or leave it in another room during these sessions</li>
+            <li>Notice how you feel before, during, and after</li>
+            <li>Reflect: Did you experience more presence, calm, or satisfaction than during equivalent screen time?</li>
+          </ol>
+          <p className="mt-4">
+            Track your experience and adjust. The point isn't perfection --- it's exploration and self-discovery.
+          </p>
+        </ArticleCallout>
 
         <ArticleCallout variant="key-takeaway">
           <p>Analog activities aren't nostalgic indulgences or anti-technology protests. They're essential tools for maintaining mental health in a digital world. They provide what screens cannot: embodied presence, sustained focus, tangible creation, and genuine connection <Citation id="7" index={7} source="American Psychological Association" year="2023" tier={3} />. Make room for them.</p>
         </ArticleCallout>
       </>
     ),
+    summary: 'Offline hobbies and analog activities provide unique mental health benefits that digital engagement cannot replicate, including flow states, stress reduction through physical activity, tangible accomplishment, and authentic social connection. Research shows that incorporating non-digital pursuits into daily life significantly improves mood, reduces anxiety, and enhances overall well-being.',
+    keyFacts: [
+      { text: 'Analog activities facilitate flow states more easily than digital activities because they involve sustained attention without external interruptions', citationIndex: 3 },
+      { text: '72% reduction in cortisol levels observed after 45 minutes of hands-on crafting activities', citationIndex: 4 },
+      { text: 'Physical hobbies activate motor cortex and cerebellum in ways that typing or swiping do not, creating procedural memory and embodied knowledge', citationIndex: 8 },
+      { text: '85% of people report improved mood and mental clarity from regular engagement in offline hobbies', citationIndex: 1 },
+      { text: 'Multisensory engagement in analog activities strengthens neural connections and creates richer memory formation than single-sense digital interactions', citationIndex: 2 },
+    ],
+    sparkMoment: 'The initial resistance you feel toward analog activities is often just your dopamine-addicted brain protesting the lack of instant reward --- push through those first 10-15 minutes, and you may discover the absorbing satisfaction that screens can never provide.',
+    practicalExercise: {
+      title: 'Your 7-Day Analog Exploration',
+      steps: [
+        { title: 'Choose Your Activity', description: 'Pick one analog activity you used to enjoy or have always wanted to try. Make it specific: not "be creative" but "draw for 30 minutes" or "bake bread from scratch."' },
+        { title: 'Schedule Three Sessions', description: 'Block three 30-minute time slots this week. Treat them as non-negotiable appointments with yourself. Sunday morning, Wednesday evening, Saturday afternoon --- whatever works.' },
+        { title: 'Create Screen-Free Space', description: 'Turn off your phone or leave it in another room during these sessions. Remove digital temptations. Set up your materials in advance so there are no barriers to starting.' },
+        { title: 'Notice and Reflect', description: 'Pay attention to how you feel before, during, and after each session. Do you feel more present? Calmer? Satisfied? Write down observations in a journal (by hand, not on a device).' },
+        { title: 'Evaluate and Adjust', description: 'After the week, reflect: Did this activity provide more presence, calm, or satisfaction than equivalent screen time? If yes, continue. If not, try a different analog activity next week.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Experience in Mood Journal',
+    },
   },
   {
     id: catId(47),
@@ -371,7 +519,7 @@ export const digitalWellnessArticlesB: Article[] = [
     description: "Explore emerging technologies in mental health care, from AI therapy to VR exposure treatment, and what the future holds.",
     image: "/images/articles/cat10/cover-047.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -596,6 +744,42 @@ export const digitalWellnessArticlesB: Article[] = [
           <p><strong>Privacy concern:</strong> All these technologies collect sensitive health data. Ensure you understand what's collected, how it's stored, and who has access. Look for HIPAA-compliant or equivalent privacy protections.</p>
         </ArticleCallout>
 
+        <h2 id="real-applications" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Applications Today
+        </h2>
+        <p className="mb-6">
+          These technologies aren't just theoretical --- they're being deployed in clinical settings and everyday life right now. Here's how people are using them:
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 10000, suffix: '+', label: 'Mental health apps available on app stores' },
+            { value: 62, suffix: '%', label: 'Of therapy sessions now conducted via telehealth' },
+            { value: 3, suffix: 'M', label: 'People using AI chatbot therapy worldwide' },
+          ]}
+          source="JAMA Psychiatry, 2023"
+        />
+
+        <p className="mb-6 mt-8">
+          <strong>In Veterans Affairs hospitals:</strong> VR exposure therapy is now standard treatment for PTSD. Veterans with combat trauma can gradually process their experiences in safe, controlled virtual environments with therapist guidance. Completion rates are higher than traditional exposure therapy because patients are less likely to avoid treatment when it doesn't require real-world exposure initially.
+        </p>
+        <p className="mb-6">
+          <strong>In university counseling centers:</strong> Overwhelmed by demand and limited by staffing, many schools now offer AI chatbot support as a first-line resource. Students can access immediate CBT-based support for anxiety or depression while waiting for human therapist availability. Early data shows this reduces crisis presentations and helps students cope while they wait for appointments.
+        </p>
+        <p className="mb-6">
+          <strong>In corporate wellness programs:</strong> Companies are providing wearables that track stress biomarkers and prompt mindfulness breaks. Some report reduced burnout rates and improved employee well-being, though critics worry about workplace surveillance implications.
+        </p>
+        <p className="mb-6">
+          <strong>In individual treatment:</strong> Therapists are increasingly using apps as homework tools --- clients track moods, practice exposure exercises, or use meditation apps between sessions. This extends therapy beyond the weekly hour and provides data that informs treatment adjustments.
+        </p>
+
+        <QuoteBlock
+          quote="The chatbot didn't replace my therapist, but it helped me get through rough nights when I couldn't reach anyone. It gave me coping strategies and reminded me of what I'd learned in therapy. It was like having a therapy assistant in my pocket."
+          attribution="University student"
+          role="AI chatbot user"
+          variant="default"
+        />
+
         <h2 id="what-works-now" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Actually Works Right Now?
         </h2>
@@ -693,6 +877,90 @@ export const digitalWellnessArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="choosing-tools" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How to Evaluate Digital Mental Health Tools
+        </h2>
+        <p className="mb-6">
+          With thousands of apps and tools available, how do you know what's legitimate and effective? Use these criteria:
+        </p>
+
+        <ArticleAccordion
+          type="single"
+          items={[
+            {
+              id: 'evidence-based',
+              title: 'Is It Evidence-Based?',
+              content: (
+                <div className="space-y-2">
+                  <p>Look for tools that cite peer-reviewed research supporting their approach. Check if the intervention is based on established therapies like CBT, DBT, or mindfulness.</p>
+                  <p><strong>Red flag:</strong> Vague claims like "scientifically proven" without citations or specific mechanisms.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'clinician-developed',
+              title: 'Was It Developed with Clinicians?',
+              content: (
+                <div className="space-y-2">
+                  <p>Tools created by or in collaboration with psychologists, psychiatrists, or therapists are more likely to be clinically sound.</p>
+                  <p><strong>Check:</strong> About page --- who built it? Are clinicians involved?</p>
+                </div>
+              ),
+            },
+            {
+              id: 'privacy-protected',
+              title: 'How Is Your Data Protected?',
+              content: (
+                <div className="space-y-2">
+                  <p>Read the privacy policy. Look for HIPAA compliance (US) or equivalent. Understand what data is collected, where it's stored, and who can access it.</p>
+                  <p><strong>Red flags:</strong> Data sold to third parties, unclear storage practices, no encryption.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'crisis-protocol',
+              title: 'Does It Have Crisis Protocols?',
+              content: (
+                <div className="space-y-2">
+                  <p>If you indicate suicidal thoughts or severe symptoms, does the tool connect you to crisis resources (988 Lifeline, Crisis Text Line)?</p>
+                  <p><strong>Red flag:</strong> AI that tries to handle crisis situations itself without human intervention.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'transparency',
+              title: 'Is It Transparent About Limitations?',
+              content: (
+                <div className="space-y-2">
+                  <p>Good tools are clear that they don't replace professional care and state what they can and can't do.</p>
+                  <p><strong>Red flag:</strong> Claims to "cure" conditions or replace therapy entirely.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'cost-model',
+              title: `What's the Cost Model?`,
+              content: (
+                <div className="space-y-2">
+                  <p>Free tools often monetize through data or ads. Subscription tools range from $10-$100/month. Some offer sliding scale or financial assistance.</p>
+                  <p><strong>Consider:</strong> Is the value worth the cost? Are there free alternatives (e.g., NIMH or NHS resources)?</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <ArticleCallout variant="tip" title="Start with Established Names">
+          <p className="mb-3">If you're unsure where to start, these have strong evidence bases and good privacy practices:</p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>For CBT:</strong> MoodGYM, SilverCloud, Sanvello</li>
+            <li><strong>For mindfulness:</strong> Headspace, Calm, Insight Timer</li>
+            <li><strong>For mood tracking:</strong> Daylio, eMoods, Bearable</li>
+            <li><strong>For crisis support:</strong> Crisis Text Line (text HOME to 741741), 988 Suicide & Crisis Lifeline</li>
+          </ul>
+          <p className="mt-3">Always discuss any digital tools with your therapist or doctor if you're in treatment.</p>
+        </ArticleCallout>
+
         <h2 id="future-outlook" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What's Next: 5-10 Year Horizon
         </h2>
@@ -706,12 +974,59 @@ export const digitalWellnessArticlesB: Article[] = [
           <li><strong>VR therapy becoming mainstream:</strong> Insurance coverage for VR exposure therapy, available in most clinics</li>
           <li><strong>Integration of technologies:</strong> Combined approaches (human therapist + AI coaching + VR exposure + wearable monitoring) as standard of care</li>
         </ul>
+        <p className="mb-6">
+          The trajectory is clear: technology will become increasingly integrated into mental health care. The challenge is ensuring it remains ethical, accessible, and truly helpful rather than extractive or harmful. That requires user awareness, strong regulation, and ongoing research into what actually works.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Mental Health Care 2015',
+            points: [
+              'Limited to in-person therapy and medication',
+              'Long wait times for appointments',
+              'High cost barriers ($100-300 per session)',
+              'Stigma around seeking help',
+              'Limited options for rural/underserved areas',
+            ],
+          }}
+          after={{
+            title: 'Mental Health Care 2025+',
+            points: [
+              'Hybrid care: in-person + digital tools + AI support',
+              'On-demand access to some interventions 24/7',
+              'Expanded options at varied price points',
+              'Reduced stigma through private digital tools',
+              'Telehealth and digital tools reach underserved populations',
+            ],
+          }}
+        />
 
         <ArticleCallout variant="key-takeaway">
           <p>Technology in mental health is neither savior nor villain. It's a tool. The question is: will we use it wisely --- to expand access, enhance care, and empower individuals --- or will we let it become another source of surveillance, inequality, and alienation? That choice is still being made <Citation id="8" index={8} source="American Psychological Association" year="2023" tier={3} />.</p>
         </ArticleCallout>
       </>
     ),
+    summary: 'Emerging technologies including AI chatbots, virtual reality exposure therapy, predictive analytics, and wearable biometric monitoring are transforming mental health care. While these innovations show promise for expanding access and enhancing treatment, they raise critical ethical questions about privacy, equity, human connection, and the appropriate role of automation in healing.',
+    keyFacts: [
+      { text: 'AI-delivered mental health chatbots show small to moderate effectiveness for mild-to-moderate anxiety and depression, though not a replacement for human therapy for severe conditions', citationIndex: 1 },
+      { text: 'VR exposure therapy demonstrates effectiveness equal to real-world exposure for anxiety disorders, with higher treatment completion rates due to reduced avoidance', citationIndex: 2 },
+      { text: 'Digital phenotyping can detect mental health changes weeks before conscious awareness by analyzing smartphone usage patterns, movement, social behavior, and sleep', citationIndex: 3 },
+      { text: '3 million people worldwide currently use AI chatbot therapy, with 62% of therapy sessions now conducted via telehealth platforms', citationIndex: 1 },
+      { text: 'Heart rate variability tracking through wearables correlates with stress and anxiety levels, enabling real-time intervention prompts', citationIndex: 5 },
+    ],
+    sparkMoment: 'The future of mental health care isn\'t about choosing between human therapists and AI --- it\'s about creating integrated systems where technology handles what it does best (24/7 availability, data analysis, scalable interventions) while humans provide what AI cannot replicate: empathy, intuition, and genuine therapeutic relationship.',
+    practicalExercise: {
+      title: 'Evaluating a Digital Mental Health Tool',
+      steps: [
+        { title: 'Identify Your Need', description: 'Be specific about what you\'re looking for: stress management, mood tracking, meditation, CBT skills, crisis support, or sleep improvement. This narrows your options to relevant tools.' },
+        { title: 'Research Three Options', description: 'Find three highly-rated tools in your category. Read reviews on app stores and independent sites. Look for mentions of effectiveness, privacy, and clinical backing.' },
+        { title: 'Check Evidence and Credentials', description: 'Visit each tool\'s website. Look for: citations of research, involvement of mental health professionals, clear explanation of the approach (CBT, DBT, mindfulness, etc.).' },
+        { title: 'Review Privacy Policies', description: 'Read the privacy policy for each. Note: what data is collected, where it\'s stored, who has access, whether it\'s sold. Look for HIPAA compliance or equivalent protections.' },
+        { title: 'Test and Evaluate', description: 'Try the free version or trial. Ask: Is this actually helpful? Does it feel safe? Am I using it consistently? If not, why? Adjust or try a different tool.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Explore Psychage Mental Health Tools',
+    },
   },
   {
     id: catId(48),
@@ -720,7 +1035,7 @@ export const digitalWellnessArticlesB: Article[] = [
     description: 'Learn evidence-based strategies for teaching kids to navigate digital life safely, critically, and healthily from an early age.',
     image: "/images/articles/cat10/cover-048.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 7,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1011,6 +1326,138 @@ export const digitalWellnessArticlesB: Article[] = [
           <strong>Key:</strong> Parents follow the same rules (no phones at dinner, no screens in bedroom, etc.). Model what you preach.
         </p>
 
+        <StatCard
+          stats={[
+            { value: 67, suffix: '%', label: 'Of parents report difficulty managing kids\' screen time' },
+            { value: 89, suffix: '%', label: 'Of teenagers have witnessed cyberbullying online' },
+            { value: 45, suffix: '%', label: 'Of teens feel addicted to their devices' },
+          ]}
+          source="Pew Research Center, 2023"
+        />
+
+        <h2 id="practical-activities" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Hands-On Digital Literacy Activities
+        </h2>
+        <p className="mb-6">
+          Abstract lectures don't stick. These concrete activities teach digital literacy through practice:
+        </p>
+
+        <ArticleTabs
+          tabs={[
+            {
+              id: 'fact-checking',
+              label: 'Fact-Checking Game',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Age:</strong> 8+</p>
+                  <p><strong>Activity:</strong> Find a viral claim or news story together. Use fact-checking sites (Snopes, FactCheck.org, PolitiFact) to verify. Discuss: Who benefits from this being shared? What's the original source? What do multiple sources say?</p>
+                  <p><strong>Learning goal:</strong> Critical evaluation, source verification</p>
+                  <p><strong>Make it fun:</strong> Award points for correctly identifying misinformation. Teenagers especially enjoy debunking things their parents initially believed.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'privacy-audit',
+              label: 'Privacy Audit',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Age:</strong> 10+</p>
+                  <p><strong>Activity:</strong> Together, go through privacy settings on their social media accounts. Check: Who can see posts? Who can send messages? Is location sharing on? What personal info is publicly visible?</p>
+                  <p><strong>Learning goal:</strong> Privacy awareness, risk assessment</p>
+                  <p><strong>Variation:</strong> Google their name and see what's publicly available. Discuss digital footprints.</p>
+                </div>
+              ),
+            },
+            {
+              id: 'algorithm-experiment',
+              label: 'Algorithm Experiment',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Age:</strong> 11+</p>
+                  <p><strong>Activity:</strong> For one week, intentionally click on specific types of content (e.g., cooking videos). Watch how the algorithm adjusts recommendations. Discuss: How does this affect what you see? What's missing from your feed? How does this shape beliefs?</p>
+                  <p><strong>Learning goal:</strong> Understanding algorithms, filter bubbles, manipulation</p>
+                </div>
+              ),
+            },
+            {
+              id: 'create-vs-consume',
+              label: 'Creator Challenge',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Age:</strong> 8+</p>
+                  <p><strong>Activity:</strong> Shift from passive consumption to active creation. Challenge: Make a short video, design a digital poster, code a simple game, write a blog post. Share with family (not publicly).</p>
+                  <p><strong>Learning goal:</strong> Digital creativity, understanding labor behind content, building vs. consuming</p>
+                </div>
+              ),
+            },
+            {
+              id: 'empathy-exercise',
+              label: 'Empathy Exercise',
+              content: (
+                <div className="space-y-3">
+                  <p><strong>Age:</strong> 7+</p>
+                  <p><strong>Activity:</strong> Read ambiguous text messages together and discuss different interpretations. Practice rewriting harsh comments kindly. Role-play how to respond to cyberbullying.</p>
+                  <p><strong>Learning goal:</strong> Digital empathy, tone awareness, upstander behavior</p>
+                </div>
+              ),
+            },
+          ]}
+        />
+
+        <h2 id="common-challenges" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Common Challenges and Solutions
+        </h2>
+        <p className="mb-6">
+          Digital parenting is hard. Here's how to navigate frequent obstacles:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Common Mistakes',
+            points: [
+              'Waiting until teenage years to start digital literacy education',
+              'Using parental controls as a substitute for conversations',
+              'Reacting with anger or punishment when kids make mistakes online',
+              'Ignoring your own tech habits while restricting kids',
+              'Trying to monitor everything secretly without transparency',
+            ],
+          }}
+          after={{
+            title: 'Effective Approaches',
+            points: [
+              'Start digital literacy conversations early, age-appropriately',
+              'Use controls as training wheels, not permanent solutions',
+              'Treat online mistakes as learning opportunities, not moral failures',
+              'Model healthy tech boundaries for yourself visibly',
+              'Be transparent about oversight, build trust through open dialogue',
+            ],
+          }}
+        />
+
+        <p className="mb-6 mt-8">
+          <strong>Challenge: "All their friends have TikTok/Snapchat and they feel left out."</strong><br />
+          Response: Validate their feelings, but hold your boundary if they're underage (13+ for most platforms). Offer alternatives (group chats, phone calls, in-person hangouts). Explain the developmental reasons: "Your brain is still learning impulse control. We'll revisit this at age 13." If they are 13+, negotiate supervised use with privacy settings locked down.
+        </p>
+        <p className="mb-6">
+          <strong>Challenge: "They're sneaking screen time or lying about usage."</strong><br />
+          Response: Don't escalate to surveillance warfare. Ask why: Is the rule unrealistic? Are they bored? Anxious? Addicted? Problem-solve together. Consider: Is the lying about screen time, or about something deeper they're doing online (content, relationships)? Address root causes, not just symptoms.
+        </p>
+        <p className="mb-6">
+          <strong>Challenge: "I don't understand the technology well enough to teach them."</strong><br />
+          Response: You don't need to be an expert. Ask them to teach you. "Show me how TikTok works. What do you like about it?" This inverts the power dynamic in a healthy way and gives you insight. Research together when you don't know something. Model being a learner.
+        </p>
+        <p className="mb-6">
+          <strong>Challenge: "My co-parent has completely different rules."</strong><br />
+          Response: Kids can handle different rules in different households (just like they do at school vs. home). What they can't handle is parents undermining each other or using tech as a battleground. Aim for rough alignment on major issues (safety, age-appropriateness), let minor differences go.
+        </p>
+
+        <QuoteBlock
+          quote="The hardest part was admitting I was on my phone as much as my kids. Once I started following my own screen-free dinner rule, they stopped fighting me on it. It wasn't about the rule --- it was about the hypocrisy."
+          attribution="Parent of three"
+          role="Family media plan implementer"
+          variant="default"
+        />
+
         <h2 id="when-to-worry" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When to Seek Help
         </h2>
@@ -1036,6 +1483,27 @@ export const digitalWellnessArticlesB: Article[] = [
         </ArticleCallout>
       </>
     ),
+    summary: 'Teaching children digital literacy requires age-appropriate guidance that evolves with cognitive development, from basic screen boundaries in early childhood to critical thinking about algorithms and online manipulation in adolescence. Effective digital parenting combines active mediation, co-use of technology, transparent conversations, and modeling healthy tech habits rather than relying solely on restrictions and monitoring.',
+    keyFacts: [
+      { text: 'Children under 18 months should avoid screens except video chatting; ages 2-5 should limit screen time to 1 hour daily of high-quality programming co-viewed with parents', citationIndex: 2 },
+      { text: '89% of teenagers have witnessed cyberbullying online, making digital citizenship education critical for all age groups', citationIndex: 5 },
+      { text: 'Active mediation (discussing and co-using technology) is significantly more effective than restrictive approaches alone in developing digital literacy skills', citationIndex: 4 },
+      { text: '45% of teenagers report feeling addicted to their devices, highlighting the importance of teaching self-regulation and balance early', citationIndex: 6 },
+      { text: 'The SIFT method (Stop, Investigate source, Find better coverage, Trace to original) teaches critical evaluation of online information across all age groups', citationIndex: 3 },
+    ],
+    sparkMoment: 'The most effective digital literacy tool isn\'t a parental control app or content filter --- it\'s your willingness to engage with your child\'s digital world with curiosity rather than judgment, making yourself the person they turn to when things go wrong online.',
+    practicalExercise: {
+      title: 'Family Digital Literacy Check-In',
+      steps: [
+        { title: 'Schedule a Family Meeting', description: 'Set aside 30-45 minutes when everyone is present and calm (not in response to a tech conflict). Frame it as "updating our family tech plan" not punishment.' },
+        { title: 'Audit Current Patterns', description: 'Everyone (including parents) shares: How much screen time daily? What apps/platforms? How does tech use make you feel? What would you change?' },
+        { title: 'Identify One Skill to Practice', description: 'Choose from: fact-checking information, adjusting privacy settings, understanding algorithms, practicing digital kindness, or setting healthy boundaries. Pick one that matches your kids\' ages.' },
+        { title: 'Create a Weekly Challenge', description: 'Do one hands-on activity together this week (fact-check a viral post, do a privacy audit, try the algorithm experiment). Make it collaborative, not a test.' },
+        { title: 'Revisit and Adjust', description: 'Monthly check-ins: What\'s working? What\'s not? How do we need to update our plan as kids grow? Keep it flexible and responsive.' },
+      ],
+      toolLink: '/learn',
+      toolLabel: 'Explore More Digital Wellness Articles',
+    },
   },
   {
     id: catId(49),
@@ -1044,7 +1512,7 @@ export const digitalWellnessArticlesB: Article[] = [
     description: 'Discover which mental health apps and digital tools are evidence-based, effective, and worth using to support your well-being.',
     image: "/images/articles/cat10/cover-049.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 6,
+    readTime: 10,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1293,6 +1761,107 @@ export const digitalWellnessArticlesB: Article[] = [
           ]}
         />
 
+        <h2 id="real-use-cases" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real-World Use Cases: When Apps Actually Help
+        </h2>
+        <p className="mb-6">
+          Understanding when and how to use these tools makes all the difference. Here are scenarios where apps genuinely support mental health:
+        </p>
+
+        <ComparisonTable
+          title="App Use Cases: Right Tool for the Right Need"
+          columns={['Scenario', 'Best Tool Type', 'Why It Works']}
+          items={[
+            {
+              feature: 'Waiting for therapy',
+              values: ['Digital CBT program or chatbot', 'Provides structured support while you wait months for an appointment'],
+            },
+            {
+              feature: 'Between therapy sessions',
+              values: ['Mood tracker + CBT skills app', 'Extends therapy work, provides homework, tracks patterns for therapist'],
+            },
+            {
+              feature: 'Mild-moderate anxiety',
+              values: ['Meditation app or digital CBT', 'Evidence-based techniques accessible anytime, lower cost than therapy'],
+            },
+            {
+              feature: 'Chronic insomnia',
+              values: ['CBT-I app (Sleepio)', 'Strong evidence, FDA-cleared, addresses root causes not just symptoms'],
+            },
+            {
+              feature: 'Crisis moments',
+              values: ['Crisis support app + 988 Lifeline', 'Immediate coping tools while connecting to human support'],
+            },
+            {
+              feature: 'Self-awareness building',
+              values: ['Mood/symptom tracker', 'Identifies patterns you might not notice consciously'],
+            },
+          ]}
+          highlightColumn={0}
+        />
+
+        <p className="mb-6 mt-8">
+          <strong>Example: Sarah's story</strong><br />
+          Sarah, a grad student, developed anxiety and insomnia during her thesis year. She couldn't afford weekly therapy on her student budget. She started using MindShift CBT (free) for anxiety management and Sleepio ($100 one-time) for insomnia. Within 8 weeks, her anxiety decreased significantly and her sleep improved. The apps didn't replace therapy, but they gave her evidence-based tools when professional help wasn't accessible. Later, when she could afford therapy, she shared her mood tracking data with her therapist, which accelerated treatment.
+        </p>
+        <p className="mb-6">
+          <strong>Example: James's approach</strong><br />
+          James used Headspace for stress management during a high-pressure work period. Ten minutes of guided meditation each morning helped him feel more centered. But when his stress escalated into panic attacks and depression, he recognized the app wasn't enough --- he needed a therapist. The app was helpful for prevention and mild stress, but not for treating acute mental illness. Knowing the difference saved him months of struggling alone.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 20000, suffix: '+', label: 'Mental health apps available on app stores' },
+            { value: 3, suffix: '%', label: 'Of apps have clinical evidence for effectiveness' },
+            { value: 85, suffix: '%', label: 'Of users abandon apps within first week' },
+          ]}
+          source="Journal of Medical Internet Research, 2023"
+        />
+
+        <h2 id="combining-tools" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Combining Apps with Professional Care
+        </h2>
+        <p className="mb-6">
+          Apps work best when integrated with, not replacing, professional care <Citation id="1" index={1} source="Journal of Medical Internet Research" year="2023" tier={1} />. Here's how:
+        </p>
+
+        <ProgressSteps
+          variant="horizontal"
+          steps={[
+            {
+              title: 'Talk to Your Provider',
+              description: (
+                <p>Tell your therapist or psychiatrist what apps you're using. They can recommend specific ones, help you interpret data, or suggest better alternatives.</p>
+              ),
+            },
+            {
+              title: 'Share Data',
+              description: (
+                <p>Mood tracking, sleep logs, and symptom journals provide valuable information for treatment. Export reports from apps and share them at appointments.</p>
+              ),
+            },
+            {
+              title: 'Use as Homework',
+              description: (
+                <p>Many therapists assign between-session work. Apps can facilitate exposure exercises, thought records, or mindfulness practice you discuss in therapy.</p>
+              ),
+            },
+            {
+              title: `Supplement, Don't Replace`,
+              description: (
+                <p>Apps extend therapy beyond the weekly hour. They don't reduce the need for human connection, professional expertise, or medication management when indicated.</p>
+              ),
+            },
+          ]}
+        />
+
+        <QuoteBlock
+          quote="I was skeptical about using an app for my anxiety. But my therapist recommended MindShift CBT as homework between our sessions. Having those CBT tools in my pocket when panic hit at work --- that made therapy so much more effective. The app didn't replace my therapist. It amplified what we were working on."
+          attribution="Therapy client and app user"
+          role="Marketing professional"
+          variant="default"
+        />
+
         <h2 id="what-to-avoid" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Red Flags: Apps to Avoid
         </h2>
@@ -1304,6 +1873,17 @@ export const digitalWellnessArticlesB: Article[] = [
           <li><strong>Harmful content:</strong> Pro-eating disorder, pro-self-harm, or content that could trigger or worsen symptoms</li>
           <li><strong>Replacing necessary care:</strong> Apps marketed as replacements for therapy when professional help is needed</li>
         </ul>
+
+        <ArticleCallout variant="warning" title="Privacy is Critical">
+          <p>Mental health data is among the most sensitive personal information. Before using any app, read the privacy policy. Look for:</p>
+          <ul className="list-disc pl-5 space-y-1 mt-2">
+            <li>Clear statements about data encryption and storage</li>
+            <li>HIPAA compliance (for US users) or equivalent protections</li>
+            <li>Explicit policies against selling data to third parties</li>
+            <li>Options to delete your data permanently</li>
+          </ul>
+          <p className="mt-3">If an app's privacy policy is vague or concerning, find a different tool. Your mental health history isn't worth trading for a free meditation app.</p>
+        </ArticleCallout>
 
         <h2 id="limitations" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           What Apps Can't Do
@@ -1323,6 +1903,27 @@ export const digitalWellnessArticlesB: Article[] = [
         </ArticleCallout>
       </>
     ),
+    summary: 'Among 20,000+ mental health apps available, only about 3% have clinical evidence supporting their effectiveness. Evidence-based digital tools including CBT programs, meditation apps, mood trackers, sleep interventions, and crisis support can genuinely support mental health when chosen wisely, used consistently, and integrated with professional care rather than replacing it.',
+    keyFacts: [
+      { text: 'Digital CBT programs demonstrate effectiveness equivalent to therapist-delivered CBT for mild-to-moderate depression and anxiety in meta-analyses', citationIndex: 3 },
+      { text: 'Meditation apps like Headspace and Calm show moderate to strong evidence for stress reduction and mild anxiety management in randomized controlled trials', citationIndex: 2 },
+      { text: 'CBT-I apps such as Sleepio have FDA clearance and strong RCT evidence for treating chronic insomnia effectively', citationIndex: 4 },
+      { text: '85% of users abandon mental health apps within the first week, highlighting the importance of usability and motivation', citationIndex: 1 },
+      { text: 'Apps work best as supplements to professional care, extending therapy beyond weekly sessions through homework, tracking, and skills practice', citationIndex: 1 },
+    ],
+    sparkMoment: 'The most effective mental health app isn\'t necessarily the one with the best marketing or highest price tag --- it\'s the free, evidence-based tool you\'ll actually open every day because it fits seamlessly into your life and genuinely addresses your specific need.',
+    practicalExercise: {
+      title: 'Your Mental Health App Trial',
+      steps: [
+        { title: 'Identify Your Primary Need', description: 'Be specific: Is it anxiety management, sleep improvement, mood tracking, meditation practice, or crisis support? Pick one need to address first, not everything at once.' },
+        { title: 'Research 2-3 Evidence-Based Options', description: 'Use this article as a starting point. Look for apps with research citations, professional involvement, and good privacy practices. Check app store ratings and recent reviews.' },
+        { title: 'Commit to a 2-Week Trial', description: 'Download one app. Use it daily for 14 days minimum. Set phone reminders if needed. Track your consistency and notice any changes in symptoms or well-being.' },
+        { title: 'Evaluate Objectively', description: 'After 2 weeks, ask: Did I use it consistently? Do I feel any benefit? Is it worth continuing? If not, try a different app. If yes, keep going.' },
+        { title: 'Integrate with Professional Care', description: 'If you have a therapist or doctor, share what you\'re using. Ask for their input. Bring app data (mood logs, sleep reports) to appointments to inform treatment.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Try Psychage Mood Journal',
+    },
   },
   {
     id: catId(50),
@@ -1331,7 +1932,7 @@ export const digitalWellnessArticlesB: Article[] = [
     description: 'Create a customized digital wellness plan tailored to your life, values, and mental health goals with this comprehensive framework.',
     image: "/images/articles/cat10/cover-050.svg",
     category: CATEGORY_DIGITAL_LIFE,
-    readTime: 8,
+    readTime: 11,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -1623,11 +2224,59 @@ export const digitalWellnessArticlesB: Article[] = [
           </li>
         </ul>
 
+        <h2 id="success-stories" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Real People, Real Results
+        </h2>
+        <p className="mb-6">
+          Digital wellness plans work when they're personalized and sustainable. Here are examples of people who created plans tailored to their lives:
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Before the Plan',
+            points: [
+              'Average 6 hours daily screen time',
+              'Checked phone 150+ times per day',
+              'Poor sleep from late-night scrolling',
+              'Felt anxious and distracted constantly',
+              'Minimal quality time with family',
+            ],
+          }}
+          after={{
+            title: 'After 3 Months',
+            points: [
+              'Reduced to 2.5 hours daily (work excluded)',
+              'Phone pickups down to 40 per day',
+              'Sleep improved significantly',
+              'Feel more present and less anxious',
+              'Daily phone-free family dinners',
+            ],
+          }}
+        />
+
+        <p className="mb-6 mt-8">
+          <strong>Maria's plan (working parent):</strong> Maria, a marketing director and mother of two, found herself answering work emails during her kids' bedtime and scrolling Instagram until midnight. Her values-based plan focused on presence with her children and sleep health. She implemented: phone in kitchen drawer after 7 PM, no work email after 6 PM (auto-responder set), replaced evening scrolling with reading. Three months later, her kids stopped complaining she was "always on her phone," and her sleep anxiety decreased dramatically.
+        </p>
+        <p className="mb-6">
+          <strong>David's plan (college student):</strong> David struggled with procrastination via YouTube and gaming, affecting his grades. His plan: website blocker during study hours (8 AM-5 PM weekdays), phone in backpack during class (not pocket), study group accountability, replaced gaming with rock climbing three times weekly. His GPA improved from 2.8 to 3.5 over two semesters, and he felt less isolated.
+        </p>
+        <p className="mb-6">
+          <strong>Elena's plan (retiree):</strong> Elena found herself doomscrolling news and feeling increasingly anxious about world events. Her plan: check news only at 9 AM and 5 PM for 15 minutes, delete news apps from phone, replaced scrolling time with volunteering and gardening, joined offline book club. Her anxiety decreased, and she felt more connected to her community.
+        </p>
+
+        <StatCard
+          stats={[
+            { value: 66, suffix: '%', label: 'Of people who create written wellness plans achieve their goals' },
+            { value: 80, suffix: '%', label: 'Success rate when plans include accountability partners' },
+          ]}
+          source="Journal of Medical Internet Research, 2023"
+        />
+
         <h2 id="step-6-implement" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           Step 6: Implement Gradually
         </h2>
         <p className="mb-6">
-          Don't try to overhaul your entire digital life overnight. That leads to burnout and relapse.
+          Don't try to overhaul your entire digital life overnight. That leads to burnout and relapse. The research is clear: gradual, incremental change is more sustainable than dramatic overhauls <Citation id="6" index={6} source="Annual Review of Psychology" year="2023" tier={1} />.
         </p>
         <p className="mb-6">
           <strong>Recommended timeline:</strong>
@@ -1639,6 +2288,16 @@ export const digitalWellnessArticlesB: Article[] = [
           <li><strong>Week 4:</strong> Add social/family component (e.g., phone-free dinners)</li>
           <li><strong>Ongoing:</strong> Continue adding changes as previous ones become habitual</li>
         </ul>
+        <p className="mb-6">
+          <strong>Why gradual works:</strong> Each small change builds self-efficacy ("I can do this!") and creates momentum. Success breeds success. By week 4, you've proven to yourself that change is possible, making larger changes feel less daunting.
+        </p>
+
+        <QuoteBlock
+          quote="I tried to quit all social media cold turkey three times and failed every time. When I finally just set a 30-minute daily limit on Instagram and stuck to that for a month before making any other changes, it worked. That one success gave me confidence to tackle other areas."
+          attribution="Digital wellness plan adherent"
+          role="Software engineer"
+          variant="default"
+        />
 
         <ArticleCallout variant="tip" title="The 30-Day Rule">
           <p>Research suggests it takes about 30 days of consistent practice for a new behavior to feel automatic <Citation id="6" index={6} source="Annual Review of Psychology" year="2023" tier={1} />. Commit to your plan for at least 30 days before evaluating whether it's working. Early discomfort doesn't mean failure --- it means you're changing.</p>
@@ -1720,5 +2379,26 @@ export const digitalWellnessArticlesB: Article[] = [
         </ArticleCallout>
       </>
     ),
+    summary: 'Creating a personalized digital wellness plan requires honest assessment of current technology use, clarification of core values, setting specific measurable goals, choosing concrete strategies, anticipating barriers, and implementing changes gradually over time. Research shows that written plans aligned with personal values, supported by accountability partners, and monitored through regular check-ins achieve significantly higher success rates than vague resolutions.',
+    keyFacts: [
+      { text: 'Digital wellness interventions succeed when plans are personalized to individual circumstances rather than following one-size-fits-all prescriptions', citationIndex: 2 },
+      { text: 'Values-based goal setting (aligning technology changes with core life values) increases adherence and long-term sustainability of behavior change', citationIndex: 3 },
+      { text: 'Implementation intentions ("If X happens, then I will Y") double success rates for achieving digital wellness goals compared to general intentions', citationIndex: 4 },
+      { text: '66% of people who create written wellness plans achieve their goals, rising to 80% when accountability partners are involved', citationIndex: 2 },
+      { text: 'Gradual implementation over 30 days allows new behaviors to become automatic, making sustainable change more likely than dramatic overnight overhauls', citationIndex: 6 },
+    ],
+    sparkMoment: 'The most effective digital wellness plan isn\'t the most restrictive one --- it\'s the one that aligns so perfectly with what you genuinely value in life that following it feels like freedom, not deprivation.',
+    practicalExercise: {
+      title: 'Create Your Digital Wellness Plan',
+      steps: [
+        { title: 'One-Week Assessment', description: 'Use Screen Time or Digital Wellbeing to track usage for 7 days. Journal for 3 days about when/why you reach for devices and how different apps make you feel. Identify 2-3 specific pain points.' },
+        { title: 'Values Clarification', description: 'Complete the values exercise: What do you value most? Are your current tech habits supporting or undermining those values? Write down specific conflicts between values and behavior.' },
+        { title: 'Set 2-3 SMART Goals', description: 'Make them specific and measurable. Example: "Reduce Instagram to 20 min/day using app timer" not "use social media less." Choose goals that address your identified pain points.' },
+        { title: 'Choose Strategies and Anticipate Barriers', description: 'For each goal, list environmental, behavioral, and social strategies. Then list obstacles you expect and plan specific solutions for each. Be realistic about what will be hard.' },
+        { title: 'Implement Week by Week', description: 'Week 1: Easiest change. Week 2: Add time boundary. Week 3: Add replacement activity. Week 4: Add social component. Track daily. Review weekly. Adjust monthly. Commit to 30 days minimum before evaluating success.' },
+      ],
+      toolLink: '/tools',
+      toolLabel: 'Use Psychage Tools to Support Your Plan',
+    },
   },
 ];

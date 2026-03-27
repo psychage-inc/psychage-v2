@@ -806,11 +806,31 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     description: 'Learn practical grounding techniques that use physical sensations to pull you back to the present moment, reduce anxiety, and manage emotional overwhelm.',
     image: "/images/articles/cat09/cover-048.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 6,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Grounding', 'Anxiety', 'Coping Skills', 'Present Moment'],
+    summary: 'Grounding techniques use sensory input to anchor you in the present moment when anxiety, panic, dissociation, or emotional overwhelm takes over. By redirecting attention from internal distress to external reality—what you can see, hear, touch, taste, and smell—these fast, effective tools interrupt crisis states and restore a sense of safety and control.',
+    keyFacts: [
+      { text: 'Grounding works by redirecting attention from internal distress to external sensory input, engaging the prefrontal cortex and activating the parasympathetic nervous system', citationIndex: 2 },
+      { text: 'The 5-4-3-2-1 technique (naming 5 things you see, 4 you touch, 3 you hear, 2 you smell, 1 you taste) is the most popular grounding method for acute anxiety', citationIndex: 5 },
+      { text: 'Cold water techniques like splashing your face or holding ice cubes activate the dive reflex, which slows heart rate and engages the parasympathetic response—particularly effective for panic attacks', citationIndex: 4 },
+      { text: 'Grounding is a core "Distress Tolerance" skill in Dialectical Behavior Therapy (DBT), with the TIP acronym: Temperature, Intense exercise, and Paced breathing', citationIndex: 3 },
+      { text: 'For dissociation, strong sensory input like ice cubes, sour candy, or stamping feet works best to bring you back into your body and the present moment', citationIndex: 6 },
+    ],
+    sparkMoment: 'The present moment is always safe—grounding techniques are your fastest route back to it.',
+    practicalExercise: {
+      title: '3-Minute Emergency Grounding Sequence',
+      steps: [
+        { title: '5-4-3-2-1 Countdown', description: 'Name 5 things you see, 4 you can touch, 3 you hear, 2 you smell, 1 you taste. Say them out loud if possible. Go slowly.' },
+        { title: 'Cold Splash', description: 'If available, splash cold water on your face or hold ice cubes in your hands for 30 seconds. Notice the sharp cold sensation.' },
+        { title: 'Feet to Floor', description: 'Press both feet firmly into the ground. Notice the pressure, the stability, the solid support beneath you. Stomp if needed.' },
+        { title: 'Check In', description: 'Notice: did the intensity decrease? If yes, continue with slow breathing. If not, repeat the sequence or try a different technique from your grounding kit.' },
+      ],
+      toolLink: '/tools/symptom-navigator',
+      toolLabel: 'Explore Anxiety Management Tools',
+    },
     citations: [
       {
         id: '1',
@@ -858,6 +878,22 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         source: 'European Journal of Psychotraumatology',
         year: '2021',
         link: 'https://doi.org/10.1080/20008198.2021.1883224',
+        tier: 1,
+      },
+      {
+        id: '7',
+        text: 'Sensory modulation and grounding in acute psychiatric settings',
+        source: 'Archives of Psychiatric Nursing',
+        year: '2020',
+        link: 'https://doi.org/10.1016/j.apnu.2020.08.008',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Effectiveness of grounding techniques for PTSD symptoms',
+        source: 'Journal of Clinical Psychology',
+        year: '2021',
+        link: 'https://doi.org/10.1002/jclp.23145',
         tier: 1,
       },
     ],
@@ -1104,6 +1140,40 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
           <li><strong>P</strong>aced breathing: Slow, deep breathing</li>
         </ul>
 
+        <h2 id="integrating-grounding-daily" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Integrating Grounding Into Daily Life
+        </h2>
+        <p className="mb-6">
+          While grounding techniques are essential crisis tools, they're also valuable for everyday stress management and present-moment awareness <Citation id="7" index={7} source="Archives of Psychiatric Nursing" year="2020" tier={1} />:
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Preventive Grounding
+        </h3>
+        <p className="mb-6">
+          Use mini-grounding exercises throughout the day to prevent anxiety from building:
+        </p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li><strong>Morning grounding</strong>: Before checking your phone, notice 3 things you see, hear, and feel</li>
+          <li><strong>Transition grounding</strong>: Between tasks, take 30 seconds to feel your feet on the floor</li>
+          <li><strong>Red light grounding</strong>: At stoplights, do a quick sensory check-in</li>
+          <li><strong>Meal grounding</strong>: Notice the first bite—taste, texture, temperature</li>
+        </ul>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Grounding for Focus
+        </h3>
+        <p className="mb-6">
+          When your mind wanders or you're procrastinating, 60 seconds of grounding can restore focus. The act of bringing attention to sensory input trains the same mental muscle you use for concentration.
+        </p>
+
+        <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">
+          Grounding as Meditation Gateway
+        </h3>
+        <p className="mb-6">
+          For people who struggle with traditional meditation, grounding techniques serve as a bridge. They're shorter, more concrete, and provide immediate benefits—making them easier to practice consistently. Once grounding becomes comfortable, formal mindfulness practice often feels more accessible.
+        </p>
+
         <h2 id="when-grounding-isnt-enough" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
           When Grounding Isn't Enough
         </h2>
@@ -1137,11 +1207,31 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     description: 'Understand how the vagus nerve regulates stress responses and mental states, and learn practical ways to activate this powerful mind-body pathway for better mental health.',
     image: "/images/articles/cat09/cover-049.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 8,
+    readTime: 9,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Vagus Nerve', 'Polyvagal Theory', 'Nervous System', 'Stress Response'],
+    summary: 'The vagus nerve is your body\'s main parasympathetic pathway—a biological superhighway connecting your brain to vital organs, regulating stress responses, emotional states, and physical calm. Higher vagal tone means better emotional regulation, faster stress recovery, and improved mental health, and you can strengthen it through specific practices like slow breathing, cold exposure, and humming.',
+    keyFacts: [
+      { text: 'About 80% of vagus nerve fibers are afferent, meaning they carry information FROM your body TO your brain, constantly updating your brain about internal states', citationIndex: 1 },
+      { text: 'Polyvagal Theory describes three nervous system states: ventral vagal (safe and social), sympathetic (fight-or-flight), and dorsal vagal (shutdown/freeze)', citationIndex: 1 },
+      { text: 'Vagal tone—measured through Heart Rate Variability (HRV)—predicts emotional regulation, stress resilience, and recovery speed from difficult experiences', citationIndex: 4 },
+      { text: 'Low vagal tone is associated with depression, anxiety disorders, PTSD, panic disorder, and chronic inflammation throughout the body', citationIndex: 3 },
+      { text: 'Simple practices like slow breathing with extended exhales, cold water exposure, humming, and gargling can naturally activate the vagus nerve and improve mental health', citationIndex: 5 },
+    ],
+    sparkMoment: 'Your vagus nerve is a wandering messenger of calm—learning to activate it is like discovering a reset button you\'ve carried all along.',
+    practicalExercise: {
+      title: 'Daily Vagal Toning Routine (5 Minutes)',
+      steps: [
+        { title: 'Resonant Breathing', description: 'Breathe slowly at 5-6 breaths per minute with exhales twice as long as inhales. Count: inhale for 4, exhale for 8. Do this for 2 minutes.' },
+        { title: 'Vocal Vibration', description: 'Hum loudly for 1 minute, feeling the vibration in your throat and chest. Or try "om" chanting. The vibration directly stimulates the vagus nerve.' },
+        { title: 'Cold Splash', description: 'Splash cold water on your face for 30 seconds, or hold ice cubes briefly. This activates the dive reflex and vagal response.' },
+        { title: 'Social Connection', description: 'End with 90 seconds of genuine eye contact, a warm conversation, or looking at photos of loved ones. Social safety activates ventral vagal tone.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Vagal Tone Practice',
+    },
     citations: [
       {
         id: '1',
@@ -1197,6 +1287,14 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         source: 'Journal of Psychophysiology',
         year: '2019',
         link: 'https://doi.org/10.1027/0269-8803/a000239',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Breathing techniques for vagal activation and stress reduction',
+        source: 'Applied Psychophysiology and Biofeedback',
+        year: '2021',
+        link: 'https://doi.org/10.1007/s10484-021-09495-w',
         tier: 1,
       },
     ],
@@ -1489,11 +1587,31 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
     description: 'Understand interoception---your sense of internal body states---and learn how improving this crucial awareness supports emotional regulation, decision-making, and mental health.',
     image: "/images/articles/cat09/cover-050.svg",
     category: CATEGORY_SLEEP_BODY,
-    readTime: 7,
+    readTime: 8,
     publishedAt: '2026-03-17',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
     tags: ['Interoception', 'Body Awareness', 'Emotional Regulation', 'Mind-Body'],
+    summary: 'Interoception is your ability to sense internal body states like heartbeat, hunger, tension, and emotional sensations. This often-overlooked sense is fundamental to emotional regulation, decision-making, and mental health—poor interoceptive awareness is linked to anxiety, depression, and eating disorders, while improving it enhances self-understanding and wellbeing.',
+    keyFacts: [
+      { text: 'Interoception is the sense of your body\'s internal physiological condition, including heartbeat, breathing, hunger, temperature, pain, muscle tension, and emotional body sensations', citationIndex: 1 },
+      { text: 'Better interoceptive awareness predicts stronger emotional regulation—people who accurately sense their internal states can identify and manage emotions more effectively', citationIndex: 2 },
+      { text: 'Disrupted interoception is implicated in anxiety disorders, depression, eating disorders, PTSD, and alexithymia (difficulty identifying emotions)', citationIndex: 3 },
+      { text: 'Interoceptive accuracy varies widely: some people naturally sense their heartbeat precisely, while others struggle—but interoception can be trained and improved', citationIndex: 5 },
+      { text: 'Mindfulness practices like body scan meditation and yoga significantly enhance interoceptive awareness by systematically directing attention to internal sensations', citationIndex: 7 },
+    ],
+    sparkMoment: 'Your body is always speaking—interoception is learning to listen.',
+    practicalExercise: {
+      title: 'Heartbeat Counting Practice (Interoceptive Training)',
+      steps: [
+        { title: 'Find Stillness', description: 'Sit quietly in a chair. Close your eyes. Place both hands on your lap (not touching your pulse). Take 3 deep breaths to settle.' },
+        { title: 'Count Heartbeats', description: 'For exactly 25 seconds (use a timer), count the number of heartbeats you feel in your chest. Don\'t use your pulse—sense the beat internally. Guess if uncertain.' },
+        { title: 'Check Accuracy', description: 'Now find your pulse and count for 25 seconds. Compare the two numbers. The difference shows your current interoceptive accuracy.' },
+        { title: 'Practice Daily', description: 'Repeat this daily for 2 weeks. Your accuracy will improve as you learn to tune into subtle internal signals. Track your progress in your journal.' },
+      ],
+      toolLink: '/tools/mood-journal',
+      toolLabel: 'Track Your Interoception Practice',
+    },
     citations: [
       {
         id: '1',
@@ -1549,6 +1667,14 @@ export const somaticAwarenessBodyHealingArticlesB: Article[] = [
         source: 'Mindfulness',
         year: '2020',
         link: 'https://doi.org/10.1007/s12671-019-01258-x',
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: 'Interoception in eating disorders and body image disturbance',
+        source: 'European Eating Disorders Review',
+        year: '2021',
+        link: 'https://doi.org/10.1002/erv.2821',
         tier: 1,
       },
     ],

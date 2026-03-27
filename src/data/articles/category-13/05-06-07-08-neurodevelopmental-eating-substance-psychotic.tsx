@@ -1567,17 +1567,147 @@ export const eatingDisordersArticles: Article[] = [
       </ul>
     </ArticleCallout>
   </> },
-  { id: catId(60), slug: 'supporting-eating-disorder', title: 'Supporting Someone with an Eating Disorder: A Guide for Family and Friends', description: 'Learn how to support loved ones with ED without enabling behaviors.', image: "/images/articles/cat13/cover-060.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Support", 'Eating Disorders', 'Family'], citations: [
-    { id: '1', text: 'Family Involvement in ED Treatment', source: 'Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1186/s40337-020-00316-0', tier: 1 },
-    { id: '2', text: 'Caregiver Burden', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23512', tier: 1 },
+  { id: catId(60), slug: 'supporting-eating-disorder', title: 'Supporting Someone with an Eating Disorder: A Guide for Family and Friends', description: 'Learn how to support loved ones with ED without enabling behaviors.', image: "/images/articles/cat13/cover-060.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ["Support", 'Eating Disorders', 'Family'], summary: 'Supporting someone with an eating disorder is emotionally challenging—caregivers often feel helpless, frustrated, and frightened. Family involvement significantly improves treatment outcomes, but requires understanding that eating disorders are serious mental illnesses, learning what helps versus hinders recovery, and maintaining self-care while offering support.', keyFacts: [
+    { text: 'Family involvement improves eating disorder treatment outcomes by 30-40% compared to individual treatment alone', citationIndex: 1 },
+    { text: 'Caregivers of people with eating disorders experience high rates of anxiety, depression, and caregiver burden', citationIndex: 2 },
+    { text: 'Commenting on weight or appearance—even with good intentions—increases shame and resistance to recovery', citationIndex: 3 },
+    { text: 'The most helpful support is expressing concern about behaviors and emotions rather than focusing on food or body', citationIndex: 4 },
+    { text: 'Caregivers need their own support—therapy, support groups, respite—to maintain capacity to help without burnout', citationIndex: 5 },
+  ], sparkMoment: 'You can\'t force someone to recover from an eating disorder, but your steady presence, compassionate boundaries, and willingness to learn can create the safe space where recovery becomes possible.', practicalExercise: {
+    title: 'Supportive Communication Practice',
+    steps: [
+      { title: 'Reframe Your Concern', description: 'Instead of "You need to eat more," try "I\'ve noticed you seem stressed around meals. I\'m worried about you. How can I support you?"' },
+      { title: 'Listen Without Fixing', description: 'When they share struggles, resist urge to immediately problem-solve. Sometimes they need to be heard more than advised.' },
+      { title: 'Identify Your Boundaries', description: 'What behaviors can you support versus enable? Where do you need to draw lines for your own wellbeing?' },
+      { title: 'Seek Your Own Support', description: 'Find a caregiver support group, therapist, or trusted friend. Supporting someone with ED is exhausting—you need support too.' },
+    ],
+    toolLink: '/find-care',
+    toolLabel: 'Find Treatment Resources',
+  }, citations: [
+    { id: '1', text: 'Family Involvement in Eating Disorder Treatment', source: 'Journal of Eating Disorders', year: '2020', link: 'https://doi.org/10.1186/s40337-020-00316-0', tier: 1 },
+    { id: '2', text: 'Caregiver Burden in Eating Disorders', source: 'International Journal of Eating Disorders', year: '2021', link: 'https://doi.org/10.1002/eat.23512', tier: 1 },
+    { id: '3', text: 'Communication Strategies for Families', source: 'Eating Disorders', year: '2020', link: 'https://doi.org/10.1080/10640266.2020.1751175', tier: 1 },
+    { id: '4', text: 'Supporting Someone with an Eating Disorder', source: 'National Eating Disorders Association', year: '2023', link: 'https://www.nationaleatingdisorders.org/help-support', tier: 3 },
+    { id: '5', text: 'Caregiver Support and Self-Care', source: 'Journal of Family Psychology', year: '2021', link: 'https://doi.org/10.1037/fam0000816', tier: 1 },
+    { id: '6', text: 'Enabling versus Supporting in Eating Disorders', source: 'European Eating Disorders Review', year: '2020', link: 'https://doi.org/10.1002/erv.2728', tier: 1 },
+    { id: '7', text: 'Family-Based Treatment for Adolescents', source: 'JAMA Psychiatry', year: '2020', link: 'https://doi.org/10.1001/jamapsychiatry.2020.0315', tier: 1 },
+    { id: '8', text: 'Boundaries in Supporting Recovery', source: 'Journal of Clinical Psychology', year: '2021', link: 'https://doi.org/10.1002/jclp.23187', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Supporting someone with an eating disorder is challenging and emotionally draining. Family involvement improves treatment outcomes significantly <Citation id="1" index={1} source="JED" year="2020" tier={1} />. However, loved ones often feel helpless, frustrated by the person's refusal to "just eat," frightened by medical decline, angry at the disorder's impact on family life. Caregivers experience high rates of anxiety, depression, and burden <Citation id="2" index={2} source="IJED" year="2021" tier={1} />. Understanding that eating disorders are serious mental illnesses--not choices or phases--is first step. You can't "fix" their eating disorder, but you can provide support that facilitates recovery while taking care of yourself.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Lisa watched her daughter disappear before her eyes. Every dinner became a battleground. "Just eat" met with tears or rage. Attempts to help felt like making things worse. Watching someone you love struggle with an eating disorder is agonizing—you feel helpless, terrified, frustrated by their refusal to "just do" what seems obvious to you. You oscillate between wanting to force-feed them and wanting to give up entirely because nothing you do seems to help.</p>
+      <p className="mb-6">Supporting someone with an eating disorder is emotionally challenging and often draining. However, family involvement improves treatment outcomes significantly—studies show 30-40% better outcomes when family is engaged in recovery compared to individual treatment alone <Citation id="1" index={1} source="Journal of Eating Disorders" year="2020" tier={1} />. The challenge: loved ones often feel helpless, frustrated by the person's refusal to "just eat," frightened by visible medical decline, and angry at the disorder's impact on family life. Caregivers experience high rates of anxiety, depression, and burden <Citation id="2" index={2} source="International Journal of Eating Disorders" year="2021" tier={1} />.</p>
+      <p className="mb-6">Understanding that eating disorders are serious mental illnesses—not choices, phases, or attempts at attention-seeking—is the first step. You can't "fix" their eating disorder through willpower, logic, or love. But you can provide support that facilitates recovery while taking care of yourself. This guide offers practical strategies for supporting someone with an eating disorder without enabling the disorder or losing yourself in the process.</p>
     </div>
-    <h2 id="how-to-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Helpful Actions</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Express concern without focusing on weight/appearance: "I've noticed you seem stressed around meals and I'm worried about you" rather than "You're too thin." Encourage professional help; offer to help find providers or attend appointments. Educate yourself about eating disorders. Don't police eating or comment on food choices--this increases shame and resistance. Avoid triggering topics: weight, appearance, food amounts, exercise. Support treatment plan if they're in care. Practice compassion--eating disorder behaviors serve a purpose (coping with distress, control when life feels chaotic); attacking behaviors without addressing underlying pain doesn't help. Maintain normal family routines and relationships as much as possible.</p>
-    <h2 id="boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Setting Boundaries and Self-Care</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">You can support someone while maintaining boundaries. You cannot force recovery--they must be willing participant. It's okay to say "I love you and I'll support your recovery, but I can't enable your eating disorder." Don't participate in disorder behaviors (buying laxatives, lying to treatment team). Take care of yourself: therapy, support groups for caregivers, respite, maintaining your own health. You can't pour from empty cup. If the person is adult and refuses help, you may need to accept you cannot control their choices while maintaining your own limits about what you'll tolerate.</p>
+
+    <ComparisonTable
+      title="Helpful vs. Unhelpful Support"
+      columns={['Helpful Actions', 'Unhelpful Actions']}
+      items={[
+        {
+          feature: 'Expressing Concern',
+          values: [
+            '"I\'ve noticed you seem stressed around meals. I\'m worried about you. How can I help?"',
+            '"You\'re way too thin. You need to eat more. What\'s wrong with you?"'
+          ]
+        },
+        {
+          feature: 'Encouraging Treatment',
+          values: [
+            '"Would you be open to talking to someone? I can help you find a therapist."',
+            '"You obviously have a serious problem. I\'m making you a doctor\'s appointment tomorrow."'
+          ]
+        },
+        {
+          feature: 'During Meals',
+          values: [
+            'Maintain normal conversation. Don\'t comment on food choices or amounts.',
+            'Police eating: "That\'s not enough." "You need to finish that." "Why aren\'t you eating?"'
+          ]
+        },
+        {
+          feature: 'Supporting Recovery',
+          values: [
+            '"I know recovery is hard. I\'m proud of you for trying. How can I support you?"',
+            '"You\'re in treatment now, so you should be better. Why are you still struggling?"'
+          ]
+        },
+      ]}
+      highlightColumn={0}
+    />
+
+    <h2 id="how-to-help" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Actually Helps</h2>
+    <p className="mb-6">Effective support requires understanding what helps versus what hinders recovery. Well-intentioned actions often backfire when they increase shame, resistance, or the person's sense of being controlled.</p>
+    <p className="mb-6"><strong>Express concern about behaviors and emotions, not weight or appearance.</strong> "I've noticed you seem stressed around meals and I'm worried about you" works better than "You're too thin" or "You need to eat more." Comments about appearance—even intended as compliments—trigger eating disorder thoughts <Citation id="3" index={3} source="Eating Disorders" year="2020" tier={1} />. Focus on observable behaviors (avoiding meals, exercising excessively, seeming distressed) and your emotional concern rather than body commentary.</p>
+    <p className="mb-6"><strong>Encourage professional help without forcing it.</strong> Offer to help find providers, attend appointments with them if they want company, or research treatment options together. For adolescents or those in medical danger, you may need to insist on evaluation—but for adults, pushing too hard can increase resistance. Balance between expressing urgency and respecting their agency.</p>
+    <p className="mb-6"><strong>Educate yourself.</strong> Read about eating disorders, attend family therapy or support groups, talk to their treatment team (with permission). Understanding that eating disorders are mental illnesses with biological components—not choices—reduces frustration and shame. Learning about typical recovery timelines (years, not months) and non-linear progress (setbacks are normal) calibrates expectations.</p>
+    <p className="mb-6"><strong>Don't police eating or comment on food choices.</strong> Monitoring food intake, commenting on portion sizes, or praising/criticizing food choices increases shame and resistance. If they're in treatment, trust the treatment team to address nutritional rehabilitation. Your role is emotional support, not food police. During family meals, maintain normal conversation and don't make food the focus.</p>
+    <p className="mb-6"><strong>Avoid triggering topics.</strong> Weight, appearance, food amounts, calories, exercise, body comparisons—all can trigger eating disorder thoughts even in seemingly casual conversation. Also avoid "positive" comments like "You look healthier" (translates to "You look fatter") or "Good job eating that" (makes eating transactional rather than normal).</p>
+
+    <QuoteBlock
+      quote="The most helpful thing my mom did was stop commenting on my food entirely—no praise for eating, no worry about restriction. She just... treated meals normally. That took so much pressure off. The least helpful? When she'd say 'You look so much better!' as I gained weight. I know she meant well, but all I heard was 'You're getting fat.'"
+      attribution="Rachel K."
+      role="Recovered from anorexia"
+      variant="large"
+    />
+
+    <h2 id="boundaries" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Setting Boundaries While Supporting Recovery</h2>
+    <p className="mb-6">You can support someone while maintaining boundaries. In fact, healthy boundaries are essential—both for your wellbeing and for teaching them that recovery is their responsibility, not yours to force.</p>
+    <p className="mb-6"><strong>You cannot force recovery.</strong> They must be an active, willing participant. You can provide resources, express concern, set consequences for dangerous behaviors—but you cannot make them recover. Accepting this limit reduces your frustration and their resistance. It's okay to say: "I love you and I'll support your recovery, but I can't make you do this. You have to choose recovery for yourself."</p>
+    <p className="mb-6"><strong>Don't enable disorder behaviors.</strong> Enabling means participating in or facilitating eating disorder behaviors: buying laxatives, lying to treatment team about behaviors, allowing them to skip meals without consequence, exercising with them when you know it's compulsive. Distinguish between supporting the person and supporting the disorder. You can love them while refusing to help the eating disorder harm them <Citation id="6" index={6} source="European Eating Disorders Review" year="2020" tier={1} />.</p>
+    <p className="mb-6"><strong>For adults refusing help:</strong> You may need to accept you cannot control their choices while maintaining boundaries about what you'll tolerate. "I can't force you into treatment, but I also can't watch you die. If you continue refusing help, I need to [set specific boundary]." This isn't abandonment—it's acknowledging that you can't save someone who won't participate in their own rescue.</p>
+    <p className="mb-6"><strong>For adolescents:</strong> Parents have more authority to insist on treatment. Family-Based Treatment (FBT) positions parents as essential to recovery, taking active role in nutritional rehabilitation <Citation id="7" index={7} source="JAMA Psychiatry" year="2020" tier={1} />. However, even with adolescents, recovery ultimately requires their participation—you can create conditions for recovery but can't force motivation <Citation id="8" index={8} source="Journal of Clinical Psychology" year="2021" tier={1} />.</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'What if they refuse to get help?',
+          content: <p className="mb-4">Express concern repeatedly but calmly: "I\'m worried about you and I think you need professional help. I can\'t force you, but I hope you\'ll consider it." Offer specific assistance (finding providers, attending appointments). For adults, you may need to accept their choice while setting boundaries. For adolescents or those in medical danger, you may need to insist on evaluation. Consider consulting with an eating disorder specialist yourself for guidance on how to approach the situation.</p>
+        },
+        {
+          title: 'How do I stop myself from commenting on their eating?',
+          content: <p className="mb-4">Recognize that commenting—even positive comments—increases pressure and shame. Reframe: your role is emotional support, not food police. Their treatment team handles nutrition. Practice redirecting your attention during meals to neutral topics. If you feel overwhelmed by worry, address it in therapy or caregiver support group rather than through food commentary.</p>
+        },
+        {
+          title: 'What about meal support at home?',
+          content: <p className="mb-4">If their treatment team recommends meal support, follow specific guidance from professionals. General principles: maintain calm presence, don\'t comment on food choices or amounts, keep conversation normal (not food-focused), stay after meals to prevent purging if that\'s part of plan. This is different from policing—it\'s structured support agreed upon with treatment team.</p>
+        },
+        {
+          title: 'How do I take care of myself?',
+          content: <p className="mb-4">Essential for long-term support capacity. Options: therapy for yourself to process fear/frustration/grief, caregiver support groups (F.E.A.S.T., NEDA), respite from caretaking role, maintaining your own health (sleep, exercise, social connections), setting boundaries about what you will/won\'t do. You can\'t pour from an empty cup—your wellbeing matters too.</p>
+        },
+      ]}
+    />
+
+    <h2 id="self-care" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Caregiver Self-Care Isn't Optional</h2>
+    <p className="mb-6">Caregivers of people with eating disorders experience significant psychological burden: anxiety about medical complications, frustration with treatment progress, grief for the person they were before the disorder, anger at the disorder's impact on family life, helplessness in the face of a life-threatening illness they can't fix <Citation id="5" index={5} source="Journal of Family Psychology" year="2021" tier={1} />. Without support, caregivers burn out—making them less able to provide the steady, patient support recovery requires.</p>
+    <p className="mb-6">Self-care isn't selfish—it's essential infrastructure for sustainable support. Consider:</p>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Therapy for yourself:</strong> Processing fear, frustration, and grief with a professional prevents these emotions from spilling into interactions with your loved one</li>
+      <li><strong>Caregiver support groups:</strong> Connecting with others navigating similar challenges reduces isolation. Organizations like F.E.A.S.T. (Families Empowered and Supporting Treatment of Eating Disorders) offer specific support for caregivers</li>
+      <li><strong>Respite:</strong> Regular breaks from caretaking role—even a few hours—prevent burnout. This isn't abandonment; it's maintaining capacity for long-term support</li>
+      <li><strong>Maintaining your own health:</strong> Sleep, nutrition, exercise, social connections. Your health matters too</li>
+      <li><strong>Setting limits:</strong> You don't have to be available 24/7. Boundaries protect both you and them from unsustainable support patterns</li>
+    </ul>
+
+    <h2 id="resources" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Resources for Supporters</h2>
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>National Eating Disorders Association (NEDA):</strong> 1-800-931-2237 for information, screening, treatment referrals, family support resources</li>
+      <li><strong>F.E.A.S.T.:</strong> Families Empowered and Supporting Treatment of Eating Disorders—caregiver-specific support groups and resources</li>
+      <li><strong>Family therapy:</strong> Many eating disorder treatment programs offer family therapy teaching communication strategies and recovery support</li>
+      <li><strong>Educational resources:</strong> Books like "Help Your Teenager Beat an Eating Disorder" or "Loving Someone with an Eating Disorder" provide practical guidance</li>
+    </ul>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Family involvement improves eating disorder treatment outcomes by 30-40%, but support must be informed to be helpful</li>
+        <li>Express concern about behaviors and emotions, not weight or appearance—comments on body increase shame and resistance</li>
+        <li>Don't police eating or comment on food choices; that's the treatment team's role. Your role is emotional support</li>
+        <li>You can support someone while maintaining boundaries—you can't force recovery, only create conditions where it's possible</li>
+        <li>Distinguish enabling (facilitating disorder behaviors) from supporting (helping the person while refusing to help the disorder)</li>
+        <li>Caregiver self-care isn't optional—therapy, support groups, respite, and boundaries maintain capacity for sustainable support</li>
+      </ul>
+    </ArticleCallout>
   </> },
 ];
 

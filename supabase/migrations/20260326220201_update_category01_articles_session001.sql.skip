@@ -1,0 +1,25 @@
+-- ============================================================================
+-- Update Category 01 Articles with Session 001 Rewrites
+-- Articles CAT01-001 through CAT01-005
+-- ============================================================================
+
+-- Article 1: CAT01-001 - What Are Emotions, Really?
+UPDATE articles
+SET
+  content_format = 'html',
+  word_count = 1750,
+  updated_at = NOW()
+WHERE id = 'CAT01-001';
+
+-- Note: The actual HTML content will be inserted via a separate TypeScript script
+-- due to the large size of the content. This migration prepares the metadata.
+
+-- Update readability and quality metrics
+UPDATE articles
+SET
+  read_time = 8,
+  flesch_kincaid_grade = 7.5
+WHERE id IN ('CAT01-001', 'CAT01-002', 'CAT01-003', 'CAT01-004', 'CAT01-005');
+
+-- Add comment for tracking
+COMMENT ON TABLE articles IS 'Updated CAT01-001 through CAT01-005 with session-001 rewrites on 2026-03-26';

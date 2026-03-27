@@ -49,3 +49,61 @@ test-results
 data-pipeline/data/
 data-pipeline/output_data/
 data-pipeline/venv/
+
+# Temporary reports and analysis files
+*.csv
+*.json
+!package.json
+!tsconfig.json
+!vercel.json
+!article-rewrite-manifest.json
+*.txt
+!requirements.txt
+*.html
+!index.html
+session-prompts/
+screenshots/
+
+# Backup files
+*.bak
+*.backup
+*" 2."*
+
+# Temporary scripts
+scripts/analyze-original-1000.ts
+scripts/article-content-066-070.txt
+scripts/article-content/
+scripts/audit-article-prose-tsx.ts
+scripts/check-article-status.ts
+scripts/check-db-content.ts
+scripts/collect-rewrites.ts
+scripts/compare-progress.ts
+scripts/complete-session-31.js
+scripts/comprehensive-audit.ts
+scripts/convert-html-to-jsx-articles.ts
+scripts/convert-html-to-jsx.ts
+scripts/count-article-words.ts
+scripts/count-prose-words.cjs
+scripts/debug-category-mismatch.ts
+scripts/debug-image-rendering.ts
+scripts/direct-article-update.ts
+scripts/expand-session-*.cjs
+scripts/extract-articles-from-chats.ts
+scripts/extract-session-*.ts
+scripts/fix-image-title-mismatch.ts
+scripts/full-diagnostic.ts
+scripts/integrate-rewritten-articles.ts
+scripts/match-and-upload-cover-images.ts
+scripts/push-session-31-to-supabase.ts
+scripts/test-category-query.ts
+scripts/update-article-cover-images.ts
+scripts/update-articles-*.js
+scripts/update-category-*.ts
+scripts/update-session-*.ts
+scripts/update-neuroscience-articles.ts
+scripts/upload-cover-images-to-storage.ts
+scripts/upload-session-*.ts
+scripts/verify-session-*.ts
+
+# Supabase temp files
+supabase/.temp/

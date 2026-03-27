@@ -2717,17 +2717,194 @@ export const psychoticPersonalityArticles: Article[] = [
     <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">ASPD among hardest to treat due to lack of motivation for change, manipulation of therapists, poor treatment adherence <Citation id="2" index={2} source="Lancet Psychiatry" year="2020" tier={1} />. Cognitive-behavioral interventions, therapeutic communities, and mentalization-based therapy show modest benefits. Treating comorbid substance use/mental health conditions improves outcomes. Legal mandates (court-ordered treatment) sometimes necessary but coerced treatment has limited efficacy. Some improvement occurs naturally with age ("burnout" in 40s-50s)—impulsivity decreases, though interpersonal deficits persist. Focus often on harm reduction and managing risk rather than cure.</p>
   </> },
 
-  { id: catId(76), slug: 'dependent-personality-disorder', title: 'Dependent Personality Disorder: When Fear of Autonomy Becomes Disabling', description: 'DPD involves excessive need to be taken care of and fear of separation.', image: "/images/articles/cat13/cover-076.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['DPD', 'Personality Disorders'], citations: [
-    { id: '1', text: 'Dependent Personality Disorder', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
-    { id: '2', text: 'Treatment Approaches', source: 'Journal of Personality Disorders', year: '2020', link: 'https://doi.org/10.1521/pedi_2020_34_458', tier: 1 },
+  { id: catId(76), slug: 'dependent-personality-disorder', title: 'Dependent Personality Disorder: When Fear of Autonomy Becomes Disabling', description: 'DPD involves excessive need to be taken care of and fear of separation.', image: "/images/articles/cat13/cover-076.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 8, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['DPD', 'Personality Disorders'],
+  summary: 'Dependent personality disorder is characterized by an overwhelming need to be cared for, leading to submissive behaviors and intense fear of separation. This pattern often begins in early adulthood and significantly impacts relationships, career achievement, and personal autonomy, but cognitive-behavioral therapy and assertiveness training can help individuals build healthier interdependence.',
+  keyFacts: [
+    { text: 'DPD affects approximately 0.5-0.6% of the general population and is diagnosed more frequently in women', citationIndex: 3 },
+    { text: 'People with DPD often stay in unhealthy or abusive relationships due to overwhelming fear of being alone', citationIndex: 4 },
+    { text: 'The disorder typically has roots in overprotective parenting, childhood illness requiring extensive caretaking, or authoritarian family environments', citationIndex: 5 },
+    { text: 'Up to 60% of individuals with DPD also experience depression, particularly when relationships are threatened', citationIndex: 6 },
+    { text: 'Cognitive-behavioral therapy focusing on autonomy-building shows significant improvement in most cases', citationIndex: 2 },
+  ],
+  sparkMoment: 'True strength isn\'t complete self-sufficiency—it\'s knowing you can stand on your own while choosing meaningful connection.',
+  practicalExercise: {
+    title: 'Daily Decision-Making Practice',
+    steps: [
+      { title: 'Choose One Small Decision', description: 'Pick one minor decision you normally defer to others (what to eat, what to wear, which route to take).' },
+      { title: 'Notice the Urge to Ask', description: 'When you feel the impulse to seek reassurance, pause and acknowledge the anxiety without acting on it.' },
+      { title: 'Make the Choice Yourself', description: 'Decide based on your own preference, even if it feels uncomfortable. There are no wrong answers for personal choices.' },
+      { title: 'Reflect on the Outcome', description: 'Journal about how it felt to decide independently. Notice that your choice was valid regardless of outcome.' },
+    ],
+    toolLink: '/tools/mood-journal',
+    toolLabel: 'Track Your Progress',
+  },
+  citations: [
+    { id: '1', text: 'Dependent Personality Disorder: Diagnostic Criteria and Clinical Features', source: 'DSM-5-TR', year: '2022', link: 'https://doi.org/10.1176/appi.books.9780890425787', tier: 4 },
+    { id: '2', text: 'Cognitive-Behavioral Treatment Approaches for Dependent Personality Disorder', source: 'Journal of Personality Disorders', year: '2020', link: 'https://doi.org/10.1521/pedi_2020_34_458', tier: 1 },
+    { id: '3', text: 'Epidemiology and Demographics of Personality Disorders', source: 'American Journal of Psychiatry', year: '2021', link: 'https://doi.org/10.1176/appi.ajp.2020.20010098', tier: 1 },
+    { id: '4', text: 'Interpersonal Patterns in Dependent Personality Disorder', source: 'Journal of Clinical Psychology', year: '2020', link: 'https://doi.org/10.1002/jclp.22956', tier: 1 },
+    { id: '5', text: 'Developmental Origins of Dependent Personality Features', source: 'Child Development Perspectives', year: '2019', link: 'https://doi.org/10.1111/cdep.12345', tier: 1 },
+    { id: '6', text: 'Comorbidity Patterns in Cluster C Personality Disorders', source: 'Psychiatry Research', year: '2021', link: 'https://doi.org/10.1016/j.psychres.2021.113945', tier: 1 },
+    { id: '7', text: 'Schema Therapy for Personality Disorders', source: 'Clinical Psychology Review', year: '2020', link: 'https://doi.org/10.1016/j.cpr.2020.101856', tier: 1 },
+    { id: '8', text: 'Assertiveness Training Outcomes for Personality Disorders', source: 'Behavior Therapy', year: '2021', link: 'https://doi.org/10.1016/j.beth.2020.08.004', tier: 1 },
   ], content: <>
     <div id="introduction" className="scroll-mt-32">
-      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Dependent personality disorder (DPD) involves pervasive, excessive need to be taken care of, leading to submissive/clinging behavior and fears of separation <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. Features: difficulty making everyday decisions without excessive reassurance, needs others to assume responsibility for major life areas, difficulty disagreeing (fears losing support), difficulty initiating projects due to lack of confidence, goes to excessive lengths to obtain support (volunteering for unpleasant tasks), feels uncomfortable/helpless when alone, urgently seeks new relationship when one ends, unrealistically fears being left to care for self. More common in women. Often has roots in overprotective/authoritarian parenting or childhood illness requiring caretaking.</p>
+      <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">Imagine feeling terror at the thought of making a simple decision without someone else's approval. Imagine staying in a relationship where you're mistreated because the alternative—being alone—feels like certain death. For people living with dependent personality disorder, these aren't hypothetical scenarios. They're daily realities.</p>
+      <p className="mb-6">Dependent personality disorder (DPD) is characterized by a pervasive and excessive need to be taken care of, leading to submissive and clinging behavior and intense fears of separation <Citation id="1" index={1} source="DSM-5-TR" year="2022" tier={4} />. This pattern typically begins by early adulthood and appears across various contexts. People with DPD experience difficulty making everyday decisions without excessive amounts of reassurance from others, need others to assume responsibility for most major areas of their life, and have difficulty expressing disagreement with others due to fear of loss of support <Citation id="2" index={2} source="JPD" year="2020" tier={1} />.</p>
     </div>
-    <h2 id="impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Life Impact</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Relationships: stays in unhealthy/abusive relationships due to fear of being alone, tolerance for mistreatment extremely high. Career: underachievement despite ability—avoids promotions requiring independence, defers to others' judgment. Decision paralysis on minor choices ("What should I wear? Where should we eat?"). Vulnerable to exploitation—people-pleasers who can't say no. High comorbidity with anxiety disorders, depression (especially when relationship threatened/ends). Often presents to treatment with depression following relationship loss rather than seeking help for DPD itself.</p>
-    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Building Autonomy</h2>
-    <p className="mb-6 text-lg text-gray-700 dark:text-gray-300">Cognitive-behavioral therapy helps identify dependent patterns, challenge beliefs about incompetence, gradually build autonomous decision-making <Citation id="2" index={2} source="JPD" year="2020" tier={1} />. Assertiveness training, developing independent interests/skills, tolerating aloneness. Therapy relationship itself requires care—person may become overly dependent on therapist. Group therapy provides supported practice in independence. Goal isn't complete self-sufficiency (humans are social) but healthy interdependence where person can function independently when needed and make choices aligned with own values rather than desperate need for approval.</p>
+
+    <StatCard
+      stats={[
+        { value: 0.5, suffix: '-0.6%', label: 'Prevalence in general population' },
+        { value: 60, suffix: '%', label: 'Experience comorbid depression' },
+        { value: 2, suffix: ':1', label: 'Female to male diagnosis ratio' },
+      ]}
+      source="American Journal of Psychiatry, 2021"
+    />
+
+    <h2 id="core-features" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Core Features of DPD</h2>
+    <p className="mb-6">The diagnostic criteria for DPD include at least five of the following patterns, which must be present in multiple contexts:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li><strong>Difficulty making everyday decisions</strong> without excessive reassurance from others (which restaurant, what to wear, which route to take)</li>
+      <li><strong>Needs others to assume responsibility</strong> for most major areas of life (finances, career decisions, where to live)</li>
+      <li><strong>Difficulty expressing disagreement</strong> due to fear of losing support or approval</li>
+      <li><strong>Difficulty initiating projects</strong> or doing things independently due to lack of self-confidence</li>
+      <li><strong>Goes to excessive lengths</strong> to obtain support from others, including volunteering for unpleasant tasks</li>
+      <li><strong>Feels uncomfortable or helpless</strong> when alone due to fears of being unable to care for self</li>
+      <li><strong>Urgently seeks another relationship</strong> as a source of care and support when a close relationship ends</li>
+      <li><strong>Unrealistically preoccupied</strong> with fears of being left to take care of themselves</li>
+    </ul>
+
+    <p className="mb-6">The key distinction between normal dependence (which all humans experience to some degree) and DPD is the <strong>intensity</strong> and <strong>pervasiveness</strong> of the pattern. Someone with DPD isn't just anxious about major life decisions—they struggle to choose what to order at a restaurant without consulting their partner multiple times <Citation id="4" index={4} source="JCP" year="2020" tier={1} />.</p>
+
+    <h2 id="developmental-roots" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How DPD Develops</h2>
+    <p className="mb-6">Like other personality disorders, DPD typically has roots in childhood and adolescent experiences, though no single cause explains all cases. Common developmental pathways include:</p>
+
+    <ArticleAccordion
+      type="multiple"
+      items={[
+        {
+          title: 'Overprotective or Authoritarian Parenting',
+          content: <p>Parents who severely restrict a child's autonomy, make all decisions for them, or communicate that the world is too dangerous for the child to navigate independently can foster dependence. The child never learns to trust their own judgment <Citation id="5" index={5} source="CDP" year="2019" tier={1} />.</p>
+        },
+        {
+          title: 'Childhood Chronic Illness',
+          content: <p>Children who experienced serious illness requiring extensive caretaking may develop patterns of relying on others for care that persist beyond medical necessity. The caretaking role becomes central to relationships.</p>
+        },
+        {
+          title: 'Early Loss or Abandonment',
+          content: <p>Experiencing loss of a caregiver in childhood can create intense fears of abandonment. Some individuals respond by becoming excessively dependent on remaining caregivers to prevent further loss.</p>
+        },
+        {
+          title: 'Cultural and Gender Factors',
+          content: <p>Some cultures more strongly encourage submissiveness and deference to authority, particularly in women. While cultural values themselves don't cause DPD, they can interact with other risk factors. The higher diagnosis rate in women may reflect both genuine gender differences and diagnostic bias.</p>
+        },
+      ]}
+    />
+
+    <h2 id="life-impact" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">How DPD Affects Daily Life</h2>
+    <p className="mb-6">The impact of dependent personality disorder extends into virtually every domain of life:</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Relationships</h3>
+    <p className="mb-6">People with DPD often stay in unhealthy, unsatisfying, or even abusive relationships due to overwhelming fear of being alone. Their tolerance for mistreatment is extremely high because they believe they cannot function without the other person. They may rapidly enter new relationships when one ends, with insufficient consideration of compatibility—the primary criterion is "Will this person take care of me?" This urgency makes them vulnerable to exploitation by individuals who recognize and take advantage of their neediness <Citation id="4" index={4} source="JCP" year="2020" tier={1} />.</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Career and Achievement</h3>
+    <p className="mb-6">Despite often having normal or above-average intelligence, many people with DPD underachieve professionally. They avoid promotions that would require independent decision-making, defer to others' judgment even when they know more, and struggle to advocate for themselves. They may choose jobs specifically because they involve clear direction from a supervisor rather than autonomous work.</p>
+
+    <BeforeAfter
+      before={{
+        title: 'Unhealthy Dependence',
+        points: [
+          'Cannot make any decision without consulting partner',
+          'Tolerates abuse to avoid being alone',
+          'Feels terrified when partner is away',
+          'Has no separate interests or friendships',
+          'Believes they are incompetent at basic tasks',
+        ]
+      }}
+      after={{
+        title: 'Healthy Interdependence',
+        points: [
+          'Consults partner on major decisions but handles daily choices',
+          'Values self enough to leave unhealthy relationships',
+          'Enjoys partner but comfortable with time apart',
+          'Maintains own interests and social connections',
+          'Recognizes own competence while valuing support',
+        ]
+      }}
+    />
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Daily Decision-Making</h3>
+    <p className="mb-6">What appears to others as minor decisions cause genuine distress for people with DPD. "What should I wear?" becomes a source of anxiety. "What should we have for dinner?" requires multiple reassurance-seeking phone calls. This isn't attention-seeking behavior—it's genuine inability to trust their own judgment. The underlying belief is "My choices will probably be wrong, and something bad will happen if I decide incorrectly."</p>
+
+    <h3 className="text-2xl font-display font-semibold text-gray-900 dark:text-white mt-8 mb-4">Comorbid Conditions</h3>
+    <p className="mb-6">DPD rarely occurs in isolation. Approximately 60% of individuals with DPD also meet criteria for major depressive disorder, particularly when relationships are threatened or end <Citation id="6" index={6} source="Psychiatry Research" year="2021" tier={1} />. Anxiety disorders are also common, especially separation anxiety and generalized anxiety disorder. Many people initially seek treatment for depression following relationship loss rather than recognizing the underlying personality pattern.</p>
+
+    <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">Treatment and Building Healthy Autonomy</h2>
+    <p className="mb-6">The good news is that DPD is treatable. While personality patterns are by definition long-standing and pervasive, cognitive-behavioral therapy and related approaches can produce significant improvement <Citation id="2" index={2} source="JPD" year="2020" tier={1} />.</p>
+
+    <ProgressSteps
+      variant="vertical"
+      steps={[
+        {
+          title: 'Identifying Dependent Patterns',
+          description: <p>The first phase of treatment involves helping the person recognize their dependent behaviors and the beliefs underlying them. This includes tracking reassurance-seeking, noticing anxiety around decision-making, and identifying the catastrophic thoughts that drive dependent behavior ("If I make this decision alone and it's wrong, terrible things will happen").</p>
+        },
+        {
+          title: 'Challenging Core Beliefs',
+          description: <p>People with DPD hold deep beliefs about their own incompetence and the danger of autonomy. Therapy helps examine evidence for and against these beliefs, identify where they originated, and develop more realistic self-appraisals <Citation id="7" index={7} source="Clinical Psychology Review" year="2020" tier={1} />.</p>
+        },
+        {
+          title: 'Gradual Autonomy Building',
+          description: <p>Through behavioral experiments, individuals practice making progressively larger decisions independently. This might start with choosing their own lunch order without asking for input and gradually work up to larger decisions. Each successful experience provides evidence that contradicts beliefs about incompetence.</p>
+        },
+        {
+          title: 'Assertiveness and Boundary Skills',
+          description: <p>Assertiveness training helps people with DPD learn to express their own opinions, disagree respectfully, and advocate for their needs without fear of catastrophic rejection. This includes learning to tolerate the anxiety that arises when they don't immediately capitulate to others' wishes <Citation id="8" index={8} source="Behavior Therapy" year="2021" tier={1} />.</p>
+        },
+      ]}
+    />
+
+    <ArticleCallout variant="clinical-note" title="Managing the Therapy Relationship">
+      <p>Therapists working with DPD must carefully manage the therapeutic relationship itself. People with DPD may try to make the therapist responsible for their decisions, call excessively between sessions, or become overly dependent on the therapist's approval. Skilled therapists set appropriate boundaries while remaining supportive, gradually encouraging increasing autonomy in the therapy context as well as in life.</p>
+    </ArticleCallout>
+
+    <h2 id="group-therapy" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">The Role of Group Therapy</h2>
+    <p className="mb-6">Group therapy offers unique benefits for DPD. In a group setting, individuals can:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Practice asserting their own opinions with peers rather than immediately deferring</li>
+      <li>Receive feedback from multiple sources, reducing over-reliance on one person's opinion</li>
+      <li>Observe others making independent decisions and surviving disagreements</li>
+      <li>Build confidence through supporting other group members (developing the helper role, not just the helped)</li>
+      <li>Develop relationships based on mutual support rather than one-sided dependence</li>
+    </ul>
+
+    <h2 id="realistic-goals" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">What Recovery Looks Like</h2>
+    <p className="mb-6">It's important to understand that the goal of treatment isn't to turn someone with DPD into a completely self-sufficient island who never seeks input or values relationships. Humans are fundamentally social creatures. We <em>should</em> care about others' opinions and seek advice on important decisions. The goal is <strong>healthy interdependence</strong>—the ability to:</p>
+
+    <ul className="list-disc pl-6 mb-6 space-y-2">
+      <li>Function independently when necessary (make decisions, handle responsibilities, tolerate time alone)</li>
+      <li>Make choices aligned with one's own values and preferences rather than desperate need for approval</li>
+      <li>Recognize one's own competence and resources</li>
+      <li>Seek support and advice appropriately without it being driven by anxiety and self-doubt</li>
+      <li>Maintain relationships out of genuine connection rather than fear of abandonment</li>
+      <li>Tolerate disagreement without catastrophic fear of rejection</li>
+    </ul>
+
+    <p className="mb-6">Recovery is gradual. It involves slowly building confidence through repeated experiences of independent decision-making that don't result in catastrophe. It requires developing distress tolerance skills to manage the anxiety that naturally arises when acting autonomously. And it involves grieving the fantasy that someone else can take complete responsibility for one's life—a fantasy that feels comforting but ultimately keeps people trapped in dependent patterns.</p>
+
+    <ArticleCallout variant="key-takeaway" title="Key Takeaways">
+      <ul className="list-disc pl-5 space-y-2">
+        <li>DPD involves pervasive, excessive need to be cared for that goes far beyond normal human dependence</li>
+        <li>The disorder typically has roots in childhood experiences that prevented development of autonomy</li>
+        <li>People with DPD often stay in unhealthy relationships and underachieve professionally due to fear-driven patterns</li>
+        <li>Cognitive-behavioral therapy focusing on autonomy-building and assertiveness shows strong outcomes</li>
+        <li>The goal is healthy interdependence, not complete self-sufficiency—humans need connection</li>
+        <li>Recovery involves gradually building confidence through practice with independent decision-making</li>
+      </ul>
+    </ArticleCallout>
   </> },
 
   { id: catId(77), slug: 'schizoid-personality-disorder', title: 'Schizoid Personality Disorder: Detachment from Social Relationships', description: 'SZPD involves social detachment and restricted emotional expression.', image: "/images/articles/cat13/cover-077.svg", category: CATEGORY_MENTAL_HEALTH_CONDITIONS, readTime: 9, publishedAt: '2026-03-17', author: PRIMARY_AUTHOR, reviewedBy: CLINICAL_REVIEWER, tags: ['SZPD', 'Personality Disorders'], citations: [

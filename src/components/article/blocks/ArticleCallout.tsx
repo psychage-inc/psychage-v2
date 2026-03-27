@@ -64,191 +64,191 @@ const CALLOUT_CONFIG: Record<
     info: {
         icon: Info,
         defaultTitle: 'Good to Know',
-        bg: 'bg-blue-50',
-        darkBg: 'dark:bg-blue-950/20',
-        border: 'border-l-blue-400',
-        iconColor: 'text-blue-500',
-        titleColor: 'text-blue-900 dark:text-blue-200',
+        bg: 'bg-blue-600',
+        darkBg: 'dark:bg-blue-700',
+        border: 'border-l-blue-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     default: {
         icon: Info,
         defaultTitle: 'Note',
-        bg: 'bg-blue-50',
-        darkBg: 'dark:bg-blue-950/20',
-        border: 'border-l-blue-400',
-        iconColor: 'text-blue-500',
-        titleColor: 'text-blue-900 dark:text-blue-200',
+        bg: 'bg-blue-600',
+        darkBg: 'dark:bg-blue-700',
+        border: 'border-l-blue-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     warning: {
         icon: AlertTriangle,
         defaultTitle: 'Important',
-        bg: 'bg-amber-50',
-        darkBg: 'dark:bg-amber-950/20',
-        border: 'border-l-amber-400',
-        iconColor: 'text-amber-500',
-        titleColor: 'text-amber-900 dark:text-amber-200',
+        bg: 'bg-amber-700',
+        darkBg: 'dark:bg-amber-700',
+        border: 'border-l-amber-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     tip: {
         icon: Lightbulb,
         defaultTitle: 'Tip',
-        bg: 'bg-emerald-50',
-        darkBg: 'dark:bg-emerald-950/20',
-        border: 'border-l-emerald-400',
-        iconColor: 'text-emerald-500',
-        titleColor: 'text-emerald-900 dark:text-emerald-200',
+        bg: 'bg-emerald-600',
+        darkBg: 'dark:bg-emerald-700',
+        border: 'border-l-emerald-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     'key-takeaway': {
         icon: Star,
         defaultTitle: 'Key Takeaway',
-        bg: 'bg-teal-50',
-        darkBg: 'dark:bg-teal-950/20',
-        border: 'border-l-teal-400',
-        iconColor: 'text-teal-500',
-        titleColor: 'text-teal-900 dark:text-teal-200',
+        bg: 'bg-teal-600',
+        darkBg: 'dark:bg-teal-700',
+        border: 'border-l-teal-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     'did-you-know': {
         icon: HelpCircle,
         defaultTitle: 'Did You Know?',
-        bg: 'bg-violet-50',
-        darkBg: 'dark:bg-violet-950/20',
-        border: 'border-l-violet-400',
-        iconColor: 'text-violet-500',
-        titleColor: 'text-violet-900 dark:text-violet-200',
+        bg: 'bg-violet-600',
+        darkBg: 'dark:bg-violet-700',
+        border: 'border-l-violet-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     'clinical-note': {
         icon: Stethoscope,
         defaultTitle: 'Clinical Note',
-        bg: 'bg-rose-50',
-        darkBg: 'dark:bg-rose-950/20',
-        border: 'border-l-rose-400',
-        iconColor: 'text-rose-500',
-        titleColor: 'text-rose-900 dark:text-rose-200',
+        bg: 'bg-rose-600',
+        darkBg: 'dark:bg-rose-700',
+        border: 'border-l-rose-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     success: {
         icon: CheckCircle,
         defaultTitle: 'Success',
-        bg: 'bg-green-50',
-        darkBg: 'dark:bg-green-950/20',
-        border: 'border-l-green-400',
-        iconColor: 'text-green-500',
-        titleColor: 'text-green-900 dark:text-green-200',
+        bg: 'bg-green-600',
+        darkBg: 'dark:bg-green-700',
+        border: 'border-l-green-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     'action-plan': {
         icon: ClipboardList,
         defaultTitle: 'Action Plan',
-        bg: 'bg-indigo-50',
-        darkBg: 'dark:bg-indigo-950/20',
-        border: 'border-l-indigo-400',
-        iconColor: 'text-indigo-500',
-        titleColor: 'text-indigo-900 dark:text-indigo-200',
+        bg: 'bg-indigo-600',
+        darkBg: 'dark:bg-indigo-700',
+        border: 'border-l-indigo-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     'how-to': {
         icon: Lightbulb,
         defaultTitle: 'How To',
-        bg: 'bg-cyan-50',
-        darkBg: 'dark:bg-cyan-950/20',
-        border: 'border-l-cyan-400',
-        iconColor: 'text-cyan-500',
-        titleColor: 'text-cyan-900 dark:text-cyan-200',
+        bg: 'bg-cyan-600',
+        darkBg: 'dark:bg-cyan-700',
+        border: 'border-l-cyan-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     checklist: {
         icon: ClipboardList,
         defaultTitle: 'Checklist',
-        bg: 'bg-purple-50',
-        darkBg: 'dark:bg-purple-950/20',
-        border: 'border-l-purple-400',
-        iconColor: 'text-purple-500',
-        titleColor: 'text-purple-900 dark:text-purple-200',
+        bg: 'bg-purple-600',
+        darkBg: 'dark:bg-purple-700',
+        border: 'border-l-purple-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     reflection: {
         icon: Lightbulb,
         defaultTitle: 'Reflection',
-        bg: 'bg-amber-50',
-        darkBg: 'dark:bg-amber-950/20',
-        border: 'border-l-amber-400',
-        iconColor: 'text-amber-500',
-        titleColor: 'text-amber-900 dark:text-amber-200',
+        bg: 'bg-amber-700',
+        darkBg: 'dark:bg-amber-700',
+        border: 'border-l-amber-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     insight: {
         icon: Star,
         defaultTitle: 'Insight',
-        bg: 'bg-sky-50',
-        darkBg: 'dark:bg-sky-950/20',
-        border: 'border-l-sky-400',
-        iconColor: 'text-sky-500',
-        titleColor: 'text-sky-900 dark:text-sky-200',
+        bg: 'bg-sky-600',
+        darkBg: 'dark:bg-sky-700',
+        border: 'border-l-sky-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     science: {
         icon: Info,
         defaultTitle: 'Science',
-        bg: 'bg-slate-50',
-        darkBg: 'dark:bg-slate-950/20',
-        border: 'border-l-slate-400',
-        iconColor: 'text-slate-500',
-        titleColor: 'text-slate-900 dark:text-slate-200',
+        bg: 'bg-slate-600',
+        darkBg: 'dark:bg-slate-700',
+        border: 'border-l-slate-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     action: {
         icon: CheckCircle,
         defaultTitle: 'Take Action',
-        bg: 'bg-orange-50',
-        darkBg: 'dark:bg-orange-950/20',
-        border: 'border-l-orange-400',
-        iconColor: 'text-orange-500',
-        titleColor: 'text-orange-900 dark:text-orange-200',
+        bg: 'bg-orange-700',
+        darkBg: 'dark:bg-orange-700',
+        border: 'border-l-orange-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     'self-assessment': {
         icon: ClipboardList,
         defaultTitle: 'Self-Assessment',
-        bg: 'bg-fuchsia-50',
-        darkBg: 'dark:bg-fuchsia-950/20',
-        border: 'border-l-fuchsia-400',
-        iconColor: 'text-fuchsia-500',
-        titleColor: 'text-fuchsia-900 dark:text-fuchsia-200',
+        bg: 'bg-fuchsia-600',
+        darkBg: 'dark:bg-fuchsia-700',
+        border: 'border-l-fuchsia-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     research: {
         icon: Info,
         defaultTitle: 'Research',
-        bg: 'bg-cyan-50',
-        darkBg: 'dark:bg-cyan-950/20',
-        border: 'border-l-cyan-400',
-        iconColor: 'text-cyan-500',
-        titleColor: 'text-cyan-900 dark:text-cyan-200',
+        bg: 'bg-cyan-600',
+        darkBg: 'dark:bg-cyan-700',
+        border: 'border-l-cyan-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     exercise: {
         icon: ClipboardList,
         defaultTitle: 'Exercise',
-        bg: 'bg-indigo-50',
-        darkBg: 'dark:bg-indigo-950/20',
-        border: 'border-l-indigo-400',
-        iconColor: 'text-indigo-500',
-        titleColor: 'text-indigo-900 dark:text-indigo-200',
+        bg: 'bg-indigo-600',
+        darkBg: 'dark:bg-indigo-700',
+        border: 'border-l-indigo-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     clinical: {
         icon: Stethoscope,
         defaultTitle: 'Clinical Note',
-        bg: 'bg-rose-50',
-        darkBg: 'dark:bg-rose-950/20',
-        border: 'border-l-rose-400',
-        iconColor: 'text-rose-500',
-        titleColor: 'text-rose-900 dark:text-rose-200',
+        bg: 'bg-rose-600',
+        darkBg: 'dark:bg-rose-700',
+        border: 'border-l-rose-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     danger: {
         icon: AlertTriangle,
         defaultTitle: 'Warning',
-        bg: 'bg-red-50',
-        darkBg: 'dark:bg-red-950/20',
-        border: 'border-l-red-500',
-        iconColor: 'text-red-500',
-        titleColor: 'text-red-900 dark:text-red-200',
+        bg: 'bg-red-600',
+        darkBg: 'dark:bg-red-700',
+        border: 'border-l-red-800',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
     crisis: {
         icon: AlertTriangle,
         defaultTitle: 'Crisis Resources',
-        bg: 'bg-red-50',
-        darkBg: 'dark:bg-red-950/20',
-        border: 'border-l-red-600',
-        iconColor: 'text-red-600',
-        titleColor: 'text-red-900 dark:text-red-200',
+        bg: 'bg-red-700',
+        darkBg: 'dark:bg-red-800',
+        border: 'border-l-red-900',
+        iconColor: 'text-white',
+        titleColor: 'text-white',
     },
 };
 
@@ -275,6 +275,7 @@ const ArticleCallout: React.FC<ArticleCalloutProps> = ({
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
+            data-vibrant=""
             className={`
                 not-prose my-8 rounded-xl border-l-4 ${config.border}
                 ${config.bg} ${config.darkBg}
@@ -282,28 +283,28 @@ const ArticleCallout: React.FC<ArticleCalloutProps> = ({
                 ${className}
             `}
         >
-            <div
-                className={`flex items-start gap-3 p-5 ${collapsible ? 'cursor-pointer select-none' : ''}`}
-                onClick={collapsible ? () => setIsOpen(!isOpen) : undefined}
-                role={collapsible ? 'button' : undefined}
-                aria-expanded={collapsible ? isOpen : undefined}
-            >
-                <Icon size={20} className={`${config.iconColor} mt-0.5 shrink-0`} />
-                <div className="flex-1 min-w-0">
-                    <h4 className={`font-bold text-sm ${config.titleColor}`}>
+            <div className="p-5">
+                <div
+                    className={`flex items-center gap-3 ${collapsible ? 'cursor-pointer select-none' : ''}`}
+                    onClick={collapsible ? () => setIsOpen(!isOpen) : undefined}
+                    role={collapsible ? 'button' : undefined}
+                    aria-expanded={collapsible ? isOpen : undefined}
+                >
+                    <Icon size={20} className={`${config.iconColor} shrink-0`} />
+                    <h4 className={`font-bold text-sm ${config.titleColor} leading-tight`}>
                         {displayTitle}
                     </h4>
-                    {(!collapsible || isOpen) && body && (
-                        <div className="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0">
-                            {body}
-                        </div>
+                    {collapsible && (
+                        <ChevronDown
+                            size={16}
+                            className={`text-white/60 transition-transform duration-200 ml-auto shrink-0 ${isOpen ? 'rotate-180' : ''}`}
+                        />
                     )}
                 </div>
-                {collapsible && (
-                    <ChevronDown
-                        size={16}
-                        className={`text-gray-400 transition-transform duration-200 mt-0.5 ${isOpen ? 'rotate-180' : ''}`}
-                    />
+                {(!collapsible || isOpen) && body && (
+                    <div className="mt-3 pl-8 text-sm text-white leading-relaxed [&>p]:mb-2 [&>p:last-child]:mb-0 [&_a]:text-white [&_a]:underline [&_li]:marker:text-white">
+                        {body}
+                    </div>
                 )}
             </div>
         </motion.div>

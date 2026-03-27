@@ -42,6 +42,9 @@ test-results
 .moat/
 .claude/
 
+# Parallel rewrite coordination (lock files)
+.rewrite/
+
 # Data pipeline (large downloaded/generated files)
 data-pipeline/data/
 data-pipeline/output_data/

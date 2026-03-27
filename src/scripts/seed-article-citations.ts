@@ -87,7 +87,7 @@ function inferSourceType(tier: number, source?: string): string {
 // Main
 // ---------------------------------------------------------------------------
 async function main() {
-  const ALL_CATEGORIES = Array.from({ length: 15 }, (_, i) => i + 1);
+  const ALL_CATEGORIES = Array.from({ length: 22 }, (_, i) => i + 1);
   const categoriesToProcess = targetCategory ? [targetCategory] : ALL_CATEGORIES;
 
   console.log('🚀 Article Citation Seeder');

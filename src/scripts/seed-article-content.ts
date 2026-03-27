@@ -16,6 +16,7 @@ import { createClient } from '@supabase/supabase-js';
 import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
+import { UNSAFE_LocationContext, UNSAFE_NavigationContext } from 'react-router-dom';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -58,7 +59,7 @@ const forceOverwrite = args.includes('--force');
 // ---------------------------------------------------------------------------
 // Category metadata
 // ---------------------------------------------------------------------------
-const ALL_CATEGORIES = Array.from({ length: 15 }, (_, i) => i + 1);
+const ALL_CATEGORIES = Array.from({ length: 22 }, (_, i) => i + 1);
 const categoriesToProcess = targetCategory ? [targetCategory] : ALL_CATEGORIES;
 
 // ---------------------------------------------------------------------------
@@ -142,9 +143,35 @@ async function main() {
         } else if (typeof article.content === 'string') {
           html = article.content;
         } else {
-          // JSX content — render to static markup
-          const element = React.createElement('div', null, article.content);
-          html = renderToStaticMarkup(element);
+          // JSX content — render to static markup with mock Router context
+          const mockLocation = {
+            pathname: `/articles/${slug}`,
+            search: '',
+            hash: '',
+            state: null,
+            key: 'default',
+          };
+
+          const mockNavigator = {
+            createHref: (to: any) => typeof to === 'string' ? to : to.pathname || '/',
+            push: () => {},
+            replace: () => {},
+            go: () => {},
+            back: () => {},
+            forward: () => {},
+          };
+
+          const content = React.createElement('div', null, article.content);
+          const wrappedElement = React.createElement(
+            UNSAFE_LocationContext.Provider,
+            { value: { location: mockLocation, navigationType: 'POP' } },
+            React.createElement(
+              UNSAFE_NavigationContext.Provider,
+              { value: { basename: '', navigator: mockNavigator as any, static: true } },
+              content
+            )
+          );
+          html = renderToStaticMarkup(wrappedElement);
         }
       } catch (renderErr) {
         console.warn(

@@ -22,11 +22,15 @@ const CategoryPage: React.FC = () => {
         window.scrollTo(0, 0);
         const fetchData = async () => {
             if (!categorySlug) return;
+            console.log('[CategoryPage] Fetching data for slug:', categorySlug);
             try {
                 const [cat, allArticles] = await Promise.all([
                     categoryService.getBySlug(categorySlug),
                     articleService.getAll({ category: categorySlug })
                 ]);
+                console.log('[CategoryPage] Category:', cat);
+                console.log('[CategoryPage] Articles fetched:', allArticles.length);
+                console.log('[CategoryPage] First article:', allArticles[0]);
                 setCategory(cat);
                 setArticles(allArticles);
             } catch (error) {
@@ -58,6 +62,9 @@ const CategoryPage: React.FC = () => {
     const categoryArticles = articles.filter(
         article => article.category.slug === category.slug
     );
+
+    console.log('[CategoryPage] Render - Total articles:', articles.length);
+    console.log('[CategoryPage] Render - Filtered articles:', categoryArticles.length);
 
     return (
         <div className="min-h-screen bg-background pt-24 pb-20">

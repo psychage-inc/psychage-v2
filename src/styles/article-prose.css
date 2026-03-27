@@ -213,33 +213,41 @@
 /* Callout blocks (for HTML content) */
 .article-prose div[data-callout] {
   border-left: 4px solid;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
   margin: 1.5rem 0;
+  color: white;
+}
+.article-prose div[data-callout] a {
+  color: white;
+  text-decoration: underline;
+}
+.article-prose div[data-callout] li::marker {
+  color: white;
 }
 .article-prose div[data-callout][data-callout-variant="info"] {
-  background: rgb(239 246 255);
-  border-color: rgb(96 165 250);
+  background: #2563eb;
+  border-color: #1e40af;
 }
 .article-prose div[data-callout][data-callout-variant="warning"] {
-  background: rgb(255 251 235);
-  border-color: rgb(251 191 36);
+  background: #b45309;
+  border-color: #92400e;
 }
 .article-prose div[data-callout][data-callout-variant="tip"] {
-  background: rgb(236 253 245);
-  border-color: rgb(52 211 153);
+  background: #059669;
+  border-color: #065f46;
 }
 .dark .article-prose div[data-callout][data-callout-variant="info"] {
-  background: rgba(59, 130, 246, 0.1);
-  border-color: rgba(96, 165, 250, 0.6);
+  background: #1d4ed8;
+  border-color: #1e40af;
 }
 .dark .article-prose div[data-callout][data-callout-variant="warning"] {
-  background: rgba(245, 158, 11, 0.1);
-  border-color: rgba(251, 191, 36, 0.6);
+  background: #92400e;
+  border-color: #78350f;
 }
 .dark .article-prose div[data-callout][data-callout-variant="tip"] {
-  background: rgba(16, 185, 129, 0.1);
-  border-color: rgba(52, 211, 153, 0.6);
+  background: #047857;
+  border-color: #065f46;
 }
 
 /* Chart blocks (for HTML content — empty until hydrated) */
@@ -249,6 +257,29 @@
   padding: 1rem;
   margin: 1.5rem 0;
   min-height: 200px;
+}
+
+/* not-prose blocks: ensure text visibility inside prose wrapper */
+.article-prose .not-prose,
+.article-prose .not-prose * {
+  color: inherit;
+}
+.article-prose .not-prose {
+  color: #1f2937;
+}
+.dark .article-prose .not-prose {
+  color: #f3f4f6;
+}
+/* Vibrant callout blocks manage their own text color — override not-prose defaults */
+.article-prose .not-prose[data-vibrant],
+.article-prose .not-prose[data-vibrant] * {
+  color: inherit;
+}
+.article-prose .not-prose[data-vibrant] {
+  color: white;
+}
+.dark .article-prose .not-prose[data-vibrant] {
+  color: white;
 }
 
 /* Citation highlight flash */

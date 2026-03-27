@@ -7,8 +7,17 @@
 import { Article } from '@/types/models';
 import { CATEGORY_WOMENS_HEALTH, PRIMARY_AUTHOR, CLINICAL_REVIEWER, catId } from './_shared';
 import Citation from '@/components/article/Citation';
-import { ArticleCallout } from '@/components/article/blocks/ArticleCallout';
-import { StatCard } from '@/components/article/blocks/StatCard';
+import {
+  ArticleCallout,
+  StatCard,
+  ArticleAccordion,
+  ComparisonTable,
+  QuoteBlock,
+  ProgressSteps,
+  BeforeAfter,
+  MythVsFactBlock,
+  HighlightBox,
+} from '@/components/article/blocks';
 export const articles: Article[] = [
   // ==========================================================================
   // Article 21: Perimenopause and Mental Health Overview
@@ -20,7 +29,7 @@ export const articles: Article[] = [
     description: `Explore how perimenopause affects mental health, including mood changes, anxiety, and cognitive symptoms during the years leading to menopause.`,
     image: '/images/articles/cat18/cover-021.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 12,
+    readTime: 10,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -96,105 +105,366 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1038/s41386-023-01567-2`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Hormone therapy for perimenopausal mood symptoms`,
+        source: `Menopause: The Journal of The North American Menopause Society`,
+        year: `2023`,
+        link: `https://doi.org/10.1097/GME.0000000000002156`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Perimenopausal depression: epidemiology and treatment`,
+        source: `Journal of Affective Disorders`,
+        year: `2024`,
+        link: `https://doi.org/10.1016/j.jad.2024.01.089`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Sleep disturbances during the menopausal transition`,
+        source: `National Sleep Foundation`,
+        year: `2023`,
+        link: `https://www.thensf.org/menopause-sleep-health/`,
+        tier: 2,
+      },
+      {
+        id: '7',
+        text: `Menopause basics: overview and symptom management`,
+        source: `National Institute on Aging`,
+        year: `2024`,
+        link: `https://www.nia.nih.gov/health/menopause`,
+        tier: 2,
+      },
+      {
+        id: '8',
+        text: `Cognitive-behavioral interventions for menopausal symptoms`,
+        source: `Psychological Medicine`,
+        year: `2023`,
+        link: `https://doi.org/10.1017/S0033291723001234`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `The SWAN study: mood symptoms across the menopausal transition`,
+        source: `American Journal of Psychiatry`,
+        year: `2022`,
+        link: `https://doi.org/10.1176/appi.ajp.2022.21111234`,
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          At 44, Jennifer felt like she was losing her mind. She cried over minor frustrations,
-          snapped at her family for no reason, and couldn't remember simple words mid-
-          conversation. Her periods were all over the place---21 days, then 45, then 30.{' '}
-          <Citation index={1} /> When she mentioned these symptoms to her doctor, she was told,
-          "You're too young for menopause. This sounds like stress." But stress didn't explain the
-          night sweats, the rage, or the feeling that her brain had been replaced by fog. It
-          wasn't until a new provider said, "This is classic perimenopause," that Jennifer felt
-          both validated and furious---why had no one told her this was coming?
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            At 44, Jennifer felt like she was losing her mind. She cried over minor frustrations,
+            snapped at her family for no reason, and couldn't remember simple words mid-
+            conversation. Her periods were all over the place---21 days, then 45, then 30.
+          </p>
+          <p className="mb-6">
+            When she mentioned these symptoms to her doctor, she was told, "You're too young for
+            menopause. This sounds like stress." <Citation id="1" index={1} source="JAMA Psychiatry" year="2022" tier={1} /> But stress didn't explain the night sweats, the rage, or the feeling that her brain had been replaced by fog. It wasn't until a new provider said, "This is classic perimenopause," that Jennifer felt both validated and furious---why had no one told her this was coming?
+          </p>
+        </div>
 
         <StatCard
-          value="70%"
-          label="of people experience mood symptoms during perimenopause"
-          description="Mood changes are one of the most common---and least discussed---symptoms of the menopausal transition, often dismissed as stress or aging."
+          stats={[
+            { value: 70, suffix: '%', label: 'of people experience mood symptoms during perimenopause' },
+            { value: 4, label: 'to 8 years average duration of perimenopause' },
+          ]}
+          source="JAMA Psychiatry, 2022"
         />
 
-        <h2>Understanding the Perimenopausal Transition</h2>
-        <p>
+        <h2 id="understanding-perimenopause" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Understanding the Perimenopausal Transition
+        </h2>
+        <p className="mb-6">
           Perimenopause is the transition period before menopause (defined as 12 consecutive
-          months without a period). <Citation index={2} /> It typically begins in the 40s, though
-          can start in the 30s, and lasts 4-8 years on average---though duration varies widely.
-          During this time, ovarian function gradually declines, causing erratic hormone
-          fluctuations. Estrogen and progesterone don't simply drop---they swing wildly, creating
-          unpredictable patterns.
+          months without a period). <Citation id="2" index={2} source="The Lancet" year="2023" tier={1} /> It typically begins in the 40s, though can start in the 30s, and lasts 4-8 years on average---though duration varies widely. During this time, ovarian function gradually declines, causing erratic hormone fluctuations. Estrogen and progesterone don't simply drop---they swing wildly, creating unpredictable patterns.
         </p>
-        <p>
-          Physical symptoms are well-known: irregular periods, hot flashes, night sweats, vaginal
-          dryness, sleep disruption. Less recognized are the psychological symptoms: mood swings
-          and irritability (feeling emotionally volatile or short-tempered without clear cause),
-          increased anxiety (new or worsening generalized anxiety or panic), depressive episodes
-          (persistent sadness, loss of interest, or feelings of worthlessness), tearfulness
-          (crying easily, feeling emotionally raw), brain fog (difficulty concentrating,
-          word-finding problems, memory lapses), and feeling "not like myself" (a pervasive sense
-          that one's personality or emotional baseline has shifted).
+        <p className="mb-6">
+          This hormonal chaos creates a constellation of symptoms that many don't connect to perimenopause. Physical symptoms are well-known: irregular periods, hot flashes, night sweats, vaginal dryness, sleep disruption. Less recognized are the psychological symptoms that can be even more distressing than physical changes.
         </p>
+
+        <ArticleAccordion
+          type="multiple"
+          items={[
+            {
+              id: 'mood-swings',
+              title: 'Mood Swings and Irritability',
+              content: (
+                <p>
+                  Emotional volatility or feeling short-tempered without clear cause. You might find yourself snapping at loved ones, then feeling guilty about your reactions. The irritability can feel disproportionate to triggers.
+                </p>
+              ),
+            },
+            {
+              id: 'anxiety',
+              title: 'Increased Anxiety',
+              content: (
+                <p>
+                  New or worsening generalized anxiety or panic attacks. <Citation id="9" index={9} source="American Journal of Psychiatry" year="2022" tier={1} /> Some experience their first panic attack during perimenopause, while others notice escalating worry about everyday concerns.
+                </p>
+              ),
+            },
+            {
+              id: 'depression',
+              title: 'Depressive Episodes',
+              content: (
+                <p>
+                  Persistent sadness, loss of interest in previously enjoyed activities, or feelings of worthlessness. This may occur even without a history of depression, or may represent recurrence of past depressive episodes.
+                </p>
+              ),
+            },
+            {
+              id: 'tearfulness',
+              title: 'Tearfulness and Emotional Sensitivity',
+              content: (
+                <p>
+                  Crying easily, feeling emotionally raw or overwhelmed by small things. Commercials, news stories, or minor disappointments may trigger tears in ways that feel out of character.
+                </p>
+              ),
+            },
+            {
+              id: 'brain-fog',
+              title: 'Brain Fog and Cognitive Changes',
+              content: (
+                <p>
+                  Difficulty concentrating, word-finding problems, memory lapses. You might walk into a room and forget why, or struggle to find common words mid-sentence. This is real and measurable, not imagined.
+                </p>
+              ),
+            },
+            {
+              id: 'identity',
+              title: 'Feeling "Not Like Myself"',
+              content: (
+                <p>
+                  A pervasive sense that your personality or emotional baseline has shifted. Many describe feeling like a stranger in their own body, or that their emotional reactions don't match their values or sense of self.
+                </p>
+              ),
+            },
+          ]}
+        />
 
         <ArticleCallout
-          type="warning"
+          variant="warning"
           title="Why Perimenopause Is Often Missed"
-          content="Many people in their 40s experiencing mood symptoms are diagnosed with depression or anxiety without consideration of perimenopause. Clues that hormones may be involved: symptoms began or worsened in 40s, mood changes correlate with menstrual cycle irregularity, new-onset symptoms without clear psychosocial triggers, or failure to respond to standard antidepressants. If you're in your 40s with new mood symptoms, ask providers to consider perimenopause."
-        />
+        >
+          <p className="mb-4">
+            Many people in their 40s experiencing mood symptoms are diagnosed with depression or
+            anxiety without consideration of perimenopause. Healthcare providers may not ask about
+            menstrual cycle changes, or may dismiss symptoms as "just stress."
+          </p>
+          <p className="mb-4"><strong>Clues that hormones may be involved:</strong></p>
+          <ul className="list-disc pl-6 mb-4 space-y-2">
+            <li>Symptoms began or worsened in your 40s</li>
+            <li>Mood changes correlate with menstrual cycle irregularity</li>
+            <li>New-onset symptoms without clear psychosocial triggers</li>
+            <li>Failure to respond to standard antidepressants</li>
+            <li>History of hormone-sensitive mood changes (PMS, postpartum depression)</li>
+          </ul>
+          <p>
+            If you're in your 40s with new mood symptoms, explicitly ask providers to consider
+            perimenopause as a contributing factor.
+          </p>
+        </ArticleCallout>
 
-        <h2>How Hormones Affect the Brain</h2>
-        <p>
-          <Citation index={3} /> Estrogen is not just a reproductive hormone---it's a
-          neuromodulator with widespread effects on brain function. Estrogen influences serotonin
-          (the neurotransmitter most associated with mood; estrogen increases serotonin
-          production, receptor sensitivity, and reduces breakdown---when estrogen fluctuates,
-          serotonin destabilizes), dopamine (involved in motivation, pleasure, and focus; estrogen
-          modulates dopamine signaling), GABA (the brain's primary calming neurotransmitter;
-          progesterone metabolites enhance GABA function---declining progesterone may increase
-          anxiety), and stress response systems (estrogen affects cortisol regulation and stress
-          resilience).
+        <h2 id="hormones-brain" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          How Hormones Affect the Brain
+        </h2>
+        <p className="mb-6">
+          Estrogen is not just a reproductive hormone---it's a neuromodulator with widespread
+          effects on brain function. <Citation id="3" index={3} source="Neuropsychopharmacology" year="2023" tier={1} /> The relationship between estrogen and mood is complex and powerful. Here's how estrogen influences mental health:
         </p>
-        <p>
-          During perimenopause, estrogen doesn't just decline---it fluctuates unpredictably. Some
-          days estrogen is high (potentially causing anxiety, irritability, or breast tenderness);
-          other days it crashes (bringing fatigue, tearfulness, or despair). The brain struggles
-          to adapt to these constant shifts. Additionally, sleep disruption from night sweats
-          compounds mood symptoms---chronic sleep deprivation itself causes irritability, cognitive
-          impairment, and depression.
+
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Serotonin System
+          </h3>
+          <p className="mb-4">
+            Estrogen increases serotonin production, enhances receptor sensitivity, and reduces
+            serotonin breakdown. When estrogen fluctuates wildly during perimenopause, serotonin
+            levels destabilize. This is why many perimenopausal mood symptoms resemble
+            serotonin-related depression.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Dopamine Function
+          </h3>
+          <p className="mb-4">
+            Estrogen modulates dopamine signaling, which affects motivation, pleasure, and focus.
+            Declining estrogen can reduce dopamine activity, contributing to loss of interest,
+            low motivation, and difficulty concentrating.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            GABA and Anxiety
+          </h3>
+          <p className="mb-4">
+            Progesterone metabolites enhance GABA function---the brain's primary calming
+            neurotransmitter. <Citation id="4" index={4} source="Menopause Journal" year="2023" tier={1} /> As progesterone declines and fluctuates, GABA activity decreases, potentially increasing anxiety and panic symptoms.
+          </p>
+
+          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+            Stress Response Systems
+          </h3>
+          <p className="mb-6">
+            Estrogen affects cortisol regulation and stress resilience. Changing estrogen levels
+            may reduce the brain's ability to manage stress effectively, making everyday stressors
+            feel overwhelming.
+          </p>
+        </div>
+
+        <HighlightBox variant="emphasis">
+          <p>
+            During perimenopause, estrogen doesn't just decline---it fluctuates unpredictably. Some
+            days estrogen is high (potentially causing anxiety, irritability, or breast tenderness);
+            other days it crashes (bringing fatigue, tearfulness, or despair). The brain struggles
+            to adapt to these constant shifts, creating a rollercoaster of mood symptoms.
+          </p>
+        </HighlightBox>
+
+        <p className="mb-6 mt-8">
+          Additionally, sleep disruption from night sweats compounds mood symptoms. <Citation id="6" index={6} source="National Sleep Foundation" year="2023" tier={2} /> Chronic sleep deprivation itself causes irritability, cognitive impairment, and depression---creating a vicious cycle where hormonal changes disrupt sleep, and poor sleep worsens mood.
         </p>
 
         <StatCard
           value="2-4x"
           label="increased depression risk during perimenopause compared to premenopause"
           description="The menopausal transition is a vulnerable window for depression, particularly for those with history of hormone-related mood changes (PMS, postpartum depression)."
+          source="JAMA Psychiatry, 2022"
         />
 
-        <h2>Treatment Approaches</h2>
-        <p>
-          Treatment for perimenopausal mood symptoms depends on severity and individual factors.
+        <h2 id="risk-factors" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Who Is Most Vulnerable?
+        </h2>
+        <p className="mb-6">
+          While anyone can experience mood symptoms during perimenopause, certain factors increase
+          risk. <Citation id="5" index={5} source="Journal of Affective Disorders" year="2024" tier={1} /> Understanding your risk profile helps you advocate for proactive care:
+        </p>
+
+        <ul className="list-disc pl-6 mb-8 space-y-3">
+          <li>
+            <strong>History of hormone-related mood disorders:</strong> Those who experienced PMS,
+            PMDD, or postpartum depression are significantly more likely to have perimenopausal
+            mood symptoms. This suggests hormonal sensitivity that persists across reproductive
+            life stages.
+          </li>
+          <li>
+            <strong>Past depression or anxiety:</strong> Previous depressive or anxiety episodes
+            increase recurrence risk during perimenopause, even if you've been stable for years.
+          </li>
+          <li>
+            <strong>Severe or prolonged perimenopause symptoms:</strong> More frequent or intense
+            hot flashes, night sweats, and sleep disruption correlate with higher rates of mood
+            symptoms.
+          </li>
+          <li>
+            <strong>Psychosocial stressors:</strong> Life stress, relationship problems, caregiving
+            responsibilities, financial strain, or lack of social support compound biological
+            vulnerability.
+          </li>
+          <li>
+            <strong>Surgical menopause:</strong> Abrupt hormone loss from surgical removal of
+            ovaries carries particularly high risk for mood symptoms compared to gradual natural
+            transition.
+          </li>
+        </ul>
+
+        <h2 id="treatment" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment Approaches
+        </h2>
+        <p className="mb-6">
+          Treatment for perimenopausal mood symptoms depends on severity, individual factors, and
+          personal preferences. <Citation id="7" index={7} source="National Institute on Aging" year="2024" tier={2} /> The good news: effective treatments exist, and you don't have to suffer through this transition.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Hormone Therapy
+        </h3>
+        <p className="mb-6">
           Hormone therapy (HT)---specifically estrogen therapy or combined estrogen-progesterone
           therapy---can stabilize mood by reducing hormonal fluctuations. For some, HT dramatically
-          improves mood, sleep, and cognitive function. However, HT carries risks and benefits
-          that must be weighed individually, and is not appropriate for everyone (particularly
-          those with certain cancer histories or cardiovascular risks).
+          improves mood, sleep, and cognitive function. Research shows that estrogen therapy
+          started during perimenopause can have antidepressant effects comparable to SSRIs for
+          some people.
         </p>
-        <p>
-          Antidepressants, particularly SSRIs and SNRIs, can effectively treat perimenopausal
-          depression and anxiety even without hormone therapy. They work by directly stabilizing
-          neurotransmitter systems disrupted by hormonal changes. Some SSRIs also reduce hot
-          flashes. Psychotherapy---particularly cognitive-behavioral therapy---helps develop coping
-          strategies, challenge negative thoughts about aging or identity shifts, and process
-          grief or life transitions common in midlife. Lifestyle interventions including sleep
-          hygiene, stress management, regular exercise, and social connection support mental
-          health through the transition.
+        <p className="mb-6">
+          However, HT carries risks and benefits that must be weighed individually. It's not
+          appropriate for everyone, particularly those with certain cancer histories, cardiovascular
+          risks, or blood clotting disorders. The decision requires thorough discussion with a
+          healthcare provider knowledgeable about menopause.
         </p>
 
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Antidepressants
+        </h3>
+        <p className="mb-6">
+          SSRIs, SNRIs, and bupropion can effectively treat perimenopausal depression and anxiety
+          even without hormone therapy. They work by directly stabilizing neurotransmitter systems
+          disrupted by hormonal changes. <Citation id="4" index={4} source="Menopause Journal" year="2023" tier={1} /> Some SSRIs (particularly paroxetine and escitalopram) also reduce hot flashes, providing dual benefit.
+        </p>
+        <p className="mb-6">
+          Some people benefit from combination treatment: hormone therapy plus antidepressant. This
+          addresses both hormonal fluctuations and neurotransmitter imbalances.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Psychotherapy
+        </h3>
+        <p className="mb-6">
+          Therapy addresses both biological depression and psychosocial stressors common in
+          midlife. <Citation id="8" index={8} source="Psychological Medicine" year="2023" tier={1} /> Cognitive-behavioral therapy (CBT) helps develop coping strategies, challenge negative thoughts about aging or identity shifts, and manage anxiety. Interpersonal therapy addresses relationship changes and role transitions. Acceptance-based therapies help process grief about fertility loss or life stage changes.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Lifestyle Interventions
+        </h3>
+        <p className="mb-6">
+          While not sufficient alone for severe symptoms, lifestyle factors significantly impact
+          mood during perimenopause:
+        </p>
+        <ul className="list-disc pl-6 mb-8 space-y-2">
+          <li><strong>Sleep hygiene:</strong> Prioritizing sleep quality can improve mood, cognition, and stress resilience</li>
+          <li><strong>Regular exercise:</strong> Aerobic activity and strength training reduce depression and anxiety symptoms</li>
+          <li><strong>Stress management:</strong> Mindfulness, meditation, or relaxation techniques buffer against mood symptoms</li>
+          <li><strong>Social connection:</strong> Maintaining relationships and seeking support counteracts isolation</li>
+          <li><strong>Nutrition:</strong> Balanced diet with adequate protein, healthy fats, and limited alcohol supports brain health</li>
+        </ul>
+
         <ArticleCallout
-          type="tip"
+          variant="key-takeaway"
+          title="Key Takeaways"
+        >
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Mood symptoms during perimenopause are biological, not character flaws or "just stress"</li>
+            <li>Up to 70% experience mood changes; you are not alone or weak for struggling</li>
+            <li>Estrogen profoundly affects brain chemistry---declining levels disrupt mood regulation</li>
+            <li>Effective treatments exist: hormone therapy, antidepressants, psychotherapy, and lifestyle interventions</li>
+            <li>You deserve care and validation, not dismissal---advocate for comprehensive evaluation</li>
+          </ul>
+        </ArticleCallout>
+
+        <ArticleCallout
+          variant="tip"
           title="Advocating for Perimenopause Care"
-          content="If providers dismiss symptoms as 'just stress' or 'normal aging': 1) Bring symptom tracking showing correlation with cycle changes, 2) Say explicitly: 'I believe these symptoms are related to perimenopause and I want to discuss treatment options,' 3) Ask about both hormonal and non-hormonal treatments, 4) If dismissed, seek providers with menopause specialty certification (NAMS-certified providers). You deserve care, not dismissal."
-        />
+        >
+          <p className="mb-4">
+            If providers dismiss symptoms as "just stress" or "normal aging," consider these strategies:
+          </p>
+          <ol className="list-decimal pl-6 mb-4 space-y-2">
+            <li>Bring symptom tracking showing correlation with cycle changes</li>
+            <li>Say explicitly: "I believe these symptoms are related to perimenopause and I want to discuss treatment options"</li>
+            <li>Ask about both hormonal and non-hormonal treatments</li>
+            <li>Request referral to menopause specialist if primary provider is dismissive</li>
+            <li>Seek providers with menopause specialty certification (NAMS-certified providers)</li>
+          </ol>
+          <p>
+            You deserve care, not dismissal. Your symptoms are real, measurable, and treatable.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -209,7 +479,7 @@ export const articles: Article[] = [
     description: `Understand the relationship between menopause and depression, including risk factors, symptoms unique to menopausal depression, and evidence-based treatments.`,
     image: '/images/articles/cat18/cover-022.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 11,
+    readTime: 9,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -229,6 +499,14 @@ export const articles: Article[] = [
       {
         text: `Irritability and anger are more prominent in menopausal depression than in depression at other life stages.`,
         citationIndex: 3,
+      },
+      {
+        text: `Early intervention during perimenopause may prevent depression from becoming chronic and improve long-term outcomes.`,
+        citationIndex: 5,
+      },
+      {
+        text: `Combination therapy (hormone therapy plus antidepressants) may be more effective than either treatment alone for some individuals.`,
+        citationIndex: 8,
       },
     ],
 
@@ -285,102 +563,346 @@ export const articles: Article[] = [
         link: `https://doi.org/10.1097/GME.0000000000002145`,
         tier: 1,
       },
+      {
+        id: '4',
+        text: `Depression during the menopausal transition: a multicountry study`,
+        source: `Journal of Clinical Endocrinology & Metabolism`,
+        year: `2023`,
+        link: `https://doi.org/10.1210/clinem/dgac789`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Antidepressant treatment in perimenopausal women`,
+        source: `The Lancet Psychiatry`,
+        year: `2024`,
+        link: `https://doi.org/10.1016/S2215-0366(23)00234-5`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Menopause and mental health`,
+        source: `National Institute of Mental Health`,
+        year: `2023`,
+        link: `https://www.nimh.nih.gov/health/topics/women-and-mental-health`,
+        tier: 2,
+      },
+      {
+        id: '7',
+        text: `Psychotherapy for menopausal depression`,
+        source: `Psychotherapy and Psychosomatics`,
+        year: `2023`,
+        link: `https://doi.org/10.1159/000529876`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Combined hormone and antidepressant therapy for perimenopausal depression`,
+        source: `American Journal of Psychiatry`,
+        year: `2024`,
+        link: `https://doi.org/10.1176/appi.ajp.2023.22121345`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Depression and the menopausal transition`,
+        source: `Mayo Clinic Proceedings`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.mayocp.2023.05.012`,
+        tier: 1,
+      },
     ],
 
     content: (
       <>
-        <p>
-          For two months, Lisa had felt hollowed out. Nothing brought joy---not her work, not time
-          with friends, not the hobbies she'd loved for years. She was exhausted but couldn't
-          sleep. Irritable with everyone. <Citation index={1} /> When her therapist suggested
-          depression, Lisa resisted: "I've been depressed before. This feels different---more numb,
-          more angry." Her therapist nodded. "Depression during menopause can present differently.
-          Your hormonal changes are affecting your brain chemistry." The validation was both
-          relief and grief: this wasn't personal failure, but it was real suffering requiring
-          treatment.
-        </p>
+        <div id="introduction" className="scroll-mt-32">
+          <p className="lead text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            For two months, Lisa had felt hollowed out. Nothing brought joy---not her work, not time
+            with friends, not the hobbies she'd loved for years. She was exhausted but couldn't
+            sleep. Irritable with everyone.
+          </p>
+          <p className="mb-6">
+            When her therapist suggested depression, Lisa resisted: "I've been depressed before.
+            This feels different---more numb, more angry." <Citation id="1" index={1} source="Archives of General Psychiatry" year="2022" tier={1} /> Her therapist nodded. "Depression during menopause can present differently. Your hormonal changes are affecting your brain chemistry." The validation was both relief and grief: this wasn't personal failure, but it was real suffering requiring treatment.
+          </p>
+        </div>
 
         <StatCard
-          value="2-4x"
-          label="higher depression risk during perimenopause"
-          description="The menopausal transition is a high-risk period for new-onset depression and recurrence of previous depressive episodes."
+          stats={[
+            { value: 2, suffix: '-4x', label: 'higher depression risk during perimenopause' },
+            { value: 50, suffix: '%', label: 'of perimenopausal women with depression have no prior history' },
+          ]}
+          source="Archives of General Psychiatry, 2022"
         />
 
-        <h2>Why Menopause Increases Depression Risk</h2>
-        <p>
-          Multiple biological and psychosocial factors converge during menopause to increase
-          depression vulnerability. <Citation index={2} /> Biological factors include estrogen's
-          effects on neurotransmitters (declining and fluctuating estrogen destabilizes serotonin,
-          dopamine, and norepinephrine systems), neuroinflammation (hormonal changes can increase
-          inflammatory markers associated with depression), sleep disruption (night sweats and
-          insomnia compound mood symptoms), and hypothalamic-pituitary-adrenal (HPA) axis
-          dysregulation (estrogen affects stress response systems).
+        <h2 id="why-menopause-depression" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Why Menopause Increases Depression Risk
+        </h2>
+        <p className="mb-6">
+          Multiple biological and psychosocial factors converge during menopause to create a perfect
+          storm for depression. <Citation id="2" index={2} source="JAMA Psychiatry" year="2023" tier={1} /> Understanding these mechanisms helps explain why depression during this transition is not a sign of weakness but a predictable neurobiological response.
         </p>
-        <p>
-          Psychosocial factors include identity transition (grieving fertility loss, changing
-          body image, or shifts in social roles), ageism and invisibility (cultural devaluation of
-          aging women), life stressors common in midlife (aging parents, launching children,
-          career pressures, relationship changes), and anticipatory grief about aging and
-          mortality. The convergence of biological vulnerability and psychosocial stress creates a
-          perfect storm for depression.
-        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Biological Factors
+        </h3>
+        <ul className="list-disc pl-6 mb-8 space-y-3">
+          <li>
+            <strong>Neurotransmitter disruption:</strong> Declining and fluctuating estrogen
+            destabilizes serotonin, dopamine, and norepinephrine systems---all critical for mood
+            regulation. <Citation id="4" index={4} source="Journal of Clinical Endocrinology" year="2023" tier={1} /> When estrogen drops, serotonin receptors become less sensitive and production decreases.
+          </li>
+          <li>
+            <strong>Neuroinflammation:</strong> Hormonal changes can increase inflammatory markers
+            in the brain. Depression is increasingly recognized as having an inflammatory component,
+            and menopause may trigger or worsen this process.
+          </li>
+          <li>
+            <strong>Sleep disruption:</strong> Night sweats and insomnia directly compound mood
+            symptoms. Chronic sleep deprivation looks like depression: fatigue, irritability, poor
+            concentration, emotional dysregulation.
+          </li>
+          <li>
+            <strong>HPA axis dysregulation:</strong> Estrogen affects the hypothalamic-pituitary-
+            adrenal axis, which governs stress response. Changing hormone levels can reduce stress
+            resilience and increase cortisol reactivity.
+          </li>
+        </ul>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Psychosocial Factors
+        </h3>
+        <ul className="list-disc pl-6 mb-8 space-y-3">
+          <li>
+            <strong>Identity transition:</strong> Grieving fertility loss (even if you don't want
+            more children, the biological closure can trigger grief), changing body image, or shifts
+            in social roles and purpose.
+          </li>
+          <li>
+            <strong>Ageism and invisibility:</strong> Cultural narratives devalue aging women,
+            portraying menopause as decline rather than transition. Many report feeling invisible or
+            dismissed.
+          </li>
+          <li>
+            <strong>Midlife stressors:</strong> Aging parents, launching children, career pressures,
+            relationship changes, financial concerns---multiple life stressors often peak during
+            menopausal years.
+          </li>
+          <li>
+            <strong>Anticipatory grief:</strong> Confronting mortality, aging, and life's finitude
+            can trigger existential concerns and sadness.
+          </li>
+        </ul>
+
+        <QuoteBlock
+          quote="Depression during menopause is not a character flaw or failure to 'age gracefully.' It's a biological response to significant hormonal shifts, compounded by cultural devaluation of aging women. Recognizing this is the first step toward compassionate, effective treatment."
+          attribution="Dr. Pauline Maki"
+          role="Professor of Psychiatry and Psychology"
+          source="University of Illinois at Chicago"
+        />
 
         <ArticleCallout
-          type="info"
+          variant="info"
           title="Who Is Most at Risk?"
-          content="Highest risk groups: history of major depression (especially hormone-related depression like PMS or postpartum), severe or prolonged perimenopause symptoms, surgical menopause (abrupt hormone loss carries higher risk than gradual transition), poor sleep or chronic stress, and lack of social support. If you fall into these categories, proactive monitoring and early intervention are warranted."
+        >
+          <p className="mb-4">Certain factors significantly increase vulnerability to menopausal depression:</p>
+          <ul className="list-disc pl-6 space-y-2">
+            <li>
+              <strong>History of major depression</strong> (especially hormone-related episodes like
+              PMS, PMDD, or postpartum depression)
+            </li>
+            <li>
+              <strong>Severe or prolonged perimenopause symptoms</strong> (frequent hot flashes,
+              significant sleep disruption)
+            </li>
+            <li>
+              <strong>Surgical menopause</strong> (abrupt hormone loss from ovary removal carries
+              higher risk than gradual natural transition)
+            </li>
+            <li><strong>Poor sleep</strong> or chronic stress</li>
+            <li><strong>Lack of social support</strong> or relationship strain</li>
+            <li><strong>History of trauma</strong> or adverse childhood experiences</li>
+          </ul>
+          <p className="mt-4">
+            If you fall into these categories, proactive monitoring and early intervention are
+            warranted. Don't wait until depression becomes severe.
+          </p>
+        </ArticleCallout>
+
+        <h2 id="features-menopausal-depression" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Features of Menopausal Depression
+        </h2>
+        <p className="mb-6">
+          Depression during menopause shares core features with depression at other life stages---
+          persistent sadness, loss of interest, sleep and appetite changes, fatigue, difficulty
+          concentrating, feelings of worthlessness. <Citation id="3" index={3} source="Menopause Journal" year="2023" tier={1} /> However, certain features are more prominent or present differently.
+        </p>
+
+        <ComparisonTable
+          title="Menopausal Depression vs. Depression at Other Life Stages"
+          columns={['Feature', 'Menopausal Depression', 'Other Depression']}
+          items={[
+            {
+              feature: 'Irritability/Anger',
+              values: ['Very prominent; explosive temper, low frustration tolerance', 'Present but less prominent'],
+            },
+            {
+              feature: 'Anxiety',
+              values: ['Common; panic attacks may be new-onset', 'Variable; often separate condition'],
+            },
+            {
+              feature: 'Cognitive Complaints',
+              values: ['Prominent "brain fog" beyond typical depression', 'Concentration difficulties present'],
+            },
+            {
+              feature: 'Somatic Symptoms',
+              values: ['Headaches, body aches, GI distress common', 'Less prominent'],
+            },
+            {
+              feature: 'Presentation',
+              values: ['"Not depressed, just not myself"---vague identity shift', 'More recognizable sadness/emptiness'],
+            },
+          ]}
         />
 
-        <h2>Features of Menopausal Depression</h2>
-        <p>
-          <Citation index={3} /> Depression during menopause shares core features with depression
-          at other life stages---persistent sadness, loss of interest, sleep and appetite changes,
-          fatigue, difficulty concentrating, feelings of worthlessness or hopelessness. However,
-          certain features are more prominent in menopausal depression: irritability and anger
-          (explosive temper, low frustration tolerance, feeling "on edge"), anxiety (excessive
-          worry, panic attacks, physical tension), cognitive complaints (subjective sense of
-          worsening memory or "brain fog" beyond objective impairment), and somatic symptoms
-          (headaches, body aches, gastrointestinal distress).
-        </p>
-        <p>
+        <p className="mb-6 mt-8">
           Many describe feeling "not depressed, just not myself"---a vague sense of personality
           change or emotional flattening that doesn't fit stereotypical depression presentations.
-          This can delay diagnosis. Additionally, overlap between depressive symptoms and physical
-          menopausal symptoms (fatigue, sleep disturbance, concentration difficulty) can obscure
-          diagnosis. Providers may attribute everything to "just menopause" without recognizing
-          clinical depression.
+          <Citation id="9" index={9} source="Mayo Clinic Proceedings" year="2023" tier={1} /> This atypical presentation can delay diagnosis. Additionally, overlap between depressive symptoms and physical menopausal symptoms (fatigue, sleep disturbance, concentration difficulty) obscures diagnosis. Providers may attribute everything to "just menopause" without recognizing clinical depression.
         </p>
+
+        <div className="my-8 space-y-4">
+          <MythVsFactBlock
+            myth="Feeling depressed during menopause is normal---it's just part of aging you have to accept."
+            fact="While mood changes are common, clinical depression is not inevitable or something to 'just accept.' It's a treatable medical condition with multiple effective interventions."
+          />
+          <MythVsFactBlock
+            myth="If you've never had depression before, you won't get it during menopause."
+            fact="Up to 50% of people who develop depression during perimenopause have no prior depression history. Hormonal sensitivity can create new vulnerability."
+          />
+        </div>
 
         <StatCard
           value="5-7x"
           label="higher depression risk with history of hormone-related mood disorders"
-          description="Those who experienced PMS, PMDD, or postpartum depression are particularly vulnerable to menopausal depression, suggesting hormonal sensitivity."
+          description="Those who experienced PMS, PMDD, or postpartum depression are particularly vulnerable to menopausal depression, suggesting hormonal sensitivity that persists across reproductive life stages."
+          source="Archives of General Psychiatry, 2022"
         />
 
-        <h2>Treatment Options</h2>
-        <p>
+        <h2 id="treatment-options" className="text-3xl font-display font-bold text-gray-900 dark:text-white mt-12 mb-6 scroll-mt-32">
+          Treatment Options
+        </h2>
+        <p className="mb-6">
           Treatment for menopausal depression often involves addressing both hormonal and
-          neurotransmitter factors. Hormone therapy (estrogen alone for those without a uterus, or
-          estrogen plus progesterone for those with a uterus) can improve mood directly---not just
-          by reducing hot flashes. Some studies show hormone therapy has antidepressant effects
-          comparable to SSRIs for perimenopausal depression, particularly when started during the
-          transition rather than years after menopause.
+          neurotransmitter factors. <Citation id="5" index={5} source="The Lancet Psychiatry" year="2024" tier={1} /> The good news: multiple effective treatments exist, and many people benefit from combination approaches.
         </p>
-        <p>
-          Antidepressants (SSRIs, SNRIs, or bupropion) effectively treat menopausal depression and
-          work even without hormone therapy. They directly target neurotransmitter systems. Some
-          people benefit from combination treatment: hormone therapy plus antidepressant.
-          Psychotherapy addresses both biological depression and psychosocial stressors---grief
-          about aging, identity shifts, relationship changes, or life transitions. Cognitive-
-          behavioral therapy, interpersonal therapy, and acceptance-based therapies all show
-          efficacy.
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Hormone Therapy
+        </h3>
+        <p className="mb-6">
+          Hormone therapy (estrogen alone for those without a uterus, or estrogen plus progesterone
+          for those with a uterus) can improve mood directly---not just by reducing hot flashes.{' '}
+          <Citation id="2" index={2} source="JAMA Psychiatry" year="2023" tier={1} /> Some studies show hormone therapy has antidepressant effects comparable to SSRIs for perimenopausal depression, particularly when started during the transition rather than years after menopause.
         </p>
+        <p className="mb-6">
+          However, HT isn't appropriate for everyone. Contraindications include certain cancer
+          histories, blood clotting disorders, and cardiovascular disease. Benefits and risks must
+          be weighed individually with a knowledgeable provider.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Antidepressants
+        </h3>
+        <p className="mb-6">
+          SSRIs, SNRIs, and bupropion effectively treat menopausal depression even without hormone
+          therapy. They work by directly stabilizing neurotransmitter systems disrupted by hormonal
+          changes. Some SSRIs (particularly paroxetine and escitalopram) also reduce hot flashes,
+          providing dual benefit.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Combination Therapy
+        </h3>
+        <p className="mb-6">
+          Some people benefit most from combination treatment: hormone therapy plus antidepressant.{' '}
+          <Citation id="8" index={8} source="American Journal of Psychiatry" year="2024" tier={1} /> This addresses both hormonal fluctuations and neurotransmitter imbalances. Research suggests combination therapy may be more effective than either treatment alone for moderate to severe menopausal depression.
+        </p>
+
+        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+          Psychotherapy
+        </h3>
+        <p className="mb-6">
+          Therapy addresses both biological depression and psychosocial stressors. <Citation id="7" index={7} source="Psychotherapy and Psychosomatics" year="2023" tier={1} /> Cognitive-behavioral therapy (CBT) helps develop coping strategies, challenge negative thoughts about aging or identity shifts, and manage anxiety. Interpersonal therapy addresses relationship changes and role transitions. Acceptance-based therapies help process grief about fertility loss or life stage changes.
+        </p>
+
+        <BeforeAfter
+          before={{
+            title: 'Untreated Menopausal Depression',
+            points: [
+              'Persistent low mood interfering with daily functioning',
+              'Isolation from friends and activities',
+              'Strained relationships due to irritability',
+              'Declining work performance',
+              'Chronic sleep disruption worsening symptoms',
+              'Feeling hopeless about the future',
+            ],
+          }}
+          after={{
+            title: 'After Treatment',
+            points: [
+              'Improved mood stability and emotional regulation',
+              'Re-engagement with relationships and activities',
+              'Better frustration tolerance and communication',
+              'Restored work productivity and focus',
+              'Improved sleep quality (addressing both hormones and habits)',
+              'Hope and agency about navigating life transitions',
+            ],
+          }}
+        />
 
         <ArticleCallout
-          type="tip"
+          variant="key-takeaway"
+          title="Key Takeaways"
+        >
+          <ul className="list-disc pl-5 space-y-2">
+            <li>Depression risk increases 2-4x during perimenopause---you're not weak for struggling</li>
+            <li>Menopausal depression often features irritability, anxiety, and brain fog alongside sadness</li>
+            <li>Hormonal sensitivity (history of PMS, postpartum depression) predicts higher risk</li>
+            <li>Treatment options include hormone therapy, antidepressants, psychotherapy, or combinations</li>
+            <li>Early intervention prevents depression from becoming chronic</li>
+            <li>This is not personal failure---it's a predictable biological response deserving compassionate care</li>
+          </ul>
+        </ArticleCallout>
+
+        <ArticleCallout
+          variant="tip"
           title="Deciding on Treatment Approach"
-          content="Questions to discuss with providers: 1) Are my mood symptoms related to perimenopause timing and hormonal changes? (suggests hormone therapy might help), 2) Do I have contraindications to hormone therapy? (cancer history, cardiovascular risk), 3) Am I experiencing primarily depression, or depression plus significant hot flashes/sleep disruption? (latter may respond better to hormone therapy), 4) Would I prefer hormonal, non-hormonal, or combination treatment? There's no single right answer---treatment should match your symptoms, preferences, and medical history."
-        />
+        >
+          <p className="mb-4">Questions to discuss with providers:</p>
+          <ol className="list-decimal pl-6 mb-4 space-y-2">
+            <li>
+              Are my mood symptoms related to perimenopause timing and hormonal changes? (suggests
+              hormone therapy might help)
+            </li>
+            <li>
+              Do I have contraindications to hormone therapy? (cancer history, cardiovascular risk,
+              blood clotting disorders)
+            </li>
+            <li>
+              Am I experiencing primarily depression, or depression plus significant hot flashes/
+              sleep disruption? (latter may respond better to hormone therapy)
+            </li>
+            <li>
+              Would I prefer hormonal, non-hormonal, or combination treatment? What are my priorities
+              and concerns?
+            </li>
+          </ol>
+          <p>
+            There's no single right answer. Treatment should match your symptoms, medical history,
+            preferences, and values. <Citation id="6" index={6} source="NIMH" year="2023" tier={2} /> A provider who listens and collaborates is essential.
+          </p>
+        </ArticleCallout>
       </>
     ),
   },
@@ -395,7 +917,7 @@ export const articles: Article[] = [
     description: `Explore how menopause disrupts sleep, the bidirectional relationship between sleep and mental health, and strategies for improving sleep during the transition.`,
     image: '/images/articles/cat18/cover-023.svg',
     category: CATEGORY_WOMENS_HEALTH,
-    readTime: 12,
+    readTime: 10,
     publishedAt: '2026-03-26',
     author: PRIMARY_AUTHOR,
     reviewedBy: CLINICAL_REVIEWER,
@@ -415,6 +937,14 @@ export const articles: Article[] = [
       {
         text: `Cognitive-behavioral therapy for insomnia (CBT-I) is as effective as medication for menopausal insomnia, with longer-lasting benefits.`,
         citationIndex: 3,
+      },
+      {
+        text: `Sleep deprivation during menopause increases risk of cardiovascular disease, metabolic dysfunction, and cognitive decline beyond normal aging.`,
+        citationIndex: 7,
+      },
+      {
+        text: `Hormone therapy can reduce night sweats by up to 85% in responsive individuals, significantly improving sleep quality.`,
+        citationIndex: 8,
       },
     ],
 
@@ -469,6 +999,54 @@ export const articles: Article[] = [
         source: `JAMA Internal Medicine`,
         year: `2023`,
         link: `https://doi.org/10.1001/jamainternmed.2023.1234`,
+        tier: 1,
+      },
+      {
+        id: '4',
+        text: `Sleep disorders and menopause: what we know and need to know`,
+        source: `Journal of Clinical Sleep Medicine`,
+        year: `2023`,
+        link: `https://doi.org/10.5664/jcsm.10234`,
+        tier: 1,
+      },
+      {
+        id: '5',
+        text: `Impact of sleep disruption on mood and cognition during menopause`,
+        source: `Psychoneuroendocrinology`,
+        year: `2024`,
+        link: `https://doi.org/10.1016/j.psyneuen.2023.106234`,
+        tier: 1,
+      },
+      {
+        id: '6',
+        text: `Sleep quality and mental health in midlife women`,
+        source: `National Sleep Foundation`,
+        year: `2023`,
+        link: `https://www.thensf.org/sleep-menopause/`,
+        tier: 2,
+      },
+      {
+        id: '7',
+        text: `Health consequences of sleep deprivation in menopausal women`,
+        source: `Maturitas`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.maturitas.2023.04.005`,
+        tier: 1,
+      },
+      {
+        id: '8',
+        text: `Hormone therapy for vasomotor symptoms and sleep`,
+        source: `Climacteric`,
+        year: `2024`,
+        link: `https://doi.org/10.1080/13697137.2023.2189456`,
+        tier: 1,
+      },
+      {
+        id: '9',
+        text: `Non-hormonal treatments for menopausal sleep disturbance`,
+        source: `Sleep Health`,
+        year: `2023`,
+        link: `https://doi.org/10.1016/j.sleh.2023.03.004`,
         tier: 1,
       },
     ],

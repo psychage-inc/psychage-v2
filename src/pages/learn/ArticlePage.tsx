@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback, useRef, useMemo } from 'react';
-import { Bookmark, ChevronRight, ChevronDown, ChevronUp, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Moon, Wind } from 'lucide-react';
+import { Bookmark, ChevronRight, ChevronDown, ChevronUp, Clock, Calendar, Search, ArrowRight, BrainCircuit, PenTool, Compass, Sparkles } from 'lucide-react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useArticleService } from '@/services/articleService';
 import { Article } from '@/types/models';
@@ -145,7 +145,7 @@ const ArticlePage: React.FC = () => {
         return article.title.length > 60 ? article.title.slice(0, 57) + '...' : article.title;
     }, [article]);
 
-    // Reviewer info
+    // Reviewer info (kept for SEO structured data, removed from visible UI)
     const reviewerName = article?.reviewedBy?.name || 'Dr. Lena Dobson, Ph.D.';
     const reviewerRole = article?.reviewedBy?.role || 'Clinical Neuropsychology';
 
@@ -310,13 +310,6 @@ const ArticlePage: React.FC = () => {
                 </motion.div>
             </div>
 
-            {/* Clinical Authority Line */}
-            <div className="container mx-auto max-w-content px-6 py-3">
-                <p className="text-xs text-text-tertiary">
-                    Reviewed by <span className="font-semibold text-text-secondary">{reviewerName}</span>, {reviewerRole}
-                </p>
-            </div>
-
             {/* Main Layout — 2 columns on desktop */}
             <main className="container mx-auto max-w-content px-6 pb-16 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-8 lg:gap-12">
@@ -330,27 +323,29 @@ const ArticlePage: React.FC = () => {
                             </InteractiveCard>
 
                             {/* Share + Bookmark */}
-                            <div className="space-y-3">
+                            <div className="space-y-2">
                                 <p className="text-xs font-bold uppercase tracking-widest text-text-tertiary pl-1">Share</p>
-                                <ShareButtons
-                                    title={article.title}
-                                    url={currentUrl}
-                                    orientation="vertical"
-                                />
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    onClick={handleBookmark}
-                                    className={cn(
-                                        "w-10 h-10 rounded-full border shadow-sm flex items-center justify-center transition-all",
-                                        bookmarked
-                                            ? "bg-primary text-white border-primary"
-                                            : "bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-500 hover:text-primary hover:border-primary/30"
-                                    )}
-                                    aria-label={bookmarked ? "Remove bookmark" : "Bookmark article"}
-                                >
-                                    <Bookmark size={16} fill={bookmarked ? "currentColor" : "none"} />
-                                </motion.button>
+                                <div className="flex flex-wrap items-center gap-2">
+                                    <ShareButtons
+                                        title={article.title}
+                                        url={currentUrl}
+                                        orientation="horizontal"
+                                    />
+                                    <motion.button
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                        onClick={handleBookmark}
+                                        className={cn(
+                                            "w-10 h-10 rounded-full border shadow-sm flex items-center justify-center transition-all",
+                                            bookmarked
+                                                ? "bg-primary text-white border-primary"
+                                                : "bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 text-gray-500 hover:text-primary hover:border-primary/30"
+                                        )}
+                                        aria-label={bookmarked ? "Remove bookmark" : "Bookmark article"}
+                                    >
+                                        <Bookmark size={16} fill={bookmarked ? "currentColor" : "none"} />
+                                    </motion.button>
+                                </div>
                             </div>
 
                             {/* Provider CTA */}
@@ -457,20 +452,6 @@ const ArticlePage: React.FC = () => {
                             )}
                         </div>
 
-                        {/* Expert Review Badge */}
-                        <InteractiveCard className="mt-12 flex items-center gap-5 p-6 bg-surface/40 backdrop-blur-md">
-                            <div className="w-14 h-14 bg-success/10 rounded-full flex items-center justify-center text-success border border-success/20 shadow-inner">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /><path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></svg>
-                            </div>
-                            <div>
-                                <p className="text-base font-bold text-text-primary mb-1">Medically Reviewed</p>
-                                <p className="text-sm text-text-secondary mb-1">
-                                    By <span className="font-semibold text-text-primary">{reviewerName}</span>, {reviewerRole}
-                                </p>
-                                <p className="text-xs text-text-tertiary">Ensuring accuracy and clinical relevance.</p>
-                            </div>
-                        </InteractiveCard>
-
                         {/* Mobile Share Buttons */}
                         <div className="mt-8 lg:hidden">
                             <p className="text-xs font-bold uppercase tracking-widest text-text-tertiary mb-3">Share this article</p>
@@ -491,7 +472,7 @@ const ArticlePage: React.FC = () => {
                         <h3 className="font-display font-bold text-2xl text-text-primary mb-8">Related Articles</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             {relatedArticles.slice(0, 3).map(rel => (
-                                <ArticleCard key={rel.id} article={rel} />
+                                <ArticleCard key={rel.id} article={rel} onClick={() => navigate(getArticleUrl(rel))} />
                             ))}
                         </div>
                         <div className="text-center mt-8">
@@ -525,8 +506,8 @@ const ArticlePage: React.FC = () => {
                         {[
                             { name: 'Clarity Score', icon: BrainCircuit, href: '/clarity-score', color: 'text-teal-600 dark:text-teal-400', bg: 'bg-teal-100 dark:bg-teal-900/40' },
                             { name: 'Mood Journal', icon: PenTool, href: '/tools/mood-journal', color: 'text-amber-600 dark:text-amber-400', bg: 'bg-amber-100 dark:bg-amber-900/40' },
-                            { name: 'Sleep Architect', icon: Moon, href: '/tools/sleep-architect', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-100 dark:bg-indigo-900/40' },
-                            { name: 'Breathwork', icon: Wind, href: '/tools/breathwork', color: 'text-sky-600 dark:text-sky-400', bg: 'bg-sky-100 dark:bg-sky-900/40' },
+                            { name: 'Symptom Navigator', icon: Compass, href: '/tools/symptom-navigator', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-100 dark:bg-indigo-900/40' },
+                            { name: 'MindMate AI', icon: Sparkles, href: '/tools/mindmate', color: 'text-violet-600 dark:text-violet-400', bg: 'bg-violet-100 dark:bg-violet-900/40' },
                         ].map((tool) => (
                             <Link
                                 key={tool.name}

@@ -1,10 +1,12 @@
 /**
- * Generate Article Seed Migrations for Categories 8-15
+ * Generate Article Seed Migrations
  *
  * Reads TSX article data from src/data/articles/ and generates SQL migration
  * files following the established seed pattern.
  *
- * Usage: npx tsx src/scripts/generate-article-seeds.ts
+ * Usage:
+ *   npx tsx src/scripts/generate-article-seeds.ts              # Generate for categories 16-22
+ *   npx tsx src/scripts/generate-article-seeds.ts --range 8-15 # Regenerate for 8-15
  */
 
 import * as fs from 'fs';
@@ -191,6 +193,143 @@ const CATEGORIES: CategoryMeta[] = [
       'Digital Connection & Modern Isolation',
     ],
   },
+  {
+    catNum: 16,
+    catPad: '16',
+    name: 'Psychosis, Schizophrenia & Severe Mental Illness',
+    slug: 'psychosis-schizophrenia',
+    description:
+      'Comprehensive education on psychotic disorders, schizophrenia spectrum conditions, and severe mental illness — from neuroscience and treatment to family support and recovery.',
+    icon: 'Brain',
+    displayOrder: 16,
+    articleTarget: 60,
+    color: '#7C3AED',
+    subTopics: [
+      'Understanding Psychosis',
+      'Schizophrenia',
+      'Treatment for Psychotic Conditions',
+      'Supporting Someone With Psychosis',
+      'Related Severe Conditions',
+      'Psychosis Research and Emerging Approaches',
+    ],
+  },
+  {
+    catNum: 17,
+    catPad: '17',
+    name: 'Aging, Dementia & Late-Life Mental Health',
+    slug: 'aging-dementia-late-life',
+    description:
+      'Comprehensive resources on mental health challenges unique to older adults, including dementia, Alzheimer disease, late-life depression, cognitive decline, caregiving, and strategies for healthy aging.',
+    icon: 'Clock',
+    displayOrder: 17,
+    articleTarget: 55,
+    color: '#D97706',
+    subTopics: [
+      'Understanding Mental Health in Later Life',
+      'Dementia and Alzheimer Disease',
+      'Depression and Anxiety in Older Adults',
+      'Caregiving and Family Support',
+      'Cognitive Aging and Brain Health',
+      'Late-Life Mental Health Research and Interventions',
+    ],
+  },
+  {
+    catNum: 18,
+    catPad: '18',
+    name: "Women's Mental Health",
+    slug: 'womens-mental-health',
+    description:
+      "Comprehensive coverage of mental health issues affecting women across the lifespan, from reproductive health to gender-specific risk factors, treatment considerations, and sociocultural influences on women's psychological well-being.",
+    icon: 'Heart',
+    displayOrder: 18,
+    articleTarget: 55,
+    color: '#EC4899',
+    subTopics: [
+      'Reproductive Mental Health',
+      'Perinatal and Postpartum Mental Health',
+      'Menopause and Perimenopause',
+      'Trauma and PTSD in Women',
+      'Eating Disorders',
+      'Depression and Anxiety in Women',
+      'Sociocultural Factors',
+    ],
+  },
+  {
+    catNum: 19,
+    catPad: '19',
+    name: "Men's Mental Health",
+    slug: 'mens-mental-health',
+    description:
+      "Evidence-based education on men's mental health — exploring the gender paradox in suicide, masked depression, help-seeking barriers, and the impact of cultural norms on men's psychological wellbeing.",
+    icon: 'Shield',
+    displayOrder: 19,
+    articleTarget: 55,
+    color: '#2563EB',
+    subTopics: [
+      "Understanding Men's Mental Health",
+      "Men's Relationships and Family",
+      "Men's Physical and Mental Health",
+      'Men in Specific Contexts',
+      "Myths About Men's Mental Health",
+      "Men's Health Interventions Part 1",
+      "Men's Health Interventions Part 2",
+    ],
+  },
+  {
+    catNum: 20,
+    catPad: '20',
+    name: 'Chronic Illness, Pain & Medical Psychology',
+    slug: 'chronic-illness-pain',
+    description:
+      'Evidence-based education on the psychological dimensions of chronic illness — covering pain neuroscience, medical trauma, identity shifts after diagnosis, and resilience-building strategies for people living with ongoing health conditions.',
+    icon: 'Stethoscope',
+    displayOrder: 20,
+    articleTarget: 55,
+    color: '#059669',
+    subTopics: [
+      'Psychology of Chronic Illness',
+      'Chronic Pain and the Mind',
+      'Specific Medical Conditions and Mental Health',
+      'Medical Trauma and Healthcare Experiences',
+      'Supporting Wellbeing Alongside Illness',
+      'Psychological Resilience in Medical Settings',
+    ],
+  },
+  {
+    catNum: 21,
+    catPad: '21',
+    name: 'Technology, Digital Life & Mental Health',
+    slug: 'technology-digital-life',
+    description:
+      'Evidence-based education on the psychological impact of technology — from social media and smartphone use to emerging tools like VR therapy and digital therapeutics, exploring both harms and benefits for mental health.',
+    icon: 'Laptop',
+    displayOrder: 21,
+    articleTarget: 55,
+    color: '#6366F1',
+    subTopics: [
+      'Social Media and Psychological Impact',
+      'Digital Addiction and Compulsive Use',
+      'AI, Emerging Technology & Mental Health',
+      'Online Relationships and Community',
+      'Healthy Digital Life',
+      'Digital Culture and Society',
+    ],
+  },
+  {
+    catNum: 22,
+    catPad: '22',
+    name: 'Spirituality, Meaning & Existential Mental Health',
+    slug: 'spirituality-meaning',
+    description:
+      'Evidence-based exploration of existential psychology — confronting questions of meaning, mortality, freedom, and isolation through philosophical frameworks and therapeutic approaches that help people navigate the deepest human concerns.',
+    icon: 'Compass',
+    displayOrder: 22,
+    articleTarget: 40,
+    color: '#8B5CF6',
+    subTopics: [
+      'Existential Psychology',
+    ],
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -260,11 +399,27 @@ async function main() {
   const migrationsDir = path.join(projectRoot, 'supabase/migrations');
   const dataDir = path.join(projectRoot, 'src/data/articles');
 
+  // Parse --range flag (e.g., --range 16-22)
+  const rangeIdx = process.argv.indexOf('--range');
+  let minCat = 16;
+  let maxCat = 22;
+  if (rangeIdx >= 0 && process.argv[rangeIdx + 1]) {
+    const parts = process.argv[rangeIdx + 1].split('-').map(Number);
+    minCat = parts[0] || 16;
+    maxCat = parts[1] || parts[0] || 22;
+  }
+
+  const filteredCategories = CATEGORIES.filter(
+    (c) => c.catNum >= minCat && c.catNum <= maxCat
+  );
+
+  console.log(`\nGenerating seeds for categories ${minCat}-${maxCat} (${filteredCategories.length} categories)\n`);
+
   let totalFiles = 0;
   let totalArticles = 0;
   let totalCitations = 0;
 
-  for (const cat of CATEGORIES) {
+  for (const cat of filteredCategories) {
     console.log(`\n📦 Processing Category ${cat.catNum}: ${cat.name}`);
 
     // Dynamically import the category module
@@ -320,8 +475,9 @@ async function main() {
       const subArticles = subcatGroups[subIdx];
       const subNum = String(subIdx + 1).padStart(2, '0');
 
-      // Migration file naming: 20260321CCSS01 where CC=cat num, SS=subcat num
-      const migrationName = `20260321${cat.catPad}${subNum}01_seed_category${cat.catPad}_subcategory${subNum}.sql`;
+      // Migration file naming: date prefix based on category range to avoid conflicts
+      const datePrefix = cat.catNum >= 16 ? '20260326' : '20260321';
+      const migrationName = `${datePrefix}${cat.catPad}${subNum}01_seed_category${cat.catPad}_subcategory${subNum}.sql`;
       const migrationPath = path.join(migrationsDir, migrationName);
 
       // Compute article range from actual IDs

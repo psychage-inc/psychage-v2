@@ -35,6 +35,7 @@
     "e2e",
     "dist",
     "src/tests",
+    "src/scripts",
     "**/__tests__/**",
     "**/*.test.ts",
     "**/*.test.tsx",

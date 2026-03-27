@@ -10,17 +10,17 @@ interface DisclaimerProps {
 const Disclaimer: React.FC<DisclaimerProps> = ({ type = 'medical', className = '' }) => {
     const isMedical = type === 'medical';
     const Icon = isMedical ? AlertTriangle : Info;
-    const bgColor = isMedical ? 'bg-amber-50/50 dark:bg-amber-900/10' : 'bg-blue-50/50 dark:bg-blue-900/10';
-    const borderColor = isMedical ? 'border-amber-100 dark:border-amber-900/30' : 'border-blue-100 dark:border-blue-900/30';
-    const textColor = isMedical ? 'text-amber-800/80 dark:text-amber-400' : 'text-blue-800/80 dark:text-blue-400';
-    const iconColor = isMedical ? 'text-amber-500' : 'text-blue-500';
+    const bgColor = isMedical ? 'bg-amber-700 dark:bg-amber-700' : 'bg-blue-600 dark:bg-blue-700';
+    const borderColor = isMedical ? 'border-amber-800 dark:border-amber-600' : 'border-blue-700 dark:border-blue-500';
+    const textColor = 'text-white';
+    const iconColor = 'text-white';
 
     return (
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className={`p-6 rounded-xl border ${bgColor} ${borderColor} ${className}`}
+            className={`p-6 rounded-xl border shadow-md ${bgColor} ${borderColor} ${className}`}
         >
             <div className="flex gap-4">
                 <div className={`shrink-0 ${iconColor} mt-0.5`}>

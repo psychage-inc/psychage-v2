@@ -58,7 +58,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
     return (
         <div
             className={cn(
-                'bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200/60 dark:border-gray-800/60',
+                'bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 dark:from-primary/20 dark:via-primary/10 dark:to-primary/20 backdrop-blur-md border-b border-primary/20 dark:border-primary/30',
                 className,
             )}
             role="toolbar"
@@ -73,7 +73,7 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                             'flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors shrink-0',
                             showPlayer
                                 ? 'bg-primary text-white'
-                                : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary',
+                                : 'bg-white dark:bg-gray-900 text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm',
                         )}
                     >
                         <Headphones size={16} />
@@ -84,34 +84,35 @@ const AccessibilityBar: React.FC<AccessibilityBarProps> = ({
                     {/* Read summary */}
                     <button
                         onClick={scrollToSummary}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary transition-colors shrink-0"
+                        className="flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium bg-white dark:bg-gray-900 text-primary border border-primary/30 hover:bg-primary hover:text-white hover:border-primary shadow-sm transition-colors shrink-0"
                     >
                         <span className="hidden sm:inline">Read Summary</span>
                         <span className="sm:hidden">Summary</span>
                     </button>
 
                     {/* Font size controls */}
-                    <div className="flex items-center gap-1 ml-auto shrink-0">
-                        <Type size={14} className="text-gray-400 mr-1" />
+                    <div className="flex items-center gap-1.5 ml-auto shrink-0" role="group" aria-label="Text size controls">
+                        <Type size={12} className="text-primary/50 dark:text-primary/40" aria-hidden="true" />
                         <button
                             onClick={() => adjustFontSize('down')}
                             disabled={fontSizeIndex === 0}
-                            className="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                            aria-label="Decrease font size"
+                            className="w-7 h-7 rounded-full bg-white dark:bg-gray-900 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                            aria-label={`Decrease font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
                         >
                             <Minus size={12} />
                         </button>
-                        <span className="text-xs font-medium text-gray-500 dark:text-gray-400 w-5 text-center">
+                        <span className="text-xs font-semibold text-primary/70 dark:text-primary/60 w-6 text-center select-none" aria-live="polite">
                             {FONT_SIZES[fontSizeIndex].label}
                         </span>
                         <button
                             onClick={() => adjustFontSize('up')}
                             disabled={fontSizeIndex === FONT_SIZES.length - 1}
-                            className="w-7 h-7 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-                            aria-label="Increase font size"
+                            className="w-7 h-7 rounded-full bg-white dark:bg-gray-900 border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/10 dark:hover:bg-primary/20 disabled:opacity-40 disabled:cursor-not-allowed transition-colors shadow-sm"
+                            aria-label={`Increase font size, currently ${FONT_SIZES[fontSizeIndex].label}`}
                         >
                             <Plus size={12} />
                         </button>
+                        <Type size={18} className="text-primary/70 dark:text-primary/60" aria-hidden="true" />
                     </div>
                 </div>
 

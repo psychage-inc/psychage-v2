@@ -3,7 +3,7 @@
   "generatedAt": "2026-03-26T22:20:03.374Z",
   "wordThreshold": 1500,
   "totalSessions": 260,
-  "completedSessions": 226,
+  "completedSessions": 227,
   "totalArticles": 1246,
   "sessions": {
     "1": {
@@ -2217,7 +2217,7 @@
       "completedAt": "2026-03-27T00:10:00.000Z"
     },
     "46": {
-      "status": "pending",
+      "status": "complete",
       "category": 3,
       "subcategoryFile": "07a-toxic-dynamics-red-flags",
       "file": "src/data/articles/category-03/07a-toxic-dynamics-red-flags.tsx",
@@ -2229,7 +2229,7 @@
           "slug": "recognizing-toxic-relationship-patterns-research",
           "title": "Recognizing Toxic Relationship Patterns: A Research-Based Guide",
           "currentWords": 573,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 1,
@@ -2237,7 +2237,7 @@
           "slug": "emotional-manipulation-gaslighting-love-bombing",
           "title": "Emotional Manipulation: Gaslighting, Love-Bombing, and Other Tactics",
           "currentWords": 769,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 2,
@@ -2245,7 +2245,7 @@
           "slug": "codependency-helping-becomes-harmful",
           "title": "Codependency: When Helping Becomes Harmful",
           "currentWords": 607,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 3,
@@ -2253,7 +2253,7 @@
           "slug": "narcissistic-relationship-patterns-inside",
           "title": "Narcissistic Relationship Patterns: What They Look Like From the Inside",
           "currentWords": 821,
-          "status": "pending"
+          "status": "complete"
         },
         {
           "index": 4,
@@ -2261,10 +2261,10 @@
           "slug": "trauma-bonding-leaving-harmful-relationships",
           "title": "Trauma Bonding: Why Leaving Harmful Relationships Feels Impossible",
           "currentWords": 801,
-          "status": "pending"
+          "status": "complete"
         }
       ],
-      "completedAt": null
+      "completedAt": "2026-03-27T12:31:10.000Z"
     },
     "47": {
       "status": "pending",

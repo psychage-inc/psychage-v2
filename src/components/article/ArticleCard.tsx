@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Clock, ArrowUpRight, Bookmark, BookOpen } from 'lucide-react';
+import { Clock, ArrowUpRight, Bookmark } from 'lucide-react';
 import Badge from '../ui/Badge';
 import { Article } from '../../types';
 import { NoiseTexture } from '../home/hero/HeroAssets';
@@ -19,6 +19,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
   const bookmarked = isBookmarked(article.id);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const theme = getCategoryTheme(article.category.slug);
+  const FallbackIcon = theme.icon;
 
   const handleBookmark = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -30,7 +32,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
 
   return (
     <InteractiveCard
-      className="group h-full flex flex-col cursor-pointer border-white/5 bg-white/5 backdrop-blur-sm dark:bg-white/5 dark:border-white/5 hover:border-primary/20 hover:bg-white/10 transition-all duration-300"
+      className={`group h-full flex flex-col cursor-pointer shadow-sm hover:shadow-md bg-white dark:bg-gray-900 ${theme.classes.border} ${theme.classes.borderDark} hover:border-primary/20 transition-all duration-300`}
       onClick={onClick}
       spotlightColor={getCategoryTheme(article.category.slug).classes.spotlight}
     >
@@ -48,8 +50,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article, onClick }) => {
             onError={() => setImgError(true)}
           />
         ) : (
-          <div className="w-full h-full bg-gradient-to-br from-teal-500/20 via-teal-500/10 to-transparent flex items-center justify-center">
-            <BookOpen size={48} className="text-teal-500/30" />
+          <div className={`w-full h-full flex items-center justify-center ${theme.classes.bgLight} ${theme.classes.bgLightDark}`}>
+            <FallbackIcon size={48} className={`${theme.classes.text} ${theme.classes.textDark} opacity-40`} />
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -34,20 +34,12 @@ const MeshGradient = ({ className }: { className?: string }) => (
     <div className={cn("absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-background pointer-events-none", className)} />
 );
 
-/** Extract plain text from article content for TTS */
-function extractPlainText(content: React.ReactNode): string {
-    if (typeof content === 'string') {
-        const div = document.createElement('div');
-        div.innerHTML = content;
-        return div.textContent || div.innerText || '';
-    }
-    return '';
-}
-
-/** Estimate read time in minutes from word count (~225 wpm average) */
+/** Estimate read time in minutes from word count (~225 wpm average). Only works for string (HTML) content. */
 function estimateReadTime(content: React.ReactNode): number {
-    const text = extractPlainText(content);
-    const wordCount = text.split(/\s+/).filter(Boolean).length;
+    if (typeof content !== 'string') return 1;
+    const div = document.createElement('div');
+    div.innerHTML = content;
+    const wordCount = (div.textContent || '').split(/\s+/).filter(Boolean).length;
     return Math.max(1, Math.round(wordCount / 225));
 }
 
@@ -118,10 +110,20 @@ const ArticlePage: React.FC = () => {
         window.scrollTo(0, 0);
     }, [articleSlug]);
 
-    // Extract plain text for TTS
-    const articlePlainText = useMemo(() => {
-        if (!article?.content) return '';
-        return extractPlainText(article.content);
+    // Extract plain text for TTS from the rendered DOM
+    const [articlePlainText, setArticlePlainText] = useState('');
+    useEffect(() => {
+        if (!article?.content) {
+            setArticlePlainText('');
+            return;
+        }
+        const raf = requestAnimationFrame(() => {
+            const el = articleContentRef.current;
+            if (el) {
+                setArticlePlainText(el.textContent || '');
+            }
+        });
+        return () => cancelAnimationFrame(raf);
     }, [article?.content]);
 
     // Show back-to-top after scrolling past hero

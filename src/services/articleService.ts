@@ -123,9 +123,10 @@ export const articleService = {
      * Priority: Supabase > Mock
      */
     getAll: async (params?: { category?: string; featured?: boolean }): Promise<ArticleWithContent[]> => {
-        // Try Supabase first — OPTIMIZED: Only fetch fields needed for list view (97.9% smaller, 61% faster)
+        let supabaseArticles: ArticleWithContent[] = [];
+
+        // Try Supabase first — OPTIMIZED: Only fetch fields needed for list view
         try {
-            // Exclude 'content' field for list views - it's massive (1600-1800 words per article)
             const listFields = 'id, slug, title, seo_description, hero_image_url, category_id, read_time, status, created_at, featured, tags';
             let selectString = `${listFields}, category:article_categories!category_id(id, name, slug, description)`;
 
@@ -136,7 +137,7 @@ export const articleService = {
             let query = supabase.from('articles').select(selectString)
                 .eq('status', 'published')
                 .order('created_at', { ascending: false })
-                .limit(200); // Reasonable limit for initial load
+                .limit(200);
 
             if (params?.featured) {
                 query = query.eq('featured', true);
@@ -150,24 +151,34 @@ export const articleService = {
             if (error) throw error;
 
             if (data && data.length > 0) {
-                const sizeKB = (JSON.stringify(data).length / 1024).toFixed(1);
-                console.log(`[ArticleService] Fetched ${data.length} articles from Supabase (${sizeKB}KB)`);
-                return (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
+                supabaseArticles = (data as unknown as DBArticle[]).map(mapSupabaseToArticle);
             }
         } catch (error) {
             console.warn('[ArticleService] Supabase fetch failed, using mock data:', error);
         }
 
-        // Final fallback to mock data
-        console.log('[ArticleService] Using mock data');
-        let result = publishedMockArticles.map(a => ({ ...a, _source: 'mock' as const }));
+        // Build mock article set (filtered by params)
+        let mockResult = publishedMockArticles.map(a => ({ ...a, _source: 'mock' as const }));
         if (params?.category) {
-            result = result.filter(a => a.category.slug === params.category);
+            mockResult = mockResult.filter(a => a.category.slug === params.category);
         }
         if (params?.featured) {
-            result = result.filter(a => a.featured);
+            mockResult = mockResult.filter(a => a.featured);
         }
-        return result;
+
+        // No Supabase data — return mock only
+        if (supabaseArticles.length === 0) {
+            console.log(`[ArticleService] Using ${mockResult.length} mock articles`);
+            return mockResult;
+        }
+
+        // Merge: Supabase wins for matching slugs, mock fills gaps
+        const supabaseSlugs = new Set(supabaseArticles.map(a => a.slug));
+        const supplementalMock = mockResult.filter(a => !supabaseSlugs.has(a.slug));
+        const merged = [...supabaseArticles, ...supplementalMock];
+
+        console.log(`[ArticleService] Merged ${supabaseArticles.length} Supabase + ${supplementalMock.length} mock articles (${merged.length} total)`);
+        return merged;
     },
 
     /**

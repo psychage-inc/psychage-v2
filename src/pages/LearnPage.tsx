@@ -1,19 +1,205 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import { Search, BookOpen, Sparkles, TrendingUp, ArrowRight } from 'lucide-react';
+import { Search, BookOpen, Sparkles, ArrowRight, Clock } from 'lucide-react';
 import SEO from '../components/SEO';
 import { useArticleService } from '../services/articleService';
 import { categoryService } from '../services/categoryService';
 import { Article, Category } from '../types/models';
-import { getPopularArticles } from '../utils/articleUtils';
-import CategoryCard from '../components/articles/CategoryCard';
 import ArticleCard from '../components/article/ArticleCard';
 import Button from '../components/ui/Button';
-import InteractiveCard from '../components/ui/InteractiveCard';
-import { getCategoryBadgeClasses } from '../config/categoryThemes';
-import { getArticleUrl } from '../lib/articleUrl';
+import Badge from '../components/ui/Badge';
+import { getCategoryTheme, getCategoryBadgeClasses } from '../config/categoryThemes';
+import { getArticleUrl, getCategoryUrl } from '../lib/articleUrl';
 
+// ─── Compact Horizontal Article Card ─────────────────────────────────
+const CompactArticleCard: React.FC<{ article: Article; onClick: () => void }> = ({ article, onClick }) => {
+    const theme = getCategoryTheme(article.category.slug);
+    const FallbackIcon = theme.icon;
+    return (
+    <button
+        onClick={onClick}
+        className="group flex items-center gap-4 w-full p-3 rounded-2xl bg-surface/50 border border-border/50 hover:border-primary/30 hover:bg-surface transition-all duration-300 text-left"
+    >
+        <div className="w-20 h-20 rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 shrink-0">
+            {article.image ? (
+                <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" />
+            ) : (
+                <div className={`w-full h-full flex items-center justify-center ${theme.classes.bgLight} ${theme.classes.bgLightDark}`}>
+                    <FallbackIcon size={24} className={`${theme.classes.text} ${theme.classes.textDark} opacity-40`} />
+                </div>
+            )}
+        </div>
+        <div className="flex-1 min-w-0">
+            <h4 className="font-display font-bold text-sm text-text-primary leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                {article.title}
+            </h4>
+            <div className="flex items-center gap-2 mt-1.5 text-xs text-text-tertiary">
+                <Clock size={12} />
+                <span>{article.readTime ?? 5} min read</span>
+            </div>
+        </div>
+        <ArrowRight size={16} className="text-text-tertiary group-hover:text-primary group-hover:translate-x-1 transition-all shrink-0" />
+    </button>
+    );
+};
+
+// ─── Bento Card for Hero Grid ────────────────────────────────────────
+const BentoCard: React.FC<{
+    article: Article;
+    className?: string;
+    size: 'large' | 'small';
+    onClick: () => void;
+}> = ({ article, className = '', size, onClick }) => {
+    const theme = getCategoryTheme(article.category.slug);
+    const Icon = theme.icon;
+    const [imgError, setImgError] = React.useState(false);
+
+    return (
+        <button
+            onClick={onClick}
+            className={`relative overflow-hidden rounded-2xl group text-left transition-all duration-300 hover:scale-[1.01] ${className}`}
+        >
+            {article.image && !imgError ? (
+                <img
+                    src={article.image}
+                    alt={article.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    onError={() => setImgError(true)}
+                />
+            ) : (
+                <div className={`absolute inset-0 ${theme.classes.bg}`}>
+                    <Icon size={size === 'large' ? 80 : 48} className="absolute bottom-4 right-4 text-white/10" />
+                </div>
+            )}
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
+            <div className="relative z-10 h-full flex flex-col justify-end p-5">
+                <Badge variant="neutral" className={`mb-2 w-fit backdrop-blur-sm border-0 ${getCategoryBadgeClasses(article.category.slug)}`}>
+                    {article.category.name}
+                </Badge>
+                <h3 className={`font-display font-bold text-white leading-tight ${size === 'large' ? 'text-xl line-clamp-2' : 'text-sm line-clamp-2'}`}>
+                    {article.title}
+                </h3>
+                {size === 'large' && article.description && (
+                    <p className="text-white/70 text-sm mt-1 line-clamp-1">{article.description}</p>
+                )}
+            </div>
+        </button>
+    );
+};
+
+// ─── Themed Section Header ───────────────────────────────────────────
+const CategorySectionHeader: React.FC<{
+    category: Category;
+    articleCount: number;
+    onViewAll: () => void;
+}> = ({ category, articleCount, onViewAll }) => {
+    const theme = getCategoryTheme(category.slug);
+    const Icon = theme.icon;
+
+    return (
+        <div className="mb-8">
+            {/* Gradient accent bar */}
+            <div className={`h-1 w-20 rounded-full bg-gradient-to-r ${theme.classes.gradient} mb-5`} />
+
+            <div className="flex items-start justify-between gap-4">
+                <div className="flex items-center gap-4">
+                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${theme.classes.bg} shadow-lg shadow-${theme.colorFamily}-500/20`}>
+                        <Icon size={22} className="text-white" />
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-display font-bold text-text-primary leading-tight">
+                            {category.name}
+                        </h3>
+                        <p className="text-sm text-text-tertiary mt-0.5">
+                            {articleCount} {articleCount === 1 ? 'article' : 'articles'}
+                        </p>
+                    </div>
+                </div>
+                <button
+                    onClick={onViewAll}
+                    className={`inline-flex items-center gap-1.5 text-sm font-semibold transition-all hover:gap-2.5 ${theme.classes.text} ${theme.classes.textDark}`}
+                >
+                    View all
+                    <ArrowRight size={16} />
+                </button>
+            </div>
+        </div>
+    );
+};
+
+// ─── Layout A: Hero Feature (hero left + 2 compact right) ───────────
+const LayoutHeroFeature: React.FC<{
+    articles: Article[];
+    navigate: (path: string) => void;
+}> = ({ articles, navigate }) => {
+    const [hero, ...rest] = articles;
+    const compactArticles = rest.slice(0, 2);
+
+    if (!hero) return null;
+
+    return (
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+            {/* Hero Card — takes 3 of 5 columns */}
+            <div className="lg:col-span-3">
+                <ArticleCard
+                    article={hero}
+                    onClick={() => navigate(getArticleUrl(hero))}
+                />
+            </div>
+
+            {/* Compact Stack — takes 2 of 5 columns */}
+            <div className="lg:col-span-2 flex flex-col gap-4 justify-center">
+                {compactArticles.map((article) => (
+                    <CompactArticleCard
+                        key={article.id}
+                        article={article}
+                        onClick={() => navigate(getArticleUrl(article))}
+                    />
+                ))}
+                {/* Teaser if more articles exist */}
+                {articles.length > 3 && (
+                    <div className="text-center text-xs text-text-tertiary pt-1">
+                        +{articles.length - 3} more articles in this topic
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
+
+// ─── Layout B: Grid Showcase (3-col, third card accented) ────────────
+const LayoutGridShowcase: React.FC<{
+    articles: Article[];
+    navigate: (path: string) => void;
+    accentGradient: string;
+}> = ({ articles, navigate, accentGradient }) => {
+    const topArticles = articles.slice(0, 3);
+
+    return (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {topArticles.map((article, i) => (
+                <div
+                    key={article.id}
+                    className={`h-full ${i === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
+                >
+                    {/* Third card gets a subtle accent ring */}
+                    <div className={`h-full ${i === 2 ? `rounded-3xl ring-1 ring-inset bg-gradient-to-br ${accentGradient} p-[1px]` : ''}`}>
+                        <div className={i === 2 ? 'h-full rounded-[calc(1.5rem-1px)] overflow-hidden' : 'h-full'}>
+                            <ArticleCard
+                                article={article}
+                                onClick={() => navigate(getArticleUrl(article))}
+                            />
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+// ─── Main Learn Page ─────────────────────────────────────────────────
 const LearnPage: React.FC = () => {
     const navigate = useNavigate();
     const [articles, setArticles] = useState<Article[]>([]);
@@ -47,7 +233,7 @@ const LearnPage: React.FC = () => {
             const query = searchQuery.toLowerCase();
             result = result.filter(a =>
                 a.title.toLowerCase().includes(query) ||
-                a.description.toLowerCase().includes(query)
+                (a.description ?? '').toLowerCase().includes(query)
             );
         }
         return result;
@@ -58,25 +244,50 @@ const LearnPage: React.FC = () => {
         return featured.length > 0 ? featured.slice(0, 3) : filteredArticles.slice(0, 3);
     }, [filteredArticles]);
 
-    const recentArticles = useMemo(() => {
-        const featuredIds = new Set(featuredArticles.map(a => a.id));
-        return filteredArticles.filter(a => !featuredIds.has(a.id)).slice(0, 4);
-    }, [filteredArticles, featuredArticles]);
+    const articlesByCategory = useMemo(() => {
+        const grouped: Record<string, Article[]> = {};
+        for (const article of filteredArticles) {
+            const slug = article.category.slug;
+            if (!grouped[slug]) grouped[slug] = [];
+            grouped[slug].push(article);
+        }
+        return grouped;
+    }, [filteredArticles]);
 
-    const popularArticles = useMemo(() => {
-        const featuredIds = new Set(featuredArticles.map(a => a.id));
-        return getPopularArticles(filteredArticles.filter(a => !featuredIds.has(a.id))).slice(0, 3);
-    }, [filteredArticles, featuredArticles]);
+    const categoriesWithArticles = useMemo(() => {
+        return categories.filter(cat => (articlesByCategory[cat.slug]?.length ?? 0) > 0);
+    }, [categories, articlesByCategory]);
+
+    const bentoArticles = useMemo(() => {
+        const picks: Article[] = [];
+        const usedCategories = new Set<string>();
+        // Featured articles first, one per category
+        for (const a of articles) {
+            if (picks.length >= 3) break;
+            if (a.tags.includes('featured') && !usedCategories.has(a.category.slug)) {
+                picks.push(a);
+                usedCategories.add(a.category.slug);
+            }
+        }
+        // Fill remaining from distinct categories
+        for (const a of articles) {
+            if (picks.length >= 3) break;
+            if (!usedCategories.has(a.category.slug)) {
+                picks.push(a);
+                usedCategories.add(a.category.slug);
+            }
+        }
+        return picks;
+    }, [articles]);
 
     const hasNoResults = searchQuery.length > 0 && filteredArticles.length === 0;
+    const isSearching = searchQuery.length > 0;
 
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.1
-            }
+            transition: { staggerChildren: 0.1 }
         }
     };
 
@@ -99,37 +310,62 @@ const LearnPage: React.FC = () => {
             />
 
             {/* Hero Section */}
-            <section className="relative pt-32 pb-20 px-6 min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh] flex flex-col justify-center overflow-hidden">
+            <section className="relative pt-28 pb-16 px-6 overflow-hidden">
                 <div className="container mx-auto max-w-7xl relative z-10">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm">
-                            <BookOpen size={16} className="text-primary" />
-                            <span>Knowledge Base</span>
-                        </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        {/* Left Column: Hero Content */}
+                        <div>
+                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface border border-border text-text-primary text-sm font-bold uppercase tracking-wider mb-8 shadow-sm">
+                                <BookOpen size={16} className="text-primary" />
+                                <span>Knowledge Base</span>
+                            </div>
 
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-bold mb-6 text-text-primary leading-tight">
-                            Mental Health <br />
-                            <span className="text-primary">
-                                Education & Guides
-                            </span>
-                        </h1>
+                            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold mb-6 text-text-primary leading-tight">
+                                Mental Health <br />
+                                <span className="text-primary">
+                                    Education & Guides
+                                </span>
+                            </h1>
 
-                        <p className="text-xl text-text-secondary mb-12 max-w-2xl mx-auto leading-relaxed">
-                            Explore expert-reviewed articles, practical guides, and the latest research on emotional well-being.
-                        </p>
+                            <p className="text-xl text-text-secondary mb-10 max-w-lg leading-relaxed">
+                                Explore expert-reviewed articles, practical guides, and the latest research on emotional well-being.
+                            </p>
 
-                        <div className="max-w-2xl mx-auto relative group">
-                            <div className="relative flex items-center bg-surface border border-border rounded-xl shadow-sm focus-within:ring-2 focus-within:ring-primary/50 transition-all overflow-hidden">
-                                <Search className="absolute left-4 text-text-tertiary" size={24} />
-                                <input
-                                    type="text"
-                                    value={searchQuery}
-                                    onChange={(e) => setSearchQuery(e.target.value)}
-                                    placeholder="Search for topics (e.g., Anxiety, Sleep, CBT)..."
-                                    className="w-full pl-14 pr-4 py-5 bg-transparent text-text-primary placeholder-text-tertiary outline-none text-lg font-medium"
-                                />
+                            <div className="max-w-lg relative group">
+                                <div className="relative flex items-center bg-surface border border-border rounded-xl shadow-sm focus-within:ring-2 focus-within:ring-primary/50 transition-all overflow-hidden">
+                                    <Search className="absolute left-4 text-text-tertiary" size={24} />
+                                    <input
+                                        type="text"
+                                        value={searchQuery}
+                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                        placeholder="Search topics (e.g., Anxiety, Sleep, CBT)..."
+                                        className="w-full pl-14 pr-4 py-4 bg-transparent text-text-primary placeholder-text-tertiary outline-none text-lg font-medium"
+                                    />
+                                </div>
                             </div>
                         </div>
+
+                        {/* Right Column: Bento Grid */}
+                        {bentoArticles.length >= 3 && (
+                        <div className="hidden lg:grid grid-cols-2 grid-rows-3 gap-3 h-[420px]">
+                            <BentoCard
+                                article={bentoArticles[0]}
+                                className="col-span-2 row-span-2"
+                                size="large"
+                                onClick={() => navigate(getArticleUrl(bentoArticles[0]))}
+                            />
+                            <BentoCard
+                                article={bentoArticles[1]}
+                                size="small"
+                                onClick={() => navigate(getArticleUrl(bentoArticles[1]))}
+                            />
+                            <BentoCard
+                                article={bentoArticles[2]}
+                                size="small"
+                                onClick={() => navigate(getArticleUrl(bentoArticles[2]))}
+                            />
+                        </div>
+                        )}
                     </div>
                 </div>
             </section>
@@ -152,9 +388,9 @@ const LearnPage: React.FC = () => {
                 </section>
             )}
 
-            {/* Featured Articles */}
-            {!hasNoResults && featuredArticles.length > 0 && (
-            <section className="px-6 mb-24">
+            {/* Featured Articles (only when not searching) */}
+            {!isSearching && featuredArticles.length > 0 && (
+            <section className="px-6 mb-16">
                 <div className="container mx-auto max-w-7xl">
                     <div className="flex items-center gap-3 mb-8">
                         <Sparkles className="text-amber-500" size={24} />
@@ -181,106 +417,89 @@ const LearnPage: React.FC = () => {
             </section>
             )}
 
-            {/* Categories Grid */}
-            <section className="px-6 mb-24 relative pt-8 border-t border-border mt-8">
+            {/* Quick Nav — Category Pills */}
+            {!hasNoResults && categoriesWithArticles.length > 0 && (
+            <section className="px-6 mb-16 border-t border-border pt-12">
                 <div className="container mx-auto max-w-7xl">
-                    <div className="flex items-center gap-3 mb-8">
+                    <div className="flex items-center gap-3 mb-6">
                         <BookOpen className="text-primary" size={24} />
                         <h2 className="text-3xl font-display font-bold text-text-primary">Browse by Topic</h2>
-                        <span className="text-sm text-text-tertiary font-medium ml-2">{categories.length} categories</span>
+                        <span className="text-sm text-text-tertiary font-medium ml-2">{categoriesWithArticles.length} categories</span>
                     </div>
 
-                    <motion.div
-                        layout
-                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
-                    >
-                        <AnimatePresence mode="popLayout">
-                            {categories.map((category) => (
-                                <motion.div
-                                    key={category.id}
-                                    layout
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    exit={{ opacity: 0 }}
-                                    transition={{ duration: 0.2 }}
-                                    className="h-full"
+                    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                        {categoriesWithArticles.map((cat) => {
+                            const theme = getCategoryTheme(cat.slug);
+                            const Icon = theme.icon;
+                            const count = articlesByCategory[cat.slug]?.length ?? 0;
+                            return (
+                                <button
+                                    key={cat.id}
+                                    onClick={() => navigate(getCategoryUrl(cat.slug))}
+                                    className={`relative overflow-hidden rounded-2xl ${theme.classes.bg} p-5 min-h-[140px] flex flex-col justify-between text-left transition-all hover:scale-[1.02] hover:shadow-lg group`}
                                 >
-                                    <CategoryCard
-                                        category={category}
-                                        onClick={() => navigate(`/learn/${category.slug}`)}
-                                    />
-                                </motion.div>
-                            ))}
-                        </AnimatePresence>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* Recent & Popular Split */}
-            {!hasNoResults && (recentArticles.length > 0 || popularArticles.length > 0) && (
-            <section className="px-6 mb-24">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="grid lg:grid-cols-3 gap-8">
-                        {/* Recent Articles (2 cols) */}
-                        {recentArticles.length > 0 && (
-                        <div className="lg:col-span-2 space-y-6">
-                            <div className="flex items-center gap-3 mb-6">
-                                <BookOpen className="text-secondary" size={24} />
-                                <h2 className="text-3xl font-display font-bold text-text-primary">Recent Articles</h2>
-                            </div>
-                            <div className="grid md:grid-cols-2 gap-6">
-                                {recentArticles.map((article) => (
-                                    <div key={article.id} className="h-full">
-                                        <ArticleCard
-                                            article={article}
-                                            onClick={() => navigate(getArticleUrl(article))}
-                                        />
+                                    <div className="relative z-10">
+                                        <span className="text-white font-display font-bold text-base leading-tight line-clamp-2 block">
+                                            {cat.name}
+                                        </span>
+                                        <span className="block text-white/70 text-xs mt-1.5 font-medium">
+                                            {count} {count === 1 ? 'article' : 'articles'}
+                                        </span>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                        )}
-
-                        {/* Popular Sidebar (1 col) */}
-                        {popularArticles.length > 0 && (
-                        <div className="space-y-6">
-                            <div className="flex items-center gap-3 mb-6">
-                                <TrendingUp className="text-accent-rose" size={24} />
-                                <h2 className="text-3xl font-display font-bold text-text-primary">Most Popular</h2>
-                            </div>
-                            <InteractiveCard className="bg-white/5 border-white/10 p-0 overflow-hidden">
-                                <ul className="divide-y divide-white/5">
-                                    {popularArticles.map((article, idx) => (
-                                        <li
-                                            key={article.id}
-                                            className="group cursor-pointer hover:bg-white/5 transition-colors p-6"
-                                            onClick={() => navigate(getArticleUrl(article))}
-                                        >
-                                            <div className="flex gap-4 items-start">
-                                                <span className="text-3xl font-display font-bold text-text-tertiary/30 group-hover:text-primary transition-colors">0{idx + 1}</span>
-                                                <div>
-                                                    <h3 className="font-bold text-text-primary group-hover:text-primary transition-colors line-clamp-2 mb-2">
-                                                        {article.title}
-                                                    </h3>
-                                                    <div className="flex items-center text-xs text-text-secondary">
-                                                        <span className={`px-2 py-0.5 rounded text-[10px] uppercase font-bold mr-2 ${getCategoryBadgeClasses(article.category.slug)}`}>{article.category.name}</span>
-                                                        <span>{article.readTime} min read</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </InteractiveCard>
-                        </div>
-                        )}
+                                    <div className="absolute bottom-3 right-3">
+                                        <Icon size={36} className="text-white/20 group-hover:text-white/30 transition-colors" />
+                                    </div>
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
             )}
 
+            {/* Per-Category Showcases — Alternating Layouts */}
+            {!hasNoResults && categoriesWithArticles.map((category, index) => {
+                const catArticles = articlesByCategory[category.slug] || [];
+                const theme = getCategoryTheme(category.slug);
+                const isLayoutA = index % 2 === 0;
+                // Every 3rd section gets extra top spacing
+                const extraSpacing = index > 0 && index % 3 === 0;
+
+                return (
+                    <motion.section
+                        key={category.id}
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: '-50px' }}
+                        transition={{ duration: 0.5, ease: 'easeOut' }}
+                        className={`px-6 ${extraSpacing ? 'mt-8 mb-16' : 'mb-12'} ${index > 0 ? 'border-t border-border/50 pt-12' : 'pt-4'}`}
+                    >
+                        <div className="container mx-auto max-w-7xl">
+                            <CategorySectionHeader
+                                category={category}
+                                articleCount={catArticles.length}
+                                onViewAll={() => navigate(getCategoryUrl(category.slug))}
+                            />
+
+                            {isLayoutA ? (
+                                <LayoutHeroFeature
+                                    articles={catArticles}
+                                    navigate={navigate}
+                                />
+                            ) : (
+                                <LayoutGridShowcase
+                                    articles={catArticles}
+                                    navigate={navigate}
+                                    accentGradient={theme.classes.gradient}
+                                />
+                            )}
+                        </div>
+                    </motion.section>
+                );
+            })}
+
             {/* CTA Banner */}
-            <section className="px-6 mb-20">
+            <section className="px-6 mb-20 mt-8">
                 <div className="container mx-auto max-w-7xl">
                     <div className="rounded-2xl border border-border bg-surface p-8 md:p-12 shadow-sm">
                         <div className="flex flex-col md:flex-row items-center justify-between gap-8">

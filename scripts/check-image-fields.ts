@@ -26,25 +26,37 @@ const supabase = createClient(env.VITE_SUPABASE_URL, env.SUPABASE_SERVICE_ROLE_K
 });
 
 async function main() {
-  const { data: articles, error } = await supabase
-    .from('articles')
-    .select('article_production_id, title, image, hero_image_url')
-    .like('article_production_id', 'CAT01-%')
-    .order('article_production_id');
+  const categoryArg = process.argv[2];
+  const categories = categoryArg
+    ? [categoryArg]
+    : ['CAT01', 'CAT02', 'CAT03', 'CAT04', 'CAT05'];
 
-  if (error) {
-    console.error(error);
-    return;
-  }
+  for (const catId of categories) {
+    const { data: articles, error } = await supabase
+      .from('articles')
+      .select('article_production_id, title, hero_image_url')
+      .like('article_production_id', `${catId}-%`)
+      .order('article_production_id');
 
-  console.log('article_id | image_field | hero_image_url_field');
-  console.log('='.repeat(120));
-  for (const a of articles) {
-    const img = a.image || '(null)';
-    const hero = a.hero_image_url || '(null)';
-    const imgShort = img.length > 40 ? img.substring(0, 40) + '...' : img;
-    const heroShort = hero.length > 40 ? hero.substring(0, 40) + '...' : hero;
-    console.log(`${a.article_production_id} | image=${imgShort} | hero=${heroShort}`);
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    const withImage = articles.filter(a => a.hero_image_url && a.hero_image_url.includes('supabase'));
+    const withoutImage = articles.filter(a => !a.hero_image_url || !a.hero_image_url.includes('supabase'));
+
+    console.log(`\n${catId}: ${articles.length} articles | ${withImage.length} with Supabase image | ${withoutImage.length} missing`);
+    console.log('='.repeat(100));
+
+    if (withoutImage.length > 0) {
+      for (const a of withoutImage) {
+        const hero = a.hero_image_url || '(null)';
+        console.log(`  MISSING: ${a.article_production_id} | hero=${hero}`);
+      }
+    } else {
+      console.log('  All articles have Supabase cover images!');
+    }
   }
 }
 main();
